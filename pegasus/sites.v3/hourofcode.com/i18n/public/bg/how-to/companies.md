@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Вдъхновение за учениците и доброволците -Hour of Code
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [ Регистрирайте се](<%= resolve_url('https://code.org/volunteer') %>), за доброволец.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## Допълнителни начини, по които компаниите могат да подкрепят Hour of Code:
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - Станете домакин на Hour of Code събитие в местна класната стая или направете Hour of Code в офиса на фирмата. Вижте ръководството по-долу.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - Рекламирайте своя [Hour of Code](<%= resolve_url('/promote') %>) и насърчете и другите да се включат.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Те могат да [ се регистрират,](<%= resolve_url('https://code.org/volunteer/engineer') %>) за да бъдат свързани с класната стая.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - -Ако сте технологична компания, демонстрирайте забавни иновативни продукти, по които вашата компания работи.
 - -Ако не сте технологична компания, обсъдете начини, Вашата фирма да използва технологията за решаване на проблемите и изпълнение на целите.
 - -Поканете софтуерни инженери от вашата фирма да говорят за това, защо те са решили да учат компютърни науки и да работят по проекти.
-- Вижте съвети за въвличане на момичета в компютърните науки [тук](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 ## 7) Празник
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [ Разпечатайте "Преминах Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) стикери.
 - [ поръчайте тениски](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) за вашето училище.
 - Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!

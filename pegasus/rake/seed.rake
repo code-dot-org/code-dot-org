@@ -200,97 +200,26 @@ end
 $gdrive_ = nil
 
 namespace :seed do
-  def csv_smart_value(value)
-    return true if value == 'TRUE'
-    return false if value == 'FALSE'
-    return Date.strptime(value.to_s.strip, '%m/%d/%Y') if value.to_s.strip =~ /^\d{1,2}\/\d{1,2}\/\d{4}$/
-    return value
-  end
-
-  def import_csv_into_table(path, table)
-    db = DB[table]
-
-    db.delete
-
-    auto_id = db.columns.include?(:id)
-
-    count = 0
-    CSV.foreach(path, headers: true, encoding: 'utf-8') do |data|
-      record = {}
-      db.columns.each {|column| record[column] = csv_smart_value(data[column.to_s])}
-
-      count += 1
-      record[:id] = count if auto_id
-
-      db.insert record
-    end
-    puts "#{count} items imported into #{table} from '#{path}'"
-  end
-
-  def stub_path(table)
-    cache_dir(".#{table}-imported")
-  end
-
   def gdrive
     $gdrive_ ||= Google::Drive.new
   end
 
-  sync_tasks = []
-
-  imports = {
-    beyond_tutorials: 'Data/HocBeyondTutorials.gsheet',
-    tutorials: 'Data/HocTutorials.gsheet'
-  }
-
-  imports.each_pair do |table, path|
-    extname = File.extname(path)
-    if extname == '.gsheet'
-      gsheet = path[0..-(extname.length + 1)]
-      path = "cache/#{path.gsub(File::SEPARATOR, '_')}.csv"
-
-      sync = "sync:#{table}"
-      task sync do
-        if file = gdrive.file(gsheet)
-          mtime = file.mtime
-          ctime = File.mtime(path).utc if File.file?(path)
-          unless mtime.to_s == ctime.to_s
-            puts "gdrive #{path}"
-            IO.write(path, file.spreadsheet_csv)
-            File.utime(File.atime(path), mtime, path)
-          end
-        else
-          ChatClient.log "Google Drive file <b>#{gsheet}</b> not found.", color: 'red', notify: 1
-        end
-      end
-      sync_tasks << sync
-    end
-
-    task table do
-      import_csv_into_table(path, table)
-    end
-
-    stub = stub_path(table)
-    file stub => [path] do
-      import_csv_into_table(path, table)
-      touch stub
-    end
-  end
-
-  desc 'import any modified seeds'
-  task migrate: imports.keys.map {|i| stub_path(i)} do
+  desc 'import any CSV files that were modified since the last import'
+  task :migrate do
     Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import}
   end
 
-  desc 'drop and import all seeds'
-  task reset: imports.keys do
+  desc 'drop and import all CSV files'
+  task :reset do
     Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import!}
   end
 
+  desc 'download modified Google Sheets as CSV'
   task :sync_v3 do
     Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
   end
 
-  desc 'update remote seeds and import any modified'
-  task sync: [:sync_v3, sync_tasks, :migrate].flatten do
+  desc 'download modified Google Sheets as CSV, and import any modified CSVs into the database'
+  task sync: [:sync_v3, :migrate] do
   end
 end

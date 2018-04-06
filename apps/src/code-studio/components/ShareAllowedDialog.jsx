@@ -1,3 +1,5 @@
+/* global dashboard */
+
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
@@ -13,6 +15,31 @@ import { showPublishDialog } from '../../templates/publishDialog/publishDialogRe
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+function recordShare(type) {
+  if (!window.dashboard) {
+    return;
+  }
+
+  firehoseClient.putRecord({
+    study: 'finish-dialog-share',
+    study_group: 'v1',
+    event: 'project-share',
+    project_id: dashboard.project && dashboard.project.getCurrentId(),
+    data_string: type,
+  }, {includeUserId: true});
+}
+
+function wrapShareClick(handler, type) {
+  return function () {
+    try {
+      recordShare(type);
+    } finally {
+      handler.apply(this, arguments);
+    }
+  };
+}
 
 function select(event) {
   event.target.select();
@@ -128,6 +155,7 @@ class ShareAllowedDialog extends React.Component {
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
     onClickExport: PropTypes.func,
+    onClickExportExpo: PropTypes.func,
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
@@ -181,19 +209,6 @@ class ShareAllowedDialog extends React.Component {
       showSendToPhone: false,
       showAdvancedOptions: true,
     });
-  };
-
-  clickExport = () => {
-    this.setState({exporting: true});
-    this.props.onClickExport().then(
-      () => this.setState({exporting: false}),
-      () => {
-        this.setState({
-          exporting: false,
-          exportError: 'Failed to export project. Please try again later.'
-        });
-      }
-    );
   };
 
   publish = () => {
@@ -311,7 +326,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons">
-                  <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
+                  <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                     <span>Send to phone</span>
                   </a>
@@ -319,7 +334,7 @@ class ShareAllowedDialog extends React.Component {
                   <button
                     id="share-dialog-publish-button"
                     style={hasThumbnail ? styles.button : styles.buttonDisabled}
-                    onClick={this.publish}
+                    onClick={wrapShareClick(this.publish.bind(this), 'publish')}
                     disabled={!hasThumbnail}
                     className="no-mc"
                   >
@@ -338,7 +353,7 @@ class ShareAllowedDialog extends React.Component {
                   />
                   }
                   {canPrint && hasThumbnail &&
-                    <a href="#" onClick={this.print}>
+                    <a href="#" onClick={wrapShareClick(this.print.bind(this), 'print')}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
                       <span>{i18n.print()}</span>
                     </a>
@@ -350,12 +365,12 @@ class ShareAllowedDialog extends React.Component {
                     <a
                       href={facebookShareUrl}
                       target="_blank"
-                      onClick={this.props.onClickPopup.bind(this)}
+                      onClick={wrapShareClick(this.props.onClickPopup.bind(this), 'facebook')}
                     >
                       <i className="fa fa-facebook"></i>
                     </a>}
                     {this.state.isTwitterAvailable &&
-                    <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
+                    <a href={twitterShareUrl} target="_blank" onClick={wrapShareClick(this.props.onClickPopup.bind(this), 'twitter')}>
                       <i className="fa fa-twitter"></i>
                     </a>}
                   </span>}
@@ -379,6 +394,7 @@ class ShareAllowedDialog extends React.Component {
                     i18n={this.props.i18n}
                     shareUrl={this.props.shareUrl}
                     onClickExport={this.props.onClickExport}
+                    onClickExportExpo={this.props.onClickExportExpo}
                     expanded={this.state.showAdvancedOptions}
                     onExpand={this.showAdvancedOptions}
                     channelId={this.props.channelId}

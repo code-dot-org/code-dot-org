@@ -660,6 +660,9 @@ en:
       CSD U3 -conditionals - stop booleans: {}
       CSD U3 AnimationsMulti STOP project guide: {}
       CSD U3 AnimationsMulti STOP project guide_2018: {}
+      CSD U3 Card Examples_2018:
+        Making an Interactive Card: Making an Interactive Card
+        description here: description here
       CSD U3 Collision Detection: {}
       CSD U3 Collision Detection_2018: {}
       CSD U3 Collisions SFLP: {}
@@ -2996,7 +2999,13 @@ en:
       csp_unit5_finalassessment_overview:
         description here: description here
         title: title
+      csp_unit5_finalassessment_overview_exam_prep:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
+        description here: description here
+        title: title
+      csp_unit_assessment_overview_exam_prep:
         description here: description here
         title: title
       deeper learning:
@@ -3584,19 +3593,30 @@ en:
       name:
         CSP Culminating Assessment: {}
         CSP Cumulative Assess A: {}
+        CSP Cumulative Assess A_exam_prep: {}
         CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
+        CSP Unit 5 Cumulative Assessment 1 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
+        CSP Unit 5 Cumulative Assessment 2 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 3 MC: {}
+        CSP Unit 5 Cumulative Assessment 3 MC_exam_prep: {}
         CSP Unit 5 Cumulative Assessment 4 MC: {}
+        CSP Unit 5 Cumulative Assessment 4 MC_exam_prep: {}
         CSP post-assessment survey: {}
         CSP pre-assessment survey: {}
         HOC post-survey 2016 levelgroup: {}
@@ -4961,7 +4981,17 @@ en:
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
         When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
         When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_11_exam_prep:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
       CB_Question_12:
+        I and II: I and II
+        I only: I only
+        II only: II only
+        Neither I nor II: Neither I nor II
+      CB_Question_12_exam_prep:
         I and II: I and II
         I only: I only
         II only: II only
@@ -4981,6 +5011,11 @@ en:
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
         Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
         In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+      CB_Question_15_exam_prep:
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
       CB_Question_16:
         <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">: <img src="https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG">
         <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">: <img src="https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG">
@@ -4996,12 +5031,22 @@ en:
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
         Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
         There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_18_exam_prep:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
       CB_Question_19:
         "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) AND (onFloor2 AND callTo1)"
         "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
       CB_Question_1_copy:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
+      CB_Question_1_exam_prep:
         2 times as many values can be represented.: 2 times as many values can be represented.
         2^32 times as many values can be represented.: 2^32 times as many values can be represented.
         32 times as many values can be represented.: 32 times as many values can be represented.
@@ -5016,6 +5061,11 @@ en:
         ? First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
         : First, change all occurrences of &quot;goats&quot; to &quot;sheep.&quot; <br> Then, change all occurrences of &quot;sheep&quot; to &quot;goats.&quot; <br>Last, change all occurrences of &quot;foxes&quot; to &quot;sheep.&quot;
       CB_Question_20:
+        about.example.com: about.example.com
+        example.co.uk: example.co.uk
+        example.com.org: example.com.org
+        example.org: example.org
+      CB_Question_20_exam_prep:
         about.example.com: about.example.com
         example.co.uk: example.co.uk
         example.com.org: example.com.org
@@ -5040,6 +5090,11 @@ en:
         'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
         'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
         The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
+      CB_Question_3update_exam_prep:
+        'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
+        'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
+        'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
+        The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
       CB_Question_4:
         Input A can be either true or false: Input A can be either true or false
         Input A must be false: Input A must be false
@@ -5056,6 +5111,11 @@ en:
         Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.: Computer simulations usually make some simplifying assumptions about the real-world object or system being modeled.
         It is difficult to change input parameters or conditions when using computer simulations.: It is difficult to change input parameters or conditions when using computer simulations.
       CB_Question_7:
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+      CB_Question_7_exam_prep:
         To determine the time of day that the site is most active: To determine the time of day that the site is most active
         To determine the topics that many users are posting about: To determine the topics that many users are posting about
         To determine the users who post messages most frequently: To determine the users who post messages most frequently
@@ -5077,7 +5137,21 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossless compression_exam_prep:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossy compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression_exam_prep:
         " ": " "
         Compression: Compression
         Fast Fourier Transform compression: Fast Fourier Transform compression
@@ -5242,7 +5316,22 @@ en:
         The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
         What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
         What's Binary?: What's Binary?
+      CSP Unit 1 Ch 1 MC binary def_exam_prep:
+        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
+        It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
+        The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
+        What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
+        What's Binary?: What's Binary?
       CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+        Decimal to Binary: Decimal to Binary
+        What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?: What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?
+      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
         '0010': '0010'
         '0101': '0101'
         '0110': '0110'
@@ -5256,7 +5345,21 @@ en:
         8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
         9 bits: 9 bits
         How Many Bits?: How Many Bits?
+      CSP Unit 1 Ch 1 MC bits to make 512_exam_prep:
+        10 bits: 10 bits
+        16 bits: 16 bits
+        17 bits: 17 bits
+        8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
+        9 bits: 9 bits
+        How Many Bits?: How Many Bits?
       CSP Unit 1 Ch 2 MC internet layers:
+        " ": " "
+        DNS relies on TCP/IP: DNS relies on TCP/IP
+        HTTP relies on TCP/IP: HTTP relies on TCP/IP
+        Layers of Protocols: Layers of Protocols
+        TCP/IP relies on DNS: TCP/IP relies on DNS
+        TCP/IP relies on HTTP: TCP/IP relies on HTTP
+      CSP Unit 1 Ch 2 MC internet layers_exam_prep:
         " ": " "
         DNS relies on TCP/IP: DNS relies on TCP/IP
         HTTP relies on TCP/IP: HTTP relies on TCP/IP
@@ -5270,6 +5373,13 @@ en:
         Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
         TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
         Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
+      CSP Unit 1 Ch 2 MC packets_exam_prep:
+        Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
+        Packets: Packets
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
+        TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
+        Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
       CSP Unit 2 Ch 1 MC kilo v mega:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -5277,7 +5387,21 @@ en:
         100,000 times bigger: 100,000 times bigger
         Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
         How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 MC kilo v mega_exam_prep:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
       CSP Unit 2 Ch 1 metadata:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 1 metadata_exam_prep:
         " ": " "
         data: data
         megadata: megadata
@@ -5293,7 +5417,24 @@ en:
         ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
         : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
         There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      CSP Unit 2 Ch 2 MC IETF_exam_prep:
+        A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
+        A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        The IETF: The IETF
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
       CSP Unit 2 Ch 2 MC data bias:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 2 Ch 2 MC data bias_exam_prep:
         " ": " "
         Data Bias: Data Bias
         She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
@@ -5311,7 +5452,25 @@ en:
         ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         What's it showing?: What's it showing?
+      CSP Unit 2 Ch 2 MC google trends_exam_prep:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
       CSP Unit 2 Ch 2 MC routing simple:
+        A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
+        Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
+        'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
+        ? Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        : Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        Routing: Routing
+        Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.: Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.
+      CSP Unit 2 Ch 2 MC routing simple_exam_prep:
         A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
         Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
         'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
@@ -5326,7 +5485,22 @@ en:
         Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
         Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
         Which is the Best?: Which is the Best?
+      CSP Unit 2 Ch 2 MC worst viz_exam_prep:
+        " ": " "
+        Chart A (Line Chart): Chart A (Line Chart)
+        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
+        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
+        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
+        Which is the Best?: Which is the Best?
       CSP Unit 2 Ch2 MC data cleaning:
+        " ": " "
+        Data Cleaning: Data Cleaning
+        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
+        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
+        Translate all states into their two-letter state code: Translate all states into their two-letter state code
+      CSP Unit 2 Ch2 MC data cleaning_exam_prep:
         " ": " "
         Data Cleaning: Data Cleaning
         ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
@@ -5341,6 +5515,13 @@ en:
         Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
         Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
         Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 2 ch 2 MC trends as predictors_exam_prep:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit2 Ch 1 MC hex rgb:
         " ": " "
         00F: 00F
@@ -5348,7 +5529,21 @@ en:
         F00: F00
         FF00: FF00
         FF0000: FF0000
+      CSP Unit2 Ch 1 MC hex rgb_exam_prep:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
       CSP Unit2 Ch1 MC megabyte:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP Unit2 Ch1 MC megabyte_exam_prep:
         How big is it?: How big is it?
         Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
         gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
@@ -5382,6 +5577,11 @@ en:
         High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
         Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
         Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
+      CSPFinal_Question_12_exam_prep:
+        High level protocols can take on the role of a low level protocol in the event of failure in the system.: High level protocols can take on the role of a low level protocol in the event of failure in the system.
+        High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
+        Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
+        Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
       CSPFinal_Question_13:
         "<pre>dieRoll = 2</pre>": "<pre>dieRoll = 2</pre>"
         "<pre>dieRoll = evenCounter + RollCounter</pre>": "<pre>dieRoll = evenCounter + RollCounter</pre>"
@@ -5408,7 +5608,20 @@ en:
         Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.: Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.
         Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.: Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.
         Public key encryption makes use of mathematical problems which no algorithm can be used to solve.: Public key encryption makes use of mathematical problems which no algorithm can be used to solve.
+      CSPFinal_Question_17_exam_prep:
+        ? Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        : Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.
+        Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.: Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.
+        Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.: Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.
+        Public key encryption makes use of mathematical problems which no algorithm can be used to solve.: Public key encryption makes use of mathematical problems which no algorithm can be used to solve.
       CSPFinal_Question_18:
+        Chrome Sampling transformation: Chrome Sampling transformation
+        Lossless transformation: Lossless transformation
+        Lossy transformation: Lossy transformation
+        Multiband transformation: Multiband transformation
+        ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+        : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+      CSPFinal_Question_18_exam_prep:
         Chrome Sampling transformation: Chrome Sampling transformation
         Lossless transformation: Lossless transformation
         Lossy transformation: Lossy transformation
@@ -5420,6 +5633,11 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Steganography: Steganography
+      CSPFinal_Question_1_exam_prep:
+        Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
+        Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+        Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_2:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -5430,7 +5648,19 @@ en:
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
+      CSPFinal_Question_20_exam_prep:
+        Days when certain items sell the most.: Days when certain items sell the most.
+        The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
+        The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
+        Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
+        ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
+        Scalability of the system.: Scalability of the system.
+        Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
+        The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
+      CSPFinal_Question_21_exam_prep:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
@@ -5445,6 +5675,11 @@ en:
         ? Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
         : Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?
       CSPFinal_Question_23:
+        Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
+        Which programs students are running on the lab computers: Which programs students are running on the lab computers
+        Which students are visiting social media sites from school: Which students are visiting social media sites from school
+        Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
+      CSPFinal_Question_23_exam_prep:
         Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
         Which programs students are running on the lab computers: Which programs students are running on the lab computers
         Which students are visiting social media sites from school: Which students are visiting social media sites from school
@@ -5481,6 +5716,11 @@ en:
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
+      CSPFinal_Question_2_exam_prep:
+        High bandwidth, high latency: High bandwidth, high latency
+        High bandwidth, low latency: High bandwidth, low latency
+        Low bandwidth, high latency: Low bandwidth, high latency
+        Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_3:
         "<code>Computer A</code>": "<code>Computer A</code>"
         "<code>Computer B</code>": "<code>Computer B</code>"
@@ -5507,7 +5747,20 @@ en:
         It displays the last number in the list: It displays the last number in the list
         It displays the smallest number in the list.: It displays the smallest number in the list.
         Which of the following best describes the result after the program is executed on a given list?: Which of the following best describes the result after the program is executed on a given list?
+      CSPFinal_Question_3_exam_prep:
+        "<code>Computer A</code>": "<code>Computer A</code>"
+        "<code>Computer B</code>": "<code>Computer B</code>"
+        "<code>Computer D</code>": "<code>Computer D</code>"
+        "<code>Computer F</code>": "<code>Computer F</code>"
       CSPFinal_Question_4:
+        ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
+        IPv4 proved unreliable in some cases where network redundancy could not be ensured: IPv4 proved unreliable in some cases where network redundancy could not be ensured
+        IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
+        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+      CSPFinal_Question_4_exam_prep:
         ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
         : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
         32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
@@ -5525,7 +5778,17 @@ en:
         No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".: No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".
         Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
         Yes, public key encryption is secure because it transmits credit card information in binary.: Yes, public key encryption is secure because it transmits credit card information in binary.
+      CSPFinal_Question_5_exam_prep:
+        No, public key encryption allows the credit card information to be read by the public.: No, public key encryption allows the credit card information to be read by the public.
+        No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".: No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".
+        Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.: Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.
+        Yes, public key encryption is secure because it transmits credit card information in binary.: Yes, public key encryption is secure because it transmits credit card information in binary.
       CSPFinal_Question_6:
+        It asks a DNS server for the corresponding IP address: It asks a DNS server for the corresponding IP address
+        It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
+        It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
+        It uses a Border Gateway Protocol to get the address from a nearby computer.: It uses a Border Gateway Protocol to get the address from a nearby computer.
+      CSPFinal_Question_6_exam_prep:
         It asks a DNS server for the corresponding IP address: It asks a DNS server for the corresponding IP address
         It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
         It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
@@ -5535,12 +5798,32 @@ en:
         3 bits: 3 bits
         5 bits: 5 bits
         6 bits: 6 bits
+      CSPFinal_Question_7_exam_prep:
+        2 bits: 2 bits
+        3 bits: 3 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
       CSPFinal_Question_8:
         'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8_exam_prep:
+        'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
+        'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8update:
+        " ": " "
+        ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+        : '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+      CSPFinal_Question_8update_exam_prep:
         " ": " "
         ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
         : '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
@@ -5560,6 +5843,14 @@ en:
         ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
         : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
       CSPFinal_Question_9update:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
+        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+      CSPFinal_Question_9update_exam_prep:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
@@ -5735,7 +6026,21 @@ en:
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 1 - block_exam_prep:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
       Commute Assess - comp 2 - block:
+        Randomly returns on of the three numbers: Randomly returns on of the three numbers
+        'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
+        Returns the largest of the three numbers: Returns the largest of the three numbers
+        Set all three inputs to a temporary value: Set all three inputs to a temporary value
+        'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+        This code will cause an error: This code will cause an error
+      Commute Assess - comp 2 - block_exam_prep:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
         Returns the largest of the three numbers: Returns the largest of the three numbers
@@ -5753,6 +6058,17 @@ en:
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+      Commute Assess - comp 4 - block_exam_prep:
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
       Commute Assess - comp 5 - block:
         It always sets x equal to 5: It always sets x equal to 5
         Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
@@ -5760,7 +6076,22 @@ en:
         Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
         This code will cause an error: This code will cause an error
         What does this code do?: What does this code do?
+      Commute Assess - comp 5 - block_exam_prep:
+        It always sets x equal to 5: It always sets x equal to 5
+        Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
+        Makes sure the value of x is between 10 and 5: Makes sure the value of x is between 10 and 5
+        Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
+        This code will cause an error: This code will cause an error
+        What does this code do?: What does this code do?
       Commute Assess - cond 3 - block:
+        "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
+        "<pre>And under 21</pre>": "<pre>And under 21</pre>"
+        "<pre>Under 40</pre>": "<pre>Under 40</pre>"
+        "<pre>Under 40<br>And contains a 3</pre>": "<pre>Under 40<br>And contains a 3</pre>"
+        "<pre>Under 40<br>And under 21<br>And contains a 3</pre>": "<pre>Under 40<br>And under 21<br>And contains a 3</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      Commute Assess - cond 3 - block_exam_prep:
         "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
         "<pre>And under 21</pre>": "<pre>And under 21</pre>"
         "<pre>Under 40</pre>": "<pre>Under 40</pre>"
@@ -5786,6 +6117,12 @@ en:
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 2a - block_exam_prep:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 2b - block:
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
@@ -5798,6 +6135,12 @@ en:
         "<pre>9</pre>": "<pre>9</pre>"
         nothing is printed: nothing is printed
         this script would cause an error: this script would cause an error
+      Commute Assess - func 2b - block_exam_prep:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
       Commute Assess - func 3a - block:
         "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
         "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
@@ -5805,7 +6148,23 @@ en:
         "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
+      Commute Assess - func 3a - block_exam_prep:
+        "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
+        "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
+        "<pre>in func1<br>in func2</pre>": "<pre>in func1<br>in func2</pre>"
+        "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
       Commute Assess - func 3b - block:
+        "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
+        "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
+        "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
+        "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        Nothing is displayed: Nothing is displayed
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+      Commute Assess - func 3b - block_exam_prep:
         "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
         "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
         "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
@@ -5828,6 +6187,13 @@ en:
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 1 - block_exam_prep:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 2 - block:
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
@@ -5842,7 +6208,22 @@ en:
         "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
         "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
         What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block_exam_prep:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 4a - block:
+        "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
+        "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
+        "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
+        "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
+        "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after this code has run?: What will be displayed after this code has run?
+      CommuteAssess - Cond 4a - block_exam_prep:
         "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
@@ -5864,7 +6245,21 @@ en:
         x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
         x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
         x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
+      CommuteAssess - Var 3 - block_exam_prep:
+        What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
+        x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "x": x is equal to "no"; y is equal to "maybe"; z is equal to "x"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
+        x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
       CommuteAssess - Var 4 - block:
+        What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
+        x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
+        x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
+        x is equal to 8; y is equal to 8; z is equal to "x + y": x is equal to 8; y is equal to 8; z is equal to "x + y"
+        x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
+        x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
+      CommuteAssess - Var 4 - block_exam_prep:
         What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
         x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
         x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
@@ -5893,6 +6288,13 @@ en:
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
         It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 1 - block_exam_prep:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 2 - block:
         '0': '0'
         '1': '1'
@@ -5903,7 +6305,25 @@ en:
         ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 2 - block_exam_prep:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        it will be different each time you run it: it will be different each time you run it
       CommuteAssess - loops 5 - block:
+        "<pre>3</pre>": "<pre>3</pre>"
+        "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
+        "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
+        "<pre>5<br>3<br>1</pre>": "<pre>5<br>3<br>1</pre>"
+        "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>": "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>"
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+        it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 5 - block_exam_prep:
         "<pre>3</pre>": "<pre>3</pre>"
         "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
         "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
@@ -5936,6 +6356,14 @@ en:
         x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 1 - block_exam_prep:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 2 - block:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
@@ -5944,6 +6372,13 @@ en:
         <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
         What will be displayed after running this code?: What will be displayed after running this code?
       CumulAssess - Var 2 - block B:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CumulAssess - Var 2 - block_exam_prep:
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
@@ -6679,6 +7114,11 @@ en:
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
       U1 Ch1 Assessment question 4 to 8 bit:
+        2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
+        2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
+        2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
+        2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
+      U1 Ch1 Assessment question 4 to 8 bit_exam_prep:
         2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
         2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
@@ -7723,6 +8163,12 @@ en:
         "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
         "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
         "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
+      U5 assess compound boolean conditions_exam_prep:
+        "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
+        "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
+        "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
+        "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
+        "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
       U5 assess_weight_v2:
         Question: Question
         description here: description here
@@ -7730,6 +8176,10 @@ en:
         title: title
         wrong answer: wrong answer
       Unit 5 final assessment understand and continue:
+        I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
+        I am planning to take the AP exam this year: I am planning to take the AP exam this year
+        I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
+      Unit 5 final assessment understand and continue_exam_prep:
         I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
         I am planning to take the AP exam this year: I am planning to take the AP exam this year
         I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
@@ -7748,6 +8198,13 @@ en:
         Displays "Hello" once after 60 seconds has elapsed: Displays "Hello" once after 60 seconds has elapsed
         This code will cause an error: This code will cause an error
       commute assess - loops 3 - block:
+        "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
+        "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
+        "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
+        It will be different each time you run it: It will be different each time you run it
+        Nothing with be printed: Nothing with be printed
+        What will be printed when this code is run?: What will be printed when this code is run?
+      commute assess - loops 3 - block_exam_prep:
         "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
         "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
         "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
@@ -8085,27 +8542,27 @@ en:
       courseD_multi_farmer_condLoops9_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        ? Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        : Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        ? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
         Incorrect. There is no code here for collecting the pumpkin.: Incorrect. There is no code here for collecting the pumpkin.
         Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
-        ? The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        : The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
-        The farmer will collect all of the produce.: The farmer will collect all of the produce.
-        The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
+        ? The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The harvester will collect all of the crops, except the pumpkin.: The harvester will collect all of the crops, except the pumpkin.
+        The harvester will collect all of the crops.: The harvester will collect all of the crops.
+        The harvester will not collect any of the crops with the path she is taking.: The harvester will not collect any of the crops with the path she is taking.
       courseD_multi_farmer_condLoops9_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
-        ? Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        : Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        Incorrect. There is no code here for collecting the pumpkin.: Incorrect. There is no code here for collecting the pumpkin.
+        ? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for picking the pumpkin.: Incorrect. There is no code here for picking the pumpkin.
         Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
-        ? The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        : The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
-        The farmer will collect all of the produce.: The farmer will collect all of the produce.
-        The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
+        ? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The harvester will collect all of the crops.: The harvester will collect all of the crops.
+        The harvester will not pick any of the crops with the path she is taking.: The harvester will not pick any of the crops with the path she is taking.
+        The harvester will pick all of the crops, except the pumpkin.: The harvester will pick all of the crops, except the pumpkin.
       courseD_multi_farmer_ramp13:
         " ": " "
         Correct!: Correct!
@@ -8282,22 +8739,22 @@ en:
         The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
       courseE_multi_farmer_functions11_predict:
         Correct!: Correct!
-        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
-        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
-        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
-        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
-        The farmer will harvest the corn.: The farmer will harvest the corn.
-        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
-        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+        Incorrect.  The harvester does not call "check and pick" until she gets to the corn.: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        Incorrect. The harvester only makes one turn, and ends at the corn.: Incorrect. The harvester only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
       courseE_multi_farmer_functions11_predict_2018:
         Correct!: Correct!
-        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
-        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
-        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
-        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
-        The farmer will harvest the corn.: The farmer will harvest the corn.
-        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
-        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+        Incorrect.  The harvester does not call "check and pick" until she gets to the corn.: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        Incorrect. The harvester only makes one turn, and ends at the corn.: Incorrect. The harvester only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
       courseE_multi_farmer_predict1:
         Correct!: Correct!
         I don't know: I don't know
@@ -10267,12 +10724,30 @@ en:
         <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
         <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
         <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
+      cspu3_assess1_callfunction_exam_prep:
+        <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
+        <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
+        <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
+        <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
+        <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
       cspu3_assess1_codeoutcome:
         It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
         The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
         The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
         The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_codeoutcome_exam_prep:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
       cspu3_assess1_collaboration:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_collaboration_exam_prep:
         Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
         In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
         ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
@@ -10285,19 +10760,43 @@ en:
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+      cspu3_assess1_functionsfalse_exam_prep:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
       cspu3_assess1_loop_or_function1:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function1_exam_prep:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function2:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function2_exam_prep:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function3:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function3_exam_prep:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function4:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function4_exam_prep:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_namingconvention:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_namingconvention_exam_prep:
         A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
         A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
         Function names should be organized alphabetically.: Function names should be organized alphabetically.
@@ -10308,7 +10807,18 @@ en:
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_naturallanguage_exam_prep:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       cspu3_assess1_outputdrawing:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+      cspu3_assess1_outputdrawing_exam_prep:
         <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
         <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
         <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
@@ -10319,12 +10829,28 @@ en:
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_parameters_exam_prep:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
       cspu3_assess1_removeline:
         Line 3 and Line 4: Line 3 and Line 4
         Line 8 and Line 9: Line 8 and Line 9
         Line 9: Line 9
         Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_removeline_exam_prep:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
       cspu3_assess1_robotpath:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_robotpath_exam_prep:
         <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
         <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
         <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
@@ -10336,7 +10862,18 @@ en:
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
         Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
         Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu3_assess1_truefunctions_exam_prep:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
       cspu4_assess1_DDoS:
+        A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
+        An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
+        An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
+        An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.: An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.
+      cspu4_assess1_DDoS_exam_prep:
         A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems: A coordinated effort by a group to simultaneously attempt to gain entry to foreign government's servers or systems
         An attempt to compromise a single target by flooding it with requests from multiple systems.: An attempt to compromise a single target by flooding it with requests from multiple systems.
         An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).: An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).
@@ -10346,7 +10883,17 @@ en:
         Public key: Public key
         SSL: SSL
         Symmetric: Symmetric
+      cspu4_assess1_encryption_exam_prep:
+        Asymmetric: Asymmetric
+        Public key: Public key
+        SSL: SSL
+        Symmetric: Symmetric
       cspu4_assess1_keyEncryption:
+        A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
+        A key for decrypting is never made public: A key for decrypting is never made public
+        Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
+        Using public key guarantees that only the intended recipient can decrypt the message: Using public key guarantees that only the intended recipient can decrypt the message
+      cspu4_assess1_keyEncryption_exam_prep:
         A Public Key database ensures 3rd party accountability of security: A Public Key database ensures 3rd party accountability of security
         A key for decrypting is never made public: A key for decrypting is never made public
         Allows secure communication without establishing a *shared* encryption key ahead of time.: Allows secure communication without establishing a *shared* encryption key ahead of time.
@@ -10356,7 +10903,17 @@ en:
         52 MOD 32: 52 MOD 32
         9 MOD 64: 9 MOD 64
         9 MOD 8: 9 MOD 8
+      cspu4_assess1_mod_exam_prep:
+        1 MOD 16: 1 MOD 16
+        52 MOD 32: 52 MOD 32
+        9 MOD 64: 9 MOD 64
+        9 MOD 8: 9 MOD 8
       cspu4_assess1_moore:
+        Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
+        Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
+        Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
+        Moore's Law is the principle that one should assume that any traffic on the Internet is insecure: Moore's Law is the principle that one should assume that any traffic on the Internet is insecure
+      cspu4_assess1_moore_exam_prep:
         Moore's Law describes a relationship of boolean logic statements involving AND and OR: Moore's Law describes a relationship of boolean logic statements involving AND and OR
         Moore's Law explains why cracking modern cryptography is a "computationally hard" problem: Moore's Law explains why cracking modern cryptography is a "computationally hard" problem
         Moore's Law is the observation that computing power tends to double every two years: Moore's Law is the observation that computing power tends to double every two years
@@ -10368,7 +10925,20 @@ en:
         ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
         : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
         You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”: You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”
+      cspu4_assess1_phishing_exam_prep:
+        ? You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        : You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.
+        You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability: You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability
+        ? You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        : You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account
+        You get an unwanted email trying to sell you a low quality product or service that seems "fishy.": You get an unwanted email trying to sell you a low quality product or service that seems "fishy."
       cspu5_assess1_additem:
+        cart total = 1;: cart total = 1;
+        cartTotal + 1;: cartTotal + 1;
+        cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
+        var cartTotal + 1;: var cartTotal + 1;
+        var cartTotal = cartTotal + 1;: var cartTotal = cartTotal + 1;
+      cspu5_assess1_additem_exam_prep:
         cart total = 1;: cart total = 1;
         cartTotal + 1;: cartTotal + 1;
         cartTotal = cartTotal +1;: cartTotal = cartTotal +1;
@@ -10380,7 +10950,19 @@ en:
         Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
         Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
         apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+      cspu5_assess1_algorithm_exam_prep:
+        Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.: Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+        Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
+        apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.: apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.
       cspu5_assess1_codevalues:
+        <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
+        <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
+        <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
+        <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>: <img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>
+        <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>: <img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>
+      cspu5_assess1_codevalues_exam_prep:
         <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>: <img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>
         <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>: <img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>
         <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>: <img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>
@@ -10391,12 +10973,28 @@ en:
         Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
         Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
         Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
+      cspu5_assess1_debugging_exam_prep:
+        Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.: Ask a friend or collaborator to look over the code segment to see if they are able to find any errors.
+        Change the names of variables within the program and run the program again.: Change the names of variables within the program and run the program again.
+        Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.: Delete the code and re-type it to make sure there were no spelling errors and that it was written correctly.
+        Display the value of variables at various points during the program.: Display the value of variables at various points during the program.
       cspu5_assess1_drawingoutcome:
         <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
         <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
+      cspu5_assess1_drawingoutcome_exam_prep:
+        <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">: <img src="https://images.code.org/5aae4fb918093388bd3151828fa62010-image-1475971500656.png">
+        <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">: <img src="https://images.code.org/63e032c191df238f0da8f7b327778017-image-1475971518758.png">
+        <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
+        <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
+        An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
+        IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
+        Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
+        While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
+      cspu5_assess1_elementid_exam_prep:
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
         Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
@@ -10409,7 +11007,20 @@ en:
         Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
+      cspu5_assess1_eventprograms_exam_prep:
+        ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
+        Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
+        Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
+        The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
       cspu5_assess1_fivemore:
+        "-2": "-2"
+        '3': '3'
+        '5': '5'
+        '8': '8'
+        'Error. Unknown Identifier: x': 'Error. Unknown Identifier: x'
+      cspu5_assess1_fivemore_exam_prep:
         "-2": "-2"
         '3': '3'
         '5': '5'
@@ -10421,7 +11032,19 @@ en:
         Nothing will be displayed: Nothing will be displayed
         a is bigger: a is bigger
         b: b
+      cspu5_assess1_flowchart_exam_prep:
+        '10': '10'
+        '5': '5'
+        Nothing will be displayed: Nothing will be displayed
+        a is bigger: a is bigger
+        b: b
       cspu5_assess1_increase:
+        '10': '10'
+        '13': '13'
+        '5': '5'
+        '8': '8'
+        Error.  Cannot make a new variable x inside function increase(): Error.  Cannot make a new variable x inside function increase()
+      cspu5_assess1_increase_exam_prep:
         '10': '10'
         '13': '13'
         '5': '5'
@@ -10433,7 +11056,19 @@ en:
         <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
         <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
         <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
+      cspu5_assess1_snowman_exam_prep:
+        <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">: <img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">
+        <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">: <img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">
+        <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">: <img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">
+        <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">: <img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">
+        <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">: <img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">
       cspu5_assess1_swap:
+        <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
+        <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
+        <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
+        <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>: <img src="https://images.code.org/6fc52217eccd297fd66a0d3fa297833c-image-1475371619856.png" width=150>
+        <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>: <img src="https://images.code.org/fd8b8348e58123d973fd6db688f20373-image-1475371619857.png" width=150>
+      cspu5_assess1_swap_exam_prep:
         <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>: <img src="https://images.code.org/1468cfa4769c1b858c886dc9b340c846-image-1475371619859.png" width=100>
         <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>: <img src="https://images.code.org/2075d1dd6f3449c60fb4eb220e3c604c-image-1475371619855.png" width=150>
         <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>: <img src="https://images.code.org/3fda06e12c08bd63a0775c64c2da7c4d-image-1475371619852.png" width=150>
@@ -10445,13 +11080,30 @@ en:
         <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
         <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
         <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
+      cspu5_assess1_turtle_exam_prep:
+        <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>: <img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>: <img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>
+        <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>: <img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>
+        <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>: <img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>
+        <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>: <img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>
       cspu5_assess1_value:
         'value is: 2': 'value is: 2'
         'value is: 2.3333333': 'value is: 2.3333333'
         'value is: 3': 'value is: 3'
         'value is: 4': 'value is: 4'
         'value is: c': 'value is: c'
+      cspu5_assess1_value_exam_prep:
+        'value is: 2': 'value is: 2'
+        'value is: 2.3333333': 'value is: 2.3333333'
+        'value is: 3': 'value is: 3'
+        'value is: 4': 'value is: 4'
+        'value is: c': 'value is: c'
       cspu5_assess2_addstrings:
+        5 + hello: 5 + hello
+        5hello: 5hello
+        'error on num + str: type mismatch': 'error on num + str: type mismatch'
+        result: result
+      cspu5_assess2_addstrings_exam_prep:
         5 + hello: 5 + hello
         5hello: 5hello
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
@@ -10468,12 +11120,29 @@ en:
         Integers between 1 and 10: Integers between 1 and 10
         True/False: True/False
         Yes/Maybe/No: Yes/Maybe/No
+      cspu5_assess2_boolean_exam_prep:
+        Any Integer: Any Integer
+        Any single character: Any single character
+        Integers between 1 and 10: Integers between 1 and 10
+        True/False: True/False
+        Yes/Maybe/No: Yes/Maybe/No
       cspu5_assess2_combineString:
         '10': '10'
         '55': '55'
         'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
         result: result
+      cspu5_assess2_combineString_exam_prep:
+        '10': '10'
+        '55': '55'
+        'error on str1 + str2: type mismatch': 'error on str1 + str2: type mismatch'
+        result: result
       cspu5_assess2_false:
+        A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
+        Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
+        Strings sometimes include spaces.: Strings sometimes include spaces.
+        Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
+      cspu5_assess2_false_exam_prep:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
@@ -10485,7 +11154,19 @@ en:
         Nothing will be printed: Nothing will be printed
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
+      cspu5_assess2_goodbye_exam_prep:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed: Nothing will be printed
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
       cspu5_assess2_hello:
+        Did you say something? That was so short.: Did you say something? That was so short.
+        I have never heard that before.: I have never heard that before.
+        Nothing will be printed.: Nothing will be printed.
+        Use that word on the SAT.: Use that word on the SAT.
+        Wow, big word.: Wow, big word.
+      cspu5_assess2_hello_exam_prep:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
         Nothing will be printed.: Nothing will be printed.
@@ -10497,7 +11178,19 @@ en:
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
+      cspu5_assess2_numValues_exam_prep:
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
+        The code will display the largest of the three values: The code will display the largest of the three values
+        The code will display the middle of all three values: The code will display the middle of all three values
+        The code will display the smallest of the three values: The code will display the smallest of the three values
+        The code will not display anything due to an error: The code will not display anything due to an error
       cspu5_assess2_oldEnough:
+        '35': '35'
+        You are not old enough to be President.: You are not old enough to be President.
+        You are old enough to be President!: You are old enough to be President!
+        'false': 'false'
+        'true': 'true'
+      cspu5_assess2_oldEnough_exam_prep:
         '35': '35'
         You are not old enough to be President.: You are not old enough to be President.
         You are old enough to be President!: You are old enough to be President!
@@ -10509,19 +11202,43 @@ en:
         "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
+      cspu5_assess2_pseudoCode_exam_prep:
+        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
+        "<code>You passed!</code>": "<code>You passed!</code>"
+        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
+        Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
         day != “Monday”: day != “Monday”
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
+      cspu5_assess2_setAlarm_exam_prep:
+        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
+        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
+        day != "Monday": day != "Monday"
+        day == "Saturday": day == "Saturday"
+        day == "Sunday": day == "Sunday"
       cspu5_assess2_statementOutput:
         console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
         console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
         console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
         console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
         console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
+      cspu5_assess2_statementOutput_exam_prep:
+        console.log("Hello! \bHow are you?");: console.log("Hello! \bHow are you?");
+        console.log("Hello! \nHow are you?");: console.log("Hello! \nHow are you?");
+        console.log("Hello! \newLineHow are you?");: console.log("Hello! \newLineHow are you?");
+        console.log("Hello! \nlHow are you?");: console.log("Hello! \nlHow are you?");
+        console.log("Hello! \tHow are you?");: console.log("Hello! \tHow are you?");
       cspu5_assess2_weight:
+        '125': '125'
+        '200': '200'
+        '30': '30'
+        '50': '50'
+        '75': '75'
+      cspu5_assess2_weight_exam_prep:
         '125': '125'
         '200': '200'
         '30': '30'
@@ -10533,12 +11250,29 @@ en:
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
         There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
+      cspu5_assess2_wrongLogic_exam_prep:
+        Any time between 0 and 20: Any time between 0 and 20
+        Any time between 10 and 19: Any time between 10 and 19
+        Any time between 6 and 9: Any time between 6 and 9
+        The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
+        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
       cspu5_assess3_ageList:
         INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
         REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
         Remove all items from the list and start over: Remove all items from the list and start over
         ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
+      cspu5_assess3_ageList_exam_prep:
+        INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
+        REMOVE  the value at the index of 2, then INSERT 13 in the index 2: REMOVE  the value at the index of 2, then INSERT 13 in the index 2
+        Remove all items from the list and start over: Remove all items from the list and start over
+        ages[2] = ages[2] + 1: ages[2] = ages[2] + 1
       cspu5_assess3_array1:
+        '10': '10'
+        '4': '4'
+        '7': '7'
+        '9': '9'
+        ab: ab
+      cspu5_assess3_array1_exam_prep:
         '10': '10'
         '4': '4'
         '7': '7'
@@ -10550,7 +11284,19 @@ en:
         '4': '4'
         '5': '5'
         '6': '6'
+      cspu5_assess3_array2_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
       cspu5_assess3_array3:
+        <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
+        <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
+        <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
+        <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
+      cspu5_assess3_array3_exam_prep:
         <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
         <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
         <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
@@ -10562,7 +11308,19 @@ en:
         '2': '2'
         '8': '8'
         Error. Index 3 does not exist.: Error. Index 3 does not exist.
+      cspu5_assess3_array4_exam_prep:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '8': '8'
+        Error. Index 3 does not exist.: Error. Index 3 does not exist.
       cspu5_assess3_array5:
+        <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
+        <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
+        <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
+        <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
+        <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
+      cspu5_assess3_array5_exam_prep:
         <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">: <img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">
         <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">: <img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">
         <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">: <img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">
@@ -10574,7 +11332,19 @@ en:
         'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
         'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
         'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>': 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
+      cspu5_assess3_bakeSale_exam_prep:
+        'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
+        'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
+        'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
+        'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
+        'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>': 'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>'
       cspu5_assess3_counter:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+      cspu5_assess3_counter_exam_prep:
         '0': '0'
         '1': '1'
         '2': '2'
@@ -10586,7 +11356,19 @@ en:
         2, 1: 2, 1
         2, 2: 2, 2
         2, 4: 2, 4
+      cspu5_assess3_impossibleOutput_exam_prep:
+        0, 0: 0, 0
+        1, 1: 1, 1
+        2, 1: 2, 1
+        2, 2: 2, 2
+        2, 4: 2, 4
       cspu5_assess3_listAppend:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '6': '6'
+        Error. There is no index 2.: Error. There is no index 2.
+      cspu5_assess3_listAppend_exam_prep:
         '1': '1'
         '2': '2'
         '3': '3'
@@ -10598,7 +11380,19 @@ en:
         '4': '4'
         '5': '5'
         Infinite loop: Infinite loop
+      cspu5_assess3_loopValue1_exam_prep:
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        Infinite loop: Infinite loop
       cspu5_assess3_loopValue2:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
+      cspu5_assess3_loopValue2_exam_prep:
         '0': '0'
         '4': '4'
         '5': '5'
@@ -10610,7 +11404,19 @@ en:
         '5': '5'
         '6': '6'
         Infinite loop: Infinite loop
+      cspu5_assess3_loopValue3_exam_prep:
+        '0': '0'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        Infinite loop: Infinite loop
       cspu5_assess3_mysterySwap:
+        a: a
+        b: b
+        c: c
+        d: d
+        e: e
+      cspu5_assess3_mysterySwap_exam_prep:
         a: a
         b: b
         c: c
@@ -10622,7 +11428,19 @@ en:
         <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
         <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
         <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
+      cspu5_assess3_robot_exam_prep:
+        <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>: <img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>
+        <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>: <img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>
+        <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>: <img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>
+        <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>: <img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>
+        <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>: <img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>
       cspu5_assess3_rollDie:
+        rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
+        rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
+        rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
+        rolls = 100 || sixes <= 25: rolls = 100 || sixes <= 25
+        rolls >= 0 && sixes < 25: rolls >= 0 && sixes < 25
+      cspu5_assess3_rollDie_exam_prep:
         rolls < 100 && sixes < 25: rolls < 100 && sixes < 25
         rolls < 100 || sixes < 25: rolls < 100 || sixes < 25
         rolls < sixes || sixes > 25: rolls < sixes || sixes > 25
@@ -10633,13 +11451,30 @@ en:
         <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
         <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
         <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
+      cspu5_assess3_swap_exam_prep:
+        <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">: <img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">
+        <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">: <img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">
+        <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
+        <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
       cspu5_assess3_whileTrue:
         While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
         While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
         While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
         While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
+      cspu5_assess3_whileTrue_exam_prep:
+        While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
+        While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
+        While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
+        While loops terminate after a fixed number of loops that is determined after the loop executes once.: While loops terminate after a fixed number of loops that is determined after the loop executes once.
+        While loops terminate after a fixed number of loops that is pre-determined: While loops terminate after a fixed number of loops that is pre-determined
       cspu5_assess4_arrayContains:
+        <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
+        <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
+        <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
+        <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">: <img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">
+        <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">: <img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">
+      cspu5_assess4_arrayContains_exam_prep:
         <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">: <img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">
         <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">: <img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">
         <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">: <img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">
@@ -10651,12 +11486,29 @@ en:
         '3': '3'
         '4': '4'
         '9': '9'
+      cspu5_assess4_dataReturns_exam_prep:
+        '10': '10'
+        '16': '16'
+        '3': '3'
+        '4': '4'
+        '9': '9'
       cspu5_assess4_listContains:
         <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
         <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
         <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
         <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
+      cspu5_assess4_listContains_exam_prep:
+        <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">: <img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">
+        <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">: <img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">
+        <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">: <img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">
+        <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">: <img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">
       cspu5_assess4_listOutput:
+        '17': '17'
+        '3': '3'
+        '42': '42'
+        '9': '9'
+        Error. Index 1 does not exist.: Error. Index 1 does not exist.
+      cspu5_assess4_listOutput_exam_prep:
         '17': '17'
         '3': '3'
         '42': '42'
@@ -10668,7 +11520,19 @@ en:
         Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
         Mystery displays the number at index n.: Mystery displays the number at index n.
         Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
+      cspu5_assess4_mysteryMethod_exam_prep:
+        Mystery displays the index of every occurrence of the value n in the list.: Mystery displays the index of every occurrence of the value n in the list.
+        Mystery displays the index of the first occurrence of the value n in the list.: Mystery displays the index of the first occurrence of the value n in the list.
+        Mystery displays the index of the last occurrence of the value n in the list.: Mystery displays the index of the last occurrence of the value n in the list.
+        Mystery displays the number at index n.: Mystery displays the number at index n.
+        Mystery displays true if n is in the list.: Mystery displays true if n is in the list.
       cspu5_assess4_mysteryResult:
+        It always returns c: It always returns c
+        It returns the average of the three input values: It returns the average of the three input values
+        It returns the largest of the three input values: It returns the largest of the three input values
+        It returns the middle of the three input values: It returns the middle of the three input values
+        mystery returns the smallest of the three input values: mystery returns the smallest of the three input values
+      cspu5_assess4_mysteryResult_exam_prep:
         It always returns c: It always returns c
         It returns the average of the three input values: It returns the average of the three input values
         It returns the largest of the three input values: It returns the largest of the three input values
@@ -10680,13 +11544,31 @@ en:
         The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
         The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
         The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
+      cspu5_assess4_mysteryReturn_exam_prep:
+        The procedure counts how long it takes to find two numbers in descending order and returns that number: The procedure counts how long it takes to find two numbers in descending order and returns that number
+        The procedure returns false when data is in descending order: The procedure returns false when data is in descending order
+        The procedure returns how long it takes to find two numbers in ascending order: The procedure returns how long it takes to find two numbers in ascending order
+        The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
+        The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
       cspu5_assess4_playGame:
         DISPLAY (count): DISPLAY (count)
         DISPLAY (“game over”): DISPLAY (“game over”)
         Nothing. Procedure works as is.: Nothing. Procedure works as is.
         RETURN (count): RETURN (count)
         RETURN (“game over”): RETURN (“game over”)
+      cspu5_assess4_playGame_exam_prep:
+        DISPLAY ("game over"): DISPLAY ("game over")
+        DISPLAY (count): DISPLAY (count)
+        Nothing. Procedure works as is.: Nothing. Procedure works as is.
+        RETURN ("game over"): RETURN ("game over")
+        RETURN (count): RETURN (count)
       cspu5_assess4_robot:
+        <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
+        <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
+        <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
+        <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
+        <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      cspu5_assess4_robot_exam_prep:
         <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">: <img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">
         <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">: <img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">

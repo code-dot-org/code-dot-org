@@ -1,0 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+- if @seat_accepted
+  %p
+    We’re excited you’re planning to join us this summer! You will receive more
+    information about travel approximately six weeks before TeacherCon. In the meantime,
+    please
+    %strong
+      do not
+    book your flight, and make sure to
+    contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any
+    questions. We look forward to seeing you this summer!
+- else
+  %p
+    Thank you for submitting your TeacherCon registration form. You responded that you
+    are not able to attend your assigned TeacherCon dates. Please contact
+    <a href="mailto:facilitators@code.org">facilitators@code.org</a> as soon as possible
+    so that we may assist you.

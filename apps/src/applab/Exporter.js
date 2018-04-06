@@ -3,14 +3,25 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+import {SnackSession} from '@code-dot-org/snack-sdk';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
-import exportProjectEjs from '../templates/exportProject.html.ejs';
-import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
+import exportProjectEjs from '../templates/export/project.html.ejs';
+import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
+import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
+import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
+import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
+import exportExpoAppJs from '../templates/export/expo/App.exported_js';
+import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
+import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
+import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import exportExpoIconPng from '../templates/export/expo/icon.png';
+import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -216,68 +227,111 @@ function extractCSSFromHTML(el) {
 }
 
 export default {
-  exportAppToZip(appName, code, levelHtml) {
-    var holder = document.createElement('div');
-    holder.innerHTML = levelHtml;
-    var appElement = holder.children[0];
-    appElement.id = 'divApplab';
-    appElement.style.display = 'block';
-    appElement.classList.remove('notRunning');
-    appElement.classList.remove('withCrosshair');
+  exportAppToZip(appName, code, levelHtml, expoMode) {
+    const { css, outerHTML } = transformLevelHtml(levelHtml);
 
-    var css = extractCSSFromHTML(appElement);
-    var html = exportProjectEjs({htmlBody: appElement.outerHTML});
+    const jQueryBaseName = 'jquery-1.12.1.min';
+    var html;
+    if (expoMode) {
+      html = exportExpoIndexEjs({
+        htmlBody: outerHTML,
+        applabApiPath: "applab-api.j",
+        jQueryPath: jQueryBaseName + ".j",
+        applabCssPath: "applab/applab.css",
+        appOptionsPath: null,
+        commonLocalePath: null,
+        applabLocalePath: null,
+        commonCssPath: null,
+      });
+    } else {
+      html = exportProjectEjs({htmlBody: outerHTML});
+    }
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
     const staticAssets = [
       {
         url: '/blockly/js/en_us/common_locale.js' + cacheBust,
-        zipPath: appName + '/common_locale.js'
       }, {
         url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
-        zipPath: appName + '/applab_locale.js'
       }, {
         url: '/blockly/js/applab-api.js' + cacheBust,
-        zipPath: appName + '/applab/applab-api.js'
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
-        zipPath: appName + '/applab/applab.css'
       }, {
         url: '/blockly/css/common.css' + cacheBust,
-        zipPath: appName + '/applab/common.css'
       },
     ];
+    if (expoMode) {
+      staticAssets.push({
+        url: 'https://code.jquery.com/' + jQueryBaseName + '.js',
+      });
+    }
+
+    const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
+    const zipAssetPrefix = appName + '/assets/';
 
     const appAssets = dashboard.assets.listStore.list().map(asset => ({
       url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: 'assets/' + asset.filename,
-      zipPath: appName + '/assets/' + asset.filename,
+      rootRelativePath: rootRelativeAssetPrefix + asset.filename,
+      zipPath: zipAssetPrefix + asset.filename,
       dataType: 'binary',
       filename: asset.filename,
     }));
 
-    function rewriteAssetUrls(data) {
-      return appAssets.reduce(function (data, assetToDownload) {
-        if (data.indexOf(assetToDownload.url) >= 0) {
-          return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
-        }
-        return data.split(assetToDownload.filename).join(assetToDownload.rootRelativePath);
-      }, data);
+    if (expoMode) {
+      appAssets.push({
+        url: exportExpoIconPng,
+        rootRelativePath: 'appassets/icon.png',
+        zipPath: appName + '/appassets/icon.png',
+        dataType: 'binary',
+        filename: 'icon.png',
+      });
+      appAssets.push({
+        url: exportExpoSplashPng,
+        rootRelativePath: 'appassets/splash.png',
+        zipPath: appName + '/appassets/splash.png',
+        dataType: 'binary',
+        filename: 'splash.png',
+      });
     }
 
+    const mainProjectFilesPrefix = appName + (expoMode ? '/assets/' : '/');
+
     var zip = new JSZip();
-    zip.file(appName + "/README.txt", readme);
-    zip.file(appName + "/index.html", rewriteAssetUrls(html));
-    zip.file(appName + "/style.css", rewriteAssetUrls(css));
-    zip.file(appName + "/code.js", rewriteAssetUrls(code));
+    if (expoMode) {
+      const appJson = exportExpoAppJsonEjs({
+        appName: appName,
+        projectId: project.getCurrentId()
+      });
+
+      zip.file(appName + "/package.json", exportExpoPackageJson);
+      zip.file(appName + "/app.json", appJson);
+      zip.file(appName + "/App.js", exportExpoAppJs);
+      zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
+    }
+    // NOTE: for expoMode, it is important that index.html comes first...
+    zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
+    zip.file(mainProjectFilesPrefix + "README.txt", readme);
+    zip.file(mainProjectFilesPrefix + "style.css", rewriteAssetUrls(appAssets, css));
+    zip.file(mainProjectFilesPrefix + (expoMode ? "code.j" : "code.js"), rewriteAssetUrls(appAssets, code));
+
+    const rootApplabPrefix = expoMode ? 'assets/applab/' : 'applab/';
+    const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
+    const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
     return new Promise((resolve, reject) => {
       $.when(...[...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
       )).then(
         ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], ...rest) => {
-          zip.file(appName + "/applab/applab-api.js",
+          zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+          if (expoMode) {
+            const [data] = rest[0];
+            zip.file(mainProjectFilesPrefix + jQueryBaseName + '.j', data);
+            // Remove the jquery file from the rest array:
+            rest = rest.slice(1);
+          }
           rest.forEach(([data], index) => {
             zip.file(appAssets[index].zipPath, data, {binary: true});
           });
@@ -304,12 +358,12 @@ export default {
             .map(
               url => ({
                 url,
-                rootRelativePath: 'applab/assets' + url,
-                zipPath: appName + '/applab/assets' + url,
+                rootRelativePath: rootRelativeApplabAssetPrefix + url,
+                zipPath: zipApplabAssetPrefix + url,
               })
             );
 
-          zip.file(appName + "/applab/applab.css", applabCSS);
+          zip.file(appName + "/" + rootApplabPrefix + "applab.css", applabCSS);
 
           $.when(
             ...cssAssetsToDownload.map(
@@ -320,6 +374,13 @@ export default {
               assetResponses.forEach(([data], index) => {
                 zip.file(cssAssetsToDownload[index].zipPath, data, {binary: true});
               });
+              if (expoMode) {
+                // Write a packagedFiles.js into the zip that contains require
+                // statements for each file under assets. This will allow the
+                // Expo app to locally install of these files onto the device.
+                const packagedFilesJs = this.createPackageFilesFromZip(zip, appName);
+                zip.file(appName + "/packagedFiles.js", packagedFilesJs);
+              }
               return resolve(zip);
             },
             () => {
@@ -337,12 +398,175 @@ export default {
     });
   },
 
-  exportApp(appName, code, levelHtml) {
-    return this.exportAppToZip(appName, code, levelHtml)
+  async exportApp(appName, code, levelHtml, suppliedExpoOpts) {
+    const expoOpts = suppliedExpoOpts || {};
+    if (expoOpts.mode === 'publish') {
+      return await this.publishToExpo(appName, code, levelHtml);
+    }
+    return this.exportAppToZip(appName, code, levelHtml, expoOpts.mode === 'zip')
       .then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");
         });
       });
+  },
+
+  createPackageFilesFromZip(zip, appName) {
+    const moduleList = [];
+    zip.folder(appName + "/assets").forEach((fileName, file) => {
+        if (!file.dir) {
+          moduleList.push({ fileName });
+        }
+    });
+    const entries = moduleList.map(module => exportExpoPackagedFilesEntryEjs({ module }));
+    return exportExpoPackagedFilesEjs({ entries });
+  },
+
+  createPackageFilesFromExpoFiles(files) {
+    const moduleList = [];
+    const assetPrefix = "assets/";
+    const assetPrefixLength = assetPrefix.length;
+    for (const fileName in files) {
+      if (fileName.indexOf(assetPrefix) !== 0) {
+        continue;
+      }
+      const relativePath = fileName.substring(assetPrefixLength);
+      moduleList.push({ fileName: relativePath });
+    }
+    const entries = moduleList.map(module => exportExpoPackagedFilesEntryEjs({ module }));
+    return exportExpoPackagedFilesEjs({ entries });
+  },
+
+  async publishToExpo(appName, code, levelHtml) {
+    const appOptionsJs = getAppOptionsFile();
+    const { css, outerHTML } = transformLevelHtml(levelHtml);
+    const html = exportExpoIndexEjs({
+      htmlBody: outerHTML,
+      commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
+      applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
+      appOptionsPath: "appOptions.j",
+      applabApiPath: "https://studio.code.org/blockly/js/applab-api.js",
+      jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
+      commonCssPath: "https://studio.code.org/blockly/css/common.css",
+      applabCssPath: "https://studio.code.org/blockly/css/applab.css",
+    });
+
+    const appAssets = dashboard.assets.listStore.list().map(asset => ({
+      url: assetPrefix.fixPath(asset.filename),
+      rootRelativePath: asset.filename,
+      dataType: 'binary',
+      filename: asset.filename,
+    }));
+
+    const files = {
+      'App.js': { contents: exportExpoAppJs, type: 'CODE'},
+      'CustomAsset.js': { contents: exportExpoCustomAssetJs, type: 'CODE'},
+    };
+
+    const session = new SnackSession({
+      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+      files,
+      name: project.getCurrentName(),
+      sdkVersion: '25.0.0',
+    });
+
+    // Important that index.html comes first:
+    const fileAssets = [
+      { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
+      { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
+      { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
+      { filename: 'appOptions.j', data: appOptionsJs },
+    ];
+
+    const fileUploads = fileAssets.map(({ data }) =>
+        session.uploadAssetAsync(new Blob([data]))
+    );
+    const snackFileUrls = await Promise.all(fileUploads);
+
+    snackFileUrls.forEach((url, index) => {
+      files['assets/' + fileAssets[index].filename] = {
+        contents: url,
+        type: 'ASSET',
+      };
+    });
+
+    const assetDownloads = appAssets.map(asset =>
+      download(asset.url, asset.dataType || 'text')
+    );
+
+    const downloadedAssets = await Promise.all(assetDownloads);
+    const assetUploads = downloadedAssets.map(downloadedAsset =>
+        session.uploadAssetAsync(downloadedAsset)
+    );
+    const snackAssetUrls = await Promise.all(assetUploads);
+
+    snackAssetUrls.forEach((url, index) => {
+      files['assets/' + appAssets[index].filename] = {
+        contents: url,
+        type: 'ASSET',
+      };
+    });
+    files['packagedFiles.js'] = {
+      contents: this.createPackageFilesFromExpoFiles(files),
+      type: 'CODE',
+    };
+
+    await session.sendCodeAsync(files);
+    const saveResult = await session.saveAsync();
+    const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
+
+    return expoURL;
   }
 };
+
+// TODO: for expoMode, replace spaces in asset filenames or wait for this fix
+// to make it into Metro Bundler:
+// https://github.com/facebook/react-native/pull/10365
+function rewriteAssetUrls(appAssets, data) {
+  return appAssets.reduce(function (data, assetToDownload) {
+    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
+    return data.replace(new RegExp(`["|']${assetToDownload.filename}["|']`), `"${assetToDownload.rootRelativePath}"`);
+  }, data);
+}
+
+function transformLevelHtml(levelHtml) {
+  const holder = document.createElement('div');
+  holder.innerHTML = levelHtml;
+  const appElement = holder.children[0];
+  appElement.id = 'divApplab';
+  appElement.style.display = 'block';
+  appElement.classList.remove('notRunning');
+  appElement.classList.remove('withCrosshair');
+
+  // NOTE: this also modifies appElement!
+  const css = extractCSSFromHTML(appElement);
+
+  return {
+    outerHTML: appElement.outerHTML,
+    css,
+  };
+}
+
+function getEnvironmentPrefix() {
+  const hostname = window.location.hostname;
+  if (hostname.includes("adhoc")) {
+    // As adhoc hostnames may include other keywords, check it first.
+    return "cdo-adhoc";
+  }
+  if (hostname.includes("test")) {
+    return "cdo-test";
+  }
+  if (hostname.includes("levelbuilder")) {
+    return "cdo-levelbuilder";
+  }
+  if (hostname.includes("staging")) {
+    return "cdo-staging";
+  }
+  if (hostname.includes("localhost")) {
+    return "cdo-development";
+  }
+  if (hostname.includes("code.org")) {
+    return "cdo";
+  }
+  return "cdo-unknown";
+}

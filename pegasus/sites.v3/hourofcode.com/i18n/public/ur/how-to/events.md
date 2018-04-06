@@ -7,55 +7,55 @@ nav: how_to_nav
 
 # آور-آف-کوڈ کا انعقاد کیسے کریں
 
-## 1. Prepare for your event
+## 1. آپ کے ایونٹ کے لئے تیار کریں
 
-- Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
+- مقام، تاریخ، اور وقت کا تعین کریں.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- میڈیا / دبائیں مدعو کریں. یعنی مقامی خبر سٹیشن، اخبار، تعلیم / ٹیک بلاگر. مدد کے لئے ہماری [ کٹ دبائیں ](٪= حل_ورل('/ پروموٹ /press-kit') ٪) ملاحظہ کریں.
 
-## 2. During your event
+## 2. آپ کے ایونٹ کے دوران
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+- اپنے ایونٹ کو ہمارے [ متاثر کن ویڈیوز ](٪= حل_ورل('/ پروموٹ / ریورسورس#videos') ٪) کے ساتھ لاؤ.
+- ان [ اعداد و شمار اور انفرافیککس ](٪= solution_url('/romote/stats') ٪) کا استعمال کرتے ہوئے، کمپیوٹر سائنس کی اہمیت کا جائزہ لے کر انٹرویو دیں.   
       
     
-- Other event ideas: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- دیگر ایونٹ کے خیالات: 
+    - کمپیوٹر سائنس سے متعلق اس کے کام پر گفتگو کرنے کے لئے مقامی صنعت کے رہنما کو مدعو کریں.
+    - ایک مقامی سیاستدان کو مدعو کریں اور طلباء کو اس کے بارے میں سکھاو سکیں.
+    - کیا طالب علموں کا ایک گروپ غیر فعال شدہ سرگرمی کا مظاہرہ کرتا ہے.
+    - طالب علموں کا ایک گروہ کیا پرنسپل یا اساتذہ کے ایک گروپ کو کس طرح کوڈ سکھانے کے لئے سکھاتا ہے.
+    - اگر آپ کا اسکول پہلے ہی کمپیوٹر سائنس کو سکھاتا ہے، تو طالب علموں کو ڈیمو منصوبوں کی ضرورت ہے.
 
-## 3. Share how it went
+## 3. یہ کیسے چلا گیا
 
-- Share pictures of your event on Facebook and Twitter. 
-- Use the hashtag **#HourOfCode**
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-## Example Event Plan
-
-**Event:** School-wide Computer Science Education Week kick-off assembly
-
-**Date:** Dec. 5th (start of Computer Science Education Week)
-
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
-
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
-  
-
-
-## Run of Show
-
-| Time             | Action                                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                       |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
-
-<%= view :signup_button %>
+- فیس بک اور ٹویٹر پر اپنے ایونٹ کی تصاویر کا اشتراک کریں. 
+- ہاسٹگ ** #HourOfCode </ strong> کا استعمال کریں</li> </ul> 
+    
+    ## کوڈ آفس کے ساتھ ایک خاندانی کوڈ رات کی میزبانی کریں اور والدین کو شرکت کرنے میں دعوت دیں
+    
+    K-5 شام کی تقریب کی میزبانی پر غور کریں اور والدین کو مدعو کرنے کے لئے اپنے طالب علموں کو کمپیوٹر سائنس کے ایک گھنٹہ میں شامل ہونے پر دعوت دیں. یہ بڑی برادری میں حصہ لینے اور آپ کے اسکول میں کمپیوٹر سائنس کے لئے والدین کی مدد کی حوصلہ افزائی کرنے کا بہترین طریقہ ہے. خاندانی کوڈ نائٹ میں ہمارا شراکت دار نے منصوبہ بندی کے چیک لسٹ کے ساتھ سبھی میں ایک واقعہ کا کٹ بنا دیا ہے، پیش کرنے والے کی اسکرپٹ، دعوت نامہ ای میلز، پوسٹر، پاور پوائنٹس اور مزید اپنے ایونٹ کو چلانے کے لئے. [ واقعہ کٹ ڈاؤن لوڈ کرنے کے لئے یہاں کلک کریں ](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+    
+    ## مثال کے طور پر واقعہ منصوبہ
+    
+    ** واقعہ: </ strong> سکول وسیع کمپیوٹر سائنس تعلیم ہفتہ کک آف اسمبلی</p> 
+    
+    **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+    
+    ** وقت: </ strong> اسکول کے دن کے دوران. مڈ صبح کی تقریب کو ترجیح دی. تقریبا 1 گھنٹہ.</p> 
+    
+    ** مقام: </ strong> اسکول اسمبلی ہال (مثال کے طور پر تھیٹر، جم، کیفیٹیریا)   
+      
+    </p> 
+    
+    ## دکھائیں چلائیں
+    
+    | وقت               | عمل                                                                                                                                             |
+    | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+    | 10:00 - 10:05 بجے | ہمارے [ متاثر کن ویڈیوز ](٪= solution_url('/romote/resources#videos') ٪) میں سے ایک کے ساتھ کھولیں                                              |
+    | 10:05 - 10:15 بجے | پرنسپل کو کمپیوٹر سائنس کی اہمیت کا سامنا کرنا پڑتا ہے. ان [ اعداد و شمار اور انفرافیککس ](٪= solution_url('/romote/stats') ٪) کا استعمال کریں. |
+    | 10:15 - 10:30 بجے | ان کے پس منظر اور کس طرح کی ٹیکنالوجی اور کمپیوٹر سائنس ان کی روز مرہ زندگی میں اہم کردار ادا کرتا ہے کے بارے میں بات کرنے کے لئے خصوصی مہمان.  |
+    | 10:30 - 10:40 بجے | طالب علموں کو اسکول کے لئے کوڈ کا ڈیمو کرنا ہے. تفریح موڑ: کیا وہ پرنسپل، سیاستدان، یا دیگر طلبا کو سکھاتے ہیں!                                 |
+    | 10:40 - 11 بجے    | طالب علموں کو ایک غیر فعال سرگرمی ڈیمو اور کمپیوٹرز کا استعمال کئے بغیر کمپیوٹر سائنس کیسے سکھایا جا سکتا ہے.                                   |
+    | 11:00 - 11:05 بجے | اساتذہ نے جو اسکول کی وسیع تقریر میں مدد کی ہے اس کے قریب بند ہونے والے تبصرے بھی پیش کرتے ہیں.                                                 |
+    
+    <%= view :signup_button %>

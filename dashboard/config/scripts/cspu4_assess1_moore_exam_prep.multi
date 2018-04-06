@@ -1,0 +1,20 @@
+name 'cspu4_assess1_moore_exam_prep'
+wrong 'Moore\'s Law describes a relationship of boolean logic statements involving AND and OR'
+wrong 'Moore\'s Law is the principle that one should assume that any traffic on the Internet is insecure'
+right 'Moore\'s Law is the observation that computing power tends to double every two years'
+wrong 'Moore\'s Law explains why cracking modern cryptography is a "computationally hard" problem'
+
+markdown <<MARKDOWN
+Which of the following most accurately describes Moore's Law:
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Definition of Moore\'s Law:** A predication made by Gordon Moore in 1965 that
+computing power will double every 1.5-2 years, it has remained more or less
+true ever since.
+
+**More Informaton:**
+
+* http://www.mooreslaw.org/ 
+* http://www.intel.com/content/www/us/en/silicon-innovations/moores-law-technology.html 
+MARKDOWN

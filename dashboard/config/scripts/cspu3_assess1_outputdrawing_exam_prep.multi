@@ -1,0 +1,23 @@
+name 'cspu3_assess1_outputdrawing_exam_prep'
+wrong '<img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">'
+right '<img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">'
+wrong '<img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">'
+wrong '<img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">'
+wrong '<img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">'
+
+markdown <<MARKDOWN
+Which of the following images represents the most likely output produced by the code segment given below?
+
+![](https://images.code.org/e97c38a42f3b9970454a91d7e4af2ff6-image-1474953070863.png)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the given chunk of code line by line:
+
+* Line 1: A for loop is written. Given the beginning "i = 0" and the condition "i < 15", the code inside the loop will run 15 times.
+* Line 2: The robot will move forward somewhere between 15 and 75 steps, the number of steps is chosen at random.
+* Line 3: The robot turns 90 degrees to the right.
+
+Lines 2 and 3 are repeated 15 times, so there will be 15 lines made. As the robot turns 90 degrees each time, the corner it turns will be right angles. By process of elimination (right angles, and the robot moves forward 15 times with varied distances each time), an answer can be chosen.
+MARKDOWN

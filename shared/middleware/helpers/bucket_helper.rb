@@ -187,7 +187,7 @@ class BucketHelper
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v2',
+      study_group: 'v3',
       event: 'replace-non-current-main-json',
 
       project_id: encrypted_channel_id,
@@ -273,16 +273,24 @@ class BucketHelper
 
     version_restored = false
 
-    begin
-      response = s3.copy_object(
-        bucket: @bucket,
-        key: key,
-        copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
-      )
-      version_restored = true
-    rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
-      raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
+    unless version_id.nil? || version_id.empty?
+      begin
+        response = s3.copy_object(
+          bucket: @bucket,
+          key: key,
+          copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
+        )
+        version_restored = true
+      rescue Aws::S3::Errors::NoSuchVersion
+        # Do nothing - we'll attempt the fallback below.
+      rescue Aws::S3::Errors::InvalidArgument => err
+        # On invalid version, try the fallback - otherwise reraise.
+        raise unless invalid_version_id?(err)
+      end
+    end
 
+    # Try restoring the latest version
+    unless version_restored
       if object_exists?(key)
         response = s3.copy_object(
           bucket: @bucket,
@@ -292,12 +300,13 @@ class BucketHelper
           metadata: {
             abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
             failed_restore_at: Time.now.to_s,
-            failed_restore_from_version: version_id
+            failed_restore_from_version: version_id || ''
           }
         )
         version_restored = true
         Honeybadger.notify(
-          "Restore at Specified Version Failed. Restored most recent.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed. Restored most recent.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
@@ -308,7 +317,8 @@ class BucketHelper
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
         Honeybadger.notify(
-          "Restore at Specified Version Failed on deleted object. No action taken.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed on deleted object. No action taken.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
@@ -347,7 +357,7 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
-      study_group: 'v2',
+      study_group: 'v3',
       event: 'version-restored',
 
       # Make it easy to limit our search to restores in the sources bucket for a certain project.
