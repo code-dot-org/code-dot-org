@@ -103,11 +103,8 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "// Create your event handlers here\r\n\r\n\r\n\r\n// Create your functions here\r\n\r\n\r\n",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
