@@ -740,7 +740,7 @@ export function animationSourceUrl(key, props, withVersion = false, channelId = 
   if (versionNotNeeded) {
     return assetPrefix.fixPath(props.sourceUrl);
   } else if (uploadedAnimation && !props.sourceUrl.includes('?version')) {
-    if (srcInProj) {
+    if (srcInProj && props.version) {
       // SrcUrl doesn't point to a delete animation
       return assetPrefix.fixPath(props.sourceUrl) + '?version=' + props.version;
     } else {
