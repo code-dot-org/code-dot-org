@@ -23,9 +23,9 @@
   anybody_can_learn: Vsakdo se lahko nauči.
   learn_now: Nauči se zdaj
   petition_message: Vsak učenec v vsaki šoli bi moral imeti možnost učenja računalništva
-  petition_sign_message: "Če se strinjate, podpišite se.  Pridružite se # ostalim."
-  petition_sign_message_support: "Če nas podpirate, se podpišite. Pridružite se #
-    ostalim."
+  petition_sign_message: 'Če se strinjate, podpišite se.  Pridružite se # ostalim.'
+  petition_sign_message_support: 'Če nas podpirate, se podpišite. Pridružite se #
+    ostalim.'
   petition_join_others: 'Pridruži se # ostalim'
   name: Ime
   email: Elektronska pošta
@@ -89,23 +89,22 @@
   n_participants: "# udeležencev"
   go: Pojdi
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
-  congratulations_on_completing_hoc: "Čestitamo za dokončanje Ure za kodo"
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   congratulations_volunteer: 'Čestitamo: Sedaj, ko si preizkusil Uro kode, <a href="https://code.org/volunteer">se
     lahko vpišeš med prostovoljce v razredu</a> in pomagaš drugim,dase učijo na svoji
     Uri kode!'
-  congratulations_on_completing_course1: "Čestitke za dokončan Tečaj 1"
-  congratulations_on_completing_course2: "Čestitke za dokončan Tečaj 2"
-  congratulations_on_completing_course3: "Čestitke za dokončan Tečaj 3"
-  congratulations_on_completing_course4: "Čestitke za dokončan Tečaj 4"
+  congratulations_on_completing_course1: Čestitke za dokončan Tečaj 1
+  congratulations_on_completing_course2: Čestitke za dokončan Tečaj 2
+  congratulations_on_completing_course3: Čestitke za dokončan Tečaj 3
+  congratulations_on_completing_course4: Čestitke za dokončan Tečaj 4
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "Čestitamo za dokončanje Pospešenega
-    Tečaja"
+  congratulations_on_completing_accelerated: Čestitamo za dokončanje Pospešenega Tečaja
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
   congrats_next_tutorials_desc: Preizkusi te krajše, 1 urne tutoriale ali pa poskusi
     <a href="%{current_path}/next"> podoben tutorial</a>.
@@ -223,8 +222,8 @@
     z  <a href='http://studio.code.org'> drugimi tečaje</a>, ali pa si oglejte druge
     možnost <a href='/learn/beyond'> učenje po Uro za kodo</a>.
   thanks_for_submitting: Hvala!
-  if_you_enjoyed: "Če ste uživali v učenju, vprašajte prijatelje, naj tudi oni preizkusijo!
-    \ Želimo, da ves svet izve."
+  if_you_enjoyed: Če ste uživali v učenju, vprašajte prijatelje, naj tudi oni preizkusijo!  Želimo,
+    da ves svet izve.
   personalize_certificate: Prilagodite vaš certifikat
   share_achievement: Deli svoj dosežek
   beyond_hour_message: Nadaljuj z našimi <a href='http://studio.code.org'> drugimi
@@ -880,13 +879,13 @@
   dashboard_filter_all: Vse
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Učiteljeva domača stran
-  dashboard_navigation_section_student_progress: "Študentski računi in napredek"
+  dashboard_navigation_section_student_progress: Študentski računi in napredek
   dashboard_navigation_section_teacher_progress: Tvoj napredek v tečaju
   dashboard_navigation_section_lesson_plans: Učni načrti in viri
   dashboard_navigation_section_community: Pomoč in Skupnosti
   dashboard_navigation_section_pd: Strokovni razvoj
   dashboard_navigation_section_speakers: Računalništvo <br/> gostujoči predavatelji
-  dashboard_navigation_all_sections: "Študentski računi in napredek"
+  dashboard_navigation_all_sections: Študentski računi in napredek
   dashboard_navigation_view_progress: Napredek
   dashboard_navigation_view_text_responses: Ogled besedilnih odgovorov
   dashboard_navigation_view_assessments: Assessments
@@ -924,14 +923,14 @@
   dashboard_sections_table_students: Učenci
   dashboard_sections_table_code: Koda razdelka
   dashboard_sections_name: Ime razdelka
-  dashboard_sections_choose_secret: "Če bi želeli priskrbeti račune za svoje učence,
-    izberite skrivno vrsto  <b>besedo</b> ali <b>sliko</b> za ta razdelek."
+  dashboard_sections_choose_secret: Če bi želeli priskrbeti račune za svoje učence,
+    izberite skrivno vrsto  <b>besedo</b> ali <b>sliko</b> za ta razdelek.
   dashboard_sections_secret_word: "<b>Beseda</b> vam omogoča, da nastavite skrivno
     besedo za vsakega učenca."
   dashboard_sections_secret_picture: "<b>Slika</b> vam omogoča, da nastavite skrivno
     sliko za vsakega učenca, idealen za mlajše učence, ki še ne znajo tipkati."
-  dashboard_sections_secret_none: "Če bi želeli, da vaši učenci upravljajo svoje račune,
-    vključno z izbiro svoja gesla, izberite vrsto skrivnost <b>brez</b>."
+  dashboard_sections_secret_none: Če bi želeli, da vaši učenci upravljajo svoje račune,
+    vključno z izbiro svoja gesla, izberite vrsto skrivnost <b>brez</b>.
   dashboard_sections_print_secrets: Natisnete lahko kartice, ki vsebujejo informacije
     o računu in jih razdelite vsakemu učencu posebej.
   dashboard_sections_switch_section: 'Zamenjaj razdelek:'
@@ -977,7 +976,7 @@
   dashboard_students_name: Ime
   dashboard_students_progress: Napredek
   dashboard_students_male: Moški
-  dashboard_students_female: "Ženska"
+  dashboard_students_female: Ženska
   dashboard_students_completed_levels: Dokončani nivoji
   dashboard_students_total_lines: Vrstic kode
   dashboard_students_share_section: 'Delite vstopno stran za ta razdelek s svojimi
@@ -997,9 +996,9 @@
     Nov par skrivnih besed bo ustvarjen, ko se učenec prijavi. '
   dashboard_students_join_link: Povejte svojim učencem, naj si ustvarite svoje račune
     in se pridružijo vašemu razdelku na
-  dashboard_students_no_email: "Če vaši učenci nimajo e-poštnega naslova, ali bi želeli
+  dashboard_students_no_email: Če vaši učenci nimajo e-poštnega naslova, ali bi želeli
     ustvariti račune za njih, spremenite vrsto skrivnosti za ta razdelek  v <b>besedo</b>
-    ali <b>sliko</b>."
+    ali <b>sliko</b>.
   dashboard_students_print_page: Natisnite to stran
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
@@ -1154,8 +1153,8 @@
     here.</a>
   how_to_teach_hoc: Kako poučevati Uro za kodo
   more_resources_educators: Več virov za učitelje in vzgojitelje
-  beyond_submission: "Želiš prispevati vadnico za Po Uri za kodo? Pogej kriterije
-    in prispevni obrazec."
+  beyond_submission: Želiš prispevati vadnico za Po Uri za kodo? Pogej kriterije in
+    prispevni obrazec.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: udeleženci
@@ -1643,11 +1642,11 @@
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
     colorful animated graphics, audio instructions.
-  allcancode_longdescription: "Študenti igrajo pustolovsko igro, ki temelji na izvirni
+  allcancode_longdescription: Študenti igrajo pustolovsko igro, ki temelji na izvirni
     zgodbi. Marca - glavnega lika - usmerjajo skozi vsako stopnjo s pomočjo navodil
     korak-za-korakom v obliki vizualnega programskega jezika, ki ga uporablja Ura
     za kodo. Spoznajo se z zaporedji ukazov, ponovitev in pogojev, brez da bi to sploh
-    opazili."
+    opazili.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
     water, and customize the scenery to add your own flare. Use code to tell the story
     you want to tell!
@@ -1678,7 +1677,7 @@
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR za nebralce
   hopscotch_beyond_name: 'Hopscotch: Programiranje na vašem iPadu'
-  pocketcode_beyond_name: "Žepno kodiranje"
+  pocketcode_beyond_name: Žepno kodiranje
   groklearning_beyond_name: Nauči se programirati v Python
   hacketyhack_beyond_name: Nauči se Ruby
   robomind_beyond_name: Programiraj virtualega robota
@@ -2033,7 +2032,7 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "Živjo %{username}"
+  user_header_label: Živjo %{username}
   user_header_settings: Moj račun
   user_header_logout: Izpis
   user_header_signin: Prijava

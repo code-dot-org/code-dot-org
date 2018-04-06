@@ -1,7 +1,7 @@
 "sk-SK":
   hour_of_code: Hodina kódovania
   hello: Ahoj svet
-  'yes': "Áno"
+  'yes': Áno
   'no': Nie
   select_language: Prosím, zvoľte si jazyk
   upgrade_ie_message: Code.org onedlho ukončí podporu pre Internet Explorer 8, 9 a
@@ -48,13 +48,13 @@
     for every student to learn.
   hoc2014_heading: Pridajte sa k <a href="http://hourofcode.com">Hodine kódu</a> <br/>
     8. až 14. Decembra 2014 <br/>
-  hoc2014_students: "Študenti"
+  hoc2014_students: Študenti
   hoc2014_try: Skús to
   hoc2014_teachers: Učitelia
   hoc2014_host: Zorganizujte ju
   hoc2014_everyone: Ktokoľvek
   hoc2014_support: Podporte ju &#x25BE;
-  hoc2014_whatishoc: "Čo je to Hodina Kódu?"
+  hoc2014_whatishoc: Čo je to Hodina Kódu?
   csedweek_map_header: "# CSEdWeek / Hodina kódu-udalosť vo svete"
   csedweek_map_signup: Zaregistrujte Vašu udalosť
   csedweek_map_search_placeholder: Hľadať Hour of Code udalosti
@@ -62,7 +62,7 @@
   csedweek_map_search_reset: Obnoviť
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Hour of Code udalosť
-  csedweek_map_legend_cs_tech_jam: "Špeciálna udalosť"
+  csedweek_map_legend_cs_tech_jam: Špeciálna udalosť
   cded_sign_up: Zaregistrovať sa
   cded_try_it: Skús to
   try_now: Skús teraz
@@ -71,7 +71,7 @@
     bezplatné kurzy</a>.  Každá základná škola môže <a href='http://code.org/educate/k5'>
     vyučovať informatiku</a>. Požiadajte stredné školy, aby <a href = 'http://code.org/educate/districts'
     > sa k nám pripojili.
-  california_button: "Ďalšie informácie"
+  california_button: Ďalšie informácie
   flappy_heading: Všetko najlepšie k narodeninám Code.org
   flappy_text: Code.org sa práve dožil 1 roku. <br/> <br/> Osláv to s nami vytvorením
     vlastnej <b>Flappy</b> hry. Naprogramuj vlastné pravidlá a zdieľaj s priateľmi!
@@ -86,7 +86,7 @@
   beginner: Začiatočník
   n_participants: "# účastníkov"
   go: Spustiť
-  thank_you_: "Ďakujeme!"
+  thank_you_: Ďakujeme!
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Gratulujeme ku absolvovaniu jednej Hodiny kódu
   congratulations_volunteer: 'Gratulujeme: Teraz keď si skúsil Hodinu kódu, <a href="https://code.org/volunteer">prihlás
@@ -220,7 +220,7 @@
     alebo vytlačiť. Teraz pokračujte s našimi <a href='http://studio.code.org'> ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>Výučbe
     po prvej hodine</a>.
-  thanks_for_submitting: "Ďakujeme za odoslanie!"
+  thanks_for_submitting: Ďakujeme za odoslanie!
   if_you_enjoyed: Ak sa ti výučba páčila, opýtaj sa priateľov či to chcú skúsiť tiež!
     Chceme, aby sa celý svet mohol učiť.
   personalize_certificate: Prispôsob si svoj certifikát
@@ -246,7 +246,7 @@
   get_started: Spustiť
   i_agree: súhlasím
   participant_select: "-Vyberte-"
-  participant_student: "Študent"
+  participant_student: Študent
   participant_parent: Rodič
   participant_educator: Pedagóg
   participant_engineer: Softvérový inžinier
@@ -259,7 +259,7 @@
   enter_country: Zadaj krajinu ak si mimo Spojené štáty
   used_infrequent_updates: Používa se iba pre občasné aktualizácie
   privacy_practices_children: Pozri naše zásady ochrany osobných údajov pre deti
-  petition_thankyou: "Ďakujeme, že si podpísal petíciu"
+  petition_thankyou: Ďakujeme, že si podpísal petíciu
   continue_learning_header: Pokračuj v učení nad rámec jednej hodiny
   continue_learning_body: Existuje veľa možností.  Môžeš sa učiť on-line alebo v miestnej
     škole alebo na letnom tábore.
@@ -464,7 +464,7 @@
   homepage_slot_text_link_host: Usporiadajte u vás Hodinu kódu
   homepage_slot_text_link_hocserved: "# účastníkov"
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hodinu kódu
-  homepage_slot_text_title_students: "Študenti"
+  homepage_slot_text_title_students: Študenti
   homepage_slot_text_blurb_students: Preskúmaj všetky naše tutoriály
   homepage_slot_text_blurb_students_courses: Preskúmaj naše kurzy
   homepage_slot_text_link_codestudio: Skúsiť Code Studio
@@ -503,25 +503,25 @@
   class_submission_in_school: V škole
   class_submission_in_school_daily_programming_course: Denný kurz programovania
   class_submission_in_school_ap_computer_science: AP informatika
-  class_submission_in_school_full_university_cs_curriculum: "Úplné univerzitné informatické
-    osnovy (CS curriculum)"
+  class_submission_in_school_full_university_cs_curriculum: Úplné univerzitné informatické
+    osnovy (CS curriculum)
   class_submission_in_school_robotics_club: Klub robotiky
   class_submission_in_school_programming_integrated_in_other_classes: Programovanie
     v iných predmetoch (matematika, prírodné vedy atď.)
   class_submission_in_school_summer_school_cs_program: Program letnej školy informatiky
   class_submission_in_school_exploring_computer_science: Preskúmať informatiku
-  class_submission_in_school_other: "Ďalší v škole"
+  class_submission_in_school_other: Ďalší v škole
   class_submission_out_of_school: Mimo školu
   class_submission_out_of_school_summer_camp: Letný tábor
   class_submission_out_of_school_afterschool_program: Program po vyučovaní
   class_submission_out_of_school_all-day_workshop: Celodenný seminár (až jeden týždeň)
   class_submission_out_of_school_multi-week_workshop: Viactýždňový seminár
-  class_submission_out_of_school_other: "Ďalší mimo školu"
+  class_submission_out_of_school_other: Ďalší mimo školu
   class_submission_online: Online
   class_submission_online_programming_class: Online kurz programovania
   class_submission_online_teacher_resource: Online zdroje pre učiteľov
-  class_submission_online_other: "Ďalšie online"
-  class_submission_level_preschool: "Škôlka"
+  class_submission_online_other: Ďalšie online
+  class_submission_level_preschool: Škôlka
   class_submission_level_elementary: Základná
   class_submission_level_middle_school: 2. stupeň ZŠ
   class_submission_level_high_school: Stredná škola
@@ -534,7 +534,7 @@
     featuring professionals in technology fields
   playlab_choose_theme: Vyber si tému Play Lab
   playlab_classic_title: Klasické
-  playlab_gumball_title: "Úžasný svet s Gumball"
+  playlab_gumball_title: Úžasný svet s Gumball
   playlab_iceage_title: Doba ľadová - už čoskoro
   playlab_iceage_title_live: Doba ľadová
   starwars_subtitle: Budovánie Galaxie s kódom
@@ -700,7 +700,7 @@
   volunteer_engineer_submission_field_name_placeholder: Celé meno
   volunteer_engineer_submission_field_company: Firma (alebo škola)
   volunteer_engineer_submission_field_company_placeholder: Firma (alebo škola)
-  volunteer_engineer_submission_field_experience_level: "Úroveň skúseností"
+  volunteer_engineer_submission_field_experience_level: Úroveň skúseností
   volunteer_engineer_submission_field_location: Miesto
   volunteer_engineer_submission_field_location_desc: Vaša poloha bude použitá k umožneniu
     učiteľom nájsť najbližších dobrovoľníkov a budú zobrazené ako bod na mape. Ak
@@ -711,7 +711,7 @@
     Kódu pomocou... (zaškrtnite všetko čo platí)
   volunteer_engineer_submission_checkbox_after_hoc: Mám záujem o dobrovoľníctvo po
     Hodine Kódu
-  volunteer_engineer_submission_field_time_commitment: "Časový záväzok po Hodine Kódu"
+  volunteer_engineer_submission_field_time_commitment: Časový záväzok po Hodine Kódu
   volunteer_engineer_submission_field_linkedin: LinkedIn profil
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profil
@@ -793,7 +793,7 @@
     ZŠ.
   dashboard_landing_new_k5courses: Novinka! Vyskúšajte naše kurzy pre žiakov 1. stupňa
     ZŠ.
-  dashboard_landing_useful_links: "Ďalšie užitočné odkazy (iba v angličtine)"
+  dashboard_landing_useful_links: Ďalšie užitočné odkazy (iba v angličtine)
   dashboard_landing_classroom_resources: Zdroje pre tvoju triedu
   dashboard_landing_office_hours: Spýtaj sa osobne! Zúčastni sa našich pravidelných
     mesačných video rozhovorov v úradných hodinách.
@@ -816,7 +816,7 @@
   dashboard_landing_inspire: Inšpiruj svojich študentov z plagátmi, videami a pod.
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
-  dashboard_landing_report_bug: "Žiadosť o pridanie funkcie, alebo ohlásenie chyby."
+  dashboard_landing_report_bug: Žiadosť o pridanie funkcie, alebo ohlásenie chyby.
   dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
   dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových
@@ -859,7 +859,7 @@
   dashboard_landing_loading: Načítavanie...
   dashboard_action_cancel: Zrušiť
   dashboard_action_delete: Odstrániť
-  dashboard_action_delete_yes: "Áno"
+  dashboard_action_delete_yes: Áno
   dashboard_action_delete_no: Nie
   dashboard_action_confirm: Odstrániť?
   dashboard_action_done: Hotovo
@@ -882,13 +882,13 @@
   dashboard_filter_all: Všetko
   dashboard_download_csv: Stiahnuť CSV
   dashboard_navigation_home_page: Domovská stránka učiteľa
-  dashboard_navigation_section_student_progress: "Študentské účty a pokrok"
+  dashboard_navigation_section_student_progress: Študentské účty a pokrok
   dashboard_navigation_section_teacher_progress: Pokrok tvojho kurzu
   dashboard_navigation_section_lesson_plans: Plány hodín a Materiály
   dashboard_navigation_section_community: Pomoc a Komunita
   dashboard_navigation_section_pd: Profesionálny rast
   dashboard_navigation_section_speakers: Informatici ako <br/> hostia-rečníci
-  dashboard_navigation_all_sections: "Študentské účty a pokrok"
+  dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_view_progress: Pokrok
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
@@ -896,9 +896,9 @@
   dashboard_navigation_add_students: Pridať Študentov
   dashboard_navigation_manage_students: Správa Študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín a Materiály
-  dashboard_navigation_view_stats: "Štatistiky"
+  dashboard_navigation_view_stats: Štatistiky
   dashboard_navigation_section: 'Sekcia: %{section_name}'
-  dashboard_navigation_student: "Študent: %{student_name}"
+  dashboard_navigation_student: 'Študent: %{student_name}'
   dashboard_progress_not_started: nezačal
   dashboard_progress_in_progress: v procese
   dashboard_progress_not_completed: nedokončené
@@ -923,7 +923,7 @@
   dashboard_sections_table_course: Kurz
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "Študenti"
+  dashboard_sections_table_students: Študenti
   dashboard_sections_table_code: Kód sekcie
   dashboard_sections_name: Meno sekcie
   dashboard_sections_choose_secret: Pokiaľ by ste chceli vytvoriť účty pre svojich
@@ -981,7 +981,7 @@
   dashboard_students_name: Meno
   dashboard_students_progress: Pokrok
   dashboard_students_male: Muž
-  dashboard_students_female: "Žena"
+  dashboard_students_female: Žena
   dashboard_students_completed_levels: Dokončené úrovne
   dashboard_students_total_lines: Riadky kódu
   dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
@@ -1035,7 +1035,7 @@
   dashboard_overview: Prehľad
   dashboard_sequence: Postupnosť
   dashboard_framework: Rámec
-  dashboard_standards: "Štandardy"
+  dashboard_standards: Štandardy
   dashboard_implementation_guide: Implementačná Príručka
   dashboard_glossary: Slovník pojmov
   dashboard_classroom_strategies: Stratégie výučby pre učiteľov
@@ -1054,8 +1054,8 @@
   dashboard_login_word: Slovo
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
-  dashboard_stage: "Úroveň"
-  dashboard_puzzle: "Úloha"
+  dashboard_stage: Úroveň
+  dashboard_puzzle: Úloha
   dashboard_question: Otázka
   dashboard_response: Odpoveď
   dashboard_correctness: Správnosť
@@ -1069,12 +1069,12 @@
   dashboard_multi_correct: "# výberov odpovedí správne"
   dashboard_multi_count: "# výber odpovede"
   dashboard_multi_correct_percent: "% výberov odpovedí správne"
-  dashboard_submission_timestamp: "Časová pečiatka odoslania"
+  dashboard_submission_timestamp: Časová pečiatka odoslania
   stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom
     jediného týždňa:'
-  stats_hoc_2013_image_alt: "Štatistika z Hodiny Kódu 2013"
+  stats_hoc_2013_image_alt: Štatistika z Hodiny Kódu 2013
   dashboard_teacher: Učiteľ
-  dashboard_student: "Študent"
+  dashboard_student: Študent
   dashboard_sections_email_question: Majú všetci študenti platnú e-mailovú adresu?
   dashboard_sections_account_creation_question: Kto vytvára študentský účet?
   dashboard_sections_password_question: Čo študenti používajú ako "heslo"?
@@ -1088,8 +1088,8 @@
   dashboard_sections_login_type_explanation: Táto tabuľka pomáha vysvetliť, ktoré
     z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať
     pre vašu skupinu.
-  dashboard_faq: "Často kladené otázky"
-  dashboard_faq_k5: "Často kladené otázky – prvý stupeň"
+  dashboard_faq: Často kladené otázky
+  dashboard_faq_k5: Často kladené otázky – prvý stupeň
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   host_an_hour: Host an hour
@@ -1100,7 +1100,7 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "Ďalšie informácie"
+  learn_more: Ďalšie informácie
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
   learn_sign_up_button: Zaregistrovať sa
@@ -1158,16 +1158,16 @@
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
   how_to_teach_hoc: Ako učiť "Hodinu kódu"
-  more_resources_educators: "Ďalšie zdroje pre učiteľov"
+  more_resources_educators: Ďalšie zdroje pre učiteľov
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "účastníci"
+  participants: účastníci
   teachers_notes: Poznámky učiteľa
   teachers_notes_hoc: 'Učitelia: Prečítajte si dôležité pedagogické poznámky'
   previous: Predchádzajúci
-  next: "Ďalší"
+  next: Ďalší
   older_systems: Kurzy, ktoré pracujú na starších systémoch
   older_systems_subheading: Tieto by mali fungovať so staršími webovými prehliadačmi.
     Ak chcete získať prístup ku všetkým kurzom, aktualizujte na <a href="http://browsehappy.com/"
@@ -1179,12 +1179,12 @@
   codeorg_name: Klasické bludisko
   codeintl_name: Klasické bludisko
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "Úvod do JavaScriptu"
-  khanes_name: "Úvod do JavaScriptu"
-  khanpt_name: "Úvod do JavaScriptu"
-  khanhe_name: "Úvod do JavaScriptu"
-  khanfr_name: "Úvod do JavaScriptu"
-  khanpl_name: "Úvod do JavaScriptu"
+  khan_name: Úvod do JavaScriptu
+  khanes_name: Úvod do JavaScriptu
+  khanpt_name: Úvod do JavaScriptu
+  khanhe_name: Úvod do JavaScriptu
+  khanfr_name: Úvod do JavaScriptu
+  khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvorte si vlastnú hru
   scratch_name: Buďte kreatívni s programovaním
   lightbot_name: Lightbot
@@ -1439,7 +1439,7 @@
   codecademy_shortdescription: Nauč sa JavaScript programovanie v prehliadači
   codecombat_shortdescription: Poraz zlobrov a nauč sa Python alebo JavaScript v tejto
     epickej programovacej hre!
-  codemonkey_shortdescription: "Žiaci naprogramujú opicu, ktorá chytá banány."
+  codemonkey_shortdescription: Žiaci naprogramujú opicu, ktorá chytá banány.
   codeavengers_shortdescription: Nauč sa JavaScript programovanie v prehliadači
   processing_shortdescription: Jednohodinový úvod do programovacieho jazyka Processing
   robomind_shortdescription: Napíš kód pre virtuálneho robota
@@ -1583,12 +1583,12 @@
     10 krátkych krokov. Potom pokračuj v učení sa základov programovania (premenné
     a príkaz AK) tým, že vytvoríš kvíz, ktorý môžeš zdieľať s priateľmi. Popri tom
     získaj v súťaži body a odznaky a dosiahni vrchol triedneho rebríčka.
-  processing_longdescription: "Úvod do programovania v rámci grafického umenia pomocou
+  processing_longdescription: Úvod do programovania v rámci grafického umenia pomocou
     programovacieho jazyka Processing. Krátke video lekcie predstavia programovacie
-    cvičenia, ktoré vedú ku návrhu interaktívneho kresliaceho programu"
-  robomind_longdescription: "Žiaci sa naučia základy programovania riadením vlastného
+    cvičenia, ktoré vedú ku návrhu interaktívneho kresliaceho programu
+  robomind_longdescription: 'Žiaci sa naučia základy programovania riadením vlastného
     virtuálneho robota. Online kurz je plne sebestačný s krátkymi prezentáciami, filmami,
-    kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. "
+    kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. '
   groklearning_longdescription: Použi programovací jazyk Python na vytvorenie chatbota
     s menom "Eliza", ktorá bude rozprávať ako psychoterapeut. Naučíš Elizu hovoriť
     a to tie správne veci. Dokáže presvedčiť tvojich kamarátov, aby ju považovali
@@ -1606,9 +1606,9 @@
     Ľahko tvorte hry a príbehy používaním grafických motívov, stavebníc a prispôsobiteľných
     postavičiek. Pripojenie k Internetu nie je nutné. Ku svojim výtvorom sa dostanete
     aj na webe.
-  robomindnl_longdescription: "Žiaci sa naučia základy programovania riadením vlastného
+  robomindnl_longdescription: 'Žiaci sa naučia základy programovania riadením vlastného
     virtuálneho robota. Online kurz je plne sebestačný s krátkymi prezentáciami, filmami,
-    kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. "
+    kvízmi a automatickým vedením a tipmi na pomoc pri programovacích cvičeniach. '
   flappy_longdescription: Vytvorte vlastnú hru Flappy Bird pomocou drag & drop programovania,
     ktorú si môžete prispôsobiť nech vypadá inak (Flappy žralok, Flappy Santa, čokoľvek).
     Hru do telefónu pridáte jedným klikom.
@@ -1631,9 +1631,9 @@
   blockly_longdescription: Máš PC s pomalým (alebo žiadnym) internetom? Stiahni si
     Blocky tutoriály ktoré boli predchodcom Code.org tutorálov - jednoduchý 3MB ZIP
     si môžeš nahrať na ľubovoľný počítač alebo usb kľúč
-  thinkersmith2_longdescription: "Študenti sa učia o reprezentovaní a ukladaní znakov
+  thinkersmith2_longdescription: Študenti sa učia o reprezentovaní a ukladaní znakov
     v binárnej sústave, pomocou funkcií zapnúť a vypnuť. Na konci hodiny dostanú úlohu
-    zakódovať svoje vlastné iniciály, ktoré si odnesú domov."
+    zakódovať svoje vlastné iniciály, ktoré si odnesú domov.
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
     Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
     explain the game, then students program a partner to complete a simple obstacle
@@ -1681,7 +1681,7 @@
     activities that teach the basics of computer science. To help teachers find inspiration,
     we collected and curated one-hour teacher-led lesson and activity plans designed
     for different subject areas for Hour of Code veterans.
-  codeorg_beyond_name: "Úvod do informatiky (2.stupeň ZŠ)"
+  codeorg_beyond_name: Úvod do informatiky (2.stupeň ZŠ)
   khan_beyond_name: Nauč sa počítačové programovanie
   tynker_beyond_name: Nauč sa programovanie doma
   scratch_beyond_name: Buďte kreatívni s programovaním
@@ -1998,9 +1998,9 @@
     prostredia na podporu 3D animacií,  poskytuje nástroje a prostriedky k výuke logického
     myslenia, riešenia problémov a programovania pre všetky vekové kategórie a vzdelávacie
     stupne.
-  sphero_beyond_longdescription: "Či ste pedagóg alebo rodič, lekcie SPRK sú pre deti
+  sphero_beyond_longdescription: Či ste pedagóg alebo rodič, lekcie SPRK sú pre deti
     zábavným kurzom programovania robotov, rozvíjajúcim ich zručnosti v matematike
-    a prírodných vedách."
+    a prírodných vedách.
   compatibility_hide_this_warning: Skryť toto upozornenie
   compatibility_unsupported_browser: Váš prehliadač internetu nepodporujeme. Prosím
     aktualizujte si váš prehliadač internetu, <a href='%{supported_browsers_url}',
@@ -2042,7 +2042,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: "Štatistiky"
+  header_stats: Štatistiky
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community

@@ -118,17 +118,14 @@
     Kurs E
   congratulations_on_completing_coursef: Herzlichen Glückwunsch zum Abschluss von
     Kurs F
-  congratulations_on_completing_accelerated: |2+
-
+  congratulations_on_completing_accelerated: "\n"
   congrats_next_tutorials_title: Probieren Sie als Nächstes diese Anleitungen
   congrats_next_tutorials_desc: Probieren Sie diese kürzeren, ca. 1-stündigen Anleitungen
     oder eine unserer <a href="%{current_path}/next">Partneranleitungen</a>.
   get_a_certificate_of_achievement: Erhalten Sie eine Leistungsurkunde
   view_course: Kurs anzeigen
-  view_unit: |2+
-
-  make_app: |2+
-
+  view_unit: "\n"
+  make_app: "\n"
   congrats_guest_speaker_title: Einen Gastredner für Ihren Unterricht finden
   congrats_guest_speaker_desc: Jetzt, da ihre SchülerInnen den Informatik-Kurs abgeschlossen
     haben, sollten Sie dies feiern und sie mit Dingen in Verbindung bringen, die es
@@ -1049,7 +1046,7 @@
   dashboard_tools: 'Tools: '
   dashboard_curriculum: Lehrplan
   dashboard_curriculum_overview: Vor- und Grundschullehrplan Übersicht
-  dashboard_overview: "Übersicht"
+  dashboard_overview: Übersicht
   dashboard_sequence: Sequenz
   dashboard_framework: Rahmen
   dashboard_standards: Standards
@@ -2068,7 +2065,7 @@
   header_educate_inspire: Inspiriere einen Schüler/eine Schülerin
   header_educate_community: Online Community
   header_educate_tools: Hilfsmittel und Videos
-  header_about_us: "Über uns "
+  header_about_us: 'Über uns '
   header_about_leadership: Die Leitung
   header_about_donors: Sponsoren
   header_about_partners: Partner
@@ -2082,7 +2079,7 @@
   header_teach: Unterrichten
   header_stats: Statistiken
   header_help_us: Helfen Sie uns
-  header_about: "Über"
+  header_about: Über
   header_teacher_community: Lehrer Community
   header_help_support: 'Hilfe und Support '
   header_report_bug: Einen Fehler melden

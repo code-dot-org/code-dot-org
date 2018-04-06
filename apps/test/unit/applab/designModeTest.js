@@ -99,3 +99,59 @@ describe('makeUrlProtocolRelative', () => {
     });
   });
 });
+
+describe('setProperty and read Property', () => {
+  let text_input, text_area, dropdown;
+  // Create HTML elements to get/set
+  beforeEach( () => {
+    text_input = document.createElement('input');
+    text_area = document.createElement('div');
+    dropdown = document.createElement('select');
+    let option1 = document.createElement('option');
+    option1.innerHTML = "Eta Theta";
+    let option2 = document.createElement('option');
+    option2.innerHTML = "Epsilon Zeta";
+    dropdown.appendChild(option1);
+    dropdown.appendChild(option2);
+  });
+
+  describe('setProperty: ', () => {
+    it('Sets the expected text for dropdowns, text area, and text input', () => {
+      designMode.updateProperty(text_input, 'text', 'Alpha Beta');
+      designMode.updateProperty(text_area, 'text', 'Gamma Delta');
+      designMode.updateProperty(dropdown, 'text', 'Epsilon Zeta');
+
+      expect(text_input.value).to.equal("Alpha Beta");
+      expect(text_area.innerHTML).to.equal("Gamma Delta");
+      expect(dropdown.value).to.equal("Epsilon Zeta");
+    });
+    it('Sets the expected value for dropdowns, text area, and text input', () => {
+      designMode.updateProperty(text_input, 'value', 'Iota Kappa');
+      designMode.updateProperty(text_area, 'value', 'Lambda Mu');
+      designMode.updateProperty(dropdown, 'value', 'Eta Theta');
+
+      expect(text_input.value).to.equal("Iota Kappa");
+      expect(text_area.innerHTML).to.equal("Lambda Mu");
+      expect(dropdown.value).to.equal("Eta Theta");
+    });
+  });
+
+  describe('readProperty: ', () => {
+    beforeEach( () => {
+      text_input.value = "Nu Xi";
+      text_area.innerHTML = "Omicron Pi";
+      dropdown.value = "Epsilon Zeta";
+    });
+
+    it('Gets the expected text for dropdowns, text area, and text input', () => {
+      expect(designMode.readProperty(text_input, 'text')).to.equal("Nu Xi");
+      expect(designMode.readProperty(text_area, 'text')).to.equal("Omicron Pi");
+      expect(designMode.readProperty(dropdown, 'text')).to.equal("Epsilon Zeta");
+    });
+    it('Gets the expected value for dropdowns, text area, and text input', () => {
+      expect(designMode.readProperty(text_input, 'value')).to.equal("Nu Xi");
+      expect(designMode.readProperty(text_area, 'value')).to.equal("Omicron Pi");
+      expect(designMode.readProperty(dropdown, 'value')).to.equal("Epsilon Zeta");
+    });
+  });
+});
