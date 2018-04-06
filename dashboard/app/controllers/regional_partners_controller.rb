@@ -10,6 +10,7 @@ class RegionalPartnersController < ApplicationController
     current_sign_in_at
     sign_in_count
     users.created_at
+    provider
   ).freeze
 
   # GET /regional_partners
