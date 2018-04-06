@@ -1,6 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
-import {sectionDataPropType, scriptDataPropType, studentLevelProgressPropType} from './sectionProgressRedux';
+import {
+  sectionDataPropType,
+  scriptDataPropType,
+  studentLevelProgressPropType
+} from './sectionProgressRedux';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
@@ -16,6 +20,9 @@ export default class StudentProgressSummaryCell extends Component {
   studentLevelProgressInStage(studentId, stageId) {
     const { scriptData, studentLevelProgress } = this.props;
 
+    // TODO(caleybrock): It's likely more efficient to combine getting
+    // a level by lesson and calculating the level statuses at the same time.
+    // Move this calculation to progressRedux and activityUtils.
     const levelState = {
       stage: scriptData.stages[stageId],
       levelProgress: studentLevelProgress[studentId],

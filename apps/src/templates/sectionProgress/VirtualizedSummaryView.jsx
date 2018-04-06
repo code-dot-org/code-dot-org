@@ -4,6 +4,7 @@ import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 
+// TODO(caleybrock): share these styles with detail view
 const styles = {
   cell: {
     padding: 10,
@@ -47,6 +48,8 @@ export default class VirtualizedDetailView extends Component {
     scrollToRow: 0,
   };
 
+  // TODO(caleybrock): Look at sharing this component with the detail view.
+  // This function and the renderer are very similar to VirtualizedDetailView.
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress} = this.props;
     // Subtract 1 to account for the header row.
