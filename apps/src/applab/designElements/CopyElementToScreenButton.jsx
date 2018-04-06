@@ -36,46 +36,50 @@ class CopyElementToScreenButton extends React.Component {
     currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
   };
 
-  getResizeListener() {
-    if (!this.resizeListener) {
+  // Overrides base class implementation
+  setState(newState) {
+    if (newState.opened && !this.resizeListener) {
       this.resizeListener = throttle(this.updateMenuLocation, 50);
+      window.addEventListener("resize", this.resizeListener);
+      let loc = this.getMenuLocation();
+      newState.menuTop = loc.menuTop;
+      newState.menuLeft = loc.menuLeft;
+    } else if (!newState.opened && this.resizeListener) {
+      window.removeEventListener("resize", this.resizeListener);
+      this.resizeListener = null;
     }
-    return this.resizeListener;
-  }
+    super.setState(newState);
+  };
+
+  getMenuLocation() {
+    const rect = this.element.firstChild.getBoundingClientRect();
+    return {
+      menuTop: rect.bottom + window.pageYOffset,
+      menuLeft: rect.left + window.pageXOffset,
+    };
+  };
 
   updateMenuLocation = () => {
-    const rect = this.element.getBoundingClientRect();
-    /*const windowWidth = window.innerWidth;
-    if (windowWidth > styleConstants['content-width']) { // Accounts for resizing when page is not scrollable
-      this.setState({
-        menuTop: rect.bottom + window.pageYOffset,
-        menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2,
-        currWindowWidth : window.innerWidth});
-    } else { // Accounts for scrolling or resizing when scrollable  */
-      this.setState({
-        menuTop: rect.bottom + window.pageYOffset,
-        menuLeft: rect.left - rect.width + window.pageXOffset});
-    //}
+    this.setState(this.getMenuLocation());
   };
 
   handleDropdownClick = (event) => {
-    if (this.state.opened) {
-      window.removeEventListener("resize", this.getResizeListener());
-    } else {
-      window.addEventListener("resize", this.getResizeListener());
-      this.updateMenuLocation();
-    }
     this.setState({opened: !this.state.opened});
   };
 
   handleMenuClick = (screenId) => {
-    this.setState({opened: false});
+    this.closeMenu();
     this.props.handleCopyElementToScreen(screenId);
   };
 
   closeMenu() {
     this.state.opened && this.setState({opened: false});
   }
+
+  beforeClose = (_, resetPortalState) => {
+    resetPortalState();
+    this.closeMenu();
+  };
 
   render() {
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
@@ -92,15 +96,18 @@ class CopyElementToScreenButton extends React.Component {
                   onClick={this.handleDropdownClick}>
             Copy to screen <i className="fa fa-chevron-down" />
           </button>
-          <PopUpMenu
-              isOpen={this.state.opened}
-              targetPoint={targetPoint}
-              beforeClose={() => this.closeMenu()}>
-            {otherScreens}
-          </PopUpMenu>
+          {this.state.opened &&
+            <PopUpMenu
+                isOpen={this.state.opened}
+                targetPoint={targetPoint}
+                offset={{x: 0, y: 0}}
+                beforeClose={this.beforeClose}>
+              {otherScreens}
+            </PopUpMenu>
+          }
         </div>
     );
-  }
+  };
 }
 
 export default connect(function propsFromStore(state) {
