@@ -810,7 +810,7 @@ var projects = module.exports = {
       const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
-          if (err.message.includes('Unauthorized')) {
+          if (err.message.includes('httpStatusCode: 401')) {
             this.showSaveError_('unauthorized-save-sources-reload', saveSourcesErrorCount, err.message);
             window.location.reload();
           } else {
@@ -919,7 +919,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v2',
+        study_group: 'v3',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
