@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
-import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
+import VirtualizedSummaryView from './VirtualizedSummaryView';
 import { connect } from 'react-redux';
 import {
   ViewType,
@@ -69,16 +69,15 @@ class SectionProgress extends Component {
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
         {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
           <div>
-            <h1>This will be the summary view</h1>
+            <VirtualizedSummaryView
+              section={section}
+              scriptData={scriptData}
+            />
           </div>
         }
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&
           <div>
             <VirtualizedDetailView
-              section={section}
-              scriptData={scriptData}
-            />
-            <SectionScriptProgress
               section={section}
               scriptData={scriptData}
               studentLevelProgress={studentLevelProgress}
