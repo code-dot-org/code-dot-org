@@ -49,7 +49,12 @@ export function convertXmlToBlockly(container) {
     const inline = xml.parentNode.tagName === "P";
 
     // create a container and insert the blockspace into it
-    const container = document.createElement('div');
+    const container = document.createElement(inline ? 'span' : 'div');
+    if (inline) {
+      // SVGs don't play nicely if they're rendered into purely inline elements,
+      // so if our container is a span it should be inline-block
+      container.style.display = "inline-block";
+    }
     xml.parentNode.insertBefore(container, xml);
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
       noScrolling: true,
@@ -61,6 +66,7 @@ export function convertXmlToBlockly(container) {
     let height = metrics.contentHeight;
     let width = metrics.contentWidth;
 
+    // give block embeds more padding than inline
     if (!inline) {
       height += metrics.contentTop * 2;
       width += metrics.contentLeft;
@@ -70,10 +76,6 @@ export function convertXmlToBlockly(container) {
     container.style.height = height + "px";
     container.style.width = width + "px";
     blockSpace.blockSpaceEditor.svgResize();
-
-    if (inline) {
-      container.style.display = "inline";
-    }
   });
 }
 
