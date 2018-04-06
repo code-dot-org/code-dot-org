@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { MultiGrid } from 'react-virtualized';
-import ProgressBox from '../sectionProgress/ProgressBox';
 import styleConstants from '../../styleConstants';
-import { sectionDataPropType, scriptDataPropType } from './sectionProgressRedux';
+import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
+import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 
+// TODO(caleybrock): share these styles with detail view
 const styles = {
   cell: {
     padding: 10,
@@ -37,6 +38,7 @@ export default class VirtualizedDetailView extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    studentLevelProgress: studentLevelProgressPropType.isRequired,
   };
 
   state = {
@@ -46,8 +48,14 @@ export default class VirtualizedDetailView extends Component {
     scrollToRow: 0,
   };
 
+  // TODO(caleybrock): Look at sharing this component with the detail view.
+  // This function and the renderer are very similar to VirtualizedDetailView.
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, studentLevelProgress} = this.props;
+    // Subtract 1 to account for the header row.
+    const studentStartIndex = rowIndex-1;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = columnIndex-1;
 
     return (
       <div className={styles.Cell} key={key} style={style}>
@@ -65,11 +73,12 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {rowIndex >= 1 && columnIndex > 0 && (
-          <ProgressBox
-            started={true}
-            incomplete={5}
-            imperfect={5}
-            perfect={10}
+          <StudentProgressSummaryCell
+            studentId={section.students[studentStartIndex].id}
+            section={section}
+            studentLevelProgress={studentLevelProgress}
+            stageId={stageIdIndex}
+            scriptData={scriptData}
           />
         )}
       </div>
