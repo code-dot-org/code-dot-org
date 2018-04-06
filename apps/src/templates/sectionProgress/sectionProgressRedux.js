@@ -73,9 +73,7 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
 );
 
 const initialState = {
-  // TODO: default to what is assigned to section, or at least come up with
-  // some heuristic so that we have a default
-  scriptId: "112",
+  scriptId: null,
   section: {},
   validScripts: [],
   currentView: ViewType.SUMMARY,
@@ -97,15 +95,21 @@ export default function sectionProgress(state=initialState, action) {
     };
   }
   if (action.type === SET_SECTION) {
+    // Default the scriptId to the script assigned to the section
+    const defaultScriptId = action.section.script ? action.section.script.id : null;
     return {
       ...state,
-      section: action.section
+      section: action.section,
+      scriptId: defaultScriptId,
     };
   }
   if (action.type === SET_VALID_SCRIPTS) {
+    // If no scriptId is assigned, use the first valid script.
+    const defaultScriptId = state.scriptId || action.validScripts[0].id;
     return {
       ...state,
-      validScripts: action.validScripts
+      validScripts: action.validScripts,
+      scriptId: defaultScriptId,
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {
