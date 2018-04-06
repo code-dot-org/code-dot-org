@@ -242,7 +242,7 @@ class User < ActiveRecord::Base
   end
 
   def email
-    unless provider == 'migrated'
+    unless provider && provider == 'migrated'
       return self[:email]
     end
     if primary_email.nil?
@@ -253,7 +253,7 @@ class User < ActiveRecord::Base
   end
 
   def hashed_email
-    unless provider == 'migrated'
+    unless provider && provider == 'migrated'
       return self[:hashed_email]
     end
     if primary_email.nil?
