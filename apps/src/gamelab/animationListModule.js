@@ -688,14 +688,6 @@ function loadPendingFramesFromSource(key, props, callback) {
   };
 }
 
-/**
-  * Given the animationList and a sourceUrl, determine whether sourceUrl exists
-  * in the project. If it doesn't exist, the animation could be deleted or not
-  * a part of this project.
-*/
-function isSourceUrlInProject(sourceUrl, animationList) {
-  return animationList.orderedKeys.some(key => sourceUrl.includes(key));
-}
 
 /**
  * Given a key/serialized-props pair for an animation, work out where to get
@@ -706,7 +698,7 @@ function isSourceUrlInProject(sourceUrl, animationList) {
  * @param {string} channelId - Used to differentiate library animations from others
  * @returns {string}
  */
-export function animationSourceUrl(key, animationList, channelId = null) {
+export function animationSourceUrl(key, animationList, channelId = "") {
   const props = animationList.propsByKey[key];
 
   // If the animation has a sourceUrl it's external (from the library,
@@ -723,9 +715,7 @@ export function animationSourceUrl(key, animationList, channelId = null) {
   if (versionNotNeeded) {
     return assetPrefix.fixPath(props.sourceUrl);
   } else if (uploadedAnimation) {
-    const srcUrlDeleted = isSourceUrlInProject(props.sourceUrl, animationList);
-
-    if (srcUrlDeleted && props.version) {
+    if (props.version) {
       return assetPrefix.fixPath(props.sourceUrl) + '?version=' + props.version;
     } else {
       return assetPrefix.fixPath(props.sourceUrl) + '?version=latestVersion';
