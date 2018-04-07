@@ -3,6 +3,7 @@
  */
 
 import color from '@cdo/apps/util/color';
+import { PropTypes } from 'react';
 
 /**
  * Mapping of application statuses to their background and text colors.
@@ -87,3 +88,8 @@ exports.RegionalPartnerDropdownOptions = [
   {value: unmatchedFilter, label: unmatchedLabel},
   {value: allPartnersFilter, label: allPartnersLabel}
 ];
+
+exports.RegionalPartnerFilterPropType = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number
+]);

@@ -9,7 +9,10 @@ import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
-import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
+import {
+  RegionalPartnerDropdownOptions as dropdownOptions,
+  RegionalPartnerFilterPropType
+} from './constants';
 
 const styles = {
   button: {
@@ -20,10 +23,7 @@ const styles = {
 class CohortView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]).isRequired,
+    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,

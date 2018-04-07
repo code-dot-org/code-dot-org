@@ -9,16 +9,16 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
-import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
+import {
+  RegionalPartnerDropdownOptions as dropdownOptions,
+  RegionalPartnerFilterPropType
+} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]).isRequired,
+    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
 

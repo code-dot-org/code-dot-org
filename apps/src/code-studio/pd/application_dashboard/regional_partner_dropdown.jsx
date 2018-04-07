@@ -12,6 +12,7 @@ import {
   setRegionalPartnerFilter,
   setRegionalPartnerName
 } from './reducers';
+import { RegionalPartnerFilterPropType } from './constants';
 
 const styles = {
   select: {
@@ -22,10 +23,7 @@ const styles = {
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]).isRequired,
+    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
