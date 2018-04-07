@@ -192,7 +192,7 @@ class User < ActiveRecord::Base
   has_many :districts, through: :districts_users
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_email, class_name: 'AuthenticationOption', foreign_key: :primary_email_id
+  belongs_to :primary_authentication_option, class_name: 'AuthenticationOption', foreign_key: :primary_email_id
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -241,18 +241,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  def primary_email
+    primary_authentication_option.try(:email)
+  end
+
   def email
-    unless provider && provider == 'migrated'
-      return self[:email]
-    end
-    primary_email.nil? ? '' : primary_email.email
+    return read_attribute(:email) unless provider == 'migrated'
+    primary_email.try(:email)
   end
 
   def hashed_email
-    unless provider && provider == 'migrated'
-      return self[:hashed_email]
-    end
-    primary_email.nil? ? '' : primary_email.hashed_email
+    return read_attribute(:hashed_email) unless provider == 'migrated'
+    primary_email.try(:hashed_email)
   end
 
   def facilitator?
