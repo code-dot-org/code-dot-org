@@ -548,6 +548,44 @@ class FilesTest < FilesApiTestBase
     delete_channel(dest_channel_id)
   end
 
+  def test_temporary_public_url
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename)
+
+    # Links to the right file
+    assert_match /#{'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'}/, temp_url
+
+    # Has a 5-minute timeout by default
+    assert_match /#{'X-Amz-Expires=300'}/, temp_url
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
+  def test_temporary_public_url_with_custom_timeout
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename, 1.hour)
+
+    # Links to the right file
+    assert_match /#{'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'}/, temp_url
+
+    # Has a 5-minute timeout by default
+    assert_match /#{'X-Amz-Expires=3600'}/, temp_url
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
   private
 
   def delete_all_files(bucket)
