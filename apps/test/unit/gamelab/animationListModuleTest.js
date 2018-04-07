@@ -27,10 +27,36 @@ describe('animationListModule', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    it(`returns the sourceUrl from props if it exists`, function () {
+    it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: 'bar'}}};
       expect(animationSourceUrl(key, animationList)).to.equal('bar');
     });
+
+    it(`returns the sourceUrl from props if it exists and contains the version`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/test?version=foo'}}};
+      expect(animationSourceUrl(key, animationList)).to.equal('/v3/animations/test?version=foo');
+    });
+
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/123/foo', version:'alpha'}}};
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/123/foo?version=alpha');
+    });
+
+    it(`returns the sourceUrl from a deleted, uploaded animation with the version`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/123/bar', version:'beta'}}};
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/123/bar?version=beta');
+    });
+
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with no version specified`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/123/foo'}}};
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/123/foo?version=latestVersion');
+    });
+
+    it(`returns the sourceUrl from a deleted, uploaded animation with no version specified`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/123/bar'}}};
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/123/bar?version=latestVersion');
+    });
+
 
     it(`returns the sourceUrl passed through the media proxy if it's an aboslute url`, function () {
       const insecureAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: 'http://bar'}}};
