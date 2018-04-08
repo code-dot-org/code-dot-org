@@ -16,7 +16,7 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       end
       matches = match_terms.join ' + '
       rows = rows.
-        where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", query).
+        where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", terms.join(' ')).
         order("(#{matches}) DESC, state, city, name")
     elsif search_by_zip?((query = query.strip))
       query = "#{query[0, 5]}%"
