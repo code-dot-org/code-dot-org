@@ -16,8 +16,8 @@ class AutocompleteHelper
   end
 
   def self.get_query_terms(query)
-    query.strip.split(/\s+/).map do |w|
-      w.gsub(/\W/, '').upcase.presence
+    query.strip.split(/\s+|\W+/).map do |w|
+      w.upcase.presence
     end.compact
   end
 
