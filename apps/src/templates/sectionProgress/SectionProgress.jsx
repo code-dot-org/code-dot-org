@@ -4,6 +4,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
+import SummaryViewLegend from './SummaryViewLegend';
 import { connect } from 'react-redux';
 import {
   ViewType,
@@ -73,6 +74,7 @@ class SectionProgress extends Component {
               section={section}
               scriptData={scriptData}
             />
+            <SummaryViewLegend/>
           </div>
         }
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&

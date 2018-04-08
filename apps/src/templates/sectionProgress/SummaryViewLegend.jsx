@@ -1,38 +1,41 @@
 import React, { PropTypes, Component } from 'react';
 import ProgressBox from './ProgressBox';
 import color from "@cdo/apps/util/color";
+import i18n from '@cdo/locale';
 
 const styles = {
   legendBox: {
     borderWidth: '1px',
     borderStyle: 'solid',
-    borderColor: color.gray,
+    borderColor: color.lightest_gray,
     backgroundColor: color.white,
     float: 'left',
-    display: 'inline-block'
+    display: 'inline-block',
+    marginTop: 20,
   },
   progressBox: {
     float: 'left',
     padding: 10,
     width: 130,
     marginLeft: 10,
-    border: '1px solid red',
   },
   heading: {
-    fontSize: 16,
-    fontWeight: 900,
-    width: '48%',
-    // float: 'left',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: color.charcoal,
+    float: 'left',
     paddingTop: 10,
     paddingBottom: 10,
     textAlign: 'center',
   },
   label: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 900,
+    color: color.charcoal,
   },
   parenthetical: {
-    fontSize: 12,
+    fontSize: 10,
+    color: color.charcoal,
   },
   labelBox: {
     height: 40,
@@ -48,14 +51,22 @@ export default class SummaryViewLegend extends Component {
 
   render() {
     const { showCSFProgressBox } = this.props;
+    const headingStyle = {
+      ...styles.heading,
+      width: showCSFProgressBox ? '48%' : '100%'
+    };
 
     return (
       <div style={styles.legendBox}>
-        <div style={styles.heading}>Lesson Status</div>
-        <div style={styles.heading}>Completion Status</div>
+        <div style={styles.headingBox}>
+          <div style={headingStyle}>{i18n.levelStatus()}</div>
+          {showCSFProgressBox &&
+            <div style={headingStyle}>{i18n.completionStatus()}</div>
+          }
+        </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
-            <div>Not started</div>
+            <div>{i18n.notStarted()}</div>
           </div>
           <ProgressBox
             started={false}
@@ -66,7 +77,7 @@ export default class SummaryViewLegend extends Component {
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
-            <div>Started</div>
+            <div>{i18n.started()}</div>
           </div>
           <ProgressBox
             started={true}
@@ -77,9 +88,9 @@ export default class SummaryViewLegend extends Component {
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
-            <div>Completed</div>
+            <div>{i18n.completed()}</div>
             {showCSFProgressBox &&
-              <div style={styles.parenthetical}>(perfect)</div>
+              <div style={styles.parenthetical}>({i18n.perfect()})</div>
             }
           </div>
           <ProgressBox
@@ -92,8 +103,8 @@ export default class SummaryViewLegend extends Component {
         {showCSFProgressBox &&
           <div style={styles.progressBox}>
             <div style={styles.labelBox}>
-              <div>Completed</div>
-              <div style={styles.parenthetical}>(too many blocks)</div>
+              <div>{i18n.completed()}</div>
+              <div style={styles.parenthetical}>({i18n.tooManyBlocks()})</div>
             </div>
             <ProgressBox
               started={true}
