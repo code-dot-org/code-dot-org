@@ -190,6 +190,10 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
+  def self.csf_script_ids
+    @@csf_scripts ||= Script.all.select(&:csf?).pluck(:id)
+  end
+
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
