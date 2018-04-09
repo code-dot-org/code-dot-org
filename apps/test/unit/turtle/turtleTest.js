@@ -176,8 +176,8 @@ describe('Artist', () => {
   });
 
   describe('pointTo', () => {
-    it('can point to 30 degrees', () => {
-      let angle = 30;
+    it('can point to 45 degrees', () => {
+      let angle = 45;
       let blockId = "block_id_4";
       let artist = new Artist();
 
@@ -189,7 +189,7 @@ describe('Artist', () => {
     });
 
     it('can point to a specific direction', () => {
-      const angle = 60;
+      const angle = 45;
       const blockId = "block_id_8";
       let artist = new Artist();
 
