@@ -1349,13 +1349,13 @@ ActiveRecord::Schema.define(version: 20180403024415) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
-    t.string   "email",                                  default: "",      null: false
+    t.string   "email",                                          default: "",      null: false
     t.string   "parent_email"
-    t.string   "encrypted_password",                     default: ""
+    t.string   "encrypted_password",                             default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                          default: 0
+    t.integer  "sign_in_count",                                  default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -1366,22 +1366,22 @@ ActiveRecord::Schema.define(version: 20180403024415) do
     t.string   "provider"
     t.string   "uid"
     t.boolean  "admin"
-    t.string   "gender",                   limit: 1
+    t.string   "gender",                           limit: 1
     t.string   "name"
-    t.string   "locale",                   limit: 10,    default: "en-US", null: false
+    t.string   "locale",                           limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "user_type",                limit: 16
+    t.string   "user_type",                        limit: 16
     t.string   "school"
-    t.string   "full_address",             limit: 1024
+    t.string   "full_address",                     limit: 1024
     t.integer  "school_info_id"
-    t.integer  "total_lines",                            default: 0,       null: false
+    t.integer  "total_lines",                                    default: 0,       null: false
     t.integer  "secret_picture_id"
-    t.boolean  "active",                                 default: true,    null: false
+    t.boolean  "active",                                         default: true,    null: false
     t.string   "hashed_email"
     t.datetime "deleted_at"
     t.datetime "purged_at"
     t.string   "secret_words"
-    t.text     "properties",               limit: 65535
+    t.text     "properties",                       limit: 65535
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -1389,11 +1389,11 @@ ActiveRecord::Schema.define(version: 20180403024415) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "invitations_count",                      default: 0
+    t.integer  "invitations_count",                              default: 0
     t.integer  "terms_of_service_version"
     t.boolean  "urm"
     t.string   "races"
-    t.integer  "primary_email_id"
+    t.integer  "primary_authentication_option_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree

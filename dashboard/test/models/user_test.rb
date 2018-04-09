@@ -2680,19 +2680,19 @@ class UserTest < ActiveSupport::TestCase
 
   test 'primary email for migrated user is readable from user model' do
     user = create(:teacher, :with_email_authentication_option)
-    user.primary_email = user.authentication_options.first
+    user.primary_authentication_option = user.authentication_options.first
     user.provider = 'migrated'
-    user.primary_email.update(email: 'eric@code.org')
+    user.primary_authentication_option.update(email: 'eric@code.org')
     assert_equal user.email, user.authentication_options.first.email
-    assert_equal user.email, user.primary_email.email
+    assert_equal user.email, user.primary_authentication_option.email
   end
 
   test 'primary email for non-migrated user is not readable from user model' do
     user = create(:teacher, :with_email_authentication_option)
-    user.primary_email = user.authentication_options.first
-    user.primary_email.update(email: 'eric@code.org')
+    user.primary_authentication_option = user.authentication_options.first
+    user.primary_authentication_option.update(email: 'eric@code.org')
     assert_not_equal user.email, user.authentication_options.first.email
-    assert_not_equal user.email, user.primary_email.email
-    assert_equal user.primary_email.email, user.authentication_options.first.email
+    assert_not_equal user.email, user.primary_authentication_option.email
+    assert_equal user.primary_authentication_option.email, user.authentication_options.first.email
   end
 end

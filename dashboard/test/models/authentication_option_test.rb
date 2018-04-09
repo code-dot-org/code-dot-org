@@ -6,8 +6,8 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     new_teacher_email = 'awesometeacher@xyz.foo'
     teacher = create(:teacher, email: original_teacher_email)
     email_auth = create(:email_authentication_option, user: teacher, email: new_teacher_email)
-    teacher.update(primary_email: email_auth, provider: 'migrated')
-    assert_equal teacher.primary_email_id, email_auth.id
+    teacher.update(primary_authentication_option: email_auth, provider: 'migrated')
+    assert_equal teacher.primary_authentication_option_id, email_auth.id
     assert_equal new_teacher_email, teacher.email
     assert_equal AuthenticationOption.hash_email(new_teacher_email), teacher.hashed_email
   end
