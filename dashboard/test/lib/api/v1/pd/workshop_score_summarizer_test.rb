@@ -19,6 +19,7 @@ module Api::V1::Pd
       ].flatten.each do |question|
         @happy_teacher_question_responses[question] = get_best_response_for_question(question, PdWorkshopSurvey::OPTIONS)
       end
+      @happy_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @happy_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
@@ -89,7 +90,8 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Curly' => 'Extremely comfortable'},
           how_often_taught_new_things_s: {'Curly' => 'All the time'},
           things_facilitator_did_well_s: {'Curly' => 'Curly did everything great'},
-          things_facilitator_could_improve_s: {'Curly' => 'Curly was perfect'}
+          things_facilitator_could_improve_s: {'Curly' => 'Curly was perfect'},
+          who_facilitated_ss: ['Curly']
         }
       )
 
@@ -101,7 +103,8 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Curly' => 'Extremely comfortable', 'Larry' => 'Quite comfortable'},
           how_often_taught_new_things_s: {'Curly' => 'All the time', 'Larry' => 'Often'},
           things_facilitator_did_well_s: {'Curly' => 'Curly was awesome', 'Larry' => 'Larry did pretty good'},
-          things_facilitator_could_improve_s: {'Curly' => 'Curly shouldnt change a thing', 'Larry' => 'Larry doesnt need to improve'}
+          things_facilitator_could_improve_s: {'Curly' => 'Curly shouldnt change a thing', 'Larry' => 'Larry doesnt need to improve'},
+          who_facilitated_ss: ['Curly', 'Larry']
         }
       )
 
@@ -117,7 +120,8 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Moe' => 'Not at all comfortable', 'Larry' => 'Not at all comfortable'},
           how_often_taught_new_things_s: {'Moe' => 'Almost never', 'Larry' => 'Almost never'},
           things_facilitator_did_well_s: {'Moe' => 'Moe did nothing great', 'Larry' => 'Larry did not do great'},
-          things_facilitator_could_improve_s: {'Moe' => 'Moe was awful', 'Larry' => 'Larry was awful'}
+          things_facilitator_could_improve_s: {'Moe' => 'Moe was awful', 'Larry' => 'Larry was awful'},
+          who_facilitated_ss: ['Larry', 'Moe']
         }
       )
       bad_workshop_responses = [{data: bad_response.to_json}, {data: bad_response.to_json}]
