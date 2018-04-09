@@ -670,7 +670,9 @@ function startLoadingPendingFramesFromSourceAction() {
 function loadPendingFramesFromSource(key, props, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
-    const sourceUrl = animationSourceUrl(key, getState().animationList);
+    const state = getState();
+    const sourceUrl = animationSourceUrl(key, state.animationList,
+      state.pageConstants && state.pageConstants.channelId);
     dispatch(startLoadingPendingFramesFromSourceAction());
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -698,7 +700,7 @@ function loadPendingFramesFromSource(key, props, callback) {
  * @param {string} channelId - Used to differentiate library animations from others
  * @returns {string}
  */
-export function animationSourceUrl(key, animationList, channelId = "") {
+export function animationSourceUrl(key, animationList, channelId) {
   const props = animationList.propsByKey[key];
 
   // If the animation has a sourceUrl it's external (from the library,
@@ -734,12 +736,12 @@ export function animationSourceUrl(key, animationList, channelId = "") {
  * @param {SerializedAnimationList} serializedList
  * @return {SerializedAnimationList} with aboslute sourceUrls for every animation.
  */
-export function withAbsoluteSourceUrls(serializedList) {
+export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, list);
+    const relativeUrl = animationSourceUrl(key, list, channelId);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;
