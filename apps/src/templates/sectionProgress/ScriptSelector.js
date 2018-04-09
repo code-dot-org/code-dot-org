@@ -34,7 +34,7 @@ export default class ScriptSelector extends Component {
       <div>
         <select
           value={scriptId}
-          onChange={event => onChange(event.target.value)}
+          onChange={event => onChange(parseInt(event.target.value))}
         >
           <option key="default" value={''}/>
           {Object.keys(grouped).map((groupName, index) => (
