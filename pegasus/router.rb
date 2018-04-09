@@ -38,6 +38,7 @@ require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
 require src_dir 'advocacy_site'
+require '../lib/cdo/hamburger'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -370,8 +371,9 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def resolve_template(subdir, extnames, uri)
-      @dirs.each do |dir|
+    def resolve_template(subdir, extnames, uri, is_document = false)
+      dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
+      dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
           if File.file?(path)
@@ -425,10 +427,10 @@ class Documents < Sinatra::Base
     def resolve_document(uri)
       extnames = settings.non_static_extnames
 
-      path = resolve_template('public', extnames, uri)
+      path = resolve_template('public', extnames, uri, true)
       return path if path
 
-      path = resolve_template('public', extnames, File.join(uri, 'index'))
+      path = resolve_template('public', extnames, File.join(uri, 'index'), true)
       return path if path
 
       # Recursively resolve '/splat.[ext]' template from the given URI.
@@ -437,7 +439,7 @@ class Documents < Sinatra::Base
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', extnames, File.join(parent, 'splat'))
+        path = resolve_template('public', extnames, File.join(parent, 'splat'), true)
         if path
           request.env[:splat_path_info] = uri[parent.length..-1]
           return path
