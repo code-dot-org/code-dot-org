@@ -65,8 +65,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'exclude_summer scope' do
     summer_workshop = create :pd_workshop, :local_summer_workshop
+    teachercon = create :pd_workshop, :teachercon
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
+    assert Pd::Workshop.exclude_summer.exclude? teachercon
+    assert Pd::Workshop.exclude_summer.include? @workshop
   end
 
   test 'managed_by' do

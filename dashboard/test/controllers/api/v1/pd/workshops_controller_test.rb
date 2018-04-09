@@ -89,7 +89,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
-  test 'exclude_summer excludes local summer workshops if included' do
+  test 'exclude local summer workshops if exclude_summer present' do
     sign_in @organizer
 
     create :pd_workshop, :local_summer_workshop, organizer: @organizer
