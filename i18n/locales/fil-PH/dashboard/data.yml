@@ -525,6 +525,9 @@ fil:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Mga Loops kasama si BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Mga Loops sa Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

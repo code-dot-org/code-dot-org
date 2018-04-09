@@ -6674,6 +6674,23 @@
         This Corgi has been a good boy! Drag this carrot to
         him as a special treat.
       beeDebugVideo1_instruction: 使用一個`重複`迴圈來收集所有的花蜜。
+      behaviors pet test 2_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
+      behaviors pet test 3_instruction: "**It's time to make your own virtual pet!**\nYou
+        can change whatever code you want to to make your own pet. Here are some\nideas:\\r\n*
+        Can you make your pet start a new behavior when you click on it?\\r\n*\nCan
+        you make your pet run away when you drag the vacuum to it?\\r\n* Can you\nadd
+        other animal friends to your pet's area? "
+      behaviors pet test_instruction: |-
+        Last time, you practiced using "behaviors"
+        to make a sprite do something forever. This time, we will use behaviors to
+        make a virtual pet. \r
+        \r
+        This dog's name is Daisy. Daisy LOVES to snack
+        on carrots. Add the "drag and drop" behavior to the carrot so you can move
+        it to her.
       birdsDebugVideo1_instruction: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
       bounce_1_instruction: 添加一個積木到「當按向左鍵時」積木下，並點擊「運行」。讓球拍可以用向左鍵移動到目標。
       bounce_10_instruction: 畫面上方有個新的目標區域，把「得分 - 自己」和「得分 - 對手」積木分別附加到「當球命中目標時」和「當球沒有碰到球拍時」積木下以製作一個遊戲。看看在對手得到
@@ -7140,9 +7157,12 @@
         Get all three piles to pass this
         level.
       courseA_forVideoTest_artist_instruction: 使用`重複`迴圈為水添加波紋。
+      courseA_harvester_forVideo_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
       courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
       courseA_harvester_loops10_instruction: |-
-        Help the harvester pick all three ears
+        Help the harvester pick all five ears
         of corn!
       courseA_harvester_loops11_instruction: 'Try one more on your own! '
       courseA_harvester_loops2_instruction: Make sure to pick all the corn!
@@ -7152,7 +7172,15 @@
       courseA_harvester_loops4_instruction: |-
         Can you help the harvester find the
         bug in her code?
-      courseA_harvester_loops5_instruction: 'Help the harvester fix her code. '
+      courseA_harvester_loops5_instruction: |-
+        Try it yourself! Can you pick the corn
+        at the end too?
+      courseA_harvester_loops5a_instruction: |-
+        Look at all this corn? Can you pick
+        it all by yourself?
+      courseA_harvester_loops5b_instruction: |-
+        Can you change your code to make the
+        harvester pick all the corn?
       courseA_harvester_loops6_instruction: |-
         You will need **one** `Move South` block
         and **one** `Move West` block.
@@ -7165,7 +7193,7 @@
         corn?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
-        pick *one* corn.
+        pick the piece of corn.
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: |-
@@ -7175,12 +7203,14 @@
         Play with these blocks to help the harvester
         pick **one** corn.
       courseA_harvester_seq2_instruction: |-
-        Use three `Move West` blocks and one `Pick
-        Corn` block.
+        Use three `move west` blocks and one `pick
+        corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: |-
         Use three `Move North` blocks and one
         `Pick Corn` block.
-      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq4_instruction: |-
+        Add one block to help the harvester pick
+        the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
       courseA_harvester_seq6_instruction: Try it yourself!
       courseA_harvester_seq7_instruction: Try it yourself!
@@ -7188,10 +7218,28 @@
         Now the harvester needs to pick corn two
         times!
       courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
+      courseA_maze_ramp2_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp2a_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseA_maze_ramp3a_2018_instruction: |-
+        Add a `North` block to the bottom of
+        the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp4_2018_instruction: 小心 TNT 炸藥，不然羽毛會被炸飛！
+      courseA_maze_ramp4a_2018_instruction: |-
+        Can you figure out which block you need
+        to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_instruction: 小心 TNT 炸藥。
+      courseA_maze_ramp5a_2018_instruction: 讓鳥抓到這隻豬！
       courseA_maze_seq1_instruction: 讓這隻鳥抓到壞豬豬！
       courseA_maze_seq10_instruction: '挑戰：繞開 TNT 炸蘗，讓鳥能夠抓到豬！ '
-      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
-        to the pig! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Avoid the TNT to get the bird\nto
+        the pig! "
       courseA_maze_seq11_instruction: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到那頭豬。
       courseA_maze_seq11_2018_instruction: |-
         Move one way, then another to get the
@@ -7214,6 +7262,9 @@
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5a_2018_instruction: |-
+        What can you add to the end of this code
+        to get the bird to the pig?
       courseA_maze_seq6_instruction: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseA_maze_seq6_2018_instruction: |-
         Move one way, then another to get the
@@ -7416,6 +7467,32 @@
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
+      courseB_iceage_loops1_instruction: |-
+        Help Scrat across the ice to get to the
+        acorn!
+      courseB_iceage_loops10_instruction: |-
+        Help Scrat get all the way over to the
+        acorn!
+      courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseB_iceage_loops2_instruction: |-
+        Use two different move blocks to get to
+        the acorn!
+      courseB_iceage_loops3_instruction: |-
+        Can you get to the acorn with just one
+        `W` block?
+      courseB_iceage_loops4_instruction: |-
+        Add one more block to get Scrat all the
+        way to the acorn!
+      courseB_iceage_loops5_instruction: |-
+        Can you add one more loop to get to the
+        acorn?
+      courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
+      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseB_iceage_loops8_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_instruction: |-
+        The acorn is so far away! Can you use loops
+        to help Scrat get there?
       courseB_maze_seq1_instruction: |-
         Play with these blocks to see what they make
         the bird do! \r
@@ -7429,33 +7506,33 @@
       courseB_maze_seq12_2018_instruction: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq1_2018_instruction: |-
         Play with these blocks to see what they
-        make the bird do! \r
+        make Scrat do! \r
         \r
-        Get the bird to the pig to complete the level.
+        Get Scrat to the acorn to complete the level.
       courseB_maze_seq2_instruction: "*「有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。」*"
       courseB_maze_seq2_2018_instruction: |-
-        *"A bug! Fix the code to get me to the
-        pig."*
+        A bug! Fix the code to get Scrat to the
+        acorn!
       courseB_maze_seq4_instruction: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq4_2018_instruction: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: 先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！
       courseB_maze_seq6_2018_instruction: |-
-        Move one way, then another to get the
-        bird to the pig!
+        Move one way, then another to get Scrat
+        to the acorn!
       courseB_maze_seq7_instruction: 想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！
       courseB_maze_seq7_2018_instruction: |-
         Figure out what is missing and then add
-        blocks to get the bird to the pig!
+        blocks to get Scrat to the acorn!
       courseB_maze_seq8_instruction: 輪到你了！要怎麼樣才能讓鳥抓到這頭豬呢？
       courseB_maze_seq8_2018_instruction: |-
         Your turn!  What do you need to do to
-        get the bird to the pig?
+        get Scrat to the acorn?
       courseB_maze_seq9_instruction: 挑戰：繞開 TNT 炸蘗，讓鳥能夠抓到豬！
       courseB_maze_seq9_2018_instruction: |-
-        Challenge: Move around the TNT to get
-        the bird to the pig.
+        Challenge: Move around the broken ice
+        to get Scrat to the acorn.
       courseB_maze_seq9_challenge1_instruction: "*那隻豬現在藏在哪裡？*"
       courseB_maze_seqCold_instruction: 挑戰：找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！
       courseB_maze_seqOld_instruction: '繞開 TNT 炸藥，讓鳥抓到這頭豬！ '
@@ -7550,6 +7627,7 @@
         Let's make the
         animals disappear when you click on them! You can also add sounds and score
         points to create a fun game of Animal Tag!
+      courseB_scrat_forVideo_instruction: Get the acorn!
       courseB_starWars_prog1_instruction: 幫助 BB-8 拿到所有廢金屬！
       courseB_starWars_prog10_instruction: 幫助 BB-8 收集到所有發光的廢金屬
       courseB_starWars_prog10_2018_instruction: |-
@@ -10276,6 +10354,9 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      coursea_maze_ramp1_2018_instruction: |-
+        For this puzzle, snap the blocks together
+        and click "Run"!
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.

@@ -7471,6 +7471,8 @@ sq:
               name: Programming in Harvester
             Loops in Harvester:
               name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -7675,6 +7677,10 @@ sq:
               name: Events in Play Lab
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
         coursed-2018:
           title: New Course D Script
           description: ''
@@ -7759,6 +7765,8 @@ sq:
               name: Using Behaviors
             Using Forever Loops:
               name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
           title: ''
           description_audience: ''
           description_short: ''
@@ -7771,3 +7779,31 @@ sq:
           description_audience: ''
           description_short: ''
           description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  '

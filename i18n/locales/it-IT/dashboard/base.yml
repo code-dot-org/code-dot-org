@@ -570,7 +570,7 @@ it:
       cta: "Scopri come"
     hoc-encryption:
       title: "Crittografia semplice"
-      body: "Students will learn techniques to create and crack encrypted messages."
+      body: "Gli studenti impareranno tecniche per creare e decifrare un messaggio cifrato."
     weblab:
       title: "Sviluppo Web (versione provvisoria)"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."

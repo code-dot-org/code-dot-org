@@ -8067,6 +8067,23 @@
         This Corgi has been a good boy! Drag this carrot to
         him as a special treat.
       beeDebugVideo1_instruction: Use a `repeat` loop to collect all of the nectar.
+      behaviors pet test 2_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
+      behaviors pet test 3_instruction: "**It's time to make your own virtual pet!**\nYou
+        can change whatever code you want to to make your own pet. Here are some\nideas:\\r\n*
+        Can you make your pet start a new behavior when you click on it?\\r\n*\nCan
+        you make your pet run away when you drag the vacuum to it?\\r\n* Can you\nadd
+        other animal friends to your pet's area? "
+      behaviors pet test_instruction: |-
+        Last time, you practiced using "behaviors"
+        to make a sprite do something forever. This time, we will use behaviors to
+        make a virtual pet. \r
+        \r
+        This dog's name is Daisy. Daisy LOVES to snack
+        on carrots. Add the "drag and drop" behavior to the carrot so you can move
+        it to her.
       birdsDebugVideo1_instruction: |-
         Trace the path and lead me to the silly pig.
         Avoid TNT or feathers will fly!
@@ -8707,9 +8724,12 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
+      courseA_harvester_forVideo_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
       courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
       courseA_harvester_loops10_instruction: |-
-        Help the harvester pick all three ears
+        Help the harvester pick all five ears
         of corn!
       courseA_harvester_loops11_instruction: 'Try one more on your own! '
       courseA_harvester_loops2_instruction: Make sure to pick all the corn!
@@ -8719,7 +8739,15 @@
       courseA_harvester_loops4_instruction: |-
         Can you help the harvester find the
         bug in her code?
-      courseA_harvester_loops5_instruction: 'Help the harvester fix her code. '
+      courseA_harvester_loops5_instruction: |-
+        Try it yourself! Can you pick the corn
+        at the end too?
+      courseA_harvester_loops5a_instruction: |-
+        Look at all this corn? Can you pick
+        it all by yourself?
+      courseA_harvester_loops5b_instruction: |-
+        Can you change your code to make the
+        harvester pick all the corn?
       courseA_harvester_loops6_instruction: |-
         You will need **one** `Move South` block
         and **one** `Move West` block.
@@ -8732,7 +8760,7 @@
         corn?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
-        pick *one* corn.
+        pick the piece of corn.
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: |-
@@ -8742,12 +8770,14 @@
         Play with these blocks to help the harvester
         pick **one** corn.
       courseA_harvester_seq2_instruction: |-
-        Use three `Move West` blocks and one `Pick
-        Corn` block.
+        Use three `move west` blocks and one `pick
+        corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: |-
         Use three `Move North` blocks and one
         `Pick Corn` block.
-      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq4_instruction: |-
+        Add one block to help the harvester pick
+        the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
       courseA_harvester_seq6_instruction: Try it yourself!
       courseA_harvester_seq7_instruction: Try it yourself!
@@ -8755,13 +8785,31 @@
         Now the harvester needs to pick corn two
         times!
       courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
+      courseA_maze_ramp2_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp2a_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseA_maze_ramp3a_2018_instruction: |-
+        Add a `North` block to the bottom of
+        the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
+      courseA_maze_ramp4a_2018_instruction: |-
+        Can you figure out which block you need
+        to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_instruction: Avoid the TNT.
+      courseA_maze_ramp5a_2018_instruction: Get the bird to the pig!
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
-      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
-        to the pig! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Avoid the TNT to get the bird\nto
+        the pig! "
       courseA_maze_seq11_instruction: |-
         Move one way, then another to get the bird
         to the pig.
@@ -8786,6 +8834,9 @@
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5a_2018_instruction: |-
+        What can you add to the end of this code
+        to get the bird to the pig?
       courseA_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
@@ -9036,6 +9087,32 @@
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
+      courseB_iceage_loops1_instruction: |-
+        Help Scrat across the ice to get to the
+        acorn!
+      courseB_iceage_loops10_instruction: |-
+        Help Scrat get all the way over to the
+        acorn!
+      courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseB_iceage_loops2_instruction: |-
+        Use two different move blocks to get to
+        the acorn!
+      courseB_iceage_loops3_instruction: |-
+        Can you get to the acorn with just one
+        `W` block?
+      courseB_iceage_loops4_instruction: |-
+        Add one more block to get Scrat all the
+        way to the acorn!
+      courseB_iceage_loops5_instruction: |-
+        Can you add one more loop to get to the
+        acorn?
+      courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
+      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseB_iceage_loops8_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_instruction: |-
+        The acorn is so far away! Can you use loops
+        to help Scrat get there?
       courseB_maze_seq1_instruction: |-
         Play with these blocks to see what they make
         the bird do! \r
@@ -9049,13 +9126,13 @@
       courseB_maze_seq12_2018_instruction: Now get that pig any way you can!
       courseB_maze_seq1_2018_instruction: |-
         Play with these blocks to see what they
-        make the bird do! \r
+        make Scrat do! \r
         \r
-        Get the bird to the pig to complete the level.
+        Get Scrat to the acorn to complete the level.
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: |-
-        *"A bug! Fix the code to get me to the
-        pig."*
+        A bug! Fix the code to get Scrat to the
+        acorn!
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -9064,26 +9141,26 @@
         Move one way, then another to get the bird
         to the pig!
       courseB_maze_seq6_2018_instruction: |-
-        Move one way, then another to get the
-        bird to the pig!
+        Move one way, then another to get Scrat
+        to the acorn!
       courseB_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
       courseB_maze_seq7_2018_instruction: |-
         Figure out what is missing and then add
-        blocks to get the bird to the pig!
+        blocks to get Scrat to the acorn!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
       courseB_maze_seq8_2018_instruction: |-
         Your turn!  What do you need to do to
-        get the bird to the pig?
+        get Scrat to the acorn?
       courseB_maze_seq9_instruction: |-
         Challenge: Move around the TNT to get the bird
         to the pig.
       courseB_maze_seq9_2018_instruction: |-
-        Challenge: Move around the TNT to get
-        the bird to the pig.
+        Challenge: Move around the broken ice
+        to get Scrat to the acorn.
       courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
       courseB_maze_seqCold_instruction: |-
         Challenge: Debug this level by adding blocks
@@ -9184,6 +9261,7 @@
         Let's make the
         animals disappear when you click on them! You can also add sounds and score
         points to create a fun game of Animal Tag!
+      courseB_scrat_forVideo_instruction: Get the acorn!
       courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
       courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
       courseB_starWars_prog10_2018_instruction: |-
@@ -12062,6 +12140,9 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      coursea_maze_ramp1_2018_instruction: |-
+        For this puzzle, snap the blocks together
+        and click "Run"!
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.

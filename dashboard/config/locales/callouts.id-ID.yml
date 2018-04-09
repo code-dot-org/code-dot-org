@@ -1078,6 +1078,23 @@
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
+          kotak perlengkapan untuk membuangnya.
+        stone_block_2: Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang.
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
+          kepada kamu masih ada berapa blok yang bisa kamu gunakan.
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseA_maze_seq1_2018_callout:
@@ -1164,6 +1181,9 @@
         courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
           aktor kebagian yang berbeda di dalam ruang permainan.
@@ -1862,6 +1882,9 @@
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Ini adalah bagaimana anda menetapkan nilai variabel
           anda.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
           kotak perlengkapan untuk membuangnya.
