@@ -73,8 +73,6 @@ const decorationAnimationWidth = 85;
 const decorationAnimationHeight = 85;
 const decorationAnimationNumFrames = 19;
 
-const ABSOLUTE_DIRECTION = 90;
-
 /**
 * Minimum joint segment length
 */
@@ -397,7 +395,7 @@ class Visualization {
   }
 
   pointTo(degrees) {
-    this.setHeading(degrees + ABSOLUTE_DIRECTION);
+    this.setHeading(degrees + DEFAULT_DIRECTION);
   }
 
   turnByDegrees(degreesRight) {
@@ -1533,7 +1531,7 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.visualization.turnByDegrees(result.distance);
       break;
-    case 'PT': //Point To
+    case 'PT': // Point To
       this.visualization.pointTo(values[0]);
       break;
     case 'GA':  // Global Alpha
