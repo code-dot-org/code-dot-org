@@ -36,7 +36,7 @@
     และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้
   og_title: เด็กทุกคนสมควรได้รับโอกาส
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Hour of Code อยู่ที่นี่แล้ว
   og_description: นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์.
     มันมีการเปลี่ยนแปลงทุกๆ อย่าง.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -186,12 +186,12 @@
     and more. We are building the education the world needs - the first truly net
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codecademy_btn_site: เข้าชม Codecademy
+  third_party_organization: องค์กร
   third_party_curriculum: หลักสูตร
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
+  third_party_pricing: ราคา
+  third_party_cost_free: ฟรีสำหรับนักเรียนและคุณครู
+  third_party_cost_5permonth: 5 ดอลลาร์ต่อเดือนต่อชั้นเรียน
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
@@ -567,7 +567,7 @@
   minecraft_designer_button: เริ่มต้น
   minecraft_adventurer_description: ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย
   minecraft_adventurer_button: เริ่มต้น
-  minecraft_no_internet: Don't have Internet?
+  minecraft_no_internet: ไม่มีอินเทอร์เน็ตใช่หรือไม่
   minecraft_download_adventurer: ดาวน์โหลด ผจญภัยใน Minecraft แบบออฟไลน์
   minecraft_subtitle: ชั่วโมงแห่งการโค้ดด้วย Minecraft
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
@@ -576,7 +576,7 @@
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_teach_resources: แหล่งข้อมูลและแผนการเรียนสำหรับครู
   minecraft_leader_guide: Download resources to help you plan and lead an event.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
@@ -659,13 +659,13 @@
   video_title_real_madrid: Hour of Code with Real Madrid
   video_title_marco_belinelli: Hour of Code with Marco Belinelli
   video_title_chris_bosh: Chris Bosh on Computer Science
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  video_1min: 1 นาที
+  video_2min: 2 นาที
+  video_5min: 5 นาที
+  speak_another_language: พูดภาษาอื่นใช่หรือไม่?
+  help_translate: ช่วยเราแปลภาษา
+  no_internet: ไม่มีอินเทอร์เน็ตใช่หรือไม่
+  download_offline: ดาวน์โหลดเวอร์ชั่นออฟไลน์
   are_you_teacher: คุณเป็นครูหรือ
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: แรงบันดาลใจให้นักเรียน และอาสาสมัคร
@@ -727,8 +727,8 @@
     (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_checkbox_age_18_plus: ฉันยืนยันว่าฉันอายุมากกว่าหรือเท่ากับ
+    18 ปี
   volunteer_engineer_submission_submit: ส่ง
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
@@ -843,7 +843,7 @@
   dashboard_action_delete_no: ไม่ใช่
   dashboard_action_confirm: ลบหรือไม่?
   dashboard_action_done: เรียบร้อย
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: พิมพ์ใบรับรอง
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
@@ -856,11 +856,11 @@
     students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: แบบสำรวจ
+  dashboard_percent: เปอร์เซนต์
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_filter_all: ทั้งหมด
+  dashboard_download_csv: ดาวน์โหลดไฟล์ CSV
   dashboard_navigation_home_page: หน้าแรกของคุณครู
   dashboard_navigation_section_student_progress: บัญชีผู้ใช้ของนักเรียนและความคืบหน้า
   dashboard_navigation_section_teacher_progress: ความคืบหน้าของคุณ
@@ -870,13 +870,13 @@
   dashboard_navigation_section_speakers: วิทยาการคอมพิวเตอร์ <br/> วิทยากรรับเชิญ
   dashboard_navigation_all_sections: บัญชีผู้ใช้ของนักเรียนและความคืบหน้า
   dashboard_navigation_view_progress: ความคืบหน้า
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: การตอบกลับล่าสุด
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: เพิ่มนักเรียน
   dashboard_navigation_manage_students: จัดการนักเรียน
   dashboard_navigation_lesson_plans_resources: แผนการเรียนและแหล่งข้อมูล
-  dashboard_navigation_view_stats: ดูสถิติ
+  dashboard_navigation_view_stats: สถิติ
   dashboard_navigation_section: กลุ่ม %{section_name}
   dashboard_navigation_student: นักเรียน %{student_name}
   dashboard_progress_not_started: not started
@@ -886,7 +886,7 @@
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
   dashboard_progress_submitted: submitted
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: ดูความคืบหน้า
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
   dashboard_progress_pair_programming: pair programming
@@ -1028,10 +1028,10 @@
   dashboard_response: คำตอบ
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_unsubmitted: ยังไม่ส่ง
   dashboard_correctness_correct: Correct
   dashboard_correctness_incorrect: ไม่ถูกต้อง
-  dashboard_submission_submitted: Submitted
+  dashboard_submission_submitted: ส่งแล้ว
   dashboard_submission_in_progress: อยู่ในระหว่างความคืบหน้า
   dashboard_status: สถานะ
   dashboard_multi_correct: "# multiple choice correct"
@@ -1190,18 +1190,18 @@
   course2_name: คอร์ส 2
   course3_name: คอร์ส 3
   course4_name: คอร์ส 4
-  coursea-draft_name: Course A
-  coursea_name: Course A
-  courseb-draft_name: Course B
-  courseb_name: Course B
-  coursec-draft_name: Course C
-  coursec_name: Course C
-  coursed-draft_name: Course D
-  coursed_name: Course D
-  coursee-draft_name: Course E
-  coursee_name: Course E
-  coursef-draft_name: Course F
-  coursef_name: Course F
+  coursea-draft_name: คอร์ส A
+  coursea_name: คอร์ส A
+  courseb-draft_name: คอร์ส B
+  courseb_name: คอร์ส B
+  coursec-draft_name: คอร์ส C
+  coursec_name: คอร์ส C
+  coursed-draft_name: คอร์ส D
+  coursed_name: คอร์ส D
+  coursee-draft_name: คอร์ส E
+  coursee_name: คอร์ส E
+  coursef-draft_name: คอร์ส F
+  coursef_name: คอร์ส F
   accelerated_name: Accelerated Course
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
@@ -1313,12 +1313,12 @@
   infinity_gradelevel: อายุ 4 - 104 ปี
   artist_gradelevel: อายุ 8 ปีขึ้นไป
   monstercoding_gradelevel: อายุ 5 - 13 ปี
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: อายุ 5 - 10 ปี
+  csfirst_gradelevel: อายุ 9 - 14 ปี
   boxisland_gradelevel: ประถมศึกษา
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: อายุ 12 - 14 ปี
+  texasinstruments_gradelevel: อายุ 13-16 ปี
+  teacherled_gradelevel: อายุ 5 ปีขึ้นไป
   course1_gradelevel: อายุ 4-6 ปี
   course2_gradelevel: อายุ 6-18 ปี
   course3_gradelevel: อายุ 8-18 ปี
@@ -1938,7 +1938,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: สถิติ
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1958,7 +1958,7 @@
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
+  signing_in: เข้าสู่ระบบ
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
   sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the

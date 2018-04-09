@@ -35,7 +35,7 @@
     počítačovej vedy a programovacích konceptoch  v nasledujúcom kurze.
   og_title: 'Code.org: Ktokoľvek sa môže naučiť'
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Hour of Code je tu!
   og_description: Každý študent v každej škole si zaslúži možnosť študovať informatiku.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
@@ -95,12 +95,12 @@
   congratulations_on_completing_course2: Gratulujeme ti k dokončeniu kurzu 2
   congratulations_on_completing_course3: Gratulujeme ti k dokončeniu kurzu 3
   congratulations_on_completing_course4: Gratulujeme ti k dokončeniu kurzu 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Blahoželáme Vám k dokončeniu kurzu A
+  congratulations_on_completing_courseb: Blahoželáme Vám k dokončeniu kurzu B
+  congratulations_on_completing_coursec: Blahoželáme Vám k dokončeniu kurzu C
+  congratulations_on_completing_coursed: Blahoželáme Vám k dokončeniu kurzu D
+  congratulations_on_completing_coursee: Blahoželáme Vám k dokončeniu kurzu E
+  congratulations_on_completing_coursef: Blahoželáme Vám k dokončeniu kurzu F
   congratulations_on_completing_accelerated: Gratulujeme ti k dokončeniu zrýchleného
     kurzu
   congrats_next_tutorials_title: Pokračovať na ďalšiu úroveň
@@ -148,13 +148,13 @@
     move, jump, dance, and sing. Children can modify characters in the paint editor,
     add their own voices and sounds, even insert photos of themselves - then use the
     programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_curriculum: Stiahnuť Scratch Jr Curriculum
   third_party_scratchjr_btn_site: Navštív Scratch Jr.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_curriculum: Stiahnuť Scratch Curriculum
   third_party_scratch_btn_forum: Scratch Educator Forum
   third_party_scratch_btn_site: Navštív Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
@@ -162,21 +162,21 @@
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_curriculum: Stiahnuť Lightbot Curriculum
   third_party_lightbot_btn_site: Navštív Lightbot
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
   third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_forum: Khan Academy CS Fórum
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_forum: App Inventor 2 Fórum
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
@@ -263,27 +263,20 @@
   continue_learning_header: Pokračuj v učení nad rámec jednej hodiny
   continue_learning_body: Existuje veľa možností.  Môžeš sa učiť on-line alebo v miestnej
     škole alebo na letnom tábore.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Vyskúšajte Code.org's kurzy
   learn_next_level: Pokračovať na ďalšiu úroveň
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
   learn_back_to_minecraft: Neprestávajte sa učiť vďaka Minecraftu
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_course1: Práve som dokončil/a Kurz 1 - Pozri @codeorg
+  just_did_course2: Práve som dokončil/a Kurz 2 - Pozri @codeorg
+  just_did_course3: Práve som dokončil/a Kurz 3 - Pozri @codeorg
+  just_did_course4: Práve som dokončil/a Kurz 4 - Pozri @codeorg
+  just_did_coursea: Práve som dokončil/a Kurz A - Pozri @codeorg
+  just_did_courseb: Práve som dokončil/a Kurz B - Pozri @codeorg
+  just_did_coursec: Práve som dokončil/a Kurz C - Pozri @codeorg
   just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
@@ -1019,12 +1012,12 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Kurz 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Kurz A: '
+  dashboard_courseb: 'Kurz B: '
+  dashboard_coursec: 'Kurz C: '
+  dashboard_coursed: 'Kurz D: '
+  dashboard_coursee: 'Kurz E: '
+  dashboard_coursef: 'Kurz F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
@@ -1092,7 +1085,7 @@
   dashboard_faq_k5: Často kladené otázky – prvý stupeň
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
-  host_an_hour: Host an hour
+  host_an_hour: Hosťuj Hodinu kódu
   learn_banner_title: Pripoj sa k nám do Hodiny Kódu
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
@@ -1125,8 +1118,8 @@
   hoc2014_try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
   hoc2014_try_frozen: Postavy s Annou a Elsou z Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg: Tutoriály Code.org
+  carousel_heading_codeorg_any_device: Tutoriály Code.org (pre všetky zariadenia)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Kurzy vo vašom jazyku
@@ -1134,11 +1127,11 @@
   carousel_heading_beginners: Kurzy pre začiatočníkov
   carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Cvičenia na výuku JavaScriptu
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Uč sa JavaScript
   carousel_heading_unplugged: Žiadne zariadenie alebo internet? Skúste informatiku
     "unplugged"
   carousel_heading_devices: Aplikácie s kurzami pre telefóny a tablety
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Aplikácie pre telefóny a tablety
   carousel_heading_languages: Kurzy iných programovacích jazykov
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Vytvorte si vlastné aplikácie alebo hry
@@ -1173,7 +1166,7 @@
     Ak chcete získať prístup ku všetkým kurzom, aktualizujte na <a href="http://browsehappy.com/"
     target="_blank">moderný webový prehliadač.</a>
   mobile_devices: Kurzy pre mobilné zariadenia
-  frozen_name: Code with Anna and Elsa
+  frozen_name: Programuj s Annou a Elsou
   starwars_name: 'Hviezdne Vojny (angl. Star Wars): Vybudovanie galaxie za pomoci
     Kódu'
   codeorg_name: Klasické bludisko
@@ -1229,18 +1222,18 @@
   course2_name: Kurz 2
   course3_name: Kurz 3
   course4_name: Kurz 4
-  coursea-draft_name: Course A
-  coursea_name: Course A
-  courseb-draft_name: Course B
-  courseb_name: Course B
-  coursec-draft_name: Course C
-  coursec_name: Course C
-  coursed-draft_name: Course D
-  coursed_name: Course D
-  coursee-draft_name: Course E
-  coursee_name: Course E
-  coursef-draft_name: Course F
-  coursef_name: Course F
+  coursea-draft_name: Kurz A
+  coursea_name: Kurz A
+  courseb-draft_name: Kurz B
+  courseb_name: Kurz B
+  coursec-draft_name: Kurz C
+  coursec_name: Kurz C
+  coursed-draft_name: Kurz D
+  coursed_name: Kurz D
+  coursee-draft_name: Kurz E
+  coursee_name: Kurz E
+  coursef-draft_name: Kurz F
+  coursef_name: Kurz F
   accelerated_name: Zrýchlený kurz
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
