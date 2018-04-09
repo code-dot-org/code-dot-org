@@ -140,5 +140,9 @@ module Dashboard
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
+
+    console do
+      ARGV.push '-r', root.join('lib/console.rb')
+    end
   end
 end
