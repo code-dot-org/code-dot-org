@@ -545,7 +545,7 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
-    const sourceUrl = animationSourceUrl(key, state.animationList,
+    const sourceUrl = animationSourceUrl(key, state.animationList.propsByKey[key],
       state.pageConstants && state.pageConstants.channelId);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
@@ -671,7 +671,7 @@ function loadPendingFramesFromSource(key, props, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
-    const sourceUrl = animationSourceUrl(key, state.animationList,
+    const sourceUrl = animationSourceUrl(key, props,
       state.pageConstants && state.pageConstants.channelId);
     dispatch(startLoadingPendingFramesFromSourceAction());
     fetchURLAsBlob(sourceUrl, (err, blob) => {
@@ -694,14 +694,11 @@ function loadPendingFramesFromSource(key, props, callback) {
  * Given a key/serialized-props pair for an animation, work out where to get
  * the spritesheet.
  * @param {!AnimationKey} key
- * @param {object} animationList - Used to access props and check if src url
- *        exists in this project and is deleted
- * @param {string} channelId - Used to differentiate library animations from others
+ * @param {!SerializedAnimationProps} props
+ * @param {string} channelId - Used to differentiate library animations
  * @returns {string}
  */
-export function animationSourceUrl(key, animationList, channelId) {
-  const props = animationList.propsByKey[key];
-
+export function animationSourceUrl(key, props, channelId) {
   // If the animation has a sourceUrl it's external (from the library,
   // a levelbuilder, or an uploaded image) - and we may need to run it through
   // the media proxy.
@@ -740,7 +737,7 @@ export function withAbsoluteSourceUrls(serializedList, channelId) {
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, list, channelId);
+    const relativeUrl = animationSourceUrl(key, props, channelId);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;
