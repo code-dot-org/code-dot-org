@@ -275,13 +275,16 @@ var TopInstructions = React.createClass({
             {!this.props.hasContainedLevels &&
               <div ref="instructions">
                 {!this.state.helpTabSelected &&
-                  <Instructions
-                    ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
-                    onResize={this.adjustMaxNeededHeight}
-                    inTopPane
-                  />
+                  <div>
+                    <Instructions
+                      ref="instructions"
+                      renderedMarkdown={processMarkdown(this.props.markdown,
+                        { renderer })}
+                      onResize={this.adjustMaxNeededHeight}
+                      inTopPane
+                    />
+                    <TeacherOnlyMarkdown/>
+                  </div>
                 }
                 {this.state.helpTabSelected &&
                   <HelpTabContents
@@ -290,7 +293,6 @@ var TopInstructions = React.createClass({
                     referenceLinks={this.props.referenceLinks}
                   />
                 }
-                <TeacherOnlyMarkdown/>
               </div>
             }
           </div>
