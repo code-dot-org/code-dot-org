@@ -122,13 +122,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     responses = responses.compact.reject {|response| response['consent_b'] == '0'}
     return {} if responses.count == 0
 
-    facilitators = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq
+    facilitators = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq.compact
 
     response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses_per_facilitator = calculate_facilitator_name_frequencies(responses)
 
-    generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
+    generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter, has_facilitator_specific_responses: !!responses_per_facilitator)
 
     response_summary.merge! generate_response_averages(responses, response_sums, facilitator_specific_response_sums, responses_per_facilitator, facilitator_name_filter)
 
@@ -152,14 +152,33 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   # @param responses [Array(Hash)] List of responses in hash form
   # @return [Hash] Hash of names to response counts
   def calculate_facilitator_name_frequencies(responses)
-    if responses.first['how_often_given_feedback_s'].is_a? Hash
+    facilitator_names = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq
+
+    if facilitator_names == [nil]
+      return nil
+    elsif facilitator_names.include? nil
+      # This means that we have a hybrid of facilitator specific responses and non
+      # facilitator specific responses. So we assume that each response is for all
+      # facilitators and add to responses accordingly
+      facilitator_name_responses = Hash[facilitator_names.compact.map {|facilitator| [facilitator, 0]}]
+
+      responses.each do |response|
+        if response['who_facilitated_ss']
+          response['who_facilitated_ss'].each do |facilitator|
+            facilitator_name_responses[facilitator] += 1
+          end
+        else
+          facilitator_name_responses.each_key {|facilitator| facilitator_name_responses[facilitator] += 1}
+        end
+      end
+
+      return facilitator_name_responses
+    else
       # the below two lines return a histogram showing FacilitatorName=># Responses.
       # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
       # specific responses would do fine here
-      facilitator_name_responses = responses.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
+      facilitator_name_responses = responses.map {|x| x['who_facilitated_ss']}.flatten
       return Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
-    else
-      nil
     end
   end
 
@@ -198,7 +217,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   # @param facilitator_specific_response_sums [Hash] Sum total of question responses that are facilitator specific
   # @param facilitator_name_filter [String] Facilitator name - used when we are only looking for one facilitators results
   # @return nil
-  def generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
+  def generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter, has_facilitator_specific_responses:)
     responses.each do |response|
       response.symbolize_keys.each do |question, answer|
         if INDIVIDUAL_RESPONSE_QUESTIONS.include? question
@@ -212,7 +231,17 @@ module Api::V1::Pd::WorkshopScoreSummarizer
               end
             end
           else
-            response_sums[question] += get_score_for_response(question, answer)
+            if has_facilitator_specific_responses && FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.include?(question)
+              # We have a non facilitator specific response to a facilitator specific
+              # question. This can happen for CS Fundamentals - old workshops used to not
+              # have facilitator specific questions, newer ones do. We assume that the
+              # response applies to every facilitator in this case
+              facilitator_specific_response_sums[question].each_key do |facilitator_name|
+                facilitator_specific_response_sums[question][facilitator_name] += get_score_for_response(question, answer)
+              end
+            else
+              response_sums[question] += get_score_for_response(question, answer)
+            end
           end
         end
       end
