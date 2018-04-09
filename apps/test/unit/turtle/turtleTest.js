@@ -194,8 +194,7 @@ describe('Artist', () => {
       let artist = new Artist();
 
       artist.visualization = new Artist.Visualization();
-      console.info(typeof artist.visualization.pointTo);
-      artist.visualization.angle = 60;
+      artist.visualization.angle = 45;
       artist.step('PT', [angle, blockId]);
 
       expect(artist.visualization.angle).to.equal(angle);
