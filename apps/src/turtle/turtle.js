@@ -73,6 +73,8 @@ const decorationAnimationWidth = 85;
 const decorationAnimationHeight = 85;
 const decorationAnimationNumFrames = 19;
 
+const ABSOLUTE_DIRECTION = 90;
+
 /**
 * Minimum joint segment length
 */
@@ -395,7 +397,7 @@ class Visualization {
   }
 
   pointTo(degrees) {
-    this.setHeading(degrees + 90);
+    this.setHeading(degrees + ABSOLUTE_DIRECTION);
   }
 
   turnByDegrees(degreesRight) {
