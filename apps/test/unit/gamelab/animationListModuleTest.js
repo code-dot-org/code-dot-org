@@ -29,12 +29,17 @@ describe('animationListModule', function () {
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: 'bar'}}};
-      expect(animationSourceUrl(key, animationList)).to.equal('bar');
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('bar');
     });
 
     it(`returns the sourceUrl from props if it exists and contains the version`, function () {
       const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/test?version=foo'}}};
-      expect(animationSourceUrl(key, animationList)).to.equal('/v3/animations/test?version=foo');
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/test?version=foo');
+    });
+
+    it(`returns the sourceUrl from props if it exists in a different channel`, function () {
+      const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: '/v3/animations/456/789'}}};
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/456/789');
     });
 
     it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function () {
@@ -57,34 +62,33 @@ describe('animationListModule', function () {
       expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/123/bar?version=latestVersion');
     });
 
-
     it(`returns the sourceUrl passed through the media proxy if it's an aboslute url`, function () {
       const insecureAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: 'http://bar'}}};
-      expect(animationSourceUrl(key, insecureAnimationList))
+      expect(animationSourceUrl(key, insecureAnimationList, '123'))
           .to.equal(`//${document.location.host}/media?u=http%3A%2F%2Fbar`);
 
       const secureAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: 'https://bar'}}};
-      expect(animationSourceUrl(key, secureAnimationList))
+      expect(animationSourceUrl(key, secureAnimationList, '123'))
           .to.equal(`//${document.location.host}/media?u=https%3A%2F%2Fbar`);
     });
 
     it(`constructs a sourceUrl from key, version, and project if one isn't provided`, function () {
       const animationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: null, version: 'test-version'}}};
-      expect(animationSourceUrl(key, animationList)).to.equal('/v3/animations/fake_id/foo.png?version=test-version');
+      expect(animationSourceUrl(key, animationList, '123')).to.equal('/v3/animations/fake_id/foo.png?version=test-version');
     });
 
     it(`has empty version queryParam when version is falsy`, function () {
       let nullAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: null, version: null}}};
-      expect(animationSourceUrl(key, nullAnimationList)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      expect(animationSourceUrl(key, nullAnimationList, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
       let undefinedAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: null, version: undefined}}};
-      expect(animationSourceUrl(key, undefinedAnimationList)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      expect(animationSourceUrl(key, undefinedAnimationList, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
       let falseAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: null, version: false}}};
-      expect(animationSourceUrl(key, falseAnimationList)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      expect(animationSourceUrl(key, falseAnimationList, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
       let zeroAnimationList = {orderedKeys: ['foo'], propsByKey: {'foo' : {sourceUrl: null, version: 0}}};
-      expect(animationSourceUrl(key, zeroAnimationList)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      expect(animationSourceUrl(key, zeroAnimationList, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
     });
   });
 

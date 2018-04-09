@@ -690,7 +690,6 @@ function loadPendingFramesFromSource(key, props, callback) {
   };
 }
 
-
 /**
  * Given a key/serialized-props pair for an animation, work out where to get
  * the spritesheet.
