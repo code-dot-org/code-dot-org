@@ -3,7 +3,7 @@
  */
 
 import color from '@cdo/apps/util/color';
-import { PropTypes } from 'react';
+import {PropTypes} from 'react';
 
 /**
  * Mapping of application statuses to their background and text colors.
@@ -76,20 +76,23 @@ exports.ApplicationFinalStatuses = [
  * Constants for Regional Partner dropdown
  */
 const allPartnersLabel = "All Regional Partners' Applications";
-const allPartnersFilter = "all";
+const allPartnersValue = "all";
 const unmatchedLabel = "No Partner/Unmatched";
-const unmatchedFilter = "none";
+const unmatchedValue = "none";
 exports.AllPartnersLabel = allPartnersLabel;
-exports.AllPartnersFilter = allPartnersFilter;
+exports.AllPartnersValue = allPartnersValue;
 exports.UnmatchedLabel = unmatchedLabel;
-exports.UnmatchedFilter = unmatchedFilter;
+exports.UnmatchedValue = unmatchedValue;
 
 exports.RegionalPartnerDropdownOptions = [
-  {value: unmatchedFilter, label: unmatchedLabel},
-  {value: allPartnersFilter, label: allPartnersLabel}
+  {value: unmatchedValue, label: unmatchedLabel},
+  {value: allPartnersValue, label: allPartnersLabel}
 ];
 
-exports.RegionalPartnerFilterPropType = PropTypes.oneOfType([
-  PropTypes.string,
-  PropTypes.number
-]);
+exports.RegionalPartnerFilterPropType = PropTypes.shape({
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  label: PropTypes.string.isRequired
+});

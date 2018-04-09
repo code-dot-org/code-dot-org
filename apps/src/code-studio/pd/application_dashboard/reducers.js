@@ -1,9 +1,8 @@
 import {
   UnmatchedLabel,
-  UnmatchedFilter
+  UnmatchedValue
 } from './constants';
 
-const SET_REGIONAL_PARTNER_NAME = 'application_dashboard/SET_REGIONAL_PARTNER_NAME';
 const SET_REGIONAL_PARTNER_FILTER = 'application_dashboard/SET_REGIONAL_PARTNER_FILTER';
 const SET_REGIONAL_PARTNER_GROUP = 'application_dashboard/SET_REGIONAL_PARTNER_GROUP';
 const SET_REGIONAL_PARTNERS = 'application_dashboard/SET_REGIONAL_PARTNERS';
@@ -11,8 +10,7 @@ const SET_WORKSHOP_ADMIN_PERMISSION = 'application_dashboard/SET_WORKSHOP_ADMIN_
 const SET_LOCK_APPLICATION_PERMISSION = 'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
-  regionalPartnerName: sessionStorage.getItem("regionalPartnerName") || UnmatchedLabel,
-  regionalPartnerFilter: sessionStorage.getItem("regionalPartnerFilter") || UnmatchedFilter,
+  regionalPartnerFilter: JSON.parse(sessionStorage.getItem("regionalPartnerFilter")) || {value: UnmatchedValue, label: UnmatchedLabel},
   regionalPartnerGroup: null,
   regionalPartners: [],
   permissions: {}
@@ -20,13 +18,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case SET_REGIONAL_PARTNER_NAME:
-      return {
-        ...state,
-        regionalPartnerName: action.name
-      };
-
     case SET_REGIONAL_PARTNER_FILTER:
+      sessionStorage.setItem("regionalPartnerFilter", JSON.stringify(action.filter));
       return {
         ...state,
         regionalPartnerFilter: action.filter
@@ -66,11 +59,6 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
-
-export const setRegionalPartnerName = (name) => ({
-  type: SET_REGIONAL_PARTNER_NAME,
-  name
-});
 
 export const setRegionalPartnerFilter = (filter) => ({
   type: SET_REGIONAL_PARTNER_FILTER,

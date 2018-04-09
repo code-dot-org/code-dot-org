@@ -5,7 +5,6 @@ import React, {PropTypes} from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import applicationDashboardReducers, {
-  setRegionalPartnerName,
   setRegionalPartnerFilter,
   setRegionalPartnerGroup,
   setRegionalPartners,
@@ -52,8 +51,8 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string,
-    regionalPartnerFilter: PropTypes.number,
+    regionalPartnerLabel: PropTypes.string,
+    regionalPartnerValue: PropTypes.number,
     regionalPartnerGroup: PropTypes.number,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
@@ -64,12 +63,9 @@ export default class ApplicationDashboard extends React.Component {
   };
 
   componentWillMount() {
-    if (this.props.regionalPartnerName) {
-      store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
-    }
-
-    if (this.props.regionalPartnerFilter) {
-      store.dispatch(setRegionalPartnerFilter(this.props.regionalPartnerFilter));
+    if (this.props.regionalPartnerLabel && this.props.regionalPartnerValue) {
+      const regionalPartnerFilter = {value: this.props.regionalPartnerValue, label: this.props.regionalPartnerLabel};
+      store.dispatch(setRegionalPartnerFilter(regionalPartnerFilter));
     }
 
     if (this.props.regionalPartnerGroup) {

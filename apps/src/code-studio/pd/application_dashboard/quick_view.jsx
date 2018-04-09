@@ -40,7 +40,6 @@ const styles = {
 
 export class QuickView extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
     regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
@@ -68,7 +67,7 @@ export class QuickView extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
-      this.load(nextProps.regionalPartnerFilter);
+      this.load(nextProps.regionalPartnerFilter.value);
     }
   }
 
@@ -77,7 +76,7 @@ export class QuickView extends React.Component {
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
     this.statuses.unshift({value: '', label: "All statuses"});
 
-    this.load(this.props.regionalPartnerFilter);
+    this.load(this.props.regionalPartnerFilter.value);
   }
 
   componentWillUnmount() {
@@ -90,13 +89,13 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
+  load(regionalPartnerValue = this.props.regionalPartnerFilter.value) {
     this.abortLoad();
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.getJsonUrl(regionalPartnerFilter),
+      url: this.getJsonUrl(regionalPartnerValue),
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -107,18 +106,18 @@ export class QuickView extends React.Component {
     });
   }
 
-  getApiUrl = (format, regionalPartnerFilter) => (
-    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
+  getApiUrl = (format, regionalPartnerValue) => (
+    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerValue))}`
   );
-  getApiParams = (regionalPartnerFilter) => ({
+  getApiParams = (regionalPartnerValue) => ({
     role: this.props.route.role,
-    regional_partner_filter: regionalPartnerFilter
+    regional_partner_value: regionalPartnerValue
   });
-  getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
-  getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
+  getJsonUrl = (regionalPartnerValue) => this.getApiUrl('', regionalPartnerValue);
+  getCsvUrl = (regionalPartnerValue) => this.getApiUrl('.csv', regionalPartnerValue);
 
   handleDownloadCsvClick = event => {
-    window.open(this.getCsvUrl(this.state.regionalPartnerFilter || ''));
+    window.open(this.getCsvUrl(this.props.regionalPartnerFilter.value || ''));
   };
 
   handleStateChange = (selected) => {
@@ -142,7 +141,7 @@ export class QuickView extends React.Component {
         {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
+            regionalPartnerValue={this.props.regionalPartnerFilter.value}
             accepted={accepted}
             registered={registered}
           />
@@ -154,7 +153,7 @@ export class QuickView extends React.Component {
           />
         }
         <Row>
-          <h1>{this.props.regionalPartnerName}</h1>
+          <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -193,7 +192,7 @@ export class QuickView extends React.Component {
         path={this.props.route.path}
         data={this.state.applications}
         statusFilter={this.state.filter}
-        regionalPartnerName={this.props.regionalPartnerName}
+        regionalPartnerName={this.props.regionalPartnerFilter.label}
         viewType={this.props.route.viewType}
       />
     );
@@ -201,7 +200,6 @@ export class QuickView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
   regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);
