@@ -175,18 +175,6 @@ describe('Artist', () => {
     });
   });
 
-  // describe('pointTo', () => {
-  //   it('can point to 30 degrees', () => {
-  //     let angle = 30;
-  //     let block_Id = "block_id_4";
-  //     let artist = new Artist();
-  //
-  //     artist.visualization = new Artist.Visualization();
-  //     artist.step('PT', [angle, block_Id]);
-  //     expect(artist.visualization.pointTo(angle)).to.equal(angle);
-  //   });
-  // });
-
   describe('pointTo', () => {
     it('can point to 30 degrees', () => {
       let angle = 30;
@@ -200,28 +188,17 @@ describe('Artist', () => {
       expect(pointToSpy).to.be.have.been.calledWith(angle);
     });
 
-    it('can point to 0 degrees', () => {
-      let angle = 0;
-      let blockId = "block_id_4";
+    it('can point to a specific direction', () => {
+      const angle = 60;
+      const blockId = "block_id_8";
       let artist = new Artist();
 
       artist.visualization = new Artist.Visualization();
-      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
+      console.info(typeof artist.visualization.pointTo);
+      artist.visualization.angle = 60;
       artist.step('PT', [angle, blockId]);
 
-      expect(pointToSpy).to.be.have.been.calledWith(angle);
-    });
-
-    it('can point to 0 degrees', () => {
-      let angle = -50;
-      let blockId = "block_id_4";
-      let artist = new Artist();
-
-      artist.visualization = new Artist.Visualization();
-      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
-      artist.step('PT', [angle, blockId]);
-
-      expect(pointToSpy).to.be.have.been.calledWith(angle);
+      expect(artist.visualization.angle).to.equal(angle);
     });
   });
 
