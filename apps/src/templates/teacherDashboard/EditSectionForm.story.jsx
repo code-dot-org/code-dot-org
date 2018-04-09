@@ -75,6 +75,7 @@ export default storybook => storybook
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
+        isCsfScript={() => false}
       />
     );
   });
