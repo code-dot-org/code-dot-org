@@ -4,6 +4,16 @@ import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
 
+const styles = {
+  dropdown: {
+    width: 250,
+    display: 'block',
+    boxSizing: 'border-box',
+    fontSize: 'medium',
+    padding: '0.8em',
+  },
+};
+
 /**
  * Group our assignments into categories for our dropdown
  */
@@ -23,6 +33,7 @@ export default class ScriptSelector extends Component {
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
+    style: PropTypes.object,
   };
 
   render() {
@@ -35,6 +46,7 @@ export default class ScriptSelector extends Component {
         <select
           value={scriptId}
           onChange={event => onChange(parseInt(event.target.value))}
+          style={styles.dropdown}
         >
           <option key="default" value={''}/>
           {Object.keys(grouped).map((groupName, index) => (
