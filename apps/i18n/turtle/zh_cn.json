@@ -74,7 +74,7 @@
   "penDown": "下移铅笔",
   "penTooltip": "上下移动铅笔来启动或停止绘图。",
   "penUp": "上移铅笔",
-  "pointTo": "point to",
+  "pointTo": "指向",
   "pixels": "像素",
   "reinfFeedbackMsg": "这里是您的绘图 ！再次尝试来接着做下去，或者点击“继续”开始下一关。",
   "setAlpha": "设置透明度",
@@ -94,6 +94,6 @@
   "turnTooltip": "把小艺术家向左或向右转指定的角度。",
   "turtleVisibilityTooltip": "使小艺术家可见或不可见。",
   "widthTooltip": "更改铅笔的宽度。",
-  "withSize": "with size",
+  "withSize": "尺寸",
   "wrongColour": "您的图片显示颜色是错误的。该谜题需要颜色是 %1。"
 }

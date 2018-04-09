@@ -1,5 +1,5 @@
 {
-  "achievements": "Achievements",
+  "achievements": "Logros",
   "activity": "Actividad",
   "actions": "Acciones",
   "add": "Añadir",
@@ -893,6 +893,7 @@
   "sectionViewProgress": "Ver progreso",
   "secret": "Secreto",
   "seeAllTutorials": "Mirar todos los tutoriales",
+  "selectACourse": "Select a course or unit",
   "selectGoogleClassroom": "Usa aula de Google",
   "selectCleverSection": "Seleccione una sección Clever",
   "selectSection": "Elige una Sección",
