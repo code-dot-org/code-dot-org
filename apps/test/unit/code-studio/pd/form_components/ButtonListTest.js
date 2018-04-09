@@ -1,4 +1,4 @@
-import ButtonList from '@cdo/apps/code-studio/pd/form_components/button_list';
+import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';

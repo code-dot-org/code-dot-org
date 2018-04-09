@@ -86,6 +86,7 @@ export default class Section2YourSchool extends LabeledFormComponent {
         {this.props.data.school && this.props.data.school === '-1' &&
           <div style={styles.indented}>
             {this.inputFor("schoolName")}
+            {this.inputFor("schoolDistrictName")}
             {this.inputFor("schoolAddress")}
             {this.inputFor("schoolCity")}
             {this.selectFor("schoolState", {placeholder: "Select a state"})}
@@ -191,6 +192,7 @@ export default class Section2YourSchool extends LabeledFormComponent {
     if (data.school && data.school === '-1') {
       requiredFields.push(
         "schoolName",
+        "schoolDistrictName",
         "schoolAddress",
         "schoolCity",
         "schoolState",
@@ -232,6 +234,7 @@ export default class Section2YourSchool extends LabeledFormComponent {
 
     if (data.school && data.school !== '-1') {
       changes.schoolName = undefined;
+      changes.schoolDistrictName = undefined;
       changes.schoolAddress = undefined;
       changes.schoolCity = undefined;
       changes.schoolState = undefined;

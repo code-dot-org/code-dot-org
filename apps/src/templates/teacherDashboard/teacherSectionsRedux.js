@@ -58,6 +58,13 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
+/** Reports server request has started */
+const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
+/** Reports server request has succeeded */
+const UPDATE_SHARING_SUCCESS = 'teacherDashboard/UPDATE_SHARING_SUCCESS';
+/** Reports server request has failed */
+const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
+
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
@@ -188,6 +195,29 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   dispatch(beginEditingSection(sectionId));
   dispatch(editSectionProperties({loginType}));
   return dispatch(finishEditingSection());
+};
+
+export const updateShareSetting = (sectionId, shareSetting) => dispatch => {
+  dispatch({type: UPDATE_SHARING_REQUEST});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({sharing_disabled: shareSetting}),
+    }).done(result => {
+      dispatch({
+        type: UPDATE_SHARING_SUCCESS,
+        sectionId: sectionId,
+        serverSectionShareSetting: result.sharing_disabled,
+        serverStudents: result.students
+      });
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: UPDATE_SHARING_FAILURE});
+      reject(status);
+    });
+  });
 };
 
 export const asyncLoadSectionData = (id) => (dispatch) => {
@@ -432,6 +462,16 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === UPDATE_SHARING_SUCCESS) {
+    const students = action.serverStudents.map(student =>
+      studentFromServerStudent(student, action.sectionId));
+    return {
+      ...state,
+      saveInProgress: false,
+      selectedStudents: students
+    };
+  }
+
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
@@ -491,6 +531,20 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+
+  if (action.type === UPDATE_SHARING_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false
     };
   }
 

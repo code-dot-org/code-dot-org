@@ -1,17 +1,17 @@
 "km-KH":
-  hour_of_code: "ពេលវេលា​នៃ​កូដ"
-  hello: "សួស្ដី​ពិភពលោក"
-  'yes': "យល់ព្រម"
-  'no': "ទេ"
-  select_language: "សូម​ជ្រើសយក​ភាសា​របស់​អ្នក"
-  upgrade_ie_message: "អ្នកហ្នឹងមិនអាចបើកគេហទំព័រ Code.org ដោយប្រើ Internet Explorer
-    ជំនាន់ទី ៨, ៩, និង ១០ ក្នុងពេលខាងមុខនេះ។ ដូច្នេះសូមធ្វើបច្ចុប្បន្នភាពកម្មវិធីបើកគេហទំព័ររបស់អ្នក។"
-  upgrade_ie_message_csedweek: "អ្នកហ្នឹងមិនអាចបើកគេហទំព័រ CSEdWeek.org ដោយប្រើ Internet
-    Explorer ជំនាន់ទី ៨, ៩, និង ១០ ក្នុងពេលខាងមុខនេះ។ ដូច្នេះសូមធ្វើបច្ចុប្បន្នភាពកម្មវិធីបើកគេហទំព័ររបស់អ្នក។"
-  upgrade_ie_link: "សិក្សាបន្ថែម"
-  en: "វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  computer_science_edweek: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  csedweek_dates: "ថ្ងៃទី៨ ដល់ទី១៤ ខែធ្នូ ឆ្នាំ២០១៤"
+  hour_of_code: ពេលវេលា​នៃ​កូដ
+  hello: សួស្ដី​ពិភពលោក
+  'yes': យល់ព្រម
+  'no': ទេ
+  select_language: សូម​ជ្រើសយក​ភាសា​របស់​អ្នក
+  upgrade_ie_message: អ្នកហ្នឹងមិនអាចបើកគេហទំព័រ Code.org ដោយប្រើ Internet Explorer
+    ជំនាន់ទី ៨, ៩, និង ១០ ក្នុងពេលខាងមុខនេះ។ ដូច្នេះសូមធ្វើបច្ចុប្បន្នភាពកម្មវិធីបើកគេហទំព័ររបស់អ្នក។
+  upgrade_ie_message_csedweek: អ្នកហ្នឹងមិនអាចបើកគេហទំព័រ CSEdWeek.org ដោយប្រើ Internet
+    Explorer ជំនាន់ទី ៨, ៩, និង ១០ ក្នុងពេលខាងមុខនេះ។ ដូច្នេះសូមធ្វើបច្ចុប្បន្នភាពកម្មវិធីបើកគេហទំព័ររបស់អ្នក។
+  upgrade_ie_link: សិក្សាបន្ថែម
+  en: វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  computer_science_edweek: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  csedweek_dates: ថ្ងៃទី៨ ដល់ទី១៤ ខែធ្នូ ឆ្នាំ២០១៤
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">កម្មវិធី Hour of Code</a> ហ្នឹងមកដល់ក្នុងពេលឆាប់ៗ. សូមអំពាវនាវដល់គ្រូបង្រៀន
     និងអ្នករៀបចំកម្មវិធីទាំងអស់, <a href="http://hourofcode.com" style="color: white;
@@ -20,29 +20,29 @@
     none; font-weight: 400">តើអ្នកជាគ្រូបង្រៀនផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ? សូមមើលធនធាន
     CSEdWeek ដ៏ទៃទៀត</a>'
   n_have_learned_an_hoc: "<h1>សាកល្បង</h1><h2>កម្មវិធី Hour of Code</h2><h3># ដែលបានផ្តល់ឲ</h3>"
-  anybody_can_learn: "គ្រប់គ្នាអាចរៀនបាន។"
-  learn_now: "ចាប់ផ្ដើមរៀននៅពេលនេះ"
-  petition_message: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  petition_sign_message: "ប្រសិនបើអ្នកយល់ព្រម, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។ ចូលរួម
-    # ជាមួយអ្នកដ៏ទៃទៀត។"
-  petition_sign_message_support: "ប្រសិនបើអ្នកគាំទ្រយើង, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។
-    ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត។"
-  petition_join_others: "ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត"
-  name: "ឈ្មោះ"
-  email: "អ៊ីមែល"
-  zipcode: "លេខកូដ​ប្រៃសណីយ៍​ឬ​ប្រទេស"
-  submit: "ដាក់ស្នើរ"
-  twentyhours_heading: "សាកល្បងមេរៀន ការណែនាំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ របស់យើង"
-  twentyhours_text: "បានបញ្ចប់កម្មវិធី Hour of Code ជាលើកដំបូង? សិក្សាបន្ថែមពីចំនុចសំខាន់នៃវិទ្យាសាស្រ្តកុំព្យូទ័រ
-    និងមូលដ្ឋានគ្រិះនៃការសរសេរកម្មវិធី នៅក្នុងមេរៀនជាបន្តបន្ទាប់។"
+  anybody_can_learn: គ្រប់គ្នាអាចរៀនបាន។
+  learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
+  petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  petition_sign_message: 'ប្រសិនបើអ្នកយល់ព្រម, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។ ចូលរួម
+    # ជាមួយអ្នកដ៏ទៃទៀត។'
+  petition_sign_message_support: 'ប្រសិនបើអ្នកគាំទ្រយើង, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។
+    ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត។'
+  petition_join_others: 'ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត'
+  name: ឈ្មោះ
+  email: អ៊ីមែល
+  zipcode: លេខកូដ​ប្រៃសណីយ៍​ឬ​ប្រទេស
+  submit: ដាក់ស្នើរ
+  twentyhours_heading: សាកល្បងមេរៀន ការណែនាំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ របស់យើង
+  twentyhours_text: បានបញ្ចប់កម្មវិធី Hour of Code ជាលើកដំបូង? សិក្សាបន្ថែមពីចំនុចសំខាន់នៃវិទ្យាសាស្រ្តកុំព្យូទ័រ
+    និងមូលដ្ឋានគ្រិះនៃការសរសេរកម្មវិធី នៅក្នុងមេរៀនជាបន្តបន្ទាប់។
   og_title: 'Code.org: អ្នកគ្រប់គ្នាអាចរៀន'
-  og_title_soon: "កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ"
+  og_title_soon: កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ
   og_title_here: The Hour of Code is here!
-  og_description: "សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ។"
+  og_description: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ។
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
-  csedweek_og_description: "ថ្ងៃទី៤ ដល់ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ២០១៧។ វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់ការសិក្សារបស់សិស្សទាំងអស់។"
+  csedweek_og_title: សប្ដាហ៍​នៃ​ការ​សិក្សា​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+  csedweek_og_description: ថ្ងៃទី៤ ដល់ថ្ងៃទី១០ ខែធ្នូ ឆ្នាំ២០១៧។ វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់ការសិក្សារបស់សិស្សទាំងអស់។
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
@@ -50,287 +50,287 @@
   hoc2014_heading: ចូលរួម<a href="http://hourofcode.com">កម្មវិធី Hour of Code</a><br/>នៅថ្ងៃទី៨
     ដល់ថ្ងៃទី១៤ ខែធ្នូ ឆ្នាំ២០១៤<br/>
   hoc2014_students: Students
-  hoc2014_try: "សាកល្បង"
-  hoc2014_teachers: "គ្រូបង្រៀន"
-  hoc2014_host: "រៀបចំ"
-  hoc2014_everyone: "អ្នក​ទាំង​អស់​គ្នា"
-  hoc2014_support: "គាំទ្រវា &#x25BE;"
-  hoc2014_whatishoc: "តើអ្វីជាកម្មវិធី Hour of Code?"
+  hoc2014_try: សាកល្បង
+  hoc2014_teachers: គ្រូបង្រៀន
+  hoc2014_host: រៀបចំ
+  hoc2014_everyone: អ្នក​ទាំង​អស់​គ្នា
+  hoc2014_support: គាំទ្រវា &#x25BE;
+  hoc2014_whatishoc: តើអ្វីជាកម្មវិធី Hour of Code?
   csedweek_map_header: "​ព្រឹត្តិការណ៍ # CSEdWeek / Hour of Code នៅជុំវិញពិភពលោក"
-  csedweek_map_signup: "ចុះឈ្មោះ​ព្រឹត្តិការណ៍​របស់​អ្នក"
-  csedweek_map_search_placeholder: "ស្វែងរក​ព្រឹត្តិការណ៍ Hour of Code"
-  csedweek_map_search_search: "ស្វែងរក"
-  csedweek_map_search_reset: "កំណត់​ឡើង​វិញ"
-  csedweek_map_legend_title: "វារៈបុរស"
+  csedweek_map_signup: ចុះឈ្មោះ​ព្រឹត្តិការណ៍​របស់​អ្នក
+  csedweek_map_search_placeholder: ស្វែងរក​ព្រឹត្តិការណ៍ Hour of Code
+  csedweek_map_search_search: ស្វែងរក
+  csedweek_map_search_reset: កំណត់​ឡើង​វិញ
+  csedweek_map_legend_title: វារៈបុរស
   csedweek_map_legend_event: "​ព្រឹត្តិការណ៍ Hour of Code"
   csedweek_map_legend_cs_tech_jam: "​ព្រឹត្តិការណ៍ពិសេស"
-  cded_sign_up: "ចុះឈ្មោះ"
-  cded_try_it: "សាកល្បង"
-  try_now: "សាកល្បង​ឥឡូវ"
-  california_heading: "ស្នើសុំសាលារបស់អ្នកដើម្បីបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  california_text: "គ្រូបង្រៀនទាំងអស់អាចទទួលបាន <a href='http://studio.code.org/'>មេរៀនដោយឥតគិតថ្លៃ</a>។
-    \ គ្រូបង្រៀនបឋមសិក្សាទាំងអស់អាច <a href='http://code.org/educate/k5'>បង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័របាន</a>។
-    ស្នើសុំវិទ្យាល័យ <a href='http://code.org/educate/districts'>ដើម្បីសហការជាមួយពួកយើង។"
-  california_button: "រៀនបន្ថែមទៀត"
-  flappy_heading: "រីករាយខួបកំណើត Code.org"
+  cded_sign_up: ចុះឈ្មោះ
+  cded_try_it: សាកល្បង
+  try_now: សាកល្បង​ឥឡូវ
+  california_heading: ស្នើសុំសាលារបស់អ្នកដើម្បីបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  california_text: គ្រូបង្រៀនទាំងអស់អាចទទួលបាន <a href='http://studio.code.org/'>មេរៀនដោយឥតគិតថ្លៃ</a>។  គ្រូបង្រៀនបឋមសិក្សាទាំងអស់អាច
+    <a href='http://code.org/educate/k5'>បង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័របាន</a>។ ស្នើសុំវិទ្យាល័យ
+    <a href='http://code.org/educate/districts'>ដើម្បីសហការជាមួយពួកយើង។
+  california_button: រៀនបន្ថែមទៀត
+  flappy_heading: រីករាយខួបកំណើត Code.org
   flappy_text: Code.org ទើបតែគម្រប់ខួបបានមួយឆ្នាំ។<br/><br/> អបអរសាទរជាមួយពួកយើង ដោយបង្កើតហ្គេម<b>Flappy</b>ដោយខ្លួនអ្នក។
     សរសេរកូដដោយកំណត់ច្បាប់ដោយខ្លួនអ្នក ហើយចែករំលែកវាទៅកាន់មិត្តរបស់អ្នក!
-  view_english_site: "បើកមើលផ្នែកភាសាអង់គ្លេស"
-  non_english_tutorials: "ការបង្រៀនបានបកប្រែជាច្រើនភាសា:"
-  write_your_first_program: "សរសេរកម្មវិធីកុំព្យូទ័ររបស់អ្នកជាលើកដំបូង"
-  learn_cs_concepts: "សិក្សាមូលដ្ឋានគ្រិះនៃវិទ្យាសាស្រ្តកុំព្យូទ័រដោយសរសេរកម្មវិធីដោយប្រើវិធីអូសនិងទម្លាក់។
+  view_english_site: បើកមើលផ្នែកភាសាអង់គ្លេស
+  non_english_tutorials: 'ការបង្រៀនបានបកប្រែជាច្រើនភាសា:'
+  write_your_first_program: សរសេរកម្មវិធីកុំព្យូទ័ររបស់អ្នកជាលើកដំបូង
+  learn_cs_concepts: សិក្សាមូលដ្ឋានគ្រិះនៃវិទ្យាសាស្រ្តកុំព្យូទ័រដោយសរសេរកម្មវិធីដោយប្រើវិធីអូសនិងទម្លាក់។
     នេះជាការបង្រៀនដូចលេងហ្គេមដោយមើលវីដេអូបង្រៀនរបស់ Bill Gates, Mark Zukerberg, Angry
-    Birds និង Plants vs. Zombies។ រៀនពី រង្វិលជុំដដែលៗ, លក្ខខណ្ឌប្រសិនបើ, និង ក្បួនដោះស្រាយមូលដ្ឋាន។"
-  all_ages: "គ្រប់​អាយុ"
-  beginner: "អ្នកកំរិត​ដំបូង"
+    Birds និង Plants vs. Zombies។ រៀនពី រង្វិលជុំដដែលៗ, លក្ខខណ្ឌប្រសិនបើ, និង ក្បួនដោះស្រាយមូលដ្ឋាន។
+  all_ages: គ្រប់​អាយុ
+  beginner: អ្នកកំរិត​ដំបូង
   n_participants: "# អ្នកចូលរួម"
-  go: "ចាប់ផ្ដើម"
-  thank_you_: "សូមអរគុណ!"
-  congratulations: "សូម​អប​អរសាទរ!"
-  congratulations_on_completing_hoc: "សូមអបអរ​សាទរ​សំរាប់​ការ​បញ្ចប់​កម្មវិធី Hour
-    of Code"
+  go: ចាប់ផ្ដើម
+  thank_you_: សូមអរគុណ!
+  congratulations: សូម​អប​អរសាទរ!
+  congratulations_on_completing_hoc: សូមអបអរ​សាទរ​សំរាប់​ការ​បញ្ចប់​កម្មវិធី Hour
+    of Code
   congratulations_volunteer: 'សូមអបអរសាទរ: ឥលូវអ្នកបានសាកល្បងកម្មវិធី Hour of Code,
     <a href="https://code.org/volunteer">ចុះឈ្មោះដើម្បីធ្វើជាអ្នកស្មាក់ចិត្តនៅក្នុងថ្នាក់រៀន</a>
     ហើយជួយសិស្សទាំងអស់ដើម្បីរៀនពីកម្មវិធី Hour of Code!'
-  congratulations_on_completing_course1: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី១"
-  congratulations_on_completing_course2: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី២"
-  congratulations_on_completing_course3: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៣"
-  congratulations_on_completing_course4: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៤"
-  congratulations_on_completing_coursea: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ក"
-  congratulations_on_completing_courseb: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ខ"
-  congratulations_on_completing_coursec: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន គ"
-  congratulations_on_completing_coursed: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ឃ"
-  congratulations_on_completing_coursee: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ង"
-  congratulations_on_completing_coursef: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ច"
-  congratulations_on_completing_accelerated: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់វគ្គសិក្សាពន្លឿន"
-  congrats_next_tutorials_title: "បញ្ចប់វគ្គសិក្សាទៅកំរិតបន្ទាប់"
+  congratulations_on_completing_course1: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី១
+  congratulations_on_completing_course2: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី២
+  congratulations_on_completing_course3: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៣
+  congratulations_on_completing_course4: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៤
+  congratulations_on_completing_coursea: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ក
+  congratulations_on_completing_courseb: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ខ
+  congratulations_on_completing_coursec: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន គ
+  congratulations_on_completing_coursed: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ឃ
+  congratulations_on_completing_coursee: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ង
+  congratulations_on_completing_coursef: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ច
+  congratulations_on_completing_accelerated: សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់វគ្គសិក្សាពន្លឿន
+  congrats_next_tutorials_title: បញ្ចប់វគ្គសិក្សាទៅកំរិតបន្ទាប់
   congrats_next_tutorials_desc: សាកល្បងវគ្គខ្លី ការបង្រៀនរយៈពេលមួយម៉ោងឬសាកល្បង <a
     href="%{current_path}/next">មេរៀនរបស់ដៃគូ</a>។
-  get_a_certificate_of_achievement: "ទទួលបានវិញ្ញាបនបត្រនៃការសិក្សា"
-  view_course: "មើលវគ្គសិក្សា"
-  view_unit: "មើលមេរៀន"
-  make_app: "បង្កើតកម្មវិធី១"
-  congrats_guest_speaker_title: "ស្វែងរកវាលគ្មិនសំរាប់ថ្នាក់រៀនរបស់អ្នក"
-  congrats_guest_speaker_desc: "ឥលូវនេះសិស្សរបស់អ្នកបានបញ្ចប់មេរៀនវិទ្យាសាស្រ្តកុំព្យូទ័រហើយ
+  get_a_certificate_of_achievement: ទទួលបានវិញ្ញាបនបត្រនៃការសិក្សា
+  view_course: មើលវគ្គសិក្សា
+  view_unit: មើលមេរៀន
+  make_app: បង្កើតកម្មវិធី១
+  congrats_guest_speaker_title: ស្វែងរកវាលគ្មិនសំរាប់ថ្នាក់រៀនរបស់អ្នក
+  congrats_guest_speaker_desc: ឥលូវនេះសិស្សរបស់អ្នកបានបញ្ចប់មេរៀនវិទ្យាសាស្រ្តកុំព្យូទ័រហើយ
     រៀបចំការអបអរសាទរហើយតភ្ជាប់នូវអ្វីដែលពួកគេបានទ្វើទៅកាន់ពិភពលោកដោយអញ្ជើញវាលគ្មិន។
     អ្នកអាចប្រើប្រាស់ផែនទីអ្នកស្មាក់ចិត្តរបស់ពួកយើងដើម្បីទាក់ទងអ្នកស្មាក់ចិត្តនៅក្នុងតំបន់ឲពួកគេមកទស្សនៈកិច្ចថ្នាក់រៀនរបស់អ្នក
-    ឬស្វែងរកសិស្សផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រនៅតំបន់ណាមួយ ឬក៏អ្នកបច្ចេកទេសអាជីពណាម្នាក់ដើម្បីឲគេជួយបំផុសគំនិតនិងជំរុញសិស្សរបស់អ្នកតាមរយៈការទាក់ទងតាមវីដេអូ។"
-  congrats_guest_speaker_cta: "ស្វែងរកវាលគ្មិន"
-  congrats_third_party_title: "ប្រើជំនាញថ្មីរបស់អ្នកជាមួយនឹងកម្មវិធីនិងគេហទំព័រទាំងនេះ"
-  third_party_gradelevel_kto8: "ថ្នាក់ទី៨"
-  third_party_gradelevel_kto2: "ថ្នាក់ទី២"
-  third_party_gradelevel_2to8: "ថ្នាក់ទី២ ដល់ទី៨"
-  third_party_gradelevel_4to12: "ថ្នាក់ទី៤ ដល់ទី១២"
-  third_party_gradelevel_5to12: "ថ្នាក់ទី៥ ដល់ទី១២"
-  third_party_gradelevel_6plus: "ថ្នាក់ទី៦ ឡើងទៅ"
-  third_party_gradelevel_8plus: "ថ្នាក់ទី៨ ឡើងទៅ"
-  third_party_platform_all: "ឧបករណ៍៖ គេហទំព័រ iPad និង Android"
-  third_party_platform_mobile: "ឧបករណ៍៖ iPad និង Android"
-  third_party_platform_web: "ឧបករណ៍៖ គេហទំព័រ"
-  third_party_price_varies: "តំលៃ៖ គម្រោងផ្សេងៗគ្នា"
-  third_party_price_free: "តំលៃ៖ ឥតគិតថ្លៃ"
-  third_party_price_299: "តំលៃ៖ ២. ៩៩ដុល្លាក្នុងការទាញយកម្តង"
-  third_party_price_individual: "តំលៃសំរាប់បុគ្គលឯកជន៖ ឥតគិតថ្លៃចំពោះការសាកល្បង និង២៥ដុល្លាក្នុងមួយខែ"
-  third_party_price_school: "តំលៃសំរាប់សាលាោ៖ គំរោងឥតគិតថ្លៃ និងគំរោងគិតថ្លៃដោយចាប់
-    ២៥០០ដុល្លាឡើងទៅ"
-  third_party_tynker_desc: "វេទិកាកុំព្យូទ័រប្រកបដោយការច្នៃប្រឌិតរបស់ Tynker បានជួយកុមារអភិវឌ្ឍការគិតនិងជំនាញសរសេរកម្មវិធីតាមរបៀបសប្បាយរីករាយ
+    ឬស្វែងរកសិស្សផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រនៅតំបន់ណាមួយ ឬក៏អ្នកបច្ចេកទេសអាជីពណាម្នាក់ដើម្បីឲគេជួយបំផុសគំនិតនិងជំរុញសិស្សរបស់អ្នកតាមរយៈការទាក់ទងតាមវីដេអូ។
+  congrats_guest_speaker_cta: ស្វែងរកវាលគ្មិន
+  congrats_third_party_title: ប្រើជំនាញថ្មីរបស់អ្នកជាមួយនឹងកម្មវិធីនិងគេហទំព័រទាំងនេះ
+  third_party_gradelevel_kto8: ថ្នាក់ទី៨
+  third_party_gradelevel_kto2: ថ្នាក់ទី២
+  third_party_gradelevel_2to8: ថ្នាក់ទី២ ដល់ទី៨
+  third_party_gradelevel_4to12: ថ្នាក់ទី៤ ដល់ទី១២
+  third_party_gradelevel_5to12: ថ្នាក់ទី៥ ដល់ទី១២
+  third_party_gradelevel_6plus: ថ្នាក់ទី៦ ឡើងទៅ
+  third_party_gradelevel_8plus: ថ្នាក់ទី៨ ឡើងទៅ
+  third_party_platform_all: ឧបករណ៍៖ គេហទំព័រ iPad និង Android
+  third_party_platform_mobile: ឧបករណ៍៖ iPad និង Android
+  third_party_platform_web: ឧបករណ៍៖ គេហទំព័រ
+  third_party_price_varies: តំលៃ៖ គម្រោងផ្សេងៗគ្នា
+  third_party_price_free: តំលៃ៖ ឥតគិតថ្លៃ
+  third_party_price_299: តំលៃ៖ ២. ៩៩ដុល្លាក្នុងការទាញយកម្តង
+  third_party_price_individual: តំលៃសំរាប់បុគ្គលឯកជន៖ ឥតគិតថ្លៃចំពោះការសាកល្បង និង២៥ដុល្លាក្នុងមួយខែ
+  third_party_price_school: តំលៃសំរាប់សាលាោ៖ គំរោងឥតគិតថ្លៃ និងគំរោងគិតថ្លៃដោយចាប់
+    ២៥០០ដុល្លាឡើងទៅ
+  third_party_tynker_desc: វេទិកាកុំព្យូទ័រប្រកបដោយការច្នៃប្រឌិតរបស់ Tynker បានជួយកុមារអភិវឌ្ឍការគិតនិងជំនាញសរសេរកម្មវិធីតាមរបៀបសប្បាយរីករាយ
     វិចារណញាណនិងការស្រមើលស្រមៃ។ ភាសាសរសេរកម្មវិធីប្រកបដោយភាពច្នៃប្រឌិត មេរៀនដែលរៀនដោយខ្លួនឯងប្រកបដោយភាពទាក់ទាញ
     និងសក្មមភាពសរសេរកម្មវិធីដោយប្រើប្រាស់ហ្គេមរបស់ពួកយើង បានផ្តល់នូវភាពងាយស្រួលក្នុងការណែនាំពីរបៀបសរសេរកម្មវិធី
-    និងពង្រឹងសម្ថភាពក្មេងៗក្នុងការច្នៃប្រឌិតនិងបង្កើត។"
-  third_party_tynker_btn_curriculum: "សាកល្បងកម្មវិធីសិក្សារបស់ Tynker សម្រាប់អ្នកអានដំបូង"
-  third_party_tynker_btn_site: "ចូលមើល Tynker"
+    និងពង្រឹងសម្ថភាពក្មេងៗក្នុងការច្នៃប្រឌិតនិងបង្កើត។
+  third_party_tynker_btn_curriculum: សាកល្បងកម្មវិធីសិក្សារបស់ Tynker សម្រាប់អ្នកអានដំបូង
+  third_party_tynker_btn_site: ចូលមើល Tynker
   third_party_scratchjr_desc: Scratch Jr. គឺជាភាសាសរសេរកម្មវិធីកំរិតបឋមដែលអនុញ្ញាតឱ្យកុមារតូចៗ
     (អាយុចាប់ពី ៥ ដល់ ៧ឆ្នាំ) បង្កើតសាច់រឿងនិងហ្គេមដែលមានភាពទាក់ទងគ្នា។ កុមារចាប់យកប្លុកសរសេរកម្មវិធីជាលក្ខណៈក្រាហ្វិកដើម្បីឲតួអង្គផ្លាស់ទី
     លោត រាំ និងច្រៀង។ កុមារអាចកែប្រែតួអង្គក្នុងកម្មវិធីកែសម្រួលគំនូរដោយបន្ថែមសំលេងក៏ដូចជារូបភាពរបស់គេ
     រួចប្រើវានៅក្នុងប្លុកសរសេរកម្មវិធីដើម្បីធ្វើឲតួអង្គរបស់ពួកគេមានជីវិត។
-  third_party_scratchjr_btn_curriculum: "ទាញយកកម្មវិធីសិក្សា Scratch Jr."
-  third_party_scratchjr_btn_site: "ចូលមើល Scratch Jr."
-  third_party_scratch_desc: "ដោយប្រើប្រាស់Scratch អ្នកអាចសរសេរកម្មវិធីឲសាច់រឿង ហ្គេមនិងរូបតុក្កតារបស់អ្នកមានភាពទាក់ទងគ្នារួចចែករំលែកការបង្កើតរបស់អ្នកជាមួយអ្នកដទៃនៅក្នុងសហគមន៍លើអ៊ីនធឺណិត។
+  third_party_scratchjr_btn_curriculum: ទាញយកកម្មវិធីសិក្សា Scratch Jr.
+  third_party_scratchjr_btn_site: ចូលមើល Scratch Jr.
+  third_party_scratch_desc: ដោយប្រើប្រាស់Scratch អ្នកអាចសរសេរកម្មវិធីឲសាច់រឿង ហ្គេមនិងរូបតុក្កតារបស់អ្នកមានភាពទាក់ទងគ្នារួចចែករំលែកការបង្កើតរបស់អ្នកជាមួយអ្នកដទៃនៅក្នុងសហគមន៍លើអ៊ីនធឺណិត។
     Scratch ជួយឱ្យយុវវ័យរៀនចេះគិតប្រកបដោយការច្នៃប្រឌិត ហេតុផលជាប្រព័ន្ធ និងការធ្វើការជាក្រុម
-    ដែលជាជំនាញសំខាន់ៗសម្រាប់ជីវិតនៅក្នុងសតវត្សរ៍ទី ២១ ។"
-  third_party_scratch_btn_curriculum: "ទាញយកកម្មវិធីសិក្សា Scratch"
-  third_party_scratch_btn_forum: "វេទិការអ្នកបង្រៀនScratch"
-  third_party_scratch_btn_site: "ចូលមើល Scratch"
-  third_party_lightbot_desc: "នៅក្នុង Lightbot សិស្សត្រូវសរសេរកម្មវិធីមនុស្សយន្តមួយជាមួយនឹងពាក្យបញ្ជាដើម្បីដោះស្រាយរូបផ្គុំ។
+    ដែលជាជំនាញសំខាន់ៗសម្រាប់ជីវិតនៅក្នុងសតវត្សរ៍ទី ២១ ។
+  third_party_scratch_btn_curriculum: ទាញយកកម្មវិធីសិក្សា Scratch
+  third_party_scratch_btn_forum: វេទិការអ្នកបង្រៀនScratch
+  third_party_scratch_btn_site: ចូលមើល Scratch
+  third_party_lightbot_desc: នៅក្នុង Lightbot សិស្សត្រូវសរសេរកម្មវិធីមនុស្សយន្តមួយជាមួយនឹងពាក្យបញ្ជាដើម្បីដោះស្រាយរូបផ្គុំ។
     សិស្សអាចលេងហ្គេមនៅក្នុងកម្មវិធីបើកគេហទំព័រ (ចាំបាច់ត្រូវមានកម្មវិធី Flash Player)
     ឬនៅក្នុងឧបករណ៍ដែលប្រើប្រាស់ Android ឬ iOS។ សិស្សចាប់ផ្តើមលេងពីវគ្គ “ដំបូង”ទៅនៅក្នុង
-    Lightbot។ ពួកគេនឹងរៀនពីរបៀបប្រាប់កុំព្យូទ័រនូវអ្វីដែលត្រូវធ្វើជាមួយពាក្យបញ្ជាជាមូលដ្ឋាននិងទទួលបាននូវដំណើរការទូទៅដែលកម្មវិធីកុំព្យូទ័រត្រូវបានសរសេរ។"
-  third_party_lightbot_btn_curriculum: "ទាញយកកម្មវិធីសិក្សាLightbot"
-  third_party_lightbot_btn_site: "ចូលមើល Lightbot"
-  third_party_khan_desc: "រៀនពីរបៀបបង្កើតកម្មវិធី គំនូរ គំនូរជីវចល និងហ្គេមដោយប្រើ
+    Lightbot។ ពួកគេនឹងរៀនពីរបៀបប្រាប់កុំព្យូទ័រនូវអ្វីដែលត្រូវធ្វើជាមួយពាក្យបញ្ជាជាមូលដ្ឋាននិងទទួលបាននូវដំណើរការទូទៅដែលកម្មវិធីកុំព្យូទ័រត្រូវបានសរសេរ។
+  third_party_lightbot_btn_curriculum: ទាញយកកម្មវិធីសិក្សាLightbot
+  third_party_lightbot_btn_site: ចូលមើល Lightbot
+  third_party_khan_desc: រៀនពីរបៀបបង្កើតកម្មវិធី គំនូរ គំនូរជីវចល និងហ្គេមដោយប្រើ
     JavaScript & ProcessingJS ឬរៀនពីរបៀបបង្កើតគេហទំព័រដោយប្រើ HTML និង CSS។ អ្នកអាចចែករំលែកនូវអ្វីដែលអ្នកបានធ្វើ
-    ស្វែងយល់ពីអ្វីដែលអ្នកផ្សេងបានធ្វើ និងរៀនពីគ្នាទៅវិញទៅមក!"
-  third_party_khan_btn_learn: "រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រជាមួយគេហទំព័រ Khan Academy"
-  third_party_khan_btn_forum: "វេទិការវិទ្យាសាស្រ្តកុំព្យូទ័រ Khan Academy"
-  third_party_appinv_desc: "កម្មវិធី MIT App Inventor គឺជាកម្មវិធីសរសេរកម្មវិធីមួយដោយផ្អែកលើប្លុកដែលអនុញ្ញាតឱ្យមនុស្សគ្រប់រូបទោះបីអ្នកមិនចេះសោះអាចចាប់ផ្តើមសរសេរនិងបង្កើតកម្មវិធីដែលមានមុខងារពេញលេញសម្រាប់ឧបករណ៍
+    ស្វែងយល់ពីអ្វីដែលអ្នកផ្សេងបានធ្វើ និងរៀនពីគ្នាទៅវិញទៅមក!
+  third_party_khan_btn_learn: រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រជាមួយគេហទំព័រ Khan Academy
+  third_party_khan_btn_forum: វេទិការវិទ្យាសាស្រ្តកុំព្យូទ័រ Khan Academy
+  third_party_appinv_desc: កម្មវិធី MIT App Inventor គឺជាកម្មវិធីសរសេរកម្មវិធីមួយដោយផ្អែកលើប្លុកដែលអនុញ្ញាតឱ្យមនុស្សគ្រប់រូបទោះបីអ្នកមិនចេះសោះអាចចាប់ផ្តើមសរសេរនិងបង្កើតកម្មវិធីដែលមានមុខងារពេញលេញសម្រាប់ឧបករណ៍
     Android ។ អ្នកដែលទើបតែប្រើប្រាស់ App Inventor អាចបង្កើតកម្មវិធីដែលអាចប្រើប្រាស់បានមួយក្នុងរយៈពេលត្រឹមតែមួយម៉ោងរឺតិចជាងនេះ
-    ហើយពួកគេអាចសរសេរកម្មវិធីដែលមានភាពស្មុគស្មាញក្នុងរយៈពេលដ៏ខ្លីមួយបើប្រៀបធៀបការសរសេរតាមរបៀបជំនាន់មុនឬការសរសេរដោយប្រើប្រាស់ភាសាផ្អែកលើអក្សរ។"
-  third_party_appinv_btn_curriculum: "ទាញយកមេរៀន App Inventor 2"
-  third_party_appinv_btn_forum: "វេទីការ App Inventor 2"
-  third_party_appinv_btn_site: "ចូលមើល App Inventor 2"
+    ហើយពួកគេអាចសរសេរកម្មវិធីដែលមានភាពស្មុគស្មាញក្នុងរយៈពេលដ៏ខ្លីមួយបើប្រៀបធៀបការសរសេរតាមរបៀបជំនាន់មុនឬការសរសេរដោយប្រើប្រាស់ភាសាផ្អែកលើអក្សរ។
+  third_party_appinv_btn_curriculum: ទាញយកមេរៀន App Inventor 2
+  third_party_appinv_btn_forum: វេទីការ App Inventor 2
+  third_party_appinv_btn_site: ចូលមើល App Inventor 2
   third_party_codehs_desc: CodeHS ណែនាំពីការសរសេរកម្មវិធីដោយប្រើប្រាស់បណ្តុំនៃប្លុកតាមរយៈវីដេអូខ្លីៗ
     កូដឧទាហរណ៍ និងលំហាត់ជាច្រើនដែលធ្វើឱ្យការសរសេរកូដមានភាពសប្បាយរីករាយនិងងាយស្រួលសម្រាប់អ្នកចាប់ផ្តើមដំបូង។
     សំរាប់សាលារៀននិងគ្រូបង្រៀន CodeHS នឹងផ្តល់នូវកម្មវិធីសិក្ សាឧបករណ៍ប្រើប្រាស់សំរាប់គ្រូ
     និងការអភិវឌ្ឍវិជ្ជាជីវៈ។ សម្រាប់អ្នករៀនលក្ខណៈបុគ្គល អាចទទួលបានជំនួយដែលអ្នកត្រូវការតាមបណ្ដាញគ្រូបង្រៀន។
   third_party_codehs_btn_try: Intro CS សិក្សាបន្ថែមពីសាលារៀន
-  third_party_codecademy_desc: "យើងកំពុងគិតឡើងវិញពីការអប់រំពីក្រោមឡើងទៅ។ បណ្តាញនេះបានពិចារណាឡើងវិញស្ទើរតែគ្រប់យ៉ាងដូចជា
+  third_party_codecademy_desc: យើងកំពុងគិតឡើងវិញពីការអប់រំពីក្រោមឡើងទៅ។ បណ្តាញនេះបានពិចារណាឡើងវិញស្ទើរតែគ្រប់យ៉ាងដូចជា
     ពាណិជ្ជកម្ម, បណ្តាញសង្គម, ថែទាំសុខភាព, និងច្រើនទៀត។ យើងកំពុងកសាងការអប់រំដែលត្រូវការសម្រាប់ពិភពលោក
-    ដែលជាការអប់រំពីកំណើតពិតប្រាកដជាលើកដំបូង។"
-  third_party_codecademy_btn_curriculum: "ទាញយកកម្មវិធីសិក្សា Codecademy"
-  third_party_codecademy_btn_site: "ចូលមើល Codecademy"
-  third_party_organization: "ស្ថាប័ន"
+    ដែលជាការអប់រំពីកំណើតពិតប្រាកដជាលើកដំបូង។
+  third_party_codecademy_btn_curriculum: ទាញយកកម្មវិធីសិក្សា Codecademy
+  third_party_codecademy_btn_site: ចូលមើល Codecademy
+  third_party_organization: ស្ថាប័ន
   third_party_curriculum: Curriculum
-  third_party_pricing: "តំលៃ"
-  third_party_cost_free: "ឥតគិតថ្លៃចំពោះសិស្សនិងគ្រូបង្រៀន"
-  third_party_cost_5permonth: "៥ដុល្លាក្នុងមួយខែចំពោះថ្នាក់រៀនមួយ"
-  third_party_cost_299: "២. ៩៩ដុល្លាចំពោះការទាញយកម្តង"
-  third_party_cost_free_399: "ឥតគិតថ្លៃចំពោះការសាកល្បង និង ៣៩៩ដុល្លាសំរាប់ថ្នាក់រៀនមួយ"
-  third_party_cost_free_2: "ឥតគិតថ្លៃចំពោះការសាកល្បង និង ២ដុល្លាសំរាប់សិស្សម្នាក់"
-  third_party_cost_free_10: "ឥតគិតថ្លៃចំពោះការសាកល្បង និង ៩. ៩៩ដុល្លាក្នុងមួយខែ"
-  third_party_desc_5_4to8: "ប្រហែលជា៥មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី៨"
-  third_party_desc_10to12_kto3: "ប្រហែលជា១០ទៅ១២មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៣"
-  third_party_desc_11_kto5: "ប្រហែលជា១១មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៥"
-  third_party_desc_10to12_kto5: "ប្រហែលជា១០ទៅ១២មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៥"
-  third_party_desc_40_4to8: "នៅសល់ជាង៤០មេរៀនដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី៨"
-  third_party_desc_dozens_kto8: "មេរៀនជាច្រើនសំរាប់ថ្នាក់មត្តេយ្យទី៨"
-  third_party_desc_10to15_3to12: "នៅចន្លោះ១០និង១៥មេរៀនទៀតដើម្បីទៅដល់ថ្នាក់ទី៣ដល់ទី១២"
-  third_party_desc_25to40_3to12: "ចាប់ពី២៥ទៅ៤០មេរៀនដែលបានបំរុងទុកសំរាប់ថ្នាក់ទី៣ដល់ទី១២"
-  third_party_desc_20_2to8: "ប្រហែល២០មេរៀនទៀតដើម្បីឆ្ពោះទៅថ្នាក់ទី២ដល់ទី៨"
-  third_party_desc_7to22_5to12: "នៅចន្លោះ៧និង២២មេរៀនទៀតដើម្បីទៅដល់ថ្នាក់ទី៥ដល់ទី១២"
-  third_party_desc_20_4to12: "ច្រើនជាង៤០មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី១២"
-  enter_valid_age: "សូមជ្រើសរើសអាយុដែលត្រឹមត្រូវ"
-  enter_valid_email: "សូម​បំពេញ​អាសយដ្ឋាន​អ៊ីមែល​ដែលត្រឹមត្រូវ"
-  get_a_certificate_message: "យើងនឹងផ្ញើសញ្ញាប័ត្រនិងព័ត៌មានពីរបៀប<a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>ទៅអ្នក"
-  get_a_certificate_message_after: "ចុចលើសញ្ញាប័ត្រដើម្បីទាញយកឬព្រីនចេញ។ ឥលូវសូមបន្តដំណើរជាមួយ
+  third_party_pricing: តំលៃ
+  third_party_cost_free: ឥតគិតថ្លៃចំពោះសិស្សនិងគ្រូបង្រៀន
+  third_party_cost_5permonth: ៥ដុល្លាក្នុងមួយខែចំពោះថ្នាក់រៀនមួយ
+  third_party_cost_299: ២. ៩៩ដុល្លាចំពោះការទាញយកម្តង
+  third_party_cost_free_399: ឥតគិតថ្លៃចំពោះការសាកល្បង និង ៣៩៩ដុល្លាសំរាប់ថ្នាក់រៀនមួយ
+  third_party_cost_free_2: ឥតគិតថ្លៃចំពោះការសាកល្បង និង ២ដុល្លាសំរាប់សិស្សម្នាក់
+  third_party_cost_free_10: ឥតគិតថ្លៃចំពោះការសាកល្បង និង ៩. ៩៩ដុល្លាក្នុងមួយខែ
+  third_party_desc_5_4to8: ប្រហែលជា៥មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី៨
+  third_party_desc_10to12_kto3: ប្រហែលជា១០ទៅ១២មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៣
+  third_party_desc_11_kto5: ប្រហែលជា១១មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៥
+  third_party_desc_10to12_kto5: ប្រហែលជា១០ទៅ១២មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់មត្តេយ្យទី៥
+  third_party_desc_40_4to8: នៅសល់ជាង៤០មេរៀនដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី៨
+  third_party_desc_dozens_kto8: មេរៀនជាច្រើនសំរាប់ថ្នាក់មត្តេយ្យទី៨
+  third_party_desc_10to15_3to12: នៅចន្លោះ១០និង១៥មេរៀនទៀតដើម្បីទៅដល់ថ្នាក់ទី៣ដល់ទី១២
+  third_party_desc_25to40_3to12: ចាប់ពី២៥ទៅ៤០មេរៀនដែលបានបំរុងទុកសំរាប់ថ្នាក់ទី៣ដល់ទី១២
+  third_party_desc_20_2to8: ប្រហែល២០មេរៀនទៀតដើម្បីឆ្ពោះទៅថ្នាក់ទី២ដល់ទី៨
+  third_party_desc_7to22_5to12: នៅចន្លោះ៧និង២២មេរៀនទៀតដើម្បីទៅដល់ថ្នាក់ទី៥ដល់ទី១២
+  third_party_desc_20_4to12: ច្រើនជាង៤០មេរៀនទៀតដើម្បីឆ្ពោះទៅរកថ្នាក់ទី៤ដល់ទី១២
+  enter_valid_age: សូមជ្រើសរើសអាយុដែលត្រឹមត្រូវ
+  enter_valid_email: សូម​បំពេញ​អាសយដ្ឋាន​អ៊ីមែល​ដែលត្រឹមត្រូវ
+  get_a_certificate_message: យើងនឹងផ្ញើសញ្ញាប័ត្រនិងព័ត៌មានពីរបៀប<a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>ទៅអ្នក
+  get_a_certificate_message_after: ចុចលើសញ្ញាប័ត្រដើម្បីទាញយកឬព្រីនចេញ។ ឥលូវសូមបន្តដំណើរជាមួយ
     <a href='http://studio.code.org'>មេរៀនដ៏ទៃទៀត</a>របស់ពួកយើង ឬស្វែងរកជំរើសបន្ថែមដោយទៅកាន់
-    <a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>។"
-  thanks_for_submitting: "អរគុណចំពោះការដាក់សំណើរ!"
-  if_you_enjoyed: "ប្រសិនបើអ្នកសប្បាយក្នុងការសិក្សា ចូរប្រាប់មិត្តរបស់អ្នកដើម្បីសាកល្បងវាដែរ!
-    យើងចង់អោយមនុស្សគ្រប់គ្នាបានរៀន។"
-  personalize_certificate: "ធ្វើវិញ្ញាបនបត្រផ្ទាល់ខ្លួនរបស់អ្នក"
-  share_achievement: "ចែករំលែកសមិទ្ធផលរបស់អ្នក"
-  beyond_hour_message: "សូមបន្តដំណើរជាមួយ <a href='http://studio.code.org'>មេរៀនដ៏ទៃទៀត</a>របស់ពួកយើង
-    ឬស្វែងរកជំរើសបន្ថែមដោយទៅកាន់ <a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>។"
-  leaderboards_for_hoc: "តារាងពិន្ទុសំរាប់ Hour of Code។"
+    <a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>។
+  thanks_for_submitting: អរគុណចំពោះការដាក់សំណើរ!
+  if_you_enjoyed: ប្រសិនបើអ្នកសប្បាយក្នុងការសិក្សា ចូរប្រាប់មិត្តរបស់អ្នកដើម្បីសាកល្បងវាដែរ!
+    យើងចង់អោយមនុស្សគ្រប់គ្នាបានរៀន។
+  personalize_certificate: ធ្វើវិញ្ញាបនបត្រផ្ទាល់ខ្លួនរបស់អ្នក
+  share_achievement: ចែករំលែកសមិទ្ធផលរបស់អ្នក
+  beyond_hour_message: សូមបន្តដំណើរជាមួយ <a href='http://studio.code.org'>មេរៀនដ៏ទៃទៀត</a>របស់ពួកយើង
+    ឬស្វែងរកជំរើសបន្ថែមដោយទៅកាន់ <a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>។
+  leaderboards_for_hoc: តារាងពិន្ទុសំរាប់ Hour of Code។
   support_url: http://support.code.org/
-  country: "ប្រទេស"
-  city: "ទីក្រុង"
-  gender: "ភេទ"
-  boys: "ក្មេងប្រុស"
-  girls: "ក្មេងស្រី"
-  give_my_hour: "ឲម៉ោងរបស់ខ្ញុំទៅ៖"
-  girls_team: "ក្រុម​ក្មេងស្រី"
-  boys_team: "ក្រុម​ក្មេងប្រុស"
-  tell_the_world: "ប្រាប់​ទៅ​ពិភពលោក​!"
-  thanks_for_voting: "សូមអរគុណ​សំរាប់​ការ​បោះ​ឆ្នោត!"
-  share_on_facebook: "ចែករំលែកលើគេហទំព័រ Facebook"
-  share_on_twitter: "ចែក​រំលែក​លើគេហទំព័រ Twitter"
-  beyond_an_hour: "លើសពី Hour of Code"
-  get_started: "ចាប់​ផ្ដើម"
-  i_agree: "ខ្ញុំ​យល់​ព្រម"
+  country: ប្រទេស
+  city: ទីក្រុង
+  gender: ភេទ
+  boys: ក្មេងប្រុស
+  girls: ក្មេងស្រី
+  give_my_hour: ឲម៉ោងរបស់ខ្ញុំទៅ៖
+  girls_team: ក្រុម​ក្មេងស្រី
+  boys_team: ក្រុម​ក្មេងប្រុស
+  tell_the_world: ប្រាប់​ទៅ​ពិភពលោក​!
+  thanks_for_voting: សូមអរគុណ​សំរាប់​ការ​បោះ​ឆ្នោត!
+  share_on_facebook: ចែករំលែកលើគេហទំព័រ Facebook
+  share_on_twitter: ចែក​រំលែក​លើគេហទំព័រ Twitter
+  beyond_an_hour: លើសពី Hour of Code
+  get_started: ចាប់​ផ្ដើម
+  i_agree: ខ្ញុំ​យល់​ព្រម
   participant_select: "- ជ្រើស​រើស​ -"
-  participant_student: "សិស្ស"
-  participant_parent: "ឪពុក​ម្ដាយ"
-  participant_educator: "អ្នក​អប់​រំ"
-  participant_engineer: "វិស្វករផ្នែក​Software"
-  participant_other: "មិនមែនដូចខាងលើ"
-  print_all: "បោះ​ពុម្ភទាំងអស់"
-  print_ice_art: "បោះពុម្ពសិល្បៈទឹកកករបស់អ្នក"
-  create_art_with_zombie: "ឬធ្វើឱ្យសិល្បៈមានកម្រិតខ្ពស់ជាមួយនឹងខ្មោចឆៅ"
-  i_am_a: "ខ្ញុំគឺជា"
-  never_spam: "យើងមិនដែលក្លែងបន្លំអ្នកទេ"
-  enter_country: "បញ្ចូលប្រទេសបើសិនជានៅក្រៅសហរដ្ឋអាមេរិក"
-  used_infrequent_updates: "ប្រើបានសម្រាប់ការធ្វើបច្ចុប្បន្នភាពមិនញឹកញាប់ប៉ុណ្ណោះ"
-  privacy_practices_children: "សូមមើលការអនុវត្តសិទ្ធិឯកជនសម្រាប់កុមាររបស់យើង"
-  petition_thankyou: "សូមអរគុណចំពោះការចុះហត្ថលេខាលើញត្តិ"
-  continue_learning_header: "បន្តការរៀនលើសពីមួយម៉ោង"
-  continue_learning_body: "វាមានជម្រើសជាច្រើន។ អ្នកអាចរៀនតាមប្រព័ន្ធអ៊ីនធើណែត ឬនៅសាលារៀន
-    ឬវគ្គសិក្សាខ្លីនៅពេលវ៉ាកង។"
-  learn_code_studio: "សាកល្បងមេរៀនរបស់ Code.org"
-  learn_next_level: "សាកល្បងមេរៀនរបស់ Code.org ដ៏ទៃទៀត"
-  learn_online: "សាកល្បងមេរៀនតាមប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត"
-  learn_classes: "ស្វែងរកថ្នាក់រៀនក្នុងតំបន់"
-  learn_back_to_minecraft: "បន្តការសិក្សាជាមួយ Minecraft"
-  hoc_is_here: "កម្មវិធី #HourOfCode នឹងត្រលប់មកវិញម្តងទៀតនៅថ្ងៃទី៥ ដល់ទី១១ ខែធ្នូ។https://youtu.be/KsOIlDT145A."
-  just_did_hoc: "ខ្ញុំទើបតែបានចូលរួម #HourOfCode - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_course1: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី១ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_course2: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី២ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_course3: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៣ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_course4: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៤ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_coursea: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ក - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_courseb: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ខ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_coursec: "ខ្ញុំទើបតែបញ្ចប់មេរៀន គ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_coursed: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ឃ - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_coursee: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ង - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_coursef: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_accelerated: "ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! @codeorg"
-  just_did_hoc_donor: "ខ្ញុំទើបតែរៀន #HourOfCode - មើលទាំងអស់គ្នា! (អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg)"
-  just_did_course1_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី១ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_course2_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី២ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_course3_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៣ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_course4_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៤ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursea_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ក - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_courseb_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ខ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursec_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន គ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursed_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ឃ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursee_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ង - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursef_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
-    ចំពោះការគាំទ្រ @codeorg"
-  just_did_accelerated_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! អរគុណ
-    %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  twitter_teach_cs: "៩ក្នងចំណោម១០នាក់ទទួលស្គាល់ថា សាលាគួរតែបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ។
-    http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
-  twitter_cs_foundational: "វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់សិស្សគ្រប់រូចក្នុងការសិក្សា។
-    https://youtu.be/QvyTEx1wyOY"
-  learn_hoc: "រៀនកម្មវិធីHour of Code"
-  beyond_hoc: "លើសពីមួយម៉ោង"
-  what_gender: "តើអ្នកមានភេទអ្វី?"
-  girl: "ស្រី"
-  boy: "ប្រុស"
-  help_recruit_coders: "ជួយពួកយើងក្នុងការជ្រើសរើសអ្នកសរសេរកូដសំរាប់ក្រុមរបស់ពួកយើង!"
-  help_recruit: "ជួយពួកយើងក្នុងការជ្រើសរើសអ្នកសរសេរកូដ!"
-  lines_of_code: "កូដលើសពី <b># ជួរ</b> ត្រូវបានសរសេររហូតមកដល់ឥលូវ."
-  lines_of_code_alt: "កូដចំនួន <b>#</b> ជួរដែលបានសរសេរដោយសិស្ស"
-  who_has_done_hoc: "តើអ្នកខ្លះបានបញ្ចប់ #HourOfCode? @codeorg"
-  who_has_done_hoc_donor: "តើអ្នកខ្លះបានបញ្ចប់ #HourOfCode? (សូមអរគុណ %{donor_twitter}
-    សំរាប់ការគាំទ្រ @codeorg)"
-  hoc_leaderboards: "តារាងពិន្ទុ Hour of Code"
+  participant_student: សិស្ស
+  participant_parent: ឪពុក​ម្ដាយ
+  participant_educator: អ្នក​អប់​រំ
+  participant_engineer: វិស្វករផ្នែក​Software
+  participant_other: មិនមែនដូចខាងលើ
+  print_all: បោះ​ពុម្ភទាំងអស់
+  print_ice_art: បោះពុម្ពសិល្បៈទឹកកករបស់អ្នក
+  create_art_with_zombie: ឬធ្វើឱ្យសិល្បៈមានកម្រិតខ្ពស់ជាមួយនឹងខ្មោចឆៅ
+  i_am_a: ខ្ញុំគឺជា
+  never_spam: យើងមិនដែលក្លែងបន្លំអ្នកទេ
+  enter_country: បញ្ចូលប្រទេសបើសិនជានៅក្រៅសហរដ្ឋអាមេរិក
+  used_infrequent_updates: ប្រើបានសម្រាប់ការធ្វើបច្ចុប្បន្នភាពមិនញឹកញាប់ប៉ុណ្ណោះ
+  privacy_practices_children: សូមមើលការអនុវត្តសិទ្ធិឯកជនសម្រាប់កុមាររបស់យើង
+  petition_thankyou: សូមអរគុណចំពោះការចុះហត្ថលេខាលើញត្តិ
+  continue_learning_header: បន្តការរៀនលើសពីមួយម៉ោង
+  continue_learning_body: វាមានជម្រើសជាច្រើន។ អ្នកអាចរៀនតាមប្រព័ន្ធអ៊ីនធើណែត ឬនៅសាលារៀន
+    ឬវគ្គសិក្សាខ្លីនៅពេលវ៉ាកង។
+  learn_code_studio: សាកល្បងមេរៀនរបស់ Code.org
+  learn_next_level: សាកល្បងមេរៀនរបស់ Code.org ដ៏ទៃទៀត
+  learn_online: សាកល្បងមេរៀនតាមប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត
+  learn_classes: ស្វែងរកថ្នាក់រៀនក្នុងតំបន់
+  learn_back_to_minecraft: បន្តការសិក្សាជាមួយ Minecraft
+  hoc_is_here: 'កម្មវិធី #HourOfCode នឹងត្រលប់មកវិញម្តងទៀតនៅថ្ងៃទី៥ ដល់ទី១១ ខែធ្នូ។https://youtu.be/KsOIlDT145A.'
+  just_did_hoc: 'ខ្ញុំទើបតែបានចូលរួម #HourOfCode - មើលទាំងអស់គ្នា! @codeorg'
+  just_did_course1: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី១ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_course2: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី២ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_course3: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៣ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_course4: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៤ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_coursea: ខ្ញុំទើបតែបញ្ចប់មេរៀន ក - មើលទាំងអស់គ្នា! @codeorg
+  just_did_courseb: ខ្ញុំទើបតែបញ្ចប់មេរៀន ខ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_coursec: ខ្ញុំទើបតែបញ្ចប់មេរៀន គ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_coursed: ខ្ញុំទើបតែបញ្ចប់មេរៀន ឃ - មើលទាំងអស់គ្នា! @codeorg
+  just_did_coursee: ខ្ញុំទើបតែបញ្ចប់មេរៀន ង - មើលទាំងអស់គ្នា! @codeorg
+  just_did_coursef: ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! @codeorg
+  just_did_accelerated: ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! @codeorg
+  just_did_hoc_donor: 'ខ្ញុំទើបតែរៀន #HourOfCode - មើលទាំងអស់គ្នា! (អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg)'
+  just_did_course1_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី១ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_course2_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី២ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_course3_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៣ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_course4_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៤ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_coursea_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន ក - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_courseb_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន ខ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_coursec_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន គ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_coursed_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន ឃ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_coursee_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន ង - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_coursef_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter}
+    ចំពោះការគាំទ្រ @codeorg
+  just_did_accelerated_donor: ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! អរគុណ
+    %{donor_twitter} ចំពោះការគាំទ្រ @codeorg
+  twitter_teach_cs: ៩ក្នងចំណោម១០នាក់ទទួលស្គាល់ថា សាលាគួរតែបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ។
+    http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
+  twitter_cs_foundational: វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់សិស្សគ្រប់រូចក្នុងការសិក្សា។
+    https://youtu.be/QvyTEx1wyOY
+  learn_hoc: រៀនកម្មវិធីHour of Code
+  beyond_hoc: លើសពីមួយម៉ោង
+  what_gender: តើអ្នកមានភេទអ្វី?
+  girl: ស្រី
+  boy: ប្រុស
+  help_recruit_coders: ជួយពួកយើងក្នុងការជ្រើសរើសអ្នកសរសេរកូដសំរាប់ក្រុមរបស់ពួកយើង!
+  help_recruit: ជួយពួកយើងក្នុងការជ្រើសរើសអ្នកសរសេរកូដ!
+  lines_of_code: កូដលើសពី <b># ជួរ</b> ត្រូវបានសរសេររហូតមកដល់ឥលូវ.
+  lines_of_code_alt: កូដចំនួន <b>#</b> ជួរដែលបានសរសេរដោយសិស្ស
+  who_has_done_hoc: 'តើអ្នកខ្លះបានបញ្ចប់ #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'តើអ្នកខ្លះបានបញ្ចប់ #HourOfCode? (សូមអរគុណ %{donor_twitter}
+    សំរាប់ការគាំទ្រ @codeorg)'
+  hoc_leaderboards: តារាងពិន្ទុ Hour of Code
   students_and_lines: "%{students} សិស្សដែលបានបញ្ចប់ Hour of Code ហើយបានសរសេរកូដ %{lines}
     ជួរ។"
-  start_hoc: "ចាប់ផ្តើមកម្មវិធី Hour of Code ឥលូវនេះ"
-  contact_form_topic_press: "សារព័ត៌មាន / ប្រព័ន្ធផ្សព្វផ្សាយ (ការសម្ភាសឬការសន្ទនាគ្នា)"
+  start_hoc: ចាប់ផ្តើមកម្មវិធី Hour of Code ឥលូវនេះ
+  contact_form_topic_press: សារព័ត៌មាន / ប្រព័ន្ធផ្សព្វផ្សាយ (ការសម្ភាសឬការសន្ទនាគ្នា)
   stats_nina: '"រាល់ថ្ងៃមានលទ្ធផល&mdash; ដូចគ្នា ការចូលរួម១០០%។" - Nina Nichols Peery,
     គ្រូបង្រៀន'
   stats_student: '"ខ្ញុំដឹងថាវាជាឱកាសមួយ <b>ក្នុងមួយឆាកជីវិត</b>។" - Mariana Alzate,
     សិស្សថ្នាក់ទី៥'
   stats_michael: '"ខ្ញុំ <b>មិនដែល</b> សិស្សរបស់ខ្ញុំមានភាពរំភើបក្នុងការសិក្សាបែបនេះទេ។"
     - Frank Martinez, គ្រូបង្រៀន'
-  studiobar_title: "ស្វែងរក <a href='http://studio.code.org'>មេរៀនរបស់ Code.org</a>"
-  studiobar_title_nolink: "ស្វែក​រក​មេរៀនរបស់ Code.org"
-  studiobar_elementary_title: "មេរៀនបឋម"
-  studiobar_elementary_body: "មេរៀនថ្មីទាំងបីរបស់យើងសំរាប់ថ្នាក់មត្តេយ្យទី&#8209;៥"
-  studiobar_hoc_title: "ពេលវេលា​នៃ​កូដ"
-  studiobar_hoc_body: "រៀនសរសេរកូដជាមួយ Angry Birds"
+  studiobar_title: ស្វែងរក <a href='http://studio.code.org'>មេរៀនរបស់ Code.org</a>
+  studiobar_title_nolink: ស្វែក​រក​មេរៀនរបស់ Code.org
+  studiobar_elementary_title: មេរៀនបឋម
+  studiobar_elementary_body: មេរៀនថ្មីទាំងបីរបស់យើងសំរាប់ថ្នាក់មត្តេយ្យទី&#8209;៥
+  studiobar_hoc_title: ពេលវេលា​នៃ​កូដ
+  studiobar_hoc_body: រៀនសរសេរកូដជាមួយ Angry Birds
   studiobar_flappy_title: Flappy កូដ
-  studiobar_flappy_body: "បង្កើតនិងចែករំលែកហ្គេមFlappyរបស់អ្នក"
-  studiobar_teacher_title: "បង្កើតសំរាប់គ្រូបង្រៀន"
-  studiobar_teacher_body: "ណែនាំកម្មវិធី Code.org ក្នុងថ្នាក់រៀនរបស់អ្នក"
-  studiobar_frozen_title: "ពេលវេលា​នៃ​កូដ"
-  studiobar_frozen_body: "បង្កើតរដូវរងារនៅតំបន់ wonderland ជាមួយ Anna និង Elsa"
-  studiobar_donate_title: "បរិចាក"
-  studiobar_donate_body: "កុមារម្នាក់បានសិក្សាដោយសារលុយដែលបានមកពីការបរិចាករបស់អ្នក"
-  studiobar_shop_title: "ហាង"
-  studiobar_shop_body: "បំបែកផ្នត់គំនិត។ ពាក់ស្លាកសញ្ញារបស់យើងដោយមោទនភាព។"
+  studiobar_flappy_body: បង្កើតនិងចែករំលែកហ្គេមFlappyរបស់អ្នក
+  studiobar_teacher_title: បង្កើតសំរាប់គ្រូបង្រៀន
+  studiobar_teacher_body: ណែនាំកម្មវិធី Code.org ក្នុងថ្នាក់រៀនរបស់អ្នក
+  studiobar_frozen_title: ពេលវេលា​នៃ​កូដ
+  studiobar_frozen_body: បង្កើតរដូវរងារនៅតំបន់ wonderland ជាមួយ Anna និង Elsa
+  studiobar_donate_title: បរិចាក
+  studiobar_donate_body: កុមារម្នាក់បានសិក្សាដោយសារលុយដែលបានមកពីការបរិចាករបស់អ្នក
+  studiobar_shop_title: ហាង
+  studiobar_shop_body: បំបែកផ្នត់គំនិត។ ពាក់ស្លាកសញ្ញារបស់យើងដោយមោទនភាព។
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -380,208 +380,208 @@
   homepage_hero_text_teacher2: |-
     &ldquo;កូនសិស្សរបស់ខ្ញុំ១០០% បានចូលរួមកម្មវិធីមួយនេះ។&rdquo;
     Adam, គ្រូបង្រៀន
-  homepage_hero_text_stat_loc: "ក្មេងស្រីចំនួន ៨លាន៥សែននាក់ បានចុះឈ្មោះសិក្សានៅលើគេហទំព័រ
-    Code.org"
+  homepage_hero_text_stat_loc: ក្មេងស្រីចំនួន ៨លាន៥សែននាក់ បានចុះឈ្មោះសិក្សានៅលើគេហទំព័រ
+    Code.org
   homepage_hero_text_stat_students: "#student_count គណនេយ្យរបស់សិស្សនៅលើគេហទំព័រ Code.org"
-  homepage_hero_text_stat_served: "កម្មវិធី Hour of Code: #served ត្រូវបានប្រើ"
-  homepage_hero_hoc_is_coming: "កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ"
-  homepage_hero_hoc_is_here: "កម្មវិធី Hour of Code នៅ​ទីនេះ"
-  homepage_slot_text_hoc: "ពេលវេលា​នៃ​កូដ"
-  homepage_slot_text_frozen: "ហ្គេម Frozen ជាមួយ Anna និង Elsa"
-  homepage_slot_text_teacher: "ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន"
-  homepage_slot_text_studio: "ការបង្រៀនរបស់យើងទាំងអស់"
+  homepage_hero_text_stat_served: 'កម្មវិធី Hour of Code: #served ត្រូវបានប្រើ'
+  homepage_hero_hoc_is_coming: កម្មវិធី Hour of Code នឹងមកដល់ក្នុងពេលឆាប់ៗនេះ
+  homepage_hero_hoc_is_here: កម្មវិធី Hour of Code នៅ​ទីនេះ
+  homepage_slot_text_hoc: ពេលវេលា​នៃ​កូដ
+  homepage_slot_text_frozen: ហ្គេម Frozen ជាមួយ Anna និង Elsa
+  homepage_slot_text_teacher: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
+  homepage_slot_text_studio: ការបង្រៀនរបស់យើងទាំងអស់
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: "ហាង"
+  homepage_slot_text_shop: ហាង
   homepage_slot_text_flappy: Flappy កូដ
-  homepage_action_text_hoc: "កម្មវិធី Hour of Code គឺសំរាប់សិស្សគ្រប់គ្នា។"
+  homepage_action_text_hoc: កម្មវិធី Hour of Code គឺសំរាប់សិស្សគ្រប់គ្នា។
   homepage_action_text_num_served: "# បានប្រើប្រាស់"
-  homepage_action_text_join_us: "ចូលរួមជាមួយយើង"
-  homepage_action_text_sign_up: "ចុះឈ្មោះ"
-  homepage_action_text_try_it: "សាកល្បង"
-  homepage_action_text_volunteers: "ត្រូវការអ្នកស្ម័គ្រចិត្តខាងបច្ចេកទេស"
-  homepage_action_text_codevideo: "មេីលវិដេអូ"
-  homepage_action_text_teachervideo: "មេីលវិដេអូ"
-  homepage_action_text_watchvideo: "មេីលវិដេអូ"
-  homepage_action_text_girlvideo: "បំផុសគំនិតក្មេងស្រី"
-  homepage_action_text_learn: "ចាប់ផ្តើមរៀន"
-  homepage_action_text_signpetition: "ចុះហត្ថលេខាលើញត្តិ"
-  homepage_action_text_wincelebritychat: "ឈ្នះការជជែកជាមួយតារាល្បី"
-  homepage_signpetition_dropdown: "ខ្ញុំយល់ព្រម &#x25BE;"
-  homepage_diversity_pledge: "បង្កើនការចូលរួមពីគ្រប់ទិសទីពិសេសគឺស្រ្តីនិងសិស្សដែលបានទទួលការរើសអើង។"
-  homepage_banner_text_prizes: "កម្មវិធី Hour of Code ហ្នឹងត្រលប់មកវិញសារជាថ្មីនៅថ្ងៃទី
-    ៧ដល់១៣ ខែធ្នូ។ "
-  homepage_banner_link_prizes: "ចូលរួមជាមួយព្រឹត្តិការណ៏ដ៏ធំជាប្រវត្តិសាស្រ្ត។ "
+  homepage_action_text_join_us: ចូលរួមជាមួយយើង
+  homepage_action_text_sign_up: ចុះឈ្មោះ
+  homepage_action_text_try_it: សាកល្បង
+  homepage_action_text_volunteers: ត្រូវការអ្នកស្ម័គ្រចិត្តខាងបច្ចេកទេស
+  homepage_action_text_codevideo: មេីលវិដេអូ
+  homepage_action_text_teachervideo: មេីលវិដេអូ
+  homepage_action_text_watchvideo: មេីលវិដេអូ
+  homepage_action_text_girlvideo: បំផុសគំនិតក្មេងស្រី
+  homepage_action_text_learn: ចាប់ផ្តើមរៀន
+  homepage_action_text_signpetition: ចុះហត្ថលេខាលើញត្តិ
+  homepage_action_text_wincelebritychat: ឈ្នះការជជែកជាមួយតារាល្បី
+  homepage_signpetition_dropdown: ខ្ញុំយល់ព្រម &#x25BE;
+  homepage_diversity_pledge: បង្កើនការចូលរួមពីគ្រប់ទិសទីពិសេសគឺស្រ្តីនិងសិស្សដែលបានទទួលការរើសអើង។
+  homepage_banner_text_prizes: 'កម្មវិធី Hour of Code ហ្នឹងត្រលប់មកវិញសារជាថ្មីនៅថ្ងៃទី
+    ៧ដល់១៣ ខែធ្នូ។ '
+  homepage_banner_link_prizes: 'ចូលរួមជាមួយព្រឹត្តិការណ៏ដ៏ធំជាប្រវត្តិសាស្រ្ត។ '
   homepage_banner_text_main: Code.org និង College Board បានសហការគ្នាក្នុងការជំរុញអោយមានការចូលរួមសិក្សាវិទ្យាសាស្រ្តកុំព្យូទ័រពីគ្រប់មជ្ឈដ្ធាន។
-  homepage_banner_text_link: "សិក្សាបន្ថែម"
+  homepage_banner_text_link: សិក្សាបន្ថែម
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "សិក្សាបន្ថែម"
+  homepage_banner_privacy_link: សិក្សាបន្ថែម
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "សិក្សាបន្ថែម"
+  homepage_banner_20k_teachers_link: សិក្សាបន្ថែម
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: "យើងកំពុងធ្វើការផ្លាស់ប្តូរដ៏សំខាន់ចំពោះរបៀបដែលយើងគាំទ្រភាពជាឯកជនរបស់សិស្ស។"
-  homepage_banner_emailprivacy_link: "អាន​បន្ត"
+  homepage_banner_emailprivacy: យើងកំពុងធ្វើការផ្លាស់ប្តូរដ៏សំខាន់ចំពោះរបៀបដែលយើងគាំទ្រភាពជាឯកជនរបស់សិស្ស។
+  homepage_banner_emailprivacy_link: អាន​បន្ត
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "សិក្សាបន្ថែម"
-  homepage_slot_text_title_hoc: "ពេលវេលា​នៃ​កូដ"
-  homepage_slot_text_blurb_hoc: "អ្នកគ្រប់អាចរៀនបាន។ ចាប់ផ្តើមនៅថ្ងៃនេះ"
+  homepage_banner_40k_teachers_link: សិក្សាបន្ថែម
+  homepage_slot_text_title_hoc: ពេលវេលា​នៃ​កូដ
+  homepage_slot_text_blurb_hoc: អ្នកគ្រប់អាចរៀនបាន។ ចាប់ផ្តើមនៅថ្ងៃនេះ
   homepage_slot_text_link_hoc: សាក​ល្បង "ពេល​វេលា​នៃ​កូដ"
-  homepage_slot_text_link_about_hoc: "អំពីកម្មវិធី Hour of Code"
-  homepage_slot_text_link_host: "រៀបចំកម្មវិធី Hour of Code"
+  homepage_slot_text_link_about_hoc: អំពីកម្មវិធី Hour of Code
+  homepage_slot_text_link_host: រៀបចំកម្មវិធី Hour of Code
   homepage_slot_text_link_hocserved: "# បានប្រើប្រាស់"
-  homepage_solot_text_link_volunteer: "ស្ម័គ្រចិត្តក្នុងកម្មវិធី Hour of Code"
+  homepage_solot_text_link_volunteer: ស្ម័គ្រចិត្តក្នុងកម្មវិធី Hour of Code
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: "ស្វែងរកការបង្រៀនរបស់យើងទាំងអស់"
-  homepage_slot_text_blurb_students_courses: "ស្វែងរកមេរៀនរបស់យើង"
-  homepage_slot_text_link_codestudio: "សាកល្បង Code Studio"
-  homepage_slot_text_link_local: "ស្វែងរកថ្នាក់រៀនក្នុងតំបន់"
-  homepage_slot_text_link_othercourses: "មេរៀនក្នុងប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត"
-  homepage_slot_text_title_educators: "អ្នក​អប់​រំ"
-  homepage_slot_text_blurb_educators: "បង្រៀនសិស្សរបស់អ្នក"
-  homepage_slot_text_link_elementary: "សាលាបឋមសិក្សា"
-  homepage_slot_text_link_middle: "អនុវិទ្យាល័យ"
-  homepage_slot_text_link_high: "វិទ្យាល័យ"
-  homepage_slot_text_link_k5: "មេរៀនសំរាប់សិស្សមេត្តេយ្យថ្នាក់ទី៥"
-  homepage_slot_text_link_fullcurriculum: "សូមមើលកម្មវិធីសិក្សាពេញលេញរបស់យើង"
-  homepage_slot_text_link_pd: "ការអភិវឌ្ឍវិជ្ជាជីវៈ"
-  homepage_slot_text_title_advocates: "អ្នកគាំពារ"
-  homepage_slot_text_blurb_advocates: "គាំទ្រភាពសម្បូរបែបក្នុងការប្រើប្រាស់កុំព្យូទ័រ"
-  homepage_slot_text_link_stats: "មើលរដ្ឋ"
-  homepage_slot_text_link_buy: "ចូលរួម"
-  homepage_slot_text_link_donate: "បរិចាក"
-  homepage_slot_text_link_shop: "អាវយឺត មួក និងផ្សេងៗទៀត"
-  homepage_slot_text_link_administrators: "នាំយកទៅសាលារៀនឬស្រុករបស់អ្នក"
-  homepage_header_codestudio: "ការបង្កើតសិស្ស Code.org"
+  homepage_slot_text_blurb_students: ស្វែងរកការបង្រៀនរបស់យើងទាំងអស់
+  homepage_slot_text_blurb_students_courses: ស្វែងរកមេរៀនរបស់យើង
+  homepage_slot_text_link_codestudio: សាកល្បង Code Studio
+  homepage_slot_text_link_local: ស្វែងរកថ្នាក់រៀនក្នុងតំបន់
+  homepage_slot_text_link_othercourses: មេរៀនក្នុងប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត
+  homepage_slot_text_title_educators: អ្នក​អប់​រំ
+  homepage_slot_text_blurb_educators: បង្រៀនសិស្សរបស់អ្នក
+  homepage_slot_text_link_elementary: សាលាបឋមសិក្សា
+  homepage_slot_text_link_middle: អនុវិទ្យាល័យ
+  homepage_slot_text_link_high: វិទ្យាល័យ
+  homepage_slot_text_link_k5: មេរៀនសំរាប់សិស្សមេត្តេយ្យថ្នាក់ទី៥
+  homepage_slot_text_link_fullcurriculum: សូមមើលកម្មវិធីសិក្សាពេញលេញរបស់យើង
+  homepage_slot_text_link_pd: ការអភិវឌ្ឍវិជ្ជាជីវៈ
+  homepage_slot_text_title_advocates: អ្នកគាំពារ
+  homepage_slot_text_blurb_advocates: គាំទ្រភាពសម្បូរបែបក្នុងការប្រើប្រាស់កុំព្យូទ័រ
+  homepage_slot_text_link_stats: មើលរដ្ឋ
+  homepage_slot_text_link_buy: ចូលរួម
+  homepage_slot_text_link_donate: បរិចាក
+  homepage_slot_text_link_shop: អាវយឺត មួក និងផ្សេងៗទៀត
+  homepage_slot_text_link_administrators: នាំយកទៅសាលារៀនឬស្រុករបស់អ្នក
+  homepage_header_codestudio: ការបង្កើតសិស្ស Code.org
   homepage_header_donors: Code.org សូមថ្លែងអំណរគុណដល់អ្នកគាំទ្រ
-  homepage_donors_seall: "មើលទាំងអស់"
-  homepage_donors_donate: "បរិចាក"
-  contact_form_topic_student: "ខ្ញុំគឺជាសិស្ស"
-  contact_form_topic_parent: "ខ្ញុំគឺជាឪពុកម្តាយ"
-  contact_form_topic_teacher: "ខ្ញុំគឺជាគ្រូបង្រៀន/ស្ថាប័នអប់រំ"
-  contact_form_topic_outside_us: "ខ្ញុំរស់នៅក្រៅសហរដ្ឋអាមេរិក"
-  contact_form_topic_contribution: "វិភាគទានសប្បុរសធម៌"
-  contact_form_topic_partner: "ខ្ញុំចង់ធ្វើជាដៃគូ"
-  contact_form_topic_other: "ផ្សេងៗ"
-  contact_form_label_topic: "ប្រធានបទ"
-  contact_form_label_email: "អ៊ីមែលរបស់អ្នក"
-  contact_form_label_message: "សារ"
-  contact_form_label_submit: "ផ្ញើ​សារ"
-  class_submission_in_school: "នៅក្នុងសាលា"
-  class_submission_in_school_daily_programming_course: "មេរៀនសរសេរកម្មវិធីជារៀងរាល់ថ្ងៃ"
-  class_submission_in_school_ap_computer_science: "ការធ្វើតែស្តចូលរៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  class_submission_in_school_full_university_cs_curriculum: "កម្មវិធីសិក្សាពេញលេញរបស់មហាវិទ្យាល័យវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  class_submission_in_school_robotics_club: "ក្លឹបធ្វើមនុស្សយន្ត"
-  class_submission_in_school_programming_integrated_in_other_classes: "ការរួមបញ្ចូលការសរសេរកម្មវិធីជាមួយថ្នាក់ដ៏ទៃទៀត
-    (គណិតវិទ្យា, វិទ្យាសាស្រ្ត, ល)"
-  class_submission_in_school_summer_school_cs_program: "កម្មវិធីវិទ្យាសាស្រ្តកុំព្យូទ័រនៅពេលវ៉ាកង"
-  class_submission_in_school_exploring_computer_science: "ស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  class_submission_in_school_other: "កម្មវិធីដ៏ទៃទៀតនៅក្នុងសាលា"
-  class_submission_out_of_school: "កម្មវិធីនៅក្រៅសាលា"
-  class_submission_out_of_school_summer_camp: "វគ្គខ្លីពេលវ៉ាកង"
-  class_submission_out_of_school_afterschool_program: "កម្មវិធីក្រោយបញ្ចប់ម៉ោងសិក្សានៅសាលា"
-  class_submission_out_of_school_all-day_workshop: "សិក្ខាសាលាពេញមួយថ្ងៃ (រហូតដល់
-    1 សប្តាហ៍)"
-  class_submission_out_of_school_multi-week_workshop: "សិក្ខាសាលាច្រើនសប្តាហ៍"
-  class_submission_out_of_school_other: "កម្មវិធីក្រៅសាលាដ៏ទៃទៀត"
-  class_submission_online: "ប្រព័ន្ធអ៊ីនធើណែត"
-  class_submission_online_programming_class: "ថ្នាក់រៀនសរសេរកម្មវិធីតាមប្រព័ន្ធអ៊ីនធើណែត"
-  class_submission_online_teacher_resource: "ធនធានសំរាប់គ្រូក្នុងប្រព័ន្ធអ៊ីនធើណែត"
-  class_submission_online_other: "ប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត"
-  class_submission_level_preschool: "មត្តេយ្យ"
-  class_submission_level_elementary: "មឋមសិក្សា"
-  class_submission_level_middle_school: "អនុវិទ្យាល័យ"
-  class_submission_level_high_school: "វិទ្យាល័យ"
-  class_submission_level_college: "មហាវិទ្យាល័យ"
-  class_submission_level_vocational: "ថ្នាក់វិជ្ជាជីវៈ"
-  class_submission_languages_other: "ភាសាដ៏ទៃទៀត"
+  homepage_donors_seall: មើលទាំងអស់
+  homepage_donors_donate: បរិចាក
+  contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
+  contact_form_topic_parent: ខ្ញុំគឺជាឪពុកម្តាយ
+  contact_form_topic_teacher: ខ្ញុំគឺជាគ្រូបង្រៀន/ស្ថាប័នអប់រំ
+  contact_form_topic_outside_us: ខ្ញុំរស់នៅក្រៅសហរដ្ឋអាមេរិក
+  contact_form_topic_contribution: វិភាគទានសប្បុរសធម៌
+  contact_form_topic_partner: ខ្ញុំចង់ធ្វើជាដៃគូ
+  contact_form_topic_other: ផ្សេងៗ
+  contact_form_label_topic: ប្រធានបទ
+  contact_form_label_email: អ៊ីមែលរបស់អ្នក
+  contact_form_label_message: សារ
+  contact_form_label_submit: ផ្ញើ​សារ
+  class_submission_in_school: នៅក្នុងសាលា
+  class_submission_in_school_daily_programming_course: មេរៀនសរសេរកម្មវិធីជារៀងរាល់ថ្ងៃ
+  class_submission_in_school_ap_computer_science: ការធ្វើតែស្តចូលរៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  class_submission_in_school_full_university_cs_curriculum: កម្មវិធីសិក្សាពេញលេញរបស់មហាវិទ្យាល័យវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  class_submission_in_school_robotics_club: ក្លឹបធ្វើមនុស្សយន្ត
+  class_submission_in_school_programming_integrated_in_other_classes: ការរួមបញ្ចូលការសរសេរកម្មវិធីជាមួយថ្នាក់ដ៏ទៃទៀត
+    (គណិតវិទ្យា, វិទ្យាសាស្រ្ត, ល)
+  class_submission_in_school_summer_school_cs_program: កម្មវិធីវិទ្យាសាស្រ្តកុំព្យូទ័រនៅពេលវ៉ាកង
+  class_submission_in_school_exploring_computer_science: ស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  class_submission_in_school_other: កម្មវិធីដ៏ទៃទៀតនៅក្នុងសាលា
+  class_submission_out_of_school: កម្មវិធីនៅក្រៅសាលា
+  class_submission_out_of_school_summer_camp: វគ្គខ្លីពេលវ៉ាកង
+  class_submission_out_of_school_afterschool_program: កម្មវិធីក្រោយបញ្ចប់ម៉ោងសិក្សានៅសាលា
+  class_submission_out_of_school_all-day_workshop: សិក្ខាសាលាពេញមួយថ្ងៃ (រហូតដល់ 1
+    សប្តាហ៍)
+  class_submission_out_of_school_multi-week_workshop: សិក្ខាសាលាច្រើនសប្តាហ៍
+  class_submission_out_of_school_other: កម្មវិធីក្រៅសាលាដ៏ទៃទៀត
+  class_submission_online: ប្រព័ន្ធអ៊ីនធើណែត
+  class_submission_online_programming_class: ថ្នាក់រៀនសរសេរកម្មវិធីតាមប្រព័ន្ធអ៊ីនធើណែត
+  class_submission_online_teacher_resource: ធនធានសំរាប់គ្រូក្នុងប្រព័ន្ធអ៊ីនធើណែត
+  class_submission_online_other: ប្រព័ន្ធអ៊ីនធើណែតដ៏ទៃទៀត
+  class_submission_level_preschool: មត្តេយ្យ
+  class_submission_level_elementary: មឋមសិក្សា
+  class_submission_level_middle_school: អនុវិទ្យាល័យ
+  class_submission_level_high_school: វិទ្យាល័យ
+  class_submission_level_college: មហាវិទ្យាល័យ
+  class_submission_level_vocational: ថ្នាក់វិជ្ជាជីវៈ
+  class_submission_languages_other: ភាសាដ៏ទៃទៀត
   videos_more: "<a href='%{inspiring_videos_playlist}'>វីដេអូបំផុសគំនិត</a>បន្ថែមជាមួយនឹងជនគំរូនិងតារាល្បីៗ"
   careers_page_more: "<a href='%{careers_url}' target='_blank'>វីដេអូបំផុសគំនិត</a>
     បន្ថែមជាមួយអ្នកជំនាញក្នុងវិស័យបច្ចេកវិទ្យា"
-  playlab_choose_theme: "ជ្រើសរើសទំរង់ Play Lab របស់អ្នក"
-  playlab_classic_title: "បុរាណ"
+  playlab_choose_theme: ជ្រើសរើសទំរង់ Play Lab របស់អ្នក
+  playlab_classic_title: បុរាណ
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - ហ្នឹងមកដល់ក្នុងពេលឆាប់ៗ
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
-  starwars_javascript_description: "ប្រើប្រាស់ការទាញ-ទម្លាក់ប្លុក និង JavaScript។"
-  starwars_javascript_specs: "សំរាប់ភាសាអង់គ្លេសប៉ណ្ណោះ | កម្មវិធីបើកគេហទំព័រទំនើប
-    | អាយុចាប់ពី១១ឆ្នាំឡើងទៅ"
-  starwars_blocks_title: "ប្លុក"
-  starwars_blocks_description: "ប្រើប្រាស់ការទាញ-ទម្លាក់ប្លុក។"
-  starwars_blocks_specs: "ភាសាជាច្រើន | កម្មវិធីបើកគេហទំព័រ ទូរស័ព្ទទំនើប និង tablets
-    | អាយុចាប់ពី ៦ដល់១០៦"
+  starwars_javascript_description: ប្រើប្រាស់ការទាញ-ទម្លាក់ប្លុក និង JavaScript។
+  starwars_javascript_specs: សំរាប់ភាសាអង់គ្លេសប៉ណ្ណោះ | កម្មវិធីបើកគេហទំព័រទំនើប
+    | អាយុចាប់ពី១១ឆ្នាំឡើងទៅ
+  starwars_blocks_title: ប្លុក
+  starwars_blocks_description: ប្រើប្រាស់ការទាញ-ទម្លាក់ប្លុក។
+  starwars_blocks_specs: ភាសាជាច្រើន | កម្មវិធីបើកគេហទំព័រ ទូរស័ព្ទទំនើប និង tablets
+    | អាយុចាប់ពី ៦ដល់១០៦
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: "ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព
-    Minecraft នេះ។"
-  mc_shortdescription: "ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព
-    Minecraft នេះ។"
+  mc_longdescription: ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព
+    Minecraft នេះ។
+  mc_shortdescription: ប្រើប្លុកនៃកូដដើម្បី Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងនៅក្នុងពិភព
+    Minecraft នេះ។
   mc_gradelevel: Ages 6+
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: "ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រ និង tablets | អាយុចាប់ពី ៦ដល់១០៦"
+  mc_specs: ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រ និង tablets | អាយុចាប់ពី ៦ដល់១០៦
   minecraft_agent: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: "មេរៀន Minecraft Hour of Code"
-  minecraft_specs: "ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រទំនើបៗ និង tablets | ថ្នាក់ទី២ឡើងទៅ"
+  minecraft_tutorials: មេរៀន Minecraft Hour of Code
+  minecraft_specs: ភាសាជាច្រើន | ឧបករណ៍បើកគេហទំព័រទំនើបៗ និង tablets | ថ្នាក់ទី២ឡើងទៅ
   minecraft_agent_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
     ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
-  minecraft_agent_button: "ចាប់​ផ្ដើម"
+  minecraft_agent_button: ចាប់​ផ្ដើម
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: "ចាប់​ផ្ដើម"
-  minecraft_adventurer_description: "ប្រើកូដដើម្បីឲ Alex ឬ Steve ធ្វើដំណើរផ្សងព្រេង។"
-  minecraft_adventurer_button: "ចាប់​ផ្ដើម"
-  minecraft_no_internet: "គ្មានអ៊ីនធើណែតប្រើប្រាស់?"
-  minecraft_download_adventurer: "ទាញយក Minecraft Adventurer ដែលជាប្រភេទមិនត្រូវការអ៊ីនធើណែត។"
+  minecraft_designer_button: ចាប់​ផ្ដើម
+  minecraft_adventurer_description: ប្រើកូដដើម្បីឲ Alex ឬ Steve ធ្វើដំណើរផ្សងព្រេង។
+  minecraft_adventurer_button: ចាប់​ផ្ដើម
+  minecraft_no_internet: គ្មានអ៊ីនធើណែតប្រើប្រាស់?
+  minecraft_download_adventurer: ទាញយក Minecraft Adventurer ដែលជាប្រភេទមិនត្រូវការអ៊ីនធើណែត។
   minecraft_subtitle: Minecraft Hour of Code
-  minecraft_store_camps: "ស្វែងរក Minecraft Hour of Code Camps ដោយឥតគិតថ្លៃនៅហាងរបស់ក្រុមហ៊ុនMicrosoft"
+  minecraft_store_camps: ស្វែងរក Minecraft Hour of Code Camps ដោយឥតគិតថ្លៃនៅហាងរបស់ក្រុមហ៊ុនMicrosoft
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>ចុះឈ្មោះ</a> សំរាប់សិក្ខាសាលា
     Minecraft Hour of Code ដោយឥតគិតថ្លៃនៅហាងក្រុមហ៊ុន Microsoft នៅក្នុងប្រទេសអូស្រ្តាលី
     កាណាដា ពឺតូរីកូ ឬ សហរដ្ឋអាមេរិក។ រៀនពីរបៀបសរសេរកូដគឺសំរាប់គ្រប់គ្នា ហើយវាបានរួមបញ្ចូលនូវភាពច្នៃប្រឌិត
     ការដោះស្រាយបញ្ហា និងភាពសប្បាយរីករាយជាច្រើន។"
-  minecraft_host_event: "រៀបចំព្រឹត្តិការណ៍ Minecraft Hour of Code"
-  minecraft_teach_resources: "ប្រភពធនធានសំរាប់គ្រូបង្រៀន និងគំរោងមេរៀន។"
-  minecraft_leader_guide: "ទាញយកធនធានទាំងនេះដើម្បីជួយអាចក្នុងការរៀបចំគំរោងនិងដឹកនាំព្រឹត្តិការណ៍មួយ។"
+  minecraft_host_event: រៀបចំព្រឹត្តិការណ៍ Minecraft Hour of Code
+  minecraft_teach_resources: ប្រភពធនធានសំរាប់គ្រូបង្រៀន និងគំរោងមេរៀន។
+  minecraft_leader_guide: ទាញយកធនធានទាំងនេះដើម្បីជួយអាចក្នុងការរៀបចំគំរោងនិងដឹកនាំព្រឹត្តិការណ៍មួយ។
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>ទាញយក</a>
     សៀវភៅមគ្គុទេសសំរាប់អ្នកសម្របសម្រួល និងឯកសារក្នុងការធ្វើបទបង្ហាញសំរាប់សិស្សឥលូវនេះ។"
-  minecraft_join_online_training: "ត្រៀមខ្លួនរួចរាល់ក្នុងការសម្របសម្រួលកម្មវិធី Hour
+  minecraft_join_online_training: ត្រៀមខ្លួនរួចរាល់ក្នុងការសម្របសម្រួលកម្មវិធី Hour
     of Code ជាមួយ Minecraft ហើយប៉ុន្តែមិនដឺងកន្លែងដែលត្រូវចាប់ផ្តើម? ស្វែងរក <a href='%{minecraft_webinar_url}'>សិក្ខាសាលាតាមអ៊ីនធើណែត</a>របស់យើង។
     អ្នកនឹងរៀនការអនុវត្តន៍ល្អៗ ប្រើប្រាស់ឧបករណ៍សំរាប់អ្នកសម្របសម្រួល ហើយទទួលបានការណែនាំមេរៀនថ្មី
     ដំណើរផ្សងព្រេងរបស់វារៈបុរស ពីក្រុមMinecraft។ គិតទុកជាមុននូវអ្វីដែលអ្នកត្រូវការក្នុងកម្មវិធី
     Hour of Code សំរាប់ក្មេងៗក្នុងកំឡុងសប្តាហ៍អបអរការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ
-    (ថ្ងៃទី៤ ដល់ទី១០ ខែធ្នូ) និងទៅថ្ងៃមុខទៀត។"
-  minecraft_continue_learning: "វិទ្យាសាស្រ្តកុំព្យូទ័រគឺសំរាប់មនុស្សគ្រប់គ្នា៖ ស្វែងរកបន្ថែមលើសពីកម្មវិធី
-    Hour of Code នៅក្នុងហាងរបស់ ក្រុមហ៊ុនMicrosoft"
-  minecraft_continue_learning_description: "មិនត្រូវការបទពីសោធន៍ក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រទេ!
+    (ថ្ងៃទី៤ ដល់ទី១០ ខែធ្នូ) និងទៅថ្ងៃមុខទៀត។
+  minecraft_continue_learning: វិទ្យាសាស្រ្តកុំព្យូទ័រគឺសំរាប់មនុស្សគ្រប់គ្នា៖ ស្វែងរកបន្ថែមលើសពីកម្មវិធី
+    Hour of Code នៅក្នុងហាងរបស់ ក្រុមហ៊ុនMicrosoft
+  minecraft_continue_learning_description: មិនត្រូវការបទពីសោធន៍ក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រទេ!
     ជួយដល់យុវជនទាំងអស់ក្នុងការសិក្សានូវជំនាញដែលមានតំលៃតាមរយៈការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ។
     ចូលរួមជាមួយនៅតាមហាងរបស់ក្រុមហ៊ុនMicrosoft ដើម្បីទទួលបាននូវអត្ថប្រយោជន៍ចំនួនបីដូចជា
     សិក្ខាសិលារយៈពេលមួយម៉ោងដែលមានបរិយាកាសសប្បាយរីករាយក្នុងការទទួលយកបទពិសោធន៍ក្នុងការសរសេរកូដ
     ទំលាប់ជាមួយពាក្យគន្លិះមូលដ្ឋានក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រ និងការត្រៀមខ្លួនអោយរួចរាល់សំរាប់កម្មវិធីHour
-    of Code នៅក្នុងថ្នាក់រៀនឬសាលារបស់អ្នក។ អ្នកហ្នឺងទទួលបានដូចនេះ! <a href='%{minecraft_continue_learning_url}'>ចុះឈ្មោះថ្ងៃនេះ</a>។"
-  minecraft_future: "ជួយយុុវជនទាំងអស់ក្នុងការត្រៀមខ្លួនសំរាប់អនាគត"
-  minecraft_future_description: "ស្វែងយល់វិធីសាស្រ្តពីសាលាដ៏ទៃឬអង្គការផ្សេងៗដែលបាននាំជំនាញឌីជីថលទៅកាន់សហគមន៍របស់ពួកគេដោយចាប់ផ្តើមពីអក្ខរកម្មឌីជីថលរហូតដល់ការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ។
-    ពីចារណាលើវិធីសាស្រ្ត គន្លិះផ្សេងៗ ហើយ <a href='%{minecraft_future_url}'>ចូលទៅកាន់ប្រភពធនធាន</a>ដែលមានតំលៃ។"
+    of Code នៅក្នុងថ្នាក់រៀនឬសាលារបស់អ្នក។ អ្នកហ្នឺងទទួលបានដូចនេះ! <a href='%{minecraft_continue_learning_url}'>ចុះឈ្មោះថ្ងៃនេះ</a>។
+  minecraft_future: ជួយយុុវជនទាំងអស់ក្នុងការត្រៀមខ្លួនសំរាប់អនាគត
+  minecraft_future_description: ស្វែងយល់វិធីសាស្រ្តពីសាលាដ៏ទៃឬអង្គការផ្សេងៗដែលបាននាំជំនាញឌីជីថលទៅកាន់សហគមន៍របស់ពួកគេដោយចាប់ផ្តើមពីអក្ខរកម្មឌីជីថលរហូតដល់ការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ។
+    ពីចារណាលើវិធីសាស្រ្ត គន្លិះផ្សេងៗ ហើយ <a href='%{minecraft_future_url}'>ចូលទៅកាន់ប្រភពធនធាន</a>ដែលមានតំលៃ។
   minecraft_og_designer: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីៗសំរាប់កម្មវិធី
     Hour of Code។ សរសេរកម្មវិធីសត្វ និងសត្វដ៏ទៃទៀតនៅក្នុងហ្គេមMinecraft ដោយខ្លួនឯង។
   minecraft_og_agent: Minecraft​ បានត្រលប់មកវិញសំរាប់កម្មវិធី Hour of Code អ្នកគឺជាវារៈបុរស!
     សរសេរកូដសំរាប់ដំណើរផ្សងព្រេងទៅកាន់តំបន់ជីវចំរុះរបស់ Minecraft។
-  sports_page_title: "កីឡា Hour of Code"
-  sports_og_title: "ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។"
-  sports_og_description: "ជើងឯកនិងមេដាយមាសលើកទឹកចិត្តអ្នកអោយសាកល្បងកម្មវិធីHour of
-    Code។ សរសេរកូដសំរាប់ហ្គេមប្រភេទកីឡាដោយខ្លួនឯង។"
+  sports_page_title: កីឡា Hour of Code
+  sports_og_title: ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។
+  sports_og_description: ជើងឯកនិងមេដាយមាសលើកទឹកចិត្តអ្នកអោយសាកល្បងកម្មវិធីHour of
+    Code។ សរសេរកូដសំរាប់ហ្គេមប្រភេទកីឡាដោយខ្លួនឯង។
   sports_title: Code your own sports game
-  sports_watch_video: "មេីលវិដេអូ"
-  sports_video_title: "ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។"
-  sports_select_theme: "ជ្រើរើសទំរង់នៃការបង្រៀនរបស់អ្នក"
-  sports_basketball_title: "បង្កើតហ្គេមបោះបាល់"
+  sports_watch_video: មេីលវិដេអូ
+  sports_video_title: ជំរុញខ្លួនអ្នក។ មនុស្សគ្រប់គ្នាអាចរៀនបាន។
+  sports_select_theme: ជ្រើរើសទំរង់នៃការបង្រៀនរបស់អ្នក
+  sports_basketball_title: បង្កើតហ្គេមបោះបាល់
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: "មើលអត្តពលិកដែលមានលក្ខណៈពិសេស"
-  sports_athletes_title: "អត្តពលិកដែលមានលក្ខណៈពិសេស"
+  sports_featured_athletes: មើលអត្តពលិកដែលមានលក្ខណៈពិសេស
+  sports_athletes_title: អត្តពលិកដែលមានលក្ខណៈពិសេស
   sports_athlete_Draymond: Draymond Green ម្ចាស់មេដាយមាសអូឡាំពិក និងជើងឯកក្របខ័ណ្ឌ
     NBA នៅក្នុងក្លឹបGolden State Warriors
   sports_athlete_Serena: Serena Williams ម្ចាស់មេដាយមាសអូឡាំពិក និងម្ចាស់ជើងឯកកីឡាវាយកូនបាល់
@@ -612,39 +612,39 @@
     NBA របស់ក្រុម Miami Heat
   sports_athlete_Harrison: Harrison Barnes ម្ចាស់មេដាយមាសអូឡាំពិក និងជាម្ចាស់ជើងឯកក្នុងស្ថាប័នបាល់បោះ
     NBA របស់ក្រុម Dallas Mavericks
-  watch_inspirational_videos: "មុនហ្នឹងអ្នកចាប់ផ្តើម សូមមើលវីដេអូបំផុសគំនិតមួយក្នុងចំណោមវីដេអូទាំងនេះ"
+  watch_inspirational_videos: មុនហ្នឹងអ្នកចាប់ផ្តើម សូមមើលវីដេអូបំផុសគំនិតមួយក្នុងចំណោមវីដេអូទាំងនេះ
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "បំផុសគំនិតក្មេងស្រី"
-  video_title_cs_intro: "ការណែនាំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ"
-  video_title_schools_dont_teach: "អ្វីដែលសាលាភាគច្រើនមិនបានបង្រៀន"
-  video_title_obama: "ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  video_title_hoc_is_here: "កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា"
-  video_title_anybody_can_learn: "មនុស្សគ្រប់គ្នាអាចរៀនបាន"
+  video_title_inspire_girl: បំផុសគំនិតក្មេងស្រី
+  video_title_cs_intro: ការណែនាំពីវិទ្យាសាស្ត្រកុំព្យូទ័រ
+  video_title_schools_dont_teach: អ្វីដែលសាលាភាគច្រើនមិនបានបង្រៀន
+  video_title_obama: ការយល់ឃើញរបស់ប្រធានាធិបតី Obama ចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  video_title_hoc_is_here: កម្មវិធី Hour of Code នៅទីនេះ - មនុស្សគ្រប់គ្នាអាចសិក្សា
+  video_title_anybody_can_learn: មនុស្សគ្រប់គ្នាអាចរៀនបាន
   video_title_steph_curry: Hour of Code with Steph Curry
-  video_title_draymond_green: "កម្មវិធី Hour of Code ជាមួយ Draymond Green"
-  video_title_russell_okung: "កម្មវិធី Hour of Code ជាមួយ Russell Okung"
-  video_title_real_madrid: "កម្មវិធី Hour of Code ជាមួយ Real Madrid"
-  video_title_marco_belinelli: "កម្មវិធី Hour of Code ជាមួយ Marco Belinelli"
-  video_title_chris_bosh: "ការយល់ឃើញចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័ររបស់ Chris Bosh"
-  video_1min: "១នាទី"
-  video_2min: "២នាទី"
-  video_5min: "៥នាទី"
-  speak_another_language: "និយាយភាសាផ្សេងទៀត?"
-  help_translate: "ជួយពួកយើងក្នុងការបកប្រែភាសា។"
-  no_internet: "គ្មានអ៊ីនធើណែតប្រើប្រាស់?"
-  download_offline: "ទាញយកនូវប្រភេទដែលអាចប្រើដោយគ្មានអ៊ីនធើណែតបាន"
-  are_you_teacher: "តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?"
-  review_lesson_plan: "ពិនិត្យឡើងវិញនូវផែនការមេរៀននិងធនធានគ្រូបង្រៀនផ្សេងទៀត។"
-  volunteer_engineer_submission_title: "បំផុសគំនិតសិស្ស និងអ្នកស្ម័គ្រចិត្ត"
-  volunteer_engineer_submission_subtitle_generic: "គ្រូបង្រៀនចំនួន ១០០, ០០០ នាក់នឹងទទួលរៀបចំកម្មវិធី
+  video_title_draymond_green: កម្មវិធី Hour of Code ជាមួយ Draymond Green
+  video_title_russell_okung: កម្មវិធី Hour of Code ជាមួយ Russell Okung
+  video_title_real_madrid: កម្មវិធី Hour of Code ជាមួយ Real Madrid
+  video_title_marco_belinelli: កម្មវិធី Hour of Code ជាមួយ Marco Belinelli
+  video_title_chris_bosh: ការយល់ឃើញចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័ររបស់ Chris Bosh
+  video_1min: ១នាទី
+  video_2min: ២នាទី
+  video_5min: ៥នាទី
+  speak_another_language: និយាយភាសាផ្សេងទៀត?
+  help_translate: ជួយពួកយើងក្នុងការបកប្រែភាសា។
+  no_internet: គ្មានអ៊ីនធើណែតប្រើប្រាស់?
+  download_offline: ទាញយកនូវប្រភេទដែលអាចប្រើដោយគ្មានអ៊ីនធើណែតបាន
+  are_you_teacher: តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?
+  review_lesson_plan: ពិនិត្យឡើងវិញនូវផែនការមេរៀននិងធនធានគ្រូបង្រៀនផ្សេងទៀត។
+  volunteer_engineer_submission_title: បំផុសគំនិតសិស្ស និងអ្នកស្ម័គ្រចិត្ត
+  volunteer_engineer_submission_subtitle_generic: 'គ្រូបង្រៀនចំនួន ១០០, ០០០ នាក់នឹងទទួលរៀបចំកម្មវិធី
     Hour of Code នៅក្នុងថ្នាក់រៀនរបស់ពួកគេនៅឆ្នាំនេះ ចាប់ពីថ្ងៃទី ៧ដល់១៣ ខែធ្នូឆ្នាំ
-    ២០១៥។ ពួកគេត្រូវការជំនួយរបស់អ្នក! "
-  volunteer_engineer_submission_subtitle_specific: "គ្រូបង្រៀនចំនួន%{num_teachers}
+    ២០១៥។ ពួកគេត្រូវការជំនួយរបស់អ្នក! '
+  volunteer_engineer_submission_subtitle_specific: គ្រូបង្រៀនចំនួន%{num_teachers}
     ត្រូវការអ្នកស្ម័គ្រចិត្ត។ អ្នកស្ម័គ្រចិត្តចំនួន<br>%{num_volunteers} បានចុះឈ្មោះ។
-    ចូរចូលរួមជាមួយពួកគេ។"
-  volunteer_engineer_submission_intro_background: "កម្មវិធី Hour of Code គឺជាចលនាសកលលោកដើម្បីធ្វើការណែនាំអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រក្នុងរយៈពេលមួយម៉ោងទៅដល់សិស្សរាប់លាននាក់នៅក្នុងជាង១៨០ប្រទេស។
+    ចូរចូលរួមជាមួយពួកគេ។
+  volunteer_engineer_submission_intro_background: កម្មវិធី Hour of Code គឺជាចលនាសកលលោកដើម្បីធ្វើការណែនាំអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រក្នុងរយៈពេលមួយម៉ោងទៅដល់សិស្សរាប់លាននាក់នៅក្នុងជាង១៨០ប្រទេស។
     សូមចូលរួមក្នុងសប្តាហ៍នៃការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រចាប់ពីថ្ងៃទី ៧ ដល់ថ្ងៃទី
-    ១៣ ខែធ្នូ។"
+    ១៣ ខែធ្នូ។
   volunteer_engineer_submission_intro_recruit: 'គ្រូបង្រៀនពេញចិត្តនៅពេលដែលមាននរណាម្មាក់
     <span style="font-family: ''Gotham 7r'', sans-serif;">មានចំណាប់អារម្មណ៍ចំពោះការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ</span>ដែលជាអ្នកអាចជួយនៅក្នុងថ្នាក់រៀនបាន
     ឬនរណាម្នាក់ដែលអាច<span style="font-family: ''Gotham 7r'', sans-serif;">បំផុសគំនិត</span>សិស្សរបស់ពួកគេដោយនិយាយអំពីទំហំនៃលទ្ធភាពដែលមានក្នុងវិទ្យាសាស្រ្តកុំព្យូទ័រ
@@ -654,158 +654,158 @@
     ចន្លោះបំពេញដែលមានសញ្ញា<span class="form-required-field">*</span> គឺតម្រូវឲបំពេញជាដាច់ខាត។
   volunteer_engineer_submission_intro_links: តើអ្នកជាគ្រូបង្រៀនកំពុងស្វែងរកអ្នកស្ម័គ្រចិត្តដែរឬទេ?
     ស្វែងរកអ្នកស្ម័គ្រចិត្តក្នុងតំបន់តាមរយៈ<a href="%{volunteer_local}">ផែនទីអ្នកស្ម័គ្រចិត្ត</a>របស់យើង។
-  volunteer_engineer_submission_update_information: "ធ្វើបច្ចុប្បន្នភាពព័ត៌មានរបស់អ្នក"
-  volunteer_engineer_submission_header_shared: "ព័ត៌មានដែលបានចែករំលែកជាមួយគ្រូលើផែនទីអ្នកស្ម័គ្រចិត្ត"
-  volunteer_engineer_submission_field_name: "ឈ្មោះ"
-  volunteer_engineer_submission_field_name_placeholder: "ឈ្មោះពេញ"
-  volunteer_engineer_submission_field_company: "ក្រុមហ៊ុន(ឬសាកលវិទ្យាល័យ)"
-  volunteer_engineer_submission_field_company_placeholder: "ក្រុមហ៊ុន(ឬសាកលវិទ្យាល័យ)"
-  volunteer_engineer_submission_field_experience_level: "កំរិតបទពិសោធន៍"
-  volunteer_engineer_submission_field_location: "ទីតាំង"
-  volunteer_engineer_submission_field_location_desc: "ទីតាំងរបស់អ្នកនឹងត្រូវបានប្រើដើម្បីអនុញ្ញាតឱ្យគ្រូបង្រៀនស្វែងរកអ្នកស្ម័គ្រចិត្តដែលនៅក្បែរនោះហើយនឹងត្រូវបានបង្ហាញជាម្ជុលនៅលើផែនទី។
-    ប្រសិនបើអ្នកព្រួយបារម្ភអំពីភាពឯកជន សូមប្រើអាសយដ្ឋានការងារ សាលារៀនឬគ្រាន់តែឈ្មោះទីក្រុងរបស់អ្នក។"
-  volunteer_engineer_submission_field_location_placeholder: "លេខកូដតំបន់ ទីក្រុងនិងប្រទេស
-    ឬអាស័យដ្ឋានផ្លូវ"
-  volunteer_engineer_submission_field_location_flexibility: "ខ្ញុំអាចស្ម័គ្រចិត្តដោយ...
-    (ជ្រើសរើសទាំងអស់ដែលអាច)"
-  volunteer_engineer_submission_checkbox_after_hoc: "ខ្ញុំចាប់អារម្មណ៍ក្នុងការស្ម័គ្រចិត្តពេញមួយឆ្នាំ"
-  volunteer_engineer_submission_field_time_commitment: "ការប្តេជ្ញាចិត្តចំពោះពេលវេលា"
-  volunteer_engineer_submission_field_linkedin: "ប្រវត្តិរូបក្នុង LinkedIn"
+  volunteer_engineer_submission_update_information: ធ្វើបច្ចុប្បន្នភាពព័ត៌មានរបស់អ្នក
+  volunteer_engineer_submission_header_shared: ព័ត៌មានដែលបានចែករំលែកជាមួយគ្រូលើផែនទីអ្នកស្ម័គ្រចិត្ត
+  volunteer_engineer_submission_field_name: ឈ្មោះ
+  volunteer_engineer_submission_field_name_placeholder: ឈ្មោះពេញ
+  volunteer_engineer_submission_field_company: ក្រុមហ៊ុន(ឬសាកលវិទ្យាល័យ)
+  volunteer_engineer_submission_field_company_placeholder: ក្រុមហ៊ុន(ឬសាកលវិទ្យាល័យ)
+  volunteer_engineer_submission_field_experience_level: កំរិតបទពិសោធន៍
+  volunteer_engineer_submission_field_location: ទីតាំង
+  volunteer_engineer_submission_field_location_desc: ទីតាំងរបស់អ្នកនឹងត្រូវបានប្រើដើម្បីអនុញ្ញាតឱ្យគ្រូបង្រៀនស្វែងរកអ្នកស្ម័គ្រចិត្តដែលនៅក្បែរនោះហើយនឹងត្រូវបានបង្ហាញជាម្ជុលនៅលើផែនទី។
+    ប្រសិនបើអ្នកព្រួយបារម្ភអំពីភាពឯកជន សូមប្រើអាសយដ្ឋានការងារ សាលារៀនឬគ្រាន់តែឈ្មោះទីក្រុងរបស់អ្នក។
+  volunteer_engineer_submission_field_location_placeholder: លេខកូដតំបន់ ទីក្រុងនិងប្រទេស
+    ឬអាស័យដ្ឋានផ្លូវ
+  volunteer_engineer_submission_field_location_flexibility: ខ្ញុំអាចស្ម័គ្រចិត្តដោយ...
+    (ជ្រើសរើសទាំងអស់ដែលអាច)
+  volunteer_engineer_submission_checkbox_after_hoc: ខ្ញុំចាប់អារម្មណ៍ក្នុងការស្ម័គ្រចិត្តពេញមួយឆ្នាំ
+  volunteer_engineer_submission_field_time_commitment: ការប្តេជ្ញាចិត្តចំពោះពេលវេលា
+  volunteer_engineer_submission_field_linkedin: ប្រវត្តិរូបក្នុង LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: "ប្រវត្តិរូប Facebook"
+  volunteer_engineer_submission_field_facebook: ប្រវត្តិរូប Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "ការ​ពណ៌នា"
-  volunteer_engineer_submission_field_description_desc: "ពិពណ៌នាអំពីបទពិសោធន៍វិទ្យាសាស្រ្តកុំព្យូទ័រឬបទពិសោធន៍បច្ចេកទេសរបស់អ្នកនិងរបៀបដែលអ្នកចង់ចូលរួមជាអ្នកស្ម័គ្រចិត្តសម្រាប់គ្រូបង្រៀនក្នុងតំបន់។"
-  volunteer_engineer_submission_field_description_placeholder: "ការពិពណ៌នាអំពីបទពិសោធន៍
-    និង/ឬការចូលរួម។ ប្រសិនបើអ្នកនិយាយភាសាផ្សេងក្រៅពីអង់គ្លេសត្រូវប្រាកដថាបានបញ្ចូលវានៅទីនេះ។"
-  volunteer_engineer_submission_header_private: "ពត៌មាននឹងត្រូវបានរក្សាទុកជាការសំងាត់ហើយនឹងមិនត្រូវបានចែករំលែកនោះទេ"
-  volunteer_engineer_submission_field_email: "អាសយដ្ឋាន​អ៊ីមែល"
-  volunteer_engineer_submission_field_email_desc: "អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេប៉ុន្តែយើងនឹងផ្ញើសំណើពីគ្រូទៅកាន់អ្នក។"
-  volunteer_engineer_submission_field_email_placeholder: "អាសយដ្ឋាន​អ៊ីមែល"
-  volunteer_engineer_submission_final_paragraph: "អ្នកនឹងត្រូវបានចុះបញ្ជីនៅលើផែនទីសម្រាប់គ្រូបង្រៀនក្នុងតំបន់ដើម្បីទាក់ទងអ្នកសម្រាប់កម្មវិធី
+  volunteer_engineer_submission_field_description: ការ​ពណ៌នា
+  volunteer_engineer_submission_field_description_desc: ពិពណ៌នាអំពីបទពិសោធន៍វិទ្យាសាស្រ្តកុំព្យូទ័រឬបទពិសោធន៍បច្ចេកទេសរបស់អ្នកនិងរបៀបដែលអ្នកចង់ចូលរួមជាអ្នកស្ម័គ្រចិត្តសម្រាប់គ្រូបង្រៀនក្នុងតំបន់។
+  volunteer_engineer_submission_field_description_placeholder: ការពិពណ៌នាអំពីបទពិសោធន៍
+    និង/ឬការចូលរួម។ ប្រសិនបើអ្នកនិយាយភាសាផ្សេងក្រៅពីអង់គ្លេសត្រូវប្រាកដថាបានបញ្ចូលវានៅទីនេះ។
+  volunteer_engineer_submission_header_private: ពត៌មាននឹងត្រូវបានរក្សាទុកជាការសំងាត់ហើយនឹងមិនត្រូវបានចែករំលែកនោះទេ
+  volunteer_engineer_submission_field_email: អាសយដ្ឋាន​អ៊ីមែល
+  volunteer_engineer_submission_field_email_desc: អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេប៉ុន្តែយើងនឹងផ្ញើសំណើពីគ្រូទៅកាន់អ្នក។
+  volunteer_engineer_submission_field_email_placeholder: អាសយដ្ឋាន​អ៊ីមែល
+  volunteer_engineer_submission_final_paragraph: អ្នកនឹងត្រូវបានចុះបញ្ជីនៅលើផែនទីសម្រាប់គ្រូបង្រៀនក្នុងតំបន់ដើម្បីទាក់ទងអ្នកសម្រាប់កម្មវិធី
     Hour of Code ឬឱកាសការងារស្ម័គ្រចិត្តផ្សេងទៀត។ អ៊ីម៉ែលនិងអាសយដ្ឋានពិតប្រាកដរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកដោយពួកយើងទេ។
-    ប៉ុន្តែព័ត៌មានផ្សេងទៀត (រួមទាំងទីតាំងប្រហាក់ប្រហែល) នឹងត្រូវបានមើលឃើញជាសាធារណៈដោយគ្រូក្នុងតំបន់។"
-  volunteer_engineer_submission_checkbox_contact: "ខ្ញុំយល់ព្រមឲគ្រូបង្រៀនអាចទាក់ទងខ្ញុំដើម្បីឱកាសការងារស្ម័គ្រចិត្ត
-    (ចំណាំ៖ អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេ)"
-  volunteer_engineer_submission_checkbox_age_18_plus: "ខ្ញុំបញ្ជាក់ថាខ្ញុំមានអាយុយ៉ាងហោចណាស់
-    18 ឆ្នាំ។"
-  volunteer_engineer_submission_submit: "ដាក់ស្នើរ"
+    ប៉ុន្តែព័ត៌មានផ្សេងទៀត (រួមទាំងទីតាំងប្រហាក់ប្រហែល) នឹងត្រូវបានមើលឃើញជាសាធារណៈដោយគ្រូក្នុងតំបន់។
+  volunteer_engineer_submission_checkbox_contact: ខ្ញុំយល់ព្រមឲគ្រូបង្រៀនអាចទាក់ទងខ្ញុំដើម្បីឱកាសការងារស្ម័គ្រចិត្ត
+    (ចំណាំ៖ អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេ)
+  volunteer_engineer_submission_checkbox_age_18_plus: ខ្ញុំបញ្ជាក់ថាខ្ញុំមានអាយុយ៉ាងហោចណាស់
+    18 ឆ្នាំ។
+  volunteer_engineer_submission_submit: ដាក់ស្នើរ
   volunteer_engineer_submission_thankyou: សូមអរគុណ! ព័ត៌មានអ្នកស្ម័គ្រចិត្តរបស់អ្នកត្រូវបានបញ្ជូនដោយជោគជ័យ។
     គ្រូនឹងប្រើ<a href="%{url}"> ផែនទីនេះ</a> ដើម្បីស្វែងរកនិងទាក់ទងអ្នកស្ម័គ្រចិត្តដូចជាអ្នក។
     សូមអនុញ្ញាតិ ៤៨ម៉ោងសំរាប់ព័ត៌មានរបស់អ្នកដើម្បីឱ្យបង្ហាញឲត្រឹមត្រូវនៅលើផែនទី។
-  volunteer_engineer_submission_commitment_uncertain: "មិនប្រាកដ"
-  volunteer_engineer_submission_commitment_one_hr_per_week: "១ម៉ោងក្នុងមួយអាទិត្យ"
-  volunteer_engineer_submission_commitment_three_hrs_per_week: "៣ម៉ោងក្នុងមួយអាទិត្យ"
-  volunteer_engineer_submission_commitment_five_hrs_per_week: "៥ម៉ោងក្នុងមួយអាទិត្យ"
-  volunteer_engineer_submission_commitment_now_and_then: "ពេលនេះ​ក្តី​ពេលណា​ក្តី"
-  volunteer_engineer_submission_commitment_annually: "២ទៅ៣ដងក្នុងមួយឆ្នាំ"
-  volunteer_engineer_submission_commitment_monthly: "២ឬ៣ ម៉ោងក្នុងមួយខែ"
-  volunteer_engineer_submission_commitment_weekly: "២ឬ៣ ម៉ោងក្នុងមួយអាទិត្យ"
-  volunteer_engineer_submission_commitment_more: "ផ្សេង​ទៀត"
-  volunteer_engineer_submission_location_flexibility_onsite: "មកមើលនៅតាមសាលារៀន (១ម៉ោង
-    ទៅ២ម៉ោង នៅក្នុងថ្នាក់រៀនឬសាលារៀន)"
-  volunteer_engineer_submission_location_flexibility_remote: "មានសំនួរចំលើយជាមួយសិស្សពីចម្ងាយ(តាមរយៈសន្និសីទវីដេអូខ្លី)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "រួមចំណែកដល់គម្រោងកម្មវិធីសិក្សាដោយឥតគិតថ្លៃ"
-  volunteer_engineer_submission_experience_unspecified: "មិនបានបញ្ជាក់"
-  volunteer_engineer_submission_experience_tech_company: "មិនមែនជាវិស្វករនៅឯក្រុមហ៊ុនបច្ចេកវិទ្យា"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "និស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  volunteer_engineer_submission_experience_software_professional: "វិស្វករផ្នែក​បង្កើតកម្មវិធី
-    ឬអ្នកជំនាញបច្ចេកទេស"
-  volunteer_engineer_submission_distance_8: "៨គីឡូម៉ែត្រ"
-  volunteer_engineer_submission_distance_16: "១៦គីឡូម៉ែត្រ"
-  volunteer_engineer_submission_distance_24: "២៤គីឡូម៉ែត្រ"
-  volunteer_engineer_submission_distance_32: "៣២គីឡូម៉ែត្រ"
-  volunteer_engineer_submission_num_volunteers_5: "អ្នកស្ម័គ្រចិត្ត ៥នាក់"
-  volunteer_engineer_submission_num_volunteers_10: "អ្នកស្ម័គ្រចិត្ត ១០នាក់"
-  volunteer_engineer_submission_num_volunteers_25: "អ្នកស្ម័គ្រចិត្ត ២៥នាក់"
-  volunteer_engineer_submission_num_volunteers_50: "អ្នកស្ម័គ្រចិត្ត ៥០នាក់"
-  volunteer_engineer_submission_type_task_onsite: "ខ្ញុំចង់ឱ្យអ្នកមកមើលថ្នាក់រៀនរបស់ខ្ញុំសម្រាប់ជំនួយបច្ចេកទេសនិងការបំផុសគំនិត"
-  volunteer_engineer_submission_type_task_remote: "ខ្ញុំចង់ឱ្យអ្នកប្រើប្រាស់ Skype
-    ចូលទៅក្នុងបន្ទប់រៀនរបស់ខ្ញុំដើម្បីនិយាយពាក្យបំផុសគំនិតមួយចំនួនទៅកាន់ក្មេងៗ"
-  volunteer_engineer_submission_type_task_mentor: "ខ្ញុំកំពុងស្វែងរកអ្នកណែនាំដើម្បីជួយរៀបចំខ្ញុំសម្រាប់ការសរសេរកូដជាមួយសិស្សរបស់ខ្ញុំ"
-  petition_age: "អាយុ"
-  dashboard_announce_hoc_scaling_progress: "ទេ! យើងកំពុងជួបប្រទះការប្រើប្រាស់កម្មវិធី
-    Hour of Code ច្រើនហួសហេតុពេកហើយ។ យើងមិនអាចរក្សាទុកអ្វីដែលបានធ្វើនៅសប្តាហ៍នេះប៉ុន្តែអ្វីដែលបានធ្វើកាលពីមុនសប្តាហ៍នេះនៅតែមានសុវត្ថិភាព។"
-  dashboard_announce_learn_more_button: "សិក្សាបន្ថែម"
-  dashboard_landing_title: "ទំព័រដើមគ្រូបង្រៀន"
-  dashboard_landing_welcome: "សូមស្វាគមន៍មកកាន់តារាងពត៌មានគ្រូបង្រៀនថ្មី។"
-  dashboard_landing_video: "មេីលវិដេអូនេះ"
-  dashboard_landing_watch_video: "សម្រាប់ដំណើរទស្សនកិច្ចនៃលក្ខណៈពិសេសថ្មីៗ!"
-  dashboard_landing_view_as_student: "បើកមើលទំព័រនេះក្នុងនាមជាសិស្ស"
-  dashboard_landing_students_title: "សិស្សរបស់អ្នក"
-  dashboard_landing_students_manage: "មើលនិងគ្រប់គ្រងសិស្សរបស់អ្នក"
-  dashboard_landing_news_title: "ធនធានសំរាប់អ្នកអប់រំថ្នាក់មត្តេយ្យដល់ទី៥ (មានតែភាសាអង់គ្លេសប៉ុណ្នោះ)"
-  dashboard_landing_new_beta: "ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
-    ។"
-  dashboard_landing_new_k5courses: "ថ្មី! សាកល្បងវគ្គសិក្សារបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
-    ។"
-  dashboard_landing_useful_links: "តំណដែលមានអត្ថប្រយោជន៍ផ្សេងៗទៀត"
-  dashboard_landing_classroom_resources: "ធនធានសំរាប់ថ្នាក់រៀនរបស់អ្នក"
-  dashboard_landing_office_hours: "សួរសំនួរជាលក្ខណៈបុគ្គល! ចូលមើលវិដេអូប្រចាំខែរបស់ពួកយើងរៀងរាល់ម៉ោងធ្វើការ។"
+  volunteer_engineer_submission_commitment_uncertain: មិនប្រាកដ
+  volunteer_engineer_submission_commitment_one_hr_per_week: ១ម៉ោងក្នុងមួយអាទិត្យ
+  volunteer_engineer_submission_commitment_three_hrs_per_week: ៣ម៉ោងក្នុងមួយអាទិត្យ
+  volunteer_engineer_submission_commitment_five_hrs_per_week: ៥ម៉ោងក្នុងមួយអាទិត្យ
+  volunteer_engineer_submission_commitment_now_and_then: ពេលនេះ​ក្តី​ពេលណា​ក្តី
+  volunteer_engineer_submission_commitment_annually: ២ទៅ៣ដងក្នុងមួយឆ្នាំ
+  volunteer_engineer_submission_commitment_monthly: ២ឬ៣ ម៉ោងក្នុងមួយខែ
+  volunteer_engineer_submission_commitment_weekly: ២ឬ៣ ម៉ោងក្នុងមួយអាទិត្យ
+  volunteer_engineer_submission_commitment_more: ផ្សេង​ទៀត
+  volunteer_engineer_submission_location_flexibility_onsite: មកមើលនៅតាមសាលារៀន (១ម៉ោង
+    ទៅ២ម៉ោង នៅក្នុងថ្នាក់រៀនឬសាលារៀន)
+  volunteer_engineer_submission_location_flexibility_remote: មានសំនួរចំលើយជាមួយសិស្សពីចម្ងាយ(តាមរយៈសន្និសីទវីដេអូខ្លី)
+  volunteer_engineer_submission_location_flexibility_curriculum: រួមចំណែកដល់គម្រោងកម្មវិធីសិក្សាដោយឥតគិតថ្លៃ
+  volunteer_engineer_submission_experience_unspecified: មិនបានបញ្ជាក់
+  volunteer_engineer_submission_experience_tech_company: មិនមែនជាវិស្វករនៅឯក្រុមហ៊ុនបច្ចេកវិទ្យា
+  volunteer_engineer_submission_experience_university_student_or_researcher: និស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  volunteer_engineer_submission_experience_software_professional: វិស្វករផ្នែក​បង្កើតកម្មវិធី
+    ឬអ្នកជំនាញបច្ចេកទេស
+  volunteer_engineer_submission_distance_8: ៨គីឡូម៉ែត្រ
+  volunteer_engineer_submission_distance_16: ១៦គីឡូម៉ែត្រ
+  volunteer_engineer_submission_distance_24: ២៤គីឡូម៉ែត្រ
+  volunteer_engineer_submission_distance_32: ៣២គីឡូម៉ែត្រ
+  volunteer_engineer_submission_num_volunteers_5: អ្នកស្ម័គ្រចិត្ត ៥នាក់
+  volunteer_engineer_submission_num_volunteers_10: អ្នកស្ម័គ្រចិត្ត ១០នាក់
+  volunteer_engineer_submission_num_volunteers_25: អ្នកស្ម័គ្រចិត្ត ២៥នាក់
+  volunteer_engineer_submission_num_volunteers_50: អ្នកស្ម័គ្រចិត្ត ៥០នាក់
+  volunteer_engineer_submission_type_task_onsite: ខ្ញុំចង់ឱ្យអ្នកមកមើលថ្នាក់រៀនរបស់ខ្ញុំសម្រាប់ជំនួយបច្ចេកទេសនិងការបំផុសគំនិត
+  volunteer_engineer_submission_type_task_remote: ខ្ញុំចង់ឱ្យអ្នកប្រើប្រាស់ Skype
+    ចូលទៅក្នុងបន្ទប់រៀនរបស់ខ្ញុំដើម្បីនិយាយពាក្យបំផុសគំនិតមួយចំនួនទៅកាន់ក្មេងៗ
+  volunteer_engineer_submission_type_task_mentor: ខ្ញុំកំពុងស្វែងរកអ្នកណែនាំដើម្បីជួយរៀបចំខ្ញុំសម្រាប់ការសរសេរកូដជាមួយសិស្សរបស់ខ្ញុំ
+  petition_age: អាយុ
+  dashboard_announce_hoc_scaling_progress: ទេ! យើងកំពុងជួបប្រទះការប្រើប្រាស់កម្មវិធី
+    Hour of Code ច្រើនហួសហេតុពេកហើយ។ យើងមិនអាចរក្សាទុកអ្វីដែលបានធ្វើនៅសប្តាហ៍នេះប៉ុន្តែអ្វីដែលបានធ្វើកាលពីមុនសប្តាហ៍នេះនៅតែមានសុវត្ថិភាព។
+  dashboard_announce_learn_more_button: សិក្សាបន្ថែម
+  dashboard_landing_title: ទំព័រដើមគ្រូបង្រៀន
+  dashboard_landing_welcome: សូមស្វាគមន៍មកកាន់តារាងពត៌មានគ្រូបង្រៀនថ្មី។
+  dashboard_landing_video: មេីលវិដេអូនេះ
+  dashboard_landing_watch_video: សម្រាប់ដំណើរទស្សនកិច្ចនៃលក្ខណៈពិសេសថ្មីៗ!
+  dashboard_landing_view_as_student: បើកមើលទំព័រនេះក្នុងនាមជាសិស្ស
+  dashboard_landing_students_title: សិស្សរបស់អ្នក
+  dashboard_landing_students_manage: មើលនិងគ្រប់គ្រងសិស្សរបស់អ្នក
+  dashboard_landing_news_title: ធនធានសំរាប់អ្នកអប់រំថ្នាក់មត្តេយ្យដល់ទី៥ (មានតែភាសាអង់គ្លេសប៉ុណ្នោះ)
+  dashboard_landing_new_beta: ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
+    ។
+  dashboard_landing_new_k5courses: ថ្មី! សាកល្បងវគ្គសិក្សារបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
+    ។
+  dashboard_landing_useful_links: តំណដែលមានអត្ថប្រយោជន៍ផ្សេងៗទៀត
+  dashboard_landing_classroom_resources: ធនធានសំរាប់ថ្នាក់រៀនរបស់អ្នក
+  dashboard_landing_office_hours: សួរសំនួរជាលក្ខណៈបុគ្គល! ចូលមើលវិដេអូប្រចាំខែរបស់ពួកយើងរៀងរាល់ម៉ោងធ្វើការ។
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: "ដំណើរការរបស់ថ្នាក់រៀនចំបង"
-  dashboard_landing_progress_biggest: "នេះជាដំណើរការផ្នែកធំបំផុតរបស់អ្នក។"
-  dashboard_landing_view_progress: "មើលដំណើរការសំរាប់ %{biggest_section}"
-  dashboard_landing_print_progress: "បោះពុម្ភដំណើរការ"
-  dashboard_landing_available_title: "មេរៀនដែលអាចប្រើបាន"
-  dashboard_landing_available_courses: "នេះគឺជាមេរៀនដែលអាចរកបានសម្រាប់អ្នកនិងសិស្សរបស់អ្នក។"
-  dashboard_landing_more_tutorials: "ចង់មើលការបង្រៀនផ្សេងទៀត?"
+  dashboard_landing_progress_title: ដំណើរការរបស់ថ្នាក់រៀនចំបង
+  dashboard_landing_progress_biggest: នេះជាដំណើរការផ្នែកធំបំផុតរបស់អ្នក។
+  dashboard_landing_view_progress: មើលដំណើរការសំរាប់ %{biggest_section}
+  dashboard_landing_print_progress: បោះពុម្ភដំណើរការ
+  dashboard_landing_available_title: មេរៀនដែលអាចប្រើបាន
+  dashboard_landing_available_courses: នេះគឺជាមេរៀនដែលអាចរកបានសម្រាប់អ្នកនិងសិស្សរបស់អ្នក។
+  dashboard_landing_more_tutorials: ចង់មើលការបង្រៀនផ្សេងទៀត?
   dashboard_landing_more_tutorials_desc: មានការបង្រៀនជាច្រើនទៀត <a href="/learn/beyond">
     ដែលបានផ្តល់ជូនពីដៃគូរបស់យើង </a> រៀនសរសេរកម្មវិធីជាមួយ មនុស្សយន្ត បង្កើតគេហទំព័រ
     បង្កើតកម្មវិធីផ្ទាល់ខ្លួន ឬស្វែងយល់ភាសាផ្សេងទៀតដូចជា C ++, Ruby, ឬ Python!
-  dashboard_landing_inspire: "បំផុសសិស្សរបស់អ្នកជាមួយផ្ទាំងរូបភាព វីដេអូនិងច្រើនទៀត។"
-  dashboard_landing_video_library: "ប្រើវីដេអូពីបណ្ណាល័យវីដេអូនៃមូលដ្ឋានគ្រិះវិទ្យាសាស្រ្តកុំព្យូទ័រ។"
-  dashboard_landing_report_bug: "ស្នើសុំលក្ខណៈពិសេសឬរាយការណ៍កំហុស។"
-  dashboard_landing_teacher_forum: "ចូលរួមជាមួយសហគមន៍អ្នកសិក្សាជំនាញ។"
-  dashboard_hoc_courses: "កម្មវិធី Hour of Code សំរាប់គ្រប់អាយុទាំងអស់"
-  dashboard_hoc_courses_desc: "សូមសាកល្បងប្រើការបង្រៀនខ្លីៗទាំងនេះ ដែលមានរយៈពេល ១ម៉ោងជាមួយសិស្សរបស់អ្នក!"
+  dashboard_landing_inspire: បំផុសសិស្សរបស់អ្នកជាមួយផ្ទាំងរូបភាព វីដេអូនិងច្រើនទៀត។
+  dashboard_landing_video_library: ប្រើវីដេអូពីបណ្ណាល័យវីដេអូនៃមូលដ្ឋានគ្រិះវិទ្យាសាស្រ្តកុំព្យូទ័រ។
+  dashboard_landing_report_bug: ស្នើសុំលក្ខណៈពិសេសឬរាយការណ៍កំហុស។
+  dashboard_landing_teacher_forum: ចូលរួមជាមួយសហគមន៍អ្នកសិក្សាជំនាញ។
+  dashboard_hoc_courses: កម្មវិធី Hour of Code សំរាប់គ្រប់អាយុទាំងអស់
+  dashboard_hoc_courses_desc: សូមសាកល្បងប្រើការបង្រៀនខ្លីៗទាំងនេះ ដែលមានរយៈពេល ១ម៉ោងជាមួយសិស្សរបស់អ្នក!
   dashboard_hoc_courses_desc_and_cta: សូមសាកល្បងប្រើការបង្រៀនខ្លីៗទាំងនេះ ដែលមានរយៈពេល
     ១ម៉ោងជាមួយសិស្សរបស់អ្នក។ <a href="https://hourofcode.com">ចូលរួមក្នុងចលនា Hour
     of Code</a> ក្នុងកំឡុងសប្តាហ៍អប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ។
-  dashboard_k5_courses: "មេរៀនចំនួន២០ម៉ោងសំរាប់សិស្សថ្នាក់មេត្តេយ្យដល់ថ្នាក់ទី៥"
+  dashboard_k5_courses: មេរៀនចំនួន២០ម៉ោងសំរាប់សិស្សថ្នាក់មេត្តេយ្យដល់ថ្នាក់ទី៥
   dashboard_k5_courses_desc: វគ្គសិក្សាទាំងនេះបញ្ចូលគ្នាលើការបង្រៀនតាមអ៊ីនធឺណែត ការរៀននិងណែនាំដោយខ្លួនឯង
     ដែលមានសកម្មភាព"មិនជាប់" ដែលមានន័យថាមិនត្រូវការកុំព្យូទ័រគ្រប់ពេលនោះទេ។​ វគ្គសិក្សានីមួយៗមានប្រហែលជា២០មេរៀនដែលអាចត្រូវបានអនុវត្តជាជំពូកមួយឬលើសពីនេះក្នុងមួយត្រីមាស។
     ទោះជាសិស្សថ្នាក់មត្តេយ្យក៏អាចចូលរួមបានដែរ។ ដើម្បីជួយអ្នកក្នុងការចាប់ផ្តើម យើងផ្តល់ជូននូវសិក្ខាសាលាស្តីពីការអភិវឌ្ឍន៍ដែលមានគុណភាពខ្ពស់នៅជុំវិញសហរដ្ឋអាមេរិកដោយឥតគិតថ្លៃ។
     <a href="/professional-development-workshops">ស្វែងរកមួយដែលនៅក្បែរអ្នក!</a>
-  dashboard_middle_courses: "វគ្គសិក្សាចំនួន២០ម៉ោងសំរាប់ថ្នាក់អនុវិទ្យាល័យ"
+  dashboard_middle_courses: វគ្គសិក្សាចំនួន២០ម៉ោងសំរាប់ថ្នាក់អនុវិទ្យាល័យ
   dashboard_middle_courses_desc: កម្មវិធីសិក្សាកំរិតថ្នាក់អនុវិទ្យាល័យរបស់យើងប្រើប្រាស់វិទ្យាសាស្ត្រកុំព្យូទ័រនិងការសរសេរកម្មវិធីនៅក្នុងបរិបទនៃគណិតវិទ្យានិងវិទ្យាសាស្រ្តកំរិតអនុវិទ្យាល័យ
     - ធ្វើជាឧបករណ៍ដើម្បីមូលដ្ឋានគ្រិះបង្រៀនគណិតវិទ្យានិងវិទ្យាសាស្រ្ត។ ដើម្បីចុះឈ្មោះសម្រាប់សិក្ខាសាលាស្តីពីការអភិវឌ្ឍវិជ្ជាជីវៈសូមចុះឈ្មោះតាម
     <a href="/educate/districts"> ភាពជាដៃគូនៅក្នុងស្រុក </a> ជាមួយ Code.org ។
-  dashboard_high_courses: "មេរៀនសំរាប់ថ្នាក់វិទ្យាល័យមួយឆ្នាំពេញ"
+  dashboard_high_courses: មេរៀនសំរាប់ថ្នាក់វិទ្យាល័យមួយឆ្នាំពេញ
   dashboard_high_courses_desc: កម្មវិធីវិទ្យាល័យរបស់យើងជួយឱ្យសាលារៀនផ្តល់ជូននូវថ្នាក់វិទ្យាសាស្រ្តកុំព្យូទ័រពេញមួយឆ្នាំដោយរៀបចំបុគ្គលិកបង្រៀនដែលមានស្រាប់ដើម្បីផ្តល់ជូននូវជំនាញថ្មីនេះ។
     ដើម្បីចុះឈ្មោះសម្រាប់សិក្ខាសាលាស្តីពីការអភិវឌ្ឍវិជ្ជាជីវៈសូមចុះឈ្មោះតាម <a href="/educate/districts">
     ភាពជាដៃគូនៅក្នុងស្រុក </a> ជាមួយ Code.org ។
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org បានចាប់ដៃគូជាមួយ Bootstrap ដើម្បីអភិវឌ្ឍកម្មវិធីសិក្សាដែលបង្រៀនពីពិជគណិតនិងធរណីមាត្រតាមរយៈការសរសេរកម្មវិធីកុំព្យូទ័រ។
-  dashboard_course_csins: "វិទ្យាសាស្ត្រកុំព្យូទ័រក្នុងវិទ្យាសាស្រ្ត"
+  dashboard_course_csins: វិទ្យាសាស្ត្រកុំព្យូទ័រក្នុងវិទ្យាសាស្រ្ត
   dashboard_course_csins_desc: Code.org បានចាប់ដៃគូជាមួយគម្រោង GUTS ដើម្បីផ្តល់ការណែនាំអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រនៅក្នុងបរិបទនៃការធ្វើ
     modeling និង simulation។
-  dashboard_course_ecs: "ស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រ"
-  dashboard_course_ecs_desc: "ការស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាវគ្គសិក្សាមួយឆ្នាំដែលមាន
+  dashboard_course_ecs: ស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
+  dashboard_course_ecs_desc: 'ការស្វែងយល់ពីវិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាវគ្គសិក្សាមួយឆ្នាំដែលមាន
     6 មុខ: ការទំនាក់ទំនងរវាងមនុស្សនិងកុំព្យូទ័រ ការដោះស្រាយបញ្ហា ការរចនាគេហទំព័រ ការសរសេរកម្មវិធី
-    ការគណនានិងវិភាគទិន្នន័យ និងការធ្វើមនុស្សយន្ត។"
-  dashboard_course_csp: "គោលការណ៍របស់តែស្តទ្រាមចូលរៀន® វិទ្យាសាស្រ្តកុំព្យូទ័រ"
+    ការគណនានិងវិភាគទិន្នន័យ និងការធ្វើមនុស្សយន្ត។'
+  dashboard_course_csp: គោលការណ៍របស់តែស្តទ្រាមចូលរៀន® វិទ្យាសាស្រ្តកុំព្យូទ័រ
   dashboard_course_csp_desc: Code.org បានបង្កើតវិធីសាស្ត្រយ៉ាងម៉ត់ចត់ ទាក់ទាញនិងផ្តល់ភាពងាយស្រួលក្នុងការស្វែងយល់ពីគំនិតមូលដ្ឋាននៃការប្រើប្រាស់កុំព្យូទ័រ។
-  dashboard_landing_loading: "កំពុង​ដំណើរការ..."
-  dashboard_action_cancel: "បោះបង់"
-  dashboard_action_delete: "លុប"
-  dashboard_action_delete_yes: "យល់ព្រម"
-  dashboard_action_delete_no: "ទេ"
-  dashboard_action_confirm: "ប្រាកដថាលុប?"
-  dashboard_action_done: "រួចរាល់"
-  dashboard_action_print_certificates: "បោះពុម្ពវិញ្ញាបនប័ត្រ"
-  dashboard_assessments_view: "មើលការវាយតម្លៃនៅក្នុង៖"
+  dashboard_landing_loading: កំពុង​ដំណើរការ...
+  dashboard_action_cancel: បោះបង់
+  dashboard_action_delete: លុប
+  dashboard_action_delete_yes: យល់ព្រម
+  dashboard_action_delete_no: ទេ
+  dashboard_action_confirm: ប្រាកដថាលុប?
+  dashboard_action_done: រួចរាល់
+  dashboard_action_print_certificates: បោះពុម្ពវិញ្ញាបនប័ត្រ
+  dashboard_assessments_view: មើលការវាយតម្លៃនៅក្នុង៖
   dashboard_assessments_none: គ្រូភាគច្រើនវាស់វឌ្ឍនភាពរបស់សិស្សរបស់ពួកគេដោយប្រើផ្ទាំង
     "មើលដំណើរការ" ។ ប្រសិនបើអ្នកចាប់អារម្មណ៍ក្នុងការផ្តល់ការវាយតម្លៃបន្ថែមដល់សិស្សរបស់អ្នក
     អ្នកអាចរកឃើញសំណួរនិងផ្នែកនៅក្នុងគំរោងមេរៀនដែលត្រូវបានណែនាំ។ វាទាំងនេះត្រូវបានធ្វើនៅក្រៅ
     Code.org ។
-  dashboard_assessments_none_part2: "ប្រសិនបើអ្នកកំពុងបង្រៀនអនុវិទ្យាល័យឬវិទ្យាល័យយើងមានសំណួរសំរាប់ធ្វើការវាស់ស្ទង់ដែលអាចរកបានក្នុងផ្នែកមួយនៃ
+  dashboard_assessments_none_part2: ប្រសិនបើអ្នកកំពុងបង្រៀនអនុវិទ្យាល័យឬវិទ្យាល័យយើងមានសំណួរសំរាប់ធ្វើការវាស់ស្ទង់ដែលអាចរកបានក្នុងផ្នែកមួយនៃ
     Code.org ដើម្បីជួយសិស្សរបស់អ្នកត្រៀមលក្ខណៈសម្រាប់ការធ្វើតេស្តចូលរៀន ។ ដើម្បីប្រើប្រាស់ការវាស់ស្ទង់ទាំងនេះ
-    ដំបូងជ្រើសមេរៀនសំរាប់ថ្នាក់របស់អ្នក រួចជ្រើសរើសមេរៀនចេញពីតារាងជម្រើសខាងលើហើយអ្នកនឹងឃើញចំលើយនៅទីនោះ។"
+    ដំបូងជ្រើសមេរៀនសំរាប់ថ្នាក់របស់អ្នក រួចជ្រើសរើសមេរៀនចេញពីតារាងជម្រើសខាងលើហើយអ្នកនឹងឃើញចំលើយនៅទីនោះ។
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
@@ -817,7 +817,7 @@
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: "ការ​គាំទ្រ"
+  dashboard_navigation_section_community: ការ​គាំទ្រ
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
@@ -909,10 +909,10 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "ឈ្មោះ"
+  dashboard_students_name: ឈ្មោះ
   dashboard_students_progress: Progress
-  dashboard_students_male: "ប្រុស"
-  dashboard_students_female: "ស្រី"
+  dashboard_students_male: ប្រុស
+  dashboard_students_female: ស្រី
   dashboard_students_completed_levels: Completed Levels
   dashboard_students_total_lines: Lines of Code
   dashboard_students_share_section: 'Share this section''s sign in page with your
@@ -980,18 +980,18 @@
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "ផ្សេងៗ"
+  dashboard_grade_other: ផ្សេងៗ
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: "អ៊ីមែល"
-  dashboard_stage: "ដំណាក់​កាល"
-  dashboard_puzzle: "ល្បែង​ប្រាជ្ញា"
+  dashboard_login_none: អ៊ីមែល
+  dashboard_stage: ដំណាក់​កាល
+  dashboard_puzzle: ល្បែង​ប្រាជ្ញា
   dashboard_question: Question
   dashboard_response: Response
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: "ត្រឹម​ត្រូវ"
+  dashboard_correctness_correct: ត្រឹម​ត្រូវ
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
@@ -1004,7 +1004,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "សិស្ស"
+  dashboard_student: សិស្ស
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1028,10 +1028,10 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "រៀនបន្ថែមទៀត"
+  learn_more: រៀនបន្ថែមទៀត
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: "ចុះឈ្មោះ"
+  learn_sign_up_button: ចុះឈ្មោះ
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1215,8 +1215,8 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "គណិតវិទ្យា"
-  hoc_category_name: "ពេលវេលា​នៃ​កូដ"
+  math_category_name: គណិតវិទ្យា
+  hoc_category_name: ពេលវេលា​នៃ​កូដ
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1227,7 +1227,7 @@
   research_studies_category_name: Research Studies
   applab_name: App Lab
   gamelab_name: Game Lab
-  basketball_name: "បង្កើតហ្គេមបោះបាល់"
+  basketball_name: បង្កើតហ្គេមបោះបាល់
   sports_name: Code your own sports game
   applab_gradelevel: Ages 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1244,29 +1244,29 @@
   khanpl_gradelevel: Middle school +
   tynker_gradelevel: Ages 5-13
   scratch_gradelevel: Ages 8+
-  lightbot_gradelevel: "គ្រប់​អាយុ"
-  thinkersmith_gradelevel: "គ្រប់​អាយុ"
+  lightbot_gradelevel: គ្រប់​អាយុ
+  thinkersmith_gradelevel: គ្រប់​អាយុ
   condcards_gradelevel: Ages 8-12
-  lightbotintl_gradelevel: "គ្រប់​អាយុ"
-  codehs_gradelevel: "វិទ្យាល័យ"
-  codecademy_gradelevel: "វិទ្យាល័យ"
+  lightbotintl_gradelevel: គ្រប់​អាយុ
+  codehs_gradelevel: វិទ្យាល័យ
+  codecademy_gradelevel: វិទ្យាល័យ
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: "វិទ្យាល័យ"
+  processing_gradelevel: វិទ្យាល័យ
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: "មឋមសិក្សា"
-  kodable_gradelevel: "មឋមសិក្សា"
+  codespark_gradelevel: មឋមសិក្សា
+  kodable_gradelevel: មឋមសិក្សា
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: "មឋមសិក្សា"
-  makeschool_gradelevel: "វិទ្យាល័យ"
-  touchdevelop_gradelevel: "វិទ្យាល័យ"
+  bitsbox_gradelevel: មឋមសិក្សា
+  makeschool_gradelevel: វិទ្យាល័យ
+  touchdevelop_gradelevel: វិទ្យាល័យ
   appinventor_gradelevel: Middle school +
-  blockly_gradelevel: "គ្រប់​អាយុ"
+  blockly_gradelevel: គ្រប់​អាយុ
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
@@ -1279,7 +1279,7 @@
   monstercoding_gradelevel: Ages 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: "មឋមសិក្សា"
+  boxisland_gradelevel: មឋមសិក្សា
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
@@ -1290,7 +1290,7 @@
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
-  coursed_gradelevel: "ថ្នាក់ទី៨ ឡើងទៅ"
+  coursed_gradelevel: ថ្នាក់ទី៨ ឡើងទៅ
   coursee_gradelevel: Grade 9+
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ages 10-18
@@ -1638,19 +1638,19 @@
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: "គ្រប់​អាយុ"
-  codecademy_beyond_gradelevel: "វិទ្យាល័យ"
-  kodable_beyond_gradelevel: "មឋមសិក្សា"
-  scratchjr_beyond_gradelevel: "មឋមសិក្សា"
+  lightbot_beyond_gradelevel: គ្រប់​អាយុ
+  codecademy_beyond_gradelevel: វិទ្យាល័យ
+  kodable_beyond_gradelevel: មឋមសិក្សា
+  scratchjr_beyond_gradelevel: មឋមសិក្សា
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: "វិទ្យាល័យ"
+  hacketyhack_beyond_gradelevel: វិទ្យាល័យ
   robomind_beyond_gradelevel: Ages 8-13
-  makeschool_beyond_gradelevel: "វិទ្យាល័យ"
+  makeschool_beyond_gradelevel: វិទ្យាល័យ
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: "វិទ្យាល័យ"
-  codehs_beyond_gradelevel: "វិទ្យាល័យ"
+  touchdevelop_beyond_gradelevel: វិទ្យាល័យ
+  codehs_beyond_gradelevel: វិទ្យាល័យ
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -1668,7 +1668,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: "វិទ្យាល័យ"
+  processing_beyond_gradelevel: វិទ្យាល័យ
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets
@@ -1920,54 +1920,54 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "ទទះ"
+  flappy_shortcode: ទទះ
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  header_home: "ទំព័រដើម"
-  header_my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-  header_courses: "វគ្គ​សិក្សា"
-  header_course_catalog: "មុខវិទ្យាដោយផ្នែក"
+  header_home: ទំព័រដើម
+  header_my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
+  header_courses: វគ្គ​សិក្សា
+  header_course_catalog: មុខវិទ្យាដោយផ្នែក
   header_project_gallery: Project Gallery
-  header_sections: "វគ្គ"
-  header_professional_learning: "ការរៀនដោយមានវិជ្ជាជីវ"
+  header_sections: វគ្គ
+  header_professional_learning: ការរៀនដោយមានវិជ្ជាជីវ
   header_educate_overview: Educator Overview
-  header_educate_elementary: "សាលាបឋម"
-  header_educate_middle: "អនុវិទ្យាល័យ"
-  header_educate_high: "វិទ្យាល័យ"
-  header_educate_hoc: "ពេលវេលា​នៃ​កូដ"
-  header_educate_partner: "ដៃគូររបស់យើង"
+  header_educate_elementary: សាលាបឋម
+  header_educate_middle: អនុវិទ្យាល័យ
+  header_educate_high: វិទ្យាល័យ
+  header_educate_hoc: ពេលវេលា​នៃ​កូដ
+  header_educate_partner: ដៃគូររបស់យើង
   header_educate_beyond: Beyond Code.org
-  header_educate_inspire: "ជំរុញទឹកចិត្តសិស្ស"
+  header_educate_inspire: ជំរុញទឹកចិត្តសិស្ស
   header_educate_community: Online Community
   header_educate_tools: Tools and Videos
-  header_about_us: "អំពីយើង"
-  header_about_leadership: "ភាពជាអ្នកដឹកនាំ"
-  header_about_donors: "អ្នកផ្តល់ជំនួយ"
-  header_about_partners: "ដៃគូរ"
-  header_about_team: "ក្រុមទាំងមូល"
-  header_about_news: "វគ្គថ្មី"
-  header_about_evaluation: "ការវាយតម្លៃ"
-  header_about_jobs: "កិច្ចការ"
-  header_about_contact: "ទំនាក់ទំនងមកពួកយើង"
-  header_about_faqs: "សម្រាប់សំនួរបន្ថែមទៀត"
-  header_learn: "ស្វែងយល់បន្ថែំម"
-  header_teach: "បង្រៀន"
+  header_about_us: អំពីយើង
+  header_about_leadership: ភាពជាអ្នកដឹកនាំ
+  header_about_donors: អ្នកផ្តល់ជំនួយ
+  header_about_partners: ដៃគូរ
+  header_about_team: ក្រុមទាំងមូល
+  header_about_news: វគ្គថ្មី
+  header_about_evaluation: ការវាយតម្លៃ
+  header_about_jobs: កិច្ចការ
+  header_about_contact: ទំនាក់ទំនងមកពួកយើង
+  header_about_faqs: សម្រាប់សំនួរបន្ថែមទៀត
+  header_learn: ស្វែងយល់បន្ថែំម
+  header_teach: បង្រៀន
   header_stats: Stats
-  header_help_us: "ជួយពួកយើង"
-  header_about: "អំពី"
-  header_teacher_community: "សមាគមន៏នៃគ្រូបង្រៀន"
+  header_help_us: ជួយពួកយើង
+  header_about: អំពី
+  header_teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
   header_help_support: 'Help and support '
-  header_report_bug: "រាយការណ៌អំពីកំហុសរបស់កម្មវិធី"
+  header_report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
   header_tutorials: Tutorials
   header_documentation: Documentation
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "សួស្តី%{username}"
-  user_header_settings: "គណនី​របស់​ខ្ញុំ"
-  user_header_logout: "ចាកចេញ"
-  user_header_signin: "ចូល​គណនី"
+  user_header_label: សួស្តី%{username}
+  user_header_settings: គណនី​របស់​ខ្ញុំ
+  user_header_logout: ចាកចេញ
+  user_header_signin: ចូល​គណនី
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

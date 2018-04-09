@@ -1131,7 +1131,7 @@
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
   carousel_heading_beyond_beginners: Tutorials for begyndere
-  carousel_heading_javascript: "Øvelser, hvor du lærer Javascript"
+  carousel_heading_javascript: Øvelser, hvor du lærer Javascript
   carousel_heading_beyond_javascript: Tutorials hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
@@ -1156,8 +1156,8 @@
     Klik her.</a>
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
-  beyond_submission: "Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
-    og indsendelseformularen."
+  beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
+    og indsendelseformularen.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: deltagerne

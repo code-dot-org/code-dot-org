@@ -192,5 +192,26 @@ export default {
         e.preventDefault();
       }
     });
+  },
+
+  onPropertyChange: function (element, name, value) {
+    switch (name) {
+      case 'value':
+        element.innerHTML = value;
+        break;
+      default:
+        return false;
+    }
+    return true;
+  },
+
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'value':
+        return element.innerHTML;
+      default:
+        throw `unknown property name ${name}`;
+    }
   }
+
 };
