@@ -462,7 +462,7 @@ describe('animationListModule', function () {
           },
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
@@ -482,7 +482,7 @@ describe('animationListModule', function () {
           }
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
@@ -501,7 +501,7 @@ describe('animationListModule', function () {
           }
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
