@@ -11,7 +11,7 @@ const styles = {
 export default class CohortCalculator extends React.Component {
   static propTypes = {
     role: PropTypes.string.isRequired,
-    regionalPartnerFilter: PropTypes.oneOfType([
+    regionalPartnerValue: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
     ]),
@@ -32,11 +32,11 @@ export default class CohortCalculator extends React.Component {
   }
 
   componentWillMount() {
-    this.load(this.props.regionalPartnerFilter);
+    this.load(this.props.regionalPartnerValue);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.load(nextProps.regionalPartnerFilter);
+    this.load(nextProps.regionalPartnerValue);
   }
 
   componentWillUnmount() {
@@ -49,13 +49,13 @@ export default class CohortCalculator extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter) {
+  load(regionalPartnerValue) {
     this.abortLoad();
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_filter=${regionalPartnerFilter}`,
+      url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_value=${regionalPartnerValue}`,
       dataType: 'json'
     })
       .done(data => {

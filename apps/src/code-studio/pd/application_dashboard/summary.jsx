@@ -17,7 +17,6 @@ import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
     regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
@@ -57,7 +56,7 @@ export class Summary extends React.Component {
 
     let url = '/api/v1/pd/applications';
     if (this.props.isWorkshopAdmin) {
-      url += `?${$.param({regional_partner_filter: regionalPartnerFilter})}`;
+      url += `?${$.param({regional_partner_value: regionalPartnerFilter.value})}`;
     }
 
     this.loadRequest = $.ajax({
@@ -88,7 +87,7 @@ export class Summary extends React.Component {
             additionalOptions={dropdownOptions}
           />
         }
-        <h1>{this.props.regionalPartnerName}</h1>
+        <h1>{this.props.regionalPartnerFilter.label}</h1>
         <div className="row">
           <SummaryTable
             id="summary-csf-facilitators"
@@ -127,7 +126,6 @@ export class Summary extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
   regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(Summary);

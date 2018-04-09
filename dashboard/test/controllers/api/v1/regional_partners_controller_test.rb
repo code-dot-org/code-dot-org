@@ -169,7 +169,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       application.lock!
 
       sign_in @workshop_admin
-      get :capacity, params: {role: 'csp_teachers', regional_partner_filter: 'all'}
+      get :capacity, params: {role: 'csp_teachers', regional_partner_value: 'all'}
       assert_response :success
 
       assert_nil JSON.parse(@response.body)['capacity']
@@ -193,7 +193,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       application.lock!
 
       sign_in @workshop_admin
-      get :capacity, params: {role: 'csp_teachers', regional_partner_filter: 'none'}
+      get :capacity, params: {role: 'csp_teachers', regional_partner_value: 'none'}
       assert_response :success
 
       assert_nil JSON.parse(@response.body)['capacity']
@@ -217,7 +217,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       application.lock!
 
       sign_in @workshop_admin
-      get :capacity, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
+      get :capacity, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
 
       assert_equal(25, JSON.parse(@response.body)['capacity'])

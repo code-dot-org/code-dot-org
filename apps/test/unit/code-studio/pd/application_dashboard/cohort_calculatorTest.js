@@ -7,11 +7,11 @@ import sinon from 'sinon';
 describe("Cohort Calculator", () => {
   describe("Initially", () => {
     let cohortCalculator;
-    const regionalPartnerFilter = "all";
+    const regionalPartnerValue = "all";
     before(() => {
       cohortCalculator = shallow(
         <CohortCalculator
-          regionalPartnerFilter={regionalPartnerFilter}
+          regionalPartnerValue={regionalPartnerValue}
           role="csp_teachers"
           accepted={0}
           registered={0}
@@ -29,13 +29,13 @@ describe("Cohort Calculator", () => {
 
   describe("After receiving null capacity from server", () => {
     const data = {capacity: null};
-    const regionalPartnerFilter = "all";
+    const regionalPartnerValue = "all";
     let server;
     let cohortCalculator;
 
     before(() => {
       server = sinon.fakeServer.create();
-      server.respondWith("GET", `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_filter=${regionalPartnerFilter}`,
+      server.respondWith("GET", `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_value=${regionalPartnerValue}`,
         [
           200,
           {"Content-Type": "json"},
@@ -45,7 +45,7 @@ describe("Cohort Calculator", () => {
 
       cohortCalculator = shallow(
         <CohortCalculator
-          regionalPartnerFilter={regionalPartnerFilter}
+          regionalPartnerValue={regionalPartnerValue}
           role="csp_teachers"
           accepted={0}
           registered={0}
@@ -68,12 +68,12 @@ describe("Cohort Calculator", () => {
 
   describe("After receiving non-null capacity from server", () => {
     const data = {capacity: 25};
-    const regionalPartnerFilter = 1;
+    const regionalPartnerValue = 1;
     let server;
     let cohortCalculator;
     before(() => {
       server = sinon.fakeServer.create();
-      server.respondWith("GET", `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_filter=${regionalPartnerFilter}`,
+      server.respondWith("GET", `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_value=${regionalPartnerValue}`,
         [
           200,
           {"Content-Type": "json"},
@@ -83,7 +83,7 @@ describe("Cohort Calculator", () => {
 
       cohortCalculator = shallow(
         <CohortCalculator
-          regionalPartnerFilter={regionalPartnerFilter}
+          regionalPartnerValue={regionalPartnerValue}
           role="csp_teachers"
           accepted={0}
           registered={0}

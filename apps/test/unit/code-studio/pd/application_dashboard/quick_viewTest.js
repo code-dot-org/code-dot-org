@@ -21,12 +21,14 @@ describe("Quick View", () => {
     role: 'csf_facilitators'
   };
 
+  const regionalPartnerFilter = {value: "1", label: "A Great Organization"};
+
   describe("Initially", () => {
     let quickView;
     before(() => {
       quickView = shallow(
         <QuickView
-          regionalPartnerName="A Great Organization"
+          regionalPartnerFilter={regionalPartnerFilter}
           route={routeProps}
         />,
         { context },
@@ -60,7 +62,7 @@ describe("Quick View", () => {
     let quickView;
     before(() => {
       server = sinon.fakeServer.create();
-      server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators&regional_partner_filter=',
+      server.respondWith("GET", '/api/v1/pd/applications/quick_view?role=csf_facilitators&regional_partner_value=1',
         [
           200,
           {"Content-Type": "application/json"},
@@ -70,7 +72,7 @@ describe("Quick View", () => {
 
       quickView = shallow(
         <QuickView
-          regionalPartnerName="A Great Organization"
+          regionalPartnerFilter={regionalPartnerFilter}
           route={routeProps}
         />,
         { context },

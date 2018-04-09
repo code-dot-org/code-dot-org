@@ -8,10 +8,7 @@ import { connect } from 'react-redux';
 import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
-import {
-  setRegionalPartnerFilter,
-  setRegionalPartnerName
-} from './reducers';
+import { setRegionalPartnerFilter } from './reducers';
 import { RegionalPartnerFilterPropType } from './constants';
 
 const styles = {
@@ -22,7 +19,10 @@ const styles = {
 
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
+    // Parents can pass in an onChange function; otherwise the dropdown will
+    // update the application dashboard's regional partner filter on change
+    onChange: PropTypes.func,
+    updateRegionalPartnerFilter: PropTypes.func.isRequired,
     regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
@@ -39,9 +39,11 @@ export class RegionalPartnerDropdown extends React.Component {
   }
 
   onChange = (selected) => {
-    this.props.onChange(selected);
-    sessionStorage.setItem("regionalPartnerFilter", selected.value);
-    sessionStorage.setItem("regionalPartnerName", selected.label);
+    if (this.props.onChange) {
+      this.props.onChange(selected);
+    } else {
+      this.props.updateRegionalPartnerFilter(selected);
+    }
   };
 
   render() {
@@ -50,7 +52,7 @@ export class RegionalPartnerDropdown extends React.Component {
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
           clearable={false}
-          value={this.props.regionalPartnerFilter}
+          value={this.props.regionalPartnerFilter.value}
           onChange={this.onChange}
           placeholder={null}
           options={this.regionalPartners}
@@ -67,9 +69,8 @@ export default connect(
     regionalPartners: state.regionalPartners,
   }),
   dispatch => ({
-    onChange(selectedOption) {
-      dispatch(setRegionalPartnerFilter(selectedOption.value));
-      dispatch(setRegionalPartnerName(selectedOption.label));
+    updateRegionalPartnerFilter(selected) {
+      dispatch(setRegionalPartnerFilter(selected));
     }
   })
 )(RegionalPartnerDropdown);
