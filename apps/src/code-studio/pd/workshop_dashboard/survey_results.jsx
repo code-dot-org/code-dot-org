@@ -20,7 +20,7 @@ export class SurveyResults extends React.Component {
     let queryUrl = '/api/v1/pd/workshops/?state=Ended&facilitator_view=1';
 
     if (this.props.permission.has(WorkshopAdmin) && this.props.params.workshopId) {
-      queryUrl += `&workshop_id=${this.props.params.workshopId}`;
+      queryUrl += `&workshop_id=${this.props.params.workshopId}&exclude_summer=1`;
     }
 
     return (
