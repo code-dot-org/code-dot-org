@@ -17,8 +17,8 @@ export default class StudentProgressSummaryCell extends Component {
     studentLevelProgress: studentLevelProgressPropType.isRequired,
   };
 
-  studentLevelProgressInStage(studentId, stageId) {
-    const { scriptData, studentLevelProgress } = this.props;
+  studentLevelProgressInStage() {
+    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
 
     // TODO(caleybrock): It's likely more efficient to combine getting
     // a level by lesson and calculating the level statuses at the same time.
@@ -65,10 +65,8 @@ export default class StudentProgressSummaryCell extends Component {
   }
 
   render() {
-    const { studentId, stageId } = this.props;
-
     const totalPixels = 20;
-    const statusCounts = this.studentLevelProgressInStage(studentId, stageId);
+    const statusCounts = this.studentLevelProgressInStage();
     const perfectPixels = Math.floor((statusCounts.completed / statusCounts.total) * totalPixels);
     const imperfectPixels = Math.floor((statusCounts.imperfect / statusCounts.total) * totalPixels);
     const incompletePixels = 20 - perfectPixels - imperfectPixels;
