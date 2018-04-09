@@ -10,7 +10,7 @@ import { showShareDialog } from './components/shareDialogRedux';
 import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 import experiments from '../util/experiments';
 
-export function shareProject(shareUrl = dashboard.project.getShareUrl()) {
+export function shareProject(shareUrl) {
   dashboard.project.save().then(() => {
 
     var i18n = window.dashboard.i18n;

@@ -306,7 +306,7 @@ header.showHeaderForProjectBacked = function (options) {
     $('.project_info')
         .append($('<div class="project_share header_button header_button_light">').text(dashboard.i18n.t('project.share')))
         .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
-    $('.project_share').click(shareProject);
+    $('.project_share').click(() => shareProject(dashboard.project.getShareUrl()));
     $('.project_remix').click(remixProject);
   }
 
@@ -384,7 +384,7 @@ header.showProjectHeader = function () {
     dashboard.project.rename($('.project_name').val().trim().substr(0, 100), projectNameShow);
   });
 
-  $('.project_share').click(shareProject);
+  $('.project_share').click(() => shareProject(dashboard.project.getShareUrl()));
   $('.project_remix').click(remixProject);
   $('.project_import').click(importProject);
 
