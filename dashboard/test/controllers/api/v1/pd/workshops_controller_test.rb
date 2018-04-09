@@ -89,6 +89,30 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test 'exclude_summer excludes local summer workshops if included' do
+    sign_in @organizer
+
+    create :pd_workshop, :local_summer_workshop, organizer: @organizer
+
+    get :index, params: {exclude_summer: 1}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal @workshop.id, response[0]['id']
+  end
+
+  test 'includes local summer workshop if exclude_summer not present' do
+    sign_in @organizer
+
+    summer_workshop = create :pd_workshop, :local_summer_workshop, organizer: @organizer
+
+    get :index, params: {}
+    response = JSON.parse(@response.body)
+    assert_response :success
+    assert_equal 2, response.length
+    assert_equal [@workshop.id, summer_workshop.id], [response[0]['id'], response[1]['id']]
+  end
+
   test_user_gets_response_for :workshops_user_enrolled_in, user: nil, response: :forbidden
 
   test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do

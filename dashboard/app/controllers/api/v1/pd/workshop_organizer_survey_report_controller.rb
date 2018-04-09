@@ -7,7 +7,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshop_organizer_survey_report_for_course/:course
     def index
-      workshops = ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED)
+      workshops = ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED).reject {|w| w.local_summer? || w.teachercon?}
 
       survey_report = generate_summary_report(
         workshop: nil,
