@@ -28,7 +28,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     if params[:exclude_summer]
-      @workshops = @workshops.to_a.reject! {|w| w.local_summer? || w.teachercon?}
+      @workshops = @workshops.exclude_summer
     end
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
