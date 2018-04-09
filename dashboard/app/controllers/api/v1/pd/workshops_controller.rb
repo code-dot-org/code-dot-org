@@ -27,9 +27,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
     end
 
-    if params[:exclude_summer]
-      @workshops = @workshops.exclude_summer
-    end
+    @workshops = @workshops.exclude_summer if params[:exclude_summer]
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
