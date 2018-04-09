@@ -24,7 +24,7 @@ export default class App extends React.Component {
       CustomAsset.fromModule(module, fileName)
     );
     await CustomAsset.loadAsyncAssets(downloadAssets);
-    const indexHtmlIndex = packagedFiles.findIndex(({ fileName }, index) => fileName === 'index.html');
+    const indexHtmlIndex = packagedFiles.findIndex(({ fileName }) => fileName === 'index.html');
     this.setState({
       indexUri: downloadAssets[indexHtmlIndex].localUri,
     });

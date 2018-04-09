@@ -167,11 +167,11 @@ theme: pdf
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by Native American or Alaska Native students
+            exam was taken by American Indian or Alaska Native students
           - else
-            exams were taken by Native American or Alaska Native students
+            exams were taken by American Indian or Alaska Native students
         - else
-          no exams were taken by Native American or Alaska Native students;
+          no exams were taken by American Indian or Alaska Native students;
         - if state_info[:ap_native_american_i] != 0
           = precede "(" do
             = state_info[:ap_csa_native_american_i]

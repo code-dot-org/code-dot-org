@@ -71,7 +71,6 @@ const SILENCED = [
   'levels/widget',
   'maze',
   'netsim',
-  'pd',
   'plc',
   'publicKeyCryptography',
   'raceInterstitial',

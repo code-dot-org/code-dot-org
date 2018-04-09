@@ -1,29 +1,29 @@
 "hy":
   devise:
     confirmations:
-      confirmed: "Ձեր էլ. Փոստի հասցեն հաջողությամբ հաստատվել է:"
-      send_instructions: "Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
-        պետք է հաստատեք ձեր հաշիվը մի քանի րոպե:"
-      send_paranoid_instructions: "Եթե ​​Ձեր էլփոստի հասցեն գոյություն ունի մեր տվյալների
+      confirmed: 'Ձեր էլ. Փոստի հասցեն հաջողությամբ հաստատվել է:'
+      send_instructions: 'Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
+        պետք է հաստատեք ձեր հաշիվը մի քանի րոպե:'
+      send_paranoid_instructions: 'Եթե ​​Ձեր էլփոստի հասցեն գոյություն ունի մեր տվյալների
         բազայում, դուք կստանաք նամակ հրահանգներ, թե ինչպես հաստատեք ձեր հաշիվը մի
-        քանի րոպե:"
+        քանի րոպե:'
     failure:
-      already_authenticated: "Դուք արդեն ստորագրվել է:"
-      inactive: "Ձեր հաշիվը չէր ակտիվացված չէ:"
-      invalid: "Անվավեր էլեկտրոնային փոստով կամ գաղտնաբառ:"
-      invalid_token: "Անվավեր իսկությունը նշան:"
-      locked: "Ձեր հաշիվը արգելափակված:"
-      not_found_in_database: "Անվավեր էլեկտրոնային փոստով կամ գաղտնաբառ:"
-      timeout: "Ձեր նիստը ժամկետանց, խնդրում ենք մուտք գործեք կրկին շարունակվում են:"
-      unauthenticated: "Դուք պետք է մուտք գործեք կամ գրանցվել մինչեւ շարունակելը:"
-      unconfirmed: "Դուք պետք է հաստատեք ձեր հաշիվը, նախքան շարունակելը:"
+      already_authenticated: 'Դուք արդեն ստորագրվել է:'
+      inactive: 'Ձեր հաշիվը չէր ակտիվացված չէ:'
+      invalid: 'Անվավեր էլեկտրոնային փոստով կամ գաղտնաբառ:'
+      invalid_token: 'Անվավեր իսկությունը նշան:'
+      locked: 'Ձեր հաշիվը արգելափակված:'
+      not_found_in_database: 'Անվավեր էլեկտրոնային փոստով կամ գաղտնաբառ:'
+      timeout: 'Ձեր նիստը ժամկետանց, խնդրում ենք մուտք գործեք կրկին շարունակվում են:'
+      unauthenticated: 'Դուք պետք է մուտք գործեք կամ գրանցվել մինչեւ շարունակելը:'
+      unconfirmed: 'Դուք պետք է հաստատեք ձեր հաշիվը, նախքան շարունակելը:'
     mailer:
       confirmation_instructions:
         subject: Code.org հաստատում հրահանգներ
       reset_password_instructions:
         subject: Code.org Վերագործարկեք գաղտնաբառը հրահանգներ
       unlock_instructions:
-        subject: "Բացել Հրահանգներ"
+        subject: Բացել Հրահանգներ
     omniauth_callbacks:
       failure: Could not authenticate you from %{kind} because "%{reason}".
       success: Successfully authenticated from %{kind} account.
@@ -31,67 +31,67 @@
       no_token: You cant access this page without coming from a password reset email.
         If you do come from a password reset email, please make sure you used the
         full URL provided.
-      send_instructions: "Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
-        պետք է վերականգնել Ձեր գաղտնաբառը մի քանի րոպե:"
-      send_paranoid_instructions: "Եթե ​​Ձեր էլփոստի հասցեն գոյություն ունի մեր տվյալների
+      send_instructions: 'Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
+        պետք է վերականգնել Ձեր գաղտնաբառը մի քանի րոպե:'
+      send_paranoid_instructions: 'Եթե ​​Ձեր էլփոստի հասցեն գոյություն ունի մեր տվյալների
         բազայում, դուք կստանաք մի գաղտնաբառի վերականգնումը, հղում ձեր էլեկտրոնային
-        փոստի հասցեն է մի քանի րոպե:"
-      updated: "Ձեր գաղտնաբառը փոխվեց հաջողությամբ: Դուք այժմ մուտք եք գործել:"
-      updated_not_active: "Ձեր գաղտնաբառը փոխվեց հաջողությամբ:"
+        փոստի հասցեն է մի քանի րոպե:'
+      updated: 'Ձեր գաղտնաբառը փոխվեց հաջողությամբ: Դուք այժմ մուտք եք գործել:'
+      updated_not_active: 'Ձեր գաղտնաբառը փոխվեց հաջողությամբ:'
     registrations:
       destroyed: 'Bye! Ձեր հաշիվը հաջողությամբ չեղյալ է հայտարարվել: Մենք հուսով ենք
         տեսնել Ձեզ կրկին շուտով.'
-      signed_up: "Բարի գալուստ! Դուք ստորագրել հաջողությամբ."
-      signed_up_but_inactive: "Դուք ստորագրել հաջողությամբ. Սակայն, մենք չենք կարող
-        մուտք քանի որ ձեր հաշիվը դեռ չի ակտիվացված է:"
-      signed_up_but_locked: "Դուք ստորագրել հաջողությամբ. Սակայն, մենք չենք կարող
-        մուտք քանի որ ձեր հաշիվը արգելափակված:"
+      signed_up: Բարի գալուստ! Դուք ստորագրել հաջողությամբ.
+      signed_up_but_inactive: 'Դուք ստորագրել հաջողությամբ. Սակայն, մենք չենք կարող
+        մուտք քանի որ ձեր հաշիվը դեռ չի ակտիվացված է:'
+      signed_up_but_locked: 'Դուք ստորագրել հաջողությամբ. Սակայն, մենք չենք կարող
+        մուտք քանի որ ձեր հաշիվը արգելափակված:'
       signed_up_but_unconfirmed: A հաղորդագրությունը հաստատման հղումը արդեն ուղարկվել
         է Ձեր էլեկտրոնային փոստի հասցեն. Խնդրում ենք բացել հղումը ակտիվացնել Ձեր հաշիվը.
-      update_needs_confirmation: "Դուք փոխել եք Ձեր հաշիվը հաջողությամբ, բայց մենք
+      update_needs_confirmation: 'Դուք փոխել եք Ձեր հաշիվը հաջողությամբ, բայց մենք
         պետք է ստուգել Ձեր էլփոստի հասցեն: Խնդրում ենք ստուգել Ձեր էլ սեղմեք հաստատել
-        հղումը վերջնականացնելու հաստատող Ձեր նոր էլփոստի հասցեն:"
-      updated: "Դուք հաստատում սէփականատիրոջ կողմից Ձեր հաշիվը հաջողությամբ."
+        հղումը վերջնականացնելու հաստատող Ձեր նոր էլփոստի հասցեն:'
+      updated: Դուք հաստատում սէփականատիրոջ կողմից Ձեր հաշիվը հաջողությամբ.
     sessions:
       signed_in: ''
-      signed_out: "Ստորագրել դուրս հաջողությամբ."
+      signed_out: Ստորագրել դուրս հաջողությամբ.
     unlocks:
-      send_instructions: "Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
-        պետք է բացելու Ձեր հաշիվը մի քանի րոպե:"
-      send_paranoid_instructions: "Եթե ​​Ձեր հաշիվը կա, դուք կստանաք նամակ հրահանգներով,
-        թե ինչպես պետք է այն բացելու մի քանի րոպեների ընթացքում:"
-      unlocked: "Ձեր հաշիվը վերաբացված հաջողությամբ. Խնդրում ենք մուտք գործել, որպեսզի
-        շարունակել."
+      send_instructions: 'Դուք կստանաք էլեկտրոնային նամակ հրահանգներով, թե ինչպես
+        պետք է բացելու Ձեր հաշիվը մի քանի րոպե:'
+      send_paranoid_instructions: 'Եթե ​​Ձեր հաշիվը կա, դուք կստանաք նամակ հրահանգներով,
+        թե ինչպես պետք է այն բացելու մի քանի րոպեների ընթացքում:'
+      unlocked: Ձեր հաշիվը վերաբացված հաջողությամբ. Խնդրում ենք մուտք գործել, որպեսզի
+        շարունակել.
   errors:
     messages:
-      already_confirmed: "արդեն իսկ հաստատել է, խնդրում ենք փորձել ստորագրելով"
+      already_confirmed: արդեն իսկ հաստատել է, խնդրում ենք փորձել ստորագրելով
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
-      expired: "ժամկետը լրացել է, խնդրում ենք դիմել նորը"
-      not_found: "չի գտնվել"
-      not_locked: "չէր կողպված"
+      expired: ժամկետը լրացել է, խնդրում ենք դիմել նորը
+      not_found: չի գտնվել
+      not_locked: չէր կողպված
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
     invitations:
       send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: "Հրավերը նշանն տրամադրել վավերական չէ!"
-      updated: "Ձեր գաղտնաբառը ստեղծվել հաջողությամբ: Դուք այժմ մուտք եք գործել:"
-      no_invitations_remaining: "Ոչ հրավերներ մնացած"
-      invitation_removed: "Ձեր հրավերը հեռացվեց:"
+      invitation_token_invalid: Հրավերը նշանն տրամադրել վավերական չէ!
+      updated: 'Ձեր գաղտնաբառը ստեղծվել հաջողությամբ: Դուք այժմ մուտք եք գործել:'
+      no_invitations_remaining: Ոչ հրավերներ մնացած
+      invitation_removed: 'Ձեր հրավերը հեռացվեց:'
       new:
-        header: "Ուղարկել հրավերը"
-        submit_button: "Ուղարկել հրավերը"
+        header: Ուղարկել հրավերը
+        submit_button: Ուղարկել հրավերը
       edit:
-        header: "Սահմանել ձեր գաղտնաբառը"
-        submit_button: "Սահմանել իմ գաղտնաբառը"
+        header: Սահմանել ձեր գաղտնաբառը
+        submit_button: Սահմանել իմ գաղտնաբառը
     mailer:
       invitation_instructions:
-        subject: "հրավերի հրահանգներ"
+        subject: հրավերի հրահանգներ
         hello: Hello %{email}
         someone_invited_you: Someone has invited you to %{url}, you can accept it
           through the link below.
-        accept: "Ընդունեք հրավերը"
+        accept: Ընդունեք հրավերը
         ignore: If you dont want to accept the invitation, please ignore this email.<br
           />Your account wont be created until you access the link above and set your
           password.

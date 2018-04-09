@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Kegiatan",
   "actions": "Aksi",
   "add": "Tambahkan",
@@ -915,6 +916,7 @@
   "shareSettingEnableDialog": "Dengan mengaktifkan pembagian, siswa anda akan di izinkan untuk berbagi proyek-proyek yang diciptakan oleh mereka melalui alat pemrograman lanjutan Code.org (lab aplikasi, lab permainan, dan lab web) dengan siapapun dengan berbagi link proyek mereka.",
   "shareSettingDisableDialog": "Bagian penting dari pengalaman siswa menggunakan Code.org adalah kemampuan untuk berbagi proyek dan kreasi mereka dengan orang lain. Dengan berbagi kekurangan, siswa tidak akan dapat membagikan kreasi mereka yang dibuat dengan alat pemrograman tingkat lanjut kami (Lab Aplikasi, Lab Permainan, dan Lab Web) dengan orang lain selain guru Code.org mereka. Alat canggih ini dirancang untuk siswa yang berusia di atas 13 tahun atau sedang digunakan di bawah bimbingan guru atau orang tua.",
   "shareSettingDisableDialogNote": "Perhatikan bahwa siswa masih dapat berbagi proyek yang dibuat dengan menggunakan alat pemrograman yang dirancang untuk siswa yang lebih muda seperti Play Lab and Artist. Alat ini membatasi apa yang dapat dibuat siswa dan tidak memungkinkan untuk mengunggah aset mereka sendiri. Untuk melindungi privasi siswa, kreasi bersama di galeri proyek diberi label hanya dengan huruf pertama nama siswa dan rentang usia.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Tolong isikan umur Anda dibawah dan klik OK untuk melanjutkan.",
   "shareWarningsMoreInfo": "Lebih Lanjut",
   "shareWarningsStoreData": "Aplikasi ini dibangun dengan kode Studio dan data yang disimpan dapat dilihat oleh siapa saja dengan mebagikan link ini, jadi hati-hati jika Anda diminta untuk memberikan informasi pribadi.",

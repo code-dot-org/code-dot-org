@@ -479,8 +479,8 @@
           no šiem lietām ir visgrūtāk aprakstīt algoritma?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene is a _____ city.
-        0: "Šeit ir trīs teikumi. Kurš no paraugiem zemāk der tā, lai visi trīs teikumu
-          sakrīt ar rakstu paraugā?"
+        0: Šeit ir trīs teikumi. Kurš no paraugiem zemāk der tā, lai visi trīs teikumu
+          sakrīt ar rakstu paraugā?
         1: ": Doti trīs teikumi. Kurš no paraugiem zemāk atbilst tā, lai visi trīs
           teikumi atbilst rakstam paraugā?"
         Multiple Choice: Atbilžu varianti
@@ -863,8 +863,7 @@
         Driver and Helper: Vadītājs un palīgs
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Viens
           no šiem zēniem ir <b>šoferis</b>.  Un viens <b>palīgs</b>.
-        This time, which boy is the <large>driver</large>?: "Šoreiz, kurš zēns ir
-          <large>šoferis</large>?"
+        This time, which boy is the <large>driver</large>?: Šoreiz, kurš zēns ir <large>šoferis</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100

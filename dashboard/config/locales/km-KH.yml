@@ -1,8 +1,8 @@
 "km":
   errors:
     messages:
-      not_saved: "សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់"
-      too_young: "មានបម្រាមសម្រាប់អាយុរបស់អ្នកប្រើប្រាស់នៅទីនេះ ហើយមិនអនុញ្ញាតិអោយប្រើប្រាស់សម្រាប់សិស្សដែលមានអាយុតិចពេក។"
+      not_saved: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
+      too_young: មានបម្រាមសម្រាប់អាយុរបស់អ្នកប្រើប្រាស់នៅទីនេះ ហើយមិនអនុញ្ញាតិអោយប្រើប្រាស់សម្រាប់សិស្សដែលមានអាយុតិចពេក។
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -14,100 +14,100 @@
   activerecord:
     errors:
       messages:
-        blank: "ត្រូវការ"
-        blank_plural: "តម្រូវអោយមាន"
-        invalid_plural: "មិនត្រឹមត្រូវ"
+        blank: ត្រូវការ
+        blank_plural: តម្រូវអោយមាន
+        invalid_plural: មិនត្រឹមត្រូវ
     attributes:
       user:
-        name: "បង្ហាញ​ឈ្មោះ"
-        name_example: "ឈ្មោះដែលត្រូវបង្ហាយ <br/>(ឧទាហរណ៏៖ Cool Coder រឺក៏​ Jane S.)"
-        email: "អ៊ីមែល"
-        parent_email: "អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ"
+        name: បង្ហាញ​ឈ្មោះ
+        name_example: ឈ្មោះដែលត្រូវបង្ហាយ <br/>(ឧទាហរណ៏៖ Cool Coder រឺក៏​ Jane S.)
+        email: អ៊ីមែល
+        parent_email: អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ
         personal_email: អាស័យដ្ឋានសារអេឡិចត្រូនិចផ្ទាល់ខ្លួនរបស់អ្នក<a href="%{url}">(សូមចុចនៅទីនេះ
           បើសិនជាអត់ទាន់មានអាស័យដ្ឋានសារអេឡិចត្រូនិច)</a>
-        username: "ឈ្មោះ​អ្នកប្រើ"
-        password: "ពាក្យ​សម្ងាត់"
-        password_confirmation: "ការ​បញ្ជាក់​ពាក្យ​សម្ងាត់"
-        current_password: "ពាក្យ​សម្ងាត់​បច្ចុប្បន្ន"
-        locale: "ភាសា"
-        age: "អាយុ"
-        gender: "ភេទ"
-        edit_header: "កែសម្រួល​ព័ត៌មាន​គណនី"
+        username: ឈ្មោះ​អ្នកប្រើ
+        password: ពាក្យ​សម្ងាត់
+        password_confirmation: ការ​បញ្ជាក់​ពាក្យ​សម្ងាត់
+        current_password: ពាក្យ​សម្ងាត់​បច្ចុប្បន្ន
+        locale: ភាសា
+        age: អាយុ
+        gender: ភេទ
+        edit_header: កែសម្រួល​ព័ត៌មាន​គណនី
         error:
-          future: "មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ"
-  hello: "សួស្ដី​ពិភពលោក"
-  welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
-  your_professional_learning_plan: "គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក"
-  see_your_learning_plan: "ចូលមើលគំរោងនៃការសិក្សារបស់អ្នក"
-  submit: "ដាក់ស្នើរ"
-  unsubmit: "មិនបានដាក់ចូល"
-  previous_page: "ទំព័រមុន"
-  next_page: "ទំព័របន្ទាប់"
-  next_resource: "ឯកសារបន្ទាប់"
+          future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
+  hello: សួស្ដី​ពិភពលោក
+  welcome_back: ស្វាគមន៍​ការ​មក​វិញ, %{name}
+  your_professional_learning_plan: គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក
+  see_your_learning_plan: ចូលមើលគំរោងនៃការសិក្សារបស់អ្នក
+  submit: ដាក់ស្នើរ
+  unsubmit: មិនបានដាក់ចូល
+  previous_page: ទំព័រមុន
+  next_page: ទំព័របន្ទាប់
+  next_resource: ឯកសារបន្ទាប់
   done_with_module: Done with this Learning Module
-  cancel: "បោះបង់"
-  okay: "អូខេ"
+  cancel: បោះបង់
+  okay: អូខេ
   heading_x_of_y: "%{heading}​ (ទំព័រទី %{x} នៃ %{y})"
   add_teacher_form:
     code:
-      label: "បន្ថែម​គ្រូ​ម្នាក់៖"
-      placeholder: "ផ្នែកនៃការសរសេរកូដ (ABCDEF)"
+      label: បន្ថែម​គ្រូ​ម្នាក់៖
+      placeholder: ផ្នែកនៃការសរសេរកូដ (ABCDEF)
       instructions: សូមវាយបញ្ចូលនូវកូដដែលគ្រូរបស់អ្នកបានចែកអោយ។ ហើយវាគឺជាកូដដែលមាន៦តួរអក្សរ
         ដូចជា "ABCDEF" ។
-      instructions_short: "សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។"
-    submit: "បន្ថែម​គ្រូ"
+      instructions_short: សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។
+    submit: បន្ថែម​គ្រូ
   add_hint_form:
-    placeholder: "សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។"
-    submit: "ដាក់តម្រុយសម្រាបសម្កាល់"
+    placeholder: សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។
+    submit: ដាក់តម្រុយសម្រាបសម្កាល់
   appname: Code.org
-  stage: "ដំណាក់​កាល"
-  stage_number: "ដំណាក់កាល %{number}"
-  puzzle: "ល្បែង​ប្រាជ្ញា"
-  trophies: "ពាន​រង្វាន់"
-  courses: "វគ្គ​សិក្សា"
+  stage: ដំណាក់​កាល
+  stage_number: ដំណាក់កាល %{number}
+  puzzle: ល្បែង​ប្រាជ្ញា
+  trophies: ពាន​រង្វាន់
+  courses: វគ្គ​សិក្សា
   courses_page:
-    title_student: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
-    title_teacher: "បង្រៀនជាមួយកម្មវិធីសរសេរកូដ"
+    title_student: រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម
+    title_teacher: បង្រៀនជាមួយកម្មវិធីសរសេរកូដ
   unplugged_activity: Unplugged Activity
-  of: "នៃ"
-  more: "បង្ហាញ​ច្រើន"
-  less: "បង្ហាញ​តិច"
+  of: នៃ
+  more: បង្ហាញ​ច្រើន
+  less: បង្ហាញ​តិច
   beta: beta
   try_hoc: 'សាក​ល្បង "ពេល​វេលា​នៃ​កូដ" ដោយ​ចុច​ទីនេះ >> '
-  try_k8intro: "សាកល្បងជាមួយការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
-  k8intro: "ការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
-  already_started: "បាន​ចាប់​ផ្ដើម​ហើយ? បន្ត​នៅ​ទីនេះ >> "
-  demos: "រដ្ឋបា​លៈ ការធ្វេើបទបង្ហាយទាំងអស់"
-  continue: "បន្ត"
-  prize: "រង្វាន់"
-  more_info: "ព័ត៌មាន​បន្ថែម"
+  try_k8intro: សាកល្បងជាមួយការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)
+  k8intro: ការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)
+  already_started: 'បាន​ចាប់​ផ្ដើម​ហើយ? បន្ត​នៅ​ទីនេះ >> '
+  demos: រដ្ឋបា​លៈ ការធ្វេើបទបង្ហាយទាំងអស់
+  continue: បន្ត
+  prize: រង្វាន់
+  more_info: ព័ត៌មាន​បន្ថែម
   auth:
-    sign_in_with: "ចូល​គណនី​ជាមួយ %{provider}"
-    signed_in: "បាន​ចូល​គណនី!"
+    sign_in_with: ចូល​គណនី​ជាមួយ %{provider}
+    signed_in: បាន​ចូល​គណនី!
     signed_out: អ្នក​បាន​ចាកចេញ​ពី  <a href="%{url}">Code.org</a>។
     sign_out_of: អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ <a href="%{url}">ចុច​ទីនេះ</a>
       ដើម្បី​ចេញ​ពី %{provider}។
-    already_signedup: "បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?"
-    notyet_signedup: "មិន​បាន​ចូលរួម​ទេ?"
-    google_oauth2: "គណនី Google"
+    already_signedup: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
+    notyet_signedup: មិន​បាន​ចូលរួម​ទេ?
+    google_oauth2: គណនី Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: "គណនី Microsoft"
-    clever: "គណនេយ្យមានលក្ខណៈពេញលេញ"
-    forgot_password: "បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?"
-    need_confirmation: "មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?"
-    need_unlock: "មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?"
-    not_linked: "សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
-      សូមធ្វើការដំណើរការគណនេយ្យរបស់អ្នកដោយវាយបញ្ចូលលេខសំងាត់នៅខាងក្រោម។"
-    use_clever: "សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
-      សូមចូលទៅដំណើរការគណនេយ្យ Clever Portal របស់អ្នកជំនួសវិញ។"
+    windowslive: គណនី Microsoft
+    clever: គណនេយ្យមានលក្ខណៈពេញលេញ
+    forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
+    need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
+    need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
+    not_linked: សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
+      សូមធ្វើការដំណើរការគណនេយ្យរបស់អ្នកដោយវាយបញ្ចូលលេខសំងាត់នៅខាងក្រោម។
+    use_clever: សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
+      សូមចូលទៅដំណើរការគណនេយ្យ Clever Portal របស់អ្នកជំនួសវិញ។
   signup_form:
     student_count: "%{count} កូនសិស្សបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។"
     teacher_count: "%{count}​ លោកគ្រូអ្នកគ្រូបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។"
     overview: បង្កើតគណនីមួយសម្រាប់ធ្វើការតាមដាននូវដំណើរការបង្រៀននិងគ្រប់គ្រងថ្នាក់រៀនរបស់អ្នក។
       <a href="/"> អ្នកអាចធ្វើការស្វែងរកដំណាក់កាលនិងភាពស្មុគស្មាញជាច្រើនទៀត</a>ដោយមិនចាំបាច់គណនី
       ប៉ុន្តែអ្នកត្រូវតែចាំបាច់បង្កើតគណនីមួយដើម្បីរក្សាទុកនូវដំណើរការ និងគំរោងរបស់អ្នក។
-    hoc_already_signed_up_heading: "ចាប់ផ្តើមដោយមិនចាំបាច់មានគណនេយ្យ។"
+    hoc_already_signed_up_heading: ចាប់ផ្តើមដោយមិនចាំបាច់មានគណនេយ្យ។
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
       event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
@@ -121,23 +121,23 @@
       to assign courses to students and track their progress. <a href="%{studio_url}">You
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
-    teacher_educator_guide: "មើល​ការណែនាំ​សម្រាប់​អ្នក​បង្រៀន"
-    title: "បង្កើតគណនេយ្យសម្រាប់ Code.org ។"
-    school_name: "ឈ្មោះ​សាលា (ស្រេច​ចិត្ត)"
-    school_address: "អាសយដ្ឋាន​សាលា (ស្រេច​ចិត្ត)"
-    address_placeholder: "អាសយដ្ឋាន, ក្រុង, រដ្ឋ, លេខ​ប្រៃសណីយ៍"
-    gender: "ភេទ (ស្រេច​ចិត្ត)"
-    birthday: "ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត (ស្រេច​ចិត្ត)"
-    age: "អាយុ"
-    user_type: "តើ​អ្នក​គឺ​ជា​សិស្ស ឬ​ក៏​គ្រូ​បង្រៀន?"
-    submit: "ចុះឈ្មោះ"
-    teacher: "តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?"
-    valid_username: "អាច​ប្រើ​បាន!"
-    invalid_username: "ឈ្មោះ​អ្នក​ប្រើ​ត្រូវ​តែ​មាន​យ៉ាង​តិច 5 តួ​អក្សរ"
-    taken_username: "មាន​អ្នក​យក​ឈ្មោះ​នេះ​ហើយ"
-    valid_password: "ពាក្យ​សម្ងាត់​ត្រឹម​ត្រូវ!"
-    invalid_password: "ពាក្យ​សម្ងាត់​ត្រូវមាន​យ៉ាង​តិច 6 តួ​អក្សរ"
-    mismatch_password: "ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ"
+    teacher_educator_guide: មើល​ការណែនាំ​សម្រាប់​អ្នក​បង្រៀន
+    title: បង្កើតគណនេយ្យសម្រាប់ Code.org ។
+    school_name: ឈ្មោះ​សាលា (ស្រេច​ចិត្ត)
+    school_address: អាសយដ្ឋាន​សាលា (ស្រេច​ចិត្ត)
+    address_placeholder: អាសយដ្ឋាន, ក្រុង, រដ្ឋ, លេខ​ប្រៃសណីយ៍
+    gender: ភេទ (ស្រេច​ចិត្ត)
+    birthday: ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត (ស្រេច​ចិត្ត)
+    age: អាយុ
+    user_type: តើ​អ្នក​គឺ​ជា​សិស្ស ឬ​ក៏​គ្រូ​បង្រៀន?
+    submit: ចុះឈ្មោះ
+    teacher: តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?
+    valid_username: អាច​ប្រើ​បាន!
+    invalid_username: ឈ្មោះ​អ្នក​ប្រើ​ត្រូវ​តែ​មាន​យ៉ាង​តិច 5 តួ​អក្សរ
+    taken_username: មាន​អ្នក​យក​ឈ្មោះ​នេះ​ហើយ
+    valid_password: ពាក្យ​សម្ងាត់​ត្រឹម​ត្រូវ!
+    invalid_password: ពាក្យ​សម្ងាត់​ត្រូវមាន​យ៉ាង​តិច 6 តួ​អក្សរ
+    mismatch_password: ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
@@ -145,73 +145,73 @@
       allows us to contact them.
     teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>.
-    additional_information: "ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។"
-    user_type_label: "ប្រភេទនៃគណនេយ្យ"
+    additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
+    user_type_label: ប្រភេទនៃគណនេយ្យ
     user_type_teacher: Teacher
-    user_type_student: "សិស្ស"
-    field_is_required: "ត្រូវការ"
-    accept_terms: "អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ"
-    error: "មានកំហុសមួយ"
+    user_type_student: សិស្ស
+    field_is_required: ត្រូវការ
+    accept_terms: អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ
+    error: មានកំហុសមួយ
   school_info:
-    title: "ព័ត៌មានអំពីសាលា"
-    school_country: "សាលាក្នុងប្រទេស"
-    select_school_type: "ប្រភេទសាលា"
-    charter: "សេចក្តីនែនាំ"
-    private: "ឯកជន"
-    public: "រដ្ឋ​(សាលា)"
-    homeschool: "សាលាតាមផ្ទះ"
-    after_school: "បន្ទាប់ពីការសិក្សា"
-    other: "ផ្សេងៗ"
-    state: "រដ្ឋ​(សាលា)"
-    district: "ខណ្ឌ"
-    other_district_not_listed: "ខ័ណ្ឌដ៏ទៃទៀតមិនត្រូវបានដាក់បញ្ចូលក្នុងបញ្ជីខាងក្រោមនេះទេ។"
-    district_name: "ឈ្មោះខ័ណ្ឌ"
-    school: "សាលា"
-    other_school_not_listed: "សាលាដ៏ទៃដែលមិនបានចុះបញ្ជីខាងក្រោម"
-    school_name: "ឈ្មោះរបស់សាលា"
-    school_zip: "កូដតំបន់របស់សាលា"
-    school_address: "អាស័យដ្ខានរបស់សាលា"
-    school_organization_name: "ឈ្មោះរបស់សាលា​រឺអង្គការ"
-    school_organization_zip: "កូដតំបន់របស់សាលា​រឺអង្គការ"
+    title: ព័ត៌មានអំពីសាលា
+    school_country: សាលាក្នុងប្រទេស
+    select_school_type: ប្រភេទសាលា
+    charter: សេចក្តីនែនាំ
+    private: ឯកជន
+    public: រដ្ឋ​(សាលា)
+    homeschool: សាលាតាមផ្ទះ
+    after_school: បន្ទាប់ពីការសិក្សា
+    other: ផ្សេងៗ
+    state: រដ្ឋ​(សាលា)
+    district: ខណ្ឌ
+    other_district_not_listed: ខ័ណ្ឌដ៏ទៃទៀតមិនត្រូវបានដាក់បញ្ចូលក្នុងបញ្ជីខាងក្រោមនេះទេ។
+    district_name: ឈ្មោះខ័ណ្ឌ
+    school: សាលា
+    other_school_not_listed: សាលាដ៏ទៃដែលមិនបានចុះបញ្ជីខាងក្រោម
+    school_name: ឈ្មោះរបស់សាលា
+    school_zip: កូដតំបន់របស់សាលា
+    school_address: អាស័យដ្ខានរបស់សាលា
+    school_organization_name: ឈ្មោះរបស់សាលា​រឺអង្គការ
+    school_organization_zip: កូដតំបន់របស់សាលា​រឺអង្គការ
   signin_form:
-    title: "មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី"
-    login: "អ៊ីមែល"
+    title: មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី
+    login: អ៊ីមែល
     login_username: Email or Username
-    password: "ពាក្យ​សម្ងាត់"
-    remember: "ចងចាំ​ខ្ញុំ"
-    submit: "ចូល​គណនី"
+    password: ពាក្យ​សម្ងាត់
+    remember: ចងចាំ​ខ្ញុំ
+    submit: ចូល​គណនី
   signin:
-    try_heading: "តើ​អ្នក​ចង់​សាក​ល្បង​ដោយ​មិន​បាច់​ចុះឈ្មោះ​ដែរ​ឬ​ទេ?"
-    try_hoc: "សាក​ល្បង Hour of Code សិន"
-    try_20hours: "ព្យាយាមធ្វើតាមការណែនាំអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រដែលមានរយៈពេល២០ម៉ោង"
+    try_heading: តើ​អ្នក​ចង់​សាក​ល្បង​ដោយ​មិន​បាច់​ចុះឈ្មោះ​ដែរ​ឬ​ទេ?
+    try_hoc: សាក​ល្បង Hour of Code សិន
+    try_20hours: ព្យាយាមធ្វើតាមការណែនាំអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រដែលមានរយៈពេល២០ម៉ោង
   signinsection:
-    welcome: "សូមស្វាគមន៍​មក​កាន់ %{section_name}"
-    name: "ជ្រើស​ឈ្មោះ​របស់​អ្នក"
-    picture: "ឥឡូវ ស្វែងរក​រូបភាព​អាថ៌កំបាំង​របស់​អ្នក"
-    words: "ឥឡូវ បញ្ចូល​ពាក្យ​អាថ៌កំបាំង​របស់​អ្នក"
-    login: "ចូល​គណនី"
-    invalid_login: "ការចូលទៅកាន់គណនីយរបស់អ្នកមិនត្រឹមត្រូវ សូមព្យាយាមម្តងទៀត"
-    pair_programming: "នៅក្នុងកុំព្យូទ័ររបស់ខ្ញុំមានដៃគូរប្រកួតប្រជែង"
-    student_privacy: "ស្វែងយល់បន្ថែមហេតុអ្វីបានជាពុំមានឈ្មោះពេញរបស់អ្នកតាមការណែនាំ<a
-      href='%{student_privacy_blog}' target='_blank'>ត្រង់នេះ</a>។"
+    welcome: សូមស្វាគមន៍​មក​កាន់ %{section_name}
+    name: ជ្រើស​ឈ្មោះ​របស់​អ្នក
+    picture: ឥឡូវ ស្វែងរក​រូបភាព​អាថ៌កំបាំង​របស់​អ្នក
+    words: ឥឡូវ បញ្ចូល​ពាក្យ​អាថ៌កំបាំង​របស់​អ្នក
+    login: ចូល​គណនី
+    invalid_login: ការចូលទៅកាន់គណនីយរបស់អ្នកមិនត្រឹមត្រូវ សូមព្យាយាមម្តងទៀត
+    pair_programming: នៅក្នុងកុំព្យូទ័ររបស់ខ្ញុំមានដៃគូរប្រកួតប្រជែង
+    student_privacy: ស្វែងយល់បន្ថែមហេតុអ្វីបានជាពុំមានឈ្មោះពេញរបស់អ្នកតាមការណែនាំ<a
+      href='%{student_privacy_blog}' target='_blank'>ត្រង់នេះ</a>។
   password:
     reset_form:
-      title: "បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?"
-      instructions: "សូមវាយបញ្ចូល​ email address ដែលបានបង្កើតជាមួយគណនីយរបស់អ្នកខាងក្រោម
-        ហើយពួកយើងនឹងផ្ញើរការណែនាំនៃការ​បង្កើតpasswordសាជាថ្មី។"
-      email: "អាសយដ្ឋាន​អ៊ីមែល"
-      submit: "ដាក់ស្នើរ"
+      title: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
+      instructions: សូមវាយបញ្ចូល​ email address ដែលបានបង្កើតជាមួយគណនីយរបស់អ្នកខាងក្រោម
+        ហើយពួកយើងនឹងផ្ញើរការណែនាំនៃការ​បង្កើតpasswordសាជាថ្មី។
+      email: អាសយដ្ឋាន​អ៊ីមែល
+      submit: ដាក់ស្នើរ
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
-      invalid_email: "មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​
-        សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។"
+      invalid_email: មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​
+        សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។
     change_form:
-      title: "ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក"
-      new_password: "ពាក្យ​សម្ងាត់​ថ្មី"
-      confirm_password: "បញ្ជាក់​ពាក្យ​សម្ងាត់​ថ្មី"
-      submit: "ប្ដូរ​ពាក្យ​សម្ងាត់​របស់ខ្ញុំ"
+      title: ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក
+      new_password: ពាក្យ​សម្ងាត់​ថ្មី
+      confirm_password: បញ្ជាក់​ពាក្យ​សម្ងាត់​ថ្មី
+      submit: ប្ដូរ​ពាក្យ​សម្ងាត់​របស់ខ្ញុំ
   welcome_email:
-    subject: "ចូលរួម​ក្នុង​ថ្នាក់​របស់​ខ្ញុំ (នៅ Code.org)"
+    subject: ចូលរួម​ក្នុង​ថ្នាក់​របស់​ខ្ញុំ (នៅ Code.org)
     body: |
       ចុច​តំណ​ខាង​ក្រោម​ដើម្បី​ចុះ​ឈ្មោះ​រៀន​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ​នៅ​លើ Code.org (ដោយ​មាន​ខ្ញុំ​ជា​គ្រូ​បង្រៀន​អ្នក)៖
 
@@ -221,188 +221,187 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: "ព័ត៌មាននៃការចូលទៅកាន់គណនីសម្រាប់ Code.org"
+    student_associated_subject: ព័ត៌មាននៃការចូលទៅកាន់គណនីសម្រាប់ Code.org
   teacher_mailer:
-    new_teacher_subject: "សូមស្វាគមន៏មកកាន់Code.org!"
+    new_teacher_subject: សូមស្វាគមន៏មកកាន់Code.org!
   section:
     your_section:
-      one: "ផ្នែករបស់អ្នកគឺ៖"
-      other: "ផ្នែករបស់អ្នក៖"
+      one: ផ្នែករបស់អ្នកគឺ៖
+      other: ផ្នែករបស់អ្នក៖
     code_with_teacher: "%{section_code} ជាមួយ​ %{teacher_name}"
     confirm:
-      remove: "តើអ្នកប្រាកដឬអត់ថានឹងធ្វើការចាកចេញពីផ្នែកមួយនេះ?"
+      remove: តើអ្នកប្រាកដឬអត់ថានឹងធ្វើការចាកចេញពីផ្នែកមួយនេះ?
     remove: "(លុបផ្នែកចេញ)"
     type:
-      picture: "លេខកូដដែលមានទម្រង់ជារូបភាព"
-      word: "ពាក្យដែលរក្សារជាការសម្ងាត់"
-      email: "អ៊ីមែល"
-      google_classroom: "ថ្នាក់រៀន Google"
+      picture: លេខកូដដែលមានទម្រង់ជារូបភាព
+      word: ពាក្យដែលរក្សារជាការសម្ងាត់
+      email: អ៊ីមែល
+      google_classroom: ថ្នាក់រៀន Google
       clever: Clever
   follower:
-    invite_sent: "បាន​ផ្ញើ​ការ​អញ្ជើញ"
+    invite_sent: បាន​ផ្ញើ​ការ​អញ្ជើញ
     added_teacher: "%{name} ត្រូវបាន​បន្ថែម​ជា​គ្រូ​របស់​អ្នក"
-    registered: "អ្នក​បាន​ចុះឈ្មោះ​សម្រាប់ %{section_name}"
+    registered: អ្នក​បាន​ចុះឈ្មោះ​សម្រាប់ %{section_name}
     error:
-      signed_in: "សូម​ចាក​ចេញ​មុនពេល​ធ្វើ​បន្ត"
-      username_not_found: "រក​មិន​ឃើញ​ឈ្មោះ​អ្នក​ប្រើ %{username} ទេ"
-      username_in_use: "មាន​អ្នក​យក​ឈ្មោះ %{username} រួច​ហើយ ដូច្នេះ​សូម​រើស​យក​ឈ្មោះ​ផ្សេង"
-      no_teacher: "មិនអាចស្វែរកបាននូវអ្នកណាម្នាក់ដែលបានធ្វើការ sign in ជាមួយ '%{teacher_email_or_code}'។
-        សូមមេត្តាធ្វើការសាកសួរពួកគាត់ដើម្បីនៅទីនេះ រួចហើយសូមព្យាយាមដាក់បញ្ចូលពួកគាត់ម្តងទៀត។"
-      section_not_found: "មិនអាចក្នុងការស្វែងរកនូវវគ្គដែលមានកូដដូច​​ '%{section_code}'នេះបានទេ។"
-      blank_code: "សូមមេត្តាវាយបញ្ចូលនូវsectionកូដរបស់អ្នក។"
-      cant_join_own_section: "សំុទោសអ្នកមិនអាចចូលរួមsectionរបស់អ្នកផ្ទាល់បានទេ។"
-      provider_managed_section: "វគ្គនេះដែរត្រូវបានគ្រប់គ្រងដោយអ្នកបង្កើតដ៏ទៃទៀត និងមិនអាចដាកអោយចូលរួមបានទេ។​
-        សូមមេត្តាសួរគ្រូរបស់អ្នកដើម្បីដាក់អ្នកចូលជាសមាជិកថ្មីតាមរយៈ%{provider} រួចហើយធ្វើការកែរទម្រង់sectionរបស់ពួកគាត់សារជាថ្មី។"
+      signed_in: សូម​ចាក​ចេញ​មុនពេល​ធ្វើ​បន្ត
+      username_not_found: រក​មិន​ឃើញ​ឈ្មោះ​អ្នក​ប្រើ %{username} ទេ
+      username_in_use: មាន​អ្នក​យក​ឈ្មោះ %{username} រួច​ហើយ ដូច្នេះ​សូម​រើស​យក​ឈ្មោះ​ផ្សេង
+      no_teacher: មិនអាចស្វែរកបាននូវអ្នកណាម្នាក់ដែលបានធ្វើការ sign in ជាមួយ '%{teacher_email_or_code}'។
+        សូមមេត្តាធ្វើការសាកសួរពួកគាត់ដើម្បីនៅទីនេះ រួចហើយសូមព្យាយាមដាក់បញ្ចូលពួកគាត់ម្តងទៀត។
+      section_not_found: មិនអាចក្នុងការស្វែងរកនូវវគ្គដែលមានកូដដូច​​ '%{section_code}'នេះបានទេ។
+      blank_code: សូមមេត្តាវាយបញ្ចូលនូវsectionកូដរបស់អ្នក។
+      cant_join_own_section: សំុទោសអ្នកមិនអាចចូលរួមsectionរបស់អ្នកផ្ទាល់បានទេ។
+      provider_managed_section: វគ្គនេះដែរត្រូវបានគ្រប់គ្រងដោយអ្នកបង្កើតដ៏ទៃទៀត និងមិនអាចដាកអោយចូលរួមបានទេ។​
+        សូមមេត្តាសួរគ្រូរបស់អ្នកដើម្បីដាក់អ្នកចូលជាសមាជិកថ្មីតាមរយៈ%{provider} រួចហើយធ្វើការកែរទម្រង់sectionរបស់ពួកគាត់សារជាថ្មី។
     mail:
       student_disassociated:
         subject: Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។
   reports:
     error:
-      access_denied: "អ្នកមិនអាចដំណើរការទៅកាន់ទិន្នន័យរបស់អ្នកប្រើប្រាស់នេះបានទេ។"
+      access_denied: អ្នកមិនអាចដំណើរការទៅកាន់ទិន្នន័យរបស់អ្នកប្រើប្រាស់នេះបានទេ។
   crud:
     new_model: "%{model} ថ្មី"
-    show: "បង្ហាញ"
-    edit: "កែតម្រូវ"
-    edit_model: "កែតម្រូវ%{model}"
-    update: "កែលម្អរ"
-    submit: "ដាក់ស្នើរ"
-    destroy: "កំទេច"
-    back: "ត្រលប់ក្រោយ"
-    confirm: "តើអ្នកប្រកត់ឬអត់?"
+    show: បង្ហាញ
+    edit: កែតម្រូវ
+    edit_model: កែតម្រូវ%{model}
+    update: កែលម្អរ
+    submit: ដាក់ស្នើរ
+    destroy: កំទេច
+    back: ត្រលប់ក្រោយ
+    confirm: តើអ្នកប្រកត់ឬអត់?
     created: "%{model}​ បានបង្កើតដោយជោគជ័យ។"
     updated: "%{model} ត្រូវបានកែរលម្អរ ឬធ្វើអោយបានប្រសើរឡើងដោយជោគជ័យ។"
     destroyed: "%{model} ត្រូវបានលុបចោលជាស្ថាពរ។"
-    access_denied: "អ្នកមិនអាចដំណើរការទៅកាន់ %{model} នេះបានទេ។"
+    access_denied: អ្នកមិនអាចដំណើរការទៅកាន់ %{model} នេះបានទេ។
   devise:
     registrations:
       user:
         user_type_change_email_mismatch: email address​ ដែលបានវាយចូលមិនត្រូវជាមួយ
           email address សម្រាប់គណនីមួយនេះទេ។
-        personal_login_created_email: "អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយអីុម៉ែលនិងលេខសម្ងាត់របស់អ្នក។"
-        personal_login_created_username: "អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​
-          ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយនឹងusername​ (%{username})និងលេខសម្ងាត់របស់អ្នក។"
+        personal_login_created_email: អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយអីុម៉ែលនិងលេខសម្ងាត់របស់អ្នក។
+        personal_login_created_username: អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយនឹងusername​
+          (%{username})និងលេខសម្ងាត់របស់អ្នក។
   nav:
     header:
-      finished_hoc: "ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។"
-      sign_in_to_save: "ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ"
+      finished_hoc: ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។
+      sign_in_to_save: ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ
       free_play:
-        playlab: "បង្កើតកម្មវិធី Play Lab"
-        artist: "គូសអ្វីមួយ"
+        playlab: បង្កើតកម្មវិធី Play Lab
+        artist: គូសអ្វីមួយ
         calculate: Calculate Something
-        applab: "បង្កើតកម្មវិធី App Lab​មួយ"
-        gamelab: "បង្កើតគម្រោង Game​ Lab​ មួយ"
-        weblab: "បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)"
-      home: "ទំព័រដើម"
-      my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-      courses: "វគ្គ​សិក្សា"
-      course_catalog: "មុខវិទ្យាដោយផ្នែក"
-      project_gallery: "គម្រោង"
-      sections: "វគ្គ"
+        applab: បង្កើតកម្មវិធី App Lab​មួយ
+        gamelab: បង្កើតគម្រោង Game​ Lab​ មួយ
+        weblab: បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)
+      home: ទំព័រដើម
+      my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
+      courses: វគ្គ​សិក្សា
+      course_catalog: មុខវិទ្យាដោយផ្នែក
+      project_gallery: គម្រោង
+      sections: វគ្គ
       help_support: Help and support
-      report_bug: "រាយការណ៌អំពីកំហុសរបស់កម្មវិធី"
-      teacher_community: "សមាគមន៏នៃគ្រូបង្រៀន"
-      professional_learning: "ការរៀនដោយមានវិជ្ជាជីវ"
+      report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
+      teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
+      professional_learning: ការរៀនដោយមានវិជ្ជាជីវ
       documentation: Documentation
       tutorials: Tutorials
       educate_overview: Educator Overview
-      educate_elementary: "សាលាបឋម"
-      educate_middle: "អនុវិទ្យាល័យ"
-      educate_high: "វិទ្យាល័យ"
-      educate_hoc: "ពេលវេលា​នៃ​កូដ"
-      educate_partner: "ដៃគូររបស់យើង"
+      educate_elementary: សាលាបឋម
+      educate_middle: អនុវិទ្យាល័យ
+      educate_high: វិទ្យាល័យ
+      educate_hoc: ពេលវេលា​នៃ​កូដ
+      educate_partner: ដៃគូររបស់យើង
       educate_beyond: Beyond Code.org
-      educate_inspire: "ជំរុញទឹកចិត្តសិស្ស"
+      educate_inspire: ជំរុញទឹកចិត្តសិស្ស
       educate_community: Online Community
       educate_tools: Tools and Videos
-      about_us: "អំពីយើង"
-      about_leadership: "ភាពជាអ្នកដឹកនាំ"
-      about_donors: "អ្នកផ្តល់ជំនួយ"
-      about_partners: "ដៃគូរ"
-      about_team: "ក្រុមទាំងមូល"
-      about_news: "វគ្គថ្មី"
-      about_evaluation: "ការវាយតម្លៃ"
-      about_jobs: "កិច្ចការ"
-      about_contact: "ទំនាក់ទំនងមកពួកយើង"
-      about_faqs: "សម្រាប់សំនួរបន្ថែមទៀត"
-      learn: "ស្វែងយល់បន្ថែំម"
+      about_us: អំពីយើង
+      about_leadership: ភាពជាអ្នកដឹកនាំ
+      about_donors: អ្នកផ្តល់ជំនួយ
+      about_partners: ដៃគូរ
+      about_team: ក្រុមទាំងមូល
+      about_news: វគ្គថ្មី
+      about_evaluation: ការវាយតម្លៃ
+      about_jobs: កិច្ចការ
+      about_contact: ទំនាក់ទំនងមកពួកយើង
+      about_faqs: សម្រាប់សំនួរបន្ថែមទៀត
+      learn: ស្វែងយល់បន្ថែំម
       stats: Stats
-      help_us: "ជួយពួកយើង"
-      teach: "បង្រៀន"
-      about: "អំពី"
+      help_us: ជួយពួកយើង
+      teach: បង្រៀន
+      about: អំពី
     user:
-      classroom: "ទំព័រដើមគ្រូបង្រៀន"
+      classroom: ទំព័រដើមគ្រូបង្រៀន
       district_dashboard: District Dashboard
-      label: "សួស្តី%{username}"
-      stats: "ដំណើការ​របស់​ខ្ញុំ"
-      settings: "គណនី​របស់​ខ្ញុំ"
-      logout: "ចាកចេញ"
-      signin: "ចូល​គណនី"
-      signup: "បង្កើតគណនីថ្មី"
-      already_registered: "បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?"
+      label: សួស្តី%{username}
+      stats: ដំណើការ​របស់​ខ្ញុំ
+      settings: គណនី​របស់​ខ្ញុំ
+      logout: ចាកចេញ
+      signin: ចូល​គណនី
+      signup: បង្កើតគណនីថ្មី
+      already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
       pair_programming: Pair Programming
-      team: "ក្រុម"
+      team: ក្រុម
       driver: Driver
       navigator: Navigator
     popup:
-      progress_for_user: "ដំណើរការរបស់%{name}"
-      progress: "ដំណើរការ​របស់​អ្នក"
-      lines: "បន្ទាត់​កូដ​សរុប៖ %{lines}"
-      close: "បិទ"
-      mastery: "គោល​គំនិត"
-      puzzle_map: "ដំណាក់កាល"
-      prizes: "ប្រមូល​ពាន​ឲ្យ​បាន %{total_trophies} ហើយ​ឈ្នះ​រង្វាន់!"
-      prize_earned: "បាន​ប្រមូល​ពាន​គ្រប់ %{total_trophies} ។ ឈ្នះ​រង្វាន់​ហើយ!"
+      progress_for_user: ដំណើរការរបស់%{name}
+      progress: ដំណើរការ​របស់​អ្នក
+      lines: បន្ទាត់​កូដ​សរុប៖ %{lines}
+      close: បិទ
+      mastery: គោល​គំនិត
+      puzzle_map: ដំណាក់កាល
+      prizes: ប្រមូល​ពាន​ឲ្យ​បាន %{total_trophies} ហើយ​ឈ្នះ​រង្វាន់!
+      prize_earned: បាន​ប្រមូល​ពាន​គ្រប់ %{total_trophies} ។ ឈ្នះ​រង្វាន់​ហើយ!
       prize_us_only: "(បាន​តែ​សិស្ស​នៅ​សហរដ្ឋ​អាមេរិក​ប៉ុណ្ណោះ)"
-      prizes_link: "ព័ត៌មាន​បន្ថែម"
+      prizes_link: ព័ត៌មាន​បន្ថែម
   teacher:
-    answer: "ចម្លើយ"
-    for_teachers_only: "សម្រាប់តែគ្រូបង្រៀន"
+    answer: ចម្លើយ
+    for_teachers_only: សម្រាប់តែគ្រូបង្រៀន
     title:
-      one: "គ្រូ​របស់​អ្នក៖"
-      other: "គ្រូ​របស់​អ្នក៖"
+      one: គ្រូ​របស់​អ្នក៖
+      other: គ្រូ​របស់​អ្នក៖
     remove: "(ដក​គ្រូ​ចេញ)"
     confirm:
-      remove: "តើ​អ្នក​ពិត​ជា​ចង់​ដក​គ្រូ​បង្រៀន​ម្នាក់​នេះ​មែនទេ?"
+      remove: តើ​អ្នក​ពិត​ជា​ចង់​ដក​គ្រូ​បង្រៀន​ម្នាក់​នេះ​មែនទេ?
     students:
       dashboard: Go to Teacher Dashboard
-    user_not_found: "គ្រូរបស់អ្នកមិនមាននៅទីនេះទេ។"
-    student_teacher_disassociated: "អ្នកបានចាកចេញពីវគ្គ %{section_code} ជាមួយគ្រូ
-      %{teacher_name}។"
+    user_not_found: គ្រូរបស់អ្នកមិនមាននៅទីនេះទេ។
+    student_teacher_disassociated: អ្នកបានចាកចេញពីវគ្គ %{section_code} ជាមួយគ្រូ %{teacher_name}។
     panel:
-      answer_viewer: "ពត៌មានគ្រូ"
-      student: "សិស្ស"
-      viewing_solution: "មើលចម្លើយ"
-      try_it_yourself: "សាកល្បងដោយខ្លួនឯង"
+      answer_viewer: ពត៌មានគ្រូ
+      student: សិស្ស
+      viewing_solution: មើលចម្លើយ
+      try_it_yourself: សាកល្បងដោយខ្លួនឯង
       section: Section
-      example: "ចម្លើយគំរូ"
-      example_with_number: "ចម្លើយគំរូទី%{solution_number}"
-      submitted_on: "ដាក់ចូលនៅៈ"
-      unsubmit: "មិនបានដាក់ចូល"
-      worked_with: "ធ្វើកិច្ចការជាមួយ"
-      update_lock_settings: "ធ្វើការកែរលម្អរ lock settingsនៅទីនេះ"
-      clear_response: "លុបចោលលើការទទួលការខុសត្រូវ"
+      example: ចម្លើយគំរូ
+      example_with_number: ចម្លើយគំរូទី%{solution_number}
+      submitted_on: ដាក់ចូលនៅៈ
+      unsubmit: មិនបានដាក់ចូល
+      worked_with: ធ្វើកិច្ចការជាមួយ
+      update_lock_settings: ធ្វើការកែរលម្អរ lock settingsនៅទីនេះ
+      clear_response: លុបចោលលើការទទួលការខុសត្រូវ
   user:
-    email_confirm_needed: "អ៊ីម៉ែលមិនទាន់បានដាក់សម្រាប់ជាការប្រើប្រាស់"
-    email_confirm_needed_required: "អស័យដ្ឋានអ៊ីម៉ែល​របស់អ្នក %{email} មិនទាន់បានធ្វើការបញ្ជាក់នៅឡើយទេ៖"
+    email_confirm_needed: អ៊ីម៉ែលមិនទាន់បានដាក់សម្រាប់ជាការប្រើប្រាស់
+    email_confirm_needed_required: អស័យដ្ឋានអ៊ីម៉ែល​របស់អ្នក %{email} មិនទាន់បានធ្វើការបញ្ជាក់នៅឡើយទេ៖
     email_confirm_wrong_email: "(អស័យដ្ឋានអ៊ីម៉េលខុស?)"
-    email_resend_confirm: "សូមផ្ញើរម្តងទៀតនូវការយល់ព្រមអំពីសេចក្តីណែនាំ"
+    email_resend_confirm: សូមផ្ញើរម្តងទៀតនូវការយល់ព្រមអំពីសេចក្តីណែនាំ
     new_password_hint: "(សូមកុំបំពេញអ្វីទាំងអស់បើសិនជាអ្នកមិនចង់កែរវា)"
     current_password_hint: "(យើងត្រូការលេខសម្ងាត់របស់អ្នកដើម្បីយល់ព្រមសម្រាប់ការផ្លាស់ប្តូររបស់អ្នក)"
-    delete: "លុបចោលគណនីរបស់អ្នកចោល"
-    delete_text: "ចុចប៊ូតុងខាងក្រោមនឹងធ្វើការលុបគណនីរបស់អ្នកចោល។"
-    delete_text_teacher_note: "សូមធ្វើការកំណ់ចំណាំ ការលុបគណនីរបស់អ្នកនឹងមិនធ្វើការលុបគណនីរបស់សិស្សរបស់អ្នកទេ។"
-    delete_confirm: "តើអ្នកប្រាកដទេថាចង់លុបគណនីរបស់អ្នក?"
-    deleted_user: "លុបអ្នកប្រើប្រាស់ចោល"
-    no_password_because_oauth: "មិនចាំបាច់មានលេខកូដពីព្រោះអ្នកធ្វើការចូលប្រើប្រាស់គណនីជាមួយកម្មវិធីដែលផ្តល់អោយផ្សេងទៀត។"
-    no_password_because_sponsored: "ជួបជាមួយគ្រូរបស់អ្នកដើម្បីធ្វើការគ្រប់គ្រងពាក្យសម្ងាត់របស់អ្នក។"
-    create_personal_login: "បង្កើតគណនីផ្ទាល់ខ្លួន"
-    create_personal_login_under_13_info: "បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក
+    delete: លុបចោលគណនីរបស់អ្នកចោល
+    delete_text: ចុចប៊ូតុងខាងក្រោមនឹងធ្វើការលុបគណនីរបស់អ្នកចោល។
+    delete_text_teacher_note: សូមធ្វើការកំណ់ចំណាំ ការលុបគណនីរបស់អ្នកនឹងមិនធ្វើការលុបគណនីរបស់សិស្សរបស់អ្នកទេ។
+    delete_confirm: តើអ្នកប្រាកដទេថាចង់លុបគណនីរបស់អ្នក?
+    deleted_user: លុបអ្នកប្រើប្រាស់ចោល
+    no_password_because_oauth: មិនចាំបាច់មានលេខកូដពីព្រោះអ្នកធ្វើការចូលប្រើប្រាស់គណនីជាមួយកម្មវិធីដែលផ្តល់អោយផ្សេងទៀត។
+    no_password_because_sponsored: ជួបជាមួយគ្រូរបស់អ្នកដើម្បីធ្វើការគ្រប់គ្រងពាក្យសម្ងាត់របស់អ្នក។
+    create_personal_login: បង្កើតគណនីផ្ទាល់ខ្លួន
+    create_personal_login_under_13_info: បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក
       សូមសួរឪពុកម្តាយឬអ្នកណែនាំរបស់អ្នកដើម្បីជួយបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់
-      នៅខាងក្រោមនេះ។"
-    create_personal_login_under_13_username: "ឈ្មោះគណនី(សូមកុំប្រើប្រាស់ឈ្មោះពិតរបស់អ្នក!)"
-    create_personal_login_under_13_parent_email: "អ៊ីម៉ែលរបស់ឪពុកម្តាយឬអ្នកណែនាំ"
-    create_personal_login_info: "បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក
-      អ្នកអាចបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់ នៅខាងក្រោមនេះ។"
+      នៅខាងក្រោមនេះ។
+    create_personal_login_under_13_username: ឈ្មោះគណនី(សូមកុំប្រើប្រាស់ឈ្មោះពិតរបស់អ្នក!)
+    create_personal_login_under_13_parent_email: អ៊ីម៉ែលរបស់ឪពុកម្តាយឬអ្នកណែនាំ
+    create_personal_login_info: បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក
+      អ្នកអាចបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់ នៅខាងក្រោមនេះ។
     create_personal_login_terms: By creating a personal login, I agree to be bound
       by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
       service</a>. If I am under 13 years of age, I confirm that I have my parent
@@ -411,24 +410,24 @@
       that allows us to contact students. Students will never receive emails from
       Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
       target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: "សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក"
-    confirm_secret_words: "ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់"
+    enter_new_login_info: សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក
+    confirm_secret_words: ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
   user_level:
-    completed: "បាន​បញ្ចប់"
-    tried: "បាន​ព្យាយាម"
+    completed: បាន​បញ្ចប់
+    tried: បាន​ព្យាយាម
   home:
-    title: "ដំណើការ​របស់​ខ្ញុំ"
+    title: ដំណើការ​របស់​ខ្ញុំ
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
     lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
       MILLION STUDENTS"
-    all_courses: "ខ្លឹមសារទូទៅនៃមេរៀនទី១ ទី២ និងទី៣"
-    lesson_plans: "គម្រោងមេរៀនសម្រាប់បង្រៀន"
-    signin_message: "បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}"
-    student_reg_link: "ការ​ចុះឈ្មោះ​ជា​សិស្ស"
-    teacher_reg_link: "ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន"
+    all_courses: ខ្លឹមសារទូទៅនៃមេរៀនទី១ ទី២ និងទី៣
+    lesson_plans: គម្រោងមេរៀនសម្រាប់បង្រៀន
+    signin_message: បាន​ចុះឈ្មោះ​ហើយ​មែនទេ? %{link}
+    student_reg_link: ការ​ចុះឈ្មោះ​ជា​សិស្ស
+    teacher_reg_link: ការ​ចុះឈ្មោះ​ជា​គ្រូ​បង្រៀន
     signin_directions: Use an account to track progress.<br/> Teachers, track your
       entire class.
     teacher_dashboard: See progress dashboard
@@ -439,20 +438,20 @@
     teacher_print_certificates: Print certificates for students who finish this course
     teacher_read_blog: Read about news and updates to our materials at our Educator
       Blog
-    classroom: "ថ្នាក់រៀន​របស់​អ្នក"
+    classroom: ថ្នាក់រៀន​របស់​អ្នក
     student_progress: Your learning progress
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery"
       trophies.
-    student_left_off: "កន្លែងដែលយើងទើបបញ្ចប់"
-    student_finished: "អ្នកបានបញ្ចប់នូវមេរៀនទាំងអស់របស់Code.org។​ អ្នកអាចបន្តរទៅកម្រិតមួយផ្សេងទៀតតាមរយៈ%{online_link}ឬក៏%{local_school_link}។"
-    local_school: "សាលាក្នុងតំបន់របស់អ្នក"
-    online: "ប្រព័ន្ធអ៊ីនធើណែត"
-    see_details: "មើលសេចក្តីលម្អិត"
-    view_course: "មើលបន្ថែមអំពីមុខវិជ្ជា"
+    student_left_off: កន្លែងដែលយើងទើបបញ្ចប់
+    student_finished: អ្នកបានបញ្ចប់នូវមេរៀនទាំងអស់របស់Code.org។​ អ្នកអាចបន្តរទៅកម្រិតមួយផ្សេងទៀតតាមរយៈ%{online_link}ឬក៏%{local_school_link}។
+    local_school: សាលាក្នុងតំបន់របស់អ្នក
+    online: ប្រព័ន្ធអ៊ីនធើណែត
+    see_details: មើលសេចក្តីលម្អិត
+    view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: "សាកល្បង​ឥឡូវ"
+    trynow: សាកល្បង​ឥឡូវ
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming
       concepts. The course is designed for use in classrooms for grades K-8, but it
@@ -484,18 +483,18 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "សិក្សាបន្ថែម"
-    announcement_try_now_button: "សាកល្បង​ឥឡូវ"
+    announcement_learn_more_button: សិក្សាបន្ថែម
+    announcement_try_now_button: សាកល្បង​ឥឡូវ
     announcement_host_an_hour_button: Host an Hour
-    announcement_watch_video_button: "មើលវីដេអូ"
+    announcement_watch_video_button: មើលវីដេអូ
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: "ដាក់បញ្ចូលឈ្មោះរបស់អ្នក"
+    announcement_petition_button: ដាក់បញ្ចូលឈ្មោះរបស់អ្នក
     announcement_go_beyond_button: Go beyond
-    announcement_apply_now: "ចូលរួមឥលូវនេះ"
+    announcement_apply_now: ចូលរួមឥលូវនេះ
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -592,16 +591,16 @@
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
   share:
-    title: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
-    description: "រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម
-      កម្មវិធីនិងគូររូបផ្សេងៗជាមួយការសរសេរកូដ។"
-    try_hour_of_code: "សាកល្បងរៀនជាមួយHour of Code!"
+    title: រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម
+    description: រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម
+      កម្មវិធីនិងគូររូបផ្សេងៗជាមួយការសរសេរកូដ។
+    try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
   gender:
-    male: "ប្រុស"
-    female: "ស្រី"
-    none: "សម្រេច​ចិត្ត​មិន​ឆ្លើយ"
+    male: ប្រុស
+    female: ស្រី
+    none: សម្រេច​ចិត្ត​មិន​ឆ្លើយ
   user_type:
-    student: "សិស្ស"
+    student: សិស្ស
     teacher: Teacher
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
@@ -623,35 +622,35 @@
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
-    copyright: "រក្សាសិទ្ធដោយ"
-    more: "ផ្សេង​ទៀត"
-    feedback: "ផ្ដល់​មតិ​កែ​លម្អ"
-    translate: "ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក"
-    support: "ការ​គាំទ្រ"
+    copyright: រក្សាសិទ្ធដោយ
+    more: ផ្សេង​ទៀត
+    feedback: ផ្ដល់​មតិ​កែ​លម្អ
+    translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
+    support: ការ​គាំទ្រ
     support_url: http://support.code.org
-    tos_short: "លក្ខណ"
-    tos: "លក្ខខណ្ឌ"
-    privacy: "សិទ្ធបុគ្គល"
-    secure: "កំណែ​សុវត្ថិភាព"
-    report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
+    tos_short: លក្ខណ
+    tos: លក្ខខណ្ឌ
+    privacy: សិទ្ធបុគ្គល
+    secure: កំណែ​សុវត្ថិភាព
+    report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
-    try_hour_of_code: "សាកល្បងរៀនជាមួយHour of Code!"
+    try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
   reference_area:
-    title: "ត្រូវការ​ជំនួយ?"
-    subtitle: "មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ"
-    teacher: "មើល​ដំណោះស្រាយ"
+    title: ត្រូវការ​ជំនួយ?
+    subtitle: មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ
+    teacher: មើល​ដំណោះស្រាយ
     teacher_no_solution: Stop seeing solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
     direction: Start Direction (in degrees)
   video:
-    tab: "វីដេអូ។"
-    notes: "គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។"
+    tab: វីដេអូ។
+    notes: គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។
     notes_coming_soon: Notes for this video coming soon.
-    autoplay_option: "ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ"
-    download: "ទាញយក​វីដេអូ"
+    autoplay_option: ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ
+    download: ទាញយក​វីដេអូ
     show_notes: Show Notes
     show_video: Show Video
   compatibility:
@@ -660,7 +659,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: "សិក្សាបន្ថែម"
+      link: សិក្សាបន្ថែម
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -674,9 +673,9 @@
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
   slow_loading: This is taking longer than usual...
-  try_reloading: "សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ"
-  next_stage: "បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់"
-  download_pdf: "បើក​ប្លង់​មេរៀន"
+  try_reloading: សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ
+  next_stage: បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់
+  download_pdf: បើក​ប្លង់​មេរៀន
   lesson_plan: Lesson Plan
   view_lesson_plan: View Lesson Plan
   pdf_download: Download PDF
@@ -684,12 +683,12 @@
   video_coming_soon: Video Coming Soon!
   not_started: The student has not attempted this level.
   share_code:
-    title: "ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ"
+    title: ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my Play Lab App
     check_out_what_i_made: Check out what I made
-    og_description: "ខ្ញុំ​បាន​សរសេរ​កូដ​ដោយ​ខ្លួន​ឯង​ជាមួយ Code.org"
+    og_description: ខ្ញុំ​បាន​សរសេរ​កូដ​ដោយ​ខ្លួន​ឯង​ជាមួយ Code.org
     phone_number_not_allowed: It looks like there is a phone number in it. Try changing
       the text.
     address_not_allowed: It looks like there is an address in it. Try changing the
@@ -698,16 +697,16 @@
     profanity_not_allowed: It looks like there is profanity in it. Try changing the
       text.
   builder:
-    created: "ខ្ញុំ​បាន​បង្កើត​ស្គ្រីប​ថ្មី​មួយ។"
+    created: ខ្ញុំ​បាន​បង្កើត​ស្គ្រីប​ថ្មី​មួយ។
     destroyed: You destroyed a script.
     manage: Build Levels
     view: View
-    back: "ត្រឡប់​ទៅ​ស្គ្រីប"
-    success: "អ្នក​បាន​កែសម្រួល​ប្លុក​ដោយ​ជោគជ័យ។"
+    back: ត្រឡប់​ទៅ​ស្គ្រីប
+    success: អ្នក​បាន​កែសម្រួល​ប្លុក​ដោយ​ជោគជ័យ។
     level:
-      create: "បង្កើត​កម្រិត​ថ្មី"
-      current: "កម្រិត​បច្ចុប្បន្ន"
-      unused: "កម្រិត​ដែល​មិន​បាន​ប្រើ"
+      create: បង្កើត​កម្រិត​ថ្មី
+      current: កម្រិត​បច្ចុប្បន្ន
+      unused: កម្រិត​ដែល​មិន​បាន​ប្រើ
   upsell:
     applab:
       title: App Lab
@@ -719,12 +718,12 @@
       audience: Ages 13+
       cta: Learn how
     hoc:
-      title: "ពេលវេលា​នៃ​កូដ"
-      body: "សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។"
+      title: ពេលវេលា​នៃ​កូដ
+      body: សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។
     flappy:
       title: Flappy កូដ
-      body: "តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
-        សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!"
+      body: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
+        សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
     20-hour:
       title: Accelerated Course
       body: This 20-hour course covers the core computer science and programming concepts
@@ -787,7 +786,7 @@
       body_short: If you don't have computers, try these unplugged lessons in your
         classroom.
     unplugged_conditionals:
-      title: "លក្ខខណ្ឌ"
+      title: លក្ខខណ្ឌ
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -806,16 +805,16 @@
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
-    want_to_make_your_own: "តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?"
+    want_to_make_your_own: តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
-    more: "ច្រើន​ទៀត &rarr;"
+    more: ច្រើន​ទៀត &rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
-    report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
+    report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback
@@ -830,23 +829,23 @@
     documentation: Documentation
     tutorials: Tutorials
   multi:
-    wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
-    wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
-    correct_title: "ត្រឹម​ត្រូវ"
-    correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
+    wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
+    wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
+    correct_title: ត្រឹម​ត្រូវ
+    correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "អរគុណ"
+    wrong_title: អរគុណ
     wrong_body: Thank you for submitting an answer.
-    correct_title: "អរគុណ"
+    correct_title: អរគុណ
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "អរគុណ"
+    wrong_title: អរគុណ
     wrong_body: Thank you for submitting answers.
-    correct_title: "អរគុណ"
+    correct_title: អរគុណ
     correct_body: Thank you for submitting an answer
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
@@ -855,9 +854,9 @@
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "អរគុណ"
+    wrong_title: អរគុណ
     wrong_body: Thank you for submitting answers.
-    correct_title: "អរគុណ"
+    correct_title: អរគុណ
     correct_body: Thank you for submitting answers.
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
@@ -869,12 +868,12 @@
     submit-complete-body: You cannot edit your assessment after submitting it.  Are
       you sure?
   match:
-    wrong_title: "ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ"
-    wrong_body: "ដំណោះស្រាយ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
-    correct_title: "ត្រឹម​ត្រូវ"
-    correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
+    wrong_title: ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ
+    wrong_body: ដំណោះស្រាយ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
+    correct_title: ត្រឹម​ត្រូវ
+    correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
   contract_match:
-    wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
+    wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     badname: Your contract has the wrong name.
     badname_case: Function names are case-sensitive. Try changing the case of your
       contract's name.
@@ -887,15 +886,15 @@
     placeholder: Enter your answer here
     open_response_title: Thanks
     open_response_body: Thanks for your response!
-    correct_title: "ត្រឹម​ត្រូវ"
-    correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
+    correct_title: ត្រឹម​ត្រូវ
+    correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
   dialog:
-    ok: "យល់ព្រម"
-    startover_title: "តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?"
+    ok: យល់ព្រម
+    startover_title: តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: "ចាប់ផ្ដើម​ឡើង​វិញ"
-    startover_cancel: "បោះបង់"
+    startover_ok: ចាប់ផ្ដើម​ឡើង​វិញ
+    startover_cancel: បោះបង់
   time:
     hour: 1 hour
     day: day
@@ -923,13 +922,13 @@
       asked to confirm that your school has parental consent for the collection of
       the student’s personal information for the use and benefit of the school, including
       educational programs such as Code Studio.
-    tos: "លក្ខខណ្ឌ"
-    privacy: "សិទ្ធបុគ្គល"
+    tos: លក្ខខណ្ឌ
+    privacy: សិទ្ធបុគ្គល
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
-    print: "បោះពុម្ព"
+    print: បោះពុម្ព
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -942,7 +941,7 @@
     message: Please enter your school information below.
     message_with_suggestion: Please verify that the following information is correct,
       or update as necessary.
-    save: "រក្សា​ទុក"
+    save: រក្សា​ទុក
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
       science'
@@ -954,9 +953,9 @@
     - asian: Asian
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
-    - other: "ផ្សេងៗ"
+    - other: ផ្សេងៗ
     - opt_out: Prefer not to say
-    submit: "ដាក់ស្នើរ"
+    submit: ដាក់ស្នើរ
     decline: Close
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
@@ -979,20 +978,20 @@
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: "រក្សា​ទុក"
-    delete: "លុប"
-    import: "ទាញយក"
-    share_link_import_bad_link_header: "អត់ស្គាល់តំណដែលបានចែកចាយ"
-    share_link_import_bad_link_body: "យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម
-      Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។"
-    share_link_import_error_header: "មានកំហុសមួយចំនួន។"
-    share_link_import_error_body: "មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។"
+    save: រក្សា​ទុក
+    delete: លុប
+    import: ទាញយក
+    share_link_import_bad_link_header: អត់ស្គាល់តំណដែលបានចែកចាយ
+    share_link_import_bad_link_body: 'យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម
+      Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។'
+    share_link_import_error_header: មានកំហុសមួយចំនួន។
+    share_link_import_error_body: មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។
     exit: Return to Course
     my_projects: My Projects
     project_gallery: Project Gallery
     publish: Publish
     unpublish: Unpublish
-    share: "ចែក​រំលែក"
+    share: ចែក​រំលែក
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
@@ -1004,8 +1003,8 @@
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
     close: Close
-    more: "ផ្សេង​ទៀត"
-    name: "ឈ្មោះ"
+    more: ផ្សេង​ទៀត
+    name: ឈ្មោះ
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
@@ -1015,12 +1014,12 @@
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
-    really_delete: "ប្រាកដថាលុប?"
-    delete_yes: "យល់ព្រម"
-    delete_no: "ទេ"
-    saved: "បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!"
+    really_delete: ប្រាកដថាលុប?
+    delete_yes: យល់ព្រម
+    delete_no: ទេ
+    saved: បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!
     not_saved: Not saved
-    cancel: "បោះបង់"
+    cancel: បោះបង់
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
@@ -1057,7 +1056,7 @@
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: "ផ្សេងៗ"
+          other: ផ្សេងៗ
         detail: Please provide as much detail as possible regarding the content you
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled

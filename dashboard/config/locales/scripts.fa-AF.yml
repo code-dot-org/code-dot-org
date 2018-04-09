@@ -3,15 +3,15 @@
     script:
       name:
         course1:
-          title: "دوره 1"
-          description: "دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
+          title: دوره 1
+          description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
             دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد
             بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل
             امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی
             مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک
-            بگذارند. توصیه شده برای اول دبستانیها (ک1)."
+            بگذارند. توصیه شده برای اول دبستانیها (ک1).
           description_short: Introduction to computer science for early readers.
-          description_audience: "سنین 4 به بالا (کسانیکه سواد خواندن ندارند)"
+          description_audience: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
           stages:
             'Artist: Loops':
               name: 'Artist: Loops'
@@ -50,14 +50,14 @@
             The Big Event:
               name: The Big Event
         course2:
-          title: "دوره 2"
-          description: "دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه
-            برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی
-            برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
-            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5)."
+          title: دوره 2
+          description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه
+            نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای
+            حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
+            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
           description_short: Introduction to computer science for students who can
             read.
-          description_audience: "سنین 6 به بالا (خواندن لازم است)"
+          description_audience: سنین 6 به بالا (خواندن لازم است)
           stages:
             'Artist: Debugging':
               name: 'Artist: Debugging'
@@ -98,15 +98,15 @@
             Your Digital Footprint:
               name: Your Digital Footprint
         course3:
-          title: "دورۀ 3"
-          description: "دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
+          title: دورۀ 3
+          description: دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
             است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی به راه
             حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد. در پایان
             این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که می توانند
-            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5."
+            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5.
           description_short: Delve even deeper into programming while building games
             and interactive stories. This is a follow-up to Course 2.
-          description_audience: "سنین 8 به بالا (پس از دوره 2)"
+          description_audience: سنین 8 به بالا (پس از دوره 2)
           stages:
             Artist:
               name: Artist
@@ -151,51 +151,50 @@
             'Studio: Create a Story':
               name: 'Play Lab: Create a Story'
         playlab:
-          title: "آزمایشگاه بازی"
-          description: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
-          description_short: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
+          title: آزمایشگاه بازی
+          description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+          description_short: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
           stages:
             Play Lab:
               name: Play Lab
         artist:
-          title: "هنرمند"
-          description: "با نقاش چند عکس و طرح باحال بکش!"
-          description_short: "با نقاش چند عکس و طرح باحال بکش!"
+          title: هنرمند
+          description: با نقاش چند عکس و طرح باحال بکش!
+          description_short: با نقاش چند عکس و طرح باحال بکش!
           stages:
             Artist:
               name: Artist
         hourofcode:
-          title: "هزارتوی کلاسیک"
-          description: "اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
-            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!"
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          title: هزارتوی کلاسیک
+          description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
+            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           stages:
             Maze:
               name: Maze
           description_audience: ''
         frozen:
-          title: "کدنویسی با آنا و السا"
-          description: "بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
+          title: کدنویسی با آنا و السا
+          description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
             آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف
             و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می
-            توانی با دوستان خود به اشتراک بگذاری!"
-          description_short: "بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
-            و زیبایی یخ را کشف می کنند استفاده کنیم."
+            توانی با دوستان خود به اشتراک بگذاری!
+          description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
+            و زیبایی یخ را کشف می کنند استفاده کنیم.
           stages:
             Artist:
               name: Artist
         course4:
-          title: "دوره 4"
-          description: "دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند
-            طراحی شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های
-            قبلی مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند
-            کرد. در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند
-            که می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس
-            4-8."
+          title: دوره 4
+          description: دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند طراحی
+            شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی
+            مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد.
+            در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که
+            می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-8.
           description_short: Build more complex programs with concepts such as for
             loops and functions with parameters. This is a follow-up to Course 3.
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Artist:
               name: Artist
@@ -242,11 +241,11 @@
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
         Course4pre:
-          title: "پیش نیاز دوره 4"
-          description: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های
-            2 و 3 را نگذرانده اند."
-          description_short: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
-            های 2 و 3 را نگذرانده اند."
+          title: پیش نیاز دوره 4
+          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2
+            و 3 را نگذرانده اند.
+          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
+            های 2 و 3 را نگذرانده اند.
           description_audience: ''
           stages:
             'Artist: Functions':
@@ -268,8 +267,8 @@
             'Maze: Sequence':
               name: 'Maze: Sequence'
         usability:
-          title: "امتحان قابل استفاده بودن"
-          description: "منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده."
+          title: امتحان قابل استفاده بودن
+          description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
           description_short: ''
           description_audience: ''
           stages:
@@ -284,7 +283,7 @@
             Variables:
               name: Variables
         algebra:
-          title: "علوم کامپیوتر در جبر"
+          title: علوم کامپیوتر در جبر
           description: Learn Functional Programming through Algebra.
           description_short: Learn Functional Programming through Algebra.
           description_audience: ''
@@ -330,20 +329,20 @@
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
-          title: "آزمایشگاه بازی بی نهایت دیزنی"
-          description: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
-            شخصیت های دیزنی بی نهایت."
-          description_short: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی
-            بازیگران شخصیت های دیزنی بی نهایت."
+          title: آزمایشگاه بازی بی نهایت دیزنی
+          description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+            شخصیت های دیزنی بی نهایت.
+          description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+            شخصیت های دیزنی بی نهایت.
           stages:
             Infinity:
               name: Infinity
         algebrademo:
-          title: "نسخه ی نمایشی جبر"
-          description: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
-            شده در علوم کامپیوتر در جبرِ Code.org"
-          description_short: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
-            شده در علوم کامپیوتر در جبرِ Code.org"
+          title: نسخه ی نمایشی جبر
+          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده
+            در علوم کامپیوتر در جبرِ Code.org
+          description_short: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
+            شده در علوم کامپیوتر در جبرِ Code.org
           stages:
             Defining Simple Functions:
               name: Defining Simple Functions
@@ -386,7 +385,7 @@
             Writing computer programs:
               name: Writing computer programs
         netsim:
-          title: "شبیه ساز اینترنت"
+          title: شبیه ساز اینترنت
           description: Learn about how the Internet works.
           description_short: Learn about how the Internet works.
           description_audience: ''
@@ -428,14 +427,14 @@
             Color Pixelation Tutorial:
               name: Color Pixelation Tutorial
         20-hour:
-          title: "دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)"
-          description: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
+          title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
+          description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
             نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی
             تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر
-            نیز جالب باشد."
+            نیز جالب باشد.
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Abstraction:
               name: Abstraction
@@ -478,9 +477,9 @@
             Wrap-up:
               name: Wrap-up
         edit-code:
-          title: "ویرایش کد"
-          description: "ویرایش کد"
-          description_short: "ویرایش کد"
+          title: ویرایش کد
+          description: ویرایش کد
+          description_short: ویرایش کد
           description_audience: ''
           stages:
             Applab:
@@ -494,9 +493,9 @@
             The Maze:
               name: The Maze
         events:
-          title: "رویدادها"
-          description: "رویدادها"
-          description_short: "رویدادها"
+          title: رویدادها
+          description: رویدادها
+          description_short: رویدادها
           description_audience: ''
           stages:
             Bounce:
@@ -508,16 +507,16 @@
             Studio:
               name: Studio
         flappy:
-          title: "کدنویسی Flappy"
-          description: "می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
-            Flappy ما را امتحان کن!"
+          title: کدنویسی Flappy
+          description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
+            Flappy ما را امتحان کن!
           description_short: Write your own Flappy game!
           description_audience: ''
           stages:
             Flappy Code:
               name: Flappy Code
         jigsaw:
-          title: "جورچین"
+          title: جورچین
           description: Try our Jigsaw tutorial.
           description_short: Try our Jigsaw tutorial.
           description_audience: ''
@@ -525,7 +524,7 @@
             Jigsaw:
               name: Jigsaw
         step:
-          title: "مرحله"
+          title: مرحله
           description: ''
           description_short: Step tutorial
           description_audience: ''
@@ -533,11 +532,11 @@
             Step:
               name: Step
         Hour of Code:
-          title: "ساعت کد نویسی سال 2013"
-          description: "مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان
-            عصبانی را امتحان کنید!"
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          title: ساعت کد نویسی سال 2013
+          description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان
+            عصبانی را امتحان کنید!
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           description_audience: ''
           stages:
             Hour of Code 2013:
@@ -1013,7 +1012,7 @@
             and how it functions by building off the concepts learned when sending
             bits in Unit 1. This unit is a pilot version and is no longer supported
             or updated. You can find the new units at code.org/educate/csp.
-          description_short: "اینترنت"
+          description_short: اینترنت
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1796,7 +1795,7 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           description: ''
           stages:
             Halloween 2015:
@@ -1807,14 +1806,14 @@
             might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Spring 2016:
               name: Spring 2016
             Halloween 2015:
               name: Halloween 2015
         iceage:
-          title: "آزمایشگاه بازی عصر یخبندان"
+          title: آزمایشگاه بازی عصر یخبندان
           description: Create a story or make a game with Ice Age Play Lab!
           description_short: Create a story or make a game with Ice Age Play Lab!
           description_audience: ''
@@ -1894,7 +1893,7 @@
             Unit 3 Overview:
               name: Unit 3 Overview
         gumball:
-          title: "آزمایشگاه بازی Gumball"
+          title: آزمایشگاه بازی Gumball
           description: Create a story or make a game with Gumball Play Lab!
           description_short: Create a story or make a game with Gumball Play Lab!
           stages:
@@ -4461,8 +4460,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4545,8 +4551,15 @@
                 will each receive a user profile describing a person. They will use
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4628,8 +4641,18 @@
                 basis for the type of app they will make. From there, teams will have
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4715,8 +4738,13 @@
                 With the information and guidance gained from the last round of user
                 testing, each student will have the opportunity to plan for and implement
                 improvements to the team app.
-              description_teacher: |
-                Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student will have the opportunity to plan for and implement improvements to the team app.\r
+              description_teacher: 'Teams have at this point developed an app prototype
+                that has gone through multiple iterations and rounds of user testing.
+                With the information and guidance gained from the last round of user
+                testing, each student will have the opportunity to plan for and implement
+                improvements to the team app.\r
+
+'
             App Presentation:
               name: App Presentation
               description_student: At this point teams have researched a topic of
@@ -4725,8 +4753,14 @@
                 to incorporate new features and bug fixes. Now is the time for them
                 to review what they have done and pull together a coherent presentation
                 to demonstrate their process of creation.
-              description_teacher: |
-                At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation.\r
+              description_teacher: 'At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation.\r
+
+'
             User Interface and Prototype Testing:
               name: User Interface and Prototype Testing
               description_student: Following the mini design project, students look
@@ -6837,8 +6871,12 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -7081,8 +7119,16 @@
               name: Conditionals with Cards
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7395,6 +7441,8 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Nested Loops
+            Functions in Harvester:
+              name: Functions in Harvester
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -8024,6 +8072,8 @@
               name: Building a Foundation
             Nested Loops:
               name: Nested Loops
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -8709,8 +8759,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8969,6 +9021,8 @@
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -9699,8 +9753,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
           title: Course A
           description: Learn the basics of computer science and internet safety. At
@@ -9724,8 +9785,12 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -9795,3 +9860,311 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Building a Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Nested Loops
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Course B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Real-life Algorithms: Plant a Seed'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Your Digital Footprint
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Building a Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital Citizenship
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist Binary
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

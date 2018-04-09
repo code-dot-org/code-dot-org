@@ -74,13 +74,13 @@
   "penDown": "مداد پایین",
   "penTooltip": "مداد را بالا و پایین میکشد، که نقاشی را شروع یا تمام کند.",
   "penUp": "مداد بالا",
+  "pointTo": "point to",
   "pixels": "پیکسل",
   "reinfFeedbackMsg": "این نقاشی تو است! همچنان روی آن کار کن یا به پازل بعدی برو.",
   "setAlpha": "تنظیم آلفا",
   "setCharacter": "set character to {character}",
   "setColour": "رنگ را تعیین کنید",
   "setPattern": "الگو را تعیین کن",
-  "setStickerSize": "Set sticker size",
   "setWidth": "عرض را تعیین کنید",
   "shareDrawing": "نقاشی خود را به اشتراک بگذارید:",
   "showMe": "نمایش بده",
@@ -94,5 +94,6 @@
   "turnTooltip": "هنرمند را با شماره درجه مشخص به راست یا چپ می چرخاند.",
   "turtleVisibilityTooltip": "هنرمند را قابل مشاهده یا مخفی می کند.",
   "widthTooltip": "عرض قلم را تغییر می دهد.",
+  "withSize": "with size",
   "wrongColour": "رنگ تصویر نادرست است. برای این پازل باید به رنگ %1 باشد."
 }

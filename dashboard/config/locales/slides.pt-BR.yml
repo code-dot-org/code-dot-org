@@ -35,9 +35,9 @@
           vai usá-los para criar o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: "À direita você tem sua área de trabalho, onde você vai arrastar os
-          blocos da caixa de ferramentas para criar o seu programa. Para excluir um
-          bloco, arraste-o para a lixeira no canto."
+        text: À direita você tem sua área de trabalho, onde você vai arrastar os blocos
+          da caixa de ferramentas para criar o seu programa. Para excluir um bloco,
+          arraste-o para a lixeira no canto.
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se você arrastar um bloco "avance" para
@@ -725,7 +725,7 @@
           resolver. O segundo é igual, mas ela vai para baixo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "É como programar com papel. E é isso mesmo!"
+        text: É como programar com papel. E é isso mesmo!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -2098,10 +2098,10 @@
           que chamamos de parâmetros.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: "Às vezes uma função precisa de um parâmetro. Um parâmetro é uma informação
+        text: Às vezes uma função precisa de um parâmetro. Um parâmetro é uma informação
           adicional que você pode passar para uma função e personalizá-la para uma
           necessidade especial. Quando você faz sorvete com seus amigos, está usando
-          um processo similar aos parâmetros em um programa de computador."
+          um processo similar aos parâmetros em um programa de computador.
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: A bola de sorvete de creme pode ser igual em todos os sundaes, mas quando
@@ -2296,12 +2296,12 @@
           Aqui, eu preciso adicionar os comprimentos e graus apropriados.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "Às vezes, você pode acidentalmente estragar o código inicial. O que
+        text: Às vezes, você pode acidentalmente estragar o código inicial. O que
           fazer nesse caso? Você pode pressionar limpar desafio e começar de novo.
           Vou arrastar esse bloco numérico para as diferentes áreas de pixels. Selecione
           100 para pixels, 45 para graus e 100 para pixels de novo. Legal! Aqui está
           a abelha do Code Studio. Eu preciso mover a abelha para cada uma das flores
-          e coletar néctar."
+          e coletar néctar.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
         text: A primeira flor está a três blocos de distância, então eu preciso de

@@ -515,3 +515,29 @@
           da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
           botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
           dituzte.
+      GraphPaperProgramming_2018:
+        title: Paperean marraztuz programatu
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
+          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Lineaz kanpoko ekintza
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Lineaz kanpoko ekintza
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Baldintzak
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'
+      DigitalFootprint_2018:
+        title: Zure aztarna digitala
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
+          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+      BinaryImages_2018:
+        title: Irudi bitarrak
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
+          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
+          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
+          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
+          gordetzeko gai dela (irudi eta kolore bezalakoak).

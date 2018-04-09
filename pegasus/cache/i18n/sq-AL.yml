@@ -23,8 +23,8 @@
   n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
   anybody_can_learn: Të gjithë mund të mësojnë.
   learn_now: Meso tani
-  petition_message: "Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
-    rreth shkencave kompjuterike"
+  petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
+    rreth shkencave kompjuterike
   petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
     # të tjerët.'
   petition_sign_message_support: 'Në qoftë se ju na mbështesni, nënshkruaj emrin tënd.
@@ -37,11 +37,11 @@
   twentyhours_heading: Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike
   twentyhours_text: E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë
     për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim.
-  og_title: "Çdo fëmijë meriton mundësinë"
+  og_title: Çdo fëmijë meriton mundësinë
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
-  og_description: "Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar
-    shkenca kompjuterike. Po ndryshon gjithçka."
+  og_description: Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar
+    shkenca kompjuterike. Po ndryshon gjithçka.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Ora e kodimit po vjen
@@ -59,7 +59,7 @@
   hoc2014_host: Organizo
   hoc2014_everyone: Të gjithë
   hoc2014_support: Mbështete &#x25BE;
-  hoc2014_whatishoc: "Çfarë është Ora e Kodimit?"
+  hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   csedweek_map_header: "#CSEdWeek / Hour of Code ngjarjet në mbarë botën"
   csedweek_map_signup: Regjistro ngjarjen tënde
   csedweek_map_search_placeholder: Kërko ngjarjet Hour of Code
@@ -72,10 +72,10 @@
   cded_try_it: Provoje
   try_now: Provo tani
   california_heading: Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike
-  california_text: "Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
+  california_text: Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
     tona falas</a>. Çdo shkollë fillore mund <a href='http://code.org/educate/k5'>
     të japë mësim shkencën komjuterike</a>. Pyesni shkollat e mesme për tu <a href='http://code.org/educate/districts'>
-    bërë partnerë me ne."
+    bërë partnerë me ne.
   california_button: Mëso më shumë
   flappy_heading: Ditëlindja e Flapit te Code.org
   flappy_text: Code.org sapo mbushi një vit.<br/><br/> Festo me ne duke krijuar lojën
@@ -135,11 +135,11 @@
   third_party_platform_all: 'Platforma: Web, iPad & Android'
   third_party_platform_mobile: 'Platforma: iPad & Android'
   third_party_platform_web: 'Platforma: Web'
-  third_party_price_varies: "Çmimi: Planet ndryshojnë"
-  third_party_price_free: "Çmimi: Falas"
-  third_party_price_299: "Çmimi: $ 2.99 / Shkarkimi"
-  third_party_price_individual: "Çmimi individual: Test Falas & $ 25 / muaji"
-  third_party_price_school: "Çmimi i shkollës: Plane Falas  & Pro në $ 2500 +"
+  third_party_price_varies: 'Çmimi: Planet ndryshojnë'
+  third_party_price_free: 'Çmimi: Falas'
+  third_party_price_299: 'Çmimi: $ 2.99 / Shkarkimi'
+  third_party_price_individual: 'Çmimi individual: Test Falas & $ 25 / muaji'
+  third_party_price_school: 'Çmimi i shkollës: Plane Falas  & Pro në $ 2500 +'
   third_party_tynker_desc: Platforma kompjuterike kreative Tynker ndihmon fëmijët
     të zhvillojnë të menduarit kompjuterike dhe aftësitë programuese në një mënyrë
     argëtuese ,intuitive dhe imagjinative. Gjuha jonë e programimit vizual inovativë,
@@ -157,8 +157,9 @@
     tyre - pastaj përdorin blloqet e programimit për të bërë personazhet e tyre të
     vijnë në jetë.
   third_party_scratchjr_btn_curriculum: Shkarko Kurrikulën Scratch Jr.
-  third_party_scratchjr_btn_site: |
-    Vizito Scratch Jr.
+  third_party_scratchjr_btn_site: 'Vizito Scratch Jr.
+
+'
   third_party_scratch_desc: |-
     Me Scratch, ju mund të programoni tregimet  interaktive, lojra dhe animacionet tuaja dhe t`i ndani krijimet tuaja me të tjerët në komunitetin online. Scratch i ndihmon të rinjtë të mësojnë të mendojnë në mënyrë kreative, të arsyetojnë sistematikisht, dhe të punojnë bashkërisht - aftësitë thelbësore për jetën në shekullin e 21.
      
@@ -197,12 +198,13 @@
     ka rimenduar pothuajse çdo gjë - tregtinë, rrjetet sociale, kujdesin shëndetësor
     dhe më shumë. Ne po ndërtojmë arsimin  që ka nevojë bota - arsimin e parë të vërtet
     vendas.
-  third_party_codecademy_btn_curriculum: |
-    Shkarko Kurrikulën Codecademy
+  third_party_codecademy_btn_curriculum: 'Shkarko Kurrikulën Codecademy
+
+'
   third_party_codecademy_btn_site: Vizito Codecademy
   third_party_organization: Organizatë
   third_party_curriculum: Plani mësimor
-  third_party_pricing: "Çmimi"
+  third_party_pricing: Çmimi
   third_party_cost_free: Falas për studentët dhe mësuesit
   third_party_cost_5permonth: "$ 5 / muaj për klasë"
   third_party_cost_299: "$2.99/shkarkimi"
@@ -440,8 +442,10 @@
   homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të
     përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
   homepage_banner_privacy_link: Mëso më shumë
-  homepage_banner_20k_teachers: |
-    20.000 mësues të trajnuar, dhe tani mësimi i shkencës kompjuterike në klasa.
+  homepage_banner_20k_teachers: '20.000 mësues të trajnuar, dhe tani mësimi i shkencës
+    kompjuterike në klasa.
+
+'
   homepage_banner_20k_teachers_link: Mëso më shumë
   homepage_banner_congress: Udhëheqësit e Amerikës po i bëjnë thirrje Kongresit për
     të financuar  shkencat kompjuterike K-12.
@@ -452,7 +456,7 @@
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
-  homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
+  homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
   homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organizo një Orë Kodim
@@ -1762,7 +1766,7 @@
   codeorg_beyond_platformtext: Shfletuesit modernë, tabletat
   khan_beyond_platformtext: Shfletuesit modern të web-it
   tynker_beyond_platformtext: Shfletuesit modern të web-it ($$ kërkohet)
-  scratch_beyond_platformtext: "Çdo shfletues"
+  scratch_beyond_platformtext: Çdo shfletues
   lightbot_beyond_platformtext: iOS, Android (ose shfletues web-i)
   codecademy_beyond_platformtext: Shfletues modern të web-it. iOS, aplikacione Android
   kodable_beyond_platformtext: iPad

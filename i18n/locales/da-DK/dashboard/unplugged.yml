@@ -316,3 +316,21 @@ da:
       BigEvent_2018:
         title: Den store begivenhed
         desc: Eleverne introduceres til programmerings begrebet "begivenheder", som er handlinger, som en computer konstant overvåger. Læreren vil tryk knapper på et papir fjernbetjening og eleverne vil reagere, alt efter hvilken knap er trykket.
+      GraphPaperProgramming_2018:
+        title: Programmering på millimeterpapir
+        desc: Eleverne skal skrive en algoritme (et sæt af instruktioner) ved hjælp af et sæt foruddefinerede kommandoer, for at dirigere deres klassekammerater til at gengive en tegning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Unplugged aktivitet
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Unplugged aktivitet
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Betingelser
+        desc: 'For at lære om betingelsessætninger, skal eleverne spiller et kortspil og skabe regler som: "Hvis jeg trækker et rødt kort, får jer et point" og "Hvis jeg trækker et sort kort, du får et point."'
+      DigitalFootprint_2018:
+        title: Dit digitale fodspor
+        desc: Lærere introducerer for eleverne idéen om, at når man lægger oplysninger om sig selv online, opretter man også et digitalt fodaftryk eller "spor", der har konsekvenser.
+      BinaryImages_2018:
+        title: Binære billeder
+        desc: Selvom mange mennesker kun tænker på binære tal som nuller og ettaller, underviste vores tidligere kurser eleverne i at, information kan være repræsenteret i en række binære optioner.  Denne lektion tager konceptet et skridt længere, da den illustrerer hvordan en computer også kan gemme endnu mere komplekse oplysninger (f.eks. billeder og farver) i binære tal.

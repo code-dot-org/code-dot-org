@@ -6,8 +6,8 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,4,0,0],[0,0,2,1,3,4,0,0],[0,4,1,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "birds",
-    "instructions": "Add 2 blocks to get the bird to the pig.",
+    "skin": "scrat",
+    "instructions": "Add 2 blocks to get the Scrat to the acorn.",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try adding one instruction at a time until you get to the pig.\",\"hint_id\":\"courseB_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/704382be770ee2fae428030758fffc8d/courseB_maze_seq4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the <xml><block type=\\\"maze_moveEast\\\"/></xml> block to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8ec18675159b66627f498fd7bb06f211/courseB_maze_seq4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try adding one instruction at a time until you get to the acorn.\",\"hint_id\":\"courseB_maze_seq4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/608e638847903092e5b542399050a669/courseB_maze_seq4_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the <xml><block type=\\\"maze_moveEast\\\"/></xml> block to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8ec18675159b66627f498fd7bb06f211/courseB_maze_seq4_2018.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -34,11 +34,14 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5170,
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 20:28:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:07:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-28 20:28:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:07:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-03 23:06:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

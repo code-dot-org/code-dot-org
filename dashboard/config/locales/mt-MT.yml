@@ -50,15 +50,15 @@
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
-      label: "Żid Għalliem:"
+      label: 'Żid Għalliem:'
       placeholder: Sezzjoni kodiċi (ABCDEF)
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
       instructions_short: Enter your 6 letter section code
-    submit: "Żid għalliem"
+    submit: Żid għalliem
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn
-    submit: "Żid suġġeriment"
+    submit: Żid suġġeriment
   appname: Core.org
   stage: Stadju
   stage_number: Stadju numru %{number}
@@ -215,8 +215,14 @@
       submit: Ibdel il-password
   welcome_email:
     subject: Ingħaqad mal-klassi tiegħi (fuq Code.org l)
-    body: |
-      Ikklikkja l-link t'hawn taħt biex tirregistra għal lezzjonijiet tax-xjenza tal-kompjuter fuq Code.org (miegħi bħala "teacher" tiegħek):%{link} il-lezzjonijiet huma pjaċevoli, viżwalment impenjati, u jgħallmu l-kunċetti bażiċi tax-xjenza tal-kompjuter bl-użu tal-esperjenza sempliċi, Ggwidata, simili ta' logħba . Jitgħallmu kodiċi minn Bill Gates, Mark Zuckerberg, Angry Brids u Plants vs Zombies! :-) %{name}
+    body: 'Ikklikkja l-link t''hawn taħt biex tirregistra għal lezzjonijiet tax-xjenza
+      tal-kompjuter fuq Code.org (miegħi bħala "teacher" tiegħek):%{link} il-lezzjonijiet
+      huma pjaċevoli, viżwalment impenjati, u jgħallmu l-kunċetti bażiċi tax-xjenza
+      tal-kompjuter bl-użu tal-esperjenza sempliċi, Ggwidata, simili ta'' logħba .
+      Jitgħallmu kodiċi minn Bill Gates, Mark Zuckerberg, Angry Brids u Plants vs
+      Zombies! :-) %{name}
+
+'
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
@@ -363,9 +369,9 @@
       other: 'L-għalliema tiegħek:'
     remove: "(neħħi l-għalliem)"
     confirm:
-      remove: "Żgur tixtieq tneħħi dan l-għalliem?"
+      remove: Żgur tixtieq tneħħi dan l-għalliem?
     students:
-      dashboard: "Żur il-Pannell tal-Kontroll tal-Għalliem"
+      dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
     user_not_found: L-għalliem jew student ma nstabx
     student_teacher_disassociated: "%{teacher_name} tneħħa bħala għalliem ta' %{student_name}"
     panel:
@@ -390,11 +396,11 @@
     new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
     current_password_hint: "(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
       tiegħek)"
-    delete: "Ħassar l'Account tiegħek"
+    delete: Ħassar l'Account tiegħek
     delete_text: Meta tikklikkja l-buttuna hawn taħt jithassarlek l'Account.
     delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
       il-kontijiet ta'' l-istudenti tiegħek.'
-    delete_confirm: "Żgur tixtieq tħassar l'Account tiegħek?"
+    delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
     deleted_user: deleted user
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -429,7 +435,7 @@
     lines_of_code: "%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI"
     lines_of_code_linebreak: "%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count}
       MILJUNI ta ' studenti"
-    all_courses: "Ħarsa ġenerali tal-korsijiet 1, 2 u 3"
+    all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
     lesson_plans: Pjanijiet tal-Lezzjoni
     signin_message: Diġà rreġistrat? %{link}
     student_reg_link: Registrazzjoni ta' lis-Studenti
@@ -465,7 +471,7 @@
       u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi
       mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f'kull età.
     test_videos_help: Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek
-    try_beta_courses: "Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja"
+    try_beta_courses: Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja
     use_as_teacher: Uża dan is-sit bħala għalliem
     heading_hoc2014: "<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>"
     heading_elementary: "<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza
@@ -908,7 +914,7 @@
   time:
     hour: siegħa
     day: jum
-    week: "ġimgħa"
+    week: ġimgħa
   age_interstitial:
     age: Your age
     header: Account Information Update

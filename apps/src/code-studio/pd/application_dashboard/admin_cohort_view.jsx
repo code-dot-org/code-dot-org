@@ -69,7 +69,7 @@ export default class AdminCohortView extends React.Component {
   }
 
   handleDownloadCsv = () => {
-     const headers = {
+    const headers = {
       date_accepted: 'Date Accepted',
       applicant_name: 'Name',
       district_name: 'School District',
@@ -77,7 +77,8 @@ export default class AdminCohortView extends React.Component {
       email: 'Email',
       assigned_workshop: 'Assigned Workshop',
       registered_workshop: 'Registered Workshop',
-      accepted_seat: 'Accepted Seat?'
+      accepted_seat: 'Accepted Seat?',
+      course_name: 'Course'
     };
 
     const filteredCohortWithFormData = this.state.filteredCohort.map(row => {

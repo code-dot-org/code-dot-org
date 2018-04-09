@@ -674,7 +674,7 @@
   dashboard_sections_table_course: "コース"
   dashboard_sections_table_pairing_allowed: "ペアプログラミング"
   dashboard_sections_table_stage_extras: "追加ステージ"
-  dashboard_sections_table_students: "生徒の皆さん"
+  dashboard_sections_table_students: "生徒"
   dashboard_sections_table_code: "セクション・コード"
   dashboard_sections_name: "セクション名"
   dashboard_sections_choose_secret: "生徒用にアカウントを用意する場合、そのセクション用の秘密のタイプに<b>単語</b>か<b>画像</b>を選んでください。"

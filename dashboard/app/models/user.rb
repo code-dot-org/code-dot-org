@@ -421,8 +421,6 @@ class User < ActiveRecord::Base
 
   before_create :suppress_ui_tips_for_new_users
 
-  before_create :update_default_share_setting
-
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
@@ -478,8 +476,6 @@ class User < ActiveRecord::Base
     :fix_by_user_type
 
   before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
-
-  before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
     return unless teacher?
@@ -1633,11 +1629,16 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
+  # rubocop:disable Lint/UnreachableCode
   def show_census_teacher_banner?
+    # Temporarily hide the banner
+    return false
+
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
+  # rubocop:enable Lint/UnreachableCode
 
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
@@ -1679,19 +1680,6 @@ class User < ActiveRecord::Base
         enrollment.update(user: self)
       end
     end
-  end
-
-  # Disable sharing of advanced projects for students under 13 upon
-  # account creation
-  def update_default_share_setting
-    self.sharing_disabled = true if under_13?
-  end
-
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
-  def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
   end
 
   # When creating an account, we want to look for any channels that got created

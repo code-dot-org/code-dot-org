@@ -316,3 +316,21 @@ fr:
       BigEvent_2018:
         title: Le Grand Événement
         desc: Les élèves découvrent le concept de la programmation d’«événements», qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant appuiera sur des boutons à distance et les élèves réagiront en fonction du bouton choisi.
+      GraphPaperProgramming_2018:
+        title: Programmation sur papier quadrillé
+        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades afin de reproduire un dessin.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant en ligne.
+      Conditionals_2018:
+        title: Instructions conditionnelles
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme «Si je tire une carte rouge, je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+      DigitalFootprint_2018:
+        title: Ton empreinte numérique
+        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne des informations personnelles crée une empreinte numérique ou une « trace » qui a des conséquences.
+      BinaryImages_2018:
+        title: Les images binaires
+        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement des zéros et des uns, nos précédents cours ont enseigné aux élèves que les informations peuvent être représentées d’une variété d'options binaires.  Cette leçon emmène ce concept encore plus loin puisqu'elle illustre comment un ordinateur peut stocker des informations encore plus complexes (telles que les images et les couleurs) également en binaire.

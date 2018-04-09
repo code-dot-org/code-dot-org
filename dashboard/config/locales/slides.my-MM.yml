@@ -3,40 +3,40 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "ပထမဆံုး code သင္ၾကားမႈက ၾကိဳဆုိပါတယ္။ programming ရဲ့ ပထမဆံုး အရသာကို
-          ခံစားၾကည့္စို႔"
+        text: ပထမဆံုး code သင္ၾကားမႈက ၾကိဳဆုိပါတယ္။ programming ရဲ့ ပထမဆံုး အရသာကို
+          ခံစားၾကည့္စို႔
       2:
         image: notes/hoc1_2.jpg
         text: Blocky လုိ႔ေခၚတဲ့ Programming Langauge ကိုအသံုးျပဳျပီး blocks ေတြကို
           ဆြဲယူဆြဲခ်လုပ္ရင္း code ေရးၾကမယ္။
       3:
         image: notes/hoc1_3.jpg
-        text: "တခ်ိဳ ႔ code ေတြက လက္နဲ႔ရိုက္ရတယ္။ Blocky ကေတာ့ ျမင္သာတယ္။ Blocks တုိင္းဟာ
-          တကယ့္ code အစစ္ေတြကို ကိုယ္စားျပဳတယ္။ "
+        text: 'တခ်ိဳ ႔ code ေတြက လက္နဲ႔ရိုက္ရတယ္။ Blocky ကေတာ့ ျမင္သာတယ္။ Blocks တုိင္းဟာ
+          တကယ့္ code အစစ္ေတြကို ကိုယ္စားျပဳတယ္။ '
       4:
         image: notes/hoc1_4.jpg
-        text: "ကြန္ပ်ဴတာသိပၸံရဲ့ အေျခခံကိုသင္ယူျပီး ဒီသေဘာတရားေတြကို အသံုးျပဳျပီး
-          application ေတြဖန္တီးမယ္"
+        text: ကြန္ပ်ဴတာသိပၸံရဲ့ အေျခခံကိုသင္ယူျပီး ဒီသေဘာတရားေတြကို အသံုးျပဳျပီး application
+          ေတြဖန္တီးမယ္
       5:
         image: notes/hoc1_5.jpg
         text: Program ဆုိတာ ကြန္ပ်ဴတာက ဘာလုပ္ရမလဲဆုိတာကို ေျပာျပတဲ့ ညႊန္ၾကားခ်က္ေတြစုစည္းထားတာျဖစ္တယ္
       6:
         image: notes/hoc1_6.jpg
-        text: "ပထမဆံုး Program ရဲ့ လုပ္ေဆာင္ခ်က္က Angry Bird ေလးေတြကို maze ကေနျဖတ္ျပီး
-          ၀က္အစိမ္းေလးဆီပစ္ဖုိ႔ပဲ"
+        text: ပထမဆံုး Program ရဲ့ လုပ္ေဆာင္ခ်က္က Angry Bird ေလးေတြကို maze ကေနျဖတ္ျပီး
+          ၀က္အစိမ္းေလးဆီပစ္ဖုိ႔ပဲ
       7:
         image: notes/hoc1_7.jpg
-        text: "ဘယ္ဘက္က maze က program run ဖို႔။ puzzle တစ္ခုခ်င္းရဲ့ ညႊန္ၾကားခ်က္ေတြက
-          maze ရဲ့ ေအာက္မွာ"
+        text: ဘယ္ဘက္က maze က program run ဖို႔။ puzzle တစ္ခုခ်င္းရဲ့ ညႊန္ၾကားခ်က္ေတြက
+          maze ရဲ့ ေအာက္မွာ
       8:
         image: notes/hoc1_8.jpg
-        text: "အလယ္က toolbox မွာ Angry Bird အတြက္ commands(လုပ္ေဆာင္ခ်က္) ေတြပါတယ္။
-          အဲဒါေတြသံုးျပီး code ကုိေဆာက္မွာျဖစ္တယ္။"
+        text: အလယ္က toolbox မွာ Angry Bird အတြက္ commands(လုပ္ေဆာင္ခ်က္) ေတြပါတယ္။
+          အဲဒါေတြသံုးျပီး code ကုိေဆာက္မွာျဖစ္တယ္။
       9:
         image: notes/hoc1_9.jpg
-        text: "ညာဘက္က workspace ျဖစ္ျပီး toolbox ထဲက block ေတြကို program တည္ေဆာက္ဖုိ႔အတြက္
+        text: ညာဘက္က workspace ျဖစ္ျပီး toolbox ထဲက block ေတြကို program တည္ေဆာက္ဖုိ႔အတြက္
           ဆြဲထည့္ဖုိ႔ပါ။ block ကိုဖ်က္ခ်င္တယ္ဆုိရင္ အစြန္မွာရွိတဲ့ အမိႈက္ပံုးထဲကို
-          ဆြဲထည့္လုိက္ပါ။"
+          ဆြဲထည့္လုိက္ပါ။
       10:
         image: notes/hoc1_10.jpg
         text: Block တစ္ခုမွာ instruction တစ္ခုပါတယ္။ "move forward ေရွ႔သုိ ့" ဆုိတဲ့
