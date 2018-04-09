@@ -18,6 +18,8 @@ class Video < ActiveRecord::Base
 
   validates_uniqueness_of :key
 
+  before_save :fetch_thumbnail
+
   # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
   # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
   YOUTUBE_ID_REGEX = /[^!*"&?\/ ]{11}/
@@ -70,6 +72,14 @@ class Video < ActiveRecord::Base
 
   def self.youtube_base_url
     'https://www.youtube.com'
+  end
+
+  def fetch_thumbnail
+    return unless Rails.application.config.levelbuilder_mode
+
+    path = dashboard_dir('public', 'c', 'video_thumbnails', "#{key}.jpg")
+    url = "http://img.youtube.com/vi/#{youtube_code}/mqdefault.jpg"
+    IO.copy_stream(open(url), path)
   end
 
   def youtube_url(args={})

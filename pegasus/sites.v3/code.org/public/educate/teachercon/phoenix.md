@@ -69,7 +69,7 @@ If you choose to drive to TeacherCon instead of fly, and are driving over 25 mil
 <summary>**Will I need additional transportation once I arrive at TeacherCon?**</summary>
   <p>
   <br>
-You will not need to rent a vehicle while at TeacherCon since all conference sessions and meals will take place on site at the hotel. If your Regional Event is off-site, transportation options will be provided. If you are flying, you will need to arrange your own transportation to and from the airport (ex: SuperShuttle, ride share or taxi). Plan to pay for this upfront but we will provide you a gift card that will cover the cost once you arrive at the hotel. (see expenses covered for details, below).
+You will not need to rent a vehicle while at TeacherCon since all conference sessions and meals will take place on site at the hotel. If your Regional Event is off-site, transportation options will be provided. If you are flying, you will need to arrange your own transportation to and from the airport (ex: SuperShuttle, ride share or taxi). Plan to pay for this upfront but we will provide you a gift card that will cover the cost once you register at the conference. (see expenses covered for details, below).
 </p>
 </details>
 
@@ -93,7 +93,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 * A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
-All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other travel-related incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
+All participants will receive a $300 gift card upon their registration at the conference to cover any additional expenses such as meals we do not provide, and other travel-related incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
 </p>
 </details>
 
