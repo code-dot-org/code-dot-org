@@ -276,8 +276,10 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   config.omniauth :facebook, CDO.dashboard_facebook_key, CDO.dashboard_facebook_secret, scope: 'email,public_profile',
-    client_options: {site: 'https://graph.facebook.com/v2.6',
-                     authorize_url: "https://www.facebook.com/v2.6/dialog/oauth"}
+    client_options: {
+      site: 'https://graph.facebook.com/v2.12',
+      authorize_url: "https://www.facebook.com/v2.12/dialog/oauth"
+    }
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
     include_granted_scopes: true,
