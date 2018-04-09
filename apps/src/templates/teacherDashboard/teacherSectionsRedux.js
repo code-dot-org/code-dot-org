@@ -403,7 +403,7 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_CSF_SCRIPT_IDS) {
     return {
       ...state,
-      isCsfScript: id => action.ids.includes(id),
+      isCsfScript: id => action.ids.indexOf(id) > -1,
     };
   }
 
