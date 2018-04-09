@@ -403,7 +403,7 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_CSF_SCRIPT_IDS) {
     return {
       ...state,
-      isCsfScript: id => action.ids.indexOf(id) > -1,
+      csfScriptIds: action.ids,
     };
   }
 
@@ -898,6 +898,13 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => assignment ? assignment.path : '');
 };
+
+/**
+ * Is the given script ID a CSF course? `script.rb` owns the list.
+ * @param state
+ * @param id
+ */
+export const isCsfScript = (state, id) => state.teacherSections.csfScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

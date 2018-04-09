@@ -11,6 +11,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
+  isCsfScript,
 } from './teacherSectionsRedux';
 
 const style = {
@@ -145,7 +146,7 @@ export default connect(state => ({
   sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  isCsfScript: state.teacherSections.isCsfScript,
+  isCsfScript: id => isCsfScript(state, id),
 }), {
   editSectionProperties,
   handleSave: finishEditingSection,
