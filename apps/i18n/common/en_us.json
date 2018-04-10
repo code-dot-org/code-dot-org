@@ -149,6 +149,7 @@
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
   "completed": "Completed",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
+  "completionStatus": "Completion Status",
   "concept": "Concept",
   "confirming": "Confirming...",
   "confirmSchool": "Confirm School",
