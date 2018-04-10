@@ -10,5 +10,5 @@ wrong 'it will be different each time you run it'
 markdown <<MARKDOWN
 <!-- BLOCK: ![](https://images.code.org/da1c6db6f537c72748389671691619a0-image-1483468367249.png) -->
 
-![](https://images.code.org/95d7d469e22ca670564b953b0d9a54ff-image-1522966051439.png)
+<img src="https://images.code.org/95d7d469e22ca670564b953b0d9a54ff-image-1522966051439.png" style="width: 225px">
 MARKDOWN

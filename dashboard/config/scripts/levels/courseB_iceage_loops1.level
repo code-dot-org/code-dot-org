@@ -34,9 +34,8 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Help Scrat across the slippery ice to get to the acorn!",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Watch out for broken ice! Scrat will fall right through!\",\"hint_id\":\"courseB_iceage_loops1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2989877b31f13247f81d185d7f4e3e14/courseB_iceage_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will have to use this block:\\n<xml><block type=\\\"maze_moveEast\\\"/></xml>\",\"hint_id\":\"courseB_iceage_loops1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/298bfa74a8ecc417fbad4447ca52af0f/courseB_iceage_loops1.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\"Free Play\"",

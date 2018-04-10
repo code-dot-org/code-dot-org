@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Can you get to the acorn with just one <xml><block type=\"maze_moveWest\"/></xml> block? Try using a loop!",
     "ideal": "3",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Use this new block!\\n <xml><block type=\\\"controls_repeat_simplified_dropdown\\\">\\n    <title name=\\\"TIMES\\\" config=\\\"3-10\\\">5</title>\\n    </block></xml>\",\"hint_id\":\"courseB_iceage_loops3_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c588321afd9d3b266246bf0319935509/courseB_iceage_loops3.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"To repeat code, drag out a `repeat` loop, then put the block you want inside of it.\",\"hint_id\":\"courseB_iceage_loops3_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/95d0ca6b5ee266ca02838e567c1bd8ed/courseB_iceage_loops3.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
