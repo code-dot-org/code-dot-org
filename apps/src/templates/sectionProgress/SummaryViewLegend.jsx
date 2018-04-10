@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 const styles = {
   legendBox: {
-    borderWidth: '1',
+    borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: color.lightest_gray,
     backgroundColor: color.white,
