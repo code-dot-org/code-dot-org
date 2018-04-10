@@ -90,7 +90,6 @@ group :development, :test do
 
   # For UI testing.
   gem 'chromedriver-helper', '~> 0.0.7'
-  gem 'colorize'
   gem 'cucumber', '~> 2.4.0'
   gem 'eyes_selenium', '3.14.2'
   gem 'minitest', '~> 5.5'
@@ -296,3 +295,4 @@ install_if require_pg do
 end
 
 gem 'activerecord-import'
+gem 'colorize'
