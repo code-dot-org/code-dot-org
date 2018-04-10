@@ -15,6 +15,7 @@ class AdminUsersController < ApplicationController
     current_sign_in_at
     sign_in_count
     users.created_at
+    provider
   ).freeze
 
   def account_repair_form
