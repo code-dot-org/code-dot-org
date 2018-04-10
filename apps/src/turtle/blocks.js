@@ -292,13 +292,15 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
   // Block for pointing to a specified direction
-    block.appendValueInput('VALUE');
+    block.appendValueInput('VALUE')
+        .setCheck(blockly.BlockValueType.NUMBER);
     block.appendDummyInput()
         .appendTitle(msg.degrees());
   });
 
   generator.point_to_param = function () {
-    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    let value = generator.valueToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_NONE);
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
