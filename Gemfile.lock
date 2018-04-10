@@ -857,7 +857,7 @@ DEPENDENCIES
   octokit
   oj
   omniauth-clever (~> 1.2.1)!
-  omniauth-facebook (~> 4.0.0.rc1)
+  omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.3.1)
   omniauth-openid-connect!
   omniauth-windowslive (~> 0.0.11)!
