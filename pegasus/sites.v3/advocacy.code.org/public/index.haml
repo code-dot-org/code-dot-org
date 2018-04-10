@@ -12,29 +12,33 @@ video_player: false
 ---
 
 -# Put advocacy.css after other CSS files so that it can override them.
+=inline_css 'header.css'
 %link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
 %link{:href=>"/css/advocacy.css", :rel=>"stylesheet"}
 
+- banner_body = capture_haml do
+  Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
+
+  .learn-more
+    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
+      %button.header-button
+        Learn more
+
 #homepage
 
-  #fullwidth
+  #fullwidth.banner-container
+    .banner
+      .banner-shade
+        .container_responsive
+          %h1 Advocate for computer science education
+          .desktop-feature
+            = banner_body
+
     = view :header
 
-    .banner
-      .container_responsive
-        %h1 Advocate for computer science education
-        Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
-
-        .learn-more
-          %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf")}
-            %button.header-button
-              Learn more
-
-      .clear
-
-    .clear
-
   .container_responsive
+    .non-banner.mobile-feature
+      = banner_body
 
     -state ||= nil
     = view :interactive_map, use_url: false, advocacy_variation: true
