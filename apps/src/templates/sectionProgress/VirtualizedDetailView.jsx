@@ -103,7 +103,7 @@ export default class VirtualizedDetailView extends Component {
     const NAME_COLUMN_WIDTH = 150;
     const PROGRESS_BUBBLE_WIDTH = 39;
     // TODO(caleybrock): Calculate the width differently for progress bubbles
-    // const UNPLUGGED_BUBBLE_WIDTH = 100;
+    // const UNPLUGGED_BUBBLE_WIDTH = 190;
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
