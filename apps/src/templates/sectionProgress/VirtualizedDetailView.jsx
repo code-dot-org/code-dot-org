@@ -8,32 +8,54 @@ import {
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
+import color from "../../util/color";
 
 const styles = {
-  cell: {
-    padding: 10,
-    width: '100%',
+  lessonHeading: {
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+  lessonNumberHeading: {
+    margin: '9px 16px',
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   multigrid: {
-    border: '1px solid #ddd',
+    border: '1px solid',
+    borderColor: color.border_gray,
   },
   bottomLeft: {
-    borderRight: '2px solid #aaa',
-    backgroundColor: '#f7f7f7',
+    borderRight: '2px solid',
+    borderColor: color.border_gray,
   },
   topLeft: {
-    borderBottom: '2px solid #aaa',
-    borderRight: '2px solid #aaa',
-    fontWeight: 'bold',
+    borderBottom: '2px solid',
+    borderRight: '2px solid',
+    borderColor: color.border_gray,
+    padding: '8px 10px',
+    backgroundColor: color.table_header,
   },
   topRight: {
-    borderBottom: '2px solid #aaa',
-    fontWeight: 'bold',
+    borderBottom: '2px solid',
+    borderRight: '1px solid',
+    borderColor: color.border_gray,
+    backgroundColor: color.table_header,
   },
   icon: {
-    width: 40,
-    padding: 3,
+    padding: '3px 10px',
+    width: 38,
     fontSize: 20,
+  },
+  link: {
+    color: color.teal,
+  },
+  summaryCell: {
+    margin: '8px 12px',
+  },
+  nameCell: {
+    margin: '10px',
+  },
+  cell: {
+    borderRight: '1px solid',
+    borderColor: color.border_gray,
   }
 };
 
@@ -60,19 +82,38 @@ export default class VirtualizedDetailView extends Component {
     // Subtract 1 to account for the student name column.
     const stageIdIndex = columnIndex-1;
 
+    // Override default cell style from multigrid
+    let cellStyle = {
+      ...style,
+      ...styles.cell,
+    };
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      cellStyle = {
+        ...cellStyle,
+        backgroundColor: color.background_gray,
+      };
+    }
+
     return (
-      <div className={styles.Cell} key={key} style={style}>
+      <div className={styles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={styles.cell}>Lesson</span>
+          <span style={styles.lessonHeading}>
+            Lesson
+          </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <span style={styles.cell}>{columnIndex}</span>
+          <div style={styles.lessonNumberHeading}>
+            {columnIndex}
+          </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={styles.cell}>Level Type</span>
+          <span style={styles.lessonHeading}>
+            Level Type
+          </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span style={styles.cell}>
+          <span style={{}}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 className={level.icon ? level.icon: "fas fa-question"}
@@ -83,11 +124,14 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
-          <span style={styles.cell}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[rowIndex-2].id}/script/${scriptData.id}`}>
+          <div style={styles.nameCell}>
+            <a
+              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
+              style={styles.link}
+            >
               {section.students[studentStartIndex].name}
             </a>
-          </span>
+          </div>
         )}
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
@@ -105,7 +149,9 @@ export default class VirtualizedDetailView extends Component {
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
     const NAME_COLUMN_WIDTH = 150;
-    const PROGRESS_BUBBLE_WIDTH = 50;
+    const PROGRESS_BUBBLE_WIDTH = 39;
+    // TODO(caleybrock): Calculate the width differently for progress bubbles
+    // const UNPLUGGED_BUBBLE_WIDTH = 100;
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
