@@ -4,6 +4,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
+import SummaryViewLegend from './SummaryViewLegend';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
@@ -86,6 +87,9 @@ class SectionProgress extends Component {
               validScripts={validScripts}
               scriptId={scriptId}
               onChange={this.onChangeScript}
+            />
+            <SummaryViewLegend
+              showCSFProgressBox={true}
             />
           </div>
           <div style={styles.viewToggleContainer}>
