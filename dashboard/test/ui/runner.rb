@@ -688,6 +688,14 @@ def run_feature(browser, feature, options)
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
     ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
+    $lock.synchronize do
+      log_error prefix_string(Time.now, log_prefix)
+      log_error prefix_string(browser.to_yaml, log_prefix)
+      log_error prefix_string(log_link, log_prefix)
+      log_error prefix_string(output_stdout, log_prefix)
+      log_error prefix_string(output_stderr, log_prefix)
+      log_browser_error prefix_string(browser.to_yaml, log_prefix)
+    end
 
     rerun_arguments = File.exist?(rerun_file) ? " @#{rerun_file}" : ''
 
@@ -713,6 +721,7 @@ def run_feature(browser, feature, options)
     else
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
+      log_error prefix_string(log_link, log_prefix)
       log_error prefix_string(output_stdout, log_prefix)
       log_error prefix_string(output_stderr, log_prefix)
       log_browser_error prefix_string(browser.to_yaml, log_prefix)
