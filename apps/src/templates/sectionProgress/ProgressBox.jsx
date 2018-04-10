@@ -3,7 +3,6 @@ import color from "@cdo/apps/util/color";
 
 const styles = {
   box: {
-    margin: 5,
     height: 22,
     width: 22,
     borderWidth: 1,

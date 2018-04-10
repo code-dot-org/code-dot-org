@@ -175,6 +175,48 @@ describe('Artist', () => {
     });
   });
 
+  describe('pointTo', () => {
+    let artist;
+    beforeEach(() => {
+      artist = new Artist();
+      artist.visualization = new Artist.Visualization();
+    });
+
+    it('can point to a specific direction', () => {
+      const absoluteDirection = [0, 30, 45, 60, 180, 270];
+      const blockId = "block_id_4";
+      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
+
+      absoluteDirection.forEach(angle => {
+        artist.step('PT', [angle, blockId]);
+        expect(pointToSpy).to.be.have.been.calledWith(angle);
+      });
+      pointToSpy.restore();
+    });
+
+    it('can point to a 50 degrees', () => {
+      let angle = 50;
+      let blockId = "block_id_5";
+
+      artist.visualization.angle = 50;
+      artist.step('PT', [angle, blockId]);
+
+      expect(artist.visualization.angle).to.equal(angle);
+    });
+
+    it('should call setHeading', () => {
+      let angle = 60;
+      let blockId = "block_id_8";
+
+      const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
+      artist.step('PT', [angle, blockId]);
+
+      expect(setHeadingStub).to.be.have.been.calledOnce;
+
+      setHeadingStub.restore();
+    });
+  });
+
   describe('jumpTo', () => {
     let artist;
     beforeEach(() => {

@@ -1043,6 +1043,23 @@
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
+        stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq1_2018_callout:
@@ -1117,6 +1134,9 @@
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini
           kullan.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
           bölümlerine taşımanı sağlar.
@@ -1786,6 +1806,9 @@
           Bloğa bağlı yazı kısmını değiştir ve değişkenin aldığı değeri atamış ol.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Bu değişkene nasıl değer atadığını göstermektedir.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
           doğru \n sürükleyebilirsin."
