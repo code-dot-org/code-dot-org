@@ -1,17 +1,17 @@
 "ur-PK":
-  hour_of_code: "آور-آف-کوڈ"
+  hour_of_code: آور-آف-کوڈ
   hello: hello dunia
-  'yes': "جی"
-  'no': "نہيں"
-  select_language: "براہ مہربانی اپنی زبان منتخب کریں"
+  'yes': جی
+  'no': نہيں
+  select_language: براہ مہربانی اپنی زبان منتخب کریں
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: "مزید سیکھے"
-  en: "کمپیوٹر سائنس"
-  computer_science_edweek: "کمپیوٹر سائنس کا تعلیمی ہفتہ"
-  csedweek_dates: "۸-۱۴ دسمبر، ۲۰۱۵"
+  upgrade_ie_link: مزید سیکھے
+  en: کمپیوٹر سائنس
+  computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
+  csedweek_dates: ۸-۱۴ دسمبر، ۲۰۱۵
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> کوڈ کی گھڑی</a> آ رہا ہے ۔ بلارہا ہے تمام اساتذہ اور منتظمین
     کو، <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -21,19 +21,19 @@
     وسائل دیکھیں</a>'
   n_have_learned_an_hoc: "<h1>آزمائیں ایک</h1><h2>کوڈ کی گھڑی</h2><h3># جیسے پیش کیا
     گیا ہے</h3>"
-  anybody_can_learn: "ھر کوئ سیکھ سکتا ھے۔"
+  anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔
   learn_now: Abi sikhiye
-  petition_message: "ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے"
-  petition_sign_message: "اگر آپ متفق ہوں، اپنا نام سائن ان کریں ۔  # دوسروں میں شامل
-    ہوں"
-  petition_sign_message_support: "اگر آپ ہماری مدد کرنا چاہیں تو اپنا نام سائن ان
-    کریں ۔  # دوسروں میں شامل ہوں"
+  petition_message: ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے
+  petition_sign_message: 'اگر آپ متفق ہوں، اپنا نام سائن ان کریں ۔  # دوسروں میں شامل
+    ہوں'
+  petition_sign_message_support: 'اگر آپ ہماری مدد کرنا چاہیں تو اپنا نام سائن ان
+    کریں ۔  # دوسروں میں شامل ہوں'
   petition_join_others: "# دوسروں میں شامل ہوں"
-  name: "نام"
+  name: نام
   email: Email
-  zipcode: "زپ کوڈ یا ملک"
-  submit: "جمع کرائیں"
-  twentyhours_heading: "ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے"
+  zipcode: زپ کوڈ یا ملک
+  submit: جمع کرائیں
+  twentyhours_heading: ہمارے کمپیوٹر سائنس کے تعارفی کورسز کر کے دیکھیے
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   og_title: Coding is foundational
@@ -43,7 +43,7 @@
     deserves the opportunity to study computer science.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "کمپیوٹر سائنس کا تعلیمی ہفتہ"
+  csedweek_og_title: کمپیوٹر سائنس کا تعلیمی ہفتہ
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
@@ -56,16 +56,16 @@
   hoc2014_try: Try it
   hoc2014_teachers: Teachers
   hoc2014_host: Host it
-  hoc2014_everyone: "ہر کوئی"
-  hoc2014_support: "اس ▾ کی حمایت;"
-  hoc2014_whatishoc: "آور-آف-کوڈ کیا ہے؟"
+  hoc2014_everyone: ہر کوئی
+  hoc2014_support: اس ▾ کی حمایت;
+  hoc2014_whatishoc: آور-آف-کوڈ کیا ہے؟
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: "آور-آف-کوڈ کے ایونٹ کے لئے تلاش کریں"
+  csedweek_map_search_placeholder: آور-آف-کوڈ کے ایونٹ کے لئے تلاش کریں
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: "ری-سیٹ کریں"
+  csedweek_map_search_reset: ری-سیٹ کریں
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: "آور اف کوڈ ایونٹ"
+  csedweek_map_legend_event: آور اف کوڈ ایونٹ
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Sign up
   cded_try_it: Try it
@@ -79,7 +79,7 @@
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: "انگریزی ویب سائٹ دیکھئں"
+  view_english_site: انگریزی ویب سائٹ دیکھئں
   non_english_tutorials: 'Tutorials translated into multiple languages:'
   write_your_first_program: Apna pehla Computer ka Program likhiye
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
@@ -92,7 +92,7 @@
   go: jana
   thank_you_: Shukarya!
   congratulations: Mubarik ho!
-  congratulations_on_completing_hoc: "ایک کوڈ کی گھڑی مکمل کرنے پر مبارک باد"
+  congratulations_on_completing_hoc: ایک کوڈ کی گھڑی مکمل کرنے پر مبارک باد
   congratulations_volunteer: 'مبارک باد: اب جب کہ آپ نے کوڈ کی گھڑی کی کوشش کی ہے،
     <a href="https://code.org/volunteer"> ایک کلاس روم میں رضاکارانہ کام کے لئے سائن
     اپ کریں</a> اور مدد کریں طالب علموں کو ایک کوڈ کی گھڑی سیکھنے میں!'
@@ -230,7 +230,7 @@
   share_achievement: Share your achievement
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
-  leaderboards_for_hoc: "کوڈ کی گھڑی کے لیئے رہنما تختہ."
+  leaderboards_for_hoc: کوڈ کی گھڑی کے لیئے رہنما تختہ.
   support_url: http://support.code.org/
   country: Mulk
   city: Shaher
@@ -239,25 +239,25 @@
   girls: Larkian
   give_my_hour: 'Give my Hour to:'
   girls_team: larkiun ki jama'at
-  boys_team: "لڑکوں کی ٹیم"
+  boys_team: لڑکوں کی ٹیم
   tell_the_world: dunia ko btao!
   thanks_for_voting: vote daine ka shukarya!
-  share_on_facebook: "فیس بُک پر شیئر کریں"
-  share_on_twitter: "ٹوئٹر پر شیئر کریں"
-  beyond_an_hour: "کوڈ کی گھڑی سے آگے"
-  get_started: "شروع کریں"
+  share_on_facebook: فیس بُک پر شیئر کریں
+  share_on_twitter: ٹوئٹر پر شیئر کریں
+  beyond_an_hour: کوڈ کی گھڑی سے آگے
+  get_started: شروع کریں
   i_agree: ma manta ho
   participant_select: intyhab
   participant_student: Talib-e-ilm
   participant_parent: Waldain
-  participant_educator: "معلم"
+  participant_educator: معلم
   participant_engineer: Software Engineer
   participant_other: uper mein se koi ni
-  print_all: "تمام کو print کر دو"
-  print_ice_art: "اپنے برفانی آرٹ کو چھاپیں"
+  print_all: تمام کو print کر دو
+  print_ice_art: اپنے برفانی آرٹ کو چھاپیں
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: ma aik ho
-  never_spam: "ہم آپ کو کبھی فضول چیزیں نہیں بھیجیں گے"
+  never_spam: ہم آپ کو کبھی فضول چیزیں نہیں بھیجیں گے
   enter_country: Agr united states se bahir hain to apne mulk ka intyhab kijiye
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
@@ -267,11 +267,11 @@
     a local school, or summer camp.
   learn_code_studio: Try Code Studio courses
   learn_next_level: Code Studio کا ایک اور کورس آزمائیں
-  learn_online: "دیگر آن لائن کورسز آزمائیں"
-  learn_classes: "علاقائی کلاسوں کو تلاش کریں"
+  learn_online: دیگر آن لائن کورسز آزمائیں
+  learn_classes: علاقائی کلاسوں کو تلاش کریں
   learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
-  just_did_hoc: "میں نے کیا #HourOfCode -اسے جانچیں! @codeorg"
+  just_did_hoc: 'میں نے کیا #HourOfCode -اسے جانچیں! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
@@ -322,23 +322,23 @@
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "سیکھیں ایک گھنٹے کا کوڈ"
-  beyond_hoc: "ایک گھنٹے سے آگے"
+  learn_hoc: سیکھیں ایک گھنٹے کا کوڈ
+  beyond_hoc: ایک گھنٹے سے آگے
   what_gender: ap ka jinss kia hai?
   girl: larki
   boy: larka
-  help_recruit_coders: "ہمیں آپکی ٹیم کے لیے مزید coders کو بھرتی کرنے میں مدد کریں!"
-  help_recruit: "مزید coders بھرتی کرنے میں ہماری مدد کریں!"
+  help_recruit_coders: ہمیں آپکی ٹیم کے لیے مزید coders کو بھرتی کرنے میں مدد کریں!
+  help_recruit: مزید coders بھرتی کرنے میں ہماری مدد کریں!
   lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
   lines_of_code_alt: Talaba se likhi gae code ki lines#
-  who_has_done_hoc: "کس نے #HourOfCode مکمل کیا ہے؟ @codeorg"
+  who_has_done_hoc: 'کس نے #HourOfCode مکمل کیا ہے؟ @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "کوڈ کی گھڑی رہنما تختہ"
+  hoc_leaderboards: کوڈ کی گھڑی رہنما تختہ
   students_and_lines: "%{students} طلبا نے کوڈ کی گھڑی کیا ہے اور %{lines} کے خطوط
     کا کوڈ لکھا ۔"
-  start_hoc: "ابھی شروع کریں کوڈ کی گھڑی"
-  contact_form_topic_press: "پریس/میڈیا (انٹرویو یا سماعتی رابطہ)"
+  start_hoc: ابھی شروع کریں کوڈ کی گھڑی
+  contact_form_topic_press: پریس/میڈیا (انٹرویو یا سماعتی رابطہ)
   stats_nina: '"ہر روز ایک جیسے بہتر ہوتے ہوئے نتائج &mdash; 100% فیصد مصروفیت " نینا
     نیکولس پیری، ایک ٹیچر'
   stats_student: '"مجھے پتہ تھا کہ یہ <b> زندگی-میں-ایکبار </b> والا موقع ہے۔" – میریآنا
@@ -347,20 +347,20 @@
     پرجوش نہیں دیکھا۔" مائیکل کلارک، ٹیچر'
   studiobar_title: "<a href='http://studio.code.org'> کوڈ سٹوڈیو</a> دریافت کریں"
   studiobar_title_nolink: Code Studio کو جانچیں
-  studiobar_elementary_title: "بنیادی کورسز"
-  studiobar_elementary_body: "ہمارے تین نئے کورس K کے لیے &#8209; 5"
-  studiobar_hoc_title: "گھنٹے کا کوڈ"
-  studiobar_hoc_body: "کوڈ کرنا سیکھیں Angry Birds کے ساتھ"
+  studiobar_elementary_title: بنیادی کورسز
+  studiobar_elementary_body: ہمارے تین نئے کورس K کے لیے &#8209; 5
+  studiobar_hoc_title: گھنٹے کا کوڈ
+  studiobar_hoc_body: کوڈ کرنا سیکھیں Angry Birds کے ساتھ
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: "خود کی Flappy گیم بنائیں اور دوسروں کو دکھائیں"
-  studiobar_teacher_title: "اساتذہ کے لئے"
+  studiobar_flappy_body: خود کی Flappy گیم بنائیں اور دوسروں کو دکھائیں
+  studiobar_teacher_title: اساتذہ کے لئے
   studiobar_teacher_body: Code Studio کو اپنی کلاس میں متعارف کروائیں
-  studiobar_frozen_title: "آور-آف-کوڈ"
-  studiobar_frozen_body: "اینا اور ایلسا کے ساتھ ایک ونٹر ونڈرورلڈ کری-ایٹ کریں"
-  studiobar_donate_title: "عطیہ کریں"
-  studiobar_donate_body: "آپ کے عطیہ کئے گۓ ہر ڈالر سے ایک بچہ سیکھتا ہے"
-  studiobar_shop_title: "دکان"
-  studiobar_shop_body: "دقیانوسی تصوّرات کو توڑیں. فخر کے ساتھ اپنی علامت (لوگو) پہنیں."
+  studiobar_frozen_title: آور-آف-کوڈ
+  studiobar_frozen_body: اینا اور ایلسا کے ساتھ ایک ونٹر ونڈرورلڈ کری-ایٹ کریں
+  studiobar_donate_title: عطیہ کریں
+  studiobar_donate_body: آپ کے عطیہ کئے گۓ ہر ڈالر سے ایک بچہ سیکھتا ہے
+  studiobar_shop_title: دکان
+  studiobar_shop_body: دقیانوسی تصوّرات کو توڑیں. فخر کے ساتھ اپنی علامت (لوگو) پہنیں.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -409,136 +409,136 @@
   homepage_hero_text_teacher2: |-
     &ldquo;اس پروگرام نے میرے سو فیصد طلبہ کو مصروف مشغول رکھا۔&rdquo;
     آدم, استاد
-  homepage_hero_text_stat_loc: "٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس وقت داخل ہیں۔"
+  homepage_hero_text_stat_loc: ٢٥ لاکھ لڑکیاں کوڈ سٹوڈیو میں اس وقت داخل ہیں۔
   homepage_hero_text_stat_students: "#student_count طلبہ کے اکاؤنٹس کوڈ سٹوڈیو پر"
-  homepage_hero_text_stat_served: "دا ہور کوڈ: #served لوگوں کی خدمات کی"
+  homepage_hero_text_stat_served: 'دا ہور کوڈ: #served لوگوں کی خدمات کی'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "گھنٹے کا کوڈ"
-  homepage_slot_text_frozen: "فروزن۔ اینا اور ایلسا کے ساتھ"
-  homepage_slot_text_teacher: "ٹیچر کا ڈیش بورڈ"
-  homepage_slot_text_studio: "ہمارے تمام تر اسباق"
+  homepage_slot_text_hoc: گھنٹے کا کوڈ
+  homepage_slot_text_frozen: فروزن۔ اینا اور ایلسا کے ساتھ
+  homepage_slot_text_teacher: ٹیچر کا ڈیش بورڈ
+  homepage_slot_text_studio: ہمارے تمام تر اسباق
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: "دکان"
+  homepage_slot_text_shop: دکان
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: "ہر اسٹوڈینٹ کے لیے ایک کوڈ کی گھڑی."
+  homepage_action_text_hoc: ہر اسٹوڈینٹ کے لیے ایک کوڈ کی گھڑی.
   homepage_action_text_num_served: "# خدمات سر انجام دیں"
-  homepage_action_text_join_us: "ہمارے ساتھ شامل ہوں"
+  homepage_action_text_join_us: ہمارے ساتھ شامل ہوں
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: "تکنیکی رضاکاروں چاہئیں"
-  homepage_action_text_codevideo: "ویڈیو دیکھے"
-  homepage_action_text_teachervideo: "ویڈیو دیکھے"
-  homepage_action_text_watchvideo: "ویڈیو دیکھے"
-  homepage_action_text_girlvideo: "ایک لڑکی کی حوصلہ افزائی"
-  homepage_action_text_learn: "سیکھنا شروع کریں"
-  homepage_action_text_signpetition: "درخواست پر دستخط کریں"
+  homepage_action_text_volunteers: تکنیکی رضاکاروں چاہئیں
+  homepage_action_text_codevideo: ویڈیو دیکھے
+  homepage_action_text_teachervideo: ویڈیو دیکھے
+  homepage_action_text_watchvideo: ویڈیو دیکھے
+  homepage_action_text_girlvideo: ایک لڑکی کی حوصلہ افزائی
+  homepage_action_text_learn: سیکھنا شروع کریں
+  homepage_action_text_signpetition: درخواست پر دستخط کریں
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "میں اتفاق کرتا ہوں &#x25BE;"
-  homepage_diversity_pledge: "کوڈ کو پھیلانے کا عہد کریں"
-  homepage_banner_text_prizes: "کوڈ کی گھڑی آ رہا ہے پھر 7-13 دسمبر ہے."
-  homepage_banner_link_prizes: "سب سے بڑا تعلیم ایونٹ کی تاریخ میں شامل ہوں. "
+  homepage_signpetition_dropdown: میں اتفاق کرتا ہوں &#x25BE;
+  homepage_diversity_pledge: کوڈ کو پھیلانے کا عہد کریں
+  homepage_banner_text_prizes: کوڈ کی گھڑی آ رہا ہے پھر 7-13 دسمبر ہے.
+  homepage_banner_link_prizes: 'سب سے بڑا تعلیم ایونٹ کی تاریخ میں شامل ہوں. '
   homepage_banner_text_main: Code.org اور کالج بورڈ کی کمپیوٹر سائنس کے پھیلاؤ کے
     لئے شراکت
-  homepage_banner_text_link: "مزید سیکھے"
+  homepage_banner_text_link: مزید سیکھے
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "مزید سیکھے"
+  homepage_banner_privacy_link: مزید سیکھے
   homepage_banner_20k_teachers: 20،000 اساتذہ کو تربیت دی جا چکی، جو اب کلاس رومز
     میں کمپیوٹر سائنس کی تعلیم دے رہے ہیں.
-  homepage_banner_20k_teachers_link: "مزید سیکھے"
-  homepage_banner_congress: "امریکہ کے رہنما کانگریس سے کے- ١٢ (K-12) کمپیوٹر سائنس
-    فنڈ کرنے کا مطالبہ کر رہے ہیں."
-  homepage_banner_congress_link: "سپورٹ کریں"
+  homepage_banner_20k_teachers_link: مزید سیکھے
+  homepage_banner_congress: امریکہ کے رہنما کانگریس سے کے- ١٢ (K-12) کمپیوٹر سائنس
+    فنڈ کرنے کا مطالبہ کر رہے ہیں.
+  homepage_banner_congress_link: سپورٹ کریں
   homepage_banner_emailprivacy: "ہم طالبعلم کی رازداری (پرائیویسی) برقرار رکھنے کے
     لئے ایک اہم تبدیلی لا رہے ہیں.\n \n\n"
-  homepage_banner_emailprivacy_link: "اور پڑھیے"
+  homepage_banner_emailprivacy_link: اور پڑھیے
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "مزید سیکھے"
-  homepage_slot_text_title_hoc: "آور-آف-کوڈ"
-  homepage_slot_text_blurb_hoc: "کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔"
-  homepage_slot_text_link_hoc: "آور-آف-کوڈ پر کوشش کریں۔"
+  homepage_banner_40k_teachers_link: مزید سیکھے
+  homepage_slot_text_title_hoc: آور-آف-کوڈ
+  homepage_slot_text_blurb_hoc: کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔
+  homepage_slot_text_link_hoc: آور-آف-کوڈ پر کوشش کریں۔
   homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: "# خدمات سر انجام دیں"
-  homepage_solot_text_link_volunteer: "کوڈ کی گھڑی کے رضا کار"
+  homepage_solot_text_link_volunteer: کوڈ کی گھڑی کے رضا کار
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: "ہمارے سارے اسباق کو دیکھیے۔"
-  homepage_slot_text_blurb_students_courses: "ہمارے کورس دیکھیے"
-  homepage_slot_text_link_codestudio: "کوڈ سٹوڈیو ٹرائی کریں"
-  homepage_slot_text_link_local: "مقامی کلاس ڈھونڈیں"
-  homepage_slot_text_link_othercourses: "دوسرے آن لائن کورسز"
-  homepage_slot_text_title_educators: "ماہرین تعلیم"
-  homepage_slot_text_blurb_educators: "اپنے طالبعلموں کو پڑھایے"
-  homepage_slot_text_link_elementary: "ایلیمنٹری اسکول"
-  homepage_slot_text_link_middle: "مڈل اسکول"
-  homepage_slot_text_link_high: "ہائی اسکول"
-  homepage_slot_text_link_k5: "پانچویں جماعت تک کے لئے کورسز"
-  homepage_slot_text_link_fullcurriculum: "ہمارا مکمل نصاب دیکھیں"
-  homepage_slot_text_link_pd: "پیشہ ورانہ ترقی"
-  homepage_slot_text_title_advocates: "وکلاء"
-  homepage_slot_text_blurb_advocates: "کمپیوٹر سائنس کے پھیلاؤ میں مدد کریں"
-  homepage_slot_text_link_stats: "اعدادوشمار دیکھیں"
-  homepage_slot_text_link_buy: "شامل ہو جایئے"
-  homepage_slot_text_link_donate: "عطیہ کریں"
-  homepage_slot_text_link_shop: "ٹی شرٹس، ٹوپیاں اور بہت کچھ"
+  homepage_slot_text_blurb_students: ہمارے سارے اسباق کو دیکھیے۔
+  homepage_slot_text_blurb_students_courses: ہمارے کورس دیکھیے
+  homepage_slot_text_link_codestudio: کوڈ سٹوڈیو ٹرائی کریں
+  homepage_slot_text_link_local: مقامی کلاس ڈھونڈیں
+  homepage_slot_text_link_othercourses: دوسرے آن لائن کورسز
+  homepage_slot_text_title_educators: ماہرین تعلیم
+  homepage_slot_text_blurb_educators: اپنے طالبعلموں کو پڑھایے
+  homepage_slot_text_link_elementary: ایلیمنٹری اسکول
+  homepage_slot_text_link_middle: مڈل اسکول
+  homepage_slot_text_link_high: ہائی اسکول
+  homepage_slot_text_link_k5: پانچویں جماعت تک کے لئے کورسز
+  homepage_slot_text_link_fullcurriculum: ہمارا مکمل نصاب دیکھیں
+  homepage_slot_text_link_pd: پیشہ ورانہ ترقی
+  homepage_slot_text_title_advocates: وکلاء
+  homepage_slot_text_blurb_advocates: کمپیوٹر سائنس کے پھیلاؤ میں مدد کریں
+  homepage_slot_text_link_stats: اعدادوشمار دیکھیں
+  homepage_slot_text_link_buy: شامل ہو جایئے
+  homepage_slot_text_link_donate: عطیہ کریں
+  homepage_slot_text_link_shop: ٹی شرٹس، ٹوپیاں اور بہت کچھ
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: "کوڈ اسٹوڈیو طالبعلموں کی تخلیقات"
+  homepage_header_codestudio: کوڈ اسٹوڈیو طالبعلموں کی تخلیقات
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
-  homepage_donors_seall: "سبھی دیکھیں"
-  homepage_donors_donate: "عطیہ کریں"
-  contact_form_topic_student: "ميں طالب علم ہوں"
-  contact_form_topic_parent: "میں ابو/امی ہوں"
-  contact_form_topic_teacher: "میں ایک استاد/معلّم ہوں"
-  contact_form_topic_outside_us: "میں امریکہ سے باہر ہوں"
-  contact_form_topic_contribution: "خیراتی اعانت"
-  contact_form_topic_partner: "میں ساتھی بننا چاہوں گا"
-  contact_form_topic_other: "دیگر"
-  contact_form_label_topic: "موضوع"
-  contact_form_label_email: "آپ کا Email ایڈریس"
-  contact_form_label_message: "پیغام"
-  contact_form_label_submit: "پیغام بھیجیں"
-  class_submission_in_school: "اسکول میں"
-  class_submission_in_school_daily_programming_course: "روزانہ کا پروگرامنگ کورس"
+  homepage_donors_seall: سبھی دیکھیں
+  homepage_donors_donate: عطیہ کریں
+  contact_form_topic_student: ميں طالب علم ہوں
+  contact_form_topic_parent: میں ابو/امی ہوں
+  contact_form_topic_teacher: میں ایک استاد/معلّم ہوں
+  contact_form_topic_outside_us: میں امریکہ سے باہر ہوں
+  contact_form_topic_contribution: خیراتی اعانت
+  contact_form_topic_partner: میں ساتھی بننا چاہوں گا
+  contact_form_topic_other: دیگر
+  contact_form_label_topic: موضوع
+  contact_form_label_email: آپ کا Email ایڈریس
+  contact_form_label_message: پیغام
+  contact_form_label_submit: پیغام بھیجیں
+  class_submission_in_school: اسکول میں
+  class_submission_in_school_daily_programming_course: روزانہ کا پروگرامنگ کورس
   class_submission_in_school_ap_computer_science: AP کمپیوٹر سائنس
-  class_submission_in_school_full_university_cs_curriculum: "مکمل یونیورسٹی CS نصاب"
-  class_submission_in_school_robotics_club: "روبوٹکس کلب"
-  class_submission_in_school_programming_integrated_in_other_classes: "دیگر طبقات
-    (ریاضی، سائنس، وغیرہ) میں مدغم پروگرامنگ"
-  class_submission_in_school_summer_school_cs_program: "سرمائی سکول CS پروگرام"
-  class_submission_in_school_exploring_computer_science: "کمپیوٹر سائنس کی تلاش"
-  class_submission_in_school_other: "اسکول میں دوسرے"
-  class_submission_out_of_school: "اسکول سے باہر"
-  class_submission_out_of_school_summer_camp: "سرمائی کیمپ"
-  class_submission_out_of_school_afterschool_program: "اسکول کے بعد کے پروگرام"
+  class_submission_in_school_full_university_cs_curriculum: مکمل یونیورسٹی CS نصاب
+  class_submission_in_school_robotics_club: روبوٹکس کلب
+  class_submission_in_school_programming_integrated_in_other_classes: دیگر طبقات (ریاضی،
+    سائنس، وغیرہ) میں مدغم پروگرامنگ
+  class_submission_in_school_summer_school_cs_program: سرمائی سکول CS پروگرام
+  class_submission_in_school_exploring_computer_science: کمپیوٹر سائنس کی تلاش
+  class_submission_in_school_other: اسکول میں دوسرے
+  class_submission_out_of_school: اسکول سے باہر
+  class_submission_out_of_school_summer_camp: سرمائی کیمپ
+  class_submission_out_of_school_afterschool_program: اسکول کے بعد کے پروگرام
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: "اسکول کے باہر، دوسرے"
-  class_submission_online: "آن لائن"
-  class_submission_online_programming_class: "آن لائن کلاس پروگرامنگ"
-  class_submission_online_teacher_resource: "آن لائن استاد وسیلہ"
-  class_submission_online_other: "دوسرے آن لائن"
-  class_submission_level_preschool: "یرپ"
-  class_submission_level_elementary: "ایلیمنٹری"
-  class_submission_level_middle_school: "مڈل اسکول"
-  class_submission_level_high_school: "ہائی اسکول"
-  class_submission_level_college: "کالج"
-  class_submission_level_vocational: "پیشہ ورانہ"
-  class_submission_languages_other: "دیگر language(s)"
+  class_submission_out_of_school_other: اسکول کے باہر، دوسرے
+  class_submission_online: آن لائن
+  class_submission_online_programming_class: آن لائن کلاس پروگرامنگ
+  class_submission_online_teacher_resource: آن لائن استاد وسیلہ
+  class_submission_online_other: دوسرے آن لائن
+  class_submission_level_preschool: یرپ
+  class_submission_level_elementary: ایلیمنٹری
+  class_submission_level_middle_school: مڈل اسکول
+  class_submission_level_high_school: ہائی اسکول
+  class_submission_level_college: کالج
+  class_submission_level_vocational: پیشہ ورانہ
+  class_submission_languages_other: دیگر language(s)
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
     featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: "کلاسیکی"
+  playlab_classic_title: کلاسیکی
   playlab_gumball_title: Gumball
-  playlab_iceage_title: "برفانی عہد - جلد آ رہا ہے"
-  playlab_iceage_title_live: "برفانی عہد"
-  starwars_subtitle: "ایک کہکشاں کی کوڈ کے ساتھ تعمیر"
+  playlab_iceage_title: برفانی عہد - جلد آ رہا ہے
+  playlab_iceage_title_live: برفانی عہد
+  starwars_subtitle: ایک کہکشاں کی کوڈ کے ساتھ تعمیر
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
-  starwars_blocks_title: "بلاکس"
+  starwars_blocks_title: بلاکس
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
@@ -558,12 +558,12 @@
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "شروع کریں"
+  minecraft_agent_button: شروع کریں
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: "شروع کریں"
+  minecraft_designer_button: شروع کریں
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: "شروع کریں"
+  minecraft_adventurer_button: شروع کریں
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft کوڈ کی گھڑی
@@ -607,7 +607,7 @@
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
-  sports_watch_video: "ویڈیو دیکھے"
+  sports_watch_video: ویڈیو دیکھے
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -644,7 +644,7 @@
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "ایک لڑکی کی حوصلہ افزائی"
+  video_title_inspire_girl: ایک لڑکی کی حوصلہ افزائی
   video_title_cs_intro: Computer Science intro
   video_title_schools_dont_teach: What Most Schools Don't Teach
   video_title_obama: President Obama on computer science
@@ -663,7 +663,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "کیا آپ استاد ہیں؟"
+  are_you_teacher: کیا آپ استاد ہیں؟
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
@@ -694,7 +694,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "نام"
+  volunteer_engineer_submission_field_name: نام
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -714,17 +714,17 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "تفصیل"
+  volunteer_engineer_submission_field_description: تفصیل
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: "ای میل ایڈریس"
+  volunteer_engineer_submission_field_email: ای میل ایڈریس
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "ای میل ایڈریس"
+  volunteer_engineer_submission_field_email_placeholder: ای میل ایڈریس
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -733,7 +733,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "جمع کرائیں"
+  volunteer_engineer_submission_submit: جمع کرائیں
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
     like you.
@@ -742,67 +742,67 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hours per week
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hours per week
   volunteer_engineer_submission_commitment_now_and_then: Every now and then
-  volunteer_engineer_submission_commitment_annually: "ہر سال 2 - 3 اوقات"
-  volunteer_engineer_submission_commitment_monthly: "چند گھنٹے فی مہینہ"
-  volunteer_engineer_submission_commitment_weekly: "چند گھنٹے فی ہفتہ"
-  volunteer_engineer_submission_commitment_more: "مزید"
+  volunteer_engineer_submission_commitment_annually: ہر سال 2 - 3 اوقات
+  volunteer_engineer_submission_commitment_monthly: چند گھنٹے فی مہینہ
+  volunteer_engineer_submission_commitment_weekly: چند گھنٹے فی ہفتہ
+  volunteer_engineer_submission_commitment_more: مزید
   volunteer_engineer_submission_location_flexibility_onsite: on-site میں ایک اسکول
     (1-2 گھنٹے میں ایک ایسے کلاس روم یا اسکول میں اسمبلی کے) دورے
   volunteer_engineer_submission_location_flexibility_remote: "(مختصر ویڈیو کانفرنس
     کے ذریعے) بعید طالب علموں کے ساتھ ایک Q&A ہے"
-  volunteer_engineer_submission_location_flexibility_curriculum: "مفتوح مصدر(اوپن
-    سورس) کے نصاب کے منصوبوں کے لئے کردار ادا کریں"
-  volunteer_engineer_submission_experience_unspecified: "غیر تخصیص شدہ"
-  volunteer_engineer_submission_experience_tech_company: "ایک ٹیک کمپنی میں غیر-انجینئر"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "جامعہ
-    کی کمپیوٹر سائنس کا طالبعلم"
+  volunteer_engineer_submission_location_flexibility_curriculum: مفتوح مصدر(اوپن سورس)
+    کے نصاب کے منصوبوں کے لئے کردار ادا کریں
+  volunteer_engineer_submission_experience_unspecified: غیر تخصیص شدہ
+  volunteer_engineer_submission_experience_tech_company: ایک ٹیک کمپنی میں غیر-انجینئر
+  volunteer_engineer_submission_experience_university_student_or_researcher: جامعہ
+    کی کمپیوٹر سائنس کا طالبعلم
   volunteer_engineer_submission_experience_software_professional: Software Engineer
   volunteer_engineer_submission_distance_8: 5 میل
-  volunteer_engineer_submission_distance_16: "دس میل"
+  volunteer_engineer_submission_distance_16: دس میل
   volunteer_engineer_submission_distance_24: 15 میل
   volunteer_engineer_submission_distance_32: 20 میل
   volunteer_engineer_submission_num_volunteers_5: 5 رضاکار
   volunteer_engineer_submission_num_volunteers_10: 10 رضاکار
   volunteer_engineer_submission_num_volunteers_25: 25 رضاکار
   volunteer_engineer_submission_num_volunteers_50: 50 رضاکار
-  volunteer_engineer_submission_type_task_onsite: "میں چاہتا ہوں آپ میری کلاس روم
-    کا تکنیکی مدد اور وجدان کے لئے دورہ کریں"
-  volunteer_engineer_submission_type_task_remote: "میں چاہتا ہوں آپ میری کلاس روم
-    میں سکائپ کے ذریعے بچوں کے لیے چند پراثر الفاظ کہیں"
+  volunteer_engineer_submission_type_task_onsite: میں چاہتا ہوں آپ میری کلاس روم کا
+    تکنیکی مدد اور وجدان کے لئے دورہ کریں
+  volunteer_engineer_submission_type_task_remote: میں چاہتا ہوں آپ میری کلاس روم میں
+    سکائپ کے ذریعے بچوں کے لیے چند پراثر الفاظ کہیں
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: "عمر"
+  petition_age: عمر
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "مزید سیکھے"
-  dashboard_landing_title: "استاد کی ہوم پیج"
-  dashboard_landing_welcome: "نئے اور بہتر استاد ڈیش بورڈ ميں خیر مقدم."
-  dashboard_landing_video: "یہ ویڈیو دیکھیں"
-  dashboard_landing_watch_video: "نئی خصوصیات کا دورہ کے لیے!"
-  dashboard_landing_view_as_student: "اس سائٹ کے ایک طالب علم کے طور پر منظر"
-  dashboard_landing_students_title: "آپ کے طلبا"
-  dashboard_landing_students_manage: "اپنے طالب علموں کو دیکھیں اور انتظام کریں"
+  dashboard_announce_learn_more_button: مزید سیکھے
+  dashboard_landing_title: استاد کی ہوم پیج
+  dashboard_landing_welcome: نئے اور بہتر استاد ڈیش بورڈ ميں خیر مقدم.
+  dashboard_landing_video: یہ ویڈیو دیکھیں
+  dashboard_landing_watch_video: نئی خصوصیات کا دورہ کے لیے!
+  dashboard_landing_view_as_student: اس سائٹ کے ایک طالب علم کے طور پر منظر
+  dashboard_landing_students_title: آپ کے طلبا
+  dashboard_landing_students_manage: اپنے طالب علموں کو دیکھیں اور انتظام کریں
   dashboard_landing_news_title: K-5 معلم وسائل (انگریزی میں صرف)
-  dashboard_landing_new_beta: "نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں."
-  dashboard_landing_new_k5courses: "نیا! ہمارے کورس برائے K-5 طلبہ کا جائژہ لیں."
-  dashboard_landing_useful_links: "دیگر کارآمد ویب سائٹس"
+  dashboard_landing_new_beta: نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں.
+  dashboard_landing_new_k5courses: نیا! ہمارے کورس برائے K-5 طلبہ کا جائژہ لیں.
+  dashboard_landing_useful_links: دیگر کارآمد ویب سائٹس
   dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_office_hours: "سوال کے جواب شخصی حیصیت میں پوچھیں! ہمارے ماہانہ
-    ویڈیو دفتر کے اوقات کا دورہ کریں."
+  dashboard_landing_office_hours: سوال کے جواب شخصی حیصیت میں پوچھیں! ہمارے ماہانہ
+    ویڈیو دفتر کے اوقات کا دورہ کریں.
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: "اہم کلاس پیش رفت"
-  dashboard_landing_progress_biggest: "یہ آپ کے سب سے بڑا حصہ کی پیش رفت ہے."
-  dashboard_landing_view_progress: "دیکھیں %{biggest_section} کی پیش رفت"
-  dashboard_landing_print_progress: "پیش رفت کی چھپائی"
-  dashboard_landing_available_title: "میسر کورسز"
-  dashboard_landing_available_courses: "یہاں کورسز آپ اور آپ کے طالب علموں کے لئے
-    فی الحال دستیاب ہیں."
-  dashboard_landing_more_tutorials: "کیا آپ مزید سبق دیکھنا چاہتے ہیں؟"
+  dashboard_landing_progress_title: اہم کلاس پیش رفت
+  dashboard_landing_progress_biggest: یہ آپ کے سب سے بڑا حصہ کی پیش رفت ہے.
+  dashboard_landing_view_progress: دیکھیں %{biggest_section} کی پیش رفت
+  dashboard_landing_print_progress: پیش رفت کی چھپائی
+  dashboard_landing_available_title: میسر کورسز
+  dashboard_landing_available_courses: یہاں کورسز آپ اور آپ کے طالب علموں کے لئے فی
+    الحال دستیاب ہیں.
+  dashboard_landing_more_tutorials: کیا آپ مزید سبق دیکھنا چاہتے ہیں؟
   dashboard_landing_more_tutorials_desc: یہاں مزید اسباق ہیں <a href="/learn/beyond">
     ہمارے شراکت داروں کی طرف سے ۔</a> روبوٹس کے ساتھ پروگرام، ویب صفحات بنائیں، اپنا
     اپلیکیشن بنانے یا دیگر زبانوں جیسے c + +، روبی، یا ازگر دریافت کرنا سیکھیں!
@@ -842,7 +842,7 @@
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
-  dashboard_course_ecs: "کمپیوٹر سائنس کی تلاش"
+  dashboard_course_ecs: کمپیوٹر سائنس کی تلاش
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
@@ -850,10 +850,10 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_cancel: "منسوخ کریں"
+  dashboard_action_cancel: منسوخ کریں
   dashboard_action_delete: Delete
-  dashboard_action_delete_yes: "جی"
-  dashboard_action_delete_no: "نہيں"
+  dashboard_action_delete_yes: جی
+  dashboard_action_delete_no: نہيں
   dashboard_action_confirm: Delete?
   dashboard_action_done: Done
   dashboard_action_print_certificates: Print certificates
@@ -874,7 +874,7 @@
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: "ٹیچر ہوم پیج"
+  dashboard_navigation_home_page: ٹیچر ہوم پیج
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
@@ -970,7 +970,7 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "نام"
+  dashboard_students_name: نام
   dashboard_students_progress: Progress
   dashboard_students_male: Male
   dashboard_students_female: Female
@@ -1041,12 +1041,12 @@
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "دیگر"
+  dashboard_grade_other: دیگر
   dashboard_login_word: Word
   dashboard_login_picture: Picture
   dashboard_login_none: Email
-  dashboard_stage: "اسٹیج"
-  dashboard_puzzle: "پزل(Puzzle)"
+  dashboard_stage: اسٹیج
+  dashboard_puzzle: پزل(Puzzle)
   dashboard_question: Question
   dashboard_response: Response
   dashboard_correctness: Correctness
@@ -1063,7 +1063,7 @@
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
-  stats_hoc_2013_image_alt: "کوڈ کی گھڑی کے شماریات 2013"
+  stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
   dashboard_teacher: Teacher
   dashboard_student: Talib-e-ilm
   dashboard_sections_email_question: Do all students have a valid email address?
@@ -1113,7 +1113,7 @@
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: "آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ"
+  hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
@@ -1161,7 +1161,7 @@
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
     Web browser.</a>
   mobile_devices: Tutorials for mobile devices
-  frozen_name: "اینا اور ایلسا کے ساتھ کوڈ"
+  frozen_name: اینا اور ایلسا کے ساتھ کوڈ
   starwars_name: 'Star Wars: Building a Galaxy with Code'
   codeorg_name: Apna pehla Computer ka Program likhiye
   codeintl_name: Apna pehla Computer ka Program likhiye
@@ -1196,7 +1196,7 @@
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
-  blockly_name: "بلاکلی"
+  blockly_name: بلاکلی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
@@ -1269,15 +1269,15 @@
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
   classicmaze_name: Classic Maze
-  iceage_name: "برفانی عہد"
+  iceage_name: برفانی عہد
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "ریاضی"
-  hoc_category_name: "آور-آف-کوڈ"
+  math_category_name: ریاضی
+  hoc_category_name: آور-آف-کوڈ
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1309,40 +1309,42 @@
   thinkersmith_gradelevel: Her umer k log
   condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: Her umer k log
-  codehs_gradelevel: "ہائی اسکول"
-  codecademy_gradelevel: "ہائی اسکول"
+  codehs_gradelevel: ہائی اسکول
+  codecademy_gradelevel: ہائی اسکول
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: "ہائی اسکول"
+  processing_gradelevel: ہائی اسکول
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: "ایلیمنٹری"
-  kodable_gradelevel: "ایلیمنٹری"
+  codespark_gradelevel: ایلیمنٹری
+  kodable_gradelevel: ایلیمنٹری
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: "ایلیمنٹری"
-  makeschool_gradelevel: "ہائی اسکول"
-  touchdevelop_gradelevel: "ہائی اسکول"
+  bitsbox_gradelevel: ایلیمنٹری
+  makeschool_gradelevel: ہائی اسکول
+  touchdevelop_gradelevel: ہائی اسکول
   appinventor_gradelevel: Middle school +
   blockly_gradelevel: Her umer k log
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
   hourofcode_gradelevel: Ages 4-104
-  frozen_gradelevel: |
-    Ages 8-108
+  frozen_gradelevel: 'Ages 8-108
+
+'
   starwars_gradelevel: Ages 6+
   playlab_gradelevel: Ages 4-104
   infinity_gradelevel: Ages 4-104
-  artist_gradelevel: |
-    Ages 8-108
+  artist_gradelevel: 'Ages 8-108
+
+'
   monstercoding_gradelevel: Ages 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: "ایلیمنٹری"
+  boxisland_gradelevel: ایلیمنٹری
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
@@ -1395,8 +1397,8 @@
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
   hourofcode_platformtext: Modern browsers, smartphones, tablets
-  frozen_platformtext: "ماڈرن براؤزر + ٹیبلٹس"
-  starwars_platformtext: "ماڈرن براؤزر + ٹیبلٹس"
+  frozen_platformtext: ماڈرن براؤزر + ٹیبلٹس
+  starwars_platformtext: ماڈرن براؤزر + ٹیبلٹس
   playlab_platformtext: Modern browsers, smartphones, tablets
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
@@ -1452,8 +1454,8 @@
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   hourofcode_shortdescription: Placeholder for new code.org/hoc
-  frozen_shortdescription: "آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن
-    کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔"
+  frozen_shortdescription: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں
+    کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_shortdescription: Create a story or make a game with Play Lab!
@@ -1610,9 +1612,9 @@
   blockly_longdescription: Got PCs with slow (or non-existent) internet access? Download
     the Blockly tutorials that were the precursor of the Code.org tutorials - a single
     3MB ZIP file can be loaded onto any computer or used off a memory stick
-  thinkersmith2_longdescription: "سٹوڈنٹس آن اینڈ آف فنکشن کے زریعے حروف کو binary
+  thinkersmith2_longdescription: 'سٹوڈنٹس آن اینڈ آف فنکشن کے زریعے حروف کو binary
     کوڈ میں محفوظ کرنا  سیکھتے ہیں۔ یہاں تک کے تمام کلاس اپنے initials انکوڈ کرنا
-    سیکھ لیتے ہیں۔ "
+    سیکھ لیتے ہیں۔ '
   kodableunplugged_longdescription: 'Designed for use with plain paper, the fuzzFamily
     Frenzy is an introduction to programming logic for kids 5 and up. A teacher should
     explain the game, then students program a partner to complete a simple obstacle
@@ -1621,10 +1623,10 @@
     and simulation works by having a group of students play different versions of
     the Rock / Paper / Scissors game, and see the results as different modeling experiments.
   hourofcode_longdescription: Placeholder for new code.org/hoc
-  frozen_longdescription: "آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک
+  frozen_longdescription: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک
     اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز
     تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں
-    گے۔"
+    گے۔
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
@@ -1663,7 +1665,7 @@
     for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
-  tynker_beyond_name: "گھر بیٹھے پروگرامنگ سیکھیے"
+  tynker_beyond_name: گھر بیٹھے پروگرامنگ سیکھیے
   scratch_beyond_name: Get creative with coding
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
@@ -1703,18 +1705,18 @@
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
   lightbot_beyond_gradelevel: Her umer k log
-  codecademy_beyond_gradelevel: "ہائی اسکول"
-  kodable_beyond_gradelevel: "ایلیمنٹری"
-  scratchjr_beyond_gradelevel: "ایلیمنٹری"
+  codecademy_beyond_gradelevel: ہائی اسکول
+  kodable_beyond_gradelevel: ایلیمنٹری
+  scratchjr_beyond_gradelevel: ایلیمنٹری
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: "ہائی اسکول"
+  hacketyhack_beyond_gradelevel: ہائی اسکول
   robomind_beyond_gradelevel: Ages 8-13
-  makeschool_beyond_gradelevel: "ہائی اسکول"
+  makeschool_beyond_gradelevel: ہائی اسکول
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: "ہائی اسکول"
-  codehs_beyond_gradelevel: "ہائی اسکول"
+  touchdevelop_beyond_gradelevel: ہائی اسکول
+  codehs_beyond_gradelevel: ہائی اسکول
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -1732,7 +1734,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: "ہائی اسکول"
+  processing_beyond_gradelevel: ہائی اسکول
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets
@@ -1926,9 +1928,9 @@
     how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles,
     haunting music and stunning retina graphics. You can even record your solutions
     and share them on YouTube to show your friends.
-  kidsruby_beyond_longdescription: "گیمز بنانے اور Ruby سے اپنا ہوم ورک ہیک کرنے کا
+  kidsruby_beyond_longdescription: 'گیمز بنانے اور Ruby سے اپنا ہوم ورک ہیک کرنے کا
     مزہ لیں! اپنے والدین اور ٹیچرس کو بتایں کے آپ Ruby پروگرامنگ سیکھ رہے ہیں... بالکل
-    مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]"
+    مفت اور کسی بھی کمپیوٹر پر!! [نوٹ: ڈیسک ٹاپ انسٹالیشن کی ضرورت ہوتی ہے]'
   w3schools_beyond_longdescription: Learn to create websites on your own computer.
     Learn the server basics in less than a day. Learn to add databases to your website
   codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
@@ -1984,13 +1986,13 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "پھڑپھڑایں"
+  flappy_shortcode: پھڑپھڑایں
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_courses: "کورسز"
+  header_courses: کورسز
   header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
@@ -1999,7 +2001,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "آور-آف-کوڈ"
+  header_educate_hoc: آور-آف-کوڈ
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student

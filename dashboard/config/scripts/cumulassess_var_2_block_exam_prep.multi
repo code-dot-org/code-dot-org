@@ -6,5 +6,7 @@ wrong '<pre>BoysHello Girls</pre>'
 wrong '<pre>Hello Boys and Girls</pre>'
 right '<pre>Hello Girls and Boys</pre>'
 markdown <<MARKDOWN
-![](https://images.code.org/8f41f2881be7116929af1c6d379f0ca9-image-1483466229189.png)
+<!-- ![](https://images.code.org/8f41f2881be7116929af1c6d379f0ca9-image-1483466229189.png) -->
+
+![](https://images.code.org/063f1aca3a09e1fa40f6d8032557d2ed-image-1522961402527.png)
 MARKDOWN

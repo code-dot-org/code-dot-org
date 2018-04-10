@@ -5,6 +5,8 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import { connect } from 'react-redux';
+import i18n from '@cdo/locale';
+import {h3Style} from "../../lib/ui/Headings";
 import {
   ViewType,
   loadScript,
@@ -17,6 +19,20 @@ import {
   studentLevelProgressPropType,
 } from './sectionProgressRedux';
 
+const styles = {
+  heading: {
+    marginBottom: 0,
+  },
+  scriptSelectorContainer: {
+    float: 'left',
+    marginRight: 20,
+  },
+  viewToggleContainer: {
+    float: 'left',
+    marginTop: 24,
+  },
+};
+
 /**
  * Given a particular section, this component owns figuring out which script to
  * show progress for (selected via a dropdown), and querying the server for
@@ -26,7 +42,7 @@ import {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.string.isRequired,
+    scriptId: PropTypes.number.isRequired,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
@@ -43,6 +59,7 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
+    // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
   };
 
@@ -60,30 +77,42 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <ScriptSelector
-          validScripts={validScripts}
-          scriptId={scriptId}
-          onChange={this.onChangeScript}
-        />
-        <SectionProgressToggle />
-        {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
-        {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-          <div>
-            <VirtualizedSummaryView
-              section={section}
-              scriptData={scriptData}
+        <div>
+          <div style={styles.scriptSelectorContainer}>
+            <div style={{...h3Style, ...styles.heading}}>
+              {i18n.selectACourse()}
+            </div>
+            <ScriptSelector
+              validScripts={validScripts}
+              scriptId={scriptId}
+              onChange={this.onChangeScript}
             />
           </div>
-        }
-        {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-          <div>
-            <VirtualizedDetailView
-              section={section}
-              scriptData={scriptData}
-              studentLevelProgress={studentLevelProgress}
-            />
+          <div style={styles.viewToggleContainer}>
+            <SectionProgressToggle />
           </div>
-        }
+        </div>
+        <div style={{clear: 'both'}}>
+          {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
+          {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
+            <div>
+              <VirtualizedSummaryView
+                section={section}
+                scriptData={scriptData}
+                studentLevelProgress={studentLevelProgress}
+              />
+            </div>
+          }
+          {(levelDataInitialized && currentView === ViewType.DETAIL) &&
+            <div>
+              <VirtualizedDetailView
+                section={section}
+                scriptData={scriptData}
+                studentLevelProgress={studentLevelProgress}
+              />
+            </div>
+          }
+        </div>
       </div>
     );
   }

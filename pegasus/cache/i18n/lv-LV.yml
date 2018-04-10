@@ -506,7 +506,7 @@
   contact_form_topic_student: Skolēniem
   contact_form_topic_parent: Vecākiem
   contact_form_topic_teacher: Pasniedzējiem/skolotājiem
-  contact_form_topic_outside_us: "Ārpus ASV"
+  contact_form_topic_outside_us: Ārpus ASV
   contact_form_topic_contribution: Ziedojumi
   contact_form_topic_partner: Sadarbības partneriem
   contact_form_topic_other: Citi
@@ -526,9 +526,9 @@
     programma
   class_submission_in_school_exploring_computer_science: Izpētot datordatorzinātni
   class_submission_in_school_other: Citi skolā
-  class_submission_out_of_school: "Ārā no skolas"
+  class_submission_out_of_school: Ārā no skolas
   class_submission_out_of_school_summer_camp: Vasaras nometne
-  class_submission_out_of_school_afterschool_program: "Ārpusskolas programma"
+  class_submission_out_of_school_afterschool_program: Ārpusskolas programma
   class_submission_out_of_school_all-day_workshop: Visas dienas darbnīca (līdz vienai
     nedēļai)
   class_submission_out_of_school_multi-week_workshop: Vairāku nedēļu darbnīca
@@ -759,7 +759,7 @@
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 stundu katru nedēļu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 stundas katru nedēļu
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 stundas katru nedēļu
-  volunteer_engineer_submission_commitment_now_and_then: "Šad un tad"
+  volunteer_engineer_submission_commitment_now_and_then: Šad un tad
   volunteer_engineer_submission_commitment_annually: 2-3 times per year
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
@@ -814,12 +814,12 @@
     pedagogu blogā
   dashboard_landing_video_player: Izmēģinat mūsu jauno video atskaņotāju savā skolā
   dashboard_landing_progress_title: Galveno klašu progress
-  dashboard_landing_progress_biggest: "Šis ir tava lielākā koda progress."
+  dashboard_landing_progress_biggest: Šis ir tava lielākā koda progress.
   dashboard_landing_view_progress: Aplūko %{biggest_section} progresu
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Pieejamie kursi
-  dashboard_landing_available_courses: "Šeit atrodas kursi, kas ir pieejami tev un
-    taviem studentiem."
+  dashboard_landing_available_courses: Šeit atrodas kursi, kas ir pieejami tev un
+    taviem studentiem.
   dashboard_landing_more_tutorials: Vēlies redzēt vēl pamācības?
   dashboard_landing_more_tutorials_desc: Šeit ir vēl pamācības <a href="/learn/beyond">
     kuras iesaka mūsu partneris.</a> Iemācies programmēt ar robotiem, veidot mājas
@@ -1098,9 +1098,9 @@
     skolēnus"
   dashboard_sections_sign_in_main: http://code.org un spied "Pieslēgties"
   dashboard_sections_password_account_creation: Skolēnu izveidotā parole
-  dashboard_sections_login_type_explanation: "Šī tabula palīdz paskaidrot, kuru no
+  dashboard_sections_login_type_explanation: Šī tabula palīdz paskaidrot, kuru no
     visiem pieteikšanās veidiem <b>attēls, vārds vai e-pasts</b>, tu gribēsi izvēlēties
-    sadaļai."
+    sadaļai.
   dashboard_faq: Biežāk uzdotie jautājumi
   dashboard_faq_k5: No bērnudārza līdz 5. klases līmeņa Biežāk Uzdotie Jautājumi
   code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
@@ -1599,10 +1599,10 @@
   groklearning_longdescription: Ar programmēšanas valodu Python veido čata robotu
     "Eliza", kas attēlos robote0psihoterapeitu. Tu apmācīsi, ko un kad Elīzai teikt.
     Vai viņa apmuļķos tavus draugus, sakot, ka nav dators, bet gan cilvēks?
-  quorum_longdescription: "Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
+  quorum_longdescription: Šī pamācība ir pieejama arī ar redzes traucējumiem un strādā
     ar ekrāna lasītājiem. Pievienojies Mērijai ekskursijā pa bioloģijas laboratoriju
     un mācies programmēšanas valodu Quorum. Šajā pamācībā pieejami tiešsaistes aktivitātes
-    ar piemēriem."
+    ar piemēriem.
   codespark_longdescription: The Foos ir jautrs un bērniem draudzīgs vieds, kā apgūt
     programmēšanu. Programmē mīlīgus tēlus un saliec puzles, ko no virtuālās pasaules
     ienest reālajā. Spēle ir bez vārdiem, visi var spēlēt!
@@ -1925,12 +1925,12 @@
     spējas, gan ierobežojumus. CS 101 arī'sniedz vispārīgu ievadu par to, kas ir mūsdienu
     dators, kas ir aparatūra, programmatūra un internets. Nav nepieciešama iepriekšēja
     pieredze, izņemot prasme lietot tīmekļa pārlūku.
-  udacity_beyond_longdescription: "Šajā kursā apgūsi datorzinību pamatjēdzienus un
+  udacity_beyond_longdescription: Šajā kursā apgūsi datorzinību pamatjēdzienus un
     mācīsies, kā rakstīt savas datorprogrammas, sevišķi tīmekļa lietotnes. Uzsākot
     kursu nav nepieciešamas priekšzināšanas - aicināts ir katrs iesācējs! Kursa beigās
     būsi apguvis datorzinību pamatjēdzienus un pietiekami daudz programmēšanas prasmes
     , lai patstāvīgi izveidotu Python programmas, kas risina tevis izvirzītas problēmas.
-    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām."
+    Kurss sagatavos tālāk mācībām jau ar priekšzināšanām.
   teachingtree_beyond_longdescription: TeachingTree ir atvērta platforma, kas ļauj
     organizēt mācību saturu. Mūsu mērķis ir ļaut skolēniem ātri piekļūst pie vajadzīgajiem
     klipiem, lai organizētu individuālo mācīšanos. Katrs ir aicināts pievienot video

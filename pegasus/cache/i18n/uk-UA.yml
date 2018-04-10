@@ -1,16 +1,16 @@
 "uk-UA":
-  hour_of_code: "Година коду"
-  hello: "Привіт, світ!"
-  'yes': "Так"
-  'no': "Ні"
-  select_language: "Будь ласка, виберіть мову"
+  hour_of_code: Година коду
+  hello: Привіт, світ!
+  'yes': Так
+  'no': Ні
+  select_language: Будь ласка, виберіть мову
   upgrade_ie_message: Code.org незабаром припинить підтримку Internet Explorer 8,
     9, та 10. Будь ласка, оновіться до сучаснішого браузера.
   upgrade_ie_message_csedweek: CSEdWeek.org незабаром припинить підтримку Internet
     Explorer 8, 9, та 10. Будь ласка, оновіться до сучаснішого браузера.
-  upgrade_ie_link: "Дізнайтеся більше"
-  en: "Інформатика"
-  computer_science_edweek: "Тиждень інформатичної освіти"
+  upgrade_ie_link: Дізнайтеся більше
+  en: Інформатика
+  computer_science_edweek: Тиждень інформатичної освіти
   csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Година коду</a>Закликаємо
@@ -19,108 +19,107 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
-  anybody_can_learn: "Кожен може вчитися."
-  learn_now: "Почати навчання"
-  petition_message: "Кожен учень у кожній школі повинен мати можливість вивчати інформатику"
-  petition_sign_message: "Якщо ви згодні, то напишіть своє ім'я.  Приєднайтеся до
-    # інших."
-  petition_sign_message_support: "Якщо Ви підтримуєте наші ідеї, запишіть своє ім'я.
-    Приєднайтесь до # інших."
-  petition_join_others: "Приєднатися до # інших"
-  name: "Ім’я"
-  email: "Електронна пошта"
-  zipcode: "Поштовий індекс або країна"
-  submit: "Надіслати"
-  twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
-  twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні
-    поняття комп'ютерних наук та програмування на подальших курсах."
-  og_title: "Програмування є основоположним"
-  og_title_soon: "Наближається Година коду"
-  og_title_here: "Прийшла Година коду!"
-  og_description: "Технології змінюють все. Кожен учень у кожній школі заслуговує
-    на те, щоб мати можливість вивчати інформатику."
-  og_description_celeb: "Спробуйте нові підручники та вигравайте відео-чат зі знаменитістю
-    для вас чи вашого класу!"
-  csedweek_og_title: "Година коду вже тут"
-  csedweek_og_description: "Година коду є глобальним рухом, який залучає десятки мільйони
-    учнів різного віку із більш як 180 країн, які розмовляють 45 мовами."
-  csedweek_og_description_soon: "Година коду відбудится 4-10 грудня 2017 року. Інформатика
-    є основоположною навчання для кожного студента."
-  csedweek_og_description_here: "Прийшла Година коду. Інформатика є основоположною
-    навчання для кожного студента."
+  anybody_can_learn: Кожен може вчитися.
+  learn_now: Почати навчання
+  petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
+  petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
+    # інших.'
+  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
+    Приєднайтесь до # інших.'
+  petition_join_others: 'Приєднатися до # інших'
+  name: Ім’я
+  email: Електронна пошта
+  zipcode: Поштовий індекс або країна
+  submit: Надіслати
+  twentyhours_heading: Спробуйте наш курс вступу до інформатики
+  twentyhours_text: Завершили свою першу Годину Коду? Дізнайтеся більше про основні
+    поняття комп'ютерних наук та програмування на подальших курсах.
+  og_title: Програмування є основоположним
+  og_title_soon: Наближається Година коду
+  og_title_here: Прийшла Година коду!
+  og_description: Технології змінюють все. Кожен учень у кожній школі заслуговує на
+    те, щоб мати можливість вивчати інформатику.
+  og_description_celeb: Спробуйте нові підручники та вигравайте відео-чат зі знаменитістю
+    для вас чи вашого класу!
+  csedweek_og_title: Година коду вже тут
+  csedweek_og_description: Година коду є глобальним рухом, який залучає десятки мільйони
+    учнів різного віку із більш як 180 країн, які розмовляють 45 мовами.
+  csedweek_og_description_soon: Година коду відбудится 4-10 грудня 2017 року. Інформатика
+    є основоположною навчання для кожного студента.
+  csedweek_og_description_here: Прийшла Година коду. Інформатика є основоположною
+    навчання для кожного студента.
   hoc2014_heading: Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a>
     <br/> 8-14 грудня 2014 року <br/>
-  hoc2014_students: "Учні"
-  hoc2014_try: "Спробувати"
-  hoc2014_teachers: "Вчителі"
-  hoc2014_host: "Проведіть"
-  hoc2014_everyone: "Усі"
-  hoc2014_support: "Підтримайте &#x25BE;"
-  hoc2014_whatishoc: "Що таке Година коду?"
-  csedweek_map_header: "Події # CSEdWeek та Години коду по всьому світу"
-  csedweek_map_signup: "Зареєструйте свій захід"
-  csedweek_map_search_placeholder: "Пошук заходів Години коду"
-  csedweek_map_search_search: "Пошук"
-  csedweek_map_search_reset: "Скидання"
-  csedweek_map_legend_title: "Умовні позначення"
-  csedweek_map_legend_event: "Заходи Години коду"
-  csedweek_map_legend_cs_tech_jam: "Особливі заходи"
-  cded_sign_up: "Реєстрація"
-  cded_try_it: "Спробувати"
-  try_now: "Спробувати"
-  california_heading: "Попросіть свою школу викладати інформатику"
-  california_text: "Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
+  hoc2014_students: Учні
+  hoc2014_try: Спробувати
+  hoc2014_teachers: Вчителі
+  hoc2014_host: Проведіть
+  hoc2014_everyone: Усі
+  hoc2014_support: Підтримайте &#x25BE;
+  hoc2014_whatishoc: Що таке Година коду?
+  csedweek_map_header: 'Події # CSEdWeek та Години коду по всьому світу'
+  csedweek_map_signup: Зареєструйте свій захід
+  csedweek_map_search_placeholder: Пошук заходів Години коду
+  csedweek_map_search_search: Пошук
+  csedweek_map_search_reset: Скидання
+  csedweek_map_legend_title: Умовні позначення
+  csedweek_map_legend_event: Заходи Години коду
+  csedweek_map_legend_cs_tech_jam: Особливі заходи
+  cded_sign_up: Реєстрація
+  cded_try_it: Спробувати
+  try_now: Спробувати
+  california_heading: Попросіть свою школу викладати інформатику
+  california_text: Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
     вступний курс</a>. Кожна початкова школа може <a href='http://code.org/educate/k5'>навчати
     інформатиці</a>. Запросіть старшу школу <a href='http://code.org/educate/districts'>
-    до партнерства."
-  california_button: "Дізнатися більше"
-  flappy_heading: "З Днем Народження Code.org"
+    до партнерства.
+  california_button: Дізнатися більше
+  flappy_heading: З Днем Народження Code.org
   flappy_text: Code.org щойно виповнився 1 рік.<br/><br/> Святкуйте з нами, створюючи
     свою власну гру в <b>Пурха (Flappy Bird)</b>. Кодуйте свої власні правила та діліться
     грою з друзями!
-  view_english_site: "Переглянути англомовний сайт"
-  non_english_tutorials: "Підручники перекладені на кілька мов:"
-  write_your_first_program: "Напишіть свою першу комп'ютерну програму"
-  learn_cs_concepts: "Вивчайте основні поняття програмування через перетягування блоків.
+  view_english_site: Переглянути англомовний сайт
+  non_english_tutorials: 'Підручники перекладені на кілька мов:'
+  write_your_first_program: Напишіть свою першу комп'ютерну програму
+  learn_cs_concepts: Вивчайте основні поняття програмування через перетягування блоків.
     У цьому відео-підручнику, схожому на гру, знімались Біл Гейтс, Марк Цукенберг,
     Angry Birds та Plants vs. Zombies. Дізнайтеся про цикли, розгалуження та прості
-    алгоритми."
-  all_ages: "Всі вікові групи"
-  beginner: "Початківець"
+    алгоритми.
+  all_ages: Всі вікові групи
+  beginner: Початківець
   n_participants: "# учасників"
-  go: "Вперед"
-  thank_you_: "Дякую!"
-  congratulations: "Вітання!"
-  congratulations_on_completing_hoc: "Вітаємо із завершенням першої Години коду"
+  go: Вперед
+  thank_you_: Дякую!
+  congratulations: Вітання!
+  congratulations_on_completing_hoc: Вітаємо із завершенням першої Години коду
   congratulations_volunteer: 'Вітаємо: тепер, після завершення Години коду, <a href="https://code.org/volunteer">зголосіться
     волонтером для класу</a> і допоможіть учням пройти Годину коду!'
-  congratulations_on_completing_course1: "Вітаємо із завершенням курсу 1"
-  congratulations_on_completing_course2: "Вітаємо із завершенням курсу 2"
-  congratulations_on_completing_course3: "Вітаємо із завершенням курсу 3"
-  congratulations_on_completing_course4: "Вітаємо із завершенням курсу 4"
-  congratulations_on_completing_coursea: "Вітаємо із завершенням Курсу A"
-  congratulations_on_completing_courseb: "Вітаємо із завершенням Курсу B"
-  congratulations_on_completing_coursec: "Вітаємо із завершенням Курсу C"
-  congratulations_on_completing_coursed: "Вітаємо із завершенням Курсу D"
-  congratulations_on_completing_coursee: "Вітаємо із завершенням Курсу E"
-  congratulations_on_completing_coursef: "Вітаємо із завершенням Курсу F"
-  congratulations_on_completing_accelerated: "Вітаємо із завершенням прискореного
-    курсу"
-  congrats_next_tutorials_title: "Перейти до наступного рівня"
+  congratulations_on_completing_course1: Вітаємо із завершенням курсу 1
+  congratulations_on_completing_course2: Вітаємо із завершенням курсу 2
+  congratulations_on_completing_course3: Вітаємо із завершенням курсу 3
+  congratulations_on_completing_course4: Вітаємо із завершенням курсу 4
+  congratulations_on_completing_coursea: Вітаємо із завершенням Курсу A
+  congratulations_on_completing_courseb: Вітаємо із завершенням Курсу B
+  congratulations_on_completing_coursec: Вітаємо із завершенням Курсу C
+  congratulations_on_completing_coursed: Вітаємо із завершенням Курсу D
+  congratulations_on_completing_coursee: Вітаємо із завершенням Курсу E
+  congratulations_on_completing_coursef: Вітаємо із завершенням Курсу F
+  congratulations_on_completing_accelerated: Вітаємо із завершенням прискореного курсу
+  congrats_next_tutorials_title: Перейти до наступного рівня
   congrats_next_tutorials_desc: Спробуйте цей короткий, 1-годинний підручник, або
     <a href="%{current_path}/next">підручники наших партнерів</a>.
-  get_a_certificate_of_achievement: "Отримати сертифікат досягнень"
-  view_course: "Перегляд курсу"
-  view_unit: "Переглянути розділ"
-  make_app: "Створити програму"
-  congrats_guest_speaker_title: "Знайти гостя для свого класу"
-  congrats_guest_speaker_desc: "Тепер, коли Ваші учні завершили курс інформатики,
-    подумайте над відзначенням цієї події та поєднанням вивченого із реальними задачами,
-    запросивши ІТ-гостя у клас. Можете скористатись нашою картою волонтерів для запрошення
-    місцевих доповідачів, або виконайте пошук в будь-якому місті, щоб знайти студентів-інформатиків
-    чи технічних фахівців, які можуть надихнути Ваших учнів дистанційно, через відео-чат."
-  congrats_guest_speaker_cta: "Знайти гостя"
-  congrats_third_party_title: "Застосуй свої нові навички на цих сайтах та програмах"
+  get_a_certificate_of_achievement: Отримати сертифікат досягнень
+  view_course: Перегляд курсу
+  view_unit: Переглянути розділ
+  make_app: Створити програму
+  congrats_guest_speaker_title: Знайти гостя для свого класу
+  congrats_guest_speaker_desc: Тепер, коли Ваші учні завершили курс інформатики, подумайте
+    над відзначенням цієї події та поєднанням вивченого із реальними задачами, запросивши
+    ІТ-гостя у клас. Можете скористатись нашою картою волонтерів для запрошення місцевих
+    доповідачів, або виконайте пошук в будь-якому місті, щоб знайти студентів-інформатиків
+    чи технічних фахівців, які можуть надихнути Ваших учнів дистанційно, через відео-чат.
+  congrats_guest_speaker_cta: Знайти гостя
+  congrats_third_party_title: Застосуй свої нові навички на цих сайтах та програмах
   third_party_gradelevel_kto8: 8 класи
   third_party_gradelevel_kto2: 2 класи
   third_party_gradelevel_2to8: 2-8 класи
@@ -128,235 +127,234 @@
   third_party_gradelevel_5to12: 5-12 класи
   third_party_gradelevel_6plus: 6+ класи
   third_party_gradelevel_8plus: 8+ класи
-  third_party_platform_all: "Платформи: веб, iPad та Android"
-  third_party_platform_mobile: "Платформи: iPad та Android"
-  third_party_platform_web: "Платформи: веб"
-  third_party_price_varies: "Ціна: різні плани"
-  third_party_price_free: "Ціна: безкоштовно"
-  third_party_price_299: "Ціна: $2.99/завантаження"
-  third_party_price_individual: "Індивідуальна ціна: безкоштовна пробна версія та
-    25$/місяць"
-  third_party_price_school: "Шкільна ціна: безкоштовні плани та професійна версія
-    за 2500+$"
-  third_party_tynker_desc: "Креативна платформа Tynker допомагає дітям розвивати навички
+  third_party_platform_all: 'Платформи: веб, iPad та Android'
+  third_party_platform_mobile: 'Платформи: iPad та Android'
+  third_party_platform_web: 'Платформи: веб'
+  third_party_price_varies: 'Ціна: різні плани'
+  third_party_price_free: 'Ціна: безкоштовно'
+  third_party_price_299: 'Ціна: $2.99/завантаження'
+  third_party_price_individual: 'Індивідуальна ціна: безкоштовна пробна версія та
+    25$/місяць'
+  third_party_price_school: 'Шкільна ціна: безкоштовні плани та професійна версія
+    за 2500+$'
+  third_party_tynker_desc: Креативна платформа Tynker допомагає дітям розвивати навички
     обчислювального мислення та програмування весело, інтуїтивно та творчо. Наша інноваційна
     візуальна мова програмування, інтерактивні курси у власному темпі, ігрові завдання
     з програмування, створюють легкий вступ до програмування та розширюють можливості
-    дітей в інноваціях та творчості."
-  third_party_tynker_btn_curriculum: "Спробуйте навчальну програму Tynker для початківців
-    у читанні"
-  third_party_tynker_btn_site: "Відвідайте Tynker"
+    дітей в інноваціях та творчості.
+  third_party_tynker_btn_curriculum: Спробуйте навчальну програму Tynker для початківців
+    у читанні
+  third_party_tynker_btn_site: Відвідайте Tynker
   third_party_scratchjr_desc: Scratch Jr. - це вступна мова програмування, призначена
     для дітей молодшого віку (5-7 років), які зможуть створювати власні інтерактивні
     історії та ігри. Діти складають графічні блоки програмування, щоб змусити персонажів
     рухатись, стрибати, танцювати та співати. Діти можуть змінювати персонажів у графічному
     редакторі, додавати власні голоси та звуки, навіть вставляти власні фото - а тоді
     використовувати блоки програмування, щоб оживити своїх персонажів.
-  third_party_scratchjr_btn_curriculum: "Завантажити навчальну програму Scratch Jr."
-  third_party_scratchjr_btn_site: "Відвідайте Scratch Jr."
+  third_party_scratchjr_btn_curriculum: Завантажити навчальну програму Scratch Jr.
+  third_party_scratchjr_btn_site: Відвідайте Scratch Jr.
   third_party_scratch_desc: Scratch допоможе запрограмувати інтерактивні історії,
     ігри та анімації, а також поділитись своїми творіннями з іншими учасниками онлайнової
     спільноти. Scratch вчить дітей мислити творчо, використовувати систематичне доведення
     та співпрацювати у групах - все це критичні навички життя у 21му столітті.
-  third_party_scratch_btn_curriculum: "Завантажити навчальну програму Scratch"
-  third_party_scratch_btn_forum: "Форум педагогів Scratch"
-  third_party_scratch_btn_site: "Відвідайте Scratch"
-  third_party_lightbot_desc: "Із Lightbot учні можуть запрограмувати робота та розв'язати
+  third_party_scratch_btn_curriculum: Завантажити навчальну програму Scratch
+  third_party_scratch_btn_forum: Форум педагогів Scratch
+  third_party_scratch_btn_site: Відвідайте Scratch
+  third_party_lightbot_desc: Із Lightbot учні можуть запрограмувати робота та розв'язати
     поставлені задачі. Учні можуть грати у браузері (потрібен Flash Player), або на
     пристроях Android чи iOS. Учні можуть грати у базові рівні Lightbot. Вони навчаться
     вказувати комп'ютеру, що робити низкою основних команд та отримають уявлення про
-    загальний процес написання комп'ютерних програм."
-  third_party_lightbot_btn_curriculum: "Завантажити навчальну програму Lightbot"
-  third_party_lightbot_btn_site: "Відвідайте Lightbot"
-  third_party_khan_desc: "Дізнатесь, як програмно створювати малюнки, анімації та
-    ігри за допомогою JavaScript та ProcessingJS, або навчіться створювати веб-сторінки
+    загальний процес написання комп'ютерних програм.
+  third_party_lightbot_btn_curriculum: Завантажити навчальну програму Lightbot
+  third_party_lightbot_btn_site: Відвідайте Lightbot
+  third_party_khan_desc: Дізнатесь, як програмно створювати малюнки, анімації та ігри
+    за допомогою JavaScript та ProcessingJS, або навчіться створювати веб-сторінки
     з HTML та CSS. Можна поділитись усім створеним, дослідити творіння інших та вчитися
-    один в одного!"
-  third_party_khan_btn_learn: "Вивчайте інформатику з Академією Хана"
-  third_party_khan_btn_forum: "Форум інформатики Академії Хана"
+    один в одного!
+  third_party_khan_btn_learn: Вивчайте інформатику з Академією Хана
+  third_party_khan_btn_forum: Форум інформатики Академії Хана
   third_party_appinv_desc: MIT App Inventor -це інструмент блокового програмування,
     який дозволяє усім, навіть новачкам, розпочати програмування та створити повнофункціональні
     аплікації для пристроїв Android. Початківці можуть створити і запустити першу
     програму в App Inventor за годину, чи й менше, а складніші програми потребують
     значно менше часу, аніж традиційні текстові мови.
-  third_party_appinv_btn_curriculum: "Завантажити навчальну програму App Inventor
-    2"
-  third_party_appinv_btn_forum: "Форум App Inventor 2"
-  third_party_appinv_btn_site: "Відвідайте App Inventor 2"
+  third_party_appinv_btn_curriculum: Завантажити навчальну програму App Inventor 2
+  third_party_appinv_btn_forum: Форум App Inventor 2
+  third_party_appinv_btn_site: Відвідайте App Inventor 2
   third_party_codehs_desc: CodeHS представляє будівельні блоки програмування короткими
     відео-роликами, прикладами коду та багатьма вправами, які роблять програмування
     цікавим та доступним для початківців. Для шкіл та вчителів CodeHS надає навчальні
     програми, інструменти для вчителів та професійні курси. Індивідуальні учні у процесі
     навчання можуть отримати допомогу від спільноти консультантів.
-  third_party_codehs_btn_try: "Вступ до інформатики. Докладніше для шкіл"
-  third_party_codecademy_desc: "Ми переглядаємо освіту знизу вгору. Веб змусив переглянути
+  third_party_codehs_btn_try: Вступ до інформатики. Докладніше для шкіл
+  third_party_codecademy_desc: Ми переглядаємо освіту знизу вгору. Веб змусив переглянути
     майже все - комерцію, соціальні спільноти, охорону здоров'я та багато іншого.
-    Ми створюємо освіту, яку потребує світ - першу справді мережеву освіту."
-  third_party_codecademy_btn_curriculum: "Завантажити навчальну програму Codecademy"
-  third_party_codecademy_btn_site: "Відвідайте Codecademy"
-  third_party_organization: "Організація"
-  third_party_curriculum: "Навчальний план"
-  third_party_pricing: "Ціни"
-  third_party_cost_free: "Безкоштовно для учнів та вчителів"
+    Ми створюємо освіту, яку потребує світ - першу справді мережеву освіту.
+  third_party_codecademy_btn_curriculum: Завантажити навчальну програму Codecademy
+  third_party_codecademy_btn_site: Відвідайте Codecademy
+  third_party_organization: Організація
+  third_party_curriculum: Навчальний план
+  third_party_pricing: Ціни
+  third_party_cost_free: Безкоштовно для учнів та вчителів
   third_party_cost_5permonth: "$5/місяць з класу"
   third_party_cost_299: "$2.99/завантаження"
-  third_party_cost_free_399: "Спробувати безкоштовно, $399/клас"
-  third_party_cost_free_2: "Спробувати безкоштовно, $2/учень"
-  third_party_cost_free_10: "Спробувати безкоштовно, $9.99/місяць"
-  third_party_desc_5_4to8: "Приблизно 5 уроків, орієнтованих на 4-8 клас"
-  third_party_desc_10to12_kto3: "Приблизно 10-12 уроків, орієнтованих на 3 клас"
-  third_party_desc_11_kto5: "Приблизно 11 уроків, орієнтованих на 5 клас"
-  third_party_desc_10to12_kto5: "Приблизно 10-12 уроків, орієнтованих на 5 клас"
-  third_party_desc_40_4to8: "Більше 40 уроків, орієнтованих на 4-8 клас"
-  third_party_desc_dozens_kto8: "Десятки уроків для всіх класів до 8"
-  third_party_desc_10to15_3to12: "Між 10 та 15 уроків, орієнтованих на 3-12 класи"
-  third_party_desc_25to40_3to12: "Від 25-40 уроків, призначених для 3-12 класів"
-  third_party_desc_20_2to8: "Близько 20 уроків, орієнтованих на 2-8 класи"
-  third_party_desc_7to22_5to12: "Між 7 та 22 уроків, орієнтованих на 5-12 класи"
-  third_party_desc_20_4to12: "Більше 20 уроків, орієнтованих на 4-12 класи"
-  enter_valid_age: "Будь ласка, виберіть припустимий вік"
-  enter_valid_email: "Будь ласка, введіть електронну адресу"
-  get_a_certificate_message: "Ми надішлемо вам сертифікат та інформацію про те, як
-    <a href='/learn/beyond'>вчитися далі після Години коду</a>"
-  get_a_certificate_message_after: "Клацніть на сертифікаті, щоб завантажити або роздрукувати
+  third_party_cost_free_399: Спробувати безкоштовно, $399/клас
+  third_party_cost_free_2: Спробувати безкоштовно, $2/учень
+  third_party_cost_free_10: Спробувати безкоштовно, $9.99/місяць
+  third_party_desc_5_4to8: Приблизно 5 уроків, орієнтованих на 4-8 клас
+  third_party_desc_10to12_kto3: Приблизно 10-12 уроків, орієнтованих на 3 клас
+  third_party_desc_11_kto5: Приблизно 11 уроків, орієнтованих на 5 клас
+  third_party_desc_10to12_kto5: Приблизно 10-12 уроків, орієнтованих на 5 клас
+  third_party_desc_40_4to8: Більше 40 уроків, орієнтованих на 4-8 клас
+  third_party_desc_dozens_kto8: Десятки уроків для всіх класів до 8
+  third_party_desc_10to15_3to12: Між 10 та 15 уроків, орієнтованих на 3-12 класи
+  third_party_desc_25to40_3to12: Від 25-40 уроків, призначених для 3-12 класів
+  third_party_desc_20_2to8: Близько 20 уроків, орієнтованих на 2-8 класи
+  third_party_desc_7to22_5to12: Між 7 та 22 уроків, орієнтованих на 5-12 класи
+  third_party_desc_20_4to12: Більше 20 уроків, орієнтованих на 4-12 класи
+  enter_valid_age: Будь ласка, виберіть припустимий вік
+  enter_valid_email: Будь ласка, введіть електронну адресу
+  get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
+    <a href='/learn/beyond'>вчитися далі після Години коду</a>
+  get_a_certificate_message_after: Клацніть на сертифікаті, щоб завантажити або роздрукувати
     його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>інших
     курсах</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза
-    Годиною коду</a>."
-  thanks_for_submitting: "Дякуємо за участь!"
-  if_you_enjoyed: "Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо
-    навчати увесь світ."
-  personalize_certificate: "Персоналізувати ваш сертифікат"
-  share_achievement: "Поділитись досягненнями"
-  beyond_hour_message: "Продовжуйте навчання на <a href='http://studio.code.org'>інших
+    Годиною коду</a>.
+  thanks_for_submitting: Дякуємо за участь!
+  if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати
+    увесь світ.
+  personalize_certificate: Персоналізувати ваш сертифікат
+  share_achievement: Поділитись досягненнями
+  beyond_hour_message: Продовжуйте навчання на <a href='http://studio.code.org'>інших
     курсах</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза
-    Годиною коду </a>."
-  leaderboards_for_hoc: "Лідери „Години Коду“."
+    Годиною коду </a>.
+  leaderboards_for_hoc: Лідери „Години Коду“.
   support_url: http://support.code.org/
-  country: "Країна"
-  city: "Місто"
-  gender: "Стать"
-  boys: "Хлопці"
-  girls: "Дівчата"
-  give_my_hour: "Передати мою годину для:"
-  girls_team: "Група дівчат"
-  boys_team: "Команда хлопців"
-  tell_the_world: "Розкажіть світу!"
-  thanks_for_voting: "Дякуємо за голосування!"
-  share_on_facebook: "Поділитися через Facebook"
-  share_on_twitter: "Поділитися через Twitter"
-  beyond_an_hour: "Поза Годиною коду"
-  get_started: "Початок"
-  i_agree: "Погоджуюся"
+  country: Країна
+  city: Місто
+  gender: Стать
+  boys: Хлопці
+  girls: Дівчата
+  give_my_hour: 'Передати мою годину для:'
+  girls_team: Група дівчат
+  boys_team: Команда хлопців
+  tell_the_world: Розкажіть світу!
+  thanks_for_voting: Дякуємо за голосування!
+  share_on_facebook: Поділитися через Facebook
+  share_on_twitter: Поділитися через Twitter
+  beyond_an_hour: Поза Годиною коду
+  get_started: Початок
+  i_agree: Погоджуюся
   participant_select: "-Виберіть-"
-  participant_student: "учень"
-  participant_parent: "Батько/мати"
-  participant_educator: "Педагог"
-  participant_engineer: "Інженер-програміст"
-  participant_other: "Жоден з перерахованих"
-  print_all: "Друкувати все"
-  print_ice_art: "Надрукувати свої крижані узори"
-  create_art_with_zombie: "або створити складніші узори із зомбі"
-  i_am_a: "Я - "
-  never_spam: "Ми ніколи не будемо спамити вам"
-  enter_country: "Введіть країну, якщо ви - за межами США"
-  used_infrequent_updates: "Використовується лише для нечастих оновлень"
-  privacy_practices_children: "Переглянути політику конфіденційності для дітей"
-  petition_thankyou: "Дякуємо вам за підписання петиції"
-  continue_learning_header: "Продовжити навчання поза Годиною коду"
-  continue_learning_body: "Існує багато варіантів. Можна вчитись онлайн, у місцевій
-    школі або в літньому таборі."
-  learn_code_studio: "Спробуйте курси Студії коду"
-  learn_next_level: "Продовжити до наступного рівня"
-  learn_online: "Спробуйте інші курси онлайн"
-  learn_classes: "Знайти місцеві класи"
-  learn_back_to_minecraft: "Продовжуйте вчитися з Майнкрафт"
-  hoc_is_here: "Вивчайте інформатику. Вона змінює все.  https://youtu.be/xJqSu1IbcHg."
-  just_did_hoc: "Я щойно завершив #HourOfCode - подивіться, що це! @codeorg"
-  just_did_course1: "Щойно завершено Курс 1 - подивіться! @codeorg"
-  just_did_course2: "Щойно завершено Курс 2 - подивіться! @codeorg"
-  just_did_course3: "Щойно завершено Курс 3 - подивіться! @codeorg"
-  just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
-  just_did_coursea: "Я щойно завершив Курс 1 - подивіться! @codeorg"
-  just_did_courseb: "Я щойно завершив Курс 2 - подивіться! @codeorg"
-  just_did_coursec: "Я щойно завершив Курс 3 - подивіться! @codeorg"
-  just_did_coursed: "Я щойно завершив Курс 4 - подивіться! @codeorg"
-  just_did_coursee: "Я щойно завершив Курс 5 - подивіться! @codeorg"
-  just_did_coursef: "Я щойно завершив Курс 6 - подивіться! @codeorg"
-  just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
-  just_did_hoc_donor: "Я щойно завершив #HourOfCode - подивіться! (Спасибі %{donor_twitter}
-    за підтрімку @codeorg)"
-  just_did_course1_donor: "Я щойно завершив Курс 1 - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_course2_donor: "Я щойно завершив Курс 2 - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_course3_donor: "Я щойно завершив Курс 3 - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_course4_donor: "Я щойно завершив Курс 1- подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_coursea_donor: "Я щойно завершив Курс A - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_courseb_donor: "Я щойно завершив Курс B - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_coursec_donor: "Я щойно завершив Курс C - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_coursed_donor: "Я щойно завершив Курс D - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_coursee_donor: "Я щойно завершив Курс E - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_coursef_donor: "Я щойно завершив Курс F - подивіться! Спасибі %{donor_twitter}
-    за підтрімку @codeorg"
-  just_did_accelerated_donor: "Я щойно завершив Прискорений курс - подивіться! Спасибі
-    %{donor_twitter} за підтрімку @codeorg"
+  participant_student: учень
+  participant_parent: Батько/мати
+  participant_educator: Педагог
+  participant_engineer: Інженер-програміст
+  participant_other: Жоден з перерахованих
+  print_all: Друкувати все
+  print_ice_art: Надрукувати свої крижані узори
+  create_art_with_zombie: або створити складніші узори із зомбі
+  i_am_a: 'Я - '
+  never_spam: Ми ніколи не будемо спамити вам
+  enter_country: Введіть країну, якщо ви - за межами США
+  used_infrequent_updates: Використовується лише для нечастих оновлень
+  privacy_practices_children: Переглянути політику конфіденційності для дітей
+  petition_thankyou: Дякуємо вам за підписання петиції
+  continue_learning_header: Продовжити навчання поза Годиною коду
+  continue_learning_body: Існує багато варіантів. Можна вчитись онлайн, у місцевій
+    школі або в літньому таборі.
+  learn_code_studio: Спробуйте курси Студії коду
+  learn_next_level: Продовжити до наступного рівня
+  learn_online: Спробуйте інші курси онлайн
+  learn_classes: Знайти місцеві класи
+  learn_back_to_minecraft: Продовжуйте вчитися з Майнкрафт
+  hoc_is_here: Вивчайте інформатику. Вона змінює все.  https://youtu.be/xJqSu1IbcHg.
+  just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
+  just_did_course1: Щойно завершено Курс 1 - подивіться! @codeorg
+  just_did_course2: Щойно завершено Курс 2 - подивіться! @codeorg
+  just_did_course3: Щойно завершено Курс 3 - подивіться! @codeorg
+  just_did_course4: Щойно завершено Курс 4 - подивіться! @codeorg
+  just_did_coursea: Я щойно завершив Курс 1 - подивіться! @codeorg
+  just_did_courseb: Я щойно завершив Курс 2 - подивіться! @codeorg
+  just_did_coursec: Я щойно завершив Курс 3 - подивіться! @codeorg
+  just_did_coursed: Я щойно завершив Курс 4 - подивіться! @codeorg
+  just_did_coursee: Я щойно завершив Курс 5 - подивіться! @codeorg
+  just_did_coursef: Я щойно завершив Курс 6 - подивіться! @codeorg
+  just_did_accelerated: Щойно завершено Прискорений курс - подивіться! @codeorg
+  just_did_hoc_donor: 'Я щойно завершив #HourOfCode - подивіться! (Спасибі %{donor_twitter}
+    за підтрімку @codeorg)'
+  just_did_course1_donor: Я щойно завершив Курс 1 - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_course2_donor: Я щойно завершив Курс 2 - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_course3_donor: Я щойно завершив Курс 3 - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_course4_donor: Я щойно завершив Курс 1- подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_coursea_donor: Я щойно завершив Курс A - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_courseb_donor: Я щойно завершив Курс B - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_coursec_donor: Я щойно завершив Курс C - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_coursed_donor: Я щойно завершив Курс D - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_coursee_donor: Я щойно завершив Курс E - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_coursef_donor: Я щойно завершив Курс F - подивіться! Спасибі %{donor_twitter}
+    за підтрімку @codeorg
+  just_did_accelerated_donor: Я щойно завершив Прискорений курс - подивіться! Спасибі
+    %{donor_twitter} за підтрімку @codeorg
   twitter_teach_cs: 9 з 10 людей погоджуються із тим, інформатику потрібно викладати
     у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/.
   twitter_cs_foundational: |-
     Інформатика є основою, яку має вивчати кожен учень.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "Вивчати Годину Коду"
-  beyond_hoc: "Поза Годиною коду"
-  what_gender: "Якої ви статі?"
-  girl: "Дівчина"
-  boy: "Хлопець"
-  help_recruit_coders: "Допоможіть залучити більше програмістів у свою команду!"
-  help_recruit: "Допоможіть залучити більше програмістів!"
-  lines_of_code: "ДОСІ НАПИСАНО <b># РЯДКІВ КОДУ</b>."
-  lines_of_code_alt: "УЧНЯМИ НАПИСАНО <b>#</b> РЯДКІВ КОДУ"
-  who_has_done_hoc: "Хто пройшов Годину коду #HourOfCode? @codeorg"
-  who_has_done_hoc_donor: "Хто закінчив #HourOfCode? (Спасибі %{donor_twitter} за
-    підтрімку @codeorg)"
-  hoc_leaderboards: "Лідери Години коду"
+  learn_hoc: Вивчати Годину Коду
+  beyond_hoc: Поза Годиною коду
+  what_gender: Якої ви статі?
+  girl: Дівчина
+  boy: Хлопець
+  help_recruit_coders: Допоможіть залучити більше програмістів у свою команду!
+  help_recruit: Допоможіть залучити більше програмістів!
+  lines_of_code: ДОСІ НАПИСАНО <b># РЯДКІВ КОДУ</b>.
+  lines_of_code_alt: УЧНЯМИ НАПИСАНО <b>#</b> РЯДКІВ КОДУ
+  who_has_done_hoc: 'Хто пройшов Годину коду #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Хто закінчив #HourOfCode? (Спасибі %{donor_twitter} за
+    підтрімку @codeorg)'
+  hoc_leaderboards: Лідери Години коду
   students_and_lines: "%{students} учнів пройшли Годину коду і написали  %{lines}
     рядків коду."
-  start_hoc: "Почати Годину коду"
-  contact_form_topic_press: "Преса/ЗМІ (інтерв’ю або розмова)"
+  start_hoc: Почати Годину коду
+  contact_form_topic_press: Преса/ЗМІ (інтерв’ю або розмова)
   stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна
     Ніколс Пірі, педагог'
   stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате,
     5 клас'
   stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням."
     - Френк Мартінез, педагог'
-  studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
-  studiobar_title_nolink: "Познайомтесь зі Студією коду"
-  studiobar_elementary_title: "Базові курси"
-  studiobar_elementary_body: "Три нові курси для K&#8209;5"
-  studiobar_hoc_title: "Година Коду"
-  studiobar_hoc_body: "Вчимося програмувати зі Злими Птахами"
-  studiobar_flappy_title: "Код Пурха"
-  studiobar_flappy_body: "Створіть та поділиться своєю власною грою Пурха"
-  studiobar_teacher_title: "Створено для вчителів"
-  studiobar_teacher_body: "Введіть студію коду в свій клас"
-  studiobar_frozen_title: "Година коду"
-  studiobar_frozen_body: "Створіть зимову казку з Анною та Ельзою"
-  studiobar_donate_title: "Підтримати"
-  studiobar_donate_body: "На кожен долар пожертв ми навчимо одну дитину"
-  studiobar_shop_title: "Магазин"
-  studiobar_shop_body: "Ламайте стереотипи. Гордо носіть наш логотип."
-  homepage_stats_students: "студентів США мають облікові записи на Code.org"
-  homepage_stats_female: "наших учнів - жінки"
-  homepage_stats_teachers: "викладачів користуються Code.org"
-  homepage_stats_hourofcodde: "студентів світу спробували Годину коду"
+  studiobar_title: Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>
+  studiobar_title_nolink: Познайомтесь зі Студією коду
+  studiobar_elementary_title: Базові курси
+  studiobar_elementary_body: Три нові курси для K&#8209;5
+  studiobar_hoc_title: Година Коду
+  studiobar_hoc_body: Вчимося програмувати зі Злими Птахами
+  studiobar_flappy_title: Код Пурха
+  studiobar_flappy_body: Створіть та поділиться своєю власною грою Пурха
+  studiobar_teacher_title: Створено для вчителів
+  studiobar_teacher_body: Введіть студію коду в свій клас
+  studiobar_frozen_title: Година коду
+  studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
+  studiobar_donate_title: Підтримати
+  studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
+  studiobar_shop_title: Магазин
+  studiobar_shop_body: Ламайте стереотипи. Гордо носіть наш логотип.
+  homepage_stats_students: студентів США мають облікові записи на Code.org
+  homepage_stats_female: наших учнів - жінки
+  homepage_stats_teachers: викладачів користуються Code.org
+  homepage_stats_hourofcodde: студентів світу спробували Годину коду
   homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: "Ми змінюємо світ"
+  homepage_stats_title: Ми змінюємо світ
   homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну
     Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру"
   homepage_hero_text_susan: |-
@@ -409,171 +407,170 @@
   homepage_hero_text_stat_loc: "#loc рядків коду, написаних учнями"
   homepage_hero_text_stat_students: "#student_count облікових записів учнів у Студії
     коду"
-  homepage_hero_text_stat_served: "Година коду: навчились #served"
-  homepage_hero_hoc_is_coming: "Наближається Година коду"
-  homepage_hero_hoc_is_here: "Прийшла Година коду"
-  homepage_slot_text_hoc: "Година Коду"
-  homepage_slot_text_frozen: "Крижане серце з Анною і Ельзою"
-  homepage_slot_text_teacher: "Панель вчителя"
-  homepage_slot_text_studio: "Всі наші підручники"
-  homepage_slot_text_course4: "Курс 4"
-  homepage_slot_text_shop: "Магазин"
-  homepage_slot_text_flappy: "Код Пурха"
-  homepage_action_text_hoc: "Година коду для кожного учня."
+  homepage_hero_text_stat_served: 'Година коду: навчились #served'
+  homepage_hero_hoc_is_coming: Наближається Година коду
+  homepage_hero_hoc_is_here: Прийшла Година коду
+  homepage_slot_text_hoc: Година Коду
+  homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
+  homepage_slot_text_teacher: Панель вчителя
+  homepage_slot_text_studio: Всі наші підручники
+  homepage_slot_text_course4: Курс 4
+  homepage_slot_text_shop: Магазин
+  homepage_slot_text_flappy: Код Пурха
+  homepage_action_text_hoc: Година коду для кожного учня.
   homepage_action_text_num_served: "# вже спробували"
-  homepage_action_text_join_us: "Приєднуйтесь"
-  homepage_action_text_sign_up: "Реєстрація"
-  homepage_action_text_try_it: "Спробувати"
-  homepage_action_text_volunteers: "Потрібні технічні волонтери"
-  homepage_action_text_codevideo: "Переглянути відео"
-  homepage_action_text_teachervideo: "Переглянути відео"
-  homepage_action_text_watchvideo: "Переглянути відео"
-  homepage_action_text_girlvideo: "Залучайте дівчат"
-  homepage_action_text_learn: "Початок навчання"
-  homepage_action_text_signpetition: "Підписати петицію"
-  homepage_action_text_wincelebritychat: "Виграй чат зі знаменітостю"
-  homepage_signpetition_dropdown: "Підписати нашу петицію &#x25BE;"
-  homepage_diversity_pledge: "Приєднатись до петиції про різноманіття"
-  homepage_banner_text_prizes: "Година коду наближається знову, 7-13 грудня. "
-  homepage_banner_link_prizes: "Приєднуйтесь до найбільшої освітньої події в історії. "
+  homepage_action_text_join_us: Приєднуйтесь
+  homepage_action_text_sign_up: Реєстрація
+  homepage_action_text_try_it: Спробувати
+  homepage_action_text_volunteers: Потрібні технічні волонтери
+  homepage_action_text_codevideo: Переглянути відео
+  homepage_action_text_teachervideo: Переглянути відео
+  homepage_action_text_watchvideo: Переглянути відео
+  homepage_action_text_girlvideo: Залучайте дівчат
+  homepage_action_text_learn: Початок навчання
+  homepage_action_text_signpetition: Підписати петицію
+  homepage_action_text_wincelebritychat: Виграй чат зі знаменітостю
+  homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_diversity_pledge: Приєднатись до петиції про різноманіття
+  homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
+  homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '
   homepage_banner_text_main: Code.org та Рада коледжів утворили альянс для посилення
     різноманітності в інформатиці.
-  homepage_banner_text_link: "Дізнайтеся більше"
+  homepage_banner_text_link: Дізнайтеся більше
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "Дізнайтеся більше"
-  homepage_banner_20k_teachers: "Вже навчено 20 000 вчителів, які зараз викладають
-    інформатику в своїх класах."
-  homepage_banner_20k_teachers_link: "Дізнайтеся більше"
-  homepage_banner_congress: "Американські лідери закликають Конгрес фінансувати інформатику
-    в школі."
-  homepage_banner_congress_link: "Підтримайте"
-  homepage_banner_emailprivacy: "Ми вносимо важливі зміни у підтриманні конфіденційності
-    учнів."
-  homepage_banner_emailprivacy_link: "Докладніше"
+  homepage_banner_privacy_link: Дізнайтеся більше
+  homepage_banner_20k_teachers: Вже навчено 20 000 вчителів, які зараз викладають
+    інформатику в своїх класах.
+  homepage_banner_20k_teachers_link: Дізнайтеся більше
+  homepage_banner_congress: Американські лідери закликають Конгрес фінансувати інформатику
+    в школі.
+  homepage_banner_congress_link: Підтримайте
+  homepage_banner_emailprivacy: Ми вносимо важливі зміни у підтриманні конфіденційності
+    учнів.
+  homepage_banner_emailprivacy_link: Докладніше
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "Дізнайтеся більше"
-  homepage_slot_text_title_hoc: "Година коду"
-  homepage_slot_text_blurb_hoc: "Кожен може навчитися. Почніть сьогодні"
-  homepage_slot_text_link_hoc: "Спробуйте годину коду"
-  homepage_slot_text_link_about_hoc: "Про Годину Коду"
-  homepage_slot_text_link_host: "Провести Годину Коду"
+  homepage_banner_40k_teachers_link: Дізнайтеся більше
+  homepage_slot_text_title_hoc: Година коду
+  homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
+  homepage_slot_text_link_hoc: Спробуйте годину коду
+  homepage_slot_text_link_about_hoc: Про Годину Коду
+  homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: "# вже спробували"
-  homepage_solot_text_link_volunteer: "Волонтер для Години коду"
-  homepage_slot_text_title_students: "Учні"
-  homepage_slot_text_blurb_students: "Пройдіть всі наші навчальні курси"
-  homepage_slot_text_blurb_students_courses: "Перегляньте наші курси"
-  homepage_slot_text_link_codestudio: "Спробуйте Студію Коду"
-  homepage_slot_text_link_local: "Знайти місцевий клас"
-  homepage_slot_text_link_othercourses: "Інші онлайн курси"
-  homepage_slot_text_title_educators: "Вчителі"
-  homepage_slot_text_blurb_educators: "Навчіть Ваших учнів"
-  homepage_slot_text_link_elementary: "Початкова школа"
-  homepage_slot_text_link_middle: "Середня школа"
-  homepage_slot_text_link_high: "Старша школа"
-  homepage_slot_text_link_k5: "Курси для дітей"
-  homepage_slot_text_link_fullcurriculum: "Подивіться наш повний курс навчання"
-  homepage_slot_text_link_pd: "Професійний розвиток"
-  homepage_slot_text_title_advocates: "Однодумці"
-  homepage_slot_text_blurb_advocates: "Підтримайте нашу роботу"
-  homepage_slot_text_link_stats: "Подивитися статистику"
-  homepage_slot_text_link_buy: "Взяти участь"
-  homepage_slot_text_link_donate: "Зробити пожертвування"
-  homepage_slot_text_link_shop: "Футболки, капелюхи та інше"
-  homepage_slot_text_link_administrators: "Привнесить Інформатику до вашої школи"
-  homepage_header_codestudio: "Творчість учнів Студії Коду"
+  homepage_solot_text_link_volunteer: Волонтер для Години коду
+  homepage_slot_text_title_students: Учні
+  homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
+  homepage_slot_text_blurb_students_courses: Перегляньте наші курси
+  homepage_slot_text_link_codestudio: Спробуйте Студію Коду
+  homepage_slot_text_link_local: Знайти місцевий клас
+  homepage_slot_text_link_othercourses: Інші онлайн курси
+  homepage_slot_text_title_educators: Вчителі
+  homepage_slot_text_blurb_educators: Навчіть Ваших учнів
+  homepage_slot_text_link_elementary: Початкова школа
+  homepage_slot_text_link_middle: Середня школа
+  homepage_slot_text_link_high: Старша школа
+  homepage_slot_text_link_k5: Курси для дітей
+  homepage_slot_text_link_fullcurriculum: Подивіться наш повний курс навчання
+  homepage_slot_text_link_pd: Професійний розвиток
+  homepage_slot_text_title_advocates: Однодумці
+  homepage_slot_text_blurb_advocates: Підтримайте нашу роботу
+  homepage_slot_text_link_stats: Подивитися статистику
+  homepage_slot_text_link_buy: Взяти участь
+  homepage_slot_text_link_donate: Зробити пожертвування
+  homepage_slot_text_link_shop: Футболки, капелюхи та інше
+  homepage_slot_text_link_administrators: Привнесить Інформатику до вашої школи
+  homepage_header_codestudio: Творчість учнів Студії Коду
   homepage_header_donors: Code.org дякує своїм помічникам
-  homepage_donors_seall: "Подивитися усіх"
-  homepage_donors_donate: "Підтримати"
-  contact_form_topic_student: "Я учень"
-  contact_form_topic_parent: "Я батько/мати"
-  contact_form_topic_teacher: "Я вчитель/педагог"
-  contact_form_topic_outside_us: "Я за межами США"
-  contact_form_topic_contribution: "Благодійний внесок"
-  contact_form_topic_partner: "Я хочу стати партнером"
-  contact_form_topic_other: "Інше"
-  contact_form_label_topic: "Тема"
-  contact_form_label_email: "Ваша адреса електронної пошти"
-  contact_form_label_message: "Повідомлення"
-  contact_form_label_submit: "Надіслати повідомлення"
-  class_submission_in_school: "У школі"
-  class_submission_in_school_daily_programming_course: "Щоденний курс програмування"
-  class_submission_in_school_ap_computer_science: "Поглиблений курс інформатики"
-  class_submission_in_school_full_university_cs_curriculum: "Повний університетський
-    курс комп'ютерних наук"
-  class_submission_in_school_robotics_club: "Клуб робототехніки"
-  class_submission_in_school_programming_integrated_in_other_classes: "Програмування
-    на інших уроках (математика, природничі науки тощо)"
-  class_submission_in_school_summer_school_cs_program: "Програма літньої школи з інформатики"
-  class_submission_in_school_exploring_computer_science: "Вивчення інформатики"
-  class_submission_in_school_other: "Інше у школі"
-  class_submission_out_of_school: "Поза школою"
-  class_submission_out_of_school_summer_camp: "Літній табір"
-  class_submission_out_of_school_afterschool_program: "Післяурочні програми"
-  class_submission_out_of_school_all-day_workshop: "Денний семінар (до 1 тижня)"
-  class_submission_out_of_school_multi-week_workshop: "Кількатижневий семінар"
-  class_submission_out_of_school_other: "Інше позашкілля"
-  class_submission_online: "Онлайн"
-  class_submission_online_programming_class: "Онлайновий курс програмування"
-  class_submission_online_teacher_resource: "Онлайнові ресурси для вчителів"
-  class_submission_online_other: "Інші онлайнові ресурси"
-  class_submission_level_preschool: "Дошкілля"
-  class_submission_level_elementary: "Початкова школа"
-  class_submission_level_middle_school: "Середня школа"
-  class_submission_level_high_school: "Старша школа"
-  class_submission_level_college: "Коледж"
-  class_submission_level_vocational: "Професійна освіта"
-  class_submission_languages_other: "Інші мови"
-  videos_more: "Більше <a href='%{inspiring_videos_playlist}'>надихаючих відео</a>
-    з рольовими моделями та знаменитостями"
-  careers_page_more: "Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a>
-    з фахівцями зі сфери технологій"
-  playlab_choose_theme: "Обери тему Ігрової лабораторїі"
-  playlab_classic_title: "Класична"
-  playlab_gumball_title: "Гамбол"
-  playlab_iceage_title: "Льодовиковий період - скоро"
-  playlab_iceage_title_live: "Льодовиковий період"
-  starwars_subtitle: "Закодуємо далеку Галактику"
+  homepage_donors_seall: Подивитися усіх
+  homepage_donors_donate: Підтримати
+  contact_form_topic_student: Я учень
+  contact_form_topic_parent: Я батько/мати
+  contact_form_topic_teacher: Я вчитель/педагог
+  contact_form_topic_outside_us: Я за межами США
+  contact_form_topic_contribution: Благодійний внесок
+  contact_form_topic_partner: Я хочу стати партнером
+  contact_form_topic_other: Інше
+  contact_form_label_topic: Тема
+  contact_form_label_email: Ваша адреса електронної пошти
+  contact_form_label_message: Повідомлення
+  contact_form_label_submit: Надіслати повідомлення
+  class_submission_in_school: У школі
+  class_submission_in_school_daily_programming_course: Щоденний курс програмування
+  class_submission_in_school_ap_computer_science: Поглиблений курс інформатики
+  class_submission_in_school_full_university_cs_curriculum: Повний університетський
+    курс комп'ютерних наук
+  class_submission_in_school_robotics_club: Клуб робототехніки
+  class_submission_in_school_programming_integrated_in_other_classes: Програмування
+    на інших уроках (математика, природничі науки тощо)
+  class_submission_in_school_summer_school_cs_program: Програма літньої школи з інформатики
+  class_submission_in_school_exploring_computer_science: Вивчення інформатики
+  class_submission_in_school_other: Інше у школі
+  class_submission_out_of_school: Поза школою
+  class_submission_out_of_school_summer_camp: Літній табір
+  class_submission_out_of_school_afterschool_program: Післяурочні програми
+  class_submission_out_of_school_all-day_workshop: Денний семінар (до 1 тижня)
+  class_submission_out_of_school_multi-week_workshop: Кількатижневий семінар
+  class_submission_out_of_school_other: Інше позашкілля
+  class_submission_online: Онлайн
+  class_submission_online_programming_class: Онлайновий курс програмування
+  class_submission_online_teacher_resource: Онлайнові ресурси для вчителів
+  class_submission_online_other: Інші онлайнові ресурси
+  class_submission_level_preschool: Дошкілля
+  class_submission_level_elementary: Початкова школа
+  class_submission_level_middle_school: Середня школа
+  class_submission_level_high_school: Старша школа
+  class_submission_level_college: Коледж
+  class_submission_level_vocational: Професійна освіта
+  class_submission_languages_other: Інші мови
+  videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих відео</a>
+    з рольовими моделями та знаменитостями
+  careers_page_more: Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a>
+    з фахівцями зі сфери технологій
+  playlab_choose_theme: Обери тему Ігрової лабораторїі
+  playlab_classic_title: Класична
+  playlab_gumball_title: Гамбол
+  playlab_iceage_title: Льодовиковий період - скоро
+  playlab_iceage_title_live: Льодовиковий період
+  starwars_subtitle: Закодуємо далеку Галактику
   starwars_javascript_title: Javascript
-  starwars_javascript_description: "На основі рухомих блоків та JavaScript."
-  starwars_javascript_specs: "Лише англійська | Сучасні браузери| Вік 11+"
-  starwars_blocks_title: "Блоки"
-  starwars_blocks_description: "На основі рухомих блоків."
-  starwars_blocks_specs: "Багато мов | Сучасні браузери, смартфони, планшети| Вік
-    6-106"
-  starwars_platform_text: "Сучасні браузери, смартфони, планшети"
-  mc_name: "Година коду від Майнкрафт"
-  mc_longdescription: "Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
-    пригодах у світі Майнкрафт."
-  mc_shortdescription: "Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
-    пригодах у світі Майнкрафт."
-  mc_gradelevel: "Вік 6+"
-  mc_platformtext: "Сучасні браузери, смартфони, планшети"
-  mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
+  starwars_javascript_description: На основі рухомих блоків та JavaScript.
+  starwars_javascript_specs: Лише англійська | Сучасні браузери| Вік 11+
+  starwars_blocks_title: Блоки
+  starwars_blocks_description: На основі рухомих блоків.
+  starwars_blocks_specs: Багато мов | Сучасні браузери, смартфони, планшети| Вік 6-106
+  starwars_platform_text: Сучасні браузери, смартфони, планшети
+  mc_name: Година коду від Майнкрафт
+  mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
+    пригодах у світі Майнкрафт.
+  mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
+    пригодах у світі Майнкрафт.
+  mc_gradelevel: Вік 6+
+  mc_platformtext: Сучасні браузери, смартфони, планшети
+  mc_specs: Багато мов | Сучасні браузери та планшети| Вік 6-106
   minecraft_agent: 'Minecraft: Подорож героя'
-  minecraft_designer: "Майнкрафт - Розробник"
-  minecraft_adventurer: "Майнкрафт - Пригоди"
-  minecraft_tutorials: "Підручники Години коду від Майнкрафт"
-  minecraft_specs: "Багато мов | Сучасні браузери та планшети | Класи 2+"
+  minecraft_designer: Майнкрафт - Розробник
+  minecraft_adventurer: Майнкрафт - Пригоди
+  minecraft_tutorials: Підручники Години коду від Майнкрафт
+  minecraft_specs: Багато мов | Сучасні браузери та планшети | Класи 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "Початок"
-  minecraft_designer_description: "Запрограмуй тварин та інших істот Майнкрафт у власній
-    версії цієї гри."
-  minecraft_designer_button: "Початок"
-  minecraft_adventurer_description: "Скористайся кодом, щоб запросити Алекс чи Стіва
-    на пригоду."
-  minecraft_adventurer_button: "Початок"
-  minecraft_no_internet: "Немає Інтернету?"
-  minecraft_download_adventurer: "Завантажуйте оффлайнову версію Майнкрафт - Пригод."
-  minecraft_subtitle: "Година коду від Майнкрафт"
-  minecraft_store_camps: "Безкоштовні табори Години коду в магазині Microsoft"
+  minecraft_agent_button: Початок
+  minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
+    версії цієї гри.
+  minecraft_designer_button: Початок
+  minecraft_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
+    на пригоду.
+  minecraft_adventurer_button: Початок
+  minecraft_no_internet: Немає Інтернету?
+  minecraft_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
+  minecraft_subtitle: Година коду від Майнкрафт
+  minecraft_store_camps: Безкоштовні табори Години коду в магазині Microsoft
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Реєструйся</a>
     на безкоштовні майстерні Години коду від Minecraft у магазинах Microsoft у Австралії,
     Канаді, Пуерто Ріко чи США. Дізнайся, чому кодування підходить для всіх та поєднує
     в собі творчість, вирішення проблем та багато веселощів."
-  minecraft_host_event: "Проведіть Годину коду від Minecraft"
-  minecraft_teach_resources: "Ресурси вчителя та план уроку."
+  minecraft_host_event: Проведіть Годину коду від Minecraft
+  minecraft_teach_resources: Ресурси вчителя та план уроку.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
@@ -593,87 +590,87 @@
     become familiar with key computer science concepts, and get ready to lead an Hour
     of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
     up today</a>.
-  minecraft_future: "Допожить всій молоді стати готовими до майбутнього"
-  minecraft_future_description: "Дізнайтесь, як інші школи та некомерційні організації
+  minecraft_future: Допожить всій молоді стати готовими до майбутнього
+  minecraft_future_description: Дізнайтесь, як інші школи та некомерційні організації
     привносять цифрові навичкі, від цифровій грамотності до навчання інформатиці,
     до їх спільноти. Розгляньте різні моделі, отримуйте поради та хитрощі та <a href='%{minecraft_future_url}',
-    target='_blank'>отримуйте ресурси</a>, що вони знайшли найцинішими."
+    target='_blank'>отримуйте ресурси</a>, що вони знайшли найцинішими.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
-  sports_page_title: "Спортивна Година коду"
-  sports_og_title: "Підручник зі спортивної Години коду"
-  sports_og_description: "Обери між підручниками створення гри в баскетбол чи заміксуй
-    інші спортивні заходи."
-  sports_title: "Закодуй власну спортивну гру"
-  sports_watch_video: "Переглянути відео"
-  sports_video_title: "Постарайся! Навчитись може кожен."
-  sports_select_theme: "Обери тему підручника"
-  sports_basketball_title: "Зроби гру в баскетбол"
-  sports_all_sports_title: "Закодуй власний спорт"
-  sports_featured_athletes: "Переглянути прославлених спортсменів"
-  sports_athletes_title: "Прославлені спортсмени"
-  sports_athlete_Draymond: "Дреймон Ґрін, олімпійський золотий медаліст та чемпіон
-    НБА, Голден-Стейт Ворріорс"
-  sports_athlete_Serena: "Серена Вільямс, олімпійська золота медалістка та тенісна
-    чемпіонка"
-  sports_athlete_Russell: "Рассел Окунг, чемпіон Супербоулу та гравець НФЛ, Денвер
-    Бронкос"
-  sports_athlete_Sergio: "Серхіо Рамос, чемпіон Кубку світу з футболу, Реал Мадрид"
-  sports_athlete_Sue: "Сью Берд, олімпійська золота медалістка та чемпіонка ЖНБА,
-    Сіетл Шторм"
-  sports_athlete_Alana: "Алана Берд, золота медалістка та зірка ЖНБА, Лос-Анджелес
-    Спаркс"
-  sports_athlete_Angelo: "Анжело Метьюс, капітан Шрі-Ланкійської команди з крикету"
-  sports_athlete_Nneka: "Ннека Огвуміке, золота медалістка, чемпіонка ЖНБА та найцінніший
-    гравець 2016 року, Лос-Анджелес Спаркс"
-  sports_athlete_Carmelo: "Кармело Ентоні, олімпійський золотий медаліст та зірка
-    НБА, Нью-Йорк Нікс"
-  sports_athlete_Marco: "Марко Белінеллі, чемпіон НБА, Шарлотт Горнетс"
-  sports_athlete_Neymar: "Неймар Жуніор, олімпійський золотий медаліст, футболіст
-    ФК Барселона та Національної збірної Бразилії"
-  sports_athlete_Sarah: "Сара-Куіта Оффрінга, чемпіонка з віндсерфінгу"
-  sports_athlete_Marcelo: "Марсело, чемпіон з футболу, Реал Мадрид та Національна
-    збірна Бразилії"
-  sports_athlete_Erika: "Еріка Олівера, чемпіонка з марафонського бігу"
-  sports_athlete_John: "Джон Уолл, зірка НБА, Вашингтон Візардс"
-  sports_athlete_Chris: "Кріс Бош, олімпійський золотий медаліст та чемпіон НБА, Маямі
-    Гіт"
-  sports_athlete_Harrison: "Гаррісон Барнс, олімпійський золотий медаліст та чемпіон
-    НБА, Даллас Маверікс"
-  watch_inspirational_videos: "Перед початком роботи перегляньте ці відео для натхнення"
+  sports_page_title: Спортивна Година коду
+  sports_og_title: Підручник зі спортивної Години коду
+  sports_og_description: Обери між підручниками створення гри в баскетбол чи заміксуй
+    інші спортивні заходи.
+  sports_title: Закодуй власну спортивну гру
+  sports_watch_video: Переглянути відео
+  sports_video_title: Постарайся! Навчитись може кожен.
+  sports_select_theme: Обери тему підручника
+  sports_basketball_title: Зроби гру в баскетбол
+  sports_all_sports_title: Закодуй власний спорт
+  sports_featured_athletes: Переглянути прославлених спортсменів
+  sports_athletes_title: Прославлені спортсмени
+  sports_athlete_Draymond: Дреймон Ґрін, олімпійський золотий медаліст та чемпіон
+    НБА, Голден-Стейт Ворріорс
+  sports_athlete_Serena: Серена Вільямс, олімпійська золота медалістка та тенісна
+    чемпіонка
+  sports_athlete_Russell: Рассел Окунг, чемпіон Супербоулу та гравець НФЛ, Денвер
+    Бронкос
+  sports_athlete_Sergio: Серхіо Рамос, чемпіон Кубку світу з футболу, Реал Мадрид
+  sports_athlete_Sue: Сью Берд, олімпійська золота медалістка та чемпіонка ЖНБА, Сіетл
+    Шторм
+  sports_athlete_Alana: Алана Берд, золота медалістка та зірка ЖНБА, Лос-Анджелес
+    Спаркс
+  sports_athlete_Angelo: Анжело Метьюс, капітан Шрі-Ланкійської команди з крикету
+  sports_athlete_Nneka: Ннека Огвуміке, золота медалістка, чемпіонка ЖНБА та найцінніший
+    гравець 2016 року, Лос-Анджелес Спаркс
+  sports_athlete_Carmelo: Кармело Ентоні, олімпійський золотий медаліст та зірка НБА,
+    Нью-Йорк Нікс
+  sports_athlete_Marco: Марко Белінеллі, чемпіон НБА, Шарлотт Горнетс
+  sports_athlete_Neymar: Неймар Жуніор, олімпійський золотий медаліст, футболіст ФК
+    Барселона та Національної збірної Бразилії
+  sports_athlete_Sarah: Сара-Куіта Оффрінга, чемпіонка з віндсерфінгу
+  sports_athlete_Marcelo: Марсело, чемпіон з футболу, Реал Мадрид та Національна збірна
+    Бразилії
+  sports_athlete_Erika: Еріка Олівера, чемпіонка з марафонського бігу
+  sports_athlete_John: Джон Уолл, зірка НБА, Вашингтон Візардс
+  sports_athlete_Chris: Кріс Бош, олімпійський золотий медаліст та чемпіон НБА, Маямі
+    Гіт
+  sports_athlete_Harrison: Гаррісон Барнс, олімпійський золотий медаліст та чемпіон
+    НБА, Даллас Маверікс
+  watch_inspirational_videos: Перед початком роботи перегляньте ці відео для натхнення
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "Залучайте дівчат"
-  video_title_cs_intro: "Вступ до інформатики"
-  video_title_schools_dont_teach: "Те, чого не навчають у більшості шкіл"
-  video_title_obama: "Президент Обама про інформатику"
-  video_title_hoc_is_here: "Година коду вже тут - навчитись може кожен"
-  video_title_anybody_can_learn: "Навчитись може кожен"
-  video_title_steph_curry: "Година коду зі Стефом Каррі"
-  video_title_draymond_green: "Година коду з Дреймондом Гріном"
-  video_title_russell_okung: "Година коду з Расселом Окунгом"
-  video_title_real_madrid: "Година коду з Реал Мадрид"
-  video_title_marco_belinelli: "Година коду з Марко Белінеллі"
-  video_title_chris_bosh: "Кріс Бош про інформатику"
+  video_title_inspire_girl: Залучайте дівчат
+  video_title_cs_intro: Вступ до інформатики
+  video_title_schools_dont_teach: Те, чого не навчають у більшості шкіл
+  video_title_obama: Президент Обама про інформатику
+  video_title_hoc_is_here: Година коду вже тут - навчитись може кожен
+  video_title_anybody_can_learn: Навчитись може кожен
+  video_title_steph_curry: Година коду зі Стефом Каррі
+  video_title_draymond_green: Година коду з Дреймондом Гріном
+  video_title_russell_okung: Година коду з Расселом Окунгом
+  video_title_real_madrid: Година коду з Реал Мадрид
+  video_title_marco_belinelli: Година коду з Марко Белінеллі
+  video_title_chris_bosh: Кріс Бош про інформатику
   video_1min: 1 хв
   video_2min: 2 хв
   video_5min: 5 хв
-  speak_another_language: "Інша мова?"
-  help_translate: "Допоможіть нам з перекладом."
-  no_internet: "Немає Інтернету?"
-  download_offline: "Завантажити автономну версію."
-  are_you_teacher: "Ви вчитель?"
-  review_lesson_plan: "Переглянути план уроку та інші ресурси вчителя."
-  volunteer_engineer_submission_title: "Надихайте учнів та волонтерів на Годину коду."
+  speak_another_language: Інша мова?
+  help_translate: Допоможіть нам з перекладом.
+  no_internet: Немає Інтернету?
+  download_offline: Завантажити автономну версію.
+  are_you_teacher: Ви вчитель?
+  review_lesson_plan: Переглянути план уроку та інші ресурси вчителя.
+  volunteer_engineer_submission_title: Надихайте учнів та волонтерів на Годину коду.
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести
     Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} вчителів потребують
     волонтерів, натхненних інформатичною освітою для допомоги у проведенні Години
     коду цього грудня.<br>%{num_volunteers} волонтерів вже підписались. Приєднуйтесь."
-  volunteer_engineer_submission_intro_background: "Година коду - це глобальний рух
+  volunteer_engineer_submission_intro_background: Година коду - це глобальний рух
     годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш,
-    як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня."
+    як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня.
   volunteer_engineer_submission_intro_recruit: 'Ці вчителі хочуть, щоб хтось, <span
     style="font-family: ''Gotham 7r'', sans-serif;">захоплений інформатичною освітою</span>
     допоміг їм у класі, або <span style="font-family: ''Gotham 7r'', sans-serif;">надихнув</span>
@@ -688,74 +685,74 @@
   volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
     більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
     на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
-  volunteer_engineer_submission_update_information: "Оновіть свої дані"
-  volunteer_engineer_submission_header_shared: "Інформація доступна вчителям та волонтерам
-    на карті"
-  volunteer_engineer_submission_field_name: "Ім’я"
-  volunteer_engineer_submission_field_name_placeholder: "Повне ім'я"
-  volunteer_engineer_submission_field_company: "Компанія (або університет)"
-  volunteer_engineer_submission_field_company_placeholder: "Компанія (або університет)"
-  volunteer_engineer_submission_field_experience_level: "Рівень досвіду"
-  volunteer_engineer_submission_field_location: "Місце знаходження"
-  volunteer_engineer_submission_field_location_desc: "Якщо ви вкажете свою точну адресу,
-    ми не будемо її показувати, просто поставимо мітку на карті."
-  volunteer_engineer_submission_field_location_placeholder: "Поштовий індекс, місто
-    та країна, або поштова адреса"
-  volunteer_engineer_submission_field_location_flexibility: "Я можу допомогти в проведенні
-    Години коду... (вкажіть все, що підходить)"
-  volunteer_engineer_submission_checkbox_after_hoc: "Мене цікавить волонтерство після
-    Години коду"
-  volunteer_engineer_submission_field_time_commitment: "Часові зобов'язання після
-    Години коду"
-  volunteer_engineer_submission_field_linkedin: "профіль LinkedIn"
+  volunteer_engineer_submission_update_information: Оновіть свої дані
+  volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
+    на карті
+  volunteer_engineer_submission_field_name: Ім’я
+  volunteer_engineer_submission_field_name_placeholder: Повне ім'я
+  volunteer_engineer_submission_field_company: Компанія (або університет)
+  volunteer_engineer_submission_field_company_placeholder: Компанія (або університет)
+  volunteer_engineer_submission_field_experience_level: Рівень досвіду
+  volunteer_engineer_submission_field_location: Місце знаходження
+  volunteer_engineer_submission_field_location_desc: Якщо ви вкажете свою точну адресу,
+    ми не будемо її показувати, просто поставимо мітку на карті.
+  volunteer_engineer_submission_field_location_placeholder: Поштовий індекс, місто
+    та країна, або поштова адреса
+  volunteer_engineer_submission_field_location_flexibility: Я можу допомогти в проведенні
+    Години коду... (вкажіть все, що підходить)
+  volunteer_engineer_submission_checkbox_after_hoc: Мене цікавить волонтерство після
+    Години коду
+  volunteer_engineer_submission_field_time_commitment: Часові зобов'язання після Години
+    коду
+  volunteer_engineer_submission_field_linkedin: профіль LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: "профіль Facebook"
+  volunteer_engineer_submission_field_facebook: профіль Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "Опис"
-  volunteer_engineer_submission_field_description_desc: "Опишіть свій досвід в інформатиці
-    та вкажіть, чому Ви бажаєте допомогти місцевим вчителям."
-  volunteer_engineer_submission_field_description_placeholder: "Опис досвіду та/або
-    участі"
-  volunteer_engineer_submission_header_private: "Інформація зберігається приватно
-    і ніколи не поширюється"
-  volunteer_engineer_submission_field_email: "Адреса електронної пошти"
-  volunteer_engineer_submission_field_email_desc: "Ваша адреса електронної пошти ніколи
-    не передаватиметься, але ми надішлемо вам запити від учителів."
-  volunteer_engineer_submission_field_email_placeholder: "Адреса електронної пошти"
-  volunteer_engineer_submission_final_paragraph: "Ви з'явитесь на карті, щоб місцеві
+  volunteer_engineer_submission_field_description: Опис
+  volunteer_engineer_submission_field_description_desc: Опишіть свій досвід в інформатиці
+    та вкажіть, чому Ви бажаєте допомогти місцевим вчителям.
+  volunteer_engineer_submission_field_description_placeholder: Опис досвіду та/або
+    участі
+  volunteer_engineer_submission_header_private: Інформація зберігається приватно і
+    ніколи не поширюється
+  volunteer_engineer_submission_field_email: Адреса електронної пошти
+  volunteer_engineer_submission_field_email_desc: Ваша адреса електронної пошти ніколи
+    не передаватиметься, але ми надішлемо вам запити від учителів.
+  volunteer_engineer_submission_field_email_placeholder: Адреса електронної пошти
+  volunteer_engineer_submission_final_paragraph: Ви з'явитесь на карті, щоб місцеві
     вчителі могли зв'язатися з Вами для Години коду чи інших волонтерських заходів.
     Ваша адреса електронної пошти чи поштова адреса НІКОЛИ не буде оприлюднена. Але
     інша інформація (включаючи приблизне розташування) буде публічно доступною місцевим
-    вчителям."
-  volunteer_engineer_submission_checkbox_contact: "Я погоджуюсь, що вчителі можуть
-    зв'язуватися зі мною для волонтерських заходів (Примітка: ваша адреса електронної
-    пошти не повідомлятиметься)"
-  volunteer_engineer_submission_checkbox_age_18_plus: "Я підтверджую, що мені щонайменше
-    18 років."
-  volunteer_engineer_submission_submit: "Надіслати"
+    вчителям.
+  volunteer_engineer_submission_checkbox_contact: 'Я погоджуюсь, що вчителі можуть
+    зв''язуватися зі мною для волонтерських заходів (Примітка: ваша адреса електронної
+    пошти не повідомлятиметься)'
+  volunteer_engineer_submission_checkbox_age_18_plus: Я підтверджую, що мені щонайменше
+    18 років.
+  volunteer_engineer_submission_submit: Надіслати
   volunteer_engineer_submission_thankyou: Дякуємо за подання вашої інформації. Щоб
     підготуватись до Години коду і залучити інших волонтерів, <a href="%{url}">звертайтесь
     сюди.</a>
-  volunteer_engineer_submission_commitment_uncertain: "Невизначено"
+  volunteer_engineer_submission_commitment_uncertain: Невизначено
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 година на тиждень
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 години на тиждень
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 годин на тиждень
-  volunteer_engineer_submission_commitment_now_and_then: "Час від часу"
+  volunteer_engineer_submission_commitment_now_and_then: Час від часу
   volunteer_engineer_submission_commitment_annually: 2 - 3 рази на рік
-  volunteer_engineer_submission_commitment_monthly: "Кілька годин на місяць"
-  volunteer_engineer_submission_commitment_weekly: "Кілька годин на тиждень"
-  volunteer_engineer_submission_commitment_more: "Більше"
-  volunteer_engineer_submission_location_flexibility_onsite: "На території школи"
-  volunteer_engineer_submission_location_flexibility_remote: "Віддалене навчання (вчителі
-    або учні)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "Бажаю зробити свій
-    внесок до відкритих навчальних проектів"
-  volunteer_engineer_submission_experience_unspecified: "Не вказано"
-  volunteer_engineer_submission_experience_tech_company: "Не-інженер у технічній компанії"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Студент
-    університету (або дослідник)"
-  volunteer_engineer_submission_experience_software_professional: "Програміст чи технічний
-    фахівець"
+  volunteer_engineer_submission_commitment_monthly: Кілька годин на місяць
+  volunteer_engineer_submission_commitment_weekly: Кілька годин на тиждень
+  volunteer_engineer_submission_commitment_more: Більше
+  volunteer_engineer_submission_location_flexibility_onsite: На території школи
+  volunteer_engineer_submission_location_flexibility_remote: Віддалене навчання (вчителі
+    або учні)
+  volunteer_engineer_submission_location_flexibility_curriculum: Бажаю зробити свій
+    внесок до відкритих навчальних проектів
+  volunteer_engineer_submission_experience_unspecified: Не вказано
+  volunteer_engineer_submission_experience_tech_company: Не-інженер у технічній компанії
+  volunteer_engineer_submission_experience_university_student_or_researcher: Студент
+    університету (або дослідник)
+  volunteer_engineer_submission_experience_software_professional: Програміст чи технічний
+    фахівець
   volunteer_engineer_submission_distance_8: 8 км
   volunteer_engineer_submission_distance_16: 16 км
   volunteer_engineer_submission_distance_24: 25 км
@@ -764,58 +761,58 @@
   volunteer_engineer_submission_num_volunteers_10: 10 волонтерів
   volunteer_engineer_submission_num_volunteers_25: 25 волонтерів
   volunteer_engineer_submission_num_volunteers_50: 50 волонтерів
-  volunteer_engineer_submission_type_task_onsite: "Я хочу запросити Вас у свій клас
-    для технічної допомоги та заохочення учнів"
-  volunteer_engineer_submission_type_task_remote: "Я хочу запросити Вас на Skype-зв'язок
-    у свій клас для заохочення учнів"
-  volunteer_engineer_submission_type_task_mentor: "Я шукаю наставника, який допоможе
-    мені підготуватись до програмування з учнями"
-  petition_age: "Вік"
+  volunteer_engineer_submission_type_task_onsite: Я хочу запросити Вас у свій клас
+    для технічної допомоги та заохочення учнів
+  volunteer_engineer_submission_type_task_remote: Я хочу запросити Вас на Skype-зв'язок
+    у свій клас для заохочення учнів
+  volunteer_engineer_submission_type_task_mentor: Я шукаю наставника, який допоможе
+    мені підготуватись до програмування з учнями
+  petition_age: Вік
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "Дізнайтеся більше"
-  dashboard_landing_title: "Домашня сторінка вчителя"
-  dashboard_landing_welcome: "Вітаємо в оновленій та покращеній вчительській панелі
-    керування."
-  dashboard_landing_video: "Перегляньте це відео"
-  dashboard_landing_watch_video: "для ознайомлення з новими можливостями!"
-  dashboard_landing_view_as_student: "Переглянути сайт в ролі учня"
-  dashboard_landing_students_title: "Ваші учні"
-  dashboard_landing_students_manage: "Перегляд та керування учнями"
-  dashboard_landing_news_title: "Ресурси для вчителів початкової школи (лише англійською)"
-  dashboard_landing_new_beta: "Новинка! Спробуйте наші бета-курси для учнів 1-5 класу."
-  dashboard_landing_new_k5courses: "Новинка! Спробуйте наші нові курси для учнів до
-    5 класу."
-  dashboard_landing_useful_links: "Інші корисні посилання"
-  dashboard_landing_classroom_resources: "Ресурси для класу"
-  dashboard_landing_office_hours: "Задайте своє питання! Відвідайте щомісячний вебінар
-    за розкладом."
-  dashboard_landing_print_certificates: "Надрукуйте сертифікати для учнів, які завершили
-    цей курс"
-  dashboard_landing_educator_blog: "Читати про новини та оновлення наших матеріалів
-    на нашому педагогічному блозі"
-  dashboard_landing_video_player: "Випробуйте наш новий відео-плеєр у своїй школі"
-  dashboard_landing_progress_title: "Прогрес класу"
-  dashboard_landing_progress_biggest: "Це прогрес Вашої найбільшої групи."
-  dashboard_landing_view_progress: "Переглянути прогрес для %{biggest_section}"
-  dashboard_landing_print_progress: "Друкувати прогрес"
-  dashboard_landing_available_title: "Доступні курси"
-  dashboard_landing_available_courses: "Перелік курсів, які на даний момент доступні
-    для Вас і Ваших учнів."
-  dashboard_landing_more_tutorials: "Хочите побачити більше уроків?"
+  dashboard_announce_learn_more_button: Дізнайтеся більше
+  dashboard_landing_title: Домашня сторінка вчителя
+  dashboard_landing_welcome: Вітаємо в оновленій та покращеній вчительській панелі
+    керування.
+  dashboard_landing_video: Перегляньте це відео
+  dashboard_landing_watch_video: для ознайомлення з новими можливостями!
+  dashboard_landing_view_as_student: Переглянути сайт в ролі учня
+  dashboard_landing_students_title: Ваші учні
+  dashboard_landing_students_manage: Перегляд та керування учнями
+  dashboard_landing_news_title: Ресурси для вчителів початкової школи (лише англійською)
+  dashboard_landing_new_beta: Новинка! Спробуйте наші бета-курси для учнів 1-5 класу.
+  dashboard_landing_new_k5courses: Новинка! Спробуйте наші нові курси для учнів до
+    5 класу.
+  dashboard_landing_useful_links: Інші корисні посилання
+  dashboard_landing_classroom_resources: Ресурси для класу
+  dashboard_landing_office_hours: Задайте своє питання! Відвідайте щомісячний вебінар
+    за розкладом.
+  dashboard_landing_print_certificates: Надрукуйте сертифікати для учнів, які завершили
+    цей курс
+  dashboard_landing_educator_blog: Читати про новини та оновлення наших матеріалів
+    на нашому педагогічному блозі
+  dashboard_landing_video_player: Випробуйте наш новий відео-плеєр у своїй школі
+  dashboard_landing_progress_title: Прогрес класу
+  dashboard_landing_progress_biggest: Це прогрес Вашої найбільшої групи.
+  dashboard_landing_view_progress: Переглянути прогрес для %{biggest_section}
+  dashboard_landing_print_progress: Друкувати прогрес
+  dashboard_landing_available_title: Доступні курси
+  dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
+    для Вас і Ваших учнів.
+  dashboard_landing_more_tutorials: Хочите побачити більше уроків?
   dashboard_landing_more_tutorials_desc: Є й інші навчальні посібники <a href="/learn/beyond">
     від наших партнерів.</a> Навчіться програмувати з роботами, робити веб-сторінки,
     створювати власні програмки або вивчати інші мови, як C++, Ruby або Python!
-  dashboard_landing_inspire: "Надихайте учнів постерами, відео та іншими ресурсами."
-  dashboard_landing_video_library: "Використовйте відео-ролики з бібліотеки понять
-    інформатики."
-  dashboard_landing_report_bug: "Зробити запит функціональності або повідомити про
-    помилку."
-  dashboard_landing_teacher_forum: "Приєднуйтесь до спільноти професійного навчання."
-  dashboard_hoc_courses: "Година коду для людей різного віку"
-  dashboard_hoc_courses_desc: "Спробуйте один із цих коротше 1 годину підручники з
-    вашими студентами!"
+  dashboard_landing_inspire: Надихайте учнів постерами, відео та іншими ресурсами.
+  dashboard_landing_video_library: Використовйте відео-ролики з бібліотеки понять
+    інформатики.
+  dashboard_landing_report_bug: Зробити запит функціональності або повідомити про
+    помилку.
+  dashboard_landing_teacher_forum: Приєднуйтесь до спільноти професійного навчання.
+  dashboard_hoc_courses: Година коду для людей різного віку
+  dashboard_hoc_courses_desc: Спробуйте один із цих коротше 1 годину підручники з
+    вашими студентами!
   dashboard_hoc_courses_desc_and_cta: Спробуйте зі своїми учнями ці короткі, 1-годинні
     підручники. <a href="https://hourofcode.com">Приєднуйтесь до руху Години коду</a>
     протягом тижня інформатики.
@@ -832,124 +829,123 @@
     - як інструмент для вивчення математичних та наукових понять. Щоб зареєструватись
     на курси професійного розвитку, звертайтесь до <a href="/educate/districts">районних
     партнерів</a> Code.org.
-  dashboard_high_courses: "Річні курси середньої школи"
+  dashboard_high_courses: Річні курси середньої школи
   dashboard_high_courses_desc: Наші програми для старшої школи допомагають районним
     об'єднанням проводити однорічні курси інформатики, готуючи вчителів до викладання
     нових тем. Щоб зареєструватись на семінари професійного розвитку, звертайтесь
     до <a href="/educate/districts">районних партнерів</a> Code.org.
-  dashboard_course_csina: "Інформатика в алгебрі"
+  dashboard_course_csina: Інформатика в алгебрі
   dashboard_course_csina_desc: Code.org у співпраці з Bootstrap розробили навчальні
     програми вивчення алгебраїчних і геометричних понять через програмування.
-  dashboard_course_csins: "Інформатика в науці"
+  dashboard_course_csins: Інформатика в науці
   dashboard_course_csins_desc: Code.org у співпраці з проектом GUTS розробили програму
     вступу до понять інформатики у контексті моделювання та симуляції.
-  dashboard_course_ecs: "Вивчення інформатики"
-  dashboard_course_ecs_desc: "Вивчення інформатики - це річний курс, який складається
-    з 6 блоків: взаємодія людини і комп'ютера, вирішення задач, веб-дизайн, програмування,
-    обчислення та аналіз даних і робототехніка."
+  dashboard_course_ecs: Вивчення інформатики
+  dashboard_course_ecs_desc: 'Вивчення інформатики - це річний курс, який складається
+    з 6 блоків: взаємодія людини і комп''ютера, вирішення задач, веб-дизайн, програмування,
+    обчислення та аналіз даних і робототехніка.'
   dashboard_course_csp: AP® принципи інформатики
   dashboard_course_csp_desc: Code.org розробив докладний, цікавий та доступний курс
     дослідження основоположних принципів інформатики.
-  dashboard_landing_loading: "Завантаження..."
-  dashboard_action_cancel: "Скасувати"
-  dashboard_action_delete: "Видалити"
-  dashboard_action_delete_yes: "Так"
-  dashboard_action_delete_no: "Ні"
-  dashboard_action_confirm: "Видалити?"
-  dashboard_action_done: "Готово"
-  dashboard_action_print_certificates: "Друкувати сертифікати"
-  dashboard_assessments_view: "Перегляд оцінок в:"
+  dashboard_landing_loading: Завантаження...
+  dashboard_action_cancel: Скасувати
+  dashboard_action_delete: Видалити
+  dashboard_action_delete_yes: Так
+  dashboard_action_delete_no: Ні
+  dashboard_action_confirm: Видалити?
+  dashboard_action_done: Готово
+  dashboard_action_print_certificates: Друкувати сертифікати
+  dashboard_assessments_view: 'Перегляд оцінок в:'
   dashboard_assessments_none: Більшість вчителів оцінюють прогрес своїх учнів, користуючись
     закладкою "Перегляд прогресу". Якщо потрібно ставити додаткові оцінки, можна скористатись
     рекомендованими запитаннями та областями у планах уроків. Це робиться за межами
     Студії коду.
-  dashboard_assessments_none_part2: "Якщо ви викладате курс у середній чи старшій
-    школі, у нас підготовані питання в межах Студії коду, щоб допомогти вашим учням
-    підготуватись до тесту АР. Щоб скористатись цими питаннями, призначте курс для
-    свого класу, тоді оберіть цей курс з випадного меню вгорі та перегляньте відповіді
-    учнів."
-  dashboard_assessments_summaries: "Резюме"
-  dashboard_assessments_answers: "Усі відповіді"
-  dashboard_surveys_answers: "Опитування"
-  dashboard_percent: "Відсотки"
-  dashboard_filter_by_stage: "Фільтр за етапами:"
-  dashboard_filter_all: "Все"
-  dashboard_download_csv: "Завантажити CSV"
-  dashboard_navigation_home_page: "Домашня сторінка вчителя"
-  dashboard_navigation_section_student_progress: "Облікові записи учнів та їх прогрес"
-  dashboard_navigation_section_teacher_progress: "Ваш прогрес у курсі"
-  dashboard_navigation_section_lesson_plans: "Плани уроків та ресурси"
-  dashboard_navigation_section_community: "Довідка та спільнота"
-  dashboard_navigation_section_pd: "Підвищення кваліфікації"
-  dashboard_navigation_section_speakers: "Запрошені гості <br/> з галузі інформатики"
-  dashboard_navigation_all_sections: "Облікові записи учнів та їх прогрес"
-  dashboard_navigation_view_progress: "Прогрес"
-  dashboard_navigation_view_text_responses: "Текстові відповіді"
-  dashboard_navigation_view_assessments: "Завдання"
-  dashboard_navigation_view_assessments_surveys: "Оцінки/Опитування"
-  dashboard_navigation_add_students: "Додати учнів"
-  dashboard_navigation_manage_students: "Керування учнями"
-  dashboard_navigation_lesson_plans_resources: "Плани уроків та ресурси"
-  dashboard_navigation_view_stats: "Статистика"
-  dashboard_navigation_section: "Група: %{section_name}"
-  dashboard_navigation_student: "Учень: %{student_name}"
-  dashboard_progress_not_started: "не розпочато"
-  dashboard_progress_in_progress: "в процесі"
-  dashboard_progress_not_completed: "не завершено"
-  dashboard_progress_completed_too_many_blocks: "завершено, забагато блоків"
-  dashboard_progress_completed_perfect: "виконано, ідеально"
-  dashboard_progress_furthest_level_attempted: "останній відкритий рівень"
-  dashboard_progress_submitted: "надіслано"
-  dashboard_progress_view: "Перегляд прогресу в:"
-  dashboard_progress_student_in_script: "Дані про прогрес %{student_name} в %{script_name}"
-  dashboard_progress_pair_programming: "парне програмування"
-  dashboard_responses_view: "Переглянути тексти відповідей у:"
-  dashboard_responses_none: "Більшість наших курсів розроблені для молодшого віку,
+  dashboard_assessments_none_part2: Якщо ви викладате курс у середній чи старшій школі,
+    у нас підготовані питання в межах Студії коду, щоб допомогти вашим учням підготуватись
+    до тесту АР. Щоб скористатись цими питаннями, призначте курс для свого класу,
+    тоді оберіть цей курс з випадного меню вгорі та перегляньте відповіді учнів.
+  dashboard_assessments_summaries: Резюме
+  dashboard_assessments_answers: Усі відповіді
+  dashboard_surveys_answers: Опитування
+  dashboard_percent: Відсотки
+  dashboard_filter_by_stage: 'Фільтр за етапами:'
+  dashboard_filter_all: Все
+  dashboard_download_csv: Завантажити CSV
+  dashboard_navigation_home_page: Домашня сторінка вчителя
+  dashboard_navigation_section_student_progress: Облікові записи учнів та їх прогрес
+  dashboard_navigation_section_teacher_progress: Ваш прогрес у курсі
+  dashboard_navigation_section_lesson_plans: Плани уроків та ресурси
+  dashboard_navigation_section_community: Довідка та спільнота
+  dashboard_navigation_section_pd: Підвищення кваліфікації
+  dashboard_navigation_section_speakers: Запрошені гості <br/> з галузі інформатики
+  dashboard_navigation_all_sections: Облікові записи учнів та їх прогрес
+  dashboard_navigation_view_progress: Прогрес
+  dashboard_navigation_view_text_responses: Текстові відповіді
+  dashboard_navigation_view_assessments: Завдання
+  dashboard_navigation_view_assessments_surveys: Оцінки/Опитування
+  dashboard_navigation_add_students: Додати учнів
+  dashboard_navigation_manage_students: Керування учнями
+  dashboard_navigation_lesson_plans_resources: Плани уроків та ресурси
+  dashboard_navigation_view_stats: Статистика
+  dashboard_navigation_section: 'Група: %{section_name}'
+  dashboard_navigation_student: 'Учень: %{student_name}'
+  dashboard_progress_not_started: не розпочато
+  dashboard_progress_in_progress: в процесі
+  dashboard_progress_not_completed: не завершено
+  dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
+  dashboard_progress_completed_perfect: виконано, ідеально
+  dashboard_progress_furthest_level_attempted: останній відкритий рівень
+  dashboard_progress_submitted: надіслано
+  dashboard_progress_view: 'Перегляд прогресу в:'
+  dashboard_progress_student_in_script: Дані про прогрес %{student_name} в %{script_name}
+  dashboard_progress_pair_programming: парне програмування
+  dashboard_responses_view: 'Переглянути тексти відповідей у:'
+  dashboard_responses_none: Більшість наших курсів розроблені для молодшого віку,
     і не вимагають друкування учнями відповідей, тож ви не побачите тут текстових
     відповідей. Для старших учнів у курсах для середньої та старшої школи, можна переглянути
     їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс
-    з випадного меню вгорі."
-  dashboard_sections_new_section: "Нова група"
+    з випадного меню вгорі.
+  dashboard_sections_new_section: Нова група
   dashboard_sections_new_google_section: Import section from Google Classroom
-  dashboard_sections_jumbotron_instruction: "Створюйте нові групи і додавайте до них
+  dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
     учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
-    прогресу та керування обліковими записами."
-  dashboard_sections_table_section: "Група"
-  dashboard_sections_table_secret: "Тип логіну"
-  dashboard_sections_table_grade: "Бал"
-  dashboard_sections_table_course: "Курс"
-  dashboard_sections_table_pairing_allowed: "Парне програмування"
-  dashboard_sections_table_stage_extras: "Додатки після етапу"
-  dashboard_sections_table_students: "Учні"
-  dashboard_sections_table_code: "Код групи"
-  dashboard_sections_name: "Назва групи"
-  dashboard_sections_choose_secret: "Якщо Ви хочете створити облікові записи для своїх
-    учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи."
+    прогресу та керування обліковими записами.
+  dashboard_sections_table_section: Група
+  dashboard_sections_table_secret: Тип логіну
+  dashboard_sections_table_grade: Бал
+  dashboard_sections_table_course: Курс
+  dashboard_sections_table_pairing_allowed: Парне програмування
+  dashboard_sections_table_stage_extras: Додатки після етапу
+  dashboard_sections_table_students: Учні
+  dashboard_sections_table_code: Код групи
+  dashboard_sections_name: Назва групи
+  dashboard_sections_choose_secret: Якщо Ви хочете створити облікові записи для своїх
+    учнів, оберіть таємне  <b>слово</b> або  <b>зображення</b> для цієї групи.
   dashboard_sections_secret_word: "<b>Слово</b> дозволяє задати таємне слово для кожного
     учня."
   dashboard_sections_secret_picture: "<b>Зображення</b>дозволяє задати таємне зображення
     для кожного учня - ідеальний варіант для молодших школярів, які не вміють друкувати."
-  dashboard_sections_secret_none: "Якщо Ви хочете, щоб учні самі створювали облікові
-    записи і задавали паролі, оберіть таємне слово<b>жодне</b>."
-  dashboard_sections_print_secrets: "Можете роздрукувати аркуш карток, що містять
-    інформацію про облікові записи учнів та індивідуально роздати їх учням."
-  dashboard_sections_switch_section: "Перемикач груп:"
-  dashboard_sections_close: "Закрити"
-  dashboard_sections_move_students_desc: "Оберіть учнів для переміщення у нову групу.
-    Переміщення учнів не очищує їхнього прогресу."
-  dashboard_sections_one_per_teacher: "Учні можуть перебувати лише в одній групі для
-    кожного вчителя. Ваші учні будуть додані до нової групи, і покинуть попередню."
-  dashboard_sections_move_to_section: "Перемістити до групи:"
-  dashboard_sections_enter_code: "Ввести код групи:"
+  dashboard_sections_secret_none: Якщо Ви хочете, щоб учні самі створювали облікові
+    записи і задавали паролі, оберіть таємне слово<b>жодне</b>.
+  dashboard_sections_print_secrets: Можете роздрукувати аркуш карток, що містять інформацію
+    про облікові записи учнів та індивідуально роздати їх учням.
+  dashboard_sections_switch_section: 'Перемикач груп:'
+  dashboard_sections_close: Закрити
+  dashboard_sections_move_students_desc: Оберіть учнів для переміщення у нову групу.
+    Переміщення учнів не очищує їхнього прогресу.
+  dashboard_sections_one_per_teacher: Учні можуть перебувати лише в одній групі для
+    кожного вчителя. Ваші учні будуть додані до нової групи, і покинуть попередню.
+  dashboard_sections_move_to_section: 'Перемістити до групи:'
+  dashboard_sections_enter_code: 'Ввести код групи:'
   dashboard_sections_code_placeholder: 6-символьний код (ABCDEF)
-  dashboard_sections_other_section: "Інший вчитель"
-  dashboard_sections_both_sections: "Хочете, щоб учні були в обох групах?"
-  dashboard_sections_yes_both: "Так, я хочу скопіювати учнів, щоб вони були у поточній
-    ТА новій групі"
-  dashboard_sections_no_move: "Ні, я хочу перемістити учнів у нову групу."
-  dashboard_sections_move_students: "Перемістити учнів"
-  dashboard_sections_assign_hoc_script_desc: "Береш участь в Годині коду?"
-  dashboard_sections_assign_hoc_script_msg: "Будь ласка, зверніть увагу, що ми збережемо
+  dashboard_sections_other_section: Інший вчитель
+  dashboard_sections_both_sections: Хочете, щоб учні були в обох групах?
+  dashboard_sections_yes_both: Так, я хочу скопіювати учнів, щоб вони були у поточній
+    ТА новій групі
+  dashboard_sections_no_move: Ні, я хочу перемістити учнів у нову групу.
+  dashboard_sections_move_students: Перемістити учнів
+  dashboard_sections_assign_hoc_script_desc: Береш участь в Годині коду?
+  dashboard_sections_assign_hoc_script_msg: Будь ласка, зверніть увагу, що ми збережемо
     ваш прогрес протягом тижня з 5 по 11 грудня, через безпрецедентний рівень трафіку
     на сайті Hour of Code. Ви все ще зможете призначити курс і дати всім студентам
     сертифікати за участь.  (Більшість викладачів <a href='%{certificate_url}'> друкуватимуть
@@ -957,152 +953,151 @@
     і студентів, які беруть участь, і ми шкодуємо, ми не зможемо зберегти все.  Якщо
     ваш клас хоче йти далі, може вийти за межі Hour of Code і  вивчати курс такий
     як Computer Science Fundamental.  Наш teacher dashboard (учитель приладової панелі)
-    дозволить вам відслідковувати прогрес вашого студента кожні два тижні в році."
-  dashboard_sections_assign_activity: "Призначити курс"
-  dashboard_error_none_selected: "Ви не обрали жодного учня для переміщення. Будь
-    ласка, оберіть хоча б одного учня."
+    дозволить вам відслідковувати прогрес вашого студента кожні два тижні в році.
+  dashboard_sections_assign_activity: Призначити курс
+  dashboard_error_none_selected: Ви не обрали жодного учня для переміщення. Будь ласка,
+    оберіть хоча б одного учня.
   dashboard_error_other_section: Якщо ви переміщуте учнів між власними групами, оберіть
     групу з випадного меню. Обирайте "Інша група" лише якщо Ви хочете перемістити
     учнів у групу іншого вчителя.
-  dashboard_students_add_multiple: "Надрукуйте або вставте імена Ваших учнів, по одному
-    на рядок:"
-  dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте
+  dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
+    на рядок:'
+  dashboard_students_new_google_classroom_section: Щоб додати учнів, використуйте
     <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після
-    клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
-  dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів,
-    використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
-  dashboard_students_name: "Ім’я"
-  dashboard_students_progress: "Прогрес"
-  dashboard_students_male: "Чоловік"
-  dashboard_students_female: "Жінка"
-  dashboard_students_completed_levels: "Завершені рівні"
-  dashboard_students_total_lines: "Рядків коду"
-  dashboard_students_share_section: "Надайте адресу сторінки входу для своїх учнів:"
-  dashboard_students_share_section_secondary: "Або ж поділіться зі своїми учнями сторінкою
-    входу цього розділу:"
-  dashboard_students_print_info: "Роздрукуйте картки з вхідною інформацією своїх учнів."
-  dashboard_students_secret_picture_title: "Таємне зображення"
-  dashboard_students_secret_picture: "Таємне зображення"
-  dashboard_students_reset_picture: "Можете скинути таємне зображення у будь-який
-    момент, обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b>
-    . Буде створено нове таємне зображення, яке потрібно використати для наступного
-    входу цього учня."
-  dashboard_students_secret_word_title: "Таємне слово"
-  dashboard_students_secret_word: "Таємне слово"
-  dashboard_students_reset_word: "Можете скинути таємне слово у будь-який момент,
+    клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі.
+  dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
+    кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
+  dashboard_students_name: Ім’я
+  dashboard_students_progress: Прогрес
+  dashboard_students_male: Чоловік
+  dashboard_students_female: Жінка
+  dashboard_students_completed_levels: Завершені рівні
+  dashboard_students_total_lines: Рядків коду
+  dashboard_students_share_section: 'Надайте адресу сторінки входу для своїх учнів:'
+  dashboard_students_share_section_secondary: 'Або ж поділіться зі своїми учнями сторінкою
+    входу цього розділу:'
+  dashboard_students_print_info: Роздрукуйте картки з вхідною інформацією своїх учнів.
+  dashboard_students_secret_picture_title: Таємне зображення
+  dashboard_students_secret_picture: Таємне зображення
+  dashboard_students_reset_picture: Можете скинути таємне зображення у будь-який момент,
+    обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено
+    нове таємне зображення, яке потрібно використати для наступного входу цього учня.
+  dashboard_students_secret_word_title: Таємне слово
+  dashboard_students_secret_word: Таємне слово
+  dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена
-    нова пара таємних слів, які потрібно використати для наступного входу цього учня. "
-  dashboard_students_join_link: "Скеруйте учнів для створення власних облікових записів
-    та приєднання до Ваших груп"
-  dashboard_students_no_email: "Якщо Ваші учні не мають електронних скриньок, або
-    Ви б хотіли створити для них облікові записи, вкажіть у цьому розділі таємний
-    код у формі <b>слова </b> або <b>зображення</b>."
-  dashboard_students_print_page: "Роздрукуйте цю сторінку"
-  dashboard_students_signin_card: "Відвідайте %{join_url} та введіть %{section_code}"
+    нова пара таємних слів, які потрібно використати для наступного входу цього учня. '
+  dashboard_students_join_link: Скеруйте учнів для створення власних облікових записів
+    та приєднання до Ваших груп
+  dashboard_students_no_email: Якщо Ваші учні не мають електронних скриньок, або Ви
+    б хотіли створити для них облікові записи, вкажіть у цьому розділі таємний код
+    у формі <b>слова </b> або <b>зображення</b>.
+  dashboard_students_print_page: Роздрукуйте цю сторінку
+  dashboard_students_signin_card: Відвідайте %{join_url} та введіть %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Клацніть
     тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити
     з учнями.
   dashboard_curriculum_k5_title: K-5 ресурси педагога
-  dashboard_curriculum_middle_title: "Середня школа ресурси педагога"
-  dashboard_curriculum_high_title: "Вища школа  ресурси педагога"
-  dashboard_lesson_plans: "Плани уроків"
-  dashboard_view_all_lesson_plans: "Переглянути всі конспекти уроків"
-  dashboard_course1: "Курс 1:"
-  dashboard_course2: "Курс 2:"
-  dashboard_course3: "Курс 3:"
-  dashboard_course4: "Курс 4 (beta): "
-  dashboard_coursea: "Курс A: "
-  dashboard_courseb: "Курс B: "
-  dashboard_coursec: "Курс C: "
-  dashboard_coursed: "Курс D: "
-  dashboard_coursee: "Курс E: "
-  dashboard_coursef: "Курс F: "
+  dashboard_curriculum_middle_title: Середня школа ресурси педагога
+  dashboard_curriculum_high_title: Вища школа  ресурси педагога
+  dashboard_lesson_plans: Плани уроків
+  dashboard_view_all_lesson_plans: Переглянути всі конспекти уроків
+  dashboard_course1: 'Курс 1:'
+  dashboard_course2: 'Курс 2:'
+  dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Курс 4 (beta): '
+  dashboard_coursea: 'Курс A: '
+  dashboard_courseb: 'Курс B: '
+  dashboard_coursec: 'Курс C: '
+  dashboard_coursed: 'Курс D: '
+  dashboard_coursee: 'Курс E: '
+  dashboard_coursef: 'Курс F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: "Швидкий Курс: "
-  dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте
-    ці безмашинні вправи</a> у своєму класі."
-  dashboard_tools: "Інструменти: "
-  dashboard_curriculum: "Навчальний план"
-  dashboard_curriculum_overview: "Огляд навчальної програми"
-  dashboard_overview: "Огляд"
-  dashboard_sequence: "Огляд"
-  dashboard_framework: "Програма"
-  dashboard_standards: "Стандарти"
-  dashboard_implementation_guide: "Практика впровадження"
-  dashboard_glossary: "Глосарій"
-  dashboard_classroom_strategies: "Прийоми для вчителів"
-  dashboard_debugging: "Налагодження:"
-  dashboard_puzzle_solving: "Розв'язання задач:"
-  dashboard_student_worksheet: "інструкція для учня"
-  dashboard_teacher_worksheet: "інструкція для вчителя"
-  dashboard_curriculum_csina: "Інформатика в алгебрі:"
-  dashboard_curriculum_csins: "Інформатика в науці:"
+  dashboard_express: 'Швидкий Курс: '
+  dashboard_unplugged: Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте
+    ці безмашинні вправи</a> у своєму класі.
+  dashboard_tools: 'Інструменти: '
+  dashboard_curriculum: Навчальний план
+  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_overview: Огляд
+  dashboard_sequence: Огляд
+  dashboard_framework: Програма
+  dashboard_standards: Стандарти
+  dashboard_implementation_guide: Практика впровадження
+  dashboard_glossary: Глосарій
+  dashboard_classroom_strategies: Прийоми для вчителів
+  dashboard_debugging: 'Налагодження:'
+  dashboard_puzzle_solving: 'Розв''язання задач:'
+  dashboard_student_worksheet: інструкція для учня
+  dashboard_teacher_worksheet: інструкція для вчителя
+  dashboard_curriculum_csina: 'Інформатика в алгебрі:'
+  dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
-  dashboard_curriculum_ecs: "Вивчення інформатики:"
+  dashboard_curriculum_ecs: 'Вивчення інформатики:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Kлас
-  dashboard_grade_other: "Інше"
-  dashboard_login_word: "Слово"
-  dashboard_login_picture: "Зображення"
-  dashboard_login_none: "Електронна пошта"
-  dashboard_stage: "Етап"
-  dashboard_puzzle: "Завдання"
-  dashboard_question: "Питання"
-  dashboard_response: "Відповідь"
-  dashboard_correctness: "Правильність"
-  dashboard_correctness_free_response: "Вільна відповідь"
-  dashboard_correctness_unsubmitted: "Не надіслано"
-  dashboard_correctness_correct: "Правильно"
-  dashboard_correctness_incorrect: "Неправильно"
-  dashboard_submission_submitted: "Надіслано"
-  dashboard_submission_in_progress: "У процесі"
-  dashboard_status: "Статус"
+  dashboard_grade_other: Інше
+  dashboard_login_word: Слово
+  dashboard_login_picture: Зображення
+  dashboard_login_none: Електронна пошта
+  dashboard_stage: Етап
+  dashboard_puzzle: Завдання
+  dashboard_question: Питання
+  dashboard_response: Відповідь
+  dashboard_correctness: Правильність
+  dashboard_correctness_free_response: Вільна відповідь
+  dashboard_correctness_unsubmitted: Не надіслано
+  dashboard_correctness_correct: Правильно
+  dashboard_correctness_incorrect: Неправильно
+  dashboard_submission_submitted: Надіслано
+  dashboard_submission_in_progress: У процесі
+  dashboard_status: Статус
   dashboard_multi_correct: "# правильних у множинний вибір"
   dashboard_multi_count: "# множинний вибір"
   dashboard_multi_correct_percent: "% правильних у множинний вибір"
-  dashboard_submission_timestamp: "Час надсилання"
-  stats_hoc_2013_heading: "Неймовірна статистика з минулорічної Години коду. Лише
-    за тиждень:"
-  stats_hoc_2013_image_alt: "Статистика Години коду 2013 року"
-  dashboard_teacher: "Вчитель"
-  dashboard_student: "Учень"
-  dashboard_sections_email_question: "У всіх учнів є електроні скриньки?"
-  dashboard_sections_account_creation_question: "Хто створює облікові записи учнів?"
-  dashboard_sections_password_question: "Який тип паролю мають учні?"
-  dashboard_sections_picture_account_creation: "Малюнок, виданий Code.org"
-  dashboard_sections_word_account_creation: "Слово, видане Code.org"
-  dashboard_sections_sign_in_question: "Де точка входу учнів?"
+  dashboard_submission_timestamp: Час надсилання
+  stats_hoc_2013_heading: 'Неймовірна статистика з минулорічної Години коду. Лише
+    за тиждень:'
+  stats_hoc_2013_image_alt: Статистика Години коду 2013 року
+  dashboard_teacher: Вчитель
+  dashboard_student: Учень
+  dashboard_sections_email_question: У всіх учнів є електроні скриньки?
+  dashboard_sections_account_creation_question: Хто створює облікові записи учнів?
+  dashboard_sections_password_question: Який тип паролю мають учні?
+  dashboard_sections_picture_account_creation: Малюнок, виданий Code.org
+  dashboard_sections_word_account_creation: Слово, видане Code.org
+  dashboard_sections_sign_in_question: Де точка входу учнів?
   dashboard_sections_sign_in_unique: Унікальна веб-сторінка на вкладці "Керування
     учнями"
   dashboard_sections_sign_in_main: http://code.org і клацніть "Увійти"
-  dashboard_sections_password_account_creation: "Пароль, створений учнем"
-  dashboard_sections_login_type_explanation: "Подана нижче таблиця ілюструє різні
-    типи логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати
-    для групи."
-  dashboard_faq: "Запитання й відповіді"
+  dashboard_sections_password_account_creation: Пароль, створений учнем
+  dashboard_sections_login_type_explanation: Подана нижче таблиця ілюструє різні типи
+    логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для
+    групи.
+  dashboard_faq: Запитання й відповіді
   dashboard_faq_k5: K-5 запитання й відповіді
-  code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
-  code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
-  host_an_hour: "Проведіть Годину коду"
-  learn_banner_title: "Приєднуйтесь до нас на Годину коду"
-  learn_banner_desc: "Година коду - це глобальний рух, що сягнуть 100 мільйонів учнів
+  code_hoc_coming: Година коду вже тут - 8-14 грудня!
+  code_sign_up: Зареєструватися для участі протягом тижня інформатики
+  host_an_hour: Проведіть Годину коду
+  learn_banner_title: Приєднуйтесь до нас на Годину коду
+  learn_banner_desc: Година коду - це глобальний рух, що сягнуть 100 мільйонів учнів
     у більш, як 180 країнах світу. Кожен, у будь-якому місці може організувати подію
     Години коду. Допоможіть нам надати кожному учневі можливість вивчати інформатику!
     Організатори можуть слідкувати за нашими <a href='%{how_to_url}' target='_blank'>інструкціями</a>
     для викладання Години коду та заохочення учнів <a href='%{videos_url}' target='_blank'>цими
-    роликами</a>."
-  learn_more: "Спробувати зараз"
-  learn_sign_up_description: "Зареєструйтесь для участі в Годині коду протягом тижня
-    інформатики"
-  learn_sign_up_button: "Реєстрація"
-  learn_videos_watch: "Перегляньте у класі ці відео для натхнення"
-  learn_videos_show: "Покажіть ці відео своєму класу для натхнення"
-  learn_videos_before_hoc: "Перегляньте у класі ці відео для натхнення перед Годиною
-    коду"
-  learn_educator_resources_description: "Дізнайтесь як викладати Годину коду"
-  learn_educator_resources_button: "Ресурси для вчителів"
+    роликами</a>.
+  learn_more: Спробувати зараз
+  learn_sign_up_description: Зареєструйтесь для участі в Годині коду протягом тижня
+    інформатики
+  learn_sign_up_button: Реєстрація
+  learn_videos_watch: Перегляньте у класі ці відео для натхнення
+  learn_videos_show: Покажіть ці відео своєму класу для натхнення
+  learn_videos_before_hoc: Перегляньте у класі ці відео для натхнення перед Годиною
+    коду
+  learn_educator_resources_description: Дізнайтесь як викладати Годину коду
+  learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як
     провести Годину коду</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Знайдіть місцевого
@@ -1115,141 +1110,141 @@
     призи для кожного вчителя.
   learn_inspirational_videos: Надихайте учнів, показуючи їи <a href="https://code.org/educate/inspire">ці
     відео</a>
-  hoc2014_try_new_tutorials: "Спробуйте наш новий підручник Години коду"
-  hoc2014_try_new_tutorial: "Спробуйте новий підручник Години коду в бета-версії"
+  hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
+  hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
-  hoc2014_try_frozen: "Художник з Анною та Ельзою, із Крижаного серця"
-  carousel_heading_codeorg: "Підручники від Code.org"
-  carousel_heading_codeorg_any_device: "Підручники від Code.org (для будь-якого пристрою)"
-  carousel_heading_3rd_party: "Підручники від інших учасників"
-  carousel_heading_third_party: "Підручники від інших учасників"
-  carousel_heading_international: "Підручники вашою мовою"
-  carousel_heading_domestic: "Підручники англійською мовою"
-  carousel_heading_beginners: "Посібники для середніх класів від партнерів"
-  carousel_heading_beyond_beginners: "Посібники для початківців"
-  carousel_heading_javascript: "Посібники з вивчення Javascript"
-  carousel_heading_beyond_javascript: "Посібники з вивчення JavaScript"
-  carousel_heading_unplugged: "Немає пристроїв або Інтернету? Спробуйте безмашинні
-    вправи"
-  carousel_heading_devices: "Підручники для телефонів та планшетів"
-  carousel_heading_beyond_devices: "Підручники для телефонів та планшетів"
-  carousel_heading_languages: "Підручники інших мов програмування"
-  carousel_heading_beyond_languages: "Підручники інших мов програмування"
-  carousel_heading_apps_games: "Створіть власні програми чи ігри"
-  carousel_heading_university: "Курси університетів онлайн"
-  carousel_heading_webpages: "Навчіться створювати веб-сторінки"
-  carousel_heading_robots: "Навчіться програмувати роботів"
-  carousel_heading_ide: "Платформи, популярні серед вчителів"
+  hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
+  carousel_heading_codeorg: Підручники від Code.org
+  carousel_heading_codeorg_any_device: Підручники від Code.org (для будь-якого пристрою)
+  carousel_heading_3rd_party: Підручники від інших учасників
+  carousel_heading_third_party: Підручники від інших учасників
+  carousel_heading_international: Підручники вашою мовою
+  carousel_heading_domestic: Підручники англійською мовою
+  carousel_heading_beginners: Посібники для середніх класів від партнерів
+  carousel_heading_beyond_beginners: Посібники для початківців
+  carousel_heading_javascript: Посібники з вивчення Javascript
+  carousel_heading_beyond_javascript: Посібники з вивчення JavaScript
+  carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні
+    вправи
+  carousel_heading_devices: Підручники для телефонів та планшетів
+  carousel_heading_beyond_devices: Підручники для телефонів та планшетів
+  carousel_heading_languages: Підручники інших мов програмування
+  carousel_heading_beyond_languages: Підручники інших мов програмування
+  carousel_heading_apps_games: Створіть власні програми чи ігри
+  carousel_heading_university: Курси університетів онлайн
+  carousel_heading_webpages: Навчіться створювати веб-сторінки
+  carousel_heading_robots: Навчіться програмувати роботів
+  carousel_heading_ide: Платформи, популярні серед вчителів
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "Інформація для вчителя"
-  teach_led_lesson_plans: "Плани уроків для вчителів"
+  educator_notes: Інформація для вчителя
+  teach_led_lesson_plans: Плани уроків для вчителів
   learn_footer_all_tutorials: Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний
     перелік підручників Години коду</a>. Щоб ознайомитись з нашими критеріями та інструкціями
     з подання підручників Години коду, <a href="https://hourofcode.com/tutorial-guidelines">клацніть
     тут.</a>
   how_to_teach_hoc: Як викладати "Годину коду"
-  more_resources_educators: "Більше ресурсів для вчителів та освітян"
-  beyond_submission: "Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
-    критерії та форму подання."
+  more_resources_educators: Більше ресурсів для вчителів та освітян
+  beyond_submission: Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
+    критерії та форму подання.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "учасники"
-  teachers_notes: "Інформація для вчителя"
-  teachers_notes_hoc: "Вчителі: ознайомтесь із вказівками для вчителів"
-  previous: "Назад"
-  next: "Далі"
-  older_systems: "Підручники для старих машин"
+  participants: учасники
+  teachers_notes: Інформація для вчителя
+  teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'
+  previous: Назад
+  next: Далі
+  older_systems: Підручники для старих машин
   older_systems_subheading: Ці підручники працюватимуть на старих версіях браузерів.
     Для доступу до всіх підручників, оновіть <a href="http://browsehappy.com/" target="_blank">браузер
     до останньої версії.</a>
-  mobile_devices: "Підручники для мобільних пристроїв"
-  frozen_name: "Програмуємо з Анною та Ельзою"
-  starwars_name: "Зоряні війни: Закодуємо далеку Галактику"
-  codeorg_name: "Лабіринт"
-  codeintl_name: "Лабіринт"
-  thinkersmithspanish_name: "Мої друзі-роботи"
-  khan_name: "Вступ до JavaScript"
-  khanes_name: "Вступ до JavaScript"
-  khanpt_name: "Вступ до JavaScript"
-  khanhe_name: "Вступ до JavaScript"
-  khanfr_name: "Вступ до JavaScript"
-  khanpl_name: "Вступ до JavaScript"
-  tynker_name: "Створіть власну гру"
-  scratch_name: "Творіть програмуючи"
-  lightbot_name: "Світлячок"
-  thinkersmith_name: "Мої друзі-роботи"
-  condcards_name: "Листівки та умови"
-  lightbotintl_name: "Світлячок"
-  codehs_name: "Навчання програмуванню з собакою Карел"
+  mobile_devices: Підручники для мобільних пристроїв
+  frozen_name: Програмуємо з Анною та Ельзою
+  starwars_name: 'Зоряні війни: Закодуємо далеку Галактику'
+  codeorg_name: Лабіринт
+  codeintl_name: Лабіринт
+  thinkersmithspanish_name: Мої друзі-роботи
+  khan_name: Вступ до JavaScript
+  khanes_name: Вступ до JavaScript
+  khanpt_name: Вступ до JavaScript
+  khanhe_name: Вступ до JavaScript
+  khanfr_name: Вступ до JavaScript
+  khanpl_name: Вступ до JavaScript
+  tynker_name: Створіть власну гру
+  scratch_name: Творіть програмуючи
+  lightbot_name: Світлячок
+  thinkersmith_name: Мої друзі-роботи
+  condcards_name: Листівки та умови
+  lightbotintl_name: Світлячок
+  codehs_name: Навчання програмуванню з собакою Карел
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: "Створення гри з JavaScript"
-  processing_name: "Код малювання"
-  robomind_name: "Програмування віртуального робота"
-  groklearning_name: "Еліза - балакучий лікар"
-  quorum_name: "Особливе програмування (з підтримкою читання екрану)"
-  codespark_name: "Сімейка Фо (для тих, хто ще не читає)"
+  codeavengers_name: Створення гри з JavaScript
+  processing_name: Код малювання
+  robomind_name: Програмування віртуального робота
+  groklearning_name: Еліза - балакучий лікар
+  quorum_name: Особливе програмування (з підтримкою читання екрану)
+  codespark_name: Сімейка Фо (для тих, хто ще не читає)
   kodable_name: Kodable (для тих, хто ще не читає)
   tynkerapp_name: Tynker - для планшетів
-  robomindnl_name: "Програмування віртуального робота"
-  flappy_name: "Створіть гру Пурха"
+  robomindnl_name: Програмування віртуального робота
+  flappy_name: Створіть гру Пурха
   bitsbox_name: Bitsbox - створимо гру
-  makeschool_name: "Створіть гру для iPhone у браузері!"
+  makeschool_name: Створіть гру для iPhone у браузері!
   touchdevelop_name: TouchDevelop
-  appinventor_name: "Година коду від AppInventor"
-  blockly_name: "Блоклі"
-  thinkersmith2_name: "Двійкові дрібнички"
-  kodableunplugged_name: "Безумна сімейка fuzzFamily"
-  projguts_name: "Камінь, папір, ножиці"
-  hourofcode_name: "Лабіринт"
-  playlab_name: "Ігрова студія"
-  infinity_name: "Ігрова лабораторія Infiinty"
-  artist_name: "Художник"
-  monstercoding_name: "Квест кодування Загадкового острова"
-  allcancode_name: "Біжи, Марко!"
-  csfirst_name: "Перша інформатика"
-  boxisland_name: "Острів Бокс"
+  appinventor_name: Година коду від AppInventor
+  blockly_name: Блоклі
+  thinkersmith2_name: Двійкові дрібнички
+  kodableunplugged_name: Безумна сімейка fuzzFamily
+  projguts_name: Камінь, папір, ножиці
+  hourofcode_name: Лабіринт
+  playlab_name: Ігрова студія
+  infinity_name: Ігрова лабораторія Infiinty
+  artist_name: Художник
+  monstercoding_name: Квест кодування Загадкового острова
+  allcancode_name: Біжи, Марко!
+  csfirst_name: Перша інформатика
+  boxisland_name: Острів Бокс
   codesters_name: Codesters
   texasinstruments_name: 10 хвилин коду
-  teacherled_name: "Плани уроків для вчителів"
-  course1_name: "Курс 1"
-  course2_name: "Курс 2"
-  course3_name: "Курс 3"
-  course4_name: "Курс 4"
-  coursea-draft_name: "Курс А"
-  coursea_name: "Курс А"
-  courseb-draft_name: "Курс Б"
-  courseb_name: "Курс Б"
-  coursec-draft_name: "Курс В"
-  coursec_name: "Курс В"
-  coursed-draft_name: "Курс Г"
-  coursed_name: "Курс Г"
-  coursee-draft_name: "Курс Ґ"
-  coursee_name: "Курс Ґ"
-  coursef-draft_name: "Курс Д"
-  coursef_name: "Курс Д"
-  accelerated_name: "Прискорений курс"
+  teacherled_name: Плани уроків для вчителів
+  course1_name: Курс 1
+  course2_name: Курс 2
+  course3_name: Курс 3
+  course4_name: Курс 4
+  coursea-draft_name: Курс А
+  coursea_name: Курс А
+  courseb-draft_name: Курс Б
+  courseb_name: Курс Б
+  coursec-draft_name: Курс В
+  coursec_name: Курс В
+  coursed-draft_name: Курс Г
+  coursed_name: Курс Г
+  coursee-draft_name: Курс Ґ
+  coursee_name: Курс Ґ
+  coursef-draft_name: Курс Д
+  coursef_name: Курс Д
+  accelerated_name: Прискорений курс
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: "Розділ 1: Цифрова інформація"
-  cspunit2_name: "Розділ 2: Інтернет"
-  cspunit3_name: "Розділ 3: Програмування"
-  cspunit4_name: "Розділ 4: Дані"
-  cspunit5_name: "Розділ 5: Дослідження та створення PT"
-  cspunit6_name: "Після-АР: Бази даних у програмах"
+  cspunit1_name: 'Розділ 1: Цифрова інформація'
+  cspunit2_name: 'Розділ 2: Інтернет'
+  cspunit3_name: 'Розділ 3: Програмування'
+  cspunit4_name: 'Розділ 4: Дані'
+  cspunit5_name: 'Розділ 5: Дослідження та створення PT'
+  cspunit6_name: 'Після-АР: Бази даних у програмах'
   csd1_name: 'Unit 1: Computers and Logic'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: "Розділ 5: Дані та суспільство"
-  csd6_name: "Розділ 6: Фізичні обчислення"
-  csp1_name: "Розділ 1: Інтернет"
-  csp2_name: "Розділ 2: Цифрова інформація"
+  csd5_name: 'Розділ 5: Дані та суспільство'
+  csd6_name: 'Розділ 6: Фізичні обчислення'
+  csp1_name: 'Розділ 1: Інтернет'
+  csp2_name: 'Розділ 2: Цифрова інформація'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
   csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
@@ -1257,592 +1252,589 @@
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
-  csppostap_name: "Після довишівської підготовки: Бази даних у програмах"
-  cspassessment_name: "Повний тест - 50 запитань"
+  csppostap_name: 'Після довишівської підготовки: Бази даних у програмах'
+  cspassessment_name: Повний тест - 50 запитань
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
-  cspexam1-mWU7ilDYM9_name: "Тест, частина 1 - 25 запитань"
-  cspexam2-AKwgAh1ac5_name: "Тест, частина 2 - 25 запитань"
+  cspexam1-mWU7ilDYM9_name: Тест, частина 1 - 25 запитань
+  cspexam2-AKwgAh1ac5_name: Тест, частина 2 - 25 запитань
   cspunit3_gradelevel: 9-12 класи
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: "Прискорений курс"
-  algebra_name: "Інформатика в алгебрі"
-  AlgebraA_name: "Інформатика в алгебрі - Курс А"
-  AlgebraB_name: "Інформатика в алгебрі - Курс В"
-  gumball_name: "Гамбол"
-  classicmaze_name: "Лабіринт"
-  iceage_name: "Льодовиковий період"
-  minecraft_name: "Майнкрафт"
-  starwarsblocks_name: "Зоряні війни (блоки)"
+  20-hour_name: Прискорений курс
+  algebra_name: Інформатика в алгебрі
+  AlgebraA_name: Інформатика в алгебрі - Курс А
+  AlgebraB_name: Інформатика в алгебрі - Курс В
+  gumball_name: Гамбол
+  classicmaze_name: Лабіринт
+  iceage_name: Льодовиковий період
+  minecraft_name: Майнкрафт
+  starwarsblocks_name: Зоряні війни (блоки)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: "Просте шифрування"
+  hoc-encryption_name: Просте шифрування
   text-compression_name: Text Compression
-  math_category_name: "Математика"
-  hoc_category_name: "Година коду"
-  csf_category_name: "Основи інформатики"
+  math_category_name: Математика
+  hoc_category_name: Година коду
+  csf_category_name: Основи інформатики
   csf_international_category_name: CS Fundamentals International
-  csf2_draft_category_name: "В розробці: курси А—Д"
+  csf2_draft_category_name: 'В розробці: курси А—Д'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"
-  cspexams_category_name: "Практичний тест з принципів інформатики"
+  cspexams_category_name: Практичний тест з принципів інформатики
   research_studies_category_name: Research Studies
   applab_name: App Lab
-  gamelab_name: "Ігрова лабораторія"
-  basketball_name: "Зроби гру в баскетбол"
-  sports_name: "Закодуй власну спортивну гру"
-  applab_gradelevel: "Вік 13+"
+  gamelab_name: Ігрова лабораторія
+  basketball_name: Зроби гру в баскетбол
+  sports_name: Закодуй власну спортивну гру
+  applab_gradelevel: Вік 13+
   applab_shortdescription_congrats: App Lab - це середовище програмування для створення
     простих аплікацій. Спроектуйте додаток, запрограмуйте його блоками чи JavaScript,
     а тоді поділіться ним за кілька секунд
-  codeorg_gradelevel: "Вік 4-104"
-  codeintl_gradelevel: "Вік 4-104"
-  thinkersmithspanish_gradelevel: "Для всіх"
-  khan_gradelevel: "Середня школа +"
-  khanes_gradelevel: "Середня школа +"
-  khanpt_gradelevel: "Середня школа +"
-  khanhe_gradelevel: "Середня школа +"
-  khanfr_gradelevel: "Середня школа +"
-  khanpl_gradelevel: "Середня школа +"
-  tynker_gradelevel: "Вік 5-13"
-  scratch_gradelevel: "Вік 8 +"
-  lightbot_gradelevel: "Всі вікові групи"
-  thinkersmith_gradelevel: "Всі вікові групи"
-  condcards_gradelevel: "Вік 8-12"
-  lightbotintl_gradelevel: "Всі вікові групи"
-  codehs_gradelevel: "Старша школа"
-  codecademy_gradelevel: "Старша школа"
-  codecombat_gradelevel: "Середня школа +"
-  codemonkey_gradelevel: "Середня школа +"
-  codeavengers_gradelevel: "Середня школа +"
-  processing_gradelevel: "Старша школа"
-  robomind_gradelevel: "Вік 8-13"
-  groklearning_gradelevel: "Середня школа +"
-  quorum_gradelevel: "Середня школа +"
-  codespark_gradelevel: "Початкова школа"
-  kodable_gradelevel: "Початкова школа"
-  tynkerapp_gradelevel: "Вік 5-13"
-  robomindnl_gradelevel: "Вік 8-13"
-  flappy_gradelevel: "Вік 4-104"
-  bitsbox_gradelevel: "Початкова школа"
-  makeschool_gradelevel: "Старша школа"
-  touchdevelop_gradelevel: "Старша школа"
-  appinventor_gradelevel: "Середня школа +"
-  blockly_gradelevel: "Всі вікові групи"
-  thinkersmith2_gradelevel: "Вік 8 +"
-  kodableunplugged_gradelevel: "Вік 8-13"
-  projguts_gradelevel: "Вік 10-13"
-  hourofcode_gradelevel: "Вік 4-104"
-  frozen_gradelevel: "Вік 8 +"
-  starwars_gradelevel: "Вік 6-106"
-  playlab_gradelevel: "Вік 4-104"
-  infinity_gradelevel: "Вік 4-104"
-  artist_gradelevel: "Вік 4-104"
-  monstercoding_gradelevel: "Вік 5-13"
-  allcancode_gradelevel: "Вік 5-10"
-  csfirst_gradelevel: "Вік 9-14"
-  boxisland_gradelevel: "Початкова школа"
-  codesters_gradelevel: "Вік 12-14"
-  texasinstruments_gradelevel: "Вік 13-16"
-  teacherled_gradelevel: "Вік 5+"
-  course1_gradelevel: "Вік 4-6"
-  course2_gradelevel: "Вік 6-18"
-  course3_gradelevel: "Вік 8-18"
-  course4_gradelevel: "Вік 10-18"
+  codeorg_gradelevel: Вік 4-104
+  codeintl_gradelevel: Вік 4-104
+  thinkersmithspanish_gradelevel: Для всіх
+  khan_gradelevel: Середня школа +
+  khanes_gradelevel: Середня школа +
+  khanpt_gradelevel: Середня школа +
+  khanhe_gradelevel: Середня школа +
+  khanfr_gradelevel: Середня школа +
+  khanpl_gradelevel: Середня школа +
+  tynker_gradelevel: Вік 5-13
+  scratch_gradelevel: Вік 8 +
+  lightbot_gradelevel: Всі вікові групи
+  thinkersmith_gradelevel: Всі вікові групи
+  condcards_gradelevel: Вік 8-12
+  lightbotintl_gradelevel: Всі вікові групи
+  codehs_gradelevel: Старша школа
+  codecademy_gradelevel: Старша школа
+  codecombat_gradelevel: Середня школа +
+  codemonkey_gradelevel: Середня школа +
+  codeavengers_gradelevel: Середня школа +
+  processing_gradelevel: Старша школа
+  robomind_gradelevel: Вік 8-13
+  groklearning_gradelevel: Середня школа +
+  quorum_gradelevel: Середня школа +
+  codespark_gradelevel: Початкова школа
+  kodable_gradelevel: Початкова школа
+  tynkerapp_gradelevel: Вік 5-13
+  robomindnl_gradelevel: Вік 8-13
+  flappy_gradelevel: Вік 4-104
+  bitsbox_gradelevel: Початкова школа
+  makeschool_gradelevel: Старша школа
+  touchdevelop_gradelevel: Старша школа
+  appinventor_gradelevel: Середня школа +
+  blockly_gradelevel: Всі вікові групи
+  thinkersmith2_gradelevel: Вік 8 +
+  kodableunplugged_gradelevel: Вік 8-13
+  projguts_gradelevel: Вік 10-13
+  hourofcode_gradelevel: Вік 4-104
+  frozen_gradelevel: Вік 8 +
+  starwars_gradelevel: Вік 6-106
+  playlab_gradelevel: Вік 4-104
+  infinity_gradelevel: Вік 4-104
+  artist_gradelevel: Вік 4-104
+  monstercoding_gradelevel: Вік 5-13
+  allcancode_gradelevel: Вік 5-10
+  csfirst_gradelevel: Вік 9-14
+  boxisland_gradelevel: Початкова школа
+  codesters_gradelevel: Вік 12-14
+  texasinstruments_gradelevel: Вік 13-16
+  teacherled_gradelevel: Вік 5+
+  course1_gradelevel: Вік 4-6
+  course2_gradelevel: Вік 6-18
+  course3_gradelevel: Вік 8-18
+  course4_gradelevel: Вік 10-18
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8+ класи
-  coursee_gradelevel: "Вік 8-12"
+  coursee_gradelevel: Вік 8-12
   coursef_gradelevel: Grade 10+
-  accelerated_gradelevel: "Вік 10-18"
-  codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
-  codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
-  thinkersmithspanish_platformtext: "Безмашинні вправи"
-  khan_platformtext: "Сучасні веб-браузери"
-  khanes_platformtext: "Сучасні веб-браузери"
-  khanpt_platformtext: "Сучасні веб-браузери"
-  khanhe_platformtext: "Сучасні веб-браузери"
-  khanfr_platformtext: "Сучасні веб-браузери"
-  khanpl_platformtext: "Сучасні веб-браузери"
-  tynker_platformtext: "Сучасні веб-браузери"
-  scratch_platformtext: "Лише для веб-браузерів на комп'ютері (не планшети)"
-  lightbot_platformtext: "ВСІ браузери та iOS, Android або ігрова консоль"
-  thinkersmith_platformtext: "Безмашинні вправи"
-  condcards_platformtext: "Безмашинні вправи"
+  accelerated_gradelevel: Вік 10-18
+  codeorg_platformtext: Сучасні браузери, смартфони, планшети
+  codeintl_platformtext: Сучасні браузери, смартфони, планшети
+  thinkersmithspanish_platformtext: Безмашинні вправи
+  khan_platformtext: Сучасні веб-браузери
+  khanes_platformtext: Сучасні веб-браузери
+  khanpt_platformtext: Сучасні веб-браузери
+  khanhe_platformtext: Сучасні веб-браузери
+  khanfr_platformtext: Сучасні веб-браузери
+  khanpl_platformtext: Сучасні веб-браузери
+  tynker_platformtext: Сучасні веб-браузери
+  scratch_platformtext: Лише для веб-браузерів на комп'ютері (не планшети)
+  lightbot_platformtext: ВСІ браузери та iOS, Android або ігрова консоль
+  thinkersmith_platformtext: Безмашинні вправи
+  condcards_platformtext: Безмашинні вправи
   lightbotintl_platformtext: iOS, Android (або веб-браузер)
-  codehs_platformtext: "Сучасні браузери. (подальший курс потребує оплати)"
-  codecademy_platformtext: "Сучасні веб-браузери. програми iOS, Android"
-  codecombat_platformtext: "Сучасні браузери (подальший курс потребує оплати)"
-  codemonkey_platformtext: "Сучасні веб-браузери"
-  codeavengers_platformtext: "Сучасні веб-браузери"
-  processing_platformtext: "Сучасні веб-браузери"
-  robomind_platformtext: "Сучасні веб-браузери, мобільні застосунки"
-  groklearning_platformtext: "Сучасні веб-браузери"
-  quorum_platformtext: "Сучасні веб-браузери. Підтримується читання екрану"
+  codehs_platformtext: Сучасні браузери. (подальший курс потребує оплати)
+  codecademy_platformtext: Сучасні веб-браузери. програми iOS, Android
+  codecombat_platformtext: Сучасні браузери (подальший курс потребує оплати)
+  codemonkey_platformtext: Сучасні веб-браузери
+  codeavengers_platformtext: Сучасні веб-браузери
+  processing_platformtext: Сучасні веб-браузери
+  robomind_platformtext: Сучасні веб-браузери, мобільні застосунки
+  groklearning_platformtext: Сучасні веб-браузери
+  quorum_platformtext: Сучасні веб-браузери. Підтримується читання екрану
   codespark_platformtext: iOS, Android (або веб-браузер)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: "планшети iPad, Android"
-  robomindnl_platformtext: "Сучасні веб-браузери, мобільні застосунки"
-  flappy_platformtext: "Сучасні браузери, смартфони, планшети"
-  bitsbox_platformtext: "Сучасні веб-браузери"
-  makeschool_platformtext: "Сучасні веб-браузери"
-  touchdevelop_platformtext: "Сучасні браузери, смартфони, всі пристрої"
-  appinventor_platformtext: "Сучасні браузери + Android"
-  blockly_platformtext: "Тільки сучасні браузери"
-  thinkersmith2_platformtext: "Безмашинні вправи"
-  kodableunplugged_platformtext: "Безмашинні вправи"
-  projguts_platformtext: "Безмашинні вправи"
-  hourofcode_platformtext: "Сучасні браузери, смартфони, планшети"
-  frozen_platformtext: "Сучасні браузери + планшети"
-  starwars_platformtext: "Сучасні браузери + планшети"
-  playlab_platformtext: "Сучасні браузери, смартфони, планшети"
-  monstercoding_platformtext: "Сучасні браузери, iOS, Android"
-  allcancode_platformtext: "Сучасні браузери, iOS"
-  csfirst_platformtext: "Сучасні веб-браузери"
+  tynkerapp_platformtext: планшети iPad, Android
+  robomindnl_platformtext: Сучасні веб-браузери, мобільні застосунки
+  flappy_platformtext: Сучасні браузери, смартфони, планшети
+  bitsbox_platformtext: Сучасні веб-браузери
+  makeschool_platformtext: Сучасні веб-браузери
+  touchdevelop_platformtext: Сучасні браузери, смартфони, всі пристрої
+  appinventor_platformtext: Сучасні браузери + Android
+  blockly_platformtext: Тільки сучасні браузери
+  thinkersmith2_platformtext: Безмашинні вправи
+  kodableunplugged_platformtext: Безмашинні вправи
+  projguts_platformtext: Безмашинні вправи
+  hourofcode_platformtext: Сучасні браузери, смартфони, планшети
+  frozen_platformtext: Сучасні браузери + планшети
+  starwars_platformtext: Сучасні браузери + планшети
+  playlab_platformtext: Сучасні браузери, смартфони, планшети
+  monstercoding_platformtext: Сучасні браузери, iOS, Android
+  allcancode_platformtext: Сучасні браузери, iOS
+  csfirst_platformtext: Сучасні веб-браузери
   boxisland_platformtext: Android, iOS
-  codesters_platformtext: "Сучасні веб-браузери"
-  texasinstruments_platformtext: "Калькулятори ТІ"
-  teacherled_platformtext: "Сучасні браузери, смартфони, планшети"
-  codeorg_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими птахами!"
-  codeintl_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими птахами!"
+  codesters_platformtext: Сучасні веб-браузери
+  texasinstruments_platformtext: Калькулятори ТІ
+  teacherled_platformtext: Сучасні браузери, смартфони, планшети
+  codeorg_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
+  codeintl_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "Вчимося малювати в JavaScript"
-  khanes_shortdescription: "Вчимося малювати в JavaScript"
-  khanpt_shortdescription: "Вчимося малювати в JavaScript"
-  khanhe_shortdescription: "Вчимося малювати в JavaScript"
-  khanfr_shortdescription: "Вчимося малювати в JavaScript"
-  khanpl_shortdescription: "Вчимося малювати в JavaScript"
-  tynker_shortdescription: "Вчіться програмувати, розв'язуючи задачі та створюючи
-    власні мобільні ігри."
-  scratch_shortdescription: "Створюйте інтерактивні ігри, історії та анімації."
-  lightbot_shortdescription: "Запрограмуйте Світлячка, щоб розв'язати завдання з процедурами
-    та циклами!"
-  thinkersmith_shortdescription: "Безмашинні вправи для груп без комп'ютерів"
-  condcards_shortdescription: "Вивчайте алгоритми з колодою карт"
-  lightbotintl_shortdescription: "Гра вивчення базових понять програмування"
-  codehs_shortdescription: "Розпочніть програмувати з собакою Карел - це цікавий та
-    візуальний вступ до програмування!"
-  codecademy_shortdescription: "Вивчайте основи програмування JavaScript у веб-браузері"
-  codecombat_shortdescription: "Перемагайте людожерів, вивчаючи Python або JavaScript
-    у цій епічній грі в програмування!"
-  codemonkey_shortdescription: "Учні програмують мавпу, щоб вона ловила банани."
-  codeavengers_shortdescription: "Вивчайте основи програмування JavaScript у веб-браузері"
-  processing_shortdescription: "Годинний підручник програмування на мові Processing"
-  robomind_shortdescription: "Напишіть код для віртуального робота"
-  groklearning_shortdescription: "Навчіть балакучу Елізу справляти враження справжнього
-    співрозмовника!"
-  quorum_shortdescription: "Приєднуйтесь до Мері на екскурсію мовою програмування
-    Quorum."
-  codespark_shortdescription: "Фо - це весела та зрозуміла гра з вивченням програмування."
-  kodable_shortdescription: "Цікава гра для iPad із вивчення базових понять програмування"
-  tynkerapp_shortdescription: "Навчіться програмувати, розв'язуючи цікаві завдання
-    з програмування. "
-  robomindnl_shortdescription: "Напишіть код для віртуального робота"
-  flappy_shortdescription: "Створіть власну гру - Пурха, Акулу чи Підводного човна"
-  bitsbox_shortdescription: "Створіть набір програм мовою JavaScript, у які можна
-    грати та поділитися з іншими."
-  makeschool_shortdescription: "Створіть гру для iPhone! Дізнайтесь, як написати код,
-    котрий навчить монстра новим рухам!"
-  touchdevelop_shortdescription: "Розв'язуйте задачки, створюйте ігри та вчіться програмувати
-    за допомогою свого телефону. "
-  appinventor_shortdescription: "Розробіть власну програму! (лише Android)"
-  blockly_shortdescription: "Завантажте архів ZIP для навчання оффлайн"
-  thinkersmith2_shortdescription: "Дізнайтесь, як інформація подається в комп'ютері
-    за допомогою 0 та 1"
-  kodableunplugged_shortdescription: "Веселі безмашинні вправи"
+  khan_shortdescription: Вчимося малювати в JavaScript
+  khanes_shortdescription: Вчимося малювати в JavaScript
+  khanpt_shortdescription: Вчимося малювати в JavaScript
+  khanhe_shortdescription: Вчимося малювати в JavaScript
+  khanfr_shortdescription: Вчимося малювати в JavaScript
+  khanpl_shortdescription: Вчимося малювати в JavaScript
+  tynker_shortdescription: Вчіться програмувати, розв'язуючи задачі та створюючи власні
+    мобільні ігри.
+  scratch_shortdescription: Створюйте інтерактивні ігри, історії та анімації.
+  lightbot_shortdescription: Запрограмуйте Світлячка, щоб розв'язати завдання з процедурами
+    та циклами!
+  thinkersmith_shortdescription: Безмашинні вправи для груп без комп'ютерів
+  condcards_shortdescription: Вивчайте алгоритми з колодою карт
+  lightbotintl_shortdescription: Гра вивчення базових понять програмування
+  codehs_shortdescription: Розпочніть програмувати з собакою Карел - це цікавий та
+    візуальний вступ до програмування!
+  codecademy_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
+  codecombat_shortdescription: Перемагайте людожерів, вивчаючи Python або JavaScript
+    у цій епічній грі в програмування!
+  codemonkey_shortdescription: Учні програмують мавпу, щоб вона ловила банани.
+  codeavengers_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
+  processing_shortdescription: Годинний підручник програмування на мові Processing
+  robomind_shortdescription: Напишіть код для віртуального робота
+  groklearning_shortdescription: Навчіть балакучу Елізу справляти враження справжнього
+    співрозмовника!
+  quorum_shortdescription: Приєднуйтесь до Мері на екскурсію мовою програмування Quorum.
+  codespark_shortdescription: Фо - це весела та зрозуміла гра з вивченням програмування.
+  kodable_shortdescription: Цікава гра для iPad із вивчення базових понять програмування
+  tynkerapp_shortdescription: 'Навчіться програмувати, розв''язуючи цікаві завдання
+    з програмування. '
+  robomindnl_shortdescription: Напишіть код для віртуального робота
+  flappy_shortdescription: Створіть власну гру - Пурха, Акулу чи Підводного човна
+  bitsbox_shortdescription: Створіть набір програм мовою JavaScript, у які можна грати
+    та поділитися з іншими.
+  makeschool_shortdescription: Створіть гру для iPhone! Дізнайтесь, як написати код,
+    котрий навчить монстра новим рухам!
+  touchdevelop_shortdescription: 'Розв''язуйте задачки, створюйте ігри та вчіться
+    програмувати за допомогою свого телефону. '
+  appinventor_shortdescription: Розробіть власну програму! (лише Android)
+  blockly_shortdescription: Завантажте архів ZIP для навчання оффлайн
+  thinkersmith2_shortdescription: Дізнайтесь, як інформація подається в комп'ютері
+    за допомогою 0 та 1
+  kodableunplugged_shortdescription: Веселі безмашинні вправи
   projguts_shortdescription: Спробуйте змоделювати гру "камінь-ножиці-папір"
-  hourofcode_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими
-    птахами!"
-  frozen_shortdescription: "Вивчимо програмування, приєднавшись до Анни та Ельзи у
-    подорожі чарівною зимовою казкою."
-  starwars_shortdescription: "Навчись програмувати дроїдів, створи власну гру Зоряних
-    воєн у далекій-далекій галактиці."
-  playlab_shortdescription: "Складіть історію або створіть гру в Ігровій студії!"
-  infinity_shortdescription: "За допомогою Ігрової лабораторії створіть гру або історію
-    за участі персонажів Діснея Infiinty."
-  artist_shortdescription: "Малюйте картини та узори разом з Художником!"
-  monsterocding_shortdescription: "Барвиста пригода самостійного програмування для
-    дітей."
-  allcancode_shortdescription: "Захоплююча гра з керування Марко за допомогою візуальної
-    мови програмування."
-  csfirst_shortdescription: "Анімуйте історію про двох персонажів в океані. І додайте
-    власний стиль!"
-  boxisland_shortdescription: "Подорожуйте на острів Бокс з хоробрим Хіро."
-  codesters_shortdescription: "Створюйте власні ігри, анімації та ілюстрації у Python."
-  texasinstruments_shortdescription: "Вивчайте основи програмування за допомогою калькулятора
-    TI-84&#8482; Plus."
-  teacherled_shortdescription: "Надихайтесь для проведення власної події Години коду
-    з цими планами уроків."
-  course2_shortdescription_congrats: "Цей курс для учнів з базовими навичками читаннябазується
+  hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими
+    птахами!
+  frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у
+    подорожі чарівною зимовою казкою.
+  starwars_shortdescription: Навчись програмувати дроїдів, створи власну гру Зоряних
+    воєн у далекій-далекій галактиці.
+  playlab_shortdescription: Складіть історію або створіть гру в Ігровій студії!
+  infinity_shortdescription: За допомогою Ігрової лабораторії створіть гру або історію
+    за участі персонажів Діснея Infiinty.
+  artist_shortdescription: Малюйте картини та узори разом з Художником!
+  monsterocding_shortdescription: Барвиста пригода самостійного програмування для
+    дітей.
+  allcancode_shortdescription: Захоплююча гра з керування Марко за допомогою візуальної
+    мови програмування.
+  csfirst_shortdescription: Анімуйте історію про двох персонажів в океані. І додайте
+    власний стиль!
+  boxisland_shortdescription: Подорожуйте на острів Бокс з хоробрим Хіро.
+  codesters_shortdescription: Створюйте власні ігри, анімації та ілюстрації у Python.
+  texasinstruments_shortdescription: Вивчайте основи програмування за допомогою калькулятора
+    TI-84&#8482; Plus.
+  teacherled_shortdescription: Надихайтесь для проведення власної події Години коду
+    з цими планами уроків.
+  course2_shortdescription_congrats: Цей курс для учнів з базовими навичками читаннябазується
     на Курсі 1. Учні створюватимуть програми для розв'язування задач та розробки інтерактивних
-    ігор чи історій, якими можна поділитись. Рекомандовано для 2-5 класів."
-  course3_shortdescription_congrats: "Готові до наступного рівня? Учні глибше розглянуть
+    ігор чи історій, якими можна поділитись. Рекомандовано для 2-5 класів.
+  course3_shortdescription_congrats: Готові до наступного рівня? Учні глибше розглянуть
     теми з програмування, з якими ознайомились у попередньому курсі, і шукатимуть
     гнучкіших рішень складніших завдань. До кінця цього курсу учні навчаться створювати
     інтерактивні історії та ігри, якими зможуть поділитись. Рекомендовано для 4-5
-    класів."
-  course4_shortdescription_congrats: "Готові йти далі? Учні глибше розглянуть теми
+    класів.
+  course4_shortdescription_congrats: Готові йти далі? Учні глибше розглянуть теми
     з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших
     рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні
-    історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів."
+    історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів.
   coursea_shortdescription_congrats: ''
   courseb_shortdescription_congrats: ''
   coursec_shortdescription_congrats: ''
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
-  codeorg_longdescription: "Вивчайте основи програмування шляхом перетягування блоків.
+  codeorg_longdescription: Вивчайте основи програмування шляхом перетягування блоків.
     Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
     Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
-    алгоритми як цикли та умови. Перекладено 34 мовами."
-  codeintl_longdescription: "Вивчайте основи програмування шляхом перетягування блоків.
+    алгоритми як цикли та умови. Перекладено 34 мовами.
+  codeintl_longdescription: Вивчайте основи програмування шляхом перетягування блоків.
     Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
     Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
-    алгоритми як цикли та умови. Перекладено 34 мовами."
+    алгоритми як цикли та умови. Перекладено 34 мовами.
   thinkersmithspanish_longdescription: За допомогою визначеного словника робота, учні
     навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей.
     Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває
     навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність,
     і містить робочі аркуші вчителя для використання у класі.
-  khan_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  khanes_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  khanpt_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  khanhe_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  khanfr_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  khanpl_longdescription: "Вивчайте основи програмування на JavaScript шляхом створення
-    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
-  tynker_longdescription: "Створюйте власні ігри та діліться ними з друзями! Розв'язуйте
+  khan_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanes_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanpt_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanhe_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanfr_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  khanpl_longdescription: Вивчайте основи програмування на JavaScript шляхом створення
+    цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
+  tynker_longdescription: Створюйте власні ігри та діліться ними з друзями! Розв'язуйте
     цікаві задачі з програмування та вивчайте базові поняття на кожному рівні. Додавайте
     до гри анімованих персонажів, розробляйте кілька рівнів та розставляйте скарби.
     Включайте у грі правила фізики. Переглядайте роботу коду блоків на JavaScript.
-    Передавайте свої ігри на планшети iPad та Android. Обирайте з-поміж десятків вправ!"
-  scratch_longdescription: "Зі Scratch ви можете створювати власні інтерактивні ігри,
+    Передавайте свої ігри на планшети iPad та Android. Обирайте з-поміж десятків вправ!
+  scratch_longdescription: Зі Scratch ви можете створювати власні інтерактивні ігри,
     історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації свого
-    імені, створення святкової листівки чи створення гри у теніс."
-  lightbot_longdescription: "Покеруйте Світлячком, щоб він запалив усі сині плити!
+    імені, створення святкової листівки чи створення гри у теніс.
+  lightbot_longdescription: Покеруйте Світлячком, щоб він запалив усі сині плити!
     Світлячок використовує ігрове програмування для практичного вивчення основних
     понять інформатики. Навчіться складати послідовні вказівки, писати процедури та
     використовувати цикли для проходження рівнів. Ідеально підходить для будь-якого
-    віку."
+    віку.
   thinkersmith_longdescription: За допомогою визначеного словника робота, учні навчаться
     скеровувати один одного для досягнення певної мети, без попередніх домовленостей.
     Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває
     навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність,
     і містить робочі аркуші вчителя для використання у класі.
-  condcards_longdescription: "Дізнавайтесь про алгоритми та умовні команди у цій безмашинній
+  condcards_longdescription: Дізнавайтесь про алгоритми та умовні команди у цій безмашинній
     вправі з колодою карт. Учні можуть виконувати завдання у групах, кожна з яких
-    працюватиме зі своєю колодою."
-  lightbotintl_longdescription: "Вивчайте базову логіку програмування, починаючи з
+    працюватиме зі своєю колодою.
+  lightbotintl_longdescription: Вивчайте базову логіку програмування, починаючи з
     найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android
     (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони,
-    навчіться використовувати процедури та цикли!"
-  codehs_longdescription: "Віддавати команди для комп'ютера, власне в чому й полягає
+    навчіться використовувати процедури та цикли!
+  codehs_longdescription: Віддавати команди для комп'ютера, власне в чому й полягає
     програмування, так само, як давати команди собаці. Вивчайте програмування з собакою
     Карел&mdash;цікавий, доступний візуальний вступ до програмування, який пропонує
     вивчення базових понять, таких як команди та функції, для абсолютних початківців.
     Вправи призначені для самостійної роботи, але вчителі можуть зареєструватись для
-    відстеження статистики успішності своїх учнів!"
+    відстеження статистики успішності своїх учнів!
   codecademy_longdescription: Codecademy - це інтерактивне, кероване учнем, навчання,
     котре охоплює основи інформатики через вивчення JavaScript десятками мільйонів
     учнів по всьому світу. Ми підготували цілісне заняття Години коду з тестами та
     слайдами, в кінці якого учень створить завершений проект.
-  codecombat_longdescription: "Перемагайте людожерів, вивчаючи Python або JavaScript
-    у цій епічній грі в програмування!"
+  codecombat_longdescription: Перемагайте людожерів, вивчаючи Python або JavaScript
+    у цій епічній грі в програмування!
   codemonkey_longdescription: 'CodeMonkey це онлайнова гра, котра навчає програмуванню
     справжньою мовою програмування! Учням потрібно зробити так, щоб мавпа ловила банани,
     що стає все складнішим із кожним рівнем. За рішення можна отримати значки-зірочки,
     якими можна поділитись одним клацанням. '
-  codeavengers_longdescription: "Створіть двовимірну гру для двох гравців, виконуючи
+  codeavengers_longdescription: Створіть двовимірну гру для двох гравців, виконуючи
     10 коротких вправ на JavaScript. Далі продовжуйте вивчення основ програмування
     (змінні та умови), створюючи Тест, яким поділитесь із друзями. В ході роботи отримуйте
-    бали та значки, змагаючись за перші місця таблиці лідерів рейтингу програмування."
-  processing_longdescription: "Вступ до програмування в контексті візуального мистецтва
+    бали та значки, змагаючись за перші місця таблиці лідерів рейтингу програмування.
+  processing_longdescription: Вступ до програмування в контексті візуального мистецтва
     за допомогою мови програмування Processing. Короткі відео-уроки знайомлять з простими
-    вправами з проектування інтерактивної програми малювання"
-  robomind_longdescription: "Учні вивчають основи програмування, контролюючи власного
+    вправами з проектування інтерактивної програми малювання
+  robomind_longdescription: 'Учні вивчають основи програмування, контролюючи власного
     віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі
     презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають
-    виконати завдання з програмування. "
-  groklearning_longdescription: "Створіть програму на Python для балакучої Елізи,
-    котра хоче стати роботом-психотерапевтом. Ви навчите Елізу говорити правильні
-    слова. Зможете переконати своїх друзів, що з ними розмовляє людина, а не комп'ютер?"
-  quorum_longdescription: "Цей підручник доступний для людей з вадами зору, які працюють
+    виконати завдання з програмування. '
+  groklearning_longdescription: Створіть програму на Python для балакучої Елізи, котра
+    хоче стати роботом-психотерапевтом. Ви навчите Елізу говорити правильні слова.
+    Зможете переконати своїх друзів, що з ними розмовляє людина, а не комп'ютер?
+  quorum_longdescription: Цей підручник доступний для людей з вадами зору, які працюють
     з програмами читання з екрану. Приєднуйтесь до Мері на екскурсію в біологічну
     лабораторію та вивчайте мову програмування Quorum. Цей підручник на основі онлайнових
-    вправ призначений для самостійного опрацювання учнями."
-  codespark_longdescription: "Сімейка Фо допоможе весело й доступно познайомитись
-    з програмуванням. Милі персонажі, котрим потрібно вирішити задачі та оживити віртуальний
-    світ. Ця гра не містить слів, тож грати можуть всі!"
+    вправ призначений для самостійного опрацювання учнями.
+  codespark_longdescription: Сімейка Фо допоможе весело й доступно познайомитись з
+    програмуванням. Милі персонажі, котрим потрібно вирішити задачі та оживити віртуальний
+    світ. Ця гра не містить слів, тож грати можуть всі!
   kodable_longdescription: Kodable - це самостійне гра для iPad, котра знайомить дітей
     від 5 років з основами програмування. Супровід вчителя чи іншого дорослого не
     обов'язковий, хоча й бажаний.
-  tynkerapp_longdescription: "Навчіться програмувати, розв'язуючи цікаві завдання
-    з програмування. Легко створюйте ігри та історії, використовуючи тематичну графіку,
+  tynkerapp_longdescription: Навчіться програмувати, розв'язуючи цікаві завдання з
+    програмування. Легко створюйте ігри та історії, використовуючи тематичну графіку,
     більше 10 ігрових комплектів та редагованих персонажів. Не потрібне підключення
-    до Інтернету. Можна отримати доступ до результатів роботи через Інтернет."
-  robomindnl_longdescription: "Учні вивчають основи програмування, контролюючи власного
+    до Інтернету. Можна отримати доступ до результатів роботи через Інтернет.
+  robomindnl_longdescription: 'Учні вивчають основи програмування, контролюючи власного
     віртуального робота. Цей онлайновий курс повністю самодостатній, і містить короткі
     презентації, відео-ролики, тести та автоматизовані підказки, котрі допомагають
-    виконати завдання з програмування. "
-  flappy_longdescription: "Використовуючи перетягування блоків, створіть гру в Пурха,
+    виконати завдання з програмування. '
+  flappy_longdescription: Використовуючи перетягування блоків, створіть гру в Пурха,
     налаштовуючи її різний вигляд (Акула, Санта, як завгодно). Перенесіть гру на свій
-    телефон одним клацанням."
-  bitsbox_longdescription: "За допомогою власного віртуального планшету можна створити
+    телефон одним клацанням.
+  bitsbox_longdescription: За допомогою власного віртуального планшету можна створити
     кілька ігрових програм та поділитися ними. Прості інструкції дозволяють дітям
-    вивчити справжній Javascript, і чим краще ви вчитеся, тим більшого досягнете."
-  makeschool_longdescription: "Навчіться програмувати, створюючи гру для iPhone за
+    вивчити справжній Javascript, і чим краще ви вчитеся, тим більшого досягнете.
+  makeschool_longdescription: Навчіться програмувати, створюючи гру для iPhone за
     допомогою нової мови програмування для початківців - Swift! Створюйте гру, натхненну
     покемонами - пишіть код, щоб навчити монстриків виконувати нові рухи. Ви навчитеся
-    використовувати змінні, методи та об'єкти, щоб привести персонажів до перемоги!"
-  touchdevelop_longdescription: "Сенсорний редактор допоможе створити піксельну графіку,
-    розв'язувати ведмежі задачки чи розробити власну гру зі стрибаючим птахом. "
-  appinventor_longdescription: "Розважальні, швидкі відео-уроки поетапного створення
+    використовувати змінні, методи та об'єкти, щоб привести персонажів до перемоги!
+  touchdevelop_longdescription: 'Сенсорний редактор допоможе створити піксельну графіку,
+    розв''язувати ведмежі задачки чи розробити власну гру зі стрибаючим птахом. '
+  appinventor_longdescription: Розважальні, швидкі відео-уроки поетапного створення
     трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
     так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
     власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
     Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
-    з вчителем."
-  blockly_longdescription: "Маєте комп'ютери з повільним (чи відсутнім) Інтернетом?
+    з вчителем.
+  blockly_longdescription: Маєте комп'ютери з повільним (чи відсутнім) Інтернетом?
     Завантажте вправи Blockly, попередники вправ на Code.org - ZIP-архів на 3MB можна
-    завантажити на комп'ютер або запустити з флешки."
-  thinkersmith2_longdescription: "Учні дізнаються про представлення та зберігання
+    завантажити на комп'ютер або запустити з флешки.
+  thinkersmith2_longdescription: 'Учні дізнаються про представлення та зберігання
     символів у двійковому вигляді, як функцій ВКЛ та ВИКЛ. У кінці заняття учні класу
-    закодують власні ініціали та заберуть їх з собою додому. "
-  kodableunplugged_longdescription: "Вправа fuzzFamily Frenzy розроблена для використання
+    закодують власні ініціали та заберуть їх з собою додому. '
+  kodableunplugged_longdescription: 'Вправа fuzzFamily Frenzy розроблена для використання
     на звичайному папері, і слугує вступом в алгоритмічну логіку для дітей віком від
     5 років. Вчитель повинен пояснити правила гри, а учні створять вказівки однокласникам
-    з метою подолання смуги перешкод. "
+    з метою подолання смуги перешкод. '
   projguts_longdescription: Ця безмашинна вправа допоможе учням дізнатися про моделювання,
     створюючи різні версії гри "камінь-папір-ножиці", і спостерігаючи результати цих
     експериментів.
-  hourofcode_longdescription: "Бланк для нового code.org/hoc"
-  frozen_longdescription: "Скористаємось вмінням програмувати, щоб допомогти Анні
-    та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори,
-    покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!"
-  starwars_longdescription: "Навчись програмувати дроїдів, створи власну гру Зоряних
-    воєн у далекій-далекій галактиці."
-  playlab_longdescription: "Створіть історію або гру в Ігровій лабораторії! Запрограмуйте
+  hourofcode_longdescription: Бланк для нового code.org/hoc
+  frozen_longdescription: Скористаємось вмінням програмувати, щоб допомогти Анні та
+    Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори,
+    покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
+  starwars_longdescription: Навчись програмувати дроїдів, створи власну гру Зоряних
+    воєн у далекій-далекій галактиці.
+  playlab_longdescription: Створіть історію або гру в Ігровій лабораторії! Запрограмуйте
     тварин, піратів, зомбі, ніндзя і багато інших персонажів, щоб вони рухалися, говорили,
-    набирали бали і навіть запускали вогняні кулі!"
-  monstercoding_longdescription: "Квест кодування Загадкового острова від Monster
-    Coding пропонує веселу самостійну пригоду, яка навчає дітей кільком поняттям програмування.
+    набирали бали і навіть запускали вогняні кулі!
+  monstercoding_longdescription: Квест кодування Загадкового острова від Monster Coding
+    пропонує веселу самостійну пригоду, яка навчає дітей кільком поняттям програмування.
     Кожна вправа, що базується на блоках, виконується на основі попередньої, вводячи
     поняття функцій, логічних виразів, циклів, команд розгалуження, масивів, за допомогою
-    кольорової анімованої графіки та аудіо-інструкцій."
-  allcancode_longdescription: "Учні грають у пригодницьку гру на основі оригінальної
+    кольорової анімованої графіки та аудіо-інструкцій.
+  allcancode_longdescription: Учні грають у пригодницьку гру на основі оригінальної
     історії. Вони проведуть Марко - головного персонажа - через кожен рівень, надаючи
     покрокові інструкції у формі візуальної мови програмування, що використовується
     у Годині коду. Вони знайомляться з послідовним виконанням команд, повтореннями,
-    розгалуженнями, навіть не помічаючи цього."
-  csfirst_longdescription: "Створіть історію про двох персонажів у морі. Анімуйте
-    воду, налаштуйте сцену, щоб додати власну іскру. Використайте код, щоб розповісти
-    свою історію!"
-  boxisland_longdescription: "Відправляйтесь у подорож на острів Бокс і допоможуть
+    розгалуженнями, навіть не помічаючи цього.
+  csfirst_longdescription: Створіть історію про двох персонажів у морі. Анімуйте воду,
+    налаштуйте сцену, щоб додати власну іскру. Використайте код, щоб розповісти свою
+    історію!
+  boxisland_longdescription: Відправляйтесь у подорож на острів Бокс і допоможуть
     Хіро зібрати усі годинники, розсипані у пустелі! У цьому підручнику можна вивчити
-    основи алгоритмів, послідовного виконання, цикли та умови!"
-  codesters_longdescription: "Створюйте власні ігри, анімації та ілюстрації за допомогою
+    основи алгоритмів, послідовного виконання, цикли та умови!
+  codesters_longdescription: 'Створюйте власні ігри, анімації та ілюстрації за допомогою
     Python. Кои буде готово, можна поділитися з друзями! Програмуйте у Python, справжній
     мові програмування, яка щодня використовується у компаніях - наша збірка інструментів
     для перетягування робить її вивчення дуже легким! Спробуйте створити гру в баскетбол
-    зрежисуйте танець чи створіть анімаційну листівку! "
-  texasinstruments_longdescription: "Вправи 10 хвилин коду можна використати у класі
+    зрежисуйте танець чи створіть анімаційну листівку! '
+  texasinstruments_longdescription: 'Вправи 10 хвилин коду можна використати у класі
     для того, щоб розпалити інтерес учнів до програмування через технології TI, які
     вони носять у своїх портфелях. Вивчайте основи програмування на TI-84&#8482; Plus
-    і починайте програмувати всього за 10 хвилин - попередній досвід не потрібен!
-    \ "
-  teacherled_longdescription: "Тепер, коли десятки тисяч вчителів вже спробували Годину
+    і починайте програмувати всього за 10 хвилин - попередній досвід не потрібен!  '
+  teacherled_longdescription: Тепер, коли десятки тисяч вчителів вже спробували Годину
     коду, багато з них вже готові до більш творчих, менш універсальних вправ, які
     викладають основи інформатики. Щоб допомогти вчителям знайти натхнення, ми зібрали
     і перевірили одногодинні уроки та вправи, розроблені для різних предметних галузей
-    для ветеранів Години коду."
-  codeorg_beyond_name: "Вступ до інформатики (до 8 класу)"
-  khan_beyond_name: "Вивчайте програмування"
-  tynker_beyond_name: "Вивчайте програмування вдома"
-  scratch_beyond_name: "Творіть програмуючи"
+    для ветеранів Години коду.
+  codeorg_beyond_name: Вступ до інформатики (до 8 класу)
+  khan_beyond_name: Вивчайте програмування
+  tynker_beyond_name: Вивчайте програмування вдома
+  scratch_beyond_name: Творіть програмуючи
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR для тих, хто ще не читає
   hopscotch_beyond_name: 'Hopscotch: програмування на iPad'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: "Вивчайте програмування на Python"
-  hacketyhack_beyond_name: "Вивчайте Ruby"
-  robomind_beyond_name: "Програмування віртуального робота"
-  makeschool_beyond_name: "Створіть гру для iPhone у браузері!"
-  appinventor_beyond_name: "Година коду від AppInventor"
+  groklearning_beyond_name: Вивчайте програмування на Python
+  hacketyhack_beyond_name: Вивчайте Ruby
+  robomind_beyond_name: Програмування віртуального робота
+  makeschool_beyond_name: Створіть гру для iPhone у браузері!
+  appinventor_beyond_name: Година коду від AppInventor
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "Навчання програмуванню з собакою Карел"
-  udemy_beyond_name: "Онлайнові курси з програмування"
-  lynda_beyond_name: "Онлайнові курси з програмування"
-  edx_beyond_name: "Курс CS50 (Гарвард)"
-  coursera_beyond_name: "Курс CS 101 (Стенфорд)"
+  codehs_beyond_name: Навчання програмуванню з собакою Карел
+  udemy_beyond_name: Онлайнові курси з програмування
+  lynda_beyond_name: Онлайнові курси з програмування
+  edx_beyond_name: Курс CS50 (Гарвард)
+  coursera_beyond_name: Курс CS 101 (Стенфорд)
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "Курси університетів онлайн"
+  teachingtree_beyond_name: Курси університетів онлайн
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "Вивчіть HTML"
-  codeavengers_beyond_name: "Навчіться програмувати веб-сайти"
+  w3schools_beyond_name: Вивчіть HTML
+  codeavengers_beyond_name: Навчіться програмувати веб-сайти
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino зі Sparkfun
-  processing_beyond_name: "Програмуйте на Processing"
+  processing_beyond_name: Програмуйте на Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "Вік 4-104"
-  khan_beyond_gradelevel: "Середня школа +"
-  tynker_beyond_gradelevel: "Вік 5-13"
-  scratch_beyond_gradelevel: "Вік 8 +"
-  lightbot_beyond_gradelevel: "Всі вікові групи"
-  codecademy_beyond_gradelevel: "Старша школа"
-  kodable_beyond_gradelevel: "Початкова школа"
-  scratchjr_beyond_gradelevel: "Початкова школа"
-  hopscotch_beyond_gradelevel: "Середня школа +"
-  pocketcode_beyond_gradelevel: "Середня школа +"
-  groklearning_beyond_gradelevel: "Середня школа +"
-  hacketyhack_beyond_gradelevel: "Старша школа"
-  robomind_beyond_gradelevel: "Вік 8-13"
-  makeschool_beyond_gradelevel: "Старша школа"
-  appinventor_beyond_gradelevel: "Середня школа +"
-  touchdevelop_beyond_gradelevel: "Старша школа"
-  codehs_beyond_gradelevel: "Старша школа"
-  udemy_beyond_gradelevel: "Старша школа +"
-  lynda_beyond_gradelevel: "Старша школа +"
-  edx_beyond_gradelevel: "Університет"
-  coursera_beyond_gradelevel: "Університет"
-  udacity_beyond_gradelevel: "Університет"
-  teachingtree_beyond_gradelevel: "Університет"
-  kodu_beyond_gradelevel: "Вік 8 +"
-  cargobot_beyond_gradelevel: "Вік 8 +"
-  kidsruby_beyond_gradelevel: "Вік 12 +"
-  w3schools_beyond_gradelevel: "Вік 12 +"
-  codeavengers_beyond_gradelevel: "Середня школа +"
-  mozilla_beyond_gradelevel: "Вік 12 +"
-  codecombat_beyond_gradelevel: "Середня школа +"
-  codea_beyond_gradelevel: "Старша школа +"
-  lego_beyond_gradelevel: "Середня школа +"
-  finch_beyond_gradelevel: "Вік 8 +"
-  arduino_beyond_gradelevel: "Старша школа +"
-  processing_beyond_gradelevel: "Старша школа"
-  alice_beyond_gradelevel: "Середня школа +"
-  sphero_beyond_gradelevel: "Вік 8 +"
-  codeorg_beyond_platformtext: "Сучасні браузери, планшети"
-  khan_beyond_platformtext: "Сучасні веб-браузери"
-  tynker_beyond_platformtext: "Сучасні браузери (необхідна оплата)"
-  scratch_beyond_platformtext: "Будь-які браузери"
+  codeorg_beyond_gradelevel: Вік 4-104
+  khan_beyond_gradelevel: Середня школа +
+  tynker_beyond_gradelevel: Вік 5-13
+  scratch_beyond_gradelevel: Вік 8 +
+  lightbot_beyond_gradelevel: Всі вікові групи
+  codecademy_beyond_gradelevel: Старша школа
+  kodable_beyond_gradelevel: Початкова школа
+  scratchjr_beyond_gradelevel: Початкова школа
+  hopscotch_beyond_gradelevel: Середня школа +
+  pocketcode_beyond_gradelevel: Середня школа +
+  groklearning_beyond_gradelevel: Середня школа +
+  hacketyhack_beyond_gradelevel: Старша школа
+  robomind_beyond_gradelevel: Вік 8-13
+  makeschool_beyond_gradelevel: Старша школа
+  appinventor_beyond_gradelevel: Середня школа +
+  touchdevelop_beyond_gradelevel: Старша школа
+  codehs_beyond_gradelevel: Старша школа
+  udemy_beyond_gradelevel: Старша школа +
+  lynda_beyond_gradelevel: Старша школа +
+  edx_beyond_gradelevel: Університет
+  coursera_beyond_gradelevel: Університет
+  udacity_beyond_gradelevel: Університет
+  teachingtree_beyond_gradelevel: Університет
+  kodu_beyond_gradelevel: Вік 8 +
+  cargobot_beyond_gradelevel: Вік 8 +
+  kidsruby_beyond_gradelevel: Вік 12 +
+  w3schools_beyond_gradelevel: Вік 12 +
+  codeavengers_beyond_gradelevel: Середня школа +
+  mozilla_beyond_gradelevel: Вік 12 +
+  codecombat_beyond_gradelevel: Середня школа +
+  codea_beyond_gradelevel: Старша школа +
+  lego_beyond_gradelevel: Середня школа +
+  finch_beyond_gradelevel: Вік 8 +
+  arduino_beyond_gradelevel: Старша школа +
+  processing_beyond_gradelevel: Старша школа
+  alice_beyond_gradelevel: Середня школа +
+  sphero_beyond_gradelevel: Вік 8 +
+  codeorg_beyond_platformtext: Сучасні браузери, планшети
+  khan_beyond_platformtext: Сучасні веб-браузери
+  tynker_beyond_platformtext: Сучасні браузери (необхідна оплата)
+  scratch_beyond_platformtext: Будь-які браузери
   lightbot_beyond_platformtext: iOS, Android (або веб-браузер)
-  codecademy_beyond_platformtext: "Сучасні веб-браузери. програми iOS, Android"
+  codecademy_beyond_platformtext: Сучасні веб-браузери. програми iOS, Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "Мобільний додаток"
-  groklearning_beyond_platformtext: "Сучасні веб-браузери"
-  hacketyhack_beyond_platformtext: "Установка програми"
-  robomind_beyond_platformtext: "Сучасні веб-браузери, мобільні застосунки"
-  makeschool_beyond_platformtext: "Сучасні веб-браузери"
-  appinventor_beyond_platformtext: "Сучасний веб-браузер + Android"
-  touchdevelop_beyond_platformtext: "Сучасні браузери, смартфони, всі пристрої"
-  codehs_beyond_platformtext: "Сучасні браузери (необхідна оплата)"
-  udemy_beyond_platformtext: "Веб-базовані"
-  lynda_beyond_platformtext: "Веб-сайт (необхідна оплата)"
-  edx_beyond_platformtext: "Сучасні браузери"
-  coursera_beyond_platformtext: "Сучасні браузери"
-  udacity_beyond_platformtext: "Сучасні браузери"
-  teachingtree_beyond_platformtext: "Веб-базовані"
+  pocketcode_beyond_platformtext: Мобільний додаток
+  groklearning_beyond_platformtext: Сучасні веб-браузери
+  hacketyhack_beyond_platformtext: Установка програми
+  robomind_beyond_platformtext: Сучасні веб-браузери, мобільні застосунки
+  makeschool_beyond_platformtext: Сучасні веб-браузери
+  appinventor_beyond_platformtext: Сучасний веб-браузер + Android
+  touchdevelop_beyond_platformtext: Сучасні браузери, смартфони, всі пристрої
+  codehs_beyond_platformtext: Сучасні браузери (необхідна оплата)
+  udemy_beyond_platformtext: Веб-базовані
+  lynda_beyond_platformtext: Веб-сайт (необхідна оплата)
+  edx_beyond_platformtext: Сучасні браузери
+  coursera_beyond_platformtext: Сучасні браузери
+  udacity_beyond_platformtext: Сучасні браузери
+  teachingtree_beyond_platformtext: Веб-базовані
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "Установка програми"
-  w3schools_beyond_platformtext: "Сучасні веб-браузери"
-  codeavengers_beyond_platformtext: "Сучасні веб-браузери"
-  mozilla_beyond_platformtext: "Сучасні веб-браузери"
-  codecombat_beyond_platformtext: "Веб інтерфейс (Firefox, Chrome, Safari, IE9+)"
+  kidsruby_beyond_platformtext: Установка програми
+  w3schools_beyond_platformtext: Сучасні веб-браузери
+  codeavengers_beyond_platformtext: Сучасні веб-браузери
+  mozilla_beyond_platformtext: Сучасні веб-браузери
+  codecombat_beyond_platformtext: Веб інтерфейс (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "Покупка робота"
-  finch_beyond_platformtext: "Покупка робота"
-  arduino_beyond_platformtext: "Веб-браузер, потім покупка комплекту"
-  processing_beyond_platformtext: "Сучасні веб-браузери"
+  lego_beyond_platformtext: Покупка робота
+  finch_beyond_platformtext: Покупка робота
+  arduino_beyond_platformtext: Веб-браузер, потім покупка комплекту
+  processing_beyond_platformtext: Сучасні веб-браузери
   alice_beyond_platformtext: Windows або Mac (потрібна установка)
-  sphero_beyond_platformtext: "Покупка робота"
-  codeorg_beyond_shortdescription: "Вчіться програмувати з Марком Цукенбергом та Злими
-    птахами!"
-  khan_beyond_shortdescription: "Вчимося малювати в JavaScript"
-  tynker_beyond_shortdescription: "Веселий та цікавий курс для учнів 4-8 класів"
-  scratch_beyond_shortdescription: "Створюйте інтерактивні ігри, історії та анімації."
-  lightbot_beyond_shortdescription: "Гра вивчення базових понять програмування"
-  codecademy_beyond_shortdescription: "Вивчайте основи програмування JavaScript у
-    веб-браузері"
-  kodable_beyond_shortdescription: "Цікава гра для iPad із вивчення базових понять
-    програмування"
-  scratchjr_beyond_shortdescription: "Створюйте інтерактивні історії та ігри за допомогою
-    ScratchJr. "
-  hopscotch_beyond_shortdescription: "Вчимо візуальне програмування на iPad"
-  pocketcode_beyond_shortdescription: "Створіть гру на смартфоні та поділіться нею
-    з друзями!"
-  groklearning_beyond_shortdescription: "Базовий вступ до програмування на Python"
-  hacketyhack_beyond_shortdescription: "Вивчайте Ruby з самого початку"
-  robomind_beyond_shortdescription: "Напишіть код для віртуального робота"
-  makeschool_beyond_shortdescription: "Навчіться створювати гру для iPhone за годину"
-  appinventor_beyond_shortdescription: "Розробіть власну програму! (лише Android)"
-  touchdevelop_beyond_shortdescription: "Створіть мобільну програму прямо на телефоні,
-    планшеті чи ноутбуці"
-  codehs_beyond_shortdescription: "Вчіться програмувати на JavaScript у веселому візуальному
-    середовищі"
-  udemy_beyond_shortdescription: "Десятки онлайнових курсів програмування"
-  lynda_beyond_shortdescription: "Десятки онлайнових курсів програмування"
-  edx_beyond_shortdescription: "Найпопулярніший курс Гарварду"
-  coursera_beyond_shortdescription: "Почніть з CS101"
-  udacity_beyond_shortdescription: "Почніть з CS101"
-  teachingtree_beyond_shortdescription: "Знання онлайн: швидко і необмежено"
-  kodu_beyond_shortdescription: "Розробка світу 3D-гри"
-  cargobot_beyond_shortdescription: "Програмування робо-руки на iPad"
-  kidsruby_beyond_shortdescription: "Навчіться програмувати на Ruby"
-  w3schools_beyond_shortdescription: "Навчіться створювати веб-сайти"
-  codeavengers_beyond_shortdescription: "Навчіться створювати ігри та сайти"
-  mozilla_beyond_shortdescription: "Створюйте та публікуйте веб-сторінки"
-  codecombat_beyond_shortdescription: "Грайте в гру та вивчайте JavaScript, щоб виграти"
-  codea_beyond_shortdescription: "Створіть програми на своєму iPad"
-  lego_beyond_shortdescription: "Створіть та запрограмуйте робота"
-  finch_beyond_shortdescription: "Робот для уроків інформатики"
-  arduino_beyond_shortdescription: "Вивчайте Arduino з Sparkfun's Digital Sandbox."
-  processing_beyond_shortdescription: "Вивчення мови Processing"
-  alice_beyond_shortdescription: "Навчайте програмуванню в 3D-середовищі"
-  sphero_beyond_shortdescription: "Уроки SPRK містять цікавий прискорений курс програмування
-    роботів, водночас розвиваючи математичні та природничі знання та навики."
+  sphero_beyond_platformtext: Покупка робота
+  codeorg_beyond_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими
+    птахами!
+  khan_beyond_shortdescription: Вчимося малювати в JavaScript
+  tynker_beyond_shortdescription: Веселий та цікавий курс для учнів 4-8 класів
+  scratch_beyond_shortdescription: Створюйте інтерактивні ігри, історії та анімації.
+  lightbot_beyond_shortdescription: Гра вивчення базових понять програмування
+  codecademy_beyond_shortdescription: Вивчайте основи програмування JavaScript у веб-браузері
+  kodable_beyond_shortdescription: Цікава гра для iPad із вивчення базових понять
+    програмування
+  scratchjr_beyond_shortdescription: 'Створюйте інтерактивні історії та ігри за допомогою
+    ScratchJr. '
+  hopscotch_beyond_shortdescription: Вчимо візуальне програмування на iPad
+  pocketcode_beyond_shortdescription: Створіть гру на смартфоні та поділіться нею
+    з друзями!
+  groklearning_beyond_shortdescription: Базовий вступ до програмування на Python
+  hacketyhack_beyond_shortdescription: Вивчайте Ruby з самого початку
+  robomind_beyond_shortdescription: Напишіть код для віртуального робота
+  makeschool_beyond_shortdescription: Навчіться створювати гру для iPhone за годину
+  appinventor_beyond_shortdescription: Розробіть власну програму! (лише Android)
+  touchdevelop_beyond_shortdescription: Створіть мобільну програму прямо на телефоні,
+    планшеті чи ноутбуці
+  codehs_beyond_shortdescription: Вчіться програмувати на JavaScript у веселому візуальному
+    середовищі
+  udemy_beyond_shortdescription: Десятки онлайнових курсів програмування
+  lynda_beyond_shortdescription: Десятки онлайнових курсів програмування
+  edx_beyond_shortdescription: Найпопулярніший курс Гарварду
+  coursera_beyond_shortdescription: Почніть з CS101
+  udacity_beyond_shortdescription: Почніть з CS101
+  teachingtree_beyond_shortdescription: 'Знання онлайн: швидко і необмежено'
+  kodu_beyond_shortdescription: Розробка світу 3D-гри
+  cargobot_beyond_shortdescription: Програмування робо-руки на iPad
+  kidsruby_beyond_shortdescription: Навчіться програмувати на Ruby
+  w3schools_beyond_shortdescription: Навчіться створювати веб-сайти
+  codeavengers_beyond_shortdescription: Навчіться створювати ігри та сайти
+  mozilla_beyond_shortdescription: Створюйте та публікуйте веб-сторінки
+  codecombat_beyond_shortdescription: Грайте в гру та вивчайте JavaScript, щоб виграти
+  codea_beyond_shortdescription: Створіть програми на своєму iPad
+  lego_beyond_shortdescription: Створіть та запрограмуйте робота
+  finch_beyond_shortdescription: Робот для уроків інформатики
+  arduino_beyond_shortdescription: Вивчайте Arduino з Sparkfun's Digital Sandbox.
+  processing_beyond_shortdescription: Вивчення мови Processing
+  alice_beyond_shortdescription: Навчайте програмуванню в 3D-середовищі
+  sphero_beyond_shortdescription: Уроки SPRK містять цікавий прискорений курс програмування
+    роботів, водночас розвиваючи математичні та природничі знання та навики.
   codeorg_beyond_longdescription: Вивчайте основи інформатики за допомогою візуального
     програмування. 3 повні курси, кожен з яких складається з 15-20 уроків, які поєднують
     "змішані" вправи та ігроподібні інструкції, призначені для самостійної роботи,
     поряд з відео-лекціями від Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants
     vs. Zombies. Ознайомтесь з циклами, умовами, простими алгоритмами, функціями та
     змінними.
-  khan_beyond_longdescription: "Вивчайте основи програмування на JavaScript шляхом
-    створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!"
+  khan_beyond_longdescription: Вивчайте основи програмування на JavaScript шляхом
+    створення цікавих малюнків за допомогою коду. Працюйте самостійно або в класі!
   tynker_beyond_longdescription: Tynker робить програмування цікавим та легким, робить
     його візуальним. Діти створюють ігри та мобільні застосунки, впорядковуючи блоки
     коду. При цьому відпадає необхідність вивчати синтаксис програмування. Діти одразу
     втілюють свої ідеї в анімованих історіях та математичних виразах - це сприяє прогресивному
     навчанню. Навчаючи основам, Tynker також знайомить зі складнішими поняттями, такими
     як синтаксичне програмування.
-  scratch_beyond_longdescription: "Зі Scratch ви можете створювати власні інтерактивні
+  scratch_beyond_longdescription: Зі Scratch ви можете створювати власні інтерактивні
     ігри, історії, анімації &mdash; та ділитися ними з друзями. Почніть з анімації
-    свого імені, створення святкової листівки чи створення гри у теніс."
-  lightbot_beyond_longdescription: "Вивчайте базову логіку програмування, починаючи
+    свого імені, створення святкової листівки чи створення гри у теніс.
+  lightbot_beyond_longdescription: Вивчайте базову логіку програмування, починаючи
     з найпростіших понять. Для дітей від 4 років. Працює на платформах iOS та Android
     (та у веб-браузерах). Вивчіть команди послідовного виконання, ідентифікуйте шаблони,
-    навчіться використовувати процедури та цикли!"
+    навчіться використовувати процедури та цикли!
   codecademy_beyond_longdescription: Codecademy - це інтерактивне, кероване учнем,
     навчання, котре охоплює основи інформатики через вивчення JavaScript десятками
     мільйонів учнів по всьому світу. Ми підготували цілісне заняття Години коду з
@@ -1854,70 +1846,70 @@
     дозволяє дітям створювати власні інтерактивні історії та ігри. Потрібно складати
     графічні блоки команд, щоб змусити персонажів рухатись, стрибати, танцювати та
     співати
-  hopscotch_beyond_longdescription: "Підручник на iPad з використанням мови програмування
+  hopscotch_beyond_longdescription: 'Підручник на iPad з використанням мови програмування
     Hopscotch. Учні у власному темпі створюють ігри та програми на своїх мобільних
-    пристроях, працюючи індивідуально чи в малих групах (до 3 учнів на пристрій). "
-  pocketcode_beyond_longdescription: "Створіть власну гру на телефоні з Pocket Code!
+    пристроях, працюючи індивідуально чи в малих групах (до 3 учнів на пристрій). '
+  pocketcode_beyond_longdescription: Створіть власну гру на телефоні з Pocket Code!
     Допоможіть парашутистові Стіву доставити пакунки. Ви зможете поділитись грою з
-    друзями!"
-  groklearning_beyond_longdescription: "Вступний курс інформатики на основі мови програмування
+    друзями!
+  groklearning_beyond_longdescription: Вступний курс інформатики на основі мови програмування
     Python для тих, хто не має попереднього досвіду програмування. Наше унікальне
     поєднання базового матеріалу з цікавими завданнями допоможе розібратись як у мові
     Python, так і з самим програмуванням. Ми апробували навчальні матеріали з учнями
-    різного віку з різним базовим рівнем і переконані, що вони підійдуть і вам."
+    різного віку з різним базовим рівнем і переконані, що вони підійдуть і вам.
   hacketyhack_beyond_longdescription: 'Hackety Hack навчить абсолютним основам програмування
     із самого початку. Не потрібно попереднього досвіду вивчення програмування! З
     Hackety Hack ви вивчите мову Ruby, котра використовується для різних типів програм,
     включаючи настільні розробки та веб-сайти. [Примітка: потрібна установка програми]'
-  robomind_beyond_longdescription: "Учні вивчать основи програмування, контролюючи
+  robomind_beyond_longdescription: 'Учні вивчать основи програмування, контролюючи
     власного віртуального робота. Цей онлайновий курс повністю самодостатній, і містить
     короткі презентації, відео-ролики, тести та автоматизовані підказки, котрі допоможуть
-    виконати завдання з програмування. "
-  makeschool_beyond_longdescription: "Вже знаєте трохи ObjectiveC? Тоді навчіться
-    створювати гру для iPhone за одну годину! Ми покажемо, як можна спроектувати,
-    запрограмувати, протестувати та пограти у гру в своєму браузері, а потім поділитись
-    нею з друзями на Facebook! Попередній досвід розробки для iPhone не потрібен.
-    Потрібне розуміння змінних, методів та об'єктів."
-  appinventor_beyond_longdescription: "Розважальні, швидкі відео-уроки поетапного
-    створення трьох простих додатків телефону або планшета на Android. Призначені
-    як для новачків, так досвідчених учнів, ці уроки Години коду допоможуть розпочати
-    програмування власних проектів. І уявіть собі, можна поділитися своїми творіннями
-    з друзями! Ці навчальні діяльності підходять як для індивідуальної, так і групової
-    роботи з вчителем."
+    виконати завдання з програмування. '
+  makeschool_beyond_longdescription: Вже знаєте трохи ObjectiveC? Тоді навчіться створювати
+    гру для iPhone за одну годину! Ми покажемо, як можна спроектувати, запрограмувати,
+    протестувати та пограти у гру в своєму браузері, а потім поділитись нею з друзями
+    на Facebook! Попередній досвід розробки для iPhone не потрібен. Потрібне розуміння
+    змінних, методів та об'єктів.
+  appinventor_beyond_longdescription: Розважальні, швидкі відео-уроки поетапного створення
+    трьох простих додатків телефону або планшета на Android. Призначені як для новачків,
+    так досвідчених учнів, ці уроки Години коду допоможуть розпочати програмування
+    власних проектів. І уявіть собі, можна поділитися своїми творіннями з друзями!
+    Ці навчальні діяльності підходять як для індивідуальної, так і групової роботи
+    з вчителем.
   touchdevelop_beyond_longdescription: TouchDevelop дозволяє створювати програми на
     iPad, iPhone, Android, PC, Mac, Windows Phone. Наш сенсорний редактор зробить
     програмування цікавим, навіть на телефоні чи планшеті!
-  codehs_beyond_longdescription: "Вивчайте основи програмування з цуценям Карелом
-    - це веселий, доступний та візуальний вступ до програмування, де команди для комп'ютера
+  codehs_beyond_longdescription: 'Вивчайте основи програмування з цуценям Карелом
+    - це веселий, доступний та візуальний вступ до програмування, де команди для комп''ютера
     віддаються, як команди для собаки. Цей підручник найкраще опрацьовувати із вчителем,
-    але можна вчитися й самостійно. [Примітка: потрібна оплата]"
-  udemy_beyond_longdescription: "Незалежно від того, чи ви не написали жодного рядка
+    але можна вчитися й самостійно. [Примітка: потрібна оплата]'
+  udemy_beyond_longdescription: 'Незалежно від того, чи ви не написали жодного рядка
     коду, чи заробляєте програмуванням на життя, на Udemy є курс саме для вас, із
-    супроводом професійного викладача. [Примітка: потрібна оплата]"
-  lynda_beyond_longdescription: "Дізнайтеся, як писати код, створювати і розробляти
-    веб-застосунки, від самих основ об'єктно-орієнтованого програмування на мові C
-    і С++, до Java. Наші уроки допоможуть навчитися програмувати мобільні додатки,
+    супроводом професійного викладача. [Примітка: потрібна оплата]'
+  lynda_beyond_longdescription: 'Дізнайтеся, як писати код, створювати і розробляти
+    веб-застосунки, від самих основ об''єктно-орієнтованого програмування на мові
+    C і С++, до Java. Наші уроки допоможуть навчитися програмувати мобільні додатки,
     працювати з PHP і базами даних MySQL, ознайомитись з мовою статистичної обробки
-    R і багато іншого.  [Примітка: потрібна оплата]"
+    R і багато іншого.  [Примітка: потрібна оплата]'
   edx_beyond_longdescription: CS50x це вступ до інтелектуальної сфери інформатики
     та мистецтва програмування для студентів різних спеціальностей від Гарварду. Курс
     охоплює такі теми як абстрації, алгоритми, структури даних, інкапсуляція, керування
     ресурсами, безпека, розробка програм та веб-розробка. В курсі використовуються
     такі мови як  C, PHP та JavaScript, а також SQL, CSS та HTML. Очний курс CS50x
     є другим за масовістю курсом Гарварду.
-  coursera_beyond_longdescription: "Курс CS 101 від Стенфорду викладає Нік Парланте
+  coursera_beyond_longdescription: 'Курс CS 101 від Стенфорду викладає Нік Парланте
     (безкоштовно!) CS101 містить базові поняття інформатики для аудиторії без попередньої
     підготовки. Можна експериментувати з короткими фрагментами коду і пробувати розібратись
-    у можливостях та обмеженнях комп'ютерів. CS101 також знайомить із загальними основами
-    комп'ютерної техніки: що таке комп'ютер, його апаратне та програмне забезпечення,
-    що таке Інтернет. Не вимагається попередній рівень знань, окрім вміння користуватись
-    браузером."
-  udacity_beyond_longdescription: "У цьому курси можна вивчити базові поняття інформатики
+    у можливостях та обмеженнях комп''ютерів. CS101 також знайомить із загальними
+    основами комп''ютерної техніки: що таке комп''ютер, його апаратне та програмне
+    забезпечення, що таке Інтернет. Не вимагається попередній рівень знань, окрім
+    вміння користуватись браузером.'
+  udacity_beyond_longdescription: У цьому курси можна вивчити базові поняття інформатики
     і навчитися писати власні програми в контексті розробки веб-сканера. Для навчання
     не потрібен попередній досвід програмування. Ласкаво просимо початківців! По завершенню
     курсу, ви вивчите основи інформатики та вмітимете писати програми мовою Python
     для розв'язання власних задач. Цей курс може слугувати підготовкою до подальших
-    курсів інформатики середнього рівня."
+    курсів інформатики середнього рівня.
   teachingtree_beyond_longdescription: TeachingTree є відкритою платформою, котра
     дозволяє організовувати навчальні матеріали. Нашою метою є надати учням легкий
     доступ до конкретних фрагментів, щоб дізнатися про окремі поняття. Ми запрошуємо
@@ -1933,26 +1925,26 @@
     навчитись переміщувати ящики. Звучить просто, чи не так? Тут є 36 складнющих завдань,
     вражаючої музики та дивовижної графіки. Можете навіть записати своє рішення і
     викласти на YouTube, щоб показати своїм друзям.
-  kidsruby_beyond_longdescription: "Створюйте ігри, розважаючись, або й полегшуйте
+  kidsruby_beyond_longdescription: 'Створюйте ігри, розважаючись, або й полегшуйте
     собі роботу над домашніми завданнями за допомогою Ruby! Просто скажіть батькам
     та вчителям, що ви вивчаєте мову програмування Ruby... ;) Це безкоштовно і працюватиме
-    на будь-якому комп'ютері. [Примітка: потрібна установка програми]"
-  w3schools_beyond_longdescription: "Навчіться створювати веб-сайти на власному комп'ютері.
+    на будь-якому комп''ютері. [Примітка: потрібна установка програми]'
+  w3schools_beyond_longdescription: Навчіться створювати веб-сайти на власному комп'ютері.
     Ознайомтеся з серверними основами менш, ніж за один день. Навчіться підключати
-    бази даних до свого сайту"
-  codeavengers_beyond_longdescription: "Навчіться програмувати ігри, додатки та веб-сайти.
+    бази даних до свого сайту
+  codeavengers_beyond_longdescription: Навчіться програмувати ігри, додатки та веб-сайти.
     Розроблені фахівцями збірники з ідеальним для початківців рівнем складності, легкими
     для розуміння інструкціями та корисними підказками, коли це потрібно. Наші курси
     HTML, CSS та JavaScript містять завдання з написання коду та ігрові перевірки,
-    які роблять навчання веселим і ефективним для учнів різного віку."
+    які роблять навчання веселим і ефективним для учнів різного віку.
   mozilla_beyond_longdescription: Thimble робить створення та розміщення веб-сторінок
     дивовижно простим. Пишіть та редагуйте HTML та CSS прямо у браузері, й одразу
     переглядайте результат роботи. Розмістити завершений проект в Інтернеті та розіслати
     його друзям можна за одне клацання мишею. Ідеально для початківців та фахівців.
-  codecombat_beyond_longdescription: "Грайте як Маг, використовуючи код (заклинання)
+  codecombat_beyond_longdescription: Грайте як Маг, використовуючи код (заклинання)
     для керування героями, проходження лабіринтів, перемог над людожерами, перехитрювання
     ворогів та порятунку союзників! Вивчайте JavaScript у цій веб-грі на HTML 5 для
-    абсолютних початківців у програмуванні."
+    абсолютних початківців у програмуванні.
   codea_beyond_longdescription: Codea для iPad дозволяє створювати ігри та симуляції  &mdash;
     або реалізовувати будь-яку візуальну ідею. Перетворіть свої думки на інтерактивні
     об'єкти, користуючись такими можливостями iPad як мульти-тач та акселерометр.
@@ -1960,8 +1952,8 @@
     створений для того, щоб ви могли торкнутися коду. Хочете змінити число? Торкніться
     та перетягніть. Як щодо кольорів чи зображень? Торкання викличе візуальний редактор,
     де можна обрати потрібну настройку.
-  lego_beyond_longdescription: "Створюйте невеликих настроюваних та програмованих
-    роботів з кубиків LEGO."
+  lego_beyond_longdescription: Створюйте невеликих настроюваних та програмованих роботів
+    з кубиків LEGO.
   finch_beyond_longdescription: Finch - це новий робот для навчання інформатиці. Його
     розробили в результаті чотирирічних досліджень у лабораторії CREATE у Carnegie
     Mellon. Finch створений для захоплюючого ознайомлення з мистецтвом програмування.
@@ -1979,57 +1971,57 @@
     аспекті, Processing перетворилась на інструмент розробки для фахівців. На нинішній
     день десятки тисяч учнів, студентів, художників, дизайнерів, дослідників та любителів
     використовують Processing для навчання, створення прототипів та готових проектів.
-  alice_beyond_longdescription: "Використовуючи інноваційне середовище програмування
+  alice_beyond_longdescription: Використовуючи інноваційне середовище програмування
     для створення 3D-анімацій, проект Alice пропонує інструменти та навчальні матеріали
     для навчання обчислювального мислення, навичок розв'язання задач та програмування
-    для учнів різних класів та рівнів."
-  sphero_beyond_longdescription: "Чи ви є педагогом чи батьком, уроки SPRK пропонують
+    для учнів різних класів та рівнів.
+  sphero_beyond_longdescription: Чи ви є педагогом чи батьком, уроки SPRK пропонують
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
-    та природничі знання та навики."
-  compatibility_hide_this_warning: "Сховати попередження"
-  compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер
+    та природничі знання та навики.
+  compatibility_hide_this_warning: Сховати попередження
+  compatibility_unsupported_browser: Ваш браузер не підтримується. Оновіть свій браузер
     до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
-    Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
+    Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "махати"
+  flappy_shortcode: махати
   infinity_shortcode: inf
-  playlab_shortcode: "грати"
+  playlab_shortcode: грати
   artist_shortcode: art
-  header_home: "Головна"
+  header_home: Головна
   header_my_dashboard: My Dashboard
-  header_courses: "курси"
+  header_courses: курси
   header_course_catalog: Course Catalog
-  header_project_gallery: "Проекти"
+  header_project_gallery: Проекти
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: "Огляд для педагога"
-  header_educate_elementary: "Початкова школа"
-  header_educate_middle: "Середня школа"
-  header_educate_high: "Старша школа"
-  header_educate_hoc: "Година коду"
-  header_educate_partner: "Співпраця з нами"
-  header_educate_beyond: "Поза Code.org"
-  header_educate_inspire: "Надихнути учня"
-  header_educate_community: "Інтернет-спільнота"
-  header_educate_tools: "Інструменти та відео"
-  header_about_us: "Про нас"
-  header_about_leadership: "Керівництво"
-  header_about_donors: "Донори"
-  header_about_partners: "Партнери"
-  header_about_team: "Вся команда"
-  header_about_news: "Новини"
-  header_about_evaluation: "Проба"
-  header_about_jobs: "Вакансії"
-  header_about_contact: "Контакти"
-  header_about_faqs: "ЧаПи"
-  header_learn: "Вчитися"
-  header_teach: "Вчити"
-  header_stats: "Статистика"
-  header_help_us: "Допомога нам"
-  header_about: "Про"
+  header_educate_overview: Огляд для педагога
+  header_educate_elementary: Початкова школа
+  header_educate_middle: Середня школа
+  header_educate_high: Старша школа
+  header_educate_hoc: Година коду
+  header_educate_partner: Співпраця з нами
+  header_educate_beyond: Поза Code.org
+  header_educate_inspire: Надихнути учня
+  header_educate_community: Інтернет-спільнота
+  header_educate_tools: Інструменти та відео
+  header_about_us: Про нас
+  header_about_leadership: Керівництво
+  header_about_donors: Донори
+  header_about_partners: Партнери
+  header_about_team: Вся команда
+  header_about_news: Новини
+  header_about_evaluation: Проба
+  header_about_jobs: Вакансії
+  header_about_contact: Контакти
+  header_about_faqs: ЧаПи
+  header_learn: Вчитися
+  header_teach: Вчити
+  header_stats: Статистика
+  header_help_us: Допомога нам
+  header_about: Про
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
@@ -2038,10 +2030,10 @@
   csp_name: "'16-'17 принципи інформатики"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "Привіт %{username}"
-  user_header_settings: "Мій профіль"
-  user_header_logout: "Вийти"
-  user_header_signin: "Вхід"
+  user_header_label: Привіт %{username}
+  user_header_settings: Мій профіль
+  user_header_logout: Вийти
+  user_header_signin: Вхід
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

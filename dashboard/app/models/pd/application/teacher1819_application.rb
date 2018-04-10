@@ -421,7 +421,9 @@ module Pd::Application
     end
 
     def district_name
-      school.try(:school_district).try(:name).try(:titleize)
+      school ?
+        school.try(:school_district).try(:name).try(:titleize) :
+        sanitize_form_data_hash[:school_district_name]
     end
 
     def school_name

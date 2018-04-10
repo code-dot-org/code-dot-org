@@ -6515,18 +6515,6 @@ en:
         What seems to be the difference between `keyDown()`, `keyWentDown()`, and
         `keyWentUp()`?\r\n* What do you think the exclamation mark (`!`) on line 10
         does?\r\n* How might you use the different keypress blocks in a game?"
-      CSD U3 Keypress Watchers_markdown_instruction: "# More Ways to Get User Input\r\n\r\nSo
-        far you've used `keyDown` as a way to let users control your programs, but
-        that's just one of many ways to take input. In fact, just one of many ways
-        _to detect keypresses_! Depending on how you want to react to a keypress,
-        there are a few other blocks you might want to use.\r\n\r\n# Do This\r\n\r\nYou
-        will **not write any code** in this program.\r\n\r\n* Read the program and
-        see if you can guess what will happen.\r\n* While the program is running,
-        press the arrow keys and observe how the screen responds.\r\n* Write down
-        or share with your neighbor your observations.\r\n\t* What seems to be the
-        difference between `keyDown()`, `keyWentDown()`, and `keyWentUp()`?\r\n    *
-        What do you think the exclamation mark (`!`) on line 10 does?\r\n    * How
-        might you use the different keypress blocks in a game?"
       CSD U3 Keypress Watchers_2018_markdown_instruction: "# More Ways to Get User
         Input\r\n\r\nSo far you've used `keyDown` as a way to let users control your
         programs, but that's just one of many ways to take input. In fact, just one
@@ -6878,13 +6866,6 @@ en:
         need to change two parameters. Which ones set your cloud's width and height?\r\n\r\n_Challenge:
         The sun is not in the exact same place as in the picture.  Can you change
         the sun's coordinates so that the picture matches completely?_\r\n"
-      CSD U3 Random Debug Grass-2018_markdown_instruction: "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37
-        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis
-        program uses the four parameter version of `rect()` and `ellipse()` to draw
-        a simple scene.\r\n\r\n# Do This\r\n\r\n* Debug this program and correct the
-        error so that the grass extends across the entire bottom.\r\n* Hint: You only
-        have to change one number. Which parameter makes your rectangle (the grass)
-        wider?"
       CSD U3 Random Debug Grass_markdown_instruction: "<img src=\"https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis
         program uses the four parameter version of `rect()` and `ellipse()` to draw
@@ -20080,6 +20061,33 @@ en:
         is in your workspace.  All of the code you need to cross the river is built
         right in! \r\n \r\nSnap the small, green block twice into your workspace to
         fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
+      GLJr_Behavior_7_markdown_instruction: "Check out these two new blocks - the
+        green \"When dog is touching cat\" block will run everything attached to it
+        when the dog touches the cat, and the \"Remove behavior\" block removes a
+        behavior from a sprite.\r\n\r\nSee if you can make both the dog and cat stop
+        moving when they run into each other."
+      GLJr_Behavior_8_markdown_instruction: "The cat and dog are so excited to see
+        each other that they want to have a dance party. In addition to removing their
+        move behaviors when the two sprites touch, add the \"dance party\" behavior
+        so they celebrate!"
+      GLJr_Behavior_9_markdown_instruction: "**Free Play**: Try using what you've
+        learned to make something new. Make sure to explore some of the new blocks
+        in the toolbox."
+      GLJr_Forever_5_markdown_instruction: "Now we have two sprites! Use a loop to
+        make the dog jittery and make the cat wander"
+      GLJr_Forever_6_markdown_instruction: "Let's try some more movement blocks
+        - make the dog run up and make the cat run right."
+      GLJr_Forever_7_markdown_instruction: "Check out this new \"if-else\" block
+        - it lets you run one set of code _if_ a condition is true, and a different
+        set of code if it's false. Inside it we're using another new block that
+        tells you _if_ two sprites are touching.\r\n\r\nSee if you can make both the
+        dog and cat stop moving when they run into each other."
+      GLJr_Forever_8_markdown_instruction: "The cat and dog are so excited to see
+        each other that they want to have a dance party. If the two sprites are touching,
+        have each run the \"dance party\" block."
+      GLJr_Forever_9_markdown_instruction: "**Free Play**: Try using what you've
+        learned to make something new. Make sure to explore some of the new blocks
+        in the toolbox."
       'Game Lab Workshop: Random_markdown_instruction': "# Randomized Shapes\r\n\r\nLet's
         see how we can use randomization in our drawings. Each of the inputs from
         the shape blocks you've seen can be replaced with calls to `randomNumber()`.
@@ -34422,8 +34430,39 @@ en:
         Laurel to each piece of treasure, then use this block:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_forVideoTest_artist_markdown_instruction: "Repeat loops work for Artist,
         too!"
+      courseA_harvester_loops1_markdown_instruction: "*\"Look at all this corn! A-maize-ing!\"*\r\n\r\nHelp
+        the farmer pick all the corn!"
+      courseA_harvester_loops10_markdown_instruction: "Help the harvester pick all
+        three ears of corn!"
+      courseA_harvester_loops11_markdown_instruction: "Try one more on your own!
+        "
+      courseA_harvester_loops2_markdown_instruction: "The farmer needs to pick all
+        the corn! Do you see a pattern?"
+      courseA_harvester_loops3_markdown_instruction: "Can you pick all the corn using
+        only **one** move block?"
+      courseA_harvester_loops4_markdown_instruction: "*\"I need help to find what's
+        wrong!\"*\r\n\r\nCan you help the harvester find the bug in her code?"
+      courseA_harvester_loops5_markdown_instruction: "More bugs! Help the harvester
+        fix her code. "
+      courseA_harvester_loops6_markdown_instruction: "You will need **one** <xml><block
+        type=\"maze_moveSouth\"></block></xml> block and **one** <xml><block type=\"maze_moveWest\"></block></xml>
+        block to finish this puzzle!"
+      courseA_harvester_loops7_markdown_instruction: "Try it on your own! "
+      courseA_harvester_loops8_markdown_instruction: "This is the same puzzle, but
+        now you have to repeat **three** times instead of two! Use this block:\r\n\r\n<xml><block
+        type=\"controls_repeat_simplified_dropdown\">\r\n    <title name=\"TIMES\"
+        config=\"2-10\">3</title>\r\n  </block></xml>"
+      courseA_harvester_loops9_markdown_instruction: "Can you figure out how to pick
+        *all* this corn?"
       courseA_harvester_seq1_markdown_instruction: "Help the farmer pick one corn!"
-      courseA_harvester_seq12_markdown_instruction: "Help the bee get one nectar!"
+      courseA_harvester_seq10_markdown_instruction: "The farmer needs to pick all
+        the corn! Do you see a pattern?"
+      courseA_harvester_seq11_markdown_instruction: "Try it by yourself! Pick all
+        the corn."
+      courseA_harvester_seq12_markdown_instruction: "*Thank you for helping me!*
+        Pick all the corn."
+      courseA_harvester_seq13_markdown_instruction: "Help the harvester pick **one**
+        corn!"
       courseA_harvester_seq2_markdown_instruction: "Use <xml><block type=\"maze_moveWest\"/></xml>
         **three** times to get the harvester to the corn! Don't forget to use <xml><block
         type=\"harvester_corn\"/></xml> to pick the corn!"
@@ -34437,8 +34476,10 @@ en:
       courseA_harvester_seq6_markdown_instruction: "Try it yourself!"
       courseA_harvester_seq7_markdown_instruction: "You have to move in two directions
         to get to the corn! Help the harvester pick the right direction."
-      courseA_harvester_seq8_markdown_instruction: "Now the bee needs to pick corn
-        two times!"
+      courseA_harvester_seq8_markdown_instruction: "Now the harvester needs to pick
+        corn two times!"
+      courseA_harvester_seq9_markdown_instruction: "Add two blocks to finish this
+        puzzle!"
       courseA_maze_seq1_markdown_instruction: "*\"Play with these blocks and try
         to get me to the bad pig!\"*"
       courseA_maze_seq10_markdown_instruction: "**Challenge:** Go around the TNT
@@ -34540,83 +34581,159 @@ en:
       courseB_artist_loops10_markdown_instruction: "Use what you have learned to
         draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n###
         Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseB_artist_loops10_2018_markdown_instruction: "Use what you have learned
+        to draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n###
+        Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseB_artist_loops6_markdown_instruction: "Behind the bushes there is a beautiful
         vine full of flowers.  Can you climb the vine and see where it goes?"
+      courseB_artist_loops6_2018_markdown_instruction: "Behind the bushes there is
+        a beautiful vine full of flowers.  Can you climb the vine and see where it
+        goes?"
       courseB_artist_loops7_markdown_instruction: "**Challenge:**  It's a hidden
+        garden! Let's walk around."
+      courseB_artist_loops7_2018_markdown_instruction: "**Challenge:**  It's a hidden
         garden! Let's walk around."
       courseB_artist_loops_challenge1_markdown_instruction: "*\"It's time to toss
         the dice! Can you help me draw these?\"*"
+      courseB_artist_loops_challenge1_2018_markdown_instruction: "*\"It's time to
+        toss the dice! Can you help me draw these?\"*"
       courseB_artist_loops_challenge2_markdown_instruction: "Draw as many X's as
         you can. Can you get 3 in a row?"
+      courseB_artist_loops_challenge2_2018_markdown_instruction: "Draw as many X's
+        as you can. Can you get 3 in a row?"
       courseB_collector_loops1_markdown_instruction: "**Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
+        blocks into the workspace and try to figure out how to get treasure.  Get
+        at least one item to pass this level."
+      courseB_collector_loops1_2018_markdown_instruction: "**Free Play:** This is
+        Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
         blocks into the workspace and try to figure out how to get treasure.  Get
         at least one item to pass this level."
       courseB_collector_loops2_markdown_instruction: "Move Laurel to the treasure,
         then use the<xml><block type=\"collector_collect\"/></xml>block to pick it
         up.\r\n\r\n\r\nGet all four piles to pass this level."
+      courseB_collector_loops2_2018_markdown_instruction: "Move Laurel to the treasure,
+        then use the<xml><block type=\"collector_collect\"/></xml>block to pick it
+        up.\r\n\r\n\r\nGet all four piles to pass this level."
       courseB_collector_loops3_markdown_instruction: "How can Laurel get all five
         piles of treasure using only one <xml><block type=\"maze_moveEast\"/></xml>
+        block?"
+      courseB_collector_loops3_2018_markdown_instruction: "How can Laurel get all
+        five piles of treasure using only one <xml><block type=\"maze_moveEast\"/></xml>
         block?"
       courseB_collector_loops3_predict1_markdown_instruction: "How can Laurel collect
         all five piles of gold using only one `E -->` block?"
       courseB_collector_loops_challenge2a_markdown_instruction: "*\"Let's get the
         treasure!\"*\r\n\r\nHelp Laurel get at least **5** pieces of treasure to finish
         this puzzle."
+      courseB_collector_loops_challenge2a_2018_markdown_instruction: "*\"Let's get
+        the treasure!\"*\r\n\r\nHelp Laurel get at least **5** pieces of treasure
+        to finish this puzzle."
       courseB_collector_prog3_markdown_instruction: "How can Laurel collect all five
         piles of gold using only one `E -->` block?"
       courseB_maze_seq3_markdown_instruction: "*\"Fix the code to get me to the pig!\"*"
+      courseB_maze_seq3_2018_markdown_instruction: "*\"Fix the code to get me to
+        the pig!\"*"
       courseB_maze_seq9_markdown_instruction: "**Challenge:** Move around the TNT
         to get the bird to the pig."
+      courseB_maze_seq9_2018_markdown_instruction: "**Challenge:** Move around the
+        TNT to get the bird to the pig."
       courseB_maze_seq9_challenge1_markdown_instruction: "*Where's that pig hiding
         now?*"
       courseB_maze_seqCold_markdown_instruction: "**Challenge:** Debug this level
         by adding blocks to get the bird to the pig!"
       courseB_maze_seq_challenge1_markdown_instruction: "You only have four of each
         move block. Can you find a path before you run out of blocks?"
+      courseB_maze_seq_challenge1_2018_markdown_instruction: "You only have four
+        of each move block. Can you find a path before you run out of blocks?"
       courseB_playLab_events1_markdown_instruction: "This game is called \"Play Lab\".  \r\n\r\nSee
         if you can figure out what each block does."
+      courseB_playLab_events1_2018_markdown_instruction: "This game is called \"Play
+        Lab\".  \r\n\r\nSee if you can figure out what each block does."
       courseB_playlab_events3_markdown_instruction: "Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         mood when you click on her."
+      courseB_playlab_events3_2018_markdown_instruction: "Use an event to make Daisy
+        the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
+        mood when you click on her."
       courseB_playlab_events4_markdown_instruction: "Knight time!  \r\n\r\nAdd an
         event so that the knight moves toward the dragon when the left arrow is clicked."
+      courseB_playlab_events4_2018_markdown_instruction: "Knight time!  \r\n\r\nAdd
+        an event so that the knight moves toward the dragon when the left arrow is
+        clicked."
       courseB_playlab_events6_markdown_instruction: "Help your knight get all of
         the flags!\r\n\r\nTo do this, you'll need to add events to help the knight
         move up, down, left, and right."
+      courseB_playlab_events6_2018_markdown_instruction: "Help your knight get all
+        of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight
+        move up, down, left, and right."
       courseB_playlab_events7_markdown_instruction: "Make this game fun by setting
+        the knight to vanish when he runs into the dragon on his way to get the flags!
+        \r\n\r\nPlay a sound when they collide to make it feel more real.\r\n\r\nVisit
+        all of the goals, then run into the dragon to pass the level."
+      courseB_playlab_events7_2018_markdown_instruction: "Make this game fun by setting
         the knight to vanish when he runs into the dragon on his way to get the flags!
         \r\n\r\nPlay a sound when they collide to make it feel more real.\r\n\r\nVisit
         all of the goals, then run into the dragon to pass the level."
       courseB_playlab_events_challenge1_markdown_instruction: "It's time for the
         Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
         will run the fastest?"
+      courseB_playlab_events_challenge1_2018_markdown_instruction: "It's time for
+        the Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho
+        will run the fastest?"
       courseB_playlab_events_challenge2_markdown_instruction: "Let's make the animals
         disappear when you click on them.\r\nTry playing with the dog now, then help
         the other animals join in the fun. You can also add sounds and score points
         to create a game of Animal Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseB_playlab_events_challenge2_2018_markdown_instruction: "Let's make the
+        animals disappear when you click on them.\r\nTry playing with the dog now,
+        then help the other animals join in the fun. You can also add sounds and score
+        points to create a game of Animal Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_starWars_prog1_markdown_instruction: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_\"Go
         get the scrap metal, BB-8!\"_\r\n\r\nWatch out for walls and crates. Scrap
         metal looks like this: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseB_starWars_prog10_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Can you get it all?\"_"
+      courseB_starWars_prog10_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Can you get it all?\"_"
       courseB_starWars_prog11_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Keep going!\"_"
+      courseB_starWars_prog11_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going!\"_"
+      courseB_starWars_prog1_2018_markdown_instruction: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_\"Go
+        get the scrap metal, BB-8!\"_\r\n\r\nWatch out for walls and crates. Scrap
+        metal looks like this: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseB_starWars_prog2_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Get all the metal.\"_"
+      courseB_starWars_prog2_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Get all the metal.\"_"
       courseB_starWars_prog3_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Keep going, BB-8!\"_"
+      courseB_starWars_prog3_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going, BB-8!\"_"
       courseB_starWars_prog4_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Get it, BB-8!\"_"
+      courseB_starWars_prog4_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Get it, BB-8!\"_"
       courseB_starWars_prog5_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Can you get it all?\"_"
+      courseB_starWars_prog5_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Can you get it all?\"_"
       courseB_starWars_prog6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"You can do it!\"_"
+      courseB_starWars_prog6_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"You can do it!\"_"
       courseB_starWars_prog7_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Go get it!\"_"
+      courseB_starWars_prog7_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Go get it!\"_"
       courseB_starWars_prog8_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Keep it up, BB-8.\"_\r\n\r\n**Challenge**: Gather all the scrap metal."
+      courseB_starWars_prog8_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep it up, BB-8.\"_\r\n\r\n**Challenge**: Gather all the scrap metal."
       courseB_starWars_prog9_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"You can do it!\"_"
+      courseB_starWars_prog9_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"You can do it!\"_"
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
@@ -34635,16 +34752,29 @@ en:
         get the artist to the center of the play area, then use the `draw a sticker`
         block to make a bird appear.  \r\n\r\n---\r\n\r\nPress \"Finish\" when you
         are happy with what you've made."
+      courseC_artist_loops1a_2018_markdown_instruction: "**Free Play:** Let's build
+        something bigger, one step at a time!  \r\n\r\nUse the `jump to 200 over 200
+        down` to get the artist to the center of the play area, then use the `draw
+        a sticker` block to make a bird appear.  \r\n\r\n---\r\n\r\nPress \"Finish\"
+        when you are happy with what you've made."
       courseC_artist_loops2_markdown_instruction: "Now that the zombie knows his
         way, help him dig **25 pixel long** holes along the path to plant more flowers!\r\n-
         Each hole should be 25 pixels long\r\n- Each hole has 25 pixels of space before
         the next hole"
       courseC_artist_loops2a_markdown_instruction: "Now, use a loop to spin your
         bird around 12 times with a 30 degree turn."
+      courseC_artist_loops2a_2018_markdown_instruction: "Now, use a loop to spin
+        your bird around 12 times with a 30 degree turn."
       courseC_artist_loops3a_markdown_instruction: "So much fun!  \r\n\r\nNow, add
         a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2018_markdown_instruction: "So much fun!  \r\n\r\nNow,
+        add a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a_markdown_instruction: "Edit your code so that you jump
         forward by 75 pixels between stamping the bird and the bat. In this puzzle,
+        make sure you have `jump to 200 over 200 down` inside of your loop, so you
+        stay in the center!\r\n___\r\n\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)"
+      courseC_artist_loops4a_2018_markdown_instruction: "Edit your code so that you
+        jump forward by 75 pixels between stamping the bird and the bat. In this puzzle,
         make sure you have `jump to 200 over 200 down` inside of your loop, so you
         stay in the center!\r\n___\r\n\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)"
       courseC_artist_loops5_markdown_instruction: "Great!  Now it's time to make
@@ -34656,6 +34786,10 @@ en:
         then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\n-
         Try using the `set pattern` block before you start your loop to make a work
         of art!\r\n___\r\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2018_markdown_instruction: "What happens when you `move
+        forward` then `move backward` by 100, 200, or 400 pixels somewhere inside
+        the loop?  \r\n- Try using the `set pattern` block before you start your loop
+        to make a work of art!\r\n___\r\n![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops6_markdown_instruction: "What should the zombie put inside
         of the garden?  \r\n\r\nDraw anything you'd like inside of the fence.  Would
         you like some flowers or a few bugs? \r\n*(See hints for more suggestions.)*\r\n\r\n\r\n"
@@ -34671,6 +34805,9 @@ en:
       courseC_artist_loops8a_markdown_instruction: "Now make something on your own.  What
         happens when you make two separate circles of different stickers?\r\n___\r\nNeed
         an idea? Try making a design like this one.\r\n\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
+      courseC_artist_loops8a_2018_markdown_instruction: "Now make something on your
+        own.  What happens when you make two separate circles of different stickers?\r\n___\r\nNeed
+        an idea? Try making a design like this one.\r\n\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
       courseC_artist_loopsPre1a_markdown_instruction: "Now, put this code into  a
         `repeat` block and loop it **6** times.\r\n- Notice that we have added a 60
         degree turn at the end of the looped code to get a full rotation."
@@ -34683,6 +34820,9 @@ en:
       courseC_artist_loopsTemplateA_markdown_instruction: "Use the `jump to 200 over
         200 down` to get the artist to the center of the play area, then use the `draw
         a sticker` block to make a bird appear. "
+      courseC_artist_loopsTemplateA_2018_markdown_instruction: "Use the `jump to
+        200 over 200 down` to get the artist to the center of the play area, then
+        use the `draw a sticker` block to make a bird appear. "
       courseC_artist_prog1_markdown_instruction: "*\"Hi, I'm an artist. You can
         write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks
         in the toolbox to see what they do!"
@@ -34850,6 +34990,9 @@ en:
       courseC_maze_debugging_challenge2_markdown_instruction: "If Scrat turns too
         often, he might get dizzy! Help him reach the acorn with only four `turn`
         commands."
+      courseC_maze_debugging_challenge2_2018_markdown_instruction: "If Scrat turns
+        too often, he might get dizzy! Help him reach the acorn with only four `turn`
+        commands."
       courseC_maze_loops2_markdown_instruction: "With the `repeat` block, you can
         loop code over and over.\r\n\r\nCan you get the bird to the pig by creating
         a loop that uses only one `move forward` block inside of a `repeat`?"
@@ -34941,17 +35084,33 @@ en:
         of \"pixels\" that you can walk through and make designs by turning on only
         certain squares.\r\n\r\nUse the blocks below to have the artist draw \"01010101\"
         in binary in the first row."
+      courseD_artist_binary1_2018_markdown_instruction: "We've provided you with
+        a grid of \"pixels\" that you can walk through and make designs by turning
+        on only certain squares.\r\n\r\nUse the blocks below to have the artist draw
+        \"01010101\" in binary in the first row."
       courseD_artist_binary2_markdown_instruction: "Here's a function that takes
         a binary string of 1's and 0's and instructs the artist to follow them from
         left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares
         when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run
         this code to see how the artist uses binary to draw this pattern.**"
+      courseD_artist_binary2_2018_markdown_instruction: "Here's a function that
+        takes a binary string of 1's and 0's and instructs the artist to follow
+        them from left to right, top to bottom.  \r\n___\r\nThe artist will fill-in
+        the squares when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run
+        this code to see how the artist uses binary to draw this pattern.**"
       courseD_artist_binary_challenge1_markdown_instruction: "You can only use each
         binary value (0 or 1) once each in this puzzle. Try using nested loops to
         complete this drawing."
+      courseD_artist_binary_challenge1_2018_markdown_instruction: "You can only use
+        each binary value (0 or 1) once each in this puzzle. Try using nested loops
+        to complete this drawing."
       courseD_artist_binary_challenge2_markdown_instruction: "There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
         big problems. Are you persistent enough to restore this logo back to normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
+      courseD_artist_binary_challenge2_2018_markdown_instruction: "There are 256
+        bits represented on this grid - that means it's easy for a small change to
+        cause big problems. Are you persistent enough to restore this logo back to
+        normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
       courseD_artist_binary_challenge3_markdown_instruction: "There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
         big problems. Are you persistent enough to restore this logo back to normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
@@ -34991,18 +35150,38 @@ en:
       courseD_artist_nestedLoops1a_markdown_instruction: "Now loop the triangle 6
         times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before
         drawing the next. "
+      courseD_artist_nestedLoops1a_2018_markdown_instruction: "Now loop the triangle
+        6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before
+        drawing the next. "
       courseD_artist_nestedLoops2_markdown_instruction: "This time, complete the
         puzzle with the fewest number of blocks possible.\r\n\r\nAfter each triangle,
+        you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier
+        this is with **nested loops**?"
+      courseD_artist_nestedLoops2_2018_markdown_instruction: "This time, complete
+        the puzzle with the fewest number of blocks possible.\r\n\r\nAfter each triangle,
         you'll need to turn 60 degrees before drawing the next.\r\nSee how much easier
         this is with **nested loops**?"
       courseD_artist_nestedLoops4_markdown_instruction: "Great!  Do the same thing
         with these circles. \r\n\r\n- Each circle is made by moving 1 pixel before
         turning 1 degree, 360 times.\r\n- Each circle begins just 50 pixels from where
         the last one ended"
+      courseD_artist_nestedLoops4_2018_markdown_instruction: "Great!  Do the same
+        thing with these circles. \r\n\r\n- Each circle is made by moving 1 pixel
+        before turning 1 degree, 360 times.\r\n- Each circle begins just 50 pixels
+        from where the last one ended"
       courseD_artist_nestedLoops5_markdown_instruction: "What happens if you also
         turn 90 degrees between circles?\r\n\r\n(To get this image, you still need
         to jump 50 pixels between circles)"
+      courseD_artist_nestedLoops5_2018_markdown_instruction: "What happens if you
+        also turn 90 degrees between circles?\r\n\r\n(To get this image, you still
+        need to jump 50 pixels between circles)"
       courseD_artist_nestedLoops7_markdown_instruction: "Use what you've learned
+        to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and
+        **90 degree angles**\r\n- You will need to turn **60 degrees between each
+        square**. Why? Because there are 6 squares, and 360 degrees (a full turn around)
+        divided by 6 is 60 degrees.\r\n- Make sure you jump **50 pixels to get to
+        the next square**"
+      courseD_artist_nestedLoops7_2018_markdown_instruction: "Use what you've learned
         to make this drawing.\r\n\r\n- The squares each have **100 pixel sides** and
         **90 degree angles**\r\n- You will need to turn **60 degrees between each
         square**. Why? Because there are 6 squares, and 360 degrees (a full turn around)
@@ -35011,17 +35190,34 @@ en:
       courseD_artist_nestedLoops8_markdown_instruction: "Using what you have learned
         in the last couple of puzzles, build this image from the beginning.\r\n\r\n-
         Each hexagon has **50 pixel sides** and **60 degree turns**"
+      courseD_artist_nestedLoops8_2018_markdown_instruction: "Using what you have
+        learned in the last couple of puzzles, build this image from the beginning.\r\n\r\n-
+        Each hexagon has **50 pixel sides** and **60 degree turns**"
       courseD_artist_nestedLoops9_markdown_instruction: "**Challenge:** Can you figure
         out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
         sides**\r\n- Between each pair of shapes, you will need to jump forward the
         length of a side, and turn 45 degrees."
+      courseD_artist_nestedLoops9_2018_markdown_instruction: "**Challenge:** Can
+        you figure out how to make a picture like this?\r\n\r\n- Both shapes have
+        **50 pixel sides**\r\n- Between each pair of shapes, you will need to jump
+        forward the length of a side, and turn 45 degrees."
       courseD_artist_nestedLoops9_predict1_markdown_instruction: "**Challenge:**
+        Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have
+        50 pixel sides"
+      courseD_artist_nestedLoops9_predict1_2018_markdown_instruction: "**Challenge:**
         Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have
         50 pixel sides"
       courseD_artist_nestedLoopsFP_markdown_instruction: "Now it's your turn.  Take
         the skills you have learned and make something that you love!\r\n\r\nNeed
         an idea?  Try to make one of these:\r\n\r\n![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r\n![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r\n![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)"
+      courseD_artist_nestedLoopsFP_2018_markdown_instruction: "Now it's your turn.  Take
+        the skills you have learned and make something that you love!\r\n\r\nNeed
+        an idea?  Try to make one of these:\r\n\r\n![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)\r\n![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)\r\n![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)"
       courseD_artist_nestedLoops_challenge1_markdown_instruction: "Can you figure
+        out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
+        sides.**\r\n- The *octagons* are made with **45 degree** turns.\r\n- The *triangles*
+        are made with **120 degree** turns."
+      courseD_artist_nestedLoops_challenge1_2018_markdown_instruction: "Can you figure
         out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
         sides.**\r\n- The *octagons* are made with **45 degree** turns.\r\n- The *triangles*
         are made with **120 degree** turns."
@@ -35029,6 +35225,11 @@ en:
         a little bit off!  Can you fix it to make the correct drawing in the workspace?\r\n\r\n-
         The first inner loop should make an octagon.\r\n- The second inner loop should
         make a hexagon.\r\n- The third inner loop should make a square."
+      courseD_artist_nestedLoops_challenge2_2018_markdown_instruction: "This code
+        is just a little bit off!  Can you fix it to make the correct drawing in the
+        workspace?\r\n\r\n- The first inner loop should make an octagon.\r\n- The
+        second inner loop should make a hexagon.\r\n- The third inner loop should
+        make a square."
       courseD_artist_project1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,
         between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
@@ -35145,10 +35346,20 @@ en:
       courseD_bee_conditionals10_markdown_instruction: "Conditionals can be helpful,
         even when you know exactly what is in each spot!\r\n\r\nCollect all of the
         nectar and make all of the honey."
+      courseD_bee_conditionals10_2018_markdown_instruction: "Conditionals can be
+        helpful, even when you know exactly what is in each spot!\r\n\r\nCollect all
+        of the nectar and make all of the honey."
       courseD_bee_conditionals1_predict1_markdown_instruction: "*\"This cloud is
         blocking my view!\"*\r\n\r\nCheck to see if there's a flower under the cloud.
         If there's a flower, get nectar."
+      courseD_bee_conditionals1_predict1_2018_markdown_instruction: "*\"This cloud
+        is blocking my view!\"*\r\n\r\nCheck to see if there's a flower under the
+        cloud. If there's a flower, get nectar."
       courseD_bee_conditionals2_markdown_instruction: "More clouds! \r\n\r\nCheck
+        underneath every cloud to see if it is hiding a flower before you get nectar.
+        If there is a flower underneath the cloud, the bee will need to get nectar
+        *once*.  \r\n\r\nRemember: Not all clouds hide the same thing!"
+      courseD_bee_conditionals2_2018_markdown_instruction: "More clouds! \r\n\r\nCheck
         underneath every cloud to see if it is hiding a flower before you get nectar.
         If there is a flower underneath the cloud, the bee will need to get nectar
         *once*.  \r\n\r\nRemember: Not all clouds hide the same thing!"
@@ -35160,11 +35371,22 @@ en:
         from flowers, but you can check any space to see if there is a flower. If
         there is a flower under any of these clouds, the bee will need to collect
         nectar *once*."
+      courseD_bee_conditionals3_2018_markdown_instruction: "You can only collect
+        nectar from flowers, but you can check any space to see if there is a flower.
+        If there is a flower under any of these clouds, the bee will need to collect
+        nectar *once*."
       courseD_bee_conditionals4_markdown_instruction: "In this puzzle, we know that
         every flower has exactly one nectar, but the flowers aren't spaced evenly.\r\n\r\nGet
         all of the nectar using as few blocks as possible."
+      courseD_bee_conditionals4_2018_markdown_instruction: "In this puzzle, we know
+        that every flower has exactly one nectar, but the flowers aren't spaced evenly.\r\n\r\nGet
+        all of the nectar using as few blocks as possible."
       courseD_bee_conditionals6_markdown_instruction: "*\"Now I just want to make
         honey.\"*\r\n\r\nSome of these clouds might have honeycombs under them.  Be
+        sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb,
+        the bee will only need to make honey *once*."
+      courseD_bee_conditionals6_2018_markdown_instruction: "*\"Now I just want to
+        make honey.\"*\r\n\r\nSome of these clouds might have honeycombs under them.  Be
         sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb,
         the bee will only need to make honey *once*."
       courseD_bee_conditionals7_markdown_instruction: "Sometimes a cloud covers a
@@ -35172,15 +35394,32 @@ en:
         collect nectar at flowers and make honey at honeycomb. Remember: if there
         is a flower, the bee only needs to get nectar *once*. If there is a honeycomb,
         the bee only needs to make honey *once*."
+      courseD_bee_conditionals7_2018_markdown_instruction: "Sometimes a cloud covers
+        a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block
+        to collect nectar at flowers and make honey at honeycomb. Remember: if there
+        is a flower, the bee only needs to get nectar *once*. If there is a honeycomb,
+        the bee only needs to make honey *once*."
       courseD_bee_conditionals7_predict2_markdown_instruction: "Sometimes a cloud
         covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else`
+        block to collect nectar at flowers and make honey at honeycomb. Remember:
+        there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
+      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Sometimes a
+        cloud covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else`
         block to collect nectar at flowers and make honey at honeycomb. Remember:
         there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals8_markdown_instruction: "**Challenge:** There will
         be either a flower or a honeycomb under each of those clouds!\r\n\r\nCollect
         nectar once if there is a flower.\r\nOtherwise, make honey once (because there
         is a honeycomb)."
+      courseD_bee_conditionals8_2018_markdown_instruction: "**Challenge:** There
+        will be either a flower or a honeycomb under each of those clouds!\r\n\r\nCollect
+        nectar once if there is a flower.\r\nOtherwise, make honey once (because there
+        is a honeycomb)."
       courseD_bee_conditionals9_markdown_instruction: "Collect all of the nectar
+        or make all the honey. You can only collect nectar from flowers and make honey
+        from honeycombs. Check any space to see if there is a flower or honeycomb.
+        There will only ever be one flower or one honeycomb behind each cloud."
+      courseD_bee_conditionals9_2018_markdown_instruction: "Collect all of the nectar
         or make all the honey. You can only collect nectar from flowers and make honey
         from honeycombs. Check any space to see if there is a flower or honeycomb.
         There will only ever be one flower or one honeycomb behind each cloud."
@@ -35188,9 +35427,16 @@ en:
         nectar and make all of the honey. You can only collect nectar from flowers
         and make honey from honeycombs. Check every space to see if there is a flower
         or honeycomb."
+      courseD_bee_conditionals_challenge1_2018_markdown_instruction: "Collect all
+        of the nectar and make all of the honey. You can only collect nectar from
+        flowers and make honey from honeycombs. Check every space to see if there
+        is a flower or honeycomb."
       courseD_bee_conditionals_challenge2_markdown_instruction: "Collect all of the
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop."
+      courseD_bee_conditionals_challenge2_2018_markdown_instruction: "Collect all
+        of the nectar and make all the honey. You can collect all of the nectar in
+        one flower by using the `while nectar > 0` loop."
       courseD_bee_conditionals_challenge3_markdown_instruction: "Collect all of the
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop."
@@ -35216,6 +35462,9 @@ en:
       courseD_bee_debugging_challenge1_markdown_instruction: "Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
         all of the honey?"
+      courseD_bee_debugging_challenge1_2018_markdown_instruction: "Watch how the
+        bees gets the nectar. Can you use the same kind of pattern to help the bee
+        make all of the honey?"
       courseD_bee_debugging_challenge1a_markdown_instruction: "*\"Buzz buzz! I know
         how to get nectar, now help me make honey!\"*\r\n\r\nWatch how the bee gets
         the nectar. Can you use the same kind of pattern to help the bee make all
@@ -35273,65 +35522,132 @@ en:
         and the `score opponent point` block to the `when ball misses hand` event
         to make a game. \r\n\r\n---\r\n\r\nSee how many points you can score before
         your opponent scores twice."
+      courseD_bounce_events10s_2018_markdown_instruction: "There is now a hoop at
+        the top.  \r\n\r\nAttach the `score point` block to the `when ball in goal`
+        event and the `score opponent point` block to the `when ball misses hand`
+        event to make a game. \r\n\r\n---\r\n\r\nSee how many points you can score
+        before your opponent scores twice."
       courseD_bounce_events11s_markdown_instruction: "Now, you are in control of
         the ball!  Attach the `throw new ball` block in all of the places where the
         game needs a new ball.\r\n\r\n---\r\n\r\nSee how many points you can score
         before your opponent scores twice!"
+      courseD_bounce_events11s_2018_markdown_instruction: "Now, you are in control
+        of the ball!  Attach the `throw new ball` block in all of the places where
+        the game needs a new ball.\r\n\r\n---\r\n\r\nSee how many points you can score
+        before your opponent scores twice!"
       courseD_bounce_events1s_markdown_instruction: "Get the ball to the hoop!   \r\nAttach
+        a block to the `when left arrow` event and press \"Run\" to move the player
+        to the net."
+      courseD_bounce_events1s_2018_markdown_instruction: "Get the ball to the hoop!   \r\nAttach
         a block to the `when left arrow` event and press \"Run\" to move the player
         to the net."
       courseD_bounce_events2s_markdown_instruction: "Now, attach a block to the `when
         right event` so that the hand can get to both baskets."
+      courseD_bounce_events2s_2018_markdown_instruction: "Now, attach a block to
+        the `when right event` so that the hand can get to both baskets."
       courseD_bounce_events5s_markdown_instruction: "We're going to send a basketball
         flying down towards the hand.  Attach a block to the `when ball hits hand`
         event to ensure the ball reaches the basket."
+      courseD_bounce_events5s_2018_markdown_instruction: "We're going to send a
+        basketball flying down towards the hand.  Attach a block to the `when ball
+        hits hand` event to ensure the ball reaches the basket."
       courseD_bounce_events6s_markdown_instruction: "Now the basket is at the top.  \r\n\r\nAttach
         code to make the ball bounce when it hits the wall so you can solve this puzzle."
+      courseD_bounce_events6s_2018_markdown_instruction: "Now the basket is at the
+        top.  \r\n\r\nAttach code to make the ball bounce when it hits the wall so
+        you can solve this puzzle."
       courseD_bounce_events7s_markdown_instruction: "Attach sound blocks to make
         the net swish when you hit the basket and have the whistle blow when the ball
         misses your hand.  \r\n\r\n---\r\n\r\nBounce the ball until it hits the finish
         target."
+      courseD_bounce_events7s_2018_markdown_instruction: "Attach sound blocks to
+        make the net swish when you hit the basket and have the whistle blow when
+        the ball misses your hand.  \r\n\r\n---\r\n\r\nBounce the ball until it hits
+        the finish target."
       courseD_collector_debugging1_markdown_instruction: "*\"Oh no! I see a problem.\"*\r\n\r\nFix
         the error(s) to collect all of the treasure."
       courseD_collector_debugging10_predict1_markdown_instruction: "*\"It's treasure
         island!\"*\r\n\r\nHelp Laurel fix the code to get all the treasure."
+      courseD_collector_debugging10_predict1_2018_markdown_instruction: "*\"It's
+        treasure island!\"*\r\n\r\nHelp Laurel fix the code to get all the treasure."
+      courseD_collector_debugging1_2018_markdown_instruction: "*\"Oh no! I see a
+        problem.\"*\r\n\r\nFix the error(s) to collect all of the treasure."
       courseD_collector_debugging1a_markdown_instruction: "*\"Oh no! I see a problem.\"*\r\n\r\nFix
         the error(s) to collect all of the treasure."
+      courseD_collector_debugging1a_2018_markdown_instruction: "*\"Oh no! I see a
+        problem.\"*\r\n\r\nFix the error(s) to collect all of the treasure."
       courseD_collector_debugging2_markdown_instruction: "*\"You can do this!\"*\r\n\r\nFix
+        the error(s) to collect all of the treasure."
+      courseD_collector_debugging2_2018_markdown_instruction: "*\"You can do this!\"*\r\n\r\nFix
         the error(s) to collect all of the treasure."
       courseD_collector_debugging2a_markdown_instruction: "*\"You can do this!\"*\r\n\r\nFix
         the error(s) to collect all of the treasure."
+      courseD_collector_debugging2a_2018_markdown_instruction: "*\"You can do this!\"*\r\n\r\nFix
+        the error(s) to collect all of the treasure."
       courseD_collector_debugging3_markdown_instruction: "*\"Be persistent and you
         will figure this out.\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging3_2018_markdown_instruction: "*\"Be persistent and
+        you will figure this out.\"*\r\n\r\nFix the error(s) to collect all of the
+        treasure."
       courseD_collector_debugging3a_markdown_instruction: "*\"Be persistent and you
         will figure this out.\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging3a_2018_markdown_instruction: "*\"Be persistent
+        and you will figure this out.\"*\r\n\r\nFix the error(s) to collect all of
+        the treasure."
       courseD_collector_debugging4_markdown_instruction: "*\"Don't get frustrated.
         You can do it!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging4_2018_markdown_instruction: "*\"Don't get frustrated.
+        You can do it!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
       courseD_collector_debugging4a_markdown_instruction: "*\"Don't get frustrated.
+        You can do it!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
+      courseD_collector_debugging4a_2018_markdown_instruction: "*\"Don't get frustrated.
         You can do it!\"*\r\n\r\nFix the error(s) to collect all of the treasure."
       courseD_collector_debugging5_markdown_instruction: "*\"This puzzle is making
         me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now
         use your debugging skills to figure out how to solve this puzzle."
+      courseD_collector_debugging5_2018_markdown_instruction: "*\"This puzzle is
+        making me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now
+        use your debugging skills to figure out how to solve this puzzle."
       courseD_collector_debugging5a_markdown_instruction: "*\"This puzzle is making
         me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now
+        use your debugging skills to figure out how to solve this puzzle."
+      courseD_collector_debugging5a_2018_markdown_instruction: "*\"This puzzle is
+        making me loopy!\"*\r\n\r\nAll of the commands that you need are already here...now
         use your debugging skills to figure out how to solve this puzzle."
       courseD_collector_debugging6_markdown_instruction: "**Challenge:**  All of
         the blocks that you need are already here...Now use your debugging skills
         to fix the errors and collect all of the treasure."
+      courseD_collector_debugging6_2018_markdown_instruction: "**Challenge:**  All
+        of the blocks that you need are already here...Now use your debugging skills
+        to fix the errors and collect all of the treasure."
       courseD_collector_debugging6a_markdown_instruction: "Challenge: Use the code
         in the work area to get at least **6** pieces of treasure!"
+      courseD_collector_debugging6a_2018_markdown_instruction: "Challenge: Use the
+        code in the work area to get at least **6** pieces of treasure!"
       courseD_collector_debugging7_markdown_instruction: "**Challenge**: All of the
         commands that you need are already here...now use your debugging skills to
         figure out how to solve this puzzle."
       courseD_collector_debugging8_markdown_instruction: "*\"So much treasure!\"*\r\n\r\nHelp
         Laurel fix the code to get all the treasure."
+      courseD_collector_debugging8_2018_markdown_instruction: "*\"So much treasure!\"*\r\n\r\nHelp
+        Laurel fix the code to get all the treasure."
       courseD_collector_debugging8a_markdown_instruction: "*\"So much treasure!\"*\r\n\r\nHelp
+        Laurel fix the code to get all the treasure."
+      courseD_collector_debugging8a_2018_markdown_instruction: "*\"So much treasure!\"*\r\n\r\nHelp
         Laurel fix the code to get all the treasure."
       courseD_collector_debugging9_markdown_instruction: "*\"It's treasure island!\"*\r\n\r\nHelp
         Laurel fix the code to get all the treasure."
+      courseD_collector_debugging9_2018_markdown_instruction: "*\"It's treasure
+        island!\"*\r\n\r\nHelp Laurel fix the code to get all the treasure."
       courseD_collector_debugging9a_markdown_instruction: "*\"It's treasure island!\"*\r\n\r\nHelp
         Laurel fix the code to get all the treasure."
+      courseD_collector_debugging9a_2018_markdown_instruction: "*\"It's treasure
+        island!\"*\r\n\r\nHelp Laurel fix the code to get all the treasure."
       courseD_collector_nested_loops_challenge2_markdown_instruction: "*\"Let's
+        hunt for treasure - using loops!\"* \r\n\r\nHelp the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4."
+      courseD_collector_nested_loops_challenge2_2018_markdown_instruction: "*\"Let's
         hunt for treasure - using loops!\"* \r\n\r\nHelp the collector reach at least
         two piles of treasure using only the blocks in your toolbox. It is possible
         to collect all 4."
@@ -35365,20 +35681,36 @@ en:
       courseD_debugging_6_markdown_instruction: "**Challenge:**  Fix the errors to
         collect all of the nectar and make all of the honey."
       courseD_farmer_condLoops1_markdown_instruction: "*\"Corn you help me harvest
-        today?\"*\r\n\r\nHelp the farmer check her row of corn to see if anything
+        today?\"*\r\n\r\nHelp the harvester check her row of corn to see if anything
+        is ready to pick.  Use conditionals to look at each sprout.  Every stalk will
+        have either **0 or 1** pieces of corn ready to harvest."
+      courseD_farmer_condLoops1_2018_markdown_instruction: "*\"Corn you help me harvest
+        today?\"*\r\n\r\nHelp the harvester check her row of corn to see if anything
         is ready to pick.  Use conditionals to look at each sprout.  Every stalk will
         have either **0 or 1** pieces of corn ready to harvest."
       courseD_farmer_condLoops2_markdown_instruction: "*\"Lettuce collect both crops
         from this row!\"*\r\n\r\nThis garden is all mixed up, it has both **corn and
-        lettuce**!  \r\n\r\nHelp the farmer harvest the items that are ready for picking.  Each
+        lettuce**!  \r\n\r\nHelp the harvester pick the items that are ready for harvesting.  Each
         plant will have either **one** corn or **one** lettuce."
+      courseD_farmer_condLoops2_2018_markdown_instruction: "*\"Lettuce collect both
+        crops from this row!\"*\r\n\r\nThis garden is all mixed up, it has both **corn
+        and lettuce**!  \r\n\r\nHelp the harvester pick the items that are ready for
+        harvesting.  Each plant will have either **one** corn or **one** lettuce."
       courseD_farmer_condLoops3_markdown_instruction: "*\"Corn, lettuce, AND pumpkins!
         Help me harvest them all.\"*\r\n\r\nEach plant will have either one piece
         of corn, one head of lettuce, or one pumpkin."
+      courseD_farmer_condLoops3_2018_markdown_instruction: "*\"Corn, lettuce, AND
+        pumpkins! Help me harvest them all.\"*\r\n\r\nEach plant will have either
+        one piece of corn, one head of lettuce, or one pumpkin."
       courseD_farmer_condLoops4_markdown_instruction: "*\"Gosh! Now the lettuce is
-        growing in clusters!\"*  \r\n\r\nThe farmer wants to pick everything from
+        growing in clusters!\"*  \r\n\r\nThe harvester wants to pick everything from
         her lettuce garden. Each plant will now have more than one head of lettuce
         on it, so the farmer will need to keep picking while there is still lettuce
+        growing.  \r\n\r\n##### (Remember: This garden only has lettuce!)"
+      courseD_farmer_condLoops4_2018_markdown_instruction: "*\"Gosh! Now the lettuce
+        is growing in clusters!\"*  \r\n\r\nThe harvester wants to pick everything
+        from her lettuce garden. Each plant will now have more than one head of lettuce
+        on it, so the harvester will need to keep picking while there is still lettuce
         growing.  \r\n\r\n##### (Remember: This garden only has lettuce!)"
       courseD_farmer_condLoops4a_markdown_instruction: "*\"Gosh! Now the crops are
         growing in clusters!\"*  \r\n\r\nHelp the farmer pick all of the lettuce in
@@ -35387,24 +35719,45 @@ en:
       courseD_farmer_condLoops5_markdown_instruction: "*\"What a bountiful crop!\"*\r\n\r\nThis
         field has clusters of corn and lettuce growing together -- with one pumpkin
         at the end.  Can you harvest everything?"
+      courseD_farmer_condLoops5_2018_markdown_instruction: "*\"What a bountiful crop!\"*\r\n\r\nThis
+        field has clusters of corn and lettuce growing together -- with one pumpkin
+        at the end.  Can you harvest everything?"
       courseD_farmer_condLoops6_markdown_instruction: "*\"Let's take this one step
         further!\"*\r\n\r\nCan you figure out how to pick the pumpkin?  Make sure
         to collect all of the corn along the way!"
+      courseD_farmer_condLoops6_2018_markdown_instruction: "*\"Let's take this one
+        step further!\"*\r\n\r\nCan you figure out how to pick the pumpkin?  Make
+        sure to collect all of the corn along the way!"
       courseD_farmer_condLoops7_markdown_instruction: "**Challenge:** Collect all
         of the corn and lettuce, then pick the pumpkin."
+      courseD_farmer_condLoops7_2018_markdown_instruction: "**Challenge:** Collect
+        all of the corn and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops8_markdown_instruction: "Collect all of the corn and
         lettuce, then pick the pumpkin."
+      courseD_farmer_condLoops8_2018_markdown_instruction: "Collect all of the corn
+        and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops9_markdown_instruction: "Collect all of the corn and
         lettuce, then pick the pumpkin."
+      courseD_farmer_condLoops9_2018_markdown_instruction: "Collect all of the corn
+        and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops9_predict1_markdown_instruction: "Collect all of the
         corn and lettuce, then pick the pumpkin."
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: "Collect all
+        of the corn and lettuce, then pick the pumpkin."
       courseD_farmer_condLoops_challenge1_markdown_instruction: "The pumpkins mark
         the place where you should `turn right`. Otherwise keep going forward, but
         remember to collect all of the lettuce or corn along the way. \r\n\r\n**Each
         hidden crop has only one corn or lettuce.**"
+      courseD_farmer_condLoops_challenge1_2018_markdown_instruction: "The pumpkins
+        mark the place where you should `turn right`. Otherwise keep going forward,
+        but remember to collect all of the lettuce or corn along the way. \r\n\r\n**Each
+        hidden crop has only one corn or lettuce.**"
       courseD_farmer_condLoops_challenge2_markdown_instruction: "*\"It's a very
         varied vegetable maze!\"* \r\n\r\nTurn right at pumpkins, turn left at lettuce.
         Collect everything to complete the level."
+      courseD_farmer_condLoops_challenge2_2018_markdown_instruction: "*\"It's a
+        very varied vegetable maze!\"* \r\n\r\nTurn right at pumpkins, turn left at
+        lettuce. Collect everything to complete the level."
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: "It's a vegetable
         maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
         to complete the level."
@@ -35425,33 +35778,60 @@ en:
       courseD_farmer_until_challenge2_markdown_instruction: "Use `If/Else` blocks
         to follow the curvy path. At each corner, use the `remove 1` block in a loop
         to clear the piles."
+      courseD_farmer_until_challenge2_2018_markdown_instruction: "Use `If/Else` blocks
+        to follow the curvy path. At each corner, use the `remove 1` block in a loop
+        to clear the piles."
       courseD_farmer_while1_markdown_instruction: "*\"Hi, I'm a farmer. I need your
         help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove
+        to the pile of dirt and use the `remove` block to remove it."
+      courseD_farmer_while1_2018_markdown_instruction: "*\"Hi, I'm a farmer. I need
+        your help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove
         to the pile of dirt and use the `remove` block to remove it."
       courseD_farmer_while3_markdown_instruction: "*\"Move to the pile of dirt and
         tell me how many shovelfuls to remove.\"*\r\n\r\nUse as few blocks as possible
         to solve this puzzle."
+      courseD_farmer_while3_2018_markdown_instruction: "*\"Move to the pile of dirt
+        and tell me how many shovelfuls to remove.\"*\r\n\r\nUse as few blocks as
+        possible to solve this puzzle."
       courseD_farmer_while4_markdown_instruction: "*\"I don't know how much dirt
         is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using a
         `while` loop."
+      courseD_farmer_while4_2018_markdown_instruction: "*\"I don't know how much
+        dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using
+        a `while` loop."
       courseD_farmer_while4_predict1_markdown_instruction: "*\"I don't know how
         much dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile
         using a `while` loop."
+      courseD_farmer_while4_predict1_2018_markdown_instruction: "*\"I don't know
+        how much dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire
+        pile using a `while` loop."
       courseD_farmer_while6_markdown_instruction: "Look at all of those holes!  Each
+        one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop
+        to easily fill them all!"
+      courseD_farmer_while6_2018_markdown_instruction: "Look at all of those holes!  Each
         one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop
         to easily fill them all!"
       courseD_farmer_while8_markdown_instruction: "**Challenge:** Fill all of these
         holes using as few blocks as possible. "
+      courseD_farmer_while8_2018_markdown_instruction: "**Challenge:** Fill all of
+        these holes using as few blocks as possible. "
       courseD_farmer_while_challenge1_markdown_instruction: "Fill all of the holes
         and remove all of the piles."
+      courseD_farmer_while_challenge1_2018_markdown_instruction: "Fill all of the
+        holes and remove all of the piles."
       courseD_farmer_while_challenge2_markdown_instruction: "Fill all of the holes
         and remove all of the piles."
+      courseD_farmer_while_challenge2_2018_markdown_instruction: "Fill all of the
+        holes and remove all of the piles."
       courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: "*\"I
         need some help on the farm! Help me harvest this corn using only the blocks
         in your toolbox.\"*"
       courseD_harvester_nested_loops_challenge1_markdown_instruction: "*\"I need
         some help on the farm! Help me harvest this corn using only the blocks in
         your toolbox.\"*"
+      courseD_harvester_nested_loops_challenge1_2018_markdown_instruction: "*\"I
+        need some help on the farm! Help me harvest this corn using only the blocks
+        in your toolbox.\"*"
       courseD_maze_loops_challenge1_markdown_instruction: "Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox."
@@ -35513,26 +35893,45 @@ en:
       courseD_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*  \r\n\r\n\r\nUse
         what you've learned to get the bird to the pig!"
       courseD_maze_until10_markdown_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until10_2018_markdown_instruction: "Help the zombie get to the
+        sunflower."
       courseD_maze_until10_predict2_markdown_instruction: "Help the zombie get to
         the sunflower."
+      courseD_maze_until10_predict2_2018_markdown_instruction: "Help the zombie get
+        to the sunflower."
       courseD_maze_until2_markdown_instruction: "Now, use the `repeat until` loop
         to do the same thing without specifying how many times to move forward and
         turn."
       courseD_maze_until4_markdown_instruction: "*\"Dear person. Me zombie. Me hungry.
         Must... get... to sunflower...\"*\r\n\r\nCan you get the zombie to the sunflower
         using only the blocks that are available?"
+      courseD_maze_until4_2018_markdown_instruction: "*\"Dear person. Me zombie.
+        Me hungry. Must... get... to sunflower...\"*\r\n\r\nCan you get the zombie
+        to the sunflower using only the blocks that are available?"
       courseD_maze_until5_markdown_instruction: "Use the `if` block to help the zombie
         decide when to turn, then get the zombie to the sunflower."
+      courseD_maze_until5_2018_markdown_instruction: "Use the `if` block to help
+        the zombie decide when to turn, then get the zombie to the sunflower."
       courseD_maze_until6_markdown_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until6_2018_markdown_instruction: "Help the zombie get to the
+        sunflower."
       courseD_maze_until7_markdown_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until7_2018_markdown_instruction: "Help the zombie get to the
+        sunflower."
       courseD_maze_until8_markdown_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until8_2018_markdown_instruction: "Help the zombie get to the
+        sunflower."
       courseD_maze_until9_markdown_instruction: "**Challenge:** Avoid the chompers
+        and help the zombie get to the sunflower."
+      courseD_maze_until9_2018_markdown_instruction: "**Challenge:** Avoid the chompers
         and help the zombie get to the sunflower."
       courseD_maze_until_challenge_markdown_instruction: "No hints, just challenge.
         Get the zombie to the sunflower.\r\nMarkdown instructions"
       courseD_maze_until_challenge1-delete-this-copy_markdown_instruction: "No hints,
         just challenge. Get the zombie to the sunflower.\r\nMarkdown instructions"
       courseD_maze_until_challenge1_markdown_instruction: "No hints, just challenge.
+        Get the zombie to the sunflower."
+      courseD_maze_until_challenge1_2018_markdown_instruction: "No hints, just challenge.
         Get the zombie to the sunflower."
       courseD_maze_until_challenge2_markdown_instruction: "No hints, just challenge.
         Get the zombie to the sunflower.\r\nMarkdown instructions"
@@ -35544,12 +35943,25 @@ en:
         (actor 1) needs to be able to get around in all directions.   Connect the
         blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp Pegleg
         gather the flags to solve this puzzle."
+      courseD_playLab_cond1_2018_markdown_instruction: "To start our game, Pirate
+        Pegleg (actor 1) needs to be able to get around in all directions.   Connect
+        the blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp
+        Pegleg gather the flags to solve this puzzle."
       courseD_playLab_cond2_markdown_instruction: "Time to add points!  \r\n\r\nEdit
+        the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor
+        2). "
+      courseD_playLab_cond2_2018_markdown_instruction: "Time to add points!  \r\n\r\nEdit
         the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor
         2). "
       courseD_playLab_cond3_markdown_instruction: "Use a `repeat forever` loop to
         make the dragon (actor 2) change between random emotions every second.  "
+      courseD_playLab_cond3_2018_markdown_instruction: "Use a `repeat forever` loop
+        to make the dragon (actor 2) change between random emotions every second.  "
       courseD_playLab_cond3a_markdown_instruction: "It's time to use what we've
+        learned about conditionals to make this game amazing. \r\n\r\nAdd code so
+        that when Pegleg gets to the dragon, he gets two points *if* the dragon is
+        happy. Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond3a_2018_markdown_instruction: "It's time to use what we've
         learned about conditionals to make this game amazing. \r\n\r\nAdd code so
         that when Pegleg gets to the dragon, he gets two points *if* the dragon is
         happy. Otherwise, he should get only one point added to his score."
@@ -35559,7 +35971,13 @@ en:
       courseD_playLab_cond4_markdown_instruction: "This is about to get interesting!\r\n\r\nAdd
         some code so that the ninja (actor 3) starts chasing Pegleg as soon as the
         game begins.  End the game as a loss if the ninja catches him."
+      courseD_playLab_cond4_2018_markdown_instruction: "This is about to get interesting!\r\n\r\nAdd
+        some code so that the ninja (actor 3) starts chasing Pegleg as soon as the
+        game begins.  End the game as a loss if the ninja catches him."
       courseD_playLab_cond5_markdown_instruction: "Now we need a way to win.\r\n\r\nAdd
+        a `repeat forever` loop that continuously checks **if** the score is greater
+        than 5, then ends the game as a **win** when it is."
+      courseD_playLab_cond5_2018_markdown_instruction: "Now we need a way to win.\r\n\r\nAdd
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is."
       courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\r\n\r\nLet's
@@ -35569,8 +35987,20 @@ en:
         beneath the line of octopuses (greater than 225 pixels down).  If he is, set
         the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
         pirate.  "
+      courseD_playLab_cond6_2018_markdown_instruction: "Wow, this game is hard to
+        win!\r\n\r\nLet's customize this game to make it more fun.  This challenge
+        has two parts:\r\n___\r\n\r\n1)  Slow down the ninja (actor 3) before you
+        set him to chase the pirate (actor 1).  \r\n\r\n2)  Use a `repeat forever`
+        loop to check to see if the pirate is in the \"safe zone\" beneath the line
+        of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee**
+        the pirate.  Otherwise, set the ninja to **chase** the pirate.  "
       courseD_playLab_cond6a_markdown_instruction: "We don't want the pirate to
         stay in the \"safe zone\" too long!  \r\n\r\nAdd code to the `if` statement
+        below so that if the pirate (actor 1) is in the safe zone, the program will
+        wait one second, then deduct a point as long as he stays beneath the octopus
+        line."
+      courseD_playLab_cond6a_2018_markdown_instruction: "We don't want the pirate
+        to stay in the \"safe zone\" too long!  \r\n\r\nAdd code to the `if` statement
         below so that if the pirate (actor 1) is in the safe zone, the program will
         wait one second, then deduct a point as long as he stays beneath the octopus
         line."
@@ -35764,6 +36194,11 @@ en:
         little different than other puzzles, but the idea is the same.\r\n___\r\n#####
         Each side of the square has a length of 200 pixels, and you will need to turn
         90 degrees to make each angle."
+      courseE_artist_ramp8_2_2018_markdown_instruction: "Great!  Now let's use that
+        `repeat` loop to make a square using Artist!  The blocks for artist are a
+        little different than other puzzles, but the idea is the same.\r\n___\r\n#####
+        Each side of the square has a length of 200 pixels, and you will need to turn
+        90 degrees to make each angle."
       courseE_artist_ramp9_markdown_instruction: "Use what you've learned to draw
         this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner."
@@ -35773,6 +36208,9 @@ en:
       courseE_artist_ramp9_2018_markdown_instruction: "Use what you've learned to
         draw this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You
         will need to turn 120 degrees at each corner."
+      courseE_artist_ramp9_2_2018_markdown_instruction: "Use what you've learned
+        to draw this triangle.\r\n___\r\n##### The sides are each 100 pixels long.
+        You will need to turn 120 degrees at each corner."
       courseE_bee_concept1_markdown_instruction: "*\"Can you BEE-lieve all of these
         flowers?\"*\r\n\r\nCollect all of the nectar from each flower. "
       courseE_bee_concept1_2018_markdown_instruction: "*\"Can you BEE-lieve all of
@@ -35847,7 +36285,7 @@ en:
         get the artist back in place to draw the next line. Which of these code blocks
         can you place at the end of the outermost loop to draw the whole grid?"
       courseE_farmer_functions1_markdown_instruction: "*\"Have we met before? I'm
-        the farmer!\"*\r\n\r\nHelp the farmer get to the pumpkin and pick it."
+        the harvester!\"*\r\n\r\nHelp the harvester get to the pumpkin and pick it."
       courseE_farmer_functions10b_markdown_instruction: "Use your new function twice
         to solve this puzzle."
       courseE_farmer_functions10b_2018_markdown_instruction: "Use your new function
@@ -35857,15 +36295,16 @@ en:
       courseE_farmer_functions11_predict_2018_markdown_instruction: "Figure out which
         function to use and which one to delete, then solve this puzzle!"
       courseE_farmer_functions1_2018_markdown_instruction: "*\"Have we met before?
-        I'm the farmer!\"*\r\n\r\nHelp the farmer get to the pumpkin and pick it."
+        I'm the harvester!\"*\r\n\r\nHelp the harvester get to the pumpkin and pick
+        it."
       courseE_farmer_functions1a_markdown_instruction: "*\"Oooh, veggies are cropping
-        up everywhere!\"*\r\n\r\nNow help the farmer pick all of the corn on the way
-        to the pumpkin at the end.\r\n___\r\n##### Note: Every square on the path
+        up everywhere!\"*\r\n\r\nNow help the harvester pick all of the corn on the
+        way to the pumpkin at the end.\r\n___\r\n##### Note: Every square on the path
         that leads to the pumpkin will either have *one* corn or nothing.  You will
         need to use an `if` statement to check whether there is corn before you try
         to pick it!"
       courseE_farmer_functions1a_2018_markdown_instruction: "*\"Oooh, veggies are
-        cropping up everywhere!\"*\r\n\r\nNow help the farmer pick all of the corn
+        cropping up everywhere!\"*\r\n\r\nNow help the harvester pick all of the corn
         on the way to the pumpkin at the end.\r\n___\r\n##### Note: Every square on
         the path that leads to the pumpkin will either have *one* corn nothing.  You
         will need to use an `if` statement to check whether there is corn before you
@@ -35876,10 +36315,10 @@ en:
       courseE_farmer_functions2aALT_markdown_instruction: "*\"I feel so functional!\"*\r\n\r\nWe're
         going to check lots of squares for crops in the next few puzzles.  Let's
         move everything into a function to make it easier."
-      courseE_farmer_functions2b_markdown_instruction: "Help the farmer pick the
+      courseE_farmer_functions2b_markdown_instruction: "Help the harvester pick the
         corn and pumpkins.\r\n___\r\n##### Each sprout will either grow *one* corn
         or nothing."
-      courseE_farmer_functions2b_2018_markdown_instruction: "Help the farmer pick
+      courseE_farmer_functions2b_2018_markdown_instruction: "Help the harvester pick
         the corn and pumpkins.\r\n___\r\n##### Each sprout will either grow *one*
         corn or nothing."
       courseE_farmer_functions2ba_markdown_instruction: "*\"I feel so functional!\"*\r\n\r\nDid
@@ -35928,13 +36367,13 @@ en:
         do you need to add to this program to check each sprout before you pick?\r\n___\r\n#####
         Note: Each sprout will turn into either **one** corn or **one** lettuce."
       courseE_farmer_functions7b_markdown_instruction: "*\"This harvest is a-MAZE-ing!\"*\r\n\r\nHelp
-        the farmer find her way down this confusing path and to the pumpkin by turning
-        **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't forget
-        to collect all of the produce along the way!)*"
+        the harvester find her way down this confusing path and to the pumpkin by
+        turning **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't
+        forget to collect all of the produce along the way!)*"
       courseE_farmer_functions7b_2018_markdown_instruction: "*\"This harvest is a-MAZE-ing!\"*\r\n\r\nHelp
-        the farmer find her way down this confusing path and to the pumpkin by turning
-        **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't forget
-        to collect all of the produce along the way!)*"
+        the harvester find her way down this confusing path and to the pumpkin by
+        turning **left** at the corn and **right** at the lettuce.  \r\n\r\n*(Don't
+        forget to collect all of the produce along the way!)*"
       courseE_farmer_functions8b_markdown_instruction: "**Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
         code more than once to get where you need to go.  \r\n\r\nCan you figure out
@@ -36024,20 +36463,38 @@ en:
         blocks together and click \"Run\" to watch it go!"
       courseE_maze_ramp13_markdown_instruction: "Time for one last puzzle to pull
         it all together!\r\n\r\nUse nested loops to get the bird to the pig."
+      courseE_maze_ramp1_2018_markdown_instruction: "For this puzzle, drag all of
+        the blocks together and click \"Run\" to watch it go!"
       courseE_maze_ramp2_markdown_instruction: "Drag an extra `move forward` block
         out of the toolbox, then attach all blocks to `when run` to finish your code."
+      courseE_maze_ramp2_2018_markdown_instruction: "Drag an extra `move forward`
+        block out of the toolbox, then attach all blocks to `when run` to finish your
+        code."
       courseE_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
+        is one extra block that is going to cause the bird to crash.  \r\nThrow it
+        away by dragging it back to the toolbox."
+      courseE_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
         is one extra block that is going to cause the bird to crash.  \r\nThrow it
         away by dragging it back to the toolbox."
       courseE_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to
         the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
+      courseE_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me
+        to the silly pig.\"* \r\n\r\nAvoid TNT or feathers will fly!"
       courseE_maze_ramp5_markdown_instruction: "*\"Follow this path to get me to
         the pig!\"*\r\n\r\nAvoid the TNT."
+      courseE_maze_ramp5_2018_markdown_instruction: "*\"Follow this path to get me
+        to the pig!\"*\r\n\r\nAvoid the TNT."
       courseE_maze_ramp6_markdown_instruction: "*\"Keep calm and help me find the
         bad pig. Otherwise I might get angry!\"*\r\n\r\nWhen you have several blocks
         in a row, try moving them inside of a `repeat` loop.  This will do the same
         thing with less code!"
+      courseE_maze_ramp6_2018_markdown_instruction: "*\"Keep calm and help me find
+        the bad pig. Otherwise I might get angry!\"*\r\n\r\nWhen you have several
+        blocks in a row, try moving them inside of a `repeat` loop.  This will do
+        the same thing with less code!"
       courseE_maze_ramp7_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
+        Use what you've learned to get the bird to the pig!"
+      courseE_maze_ramp7_2018_markdown_instruction: "*\"It's time to get angry!\"*\r\n\r\n**Challenge:**
         Use what you've learned to get the bird to the pig!"
       courseE_multi_maze_ramp5_markdown_instruction: "*\"Follow this path to get
         me to the pig!\"*\r\n\r\nAvoid the TNT."

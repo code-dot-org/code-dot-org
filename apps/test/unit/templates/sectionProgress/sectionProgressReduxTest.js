@@ -14,6 +14,10 @@ const fakeSectionData = {
   students: {
     id: 1,
     name: 'test1'
+  },
+  script: {
+    id: 300,
+    name: 'csp2',
   }
 };
 
@@ -23,6 +27,13 @@ const fakeValidScripts = [
     category_priority: 1,
     id: 456,
     name: 'Script Name',
+    position: 23
+  },
+  {
+    category: 'category1',
+    category_priority: 1,
+    id: 300,
+    name: 'csp2',
     position: 23
   }
 ];
@@ -53,25 +64,48 @@ describe('sectionProgressRedux', () => {
 
   describe('setScriptId', () => {
     it('sets the script id', () => {
-      const action = setScriptId('130');
+      const action = setScriptId(130);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.scriptId, '130');
+      assert.deepEqual(nextState.scriptId, 130);
     });
   });
 
   describe('setSection', () => {
-    it('sets the section data', () => {
+    it('sets the section data and assigned scriptId', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.section, fakeSectionData);
+      assert.deepEqual(nextState.scriptId, 300);
+    });
+
+    it('sets the section data with no default scriptId', () => {
+      const sectionDataWithNoScript = {
+        ...fakeSectionData,
+        script: null,
+      };
+      const action = setSection(sectionDataWithNoScript);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.section, sectionDataWithNoScript);
+      assert.deepEqual(nextState.scriptId, null);
     });
   });
 
   describe('setValidScripts', () => {
-    it('sets the script data', () => {
+    it('sets the script data and defaults scriptId', () => {
       const action = setValidScripts(fakeValidScripts);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.validScripts, fakeValidScripts);
+      assert.deepEqual(nextState.scriptId, fakeValidScripts[0].id);
+    });
+
+    it('sets the script data and does not override already assigned scriptId', () => {
+      const action = setValidScripts(fakeValidScripts);
+      const nextState = sectionProgress({
+        ...initialState,
+        scriptId: 100
+      }, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts);
+      assert.deepEqual(nextState.scriptId, 100);
     });
   });
 

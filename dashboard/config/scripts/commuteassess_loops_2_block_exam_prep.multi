@@ -8,9 +8,7 @@ right '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 
 wrong 'it will be different each time you run it'
 
 markdown <<MARKDOWN
-![](https://images.code.org/38a472c2d0f29f185315d1bf481d84bc-image-1482507780691.png)
+<!-- TEXT: ![](https://images.code.org/38a472c2d0f29f185315d1bf481d84bc-image-1482507780691.png) -->
 
-<!--BLOCK <img src="https://images.code.org/bd306a4387943ae1cb82aa72f34e3984-image-1482384723399.png" style="width: 300px"> -->
-
-
+![](https://images.code.org/566c27255e4dcaf4f9c73111436592e1-image-1522965437897.png)
 MARKDOWN

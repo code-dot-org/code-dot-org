@@ -162,6 +162,8 @@ export class SessionAttendance extends React.Component {
         />
       );
     });
+
+    const attendedCount = this.state.attendance.filter(a => a.attended).length;
     return (
       <VisibilitySensor onHidden={this.setIdle} onVisible={this.setActive}>
         <IdleTimer
@@ -171,7 +173,7 @@ export class SessionAttendance extends React.Component {
         >
           <div>
             <div style={styles.attendanceSummary}>
-              Attendance: {this.state.attendance.length} / {this.props.enrollmentCount}
+              Attendance: {attendedCount} / {this.props.enrollmentCount}
             </div>
 
             <Table

@@ -1,7 +1,7 @@
 "mi-NZ":
   hour_of_code: Hour of Code
   hello: Tēnā koe e te ao
-  'yes': "Āe"
+  'yes': Āe
   'no': Kāore
   select_language: Tēnā kōwhiritia tō reo
   upgrade_ie_message: Kāore e roa ka poroa e Code.org te āheinga mō Internet Explorer
@@ -31,7 +31,7 @@
     mai ki te hia tāngata kua piri kē mai.
   petition_join_others: Whakapiri mai ki te hia tāngata kua piri kē mai
   name: Ingoa
-  email: "Īmēra"
+  email: Īmēra
   zipcode: ZIP rohenga, Whenua rānei
   submit: Tāpaetia
   twentyhours_heading: Whakamātauria tā mātou Akoranga Whakarāpopotonga o te Pūtaiao
@@ -413,7 +413,7 @@
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen me Anna rāua ko Elsa
   homepage_slot_text_teacher: Paemana Pouako
-  homepage_slot_text_studio: "Ā mātou whakaakoranga katoa"
+  homepage_slot_text_studio: Ā mātou whakaakoranga katoa
   homepage_slot_text_course4: Akoranga 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Waehere Flappy
@@ -852,7 +852,7 @@
   dashboard_landing_loading: Loading...
   dashboard_action_cancel: Whakakore
   dashboard_action_delete: Delete
-  dashboard_action_delete_yes: "Āe"
+  dashboard_action_delete_yes: Āe
   dashboard_action_delete_no: Kāore
   dashboard_action_confirm: Delete?
   dashboard_action_done: Done
@@ -1051,7 +1051,7 @@
   dashboard_grade_other: Other
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: "Īmēra"
+  dashboard_login_none: Īmēra
   dashboard_stage: Taumata
   dashboard_puzzle: Panga
   dashboard_question: Question
