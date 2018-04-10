@@ -139,6 +139,7 @@ level 'PDK5 Foundations F'
 stage 'Markdown Details'
 level 'Test External Markdown'
 level 'Test embedded Blockly in instructions'
+level 'Test embedded K1 Blockly in instructions'
 
 stage 'Studio'
 level 'Resizing Test'
