@@ -1,76 +1,76 @@
 "zh-TW":
   devise:
     confirmations:
-      confirmed: "您的電子信箱已通過驗證。"
-      send_instructions: "你會在幾分鐘內收到一封帳戶驗證的指示信件。"
-      send_paranoid_instructions: "如果你的電子信箱存在於我們的數據庫中，你會在幾分鐘內收到一封帳戶驗證的指引信件。"
+      confirmed: 您的電子信箱已通過驗證。
+      send_instructions: 你會在幾分鐘內收到一封帳戶驗證的指示信件。
+      send_paranoid_instructions: 如果你的電子信箱存在於我們的數據庫中，你會在幾分鐘內收到一封帳戶驗證的指引信件。
     failure:
-      already_authenticated: "您已經登入。"
-      inactive: "您的帳戶尚未啟動。"
-      invalid: "無效的電子信箱或密碼。"
-      invalid_token: "無效的身份驗證碼。"
-      locked: "您的帳戶已被鎖住。"
-      not_found_in_database: "無效的電子郵件或密碼。"
-      timeout: "你已離開太久，請重新登入。"
-      unauthenticated: "你必須登入或註冊才可以繼續。"
-      unconfirmed: "你必須先驗證你的帳戶才能繼續。"
+      already_authenticated: 您已經登入。
+      inactive: 您的帳戶尚未啟動。
+      invalid: 無效的電子信箱或密碼。
+      invalid_token: 無效的身份驗證碼。
+      locked: 您的帳戶已被鎖住。
+      not_found_in_database: 無效的電子郵件或密碼。
+      timeout: 你已離開太久，請重新登入。
+      unauthenticated: 你必須登入或註冊才可以繼續。
+      unconfirmed: 你必須先驗證你的帳戶才能繼續。
     mailer:
       confirmation_instructions:
         subject: Code.org 確認說明
       reset_password_instructions:
         subject: Code.org 重設密碼說明
       unlock_instructions:
-        subject: "解鎖操作說明"
+        subject: 解鎖操作說明
     omniauth_callbacks:
-      failure: "無法驗證你的身份 %{kind}，錯誤原因：%{reason}。"
+      failure: 無法驗證你的身份 %{kind}，錯誤原因：%{reason}。
       success: "%{kind} 帳戶驗證成功。"
     passwords:
-      no_token: "你無法存取此頁，如果你確定你是經由密碼重設信件到這兒的，請檢查你的網址與所提供的連結是否相符。"
-      send_instructions: "你會在幾分鐘內收到一封密碼重設的指示信件。"
-      send_paranoid_instructions: "如果您的電子信箱存在於我們的資料庫中，您將在幾分鐘時間收到密碼復原連結的電子郵件。"
-      updated: "你的密碼已修改成功，現在已是登入狀態了"
-      updated_not_active: "你的密碼已修改成功。"
+      no_token: 你無法存取此頁，如果你確定你是經由密碼重設信件到這兒的，請檢查你的網址與所提供的連結是否相符。
+      send_instructions: 你會在幾分鐘內收到一封密碼重設的指示信件。
+      send_paranoid_instructions: 如果您的電子信箱存在於我們的資料庫中，您將在幾分鐘時間收到密碼復原連結的電子郵件。
+      updated: 你的密碼已修改成功，現在已是登入狀態了
+      updated_not_active: 你的密碼已修改成功。
     registrations:
-      destroyed: "再見了！您的帳戶已成功取消。我們希望很快再次見到你。"
-      signed_up: "歡迎！你已註冊成功。"
-      signed_up_but_inactive: "您已註冊成功。但你的帳戶尚未啟用，我們無法讓您登入。"
-      signed_up_but_locked: "您已註冊成功。但你的帳戶已被鎖住，我們無法讓您登入。"
-      signed_up_but_unconfirmed: "帶有確認連結的郵件已發送到您的信箱。請點擊信件中的連結以啟用你的帳戶。"
-      update_needs_confirmation: "你的帳戶已更新，不過我們必須驗證你的新電子信箱。請查收你的郵件，點擊通知信中的驗證連結。"
-      updated: "你的帳戶已更新。"
+      destroyed: 再見了！您的帳戶已成功取消。我們希望很快再次見到你。
+      signed_up: 歡迎！你已註冊成功。
+      signed_up_but_inactive: 您已註冊成功。但你的帳戶尚未啟用，我們無法讓您登入。
+      signed_up_but_locked: 您已註冊成功。但你的帳戶已被鎖住，我們無法讓您登入。
+      signed_up_but_unconfirmed: 帶有確認連結的郵件已發送到您的信箱。請點擊信件中的連結以啟用你的帳戶。
+      update_needs_confirmation: 你的帳戶已更新，不過我們必須驗證你的新電子信箱。請查收你的郵件，點擊通知信中的驗證連結。
+      updated: 你的帳戶已更新。
     sessions:
       signed_in: ''
-      signed_out: "已成功登出。"
+      signed_out: 已成功登出。
     unlocks:
-      send_instructions: "你會在幾分鐘內收到一封帳戶解鎖的指示信件。"
-      send_paranoid_instructions: "如果您的帳號存在，您將在幾分鐘內收到一封說明如何解鎖的電子郵件。"
-      unlocked: "您的帳戶已成功解鎖，請登入以繼續。"
+      send_instructions: 你會在幾分鐘內收到一封帳戶解鎖的指示信件。
+      send_paranoid_instructions: 如果您的帳號存在，您將在幾分鐘內收到一封說明如何解鎖的電子郵件。
+      unlocked: 您的帳戶已成功解鎖，請登入以繼續。
   errors:
     messages:
-      already_confirmed: "已經驗證，請登入"
-      confirmation_period_expired: "需要在 %{period} 內被驗證，請重新申請"
-      expired: "已失效，請重新申請"
-      not_found: "未找到"
-      not_locked: "未上鎖"
+      already_confirmed: 已經驗證，請登入
+      confirmation_period_expired: 需要在 %{period} 內被驗證，請重新申請
+      expired: 已失效，請重新申請
+      not_found: 未找到
+      not_locked: 未上鎖
       not_saved:
-        one: "發生 1 個錯誤，%{resource} 無法儲存："
-        other: "發生 %{count} 個錯誤，%{resource} 無法儲存："
+        one: 發生 1 個錯誤，%{resource} 無法儲存：
+        other: 發生 %{count} 個錯誤，%{resource} 無法儲存：
     invitations:
-      send_instructions: "邀請信件已發送至 %{email}。"
-      invitation_token_invalid: "提供的邀請碼無效！"
-      updated: "你的密碼已設定成功，現在已是登入狀態了。"
-      no_invitations_remaining: "無其他邀請"
-      invitation_removed: "您的邀請已被移除。"
+      send_instructions: 邀請信件已發送至 %{email}。
+      invitation_token_invalid: 提供的邀請碼無效！
+      updated: 你的密碼已設定成功，現在已是登入狀態了。
+      no_invitations_remaining: 無其他邀請
+      invitation_removed: 您的邀請已被移除。
       new:
-        header: "發送邀請"
-        submit_button: "發送邀請"
+        header: 發送邀請
+        submit_button: 發送邀請
       edit:
-        header: "設置你的密碼"
-        submit_button: "設置我的密碼"
+        header: 設置你的密碼
+        submit_button: 設置我的密碼
     mailer:
       invitation_instructions:
-        subject: "邀請說明"
+        subject: 邀請說明
         hello: " %{email} 你好"
-        someone_invited_you: "有人邀請你到 %{url}，你可以透過下方連結接受邀請。"
-        accept: "接受邀請"
-        ignore: "如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。"
+        someone_invited_you: 有人邀請你到 %{url}，你可以透過下方連結接受邀請。
+        accept: 接受邀請
+        ignore: 如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。

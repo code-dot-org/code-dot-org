@@ -2,18 +2,18 @@
   data:
     unplugged:
       Unplug1:
-        title: "Увод у Компјутерске Науке"
-        desc: "Ова лекција ће објаснити основне идеје рачунарских наука. Поред тога,
+        title: Увод у Компјутерске Науке
+        desc: Ова лекција ће објаснити основне идеје рачунарских наука. Поред тога,
           она ће дати ученицима прилику да накратко постану програмери. На крају сваке
           активности сваки ученик ће добити подсетник ствари које је научио. Можда
           вас привуче могућност да научите децу непознате речи које су повезане са
           лекцијом, али њихово објашњавање на забаван и лак начин је  продуктивније
-          него чекање напреднијих прилика."
+          него чекање напреднијих прилика.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "Компјутерско Размишљање"
+        title: Компјутерско Размишљање
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -28,7 +28,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "Графиконско - Папирно Програмирање"
+        title: Графиконско - Папирно Програмирање
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -38,7 +38,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "Алгоритми"
+        title: Алгоритми
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -48,7 +48,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "Функције"
+        title: Функције
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -63,7 +63,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "Услови"
+        title: Услови
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -71,7 +71,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "Писање Песама"
+        title: Писање Песама
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -81,7 +81,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "Апстракција"
+        title: Апстракција
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -89,7 +89,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Релејно Програмирање"
+        title: Релејно Програмирање
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -97,7 +97,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "Интернет"
+        title: Интернет
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
@@ -113,25 +113,25 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "Веселе мапе"
+        title: Веселе мапе
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       MoveIt:
-        title: "Помери га, помери"
+        title: Помери га, помери
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       PlantASeed:
-        title: "Прави алгоритми: Засади семе"
+        title: 'Прави алгоритми: Засади семе'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       BuildingAFoundation:
-        title: "Изградња темеља"
+        title: Изградња темеља
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
-        title: "Запетљанције"
+        title: Запетљанције
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
@@ -142,40 +142,40 @@
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       Conditionals:
-        title: "Кондиционали"
+        title: Кондиционали
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
       BigEvent:
-        title: "Велики догађај"
+        title: Велики догађај
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
       GoingPlacesSafely:
-        title: "Сигурна путања"
+        title: Сигурна путања
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: "Графиконско - Папирно Програмирање"
+        title: Графиконско - Папирно Програмирање
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       PaperPlanes:
-        title: "Стварни алгоритми: Папирни авиони"
+        title: 'Стварни алгоритми: Папирни авиони'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       BinaryBracelets:
-        title: "Бинарне наруквице"
+        title: Бинарне наруквице
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
       DigitalFootprint:
-        title: "Твој дигитални траг"
+        title: Твој дигитални траг
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "Компјутерско Размишљање"
+        title: Компјутерско Размишљање
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -195,7 +195,7 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       Internet:
-        title: "Интернет"
+        title: Интернет
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       Crowdsourcing:
@@ -204,7 +204,7 @@
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
       DigitalCitizenship:
-        title: "Дигитално држављанство"
+        title: Дигитално држављанство
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
@@ -265,82 +265,82 @@
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
-        title: "Активност ван мреже"
+        title: Активност ван мреже
         desc: Today you will learn about what to do if someone is being mean online.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: "Прави алгоритми: Засади семе"
+        title: 'Прави алгоритми: Засади семе'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       courseA_unplugged_happyMaps:
-        title: "Веселе мапе"
+        title: Веселе мапе
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       courseA_unplugged_goingPlacesSafely:
-        title: "Сигурна путања"
+        title: Сигурна путања
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       courseABC_unplugged_bigEvent:
-        title: "Велики догађај"
+        title: Велики догађај
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
       courseB_unplugged_digitalFootprint:
-        title: "Твој дигитални траг"
+        title: Твој дигитални траг
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       courseC_unplugged_buildingAFoundation:
-        title: "Изградња темеља"
+        title: Изградња темеља
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       courseC_unplugged_paperPlanes:
-        title: "Стварни алгоритми: Папирни авиони"
+        title: 'Стварни алгоритми: Папирни авиони'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
       courseC_unplugged_gettingLoopy:
-        title: "Запетљанције"
+        title: Запетљанције
         desc: This lesson introduces the programming concept of loops (repeated instructions)
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
       courseC_unplugged_binaryBracelets:
-        title: "Бинарне наруквице"
+        title: Бинарне наруквице
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
       courseD_unplugged_graphPaperProgramming:
-        title: "Графичко програмирање"
+        title: Графичко програмирање
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: "Релејно Програмирање"
+        title: Релејно Програмирање
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       courseD_unplugged_conditionalsCards:
-        title: "Услови са картама"
+        title: Услови са картама
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -361,7 +361,7 @@
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseE_unplugged_internet:
-        title: "Интернет"
+        title: Интернет
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       courseE_unplugged_crowdsourcing:
@@ -471,24 +471,50 @@
         title: ''
         desc: ''
       PlantASeed_2018:
-        title: "Прави алгоритми: Засади семе"
+        title: 'Прави алгоритми: Засади семе'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       UnplugHappyMaps_2018:
-        title: "Веселе мапе"
+        title: Веселе мапе
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       GoingPlacesSafely_2018:
-        title: "Сигурна путања"
+        title: Сигурна путања
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       courseA_unplugged_loops_2018:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       BigEvent_2018:
-        title: "Велики догађај"
+        title: Велики догађај
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
+      GraphPaperProgramming_2018:
+        title: Графичко програмирање
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Активност ван мреже
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Активност ван мреже
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Кондиционали
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      DigitalFootprint_2018:
+        title: Твој дигитални траг
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: Binarne slike
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.

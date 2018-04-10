@@ -74,13 +74,13 @@
   "penDown": "қарындашты түсіру",
   "penTooltip": "Сурет салу немесе тоқтату үшін тиісінше түсіріңіз немесе көтеріңіз.",
   "penUp": "қарындашты көтеру",
+  "pointTo": "point to",
   "pixels": "пиксел",
   "reinfFeedbackMsg": "Сіздің салған суретіңіз! Сурет салуды жалғастырыңыз немесе келесі басқатырғышты бастаңыз.",
   "setAlpha": "альфаны орнату",
   "setCharacter": "set character to {character}",
   "setColour": "түсті орнату",
   "setPattern": "үлгіні орнату",
-  "setStickerSize": "Set sticker size",
   "setWidth": "еніy орнату",
   "shareDrawing": "Суретпен бөлісіңіз:",
   "showMe": "Маған көрсетіңіз",
@@ -94,5 +94,6 @@
   "turnTooltip": "Берілген бұрыш мөлшерінде ойыншыны оңға немесе солға қарай бұру.",
   "turtleVisibilityTooltip": "Ойыншыны көрінетін немесе көрінбейтін қылу.",
   "widthTooltip": "Қарындаш енін өзгерту.",
+  "withSize": "with size",
   "wrongColour": "Сіз қате түс таңдадыңыз. Бұл басқатырғыш үшін %1 керек."
 }

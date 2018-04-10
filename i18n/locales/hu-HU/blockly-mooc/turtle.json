@@ -74,13 +74,13 @@
   "penDown": "ceruza le",
   "penTooltip": "Felemeli vagy lejjebb viszi a ceruzát, hogy megállítsa vagy elindítsa a rajzolást.",
   "penUp": "ceruza fel",
+  "pointTo": "point to",
   "pixels": "képpontot",
   "reinfFeedbackMsg": "Itt van a rajzod! Még dolgozhatsz rajta, de áttérhetsz a következő feladványra is.",
   "setAlpha": "alfa beállítása",
   "setCharacter": "set character to {character}",
   "setColour": "színbeállítások megadása",
   "setPattern": "minta beállítása",
-  "setStickerSize": "Set sticker size",
   "setWidth": "szélesség beállítása",
   "shareDrawing": "Oszd meg a rajzodat:",
   "showMe": "Mutasd",
@@ -94,5 +94,6 @@
   "turnTooltip": "A művészt balra vagy jobbra fordul a megadott fokban.",
   "turtleVisibilityTooltip": "A művészt láthatóvá, vagy láthatatlanná teszi.",
   "widthTooltip": "A ceruza szélességének módosítása.",
+  "withSize": "with size",
   "wrongColour": "A kép színe hibás.  Ehhez a rejtvényhez %1 kell lennie."
 }

@@ -25,7 +25,7 @@
         subject: Pokyny k odemknutí
     omniauth_callbacks:
       failure: Nemohli jsme tě autentifikovat %{kind} z důvodu "%{reason}".
-      success: "Úspěšně autentifikován z %{kind} účtu."
+      success: Úspěšně autentifikován z %{kind} účtu.
     passwords:
       no_token: Nemůžeš vstoupit na tuto stránku jinak, než pomocí emailu obnovující
         heslo. Jestliže opravdu přicházíš z emailu znovu nastavující heslo, přesvědč
@@ -39,19 +39,19 @@
       destroyed: Na shledanou! Tvůj účet byl úspěšně zrušen. Doufáme, že tě zase někdy
         uvidíme.
       signed_up: Vítej! Byl jsi úspěšně zaregistrován.
-      signed_up_but_inactive: "Úspěšně jsi se registroval. Nicméně nemohli jsme tě
-        zaregistrovat, dokud tvůj účet není ještě aktivován."
-      signed_up_but_locked: "Úspěšně jsi byl registrován, ale nemůžeš se přihlásit,
-        protože tvůj účet je uzamčen."
+      signed_up_but_inactive: Úspěšně jsi se registroval. Nicméně nemohli jsme tě
+        zaregistrovat, dokud tvůj účet není ještě aktivován.
+      signed_up_but_locked: Úspěšně jsi byl registrován, ale nemůžeš se přihlásit,
+        protože tvůj účet je uzamčen.
       signed_up_but_unconfirmed: Zpráva s potvrzovacím odkazem byla zaslána na tvou
         emailovou adresu. Otevři si daný odkaz pro aktivování účtu, prosím.
-      update_needs_confirmation: "Účet jsi úspěšně aktualizoval, ale potřebujeme ověřit
+      update_needs_confirmation: Účet jsi úspěšně aktualizoval, ale potřebujeme ověřit
         tvou novou emailovou adresu., Zkontroluj svůj email a klepni na potvrzovací
-        odkaz, prosím, aby jsi dokončil změnu své nové emailové adresy."
+        odkaz, prosím, aby jsi dokončil změnu své nové emailové adresy.
       updated: Tvůj účet byl úspěšně aktualizován.
     sessions:
       signed_in: ''
-      signed_out: "Úspěšně odhlášen."
+      signed_out: Úspěšně odhlášen.
     unlocks:
       send_instructions: Obdržíš do několika minut email s pokyny, jak odemknout svůj
         účet.

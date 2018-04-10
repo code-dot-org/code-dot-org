@@ -74,13 +74,13 @@
   "penDown": "Stift aufsetzen",
   "penTooltip": "Hebt oder senkt den Stift, um das Zeichnen zu starten oder zu beenden.",
   "penUp": "Stift anheben",
+  "pointTo": "point to",
   "pixels": "Pixel",
   "reinfFeedbackMsg": "Hier ist deine Zeichnung! Dein Bild ist fertig! Arbeite weiter daran oder gehe zur nächsten Aufgabe.",
   "setAlpha": "setze Transparenz",
   "setCharacter": "set character to {character}",
   "setColour": "setze Farbe",
   "setPattern": "setze Muster",
-  "setStickerSize": "Set sticker size",
   "setWidth": "setze Breite",
   "shareDrawing": "Teile deine Zeichnung:",
   "showMe": "Zeige mir",
@@ -94,5 +94,6 @@
   "turnTooltip": "Dreht den Künstler nach links oder rechts um den angegebenen Winkel.",
   "turtleVisibilityTooltip": "Macht den Künstler sichtbar oder unsichtbar.",
   "widthTooltip": "Ändert die Breite des Stiftes.",
+  "withSize": "with size",
   "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen."
 }

@@ -17,6 +17,7 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     :status,
     :locked,
     :regional_partner_name,
+    :course_name,
     :form_data
   )
 
@@ -53,7 +54,7 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     if object.is_a? Pd::Application::Teacher1819Application
       'Teacher'
     elsif object.is_a? Pd::Application::Facilitator1819Application
-      'Facilitator'
+      'New Facilitator'
     elsif object.user.try {|user| user.regional_partners.any?}
       'Regional Partner'
     else

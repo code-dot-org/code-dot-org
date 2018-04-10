@@ -316,3 +316,21 @@ ja:
       BigEvent_2018:
         title: The Big Event
         desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
+      GraphPaperProgramming_2018:
+        title: プログラミングのグラフ用紙
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
+      courseD_unplugged_digitalCitizenship_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: 条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
+      DigitalFootprint_2018:
+        title: あなたのデジタルフットプリント
+        desc: Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: バイナリ画像
+        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.

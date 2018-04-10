@@ -316,3 +316,21 @@ nn:
       BigEvent_2018:
         title: Den store hendinga
         desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
+      GraphPaperProgramming_2018:
+        title: Programmering på millimeterpapir
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
+      Conditionals_2018:
+        title: Betingelser
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss eg trekk eit svart kort, får du poeng."
+      DigitalFootprint_2018:
+        title: Dine digitale fotspor
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
+      BinaryImages_2018:
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.

@@ -213,8 +213,13 @@
       submit: Tukar kata laluan
   welcome_email:
     subject: Sertai kelas saya (di Code.org)
-    body: |
-      Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu, seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs Zombie! :-) % {nama}
+    body: 'Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org
+      (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan
+      visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu,
+      seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds,
+      dan Plants vs Zombie! :-) % {nama}
+
+'
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:

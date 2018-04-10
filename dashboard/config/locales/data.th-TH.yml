@@ -2,84 +2,84 @@
   data:
     game:
       name:
-        Unplug1: "แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น"
-        Maze: "เขาวงกต"
-        Multi: "แบบมีตัวเลือก"
-        Unplug2: "คิดคำนวณ"
-        Unplug3: "การเขียนกระดาษกราฟ"
-        Artist: "ศิลปิน"
-        Unplug4: "อัลกอริทึม"
-        Artist2: "ศิลปิน 2"
-        Unplug5: "ฟังก์ชัน"
-        Farmer: "ชาวนา"
-        Unplug6: "เงื่อนไข"
-        Artist3: "ศิลปิน 3"
-        Unplug7: "การแต่งเพลง"
-        Farmer2: "ชาวนา 2"
+        Unplug1: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+        Maze: เขาวงกต
+        Multi: แบบมีตัวเลือก
+        Unplug2: คิดคำนวณ
+        Unplug3: การเขียนกระดาษกราฟ
+        Artist: ศิลปิน
+        Unplug4: อัลกอริทึม
+        Artist2: ศิลปิน 2
+        Unplug5: ฟังก์ชัน
+        Farmer: ชาวนา
+        Unplug6: เงื่อนไข
+        Artist3: ศิลปิน 3
+        Unplug7: การแต่งเพลง
+        Farmer2: ชาวนา 2
         Unplug8: Abstraction
-        Artist4: "ศิลปิน 4"
-        Unplug9: "โปรแกรมการถ่ายทอดข้อมูล"
-        Farmer3: "ชาวนา 3"
-        Unplug10: "อินเทอร์เน็ต"
-        Artist5: "ศิลปิน 5"
+        Artist4: ศิลปิน 4
+        Unplug9: โปรแกรมการถ่ายทอดข้อมูล
+        Farmer3: ชาวนา 3
+        Unplug10: อินเทอร์เน็ต
+        Artist5: ศิลปิน 5
         Unplug11: Wrap-up
-        MazeEC: "เขาวงกต"
-        Bounce: "กระเด้ง"
-        Flappy: "แฟลบปีเบิร์ด"
-        Jigsaw: "จิ๊กซอว์"
-        MazeStep: "โหมดขั้นตอนเขาวงกต"
-        Wordsearch: "ค้นหาคำ"
-        Webapp: "แอ๊ปแล็บ"
-        ArtistEC: "ศิลปิน"
-        TextMatch: "ข้อความตรงกัน"
+        MazeEC: เขาวงกต
+        Bounce: กระเด้ง
+        Flappy: แฟลบปีเบิร์ด
+        Jigsaw: จิ๊กซอว์
+        MazeStep: โหมดขั้นตอนเขาวงกต
+        Wordsearch: ค้นหาคำ
+        Webapp: แอ๊ปแล็บ
+        ArtistEC: ศิลปิน
+        TextMatch: ข้อความตรงกัน
         StudioEC: Play Lab
-        Applab: "แอ๊ปแล็บ"
-        NetSim: "เครื่องจำลองอินเตอร์เน็ต"
-        Custom: "ศิลปิน"
+        Applab: แอ๊ปแล็บ
+        NetSim: เครื่องจำลองอินเตอร์เน็ต
+        Custom: ศิลปิน
         CustomStudio: Play Lab
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "ทองแดง"
-        Silver: "เงิน"
-        Gold: "ทอง"
+        Bronze: ทองแดง
+        Silver: เงิน
+        Gold: ทอง
     concept:
       description:
-        sequence: "ลำดับ"
+        sequence: ลำดับ
         if: If บล็อก
         if_else: If บล็อกในกรณีอื่น
-        loop_times: "ทำซ้ำช่วงเวลา"
-        loop_until: "ทำซ้ำจนถึงบล็อก"
-        loop_while: "ขณะที่บล็อก"
-        loop_for: "บล็อกนับ"
-        function: "ฟังก์ชัน"
-        parameters: "ฟังก์ชันกับพารามิเตอร์"
+        loop_times: ทำซ้ำช่วงเวลา
+        loop_until: ทำซ้ำจนถึงบล็อก
+        loop_while: ขณะที่บล็อก
+        loop_for: บล็อกนับ
+        function: ฟังก์ชัน
+        parameters: ฟังก์ชันกับพารามิเตอร์
     level:
       instructions:
         maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
           forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: "หมูนี้ทำให้ขนของฉันยุ่ง. ช่วยฉันตามหาเขา!"
-        maze_2_2_5: "ติดตามเส้นทาง และนำฉันไปหาเจ้าหมูบ้า หลีกเลี่ยงระเบิด หรือขนนกจะปลิว!"
-        maze_2_3: "นำฉันไป green evilness! (ระวังระเบิด)"
-        maze_2_4: "รักษาความสงบ และช่วยฉันหาหมูนิสัยไม่ดี มิฉะนั้นฉันอาจถูกโกรธ!"
-        maze_2_5: "มีทางที่ฉันสามารถไปถึงหมูบ้าโดยใช้เพียง 2 บล็อก คุณคิดออกไหม?"
-        maze_2_6: "นำฉันไปที่พื้นที่สีเขียวโดยใช้โค้ดแค่สามบล็อก"
+        maze_2_1: หมูนี้ทำให้ขนของฉันยุ่ง. ช่วยฉันตามหาเขา!
+        maze_2_2_5: ติดตามเส้นทาง และนำฉันไปหาเจ้าหมูบ้า หลีกเลี่ยงระเบิด หรือขนนกจะปลิว!
+        maze_2_3: นำฉันไป green evilness! (ระวังระเบิด)
+        maze_2_4: รักษาความสงบ และช่วยฉันหาหมูนิสัยไม่ดี มิฉะนั้นฉันอาจถูกโกรธ!
+        maze_2_5: มีทางที่ฉันสามารถไปถึงหมูบ้าโดยใช้เพียง 2 บล็อก คุณคิดออกไหม?
+        maze_2_6: นำฉันไปที่พื้นที่สีเขียวโดยใช้โค้ดแค่สามบล็อก
         maze_2_7: ช่วยฉันไล่หมูออกไป โดยใช้บล็อกโค้ดให้น้อยที่สุด. ลองใช้บล็อก "ทำซ้ำ
           (repeat times)" ให้มากกว่าหนึ่งบล็อก
         maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
           puzzle using the "repeat" block that repeats 3 times. Try putting these
           3 blocks inside the grey "repeat" block: move, move, turn.'
         maze_2_9: เอาหล่ะ ลองใช้บล็อกอันใหม่ "ทำซ้ำจนกระทั่ง" สิ- มันจะทำซ้ำจนกว่าฉันจะไปถึงตัวหมูหล่ะ
-        maze_2_10: "การทดสอบครั้งสุดท้ายแล้ว คุณสามารถแก้ไขปัญหานี้โดยใช้โค้ดแค่สี่บล็อกได้ไหมนะ"
-        maze_2_11: "ถึงคุณ, ฉัน ซอมบี้, ฉันหิว ฉันต้องการดอกทานตะวัน คุณพาฉันไปหาดอกทานตะวันโดยใช้โค้ดแค่ห้าบล็อกได้ไหม?"
-        maze_2_12: "เอาหล่ะ นี่แตกต่างจากด่านที่แล้วนิดหน่อย คุณใช้แค่ห้าบล็อกได้ไหม?"
+        maze_2_10: การทดสอบครั้งสุดท้ายแล้ว คุณสามารถแก้ไขปัญหานี้โดยใช้โค้ดแค่สี่บล็อกได้ไหมนะ
+        maze_2_11: ถึงคุณ, ฉัน ซอมบี้, ฉันหิว ฉันต้องการดอกทานตะวัน คุณพาฉันไปหาดอกทานตะวันโดยใช้โค้ดแค่ห้าบล็อกได้ไหม?
+        maze_2_12: เอาหล่ะ นี่แตกต่างจากด่านที่แล้วนิดหน่อย คุณใช้แค่ห้าบล็อกได้ไหม?
         maze_2_13: |-
           ใช้บล็อก "ถ้า" เพื่อให้ฉันตัดสินใจเมื่อจะหัน
           คำแนะนำ: ที่จริงคุณต้องการเพียงหนึ่งบล็อกเท่านั้น แต่เราให้คุณเรียนรู้ว่าเราจัดบล็อกอย่างไร  เพื่อที่คุณจะได้ทำเป็นด้วยตนเองในครั้งหน้า
         maze_2_14: นี่เป็นด่านสุดท้ายแล้วนะ แต่คุณต้องไม่ลืมวิธีการใช้บล็อก "ถ้า"
           และบล็อก "ทำซ้ำ" เข้าด้วยกัน
         maze_2_15: ฉันต้องการดอกทานตะวัน! ใช้บล็อก "ถ้า" เพื่อนำฉันไปที่นั่น และใช้บล็อกให้น้อยที่สุด
-        maze_2_16: "เอาหล่ะ ลองทำการทดสอบนี่อีกครั้ง , ไม่ต่างจากครั้งที่แล้วมาก แต่ระวังตัวChompersไว้ให้ดีๆ!"
+        maze_2_16: เอาหล่ะ ลองทำการทดสอบนี่อีกครั้ง , ไม่ต่างจากครั้งที่แล้วมาก แต่ระวังตัวChompersไว้ให้ดีๆ!
         maze_2_17: บล็อก "If-else" ตรวจสอบเงื่อนไข และจากนั้น ทำอย่างใดอย่างหนึ่ง
           ลองใช้บล็อกใหม่นี้พาฉันไปยังดอกทานตะวัน
         maze_2_18: อีกหนึ่งแบบฝึกหัดของบล็อก "if-else" สามารถทำสำเร็จตั้งแต่ครั้งแรกเลยไหม?
@@ -89,12 +89,12 @@
           Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
-        turtle_1_3: "สร้างสี่เหลี่ยมจตุรัสโดยใช้เพียง 3 บล็อก"
+        turtle_1_3: สร้างสี่เหลี่ยมจตุรัสโดยใช้เพียง 3 บล็อก
         turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
           the "random color" option that picks a different color each time. Hint:
           you''ll have to figure out how far to turn by clicking on the number in
           the turn block.'
-        turtle_1_5: "แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย"
+        turtle_1_5: แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
           the triangle first, then figure out how much to turn before drawing the
           square.'
@@ -104,7 +104,7 @@
         turtle_1_8: Ok, try to figure out what happens if you run this code (or press
           "Run" to try it). Then, repeat it enough times to complete the drawing.
           The colors will be different every time.
-        turtle_1_9: "คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?"
+        turtle_1_9: คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?
         turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a
           stick figure, snowflake, or spiral. Also try the new "set width" block.
           Have fun!'
@@ -471,99 +471,99 @@
           let friends try your game on their phones.
     video:
       name:
-        maze_intro: "บทนำเขาวงกต"
-        artist_intro: "แนะนำศิลปิน"
+        maze_intro: บทนำเขาวงกต
+        artist_intro: แนะนำศิลปิน
         farmer_intro: Farmer Intro
         flappy_intro: Flappy Intro
-        loop_times: "ทำซ้ำช่วงเวลา"
-        loop_until: "ทำซ้ำจนถึงบล็อก"
+        loop_times: ทำซ้ำช่วงเวลา
+        loop_until: ทำซ้ำจนถึงบล็อก
         if: If บล็อก
         if_else: If/else บล็อก
         if_else_scrat: If/else บล็อก
-        function: "ฟังก์ชัน"
-        loop_while: "ขณะที่บล็อก"
-        loop_for: "บล็อกนับ"
-        parameters: "ฟังก์ชันกับพารามิเตอร์"
-        hoc_wrapup: "ชั่วโมงของรหัส Wrapup"
+        function: ฟังก์ชัน
+        loop_while: ขณะที่บล็อก
+        loop_for: บล็อกนับ
+        parameters: ฟังก์ชันกับพารามิเตอร์
+        hoc_wrapup: ชั่วโมงของรหัส Wrapup
         Unplug1: What is CS?
-        Unplug2: "คิดคำนวณ"
-        Unplug3: "การเขียนกระดาษกราฟ"
-        Unplug4: "อัลกอริทึม"
-        Unplug5: "ฟังก์ชัน"
-        Unplug6: "เงื่อนไข"
+        Unplug2: คิดคำนวณ
+        Unplug3: การเขียนกระดาษกราฟ
+        Unplug4: อัลกอริทึม
+        Unplug5: ฟังก์ชัน
+        Unplug6: เงื่อนไข
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
-        Unplug10: "อินเทอร์เน็ต"
+        Unplug10: อินเทอร์เน็ต
         Unplug11: Wrap-up
-        C1_happy_maps_unplugged: "แผนที่แห่งความสุข"
+        C1_happy_maps_unplugged: แผนที่แห่งความสุข
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: "เหตุการณ์ใหญ่"
+        C1_bigevent_unplugged: เหตุการณ์ใหญ่
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: "แนะนำศิลปิน"
+        C1_artist_intro: แนะนำศิลปิน
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: "เขาวงกต Loops"
-        C1_bee_loops: "ผึ้ง Loops"
-        C1_maze_loops: "เขาวงกต Loops"
+        C1_zuck_repeat_loop: เขาวงกต Loops
+        C1_bee_loops: ผึ้ง Loops
+        C1_maze_loops: เขาวงกต Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundation: "สร้างพื้นฐาน"
+        C1_building_foundation: สร้างพื้นฐาน
         C1_going_places_safely: Going Places Safely
-        C2_maze_intro: "บทนำเขาวงกต"
-        C2_artist_intro: "แนะนำศิลปิน"
-        C2_zuck_repeat_loop: "เขาวงกต Loops"
-        C2_artist_loops: "ศิลปิน Loops"
-        C2_artist_debugging: "ศิลปิน Debugging"
-        C2_bee_loops: "ผึ้ง Loops"
-        C2_bee_debugging: "ผึ้ง Debugging"
-        C2_bee_conditionals: "ผึ้ง Conditionals"
+        C2_maze_intro: บทนำเขาวงกต
+        C2_artist_intro: แนะนำศิลปิน
+        C2_zuck_repeat_loop: เขาวงกต Loops
+        C2_artist_loops: ศิลปิน Loops
+        C2_artist_debugging: ศิลปิน Debugging
+        C2_bee_loops: ผึ้ง Loops
+        C2_bee_debugging: ผึ้ง Debugging
+        C2_bee_conditionals: ผึ้ง Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: "การเขียนกระดาษกราฟ"
-        C2_conditionals_with_cards: "เงื่อนไข"
+        C2_graph_paper: การเขียนกระดาษกราฟ
+        C2_conditionals_with_cards: เงื่อนไข
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: "โปรแกรมการถ่ายทอดข้อมูล"
+        C2_relay_programming: โปรแกรมการถ่ายทอดข้อมูล
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: "เขาวงกต Loops"
-        C3_artist_intro: "แนะนำศิลปิน"
-        C3_artist_functions: "ศิลปิน Functions"
-        C3_bee_functions: "ผึ้ง Functions"
-        C3_bee_conditionals: "ผึ้ง Conditionals"
-        C3_maze_conditionals: "เขาวงกต Conditionals"
+        C3_maze_level_4: เขาวงกต Loops
+        C3_artist_intro: แนะนำศิลปิน
+        C3_artist_functions: ศิลปิน Functions
+        C3_bee_functions: ผึ้ง Functions
+        C3_bee_conditionals: ผึ้ง Conditionals
+        C3_maze_conditionals: เขาวงกต Conditionals
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
-        C3_bee_debugging: "ผึ้ง Debugging"
-        C3_bounce: "กระเด้ง"
+        C3_bee_debugging: ผึ้ง Debugging
+        C3_bounce: กระเด้ง
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "คิดคำนวณ"
+        C3_computational_thinking: คิดคำนวณ
         C3_dice_race: Dice Race
-        C3_internet: "อินเทอร์เน็ต"
+        C3_internet: อินเทอร์เน็ต
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "ลูป"
-        C4_bee_conditional: "ผึ้ง Conditionals"
+        C4_loops_zombie: ลูป
+        C4_bee_conditional: ผึ้ง Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: "การวนรอบ"
-        C4_for_loops_bee: "การวนรอบ"
-        C4_for_loops_no_bee: "การวนรอบ"
+        C4_for_loops: การวนรอบ
+        C4_for_loops_bee: การวนรอบ
+        C4_for_loops_no_bee: การวนรอบ
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
-        C4_function_parameters: "ฟังก์ชันกับพารามิเตอร์"
-        C4_conditionals: "เงื่อนไข"
+        C4_function_parameters: ฟังก์ชันกับพารามิเตอร์
+        C4_conditionals: เงื่อนไข
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: "การวนรอบ"
+        C4_unplugged_forloops: การวนรอบ
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         CSF_a_b_artist_loops: Loops in Artist
@@ -577,7 +577,7 @@
         CSF_EF_cs_matters: Computer Science Matters
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
-        CSF_my_robotic_friends: "เพื่อนหุ่นยนต์"
+        CSF_my_robotic_friends: เพื่อนหุ่นยนต์
         CSF_Power_of_Words: Power of Words
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
@@ -639,8 +639,8 @@
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
-        csp_applab_functions_parameters: "ฟังก์ชันกับพารามิเตอร์"
-        csp_applab_loops: "ลูป"
+        csp_applab_functions_parameters: ฟังก์ชันกับพารามิเตอร์
+        csp_applab_loops: ลูป
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -683,13 +683,13 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ"
-        starwars_typing: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - จาวาสคริปต์"
-        starwars_events: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์"
-        starwars_congrats: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย"
-        starwars_blocks_intro: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ"
-        starwars_blocks_events: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์"
-        starwars_blocks_congrats: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย"
+        starwars_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ'
+        starwars_typing: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - จาวาสคริปต์'
+        starwars_events: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์'
+        starwars_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย'
+        starwars_blocks_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ'
+        starwars_blocks_events: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์'
+        starwars_blocks_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย'
         mc_intro: Minecraft - บทนำ
         mc_repeat: Minecraft - ซ้ำ
         mc_if_statements: Minecraft - ข้อความที่มีคำว่า หากมี
@@ -701,11 +701,11 @@
         iceage_intro: Ice Age Hour of Code - Introduction
         iceage_events: Ice Age Hour of Code - Events
         iceage_repeat: Ice Age Hour of Code - Repeat statements
-        mc_2016_intro: "ชั่วโมงแห่งโค้ดด้วย Minecraft - แนะนำ"
-        mc_2016_loops: "ชั่วโมงแห่งโค้ดด้วย Minecraft - คำสั่งทำซ้ำ หรือ Loops"
-        mc_2016_events: "ชั่วโมงแห่งโค้ดด้วย Minecraft - เหตุการณ์ หรือ Events"
+        mc_2016_intro: ชั่วโมงแห่งโค้ดด้วย Minecraft - แนะนำ
+        mc_2016_loops: ชั่วโมงแห่งโค้ดด้วย Minecraft - คำสั่งทำซ้ำ หรือ Loops
+        mc_2016_events: ชั่วโมงแห่งโค้ดด้วย Minecraft - เหตุการณ์ หรือ Events
         mc_2016_spawn: Minecraft ชั่วโมงแห่งการเขียนโค้ด - การเกิด หรือ Spawn
-        mc_2016_congrats: "ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย"
+        mc_2016_congrats: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
         applab_hoc_welcome: App Lab Hour of Code - Welcome
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
@@ -714,7 +714,7 @@
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
         mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: "ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย"
+        mc_2017_congratulations: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
         mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
         mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
         mc_2017_puzzle_8: Minecraft Hour of Code - Functions
@@ -740,6 +740,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -843,8 +846,8 @@
         Infinity_repeat_callout: Place Move blocks inside here
         craft_run_button_callout: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
         craft_drag_block_callout: ลากบล็อก "moveforward ();" และย้ายไปวางไว้ด้านล่างบล็อกอื่นๆ
-        craft_callout_preplaced: "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
-        craft_inside_repeat: "ทำซ้ำโดยวางบล็อกไที่นี่"
-        craft_callout_preplaced_house: "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
-        craft_what_is_iron: "ระเบิดเหล็กนี้!"
-        craft_callout_moveforward: "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
+        craft_callout_preplaced: เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น
+        craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+        craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
+        craft_what_is_iron: ระเบิดเหล็กนี้!
+        craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม

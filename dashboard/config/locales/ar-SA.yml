@@ -1,112 +1,112 @@
 "ar":
   errors:
     messages:
-      not_saved: "الرجاء تصحيح الأخطاء التالية:"
-      too_young: "هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً."
+      not_saved: 'الرجاء تصحيح الأخطاء التالية:'
+      too_young: هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً.
       teacher_must_accept_terms: هذا المحتو يخضع لقيود العمر في ولا يتوفر للطلاب الأصغر
         سنا. اسأل المعلم الخاص بك لقبول "شروط الخدمة" المستحدثة لتمنحك الوصول إلى
         هذا المحتوى. يستطيع المعلم الخاص بك القيام بذلك بتسجيل الدخول إلى "استوديو
         التعليمات البرمجية" والنقر فوق الزر "تحديث مراجعة شروط" بالقرب من أعلى الصفحة
         الرئيسية "ستوديو التعليمات البرمجية".
-      pair_programmer: "أنت الآن توصل البرمجة مع طالب الذي ليس لديه حق الوصول إلى
-        هذا المحتوى. للوصول إلى هذا المحتوى، أوقف برمجة التوصيل وحاول مرة أخرى."
+      pair_programmer: أنت الآن توصل البرمجة مع طالب الذي ليس لديه حق الوصول إلى هذا
+        المحتوى. للوصول إلى هذا المحتوى، أوقف برمجة التوصيل وحاول مرة أخرى.
   activerecord:
     errors:
       messages:
-        blank: "مطلوب"
+        blank: مطلوب
         blank_plural: are required
         invalid_plural: are invalid
     attributes:
       user:
-        name: "اسم العرض"
+        name: اسم العرض
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
-        email: "البريد الإلكتروني"
+        email: البريد الإلكتروني
         parent_email: Parent/guardian email
         personal_email: Personal email address
-        username: "اسم المستخدم"
-        password: "كلمة المرور"
-        password_confirmation: "تأكيد كلمة المرور"
-        current_password: "كلمة المرور الحالية"
-        locale: "اللغة"
-        age: "العمر"
-        gender: "الجنس"
-        edit_header: "تعديل تفاصيل الحساب"
+        username: اسم المستخدم
+        password: كلمة المرور
+        password_confirmation: تأكيد كلمة المرور
+        current_password: كلمة المرور الحالية
+        locale: اللغة
+        age: العمر
+        gender: الجنس
+        edit_header: تعديل تفاصيل الحساب
         error:
-          future: "لا يمكن أن يكون في المستقبل"
-  hello: "مرحباً بالعالم"
-  welcome_back: "أهلاً بكم من جديد، %{name}"
-  your_professional_learning_plan: "خطة التعلم المهنية الخاصة بك"
-  see_your_learning_plan: "انظر خطة التعلم الخاص بك"
-  submit: "تسجيل"
-  unsubmit: "عدم تقديم"
-  previous_page: "الصفحة السابقة"
-  next_page: "الصفحة التالية"
-  next_resource: "المصدر التالي"
+          future: لا يمكن أن يكون في المستقبل
+  hello: مرحباً بالعالم
+  welcome_back: أهلاً بكم من جديد، %{name}
+  your_professional_learning_plan: خطة التعلم المهنية الخاصة بك
+  see_your_learning_plan: انظر خطة التعلم الخاص بك
+  submit: تسجيل
+  unsubmit: عدم تقديم
+  previous_page: الصفحة السابقة
+  next_page: الصفحة التالية
+  next_resource: المصدر التالي
   done_with_module: Done with this Learning Module
-  cancel: "إلغاء"
-  okay: "حسناً"
+  cancel: إلغاء
+  okay: حسناً
   heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
   add_teacher_form:
     code:
-      label: "إضافة معلِّماً:"
-      placeholder: "مقطع التعليمات البرمجية (ABCDEF)"
+      label: 'إضافة معلِّماً:'
+      placeholder: مقطع التعليمات البرمجية (ABCDEF)
       instructions: الرجاء ادخال الكود الذي اعطاه اليك معلمك, انه مكون من 6 حروف مثل
         "ABCDEF".
       instructions_short: Enter your 6 letter section code
-    submit: "إضافة معلِّم"
+    submit: إضافة معلِّم
   add_hint_form:
-    placeholder: "الرجاء إدخال التلميح الخاص بك هنا"
-    submit: "إضافة تلميح"
+    placeholder: الرجاء إدخال التلميح الخاص بك هنا
+    submit: إضافة تلميح
   appname: Code.org
-  stage: "المرحلة"
-  stage_number: "المرحلة %{number}"
-  puzzle: "لغز"
-  trophies: "الجوائز"
-  courses: "الدروس"
+  stage: المرحلة
+  stage_number: المرحلة %{number}
+  puzzle: لغز
+  trophies: الجوائز
+  courses: الدروس
   courses_page:
-    title_student: "تعلّم على كود استوديو"
+    title_student: تعلّم على كود استوديو
     title_teacher: Teach with Code Studio
-  unplugged_activity: "نشاط غير موصول"
-  of: "من"
-  more: "أكثر"
-  less: "أقل"
-  beta: "تجريبي"
-  try_hoc: "قم بتجربة ساعة من البرمجة، انقر هنا >>  "
+  unplugged_activity: نشاط غير موصول
+  of: من
+  more: أكثر
+  less: أقل
+  beta: تجريبي
+  try_hoc: 'قم بتجربة ساعة من البرمجة، انقر هنا >>  '
   try_k8intro: قم بتجربة المقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط
     (من 15 إلى 25 ساعة)
   k8intro: مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)
-  already_started: "بدأت بالفعل؟ أكمل من هنا >>  "
-  demos: "المشرف:  جميع العروض التوضيحية"
-  continue: "الاستمرار"
-  prize: "جائزة"
-  more_info: "المزيد من المعلومات"
+  already_started: 'بدأت بالفعل؟ أكمل من هنا >>  '
+  demos: 'المشرف:  جميع العروض التوضيحية'
+  continue: الاستمرار
+  prize: جائزة
+  more_info: المزيد من المعلومات
   auth:
-    sign_in_with: "تسجيل الدخول باستخدام %{provider}"
-    signed_in: "تم تسجيل الدخول!"
+    sign_in_with: تسجيل الدخول باستخدام %{provider}
+    signed_in: تم تسجيل الدخول!
     signed_out: لقد قمت بتسجيل الخروج من <a href="%{url}">Code.org</a>.
     sign_out_of: لقد استخدمت %{provider} لتسجيل الدخول، <a href="%{url}">انقر هنا</a>
       لتسجيل الخروج من %{provider}.
-    already_signedup: "هل قمت بالتسجيل مسبقاً؟"
-    notyet_signedup: "لم تنضم إلينا بعد؟"
-    google_oauth2: "حساب Google"
-    twitter: "تويتر"
-    facebook: "فيس بوك"
-    windowslive: "حساب Microsoft"
+    already_signedup: هل قمت بالتسجيل مسبقاً؟
+    notyet_signedup: لم تنضم إلينا بعد؟
+    google_oauth2: حساب Google
+    twitter: تويتر
+    facebook: فيس بوك
+    windowslive: حساب Microsoft
     clever: Clever Account
-    forgot_password: "هل نسيت كلمة المرور؟"
-    need_confirmation: "لم تستلم تعليمات تأكيد الحساب؟"
-    need_unlock: "لم تتلقى تعليمات فتح الحساب؟"
+    forgot_password: هل نسيت كلمة المرور؟
+    need_confirmation: لم تستلم تعليمات تأكيد الحساب؟
+    need_unlock: لم تتلقى تعليمات فتح الحساب؟
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
-    student_count: "عدد الطلاب المسجلين حالياً هو %{count}."
-    teacher_count: "عدد المعلّمين المسجلين حالياً هو %{count}."
+    student_count: عدد الطلاب المسجلين حالياً هو %{count}.
+    teacher_count: عدد المعلّمين المسجلين حالياً هو %{count}.
     overview: قم بالتسجيل للحصول على حساب لتتبع التقدم المحرز الخاص بك أو إدارة الفصول
       الدراسية الخاصة بك. <a href="/"> يمكنك استعراض مختلف مراحل والالغاز</a> دون
       حساب، ولكنك ستحتاج للتسجيل لحفظ التقدم والمشاريع الخاصة بك.
-    hoc_already_signed_up_heading: "أبدأ بدون تسجيل الدخول"
+    hoc_already_signed_up_heading: أبدأ بدون تسجيل الدخول
     hoc_already_signed_up_content: لقد انضممت لتعليم ساعة من البرمجة! لا تحتاج لا
       أنت ولا تلاميذك الدخول استوديو البرمجة لتشاركوا في هذا الحدث. للشروع في العمل،
       <a href="%{learn_url}">اختر درسا تعليميا</a> لقسمك وشارك رابطة معهم.<br/><br/>إذا
@@ -119,37 +119,37 @@
       to assign courses to students and track their progress. <a href="%{studio_url}">You
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
-    teacher_educator_guide: "راجع دليل المعلم"
-    title: "الاشتراك في Code.org"
-    school_name: "اسم المدرسة (اختياري)"
-    school_address: "عنوان المدرسة (اختياري)"
-    address_placeholder: "العنوان، المدينة، الدولة، الرمز البريدي"
-    gender: "الجنس (اختياري)"
-    birthday: "تاريخ الميلاد (اختياري)"
-    age: "العمر"
-    user_type: "هل أنت طالب أو معلّم؟"
-    submit: "تسجيل"
-    teacher: "هل أنت معلم؟"
-    valid_username: "متاح!"
-    invalid_username: "اسم المستخدم يجب ان يكون على الاقل 5 احرف"
-    taken_username: "اسم المستخدم الان موجود"
-    valid_password: "كلمة المرور متاحة!"
-    invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
-    mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
-    student_terms: "أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a>
+    teacher_educator_guide: راجع دليل المعلم
+    title: الاشتراك في Code.org
+    school_name: اسم المدرسة (اختياري)
+    school_address: عنوان المدرسة (اختياري)
+    address_placeholder: العنوان، المدينة، الدولة، الرمز البريدي
+    gender: الجنس (اختياري)
+    birthday: تاريخ الميلاد (اختياري)
+    age: العمر
+    user_type: هل أنت طالب أو معلّم؟
+    submit: تسجيل
+    teacher: هل أنت معلم؟
+    valid_username: متاح!
+    invalid_username: اسم المستخدم يجب ان يكون على الاقل 5 احرف
+    taken_username: اسم المستخدم الان موجود
+    valid_password: كلمة المرور متاحة!
+    invalid_password: كلمة المرور يجب ان تكون على الاقل 6 احرف
+    mismatch_password: كلمة المرور التي ادخلتها غير متطابقة
+    student_terms: أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a>
       Code.org. إذا كنت دون سن 13 عاماً، اؤكد بتقديم هذه الاستمارة بان أحد والدي أو
       وأي امري اذن باستخدام الخدمات Code.org. <br/> <br/> لا يتم تخزين عناوين البريد
       الإلكتروني في شكل يسمح لنا بالاتصال بالطلاب. سوف يتلقى الطلاب ابدأ رسائل البريد
       الإلكتروني من Code.org باستثناء استرداد كلمة المرور. الاطلاع على <a href='http://code.org/privacy'>
-      سياسة الخصوصية</a> لمزيد من المعلومات."
-    teacher_terms: "أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول
-      الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>."
-    additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
-    user_type_label: "نوع الحساب"
-    user_type_teacher: "المدرس"
-    user_type_student: "طالب"
-    field_is_required: "مطلوب"
-    accept_terms: "يجب عليك الموافقة على إنشاء حساب"
+      سياسة الخصوصية</a> لمزيد من المعلومات.
+    teacher_terms: أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول
+      الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>.
+    additional_information: نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع.
+    user_type_label: نوع الحساب
+    user_type_teacher: المدرس
+    user_type_student: طالب
+    field_is_required: مطلوب
+    accept_terms: يجب عليك الموافقة على إنشاء حساب
     error: An error occurred.
   school_info:
     title: School Information (optional)
@@ -160,7 +160,7 @@
     public: Public
     homeschool: Homeschool
     after_school: After School
-    other: "أخرى"
+    other: أخرى
     state: State
     district: District
     other_district_not_listed: Other district not listed above
@@ -173,44 +173,44 @@
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "هل لديك حساب؟ قم بتسجيل الدخول"
-    login: "البريد الإلكتروني"
+    title: هل لديك حساب؟ قم بتسجيل الدخول
+    login: البريد الإلكتروني
     login_username: Email or Username
-    password: "كلمة المرور"
-    remember: "تذكرني"
-    submit: "تسجيل الدخول"
+    password: كلمة المرور
+    remember: تذكرني
+    submit: تسجيل الدخول
   signin:
-    try_heading: "هل ترغب في محاولة البرمجة دون التسجيل في الموقع؟"
-    try_hoc: "جرّب برنامج ساعة واحدة من البرمجة أولاً"
-    try_20hours: "جرّب برنامج المقدمة إلى علوم الحاسب الآلي المكوّن من 20 ساعة"
+    try_heading: هل ترغب في محاولة البرمجة دون التسجيل في الموقع؟
+    try_hoc: جرّب برنامج ساعة واحدة من البرمجة أولاً
+    try_20hours: جرّب برنامج المقدمة إلى علوم الحاسب الآلي المكوّن من 20 ساعة
   signinsection:
-    welcome: "مرحباً بكم في %{section_name}"
-    name: "اختر الاسم الخاص بك"
-    picture: "الآن إختر الصورة السرية الخاصة بك"
-    words: "الآن قم بإدخال الكلمات السرية الخاصة بك"
-    login: "تسجيل الدخول"
-    invalid_login: "تسجيل الدخول غير صالح، الرجاء المحاولة مرة أخرى"
-    pair_programming: "لدى شريك في جهاز الكمبيوتر الخاص بي"
+    welcome: مرحباً بكم في %{section_name}
+    name: اختر الاسم الخاص بك
+    picture: الآن إختر الصورة السرية الخاصة بك
+    words: الآن قم بإدخال الكلمات السرية الخاصة بك
+    login: تسجيل الدخول
+    invalid_login: تسجيل الدخول غير صالح، الرجاء المحاولة مرة أخرى
+    pair_programming: لدى شريك في جهاز الكمبيوتر الخاص بي
     student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
       target='_blank'>here</a>.
   password:
     reset_form:
-      title: "نسيت كلمة المرور؟"
-      instructions: "قم بإدخال عنوان بريدك الإلكتروني أدناه وسيتم إرسال إرشادات لإعادة
-        تعيين كلمة المرور."
-      email: "البريد الإلكتروني"
-      submit: "تسجيل"
+      title: نسيت كلمة المرور؟
+      instructions: قم بإدخال عنوان بريدك الإلكتروني أدناه وسيتم إرسال إرشادات لإعادة
+        تعيين كلمة المرور.
+      email: البريد الإلكتروني
+      submit: تسجيل
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
-      title: "تغيير كلمة مرور حسابك"
-      new_password: "كلمة مرور جديدة"
-      confirm_password: "تأكيد كلمة المرور الجديدة"
-      submit: "تغيير كلمة المرور الخاصة بي"
+      title: تغيير كلمة مرور حسابك
+      new_password: كلمة مرور جديدة
+      confirm_password: تأكيد كلمة المرور الجديدة
+      submit: تغيير كلمة المرور الخاصة بي
   welcome_email:
-    subject: "أنضم إلى صفي (في Code.org)"
+    subject: أنضم إلى صفي (في Code.org)
     body: "انقر على الرابط أدناه للتسجيل في دروس علوم الكمبيوتر في Code.org ( مثل
       \"معلمك الخاص\"): \n\n%{link}\n\n\nالدروس تجلب لكم المتعة لانها تعمل بشكل مرئي
       وتقدم لكم مجموعة من المفاهيم الأساسية لعلوم الكمبيوتر الآلي باستخدام التبسيط
@@ -230,46 +230,46 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: "الكلمة السرية"
-      email: "البريد الإلكتروني"
+      word: الكلمة السرية
+      email: البريد الإلكتروني
       google_classroom: Google Classroom
       clever: Clever
   follower:
-    invite_sent: "تم إرسال الدعوة"
+    invite_sent: تم إرسال الدعوة
     added_teacher: "%{name} تم اضافتك كمعلم"
-    registered: "لقد قمت بتسجيل %{section_name}."
+    registered: لقد قمت بتسجيل %{section_name}.
     error:
-      signed_in: "من فضلك قم بتسجيل الخروج قبل المتابعة"
-      username_not_found: "اسم المستخدم %{username} غير موجود"
+      signed_in: من فضلك قم بتسجيل الخروج قبل المتابعة
+      username_not_found: اسم المستخدم %{username} غير موجود
       username_in_use: "%{username} مستخدم، الرجاء اختر واحدا آخر من فضلك"
-      no_teacher: "تعذر العثور على أي شخص مسجل بـ  '%{teacher_email_or_code}'. من
-        فضلك أطلب منهم التسجيل هنا و من ثم محاولة إضافتهم مرة أخرى"
-      section_not_found: "تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'."
-      blank_code: "الرجاء إدخال رمز الفرع"
-      cant_join_own_section: "عذراً، لا يمكنك الانضمام إلى القسم الخاص بك."
+      no_teacher: تعذر العثور على أي شخص مسجل بـ  '%{teacher_email_or_code}'. من فضلك
+        أطلب منهم التسجيل هنا و من ثم محاولة إضافتهم مرة أخرى
+      section_not_found: تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'.
+      blank_code: الرجاء إدخال رمز الفرع
+      cant_join_own_section: عذراً، لا يمكنك الانضمام إلى القسم الخاص بك.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
     mail:
       student_disassociated:
-        subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
+        subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
   reports:
     error:
-      access_denied: "لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم"
+      access_denied: لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم
   crud:
-    new_model: "جديد %{model}"
-    show: "إظهار"
-    edit: "تعديل"
-    edit_model: "تعديل %{model}"
-    update: "تحديث"
-    submit: "تسجيل"
-    destroy: "تدمير"
-    back: "العودة"
-    confirm: "هل أنت متأكد؟"
-    created: "تم بنجاح إنشاء %{model}."
-    updated: "تم بنجاح تحديث %{model}."
-    destroyed: "تم حذف %{model} بنجاح."
-    access_denied: "ليس لديك حق الوصول إلى هذا %{model}."
+    new_model: جديد %{model}
+    show: إظهار
+    edit: تعديل
+    edit_model: تعديل %{model}
+    update: تحديث
+    submit: تسجيل
+    destroy: تدمير
+    back: العودة
+    confirm: هل أنت متأكد؟
+    created: تم بنجاح إنشاء %{model}.
+    updated: تم بنجاح تحديث %{model}.
+    destroyed: تم حذف %{model} بنجاح.
+    access_denied: ليس لديك حق الوصول إلى هذا %{model}.
   devise:
     registrations:
       user:
@@ -281,20 +281,20 @@
           You can now log into Code.org with your username and password
   nav:
     header:
-      finished_hoc: "لقد انهيت ساعة من البرمجة "
-      sign_in_to_save: "قم بتسجيل الدخول لحفظ التقدم"
+      finished_hoc: 'لقد انهيت ساعة من البرمجة '
+      sign_in_to_save: قم بتسجيل الدخول لحفظ التقدم
       free_play:
-        playlab: "اصنع تطبيقا"
-        artist: "ارسم شيئا"
+        playlab: اصنع تطبيقا
+        artist: ارسم شيئا
         calculate: Calculate Something
-        applab: "اصنع تطبيقا"
+        applab: اصنع تطبيقا
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
       my_dashboard: My Dashboard
-      courses: "الدروس"
+      courses: الدروس
       course_catalog: Course Catalog
-      project_gallery: "المشاريع"
+      project_gallery: المشاريع
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -306,7 +306,7 @@
       educate_elementary: Elementary School
       educate_middle: Middle School
       educate_high: High School
-      educate_hoc: "ساعة البرمجة"
+      educate_hoc: ساعة البرمجة
       educate_partner: Partner with Us
       educate_beyond: Beyond Code.org
       educate_inspire: Inspire a Student
@@ -323,74 +323,74 @@
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
-      stats: "الإحصائيات"
+      stats: الإحصائيات
       help_us: Help Us
       teach: Teach
       about: About
     user:
-      classroom: "الصفحة الرئيسية المعلم"
-      district_dashboard: "جزء لوحة المعلومات"
-      label: "مرحباً %{username}"
-      stats: "انجازاتي"
-      settings: "حسابي"
-      logout: "تسجيل الخروج"
-      signin: "تسجيل الدخول"
-      signup: "إنشاء حساب"
-      already_registered: "هل قمت بالتسجيل من قبل؟"
-      pair_programming: "البرمجة الزوجية"
-      team: "فريق"
-      driver: "سائق"
-      navigator: "مستكشف"
+      classroom: الصفحة الرئيسية المعلم
+      district_dashboard: جزء لوحة المعلومات
+      label: مرحباً %{username}
+      stats: انجازاتي
+      settings: حسابي
+      logout: تسجيل الخروج
+      signin: تسجيل الدخول
+      signup: إنشاء حساب
+      already_registered: هل قمت بالتسجيل من قبل؟
+      pair_programming: البرمجة الزوجية
+      team: فريق
+      driver: سائق
+      navigator: مستكشف
     popup:
-      progress_for_user: "تقدم %{name}"
-      progress: "إنجازاتك"
-      lines: "عدد أسطر الكود البرمجي : %{lines}"
-      close: "إغلاق"
-      mastery: "مفاهيم"
-      puzzle_map: "مراحل"
-      prizes: "اجمع الجوائز الـ %{total_trophies} و فز بجوائز قيمة!"
-      prize_earned: "كل الجوائز %{total_trophies} جمعت . فزت بجائزة!"
+      progress_for_user: تقدم %{name}
+      progress: إنجازاتك
+      lines: 'عدد أسطر الكود البرمجي : %{lines}'
+      close: إغلاق
+      mastery: مفاهيم
+      puzzle_map: مراحل
+      prizes: اجمع الجوائز الـ %{total_trophies} و فز بجوائز قيمة!
+      prize_earned: كل الجوائز %{total_trophies} جمعت . فزت بجائزة!
       prize_us_only: "(طلاب الولايات المتحدة فقط)"
-      prizes_link: "المزيد من المعلومات"
+      prizes_link: المزيد من المعلومات
   teacher:
-    answer: "أجب"
-    for_teachers_only: "للمعلمين فقط"
+    answer: أجب
+    for_teachers_only: للمعلمين فقط
     title:
-      one: "المعلم الخاص بك:"
-      other: "معلميك:"
+      one: 'المعلم الخاص بك:'
+      other: 'معلميك:'
     remove: "(إزالة معلم)"
     confirm:
-      remove: "هل أنت متأكد من أنك تريد إزالة هذا المعلم؟"
+      remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
     students:
-      dashboard: "انتقل إلى لوحة المعلم"
-    user_not_found: "لا يمكن العثور على المعلم."
-    student_teacher_disassociated: "لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك."
+      dashboard: انتقل إلى لوحة المعلم
+    user_not_found: لا يمكن العثور على المعلم.
+    student_teacher_disassociated: لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.
     panel:
-      answer_viewer: "لوحة المعلم"
-      student: "طالب"
-      viewing_solution: "عرض الحلول"
-      try_it_yourself: "جربها بنفسك"
-      section: "القسم"
-      example: "مثال الحل"
-      example_with_number: "مثال الحل %{solution_number}"
-      submitted_on: "تم تقديمه في:"
-      unsubmit: "عدم تقديم"
-      worked_with: "عملت مع"
-      update_lock_settings: "حدث قفل الاعدادات هنا."
-      clear_response: "أستجابة واضحة"
+      answer_viewer: لوحة المعلم
+      student: طالب
+      viewing_solution: عرض الحلول
+      try_it_yourself: جربها بنفسك
+      section: القسم
+      example: مثال الحل
+      example_with_number: مثال الحل %{solution_number}
+      submitted_on: 'تم تقديمه في:'
+      unsubmit: عدم تقديم
+      worked_with: عملت مع
+      update_lock_settings: حدث قفل الاعدادات هنا.
+      clear_response: أستجابة واضحة
   user:
-    email_confirm_needed: "لم يتم تأكيد عنوان البريد الإلكتروني:"
-    email_confirm_needed_required: "لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:"
+    email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
+    email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
     email_confirm_wrong_email: "(عنوان بريد إلكتروني خاطئ؟)"
-    email_resend_confirm: "إعادة إرسال رسالة تعليمات عملية التأكيد"
+    email_resend_confirm: إعادة إرسال رسالة تعليمات عملية التأكيد
     new_password_hint: "(اتركه فارغاً إذا كنت لا ترغب في تغييره)"
     current_password_hint: "(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)"
-    delete: "إحذف الحساب الخاص بك"
-    delete_text: "النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك."
-    delete_text_teacher_note: "يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف
-      حسابات طلابك."
-    delete_confirm: "هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟"
-    deleted_user: "عضو محذوف"
+    delete: إحذف الحساب الخاص بك
+    delete_text: النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك.
+    delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات
+      طلابك.
+    delete_confirm: هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟
+    deleted_user: عضو محذوف
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
@@ -416,61 +416,61 @@
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
   user_level:
-    completed: "أكمل"
-    tried: "حاول"
+    completed: أكمل
+    tried: حاول
   home:
-    title: "ستوديو كود"
+    title: ستوديو كود
     description: Code Studio هو موقع الدروس المتوفرة على الإنترنت من Code.org
     lines_of_code: "%{lines_count} الأسطر من التعليمات البرمجية التي كتبها الطلاب"
     lines_of_code_linebreak: "%{lines_count} هو عدد سطور التعليمات البرمجية<br/> كتبها
       %{students_count} مليون طالب"
-    all_courses: "لمحة عن الدروس 1 و 2 و 3"
-    lesson_plans: "خطط الدرس"
-    signin_message: "هل قمت بالتسجيل مسبقاً؟ %{link}"
-    student_reg_link: "تسجيل كطالب"
-    teacher_reg_link: "تسجيل كمعلم"
-    signin_directions: "استخدام حساب لتتبع التقدم. <br/> المعلمين، تتبعوا الصف الخاص
-      بكم بأكمله."
-    teacher_dashboard: "انظر على لوحة معلومات التقدم"
-    teacher_student_count_one: "لديك %{count} طلاب."
-    teacher_student_count: "لديك %{count} طلاب."
+    all_courses: لمحة عن الدروس 1 و 2 و 3
+    lesson_plans: خطط الدرس
+    signin_message: هل قمت بالتسجيل مسبقاً؟ %{link}
+    student_reg_link: تسجيل كطالب
+    teacher_reg_link: تسجيل كمعلم
+    signin_directions: استخدام حساب لتتبع التقدم. <br/> المعلمين، تتبعوا الصف الخاص
+      بكم بأكمله.
+    teacher_dashboard: انظر على لوحة معلومات التقدم
+    teacher_student_count_one: لديك %{count} طلاب.
+    teacher_student_count: لديك %{count} طلاب.
     teacher_averages: كمعدل حصل طلابك %{trophy_average} من %{trophy_max} جائزة "إتقان
       المفهوم".
-    teacher_print_certificates: "طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية"
-    teacher_read_blog: "أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا"
-    classroom: "فصلك الدراسي"
-    student_progress: "تقدم تعلمك"
+    teacher_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة التدريبية
+    teacher_read_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
+    classroom: فصلك الدراسي
+    student_progress: تقدم تعلمك
     student_stats: لقد حصلت %{trophy_count} من %{trophy_max}  جائزة "اتقان المفهوم".
-    student_left_off: "اين كنت آخر مرة:"
-    student_finished: "لقد أتممت جميع دروس Code.org. قم باختيار صف آخر %{online_link}
-      أو في %{local_school_link}."
-    local_school: "مدرسة محلية"
-    online: "متصل"
-    see_details: "مشاهدة التفاصيل"
-    view_course: "عرض الدرس"
-    prize_info: "جوائز للمشاركة (معلمي المدارس العامة في الولايات المتحدة فقط): تصل
-      إلى 1000 $ في المكافآت الفصول الدراسية."
-    tryfirst: "أو، يمكنك تجربتها أولاً، والتسجيل في وقت لاحق:"
-    trynow: "جرب الآن"
-    add_hint_help: "الرجاء مساعدتنا لإضافة تلميحات ذكية لبرامج Code.org التعليمية"
-    20hour_overview: "هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة.
+    student_left_off: 'اين كنت آخر مرة:'
+    student_finished: لقد أتممت جميع دروس Code.org. قم باختيار صف آخر %{online_link}
+      أو في %{local_school_link}.
+    local_school: مدرسة محلية
+    online: متصل
+    see_details: مشاهدة التفاصيل
+    view_course: عرض الدرس
+    prize_info: 'جوائز للمشاركة (معلمي المدارس العامة في الولايات المتحدة فقط): تصل
+      إلى 1000 $ في المكافآت الفصول الدراسية.'
+    tryfirst: 'أو، يمكنك تجربتها أولاً، والتسجيل في وقت لاحق:'
+    trynow: جرب الآن
+    add_hint_help: الرجاء مساعدتنا لإضافة تلميحات ذكية لبرامج Code.org التعليمية
+    20hour_overview: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة.
       تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة،
-      ولكن أنها متعة للتعلم لكل الإعمار."
-    test_videos_help: "إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك"
-    try_beta_courses: "جديدنا ! جرب الآن النسخة التجريبية من دورتنا التدريبية لطلاب
-      K-5"
-    use_as_teacher: "استخدم هذا الموقع كمدرس"
+      ولكن أنها متعة للتعلم لكل الإعمار.
+    test_videos_help: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
+    try_beta_courses: جديدنا ! جرب الآن النسخة التجريبية من دورتنا التدريبية لطلاب
+      K-5
+    use_as_teacher: استخدم هذا الموقع كمدرس
     heading_hoc2014: "<h2>ساعة من البرمجة </h2><h1>لجميع الأعمار</h1>"
     heading_elementary: "<h2>دورات لمدة 20 ساعة</h2> <h1>في أساسيات علوم الكمبيوتر
       (لجميع الأعمار)</h1>"
     heading_apps: "<h2>المتعة</h2><h1>للجميع</h1>"
     heading_tools: "<h2>جاهزة للخطوة التالية؟</h2> <h1>أدوات جافا سكريبت للمدرسة الثانوية</h1>"
     heading_legacy: "<h2>الدورات المعجلةـ</h2><h1>جميع الأعمار</h1>"
-    your_gallery: "معرض"
+    your_gallery: معرض
     no_primary_course: جرب الدورة تدريبية في "كود استوديو"
-    choose_next_course: "جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل"
-    print_certificate: "طباعة الشهادة"
-    announcement_title: "إعلانات"
+    choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
+    print_certificate: طباعة الشهادة
+    announcement_title: إعلانات
     announcement_message_fall2016_features: We spent the summer turning your feedback
       into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
       students' progress</a> even if they're pair programming on one device. You can
@@ -483,20 +483,20 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "اعرف المزيد"
-    announcement_try_now_button: "جرب الآن"
-    announcement_host_an_hour_button: "أستضافة لساعة"
-    announcement_watch_video_button: "مشاهدة الفديو"
-    announcement_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة
+    announcement_learn_more_button: اعرف المزيد
+    announcement_try_now_button: جرب الآن
+    announcement_host_an_hour_button: أستضافة لساعة
+    announcement_watch_video_button: مشاهدة الفديو
+    announcement_petition: كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة
       الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك.
       هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
       الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم
-      الكمبيوتر."
-    announcement_petition_button: "أضف أسمك"
+      الكمبيوتر.
+    announcement_petition_button: أضف أسمك
     announcement_go_beyond_button: Go beyond
     announcement_apply_now: Apply now
-    announcement_all: "ابق على اطلاع على المزايا الجديدة والتحديثات عبر مدونتنا للأساتذة.
-      <a href='%{teacher_blog_url}' target='_blank'>اطلع على المنشورات السابقة.</a>"
+    announcement_all: ابق على اطلاع على المزايا الجديدة والتحديثات عبر مدونتنا للأساتذة.
+      <a href='%{teacher_blog_url}' target='_blank'>اطلع على المنشورات السابقة.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
       start teaching computer science during the Hour of Code this December 5-11.
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
@@ -578,96 +578,95 @@
       bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
       Learning."
   move_students:
-    new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال
-      كود قسم مختلف."
-    section_code_cant_be_current_section: "القسم الحالي لا يمكن أن يكون مثل القسم
-      الجديد."
-    current_section_dne: "عذراً, ولكن قسم %{current_section_code} غير موجود. لطفاً
-      أدخل كود قسم مختلف."
-    student_ids_not_entered: "الرجاء تقديم معرفات_الطالب."
-    student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
-    all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في
-      الوقت الحالي."
-    already_enrolled_in_new_section: "لا يمكنك نقل هؤلاء الطلاب لأن هذا المدرّس قد
-      حصل عليهم في قسم أخر."
+    new_section_dne: عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود
+      قسم مختلف.
+    section_code_cant_be_current_section: القسم الحالي لا يمكن أن يكون مثل القسم الجديد.
+    current_section_dne: عذراً, ولكن قسم %{current_section_code} غير موجود. لطفاً
+      أدخل كود قسم مختلف.
+    student_ids_not_entered: الرجاء تقديم معرفات_الطالب.
+    student_not_found: لا يمكن إيجاد الطالب أو مجموعة الطلاب.
+    all_students_must_be_in_current_section: يجب على جميع الطلاب أن تلتحق بقسمك في
+      الوقت الحالي.
+    already_enrolled_in_new_section: لا يمكنك نقل هؤلاء الطلاب لأن هذا المدرّس قد
+      حصل عليهم في قسم أخر.
   share:
-    title: "تعلّم على كود استوديو"
-    description: "أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن
-      مع التعليمات البرمجية."
-    try_hour_of_code: "جرب ساعة من البرمجة!"
+    title: تعلّم على كود استوديو
+    description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع
+      التعليمات البرمجية.
+    try_hour_of_code: جرب ساعة من البرمجة!
   gender:
-    male: "ذكر"
-    female: "أنثى"
-    none: "أفضل عدم الإجابة"
+    male: ذكر
+    female: أنثى
+    none: أفضل عدم الإجابة
   user_type:
-    student: "طالب"
-    teacher: "المدرس"
+    student: طالب
+    teacher: المدرس
   footer:
     thank_you: نشكر <a href="https://code.org/about/donors"> الجهات المانحة</a> و
       <a href="https://code.org/about/partners"> الشركاء</a>، و <a href="https://code.org/about/team">
       الفريق الموسع</a>، وفريق تصوير الفيديو و <a href="https://code.org/about/advisors">
       مستشاري التعليم</a> لدعمهم في إنشاء "استوديو التعليمات البرمجية".
-    help_from_html: "نود بالأخص تكريم المهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر
-      الذين ساعدوا في إنشاء هذه البرامج التعليمية."
-    help_from_html_old: "ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء
-      هذه البرنامج التعليمية."
-    art_from_html: "ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق
+    help_from_html: نود بالأخص تكريم المهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر
+      الذين ساعدوا في إنشاء هذه البرامج التعليمية.
+    help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء
+      هذه البرنامج التعليمية.
+    art_from_html: ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق
       محفوظة.<br /> حروب النج&#8482;&copy; م%{current_year} ديزني و لوكاس فيلم. جميع
       الحقوق محفوظة.<br /> متجمد &#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة.<br
       /> العصر الجليدي&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق
       محفوظة.<br /> الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة
       للترفيه.<br /> جميع الحقوق محفوظة. <br />النباتات ضد المتبلدين &#8482; &copy;
       %{current_year} الكترونكس ارتس. <br />جميع الحقوق محفوظة. عالم غامبل المدهش
-      علامة مسجلة و&copy; 2015 شبكة الكرتون."
-    art_from_html_old: "ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق
+      علامة مسجلة و&copy; 2015 شبكة الكرتون.
+    art_from_html_old: ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق
       محفوظة. حروب النجم&#8482;&copy;%{current_year} ديزني و لوكاس فيلم. جميع الحقوق
       محفوظة. متجمد&#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة. العصر الجليدي.&#8482;&copy;%{current_year}
       القرن العشرين فوكس. جميع الحقوق محفوظة. الطيور الغاضبة&#8482;&copy; 2009-%{current_year}
       ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year}
       الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015
-      شبكة الكرتون."
+      شبكة الكرتون.
     code_from_html: Code.org يستخدم p5.play الذي قد تم ترخيصه تحت <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
-    powered_by_aws: "تعمل على خدمات أمازون للويب"
+    powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
       of Code&reg; هما علامات تجارية لـ Code.org."
-    copyright: "حقوق النسخ"
-    more: "المزيد"
-    feedback: "توفير التغذية الرجعية"
-    translate: "ساعدنا على ترجمة لغتك"
-    support: "الدعم"
+    copyright: حقوق النسخ
+    more: المزيد
+    feedback: توفير التغذية الرجعية
+    translate: ساعدنا على ترجمة لغتك
+    support: الدعم
     support_url: http://support.code.org
-    tos_short: "الشروط"
-    tos: "شروط الخدمة"
-    privacy: "سياسة الخصوصية"
-    secure: "نسخة آمنة"
-    report_abuse: "الابلاغ عن سوء استخدام"
+    tos_short: الشروط
+    tos: شروط الخدمة
+    privacy: سياسة الخصوصية
+    secure: نسخة آمنة
+    report_abuse: الابلاغ عن سوء استخدام
     built_on_code_studio: بني في "Code Studio"
-    make_my_own_app: "بناء التطبيق الخاص بي"
-    how_it_works: "كيف تعمل"
-    try_hour_of_code: "جرب ساعة من البرمجة!"
+    make_my_own_app: بناء التطبيق الخاص بي
+    how_it_works: كيف تعمل
+    try_hour_of_code: جرب ساعة من البرمجة!
   reference_area:
-    title: "بحاجة إلى مساعدة؟"
-    subtitle: "مشاهدة اشرطة الفيديو والتلميحات"
-    teacher: "انظر الى الحل"
+    title: بحاجة إلى مساعدة؟
+    subtitle: مشاهدة اشرطة الفيديو والتلميحات
+    teacher: انظر الى الحل
     teacher_no_solution: Stop seeing solution
-    auth_error: "انت غير مسموح لك برؤية الحل."
-    submit: "تحديث موقع الفنان"
-    direction: "اتجاه البدء (بالدرجات)"
+    auth_error: انت غير مسموح لك برؤية الحل.
+    submit: تحديث موقع الفنان
+    direction: اتجاه البدء (بالدرجات)
   video:
-    tab: "فيديو."
-    notes: "لا يوجد فيديو؟ اظهر الملاحظات."
-    notes_coming_soon: "ملاحظات على هذا الفيديو. قريبا."
-    autoplay_option: "تشغيل تلقائي لاشرطة الفيديو"
-    download: "تحميل الفيديو"
+    tab: فيديو.
+    notes: لا يوجد فيديو؟ اظهر الملاحظات.
+    notes_coming_soon: ملاحظات على هذا الفيديو. قريبا.
+    autoplay_option: تشغيل تلقائي لاشرطة الفيديو
+    download: تحميل الفيديو
     show_notes: Show Notes
     show_video: Show Video
   compatibility:
     upgrade:
-      unsupported_message: "متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}',
+      unsupported_message: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى <a href='%{supported_browsers_url}',
         target='_blank'> أحد متصفحاتنا المدعومة.</a> يمكنك تجربة رؤية الصفحة, ولكن
-        توقع أن لا تعمل بكافة الوظائف و قد تتعطل."
-      link: "اعرف المزيد"
+        توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
+      link: اعرف المزيد
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -680,73 +679,73 @@
       weblab_unsupported_locale_storage: You may experience issues using Web Lab in
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
-  slow_loading: "هذا يأخذ وقتاً اطول من المعتاد..."
-  try_reloading: "حاول اعادة تحميل الصفحة"
-  next_stage: "انتهى! استمر في المرحلة القادمة"
-  download_pdf: "افتح خطة الدرس"
-  lesson_plan: "خطة الدرس"
-  view_lesson_plan: "عرض خطة الدرس"
-  pdf_download: "تحميل ملف بي دي اف"
-  download_coming_soon: "قريبا أنشطة قابلة للتحميل. "
-  video_coming_soon: "قريبا فيديو!"
-  not_started: "الطالب لم يحاول اجتياز هذا المستوى."
+  slow_loading: هذا يأخذ وقتاً اطول من المعتاد...
+  try_reloading: حاول اعادة تحميل الصفحة
+  next_stage: انتهى! استمر في المرحلة القادمة
+  download_pdf: افتح خطة الدرس
+  lesson_plan: خطة الدرس
+  view_lesson_plan: عرض خطة الدرس
+  pdf_download: تحميل ملف بي دي اف
+  download_coming_soon: 'قريبا أنشطة قابلة للتحميل. '
+  video_coming_soon: قريبا فيديو!
+  not_started: الطالب لم يحاول اجتياز هذا المستوى.
   share_code:
-    title: "انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي وهو يعمل"
-    bounce_og_title: "هل تريد تجربة لعبة الارتداد الخاصة بي"
-    flappy_og_title: "هل تريد تجربة لعبة Flappy الخاصة بي"
-    studio_og_title: "هل تريد تجربة مختبر اللعب خاصتي"
-    check_out_what_i_made: "انظر ما الذي صنعته"
-    og_description: "كتبت البرنامج بنفسي على Code.org"
-    phone_number_not_allowed: "يبدو أنه يحتوي على رقم هاتف. حاول تغيير النص."
-    address_not_allowed: "يبدو أنه يحتوي على عنوان. حاول تغيير النص."
-    email_not_allowed: "يبدو أنه يحتوي على بريد إلكتروني. حاول تغيير النص."
-    profanity_not_allowed: "يبدو أنه يحتوي على ألفاظ نابية. حاول تغيير النص. "
+    title: انقر فوق 'تشغيل' لرؤية البرنامج الخاص بي وهو يعمل
+    bounce_og_title: هل تريد تجربة لعبة الارتداد الخاصة بي
+    flappy_og_title: هل تريد تجربة لعبة Flappy الخاصة بي
+    studio_og_title: هل تريد تجربة مختبر اللعب خاصتي
+    check_out_what_i_made: انظر ما الذي صنعته
+    og_description: كتبت البرنامج بنفسي على Code.org
+    phone_number_not_allowed: يبدو أنه يحتوي على رقم هاتف. حاول تغيير النص.
+    address_not_allowed: يبدو أنه يحتوي على عنوان. حاول تغيير النص.
+    email_not_allowed: يبدو أنه يحتوي على بريد إلكتروني. حاول تغيير النص.
+    profanity_not_allowed: 'يبدو أنه يحتوي على ألفاظ نابية. حاول تغيير النص. '
   builder:
-    created: "لقد أنشأت برنامج نصي جديد."
-    destroyed: "لقد دمرت برنامج نصي."
-    manage: "بناء مستويات"
-    view: "عرض"
-    back: "العودة إلى البرامج النصية"
-    success: "لقد نجحت في تعديل المربعات البرمجية."
+    created: لقد أنشأت برنامج نصي جديد.
+    destroyed: لقد دمرت برنامج نصي.
+    manage: بناء مستويات
+    view: عرض
+    back: العودة إلى البرامج النصية
+    success: لقد نجحت في تعديل المربعات البرمجية.
     level:
-      create: "إنشاء مستوى جديد"
-      current: "المستويات الحالية"
-      unused: "المستويات غير المستخدمة"
+      create: إنشاء مستوى جديد
+      current: المستويات الحالية
+      unused: المستويات غير المستخدمة
   upsell:
     applab:
-      title: "مختبر التطبيق"
-      body: "مختبر التطبيق هي بيئة برمجة حيث يمكنك صنع تطبيقات بسيطة. تصميم تطبيق،
+      title: مختبر التطبيق
+      body: مختبر التطبيق هي بيئة برمجة حيث يمكنك صنع تطبيقات بسيطة. تصميم تطبيق،
         أكواد مع قطع برمجية أو JavaScript لجعلها تعمل، ثم قم بشاركة التطبيق الخاص
-        بك في ثوان."
-      body_short: "تصميم تطبيق، أكواد مع قطع برمجية أو JavaScript لجعلها تعمل، ثم
-        قم بشاركة التطبيق الخاص بك في ثوان."
-      audience: "للأعمار 13 +"
-      cta: "تعلم كيف"
+        بك في ثوان.
+      body_short: تصميم تطبيق، أكواد مع قطع برمجية أو JavaScript لجعلها تعمل، ثم قم
+        بشاركة التطبيق الخاص بك في ثوان.
+      audience: للأعمار 13 +
+      cta: تعلم كيف
     hoc:
-      title: "المتاهة الكلاسيكية"
-      body: "جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك."
+      title: المتاهة الكلاسيكية
+      body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
     flappy:
-      title: "رمز لعبة flappy"
-      body: "هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy
-        التعليمية الخاصة بنا!"
+      title: رمز لعبة flappy
+      body: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy
+        التعليمية الخاصة بنا!
     20-hour:
-      title: "دورة تدريبية مسرّعة"
-      body: "هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم
+      title: دورة تدريبية مسرّعة
+      body: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم
         هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن
-        أنها متعة للتعلم لكل الإعمار."
-      body_short: "تعلم علوم الكمبيوتر الأساسية في الإصدار المعجل من الدورات من 2-4."
+        أنها متعة للتعلم لكل الإعمار.
+      body_short: تعلم علوم الكمبيوتر الأساسية في الإصدار المعجل من الدورات من 2-4.
     hoc2014:
       try_new_tutorial: جرب درس ساعة من البرمجة الجديد في "بيتا - التجريبي"
-      try_frozen: "الفنان مع آنا و إلسا, من Frozen"
+      try_frozen: الفنان مع آنا و إلسا, من Frozen
     gallery:
-      title: "معرض"
+      title: معرض
       body: عرض معرض صور "تطبيقات" و "الفنانين" التي تم إنشاؤها من قبل مستخدمينا
     gamelab:
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "للأعمار 13 +"
-      cta: "تعلم كيف"
+      audience: للأعمار 13 +
+      cta: تعلم كيف
     hoc-encryption:
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
@@ -754,21 +753,21 @@
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "للأعمار 13 +"
-      cta: "تعلم كيف"
+      audience: للأعمار 13 +
+      cta: تعلم كيف
     frozen:
-      title: "ملكة الثلج Frozen"
+      title: ملكة الثلج Frozen
     starwars:
       title: حرب النجوم "Star Wars"
     infinity:
-      title: "لعبة مختبر اللعب اللانهائية"
+      title: لعبة مختبر اللعب اللانهائية
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: "استكشف عالم Minecraft عن طريق الكود."
+      body: استكشف عالم Minecraft عن طريق الكود.
     minecraft2016:
       title: Minecraft
-      body: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت."
+      body: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
     hero:
       title: Minecraft
       body: Minecraft is back for the Hour of Code with a brand new activity! Journey
@@ -781,16 +780,16 @@
       body: In this lesson, students will use the Text Compression Widget to compress
         text by substituting patterns with symbols.
     unplugged:
-      title: "درس غير موصول"
-      audience: "العمر 4+"
+      title: درس غير موصول
+      audience: العمر 4+
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
         or as complementary lessons for any computer science course.
-      body_short: "إذا لم يكن لديك أجهزة حاسب، حاول هذه الدروس الغير متصلة بالشبكة
-        في الفصول الدراسية الخاصة بك."
+      body_short: إذا لم يكن لديك أجهزة حاسب، حاول هذه الدروس الغير متصلة بالشبكة
+        في الفصول الدراسية الخاصة بك.
     unplugged_conditionals:
-      title: "الجمل الشرطية"
+      title: الجمل الشرطية
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -799,59 +798,59 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Ages 14+
-      cta: "تعلم كيف"
+      cta: تعلم كيف
   gallery:
-    students_drew_these_with_code: "قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!"
-    students_made_these_with_code: "قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!"
-    picture_count: "في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة برسم <b>%{count}</b>
+    students_drew_these_with_code: قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!
+    students_made_these_with_code: قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!
+    picture_count: في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة برسم <b>%{count}</b>
       لوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج
-      وهو يعمل."
-    activity_count: "في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة بإنتاج <b>%{count}</b>
+      وهو يعمل.
+    activity_count: في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة بإنتاج <b>%{count}</b>
       تطبيقات ولوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى
-      البرنامج وهو يعمل."
-    want_to_make_your_own: "هل ترغب في إنجاز مشروعك الخاص؟"
+      البرنامج وهو يعمل.
+    want_to_make_your_own: هل ترغب في إنجاز مشروعك الخاص؟
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
-    more: "المزيد من &rarr;"
-    caption_by_name_age: "من قِبل %{name}، العمر %{age}"
-    caption_time_ago: "من قبل %{time_ago}"
-    header: "معرض"
-    header_playlab: "مختبر اللعب"
-    header_artist: "الرسام"
-    report_abuse: "الابلاغ عن سوء استخدام"
+    more: المزيد من &rarr;
+    caption_by_name_age: من قِبل %{name}، العمر %{age}
+    caption_time_ago: من قبل %{time_ago}
+    header: معرض
+    header_playlab: مختبر اللعب
+    header_artist: الرسام
+    report_abuse: الابلاغ عن سوء استخدام
   landing:
-    prerelease: "هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>.
+    prerelease: هذا الدرس لا يزال بنسختة التجريبية <span class='betatext'> Beta </span>.
       مما يعني أن هذة النسخة ليست النسخة النهائية من هذا الدرس وهي عرضة للمراجعة عند
-      الحصول على الآراء وإجراء التغييرات بناء عليها."
-    prerelease_hoc2014: "هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'>
+      الحصول على الآراء وإجراء التغييرات بناء عليها.
+    prerelease_hoc2014: هذا الدرس التعليمي لا يزال بنسختة التجريبية <span class='betatext'>
       Beta </span>. فهو عرضة للمراجعة عند الحصول على الآراء وإجراء التغييرات بناء
-      عليها."
-    report_bug: "الإبلاغ عن خلل"
-    support: "للحصول على المساعدة"
+      عليها.
+    report_bug: الإبلاغ عن خلل
+    support: للحصول على المساعدة
     support_url: support.code.org
-    help_resources: "المساعدة والموارد"
+    help_resources: المساعدة والموارد
     help_support: Help and Support
     documentation: Documentation
     tutorials: Tutorials
   multi:
-    wrong_title: "الإجابة غير صحيحة"
-    wrong_body: "أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!"
-    correct_title: "صحيح"
-    correct_body: "هذا هو الجواب الصحيح."
+    wrong_title: الإجابة غير صحيحة
+    wrong_body: أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!
+    correct_title: صحيح
+    correct_body: هذا هو الجواب الصحيح.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "شكراً"
-    wrong_body: "شكرا لك على تقديم إجابة."
-    correct_title: "شكراً"
-    correct_body: "شكرا لك على تقديم إجابة."
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم إجابة.
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم إجابة.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "شكراً"
-    wrong_body: "شكرا لك على تقديم الإجابات."
-    correct_title: "شكراً"
-    correct_body: "شكرا لك على تقديم الإجابات."
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم الإجابات.
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم الإجابات.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -859,58 +858,58 @@
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "شكراً"
-    wrong_body: "شكرا لك على تقديم الإجابات."
-    correct_title: "شكراً"
-    correct_body: "شكرا لك على تقديم الإجابات."
+    wrong_title: شكراً
+    wrong_body: شكرا لك على تقديم الإجابات.
+    correct_title: شكراً
+    correct_body: شكرا لك على تقديم الإجابات.
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
     submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: "تركت بعض الأسئلة غير مكتملة.  لا يمكنك تحرير مشروعكم
-      بعد تقديمه.  هل أنت متأكد؟"
+    submit-incomplete-body: تركت بعض الأسئلة غير مكتملة.  لا يمكنك تحرير مشروعكم بعد
+      تقديمه.  هل أنت متأكد؟
     submit-complete-title: Submit your assessment
-    submit-complete-body: "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟"
+    submit-complete-body: لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟
   match:
-    wrong_title: "الحل غير صحيح"
-    wrong_body: "الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!"
-    correct_title: "صحيح"
-    correct_body: "هذا هو الجواب الصحيح."
+    wrong_title: الحل غير صحيح
+    wrong_body: الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!
+    correct_title: صحيح
+    correct_body: هذا هو الجواب الصحيح.
   contract_match:
-    wrong_title: "الإجابة غير صحيحة"
-    badname: "اسم العقد الخاص بك غير صحيح."
-    badname_case: "أسماء الدلالات تعتمد على حالة الحرف. حاول تغيير حالة حروف اسم عقدك."
-    badrange: "النطاق المحدد لعقدك خاطئ."
-    baddomainsize: "لا يملك العقد الخاص بك العدد الصحيح من العناصر الموجودة في المجال."
-    baddomainname: "لدى واحد أو أكثر من عناصر المجال الخاص بك اسم غير صحيح."
-    baddomaintype: "لدى واحد أو أكثر من عناصر المجال الخاص بك نوع خاطئ، أو أنها بالترتيب
-      الخاطئ."
+    wrong_title: الإجابة غير صحيحة
+    badname: اسم العقد الخاص بك غير صحيح.
+    badname_case: أسماء الدلالات تعتمد على حالة الحرف. حاول تغيير حالة حروف اسم عقدك.
+    badrange: النطاق المحدد لعقدك خاطئ.
+    baddomainsize: لا يملك العقد الخاص بك العدد الصحيح من العناصر الموجودة في المجال.
+    baddomainname: لدى واحد أو أكثر من عناصر المجال الخاص بك اسم غير صحيح.
+    baddomaintype: لدى واحد أو أكثر من عناصر المجال الخاص بك نوع خاطئ، أو أنها بالترتيب
+      الخاطئ.
   text_match:
-    placeholder: "ادخل إجابتك هنا "
-    open_response_title: "شكرا،"
-    open_response_body: "شكرا لردكم!"
-    correct_title: "صحيح"
-    correct_body: "هذا هو الجواب الصحيح."
+    placeholder: 'ادخل إجابتك هنا '
+    open_response_title: شكرا،
+    open_response_body: شكرا لردكم!
+    correct_title: صحيح
+    correct_body: هذا هو الجواب الصحيح.
   dialog:
-    ok: "موافق"
-    startover_title: "هل أنت متأكد من أنك تريد البدء من جديد؟"
-    startover_body: "سيقوم هذا بإعادة اللغز إلى حالته الأصلية وحذف جميع المربعات البرمجية
-      التي قمت بإضافتها أو تعديلها."
-    startover_ok: "البدء من جديد"
-    startover_cancel: "إلغاء"
+    ok: موافق
+    startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
+    startover_body: سيقوم هذا بإعادة اللغز إلى حالته الأصلية وحذف جميع المربعات البرمجية
+      التي قمت بإضافتها أو تعديلها.
+    startover_ok: البدء من جديد
+    startover_cancel: إلغاء
   time:
-    hour: "ساعة واحدة"
-    day: "يوم"
-    week: "أسبوع"
+    hour: ساعة واحدة
+    day: يوم
+    week: أسبوع
   age_interstitial:
-    age: "عمرك"
-    header: "تحديث معلومات الحساب"
-    message: "نحن في طور ترقية خبراتنا لنقدم لك حماية خصوصية أفضل مما سبق، لنقوم بذلك
+    age: عمرك
+    header: تحديث معلومات الحساب
+    message: نحن في طور ترقية خبراتنا لنقدم لك حماية خصوصية أفضل مما سبق، لنقوم بذلك
       نحتاج أن يدخل المستخدمون الحاليون عمرهم هنا. <br/> ولن يقوم Code.org على الإطلاق
-      بإعارة أو بيع أو مشاركة هذه المعلومات مع أي طرف آخر."
+      بإعارة أو بيع أو مشاركة هذه المعلومات مع أي طرف آخر.
     sign_out: إذا كنت لا ترغب بالإدلاء بعمرك، يمكنك <a href="%{url}"> تسجيل الخروج</a>.
   terms_interstitial:
-    title: "تحديث شروط الخدمة وسياسة الخصوصية"
+    title: تحديث شروط الخدمة وسياسة الخصوصية
     intro_desc: 'قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه.
       فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن
       عناوين البريد الإلكتروني لحسابات الطلاب في "استوديو البرمجية".</i> هذا فرق كبير
@@ -921,64 +920,64 @@
       التعليمات البرمجية".  عند تسجيل حساب لطالب دون سن 13، سيتم مطالبتك بتأكيد أن
       المدرسة الخاصة بك بموافقة الوالدين لجمع المعلومات الشخصية للطالب لاستخدام والاستفادة
       من المدرسة، بما في ذلك البرامج التعليمية مثل Studio التعليمات البرمجية.
-    tos: "شروط الخدمة"
-    privacy: "سياسة الخصوصية"
-    privacy_notice: "ملاحظة: سياسة الخصوصية"
+    tos: شروط الخدمة
+    privacy: سياسة الخصوصية
+    privacy_notice: 'ملاحظة: سياسة الخصوصية'
     accept_label: أوافق على <a href="%{tos_url}" target="_blank"> شروط الخدمة</a>
       و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
-    accept: "اوافق"
-    print: "طباعة"
+    accept: اوافق
+    print: طباعة
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: "راجع سياسة الخصوصية المستحدثة"
+    review_terms: راجع سياسة الخصوصية المستحدثة
   school_info_interstitial:
     title: We want to bring Computer Science to every student - help us track our
       progress!
     message: Please enter your school information below.
     message_with_suggestion: Please verify that the following information is correct,
       or update as necessary.
-    save: "حفظ"
+    save: حفظ
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
       science'
     message: Please tell us your race (check all that apply)
     races:
-    - white: "أبيض"
-    - black: "أسود أو أمريكي من أصل أفريقي"
+    - white: أبيض
+    - black: أسود أو أمريكي من أصل أفريقي
     - hispanic: Hispanic or Latino
-    - asian: "آسيوي"
+    - asian: آسيوي
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
-    - other: "أخرى"
+    - other: أخرى
     - opt_out: Prefer not to say
-    submit: "تسجيل"
-    decline: "إغلاق"
+    submit: تسجيل
+    decline: إغلاق
   zendesk_too_young_message: عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع
     دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول
     أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.
   progress:
-    not_started: "لم تبدأ"
-    in_progress: "في طور التقدم"
-    completed_too_many_blocks: "أكملت، استخدمت مربعات برمجية كثيرة جداً"
-    completed_perfect: "مكتمل, ممتاز"
-    furthest_level_attempted: "المستوى الأبعد الذي تمت محاولته"
-    assessment: "تقييم"
-    submitted: "تم التقديم"
+    not_started: لم تبدأ
+    in_progress: في طور التقدم
+    completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة جداً
+    completed_perfect: مكتمل, ممتاز
+    furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
+    assessment: تقييم
+    submitted: تم التقديم
   studio:
-    courses_working_on: "الدورات التدريبية التي تعمل عليها"
-    completed_courses: "الدورات المكتملة"
-    all_courses: "جميع الدورات"
+    courses_working_on: الدورات التدريبية التي تعمل عليها
+    completed_courses: الدورات المكتملة
+    all_courses: جميع الدورات
   project:
-    projects: "المشاريع"
-    create: "إنشاء مشروع"
-    create_a_project: "إنشاء مشروع جديد:"
-    new: "إنشاء جديد"
-    rename: "إعادة تسمية"
-    save: "حفظ"
-    delete: "حذف"
+    projects: المشاريع
+    create: إنشاء مشروع
+    create_a_project: 'إنشاء مشروع جديد:'
+    new: إنشاء جديد
+    rename: إعادة تسمية
+    save: حفظ
+    delete: حذف
     import: Import
     share_link_import_bad_link_header: Share link not recognized
     share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
@@ -987,90 +986,90 @@
     share_link_import_error_header: Something went wrong.
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
-    exit: "العودة إلى الدورة التدريبية"
-    my_projects: "مشاريعي"
-    project_gallery: "المشاريع"
+    exit: العودة إلى الدورة التدريبية
+    my_projects: مشاريعي
+    project_gallery: المشاريع
     publish: Publish
     unpublish: Unpublish
-    share: "المشاركة"
-    share_title: "شارك مشاريعك"
-    share_copy_link: "إنسخ الرابط:"
-    share_embed_description: "يمكنك لصق تضمين رمز في صفحة HTML لعرض المشروع على صفحة
-      ويب."
-    share_u13_warning: "اسأل المعلم الخاص بك قبل مشاركة. فقط تستطيع المشاركة مع الآخرين
-      في المدرسة الخاصة بك."
-    embed: "تضمين"
-    advanced_share: "إظهار الخيارات المتقدمة"
+    share: المشاركة
+    share_title: شارك مشاريعك
+    share_copy_link: 'إنسخ الرابط:'
+    share_embed_description: يمكنك لصق تضمين رمز في صفحة HTML لعرض المشروع على صفحة
+      ويب.
+    share_u13_warning: اسأل المعلم الخاص بك قبل مشاركة. فقط تستطيع المشاركة مع الآخرين
+      في المدرسة الخاصة بك.
+    embed: تضمين
+    advanced_share: إظهار الخيارات المتقدمة
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
-    close: "إغلاق"
-    more: "المزيد"
-    name: "الاسم"
-    updated: "تم التحديث"
-    project_type: "نوع المشروع"
-    help_text: "انقر على <strong>اصنع تطبيق</strong>أو<strong>أرسم شيئاً</strong>في
-      الأسفل لبدأ مشروع جديد!<br/>بمكنك العودة و العمل على مشاريعك في أي وقت."
-    need_help: "جرّب هذه الدورات لمساعدتك على البدء بمشروعك الجديد"
+    close: إغلاق
+    more: المزيد
+    name: الاسم
+    updated: تم التحديث
+    project_type: نوع المشروع
+    help_text: انقر على <strong>اصنع تطبيق</strong>أو<strong>أرسم شيئاً</strong>في
+      الأسفل لبدأ مشروع جديد!<br/>بمكنك العودة و العمل على مشاريعك في أي وقت.
+    need_help: جرّب هذه الدورات لمساعدتك على البدء بمشروعك الجديد
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
-    really_delete: "حذف؟"
-    delete_yes: "نعم"
-    delete_no: "لا"
-    saved: "تم الحفظ"
-    not_saved: "لم يتم الحفظ"
-    cancel: "إلغاء"
-    delete_confirm_title: "هل أنت متأكد من أنك تريد حذف هذا المشروع؟"
-    delete_confirm_text: "بحذفك لمشروعك سيتم إزالته نهائياً من قائمة المشاريع الخاصة
-      بك، ولن يتمكن أي شخص قمت بمشاركة الرابط معه عرض المشروع الخاص بك."
-    view_all: "عرض مشاريعي"
-    remix: "إعادة المزج"
+    really_delete: حذف؟
+    delete_yes: نعم
+    delete_no: لا
+    saved: تم الحفظ
+    not_saved: لم يتم الحفظ
+    cancel: إلغاء
+    delete_confirm_title: هل أنت متأكد من أنك تريد حذف هذا المشروع؟
+    delete_confirm_text: بحذفك لمشروعك سيتم إزالته نهائياً من قائمة المشاريع الخاصة
+      بك، ولن يتمكن أي شخص قمت بمشاركة الرابط معه عرض المشروع الخاص بك.
+    view_all: عرض مشاريعي
+    remix: إعادة المزج
     click_to_remix: انقر فوق "إعادة المزج" لعرض نسختك المعدلة!
-    edit_project: "تعديل المشروع"
+    edit_project: تعديل المشروع
     sharing_disabled: Sorry, this project is not available for sharing. If this is
       your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
       in</a> to your account to view the project.
     abuse:
-      tos: "هذا المشروع قد تم الإبلاغ عنه بانتهاكه Code.org، <a href='http://code.org/tos'>
-        شروط الخدمة</a>، ولا يمكن مشاركته مع الآخرين."
-      policy_violation: "هذا المشروع يحتوي على معلومات لا يمكن مشاركتها مع الآخرين.
-        الرجاء الاتصال بمالك التطبيق لإصلاح محتويات على التطبيق."
-      contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'>
-        مراسلتنا.</a>"
-      go_to_code_studio: "الذهاب الي Code Studio"
+      tos: هذا المشروع قد تم الإبلاغ عنه بانتهاكه Code.org، <a href='http://code.org/tos'>
+        شروط الخدمة</a>، ولا يمكن مشاركته مع الآخرين.
+      policy_violation: هذا المشروع يحتوي على معلومات لا يمكن مشاركتها مع الآخرين.
+        الرجاء الاتصال بمالك التطبيق لإصلاح محتويات على التطبيق.
+      contact_us: إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'>
+        مراسلتنا.</a>
+      go_to_code_studio: الذهاب الي Code Studio
       report_abuse_form:
-        intro: "اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل
+        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل
           من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات
           الموجودة على Code Studio, الرجاء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك
-          على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب."
+          على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
         validation:
-          email: "الرجاء تقديم بريد إلكتروني"
-          age: "الرجاء تحديد سن"
-          abuse_type: "الرجاء الاجابة عن كفيفة انتهاك هذا المحتوى لشروط الخدمة"
-          abuse_detail: "الرجاء تقديم تفاصيل بشأن المحتوى الذي تقوم بالإبلاغ عنه"
+          email: الرجاء تقديم بريد إلكتروني
+          age: الرجاء تحديد سن
+          abuse_type: الرجاء الاجابة عن كفيفة انتهاك هذا المحتوى لشروط الخدمة
+          abuse_detail: الرجاء تقديم تفاصيل بشأن المحتوى الذي تقوم بالإبلاغ عنه
         abusive_url: الرابط "URL" للمحتوي الذي تقوم بالابلاغ عنه
         abuse_type:
-          question: "كيف يقوم هذا المحتوى رابط %{link_start} بانتهاك شروط الخدمة رابط%{link_end}
-            ؟"
-          harassment: "التهديدات والتسلط عبر الإنترنتت, تصرفات غير لائقة"
-          offensive: "محتوى مسيء"
-          infringement: "التعدي على حقوق النشر"
-          other: "أخرى"
-        detail: "يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه."
-        acknowledge: "عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا
+          question: كيف يقوم هذا المحتوى رابط %{link_start} بانتهاك شروط الخدمة رابط%{link_end}
+            ؟
+          harassment: التهديدات والتسلط عبر الإنترنتت, تصرفات غير لائقة
+          offensive: محتوى مسيء
+          infringement: التعدي على حقوق النشر
+          other: أخرى
+        detail: يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.
+        acknowledge: عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا
           للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط
-          الاستخدام%{link_end}"
+          الاستخدام%{link_end}
   peer_review:
     accepted:
-      name: "مقبول"
+      name: مقبول
       description: "<strong>نعم</strong>، هذا الإرسال <strong>يلبي</strong> المتطلبات"
     rejected:
-      name: "مرفوض"
+      name: مرفوض
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
-      name: "تم تصعيدها"
-      description: "أود أن يقوم مدرب بمراجعة هذا الإرسال"
+      name: تم تصعيدها
+      description: أود أن يقوم مدرب بمراجعة هذا الإرسال
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
@@ -1084,9 +1083,9 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "لمحة عامة"
-    content: "محتوى"
-    practice: "تمارين معلم الرياضيات"
+    required: لمحة عامة
+    content: محتوى
+    practice: تمارين معلم الرياضيات
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1133,10 +1132,10 @@
       please <a href='%{support_url}'>contact support</a> if you find the content
       objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: "ساعة تحميل التعليمات البرمجية"
-    capsule_title: "هل لديك إنترنت؟"
+    title: ساعة تحميل التعليمات البرمجية
+    capsule_title: هل لديك إنترنت؟
     capsule_desc: استخدام الإنترنت، على شبكة الإنترنت <a href="%{url}">%{app_name}</a>.
-    instructions_headline: "لا يوجد إتصال بالإنترنت؟"
+    instructions_headline: لا يوجد إتصال بالإنترنت؟
     instructions: 'إرشادات للمعلمين: إذا كانت لديك خدمة إلانترنت ضعيفه، هذه الدروس
       "ساعة من التعليمات البرمجية" متوفرة للتحميل والتثبيت واستخدامها دون اتصال. اختر
       اللغة الخاصة بك ومنصة وتنزيل وتثبيتهاا على كافة أجهزة الكمبيوتر في الفصول الدراسية
@@ -1144,9 +1143,9 @@
       ملاحظة: سوف لا يكون للطلاب القدره على تسجيل الدخول إلى "استوديو التعليمات البرمجية"
       أو حفظ التقدم، أو طباعة الشهادات. يمكن للمعلمين طباعة الشهادات قبل الموعد المحدد
       <a href="%{url}"> هنا</a>.'
-    minecraft_name: "ساعة البرمجة ماين كرافت"
+    minecraft_name: ساعة البرمجة ماين كرافت
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: "حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)"
+    starwars_javascript_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)'
     download_message: Download %{app_name} for offline use (136MB)
     download_in_Albanian: 'Download in Albanian:'
     download_in_Arabic: 'Download in Arabic:'
@@ -1191,7 +1190,7 @@
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
-    mac: "نظام تشغيل ماك"
+    mac: نظام تشغيل ماك
   plc:
     preview_assignments:
       content_focus_header: Content Focus Area

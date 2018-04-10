@@ -18,7 +18,7 @@
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
-        Unplug9: "Štafeta Programiranje"
+        Unplug9: Štafeta Programiranje
         Farmer3: Farmer 3
         Unplug10: Internet
         Artist5: Umjetnik 5
@@ -259,8 +259,8 @@
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi
           ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati
           zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: "Šta ne valja u ovom programu? Kako ga treba popraviti
-          tako da ja mogu ukloniti ovu hrpu?"
+        maze_karel_debug_seq_2: Šta ne valja u ovom programu? Kako ga treba popraviti
+          tako da ja mogu ukloniti ovu hrpu?
         maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje
           bude poravnato.
         maze_karel_debug_while: Kako treba izmijeniti ovaj program da bih ja zatrpao
@@ -507,7 +507,7 @@
         loop_for: Blok "Brojač"
         parameters: Funkcije sa Parametrima
         hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: "Šta je to informatika?"
+        Unplug1: Šta je to informatika?
         Unplug2: Računarsko razmišljanje
         Unplug3: Papirno Programiranje Grafikona
         Unplug4: Algoritmi
@@ -547,7 +547,7 @@
         C2_graph_paper: Papirno Programiranje Grafikona
         C2_conditionals_with_cards: Uvjeti
         C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: "Štafeta Programiranje"
+        C2_relay_programming: Štafeta Programiranje
         C2_paper_airplanes: Avioni od Papira
         C2_digital_footprint: Digitalni otisak stopala
         C2_digital_footprint_v2: Digitalni otisak stopala
@@ -762,6 +762,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka

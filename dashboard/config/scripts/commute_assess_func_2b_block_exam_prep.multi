@@ -10,16 +10,19 @@ markdown <<MARKDOWN
 What will be displayed when this code is run?<br>
 </p>
 
-<img src="https://images.code.org/2a2d0ace59f44d8817ca7ef1aad18949-image-1482508898388.png">
+<img src="https://images.code.org/a8e9e9422264eeba131ef1eed4b9c577-image-1482335032822.png">
+<!-- TEXT: <img src="https://images.code.org/2a2d0ace59f44d8817ca7ef1aad18949-image-1482508898388.png"> -->
 
 </div>
 
 <div style="width: 300px; float: left; border-left: solid 1px #00adbc; padding-left: 10px; margin-left: 25px">
 <em>These procedures are shown for your reference - they are the same as the last question.</em><br>
-<img src="https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png" >
+<img src="https://images.code.org/4735000ae66d81b5a1dd2c9775a5b7e3-image-1482334301386.png" style="width: 300px">
+<!-- TEXT:
+<img src="https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png" > -->
 </div>
-<!-- 
-![](https://images.code.org/a8e9e9422264eeba131ef1eed4b9c577-image-1482335032822.png) -->
+
+ 
 
 MARKDOWN
 

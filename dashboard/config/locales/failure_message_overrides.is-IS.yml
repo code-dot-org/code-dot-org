@@ -73,8 +73,8 @@
         í átt að leikmanni" skipun við "þegar kviknar" atburð þeirra með lykkju svo
         þeir elti þig. Ef þeir fara of hratt, getur þú bætt við "bíða" skipun til
         að hægja á þeim.
-      MC HOC 2016 Level 8_failure_message_override: "Þú þarft að láta laumupúkann
-        sprengja vegginn svo að þú komist til kindarinnar."
+      MC HOC 2016 Level 8_failure_message_override: Þú þarft að láta laumupúkann sprengja
+        vegginn svo að þú komist til kindarinnar.
       MC HOC 2016 New Drop_failure_message_override: Notaðu örvarlyklana til að ganga
         að kindinni og ýttu á bilslána eða smelltu á leikjaborðið til að nýta hana.
         Og gleymdu ekki að bæta "Gefa" kubbnum við kóðann þinn.
@@ -89,13 +89,13 @@
         láta járnþursinn elta og ráðast á uppvakinganna.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Til hamingju! Þú safnaðir X peningum!
-      courseE_playLab_scaffold3_failure_message_override: "Þú verður að bæta tveimur
-        eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist."
+      courseE_playLab_scaffold3_failure_message_override: Þú verður að bæta tveimur
+        eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: "Þú verður að bæta í leikinn
-        tveimur eða fleiri nýjum leikmönnum sem hreyfast."
+      grade4_scaffolded_project3_failure_message_override: Þú verður að bæta í leikinn
+        tveimur eða fleiri nýjum leikmönnum sem hreyfast.
       kikiTesta_failure_message_override: Til hamingju! Þú safnaðir X peningum!
       sample1_failure_message_override: Til hamingju! Þú safnaðir X peningum!
       sample4_failure_message_override: Til hamingju! Þú safnaðir X peningum!

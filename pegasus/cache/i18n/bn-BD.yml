@@ -1,17 +1,17 @@
 "bn-BD":
-  hour_of_code: "এক ঘন্টার কোড"
-  hello: "হ্যালো ওয়ার্ল্ড"
+  hour_of_code: এক ঘন্টার কোড
+  hello: হ্যালো ওয়ার্ল্ড
   'yes': '"হ্যাঁ"'
-  'no': "না"
-  select_language: "অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন"
+  'no': না
+  select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
   upgrade_ie_message: Code.org শীঘ্রই Internet Explorer 8, 9, এবং 10 এর জন্য সহায়তা
     অপসারণ করবে। দয়া করে একটা আধুনিক ব্রাউজােরে আপগ্রেড করুন।
   upgrade_ie_message_csedweek: CSEdWeek.org শীঘ্রই Internet Explorer 8, 9, এবং 10
     এর জন্য সহায়তা অপসারণ করবে। দয়া করে একটা আধুনিক ব্রাউজােরে আপগ্রেড করুন।
-  upgrade_ie_link: "আরও জানুন"
-  en: "কম্পিউটার বিজ্ঞান"
-  computer_science_edweek: "কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ"
-  csedweek_dates: "ডিসেম্বর 8-14, ২০১৪"
+  upgrade_ie_link: আরও জানুন
+  en: কম্পিউটার বিজ্ঞান
+  computer_science_edweek: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
+  csedweek_dates: ডিসেম্বর 8-14, ২০১৪
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Hour of Code </a> আসছে, তাই সব শিক্ষক ও উদ্যোক্তাদের আহ্বান
     জানানো হচ্ছে, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -20,30 +20,30 @@
     none; font-weight: 400"> আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর
     উপর অন্যান্য বিষয় গুলি জানুন</a>'
   n_have_learned_an_hoc: "<h2>এক ঘণ্টা কোড করার </h2><h1> চেষ্টা করুন </h1><h3># সেবা</h3>"
-  anybody_can_learn: "যে কেউ শিখতে পারবে।"
-  learn_now: "এবার শিখুন"
-  petition_message: "প্রত্যেক স্কুলের প্রতিটি ছাত্রের কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ
-    থাকা উচিত"
-  petition_sign_message: "আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ
-    দিতে বলুন।"
-  petition_sign_message_support: "আমাদের সমর্থন করলে, আপনার নাম সই করুন। অন্যদের যোগ
-    দিতে বলুন।"
+  anybody_can_learn: যে কেউ শিখতে পারবে।
+  learn_now: এবার শিখুন
+  petition_message: প্রত্যেক স্কুলের প্রতিটি ছাত্রের কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ
+    থাকা উচিত
+  petition_sign_message: 'আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ
+    দিতে বলুন।'
+  petition_sign_message_support: আমাদের সমর্থন করলে, আপনার নাম সই করুন। অন্যদের যোগ
+    দিতে বলুন।
   petition_join_others: "# অন্যদের যোগ দিন"
-  name: "নাম"
-  email: "ই-মেইল"
+  name: নাম
+  email: ই-মেইল
   zipcode: ZIP কোড বা দেশ
-  submit: "জমা করুন"
-  twentyhours_heading: "আমাদের কম্পিউটার সায়েন্স কোর্সের সূচনাটি করার চেষ্টা করুন।"
-  twentyhours_text: "আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
-    এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।"
-  og_title: "প্রতিটি শিশু সুযোগের দাবীদার"
+  submit: জমা করুন
+  twentyhours_heading: আমাদের কম্পিউটার সায়েন্স কোর্সের সূচনাটি করার চেষ্টা করুন।
+  twentyhours_text: আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
+    এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।
+  og_title: প্রতিটি শিশু সুযোগের দাবীদার
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
-  og_description: "প্রতিটি স্কুলে প্রত্যেক শিক্ষার্থীর কম্পিউটার সায়েন্স পড়ার সুযোগের
-    দাবীদার।"
+  og_description: প্রতিটি স্কুলে প্রত্যেক শিক্ষার্থীর কম্পিউটার সায়েন্স পড়ার সুযোগের
+    দাবীদার।
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ"
+  csedweek_og_title: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
@@ -52,104 +52,103 @@
     for every student to learn.
   hoc2014_heading: যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/>
     ডিসেম্বর 8-14, ২০১৪ <br/>
-  hoc2014_students: "ছাত্র"
-  hoc2014_try: "এটা চেষ্টা করুন।"
-  hoc2014_teachers: "শিক্ষকদের"
-  hoc2014_host: "এটা উদযাপন করুন"
-  hoc2014_everyone: "সবাই"
-  hoc2014_support: "এটা সমর্থন করুন &#x25BE;"
+  hoc2014_students: ছাত্র
+  hoc2014_try: এটা চেষ্টা করুন।
+  hoc2014_teachers: শিক্ষকদের
+  hoc2014_host: এটা উদযাপন করুন
+  hoc2014_everyone: সবাই
+  hoc2014_support: এটা সমর্থন করুন &#x25BE;
   hoc2014_whatishoc: Hour of Code কি?
   csedweek_map_header: "# CSEdWeek / সারা বিশ্বে এক ঘন্টার কোডিং এর ইভেন্টগুলি"
-  csedweek_map_signup: "আপনার অনুষ্ঠান নিবন্ধন করুন"
-  csedweek_map_search_placeholder: "এক ঘন্টার কোডিং এর ইভেন্টগুলি অনুসন্ধান করুন"
-  csedweek_map_search_search: "অনুসন্ধান"
-  csedweek_map_search_reset: "পুনরায় সেট করুন"
-  csedweek_map_legend_title: "কিংবদন্তি"
-  csedweek_map_legend_event: "এক ঘন্টা কোড অনুষ্ঠান"
-  csedweek_map_legend_cs_tech_jam: "কম্পিউটার বিজ্ঞান প্রযুক্তি আড্ডা"
-  cded_sign_up: "সাইন আপ"
-  cded_try_it: "এটা চেষ্টা করুন।"
-  try_now: "এখন চেষ্টা করুন"
-  california_heading: "আপনা্দের স্কুলে কম্পিউটার সায়েন্স শেখানোর ব্যাপারে কথা বলুন"
+  csedweek_map_signup: আপনার অনুষ্ঠান নিবন্ধন করুন
+  csedweek_map_search_placeholder: এক ঘন্টার কোডিং এর ইভেন্টগুলি অনুসন্ধান করুন
+  csedweek_map_search_search: অনুসন্ধান
+  csedweek_map_search_reset: পুনরায় সেট করুন
+  csedweek_map_legend_title: কিংবদন্তি
+  csedweek_map_legend_event: এক ঘন্টা কোড অনুষ্ঠান
+  csedweek_map_legend_cs_tech_jam: কম্পিউটার বিজ্ঞান প্রযুক্তি আড্ডা
+  cded_sign_up: সাইন আপ
+  cded_try_it: এটা চেষ্টা করুন।
+  try_now: এখন চেষ্টা করুন
+  california_heading: আপনা্দের স্কুলে কম্পিউটার সায়েন্স শেখানোর ব্যাপারে কথা বলুন
   california_text: যে কোন শিক্ষক আমাদের <a href='http://studio.code.org/'>এই কোর্স
     বিনামূল্যে</a> দিতে পারবেন। যে কোন সাধারন স্কুলে <a href='http://code.org/educate/k5'>
     কম্পিউটার বিজ্ঞান শিক্ষা লাভ করা যায় </a> উচ্চ বিদ্যালয় গুলিকে বলুন< href = "http://code.org/educate/districts"
     > আমাদের সাথে সঙ্গী হতে।
-  california_button: "আরও জানুন"
+  california_button: আরও জানুন
   flappy_heading: Code.org এর flappy জন্মদিন
   flappy_text: Code.org এইমাত্র 1 বছরের হল। <br/> <br/> আপনার নিজের <b>Flappy</b>
     খেলা তৈরি করুন আর আমদের সাথে সেটার আনন্দ ভাগ করে নিন। সেটা চলবে আপনার নিজস্ব নিয়মে
     এবং তা বন্ধুদের সাথে শেয়ার করুন!
-  view_english_site: "ইংরেজি website দেখুন"
+  view_english_site: ইংরেজি website দেখুন
   non_english_tutorials: Tutorials একাধিক ভাষায় অনুবাদ করা।
-  write_your_first_program: "আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন"
-  learn_cs_concepts: "কম্পিউটার বিজ্ঞানের প্রাথমিক ধারণা লাভ করুন অপসারণ এবং নিক্ষেপ
+  write_your_first_program: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
+  learn_cs_concepts: কম্পিউটার বিজ্ঞানের প্রাথমিক ধারণা লাভ করুন অপসারণ এবং নিক্ষেপ
     প্রোগ্রামিং দ্বারা । বিল গেটস, মার্ক জাকারবার্গ, Angry Bird ও Plant vs. Zombies
     দ্বারা ভিডিও বক্তৃতায় আপনারা দেখবেন খেলার ছলে শেখার উপায় বলা আছে। পুনরাবৃত্তি-loops
-    শিখুন, যদি-সেই বিবরণ এবং প্রাথমিক অ্যালগোরিদম জানুন।"
-  all_ages: "সব বয়সের জন্য"
-  beginner: "শিক্ষানবিশ"
+    শিখুন, যদি-সেই বিবরণ এবং প্রাথমিক অ্যালগোরিদম জানুন।
+  all_ages: সব বয়সের জন্য
+  beginner: শিক্ষানবিশ
   n_participants: "# অংশগ্রহণকারীরা"
-  go: "যান"
-  thank_you_: "আপনাকে ধন্যবাদ!"
-  congratulations: "অভিনন্দন !"
-  congratulations_on_completing_hoc: "আওয়ার অব কোড সম্পন্ন  করার জন্য অভিনন্দন।"
-  congratulations_volunteer: "অভিনন্দন: আপনি এক ঘন্টার কোড চেষ্টা করেছেন, https://code.org/volunteer
+  go: যান
+  thank_you_: আপনাকে ধন্যবাদ!
+  congratulations: অভিনন্দন !
+  congratulations_on_completing_hoc: আওয়ার অব কোড সম্পন্ন  করার জন্য অভিনন্দন।
+  congratulations_volunteer: 'অভিনন্দন: আপনি এক ঘন্টার কোড চেষ্টা করেছেন, https://code.org/volunteer
     এখান থেকে শ্রেণীকক্ষে স্বেচ্ছাসেবক হবার জন্য নিবন্ধন করুন এবং ছাত্র এক ঘন্টার
-    কোড শিখতে সহায়তা করুন!"
-  congratulations_on_completing_course1: "কোর্স ১ সম্পন্ন করার জন্য অভিনন্দন"
-  congratulations_on_completing_course2: "কোর্স ২ সম্পন্ন করার জন্য অভিনন্দন"
-  congratulations_on_completing_course3: "কোর্স ৩ সম্পন্ন করার জন্য অভিনন্দন"
-  congratulations_on_completing_course4: "কোর্স ৪ সম্পন্ন করার জন্য অভিনন্দন"
+    কোড শিখতে সহায়তা করুন!'
+  congratulations_on_completing_course1: কোর্স ১ সম্পন্ন করার জন্য অভিনন্দন
+  congratulations_on_completing_course2: কোর্স ২ সম্পন্ন করার জন্য অভিনন্দন
+  congratulations_on_completing_course3: কোর্স ৩ সম্পন্ন করার জন্য অভিনন্দন
+  congratulations_on_completing_course4: কোর্স ৪ সম্পন্ন করার জন্য অভিনন্দন
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "অ্যাক্সিলারেটেড কোর্স সম্পন্ন করার জন্য
-    অভিনন্দন"
-  congrats_next_tutorials_title: "পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন"
+  congratulations_on_completing_accelerated: অ্যাক্সিলারেটেড কোর্স সম্পন্ন করার জন্য
+    অভিনন্দন
+  congrats_next_tutorials_title: পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন
   congrats_next_tutorials_desc: এই ছোট, ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন বা <a href="%{current_path}/next">
     সঙ্গী টিউটোরিয়াল</a> চেষ্টা করুন।
-  get_a_certificate_of_achievement: "আপনার প্রশংসাপত্র গ্রহণ করুন"
-  view_course: "কোর্স দেখুন"
-  view_unit: "ইউনিট দেখুন"
-  make_app: "একটি অ্যাপ্লিকেশন তৈরি করুন"
-  congrats_guest_speaker_title: "আপনার শ্রেনীকক্ষের জন্য অতিথি স্পীকার খুঁজুন"
-  congrats_guest_speaker_desc: "এখন আপনার ছাত্র একটি কম্পিউটার বিজ্ঞান কোর্স সমাপ্ত
+  get_a_certificate_of_achievement: আপনার প্রশংসাপত্র গ্রহণ করুন
+  view_course: কোর্স দেখুন
+  view_unit: ইউনিট দেখুন
+  make_app: একটি অ্যাপ্লিকেশন তৈরি করুন
+  congrats_guest_speaker_title: আপনার শ্রেনীকক্ষের জন্য অতিথি স্পীকার খুঁজুন
+  congrats_guest_speaker_desc: এখন আপনার ছাত্র একটি কম্পিউটার বিজ্ঞান কোর্স সমাপ্ত
     করেছেন, উদযাপন করার চেষ্টা করে দেখতে পারেন এবং একটি অতিথি বক্তাকে আপনার শ্রেণীকক্ষ
     আমন্ত্রণ করে তারা বাস্তব জীবনে কি গড়ে তুলতে পারেন তা  দেখানোর চেষ্টা করুন। আপনি
     আমাদের স্বেচ্ছাসেবকদের মানচিত্র ব্যবহার করে, স্থানীয় স্বেচ্ছাসেবকদের সঙ্গে যোগাযোগ
     করতে পারেন শ্রেণীকক্ষ পরিদর্শন জন্য অথবা যেকোন শহরে কম্পিউটার বিজ্ঞান ছাত্র বা
     প্রযুক্তিগত পেশাদার খুঁজতে পারেন যারা দূরবর্তী অবস্থান থেকে ভিডিও চ্যাটের মাধ্যমে
-    আপনার ছাত্রদের উদ্বুদ্ধ করার জন্য প্রস্তুত।"
-  congrats_guest_speaker_cta: "অতিথি স্পীকার সন্ধান করুন"
-  congrats_third_party_title: "এই অ্যাপ্লিকেশন এবং ওয়েবসাইটে আপনার নতুন দক্ষতা ব্যবহার
-    করুন"
-  third_party_gradelevel_kto8: "গ্রেড k-৮"
-  third_party_gradelevel_kto2: "গ্রেড k-২"
-  third_party_gradelevel_2to8: "গ্রেড ২-৮"
-  third_party_gradelevel_4to12: "গ্রেড ৪-১২"
-  third_party_gradelevel_5to12: "গ্রেড ৫-১২"
-  third_party_gradelevel_6plus: "গ্রেড ৬ +"
-  third_party_gradelevel_8plus: "গ্রেড ৮ +"
-  third_party_platform_all: "প্ল্যাটফর্ম: ওয়েব, আইপ্যাড & অ্যান্ড্রয়েড"
-  third_party_platform_mobile: "প্ল্যাটফর্ম: আইপ্যাড & অ্যান্ড্রয়েড"
-  third_party_platform_web: "প্ল্যাটফর্ম: ওয়েব"
-  third_party_price_varies: "দাম: পরিকল্পনা মত তারতম্য"
-  third_party_price_free: "দাম: বিনামূল্যে"
-  third_party_price_299: "মূল্য: ২.৯৯ ডলার/ডাউনলোড"
-  third_party_price_individual: "একক মূল্য: বিনামূল্যে ট্রায়াল & $ ২৫/মাস"
-  third_party_price_school: "স্কুল দাম: ফ্রি প্লান ও প্রো $২৫০০++"
+    আপনার ছাত্রদের উদ্বুদ্ধ করার জন্য প্রস্তুত।
+  congrats_guest_speaker_cta: অতিথি স্পীকার সন্ধান করুন
+  congrats_third_party_title: এই অ্যাপ্লিকেশন এবং ওয়েবসাইটে আপনার নতুন দক্ষতা ব্যবহার
+    করুন
+  third_party_gradelevel_kto8: গ্রেড k-৮
+  third_party_gradelevel_kto2: গ্রেড k-২
+  third_party_gradelevel_2to8: গ্রেড ২-৮
+  third_party_gradelevel_4to12: গ্রেড ৪-১২
+  third_party_gradelevel_5to12: গ্রেড ৫-১২
+  third_party_gradelevel_6plus: গ্রেড ৬ +
+  third_party_gradelevel_8plus: গ্রেড ৮ +
+  third_party_platform_all: 'প্ল্যাটফর্ম: ওয়েব, আইপ্যাড & অ্যান্ড্রয়েড'
+  third_party_platform_mobile: 'প্ল্যাটফর্ম: আইপ্যাড & অ্যান্ড্রয়েড'
+  third_party_platform_web: 'প্ল্যাটফর্ম: ওয়েব'
+  third_party_price_varies: 'দাম: পরিকল্পনা মত তারতম্য'
+  third_party_price_free: 'দাম: বিনামূল্যে'
+  third_party_price_299: 'মূল্য: ২.৯৯ ডলার/ডাউনলোড'
+  third_party_price_individual: 'একক মূল্য: বিনামূল্যে ট্রায়াল & $ ২৫/মাস'
+  third_party_price_school: 'স্কুল দাম: ফ্রি প্লান ও প্রো $২৫০০++'
   third_party_tynker_desc: Tynker-এর সৃজনশীল কম্পিউটিং প্ল্যাটফর্ম শিশুদের গণনীয়
     চিন্তায় সাহায্য করে এবং একটি মজার, স্বজ্ঞাত এবং কল্পনাপ্রবণ উপায়ে প্রোগ্রামিং
     দক্ষতা বিকশিত করতে সাহায্য করে। আমাদের উদ্ভাবনী চাক্ষুষ প্রোগ্রামিং ভাষা, ইন্টারেক্টিভ
     স্ব-বিন্যস্ত কোর্স, এবং খেলা ভিত্তিক প্রোগ্রামিং কার্যক্রম প্রোগ্রামিং এর একটি
     সহজ ভূমিকা প্রদান করে এবং শিশুদের উদ্ভাবন ও সৃজনের ক্ষমতা দেয়।
-  third_party_tynker_btn_curriculum: "শুরুর দিকের পাঠকরা Tynker-এর পাঠক্রম চেষ্টা
-    করুন।"
-  third_party_tynker_btn_site: "ভিজিট করুন Tynker"
+  third_party_tynker_btn_curriculum: শুরুর দিকের পাঠকরা Tynker-এর পাঠক্রম চেষ্টা করুন।
+  third_party_tynker_btn_site: ভিজিট করুন Tynker
   third_party_scratchjr_desc: Scratch Jr. একটি পরিচায়ক প্রোগ্রামিং ভাষা যা তরুণ শিশুদের
     (বয়সের ৫-৭) তাদের নিজস্ব ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে দেয়। শিশু একসঙ্গে
     গ্রাফিক্যাল প্রোগ্রামিং ব্লক জোড়া দিয়ে চরিত্রদের সরানো, লাফ দেওয়া, নাচ, এবং গাত্তয়া
@@ -171,108 +170,108 @@
     মৌলিক কমান্ড দিয়ে কি করতে হবে এবং সাধারণ প্রক্রিয়া যার মাধ্যমে কম্পিউটার প্রোগ্রাম
     লেখা হয়।
   third_party_lightbot_btn_curriculum: Lightbot পাঠক্রম ডাউনলোড করুন
-  third_party_lightbot_btn_site: "ভিজিট করুন Lightbot"
-  third_party_khan_desc: "কিভাবে জাভাস্ক্রিপ্ট ও প্রসেসিংজেএস ব্যবহার করে আঁকা, এনিমেশন
+  third_party_lightbot_btn_site: ভিজিট করুন Lightbot
+  third_party_khan_desc: কিভাবে জাভাস্ক্রিপ্ট ও প্রসেসিংজেএস ব্যবহার করে আঁকা, এনিমেশন
     ও গেম তৈরি করতে হয় শিখুন, অথবা HTML ও CSS দিয়ে ওয়েব পেজ তৈরি করা শিখুন। আপনি
     যাই তৈরি করেন না কেন, তা শেয়ার করতে পারেন, অন্যরা কি তৈরি করেছে তা ঘুরে দেখতে
-    পারেন এবং একে অন্যে কাছে থেকে শিখতে পারেন।"
-  third_party_khan_btn_learn: "খান একাডেমী তে কম্পিউটার সাইন্স শিখুন"
-  third_party_khan_btn_forum: "খান একাডেমী সিএস ফোরাম"
-  third_party_appinv_desc: "এমআইটি অ্যাপ ইনভেন্ট একটি ব্লক-ভিত্তিক প্রোগ্রামিং টুল
+    পারেন এবং একে অন্যে কাছে থেকে শিখতে পারেন।
+  third_party_khan_btn_learn: খান একাডেমী তে কম্পিউটার সাইন্স শিখুন
+  third_party_khan_btn_forum: খান একাডেমী সিএস ফোরাম
+  third_party_appinv_desc: এমআইটি অ্যাপ ইনভেন্ট একটি ব্লক-ভিত্তিক প্রোগ্রামিং টুল
     যা সবাইকে, এমনকি নতুন শিক্ষারথীদের, প্রোগ্রামিং শুরু করার এবং অ্যান্ড্রয়েড ডিভাইসের
     জন্য সম্পূর্ণরূপে কার্যকরী অ্যাপস নির্মাণের আনুমতি দেয়। অ্যাপ ইনভেন্টের নতুনরা
     তাদের প্রথম অ্যাপ্লিকেশন একটি ঘন্টা বা তার কম সময়ে তৈরি ও চালাতে পাড়েন এবং প্রথাগত,
     টেক্সট-ভিত্তিক ভাষার সাথে তুলনায় উল্লেখযোগ্যভাবে কম সময় আরও জটিল অ্যাপ্লিকেশান
-    প্রোগ্রাম তৈরী করতে পারেন।"
-  third_party_appinv_btn_curriculum: "অ্যাপ ইনভেন্টর ২ পাঠক্রম ডাউনলোড করুন"
-  third_party_appinv_btn_forum: "অ্যাপ ইনভেন্টর ২ ফোরাম"
-  third_party_appinv_btn_site: "অ্যাপ ইনভেন্টর ২ পরিদর্শন করুন"
+    প্রোগ্রাম তৈরী করতে পারেন।
+  third_party_appinv_btn_curriculum: অ্যাপ ইনভেন্টর ২ পাঠক্রম ডাউনলোড করুন
+  third_party_appinv_btn_forum: অ্যাপ ইনভেন্টর ২ ফোরাম
+  third_party_appinv_btn_site: অ্যাপ ইনভেন্টর ২ পরিদর্শন করুন
   third_party_codehs_desc: CodeHS, সংক্ষিপ্ত ভিডিও, উদাহরণ কোড দিয়ে প্রোগ্রামিং এর
     বিল্ডিং ব্লকের পরিচয় করায়, এবং প্রচুর প্রোগ্রামিং অনুশীলনের যা প্রাথমিক শিক্ষার্থীদের
     জন্য কোডিং মজা এবং অ্যাক্সেসযোগ্য করে। স্কুল ও শিক্ষকদের জন্য CodeHS পাঠ্যক্রম,
     শিক্ষক সরঞ্জাম ও পিডি প্রদান করে। পৃথক শিক্ষার্থীদের জন্য, আপনি গুরুদের নেটওয়ার্ক
     থেকে আপনার প্রয়োজনঈয় সাহায্য পেতে পারেন।
-  third_party_codehs_btn_try: "কম্পিউটার বিজ্ঞানের ভুমিকার জন্য CodeHS চেষ্টা করুন।"
-  third_party_codecademy_desc: "আমরা শিক্ষার বিষয়ে আগাগোড়া নতুন করে চিন্তা করছি। ওয়েব
+  third_party_codehs_btn_try: কম্পিউটার বিজ্ঞানের ভুমিকার জন্য CodeHS চেষ্টা করুন।
+  third_party_codecademy_desc: আমরা শিক্ষার বিষয়ে আগাগোড়া নতুন করে চিন্তা করছি। ওয়েব
     প্রায় সবকিছু নতুন আঙ্গিকে দেখাচ্ছে - বাণিজ্য, সামাজিক যোগাযোগ, স্বাস্থ্য, এবং
-    আরো অনেক কিছু।"
+    আরো অনেক কিছু।
   third_party_codecademy_btn_curriculum: Codecademy পাঠক্রম ডাউনলোড করুন
-  third_party_codecademy_btn_site: "ভিজিট করুন Codecademy"
-  third_party_organization: "প্রতিষ্ঠান"
-  third_party_curriculum: "পাঠ্যক্রম"
-  third_party_pricing: "মূল্য স্থির করা"
-  third_party_cost_free: "বিনামূল্যে"
-  third_party_cost_5permonth: "প্রতি ক্লাস ৫ ডলার/মাস"
-  third_party_cost_299: "২.৯৯ ডলার/ ডাউনলোড"
-  third_party_cost_free_399: "বিনামুল্যে চেষ্টা করতে পারেন, ৩৯৯ ডলার/শ্রেনীকক্ষ"
-  third_party_cost_free_2: "বিনামুল্যে চেষ্টা করতে পারেন, ২ ডলার ছাত্র"
-  third_party_cost_free_10: "বিনামুল্যে চেষ্টা করতে পারেন, ৯.৯৯ ডলার/মাস"
-  third_party_desc_5_4to8: "প্রায় ৫ পাঠ, ৪-৮ গ্রেডের জন্য বানানো"
-  third_party_desc_10to12_kto3: "প্রায় ১০-১২ পাঠ, K-৩ গ্রডের জন্য সাজানো"
-  third_party_desc_11_kto5: "প্রায় ১১ টি পাঠ, K-৫ গ্রেডের জন্য সাজানো"
-  third_party_desc_10to12_kto5: "প্রায় ১০-১২ পাঠ, K-৫ গ্রডের জন্য সাজানো"
-  third_party_desc_40_4to8: "প্রায় ৪০ টি পাঠ, ৪-৮ গ্রেডের জন্য সাজানো"
-  third_party_desc_dozens_kto8: "সকল গ্রেড K-৮ এর জন্য ডজনে ডজনে পাঠ্যবস্তু"
-  third_party_desc_10to15_3to12: "১০ ও ১৫ পাঠের মধ্যে, ৩-১২ গ্রেডের জন্য সাজানো"
-  third_party_desc_25to40_3to12: "২৫-৪০ পাঠ, ৩-১২ গ্রেডের জন্য "
-  third_party_desc_20_2to8: "প্রায় ২০ টি পাঠ, ২-৮ গ্রেডের জন্য সাজানো"
-  third_party_desc_7to22_5to12: "৭ ও ২২ পাঠের মধ্যে, ৫-১২ গ্রেডের জন্য সাজানো"
-  third_party_desc_20_4to12: "২০ টিরও বেশি পাঠ, ৪-১২ গ্রেডের জন্য সাজানো"
-  enter_valid_age: "অনুগ্রহ করে সঠিক বয়স নির্বাচন করুন"
-  enter_valid_email: "অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।"
-  get_a_certificate_message: "আমরা আপনার সার্টিফিকেট পাঠিয়ে দেব <a href='/learn/beyond'>
-    এক ঘণ্টার কোড এর থেকে বেশি </a> শিখতে চান?"
-  get_a_certificate_message_after: "ডাউনলোড অথবা মুদ্রণ করার জন্য সার্টিফিকেট এ ক্লিক
+  third_party_codecademy_btn_site: ভিজিট করুন Codecademy
+  third_party_organization: প্রতিষ্ঠান
+  third_party_curriculum: পাঠ্যক্রম
+  third_party_pricing: মূল্য স্থির করা
+  third_party_cost_free: বিনামূল্যে
+  third_party_cost_5permonth: প্রতি ক্লাস ৫ ডলার/মাস
+  third_party_cost_299: ২.৯৯ ডলার/ ডাউনলোড
+  third_party_cost_free_399: বিনামুল্যে চেষ্টা করতে পারেন, ৩৯৯ ডলার/শ্রেনীকক্ষ
+  third_party_cost_free_2: বিনামুল্যে চেষ্টা করতে পারেন, ২ ডলার ছাত্র
+  third_party_cost_free_10: বিনামুল্যে চেষ্টা করতে পারেন, ৯.৯৯ ডলার/মাস
+  third_party_desc_5_4to8: প্রায় ৫ পাঠ, ৪-৮ গ্রেডের জন্য বানানো
+  third_party_desc_10to12_kto3: প্রায় ১০-১২ পাঠ, K-৩ গ্রডের জন্য সাজানো
+  third_party_desc_11_kto5: প্রায় ১১ টি পাঠ, K-৫ গ্রেডের জন্য সাজানো
+  third_party_desc_10to12_kto5: প্রায় ১০-১২ পাঠ, K-৫ গ্রডের জন্য সাজানো
+  third_party_desc_40_4to8: প্রায় ৪০ টি পাঠ, ৪-৮ গ্রেডের জন্য সাজানো
+  third_party_desc_dozens_kto8: সকল গ্রেড K-৮ এর জন্য ডজনে ডজনে পাঠ্যবস্তু
+  third_party_desc_10to15_3to12: ১০ ও ১৫ পাঠের মধ্যে, ৩-১২ গ্রেডের জন্য সাজানো
+  third_party_desc_25to40_3to12: '২৫-৪০ পাঠ, ৩-১২ গ্রেডের জন্য '
+  third_party_desc_20_2to8: প্রায় ২০ টি পাঠ, ২-৮ গ্রেডের জন্য সাজানো
+  third_party_desc_7to22_5to12: ৭ ও ২২ পাঠের মধ্যে, ৫-১২ গ্রেডের জন্য সাজানো
+  third_party_desc_20_4to12: ২০ টিরও বেশি পাঠ, ৪-১২ গ্রেডের জন্য সাজানো
+  enter_valid_age: অনুগ্রহ করে সঠিক বয়স নির্বাচন করুন
+  enter_valid_email: অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।
+  get_a_certificate_message: আমরা আপনার সার্টিফিকেট পাঠিয়ে দেব <a href='/learn/beyond'>
+    এক ঘণ্টার কোড এর থেকে বেশি </a> শিখতে চান?
+  get_a_certificate_message_after: ডাউনলোড অথবা মুদ্রণ করার জন্য সার্টিফিকেট এ ক্লিক
     করুন। এখন আমাদের <a href='http://studio.code.org'> অন্যান্য কোর্সে</a> যান বা
-    <a href='/learn/beyond'> অধিক শেখার জন্য </a> আরও বিকল্প দেখুন।"
-  thanks_for_submitting: "জমা দেওয়ার জন্য ধন্যবাদ!"
-  if_you_enjoyed: "আপনি যদি শিখে মজা পেয়েছেন, তবে আপনার বন্ধুদেরও বলুন এটা চেষ্টা
-    করে দেখতে ! আমরা চাই সারা বিশ্বের সকলে যেন এটা শিখুন।"
-  personalize_certificate: "আপনার সার্টিফিকেটকে ব্যক্তিকরণ করুন"
-  share_achievement: "আপনার উপলব্ধি শেয়ার করুন"
-  beyond_hour_message: "আমাদের <a href='http://studio.code.org'> অন্যান্য কোর্স</a>
+    <a href='/learn/beyond'> অধিক শেখার জন্য </a> আরও বিকল্প দেখুন।
+  thanks_for_submitting: জমা দেওয়ার জন্য ধন্যবাদ!
+  if_you_enjoyed: আপনি যদি শিখে মজা পেয়েছেন, তবে আপনার বন্ধুদেরও বলুন এটা চেষ্টা করে
+    দেখতে ! আমরা চাই সারা বিশ্বের সকলে যেন এটা শিখুন।
+  personalize_certificate: আপনার সার্টিফিকেটকে ব্যক্তিকরণ করুন
+  share_achievement: আপনার উপলব্ধি শেয়ার করুন
+  beyond_hour_message: আমাদের <a href='http://studio.code.org'> অন্যান্য কোর্স</a>
     সম্বন্ধে জানুন বা <a href='/learn/beyond'> এক ঘন্টার জ্ঞানের বাইরে </a> অধিক বিকল্প
-    দেখুন।"
+    দেখুন।
   leaderboards_for_hoc: Leaderboards Hour of Code এর জন্য।
   support_url: http://support.code.org/
-  country: "দেশ"
-  city: "শহর"
-  gender: "লিঙ্গ"
-  boys: "ছেলেরা"
-  girls: "মেয়েরা"
-  give_my_hour: "আপনার ঘন্টা কাদের জন্য দিচ্ছেন:"
-  girls_team: "মেয়েদের দল"
-  boys_team: "ছেলেদের দল"
-  tell_the_world: "সকলকে বলুন !"
-  thanks_for_voting: "ভোট দানের জন্য ধন্যবাদ!"
-  share_on_facebook: "ফেইসবুক এ শেয়ার করুন।"
-  share_on_twitter: "টুইটার এ শেয়ার করুন"
-  beyond_an_hour: "আওয়ার অব কোডের বাইরে।"
-  get_started: "শুরু করুন"
-  i_agree: "আমি একমত"
+  country: দেশ
+  city: শহর
+  gender: লিঙ্গ
+  boys: ছেলেরা
+  girls: মেয়েরা
+  give_my_hour: 'আপনার ঘন্টা কাদের জন্য দিচ্ছেন:'
+  girls_team: মেয়েদের দল
+  boys_team: ছেলেদের দল
+  tell_the_world: সকলকে বলুন !
+  thanks_for_voting: ভোট দানের জন্য ধন্যবাদ!
+  share_on_facebook: ফেইসবুক এ শেয়ার করুন।
+  share_on_twitter: টুইটার এ শেয়ার করুন
+  beyond_an_hour: আওয়ার অব কোডের বাইরে।
+  get_started: শুরু করুন
+  i_agree: আমি একমত
   participant_select: "-নির্বাচন করুন-"
-  participant_student: "ছাত্র"
-  participant_parent: "মা-বাবা"
-  participant_educator: "শিক্ষাবিদ"
-  participant_engineer: "সফটওয়্যার বিসয়ক পেশাদার"
-  participant_other: "উপরের কোনটিই নয়।"
-  print_all: "পুরো প্রিন্ট করো।"
-  print_ice_art: "তোমার বরফ চিত্র প্রিন্ট করো।"
-  create_art_with_zombie: "অথবা zombie(আত্নাহীন মানবদেহ) দিয়ে আরও উন্নত  চিত্র তৈরি
-    করো।"
-  i_am_a: "আমি হলাম"
-  never_spam: "আমরা কখনই আপনাকে spam পাঠাবো না"
-  enter_country: "যুক্তরাষ্ট্রের বদলে অন্য দেশ হলে প্রবেশ করুন"
-  used_infrequent_updates: "শুধু অনিয়মিত update এর জন্য"
-  privacy_practices_children: "ছোটদের জন্য গোপনীয়তা নিয়ম দেখুন"
-  petition_thankyou: "অংশগ্রহনের জন্য ধন্যবাদ"
-  continue_learning_header: "এক ঘণ্টারও পরে শিখুন"
-  continue_learning_body: "অনেক শেখার সুযোগ আছে।  আপনি অনলাইন, অথবা স্থানীয় স্কুলে,
-    বা গ্রীষ্মকালীন ক্যাম্পে শিখতে পারেন।"
-  learn_code_studio: "কোড স্টুডিও কোর্সগুলি করার চেষ্টা করুন।"
-  learn_next_level: "পরবর্তী ধাপে যান"
-  learn_online: "অনলাইনে অন্যান্য কোর্স করুন"
-  learn_classes: "স্থানীয় শ্রেণি খুঁজুন"
+  participant_student: ছাত্র
+  participant_parent: মা-বাবা
+  participant_educator: শিক্ষাবিদ
+  participant_engineer: সফটওয়্যার বিসয়ক পেশাদার
+  participant_other: উপরের কোনটিই নয়।
+  print_all: পুরো প্রিন্ট করো।
+  print_ice_art: তোমার বরফ চিত্র প্রিন্ট করো।
+  create_art_with_zombie: অথবা zombie(আত্নাহীন মানবদেহ) দিয়ে আরও উন্নত  চিত্র তৈরি
+    করো।
+  i_am_a: আমি হলাম
+  never_spam: আমরা কখনই আপনাকে spam পাঠাবো না
+  enter_country: যুক্তরাষ্ট্রের বদলে অন্য দেশ হলে প্রবেশ করুন
+  used_infrequent_updates: শুধু অনিয়মিত update এর জন্য
+  privacy_practices_children: ছোটদের জন্য গোপনীয়তা নিয়ম দেখুন
+  petition_thankyou: অংশগ্রহনের জন্য ধন্যবাদ
+  continue_learning_header: এক ঘণ্টারও পরে শিখুন
+  continue_learning_body: অনেক শেখার সুযোগ আছে।  আপনি অনলাইন, অথবা স্থানীয় স্কুলে,
+    বা গ্রীষ্মকালীন ক্যাম্পে শিখতে পারেন।
+  learn_code_studio: কোড স্টুডিও কোর্সগুলি করার চেষ্টা করুন।
+  learn_next_level: পরবর্তী ধাপে যান
+  learn_online: অনলাইনে অন্যান্য কোর্স করুন
+  learn_classes: স্থানীয় শ্রেণি খুঁজুন
   learn_back_to_minecraft: Minecraft এর সঙ্গে শিখতে থাখুন
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: "#HourOfCode সম্পন্ন করেছি @codeorg"
@@ -321,23 +320,23 @@
     দেওয়া উচিত। http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "সম্পন্ন করুন Hour of Code"
-  beyond_hoc: "এক ঘণ্টারও বেশি"
-  what_gender: "আপনার লিঙ্গ কি?"
-  girl: "মেয়ে"
-  boy: "ছেলে"
-  help_recruit_coders: "আপনার দলে আরও কোডার নিয়োগ করতে সাহায্য করুন!"
-  help_recruit: "আরও কোডার নিয়োগ করতে সাহায্য করুন!"
-  lines_of_code: "এ পর্যন্ত <b># LINES OF CODE</b> এরও বেশি লাইন কোড লেখা হয়েছে।"
+  learn_hoc: সম্পন্ন করুন Hour of Code
+  beyond_hoc: এক ঘণ্টারও বেশি
+  what_gender: আপনার লিঙ্গ কি?
+  girl: মেয়ে
+  boy: ছেলে
+  help_recruit_coders: আপনার দলে আরও কোডার নিয়োগ করতে সাহায্য করুন!
+  help_recruit: আরও কোডার নিয়োগ করতে সাহায্য করুন!
+  lines_of_code: এ পর্যন্ত <b># LINES OF CODE</b> এরও বেশি লাইন কোড লেখা হয়েছে।
   lines_of_code_alt: "<b>#</b> লাইন এরও বেশি কোড ছাত্রদের দ্বারা"
-  who_has_done_hoc: "কারা @codeorg #HourOfCode করেছেন?"
+  who_has_done_hoc: 'কারা @codeorg #HourOfCode করেছেন?'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
   hoc_leaderboards: Hour of Code শীর্ষ স্থান তালিকা
   students_and_lines: "%{students} ছাত্র Hour of Code করেছে এবং %{lines} লাইন কোড
     এরা লেখেছে।"
   start_hoc: Hour of Code শুরু করুন
-  contact_form_topic_press: "সংবাদ/গণমাধ্যম (সাক্ষাৎকার অথবা আলোচনার আয়োজন)"
+  contact_form_topic_press: সংবাদ/গণমাধ্যম (সাক্ষাৎকার অথবা আলোচনার আয়োজন)
   stats_nina: '"প্রতিদিন একই ফলাফল&mdash; শতভাগ নিযুক্ত হওয়া।" - নিনা নিকোলস্‌ পিয়ারি,
     শিক্ষক'
   stats_student: '"আমি জানতাম এটা আমার <b>সারা জীবনের একমাত্র</b> সুযোগ ছিল।" - মারিয়ানা
@@ -345,22 +344,22 @@
   stats_michael: '"আমি  <b>কখনোই,  </b> আমার ছাত্রদের শেখার ব্যাপারে এত উত্তেজিত হতে
     দেখিনি।" - মাইকেল ক্লার্ক , শিক্ষক'
   studiobar_title: "<a href='http://studio.code.org'> কোড স্টুডিও</a> অনুসন্ধান করো।"
-  studiobar_title_nolink: "কোড স্টুডিও অনুসন্ধান করুন"
-  studiobar_elementary_title: "মৌলিক কোর্স।"
-  studiobar_elementary_body: "আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5"
-  studiobar_hoc_title: "কোডিং এর এক ঘণ্টা"
-  studiobar_hoc_body: "অ্যাংরি বার্ডস এর সাথে কোড করতে শেখ।"
-  studiobar_flappy_title: "ফ্লাপি কোড"
-  studiobar_flappy_body: "তোমার নিজের Flappy Game তৈরি করে শেয়ার করো।"
-  studiobar_teacher_title: "শিক্ষকদের জন্য তৈরী"
-  studiobar_teacher_body: "কোড স্টুডিওকে তোমার শ্রেণীতে পরিচিত করাও।"
-  studiobar_frozen_title: "এক ঘন্টার কোড"
+  studiobar_title_nolink: কোড স্টুডিও অনুসন্ধান করুন
+  studiobar_elementary_title: মৌলিক কোর্স।
+  studiobar_elementary_body: আমাদের তিনটি নতুন কোর্স জন্য K &#8209; 5
+  studiobar_hoc_title: কোডিং এর এক ঘণ্টা
+  studiobar_hoc_body: অ্যাংরি বার্ডস এর সাথে কোড করতে শেখ।
+  studiobar_flappy_title: ফ্লাপি কোড
+  studiobar_flappy_body: তোমার নিজের Flappy Game তৈরি করে শেয়ার করো।
+  studiobar_teacher_title: শিক্ষকদের জন্য তৈরী
+  studiobar_teacher_body: কোড স্টুডিওকে তোমার শ্রেণীতে পরিচিত করাও।
+  studiobar_frozen_title: এক ঘন্টার কোড
   studiobar_frozen_body: 'Anna(এন্না) এবং Elsa(এলসা) কে নিয়ে শীতের কল্পনারাজ্য তৈরি
     করো '
-  studiobar_donate_title: "স্বেচ্ছায় অর্থায়ন করুন"
-  studiobar_donate_body: "আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে"
-  studiobar_shop_title: "দোকান"
-  studiobar_shop_body: "বাঁধাধরা নিয়ম থেকে বেরিয়ে এসে গর্বের সাথে আমাদের লোগো লাগাও।"
+  studiobar_donate_title: স্বেচ্ছায় অর্থায়ন করুন
+  studiobar_donate_body: আপনার প্রতি ডলার অর্থায়নে একটি শিশু শেখে
+  studiobar_shop_title: দোকান
+  studiobar_shop_body: বাঁধাধরা নিয়ম থেকে বেরিয়ে এসে গর্বের সাথে আমাদের লোগো লাগাও।
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -400,149 +399,149 @@
   homepage_hero_text_stat_loc: "#লক লাইনের কোড ছাত্রছাত্রীদের দিয়ে লেখা"
   homepage_hero_text_stat_students: "#student_count  কোড স্টুডিওতে ছাত্রছাত্রীদের
     হিসাব"
-  homepage_hero_text_stat_served: "ঘন্টার কোড: #সেবা সেবা"
+  homepage_hero_text_stat_served: 'ঘন্টার কোড: #সেবা সেবা'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "কোডিং এর এক ঘণ্টা"
-  homepage_slot_text_frozen: "আন্না এবং এলসার সাথে ফ্রোজেন"
-  homepage_slot_text_teacher: "শিক্ষক ড্যাশবোর্ড"
-  homepage_slot_text_studio: "আমাদের সব টিউটোরিয়াল"
-  homepage_slot_text_course4: "কোর্স ৪"
-  homepage_slot_text_shop: "দোকান"
-  homepage_slot_text_flappy: "ফ্লাপি কোড"
-  homepage_action_text_hoc: "এক ঘন্টা কোড সকল ছাত্রের জন্য।"
+  homepage_slot_text_hoc: কোডিং এর এক ঘণ্টা
+  homepage_slot_text_frozen: আন্না এবং এলসার সাথে ফ্রোজেন
+  homepage_slot_text_teacher: শিক্ষক ড্যাশবোর্ড
+  homepage_slot_text_studio: আমাদের সব টিউটোরিয়াল
+  homepage_slot_text_course4: কোর্স ৪
+  homepage_slot_text_shop: দোকান
+  homepage_slot_text_flappy: ফ্লাপি কোড
+  homepage_action_text_hoc: এক ঘন্টা কোড সকল ছাত্রের জন্য।
   homepage_action_text_num_served: "# সেবা"
-  homepage_action_text_join_us: "আমাদের সাথে যোগ দিন"
-  homepage_action_text_sign_up: "সাইন আপ"
-  homepage_action_text_try_it: "এটা চেষ্টা করুন।"
-  homepage_action_text_volunteers: "প্রযুক্তিগত স্বেচ্ছাসেবক প্রয়োজন"
-  homepage_action_text_codevideo: "ভিডিও দেখুন"
-  homepage_action_text_teachervideo: "ভিডিও দেখুন"
-  homepage_action_text_watchvideo: "ভিডিও দেখুন"
-  homepage_action_text_girlvideo: "একটি মেয়েকে অনুপ্রাণিত করুন"
-  homepage_action_text_learn: "শেখা শুরু করুন।"
-  homepage_action_text_signpetition: "পিটিশন স্বাক্ষর করুন"
+  homepage_action_text_join_us: আমাদের সাথে যোগ দিন
+  homepage_action_text_sign_up: সাইন আপ
+  homepage_action_text_try_it: এটা চেষ্টা করুন।
+  homepage_action_text_volunteers: প্রযুক্তিগত স্বেচ্ছাসেবক প্রয়োজন
+  homepage_action_text_codevideo: ভিডিও দেখুন
+  homepage_action_text_teachervideo: ভিডিও দেখুন
+  homepage_action_text_watchvideo: ভিডিও দেখুন
+  homepage_action_text_girlvideo: একটি মেয়েকে অনুপ্রাণিত করুন
+  homepage_action_text_learn: শেখা শুরু করুন।
+  homepage_action_text_signpetition: পিটিশন স্বাক্ষর করুন
   homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: "▾ একমত;"
-  homepage_diversity_pledge: "বৈচিত্রতার অঙ্গীকার নিন"
-  homepage_banner_text_prizes: "এক ঘন্টা কোড অনুষ্ঠান আবার আসছে, ডিসেম্বর ৭ থেকে ১৩।"
-  homepage_banner_link_prizes: "ইতিহাসের সবচেয়ে বড় ঘটনায় যোগ দিন।"
-  homepage_banner_text_main: "কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org
-    ও কলেজ বোর্ড গঠন করে।"
-  homepage_banner_text_link: "আরও জানুন"
+  homepage_diversity_pledge: বৈচিত্রতার অঙ্গীকার নিন
+  homepage_banner_text_prizes: এক ঘন্টা কোড অনুষ্ঠান আবার আসছে, ডিসেম্বর ৭ থেকে ১৩।
+  homepage_banner_link_prizes: ইতিহাসের সবচেয়ে বড় ঘটনায় যোগ দিন।
+  homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org
+    ও কলেজ বোর্ড গঠন করে।
+  homepage_banner_text_link: আরও জানুন
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "আরও জানুন"
-  homepage_banner_20k_teachers: "২০০০০ শিক্ষক প্রশিক্ষিত এবং এখন তারা শ্রেনীকক্ষে
-    কম্পিউটার বিজ্ঞান শেখাচ্ছে।"
-  homepage_banner_20k_teachers_link: "আরও জানুন"
+  homepage_banner_privacy_link: আরও জানুন
+  homepage_banner_20k_teachers: ২০০০০ শিক্ষক প্রশিক্ষিত এবং এখন তারা শ্রেনীকক্ষে কম্পিউটার
+    বিজ্ঞান শেখাচ্ছে।
+  homepage_banner_20k_teachers_link: আরও জানুন
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: "বিস্তারিত পড়ুন"
+  homepage_banner_emailprivacy_link: বিস্তারিত পড়ুন
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "আরও জানুন"
-  homepage_slot_text_title_hoc: "এক ঘন্টার কোড"
-  homepage_slot_text_blurb_hoc: "যে কেউ শিখতে পারে। আজ শুরু করুন"
-  homepage_slot_text_link_hoc: "এক ঘন্টা কোড চেষ্টা করুন"
+  homepage_banner_40k_teachers_link: আরও জানুন
+  homepage_slot_text_title_hoc: এক ঘন্টার কোড
+  homepage_slot_text_blurb_hoc: যে কেউ শিখতে পারে। আজ শুরু করুন
+  homepage_slot_text_link_hoc: এক ঘন্টা কোড চেষ্টা করুন
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "কোডের ঘন্টার নিমন্ত্রক হন"
+  homepage_slot_text_link_host: কোডের ঘন্টার নিমন্ত্রক হন
   homepage_slot_text_link_hocserved: "# সেবা"
-  homepage_solot_text_link_volunteer: "কোড ঘন্টা জন্য স্বেচ্ছাসেবা করুন"
-  homepage_slot_text_title_students: "ছাত্র"
-  homepage_slot_text_blurb_students: "আমাদের সব টিউটোরিয়াল অনুসন্ধান করুন"
-  homepage_slot_text_blurb_students_courses: "আমাদের কোর্স ঘুরে দেখুন"
-  homepage_slot_text_link_codestudio: "কোড স্টুডিও চেষ্টা করুন।"
-  homepage_slot_text_link_local: "স্থানীয় শ্রেণী সন্ধান করুন"
-  homepage_slot_text_link_othercourses: "অন্যান্য অনলাইন কোর্স"
-  homepage_slot_text_title_educators: "জ্ঞাপিত"
-  homepage_slot_text_blurb_educators: "আপনার ছাত্রদের শেখান"
-  homepage_slot_text_link_elementary: "প্রাথমিক স্কুল"
-  homepage_slot_text_link_middle: "মাধ্যমিক স্কুল"
-  homepage_slot_text_link_high: "উচ্চ বিদ্যালয়"
-  homepage_slot_text_link_k5: "কোর্সগুলো কে-৫ শ্রেণীর জন্য"
-  homepage_slot_text_link_fullcurriculum: "আমাদের পুরো কারিকুলাম দেখুন"
-  homepage_slot_text_link_pd: "পেশাগত উন্নয়ন"
-  homepage_slot_text_title_advocates: "সমর্থনকারীরা"
-  homepage_slot_text_blurb_advocates: "আমাদের কাজ সমর্থন করে"
-  homepage_slot_text_link_stats: "শুরুটা দেখুন"
-  homepage_slot_text_link_buy: "জড়িত"
-  homepage_slot_text_link_donate: "দান করুন"
+  homepage_solot_text_link_volunteer: কোড ঘন্টা জন্য স্বেচ্ছাসেবা করুন
+  homepage_slot_text_title_students: ছাত্র
+  homepage_slot_text_blurb_students: আমাদের সব টিউটোরিয়াল অনুসন্ধান করুন
+  homepage_slot_text_blurb_students_courses: আমাদের কোর্স ঘুরে দেখুন
+  homepage_slot_text_link_codestudio: কোড স্টুডিও চেষ্টা করুন।
+  homepage_slot_text_link_local: স্থানীয় শ্রেণী সন্ধান করুন
+  homepage_slot_text_link_othercourses: অন্যান্য অনলাইন কোর্স
+  homepage_slot_text_title_educators: জ্ঞাপিত
+  homepage_slot_text_blurb_educators: আপনার ছাত্রদের শেখান
+  homepage_slot_text_link_elementary: প্রাথমিক স্কুল
+  homepage_slot_text_link_middle: মাধ্যমিক স্কুল
+  homepage_slot_text_link_high: উচ্চ বিদ্যালয়
+  homepage_slot_text_link_k5: কোর্সগুলো কে-৫ শ্রেণীর জন্য
+  homepage_slot_text_link_fullcurriculum: আমাদের পুরো কারিকুলাম দেখুন
+  homepage_slot_text_link_pd: পেশাগত উন্নয়ন
+  homepage_slot_text_title_advocates: সমর্থনকারীরা
+  homepage_slot_text_blurb_advocates: আমাদের কাজ সমর্থন করে
+  homepage_slot_text_link_stats: শুরুটা দেখুন
+  homepage_slot_text_link_buy: জড়িত
+  homepage_slot_text_link_donate: দান করুন
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: "কোড স্টুডিও ছাত্র সৃষ্টি"
+  homepage_header_codestudio: কোড স্টুডিও ছাত্র সৃষ্টি
   homepage_header_donors: Code.org তার সমর্থকদের ধন্যবাদ দেয়
-  homepage_donors_seall: "সব দেখুন"
-  homepage_donors_donate: "স্বেচ্ছায় অর্থায়ন করুন"
-  contact_form_topic_student: "আমি একজন ছাত্র"
-  contact_form_topic_parent: "আমি ছাত্রের বাবা/মা"
-  contact_form_topic_teacher: "আমি একজন শিক্ষক/শিক্ষাবিদ"
-  contact_form_topic_outside_us: "আমি U.S. এর বাইরে বসবাস করি"
-  contact_form_topic_contribution: "দান করুন"
-  contact_form_topic_partner: "আমি সঙ্গী হতে চায়"
-  contact_form_topic_other: "অন্যান্য"
-  contact_form_label_topic: "প্রসঙ্গ"
-  contact_form_label_email: "আপনার ই-মেইল ঠিকানা"
-  contact_form_label_message: "বার্তা"
-  contact_form_label_submit: "বার্তা প্রেরণ করুন"
-  class_submission_in_school: "বিদ্যালয়ে"
-  class_submission_in_school_daily_programming_course: "দৈনিক প্রোগ্রামিং কোর্স"
-  class_submission_in_school_ap_computer_science: "এপি কম্পিউটার বিজ্ঞান"
+  homepage_donors_seall: সব দেখুন
+  homepage_donors_donate: স্বেচ্ছায় অর্থায়ন করুন
+  contact_form_topic_student: আমি একজন ছাত্র
+  contact_form_topic_parent: আমি ছাত্রের বাবা/মা
+  contact_form_topic_teacher: আমি একজন শিক্ষক/শিক্ষাবিদ
+  contact_form_topic_outside_us: আমি U.S. এর বাইরে বসবাস করি
+  contact_form_topic_contribution: দান করুন
+  contact_form_topic_partner: আমি সঙ্গী হতে চায়
+  contact_form_topic_other: অন্যান্য
+  contact_form_label_topic: প্রসঙ্গ
+  contact_form_label_email: আপনার ই-মেইল ঠিকানা
+  contact_form_label_message: বার্তা
+  contact_form_label_submit: বার্তা প্রেরণ করুন
+  class_submission_in_school: বিদ্যালয়ে
+  class_submission_in_school_daily_programming_course: দৈনিক প্রোগ্রামিং কোর্স
+  class_submission_in_school_ap_computer_science: এপি কম্পিউটার বিজ্ঞান
   class_submission_in_school_full_university_cs_curriculum: CS পূর্ণাঙ্গ বিশ্ববিদ্যালয়
     কারিকুলাম এ
-  class_submission_in_school_robotics_club: "রবোটিক্সের ক্লাব"
-  class_submission_in_school_programming_integrated_in_other_classes: "প্রোগ্রামিং-
-    অন্যান্য শ্রেণীর (গণিত, বিজ্ঞান, ইত্যাদি) মধ্যে অন্তর্গত "
-  class_submission_in_school_summer_school_cs_program: "গ্রীষ্মকালীন স্কুল CS প্রোগ্রাম"
-  class_submission_in_school_exploring_computer_science: "কম্পিউটার বিজ্ঞানের প্রসার
-    করা হচ্ছে"
-  class_submission_in_school_other: "অন্য স্কুলে"
-  class_submission_out_of_school: "স্কুলের বাইরে"
-  class_submission_out_of_school_summer_camp: "গ্রীষ্মকালীন ক্যাম্প"
-  class_submission_out_of_school_afterschool_program: "স্কুল শেষের পর প্রোগ্রাম"
-  class_submission_out_of_school_all-day_workshop: "সারা দিনের কার্যকলাপ (১ সপ্তাহের
-    মত)"
-  class_submission_out_of_school_multi-week_workshop: "কয়েক সপ্তাহের কার্যকলাপ"
-  class_submission_out_of_school_other: "স্কুল থেকে বাইরে অন্যান্য যারা"
-  class_submission_online: "অনলাইনে"
-  class_submission_online_programming_class: "অনলাইন প্রোগ্রামিং ক্লাস"
-  class_submission_online_teacher_resource: "অনলাইন শিক্ষকদের জন্য তথ্য"
-  class_submission_online_other: "অন্যান্য অনলাইন"
-  class_submission_level_preschool: "স্কুল শুরুর আগে"
-  class_submission_level_elementary: "সাধারন"
-  class_submission_level_middle_school: "মাধ্যমিক স্কুল"
-  class_submission_level_high_school: "উচ্চ বিদ্যালয়"
-  class_submission_level_college: "কলেজ"
-  class_submission_level_vocational: "পেশাগত"
-  class_submission_languages_other: "অন্যান্য ভাষা"
+  class_submission_in_school_robotics_club: রবোটিক্সের ক্লাব
+  class_submission_in_school_programming_integrated_in_other_classes: 'প্রোগ্রামিং-
+    অন্যান্য শ্রেণীর (গণিত, বিজ্ঞান, ইত্যাদি) মধ্যে অন্তর্গত '
+  class_submission_in_school_summer_school_cs_program: গ্রীষ্মকালীন স্কুল CS প্রোগ্রাম
+  class_submission_in_school_exploring_computer_science: কম্পিউটার বিজ্ঞানের প্রসার
+    করা হচ্ছে
+  class_submission_in_school_other: অন্য স্কুলে
+  class_submission_out_of_school: স্কুলের বাইরে
+  class_submission_out_of_school_summer_camp: গ্রীষ্মকালীন ক্যাম্প
+  class_submission_out_of_school_afterschool_program: স্কুল শেষের পর প্রোগ্রাম
+  class_submission_out_of_school_all-day_workshop: সারা দিনের কার্যকলাপ (১ সপ্তাহের
+    মত)
+  class_submission_out_of_school_multi-week_workshop: কয়েক সপ্তাহের কার্যকলাপ
+  class_submission_out_of_school_other: স্কুল থেকে বাইরে অন্যান্য যারা
+  class_submission_online: অনলাইনে
+  class_submission_online_programming_class: অনলাইন প্রোগ্রামিং ক্লাস
+  class_submission_online_teacher_resource: অনলাইন শিক্ষকদের জন্য তথ্য
+  class_submission_online_other: অন্যান্য অনলাইন
+  class_submission_level_preschool: স্কুল শুরুর আগে
+  class_submission_level_elementary: সাধারন
+  class_submission_level_middle_school: মাধ্যমিক স্কুল
+  class_submission_level_high_school: উচ্চ বিদ্যালয়
+  class_submission_level_college: কলেজ
+  class_submission_level_vocational: পেশাগত
+  class_submission_languages_other: অন্যান্য ভাষা
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
     featuring professionals in technology fields
-  playlab_choose_theme: "আপনার প্লেল্যাবের মূলভাব (থীম) বেছে নিন।"
-  playlab_classic_title: "কালজয়ী"
-  playlab_gumball_title: "গামবল"
-  playlab_iceage_title: "বরফযুগ - শীঘ্রই আসছে"
-  playlab_iceage_title_live: "বরফযুগ"
-  starwars_subtitle: "কোড দিয়ে একটি আকাশগঙ্গা (গ্যালাক্সি) নির্মাণ করুন।"
-  starwars_javascript_title: "জাভাস্ক্রিপ্ট"
-  starwars_javascript_description: "ড্র্যাগ-ড্রপ ব্লক এবং জাভাস্ক্রিপ্ট ব্যবহার করুন।"
-  starwars_javascript_specs: "কেবল ইংরেজি | আধুনিক ব্রাউজার | বয়সের 11 +"
-  starwars_blocks_title: "ব্লকসমূহ"
-  starwars_blocks_description: "ড্র্যাগ-ড্রপ ব্লক ব্যবহার করুন।"
-  starwars_blocks_specs: "অনেক ভাষা | আধুনিক ব্রাউজার, স্মার্টফোন, ট্যাবলেট | বয়সের
-    6-10"
-  starwars_platform_text: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  mc_name: "মাইনক্র্যাফট এক ঘণ্টার কোড"
-  mc_longdescription: "স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
-    যেতে কোড ব্লকগুলি ব্যবহার করুন। "
-  mc_shortdescription: "স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
-    যেতে কোড ব্লকগুলি ব্যবহার করুন। "
-  mc_gradelevel: "বয়স 4-104"
-  mc_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  mc_specs: "অনেক ভাষা | আধুনিক ব্রাউজার এবং ট্যাবলেট | বয়সের 6 +"
+  playlab_choose_theme: আপনার প্লেল্যাবের মূলভাব (থীম) বেছে নিন।
+  playlab_classic_title: কালজয়ী
+  playlab_gumball_title: গামবল
+  playlab_iceage_title: বরফযুগ - শীঘ্রই আসছে
+  playlab_iceage_title_live: বরফযুগ
+  starwars_subtitle: কোড দিয়ে একটি আকাশগঙ্গা (গ্যালাক্সি) নির্মাণ করুন।
+  starwars_javascript_title: জাভাস্ক্রিপ্ট
+  starwars_javascript_description: ড্র্যাগ-ড্রপ ব্লক এবং জাভাস্ক্রিপ্ট ব্যবহার করুন।
+  starwars_javascript_specs: কেবল ইংরেজি | আধুনিক ব্রাউজার | বয়সের 11 +
+  starwars_blocks_title: ব্লকসমূহ
+  starwars_blocks_description: ড্র্যাগ-ড্রপ ব্লক ব্যবহার করুন।
+  starwars_blocks_specs: অনেক ভাষা | আধুনিক ব্রাউজার, স্মার্টফোন, ট্যাবলেট | বয়সের
+    6-10
+  starwars_platform_text: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  mc_name: মাইনক্র্যাফট এক ঘণ্টার কোড
+  mc_longdescription: 'স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
+    যেতে কোড ব্লকগুলি ব্যবহার করুন। '
+  mc_shortdescription: 'স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
+    যেতে কোড ব্লকগুলি ব্যবহার করুন। '
+  mc_gradelevel: বয়স 4-104
+  mc_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  mc_specs: অনেক ভাষা | আধুনিক ব্রাউজার এবং ট্যাবলেট | বয়সের 6 +
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
@@ -550,15 +549,15 @@
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "শুরু করুন"
+  minecraft_agent_button: শুরু করুন
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: "শুরু করুন"
+  minecraft_designer_button: শুরু করুন
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: "শুরু করুন"
-  minecraft_no_internet: "ইন্টারনেট নেই?"
+  minecraft_adventurer_button: শুরু করুন
+  minecraft_no_internet: ইন্টারনেট নেই?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_subtitle: "মাইনক্র্যাফট এক ঘণ্টার কোড"
+  minecraft_subtitle: মাইনক্র্যাফট এক ঘণ্টার কোড
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
@@ -599,16 +598,16 @@
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
-  sports_watch_video: "ভিডিও দেখুন"
+  sports_watch_video: ভিডিও দেখুন
   sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: "আপনার টিউটোরিয়াল থিম নির্বাচন করুন"
+  sports_select_theme: আপনার টিউটোরিয়াল থিম নির্বাচন করুন
   sports_basketball_title: Make a basketball game
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: "বিশিষ্ট্য ক্রীড়াবিদদের দেখুন"
-  sports_athletes_title: "বিশিষ্ট্য ক্রীড়াবিদরা"
+  sports_featured_athletes: বিশিষ্ট্য ক্রীড়াবিদদের দেখুন
+  sports_athletes_title: বিশিষ্ট্য ক্রীড়াবিদরা
   sports_athlete_Draymond: Draymond Green, অলিম্পিকে স্বর্ণ জয়ী ও NBA চ্যাম্পিয়ন,
     গোল্ডেন স্টেট ওয়ারিয়র্স
-  sports_athlete_Serena: "সেরেনা উইলিয়ামস, অলিম্পিকে স্বর্ণ জয়ী ও টেনিস চ্যাম্পিয়ন"
+  sports_athlete_Serena: সেরেনা উইলিয়ামস, অলিম্পিকে স্বর্ণ জয়ী ও টেনিস চ্যাম্পিয়ন
   sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
     Broncos
   sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
@@ -636,38 +635,38 @@
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "একটি মেয়েকে অনুপ্রাণিত করুন"
+  video_title_inspire_girl: একটি মেয়েকে অনুপ্রাণিত করুন
   video_title_cs_intro: Computer Science intro
   video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: "কম্পিউটার বিজ্ঞান বিষয়ে প্রেসিডেন্ট ওবামা"
+  video_title_obama: কম্পিউটার বিজ্ঞান বিষয়ে প্রেসিডেন্ট ওবামা
   video_title_hoc_is_here: Hour of Code কোড এখানে - যেকেউ শিখতে পারে
-  video_title_anybody_can_learn: "যে কেউ শিখতে পারে"
+  video_title_anybody_can_learn: যে কেউ শিখতে পারে
   video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Draymond Green এর সঙ্গে Hour of Code
   video_title_russell_okung: Hour of Code with Russell Okung
   video_title_real_madrid: Hour of Code with Real Madrid
   video_title_marco_belinelli: Hour of Code with Marco Belinelli
   video_title_chris_bosh: Chris Bosh on Computer Science
-  video_1min: "১ মিনিট"
+  video_1min: ১ মিনিট
   video_2min: 2 মিনিট
-  video_5min: "৫ মিনিট"
-  speak_another_language: "অন্য ভাষায় কথা বলেন?"
-  help_translate: "আমাদের অনুবাদ করতে সাহায্য করুন।"
-  no_internet: "ইন্টারনেট নেই?"
-  download_offline: "অফলাইন সংস্করণ ডাউনলোড করুন।"
-  are_you_teacher: "আপনি কি শিক্ষক?"
+  video_5min: ৫ মিনিট
+  speak_another_language: অন্য ভাষায় কথা বলেন?
+  help_translate: আমাদের অনুবাদ করতে সাহায্য করুন।
+  no_internet: ইন্টারনেট নেই?
+  download_offline: অফলাইন সংস্করণ ডাউনলোড করুন।
+  are_you_teacher: আপনি কি শিক্ষক?
   review_lesson_plan: Review the lesson plan and other teacher resources.
-  volunteer_engineer_submission_title: "ছাত্র এবং স্বেচ্ছাসেবকদের এক ঘন্টার কোডের
-    জন্য অনুপ্রাণিত করুন"
-  volunteer_engineer_submission_subtitle_generic: "এই বছর, ডিসেম্বর ৭-১৩, ২০১৫, ১০০০০০
-    শিক্ষক তাদের শ্রেণীকক্ষে এক ঘন্টার কোড আয়জন করতে যাচ্ছি। তারা আপনার সাহায্য চায়!"
-  volunteer_engineer_submission_subtitle_specific: "এই ডিসেম্বরে %{num_teachers} শিক্ষক
+  volunteer_engineer_submission_title: ছাত্র এবং স্বেচ্ছাসেবকদের এক ঘন্টার কোডের জন্য
+    অনুপ্রাণিত করুন
+  volunteer_engineer_submission_subtitle_generic: এই বছর, ডিসেম্বর ৭-১৩, ২০১৫, ১০০০০০
+    শিক্ষক তাদের শ্রেণীকক্ষে এক ঘন্টার কোড আয়জন করতে যাচ্ছি। তারা আপনার সাহায্য চায়!
+  volunteer_engineer_submission_subtitle_specific: এই ডিসেম্বরে %{num_teachers} শিক্ষক
     এক ঘণ্টার কোড আয়জন করতে কম্পিউটার বিজ্ঞান শিক্ষার উত্সাহী স্বেচ্ছাসেবকদের সাহায্য
-    চা।<br>%{num_volunteers}স্বাক্ষর করেছেন। তাদের সাথে যোগ দিন।"
-  volunteer_engineer_submission_intro_background: "এক ঘন্টার কোড একটি বিশ্বব্যাপী
-    আন্দোলন যা একটি ঘন্টা কম্পিউটার বিজ্ঞানের সূচনার বিষয়গুলি শিখানোর চেষ্টার মধ্যমে
-    ১৮০ বেশি দেশে দশ লক্ষাধিক ছাত্রের কাছে পৌঁছনোর চেষ্টা করে। দয়া করে ডিসেম্বর ৭-১৩
-    তে কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে, সংশ্লিষ্ট হন।"
+    চা।<br>%{num_volunteers}স্বাক্ষর করেছেন। তাদের সাথে যোগ দিন।
+  volunteer_engineer_submission_intro_background: এক ঘন্টার কোড একটি বিশ্বব্যাপী আন্দোলন
+    যা একটি ঘন্টা কম্পিউটার বিজ্ঞানের সূচনার বিষয়গুলি শিখানোর চেষ্টার মধ্যমে ১৮০ বেশি
+    দেশে দশ লক্ষাধিক ছাত্রের কাছে পৌঁছনোর চেষ্টা করে। দয়া করে ডিসেম্বর ৭-১৩ তে কম্পিউটার
+    বিজ্ঞান শিক্ষা সপ্তাহে, সংশ্লিষ্ট হন।
   volunteer_engineer_submission_intro_recruit: 'এই শিক্ষকরা এমন কাউকে পেলে খুশি হবেন<span
     style="font-family: ''Gotham 7r'', sans-serif;">যারা কম্পিউটার বিজ্ঞান শিক্ষায়
     উত্সাহী</span>যারা তাদের শ্রেনীকক্ষে সাহায্য করতে পারবে বা তাদের <span style="font-family:
@@ -682,126 +681,125 @@
   volunteer_engineer_submission_intro_links: স্বেচ্ছাসেবক খুজছেন না? এখনে নিজের এক
     ঘন্টা কোড আয়োজন করার জন্য <a href="%{learn_more}">আরো জানুন</a>  <a href="%{volunteer_local}">
     </a> এবং স্বেচ্ছাসেবক মানচিত্রে স্থানীয় স্বেচ্ছাসেবক খুজুন।
-  volunteer_engineer_submission_update_information: "আপনার তথ্য হালনাগাদ করুন"
-  volunteer_engineer_submission_header_shared: "স্বেচ্ছাসেবকদের মানচিত্রে শিক্ষকদের
-    সাথে তথ্য শেয়ার করা"
-  volunteer_engineer_submission_field_name: "নাম"
-  volunteer_engineer_submission_field_name_placeholder: "সম্পুন্ন নাম"
-  volunteer_engineer_submission_field_company: "কোম্পানি (বা বিশ্ববিদ্যালয়)"
-  volunteer_engineer_submission_field_company_placeholder: "কোম্পানি (বা বিশ্ববিদ্যালয়)"
-  volunteer_engineer_submission_field_experience_level: "অভিজ্ঞতার স্তর"
-  volunteer_engineer_submission_field_location: "অবস্থান"
-  volunteer_engineer_submission_field_location_desc: "আপনার অবস্থান শিক্ষকদের জন্য
+  volunteer_engineer_submission_update_information: আপনার তথ্য হালনাগাদ করুন
+  volunteer_engineer_submission_header_shared: স্বেচ্ছাসেবকদের মানচিত্রে শিক্ষকদের
+    সাথে তথ্য শেয়ার করা
+  volunteer_engineer_submission_field_name: নাম
+  volunteer_engineer_submission_field_name_placeholder: সম্পুন্ন নাম
+  volunteer_engineer_submission_field_company: কোম্পানি (বা বিশ্ববিদ্যালয়)
+  volunteer_engineer_submission_field_company_placeholder: কোম্পানি (বা বিশ্ববিদ্যালয়)
+  volunteer_engineer_submission_field_experience_level: অভিজ্ঞতার স্তর
+  volunteer_engineer_submission_field_location: অবস্থান
+  volunteer_engineer_submission_field_location_desc: আপনার অবস্থান শিক্ষকদের জন্য
     নিকটবর্তী স্বেচ্ছাসেবক সন্ধান দিতে ব্যবহার করা হবে এবং পিন হিসেবে মানচিত্রে দেখানো
     হবে। যদি আপনি গোপনীয়তা সম্পর্কে উদ্বিগ্ন হন, অনুগ্রহ করে আপনার কাজ/স্কুলের ঠিকানা
-    বা কেবল আপনার শহর ব্যবহার করুন।"
-  volunteer_engineer_submission_field_location_placeholder: "জিপ কোড, সিটি ও রাজ্য/দেশের
-    বা রাস্তার ঠিকানা"
-  volunteer_engineer_submission_field_location_flexibility: "আমি এক ঘন্টার কোড সময়
-    সহায়তা করতে পারে... (সকল আবেদন নির্বাচন করুন)"
+    বা কেবল আপনার শহর ব্যবহার করুন।
+  volunteer_engineer_submission_field_location_placeholder: জিপ কোড, সিটি ও রাজ্য/দেশের
+    বা রাস্তার ঠিকানা
+  volunteer_engineer_submission_field_location_flexibility: আমি এক ঘন্টার কোড সময়
+    সহায়তা করতে পারে... (সকল আবেদন নির্বাচন করুন)
   volunteer_engineer_submission_checkbox_after_hoc: " এক ঘন্টার কোডের পর স্বেচ্ছাসেবক
     হতে আগ্রহী"
-  volunteer_engineer_submission_field_time_commitment: "এক ঘন্টা কোডের শেষেও সময়
-    দেয়ার প্রতিশ্রুতি"
-  volunteer_engineer_submission_field_linkedin: "লিঙ্কডইন প্রোফাইল"
+  volunteer_engineer_submission_field_time_commitment: এক ঘন্টা কোডের শেষেও সময় দেয়ার
+    প্রতিশ্রুতি
+  volunteer_engineer_submission_field_linkedin: লিঙ্কডইন প্রোফাইল
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/আপনার_নাম
-  volunteer_engineer_submission_field_facebook: "ফেইসবুক প্রোফাইল"
+  volunteer_engineer_submission_field_facebook: ফেইসবুক প্রোফাইল
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/আপনার_নাম
-  volunteer_engineer_submission_field_description: "বর্ণনা"
-  volunteer_engineer_submission_field_description_desc: "আপনার কম্পিউটার বিজ্ঞানের
+  volunteer_engineer_submission_field_description: বর্ণনা
+  volunteer_engineer_submission_field_description_desc: আপনার কম্পিউটার বিজ্ঞানের
     অভিজ্ঞত এবং আপনি কিভাবে স্থানীয় শিক্ষকদের জন্য স্বেচ্ছাসেবক হিসেবে অংশগ্রহন করতে
-    চান তা বর্ণনা করুন ।"
-  volunteer_engineer_submission_field_description_placeholder: "অভিজ্ঞতা এবং/অথবা
-    অংশগ্রহণের বর্ণনা। ইংরেজি ছাড়া অন্য ভাষায় কথা বললে, এখানে অন্তর্ভুক্ত করতে ভুলবেন
-    না।"
-  volunteer_engineer_submission_header_private: "তথ্য অপ্রকাশ্য রাখা হয় ও কখনো শেয়ার
-    করা হয় না"
-  volunteer_engineer_submission_field_email: "ইমেইল ঠিকানা"
-  volunteer_engineer_submission_field_email_desc: "আপনার ই-মেইল ঠিকানা শেয়ার করা হবে
-    না, তবে আমরা আপনাকে শিক্ষকদের অনুরোধ প্রেরণ করবো।"
-  volunteer_engineer_submission_field_email_placeholder: "ইমেইল ঠিকানা"
-  volunteer_engineer_submission_final_paragraph: "এক ঘন্টার কোডে বা অন্য কোন স্বেচ্ছাসেবার
+    চান তা বর্ণনা করুন ।
+  volunteer_engineer_submission_field_description_placeholder: অভিজ্ঞতা এবং/অথবা অংশগ্রহণের
+    বর্ণনা। ইংরেজি ছাড়া অন্য ভাষায় কথা বললে, এখানে অন্তর্ভুক্ত করতে ভুলবেন না।
+  volunteer_engineer_submission_header_private: তথ্য অপ্রকাশ্য রাখা হয় ও কখনো শেয়ার
+    করা হয় না
+  volunteer_engineer_submission_field_email: ইমেইল ঠিকানা
+  volunteer_engineer_submission_field_email_desc: আপনার ই-মেইল ঠিকানা শেয়ার করা হবে
+    না, তবে আমরা আপনাকে শিক্ষকদের অনুরোধ প্রেরণ করবো।
+  volunteer_engineer_submission_field_email_placeholder: ইমেইল ঠিকানা
+  volunteer_engineer_submission_final_paragraph: এক ঘন্টার কোডে বা অন্য কোন স্বেচ্ছাসেবার
     সুযোগে শিক্ষকদের আপনার সাথে যোগাযোগ করা জন্য আপনাকে একটি মানচিত্রে তালিকাভুক্ত
     করা হবে । আপনার ইমেল ও আসল ঠিকানা কখন আমরা শেয়ার করব না। কিন্তু অন্যান্য তথ্য
-    (আপনার আনুমানিক অবস্থান) স্থানীয় শিক্ষক দ্বারা প্রকাশ্যে দর্শনযোগ্য হবে।."
-  volunteer_engineer_submission_checkbox_contact: "আমি একমত যে শিক্ষক আমাকে স্বেচ্ছাসেবক
+    (আপনার আনুমানিক অবস্থান) স্থানীয় শিক্ষক দ্বারা প্রকাশ্যে দর্শনযোগ্য হবে।.
+  volunteer_engineer_submission_checkbox_contact: 'আমি একমত যে শিক্ষক আমাকে স্বেচ্ছাসেবক
     সুযোগ দেবার জন্য যোগাযোগ করতে পারেন।  (দ্রষ্টব্য: আপনার ইমেইল ঠিকানা শেয়ার করবেন
-    না)"
+    না)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "জমা করুন"
+  volunteer_engineer_submission_submit: জমা করুন
   volunteer_engineer_submission_thankyou: এক ঘন্টার কোডে স্বেচ্ছাসেবা করার জন্য আপনাকে
     ধন্যবাদ। এখানে এক ঘন্টার কোডের  প্রস্তুতির জন্য এবং অন্যান্য স্বেচ্ছাসেবক নিয়োগ
     দেবার <a href="%{url}">আরো জানুন।</a>
-  volunteer_engineer_submission_commitment_uncertain: "অনিশ্চিত"
-  volunteer_engineer_submission_commitment_one_hr_per_week: "প্রতি সপ্তাহে ১ ঘন্টা"
+  volunteer_engineer_submission_commitment_uncertain: অনিশ্চিত
+  volunteer_engineer_submission_commitment_one_hr_per_week: প্রতি সপ্তাহে ১ ঘন্টা
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ঘন্টা প্রতি সপ্তাহে
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ঘন্টা প্রতি সপ্তাহে
-  volunteer_engineer_submission_commitment_now_and_then: "প্রায়শই"
-  volunteer_engineer_submission_commitment_annually: "প্রতি বছরে 2 - 3 বার"
-  volunteer_engineer_submission_commitment_monthly: "প্রতি মাসে কয়েক ঘন্টার"
-  volunteer_engineer_submission_commitment_weekly: "প্রতি সপ্তাহে কয়েক ঘন্টার"
-  volunteer_engineer_submission_commitment_more: "আরো"
-  volunteer_engineer_submission_location_flexibility_onsite: "স্কুলের প্রাঙ্গণে "
-  volunteer_engineer_submission_location_flexibility_remote: "দূর থেকে শিক্ষা দেওয়া
-    (শিক্ষক অ ছাত্রদের)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "ওপেন-সোর্স কারিকুলাম
-    প্রকল্পে অবদান রাখতে সহায়তা করার ইচ্ছা"
-  volunteer_engineer_submission_experience_unspecified: "অনির্দিষ্ট"
-  volunteer_engineer_submission_experience_tech_company: "একটি কারিগরি কোম্পানিতে
-    অপ্রকৌশলী পদে কর্মরত"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "বর্তমান
-    বিশ্ববিদ্যালয় ছাত্র (বা গবেষক)"
-  volunteer_engineer_submission_experience_software_professional: "পেশাদার সফটওয়্যার
-    বিসয়ক"
-  volunteer_engineer_submission_distance_8: "৫ মাইল"
-  volunteer_engineer_submission_distance_16: "১০ মাইল"
-  volunteer_engineer_submission_distance_24: "১৫ মাইল"
-  volunteer_engineer_submission_distance_32: "২০ মাইল"
-  volunteer_engineer_submission_num_volunteers_5: "৫ জন স্বেচ্ছাসেবক"
-  volunteer_engineer_submission_num_volunteers_10: "১০ জন স্বেচ্ছাসেবক"
-  volunteer_engineer_submission_num_volunteers_25: "২৫ জন স্বেচ্ছাসেবক"
-  volunteer_engineer_submission_num_volunteers_50: "৫০ জন স্বেচ্ছাসেবক"
-  volunteer_engineer_submission_type_task_onsite: "আমি আপনাকে প্রযুক্তিগত সহায়তা
-    এবং অনুপ্রেরণা জন্য আমার শ্রেণীকক্ষ পরিদর্শন করতে চান"
-  volunteer_engineer_submission_type_task_remote: "আমি চাই আপনি আমার শ্রেনীতে বাচ্চাদের
-    স্কাইপের মাধ্যমে কিছু অনুপ্রেরণীয় কথা বলুন"
-  volunteer_engineer_submission_type_task_mentor: "আমার ছাত্রদের সাথে কোডিং করার জন্য
-    প্রস্তুত হতে আমি একজন পরামর্শদাতা খুঁজছি"
-  petition_age: "বয়স"
+  volunteer_engineer_submission_commitment_now_and_then: প্রায়শই
+  volunteer_engineer_submission_commitment_annually: প্রতি বছরে 2 - 3 বার
+  volunteer_engineer_submission_commitment_monthly: প্রতি মাসে কয়েক ঘন্টার
+  volunteer_engineer_submission_commitment_weekly: প্রতি সপ্তাহে কয়েক ঘন্টার
+  volunteer_engineer_submission_commitment_more: আরো
+  volunteer_engineer_submission_location_flexibility_onsite: 'স্কুলের প্রাঙ্গণে '
+  volunteer_engineer_submission_location_flexibility_remote: দূর থেকে শিক্ষা দেওয়া
+    (শিক্ষক অ ছাত্রদের)
+  volunteer_engineer_submission_location_flexibility_curriculum: ওপেন-সোর্স কারিকুলাম
+    প্রকল্পে অবদান রাখতে সহায়তা করার ইচ্ছা
+  volunteer_engineer_submission_experience_unspecified: অনির্দিষ্ট
+  volunteer_engineer_submission_experience_tech_company: একটি কারিগরি কোম্পানিতে অপ্রকৌশলী
+    পদে কর্মরত
+  volunteer_engineer_submission_experience_university_student_or_researcher: বর্তমান
+    বিশ্ববিদ্যালয় ছাত্র (বা গবেষক)
+  volunteer_engineer_submission_experience_software_professional: পেশাদার সফটওয়্যার
+    বিসয়ক
+  volunteer_engineer_submission_distance_8: ৫ মাইল
+  volunteer_engineer_submission_distance_16: ১০ মাইল
+  volunteer_engineer_submission_distance_24: ১৫ মাইল
+  volunteer_engineer_submission_distance_32: ২০ মাইল
+  volunteer_engineer_submission_num_volunteers_5: ৫ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_10: ১০ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_25: ২৫ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_num_volunteers_50: ৫০ জন স্বেচ্ছাসেবক
+  volunteer_engineer_submission_type_task_onsite: আমি আপনাকে প্রযুক্তিগত সহায়তা এবং
+    অনুপ্রেরণা জন্য আমার শ্রেণীকক্ষ পরিদর্শন করতে চান
+  volunteer_engineer_submission_type_task_remote: আমি চাই আপনি আমার শ্রেনীতে বাচ্চাদের
+    স্কাইপের মাধ্যমে কিছু অনুপ্রেরণীয় কথা বলুন
+  volunteer_engineer_submission_type_task_mentor: আমার ছাত্রদের সাথে কোডিং করার জন্য
+    প্রস্তুত হতে আমি একজন পরামর্শদাতা খুঁজছি
+  petition_age: বয়স
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "আরও জানুন"
-  dashboard_landing_title: "শিক্ষক হোম পেজ"
-  dashboard_landing_welcome: "নতুন ও উন্নত শিক্ষক dashboard-এ আপনাকে স্বাগতম।"
-  dashboard_landing_video: "এই ভিডিও টি দেখুন"
-  dashboard_landing_watch_video: "নতুন বৈশিষ্ট্যসমূহের একটি ভ্রমনের জন্য!"
-  dashboard_landing_view_as_student: "একজন ছাত্র হিসেবে এই সাইটটি দেখুন।"
-  dashboard_landing_students_title: "আপনার শিক্ষার্থীরা"
-  dashboard_landing_students_manage: "দেখুন এবং আপনার শিক্ষার্থীদের পরিচালনা করুন"
-  dashboard_landing_news_title: "প্রাথমিক শ্রেণীর শিক্ষকদের জন্য তথ্য(কেবল ইংরেজিতে)"
-  dashboard_landing_new_beta: "নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক
-    কোর্স ব্যাবহার করে দেখুন।"
-  dashboard_landing_new_k5courses: "নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য আমাদের
-    কোর্স ব্যাবহার করে দেখুন।"
-  dashboard_landing_useful_links: "অন্যান্য প্রয়োজনীয় লিংক (শুধুমাত্র ইংরেজিতে)"
+  dashboard_announce_learn_more_button: আরও জানুন
+  dashboard_landing_title: শিক্ষক হোম পেজ
+  dashboard_landing_welcome: নতুন ও উন্নত শিক্ষক dashboard-এ আপনাকে স্বাগতম।
+  dashboard_landing_video: এই ভিডিও টি দেখুন
+  dashboard_landing_watch_video: নতুন বৈশিষ্ট্যসমূহের একটি ভ্রমনের জন্য!
+  dashboard_landing_view_as_student: একজন ছাত্র হিসেবে এই সাইটটি দেখুন।
+  dashboard_landing_students_title: আপনার শিক্ষার্থীরা
+  dashboard_landing_students_manage: দেখুন এবং আপনার শিক্ষার্থীদের পরিচালনা করুন
+  dashboard_landing_news_title: প্রাথমিক শ্রেণীর শিক্ষকদের জন্য তথ্য(কেবল ইংরেজিতে)
+  dashboard_landing_new_beta: নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক
+    কোর্স ব্যাবহার করে দেখুন।
+  dashboard_landing_new_k5courses: নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য আমাদের
+    কোর্স ব্যাবহার করে দেখুন।
+  dashboard_landing_useful_links: অন্যান্য প্রয়োজনীয় লিংক (শুধুমাত্র ইংরেজিতে)
   dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_office_hours: "স্বতন্ত্রভাবে প্রশ্ন করন! আমাদের মাসিক ভিডিও অফিস
-    সময়ে ভিজিট করুন।"
+  dashboard_landing_office_hours: স্বতন্ত্রভাবে প্রশ্ন করন! আমাদের মাসিক ভিডিও অফিস
+    সময়ে ভিজিট করুন।
   dashboard_landing_print_certificates: Print certificates for students who finish
     this course
   dashboard_landing_educator_blog: Read about news and updates to our materials at
     our Educator Blog
   dashboard_landing_video_player: Test our new video player at your school
-  dashboard_landing_progress_title: "মূল শ্রেণী অগ্রগতি"
-  dashboard_landing_progress_biggest: "এটি হল আপনার সবচেয়ে বড় অংশের অগ্রগতি।"
+  dashboard_landing_progress_title: মূল শ্রেণী অগ্রগতি
+  dashboard_landing_progress_biggest: এটি হল আপনার সবচেয়ে বড় অংশের অগ্রগতি।
   dashboard_landing_view_progress: "%{biggest_section} এর জন্য আপনার অগ্রগতি দেখুন"
-  dashboard_landing_print_progress: "উন্নতি ছাপুন"
-  dashboard_landing_available_title: "বিদ্যমান কোর্সসমূহ"
-  dashboard_landing_available_courses: "এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান
-    কোর্সগুলো রয়েছে।"
-  dashboard_landing_more_tutorials: "আরও টিউটোরিয়াল দেখতে চান?"
+  dashboard_landing_print_progress: উন্নতি ছাপুন
+  dashboard_landing_available_title: বিদ্যমান কোর্সসমূহ
+  dashboard_landing_available_courses: এখানে  আপনার এবং আপনার ছাত্রদের জন্য বিদ্যমান
+    কোর্সগুলো রয়েছে।
+  dashboard_landing_more_tutorials: আরও টিউটোরিয়াল দেখতে চান?
   dashboard_landing_more_tutorials_desc: আমাদের সহযোগী করা আরো অনেক টিউটোরিয়াল এখানে
     <a href="/learn/beyond">আছে ।</a> রোবট নিয়ে প্রোগ্রাম, ওয়েব পৃষ্ঠা তৈরি, নিজের
     অ্যাপ তৈরি বা অন্য ভাষা যেমন সি + +, রুবি, বা পাইথন নিয়ে কাজ করতে শিখুন!
@@ -810,9 +808,9 @@
     science concepts.
   dashboard_landing_report_bug: Request a feature or report a bug.
   dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_hoc_courses: "সব বয়সের জন্য এক ঘন্টার কোডিং"
-  dashboard_hoc_courses_desc: "আপনার ছাত্রদের সাথে এই ছোট ১ ঘন্টা টিউটোরিয়াল চেষ্টা
-    করুন!"
+  dashboard_hoc_courses: সব বয়সের জন্য এক ঘন্টার কোডিং
+  dashboard_hoc_courses_desc: আপনার ছাত্রদের সাথে এই ছোট ১ ঘন্টা টিউটোরিয়াল চেষ্টা
+    করুন!
   dashboard_hoc_courses_desc_and_cta: ছোট ছোট, এক ঘণ্টার এই টিউটোরিয়াল আপনার ছাত্রের
     সাথে চেষ্টা করুন। <a href="https://hourofcode.com">কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
     সময় এক ঘন্টার কোড আন্দোলনে যোগ দিন।</a>
@@ -830,113 +828,113 @@
     গণিত ও বিজ্ঞান ধারণা শেখানো একটি হাতিয়ার হিসেবে। পেশাদারী উন্নয়ন কর্মশালা রেজিস্টার
     করার জন্য, Code.org সঙ্গে <a href="/educate/districts">জেলা ব্যাপী</a> অংশীদারিত্বে
     আবেদন।
-  dashboard_high_courses: "বছর দীর্ঘ হাই স্কুলের কোর্স"
+  dashboard_high_courses: বছর দীর্ঘ হাই স্কুলের কোর্স
   dashboard_high_courses_desc: বিদ্যমান শিক্ষা কর্মচারীদের এই নতুন ক্ষেত্রে প্রদানের
     জন্য প্রস্তুত করে আমাদের হাই স্কুলের প্রোগ্রাম স্কুল জেলাকে পূর্ণ বছরের কম্পিউটার
     বিজ্ঞান শ্রেণীকে সহায়তা করে। পেশাগত উন্নয়ন কর্মশালা জন্য নিবন্ধন করতে, <a href="/educate/districts">
     জেলা ব্যাপী অংশীদারিত্ব</a> Code.org সাথে।
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: "কম্পিউটার প্রোগ্রামিং এর মাধ্যমে বীজগাণীতিক এবং জ্যামিতির
-    ধারণা দিবে এমন একটি পাঠ্যক্রম গড়া জন্য কোড.ওআরজি বুটস্ট্রাপের সাথে অংশীদার হয়েছে।"
-  dashboard_course_csins: "বিজ্ঞানে কম্পিউটার বিজ্ঞান"
-  dashboard_course_csins_desc: "মডেলিং ও সিমুলেশন প্রসঙ্গের মধ্যে কম্পিউটার বিজ্ঞানের
-    ভূমিকা দেওয়ার জন্য Code.org, GUTS প্রকল্পের সাথে অংশীদার হয়েছে।"
-  dashboard_course_ecs: "কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে"
+  dashboard_course_csina_desc: কম্পিউটার প্রোগ্রামিং এর মাধ্যমে বীজগাণীতিক এবং জ্যামিতির
+    ধারণা দিবে এমন একটি পাঠ্যক্রম গড়া জন্য কোড.ওআরজি বুটস্ট্রাপের সাথে অংশীদার হয়েছে।
+  dashboard_course_csins: বিজ্ঞানে কম্পিউটার বিজ্ঞান
+  dashboard_course_csins_desc: মডেলিং ও সিমুলেশন প্রসঙ্গের মধ্যে কম্পিউটার বিজ্ঞানের
+    ভূমিকা দেওয়ার জন্য Code.org, GUTS প্রকল্পের সাথে অংশীদার হয়েছে।
+  dashboard_course_ecs: কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে
   dashboard_course_ecs_desc: " অনুসন্ধান করছে। রাষ্ট্রটি : \nমানব কম্পিউটার পরস্পর
     ক্রিয়াশীলতার, সমস্যা সমাধান, ওয়েব ডিজাইন, প্রোগ্রামিং, কম্পিউটিং এবং উপাত্ত
     বিশ্লেষণ এবং রবোটিক্স এই ৬ ইউনিটের বছর ব্যাপি কোর্সে কম্পিউটার বিজ্ঞান বিচরণ করুন।"
-  dashboard_course_csp: "এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি"
+  dashboard_course_csp: এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি
   dashboard_course_csp_desc: Code.org এমন একটি যথাযথ, আকর্ষক এবং সহজগম্য কোর্স পরিকল্পনা
     করাছে যা কম্পিউটিং এর মৌলিক ধারণাগুলি বিচরণ করে।
-  dashboard_landing_loading: "লোড হচ্ছে..."
-  dashboard_action_cancel: "বাতিল করুন"
-  dashboard_action_delete: "বাদ দিন"
+  dashboard_landing_loading: লোড হচ্ছে...
+  dashboard_action_cancel: বাতিল করুন
+  dashboard_action_delete: বাদ দিন
   dashboard_action_delete_yes: '"হ্যাঁ"'
-  dashboard_action_delete_no: "না"
-  dashboard_action_confirm: "বাদ দিবেন কি?"
-  dashboard_action_done: "হয়ে গেছে"
+  dashboard_action_delete_no: না
+  dashboard_action_confirm: বাদ দিবেন কি?
+  dashboard_action_done: হয়ে গেছে
   dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: "মূল্যায়ন দেখুন:"
-  dashboard_assessments_none: "মূল্যায়ন নাই"
+  dashboard_assessments_view: 'মূল্যায়ন দেখুন:'
+  dashboard_assessments_none: মূল্যায়ন নাই
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
     we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
   dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: "সব মূল্যায়ন করা উত্তর"
+  dashboard_assessments_answers: সব মূল্যায়ন করা উত্তর
   dashboard_surveys_answers: Surveys
-  dashboard_percent: "শতাংশ"
-  dashboard_filter_by_stage: "স্তর দ্বারা ফিল্টার করুন:"
-  dashboard_filter_all: "সব"
+  dashboard_percent: শতাংশ
+  dashboard_filter_by_stage: 'স্তর দ্বারা ফিল্টার করুন:'
+  dashboard_filter_all: সব
   dashboard_download_csv: CSV ডাউনলোড করুন
-  dashboard_navigation_home_page: "শিক্ষক হোম পেজ"
-  dashboard_navigation_section_student_progress: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
-  dashboard_navigation_section_teacher_progress: "আপনার কোর্সের অগ্রগতি"
-  dashboard_navigation_section_lesson_plans: "পাঠ পরিকাল্পনা এবং তথ্য"
-  dashboard_navigation_section_community: "সম্প্রদায় এবং সহায়তা"
-  dashboard_navigation_section_pd: "পেশাগত উন্নয়ন"
-  dashboard_navigation_section_speakers: "কম্পিউটার বিজ্ঞানের <br/> অতিথী বক্তারা"
-  dashboard_navigation_all_sections: "শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি"
-  dashboard_navigation_view_progress: "অগ্রগতি"
-  dashboard_navigation_view_text_responses: "লিখিত জবাবগুলি"
-  dashboard_navigation_view_assessments: "মূল্যায়ন"
+  dashboard_navigation_home_page: শিক্ষক হোম পেজ
+  dashboard_navigation_section_student_progress: শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি
+  dashboard_navigation_section_teacher_progress: আপনার কোর্সের অগ্রগতি
+  dashboard_navigation_section_lesson_plans: পাঠ পরিকাল্পনা এবং তথ্য
+  dashboard_navigation_section_community: সম্প্রদায় এবং সহায়তা
+  dashboard_navigation_section_pd: পেশাগত উন্নয়ন
+  dashboard_navigation_section_speakers: কম্পিউটার বিজ্ঞানের <br/> অতিথী বক্তারা
+  dashboard_navigation_all_sections: শিক্ষার্থীদের অ্যাকাউন্ট এবং আগ্রগতি
+  dashboard_navigation_view_progress: অগ্রগতি
+  dashboard_navigation_view_text_responses: লিখিত জবাবগুলি
+  dashboard_navigation_view_assessments: মূল্যায়ন
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: " শিক্ষার্থীদের যুক্ত করন"
   dashboard_navigation_manage_students: " শিক্ষার্থীদের পরিচালনা করন"
-  dashboard_navigation_lesson_plans_resources: "পাঠ পরিকাল্পনা এবং তথ্য"
-  dashboard_navigation_view_stats: "পরিসংখ্যান"
-  dashboard_navigation_section: "বিভাগ: %{section_name}"
-  dashboard_navigation_student: "শিক্ষার্থী:%{student_name}"
-  dashboard_progress_not_started: "শুরু হয়নি"
-  dashboard_progress_in_progress: "অগ্রসর হচ্ছে"
-  dashboard_progress_not_completed: "সম্পন্ন নয়"
+  dashboard_navigation_lesson_plans_resources: পাঠ পরিকাল্পনা এবং তথ্য
+  dashboard_navigation_view_stats: পরিসংখ্যান
+  dashboard_navigation_section: 'বিভাগ: %{section_name}'
+  dashboard_navigation_student: শিক্ষার্থী:%{student_name}
+  dashboard_progress_not_started: শুরু হয়নি
+  dashboard_progress_in_progress: অগ্রসর হচ্ছে
+  dashboard_progress_not_completed: সম্পন্ন নয়
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: "দাখিল"
-  dashboard_progress_view: "আগ্রগতি দেখুন:"
+  dashboard_progress_submitted: দাখিল
+  dashboard_progress_view: 'আগ্রগতি দেখুন:'
   dashboard_progress_student_in_script: "%{student_name} এর %{script_name} তে অগ্রগতি
     তথ্য"
-  dashboard_progress_pair_programming: "জোড়ায় প্রোগ্রামিং"
-  dashboard_responses_view: "লিখিত জবাব দেখুন:"
-  dashboard_responses_none: "কোন টেক্সট প্রতিক্রিয়া নাই"
-  dashboard_sections_new_section: "নতুন বিভাগ"
+  dashboard_progress_pair_programming: জোড়ায় প্রোগ্রামিং
+  dashboard_responses_view: 'লিখিত জবাব দেখুন:'
+  dashboard_responses_none: কোন টেক্সট প্রতিক্রিয়া নাই
+  dashboard_sections_new_section: নতুন বিভাগ
   dashboard_sections_new_google_section: Import section from Google Classroom
-  dashboard_sections_jumbotron_instruction: "নতুন বিভাগ খুলে  শিক্ষার্থীদের তাতে  যুক্ত
+  dashboard_sections_jumbotron_instruction: নতুন বিভাগ খুলে  শিক্ষার্থীদের তাতে  যুক্ত
     করুন। বিভাগ  শিক্ষার্থীদের  ছোট ছোট দলে বিভক্ত হতে সাহায্য করে যার মাধ্যমে আপনি
-    তাদের আগ্রগতি পর্যবেক্ষণ  এবং তাদের অ্যাকাউন্ট পরিচলনা করতে পারেন।"
-  dashboard_sections_table_section: "শাখা"
-  dashboard_sections_table_secret: "লগ-ইনের ধরণ"
-  dashboard_sections_table_grade: "গ্রেড"
-  dashboard_sections_table_course: "কোর্স"
+    তাদের আগ্রগতি পর্যবেক্ষণ  এবং তাদের অ্যাকাউন্ট পরিচলনা করতে পারেন।
+  dashboard_sections_table_section: শাখা
+  dashboard_sections_table_secret: লগ-ইনের ধরণ
+  dashboard_sections_table_grade: গ্রেড
+  dashboard_sections_table_course: কোর্স
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "ছাত্র"
-  dashboard_sections_table_code: "শাখা কোড"
-  dashboard_sections_name: "শাখার নাম"
+  dashboard_sections_table_students: ছাত্র
+  dashboard_sections_table_code: শাখা কোড
+  dashboard_sections_name: শাখার নাম
   dashboard_sections_choose_secret: আপনি কি আপনার ছাত্রদের হিসাবে প্রদান করতে চান,
     তাহলে গুপ্ত ধরনের "শব্দ" বা ওই অংশের জন্য "চিত্র" চয়ন করুন।
   dashboard_sections_secret_word: A <b>শব্দের</b> জন্য প্রত্যেক ছাত্র গুপ্ত শব্দের
     বিন্যাস করতে আপনাকে সম্মতি দেয়।
   dashboard_sections_secret_picture: "<b>ছবির</b> জন্য প্রত্যেক ছাত্র, আদর্শ ছোট ছোট
     ছাত্রদের জন্য যারা এখনও টাইপ করতে পারে না,গুপ্ত ছবি সেট করতে আপনাকে সম্মতি দেয়।"
-  dashboard_sections_secret_none: "আপনি যদি আপনার ছাত্রদের নিজেদের একাউন্ট পরিচালনা
+  dashboard_sections_secret_none: আপনি যদি আপনার ছাত্রদের নিজেদের একাউন্ট পরিচালনা
     করতে দিতে চান, তাদের নিজেদের পাসওয়ার্ড চয়নসহ তাহলে গুপ্ত ধরনের <b>কোনো</b> পছন্দ
-    করুন।"
-  dashboard_sections_print_secrets: "আপনি তখন আপনার ছাত্রদের পৃথক পৃথকভাবে অ্যাকাউন্টের
-    তথ্য ধারণকারী কার্ড মুদ্রণ করে বন্টন করে দিতে পারেন ।"
-  dashboard_sections_switch_section: "অধ্যায় অদল-বদল করুন:"
-  dashboard_sections_close: "বন্ধ"
+    করুন।
+  dashboard_sections_print_secrets: আপনি তখন আপনার ছাত্রদের পৃথক পৃথকভাবে অ্যাকাউন্টের
+    তথ্য ধারণকারী কার্ড মুদ্রণ করে বন্টন করে দিতে পারেন ।
+  dashboard_sections_switch_section: 'অধ্যায় অদল-বদল করুন:'
+  dashboard_sections_close: বন্ধ
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: "শাখাতে সরান:"
-  dashboard_sections_enter_code: "অধ্যায় কোড লিখুন:"
+  dashboard_sections_move_to_section: 'শাখাতে সরান:'
+  dashboard_sections_enter_code: 'অধ্যায় কোড লিখুন:'
   dashboard_sections_code_placeholder: 6-বর্ণ-চিহ্ন সঙ্কেত (ABCDEF)
-  dashboard_sections_other_section: "অন্যান্য শাখা"
-  dashboard_sections_both_sections: "আপনি কি উভয় অংশের ছাত্র হতে চান?"
+  dashboard_sections_other_section: অন্যান্য শাখা
+  dashboard_sections_both_sections: আপনি কি উভয় অংশের ছাত্র হতে চান?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
@@ -959,54 +957,54 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "প্রতি লাইনে একজন করে, শিক্ষার্থীদের নাম লিখুন
-    বা পেস্ট করুন:"
+  dashboard_students_add_multiple: 'প্রতি লাইনে একজন করে, শিক্ষার্থীদের নাম লিখুন
+    বা পেস্ট করুন:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
-  dashboard_students_new_section: "নতুন শাখার সৃষ্টি করেছেন! এখন উপরের<b>ছাত্র যুক্ত
-    করুন</b> এবং <b>একাধিক ছাত্র যুক্ত করুন</b>বোতামগুলি ব্যবহার করে ছাত্র যুক্ত করুন।"
-  dashboard_students_name: "নাম"
-  dashboard_students_progress: "অগ্রগতি"
-  dashboard_students_male: "পুরুষ"
-  dashboard_students_female: "মহিলা"
-  dashboard_students_completed_levels: "সফলভা্বে পার করেছেন"
-  dashboard_students_total_lines: "কোড লিখেছেন"
-  dashboard_students_share_section: "পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার
-    করুন:"
+  dashboard_students_new_section: নতুন শাখার সৃষ্টি করেছেন! এখন উপরের<b>ছাত্র যুক্ত
+    করুন</b> এবং <b>একাধিক ছাত্র যুক্ত করুন</b>বোতামগুলি ব্যবহার করে ছাত্র যুক্ত করুন।
+  dashboard_students_name: নাম
+  dashboard_students_progress: অগ্রগতি
+  dashboard_students_male: পুরুষ
+  dashboard_students_female: মহিলা
+  dashboard_students_completed_levels: সফলভা্বে পার করেছেন
+  dashboard_students_total_lines: কোড লিখেছেন
+  dashboard_students_share_section: 'পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার
+    করুন:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
-  dashboard_students_print_info: "আপনার ছাত্র যুক্ত হওয়ার তথ্য কার্ড মুদ্রন করুন"
-  dashboard_students_secret_picture_title: "গোপন ছবি"
-  dashboard_students_secret_picture: "গুপ্ত ছবি"
-  dashboard_students_reset_picture: "আপনি ছাত্রের গোপন ছবি যে কোন সময়ে <b>গোপন দেখান</b>
+  dashboard_students_print_info: আপনার ছাত্র যুক্ত হওয়ার তথ্য কার্ড মুদ্রন করুন
+  dashboard_students_secret_picture_title: গোপন ছবি
+  dashboard_students_secret_picture: গুপ্ত ছবি
+  dashboard_students_reset_picture: আপনি ছাত্রের গোপন ছবি যে কোন সময়ে <b>গোপন দেখান</b>
     এবং তখন <b>গোপন রিসেট</b> পছন্দ করে রিসেট হতে পারে। তারা সাইন ইন করার সময় তাদের
-    ব্যবহারের জন্য একটি নতুন গোপন ছবি উত্পন্ন করা হবে।"
-  dashboard_students_secret_word_title: "গোপন শব্দ"
-  dashboard_students_secret_word: "গুপ্ত শব্দ"
-  dashboard_students_reset_word: "আপনি ছাত্র গুপ্ত কথা যে কোন সময় <b>গুপ্ত দেখান</b>
+    ব্যবহারের জন্য একটি নতুন গোপন ছবি উত্পন্ন করা হবে।
+  dashboard_students_secret_word_title: গোপন শব্দ
+  dashboard_students_secret_word: গুপ্ত শব্দ
+  dashboard_students_reset_word: 'আপনি ছাত্র গুপ্ত কথা যে কোন সময় <b>গুপ্ত দেখান</b>
     এবং পরে <b>গোপনে রিসেট</b> পছন্দ করে রিসেট হতে পারে। তারা সাইন ইন করার সময় তাদের
-    ব্যবহারের জন্য এক জোড়া নতুন গুপ্ত কথা উত্পন্ন করা হবে। "
-  dashboard_students_join_link: "আপনার ছাত্রদের বলুন তাদের নিজস্ব একাউন্ট তৈরি করতে
-    এবং আপনার দিকের অংশে যোগ করুন"
-  dashboard_students_no_email: "যদি আপনার ছাত্রদের  ই-মেইল ঠিকানা না থাকে, বা আপনি
+    ব্যবহারের জন্য এক জোড়া নতুন গুপ্ত কথা উত্পন্ন করা হবে। '
+  dashboard_students_join_link: আপনার ছাত্রদের বলুন তাদের নিজস্ব একাউন্ট তৈরি করতে
+    এবং আপনার দিকের অংশে যোগ করুন
+  dashboard_students_no_email: যদি আপনার ছাত্রদের  ই-মেইল ঠিকানা না থাকে, বা আপনি
     তাদের একাউন্ট তৈরি করতে চান, তাহলে এই বিভাগের গুপ্ত ধরনের <b>শব্দ</b> বা <b>ছবি</b>তে
-    পরিবর্তন করুন।"
-  dashboard_students_print_page: "এই পৃষ্ঠা মুদ্রণ করুন"
+    পরিবর্তন করুন।
+  dashboard_students_print_page: এই পৃষ্ঠা মুদ্রণ করুন
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     এখানে ক্লিক করুন</a>আমাদের গোপনীয়তা নথির জন্য যা আপনার ছাত্রদের জন্য শেয়ার অথবা  মুদ্রণ
     (print) করতে পারবেন।
-  dashboard_curriculum_k5_title: "কে-৫ শিক্ষকদের জন্য তথ্য"
-  dashboard_curriculum_middle_title: "মধ্যমিক স্কুলের শিক্ষকদের জন্য তথ্য"
-  dashboard_curriculum_high_title: "উচ্চ মধ্যমিক স্কুলের  শিক্ষকদের জন্য তথ্য"
-  dashboard_lesson_plans: "পাঠ পরিকল্পনা"
+  dashboard_curriculum_k5_title: কে-৫ শিক্ষকদের জন্য তথ্য
+  dashboard_curriculum_middle_title: মধ্যমিক স্কুলের শিক্ষকদের জন্য তথ্য
+  dashboard_curriculum_high_title: উচ্চ মধ্যমিক স্কুলের  শিক্ষকদের জন্য তথ্য
+  dashboard_lesson_plans: পাঠ পরিকল্পনা
   dashboard_view_all_lesson_plans: Lesson এর সকল পরিকল্পনাসমূহ প্রদর্শন করুন
-  dashboard_course1: "কোর্স 1:"
-  dashboard_course2: "কোর্স 2:"
-  dashboard_course3: "কোর্স 3:"
-  dashboard_course4: "কোর্স ৪ (পরীক্ষামুলক):"
+  dashboard_course1: 'কোর্স 1:'
+  dashboard_course2: 'কোর্স 2:'
+  dashboard_course3: 'কোর্স 3:'
+  dashboard_course4: 'কোর্স ৪ (পরীক্ষামুলক):'
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
@@ -1018,68 +1016,68 @@
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_tools: 'Tools: '
-  dashboard_curriculum: "পাঠ্যক্রম"
+  dashboard_curriculum: পাঠ্যক্রম
   dashboard_curriculum_overview: K-5 কারিকুলাম তথ্যাবলী
-  dashboard_overview: "সংক্ষিপ্ত বিবরণ"
-  dashboard_sequence: "অনুক্রম"
-  dashboard_framework: "ফ্রেমওয়ার্ক"
-  dashboard_standards: "মানের"
-  dashboard_implementation_guide: "বাস্তবায়নের নির্দেশ"
-  dashboard_glossary: "পরিভাষা"
-  dashboard_classroom_strategies: "শিক্ষকদের জন্য ক্লাস রুমের মধ্যেকার পরিকল্পনা"
-  dashboard_debugging: "ডিবাগিং:"
-  dashboard_puzzle_solving: "ধাঁধা-সমাধান:"
-  dashboard_student_worksheet: "ছাত্র কর্মসূচি"
-  dashboard_teacher_worksheet: "শিক্ষক কর্মসূচি"
-  dashboard_curriculum_csina: "বীজগণিতে কম্পিউটার বিজ্ঞান:"
-  dashboard_curriculum_csins: "বিজ্ঞানে কম্পিউটার বিজ্ঞান:"
-  dashboard_curriculum_csp: "এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি:"
-  dashboard_curriculum_ecs: "কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে:"
+  dashboard_overview: সংক্ষিপ্ত বিবরণ
+  dashboard_sequence: অনুক্রম
+  dashboard_framework: ফ্রেমওয়ার্ক
+  dashboard_standards: মানের
+  dashboard_implementation_guide: বাস্তবায়নের নির্দেশ
+  dashboard_glossary: পরিভাষা
+  dashboard_classroom_strategies: শিক্ষকদের জন্য ক্লাস রুমের মধ্যেকার পরিকল্পনা
+  dashboard_debugging: 'ডিবাগিং:'
+  dashboard_puzzle_solving: 'ধাঁধা-সমাধান:'
+  dashboard_student_worksheet: ছাত্র কর্মসূচি
+  dashboard_teacher_worksheet: শিক্ষক কর্মসূচি
+  dashboard_curriculum_csina: 'বীজগণিতে কম্পিউটার বিজ্ঞান:'
+  dashboard_curriculum_csins: 'বিজ্ঞানে কম্পিউটার বিজ্ঞান:'
+  dashboard_curriculum_csp: 'এপি ® কম্পিউটার বিজ্ঞানের মূলনীতি:'
+  dashboard_curriculum_ecs: 'কম্পিউটার বিজ্ঞানের প্রসার করা হচ্ছে:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "অন্যান্য"
-  dashboard_login_word: "শব্দ"
-  dashboard_login_picture: "ছবি"
-  dashboard_login_none: "ই-মেইল"
-  dashboard_stage: "ধাপ"
-  dashboard_puzzle: "ধাঁধা"
-  dashboard_question: "প্রশ্ন"
-  dashboard_response: "জবাব"
-  dashboard_correctness: "শুদ্ধতা"
-  dashboard_correctness_free_response: "ফ্রী প্রতিক্রিয়া"
-  dashboard_correctness_unsubmitted: "জমা দেওয়া হয়নি"
-  dashboard_correctness_correct: "সঠিক"
-  dashboard_correctness_incorrect: "ভুল"
-  dashboard_submission_submitted: "দাখিল করা হয়েছে"
-  dashboard_submission_in_progress: "অগ্রসর হচ্ছে"
-  dashboard_status: "অবস্থা"
+  dashboard_grade_other: অন্যান্য
+  dashboard_login_word: শব্দ
+  dashboard_login_picture: ছবি
+  dashboard_login_none: ই-মেইল
+  dashboard_stage: ধাপ
+  dashboard_puzzle: ধাঁধা
+  dashboard_question: প্রশ্ন
+  dashboard_response: জবাব
+  dashboard_correctness: শুদ্ধতা
+  dashboard_correctness_free_response: ফ্রী প্রতিক্রিয়া
+  dashboard_correctness_unsubmitted: জমা দেওয়া হয়নি
+  dashboard_correctness_correct: সঠিক
+  dashboard_correctness_incorrect: ভুল
+  dashboard_submission_submitted: দাখিল করা হয়েছে
+  dashboard_submission_in_progress: অগ্রসর হচ্ছে
+  dashboard_status: অবস্থা
   dashboard_multi_correct: "# একাধিক পছন্দ সঠিক"
-  dashboard_multi_count: "একাধিক-পছন্দের"
+  dashboard_multi_count: একাধিক-পছন্দের
   dashboard_multi_correct_percent: "% একাধিক পছন্দ সঠিক"
-  dashboard_submission_timestamp: "জমা দেওয়ার টাইমস্ট্যাম্প"
-  stats_hoc_2013_heading: "গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান।
-    শুধু এক সপ্তাহেঃ"
+  dashboard_submission_timestamp: জমা দেওয়ার টাইমস্ট্যাম্প
+  stats_hoc_2013_heading: গত বছরের এক ঘন্টার কোড থেকে আসা অবিশ্বাস্য পরিসংখ্যান। শুধু
+    এক সপ্তাহেঃ
   stats_hoc_2013_image_alt: 2013 থেকে ঘন্টা কোড এর stats
-  dashboard_teacher: "শিক্ষক"
-  dashboard_student: "ছাত্র"
-  dashboard_sections_email_question: "সকল ছাত্রের কি একটি বৈধ ই-মেইল ঠিকানা আছে?"
-  dashboard_sections_account_creation_question: "কে ছাত্রের একাউন্ট তৈরি করে?"
+  dashboard_teacher: শিক্ষক
+  dashboard_student: ছাত্র
+  dashboard_sections_email_question: সকল ছাত্রের কি একটি বৈধ ই-মেইল ঠিকানা আছে?
+  dashboard_sections_account_creation_question: কে ছাত্রের একাউন্ট তৈরি করে?
   dashboard_sections_password_question: '''পাসওয়ার্ড" হিসাবে ছাত্ররা কি ব্যবহার করেন?'
   dashboard_sections_picture_account_creation: Code.org কর্তৃক সংযুক্ত ছবি
   dashboard_sections_word_account_creation: Code.org, দ্বারা নিযুক্ত একটি সাধারণ শব্দ
-  dashboard_sections_sign_in_question: "কোথায় ছাত্ররা সাইন-ইন করবেন?"
+  dashboard_sections_sign_in_question: কোথায় ছাত্ররা সাইন-ইন করবেন?
   dashboard_sections_sign_in_unique: '"ছাত্র নিয়ন্ত্রণ করুন" ট্যাব তালিকাভুক্ত স্বতন্ত্র
     ওয়েব-পাতা'
   dashboard_sections_sign_in_main: 'http://code.org যান এবং ''সাইন ইন'' ক্লিক করুন '
-  dashboard_sections_password_account_creation: "ছাত্র-নির্মিত টেক্সট পাসওয়ার্ড"
-  dashboard_sections_login_type_explanation: "এই টেবিল আপনাকে <b>ছবি, শব্দ, অথবা ই-মেল</b>,
-    এর ভেতর থেকে আপনার বিভাগের জন্য লগ ইনের নমুনা বাছতে সাহায্য করবে। "
-  dashboard_faq: "বহুবার আলোচিত প্রশ্ন সমূহ"
+  dashboard_sections_password_account_creation: ছাত্র-নির্মিত টেক্সট পাসওয়ার্ড
+  dashboard_sections_login_type_explanation: 'এই টেবিল আপনাকে <b>ছবি, শব্দ, অথবা ই-মেল</b>,
+    এর ভেতর থেকে আপনার বিভাগের জন্য লগ ইনের নমুনা বাছতে সাহায্য করবে। '
+  dashboard_faq: বহুবার আলোচিত প্রশ্ন সমূহ
   dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
-  code_hoc_coming: "এক ঘন্টা কোড এখানে-ডিসেম্বর 8-14"
+  code_hoc_coming: এক ঘন্টা কোড এখানে-ডিসেম্বর 8-14
   code_sign_up: CS শিক্ষা সপ্তাহ সময় অংশগ্রহণ করা সাইন আপ করুন
-  host_an_hour: "এক ঘণ্টার আয়োজন করুন"
+  host_an_hour: এক ঘণ্টার আয়োজন করুন
   learn_banner_title: Hour of Code এর জন্য আমাদের সাথে যোগ দিন
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
@@ -1087,15 +1085,15 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "আরও জানুন"
-  learn_sign_up_description: "সিএস শিক্ষা সপ্তাহের সময় এক ঘন্টার কোডে অংশগ্রহনের
-    জন্য সাইন আপ করুন"
-  learn_sign_up_button: "সাইন আপ"
-  learn_videos_watch: "আপনার শ্রেণীকক্ষে এই অনুপ্রেরণীয় ভিডিও দেখান"
-  learn_videos_show: "আপনার ক্লাসে এই অনুপ্রেরণীয় ভিডিও প্রদর্শন করুন"
-  learn_videos_before_hoc: "আপনার ঘন্টা এর কোড করার আগে অনুপ্রেরণীয় ভিডিও দেখুন"
-  learn_educator_resources_description: "শিক্ষা এক ঘন্টার কোড কিভাবে করতে হয় তা শিখুন"
-  learn_educator_resources_button: "শিক্ষকদের জন্য তথ্য"
+  learn_more: আরও জানুন
+  learn_sign_up_description: সিএস শিক্ষা সপ্তাহের সময় এক ঘন্টার কোডে অংশগ্রহনের জন্য
+    সাইন আপ করুন
+  learn_sign_up_button: সাইন আপ
+  learn_videos_watch: আপনার শ্রেণীকক্ষে এই অনুপ্রেরণীয় ভিডিও দেখান
+  learn_videos_show: আপনার ক্লাসে এই অনুপ্রেরণীয় ভিডিও প্রদর্শন করুন
+  learn_videos_before_hoc: আপনার ঘন্টা এর কোড করার আগে অনুপ্রেরণীয় ভিডিও দেখুন
+  learn_educator_resources_description: শিক্ষা এক ঘন্টার কোড কিভাবে করতে হয় তা শিখুন
+  learn_educator_resources_button: শিক্ষকদের জন্য তথ্য
   learn_are_you_educator: আপনি কি একজন শিক্ষাবিদ? <a href="http://hourofcode.com/resources/how-to">থেকে
     কিভাবে এক ঘন্টার কোড করতে হয় তা</a> শিখুন
   learn_find_volunteer: আপনার এক ঘন্টার কোড করার সময় সাহায্য করতে <a href="https://code.org/volunteer/local">
@@ -1108,130 +1106,130 @@
     শিক্ষাবিদের পুরস্কার সম্পর্কে।
   learn_inspirational_videos: <a href="https://code.org/educate/inspire"> এই ভিডিও</a>
     দেখানোর মাধ্যমে ছাত্রদের অনুপ্রাণিত করুন
-  hoc2014_try_new_tutorials: "আমাদের নতুন এক ঘন্টা কোড টিউটোরিয়াল চেষ্টা করুন।"
+  hoc2014_try_new_tutorials: আমাদের নতুন এক ঘন্টা কোড টিউটোরিয়াল চেষ্টা করুন।
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
   hoc2014_try_scrat: Angry Birds, PvZ, এবং Scrat
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Code.org টিউটোরিয়াল
   carousel_heading_codeorg_any_device: Code.org-টিউটোরিয়াল (সমস্ত ডিভাইসের জন্য)
-  carousel_heading_3rd_party: "তৃতীয় দলের করা টিউটোরিয়াল"
-  carousel_heading_third_party: "তৃতীয় পক্ষের করা টিউটোরিয়াল"
-  carousel_heading_international: "নিজের ভাষায় টিউটোরিয়াল"
-  carousel_heading_domestic: "সঙ্গী টিউটোরিয়াল ইংরেজিতে উপলভ্য।"
-  carousel_heading_beginners: "কে-৮ পর্যন্ত অংশীদারদের টিউটোরিয়াল"
-  carousel_heading_beyond_beginners: "প্রাথমিক শিক্ষার্থীর জন্য টিউটোরিয়াল"
-  carousel_heading_javascript: "জাভাস্ক্রিপ্ট শেখায় যে সহযোগী টিউটোরিয়াল"
-  carousel_heading_beyond_javascript: "জাভাস্ক্রিপ্ট শেখানোর টিউটোরিয়াল"
-  carousel_heading_unplugged: "কোন ডিভাইস বা ইন্টারনেট নেই? 'বিচ্ছিন্ন' কম্পিউটার
-    বিজ্ঞান চেষ্টা করুন।"
-  carousel_heading_devices: "ফোন এবং ট্যাবলেটের জন্য অংশীদার টিউটরিয়াল অ্যাপ"
-  carousel_heading_beyond_devices: "ফোন এবং ট্যাবলেট জন্য টিউটরিয়াল অ্যাপ"
-  carousel_heading_languages: "অন্য প্রোগ্রামিং ভাষায় অংশীদারদের টিউটরিয়াল"
-  carousel_heading_beyond_languages: "অন্য প্রোগ্রামিং ভাষার টিউটোরিয়াল"
-  carousel_heading_apps_games: "আপনার নিজের অ্যাপ বা গেম বানান"
-  carousel_heading_university: "অনলাইনে বিশ্ববিদ্যালয়ে কোর্স"
-  carousel_heading_webpages: "ওয়েব পেজ তৈরি করতে শিখুন"
-  carousel_heading_robots: "রোবটের সাথে প্রোগ্রাম করতে শিখুন"
-  carousel_heading_ide: "শিক্ষকদের মধ্যে জনপ্রিয় প্ল্যাটফর্ম"
+  carousel_heading_3rd_party: তৃতীয় দলের করা টিউটোরিয়াল
+  carousel_heading_third_party: তৃতীয় পক্ষের করা টিউটোরিয়াল
+  carousel_heading_international: নিজের ভাষায় টিউটোরিয়াল
+  carousel_heading_domestic: সঙ্গী টিউটোরিয়াল ইংরেজিতে উপলভ্য।
+  carousel_heading_beginners: কে-৮ পর্যন্ত অংশীদারদের টিউটোরিয়াল
+  carousel_heading_beyond_beginners: প্রাথমিক শিক্ষার্থীর জন্য টিউটোরিয়াল
+  carousel_heading_javascript: জাভাস্ক্রিপ্ট শেখায় যে সহযোগী টিউটোরিয়াল
+  carousel_heading_beyond_javascript: জাভাস্ক্রিপ্ট শেখানোর টিউটোরিয়াল
+  carousel_heading_unplugged: কোন ডিভাইস বা ইন্টারনেট নেই? 'বিচ্ছিন্ন' কম্পিউটার বিজ্ঞান
+    চেষ্টা করুন।
+  carousel_heading_devices: ফোন এবং ট্যাবলেটের জন্য অংশীদার টিউটরিয়াল অ্যাপ
+  carousel_heading_beyond_devices: ফোন এবং ট্যাবলেট জন্য টিউটরিয়াল অ্যাপ
+  carousel_heading_languages: অন্য প্রোগ্রামিং ভাষায় অংশীদারদের টিউটরিয়াল
+  carousel_heading_beyond_languages: অন্য প্রোগ্রামিং ভাষার টিউটোরিয়াল
+  carousel_heading_apps_games: আপনার নিজের অ্যাপ বা গেম বানান
+  carousel_heading_university: অনলাইনে বিশ্ববিদ্যালয়ে কোর্স
+  carousel_heading_webpages: ওয়েব পেজ তৈরি করতে শিখুন
+  carousel_heading_robots: রোবটের সাথে প্রোগ্রাম করতে শিখুন
+  carousel_heading_ide: শিক্ষকদের মধ্যে জনপ্রিয় প্ল্যাটফর্ম
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "শিক্ষকের টীকা"
-  teach_led_lesson_plans: "শিক্ষক পরিচালিত পাঠ পরিকল্পনা"
+  educator_notes: শিক্ষকের টীকা
+  teach_led_lesson_plans: শিক্ষক পরিচালিত পাঠ পরিকল্পনা
   learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode">এক
     ঘন্টার কোডের বিস্তৃত টিউটোরিয়াল তালিকা</a> দেখুন। এক ঘন্টার কোডের টিউটোরিয়াল
     জমা দেবার জন্য আমাদের শর্তাবলী ও দাখিল নির্দেশিকা দেখার জন্য , <a href="https://hourofcode.com/tutorial-guidelines">
     এখানে ক্লিক করুন।</a>
-  how_to_teach_hoc: "কিভাবে এক ঘন্টার কোড শিক্ষাবেন"
-  more_resources_educators: "শিক্ষক ও শিক্ষাবিদদের জন্য তথ্য"
-  beyond_submission: "এক ঘন্টার কোডের বাইরে টিউটোরিয়াল জমা করতে চান? শর্ত ও জমা ফর্ম
-    দেখুন।"
+  how_to_teach_hoc: কিভাবে এক ঘন্টার কোড শিক্ষাবেন
+  more_resources_educators: শিক্ষক ও শিক্ষাবিদদের জন্য তথ্য
+  beyond_submission: এক ঘন্টার কোডের বাইরে টিউটোরিয়াল জমা করতে চান? শর্ত ও জমা ফর্ম
+    দেখুন।
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "অংশগ্রহণকারী"
-  teachers_notes: "শিক্ষকদের টীকা"
-  teachers_notes_hoc: "শিক্ষকরা: এখানে গুরুত্বপূর্ণ শিক্ষাবিদ মন্তব্য পড়ুন"
-  previous: "পূর্ববর্তী"
-  next: "পরবর্তী"
-  older_systems: "পুরাতন সিস্টেমে যে অংশীদার টিউটরিয়াল কাজ করে"
+  participants: অংশগ্রহণকারী
+  teachers_notes: শিক্ষকদের টীকা
+  teachers_notes_hoc: 'শিক্ষকরা: এখানে গুরুত্বপূর্ণ শিক্ষাবিদ মন্তব্য পড়ুন'
+  previous: পূর্ববর্তী
+  next: পরবর্তী
+  older_systems: পুরাতন সিস্টেমে যে অংশীদার টিউটরিয়াল কাজ করে
   older_systems_subheading: এগুলি পুরাতন ওয়েব ব্রাউজারে কাজ করা উচিত। সকল টিউটোরিয়ালে
     প্রবেশ করতে<a href="http://browsehappy.com/" target="_blank"> আধুনিক ওয়েব ব্রাউজারে
     উন্নতিকরণ করুন।</a>
-  mobile_devices: "মোবাইল ডিভাইসের জন্য অংশীদারদের টিউটোরিয়াল"
+  mobile_devices: মোবাইল ডিভাইসের জন্য অংশীদারদের টিউটোরিয়াল
   frozen_name: Code with Anna and Elsa
-  starwars_name: "স্টার ওয়ার্স: কোড দিয়ে ছায়াপথ (গ্যালাক্সি বানান)"
-  codeorg_name: "আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন"
-  codeintl_name: "আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন"
+  starwars_name: 'স্টার ওয়ার্স: কোড দিয়ে ছায়াপথ (গ্যালাক্সি বানান)'
+  codeorg_name: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
+  codeintl_name: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  khanes_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  khanpt_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  khanhe_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  khanfr_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  khanpl_name: "জাভাস্ক্রিপ্টের ভূমিকা"
-  tynker_name: "আপনার নিজস্ব খেলা তৈরি করুন"
-  scratch_name: "কোডিং মাধ্যমে সৃজনশীল পান"
+  khan_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanes_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanpt_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanhe_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanfr_name: জাভাস্ক্রিপ্টের ভূমিকা
+  khanpl_name: জাভাস্ক্রিপ্টের ভূমিকা
+  tynker_name: আপনার নিজস্ব খেলা তৈরি করুন
+  scratch_name: কোডিং মাধ্যমে সৃজনশীল পান
   lightbot_name: Lightbot
-  thinkersmith_name: "আমার রোবোটিক্স বন্ধুরা"
-  condcards_name: "কার্ড সঙ্গে শর্ত"
+  thinkersmith_name: আমার রোবোটিক্স বন্ধুরা
+  condcards_name: কার্ড সঙ্গে শর্ত
   lightbotintl_name: Lightbot
-  codehs_name: "কুকুর ক্যারেল সাথে কোড শিখুন"
+  codehs_name: কুকুর ক্যারেল সাথে কোড শিখুন
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: "কোডবানর"
-  codeavengers_name: "জাভাস্ক্রিপ্ট দিয়ে একটি খেলা তৈরি করুন"
-  processing_name: "কোড দিয়ে ছবি আঁকা"
-  robomind_name: "একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন"
-  groklearning_name: "এলিজা কথপকথনকারী রোবট ডাক্তার"
-  quorum_name: "সুলভ প্রোগ্রামিং (স্ক্রীন রীডার সাপোর্ট সহ)"
+  codemonkey_name: কোডবানর
+  codeavengers_name: জাভাস্ক্রিপ্ট দিয়ে একটি খেলা তৈরি করুন
+  processing_name: কোড দিয়ে ছবি আঁকা
+  robomind_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  groklearning_name: এলিজা কথপকথনকারী রোবট ডাক্তার
+  quorum_name: সুলভ প্রোগ্রামিং (স্ক্রীন রীডার সাপোর্ট সহ)
   codespark_name: The Foos (প্রাক পাঠকদের স্বাগত)
   kodable_name: Kodable (প্রাক পাঠকদের স্বাগত)
   tynkerapp_name: Tynker - ট্যাবলেটে
-  robomindnl_name: "একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন"
-  flappy_name: "ফ্লাপি গেম তৈরি করুন"
+  robomindnl_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  flappy_name: ফ্লাপি গেম তৈরি করুন
   bitsbox_name: Bitsbox - একটি খেলা বানান
-  makeschool_name: "আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!"
+  makeschool_name: আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!
   touchdevelop_name: TouchDevelop
-  appinventor_name: "অ্যাপইনভেন্টরে এক ঘন্টার কোড"
+  appinventor_name: অ্যাপইনভেন্টরে এক ঘন্টার কোড
   blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: "আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন"
-  playlab_name: "প্লে ল্যাব"
+  hourofcode_name: আপনার প্রথম কম্পিউটার প্রোগ্রাম লেখুন
+  playlab_name: প্লে ল্যাব
   infinity_name: Infinity Play Lab
-  artist_name: "শিল্পী"
-  monstercoding_name: "রহস্য দ্বীপের কোডিং অনুসন্ধান"
-  allcancode_name: "পালাও মার্কো!"
-  csfirst_name: "সিএস প্রথমে"
-  boxisland_name: "বাক্স দ্বীপ"
+  artist_name: শিল্পী
+  monstercoding_name: রহস্য দ্বীপের কোডিং অনুসন্ধান
+  allcancode_name: পালাও মার্কো!
+  csfirst_name: সিএস প্রথমে
+  boxisland_name: বাক্স দ্বীপ
   codesters_name: Codesters
   texasinstruments_name: 10 মিনিটের কোড
-  teacherled_name: "শিক্ষক পরিচালিত পাঠ পরিকল্পনা"
-  course1_name: "কোর্স ১"
-  course2_name: "কোর্স ২"
-  course3_name: "কোর্স ২"
-  course4_name: "কোর্স ৪"
-  coursea-draft_name: "কোর্স A"
-  coursea_name: "কোর্স A"
-  courseb-draft_name: "কোর্স B"
-  courseb_name: "কোর্স B"
-  coursec-draft_name: "কোর্স C"
-  coursec_name: "কোর্স C"
-  coursed-draft_name: "কোর্স D"
-  coursed_name: "কোর্স D"
-  coursee-draft_name: "কোর্স E"
-  coursee_name: "কোর্স E"
-  coursef-draft_name: "কোর্স F"
-  coursef_name: "কোর্স F"
+  teacherled_name: শিক্ষক পরিচালিত পাঠ পরিকল্পনা
+  course1_name: কোর্স ১
+  course2_name: কোর্স ২
+  course3_name: কোর্স ২
+  course4_name: কোর্স ৪
+  coursea-draft_name: কোর্স A
+  coursea_name: কোর্স A
+  courseb-draft_name: কোর্স B
+  courseb_name: কোর্স B
+  coursec-draft_name: কোর্স C
+  coursec_name: কোর্স C
+  coursed-draft_name: কোর্স D
+  coursed_name: কোর্স D
+  coursee-draft_name: কোর্স E
+  coursee_name: কোর্স E
+  coursef-draft_name: কোর্স F
+  coursef_name: কোর্স F
   accelerated_name: Accelerated Course
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
   cspunit1_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
   cspunit2_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-  cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
+  cspunit3_name: সিএস এর মূলনীতি ইউনিট ৩
   cspunit4_name: "(পুরাতন) ইউনিট ৪: তথ্য"
   cspunit5_name: "(পুরাতন) ইউনিট 5: PT খোঁজ এবং তৈরি করুন"
   cspunit6_name: 'Post-AP: অ্যাপ্লিকেশন ডাটাবেস'
@@ -1239,7 +1237,7 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: "ইউনিট ৫: তথ্য এবং সমাজ"
+  csd5_name: 'ইউনিট ৫: তথ্য এবং সমাজ'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
@@ -1256,7 +1254,7 @@
   csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: "৯-১২ গ্রেড"
+  cspunit3_gradelevel: ৯-১২ গ্রেড
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -1268,15 +1266,15 @@
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
   classicmaze_name: Classic Maze
-  iceage_name: "বরফযুগ"
-  minecraft_name: "মাইনক্র্যাফট"
+  iceage_name: বরফযুগ
+  minecraft_name: মাইনক্র্যাফট
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: "সাধারণ এনক্রিপশন"
+  hoc-encryption_name: সাধারণ এনক্রিপশন
   text-compression_name: Text Compression
-  math_category_name: "গণিত"
-  hoc_category_name: "এক ঘন্টার কোড"
+  math_category_name: গণিত
+  hoc_category_name: এক ঘন্টার কোড
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1285,201 +1283,200 @@
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
-  applab_name: "অ্যাপ ল্যাব"
+  applab_name: অ্যাপ ল্যাব
   gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
-  applab_gradelevel: "বয়সের ১৩+"
-  applab_shortdescription_congrats: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি
+  applab_gradelevel: বয়সের ১৩+
+  applab_shortdescription_congrats: অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি
     সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য
     ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন
-    শেয়ার করুন।"
-  codeorg_gradelevel: "বয়স 4-104"
-  codeintl_gradelevel: "বয়স 4-104"
+    শেয়ার করুন।
+  codeorg_gradelevel: বয়স 4-104
+  codeintl_gradelevel: বয়স 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: "মাধ্যামিক স্কুল +"
-  khanes_gradelevel: "মাধ্যামিক স্কুল +"
-  khanpt_gradelevel: "মাধ্যামিক স্কুল +"
-  khanhe_gradelevel: "মাধ্যামিক স্কুল +"
-  khanfr_gradelevel: "মাধ্যামিক স্কুল +"
-  khanpl_gradelevel: "মাধ্যামিক স্কুল +"
-  tynker_gradelevel: "বয়স 5-13"
-  scratch_gradelevel: "বয়স 8 +"
-  lightbot_gradelevel: "সব বয়সের জন্য"
-  thinkersmith_gradelevel: "সব বয়সের জন্য"
-  condcards_gradelevel: "বয়স 8-12"
-  lightbotintl_gradelevel: "সব বয়সের জন্য"
-  codehs_gradelevel: "উচ্চ বিদ্যালয়"
-  codecademy_gradelevel: "উচ্চ বিদ্যালয়"
-  codecombat_gradelevel: "মাধ্যামিক স্কুল +"
-  codemonkey_gradelevel: "মাধ্যামিক স্কুল +"
-  codeavengers_gradelevel: "মাধ্যামিক স্কুল +"
-  processing_gradelevel: "উচ্চ বিদ্যালয়"
-  robomind_gradelevel: "বয়স 8-13"
-  groklearning_gradelevel: "মাধ্যামিক স্কুল +"
-  quorum_gradelevel: "মাধ্যামিক স্কুল +"
-  codespark_gradelevel: "সাধারন"
-  kodable_gradelevel: "সাধারন"
-  tynkerapp_gradelevel: "বয়স 5-13"
-  robomindnl_gradelevel: "বয়স 8-13"
-  flappy_gradelevel: "বয়স 4-104"
-  bitsbox_gradelevel: "সাধারন"
-  makeschool_gradelevel: "উচ্চ বিদ্যালয়"
-  touchdevelop_gradelevel: "উচ্চ বিদ্যালয়"
-  appinventor_gradelevel: "মাধ্যামিক স্কুল +"
-  blockly_gradelevel: "সব বয়সের জন্য"
-  thinkersmith2_gradelevel: "বয়স 8 +"
-  kodableunplugged_gradelevel: "বয়স 8-13"
-  projguts_gradelevel: "বয়স 10-13"
-  hourofcode_gradelevel: "বয়স 4-104"
-  frozen_gradelevel: "বয়স 8 +"
-  starwars_gradelevel: "বয়স 4-104"
-  playlab_gradelevel: "বয়স 4-104"
-  infinity_gradelevel: "বয়স 4-104"
-  artist_gradelevel: "বয়স 8 +"
-  monstercoding_gradelevel: "বয়স 5-13"
-  allcancode_gradelevel: "বয়স 5-10"
-  csfirst_gradelevel: "বয়স 9-14"
-  boxisland_gradelevel: "সাধারন"
-  codesters_gradelevel: "বয়স 12-14"
-  texasinstruments_gradelevel: "বয়স 13-16"
-  teacherled_gradelevel: "বয়স ৫+"
-  course1_gradelevel: "বয়স ৪-৬"
-  course2_gradelevel: "বয়স ৬-১৮"
-  course3_gradelevel: "বয়স ৮-১৮"
-  course4_gradelevel: "বয়স ১০-১৮"
+  khan_gradelevel: মাধ্যামিক স্কুল +
+  khanes_gradelevel: মাধ্যামিক স্কুল +
+  khanpt_gradelevel: মাধ্যামিক স্কুল +
+  khanhe_gradelevel: মাধ্যামিক স্কুল +
+  khanfr_gradelevel: মাধ্যামিক স্কুল +
+  khanpl_gradelevel: মাধ্যামিক স্কুল +
+  tynker_gradelevel: বয়স 5-13
+  scratch_gradelevel: বয়স 8 +
+  lightbot_gradelevel: সব বয়সের জন্য
+  thinkersmith_gradelevel: সব বয়সের জন্য
+  condcards_gradelevel: বয়স 8-12
+  lightbotintl_gradelevel: সব বয়সের জন্য
+  codehs_gradelevel: উচ্চ বিদ্যালয়
+  codecademy_gradelevel: উচ্চ বিদ্যালয়
+  codecombat_gradelevel: মাধ্যামিক স্কুল +
+  codemonkey_gradelevel: মাধ্যামিক স্কুল +
+  codeavengers_gradelevel: মাধ্যামিক স্কুল +
+  processing_gradelevel: উচ্চ বিদ্যালয়
+  robomind_gradelevel: বয়স 8-13
+  groklearning_gradelevel: মাধ্যামিক স্কুল +
+  quorum_gradelevel: মাধ্যামিক স্কুল +
+  codespark_gradelevel: সাধারন
+  kodable_gradelevel: সাধারন
+  tynkerapp_gradelevel: বয়স 5-13
+  robomindnl_gradelevel: বয়স 8-13
+  flappy_gradelevel: বয়স 4-104
+  bitsbox_gradelevel: সাধারন
+  makeschool_gradelevel: উচ্চ বিদ্যালয়
+  touchdevelop_gradelevel: উচ্চ বিদ্যালয়
+  appinventor_gradelevel: মাধ্যামিক স্কুল +
+  blockly_gradelevel: সব বয়সের জন্য
+  thinkersmith2_gradelevel: বয়স 8 +
+  kodableunplugged_gradelevel: বয়স 8-13
+  projguts_gradelevel: বয়স 10-13
+  hourofcode_gradelevel: বয়স 4-104
+  frozen_gradelevel: বয়স 8 +
+  starwars_gradelevel: বয়স 4-104
+  playlab_gradelevel: বয়স 4-104
+  infinity_gradelevel: বয়স 4-104
+  artist_gradelevel: বয়স 8 +
+  monstercoding_gradelevel: বয়স 5-13
+  allcancode_gradelevel: বয়স 5-10
+  csfirst_gradelevel: বয়স 9-14
+  boxisland_gradelevel: সাধারন
+  codesters_gradelevel: বয়স 12-14
+  texasinstruments_gradelevel: বয়স 13-16
+  teacherled_gradelevel: বয়স ৫+
+  course1_gradelevel: বয়স ৪-৬
+  course2_gradelevel: বয়স ৬-১৮
+  course3_gradelevel: বয়স ৮-১৮
+  course4_gradelevel: বয়স ১০-১৮
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
-  coursed_gradelevel: "গ্রেড ৮ +"
-  coursee_gradelevel: "বয়স 8-12"
+  coursed_gradelevel: গ্রেড ৮ +
+  coursee_gradelevel: বয়স 8-12
   coursef_gradelevel: Grade 10+
-  accelerated_gradelevel: "বয়স ১০-১৮"
-  codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  thinkersmithspanish_platformtext: "অসংযুক্ত"
-  khan_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  khanes_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  khanpt_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  khanhe_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  khanfr_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  khanpl_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  tynker_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  scratch_platformtext: "ডেস্কটপ-শুধুমাত্র ওয়েব ব্রাউজারে (ট্যাবলেটে না)"
-  lightbot_platformtext: "সকল ব্রাউজারগুলি এবং iOS, Android, বা গেইম কনসোল"
-  thinkersmith_platformtext: "অসংযুক্ত"
+  accelerated_gradelevel: বয়স ১০-১৮
+  codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  thinkersmithspanish_platformtext: অসংযুক্ত
+  khan_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanes_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanpt_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanhe_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanfr_platformtext: আধুনিক ওয়েব ব্রাউজার
+  khanpl_platformtext: আধুনিক ওয়েব ব্রাউজার
+  tynker_platformtext: আধুনিক ওয়েব ব্রাউজার
+  scratch_platformtext: ডেস্কটপ-শুধুমাত্র ওয়েব ব্রাউজারে (ট্যাবলেটে না)
+  lightbot_platformtext: সকল ব্রাউজারগুলি এবং iOS, Android, বা গেইম কনসোল
+  thinkersmith_platformtext: অসংযুক্ত
   condcards_platformtext: Unuplugged
-  lightbotintl_platformtext: "আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)"
-  codehs_platformtext: "আধুনিক ব্রাউজার। (ফলো-অন কোর্স ডলার প্রয়োজন $)"
-  codecademy_platformtext: "আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস"
-  codecombat_platformtext: "আধুনিক ওয়েব ব্রাউজার (ফলো-অন কোর্স ডলার প্রয়োজন $)"
-  codemonkey_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  codeavengers_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  processing_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  robomind_platformtext: "আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব"
-  groklearning_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  quorum_platformtext: "আধুনিক ওয়েব ব্রাউজার। পর্দা-সমর্থিত পাঠক"
-  codespark_platformtext: "আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)"
+  lightbotintl_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
+  codehs_platformtext: আধুনিক ব্রাউজার। (ফলো-অন কোর্স ডলার প্রয়োজন $)
+  codecademy_platformtext: আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস
+  codecombat_platformtext: আধুনিক ওয়েব ব্রাউজার (ফলো-অন কোর্স ডলার প্রয়োজন $)
+  codemonkey_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codeavengers_platformtext: আধুনিক ওয়েব ব্রাউজার
+  processing_platformtext: আধুনিক ওয়েব ব্রাউজার
+  robomind_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
+  groklearning_platformtext: আধুনিক ওয়েব ব্রাউজার
+  quorum_platformtext: আধুনিক ওয়েব ব্রাউজার। পর্দা-সমর্থিত পাঠক
+  codespark_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: "আইপ্যাড, অ্যান্ড্রয়েড ট্যাবলেট"
-  robomindnl_platformtext: "আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব"
-  flappy_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  bitsbox_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  makeschool_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  touchdevelop_platformtext: "আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস"
-  appinventor_platformtext: "আধুনিক ব্রাউজার + অ্যান্ড্রয়েড"
-  blockly_platformtext: "শুধু আধুনিক ব্রাউজার"
-  thinkersmith2_platformtext: "অসংযুক্ত"
-  kodableunplugged_platformtext: "অসংযুক্ত"
-  projguts_platformtext: "অসংযুক্ত"
-  hourofcode_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  frozen_platformtext: "আধুনিক ব্রাউজার + ট্যাবলেট"
-  starwars_platformtext: "আধুনিক ব্রাউজার + ট্যাবলেট"
-  playlab_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  monstercoding_platformtext: "আধুনিক ওয়েব ব্রাউজার, আইওস অ্যান্ডয়েড"
-  allcancode_platformtext: "আধুনিক ওয়েব ব্রাউজার, আইওস"
-  csfirst_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  boxisland_platformtext: "অ্যান্ড্রয়েড, আইওএস"
-  codesters_platformtext: "আধুনিক ওয়েব ব্রাউজার"
+  tynkerapp_platformtext: আইপ্যাড, অ্যান্ড্রয়েড ট্যাবলেট
+  robomindnl_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
+  flappy_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  bitsbox_platformtext: আধুনিক ওয়েব ব্রাউজার
+  makeschool_platformtext: আধুনিক ওয়েব ব্রাউজার
+  touchdevelop_platformtext: আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস
+  appinventor_platformtext: আধুনিক ব্রাউজার + অ্যান্ড্রয়েড
+  blockly_platformtext: শুধু আধুনিক ব্রাউজার
+  thinkersmith2_platformtext: অসংযুক্ত
+  kodableunplugged_platformtext: অসংযুক্ত
+  projguts_platformtext: অসংযুক্ত
+  hourofcode_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  frozen_platformtext: আধুনিক ব্রাউজার + ট্যাবলেট
+  starwars_platformtext: আধুনিক ব্রাউজার + ট্যাবলেট
+  playlab_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  monstercoding_platformtext: আধুনিক ওয়েব ব্রাউজার, আইওস অ্যান্ডয়েড
+  allcancode_platformtext: আধুনিক ওয়েব ব্রাউজার, আইওস
+  csfirst_platformtext: আধুনিক ওয়েব ব্রাউজার
+  boxisland_platformtext: অ্যান্ড্রয়েড, আইওএস
+  codesters_platformtext: আধুনিক ওয়েব ব্রাউজার
   texasinstruments_platformtext: TI ক্যালকুলেটর
-  teacherled_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
-  codeorg_shortdescription: "মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
-    শিখুন!"
-  codeintl_shortdescription: "মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
-    শিখুন!"
+  teacherled_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
+  codeorg_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
+  codeintl_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  khanes_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  khanpt_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  khanhe_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  khanfr_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  khanpl_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  tynker_shortdescription: "মজার ধাঁধা সমধান করার মাধম্যে কোড শিখুন, নিজের মোবাইল
-    গেম তৈরী করুন।"
-  scratch_shortdescription: "পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি করুন।"
-  lightbot_shortdescription: "কার্যপ্রণালী এবং লুপ ব্যবহার করে লাইটবোটকে ধাঁধা সমাধান
-    করাতে প্রোগ্রাম করুন।"
-  thinkersmith_shortdescription: "অসংযুক্ত টিউটোরিয়াল যাদের কোন যন্ত্র নেই তাদের
-    জন্য"
-  condcards_shortdescription: "এক বান্ডিল তাস দিয়ে অ্যালগোরিদম শিখুন"
-  lightbotintl_shortdescription: "কোডিং ধারণা শেখানোর একটি খেলা"
-  codehs_shortdescription: "কারল কুকুরের সাথে প্রোগ্রামিং শুরু করুন যা  প্রোগ্রামিং
-    এর একটি আনন্দদায়ক ও চাক্ষুষ মুখ্য পৃষ্ঠা।"
-  codecademy_shortdescription: "ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন"
-  codecombat_shortdescription: "এই মহাকাব্যিক খেলায় পাইথন বা জাভাস্ক্রিপ্ট শিখতে,
-    রাক্ষসদের পরাজিত করুন।"
-  codemonkey_shortdescription: "ছাত্ররা প্রোগ্রাম করে বানরকে কলা ধরায়।"
-  codeavengers_shortdescription: "ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন"
-  processing_shortdescription: "প্রক্রিয়াকরণ ভাষায় এক ঘন্টা টিউটোরিয়াল"
-  robomind_shortdescription: "ভার্চুয়াল রোবটের জন্য কোড লিখুন"
+  khan_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanes_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanpt_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanhe_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanfr_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  khanpl_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  tynker_shortdescription: মজার ধাঁধা সমধান করার মাধম্যে কোড শিখুন, নিজের মোবাইল গেম
+    তৈরী করুন।
+  scratch_shortdescription: পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি করুন।
+  lightbot_shortdescription: কার্যপ্রণালী এবং লুপ ব্যবহার করে লাইটবোটকে ধাঁধা সমাধান
+    করাতে প্রোগ্রাম করুন।
+  thinkersmith_shortdescription: অসংযুক্ত টিউটোরিয়াল যাদের কোন যন্ত্র নেই তাদের জন্য
+  condcards_shortdescription: এক বান্ডিল তাস দিয়ে অ্যালগোরিদম শিখুন
+  lightbotintl_shortdescription: কোডিং ধারণা শেখানোর একটি খেলা
+  codehs_shortdescription: কারল কুকুরের সাথে প্রোগ্রামিং শুরু করুন যা  প্রোগ্রামিং
+    এর একটি আনন্দদায়ক ও চাক্ষুষ মুখ্য পৃষ্ঠা।
+  codecademy_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
+  codecombat_shortdescription: এই মহাকাব্যিক খেলায় পাইথন বা জাভাস্ক্রিপ্ট শিখতে, রাক্ষসদের
+    পরাজিত করুন।
+  codemonkey_shortdescription: ছাত্ররা প্রোগ্রাম করে বানরকে কলা ধরায়।
+  codeavengers_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
+  processing_shortdescription: প্রক্রিয়াকরণ ভাষায় এক ঘন্টা টিউটোরিয়াল
+  robomind_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
   groklearning_shortdescription: আপনার বন্ধুদের বোকা বানাতে "এলিজা" কথোপকথনকারী রোবটকে
     মানুষের মত কথা বলা শিখান।
-  quorum_shortdescription: "যখন মরিয়ম কোরাম প্রোগ্রামিং ভাষা শেখে তখন তার সাথে নির্দেশিত
-    সফরে যোগ দিন।"
-  codespark_shortdescription: "ফুস প্রোগ্রামিং শেখার জন্য একটি মজার, শিশু সুলভ খেলা।"
-  kodable_shortdescription: "কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
-    একটি মজার খেলা"
-  tynkerapp_shortdescription: "মজা কোডিং রহস্য উন্মোচন করতে করতে প্রোগ্রাম শিখুন।"
-  robomindnl_shortdescription: "ভার্চুয়াল রোবটের জন্য কোড লিখুন"
-  flappy_shortdescription: "নিজের গেম তৈরি করুন- ফ্লাপি পাখি, হাঙ্গর বা সাবমেরিন"
-  bitsbox_shortdescription: "বাস্তবে জাভাস্ক্রিপ্ট ব্যবহার করে খেলার জন্য অনেকগুলি
-    অ্যাপ কোড করুন এবং শেয়ার করুন।"
-  makeschool_shortdescription: "আইফোন গেম তৈরি করুন! আপনার নতুন দানবকে পদক্ষেপ শিক্ষানোর
-    মাধ্যমে কোড লেখা শিখুন!"
-  touchdevelop_shortdescription: "পাজল সমাধান করুন, গেমস তৈরি করুন এবং সকল কোডিং আপনার
-    ফোনে শিখুন।"
-  appinventor_shortdescription: "তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)"
-  blockly_shortdescription: "অফলাইনে শিখার জন্য জিপ ফাইলটি ডাউনলোড করুন।"
-  thinkersmith2_shortdescription: "কীভাবে কম্পিউটার 1s ও 0s ব্যবহার করে তথ্য প্রকাশ
-    করে তা শিখুন"
-  kodableunplugged_shortdescription: "অসংযুক্ত মজার কাজ"
-  projguts_shortdescription: "পাথর/কাগজ/কাঁচি ব্যবহার করে প্রতিলিপি ও সিমুলেশন করা
-    চেষ্টা করুন"
-  hourofcode_shortdescription: "মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
-    শিখুন!"
-  frozen_shortdescription: "চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য
-    অনুসন্ধানে যোগ দেই।"
-  starwars_shortdescription: "ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
-    নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। "
+  quorum_shortdescription: যখন মরিয়ম কোরাম প্রোগ্রামিং ভাষা শেখে তখন তার সাথে নির্দেশিত
+    সফরে যোগ দিন।
+  codespark_shortdescription: ফুস প্রোগ্রামিং শেখার জন্য একটি মজার, শিশু সুলভ খেলা।
+  kodable_shortdescription: কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
+    একটি মজার খেলা
+  tynkerapp_shortdescription: মজা কোডিং রহস্য উন্মোচন করতে করতে প্রোগ্রাম শিখুন।
+  robomindnl_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
+  flappy_shortdescription: নিজের গেম তৈরি করুন- ফ্লাপি পাখি, হাঙ্গর বা সাবমেরিন
+  bitsbox_shortdescription: বাস্তবে জাভাস্ক্রিপ্ট ব্যবহার করে খেলার জন্য অনেকগুলি
+    অ্যাপ কোড করুন এবং শেয়ার করুন।
+  makeschool_shortdescription: আইফোন গেম তৈরি করুন! আপনার নতুন দানবকে পদক্ষেপ শিক্ষানোর
+    মাধ্যমে কোড লেখা শিখুন!
+  touchdevelop_shortdescription: পাজল সমাধান করুন, গেমস তৈরি করুন এবং সকল কোডিং আপনার
+    ফোনে শিখুন।
+  appinventor_shortdescription: তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)
+  blockly_shortdescription: অফলাইনে শিখার জন্য জিপ ফাইলটি ডাউনলোড করুন।
+  thinkersmith2_shortdescription: কীভাবে কম্পিউটার 1s ও 0s ব্যবহার করে তথ্য প্রকাশ
+    করে তা শিখুন
+  kodableunplugged_shortdescription: অসংযুক্ত মজার কাজ
+  projguts_shortdescription: পাথর/কাগজ/কাঁচি ব্যবহার করে প্রতিলিপি ও সিমুলেশন করা
+    চেষ্টা করুন
+  hourofcode_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড করতে
+    শিখুন!
+  frozen_shortdescription: চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য
+    অনুসন্ধানে যোগ দেই।
+  starwars_shortdescription: 'ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+    নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। '
   playlab_shortdescription: Create a story or make a game with Play Lab!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
   artist_shortdescription: Draw cool pictures and designs with the Artist!
-  monsterocding_shortdescription: "শিশুদের জন্য একটি রঙিন স্বনির্দেশিত প্রোগ্রামিং
-    ভ্রমণ।"
-  allcancode_shortdescription: "ভিজ্যুয়াল প্রোগ্রামিং ভাষার সাথে মার্কোকে গাইড করার
-    জন্য একটি ইমারসিভ (immersive) খেলা।"
-  csfirst_shortdescription: "সমুদ্রের দুই চরিত্র সম্পর্কে একটি গল্প অ্যানিমেট করুন।
-    আপনার নিজস্ব শৈলী যোগ করুন!"
-  boxisland_shortdescription: "সাহসী বীরের সাথে বাক্স দ্বীপে কোডিং ভ্রমন করুন।"
-  codesters_shortdescription: "পাইথন ব্যবহার করে আপনার নিজস্ব গেমস, এনিমেশন ও নকশার
-    তৈরি করুন।"
-  texasinstruments_shortdescription: "মৌলিক কোডিং শিখুন TI-84&#8482;প্লাস ক্যালকুলেটর
-    ব্যবহার করে।"
-  teacherled_shortdescription: "এই পঠ পরিকল্পনার সাহায্য নিয়ে আপনার নিজস্ব এক ঘন্টার
-    কোড আয়জন করতে উদ্বুদ্ধ হন।"
-  course2_shortdescription_congrats: "যেসব ছাত্রের পড়ার প্রাথমিক দক্ষতা আছে তাদের
-    উদ্দেশ্যে, এই কোর্সটি কোর্স ১-এর ওপর ভিত্তি করে তৈরি করা হয়েছে।"
+  monsterocding_shortdescription: শিশুদের জন্য একটি রঙিন স্বনির্দেশিত প্রোগ্রামিং
+    ভ্রমণ।
+  allcancode_shortdescription: ভিজ্যুয়াল প্রোগ্রামিং ভাষার সাথে মার্কোকে গাইড করার
+    জন্য একটি ইমারসিভ (immersive) খেলা।
+  csfirst_shortdescription: সমুদ্রের দুই চরিত্র সম্পর্কে একটি গল্প অ্যানিমেট করুন।
+    আপনার নিজস্ব শৈলী যোগ করুন!
+  boxisland_shortdescription: সাহসী বীরের সাথে বাক্স দ্বীপে কোডিং ভ্রমন করুন।
+  codesters_shortdescription: পাইথন ব্যবহার করে আপনার নিজস্ব গেমস, এনিমেশন ও নকশার
+    তৈরি করুন।
+  texasinstruments_shortdescription: মৌলিক কোডিং শিখুন TI-84&#8482;প্লাস ক্যালকুলেটর
+    ব্যবহার করে।
+  teacherled_shortdescription: এই পঠ পরিকল্পনার সাহায্য নিয়ে আপনার নিজস্ব এক ঘন্টার
+    কোড আয়জন করতে উদ্বুদ্ধ হন।
+  course2_shortdescription_congrats: যেসব ছাত্রের পড়ার প্রাথমিক দক্ষতা আছে তাদের উদ্দেশ্যে,
+    এই কোর্সটি কোর্স ১-এর ওপর ভিত্তি করে তৈরি করা হয়েছে।
   course3_shortdescription_congrats: |-
     পরবর্তী ধাপে যেতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
     ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
@@ -1492,45 +1489,45 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
-  codeorg_longdescription: "ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
+  codeorg_longdescription: ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
     ধারনা শিখুন। এটি একটি খেলার মত, স্বচালিত ভিডিও টিউটোরিয়াল যার পাঠগুলি বিল গেটস,
     মার্ক যকারবার্গ, এংরি বার্ড, প্লান্ট বনাম জম্বি দ্বারা অভিনিত। পুনরায়-চক্র(লুপ),
-    শর্তাধীন ও এলগরিদম শিখুন। ৩৪ টি ভাষায় পাওয়া যায়।"
-  codeintl_longdescription: "ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
+    শর্তাধীন ও এলগরিদম শিখুন। ৩৪ টি ভাষায় পাওয়া যায়।
+  codeintl_longdescription: ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
     ধারনা শিখুন। এটি একটি খেলার মত, স্বচালিত ভিডিও টিউটোরিয়াল যার পাঠগুলি বিল গেটস,
     মার্ক যকারবার্গ, এংরি বার্ড, প্লান্ট বনাম জম্বি দ্বারা অভিনিত। পুনরায়-চক্র(লুপ),
-    শর্তাধীন ও এলগরিদম শিখুন। ৩৪ টি ভাষায় পাওয়া যায়।"
+    শর্তাধীন ও এলগরিদম শিখুন। ৩৪ টি ভাষায় পাওয়া যায়।
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
     los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট প্রোগ্রামিং
-    এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  khanes_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  khanpt_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  khanhe_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  khanfr_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  khanpl_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
-  tynker_longdescription: "আপনার নিজস্ব গেম তৈরি করুন এবং বন্ধুদের সাথে শেয়ার করুন!
+  khan_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট প্রোগ্রামিং
+    এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  khanes_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  khanpt_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  khanhe_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  khanfr_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  khanpl_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
+  tynker_longdescription: আপনার নিজস্ব গেম তৈরি করুন এবং বন্ধুদের সাথে শেয়ার করুন!
     মজা পাজল কোডিং সমাধান করুন এবং প্রতিটি স্তরে প্রোগ্রামিংএর ধারনা পান। অ্যানিমেটেড
     চরিত্র, একাধিক ধাপ এবং সমৃদ্ধ সাজসরঞ্জাম সঙ্গে গেমকে ব্যক্তিগত রূপ দিন। আপনার
     গেমকে বাস্তবধর্মী করে তুলতে পদার্থবিদ্যা ব্যবহার করুন। চাক্ষুষ ব্লক বা জাভাস্ক্রিপ্ট
     কোড হিসাবে দেখুন। আইপ্যাড এবং অ্যান্ড্রয়েড ট্যাবলেটে আপনার গেমস নিন। এক ডজনেরও
-    বেশি মজা কার্যক্রম থেকে পছন্দ করে নিন!"
+    বেশি মজা কার্যক্রম থেকে পছন্দ করে নিন!
   scratch_longdescription: Scratch দিয়ে আপনি আপনার নিজের পরস্পর ক্রিয়াশীল খেলা,
     গল্প, এনিমেশন &mdash তৈরি করতে পারেন; এবং আপনার বন্ধুদের সাথে শেয়ার করতে পারেন।
     আপনার নাম এনিমেশন করে, ছুটির কার্ড তৈরি করে, অথবা পং খেলা বানানোর মাধ্যমে শুরু
     করুন।
-  lightbot_longdescription: "সকল নীল টালি জ্বালাতে লাইটবোট কে পথ প্রদর্শন করুন। লাইটবোট
+  lightbot_longdescription: সকল নীল টালি জ্বালাতে লাইটবোট কে পথ প্রদর্শন করুন। লাইটবোট
     একটি ধাধার খেলা যা প্রগ্রামিং গেম মেশিন ব্যবহার করে ব্যবহারকারীকে মৌলিক কোডিঙের
     ব্যবহারিক বুদ্ধি দেয়। নির্দেশাবলী ক্রমক পদ্ধতি লিখতে, কার্যপ্রণালী লিখতে এবং চক্র(loops)
-    ব্যবহার করতে শিখুন। সব বয়সের জন্য আদর্শ।"
+    ব্যবহার করতে শিখুন। সব বয়সের জন্য আদর্শ।
   thinkersmith_longdescription: প্রথমে আলোচনা না করেই একটি প্রাক-সংজ্ঞায়িত "রোবট
     শব্দভাণ্ডার" ব্যবহার করে শিক্ষার্থীরা তাদের নির্দিষ্ট কাজগুলো সম্পন্ন করার জন্য
     কিভাবে একে অপরের গাইড করবে তা বের করার চেষ্টা করবে। এই পাঠ শিশুদের চিহ্ন এবং কর্মের
@@ -1540,83 +1537,83 @@
   condcards_longdescription: এক বান্ডিল তাস ব্যবহার করে "অসংযুক্ত কার্যকলাপে অ্যালগোরিদম
     ও শর্তাধীন বিবরণ শিখুন। ছাত্ররা দলে এই কাজ করবে এবং প্রতি দল এক বান্ডিল তাস দরকার
     হবে।
-  lightbotintl_longdescription: "আইওএস, এন্ড্রয়েড (বা ওয়েব ব্রাউজার) ব্যবহার করে
-    ৪+ বয়সের বাচ্চারা মুল প্রোগ্রামিং যুক্তি শিখতে পারে  অতি-মৌলিক প্রোগ্রামিং থেকে
+  lightbotintl_longdescription: আইওএস, এন্ড্রয়েড (বা ওয়েব ব্রাউজার) ব্যবহার করে ৪+
+    বয়সের বাচ্চারা মুল প্রোগ্রামিং যুক্তি শিখতে পারে  অতি-মৌলিক প্রোগ্রামিং থেকে
     শুরু করে। কিভাবে ক্রম নির্দেশ, নমুনা সনাক্তকরণ, সুডকোড ব্যবহার ও লুপ ব্যবহার করতে
-    হয় তা শিখুন!"
-  codehs_longdescription: "একটি কম্পিউটারকে কমান্ড দেওয়া, প্রোগ্রামিং হচ্ছে যার মূল
+    হয় তা শিখুন!
+  codehs_longdescription: একটি কম্পিউটারকে কমান্ড দেওয়া, প্রোগ্রামিং হচ্ছে যার মূল
     কথা,  তা মুলত একটি কুকুর কমান্ড দেবার মত। ক্যারেল কুকুর সঙ্গে কোড করা শিখুন&mdash;
     প্রোগ্রামিং এর একটি মজার, অ্যাক্সেসযোগ্য এবং চাক্ষুষ ভূমিকা যা কমান্ড এবং ফাংশন
     মত মৌলিক ধারণা একদম নতুনদের শেখায়। টিউটোরিয়াল ছাত্র-পরিচালিত হয় কিন্তু শিক্ষক
-    সরঞ্জাম অ্যাক্সেস এবং ট্র্যাক ছাত্র সাফল্য দেখার জন্য শিক্ষক সাইন আপ করতে পারেন!"
-  codecademy_longdescription: "কোডএকাডেমী একটি পরস্পর ক্রিয়াশীল, ছাত্র-নির্দেশিত
-    মৌলিক সিএসের ভূমিকা যা জাভাস্ক্রিপ্ট দ্বারা শিখানো হয় ও সারা পৃথিবীর লক্ষ লক্ষ
-    ছাত্র দ্বারা ব্যবহৃত হয়। । ছাত্রদের এক ঘন্টার হয়রানইহীন কোড অভিজ্ঞতা দেবার জন্য
-    আমরা কুইজ, স্লাইড, এবং সম্পূর্ণ প্রকল্প তৈরী করেছি।"
-  codecombat_longdescription: "এই মহাকাব্যিক খেলায় পাইথন বা জাভাস্ক্রিপ্ট শিখতে, রাক্ষসদের
-    পরাজিত করুন।"
+    সরঞ্জাম অ্যাক্সেস এবং ট্র্যাক ছাত্র সাফল্য দেখার জন্য শিক্ষক সাইন আপ করতে পারেন!
+  codecademy_longdescription: কোডএকাডেমী একটি পরস্পর ক্রিয়াশীল, ছাত্র-নির্দেশিত মৌলিক
+    সিএসের ভূমিকা যা জাভাস্ক্রিপ্ট দ্বারা শিখানো হয় ও সারা পৃথিবীর লক্ষ লক্ষ ছাত্র
+    দ্বারা ব্যবহৃত হয়। । ছাত্রদের এক ঘন্টার হয়রানইহীন কোড অভিজ্ঞতা দেবার জন্য আমরা
+    কুইজ, স্লাইড, এবং সম্পূর্ণ প্রকল্প তৈরী করেছি।
+  codecombat_longdescription: এই মহাকাব্যিক খেলায় পাইথন বা জাভাস্ক্রিপ্ট শিখতে, রাক্ষসদের
+    পরাজিত করুন।
   codemonkey_longdescription: CodeMonkey একটি অনলাইন খেলা যা একটি বাস্তব প্রোগ্রামিং
     ভাষায় কোডিং শেখায়! শিক্ষার্থীরা একটি বানর কলা ধরা জন্য প্রোগ্রাম লিখে যা প্রতিটি
     স্তরে সামান্য বেশি জটিল পায়। তারা প্রতিটি সমাধানে তারকা স্কোর পায় এবং একটি ক্লিকেই
     এ শেয়ার করতে পারেন।
-  codeavengers_longdescription: "১০ টি ছোট কাজের মাধ্যমের JavaScript দিয়ে দুই খেলোয়ারের
+  codeavengers_longdescription: ১০ টি ছোট কাজের মাধ্যমের JavaScript দিয়ে দুই খেলোয়ারের
     একটি 2D উপর হইতে দৃষ্ট গেম বানান। তারপর কিছু মৌলিক প্রগ্রামিং (ভেরিয়েবল ও যদি
     বিবৃতি) শিখা চালিয়ে যান এবং কুইজ তৈরি করে বন্ধুদের সাথে শেয়ার করুন। সাথে সাথে
-    পয়েন্ট ও ব্যাজ অর্জন করে ক্লাসের শীর্ষে পৌছার চেষ্টা করুন।"
-  processing_longdescription: "ভিজুয়াল আর্টের মাধ্যমে প্রসেসিং প্রোগ্রামিং ভাষা ব্যবহার
+    পয়েন্ট ও ব্যাজ অর্জন করে ক্লাসের শীর্ষে পৌছার চেষ্টা করুন।
+  processing_longdescription: ভিজুয়াল আর্টের মাধ্যমে প্রসেসিং প্রোগ্রামিং ভাষা ব্যবহার
     করে প্রোগ্রামিং এর ভূমিকা। কোড অনুশীলনের জন্য ছোট ভিডিও পাঠ যা পরস্পর ক্রিয়াশীল
-    অঙ্কন প্রোগ্রাম ডিজাইন করতে সাহায্য করে।"
-  robomind_longdescription: "শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
-    করে প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
+    অঙ্কন প্রোগ্রাম ডিজাইন করতে সাহায্য করে।
+  robomind_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ করে
+    প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
     সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
-    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।"
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
   groklearning_longdescription: একটি রোবট মনবিজ্ঞানী হিসাবে কাজ করতে "এলিজা" নামের
     একটি চ্যাটবট নির্মাণের জন্য পাইথন প্রোগ্রামিং ভাষা ব্যবহার করুন। আপনি এলিজাকে
     কিভাবে কথা বলতে এবং সঠিক জিনিস বলেতে হয় তা শেখাবেন। আপনার বন্ধুরা কি তাকে একজন
     মানুষ না কম্পিউটার এই ভেবে বোকা হয়?
-  quorum_longdescription: "এই টিউটোরিয়ালটি দৃষ্টি-প্রতিবন্ধী জন্য ব্যবহারযোগ্য এবং
+  quorum_longdescription: এই টিউটোরিয়ালটি দৃষ্টি-প্রতিবন্ধী জন্য ব্যবহারযোগ্য এবং
     স্ক্রিন সঙ্গে কাজ করে। মেরী সাথে কোরাম প্রোগ্রামিং ভাষা শেখার সফরে যোগ দিন যখন
     সে একজন প্রোগ্রামার হিসাবে একটি জীববিজ্ঞান ল্যাব যোগদান করে। এই টিউটোরিয়ালটি
-    ছাত্র নির্দেশিত যার সাথে অনলাইন উদাহরণস্বরূপ কার্যক্রম আছে।"
-  codespark_longdescription: "ফুস প্রোগ্রামিং শেখার জন্য একটি মজার, শিশু সুলভ খেলা।
-    ধাঁধা সমাধান করতে ও ভার্চুয়াল জগত জীবন্ত করার জন্য আকর্ষণীয় রোবট প্রোগ্রাম করুন।
-    \ সমস্ত খেলা 'শব্দটি ছাড়া' তাই সবাই খেলতে পারে!"
+    ছাত্র নির্দেশিত যার সাথে অনলাইন উদাহরণস্বরূপ কার্যক্রম আছে।
+  codespark_longdescription: ফুস প্রোগ্রামিং শেখার জন্য একটি মজার, শিশু সুলভ খেলা।
+    ধাঁধা সমাধান করতে ও ভার্চুয়াল জগত জীবন্ত করার জন্য আকর্ষণীয় রোবট প্রোগ্রাম করুন।  সমস্ত
+    খেলা 'শব্দটি ছাড়া' তাই সবাই খেলতে পারে!
   kodable_longdescription: Kodable একটি স্ব-নির্দেশিত আইপ্যাডের গেম যা ৫ বছরের বেশি
     বয়সি শিশুদের প্রোগ্রামিং মৌলিক বিষয়গুলির সাথে পরিচিত করায়। শিক্ষক বা মা-বাবা কাছাকাছি
     থাকা সন্তোষজনক, কিন্তু প্রয়োজন নয়।
-  tynkerapp_longdescription: "মজার কোডিং পাজল সমাধান দ্বারা প্রোগ্রাম শিখুন।সহজে থিমযুক্ত
+  tynkerapp_longdescription: মজার কোডিং পাজল সমাধান দ্বারা প্রোগ্রাম শিখুন।সহজে থিমযুক্ত
     গ্রাফিক্স, ১০ এর অধিক খেলা সজ্জা ও স্বনির্ধারিত চরিত্র ব্যবহার করে গেম এবং গল্প
     নির্মাণ করুন।কোন ইন্টারনেট সংযোগ প্রয়োজন নেই, এছাড়াও আপনি ওয়েব থেকে আপনার তৈরি
-    জিনিসে প্রবেশ করতে পারেন।"
-  robomindnl_longdescription: "শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
+    জিনিসে প্রবেশ করতে পারেন।
+  robomindnl_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
     করে প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
     সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
-    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।"
-  flappy_longdescription: "নিজের ফ্লাপি বার্ড গেম তৈরির জন্য ড্রাগ ও ড্রপ প্রোগ্রামিং
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
+  flappy_longdescription: নিজের ফ্লাপি বার্ড গেম তৈরির জন্য ড্রাগ ও ড্রপ প্রোগ্রামিং
     ব্যবহার করুন এবং এটিকে আপনার পছন্দমত (ফ্লাপি হাঙ্গর, ফ্লাপি সান্তা, বা যাই হোক
-    না কেন) দেখতে বানান। এক ক্লিক-এ আপনার ফোনে খেলাটি যোগ করুন।"
-  bitsbox_longdescription: "আপনার নিজস্ব ভার্চুয়াল ট্যাবলেটের পছন্দসই-বিন্যাস করুন,
+    না কেন) দেখতে বানান। এক ক্লিক-এ আপনার ফোনে খেলাটি যোগ করুন।
+  bitsbox_longdescription: আপনার নিজস্ব ভার্চুয়াল ট্যাবলেটের পছন্দসই-বিন্যাস করুন,
     তারপর অনেকগুলি অ্যাপ ক্রমাগত কোড করে খেলুন এবং শেয়ার করুন। সরল সম্পূর্ণ করার
     কৌশল এমনকি ছোট শিশুদের জন্যও আসল JavaScript প্রোগ্রামিং করা সম্ভব করে এবং আপনি
-    যত সামনে যাবেন তত উন্নীত হবেন।"
-  makeschool_longdescription: "সুইফট নামের একদম নতুন ও ব্যবহারকারীর জন্য বন্ধুসুলভ
+    যত সামনে যাবেন তত উন্নীত হবেন।
+  makeschool_longdescription: সুইফট নামের একদম নতুন ও ব্যবহারকারীর জন্য বন্ধুসুলভ
     প্রোগ্রামিং ভাষা ব্যবহার করে আইফোনের জন্য গেম বানানোর মাধ্যমে কোড করা শিখুন। পোকেমন-অনুপ্রাণিত
     একশান গেম বানান এবং কোড লিখে আপনার রাক্ষসকে নতুন পদক্ষেপ শিখান। আপনার রাক্ষসকে
-    জিততে সাহায্য করার জন্য আপনাকে ভেরিয়েবল, মেথড ও অবজেক্টের ব্যবহার শিখতে হবে।"
-  touchdevelop_longdescription: "পিক্সেল আর্টে তৈরি, ভাল্লুক ধাঁধা সমাধান বা আপনার
-    নিজের লাফানো পাখি খেলা করতে  স্পর্শ-বন্ধুসুলভ সম্পাদক আপনাকে পথপ্রদর্শন করবে।"
-  appinventor_longdescription: "আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি সহজ
+    জিততে সাহায্য করার জন্য আপনাকে ভেরিয়েবল, মেথড ও অবজেক্টের ব্যবহার শিখতে হবে।
+  touchdevelop_longdescription: পিক্সেল আর্টে তৈরি, ভাল্লুক ধাঁধা সমাধান বা আপনার
+    নিজের লাফানো পাখি খেলা করতে  স্পর্শ-বন্ধুসুলভ সম্পাদক আপনাকে পথপ্রদর্শন করবে।
+  appinventor_longdescription: আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি সহজ
     অ্যাপস নির্মাণের কলাকৌশল মজার ও দূত টিউটোরিয়ালে দেখুন। নতুন শিক্ষারথীদের এবং
     বিশেষজ্ঞদের জন্য সমভাবে ডিজাইন করা, এই এক ঘন্টার কোড আপনাকে আপনি এটা জানার আগেই
     আপনার নিজস্ব অ্যাপ্লিকেশন নির্মাণ শুরু করার জন্য প্রস্তুত করে তুলবে। কল্পনা করুন
     আপনি আপনার বন্ধুদের সঙ্গে আপনার নিজস্ব অ্যাপ্লিকেশন সৃষ্টিকে শেয়ার করছেন! এই কার্যকলাপের
-    সকল পৃথক ব্যক্তিদের জন্য এবং নেতৃস্থানীয় শ্রেণীর শিক্ষকদের জন্য উপযুক্ত।"
-  blockly_longdescription: "ধীর  ইন্টারনেট (বা ইন্টারনেট নেই) এমন পিসি ব্যবহার করেন?
+    সকল পৃথক ব্যক্তিদের জন্য এবং নেতৃস্থানীয় শ্রেণীর শিক্ষকদের জন্য উপযুক্ত।
+  blockly_longdescription: ধীর  ইন্টারনেট (বা ইন্টারনেট নেই) এমন পিসি ব্যবহার করেন?
     Code.org টিউটোরিয়াল এর পূর্বগামী Blockly টিউটোরিয়াল ডাউনলোড করুন যা একটি ৩ এমবি
-    জিপ ফাইল যেকোন কম্পিউটারে লোড করে অথবা মেমরী স্টিক থেকে ব্যবহার করা যায়।"
-  thinkersmith2_longdescription: "শিক্ষার্থী খোলা এবং বন্ধ কার্যাবলী হিসাবে, বাইনারি
+    জিপ ফাইল যেকোন কম্পিউটারে লোড করে অথবা মেমরী স্টিক থেকে ব্যবহার করা যায়।
+  thinkersmith2_longdescription: শিক্ষার্থী খোলা এবং বন্ধ কার্যাবলী হিসাবে, বাইনারি
     সংখ্যা ব্যবহার করে অক্ষর প্রতীকী ও সংরক্ষণ করা শেখে। শেষে, তারা সঙ্কেতাক্ষরে লিখা
-    তাদের নিজস্ব আদ্যক্ষর তাদের সঙ্গে বাড়িতে নিয়ে যায়।"
+    তাদের নিজস্ব আদ্যক্ষর তাদের সঙ্গে বাড়িতে নিয়ে যায়।
   kodableunplugged_longdescription: 'fuzzFamily Frenzy ৫ বা তার বেশি বয়সের শিশুদের
     প্রোগ্রামিং যুক্তির ভূমিকা হিসাবে কাজ করে, শুধু কাগজের সাথে ব্যবহারের জন্য ডিজাইন
     করা। শিক্ষক খেলা ব্যাখ্যা করা উচিত, তারপর ছাত্ররা সরল বাধা টপকানোরে জন্য সঙ্গীকে
@@ -1630,203 +1627,202 @@
     and make a winter wonderland that you can then share with your friends!
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
-  playlab_longdescription: "প্লে ল্যাবের সাথে গল্প তৈরি করুন অথবা গেম বানান ! প্রাণী,
+  playlab_longdescription: প্লে ল্যাবের সাথে গল্প তৈরি করুন অথবা গেম বানান ! প্রাণী,
     গাছ, জোম্বি, নিনজা, এবং আরো অনেক চরিত্রকে সরান, শব্দ বানান, পয়েন্ট স্কোর করুন,
-    এমন কি আগুনের গোলা ছুরুন।"
-  monstercoding_longdescription: "মনস্টার কোডিং এর রহস্য দ্বীপ কোডিং কোয়েস্ট একটা
+    এমন কি আগুনের গোলা ছুরুন।
+  monstercoding_longdescription: মনস্টার কোডিং এর রহস্য দ্বীপ কোডিং কোয়েস্ট একটা
     মজা ভরা স্বনির্দেশিত অভিযান যা শিশুদের বিভিন্ন মুখ্য প্রোগ্রামিং ধারণা শেখায়।
     প্রতিটি ব্লক ভিত্তিক কার্যকলাপ কার্যাবলী আগেরটির উপর ভিত্তি করে বানান, শিশুদের
     রঙিন প্রাণবন্ত গ্রাফিক্স ও অডিও নির্দেশাবলী ব্যবহার করে ফাংশন, বুলিয়ান মান, চক্র,
-    যদি/ অন্যথা (If/Else) বিবৃতি এবং অ্যারের সাথে পরিচিত করে তোলে।"
-  allcancode_longdescription: "শিক্ষার্থীরা একটি মূল গল্পের উপর ভিত্তি করে একটি দুঃসাহসিক
+    যদি/ অন্যথা (If/Else) বিবৃতি এবং অ্যারের সাথে পরিচিত করে তোলে।
+  allcancode_longdescription: 'শিক্ষার্থীরা একটি মূল গল্পের উপর ভিত্তি করে একটি দুঃসাহসিক
     খেলা খেলে। তারা প্রধান চরিত্র - মার্কোকে প্রতিটি স্তরে ধাপে ধাপে নির্দেশাবলী প্রদান
     করে গাইড করে,এক ঘন্টার কোডে ব্যবহৃত চাক্ষুষ প্রোগ্রামিং ভাষা সাহায্য। এমনকি তারা
-    তা খেয়াল না করেই সিকোয়েন্সিং কমান্ড, পুনরাবৃত্তির এবং শর্তের সাথে পরিচিত হয়। "
-  csfirst_longdescription: "সাগরে দুটি চরিত্রের গল্প তৈরি করুন। জল সজীব করুন, এবং
-    আপনার নিজস্ব বিস্তারণ যুক্ত করার দৃশ্যের পছন্দসই-বিন্যাস করুন। কোড ব্যবহার করে
-    আপনি যে গল্প বলতে চান তা বলুন!"
+    তা খেয়াল না করেই সিকোয়েন্সিং কমান্ড, পুনরাবৃত্তির এবং শর্তের সাথে পরিচিত হয়। '
+  csfirst_longdescription: সাগরে দুটি চরিত্রের গল্প তৈরি করুন। জল সজীব করুন, এবং আপনার
+    নিজস্ব বিস্তারণ যুক্ত করার দৃশ্যের পছন্দসই-বিন্যাস করুন। কোড ব্যবহার করে আপনি
+    যে গল্প বলতে চান তা বলুন!
   boxisland_longdescription: " বাক্স দ্বীপে ভ্রমন করুন এবং সাহসী বীরকে জনহীন স্থান
     থেকে সকল ঘড়ি সংগ্রহ করতে সাহায্য করুন! এই টিউটোরিয়াল আপনি অ্যালগোরিদম, ক্রম,
     লুপ ও শর্তের মৌলিক বিষয়গুলি শিখে যাবেন!"
-  codesters_longdescription: "পাইথন ব্যবহার করে নিজের গেম, এনিমেশন ও আর্টওয়ার্ক তৈরি
+  codesters_longdescription: পাইথন ব্যবহার করে নিজের গেম, এনিমেশন ও আর্টওয়ার্ক তৈরি
     করুন।  যখন কাজ শেষ হবে তখন তা আপনার বন্ধুদের সাথে শেয়ার করুন। পাইথনে প্রগ্রামিং,
     একটি সত্যিকারে প্রগ্রামিং ভাষা যা কোম্পানি গুলিতে প্রতিদিন ব্যবহার হয় আমাদের ড্রাগ
     অ্যান্ড ড্রপ টুলকিট ব্যবহার করে সহজ শিক্ষনীয় করে তোলে।  একটি বাস্কেটবল খেলা তৈরি,
-    একটি নাচ কোরিওগ্রাফ করা বা একটি এনিমেটেড কার্ড ডিজাইন করার চেষ্টা করুন।"
-  texasinstruments_longdescription: "টিআই প্রযুক্তির সাথে ১০ মিনিটের কোড কার্যক্রম
+    একটি নাচ কোরিওগ্রাফ করা বা একটি এনিমেটেড কার্ড ডিজাইন করার চেষ্টা করুন।
+  texasinstruments_longdescription: টিআই প্রযুক্তির সাথে ১০ মিনিটের কোড কার্যক্রম
     শ্রেণীতে ছাত্রদের কোডিঙের আগ্রহের স্ফুলিঙ্গ তৈরিতে ব্যবহার করা যেতে পারে যা তারা
     প্রতিদিন তাদের ব্যাকপ্যাকে করে বহন করে আনে। টিআই-84&#8482 ব্যবহার শিখে; প্লাস
-    আর মাত্র 10 মিনিটে প্রোগ্রামিং শুরু করুন – কোন অভিজ্ঞতার প্রয়োজন নেই!"
-  teacherled_longdescription: "এখন যখন দশ হাজারের বেশি শিক্ষাবিদ এক ঘন্টার কোড চেষ্টা
+    আর মাত্র 10 মিনিটে প্রোগ্রামিং শুরু করুন – কোন অভিজ্ঞতার প্রয়োজন নেই!
+  teacherled_longdescription: এখন যখন দশ হাজারের বেশি শিক্ষাবিদ এক ঘন্টার কোড চেষ্টা
     করেছেন যে, অনেক শ্রেণীকক্ষে আরও সৃজনশীল কাজের জন্য প্রস্তুত, কম্পিউটার বিজ্ঞান
     মৌলিক বিষয় শেখানো জন্য সবার জন্য এক রকম কার্যক্রম কম। শিক্ষকদের অনুপ্রেরণা খুঁজে
     পেতে সাহায্য করার জন্য, আমরা অভিজ্ঞ ব্যক্তি দ্বারা এক ঘণ্টার কোডের বিভিন্ন দিকের
     জন্য পরিকল্পিত এক ঘণ্টার শিক্ষক নেতৃত্বাধীন পাঠ এবং কার্যকলাপ পরিকল্পনা সংগ্রহ
-    ও সংরক্ষণ করি।"
-  codeorg_beyond_name: "কম্পিউটার বিজ্ঞানের মৌলিক (K-8 শ্রেনী)"
-  khan_beyond_name: "কম্পিউটার প্রোগ্রামিং শিখুন"
-  tynker_beyond_name: "বাড়িতে প্রোগ্রামিং শিখুন"
-  scratch_beyond_name: "কোডিং মাধ্যমে সৃজনশীল পান"
+    ও সংরক্ষণ করি।
+  codeorg_beyond_name: কম্পিউটার বিজ্ঞানের মৌলিক (K-8 শ্রেনী)
+  khan_beyond_name: কম্পিউটার প্রোগ্রামিং শিখুন
+  tynker_beyond_name: বাড়িতে প্রোগ্রামিং শিখুন
+  scratch_beyond_name: কোডিং মাধ্যমে সৃজনশীল পান
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
-  kodable_beyond_name: "কোডাবল"
-  scratchjr_beyond_name: "প্রাক পাঠকদের জন্য ScratchJR"
+  kodable_beyond_name: কোডাবল
+  scratchjr_beyond_name: প্রাক পাঠকদের জন্য ScratchJR
   hopscotch_beyond_name: 'Hopscotch: আপনার আইপ্যাডে এ প্রোগ্রামিং'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: "পাইথন প্রোগ্রামিং শিখুন"
-  hacketyhack_beyond_name: "রুবি শিখুন"
-  robomind_beyond_name: "একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন"
-  makeschool_beyond_name: "আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!"
-  appinventor_beyond_name: "অ্যাপইনভেন্টরে এক ঘন্টার কোড"
+  groklearning_beyond_name: পাইথন প্রোগ্রামিং শিখুন
+  hacketyhack_beyond_name: রুবি শিখুন
+  robomind_beyond_name: একটি ভার্চুয়াল রোবট প্রোগ্রাম করুন
+  makeschool_beyond_name: আপনার ব্রাউজার দিয়ে আইফোনের জন্য গেম তৈরী করুন!
+  appinventor_beyond_name: অ্যাপইনভেন্টরে এক ঘন্টার কোড
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "কুকুর ক্যারেল সাথে কোড শিখুন"
-  udemy_beyond_name: "অনলাইন প্রোগ্রামিং কোর্স"
-  lynda_beyond_name: "অনলাইন প্রোগ্রামিং কোর্স"
-  edx_beyond_name: "হার্ভার্ড CS50 ক্লাস"
-  coursera_beyond_name: "স্ট্যানফোর্ড CS 101 ক্লাস"
+  codehs_beyond_name: কুকুর ক্যারেল সাথে কোড শিখুন
+  udemy_beyond_name: অনলাইন প্রোগ্রামিং কোর্স
+  lynda_beyond_name: অনলাইন প্রোগ্রামিং কোর্স
+  edx_beyond_name: হার্ভার্ড CS50 ক্লাস
+  coursera_beyond_name: স্ট্যানফোর্ড CS 101 ক্লাস
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "অনলাইনে বিশ্ববিদ্যালয়ে কোর্স"
+  teachingtree_beyond_name: অনলাইনে বিশ্ববিদ্যালয়ে কোর্স
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: HTML শিখুন
-  codeavengers_beyond_name: "ওয়েবসাইটে কোড করতে শিখুন"
+  codeavengers_beyond_name: ওয়েবসাইটে কোড করতে শিখুন
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Sparkfun সঙ্গে Arduino
-  processing_beyond_name: "প্রোগ্রাম দ্বারা প্রক্রিয়াকরণ"
+  processing_beyond_name: প্রোগ্রাম দ্বারা প্রক্রিয়াকরণ
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "বয়স 4-104"
-  khan_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  tynker_beyond_gradelevel: "বয়স 5-13"
-  scratch_beyond_gradelevel: "বয়স 8 +"
-  lightbot_beyond_gradelevel: "সব বয়সের জন্য"
-  codecademy_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  kodable_beyond_gradelevel: "সাধারন"
-  scratchjr_beyond_gradelevel: "সাধারন"
-  hopscotch_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  pocketcode_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  groklearning_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  hacketyhack_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  robomind_beyond_gradelevel: "বয়স 8-13"
-  makeschool_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  appinventor_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  touchdevelop_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  codehs_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  udemy_beyond_gradelevel: "উচ্চ মাধ্যমিক +"
-  lynda_beyond_gradelevel: "উচ্চ মাধ্যমিক +"
-  edx_beyond_gradelevel: "বিশ্ববিদ্যালয়"
-  coursera_beyond_gradelevel: "বিশ্ববিদ্যালয়"
-  udacity_beyond_gradelevel: "বিশ্ববিদ্যালয়"
-  teachingtree_beyond_gradelevel: "বিশ্ববিদ্যালয়"
-  kodu_beyond_gradelevel: "বয়স 8 +"
-  cargobot_beyond_gradelevel: "বয়স 8 +"
-  kidsruby_beyond_gradelevel: "বয়সের ১২+"
-  w3schools_beyond_gradelevel: "বয়সের ১২+"
-  codeavengers_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  mozilla_beyond_gradelevel: "বয়সের ১২+"
-  codecombat_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  codea_beyond_gradelevel: "উচ্চ মাধ্যমিক +"
-  lego_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  finch_beyond_gradelevel: "বয়স 8 +"
-  arduino_beyond_gradelevel: "উচ্চ মাধ্যমিক +"
-  processing_beyond_gradelevel: "উচ্চ বিদ্যালয়"
-  alice_beyond_gradelevel: "মাধ্যামিক স্কুল +"
-  sphero_beyond_gradelevel: "বয়স 8 +"
-  codeorg_beyond_platformtext: "আধুনিক ব্রাউজার, ট্যাবলেট"
-  khan_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  tynker_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার (ডলার প্রয়োজন $)"
-  scratch_beyond_platformtext: "কোন ব্রাউজার"
-  lightbot_beyond_platformtext: "আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)"
-  codecademy_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস"
+  codeorg_beyond_gradelevel: বয়স 4-104
+  khan_beyond_gradelevel: মাধ্যামিক স্কুল +
+  tynker_beyond_gradelevel: বয়স 5-13
+  scratch_beyond_gradelevel: বয়স 8 +
+  lightbot_beyond_gradelevel: সব বয়সের জন্য
+  codecademy_beyond_gradelevel: উচ্চ বিদ্যালয়
+  kodable_beyond_gradelevel: সাধারন
+  scratchjr_beyond_gradelevel: সাধারন
+  hopscotch_beyond_gradelevel: মাধ্যামিক স্কুল +
+  pocketcode_beyond_gradelevel: মাধ্যামিক স্কুল +
+  groklearning_beyond_gradelevel: মাধ্যামিক স্কুল +
+  hacketyhack_beyond_gradelevel: উচ্চ বিদ্যালয়
+  robomind_beyond_gradelevel: বয়স 8-13
+  makeschool_beyond_gradelevel: উচ্চ বিদ্যালয়
+  appinventor_beyond_gradelevel: মাধ্যামিক স্কুল +
+  touchdevelop_beyond_gradelevel: উচ্চ বিদ্যালয়
+  codehs_beyond_gradelevel: উচ্চ বিদ্যালয়
+  udemy_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  lynda_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  edx_beyond_gradelevel: বিশ্ববিদ্যালয়
+  coursera_beyond_gradelevel: বিশ্ববিদ্যালয়
+  udacity_beyond_gradelevel: বিশ্ববিদ্যালয়
+  teachingtree_beyond_gradelevel: বিশ্ববিদ্যালয়
+  kodu_beyond_gradelevel: বয়স 8 +
+  cargobot_beyond_gradelevel: বয়স 8 +
+  kidsruby_beyond_gradelevel: বয়সের ১২+
+  w3schools_beyond_gradelevel: বয়সের ১২+
+  codeavengers_beyond_gradelevel: মাধ্যামিক স্কুল +
+  mozilla_beyond_gradelevel: বয়সের ১২+
+  codecombat_beyond_gradelevel: মাধ্যামিক স্কুল +
+  codea_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  lego_beyond_gradelevel: মাধ্যামিক স্কুল +
+  finch_beyond_gradelevel: বয়স 8 +
+  arduino_beyond_gradelevel: উচ্চ মাধ্যমিক +
+  processing_beyond_gradelevel: উচ্চ বিদ্যালয়
+  alice_beyond_gradelevel: মাধ্যামিক স্কুল +
+  sphero_beyond_gradelevel: বয়স 8 +
+  codeorg_beyond_platformtext: আধুনিক ব্রাউজার, ট্যাবলেট
+  khan_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  tynker_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার (ডলার প্রয়োজন $)
+  scratch_beyond_platformtext: কোন ব্রাউজার
+  lightbot_beyond_platformtext: আইওস, অ্যান্ডয়েড (বা ওয়েব ব্রাউজার)
+  codecademy_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার। আইওস, অ্যান্ড্রয়েড অ্যাপস
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "মোবাইল আপ"
-  groklearning_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  hacketyhack_beyond_platformtext: "ডেস্কটপে সংস্থাপন করুন"
-  robomind_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব"
-  makeschool_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  appinventor_beyond_platformtext: "আধুনিক ব্রাউজার + অ্যান্ড্রয়েড"
-  touchdevelop_beyond_platformtext: "আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস"
-  codehs_beyond_platformtext: "আধুনিক ব্রাউজার (ডলার প্রয়োজন $)"
-  udemy_beyond_platformtext: "ওয়েব ভিত্তিক"
-  lynda_beyond_platformtext: "ওয়েব ভিত্তিক (ডলার প্রয়োজন)"
-  edx_beyond_platformtext: "আধুনিক ব্রাউজার"
-  coursera_beyond_platformtext: "আধুনিক ব্রাউজার"
-  udacity_beyond_platformtext: "আধুনিক ব্রাউজার"
-  teachingtree_beyond_platformtext: "ওয়েব ভিত্তিক"
+  pocketcode_beyond_platformtext: মোবাইল আপ
+  groklearning_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  hacketyhack_beyond_platformtext: ডেস্কটপে সংস্থাপন করুন
+  robomind_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার, মোবাইল ওয়েব
+  makeschool_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  appinventor_beyond_platformtext: আধুনিক ব্রাউজার + অ্যান্ড্রয়েড
+  touchdevelop_beyond_platformtext: আধুনিক ব্রাউজার, স্মার্টফোন, সকল ডিভাইস
+  codehs_beyond_platformtext: আধুনিক ব্রাউজার (ডলার প্রয়োজন $)
+  udemy_beyond_platformtext: ওয়েব ভিত্তিক
+  lynda_beyond_platformtext: ওয়েব ভিত্তিক (ডলার প্রয়োজন)
+  edx_beyond_platformtext: আধুনিক ব্রাউজার
+  coursera_beyond_platformtext: আধুনিক ব্রাউজার
+  udacity_beyond_platformtext: আধুনিক ব্রাউজার
+  teachingtree_beyond_platformtext: ওয়েব ভিত্তিক
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "ডেস্কটপে সংস্থাপন করুন"
-  w3schools_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  codeavengers_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  mozilla_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  codecombat_beyond_platformtext: "ওয়েব ভিত্তিক (ফায়ারফক্স ক্রোম, সাফারি, আইই৯+)"
+  kidsruby_beyond_platformtext: ডেস্কটপে সংস্থাপন করুন
+  w3schools_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codeavengers_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  mozilla_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  codecombat_beyond_platformtext: ওয়েব ভিত্তিক (ফায়ারফক্স ক্রোম, সাফারি, আইই৯+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "রোবট ক্রয়"
-  finch_beyond_platformtext: "রোবট ক্রয়"
-  arduino_beyond_platformtext: "ওয়েব ব্রাউজার, তারপর সাজসরঞ্জাম ক্রয়"
-  processing_beyond_platformtext: "আধুনিক ওয়েব ব্রাউজার"
-  alice_beyond_platformtext: "উইন্ডোজ বা ম্যাক (ইনস্টল করা প্রয়োজনীয়)"
-  sphero_beyond_platformtext: "রোবট ক্রয়"
-  codeorg_beyond_shortdescription: "মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড
-    করতে শিখুন!"
-  khan_beyond_shortdescription: "জাভাস্ক্রিপ্টে আকা শিখুন"
-  tynker_beyond_shortdescription: "৪-৮ শ্রেনীর বাচ্চাদের জন্য একটি মজার এবং আকর্ষক
-    কোর্স"
-  scratch_beyond_shortdescription: "পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি
-    করুন।"
-  lightbot_beyond_shortdescription: "কোডিং ধারণা শেখানোর একটি খেলা"
-  codecademy_beyond_shortdescription: "ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন"
-  kodable_beyond_shortdescription: "কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
-    একটি মজার খেলা"
+  lego_beyond_platformtext: রোবট ক্রয়
+  finch_beyond_platformtext: রোবট ক্রয়
+  arduino_beyond_platformtext: ওয়েব ব্রাউজার, তারপর সাজসরঞ্জাম ক্রয়
+  processing_beyond_platformtext: আধুনিক ওয়েব ব্রাউজার
+  alice_beyond_platformtext: উইন্ডোজ বা ম্যাক (ইনস্টল করা প্রয়োজনীয়)
+  sphero_beyond_platformtext: রোবট ক্রয়
+  codeorg_beyond_shortdescription: মার্ক জাকারবার্গ এবং রাগী(আংগ্রি) পাখির সাথে কোড
+    করতে শিখুন!
+  khan_beyond_shortdescription: জাভাস্ক্রিপ্টে আকা শিখুন
+  tynker_beyond_shortdescription: ৪-৮ শ্রেনীর বাচ্চাদের জন্য একটি মজার এবং আকর্ষক
+    কোর্স
+  scratch_beyond_shortdescription: পরস্পর ক্রিয়াশীল খেলা, গল্প এবং এনিমেশন তৈরি করুন।
+  lightbot_beyond_shortdescription: কোডিং ধারণা শেখানোর একটি খেলা
+  codecademy_beyond_shortdescription: ওয়েব-ব্রাউজারে জাভাস্ক্রিপ্ট প্রোগ্রামিং শিখুন
+  kodable_beyond_shortdescription: কম্পিউটার প্রোগ্রামিং এর ধারণা শিখানোর জন্য আইপ্যাডের
+    একটি মজার খেলা
   scratchjr_beyond_shortdescription: ScratchJr ব্যবহার ইন্টারেক্টিভ গল্প এবং গেম তৈরি
     করুন।
-  hopscotch_beyond_shortdescription: "আইপ্যাডে  এ ভিজ্যুয়াল প্রোগ্রামিং শিখুন"
-  pocketcode_beyond_shortdescription: "আপনার স্মার্টফোনে গেম তৈরি করুন ও বন্ধুদের
-    সাথে শেয়ার করুন!"
-  groklearning_beyond_shortdescription: "পাইথন প্রোগ্রামিং করার মৌলিক ধারনা"
-  hacketyhack_beyond_shortdescription: "শুরু থেকে রুবি শিখুন"
-  robomind_beyond_shortdescription: "ভার্চুয়াল রোবটের জন্য কোড লিখুন"
-  makeschool_beyond_shortdescription: "এক ঘণ্টায় আইফোনে খেলা (গেম) তৈরি শিখুন"
-  appinventor_beyond_shortdescription: "তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)"
-  touchdevelop_beyond_shortdescription: "সরাসরি আপনার ফোন, ট্যাবলেট বা ল্যাপটপে মোবাইল
-    অ্যাপ কোড করুন"
-  codehs_beyond_shortdescription: "মজা রূপকল্প পরিবেশ দিয়ে জাভাস্ক্রিপ্ট  প্রোগ্রামিং
-    শিখুন"
-  udemy_beyond_shortdescription: "এক ডজন অনলাইন প্রোগ্রামিং কোর্স"
-  lynda_beyond_shortdescription: "এক ডজন অনলাইন প্রোগ্রামিং কোর্স"
-  edx_beyond_shortdescription: "হার্ভার্ড এ সবচেয়ে জনপ্রিয় ক্লাস"
+  hopscotch_beyond_shortdescription: আইপ্যাডে  এ ভিজ্যুয়াল প্রোগ্রামিং শিখুন
+  pocketcode_beyond_shortdescription: আপনার স্মার্টফোনে গেম তৈরি করুন ও বন্ধুদের সাথে
+    শেয়ার করুন!
+  groklearning_beyond_shortdescription: পাইথন প্রোগ্রামিং করার মৌলিক ধারনা
+  hacketyhack_beyond_shortdescription: শুরু থেকে রুবি শিখুন
+  robomind_beyond_shortdescription: ভার্চুয়াল রোবটের জন্য কোড লিখুন
+  makeschool_beyond_shortdescription: এক ঘণ্টায় আইফোনে খেলা (গেম) তৈরি শিখুন
+  appinventor_beyond_shortdescription: তৈরি করুন আপনার নিজস্ব অ্যাপ! (শুধু অ্যান্ড্রয়েডে)
+  touchdevelop_beyond_shortdescription: সরাসরি আপনার ফোন, ট্যাবলেট বা ল্যাপটপে মোবাইল
+    অ্যাপ কোড করুন
+  codehs_beyond_shortdescription: মজা রূপকল্প পরিবেশ দিয়ে জাভাস্ক্রিপ্ট  প্রোগ্রামিং
+    শিখুন
+  udemy_beyond_shortdescription: এক ডজন অনলাইন প্রোগ্রামিং কোর্স
+  lynda_beyond_shortdescription: এক ডজন অনলাইন প্রোগ্রামিং কোর্স
+  edx_beyond_shortdescription: হার্ভার্ড এ সবচেয়ে জনপ্রিয় ক্লাস
   coursera_beyond_shortdescription: CS101 দিয়ে শুরু করুন
   udacity_beyond_shortdescription: CS101 দিয়ে শুরু করুন
-  teachingtree_beyond_shortdescription: "অনলাইন জ্ঞান: দ্রুত ও বাধ্যবাধকতাশূন্য"
+  teachingtree_beyond_shortdescription: 'অনলাইন জ্ঞান: দ্রুত ও বাধ্যবাধকতাশূন্য'
   kodu_beyond_shortdescription: 3D খেলার জগৎ পরিকল্পনা করুন
-  cargobot_beyond_shortdescription: "আপনার আইপ্যাড দিয়ে রোবটের হাতে প্রোগ্রাম করুন"
-  kidsruby_beyond_shortdescription: "রুবি ব্যবহার করে প্রোগ্রাম করতে শিখুন"
-  w3schools_beyond_shortdescription: "ওয়েব সাইট তৈরি সম্বন্ধে জানুন"
-  codeavengers_beyond_shortdescription: "খেলা এবং ওয়েবসাইট কোড করা শিখুন"
-  mozilla_beyond_shortdescription: "ওয়েব পৃষ্ঠা তৈরি এবং শেয়ার করুন"
-  codecombat_beyond_shortdescription: "খেলা খেলুন ও জিততে জাভাস্ক্রিপ্ট শিখুন"
-  codea_beyond_shortdescription: "আপনার আইপ্যাডে অ্যাপ বানান"
-  lego_beyond_shortdescription: "রোবট তৈরী ও প্রোগ্রাম করুন"
-  finch_beyond_shortdescription: "কম্পিউটার বিজ্ঞান শিক্ষার জন্য রোবট"
+  cargobot_beyond_shortdescription: আপনার আইপ্যাড দিয়ে রোবটের হাতে প্রোগ্রাম করুন
+  kidsruby_beyond_shortdescription: রুবি ব্যবহার করে প্রোগ্রাম করতে শিখুন
+  w3schools_beyond_shortdescription: ওয়েব সাইট তৈরি সম্বন্ধে জানুন
+  codeavengers_beyond_shortdescription: খেলা এবং ওয়েবসাইট কোড করা শিখুন
+  mozilla_beyond_shortdescription: ওয়েব পৃষ্ঠা তৈরি এবং শেয়ার করুন
+  codecombat_beyond_shortdescription: খেলা খেলুন ও জিততে জাভাস্ক্রিপ্ট শিখুন
+  codea_beyond_shortdescription: আপনার আইপ্যাডে অ্যাপ বানান
+  lego_beyond_shortdescription: রোবট তৈরী ও প্রোগ্রাম করুন
+  finch_beyond_shortdescription: কম্পিউটার বিজ্ঞান শিক্ষার জন্য রোবট
   arduino_beyond_shortdescription: Sparkfun ডিজিটাল স্যান্ডবক্সের সঙ্গে Arduino শিখুন
-  processing_beyond_shortdescription: "প্রসেসিং ভাষা শিখুন"
-  alice_beyond_shortdescription: "ত্রিমাত্রিক পরিবেশ প্রোগ্রামিং শিখান"
-  sphero_beyond_shortdescription: "এসপিআরকে পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং
-    কোর্স দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা শাণিত করে।"
+  processing_beyond_shortdescription: প্রসেসিং ভাষা শিখুন
+  alice_beyond_shortdescription: ত্রিমাত্রিক পরিবেশ প্রোগ্রামিং শিখান
+  sphero_beyond_shortdescription: এসপিআরকে পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং কোর্স
+    দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা শাণিত করে।
   codeorg_beyond_longdescription: ড্র্যাগ এবং ড্রপ প্রোগ্রামিং সঙ্গে কম্পিউটার বিজ্ঞানের
     মৌলিক ধারণা শিখুন। ৩টি পূর্ণ কোর্স, প্রতিটিতে 15-20 পাঠ আছে যা খেলা-মত, আত্মবশ
     টিউটোরিয়াল যা বিল গেটস, মার্ক জুকারবার্গ, অ্যাংরি বার্ড এবং প্লান্ট বনাম জম্বি
     দ্বারা অভিনীত ভিডিও লেকচার যাতে শ্রেণীকক্ষ করা যায় এমন "আনপ্লাগড" কাজ বিচ্ছিন্ন
     ভাবে সাজানো। পুনরাবৃত্তি-লুপ, কন্ডিশন, মৌলিক আলগোরিদিম, ফাংশন, এবং ভেরিয়েবল শিখুন।
-  khan_beyond_longdescription: "আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
-    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!"
+  khan_beyond_longdescription: আপনার কোড দিয়ে মজা অঙ্কন  তৈরি করার সময় জাভাস্ক্রিপ্ট
+    প্রোগ্রামিং এর মৌলিক বিষয় গুলি শিখুন । আপনার নিজের বা আপনার ক্লাসের সাথে করুন!
   tynker_beyond_longdescription: Tynker প্রোগ্রামিং শেখা এটা মজা ও সহজ করে তোলে। এটা
     একে চাক্ষুষ করে তোলে। বাচ্চারা কোডের ব্লক সাজিয়ে গেম এবং মোবাইল অ্যাপস নির্মাণ
     করে। এটা প্রোগ্রামিং সিনট্যাক্স জানা প্রয়োজন সরিয়ে ফেলে। বাচ্চারা সরাসরি অ্যানিমেটেড
@@ -1837,68 +1833,68 @@
     খেলা, গল্প, এনিমেশন &mdash তৈরি করতে পারেন; এবং আপনার বন্ধুদের সাথে শেয়ার করতে
     পারেন। আপনার নাম এনিমেশন করে, ছুটির কার্ড তৈরি করে, অথবা পং খেলা বানানোর মাধ্যমে
     শুরু করুন।
-  lightbot_beyond_longdescription: "আইওএস, এন্ড্রয়েড (বা ওয়েব ব্রাউজার) ব্যবহার করে
+  lightbot_beyond_longdescription: আইওএস, এন্ড্রয়েড (বা ওয়েব ব্রাউজার) ব্যবহার করে
     ৪+ বয়সের বাচ্চারা মুল প্রোগ্রামিং যুক্তি শিখতে পারে  অতি-মৌলিক প্রোগ্রামিং থেকে
     শুরু করে। কিভাবে ক্রম নির্দেশ, নমুনা সনাক্তকরণ, সুডকোড ব্যবহার ও লুপ ব্যবহার করতে
-    হয় তা শিখুন!"
-  codecademy_beyond_longdescription: "কোডএকাডেমী একটি পরস্পর ক্রিয়াশীল, ছাত্র-নির্দেশিত
+    হয় তা শিখুন!
+  codecademy_beyond_longdescription: কোডএকাডেমী একটি পরস্পর ক্রিয়াশীল, ছাত্র-নির্দেশিত
     মৌলিক সিএসের ভূমিকা যা জাভাস্ক্রিপ্ট দ্বারা শিখানো হয় ও সারা পৃথিবীর লক্ষ লক্ষ
     ছাত্র দ্বারা ব্যবহৃত হয়। । ছাত্রদের এক ঘন্টার হয়রানইহীন কোড অভিজ্ঞতা দেবার জন্য
-    আমরা কুইজ, স্লাইড, এবং সম্পূর্ণ প্রকল্প তৈরী করেছি।"
+    আমরা কুইজ, স্লাইড, এবং সম্পূর্ণ প্রকল্প তৈরী করেছি।
   kodable_beyond_longdescription: Kodable একটি স্ব-নির্দেশিত আইপ্যাডের গেম যা ৫ বছরের
     বেশি বয়সি শিশুদের প্রোগ্রামিং মৌলিক বিষয়গুলির সাথে পরিচিত করায়। শিক্ষক বা মা-বাবা
     কাছাকাছি থাকা সন্তোষজনক, কিন্তু প্রয়োজন নয়।
   scratchjr_beyond_longdescription: ScratchJr এমন একটি প্রোগ্রামিং ভাষা যা ছেলেমেয়েরা
     তাদের নিজের পরস্পর ক্রিয়াশীল গল্প এবং খেলা তৈরি করতে সক্ষম করে। ছেলেমেয়েরা গ্রাফিক্যাল
     প্রোগ্রামিং ব্লক একসঙ্গে করে তাহের চরিত্রকে সরতে,লাফাত, নাচ ও গান গাওয়াতে পারবে।
-  hopscotch_beyond_longdescription: "হপস্কছ(Hopscotch) প্রোগ্রামিং ভাষায় আইপ্যাড ব্যবহার
+  hopscotch_beyond_longdescription: হপস্কছ(Hopscotch) প্রোগ্রামিং ভাষায় আইপ্যাড ব্যবহার
     করে ছাত্র-নির্দেশিত টিউটোরিয়াল। ছাত্ররা তাদের আইপ্যাডে তাদের আইপ্যাডের জন্য অ্যাপ
     তৈরী করবে। ছাত্র পৃথক পৃথকভাবে বা বন্ধুদের সঙ্গে (প্রতি আইপ্যাডে ৩ জন) কাজ করতে
-    পারেন।"
-  pocketcode_beyond_longdescription: "স্মার্ট ফোনে পকেট কোড দিয়ে নিজের গেম তৈরি করুন!
-    \ স্কাইডাইভার স্টিভকে তাঁর পার্সেল প্রদান করতে সাহায্য করুন। আপনি আপনার বন্ধু
-    এবং অন্যান্য ব্যবহারকারীদের সাথে শেয়ার করতে পারেন তাদের চেষ্টা করে দেখার জন্য!"
-  groklearning_beyond_longdescription: "প্রোগ্রামিং এর অনভিজ্ঞ ব্যক্তিদের জন্য পাইথন
+    পারেন।
+  pocketcode_beyond_longdescription: স্মার্ট ফোনে পকেট কোড দিয়ে নিজের গেম তৈরি করুন!  স্কাইডাইভার
+    স্টিভকে তাঁর পার্সেল প্রদান করতে সাহায্য করুন। আপনি আপনার বন্ধু এবং অন্যান্য ব্যবহারকারীদের
+    সাথে শেয়ার করতে পারেন তাদের চেষ্টা করে দেখার জন্য!
+  groklearning_beyond_longdescription: প্রোগ্রামিং এর অনভিজ্ঞ ব্যক্তিদের জন্য পাইথন
     প্রোগ্রামিং ভাষা ব্যবহার করে একটি পরিচায়ক কোর্স। আমাদের পরিচায়ক বিষয়বস্তু এবং
     চ্যালেঞ্জের অনন্য মিশ্রণ আপনাকে পাইথন এবং প্রোগ্রামিং পুঙ্খানুপুঙ্খ বুঝতে সাহায্য
     করবে। আমরা বিভিন্ন ব্যাকগ্রাউন্ড থেকে বয়সের তারতম্য ছাত্রদের এই বিষয়বস্তু শেখিয়েছি
-    এবং এটা যে আপনার জন্য খুব উপযুক্ত তা আমরা নিশ্চিত।"
-  hacketyhack_beyond_longdescription: "হ্যাকটি হ্যাক আপনাকে মুল থেকে প্রোগ্রামিং এর
+    এবং এটা যে আপনার জন্য খুব উপযুক্ত তা আমরা নিশ্চিত।
+  hacketyhack_beyond_longdescription: 'হ্যাকটি হ্যাক আপনাকে মুল থেকে প্রোগ্রামিং এর
     খাঁটি মৌলিক বিষয়গুলি শেখাবে। কোন পূর্বের প্রোগ্রামিং অভিজ্ঞতা প্রয়োজন নেই। হ্যাকটি
     হ্যাকের সাথে, আপনি রুবি প্রোগ্রামিং ভাষা শিখবেন। রুবি ডেক্সটপ আপ্লিকেশন ও ওয়েবসাইট
-    সকল ধরনের প্রোগ্রামে ব্যবহার হয়। [উল্লেখ্য: ডেস্কটপ ইনস্টল করার প্রয়োজন]"
-  robomind_beyond_longdescription: "শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
+    সকল ধরনের প্রোগ্রামে ব্যবহার হয়। [উল্লেখ্য: ডেস্কটপ ইনস্টল করার প্রয়োজন]'
+  robomind_beyond_longdescription: শিক্ষার্থীরা তাদের নিজস্ব ভার্চুয়াল রোবট নিয়ন্ত্রণ
     করে প্রোগ্রামিং এর মূলসূত্র শিখতে পারে। অনলাইন কোর্সটি সম্পূর্ণরূপে স্বয়ংসম্পূর্ণ,
     সংক্ষিপ্ত উপস্থাপনা, চলচ্চিত্র, ক্যুইজ এবং স্বয়ংক্রিয় নির্দেশিকা/ইঙ্গিত পূর্ণ
-    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।"
-  makeschool_beyond_longdescription: "কিছু অব্জেক্টিভ সি জানেন? এক ঘন্টায় আইফোন গেম
+    যা প্রোগ্রামিং অনুশীলনের সাহায্য করে।
+  makeschool_beyond_longdescription: কিছু অব্জেক্টিভ সি জানেন? এক ঘন্টায় আইফোন গেম
     বানানোর চেষ্টা করুন। আমরা আপনাকে প্রক্রিয়ার করণ, কোড করা, পরীক্ষা করার এবং আপনার
     গেম সম্পূর্ণভাবে ব্রাউজারে খেলা ও তারপর বন্ধুদের চেষ্টা করার জন্য ফেসবুকে শেয়ার
     করতে সহায়তা করবে! কোন পূর্বে আইফোন ডেভলপমেন্ট অভিজ্ঞতার প্রয়োজন নেই। আপনি কে
-    ভেরিয়েবল, মেথড, এবং অবেজেক্ট বুঝতে হবে।"
-  appinventor_beyond_longdescription: "আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি
+    ভেরিয়েবল, মেথড, এবং অবেজেক্ট বুঝতে হবে।
+  appinventor_beyond_longdescription: আপনার অ্যান্ড্রয়েড ফোন বা ট্যাবলেট জন্য তিনটি
     সহজ অ্যাপস নির্মাণের কলাকৌশল মজার ও দূত টিউটোরিয়ালে দেখুন। নতুন শিক্ষারথীদের
     এবং বিশেষজ্ঞদের জন্য সমভাবে ডিজাইন করা, এই এক ঘন্টার কোড আপনাকে আপনি এটা জানার
     আগেই আপনার নিজস্ব অ্যাপ্লিকেশন নির্মাণ শুরু করার জন্য প্রস্তুত করে তুলবে। কল্পনা
     করুন আপনি আপনার বন্ধুদের সঙ্গে আপনার নিজস্ব অ্যাপ্লিকেশন সৃষ্টিকে শেয়ার করছেন!
     এই কার্যকলাপের সকল পৃথক ব্যক্তিদের জন্য এবং নেতৃস্থানীয় শ্রেণীর শিক্ষকদের জন্য
-    উপযুক্ত।"
+    উপযুক্ত।
   touchdevelop_beyond_longdescription: TouchDevelop আইপ্যাড, আইফোন, অ্যান্ড্র্যয়েড,
     পিসি, ম্যাক, উইন্ডজ ফোনে আপনাকে অ্যাপ তৈরি করতে দেয়। আমাদের স্পর্শ-বন্ধুসুলভ সম্পাদক
     আপনার ফোন বা ট্যাবলেটে কোডিং মজা করে তোলে!
-  codehs_beyond_longdescription: "কারল কুকুরের সাথে প্রোগ্রামিং এর মুল বিষয়গুলি শিখুন,
+  codehs_beyond_longdescription: কারল কুকুরের সাথে প্রোগ্রামিং এর মুল বিষয়গুলি শিখুন,
     কোডিং এর একটি মজার, সুগম ও চাক্ষুশ ভুমিকা, যেখানএ কম্পিউটারকে নির্দেশ দেয়া কুকুরকে
     নির্দেশ দেওয়ার মতই। এই টিউটোরিয়াল যদি শিক্ষক দ্বারা পরিচালিত হয় তা হলে তা অনেক
-    ভাল হয় কিন্তু এইটি একা একা ও করা সম্ভব। [বিঃদ্রঃ টাকা প্রদান আবশ্যক]"
-  udemy_beyond_longdescription: "আপনি কখনো কোড দেখেন বা জীবনযাত্রার জন্য আপনি কোড
-    \ করেনব তা যাই হোক, Udemy তে আপনার জন্য পেশাগত প্রশিক্ষক দ্বারা শেখানো কোর্স আছে।
-    [দ্রষ্টব্য: পেমেন্ট প্রয়োজন।]"
-  lynda_beyond_longdescription: "ওয়েব অ্যাপ্লিকেশন কোড, তৈরি এবং নির্মাণ করার উপায়
+    ভাল হয় কিন্তু এইটি একা একা ও করা সম্ভব। [বিঃদ্রঃ টাকা প্রদান আবশ্যক]
+  udemy_beyond_longdescription: 'আপনি কখনো কোড দেখেন বা জীবনযাত্রার জন্য আপনি কোড  করেনব
+    তা যাই হোক, Udemy তে আপনার জন্য পেশাগত প্রশিক্ষক দ্বারা শেখানো কোর্স আছে। [দ্রষ্টব্য:
+    পেমেন্ট প্রয়োজন।]'
+  lynda_beyond_longdescription: 'ওয়েব অ্যাপ্লিকেশন কোড, তৈরি এবং নির্মাণ করার উপায়
     সম্পর্কে জানুন, সি এবং সি ++ তে অবজেক্ট ওরিয়েন্টেড প্রোগ্রামিং এর মূলে থাকে শুরু
     করে জাভা লিখা পর্যন্ত। আমাদের ডেভেলপাদের টিউটোরিয়াল আপনাকে মোবাইল অ্যাপ্লিকেশন
     বিকাশ ও তৈরি, পিএইচপি এবং মাইএসকিউএল ডাটাবেস সঙ্গে কাজ শিখতে সাহায্য করতে পারেন,
     শুরু করতে পারেন পরিসংখ্যান প্রক্রিয়াকরণ ভাষা R, এবং আরো অনেক কিছু। [উল্লেখ্য:
-    পেমেন্ট প্রয়োজন]"
+    পেমেন্ট প্রয়োজন]'
   edx_beyond_longdescription: CS50x হল মেজর এবং নন-মেজর উভয়ের জন্যেই, পূর্বে প্রোগ্রামিং
     অভিজ্ঞতাসহ বা ছাড়া, কম্পিউটার বিজ্ঞান এবং প্রোগ্রামিং শিল্প সম্পর্কিত বুদ্ধিবৃত্তিক
     উদ্যোগের ব্যাপারে হার্ভার্ড কলেজের দেওয়া ভুমিকা। টপিককে আবস্ট্রাকশন, আলগোরিদিম,
@@ -1906,19 +1902,19 @@
     এবং ওয়েব ডেভেলপমেন্ট অন্তর্ভুক্ত। ভাষাসমূহের মধ্যে সি, পিএইচপি এবং জাভাস্ক্রিপ্ট
     প্লাস এসকিউএল, সিএসএস এবং HTML অন্তর্ভুক্ত। CS50x অন ক্যাম্পাস সংস্করণ হার্ভার্ড
     এর দ্বিতীয় বৃহত্তম কোর্স।
-  coursera_beyond_longdescription: "স্ট্যানফোর্ড CS 101 ক্লাস নিক পারলান্টে দ্বারা
+  coursera_beyond_longdescription: 'স্ট্যানফোর্ড CS 101 ক্লাস নিক পারলান্টে দ্বারা
     শেখানো হয় (বিনামূল্যে!)। CS101 শূন্য-পূর্ব-অভিজ্ঞতা দর্শকদের জন্য কম্পিউটার সায়েন্স
     এর অপরিহার্য ধারণা শেখায়। কোডের সংক্ষিপ্ত বিট সঙ্গে খেলুন এবং পরীক্ষা করুন এবং
     জীবনে কম্পিউটারের ক্ষমতা ও সীমাবদ্ধতার ফিরিয়ে আনার। CS101 আজকের দিনের কম্পিউটারে
     একটি সাধারণ পটভূমি দেয়া হয়: কম্পিউটার কি, হার্ডওয়্যার কি, সফটওয়্যার কি, ইন্টারনেট
     কি। একটি ওয়েব ব্রাউজার ব্যবহার করার ক্ষমতা ছাড়া অন্য কোনো পূর্ববর্তী অভিজ্ঞতার
-    প্রয়োজন নেই।"
-  udacity_beyond_longdescription: "এই কোর্সে আপনি কম্পিউটার বিজ্ঞান মধ্যে মূল ধারণাগুলি
+    প্রয়োজন নেই।'
+  udacity_beyond_longdescription: এই কোর্সে আপনি কম্পিউটার বিজ্ঞান মধ্যে মূল ধারণাগুলি
     শিখবেন এবং কিভাবে একটি ওয়েব ক্রলার নির্মাণের প্রেক্ষাপটে আপনার নিজের কম্পিউটার
     প্রোগ্রাম লিখতে হয় তা শিখবেন। কোন পূর্বে প্রোগ্রামিং জ্ঞান এই কোর্সের জন্য প্রয়োজনীয়।
     নতুনদের স্বাগত জানাই! এই কোর্সের শেষে, আপনি কম্পিউটার বিজ্ঞানের যথেষ্ট ধারণা শিখবেন
     এবং আপনার নিজের সমস্যা সমাধানের জন্য পাইথন প্রোগ্রাম লিখতে পারবেন। এই কোর্সে আপনি
-    মধ্যবর্তী পর্যায়ের কম্পিউটিং কোর্সর জন্য প্রস্তুত করবে।"
+    মধ্যবর্তী পর্যায়ের কম্পিউটিং কোর্সর জন্য প্রস্তুত করবে।
   teachingtree_beyond_longdescription: TeachingTree একটি উন্মুক্ত প্ল্যাটফর্ম যা যে
     কেউকে শিক্ষাগত কন্টেন্ট সংগঠিত করতে দেয়। ছাত্র দ্রুত পৃথক ধারণা শিখতে যাতে তারা
     প্রয়োজন সঠিক ক্লিপ পায় তা নিশ্চিত করাই আমাদের লক্ষ্য। প্রত্যেকেই ভিডিও যোগ করা
@@ -1933,26 +1929,26 @@
     কিভাবে বাক্স সরায় তা শেখান। শুনতে সহজ, ঠিক? এতে ৩৬ টি বন্ধুসুলভ চতুর পাজল, গা
     ছমছমে গান এবং চোখ ধাঁধানো গ্রাফিক্স আছে। এমনকি আপনি আপনার সমাধান রেকর্ড করতে পারেন
     এবং আপনার বন্ধুদের দেখানোর জন্য YouTube- এ শেয়ার করে পারেন।
-  kidsruby_beyond_longdescription: "মজা করুন এবং খেলার তৈরি করুন অথবা রুবি ব্যবহার
+  kidsruby_beyond_longdescription: 'মজা করুন এবং খেলার তৈরি করুন অথবা রুবি ব্যবহার
     করে আপনার বাড়ির কাজ সহজ (হ্যাক) করুন! আপনার বাবা-মা বলবে বা শিক্ষকে বলুন আপনি
     রুবি প্রোগ্রামিং শেখছেন ;)। বিনামূল্যে এবং যে কোন কম্পিউটারে কাজ করেন। [দ্রষ্টব্য:
-    ডেস্কটপ ইনস্টল প্রয়োজন]"
-  w3schools_beyond_longdescription: "নিজের কম্পিউটারে ওয়েব সাইট তৈরি করতে শিখুন।
-    সার্ভারের মৌলিক বিষয়গুলো এক দিনের কম সময়ে শিখে নিন। আপনার ওয়েবসাইটে ডাটাবেস
-    যুক্ত করতে শিখুন"
-  codeavengers_beyond_longdescription: "গেম, আপস ও ওয়েবসাইট প্রোগ্রাম করা শিখুন। বিশেষজ্ঞদের
+    ডেস্কটপ ইনস্টল প্রয়োজন]'
+  w3schools_beyond_longdescription: নিজের কম্পিউটারে ওয়েব সাইট তৈরি করতে শিখুন। সার্ভারের
+    মৌলিক বিষয়গুলো এক দিনের কম সময়ে শিখে নিন। আপনার ওয়েবসাইটে ডাটাবেস যুক্ত করতে
+    শিখুন
+  codeavengers_beyond_longdescription: গেম, আপস ও ওয়েবসাইট প্রোগ্রাম করা শিখুন। বিশেষজ্ঞদের
     দ্বারা পরিকল্পিত নতুনদের জন্য নিখুঁত অসুবিধা মাত্রাসহ, সহজে বুঝা যায় এমন নির্দেশাবলী
     এবং গুরুত্বপূর্ণ সাহায্য যখন আপনাদের প্রয়োজন। আমাদের এইচটিএমএল, সিএসএস এবং জাভাস্ক্রিপ্ট
     কোর্স কোড চ্যালেঞ্জ এবং গেম অন্তর্ভুক্ত যা শিখন সব বয়সের জন্য মজা এবং কার্যকর
-    করে।"
+    করে।
   mozilla_beyond_longdescription: Thimble আপনার নিজস্ব ওয়েব পেজ তৈরি এবং শেয়ার করা
     হাস্যকর ভাবে সহজ করে তোলে। HTML এবং CSS সরাসরি আপনার ব্রাউজারে লিখুন ও সম্পাদন
     করুন এবং তারপর অবিলম্বে আপনার কাজ পূর্বরূপ দেখুন। একটি ক্লিকেই আপনার সমাপ্ত প্রকল্পের
     হোস্ট এবং শেয়ার করুন। একইভাবে শিক্ষানবিস ও বিশেষজ্ঞদের জন্য উপযোগী।
-  codecombat_beyond_longdescription: "একজন জাদুকর হয়ে কোড (জাদু) ব্যবহার করে আপনার
+  codecombat_beyond_longdescription: একজন জাদুকর হয়ে কোড (জাদু) ব্যবহার করে আপনার
     বীরদের নিয়ন্ত্রণ, গোলকধাঁধা পরিভ্রমণ, রাক্ষস হারানো, শত্রুদের প্রতারিত এবং মিত্রশক্তিকে
     উদ্ধার করুন! HTML 5 ব্যবহার করে তৈরি ওয়েব খেলায় সম্পূর্ণ নতুন হয়েও জাভাস্ক্রিপ্ট
-    শিখুন।"
+    শিখুন।
   codea_beyond_longdescription: iPad এর জন্য Codea আপনাকে গেম এবং সিমিউলেশন তৈরি করতে
     দেয় &mdash; বা আপনার থাকা শুধু কোন চাক্ষুষ ধারণা সম্পর্কে। iPad এর মাল্টি টাচ
     এবং অ্যাকসিলরোমিটারটির মত বৈশিষ্ট্য ব্যবহার করতে আপনার চিন্তাধারা কে ইন্টারেক্টিভ
@@ -1961,31 +1957,31 @@
     হয়েছে। সংখ্যা পরিবর্তন করতে চান? শুধু টোকা (ট্যাপ) দিন এবং এটি টেনে আনুন। রং বা
     একটি চিত্র সম্পর্কে কি ভাবছেন? টোকা দিলে চাক্ষুষ সম্পাদক সামনে আসবে যা থেকে আপনি
     ঠিক কি আপনি চান তা বেছে নিতে পারবেন।
-  lego_beyond_longdescription: "লেগো ব্যবহার করে ছোট, কাস্টমাইজেবল ও র্কমক্ষম রোবট
-    তৈরি।"
-  finch_beyond_longdescription: "ফিঞ্চ কম্পিউটার বিজ্ঞান শিক্ষার জন্য একটি নতুন রোবট।
+  lego_beyond_longdescription: লেগো ব্যবহার করে ছোট, কাস্টমাইজেবল ও র্কমক্ষম রোবট
+    তৈরি।
+  finch_beyond_longdescription: ফিঞ্চ কম্পিউটার বিজ্ঞান শিক্ষার জন্য একটি নতুন রোবট।
     কার্নেগী মেলনের CREATE ল্যাবে একটি চার বছরের গবেষণার ফল এর নকশা। ফিঞ্চ প্রোগ্রামিং
     শিল্পে একটি আকর্ষক ভূমিকা সমর্থন করার জন্য ডিজাইন করা হয়। এটা এক ডজনেরও বেশি
     প্রোগ্রামিং ভাষা এবং পরিবেশ সমর্থন করে, তরুণ আট বছর বয়সী শিক্ষার্থীদের জন্য উওপযুক্ত
     বিভিন্ন পরিবেশও অন্তর্ভুক্ত। ফিঞ্চ ছাত্রদের সমৃদ্ধ ইন্টারেক্টিভ প্রোগ্রাম লিখতে
-    পরিকল্পনা করা হয়েছিল।"
-  arduino_beyond_longdescription: "আরডুইনো একটি জনপ্রিয় প্ল্যাটফর্ম যা শিল্পী ও ডিজাইনারদের
+    পরিকল্পনা করা হয়েছিল।
+  arduino_beyond_longdescription: আরডুইনো একটি জনপ্রিয় প্ল্যাটফর্ম যা শিল্পী ও ডিজাইনারদের
     প্রকৃত সেন্সর, এলইডি, হর্ণ এবং আরো অনেক কিছু নিয়ে কাজ করার সুযোগ দেয়। স্পার্কফান
-    ভার্চুয়াল সান্ডবক্স আপনাকে আপনার ব্রাউজার এ বাস্তব আরডুইনো কোড ঠিক শিখাবে।"
-  processing_beyond_longdescription: "প্রসেসিং একটি প্রোগ্রামিং ভাষা, উন্নয়ন পরিবেশ,
+    ভার্চুয়াল সান্ডবক্স আপনাকে আপনার ব্রাউজার এ বাস্তব আরডুইনো কোড ঠিক শিখাবে।
+  processing_beyond_longdescription: প্রসেসিং একটি প্রোগ্রামিং ভাষা, উন্নয়ন পরিবেশ,
     এবং অনলাইন সম্প্রদায়। 2001 সাল থেকে, প্রসেসিং চাক্ষুষ শিল্পকলা ও চাক্ষুষ সাক্ষরতা
     মধ্যেমে প্রযুক্তি মধ্যে সফ্টওয়্যার সাক্ষরতা হার উন্নীত করেছে। প্রাথমিকভাবে একটি
     সফ্টওয়্যার স্কেচবুক হিসেবে পরিবেশন করা এবং একটি চাক্ষুষ কনটেক্সট মধ্যেমে কম্পিউটার
     প্রোগ্রামিং মৌলিক শেখান নির্মিত, প্রসেসিং পেশাদারদের জন্য একটি উন্নয়ন টুল পরিচাযক।
     আজ, দশ হাজারেরও আধিক ছাত্র, শিল্পী, ডিজাইনার, গবেষক, এবং শৌখিন মানুষরা শেখা, প্রোটোটাইপিং
-    এবং উৎপাদনের জন্য প্রসেসিং ব্যবহার করে।"
-  alice_beyond_longdescription: "এলিস প্রকল্প, একটি উদ্ভাবনী প্রোগ্রামিং এনভায়রনমেন্ট
+    এবং উৎপাদনের জন্য প্রসেসিং ব্যবহার করে।
+  alice_beyond_longdescription: এলিস প্রকল্প, একটি উদ্ভাবনী প্রোগ্রামিং এনভায়রনমেন্ট
     ব্যবহার করে যা 3D অ্যানিমেশন সৃষ্টিতে সক্ষম, বয়সের এবং গ্রেড স্তরের একটি বিস্তীর্ণ
     এলাকা জুড়ে কম্পিউটেশনাল চিন্তা, সমস্যা সমাধান ও কম্পিউটার প্রোগ্রামিং শিখানো
-    এবং শেখার জন্য সরঞ্জাম ও উপকরণ প্রদান করে।"
-  sphero_beyond_longdescription: "আপনি চাই একজন শিক্ষাবিদ বা অভিভাবক হন , এসপিআরকে
+    এবং শেখার জন্য সরঞ্জাম ও উপকরণ প্রদান করে।
+  sphero_beyond_longdescription: আপনি চাই একজন শিক্ষাবিদ বা অভিভাবক হন , এসপিআরকে
     পাঠ শিশুদের আনন্দায়ক রোবট প্রোগ্রামিং কোর্স দিয়ে থাকে যা গণিত ও বিজ্ঞানের দক্ষতা
-    শাণিত করে।"
+    শাণিত করে।
   compatibility_hide_this_warning: Hide this warning
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
@@ -1995,22 +1991,22 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "পাখা ঝাপ্টান"
+  flappy_shortcode: পাখা ঝাপ্টান
   infinity_shortcode: inf
-  playlab_shortcode: "খেলুন"
+  playlab_shortcode: খেলুন
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_courses: "পাঠ্যতালিকা"
+  header_courses: পাঠ্যতালিকা
   header_course_catalog: Course Catalog
-  header_project_gallery: "প্রকল্প"
+  header_project_gallery: প্রকল্প
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "এক ঘন্টার কোড"
+  header_educate_hoc: এক ঘন্টার কোড
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -2028,7 +2024,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: "পরিসংখ্যান"
+  header_stats: পরিসংখ্যান
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -2039,10 +2035,10 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "হ্যালো %{username}"
-  user_header_settings: "আমার একাউন্ট"
-  user_header_logout: "সাইন আউট"
-  user_header_signin: "সাইন ইন করুন"
+  user_header_label: হ্যালো %{username}
+  user_header_settings: আমার একাউন্ট
+  user_header_logout: সাইন আউট
+  user_header_signin: সাইন ইন করুন
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

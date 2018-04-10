@@ -522,6 +522,9 @@ pl:
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
         csd_applab_arrays: Wprowadzenie do tablic
         CSF_skinOverview_Harvester: Kombajn
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Pętle z BB-8
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

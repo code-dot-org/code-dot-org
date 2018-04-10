@@ -316,3 +316,21 @@ de:
       BigEvent_2018:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
+      GraphPaperProgramming_2018:
+        title: Programmieren auf Millimeterpapier
+        desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
+      DigitalFootprint_2018:
+        title: Dein digitaler Fußabdruck
+        desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
+      BinaryImages_2018:
+        title: Binärbilder
+        desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.

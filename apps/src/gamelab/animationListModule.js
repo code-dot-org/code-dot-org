@@ -544,8 +544,9 @@ export function deleteAnimation(key) {
 function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
-    const state = getState().animationList;
-    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
+    const state = getState();
+    const sourceUrl = animationSourceUrl(key, state.animationList.propsByKey[key],
+      state.pageConstants && state.pageConstants.channelId);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -565,9 +566,9 @@ function loadAnimationFromSource(key, callback) {
             project_id: getCurrentId(),
             data_json: JSON.stringify({
               'sourceUrl': sourceUrl,
-              'mainJsonSourceUrl': state.propsByKey[key].sourceUrl,
-              'version': state.propsByKey[key].version,
-              'animationName': state.propsByKey[key].name,
+              'mainJsonSourceUrl': state.animationList.propsByKey[key].sourceUrl,
+              'version': state.animationList.propsByKey[key].version,
+              'animationName': state.animationList.propsByKey[key].name,
               'error': err.message
             })
           },
@@ -576,7 +577,7 @@ function loadAnimationFromSource(key, callback) {
 
         if (isOwner()) {
           // Display error dialog
-          dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+          dispatch(reportError(`Sorry, we couldn't load animation "${state.animationList.propsByKey[key].name}".`, "anim_load", key));
         }
 
         return;
@@ -669,7 +670,9 @@ function startLoadingPendingFramesFromSourceAction() {
 function loadPendingFramesFromSource(key, props, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
-    const sourceUrl = animationSourceUrl(key, props);
+    const state = getState();
+    const sourceUrl = animationSourceUrl(key, props,
+      state.pageConstants && state.pageConstants.channelId);
     dispatch(startLoadingPendingFramesFromSourceAction());
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -692,23 +695,33 @@ function loadPendingFramesFromSource(key, props, callback) {
  * the spritesheet.
  * @param {!AnimationKey} key
  * @param {!SerializedAnimationProps} props
+ * @param {string} channelId - Used to differentiate library animations
  * @returns {string}
  */
-export function animationSourceUrl(key, props) {
-  // TODO: (Brad) We want to get to where the client doesn't know much about
-  //       animation versions, by switching to Chris' new Files API.
-  //       in the meantime, be able to request versions only when we export
-  //       JSON for levelbuilders to use.
+export function animationSourceUrl(key, props, channelId) {
+  // If the animation has a sourceUrl it's external (from the library,
+  // a levelbuilder, or an uploaded image) - and we may need to run it through
+  // the media proxy.
+  // ChannelId differentiates anims included by levelbuilders from project animations
+  const fromLibraryOrLevelbuilder = props.sourceUrl && !props.sourceUrl.includes('v3/animations/' + channelId);
+  const uploadedAnimation = props.sourceUrl && props.sourceUrl.includes('v3/animations/' + channelId);
 
-  // 1. If the animation has a sourceUrl it's external (from the library
-  //    or some other outside source, not the animation API) - and we may need
-  //    to run it through the media proxy.
-  if (props.sourceUrl) {
+  // No need to append a version for animations in the library/from levelbuilders
+  // or if the srcUrl points to an uploaded animation and contains a version
+  const versionNotNeeded = fromLibraryOrLevelbuilder || (uploadedAnimation && props.sourceUrl.includes('?version'));
+
+  if (versionNotNeeded) {
     return assetPrefix.fixPath(props.sourceUrl);
+  } else if (uploadedAnimation) {
+    if (props.version) {
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=' + props.version;
+    } else {
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=latestVersion';
+    }
   }
 
-  // 2. Otherwise it's local to this project, and we should use the animation
-  //    key and version to look it up in the animations API.
+  // Animations that are not from the library, levelbuilder, or uploaded, should
+  // use the animation key and version to look it up in the animations API.
   return animationsApi.basePath(key) + '.png?version=' + (props.version || '');
 }
 
@@ -719,12 +732,12 @@ export function animationSourceUrl(key, props) {
  * @param {SerializedAnimationList} serializedList
  * @return {SerializedAnimationList} with aboslute sourceUrls for every animation.
  */
-export function withAbsoluteSourceUrls(serializedList) {
+export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props);
+    const relativeUrl = animationSourceUrl(key, props, channelId);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;

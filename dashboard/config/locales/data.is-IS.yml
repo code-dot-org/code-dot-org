@@ -59,14 +59,14 @@
         maze_2_2: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara
           áfram" kubbum saman og ýttu svo á "Keyra forrit" til að hjálpa mér að komast
           þangað. '
-        maze_2_1: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!"
+        maze_2_1: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
         maze_2_2_5: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna
           annars verður fjaðrafok!
         maze_2_3: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
         maze_2_4: Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég
           reiðst!
-        maze_2_5: "Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu
-          fundið út úr því?"
+        maze_2_5: Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið
+          út úr því?
         maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
         maze_2_7: Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum.
           Prófaðu að nota fleiri en einn "endurtaka" kubb.
@@ -108,8 +108,8 @@
         turtle_1_4: 'Teiknaðu þríhyrning með hliðar í mismunandi litum með því að
           nota kubbinn "einhver litur" sem velur lit af handahófi í hvert sinn. Vísbending:
           Þú þarft að finna út hve mikið á að snúa með því að smella á töluna í snúningskubbnum.'
-        turtle_1_5: "Æfðu þetta nú með því að teikna þríhyrning og ferning til að
-          búa til mynd af umslagi."
+        turtle_1_5: Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa
+          til mynd af umslagi.
         turtle_1_6: 'Getur þú fundið út hvernig á að teikna þennan þríhyrning og ferning?
           Vísbending: Teiknaðu þríhyrninginn fyrst og finndu svo út hve mikið á að
           snúa áður en ferningurinn er teiknaður.'
@@ -164,9 +164,9 @@
           mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir
           í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
-        maze_karel_1_7: "Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur
-          þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til
-          yfirborðið er slétt?"
+        maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf
+          til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið
+          er slétt?
         maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem
           fæstum kubbum.
         maze_karel_1_9: 'Láttu mig fjarlægja alla þessa moldarhauga. Reyndu að nota
@@ -191,9 +191,9 @@
           Þú vilt kannske nota sleðann til að láta mig fara hraðar.'
         turtle_2_5: Teiknaðu ferninga með 50, 60, 70, 80 og 90 pixla hliðar. Þú þarft
           að nota "teikna ferning" fallið fimm sinnum.
-        turtle_2_6: "Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
+        turtle_2_6: 'Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
           Hver ferningur á að hafa hlið sem er jafnstór og teljarinn svo þú verður
-          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur."
+          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur.'
         turtle_2_7: Hér er forrit sem teiknar spíral, en kubbarnir eru óvirkir svo
           þeir keyra ekki. Búðu til nýtt forrit með því að nota "frá" kubb (undir
           flokknum Lykkjur) og "teljari" (undir Breytur) til að teikna sama spíral.
@@ -220,9 +220,8 @@
           notaðu það til að hjálpa mér að slétta alla haugana.
         maze_karel_2_6: Notaðu tvö ný föll, "fylla 8" og "fjarlægja 8", til að hjálpa
           mér að slétta hauginn og fylla upp í holuna.
-        maze_karel_2_7: "Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar
-          mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja
-          fallið."
+        maze_karel_2_7: Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér
+          að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið.
         maze_karel_2_8: Notaðu þetta nýja fall "forðast kúna og fjarlægja 1" til að
           hjálpa mér að fjarlægja alla haugana.
         maze_karel_2_9: Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt.
@@ -252,8 +251,8 @@
           að ég teikna nýtt hús. Notaðu þetta breytta fall til að teikna þrjú hús.
         turtle_3_9: Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu
           það og teiknaðu svo röð af húsum.
-        turtle_3_10: "Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
-          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn."
+        turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
+          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
         maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur
           þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og
           undirbúið hann fyrir sáningu?
@@ -289,8 +288,8 @@
         turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
           áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
           sett eitthvað allt annað í staðinn)
-        maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
-          svo ég geti fengið eggin mín til baka."
+        maze_3_1: Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
+          svo ég geti fengið eggin mín til baka.
         maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
         maze_3_3: Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT
           sprengiefnið!
@@ -479,8 +478,8 @@
         maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
         maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
-        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
-          stafa orðið STORY"
+        maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
+          stafa orðið STORY
         applab_ec_simple: Búðu til appið þitt með því að nota kubbana í verkfærakassanum.
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með
           því að velja hann í nýja "pennalitur" kubbnum.'
@@ -556,7 +555,7 @@
         C3_bee_conditionals: Býfluga - skilyrði
         C3_maze_conditionals: Völundarhús - skilyrði
         C3_artist_nested_loops: Innri lykkjur
-        C3_farmer_while: "Á meðan lykkjur"
+        C3_farmer_while: Á meðan lykkjur
         C3_bee_nested_loops: Innri lykkjur
         C3_bee_debugging: Býfluga - villuleit
         C3_bounce: Skopp
@@ -601,7 +600,7 @@
         CSF_Power_of_Words: Máttur orða
         CSF_Super_Digital_Citizen: Stafrænn heimsborgari
         CSF_stevie_big_project: Stevie og Stóra verkefnið
-        CSF_unspotted_bugs: "Ófundnar villur"
+        CSF_unspotted_bugs: Ófundnar villur
         CSF_zuck_loops_short: Lykkjur
         frozen_intro: Kynning á Klukkustund kóðunar
         frozen_loops: Kynning á lykkjum
@@ -609,7 +608,7 @@
         playlab_intro: Kynning á Leikjasmiðju
         playlab_events: Leikjasmiðja, atvik
         playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
-        tutorial_puzzle_challenge: "Þrautaáskorun"
+        tutorial_puzzle_challenge: Þrautaáskorun
         infinity_playlab_intro: Leikjasmiðja - kynning
         infinity_playlab_events: Leikjasmiðja - Atvik
         infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
@@ -761,6 +760,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Kynning á fylkjum
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -772,8 +774,8 @@
           búa til
         instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar
           hér
-        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim
-          í flokka"
+        category_explanation: Þú hefur alla sömu kubbana en nú er búið að raða þeim
+          í flokka
         set_sprite_image: Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb
           til að virkja leikmann fyrir þessa sögu
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
@@ -807,8 +809,8 @@
         edit_function: Smelltu hér til að breyta fallinu þínu.
         create_function: Smelltu hér til að opna hliðargluggann "Föll" og smelltu
           svo á "Búa til fall" hnappinn.
-        house_hint: "Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
-          það í næstu þraut."
+        house_hint: Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
+          það í næstu þraut.
         edit_draw_square: Notaðu þennan hnapp til að breyta fallinu og bæta lykkjunni
           við.
         edit_get_nectar: Notaðu þennan hnapp til að breyta fallinu og breyta í hvaða
@@ -869,8 +871,8 @@
           undir hinn kubbinn
         craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
         craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
-        craft_callout_preplaced_house: "Þessi kóði mun byrja að byggja húsið þitt.
-          Getur þú klárað það?"
+        craft_callout_preplaced_house: Þessi kóði mun byrja að byggja húsið þitt.
+          Getur þú klárað það?
         craft_what_is_iron: Grafðu út þetta járn!
-        craft_callout_moveforward: "Þessi kóði mun athuga með hraun. Getur þú bætt
-          við skipun um að fara áfram?"
+        craft_callout_moveforward: Þessi kóði mun athuga með hraun. Getur þú bætt
+          við skipun um að fara áfram?

@@ -2,143 +2,142 @@
   data:
     game:
       name:
-        Unplug1: "컴퓨터과학(Computer Science, 정보과학) 소개"
-        Maze: "미로 퍼즐"
-        Multi: "객관식 선택 문제"
-        Unplug2: "컴퓨터과학적(정보과학적)사고"
-        Unplug3: "모눈종이 프로그래밍"
-        Artist: "화가"
-        Unplug4: "알고리즘"
-        Artist2: "화가2"
-        Unplug5: "함수"
-        Farmer: "농부"
-        Unplug6: "조건/선택"
-        Artist3: "화가3"
-        Unplug7: "노래 만들기"
-        Farmer2: "농부2"
-        Unplug8: "추상화"
-        Artist4: "화가4"
-        Unplug9: "릴레이 프로그래밍"
-        Farmer3: "농부3"
-        Unplug10: "인터넷"
-        Artist5: "화가5"
-        Unplug11: "마무리"
-        MazeEC: "미로 퍼즐"
-        Bounce: "바운스"
-        Flappy: "플래피 버드"
-        Jigsaw: "직소퍼즐"
-        MazeStep: "미로 단계별 모드"
-        Wordsearch: "단어 탐색"
-        Webapp: "앱 연구실"
-        ArtistEC: "화가"
-        TextMatch: "글자 맞추기"
+        Unplug1: 컴퓨터과학(Computer Science, 정보과학) 소개
+        Maze: 미로 퍼즐
+        Multi: 객관식 선택 문제
+        Unplug2: 컴퓨터과학적(정보과학적)사고
+        Unplug3: 모눈종이 프로그래밍
+        Artist: 화가
+        Unplug4: 알고리즘
+        Artist2: 화가2
+        Unplug5: 함수
+        Farmer: 농부
+        Unplug6: 조건/선택
+        Artist3: 화가3
+        Unplug7: 노래 만들기
+        Farmer2: 농부2
+        Unplug8: 추상화
+        Artist4: 화가4
+        Unplug9: 릴레이 프로그래밍
+        Farmer3: 농부3
+        Unplug10: 인터넷
+        Artist5: 화가5
+        Unplug11: 마무리
+        MazeEC: 미로 퍼즐
+        Bounce: 바운스
+        Flappy: 플래피 버드
+        Jigsaw: 직소퍼즐
+        MazeStep: 미로 단계별 모드
+        Wordsearch: 단어 탐색
+        Webapp: 앱 연구실
+        ArtistEC: 화가
+        TextMatch: 글자 맞추기
         StudioEC: Play Lab
-        Applab: "앱 연구실"
-        NetSim: "인터넷 시뮬레이터"
-        Custom: "화가"
+        Applab: 앱 연구실
+        NetSim: 인터넷 시뮬레이터
+        Custom: 화가
         CustomStudio: Play Lab
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "동"
-        Silver: "은"
-        Gold: "금"
+        Bronze: 동
+        Silver: 은
+        Gold: 금
     concept:
       description:
-        sequence: "순차"
-        if: "조건"
-        if_else: "선택"
-        loop_times: "반복(횟수)"
-        loop_until: "반복(~할 때까지)"
-        loop_while: "반복(~인 동안)"
-        loop_for: "카운터"
-        function: "함수"
-        parameters: "함수(값 전달)"
+        sequence: 순차
+        if: 조건
+        if_else: 선택
+        loop_times: 반복(횟수)
+        loop_until: 반복(~할 때까지)
+        loop_while: 반복(~인 동안)
+        loop_for: 카운터
+        function: 함수
+        parameters: 함수(값 전달)
     level:
       instructions:
         maze_2_2: '나쁜 돼지를 잡을 수 있게 도와줄 수 있겠어? "앞으로 이동" 블럭을 몇 개 모아서 붙인 다음, "실행하기"를 누르면
           돼. '
-        maze_2_1: "초록 돼지가 내 깃털들을 마구 헝클어 놓고 있어. 돼지를 찾을 수 있게 도와줘!"
-        maze_2_2_5: "길을 따라 움직여서, 바보 같은 돼지 녀석을 잡아줘. TNT 폭탄을 피하고, 깃털들이 헝클어지지 않도록 해야
-          돼!"
-        maze_2_3: "초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)"
-        maze_2_4: "나쁜 돼지를 잡을 수 있게 도와줘, 침착하게 생각하면 돼. 돼지를 못 잡으면, 화가 날 것 같아!"
-        maze_2_5: "블럭을 2개 만 더 사용해서, 돼지를 잡을 수 있는 방법이 있어. 어떻게 하는지 알아낼 수 있을까?"
-        maze_2_6: "블럭을 3개 만 사용해서, 자기 마음대로 돌아다니는 초록 돼지를 잡을 수 있게 해줘."
+        maze_2_1: 초록 돼지가 내 깃털들을 마구 헝클어 놓고 있어. 돼지를 찾을 수 있게 도와줘!
+        maze_2_2_5: 길을 따라 움직여서, 바보 같은 돼지 녀석을 잡아줘. TNT 폭탄을 피하고, 깃털들이 헝클어지지 않도록 해야 돼!
+        maze_2_3: 초록색 나쁜 놈에게 데려다 줘!(TNT 폭탄 조심)
+        maze_2_4: 나쁜 돼지를 잡을 수 있게 도와줘, 침착하게 생각하면 돼. 돼지를 못 잡으면, 화가 날 것 같아!
+        maze_2_5: 블럭을 2개 만 더 사용해서, 돼지를 잡을 수 있는 방법이 있어. 어떻게 하는지 알아낼 수 있을까?
+        maze_2_6: 블럭을 3개 만 사용해서, 자기 마음대로 돌아다니는 초록 돼지를 잡을 수 있게 해줘.
         maze_2_7: 블럭을 최대한 적게 사용해서, 나쁜 돼지를 쫓아낼 수 있게 해줘. "반복(횟수)" 블럭을 한 개 이상 사용하면 될꺼야.
         maze_2_8: '회색 블럭은 지울 수 없습니다. 3번 반복 실행되는 "반복(횟수)"블럭을 이용해 퍼즐을 해결하세요. 회색 "반복(횟수)"
           블럭 안에 3개의 블럭을 넣으세요 : "이동", "이동", "방향 바꾸기"'
         maze_2_9: '"반복(~할 때까지)" 블럭은, 짜증나는 돼지에게 도착~할 때까지, 계속 반복시켜 줄 꺼야.'
-        maze_2_10: "이번에는 마지막 연습이야 - 블럭을 4개 만 사용해서 해결 할 수 있겠어?"
-        maze_2_11: "여~어~러~부~운~~~. 나 좀비... 배고파... 해바라기 가지고 싶어... 블럭 5개 만 가지고 가능할까?"
-        maze_2_12: "이번 것도 비슷한데 약간 달라. 블럭을 5개만 가지고 가능하겠어?"
+        maze_2_10: 이번에는 마지막 연습이야 - 블럭을 4개 만 사용해서 해결 할 수 있겠어?
+        maze_2_11: 여~어~러~부~운~~~. 나 좀비... 배고파... 해바라기 가지고 싶어... 블럭 5개 만 가지고 가능할까?
+        maze_2_12: 이번 것도 비슷한데 약간 달라. 블럭을 5개만 가지고 가능하겠어?
         maze_2_13: '"만약" 블럭을 이용하면, 언제 돌아야 할지 판단할 수 있어. 힌트: 블럭을 1개 더 사용하면 되지만, 이번에
           "만약" 블럭을 사용하는 방법을 배워야, 다음 퍼즐을 해결할 때 사용할 수 있어.'
         maze_2_14: 음... 이번이 마지막 퍼즐이야!, "만약" 블럭하고 "반복" 블럭을 함께 사용해야 돼.
         maze_2_15: 나... 해바라기... 가지고 싶어~! "만약" 블럭을 사용해서, 블럭을 최대한 적게 사용해서 해바라기로 보내 줘.
-        maze_2_16: "좋아... 한 번 더 해보자~ - 이번 것도 그렇게 어렵지는 않지만, 식충식물들을 조심해야 돼!"
+        maze_2_16: 좋아... 한 번 더 해보자~ - 이번 것도 그렇게 어렵지는 않지만, 식충식물들을 조심해야 돼!
         maze_2_17: '"조건/선택" 블럭은, 검사를 한 다음에 그 결과에 따라 하나의 작업을 실행해 줘. 이 새로운 블럭을 이용해서,
           나를 해바라기로 보내 줘.'
         maze_2_18: '"조건/선택" 블럭을 다시 한 번 사용해 보자~, 한 번에 성공할 수 있을까?'
-        maze_2_19: "블럭을 3개 더 붙여서, 좀 더 복잡한 미로를 빠져나갈 수 있도록 할 수 있겠어? 네가 성공하면 난, 아무리 크고
-          복잡한 미로라고 하더라도 거뜬히 통과할 수 있을 거야."
-        turtle_1_1: "저는 예술가입니다. 원하는 모든 것을 그리도록 코드를 작성할 수 있습니다. 그림에서 회색 선을 따라 그릴 수
-          있도록 블럭들을 사용하세요."
+        maze_2_19: 블럭을 3개 더 붙여서, 좀 더 복잡한 미로를 빠져나갈 수 있도록 할 수 있겠어? 네가 성공하면 난, 아무리 크고
+          복잡한 미로라고 하더라도 거뜬히 통과할 수 있을 거야.
+        turtle_1_1: 저는 예술가입니다. 원하는 모든 것을 그리도록 코드를 작성할 수 있습니다. 그림에서 회색 선을 따라 그릴 수 있도록
+          블럭들을 사용하세요.
         turtle_1_2: '자! 이제, 사각형을 그려봐. 참고: "색 설정" 블럭을 사용하면 원하는 색을 사용할 수 있어.'
-        turtle_1_3: "블럭을 3개만 이용해서 사각형을 그려봐."
+        turtle_1_3: 블럭을 3개만 이용해서 사각형을 그려봐.
         turtle_1_4: '사용할 때마다 색이 바뀌는 "랜덤 색" 블럭을 사용해서, 세 변의 색이 다른 삼각형을 그려봐. 힌트: 돌기 블럭을
           사용할 때에는 회전할 각도를 입력해 주어야 해.'
-        turtle_1_5: "그럼 이번에는, 사각형 안에 삼각형이 들어있는 모양을 그려봐."
-        turtle_1_6: "이 삼각형과 사각형을 어떻게 그릴 수 있을까? 힌트: 삼각형을 먼저 그린 후, 사각형을 그리기 위해 얼마나 회전해야
-          할 지를 생각해야 해."
-        turtle_1_7: "자. 이제 좀더 어려운 것을 해보자. - 초록색 안경을 그릴 수 있을까? 사각형은 각 변의 크기가 100 픽셀이고
-          , 50 픽셀 만큼 떨어져 있고, 초록 선으로 그려야 해!"
-        turtle_1_8: "이 코드를 실행시켰을 때에는 어떤 일이 벌어질까? 나머지 그림을 완성시켜보자. 색은 실행시킬 때마다 달라진다."
-        turtle_1_9: "원을 그리려면, 물음표로 표시된 부분에 어떤 수를 넣어야 할까?"
+        turtle_1_5: 그럼 이번에는, 사각형 안에 삼각형이 들어있는 모양을 그려봐.
+        turtle_1_6: '이 삼각형과 사각형을 어떻게 그릴 수 있을까? 힌트: 삼각형을 먼저 그린 후, 사각형을 그리기 위해 얼마나 회전해야
+          할 지를 생각해야 해.'
+        turtle_1_7: 자. 이제 좀더 어려운 것을 해보자. - 초록색 안경을 그릴 수 있을까? 사각형은 각 변의 크기가 100 픽셀이고
+          , 50 픽셀 만큼 떨어져 있고, 초록 선으로 그려야 해!
+        turtle_1_8: 이 코드를 실행시켰을 때에는 어떤 일이 벌어질까? 나머지 그림을 완성시켜보자. 색은 실행시킬 때마다 달라진다.
+        turtle_1_9: 원을 그리려면, 물음표로 표시된 부분에 어떤 수를 넣어야 할까?
         turtle_1_10: '성공했구나! 이제, 그리고 싶은 그림을 그려봐. 몇 가지 재미있는 아이디어 : 막대기 모양, 해바라기 모양,
           달팽이 나선 모양. 새로운 "선 굵기" 블럭을 사용해 재미있게 그려봐!'
         turtle_4_1: '블럭을 3개만 가지고 각 변의 길이가 100 픽셀인 삼각형을 그릴 수 있을까요? 힌트: "반복" 블럭을 사용하면
           됩니다.'
         turtle_4_2: 주어진 프로그램의 어딘가에 "방향 바꾸기 90도" 블럭을 추가해 삼각형들을 그려보세요.
         turtle_4_3: 삼각형을 그리는 코드가 있습니다. "반복" 블럭과 "돌기" 블럭을 추가해서, 예쁜 꽃을 그릴 수 있을까요?
-        turtle_4_4: "이전 퍼즐과 같은 코드인데, 각각의 삼각형을 그린 다음에 36도 만 회전합니다. 몇 번 반복해야 할까요? (힌트:
-          360 도를 회전하면 처음 상태로 되돌아 옵니다.)"
-        turtle_4_5: "이전 퍼즐과 같은 코드인데, 36번 반복 회전합니다. 몇 도씩 회전 해야할까요? (힌트: 360 도를 회전하면
-          처음 상태로 되돌아 옵니다.)"
-        turtle_4_6: "블럭을 3개만 사용해서, 한 변의 길이가 20 픽셀인 사각형을 그릴 수 있을까요?"
-        turtle_4_7: "이전 퍼즐에서 사각형 그리는 코드를 그대로 가져왔습니다. 사각형을 10개 붙여 사다리 모양을 만들 수 있을까요?
-          힌트: 블럭을 2개 만 더 사용하면 가능합니다."
-        turtle_4_8: "이전 퍼즐의 답이 여기 있습니다. 2 개의 블럭을 더 붙여서 그림을 완성할 수 있을까요?"
-        turtle_4_9: "이전 퍼즐의 답이 여기 있습니다. 몇 도를 회전해야 그림을 완성할 수 있을까요? (몇 번 시도해 보면 쉽게 찾아낼
-          수 있습니다.)"
-        turtle_4_10: "이전 퍼즐의 답이 여기 있습니다. 몇 번 반복해야 그림을 완성할 수 있을까요?"
+        turtle_4_4: '이전 퍼즐과 같은 코드인데, 각각의 삼각형을 그린 다음에 36도 만 회전합니다. 몇 번 반복해야 할까요? (힌트:
+          360 도를 회전하면 처음 상태로 되돌아 옵니다.)'
+        turtle_4_5: '이전 퍼즐과 같은 코드인데, 36번 반복 회전합니다. 몇 도씩 회전 해야할까요? (힌트: 360 도를 회전하면
+          처음 상태로 되돌아 옵니다.)'
+        turtle_4_6: 블럭을 3개만 사용해서, 한 변의 길이가 20 픽셀인 사각형을 그릴 수 있을까요?
+        turtle_4_7: '이전 퍼즐에서 사각형 그리는 코드를 그대로 가져왔습니다. 사각형을 10개 붙여 사다리 모양을 만들 수 있을까요?
+          힌트: 블럭을 2개 만 더 사용하면 가능합니다.'
+        turtle_4_8: 이전 퍼즐의 답이 여기 있습니다. 2 개의 블럭을 더 붙여서 그림을 완성할 수 있을까요?
+        turtle_4_9: 이전 퍼즐의 답이 여기 있습니다. 몇 도를 회전해야 그림을 완성할 수 있을까요? (몇 번 시도해 보면 쉽게 찾아낼
+          수 있습니다.)
+        turtle_4_10: 이전 퍼즐의 답이 여기 있습니다. 몇 번 반복해야 그림을 완성할 수 있을까요?
         turtle_4_11: 다른 모양들을 만들기 위해, "돌기"/"반복" 블럭의 갯수나 코드를 바꿔보면서 여러 가지 그림을 그려 보세요.
         maze_karel_1_1: 안녕하세요! 저는 농부입니다. 농장에 있는 밭을 고르게 만들어 식물들을 심고 싶어요. 흙더미로 이동해서
           "치우기" 블럭을 사용하면 됩니다.
         maze_karel_1_2: 자 이제! 구덩이로 이동한 후, "메우기" 블럭을 2번 사용해 구덩이를 메울 수 있게 도와주세요.
-        maze_karel_1_3: "블럭을 최대한 적게 사용해서, 흙더미를 치울 수 있는 방법을 알려주세요."
+        maze_karel_1_3: 블럭을 최대한 적게 사용해서, 흙더미를 치울 수 있는 방법을 알려주세요.
         maze_karel_1_4: '4 개의 흙더미를 모두 치울 수 있도록 도와줄 수 있나요? 힌트: "반복" 블럭을 사용해 보세요.'
         maze_karel_1_5: '5 번 메워야 하는 구덩이들을 모두 없앨 수 있도록 도와주세요. 힌트: "반복(~인 동안)" 블럭 안에
           "반복(횟수)" 블럭을 넣으면 할 수 있습니다.'
         maze_karel_1_6: 블럭을 최대한 적게 사용해서 모든 흙더미를 치울 수 있게 도와주세요. "반복(~인 동안)" 블럭에서 선택하면
           흙더미 위에 있는지, 구덩이 위에 있는지를 판단해 반복 실행할 수 있습니다.
-        maze_karel_1_7: "와! 진짜 깊은 구덩이를 발견했어요! 이 구덩이를 없애려면 몇 번 메워야 할 지 모르겠네요. 구덩이를
-          없앨 때까지 메우는 프로그램을 만들 수 있을까요?"
-        maze_karel_1_8: "블럭을 최대한 적게 사용해서 밭 끝에 있는 구덩이를 메울 수 있게 도와주세요."
+        maze_karel_1_7: 와! 진짜 깊은 구덩이를 발견했어요! 이 구덩이를 없애려면 몇 번 메워야 할 지 모르겠네요. 구덩이를 없앨
+          때까지 메우는 프로그램을 만들 수 있을까요?
+        maze_karel_1_8: 블럭을 최대한 적게 사용해서 밭 끝에 있는 구덩이를 메울 수 있게 도와주세요.
         maze_karel_1_9: '흙더미를 모두 치울 수 있게 도와주세요. 블럭을 최대한 적게 사용하세요. 힌트: "반복(~인 동안)"
           블럭을 사용해 보세요.'
         maze_karel_1_10: 늦게까지 일을 하느라 어두워졌네요, 흙더미가 어디에 있는지 알수가 없어요. 이제 "반복(~인 동안)"
           블럭을 사용할 수 없습니다. 밭을 가로질러 가면서 흙더미가 있으면 치울 수 있게 도와주세요.
         maze_karel_1_11: '아직도 어둡습니다. 밭을 가로질러 가면서 흙더미가 있으면 치우고, 구덩이가 있으면 메울 수 있게 도와주세요.
           힌트: "만약" 블럭의 메뉴를 사용해 보세요.'
-        turtle_2_1: "안녕하세요. 저는 예술가 좀비입니다. 그리기가 너무 좋아요! 특별한 색으로 사각형을 그릴 수 있게 도와주세요.
-          중요: 이전에 사용되었던 블럭들이 분류 되어있습니다."
+        turtle_2_1: '안녕하세요. 저는 예술가 좀비입니다. 그리기가 너무 좋아요! 특별한 색으로 사각형을 그릴 수 있게 도와주세요.
+          중요: 이전에 사용되었던 블럭들이 분류 되어있습니다.'
         turtle_2_2: 함수 사용 퍼즐에 온 것을 환영합니다. 함수 블럭을 사용하면, 새로운 블럭을 직접 만들어 사용할 수 있습니다!
           "함수" 분류에서, 새로운 "사각형 그리기" 블럭을 찾아, 50x50 크기의 초록 사각형을 그려보세요.
         turtle_2_3: '"반복" 분류에 있는 "반복(횟수)" 블럭을 사용해서, 100 픽셀 크기의 정사각형을 120도 만큼 씩 회전시켜
           그려보세요. 랜덤 색도 사용하세요.'
-        turtle_2_4: "자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로
-          수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요."
+        turtle_2_4: '자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로
+          수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요.'
         turtle_2_5: 50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. "사각형 그리기" 함수 블럭을 5 번 사용면
           됩니다.
         turtle_2_6: '이번에는 사각형들을 그리기 위해서 카운터를 사용해 봅시다. 한 변의 길이가 카운터와 같은 사각형들을 그려야 합니다.
@@ -152,8 +151,8 @@
           3 개의 눈사람을 서로 다른 색으로 100 픽셀 만큼씩 띄워 그려보세요.
         turtle_2_9: '"for 반복" 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은
           60 픽셀씩 떨어져 있어야 합니다.'
-        turtle_2_10: "이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서
-          랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
+        turtle_2_10: 이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서
+          랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요.
         maze_karel_2_1: '밭에 있는 모든 흙더미와 구덩이를 없앨 수 있게 도와 주세요. "반복" 블럭을 활용하면 블럭을 여러 번
           사용할 필요가 없습니다. 힌트: 반복 블럭 안에 다른 반복 블럭을 넣을 수 있습니다.'
         maze_karel_2_2: '"메우기 5번"이라는 블럭을 새로 만들어 "함수" 분류에 넣어 두었습니다. 그걸 이용해서 구덩이를 메울
@@ -163,17 +162,17 @@
         maze_karel_2_4: '"치우기 7번" 함수의 내용을 만들어주세요. 그리고 그 함수로 흙더미를 모두 치울 수 있게 도와주세요.'
         maze_karel_2_5: '"치우기 6번" 함수를 새로 만드세요. 그리고 그 함수로 흙더미를 모두 치울 수 있게 도와주세요.'
         maze_karel_2_6: '"메우기 8번", "치우기 8번" 함수를 사용해서 구덩이를 메우고, 흙더미를 치울 수 있게 도와 주세요.'
-        maze_karel_2_7: "어머! 내 밭에 젖소가 있어요. 젖소를 피해서 흙더미를 치울 수 있는 새로운 함수를 만들어 주세요. 그
-          함수에 필요한 블럭들을 모두 넣으면 됩니다."
+        maze_karel_2_7: 어머! 내 밭에 젖소가 있어요. 젖소를 피해서 흙더미를 치울 수 있는 새로운 함수를 만들어 주세요. 그
+          함수에 필요한 블럭들을 모두 넣으면 됩니다.
         maze_karel_2_8: '"젖소 피해 치우기 1번" 함수를 이용해서, 모든 흙더미를 치울 수 있게 해 주세요.'
-        maze_karel_2_9: "위쪽으로 이동하면서 흙더미를 치울 수 있는 함수가 있습니다. 이 함수를 반복 블럭에 넣어서 모든 흙더미를
-          간단히 치울 수 있게 해주세요."
-        maze_karel_2_10: "밭을 가로질러 이동하는데, 2개의 함수를 이용해서 모든 흙더미와 구덩이들을 없앨 수 있도록 도와주세요."
+        maze_karel_2_9: 위쪽으로 이동하면서 흙더미를 치울 수 있는 함수가 있습니다. 이 함수를 반복 블럭에 넣어서 모든 흙더미를
+          간단히 치울 수 있게 해주세요.
+        maze_karel_2_10: 밭을 가로질러 이동하는데, 2개의 함수를 이용해서 모든 흙더미와 구덩이들을 없앨 수 있도록 도와주세요.
         turtle_3_1: 이번 퍼즐에는 "사각형 그리기" 함수와 "원 그리기" 함수가 정의되어 있습니다. 하지만, 함수가 정의되어 있다고
           해서 실행되지는 않습니다. 사각형을 그리기 위해서는 "사각형 그리기" 블럭을 가져와 실행시켜야 합니다.
         turtle_3_2: '"사각형 그리기" 함수를 살펴본 후, "삼각형 그리기" 함수를 만들어 보세요.'
-        turtle_3_3: "고양이 주변에는 삼각형 울타리를 그리고, 젖소 주변에는 사각형 울타리를 그려주세요. 팁: 몇 번만 시도해 보면
-          알게 됩니다."
+        turtle_3_3: '고양이 주변에는 삼각형 울타리를 그리고, 젖소 주변에는 사각형 울타리를 그려주세요. 팁: 몇 번만 시도해 보면
+          알게 됩니다.'
         turtle_3_4: '"사각형 그리기" 블럭, "삼각형 그리기" 블럭을 이용해서 사자 집을 어떻게 만들지 생각해 보세요.'
         turtle_3_5: '이제, "집 그리기" 블럭을 새로 만들고, 그 블럭을 이용해서 고양이 2마리를 위한 집을 만들어 보세요. 힌트:
           "함수 이름" 이 적혀있는 블럭을 이용해서 새로운 블럭을 만들고, 원하는 이름을 넣어서 사용하면 됩니다.'
@@ -184,98 +183,98 @@
         turtle_3_8: 새로운 집 그리기가 완료되면 오른쪽 하단에서 끝나도록 "집 그리기"를 수정하세요. 이 수정된 함수를 사용해서 3개의
           집을 그리세요.
         turtle_3_9: '"집 그리기" 함수를 아무 도움 없이 스스로 만들 수 있을까요? 도전해 보세요.'
-        turtle_3_10: "지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진
-          것들을 상상하고 그려보세요."
-        maze_karel_debug_seq_1: "잘못된 곳 찾기! 퍼즐에 오신 것을 환영합니다! 만들어져 있는 코드가 제대로 동작하지 않아요.
-          틀린 부분을 찾고, 수정해서밭을 평평하게 만들 수 있도록 도와줄 수 있겠어요?"
-        maze_karel_debug_seq_2: "어떤 것이 잘못된 것일까요? 어떻게 수정해야 흙더미를 모두 치울 수 있을까요?"
-        maze_karel_debug_repeat: "이 프로그램에서 잘못된 곳을 찾고 수정해서, 깨끗하고 평평한 밭을 만들 수 있게 도와주세요."
-        maze_karel_debug_while: "구덩이를 메우기 위해서 이 프로그램을 어떻게 수정해야 할까요?"
-        maze_karel_debug_if: "도와주세요! 밭을 모두 평평하게 만들 수 있게 프로그램을 수정해 주세요."
-        maze_karel_debug_if_else: "이 프로그램을 수정해서 구덩이와 흙더미를 모두 없앨 수 있게 도와주세요."
-        maze_karel_debug_function_1: "흙더미를 모두 치우기 위해서 프로그램을 어떻게 바꿔야 할까요?"
-        maze_karel_debug_function_2: "구덩이와 흙더미를 모두 없앨 수 있도록, 프로그램에서 잘못된 곳을 찾고 수정해
-          줄 수 있나요?"
-        maze_karel_debug_function_3: "프로그램의 오류를 찾고 수정하면 흙더미들을 깨끗이 치울 수 있을 거에요."
-        turtle_5_1: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        turtle_5_2: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        turtle_5_3: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        turtle_5_4: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        turtle_5_5: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        turtle_5_6: "프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
-          만들어 봐도 됩니다.)"
-        maze_3_1: "초록 돼지를 잡아야 돼! 몇 번 앞으로 이동해야 하는지 입력해 줘; 그래야 내 알들을 돌려받을 수 있을 것 같아."
-        maze_3_2: "초록 돼지를 잡을 수 있도록, 프로그램을 만들어줘."
-        maze_3_3: "어떻게 해야 초록 돼지를 잡을 수 있지? TNT 폭탄이 있는 곳으로는 갈 수 없어!"
-        maze_3_4: "아~~~! TNT 폭탄을 피해서 초록 돼지를 잡을 수 있게 해 줘."
+        turtle_3_10: 지금까지 많은 것을 배웠습니다! 이제, 아무거나 원하는 것을 그려보세요. 별, 달팽이 나선, 눈 결정 등 멋진
+          것들을 상상하고 그려보세요.
+        maze_karel_debug_seq_1: 잘못된 곳 찾기! 퍼즐에 오신 것을 환영합니다! 만들어져 있는 코드가 제대로 동작하지 않아요.
+          틀린 부분을 찾고, 수정해서밭을 평평하게 만들 수 있도록 도와줄 수 있겠어요?
+        maze_karel_debug_seq_2: 어떤 것이 잘못된 것일까요? 어떻게 수정해야 흙더미를 모두 치울 수 있을까요?
+        maze_karel_debug_repeat: 이 프로그램에서 잘못된 곳을 찾고 수정해서, 깨끗하고 평평한 밭을 만들 수 있게 도와주세요.
+        maze_karel_debug_while: 구덩이를 메우기 위해서 이 프로그램을 어떻게 수정해야 할까요?
+        maze_karel_debug_if: 도와주세요! 밭을 모두 평평하게 만들 수 있게 프로그램을 수정해 주세요.
+        maze_karel_debug_if_else: 이 프로그램을 수정해서 구덩이와 흙더미를 모두 없앨 수 있게 도와주세요.
+        maze_karel_debug_function_1: 흙더미를 모두 치우기 위해서 프로그램을 어떻게 바꿔야 할까요?
+        maze_karel_debug_function_2: 구덩이와 흙더미를 모두 없앨 수 있도록, 프로그램에서 잘못된 곳을 찾고 수정해 줄
+          수 있나요?
+        maze_karel_debug_function_3: 프로그램의 오류를 찾고 수정하면 흙더미들을 깨끗이 치울 수 있을 거에요.
+        turtle_5_1: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        turtle_5_2: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        turtle_5_3: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        turtle_5_4: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        turtle_5_5: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        turtle_5_6: 프로그램을 실행시켜보고 어떤 일이 일어나는지 살펴보세요. 이해할 수 있을까요?(블럭들을 모두 지우고 완전히 새로
+          만들어 봐도 됩니다.)
+        maze_3_1: 초록 돼지를 잡아야 돼! 몇 번 앞으로 이동해야 하는지 입력해 줘; 그래야 내 알들을 돌려받을 수 있을 것 같아.
+        maze_3_2: 초록 돼지를 잡을 수 있도록, 프로그램을 만들어줘.
+        maze_3_3: 어떻게 해야 초록 돼지를 잡을 수 있지? TNT 폭탄이 있는 곳으로는 갈 수 없어!
+        maze_3_4: 아~~~! TNT 폭탄을 피해서 초록 돼지를 잡을 수 있게 해 줘.
         Custom_builder: 왼쪽의 도구 블럭 상자에서 오른쪽의 코딩창으로 블럭들을 끌어와서 원하는 레벨을 만드세요. 모두 준비가 되면
           "실행하기"를 누르면 됩니다.
-        jigsaw_1: "블럭을 클릭하세요."
-        jigsaw_2: "블럭을 맞는 위치에 끌어가세요."
-        jigsaw_3: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_4: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_5: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_6: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_7: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_8: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_9: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_10: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_11: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_12: "블럭들을 그림에 맞게 맞춰 보세요."
-        jigsaw_13: "퍼즐을 맞춰 보세요!"
-        mazestep_1: "미로 퍼즐의 단계별 설명입력"
-        mazestep_2: "미로 퍼즐의 단계별 설명입력"
-        mazestep_3: "미로 퍼즐의 단계별 설명입력"
-        mazestep_4: "미로 퍼즐의 단계별 설명입력"
-        mazestep_5: "미로 퍼즐의 단계별 설명입력"
+        jigsaw_1: 블럭을 클릭하세요.
+        jigsaw_2: 블럭을 맞는 위치에 끌어가세요.
+        jigsaw_3: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_4: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_5: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_6: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_7: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_8: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_9: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_10: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_11: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_12: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_13: 퍼즐을 맞춰 보세요!
+        mazestep_1: 미로 퍼즐의 단계별 설명입력
+        mazestep_2: 미로 퍼즐의 단계별 설명입력
+        mazestep_3: 미로 퍼즐의 단계별 설명입력
+        mazestep_4: 미로 퍼즐의 단계별 설명입력
+        mazestep_5: 미로 퍼즐의 단계별 설명입력
         studio_c2_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
-        studio_c2_2: "강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요."
-        studio_c2_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
+        studio_c2_2: 강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요.
+        studio_c2_3: 강아지가 고양이에게 움직이도록 할 수 있을까요?
         studio_c2_4: 강아지가 고양이에게 닿으면 고양이가 "hello"라고 말하도록 할 수 있을까요?
         studio_c2_5: 문어를 클릭하면 "hello"라고 말하도록 할 수 있을까요?
-        studio_c2_6: "위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?"
+        studio_c2_6: 위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?
         studio_c2_7: '"계속 반복하기" 블럭을 사용하면 코드를 무한히 반복하도록 할 수 있습니다. 공룡이 위 아래로 왔다 갔다를
           반복하도록 할 수 있을까요?'
         studio_c2_8: 펭귄이 "Ouch!"라고 말하고, 공룡에 닿으면 "충돌 소리"를 출력하도록 한 후 방향키들을 움직여보세요.
-        studio_c2_9: "펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요."
-        studio_c2_10: "화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요."
-        studio_c2_11: "자신만의 이야기를 구들이 스마트폰에서 살펴볼 수 있도록 만들어보세요."
+        studio_c2_9: 펭귄이 문어에 닿았을 때 점수가 올라가도록 만든 후 방향키를 움직여 점수가 올라가는지 살펴보세요.
+        studio_c2_10: 화면의 배경과 펭귄의 스피드를 바꿀 수 있을까요? 점수를 득점할 때까지 방향키들을 움직여 보세요.
+        studio_c2_11: 자신만의 이야기를 구들이 스마트폰에서 살펴볼 수 있도록 만들어보세요.
         studio_c3_story_1: 강아지가 "hello world"라고 말하도록 만들어 보세요.
-        studio_c3_story_2: "강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요."
-        studio_c3_story_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
+        studio_c3_story_2: 강아지가 어떤 말을 하고 난 후에 고양이가 어떤 말을 하게 해보세요.
+        studio_c3_story_3: 강아지가 고양이에게 움직이도록 할 수 있을까요?
         studio_c3_story_4: 강아지가 고양이에게 닿으면 고양이가 "hello"라고 말하도록 할 수 있을까요?
-        studio_c3_story_5: "문어를 행복한 표정으로 만들어보세요."
-        studio_c3_story_6: "자신만의 스토리를 만들어 친구들이 스마트폰에서 살펴볼 수 있도록 해보세요."
+        studio_c3_story_5: 문어를 행복한 표정으로 만들어보세요.
+        studio_c3_story_6: 자신만의 스토리를 만들어 친구들이 스마트폰에서 살펴볼 수 있도록 해보세요.
         studio_c3_game_1: 문어를 클릭하면 "hello"라고 말하도록 할 수 있을까요?
-        studio_c3_game_2: "위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?"
+        studio_c3_game_2: 위/아래/왼쪽/오른쪽 방향키를 사용해 펭귄이 이리저리 목표지점들로 움직이도록 할 수 있을까요?
         studio_c3_game_3: '"계속 반복하기" 블럭을 사용하면 코드를 무한히 반복하도록 할 수 있습니다. 공룡이 위 아래로 왔다
           갔다를 반복하도록 할 수 있을까요?'
         studio_c3_game_4: 펭귄이 "Ouch!"라고 말하고, 공룡에 닿으면 "충돌 소리"를 출력하도록 한 후 방향키들을 움직여보세요.
-        studio_c3_game_5: "펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요."
-        studio_c3_game_6: "화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요."
-        studio_c3_game_7: "자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
-          할 수 있습니다."
+        studio_c3_game_5: 펭귄이 문어에 닿으면 점수가 올라가게 만든 후 방향키를 눌러 움직여 보세요.
+        studio_c3_game_6: 화면의 배경과 펭귄의 이동 스피드를 바꾼 후 방향키를 눌러 움직여 보세요.
+        studio_c3_game_7: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
         studio_playlab_1: 펭귄이 "hello"라고 말하고 싶어하네요. 여러분이 도와주겠어요?
         studio_playlab_2: 원시 소년(캐릭터1) 와 원시 소녀(캐릭터2)가 서로 "hello"라고 인사하도록 할 수 있을까요?
           "말하기" 블럭을 이용해서 도와주세요.
-        studio_playlab_3: "테니스 소녀가 깃발까지 갈 수 있게 도와주겠어요?"
-        studio_playlab_4: "테니스 소년(캐릭터1)이 테니스 소녀(캐릭터2)에게 가서 닿으면 어떤 소리가 나도록 도와주세요."
+        studio_playlab_3: 테니스 소녀가 깃발까지 갈 수 있게 도와주겠어요?
+        studio_playlab_4: 테니스 소년(캐릭터1)이 테니스 소녀(캐릭터2)에게 가서 닿으면 어떤 소리가 나도록 도와주세요.
         studio_playlab_5: 우주 소년을 클릭하면 "greetings earhlings"라고 말할 수 있도록 해주실 수 있으세요?
           프로그램을 실행시킨 후에 클릭하는 것을 잊지 마세요.
-        studio_playlab_6: "마녀 캐릭터를 위/아래/왼쪽/오른쪽의 방향키를 이용해서 이리저리 움직이면서 마술 파이어볼들로 이동하도록
-          도와주실 수 있으세요?"
+        studio_playlab_6: 마녀 캐릭터를 위/아래/왼쪽/오른쪽의 방향키를 이용해서 이리저리 움직이면서 마술 파이어볼들로 이동하도록
+          도와주실 수 있으세요?
         studio_playlab_7: '"무한 반복(repeat forever)") 블럭은 어떤 코드들을 계속해서 무한히 반복해서 실행하도록
           할 수 있습니다. 마법사 캐릭터가 왼쪽 오른쪽으로 계속 반복해서 움직일 수 있도록 블럭들을 붙여주세요.'
-        studio_playlab_8: "방향키를 이용해서 유니콘을 움직이고, 유니콘이 마법사에게 닿으면 점수가 올라가고 소리가 나도록 도와주세요."
-        studio_playlab_9: "외계인 침략 배경으로 바꾼 다음에, 우주로봇의 이동 속도를 더 빠르게 변화시켜서 외계인 캐릭터로 이동할
-          수 있도록 도와주세요. 그리고, 우주로봇이 외계인 캐릭터에 닿으면 모두에게 경고를 할 수 있게 해주세요."
-        studio_playlab_10: "자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
-          할 수 있습니다."
+        studio_playlab_8: 방향키를 이용해서 유니콘을 움직이고, 유니콘이 마법사에게 닿으면 점수가 올라가고 소리가 나도록 도와주세요.
+        studio_playlab_9: 외계인 침략 배경으로 바꾼 다음에, 우주로봇의 이동 속도를 더 빠르게 변화시켜서 외계인 캐릭터로 이동할
+          수 있도록 도와주세요. 그리고, 우주로봇이 외계인 캐릭터에 닿으면 모두에게 경고를 할 수 있게 해주세요.
+        studio_playlab_10: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
         studio_iceage_hello1: 시드는 새로운 모험을 위해 모든 사람들을 모으고 싶어합니다. "말하기" 블록을 작업 공간으로
           드래그 한 후, "안녕"이라고 입력해서 "안녕"이라고 말하도록 해주세요.
         studio_iceage_hello2: 시드(캐릭터 1) 는 매니(캐릭터 2) 를 발견하고 모험에 초대하고 싶어합니다. "캐릭터 말하기"
@@ -287,8 +286,8 @@
           "캐릭터가 닿으면" 이벤트에 블록을 연결해주세요.
         studio_iceage_repeat: '"무한 반복" 블록은 코드를 계속해서 실행하도록 해 줍니다. 그레니가 왼쪽, 오른쪽으로 반복해서
           움직이면서 운동을 할 수 있도록 해주세요.'
-        studio_iceage_click_hello: "시드가 클릭되었을 때 마지막으로 친구들을 부르도록 도와줄래요? 실행한 후에 그를 클릭하는
-          것을 잊지마세요."
+        studio_iceage_click_hello: 시드가 클릭되었을 때 마지막으로 친구들을 부르도록 도와줄래요? 실행한 후에 그를 클릭하는
+          것을 잊지마세요.
         studio_iceage_move_events: 스크랫은 아직도 도토리를 찾고 있습니다! 각각의 이벤트에 "움직이기" 블록을 연결하고,
           방향키를 눌러 이동할 수 있게 해주세요. 실행 시킨 후 모든 도토리들을 모아주세요.
         studio_iceage_sound_and_points: |-
@@ -299,8 +298,8 @@
         studio_iceage_throw_hearts: 시드는 그의 할머니인 그레니에게, 자기가 사랑한다는 것을 알리고 싶습니다. "캐릭터
           던지기" 명령을 사용해서 시드(캐릭터 1) 가 그레니(캐릭터 2) 에게 하트를 던지도록 해 주세요. 그 하트를 받으면 그레니의 분위기를
           행복하게 바꾸면 됩니다.
-        studio_iceage_free_play: "게임이나 이야기를 직접 만들어보세요. 다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서
-          실행시켜 볼 수 있게 됩니다."
+        studio_iceage_free_play: 게임이나 이야기를 직접 만들어보세요. 다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서
+          실행시켜 볼 수 있게 됩니다.
         studio_gumball_hello1: |-
           아나이스가 새로운 친구들을 만들고 싶어합니다.
           "말하기" 블록을 작업 영역에 드래그해서 넣어서 "안녕"이라고 말 할 수 있도록 해주세요. "안녕"이라고 입력하면 됩니다.
@@ -331,14 +330,14 @@
         studio_gumball_free_play: |-
           게임이나 이야기를 직접 만들어보세요.
           다 만들고 나면, 친구들의 스마트폰, 태블릿, 컴퓨터에서 실행시켜 볼 수 있게 됩니다.
-        studio_full_sandbox: "자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수
-          있도록 할 수 있습니다."
+        studio_full_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
         studio_k1_1: 강아지가 "hello world"라고 말하도록 할 수 있을까요?
-        studio_k1_2: "강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?"
-        studio_k1_3: "강아지가 고양이에게 움직이도록 할 수 있을까요?"
+        studio_k1_2: 강아지가 어떤 말을 한 후에 고양이가 어떤 말을 하도로 할 수 있을까요?
+        studio_k1_3: 강아지가 고양이에게 움직이도록 할 수 있을까요?
         studio_k1_4: 강아지를 고양이에게 움직여 닿았을 때, 고양이가 "hello"라고 말하도록 해보세요.
-        studio_k1_5: "문어가 행복한 표정이 되도록 해보세요."
-        studio_k1_6: "자신만의 이야기를 만들어보세요! 고양이와 강아지가 이리저리 돌아다니면서 말을 하게 해보세요."
+        studio_k1_5: 문어가 행복한 표정이 되도록 해보세요.
+        studio_k1_6: 자신만의 이야기를 만들어보세요! 고양이와 강아지가 이리저리 돌아다니면서 말을 하게 해보세요.
         maze_wordsearch_k_1: '"오른쪽" 으로 이동시켜주세요.'
         maze_wordsearch_k_2: '"아래쪽"으로 이동시켜주세요.'
         maze_wordsearch_k_3: '"왼쪽"으로 이동시켜주세요.'
@@ -349,136 +348,136 @@
         maze_wordsearch_k_15: 어떤 방향으로 움직인 후에 "위"로 이동시켜주세요.
         maze_wordsearch_k_16: 어떤 방향으로 움직인 후에 "아래"로 이동시켜주세요.
         maze_wordsearch_k_20: 테스트입니다! 어떤 방향으로 움직인 후에 "스토리"로 이동시켜주세요.
-        applab_ec_simple: "도구 상자에 있는 블록을 사용하여 당신의 앱을 만드십시오."
+        applab_ec_simple: 도구 상자에 있는 블록을 사용하여 당신의 앱을 만드십시오.
         turtle_ec_1_2: '이제, 사각형을 그려보세요. 참고: 새로운 "펜 색" 블럭을 이용해 원하는 색을 고를 수 있습니다.'
         turtle_ec_1_10: '잘했습니다! 이제 그리고 싶은 것을 마음대로 그려보세요. 몇 가지 재미있는 예시: 막대기 모양, 눈꽃모양,
           나선모양. 그리고 새로운 "펜 두께" 블럭을 이용해 보세요!'
-        studio_ec_sandbox: "자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
-          할 수 있습니다."
+        studio_ec_sandbox: 자신만의 게임을 만들어보세요. 만들기가 완료되면 마치기를 눌러 친구들의 스마트폰에서 해볼 수 있도록
+          할 수 있습니다.
     video:
       name:
-        maze_intro: "미로 퍼즐 소개"
-        artist_intro: "예술가 퍼즐 소개"
-        farmer_intro: "농부 퍼즐 소개"
-        flappy_intro: "플래피 시작하기"
-        loop_times: "반복(횟수)"
-        loop_until: "반복(~할 때까지)"
-        if: "조건 실행"
-        if_else: "조건/선택 실행"
-        if_else_scrat: "조건/선택 실행"
-        function: "함수"
-        loop_while: "반복(~인 동안)"
-        loop_for: "카운터"
-        parameters: "함수(값 전달)"
+        maze_intro: 미로 퍼즐 소개
+        artist_intro: 예술가 퍼즐 소개
+        farmer_intro: 농부 퍼즐 소개
+        flappy_intro: 플래피 시작하기
+        loop_times: 반복(횟수)
+        loop_until: 반복(~할 때까지)
+        if: 조건 실행
+        if_else: 조건/선택 실행
+        if_else_scrat: 조건/선택 실행
+        function: 함수
+        loop_while: 반복(~인 동안)
+        loop_for: 카운터
+        parameters: 함수(값 전달)
         hoc_wrapup: Hour of Code 마무리
-        Unplug1: "컴퓨터과학(CS, 정보과학)이란?"
-        Unplug2: "컴퓨터과학적(정보과학적)사고"
-        Unplug3: "모눈종이 프로그래밍"
-        Unplug4: "알고리즘"
-        Unplug5: "함수"
-        Unplug6: "조건"
-        Unplug7: "노래 만들기"
-        Unplug8: "추상화"
-        Unplug9: "릴레이 프로그래밍"
-        Unplug10: "인터넷"
-        Unplug11: "마무리"
-        C1_happy_maps_unplugged: "즐거운 맵"
-        C1_moveitmoveit_unplugged: "빨리 빨리 움직이자!"
-        C1_bigevent_unplugged: "큰 이벤트"
-        C1_getting_loopy: "반복시키기"
-        C1_pair_programming: "페어 프로그래밍"
-        C1_maze_intro_sequencing: "미로 탐색 소개"
-        C1_maze_debugging: "미로 퍼즐 디버깅"
-        C1_bee_level_intro: "꿀벌 퍼즐 소개"
-        C1_artist_intro: "예술가 퍼즐 소개"
-        C1_spelling_bee_intro: "말하는 꿀벌 소개"
-        C1_zuck_repeat_loop: "미로 반복"
-        C1_bee_loops: "꿀벌 반복"
-        C1_maze_loops: "미로 퍼즐 반복"
+        Unplug1: 컴퓨터과학(CS, 정보과학)이란?
+        Unplug2: 컴퓨터과학적(정보과학적)사고
+        Unplug3: 모눈종이 프로그래밍
+        Unplug4: 알고리즘
+        Unplug5: 함수
+        Unplug6: 조건
+        Unplug7: 노래 만들기
+        Unplug8: 추상화
+        Unplug9: 릴레이 프로그래밍
+        Unplug10: 인터넷
+        Unplug11: 마무리
+        C1_happy_maps_unplugged: 즐거운 맵
+        C1_moveitmoveit_unplugged: 빨리 빨리 움직이자!
+        C1_bigevent_unplugged: 큰 이벤트
+        C1_getting_loopy: 반복시키기
+        C1_pair_programming: 페어 프로그래밍
+        C1_maze_intro_sequencing: 미로 탐색 소개
+        C1_maze_debugging: 미로 퍼즐 디버깅
+        C1_bee_level_intro: 꿀벌 퍼즐 소개
+        C1_artist_intro: 예술가 퍼즐 소개
+        C1_spelling_bee_intro: 말하는 꿀벌 소개
+        C1_zuck_repeat_loop: 미로 반복
+        C1_bee_loops: 꿀벌 반복
+        C1_maze_loops: 미로 퍼즐 반복
         C1_playlab_storytelling: Play Lab - 스토리 만들기
-        C1_planting_seed: "씨앗 심기"
-        C1_building_foundation: "건물 기초 만들기"
-        C1_going_places_safely: "안전하게 자리잡기"
-        C2_maze_intro: "미로 퍼즐 소개"
-        C2_artist_intro: "예술가 퍼즐 소개"
-        C2_zuck_repeat_loop: "미로 퍼즐 반복"
-        C2_artist_loops: "아티스트 반복"
-        C2_artist_debugging: "화가 디버깅"
-        C2_bee_loops: "꿀벌 반복"
-        C2_bee_debugging: "꿀벌 디버깅"
-        C2_bee_conditionals: "꿀벌 조건선택"
+        C1_planting_seed: 씨앗 심기
+        C1_building_foundation: 건물 기초 만들기
+        C1_going_places_safely: 안전하게 자리잡기
+        C2_maze_intro: 미로 퍼즐 소개
+        C2_artist_intro: 예술가 퍼즐 소개
+        C2_zuck_repeat_loop: 미로 퍼즐 반복
+        C2_artist_loops: 아티스트 반복
+        C2_artist_debugging: 화가 디버깅
+        C2_bee_loops: 꿀벌 반복
+        C2_bee_debugging: 꿀벌 디버깅
+        C2_bee_conditionals: 꿀벌 조건선택
         C2_playlab_createstory: Play Lab - 스토리 만들기
-        C2_graph_paper: "모눈종이 프로그래밍"
-        C2_conditionals_with_cards: "조건"
+        C2_graph_paper: 모눈종이 프로그래밍
+        C2_conditionals_with_cards: 조건
         C2_binary_bracelets: 2진 팔찌
-        C2_relay_programming: "릴레이 프로그래밍"
-        C2_paper_airplanes: "종이 비행기"
-        C2_digital_footprint: "디지털 개인정보 흔적"
-        C2_digital_footprint_v2: "디지털 개인정보 흔적"
-        C3_maze_level_4: "미로 반복"
-        C3_artist_intro: "예술가 퍼즐 소개"
-        C3_artist_functions: "예술가 함수"
-        C3_bee_functions: "꿀벌 함수"
-        C3_bee_conditionals: "꿀벌 조건선택"
-        C3_maze_conditionals: "미로 퍼즐 조건선택"
-        C3_artist_nested_loops: "중첩 반복"
+        C2_relay_programming: 릴레이 프로그래밍
+        C2_paper_airplanes: 종이 비행기
+        C2_digital_footprint: 디지털 개인정보 흔적
+        C2_digital_footprint_v2: 디지털 개인정보 흔적
+        C3_maze_level_4: 미로 반복
+        C3_artist_intro: 예술가 퍼즐 소개
+        C3_artist_functions: 예술가 함수
+        C3_bee_functions: 꿀벌 함수
+        C3_bee_conditionals: 꿀벌 조건선택
+        C3_maze_conditionals: 미로 퍼즐 조건선택
+        C3_artist_nested_loops: 중첩 반복
         C3_farmer_while: "~인 동안 반복"
-        C3_bee_nested_loops: "중첩 반복"
-        C3_bee_debugging: "꿀벌 디버깅"
-        C3_bounce: "바운스"
-        C3_playlab_create_game: "플래이 랩 - 게임 만들기"
-        C3_computational_thinking: "컴퓨터과학적(정보과학적)사고"
-        C3_dice_race: "주사위 레이스"
-        C3_internet: "인터넷"
-        C3_crowdsourcing: "클라우드소싱"
-        C3_functional_suncatchers: "기능성 색유리"
-        C3_songwriting_with_parameters: "매개변수를 사용한 음악 작곡"
-        C4_intro: "소개"
-        C4_loops_zombie: "반복"
-        C4_bee_conditional: "꿀벌 조건선택"
-        C4_variables_artist: "변수 - 예술가"
-        C4_variables_playlab: "변수 - 플레이 랩"
-        C4_for_loops: "반복을 위한"
-        C4_for_loops_bee: "반복을 위한"
-        C4_for_loops_no_bee: "반복을 위한"
-        C4_math_artist: "수학 예술가 프로그래밍"
-        C4_function_edit: "함수 수정하기"
-        C4_function_create: "함수 만들기"
-        C4_function_parameters: "함수(값 전달)"
-        C4_conditionals: "조건/선택"
-        C4_unplugged_algorithms: "탱그램 알고리즘"
-        C4_unplugged_madlibs: "매드 립스(Mad Libs)"
-        C4_unplugged_variables: "변수들 싸기(함께 넣기)"
-        C4_unplugged_forloops: "반복을 위한"
-        C4_unplugged_parameters: "매개변수를 사용하는 음악 작곡"
+        C3_bee_nested_loops: 중첩 반복
+        C3_bee_debugging: 꿀벌 디버깅
+        C3_bounce: 바운스
+        C3_playlab_create_game: 플래이 랩 - 게임 만들기
+        C3_computational_thinking: 컴퓨터과학적(정보과학적)사고
+        C3_dice_race: 주사위 레이스
+        C3_internet: 인터넷
+        C3_crowdsourcing: 클라우드소싱
+        C3_functional_suncatchers: 기능성 색유리
+        C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
+        C4_intro: 소개
+        C4_loops_zombie: 반복
+        C4_bee_conditional: 꿀벌 조건선택
+        C4_variables_artist: 변수 - 예술가
+        C4_variables_playlab: 변수 - 플레이 랩
+        C4_for_loops: 반복을 위한
+        C4_for_loops_bee: 반복을 위한
+        C4_for_loops_no_bee: 반복을 위한
+        C4_math_artist: 수학 예술가 프로그래밍
+        C4_function_edit: 함수 수정하기
+        C4_function_create: 함수 만들기
+        C4_function_parameters: 함수(값 전달)
+        C4_conditionals: 조건/선택
+        C4_unplugged_algorithms: 탱그램 알고리즘
+        C4_unplugged_madlibs: 매드 립스(Mad Libs)
+        C4_unplugged_variables: 변수들 싸기(함께 넣기)
+        C4_unplugged_forloops: 반복을 위한
+        C4_unplugged_parameters: 매개변수를 사용하는 음악 작곡
         C4_unplugged_binary: 2진
         CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles in Artist
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
         CSF_collector_repeat_loops: Collector Repeat Loops
         CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: "함수 만들기"
+        CSF_create_functions: 함수 만들기
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: "컴퓨터과학(정보과학) 문제들"
+        CSF_EF_cs_matters: 컴퓨터과학(정보과학) 문제들
         CSF_maze_intro_k1_blocks: Code Studio 소개
         CSF_maze_intro_text_blocks: Code Studio 소개
-        CSF_my_robotic_friends: "내 로봇 친구"
+        CSF_my_robotic_friends: 내 로봇 친구
         CSF_Power_of_Words: Power of Words
         CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: "스티비와 큰 프로젝트"
+        CSF_stevie_big_project: 스티비와 큰 프로젝트
         CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: "반복 루프"
+        CSF_zuck_loops_short: 반복 루프
         frozen_intro: Hour of Code 소개
-        frozen_loops: "반복(Loop) 소개"
-        frozen_functions: "함수(Function) 소개"
-        playlab_intro: "플레이 랩 소개"
-        playlab_events: "플레이 랩 이벤트"
-        playlab_repeat_forever: "플레이 랩 무한 반복"
-        tutorial_puzzle_challenge: "튜토리얼 퍼즐 첼린지"
-        infinity_playlab_intro: "플레이 랩 - 소개"
-        infinity_playlab_events: "플레이 랩 - 이벤트"
-        infinity_playlab_repeat_forever: "플레이 랩 - 무한 반복"
+        frozen_loops: 반복(Loop) 소개
+        frozen_functions: 함수(Function) 소개
+        playlab_intro: 플레이 랩 소개
+        playlab_events: 플레이 랩 이벤트
+        playlab_repeat_forever: 플레이 랩 무한 반복
+        tutorial_puzzle_challenge: 튜토리얼 퍼즐 첼린지
+        infinity_playlab_intro: 플레이 랩 - 소개
+        infinity_playlab_events: 플레이 랩 - 이벤트
+        infinity_playlab_repeat_forever: 플레이 랩 - 무한 반복
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
@@ -491,7 +490,7 @@
           To Change Our Lives
         csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: "애니메이션 탭"
+        csd_gamelab_animation_tab: 애니메이션 탭
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -501,12 +500,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: "속도"
-        csd_weblab_intro_1: "웹 연구소 소개 - 파트 1"
-        csd_weblab_intro_2: "웹 연구소 소개 - 파트 2"
+        csd_gamelab_velocity: 속도
+        csd_weblab_intro_1: 웹 연구소 소개 - 파트 1
+        csd_weblab_intro_2: 웹 연구소 소개 - 파트 2
         csd_weblab_css_1: CSS(스타일시트) 소개 - 파트 1
         csd_weblab_css_2: CSS(스타일시트) 소개 - 파트 2
-        csd_weblab_intro_3: "웹 연구소 소개 - 파트 3"
+        csd_weblab_intro_3: 웹 연구소 소개 - 파트 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -524,9 +523,9 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "함수(Function) 소개"
-        csp_applab_functions_parameters: "함수(값 전달)"
-        csp_applab_loops: "반복"
+        csp_applab_functions: 함수(Function) 소개
+        csp_applab_functions_parameters: 함수(값 전달)
+        csp_applab_loops: 반복
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -537,45 +536,45 @@
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: "픽셀에 관해서 조금"
+        csp_concept_rgb: 픽셀에 관해서 조금
         csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: "픽셀 색상 위젯 - 1부"
-        csp_pixelation_color_2: "픽셀 색상 위젯 - 2부"
-        csp_pixelation_color_3: "픽셀 색상 위젯 - 3부"
-        csp_pixelation_bw: "흑백 픽셀 위젯"
-        csp_U1L14_tipstricks: "유닛 1 레슨 14 교사 팁 & 트릭"
-        csp_textcompression: "텍스트 압축 도구"
-        csp_textcompression_new: "텍스트 압축 도구"
+        csp_pixelation_color_1: 픽셀 색상 위젯 - 1부
+        csp_pixelation_color_2: 픽셀 색상 위젯 - 2부
+        csp_pixelation_color_3: 픽셀 색상 위젯 - 3부
+        csp_pixelation_bw: 흑백 픽셀 위젯
+        csp_U1L14_tipstricks: 유닛 1 레슨 14 교사 팁 & 트릭
+        csp_textcompression: 텍스트 압축 도구
+        csp_textcompression_new: 텍스트 압축 도구
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: "대수학 CS - 소개"
-        alg_2_eval_block: "대수학 CS - 블록 평가"
-        alg_3_pemdas: "대수학 CS - 작업 순서"
-        alg_4_data_types: "대수학 CS - 데이터 형식"
-        alg_5_contracts: "대수학 CS - 계약"
-        alg_6_variables: "대수학 CS - 변수"
-        alg_7_function: "대수학 CS - 함수"
-        alg_8_design_recipe: "대수학 CS - 디자인 레시피"
-        alg_9_booleans: "대수학 CS - 부울 :1과0만 사용"
-        alg_10_conditionals: "대수학 CS - 조건문"
-        alg_11_coordinate_plane: "대수학 CS - 좌표 평면"
-        alg_12_biggame_variables: "대수학 CS - 빅게임 변수"
-        alg_13_biggame_animation: "대수학 CS - 빅게임 영상"
-        alg_14_biggame_booleans: "대수학 CS - 빅게임 불: 1과0만 사용"
-        alg_15_biggame_update_player: "대수학 CS - 빅게임 플레이어 업데이트"
-        alg_16_biggame_collision_detection: "대수학 CS - 빅게임 충돌 감지"
-        alg_17_sambat_compound_booleans: "대수학 CS - 복합 부울"
+        alg_1_intro: 대수학 CS - 소개
+        alg_2_eval_block: 대수학 CS - 블록 평가
+        alg_3_pemdas: 대수학 CS - 작업 순서
+        alg_4_data_types: 대수학 CS - 데이터 형식
+        alg_5_contracts: 대수학 CS - 계약
+        alg_6_variables: 대수학 CS - 변수
+        alg_7_function: 대수학 CS - 함수
+        alg_8_design_recipe: 대수학 CS - 디자인 레시피
+        alg_9_booleans: 대수학 CS - 부울 :1과0만 사용
+        alg_10_conditionals: 대수학 CS - 조건문
+        alg_11_coordinate_plane: 대수학 CS - 좌표 평면
+        alg_12_biggame_variables: 대수학 CS - 빅게임 변수
+        alg_13_biggame_animation: 대수학 CS - 빅게임 영상
+        alg_14_biggame_booleans: '대수학 CS - 빅게임 불: 1과0만 사용'
+        alg_15_biggame_update_player: 대수학 CS - 빅게임 플레이어 업데이트
+        alg_16_biggame_collision_detection: 대수학 CS - 빅게임 충돌 감지
+        alg_17_sambat_compound_booleans: 대수학 CS - 복합 부울
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: "스타워즈: 코드로 은하계 건설하기 - 소개"
-        starwars_typing: "스타워즈: 코드로 은하계 건설하기 - 자바스크립트"
-        starwars_events: "스타워즈: 코드로 은하계 건설하기 - 이벤트"
-        starwars_congrats: "스타워즈: 코드로 은하계 건설하기 - 축하"
-        starwars_blocks_intro: "스타워즈: 코드로 은하계 건설하기 - 소개"
-        starwars_blocks_events: "스타워즈: 코드로 은하계 건설하기 - 이벤트"
-        starwars_blocks_congrats: "스타워즈: 코드로 은하계 건설하기 - 축하"
+        starwars_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
+        starwars_typing: '스타워즈: 코드로 은하계 건설하기 - 자바스크립트'
+        starwars_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
+        starwars_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
+        starwars_blocks_intro: '스타워즈: 코드로 은하계 건설하기 - 소개'
+        starwars_blocks_events: '스타워즈: 코드로 은하계 건설하기 - 이벤트'
+        starwars_blocks_congrats: '스타워즈: 코드로 은하계 건설하기 - 축하'
         mc_intro: Minecraft - 소개
         mc_repeat: Minecraft - 반복
         mc_if_statements: Minecraft - If문
@@ -584,14 +583,14 @@
         gumball_intro: Hour of Code 껌볼 - 소개
         gumball_events: Hour of Code 껌볼 - 이벤트
         gumball_repeat: Hour of Code 껌볼 - 반복문
-        iceage_intro: "아이스 에이지 Hour of Code - 소개"
-        iceage_events: "아이스 에이지 Hour of Code - 이벤트"
-        iceage_repeat: "아이스 에이지 Hour of Code - 반복문"
-        mc_2016_intro: "마인크래프트 Hour of Code - 소개"
-        mc_2016_loops: "마인크래프트 Hour of Code - 반복"
-        mc_2016_events: "마인크래프트 Hour of Code - 이벤트"
-        mc_2016_spawn: "마인크래프트 Hour of Code - 생성"
-        mc_2016_congrats: "마인크래프트 Hour of Code - 축하합니다"
+        iceage_intro: 아이스 에이지 Hour of Code - 소개
+        iceage_events: 아이스 에이지 Hour of Code - 이벤트
+        iceage_repeat: 아이스 에이지 Hour of Code - 반복문
+        mc_2016_intro: 마인크래프트 Hour of Code - 소개
+        mc_2016_loops: 마인크래프트 Hour of Code - 반복
+        mc_2016_events: 마인크래프트 Hour of Code - 이벤트
+        mc_2016_spawn: 마인크래프트 Hour of Code - 생성
+        mc_2016_congrats: 마인크래프트 Hour of Code - 축하합니다
         applab_hoc_welcome: App Lab Hour of Code - Welcome
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
@@ -600,7 +599,7 @@
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
         mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: "마인크래프트 Hour of Code - 축하합니다"
+        mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
         mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
         mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
         mc_2017_puzzle_8: Minecraft Hour of Code - Functions
@@ -626,18 +625,21 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'
         run: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
-        watch_again: "다시 보기위해 여기를 눌러보세요."
-        gray_block_explanation: "회색 블럭들은 삭제할 수 없습니다. 퍼즐을 해결할 수 있나요?"
-        show_code_explanation: "자신이 만든 프로그램의 코드를 보기 위해 여기를 눌러 보세요."
-        instructions_repeat_explanation: "각 퍼즐의 명령어들은 여기서 반복됩니다."
-        category_explanation: "여러 가지 블럭들이 카테고리별로 분리되었습니다."
+        watch_again: 다시 보기위해 여기를 눌러보세요.
+        gray_block_explanation: 회색 블럭들은 삭제할 수 없습니다. 퍼즐을 해결할 수 있나요?
+        show_code_explanation: 자신이 만든 프로그램의 코드를 보기 위해 여기를 눌러 보세요.
+        instructions_repeat_explanation: 각 퍼즐의 명령어들은 여기서 반복됩니다.
+        category_explanation: 여러 가지 블럭들이 카테고리별로 분리되었습니다.
         set_sprite_image: '"케릭터 사용하기" 블럭을 "이야기가 시작되면" 블럭에 붙여 스토리가 가능하게 해 보세요. '
-        studio_say_text: "큰 따옴표 사이에 케릭터가 해야하는 말을 입력하세요."
-        jigsaw_click: "이 블럭을 클릭하세요!"
+        studio_say_text: 큰 따옴표 사이에 케릭터가 해야하는 말을 입력하세요.
+        jigsaw_click: 이 블럭을 클릭하세요!
         move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
         turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를
           의미합니다.'
@@ -646,66 +648,65 @@
         repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
         repeat_blocks_1: "(1) 이 블럭을 회색 블럭들에 사용하세요."
         repeat_blocks_2: (2) "반복(Repeat)" 블럭을 여기에 이동시킨 후, 회색 블럭들의 안에 넣어주세요.
-        snowflake_dropdown: "다른 모양의 눈송이를 만들기 위해서 사용해 보세요."
-        degrees_per_side: "각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요."
-        set_sides: "퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요."
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+        degrees_per_side: 각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요.
+        set_sides: 퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요.
         set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
-        which_equation: "어떤 식이 더 많은 면들에 대해서, 각 면의 길이를 더 적게 줄일 수 있을까요?"
+        which_equation: 어떤 식이 더 많은 면들에 대해서, 각 면의 길이를 더 적게 줄일 수 있을까요?
         get_nectar: 새로운 "꽃꿀 얻기" 블럭을 사용하세요.
         actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
-        draw_square_hint: "힌트: 바로 전 퍼즐에서 사용했던 사각형 반복을 사용하세요."
-        edit_function: "함수를 수정하기 위해서 여기를 클릭하세요."
+        draw_square_hint: '힌트: 바로 전 퍼즐에서 사용했던 사각형 반복을 사용하세요.'
+        edit_function: 함수를 수정하기 위해서 여기를 클릭하세요.
         create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
-        house_hint: "그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다."
-        edit_draw_square: "함수를 수정해 반복 실행을 추가하기 위해 이 버튼을 사용하세요."
-        edit_get_nectar: "이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요."
+        house_hint: 그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다.
+        edit_draw_square: 함수를 수정해 반복 실행을 추가하기 위해 이 버튼을 사용하세요.
+        edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
         logic_category: '"논리" 메뉴를 열어 "만약/아니면" 블럭을 찾아보세요.'
         length_parameter: 이 함수를 수정해서 "길이"를 매개변수로 사용할 수 있도록 해 보세요.
-        frozen_diamond_repeat: "반복 블럭을 사용해 이 모양을 만들어보세요."
-        frozen_circle_function_in_circle_turn: "각각의 원을 만들고 난 후에, 회전해야하는 것을 잊지마세요."
+        frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
+        frozen_circle_function_in_circle_turn: 각각의 원을 만들고 난 후에, 회전해야하는 것을 잊지마세요.
         frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
         frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
-        frozen_create_square: "사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요."
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
         playlab_drag_say: '"말하기" 블럭을 드래그 한 후 "hello"이라고 입력해주세요.'
-        playlab_use_twice: "이 블럭을 두 번 사용하세요. 그리고 캐릭터(actor) 번호를 바꿔주세요."
+        playlab_use_twice: 이 블럭을 두 번 사용하세요. 그리고 캐릭터(actor) 번호를 바꿔주세요.
         playlab_move_girl: 테니스 소녀를 오른쪽으로 이동시키기 위해서 "오른쪽으로 이동" 블럭을 사용하세요.
         playlab_play_sound: '"소리 재생" 블럭을 여기에 추가하세요'
-        playlab_arrow_keys: "마녀를 클릭했을 때 움직이도록 하기위해서 이 블럭들을 사용해야 합니다."
+        playlab_arrow_keys: 마녀를 클릭했을 때 움직이도록 하기위해서 이 블럭들을 사용해야 합니다.
         playlab_add_move: 이 반복 블럭 안에 "이동" 블럭들을 추가하세요.
-        playlab_add_score: "여기에 점수 블럭들을 추가하세요"
-        playlab_add_blocks: "여기에 블럭들을 추가하세요."
-        set_variable: "변수에 값을 바꾸기 위해 수 블럭을 드래그해서 가져오세요."
-        place_variable: "이 블럭의 안쪽에 변수 블럭을 드래그 하세요."
-        bee_for_loop: "꿀벌이 모으도록 하려는 가장 큰 꽃꿀의 수를 여기에 드래그 하세요."
-        place_counter_variable: "이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요."
+        playlab_add_score: 여기에 점수 블럭들을 추가하세요
+        playlab_add_blocks: 여기에 블럭들을 추가하세요.
+        set_variable: 변수에 값을 바꾸기 위해 수 블럭을 드래그해서 가져오세요.
+        place_variable: 이 블럭의 안쪽에 변수 블럭을 드래그 하세요.
+        bee_for_loop: 꿀벌이 모으도록 하려는 가장 큰 꽃꿀의 수를 여기에 드래그 하세요.
+        place_counter_variable: 이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요.
         function_editor_draw_square: 이것이 여러분이 만든 함수의 정의입니다. 이 블럭들은 "사각형 그리기" 블럭을 사용할
           때마다 실행됩니다.
-        change_here: "여기서 바꾸세요."
-        write_draw_square_function: "도구 상자에 있는 블럭들을 여기로 드래그해서 사각형을 그려보세요."
-        write_draw_triangle_function: "도구 상자에서 블럭들을 드래그해서 여기에 집어 넣어 사각형을 그려보세요."
-        edit_add_parameter: "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
-        add_and_drag_parameter: "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
-          안에 드래그해 넣으세요."
+        change_here: 여기서 바꾸세요.
+        write_draw_square_function: 도구 상자에 있는 블럭들을 여기로 드래그해서 사각형을 그려보세요.
+        write_draw_triangle_function: 도구 상자에서 블럭들을 드래그해서 여기에 집어 넣어 사각형을 그려보세요.
+        edit_add_parameter: 함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요.
+        add_and_drag_parameter: 만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요.
         fill_in_actor: "??? 부분을 각 캐릭터(1, 2, 3)에 맞는 수로 채우세요."
-        repeat: "루프(loop) 안에 블럭을 넣어 반복하도록 하세요."
+        repeat: 루프(loop) 안에 블럭을 넣어 반복하도록 하세요.
         if_bee_nectar: '"만약(if)" 블럭을 사용해 꽃꿀을 집어야 하는지 판단하도록 하세요.'
         if_else_bee: '"만약(if)/그렇지 않으면(else)" 블럭을 사용해서 꿀벌이 꽃에 꽃꿀이 있으면 집고, 아니면 꿀을 만들도록
           해 보세요.'
-        repeat_full_circle: "원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요."
-        place_length_variable: "여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요."
-        arrows_move_actor: "캐릭터를 움직이기 위해 방향키를 사용하세요."
-        right_arrow_fireball: "파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요."
-        name_function: "함수의 이름을 여기에 작성하세요."
-        Infinity_move_right_runbutton: "이곳에 이동 블록을 추가합니다."
-        Infinity_move_directions_callout: "어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게
-          할까요?"
-        Infinity_move_directions_callout_arrow: "이 화살표를 이용해서 조정하세요"
-        Infinity_move_collide_callout: "이 이벤트가 발생하면 소리를 재생 합니다."
-        Infinity_repeat_callout: "여기로 '이동 블록'을 이동 시키세요"
+        repeat_full_circle: 원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요.
+        place_length_variable: 여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요.
+        arrows_move_actor: 캐릭터를 움직이기 위해 방향키를 사용하세요.
+        right_arrow_fireball: 파이어볼을 쏘기 위해 오른쪽 방향키를 사용하세요.
+        name_function: 함수의 이름을 여기에 작성하세요.
+        Infinity_move_right_runbutton: 이곳에 이동 블록을 추가합니다.
+        Infinity_move_directions_callout: 어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게 할까요?
+        Infinity_move_directions_callout_arrow: 이 화살표를 이용해서 조정하세요
+        Infinity_move_collide_callout: 이 이벤트가 발생하면 소리를 재생 합니다.
+        Infinity_repeat_callout: 여기로 '이동 블록'을 이동 시키세요
         craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
         craft_drag_block_callout: '"앞으로 이동" 블록을 드래그해서 다른 블록 아래에 끼우세요'
-        craft_callout_preplaced: "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
-        craft_inside_repeat: "블록들을 이곳에 놓아서 행동을 반복하세요"
-        craft_callout_preplaced_house: "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
-        craft_what_is_iron: "이 철을 채굴하세요!"
-        craft_callout_moveforward: "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
+        craft_callout_preplaced: 여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요
+        craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
+        craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
+        craft_what_is_iron: 이 철을 채굴하세요!
+        craft_callout_moveforward: 이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?

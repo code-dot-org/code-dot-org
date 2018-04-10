@@ -389,7 +389,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: "Ākuanei ka puta gā taipitopito o te Whakaaturanga!"
+        text: Ākuanei ka puta gā taipitopito o te Whakaaturanga!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -1314,9 +1314,9 @@
     C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: "Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
+        text: Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
           ka tōai i ōna āhuatanga ia te wā ka whakahaerehia. Nā reira, e wātea ana
-          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro."
+          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro.
       2:
         image: notes/C2_playlab_createastory_2.png
         text: He paraka hou hei whakamātau māu. Ko te paraka "ina pere" tētahi, ko
@@ -1771,9 +1771,9 @@
     C3_playlab_create_game:
       1:
         image: notes/C3_playlab_create_game_1.png
-        text: "Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
+        text: Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
           ka tōai i ōna āhuatanga ia te wā ka whakahaerehia. Nā reira, e wātea ana
-          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro."
+          ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro.
       2:
         image: notes/C3_playlab_create_game_2.png
         text: He paraka hou hei whakamātau māu. Ko te paraka "ina pere" tētahi, ko

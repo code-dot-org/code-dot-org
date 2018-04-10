@@ -256,8 +256,8 @@
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi
           ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati
           zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: "Što je krivo u ovom programu? Kako bi ga ti popravio
-          tako da ja mogu ukloniti ovu hrpu?"
+        maze_karel_debug_seq_2: Što je krivo u ovom programu? Kako bi ga ti popravio
+          tako da ja mogu ukloniti ovu hrpu?
         maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje
           bude poravnato.
         maze_karel_debug_while: Kako bi ti izmijenio ovaj program i pomogao mi da
@@ -506,7 +506,7 @@
         loop_for: Blok "Brojač"
         parameters: Funkcije s parametrima
         hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: "Što je informatika?"
+        Unplug1: Što je informatika?
         Unplug2: Razmišljati poput računala
         Unplug3: Grafičko programiranje
         Unplug4: Algoritmi
@@ -763,6 +763,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

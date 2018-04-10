@@ -100,9 +100,9 @@
           kompjuterike është që një program kompjuterik mund të jetë interaktiv.
       2:
         image: notes/flappy02.jpg
-        text: "Çdo moment kur dikush klikon ose shtyp në një kompjuter ose telefon,
+        text: Çdo moment kur dikush klikon ose shtyp në një kompjuter ose telefon,
           kjo do gjenerojë një EVENT, dhe ka pjesë kodi që vendosin çfarë bëhet kur
-          ndodh një EVENT."
+          ndodh një EVENT.
       3:
         image: notes/flappy03.jpg
         text: 'Për shembull, ti mund të kesh një EVENT-HANDLER që thotë "kur mouse
@@ -733,7 +733,7 @@
           për të zgjidhur. E dyta është e njejtë vetëm se shkon poshtë.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "Është sikur duke programuar me letër. Dhe kjo është!"
+        text: Është sikur duke programuar me letër. Dhe kjo është!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -1722,12 +1722,12 @@
           tonë.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "Është një shembull të përdorimit nëse deklarimit i cili është më të
+        text: Është një shembull të përdorimit nëse deklarimit i cili është më të
           vërtetë koncept fundamental në programimin kompjuterik. Një nga gjërat e
           para që kam mësuar ishtë si të shkruaj një program që ka luajtur lojën tic-tac
           toe. Unë kisha nëse deklaratën për të thënë, ok, nëse tjetri person do të
           fitojë, ec përpara dhe bllokoje atë vend. Kënaqu duke mësuar si të perdorësh
-          nëse deklaratat, është një koncept kyq."
+          nëse deklaratat, është një koncept kyq.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
@@ -2045,11 +2045,11 @@
           e duhura dhe vendin e duhur ku ti përdor.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "Është shumë specifike dhe jam në gjëndje të ndjek instruksionet dhe
+        text: Është shumë specifike dhe jam në gjëndje të ndjek instruksionet dhe
           piktura do të duket e mrekullueshme. Është një algoritëm shumë i mirë. Në
           qoftë se instruksionet nuk do të ishin kaq të sakta, ujqit e mi nuk do të
           dukeshin kaq mirë. Kur duam që diçka të dalë ekzaktësisht siç e kemi planifikuar,
-          është mirë që gjërat të jenë të specifikuara deri në detaje."
+          është mirë që gjërat të jenë të specifikuara deri në detaje.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png

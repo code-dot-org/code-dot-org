@@ -1131,23 +1131,45 @@
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco
+          come questo rimasto nella sezione degli strumenti.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco
           come questo rimasto nella sezione degli strumenti.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
+          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
+          lezione.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
+          nel programma. Ti aiuterà a trovare il bug!
+      courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Usa il bottone passo per andare passo dopo passo
           nel programma. Ti aiuterà a trovare il bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: I blocchi grigi sono fatti di pietra e non possono essere
           gettati via.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: I blocchi grigi sono fatti di pietra e non possono essere
+          gettati via.
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le
+          direzioni.
+      courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Usa la freccia verde a tendina per cambiare le
           direzioni.
       courseC_PlayLab_events_challenge1_callout:
@@ -1227,13 +1249,21 @@
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Non devi usare i colori per completare questo
           puzzle. Se vuoi, questo blocco di colore casuale lo rende facile!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Non devi usare i colori per completare questo
+          puzzle. Se vuoi, questo blocco di colore casuale lo rende facile!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Puoi cambiare questo numero.
         courseD_artist_ramp11_2: Clicca qui per inserire il numero di volte da ripetere
           il tuo codice.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
+          ha un FIORE. Invece non devi proprio cercare favi.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ricorda di controllare OGNI nuvola per vedere se
           ha un FIORE. Invece non devi proprio cercare favi.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
@@ -1245,10 +1275,16 @@
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare (o miele) da un fiore (o nido d'ape).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
+          il nettare (o miele) da un fiore (o nido d'ape).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Prova a ripetere il blocco "vai avanti"
           usando questo ciclo.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
+          l'ape indietro.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
           l'ape indietro.
       courseD_bee_debugging_challenge1a_callout:
@@ -1260,7 +1296,9 @@
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
@@ -1269,6 +1307,7 @@
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1315,6 +1354,9 @@
           gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
@@ -1414,6 +1456,7 @@
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Puoi cambiare questo numero.
@@ -1432,9 +1475,14 @@
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
           il tuo codice.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
+          il tuo codice.
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Usa questo blocco per raccogliere un singolo pezzo
@@ -1491,24 +1539,44 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
+          gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: []

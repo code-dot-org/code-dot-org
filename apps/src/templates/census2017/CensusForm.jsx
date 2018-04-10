@@ -582,7 +582,7 @@ class CensusForm extends Component {
                   {i18n.censusExistingInaccuracyTip()}
                   &nbsp;
                   <a
-                    href="/yourschool/defining-computer-science"
+                    href="/yourschool/about"
                     target="_blank"
                   >
                     {i18n.censusExistingInaccuracyTipLink()}

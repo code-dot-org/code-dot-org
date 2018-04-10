@@ -1123,24 +1123,46 @@
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam
           kotak peralatan. Mau digunakan untuk apa?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam
+          kotak peralatan. Mau digunakan untuk apa?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: Angka ini berarti bahwa tidak ada lagi blok yang
+          tersedia di dalam kotak peralatan.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: Angka ini berarti bahwa tidak ada lagi blok yang
           tersedia di dalam kotak peralatan.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
           tahapan.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
+          alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
+          tahapan.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Klik icon bola lampu saat Anda membutuhkan petunjuk!
       courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Gunakan tombol langkah agar dituntun langkah demi
+          langkah dalam menjalankan program nya. Hal ini akan membantu Anda menemukan
+          bug!
+      courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Gunakan tombol langkah agar dituntun langkah demi
           langkah dalam menjalankan program nya. Hal ini akan membantu Anda menemukan
           bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: Blok-blok yang warna abu-abu terbuat dari batu dan tidak
           bisa dibuang.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: Blok-blok yang warna abu-abu terbuat dari batu dan tidak
+          bisa dibuang.
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
+      courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Gunakan panah warna hijau untuk merubah arah.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Blok ini memungkinkan Anda memindahkan
@@ -1221,13 +1243,22 @@
         courseD_artist_nestedLoops1a_1: Kamu tidak harus menggunakan warna agar teka-teki
           ini benar. Namun jika kamu mau melakukannya, blok `warna acak` ini lebih
           mudah digunakan!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Kamu tidak harus menggunakan warna agar teka-teki
+          ini benar. Namun jika kamu mau melakukannya, blok `warna acak` ini lebih
+          mudah digunakan!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Kamu bisa merubah angka ini.
         courseD_artist_ramp11_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
+          memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
+        4_5_Bee_Conditionals_2_2: Butuh bantuan? Klik disini untuk VIDEO petunjuk!
+      courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ingat, periksa untuk melihat jika SETIAP awan yang
           memiliki BUNGA. Anda tidak perlu untuk memeriksa semua sarang.
         4_5_Bee_Conditionals_2_2: Butuh bantuan? Klik disini untuk VIDEO petunjuk!
@@ -1239,10 +1270,16 @@
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Gunakan loop ini untuk mengumpulkan
           semua nektar (atau madu) dari satu bunga (atau sarang madu).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Gunakan loop ini untuk mengumpulkan
+          semua nektar (atau madu) dari satu bunga (atau sarang madu).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Ulangi lagi gerakan memajukan blok
           menggunakan loop ini.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Gunakan perintah ini untuk memundurkan
+          lebah.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Gunakan perintah ini untuk memundurkan
           lebah.
       courseD_bee_debugging_challenge1a_callout:
@@ -1254,7 +1291,9 @@
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
@@ -1263,6 +1302,7 @@
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1311,6 +1351,10 @@
           program itu.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk
+          memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat
+          kemana semua pergi.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk
           memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat
           kemana semua pergi.
@@ -1415,6 +1459,7 @@
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Kamu bisa merubah angka ini.
@@ -1433,9 +1478,14 @@
         courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
+          pembuatan kode kamu.
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Gunakan blok ini untuk mengumpulkan satu buah
@@ -1493,25 +1543,46 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
           kotak perlengkapan untuk membuangnya.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
+          kotak perlengkapan untuk membuangnya.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
+          kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
           sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
           program itu.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
+          sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
+          program itu.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
+          Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
           Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
       courseE_maze_ramp_predict1_callout: []

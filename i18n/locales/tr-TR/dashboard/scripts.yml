@@ -5679,6 +5679,8 @@ tr:
               name: Nested Loops with Frozen
             Nested Loops:
               name: İç İçe Döngüler
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Kurs E
           description_audience: '8-12 yaş grubu'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
@@ -6113,6 +6115,8 @@ tr:
               name: Bir Temel Oluşturma
             Nested Loops:
               name: İç İçe Döngüler
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: Hızlı Kurs
           description_audience: 'Yaş: 9-18'
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -7039,6 +7043,8 @@ tr:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -7454,3 +7460,307 @@ tr:
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler, Play Lab' da, olayların nasıl kullanılacağını öğrenme şansına sahip olacaklar. Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın ve yaratıcı olmanın zamanı!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+        express-2018:
+          title: Hızlı Kurs
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
+          description_audience: 'Yaş: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Giriş
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: İç İçe Döngüler
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Ortak Düşünce Eğitimi: Dijital Vatandaşlık'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Sıçrama Olayları
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Labirentte Koşullu Döngüler
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Minecraft' da Koşullar
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Değişkenler: Zarf Değişkenleri'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Sanatçı-Değişkenler
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Değişkenler - Oyun laboratuarı
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'Döngüler İçin: Döngü Eğlencesi İçin'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: Arı - şununla say döngüleri
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Fonksiyonlar: Parametrelerle Şarkı Yazarlığı'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Arı fonksiyonları
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Sanatçı Parametrelerinde Fonksiyonlar
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Arıda Parametreli Fonksiyonlar
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Projenizi Gözden Geçirme
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Projeni sun
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Kurs B
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_audience: 'Yaş: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Dijital İziniz
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Labirentte Programlama
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Toplayıcıda Döngüler
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+              description_student: ''
+              description_teacher: ''
+        coursed-2018:
+          title: Yeni Kurs D Senaryosu
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Giriş
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Sıçrama Olayları
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Sanatçıların İç İçe Döngüleri
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Koşullar-Arı
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Labirentte Koşullar ve Döngüler
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Sayısal Vatandaşlık
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Bir Play Lab Oyunu Oluştur
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Bağımsız: İkili Taban (Binary)'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Sanaçtı İkili Taban
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

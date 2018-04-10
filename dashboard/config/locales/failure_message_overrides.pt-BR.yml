@@ -90,13 +90,13 @@
         do Golem de Ferro e atacar os zumbis para ganhar.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Parabéns! Você reuniu X moedas!
-      courseE_playLab_scaffold3_failure_message_override: "É necessário adicionar
-        dois ou mais atores ao seu jogo e programá-los para se mexerem."
+      courseE_playLab_scaffold3_failure_message_override: É necessário adicionar dois
+        ou mais atores ao seu jogo e programá-los para se mexerem.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: "É necessário adicionar
-        dois ou mais atores que se movam para o seu jogo."
+      grade4_scaffolded_project3_failure_message_override: É necessário adicionar
+        dois ou mais atores que se movam para o seu jogo.
       kikiTesta_failure_message_override: Parabéns! Você reuniu X moedas!
       sample1_failure_message_override: Parabéns! Você reuniu X moedas!
       sample4_failure_message_override: Parabéns! Você reuniu X moedas!

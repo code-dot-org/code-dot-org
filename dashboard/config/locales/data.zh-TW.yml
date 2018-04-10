@@ -2,370 +2,368 @@
   data:
     game:
       name:
-        Unplug1: "計算機科學介紹"
-        Maze: "迷宮"
-        Multi: "多選項目"
-        Unplug2: "計算機式思維"
-        Unplug3: "方格紙編程"
-        Artist: "藝術家"
-        Unplug4: "演算法"
-        Artist2: "藝術家 2"
-        Unplug5: "函數類別"
-        Farmer: "農夫"
-        Unplug6: "條件判斷（Conditionals）"
-        Artist3: "藝術家 3"
-        Unplug7: "歌曲創作"
-        Farmer2: "農夫 2"
-        Unplug8: "抽象概念"
-        Artist4: "藝術家 4"
-        Unplug9: "接力編程"
-        Farmer3: "農夫 3"
-        Unplug10: "網際網路"
-        Artist5: "藝術家 5"
-        Unplug11: "總結"
-        MazeEC: "迷宮"
-        Bounce: "彈跳"
-        Flappy: "像素鳥"
-        Jigsaw: "拼圖"
-        MazeStep: "迷宮 - 步進模式（Step Mode）"
-        Wordsearch: "字謎"
+        Unplug1: 計算機科學介紹
+        Maze: 迷宮
+        Multi: 多選項目
+        Unplug2: 計算機式思維
+        Unplug3: 方格紙編程
+        Artist: 藝術家
+        Unplug4: 演算法
+        Artist2: 藝術家 2
+        Unplug5: 函數類別
+        Farmer: 農夫
+        Unplug6: 條件判斷（Conditionals）
+        Artist3: 藝術家 3
+        Unplug7: 歌曲創作
+        Farmer2: 農夫 2
+        Unplug8: 抽象概念
+        Artist4: 藝術家 4
+        Unplug9: 接力編程
+        Farmer3: 農夫 3
+        Unplug10: 網際網路
+        Artist5: 藝術家 5
+        Unplug11: 總結
+        MazeEC: 迷宮
+        Bounce: 彈跳
+        Flappy: 像素鳥
+        Jigsaw: 拼圖
+        MazeStep: 迷宮 - 步進模式（Step Mode）
+        Wordsearch: 字謎
         Webapp: Webapp
-        ArtistEC: "藝術家"
-        TextMatch: "文字相符"
-        StudioEC: "播放實驗室"
+        ArtistEC: 藝術家
+        TextMatch: 文字相符
+        StudioEC: 播放實驗室
         Applab: App Lab
-        NetSim: "網路模擬器"
-        Custom: "藝術家"
-        CustomStudio: "播放實驗室"
+        NetSim: 網路模擬器
+        Custom: 藝術家
+        CustomStudio: 播放實驗室
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "銅牌"
-        Silver: "銀牌"
-        Gold: "金牌"
+        Bronze: 銅牌
+        Silver: 銀牌
+        Gold: 金牌
     concept:
       description:
-        sequence: "序列"
+        sequence: 序列
         if: "「如果」積木"
         if_else: "「如果…否則」積木"
         loop_times: "「重複... 次」積木"
         loop_until: "「重複 直到」積木"
         loop_while: "「當…時」積木"
         loop_for: "「計數器」積木"
-        function: "函式"
-        parameters: "函式帶參數"
+        function: 函式
+        parameters: 函式帶參數
     level:
       instructions:
-        maze_2_2: "你可以幫我抓住這隻淘氣的豬嗎？把 2 個「移動-向前」積木堆疊在一起，然後按下「運行」來幫我到達目的地。 "
-        maze_2_1: "這隻豬惹毛我了。帶我去那，我要抓住牠！"
-        maze_2_2_5: "沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！"
-        maze_2_3: "帶我去找那綠色的小惡魔！（小心 TNT 炸藥）"
-        maze_2_4: "保持冷靜，趕快幫我找到那隻壞豬。不然我會被牠氣死！"
-        maze_2_5: "聽說用 2 個積木就能抓到那隻綠色笨豬，你辦得到嗎？"
-        maze_2_6: "帶我去綠色入侵者那裡，只可以用 3 個積木喔。"
-        maze_2_7: "幫我想想辦法，在使用最少的積木數量下，趕走這隻壞豬豬。試著使用多個「重複」積木來完成目標吧！"
-        maze_2_8: "當積木變灰色時，代表你不能刪去它。要解決這個問題，請使用「循環」積木，試著將「移動」、「移動」、「旋轉」三個積木，放入循環積木中，並設定重複
-          3 次。"
-        maze_2_9: "好的，接著我們試試這個新的「循環…直到…」積木，它會一直重複執行，直到我抓到這隻惹人厭的豬豬。"
-        maze_2_10: "好了，這是最後一次的練習 - 你可以使用 4 個積木解決這個問題嗎？"
-        maze_2_11: "親愛滴人類，偶是隻殭屍。偶~餓了。必須... 吃到... 向日葵... 你有辦法只用 5 個積木就讓我到那兒嗎？"
-        maze_2_12: "好的，這和上一關很相似，有些不一樣就是。你可以只用 5 個積木解決嗎？"
-        maze_2_13: "使用新的「如果」積木可以讓我決定何時轉彎。提示：只要再添加一個積木就可以了，但你可以學習其他積木的組合方式，這樣你下次就可以自己編寫了。"
-        maze_2_14: "好，這個關卡跟前一關很像，但你需要記住你是如何同時使用「如果」 及「循環」程式積木的。"
-        maze_2_15: "偶想要吃向日葵！試著使用「如果」積木，讓我使用最少的積木就能吃到向日葵。"
-        maze_2_16: "好啦，讓我們再練習一次，這次跟之前差不多，但小心別被「食殭花」給吞了 ！"
+        maze_2_2: '你可以幫我抓住這隻淘氣的豬嗎？把 2 個「移動-向前」積木堆疊在一起，然後按下「運行」來幫我到達目的地。 '
+        maze_2_1: 這隻豬惹毛我了。帶我去那，我要抓住牠！
+        maze_2_2_5: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
+        maze_2_3: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
+        maze_2_4: 保持冷靜，趕快幫我找到那隻壞豬。不然我會被牠氣死！
+        maze_2_5: 聽說用 2 個積木就能抓到那隻綠色笨豬，你辦得到嗎？
+        maze_2_6: 帶我去綠色入侵者那裡，只可以用 3 個積木喔。
+        maze_2_7: 幫我想想辦法，在使用最少的積木數量下，趕走這隻壞豬豬。試著使用多個「重複」積木來完成目標吧！
+        maze_2_8: 當積木變灰色時，代表你不能刪去它。要解決這個問題，請使用「循環」積木，試著將「移動」、「移動」、「旋轉」三個積木，放入循環積木中，並設定重複
+          3 次。
+        maze_2_9: 好的，接著我們試試這個新的「循環…直到…」積木，它會一直重複執行，直到我抓到這隻惹人厭的豬豬。
+        maze_2_10: 好了，這是最後一次的練習 - 你可以使用 4 個積木解決這個問題嗎？
+        maze_2_11: 親愛滴人類，偶是隻殭屍。偶~餓了。必須... 吃到... 向日葵... 你有辦法只用 5 個積木就讓我到那兒嗎？
+        maze_2_12: 好的，這和上一關很相似，有些不一樣就是。你可以只用 5 個積木解決嗎？
+        maze_2_13: 使用新的「如果」積木可以讓我決定何時轉彎。提示：只要再添加一個積木就可以了，但你可以學習其他積木的組合方式，這樣你下次就可以自己編寫了。
+        maze_2_14: 好，這個關卡跟前一關很像，但你需要記住你是如何同時使用「如果」 及「循環」程式積木的。
+        maze_2_15: 偶想要吃向日葵！試著使用「如果」積木，讓我使用最少的積木就能吃到向日葵。
+        maze_2_16: 好啦，讓我們再練習一次，這次跟之前差不多，但小心別被「食殭花」給吞了 ！
         maze_2_17: "「如果…否則…」積木會依指定的條件執行相應指令，用這個新學習的積木把我送到向日葵那裡吧！"
-        maze_2_18: "再練習一次「如果…否則…」積木，你能一次就成功嗎？"
-        maze_2_19: "能不能添加 3 個積木帶我走出這個複雜的迷宮？如果你成功了，不管怎樣曲折的路我都能克服！"
-        turtle_1_1: "嗨！我是個藝術家。你可以寫程式碼來讓我畫出任何東西（幾乎啦）。用一些程式積木來讓我沿著圖上的灰線作畫。"
-        turtle_1_2: "現在，畫一個正方形。注意：透過選擇新積木「筆跡顏色」，畫上你最喜愛的顏色吧。"
-        turtle_1_3: "只能用 3 個積木來畫出一個正方形。"
-        turtle_1_4: "畫出一個三角形，三角形的每個邊的顏色要不一樣，使用「隨機取色」以在每次執行時使用不同的顏色。提示：你要思考要將轉向積木的轉向角度改成多少。"
-        turtle_1_5: "現在，練習一下，畫個三角形，然後再畫個正方形來繪製一個信封。"
-        turtle_1_6: "你想得到要怎麼畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想，在畫正方形之前應該要轉多少度。"
-        turtle_1_7: "好啦，讓我們試著提高一點難度，看看你有沒有辦法畫出這副綠色的眼鏡。正方形的邊長為 100 像素，兩個正方形之間間隔 50
-          像素。對了，不要忘記要用綠色來畫喔 ！"
-        turtle_1_8: "試著想一想如果你運行程式會發生什麼事（你也可以直接點搫運行來看看）。接著，重複它幾次來完成這個圖案，每次畫的顏色都要不一樣。"
-        turtle_1_9: "想一想，問號要換成什麼數字，才可以畫出一個圓形？"
-        turtle_1_10: "你做到了！現在，畫你想畫的東西吧。給你些好點子：你可以畫個火柴人、雪花或者螺旋圖形。也試試看新的「筆跡寬度」積木吧。玩得開心！"
-        turtle_4_1: "你有辦法只用 3 個積木畫出一個邊長為 100 像素的三角形嗎？提示：使用「重複」積木。"
-        turtle_4_2: "於工作區現有程式中的某一處，加入一個「轉向-右方 90度」的積木，以繪製出這些三角形。"
-        turtle_4_3: "這裡有個你寫的畫個三角形的程式，你可以添加一個「重複」和「轉向」積木來創作出一朵漂亮的花嗎？"
-        turtle_4_4: "這個程式大致和上個關卡相同，只是在每個三角形畫完後轉向 36 度。這樣需要重複的次數共是多少呢？（提示：在轉向的角度超過
-          360 度後，畫出的圖形會繞成一圈。）"
-        turtle_4_5: "這個程式和上個關卡大致相同，只是將轉向次數變成 36 次。這樣轉向的角度總共是多少呢？（提供：在轉向的角度超過 360 度後，畫出的圖形會繞成一圈。）"
-        turtle_4_6: "你可以只用 3 個積木就畫出一個邊長 20 像素的三角形嗎？"
-        turtle_4_7: "這是上個關卡畫正方形的程式。你可以重複畫出 10 個一樣的正方形來組合成一個梯子嗎？提示：你只需要再添加 2 個積木。"
-        turtle_4_8: "這是前一個關卡的解法。你可以只添加 2 個積木來完成這幅畫嗎？"
-        turtle_4_9: "這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)"
-        turtle_4_10: "這是前一個關卡的解法。應該要重複幾次才能完成這件繪圖作品呢？"
-        turtle_4_11: "試著改變在「轉向」和「重複」積木上的數字來產生不同的圖案。或者，實驗看看，變換其他的積木來畫出你想要的東西來。"
-        maze_karel_1_1: "你好！我是農夫。請你幫助我將農地整平，好讓我可以耕作。請將我移到土堆，然後使用｢移除｣積木來移除土堆。"
-        maze_karel_1_2: "接下來，將我移到坑洞那裡，使用「填充」積木往洞裡填入 2 鏟土。"
-        maze_karel_1_3: "將我移到小土堆上，告訴我該移除多少鏟的泥土，用的積木愈少愈好。"
-        maze_karel_1_4: "你能幫我移除 4 個土堆嗎？提示：盡量使用「重複」積木。"
-        maze_karel_1_5: "幫助我填滿這些坑洞，每個坑洞需要填入 5 鏟的泥土。提示：你可以在「當…」積木中，放進「重複」積木來完成這個關卡。"
-        maze_karel_1_6: "盡可能用最少的積木來移除所有土堆。在「當…」積木的下拉清單裡多了幾個選項，可以用來協助你判斷現在是站在土堆上，還是站在坑洞上。"
-        maze_karel_1_7: "哇！我發現了一個很深的坑洞，但我不知道要用多少鏟土才可以把它填平。你可以寫個程式讓它自動填土直到填平為止嗎？"
-        maze_karel_1_8: "盡可能使用最少的程式積木，幫我將田地最後面的坑洞填平。"
-        maze_karel_1_9: "讓我移除所有的小土堆，用的積木愈少愈好。提示：試試「當…」積木。"
-        maze_karel_1_10: "我工作到太晚，外面都天黑了，所以我無法分辨這些土堆到底有多大。現在「當…」積木下有些項目消失不見了。想辦法讓我沿著田地移動，如果碰到了土堆，就幫我移除它。"
-        maze_karel_1_11: "現在外面還是一片漆黑。讓我沿著田地移動，如果有土堆就將它移除，如果有坑洞就將它填滿。提示：使用「如果」積木上的下拉清單。"
-        turtle_2_1: "哈囉，偶…殭屍…速…藝術家…超愛畫畫！幫偶用特定的顏色畫一個正方形。注意：所有的積木已經依程式功能分類，試著點選每個類別看看裡頭有哪些積木可以使用。"
-        turtle_2_2: "歡迎使用函式類指令，這裡你可以定義新的積木！試試這個新的 draw a square（畫個正方形）積木，它放在函式類指令中，用它來畫出一個邊長
-          50 像素的綠色正方形。"
-        turtle_2_3: "使用「重複」積木（在迴圈類指令中）以畫出 3 個邊長 100 像素的正方形，每個正方形的角度差 120 度，同時使用 3
-          個不同的隨機顏色來繪製。"
-        turtle_2_4: "現在讓我們試著繪製花式的圖形吧。改變程式碼畫出 36 個寬度為 100 像素的正方形，每畫一個正方形就轉 10 度。提示：你可能會想使用「滑桿」來讓我運行得更快些。"
-        turtle_2_5: "畫出邊長分別為 50、60、70、80 及 90 像素的正方形。你可能需要使用 5 次 draw a square（畫個正方形）函式來完成這個任務。"
-        turtle_2_6: "好的，這個程式會用到一個計數器來畫出和上次相同的正方形。你想要讓正方形的尺寸和 counter 的數值一樣，那就用 counter
-          積木。提示：它在變數類別中。"
-        turtle_2_7: "這裡有個可以畫出漩渦圖案的程式，但這些程式積木已經被停用了，所以它們無法運行。使用一個「計數」積木（在迴圈類別裡）和「計數器」積木（在變數類別裡）來建立一個新的程式，以畫出一樣的漩渦。"
-        turtle_2_7_5: "這裡有個新的 draw a snowman（畫個雪人）函式（在函式類別裡）。畫 2 個雪人，高分別是 250 和 100
-          像素。"
-        turtle_2_8: "這個關卡有些小難度。使用 draw a snowman（畫個雪人）函式，還有新的「跳躍-向前」積木（在動作類指令中），畫出
-          3 個雪人，顏色要不一樣，之間的間隔距離要 100 像素。"
-        turtle_2_9: "使用一個「計數迴圈」來畫出雪人家庭，它們的高度分別是 110、100、90、80、70。每個雪人的間隔距離需為 60 像素。"
-        turtle_2_10: "這裡有一些程式碼可以讓你進行試驗，產生一些不同的螺旋圖形。如果改變轉彎的角度，會發生什麼事情呢？或是在迴圈中設定隨機顏色，圖形又會變怎樣呢？隨性的畫些你喜歡的東西吧！"
-        maze_karel_2_1: "試著使用這些積木，幫我鏟平所有土堆，填滿所有坑洞。用用看迴圈，不要使用太多積木。提示：你可以放置一個迴圈到另一個迴圈裡。"
-        maze_karel_2_2: "我們已經定義了一個自己的積木，名為 fill 5（填充 5），它現在在函式類指令中，使用它來幫我填平這個坑洞。"
-        maze_karel_2_3: "使用這個新的 fill 5（填充 5）函式積木（在函式類指令中）來讓我填滿這些坑洞。"
-        maze_karel_2_4: "定義一個新的函式以移除 7 鏟土。接著使用它來寫個程式，幫我移除所有的土堆。"
-        maze_karel_2_5: "建立一個新的函式，以從土堆中移除 6 鏟土。使用它來幫助我擺脫這些土堆。"
-        maze_karel_2_6: "使用兩個新的函式 - fill 8（填充 8）和 remove 8（移除 8），以幫助我鏟平所有土堆和填滿所有坑洞。"
-        maze_karel_2_7: "我的田地上有頭牛！撰寫一個新函式，用它來幫助我避開牛隻並移除所有的土堆。記得把所有你需要的程式積木通通放在新函式裡頭。"
-        maze_karel_2_8: "使用這個新函式 avoid the cow and remove 1（避開牛並移除1）來幫我鏟平所有的土堆。"
-        maze_karel_2_9: "這裡有一個函式，可以將同一列中的 4 個土堆一次移除。請試著將函式放進迴圈內，讓你可以使用較少的程式積木將田裡的土堆通通移除。"
-        maze_karel_2_10: "把我移動到田地，並使用這兩個函式來幫我移除所有的土堆，並填平所有的坑洞。"
-        turtle_3_1: "這一關卡我們提供給你 draw a square（畫個正方形）和 draw a circle（畫個圓形） 兩個函式。定義一個函式並不會執行裡頭的程式。如果你要畫一個正方形，那麼你必須把
-          draw a square 積木拖曳到工作區才能執行。"
-        turtle_3_2: "用 draw a square（畫個正方形）函式作範例，建立一個 draw a triangle（畫個三角形）函式並使用它。"
-        turtle_3_3: "在貓的周圍畫一個三角形的籬巴，在牛的周圍畫一個正方形的籬巴。提示：你可以邊寫程式邊測試。"
-        turtle_3_4: "看看你能不能利用 draw a square（畫個正方形）和 draw a triangle（畫個三角形）以及其它積木，來畫出一間圍繞著獅子的房子。"
-        turtle_3_5: "現在建立一個新的 draw a house（畫個房子）函式，並為兩隻貓咪畫一間房子。提示：使用「做些什麼」積木建立一個新函式，並輸入你自己的文字為積木命名。"
-        turtle_3_6: "使用 draw a square（畫個正方形）當範例，添加一個名為 length 的輸入到 draw a triangle
-          裡。接著畫出不同尺寸的三角形（提示：點擊星星可以為函式添加一個輸入）"
-        turtle_3_7: "添加名為「長度」的輸入（input）來「畫個房子」，為大象蓋間大房子（房子長度為 150 像素）"
-        turtle_3_8: "修改 draw a house（畫個房子），讓我可以在畫完房子後停在右下角。使用這個修改後的函式來畫出 3 棟房子。"
-        turtle_3_9: "您可以在沒人幫助的情況下重新建立 draw a house（畫個房子）函式嗎？試著自己完成它，然後用它畫出一排房子。"
-        turtle_3_10: "你已學會很多東西囉！現在就用它們來畫出任何你想畫的，試試畫個星星、畫個螺旋紋、畫個別緻的雪花。"
-        maze_karel_debug_seq_1: "歡迎使用除錯階段！我的程式無法正常運行，你可以找到問題並修正它嗎？這樣一來田地才能變得平坦，我才能開始種植作物。"
-        maze_karel_debug_seq_2: "這個程式是哪兒出錯了？你應該怎麼修正它好讓我可以移除那個土堆呢？"
-        maze_karel_debug_repeat: "為這個程式除錯，讓我的土地變得平坦。"
-        maze_karel_debug_while: "要如何修改程式，才能幫助我填滿這個坑洞？"
-        maze_karel_debug_if: "幫個忙！修正這個程式，讓我的田地變得平坦。"
-        maze_karel_debug_if_else: "為這個程式除錯，讓我可以填滿這些洞，並移除所有土堆。"
-        maze_karel_debug_function_1: "你應該改變程式的哪個部分才能幫我移除所有的土堆？"
-        maze_karel_debug_function_2: "你可以為這個程式除錯嗎？這樣我就可以讓我的地變平坦了。"
-        maze_karel_debug_function_3: "編輯這個程式，那樣我就可以移除在田地上的所有土堆。 "
-        turtle_5_1: "試著運行這個程式，然後做些改變看看會發生什麼事。你能清楚的知道它是怎麼運作的嗎？（或著刪除它，然後用完全不同的程式碼來取代它）"
-        turtle_5_2: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_3: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_4: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_5: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        turtle_5_6: "試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)"
-        maze_3_1: "我必須抓到那隻豬！輸入幾個呼叫 move() 的函式，這樣我就可以把我的蛋拿回來。"
-        maze_3_2: "給我寫個程式，讓我可以用它抓到那頭豬。"
-        maze_3_3: "我應該如何抓到那頭豬？確保我不會撞到裝著 TNT 炸藥的盒子！"
-        maze_3_4: "啊！給我一個程式讓我可以繞過那些 TNT 炸藥，然後抓到那隻豬。"
-        Custom_builder: "從工具箱拖曳一些積木到工作區裡，以畫出關卡要建立的圖形，當你準備好了，點擊「運行」。"
-        jigsaw_1: "點擊這個積木"
-        jigsaw_2: "拖曳積木並放到目標位置"
-        jigsaw_3: "排列積木以組成圖像"
-        jigsaw_4: "排列積木以組成圖像"
-        jigsaw_5: "排列積木以組成圖像"
-        jigsaw_6: "排列積木以組成圖像"
-        jigsaw_7: "排列積木以組成圖像"
-        jigsaw_8: "排列積木以組成圖像"
-        jigsaw_9: "排列積木以組成圖像"
-        jigsaw_10: "排列積木以組成圖像"
-        jigsaw_11: "排列積木以組成圖像"
-        jigsaw_12: "排列積木以組成圖像"
-        jigsaw_13: "解決這個難題！"
-        mazestep_1: "這是迷宮步驟說明"
-        mazestep_2: "這是迷宮步驟說明"
-        mazestep_3: "這是迷宮步驟說明"
-        mazestep_4: "這是迷宮步驟說明"
-        mazestep_5: "這是迷宮步驟說明"
-        studio_c2_1: "你能讓這隻狗說出 Hello World 嗎？"
-        studio_c2_2: "你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？"
-        studio_c2_3: "你能寫個程式讓小狗移動到小貓那邊嗎？"
-        studio_c2_4: "你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？"
-        studio_c2_5: "你可以寫一個程式讓章魚被點擊時說 hello 嗎？"
-        studio_c2_6: "你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？"
+        maze_2_18: 再練習一次「如果…否則…」積木，你能一次就成功嗎？
+        maze_2_19: 能不能添加 3 個積木帶我走出這個複雜的迷宮？如果你成功了，不管怎樣曲折的路我都能克服！
+        turtle_1_1: 嗨！我是個藝術家。你可以寫程式碼來讓我畫出任何東西（幾乎啦）。用一些程式積木來讓我沿著圖上的灰線作畫。
+        turtle_1_2: 現在，畫一個正方形。注意：透過選擇新積木「筆跡顏色」，畫上你最喜愛的顏色吧。
+        turtle_1_3: 只能用 3 個積木來畫出一個正方形。
+        turtle_1_4: 畫出一個三角形，三角形的每個邊的顏色要不一樣，使用「隨機取色」以在每次執行時使用不同的顏色。提示：你要思考要將轉向積木的轉向角度改成多少。
+        turtle_1_5: 現在，練習一下，畫個三角形，然後再畫個正方形來繪製一個信封。
+        turtle_1_6: 你想得到要怎麼畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想，在畫正方形之前應該要轉多少度。
+        turtle_1_7: 好啦，讓我們試著提高一點難度，看看你有沒有辦法畫出這副綠色的眼鏡。正方形的邊長為 100 像素，兩個正方形之間間隔 50 像素。對了，不要忘記要用綠色來畫喔
+          ！
+        turtle_1_8: 試著想一想如果你運行程式會發生什麼事（你也可以直接點搫運行來看看）。接著，重複它幾次來完成這個圖案，每次畫的顏色都要不一樣。
+        turtle_1_9: 想一想，問號要換成什麼數字，才可以畫出一個圓形？
+        turtle_1_10: 你做到了！現在，畫你想畫的東西吧。給你些好點子：你可以畫個火柴人、雪花或者螺旋圖形。也試試看新的「筆跡寬度」積木吧。玩得開心！
+        turtle_4_1: 你有辦法只用 3 個積木畫出一個邊長為 100 像素的三角形嗎？提示：使用「重複」積木。
+        turtle_4_2: 於工作區現有程式中的某一處，加入一個「轉向-右方 90度」的積木，以繪製出這些三角形。
+        turtle_4_3: 這裡有個你寫的畫個三角形的程式，你可以添加一個「重複」和「轉向」積木來創作出一朵漂亮的花嗎？
+        turtle_4_4: 這個程式大致和上個關卡相同，只是在每個三角形畫完後轉向 36 度。這樣需要重複的次數共是多少呢？（提示：在轉向的角度超過 360
+          度後，畫出的圖形會繞成一圈。）
+        turtle_4_5: 這個程式和上個關卡大致相同，只是將轉向次數變成 36 次。這樣轉向的角度總共是多少呢？（提供：在轉向的角度超過 360 度後，畫出的圖形會繞成一圈。）
+        turtle_4_6: 你可以只用 3 個積木就畫出一個邊長 20 像素的三角形嗎？
+        turtle_4_7: 這是上個關卡畫正方形的程式。你可以重複畫出 10 個一樣的正方形來組合成一個梯子嗎？提示：你只需要再添加 2 個積木。
+        turtle_4_8: 這是前一個關卡的解法。你可以只添加 2 個積木來完成這幅畫嗎？
+        turtle_4_9: 這是前一個關卡的解法。應該要轉幾度才能完成這件繪圖作品呢？(可能需要多猜幾次才能猜對喔！)
+        turtle_4_10: 這是前一個關卡的解法。應該要重複幾次才能完成這件繪圖作品呢？
+        turtle_4_11: 試著改變在「轉向」和「重複」積木上的數字來產生不同的圖案。或者，實驗看看，變換其他的積木來畫出你想要的東西來。
+        maze_karel_1_1: 你好！我是農夫。請你幫助我將農地整平，好讓我可以耕作。請將我移到土堆，然後使用｢移除｣積木來移除土堆。
+        maze_karel_1_2: 接下來，將我移到坑洞那裡，使用「填充」積木往洞裡填入 2 鏟土。
+        maze_karel_1_3: 將我移到小土堆上，告訴我該移除多少鏟的泥土，用的積木愈少愈好。
+        maze_karel_1_4: 你能幫我移除 4 個土堆嗎？提示：盡量使用「重複」積木。
+        maze_karel_1_5: 幫助我填滿這些坑洞，每個坑洞需要填入 5 鏟的泥土。提示：你可以在「當…」積木中，放進「重複」積木來完成這個關卡。
+        maze_karel_1_6: 盡可能用最少的積木來移除所有土堆。在「當…」積木的下拉清單裡多了幾個選項，可以用來協助你判斷現在是站在土堆上，還是站在坑洞上。
+        maze_karel_1_7: 哇！我發現了一個很深的坑洞，但我不知道要用多少鏟土才可以把它填平。你可以寫個程式讓它自動填土直到填平為止嗎？
+        maze_karel_1_8: 盡可能使用最少的程式積木，幫我將田地最後面的坑洞填平。
+        maze_karel_1_9: 讓我移除所有的小土堆，用的積木愈少愈好。提示：試試「當…」積木。
+        maze_karel_1_10: 我工作到太晚，外面都天黑了，所以我無法分辨這些土堆到底有多大。現在「當…」積木下有些項目消失不見了。想辦法讓我沿著田地移動，如果碰到了土堆，就幫我移除它。
+        maze_karel_1_11: 現在外面還是一片漆黑。讓我沿著田地移動，如果有土堆就將它移除，如果有坑洞就將它填滿。提示：使用「如果」積木上的下拉清單。
+        turtle_2_1: 哈囉，偶…殭屍…速…藝術家…超愛畫畫！幫偶用特定的顏色畫一個正方形。注意：所有的積木已經依程式功能分類，試著點選每個類別看看裡頭有哪些積木可以使用。
+        turtle_2_2: 歡迎使用函式類指令，這裡你可以定義新的積木！試試這個新的 draw a square（畫個正方形）積木，它放在函式類指令中，用它來畫出一個邊長
+          50 像素的綠色正方形。
+        turtle_2_3: 使用「重複」積木（在迴圈類指令中）以畫出 3 個邊長 100 像素的正方形，每個正方形的角度差 120 度，同時使用 3 個不同的隨機顏色來繪製。
+        turtle_2_4: 現在讓我們試著繪製花式的圖形吧。改變程式碼畫出 36 個寬度為 100 像素的正方形，每畫一個正方形就轉 10 度。提示：你可能會想使用「滑桿」來讓我運行得更快些。
+        turtle_2_5: 畫出邊長分別為 50、60、70、80 及 90 像素的正方形。你可能需要使用 5 次 draw a square（畫個正方形）函式來完成這個任務。
+        turtle_2_6: 好的，這個程式會用到一個計數器來畫出和上次相同的正方形。你想要讓正方形的尺寸和 counter 的數值一樣，那就用 counter
+          積木。提示：它在變數類別中。
+        turtle_2_7: 這裡有個可以畫出漩渦圖案的程式，但這些程式積木已經被停用了，所以它們無法運行。使用一個「計數」積木（在迴圈類別裡）和「計數器」積木（在變數類別裡）來建立一個新的程式，以畫出一樣的漩渦。
+        turtle_2_7_5: 這裡有個新的 draw a snowman（畫個雪人）函式（在函式類別裡）。畫 2 個雪人，高分別是 250 和 100
+          像素。
+        turtle_2_8: 這個關卡有些小難度。使用 draw a snowman（畫個雪人）函式，還有新的「跳躍-向前」積木（在動作類指令中），畫出
+          3 個雪人，顏色要不一樣，之間的間隔距離要 100 像素。
+        turtle_2_9: 使用一個「計數迴圈」來畫出雪人家庭，它們的高度分別是 110、100、90、80、70。每個雪人的間隔距離需為 60 像素。
+        turtle_2_10: 這裡有一些程式碼可以讓你進行試驗，產生一些不同的螺旋圖形。如果改變轉彎的角度，會發生什麼事情呢？或是在迴圈中設定隨機顏色，圖形又會變怎樣呢？隨性的畫些你喜歡的東西吧！
+        maze_karel_2_1: 試著使用這些積木，幫我鏟平所有土堆，填滿所有坑洞。用用看迴圈，不要使用太多積木。提示：你可以放置一個迴圈到另一個迴圈裡。
+        maze_karel_2_2: 我們已經定義了一個自己的積木，名為 fill 5（填充 5），它現在在函式類指令中，使用它來幫我填平這個坑洞。
+        maze_karel_2_3: 使用這個新的 fill 5（填充 5）函式積木（在函式類指令中）來讓我填滿這些坑洞。
+        maze_karel_2_4: 定義一個新的函式以移除 7 鏟土。接著使用它來寫個程式，幫我移除所有的土堆。
+        maze_karel_2_5: 建立一個新的函式，以從土堆中移除 6 鏟土。使用它來幫助我擺脫這些土堆。
+        maze_karel_2_6: 使用兩個新的函式 - fill 8（填充 8）和 remove 8（移除 8），以幫助我鏟平所有土堆和填滿所有坑洞。
+        maze_karel_2_7: 我的田地上有頭牛！撰寫一個新函式，用它來幫助我避開牛隻並移除所有的土堆。記得把所有你需要的程式積木通通放在新函式裡頭。
+        maze_karel_2_8: 使用這個新函式 avoid the cow and remove 1（避開牛並移除1）來幫我鏟平所有的土堆。
+        maze_karel_2_9: 這裡有一個函式，可以將同一列中的 4 個土堆一次移除。請試著將函式放進迴圈內，讓你可以使用較少的程式積木將田裡的土堆通通移除。
+        maze_karel_2_10: 把我移動到田地，並使用這兩個函式來幫我移除所有的土堆，並填平所有的坑洞。
+        turtle_3_1: 這一關卡我們提供給你 draw a square（畫個正方形）和 draw a circle（畫個圓形） 兩個函式。定義一個函式並不會執行裡頭的程式。如果你要畫一個正方形，那麼你必須把
+          draw a square 積木拖曳到工作區才能執行。
+        turtle_3_2: 用 draw a square（畫個正方形）函式作範例，建立一個 draw a triangle（畫個三角形）函式並使用它。
+        turtle_3_3: 在貓的周圍畫一個三角形的籬巴，在牛的周圍畫一個正方形的籬巴。提示：你可以邊寫程式邊測試。
+        turtle_3_4: 看看你能不能利用 draw a square（畫個正方形）和 draw a triangle（畫個三角形）以及其它積木，來畫出一間圍繞著獅子的房子。
+        turtle_3_5: 現在建立一個新的 draw a house（畫個房子）函式，並為兩隻貓咪畫一間房子。提示：使用「做些什麼」積木建立一個新函式，並輸入你自己的文字為積木命名。
+        turtle_3_6: 使用 draw a square（畫個正方形）當範例，添加一個名為 length 的輸入到 draw a triangle
+          裡。接著畫出不同尺寸的三角形（提示：點擊星星可以為函式添加一個輸入）
+        turtle_3_7: 添加名為「長度」的輸入（input）來「畫個房子」，為大象蓋間大房子（房子長度為 150 像素）
+        turtle_3_8: 修改 draw a house（畫個房子），讓我可以在畫完房子後停在右下角。使用這個修改後的函式來畫出 3 棟房子。
+        turtle_3_9: 您可以在沒人幫助的情況下重新建立 draw a house（畫個房子）函式嗎？試著自己完成它，然後用它畫出一排房子。
+        turtle_3_10: 你已學會很多東西囉！現在就用它們來畫出任何你想畫的，試試畫個星星、畫個螺旋紋、畫個別緻的雪花。
+        maze_karel_debug_seq_1: 歡迎使用除錯階段！我的程式無法正常運行，你可以找到問題並修正它嗎？這樣一來田地才能變得平坦，我才能開始種植作物。
+        maze_karel_debug_seq_2: 這個程式是哪兒出錯了？你應該怎麼修正它好讓我可以移除那個土堆呢？
+        maze_karel_debug_repeat: 為這個程式除錯，讓我的土地變得平坦。
+        maze_karel_debug_while: 要如何修改程式，才能幫助我填滿這個坑洞？
+        maze_karel_debug_if: 幫個忙！修正這個程式，讓我的田地變得平坦。
+        maze_karel_debug_if_else: 為這個程式除錯，讓我可以填滿這些洞，並移除所有土堆。
+        maze_karel_debug_function_1: 你應該改變程式的哪個部分才能幫我移除所有的土堆？
+        maze_karel_debug_function_2: 你可以為這個程式除錯嗎？這樣我就可以讓我的地變平坦了。
+        maze_karel_debug_function_3: '編輯這個程式，那樣我就可以移除在田地上的所有土堆。 '
+        turtle_5_1: 試著運行這個程式，然後做些改變看看會發生什麼事。你能清楚的知道它是怎麼運作的嗎？（或著刪除它，然後用完全不同的程式碼來取代它）
+        turtle_5_2: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_3: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_4: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_5: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        turtle_5_6: 試著執行這個程式，然後做些改變看看它會發生什麼事情。你能清楚的知道它是怎麼運作的嗎？(或著刪除它，然後用完全不同的程式碼來取代它)
+        maze_3_1: 我必須抓到那隻豬！輸入幾個呼叫 move() 的函式，這樣我就可以把我的蛋拿回來。
+        maze_3_2: 給我寫個程式，讓我可以用它抓到那頭豬。
+        maze_3_3: 我應該如何抓到那頭豬？確保我不會撞到裝著 TNT 炸藥的盒子！
+        maze_3_4: 啊！給我一個程式讓我可以繞過那些 TNT 炸藥，然後抓到那隻豬。
+        Custom_builder: 從工具箱拖曳一些積木到工作區裡，以畫出關卡要建立的圖形，當你準備好了，點擊「運行」。
+        jigsaw_1: 點擊這個積木
+        jigsaw_2: 拖曳積木並放到目標位置
+        jigsaw_3: 排列積木以組成圖像
+        jigsaw_4: 排列積木以組成圖像
+        jigsaw_5: 排列積木以組成圖像
+        jigsaw_6: 排列積木以組成圖像
+        jigsaw_7: 排列積木以組成圖像
+        jigsaw_8: 排列積木以組成圖像
+        jigsaw_9: 排列積木以組成圖像
+        jigsaw_10: 排列積木以組成圖像
+        jigsaw_11: 排列積木以組成圖像
+        jigsaw_12: 排列積木以組成圖像
+        jigsaw_13: 解決這個難題！
+        mazestep_1: 這是迷宮步驟說明
+        mazestep_2: 這是迷宮步驟說明
+        mazestep_3: 這是迷宮步驟說明
+        mazestep_4: 這是迷宮步驟說明
+        mazestep_5: 這是迷宮步驟說明
+        studio_c2_1: 你能讓這隻狗說出 Hello World 嗎？
+        studio_c2_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
+        studio_c2_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
+        studio_c2_4: 你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？
+        studio_c2_5: 你可以寫一個程式讓章魚被點擊時說 hello 嗎？
+        studio_c2_6: 你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？
         studio_c2_7: "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓恐龍不斷地上下移動嗎？"
-        studio_c2_8: "你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。"
-        studio_c2_9: "你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？"
-        studio_c2_10: "你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？"
-        studio_c2_11: "創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。"
-        studio_c3_story_1: "你能讓這隻狗說出 Hello World 嗎？"
-        studio_c3_story_2: "你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？"
-        studio_c3_story_3: "你能寫個程式讓小狗移動到小貓那邊嗎？"
-        studio_c3_story_4: "你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？"
-        studio_c3_story_5: "你能夠添加一個積木讓章魚變得快樂嗎？"
-        studio_c3_story_6: "創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。"
-        studio_c3_game_1: "你可以寫一個程式讓章魚被點擊時說 hello 嗎？"
-        studio_c3_game_2: "你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？"
+        studio_c2_8: 你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。
+        studio_c2_9: 你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？
+        studio_c2_10: 你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？
+        studio_c2_11: 創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。
+        studio_c3_story_1: 你能讓這隻狗說出 Hello World 嗎？
+        studio_c3_story_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
+        studio_c3_story_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
+        studio_c3_story_4: 你能不能寫個程式，讓小狗移動到小貓那邊，而且讓小貓在小狗遇到他的時候說 hello？
+        studio_c3_story_5: 你能夠添加一個積木讓章魚變得快樂嗎？
+        studio_c3_story_6: 創造你自己的故事。當你做好後點擊完成，讓朋友們可以在他們的手機上體驗你的故事。
+        studio_c3_game_1: 你可以寫一個程式讓章魚被點擊時說 hello 嗎？
+        studio_c3_game_2: 你能寫個程式，用上/下/左/右方向鍵讓企鵝四處移動，碰到每一枝旗子嗎？
         studio_c3_game_3: "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓恐龍不斷地上下移動嗎？"
-        studio_c3_game_4: "你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。"
-        studio_c3_game_5: "你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？"
-        studio_c3_game_6: "你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？"
-        studio_c3_game_7: "創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。"
-        studio_playlab_1: "企鵝想要說聲 hello，你可以幫幫牠嗎？"
-        studio_playlab_2: "洞穴男孩（角色 1）和洞穴女孩（角色 2）想互相說聲 hello。你能藉由使用 2 個「說出」積木來幫助他們嗎？"
-        studio_playlab_3: "你可幫幫網球女孩到達旗子那嗎？"
-        studio_playlab_4: "你可幫幫網球男孩（角色1）到網球女孩（角色2）那兒，並且在他抵達時播放一個音效嗎？"
-        studio_playlab_5: "你可以幫幫太空寶寶嗎？當牠被點一下時，讓它說出 greetings earthlings（地球你好），在點擊「運行」後，別忘了點牠一下。"
-        studio_playlab_6: "你可以用方向鍵幫助女巫四處移動，以獲得所有魔法火球嗎？"
+        studio_c3_game_4: 你可以讓企鵝撞到恐龍時說「哎喲！」，然後播放一個「撞擊」的音效？用方向鍵移動企鵝，讓這個情況發生。
+        studio_c3_game_5: 你可以添加一個積木，讓企鵝碰到章魚時可以得一分，然後用方向鍵移動他直到達到過關分數嗎？
+        studio_c3_game_6: 你能添加一些積木，替換背景、改變企鵝的速度，接著用方向鍵移動他直到達到過關分數？
+        studio_c3_game_7: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
+        studio_playlab_1: 企鵝想要說聲 hello，你可以幫幫牠嗎？
+        studio_playlab_2: 洞穴男孩（角色 1）和洞穴女孩（角色 2）想互相說聲 hello。你能藉由使用 2 個「說出」積木來幫助他們嗎？
+        studio_playlab_3: 你可幫幫網球女孩到達旗子那嗎？
+        studio_playlab_4: 你可幫幫網球男孩（角色1）到網球女孩（角色2）那兒，並且在他抵達時播放一個音效嗎？
+        studio_playlab_5: 你可以幫幫太空寶寶嗎？當牠被點一下時，讓它說出 greetings earthlings（地球你好），在點擊「運行」後，別忘了點牠一下。
+        studio_playlab_6: 你可以用方向鍵幫助女巫四處移動，以獲得所有魔法火球嗎？
         studio_playlab_7: "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓巫師不停地左右移動嗎？"
         studio_playlab_8: |-
           添加一個積木，讓獨角獸撞上巫師時得到一分，另外添加一個積木來播放音效。
           運行遊戲並用方向鍵移動獨角獸，直到你得分為止！
-        studio_playlab_9: "將背景設為外星人入侵太空場景，並透過更改速度幫助太空寶寶更快抓到外星人。使用方向鍵來移動太空寶寶，並警告其他人。"
-        studio_playlab_10: "創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。"
-        studio_iceage_hello1: "喜德希望跟大家一起進行一次新的冒險。你可以幫他說 hello 嗎？只要把「說出」的積木拖曳到工作區，並在文字方塊上輸入
-          hello 就可以了。"
-        studio_iceage_hello2: "曼尼（角色1）找到喜德（角色2）了，他想要邀請他一塊冒險。用 2 個「角色說出」積木幫助他們互相打招呼。"
-        studio_iceage_move_to_flag: "鼠奎特正在尋找他的橡樹果實！使用「移動」積木幫助他移動到最後 200 像素位置。"
-        studio_iceage_move_to_actor: "狄亞哥（角色1）正在找曼尼（角色2）。請幫助狄亞哥使用「移動角色」積木往下移動 200
-          像素來找到曼尼，接著，在「當角色碰到」積木下方連結一個積木，讓牠們找到對方時播放一個音效。"
+        studio_playlab_9: 將背景設為外星人入侵太空場景，並透過更改速度幫助太空寶寶更快抓到外星人。使用方向鍵來移動太空寶寶，並警告其他人。
+        studio_playlab_10: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
+        studio_iceage_hello1: 喜德希望跟大家一起進行一次新的冒險。你可以幫他說 hello 嗎？只要把「說出」的積木拖曳到工作區，並在文字方塊上輸入
+          hello 就可以了。
+        studio_iceage_hello2: 曼尼（角色1）找到喜德（角色2）了，他想要邀請他一塊冒險。用 2 個「角色說出」積木幫助他們互相打招呼。
+        studio_iceage_move_to_flag: 鼠奎特正在尋找他的橡樹果實！使用「移動」積木幫助他移動到最後 200 像素位置。
+        studio_iceage_move_to_actor: 狄亞哥（角色1）正在找曼尼（角色2）。請幫助狄亞哥使用「移動角色」積木往下移動 200 像素來找到曼尼，接著，在「當角色碰到」積木下方連結一個積木，讓牠們找到對方時播放一個音效。
         studio_iceage_repeat: "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓葛瑞妮不斷地左右移動，以幫助她鍛鍊一下筋骨嗎？"
-        studio_iceage_click_hello: "你能讓喜德對朋友說 final call（最後呼叫）嗎？不要忘了在運行程式後，要點一下角色。"
-        studio_iceage_move_events: "鼠奎特就是要橡樹果實！在每個方向事件下添加移動積木，這樣牠就能到處亂跑了。完成後，點擊運行，然後試著操控牠收集橡樹果實。"
-        studio_iceage_sound_and_points: "我們已經提供了大部分的程式碼讓葛瑞妮（角色2）左右移動，也寫了程式讓喜德（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在葛瑞妮和喜德互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。"
-        studio_iceage_warn_ice_age: "冰河時期即將來臨，大家必須加快腳步！改變背景為冰的背景，接著將喜德的移動速度變快，然後點擊「運行」並移動喜德去警告狄亞哥。"
-        studio_iceage_throw_hearts: "喜德想要讓他的奶奶，葛瑞妮，知道他很愛她。使用來命令喜德（角色1）丟愛心給奶奶（角色2），並設置當奶奶接到愛心時心情會變快樂。"
-        studio_iceage_free_play: "是時候創造你自己的遊戲或故事了！當你完成後，點擊完成，讓朋友也能在手機、平板、電腦上體驗你的遊戲！"
-        studio_gumball_hello1: "陶安安想交新朋友。你可以拖曳「說出」積木到工作區，並在裡面輸入「hello」，來幫她跟朋友問好嗎？"
-        studio_gumball_hello2: "陶阿達（角色1）和他的哥哥陶阿甘（角色2）正要去學校。使用 2 個「角色說出」積木讓他們跟彼此打招呼吧！"
-        studio_gumball_move_to_flag: "蕉蕉就要在運動會比賽上獲勝啦！使用「移動」積木來幫助牠跑完這最後的 200 像素。"
-        studio_gumball_move_to_actor: "陶阿甘（角色1）及陶阿達（角色2）已經快趕不上體育表演會了！使用「移動角色」積木移動
-          200 像素，幫陶阿甘往陶阿達方向靠近。接著，連接某個程式積木到「當角色碰到」事件下，在他們找到彼此的時候能播放一個音效。"
+        studio_iceage_click_hello: 你能讓喜德對朋友說 final call（最後呼叫）嗎？不要忘了在運行程式後，要點一下角色。
+        studio_iceage_move_events: 鼠奎特就是要橡樹果實！在每個方向事件下添加移動積木，這樣牠就能到處亂跑了。完成後，點擊運行，然後試著操控牠收集橡樹果實。
+        studio_iceage_sound_and_points: 我們已經提供了大部分的程式碼讓葛瑞妮（角色2）左右移動，也寫了程式讓喜德（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在葛瑞妮和喜德互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。
+        studio_iceage_warn_ice_age: 冰河時期即將來臨，大家必須加快腳步！改變背景為冰的背景，接著將喜德的移動速度變快，然後點擊「運行」並移動喜德去警告狄亞哥。
+        studio_iceage_throw_hearts: 喜德想要讓他的奶奶，葛瑞妮，知道他很愛她。使用來命令喜德（角色1）丟愛心給奶奶（角色2），並設置當奶奶接到愛心時心情會變快樂。
+        studio_iceage_free_play: 是時候創造你自己的遊戲或故事了！當你完成後，點擊完成，讓朋友也能在手機、平板、電腦上體驗你的遊戲！
+        studio_gumball_hello1: 陶安安想交新朋友。你可以拖曳「說出」積木到工作區，並在裡面輸入「hello」，來幫她跟朋友問好嗎？
+        studio_gumball_hello2: 陶阿達（角色1）和他的哥哥陶阿甘（角色2）正要去學校。使用 2 個「角色說出」積木讓他們跟彼此打招呼吧！
+        studio_gumball_move_to_flag: 蕉蕉就要在運動會比賽上獲勝啦！使用「移動」積木來幫助牠跑完這最後的 200 像素。
+        studio_gumball_move_to_actor: 陶阿甘（角色1）及陶阿達（角色2）已經快趕不上體育表演會了！使用「移動角色」積木移動 200
+          像素，幫陶阿甘往陶阿達方向靠近。接著，連接某個程式積木到「當角色碰到」事件下，在他們找到彼此的時候能播放一個音效。
         studio_gumball_repeat: "「重複無限次」積木可以讓你不斷執行程式。你能將程式積木附加到裡頭，讓陶阿甘不停地左右移動，以幫助他在比賽前暖身嗎？"
-        studio_gumball_click_hello: "幫助土司在比賽開始前說「各就各位…預備…衝啊！」。要測試你的程式，在點擊運行後，記得要點一下土司！"
-        studio_gumball_move_events: "陶阿達正在參加旗幟收集競賽！將「移動」積木附加到每個事件下，幫助他到處亂跑。當你完成時，點擊運行，試著將收集到所有旗幟。"
-        studio_gumball_sound_and_points: "我們已經提供了大部分的程式碼讓土司（角色2）左右移動，也寫了程式讓蕉蕉（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在蕉蕉和土司互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。"
-        studio_gumball_warn_food_fight: "陶阿達剛從食物大戰中脫身！將背景設成「符號圖形」，並將陶阿達的速度設為快速，然後點擊運行，移動他到佩佩那去警告她。"
-        studio_gumball_join_food_fight: "加入食物大戰！使用「角色丟擲物品」指令讓蕉蕉（角色1）往土司（角色2）那丟食物！當土司被丟到時，將他的情緒設為生氣。"
-        studio_gumball_free_play: "建立屬於你的遊戲或故事。當你做好後點擊完成，讓你的朋友們在他們的手機、平版或電腦上體驗你的遊戲。"
-        studio_full_sandbox: "創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。"
-        studio_k1_1: "你能讓這隻狗說出 Hello World 嗎？"
-        studio_k1_2: "你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？"
-        studio_k1_3: "你能寫個程式讓小狗移動到小貓那邊嗎？"
-        studio_k1_4: "讓小狗移動到小貓身邊，在小狗到達那兒時，讓小貓跟牠說聲 hello。"
-        studio_k1_5: "你能夠添加一個積木讓章魚變得快樂嗎？"
-        studio_k1_6: "創造你自己的故事！讓貓和狗四處走動，並讓牠們說些什麼吧。"
-        maze_wordsearch_k_1: "移動我來拼出單字 EAST（東）"
-        maze_wordsearch_k_2: "移動我來拼出單字 SOUTH（南）"
-        maze_wordsearch_k_3: "移動我來拼出單字 WEST（西）"
-        maze_wordsearch_k_4: "移動我來拼出單字 NORTH（北）"
-        maze_wordsearch_k_6: "移動我，先往東然後往南，來拼出單字 JUMP（跳）"
-        maze_wordsearch_k_9: "先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 CODE 這個字"
-        maze_wordsearch_k_13: "先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 DEBUG 這個字"
-        maze_wordsearch_k_15: "先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 ABOVE 這個字"
-        maze_wordsearch_k_16: "先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 BELOW 這個字"
-        maze_wordsearch_k_20: "這是個測驗！讓我移動，以拼出單字 STORY。"
-        applab_ec_simple: "使用工具箱的積木來創造你的應用程式吧。"
-        turtle_ec_1_2: "現在，畫一個正方形。注意：透過選擇新積木「筆跡顏色」，畫上你最喜愛的顏色吧。"
-        turtle_ec_1_10: "你做到了！現在，畫你想畫的東西吧。給你些好點子：你可以畫個火柴人、雪花或者螺旋圖形。也試試看新的「筆跡寬度」積木吧。玩得開心！"
-        studio_ec_sandbox: "創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。"
+        studio_gumball_click_hello: 幫助土司在比賽開始前說「各就各位…預備…衝啊！」。要測試你的程式，在點擊運行後，記得要點一下土司！
+        studio_gumball_move_events: 陶阿達正在參加旗幟收集競賽！將「移動」積木附加到每個事件下，幫助他到處亂跑。當你完成時，點擊運行，試著將收集到所有旗幟。
+        studio_gumball_sound_and_points: 我們已經提供了大部分的程式碼讓土司（角色2）左右移動，也寫了程式讓蕉蕉（角色1）在畫面上四處移動。你可以完成這個程式嗎？添加一些積木到「當角色碰到」事件下，讓它在蕉蕉和土司互撞時播放一個音效，還有得到一分，然後點擊運行玩玩這個遊戲。
+        studio_gumball_warn_food_fight: 陶阿達剛從食物大戰中脫身！將背景設成「符號圖形」，並將陶阿達的速度設為快速，然後點擊運行，移動他到佩佩那去警告她。
+        studio_gumball_join_food_fight: 加入食物大戰！使用「角色丟擲物品」指令讓蕉蕉（角色1）往土司（角色2）那丟食物！當土司被丟到時，將他的情緒設為生氣。
+        studio_gumball_free_play: 建立屬於你的遊戲或故事。當你做好後點擊完成，讓你的朋友們在他們的手機、平版或電腦上體驗你的遊戲。
+        studio_full_sandbox: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
+        studio_k1_1: 你能讓這隻狗說出 Hello World 嗎？
+        studio_k1_2: 你能讓小狗先說一些話，然後讓小貓接著說一些話嗎？
+        studio_k1_3: 你能寫個程式讓小狗移動到小貓那邊嗎？
+        studio_k1_4: 讓小狗移動到小貓身邊，在小狗到達那兒時，讓小貓跟牠說聲 hello。
+        studio_k1_5: 你能夠添加一個積木讓章魚變得快樂嗎？
+        studio_k1_6: 創造你自己的故事！讓貓和狗四處走動，並讓牠們說些什麼吧。
+        maze_wordsearch_k_1: 移動我來拼出單字 EAST（東）
+        maze_wordsearch_k_2: 移動我來拼出單字 SOUTH（南）
+        maze_wordsearch_k_3: 移動我來拼出單字 WEST（西）
+        maze_wordsearch_k_4: 移動我來拼出單字 NORTH（北）
+        maze_wordsearch_k_6: 移動我，先往東然後往南，來拼出單字 JUMP（跳）
+        maze_wordsearch_k_9: 先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 CODE 這個字
+        maze_wordsearch_k_13: 先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 DEBUG 這個字
+        maze_wordsearch_k_15: 先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 ABOVE 這個字
+        maze_wordsearch_k_16: 先把我移往一個方向，然後再往另一個方向移動，慢慢拼出 BELOW 這個字
+        maze_wordsearch_k_20: 這是個測驗！讓我移動，以拼出單字 STORY。
+        applab_ec_simple: 使用工具箱的積木來創造你的應用程式吧。
+        turtle_ec_1_2: 現在，畫一個正方形。注意：透過選擇新積木「筆跡顏色」，畫上你最喜愛的顏色吧。
+        turtle_ec_1_10: 你做到了！現在，畫你想畫的東西吧。給你些好點子：你可以畫個火柴人、雪花或者螺旋圖形。也試試看新的「筆跡寬度」積木吧。玩得開心！
+        studio_ec_sandbox: 創造你自己的遊戲。當你做好時點擊完成，讓朋友們可以在他們的手機上體驗你的遊戲。
     video:
       name:
-        maze_intro: "迷宮 - 簡介"
-        artist_intro: "小藝術家 - 簡介"
-        farmer_intro: "農夫 - 簡介"
-        flappy_intro: "像素鳥 - 簡介"
+        maze_intro: 迷宮 - 簡介
+        artist_intro: 小藝術家 - 簡介
+        farmer_intro: 農夫 - 簡介
+        flappy_intro: 像素鳥 - 簡介
         loop_times: "「重複... 次」積木"
         loop_until: "「重複 直到」積木"
         if: "「如果」積木"
         if_else: "「如果…否則」積木"
         if_else_scrat: "「如果…否則」積木"
-        function: "函數類別"
-        loop_while: "當…積木"
+        function: 函數類別
+        loop_while: 當…積木
         loop_for: "「計數器」積木"
-        parameters: "函式帶參數"
-        hoc_wrapup: "一小時玩程式總結"
+        parameters: 函式帶參數
+        hoc_wrapup: 一小時玩程式總結
         Unplug1: CS 是什麼？
-        Unplug2: "電腦計算式思維"
-        Unplug3: "圖畫紙程式設計"
-        Unplug4: "演算法"
-        Unplug5: "函數類別"
-        Unplug6: "流程類別"
-        Unplug7: "寫歌"
-        Unplug8: "抽象概念"
-        Unplug9: "接力編程"
-        Unplug10: "網際網路 Internet"
-        Unplug11: "總結"
-        C1_happy_maps_unplugged: "快樂地圖"
-        C1_moveitmoveit_unplugged: "移動它，移動它"
-        C1_bigevent_unplugged: "大事件"
-        C1_getting_loopy: "學習迴圈"
-        C1_pair_programming: "小組編程"
-        C1_maze_intro_sequencing: "迷宮 - 序列（Sequencing）"
-        C1_maze_debugging: "迷宮 - 除錯（Debugging）"
-        C1_bee_level_intro: "蜜蜂關卡 - 簡介"
-        C1_artist_intro: "小藝術家簡介"
-        C1_spelling_bee_intro: "拼字蜜蜂簡介"
-        C1_zuck_repeat_loop: "迷宮 - 迴圈（Loops）"
-        C1_bee_loops: "蜜蜂 - 迴圈（Loops）"
-        C1_maze_loops: "迷宮 - 迴圈（Loops）"
+        Unplug2: 電腦計算式思維
+        Unplug3: 圖畫紙程式設計
+        Unplug4: 演算法
+        Unplug5: 函數類別
+        Unplug6: 流程類別
+        Unplug7: 寫歌
+        Unplug8: 抽象概念
+        Unplug9: 接力編程
+        Unplug10: 網際網路 Internet
+        Unplug11: 總結
+        C1_happy_maps_unplugged: 快樂地圖
+        C1_moveitmoveit_unplugged: 移動它，移動它
+        C1_bigevent_unplugged: 大事件
+        C1_getting_loopy: 學習迴圈
+        C1_pair_programming: 小組編程
+        C1_maze_intro_sequencing: 迷宮 - 序列（Sequencing）
+        C1_maze_debugging: 迷宮 - 除錯（Debugging）
+        C1_bee_level_intro: 蜜蜂關卡 - 簡介
+        C1_artist_intro: 小藝術家簡介
+        C1_spelling_bee_intro: 拼字蜜蜂簡介
+        C1_zuck_repeat_loop: 迷宮 - 迴圈（Loops）
+        C1_bee_loops: 蜜蜂 - 迴圈（Loops）
+        C1_maze_loops: 迷宮 - 迴圈（Loops）
         C1_playlab_storytelling: Play Lab - 創作一個故事
-        C1_planting_seed: "植物種植"
-        C1_building_foundation: "打好基礎"
-        C1_going_places_safely: "安全的到達地點"
-        C2_maze_intro: "迷宮簡介"
-        C2_artist_intro: "小藝術家簡介"
-        C2_zuck_repeat_loop: "迷宮 - 迴圈（Loops）"
-        C2_artist_loops: "小藝術家 - 迴圈（Loops）"
-        C2_artist_debugging: "小藝術家 - 除錯（Debugging）"
-        C2_bee_loops: "蜜蜂 - 迴圈（Loops）"
-        C2_bee_debugging: "蜜蜂：除錯（Debugging）"
-        C2_bee_conditionals: "蜜蜂 - 條件判斷（Conditionals）"
+        C1_planting_seed: 植物種植
+        C1_building_foundation: 打好基礎
+        C1_going_places_safely: 安全的到達地點
+        C2_maze_intro: 迷宮簡介
+        C2_artist_intro: 小藝術家簡介
+        C2_zuck_repeat_loop: 迷宮 - 迴圈（Loops）
+        C2_artist_loops: 小藝術家 - 迴圈（Loops）
+        C2_artist_debugging: 小藝術家 - 除錯（Debugging）
+        C2_bee_loops: 蜜蜂 - 迴圈（Loops）
+        C2_bee_debugging: 蜜蜂：除錯（Debugging）
+        C2_bee_conditionals: 蜜蜂 - 條件判斷（Conditionals）
         C2_playlab_createstory: Play Lab - 創作一個故事
-        C2_graph_paper: "圖畫紙程式設計"
-        C2_conditionals_with_cards: "流程類別"
-        C2_binary_bracelets: "二進制手環"
-        C2_relay_programming: "接力編程"
-        C2_paper_airplanes: "紙飛機"
-        C2_digital_footprint: "你的數位足跡"
-        C2_digital_footprint_v2: "你的數位足跡"
-        C3_maze_level_4: "迷宮 - 迴圈（Loops）"
-        C3_artist_intro: "小藝術家簡介"
-        C3_artist_functions: "小藝術家 - 函式（Functions）"
-        C3_bee_functions: "蜜蜂 - 函式（Functions）"
-        C3_bee_conditionals: "蜜蜂 - 條件判斷（Conditionals）"
-        C3_maze_conditionals: "迷宮 - 條件判斷（Conditionals）"
-        C3_artist_nested_loops: "巢狀迴圈"
-        C3_farmer_while: "當…迴圈"
-        C3_bee_nested_loops: "巢狀迴圈"
-        C3_bee_debugging: "蜜蜂：除錯（Debugging）"
-        C3_bounce: "彈跳"
+        C2_graph_paper: 圖畫紙程式設計
+        C2_conditionals_with_cards: 流程類別
+        C2_binary_bracelets: 二進制手環
+        C2_relay_programming: 接力編程
+        C2_paper_airplanes: 紙飛機
+        C2_digital_footprint: 你的數位足跡
+        C2_digital_footprint_v2: 你的數位足跡
+        C3_maze_level_4: 迷宮 - 迴圈（Loops）
+        C3_artist_intro: 小藝術家簡介
+        C3_artist_functions: 小藝術家 - 函式（Functions）
+        C3_bee_functions: 蜜蜂 - 函式（Functions）
+        C3_bee_conditionals: 蜜蜂 - 條件判斷（Conditionals）
+        C3_maze_conditionals: 迷宮 - 條件判斷（Conditionals）
+        C3_artist_nested_loops: 巢狀迴圈
+        C3_farmer_while: 當…迴圈
+        C3_bee_nested_loops: 巢狀迴圈
+        C3_bee_debugging: 蜜蜂：除錯（Debugging）
+        C3_bounce: 彈跳
         C3_playlab_create_game: Play Lab - 設計一個遊戲
-        C3_computational_thinking: "電腦計算式思維"
-        C3_dice_race: "擲骰子比賽"
-        C3_internet: "網際網路 Internet"
-        C3_crowdsourcing: "群眾外包（Crowdsourcing）"
-        C3_functional_suncatchers: "實用的透光窗飾（Suncatcher）"
-        C3_songwriting_with_parameters: "用參數寫歌"
-        C4_intro: "介紹"
-        C4_loops_zombie: "迴圈"
-        C4_bee_conditional: "蜜蜂 - 條件判斷（Conditionals）"
-        C4_variables_artist: "變數 - 藝術家"
-        C4_variables_playlab: "變數 - Play Lab"
-        C4_for_loops: "計數迴圈（For Loops）"
-        C4_for_loops_bee: "計數迴圈（For Loops）"
-        C4_for_loops_no_bee: "計數迴圈（For Loops）"
-        C4_math_artist: "用數學來編程的小藝術家"
-        C4_function_edit: "編輯函式"
-        C4_function_create: "建立函式"
-        C4_function_parameters: "函式帶參數"
-        C4_conditionals: "條件判斷（Conditionals）"
-        C4_unplugged_algorithms: "演算法與七巧板"
-        C4_unplugged_madlibs: "瘋狂字謎"
-        C4_unplugged_variables: "信封裡的變數"
-        C4_unplugged_forloops: "計數迴圈（For Loops）"
-        C4_unplugged_parameters: "用參數寫歌"
-        C4_unplugged_binary: "二進制（Binary）"
+        C3_computational_thinking: 電腦計算式思維
+        C3_dice_race: 擲骰子比賽
+        C3_internet: 網際網路 Internet
+        C3_crowdsourcing: 群眾外包（Crowdsourcing）
+        C3_functional_suncatchers: 實用的透光窗飾（Suncatcher）
+        C3_songwriting_with_parameters: 用參數寫歌
+        C4_intro: 介紹
+        C4_loops_zombie: 迴圈
+        C4_bee_conditional: 蜜蜂 - 條件判斷（Conditionals）
+        C4_variables_artist: 變數 - 藝術家
+        C4_variables_playlab: 變數 - Play Lab
+        C4_for_loops: 計數迴圈（For Loops）
+        C4_for_loops_bee: 計數迴圈（For Loops）
+        C4_for_loops_no_bee: 計數迴圈（For Loops）
+        C4_math_artist: 用數學來編程的小藝術家
+        C4_function_edit: 編輯函式
+        C4_function_create: 建立函式
+        C4_function_parameters: 函式帶參數
+        C4_conditionals: 條件判斷（Conditionals）
+        C4_unplugged_algorithms: 演算法與七巧板
+        C4_unplugged_madlibs: 瘋狂字謎
+        C4_unplugged_variables: 信封裡的變數
+        C4_unplugged_forloops: 計數迴圈（For Loops）
+        C4_unplugged_parameters: 用參數寫歌
+        C4_unplugged_binary: 二進制（Binary）
         CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles in Artist
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
@@ -374,22 +372,22 @@
         CSF_create_functions: Create Functions
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: "計算機科學很重要"
+        CSF_EF_cs_matters: 計算機科學很重要
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
-        CSF_my_robotic_friends: "我的機器人朋友"
+        CSF_my_robotic_friends: 我的機器人朋友
         CSF_Power_of_Words: Power of Words
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie 和 Big Project
         CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: "重複迴圈"
-        frozen_intro: "一小時玩程式介紹"
-        frozen_loops: "迴圈（Loops）的介紹"
-        frozen_functions: "函式（Functions）的介紹"
+        CSF_zuck_loops_short: 重複迴圈
+        frozen_intro: 一小時玩程式介紹
+        frozen_loops: 迴圈（Loops）的介紹
+        frozen_functions: 函式（Functions）的介紹
         playlab_intro: Play Lab 的介紹
         playlab_events: Play Lab - 事件（Evnets）
         playlab_repeat_forever: Play Lab - 重複無限次
-        tutorial_puzzle_challenge: "關卡挑戰教程"
+        tutorial_puzzle_challenge: 關卡挑戰教程
         infinity_playlab_intro: Play Lab - 簡介
         infinity_playlab_events: Play Lab - 事件（Evnets）
         infinity_playlab_repeat_forever: Play Lab - 重複無限次
@@ -405,17 +403,17 @@
           To Change Our Lives
         csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
         csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: "動畫頁籤"
+        csd_gamelab_animation_tab: 動畫頁籤
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: "動畫角色"
+        csd_gamelab_sprites_2: 動畫角色
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: "速度"
+        csd_gamelab_velocity: 速度
         csd_weblab_intro_1: Web Lab 介紹 - 第 1 部分
         csd_weblab_intro_2: Web Lab 介紹 - 第 2 部分
         csd_weblab_css_1: CSS 介紹 -  第 1 部分
@@ -438,20 +436,20 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "函式（Functions）的介紹"
-        csp_applab_functions_parameters: "函式帶參數"
-        csp_applab_loops: "迴圈"
+        csp_applab_functions: 函式（Functions）的介紹
+        csp_applab_functions_parameters: 函式帶參數
+        csp_applab_loops: 迴圈
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
         csp_concept_encryption: 'The Internet: Encryption & Public Keys'
         csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: "網際網路是什麼？"
+        csp_concept_what_is_internet: 網際網路是什麼？
         csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: "關於像素的二三事"
+        csp_concept_rgb: 關於像素的二三事
         csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -483,29 +481,29 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: "星際大戰：用程式建立一個銀河系 - 介紹"
-        starwars_typing: "星際大戰：用程式建立一個銀河系 - JavaScript"
-        starwars_events: "星際大戰：用程式建立一個銀河系 - 事件"
-        starwars_congrats: "星際大戰：用程式建立一個銀河系 - 恭喜"
-        starwars_blocks_intro: "星際大戰：用程式建立一個銀河系 - 介紹"
-        starwars_blocks_events: "星際大戰：用程式建立一個銀河系 - 事件"
-        starwars_blocks_congrats: "星際大戰：用程式建立一個銀河系 - 恭喜"
+        starwars_intro: 星際大戰：用程式建立一個銀河系 - 介紹
+        starwars_typing: 星際大戰：用程式建立一個銀河系 - JavaScript
+        starwars_events: 星際大戰：用程式建立一個銀河系 - 事件
+        starwars_congrats: 星際大戰：用程式建立一個銀河系 - 恭喜
+        starwars_blocks_intro: 星際大戰：用程式建立一個銀河系 - 介紹
+        starwars_blocks_events: 星際大戰：用程式建立一個銀河系 - 事件
+        starwars_blocks_congrats: 星際大戰：用程式建立一個銀河系 - 恭喜
         mc_intro: Minecraft - 介紹
         mc_repeat: Minecraft - 重複循環
         mc_if_statements: Minecraft - 判斷式
         mc_congrats_share: Minecraft - 恭喜
         mc_congrats_no_share: Minecraft - 恭喜
-        gumball_intro: "一小時玩陶阿甘 - 簡介"
-        gumball_events: "一小時玩陶阿甘 - 事件（Evnets）"
-        gumball_repeat: "一小時玩陶阿甘 - 重複陳述式"
-        iceage_intro: "一小時玩冰原歷險記 - 介紹"
-        iceage_events: "一小時玩冰原歷險記 - 事件（Evnets）"
-        iceage_repeat: "一小時玩冰原歷險記 - 重複陳述式"
-        mc_2016_intro: "一小時玩 Minecraft - 介紹"
-        mc_2016_loops: "一小時玩 Minecraft - 迴圈 (Loops)"
-        mc_2016_events: "一小時玩 Minecraft - 事件 (Events)"
-        mc_2016_spawn: "一小時玩 Minecraft - 生成 (Spawn)"
-        mc_2016_congrats: "一小時玩 Minecraft - 恭喜"
+        gumball_intro: 一小時玩陶阿甘 - 簡介
+        gumball_events: 一小時玩陶阿甘 - 事件（Evnets）
+        gumball_repeat: 一小時玩陶阿甘 - 重複陳述式
+        iceage_intro: 一小時玩冰原歷險記 - 介紹
+        iceage_events: 一小時玩冰原歷險記 - 事件（Evnets）
+        iceage_repeat: 一小時玩冰原歷險記 - 重複陳述式
+        mc_2016_intro: 一小時玩 Minecraft - 介紹
+        mc_2016_loops: 一小時玩 Minecraft - 迴圈 (Loops)
+        mc_2016_events: 一小時玩 Minecraft - 事件 (Events)
+        mc_2016_spawn: 一小時玩 Minecraft - 生成 (Spawn)
+        mc_2016_congrats: 一小時玩 Minecraft - 恭喜
         applab_hoc_welcome: App Lab Hour of Code - Welcome
         applab_hoc_setproperty: App Lab Hour of Code - setProperty
         applab_hoc_onevent: App Lab Hour of Code - onEvent
@@ -514,7 +512,7 @@
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
         mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: "一小時玩 Minecraft - 恭喜"
+        mc_2017_congratulations: 一小時玩 Minecraft - 恭喜
         mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
         mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
         mc_2017_puzzle_8: Minecraft Hour of Code - Functions
@@ -540,81 +538,84 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
-        drag_blocks: "拖曳一個「移動」積木並將它放到其他積木下方"
-        run: "點擊「運行」以試試你的程式"
-        watch_again: "點擊此處再次觀看影片"
-        gray_block_explanation: "你不能刪掉灰色的程式積木。這樣你還能完成這道關卡嗎？"
-        show_code_explanation: "點擊此處以查看你正在做的程式碼"
-        instructions_repeat_explanation: "每個關卡的指示都會在顯示在這兒"
-        category_explanation: "你可以使用的積木都還在，只不過它們現在被分類放置了。"
-        set_sprite_image: "添加一個「角色圖像設為」積木到「當故事開始時」積木下，來為這個故事添加一個角色。"
-        studio_say_text: "輸入你想要角色說的話"
-        jigsaw_click: "點一下這個積木！"
-        move_elsa_forward: "拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。"
-        turn_elsa: "使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。"
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
-        replace_questions_degree: "使用下拉清單，把「???」換成要轉向的角度。"
-        repeat_blocks: "使用「重複」積木，並包住工作區上的所有積木。"
+        drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方
+        run: 點擊「運行」以試試你的程式
+        watch_again: 點擊此處再次觀看影片
+        gray_block_explanation: 你不能刪掉灰色的程式積木。這樣你還能完成這道關卡嗎？
+        show_code_explanation: 點擊此處以查看你正在做的程式碼
+        instructions_repeat_explanation: 每個關卡的指示都會在顯示在這兒
+        category_explanation: 你可以使用的積木都還在，只不過它們現在被分類放置了。
+        set_sprite_image: 添加一個「角色圖像設為」積木到「當故事開始時」積木下，來為這個故事添加一個角色。
+        studio_say_text: 輸入你想要角色說的話
+        jigsaw_click: 點一下這個積木！
+        move_elsa_forward: 拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。
+        turn_elsa: 使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
+        replace_questions_degree: 使用下拉清單，把「???」換成要轉向的角度。
+        repeat_blocks: 使用「重複」積木，並包住工作區上的所有積木。
         repeat_blocks_1: "(1) 使用這個積木，把它放到在工作區上的灰色積木周圍。"
         repeat_blocks_2: "(2) 將「重複」積木移到這裡，並將灰色積木放到它裡面。"
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
-        degrees_per_side: "用 360 除以邊數就可以得到每個角的角度。"
-        set_sides: "使用這個積木將 sides（邊數）設置成完成關卡所需的數值。"
-        set_length: "使用這個積木將 length（長度）設置成正確數值。"
-        which_equation: "哪個等式會讓多邊形的每條邊更短，並且有更多的邊？"
-        get_nectar: "使用新的「採集花蜜」積木。"
-        actions_category: "工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。"
-        draw_square_hint: "提示：使用你在上一關做出來的正方形迴圈。"
-        edit_function: "點擊此處以編輯你的函式。"
-        create_function: "點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。"
-        house_hint: "這個圖案看上去還不像個房子，不過沒關係，我們會在下個關卡修正它。"
-        edit_draw_square: "使用這個按鈕來編輯函式，然後添加一個迴圈。"
-        edit_get_nectar: "使用這個按鈕來編輯函式，然後改變蜜蜂的轉向，讓牠採集到花蜜。"
-        logic_category: "開啟邏輯類別的視窗，找到「如果…否則」積木。"
-        length_parameter: "你可以更新這個函式，讓它能使用 length（長度）參數嗎？"
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
-        frozen_circle_function_in_circle_turn: "創造出一個圓形之後別忘了轉向喔。"
-        frozen_circle_function_with_parameter_circle: "使用「建立一個圓形」積木並修改它的尺寸。"
-        frozen_snowflake_branch: "使用「建立雪花分支」積木"
-        frozen_create_square: "添加更多積木到這兒以建立一個正方形"
-        playlab_drag_say: "拖曳「說出」積木，然後鍵入 hello"
-        playlab_use_twice: "使用這個積木 2 次，記住要修改角色數字"
-        playlab_move_girl: "使用「移動-向右」積木來讓網球女孩移動"
-        playlab_play_sound: "添加「播放音效」積木到這裡"
-        playlab_arrow_keys: "在點擊運行後，記得要使用這些按鍵來移動女巫。"
-        playlab_add_move: "添加一些「移動」積木到「重複」積木裡頭。"
-        playlab_add_score: "添加分數積木到這兒"
-        playlab_add_blocks: "添加你的積木到這兒"
-        set_variable: "拖曳一個數字積木到這兒以設定你的變數"
-        place_variable: "拖曳你的變數到這個積木中"
-        bee_for_loop: "拖曳你想要蜜蜂收集到的花蜜，愈多愈好。"
-        place_counter_variable: "拖曳計數器變數到這個積木"
-        function_editor_draw_square: "這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。"
-        change_here: "在這裡修改"
-        write_draw_square_function: "從工具箱中拖曳多個積木到這兒以畫出一個正方形"
-        write_draw_triangle_function: "從工具箱中拖曳程式積木到這裡來畫出一個三角形"
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
-        add_and_drag_parameter: "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
-        fill_in_actor: "在問號（???）處填入數字，讓它分別對應角色 1、2、3"
-        repeat: "將程式積木放在迴圈中來重複執行指令"
-        if_bee_nectar: "使用「如果」積木來決定蜜蜂是不是應該要採集花蜜。"
-        if_else_bee: "使用「如果…否則」積木，那樣一來就可以讓蜜蜂從花朵採集花蜜，如果不是花朵就釀造蜂蜜。"
-        repeat_full_circle: "殭屍需要移動多少次才能完成一個圓？輸入移動的次數。"
-        place_length_variable: "拖曳 length（長度）參數到這裡以取代問號"
-        arrows_move_actor: "使用這些方向鍵來移動角色"
-        right_arrow_fireball: "使用向右鍵來發射火球"
-        name_function: "在這裡寫下函式的名稱"
-        Infinity_move_right_runbutton: "添加移動積木到這兒"
-        Infinity_move_directions_callout: "當按向上鍵時，哪個積木可以讓杯麵向上移動？"
-        Infinity_move_directions_callout_arrow: "使用這些方向鍵來進行引導"
-        Infinity_move_collide_callout: "當事件發生時播放一個音效。"
-        Infinity_repeat_callout: "放置移動積木到這裡面"
-        craft_run_button_callout: "點擊「運行」按鈕，看看程式的結果"
-        craft_drag_block_callout: "拖曳「移動-向前」積木，貼合到其他積木下方"
-        craft_callout_preplaced: "我們預先在這裡放了一些積木，方便您開始"
-        craft_inside_repeat: "將積木放在這裡可以重複執行程式"
-        craft_callout_preplaced_house: "此代碼會開始建造你的房屋。你能完成嗎？"
-        craft_what_is_iron: "開採這塊鐵礦！"
-        craft_callout_moveforward: "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
+        degrees_per_side: 用 360 除以邊數就可以得到每個角的角度。
+        set_sides: 使用這個積木將 sides（邊數）設置成完成關卡所需的數值。
+        set_length: 使用這個積木將 length（長度）設置成正確數值。
+        which_equation: 哪個等式會讓多邊形的每條邊更短，並且有更多的邊？
+        get_nectar: 使用新的「採集花蜜」積木。
+        actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
+        draw_square_hint: 提示：使用你在上一關做出來的正方形迴圈。
+        edit_function: 點擊此處以編輯你的函式。
+        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
+        house_hint: 這個圖案看上去還不像個房子，不過沒關係，我們會在下個關卡修正它。
+        edit_draw_square: 使用這個按鈕來編輯函式，然後添加一個迴圈。
+        edit_get_nectar: 使用這個按鈕來編輯函式，然後改變蜜蜂的轉向，讓牠採集到花蜜。
+        logic_category: 開啟邏輯類別的視窗，找到「如果…否則」積木。
+        length_parameter: 你可以更新這個函式，讓它能使用 length（長度）參數嗎？
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
+        frozen_circle_function_in_circle_turn: 創造出一個圓形之後別忘了轉向喔。
+        frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
+        frozen_snowflake_branch: 使用「建立雪花分支」積木
+        frozen_create_square: 添加更多積木到這兒以建立一個正方形
+        playlab_drag_say: 拖曳「說出」積木，然後鍵入 hello
+        playlab_use_twice: 使用這個積木 2 次，記住要修改角色數字
+        playlab_move_girl: 使用「移動-向右」積木來讓網球女孩移動
+        playlab_play_sound: 添加「播放音效」積木到這裡
+        playlab_arrow_keys: 在點擊運行後，記得要使用這些按鍵來移動女巫。
+        playlab_add_move: 添加一些「移動」積木到「重複」積木裡頭。
+        playlab_add_score: 添加分數積木到這兒
+        playlab_add_blocks: 添加你的積木到這兒
+        set_variable: 拖曳一個數字積木到這兒以設定你的變數
+        place_variable: 拖曳你的變數到這個積木中
+        bee_for_loop: 拖曳你想要蜜蜂收集到的花蜜，愈多愈好。
+        place_counter_variable: 拖曳計數器變數到這個積木
+        function_editor_draw_square: 這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。
+        change_here: 在這裡修改
+        write_draw_square_function: 從工具箱中拖曳多個積木到這兒以畫出一個正方形
+        write_draw_triangle_function: 從工具箱中拖曳程式積木到這裡來畫出一個三角形
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
+        fill_in_actor: 在問號（???）處填入數字，讓它分別對應角色 1、2、3
+        repeat: 將程式積木放在迴圈中來重複執行指令
+        if_bee_nectar: 使用「如果」積木來決定蜜蜂是不是應該要採集花蜜。
+        if_else_bee: 使用「如果…否則」積木，那樣一來就可以讓蜜蜂從花朵採集花蜜，如果不是花朵就釀造蜂蜜。
+        repeat_full_circle: 殭屍需要移動多少次才能完成一個圓？輸入移動的次數。
+        place_length_variable: 拖曳 length（長度）參數到這裡以取代問號
+        arrows_move_actor: 使用這些方向鍵來移動角色
+        right_arrow_fireball: 使用向右鍵來發射火球
+        name_function: 在這裡寫下函式的名稱
+        Infinity_move_right_runbutton: 添加移動積木到這兒
+        Infinity_move_directions_callout: 當按向上鍵時，哪個積木可以讓杯麵向上移動？
+        Infinity_move_directions_callout_arrow: 使用這些方向鍵來進行引導
+        Infinity_move_collide_callout: 當事件發生時播放一個音效。
+        Infinity_repeat_callout: 放置移動積木到這裡面
+        craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
+        craft_drag_block_callout: 拖曳「移動-向前」積木，貼合到其他積木下方
+        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
+        craft_inside_repeat: 將積木放在這裡可以重複執行程式
+        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
+        craft_what_is_iron: 開採這塊鐵礦！
+        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？

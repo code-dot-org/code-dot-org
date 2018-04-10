@@ -315,8 +315,10 @@
         maze_3_2: Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu.
         maze_3_3: Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak
           menabrak kotak TNT!
-        maze_3_4: |
-          Waduh! Buatkan saya sebuah program yang membantu saya mencapai babi tetapi menghindari TNT.
+        maze_3_4: 'Waduh! Buatkan saya sebuah program yang membantu saya mencapai
+          babi tetapi menghindari TNT.
+
+'
         Custom_builder: Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat
           yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.
         jigsaw_1: Klik blok
@@ -661,17 +663,18 @@
         infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+        csd_concept_binary_data: 'Cara Kerja Komputer: Biner & Data'
+        csd_concept_circuits_logic: 'Cara Kerja Komputer: Sirkuit & Logika'
+        csd_concept_memory_cpu_input_output: 'Cara Kerja Komputer: Memori, CPU, Input,
           & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_hardware_software: 'Cara Kerja Komputer: Perangkat Keras & Perangkat
+          Lunak'
+        csd_concept_search: Cara Kerja Pencarian
+        csd_external_amazon_data: Bagaimana Data Besar Digunakan Di Amazon Sistem
+          Rekomendasi Untuk Mengubah Kehidupan Kita
+        csd_external_netflix_data: Bagaimana Netflix Membuat Acara TV dan Saran Film?
+        csd_external_waze_data: Mengapa Banyak Pengguna terobsesi Dengan Waze?
+        csd_gamelab_animation_tab: Tab Animasi
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -681,12 +684,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Percepatan
+        csd_weblab_intro_1: Introduksi ke Web Lab - Bagian 1
+        csd_weblab_intro_2: Introduksi ke Web Lab - Bagian 2
+        csd_weblab_css_1: Introduksi ke CSS - Bagian 1
+        csd_weblab_css_2: Introduksi ke CSS - Bagian 2
+        csd_weblab_intro_3: Introduksi ke Web Lab - Bagian 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -811,6 +814,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Pengenalan untuk array
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

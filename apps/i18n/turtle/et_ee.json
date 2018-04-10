@@ -74,13 +74,13 @@
   "penDown": "pliiats alla",
   "penTooltip": "Tõstab või langetab pliiatsi joonistamise alustamiseks või lõpetamiseks.",
   "penUp": "pliiats üles",
+  "pointTo": "point to",
   "pixels": "piksli võrra",
   "reinfFeedbackMsg": "Siin on sinu joonistus! Jätka selle kallal töötamist või alusta järgmise ülesandega.",
   "setAlpha": "seada alfa",
   "setCharacter": "määra tegelene {character}",
   "setColour": "vali värv",
   "setPattern": "vali muster",
-  "setStickerSize": "Set sticker size",
   "setWidth": "vali laius",
   "shareDrawing": "Jaga oma joonistust:",
   "showMe": "Näita",
@@ -94,5 +94,6 @@
   "turnTooltip": "Pöörab kunstnikku vasakule või paremale etteantud nurga võrra.",
   "turtleVisibilityTooltip": "Teeb kunstniku nähtavaks või peidab selle.",
   "widthTooltip": "Muudab pliiatsi laiust.",
+  "withSize": "with size",
   "wrongColour": "Sinu pilt on valet värvi. Selle mõistatuse jaoks peab värv olema %1."
 }

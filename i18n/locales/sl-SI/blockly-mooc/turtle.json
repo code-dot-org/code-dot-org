@@ -74,13 +74,13 @@
   "penDown": "začni risati",
   "penTooltip": "Dvigne ali spusti svinčnik, da začne ali neha risati.",
   "penUp": "nehaj risati",
+  "pointTo": "point to",
   "pixels": "pikslov",
   "reinfFeedbackMsg": "Tukaj je tvoja risba! Lahko jo dopolniš ali pa rešiš naslednjo uganko.",
   "setAlpha": "nastavi prosojnost",
   "setCharacter": "set character to {character}",
   "setColour": "izberi barvo pisala",
   "setPattern": "določi vzorec",
-  "setStickerSize": "Set sticker size",
   "setWidth": "določi debelino pisala",
   "shareDrawing": "Deli svojo sliko:",
   "showMe": "Pokaži mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Obrne umetnika levo ali desno za določeno število stopinj.",
   "turtleVisibilityTooltip": "Naredi umetnika vidnega ali nevidnega.",
   "widthTooltip": "Spremeni debelino pisala.",
+  "withSize": "with size",
   "wrongColour": "Tvoja slika je napačne barve. Za to uganko mora biti %1."
 }

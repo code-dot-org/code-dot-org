@@ -95,8 +95,8 @@
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
-    not_linked: "Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se
-      morate prijaviti z vnosom gesla spodaj."
+    not_linked: Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se morate
+      prijaviti z vnosom gesla spodaj.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
@@ -172,14 +172,14 @@
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "Že imate račun? Vpišite se"
+    title: Že imate račun? Vpišite se
     login: Elektronska pošta
     login_username: Email or Username
     password: Geslo
     remember: Zapomni si me
     submit: Vpis
   signin:
-    try_heading: "Želiš poskusiti kodirati brez prijave?"
+    try_heading: Želiš poskusiti kodirati brez prijave?
     try_hoc: Poizkusite najprej eno Uro kode
     try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
   signinsection:
@@ -248,7 +248,7 @@
         prijavo tukaj in jih potem poskusi ponovno dodati
       section_not_found: Odseka s kodo "%{section_code}" ni bilo mogoče najti.
       blank_code: Vnesite šifro razdelka
-      cant_join_own_section: "Žal se ne morete pridružiti svojemu razdelku."
+      cant_join_own_section: Žal se ne morete pridružiti svojemu razdelku.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
@@ -332,13 +332,13 @@
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: Nadzorna plošča za okrožje
-      label: "Živjo %{username}"
+      label: Živjo %{username}
       stats: Moj napredek
       settings: Moj račun
       logout: Izpis
       signin: Prijava
       signup: Ustvari račun
-      already_registered: "Že registrirani?"
+      already_registered: Že registrirani?
       pair_programming: Programiranje parov
       team: Ekipa
       driver: Voznik
@@ -423,12 +423,12 @@
   home:
     title: Studio za kodiranje
     description: Code Studio je dom spletnih tečajev, ki jih je ustvaril Code.org
-    lines_of_code: "ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE"
+    lines_of_code: ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE
     lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
       VRSTIC KODE"
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
-    signin_message: "Že registrirani? %{link}"
+    signin_message: Že registrirani? %{link}
     student_reg_link: Vpis študenta
     teacher_reg_link: Vpis učitelja
     signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
@@ -583,12 +583,12 @@
       bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
       Learning."
   move_students:
-    new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
-      drugo šifro odseka."
+    new_section_dne: Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
+      drugo šifro odseka.
     section_code_cant_be_current_section: Trenutni odsek ne more biti enak kot nov
       odsek.
-    current_section_dne: "Žal, oddelek %{current_section_code} ne obstaja. Prosimo
-      vnesite drugo šifro odseka."
+    current_section_dne: Žal, oddelek %{current_section_code} ne obstaja. Prosimo
+      vnesite drugo šifro odseka.
     student_ids_not_entered: Prosimo vnesite student_ids.
     student_not_found: Eden ali več učencev ni bilo najdenih.
     all_students_must_be_in_current_section: Vsi učenci morajo trenutno biti vključeni
@@ -602,7 +602,7 @@
     try_hour_of_code: Poizkusi Uro za kodo!
   gender:
     male: Moški
-    female: "Ženska"
+    female: Ženska
     none: Raje ne bi odgovoril
   user_type:
     student: Učenec
@@ -905,9 +905,9 @@
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: "Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
+    message: Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
       o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil,
-      prodal ali delil s tretjimi osebami."
+      prodal ali delil s tretjimi osebami.
     sign_out: Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
@@ -949,7 +949,7 @@
     message: Please tell us your race (check all that apply)
     races:
     - white: Bela
-    - black: "Črna ali Afroameričan"
+    - black: Črna ali Afroameričan
     - hispanic: Hispanic ali Latino
     - asian: Azijske
     - hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
@@ -1038,8 +1038,8 @@
         storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi.
       policy_violation: This project contains information that cannot be shared with
         others. Please contact the app owner to fix the contents of their app.
-      contact_us: "Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
-        nas.</a>"
+      contact_us: Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
+        nas.</a>
       go_to_code_studio: Pojdi v Code studio
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying,
@@ -1056,7 +1056,7 @@
         abuse_type:
           question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
           harassment: Grožnje, ustrahovanje, nadlegovanje
-          offensive: "Žaljiva vsebina"
+          offensive: Žaljiva vsebina
           infringement: Kršitev avtorskih pravic
           other: Drugi
         detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.

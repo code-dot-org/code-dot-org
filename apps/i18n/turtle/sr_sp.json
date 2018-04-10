@@ -74,13 +74,13 @@
   "penDown": "Спусти оловку",
   "penTooltip": "листа љубитеља оловке, да почну или престану цртати.",
   "penUp": "Узми оловку",
+  "pointTo": "point to",
   "pixels": "пиксели",
   "reinfFeedbackMsg": "Овде је Ваш цртеж! Наставите да радите на њему или наставите даље.",
   "setAlpha": "поставите алфа",
   "setCharacter": "set character to {character}",
   "setColour": "постави боју",
   "setPattern": "поставите шаблон",
-  "setStickerSize": "Set sticker size",
   "setWidth": "постави ширину",
   "shareDrawing": "Подели свој цртеж:",
   "showMe": "Покажи",
@@ -94,5 +94,6 @@
   "turnTooltip": "Окреће уметника улево или удесно за одређени број степени.",
   "turtleVisibilityTooltip": "Чини уметника видљивим или невидљивим.",
   "widthTooltip": "Мења ширину оловке.",
+  "withSize": "with size",
   "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1."
 }

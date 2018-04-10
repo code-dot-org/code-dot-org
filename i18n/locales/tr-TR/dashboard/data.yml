@@ -522,6 +522,9 @@ tr:
         applab_intro_share: App Lab - Uygulamanı paylaş
         csd_applab_arrays: Dizilere Giriş
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: BB-8 ile Döngüler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

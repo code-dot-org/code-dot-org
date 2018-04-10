@@ -36,9 +36,9 @@
           dụng chúng để xây dựng đoạn code của bạn.
       9:
         image: notes/hoc1_9.jpg
-        text: "Ở bên phải là không gian làm việc nơi mà bạn sẽ kéo từng khối lệnh
-          từ hộp công cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó
-          vào thùng rác ở trong góc."
+        text: Ở bên phải là không gian làm việc nơi mà bạn sẽ kéo từng khối lệnh từ
+          hộp công cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào
+          thùng rác ở trong góc.
       10:
         image: notes/hoc1_10.jpg
         text: Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối lệnh "di chuyển về phía
@@ -46,9 +46,9 @@
           sẽ di chuyển 1 bước trong mê cung.
       11:
         image: notes/hoc1_11.jpg
-        text: "Để thực hiện nhiều hơn 1 hành động, bạn có thể kéo nhiều khối lệnh
-          vào không gian làm việc của bạn và gắn chúng vào với nhau. Con chim sẽ thực
-          hiện các dòng lệnh từ trên xuống dưới."
+        text: Để thực hiện nhiều hơn 1 hành động, bạn có thể kéo nhiều khối lệnh vào
+          không gian làm việc của bạn và gắn chúng vào với nhau. Con chim sẽ thực
+          hiện các dòng lệnh từ trên xuống dưới.
       12:
         image: notes/hoc1_12.jpg
         text: Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi
@@ -409,8 +409,8 @@
           viết ngay bên dưới bề mặt.
       6:
         image: notes/frozen1_6.jpg
-        text: "Ở giữa là hộp công cụ, và mỗi khối là một hành động mà Elsa và Anna
-          có thể làm."
+        text: Ở giữa là hộp công cụ, và mỗi khối là một hành động mà Elsa và Anna
+          có thể làm.
       7:
         image: notes/frozen1_7.jpg
         text: 'Khoảng trắng ở phía bên phải được gọi là workspace, và đây là nơi chúng
@@ -578,13 +578,13 @@
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: "Đây là khối vẽ của bạn. Sử dụng đúng để di chuyển các nhân vật mà chúng
-          cần phải đi để điền vào các dòng màu xám."
+        text: Đây là khối vẽ của bạn. Sử dụng đúng để di chuyển các nhân vật mà chúng
+          cần phải đi để điền vào các dòng màu xám.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "Đây là những khối nhảy. Khi bạn sử dụng này, nhân vật của bạn di chuyển
+        text: Đây là những khối nhảy. Khi bạn sử dụng này, nhân vật của bạn di chuyển
           nhưng không đi đến gần, mà sử dụng này khối này để nhảy đến dòng màu xám
-          kế tiếp."
+          kế tiếp.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -704,10 +704,10 @@
           đi lặp lại chúng để hoàn thành điệu nhảy.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: "Đây là những bước bạn cần học. Vỗ tay. Đặt tay ra sau đầu. Đặt tay
-          lên eo. Nâng tay trái lên. Nâng tay phải lên. Khá đơn giản phải không? Bạn
-          sẽ nhận ra là bạn có thể rút ngắn chỉ dẫn bằng cách ghi nhớ một số bước
-          nhảy theo vòng lặp."
+        text: Đây là những bước bạn cần học. Vỗ tay. Đặt tay ra sau đầu. Đặt tay lên
+          eo. Nâng tay trái lên. Nâng tay phải lên. Khá đơn giản phải không? Bạn sẽ
+          nhận ra là bạn có thể rút ngắn chỉ dẫn bằng cách ghi nhớ một số bước nhảy
+          theo vòng lặp.
       5:
         image: notes/C1_getting_loopy_5.png
         text: Chúng tôi thực ra có sử dụng vòng lặp trong các bài nhảy. Các vũ công
@@ -725,12 +725,12 @@
           bạn thú nhỏ Flurb lượm trái cây,.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: "Điều khiển bạn Flurb đến chỗ hoa quả. Để làm điều này bạn cần tìm ra
+        text: Điều khiển bạn Flurb đến chỗ hoa quả. Để làm điều này bạn cần tìm ra
           đường đi cho Flurb và dùng mũi tên chỉ dẫn bạn ấy. Để bạn Flurb lượm được
-          quả táo, bạn ấy phải đi theo chỉ dẫn nào? Vạch đường để điều khiển đi lên."
+          quả táo, bạn ấy phải đi theo chỉ dẫn nào? Vạch đường để điều khiển đi lên.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: "Để tới nơi, bạn khoanh tròn chỉ dẫn mà nó phải đi."
+        text: Để tới nơi, bạn khoanh tròn chỉ dẫn mà nó phải đi.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: Tạo ra thuật toán của bạn bằng cách dán mũi tên bên cạnh bản đồ mà bạn
@@ -753,11 +753,11 @@
           lỗi lộn sau chống tay của mình.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: "Để tìm hiểu về gỡ lỗi, chúng ta bắt đầu với 1 tập hợp các khối đã ở
+        text: Để tìm hiểu về gỡ lỗi, chúng ta bắt đầu với 1 tập hợp các khối đã ở
           sẵn trong bàn. Bạn sẽ nhận thấy rằng các khối này sẽ không giúp bạn đến
           được mục tiêu. Chúng ta cần tháo gỡ giải pháp và sửa chữa nó. Điều gì không
           đúng? Bạn sẽ nhận thấy rằng bạn cần di chuyển thêm một khối nữa về hướng
-          tây."
+          tây.
       4:
         image: notes/C1_maze_debugging_4.png
         text: Hãy cùng khắc phục điều này bằng cách thêm 1 một khối nữa ở phía tây
@@ -839,11 +839,11 @@
           quen.
       5:
         image: notes/C1_going_places_safely_5.png
-        text: "Điều tôi thích nhất trên Internet là tôi có thể chơi những trò chơi
+        text: Điều tôi thích nhất trên Internet là tôi có thể chơi những trò chơi
           vui nhộn. Ghi điểm! Tôi cũng thích vẽ và sáng tạo ra những thứ mới lạ và
           chia sẻ với bạn bè. Tuyệt vời! Đôi khi tôi truy cập vào 1 trang web và học
           hỏi được những điều mới lạ, nhưng tôi luôn vào những trang phù hợp với mình.
-          Wow, những chú khủng long!"
+          Wow, những chú khủng long!
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'Internet là một nơi cực kì vui nhộn. Nhưng cũng như khi bạn đi qua
@@ -942,8 +942,8 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: "Đây là cấp độ con ong đánh vần. Sử dụng các mảnh ghép để di chuyển
-          con ong. Khi nó di chuyển, nó sẽ thu thập các chữ cái để đánh vần các từ."
+        text: Đây là cấp độ con ong đánh vần. Sử dụng các mảnh ghép để di chuyển con
+          ong. Khi nó di chuyển, nó sẽ thu thập các chữ cái để đánh vần các từ.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Hãy xem liệu bạn có thể đánh vần từ họ cho ở trong ô phía dưới sân khấu.
@@ -973,10 +973,10 @@
           lệnh đó 5 lần và nó sẽ làm tương tự.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: "Để làm điều này, bạn kéo lệnh di chuyển về phía trước và sau đó bạn
+        text: Để làm điều này, bạn kéo lệnh di chuyển về phía trước và sau đó bạn
           đặt nó vào khối lệnh lặp lại. Và bạn có thể nhấp chuột vào nó và cho biết
           bạn lặp lại khối lệnh bao nhiêu lần để nó biết bạn muốn nó di chuyển về
-          phía trước bao nhiêu bước."
+          phía trước bao nhiêu bước.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
         text: Một điều nữa là bạn có thể đặt bao nhiêu lệnh tuỳ ý vào khối lệnh lặp
@@ -996,11 +996,11 @@
           ở phía sau.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển
-          về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh.
-          Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
+        text: Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về
+          phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi
+          chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
           định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn
-          hình máy tính của bạn."
+          hình máy tính của bạn.
       4:
         image: notes/C2_artist_intro_4.png
         text: Khối lệnh khác chúng ta có trong trò chơi này nói "qua phải 1 góc 90
@@ -1015,12 +1015,12 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong
-          ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
+        text: Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong
+          ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa
-          hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
+        text: Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc
+          mật ong, như chúng ta thấy ở đây với dấu hỏi này.
       3:
         image: notes/C2_bee_conditionals_3.png
         text: Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn
@@ -1029,8 +1029,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: "Đây là bài học vòng tay nhị phân. Chúng ta sẽ viết chữ cái đầu của
-          tên mình bằng mật mã lên vòng đeo tay và cho bạn bè xem!"
+        text: Đây là bài học vòng tay nhị phân. Chúng ta sẽ viết chữ cái đầu của tên
+          mình bằng mật mã lên vòng đeo tay và cho bạn bè xem!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Nhị phân là cách thể hiện thông tin bằng cách chỉ sử dụng 2 lựa chọn.
@@ -1087,15 +1087,15 @@
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: "Ở đây chúng ta có sẵn 1 số khối lệnh trên không gian làm việc. Nhưng
-          có điều gì đó không đúng."
+        text: Ở đây chúng ta có sẵn 1 số khối lệnh trên không gian làm việc. Nhưng
+          có điều gì đó không đúng.
       2:
         image: notes/C2_artist_debugging_2.png
         text: Hãy gỡ lỗi lập trình này bằng cách giảm tốc độ và xem nó chạy qua từng
           khối lệnh một.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Ôi có vấn đề rồi. Râu của con mèo dài 75 điểm ảnh, không phải 25."
+        text: Ôi có vấn đề rồi. Râu của con mèo dài 75 điểm ảnh, không phải 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1190,9 +1190,9 @@
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
-        text: "Ở đây chúng ta sẽ sử dụng khối lệnh lặp lại để giúp ta tiết kiệm các
+        text: Ở đây chúng ta sẽ sử dụng khối lệnh lặp lại để giúp ta tiết kiệm các
           bước khi lập trình nhân vật nghệ sỹ. Chúng ta đã có sẵn 1 vài khối lệnh
-          trên sân khấu nhưng chúng chỉ để ta khởi động."
+          trên sân khấu nhưng chúng chỉ để ta khởi động.
       2:
         image: notes/C2_artist_loops_2.png
         text: Để lặp những khối lệnh này 4 lần để vẽ cả hình vuông, chúng ta chỉ cần
@@ -1310,12 +1310,12 @@
           sau đó chữa nó.
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Ở đây tôi đang cố thực hiện động tác lộn sau chống tay, nhưng tôi cứ
+        text: Ở đây tôi đang cố thực hiện động tác lộn sau chống tay, nhưng tôi cứ
           bị thất bại. Tôi kiểm tra lại từng bước một, và nhận ra lỗi của mình ở đâu.
           Huấn luyện viên chỉ ra rằng tôi đang không đặt tay trên xà đúng cách. Vì
           vậy tôi thử làm lại với vị trí tay đã sửa và tôi đã thành công! Tôi thực
           sự rất vui vì đã gỡ được lỗi động tác lộn sau chống tay. Chúng ta đã tìm
-          ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!"
+          ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -1378,11 +1378,11 @@
           ở phía sau.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển
-          về phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh.
-          Khi chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
+        text: Để di chuyển xung quanh bức vẽ, bạn sẽ sử dụng khối lệnh di chuyển về
+          phía trước. Đây là khối lệnh nói di chuyển về phía trước 100 điểm ảnh. Khi
+          chúng ta nhấn chạy, điều gì sẽ xảy ra? Nghệ sỹ di chuyển 1 số bước nhất
           định là 100 điểm ảnh. Điểm ảnh cơ bản là những hình vuông rất nhỏ trên màn
-          hình máy tính của bạn."
+          hình máy tính của bạn.
       4:
         image: notes/C3_artist_intro_4.png
         text: Khối lệnh khác chúng ta có trong trò chơi này nói "qua phải 1 góc 90
@@ -1409,12 +1409,12 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: "Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong
-          ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó."
+        text: Đây là khối lệnh câu điều kiện. Nó nói rằng NẾU mật hoa hoặc mật ong
+          ít hơn hoặc bằng hoặc lớn hơn 1 số nào đó, THÌ làm điều gì đó.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa
-          hoặc mật ong, như chúng ta thấy ở đây với dấu hỏi này."
+        text: Điều này hữu ích khi chúng ta không biết cần lấy bao nhiêu mật hoa hoặc
+          mật ong, như chúng ta thấy ở đây với dấu hỏi này.
       3:
         image: notes/C3_bee_conditionals_3.png
         text: Trong ví dụ này, chúng ta sẽ nói NẾU bông hoa đỏ có số mật hoa lớn hơn
@@ -2892,11 +2892,11 @@
           cụ.
       12:
         image: notes/mc_intro_12.JPG
-        text: "Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử
+        text: 'Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử
           dụng nút Start Over ở góc phải trên cùng của không gian làm việc. Một điều
           nữa: bạn nhìn thấy hình tam giác nhỏ trên các khối rẽ không? Bất cứ khi
           nào bạn nhìn thấy các hình tam giác này, có nghĩa là bạn có thể chọn một
-          tùy chọn khác. Hãy bắt đầu lập mã nào!"
+          tùy chọn khác. Hãy bắt đầu lập mã nào!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -2904,10 +2904,10 @@
           tạo ra một trò chơi nhỏ gọi là Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám
+        text: Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám
           phá trong những hang động và quan sát những gì tôi có thể tìm thấy. Vì không
           phải là lập trình viên, nên tôi thực sự rất thích thú khi khám phá bài học
-          của Minecraft và thực sự tự học được một vài cách mã hóa."
+          của Minecraft và thực sự tự học được một vài cách mã hóa.
       3:
         image: notes/mc_repeat_3.JPG
         text: Cấp cuối cùng cần nhiều khối moveForward();. Sẽ dễ hơn nếu chúng ta
@@ -2927,13 +2927,13 @@
           làm được điều này cực dễ dàng.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward();
+        text: Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward();
           và đặt các tấm ván bốn lần hoặc chúng ta có thể yêu cầu cô ấy moveForward();
           và đặt một tấm ván, sau đó nhận lệnh này và sử dụng khối lặp để yêu cầu
           cô ấy thực hiện hành động này nhiều lần. Bây giờ, chúng ta sẽ bấm vào khối
           lặp và cho cô ấy biết số lần mà chúng ta muốn cô ấy thực hiện hành động
           này. Bây giờ, hãy xây ngôi nhà của chúng ta trước khi trời tối! Chúc vui
-          vẻ."
+          vẻ.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG

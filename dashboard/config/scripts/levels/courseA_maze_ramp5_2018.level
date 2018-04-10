@@ -35,10 +35,9 @@
     "shape_shift": "false",
     "name_suffix": "_2018",
     "parent_level_id": 10759,
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

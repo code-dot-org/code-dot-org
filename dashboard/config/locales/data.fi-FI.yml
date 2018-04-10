@@ -775,6 +775,9 @@
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
@@ -829,8 +832,8 @@
         length_parameter: Osaatko päivittää tämän funktion niin, että se käyttää "pituus"
           parametria?
         frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
-        frozen_circle_function_in_circle_turn: "Älä unohda kääntyä luotuasi kunkin
-          ympyrän."
+        frozen_circle_function_in_circle_turn: Älä unohda kääntyä luotuasi kunkin
+          ympyrän.
         frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja
           muuta kokoa.
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa

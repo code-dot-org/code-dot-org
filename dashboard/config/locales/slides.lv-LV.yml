@@ -61,8 +61,8 @@
           lai palīdzētu tai uzvarēt.
       2:
         image: notes/stage5_2.jpg
-        text: "Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur,
-          kur tie iet."
+        text: Šajā puzlē tu būsi mākslinieks, kas novelk līniju aiz viņiem, visur,
+          kur tie iet.
       3:
         image: notes/stage5_3.jpg
         text: Šis klucītis saka " pavirzies uz priekšu par 100 pikseļiem". Pikseļi
@@ -145,8 +145,8 @@
           pat tūkstošiem vai miljoniem daudz reižu.
       2:
         image: notes/hoc2_2.jpg
-        text: "Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai
-          sasniegtu cūku."
+        text: Šajā puzlē mēs vēlamies likt putnam pakustēties 5 lauciņus tālāk, lai
+          sasniegtu cūku.
       3:
         image: notes/hoc2_3.jpg
         text: Lai palīdzētu to izdarīt, mēs varam izmantot jauno "atkārtot" pogu.
@@ -542,9 +542,9 @@
           šo darbību blokus ievietosim iekš "atkārtot nepārtraukti" bloka.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: "Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
+        text: Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
           uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā
-          ietaupīsi daudz laika, kad veidosi savu spēli."
+          ietaupīsi daudz laika, kad veidosi savu spēli.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png

@@ -203,7 +203,8 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'fontSize',
     'textAlign',
     'readonly',
-    'hidden'
+    'hidden',
+    'value'
   ]
 };
 PROPERTIES[ElementType.CHART] = {

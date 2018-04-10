@@ -74,13 +74,13 @@
   "penDown": "පැන්සල පහතට",
   "penTooltip": "චිත්‍රය ඇඳීමට හෝ ඇඳීමෙන් ඉවත් වීමට පැන්සල උඩට හෝ පහතට චලනය කරන්න.",
   "penUp": "පැන්සල උඩට",
+  "pointTo": "point to",
   "pixels": "පික්සල",
   "reinfFeedbackMsg": "මෙන්න ඔබේ චිත්‍රය. ඔබට තවදුරටත් මෙය ඇඳිය හැකියි. නැතහොත් ඊළඟ ප්‍රහේලිකාවට යා හැකියි.",
   "setAlpha": "ඇල්ෆා සකසන්න",
   "setCharacter": "set character to {character}",
   "setColour": "පැහැය සකසන්න",
   "setPattern": "රටාව සකස් කිරීම",
-  "setStickerSize": "Set sticker size",
   "setWidth": "පළල සකසන්න",
   "shareDrawing": "ඔබගේ ඇඳීම බෙදාගන්න:",
   "showMe": "මාව පෙන්වන්න",
@@ -94,5 +94,6 @@
   "turnTooltip": "චිත්‍ර ශිල්පියා නිශ්චිත කෝණයකින් දකුනට හෝ වමට හරවන්න.",
   "turtleVisibilityTooltip": "චිත්‍ර ශිල්පියා දෘශ්යමාන හෝ අදෘශ්යමාන කරන්න.",
   "widthTooltip": "පැන්සලේ පළල වෙනස් කිරීම.",
+  "withSize": "with size",
   "wrongColour": "වැරදි වර්ණය ඇත්තේ ඔබේ පින්තූර ය තුලයි. මෙම ප්‍රහේලිකාව සඳහා %1 විය යුතුයි."
 }

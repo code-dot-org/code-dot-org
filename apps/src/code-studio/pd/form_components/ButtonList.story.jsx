@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonList from './button_list';
+import ButtonList from './ButtonList';
 
 export default storybook => {
   return storybook

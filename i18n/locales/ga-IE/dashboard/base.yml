@@ -84,7 +84,7 @@ ga:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Cuntas Microsoft'
-    clever: 'Clever Account'
+    clever: 'Cuntas Cliste'
     forgot_password: 'Focal faire dearmadta?'
     need_confirmation: "Nach bhfuair tú na treoracha deimhnithe?"
     need_unlock: "Nach bhfuair tú na treoracha díghlasála?"
@@ -122,7 +122,7 @@ ga:
     user_type_student: "Dalta"
     field_is_required: "riachtanach"
     accept_terms: "Caithfidh tú glacadh leis chun cuntas a chruthú"
-    error: "An error occurred."
+    error: "Tharla earráid."
   school_info:
     title: 'Eolas faoin scoil (roghnach)'
     school_country: 'Tír na Scoile'
@@ -189,9 +189,9 @@ ga:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Eolas logála isteach do Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Fáilte go dtí Code.org!'
   section:
     your_section:
       one: 'Do rannán:'
@@ -201,7 +201,7 @@ ga:
       remove: 'An bhfuil tú cinnte gur mhaith leat an rannán seo a fhágáil?'
     remove: '(bain rannán)'
     type:
-      picture: 'Picture Password'
+      picture: 'Pictiúr mar Fhocal Faire'
       word: 'Focal Rúnda'
       email: 'Seoladh ríomhphoist'
       google_classroom: 'Google Classroom'
@@ -257,7 +257,7 @@ ga:
         gamelab: 'Déan tionscadal sa tSaotharlann Cluichíochta'
         weblab: 'Make a Web Lab (beta) project'
       home: "Baile"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Mo Phainéal"
       courses: "Cúrsaí"
       course_catalog: "Course Catalog"
       project_gallery: "Tograí"
@@ -360,7 +360,7 @@ ga:
     no_password_because_sponsored: 'Cabhróidh do mhúinteoir leat d''fhocal faire a bhainistiú.'
     create_personal_login: 'Cruthaigh do chuntas féin'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_username: "Ainm úsáideora (ná húsáid d'fhíorainm!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'Más mian leat Code.org a úsáid fiú tar éis dheireadh na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.'
     create_personal_login_terms: "Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
@@ -498,8 +498,8 @@ ga:
     notes_coming_soon: 'Beidh nótaí don fhíseán seo ar fáil go luath.'
     autoplay_option: 'Seinn físeáin go huathoibríoch'
     download: 'Íoslódáil an Físeán'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
+    show_notes: 'Taispeáin Nótaí'
+    show_video: 'Taispeáin an Físeán'
   compatibility:
     upgrade:
       unsupported_message: "Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach briste."

@@ -4,9 +4,9 @@
       confirmed: Vaš e-poštni naslov je bil uspešno potrjen.
       send_instructions: E-pošto z navodilom o tem, kako potrdite svoj račun, boste
         prejeli v nekaj minutah.
-      send_paranoid_instructions: "Če vaš email naslov obstaja v naši bazi podatkov,
+      send_paranoid_instructions: Če vaš email naslov obstaja v naši bazi podatkov,
         boste v nekaj minutah prejeli e-pošto z navodili o tem, kako potrdite svoj
-        račun."
+        račun.
     failure:
       already_authenticated: Ste že vpisani.
       inactive: Vaš račun še ni bil aktiviran.
@@ -33,8 +33,8 @@
         prosimo, da uporabite poln URL.
       send_instructions: V nekaj minutah boste prejeli e-pošto z navodili o tem, kako
         ponastaviti vaše geslo.
-      send_paranoid_instructions: "Če vaš naslov e-pošte obstaja v naši bazi podatkov,
-        boste prejeli povezavo za povrnitev gesla na vaš e-poštni naslov v nekaj minutah."
+      send_paranoid_instructions: Če vaš naslov e-pošte obstaja v naši bazi podatkov,
+        boste prejeli povezavo za povrnitev gesla na vaš e-poštni naslov v nekaj minutah.
       updated: Tvoje geslo je bilo uspešno spremenjeno. Sedaj si se registriral/a.
       updated_not_active: Vaše geslo je bilo uspešno spremenjeno.
     registrations:
@@ -57,8 +57,8 @@
     unlocks:
       send_instructions: V naslednjih minutah boste prejeli e-pošto z navodilom kako
         odkleniti vaš račun.
-      send_paranoid_instructions: "Če ste že bili registrirani, boste v naslednjih
-        minutah prejeli e-pošto z navodilom kako odkleniti vaš račun."
+      send_paranoid_instructions: Če ste že bili registrirani, boste v naslednjih
+        minutah prejeli e-pošto z navodilom kako odkleniti vaš račun.
       unlocked: Vaš račun je bil uspešno odklenjen. Če želite nadaljevati, se vpišite.
   errors:
     messages:
@@ -89,6 +89,6 @@
         someone_invited_you: Nekdo vas je povabil na %{url}. Vabilo lahko sprejmete
           na spodnji povezavi.
         accept: Sprejmite vabilo
-        ignore: "Če ne želite sprejeti povabila, prosim ignorirajte ta email.<br />Vaš
+        ignore: Če ne želite sprejeti povabila, prosim ignorirajte ta email.<br />Vaš
           račun ne bo narejen dokler ne dostopate preko zgornje povezave in nastavite
-          svojega gesla."
+          svojega gesla.

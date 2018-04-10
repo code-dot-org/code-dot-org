@@ -582,8 +582,8 @@
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: "Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
-          donde necesita ir para completar las lineas grises."
+        text: Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
+          donde necesita ir para completar las lineas grises.
       2:
         image: notes/C1_artist_intro_2.png
         text: Estos son bloques de tu salto. Cuando los usas, tu artista se mueve
@@ -946,8 +946,8 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: "Éste es el nivel de ortografía. Utilice las piezas del puzzle para
-          mover a la abeja. Al moverse, recogerá las letras para deletrear la palabra."
+        text: Éste es el nivel de ortografía. Utilice las piezas del puzzle para mover
+          a la abeja. Al moverse, recogerá las letras para deletrear la palabra.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Vea si puede deletrear la palabra que se da en el cuadro debajo de la
@@ -1019,8 +1019,8 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C2_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -1033,8 +1033,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: "Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
-          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!"
+        text: Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
+          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: El binario es una forma de representar información utilizando sólo dos
@@ -1218,11 +1218,11 @@
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C2_bee_loops_2.png
-        text: "Éste es el bloque de repetición. Lo que pongas dentro el bloque de
-          repetición repetirá las acciones el número de veces que le digas. Por ejemplo,
-          en éste nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante
-          y obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada
-          uno y repetiremos la acción tres veces. ¡Ha sido fácil!"
+        text: Éste es el bloque de repetición. Lo que pongas dentro el bloque de repetición
+          repetirá las acciones el número de veces que le digas. Por ejemplo, en éste
+          nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante y
+          obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada uno
+          y repetiremos la acción tres veces. ¡Ha sido fácil!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -1421,8 +1421,8 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C3_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -2550,11 +2550,10 @@
           quien escribirá el siguiente paso.
       3:
         image: notes/unplug9_3.png
-        text: "Ésta es una excelente manera de entender la idea de depuración, la
-          necesidad de corregir tu propio trabajo y la necesidad de revisar el trabajo
-          que la gente hace antes de ti. Rápidamente, entenderás lo importante que
-          es tener cuidado en tu codificación cuando todo el equipo está dependiendo
-          de ti."
+        text: Ésta es una excelente manera de entender la idea de depuración, la necesidad
+          de corregir tu propio trabajo y la necesidad de revisar el trabajo que la
+          gente hace antes de ti. Rápidamente, entenderás lo importante que es tener
+          cuidado en tu codificación cuando todo el equipo está dependiendo de ti.
     unplug10:
       1:
         image: notes/unplug10_1.png
@@ -2782,14 +2781,14 @@
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "Направихме игра в която неможете да губите печелите точки от всичко.
+        text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "След като сте направите играта, изберете сподели за да я споделите
-          с приятели или да играете на телефон. Забавлявайте се!"
+        text: След като сте направите играта, изберете сподели за да я споделите с
+          приятели или да играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2909,14 +2908,14 @@
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "Направихме игра в която неможете да губите печелите точки от всичко.
+        text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "След като сте направите играта, изберете сподели за да я споделите
-          с приятели или да играете на телефон. Забавлявайте се!"
+        text: След като сте направите играта, изберете сподели за да я споделите с
+          приятели или да играете на телефон. Забавлявайте се!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -3157,10 +3156,10 @@
           cosas."
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "Éste es el bloque de repetición por siempre. Cualquier cosa dentro
-          de este bloque pasará por siempre en el juego. Si queremos que un actor
-          haga algo repetidamente sin que el jugador haga nada, pondremos eso bloques
-          dentro del bloque de repetición por siempre."
+        text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
+          este bloque pasará por siempre en el juego. Si queremos que un actor haga
+          algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
+          del bloque de repetición por siempre.
       3:
         image: notes/gumball_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
@@ -3245,10 +3244,10 @@
           cosas."
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "Éste es el bloque de repetición por siempre. Cualquier cosa dentro
-          de este bloque pasará por siempre en el juego. Si queremos que un actor
-          haga algo repetidamente sin que el jugador haga nada, pondremos eso bloques
-          dentro del bloque de repetición por siempre."
+        text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
+          este bloque pasará por siempre en el juego. Si queremos que un actor haga
+          algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
+          del bloque de repetición por siempre.
       3:
         image: notes/iceage_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
@@ -3379,94 +3378,93 @@
       1:
         image: notes/applab_intro_welcome_1.png
         text: Mi nombre es Mei'lani. Soy una pasante en code.org y soy también estudiante
-          de informática. Me gusta la informática porque es bastante creativa. Logro
-          ser la solución a los problemas. Logro hacer cualquier función como yo prefiero.
-          Pero también logro se el diseñador. Logro ser el artista y escojo todo desde
-          el punto de vista creativo de esto.
+          de ciencias de la computación. Me gusta porque es muy creativa. Puedo ser
+          la que soluciona los problemas y decidir como funciona todo. Pero también
+          logro ser la diseñadora. Puedo ser la artista y determinar todo desde el
+          lado creativo.
       2:
         image: notes/applab_intro_welcome_2.png
         text: "¡Hacer tus propias aplicaciones es muy fácil con App Lab! Sin importar
-          que seas nuevo programando o tienes alguna experiencia. App Lap es una buena
-          herramienta para la creación de nuevas aplicaciones y para compartirlas
-          con sus amigos."
+          que seas nuevo programando o si tienes alguna experiencia. App Lap es una
+          buena herramienta para la creación de nuevas aplicaciones que puedes compartir
+          con tus amigos."
       3:
         image: notes/applab_intro_welcome_3.png
-        text: Esta es App Lab. Del lado izquierdo se encuentra su aplicación. Del
-          lado derehco se encuentra el código que hará que se ejecute. Usted construye
-          su programa arrastrando en bloques desde la caja de herramientas. Para empezar
-          usted sólo necesitará un bloque denominano 'setProperty'.
+        text: Esta es App Lab. Del lado izquierdo se encuentra tu aplicación. Del
+          lado derecho se encuentra el código que hará que se ejecute. Construyes
+          tu programa arrastrando en bloques desde la caja de herramientas. Para empezar
+          sólo necesitas un bloque denominado 'setProperty'.
       4:
         image: notes/applab_intro_welcome_4.png
         text: El bloque de configuración de propiedades cambia la apariencia de los
           elementos en su pantalla. Como los botones, rótulos, o incluso la pantalla
-          en sí. Primero usted necesita decidir cuál elemento desea cambiar. Si pasa
-          el ratón por un elemento en su aplicación podrá ver el nombre o el ID acá.
-          Luego va a seleccionar ese ID desde la primera bajada.
+          en sí. Primero necesitas decidir cuál elemento deseas cambiar. Si pasas
+          el ratón por un elemento en su aplicación podrás ver el nombre o el ID aquí.
+          Luego ve a seleccionar ese ID desde el primer menú.
       5:
         image: notes/applab_intro_welcome_5.png
-        text: Elements have lots of properties you can change like their text color,
-          background color or font size. You can see the full list and choose which
-          property you want to change in the second drop down.
+        text: Los elementos tienen un montón de propiedades. Puedes cambiar su color
+          de texto, tamaño de fuente o color de fondo. Puedes ver la lista completa
+          y seleccionar qué propiedad deseas cambiar en el segundo menú.
       6:
         image: notes/applab_intro_welcome_6.png
-        text: The last drop down is where you'll write the value you want to use value
-          you want to use. The block will make a suggestion for you. But you can always
-          type in different colors or numbers yourself.
+        text: El último menú es donde escribirás el valor que deseas utilizar. El
+          bloque hará una sugerencia. Pero siempre puedes ingresar diferentes colores
+          o números.
       7:
         image: notes/applab_intro_welcome_7.png
-        text: Una vez que lo haga hecho, el bloque leerá un bit como una oración:'Configura
-          el color de fondo del botón 1's a verde.' Seleccione ejecutar para ver los
-          cambios que esta construyendo en el programa. Si se resetea usted puede
-          arrastrar más bloques para modificar otras cosas sobre su aplicación. ¡Como
-          el texto!
+        text: 'Una vez que termines, el bloque se lee un poco como una oración: ''Establece
+          el color de fondo de button1 a verde''. Ejecútalo para ver los cambios que
+          se está construyendo en el código. Si reestableces puede arrastrar más bloques
+          para cambiar otras cosas acerca de tu aplicación. ¡Como el texto!'
       8:
         image: notes/applab_intro_welcome_8.png
-        text: En este tutorial se trabajará en modo de bloques pero App Lab también
-          es compatible para trabajar en texto.
+        text: Para este tutorial vamos a trabajar en modo de bloques pero App Lab
+          también te permite trabajar con texto.
       9:
         image: notes/applab_intro_welcome_9.png
         text: De cualquier manera se va a estar programando en JavaScript, el lenguaje
           de la web. Cada nivel tiene una meta, instrucciones y una imagen de lo que
-          usted está apuntando a crear.
+          se pretende crear.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: Si alguna vez queda estancado, haga clic en la imagen y se le mostrará
-          exactamente cómo completa el nivel. Pero intenta hacerlo primero por tu
+        text: Si alguna vez tienes dificultades, haz clic en la imagen y semostrará
+          exactamente cómo completar el nivel. Pero intenta hacerlo primero por tu
           cuenta.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Una vez que hayas completado la meta para este nivel haga clic en Terminar
-          para seguir adelante. ¡Esto es todo al respecto! ¡Seleccione el botón naranja
-          "Continuar" para ir al siguiente nivel y empezar su aventura con App Lab!
+        text: Una vez que hayas completado la meta para este nivel haz clic en Terminar
+          para seguir adelante. ¡Esto es todo! ¡Selecciona el botón naranja "Continuar"
+          para ir al siguiente nivel y empezar tu aventura con App Lab!
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
-        text: Las aplicaciones son geniales porque es como comenzar su propio negocio,
-          es decir, llegar a diseñar todo desde el suelo, usted llega a gestionar
-          todo, y usted el dueño de esta obra que acaba de crear con el código.
+        text: Las aplicaciones son geniales porque son como comenzar tu propio negocio,
+          es decir, diseñar todo desde el comienzo, administrarlo, y ser el dueño
+          de esta obra que acabas de crear con código.
       2:
         image: notes/applab_intro_events_2.png
-        text: Ahora que usted puede cambiar la apariencia de su aplicación ¡hagámoslo
-          interactivo al responder a los eventos! Los eventos son acciones del usuario
-          como es hacer clic al botón, moviéndose por el menú o por una imagen. Aplicaciones
+        text: Ahora que puedes cambiar la apariencia de tu aplicación ¡hagámosla interactivo
+          respondiendo a eventos! Los eventos son acciones del usuario como hacer
+          clic al botón, moversé por el menú o sobre una imagen. Las aplicaciones
           interactivas necesitan siempre responder a eventos, como reproducir un sonido
-          cuando hago clic este botón. Para hacer esto en App Lab usted necesita usar
+          cuando hago clic este botón. Para hacer esto en App Lab se necesita usar
           un nuevo bloque denominado 'onEvent'.
       3:
         image: notes/applab_intro_events_3.png
         text: Este programa configura la pantalla en azul. Yo quiero que la pantalla
           se cambie a verde cuando haga clic en este botón. Primero necesitaré arrastrar
-          un bloque de onEvent. Por filtrado, sé que el botón ID es "bigButton" así
-          que lo seleccionaré en el primer menú desplegable.
+          un bloque de onEvent. Pasando por el, sé que el nombre del botón es "bigButton"
+          así que lo seleccionaré en el primer menú desplegable.
       4:
         image: notes/applab_intro_events_4.png
         text: Luego seleccionare el tipo de evento. Hay un montón de opciones que
-          se pueden escoger pero ahora voy a dejarlo como un clic regular antiguo.
+          se pueden escoger pero ahora voy a dejarlo como un clic cualquiera.
       5:
         image: notes/applab_intro_events_5.png
         text: 'Finalmente añadiré el código dentro del evento que cambiará el color
-          de fonde de la pantalla. Usted puede leer este bloque como una oración:
-          "En el evento que se hace clic en el botón se ejecuta todo este código."'
+          de fondo de la pantalla. Puedes leer este bloque como una oración: "En el
+          evento que se hace clic en el botón se ejecuta todo este código."'
       6:
         image: notes/applab_intro_events_6.png
         text: Probémoslo. Bloques afuera de un onEvent todavía se ejecutan justo después

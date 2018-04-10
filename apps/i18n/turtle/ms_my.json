@@ -74,13 +74,13 @@
   "penDown": "pensil ke bawah",
   "penTooltip": "Angakat atau rendahkan pensil, untuk mula atau berhenti melukis.",
   "penUp": "pensil di atas",
+  "pointTo": "point to",
   "pixels": "piksel",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "set alpha",
   "setCharacter": "set character to {character}",
   "setColour": "set warna",
   "setPattern": "set pattern",
-  "setStickerSize": "Set sticker size",
   "setWidth": "set lebar",
   "shareDrawing": "Kongsi lukisan anda:",
   "showMe": "Tunjukkan saya",
@@ -94,5 +94,6 @@
   "turnTooltip": "Pusing artis kiri atau kanan dengan darjah nombor yang telah ditentukan.",
   "turtleVisibilityTooltip": "Jadikan artis kelihatan atau tidak kelihatan.",
   "widthTooltip": "Tukar lebar pensil.",
+  "withSize": "with size",
   "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1."
 }

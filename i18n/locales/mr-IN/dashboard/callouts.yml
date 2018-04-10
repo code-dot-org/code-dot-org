@@ -934,18 +934,33 @@ mr:
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
@@ -1006,7 +1021,10 @@ mr:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
@@ -1014,14 +1032,21 @@ mr:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
@@ -1030,7 +1055,9 @@ mr:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1065,7 @@ mr:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1102,8 @@ mr:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1170,7 @@ mr:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
@@ -1154,9 +1185,13 @@ mr:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -1203,19 +1238,33 @@ mr:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]

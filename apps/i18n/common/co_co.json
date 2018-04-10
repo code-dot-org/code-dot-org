@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Activity",
   "actions": "Actions",
   "add": "Add",
@@ -915,6 +916,7 @@
   "shareSettingEnableDialog": "By enabling sharing, your students will be allowed to share their projects created through Code.org’s advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone by sharing their project link.",
   "shareSettingDisableDialog": "An important part of the student experience of using Code.org is the ability to share their projects and creations with others. With sharing disabled, students will not be able to share their creations created with our advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone else besides their Code.org teachers. These advanced tools are designed for students that are over 13 or being used under a teacher or parent’s guidance.  Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.",
   "shareSettingDisableDialogNote": "Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Please provide your age below and click OK to continue.",
   "shareWarningsMoreInfo": "Our Privacy Policy",
   "shareWarningsStoreData": "This app built on Code Studio stores data that could be viewed by anyone with this sharing link, so avoid providing personal information about yourself or others.",

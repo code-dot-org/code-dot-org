@@ -46,12 +46,12 @@
     concept:
       description:
         sequence: Zaporedje
-        if: "Če (if) blok"
-        if_else: "Če-sicer blok"
+        if: Če (if) blok
+        if_else: Če-sicer blok
         loop_times: Ponovi
         loop_until: Ponavljaj dokler ne velja
         loop_while: Dokler velja
-        loop_for: "Števec"
+        loop_for: Števec
         function: Funkcije
         parameters: Funkcije s parametri
     level:
@@ -96,9 +96,9 @@
         maze_2_19: Poskusi uporabiti še tri dodatne bloke in ta zapletenejši labirint
           ne bo več težava. Če jih prav sestaviš, lahko prehodim vse ovinke in vse
           razdalje.
-        turtle_1_1: "Živjo, sem umetnica in s pomočjo tvojih blokov lahko rišem zelo
+        turtle_1_1: Živjo, sem umetnica in s pomočjo tvojih blokov lahko rišem zelo
           različne like. Vidiš sive črte po katerih se moram zadrsati? Uporabite nekaj
-          blokov, da bom lahko drsala po črtah."
+          blokov, da bom lahko drsala po črtah.
         turtle_1_2: 'Zdaj pa poskusi narisati kvadrat. Svojo najljubšo barvo lahko
           izbireš z ukazom: "izberi barvo pisala" (ang.: "pick color").'
         turtle_1_3: Nariši kvadrat z uporabo le treh blokov.
@@ -174,9 +174,9 @@
         maze_karel_1_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup,
           ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)"
           uporabi spustni seznam z možnostmi.'
-        turtle_2_1: "Živ'. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat
+        turtle_2_1: 'Živ''. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat
           s posebno barvo. Pomembna opomba: na voljo imaš iste bloke, le da so zdaj
-          razvrščeni v kategorije."
+          razvrščeni v kategorije.'
         turtle_2_2: S funkcijami lahko zdaj ustvariš čisto svoje bloke! Poglej v kategorijo
           "Funkcije", kjer imaš zdaj na voljo nov blok "nariši kvadrat".  Narisal
           bo zelen kvadrat s stranicami 50 x 50 pik.
@@ -492,11 +492,11 @@
         loop_times: Ponovi
         loop_until: Ponavljaj dokler ne velja
         if: '"Če" blok'
-        if_else: "Če/sicer blok"
-        if_else_scrat: "Če/sicer blok"
+        if_else: Če/sicer blok
+        if_else_scrat: Če/sicer blok
         function: Funkcije
         loop_while: Dokler velja
-        loop_for: "Števec"
+        loop_for: Števec
         parameters: Funkcije s parametri
         hoc_wrapup: Povzetek Ure kodiranja
         Unplug1: Kaj je računalništvo?
@@ -517,11 +517,11 @@
         C1_pair_programming: Programiranje parov
         C1_maze_intro_sequencing: Uvod v reševanje labirinta
         C1_maze_debugging: 'Labirint: odpravljanje napak'
-        C1_bee_level_intro: "Čebelica: uvodni nivo"
+        C1_bee_level_intro: 'Čebelica: uvodni nivo'
         C1_artist_intro: 'Umetnik: uvod'
-        C1_spelling_bee_intro: "Čebelica črkuje: uvod"
+        C1_spelling_bee_intro: 'Čebelica črkuje: uvod'
         C1_zuck_repeat_loop: Labirint zanke
-        C1_bee_loops: "Čebelica zanke"
+        C1_bee_loops: Čebelica zanke
         C1_maze_loops: Labirint zanke
         C1_playlab_storytelling: 'Play Lab: ustvari zgodbo'
         C1_planting_seed: Posadi seme
@@ -532,9 +532,9 @@
         C2_zuck_repeat_loop: Labirint zanke
         C2_artist_loops: Umetnik Zanke
         C2_artist_debugging: Umetnik Razhroščevanje
-        C2_bee_loops: "Čebelica zanke"
-        C2_bee_debugging: "Čebelica razhroščevanje"
-        C2_bee_conditionals: "Čebelica pogoji"
+        C2_bee_loops: Čebelica zanke
+        C2_bee_debugging: Čebelica razhroščevanje
+        C2_bee_conditionals: Čebelica pogoji
         C2_playlab_createstory: 'Play Lab: ustvari zgodbo'
         C2_graph_paper: Obarvajmo kvadratke
         C2_conditionals_with_cards: Pogoji
@@ -546,13 +546,13 @@
         C3_maze_level_4: Labirint zanke
         C3_artist_intro: 'Umetnik: uvod'
         C3_artist_functions: Umetnik Funkcije
-        C3_bee_functions: "Čebelica funkcije"
-        C3_bee_conditionals: "Čebelica pogoji"
+        C3_bee_functions: Čebelica funkcije
+        C3_bee_conditionals: Čebelica pogoji
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Gnezdenje zank
         C3_farmer_while: 'Zanka: dokler velja'
         C3_bee_nested_loops: Gnezdenje zank
-        C3_bee_debugging: "Čebelica razhroščevanje"
+        C3_bee_debugging: Čebelica razhroščevanje
         C3_bounce: Skokica
         C3_playlab_create_game: Play Lab - ustvari igrico
         C3_computational_thinking: Računalniško razmišljanje
@@ -563,7 +563,7 @@
         C3_songwriting_with_parameters: Pisanje pesmi s parametri
         C4_intro: Uvod
         C4_loops_zombie: Zanke
-        C4_bee_conditional: "Čebelica pogoji"
+        C4_bee_conditional: Čebelica pogoji
         C4_variables_artist: Spremenljivke - Umetnik
         C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
@@ -754,6 +754,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok
@@ -782,8 +785,8 @@
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
-        degrees_per_side: "Če deliš 360 s številom stranic, je rezultat število stopinj
-          za posamezen kot (obrat)."
+        degrees_per_side: Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat).
         set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
         set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
         which_equation: Which equation makes each side shorter for shapes with more
@@ -796,11 +799,11 @@
         edit_function: Click here to edit your function.
         create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
           "ustvari funkcijo".
-        house_hint: "Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
-          nalogi bo še bolj podobna hiši."
+        house_hint: Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
+          nalogi bo še bolj podobna hiši.
         edit_draw_square: Uporabi ta gumb za urejanje funkcije in dodaj zanko.
-        edit_get_nectar: "Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
-          potem uporabi ta gumb za urejanje funkcije."
+        edit_get_nectar: Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
+          potem uporabi ta gumb za urejanje funkcije.
         logic_category: 'Odpri list "Logika" in poišči ukaz "če- sicer pa" (ang.:
           "if/else").'
         length_parameter: Znaš popraviti to funkcijo tako, da bo uporabljala parameter

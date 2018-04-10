@@ -3,11 +3,11 @@
     unplugged:
       Unplug1:
         title: Informatikos įvadas
-        desc: "Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
+        desc: Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
           ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
           jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
-          tačiau jas mokyti galima labai žaismingai."
+          tačiau jas mokyti galima labai žaismingai.
         pdfs:
         - unplug1
         video: Unplug1
@@ -102,10 +102,10 @@
         video: Unplug10
       Unplug11:
         title: Apibendrinimas
-        desc: "Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti
-          visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
+        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
+          savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
           kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
-          susidomės."
+          susidomės.
         pdfs:
         - unplug11
         video: Unplug11
@@ -119,9 +119,9 @@
           veikėją per labirintą, naudodami vieną komandą.
       PlantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       BuildingAFoundation:
         title: Laiptuota piramidė
         desc: Students build a structure using only provided supplies. Structures
@@ -129,8 +129,8 @@
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
         title: Kartojimo supratimas
-        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
       RelayProgramming:
         title: Programavimas komandoje
         desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
@@ -157,9 +157,9 @@
           naudodamasis, kitas mokinys turės nupiešti piešinį.
       PaperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
-          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
-          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
       BinaryBracelets:
         title: Dvejetainės apyrankės
         desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
@@ -283,9 +283,9 @@
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       courseA_unplugged_happyMaps:
         title: Laimingieji žemėlapiai
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
@@ -312,13 +312,13 @@
           and students discuss the idea of being persistent when things get complicated.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
-          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
-          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
       courseC_unplugged_gettingLoopy:
         title: Kartojimo supratimas
-        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
       courseC_unplugged_binaryBracelets:
         title: Dvejetainės apyrankės
         desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
@@ -466,9 +466,9 @@
         desc: ''
       PlantASeed_2018:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       UnplugHappyMaps_2018:
         title: Laimingieji žemėlapiai
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
@@ -486,3 +486,30 @@
           kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
           ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
           to, kuris mygtukas bus nuspaustas.
+      GraphPaperProgramming_2018:
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+      DigitalFootprint_2018:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+      BinaryImages_2018:
+        title: Dvejetainiai vaizdai
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.

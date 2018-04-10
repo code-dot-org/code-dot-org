@@ -2,57 +2,57 @@
   data:
     game:
       name:
-        Unplug1: "கணினி அறிவியலின் அறிமுகம்"
-        Maze: "புதிர்பாதை"
-        Multi: "பல தேர்வு பொருட்கள்"
-        Unplug2: "கணினிபூர்வமான சிந்தனை"
-        Unplug3: "வரைதாள் செய்நிரல்"
-        Artist: "கலைஞர்"
-        Unplug4: "வழிமுறைகள்"
-        Artist2: "கலைஞர் 2"
-        Unplug5: "செயல்பாடுகள்"
-        Farmer: "விவசாயி"
+        Unplug1: கணினி அறிவியலின் அறிமுகம்
+        Maze: புதிர்பாதை
+        Multi: பல தேர்வு பொருட்கள்
+        Unplug2: கணினிபூர்வமான சிந்தனை
+        Unplug3: வரைதாள் செய்நிரல்
+        Artist: கலைஞர்
+        Unplug4: வழிமுறைகள்
+        Artist2: கலைஞர் 2
+        Unplug5: செயல்பாடுகள்
+        Farmer: விவசாயி
         Unplug6: Conditionals
-        Artist3: "கலைஞர் 3"
-        Unplug7: "பாடல் எழுதுதல்"
-        Farmer2: "விவசாயி 2"
-        Unplug8: "நுண்புல"
-        Artist4: "கலைஞர் 4"
+        Artist3: கலைஞர் 3
+        Unplug7: பாடல் எழுதுதல்
+        Farmer2: விவசாயி 2
+        Unplug8: நுண்புல
+        Artist4: கலைஞர் 4
         Unplug9: Relay Programming
-        Farmer3: "விவசாயி 3"
-        Unplug10: "இணையம்"
-        Artist5: "கலைஞர் 5"
+        Farmer3: விவசாயி 3
+        Unplug10: இணையம்
+        Artist5: கலைஞர் 5
         Unplug11: Wrap-up
-        MazeEC: "புதிர்பாதை"
+        MazeEC: புதிர்பாதை
         Bounce: Bounce
-        Flappy: "சிறகடிக்கும் பறவை"
+        Flappy: சிறகடிக்கும் பறவை
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: "கலைஞர்"
+        ArtistEC: கலைஞர்
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
-        NetSim: "இணைய மாதிரி"
+        NetSim: இணைய மாதிரி
         Custom: Artist
         CustomStudio: Play Lab
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "வெண்கலம்"
-        Silver: "வெள்ளி"
-        Gold: "தங்கம்"
+        Bronze: வெண்கலம்
+        Silver: வெள்ளி
+        Gold: தங்கம்
     concept:
       description:
-        sequence: "தொடர்வரிசை"
+        sequence: தொடர்வரிசை
         if: If தொகுப்பு
         if_else: If-else block
         loop_times: Repeat times block
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: "செயல்பாடுகள்"
+        function: செயல்பாடுகள்
         parameters: Functions with parameters
     level:
       instructions:
@@ -104,8 +104,7 @@
           the "random color" option that picks a different color each time. Hint:
           you''ll have to figure out how far to turn by clicking on the number in
           the turn block.'
-        turtle_1_5: "இப்போது, பயிற்சிக்காக, மேலுறைக்கு முக்கோணம் மற்றும் சதுரத்தை
-          வரையவும்."
+        turtle_1_5: இப்போது, பயிற்சிக்காக, மேலுறைக்கு முக்கோணம் மற்றும் சதுரத்தை வரையவும்.
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
           the triangle first, then figure out how much to turn before drawing the
           square.'
@@ -493,19 +492,19 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: "செயல்பாடுகள்"
+        function: செயல்பாடுகள்
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: "கணினிபூர்வமான சிந்தனை"
-        Unplug3: "வரைதாள் செய்நிரல்"
-        Unplug4: "வழிமுறைகள்"
-        Unplug5: "செயல்பாடுகள்"
+        Unplug2: கணினிபூர்வமான சிந்தனை
+        Unplug3: வரைதாள் செய்நிரல்
+        Unplug4: வழிமுறைகள்
+        Unplug5: செயல்பாடுகள்
         Unplug6: Conditionals
-        Unplug7: "பாடல் எழுதுதல்"
-        Unplug8: "நுண்புல"
+        Unplug7: பாடல் எழுதுதல்
+        Unplug8: நுண்புல
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
@@ -535,7 +534,7 @@
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: "வரைதாள் செய்நிரல்"
+        C2_graph_paper: வரைதாள் செய்நிரல்
         C2_conditionals_with_cards: Conditionals
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
@@ -554,14 +553,14 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "கணினிபூர்வமான சிந்தனை"
+        C3_computational_thinking: கணினிபூர்வமான சிந்தனை
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "சுழற்சிகள்"
+        C4_loops_zombie: சுழற்சிகள்
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -653,7 +652,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "சுழற்சிகள்"
+        csp_applab_loops: சுழற்சிகள்
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -753,6 +752,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { ButtonList } from '../form_components/button_list.jsx';
+import { ButtonList } from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
 import SingleCheckbox from '../form_components/SingleCheckbox';

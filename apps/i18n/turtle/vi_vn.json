@@ -74,13 +74,13 @@
   "penDown": "bỏ bút xuống",
   "penTooltip": "nâng lên hay hạ bút xuống, để bắt đầu và ngừng vẽ.",
   "penUp": "nâng bút lên",
+  "pointTo": "point to",
   "pixels": "điểm ảnh",
   "reinfFeedbackMsg": "Đây là bản vẽ của bạn! Tiếp tục làm việc trên nó hoặc tiếp tục câu đố tiếp theo.",
   "setAlpha": "thiết lập alpha",
   "setCharacter": "thiết lập nhân vật {character}",
   "setColour": "chỉnh màu",
   "setPattern": "thiết lập thiết kế mẫu",
-  "setStickerSize": "Set sticker size",
   "setWidth": "chỉnh độ rộng",
   "shareDrawing": "Chia sẻ bản vẽ của bạn:",
   "showMe": "cho tôi thấy",
@@ -94,5 +94,6 @@
   "turnTooltip": "rẽ nghệ sĩ về bên phải hay bên trái một góc nhất định.",
   "turtleVisibilityTooltip": "Làm ẩn hoặc hiện họa sĩ.",
   "widthTooltip": "thay đổi độ rộng của cây bút chì.",
+  "withSize": "with size",
   "wrongColour": "Bức hình của bạn bị sai màu. Cho bài này, cần phải là"
 }

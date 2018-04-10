@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Aktibidad",
   "actions": "Mga aksyon",
   "add": "Dagdagan (increase the content)\n\nLagyan (add something new)\n\nDuktungan (continue to add more )",
@@ -915,6 +916,7 @@
   "shareSettingEnableDialog": "Sa pamamagitan ng pagpagana ng pagbabahagi, ang iyong mga estudyante ay pinayagang magbahagi ng kanilang mga proyekto na nalikha sa mga pinahusay na mga programming na kagamitan (App Lab, Game Lab, at Web Lab) ng Code.org sa kahit sinuman sa pamamagitan ng pagbahagi ng kanilang link sa proyekto.",
   "shareSettingDisableDialog": "Isang importanteng bahagi ng karanasan ng mga estudyante sa paggamit ng Code.org ay ang abilidad na magbahagi ng kanilang mga proyekto at mga nalikha sa ibang tao. Kung hindi pinagana ang pagbabahagi, ang mga estudyante ay hindi maaaring magbahagi na mga nalikha nila gamit ang pinahusay na mga programming na kagamitan (App Lab, Game Lab, at Web Lab) sa iba, maliban nalang sa mga guro ng Code.org. Ang pinahusay na kagamitang ito ay dinisenyo para sa mga estudyante na may edad na 13 pataas o ginagamit na may patnubay ng mga guro o mga magulang.",
   "shareSettingDisableDialogNote": "Tandaan na ang mga estudyante ay maaari pa ring magbahagi ng mga proyekto nilang nalikha gamit ang mga programming na kagamitan na dinisenyo para sa mga nakababatang mga estudyante gaya ng Play Lab at Artist. Ang mga kagamitang ito ay naglimita sa mga maaaring malikha ng mga estudyante at hindi pinapayagan ang pag-upload ng kanilang sariling mga ari-arian. Para maprotektahan ang privacy, ang mga binahaging nalikha sa galeriya ng mga proyekto ay binigyan lang ng palatandaan gamit ang unang titik ng pangalan ng estudyante at ang saklaw ng edad.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Pakilagay ang iyong edad sa ibaba at pindutin ang OK para magpatuloy.",
   "shareWarningsMoreInfo": "Higit pang Impormasyon",
   "shareWarningsStoreData": "Ang app na ito na ginawa sa Code Studio ay nag-store ng mga datos na maaaring tingnan ng kahit sinumang mayroong pagbabahagi na link, kaya iwasan ang pagbigay ng mga personal na impormasyon tungkol sa sarili mo o sa iba.",

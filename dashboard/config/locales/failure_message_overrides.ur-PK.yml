@@ -1,45 +1,45 @@
 "ur":
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: "اچھی کوشش ہے!
-        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: "اچھی کوشش
-        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔"
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: اچھی کوشش ہے!
+        درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: اچھی کوشش
+        ہے! درست جواب حاصل کرنے کے لئے دوبارہ کوشش کریں۔
       Course 4 Artist Vars 10_failure_message_override: |-
         Make sure you use the sides
         variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: "یاد رکھیں، دونوں کرداروں
-        کو ان کے پرچم  تک پہنچنے کے لئے چالوں کی تعداد ۱یک جیسی ہونی چاہئے!"
-      Course 4 Playlab For Loops 5b_failure_message_override: "یاد رکھیں، دونوں کرداروں
-        کوایک ہی جگہ رکنے کی ضرورت ہے ۔"
+      Course 4 Playlab For Loops 4b_failure_message_override: یاد رکھیں، دونوں کرداروں
+        کو ان کے پرچم  تک پہنچنے کے لئے چالوں کی تعداد ۱یک جیسی ہونی چاہئے!
+      Course 4 Playlab For Loops 5b_failure_message_override: یاد رکھیں، دونوں کرداروں
+        کوایک ہی جگہ رکنے کی ضرورت ہے ۔
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"

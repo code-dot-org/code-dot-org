@@ -2,7 +2,7 @@
   data:
     game:
       name:
-        Unplug1: "Įvadas į informatiką"
+        Unplug1: Įvadas į informatiką
         Maze: Labirintas
         Multi: Pasirinkti iš kelių variantų
         Unplug2: Skaičiuojamasis mąstymas
@@ -11,15 +11,15 @@
         Unplug4: Algoritmai
         Artist2: Menininkas 2
         Unplug5: Komandų kūrimas
-        Farmer: "Ūkininkas"
+        Farmer: Ūkininkas
         Unplug6: Sąlyginiai sakiniai
         Artist3: Menininkas 3
         Unplug7: Dainos ir funkcijos
-        Farmer2: "Ūkininkas 2"
+        Farmer2: Ūkininkas 2
         Unplug8: Komandos su parametrais
         Artist4: Menininkas 4
         Unplug9: Programavimas komandoje
-        Farmer3: "Ūkininkas 3"
+        Farmer3: Ūkininkas 3
         Unplug10: Internetas
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
@@ -28,7 +28,7 @@
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
-        Wordsearch: "Žodžių paieška"
+        Wordsearch: Žodžių paieška
         Webapp: Programėlių laboratorija
         ArtistEC: Menininkas
         TextMatch: Teksto Atitikmuo
@@ -37,7 +37,7 @@
         NetSim: Interneto simuliatorius
         Custom: Menininkas
         CustomStudio: Laboratorija
-        Gamelab: "Žaidimų laboratorija"
+        Gamelab: Žaidimų laboratorija
     trophy:
       name:
         Bronze: Bronza
@@ -58,7 +58,7 @@
       instructions:
         maze_2_2: 'Ar gali man padėti sugauti neklaužadą kiaulę? Sujunk keletą „ženk
           į priekį“ blokų ir nuspausk „Paleisti“, kad aš ją sugaučiau. '
-        maze_2_1: "Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!"
+        maze_2_1: Ši kiaulė sutaršė mano plunksnas. Padėk man ją pasiekti!
         maze_2_2_5: Surask kelią ir nuvesk mane pas kvailą kiaulę. Tik neleisk man
           prisiliesti prie TNT dėžučių, nes susprogsiu!
         maze_2_3: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
@@ -77,13 +77,13 @@
         maze_2_10: Ar išspręsi šią užduotį, panaudodamas tik 4 blokelius?
         maze_2_11: Mielas žmogau. Aš zombis. Aš alkanas. Turiu... pasiekti... saulėgrąžą.
           Ar padėsi man ten patekti panaudodamas tik 5 blokelius?
-        maze_2_12: "Ši situacija panaši, bet šiek tiek kitokia. Ar sugebėsi panaudoti
-          tik 5 blokelius?"
+        maze_2_12: Ši situacija panaši, bet šiek tiek kitokia. Ar sugebėsi panaudoti
+          tik 5 blokelius?
         maze_2_13: 'Panaudok naują „jei“ blokelį ir leisk man nuspręsti, kada man
           pasisukti. Sufleris: tau tereikės tik vieno naujo blokelio, bet pasistenk
           suprasti, kaip jie veikia, kad kitą kartą mokėtum viską padaryti pats.'
-        maze_2_14: "Čia yra viskas kaip ir praeitoje užduotyje, tau tereikia prisiminti,
-          kaip reikia kartu panaudoti blokelius „jei“ ir „kartok“."
+        maze_2_14: Čia yra viskas kaip ir praeitoje užduotyje, tau tereikia prisiminti,
+          kaip reikia kartu panaudoti blokelius „jei“ ir „kartok“.
         maze_2_15: Aš noriu saulėgrąžų! Panaudok blokelį „jei“, kad galėčiau pas ją
           nusigauti. Panaudok kuo mažiau blokelių.
         maze_2_16: Atlikime panašią užduotį, tačiau saugokis piktų gėlyčių!
@@ -98,7 +98,7 @@
           pilkomis linijomis.
         turtle_1_2: 'O dabar nubrėžk kvadratą. PASTABA: gali pasirinkti pieštuko spalvą
           naujame blokelyje „spalva = ...“.'
-        turtle_1_3: "Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius."
+        turtle_1_3: Šį kartą nubraižyk kvadratą panaudodamas tik 3 blokelius.
         turtle_1_4: 'Nubrėžk trikampį, kurio visos kraštinės yra skirtingų spalvų,
           panaudodamas blokelį „atsitiktinė spalva“. Jis kiekvieną kartą parenka vis
           kitą spalvą. Sufleris: turėsi nuspręsti, kiek laipsnių reikia pasisukti
@@ -110,9 +110,9 @@
         turtle_1_7: Nubrėžkime šiuos žalius akinius. Vieno kvadrato kraštinė yra 100
           pikselių, o jie abu vienas nuo kito nutolę yra per 50 pikselių. Nepamiršk
           pasirinkti žalios spalvos!
-        turtle_1_8: "Šį kartą prieš ką nors bandydamas, mėgink suprasti, ką daro jau
+        turtle_1_8: Šį kartą prieš ką nors bandydamas, mėgink suprasti, ką daro jau
           duotas kodas. Tau beliks tik pakartoti jį kažkiek kartų, kad gautum visą
-          piešinį."
+          piešinį.
         turtle_1_9: Ar sugalvosi, kiek kartų reikia pakartoti šiuos veiksmus, kad
           nubrėžtum apskritimą?
         turtle_1_10: 'Tau pavyko! O dabar nupiešk tai, ką nori. Štai keletas idėjų:
@@ -122,27 +122,27 @@
           100 pikselių, tik su 3 blokeliais? Sufleris: naudok kartojimo blokelį.'
         turtle_4_2: Pridėk blokelį „Pasisuk į dešinę per 90 laipsnių“ kažkur į programos
           kodo vidurį, kad nubrėžtum šiuos trikampius.
-        turtle_4_3: "Štai yra pateiktas kodas, kaip reikia nupiešti vieną trikampį.
+        turtle_4_3: Štai yra pateiktas kodas, kaip reikia nupiešti vieną trikampį.
           Ar sugebėsi pasinaudodamas kartojimo ir pasukimo blokeliais nupiešti gražią
-          gėlę?"
-        turtle_4_4: "Štai tas pats kodas iš praeitos užduoties, tačiau čia yra pasisukama
+          gėlę?
+        turtle_4_4: 'Štai tas pats kodas iš praeitos užduoties, tačiau čia yra pasisukama
           tik 36 laipsnius po kiekvieno nubrėžiamo trikampio. Kiek kartų reikia visa
           tai kartoti? (Sufleris: kai bus pasisukta iš viso 360 laipsnių, bus apeitas
-          ištisas ratas)"
-        turtle_4_5: "Štai tas pats kodas iš praeitos užduoties, tačiau yra kartojama
+          ištisas ratas)'
+        turtle_4_5: 'Štai tas pats kodas iš praeitos užduoties, tačiau yra kartojama
           36 kartus. Kiek laipsnių reikės pasisukti?  (Sufleris: kai bus pasisukta
-          iš viso 360 laipsnių, bus apeitas ištisas ratas)"
+          iš viso 360 laipsnių, bus apeitas ištisas ratas)'
         turtle_4_6: Panaudodamas tik 3 blokelius, ar sugebėsi nubrėžti kvadratą, kurio
           kraštinės yra po 20 pikselių?
-        turtle_4_7: "Štai kodas kvadratui nubrėžti iš praeitos užduoties. Ar sugebėsi
+        turtle_4_7: 'Štai kodas kvadratui nubrėžti iš praeitos užduoties. Ar sugebėsi
           nubrėžti dar 10 kvadratų, kad gautum kopėčias? Sufleris: tau tereikia tik
-          2 naujų blokelių."
-        turtle_4_8: "Štai praeitos užduoties sprendimas. Ar gali pridėti tik 2 blokelius,
-          kad užbaigtum piešinį?"
-        turtle_4_9: "Štai praeitos užduoties sprendimas. Kiek laipsnių reikia pasisukti,
-          kad užbaigti piešinį? (Spėlioti teks turbūt keletą kartų)"
-        turtle_4_10: "Štai praeitos užduoties sprendimas. Kiek kartų reikia pakartoti
-          veiksmus, kad užbaigti piešinį?"
+          2 naujų blokelių.'
+        turtle_4_8: Štai praeitos užduoties sprendimas. Ar gali pridėti tik 2 blokelius,
+          kad užbaigtum piešinį?
+        turtle_4_9: Štai praeitos užduoties sprendimas. Kiek laipsnių reikia pasisukti,
+          kad užbaigti piešinį? (Spėlioti teks turbūt keletą kartų)
+        turtle_4_10: Štai praeitos užduoties sprendimas. Kiek kartų reikia pakartoti
+          veiksmus, kad užbaigti piešinį?
         turtle_4_11: Pamėgink pakeisti skaičius sukimosi bei kartojimo blokeliuose,
           kad gautum skirtingus piešinius. Taip pat gali eksperimentuoti su likusiais
           blokeliais ir žiūrėti, kas gaunasi.
@@ -192,10 +192,10 @@
         turtle_2_5: Nubrėžk kvadratus, kurių kraštinės yra atitinkamai 50, 60, 70,
           80 ir 90 pikselių ilgio. Tau reikės panaudoti sudėtinę komandą „Nubrėžk
           kvadratą“ 5 kartus.
-        turtle_2_6: "Šioje programoje turėsi panaudoti skaitiklį, su kuriuo nubrėši
+        turtle_2_6: 'Šioje programoje turėsi panaudoti skaitiklį, su kuriuo nubrėši
           tokius pat kvadratus, kaip ir praeitą kartą. Kvadrato dydis turės būti toks
           pat, kaip ir skaitiklio dydis, todėl panaudok blokelį „skaitiklis“. Sufleris:
-          Jis yra kategorijoje „Kintamieji“."
+          Jis yra kategorijoje „Kintamieji“.'
         turtle_2_7: Yra pateikta programa, kuri nubrėš spiralę, tačiau jos blokeliai
           yra pilki ir jų neįmanoma aktyvuoti. Sukurk naują programą, panaudodamas
           „skaičiuok su“ blokelį (kategorijoje „Kartojimas“) ir „skaitiklio“ blokelį
@@ -203,10 +203,10 @@
         turtle_2_7_5: "„Komandų kūrimas“ skyriuje yra aprašyta nauja komanda „Nupiešk
           sniego senį“. Panaudok ją, kad nupieštum du sniego senius. Vieno dydis turi
           būti 250, o kito – 100."
-        turtle_2_8: "Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą
-          \ „Nupiešk sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje
-          „Komandos“). Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi
-          būti po 100 pikselių atstumai."
+        turtle_2_8: Ši užduotis šiek tiek sudėtingesnė. Panaudok sudėtinę komandą  „Nupiešk
+          sniego senį“ ir naują blokelį „Peršok į priekį“ (jis yra kategorijoje „Komandos“).
+          Nupiešk 3 sniego senius skirtingomis spalvomis, tarp jų turi būti po 100
+          pikselių atstumai.
         turtle_2_9: 'Panaudok blokelį „Skaičiuok su“, kad nupieštum sniego senių šeimą,
           kuri susideda iš tokio dydžio senių: 110, 100, 90, 80 ir 70. Tarpai tarp
           kiekvieno senio turi būti po 60 pikselių.'
@@ -490,17 +490,17 @@
         applab_ec_simple: Sukurk savo programėlę naudodamas blokelius įrankinėje.
         turtle_ec_1_2: 'O dabar nubrėžk kvadratą. Pastaba: naudok savo mėgstamą spalvą,
           kurią gali pasirinkti naujame blokelyje „pieštuko spalva“.'
-        turtle_ec_1_10: "Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti,
+        turtle_ec_1_10: 'Šaunu, išsprendei tiek daug užduočių! O dabar gali nupiešti,
           ką tik nori. Keletas idėjų: žmogeliukas, snaigė ar spiralė. Taip pat išmėgink
-          naują bloką: „pieštuko storis“. Smagaus piešimo!"
+          naują bloką: „pieštuko storis“. Smagaus piešimo!'
         studio_ec_sandbox: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok
           draugams išmėginti žaidimą savo telefonuose.
     video:
       name:
         maze_intro: Labirinto užduoties įvadas
         artist_intro: Menininko užduoties įvadas
-        farmer_intro: "Įvadas į Ūkininką"
-        flappy_intro: "Įvadas į Flappy"
+        farmer_intro: Įvadas į Ūkininką
+        flappy_intro: Įvadas į Flappy
         loop_times: "„Kartojimo“ blokelis"
         loop_until: "„Kartoti, kol“ blokelis"
         if: "„Jei“ blokelis"
@@ -530,12 +530,12 @@
         C1_maze_intro_sequencing: 'Labirintas: įvadas į sekas'
         C1_maze_debugging: 'Labirintas: klaidų ieškojimas'
         C1_bee_level_intro: 'Bitė: pirmasis lygis'
-        C1_artist_intro: "Įvadas į Menininką"
+        C1_artist_intro: Įvadas į Menininką
         C1_spelling_bee_intro: 'Rašanti bitė: įvadas'
         C1_zuck_repeat_loop: 'Labirintas: kartojimas'
         C1_bee_loops: 'Bitė: kartojimas'
         C1_maze_loops: 'Labirintas: kartojimas'
-        C1_playlab_storytelling: "Žaidimų laboratorija: sukurk istoriją"
+        C1_playlab_storytelling: 'Žaidimų laboratorija: sukurk istoriją'
         C1_planting_seed: Sėklos sodinimas
         C1_building_foundation: Laiptuota piramidė
         C1_going_places_safely: Saugus naršymas internete
@@ -547,7 +547,7 @@
         C2_bee_loops: 'Bitė: kartojimas'
         C2_bee_debugging: 'Bitė: klaidų ieškojimas'
         C2_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
-        C2_playlab_createstory: "Žaidimų laboratorija: sukurk istoriją"
+        C2_playlab_createstory: 'Žaidimų laboratorija: sukurk istoriją'
         C2_graph_paper: Programavimas ant languoto popieriaus
         C2_conditionals_with_cards: Sąlyginiai sakiniai
         C2_binary_bracelets: Dvejetainės apyrankės
@@ -556,7 +556,7 @@
         C2_digital_footprint: Virtualūs pirštų antspaudai
         C2_digital_footprint_v2: Virtualūs pirštų antspaudai
         C3_maze_level_4: 'Labirintas: kartojimas'
-        C3_artist_intro: "Įvadas į Menininką"
+        C3_artist_intro: Įvadas į Menininką
         C3_artist_functions: 'Menininkas: komandos'
         C3_bee_functions: 'Bitė: sudėtinės komandos'
         C3_bee_conditionals: 'Bitė: sąlyginiai sakiniai'
@@ -573,11 +573,11 @@
         C3_crowdsourcing: Komandinis programavimas
         C3_functional_suncatchers: Sekų suvokimas
         C3_songwriting_with_parameters: Dainų rašymas su parametrais
-        C4_intro: "Įvadas"
+        C4_intro: Įvadas
         C4_loops_zombie: Kartojimas
         C4_bee_conditional: 'Bitė: sąlyginiai sakiniai'
         C4_variables_artist: Menininkas – kintamieji
-        C4_variables_playlab: "Žaidimų laboratorija – kintamieji"
+        C4_variables_playlab: Žaidimų laboratorija – kintamieji
         C4_for_loops: Kartojimas
         C4_for_loops_bee: Kartojimas
         C4_for_loops_no_bee: Kartojimas
@@ -613,12 +613,12 @@
         frozen_loops: Pažintis su kartojimu
         frozen_functions: Pažintis su komandų kūrimu
         playlab_intro: Pažintis su Žaidimų laboratorija
-        playlab_events: "Žaidimų Laboratorijos įvykiai"
-        playlab_repeat_forever: "Žaidimų laboratorija – amžinas kartojimas"
+        playlab_events: Žaidimų Laboratorijos įvykiai
+        playlab_repeat_forever: Žaidimų laboratorija – amžinas kartojimas
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: "Žaidimų laboratorija – įvadas"
-        infinity_playlab_events: "Žaidimų laboratorija – įvykiai"
-        infinity_playlab_repeat_forever: "Žaidimų laboratorija – amžinas kartojimas"
+        infinity_playlab_intro: Žaidimų laboratorija – įvadas
+        infinity_playlab_events: Žaidimų laboratorija – įvykiai
+        infinity_playlab_repeat_forever: Žaidimų laboratorija – amžinas kartojimas
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
@@ -677,7 +677,7 @@
         csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
           & Reliability'
         csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: "Šiek tiek apie pikselius"
+        csp_concept_rgb: Šiek tiek apie pikselius
         csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -709,13 +709,13 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: "Žvaigždžių Karai: programuojame galaktiką - įžanga"
-        starwars_typing: "Žvaigždžių Karai: programuojame galaktiką - JavaScript kalba"
-        starwars_events: "Žvaigždžių Karai: programuojame galaktiką - Įvykiai"
-        starwars_congrats: "Žvaigždžių Karai: programuojame galaktiką - sveikinimai"
-        starwars_blocks_intro: "Žvaigždžių Karai: programuojame galaktiką - įžanga"
-        starwars_blocks_events: "Žvaigždžių Karai: programuojame galaktiką - Įvykiai"
-        starwars_blocks_congrats: "Žvaigždžių Karai: programuojame galaktiką - sveikinimai"
+        starwars_intro: 'Žvaigždžių Karai: programuojame galaktiką - įžanga'
+        starwars_typing: 'Žvaigždžių Karai: programuojame galaktiką - JavaScript kalba'
+        starwars_events: 'Žvaigždžių Karai: programuojame galaktiką - Įvykiai'
+        starwars_congrats: 'Žvaigždžių Karai: programuojame galaktiką - sveikinimai'
+        starwars_blocks_intro: 'Žvaigždžių Karai: programuojame galaktiką - įžanga'
+        starwars_blocks_events: 'Žvaigždžių Karai: programuojame galaktiką - Įvykiai'
+        starwars_blocks_congrats: 'Žvaigždžių Karai: programuojame galaktiką - sveikinimai'
         mc_intro: Minecraft - Įvadas
         mc_repeat: Minecraft - Kartojimas
         mc_if_statements: Minecraft - Sąlygos sakiniai
@@ -766,6 +766,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
@@ -781,7 +784,7 @@
           surūšiuoti pagal kategorijas
         set_sprite_image: Prijunk "veikėjas = " prie bloko "kai istorija prasideda",
           kad jis dalyvautų šioje istorijoje.
-        studio_say_text: "Įvesk, ką tavo veikėjas turės pasakyti"
+        studio_say_text: Įvesk, ką tavo veikėjas turės pasakyti
         jigsaw_click: Nuspausk ant šio blokelio!
         move_elsa_forward: Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“
         turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičius,
@@ -838,7 +841,7 @@
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
-        change_here: "Štai čia įterpk savo pakeitimą"
+        change_here: Štai čia įterpk savo pakeitimą
         write_draw_square_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
           kvadratą
         write_draw_triangle_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
@@ -858,7 +861,7 @@
           marks
         arrows_move_actor: Naudok rodykles, kad pajudintum veikėją
         right_arrow_fireball: Naudok rodyklę į dešinę, norint šaudyti ugnies kamuolius
-        name_function: "Štai čia parašyk savo funkcijos pavadinimą"
+        name_function: Štai čia parašyk savo funkcijos pavadinimą
         Infinity_move_right_runbutton: Pridėti judėjimo blokelį čia
         Infinity_move_directions_callout: Kuris blokelis privers Baymax judėti aukštyn,
           kai yra nuspausta rodyklė aukštyn?
@@ -871,8 +874,8 @@
         craft_callout_preplaced: Mes padėjome kelis blokelius, kad tau būtų nuo ko
           pradėti
         craft_inside_repeat: Kartok veiksmus, įdėdamas čia blokelius
-        craft_callout_preplaced_house: "Šis kodas pradės statyti tavo namą. Ar tu
-          gali jį pabaigti?"
+        craft_callout_preplaced_house: Šis kodas pradės statyti tavo namą. Ar tu gali
+          jį pabaigti?
         craft_what_is_iron: Iškask šią geležį!
-        craft_callout_moveforward: "Šis kodas tikrins ar yra lava, ar gali pridėti
-          komandą, kad pajudėtum pirmyn?"
+        craft_callout_moveforward: Šis kodas tikrins ar yra lava, ar gali pridėti
+          komandą, kad pajudėtum pirmyn?

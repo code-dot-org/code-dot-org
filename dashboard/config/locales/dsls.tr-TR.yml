@@ -68,7 +68,7 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         Artist Loops Matching One: Sanatçı döngüleri eşletirme
-        Match the loop to the shape: "Şekil için döngü eşleştir"
+        Match the loop to the shape: Şekil için döngü eşleştir
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -307,7 +307,7 @@
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         Choose an algorithm for the image provided.: Sağlanan görüntü için bir algoritma
           seçin.
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Kare
           ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın sağına
           bir üçgen koy
@@ -326,10 +326,10 @@
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "Çoktan Seçmeli"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "Üçgen
+        Multiple Choice: Çoktan Seçmeli
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Üçgen
           ile başlayın<br/>Üçgenin altına kare yerleştirin<br/>Karenin altına başka
-          bir üçgen daha yerleştirin"
+          bir üçgen daha yerleştirin
         Which image does <em>not</em> follow this algorithm?: Hangi resim bu algoritmayı
           <em>takip etmez</em>?
       2-3 Binary Multi 1:
@@ -337,7 +337,7 @@
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which program makes this image?: Bu resim hangi programla yapılmıştır?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -347,7 +347,7 @@
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         According to the rules of the game, which set of cards is scored correctly?: Oyun
           kurallarına uygun olarak, hangi kağıt seti doğru olarak puan alır?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
@@ -356,13 +356,13 @@
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Bu bölümü döngüler ile nasıl
           basitleştirebilirsin?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which program makes this image?: Bu resim hangi programla yapılmıştır?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
@@ -378,14 +378,14 @@
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which program does not create this image?: Bu resim hangi programda yapılmış
           olamaz?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which image-program combo does not contain mistakes?: Hangi resim-program
           ikilisi hata içermez?
       2-3 artist debug multi 1:
@@ -474,7 +474,7 @@
         Baking cookies: Tanımlama bilgileri
         Banana: Muz
         Brushing your teeth: Dişini fırçalıyor
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Shopping from a grocery list: Alışveriş listesinden alışveriş
         Which one of these items is hardest to describe an algorithm for?: Bu öğelerden
           hangisi algoritmayı en zor açıklayandır?
@@ -484,7 +484,7 @@
           parça şablona uyar?"
         1: ": Burada üç cümle var. Aşağıdaki şablonlardan hangisi en iyi şekilde özetler,
           yani aynı desenlerin üçünü birden şablonla eşleştirir?"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Seattle _____ a _____ _____.: Seattle _____ bir _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
           büyük bir şehirdir. <br/> Eugene orta bir şehirdir <br/> Hillview küçük
@@ -494,19 +494,19 @@
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which of these pictures best represents crowdsourcing?: Bu resimlerden hangisi
           kitlesel kaynağı en iyi şekilde temsil eder?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Saçını fırçala
         Cleaning your room: Odanı temizle
         Eating your dessert: Tatlını ye
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Washing your face: Yüzünü yıka
         Which one of these activities would be best for practicing crowdsourcing?: Bu
           faaliyetlerden hangisi kitlesel kaynağı uygulamak için en iyisi olurdu?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which piece of information listed below is okay to share on the internet?: Aşağıda
           listelenen bilgilerden hangisini internette paylaşmak uygundur?
         Your address: Adresin
@@ -519,7 +519,7 @@
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Code.org'ta
           oturum açmaya çalıştığında, hangi IP adresi sizi büyük ihtimalle DNS'e götürüyor?
       4-5 Internet Multi 2:
@@ -527,7 +527,7 @@
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Eğer
           DNS (alan adı hizmeti) sizi 100.42.50.110 nolu IP adresini gönderirse hangi
           sitede olursunuz?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -550,7 +550,7 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
         : "? Bu şarkının her çağrıldığında tekrarlanan, koro olarak tanımlayabileceğiniz
@@ -560,7 +560,7 @@
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Aşağıdaki
           programlardan hangisi program 1 ile aynı sırayı oluşturmaz?
       4-5 artist functions multi 1:
@@ -643,7 +643,7 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "Çiftçi Döngüler Çoktan Seçmeli"
+        Famer Loops Multiple Choice: Çiftçi Döngüler Çoktan Seçmeli
         Which blocks solve the puzzle?: Hangi bloklar yapbozu çözer?
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
@@ -689,7 +689,7 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which blocks solve this puzzle?: Hangi bloklar bulmacayı çözer?
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
@@ -698,7 +698,7 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which blocks draw the square?: Hangi bloklar kare çizer?
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
@@ -707,7 +707,7 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which shape do these squares combine to make?: Bu karelerin birleşimi hangi
           şekli oluşturur?
       K-1 Artist Loops Multi 1:
@@ -717,7 +717,7 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which blocks create this picture?: Hangi bloklar bu resmi oluşturur?
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
@@ -726,7 +726,7 @@
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Bunun içinde ne kadar nektar var?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
@@ -734,13 +734,13 @@
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Bunun içinde ne kadar nektar var?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Hayvanlardan
           hangisi kendisini <strong>en güvensiz</strong> durumda bırakan dijital ayak
           izine sahiptir?
@@ -751,20 +751,20 @@
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Bu bölümü döngüler ile nasıl
           basitleştirebilirsin?
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which arrow gets the Flurb to the treasure?: Hangi ok Flurb' u hazineye ulaştırır?
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which information should you <strong>not</strong> share online?: Hangi bilgiyi
           çevrimiçi ortamlarda (internette) <strong>paylaşmamalıyız?</strong>
       K-1 Maze Debugging Multi 1:
@@ -774,7 +774,7 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which choice should be the final block?: Son blok hangisi olmalı?
       K-1 Maze Loops Multi 1:
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
@@ -782,7 +782,7 @@
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which repeat block is the same?: Aynı olan tekrar blokları hangileridir?
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
@@ -790,7 +790,7 @@
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Pick the correct repeat block.: Doğru olan tekrar bloğunu seçiniz.
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
@@ -807,7 +807,7 @@
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which algorithm gets the Flurb to the flowers?: Hangi algoritma Flurb' u çiçeklere
           götürür?
       K-1 Plant a Seed Multi 1:
@@ -815,7 +815,7 @@
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which step should go at the beginning of this algorithm?: Bu algoritmanın
           başlangıç adımı hangisi olabilir?
       K-1 Plant a Seed Multi 2:
@@ -823,7 +823,7 @@
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which step should fill in the blank for this algorithm?: Bu algoritmada boş
           olan yere hangi adım gelmeli?
       K-1 Word Search Multi 1:
@@ -832,7 +832,7 @@
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which blocks spell "MOVE"?: Hangi bloklar "MOVE" kelimesini heceler?
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
@@ -840,12 +840,12 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         Which blocks spell "JUMP"?: Hangi bloklar "JUMP" kelimesini heceler?
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "Çoktan Seçmeli"
+        Multiple Choice: Çoktan Seçmeli
         SET: AYARLA
         SOUTH: GÜNEY
         SQUARE: KARE

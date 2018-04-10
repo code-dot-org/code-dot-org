@@ -42,9 +42,9 @@
           površini in pritisneš "Zaženi", se ptič premakne za en prostor v labirintu.
       11:
         image: notes/hoc1_11.jpg
-        text: "Če želite narediti več kot eno dejanje, lahko povlečete več blokov
-          v vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od
-          zgoraj navzdol."
+        text: Če želite narediti več kot eno dejanje, lahko povlečete več blokov v
+          vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od
+          zgoraj navzdol.
       12:
         image: notes/hoc1_12.jpg
         text: Če zaženete program in želite popraviti in poskusiti znova, pritisnite
@@ -715,10 +715,10 @@
           premet na gredi, ampak konstatno padam dol.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "Šla sem skozi vsak del korak po koraku in ugotovila, kje je moja napaka.
+        text: Šla sem skozi vsak del korak po koraku in ugotovila, kje je moja napaka.
           Svojih rok nisem pravilno položila na gredo. Poskusila sem narediti še en
           premet z novo pozicijo rok in mi je uspelo. Bila sem zelo zadovoljna, da
-          sem razhroščila svoj premet."
+          sem razhroščila svoj premet.
       3:
         image: notes/C1_maze_debugging_3.png
         text: Da bi se naučili razhroščevanja, bomo začeli z množico blokov, ki je
@@ -883,10 +883,10 @@
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: "Čas je, da si kreativen/a in uporabiš svoje svoje programerske sposobnosti
+        text: Čas je, da si kreativen/a in uporabiš svoje svoje programerske sposobnosti
           za pripovedovanje zgodbe. Tvoja zgodba bo imela igralce, ti pa boš lahko
           pripravil/a te igralce, da bodo govorili in komunicirali med sabo. Začni
-          razmišljati, kakšno zgodbo želiš povedati."
+          razmišljati, kakšno zgodbo želiš povedati.
       2:
         image: notes/C1_playlab_storytelling_2.png
         text: Mačka se je vedno bala psa. Kaj se zgodi, če mačka ugotovi, da želi
@@ -940,9 +940,9 @@
           s čimer poveš, koliko korakov naprej naj naredi.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "Še ena stvar je, da lahko postaviš toliko ukazov, kolikor želiš znotraj
+        text: Še ena stvar je, da lahko postaviš toliko ukazov, kolikor želiš znotraj
           bloka ponovi. V tem primeru rečeš, naj se premakne naprej in zavije levo,
-          kar bo naredilo petkrat. Zabavaj se!"
+          kar bo naredilo petkrat. Zabavaj se!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png

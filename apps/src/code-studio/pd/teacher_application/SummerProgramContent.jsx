@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-import {ButtonList, otherString} from '../form_components/button_list.jsx';
+import {ButtonList, otherString} from '../form_components/ButtonList.jsx';
 import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
 
 export default React.createClass({

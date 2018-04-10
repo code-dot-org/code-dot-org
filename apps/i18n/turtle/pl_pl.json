@@ -74,13 +74,13 @@
   "penDown": "opuść ołówek",
   "penTooltip": "Podnosi lub opuszcza ołówek, by zakończyć lub rozpocząć rysowanie.",
   "penUp": "podnieś ołówek",
+  "pointTo": "point to",
   "pixels": "piksele",
   "reinfFeedbackMsg": "Oto Twój rysunek! Pracuj nad nim dalej lub przejdź do następnej łamigłówki.",
   "setAlpha": "ustaw alfa",
   "setCharacter": "ustaw jako postać {character}",
   "setColour": "ustaw kolor",
   "setPattern": "ustaw wzór ",
-  "setStickerSize": "Set sticker size",
   "setWidth": "ustaw szerokość",
   "shareDrawing": "Udostępnij swój rysunek:",
   "showMe": "Pokaż mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Obraca artystę w lewo lub prawo o określoną liczbę stopni.",
   "turtleVisibilityTooltip": "Artysta staje się widoczny lub niewidoczny.",
   "widthTooltip": "Zmienia grubość ołówka.",
+  "withSize": "with size",
   "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."
 }

@@ -283,4 +283,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def regional_partner_name
     regional_partner.try(:name)
   end
+
+  def course_name
+    pd_application.try(&:course_name)
+  end
 end

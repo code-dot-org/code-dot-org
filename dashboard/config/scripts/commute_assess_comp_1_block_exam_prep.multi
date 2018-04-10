@@ -7,9 +7,7 @@ right 'swaps the values of a and b'
 wrong 'This program causes an error'
 
 markdown <<MARKDOWN
+![](https://images.code.org/a89351e293213f9e8b487d188a3181a2-image-1482338500518.png) 
 
-
-![](https://images.code.org/917403815fe4df86107d90a4335e62be-image-1482509347944.png)
-
-<!-- ![](https://images.code.org/a89351e293213f9e8b487d188a3181a2-image-1482338500518.png) -->
+<!-- ![](https://images.code.org/917403815fe4df86107d90a4335e62be-image-1482509347944.png)-->
 MARKDOWN

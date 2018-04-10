@@ -9,7 +9,7 @@
   upgrade_ie_link: "Pour en savoir plus"
   en: "Informatique/Sciences informatiques"
   computer_science_edweek: "Semaine de l'enseignement de l’informatique"
-  csedweek_dates: "8-14 décembre 2014"
+  csedweek_dates: "Du 3 au 9 décembre 2018"
   csedweek_banner_hoc: 'L’<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Heure de Code</a> arrive. Appel à tous les enseignants et organisateurs -<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifiez votre Heure de Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Êtes-vous un professeur d’informatique&#160;? Voir les autres ressources de la Semaine de l’enseignement de l’informatique</a>'
   n_have_learned_an_hoc: "<h1>Essayez une</h1><h2>Heure de Code</h2><h3># servi</h3>"
@@ -26,7 +26,7 @@
   twentyhours_heading: "Essayez notre introduction au cours d’informatique"
   twentyhours_text: "Première Heure de Code complétée&#160;? Découvrez les concepts de l’informatique et de la programmation avec ce cours d’approfondissement."
   og_title: 'Chaque enfant mérite une opportunité'
-  og_title_soon: "The Hour of Code is coming"
+  og_title_soon: "L'Heure de Code arrive"
   og_title_here: "The Hour of Code is here!"
   og_description: "Chaque élève de chaque école mérite une opportunité d'étudier l'informatique."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
@@ -260,12 +260,12 @@
   studiobar_donate_body: "Un enfant apprend pour chaque dollar que vous donnez."
   studiobar_shop_title: "Boutique"
   studiobar_shop_body: "Casse les stéréotypes. Porte fièrement notre logo."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
+  homepage_stats_students: "des élèves américains ont un compte sur Code.org"
+  homepage_stats_female: "de nos élèves sont des femmes"
+  homepage_stats_teachers: "professeurs utilisent Code.org"
+  homepage_stats_hourofcodde: "des élèves dans le monde ont essayé l'Heure de Code"
+  homepage_stats_policy: "états ont changé leur politique pour favoriser l'étude de l'informatique"
+  homepage_stats_title: "Nous faisons la différence"
   homepage_hero_text_malala: "« Je mets au défi toutes les filles de tous les pays d'apprendre une Heure de Code » Malala, lauréat du prix Nobel de la Paix"
   homepage_hero_text_susan: |-
     «&#160;Si vous pouvez changer la technologie, vous pouvez changer le monde.&#160;» Susan, PDG de YouTube
@@ -295,8 +295,8 @@
   homepage_hero_text_stat_loc: "2,5 millions de filles sont inscrites pour apprendre sur Code Studio"
   homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
   homepage_hero_text_stat_served: 'L’Heure de Code: #served servis'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "L'Heure de Code arrive"
+  homepage_hero_hoc_is_here: "L'Heure de Code est là"
   homepage_slot_text_hoc: "L'Heure de Code"
   homepage_slot_text_frozen: "La reine des neige avec Anna et Elsa"
   homepage_slot_text_teacher: "Tableau de bord enseignant"
@@ -316,7 +316,7 @@
   homepage_action_text_girlvideo: "Encourager une fille"
   homepage_action_text_learn: "Commencer à apprendre"
   homepage_action_text_signpetition: "Signez la pétition"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Gagnez un chat avec une célébrité"
   homepage_signpetition_dropdown: "Je suis d'accord ▾"
   homepage_diversity_pledge: "Prendre l'engagement de diversité"
   homepage_banner_text_prizes: 'L’Heure de Code revient du 7 au 13 décembre.'
@@ -360,7 +360,7 @@
   homepage_slot_text_link_buy: "S'impliquer"
   homepage_slot_text_link_donate: "Faire un don"
   homepage_slot_text_link_shop: "T-shirts, chapeaux, & plus"
-  homepage_slot_text_link_administrators: "Bring CS to your school"
+  homepage_slot_text_link_administrators: "Amener l'informatique dans votre école"
   homepage_header_codestudio: "Créations des élèves de Code.org"
   homepage_header_donors: "Code.org remercie tout ceux qui l'ont soutenu"
   homepage_donors_seall: "Tout afficher"

@@ -2,7 +2,7 @@
   data:
     game:
       name:
-        Unplug1: "Úvod do počítačové vědy"
+        Unplug1: Úvod do počítačové vědy
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
@@ -18,7 +18,7 @@
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: "Štafetové programování"
+        Unplug9: Štafetové programování
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -409,9 +409,9 @@
           že ji má moc rád. Použije povel "actor throw" na Sida (actor 1), aby hodil
           srdce na babičku (actor 2)! Nastav náladu Granny na spojenost, když se jí
           zasáhnou srdce.
-        studio_iceage_free_play: "Čas vytvořit si vlastní hru nebo příběh! Když budeš
+        studio_iceage_free_play: Čas vytvořit si vlastní hru nebo příběh! Když budeš
           hotov, klepni na Finish, abys nechal přátelé si zkusit tvou hru na jejich
-          mobilech, tabletech nebo Pc!"
+          mobilech, tabletech nebo Pc!
         studio_gumball_hello1: Anais chce mít nějaké nové přátele. Pomůžeš jí, aby
           řekla "Ahoj" přetažením bloku "say" do pracovní oblasti se zadáním uvnitř
           slova "hello"?
@@ -482,10 +482,10 @@
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
     video:
       name:
-        maze_intro: "Úvod Bludiště"
-        artist_intro: "Úvod Malíř"
-        farmer_intro: "Úvod Farmářka"
-        flappy_intro: "Úvod do Flappy"
+        maze_intro: Úvod Bludiště
+        artist_intro: Úvod Malíř
+        farmer_intro: Úvod Farmářka
+        flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovat n-krát
         loop_until: Blok Opakovat Dokud
         if: Blok Pokud
@@ -507,7 +507,7 @@
         Unplug9: Relay programování
         Unplug10: Internet
         Unplug11: Shrnutí
-        C1_happy_maps_unplugged: "Šťastné mapy"
+        C1_happy_maps_unplugged: Šťastné mapy
         C1_moveitmoveit_unplugged: Pohyb, pohyb
         C1_bigevent_unplugged: Velká událost
         C1_getting_loopy: Bláznit
@@ -515,7 +515,7 @@
         C1_maze_intro_sequencing: Bludiště sekvenování Intro
         C1_maze_debugging: 'Bludiště: ladění'
         C1_bee_level_intro: Včelí Level - Úvod
-        C1_artist_intro: "Úvod Malíř"
+        C1_artist_intro: Úvod Malíř
         C1_spelling_bee_intro: Hláskování Intro
         C1_zuck_repeat_loop: Bludištní cykly
         C1_bee_loops: Včelí cykly
@@ -524,8 +524,8 @@
         C1_planting_seed: Sázení semínka
         C1_building_foundation: Budování nadace
         C1_going_places_safely: Cestování bezpečně
-        C2_maze_intro: "Úvod Bludiště"
-        C2_artist_intro: "Úvod Malíř"
+        C2_maze_intro: Úvod Bludiště
+        C2_artist_intro: Úvod Malíř
         C2_zuck_repeat_loop: Bludištní cykly
         C2_artist_loops: Umělec cykly
         C2_artist_debugging: Umělecké ladění
@@ -536,12 +536,12 @@
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: "Štafetové programování"
+        C2_relay_programming: Štafetové programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
         C3_maze_level_4: Bludištní cykly
-        C3_artist_intro: "Úvod Malíř"
+        C3_artist_intro: Úvod Malíř
         C3_artist_functions: Umělec funkce
         C3_bee_functions: Včelí funkce
         C3_bee_conditionals: Včela podmínky
@@ -558,7 +558,7 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funkční náhrdelníky
         C3_songwriting_with_parameters: Psaní písniček s parametry
-        C4_intro: "Úvod"
+        C4_intro: Úvod
         C4_loops_zombie: Smyčky
         C4_bee_conditional: Včela podmínky
         C4_variables_artist: Proměnné - umělec
@@ -594,10 +594,10 @@
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
-        frozen_intro: "Úvod do Hodiny kódu"
-        frozen_loops: "Úvod do cyklů"
-        frozen_functions: "Úvod do funkcí"
-        playlab_intro: "Úvod do Play Labu"
+        frozen_intro: Úvod do Hodiny kódu
+        frozen_loops: Úvod do cyklů
+        frozen_functions: Úvod do funkcí
+        playlab_intro: Úvod do Play Labu
         playlab_events: Play Lab události
         playlab_repeat_forever: Play Lab trvalé opakování
         tutorial_puzzle_challenge: Výukový program Puzzle výzva
@@ -649,7 +649,7 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "Úvod do funkcí"
+        csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Smyčky
         csp_applab_turtle: Turtle Programming
@@ -751,6 +751,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

@@ -11,8 +11,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        Match the button combination to the dance moves.: "단추에 알맞은 춤 동작을 고르세요."
-        Matching: "맞추기"
+        Match the button combination to the dance moves.: 단추에 알맞은 춤 동작을 고르세요.
+        Matching: 맞추기
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -24,8 +24,8 @@
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
         "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: "맞추기"
-        Use the key to match each code to its letter: "키를 사용해 코드와 글자를 맞추세요."
+        Matching: 맞추기
+        Use the key to match each code to its letter: 키를 사용해 코드와 글자를 맞추세요.
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -33,8 +33,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "프로그램에 그리드,격자무늬를 맞추세요"
-        Matching: "맞추기"
+        Match the grid to the program.: 프로그램에 그리드,격자무늬를 맞추세요
+        Matching: 맞추기
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -43,10 +43,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "블록 짝 맞추기"
-        Instructions: "소개"
-        Match the puzzles to the blocks: "퍼즐 블록 맞추기"
-        Maze Match: "미로 퍼즐 짝맞추기"
+        Drag the blocks to match.: 블록 짝 맞추기
+        Instructions: 소개
+        Match the puzzles to the blocks: 퍼즐 블록 맞추기
+        Maze Match: 미로 퍼즐 짝맞추기
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -54,8 +54,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "프로그램의 모양을 맞추세요"
-        Matching: "맞추기"
+        Match the grid to the program: 프로그램의 모양을 맞추세요
+        Matching: 맞추기
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -65,8 +65,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "예술가 반복, 똑같이 그리기1"
-        Match the loop to the shape: "똑같이 맞춰 그리기"
+        Artist Loops Matching One: 예술가 반복, 똑같이 그리기1
+        Match the loop to the shape: 똑같이 맞춰 그리기
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -76,8 +76,8 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        Artist Matching: "예술가 똑같이 그리기"
-        Match the shape with the blocks that complete it.: "블럭들을 사용해서 똑같은 모양을 맞추세요."
+        Artist Matching: 예술가 똑같이 그리기
+        Match the shape with the blocks that complete it.: 블럭들을 사용해서 똑같은 모양을 맞추세요.
       2-3 bounce match 1:
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
@@ -89,9 +89,9 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "바운스 맞추기"
-        Match the events with the actions: "이벤트와 실행 맞추기"
-        Matching: "맞추기"
+        Bounce Matching: 바운스 맞추기
+        Match the events with the actions: 이벤트와 실행 맞추기
+        Matching: 맞추기
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -99,9 +99,9 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: "플래피 맞추기1"
-        Match the events with the actions: "이벤트와 실행 맞추기"
-        Matching: "맞추기"
+        Flappy Matching One: 플래피 맞추기1
+        Match the events with the actions: 이벤트와 실행 맞추기
+        Matching: 맞추기
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -109,8 +109,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "퍼즐 블럭 맞추기"
-        Maze Match One: "미로 퍼즐 맞추기1"
+        Match the puzzles to the blocks: 퍼즐 블럭 맞추기
+        Maze Match One: 미로 퍼즐 맞추기1
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
@@ -120,9 +120,9 @@
         "<h4>Compare player scores to see who wins</h4>": "<h4>누가 이겼는지 비교합니다.</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>Player 1이 주사위를 굴립니다.</h4>"
         "<h4>Set Player 1 score to 0</h4>": "<h4>Player 1 점수를 0점으로</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "알고리즘에서
-          나타나도록 주사위 레이스 게임에서 단계들을 맞추세요."
-        Matching: "맞추기"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 알고리즘에서
+          나타나도록 주사위 레이스 게임에서 단계들을 맞추세요.
+        Matching: 맞추기
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -136,9 +136,9 @@
           6</h3>"
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Wheels/side: 3<br/>Windows/side:
           2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "각각의
-          자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요."
-        Matching: "맞추기"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 각각의
+          자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
+        Matching: 맞추기
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -149,9 +149,9 @@
         "<h4>STACK</h4>": "<h4>스택</h4>"
         "<h4>STAMP</h4>": "<h4>스탬프</h4>"
         "<h4>STAR</h4>": "<h4>별</h4>"
-        Match each program to the word it makes, using the provided group of skills.: "주어진
-          방법들의 프로그램과 단어를 맞추세요."
-        Matching: "맞추기"
+        Match each program to the word it makes, using the provided group of skills.: 주어진
+          방법들의 프로그램과 단어를 맞추세요.
+        Matching: 맞추기
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -160,10 +160,10 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "블럭 짝 맞추기"
-        Instructions: "소개"
-        Match the puzzles to the blocks: "퍼즐 블럭 맞추기"
-        Maze Match: "미로 퍼즐 짝맞추기"
+        Drag the blocks to match.: 블럭 짝 맞추기
+        Instructions: 소개
+        Match the puzzles to the blocks: 퍼즐 블럭 맞추기
+        Maze Match: 미로 퍼즐 짝맞추기
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -171,9 +171,9 @@
         "<br/><br/>above": "<br/><br/>위"
         "<br/><br/>below": "<br/><br/>아래"
         "<br/><br/>next to": "<br/><br/>옆"
-        Is the square next to, above, or below the ball?: "는 사각형입니다. 공의 위? 옆? 아래?
-          어디에 있나요?"
-        Matching: "맞추기"
+        Is the square next to, above, or below the ball?: 는 사각형입니다. 공의 위? 옆? 아래? 어디에
+          있나요?
+        Matching: 맞추기
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -183,8 +183,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: "형태에 따라 모양을 맞추세요."
-        Matching: "맞추기"
+        Match the shapes based on type.: 형태에 따라 모양을 맞추세요.
+        Matching: 맞추기
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -194,8 +194,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: "형태에 따라 모양을 맞추세요."
-        Matching: "맞추기"
+        Match the shapes based on type.: 형태에 따라 모양을 맞추세요.
+        Matching: 맞추기
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -203,8 +203,8 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: "순서를 조정해 맞추세요."
-        Matching: "맞추기"
+        Match the code to the stairs it draws.: 순서를 조정해 맞추세요.
+        Matching: 맞추기
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -214,8 +214,8 @@
         "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: "블럭을 맞추세요."
-        Matching: "맞추기"
+        Match the blocks: 블럭을 맞추세요.
+        Matching: 맞추기
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -224,8 +224,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        Match the button combination to the dance moves.: "조합되는 블럭을 맞춰 댄스 무브하세요."
-        Matching: "맞추기"
+        Match the button combination to the dance moves.: 조합되는 블럭을 맞춰 댄스 무브하세요.
+        Matching: 맞추기
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -233,8 +233,8 @@
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: "블럭을 맞추세요."
-        Matching: "맞추기"
+        Match the blocks: 블럭을 맞추세요.
+        Matching: 맞추기
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -242,9 +242,9 @@
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Match the Map to the arrow that gets the Flurb to the treasure: "플러브가 보물을
-          가질 수 있도록 지도를 맞추세요."
-        Matching: "맞추기"
+        Match the Map to the arrow that gets the Flurb to the treasure: 플러브가 보물을 가질
+          수 있도록 지도를 맞추세요.
+        Matching: 맞추기
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -255,10 +255,10 @@
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: "블럭 짝 맞추기"
-        Instructions: "소개"
-        Match the puzzles and blocks: "퍼즐들과 블럭들을 맞추세요."
-        Matching: "맞추기"
+        Drag the blocks to match.: 블럭 짝 맞추기
+        Instructions: 소개
+        Match the puzzles and blocks: 퍼즐들과 블럭들을 맞추세요.
+        Matching: 맞추기
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -266,9 +266,9 @@
         "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
         "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: "플러브가
-          꽃에 도착할 수 도록 알고리즘 설계를 맞추세요."
-        Matching: "맞추기"
+        Match the Map to the algorithm that gets the Flurb to the flowers.: 플러브가 꽃에
+          도착할 수 도록 알고리즘 설계를 맞추세요.
+        Matching: 맞추기
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -279,79 +279,79 @@
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: "그림들을 오른쪽에서 가운데로 옮기세요."
-        Instructions: "소개"
-        Match up all the flowers by colour!: "꽃들을 색깔에 따라 짝을 맞추세요."
-        Matching Images Two: "이미지 맞추기2"
+        Drag the images from right to center.: 그림들을 오른쪽에서 가운데로 옮기세요.
+        Instructions: 소개
+        Match up all the flowers by colour!: 꽃들을 색깔에 따라 짝을 맞추세요.
+        Matching Images Two: 이미지 맞추기2
       test matching text:
-        Matching: "맞추기"
-        Some really easy stuff to match.  Drag it around until you get it.: "어떤 것들은
-          매우 쉽게 짝을 맞출 수 있습니다. 이동시켜 맞춰 보세요."
+        Matching: 맞추기
+        Some really easy stuff to match.  Drag it around until you get it.: 어떤 것들은
+          매우 쉽게 짝을 맞출 수 있습니다. 이동시켜 맞춰 보세요.
         Sydney: Sydney
         Van Minnen: Van Minnen
-        What color is the sky?: "하늘은 무슨 색인가요?"
+        What color is the sky?: 하늘은 무슨 색인가요?
         What's Brent's last name?: Brent 의 성은 무엇인가요?
-        What's in the ocean?: "바다는 무슨 색인가요?"
+        What's in the ocean?: 바다는 무슨 색인가요?
         Where is Brendan from?: Brendan 은 어디서 왔나요?
-        blue: "파랑"
-        salt: "소금"
+        blue: 파랑
+        salt: 소금
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: "주어진 이미지를 위한 알고리즘을 고르세요."
-        Multiple Choice: "객관식"
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: "사각형으로
-          시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "사각형에서
-          시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요."
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: "사각형으로
-          시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요"
+        Choose an algorithm for the image provided.: 주어진 이미지를 위한 알고리즘을 고르세요.
+        Multiple Choice: 객관식
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 사각형으로
+          시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 사각형에서
+          시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 사각형으로
+          시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : "사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의
-          오른쪽에 삼각형을 넣습니다"
+        : 사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의 오른쪽에
+          삼각형을 넣습니다
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "객관식"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "삼각형에서
-          시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요."
-        Which image does <em>not</em> follow this algorithm?: "어떤 이미지가 이 알고리즘으로 만들
-          수 <em>없나요?</em>"
+        Multiple Choice: 객관식
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 삼각형에서
+          시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.
+        Which image does <em>not</em> follow this algorithm?: 어떤 이미지가 이 알고리즘으로 만들
+          수 <em>없나요?</em>
       2-3 Binary Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "객관식"
-        Which program makes this image?: "어떤 프로그램이 이 그림을 그릴 수 있을까요?"
+        Multiple Choice: 객관식
+        Which program makes this image?: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: "게임의
-          규칙에 따라 정확하게 점수가 부여된 카드 세트는?"
-        Multiple Choice: "객관식"
+        According to the rules of the game, which set of cards is scored correctly?: 게임의
+          규칙에 따라 정확하게 점수가 부여된 카드 세트는?
+        Multiple Choice: 객관식
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "반복을 이용해 이 순차실행을 간단히 할 수
-          있을까요?"
-        Multiple Choice: "객관식"
+        How would you simplify this sequence with loops?: 반복을 이용해 이 순차실행을 간단히 할 수
+          있을까요?
+        Multiple Choice: 객관식
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "객관식"
-        Which program makes this image?: "어떤 프로그램이 이 그림을 그릴 수 있을까요?"
+        Multiple Choice: 객관식
+        Which program makes this image?: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -359,21 +359,21 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Maze Multiple Choice: "미로 퍼즐 객관식"
-        Which blocks work?: "어떤 블록들이 제대로 동작할까요?"
+        Maze Multiple Choice: 미로 퍼즐 객관식
+        Which blocks work?: 어떤 블록들이 제대로 동작할까요?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "객관식"
-        Which program does not create this image?: "어떤 프로그램이 이 그림을 그릴 수 없을까요?"
+        Multiple Choice: 객관식
+        Which program does not create this image?: 어떤 프로그램이 이 그림을 그릴 수 없을까요?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "객관식"
-        Which image-program combo does not contain mistakes?: "어떤 프로그램이 오류가 없을까요?"
+        Multiple Choice: 객관식
+        Which image-program combo does not contain mistakes?: 어떤 프로그램이 오류가 없을까요?
       2-3 artist debug multi 1:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -381,17 +381,17 @@
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Artist Debugging Multiple Choice One: "예술가 디버깅 객관식1"
-        Why won't this circle go all the way around?: "왜 이 원은 다 돌지 않을까요?"
+        Artist Debugging Multiple Choice One: 예술가 디버깅 객관식1
+        Why won't this circle go all the way around?: 왜 이 원은 다 돌지 않을까요?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice One: "예술가 함수 다중선택1"
-        Pick the correct blocks to draw this image using the given functions: "주어진
-          함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요."
+        Artist Functions Multiple Choice One: 예술가 함수 다중선택1
+        Pick the correct blocks to draw this image using the given functions: 주어진
+          함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요.
       2-3 artist loops multi 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
@@ -399,8 +399,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "예술가 반복 다중 선택"
-        Which shape is made by this loop?: "이 반복으로 어떤 모양이 만들어질까요?"
+        Artist Loops Multiple Choice: 예술가 반복 다중 선택
+        Which shape is made by this loop?: 이 반복으로 어떤 모양이 만들어질까요?
       2-3 artist loops multi 2:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500"
@@ -408,15 +408,15 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "예술가 반복 다중 선택"
-        Which shape is made by this program?: "이 프로그램으로 어떤 모양이 만들어질까요?"
+        Artist Loops Multiple Choice: 예술가 반복 다중 선택
+        Which shape is made by this program?: 이 프로그램으로 어떤 모양이 만들어질까요?
       2-3 bee conditionals multi 1:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "꿀벌 조건선택 다중선택1"
-        Which comparison below is true?: "다음 중 맞는 것은?"
+        Bee Conditionals Multiple Choice One: 꿀벌 조건선택 다중선택1
+        Which comparison below is true?: 다음 중 맞는 것은?
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
@@ -424,8 +424,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "꿀벌 조건선택 다중선택2"
-        Choose the best blocks.: "가장 적합한 블록들을 고르세요."
+        Bee Conditionals Multiple Choice Two: 꿀벌 조건선택 다중선택2
+        Choose the best blocks.: 가장 적합한 블록들을 고르세요.
       2-3 bee conditionals multi 3:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
@@ -433,8 +433,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "꿀벌 조건선택 다중선택2"
-        Choose the best blocks.: "가장 적합한 블럭들을 고르세요."
+        Bee Conditionals Multiple Choice Two: 꿀벌 조건선택 다중선택2
+        Choose the best blocks.: 가장 적합한 블럭들을 고르세요.
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
@@ -442,8 +442,8 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
-        Bee Loops Multiple Choice One: "꿀벌 반복 다중선택1"
-        Which blocks collect all of the nectar?: "어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?"
+        Bee Loops Multiple Choice One: 꿀벌 반복 다중선택1
+        Which blocks collect all of the nectar?: 어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?
       2-3 maze multi 1:
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
@@ -451,62 +451,62 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice One: "미로 퍼즐 객관식1"
-        Which set of blocks is the correct answer?: "다음중 어떤 블록들이 정답일까요?"
+        Maze Multiple Choice One: 미로 퍼즐 객관식1
+        Which set of blocks is the correct answer?: 다음중 어떤 블록들이 정답일까요?
       4-5 Algorithms Multi 1:
-        Baking cookies: "쿠키를 굽고"
-        Banana: "바나나"
-        Brushing your teeth: "양치질"
-        Multiple Choice: "객관식"
-        Shopping from a grocery list: "식료품 리스트를 쇼핑"
-        Which one of these items is hardest to describe an algorithm for?: "다음 중 알고리즘으로
-          표현하기 가장 어려운 것은?"
+        Baking cookies: 쿠키를 굽고
+        Banana: 바나나
+        Brushing your teeth: 양치질
+        Multiple Choice: 객관식
+        Shopping from a grocery list: 식료품 리스트를 쇼핑
+        Which one of these items is hardest to describe an algorithm for?: 다음 중 알고리즘으로
+          표현하기 가장 어려운 것은?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene는 _____ 도시입니다.
         0: "? 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?"
         1: ": 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?"
-        Multiple Choice: "객관식"
-        Seattle _____ a _____ _____.: "시애틀 _____ _____ _____입니다."
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: "시애틀은
-          대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다."
+        Multiple Choice: 객관식
+        Seattle _____ a _____ _____.: 시애틀 _____ _____ _____입니다.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 시애틀은
+          대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
         _____ is _____ a _____.: _____ _____는 _____입니다.
         _____ is a _____ city.: _____은 _____ 도시입니다.
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "객관식"
-        Which of these pictures best represents crowdsourcing?: "다음 크라우드 소싱을 가장 잘
-          표현하는 것은?"
+        Multiple Choice: 객관식
+        Which of these pictures best represents crowdsourcing?: 다음 크라우드 소싱을 가장 잘 표현하는
+          것은?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "머리를 빗질하는"
-        Cleaning your room: "방 청소"
-        Eating your dessert: "디저트를 먹는"
-        Multiple Choice: "객관식"
-        Washing your face: "세수하는"
-        Which one of these activities would be best for practicing crowdsourcing?: "클라우드소싱을
-          연습하기에 가장 좋은 활동은?"
+        Brushing your hair: 머리를 빗질하는
+        Cleaning your room: 방 청소
+        Eating your dessert: 디저트를 먹는
+        Multiple Choice: 객관식
+        Washing your face: 세수하는
+        Which one of these activities would be best for practicing crowdsourcing?: 클라우드소싱을
+          연습하기에 가장 좋은 활동은?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "객관식"
-        Which piece of information listed below is okay to share on the internet?: "다음
-          중 인터넷을 통해 공유하기 적당한 정보는?"
-        Your address: "주소"
-        Your birthday: "생일"
-        Your favorite food: "좋아하는 음식"
-        Your parent's credit card number: "부모의 신용 카드 번호"
+        Multiple Choice: 객관식
+        Which piece of information listed below is okay to share on the internet?: 다음
+          중 인터넷을 통해 공유하기 적당한 정보는?
+        Your address: 주소
+        Your birthday: 생일
+        Your favorite food: 좋아하는 음식
+        Your parent's credit card number: 부모의 신용 카드 번호
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "객관식"
+        Multiple Choice: 객관식
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: code.org에
           접속하기 위해 사용하는 IP 주소로 가장 적당한 것은?
       4-5 Internet Multi 2:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: IP
           주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
-        Multiple Choice: "객관식"
+        Multiple Choice: 객관식
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -529,18 +529,18 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "객관식"
+        Multiple Choice: 객관식
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : "코러스로 정의하여 호출될 때마다 반복될 이 노래의 가장 큰 구절은 무엇인가?"
+        : 코러스로 정의하여 호출될 때마다 반복될 이 노래의 가장 큰 구절은 무엇인가?
       4-5 Suncatchers Multi 1:
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "객관식"
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: "아래
-          프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?"
+        Multiple Choice: 객관식
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 아래
+          프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
       4-5 artist functions multi 1:
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
@@ -548,9 +548,9 @@
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice: "예술가 함수 객관식"
-        Which function creates a rectangle that can change its size?: "크기를 변경할 수 있는
-          사각형을 그리는 함수는 어떤 것일까요?"
+        Artist Functions Multiple Choice: 예술가 함수 객관식
+        Which function creates a rectangle that can change its size?: 크기를 변경할 수 있는
+          사각형을 그리는 함수는 어떤 것일까요?
       4-5 artist loops multi 1:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
@@ -558,31 +558,31 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500"
-        Artist Loops Multiple Choice: "예술가 반복 다중 선택"
-        Which blocks will create the design?: "어떤 블럭이 같은 모양을 만들어낼 수 있을까요?"
+        Artist Loops Multiple Choice: 예술가 반복 다중 선택
+        Which blocks will create the design?: 어떤 블럭이 같은 모양을 만들어낼 수 있을까요?
       4-5 artist loops multi 2:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: "예술가 함수 객관식"
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': "다음과
-          같은 패턴을 만들어내는 함수를 고르세요. : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50"
+        Artist Functions Multiple Choice: 예술가 함수 객관식
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': '다음과
+          같은 패턴을 만들어내는 함수를 고르세요. : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-        Artist Multiple Choice: "예술가 객관식"
-        Which blocks draw a rectangle with a perimeter of 100?: "둘레의 길이가 100인 사각형을
-          그리는 블록들은?"
+        Artist Multiple Choice: 예술가 객관식
+        Which blocks draw a rectangle with a perimeter of 100?: 둘레의 길이가 100인 사각형을
+          그리는 블록들은?
       4-5 artist multi 2:
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-        Artist Multiple Choice: "예술가 객관식"
-        Which drawing is symmetric?: "대칭을 그릴 수 있는 것은?"
+        Artist Multiple Choice: 예술가 객관식
+        Which drawing is symmetric?: 대칭을 그릴 수 있는 것은?
       4-5 bee conditionals multi 1:
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
@@ -591,8 +591,8 @@
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         0: "? 분홍 꽃에는 3, 2, 1의 꽃꿀이 있을 수 있습니다. 분홍 꽃에서 가능한 꽃꿀을 확인할 수 있는 블럭은?"
         1: ": 분홍 꽃에는 3, 2, 1의 꽃꿀이 있을 수 있습니다. 분홍 꽃에서 가능한 꽃꿀을 확인할 수 있는 블록은?"
-        Bee Conditionals Multiple Choice: "꿀벌 조건선택 객관식"
-        Choose the best blocks.: "가장 적합한 블럭들을 고르세요."
+        Bee Conditionals Multiple Choice: 꿀벌 조건선택 객관식
+        Choose the best blocks.: 가장 적합한 블럭들을 고르세요.
       4-5 bee debug multi 1:
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
@@ -600,16 +600,16 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: "꿀벌 디버깅 객관식"
-        Which version of the function will work?: "제대로 동작하는 함수는?"
+        Bee Debug Multiple Choice: 꿀벌 디버깅 객관식
+        Which version of the function will work?: 제대로 동작하는 함수는?
       4-5 bee loops multi 1:
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: "꿀벌 반복 객관식"
-        Which blocks will solve the puzzle?: "어떤 블록이 퍼즐을 해결할 수 있을까요?"
+        Bee Loops Multiple Choice: 꿀벌 반복 객관식
+        Which blocks will solve the puzzle?: 어떤 블록이 퍼즐을 해결할 수 있을까요?
       4-5 farmer loops multi 1:
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
@@ -617,8 +617,8 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "농부 반복 객관식"
-        Which blocks solve the puzzle?: "어떤 블록이 퍼즐을 해결할 수 있을까요?"
+        Famer Loops Multiple Choice: 농부 반복 객관식
+        Which blocks solve the puzzle?: 어떤 블록이 퍼즐을 해결할 수 있을까요?
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
@@ -626,8 +626,8 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
-        Maze Conditionals Multiple Choice: "미로 퍼즐 조건 객관식"
-        Which blocks solve the puzzle?: "어떤 블럭이 퍼즐을 해결할 수 있을까요?"
+        Maze Conditionals Multiple Choice: 미로 퍼즐 조건 객관식
+        Which blocks solve the puzzle?: 어떤 블럭이 퍼즐을 해결할 수 있을까요?
       4-5 maze multi 1:
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
@@ -635,8 +635,8 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice: "미로 퍼즐 객관식"
-        Which blocks solve the puzzle?: "어떤 블럭이 퍼즐을 해결할 수 있을까요?"
+        Maze Multiple Choice: 미로 퍼즐 객관식
+        Which blocks solve the puzzle?: 어떤 블럭이 퍼즐을 해결할 수 있을까요?
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -663,8 +663,8 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "객관식"
-        Which blocks solve this puzzle?: "어떤 블록이 퍼즐을 해결할 수 있을까요?"
+        Multiple Choice: 객관식
+        Which blocks solve this puzzle?: 어떤 블록이 퍼즐을 해결할 수 있을까요?
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
@@ -672,8 +672,8 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "객관식"
-        Which blocks draw the square?: "어떤 블록들이 사각형을 그릴 수 있을까요?"
+        Multiple Choice: 객관식
+        Which blocks draw the square?: 어떤 블록들이 사각형을 그릴 수 있을까요?
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
         "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
@@ -681,8 +681,8 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "객관식"
-        Which shape do these squares combine to make?: "이런 사각형들을 만들기 위해서 사용해야하는 블록들은?"
+        Multiple Choice: 객관식
+        Which shape do these squares combine to make?: 이런 사각형들을 만들기 위해서 사용해야하는 블록들은?
       K-1 Artist Loops Multi 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
@@ -690,55 +690,55 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "객관식"
-        Which blocks create this picture?: "이런 그림을 만들 수 있는 블록들은?"
+        Multiple Choice: 객관식
+        Which blocks create this picture?: 이런 그림을 만들 수 있는 블록들은?
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "꽃꿀은 몇 개 일까요?"
-        Multiple Choice: "객관식"
+        How many nectars is this?: 꽃꿀은 몇 개 일까요?
+        Multiple Choice: 객관식
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "꽃꿀은 몇 개 일까요?"
-        Multiple Choice: "객관식"
+        How many nectars is this?: 꽃꿀은 몇 개 일까요?
+        Multiple Choice: 객관식
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "객관식"
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: "디지털
-          흔적을 <strong>가장 적게</strong> 남기는 동물은?"
+        Multiple Choice: 객관식
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 디지털
+          흔적을 <strong>가장 적게</strong> 남기는 동물은?
       K-1 Getting Loopy Multi 1:
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "반복을 이용해 이 순차실행을 간단히 할 수
-          있을까요?"
-        Multiple Choice: "객관식"
+        How would you simplify this sequence with loops?: 반복을 이용해 이 순차실행을 간단히 할 수
+          있을까요?
+        Multiple Choice: 객관식
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "객관식"
-        Which arrow gets the Flurb to the treasure?: "어떤 방향키로 플러브를 보물로 보낼 수 있을까요?"
+        Multiple Choice: 객관식
+        Which arrow gets the Flurb to the treasure?: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "객관식"
-        Which information should you <strong>not</strong> share online?: "온라인으로 공유하지
-          <strong>말아야 할</strong> 정보는?"
+        Multiple Choice: 객관식
+        Which information should you <strong>not</strong> share online?: 온라인으로 공유하지
+          <strong>말아야 할</strong> 정보는?
       K-1 Maze Debugging Multi 1:
         "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
           700"
@@ -746,24 +746,24 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "객관식"
-        Which choice should be the final block?: "마지막 블록으로 적절한 것은?"
+        Multiple Choice: 객관식
+        Which choice should be the final block?: 마지막 블록으로 적절한 것은?
       K-1 Maze Loops Multi 1:
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
           300"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "객관식"
-        Which repeat block is the same?: "같은 반복 블럭은?"
+        Multiple Choice: 객관식
+        Which repeat block is the same?: 같은 반복 블럭은?
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
           240"
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "객관식"
-        Pick the correct repeat block.: "적절한 반복 블록을 고르세요."
+        Multiple Choice: 객관식
+        Pick the correct repeat block.: 적절한 반복 블록을 고르세요.
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
           500"
@@ -771,39 +771,39 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "미로"
-        Which answer solves this level?: "이 레벨을 해결할 수 있는 답은?"
+        Maze: 미로
+        Which answer solves this level?: 이 레벨을 해결할 수 있는 답은?
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
         "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "객관식"
-        Which algorithm gets the Flurb to the flowers?: "어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?"
+        Multiple Choice: 객관식
+        Which algorithm gets the Flurb to the flowers?: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
       K-1 Plant a Seed Multi 1:
         "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "객관식"
-        Which step should go at the beginning of this algorithm?: "이 알고리즘의 처음에 시작해야하는
-          단계는?"
+        Multiple Choice: 객관식
+        Which step should go at the beginning of this algorithm?: 이 알고리즘의 처음에 시작해야하는
+          단계는?
       K-1 Plant a Seed Multi 2:
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "객관식"
-        Which step should fill in the blank for this algorithm?: "이 알고리즘의 빈 칸에 채워야
-          하는 것은?"
+        Multiple Choice: 객관식
+        Which step should fill in the blank for this algorithm?: 이 알고리즘의 빈 칸에 채워야
+          하는 것은?
       K-1 Word Search Multi 1:
         "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
         "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "객관식"
+        Multiple Choice: 객관식
         Which blocks spell "MOVE"?: '"이동하기" 블록은?'
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
@@ -811,32 +811,32 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "객관식"
+        Multiple Choice: 객관식
         Which blocks spell "JUMP"?: '"점프" 블록은?'
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "객관식"
-        SET: "집합"
-        SOUTH: "아래쪽"
-        SQUARE: "사각형"
-        Which word is spelled?: "말한 단어는?"
+        Multiple Choice: 객관식
+        SET: 집합
+        SOUTH: 아래쪽
+        SQUARE: 사각형
+        Which word is spelled?: 말한 단어는?
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "드라이버와 헬퍼"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "이들
-          중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다."
-        Which boy is the <large>helper</large>?: "누가 <large>헬퍼</large>일까요?"
+        Driver and Helper: 드라이버와 헬퍼
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 이들
+          중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.
+        Which boy is the <large>helper</large>?: 누가 <large>헬퍼</large>일까요?
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "드라이버와 헬퍼"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "이들
-          중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다."
-        This time, which boy is the <large>driver</large>?: "이번에는 누가 <large>드라이버</large>일까요?"
+        Driver and Helper: 드라이버와 헬퍼
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 이들
+          중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.
+        This time, which boy is the <large>driver</large>?: 이번에는 누가 <large>드라이버</large>일까요?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
@@ -857,14 +857,14 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "랜덤 번째 위치"
+        random: 랜덤 번째 위치
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
         George Washington: George Washington
         Martha Washington: Martha Washington
-        Presidents: "대통령들"
-        This multiple choice is all about the presidents of the United States.: "이번
-          객관식은 미국 대통령에 대한 문제들입니다."
-        Who was the first president of the USA?: "미국의 첫 번째 대통령은?"
+        Presidents: 대통령들
+        This multiple choice is all about the presidents of the United States.: 이번
+          객관식은 미국 대통령에 대한 문제들입니다.
+        Who was the first president of the USA?: 미국의 첫 번째 대통령은?

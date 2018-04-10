@@ -46,7 +46,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "வழிமுறைகள்"
+        Instructions: வழிமுறைகள்
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
@@ -168,7 +168,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "வழிமுறைகள்"
+        Instructions: வழிமுறைகள்
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
@@ -264,7 +264,7 @@
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "வழிமுறைகள்"
+        Instructions: வழிமுறைகள்
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
       K-1 Move It Match 1:
@@ -288,7 +288,7 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "வழிமுறைகள்"
+        Instructions: வழிமுறைகள்
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
@@ -301,7 +301,7 @@
         What's Brent's last name?: What's Brent's last name?
         What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
-        blue: "நீலம்"
+        blue: நீலம்
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
@@ -892,7 +892,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "தொடர்பின்றி எடுக்கப்பட்ட"
+        random: தொடர்பின்றி எடுக்கப்பட்ட
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone

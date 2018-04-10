@@ -262,10 +262,10 @@
         turtle_3_5: 'Maintenant, crée une nouvelle fonction «Dessiner une maison»
           et utilise-la pour y mettre deux chats. Indice : crée une fonction à l''aide
           du bloc «Faire quelque chose» et écris ton propre texte pour nommer le bloc.'
-        turtle_3_6: "À l'aide de «Dessiner un carré» comme exemple, ajoute une entrée
+        turtle_3_6: 'À l''aide de «Dessiner un carré» comme exemple, ajoute une entrée
           appelée «Longueur» à «Dessiner un triangle». Puis, dessine des triangles
-          de différentes tailles. (Indice : clique sur l'étoile pour ajouter une entrée
-          à une fonction)"
+          de différentes tailles. (Indice : clique sur l''étoile pour ajouter une
+          entrée à une fonction)'
         turtle_3_7: Ajoute une entrée nommée « Longueur » à la fonction « Dessiner
           une maison » et construis une grande maison pour l'éléphant (avec des côtés
           de 150 pixels de long).
@@ -286,8 +286,8 @@
           et nivelé.
         maze_karel_debug_while: Comment devrais-tu modifier ce programme pour m'aider
           à combler le trou?
-        maze_karel_debug_if: "À l’aide ! Répare ce programme afin que mon champ soit
-          complètement plat."
+        maze_karel_debug_if: À l’aide ! Répare ce programme afin que mon champ soit
+          complètement plat.
         maze_karel_debug_if_else: Débogue ce programme pour que je puisse remplir
           les trous et supprimer tous les tas.
         maze_karel_debug_function_1: Que dois-tu changer dans ce programme pour m'aider
@@ -321,7 +321,7 @@
           différent à la place.)
         maze_3_1: J’ai besoin de parvenir à ce cochon ! Écris quelques lignes pour
           que je puisse bouger et récupérer mes œufs.
-        maze_3_2: "Écris-moi un programme pour que je puisse aller jusqu'à ce cochon."
+        maze_3_2: Écris-moi un programme pour que je puisse aller jusqu'à ce cochon.
         maze_3_3: Comment dois-je arriver au cochon ? Attention à ce que je ne rentre
           pas dans la boite de TNT !
         maze_3_4: Argh ! Écris-moi un programme qui me permet d'éviter le TNT et d’arriver
@@ -566,7 +566,7 @@
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: "Écriture de chansons"
+        Unplug7: Écriture de chansons
         Unplug8: Abstraction
         Unplug9: Programmation de relais
         Unplug10: Internet
@@ -657,12 +657,12 @@
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie et le grand projet
         CSF_unspotted_bugs: Bugs passés inaperçus
-        CSF_zuck_loops_short: Bouclers de répétition
+        CSF_zuck_loops_short: Boucles de répétition
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
         playlab_intro: Introduction au Labo de jeux
-        playlab_events: "Évènements du Labo de jeux"
+        playlab_events: Évènements du Labo de jeux
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
         tutorial_puzzle_challenge: Tutoriel Défi du puzzle
         infinity_playlab_intro: Labo de jeux - Introduction
@@ -818,6 +818,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
@@ -833,8 +836,8 @@
           organisés en catégories.
         set_sprite_image: Attache un bloc « Définir l'image du personnage » au bloc
           « Lorsque l'histoire commence » pour activer un personnage pour cette histoire.
-        studio_say_text: "Écris ce que tu souhaites que ton personnage dise entre
-          ces guillemets"
+        studio_say_text: Écris ce que tu souhaites que ton personnage dise entre ces
+          guillemets
         jigsaw_click: Clique sur ce bloc!
         move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
           « Lors du lancement » pour faire avancer Elsa.
@@ -908,8 +911,8 @@
           pour dessiner un triangle
         edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
           fonction
-        add_and_drag_parameter: "Écris le nom de ton paramètre ici, clique sur «Ajouter»,
-          et glisse-le ensuite dans la définition de ta fonction."
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
         fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
           des acteurs (1, 2, et 3)
         repeat: Place des blocs à l'intérieur de la boucle pour répéter les commandes
@@ -924,7 +927,7 @@
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
         right_arrow_fireball: Utilise la flèche « vers la droite » pour tirer des
           boules de feu
-        name_function: "Écris le nom de ta fonction ici"
+        name_function: Écris le nom de ta fonction ici
         Infinity_move_right_runbutton: Ajouter le bloc « Déplacer » ici
         Infinity_move_directions_callout: Quel bloc soulèvera Baymax lorsque tu appuies
           sur la flèche «vers le haut» ?

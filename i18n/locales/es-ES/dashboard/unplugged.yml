@@ -316,3 +316,21 @@ es:
       BigEvent_2018:
         title: El Gran Evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que un ordenador monitoriza constantemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.
+      GraphPaperProgramming_2018:
+        title: Programación de hoja cuadriculada
+        desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Actividad fuera de línea
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Actividad fuera de línea
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionales
+        desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
+      DigitalFootprint_2018:
+        title: Tu huella Digital
+        desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.
+      BinaryImages_2018:
+        title: Imágenes binarias
+        desc: Aunque muchas personas piensan que el binario es estrictamente ceros y unos, nuestros cursos anteriores enseñaron a los alumnos que la información puede ser representada en una variedad de opciones binarias. Esta clase lleva ese concepto un paso más allá que ilustra cómo un ordenador también puede almacenar información aún más compleja (por ejemplo, imágenes y colores) en binario.
