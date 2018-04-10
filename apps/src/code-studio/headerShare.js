@@ -24,7 +24,7 @@ export function shareProject(shareUrl) {
 
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
-    const appType = pageConstants.appType;
+    const appType = dashboard.project.getStandaloneApp();
 
     // Allow publishing for any project type that older students can publish.
     // Younger students should never be able to get to the share dialog in the
