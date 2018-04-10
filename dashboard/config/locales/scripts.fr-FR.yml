@@ -8889,13 +8889,15 @@
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hero''s Journey Hour of Code'
+              name: 'Minecraft\: le voyage du héros dans l''Heure de Code'
             Minecraft Hour of Code:
               name: Heure de Code Minecraft
-          title: 'Minecraft: Hero''s Journey'
+          title: 'Minecraft: Le voyage du héros'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft est de retour pour une toute nouvelle activité
+            de l'Heure de Code!
+          description: Minecraft est de retour dans l'Heure de Code avec une toute
+            nouvelle activité! Le voyage dans Minecraft avec du code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -9909,6 +9911,8 @@
               name: Programming in Harvester
             Loops in Harvester:
               name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At
@@ -10117,6 +10121,10 @@
               name: Events in Play Lab
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
         coursed-2018:
           title: New Course D Script
           description: ''
@@ -10201,6 +10209,8 @@
               name: Using Behaviors
             Using Forever Loops:
               name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
           title: ''
           description_audience: ''
           description_short: ''
@@ -10213,3 +10223,32 @@
           description_audience: ''
           description_short: ''
           description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '

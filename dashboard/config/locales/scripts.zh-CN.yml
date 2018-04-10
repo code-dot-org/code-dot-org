@@ -6031,7 +6031,7 @@
             Nested Loops:
               name: 循环嵌套
             Functions in Harvester:
-              name: Functions in Harvester
+              name: 收割者中的函数
           title: 课程 E
           description_audience: 年龄：8-12
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
@@ -7405,7 +7405,7 @@
             Build a Star Wars Game:
               name: 建立一个星球大战游戏!
             Functions in Harvester:
-              name: Functions in Harvester
+              name: 收割者中的函数
           title: 课程 E 2018
           description_audience: ''
           description_short: ''
@@ -7914,9 +7914,11 @@
             Programming in Bee:
               name: 与蜜蜂编程
             Programming in Harvester:
-              name: Programming in Harvester
+              name: 与收割者编程
             Loops in Harvester:
               name: 收割机中的循环
+            Sequencing in Maze:
+              name: Sequencing in Maze
         express-2018:
           title: 快速课程
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -8121,6 +8123,10 @@
               name: 游戏实验室中的事件
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
         coursed-2018:
           title: 新的课程D脚本
           description: ''
@@ -8198,13 +8204,15 @@
         jr-test:
           stages:
             Programming with Behaviors:
-              name: Programming with Behaviors
+              name: 编程中使用行为
             Programming with Forever:
-              name: Programming with Forever
+              name: 编程与永远
             Using Behaviors:
-              name: Using Behaviors
+              name: 使用行为
             Using Forever Loops:
-              name: Using Forever Loops
+              name: 使用永远的循环
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
           title: ''
           description_audience: ''
           description_short: ''
@@ -8212,8 +8220,37 @@
         petgame:
           stages:
             pet game:
-              name: pet game
+              name: 宠物游戏
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '

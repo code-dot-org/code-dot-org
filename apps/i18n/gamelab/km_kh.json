@@ -63,5 +63,6 @@
   "dropletBlock_x_description": "X coordinate of sprite.",
   "dropletBlock_y_description": "Y coordinate of sprite.",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
-  "shareGame": "Share your game:"
+  "shareGame": "Share your game:",
+  "errorLoadingAnimation": "It looks like we are having trouble loading your animation \"{animationName}\". Make sure you have a good internet connection and try reloading the page. If this problem persists, it is possible that this animation is broken. In this case, you may need to continue by removing the animation."
 }

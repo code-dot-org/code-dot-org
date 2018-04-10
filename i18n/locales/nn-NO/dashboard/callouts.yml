@@ -902,6 +902,19 @@ nn:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        stone_block_2: Grå blokker er laga av stein og kan ikkje bli kasta.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klikk på lyspæra når du treng hjelp!
       courseA_maze_seq1_2018_callout:
@@ -962,6 +975,8 @@ nn:
         courseB_playlab_events6_a: Bruk den grøne pila ned for å endre retningar.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Bruk den grøne pila ned for å endre retningar.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til ulike delar av speleområdet.
       courseC_artist_loopsPrePre1a_callout:
@@ -1484,6 +1499,8 @@ nn:
         course_playlab_variables2_1: Slik setter du verdien for variabelen.  Endre teksten som er kopla til denne blokka for å endre innhaldet i variabelen.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Slik setter du verdien for variabelen.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]

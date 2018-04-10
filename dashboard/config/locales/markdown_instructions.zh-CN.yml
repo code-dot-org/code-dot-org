@@ -3838,44 +3838,26 @@
         sixteen million different colors with RGB color mixing.</p></details>\r
         </div>
       CSD U2 RGB winter_2018_markdown_instruction: |-
-        # Winter Color\r
+        # 冬天的颜色\r
         \r
-        In the
-        next few levels, you'll be finding seasonal colors for a website.  Here,
-        you'll need to find the RGB values for a wintery blue color.\r
+        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。r
         \r
-        * Click
-        "Run" to start the widget.\r
-        * Adjust the levels until you match the wintery
-        blue color at the bottom of the widget.\r
-        * Write the RGB values on your
-        activity guide.  You will need them in the next activity.\r
+        * 点击"运行"来启动这个小部件。\r
+        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。\r
+        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。\r
         \r
         \r
         <div
         style="font-size: 16px">\r
         <br />\r
-        <details><summary>**How do I make
-        a color lighter?**</summary>\r
-        <p>To make a color lighter, you need to add
-        more light (increase the level of the slider).  If you have already added
-        the maximum amount of blue light, you will need to add more red and green
-        light to make your blue lighter.</p></details>\r
+        <details><summary>**如何让颜色变浅?**</summary>\r
+        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>\r
         <details>\r
-        <summary>**Why
-        do red and green make yellow?**</summary>\r
-        <p>When you mix paint, red and
-        green make brown, but RGB color mixing uses light instead of paint, so the
-        colors mix differently.  RGB uses _additive color mixing_.  In additive color
-        mixing, red and green make yellow, red and blue make magenta, and blue and
-        green make cyan.  When you mix the three primary colors together (red, green,
-        and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia
-        - Additive Color</a></p> </details>\r
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>\r
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>\r
         <details>\r
-        <summary>**How many colors
-        can I make with RGB color mixing?**</summary>\r
-        <p>You can make make over
-        sixteen million different colors with RGB color mixing.</p></details>\r
+        <summary>**我能用RGB组合出多少种颜色？**</summary>\r
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r
         </div>
       CSD U2 add content_markdown_instruction: |
         # 添加 HTML\r
@@ -3906,7 +3888,7 @@
         CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书。 \r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -4031,23 +4013,15 @@
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What is a style sheet?**</summary>\r
-        A
-        style sheet is a document that controls how a web page will appear.  External
-        style sheets are separate files that are linked to the HTML page.\r
+        <summary>**什么是样式表?**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS?**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -4055,53 +4029,36 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         <details>\r
-        <summary>**How
-        do I create a new style sheet?**</summary>\r
-        To create a new style sheet,
-        click on the "Add CSS" button above the code area.\r
+        <summary>**如何创建新的样式表?**</summary>\r
+        要创建一个新的格式表，点击代码区的"添加 CSS"按钮。\r
         </details>\r
         <details>\r
-        <summary>**What
-        should I name my style sheet?**</summary>\r
-        You can name your style sheet
-        anything, but it's better to choose a relevant name, such as "style.css"
-        or "aboutmestyles.css" so that it's clear what the file is.  Your file
-        should always end in the ".css" extension.\r
+        <summary>**如何命名我的样式表?**</summary>\r
+        你可以随意命名，但最好选一个相关的名字例如 "style.css"（样式表）
+        或"aboutmestyles.css"（关于我的样式表） 这样可以清楚知道这个文件用在什么地方。这些文件需要以以".css"扩展名结尾。.\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I rename a file?**</summary>\r
-        To rename a file, you can right click (or
-        control click) on the file name and choose the "Rename" option.  This will
-        allow you to type in a new file name.  Clicking on a file name after it is
-        already highlighted will also allow you to rename the file.\r
+        <summary>**如何重新命名文件?**</summary>\r
+        要重新命名文件，你可以右键点击(或用控制键点击)文件名，选择”重新命名“选项。 这将让你可以输入新的文件名。 在点击的文件高亮后再点击它，就可以重新命名了。\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I add a style sheet to a web page?**</summary>\r
-        To add a style sheet
-        to a web page, open up the code for the web page.  Inside the head tag, add
-        the following code `<link rel="stylesheet" href="style.css">`.  Then change
-        "style.css" to the name of your style sheet.\r
+        <summary>**如何在网页里添加样式表?**</summary>\r
+        要在网页里添加样式表， 先打开网页的代码。在标题标签中，添加以下代码`<link rel="stylesheet" href="style.css">`.  然后把"style.css" 改成你的样式表的名字。\r
         </details>\r
         </div>\r
         #
-        Adding a Style Sheet\r
+        添加样式表\r
         \r
-        This is your project from before.  In the next
-        level, you'll have a chance to add some different styles to it, but first,
-        you need to add a style sheet, name it, and link it to your html page.\r
+        这是你之前的项目。 在下一关里，你将有机会添加一些不同的样式进去。但开始前，你要添加样式表，并给它命名，把它连到你的HTML页面中。\r
         \r
         1.
-        Create a new style sheet for your project.\r
-        2. Rename the style sheet file.\r
+        为你的项目创建新的格式表。.\r
+        2. 重新命名格式表文档.\r
         3.
-        Add your style sheet to your HTML page.\r
+        把你的格式表添加到你的HTML网页。\r
         \r
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/weblab_stylesheet.png"
         style=" max-width:500px">
@@ -4216,72 +4173,45 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        For
-        the code to work, you need to both create a winter class and add elements
-        to the class.\r
+        <summary>**代码是如何起作用的？**</summary>\r
+        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r
         \r
-        The class is created in the style sheet, with the following
-        code.\r
+        样式表中的类是像下面的代码。\r
         \r
         <pre>.winter {\r
           color: rgb(195,230,255);\r
         }</pre>\r
         \r
-        This
-        code creates a class called `winter` and makes everything in the class our
-        winter blue, which has the RGB values of (195,230,255).\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
         \r
-        The code that
-        adds a `h5` element to the winter class is `<h5 class="winter">`.  The `class=winter`
-        inside the opening tag adds everything inside the tag to the class.\r
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
         </details>\r
         <details>\r
-        <summary>**What
-        rules can be added to a class rule-set?**</summary>\r
-        A class rule-set can
-        have the same rules as any other type of selector.  If a rule does not apply
-        to the content of the class (for example, using `font-size` on an element
-        with no text), then the computer will ignore that rule, but still use the
-        rules that work.\r
+        <summary>**什么样的规则能够加到类的规则组里？**</summary>\r
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
         </details>\r
         <details>\r
-        <summary>**Why does the selector
-        have a period in front of it?**</summary>\r
-        In CSS, a period in front of
-        a selector means that the selector is the name of a class.  If there is no
-        period, it means that the selector is the name of an HTML tag.\r
+        <summary>**为什么选择器前面有个句点？**</summary>\r
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        would a web developer use classes?**</summary>\r
-        A web developer uses classes
-        when some elements should be styled differently than others, even if they
-        are the same tag.  Classes can also be used to give elements that have different
-        tags the same style.\r
+        <summary>**为什么网页开发人员需要用类？**</summary>\r
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
         </details>\r
         <details>\r
-        <summary>**I got different
-        RGB values, but mine are right, too.**</summary>\r
-        Because RGB creates millions
-        of different colors, some are so similar that people have a hard time telling
-        them apart.  That means that there are multiple RGB values that are close
-        enough to work for our winter color.\r
+        <summary>**我的RBG值不一样，但也是对的。**</summary>\r
+        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\r
         \r
         </details>\r
         </div>\r
-        # Adding
-        Rules\r
+        # 添加规则\r
         \r
-        Your winter words should all have the same color and font.\r
+        冬天的词语应该用同样的颜色和字体。\r
         \r
         *
-        Find the CSS rule-set in the style sheet that gives the winter words their
-        style.\r
-        * Add a rule that changes the font of the winter words.  It can
-        be any font, but it will need to be different from that of the other three
-        seasons.\r
-        * Add any other rules you'd like for your winter words.
+        在样式表种找到给冬天的词语的样式组。\r
+        * 增加一条规则来改变冬天词语的字体。可以选择任何字体，但应该和其它三个季节的都不一样。\r
+        * 为冬天词语添加任何你喜欢的规则。
       CSD U2 classes sample_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4352,66 +4282,42 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        For
-        the code to work, you need to both create a winter class and add elements
-        to the class.\r
+        <summary>**代码是如何起作用的？**</summary>\r
+        为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r
         \r
-        The class is created in the style sheet, with the following
-        code.\r
+        样式表中的类是像下面的代码。\r
         \r
         <pre>.winter {\r
           color: rgb(195,230,255);\r
         }</pre>\r
         \r
-        This
-        code creates a class called `winter` and makes everything in the class our
-        winter blue, which has the RGB values of (195,230,255).\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
         \r
-        The code that
-        adds a `h5` element to the winter class is `<h5 class="winter">`.  The `class=winter`
-        inside the opening tag adds everything inside the tag to the class.\r
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        does the selector have a period in front of it?**</summary>\r
-        In CSS, a period
-        in front of a selector means that the selector is the name of a class.  If
-        there is no period, it means that the selector is the name of an HTML tag.\r
+        <summary>**为什么选择器前面有个句点？**</summary>\r
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        would a web developer use classes?**</summary>\r
-        A web developer uses classes
-        when some elements should be styled differently than others, even if they
-        are the same tag.  Classes can also be used to give elements that have different
-        tags the same style.\r
+        <summary>**为什么网页开发人员需要用类？**</summary>\r
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
         </details>\r
         <details>\r
-        <summary>**I got different
-        RGB values, but mine are right, too.**</summary>\r
-        Because RGB creates millions
-        of different colors, some are so similar that people have a hard time telling
-        them apart.  That means that there are multiple RGB values that are close
-        enough to work for our winter color.\r
+        <summary>**我的RBG值不一样，但也是对的。**</summary>\r
+        因为RGB能够组合出几百万种不同的颜色，有些颜色之间非常相近，以至于人类很难区分它们。这意味着，会有多个RGB值和我们要找的冬天的颜色很接近。\r
         \r
         </details>\r
         </div>\r
-        # Classes\r
+        # 类(Class)\r
         \r
-        In
-        this page, the web developer has used classes to give some of the words our
-        winter color.\r
+        在这个页面中，网页开发人员用类来给冬天颜色一些词语。\r
         \r
-        * Look at the HTML code for the winter words.  Why is
-        "snowy" the only winter word without the winter color?\r
-        * Add code to
-        the HTML that will give "snowy" the same winter blue as the other words.\r
+        * 看一看冬天词语的HTML代码。为什么"snowy"（下雪的）是唯一一个没有冬天颜色的词语？\r
+        * 添加HTML代码，来让"snowy"和其它词语一样用上同样的冬天的蓝色。\r
         *
-        Look inside the style sheet to find the rule that makes all the words in the
-        winter class blue, and check whether your RGB numbers are close to the ones
-        in the style sheet.  \r
-        * Discuss with your partner how the code works.
+        看看样式表，来找到让所有词语都是冬季蓝的类，并检查你的RGB数字是否和这个接近。  \r
+        * 和伙伴讨论一下这些代码是如何起作用的。
       CSD U2 classes spring_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4483,67 +4389,43 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
         For
-        the code to work, you need to both create a spring class and add elements
-        to the class.\r
+        为了让代码起作用，你需要创建一个spring（春天）的类（class），并将元素加到这个类中。r
         \r
-        The spring class is already created in the style sheet,
-        but it doesn't have any rules.\r
+        spring类已经在样式表中创建好了，但还没有任何规则。\r
         \r
         <pre>.spring {\r
           color: rgb(195,230,255);\r
         }</pre>\r
         \r
-        Look
-        at the rules in the `winter` class for clues to how to make rules for the
-        summer class.\r
+        看看`winter`类里的规则，参考它来看看如何制作spring（春天）类的规则。\r
         \r
-        You will also need to add some elements to the spring
-        class inside your HTML file.\r
+        你还需要添加一些元素到HTML文件里的spring类中。\r
         \r
-        The code in the HTML file that adds a
-        `h5` element to the winter class is `<h5 class="winter">`.  Use this pattern
-        to add elements to the spring class, too.\r
+        HTML文件的代码添加了一个有winter类的`h5`元素`<h5 class="winter">`。用这个模式来为spring类添加一个元素。\r
         </details>\r
         <details>\r
-        <summary>**What
-        rules can be added to a class rule-set?**</summary>\r
-        A class rule-set can
-        have the same rules as any other type of selector.  If a rule does not apply
-        to the content of the class (for example, using `font-size` on an element
-        with no text), then the computer will ignore that rule, but still use the
-        rules that work.\r
+        <summary>***什么样的规则能够加到类的规则组里？**</summary>\r
+        选择器中的任何类型都可以作为类的规则组。如果一条规则不能被应用到类的内容上（比如，在没有文本的元素上加入了`font-size`），那么计算机会忽略这条规则，而采用其它能起作用的规则。\r
         </details>\r
         <details>\r
-        <summary>**Why does the selector
-        have a period in front of it?**</summary>\r
-        In CSS, a period in front of
-        a selector means that the selector is the name of a class.  If there is no
-        period, it means that the selector is the name of an HTML tag.\r
+        <summary>**为什么选择器前面有个句点？**</summary>\r
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        would a web developer use classes?**</summary>\r
-        A web developer uses classes
-        when some elements should be styled differently than others, even if they
-        are the same tag.  Classes can also be used to give elements that have different
-        tags the same style.\r
+        <summary>**为什么网页开发人员需要用类？**</summary>\r
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
         </details>\r
         </div>\r
-        # Spring Class\r
+        # 春天类\r
         \r
-        Now
-        that your winter class is ready, you can start on the other seasons.\r
+        现在，你的春天类已经准备好了，可以开始其它季节了。\r
         \r
         *
-        Find the empty CSS rule-set in the style sheet that gives the spring words
-        their style.\r
-        * Add two rules, one to give the text your spring color for
-        earlier in the lesson, and another to give the text a different font, font
-        size, or decoration.\r
-        * Add the spring class to the spring elements in the
-        HTML page.
+        在样式表中，找到春天词语样式的空的规则集。\r
+        * 在其中加上两条规则，一条将课程中早先的春天的颜色设置到文本上，另一条给文本一个不同的字体，字体大小或其它修饰。\r
+        * 将spring类增加到HTML页面的春天元素上。
       CSD U2 classes summer_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4620,39 +4502,28 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        For
-        the code for the winter class to work, it needs to both create a winter class
-        and add elements to the class.\r
+        <summary>**代码是如何起作用的？**</summary>\r
+        为了让winter类起作用，需要创建一个winter类，并为这个类增加元素。\r
         \r
-        The class is created in the style sheet,
-        with the following code.\r
+        这个类需要在样式表中用下面的代码来创建。\r
         \r
         <pre>.winter {\r
           color: rgb(195,230,255);\r
         }</pre>\r
         \r
         This
-        code creates a class called `winter` and makes everything in the class our
-        winter blue, which has the RGB values of (195,230,255).\r
+        这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r
         \r
-        The code that
-        adds a `h5` element to the winter class is `<h5 class="winter">`.  The `class=winter`
-        inside the opening tag adds everything inside the tag to the class.\r
+        将winter类加到一个`h5`元素的代码是`<h5 class="winter">`。标签中的`class=winter`会将类的所有内容加到这个标签上。\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I create a new rule-set?**</summary>\r
-        You can create a new rule-set by
-        following the pattern that the `winter` and `spring` classes used in the style
-        sheet.\r
+        <summary>**如何创建一个新的规则集（rule-set）？**</summary>\r
+        你能按照样式表中的`winter`和`spring`类的形式来创建一个新的规则集。\r
         <pre>.winter {\r
           color: rgb(195,230,255);\r
         }</pre>\r
         \r
-        The
-        selector name and the color values will be different, but the following pattern
-        is always the same.\r
+        选择器和颜色的值会有所不同，但形式是一样的。\r
         \r
         <pre>.classname {\r
           property1: value1;\r
@@ -4661,31 +4532,23 @@
         }</pre>\r
         </details>\r
         <details>\r
-        <summary>**Why does the selector
-        have a period in front of it?**</summary>\r
-        In CSS, a period in front of
-        a selector means that the selector is the name of a class.  If there is no
-        period, it means that the selector is the name of an HTML tag.\r
+        <summary>**为什么选择器前面有个句点？**</summary>\r
+        在CSS中，选择器前面的句点表示这个选择器是类的名字。如果没有句点，就表示这个选择器是HTML标签的名字。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        would a web developer use classes?**</summary>\r
-        A web developer uses classes
-        when some elements should be styled differently than others, even if they
-        are the same tag.  Classes can also be used to give elements that have different
-        tags the same style.\r
+        <summary>**为什么网页开发人员需要用类？**</summary>\r
+        即使有时候一些元素的标签是一样的，网页开发人员也能用类来将一些元素应用上和其它元素不同的样式。类也能给不同的标签应用上相同的样式。\r
         </details>\r
         </div>\r
-        # Summer and Autumn Classes\r
+        # 夏天和秋天的类\r
         \r
         *
-        Inside the style sheet, create a new rule-set for a "summer" class.\r
+        在样式表里，为"summer"（夏天）类创建一个新的规则集。\r
         *
-        Add a rule to set the text in the summer class to your summer RGB color.\r
+        在夏天类里创建一个规则来使用夏天的RGB颜色。\r
         *
-        Add the summer class to the summer elements in the HTML page.\r
-        * Do the
-        same for the autumn class.
+        将夏天类添加到HTML的夏天元素里。\r
+        * 为autumn（秋天）类应用同样的步骤。
       CSD U2 commenting_markdown_instruction: "# 注释\\r\n<div style=\"float:\nright;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**什么是空白符?**\n</summary>\\r\n空白符指任何显示为空白空间的字符，例如空格、制表符、或是换行符。空白符能够将文档中几个不同的部分分开，使得阅读起来更容易。例如，在HTML代码中，新元素通常都放在新行，虽然这并不会让页面显示上有什么不同。\\r\n</details>\\r\n<details>\\r\n<summary>**什么是缩进？**</summary>\\r\n缩进是在文本到右边缘或左边缘之间，分隔文本的部分。缩进能够表达程序的结构。在HTML中，如果一个元素在其它元素中，通常会进行缩进。这是个例子：\n<pre>\\r\n&lt;body&gt;\\r\n&lt;p&gt;这个段落在\"body\"元素中。&lt;/p&gt;\\r\n&lt;/body&gt;\\r\n</pre>\\r\n\\r\n</details>\\r\n<details>
         \\r \n<summary> ** 什么是格式化？ ** </summary> \\r \n格式化是将文本排列成易于理解方式的方法。HTML通常用缩进格式化。这意味着元素里面的子元素都会更靠右一些。这是一个例子：\\r\n<pre>
@@ -4965,72 +4828,44 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that is making the background of the page blue:\r
+        <summary>**代码如何起作用？**</summary>\r
+        这是让页面背景变成蓝色的代码：\r
         \r
         <pre>body
         {\r
           background-color: lightblue;\r
         }</pre>\r
         \r
-        * `body` is the _selector_.  It
-        specifies which elements will have to follow the rules inside the curly braces,
-        in this case, the body element is the entire page.\r
-        * `background-color:
-        lightblue;` is the rule that makes the entire page light blue.\r
-         * `background-color`
-        is the _property_.  It explains what the rule is about, in this case the color
-        of the background.\r
-         * `lightblue` is the _value_.  It explains how the
-        rule should be applied, in this case making the background light blue.\r
+        * `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。\r
+        * `background-color: lightblue;`是让整个页面变成淡蓝色的规则。\r
+         * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。\r
+         * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。\r
         </details>\r
         <details>\r
-        <summary>**What
-        colors can I use in CSS?**</summary>\r
-        CSS includes most common color names
-        (red, blue, green, etc.), and many uncommon ones.  You can see a full list
-        of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML Color Names</a>.  You can still use colors that are not included in
-        the named list, but you will need to use their RGB values.  You can read more
-        about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS Legal Color Values</a>\r
+        <summary>**我能在CSS中使用什么颜色？**</summary>\r
+        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
+        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
+        - CSS正确的颜色值</a>查看更多信息。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `background-color` property do?**</summary>\r
-        The `background-color`
-        property determines the color of the background of an element.  You can read
-        more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
-        - CSS background-color Property</a>\r
+        <summary>**`background-color`属性做了什么？**</summary>\r
+        `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
+        - CSS background-color 属性</a>查看关于这个属性的更多信息。\r
         </details>\r
         <details>\r
-        <summary>**What
-        if an element inside the page has a different background color from the body?**</summary>\r
-        You
-        can see the answer to this question by adding a `background-color` rule to
-        the `p` tag.  The paragraphs will have the background color in the rule for
-        the `p` tag, and the rest of the page will follow the rule for the `body`
-        tag.\r
+        <summary>**如果页面里的元素有着与body不同的背景颜色会怎样？**</summary>\r
+        你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。\r
         </details>\r
         <details>\r
-        <summary>**What is a style sheet?**</summary>\r
-        A
-        style sheet is a document that controls how a web page will appear.  External
-        style sheets are separate files that are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**CSS是什么？**</summary>\r
+        CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。\r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：\r
         \r
         <pre>h2
         {\r
@@ -5038,21 +4873,16 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。\r
         </details>\r
         </div>\r
         \r
         #
-        Background Color\r
+        背景颜色\r
         \r
-        * Find the code in the style sheet that is making
-        the background of the entire page light blue.\r
-        * Change the code to make
-        the page a different color.\r
-        * Try to change the background color of just
-        the paragraphs.
+        * 在岩石表中找到让整个页面背景是蓝色的代码。\r
+        * 改动代码，让页面成为不同的颜色。\r
+        * 试着只改动这些段落的背景颜色。
       CSD U2 layout style body_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -5320,20 +5150,14 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What colors can I use in CSS?**</summary>\r
-        CSS
-        includes most common color names (red, blue, green, etc.), and many uncommon
-        ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML Color Names</a>.  You can still use colors that are not included in
-        the named list, but you will need to use their RGB values.  You can read more
-        about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS Legal Color Values</a>\r
+        <summary>**我能在CSS里使用什么颜色？**</summary>\r
+        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
+        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
+        - CSS正确的颜色值</a>查看更多信息。\r
         </details>\r
         <details>\r
-        <summary>**How
-        does the code work?**</summary>\r
-        Here is the code that is making the image
-        borders:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是实现图片边框的代码：\r
         \r
         <pre>img {\r
           border-color: saddlebrown;\r
@@ -5344,55 +5168,38 @@
         }</pre>\r
         \r
         *
-        `img` is the _selector_.  It specifies which elements will have to follow
-        the rules inside the curly braces, in this case, the images.\r
+        `img`是一个_选择器_。它指定了哪些元素上会应用花括号里的规则，在这里，指定的是图片。\r
         * `border-color:
-        saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, and `border-radius:
-        10px;` are the rules that make the border.\r
+        saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius:
+        10px;`是制作边框的规则。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `border-style` property do?**</summary>\r
-        The `border-style` property
-        determines what kind of border (solid, dotted, etc.) the element has.  You
-        can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
-        - CSS border-style Property</a>\r
+        <summary>**`border-style`（边框-样式）属性有什么用？**</summary>\r
+        `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
+        - CSS border-style属性</a>了解更多。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `border-radius` property do?**</summary>\r
-        The `border-radius` property
-        determines the radius of the curves at the corners of the element.  A bigger
-        radius makes a bigger, softer curve, and a smaller radius makes a smaller,
-        sharper curve.  A radius of zero makes a regular corner.  You can read more
-        about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
-        - CSS3 border-radius property</a>\r
+        <summary>**`border-radius`属性有什么用？**</summary>\r
+        `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
+        - CSS3 border-radius属性</a>了解更多。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `float` property do?**</summary>\r
-        The `float` property makes an
-        element "float", meaning that the elements that come after it all flow around
-        it.  If the `float` value is `left`, the element will float to the left, and
-        the elements after it will show up on its right.  If the `float` value is
-        `right`, the element will float to the right, and the elements after it will
-        show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
-        - CSS float Property</a>\r
+        <summary>**`float`属性有什么用？**</summary>\r
+        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
+        - CSS float 属性</a>了解更多。\r
         </details>\r
         </div>\r
         \r
-        # Borders\r
+        # 边框\r
         \r
         *
-        Find the rules in the style sheet that set image borders color and width.\r
+        在样式表中找到设置图片边框颜色和宽度的规则。\r
         *
-        Change the color and width of your borders.\r
-        * Try out some different border
-        styles.\r
-          * Choose from `dotted`, `dashed`, `solid`, and `double`\r
+        改变边框的颜色和宽度。\r
+        * 试试不同的边框样式。\r
+          * 从`dotted`, `dashed`, `solid`, 和`double`中选择。\r
         *
-        Put a border on another type of page element, such as one of the headings
-        or the paragraphs.
+        将边框应用到另一种页面元素上，比如某个标题或段落。
       CSD U2 layout style borderradius_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -5735,48 +5542,34 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that is putting extra space around the images:\r
+        <summary>**这些代码如何起作用？**</summary>\r
+        这是在图片周围产生一定宽度的空白的代码：\r
         \r
         <pre>img
         {\r
         \tmargin: 10px;\r
         }</pre>\r
         \r
-        * `img` is the _selector_.  It specifies
-        which elements will have to follow the rules inside the curly braces, in this
-        case, the images.\r
-        * `margin: 10px;` is the rule that puts 10 pixels of
-        space around the image.\r
+        * `img`是_选择器_ 。它指定了元素必须遵循花括号里的规则，在这里是图片。\r
+        * `margin: 10px;`是一条规则，它会在图片周围留出10像素的空间。\r
         </details>\r
         <details>\r
-        <summary>**What does
-        the `margin` property do?**</summary>\r
-        The `margin` property determines
-        how much space will be around the image.  Most of the time, you will define
-        in the margin in pixels.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_margin.asp">W3Schools
-        - CSS margin Property</a>\r
+        <summary>**`margin`属性有什么用？**</summary>\r
+        `margin`（边缘）属性决定了图片周围有多少空间。大多数情况下，需要用像素来定义边缘属性。阅读<a href="http://www.w3schools.com/cssref/pr_margin.asp">W3Schools
+        - CSS margin 属性</a>来了解更多。\r
         </details>\r
         <details>\r
-        <summary>**What does
-        `px` mean / What is a pixel?**</summary>\r
-        Pixel, which is abbreviated `px`,
-        is how elements are measured in CSS.  It’s the size of a single point of light
-        on the screen.\r
+        <summary>**`px`是什么意思？什么是像素？**</summary>\r
+        Pixel（像素）的缩写是`px`，这是在CSS中丈量元素的单位。这是屏幕上的一个点的尺寸。\r
         </details>\r
         </div>\r
-        # Margin\r
+        # 边缘\r
         \r
-        Margins specify
-        how much space should be around an element.\r
+        边缘指定了一个元素周围应该有多少空间。\r
         \r
-        * Find the `margin` property
-        in the `img` rule-set.\r
-        * Change the margin to be larger, and discuss the
-        effect with a partner.\r
-        * Choose another element type and give it a margin,
-        too.
+        * 在`img`规则集中找到`margin`属性。\r
+        * 将边缘改大点，然后和同伴讨论一下影响。\r
+        * 改变另一个元素类型，并也给它加上边缘属性。
       CSD U2 layout style sample_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -5839,58 +5632,38 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What does the `body` selector do?**</summary>\r
-        Because
-        the content of the web page is all inside the `body` tag, the body selector
-        gives style rules for everything on the web page.\r
+        <summary>**`body`选择器做了什么？**</summary>\r
+        因为网页的所有内容都在`body`（正文）标签里，正文选择器能为网页中所有内容应用样式规则。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `border-style` property do?**</summary>\r
-        The `border-style` property
-        determines what kind of border (solid, dotted, dashed, etc.) the element has.  You
-        can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
-        - CSS border-style Property</a>\r
+        <summary>**`border-style`属性有什么用？ **</summary>\r
+        `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
+        - CSS border-style属性</a>了解更多。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `border-radius` property do?**</summary>\r
-        The `border-radius` property
-        determines the radius of the curves at the corners of the element.  A bigger
-        radius makes a bigger, softer curve, and a smaller radius makes a smaller,
-        sharper curve.  A radius of zero makes a regular corner.  You can read more
-        about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
-        - CSS3 border-radius property</a>\r
+        <summary>**`border-radius`属性有什么用？**</summary>\r
+        `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
+        - CSS3 border-radius属性</a>了解更多。\r
         </details>\r
         <details>\r
-        <summary>**What
-        does the `float` property do?**</summary>\r
-        The `float` property makes an
-        element "float", meaning that the elements that come after it all flow around
-        it.  If the `float` value is `left`, the element will float to the left, and
-        the elements after it will show up on its right.  If the `float` value is
-        `right`, the element will float to the right, and the elements after it will
-        show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
-        - CSS float Property</a>\r
+        <summary>**`float`属性有什么用？**</summary>\r
+        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
+        - CSS float 属性</a>了解更多。\r
         </details>\r
         </div>\r
         \r
-        # Layout and Style\r
+        # 布局和样式\r
         \r
         *
-        Look through web page below for new styles.\r
-        * Open the style sheet\r
+        浏览一下下面网页的新样式。\r
+        * 打开样式表\r
         *
-        With your partner, discuss which parts of the CSS code you think are making
-        the page appear different.\r
-         * What makes the entire page blue?\r
-         * How
-        are the images positioned to the left of all the other elements?\r
-         * What
-        made the image corners rounded?\r
+        和你的伙伴讨论一下，你认为CSS代码中的哪部分让页面显示得不同。\r
+         * 如何让整个页面变蓝？\r
+         * 如何让图片放在所有内容的左边？\r
+         * 什么让图片的角是圆的？\r
         \r
-        In the next few levels, you'll be
-        changing and adding new styles on this page.
+        在下一关中，你会更改并添加这个页面中的新样式。
       CSD U2 layout style width_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -6176,81 +5949,49 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What are the two types of lists?**</summary>\r
+        <summary>**什么是列表的两种类型？**</summary>\r
 
-        There are two types of lists in HTML, ordered and unordered lists.\r
+        HTML中有两种类型的列表，有序的和无序的列表。\r
         </details>\r
         \r
         <details>\r
-        <summary>**What
-        is an unordered list?**</summary>\r
-        An unordered list is just a set of bulleted
-        items.\r
+        <summary>**什么是无序的列表？**</summary>\r
+        无序列表就是一组符号列表。\r
         <br /><br />\r
-        An unordered list element has the tag `<ul> </ul>`.
-        This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist.
-        Each item in the list is marked by a list item element `<li> </li>`. This
-        is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
-        item element is a child element, which means that it goes inside of its parent
-        element, the unordered list.\r
+        无序列表元素的标签是`<ul> </ul>`。这是<strong>U</strong>nordered <strong>L</strong>ist（无序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，无序列表里。\r
         </details>\r
         \r
         <details>\r
-        <summary>**How
-        do I make an unordered list?**</summary>\r
-        Making an unordered list has two
-        steps: making the list and adding the list items.  To make the unordered list,
-        write the unordered list tags `<ul> </ul>`.  Next, add your list items **inside**
-        the unordered list tags.  To make each list item, use the list item tags `<li>
-        </li>` and write the list item inside the tags.\r
+        <summary>**我该如何增加一个无序列表？**</summary>\r
+        制作一个无序列表需要两步：制作列表和增加列表条目。先写上无序列表标签 `<ul> </ul>`来增加无序列表。接着将你的列表条目加到无序列表标签的**里面**。用标签`<li>
+        </li>` 来增加列表条目，将内容都加到这对标签里。\r
         <br /><br />\r
-        It can
-        be helpful to indent your `<li> </li>` tags so it's clear they are contained
-        in the `<ul> </ul>` tags.\r
+        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ul> </ul>`标签里面的。\r
         </details>\r
         \r
         <details>\r
-        <summary>**What
-        is an ordered list?**</summary>\r
-        An ordered list is a set of bulleted items
-        which are numbered.\r
+        <summary>**什么是有序列表？**</summary>\r
+        有序列表是一组数字符号的列表。\r
         <br /><br />\r
-        An ordered list element has the tags
-        `<ol> </ol>`. This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist.
-        Each item in the list is marked by a list item element `<li> </li>`. This
-        is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list
-        item element is a child element, which means that it goes inside of its parent
-        element, the ordered list.\r
+        有序列表元素的标签是`<ol> </ol>`。这是<strong>O</strong>rdered <strong>L</strong>ist（有序列表）的缩写。列表中的每个条目都通过元素`<li> </li>`来标记。这是<strong>L</strong>ist <strong>I</strong>tem（列表条目）的缩写。列表条目元素是子元素，这意味着它会在父元素，有序列表里。\r
         </details>\r
         \r
         <details>\r
-        <summary>**How
-        do I make an ordered list?**</summary>\r
-        Making an ordered list has two steps:
-        making the list and adding the list items. To make the ordered list, write
-        the ordered list tags `<ol> </ol>`. Next, add your list items **inside** the
-        ordered list tags. To make each list item, use the list item tags `<li> </li>`
-        and write the list item inside the tags.\r
+        <summary>**我该如何增加一个有序列表？**</summary>\r
+        制作一个有序列表需要两步：制作列表和增加列表条目。先写上有序列表标签 `<ol> </ol>`来增加有序列表。接着将你的列表条目加到有序列表标签的**里面**。用标签`<li>
+        </li>` 来增加列表条目，将内容都加到这对标签里。\r
         <br /><br/>\r
-        It can be helpful
-        to indent your `<li> </li>` tags so it's clear they are contained in the
-        `<ol> </ol>` tags.\r
+        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ol> </ol>` 标签里面的。\r
         </details>\r
         </div>\r
         \r
-        You can also use HTML to
-        make different types of lists on your web page.  This recipe includes two
-        different types of lists, one ordered (with numbers) and one unordered (with
-        bullets).\r
+        你也能用HTML来给页面增加不同类型的列表。这个配方页面包括两种类型的列表，一个有序的（数字的），一个无序的（符号的）。\r
         \r
-        #  Do This\r
+        #  这样做\r
         \r
-        * Use the inspector tool to see the code
-        that is making the two different kinds of lists.\r
-        * Make sure you and your
-        partner agree on what the different tags do.\r
-        * Fix the code so that the
-        second item in each list displays correctly
+        * 用检查器来看看这两种不同类型的列表\r
+        * 确保你和你的伙伴都对这不同类型的标签是什么达成一致。\r
+        * 修复代码，使得每个列表中的第二个条目能正确显示。
       CSD U2 navigation_markdown_instruction: |
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -6740,62 +6481,38 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that makes the `h1` elements underlined:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是让`h1`元素有下划线的代码：\r
         \r
         <pre>h1 {\r
           text-decoration:
         underline;\r
         }</pre>\r
         \r
-        * `h1` is the _selector_.  It specifies which
-        elements will have to follow the rules inside the curly braces. The `p` stands
-        for paragraph.\r
-        * `text-decoration: underline;` is the rule that makes the
-        text inside the `h1` tag underlined.\r
-         * `text-decoration` is the _property_.  It
-        explains what the rule is about, in this case where the line goes.\r
-         * `underline`
-        is the _value_.  It explains how the rule should be applied, in this case
-        making the test underlined.\r
+        * `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。这里的`p`表示段落（paragraph）。\r
+        * `text-decoration: underline;`是一条规则，它能让`h1`标签里的文本有下划线。\r
+         * `text-decoration`是_属性_。它解释了这是什么规则，在这里，表示用什么修饰。\r
+         * `underline`是_值_。它解释了这条规则如何应用，在这里，表示用下划线。\r
         </details>\r
         <details>\r
-        <summary>**What
-        are the possible values for text decoration?**</summary>\r
-        You can choose
-        between "underline", "overline", and "line-through".  You can read more
-        about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools
-        - CSS text-decoration Property</a>\r
+        <summary>**文本修饰都有什么可用的值？**</summary>\r
+        可选的项目有"underline", "overline", 和"line-through"。你可以阅读<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools
+        - CSS text-decoration 属性</a>来了解更多。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the stylesheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a stylesheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -6803,21 +6520,17 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </div>\r
         #
-        Underlining\r
+        下划线\r
         \r
-        * Find the code in the style sheet that makes the h1 tag
-        underlined.\r
-        * Change the text decoration and see which one you like.\r
+        * 找到样式表中，让h1标签有下划线的代码。\r
+        * 改动文本修饰，选择一个你喜欢的值。\r
           *
-        Choose from "underline", "overline", and "line-through"\r
-        * Add a text
-        decoration rule for the paragraph or h3 tag.
+        从"underline"，"overline"，和"line-through"中选一个\r
+        * 为段落或h3标签添加一个文本修饰规则。
       CSD U2 text style font family_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -6907,62 +6620,38 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that is controlling the paragraph font:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是控制段落字体的代码：\r
         \r
         <pre>p {\r
           font-family:
         cursive;\r
         }</pre>\r
         \r
-        * `p` is the _selector_.  It specifies which elements
-        will have to follow the rules inside the curly braces. The `p` stands for
-        paragraph.\r
-        * `font-family: cursive;` is the rule that makes the text inside
-        the `p` tags a particular font.\r
-         * `font-family` is the _property_.  It
-        explains what the rule is about, in this case the font.\r
-         * `cursive` is
-        the _value_.  It explains how the rule should be applied, in this case making
-        the text cursive.\r
+        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\r
+        * `font-family: cursive;`是一条规则，它让`p`标签里的文本采用某种字体。\r
+         * `font-family`是_属性_。它解释了这条规则是关于什么的，这条是关于字体的。\r
+         * `cursive`是_值_。它解释了规则是如何被应用的，在这里，会让文本成为草书。\r
         </details>\r
         <details>\r
-        <summary>**What are the possible
-        values for font family?**</summary>\r
-        You can choose between "serif", "sans-serif",
-        "cursive", "fantasy", and "monospace".  You can also try more specific
-        fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools
-        - CSS Web Safe Font Combinations</a>\r
+        <summary>**有哪些可用的字体族？**</summary>\r
+        你可以从"serif"，"sans-serif"，"cursive"，"fantasy"和"monospace"中选择。也可以从<a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools
+        - CSS 网页安全字体组合</a>里选一种字体。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the stylesheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a stylesheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -6970,22 +6659,17 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </div>\r
         #
-        Changing the Font\r
+        改变字体\r
         \r
-        * Find the CSS rule-set in the style sheet that determines
-        the style for the paragraph tag.\r
-        * Change the font family and choose which
-        one you like the best.\r
-          * Choose from "serif", "sans-serif", "cursive",
-        "fantasy", and "monospace"\r
-        * Add a font family rule for the h1 or h3
-        tags.
+        * 在样式表中找到决定段落标签样式的CSS规则集。\r
+        * 选择一种最喜欢的字体族，并改变原来的值。\r
+          * 从"serif"，"sans-serif"，"cursive"，
+        "fantasy"和"monospace"中选择\r
+        * 为h1或h3标签增加一条字体族规则。
       CSD U2 text style freeplay - OLD_markdown_instruction: |-
         # 添加样式\r
         \r
@@ -7143,62 +6827,39 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What colors can I use in CSS?**</summary>\r
-        CSS
-        includes most common color names (red, blue, green, etc.), and many uncommon
-        ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML Color Names</a>.  You can still use colors that are not included in
-        the named list, but you will need to use their RGB values.  You can read more
-        about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS Legal Color Values</a>\r
+        <summary>**我能在CSS里使用什么颜色？**</summary>\r
+        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
+        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
+        - CSS正确的颜色值</a>查看更多信息。\r
         </details><details>\r
-        <summary>**How does
-        the code work?**</summary>\r
-        Here is the code that is making the `h1` heading
-        red:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是让`h1`标题变红的代码：\r
         \r
         <pre>h1 {\r
           color: red;\r
         }</pre>\r
         \r
-        * `h1` is the _selector_.  It
-        specifies which elements will have to follow the rules inside the curly braces.\r
+        * `h1`是_选择器_。它指定了哪些元素上会应用花括号里的规则。\r
         *
-        `color: red;` is the rule that makes the text inside the `h1` tags red.\r
+        `color: red;`是让`h1`标签里的文本变红的规则。\r
 
-        * `color` is the _property_.  It explains what the rule is about, in this
-        case the text color.\r
-         * `red` is the _value_.  It explains how the rule
-        should be applied, in this case making the text red.\r
+        * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。\r
+         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the style sheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a style sheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -7207,23 +6868,16 @@
         }\r
         </pre>\r
         \r
-        In
-        this example, `h2` is the selector, `color` and `font-family` are properties,
-        and `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </div>\r
         #
-        CSS and Text Color\r
+        CSS和文本颜色\r
         \r
-        This HTML file uses a style sheet ("style.css")
-        to give the page a particular style.  The style sheet contains information
-        about what each of the HTML elements should look like.\r
+        这个HTML文件使用了一个样式表（"style.css"）来给页面一个特定的样式。这个样式表包含了关于每个HTML元素应该看起来是什么样子的信息。\r
         \r
-        * Find the code
-        in the style sheet (click on "style.css" in the files list) that is making
-        the h1 heading red.\r
-        * Change the code for the color of the h1 heading from
-        `red` to a different color.
+        * 找到样式表（点击文件列表中的"sytle.css"）中让h1变红的代码。\r
+        * 将h1的颜色从`red`改变成另一种颜色。
       CSD U2 text style h3_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -7341,44 +6995,27 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**What colors can I use in CSS?**</summary>\r
-        CSS
-        includes most common color names (red, blue, green, etc.), and many uncommon
-        ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
-        - HTML Color Names</a>.  You can still use colors that are not included in
-        the named list, but you will need to use their RGB values.  You can read more
-        about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS Legal Color Values</a>\r
+        <summary>**我能在CSS里使用什么颜色？**</summary>\r
+        CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
+        - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
+        - CSS正确的颜色值</a>查看更多信息。\r
         </details>\r
         <details>\r
-        <summary>**How
-        does the code work?**</summary>\r
-        Here is the code that is making the `h1`
-        header red:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是让`h1`标签中文本变红的代码：\r
         \r
         <pre>h1 {\r
           color: red;\r
         }</pre>\r
         \r
-        * `h1` is
-        the _selector_.  It specifies which elements will have to follow the rules
-        inside the curly braces.\r
-        * `color: red;` is the rule that makes the text
-        inside the `h1` tags red.\r
-         * `color` is the _property_.  It explains what
-        the rule is about, in this case the text color.\r
-         * `red` is the _value_.  It
-        explains how the rule should be applied, in this case making the text red.\r
+        * `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。\r
+        * `color: red;`是让`h1`标签里的文本变红的规则。\r
+         * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。\r
+         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。\r
         </details>\r
         <details>\r
-        <summary>**How
-        do I make a new rule-set?**</summary>\r
-        To make a new rule set, you'll need
-        a selector and a list of rules.  The selector is the name of the tag you want
-        the rules to be applied to.  The rules are a list of property and value pairs.  You'll
-        also need to pay careful attention to the punctuation in the rule set.  Look
-        at the code below for an example of how the code should look.  You'll need
-        to change the specifics for your page.\r
+        <summary>**如何创建一个新的规则集（rule-set）？**</summary>\r
+        为了创建一个新的规则集，你需要一个选择器和一组规则。选择器是你想让规则应用到的标签的名字。这些规则是一组属性和值对。你需要特别注意规则集中的符号。看看下面的例子，学习一下代码看起来应该是什么样子。你需要为页面做一些改动。\r
         \r
         <pre>h1 {\r
           color: red;\r
@@ -7386,43 +7023,25 @@
         \r
         \r
         *
-        `h1` is the _selector_.  It specifies which elements will have to follow the
-        rules inside the curly braces.\r
-        * `color: red;` is the rule that makes the
-        text inside the `h1` tags red.\r
-         * `color` is the _property_.  It explains
-        what the rule is about, in this case the text color.\r
-         * `red` is the _value_.  It
-        explains how the rule should be applied, in this case making the text red.\r
+        `h1`是_选择器_。它指定了哪些元素上会应用花括号里的规则。\r
+        * `color: red;`是让`h1`标签里的文本变红的规则。\r
+         * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。\r
+         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the style sheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a style sheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -7430,24 +7049,18 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </div>\r
         #
-        Making a new CSS rule-set\r
+        制作一个新的CSS规则集\r
         \r
-        The block of code that gives rules for a
-        particular tag is called a _rule-set_.  You can make a new rule set by copying
-        the pattern you see in the rule-set for the `h1` tag.\r
+        为某个标签给定的一组规则的代码叫做_规则集_。你能通过复制样式表中的`h1`规则集来创建一个新的规则集。\r
         \r
-        * Find the CSS
-        rule-set in the style sheet that determines the styles for the h1 tag.\r
+        * 在样式表中找到决定h1标签的规则集。\r
         *
-        Using the same pattern, write a new CSS rule-set that will determine the style
-        for the h3 tag.\r
-        * Add code to set a different color for the h3 tags.
+        用同样的规律，写一个新的CSS规则集来决定h3标签的样式。\r
+        * 为h3标签添加一个不一样的颜色。
       CSD U2 text style sample_markdown_instruction: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -7624,60 +7237,37 @@
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that is controlling the paragraph text size:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是控制段落文字大小的代码：\r
         \r
         <pre>p {\r
           font-size:
         14px;\r
         }</pre>\r
         \r
-        * `p` is the _selector_.  It specifies which elements
-        will have to follow the rules inside the curly braces. The `p` stands for
-        paragraph.\r
-        * `font-size: 14px;` is the rule that makes the text inside
-        the `p` tags a particular size.\r
-         * `font-size` is the _property_.  It explains
-        what the rule is about, in this case the text size.\r
-         * `14px` is the _value_.  It
-        explains how the rule should be applied, in this case making the text 14 pixels
-        big.\r
+        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\r
+        * `font-size: 14px;`是一条规则，它让`p`标签里的文本是一定的大小。\r
+         * `font-size`是_属性_。它解释了这条规则是关于什么的，这条是关于文本大小的。\r
+         * `14px`是_值_。它解释了规则是如何被应用的，在这里，会让文本为14像素大。\r
         </details>\r
         <details>\r
-        <summary>**What does `px` mean / What is
-        a pixel?**</summary>\r
-        Pixel, which is abbreviated `px`, is how elements
-        are measured in CSS.  It’s the size of a single point of light on the screen.\r
+        <summary>**`px`是什么意思？什么是像素？**</summary>\r
+        Pixel（像素）的缩写是`px`，这是在CSS中丈量元素的单位。这是屏幕上的一个点的尺寸。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the style sheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a style sheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -7685,24 +7275,18 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </div>\r
         \r
         #
-        Changing text size\r
+        改变字体大小\r
         \r
-        You can control other things besides colors by using
-        other properties.\r
+        除了颜色，你能用其它属性控制别的样式。\r
         \r
-        * Find the CSS rule-set in the style sheet that determines
-        the style for the paragraph tag.\r
-        * Change the text size of the paragraphs
-        to be bigger.\r
-        * Add a new rule to your rule-set for your h3 tag to make
-        the text bigger or smaller.
+        * 在样式表中找到决定段落样式的规则集.\r
+        * 将段落的文本大小改得更大一些。\r
+        * 在h3标签的规则集中添加一条规则，来让文本变大或变小。
       CSD U2 text style text align_markdown_instruction: |-
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -7802,71 +7386,43 @@
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How does the code work?**</summary>\r
-        Here
-        is the code that is controlling the paragraph text alignment:\r
+        <summary>**这些代码是如何起作用的？**</summary>\r
+        这是控制段落文本对齐的代码：\r
         \r
         <pre>p
         {\r
           text-align: left;\r
         }</pre>\r
         \r
-        * `p` is the _selector_.  It specifies
-        which elements will have to follow the rules inside the curly braces. The
-        `p` stands for paragraph.\r
-        * `text-align: left;` is the rule that makes
-        the text inside the `p` tags align to the left side of the paragraph.\r
+        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\r
+        * `text-align: left;`是一条规则，它让`p`标签里的文本在段落中左对齐。\r
 
-        * `text-align` is the _property_.  It explains what the rule is about, in
-        this case the text alignment.\r
-         * `left` is the _value_.  It explains how
-        the rule should be applied, in this case making the text align to the left
-        side of the paragraph.\r
+        * `text-align`是_属性_。它解释了这条规则是关于什么的，这条是关于文本对齐的。\r
+         * `left`是_值_。它解释了规则是如何被应用的，在这里，它让文本对齐到段落的左边。\r
         </details>\r
         <details>\r
-        <summary>**Why doesn't
-        `text-align: left;` do anything?**</summary>\r
-        Most properties have default
-        values.  The default values are the styles that an element will have automatically,
-        before you add your style sheet.  The default value for `text-align` is `left`,
-        so it doesn't change from how it already looked.\r
+        <summary>**为什么`text-align: left;`看起来什么都没改变？**</summary>\r
+        大多数属性都有默认值。这些默认值是一个元素自动会应用上的样式，不需要加到样式表中。`text-align`的默认值是`left`，因此它没有改变任何样式。\r
         </details>\r
         <details>\r
-        <summary>**What
-        are the possible values for text align?**</summary>\r
-        You can choose between
-        "left", "right", and "center".  You can read more about the text-align
-        property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools
-        - CSS text-align Property</a>\r
+        <summary>**文本对齐都有哪些可能的值？**</summary>\r
+        你可以在"left"，"right"，和"center"中选一个。阅读<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools
+        - CSS text-align属性</a>了解更多关于文本对齐的内容。\r
         </details>\r
         <details>\r
-        <summary>**Why
-        do I need all the punctuation?**</summary>\r
-        The punctuation, such as the
-        curly braces `{}`, the colon `:`, and the semicolon `;`, help the computer
-        to understand the rules in the style sheet.  The curly braces hold all the
-        rules for a particular selector.  Each rule should end in a semicolon, and
-        the properties and values are always separated by a colon.\r
+        <summary>**为什么我要所有这些符号？**</summary>\r
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is a style sheet?**</summary>\r
-        A style sheet is a document that controls
-        how a web page will appear.  External style sheets are separate files that
-        are linked to the HTML page.\r
+        <summary>**什么是样式表？**</summary>\r
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
         </details>\r
         <details>\r
-        <summary>**What
-        is CSS?**</summary>\r
-        CSS is a language that controls the way content on
-        a web site appears.  It uses rule-sets to change the look of a page.  Each
-        rule set has a selector, which specifies which elements on the page will be
-        affected, and the rules, which explain how to display the elements.   Each
-        rule consists of a property and a value for that property.\r
+        <summary>**什么是CSS？**</summary>\r
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
         \r
         \r
-        Here’s
-        an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
         \r
         <pre>h2
         {\r
@@ -7874,23 +7430,19 @@
            font-family: cursive;\r
         </pre>\r
         \r
-        In this
-        example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
         </details>\r
         </details>\r
         </div>\r
         #
-        Text Alignment\r
+        文本对齐\r
         \r
-        The `text-align` property sets the horizontal (side
-        to side) position of the text within each line.\r
+        `text-align`属性设置了文本在每一行上，水平（从一边到另一边）方向的位置。\r
         \r
-        * Find the "text-align"
-        property in the paragraph tag.\r
-        * Change the paragraph alignment.\r
+        * 找到段落标签中的"text-align"属性\r
+        * 改变段落的对齐方式。\r
           *
-        Choose from "left", "right", and "center"
+        从"left"，"right"，和"center"中选择一个。
       CSD U2 unordered list_markdown_instruction: |-
         #无序列表\r
         <div style="float:
@@ -7945,56 +7497,41 @@
         ![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png)
       CSD U2 unordered list_2018_markdown_instruction: |-
-        # Unordered Lists\r
+        # 无序列表\r
         <div
         style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
         20px; font-size:14px" markdown="1">\r
         <details>\r
-        <summary>**What are
-        the two types of lists?**</summary>\r
-         There are two types of lists in HTML,
-        ordered and unordered lists.\r
+        <summary>**什么是列表的两种类型？**</summary>\r
+        HTML中有两种类型的列表，有序和无序的。\r
         </details>\r
         <details>\r
-        <summary>**What
-        is an unordered list?**</summary>\r
-        An unordered list is just a set of bulleted
-        items.\r
-        <br /><br />An unordered list element has the tag &lt;ul&gt; . This
-        is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each
-        item in the list is marked by a list item element &lt;li&gt;. This is an abbreviation
-        for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is
-        a child element, which means that it goes inside of its parent element, the
-        unordered list (&lt;ul&gt;).\r
+        <summary>**什么是无序列表?**</summary>\r
+        无序列表只是一组无序符合项。\r
+        <br /><br /> 无序列表元素有标签&lt;ul&gt; .它是 <strong>U</strong>nordered <strong>L</strong>istis 的缩写。 每个列表里的项目是由列表项目元素&lt;li&gt;标示。它是<strong>L</strong>ist <strong>I</strong>tem 的缩写. 列表项目元素是子元素。 它表示它得跟在父元素，无序列表(&lt;ul&gt;)内。\r
         </details>\r
         \r
         <details>\r
-        <summary>**How
-        do I make an unordered list?**</summary>\r
-        Making an unordered list has two
-        steps: making the list and adding the list items.  To make the unordered list,
-        write the unordered list tags `<ul></ul>`.  Next, add your list items **inside**
-        the unordered list tags.  To make each list item, use the list item tags `<li></li>`
-        and write the list item inside the tags.\r
+        <summary>**如何制作无序列表?**</summary>\r
+        制作一个无序列表需要两步：制作列表和增加列表条目。先写上无序列表标签 `<ul> </ul>`来增加无序列表。接着将你的列表条目加到无序列表标签的**里面**。用标签`<li>
+        </li>` 来增加列表条目，将内容都加到这对标签里。\r
         <br /><br />\r
-        It can be helpful
-        to indent your &lt;li&gt; tags so it's clear they are contained in the &lt;ul&gt;
-        tag.\r
+        给你的`<li> </li>`标签加上缩进会有助于表达这些条目是在`<ul> </ul>`标签里面的。\r
         \r
         </details>\r
         \r
         <details>\r
-        <summary>**Show me working code.**</summary>\r
+        <summary>**看看代码。**</summary>\r
         <table
         border="1">\r
         <tr>\r
-        <td>Example</td>\r
-        <td>Result</td>\r
+        <td>例子</td>\r
+        <td>结果</td>\r
         </tr>\r
         <tr>\r
         <td><pre>
-        &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt;
-        <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\r
+        &lt;ul&gt; <br>   &lt;li&gt;红 &lt;/li&gt; <br>   &lt;li&gt;绿 &lt;/li&gt;
+        <br>   &lt;li&gt;蓝&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\r
         <td><img
         src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32
         PM.png" style="width:200px"></td>\r
@@ -8004,14 +7541,12 @@
         </details>\r
         </div>\r
         \r
-        This
-        page should have an unordered list, but it's missing the list tags.\r
+        这个页面应该包含一个无序列表，但它少写了列表标签。\r
         \r
         #
-        Do This\r
+        这样做\r
         \r
-        * Use the `<ul>` and `<li>` tags to structure the content into
-        an unordered list like the picture below.\r
+        * 用`<ul>`和`<li>`标签来结构化内容，并将内容放到像图片这样无序列表中。\r
         \r
         ![](https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
         PM.png)
@@ -8238,27 +7773,18 @@
         Can you add a sprite that responds to `mouseWentDown` as well? Add an image
         of your choice and increase the sprite's size each time the mouse is clicked._
       CSD U3 - complex - key up and down_2018_markdown_instruction: |-
-        # Responding
-        to a Single Click\r
+        # 响应单次点击\r
         \r
-        Earlier we learned that `keyWentDown` and `keyWentUp`
-        can be used to respond to a keypress a single time. The blocks `mouseWentUp`
-        and `mouseWentDown` allow you to do that for the mouse!\r
+        我们已经学习了`keyWentDown`和`keyWentUp`能用来响应单次的按键。模块`mouseWentUp`和`mouseWentDown`能让你对鼠标做到同样的操作！\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Let's
-        make a simple game that counts how many times you've clicked. We've already
-        provided a variable `clicks` that you can use to track how many times the
-        user has clicked.\r
+        我们先制作一个简单的游戏，它能统计你点击了多少次。这里已经有一个叫做`clicks`的变量了，能用来跟踪用户点击的次数。\r
         \r
-        * Add a conditional that checks if the mouse went
-        down.\r
-        * Inside your conditional, add to the `clicks` variable.\r
+        * 添加一个条件来检查是否鼠标被‘按下了。\r
+        * 在条件里，给`clicks`变量增加1。\r
         \r
-        _Challenge:
-        Can you add a sprite that responds to `mouseWentDown` as well? Add an image
-        of your choice and increase the sprite's size each time the mouse is clicked._
+        _挑战：你能增加一个精灵也响应`mouseWentDown`事件吗？增加一张你选择的图片，并在每次鼠标点击时，将它的尺寸放大。_
       CSD U3 - complex - mouse down_markdown_instruction: |-
         # Mouse Clicks\r
         \r
@@ -8495,27 +8021,19 @@
         <img
         src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
         PM.png" style="float:right;width:100px">\r
-        # If Statement\r
+        # 如果语句\r
         \r
-        The Boolean
-        expressions you used earlier allow us to ask questions, but in order to _respond
-        to those questions_, we need to use an `if` statement.\r
+        前面学过的布尔语句能让我们问问题，为了_回答这些问题_，我们需要用`如果`语句。\r
         \r
-        `if` statements
-        usually go inside your draw loop because we want to check them each time the
-        loop runs. \r
+        `如果`语句通常放到循环中，因为需要在每次循环运行时都进行检查。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        The race car program you wrote earlier
-        is loaded here for you.\r
+        你开始编写的赛车游戏程序已经加载在这里了。\r
         \r
-        * Add an `if` statement after you update the
-        position of the race car.\r
-        * Move the Boolean expression from the console.log
-        statement to the condition of the if statement.\r
-        * Inside the `if` statement
-        add a statement to draw text on the screen to say "Winner".\r
+        * 在更新了赛车的位置后，增加一个`如果`语句。\r
+        * 将布尔表达式从console.log语句中移动到如果条件语句上。\r
+        * 在`如果`语句中，增加一条语句在屏幕上写上"胜利者"。\r
       CSD U3 - conditionals - transition 2_markdown_instruction: |-
         # More Practice
         With Booleans\r
@@ -8996,25 +8514,17 @@
         when the "left" and "right" arrows are pressed.
       CSD U3 AnimationsMulti defender animate player_2018_markdown_instruction: |-
         #
-        Change Player Animations\r
+        改变玩家动画\r
         \r
-        Right now your player is always facing the
-        same direction. You can make things look a lot more realistic by switching
-        between animations. Your player should switch between a left-facing and right-facing
-        animation depending on which key was last pressed. Remember, you can quickly
-        copy and edit animations inside the Animation Tab.\r
+        现在，你的玩家总是面朝同一个方向。通过在不同的动画中切换，你能做得更像现实中一样。你的玩家能根据按键，在左脸和右脸动画之间切换。记住，你能在动画标签页中快速的复制和编辑动画。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
         *
-        Inside the Animation Tab copy the animation of your player sprite.\r
-        * Flip
-        each frame of the new animation so that the sprite is facing in the opposite
-        direction.\r
-        * Rename your new animation.\r
-        * Use the `setAnimation` command
-        inside the `movePlayer` function so that the player changes the direction
-        it is facing when the "left" and "right" arrows are pressed.
+        在动画标签页复制玩家精灵的动画。\r
+        * 反转新动画的每一帧，这样，精灵就能朝向相反的方向了。\r
+        * 重命名新的动画。\r
+        * 在`movePlayer`（移动玩家）函数中用`setAnimation`（设置动画）命令，在玩家点击"左"和"右"方向键时，改变它朝向的方向。
       CSD U3 AnimationsMulti defender create set enemies_markdown_instruction: |-
         #
         Creating Functions\r
@@ -9095,24 +8605,19 @@
         your sprites' colliders if you need to debug your program._
       CSD U3 AnimationsMulti defender displace enemies_2018_markdown_instruction: |-
         #
-        Displace Enemies\r
+        取代敌人\r
         \r
-        It's time to write code for some more sprite interactions.
-        Your player sprite should displace the enemy sprites.\r
+        是时候写代码来加入更多的精灵进行互动了。你的玩家精灵应该取代敌人精灵。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        For
-        this level you'll be writing code inside the `displaceEnemies` function.\r
+        这一关中，你要在`displaceEnemies`（取代敌人）函数中写代码。\r
         \r
         *
-        Write code that makes player displace both enemy sprites.\r
-        * Test your program
-        to make sure your player is displacing enemies but they keep moving right
-        after the player moves away.\r
+        写代码来让玩家取代敌人精灵。\r
+        * 测试你的程序，来确保玩家能取代敌人，但它们会在玩家移动走后，继续往右移动。\r
         \r
-        _Hint: You can use `sprite.debug` to see
-        your sprites' colliders if you need to debug your program._
+        _提示：如果需要调试你的程序，可以用`sprite.debug`来看看精灵的碰撞。_
       CSD U3 AnimationsMulti defender enemies move_markdown_instruction: |-
         # Moving
         The Enemies\r
@@ -9138,27 +8643,20 @@
         moving across the bridge.
       CSD U3 AnimationsMulti defender enemies move_2018_markdown_instruction: |-
         #
-        Moving The Enemies\r
+        移动敌人\r
         \r
-        It's time to start writing the code that will move
-        your sprites. To begin you'll need to get your enemy sprites to a random
-        position and moving across the screen.\r
+        是时候学代码来开始移动你的精灵了。开始前，你需要让敌人精灵随机到达一个位置，并满屏幕移动。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        At the top
-        of your program, after you create each enemy sprite, write code that will
-        move it to the correct position and give it the correct velocity.\r
+        在程序最上面，在创建了每个敌人精灵后，写代码来将它移动到正确的位置，并给定正确的速度。\r
         \r
         *
-        Use `sprite.x` to set the x position to 0.\r
-        * Use `sprite.y` to set the
-        y position should be a random number between 150 and 250.\r
-        * Use `sprite.velocityX`
-        to set the x velocity to 2.\r
+        用`sprite.x`来将x位置设置为0。\r
+        * 用`sprite.y`来将y位置设置为150到250之间的随机值。\r
+        * 用`sprite.velocityX`来设置x速率为2。\r
         \r
-        Test your program. Your enemy sprites should
-        now be moving across the bridge.
+        测试你的程序，你的敌人精灵现在应该能在桥上移动了。
       CSD U3 AnimationsMulti defender enemies touch cake sprite2_markdown_instruction: |-
         #
         Touching the Cake: Second Ladybug\r
@@ -9287,26 +8785,20 @@
         up when players reach a higher score.
       CSD U3 AnimationsMulti defender make it your own_2018_markdown_instruction: |-
         #
-        Make It Your Own\r
+        制作你自己的\r
         \r
-        You just walked through someone else's plan for creating
-        a game, so now it's time to make it your own. What additional features or
-        challenges do you want to create?\r
+        刚刚你学习了别人创建游戏的计划，现在要开始做你自己的了。你想要创造什么样的功能或挑战呢？\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Select one of the
-        challenges below to add to the game or come up with a challenge of your own.\r
+        选择下面的一个挑战，来添加到到游戏里，或者自己制作一个挑战。\r
         \r
         *
-        Change the visuals of the game so that your player, enemies, or cake look
-        different.\r
-        * End the game when the enemies get to the cake and print the
-        score. For an extra challenge end the game only after 3 enemies get through.\r
+        改变游戏的显示，这样玩家，敌人或蛋糕会变得不同。\r
+        * 当敌人得到蛋糕时结束游戏，并打印得分。为了获得另外的挑战，只有三个敌人会到达。\r
         *
-        Randomize the speed of the enemies.\r
-        * Create a new background that shows
-        up when players reach a higher score.
+        随机改变敌人的速度。\r
+        * 当玩家获得一个更高的分数时，显示一个新的背景。
       CSD U3 AnimationsMulti defender move player_markdown_instruction: |-
         # Moving
         Left and Right\r
@@ -9378,25 +8870,19 @@
         your code. Your character should now move in all 4 directions.
       CSD U3 AnimationsMulti defender move up down_2018_markdown_instruction: |-
         #
-        Moving Up and Down\r
+        上下移动\r
         \r
-        You'll want your player sprite to move up and down
-        as well.\r
+        你也可以让自己的精灵上下移动。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        For this level you'll still be writing code
-        inside the `movePlayer` function.\r
+        在这一关中，你要继续在`movePlayer`函数中写代码。\r
         \r
-        * Use an `if` block along with `keyDown`
-        to detect when the "up" arrow is pressed.\r
-        * Use `sprite.y` to increase
-        the player's y position by 3 using the counter pattern.\r
-        * Use another
-        `if` block to move the player down when the "down" arrow is pressed.\r
+        * 在`keyDown`中用`如果`模块来检测是否"上"方向键被按下了。\r
+        * 通过计数器模式，用`sprite.y`来将玩家的y位置增加3。\r
+        * 用另一个`如果`模块来在"下"方向键按下时，将玩家往下移动。\r
         \r
-        Test
-        your code. Your character should now move in all 4 directions.
+        测试你的代码，你的角色现在能往上下左右4个方向移动了。
       CSD U3 AnimationsMulti defender template_markdown_instruction: |-
         # Play and
         Pause\r
@@ -9414,21 +8900,13 @@
         after each of your `setAnimation` commands. This will restart the walk animations
         as long as the keys are pressed.
       CSD U3 AnimationsMulti defender template_2018_markdown_instruction: |-
-        # Play
-        and Pause\r
+        # 播放和暂停\r
         \r
-        You can use the `sprite.play` and `sprite.pause` commands
-        to play and pause a sprite's animation. If the animation is already playing
-        or paused, using these commands twice in a row has no effect.  There's one
-        important exception, however, which is that **play will restart a non-looping
-        animation if it has finished**. We're going to look at some cool behavior
-        this lets us create.\r
+        你可以用`sprite.play`（精灵.播放）和`sprite.pause`（精灵.暂停）命令来播放和暂停一个精灵的动画。如果动画正在播放，或者已经被暂停了，再用同样的命令也没有影响。唯一的例外是，**如果一个非循环的动画结束了，播放会重新开始播放它**。我们一起来看看这能创造的很酷的一些行为。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Use the `sprite.play` command
-        after each of your `setAnimation` commands. This will restart the walk animations
-        as long as the keys are pressed.
+        * 在每条`setAnimation`命令后，用`sprite.play`命令。这会在当按下键时，重新播放走路的动画。
       CSD U3 AnimationsMulti defender touch water_markdown_instruction: |-
         # Touching
         the Water\r
@@ -9552,23 +9030,17 @@
         the Animation Tab.
       CSD U3 AnimationsMulti introducing multiframe_2018_markdown_instruction: |-
         #
-        Using Multiframe Animations\r
+        使用多帧动画\r
         \r
-        In the sample defender game the sprites
-        themselves were animated. Before getting started on programming this game,
-        take a minute to get familiar with this new way of animating sprites.\r
+        在示例的防守游戏中，精灵是动画的。在开始编写这个游戏前，我们来花一分钟熟悉一下动画精灵的新方式。\r
         \r
         #
-        Do This\r
+        这样做\r
         \r
-        This program already includes several sprites but they don't
-        yet have any animations.\r
+        这个程序已经有了几个精灵，但它们都没有动画。\r
         \r
-        * Go to the Animation Tab and check out the
-        multi-frame animations already added to your project. Choose one for each
-        of your characters.\r
-        * Remember you can use `setAnimation` to give your
-        sprites animations you've created in the Animation Tab.
+        * 在动画标签页中，找到已经加到项目中的多帧动画。为每个角色选择一个。\r
+        * 记住，你可以用`setAnimation`来在动画标签页中给你的精灵分配动画。
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: |-
         # Editing Multiframe
         Animations\r
@@ -9594,29 +9066,20 @@
         animation so that the alien faces the correct direction when moving. Where
         do you think you'll need to set the sprite's animation in your code?
       CSD U3 AnimationsMulti mirror animation_2018_markdown_instruction: |-
-        # Editing
-        Multiframe Animations\r
+        # 编辑多帧动画\r
         \r
-        Your sprites will look a lot more realistic if
-        they turn around when they're moving. You can switch back and forth between
-        multiframe animations when the user presses different keys.\r
+        如果你的精灵能在移动的时候转身，看起来就真实多了。当用户按下不同的键时，你可以在转身之间切换。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Read
-        this code and run the program. Make sure you know how the sprite responds
-        to the arrow keys.\r
+        读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。\r
         \r
-        * In the Animation Tab, create a copy of the alien
-        animation by clicking the following button: ![](https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
-        PM.png)\r
-        * Use the tool to flip your animation. Make sure you flip both
-        frames using this button:  ![](https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
-        PM.png) \r
-        * Rename your new animation.\r
-        * Use your new animation and old
-        animation so that the alien faces the correct direction when moving. Where
-        do you think you'll need to set the sprite's animation in your code?
+        * 在动画标签页中，通过点击这个按钮： ![](https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        PM.png) 来创建一个外星人动画的副本。\r
+        * 使用工具来反转动画。确保用这个按钮： ![](https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        PM.png) 两帧都翻转了。\r
+        * 重命名新动画。\r
+        * 使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？
       CSD U3 AnimationsMulti no loop_markdown_instruction: |-
         # Preventing Animations
         from Looping\r
@@ -10276,31 +9739,25 @@
         \r
       CSD U3 Counters explaining counters contained 2_2018_markdown_instruction: |
         #
-        The Counter Pattern\r
+        计数器模式\r
         \r
-        This pattern is one of the most important ones
-        in all of programming. \r
+        这个模式是编程中最重要的模式之一。 \r
         \r
         ![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
         PM.png)\r
             \r
-        It is used to increase the value of a variable by 1. You
-        might call it the **counter pattern** since it can be used to make a variable
-        that counts up. You'll use this pattern a lot, especially with the draw loop.
-        Let's see what that looks like.\r
+        它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        This program creates
-        a variable `counter` and then uses the **counter pattern** to make it count
-        up. When you run the program what do you think you'll see on the screen?\r
+        这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\r
         \r
         *
-        **Read the program** and make a prediction of what the output will be.\r
+        **阅读程序**，并预测一下输出会是什么。\r
         *
-        **Run the program** to check your prediction.\r
-        * **Discuss with a neighbor**.
-        Can you explain what you observed?\r
+        **运行程序**检查一下你的预测。\r
+        * **和同伴讨论**.
+        你能解释看到了什么吗？\r
         \r
       CSD U3 Counters explaining counters_markdown_instruction: |
         # The Counter Pattern\r
@@ -10551,37 +10008,24 @@
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif"
         style="float: right; margin-left: 20px;">\r
         \r
-        # Diagonal Movement\r
+        # 沿对角线移动\r
         \r
-        Updating
-        only the `x` or `y` properties of a sprite can only make it move straight
-        up and down or left and right. If you want a sprite to move on a diagonal
-        path you'll need to updated _both_ of those properties.\r
+        如果只更新精灵的`x`或`y`属性，它只能直线向上下、或左右移动。如果你想让精灵沿着对角线移动，就需要_同时_更新这两个属性。\r
         \r
-        This program
-        currently makes the mouse move straight down the screen - can you update it
-        so that it moves diagonally across the screen like the image to the right?\r
+        当前的程序让老鼠直着向下移动 - 你能更新代码，让它像右边的图片里一样，沿着屏幕的对角线移动吗？\r
         \r
-        _Challenge:
-        Can you make the mouse point in the same direction as the image?_
+        _挑战：你能让老鼠朝着图片里同样的方向吗？_
       CSD U3 Direction Animations-2018_markdown_instruction: |-
-        # Changing Images as
-        you Move\r
-        Right now your conditionals only do one thing (change your sprite's
-        x or y), but you can actually put as much code as you want inside a conditional.
-        A common thing to do in games is to change your character's image depending
-        on which direction they're walking.\r
+        # 移动时改变图片\r
+        现在，你的条件只能做一件事情（改变精灵的x或y值），实际上在一个条件里你想放多少代码都行。游戏里通常会根据它们走的方向来改变角色的图片。\r
         \r
-        # Do This\r
-        Using the provided
-        program and images:\r
+        # 这样做\r
+        使用提供的程序和图片：\r
         \r
-        - Duplicate your chosen bug image four times.\r
+        - 复制4次选择的虫子图片。\r
         -
-        Edit each of your images to point in one of the four directions.\r
-        - Write
-        code that uses `sprite.setAnimation()` to change the image on your bug sprite
-        when different arrow keys are pressed.
+        编辑每一幅图，让它们各自指向4个方向。\r
+        - 写代码来在按下不同的方向键时，用`sprite.setAnimation()`改变虫子精灵的图片。
       CSD U3 Direction Animations_markdown_instruction: |-
         # Changing Images as you
         Move\r
@@ -10601,44 +10045,27 @@
         code that uses `sprite.setAnimation()` to change the image on your bug sprite
         when different arrow keys are pressed.
       CSD U3 Direction Animations_2018_markdown_instruction: |-
-        # Changing Images as
-        you Move\r
-        Right now your conditionals only do one thing (change your sprite's
-        x or y), but you can actually put as much code as you want inside a conditional.
-        A common thing to do in games is to change your character's image depending
-        on which direction they're walking.\r
+        # 移动时改变图片\r
+        现在，你的条件只能做一件事情（改变精灵的x或y值），实际上在一个条件里你想放多少代码都行。游戏里通常会根据它们走的方向来改变角色的图片。\r
         \r
-        # Do This\r
-        Using the provided
-        program and images:\r
+        # 这样做\r
+        使用提供的程序和图片：\r
         \r
-        - Duplicate your chosen bug image four times.\r
+        - 复制4次选择的虫子图片。\r
         -
-        Edit each of your images to point in one of the four directions.\r
-        - Write
-        code that uses `sprite.setAnimation()` to change the image on your bug sprite
-        when different arrow keys are pressed.
+        编辑每一幅图，让它们各自指向4个方向。\r
+        - 写代码来在按下不同的方向键时，用`sprite.setAnimation()`改变虫子精灵的图片。
       CSD U3 Direction Arrows-2018_markdown_instruction: |-
-        # Move in All Directions\r
-        Once
-        you've got your sprite moving in one direction by responding to a `keyDown`,
-        getting it to move in all four directions should be more of the same. The
-        basic keyboard control that you're developing here will become the basis
-        for many of the games you make down the road.\r
+        # 向所有方向移动\r
+        通过响应`keyDown`（按下键时）事件，一旦你让精灵能向某个移动，将它向所有4个方向移动都很类似。你在这里开发的基本的简单控制，会在以后的开发的许多游戏中都用上。\r
         \r
-        # Do This\r
-        The bug
-        sprite you made that responds to the right arrow has been brought to this
-        level. Add the interaction for the other three arrow keys!\r
+        # 这样做\r
+        让虫子精灵响应右方向键的代码已经加到了这一关中。添加上另外3个方向的交互！\r
         \r
-        - Add three
-        if statements - one for each arrow.\r
-        - Each if statement should move the
-        sprite in the direction of the arrow.\r
+        - 增加三个如果语句 - 每个方向一个。\r
+        - 每个如果语句应该将精灵向方向键的方向移动。\r
         \r
-        _HINT: Make sure you consider
-        both the axis (x or y) of movement, **and** whether you need to increase or
-        decrease that value._
+        _提示：确保你同时考虑了轴向（x或y）的移动，**并且**是否需要增加或减少这个值。_
       CSD U3 Direction Arrows_markdown_instruction: |-
         # Move in All Directions\r
         Once
@@ -10661,26 +10088,16 @@
         axis (x or y) of movement, **and** whether you need to increase or decrease
         that value._
       CSD U3 Direction Arrows_2018_markdown_instruction: |-
-        # Move in All Directions\r
-        Once
-        you've got your sprite moving in one direction by responding to a `keyDown`,
-        getting it to move in all four directions should be more of the same. The
-        basic keyboard control that you're developing here will become the basis
-        for many of the games you make down the road.\r
+        # 向所有方向移动\r
+        通过响应`keyDown`（按下键时）事件，一旦你让精灵能向某个移动，将它向所有4个方向移动都很类似。你在这里开发的基本的简单控制，会在以后的开发的许多游戏中都用上。\r
         \r
-        # Do This\r
-        The bug
-        sprite you made that responds to the right arrow has been brought to this
-        level. Add the interaction for the other three arrow keys!\r
+        # 这样做\r
+        让虫子精灵响应右方向键的代码已经加到了这一关中。添加上另外3个方向的交互！\r
         \r
-        - Add three
-        if statements - one for each arrow.\r
-        - Each if statement should move the
-        sprite in the direction of the arrow.\r
+        - 增加三个如果语句 - 每个方向一个。\r
+        - 每个如果语句应该将精灵向方向键的方向移动。\r
         \r
-        _HINT: Make sure you consider
-        both the axis (x or y) of movement, **and** whether you need to increase or
-        decrease that value._
+        _提示：确保你同时考虑了轴向（x或y）的移动，**并且**是否需要增加或减少这个值。_
       CSD U3 Draw Loop Discuss_markdown_instruction: |-
         # Draw()ing\r
         Here's a program
@@ -10730,18 +10147,15 @@
         src="https://images.code.org/2b5b2ce029e2f1d7377db7dcd7760cf0-image-1492031771047.15.45
         PM.png" style="float:right;width:150px">\r
         \r
-        # Using the Draw Loop\r
+        # 使用循环\r
         \r
-        Now
-        it's your turn to do some work with the draw loop. Remember that the code
-        inside the draw loop is run by Game Lab over and over again.\r
+        现在，该你使用循环做些东西了。记住，循环里的代码会被游戏实验室不停的运行。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
         *
-        Add code to this program so that your drawing has orange circles being drawn,
-        too.\r
-        * Move on when your program looks like the picture to the right.
+        增加代码到程序中，这样你的画也会有橙色的圆圈。\r
+        * 当你的程序和右边的图片很像了时，就继续。
       CSD U3 Draw Loop Plugged predict 1 embed_markdown_instruction: |-
         # 预测\r
         \r
@@ -11105,23 +10519,19 @@
         Then go write your functions outside your draw loop. You get to decide what
         a "simple" or "crazy" background are. Have fun with it!
       CSD U3 Functions Add Change Background_2018_markdown_instruction: |-
-        # Change
-        the Background with the Score\r
+        # 改变分数和背景\r
         \r
-        Once you've caught 10 coins it's time
-        to celebrate. You should change the background to be something fun.\r
+        一旦你得到了10个硬币，就该庆祝了。你应该将背景变得很有趣。\r
         \r
         <img
         src="https://images.code.org/943c67e59502334fc65a25e690076bdb-image-1475030156530.33.54
         PM.png" style="float:right; height:100px">\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Use
-        an **if-statement** and two separate functions to draw your backgrounds.\r
+        * 用一个**如果语句**和两个单独的函数来画背景。\r
         *
-        Then go write your functions outside your draw loop. You get to decide what
-        a "simple" or "crazy" background are. Have fun with it!
+        然后在循环外写函数。你需要决定什么是"简单"或"疯狂"的背景。玩得愉快！
       CSD U3 Functions Add IsTouching_markdown_instruction: |-
         # Catch the Coin, Increase
         the Score\r
@@ -11140,22 +10550,16 @@
         Play the game and **randomize the velocity of the coin** to a range that you
         think is fun.
       CSD U3 Functions Add IsTouching_2018_markdown_instruction: |-
-        # Catch the Coin,
-        Increase the Score\r
+        # 接住硬币，增加得分\r
         \r
-        Let's make that score change now too to complete
-        the game. You'll need to be able to tell when the bunny is touching the coin
-        and the reset it.\r
+        让我们改变得分来完成这个游戏。需要能知道什么时候小兔碰到了金币，并重置它。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Use an **if-statement** and the
-        **isTouching** block to increase the score when the bunny catches the coin.\r
+        * 用一个**如果语句**和**isTouching**（碰到）模块来在小兔子接住硬币时增加分数。\r
         *
-        Make sure you're **calling your function** to reset the coin once it's been
-        caught.\r
-        * Play the game and **randomize the velocity of the coin** to a
-        range that you think is fun.
+        雀稗你**调用了你的函数**来在被接住时重置硬币。\r
+        * 玩这个游戏，并**随机决定硬币的速度范围**来让游戏更好玩。
       CSD U3 Functions Call Draw Loop_markdown_instruction: |-
         # Calling Functions
         in the Draw Loop\r
@@ -11389,19 +10793,13 @@
         to the `setFlyer` function so that the flyer starts at a random Y location
         between 0 and 400, and moves at a random velocity every time he is reset.
       CSD U3 Functions Randomize Sprite_2018_markdown_instruction: |-
-        # Making Changes
-        to Functions\r
+        # 改变函数\r
         \r
-        A nice benefit of using functions to remove repeated code
-        is that you can now easily make changes to multiple places in your code. Just
-        change how you create the functions, and your program will now use the new
-        code everywhere your function is called.\r
+        用函数的好处在于它能去掉重复的代码，这样重复的代码能够在不同的地方很容易的用到了。只改变创建的函数，程序会在函数被调用的地方，都运行改过的新代码。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Make changes
-        to the `setFlyer` function so that the flyer starts at a random Y location
-        between 0 and 400, and moves at a random velocity every time he is reset.
+        改变`setFlyer`函数，让飞鸟从0到400的随机的Y值开始，并每次在重置时，使用一个随机的速度。
       CSD U3 Functions Reset Sprite_markdown_instruction: |-
         # Calling Functions Multiple
         Times\r
@@ -11423,25 +10821,19 @@
         * Use this if-statement and the function written for
         you to make the sprite move across the screen multiple times.
       CSD U3 Functions Reset Sprite_2018_markdown_instruction: |-
-        # Calling Functions
-        Multiple Times\r
+        # 多次调用函数\r
         \r
-        You'll often want to use the same code at many places
-        in your program. Once you've created a function you can call it as many times
-        as you like.\r
+        在程序中，会经常在多个地方使用相同的代码。一旦创建了一个函数，你可以随意调用它多次。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        This code creates a sprite that moves
-        across the screen once. How can you make it go back across the screen?\r
+        这个代码创建了一个精灵，能够穿过屏幕一次。你能让它再回来穿过屏幕吗？\r
         \r
         *
-        **Note:** The function is already called once at the beginning of your program\r
+        **注意：** 函数在你的程序开始时已经被调用了一次了。\r
         *
-        Read the condition of the **if-statement** inside the draw loop. Why do you
-        think it's there?\r
-        * Use this if-statement and the function written for
-        you to make the sprite move across the screen multiple times.
+        阅读循环中**如果语句**的条件。你觉得它为什么会在这里？\r
+        * 使用这个如果语句和函数来让精灵穿过屏幕多次。
       CSD U3 Functions Template Flyman_markdown_instruction: |-
         # Calling Functions
         Multiple Times\r
@@ -11605,18 +10997,14 @@
         * 增加如果语句来检查是否左方向键按下了。\r
         * 将移动鱼的命令挪到如果语句里。
       CSD U3 Input Fish_2018_markdown_instruction: |-
-        # Fish With Arrows\r
+        # 方向和鱼\r
         \r
-        The
-        fish are back. Can you make the fish move left only when the left arrow key
-        is pressed down?\r
+        这条鱼回来了。你能让鱼只在按下左方向键时向左移动吗？\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Add an if statement to check when
-        the left arrow key is pressed down.\r
-        * Move the commands for moving the
-        fish inside the if statement.
+        * 增加一个如果语句来检查是否左方向键被按下了。\r
+        * 在如果语句中用移动命令来移动鱼。
       CSD U3 Input Gears_markdown_instruction: |-
         # 齿轮和条件语句\r
         \r
@@ -11664,31 +11052,18 @@
         Can you use variables or `randomNumber()` to add some subtle animation to
         your background layer?
       CSD U3 Interactive Card Background_2018_markdown_instruction: |-
-        # Laying Out
-        Your Background\r
-        Before beginning this project, you should have already
-        completed the Interactive Card Planning activity, and you'll want to have
-        that paper with you as you develop your program. Preparation is one of the
-        **most important** elements of successfully creating a program!\r
+        # 布置背景\r
+        在开始项目前，你应该已经完成了交互卡片活动了，并且你会想用纸来开发程序了。做好准备，是成功创建一个程序的**最重要的**元素之一！\r
         \r
-        # Do
-        This\r
-        Refer to your planning activity sheet to help you lay out the shapes
-        that will become the background to your card.\r
+        # 这样做\r
+        参考你的活动计划表来帮助你布置将作为卡片背景的形状。\r
         \r
-        * First, figure out what
-        the lowest layer in your image is (this should use the `background()` block)
-        and add it to the very top of the draw loop.\r
-        * Next, layer each additional
-        drawing block in the order you want them to appear in the stack.\r
-        * Finally,
-        add a comment to the top of this section of code to describe what it does,
-        and if you have any particularly complicated chunks of code within (such as
-        code to draw a tree or a house), add a descriptive comment to that as well.\r
+        * 首先，指出在你的图片上最底下一层是什么（应该用`background()`模块），并将它加到循环的最上面。\r
+        * 接下来，按照顺序将每一层布置出来。\r
+        * 最后，在这个章节的代码最上面增加一个注释，来说明这些代码做了什么。如果在其中有很复杂的代码（比如用来画树或者房子的），也给它们加一些注释。\r
         \r
-        **Challenge:**
-        Can you use variables or `randomNumber()` to add some subtle animation to
-        your background layer?
+        **挑战：**
+        你能用变量或者`randomNumber()`来在背景层增加一些小的动画吗？
       CSD U3 Interactive Card Exemplar_markdown_instruction: |-
         # Example Project\r
         \r
@@ -16422,22 +15797,15 @@
         the space bar.  The sprite should keep moving up even after you let go of
         the space bar.
       CSD U3 abstraction velocityY control_2018_markdown_instruction: |-
-        # Controlling
-        Speed\r
+        # 控制
+        速度\r
         \r
-        Your code before the draw loop sets up the beginning of your
-        game.  Your code inside the draw loop controls how the game will change while
-        it's being played.  In this game, the helicopter bot starts off at the bottom
-        of the screen, but when the space key is pressed, it flies up.\r
+        你放在循环之前的代码决定了游戏的初始状态。放在循环之中的代码则用于处理游戏的运行。在这个游戏中，直升机从屏幕的底部启动，当有人按下空格键时，它就会飞起来。\r
         \r
-        # Do
-        This\r
+        # 这样做\r
         \r
-        * Use an `if` statement inside the draw loop to check when the
-        space bar is pressed.\r
-        * Use the `velocityY` block to make the sprite fly
-        up when the user presses the space bar.  The sprite should keep moving up
-        even after you let go of the space bar.
+        * 将`如果` 语句放在循环里来检测是否有人按了空格键。\r
+        * 用 `velocityY`模块让直升机会在有人按空格键时飞起来。无论空格键有没有被按下，直升机应当一直向前移动。
       CSD U3 abstraction velocityY_markdown_instruction: |-
         # Moving Down\r
         \r
@@ -38996,6 +38364,10 @@
         您的工作区中有一项名为"建造桥梁"的**函数**。您越过河流所需的全部代码都已经写在其中了！\r
          \r
         将这个小小的绿色方块粘入您的工作区两次，从而修复道路并让{currentPlayerName} 抵达红石火把[redstone_torch]。
+      GLJ_Crawl_Exemplar_1_markdown_instruction: |-
+        **Free Play**: Try using what you've
+        learned to make something new. Make sure to explore some of the new blocks
+        in the toolbox.
       GLJr_Behavior_7_markdown_instruction: |-
         Check out these two new blocks - the
         green "When dog is touching cat" block will run everything attached to it
@@ -39004,21 +38376,13 @@
         \r
         See if you can make both the dog and cat stop
         moving when they run into each other.
-      GLJr_Behavior_8_markdown_instruction: |-
-        The cat and dog are so excited to see
-        each other that they want to have a dance party. In addition to removing their
-        move behaviors when the two sprites touch, add the "dance party" behavior
-        so they celebrate!
+      GLJr_Behavior_8_markdown_instruction: 小猫和小狗看到对方都非常兴奋，它们想要来个跳舞的派对。当两个精灵碰到一起时，除了移除他们的移动行为，还需要增加"跳舞派对"行为来让他们庆祝一下！
       GLJr_Behavior_9_markdown_instruction: |-
         **Free Play**: Try using what you've
         learned to make something new. Make sure to explore some of the new blocks
         in the toolbox.
-      GLJr_Forever_5_markdown_instruction: |-
-        Now we have two sprites! Use a loop to
-        make the dog jittery and make the cat wander
-      GLJr_Forever_6_markdown_instruction: |-
-        Let's try some more movement blocks
-        - make the dog run up and make the cat run right.
+      GLJr_Forever_5_markdown_instruction: 现在，我们有了两个精灵！用循环来让小狗紧张，并让小猫漫步。
+      GLJr_Forever_6_markdown_instruction: 让我们试试更多的移动模块 - 让小狗向上跑，小猫向右跑。
       GLJr_Forever_7_markdown_instruction: |-
         Check out this new "if-else" block
         - it lets you run one set of code _if_ a condition is true, and a different
@@ -39027,10 +38391,7 @@
         \r
         See if you can make both the
         dog and cat stop moving when they run into each other.
-      GLJr_Forever_8_markdown_instruction: |-
-        The cat and dog are so excited to see
-        each other that they want to have a dance party. If the two sprites are touching,
-        have each run the "dance party" block.
+      GLJr_Forever_8_markdown_instruction: 小猫和小狗看到对方都非常兴奋，它们想要来个跳舞的派对。如果这两个精灵碰到一起，让它们都运行"跳舞派对"模块。
       GLJr_Forever_9_markdown_instruction: |-
         **Free Play**: Try using what you've
         learned to make something new. Make sure to explore some of the new blocks
@@ -66339,11 +65700,9 @@
       courseA_bee_seq11_markdown_instruction: 多忙的蜜蜂！采集所有花蜜。
       courseA_bee_seq12_markdown_instruction: 帮助蜜蜂采花蜜！
       courseA_bee_seq13_markdown_instruction: |-
-        *Buzz buzz!*\r
-        \r
-        Use <xml><block
-        type="maze_moveWest"/></xml> **three** times to get the bee to the flower!
-        Don't forget to use <xml><block type="maze_nectar"/></xml> to get nectar!
+        嗡嗡嗡 嗡嗡嗡\r\r用<xml><block
+        type="maze_moveWest"/></xml>模块 3 次来让蜜蜂飞到花那里！
+        别忘了用<xml><block type="maze_nectar"/></xml>收集蜂蜜！
       courseA_bee_seq14_markdown_instruction: |-
         嗡嗡嗡 嗡嗡嗡\r\r用<xml><block type="maze_moveNorth"/></xml>模块 3 次来让蜜蜂飞到花那里！
         最后别忘了收集蜂蜜。
@@ -66401,58 +65760,49 @@
         得到所有三堆宝藏！移动罗瑞尔到每一堆宝藏，然后使用这个模块: \r
           <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_markdown_instruction: 重复循环对小艺术家也有用！
+      courseA_harvester_forVideo_markdown_instruction: |-
+        Can you pick all the corn
+        using only **one** move block?
       courseA_harvester_loops1_markdown_instruction: |-
-        *"Look at all this corn! A-maize-ing!"*\r
+        *"看看这些玉米！太-神-奇-了！"*\r
         \r
-        Help
-        the farmer pick all the corn!
-      courseA_harvester_loops10_markdown_instruction: |-
-        Help the harvester pick all
-        three ears of corn!
-      courseA_harvester_loops11_markdown_instruction: 'Try one more on your own!
+        帮助农夫采摘所有的玉米！
+      courseA_harvester_loops10_markdown_instruction: 帮助收割者捡起所有三束玉米！
+      courseA_harvester_loops11_markdown_instruction: '试试自己做一个！
 
 '
-      courseA_harvester_loops2_markdown_instruction: |-
-        The farmer needs to pick all
-        the corn! Do you see a pattern?
-      courseA_harvester_loops3_markdown_instruction: |-
-        Can you pick all the corn using
-        only **one** move block?
+      courseA_harvester_loops2_markdown_instruction: 农夫需要采摘所有的玉米！找到规律了吗？
+      courseA_harvester_loops3_markdown_instruction: 你能只用**一个**移动模块捡起所有玉米吗？
       courseA_harvester_loops4_markdown_instruction: |-
-        *"I need help to find what's
-        wrong!"*\r
+        *"我需要找到哪里错了！"*\r
         \r
-        Can you help the harvester find the bug in her code?
-      courseA_harvester_loops5_markdown_instruction: "More bugs! Help the harvester\nfix
-        her code. "
+        你能帮助收割者找到她代码里的错误吗？
+      courseA_harvester_loops5_markdown_instruction: '更多的缺陷！帮助收割者修复她的代码。 '
+      courseA_harvester_loops5a_markdown_instruction: |-
+        Look at all this corn? Can
+        you pick it all by yourself?
+      courseA_harvester_loops5b_markdown_instruction: |-
+        Can you change your code to
+        make the harvester pick all the corn?
       courseA_harvester_loops6_markdown_instruction: |-
-        You will need **one** <xml><block
-        type="maze_moveSouth"></block></xml> block and **one** <xml><block type="maze_moveWest"></block></xml>
-        block to finish this puzzle!
-      courseA_harvester_loops7_markdown_instruction: 'Try it on your own! '
+        你需要**一个** <xml><block
+        type="maze_moveSouth"></block></xml>模块和**一个** <xml><block type="maze_moveWest"></block></xml>
+        模块来完成这关！
+      courseA_harvester_loops7_markdown_instruction: '自己试试吧！ '
       courseA_harvester_loops8_markdown_instruction: |-
-        This is the same puzzle, but
-        now you have to repeat **three** times instead of two! Use this block:\r
+        这是同样的难题，但现在你需要用这个模块重复**三次**，而不是**两次**：\r
         \r
         <xml><block
         type="controls_repeat_simplified_dropdown">\r
             <title name="TIMES"
         config="2-10">3</title>\r
           </block></xml>
-      courseA_harvester_loops9_markdown_instruction: |-
-        Can you figure out how to pick
-        *all* this corn?
+      courseA_harvester_loops9_markdown_instruction: 你能想出如何收集*所有*玉米吗？
       courseA_harvester_seq1_markdown_instruction: 帮助农夫采摘玉米！
-      courseA_harvester_seq10_markdown_instruction: |-
-        The farmer needs to pick all
-        the corn! Do you see a pattern?
-      courseA_harvester_seq11_markdown_instruction: |-
-        Try it by yourself! Pick all
-        the corn.
+      courseA_harvester_seq10_markdown_instruction: 农夫需要采摘所有的玉米！找到规律了吗？
+      courseA_harvester_seq11_markdown_instruction: 自己试试吧！采摘所有玉米。
       courseA_harvester_seq12_markdown_instruction: 帮助蜜蜂采花蜜！
-      courseA_harvester_seq13_markdown_instruction: |-
-        Help the harvester pick **one**
-        corn!
+      courseA_harvester_seq13_markdown_instruction: 帮助农夫采摘**一个**玉米！
       courseA_harvester_seq2_markdown_instruction: |-
         用<xml><block type="maze_moveNorth"/></xml>模块 3 次来让收割者到达玉米的位置，最后别忘了用<xml><block
         type="harvester_corn"/></xml>模块捡起玉米！
@@ -66462,10 +65812,37 @@
       courseA_harvester_seq5_markdown_instruction: 能找出这代码哪里出了问题吗？改正它来帮助收割者收获玉米。
       courseA_harvester_seq6_markdown_instruction: 自己试一试！
       courseA_harvester_seq7_markdown_instruction: 你得在两个方向上移动才能找到那朵花! 帮助收割者选择正确的方向。
-      courseA_harvester_seq8_markdown_instruction: 现在农夫需要采摘玉米两次！
-      courseA_harvester_seq9_markdown_instruction: |-
-        Add two blocks to finish this
-        puzzle!
+      courseA_harvester_seq8_markdown_instruction: 现在收割者需要采摘玉米两次！
+      courseA_harvester_seq9_markdown_instruction: 添加两个模块来完成这个关卡！
+      courseA_maze_ramp2_2018_markdown_instruction: |-
+        Attach both <xml><block type="maze_moveEast"/></xml>
+        blocks to <xml><block type="when_run"/></xml> to finish your code, then
+        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp2a_2018_markdown_instruction: |-
+        Attach both <xml><block type="maze_moveEast"/></xml>
+        blocks to <xml><block type="when_run"/></xml> to finish your code, then
+        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3_2018_markdown_instruction: |-
+        *"这只猪把我的羽毛弄皱了。"*\r
+        \r
+        这里有一个额外的模块会让小鸟坠落。\r
+        将它从其它模块上移除，并拖回工具箱来扔掉。
+      courseA_maze_ramp3a_2018_markdown_instruction: |-
+        Grab a <xml><block type="maze_moveNorth"/></xml>
+        from the toolbox and add it to the bottom of the other blocks to finish this
+        code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp4_2018_markdown_instruction: |-
+        *"沿着这条路带我去找那只笨猪。"*\r
+        \r
+        躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
+      courseA_maze_ramp4a_2018_markdown_instruction: |-
+        Can you figure out which block
+        you need to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_markdown_instruction: |-
+        *"沿着这条路，让我到猪那里！"*\r
+        \r
+        躲开TNT炸药。
+      courseA_maze_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseA_maze_seq1_markdown_instruction: '*"摆弄这些模块并试着把我带到坏猪那里！"*'
       courseA_maze_seq10_markdown_instruction: |-
         **挑战：** 绕开TNT 把鸟带到猪那里！\r
@@ -66530,6 +65907,11 @@
         从头自己开始尝试这个。\r
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5a_2018_markdown_instruction: |-
+        *"Here piggy, piggy!"*\r
+        \r
+        What
+        can you add to the end of this code to get the bird to the pig?
       courseA_maze_seq6_markdown_instruction: |-
         往一条路走，然后另一条把鸟带到猪那里！\r
         \r
@@ -66647,34 +66029,27 @@
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops10_2018_markdown_instruction: |-
-        Use what you have learned
-        to draw a picture of what you think the artist saw when he got home.\r
+        运用你已经学到的知识来画一幅你认为艺术家在回到家的时会看到的画。\r
         \r
         ___\r
-        ###
-        Ideas\r
+        ###点子\r
         \r
         ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops6_markdown_instruction: 在灌木丛后面是一条开满美丽花朵的藤。你能够爬上藤看它延到哪里吗？
-      courseB_artist_loops6_2018_markdown_instruction: |-
-        Behind the bushes there is
-        a beautiful vine full of flowers.  Can you climb the vine and see where it
-        goes?
+      courseB_artist_loops6_2018_markdown_instruction: 在灌木丛后面是一条开满美丽花朵的藤。你能够爬上藤看它延到哪里吗？
       courseB_artist_loops7_markdown_instruction: "**挑战：**这是一个隐藏的花园！让我们四处走一走。"
       courseB_artist_loops7_2018_markdown_instruction: |-
         **Challenge:**  It's a hidden
         garden! Let's walk around.
       courseB_artist_loops_challenge1_markdown_instruction: '*"是时候掷骰子了! 你能帮我画这些吗？"*'
-      courseB_artist_loops_challenge1_2018_markdown_instruction: |-
-        *"It's time to
-        toss the dice! Can you help me draw these?"*
+      courseB_artist_loops_challenge1_2018_markdown_instruction: '*"是时候掷骰子了! 你能帮我画这些吗？"*'
       courseB_artist_loops_challenge2_markdown_instruction: 画尽可能多的 X。你能每行画3个吗？
       courseB_artist_loops_challenge2_2018_markdown_instruction: |-
-        Draw as many X's
-        as you can. Can you get 3 in a row?
+        让我们玩游戏吧! 尽可能多地画 X。
+        你可以做到一排放3 个吗？
       courseB_collector_loops1_markdown_instruction: |-
         ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。\r
         \r
@@ -66705,60 +66080,76 @@
         \r
         帮助罗瑞尔得到至少**5** 片宝藏来完成此关卡。
       courseB_collector_loops_challenge2a_2018_markdown_instruction: |-
-        *"Let's get
-        the treasure!"*\r
+        *”让我们得到宝藏！“*\r
         \r
-        Help Laurel get at least **5** pieces of treasure
-        to finish this puzzle.
+        帮助罗瑞尔得到至少**5** 片宝藏来完成此关卡。
       courseB_collector_prog3_markdown_instruction: 罗瑞尔怎样只用`E -->`模块来收集所有5堆金子？
+      courseB_iceage_loops1_markdown_instruction: |-
+        Help Scrat across the slippery
+        ice to get to the acorn!
+      courseB_iceage_loops10_markdown_instruction: |-
+        Help Scrat get all the way over
+        to the acorn!
+      courseB_iceage_loops11_markdown_instruction: 帮助斯奎特得到橡子！
+      courseB_iceage_loops12_markdown_instruction: |-
+        Get to the acorn any way you
+        can!
+      courseB_iceage_loops2_markdown_instruction: |-
+        Use both <xml><block type="maze_moveWest"/></xml>
+        and <xml><block type="maze_moveSouth"/></xml> blocks to get to the acorn!
+      courseB_iceage_loops3_markdown_instruction: |-
+        Can you get to the acorn with
+        just one <xml><block type="maze_moveWest"/></xml> block? Try using a loop!
+      courseB_iceage_loops4_markdown_instruction: |-
+        Add one more block to get Scrat
+        all the way to the acorn!
+      courseB_iceage_loops5_markdown_instruction: |-
+        Can you add one more loop to get
+        to the acorn?
+      courseB_iceage_loops6_markdown_instruction: |-
+        Can you add a loop to get to the
+        acorn?
+      courseB_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn!
+
+'
+      courseB_iceage_loops8_markdown_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_markdown_instruction: |-
+        The acorn is so far away! Can
+        you use loops to help Scrat get there?
       courseB_maze_seq3_markdown_instruction: '*"修复代码来让我到达那只猪！"*'
-      courseB_maze_seq3_2018_markdown_instruction: |-
-        *"Fix the code to get me to
-        the pig!"*
+      courseB_maze_seq3_2018_markdown_instruction: '*"修复代码来让我到达那只猪！"*'
       courseB_maze_seq9_markdown_instruction: "**挑战：**绕开TNT炸药，让鸟到达猪那里。"
-      courseB_maze_seq9_2018_markdown_instruction: |-
-        **Challenge:** Move around the
-        TNT to get the bird to the pig.
+      courseB_maze_seq9_2018_markdown_instruction: "**挑战：**绕开TNT炸药，让鸟到达猪那里。"
       courseB_maze_seq9_challenge1_markdown_instruction: 那只猪现在藏在哪里？
       courseB_maze_seqCold_markdown_instruction: "**挑战：**通过添加模块来调试这关, 让鸟到达猪那里!"
       courseB_maze_seq_challenge1_markdown_instruction: 每种移动模块你只有4个。你能在用完模块前，找到一条路吗？
-      courseB_maze_seq_challenge1_2018_markdown_instruction: |-
-        You only have four
-        of each move block. Can you find a path before you run out of blocks?
+      courseB_maze_seq_challenge1_2018_markdown_instruction: 每种移动模块你只有4个。你能在用完模块前，找到一条路吗？
       courseB_playLab_events1_markdown_instruction: |-
         这个游戏叫做"剧本实验室"。\r
         \r
         看看你能否指出每个模块做了什么。
       courseB_playLab_events1_2018_markdown_instruction: |-
-        This game is called "Play
-        Lab".  \r
+        这个游戏叫做"剧本实验室"。\r
         \r
-        See if you can figure out what each block does.
+        看看你能否指出每个模块做了什么。
       courseB_playlab_events3_markdown_instruction: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
-      courseB_playlab_events3_2018_markdown_instruction: |-
-        Use an event to make Daisy
-        the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        mood when you click on her.
+      courseB_playlab_events3_2018_markdown_instruction: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
       courseB_playlab_events4_markdown_instruction: |-
         骑士时间!  \r
         \r
         添加一个事件，当点击左箭头时，让骑士移向龙。
       courseB_playlab_events4_2018_markdown_instruction: |-
-        Knight time!  \r
+        骑士时间!  \r
         \r
-        Add
-        an event so that the knight moves toward the dragon when the left arrow is
-        clicked.
+        添加一个事件，当点击左箭头时，让骑士移向龙。
       courseB_playlab_events6_markdown_instruction: |-
         帮助你的骑士得到所有的旗帜！\r
         \r
         要做到这个，你需要添加事件来帮助骑士上下左右移动。
       courseB_playlab_events6_2018_markdown_instruction: |-
-        Help your knight get all
-        of the flags!\r
+        帮助你的骑士得到所有的旗帜！\r
         \r
-        To do this, you'll need to add events to help the knight
-        move up, down, left, and right.
+        要做到这个，你需要添加事件来帮助骑士上下左右移动。
       courseB_playlab_events7_markdown_instruction: |-
         当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！
         \r
@@ -66778,22 +66169,17 @@
         \r
         看谁跑得最快？
       courseB_playlab_events_challenge1_2018_markdown_instruction: |-
-        It's time for
-        the Great Animal Race! Make the animals move down when you press `▼`. \r
+        大型的动物比赛的时间到了! 当你按`▼`时, 让动物们往下移动。\r
         \r
-        Who
-        will run the fastest?
+        看谁跑得最快？
       courseB_playlab_events_challenge2_markdown_instruction: |-
         在你点击动物时，让它们消失。\r
         现在用狗先试试，然后帮助其它动物加入进来。你也可以增加声音和计分来做成一个捉动物的游戏！\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_playlab_events_challenge2_2018_markdown_instruction: |-
-        Let's make the
-        animals disappear when you click on them.\r
-        Try playing with the dog now,
-        then help the other animals join in the fun. You can also add sounds and score
-        points to create a game of Animal Tag!\r
+        在你点击动物时，让它们消失。\r
+        现在用狗先试试，然后帮助其它动物加入进来。你也可以增加声音和计分来做成一个捉动物的游戏！\r
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1_markdown_instruction: |-
@@ -66868,6 +66254,12 @@
       courseB_starWars_prog9_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"你能做到！"_
+      courseC_PlayLab_events7_markdown_instruction: |-
+        The `repeat forever` block allows
+        you to run code over and over forever.  Use this block to move Chomp the Dino
+        (actor 2) up and down by 400 pixels forever.\r
+        \r
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8_markdown_instruction: |-
         如果企鹅跑到了恐龙（演员1）那里，你能让它说"噢！"，并且播放"命中"的声音吗？\r
         \r
@@ -66892,26 +66284,20 @@
         \r
         当你对做的结果满意时，点击"完成"。
       courseC_artist_loops1a_2018_markdown_instruction: |-
-        **Free Play:** Let's build
-        something bigger, one step at a time!  \r
+        **自由发挥：** 让我们创建一些更大的，一次一步的东西！\r
         \r
-        Use the `jump to 200 over 200
-        down` to get the artist to the center of the play area, then use the `draw
-        a sticker` block to make a bird appear.  \r
+        用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\r
         \r
         ---\r
         \r
-        Press "Finish"
-        when you are happy with what you've made.
+        当你对做的结果满意时，点击"完成"。
       courseC_artist_loops2_markdown_instruction: |-
         现在，僵尸知道了他的路，帮他沿着路挖**20像素长**的洞，来种更多的花！\r
         -
         每个洞应该是25像素长\r
         - 每个洞与前一个洞的空间是25像素
       courseC_artist_loops2a_markdown_instruction: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
-      courseC_artist_loops2a_2018_markdown_instruction: |-
-        Now, use a loop to spin
-        your bird around 12 times with a 30 degree turn.
+      courseC_artist_loops2a_2018_markdown_instruction: 现在, 用一个循环旋转你的鸟大约12次, 每次转30度。
       courseC_artist_loops3a_markdown_instruction: |-
         太有趣了！ \r
         \r
@@ -66920,10 +66306,9 @@
         \r
         ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops3a_2018_markdown_instruction: |-
-        So much fun!  \r
+        太有趣了！ \r
         \r
-        Now,
-        add a bat sticker right after the bird to make an image like the one below.\r
+        现在，在鸟的右后方加一个蝙蝠贴纸，来做一张像底下一样的图片。\r
         ___\r
         \r
         ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
@@ -66933,10 +66318,7 @@
         \r
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops4a_2018_markdown_instruction: |-
-        Edit your code so that you
-        jump forward by 75 pixels between stamping the bird and the bat. In this puzzle,
-        make sure you have `jump to 200 over 200 down` inside of your loop, so you
-        stay in the center!\r
+        编辑代码，以便你在标记鸟和蝙蝠之间向前跳跃75个像素。在这个关卡中，确保在你的循环内有个`跳到200超过200下来`, 这样你可以留在中心。\r
         ___\r
         \r
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -66954,11 +66336,8 @@
         ___\r
         ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
       courseC_artist_loops5b_2018_markdown_instruction: |-
-        What happens when you `move
-        forward` then `move backward` by 100, 200, or 400 pixels somewhere inside
-        the loop?  \r
-        - Try using the `set pattern` block before you start your loop
-        to make a work of art!\r
+        当你在循环内`向前移动`，然后`向后移动`100，200，或400 像素会发生什么？ \r
+        - 在开始循环之前, 请尝试使用`设置图案`模块来制作艺术作品。\r
         ___\r
         ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
       courseC_artist_loops6_markdown_instruction: |
@@ -66986,14 +66365,8 @@
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: "现在自己做点什么吧。当你制作两个不同的贴纸圈时会发生什么？\\r
         \n___\\r\n需要一个点子吗？试着做一个像这样的设计。\\r\n\\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
-      courseC_artist_loops8a_2018_markdown_instruction: |-
-        Now make something on your
-        own.  What happens when you make two separate circles of different stickers?\r
-        ___\r
-        Need
-        an idea? Try making a design like this one.\r
-        \r
-        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2018_markdown_instruction: "现在自己做点什么吧。当你制作两个不同的贴纸圈时会发生什么？\\r
+        \n___\\r\n需要一个点子吗？试着做一个像这样的设计。\\r\n\\r\n![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
       courseC_artist_loopsPre1a_markdown_instruction: |-
         现在, 将此代码放入一个`重复`模块中, 并循环**6**次。\r
         - 请注意，我们在循环代码的末尾添加了一个60度的转弯，以获得完整的旋转。
@@ -67006,9 +66379,8 @@
         模块来画一条50 像素的线。
       courseC_artist_loopsTemplateA_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心,
         然后使用`画一个标签`模块来使一只鸟出现。 '
-      courseC_artist_loopsTemplateA_2018_markdown_instruction: "Use the `jump to\n200
-        over 200 down` to get the artist to the center of the play area, then\nuse
-        the `draw a sticker` block to make a bird appear. "
+      courseC_artist_loopsTemplateA_2018_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心,
+        然后使用`画一个标签`模块来使一只鸟出现。 '
       courseC_artist_prog1_markdown_instruction: |-
         *"嗨, 我是个艺术家。你可以编写代码来让我画几乎任何东西。“* \r
         \r
@@ -67222,10 +66594,7 @@
         \r
         移除模块来让斯奎特到达橡子！
       courseC_maze_debugging_challenge2_markdown_instruction: 如果斯奎特转得太频繁，他可能会头晕！只用4个`转向`命令来帮它拿到橡子。
-      courseC_maze_debugging_challenge2_2018_markdown_instruction: |-
-        If Scrat turns
-        too often, he might get dizzy! Help him reach the acorn with only four `turn`
-        commands.
+      courseC_maze_debugging_challenge2_2018_markdown_instruction: 如果斯奎特转得太频繁，他可能会头晕！只用4个`转向`命令来帮它拿到橡子。
       courseC_maze_loops2_markdown_instruction: |-
         通过`重复`模块，你能一次次循环代码。\r
         \r
@@ -67345,12 +66714,9 @@
         \r
         用下面的模块来让小艺术家在二进制的第一行画出"01010101"。
       courseD_artist_binary1_2018_markdown_instruction: |-
-        We've provided you with
-        a grid of "pixels" that you can walk through and make designs by turning
-        on only certain squares.\r
+        我们提供了一个"像素"网格，你可以穿过它，并通过打开某些特定的方块来做些图案。\r
         \r
-        Use the blocks below to have the artist draw
-        "01010101" in binary in the first row.
+        用下面的模块来让小艺术家在二进制的第一行画出"01010101"。
       courseD_artist_binary2_markdown_instruction: |-
         这个函数从一个二进制的字符串里面获得1和0，然后指导小艺术家根据它们来从左到右，从上到下。\r
         ___\r
@@ -67358,30 +66724,21 @@
         ___\r
         **运行一下代码，看看小艺术家是怎样用二进制来画出这个图形的。**
       courseD_artist_binary2_2018_markdown_instruction: |-
-        Here's a function that
-        takes a binary string of 1's and 0's and instructs the artist to follow
-        them from left to right, top to bottom.  \r
+        这个函数从一个二进制的字符串里面获得1和0，然后指导小艺术家根据它们来从左到右，从上到下。\r
         ___\r
-        The artist will fill-in
-        the squares when it sees a 1 and ignore the square when it sees a 0. \r
+        当小艺术家看到1时，就会填满正方形，当看到0时，则什么也不做。\r
         ___\r
-        **Run
-        this code to see how the artist uses binary to draw this pattern.**
+        **运行一下代码，看看小艺术家是怎样用二进制来画出这个图形的。**
       courseD_artist_binary_challenge1_markdown_instruction: 在这个谜题中，您只能使用每个二进制值 (0或1)
         一次。请尝试使用嵌套循环来画这幅图。
-      courseD_artist_binary_challenge1_2018_markdown_instruction: |-
-        You can only use
-        each binary value (0 or 1) once each in this puzzle. Try using nested loops
-        to complete this drawing.
+      courseD_artist_binary_challenge1_2018_markdown_instruction: 在这个谜题中，您只能使用每个二进制值
+        (0或1) 一次。请尝试使用嵌套循环来画这幅图。
       courseD_artist_binary_challenge2_markdown_instruction: |-
         网格里有256个比特 - 这意味着和容易因为一点小改动而造成大问题。你能坚持下去，把图标恢复正常吗？\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge2_2018_markdown_instruction: |-
-        There are 256
-        bits represented on this grid - that means it's easy for a small change to
-        cause big problems. Are you persistent enough to restore this logo back to
-        normal?\r
+        网格里有256个比特 - 这意味着和容易因为一点小改动而造成大问题。你能坚持下去，把图标恢复正常吗？\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge3_markdown_instruction: |-
@@ -67436,45 +66793,35 @@
         \r
         - 为了画出钻石，你需要交替旋转60度和120度。
       courseD_artist_nestedLoops1a_markdown_instruction: "现在，循环这个三角形6次。\\r\n\\r\n在画完每个三角形后，需要转60度。 "
-      courseD_artist_nestedLoops1a_2018_markdown_instruction: "Now loop the triangle\n6
-        times. \\r\n\\r\nAfter each triangle, you'll need to turn 60 degrees before\ndrawing
-        the next. "
+      courseD_artist_nestedLoops1a_2018_markdown_instruction: "现在，循环这个三角形6次。\\r\n\\r\n在画完每个三角形后，需要转60度。 "
       courseD_artist_nestedLoops2_markdown_instruction: |-
         这次，用尽可能少的模块完成这关。\r
         \r
         在画完每个三角形后，需要在画下一个前转60度。\r
         看看用**嵌套循环**的话，会有多容易？
       courseD_artist_nestedLoops2_2018_markdown_instruction: |-
-        This time, complete
-        the puzzle with the fewest number of blocks possible.\r
+        这次，用尽可能少的模块完成这关。\r
         \r
-        After each triangle,
-        you'll need to turn 60 degrees before drawing the next.\r
-        See how much easier
-        this is with **nested loops**?
+        在画完每个三角形后，需要在画下一个前转60度。\r
+        看看用**嵌套循环**的话，会有多容易？
       courseD_artist_nestedLoops4_markdown_instruction: |-
         太棒了！用这些圆做一样的事情。\r
         \r
         - 每个圆都在移动1像素前转1度，循环360次。\r
         - 每个圆都离一个圆结束位置50像素。
       courseD_artist_nestedLoops4_2018_markdown_instruction: |-
-        Great!  Do the same
-        thing with these circles. \r
+        太棒了！用这些圆做一样的事情。\r
         \r
-        - Each circle is made by moving 1 pixel
-        before turning 1 degree, 360 times.\r
-        - Each circle begins just 50 pixels
-        from where the last one ended
+        - 每个圆都在移动1像素前转1度，循环360次。\r
+        - 每个圆都离一个圆结束位置50像素。
       courseD_artist_nestedLoops5_markdown_instruction: |-
         如果你在圆之间转90度，会发生什么？\r
         \r
         （为了画出这幅图，你需要在圆之间跳50像素）
       courseD_artist_nestedLoops5_2018_markdown_instruction: |-
-        What happens if you
-        also turn 90 degrees between circles?\r
+        如果你在圆之间转90度，会发生什么？\r
         \r
-        (To get this image, you still
-        need to jump 50 pixels between circles)
+        （为了画出这幅图，你需要在圆之间跳50像素）
       courseD_artist_nestedLoops7_markdown_instruction: |-
         用你学过的知识画这幅图。\r
         \r
@@ -67493,24 +66840,20 @@
         -
         每个六边形都有**50像素的边**和**60度的转弯**
       courseD_artist_nestedLoops8_2018_markdown_instruction: |-
-        Using what you have
-        learned in the last couple of puzzles, build this image from the beginning.\r
+        用你从前面的关卡中学到的，从头构建这幅图。\r
         \r
         -
-        Each hexagon has **50 pixel sides** and **60 degree turns**
+        每个六边形都有**50像素的边**和**60度的转弯**
       courseD_artist_nestedLoops9_markdown_instruction: |-
         **挑战：** 你能想到如何做出这样一张图吗？\r
         \r
         - 两个形状都是**50像素的边长**\r
         - 在每一对形状间，你需要往前跳边长那么远，并转向45度。
       courseD_artist_nestedLoops9_2018_markdown_instruction: |-
-        **Challenge:** Can
-        you figure out how to make a picture like this?\r
+        **挑战：** 你能想到如何做出这样一张图吗？\r
         \r
-        - Both shapes have
-        **50 pixel sides**\r
-        - Between each pair of shapes, you will need to jump
-        forward the length of a side, and turn 45 degrees.
+        - 两个形状都是**50像素的边长**\r
+        - 在每一对形状间，你需要往前跳边长那么远，并转向45度。
       courseD_artist_nestedLoops9_predict1_markdown_instruction: |-
         **挑战：**
         你能想出怎么画这样的图吗？\r
@@ -67557,15 +66900,12 @@
         - 第二个内循环应该画一个六边形。\r
         - 第三个内循环应该画一个正方形。
       courseD_artist_nestedLoops_challenge2_2018_markdown_instruction: |-
-        This code
-        is just a little bit off!  Can you fix it to make the correct drawing in the
-        workspace?\r
+        这个代码有点不好！你能修复它，让它在工作区画出正确的图吗？\r
         \r
-        - The first inner loop should make an octagon.\r
-        - The
-        second inner loop should make a hexagon.\r
-        - The third inner loop should
-        make a square.
+        -
+        第一个内循环应该画一个八边形。\r
+        - 第二个内循环应该画一个六边形。\r
+        - 第三个内循环应该画一个正方形。
       courseD_artist_project1_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“你好，我是阿伦达尔的爱莎，帮我画个图形吧。”_\r
@@ -67830,11 +67170,7 @@
         \r
         记住，不是每朵云下面都藏着一样的东西！
       courseD_bee_conditionals3_markdown_instruction: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集*一次*花蜜。
-      courseD_bee_conditionals3_2018_markdown_instruction: |-
-        You can only collect
-        nectar from flowers, but you can check any space to see if there is a flower.
-        If there is a flower under any of these clouds, the bee will need to collect
-        nectar *once*.
+      courseD_bee_conditionals3_2018_markdown_instruction: 你只能从花上采集花蜜，但你能检查任何空间，看看是否那里有花。如果在任何云下面有花，蜜蜂需要采集*一次*花蜜。
       courseD_bee_conditionals4_markdown_instruction: |-
         在这一关中，我们知道每朵花都有正好一个花蜜，但是花没有均匀的分布。\r
         \r
@@ -67850,62 +67186,43 @@
         \r
         有些云下面可能有蜂窝。确保检查是否每朵云后藏着蜂窝！如果有蜂窝，蜜蜂就需要酿*一次*蜂蜜。
       courseD_bee_conditionals6_2018_markdown_instruction: |-
-        *"Now I just want to
-        make honey."*\r
+        *"现在我只想酿蜂蜜。"*\r
         \r
-        Some of these clouds might have honeycombs under them.  Be
-        sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb,
-        the bee will only need to make honey *once*.
+        有些云下面可能有蜂窝。确保检查是否每朵云后藏着蜂窝！如果有蜂窝，蜜蜂就需要酿*一次*蜂蜜。
       courseD_bee_conditionals7_markdown_instruction: |-
         有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r
         \r
         用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。
       courseD_bee_conditionals7_2018_markdown_instruction: |-
-        Sometimes a cloud covers
-        a flower, sometimes it covers a honeycomb! \r
+        有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r
         \r
-        Use the `if/else` block
-        to collect nectar at flowers and make honey at honeycomb. Remember: if there
-        is a flower, the bee only needs to get nectar *once*. If there is a honeycomb,
-        the bee only needs to make honey *once*.
+        用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。
       courseD_bee_conditionals7_predict2_markdown_instruction: |-
         有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r
         \r
         用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。
       courseD_bee_conditionals7_predict2_2018_markdown_instruction: |-
-        Sometimes a
-        cloud covers a flower, sometimes it covers a honeycomb! \r
+        有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r
         \r
-        Use the `if/else`
-        block to collect nectar at flowers and make honey at honeycomb. Remember:
-        there will only ever **bee** *one* honeycomb or *one* flower behind each cloud.
+        用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。
       courseD_bee_conditionals8_markdown_instruction: |-
         **挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r
         \r
         如果是花，就采一次花蜜。\r
         否则，就酿一次蜂蜜（因为是蜂窝）。
       courseD_bee_conditionals8_2018_markdown_instruction: |-
-        **Challenge:** There
-        will be either a flower or a honeycomb under each of those clouds!\r
+        **挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r
         \r
-        Collect
-        nectar once if there is a flower.\r
-        Otherwise, make honey once (because there
-        is a honeycomb).
+        如果是花，就采一次花蜜。\r
+        否则，就酿一次蜂蜜（因为是蜂窝）。
       courseD_bee_conditionals9_markdown_instruction: 采集所有的花蜜或酿造所有的蜂蜜。你只能从花那里采花蜜，从蜂窝那里酿蜂蜜。检查所有空间看看有花还是蜂窝。每朵云后面要么有一朵花，要么有一个蜂窝。
       courseD_bee_conditionals9_2018_markdown_instruction: 采集所有的花蜜或酿造所有的蜂蜜。你只能从花那里采花蜜，从蜂窝那里酿蜂蜜。检查所有空间看看有花还是蜂窝。每朵云后面要么有一朵花，要么有一个蜂窝。
       courseD_bee_conditionals_challenge1_markdown_instruction: 采所有的花蜜并酿造所有的蜂蜜。你只能从花那里采花蜜，从蜂窝酿蜂蜜。检查每个空间是否有花或者蜂窝。
-      courseD_bee_conditionals_challenge1_2018_markdown_instruction: |-
-        Collect all
-        of the nectar and make all of the honey. You can only collect nectar from
-        flowers and make honey from honeycombs. Check every space to see if there
-        is a flower or honeycomb.
+      courseD_bee_conditionals_challenge1_2018_markdown_instruction: 采所有的花蜜并酿造所有的蜂蜜。你只能从花那里采花蜜，从蜂窝酿蜂蜜。检查每个空间是否有花或者蜂窝。
       courseD_bee_conditionals_challenge2_markdown_instruction: 采所有花蜜，并酿所有蜂蜜。你可以用一个`while
         nectar > 0`循环，在一朵花里收集所有花蜜。
-      courseD_bee_conditionals_challenge2_2018_markdown_instruction: |-
-        Collect all
-        of the nectar and make all the honey. You can collect all of the nectar in
-        one flower by using the `while nectar > 0` loop.
+      courseD_bee_conditionals_challenge2_2018_markdown_instruction: 采所有花蜜，并酿所有蜂蜜。你可以用一个`while
+        nectar > 0`循环，在一朵花里收集所有花蜜。
       courseD_bee_conditionals_challenge3_markdown_instruction: 采所有花蜜，并酿所有蜂蜜。你可以用一个`while
         nectar > 0`循环，在一朵花里收集所有花蜜。
       courseD_bee_debugging1_markdown_instruction: |-
@@ -67942,10 +67259,7 @@
         \r
         帮助蜜蜂修好代码来采集所有的花蜜。
       courseD_bee_debugging_challenge1_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
-      courseD_bee_debugging_challenge1_2018_markdown_instruction: |-
-        Watch how the
-        bees gets the nectar. Can you use the same kind of pattern to help the bee
-        make all of the honey?
+      courseD_bee_debugging_challenge1_2018_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
       courseD_bee_debugging_challenge1a_markdown_instruction: |-
         *"嗡嗡嗡！我知道怎么采花蜜，现在帮我酿蜂蜜！"*\r
         \r
@@ -67998,17 +67312,13 @@
         \r
         看看在对手两次得分前，你能得多少分。
       courseD_bounce_events10s_2018_markdown_instruction: |-
-        There is now a hoop at
-        the top.  \r
+        现在最上面有个篮圈。  \r
         \r
-        Attach the `score point` block to the `when ball in goal`
-        event and the `score opponent point` block to the `when ball misses hand`
-        event to make a game. \r
+        将`得分`模块附加到`当球命中时`时间上，并将`对手得分`模块放到`当球从手中丢失时`时间里，来制作一个游戏。 \r
         \r
         ---\r
         \r
-        See how many points you can score
-        before your opponent scores twice.
+        看看在对手两次得分前，你能得多少分。
       courseD_bounce_events11s_markdown_instruction: |-
         现在，你控球了！将`扔出新球`模块放到游戏中所有需要一个新球得地方。\r
         \r
@@ -68016,14 +67326,11 @@
         \r
         看看在对手得分两次前，你能得多少分！
       courseD_bounce_events11s_2018_markdown_instruction: |-
-        Now, you are in control
-        of the ball!  Attach the `throw new ball` block in all of the places where
-        the game needs a new ball.\r
+        现在，你控球了！将`扔出新球`模块放到游戏中所有需要一个新球得地方。\r
         \r
         ---\r
         \r
-        See how many points you can score
-        before your opponent scores twice!
+        看看在对手得分两次前，你能得多少分！
       courseD_bounce_events1s_markdown_instruction: |-
         把球投到篮框里！ \r
         加一个模块到`当按左方向键时`事件，并点击"运行"来将玩家移动到网那里。
@@ -68031,24 +67338,17 @@
         把球投到篮框里！ \r
         加一个模块到`当按左方向键时`事件，并点击"运行"来将玩家移动到网那里。
       courseD_bounce_events2s_markdown_instruction: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
-      courseD_bounce_events2s_2018_markdown_instruction: |-
-        Now, attach a block to
-        the `when right event` so that the hand can get to both baskets.
+      courseD_bounce_events2s_2018_markdown_instruction: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
       courseD_bounce_events5s_markdown_instruction: 我们会朝着手发一个球。在`当球碰到手时`事件中加一个模块来确保球到达篮筐。
-      courseD_bounce_events5s_2018_markdown_instruction: |-
-        We're going to send a
-        basketball flying down towards the hand.  Attach a block to the `when ball
-        hits hand` event to ensure the ball reaches the basket.
+      courseD_bounce_events5s_2018_markdown_instruction: 我们会朝着手发一个球。在`当球碰到手时`事件中加一个模块来确保球到达篮筐。
       courseD_bounce_events6s_markdown_instruction: |-
         现在篮筐在顶部。 \r
         \r
         添加代码，当球碰到墙时，让球弹起来，这样来通过这关。
       courseD_bounce_events6s_2018_markdown_instruction: |-
-        Now the basket is at the
-        top.  \r
+        现在篮筐在顶部。 \r
         \r
-        Attach code to make the ball bounce when it hits the wall so
-        you can solve this puzzle.
+        添加代码，当球碰到墙时，让球弹起来，这样来通过这关。
       courseD_bounce_events7s_markdown_instruction: |-
         增加声音模块来制造出球进入篮筐时的刷刷声，在球脱手时的吹哨声。 \r
         \r
@@ -68056,14 +67356,11 @@
         \r
         弹球，直到它命中目标。
       courseD_bounce_events7s_2018_markdown_instruction: |-
-        Attach sound blocks to
-        make the net swish when you hit the basket and have the whistle blow when
-        the ball misses your hand.  \r
+        增加声音模块来制造出球进入篮筐时的刷刷声，在球脱手时的吹哨声。 \r
         \r
         ---\r
         \r
-        Bounce the ball until it hits
-        the finish target.
+        弹球，直到它命中目标。
       courseD_collector_debugging1_markdown_instruction: |-
         *"哦，不！我看到有个问题。"*\r
         \r
@@ -68073,24 +67370,21 @@
         \r
         帮助罗瑞尔修好代码，获得所有宝藏。
       courseD_collector_debugging10_predict1_2018_markdown_instruction: |-
-        *"It's
-        treasure island!"*\r
+        *"这是藏宝岛！"*\r
         \r
-        Help Laurel fix the code to get all the treasure.
+        帮助罗瑞尔修好代码，获得所有宝藏。
       courseD_collector_debugging1_2018_markdown_instruction: |-
-        *"Oh no! I see a
-        problem."*\r
+        *"哦，不！我看到有个问题。"*\r
         \r
-        Fix the error(s) to collect all of the treasure.
+        修复缺陷来收集所有宝藏。
       courseD_collector_debugging1a_markdown_instruction: |-
         *"哦，不！我看到有个问题。"*\r
         \r
         修复缺陷来收集所有宝藏。
       courseD_collector_debugging1a_2018_markdown_instruction: |-
-        *"Oh no! I see a
-        problem."*\r
+        *"哦，不！我看到有个问题。"*\r
         \r
-        Fix the error(s) to collect all of the treasure.
+        修复缺陷来收集所有宝藏。
       courseD_collector_debugging2_markdown_instruction: |-
         *"你能做到！"*\r
         \r
@@ -68112,21 +67406,17 @@
         \r
         修复错误来收集所有宝藏。
       courseD_collector_debugging3_2018_markdown_instruction: |-
-        *"Be persistent and
-        you will figure this out."*\r
+        *"坚持下去，你能找到它。"*\r
         \r
-        Fix the error(s) to collect all of the
-        treasure.
+        修复错误来收集所有宝藏。
       courseD_collector_debugging3a_markdown_instruction: |-
         *"坚持下去，你能找到它。"*\r
         \r
         修复错误来收集所有宝藏。
       courseD_collector_debugging3a_2018_markdown_instruction: |-
-        *"Be persistent
-        and you will figure this out."*\r
+        *"坚持下去，你能找到它。"*\r
         \r
-        Fix the error(s) to collect all of
-        the treasure.
+        修复错误来收集所有宝藏。
       courseD_collector_debugging4_markdown_instruction: |-
         *"别失望。你能做到！"*\r
         \r
@@ -68148,31 +67438,23 @@
         \r
         你需要的所有命令都在这里了...现在用你的调试技能来找出如何解决这个问题。
       courseD_collector_debugging5_2018_markdown_instruction: |-
-        *"This puzzle is
-        making me loopy!"*\r
+        *"这关让我疯狂！"*\r
         \r
-        All of the commands that you need are already here...now
-        use your debugging skills to figure out how to solve this puzzle.
+        你需要的所有命令都在这里了...现在用你的调试技能来找出如何解决这个问题。
       courseD_collector_debugging5a_markdown_instruction: |-
         *"这关让我疯狂！"*\r
         \r
         你需要的所有命令都在这里了...现在用你的调试技能来找出如何解决这个问题。
       courseD_collector_debugging5a_2018_markdown_instruction: |-
-        *"This puzzle is
-        making me loopy!"*\r
+        *"这关让我疯狂！"*\r
         \r
-        All of the commands that you need are already here...now
-        use your debugging skills to figure out how to solve this puzzle.
+        你需要的所有命令都在这里了...现在用你的调试技能来找出如何解决这个问题。
       courseD_collector_debugging6_markdown_instruction: "**挑战：**  所有你需要的模块都在这里了...现在用你的调试技巧来修复错误，收集所有的宝藏。"
-      courseD_collector_debugging6_2018_markdown_instruction: |-
-        **Challenge:**  All
-        of the blocks that you need are already here...Now use your debugging skills
-        to fix the errors and collect all of the treasure.
+      courseD_collector_debugging6_2018_markdown_instruction: "**挑战：**  所有你需要的模块都在这里了...现在用你的调试技巧来修复错误，收集所有的宝藏。"
       courseD_collector_debugging6a_markdown_instruction: '挑战: 使用工作区的代码得到至少 ** 6 **
         块宝藏!'
-      courseD_collector_debugging6a_2018_markdown_instruction: |-
-        Challenge: Use the
-        code in the work area to get at least **6** pieces of treasure!
+      courseD_collector_debugging6a_2018_markdown_instruction: '挑战: 使用工作区的代码得到至少 **
+        6 ** 块宝藏!'
       courseD_collector_debugging7_markdown_instruction: "**挑战**：你需要的所有命令都在这里了...现在用你的调试技巧来找到如何通过这关。"
       courseD_collector_debugging8_markdown_instruction: |-
         *"这么多宝藏！"*\r
@@ -68250,52 +67532,43 @@
       courseD_farmer_condLoops1_markdown_instruction: |-
         *"玉米，你今天帮我收获了吗？"*\r
         \r
-        帮助农夫检查她这行玉米，看看有没有可以收获的。用条件语句在每个苗那里判断。每个玉米秆都会有**0或1**个玉米能收获了。
+        帮助收割者检查她这行玉米，看看有没有可以收获的。用条件语句在每个苗那里判断。每个玉米秆都会有**0或1**个玉米能收获了。
       courseD_farmer_condLoops1_2018_markdown_instruction: |-
         *"玉米，你今天帮我收获了吗？"*\r
         \r
-        帮助农夫检查她这行玉米，看看有没有可以收获的。用条件语句在每个苗那里判断。每个玉米秆都会有**0或1**个玉米能收获了。
+        帮助收割者检查她这行玉米，看看有没有可以收获的。用条件语句在每个苗那里判断。每个玉米秆都会有**0或1**个玉米能收获了。
       courseD_farmer_condLoops2_markdown_instruction: |-
         *"莴苣，从这一行采摘所有庄稼！"*\r
         \r
         这个花园是混合的。它有**玉米和莴苣**  \r
         \r
-        帮助农夫收获已经成熟的。每个作物都有**一个**玉米或**一个**莴苣。
+        帮助收割者收获已经成熟的。每个作物都有**一个**玉米或**一个**莴苣。
       courseD_farmer_condLoops2_2018_markdown_instruction: |-
-        *"Lettuce collect both
-        crops from this row!"*\r
+        *"莴苣，从这一行采摘所有庄稼！"*\r
         \r
-        This garden is all mixed up, it has both **corn
-        and lettuce**!  \r
+        这个花园是混合的。它有**玉米和莴苣**  \r
         \r
-        Help the harvester pick the items that are ready for
-        harvesting.  Each plant will have either **one** corn or **one** lettuce.
+        帮助收割者收获已经成熟的。每个作物都有**一个**玉米或**一个**莴苣。
       courseD_farmer_condLoops3_markdown_instruction: |-
         *"玉米、莴苣和南瓜！帮我全收了。"*\r
         \r
         每个作物可能是一穗玉米、一头莴苣或一个南瓜。
       courseD_farmer_condLoops3_2018_markdown_instruction: |-
-        *"Corn, lettuce, AND
-        pumpkins! Help me harvest them all."*\r
+        *"玉米、莴苣和南瓜！帮我全收了。"*\r
         \r
-        Each plant will have either
-        one piece of corn, one head of lettuce, or one pumpkin.
+        每个作物可能是一穗玉米、一头莴苣或一个南瓜。
       courseD_farmer_condLoops4_markdown_instruction: |-
         *"哎呀！莴苣都长成团了！"*  \r
         \r
-        农夫想要从她的莴苣菜园里采摘所有的动荡西。每个作物都有一个以上的莴苣，因此只要一直有莴苣长出来，农夫就要不停的采摘。 \r
+        收割者想要从她的莴苣菜园里采摘所有的作物。每个作物都有一个以上的莴苣，因此只要一直有莴苣长出来，农夫就要不停的采摘。 \r
         \r
         ##### (记住：这个菜园里只有莴苣！)
       courseD_farmer_condLoops4_2018_markdown_instruction: |-
-        *"Gosh! Now the lettuce
-        is growing in clusters!"*  \r
+        *"哎呀！莴苣都长成团了！"*  \r
         \r
-        The harvester wants to pick everything
-        from her lettuce garden. Each plant will now have more than one head of lettuce
-        on it, so the harvester will need to keep picking while there is still lettuce
-        growing.  \r
+        收割者想要从她的莴苣菜园里采摘所有的作物。每个作物都有一个以上的莴苣，因此只要一直有莴苣长出来，收割者就要不停的采摘。 \r
         \r
-        ##### (Remember: This garden only has lettuce!)
+        ##### (记住：这个菜园里只有莴苣！)
       courseD_farmer_condLoops4a_markdown_instruction: |-
         *"哎呀！现在作物都长成团了！"*  \r
         \r
@@ -68313,48 +67586,33 @@
         \r
         你能想出怎么收获南瓜吗？确保沿途收获了所有的玉米！
       courseD_farmer_condLoops6_2018_markdown_instruction: |-
-        *"Let's take this one
-        step further!"*\r
+        *"让我们再多走一步！"*\r
         \r
-        Can you figure out how to pick the pumpkin?  Make
-        sure to collect all of the corn along the way!
+        你能想出怎么收获南瓜吗？确保沿途收获了所有的玉米！
       courseD_farmer_condLoops7_markdown_instruction: "**挑战：**收集所有的玉米和莴苣，然后捡起南瓜。"
-      courseD_farmer_condLoops7_2018_markdown_instruction: |-
-        **Challenge:** Collect
-        all of the corn and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops7_2018_markdown_instruction: "**挑战：**收集所有的玉米和莴苣，然后捡起南瓜。"
       courseD_farmer_condLoops8_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
-      courseD_farmer_condLoops8_2018_markdown_instruction: |-
-        Collect all of the corn
-        and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops8_2018_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
-      courseD_farmer_condLoops9_2018_markdown_instruction: |-
-        Collect all of the corn
-        and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_2018_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops9_predict1_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
-      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: |-
-        Collect all
-        of the corn and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
       courseD_farmer_condLoops_challenge1_markdown_instruction: |-
         有南瓜标记的地方，你应该`向右转`。否则要一直向前走，但记着收集沿途所有的莴苣或玉米。\r
         \r
         **每个隐藏的作物只有一个玉米或莴苣。**
       courseD_farmer_condLoops_challenge1_2018_markdown_instruction: |-
-        The pumpkins
-        mark the place where you should `turn right`. Otherwise keep going forward,
-        but remember to collect all of the lettuce or corn along the way. \r
+        有南瓜标记的地方，你应该`向右转`。否则要一直向前走，但记着收集沿途所有的莴苣或玉米。\r
         \r
-        **Each
-        hidden crop has only one corn or lettuce.**
+        **每个隐藏的作物只有一个玉米或莴苣。**
       courseD_farmer_condLoops_challenge2_markdown_instruction: |-
         *"这是多样的蔬菜迷宫！"* \r
         \r
         在南瓜那里向右转，在莴苣那里向左转。收集所有东西来通过这关。
       courseD_farmer_condLoops_challenge2_2018_markdown_instruction: |-
-        *"It's a
-        very varied vegetable maze!"* \r
+        *"这是多样的蔬菜迷宫！"* \r
         \r
-        Turn right at pumpkins, turn left at
-        lettuce. Collect everything to complete the level.
+        在南瓜那里向右转，在莴苣那里向左转。收集所有东西来通过这关。
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: 这是蔬菜迷宫。在南瓜那里向右转，在莴苣那里向左转。收集所有东西来完成此关卡。
       courseD_farmer_conditionals1_markdown_instruction: |-
         *"你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备！"*\r
@@ -68380,21 +67638,17 @@
         \r
         移动到那堆土上面，并使用`移除`模块来移除它。
       courseD_farmer_while1_2018_markdown_instruction: |-
-        *"Hi, I'm a farmer. I need
-        your help to flatten the field on my farm so it's ready for planting!"*  \r
+        *"你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备！"*\r
         \r
-        Move
-        to the pile of dirt and use the `remove` block to remove it.
+        移动到那堆土上面，并使用`移除`模块来移除它。
       courseD_farmer_while3_markdown_instruction: |-
         *"移动到土堆上，然后告诉我需要多少铲能够夷平。"*\r
         \r
         用尽可能少的模块来通过这关。
       courseD_farmer_while3_2018_markdown_instruction: |-
-        *"Move to the pile of dirt
-        and tell me how many shovelfuls to remove."*\r
+        *"移动到土堆上，然后告诉我需要多少铲能够夷平。"*\r
         \r
-        Use as few blocks as
-        possible to solve this puzzle.
+        用尽可能少的模块来通过这关。
       courseD_farmer_while4_markdown_instruction: |-
         *"我不知道这堆有多少土！"*\r
         \r
@@ -68410,11 +67664,9 @@
         \r
         帮助农夫用`当`循环来移除整堆土。
       courseD_farmer_while4_predict1_2018_markdown_instruction: |-
-        *"I don't know
-        how much dirt is in this pile!"*\r
+        *"我不知道这堆有多少土！"*\r
         \r
-        Help the farmer remove this entire
-        pile using a `while` loop.
+        帮助农夫用`当`循环来移除整堆土。
       courseD_farmer_while6_markdown_instruction: |-
         看看这些洞！每个都需要不同数量的土。 \r
         \r
@@ -68426,16 +67678,11 @@
         You can use the `while` loop
         to easily fill them all!
       courseD_farmer_while8_markdown_instruction: "**挑战：** 用尽可能少的模块填满这些洞。 "
-      courseD_farmer_while8_2018_markdown_instruction: "**Challenge:** Fill all of\nthese
-        holes using as few blocks as possible. "
+      courseD_farmer_while8_2018_markdown_instruction: "**挑战：** 用尽可能少的模块填满这些洞。 "
       courseD_farmer_while_challenge1_markdown_instruction: 填补所有的洞, 并移走所有的土堆。
-      courseD_farmer_while_challenge1_2018_markdown_instruction: |-
-        Fill all of the
-        holes and remove all of the piles.
+      courseD_farmer_while_challenge1_2018_markdown_instruction: 填补所有的洞, 并移走所有的土堆。
       courseD_farmer_while_challenge2_markdown_instruction: 填补所有的洞, 并移走所有的土堆。
-      courseD_farmer_while_challenge2_2018_markdown_instruction: |-
-        Fill all of the
-        holes and remove all of the piles.
+      courseD_farmer_while_challenge2_2018_markdown_instruction: 填补所有的洞, 并移走所有的土堆。
       courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: '*"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"*'
       courseD_harvester_nested_loops_challenge1_markdown_instruction: '*"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"*'
       courseD_harvester_nested_loops_challenge1_2018_markdown_instruction: '*"在农场上，我需要一些帮助！只用工具箱里的模块来帮我收获玉米。"*'
@@ -68512,40 +67759,26 @@
         \r
         用你学到的知识来帮小鸟抓到猪！
       courseD_maze_until10_markdown_instruction: 帮助僵尸到达向日葵。
-      courseD_maze_until10_2018_markdown_instruction: |-
-        Help the zombie get to the
-        sunflower.
+      courseD_maze_until10_2018_markdown_instruction: 帮助僵尸到达向日葵。
       courseD_maze_until10_predict2_markdown_instruction: 帮助僵尸到达向日葵。
-      courseD_maze_until10_predict2_2018_markdown_instruction: |-
-        Help the zombie get
-        to the sunflower.
+      courseD_maze_until10_predict2_2018_markdown_instruction: 帮助僵尸到达向日葵。
       courseD_maze_until2_markdown_instruction: 现在，用`重复直到`循环来做同样的事情，而不用指定需要多少次向前移动和转向。
       courseD_maze_until4_markdown_instruction: |-
         *"亲爱的人。我，僵尸。我，饿了。必须... 到... 向日葵那..."*\r
         \r
         你能只用这些模块让僵尸到达向日葵吗？
       courseD_maze_until4_2018_markdown_instruction: |-
-        *"Dear person. Me zombie.
-        Me hungry. Must... get... to sunflower..."*\r
+        *"亲爱的人。我，僵尸。我，饿了。必须... 到... 向日葵那..."*\r
         \r
-        Can you get the zombie
-        to the sunflower using only the blocks that are available?
+        你能只用这些模块让僵尸到达向日葵吗？
       courseD_maze_until5_markdown_instruction: 用`如果`模块来帮助僵尸决定何时转弯，然后让僵尸到达向日葵那里。
-      courseD_maze_until5_2018_markdown_instruction: |-
-        Use the `if` block to help
-        the zombie decide when to turn, then get the zombie to the sunflower.
+      courseD_maze_until5_2018_markdown_instruction: 用`如果`模块来帮助僵尸决定何时转弯，然后让僵尸到达向日葵那里。
       courseD_maze_until6_markdown_instruction: 帮助僵尸到达向日葵。
-      courseD_maze_until6_2018_markdown_instruction: |-
-        Help the zombie get to the
-        sunflower.
+      courseD_maze_until6_2018_markdown_instruction: 帮助僵尸到达向日葵。
       courseD_maze_until7_markdown_instruction: 帮助僵尸到达向日葵。
-      courseD_maze_until7_2018_markdown_instruction: |-
-        Help the zombie get to the
-        sunflower.
+      courseD_maze_until7_2018_markdown_instruction: 帮助僵尸到达向日葵。
       courseD_maze_until8_markdown_instruction: 帮助僵尸到达向日葵。
-      courseD_maze_until8_2018_markdown_instruction: |-
-        Help the zombie get to the
-        sunflower.
+      courseD_maze_until8_2018_markdown_instruction: 帮助僵尸到达向日葵。
       courseD_maze_until9_markdown_instruction: "**挑战：** 躲开食人花，让僵尸到达向日葵那里。"
       courseD_maze_until9_2018_markdown_instruction: "**挑战：** 躲开食人花，让僵尸到达向日葵那里。"
       courseD_maze_until_challenge_markdown_instruction: |-
@@ -68583,20 +67816,16 @@
         ---\r
         帮助海盗收集旗帜来通过这关。
       courseD_playLab_cond1_2018_markdown_instruction: |-
-        To start our game, Pirate
-        Pegleg (actor 1) needs to be able to get around in all directions.   Connect
-        the blocks to the correct events to get Pegleg moving.  \r
+        为了开始游戏，海盗（演员1）需要能往所有方向走动。将模块连接到正确的事件上让海盗能移动。 \r
         \r
         ---\r
-        Help
-        Pegleg gather the flags to solve this puzzle.
+        帮助海盗收集旗帜来通过这关。
       courseD_playLab_cond2_markdown_instruction: "该加分了！  \\r\n\\r\n编辑代码，当海盗（演员1）到达龙（演员
         2）时，给他加一分。 "
       courseD_playLab_cond2_2018_markdown_instruction: "该加分了！  \\r\n\\r\n编辑代码，当海盗（演员1）到达龙（演员
         2）时，给他加一分。 "
       courseD_playLab_cond3_markdown_instruction: '用`一直重复`循环来让龙（演员2）每秒钟随机改变一次表情。  '
-      courseD_playLab_cond3_2018_markdown_instruction: "Use a `repeat forever` loop\nto
-        make the dragon (actor 2) change between random emotions every second.  "
+      courseD_playLab_cond3_2018_markdown_instruction: '用`一直重复`循环来让龙（演员2）每秒钟随机改变一次表情。  '
       courseD_playLab_cond3a_markdown_instruction: |-
         是时候用我们学到的关于条件的内容来让游戏更精彩了。 \r
         \r
@@ -68625,25 +67854,17 @@
       courseD_playLab_cond6_markdown_instruction: "哇，这个游戏很难赢！\\r\n\\r\n让我们自定义游戏来让它更有趣。有两部分挑战：\\r\n___\\r\n\\r\n1)
         \ 在你设置忍者（演员3）去抓海盗（演员1）前，让他变得更慢。  \\r\n\\r\n2)  用`一直重复`循环来看看是否海盗在\"安全区\"，即章鱼线下面（大于225像素下）。如果他在，设置忍者**远离**海盗。否则，让忍者**抓住**海盗。
         \ "
-      courseD_playLab_cond6_2018_markdown_instruction: "Wow, this game is hard to\nwin!\\r\n\\r\nLet's
-        customize this game to make it more fun.  This challenge\nhas two parts:\\r\n___\\r\n\\r\n1)
-        \ Slow down the ninja (actor 3) before you\nset him to chase the pirate (actor
-        1).  \\r\n\\r\n2)  Use a `repeat forever`\nloop to check to see if the pirate
-        is in the \"safe zone\" beneath the line\nof octopuses (greater than 225 pixels
-        down).  If he is, set the ninja to **flee**\nthe pirate.  Otherwise, set the
-        ninja to **chase** the pirate.  "
+      courseD_playLab_cond6_2018_markdown_instruction: "哇，这个游戏很难赢！\\r\n\\r\n让我们自定义游戏来让它更有趣。有两部分挑战：\\r\n___\\r\n\\r\n1)
+        \ 在你设置忍者（演员3）去抓海盗（演员1）前，让他变得更慢。  \\r\n\\r\n2)  用`一直重复`循环来看看是否海盗在\"安全区\"，即章鱼线下面（大于225像素下）。如果他在，设置忍者**远离**海盗。否则，让忍者**抓住**海盗。
+        \ "
       courseD_playLab_cond6a_markdown_instruction: |-
         我们不想让海盗呆在"安全区"太久！ \r
         \r
         在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。
       courseD_playLab_cond6a_2018_markdown_instruction: |-
-        We don't want the pirate
-        to stay in the "safe zone" too long!  \r
+        我们不想让海盗呆在"安全区"太久！ \r
         \r
-        Add code to the `if` statement
-        below so that if the pirate (actor 1) is in the safe zone, the program will
-        wait one second, then deduct a point as long as he stays beneath the octopus
-        line.
+        在`如果`语句下增加代码，如果海盗（演员1）在安全区里，程序等一秒，然后只要他呆在章鱼线下，就减一分。
       courseD_playLab_cond6cloneForTest_markdown_instruction: 我们能让这个工作吗？
       courseD_scrat_ramp1_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
       courseD_scrat_ramp1_2018_markdown_instruction: 对于这个关卡，把所有的块都拼在一起，并点击"运行"来看看！
@@ -68902,11 +68123,9 @@
         ___\r
         ##### 这些边每条都是100像素长。你需要在每个角落转120度。
       courseE_artist_ramp9_2_2018_markdown_instruction: |-
-        Use what you've learned
-        to draw this triangle.\r
+        用你所学的来画个等边三角形。\r
         ___\r
-        ##### The sides are each 100 pixels long.
-        You will need to turn 120 degrees at each corner.
+        ##### 这些边每条都是100像素长。每个角转120度。
       courseE_bee_concept1_markdown_instruction: "*\"你能相信这些都是花吗？\"*\\r\n\\r\n从每朵花收集所有的花蜜。 "
       courseE_bee_concept1_2018_markdown_instruction: "*\"你能相信这些都是花吗？\"*\\r\n\\r\n从每朵花收集所有的花蜜。 "
       courseE_bee_concept2_markdown_instruction: |-
@@ -68997,27 +68216,27 @@
 '
       courseE_farmer_concept4_markdown_instruction: 现在，让我们增加难度！我们已经将所有模块嵌套到另一个循环里了，但是你需要让小艺术家回来画下一行。哪些代码模块能放在最外层循环的下面来画出整个网格？
       courseE_farmer_functions1_markdown_instruction: |-
-        *"我们以前见过吗？我是农夫！"*\r
+        *"我们以前见过吗？我是收割者！"*\r
         \r
-        帮助农夫到达南瓜并捡起它。
+        帮助收割者到达南瓜并捡起它。
       courseE_farmer_functions10b_markdown_instruction: 用新函数两次来过关。
       courseE_farmer_functions10b_2018_markdown_instruction: 用新函数两次来过关。
       courseE_farmer_functions11_predict_markdown_instruction: 找出要哪个函数，要删除哪个，然后通过这关！
       courseE_farmer_functions11_predict_2018_markdown_instruction: 找出要哪个函数，要删除哪个，然后通过这关！
       courseE_farmer_functions1_2018_markdown_instruction: |-
-        *"我们以前见过吗？我是农夫！"*\r
+        *"我们以前见过吗？我是收割者！"*\r
         \r
-        帮助农夫到达南瓜并捡起它。
+        帮助收割者到达南瓜并捡起它。
       courseE_farmer_functions1a_markdown_instruction: |-
         *"噢，蔬菜长得到处都是！"*\r
         \r
-        现在帮农夫捡起路上的所有玉米，直到最后的南瓜。\r
+        现在帮收割者捡起路上的所有玉米，直到最后的南瓜。\r
         ___\r
         ##### 主意：路上的每个通往南瓜的正方形上都有最多*一个*玉米。你需要用`如果`语句在采摘玉米前判断一下！
       courseE_farmer_functions1a_2018_markdown_instruction: |-
         *"噢，蔬菜长得到处都是！"*\r
         \r
-        现在帮农夫捡起路上的所有玉米，直到最后的南瓜。\r
+        现在帮收割者捡起路上的所有玉米，直到最后的南瓜。\r
         ___\r
         ##### 主意：路上的每个通往南瓜的正方形上都有最多*一个*玉米。你需要用`如果`语句在采摘玉米前判断一下！
       courseE_farmer_functions2a_markdown_instruction: |-
@@ -69029,11 +68248,11 @@
         \r
         在接下来的几关里，我们要检查很多农作物的方块。让我们将所有东西挪到函数里，这样更容易。
       courseE_farmer_functions2b_markdown_instruction: |-
-        帮助农夫捡起玉米和南瓜。\r
+        帮助收割者捡起玉米和南瓜。\r
         ___\r
         ##### 每个菜苗都会长出*最多一个*玉米。
       courseE_farmer_functions2b_2018_markdown_instruction: |-
-        帮助农夫捡起玉米和南瓜。\r
+        帮助收割者捡起玉米和南瓜。\r
         ___\r
         ##### 每个菜苗都会长出*最多一个*玉米。
       courseE_farmer_functions2ba_markdown_instruction: |-
@@ -69094,13 +68313,13 @@
       courseE_farmer_functions7b_markdown_instruction: |-
         *"收成太棒了！"*\r
         \r
-        帮助农夫在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \r
+        帮助收割者在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \r
         \r
         *（别忘了采摘沿途所有的作物！）*
       courseE_farmer_functions7b_2018_markdown_instruction: |-
         *"收成太棒了！"*\r
         \r
-        帮助农夫在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \r
+        帮助收割者在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \r
         \r
         *（别忘了采摘沿途所有的作物！）*
       courseE_farmer_functions8b_markdown_instruction: |-
@@ -69199,12 +68418,9 @@
         \r
         当你将几个同样的模块排成一列时，试试将它们挪到`重复`循环里。这用更少的代码来做相同的事情！
       courseE_maze_ramp6_2018_markdown_instruction: |-
-        *"Keep calm and help me find
-        the bad pig. Otherwise I might get angry!"*\r
+        *"保持冷静，帮我找到那只坏猪。否则，我会生气的！"*\r
         \r
-        When you have several
-        blocks in a row, try moving them inside of a `repeat` loop.  This will do
-        the same thing with less code!
+        当你将几个同样的模块排成一列时，试试将它们挪到`重复`循环里。这能更少的代码做到相同的事情！
       courseE_maze_ramp7_markdown_instruction: |-
         *"我该生气了！"* \r
         \r
@@ -70255,6 +69471,10 @@
         "arrrg"应该是"a" \r
         - "ye"应该是"e"\r
         \r
+      coursea_maze_ramp1_2018_markdown_instruction: |-
+        To get the bird to the pig,
+        snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
+        the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3_markdown_instruction: |-
         *"这只猪把我的羽毛弄皱了。"*\r
         \r
@@ -71881,10 +71101,41 @@
         | (Your answer)   | (Your answer)               |\r
         \r
         \r
+      cspu3_assess1_filltable_exam_prep_markdown_instruction: |
+        Use Top-Down Design
+        strategy to fill in the table below. The first line is given to you. You may
+        use as many or as few rows in the table as you see fit.\r
+        \r
+        _NOTE: Use
+        a new line for each entry to the table. Write each line in the format of "Function
+        Name : Description"_\r
+        \r
+        **Top-Down Design Strategy:**\r
+        \r
+        * Look at
+        the big picture…\r
+        * Identify a sub-task…\r
+        * Break down that sub-task into
+        smaller sub-task(s)...\r
+        * Keep going until you’re down to the commands you
+        already have access to.\r
+        \r
+        | Function Name   | Description / Justification
+        |\r
+        |-----------------|-----------------------------|\r
+        | drawSnowflake()
+        | Draw a 6 pointed snowflake  |\r
+        | (Your answer)   | (Your answer)               |\r
+        \r
+        \r
       cspu3_assess1_freeresponse_markdown_instruction: |-
         Explain how abstraction allows
         for the creation of increasingly complex systems.  Reference top-down design
         strategy in your response.
+      cspu3_assess1_freeresponse_exam_prep_markdown_instruction: |-
+        Explain how abstraction
+        allows for the creation of increasingly complex systems.  Reference top-down
+        design strategy in your response.
       cspu5_assess1_shortresponse_markdown_instruction: |-
         **Short Response:** \r
         \r
@@ -71894,6 +71145,15 @@
         replies, “That doesn’t make any sense at all!”.\r
         \tExplain what Kaleb may
         have meant by that statement.
+      cspu5_assess1_shortresponse_exam_prep_markdown_instruction: |-
+        **Short Response:**
+        \r
+        \r
+        Two students, Kaleb and Hunter, are arguing in class about an App
+        Lab project. Kaleb states, “Huh, a button and an image are basically the same
+        thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r
+        \tExplain
+        what Kaleb may have meant by that statement.
       cspu5_assess2_flowChart_markdown_instruction: |-
         The human question below has
         a yes/no answer. Create a flowchart that shows the logical progression of
@@ -71940,6 +71200,18 @@
             DISPLAY (“Enter the hour of day (0-23)”)\r
             hour
         <- INPUT ()
+      cspu5_assess2_pseudocode2_exam_prep_markdown_instruction: |-
+        A _pseudocode_ program
+        is started below that asks the user for input and stores the value in a variable.  Continue
+        writing pseudocode to accomplish this task: \r
+        \r
+        If the hour is within
+        the school day (8 to 15) then display  “Nice to see you!”, Otherwise, display
+        “It’s time to go home!\r
+        \r
+            DISPLAY (“Enter the hour of day (0-23)”)\r
+            hour
+        <- INPUT ()
       cspu5_assess2_shortAnswer_markdown_instruction: |-
         **Short answer:** When might
         a programmer create a global variable instead of a local variable?
@@ -71954,6 +71226,9 @@
         digital assistant could “intelligently” answer easily, and another that it
         could not. Explain what makes the first easy and the second difficult for
         a digital assistant. (Consider the code used to develop your digital assistant.)
+      cspu5_assess2_shortAnswer_exam_prep_markdown_instruction: |-
+        **Short answer:**
+        When might a programmer create a global variable instead of a local variable?
       cspu5_assess2_trueFalse_markdown_instruction: |-
         For each expression below, circle
         whether it evaluates to true or false. The variable temperature is initialized
@@ -71980,11 +71255,50 @@
         a scenario that could be modeled by a computer and explain one benefit and
         one drawback of doing the simulation on a computer instead of real world.
         \r
+      cspu5_assess3_shortAnswer_exam_prep_markdown_instruction: |
+        **Short Answer:**  Computer
+        models and simulations are used to formulate, refine, and test hypotheses.  Describe
+        a scenario that could be modeled by a computer and explain one benefit and
+        one drawback of doing the simulation on a computer instead of real world.
+        \r
       cspu5_assess4_challenge_markdown_instruction: |-
         **Challenge Question:** Imagine
         a list that represents the height in feet of equidistant points along a mountainous
         path.  Here is an example of the data with a diagram that reflects the data.
         For example: \r
+        \r
+        ![](https://images.code.org/8046cbdb63d7e7d68eb133c58362b099-image-1477862090668.png)\r
+        \r
+        A
+        programmer wants to write a procedure that calculates the net elevation -  total
+        number of feet a traveler goes up and down. For example, looking at the first
+        3 segments of travel, the net elevation is 7 feet (up 3, up 1, down 3).  \r
+        \r
+        Write
+        procedure (in either JavaScript or pseudocode) called processPath(data) that:\r
+        \r
+        *
+        Accepts a list of elevation data as a parameter\r
+        * For every value in the
+        list\r
+        \t* Compute the absolute difference between that value and the value
+        next to it on the path\r
+        \t* Add the difference to a running total\r
+        * Return
+        the total elevation traveled\r
+        \r
+        In writing your procedure you should assume
+        that you can call a function called _absDiff(a,b)_.\r
+        \r
+        ![](https://images.code.org/0a7b91a830319d5d690ddf2efa264395-image-1477862205239.png)\r
+        \r
+        Write
+        the full procedure below.
+      cspu5_assess4_challenge_exam_prep_markdown_instruction: |-
+        **Challenge Question:**
+        Imagine a list that represents the height in feet of equidistant points along
+        a mountainous path.  Here is an example of the data with a diagram that reflects
+        the data. For example: \r
         \r
         ![](https://images.code.org/8046cbdb63d7e7d68eb133c58362b099-image-1477862090668.png)\r
         \r
@@ -72052,12 +71366,58 @@
         ("A")\r
                 }\r
             }
+      cspu5_assess4_scoreToGrade_exam_prep_markdown_instruction: |-
+        **Short Answer:**
+        Jimmy wrote the procedure scoreToGrade which accepts as a parameter score
+        - a quiz score in the range 0-100.  The procedure is supposed to return a
+        letter grade. He feels confident his program is correct because he has tested
+        it using the scores 3, 29, and 67. Sally believes the program is incorrect
+        because she tested the values 73 and 86.  The code is syntactically correct,
+        and the programs runs without generating an error, but the results are sometimes
+        wrong.  Why does the procedure return the correct values for Jimmy’s tests
+        but not Sally’s? \r
+        \r
+            PROCEDURE scoreToGrade (percent)\r
+            {\r
+                IF
+        (percent < 60)\r
+                {\r
+                    RETURN ("F")\r
+                }\r
+                ELSE
+        IF (percent >= 60)\r
+                {\r
+                \tRETURN ("D")\r
+                }\r
+                ELSE
+        IF (percent >= 70)\r
+                {\r
+                    RETURN ("C")\r
+                }\r
+                ELSE
+        IF (percent >= 80)\r
+                {\r
+                    RETURN ("B")\r
+                }\r
+                ELSE\r
+                {\r
+                \tRETURN
+        ("A")\r
+                }\r
+            }
       cspu5_assess4_shortAnswerShopping_markdown_instruction: |
         **Short Answer:**
         Cecelia would like to write an app to help manage a trip to the grocery store.  The
         app will maintain a shopping list (a list of words) of all the items to buy.  Describe
         how Cecelia might use a second list in the app.  What else might be tracked?
         Describe how the list would be used and updated in the app.\r
+      cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: |
+        **Short
+        Answer:** Cecelia would like to write an app to help manage a trip to the
+        grocery store.  The app will maintain a shopping list (a list of words) of
+        all the items to buy.  Describe how Cecelia might use a second list in the
+        app.  What else might be tracked? Describe how the list would be used and
+        updated in the app.\r
       expresslink_markdown_instruction: |-
         <a href="https://studio.code.org/s/express"><img
         src="https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01
