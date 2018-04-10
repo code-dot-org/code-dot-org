@@ -5815,8 +5815,9 @@
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
-        courseA_artist_loops4_b: Since you can only use one East block, try putting
-          it inside of the `repeat` loop.
+        courseA_artist_loops4_b: |-
+          Since you can only use one <xml><block type="simple_move_right"/></xml>
+          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.

@@ -1424,13 +1424,12 @@
         PM.png" style="height:150px;">\r
         </div>\r
         \r
-        **Goal:** Make the text
-        bigger and blue \r
+        **Мета:** Зробити текст більшим та синім \r
         \r
-        **How:**  Give `"label1"` a `"font-size"` of `80`
-        and `"text-color"` of `"blue"`.\r
+        **Як:**  Надати для елементу`"label1"` у властивості `"font-size"` значення `80`
+        а у властивості `"text-color"` значення`"blue"`.\r
         \r
-        **Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
+        **Покажіть:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
       AppLab Intro 4 - Change Text_markdown_instruction: |-
         <div style="float:right">\r
         \t<img
@@ -1592,13 +1591,12 @@
         PM.png" style="height:150px;">\r
         </div>\r
         \r
-        **Goal:** Make the text
-        bigger and blue \r
+        **Мета:** Зробити текст більшим та синім \r
         \r
-        **How:**  Give `"label1"` a `"font-size"` of `80`
-        and `"text-color"` of `"blue"`.\r
+        **Як:**  Надати для елементу`"label1"` у властивості `"font-size"` значення `80`
+        а у властивості `"text-color"` значення`"blue"`.\r
         \r
-        **Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
+        **Покажіть:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>
       AppLab Intro 5 - Change Text_markdown_instruction: |-
         <div style="float:right">\r
         \t<img
@@ -1928,14 +1926,13 @@
         AM.png" style="height:150px"> \r
         </div>\r
         \r
-        **Goal:** Make the screen
-        green. \r
+        **Мета:** Зробити екран зеленим. \r
         \r
-        **How:** Drag in a `setProperty()` block. Use the dropdowns
-        to set the screen's `"background-color"` to `"green"`. Then hit "Run".\r
+        **Як:** Перетягнути блок `setProperty()`.Використати випадне меню
+        для встановлення властивості `"background-color"` у значення`"green"`. Тоді клацнути "Запустити".\r
         \r
-        **Stuck?
-        Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)
+        **Застрягли?
+        Клацніть тут:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)
       AppLab Intro 7 - Change Text 2_markdown_instruction: |-
         <div style="float:right">\r
         <img
@@ -1943,14 +1940,13 @@
         PM.png" style="height:200px;">\r
         </div>\r
         \r
-        **Goal:** Make the text
-        bigger and blue.\r
+        **Мета:** зробити текст більшим та синім.\r
         \r
-        **How:**  You'll need two lines of code. Give `"label1"`
-        a `"font-size"` of `80` and `"text-color"` of `"blue"`.\r
+        **Як:**  Потрібно два рядки коду. Надати елементу`"label1"`
+        властивість `"font-size"` значення`80` а властивість`"text-color"` значення`"blue"`.\r
         \r
-        **Stuck?
-        Click here:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+        **Застрягли?
+        Клацніть тут:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
       AppLab Intro 7 - Full Text_markdown_instruction: |-
         <div style="float:right">\r
         <img
@@ -1958,16 +1954,15 @@
         AM.png" style="height:200px">\r
         </div>\r
         \r
-        **Goal:** Make the buttons
-        `"red"` and `"blue"`. Then change the text in the large orange label.\r
+        **Мета:** зробити кнопки
+        `"red"` та`"blue"`. Тоді змінити текст у великому оранжевому написі.\r
         \r
-        **How:**
+        **Як:**
         \r
-        * Remember you can hover over elements to see their `"id"`.\r
-        * Set
-        the `"background-color"` of the buttons to `"red"` and `"blue"`.\r
+        * Якщо затримати мишку над елементом, можна дізнатись його `"id"`.\r
+        * Встановити властивість `"background-color"` кнопок у значення `"red"` та `"blue"`.\r
         *
-        Set the `"text"` property of the label to anything you want, like `"Welcome
+        Встановити властивість `"text"` напису на що завгодно, наприклад `"Welcome
         to my app!"`.\r
         \r
         **Stuck? Click here:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)
@@ -1975,25 +1970,22 @@
         <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif"
         style="float:right;height:200px">\r
         \r
-        **Goal:** The screen will start
-        out blue. Add code so it turns green when you click the "Green-ify" button.\r
+        **Мета:** Екран починає роботу синім. Додати код, щоб він змінив колір на зелений, коли клацнути кнопку "Green-ify".\r
         \r
-        **How:**
-        Add code inside the `onEvent()` that sets the screen's `"background-color"`
-        to `"green"`.\r
+        **Як:**
+        Додати код всередину `onEvent()` , встановлюючи властивість `"background-color"`
+        у значення`"green"`.\r
         \r
         **Stuck? Click here:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons_markdown_instruction: |-
         <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif"
         style="float:right;height:200px">\r
         \r
-        **Goal:** Help finish this flashlight
-        app. The "On" button already turns the screen white. Run the app and try
-        it out. Then write code so the "Off" button makes the screen black again.\r
+        **Мета:** Завершити програмку ліхтарика. Кнопка "On" вже вмикає екран з білою заливкою. Запустіть програму і випробуйте її. Тоді напишіть код, щоб кнопка "Off" вимикала екран (чорна заливка).\r
         \r
-        **How:**
-        Add code inside the empty `onEvent()` that sets the `"background-color"`
-        of the screen to `"black"` and `"text-color"` of the label to `"white"`.\r
+        **Як:**
+        Додати код всередину порожнього блоку `onEvent()` встановлюючи властивість `"background-color"`
+        екрану в значення `"black"` а властивість`"text-color"` напису в значення `"white"`.\r
         \r
         **Stuck?
         Click here:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
@@ -2001,31 +1993,22 @@
         <img src="https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
         AM.png" style="float:right;height:200px">\r
         \r
-        **Goal:** This sound board
-        is almost done! Run it to see how it works. Then add an image, text, and sound
-        to the last button.\r
+        **Мета:** Ця звукова панель майже готова! Запустіть, щоб побачити, як вона працює. Тоді додайте зображення, текст та звук до останньої кнопки.\r
         \r
-        **How:** \r
-        * Add an `onEvent()` to the program
-        and set the "id" to `"button4"`. Drag a `playSound()` into the `onEvent()`
-        and choose a sound from the library. \r
-        * Add a `setProperty()` (outside
-        your `onEvent()`) to change the button's `"image"` property. Choose an
-        image using the third dropdown.\r
-        * Add one more `setProperty()` to change
-        the button's `"text"`.\r
+        **Як:** \r
+        * Додати блок `onEvent()` до програми і встановити "id" у значення`"button4"`. Перетягнути блок `playSound()` у `onEvent()` та обрати звук з бібліотеки. \r
+        * Додати `setProperty()` (за межами `onEvent()`) для зміни властивості кнопки `"image"` . Обрати зображення, використавши третє випадне меню.\r
+        * Додати ще один блок `setProperty()` для зміни тексту кнопки `"text"`.\r
         \r
         **Stuck? Click here:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)
       AppLab Intro 7 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
-        **Goal:** Add a second
-        button to the screen that says "Right!" with an `"id"` of `"rightButton"`.\r
+        **Мета:** Додайте до екрану другу кнопку з написом "Right!" та ідентифікатором `"id"` рівним`"rightButton"`.\r
         \r
-        **How:**
-        In Design Mode drag in a new button. Position and resize it. Then set its
-        `"id"`, `"text"`, `"background color"`, and `"font size"`.\r
+        **Як:**
+        У режимі Дизайну перетягнути нову кнопку. ЇЇ треба розмістити та змінити розмір. Тоді задати властивості `"id"`, `"text"`, `"background color"`, та`"font size"`.\r
         \r
         **Stuck?
         Click here:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
@@ -2033,12 +2016,11 @@
         <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59
         PM.png" style="float:right;height:200px">\r
         \r
-        **Goal:** Create a new
-        screen called `"rightScreen"`. Add a text label that says "You went right!".\r
+        **Мета:** Створити новий екран з назвою`"rightScreen"`. Додати текстовий напис з вмістом "You went right!".\r
         \r
-        **How:**
-        In Design Mode drag in a new screen element. Change its `"id"` to `"rightScreen"`.
-        Then drag a label onto the screen and change the text to "You went right!".\r
+        **Як:**
+        У режимі Дизайну перетягнути новий елемент екрану. Змінити його `"id"` на`"rightScreen"`.
+        Тоді перетягнути напис на екран і змінити його текст на "You went right!".\r
         \r
         **Stuck?
         Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
@@ -2053,78 +2035,50 @@
         target="_blank"><img src="https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
         PM.png" style="float:right;height:200px"></a>\r
         \r
-        **Goal:** Build your
-        own app by extending this project. Then "Share" it with someone!\r
+        **Мета:** Створити власну програму, розширюючи створений проект. А тоді "поділитись" ним!\r
         \r
-        **How:**
-        Decide what type of app you're interested in building. Then go build it by
-        adding more screens, buttons, text, sound, and user interactions to your app.
-        There's a few more blocks in the toolbox that you can experiment with as
-        well. Once you're done click "Share" to send it to yourself or a friend!
+        **Як:**
+        Визначити, який тип програми Ви хочете створити. Виконати проект, додаючи екрани, кнопки, тексти, звуки та взаємодії. Є ще інші блоки, з якими можна поекспериментувати. По завершенню клацнути "Поділитись", щоб надіслати проект собі або другові!
         \r
         \r
-        <details><summary><b>Choose Your Own Adventure Ideas</b></summary>\r
+        <details><summary><b>Обрати власні ідеї пригод</b></summary>\r
         \r
-        Try
-        out this <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
-        target="_blank">Example Choose Your Own Adventure App</a> so you can see
-        how one works. Here's some ideas to help you come up with your own story.\r
+        Спробуйте цей <a href="https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg"
+        target="_blank">приклад програми вибору ідей пригод</a>, щоб подивитись, як вона працює. Ось кілька ідей, які можуть допомогти визначитись з власною історією.\r
         \r
-        <li>Make
-        an adventure about your favorite character, real or fictional.</li>\r
-        <li>Make
-        an adventure that tells the story of your favorite book, movie, or your own
-        creation.</li>\r
-        <li>Make an adventure that has a lot of unexpected twists
-        or has a difficult moral choice.</li>\r
+        <li>Створити пригоду улюбленого героя, справжнього чи уявного.</li>\r
+        <li>Створити пригоду, яка відтворює сюжет улюбленої книги, фільму чи свою уявну.</li>\r
+        <li>Створити пригоду, яка матиме багато несподіваних поворотів або складні моральні вибори.</li>\r
         <br>\r
         </details>\r
         \r
-        <details><summary><b>Greeting
-        Card Ideas</b></summary>\r
+        <details><summary><b>Ідеї вітальних листівок</b></summary>\r
         \r
-        Try out this <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
-        target="_blank">Example Greeting Card App</a> so you can see how one works.
-        Here's some ideas to help you come up with your own card.\r
+        Спробуйте цей <a href="https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q"
+        target="_blank">приклад програми вітальної листівки</a>, щоб подивитись, як вона працює. Ось кілька ідей, які можуть допомогти визначитись з власною листівкою.\r
         \r
-        <li>Think
-        of a birthday, holiday, or other special day that's coming up. Make a card
-        to celebrate!</li>\r
-        <li>Create a thank you card for someone you appreciate.</li>\r
-        <li>Create
-        an invitation for an upcoming event.</li>\r
+        <li>Подумайте, чи не наближається день народження, свято чи інший особливий день. Створіть листівку, щоб відсвяткувати!</li>\r
+        <li>Створіть подячну листівку для дорогої людини.</li>\r
+        <li>Створіть запрошення на подію, що наближається.</li>\r
         <br>\r
         </details>\r
         \r
-        <details><summary><b>Personality
-        Quiz Ideas</b></summary>\r
+        <details><summary><b>Ідеї психологічних тестів</b></summary>\r
         \r
-        Try out this <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
-        target="_blank">Example Personality Quiz App</a> so you can see how one
-        works. Here's some ideas to help you come up with your own quiz.\r
+        Спробуйте цей <a href="https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ"
+        target="_blank">приклад програми психологічного тестування</a>, щоб подивитись, як вона працює. Ось кілька ідей, які можуть допомогти визначитись з власним тестом.\r
         \r
-        <li>Make
-        a quiz that suggests something a person might like, for example a meal, a
-        team, a book, or a place.</li>\r
-        <li>Make an quiz that "predicts the future"
-        based on their answers.</li>\r
-        <li>Make a quiz to help people make a hard
-        decision.</li>\r
+        <li>Створіть тест, який пропонує людині страву, команду, книгу чи місце.</li>\r
+        <li>Створіть тест, який "передбачає майбутнє" на основі відповідей.</li>\r
+        <li>Створіть тест, який допоможе людям прийняти складне рішення.</li>\r
         \r
         </details>
-      AppLab Intro 7 - thisOrThatSetScreen_markdown_instruction: |-
-        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop
-        (1).gif" style="float:right;height:200px">\r
-        \r
-        **Goal:** The screen
-        switches to `"rightScreen"` when the user clicks the `"rightButton"`.\r
-        \r
-        **How:**
-        In Code Mode add a new `onEvent()` to your program for your "Right!" button.
-        Add a `setScreen()` block inside of it that switches screens to `"rightScreen"`.\r
-        \r
-        **Stuck?
-        Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      AppLab Intro 7 - thisOrThatSetScreen_markdown_instruction: "<img src=\"https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop\n(1).gif\"
+        style=\"float:right;height:200px\">\\r\n\\r\n**Мета:** Екран перемикається
+        на`\"rightScreen\"` коли користувач клацає `\"rightButton\"`.\\r\n\\r\n**Як:**\nУ
+        режимі Коду додати новий блок `onEvent()`для кнопки \"Right!\" \nВсередину
+        додати блок `setScreen()` де відбуватиметься перемикання на `\"rightScreen\"`.\\r\n\\r\n**Stuck?\nClick
+        here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)"
       AppLab_test02_markdown_instruction: |-
         # This is the title \r
         \r
@@ -25186,11 +25140,11 @@
         # Grab that Bug!\r
         \r
         This is
-        an example of a tug o' war game that you'll build by the end of this lesson.
-        To play, pair up with another student. The student on the left will the click
-        the left button on the Circuit Playground as fast as they can, while the student
-        on the right clicks the right button. Whoever can get the bug over to their
-        side first wins.
+        an example of a tug o' war game that could be built in this lesson. To play,
+        pair up with another student. The student on the left will the click the left
+        button on the Circuit Playground as fast as they can, while the student on
+        the right clicks the right button. Whoever can get the bug over to their side
+        first wins.
       CSD U6 tugowar design 1.5_markdown_instruction: |-
         # Game Screen Design\r
         \r
@@ -43748,6 +43702,10 @@
         **Функція** під назвою "побудувати міст" міститься в робочій області.  Вона вже має весь код, який знадобиться для переходу через річку! \r
          \r
         Двічі прикріпіть маленький зелений блок у робочій області, щоб виправити шлях і провести гравця {currentPlayerName} до факела з редстоуну [redstone_torch].
+      GLJ_Crawl_Exemplar_1_markdown_instruction: |-
+        **Free Play**: Try using what you've
+        learned to make something new. Make sure to explore some of the new blocks
+        in the toolbox.
       GLJr_Behavior_7_markdown_instruction: |-
         Check out these two new blocks - the
         green "When dog is touching cat" block will run everything attached to it
@@ -73140,20 +73098,21 @@
       courseA_forVideoTest_artist_markdown_instruction: |-
         Repeat loops work for Artist,
         too!
+      courseA_harvester_forVideo_markdown_instruction: |-
+        Can you pick all the corn
+        using only **one** move block?
       courseA_harvester_loops1_markdown_instruction: |-
-        *"Look at all this corn! A-maize-ing!"*\r
-        \r
-        Help
-        the farmer pick all the corn!
+        Help the harvester pick all
+        the corn!
       courseA_harvester_loops10_markdown_instruction: |-
         Help the harvester pick all
-        three ears of corn!
+        five ears of corn!
       courseA_harvester_loops11_markdown_instruction: 'Try one more on your own!
 
 '
       courseA_harvester_loops2_markdown_instruction: |-
-        The farmer needs to pick all
-        the corn! Do you see a pattern?
+        The harvester needs to pick
+        all the corn! Do you see a pattern?
       courseA_harvester_loops3_markdown_instruction: |-
         Can you pick all the corn using
         only **one** move block?
@@ -73162,11 +73121,18 @@
         wrong!"*\r
         \r
         Can you help the harvester find the bug in her code?
-      courseA_harvester_loops5_markdown_instruction: "More bugs! Help the harvester\nfix
-        her code. "
+      courseA_harvester_loops5_markdown_instruction: |-
+        Try it yourself! Can you pick
+        the corn at the end too?
+      courseA_harvester_loops5a_markdown_instruction: |-
+        Look at all this corn? Can
+        you pick it all by yourself?
+      courseA_harvester_loops5b_markdown_instruction: |-
+        Can you change your code to
+        make the harvester pick all the corn?
       courseA_harvester_loops6_markdown_instruction: |-
         You will need **one** <xml><block
-        type="maze_moveSouth"></block></xml> block and **one** <xml><block type="maze_moveWest"></block></xml>
+        type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml>
         block to finish this puzzle!
       courseA_harvester_loops7_markdown_instruction: 'Try it on your own! '
       courseA_harvester_loops8_markdown_instruction: |-
@@ -73181,23 +73147,25 @@
       courseA_harvester_loops9_markdown_instruction: |-
         Can you figure out how to pick
         *all* this corn?
-      courseA_harvester_seq1_markdown_instruction: Help the farmer pick one corn!
+      courseA_harvester_seq1_markdown_instruction: |-
+        Help the harvester pick the piece
+        of corn!
       courseA_harvester_seq10_markdown_instruction: |-
-        The farmer needs to pick all
-        the corn! Do you see a pattern?
+        The harvester needs to pick
+        all the corn! Do you see a pattern?
       courseA_harvester_seq11_markdown_instruction: |-
         Try it by yourself! Pick all
         the corn.
       courseA_harvester_seq12_markdown_instruction: |-
         *Thank you for helping me!*
+        \r
+        \r
         Pick all the corn.
       courseA_harvester_seq13_markdown_instruction: |-
         Help the harvester pick **one**
         corn!
-      courseA_harvester_seq2_markdown_instruction: |-
-        Use <xml><block type="maze_moveWest"/></xml>
-        **three** times to get the harvester to the corn! Don't forget to use <xml><block
-        type="harvester_corn"/></xml> to pick the corn!
+      courseA_harvester_seq2_markdown_instruction: "Use <xml><block type=\"maze_moveWest\"/></xml>\n**three**
+        times to get the harvester to the corn! "
       courseA_harvester_seq3_markdown_instruction: |-
         Use <xml><block type="maze_moveNorth"/></xml>
         **three** times to get the harvester to the corn! Don't forget to pick the
@@ -73218,6 +73186,39 @@
       courseA_harvester_seq9_markdown_instruction: |-
         Add two blocks to finish this
         puzzle!
+      courseA_maze_ramp2_2018_markdown_instruction: |-
+        Attach both <xml><block type="maze_moveEast"/></xml>
+        blocks to <xml><block type="when_run"/></xml> to finish your code, then
+        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp2a_2018_markdown_instruction: |-
+        Attach both <xml><block type="maze_moveEast"/></xml>
+        blocks to <xml><block type="when_run"/></xml> to finish your code, then
+        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3_2018_markdown_instruction: |-
+        *"This pig is ruffling my feathers."*\r
+        \r
+        There
+        is one extra block that is going to cause the bird to crash.  \r
+        Throw it
+        away by removing it from the other blocks and dragging it back to the toolbox.
+      courseA_maze_ramp3a_2018_markdown_instruction: |-
+        Grab a <xml><block type="maze_moveNorth"/></xml>
+        from the toolbox and add it to the bottom of the other blocks to finish this
+        code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp4_2018_markdown_instruction: |-
+        *"Trace the path and lead me
+        to the silly pig."* \r
+        \r
+        Avoid TNT or feathers will fly!
+      courseA_maze_ramp4a_2018_markdown_instruction: |-
+        Can you figure out which block
+        you need to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me
+        to the pig!"*\r
+        \r
+        Avoid the TNT.
+      courseA_maze_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseA_maze_seq1_markdown_instruction: |-
         *"Play with these blocks and try
         to get me to the bad pig!"*
@@ -73227,20 +73228,16 @@
         \r
         ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
       courseA_maze_seq10_2018_markdown_instruction: |-
-        **Challenge:** Go around the
-        TNT to get the bird to the pig!\r
-        \r
-        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+        **Challenge:** Avoid the TNT
+        to get the bird to the pig!
       courseA_maze_seq11_markdown_instruction: |-
         Time for a shorter puzzle!  Move
         one way, then another to get the bird to the pig.\r
         \r
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
-      courseA_maze_seq11_2018_markdown_instruction: |-
+      courseA_maze_seq11_2018_markdown_instruction: |
         Time for a shorter puzzle!  Move
         one way, then another to get the bird to the pig.\r
-        \r
-        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq12_markdown_instruction: |-
         Get that pig!\r
         \r
@@ -73296,6 +73293,11 @@
         beginning.\r
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5a_2018_markdown_instruction: |-
+        *"Here piggy, piggy!"*\r
+        \r
+        What
+        can you add to the end of this code to get the bird to the pig?
       courseA_maze_seq6_markdown_instruction: |-
         Move one way, then another to get
         the bird to the pig!\r
@@ -73303,9 +73305,7 @@
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018_markdown_instruction: |-
         Move one way, then another to
-        get the bird to the pig!\r
-        \r
-        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+        get the bird to the pig!
       courseA_maze_seq7_markdown_instruction: |-
         Figure out what is missing and then
         add blocks to get the bird to the pig!\r
@@ -73323,9 +73323,7 @@
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018_markdown_instruction: |-
         Solve this level and get the
-        bird to the pig!\r
-        \r
-        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+        bird to the pig!
       courseA_maze_seq9_markdown_instruction: |-
         **Challenge:** Debug this level by
         adding blocks to get the bird to the pig!\r
@@ -73547,16 +73545,48 @@
       courseB_collector_prog3_markdown_instruction: |-
         How can Laurel collect all five
         piles of gold using only one `E -->` block?
+      courseB_iceage_loops1_markdown_instruction: |-
+        Help Scrat across the slippery
+        ice to get to the acorn!
+      courseB_iceage_loops10_markdown_instruction: |-
+        Help Scrat get all the way over
+        to the acorn!
+      courseB_iceage_loops11_markdown_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops12_markdown_instruction: |-
+        Get to the acorn any way you
+        can!
+      courseB_iceage_loops2_markdown_instruction: |-
+        Use both <xml><block type="maze_moveWest"/></xml>
+        and <xml><block type="maze_moveSouth"/></xml> blocks to get to the acorn!
+      courseB_iceage_loops3_markdown_instruction: |-
+        Can you get to the acorn with
+        just one <xml><block type="maze_moveWest"/></xml> block? Try using a loop!
+      courseB_iceage_loops4_markdown_instruction: |-
+        Add one more block to get Scrat
+        all the way to the acorn!
+      courseB_iceage_loops5_markdown_instruction: |-
+        Can you add one more loop to get
+        to the acorn?
+      courseB_iceage_loops6_markdown_instruction: |-
+        Can you add a loop to get to the
+        acorn?
+      courseB_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn!
+
+'
+      courseB_iceage_loops8_markdown_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_markdown_instruction: |-
+        The acorn is so far away! Can
+        you use loops to help Scrat get there?
       courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq3_2018_markdown_instruction: |-
         *"Fix the code to get me to
-        the pig!"*
+        the acorn!"*
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
       courseB_maze_seq9_2018_markdown_instruction: |-
         **Challenge:** Move around the
-        TNT to get the bird to the pig.
+        broken ice to get Scrat to the acorn.
       courseB_maze_seq9_challenge1_markdown_instruction: |-
         *Where's that pig hiding
         now?*
@@ -73732,6 +73762,12 @@
       courseB_starWars_prog9_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"You can do it!"_
+      courseC_PlayLab_events7_markdown_instruction: |-
+        The `repeat forever` block allows
+        you to run code over and over forever.  Use this block to move Chomp the Dino
+        (actor 2) up and down by 400 pixels forever.\r
+        \r
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8_markdown_instruction: |-
         Can you have Waddles (actor
         1) say "Ouch!" and play a "hit" sound if he runs into Chomp? \r
@@ -73757,16 +73793,19 @@
         loop starts.
       courseC_artist_loops1a_markdown_instruction: |-
         **Free Play:** Let's build something
-        bigger, one step at a time!  \r
+        bigger, one step at a time!  You can make anything you want, but we're going
+        to show you how to make something like this!\r
         \r
-        Use the `jump to 200 over 200 down` to
-        get the artist to the center of the play area, then use the `draw a sticker`
-        block to make a bird appear.  \r
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\r
+        \r
+        Use
+        the `jump to 200 over 200 down` to get the artist to the center of the play
+        area, then use the `draw a sticker` block to make a bird appear.  \r
         \r
         ---\r
         \r
-        Press "Finish" when you
-        are happy with what you've made.
+        Press
+        "Finish" when you are happy with what you've made.
       courseC_artist_loops1a_2018_markdown_instruction: |-
         **Free Play:** Let's build
         something bigger, one step at a time!  \r
@@ -73809,10 +73848,10 @@
         \r
         ![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
-        Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat. In this puzzle,
-        make sure you have `jump to 200 over 200 down` inside of your loop, so you
-        stay in the center!\r
+        Add a block to your code so that
+        the artist jumps forward by 75 pixels between stamping the bird and the bat.
+        In this puzzle, make sure you have `jump to 200 over 200 down` inside of your
+        loop, so you stay in the center!\r
         ___\r
         \r
         ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -78697,32 +78736,40 @@
         setup to tell your own joke!
       courseF_playlab_variables_challenge2_markdown_instruction: |-
         Now for a game
-        of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly
-        10 points to win!\r
-        But be careful, when Cat and Penguin tag each other,
-        they take points away.\r
+        of tag! Tag Cat (actor 2) to get 2 points. Tag Penguin (actor 3) to get 3
+        points.  Get exactly 10 points to win!  \r
+         \r
+        But be careful, when Cat
+        and Penguin tag each other, they take points away.\r
         \r
-        Add the blocks necessary to make this game work
-        the way it's been explained.\r
-        - How will you get Dog to move in all directions
-        using the arrow keys?\r
-        - How will you add points when Dog tags Cat or Penguin?\r
+        ---\r
+        \r
+        Add the
+        blocks necessary to make this game work the way it's been explained.\r
         -
-        How will you subtract points when Cat and Penguin touch?
+        How will you get Dog to move in all directions using the arrow keys?\r
+        -
+        How will you add points when Dog tags Cat or Penguin?\r
+        - How will you subtract
+        points when Cat and Penguin touch?
       courseF_playlab_variables_challenge2_2018_markdown_instruction: |-
         Now for a
-        game of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly
-        10 points to win!\r
-        But be careful, when Cat and Penguin tag each other,
-        they take points away.\r
+        game of tag! Tag Cat (actor 2) to get 2 points. Tag Penguin (actor 3) to get
+        3 points.  Get exactly 10 points to win!  \r
+         \r
+        But be careful, when Cat
+        and Penguin tag each other, they take points away.\r
         \r
-        Add the blocks necessary to make this game work
-        the way it's been explained.\r
-        - How will you get Dog to move in all directions
-        using the arrow keys?\r
-        - How will you add points when Dog tags Cat or Penguin?\r
+        ---\r
+        \r
+        Add the
+        blocks necessary to make this game work the way it's been explained.\r
         -
-        How will you subtract points when Cat and Penguin touch?
+        How will you get Dog to move in all directions using the arrow keys?\r
+        -
+        How will you add points when Dog tags Cat or Penguin?\r
+        - How will you subtract
+        points when Cat and Penguin touch?
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -78764,6 +78811,10 @@
         "arrrg" should be "a" \r
         - "ye" should be "e"\r
         \r
+      coursea_maze_ramp1_2018_markdown_instruction: |-
+        To get the bird to the pig,
+        snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
+        the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3_markdown_instruction: |-
         *"This pig is ruffling my feathers."*\r
         \r
@@ -81548,10 +81599,41 @@
         | (Your answer)   | (Your answer)               |\r
         \r
         \r
+      cspu3_assess1_filltable_exam_prep_markdown_instruction: |
+        Use Top-Down Design
+        strategy to fill in the table below. The first line is given to you. You may
+        use as many or as few rows in the table as you see fit.\r
+        \r
+        _NOTE: Use
+        a new line for each entry to the table. Write each line in the format of "Function
+        Name : Description"_\r
+        \r
+        **Top-Down Design Strategy:**\r
+        \r
+        * Look at
+        the big picture…\r
+        * Identify a sub-task…\r
+        * Break down that sub-task into
+        smaller sub-task(s)...\r
+        * Keep going until you’re down to the commands you
+        already have access to.\r
+        \r
+        | Function Name   | Description / Justification
+        |\r
+        |-----------------|-----------------------------|\r
+        | drawSnowflake()
+        | Draw a 6 pointed snowflake  |\r
+        | (Your answer)   | (Your answer)               |\r
+        \r
+        \r
       cspu3_assess1_freeresponse_markdown_instruction: |-
         Explain how abstraction allows
         for the creation of increasingly complex systems.  Reference top-down design
         strategy in your response.
+      cspu3_assess1_freeresponse_exam_prep_markdown_instruction: |-
+        Explain how abstraction
+        allows for the creation of increasingly complex systems.  Reference top-down
+        design strategy in your response.
       cspu5_assess1_shortresponse_markdown_instruction: |-
         **Short Response:** \r
         \r
@@ -81561,6 +81643,15 @@
         replies, “That doesn’t make any sense at all!”.\r
         \tExplain what Kaleb may
         have meant by that statement.
+      cspu5_assess1_shortresponse_exam_prep_markdown_instruction: |-
+        **Short Response:**
+        \r
+        \r
+        Two students, Kaleb and Hunter, are arguing in class about an App
+        Lab project. Kaleb states, “Huh, a button and an image are basically the same
+        thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r
+        \tExplain
+        what Kaleb may have meant by that statement.
       cspu5_assess2_flowChart_markdown_instruction: |-
         The human question below has
         a yes/no answer. Create a flowchart that shows the logical progression of
@@ -81607,6 +81698,18 @@
             DISPLAY (“Enter the hour of day (0-23)”)\r
             hour
         <- INPUT ()
+      cspu5_assess2_pseudocode2_exam_prep_markdown_instruction: |-
+        A _pseudocode_ program
+        is started below that asks the user for input and stores the value in a variable.  Continue
+        writing pseudocode to accomplish this task: \r
+        \r
+        If the hour is within
+        the school day (8 to 15) then display  “Nice to see you!”, Otherwise, display
+        “It’s time to go home!\r
+        \r
+            DISPLAY (“Enter the hour of day (0-23)”)\r
+            hour
+        <- INPUT ()
       cspu5_assess2_shortAnswer_markdown_instruction: |-
         **Short answer:** When might
         a programmer create a global variable instead of a local variable?
@@ -81621,6 +81724,9 @@
         digital assistant could “intelligently” answer easily, and another that it
         could not. Explain what makes the first easy and the second difficult for
         a digital assistant. (Consider the code used to develop your digital assistant.)
+      cspu5_assess2_shortAnswer_exam_prep_markdown_instruction: |-
+        **Short answer:**
+        When might a programmer create a global variable instead of a local variable?
       cspu5_assess2_trueFalse_markdown_instruction: |-
         For each expression below, circle
         whether it evaluates to true or false. The variable temperature is initialized
@@ -81647,11 +81753,50 @@
         a scenario that could be modeled by a computer and explain one benefit and
         one drawback of doing the simulation on a computer instead of real world.
         \r
+      cspu5_assess3_shortAnswer_exam_prep_markdown_instruction: |
+        **Short Answer:**  Computer
+        models and simulations are used to formulate, refine, and test hypotheses.  Describe
+        a scenario that could be modeled by a computer and explain one benefit and
+        one drawback of doing the simulation on a computer instead of real world.
+        \r
       cspu5_assess4_challenge_markdown_instruction: |-
         **Challenge Question:** Imagine
         a list that represents the height in feet of equidistant points along a mountainous
         path.  Here is an example of the data with a diagram that reflects the data.
         For example: \r
+        \r
+        ![](https://images.code.org/8046cbdb63d7e7d68eb133c58362b099-image-1477862090668.png)\r
+        \r
+        A
+        programmer wants to write a procedure that calculates the net elevation -  total
+        number of feet a traveler goes up and down. For example, looking at the first
+        3 segments of travel, the net elevation is 7 feet (up 3, up 1, down 3).  \r
+        \r
+        Write
+        procedure (in either JavaScript or pseudocode) called processPath(data) that:\r
+        \r
+        *
+        Accepts a list of elevation data as a parameter\r
+        * For every value in the
+        list\r
+        \t* Compute the absolute difference between that value and the value
+        next to it on the path\r
+        \t* Add the difference to a running total\r
+        * Return
+        the total elevation traveled\r
+        \r
+        In writing your procedure you should assume
+        that you can call a function called _absDiff(a,b)_.\r
+        \r
+        ![](https://images.code.org/0a7b91a830319d5d690ddf2efa264395-image-1477862205239.png)\r
+        \r
+        Write
+        the full procedure below.
+      cspu5_assess4_challenge_exam_prep_markdown_instruction: |-
+        **Challenge Question:**
+        Imagine a list that represents the height in feet of equidistant points along
+        a mountainous path.  Here is an example of the data with a diagram that reflects
+        the data. For example: \r
         \r
         ![](https://images.code.org/8046cbdb63d7e7d68eb133c58362b099-image-1477862090668.png)\r
         \r
@@ -81719,12 +81864,58 @@
         ("A")\r
                 }\r
             }
+      cspu5_assess4_scoreToGrade_exam_prep_markdown_instruction: |-
+        **Short Answer:**
+        Jimmy wrote the procedure scoreToGrade which accepts as a parameter score
+        - a quiz score in the range 0-100.  The procedure is supposed to return a
+        letter grade. He feels confident his program is correct because he has tested
+        it using the scores 3, 29, and 67. Sally believes the program is incorrect
+        because she tested the values 73 and 86.  The code is syntactically correct,
+        and the programs runs without generating an error, but the results are sometimes
+        wrong.  Why does the procedure return the correct values for Jimmy’s tests
+        but not Sally’s? \r
+        \r
+            PROCEDURE scoreToGrade (percent)\r
+            {\r
+                IF
+        (percent < 60)\r
+                {\r
+                    RETURN ("F")\r
+                }\r
+                ELSE
+        IF (percent >= 60)\r
+                {\r
+                \tRETURN ("D")\r
+                }\r
+                ELSE
+        IF (percent >= 70)\r
+                {\r
+                    RETURN ("C")\r
+                }\r
+                ELSE
+        IF (percent >= 80)\r
+                {\r
+                    RETURN ("B")\r
+                }\r
+                ELSE\r
+                {\r
+                \tRETURN
+        ("A")\r
+                }\r
+            }
       cspu5_assess4_shortAnswerShopping_markdown_instruction: |
         **Short Answer:**
         Cecelia would like to write an app to help manage a trip to the grocery store.  The
         app will maintain a shopping list (a list of words) of all the items to buy.  Describe
         how Cecelia might use a second list in the app.  What else might be tracked?
         Describe how the list would be used and updated in the app.\r
+      cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: |
+        **Short
+        Answer:** Cecelia would like to write an app to help manage a trip to the
+        grocery store.  The app will maintain a shopping list (a list of words) of
+        all the items to buy.  Describe how Cecelia might use a second list in the
+        app.  What else might be tracked? Describe how the list would be used and
+        updated in the app.\r
       expresslink_markdown_instruction: |-
         <a href="https://studio.code.org/s/express"><img
         src="https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01

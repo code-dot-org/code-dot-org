@@ -27,13 +27,13 @@
   twentyhours_text: "Première Heure de Code complétée&#160;? Découvrez les concepts de l’informatique et de la programmation avec ce cours d’approfondissement."
   og_title: 'Chaque enfant mérite une opportunité'
   og_title_soon: "L'Heure de Code arrive"
-  og_title_here: "The Hour of Code is here!"
+  og_title_here: "L'Heure du Code est ici!"
   og_description: "Chaque élève de chaque école mérite une opportunité d'étudier l'informatique."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "L'heure du code arrive"
   csedweek_og_description: "L’heure de Code est un mouvement mondial qui touche des dizaines de millions d’étudiants de tous âges dans plus de 180 pays et plus de 45 langues."
-  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "L'Heure de Code arrive du3 au 9 décembre 2018. L'informatique est un apprentissage indispensable pour chaque élève."
+  csedweek_og_description_here: "L'Heure de Code a lieu ici. L'informatique est un apprentissage indispensable pour chaque élève."
   hoc2014_heading: "Rejoignez l'<a href=\"http://hourofcode.com\">Heure de Code</a><br/>Du 8 au 14 décembre 2014<br/>"
   hoc2014_students: "Élèves"
   hoc2014_try: "Participez"
@@ -236,7 +236,7 @@
   lines_of_code: "PLUS DE <b># LIGNES DE CODE</b> ÉCRITES À CE JOUR."
   lines_of_code_alt: "<b>#</b> LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
   who_has_done_hoc: 'Qui a fait l''Heure de Code #HourOfCode&#160;? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Qui a fini #HeureDeCode? (Merci %{donor_twitter} de supporter @codeorg)'
   hoc_leaderboards: "Les classements de l'Heure de Code"
   students_and_lines: "%{students} élèves ont fait l’Heure de Code et ont écrit %{lines} lignes de code."
   start_hoc: "Commencer l'Heure de Code maintenant"
@@ -423,12 +423,12 @@
   mc_gradelevel: "6 ans et plus"
   mc_platformtext: "Navigateurs récents, smartphones, tablettes"
   mc_specs: "Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft : Voyage du héros'
   minecraft_designer: "Concepteur de Minecraft"
   minecraft_adventurer: "Aventurier de Minecraft"
   minecraft_tutorials: "Minecraft heure de Code tutoriels"
   minecraft_specs: "Beaucoup de langues | Les navigateurs modernes et comprimés | Grades 2 +"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité! Le voyage dans Minecraft avec du code."
   minecraft_agent_button: "Commencer"
   minecraft_designer_description: "Programmez des animaux et d'autres créatures Minecraft dans votre propre version de Minecraft."
   minecraft_designer_button: "Commencer"
@@ -439,17 +439,17 @@
   minecraft_subtitle: "Une Heure de Code Minecraft"
   minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_host_event: "Accueillir un évènement Heure de Code Minecraft"
+  minecraft_teach_resources: "Ressources et plan de la leçon pour les enseignants."
+  minecraft_leader_guide: "Téléchargez les ressources pour vous aider à planifier et mener un évènement."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
   minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
   minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
+  minecraft_future: "Aidez tous les jeunes à se préparer pour le futur"
   minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
+  minecraft_og_designer: "Minecraft est de retour pour une nouvelle activité pour l'Heure de Code. Programmez des animaux et d'autres créatures dans votre version personnelle de Minecraft."
+  minecraft_og_agent: "Minecraft est de retour dans l'Heure de Code, et vous êtes le héros! Ecrivez le code pour voyagez à travers les biomes de Minecraft."
   sports_page_title: "Heure du Code Sports"
   sports_og_title: "Heure du Code tutoriels Sports"
   sports_og_description: "Choisir entre jouer au basket ou mélanger et combiner les autres sports."
@@ -486,7 +486,7 @@
   video_title_obama: "Le président Obama à propos de l'informatique"
   video_title_hoc_is_here: "L'Heure du Code est là - Tout le monde peut apprendre"
   video_title_anybody_can_learn: "Tout le monde peut apprendre"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
+  video_title_steph_curry: "Heure de Code avec Steph Curry"
   video_title_draymond_green: "Heure du Code avec Draymond Green"
   video_title_russell_okung: "Heure de Code avec Russell Okung"
   video_title_real_madrid: "Heure de Code avec le Real Madrid"
@@ -566,7 +566,7 @@
   volunteer_engineer_submission_type_task_remote: "J'aimerais que vous échangiez avec ma classe par Skype pour donner quelques mots d’encouragement aux enfants."
   volunteer_engineer_submission_type_task_mentor: "Je recherche un conseiller pour m'aider à me préparer à coder avec mes élèves."
   petition_age: "Age"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Oups! Il y a une forte affluence sur l'Heure de Code. Nous ne pouvons rien sauvegarder cette semaine, mais les sauvegardes réalisées avant cette semaine sont toujours valables."
   dashboard_announce_learn_more_button: "Pour en savoir plus"
   dashboard_landing_title: "Page d'accueil de l'enseignant"
   dashboard_landing_welcome: "Bienvenue dans la nouvelle version améliorée du tableau de bord des enseignants."
@@ -737,7 +737,7 @@
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: "Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons en mode \"déconnecté\" </a> dans votre classe."
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Outils: '
   dashboard_curriculum: "Programme"
   dashboard_curriculum_overview: "Aperçu du programme pour les élèves de primaire"
   dashboard_overview: "Aperçu"
@@ -1396,7 +1396,7 @@
   playlab_shortcode: "lab"
   artist_shortcode: "art"
   header_home: "Accueil"
-  header_my_dashboard: "My Dashboard"
+  header_my_dashboard: "Mon tableau de bord"
   header_courses: "Cours"
   header_course_catalog: "Catalogue des cours"
   header_project_gallery: "Projets"
@@ -1466,5 +1466,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: App Lab Intro
