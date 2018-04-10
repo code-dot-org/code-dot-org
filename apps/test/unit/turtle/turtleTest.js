@@ -176,28 +176,44 @@ describe('Artist', () => {
   });
 
   describe('pointTo', () => {
-    it('can point to 45 degrees', () => {
-      let angle = 45;
-      let blockId = "block_id_4";
-      let artist = new Artist();
-
+    let artist;
+    beforeEach(() => {
+      artist = new Artist();
       artist.visualization = new Artist.Visualization();
-      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
-      artist.step('PT', [angle, blockId]);
-
-      expect(pointToSpy).to.be.have.been.calledWith(angle);
     });
 
     it('can point to a specific direction', () => {
-      const angle = 45;
-      const blockId = "block_id_8";
-      let artist = new Artist();
+      const absoluteDirection = [0, 30, 45, 60, 180, 270];
+      const blockId = "block_id_4";
+      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
 
-      artist.visualization = new Artist.Visualization();
-      artist.visualization.angle = 45;
+      absoluteDirection.forEach(angle => {
+        artist.step('PT', [angle, blockId]);
+        expect(pointToSpy).to.be.have.been.calledWith(angle);
+      });
+      pointToSpy.restore();
+    });
+
+    it('can point to a 50 degrees', () => {
+      let angle = 50;
+      let blockId = "block_id_5";
+
+      artist.visualization.angle = 50;
       artist.step('PT', [angle, blockId]);
 
       expect(artist.visualization.angle).to.equal(angle);
+    });
+
+    it('should call setHeading', () => {
+      let angle = 60;
+      let blockId = "block_id_8";
+
+      const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
+      artist.step('PT', [angle, blockId]);
+
+      expect(setHeadingStub).to.be.have.been.calledOnce;
+
+      setHeadingStub.restore();
     });
   });
 
