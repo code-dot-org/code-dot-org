@@ -2,6 +2,7 @@
 %table
   %thead
     %tr
+      %th Thumbnail
       %th Title
       %th Key
       %th YouTube code
@@ -10,6 +11,8 @@
   %tbody
     - @videos.each do |video|
       %tr
+        %td
+          %img{src: video.thumbnail_path}
         %td= data_t('video.name', video.key)
         %td= video.key
         %td= video.youtube_code

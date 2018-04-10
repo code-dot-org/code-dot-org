@@ -7,20 +7,28 @@ nav: regional_partner_playbook_nav
 
 ## Quick Links
 
-- **[Ordering Academic Year Supplies](#academic)**<br/>
+- **[2018-19 Supplies Plan](#plan)**<br/>
+- **[Mimeo Marketplaces](#mimeo)**<br/>
+- **[Ordering '17-18 Academic Year Supplies](#academic)**<br/>
 - **[Printing Certificates](#certs)**<br/>
-- **[Ordering Administrator & Counselor PD Supplies](#ac)**<br/>
+- **[Ordering '17-18 Administrator & Counselor PD Supplies](#ac)**<br/>
 
+<a id="plan"></a>
+## K-12 2018-19 Supplies Plan
 
+Code.org will be covering the cost of all initial supplies needed for all K-12 programs. We will do this by shipping materials directly, providing a lump sum for partners to purchase supplies, or by covering the cost of items ordered through the Mimeo Marketplace. The [2018-19 K-12 Supplies Plan](https://docs.google.com/document/d/1L5EdftQmtZls57P5OtwmNGl6wPKrb8VbFE6xP0vdWZY/edit#heading=h.80sk5rtogqp6) outlines the details, including key differences in how supplies will be handled in the K-5 program and the 6-12 program.
 
+<a id="mimeo"></a>
 ## Accessing Mimeo
 
-[Click here to access the Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop)
+[Click here to access the K-5 CS Fundamentals Marketplace](https://marketplace.mimeo.com/codeorg)
+
+[Click here to access the 6-12 Workshop Supplies Marketplace](https://marketplace.mimeo.com/codeorgworkshop)
 
 Forget your login information or don't have an account? Email partner@code.org.
 
 <a id="academic"></a>
-## Ordering Academic Year Supplies
+## Ordering 2017-18 Academic Year Supplies
 Academic year supplies should be shipped/ordered by Program Managers as follows *(Remember: all supply orders must be placed 21 days prior to your workshop)*:
 
 Regional Managers were asked to order 1 Workshops Supplies Kit for each course cohort (either CS Principles or CS Discoveries) in the fall of 2017 through the [Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop).
@@ -50,7 +58,7 @@ Teachers are able to download and print their own workshop certificates through 
 
 
 <a id="ac"></a>
-## Ordering Administrator & Counselor PD Supplies
+## Ordering 2017-18 Administrator & Counselor PD Supplies
 Order Administrator & Counselor Supplies from the [Mimeo Marketplace](https://marketplace.mimeo.com/codeorgworkshop)
 
 You may order 1 swag bag per attendee and 1 of each of the documents shown in the "Attendee Materials" section (unless otherwise noted -- some are 1 per PAIR of attendees), plus 1 applicable State Fact Sheet(s), per attendee.
@@ -66,4 +74,3 @@ If you have reached your limit of Administrator and Counselor swag bags and docu
 *Please note: You will be responsible for the cost of the items and shipping in the 'Extra Supplies' marketplace.
 
 [**Back to the top**](#top)
-

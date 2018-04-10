@@ -27,39 +27,68 @@ describe('animationListModule', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    it(`returns the sourceUrl from props if it exists`, function () {
+    it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};
-      expect(animationSourceUrl(key, props)).to.equal('bar');
-      expect(animationSourceUrl(null, props)).to.equal('bar');
+      expect(animationSourceUrl(key, props, '123')).to.equal('bar');
+    });
+
+    it(`returns the sourceUrl from props if it exists and contains the version`, function () {
+      const props = {sourceUrl: '/v3/animations/test?version=bar'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/test?version=bar');
+    });
+
+    it(`returns the sourceUrl from props if it exists in a different channel`, function () {
+      const props = {sourceUrl: '/v3/animations/456/789'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/456/789');
+    });
+
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function () {
+      const props = {sourceUrl: '/v3/animations/123/foo', version:'alpha'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/123/foo?version=alpha');
+    });
+
+    it(`returns the sourceUrl from a deleted, uploaded animation with the version`, function () {
+      const props = {sourceUrl: '/v3/animations/123/bar', version:'beta'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/123/bar?version=beta');
+    });
+
+    it(`returns the sourceUrl from a non-deleted, uploaded animation with no version specified`, function () {
+      const props = {sourceUrl: '/v3/animations/123/foo'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/123/foo?version=latestVersion');
+    });
+
+    it(`returns the sourceUrl from a deleted, uploaded animation with no version specified`, function () {
+      const props = {sourceUrl: '/v3/animations/123/bar'};
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/123/bar?version=latestVersion');
     });
 
     it(`returns the sourceUrl passed through the media proxy if it's an aboslute url`, function () {
-      const insecure = {sourceUrl: 'http://bar'};
-      expect(animationSourceUrl(key, insecure))
+      const insecureProps = {sourceUrl: 'http://bar'};
+      expect(animationSourceUrl(key, insecureProps, '123'))
           .to.equal(`//${document.location.host}/media?u=http%3A%2F%2Fbar`);
 
-      const secure = {sourceUrl: 'https://bar'};
-      expect(animationSourceUrl(key, secure))
+      const secureProps = {sourceUrl: 'https://bar'};
+      expect(animationSourceUrl(key, secureProps, '123'))
           .to.equal(`//${document.location.host}/media?u=https%3A%2F%2Fbar`);
     });
 
     it(`constructs a sourceUrl from key, version, and project if one isn't provided`, function () {
       const props = {sourceUrl: null, version: 'test-version'};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=test-version');
+      expect(animationSourceUrl(key, props, '123')).to.equal('/v3/animations/fake_id/foo.png?version=test-version');
     });
 
     it(`has empty version queryParam when version is falsy`, function () {
-      let props = {sourceUrl: null, version: null};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      let nullProps = {sourceUrl: null, version: null};
+      expect(animationSourceUrl(key, nullProps, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
-      props = {sourceUrl: null, version: undefined};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      let undefinedProps = {sourceUrl: null, version: undefined};
+      expect(animationSourceUrl(key, undefinedProps, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
-      props = {sourceUrl: null, version: false};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      let falseProps = {sourceUrl: null, version: false};
+      expect(animationSourceUrl(key, falseProps, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
 
-      props = {sourceUrl: null, version: 0};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+      let zeroProps = {sourceUrl: null, version: 0};
+      expect(animationSourceUrl(key, zeroProps, '123')).to.equal('/v3/animations/fake_id/foo.png?version=');
     });
   });
 
@@ -437,7 +466,7 @@ describe('animationListModule', function () {
           },
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
@@ -457,7 +486,7 @@ describe('animationListModule', function () {
           }
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
@@ -476,7 +505,7 @@ describe('animationListModule', function () {
           }
         }
       };
-      expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
+      expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
