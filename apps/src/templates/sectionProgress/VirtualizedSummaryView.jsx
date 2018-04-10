@@ -6,7 +6,7 @@ import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummar
 import color from "../../util/color";
 
 // TODO(caleybrock): share these styles with detail view
-const styles = {
+export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
   },
@@ -36,8 +36,8 @@ const styles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    width: 40,
-    padding: 3,
+    padding: '3px 10px',
+    width: 38,
     fontSize: 20,
   },
   link: {
@@ -82,7 +82,7 @@ export default class VirtualizedDetailView extends Component {
     // Override default cell style from multigrid
     let cellStyle = {
       ...style,
-      ...styles.cell,
+      ...progressStyles.cell,
     };
     // Alternate background colour of each row
     if (studentStartIndex%2 === 1) {
@@ -93,20 +93,20 @@ export default class VirtualizedDetailView extends Component {
     }
 
     return (
-      <div className={styles.Cell} key={key} style={cellStyle}>
+      <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
-          <span style={styles.lessonHeading}>Lesson</span>
+          <span style={progressStyles.lessonHeading}>Lesson</span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={styles.lessonNumberHeading}>
+          <div style={progressStyles.lessonNumberHeading}>
             {columnIndex}
           </div>
         }
         {(rowIndex >= 1 && columnIndex === 0) &&
-          <div style={styles.nameCell}>
+          <div style={progressStyles.nameCell}>
             <a
               href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
-              style={styles.link}
+              style={progressStyles.link}
             >
               {section.students[studentStartIndex].name}
             </a>
@@ -119,7 +119,7 @@ export default class VirtualizedDetailView extends Component {
             studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
             scriptData={scriptData}
-            style={styles.summaryCell}
+            style={progressStyles.summaryCell}
           />
         }
       </div>
@@ -151,10 +151,10 @@ export default class VirtualizedDetailView extends Component {
           height={650}
           rowHeight={40}
           rowCount={rowCount}
-          style={styles.multigrid}
-          styleBottomLeftGrid={styles.bottomLeft}
-          styleTopLeftGrid={styles.topLeft}
-          styleTopRightGrid={styles.topRight}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
     );
