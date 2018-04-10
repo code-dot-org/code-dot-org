@@ -18,7 +18,6 @@ import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypePa
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -86,11 +85,9 @@ export function renderSectionTable(sectionId, loginType, courseName) {
   store.dispatch(setLoginType(loginType));
   store.dispatch(setSectionId(sectionId));
 
-  const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
-
   // Show share column by default for CSD and CSP courses
   const coursesToShowShareSetting = ['csd', 'csp'];
-  if (showShareColumn && coursesToShowShareSetting.includes(courseName)) {
+  if (coursesToShowShareSetting.includes(courseName)) {
     store.dispatch(toggleSharingColumn());
   }
 
