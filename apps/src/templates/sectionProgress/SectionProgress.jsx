@@ -74,7 +74,9 @@ class SectionProgress extends Component {
               section={section}
               scriptData={scriptData}
             />
-            <SummaryViewLegend/>
+            <SummaryViewLegend
+              showCSFProgressBox={true}
+            />
           </div>
         }
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&

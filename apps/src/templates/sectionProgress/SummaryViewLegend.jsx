@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 const styles = {
   legendBox: {
-    borderWidth: '1px',
+    borderWidth: '1',
     borderStyle: 'solid',
     borderColor: color.lightest_gray,
     backgroundColor: color.white,
@@ -58,7 +58,7 @@ export default class SummaryViewLegend extends Component {
 
     return (
       <div style={styles.legendBox}>
-        <div style={styles.headingBox}>
+        <div>
           <div style={headingStyle}>{i18n.levelStatus()}</div>
           {showCSFProgressBox &&
             <div style={headingStyle}>{i18n.completionStatus()}</div>
@@ -77,7 +77,7 @@ export default class SummaryViewLegend extends Component {
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
-            <div>{i18n.started()}</div>
+            <div>{i18n.inProgress()}</div>
           </div>
           <ProgressBox
             started={true}
