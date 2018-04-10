@@ -152,7 +152,9 @@ module Api::V1::Pd
       if application_data[:regional_partner_filter] == REGIONAL_PARTNERS_NONE
         application_data[:regional_partner_filter] = nil
       end
-      application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+      if application_data.key? :regional_partner_filter
+        application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+      end
 
       application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
 

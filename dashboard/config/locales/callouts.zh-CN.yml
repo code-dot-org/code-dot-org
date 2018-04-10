@@ -925,6 +925,19 @@
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        stone_block_2: 灰色的块是石头做的, 不能扔掉。
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq1_2018_callout:
@@ -985,6 +998,9 @@
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_artist_loopsPrePre1a_callout:
@@ -1507,6 +1523,8 @@
         course_playlab_variables2_1: 这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。
       course_playlab_variables3_callout:
         course_playlab_variables3_1: 这是设置变量值的方法。
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       drawings!_callout: []

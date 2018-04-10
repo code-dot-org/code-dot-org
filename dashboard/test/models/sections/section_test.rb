@@ -92,7 +92,8 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'adding student preserves their share setting when section share is enabled' do
     section = create :section, sharing_disabled: false
-    student = create :student, sharing_disabled: true
+    student = create :student, age: 11, sharing_disabled: true
+
     section.add_student student
     assert student.sharing_disabled?
   end
