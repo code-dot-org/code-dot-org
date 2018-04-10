@@ -7,14 +7,16 @@ import {
 } from './sectionProgressRedux';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import Radium from 'radium';
 
-export default class StudentProgressSummaryCell extends Component {
+class StudentProgressSummaryCell extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
+    style: PropTypes.object,
   };
 
   studentLevelProgressInStage() {
@@ -73,16 +75,16 @@ export default class StudentProgressSummaryCell extends Component {
     const started = (statusCounts.attempted > 0) || (statusCounts.incomplete !== statusCounts.total);
 
     return (
-      <div>
-        <div>
-          <ProgressBox
-            started={started}
-            incomplete={incompletePixels}
-            imperfect={imperfectPixels}
-            perfect={perfectPixels}
-          />
-        </div>
+      <div style={this.props.style}>
+        <ProgressBox
+          started={started}
+          incomplete={incompletePixels}
+          imperfect={imperfectPixels}
+          perfect={perfectPixels}
+        />
       </div>
     );
   }
 }
+
+export default Radium(StudentProgressSummaryCell);
