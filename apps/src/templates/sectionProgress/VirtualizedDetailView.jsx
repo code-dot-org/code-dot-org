@@ -121,6 +121,12 @@ export default class VirtualizedDetailView extends Component {
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
+    const rowHeight = 40;
+    // Calculate height based on the number of rows
+    const tableHeightFromRowCount = rowHeight * rowCount;
+    // Use a 'maxHeight' of 680 for when there are many rows
+    const tableHeight = tableHeightFromRowCount < 680 ?
+      tableHeightFromRowCount : 680;
 
     return (
         <MultiGrid
@@ -130,7 +136,7 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={520}
+          height={tableHeight}
           rowHeight={40}
           rowCount={rowCount}
           style={styles.multigrid}
