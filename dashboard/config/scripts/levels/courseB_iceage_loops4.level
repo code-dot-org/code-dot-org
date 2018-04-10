@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Add one more block to get Scrat all the way to the acorn!",
     "ideal": "5",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?\",\"hint_id\":\"courseB_iceage_loops4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f657ab52792f54a8f3c472be2cbd94a7/courseB_iceage_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't be afraid to run your code and see what happens!\",\"hint_id\":\"courseB_iceage_loops4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/17feffc3d1e2b7f5e4f431061ffd7544/courseB_iceage_loops4.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

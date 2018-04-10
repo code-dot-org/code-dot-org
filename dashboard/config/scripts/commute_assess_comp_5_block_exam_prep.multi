@@ -8,5 +8,5 @@ wrong 'This code will cause an error'
 markdown <<MARKDOWN
 <!-- TEXT: ![](https://images.code.org/c366abfb03cf7e5963c75b7e9dac62ab-image-1482509531074.png) -->
 
-![](https://images.code.org/fea3aa2499c72595e672f532e25fe725-image-1522966115761.png)
+<img src="https://images.code.org/fea3aa2499c72595e672f532e25fe725-image-1522966115761.png" style="width: 150px">
 MARKDOWN
