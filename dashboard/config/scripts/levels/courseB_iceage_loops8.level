@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Can you fix this code? ",
     "ideal": "9",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Are the movement blocks right? What else can you change?\",\"hint_id\":\"courseB_iceage_loops8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7dfb0480bc260274673ca77d5a98ecf2/courseB_iceage_loops8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.\",\"hint_id\":\"\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/145446b8c4fdff02db57006f31356e15/courseB_iceage_loops8.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
