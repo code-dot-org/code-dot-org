@@ -8,5 +8,6 @@ wrong 'x is equal to 8; y is equal to 4, 8; z is equal to 12'
 markdown <<MARKDOWN
 <!-- TEXT: ![](https://images.code.org/8186e70383504626932ad42b8ee808a7-image-1482507302084.png) -->
 
-![](https://images.code.org/bcba59ea7fccc7ed2f0937b25f6ae749-image-1522965775141.png)
+
+<img src="https://images.code.org/bcba59ea7fccc7ed2f0937b25f6ae749-image-1522965775141.png" style="width: 150px">
 MARKDOWN

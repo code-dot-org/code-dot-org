@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Scrat really wants that acorn! ",
     "ideal": "7",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you get stuck, try writing steps down on a piece of paper. Do you see a pattern?\",\"hint_id\":\"courseB_iceage_loops7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/36dda10b57c0a2b656e713d0b0c58630/courseB_iceage_loops7.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

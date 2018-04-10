@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
     "ideal": "9",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!\",\"hint_id\":\"courseB_iceage_loops9_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ecafbaf546f02958f58f8ab5142b253/courseB_iceage_loops9.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Your final code should have **4** loops.\",\"hint_id\":\"courseB_iceage_loops9_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/36b412ab38100e052192c59511a84513/courseB_iceage_loops9.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
