@@ -50,10 +50,10 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "markdown_instructions": "The `repeat forever` block allows you to run code over and over forever.  Use this block to move Chomp the Dino (actor 2) up and down by 400 pixels forever.\r\n\r\n![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

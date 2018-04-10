@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Can you add a loop to get to the acorn?",
     "ideal": "7",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your final code will have **three** movement blocks.\",\"hint_id\":\"courseB_iceage_loops6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d563ad93f838569a0366996b6193b056/courseB_iceage_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to add **one** more loop!\",\"hint_id\":\"courseB_iceage_loops6_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb87ff4242967ddefde6ea39a2303d74/courseB_iceage_loops6.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
