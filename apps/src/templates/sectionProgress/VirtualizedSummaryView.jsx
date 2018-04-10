@@ -93,7 +93,7 @@ export default class VirtualizedDetailView extends Component {
     }
 
     return (
-      <div key={key} style={cellStyle}>
+      <div className={styles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
           <span style={styles.lessonHeading}>Lesson</span>
         }
