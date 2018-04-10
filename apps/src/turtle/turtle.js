@@ -394,6 +394,10 @@ class Visualization {
     }
   }
 
+  pointTo(degrees) {
+    this.setHeading(degrees + DEFAULT_DIRECTION);
+  }
+
   turnByDegrees(degreesRight) {
     this.setHeading(this.heading + degreesRight);
   }
@@ -1526,6 +1530,9 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.turnByDegrees(result.distance);
+      break;
+    case 'PT': // Point To
+      this.visualization.pointTo(values[0]);
       break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
