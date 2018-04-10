@@ -8,34 +8,8 @@ import {
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
-
-const styles = {
-  cell: {
-    padding: 10,
-    width: '100%',
-  },
-  multigrid: {
-    border: '1px solid #ddd',
-  },
-  bottomLeft: {
-    borderRight: '2px solid #aaa',
-    backgroundColor: '#f7f7f7',
-  },
-  topLeft: {
-    borderBottom: '2px solid #aaa',
-    borderRight: '2px solid #aaa',
-    fontWeight: 'bold',
-  },
-  topRight: {
-    borderBottom: '2px solid #aaa',
-    fontWeight: 'bold',
-  },
-  icon: {
-    width: 40,
-    padding: 3,
-    fontSize: 20,
-  }
-};
+import color from "../../util/color";
+import {progressStyles} from './VirtualizedSummaryView';
 
 export default class VirtualizedDetailView extends Component {
 
@@ -60,34 +34,56 @@ export default class VirtualizedDetailView extends Component {
     // Subtract 1 to account for the student name column.
     const stageIdIndex = columnIndex-1;
 
+    // Override default cell style from multigrid
+    let cellStyle = {
+      ...style,
+      ...progressStyles.cell,
+    };
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      cellStyle = {
+        ...cellStyle,
+        backgroundColor: color.background_gray,
+      };
+    }
+
     return (
-      <div className={styles.Cell} key={key} style={style}>
+      <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={styles.cell}>Lesson</span>
+          <span style={progressStyles.lessonHeading}>
+            Lesson
+          </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <span style={styles.cell}>{columnIndex}</span>
+          <div style={progressStyles.lessonNumberHeading}>
+            {columnIndex}
+          </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={styles.cell}>Level Type</span>
+          <span style={progressStyles.lessonHeading}>
+            Level Type
+          </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span style={styles.cell}>
+          <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 className={level.icon ? level.icon: "fas fa-question"}
-                style={styles.icon}
+                style={progressStyles.icon}
                 key={i}
               />
             )}
           </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
-          <span style={styles.cell}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[rowIndex-2].id}/script/${scriptData.id}`}>
+          <div style={progressStyles.nameCell}>
+            <a
+              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
+              style={progressStyles.link}
+            >
               {section.students[studentStartIndex].name}
             </a>
-          </span>
+          </div>
         )}
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
@@ -105,7 +101,9 @@ export default class VirtualizedDetailView extends Component {
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
     const NAME_COLUMN_WIDTH = 150;
-    const PROGRESS_BUBBLE_WIDTH = 50;
+    const PROGRESS_BUBBLE_WIDTH = 39;
+    // TODO(caleybrock): Calculate the width differently for progress bubbles
+    // const UNPLUGGED_BUBBLE_WIDTH = 100;
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
@@ -133,10 +131,10 @@ export default class VirtualizedDetailView extends Component {
           height={520}
           rowHeight={40}
           rowCount={rowCount}
-          style={styles.multigrid}
-          styleBottomLeftGrid={styles.bottomLeft}
-          styleTopLeftGrid={styles.topLeft}
-          styleTopRightGrid={styles.topRight}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
     );
