@@ -35,9 +35,8 @@
     "top_level_procedure_autopopulate": "false",
     "markdown_instructions": "Help Scrat get all the way over to the acorn!",
     "ideal": "13",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Watch out for broken ice! Scrat will fall into the water!\",\"hint_id\":\"courseB_iceage_loops10_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/41b26d9a378aba26ffb8b55766760e87/courseB_iceage_loops10.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Try saying the steps out loud or writing them down on a piece of paper. Do you see any patterns?\",\"hint_id\":\"courseB_iceage_loops10_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71faf380432e00801f7a0a59a57552d1/courseB_iceage_loops10.mp3\"}]",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -8,5 +8,5 @@ right '<pre>Hello Girls and Boys</pre>'
 markdown <<MARKDOWN
 <!-- ![](https://images.code.org/8f41f2881be7116929af1c6d379f0ca9-image-1483466229189.png) -->
 
-![](https://images.code.org/063f1aca3a09e1fa40f6d8032557d2ed-image-1522961402527.png)
+<img src="https://images.code.org/bd43238618c2310216b4844280bdb4a9-image-1523299524358.png" style="width: 350px">
 MARKDOWN
