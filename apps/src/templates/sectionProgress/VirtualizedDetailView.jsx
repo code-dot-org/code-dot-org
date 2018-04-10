@@ -125,8 +125,7 @@ export default class VirtualizedDetailView extends Component {
     // Calculate height based on the number of rows
     const tableHeightFromRowCount = rowHeight * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
-    const tableHeight = tableHeightFromRowCount < 680 ?
-      tableHeightFromRowCount : 680;
+    const tableHeight = Math.min(tableHeightFromRowCount, 680);
 
     return (
         <MultiGrid
