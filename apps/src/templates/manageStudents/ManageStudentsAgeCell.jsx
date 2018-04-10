@@ -12,15 +12,13 @@ class ManageStudentAgeCell extends Component {
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
     setSharingDefault: PropTypes.func.isRequired,
-    // TODO (ErinB) Remove when we remove the experiment flag.
-    shareColumnExperimentEnabled: PropTypes.bool
   };
 
   // For privacy reasons, we disable sharing by default if the student is
   // under the age of 13 if the age was previously not set.
   onChangeAge = (e) => {
     this.props.editStudent(this.props.id, {age: e.target.value});
-    if (this.props.age === '' && this.props.shareColumnExperimentEnabled) {
+    if (this.props.age === '') {
       this.props.setSharingDefault(this.props.id);
     }
   };
