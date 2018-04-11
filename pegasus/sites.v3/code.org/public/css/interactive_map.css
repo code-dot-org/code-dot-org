@@ -6,12 +6,28 @@
 }
 
 #infobox {
-  text-align: left;
+  text-align: center;
   float: right;
 }
 
 .info {
-  font-size: 18px;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+#infobox strong {
+  font-size: 44px;
+  display: block;
+  line-height: 36px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+#infobox button {
+  margin-top: 18px;
+}
+
+#infobox b {
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #state-dropdown {
@@ -22,10 +38,44 @@
   margin-bottom: 10px;
 }
 
+.state-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.state-button {
+  margin: 10px;
+}
+
+.state-button button {
+  height: 80px;
+  white-space: initial;
+  padding-top: 0px;
+}
+
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
   color: white;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.icon-fact {
+  margin-bottom: 10px;
+}
+
+.fact i {
+  display: inline-block;
+  font-size: 48px;
+  vertical-align: middle;
+}
+
+.fact .fact-text {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 10px;
 }
 
 .fact.subfact {
@@ -34,4 +84,8 @@
 
 .fact > a {
   color: white;
+}
+
+#sources {
+  clear: both;
 }
