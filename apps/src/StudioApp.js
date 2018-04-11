@@ -1043,11 +1043,11 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
  */
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
-  this.lastShareUrl = response.level_source;
 
   if (!response) {
     return;
   }
+  this.lastShareUrl = response.level_source;
 
   // Track GA events
   if (response.new_level_completed) {
