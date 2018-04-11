@@ -471,7 +471,7 @@ class SourcesTest < FilesApiTestBase
     assert_restores_main_json_with_animation_version nil
   end
 
-  def test_copy_files_remix
+  def test_remix_source_file
     # Mock destination
     @destination_channel = create_channel
     @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
@@ -525,6 +525,65 @@ class SourcesTest < FilesApiTestBase
 
     delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename}")
+  end
+
+  def test_remix_not_main
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+
+    # Create non-main file
+    src_file_v1 = {
+      "source": "this is not a main.json file"
+    }.stringify_keys
+    @api.put_object('test.json', src_file_v1.to_json, {'CONTENT_TYPE' => 'application/json'})
+
+    # Remix
+    AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel
+
+    # Check that source exists in destination channel
+    # Check that remix-ed file is equal to the original file
+    remixed_source = @destination_api.get_object('test.json')
+    assert successful?
+    assert_equal src_file_v1.to_json, remixed_source
+
+    # Clear original and remixed buckets
+    delete_all_source_versions('test.json')
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/test.json")
+  end
+
+  def test_remix_no_animations
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+
+    # Update main.json
+    main_json_v1 = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [],
+        "propsByKey": {}
+      }
+    }.stringify_keys
+    put_main_json(main_json_v1)
+
+    # Remix
+    AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel
+
+    # Check that source exists in destination channel
+    # Check that remixed source does not contain animations
+    remixed_source = @destination_api.get_object(MAIN_JSON)
+    assert successful?
+    props = JSON.parse(remixed_source)['animations']
+    assert_equal props["orderedKeys"], []
+
+    # Clear original and remixed buckets
+    delete_all_source_versions(MAIN_JSON)
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
   end
 
   private
