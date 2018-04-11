@@ -150,9 +150,16 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
   # Return a hash of facilitator name to how many responses they have
   # @param responses [Array(Hash)] List of responses in hash form
+  # @param workshops [Array(Pd::Workshop)] List of workshops
   # @return [Hash] Hash of names to response counts
+  # @return [Hash] Hash of workshops_to_facilitators - returned when there is a mix of
+  # facilitator-specific and non-facilitator-specific responses
   def calculate_facilitator_name_frequencies(responses, workshops)
     facilitator_names = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq
+    # There are three possibilities for the contents of facilitator_names
+    # 1) [nil] - means that all of the responses are non-facilitator-specific
+    # 2) [nil, other things] - means there is a mix
+    # 3) [other things] - all responses are facilitator-specific
 
     if facilitator_names == [nil]
       # No workshops have facilitator specific answers
@@ -166,6 +173,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
       # response count for non-facilitator specific responses
       workshops_to_facilitators = workshops.joins(:facilitators).includes(:facilitators).map {|x| [x.id, x.facilitators.map(&:name)]}.to_h
 
+      # Now we can get a complete list of facilitators by unifying the above list and
+      # the list from the workshops.
       facilitator_names = (facilitator_names + workshops_to_facilitators.values.flatten).uniq
 
       facilitator_name_responses = Hash[facilitator_names.compact.map {|facilitator| [facilitator, 0]}]
