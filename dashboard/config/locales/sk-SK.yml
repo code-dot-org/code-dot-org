@@ -348,7 +348,7 @@
       already_registered: Ste už zaregistrovaný?
       pair_programming: Pair Programming
       team: Tím
-      driver: Ovládač
+      driver: Prihlásený
       navigator: Navigátor
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}

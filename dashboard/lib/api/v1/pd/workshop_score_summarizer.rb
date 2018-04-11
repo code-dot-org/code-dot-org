@@ -116,14 +116,15 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   # @param facilitator_name_filter [String] Name of a facilitator to select responses for
   # @return [Hash] Summary of workshop survey averages
   def get_score_for_workshops(workshops:, include_free_responses:, facilitator_name_filter:)
-    facilitators = workshops.flat_map(&:facilitators).uniq.map(&:name)
     response_summary = {}
-
-    response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
     responses = responses.compact.reject {|response| response['consent_b'] == '0'}
     return {} if responses.count == 0
+
+    facilitators = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq
+
+    response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses_per_facilitator = calculate_facilitator_name_frequencies(responses)
 

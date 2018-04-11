@@ -88,9 +88,6 @@ class PegasusTest < Minitest::Test
   ]
 
   def test_render_pegasus_documents
-    # TODO: (@brendan) re-enable this test after resolving Advocacy pages
-    skip 'temporarily skip this test because changes to the Advocacy site are failing.  Brendan will re-enable'
-
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
       page[:uri].end_with?('/splat') ||

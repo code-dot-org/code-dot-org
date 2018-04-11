@@ -6104,30 +6104,73 @@
           After you have moved to a square with treasure, use this block to pick it up.
           <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: []
-      courseA_harvester_loops1_authored_hint: []
-      courseA_harvester_loops10_authored_hint: []
-      courseA_harvester_loops11_authored_hint: []
-      courseA_harvester_loops2_authored_hint: []
-      courseA_harvester_loops3_authored_hint:
+      courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">3</title>
           </block></xml>
-      courseA_harvester_loops4_authored_hint: []
-      courseA_harvester_loops5_authored_hint: []
-      courseA_harvester_loops6_authored_hint: []
-      courseA_harvester_loops7_authored_hint: []
+      courseA_harvester_loops1_authored_hint:
+        courseA_harvester_loops1_a: |-
+          Once you move to some corn, use this block to pick it!
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops10_authored_hint: []
+      courseA_harvester_loops11_authored_hint: []
+      courseA_harvester_loops2_authored_hint:
+        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks
+          and **four** `pick corn` blocks. '
+      courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Use a `repeat` block like this to help you!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+        courseA_harvester_loops3_b: To repeat code, drag out a `repeat` loop, then
+          put the block you want inside of it.
+      courseA_harvester_loops4_authored_hint:
+        courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
+        courseA_harvester_loops4_b: How many pieces of corn are there? How many times
+          does your code repeat?
+      courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: If you get stuck, try solving the puzzle in 2
+          parts, one part before the corner and one part after the corner.
+      courseA_harvester_loops5a_authored_hint:
+        courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other
+          will repeat `move East`.
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: Press `Run` and see what happens!
+        courseA_harvester_loops5b_b: Are your loops repeating the right number of
+          times?
+      courseA_harvester_loops6_authored_hint:
+        courseA_harvester_loops6_a: If you get stuck, try writing the steps on paper
+          and looking for repeating patterns.
+      courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
       courseA_harvester_loops8_authored_hint: []
-      courseA_harvester_loops9_authored_hint: []
+      courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: Break this puzzle up into three different parts.
+          One part to the first corner, one part to the second corner, and one part
+          to the end.
+        courseA_harvester_loops9_b: Don't be afraid to run your code after every part
+          to see what happens!
       courseA_harvester_seq1_authored_hint:
         courseA_harvester_seq1_a: |-
-          Use this block to get nectar once the bee finds a flower.
+          Use this block to pick the corn when the harvester finds it!
 
           <xml>
           <block type="harvester_corn"/>
           </xml>
-      courseA_harvester_seq10_authored_hint: []
+        courseA_harvester_seq1_b: |-
+          The harvester will need to move East three times to get to the corn. Use this block:
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_a: Are you stuck? Try writing down the steps on a
+          piece of paper first.
+        courseA_harvester_seq10_b: You need to `Move East`, then `Move North`. Do
+          this two times. Don't forget to get all the corn too!
       courseA_harvester_seq11_authored_hint: []
       courseA_harvester_seq12_authored_hint: []
       courseA_harvester_seq13_authored_hint:
@@ -6137,14 +6180,131 @@
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_harvester_seq2_authored_hint: []
-      courseA_harvester_seq3_authored_hint: []
-      courseA_harvester_seq4_authored_hint: []
-      courseA_harvester_seq5_authored_hint: []
-      courseA_harvester_seq6_authored_hint: []
-      courseA_harvester_seq7_authored_hint: []
+      courseA_harvester_seq2_authored_hint:
+        courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml>
+          to pick the corn!
+        courseA_harvester_seq2_b: Try writing down the steps on paper to find a solution!
+      courseA_harvester_seq3_authored_hint:
+        courseA_harvester_seq3_a: |-
+          Did you remember to use this block?
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Say the steps out loud and see if it helps you figure
+          out the answer.
+      courseA_harvester_seq4_authored_hint:
+        courseA_harvester_seq4_a: How many spaces are between the Harvester and the
+          corn? How many blocks are already in your workspace?
+        courseA_harvester_seq4_b: |-
+          You will need five `Move East` blocks and one `Pick Corn` block:
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_a: Which block moves the harvester the wrong way?
+        courseA_harvester_seq5_b: You need to remove one block.
+        courseA_harvester_seq5_c: |-
+          Throw this block in the trash!
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: If you're stuck, try saying the steps out loud.
+          It could help you figure out the right path.
+      courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: Try solving the puzzle in 2 parts, one part before
+          the corner and one part after the corner.
       courseA_harvester_seq8_authored_hint: []
-      courseA_harvester_seq9_authored_hint: []
+      courseA_harvester_seq9_authored_hint:
+        courseA_harvester_seq9_a: Run the code a few times to see what happens. Where
+          does the harvester stop?
+        courseA_harvester_seq9_b: Don't forget to pick all the corn! You will need
+          **3** pick corn blocks.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from the bird's point
+          of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one
+          way, then move again and turn the opposite way. Move forward one more time
+          to reach the pig.
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code
+          line by line. Can you figure out what you need to do next?
+        courseC_maze_programming5_b: Remember that turns are from the bird's perspective.
+        courseC_maze_programming5_c: Don't be afraid to make a mistake! Try adding
+          blocks and running the code to see what will happen, even if you don't think
+          you've solved the puzzle yet.
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
@@ -6235,8 +6395,13 @@
         courseA_maze_seq5_b: You will need two different blocks, pointing in two different
           directions.
       courseA_maze_seq5_2018_authored_hint:
-        courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
-        courseA_maze_seq5_b: You will need 2 blocks, pointing in 2 directions.
+        '1': Try writing down the steps on paper to find a solution!
+        '2': |-
+          You will need to use this block:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have three movement blocks.
         courseA_maze_seq6_b: If you get stuck, try solving the puzzle in two separate
@@ -7078,6 +7243,45 @@
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
+      courseB_iceage_loops1_authored_hint:
+        courseB_iceage_loops1_a: Watch out for broken ice! Scrat will fall right through!
+        courseB_iceage_loops1_b: |-
+          You will have to use this block:
+          <xml><block type="maze_moveEast"/></xml>
+      courseB_iceage_loops10_authored_hint:
+        courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the
+          water!
+        courseB_iceage_loops10_b: Try saying the steps out loud or writing them down
+          on a piece of paper. Do you see any patterns?
+      courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: Break this puzzle into two pieces, one before the
+          corner, and one after the corner.
+        courseB_iceage_loops2_b: If you get stuck, try saying the steps out loud.
+      courseB_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_a: |-
+          Use this new block!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put
+          the block you want inside of it.
+      courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get
+          to the acorn. Do you see a pattern?
+        courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
+      courseB_iceage_loops6_authored_hint:
+        courseB_iceage_loops6_a: Your final code will have **three** movement blocks.
+        courseB_iceage_loops6_b: You only need to add **one** more loop!
+      courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: If you get stuck, try writing steps down on a piece
+          of paper. Do you see a pattern?
+      courseB_iceage_loops8_authored_hint:
+        courseB_iceage_loops8_a: Are the movement blocks right? What else can you
+          change?
+      courseB_iceage_loops9_authored_hint:
+        courseB_iceage_loops9_a: Having trouble? Try breaking this puzzle into smaller
+          pieces. Don't be afraid to run your puzzle as you code!
+        courseB_iceage_loops9_b: Your final code should have **4** loops.
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: |-
           Drag three of these `S` arrows out and connect them to the `when run` block to get your bird to the pig.
@@ -7598,6 +7802,7 @@
           Make some animals give more points than others.
           Use different sounds.
           Change the animals' moods!
+      courseB_scrat_forVideo_authored_hint: []
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Try adding blocks one at a time, then running your
           code to see what happens.
@@ -16579,6 +16784,11 @@
           When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
 
           Have a friend try your app when it is finished!
+      coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure
+          both of the blocks have been fully clicked together, then click "Run" again.
+        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something,
+          and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
           delete a block from the middle of your code, drag all of the blocks underneath
