@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MultiGrid } from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
+import LessonSelector from '../sectionProgress/LessonSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../styleConstants';
 import {
@@ -24,6 +25,7 @@ export default class VirtualizedDetailView extends Component {
     fixedRowCount: 2,
     scrollToColumn: 0,
     scrollToRow: 0,
+    lessonOfInterest: 1
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
@@ -47,6 +49,17 @@ export default class VirtualizedDetailView extends Component {
       };
     }
 
+    let lessonNumberStyle = {
+      ...progressStyles.lessonNumberHeading,
+    };
+
+    if (columnIndex === this.state.lessonOfInterest) {
+      lessonNumberStyle = {
+        ...progressStyles.lessonNumberHeading,
+        ...progressStyles.lessonOfInterest
+      };
+    }
+
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
@@ -55,7 +68,7 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <div style={progressStyles.lessonNumberHeading}>
+          <div style={lessonNumberStyle}>
             {columnIndex}
           </div>
         )}
@@ -113,6 +126,10 @@ export default class VirtualizedDetailView extends Component {
     return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
   };
 
+  onChangeLevel = lessonNumber => {
+    this.setState({lessonOfInterest: lessonNumber});
+  };
+
   render() {
     const {section, scriptData} = this.props;
     // Add 2 to account for the 2 header rows
@@ -124,8 +141,14 @@ export default class VirtualizedDetailView extends Component {
     const tableHeightFromRowCount = rowHeight * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, 680);
+    const lessonNumbers =  Array(scriptData.stages.length).fill().map((e,i)=>i+1);
 
     return (
+      <div>
+        <LessonSelector
+          lessonNumbers={lessonNumbers}
+          onChange={this.onChangeLevel}
+        />
         <MultiGrid
           {...this.state}
           cellRenderer={this.cellRenderer}
@@ -134,6 +157,7 @@ export default class VirtualizedDetailView extends Component {
           enableFixedColumnScroll
           enableFixedRowScroll
           height={tableHeight}
+          scrollToColumn={this.state.lessonOfInterest}
           rowHeight={40}
           rowCount={rowCount}
           style={progressStyles.multigrid}
@@ -142,6 +166,7 @@ export default class VirtualizedDetailView extends Component {
           styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
+      </div>
     );
   }
 }
