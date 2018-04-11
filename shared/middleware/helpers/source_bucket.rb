@@ -102,7 +102,6 @@ class SourceBucket < BucketHelper
       # Update animation manifest
       key = s3_path src_owner_id, src_channel_id, filename
       src_object = s3.get_object(bucket: @bucket, key: key)
-
       src_body = src_object.body.read
       psj = ProjectSourceJson.new(src_body)
 
