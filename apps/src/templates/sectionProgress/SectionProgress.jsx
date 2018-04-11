@@ -81,6 +81,8 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && studentLevelProgress;
 
+    const linkToOverview = scriptData ? scriptData.path : '';
+
     return (
       <div>
         <div>
@@ -99,7 +101,7 @@ class SectionProgress extends Component {
           </div>
           <div style={styles.viewCourseLink}>
             <SmallChevronLink
-              link={'/foo'}
+              link={linkToOverview}
               linkText={i18n.viewCourse()}
               isRtl={false}
             />
