@@ -2,7 +2,7 @@
 @no_mobile
 # only run in one browser, because multiple simultaneously-running instances of
 # this feature can interfere with each other.
-@only_ie
+@only_one_browser
 Feature: Public Project Gallery
 
 Background:
