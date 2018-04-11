@@ -9,6 +9,7 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontWeight: 'bold',
     display: 'inline',
+    textDecoration: 'none'
   },
   chevron: {
     display: 'inline',
@@ -45,7 +46,7 @@ export default class SmallChevronLink extends Component {
 
     return (
       <div style={styles.linkBox}>
-        <a href={link}>
+        <a href={link} style={styles.link}>
           <h3 style={styles.link}>
             {linkText}
           </h3>
