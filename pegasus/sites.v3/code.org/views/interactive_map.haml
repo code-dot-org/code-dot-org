@@ -4,8 +4,10 @@
 - require 'state_abbr'
 
 - advocacy_variation ||= false
-- fill_color = advocacy_variation ? '#0094ca' : '#3E484F'
+- fill_color = advocacy_variation ? '#0094a3' : '#3E484F'
 - stroke_color = advocacy_variation ? 'white' : '#7A7A7A'
+- hover_color = advocacy_variation ? '#59cad3' : '#DCDF8A'
+- click_color = advocacy_variation ? '#ffa400' : '#B9BF15'
 
 #state-list.phone-feature
   - if advocacy_variation
@@ -28,27 +30,20 @@
 #infobox.greybox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
-  %ul
-    %li.states-link
-      Only
-      = succeed " allow students to count computer science courses toward high school graduation." do
-        %strong= credit_count
-        states
-    %li
-      There are currently
-      %strong
-        = format_integer_with_commas(jobs_nationwide)
-      open computing jobs nationwide.
 
-    %li
-      Last year, only
-      %strong
-        = format_integer_with_commas(grads_nationwide)
-      computer science students graduated into the workforce.
-  %p.info
-    See a
-    = succeed "." do
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
+  %strong= credit_count
+  States where Computer Science courses count toward high school graduation
+
+  %strong= format_integer_with_commas(jobs_nationwide)
+  Open computing jobs nationwide
+
+  %strong
+    = format_integer_with_commas(grads_nationwide)
+  Computer science students graduated into the workforce last year
+
+  %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
+    %button
+      See a summary of state efforts
 
 :javascript
   var webServiceLocation = '/promote/state/';
@@ -120,9 +115,9 @@
       stateHoverAnimation: 0,
       stateStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
       labelBackingStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
-      labelBackingHoverStyles: {fill: '#DCDF8A'},
-      stateHoverStyles: {fill: '#DCDF8A'},
-      stateClickStyles: {fill: '#B9BF15', persistent: false}
+      labelBackingHoverStyles: {fill: "#{hover_color}"},
+      stateHoverStyles: {fill: "#{hover_color}"},
+      stateClickStyles: {fill: "#{click_color}", persistent: false}
     });
 
     // "Click" the current state if page is loaded with state in URL.
