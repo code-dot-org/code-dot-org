@@ -66,6 +66,66 @@ class SourceBucket < BucketHelper
     response.to_h
   end
 
+  # Copies the files in the src_channel to the dest_channel
+  # Update the animation manifest to include the version ids of the animations
+  # in dest_channel
+  # Note: this function assumes that the animations have already been copied
+  def remix_source(src_channel, dest_channel, options={})
+    src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
+    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
+
+    src_prefix = s3_path src_owner_id, src_channel_id
+
+    # For each file, copy it, update the animations, return it
+    result = s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
+      filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
+      next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+
+      src = "#{@bucket}/#{src_prefix}#{filename}"
+      dest = s3_path dest_owner_id, dest_channel_id, filename
+      animation_bucket = AnimationBucket.new
+
+      # Temporary: Add additional context to exceptions reported here, to help
+      # diagnose a recurring issue where we pass a bad copy_source to the S3
+      # API on remix.
+      # https://app.honeybadger.io/projects/3240/faults/35329035/8aba7532-c087-11e7-8280-13b5745130ae
+      Honeybadger.context(
+        {
+          copy_source: URI.encode(src),
+          copy_dest_bucket: @bucket,
+          copy_dest_key: dest
+        }
+      )
+
+      #Copy file
+      s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+
+      #Update animations
+      key = s3_path dest_owner_id, dest_channel_id, filename
+      src_object = s3.get_object(bucket: @bucket, key: key)
+      src_body = src_object.body.read
+      psj = ProjectSourceJson.new(src_body)
+
+      if psj.animation_manifest?
+        # Update the manifest to reference the newest version of the animations
+        # in the destination channel
+        psj.each_animation do |a|
+          next if library_animation? a
+          anim_response = animation_bucket.get(dest_channel, "#{a['key']}.png")
+          psj.set_animation_version(a['key'], anim_response[:version_id])
+        end
+      end
+
+      # Write the updated main.json file back to S3 as the latest version
+      response = s3.put_object(bucket: @bucket, key: key, body: psj.to_json)
+
+      {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
+    end
+    result.compact
+  end
+
   private
 
   def library_animation?(animation_props)

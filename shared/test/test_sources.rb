@@ -471,6 +471,62 @@ class SourcesTest < FilesApiTestBase
     assert_restores_main_json_with_animation_version nil
   end
 
+  def test_copy_files_remix
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+    @destination_animation_api = FilesApiTestHelper.new(current_session, 'animations', @destination_channel)
+
+    animation_key = @api.add_random_suffix('animation-key')
+    animation_filename = "#{animation_key}.png"
+    delete_all_animation_versions(animation_filename)
+
+    # Create an animation
+    animation_v1 = 'stub-png-v1'
+    animation_v1_vid = put_animation(animation_filename, animation_v1)
+
+    # Update main.json
+    main_json_v1 = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Remix",
+            "sourceUrl": nil,
+            "version": animation_v1_vid
+          }
+        }
+      }
+    }.stringify_keys
+    put_main_json(main_json_v1)
+
+    # Remix
+    AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel
+
+    # Check that source exists in destination channel
+    # Check that destination source includes a reference to the
+    # animation with a different version than that in the original destination
+    remixed_source = @destination_api.get_object(MAIN_JSON)
+    assert successful?
+    props = JSON.parse(remixed_source)['animations']['propsByKey']
+    refute_equal props[animation_key]['version'], animation_v1_vid
+
+    # Check that source in destination reference the version id of the animation
+    # that exists in the destination
+    remixed_animation_versions = @destination_animation_api.list_object_versions(animation_filename)
+    assert successful?
+    assert_equal props[animation_key]['version'], remixed_animation_versions[0]['versionId']
+
+    # Clear original and remixed buckets
+    delete_all_animation_versions(animation_filename)
+    delete_all_source_versions(MAIN_JSON)
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename}")
+  end
+
   private
 
   def assert_restores_main_json_with_animation_version(version_value)
