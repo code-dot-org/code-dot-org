@@ -4,9 +4,11 @@ import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import color from "../../util/color";
-import {progressStyles} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
+
+const SUMMARY_COLUMN_WIDTH = 50;
 
 export default class VirtualizedDetailView extends Component {
 
@@ -81,9 +83,9 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     if (index === 0) {
-      return 150;
+      return NAME_COLUMN_WIDTH;
     }
-    return 50;
+    return SUMMARY_COLUMN_WIDTH;
   };
 
   render() {
@@ -102,7 +104,7 @@ export default class VirtualizedDetailView extends Component {
           enableFixedColumnScroll
           enableFixedRowScroll
           height={650}
-          rowHeight={40}
+          rowHeight={ROW_HEIGHT}
           rowCount={rowCount}
           style={progressStyles.multigrid}
           styleBottomLeftGrid={progressStyles.bottomLeft}

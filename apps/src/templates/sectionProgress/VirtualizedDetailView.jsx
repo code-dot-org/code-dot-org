@@ -9,9 +9,13 @@ import {
   studentLevelProgressPropType
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
+
+const PROGRESS_BUBBLE_WIDTH = 39;
+// TODO(caleybrock): Calculate the width differently for progress bubbles
+// const UNPLUGGED_BUBBLE_WIDTH = 190;
 
 export default class VirtualizedDetailView extends Component {
 
@@ -100,10 +104,7 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
-    const NAME_COLUMN_WIDTH = 150;
-    const PROGRESS_BUBBLE_WIDTH = 39;
-    // TODO(caleybrock): Calculate the width differently for progress bubbles
-    // const UNPLUGGED_BUBBLE_WIDTH = 190;
+
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
@@ -129,7 +130,7 @@ export default class VirtualizedDetailView extends Component {
           enableFixedColumnScroll
           enableFixedRowScroll
           height={520}
-          rowHeight={40}
+          rowHeight={ROW_HEIGHT}
           rowCount={rowCount}
           style={progressStyles.multigrid}
           styleBottomLeftGrid={progressStyles.bottomLeft}
