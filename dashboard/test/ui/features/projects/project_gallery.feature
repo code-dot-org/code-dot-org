@@ -1,5 +1,8 @@
 @dashboard_db_access
 @no_mobile
+# only run in one browser, because multiple simultaneously-running instances of
+# this feature can interfere with each other.
+@only_ie
 Feature: Public Project Gallery
 
 Background:
