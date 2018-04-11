@@ -42,7 +42,6 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "background": "city",
-    "contained_level_names": null,
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -50,7 +49,8 @@
       "upButton"
     ],
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

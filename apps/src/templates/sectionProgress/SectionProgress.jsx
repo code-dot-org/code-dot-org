@@ -5,6 +5,7 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
+import SmallChevronLink from '../SmallChevronLink';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
@@ -32,6 +33,10 @@ const styles = {
     float: 'left',
     marginTop: 24,
   },
+  viewCourseLink: {
+    float: 'right',
+    marginTop: 10
+  }
 };
 
 /**
@@ -88,12 +93,16 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
-            <SummaryViewLegend
-              showCSFProgressBox={true}
-            />
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
+          </div>
+          <div style={styles.viewCourseLink}>
+            <SmallChevronLink
+              link={'/foo'}
+              linkText={i18n.viewCourse()}
+              isRtl={false}
+            />
           </div>
         </div>
         <div style={{clear: 'both'}}>
@@ -104,6 +113,9 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+              />
+              <SummaryViewLegend
+                showCSFProgressBox={true}
               />
             </div>
           }
