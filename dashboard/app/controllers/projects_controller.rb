@@ -367,8 +367,7 @@ class ProjectsController < ApplicationController
       remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
-    AnimationBucket.new.copy_files src_channel_id, new_channel_id
-    SourceBucket.new.copy_files src_channel_id, new_channel_id
+    remix_animation_and_sources(src_channel_id, new_channel_id)
     FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end
@@ -379,6 +378,15 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  # Helper function to keep the animation and source remix actions together and ordered
+  # Source remix assumes the animations are already copied
+  # @param src_channel_id [String]
+  # @param new_channel_id [String]
+  def remix_animation_and_sources(src_channel_id, new_channel_id)
+    AnimationBucket.new.copy_files src_channel_id, new_channel_id
+    SourceBucket.new.remix_source src_channel_id, new_channel_id
+  end
 
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
   # @param sharing [Boolean] Whether the project view event was via share page.
