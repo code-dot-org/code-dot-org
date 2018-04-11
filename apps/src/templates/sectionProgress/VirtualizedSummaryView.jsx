@@ -4,56 +4,11 @@ import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import color from "../../util/color";
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
 
-// TODO(caleybrock): share these styles with detail view
-const styles = {
-  lessonHeading: {
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  lessonNumberHeading: {
-    margin: '9px 16px',
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  multigrid: {
-    border: '1px solid',
-    borderColor: color.border_gray,
-  },
-  bottomLeft: {
-    borderRight: '2px solid',
-    borderColor: color.border_gray,
-  },
-  topLeft: {
-    borderBottom: '2px solid',
-    borderRight: '2px solid',
-    borderColor: color.border_gray,
-    padding: '8px 10px',
-    backgroundColor: color.table_header,
-  },
-  topRight: {
-    borderBottom: '2px solid',
-    borderRight: '1px solid',
-    borderColor: color.border_gray,
-    backgroundColor: color.table_header,
-  },
-  icon: {
-    width: 40,
-    padding: 3,
-    fontSize: 20,
-  },
-  link: {
-    color: color.teal,
-  },
-  summaryCell: {
-    margin: '8px 12px',
-  },
-  nameCell: {
-    margin: '10px',
-  },
-  cell: {
-    borderRight: '1px solid',
-    borderColor: color.border_gray,
-  }
-};
+const SUMMARY_COLUMN_WIDTH = 50;
 
 export default class VirtualizedDetailView extends Component {
 
@@ -70,8 +25,6 @@ export default class VirtualizedDetailView extends Component {
     scrollToRow: 0,
   };
 
-  // TODO(caleybrock): Look at sharing this component with the detail view.
-  // This function and the renderer are very similar to VirtualizedDetailView.
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress} = this.props;
     // Subtract 1 to account for the header row.
@@ -82,7 +35,7 @@ export default class VirtualizedDetailView extends Component {
     // Override default cell style from multigrid
     let cellStyle = {
       ...style,
-      ...styles.cell,
+      ...progressStyles.cell,
     };
     // Alternate background colour of each row
     if (studentStartIndex%2 === 1) {
@@ -93,24 +46,24 @@ export default class VirtualizedDetailView extends Component {
     }
 
     return (
-      <div className={styles.Cell} key={key} style={cellStyle}>
+      <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
-          <span style={styles.lessonHeading}>Lesson</span>
+          <span style={progressStyles.lessonHeading}>
+            {i18n.lesson()}
+          </span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={styles.lessonNumberHeading}>
+          <div style={progressStyles.lessonNumberHeading}>
             {columnIndex}
           </div>
         }
         {(rowIndex >= 1 && columnIndex === 0) &&
-          <div style={styles.nameCell}>
-            <a
-              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
-              style={styles.link}
-            >
-              {section.students[studentStartIndex].name}
-            </a>
-          </div>
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
         }
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
@@ -119,7 +72,7 @@ export default class VirtualizedDetailView extends Component {
             studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
             scriptData={scriptData}
-            style={styles.summaryCell}
+            style={progressStyles.summaryCell}
           />
         }
       </div>
@@ -128,9 +81,9 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     if (index === 0) {
-      return 150;
+      return NAME_COLUMN_WIDTH;
     }
-    return 50;
+    return SUMMARY_COLUMN_WIDTH;
   };
 
   render() {
@@ -139,6 +92,10 @@ export default class VirtualizedDetailView extends Component {
     const rowCount = section.students.length + 1;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
+    // Calculate height based on the number of rows
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    // Use a 'maxHeight' of 680 for when there are many rows
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid
@@ -148,13 +105,13 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={650}
-          rowHeight={40}
+          rowHeight={ROW_HEIGHT}
+          height={tableHeight}
           rowCount={rowCount}
-          style={styles.multigrid}
-          styleBottomLeftGrid={styles.bottomLeft}
-          styleTopLeftGrid={styles.topLeft}
-          styleTopRightGrid={styles.topRight}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
     );

@@ -8326,6 +8326,15 @@ en:
         Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
         Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -8373,6 +8382,15 @@ en:
         The bird will make it to the pig.: The bird will make it to the pig.
         The bird will run into the TNT.: The bird will run into the TNT.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseC_multi_maze_programming8_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will run into the TNT.: The bird will run into the TNT.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
         BB-8 will move only one space: BB-8 will move only one space
@@ -8382,7 +8400,25 @@ en:
         Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
         The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
         What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
+      courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
+        BB-8 will not move.: BB-8 will not move.
+        Correct!: Correct!
+        I don't know: I don't know
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict2:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+        BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+      courseC_multi_starWars_predict2_2018:
         BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
         BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
         BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
@@ -11575,6 +11611,16 @@ en:
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
       grade2_multi_collector_A_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+      grade2_multi_collector_A_predict1_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
