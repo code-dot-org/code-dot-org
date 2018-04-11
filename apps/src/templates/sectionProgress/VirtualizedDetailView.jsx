@@ -8,34 +8,14 @@ import {
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
+import color from "../../util/color";
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
 
-const styles = {
-  cell: {
-    padding: 10,
-    width: '100%',
-  },
-  multigrid: {
-    border: '1px solid #ddd',
-  },
-  bottomLeft: {
-    borderRight: '2px solid #aaa',
-    backgroundColor: '#f7f7f7',
-  },
-  topLeft: {
-    borderBottom: '2px solid #aaa',
-    borderRight: '2px solid #aaa',
-    fontWeight: 'bold',
-  },
-  topRight: {
-    borderBottom: '2px solid #aaa',
-    fontWeight: 'bold',
-  },
-  icon: {
-    width: 40,
-    padding: 3,
-    fontSize: 20,
-  }
-};
+const PROGRESS_BUBBLE_WIDTH = 39;
+// TODO(caleybrock): Calculate the width differently for progress bubbles
+// const UNPLUGGED_BUBBLE_WIDTH = 190;
 
 export default class VirtualizedDetailView extends Component {
 
@@ -60,34 +40,54 @@ export default class VirtualizedDetailView extends Component {
     // Subtract 1 to account for the student name column.
     const stageIdIndex = columnIndex-1;
 
+    // Override default cell style from multigrid
+    let cellStyle = {
+      ...style,
+      ...progressStyles.cell,
+    };
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      cellStyle = {
+        ...cellStyle,
+        backgroundColor: color.background_gray,
+      };
+    }
+
     return (
-      <div className={styles.Cell} key={key} style={style}>
+      <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={styles.cell}>Lesson</span>
+          <span style={progressStyles.lessonHeading}>
+            {i18n.lesson()}
+          </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <span style={styles.cell}>{columnIndex}</span>
+          <div style={progressStyles.lessonNumberHeading}>
+            {columnIndex}
+          </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={styles.cell}>Level Type</span>
+          <span style={progressStyles.lessonHeading}>
+            {i18n.levelType()}
+          </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span style={styles.cell}>
+          <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 className={level.icon ? level.icon: "fas fa-question"}
-                style={styles.icon}
+                style={progressStyles.icon}
                 key={i}
               />
             )}
           </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
-          <span style={styles.cell}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[rowIndex-2].id}/script/${scriptData.id}`}>
-              {section.students[studentStartIndex].name}
-            </a>
-          </span>
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
         )}
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
@@ -104,8 +104,7 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
-    const NAME_COLUMN_WIDTH = 150;
-    const PROGRESS_BUBBLE_WIDTH = 50;
+
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
@@ -121,6 +120,10 @@ export default class VirtualizedDetailView extends Component {
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
+    // Calculate height based on the number of rows
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    // Use a 'maxHeight' of 680 for when there are many rows
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid
@@ -130,13 +133,13 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={520}
-          rowHeight={40}
+          rowHeight={ROW_HEIGHT}
+          height={tableHeight}
           rowCount={rowCount}
-          style={styles.multigrid}
-          styleBottomLeftGrid={styles.bottomLeft}
-          styleTopLeftGrid={styles.topLeft}
-          styleTopRightGrid={styles.topRight}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
     );

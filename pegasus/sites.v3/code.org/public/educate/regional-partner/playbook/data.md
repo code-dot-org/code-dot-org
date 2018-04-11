@@ -50,8 +50,8 @@ The data we gather can be an incredible resource to you, but only if it is robus
 
 **How can you help?**
 
-* Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. You can find sample language to use in your newsletter[here](https://code.org/educate/regional-partner/playbook/data)
+* Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. You can find sample language to use in your newsletter [here](https://docs.google.com/document/d/1O9julhujYWIkg-JAm92B-6havhPLSTI0avnXFXlthsk/edit?usp=sharing)
 * Connect to local organizations in your region who can spread the word on your behalf.
 * Connect us to organizations that may already have this information in your region (accessreport@code.org).
-* Share <a href="http://code.org/yourschool" target=_blank>the page</a> on Twitter or Facebook.
+* Share <a href="http://code.org/yourschool" target=_blank>the page</a> on [Twitter](https://twitter.com/intent/tweet?related=codeorg&text=Does+your+school+teach+computer+science%3F+Expand+computer+science+at+your+school+or+district.+%40codeorg&url=https%3A%2F%2Fcode.org%2Fyourschool) or [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcode.org%2Fyourschool).
 
