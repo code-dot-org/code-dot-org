@@ -7,7 +7,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Name cell',
-        description: `Displays a students name and links to their progress in the section progress table`,
+        description: "Displays a student's name and links to their progress in the section progress table",
         story: () => (
           <SectionProgressNameCell
             name={"StudentName"}
