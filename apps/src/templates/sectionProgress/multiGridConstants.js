@@ -1,5 +1,8 @@
 import color from "../../util/color";
 
+export const ROW_HEIGHT = 40;
+export const NAME_COLUMN_WIDTH = 150;
+
 export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
