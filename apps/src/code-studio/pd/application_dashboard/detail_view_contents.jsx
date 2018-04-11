@@ -20,8 +20,8 @@ import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
-  UnmatchedValue,
-  UnmatchedLabel,
+  UnmatchedPartnerValue,
+  UnmatchedPartnerLabel,
   RegionalPartnerFilterPropType
 } from './constants';
 
@@ -118,8 +118,8 @@ export class DetailViewContents extends React.Component {
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
-      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-      regional_partner_value: this.props.applicationData.regional_partner_value || UnmatchedValue,
+      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedPartnerLabel,
+      regional_partner_value: this.props.applicationData.regional_partner_value || UnmatchedPartnerValue,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
@@ -183,8 +183,8 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_value = selected ? selected.value : UnmatchedValue;
-    const regional_partner_name = selected ? selected.label : UnmatchedLabel;
+    const regional_partner_value = selected ? selected.value : UnmatchedPartnerValue;
+    const regional_partner_name = selected ? selected.label : UnmatchedPartnerLabel;
     this.setState({ regional_partner_name, regional_partner_value});
   };
 
@@ -243,7 +243,7 @@ export class DetailViewContents extends React.Component {
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
           regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
-          additionalOptions={[{label: UnmatchedLabel, value: UnmatchedValue}]}
+          additionalOptions={[{label: UnmatchedPartnerLabel, value: UnmatchedPartnerValue}]}
         />
       );
     }

@@ -22,7 +22,7 @@ export class RegionalPartnerDropdown extends React.Component {
     // Parents can pass in an onChange function; otherwise the dropdown will
     // update the application dashboard's regional partner filter on change
     onChange: PropTypes.func,
-    updateRegionalPartnerFilter: PropTypes.func.isRequired,
+    updateRegionalPartnerFilter: PropTypes.func,
     regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,

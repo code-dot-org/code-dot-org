@@ -22,7 +22,7 @@ const styles = {
 
 class CohortView extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerFilterPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -106,7 +106,7 @@ class CohortView extends React.Component {
           {this.state.applications &&
             <CohortCalculator
               role={this.props.route.role}
-              regionalPartnerValue={this.props.regionalPartnerFilter.value}
+              regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
               accepted={accepted}
               registered={registered}
             />

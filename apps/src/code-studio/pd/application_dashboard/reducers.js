@@ -1,6 +1,6 @@
 import {
-  UnmatchedLabel,
-  UnmatchedValue
+  UnmatchedPartnerLabel,
+  UnmatchedPartnerValue
 } from './constants';
 
 const SET_REGIONAL_PARTNER_FILTER = 'application_dashboard/SET_REGIONAL_PARTNER_FILTER';
@@ -10,7 +10,7 @@ const SET_WORKSHOP_ADMIN_PERMISSION = 'application_dashboard/SET_WORKSHOP_ADMIN_
 const SET_LOCK_APPLICATION_PERMISSION = 'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
-  regionalPartnerFilter: JSON.parse(sessionStorage.getItem("regionalPartnerFilter")) || {value: UnmatchedValue, label: UnmatchedLabel},
+  regionalPartnerFilter: JSON.parse(sessionStorage.getItem("regionalPartnerFilter")) || {value: UnmatchedPartnerValue, label: UnmatchedPartnerLabel},
   regionalPartnerGroup: null,
   regionalPartners: [],
   permissions: {}
