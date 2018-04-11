@@ -9,7 +9,7 @@ import {
   studentLevelProgressPropType
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
@@ -123,7 +123,7 @@ export default class VirtualizedDetailView extends Component {
     // Calculate height based on the number of rows
     const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
-    const tableHeight = Math.min(tableHeightFromRowCount, 680);
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid

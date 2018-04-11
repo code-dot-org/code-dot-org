@@ -2,6 +2,7 @@ import color from "../../util/color";
 
 export const ROW_HEIGHT = 40;
 export const NAME_COLUMN_WIDTH = 150;
+export const MAX_TABLE_SIZE = 680;
 
 export const progressStyles = {
   lessonHeading: {
@@ -44,7 +45,7 @@ export const progressStyles = {
     margin: '8px 12px',
   },
   nameCell: {
-    margin: '10px',
+    margin: 10,
   },
   cell: {
     borderRight: '1px solid',

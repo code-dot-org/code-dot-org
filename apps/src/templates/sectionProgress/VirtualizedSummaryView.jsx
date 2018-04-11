@@ -4,7 +4,7 @@ import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
@@ -25,8 +25,6 @@ export default class VirtualizedDetailView extends Component {
     scrollToRow: 0,
   };
 
-  // TODO(caleybrock): Look at sharing this component with the detail view.
-  // This function and the renderer are very similar to VirtualizedDetailView.
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress} = this.props;
     // Subtract 1 to account for the header row.
@@ -97,7 +95,7 @@ export default class VirtualizedDetailView extends Component {
     // Calculate height based on the number of rows
     const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
-    const tableHeight = Math.min(tableHeightFromRowCount, 680);
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid
