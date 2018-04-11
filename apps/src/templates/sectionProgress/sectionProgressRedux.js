@@ -165,7 +165,7 @@ export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      // TODO(caleybrock): we don't need all these feilds, clean up this data before dispatching
+      // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
       // it to redux.
       dispatch(addScriptData(scriptId, scriptData));
     });
