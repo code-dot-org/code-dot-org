@@ -5,6 +5,8 @@ require 'cdo/git_utils'
 require 'cdo/only_one'
 
 CONTENT_PATHS = 'dashboard pegasus aws/dms'.freeze
+
+# Revert any local changes to these files on levelbuilder
 LEVELBUILDER_OMISSIONS = [
   'dashboard/db/schema_cache.dump',
 ]
@@ -48,9 +50,9 @@ def disallow_state_pdf
 end
 
 def ignore_levelbuilder_omissions
-  branchname = GitUtils.current_branch
-  if branchname == 'levelbuilder'
-    system("git reset -q HEAD -- #{LEVELBUILDER_OMISSIONS.join(' ')}")
+  if GitUtils.current_branch == 'levelbuilder'
+    system("git reset -q HEAD -- '#{LEVELBUILDER_OMISSIONS.join("' '")}'")
+    system("git checkout -q HEAD -- '#{LEVELBUILDER_OMISSIONS.join("' '")}'")
   end
 end
 
