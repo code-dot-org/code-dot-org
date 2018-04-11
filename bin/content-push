@@ -5,6 +5,9 @@ require 'cdo/git_utils'
 require 'cdo/only_one'
 
 CONTENT_PATHS = 'dashboard pegasus aws/dms'.freeze
+LEVELBUILDER_OMISSIONS = [
+  'dashboard/db/schema_cache.dump',
+]
 
 def ask_for_name
   name = ''
@@ -18,6 +21,7 @@ end
 
 def disallow_case_change
   `git add -A #{CONTENT_PATHS}`
+  ignore_levelbuilder_omissions
   `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
     next unless (%r{^R  ([^ ]+) -> ([^ ]+)}.match(line) || %r{^R  ("[^"]+") -> ("[^"]+")}.match(line)) && $1.casecmp($2) == 0
     STDERR.puts "\nAborting due to case-only rename:\n\n    #{line}\n\n"
@@ -40,6 +44,13 @@ def disallow_state_pdf
     STDERR.puts "Please wait 10 minutes and then try again.\n\n"
     `git reset HEAD`
     exit 1
+  end
+end
+
+def ignore_levelbuilder_omissions
+  branchname = GitUtils.current_branch
+  if branchname == 'levelbuilder'
+    system("git reset -q HEAD -- #{LEVELBUILDER_OMISSIONS.join(' ')}")
   end
 end
 
@@ -73,7 +84,8 @@ def commit_changes(name)
 
   branchname = GitUtils.current_branch
   exit 1 unless system("git add -A #{CONTENT_PATHS}")
-  exit 1 unless system("git commit #{CONTENT_PATHS} -m '#{branchname} content changes (-#{name})'")
+  ignore_levelbuilder_omissions
+  exit 1 unless system("git commit -m '#{branchname} content changes (-#{name})'")
   exit 1 unless system("git pull")
   exit 1 unless system("git push")
 end
