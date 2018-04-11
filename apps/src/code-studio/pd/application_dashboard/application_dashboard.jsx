@@ -11,6 +11,7 @@ import applicationDashboardReducers, {
   setWorkshopAdminPermission,
   setLockApplicationPermission,
 } from './reducers';
+import {RegionalPartnerFilterPropType} from './constants';
 import Header from '../components/header';
 import {
   Router,
@@ -51,8 +52,7 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerLabel: PropTypes.string,
-    regionalPartnerValue: PropTypes.number,
+    regionalPartnerFilter: RegionalPartnerFilterPropType,
     regionalPartnerGroup: PropTypes.number,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
@@ -63,9 +63,8 @@ export default class ApplicationDashboard extends React.Component {
   };
 
   componentWillMount() {
-    if (this.props.regionalPartnerLabel && this.props.regionalPartnerValue) {
-      const regionalPartnerFilter = {value: this.props.regionalPartnerValue, label: this.props.regionalPartnerLabel};
-      store.dispatch(setRegionalPartnerFilter(regionalPartnerFilter));
+    if (this.props.regionalPartnerFilter.value && this.props.regionalPartnerFilter.label) {
+      store.dispatch(setRegionalPartnerFilter(this.props.regionalPartnerFilter));
     }
 
     if (this.props.regionalPartnerGroup) {

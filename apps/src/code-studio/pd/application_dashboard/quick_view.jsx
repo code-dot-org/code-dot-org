@@ -40,7 +40,7 @@ const styles = {
 
 export class QuickView extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerFilterPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -89,13 +89,13 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerValue = this.props.regionalPartnerFilter.value) {
+  load(regionalPartnerFilterValue = this.props.regionalPartnerFilter.value) {
     this.abortLoad();
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.getJsonUrl(regionalPartnerValue),
+      url: this.getJsonUrl(regionalPartnerFilterValue),
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -106,15 +106,15 @@ export class QuickView extends React.Component {
     });
   }
 
-  getApiUrl = (format, regionalPartnerValue) => (
-    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerValue))}`
+  getApiUrl = (format, regionalPartnerFilterValue) => (
+    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilterValue))}`
   );
-  getApiParams = (regionalPartnerValue) => ({
+  getApiParams = (regionalPartnerFilterValue) => ({
     role: this.props.route.role,
-    regional_partner_value: regionalPartnerValue
+    regional_partner_value: regionalPartnerFilterValue
   });
-  getJsonUrl = (regionalPartnerValue) => this.getApiUrl('', regionalPartnerValue);
-  getCsvUrl = (regionalPartnerValue) => this.getApiUrl('.csv', regionalPartnerValue);
+  getJsonUrl = (regionalPartnerFilterValue) => this.getApiUrl('', regionalPartnerFilterValue);
+  getCsvUrl = (regionalPartnerFilterValue) => this.getApiUrl('.csv', regionalPartnerFilterValue);
 
   handleDownloadCsvClick = event => {
     window.open(this.getCsvUrl(this.props.regionalPartnerFilter.value || ''));
@@ -141,7 +141,7 @@ export class QuickView extends React.Component {
         {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
-            regionalPartnerValue={this.props.regionalPartnerFilter.value}
+            regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
             accepted={accepted}
             registered={registered}
           />

@@ -77,22 +77,24 @@ exports.ApplicationFinalStatuses = [
  */
 const allPartnersLabel = "All Regional Partners' Applications";
 const allPartnersValue = "all";
-const unmatchedLabel = "No Partner/Unmatched";
-const unmatchedValue = "none";
+const unmatchedPartnerLabel = "No Partner/Unmatched";
+const unmatchedPartnerValue = "none";
 exports.AllPartnersLabel = allPartnersLabel;
 exports.AllPartnersValue = allPartnersValue;
-exports.UnmatchedLabel = unmatchedLabel;
-exports.UnmatchedValue = unmatchedValue;
+exports.UnmatchedPartnerLabel = unmatchedPartnerLabel;
+exports.UnmatchedPartnerValue = unmatchedPartnerValue;
 
 exports.RegionalPartnerDropdownOptions = [
-  {value: unmatchedValue, label: unmatchedLabel},
+  {value: unmatchedPartnerValue, label: unmatchedPartnerLabel},
   {value: allPartnersValue, label: allPartnersLabel}
 ];
 
+const regionalPartnerFilterValuePropType = PropTypes.oneOfType([
+  PropTypes.number, // regional partner id
+  PropTypes.oneOf([allPartnersValue, unmatchedPartnerValue])
+]);
+exports.RegionalPartnerFilterValuePropType = regionalPartnerFilterValuePropType;
 exports.RegionalPartnerFilterPropType = PropTypes.shape({
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
-  label: PropTypes.string.isRequired
+  value: regionalPartnerFilterValuePropType,
+  label: PropTypes.string
 });
