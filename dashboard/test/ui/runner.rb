@@ -587,6 +587,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += ' -t ~@only_mobile' unless browser['mobile']
   arguments += ' -t ~@no_circle' if options.is_circle
   arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
+
+  # Only run in IE during a DTT. always run locally or during circle runs.
+  # Note that you may end up running in more than one browser if you use flags
+  # like [test safari], [test ie] or [test firefox] during a circle run.
+  arguments += ' -t ~@only_one_browser' if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+
   arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
   arguments += ' -t ~@chrome_before_62' if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
   arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
