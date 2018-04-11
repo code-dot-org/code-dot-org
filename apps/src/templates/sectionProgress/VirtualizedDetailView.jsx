@@ -17,6 +17,36 @@ const PROGRESS_BUBBLE_WIDTH = 39;
 // TODO(caleybrock): Calculate the width differently for progress bubbles
 // const UNPLUGGED_BUBBLE_WIDTH = 190;
 
+const styles = {
+  numberHeader: {
+    ...progressStyles.lessonNumberHeading,
+    margin: 0,
+    paddingLeft: 16,
+    width: 39,
+  },
+  lessonHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: 9,
+  },
+  lessonLine: {
+    marginTop: 11,
+    marginRight: -8,
+    // TODO(caleybrock) make the width dynamic with column width
+    width: 100,
+    height: 2,
+    backgroundColor:color.charcoal,
+  },
+  lessonArrow: {
+    border: 'solid ' + color.charcoal,
+    borderWidth: '0 2px 2px 0',
+    display: 'inline-block',
+    padding: 3,
+    transform: 'rotate(-45deg)',
+    WebkitTransform: 'rotate(-45deg)',
+  },
+};
+
 export default class VirtualizedDetailView extends Component {
 
   static propTypes = {
@@ -61,8 +91,15 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <div style={progressStyles.lessonNumberHeading}>
-            {columnIndex}
+          <div style={styles.lessonHeaderContainer}>
+            <div style={styles.numberHeader}>
+              {columnIndex}
+            </div>
+            <div style={styles.lessonLine}>
+            </div>
+            <div>
+              <i style={styles.lessonArrow}></i>
+            </div>
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
