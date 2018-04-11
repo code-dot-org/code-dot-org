@@ -99,12 +99,10 @@ class SourceBucket < BucketHelper
         }
       )
 
-      #Copy file
-      s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
-
-      #Update animations
-      key = s3_path dest_owner_id, dest_channel_id, filename
+      # Update animation manifest
+      key = s3_path src_owner_id, src_channel_id, filename
       src_object = s3.get_object(bucket: @bucket, key: key)
+
       src_body = src_object.body.read
       psj = ProjectSourceJson.new(src_body)
 
@@ -119,7 +117,7 @@ class SourceBucket < BucketHelper
       end
 
       # Write the updated main.json file back to S3 as the latest version
-      response = s3.put_object(bucket: @bucket, key: key, body: psj.to_json)
+      response = s3.put_object(bucket: @bucket, key: dest, body: psj.to_json)
 
       {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
