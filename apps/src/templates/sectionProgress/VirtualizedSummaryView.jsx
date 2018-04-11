@@ -3,6 +3,7 @@ import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
+import LessonSelector from '../sectionProgress/LessonSelector';
 import color from "../../util/color";
 
 // TODO(caleybrock): share these styles with detail view
@@ -13,6 +14,10 @@ export const progressStyles = {
   lessonNumberHeading: {
     margin: '9px 16px',
     fontFamily: '"Gotham 5r", sans-serif',
+  },
+  lessonOfInterest: {
+    fontSize: 20,
+    textShadow: '1px 1px 0px' + color.teal,
   },
   multigrid: {
     border: '1px solid',
@@ -68,6 +73,7 @@ export default class VirtualizedDetailView extends Component {
     fixedRowCount: 1,
     scrollToColumn: 0,
     scrollToRow: 0,
+    lessonOfInterest: 1
   };
 
   // TODO(caleybrock): Look at sharing this component with the detail view.
@@ -92,13 +98,24 @@ export default class VirtualizedDetailView extends Component {
       };
     }
 
+    let lessonNumberStyle = {
+      ...progressStyles.lessonNumberHeading,
+    };
+
+    if (columnIndex === this.state.lessonOfInterest) {
+      lessonNumberStyle = {
+        ...progressStyles.lessonNumberHeading,
+        ...progressStyles.lessonOfInterest
+      };
+    }
+
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
           <span style={progressStyles.lessonHeading}>Lesson</span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={progressStyles.lessonNumberHeading}>
+          <div style={lessonNumberStyle}>
             {columnIndex}
           </div>
         }
@@ -133,6 +150,10 @@ export default class VirtualizedDetailView extends Component {
     return 50;
   };
 
+  onChangeLevel = lessonNumber => {
+    this.setState({lessonOfInterest: lessonNumber});
+  };
+
   render() {
     const {section, scriptData} = this.props;
     // Add 1 to account for the header row
@@ -144,8 +165,14 @@ export default class VirtualizedDetailView extends Component {
     const tableHeightFromRowCount = rowHeight * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, 680);
+    const lessonNumbers =  Array(scriptData.stages.length).fill().map((e,i)=>i+1);
 
     return (
+      <div>
+        <LessonSelector
+          lessonNumbers={lessonNumbers}
+          onChange={this.onChangeLevel}
+        />
         <MultiGrid
           {...this.state}
           cellRenderer={this.cellRenderer}
@@ -154,6 +181,7 @@ export default class VirtualizedDetailView extends Component {
           enableFixedColumnScroll
           enableFixedRowScroll
           height={tableHeight}
+          scrollToColumn={this.state.lessonOfInterest}
           rowHeight={40}
           rowCount={rowCount}
           style={progressStyles.multigrid}
@@ -162,6 +190,7 @@ export default class VirtualizedDetailView extends Component {
           styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
         />
+      </div>
     );
   }
 }

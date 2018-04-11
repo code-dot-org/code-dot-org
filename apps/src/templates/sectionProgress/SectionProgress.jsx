@@ -88,9 +88,6 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
-            <SummaryViewLegend
-              showCSFProgressBox={true}
-            />
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
@@ -104,6 +101,9 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+              />
+              <SummaryViewLegend
+                showCSFProgressBox={true}
               />
             </div>
           }
