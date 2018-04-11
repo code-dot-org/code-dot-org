@@ -80,7 +80,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     if workshop
       survey_report[:this_workshop] = get_score_for_workshops(
-        workshops: [workshop],
+        workshops: Pd::Workshop.where(id: workshop.id),
         include_free_responses: true,
         facilitator_name_filter: facilitator_name
       )
@@ -100,7 +100,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
       facilitators.each do |facilitator|
         survey_report[facilitator.name] = get_score_for_workshops(
-          workshops: workshops.select {|w| w.facilitators.include? facilitator},
+          workshops: Pd::Workshop.where(id: workshops.select {|w| w.facilitators.include? facilitator}.map(&:id)),
           include_free_responses: false,
           facilitator_name_filter: facilitator.name
         )
@@ -120,6 +120,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
     responses = responses.compact.reject {|response| response['consent_b'] == '0'}
+    responses = coerce_old_surveys_to_new_format(responses, workshops)
+
     return {} if responses.count == 0
 
     facilitators = responses.map {|x| x['who_facilitated_ss']}.flatten.uniq
@@ -283,6 +285,25 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
 
     response_summary
+  end
+
+  def coerce_old_surveys_to_new_format(responses, workshops)
+    workshops_to_facilitators = workshops.includes(:facilitators).map {|x| [x.id, x.facilitators.map(&:name)]}.to_h
+    responses.map do |response|
+      if response['who_facilitated_ss']
+        response
+      else
+        facilitators = workshops_to_facilitators[response['workshop_id_i']]
+        response['who_facilitated_ss'] = facilitators
+
+        FACILITATOR_SPECIFIC_QUESTIONS.each do |question|
+          current_answer = response[question.to_s]
+          response[question.to_s] = Hash[facilitators.map {|facilitator| [facilitator, current_answer]}]
+        end
+
+        response
+      end
+    end
   end
 
   private
