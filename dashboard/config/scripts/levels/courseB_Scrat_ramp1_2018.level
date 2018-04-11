@@ -39,8 +39,7 @@
     "parent_level_id": 12153,
     "top_level_procedure_autopopulate": "false",
     "tts_markdown_instructions_override": "To get the bird to the pig, snap the \"East\" block to the bottom of the \"when run\" block, then press run.",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
