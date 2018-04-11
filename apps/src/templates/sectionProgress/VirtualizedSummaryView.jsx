@@ -4,56 +4,9 @@ import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import color from "../../util/color";
-
-// TODO(caleybrock): share these styles with detail view
-export const progressStyles = {
-  lessonHeading: {
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  lessonNumberHeading: {
-    margin: '9px 16px',
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  multigrid: {
-    border: '1px solid',
-    borderColor: color.border_gray,
-  },
-  bottomLeft: {
-    borderRight: '2px solid',
-    borderColor: color.border_gray,
-  },
-  topLeft: {
-    borderBottom: '2px solid',
-    borderRight: '2px solid',
-    borderColor: color.border_gray,
-    padding: '8px 10px',
-    backgroundColor: color.table_header,
-  },
-  topRight: {
-    borderBottom: '2px solid',
-    borderRight: '1px solid',
-    borderColor: color.border_gray,
-    backgroundColor: color.table_header,
-  },
-  icon: {
-    padding: '3px 10px',
-    width: 38,
-    fontSize: 20,
-  },
-  link: {
-    color: color.teal,
-  },
-  summaryCell: {
-    margin: '8px 12px',
-  },
-  nameCell: {
-    margin: '10px',
-  },
-  cell: {
-    borderRight: '1px solid',
-    borderColor: color.border_gray,
-  }
-};
+import {progressStyles} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
 
 export default class VirtualizedDetailView extends Component {
 
@@ -95,7 +48,9 @@ export default class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
-          <span style={progressStyles.lessonHeading}>Lesson</span>
+          <span style={progressStyles.lessonHeading}>
+            {i18n.lesson()}
+          </span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
           <div style={progressStyles.lessonNumberHeading}>
@@ -103,14 +58,12 @@ export default class VirtualizedDetailView extends Component {
           </div>
         }
         {(rowIndex >= 1 && columnIndex === 0) &&
-          <div style={progressStyles.nameCell}>
-            <a
-              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
-              style={progressStyles.link}
-            >
-              {section.students[studentStartIndex].name}
-            </a>
-          </div>
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
         }
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell

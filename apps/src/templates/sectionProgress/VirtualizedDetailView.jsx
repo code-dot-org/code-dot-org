@@ -9,7 +9,9 @@ import {
   studentLevelProgressPropType
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles} from './VirtualizedSummaryView';
+import {progressStyles} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
 
 export default class VirtualizedDetailView extends Component {
 
@@ -51,7 +53,7 @@ export default class VirtualizedDetailView extends Component {
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
           <span style={progressStyles.lessonHeading}>
-            Lesson
+            {i18n.lesson()}
           </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
@@ -61,7 +63,7 @@ export default class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
           <span style={progressStyles.lessonHeading}>
-            Level Type
+            {i18n.levelType()}
           </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
@@ -76,14 +78,12 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
-          <div style={progressStyles.nameCell}>
-            <a
-              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
-              style={progressStyles.link}
-            >
-              {section.students[studentStartIndex].name}
-            </a>
-          </div>
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
         )}
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
