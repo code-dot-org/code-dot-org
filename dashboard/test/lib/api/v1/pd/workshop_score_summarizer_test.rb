@@ -19,7 +19,7 @@ module Api::V1::Pd
       ].flatten.each do |question|
         @happy_teacher_question_responses[question] = get_best_response_for_question(question, PdWorkshopSurvey::OPTIONS)
       end
-      @happy_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
+      @happy_teacher_question_responses[:who_facilitated_ss] = TEST_FACILITATORS
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @happy_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
@@ -42,6 +42,7 @@ module Api::V1::Pd
       ].flatten.each do |question|
         @angry_teacher_question_responses[question] = get_worst_response_for_question(question, PdWorkshopSurvey::OPTIONS)
       end
+      @angry_teacher_question_responses[:who_facilitated_ss] = TEST_FACILITATORS
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @angry_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.first
@@ -71,7 +72,7 @@ module Api::V1::Pd
 
       @workshop = create :pd_workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
       create(:pd_enrollment, workshop: @workshop)
-      @workshops = [@workshop]
+      @workshops = Pd::Workshop.where(id: @workshop.id)
 
       AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
 
@@ -459,9 +460,9 @@ module Api::V1::Pd
       response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(TEST_FACILITATORS)
       responses = [JSON.parse(@happy_teacher_response[:data]), JSON.parse(@angry_teacher_response[:data])]
 
-      responses_per_facilitator = calculate_facilitator_name_frequencies(responses)
+      responses_per_facilitator, workshop_facilitator_mapping = calculate_facilitator_name_frequencies(responses, @workshops)
 
-      generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, nil)
+      generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, nil, has_facilitator_specific_responses: !!responses_per_facilitator, workshop_facilitator_mapping: workshop_facilitator_mapping)
       generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, responses_per_facilitator, nil)
 
       assert_equal(
@@ -597,9 +598,11 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: 'Extremely comfortable',
           how_often_taught_new_things_s: 'All the time',
           things_facilitator_did_well_s: 'Great!',
-          things_facilitator_could_improve_s: 'Great!'
+          things_facilitator_could_improve_s: 'Great!',
         }
       )
+
+      non_facilitator_specific_happy_teacher.delete(:who_facilitated_ss)
 
       non_facilitator_specific_angry_teacher = @angry_teacher_question_responses.merge(
         {
@@ -612,6 +615,8 @@ module Api::V1::Pd
           things_facilitator_could_improve_s: 'Lousy!'
         }
       )
+
+      non_facilitator_specific_angry_teacher.delete(:who_facilitated_ss)
 
       @pegasus_db_stub.stubs(:where).returns(
         [{data: non_facilitator_specific_happy_teacher.to_json}, {data: non_facilitator_specific_angry_teacher.to_json}]
