@@ -7,18 +7,20 @@ import {
 } from './sectionProgressRedux';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import Radium from 'radium';
 
-export default class StudentProgressSummaryCell extends Component {
+class StudentProgressSummaryCell extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
+    style: PropTypes.object,
   };
 
-  studentLevelProgressInStage(studentId, stageId) {
-    const { scriptData, studentLevelProgress } = this.props;
+  studentLevelProgressInStage() {
+    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
 
     // TODO(caleybrock): It's likely more efficient to combine getting
     // a level by lesson and calculating the level statuses at the same time.
@@ -65,26 +67,24 @@ export default class StudentProgressSummaryCell extends Component {
   }
 
   render() {
-    const { studentId, stageId } = this.props;
-
     const totalPixels = 20;
-    const statusCounts = this.studentLevelProgressInStage(studentId, stageId);
+    const statusCounts = this.studentLevelProgressInStage();
     const perfectPixels = Math.floor((statusCounts.completed / statusCounts.total) * totalPixels);
     const imperfectPixels = Math.floor((statusCounts.imperfect / statusCounts.total) * totalPixels);
     const incompletePixels = 20 - perfectPixels - imperfectPixels;
     const started = (statusCounts.attempted > 0) || (statusCounts.incomplete !== statusCounts.total);
 
     return (
-      <div>
-        <div>
-          <ProgressBox
-            started={started}
-            incomplete={incompletePixels}
-            imperfect={imperfectPixels}
-            perfect={perfectPixels}
-          />
-        </div>
+      <div style={this.props.style}>
+        <ProgressBox
+          started={started}
+          incomplete={incompletePixels}
+          imperfect={imperfectPixels}
+          perfect={perfectPixels}
+        />
       </div>
     );
   }
 }
+
+export default Radium(StudentProgressSummaryCell);

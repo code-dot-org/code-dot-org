@@ -11,6 +11,9 @@ const styles = {
   bubbles: {
     overflowX: 'scroll',
     whiteSpace: 'nowrap',
+  },
+  cell: {
+    padding: '1px 4px'
   }
 };
 
@@ -23,8 +26,8 @@ export default class StudentProgressDetailCell extends Component {
     studentLevelProgress: studentLevelProgressPropType.isRequired,
   };
 
-  studentLevelProgressInStage(studentId, stageId) {
-    const { scriptData, studentLevelProgress } = this.props;
+  studentLevelProgressInStage() {
+    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
 
     // TODO(caleybrock): Modify function call to not require
     // currentLevelId since we set it to null and don't need it here.
@@ -37,13 +40,12 @@ export default class StudentProgressDetailCell extends Component {
   }
 
   render() {
-    const { studentId, stageId } = this.props;
 
     return (
-      <div>
+      <div style={styles.cell}>
         <div style={styles.bubbles}>
           <ProgressBubbleSet
-            levels={this.studentLevelProgressInStage(studentId, stageId)}
+            levels={this.studentLevelProgressInStage()}
             disabled={false}
           />
         </div>

@@ -9,7 +9,7 @@ module Api::V1::Pd
     # GET /api/v1/pd/workshops/:id/workshop_survey_report
     def workshop_survey_report
       all_my_workshops = params[:organizer_view] ? Pd::Workshop.organized_by(current_user) : Pd::Workshop.facilitated_by(current_user)
-      all_my_completed_workshops = all_my_workshops.where(course: @workshop.course).in_state(Pd::Workshop::STATE_ENDED)
+      all_my_completed_workshops = all_my_workshops.where(course: @workshop.course).in_state(Pd::Workshop::STATE_ENDED).exclude_summer
 
       survey_report = generate_summary_report(
         workshop: @workshop,

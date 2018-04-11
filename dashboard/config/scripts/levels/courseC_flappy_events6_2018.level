@@ -1,0 +1,120 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2018-04-11T16:43:55.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "obstacles": "true",
+    "ground": "true",
+    "score": "true",
+    "goal": "{}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore > 0;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore === 0;\r\n\t      }",
+    "instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "default_flap": "NORMAL",
+    "shareable": "false",
+    "markdown_instructions": "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \r\n\r\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try connecting the `flap a ____ amount` block to the `when click` event.\",\"hint_id\":\"courseC_flappy_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/678b9515d180327ba1c2f9f1c036d81a/courseC_flappy_events6.mp3\"}]",
+    "project_template_level_name": "courseC_flappy_events_template_2018",
+    "parent_level_id": 9520,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 18:40:27 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:40:54 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 20:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:04:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:38:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:39:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:40:24 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:42:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed"/>
+          </next>
+        </block>
+        <block type="flappy_whenEnterObstacle" deletable="false">
+          <next>
+            <block type="flappy_incrementPlayerScore"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap"/>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false"/>
+        <block type="flappy_whenCollideGround" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="flappy_flap_height">
+          <title name="VALUE">Flappy.FlapHeight.LARGE</title>
+        </block>
+        <block type="flappy_endGame"/>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_playSound">
+          <title name="VALUE">"sfx_wing"</title>
+        </block>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="flappy_flap_height">
+              <title name="VALUE">random</title>
+              <next>
+                <block type="flappy_flap_height">
+                  <title name="VALUE">Flappy.FlapHeight.VERY_SMALL</title>
+                  <next>
+                    <block type="flappy_flap_height">
+                      <title name="VALUE">Flappy.FlapHeight.SMALL</title>
+                      <next>
+                        <block type="flappy_flap_height">
+                          <title name="VALUE">Flappy.FlapHeight.LARGE</title>
+                          <next>
+                            <block type="flappy_flap_height">
+                              <title name="VALUE">Flappy.FlapHeight.VERY_LARGE</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

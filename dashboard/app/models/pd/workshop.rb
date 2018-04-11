@@ -92,6 +92,10 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
+  def self.exclude_summer
+    where.not(subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_TEACHER_CON])
+  end
+
   # scopes to workshops managed by the user, which means the user is any of:
   # - the organizer
   # - a facilitator
