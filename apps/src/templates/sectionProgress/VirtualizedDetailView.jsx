@@ -9,7 +9,13 @@ import {
   studentLevelProgressPropType
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles} from './VirtualizedSummaryView';
+import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
+
+const PROGRESS_BUBBLE_WIDTH = 39;
+// TODO(caleybrock): Calculate the width differently for progress bubbles
+// const UNPLUGGED_BUBBLE_WIDTH = 190;
 
 export default class VirtualizedDetailView extends Component {
 
@@ -51,7 +57,7 @@ export default class VirtualizedDetailView extends Component {
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
           <span style={progressStyles.lessonHeading}>
-            Lesson
+            {i18n.lesson()}
           </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
@@ -61,7 +67,7 @@ export default class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
           <span style={progressStyles.lessonHeading}>
-            Level Type
+            {i18n.levelType()}
           </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
@@ -76,14 +82,12 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
-          <div style={progressStyles.nameCell}>
-            <a
-              href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[studentStartIndex].id}/script/${scriptData.id}`}
-              style={progressStyles.link}
-            >
-              {section.students[studentStartIndex].name}
-            </a>
-          </div>
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
         )}
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
@@ -100,10 +104,7 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
-    const NAME_COLUMN_WIDTH = 150;
-    const PROGRESS_BUBBLE_WIDTH = 39;
-    // TODO(caleybrock): Calculate the width differently for progress bubbles
-    // const UNPLUGGED_BUBBLE_WIDTH = 100;
+
     // Subtract 1 to account for the student name column.
     const stageIdIndex = index-1;
 
@@ -119,11 +120,10 @@ export default class VirtualizedDetailView extends Component {
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
     const columnCount = scriptData.stages.length + 1;
-    const rowHeight = 40;
     // Calculate height based on the number of rows
-    const tableHeightFromRowCount = rowHeight * rowCount;
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
-    const tableHeight = Math.min(tableHeightFromRowCount, 680);
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid
@@ -133,8 +133,8 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
+          rowHeight={ROW_HEIGHT}
           height={tableHeight}
-          rowHeight={40}
           rowCount={rowCount}
           style={progressStyles.multigrid}
           styleBottomLeftGrid={progressStyles.bottomLeft}
