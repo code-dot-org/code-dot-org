@@ -584,42 +584,13 @@ GameLab.prototype.reset = function () {
   }
 };
 
-GameLab.prototype.runSetupCode = _.debounce(function () {
+GameLab.prototype.runSetupCode = function () {
   if (getStore().getState().runState.isRunning) {
     return;
   }
-  const visualizationCanvas = document.getElementById('defaultCanvas0');
-  if (visualizationCanvas) {
-    // Cover the playspace with a copy of itself while rerunning the setup code
-    // to avoid flickering
-    const duplicateCanvas = document.createElement('canvas');
-    const visualizationRect = visualizationCanvas.getBoundingClientRect();
-    duplicateCanvas.width = visualizationRect.width;
-    duplicateCanvas.height = visualizationRect.height;
-    Object.assign(duplicateCanvas.style, {
-      position: 'absolute',
-      top: visualizationRect.top + 'px',
-      left: visualizationRect.left + 'px',
-      zIndex: 1,
-    });
-    const duplicateCtx = duplicateCanvas.getContext('2d');
-    duplicateCtx.drawImage(visualizationCanvas,
-      0, 0,
-      visualizationRect.width, visualizationRect.height
-    );
-
-    document.body.appendChild(duplicateCanvas);
-    setTimeout(() => document.body.removeChild(duplicateCanvas), 0);
-
-    if (!document.getElementById('p5_loading')) {
-      // Add a fake loading element to hide the "Loading..." text
-      const loadingElement = document.createElement('span');
-      loadingElement.id = 'p5_loading';
-      document.body.appendChild(loadingElement);
-    }
   }
-  this.execute(false /* keep Ticking */);
-}, 50, {leading: true, maxWait: 250});
+  this.execute(false /* keepTicking */);
+};
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
