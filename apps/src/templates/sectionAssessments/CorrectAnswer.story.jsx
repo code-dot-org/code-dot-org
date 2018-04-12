@@ -8,7 +8,7 @@ export default storybook => {
       {
         name:'CorrectAnswer',
         story: () => (
-          <CorrectAnswer />
+          <CorrectAnswer/>
         )
       },
     ]);
