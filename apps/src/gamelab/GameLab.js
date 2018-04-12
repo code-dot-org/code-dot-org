@@ -172,6 +172,9 @@ GameLab.prototype.init = function (config) {
   this.skin.failureAvatar = null;
   this.level = config.level;
 
+  this.shouldAutoRunSetup = config.level.autoRunSetup &&
+    !this.level.edit_blocks;
+
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
     this.startAnimations = defaultSprites;
@@ -282,7 +285,7 @@ GameLab.prototype.init = function (config) {
 
     this.setCrosshairCursorForPlaySpace();
 
-    if (this.level.autoRunSetup && !config.level.edit_blocks) {
+    if (this.shouldAutoRunSetup) {
       if (this.studioApp_.isUsingBlockly()) {
         const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
         blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
@@ -521,7 +524,7 @@ GameLab.prototype.startTickTimer = function () {
  *     implementation.
  */
 GameLab.prototype.resetHandler = function (ignore) {
-  if (this.level.autoRunSetup && !this.level.edit_blocks) {
+  if (this.shouldAutoRunSetup) {
     this.runSetupCode();
   } else {
     this.reset();
