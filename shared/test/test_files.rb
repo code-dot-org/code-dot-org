@@ -586,6 +586,104 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
+  def test_adult_thumbnail
+    ImageModeration.stubs(:rate_image).returns :adult
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-adult-thumbnail'
+
+    # Intentional: Not yet checking/blocking adult content on upload.
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
+
+    # Responds with a 404, like we do for flagged content
+    assert not_found?
+
+    # Includes content rating metadata in the response that the client can read
+    assert_equal 'adult', last_response['x-cdo-content-rating']
+
+    # Response is cached for an hour
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+    # Flags the project as abusive.
+    get "/v3/channels/#{@channel_id}/abuse"
+    assert successful?
+    assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
+
+    # Flags the asset as abusive
+    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = asset[:metadata]
+    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_operator 10, :<=, asset_abuse
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
+  def test_racy_thumbnail
+    ImageModeration.stubs(:rate_image).returns :racy
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-racy-thumbnail'
+
+    # Intentional: Not yet checking/blocking adult content on upload.
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
+
+    # Responds with a 404, like we do for flagged content
+    assert not_found?
+
+    # Includes content rating metadata in the response that the client can read
+    assert_equal 'racy', last_response['x-cdo-content-rating']
+
+    # Response is cached for an hour
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+    # Flags the project as abusive.
+    get "/v3/channels/#{@channel_id}/abuse"
+    assert successful?
+    assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
+
+    # Flags the asset as abusive
+    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = asset[:metadata]
+    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_operator 10, :<=, asset_abuse
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
+  def test_everyone_thumbnail
+    ImageModeration.stubs(:rate_image).returns :everyone
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-everyone-thumbnail'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
+    assert successful?
+    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+    assert_equal thumbnail_body, last_response.body
+
+    # Does not flag the project as abusive
+    get "/v3/channels/#{@channel_id}/abuse"
+    assert successful?
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+
+    # Does not flag the asset as abusive
+    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = asset[:metadata]
+    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_equal 0, asset_abuse
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
   private
 
   def delete_all_files(bucket)
