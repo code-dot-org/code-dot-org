@@ -6,6 +6,7 @@ import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
 import SmallChevronLink from '../SmallChevronLink';
+import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
@@ -54,9 +55,12 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
     studentLevelProgress: studentLevelProgressPropType,
-
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
+  };
+
+  state = {
+    lessonOfInterest: 1
   };
 
   componentDidMount() {
@@ -67,6 +71,10 @@ class SectionProgress extends Component {
     this.props.setScriptId(scriptId);
     // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
+  };
+
+  onChangeLevel = lessonNumber => {
+    this.setState({lessonOfInterest: lessonNumber});
   };
 
   render() {
@@ -81,6 +89,9 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && studentLevelProgress;
 
+    const lessonNumbers = scriptData ?
+      Array(scriptData.stages.length).fill().map((e,i)=>i+1) : [];
+
     return (
       <div>
         <div>
@@ -92,6 +103,10 @@ class SectionProgress extends Component {
               validScripts={validScripts}
               scriptId={scriptId}
               onChange={this.onChangeScript}
+            />
+            <LessonSelector
+              lessonNumbers={lessonNumbers}
+              onChange={this.onChangeLevel}
             />
           </div>
           <div style={styles.viewToggleContainer}>
@@ -113,6 +128,7 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+                lessonOfInterest={this.state.lessonOfInterest}
               />
               <SummaryViewLegend
                 showCSFProgressBox={true}
@@ -125,6 +141,7 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+                lessonOfInterest={this.state.lessonOfInterest}
               />
             </div>
           }
