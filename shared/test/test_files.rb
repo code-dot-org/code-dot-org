@@ -400,6 +400,7 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_metadata_cached
+    ImageModeration.stubs(:rate_image).returns :everyone
     thumbnail_filename = '.metadata/thumbnail.png'
     thumbnail_body = 'stub-thumbnail-contents'
 
