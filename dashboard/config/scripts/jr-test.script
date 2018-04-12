@@ -21,6 +21,12 @@ level 'behaviors pet test'
 level 'behaviors pet test 2'
 level 'behaviors pet test 3'
 
+stage 'Virtual Pet - Forever'
+level 'loop pet test'
+level 'loop pet test 2'
+level 'loop pet test 3'
+level 'loop pet test 4'
+
 stage 'Fish Tank'
 level 'Fish Tank 1'
 level 'Fish Tank 2'

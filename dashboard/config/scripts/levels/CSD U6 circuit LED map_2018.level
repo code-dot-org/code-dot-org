@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2018-04-12T20:53:02.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Circuits and LEDs",
+    "teacher_markdown": "#### Learning More About LEDs\r\n\r\nWe include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer](https://learn.adafruit.com/all-about-leds/overview).",
+    "reference": "/docs/csd/circuit_led/index.html",
+    "parent_level_id": 10658,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-06 00:51:07 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>
