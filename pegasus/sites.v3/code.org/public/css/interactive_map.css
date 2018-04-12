@@ -24,6 +24,7 @@
 
 #infobox button {
   margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 #infobox b {
@@ -49,9 +50,8 @@
 }
 
 .state-button button {
-  height: 80px;
+  height: 60px;
   white-space: initial;
-  padding-top: 0px;
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
@@ -60,8 +60,14 @@
   text-decoration: underline;
 }
 
+.icon-facts {
+  display: inline-block;
+}
+
 .icon-fact {
   margin-bottom: 10px;
+  display: block;
+  width: 270px;
 }
 
 .fact i {
@@ -72,10 +78,10 @@
 
 .fact .fact-text {
   display: inline-block;
-  width: 80%;
   text-align: left;
   vertical-align: middle;
   padding-left: 10px;
+  width: 80%;
 }
 
 .fact.subfact {
@@ -86,6 +92,22 @@
   color: white;
 }
 
+#state-title {
+  font-family: 'Gotham 7r', sans-serif;
+  color: #0094a3;
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.figure {
+  font-size:20px;
+}
+
 #sources {
   clear: both;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  opacity: 0.8;
+  color: #BCC2C6;
 }

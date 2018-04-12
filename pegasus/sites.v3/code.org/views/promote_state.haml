@@ -26,46 +26,47 @@
     = succeed "):" do
       %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
 
-.fact.icon-fact
-  - if data[:pd_funding_s] == "No"
-    %i.fa.fa-times-circle
-    .fact-text
-      No dedicated state funding for CS PD
-  - elsif data[:pd_funding_s] == "Yes"
-    %i.fa.fa-check-circle
-    .fact-text
-      Dedicated state funding for CS PD
-  - elsif data[:pd_funding_s] == "Other"
-    %i.fa.fa-check-circle
-    .fact-text
-      = data[:pd_funding_exception_s]
-.fact.icon-fact
-  - if data[:require_hs_s] == "No"
-    %i.fa.fa-times-circle
-    .fact-text
-      Does not require all high schools to offer CS
-  - elsif data[:require_hs_s] == "Yes"
-    %i.fa.fa-check-circle
-    .fact-text
-      Requires all high schools to offer CS
-  - elsif data[:require_hs_s] == "Other"
-    %i.fa.fa-check-circle
-    .fact-text
-      = data[:require_hs_exception_s]
+.icon-facts
+  .fact.icon-fact
+    - if data[:pd_funding_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        No dedicated state funding for CS PD
+    - elsif data[:pd_funding_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Dedicated state funding for CS PD
+    - elsif data[:pd_funding_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:pd_funding_exception_s]
+  .fact.icon-fact
+    - if data[:require_hs_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        Does not require all high schools to offer CS
+    - elsif data[:require_hs_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Requires all high schools to offer CS
+    - elsif data[:require_hs_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:require_hs_exception_s]
 
-.fact.icon-fact
-  - if data[:cs_standards_s] == "No"
-    %i.fa.fa-times-circle
-    .fact-text
-      No K-12 CS curriculum standards
-  - elsif data[:cs_standards_s] == "Yes"
-    %i.fa.fa-check-circle
-    .fact-text
-      K-12 CS curriculum standards
-  - elsif data[:cs_standards_s] == "Other"
-    %i.fa.fa-check-circle
-    .fact-text
-      = data[:cs_standards_exception_s]
+  .fact.icon-fact
+    - if data[:cs_standards_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        No K-12 CS curriculum standards
+    - elsif data[:cs_standards_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        K-12 CS curriculum standards
+    - elsif data[:cs_standards_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:cs_standards_exception_s]
 
 %p.fact{style: "margin-top: 5px; margin-bottom: 0px; text-align: left"}
   #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; AP Stats
@@ -127,23 +128,3 @@
     %a{href: "https://research.collegeboard.org/programs/ap/data", style: "color:#BCC2C6", target: '_blank'} College Board
   =succeed "." do
     %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
-
-:css
-  #state-title {
-    color: rgb(185,191,21);
-    text-shadow: 1px 1px rgba(0, 0, 0, .5);
-    font-size:36px;
-    line-height: 36px;
-    font-weight: bold;
-    text-align:center;
-  }
-  .figure {
-    font-size:20px;
-  }
-  #sources {
-    font-size: 12px;
-    line-height: 12px;
-    text-align: center;
-    opacity: 0.8;
-    color: #BCC2C6;
-  }
