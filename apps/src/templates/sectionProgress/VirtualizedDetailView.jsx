@@ -116,7 +116,7 @@ class VirtualizedDetailView extends Component {
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                icon={level.icon ? level.icon.replace('fa-', ''): "desktop"}
+                icon={level.icon ? level.icon.replace('fa-', '') : "desktop"}
                 style={progressStyles.icon}
                 key={i}
               />
