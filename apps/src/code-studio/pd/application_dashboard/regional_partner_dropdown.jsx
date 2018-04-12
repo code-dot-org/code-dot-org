@@ -19,10 +19,7 @@ const styles = {
 
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
-    // Parents can pass in an onChange function; otherwise the dropdown will
-    // update the application dashboard's regional partner filter on change
     onChange: PropTypes.func,
-    updateRegionalPartnerFilter: PropTypes.func,
     regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
@@ -38,14 +35,6 @@ export class RegionalPartnerDropdown extends React.Component {
     }
   }
 
-  onChange = (selected) => {
-    if (this.props.onChange) {
-      this.props.onChange(selected);
-    } else {
-      this.props.updateRegionalPartnerFilter(selected);
-    }
-  };
-
   render() {
     return (
       <FormGroup>
@@ -53,7 +42,7 @@ export class RegionalPartnerDropdown extends React.Component {
         <Select
           clearable={false}
           value={this.props.regionalPartnerFilter.value}
-          onChange={this.onChange}
+          onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}
           style={styles.select}
@@ -69,7 +58,7 @@ export default connect(
     regionalPartners: state.regionalPartners,
   }),
   dispatch => ({
-    updateRegionalPartnerFilter(selected) {
+    onChange(selected) {
       dispatch(setRegionalPartnerFilter(selected));
     }
   })

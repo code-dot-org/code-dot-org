@@ -13,7 +13,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import { RegionalPartnerDropdown } from './regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
@@ -21,8 +21,7 @@ import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
   UnmatchedPartnerValue,
-  UnmatchedPartnerLabel,
-  RegionalPartnerFilterPropType
+  UnmatchedPartnerLabel
 } from './constants';
 
 const styles = {
@@ -75,7 +74,7 @@ export class DetailViewContents extends React.Component {
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
-      regional_partner_value: PropTypes.number,
+      regional_partner_id: PropTypes.number,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
@@ -98,7 +97,10 @@ export class DetailViewContents extends React.Component {
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool,
     regionalPartnerGroup: PropTypes.number,
-    regionalPartnerFilter: RegionalPartnerFilterPropType
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    }))
   };
 
   static contextTypes = {
@@ -119,7 +121,7 @@ export class DetailViewContents extends React.Component {
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
       regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedPartnerLabel,
-      regional_partner_value: this.props.applicationData.regional_partner_value || UnmatchedPartnerValue,
+      regional_partner_id: this.props.applicationData.regional_partner_id || UnmatchedPartnerValue,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
@@ -183,9 +185,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_value = selected ? selected.value : UnmatchedPartnerValue;
+    const regional_partner_id = selected ? selected.value : UnmatchedPartnerValue;
     const regional_partner_name = selected ? selected.label : UnmatchedPartnerLabel;
-    this.setState({ regional_partner_name, regional_partner_value});
+    this.setState({ regional_partner_name, regional_partner_id});
   };
 
   handleSaveClick = () => {
@@ -193,7 +195,7 @@ export class DetailViewContents extends React.Component {
       'status',
       'locked',
       'notes',
-      'regional_partner_value',
+      'regional_partner_id',
       'pd_workshop_id'
     ];
 
@@ -242,7 +244,8 @@ export class DetailViewContents extends React.Component {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
-          regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
+          regionalPartnerFilter={{value: this.state.regional_partner_id, label: this.state.regional_partner_name}}
+          regionalPartners={this.props.regionalPartners}
           additionalOptions={[{label: UnmatchedPartnerLabel, value: UnmatchedPartnerValue}]}
         />
       );
@@ -522,8 +525,8 @@ export class DetailViewContents extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerFilter: state.regionalPartnerFilter,
   regionalPartnerGroup: state.regionalPartnerGroup,
+  regionalPartners: state.regionalPartners,
   canLock: state.permissions.lockApplication,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(DetailViewContents);
