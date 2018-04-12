@@ -468,6 +468,7 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5 = null;
     this.p5decrementPreload = null;
     this.gameLabWorld = null;
+    this.running = false;
   }
 
   // Important to reset these after this.p5 has been removed above
@@ -500,6 +501,7 @@ GameLabP5.prototype.drawDebugSpriteColliders = function () {
  * Instantiate a new p5 and start execution
  */
 GameLabP5.prototype.startExecution = function () {
+  this.running = true;
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
       this.p5.useQuadTree(false);
