@@ -8,7 +8,7 @@ const styles = {
   }
 };
 
-export default class CorrectAnswer extends Component {
+export default class CorrectAnswerIcon extends Component {
   render() {
     return (
       <div>
