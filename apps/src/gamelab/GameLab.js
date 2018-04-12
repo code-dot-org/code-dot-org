@@ -585,11 +585,16 @@ GameLab.prototype.reset = function () {
 };
 
 GameLab.prototype.runSetupCode = function () {
-  if (getStore().getState().runState.isRunning) {
+  if (getStore().getState().runState.isRunning ||
+      !this.areAnimationsReady_()) {
     return;
   }
-  }
-  this.execute(false /* keepTicking */);
+  this.gameLabP5.p5.allSprites.removeSprites();
+  this.consoleLogger_.detach();
+  this.JSInterpreter.deinitialize();
+  this.initInterpreter();
+  this.onP5Setup();
+  this.gameLabP5.p5.redraw();
 };
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
