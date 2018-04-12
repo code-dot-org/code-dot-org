@@ -92,6 +92,8 @@ class SectionProgress extends Component {
     const lessonNumbers = scriptData ?
       Array(scriptData.stages.length).fill().map((e,i)=>i+1) : [];
 
+    const linkToOverview = scriptData ? scriptData.path : null;
+
     return (
       <div>
         <div>
@@ -113,11 +115,13 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.viewCourseLink}>
-            <SmallChevronLink
-              link={'/foo'}
-              linkText={i18n.viewCourse()}
-              isRtl={false}
-            />
+            {linkToOverview &&
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            }
           </div>
         </div>
         <div style={{clear: 'both'}}>

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -6,24 +7,54 @@ import styleConstants from '../../styleConstants';
 import {
   sectionDataPropType,
   scriptDataPropType,
-  studentLevelProgressPropType
+  studentLevelProgressPropType,
+  getColumnWidthsForDetailView
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE, PROGRESS_BUBBLE_WIDTH} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
-const PROGRESS_BUBBLE_WIDTH = 39;
-// TODO(caleybrock): Calculate the width differently for progress bubbles
-// const UNPLUGGED_BUBBLE_WIDTH = 190;
+const ARROW_PADDING = 60;
 
-export default class VirtualizedDetailView extends Component {
+const styles = {
+  numberHeader: {
+    ...progressStyles.lessonNumberHeading,
+    margin: 0,
+    paddingLeft: 16,
+    width: 39,
+  },
+  lessonHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: 9,
+  },
+  // Arrow ---> built with CSS requires negative margin
+  lessonLine: {
+    marginTop: 11,
+    marginRight: -8,
+    width: 100,
+    height: 2,
+    backgroundColor:color.charcoal,
+  },
+  lessonArrow: {
+    border: 'solid ' + color.charcoal,
+    borderWidth: '0 2px 2px 0',
+    display: 'inline-block',
+    padding: 3,
+    transform: 'rotate(-45deg)',
+    WebkitTransform: 'rotate(-45deg)',
+  },
+};
+
+class VirtualizedDetailView extends Component {
 
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired
+    lessonOfInterest: PropTypes.number.isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   state = {
@@ -34,7 +65,7 @@ export default class VirtualizedDetailView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, studentLevelProgress} = this.props;
+    const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -54,17 +85,6 @@ export default class VirtualizedDetailView extends Component {
       };
     }
 
-    let lessonNumberStyle = {
-      ...progressStyles.lessonNumberHeading,
-    };
-
-    if (columnIndex === this.state.lessonOfInterest) {
-      lessonNumberStyle = {
-        ...progressStyles.lessonNumberHeading,
-        ...progressStyles.lessonOfInterest
-      };
-    }
-
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
@@ -73,8 +93,19 @@ export default class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
-          <div style={lessonNumberStyle}>
-            {columnIndex}
+          <div style={styles.lessonHeaderContainer}>
+            <div style={styles.numberHeader}>
+              {columnIndex}
+            </div>
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>
+              </div>
+            }
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div>
+                <i style={styles.lessonArrow}></i>
+              </div>
+            }
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
@@ -86,7 +117,7 @@ export default class VirtualizedDetailView extends Component {
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                className={level.icon ? level.icon: "fas fa-question"}
+                icon={level.icon ? level.icon.replace('fa-', ''): "desktop"}
                 style={progressStyles.icon}
                 key={i}
               />
@@ -115,15 +146,7 @@ export default class VirtualizedDetailView extends Component {
   };
 
   getColumnWidth = ({index}) => {
-    const {scriptData} = this.props;
-
-    // Subtract 1 to account for the student name column.
-    const stageIdIndex = index-1;
-
-    if (index === 0) {
-      return NAME_COLUMN_WIDTH;
-    }
-    return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
+    return this.props.columnWidths[index] || 0;
   };
 
   render() {
@@ -160,3 +183,9 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 }
+
+export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
+
+export default connect(state => ({
+  columnWidths: getColumnWidthsForDetailView(state),
+}))(VirtualizedDetailView);
