@@ -7687,6 +7687,8 @@ en:
               name: Loops in Ice Age
             Sequencing with Scrat:
               name: Sequencing with Scrat
+            Move It, Move It:
+              name: Move It, Move It
         coursed-2018:
           title: New Course D Script
           description: ''
@@ -7773,6 +7775,8 @@ en:
               name: Using Forever Loops
             Virtual Pet - Behaviors:
               name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
           title: ''
           description_audience: ''
           description_short: ''
