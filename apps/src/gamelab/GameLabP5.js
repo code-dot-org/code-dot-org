@@ -913,23 +913,28 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
  * @param {AnimationList} animationList
+ *
+ * @return {Promise} promise that resolves when all animations are loaded
  */
 GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationList.orderedKeys.forEach(key => {
+  return Promise.all(animationList.orderedKeys.map(key => {
     const props = animationList.propsByKey[key];
     const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
-    const image = this.p5.loadImage(props.dataURI, () => {
-      const spriteSheet = this.p5.loadSpriteSheet(
-          image,
-          props.frameSize.x,
-          props.frameSize.y,
-          frameCount
-      );
-      this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
-      this.p5.projectAnimations[props.name].looping = props.looping;
-      this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+    return new Promise(resolve => {
+      const image = this.p5.loadImage(props.dataURI, () => {
+        const spriteSheet = this.p5.loadSpriteSheet(
+            image,
+            props.frameSize.x,
+            props.frameSize.y,
+            frameCount
+        );
+        this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+        this.p5.projectAnimations[props.name].looping = props.looping;
+        this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+        resolve();
+      });
     });
-  });
+  }));
 };
