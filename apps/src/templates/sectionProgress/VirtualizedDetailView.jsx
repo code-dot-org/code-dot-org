@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -6,16 +7,13 @@ import styleConstants from '../../styleConstants';
 import {
   sectionDataPropType,
   scriptDataPropType,
-  studentLevelProgressPropType
+  studentLevelProgressPropType,
+  getColumnWidthsForDetailView
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
-
-const PROGRESS_BUBBLE_WIDTH = 39;
-// TODO(caleybrock): Calculate the width differently for progress bubbles
-// const UNPLUGGED_BUBBLE_WIDTH = 190;
 
 const styles = {
   numberHeader: {
@@ -47,12 +45,13 @@ const styles = {
   },
 };
 
-export default class VirtualizedDetailView extends Component {
+class VirtualizedDetailView extends Component {
 
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   state = {
@@ -140,15 +139,7 @@ export default class VirtualizedDetailView extends Component {
   };
 
   getColumnWidth = ({index}) => {
-    const {scriptData} = this.props;
-
-    // Subtract 1 to account for the student name column.
-    const stageIdIndex = index-1;
-
-    if (index === 0) {
-      return NAME_COLUMN_WIDTH;
-    }
-    return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
+    return this.props.columnWidths[index] || 0;
   };
 
   render() {
@@ -182,3 +173,9 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 }
+
+export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
+
+export default connect(state => ({
+  columnWidths: getColumnWidthsForDetailView(state),
+}))(VirtualizedDetailView);
