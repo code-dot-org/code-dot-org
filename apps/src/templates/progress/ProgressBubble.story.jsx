@@ -61,6 +61,7 @@ export default storybook => {
               icon: "fa-document"
             }}
             hideToolTips={true}
+            disabled={false}
           />
         )
       }])
