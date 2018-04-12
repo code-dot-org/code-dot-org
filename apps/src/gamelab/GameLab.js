@@ -591,9 +591,8 @@ GameLab.prototype.runSetupCode = function () {
     return;
   }
   this.gameLabP5.p5.allSprites.removeSprites();
-  this.consoleLogger_.detach();
   this.JSInterpreter.deinitialize();
-  this.initInterpreter();
+  this.initInterpreter(false /* attachDebugger */);
   this.onP5Setup();
   this.gameLabP5.p5.redraw();
 };
@@ -889,7 +888,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
   }
 };
 
-GameLab.prototype.initInterpreter = function () {
+GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   var self = this;
   function injectGamelabGlobals() {
@@ -916,7 +915,9 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
+  if (attachDebugger) {
+    getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
+  }
   let code = this.studioApp_.getCode();
   if (this.level.customHelperLibrary) {
     code = this.level.customHelperLibrary + code;
