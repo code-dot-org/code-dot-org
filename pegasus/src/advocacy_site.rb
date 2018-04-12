@@ -70,21 +70,22 @@ class AdvocacySite
         links:
           [
             {
-              text_actual: "9 ideas to make CS fundamental",
+              text_actual: "Our state policy agenda",
               url: CDO.code_org_url("/files/Making_CS_Fundamental.pdf")
             },
             {
-              text_actual: "Using Perkins for CS",
+              text_actual: "Growing K-12 CS using the Perkins Act",
               url: CDO.code_org_url("/files/RethinkingPerkins.pdf")
-            },
-            {
-              text_actual: "CS and ESSA",
-              url: CDO.code_org_url("/files/CS_and_ESSA.pdf")
             },
             {
               text_actual: "Creating teacher pathways",
               url: CDO.code_org_url("/files/TeacherPathwayRecommendations.pdf")
-            }
+            },
+            {
+              text_actual: "More policy resources",
+              url: "/policy-resources"
+            },
+
           ]
       },
 
