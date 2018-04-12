@@ -19,8 +19,7 @@ class Api::V1::SchoolsController < ApplicationController
   def search
     render json: Api::V1::SchoolAutocomplete.get_matches(
       params.require(:q),
-      params[:limit],
-      params[:use_new_search]
+      params[:limit]
     )
   end
 end
