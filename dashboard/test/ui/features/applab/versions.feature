@@ -91,6 +91,7 @@ Scenario: Project Version Checkpoints
   And I add code "// comment B" to ace editor
   And I press "resetButton"
   And I click selector "#runButton" once I see it
+  And element ".project_updated_at" eventually contains text "Saved"
   And I click selector "#versions-header"
   And I wait until element "button:contains(Current Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
