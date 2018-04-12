@@ -1,6 +1,6 @@
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import { PropTypes } from 'react';
-import { NAME_COLUMN_WIDTH } from './multiGridConstants';
+import { NAME_COLUMN_WIDTH, PROGRESS_BUBBLE_WIDTH } from './multiGridConstants';
 import _ from 'lodash';
 
 const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
@@ -156,22 +156,19 @@ export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
 };
 
-
-const PROGRESS_BUBBLE_WIDTH = 39;
-// TODO(caleybrock): Calculate the width differently for progress bubbles
-// const UNPLUGGED_BUBBLE_WIDTH = 190;
-
+/**
+ * Calculate the width of each column in the detail view based on types of levels
+ * @returns {Array} array of integers indicating the length of each column
+ */
 export const getColumnWidthsForDetailView = (state) => {
   let columnLengths = [NAME_COLUMN_WIDTH];
   const stages = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId].stages;
 
-  // For each stage in the script
   for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
     const levels = stages[stageIndex].levels;
-    columnLengths.push(levels.length * PROGRESS_BUBBLE_WIDTH);
+    const width = levels.length * PROGRESS_BUBBLE_WIDTH;
+    columnLengths.push(width || 0);
   }
-
-  //TODO(caleybrock) memoize these results
   return columnLengths;
 };
 

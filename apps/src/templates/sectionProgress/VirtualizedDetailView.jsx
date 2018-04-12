@@ -11,9 +11,11 @@ import {
   getColumnWidthsForDetailView
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE} from './multiGridConstants';
+import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE, PROGRESS_BUBBLE_WIDTH} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
+
+const ARROW_PADDING = 60;
 
 const styles = {
   numberHeader: {
@@ -27,10 +29,10 @@ const styles = {
     justifyContent: 'flex-start',
     marginTop: 9,
   },
+  // Arrow ---> built with CSS requires negative margin
   lessonLine: {
     marginTop: 11,
     marginRight: -8,
-    // TODO(caleybrock) make the width dynamic with column width
     width: 100,
     height: 2,
     backgroundColor:color.charcoal,
@@ -62,7 +64,7 @@ class VirtualizedDetailView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, studentLevelProgress} = this.props;
+    const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -94,11 +96,15 @@ class VirtualizedDetailView extends Component {
             <div style={styles.numberHeader}>
               {columnIndex}
             </div>
-            <div style={styles.lessonLine}>
-            </div>
-            <div>
-              <i style={styles.lessonArrow}></i>
-            </div>
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>
+              </div>
+            }
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div>
+                <i style={styles.lessonArrow}></i>
+              </div>
+            }
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
