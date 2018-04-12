@@ -12,7 +12,7 @@ export default class CorrectAnswer extends Component {
   render() {
     return (
       <div>
-        <FontAwesome icon="check-circle" style={styles.icon} />
+        <FontAwesome icon="check-circle" style={styles.icon}/>
       </div>
     );
   }
