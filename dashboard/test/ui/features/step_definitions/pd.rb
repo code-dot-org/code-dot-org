@@ -246,7 +246,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.update!(ended_at: DateTime.new(2016, 3, 15))
 
     if post_create_actions.include?('and answer surveys')
-      responses = {}
+      responses = {
+        workshop_id_i: workshop.id,
+      }
 
       [
         Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
