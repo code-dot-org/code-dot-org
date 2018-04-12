@@ -173,11 +173,23 @@ class Course < ApplicationRecord
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
+    info[:base_name] = base_name
+    info[:version_year] = version_year
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_course_scripts.map(&:script_id)
     info
+  end
+
+  def self.valid_courses_all_versions
+    Rails.cache.fetch("valid_courses_all_versions/#{I18n.locale}") do
+      ScriptConstants::CATEGORIES[:full_course].map do |base_name|
+        # Matches any course whose name is the base_name, with an optional
+        # suffix like '-2018'.
+        Course.where('name regexp ?', "^#{base_name}(-[0-9]{4})?$").map(&:assignable_info)
+      end.flatten
+    end
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -193,6 +205,25 @@ class Course < ApplicationRecord
         select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
         map(&:assignable_info)
     end
+  end
+
+  # If the course name  (e.g. "foo-2018") has a version suffix, then the first
+  # capture group is the base name ("foo") and the second capture group is the
+  # version year ("2018"). Does not match course name without version suffix.
+  VERSIONED_NAME_REGEX = /^(.*)-(\d{4})$/
+
+  def base_name
+    m = VERSIONED_NAME_REGEX.match(name)
+    m ? m[1] : name
+  end
+
+  DEFAULT_VERSION_YEAR = '2017'
+
+  # return the 4-digit year from the suffix of the course name if one exists,
+  # otherwise return the DEFAULT_VERSION_YEAR.
+  def version_year
+    m = VERSIONED_NAME_REGEX.match(name)
+    m ? m[2] : DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
