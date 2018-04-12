@@ -259,8 +259,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
         responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
       end
 
+      responses['workshop_id_i'] = workshop.id
+
       workshop.enrollments.each do |enrollment|
-        puts "Enrollment ID - #{enrollment.id}"
         PEGASUS_DB[:forms].insert(
           secret: SecureRandom.hex,
           source_id: enrollment.id,
