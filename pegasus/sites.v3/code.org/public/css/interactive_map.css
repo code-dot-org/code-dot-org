@@ -6,12 +6,29 @@
 }
 
 #infobox {
-  text-align: left;
+  text-align: center;
   float: right;
 }
 
 .info {
-  font-size: 18px;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+#infobox strong {
+  font-size: 44px;
+  display: block;
+  line-height: 36px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+#infobox button {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+#infobox b {
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 #state-dropdown {
@@ -22,10 +39,49 @@
   margin-bottom: 10px;
 }
 
+.state-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.state-button {
+  margin: 10px;
+}
+
+.state-button button {
+  height: 60px;
+  white-space: initial;
+}
+
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
   color: white;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.icon-facts {
+  display: inline-block;
+}
+
+.icon-fact {
+  margin-bottom: 10px;
+  display: block;
+  width: 270px;
+}
+
+.fact i {
+  display: inline-block;
+  font-size: 48px;
+  vertical-align: middle;
+}
+
+.fact .fact-text {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 10px;
+  width: 80%;
 }
 
 .fact.subfact {
@@ -34,4 +90,24 @@
 
 .fact > a {
   color: white;
+}
+
+#state-title {
+  font-family: 'Gotham 7r', sans-serif;
+  color: #0094a3;
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.figure {
+  font-size:20px;
+}
+
+#sources {
+  clear: both;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  opacity: 0.8;
+  color: #BCC2C6;
 }
