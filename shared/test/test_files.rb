@@ -559,10 +559,10 @@ class FilesTest < FilesApiTestBase
     temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename)
 
     # Links to the right file
-    assert_match /#{'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'}/, temp_url
+    assert_includes temp_url, 'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'
 
     # Has a 5-minute timeout by default
-    assert_match /#{'X-Amz-Expires=300'}/, temp_url
+    assert_includes temp_url, 'X-Amz-Expires=300'
 
     @api.delete_object(thumbnail_filename)
     assert successful?
@@ -578,10 +578,10 @@ class FilesTest < FilesApiTestBase
     temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename, 1.hour)
 
     # Links to the right file
-    assert_match /#{'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'}/, temp_url
+    assert_includes temp_url, 'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'
 
     # Has a 5-minute timeout by default
-    assert_match /#{'X-Amz-Expires=3600'}/, temp_url
+    assert_includes temp_url, 'X-Amz-Expires=3600'
 
     @api.delete_object(thumbnail_filename)
     assert successful?
