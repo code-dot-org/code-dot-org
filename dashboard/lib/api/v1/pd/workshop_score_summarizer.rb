@@ -80,7 +80,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     if workshop
       survey_report[:this_workshop] = get_score_for_workshops(
-        workshops: Pd::Workshop.where(id: workshop.id),
+        workshops: Pd::Workshop.where(id: workshop.id), # Need this to be an activerecord relation
         include_free_responses: true,
         facilitator_name_filter: facilitator_name
       )
@@ -287,8 +287,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_summary
   end
 
+  # Take surveys in the old non-facilitator-specific format and make make them look like
+  # facilitator-specific surveys
+  # @param responses Array[Hash] list of all responses
+  # @param workshops
+  # @return The responses with the old ones in the newer format
   def coerce_old_surveys_to_new_format(responses, workshops)
-    workshops_to_facilitators = workshops.includes(:facilitators).map {|x| [x.id, x.facilitators.map(&:name)]}.to_h
+    workshops_to_facilitators = workshops.includes(:facilitators).map {|w| [w.id, w.facilitators.map(&:name)]}.to_h
     responses.map do |response|
       if response['who_facilitated_ss']
         response
