@@ -4,6 +4,8 @@ export const ROW_HEIGHT = 40;
 export const NAME_COLUMN_WIDTH = 150;
 export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 39;
+export const DIAMOND_BUBBLE_WIDTH = 42;
+export const PILL_BUBBLE_WIDTH = 190;
 
 export const progressStyles = {
   lessonHeading: {
