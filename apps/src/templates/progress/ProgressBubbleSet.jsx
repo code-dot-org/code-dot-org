@@ -60,6 +60,7 @@ class ProgressBubbleSet extends React.Component {
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
     selectedSectionId: PropTypes.string,
+    hideToolTips: PropTypes.bool,
   };
 
   render() {
@@ -93,6 +94,7 @@ class ProgressBubbleSet extends React.Component {
                 disabled={disabled}
                 smallBubble={false}
                 selectedSectionId={selectedSectionId}
+                hideToolTips={this.props.hideToolTips}
               />
             </div>
           </div>
