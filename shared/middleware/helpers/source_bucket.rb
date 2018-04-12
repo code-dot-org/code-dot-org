@@ -82,12 +82,13 @@ class SourceBucket < BucketHelper
 
       dest = s3_path dest_owner_id, dest_channel_id, filename
 
-      # Update animation manifest
+      # Get animation manifest
       key = s3_path src_owner_id, src_channel_id, filename
       src_object = s3.get_object(bucket: @bucket, key: key)
       src_body = src_object.body.read
 
-      if filename.casecmp?('main.json')
+      # Only update version ids for main.json files
+      if filename.casecmp?(MAIN_JSON_FILENAME) && !animation_list.empty?
         src_body = ProjectSourceJson.new(src_body)
 
         if src_body.animation_manifest?
@@ -95,10 +96,10 @@ class SourceBucket < BucketHelper
           # in the destination channel
           src_body.each_animation do |a|
             next if library_animation? a
-            anim_response = animation_list.select do |item|
+            anim_response = animation_list.find do |item|
               item[:filename] == "#{a['key']}.png"
             end
-            src_body.set_animation_version(a['key'], anim_response[0][:versionId]) unless anim_response.empty?
+            src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response.empty?
           end
         end
 
