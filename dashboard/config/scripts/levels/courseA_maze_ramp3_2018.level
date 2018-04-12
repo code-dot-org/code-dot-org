@@ -1,0 +1,109 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-04-04T23:43:06.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,3,4,0,0],[0,0,0,0,1,0,0,0],[0,0,4,2,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming3_2\",\r\n  \"callout_text\": \"You can drag extra blocks to the toolbox to throw them away.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 50\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"stone_block_2\",\r\n  \"callout_text\": \"Grey blocks are made of stone and cannot be thrown away.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "markdown_instructions": "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere is one extra block that is going to cause the bird to crash.  \r\nThrow it away by removing it from the other blocks and dragging it back to the toolbox.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\\n\\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \\n\\nClick on the block you want to delete, and drag it back to the toolbox.\\n\\nFinally, put your other blocks back in place where they belong.\\n\",\"hint_id\":\"courseC_maze_programming3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b47e6992ad6dbc21d24a812861711e48/courseD_maze_ramp3.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
+    "parent_level_id": 10757,
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:21:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-10-02 19:29:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-18 19:29:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-18 19:30:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-04 23:43:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward" deletable="false">
+              <next>
+                <block type="maze_moveForward" id="extraBlock">
+                  <next>
+                    <block type="maze_turn" deletable="false" editable="false">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="maze_moveForward" deletable="false">
+                          <next>
+                            <block type="maze_moveForward" deletable="false" id="callMe"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

@@ -72,8 +72,11 @@ def build
     IO.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
+    git_revision_short = GitUtils.git_revision_short
+
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
     Honeybadger.notify_new_release(rack_env, git_revision)
+    write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
@@ -115,6 +118,7 @@ def main
     projects = 'websites' if projects.empty?
 
     commit_hash = RakeUtils.git_revision
+    commit_hash_short = GitUtils.git_revision_short
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
 
     duration = Time.now.to_i - start_time.to_i
@@ -141,14 +145,7 @@ def main
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
 
-      if rack_env == :staging
-        # Look at the HEAD revision on the test machine, rather than the one in
-        # GitHub. Otherwise, if someone pushes more changes to the test branch while
-        # the DTT is running, we might accidentally, automatically mark those
-        # untested changes green.
-        current_build_git_commit_hash = GitUtils.git_revision_short
-        write_build_status :staging, current_build_git_commit_hash, :success
-      end
+      write_build_status rack_env, commit_hash_short, :success
 
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
@@ -182,6 +179,8 @@ def main
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
+
+      write_build_status rack_env, commit_hash_short, :failed
 
       if rack_env == :test
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
@@ -226,11 +225,15 @@ def mark_dtt_green
 end
 
 # Log details of a build to metrics database.
-# @param [Symbol] environment - :success or :failed
+# TODO: (suresh) This method will eventually be used to write build status for all managed environments.
+# @param [Symbol] environment
 # @param [String] commit_hash
-# @param [String] status
+# @param [Symbol] status - :start, :success, :failed
 def write_build_status(environment, commit_hash, status)
-  Metrics.write_metric((status == :success) ? 'dts_green' : 'dts_red', commit_hash, Metrics::AUTOMATIC)
+  event = "#{environment}_#{status}"
+  if environment == :staging
+    Metrics.write_metric(event, commit_hash, Metrics::AUTOMATIC)
+  end
 end
 
 def emit_deploy_metric(deployment_stage, successful)

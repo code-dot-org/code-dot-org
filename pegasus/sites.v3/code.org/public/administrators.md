@@ -122,7 +122,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 30 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- 31 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
 
 [/col-80]
 

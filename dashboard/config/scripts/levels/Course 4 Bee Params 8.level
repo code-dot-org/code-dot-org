@@ -34,40 +34,49 @@
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "**Challenge:** Now there's honey to deal with too! \r\n\r\nRewrite your function to use both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0.\",\r\n  \"hint_id\": \"Course_4_Bee_Params_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-04 16:24:11 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-04 16:24:37 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-04 16:25:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-04 16:26:27 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "functions_with_params": 4
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
+        <next>
+          <block type="variables_set" inline="false" uservisible="false">
+            <title name="VAR">left</title>
+            <value name="VALUE">
+              <block type="math_number" uservisible="false">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" inline="false" uservisible="false">
+                <title name="VAR">right</title>
+                <value name="VALUE">
+                  <block type="math_number" uservisible="false">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </initialization_blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" uservisible="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
         <block type="when_run" deletable="false" movable="false">
   </block>
         <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
@@ -248,7 +257,7 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
+        <block type="when_run" deletable="false" movable="false" uservisible="false">
           <next>
             <block type="variables_set" inline="false" deletable="false" movable="false" uservisible="false">
               <title name="VAR">left</title>

@@ -53,6 +53,7 @@ export const STATES = [
   'Wyoming',
 ];
 
+// Note that this array is returned sorted by country name, not abbreviation.
 export const COUNTRIES = [
   {label: "AD", value: "Andorra"},
   {label: "AE", value: "United Arab Emirates"},
@@ -300,4 +301,4 @@ export const COUNTRIES = [
   {label: "ZA", value: "South Africa"},
   {label: "ZM", value: "Zambia"},
   {label: "ZW", value: "Zimbabwe"},
-];
+].sort((a, b) => a.value.localeCompare(b.value));

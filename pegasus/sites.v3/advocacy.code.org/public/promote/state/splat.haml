@@ -1,0 +1,21 @@
+---
+title: Promote Computer Science
+layout: none
+template: none
+theme: none
+---
+
+:ruby
+  require 'state_abbr'
+  state = File.basename(request.path_info)
+  raise Sinatra::NotFound unless state.downcase == state
+  state.upcase!
+  raise Sinatra::NotFound unless us_state_abbr?(state, true)
+
+#promote-page
+  -if state.nil_or_empty?
+    #petition-section.section.clear
+      = view :petition
+  -else
+    #state-section.clear
+      = view :promote_state, state:state

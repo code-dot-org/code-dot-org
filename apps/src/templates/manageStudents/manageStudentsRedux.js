@@ -191,6 +191,9 @@ export const addMultipleAddRows = (studentNames) => {
   return (dispatch, getState) => {
     let studentData = {};
     for (let i = 0; i<studentNames.length; i++) {
+      // Do not add rows with no name
+      if (studentNames[i] === '') { continue; }
+
       // Create a new uniqueId for the newStudentRow
       const newId = addRowIdCounter;
       addRowIdCounter = addRowIdCounter - 1;
@@ -445,7 +448,8 @@ export default function manageStudents(state=initialState, action) {
     }
     return {
       ...state,
-      studentData: _.omit(state.studentData, studentId)
+      studentData: _.omit(state.studentData, studentId),
+      editingData: _.omit(state.editingData, studentId),
     };
   }
   if (action.type === ADD_MULTIPLE_ROWS) {

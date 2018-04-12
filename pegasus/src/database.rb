@@ -16,12 +16,12 @@ class Tutorials
   def initialize(table)
     @table = "cdo_#{table}".to_sym
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
-    column_aliases = DB.schema(@table).map do |column|
+    @column_aliases = DB.schema(@table).map do |column|
       db_column_name = column[0].to_s
       column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
       "#{db_column_name}___#{column_alias}".to_sym
     end
-    @contents = DB[@table].select(*column_aliases).all
+    @contents = DB[@table].select(*@column_aliases).all
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
@@ -68,6 +68,20 @@ class Tutorials
       results[i[:code]] = i
     end
     results
+  end
+
+  # return the first tutorial with a matching code
+  def find_with_code(code)
+    # We have to use the new column name (which has datatype suffix) in where clause
+    # while aliasing the columns in the result set to match the old naming convention (no datatype suffix).
+    DB[@table].select(*@column_aliases).where(code_s: code).first
+  end
+
+  # return the first tutorial with a matching short code
+  def find_with_short_code(short_code)
+    # We have to use the new column name (which has datatype suffix) in where clause
+    # while aliasing the columns in the result set to match the old naming convention (no datatype suffix).
+    DB[@table].select(*@column_aliases).where(short_code_s: short_code).first
   end
 end
 

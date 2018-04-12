@@ -90,7 +90,7 @@ var VersionHistory = React.createClass({
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v2',
+        study_group: 'v3',
         event: 'clear-puzzle',
         project_id: project.getCurrentId(),
         data_json: JSON.stringify({

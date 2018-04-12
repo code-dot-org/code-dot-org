@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:14:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-13 20:15:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-18 17:24:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-03 15:01:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 15:02:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:30:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:14:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-13 20:15:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-18 17:24:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-03 15:01:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 15:02:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:30:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-05 01:34:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -55,6 +55,9 @@
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
         <block type="maze_moveWest"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>

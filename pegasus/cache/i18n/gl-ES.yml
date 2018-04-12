@@ -26,7 +26,7 @@
     de aprender a programar
   petition_sign_message: 'Se estás dacordo, asina co teu nome.  Únete a # outros.'
   petition_sign_message_support: 'Se nos apoias, asina co teu nome. Únete a # outros.'
-  petition_join_others: "Únete a # outros"
+  petition_join_others: 'Únete a # outros'
   name: Nome
   email: E-mail
   zipcode: Código postal ou país
@@ -680,7 +680,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "É un profesor?"
+  are_you_teacher: É un profesor?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Anima a alumnos e voluntarios para participar
     na Hora de Código

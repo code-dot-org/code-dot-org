@@ -11,12 +11,14 @@ import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
 import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
-import exportExpoPackageJson from '../templates/export/expo/package.exported.json';
+import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
-import exportExpoAppJs from '../templates/export/expo/App.exported.js';
-import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported.js';
+import exportExpoAppJs from '../templates/export/expo/App.exported_js';
+import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import exportExpoIconPng from '../templates/export/expo/icon.png';
+import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -276,6 +278,23 @@ export default {
       filename: asset.filename,
     }));
 
+    if (expoMode) {
+      appAssets.push({
+        url: exportExpoIconPng,
+        rootRelativePath: 'appassets/icon.png',
+        zipPath: appName + '/appassets/icon.png',
+        dataType: 'binary',
+        filename: 'icon.png',
+      });
+      appAssets.push({
+        url: exportExpoSplashPng,
+        rootRelativePath: 'appassets/splash.png',
+        zipPath: appName + '/appassets/splash.png',
+        dataType: 'binary',
+        filename: 'splash.png',
+      });
+    }
+
     const mainProjectFilesPrefix = appName + (expoMode ? '/assets/' : '/');
 
     var zip = new JSZip();
@@ -382,10 +401,7 @@ export default {
   async exportApp(appName, code, levelHtml, suppliedExpoOpts) {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'publish') {
-      const session = await this.publishToExpo(appName, code, levelHtml);
-      const saveResult = await session.saveAsync();
-      const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
-      return expoURL;
+      return await this.publishToExpo(appName, code, levelHtml);
     }
     return this.exportAppToZip(appName, code, levelHtml, expoOpts.mode === 'zip')
       .then(function (zip) {
@@ -421,11 +437,7 @@ export default {
     return exportExpoPackagedFilesEjs({ entries });
   },
 
-  publishToExpo(appName, code, levelHtml) {
-    const appJson = exportExpoAppJsonEjs({
-      appName: appName,
-      projectId: project.getCurrentId()
-    });
+  async publishToExpo(appName, code, levelHtml) {
     const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
     const html = exportExpoIndexEjs({
@@ -449,62 +461,61 @@ export default {
     const files = {
       'App.js': { contents: exportExpoAppJs, type: 'CODE'},
       'CustomAsset.js': { contents: exportExpoCustomAssetJs, type: 'CODE'},
-      'app.json': { contents: appJson, type: 'CODE'},
     };
 
-    return new Promise(async (resolve, reject) => {
-      const session = new SnackSession({
-        sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
-        files,
-        name: project.getCurrentName(),
-        sdkVersion: '25.0.0',
-      });
-
-      // Important that index.html comes first:
-      const fileAssets = [
-        { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
-        { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
-        { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
-        { filename: 'appOptions.j', data: appOptionsJs },
-      ];
-
-      const fileUploads = fileAssets.map(({ data }) =>
-          session.uploadAssetAsync(new Blob([data]))
-      );
-      const snackFileUrls = await Promise.all(fileUploads);
-
-      snackFileUrls.forEach((url, index) => {
-        files['assets/' + fileAssets[index].filename] = {
-          contents: url,
-          type: 'ASSET',
-        };
-      });
-
-      const assetDownloads = appAssets.map(asset =>
-        download(asset.url, asset.dataType || 'text')
-      );
-
-      const downloadedAssets = await Promise.all(assetDownloads);
-      const assetUploads = downloadedAssets.map(downloadedAsset =>
-          session.uploadAssetAsync(downloadedAsset)
-      );
-      const snackAssetUrls = await Promise.all(assetUploads);
-
-      snackAssetUrls.forEach((url, index) => {
-        files['assets/' + appAssets[index].filename] = {
-          contents: url,
-          type: 'ASSET',
-        };
-      });
-      files['packagedFiles.js'] = {
-        contents: this.createPackageFilesFromExpoFiles(files),
-        type: 'CODE',
-      };
-
-      await session.sendCodeAsync(files);
-
-      return resolve(session);
+    const session = new SnackSession({
+      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+      files,
+      name: project.getCurrentName(),
+      sdkVersion: '25.0.0',
     });
+
+    // Important that index.html comes first:
+    const fileAssets = [
+      { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
+      { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
+      { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
+      { filename: 'appOptions.j', data: appOptionsJs },
+    ];
+
+    const fileUploads = fileAssets.map(({ data }) =>
+        session.uploadAssetAsync(new Blob([data]))
+    );
+    const snackFileUrls = await Promise.all(fileUploads);
+
+    snackFileUrls.forEach((url, index) => {
+      files['assets/' + fileAssets[index].filename] = {
+        contents: url,
+        type: 'ASSET',
+      };
+    });
+
+    const assetDownloads = appAssets.map(asset =>
+      download(asset.url, asset.dataType || 'text')
+    );
+
+    const downloadedAssets = await Promise.all(assetDownloads);
+    const assetUploads = downloadedAssets.map(downloadedAsset =>
+        session.uploadAssetAsync(downloadedAsset)
+    );
+    const snackAssetUrls = await Promise.all(assetUploads);
+
+    snackAssetUrls.forEach((url, index) => {
+      files['assets/' + appAssets[index].filename] = {
+        contents: url,
+        type: 'ASSET',
+      };
+    });
+    files['packagedFiles.js'] = {
+      contents: this.createPackageFilesFromExpoFiles(files),
+      type: 'CODE',
+    };
+
+    await session.sendCodeAsync(files);
+    const saveResult = await session.saveAsync();
+    const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
+
+    return expoURL;
   }
 };
 

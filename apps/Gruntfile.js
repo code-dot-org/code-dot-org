@@ -494,8 +494,7 @@ describe('entry tests', () => {
     'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
     'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
 
-    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
-
+    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',

@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that you'll build by the end of this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
+    "markdown_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "var score = 0;\r\nvar starting_position = getProperty(\"bug\", \"x\");\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  score = score - 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score < -100) {\r\n    setProperty(\"winner\", \"text\", \"Player 1\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(900, 1000);\r\n  }\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  score = score + 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score > 100) {\r\n    setProperty(\"winner\", \"text\", \"Player 2\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(200, 1000);\r\n  }\r\n});",
@@ -225,11 +225,12 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Demo - Bug Grab",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 19:53:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-24 19:56:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 22:48:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 19:53:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-24 19:56:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 22:48:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-04-04 18:31:40 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

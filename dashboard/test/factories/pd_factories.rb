@@ -889,6 +889,7 @@ FactoryGirl.define do
       after :build do |hash|
         hash['ableToAttend'] = "Yes"
         hash.delete('teacherAcceptSeat')
+        hash['travelCovered'] = Pd::Teachercon1819Registration.options[:travel_covered].first
       end
     end
 

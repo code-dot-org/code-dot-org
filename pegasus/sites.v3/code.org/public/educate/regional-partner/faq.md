@@ -7,7 +7,7 @@ nav: plc_regional_partner_nav
 # Regional Partner FAQs
 
 
-Still have questions? See below for answers to commonly asked questions or email [partner@code.org](mailto:partner@code.org). 
+Still have questions? See below for answers to commonly asked questions or email [partner@code.org](mailto:partner@code.org).
 <br/><br/>
 **General questions:**<br/>
 
@@ -28,7 +28,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [Can I recruit middle & high school teachers from local districts to become a part of the 2019-20 professional learning programs in my area?](#recruit)
 - [Can I recruit elementary school teachers?](#k5)
 - [What is counselor/administrator professional development?](#ca)
-	
+
 
 <br/>
 ________________
@@ -36,7 +36,7 @@ ________________
 <br/>
 <br/>
 
-### **My region is already served by another organization, can I stil apply to be a Regional Partner?**
+### **My region is already served by another organization, can we still apply to be a Regional Partner?**
 
 For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2018-19 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
 
@@ -88,7 +88,7 @@ ________________
 - CS Discoveries (6-10) [curriculum](https://code.org/educate/csd)
 - CS Principles (9-12) [curriculum](https://code.org/educate/csp)
 - Facilitator Development Program [Overview](http://bit.ly/facilitatorprogram)
- 
+
 
 
 [**Back to the top**](#top)
@@ -102,7 +102,7 @@ ________________
 ### **What would our implementation timeline look like as a Regional Partner?**
 
 See implementation timeline [here](http://bit.ly/implementationtimeline18).
- 
+
 
 
 [**Back to the top**](#top)
@@ -127,7 +127,7 @@ ________________
 
 ### **Can several organizations submit a joint application to be a Regional Partner in a region?**
 
-Yes, some of our current partners have a joint partnership where one organization is the funding and advocacy arm and the other focuses on professional learning and outreach. 
+Yes, some of our current partners have a joint partnership where one organization is the funding and advocacy arm and the other focuses on professional learning and outreach.
 <br/>
 
 [**Back to the top**](#top)
@@ -139,7 +139,7 @@ ________________
 
 ### **Do you accept international applications?**
 
-No, at this time, the Regional Partner Program is only open to organizations in the United States. While the Regional Partner Program continues to focus on organizations based in the U.S., there are many ways for non-U.S. organizations to partner with us. Please check out [code.org/international](http://code.org/international) for more information. 
+No, at this time, the Regional Partner Program is only open to organizations in the United States. While the Regional Partner Program continues to focus on organizations based in the U.S., there are many ways for non-U.S. organizations to partner with us. Please check out [code.org/international](http://code.org/international) for more information.
 <br/>
 
 [**Back to the top**](#top)
@@ -151,7 +151,7 @@ ________________
 
 ### **If we become a Regional Partner can we run other CS education workshops in addition to the Code.org programs?**
 
-We encourage your organization to run other CS education workshops in addition to the Code.org programs! 
+We encourage your organization to run other CS education workshops in addition to the Code.org programs!
 <br/>
 
 [**Back to the top**](#top)
@@ -205,4 +205,3 @@ Code.org has computer science workshops designed for Counselors and Administrato
 
 ___________________
 <br/>
-

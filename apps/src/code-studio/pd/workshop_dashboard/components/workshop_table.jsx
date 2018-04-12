@@ -9,7 +9,6 @@ import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
-import Permission from '../../permission';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
@@ -55,8 +54,6 @@ export default class WorkshopTable extends React.Component {
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
-
-    this.permission = new Permission();
   }
 
   componentWillReceiveProps(nextProps) {

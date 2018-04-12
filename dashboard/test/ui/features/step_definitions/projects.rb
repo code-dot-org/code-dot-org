@@ -41,3 +41,8 @@ Then /^I reload the project page/ do
     And element ".project_updated_at" eventually contains text "Saved"
   STEPS
 end
+
+Then /^I set the project version interval to (\d+) seconds?$/ do |seconds|
+  code = "window.dashboard.project.__TestInterface.setSourceVersionInterval(#{seconds});"
+  @browser.execute_script(code)
+end

@@ -190,6 +190,10 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
+  def self.csf_script_ids
+    @@csf_scripts ||= Script.all.select(&:csf?).pluck(:id)
+  end
+
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
@@ -674,6 +678,12 @@ class Script < ActiveRecord::Base
 
       stage_name = raw_script_level.delete(:stage)
       properties = raw_script_level.delete(:properties) || {}
+
+      if new_suffix && properties[:variants]
+        properties[:variants] = properties[:variants].map do |old_level_name, value|
+          ["#{old_level_name}_#{new_suffix}", value]
+        end.to_h
+      end
 
       script_level_attributes = {
         script_id: script.id,

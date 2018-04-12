@@ -119,6 +119,11 @@ module.exports = class AnimationsController {
       const finishIcon = document.getElementById('finish');
       if (finishIcon) {
         finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.maze.skin.goalIdle);
+
+        // skins with a celebration animation (like scrat) hide the finish icon
+        // after finishing; to support resetting those, we need to restore the
+        // finish icon here
+        finishIcon.setAttribute('visibility', 'visible');
       }
     }
 

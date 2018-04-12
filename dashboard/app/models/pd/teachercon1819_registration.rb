@@ -116,6 +116,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         "2 trimesters",
         "Full year",
         "I'm not sure",
+      ],
+      travel_covered: [
+        "Code.org is covering my trip",
+        "I am covering my trip"
       ]
     }.freeze
   end
@@ -183,7 +187,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     # some fields are required based on the values of other fields
 
-    if hash[:live_far_away] == YES
+    if hash[:live_far_away] == YES && !regional_partner_id?
       requireds.concat [
         :address_street,
         :address_city,
@@ -207,6 +211,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     if pd_application
       requireds.concat [
         :agree_share_contact
+      ]
+    end
+
+    if regional_partner_id?
+      requireds.concat [
+        :travel_covered
       ]
     end
 
@@ -272,5 +282,9 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   def regional_partner_name
     regional_partner.try(:name)
+  end
+
+  def course_name
+    pd_application.try(&:course_name)
   end
 end

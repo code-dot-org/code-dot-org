@@ -9,5 +9,7 @@ wrong 'displays <span style="font-family: monospace; background-color: rgba(0,0,
 markdown <<MARKDOWN
 For the following problem, assume <span style="font-family: monospace">list</span> is a variable that contains a list of random integers. What does this program do?
 
-![](https://images.code.org/f71c5157d0a49a81a0a40fbcc991fd66-image-1483468129007.png)
+<!-- BLOCK: ![](https://images.code.org/f71c5157d0a49a81a0a40fbcc991fd66-image-1483468129007.png) -->
+
+<img src="https://images.code.org/1bfd58be0dc595007758f5287da1237c-image-1522965935422.png" style="width: 250px">
 MARKDOWN

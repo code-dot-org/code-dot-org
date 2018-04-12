@@ -39,8 +39,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat` block like this to help you!\\n<xml><block type=\\\"controls_repeat_simplified_dropdown\\\">\\n    <title name=\\\"TIMES\\\" config=\\\"2-10\\\">3</title>\\n  </block></xml>\",\"hint_id\":\"courseA_harvester_loops3_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6f61af50851a44063c8dc17a87145d3f/courseA_harvester_loops3.mp3\"}]",
     "parent_level_id": 11957,
     "ideal": "4",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
