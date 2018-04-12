@@ -166,12 +166,14 @@ export class QuickView extends React.Component {
             >
               Download CSV
             </Button>
-            <Button
-              style={styles.button}
-              onClick={this.handleViewCohortClick}
-            >
-              View accepted cohort
-            </Button>
+            {accepted > 0 &&
+              <Button
+                style={styles.button}
+                onClick={this.handleViewCohortClick}
+              >
+                View accepted cohort
+              </Button>
+            }
           </Col>
           <Col md={6} sm={6}>
             <FormGroup className="pull-right">
