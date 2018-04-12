@@ -20,7 +20,8 @@ Feature: Markdown rendering across the website
     Then I see no difference for "basic embedded blockly"
     And I close my eyes
 
-    Then I am on "http://studio.code.org/s/allthethings/stage/21/puzzle/3?noautoplay=true"
+    When I open my eyes to test "Blockly in K1 instructions"
+    And I am on "http://studio.code.org/s/allthethings/stage/21/puzzle/3?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
