@@ -52,7 +52,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 18:27:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 18:27:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-04-05 17:47:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
@@ -167,6 +167,9 @@
         <block type="studio_whenSpriteCollided">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
         </block>
         <block type="studio_repeatForever"/>
       </xml>

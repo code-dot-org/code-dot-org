@@ -74,7 +74,7 @@
             'Bee: Loops':
               name: 'Arı: Döngüler'
             Binary Bracelets:
-              name: "İkilik Bileklikler"
+              name: İkilik Bileklikler
             Conditionals:
               name: Koşullar
             Flappy:
@@ -135,17 +135,17 @@
             Digital Citizenship:
               name: Sayısal Vatandaşlık
             'Farmer: While Loops':
-              name: "Çiftçi: Süresince (While) Döngüleri"
+              name: 'Çiftçi: Süresince (While) Döngüleri'
             Functional Suncatchers:
               name: Fonksiyonel Güneş Avcıları
             Internet:
-              name: "İnternet"
+              name: İnternet
             Maze:
               name: Labirent
             'Maze: Conditionals':
               name: 'Labirent: Koşullar'
             Songwriting:
-              name: "Şarkı Yazarlığı"
+              name: Şarkı Yazarlığı
             'Studio: Create a Game':
               name: 'Oyun Laboratuvarı: Bir Oyun Oluşturun'
             'Studio: Create a Story':
@@ -191,8 +191,8 @@
             birleştirip kullanarak çözerler.  Bu ders tamamlandığında, öğrencilerin
             şununla say döngüleri ve parametreli fonksiyonları kullanarak program
             yazabilecek yetiye ulaşacaklar. 4-8. sınıflar için önerilir.
-          description_short: "Şununla say döngüleri ve parametreli fonksiyonlar kullanarak
-            daha karmaşık programlar oluşturun. Bu Kurs 3'ün devamıdır."
+          description_short: Şununla say döngüleri ve parametreli fonksiyonlar kullanarak
+            daha karmaşık programlar oluşturun. Bu Kurs 3'ün devamıdır.
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           stages:
             Artist:
@@ -261,7 +261,7 @@
             'Bee: Nested Loops':
               name: 'Arı: İçiçe Döngüler'
             'Farmer: While Loops':
-              name: "Çiftçi: Süresince (While) Döngüleri"
+              name: 'Çiftçi: Süresince (While) Döngüleri'
             'Maze: Sequence':
               name: 'Labirent: Sıra'
         usability:
@@ -271,7 +271,7 @@
           description_audience: ''
           stages:
             Binary:
-              name: "İkili"
+              name: İkili
             For Loops:
               name: For Döngüleri
             Functions and Functions with Parameters:
@@ -337,10 +337,10 @@
               name: Sonsuz
         algebrademo:
           title: Cebir Demo
-          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
-            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
-          description_short: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
-            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          description: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde
+            kullanılan programlama dilini göstermek için kullanışlı bulmacalar
+          description_short: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
+            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
           stages:
             Defining Simple Functions:
               name: Basit Fonksiyonları Tanımlama
@@ -377,13 +377,13 @@
             Reflection:
               name: Yansıma
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Unplugged lessons:
               name: Bağlantısız Dersler
             Writing computer programs:
               name: Bilgisayar programları yazma
         netsim:
-          title: "İnternet Simülatörü"
+          title: İnternet Simülatörü
           description: ''
           description_short: ''
           description_audience: ''
@@ -450,7 +450,7 @@
             Relay Programming:
               name: Röle Programlama
             Song Writing:
-              name: "Şarkı Yazma"
+              name: Şarkı Yazma
             The Artist:
               name: Sanatçı
             The Artist 2:
@@ -462,17 +462,17 @@
             The Artist 5:
               name: Sanatçı 5
             The Farmer:
-              name: "Çiftçi"
+              name: Çiftçi
             The Farmer 2:
-              name: "Çiftçi 2"
+              name: Çiftçi 2
             The Farmer 3:
-              name: "Çiftçi 3"
+              name: Çiftçi 3
             The Internet:
-              name: "İnternet"
+              name: İnternet
             The Maze:
               name: Labirent
             Wrap-up:
-              name: "Özet"
+              name: Özet
         edit-code:
           title: Kodu Düzenle
           description: Kodu Düzenle
@@ -561,7 +561,7 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: "İkili Sayılar"
+              name: İkili Sayılar
             Bytes and File Sizes:
               name: Bayt ve dosya boyutları
             Encode a Complex Thing:
@@ -581,7 +581,7 @@
             Personal Innovations:
               name: Kişisel yenilikler
             Sending Binary Messages:
-              name: "İkili Mesajları Gönderiyor"
+              name: İkili Mesajları Gönderiyor
             Sending Binary Messages with the Internet Simulator:
               name: Internet simülatörü ile ikili ileti gönderme
             Sending Bits in the Real World:
@@ -610,7 +610,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Why Computer Science belongs in Algebra:
               name: Bilgisayar bilimi neden cebire ait
         algPDmiami:
@@ -666,7 +666,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             What is CSP?:
               name: CSP nedir?
         CSPLessonSamples:
@@ -693,7 +693,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             What is ECS?:
               name: ECS nedir?
         sciencePD:
@@ -719,7 +719,7 @@
             Post-Survey:
               name: Anket Sonrası
             The Tutorial:
-              name: "Öğretici"
+              name: Öğretici
             Using Computer Models in Science:
               name: Bilimde Bilgisayar Modellerini Kullanma
             Using Models in the Classroom:
@@ -786,7 +786,7 @@
             Loops and Simulations:
               name: Döngüler ve simülasyonlar
             Multi-screen Apps:
-              name: "Çoklu ekranlı Uygulamalar"
+              name: Çoklu ekranlı Uygulamalar
             Practice PT - Design a Digital Scene:
               name: PT pratik - dijital bir sahne tasarımı
             'Practice PT: Create':
@@ -822,7 +822,7 @@
             Strings and Images:
               name: Diziler ve Görüntüler
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             The Big Game:
               name: Büyük oyun
             The Design Recipe:
@@ -842,7 +842,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             What is ECS?:
               name: ECS nedir?
         ECSPD-iZone:
@@ -860,7 +860,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             What is ECS?:
               name: ECS nedir?
         algebraPD-NexTech:
@@ -879,7 +879,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Why Computer Science belongs in Algebra:
               name: Bilgisayar bilimi neden cebire ait
         algebraPD-iZone:
@@ -898,7 +898,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Why Computer Science belongs in Algebra:
               name: Bilgisayar bilimi neden cebire ait
         sciencePD-NexTech:
@@ -925,7 +925,7 @@
             Post-Survey:
               name: Anket Sonrası
             The Tutorial:
-              name: "Öğretici"
+              name: Öğretici
             Using Computer Models in Science:
               name: Bilimde Bilgisayar Modellerini Kullanma
             Using Models in the Classroom:
@@ -956,7 +956,7 @@
             Post-Survey:
               name: Anket Sonrası
             The Tutorial:
-              name: "Öğretici"
+              name: Öğretici
             Using Computer Models in Science:
               name: Bilimde Bilgisayar Modellerini Kullanma
             Using Models in the Classroom:
@@ -988,7 +988,7 @@
           description_short: Phase 3 Professional Development
           stages:
             Decode and Share:
-              name: "Şifresini çöz ve paylaş"
+              name: Şifresini çöz ve paylaş
             Mystery Model:
               name: Gizem modeli
             Welcome Back!:
@@ -1009,7 +1009,7 @@
             the reliability of network communication, the security of data, and personal privacy. Topics
             include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
             concerns.
-          description_short: "İnternet"
+          description_short: İnternet
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Zor problemler - Gezgin Satıcı problemi
@@ -1044,9 +1044,9 @@
             Routers and Redundancy:
               name: Yönlendiriciler ve yedeklilik
             Tell Me a Secret - Encrypting Text:
-              name: "Şifreleme için ihtiyaç"
+              name: Şifreleme için ihtiyaç
             The Internet:
-              name: "İnternet"
+              name: İnternet
             The Need for Addressing:
               name: Adresleme için ihtiyaç
             The Need for DNS:
@@ -1075,7 +1075,7 @@
             Evaluation Blocks:
               name: Değerlendirme Blokları
             Free Play:
-              name: "Ücretsiz Oyna"
+              name: Ücretsiz Oyna
             Luigi's Pizza:
               name: Luigi'nin Pizacısı
             Rocket-Height:
@@ -1107,7 +1107,7 @@
             CSinA:
               name: Müfredatta Bilgisayar Bilimleri
             Farmer:
-              name: "Çiftçi"
+              name: Çiftçi
             Flappy:
               name: Flappy
             Free Response:
@@ -1127,15 +1127,15 @@
             Minecraft:
               name: Minecraft
             Multi:
-              name: "Çoklu"
+              name: Çoklu
             Multi2:
-              name: "Çoktan Seçmeli Soru-2"
+              name: Çoktan Seçmeli Soru-2
             Netsim:
               name: Netsim
             Odometer:
               name: Kilometre sayacı
             Online PD:
-              name: "Çevrimiçi kişisel gelişim"
+              name: Çevrimiçi kişisel gelişim
             Pixelation:
               name: Pikselleşme
             PlayLab:
@@ -1145,7 +1145,7 @@
             Rich long assessment:
               name: Zengin uzun değerlendirme
             Sample PLC Assessment:
-              name: "Örnek PLC değerlendirme"
+              name: Örnek PLC değerlendirme
             Star wars:
               name: Yıldız Savaşları
             Studio:
@@ -1159,13 +1159,13 @@
             Web Lab:
               name: Web Laboratuvarı
             Multi page assessment:
-              name: "Çoklu sayfa değerlendirmesi"
+              name: Çoklu sayfa değerlendirmesi
             Single page assessment:
               name: Tek sayfa değerlendirme
             Standalone video:
               name: Tek başına video
             Curriculum Reference:
-              name: "Öğretim programı"
+              name: Öğretim programı
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1193,7 +1193,7 @@
             Strings and Images:
               name: Diziler ve Görüntüler
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Writing Contracts:
               name: Yazılı sözleşmeler
         cspfacilitator:
@@ -1207,7 +1207,7 @@
             Broadcast Lesson:
               name: Yayın dersi
             Internet Simulator:
-              name: "İnternet Simülatörü"
+              name: İnternet Simülatörü
             Pixelation Widget:
               name: Pikselleştirilmiş Araç
             Text Compression Lesson:
@@ -1229,7 +1229,7 @@
             Computer Science Fundamentals:
               name: Bilgisayar bilim temelleri
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Looking Ahead:
               name: Geleceğe bakış
             'Mastering the Basics: Conditionals':
@@ -1253,25 +1253,25 @@
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: "Ünite 1, 10. gün -veri ile bir hikaye anlatma"
+              name: Ünite 1, 10. gün -veri ile bir hikaye anlatma
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: "Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım"
+              name: Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: "Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme"
+              name: Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: "Ünite 1, gün 17-19 zeka nedir?"
-            0: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
-            1: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
+              name: Ünite 1, gün 17-19 zeka nedir?
+            0: Ünite 1, gün 1-2 bir bilgisayar nedir?
+            1: Ünite 1, gün 1-2 bir bilgisayar nedir?
             Unit 1, Days 3-4 Buying a Computer:
               name: Birim 1, gün 3-4, bir bilgisayar satın almak
             Unit 1, Days 5-7 Searching and Web 2:
-              name: "Ünite 1, gün 5-7 arama ve Web 2"
+              name: Ünite 1, gün 5-7 arama ve Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Birim 1, gün 8-9 bilgisayar ve iletişimin etkileri
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-up:
-              name: "Özet"
+              name: Özet
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1290,7 +1290,7 @@
             Lesson Prep:
               name: Derse hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Teaching with Puzzles:
               name: Bulmaca ile öğretim
             Teaching with the Design Recipe:
@@ -1360,7 +1360,7 @@
             Creating Equitable Learning Environments:
               name: Adil öğrenme ortamları oluşturma
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Introduction to Equity:
               name: Sınıfta Eşitliğe Giriş
             Next Steps:
@@ -1391,50 +1391,50 @@
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: "Ünite 1, 10. gün -veri ile bir hikaye anlatma"
+              name: Ünite 1, 10. gün -veri ile bir hikaye anlatma
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: "Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım"
+              name: Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: "Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme"
+              name: Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: "Ünite 1, gün 17-19 zeka nedir?"
-            0: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
-            1: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
+              name: Ünite 1, gün 17-19 zeka nedir?
+            0: Ünite 1, gün 1-2 bir bilgisayar nedir?
+            1: Ünite 1, gün 1-2 bir bilgisayar nedir?
             Unit 1, Days 3-4 Buying a Computer:
               name: Birim 1, gün 3-4, bir bilgisayar satın almak
             Unit 1, Days 5-7 Searching and Web 2:
-              name: "Ünite 1, gün 5-7 arama ve Web 2"
+              name: Ünite 1, gün 5-7 arama ve Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Birim 1, gün 8-9 bilgisayar ve iletişimin etkileri
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-up:
-              name: "Özet"
+              name: Özet
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: "Ünite 1, 10. gün -veri ile bir hikaye anlatma"
+              name: Ünite 1, 10. gün -veri ile bir hikaye anlatma
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: "Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım"
+              name: Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: "Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme"
+              name: Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: "Ünite 1, gün 17-19 zeka nedir?"
-            0: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
-            1: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
+              name: Ünite 1, gün 17-19 zeka nedir?
+            0: Ünite 1, gün 1-2 bir bilgisayar nedir?
+            1: Ünite 1, gün 1-2 bir bilgisayar nedir?
             Unit 1, Days 3-4 Buying a Computer:
               name: Birim 1, gün 3-4, bir bilgisayar satın almak
             Unit 1, Days 5-7 Searching and Web 2:
-              name: "Ünite 1, gün 5-7 arama ve Web 2"
+              name: Ünite 1, gün 5-7 arama ve Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Birim 1, gün 8-9 bilgisayar ve iletişimin etkileri
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-up:
-              name: "Özet"
+              name: Özet
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience
@@ -1442,7 +1442,7 @@
           description_short: 'Blended Summer Study: 8 hour online'
           stages:
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Lesson Chunk 1- Sending Binary Messages:
               name: Ders yığını 1 - ikili iletiler gönderme
             Lesson Chunk 2- Encoding and Sending Numbers:
@@ -1478,7 +1478,7 @@
           description_audience: Ages 6-13
           stages:
             Binary Bracelets:
-              name: "İkilik Bileklikler"
+              name: İkilik Bileklikler
             Building a Foundation:
               name: Bir Temel Oluşturma
             Getting Loopy:
@@ -1492,7 +1492,7 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Songwriting:
-              name: "Şarkı Yazarlığı"
+              name: Şarkı Yazarlığı
             The Big Event:
               name: Büyük Olay
         afterschool1:
@@ -1515,7 +1515,7 @@
           description_audience: ''
           stages:
             Vigenere:
-              name: "Şifre karesi"
+              name: Şifre karesi
         algebraPD3a:
           title: Algebra PD'de Bilgisayar Bilimi
           description: CS in Algebra blended online school year study
@@ -1563,13 +1563,13 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 2:
               name: 2. Bölüme Giriş
             Lesson Overviews:
               name: Derse Genel Bakış
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 2 Challenge:
               name: Bölüm 2 - Meydan Okuma
         ECSPD3-Unit3:
@@ -1581,11 +1581,11 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 3:
               name: 3. Bölüme Giriş
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 3 Challenge:
               name: Bölüm 3 - Meydan Okuma
             Unit 3 Day-by-Day:
@@ -1599,15 +1599,15 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 4:
               name: 4. Bölüme Giriş
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 4 Challenge:
               name: Bölüm 4 - Meydan Okuma
             Unit 4 Day-by-Day:
-              name: "Ünite 4 gün-ve gün"
+              name: Ünite 4 gün-ve gün
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1617,15 +1617,15 @@
             Complete the Challenge:
               name: Meydan okumayı tamamla
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Introduction to the Unit 5 Challenge:
-              name: "Ünite 5 Meydan okumaya giriş"
+              name: Ünite 5 Meydan okumaya giriş
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 5 Overview:
-              name: "Ünite 5 genel bakış"
+              name: Ünite 5 genel bakış
             Unit 5 lessons:
-              name: "Ünite 5 dersleri"
+              name: Ünite 5 dersleri
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1633,17 +1633,17 @@
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: "Ünite 6 alternatif fikirler"
+              name: Ünite 6 alternatif fikirler
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 6 Challenge:
-              name: "Ünite 6 meydan okuma"
+              name: Ünite 6 meydan okuma
             Unit 6 Overview:
-              name: "Ünite 6 genel bakış"
+              name: Ünite 6 genel bakış
             Unit 6 lessons:
-              name: "Ünite 6 dersleri"
+              name: Ünite 6 dersleri
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description: |-
@@ -1662,7 +1662,7 @@
             Creating Javascript Objects:
               name: JavaScript nesneleri oluşturma
             Creating Summary Tables:
-              name: "Özet Tablo oluşturma"
+              name: Özet Tablo oluşturma
             Data, Security, and Privacy:
               name: Veri, güvenlik ve gizlilik
             Designing Data Collection:
@@ -1674,7 +1674,7 @@
             Finding Trends with Visualizations:
               name: Görselleştirmeler ile Tendleri Bulma
             Good and Bad Data Visualizations:
-              name: "İyi ve kötü veri görselleştirmeleri"
+              name: İyi ve kötü veri görselleştirmeleri
             How is Data Collected?:
               name: Veri nasıl toplanır?
             Import, Export, and Visualize Data:
@@ -1736,17 +1736,17 @@
             Close and Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Teaching Support - Lessons 1-3:
-              name: "Öğretme Desteği- ders 1-3"
+              name: Öğretme Desteği- ders 1-3
             Teaching Support - Lessons 13-16:
-              name: "Öğretme Desteği- ders 13-16"
+              name: Öğretme Desteği- ders 13-16
             Teaching Support - Lessons 17-20:
-              name: "Öğretme Desteği- ders 17-20"
+              name: Öğretme Desteği- ders 17-20
             Teaching Support - Lessons 4-7:
-              name: "Öğretme Desteği- ders 4-7"
+              name: Öğretme Desteği- ders 4-7
             Teaching Support - Lessons 8-12:
-              name: "Öğretme Desteği- ders 8-12"
+              name: Öğretme Desteği- ders 8-12
         CSPPD3-Unit2:
           title: 'Computer Science Principles: Unit 2 PD'
           description: Online Exploration of CSP Unit 2
@@ -1758,11 +1758,11 @@
             Complete the Challenge:
               name: Meydan okumayı tamamla
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 2 Overview:
-              name: "Ünite 2 genel bakış"
+              name: Ünite 2 genel bakış
         duino:
           title: Experimenting with Arduino stuff
           description: Testing some tools for teaching with Arduinos
@@ -1825,13 +1825,13 @@
             Complete the Challenge:
               name: Meydan okumayı tamamla
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Practice Performance Task:
               name: Performans Görevlerini Uygula
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 3 Overview:
-              name: "Ünite 3 genel bakış"
+              name: Ünite 3 genel bakış
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description: This unit introduces the foundational concepts of computer
@@ -1876,7 +1876,7 @@
             Practice Performance Task:
               name: Performans Görevlerini Uygula
             Unit 3 Overview:
-              name: "Ünite 3 genel bakış"
+              name: Ünite 3 genel bakış
         gumball:
           title: Gumball oyun Labaratuarı
           description: Bir hikaye oluşturmak veya bir oyun yaratmak için Gumball Lab
@@ -1973,13 +1973,13 @@
             Cleaning Data:
               name: Veri temizleme
             Creating Summary Tables:
-              name: "Özet Tablo oluşturma"
+              name: Özet Tablo oluşturma
             Discover a Data Story:
               name: Bir Veri Hikayesi Keşfet
             Finding Trends with Visualizations:
               name: Görselleştirmeler ile Tendleri Bulma
             Good and Bad Data Visualizations:
-              name: "İyi ve kötü veri görselleştirmeleri"
+              name: İyi ve kötü veri görselleştirmeleri
             Identifying People with Data:
               name: Verilerle İnsanları Tanımlama
             Intro to Data:
@@ -1993,7 +1993,7 @@
             Rapid Research - Data Innovations:
               name: Hızlı araştırma - veri yenilikleri
             The Cost of Free:
-              name: "Ücretsiz"
+              name: Ücretsiz
             What is Big Data?:
               name: Büyük veri nedir?
         CSPPD3-Unit4:
@@ -2010,13 +2010,13 @@
             Complete the Challenge:
               name: Meydan okumayı tamamla
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Practice Performance Tasks:
               name: Performans Görevlerini Uygula
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 4 Overview:
-              name: "Ünite 4 genel bakış"
+              name: Ünite 4 genel bakış
         cspunit6draft:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description: App Lab has a number of tools that allow you to collect and
@@ -2038,7 +2038,7 @@
             Reading Records:
               name: Kayıtları okuma
             Sample Apps:
-              name: "Örnek uygulamalar"
+              name: Örnek uygulamalar
             Updating Records:
               name: Kayıtları güncelleme
             Visualizing Data:
@@ -2057,11 +2057,11 @@
             Explore PT Breakdown:
               name: Performans Görevindeki Arızayı Keşfet
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 5 Overview:
-              name: "Ünite 5 genel bakış"
+              name: Ünite 5 genel bakış
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description: App Lab has a number of tools that allow you to collect and
@@ -2084,7 +2084,7 @@
             Reading Records:
               name: Kayıtları okuma
             Sample Apps:
-              name: "Örnek uygulamalar"
+              name: Örnek uygulamalar
             Updating Records:
               name: Kayıtları güncelleme
             Visualizing Data:
@@ -2165,7 +2165,7 @@
             Preparing for in-person PD:
               name: Profesyonel kişisel gelişime hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Why Computer Science belongs in Algebra:
               name: Bilgisayar bilimi neden cebire ait
         algebraPD3c:
@@ -2175,11 +2175,11 @@
           description_audience: ''
           stages:
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Planning For the Future:
               name: Gelecek için planlama
             Sharing Student Work:
-              name: "Öğrenci çalışmalarını paylaşma"
+              name: Öğrenci çalışmalarını paylaşma
         csp1:
           title: CS Principles Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -2187,11 +2187,11 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: "İnternet"
+          description_short: İnternet
           description_audience: ''
           stages:
             Binary Numbers:
-              name: "İkili Sayılar"
+              name: İkili Sayılar
             CS Principles Pre-survey:
               name: Bilgisayar Bilimi ilkeleri ön anket
             Encoding and Sending Formatted Text:
@@ -2209,21 +2209,21 @@
             Routers and Redundancy:
               name: Yönlendiriciler ve yedeklilik
             Sending Binary Messages:
-              name: "İkili Mesajları Gönderiyor"
+              name: İkili Mesajları Gönderiyor
             Sending Binary Messages with the Internet Simulator:
               name: Internet simülatörü ile ikili ileti gönderme
             Sending Numbers:
               name: Sayı gönderme
             The Internet:
-              name: "İnternet"
+              name: İnternet
             The Need for Addressing:
               name: Adresleme için ihtiyaç
             The Need for DNS:
               name: DNS için ihtiyaç
             Unit 1 Chapter 1 Assessment:
-              name: "Ünite 1 Bölüm 1 değerlendirme"
+              name: Ünite 1 Bölüm 1 değerlendirme
             Unit 1 Chapter 2 Assessment:
-              name: "Ünite 1 Bölüm 2 değerlendirme"
+              name: Ünite 1 Bölüm 2 değerlendirme
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2250,7 +2250,7 @@
             Cleaning Data:
               name: Veri temizleme
             Creating Summary Tables:
-              name: "Özet Tablo oluşturma"
+              name: Özet Tablo oluşturma
             Discover a Data Story:
               name: Bir Veri Hikayesi Keşfet
             Encode a Complex Thing:
@@ -2262,7 +2262,7 @@
             Finding Trends with Visualizations:
               name: Görselleştirmeler ile Tendleri Bulma
             Good and Bad Data Visualizations:
-              name: "İyi ve kötü veri görselleştirmeleri"
+              name: İyi ve kötü veri görselleştirmeleri
             Intro to Data:
               name: Veriye genel bakış
             Lossy Compression and File Formats:
@@ -2274,9 +2274,9 @@
             Text Compression:
               name: Text Compression
             Unit 2 Chapter 1 Assessment:
-              name: "Ünite 2 Bölüm 1 değerlendirme"
+              name: Ünite 2 Bölüm 1 değerlendirme
             Unit 2 Chapter 2 Assessment:
-              name: "Ünite 2 Bölüm 2 değerlendirme"
+              name: Ünite 2 Bölüm 2 değerlendirme
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2315,7 +2315,7 @@
             Using Simple Commands:
               name: Basit komutları kullanma
             Unit 3 Chapter 1 Assessment:
-              name: "Ünite 3 Bölüm 1 değerlendirme"
+              name: Ünite 3 Bölüm 1 değerlendirme
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonim öğrenci anketi: AP sınavına girme'
             CSP Student Post Survey Staging:
@@ -2346,7 +2346,7 @@
             Cracking the Code:
               name: Kodu çözmek
             Encryption with Keys and Passwords:
-              name: "Şifreleme anahtarları ve parolaları ile şifreleme"
+              name: Şifreleme anahtarları ve parolaları ile şifreleme
             Identifying People with Data:
               name: Verilerle İnsanları Tanımlama
             Practice PT - Cybersecurity Innovations:
@@ -2360,7 +2360,7 @@
             Simple Encryption:
               name: Basit şifreleme
             The Cost of Free:
-              name: "Ücretsiz"
+              name: Ücretsiz
             What is Big Data?:
               name: Büyük veri nedir?
             Rapid Research - Cybercrime:
@@ -2368,7 +2368,7 @@
             Practice PT - Big Data and Security Dilemmas:
               name: Uygulama PT - Büyük veri ve güvenlik problemleri
             Unit 4 Chapter 1 Assessment:
-              name: "Ünite 4 Bölüm 1 değerlendirme"
+              name: Ünite 4 Bölüm 1 değerlendirme
             CSP Student Post Survey Staging:
               name: CSP öğrenci  anket hazırlama
             Participate in a longitudinal study!:
@@ -2414,7 +2414,7 @@
             Loops and Simulations:
               name: Döngüler ve simülasyonlar
             Multi-screen Apps:
-              name: "Çoklu ekranlı Uygulamalar"
+              name: Çoklu ekranlı Uygulamalar
             'Practice PT: Create':
               name: 'Pratik PT: oluşturma'
             Processing Arrays:
@@ -2484,7 +2484,7 @@
             CSP Student Post-Course Survey:
               name: Bilgisayar Bilimi ilkeleri kurs sonrası anketi
             Multi-Screen Apps:
-              name: "Çoklu ekranlı Uygulamalar"
+              name: Çoklu ekranlı Uygulamalar
             '"if" Statements Unplugged':
               name: '"eğer" deyimleri serbest'
             Boolean Expressions and "if" Statements:
@@ -2533,9 +2533,9 @@
             Booleans and Conditionals:
               name: Mantıksal değerler ve koşullar
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
             Complex Conditionals:
               name: Karmaşık koşullar
             Complex Sprite Movement:
@@ -2595,7 +2595,7 @@
             Post-Survey:
               name: Anket Sonrası
             The Tutorial:
-              name: "Öğretici"
+              name: Öğretici
             Using Computer Models in Science:
               name: Bilimde Bilgisayar Modellerini Kullanma
             Using Models in the Classroom:
@@ -2617,7 +2617,7 @@
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           stages:
             Sample Stage:
-              name: "Örnek sahne"
+              name: Örnek sahne
         ECSPD1:
           title: ECS Part 1
           description: Two hour introduction to your Professional Learning Program
@@ -2634,7 +2634,7 @@
             Welcome to Phase 1!:
               name: 1. Faza Hoşgeldiniz!
             Wrap Up:
-              name: "Özet"
+              name: Özet
             Classroom and workshop style:
               name: Sınıf ve çalışma yöntemi
             'Classroom and workshop style ':
@@ -2650,7 +2650,7 @@
             Introduction to PD:
               name: Kişisel Geliştirme Giriş
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Why Computer Science belongs in Algebra:
               name: Bilgisayar bilimi neden cebire ait
         sciencePD1:
@@ -2676,7 +2676,7 @@
             Post-Survey:
               name: Anket Sonrası
             The Tutorial:
-              name: "Öğretici"
+              name: Öğretici
             Using Computer Models in Science:
               name: Bilimde Bilgisayar Modellerini Kullanma
             Using Models in the Classroom:
@@ -2725,9 +2725,9 @@
             Running a Constructive Classroom:
               name: Yapıcı Bir Sınıf Oluşturmak
             Sending Binary Messages:
-              name: "İkili Mesajları Gönderiyor"
+              name: İkili Mesajları Gönderiyor
             Strategies for Student Writing:
-              name: "Öğrencilerin Yazmaları İçin Stratejiler"
+              name: Öğrencilerin Yazmaları İçin Stratejiler
             Supporting Peer Learning:
               name: Akran Öğrenmeyi Destekleme
             'Tool Talk: Intro to Netsim':
@@ -2758,7 +2758,7 @@
           description_short: Unreleased level types for UI testing as admin
           stages:
             Contained Levels:
-              name: "İçerdiği Düzeyler"
+              name: İçerdiği Düzeyler
             Game Lab:
               name: Oyun Laboratuvarı
         cspunit1-support-test:
@@ -2845,7 +2845,7 @@
           description_audience: ''
           stages:
             Adding Functionality (optional):
-              name: "İşlevsellik Ekleme (isteğe bağlı)"
+              name: İşlevsellik Ekleme (isteğe bağlı)
             Design Mode:
               name: Tasarım Modu
             Making it Interactive:
@@ -2885,7 +2885,7 @@
             App Testing:
               name: Uygulama testi
             Planning for Improvements:
-              name: "İyileştirmeler için planlama"
+              name: İyileştirmeler için planlama
             Improving and Iterating:
               name: Geliştirme ve Tekrarlama
             App Presentation Prep:
@@ -2952,7 +2952,7 @@
             Describing Web pages:
               name: Web Sayfalarını Tanımlama
             Multi-Page Websites:
-              name: "Çok Sayfalı Web Siteleri"
+              name: Çok Sayfalı Web Siteleri
             Classes:
               name: Sınıflar
             External Style Sheets:
@@ -2982,7 +2982,7 @@
           description_audience: Ages 8-18+
           stages:
             Sample Stage:
-              name: "Örnek sahne"
+              name: Örnek sahne
         MikeTest:
           title: MikeTest
           description: Trying not to break anything
@@ -2992,9 +2992,9 @@
             Artist Functions:
               name: 'Sanatçı: Fonksiyonlar'
             Sample Stage:
-              name: "Örnek sahne"
+              name: Örnek sahne
             The same thing with named levels:
-              name: "İsimlendirilmiş Seviyelerle Aynı Şey"
+              name: İsimlendirilmiş Seviyelerle Aynı Şey
             You are a coding STAR:
               name: Sen Bir Kodlama YILDIZISIN
         artistExemplar:
@@ -3014,9 +3014,9 @@
           description_audience: ''
           stages:
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Introduction to Teachercon:
@@ -3030,15 +3030,15 @@
             Lesson 1,6:
               name: Sayıları Gönderme
             Lesson 1,9:
-              name: "İnternet Adresleme (Savaş Gemisi)"
+              name: İnternet Adresleme (Savaş Gemisi)
             Lesson 2,10:
-              name: "İyi ve Kötü Veri Görselleştirme"
+              name: İyi ve Kötü Veri Görselleştirme
             Lesson 2,2:
               name: Metin Sıkıştırma
             Lesson 2,3:
               name: 'Ders 2.3: Siyah ve Beyaz Pikselleşme'
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
         kinderTest:
           title: ''
           description_audience: ''
@@ -3056,7 +3056,7 @@
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: "Çevrimiçi güvende olmak"
+              name: Çevrimiçi güvende olmak
             Debugging:
               name: Hata Ayıklama (Debugging)
             Events:
@@ -3102,7 +3102,7 @@
             Explore project ideas:
               name: Proje Fikirleri Keşfet
             'Farmer: Functions (New)':
-              name: "Çiftçi: Fonksiyonlar (Yeni)"
+              name: 'Çiftçi: Fonksiyonlar (Yeni)'
             Final Project - Presentation Day:
               name: Bitirme Projesi - Sunum Günü
             'Final Project - Unplugged: Design Process':
@@ -3116,7 +3116,7 @@
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Proje Sahnesi (Döngüler, Olaylar, Koşullar, Fonksiyonlar)
             Songwriting:
-              name: "Şarkı Yazarlığı"
+              name: Şarkı Yazarlığı
             'Unplugged: Funky Functions':
               name: 'Bağımsız (Unplugged): Acaip (Funky) Fonksiyonlar'
         grade1:
@@ -3126,7 +3126,7 @@
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: "Çevrimiçi güvende olmak"
+              name: Çevrimiçi güvende olmak
             Debugging:
               name: Hata Ayıklama (Debugging)
             Events:
@@ -3202,25 +3202,25 @@
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: "Ünite 1, 10. gün -veri ile bir hikaye anlatma"
+              name: Ünite 1, 10. gün -veri ile bir hikaye anlatma
             Unit 1, Day 11-14 Data Modeling and Design:
-              name: "Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım"
+              name: Ünite 1, 11-14 Gün Veri Modelleme ve Tasarım
             Unit 1, Day 15-16 Computer Programs and Following Directions:
-              name: "Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme"
+              name: Ünite 1, gün 15-16 bilgisayar programları ve yönergeleri izleme
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: "Ünite 1, gün 17-19 zeka nedir?"
-            0: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
-            1: "Ünite 1, gün 1-2 bir bilgisayar nedir?"
+              name: Ünite 1, gün 17-19 zeka nedir?
+            0: Ünite 1, gün 1-2 bir bilgisayar nedir?
+            1: Ünite 1, gün 1-2 bir bilgisayar nedir?
             Unit 1, Days 3-4 Buying a Computer:
               name: Birim 1, gün 3-4, bir bilgisayar satın almak
             Unit 1, Days 5-7 Searching and Web 2:
-              name: "Ünite 1, gün 5-7 arama ve Web 2"
+              name: Ünite 1, gün 5-7 arama ve Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Birim 1, gün 8-9 bilgisayar ve iletişimin etkileri
             Welcome!:
               name: Hoşgeldiniz!
             Wrap-up:
-              name: "Özet"
+              name: Özet
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -3230,13 +3230,13 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 2:
               name: 2. Bölüme Giriş
             Lesson Overviews:
               name: Derse Genel Bakış
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 2 Challenge:
               name: Bölüm 2 - Meydan Okuma
         ecs-unit3:
@@ -3248,11 +3248,11 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 3:
               name: 3. Bölüme Giriş
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 3 Challenge:
               name: Bölüm 3 - Meydan Okuma
             Unit 3 Day-by-Day:
@@ -3266,15 +3266,15 @@
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Intro to Unit 4:
               name: 4. Bölüme Giriş
             Teaching Strategies:
-              name: "Öğretim stratejileri"
+              name: Öğretim stratejileri
             Unit 4 Challenge:
               name: Bölüm 4 - Meydan Okuma
             Unit 4 Day-by-Day:
-              name: "Ünite 4 gün-ve gün"
+              name: Ünite 4 gün-ve gün
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -3284,15 +3284,15 @@
             Complete the Challenge:
               name: Meydan okumayı tamamla
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Introduction to the Unit 5 Challenge:
-              name: "Ünite 5 Meydan okumaya giriş"
+              name: Ünite 5 Meydan okumaya giriş
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 5 Overview:
-              name: "Ünite 5 genel bakış"
+              name: Ünite 5 genel bakış
             Unit 5 lessons:
-              name: "Ünite 5 dersleri"
+              name: Ünite 5 dersleri
             Unit 5 Challenge:
               name: 5. Bölüm Meydan Okuma
             Close & Next Steps:
@@ -3304,17 +3304,17 @@
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: "Ünite 6 alternatif fikirler"
+              name: Ünite 6 alternatif fikirler
             Getting Started:
-              name: "İlk adım"
+              name: İlk adım
             Share out and Submit:
               name: Paylaş ve gönder
             Unit 6 Challenge:
-              name: "Ünite 6 meydan okuma"
+              name: Ünite 6 meydan okuma
             Unit 6 Overview:
-              name: "Ünite 6 genel bakış"
+              name: Ünite 6 genel bakış
             Unit 6 lessons:
-              name: "Ünite 6 dersleri"
+              name: Ünite 6 dersleri
             Close & Next Steps:
               name: Kapat ve Sonraki adımlar
         grade3:
@@ -3334,15 +3334,15 @@
             Build a Game:
               name: Bir Oyun Oluştur
             Farmer Conditional with Cards:
-              name: "Çiftçi koşullu kartlarıyla"
+              name: Çiftçi koşullu kartlarıyla
             Farmer Debug Relay Programming:
-              name: "Çiftçi Hata Ayıklama Rölesi Programlama"
+              name: Çiftçi Hata Ayıklama Rölesi Programlama
             Farmer Graph Paper Programming:
-              name: "Çiftçi Grafik Yazarlığı Programlaması"
+              name: Çiftçi Grafik Yazarlığı Programlaması
             Farmer Impacts of Computing:
-              name: "Çiftçinin Bilişim Etkileri"
+              name: Çiftçinin Bilişim Etkileri
             'Farmer: While Loops':
-              name: "Çiftçi: Süresince (While) Döngüleri"
+              name: 'Çiftçi: Süresince (While) Döngüleri'
             'Maze: Conditionals with Loops':
               name: 'Labirent: Döngüler ile Koşullar'
             'Maze: Nested Loops':
@@ -3350,7 +3350,7 @@
             More Programming with CS4FN:
               name: CS4FN ile Daha Fazla Programlama
             Robot Running the Farm:
-              name: "Çiftliği yürüten Robot"
+              name: Çiftliği yürüten Robot
             Unplugged Conditionals with Loops:
               name: Döngüler ile Bağımsız (Unplugged) Koşullar
         alltheplcthings:
@@ -3363,7 +3363,7 @@
           description_audience: ''
           stages:
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Introduction to Teachercon:
@@ -3431,14 +3431,14 @@
                 anlatılır. Öğrenciler, bu yeni özellikleri faklı yollarla kullanırken,
                 ihtiyaç duydukları basit bir oyun kaydırma çubuğunu oluştururken becerilerini
                 geliştirirler.
-              description_teacher: "Önceki derslerde öğrencilerin hareketli nesneleri
+              description_teacher: Önceki derslerde öğrencilerin hareketli nesneleri
                 sayaç deseni ile nasıl hareket ettirdikleriyle ilgili kısa bir bilgilendirmeden
                 sonra, öğrencilere nesnelerin dönme hızlarının ve süratlarinin doğrudan
                 nasıl ayarlanacağını anlatılır. Öğrenciler, bu yeni özellikleri faklı
                 yollarla kullanırken, ihtiyaç duydukları basit bir oyun kaydırma çubuğunu
-                oluştururken becerilerini geliştirirler."
+                oluştururken becerilerini geliştirirler.
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
               description_student: Sınıf bilgisayarda çarpışmayı bulmayı öğrenir.
                 Çiftler, bir bilgisayarın, hareketli nesnelerin konumunu, boyut özelliklerini
                 ve iki nesnenin birbirine dokunduğunu nasıl belirlediği keşfeder.
@@ -3446,13 +3446,13 @@
                 çarpıştığında farklı efektleri oluşturmak için 'isTouching()' komutunu
                 kullanır.  Son olarak, öğrenciler yeni becerilerini, son derste başladıkları
                 oyun kaydırma çubuğunu geliştirmek için kullanırlar.
-              description_teacher: "Öğrenciler bilgisayarda çarpışmayı bulmayı öğrenir.
+              description_teacher: Öğrenciler bilgisayarda çarpışmayı bulmayı öğrenir.
                 Çiftler halinde çalışıp, bir bilgisayarın, hareketli nesnelerin konumunu,
                 boyut özelliklerini ve iki nesnenin birbirine dokunduğunu nasıl belirlediği
                 keşfederler. Öğrenciler daha sonra oyun sesleri dahil olmak üzere,
                 hareketli nesneler çarpıştığında farklı efektleri oluşturmak için
                 'isTouching()' komutunu kullanır.  Son olarak, öğrenciler yeni becerilerini,
-                son derste başladıkları oyun kaydırma çubuğunu geliştirmek için kullanırlar."
+                son derste başladıkları oyun kaydırma çubuğunu geliştirmek için kullanırlar.
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
               description_student: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması,
@@ -3461,16 +3461,16 @@
                 öğrenir. Son seviyelerde sınıf, bu hareketleri bir nesneyi hareket
                 ettirmek ve kontrol etmek için kullanır. Kontrol ettikleri nesneyi
                 uçurarak etraftaki altınları topladıkları basit bir oyun oluştururlar. '
-              description_teacher: "Öğrenciler daha karmaşık nesne hareketleri oluşturmak
+              description_teacher: Öğrenciler daha karmaşık nesne hareketleri oluşturmak
                 için sayaç deseni ile nesnelerin sürat özelliklerini birleştirmeyi
                 öğrenir. Öğrenciler özellikle yer çekimi simülasyonu, bir nesnenin
                 zıplaması ve nesnelerin süzülmelerinin nasıl olacağını öğrenirler.
                 Code Stüdyo'da ilerledikçe öğrenciler bu hareketleri, bir nesneyi
                 hareketlendirmek, kontrol etmek ve basit bir oyunda bir nesneyi uçurarak
                 altın toplamak için kullanırlar. Öğrenciler, son seviyede oyuna kendi
-                istedikleri eklemeyi yapmaları için cesaretlendirilirler."
+                istedikleri eklemeyi yapmaları için cesaretlendirilirler.
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
               description_student: Sınıf, nesnelerin yeni bir yolla etkileşime geçmeleri
                 için program yazarlar.  'isTouching' bloğunu nasıl kullandıklarıyla
                 ilgili kısa bir gözden geçirmeden sonra, sınıf iki nesnenin farklı
@@ -3478,13 +3478,13 @@
                 yaparlar. Dört çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama
                 ve aşağı inme) denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin
                 başka bir nesneyi  ittirmesi için kullanırlar.
-              description_teacher: "Öğrenciler, farklı bir yolla etkileşime geçmeleri
+              description_teacher: Öğrenciler, farklı bir yolla etkileşime geçmeleri
                 için nesneleri programlarlar. 'isTouching' bloğunu nasıl kullandıklarıyla
                 ilgili kısa bir gözden geçirmeden sonra, iki nesnenin farklı şekillerde
                 nasıl etkileşime geçecekleri hakkında beyin fırtınası yaparlar. Dört
                 çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama ve aşağı inme)
                 denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin başka bir
-                nesneyi  ittirmesi için kullanırlar."
+                nesneyi  ittirmesi için kullanırlar.
             Functions:
               name: Fonksiyonlar
               description_student: Bu ders, kodları organize etmeyi, tekrar eden blokları
@@ -3494,7 +3494,7 @@
                 fonksiyonlar oluştururlar. Dersin sonunda sınıf, bu becerilerini,
                 oyun kaydırma çubuğu'nun son versiyonuna özellik eklemek ve düzenlemek
                 için kullanırlar.
-              description_teacher: "Öğrenciler, tekrar eden kod bloklarını kaldırmak,
+              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak,
                 kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları
                 nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması,
                 duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı
@@ -3504,7 +3504,7 @@
                 öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak
                 ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları
                 kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek
-                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar."
+                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
             The Game Design Process:
               name: Oyun tasarım süreci
               description_student: Bu ders, sınıfın, bu ünitenin devamında oyunlar
@@ -3566,8 +3566,8 @@
                 bir eğlence biçiminde veya kendini ifade etme aracı olarak nasıl bir
                 rol oynadığını keşfedeceklerdir.
             Plotting Shapes:
-              name: "Şekiller çizme"
-              description_student: "Öğrenciler şekillerle nasıl çizileceğini iletmenin
+              name: Şekiller çizme
+              description_student: Öğrenciler şekillerle nasıl çizileceğini iletmenin
                 zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
                 yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
                 referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
@@ -3577,8 +3577,8 @@
                 takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
                 Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
                 benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
-                önce kendi çizdirecekleri resimlerini oluştururlar."
-              description_teacher: "Öğrenciler şekillerle nasıl çizileceğini iletmenin
+                önce kendi çizdirecekleri resimlerini oluştururlar.
+              description_teacher: Öğrenciler şekillerle nasıl çizileceğini iletmenin
                 zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
                 yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
                 referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
@@ -3588,9 +3588,9 @@
                 takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
                 Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
                 benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
-                önce kendi çizdirecekleri resimlerini oluştururlar."
+                önce kendi çizdirecekleri resimlerini oluştururlar.
             Shapes and Randomness:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
               description_student: Bu ders çizim becerilerini genişlik ve yüksekliği
                 kapsayacak şekilde verir ve rastgele sayı üretme kavramını tanıtır.
                 Sınıf ellipse() ve rect() işlevlerinin genişlik ve yükseklik parametrelerini
@@ -3665,20 +3665,20 @@
                 uygular. Sınıf, bu söz dizimine alıştıktan sonra, hareketli nesne
                 özellikleri ile aynı süreci uygular. Ekran boyunca ilerleyen hareketli
                 bir nesneyi izler.
-              description_teacher: "Öğrenciler bağımsız bir aktivitede değişkenlerin
+              description_teacher: Öğrenciler bağımsız bir aktivitede değişkenlerin
                 arka plandaki davranışlarını keşfeder. Bir programdaki değişkenlerin
                 bir benzerini yapmak için not kartları ve metinleri kullanarak kısa
                 bir program uygular. Öğrenciler bu söz dizimine alıştıktan sonra,
                 ekran boyunca ilerleyen bir nesneyi takip etmek için hareketli nesne
-                özelliklerindeki aynı süreci uygular."
+                özelliklerindeki aynı süreci uygular.
             Sprite Movement:
               name: Hareketli Nesnelerin Hareketi
-              description_student: "Çizim Döngüsü ve Sayaç deseni birleştirilerek
-                sınıf, ekranda hareketli nesneleri hareket ettiren programlar yazar
-                ve bununla birlikte diğer hareketli nesne özelliklerini canlandırır."
-              description_teacher: "Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek
+              description_student: Çizim Döngüsü ve Sayaç deseni birleştirilerek sınıf,
                 ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
-                birlikte diğer hareketli nesne özelliklerini canlandırır."
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
+              description_teacher: Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek
+                ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
             Conditionals:
               name: Koşullar
               description_student: Sınıf, hareketli nesne özelliğinin geçerli değerini
@@ -3689,28 +3689,28 @@
                 Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
                 araştırmak için kullandıktan sonra, sınıf bu mantıksal karşılaştırmalara
                 yanıt veren kodu yazmak için koşullu eğer ifadeleri ekler.
-              description_teacher: "Öğrenciler, hareketli nesne özelliğinin geçerli
+              description_teacher: Öğrenciler, hareketli nesne özelliğinin geçerli
                 değerini bir hedef değerle karşılaştırmak için boolean değerler kullanarak
                 başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki
                 bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü
                 veya sayaç desenini kullanarak başka bir değere ulaştığını belirler.
                 Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
                 araştırmak için kullandıktan sonra, öğrenciler bu mantıksal karşılaştırmalara
-                yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler."
+                yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler.
             Keyboard Input:
               name: Klavye girişi
-              description_student: "Önceki derste boolean ve eğer ifadelerine bir
+              description_student: Önceki derste boolean ve eğer ifadelerine bir girişten
+                sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir blokla
+                tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için koşul
+                ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
+                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
+                girdileri alan programlar yazacaklar.
+              description_teacher: Önceki derste boolean ve _eğer_ ifadelerine bir
                 girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir
                 blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için
                 koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
                 öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
-                girdileri alan programlar yazacaklar."
-              description_teacher: "Önceki derste boolean ve _eğer_ ifadelerine bir
-                girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir
-                blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için
-                koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
-                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
-                girdileri alan programlar yazacaklar."
+                girdileri alan programlar yazacaklar.
             Other Forms of Input:
               name: " Diğer girdi yöntemi"
               description_student: Bu derste öğrenciler, kullanıcı girdilerini almak
@@ -3750,7 +3750,7 @@
                 çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir.
                 Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları
                 paylaşır.
-              description_teacher: "Öğrenciler, projelerini yönlendirmek için önceki
+              description_teacher: Öğrenciler, projelerini yönlendirmek için önceki
                 iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak
                 ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler
                 ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun
@@ -3762,11 +3762,11 @@
                 incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
-                ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir."
+                ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
             Parameters and Randomization:
               name: Parametreler ve Rastgelelik (Randomization)
             Shapes and Randomization:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
             CS Discoveries End of Semester Survey:
               name: CS Discoveries End of Semester Survey
         grade2:
@@ -3792,9 +3792,9 @@
             New Home for My Pet:
               name: Evcil Hayvanım İçin Yeni Ev
             Online Internet Safety:
-              name: "Çevrimiçi İnternet Güvenliği"
+              name: Çevrimiçi İnternet Güvenliği
             Online My New Pet Jigsaw:
-              name: "Çevrimiçi yeni evcil hayvan yapbozum"
+              name: Çevrimiçi yeni evcil hayvan yapbozum
             Puppy Event:
               name: Yavru köpek etkinliği
             Puppy Introduction:
@@ -3807,7 +3807,7 @@
             Programming at home with my pet:
               name: Evcil hayvanım ile evde programlama
             Binary Bracelets:
-              name: "İkilik Bileklikler"
+              name: İkilik Bileklikler
             'Real-life Algorithms: Paper Planes':
               name: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
             The Big Event:
@@ -3835,7 +3835,7 @@
           description: ''
           stages:
             Binary:
-              name: "İkili"
+              name: İkili
             Conditionals:
               name: Koşullar
             Events:
@@ -3849,7 +3849,7 @@
             Loops:
               name: Döngüler
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Variables:
               name: Değişkenler
             While Loops:
@@ -3863,7 +3863,7 @@
             Lesson Prep:
               name: Derse hazırlık
             Teacher Dashboard:
-              name: "Öğretmen Panosu"
+              name: Öğretmen Panosu
             Teaching with Puzzles:
               name: Bulmaca ile öğretim
             Teaching with the Design Recipe:
@@ -3883,11 +3883,11 @@
             NEW Unit 1 Chapter 1 Assessment:
               name: Yeni Ünite 1 Bölüm 1 değerlendirme
             Unit 1 Chapter 1 Assessment:
-              name: "Ünite 1 Bölüm 1 değerlendirme"
+              name: Ünite 1 Bölüm 1 değerlendirme
             Unit 3 Chapter 1 Assessment:
-              name: "Ünite 3 Bölüm 1 değerlendirme"
+              name: Ünite 3 Bölüm 1 değerlendirme
             Unit 4 Chapter 1 Assessment:
-              name: "Ünite 4 Bölüm 1 değerlendirme"
+              name: Ünite 4 Bölüm 1 değerlendirme
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonim öğrenci anketi: AP sınavına girme'
         csd1:
@@ -3969,13 +3969,13 @@
             Processing with Bits:
               name: Bitlerle işlem
             Human vs. Computer Processing:
-              name: "İnsana karşı bilgisayar işleme"
+              name: İnsana karşı bilgisayar işleme
             Processing with Apps:
               name: Uygulamalar ile işleme
             'Project: Apps and Problem Solving':
               name: 'Proje: Uygulamalar ve Problem Çözme'
             Human vs Computer Processing:
-              name: "İnsan ve Bilgisayar İşlemleri karşılaştırması"
+              name: İnsan ve Bilgisayar İşlemleri karşılaştırması
             Input and Output:
               name: Girdiler ve çıktılar
               description_student: "Bu sınıfta öğrenciler,  \nIn this the class students
@@ -4000,13 +4000,13 @@
                 ortak aktiviteleri incelerler ve aktivite için kullandıkları girdileri
                 ve çıktıları grafikten seçerler.
             Processing:
-              name: "İşleme"
+              name: İşleme
               description_student: Bu ders, bir bilgisayarın tanımında tanıtımı yapılan
                 işleme kavramı kısmına derinlemesine dalıyor.  Çiftler, bilgi işleme
                 şekli olarak, bir kart destesini sıraya koymak için birlikte çalışırlar.  Sonunda
                 sınıf, informasyon sorunlarını çözme bağlamında işlemenin ne demek
                 olduğunu tartışır.
-              description_teacher: "Öğrenciler, işlemenin anlamını ve problem çözme
+              description_teacher: Öğrenciler, işlemenin anlamını ve problem çözme
                 ile ilişkisini keşfetmeleri için iki tane bağımsız kart sıralama etkinliği
                 yaparlar. İlk etkinlikte az kısıtlama vardır ve işlemenin üst düzey
                 bir tanımını öğretmek için kullanılır. Sonraki etkinlikte öğrencileri,
@@ -4015,7 +4015,7 @@
                 geliştirir, test eder ve sınıf arkadaşlarıyla paylaşır. Kapanış tartışması,
                 öğrencilerin bu etkinliklerde kullandıkları farklı problem çözme türleri
                 ve bir problemi çözmek için bir algoritma üretmenin değeri üzerine
-                derinlemesine düşünmelerini sağlar."
+                derinlemesine düşünmelerini sağlar.
             Storage:
               name: Depolama
               description_student: Bu ders, bilgi işleme kapsamında bilgisayar tanımının
@@ -4024,7 +4024,7 @@
                 bilgi işlemek için algoritmalar geliştirerek ve paylaşarak dersin
                 büyük bir kısmını geçirir. Ders, bilgi işlerken depolamanın önemi
                 üzerine bir tartışma ile sonuçlanır.
-              description_teacher: "Öğrenciler bilgisayarın Girdi-Depolama-İşleme-Çıktı
+              description_teacher: Öğrenciler bilgisayarın Girdi-Depolama-İşleme-Çıktı
                 modeliyle birlikte depolamanın önemini keşfederler. Isınma etkinliği
                 belgeler, resimler ya da videolar gibi öğrencilerin geçmişte bilgisayarların
                 deposunda gördükleri bilgi türleri hakkında derinlemesine düşünmelerini
@@ -4034,7 +4034,7 @@
                 ettirecekleri hakkındaki kısıtlamalar onları desteyi işlerken bile
                 depolamanın önemini göz önünde bulundurmaya zorlar. Ders öğrencilerin
                 bu derste gördükleri iki depolama türü hakkında tartışmalar ve bilgiyi
-                işlerken depolamanın önemi hakkındaki tartışmayla sonuçlanır."
+                işlerken depolamanın önemi hakkındaki tartışmayla sonuçlanır.
             Apps and Problem Solving:
               name: Uygulamalar ve Problem çözme
               description_student: 'Bu ders, bilgisayarların girdi ve çıktı özelliklerini
@@ -4086,11 +4086,11 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
             'Lessons 4-6: Encoding and Sending Numbers':
               name: 'Ders 4-6: Kodlama ve Sayıları Gönderme'
             'Lesson 7: Encoding and Sending Text':
@@ -4128,11 +4128,11 @@
             'Lessons 11 - 15: Communicating with Visualizations':
               name: 'Ders 11-15: Görselleştirmeler ile İletişim'
             Unit 2 Overview:
-              name: "Ünite 2 genel bakış"
+              name: Ünite 2 genel bakış
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme':
               name: 'Ders 5 - 6: Sıkıştırma Formatları ve Kendi Kodlama Düzenini Geliştirme'
             Unit 3 Overview:
-              name: "Ünite 3 genel bakış"
+              name: Ünite 3 genel bakış
             'Lessons 1 - 3: Algorithms':
               name: 'Ders 1-3: Algoritmalar'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
@@ -4150,7 +4150,7 @@
             Processing Arrays and Functions with Return Values:
               name: Geri Dönen Değerler ile Fonksiyonları ve Dizileri İşleme
             Unit 5 Overview:
-              name: "Ünite 5 genel bakış"
+              name: Ünite 5 genel bakış
         csp1-support:
           title: CSP Unit 1 Online Support
           description_short: TeacherSupports for CSP unit 1
@@ -4175,11 +4175,11 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
         basketball:
@@ -4205,17 +4205,17 @@
             Simple Encryption:
               name: Basit şifreleme
         fesbinary:
-          title: "İkili"
+          title: İkili
           description_audience: ''
           description_short: ''
           description: ''
           stages:
             Binary Bracelets:
-              name: "İkilik Bileklikler"
+              name: İkilik Bileklikler
             Binary Images:
-              name: "İkili Sistemle Resimler"
+              name: İkili Sistemle Resimler
             Binary Artist Puzzles:
-              name: "İkili Sanatçı Bulmacaları"
+              name: İkili Sanatçı Bulmacaları
             RGB Color:
               name: RGB(Kırmızı Yeşil Mavi) renkler
             Processing with Bits:
@@ -4251,18 +4251,18 @@
                 karmaşık web sayfalarında giderek ortaya bir dizi hatayı düzeltecekler.
                 Ve yorumların, beyaz boşlukların ve web sayfalarını okumayı kolaylaştıran
                 girintilerin önemini öğrenecekler.
-              description_teacher: "Öğrenciler bu derste HTML ile dizayn edilen web
+              description_teacher: Öğrenciler bu derste HTML ile dizayn edilen web
                 sayfalarında ortaya çıkan genel sorunları ele alacaklar. Öğrenciler
                 Code Studio'daki karmaşık web sayfalarında ortaya çıkan bir dizi hatayı
                 düzeltecekler. Süreç içinde; yorumların önemini, beyaz boşluğu ve
                 web sayfaları okumayı kolaylaştıran girintileri öğrenecekler. Dersin
                 sonunda öğrenciler hata ayıklama (debugging) stratejilerinin bir listenin
                 yapacaklar ve kodların kolay okunabilir ve sürdürülebilir olduğundan
-                emin olacaklar."
+                emin olacaklar.
             Introduction to Styling with CSS:
               name: CSS ile Biçimlendirmeye Giriş
             Multi-Page Websites:
-              name: "Çok Sayfalı Web Siteleri"
+              name: Çok Sayfalı Web Siteleri
             Classes:
               name: Sınıflar
             External Style Sheets:
@@ -4290,10 +4290,10 @@
               name: Bir Websitesini Yayınlama
             Sources and Search Engines:
               name: Kaynaklar ve Arama Motorları
-              description_student: "İlk önce bir web araması toplama avı tamamladıktan
+              description_student: İlk önce bir web araması toplama avı tamamladıktan
                 sonra, sınıf arama motorlarının iç işleyişini öğrenir ve analitik
                 becerilerini, tuhaf ve olası olmayan hayvanlar için araştırmaya yönlendirebilme
-                olanağına sahiptirler."
+                olanağına sahiptirler.
               description_teacher: Bu ders internetteki arama motorlarının nasıl çalıştığını
                 ve internette alakalı ve güvenilir bilginin nasıl bulunacağı konusunda
                 daha ciddi düşünmeleri konusunda öğrencileri cesaretlendirecektir.
@@ -4351,7 +4351,7 @@
                 ve bu web sitelerinin kullanıcılar için nasıl kullanışlı olduğunu
                 ve onu yaratanlara nasıl hizmet ettiğini çözmeye çalışırlar.
             'Websites for Expression ':
-              name: "İfade Web Siteleri "
+              name: 'İfade Web Siteleri '
               description_student: 'Bu ders, web sitelerini kişisel ifadenin bir aracı
                 olarak tanıtır. Sınıf önce, insanların fikirlerini ve ilgi alanlarını
                 ifade etmek ve paylaşmak için kullandıkları farklı yolları tartışır.
@@ -4414,12 +4414,12 @@
                 Sınıf etiketleri kullanarak alıştırma yapar, sonra kişisel web sayfası
                 projesine giderek bu yeni etiketleri içeren yeni bir HTML sayfası
                 ekler.
-              description_teacher: "Öğrenciler, HTML'de sıralı ve sırasız listeleri
+              description_teacher: Öğrenciler, HTML'de sıralı ve sırasız listeleri
                 öğrenirler ve öğrenciler, &lt;ul&gt;, &lt;ol&gt;, ve &lt;li&gt; etiketlerini
                 kullanacakları birkaç seviyede bunlar üzerine çalışma yaparlar. Sonra
                 projelerine geri gidip yeni bir HTML sayfası eklerler. Yeni sayfa
                 içinde bir tarif, bir ilk on listesi ya da öğrendikleri yeni etiketleri
-                kullanan başka herhangi bir içerik yazarlar."
+                kullanan başka herhangi bir içerik yazarlar.
             Intellectual Property and Images:
               name: Fikri mülkiyet ve görüntüleri
               description_student: Bu derste, bir medyanın yaratıcısının haklarına
@@ -4464,8 +4464,15 @@
                 gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
                 kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
                 paylaşır.
-              description_teacher: |
-                Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış katacaklardır.\r
+              description_teacher: 'Öğrenciler, Kişisel Web Sitesi''nde çalışan ünite
+                boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
+                sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
+                yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
+                ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
+                ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
+                katacaklardır.\r
+
+'
             Headings:
               name: Başlıklar
               description_student: Bu derste HTML etiketleri tanıtmaya devam ediyor,
@@ -4490,7 +4497,7 @@
             to teach Unit 2. '
           stages:
             Unit 2 Overview:
-              name: "Ünite 2 genel bakış"
+              name: Ünite 2 genel bakış
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Ders 1-2: Bitler, Dosya Boyutları ve Metin Sıkıştırma'
             'Lessons 3 - 4 : Encoding Images':
@@ -4504,24 +4511,24 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
         csd4:
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
-          description: "Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
+          description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
             ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci
             yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem
             de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar
             ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan
-            bir tekrarlayıcı takım projesinden oluşur."
+            bir tekrarlayıcı takım projesinden oluşur.
           stages:
             Analysis of Design:
               name: Tasarım analizi
@@ -4547,8 +4554,16 @@
                 kullanıcıların çeşitli ürünlere nasıl tepki gösterebileceklerini araştırıyor.
                 Rol farklı bir kişi olarak oynuyor, sınıfın her üyesi başkasının gözüyle
                 tasarımlar tecrübe edinecek.
-              description_teacher: |
-                Kullanışlı ürünler meydana getirmek için tasarımcıların, kullanıcılarının ihtiyaçlarını anlamaları gerekir. Bu ders öğrencileri, Bu ders öğrencileri, bir kullanıcı profili kullanıp başka biriymiş gibi rol yaparak ve bir dizi ürüne o kullanıcı gibi tepki vererek başka bir insan için nasıl tasarlayacakları hakkında düşünmek için cesaretlendirir. Her öğrenci bir kişiyi tanımlayan, daha sonra uygun ürünleri seçmeyi, ürün tasarımını eleştirmeyi ve tasarım için geliştirmeler önermeyi kullanacakları, bir kullanıcı profiline atanır.\r
+              description_teacher: 'Kullanışlı ürünler meydana getirmek için tasarımcıların,
+                kullanıcılarının ihtiyaçlarını anlamaları gerekir. Bu ders öğrencileri,
+                Bu ders öğrencileri, bir kullanıcı profili kullanıp başka biriymiş
+                gibi rol yaparak ve bir dizi ürüne o kullanıcı gibi tepki vererek
+                başka bir insan için nasıl tasarlayacakları hakkında düşünmek için
+                cesaretlendirir. Her öğrenci bir kişiyi tanımlayan, daha sonra uygun
+                ürünleri seçmeyi, ürün tasarımını eleştirmeyi ve tasarım için geliştirmeler
+                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r
+
+'
             Discovering Users:
               name: Kullanıcıları keşfetmek
             User-Centered Design Micro Activity:
@@ -4588,14 +4603,14 @@
                 ekipler halinde organize olur ve uygulama konularını keşfetmeye başlar.
                 Sosyal açıdan etkileyici birkaç örnek uygulama, projeye ilham kaynağı
                 olur.
-              description_teacher: "Ünitenin sonuna kadar sürecek olan uygulama tasarım
+              description_teacher: Ünitenin sonuna kadar sürecek olan uygulama tasarım
                 projesini başlatmak için, öğrenciler ilk önce diğer öğrenciler tarafından
                 oluşturulan toplumsal etki için tasarlanmış bir dizi uygulamayı keşfederler.
                 Sınıf, daha sonra sosyal etkileri ile kendi uygulaması için fikir
                 geliştirdikçe, Problem Çözme sürecinin Tanımlama, Hazırlanmış, Deneme,
                 ve Yansıtma adımlarını gözden geçirir. Son olarak, öğrenciler proje
                 ekipleri kuracak ve ekibin uygulamanın gelişimi boyunca nasıl çalışacağı
-                konusunda bir sözleşme yapacak."
+                konusunda bir sözleşme yapacak.
             Market Research:
               name: Pazar araştırması
               description_student: Benzer kullanıcılara hizmet verebilecek mevcut
@@ -4619,8 +4634,20 @@
                 uygulama laboratuvarında bir kaç örnek uygulama yapmayı keşfeder,
                 bu uygulamalar, kendi uygulamalarının ilk kağıt prototipleri hakkında
                 bilgi vermeye yardımcı olurlar.
-              description_teacher: |
-                Uygulamaları tasarlamaya başlamadan önce öğrencilerin beklentilerini daha iyi araştırmalarına yardımcı olmamız gerekir. Çünkü öğrenciler eninde sonunda bu uygulamaları Uygulama Labaratuarında ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı'nda kolayca ön model haline getirilebilen uygulama türleriyle uyumluysa daha iyi bir halde olacaklar. Takımlar bu araştırmaya uygulama laboratuarı ile oluşturulabilecek uygulamaları göstermek için tasarlanmış birkaç örneği inceleyerek başlarlar. Takımlar daha sonra bir (veya daha fazla) uygulamayı kendisine bir temel olarak seçebilir. Buradan itibaren, takımların kağıt ön modellerini geliştirmek için 3x5 dizin kartlarını kullanmadan önce uygulamanın temel işlevselliğini tartışmak için zamanı var.\r
+              description_teacher: 'Uygulamaları tasarlamaya başlamadan önce öğrencilerin
+                beklentilerini daha iyi araştırmalarına yardımcı olmamız gerekir.
+                Çünkü öğrenciler eninde sonunda bu uygulamaları Uygulama Labaratuarında
+                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı''nda
+                kolayca ön model haline getirilebilen uygulama türleriyle uyumluysa
+                daha iyi bir halde olacaklar. Takımlar bu araştırmaya uygulama laboratuarı
+                ile oluşturulabilecek uygulamaları göstermek için tasarlanmış birkaç
+                örneği inceleyerek başlarlar. Takımlar daha sonra bir (veya daha fazla)
+                uygulamayı kendisine bir temel olarak seçebilir. Buradan itibaren,
+                takımların kağıt ön modellerini geliştirmek için 3x5 dizin kartlarını
+                kullanmadan önce uygulamanın temel işlevselliğini tartışmak için zamanı
+                var.\r
+
+'
             Prototype Testing:
               name: Prototip testi
               description_student: Bu derste takımlar sınıflarındaki diğer üyelerle
@@ -4658,9 +4685,9 @@
                 en az bir sayfasını oluşturur.
             Event Driven Programming:
               name: Olay Temelli Programlama
-              description_student: "Önceki derste sınıf tarafından tasarlanan ekranlar
+              description_student: Önceki derste sınıf tarafından tasarlanan ekranlar
                 kuruluyor, takımlar ekranları tek bir uygulamada birleştiriyor. Düğme
-                tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi."
+                tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi.
               description_teacher: Bu derste takımlar bir önceki derste tasarladıkları
                 ekranları tek bir uygulamada birleştirir, ve daha sonra basit olaylar
                 kullanarak programlamaya başlarlar. Öğrenciler butonlara tıklayan
@@ -4686,14 +4713,14 @@
               description_student: Takımlar bu kez etkileşimli prototipleriyle birlikte
                 başka bir kullanıcı testi aşaması çalıştırır. Bu aşamada testten toplanan
                 geri bildirimler uygulama prototiplerinin sonucunun, tekrarını bildirecektir.
-              description_teacher: "Önceki dersin sonuna kadar, her takım uygulamanın
+              description_teacher: 'Önceki dersin sonuna kadar, her takım uygulamanın
                 minimum canlı bir ön modeline sahip olmalıdır. Bu dersin temel amacı,
                 ekibin uygulamayı başkaları ile, tercihen de uygulamanın amaçlandığı
                 hedef kitle ile ya da takımdan olan gözlemciler sonuçları planlama
                 aşamasında kullandıkları çalışma sayfalarında kaydederken sınıftaki
                 diğer takımlar ile test etmektir. Kağıt ön modelleri test edilirken,
                 takım, testleri uygulamadan ve gözlemlemeden önce belirli senaryoları
-                planlayarak başlayacaktır. "
+                planlayarak başlayacaktır. '
             Improving and Iterating:
               name: Geliştirme ve Tekrarlama
               description_student: Testin son aşamasındaki geri bildirimi kullanarak
@@ -4781,18 +4808,18 @@
                 kullanıcıların ihtiyaçlarını karşılayan bir uygulama fikriyle gelecekler.
                 Bu fikirleri ifade etmek ve etkilerini test etmek için her öğrenci
                 kendi kağıt prototiplerini yapar ve test eder.
-              description_teacher: "Önceki dersin akran röportajından yola çıkarak,
+              description_teacher: Önceki dersin akran röportajından yola çıkarak,
                 her öğrenci kullanıcılarının sorunlarına hitap edecek bir uygulama
                 için bir fikir ortaya atar. Daha sonra öğrenciler, kişisel not kartlarına
                 “ekranlar” çizerek uygulama fikirlerinin kâğıt ön örneklerini oluştururlar.
                 Bir proje kılavuzu öğrencileri, kullanıcı ara yüzleri hakkındaki varsayımlarının
                 doğru olup olmadığını görmeleri için uygulama oluşturma ve uygulamayı
-                kullanıcıları ile test etmeyi de içeren süreç boyunca yönlendirir."
+                kullanıcıları ile test etmeyi de içeren süreç boyunca yönlendirir.
             Linking Screens:
               name: Bağlama Ekranları
-              description_student: "Önceki derste sınıf tarafından tasarlanan ekranlar
+              description_student: Önceki derste sınıf tarafından tasarlanan ekranlar
                 kuruluyor, takımlar ekranları tek bir uygulamada birleştiriyor. Düğme
-                tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi."
+                tıklamalarının uygun ekranda değiştirilebilmesi için basit kod eklendi.
               description_teacher: Bu derste takımlar bir önceki derste tasarladıkları
                 ekranları tek bir uygulamada birleştirip kod kullanarak birbirlerine
                 bağlayabilirler. Öğrenciler bir önceki derste başlatmış oldukları
@@ -4895,7 +4922,7 @@
             Programming in Maze:
               name: Labirentte Programlama
             Being Safe Online:
-              name: "Çevrimiçi güvende olmak"
+              name: Çevrimiçi güvende olmak
             'Loops: Happy Loops':
               name: 'Döngüler: Mutlu Döngüler'
             Loops in Collector:
@@ -4931,7 +4958,7 @@
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             Being Safe Online:
-              name: "Çevrimiçi güvende olmak"
+              name: Çevrimiçi güvende olmak
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -4980,13 +5007,13 @@
             Puppy Introduction:
               name: Köpek tanıtımı
             Online Internet Safety:
-              name: "Çevrimiçi İnternet Güvenliği"
+              name: Çevrimiçi İnternet Güvenliği
             Build a Flappy Game:
               name: Bir Kanat Çırpma Oyunu Oluşturmak
             More CS with Run Marco:
               name: More CS with Run Marco
             Binary Bracelets:
-              name: "İkilik Bileklikler"
+              name: İkilik Bileklikler
             Events in Play Lab:
               name: Play Lab' da Olaylar
             Your Digital Footprint:
@@ -5021,7 +5048,7 @@
             Debugging in Bee:
               name: Arı - hata ayıklama
             While Loops in Farmer:
-              name: "Çiftçi Döngüleri"
+              name: Çiftçi Döngüleri
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             Conditionals with Bee:
@@ -5047,7 +5074,7 @@
             Nested Loops in Bee:
               name: Arı -içiçe döngüler
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Introduction:
               name: Giriş
             Nested Loops Project in Artist:
@@ -5074,7 +5101,7 @@
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Determine the Concept in Bee:
               name: Arı Kavramını Belirleme
             Build a Play Lab Game:
@@ -5090,9 +5117,9 @@
             More Programming with Scratch:
               name: Scratch İle Daha Fazla Programlama
             Private and Personal Information:
-              name: "Özel ve Kişisel Bilgiler"
+              name: Özel ve Kişisel Bilgiler
             Internet:
-              name: "İnternet"
+              name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Determine the Concept:
@@ -5121,7 +5148,7 @@
             Variables in Artist:
               name: Sanatçı-Değişkenler
             For Loop Fun:
-              name: "Şununla Say Döngüsü Eğlencesi"
+              name: Şununla Say Döngüsü Eğlencesi
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
@@ -5255,7 +5282,7 @@
           description: ''
           stages:
             Unit 3 Overview:
-              name: "Ünite 3 genel bakış"
+              name: Ünite 3 genel bakış
             'Lessons 1 - 3: Algorithms':
               name: 'Ders 1-3: Algoritmalar'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
@@ -5265,11 +5292,11 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
         csdgraveyard:
@@ -5293,7 +5320,7 @@
           description: ''
           stages:
             Unit 3 Overview:
-              name: "Ünite 3 genel bakış"
+              name: Ünite 3 genel bakış
             'Lessons 1 - 2: Data in the Real World':
               name: 'Dersler 1 - 2: Gerçek Dünyada Veriler'
             'Lessons 1 - 4: Data in the Real World':
@@ -5305,13 +5332,13 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
             Unit 4 Overview:
-              name: "Ünite 4 genel bakış"
+              name: Ünite 4 genel bakış
         sciencepd4:
           title: 'CS in Science: Part 4'
           description_audience: ''
@@ -5363,13 +5390,13 @@
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Determine the Concept:
               name: Kavramı Belirme
             Prepare your snowflake for 3D printing:
               name: 3D baskı için kar taneciklerini hazırlayın
             Binary:
-              name: "İkili"
+              name: İkili
             Snowflakes:
               name: Kar taneleri
         sciencepd5:
@@ -5396,7 +5423,7 @@
             Unit 5 Professional Learning Course. '
           stages:
             Unit 5 Overview:
-              name: "Ünite 5 genel bakış"
+              name: Ünite 5 genel bakış
             Event Driven Programming:
               name: Olay Temelli Programlama
             Variables and Strings:
@@ -5410,11 +5437,11 @@
             Group Work and Peer Learning:
               name: Grup Çalışması ve Akran Öğrenimi
             Balancing Teachers and Tools:
-              name: "Öğretmenleri ve Araçları Dengeleme"
+              name: Öğretmenleri ve Araçları Dengeleme
             Discovery Learning:
-              name: "Öğrenmeyi Keşfetme"
+              name: Öğrenmeyi Keşfetme
             Measuring Student Learning:
-              name: "Öğrenci Öğrenmesini Ölçme"
+              name: Öğrenci Öğrenmesini Ölçme
         csp6-support:
           stage: []
           title: Unit 6 Online Professional Learning Course
@@ -5447,7 +5474,7 @@
             Visualizing Data:
               name: Veriyi görselleştirme
             Sample Apps:
-              name: "Örnek uygulamalar"
+              name: Örnek uygulamalar
             Final Project:
               name: Final projesi
         unit6-csd-draft:
@@ -5481,7 +5508,7 @@
             Input Uplugged:
               name: Bağımsız (Unplugged) Girdi
             The Circuit Playground:
-              name: "Çember Oyun Alanı"
+              name: Çember Oyun Alanı
             Foo:
               name: Foo
             Lists:
@@ -5525,13 +5552,13 @@
             'Project: Make a Game':
               name: 'Proje: Bir Oyun Yap'
             Getting and Setting Properties:
-              name: "Özellikleri Alma ve Ayarlama"
+              name: Özellikleri Alma ve Ayarlama
             The Program Design Process:
               name: Program Tasarım Süreci
             Getters:
               name: Alıcılar
             Getting Properties:
-              name: "Özelikleri Alma"
+              name: Özelikleri Alma
             Designing Screens with Code:
               name: Kod ile Ekranlar Tasarlama
             Arrays:
@@ -5543,7 +5570,7 @@
             Circuits and Physical Prototypes:
               name: Devreler ve Fiziksel Prototipler
             Accelerometer:
-              name: "İvme Ölçer"
+              name: İvme Ölçer
             Functions with Parameters:
               name: Fonksiyon parametreleri
         workshop-gamelab:
@@ -5577,7 +5604,7 @@
             Data in the Real World:
               name: Gerçek Dünyada Veriler
             Combining Representations:
-              name: "İfadeleri birleştirme"
+              name: İfadeleri birleştirme
             Representing Images:
               name: Görüntüleri ifade etme
             Representation Matters:
@@ -5607,7 +5634,7 @@
             8-bit Numbers:
               name: 8- ikilili numaralar
             Encryption:
-              name: "Şifreleme"
+              name: Şifreleme
             Structuring Data:
               name: Verilerin Yapılandırılması
         applab-1hour:
@@ -5666,7 +5693,7 @@
               name: Giriş
         workshop-maker:
           title: Maker Toolkit atölye
-          description_audience: "Öğretmenler bir yüze Maker Toolkit atölyesine katılıyor"
+          description_audience: Öğretmenler bir yüze Maker Toolkit atölyesine katılıyor
           description_short: Bir yüze Maker Toolkit atölyesine eşlik edecek düzeyde
           description: Bu düzeyde Maker Toolkit atölyesine eşlik etmek amaçlanmaktadır.
             Uygulama laboratuvarı ve Maker Toolkit katılanlarını desteklemek için
@@ -5675,7 +5702,7 @@
             App Lab Basics:
               name: Uygulama Laboratuvarı temelleri
             The Circuit Playground:
-              name: "Çember Oyun Alanı"
+              name: Çember Oyun Alanı
             Physical Input:
               name: Fiziksel Girdi
             Analog Input:
@@ -5752,7 +5779,7 @@
                 değiştirilen, yalnızca tek bir ekran gerektiren basit uygulamalar
                 oluşturmaktadır.
             The Circuit Playground:
-              name: "Çember Oyun Alanı"
+              name: Çember Oyun Alanı
               description_student: Bu ünitenin geri kalanında kullanılacak devre tahtası,
                 Devre Kullanma alanını tanıyın. Uygulama Lab'ı kullanarak çıktı için
                 Devre Kullanma alanındaki programları geliştirin.
@@ -5789,12 +5816,12 @@
               description_student: Sınıf _bir döngü_ kullanarak talimatları yineleme
                 hakkında, "robot" u önce bir sistem üzerinden, ve daha sonra da Uygulama
                 Laboratuvarı'ndan kontrol ederek öğrenir.
-              description_teacher: "Öğrenciler bu dersi _bir döngü_ için bazı kodları
+              description_teacher: Öğrenciler bu dersi _bir döngü_ için bazı kodları
                 belirli sayıda tekrar etmenin bir yolu olarak tanıtıyorlar. Öğrenciler
                 sisteme karşı olan bir robotun kılavuz boyunca gezinmek için kullandığı
                 tıklanmamış bir etkinlikle başlarlar. Tamamlandıktan sonra öğrenciler
                 bilgilerini Uygulama Laboratuvarı'na alırlar ve burada _bir döngü_
-                kullanarak yinelemeye dayanan programlar yazarlar."
+                kullanarak yinelemeye dayanan programlar yazarlar.
             Lists and For Loops:
               name: Listeler ve 'Şununla Say' Döngüleri
               description_student: Combining _lists_ and _for loops_ allows you to
@@ -5826,12 +5853,12 @@
                 to run alongside it.
             'Project: Board Output':
               name: 'Proje: Kart Çıktısı'
-              description_student: "Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
+              description_student: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
                 alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından
-                bir uygulama geliştiriyorlar."
-              description_teacher: "Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
+                bir uygulama geliştiriyorlar.
+              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
                 alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından
-                bir uygulama geliştiriyorlar."
+                bir uygulama geliştiriyorlar.
             Physical Input:
               name: Fiziksel Girdi
               description_student: Donanım düğmelerini ve anahtarını kullanarak sınıf,
@@ -5857,10 +5884,10 @@
               name: Sensör uygulamaları
               description_student: Derslerden önce sensörlerin kullanımlarını daha
                 iyi anlamak için üç küçük uygulama ile çalışın.
-              description_teacher: "Öğrencilerin bir önceki derste öğrendikleri sensörleri
+              description_teacher: Öğrencilerin bir önceki derste öğrendikleri sensörleri
                 takip etmek için her biri farklı bir sensöre dayanan üç uygulamadan
                 geçiyoruz. Bu üç uygulama, takip eden nihai projedeki öğrencilere
-                puan atlamak olarak görev yapabilir."
+                puan atlamak olarak görev yapabilir.
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
               description_student: Bu ders boyunca öğrendiğiniz her şeyi kullanarak
@@ -5897,7 +5924,7 @@
                 öğrenciler Devre Oyun Alanlarından girdiyi almak için `onEvent ()`benzeri
                 olarak `onBoardEvent ()` i kullanmayı öğrenirler.
             Getting Properties:
-              name: "Özelikleri Alma"
+              name: Özelikleri Alma
               description_student: This lesson introduces students to the getProperty
                 block, which allows them to access the properties of different elements
                 with code.  Students first practice using the block to determine what
@@ -5944,12 +5971,12 @@
                 to make it their own.
             'Project: Make a Game':
               name: 'Proje: Bir Oyun Yap'
-              description_student: "Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
+              description_student: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
                 alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından
-                bir uygulama geliştiriyorlar."
-              description_teacher: "Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
+                bir uygulama geliştiriyorlar.
+              description_teacher: Öğrenciler, öğrendiklerini birinci bölüm aracılığıyla
                 alıyor ve bilgi üretmek için tahtayı kullanan kendi tasarımlarından
-                bir uygulama geliştiriyorlar."
+                bir uygulama geliştiriyorlar.
             Arrays:
               name: Diziler
               description_student: Listelerin tek bir değişken isminde çoklu değerleri
@@ -5999,7 +6026,7 @@
                 list on the board to create an app that changes all of the LEDs each
                 time a button is clicked.
             Accelerometer:
-              name: "İvme Ölçer"
+              name: İvme Ölçer
               description_student: In this lesson, students will explore the accelerometer
                 and its capabilities. They’ll become familiar with its events and
                 properties, as well as create multiple programs utilizing the accelerometer
@@ -6046,13 +6073,13 @@
             Designing Screens with Code_:
               name: Kod ile Ekranlar Tasarlama
             The Circuit Playground_:
-              name: "Çember Oyun Alanı"
+              name: Çember Oyun Alanı
             Input Unplugged_:
               name: Bağımsız (Unplugged) Girdi
             Board Events_:
               name: Kurul Etkinlikleri
             Getting Properties_:
-              name: "Özelikleri Alma"
+              name: Özelikleri Alma
             Analog Input_:
               name: Analog girdi
             The Program Design Process_:
@@ -6066,7 +6093,7 @@
             Arrays and For Loops_:
               name: Diziler ve For Döngüleri
             Accelerometer_:
-              name: "İvme Ölçer"
+              name: İvme Ölçer
             Functions with Parameters_:
               name: Fonksiyon parametreleri
             Circuits and Physical Prototypes_:
@@ -6084,9 +6111,9 @@
           description: ''
           stages:
             Shapes and Randomess:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
             Shapes and Randomness:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
             Drawing in Game Lab:
               name: Game Lab' da Çizim
             Variables:
@@ -6096,7 +6123,7 @@
             Sprites:
               name: Hareketli Nesneler
             Plotting Shapes:
-              name: "Şekiller çizme"
+              name: Şekiller çizme
             Sprite Movement:
               name: Hareketli Nesnelerin Hareketi
             The Draw Loop:
@@ -6120,11 +6147,11 @@
             Velocity:
               name: Hız
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
             Functions:
               name: Fonksiyonlar
             The Game Design Process:
@@ -6136,8 +6163,8 @@
         csd5:
           title: CSD ünite 5 - veri ve toplum
           description_audience: ''
-          description_short: "İnsanların veri problemlerini çözmek için bilgisayarı
-            nasıl kullandıklarını öğrenin."
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı
+            nasıl kullandıklarını öğrenin.
           description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
             bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım
             bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri
@@ -6234,7 +6261,7 @@
             Representing Numbers Part 2:
               name: Numaraları ifade etmek part 2
             Combining Representations:
-              name: "İfadeleri birleştirme"
+              name: İfadeleri birleştirme
               description_student: Bu ders bir kayıttaki daha karmaşık türlerin kodlamasına
                 izin vermek için her üç tür ikili gösterim sistemini (ASCII karakterleri,
                 ikili sayı, ve görüntüler) birleştirir. Bir dizi bit gördükten ve
@@ -6304,24 +6331,24 @@
                 olabileceği üzerine tartışmalarla ders sonuçlanır.
             Interpreting Data:
               name: Veri Yorumlama
-              description_student: "Öğrenciler derse, katılımcıların hem  kek hem
-                de krema lezzetini belirlemesine izin veren bir kek tercihi anketine
+              description_student: Öğrenciler derse, katılımcıların hem  kek hem de
+                krema lezzetini belirlemesine izin veren bir kek tercihi anketine
                 bakarak başlarlar. Kek ile krema tercihi arasındaki ilişkiyi bilmenin
                 onlara hangi kombinasyonun önerileceğine daha iyi karar vermelerine
                 yardımcı olacağını tartışırlar. Daha sonra onlar farklı tercihlere
                 olan ilişkilerinin grafiklerini çizmelerine yardımcı olan çapraz tablolamayla
                 tanıştırıldılar.  Bir tercih anketindeki ilişkileri bulmak için bu
                 tekniği kullanırlar, daha sonra bu işlemin çözmekte yardımcı olabileceği
-                farklı sorun türleriyle ilgili beyin fırtınası yaparlar."
-              description_teacher: "Öğrenciler derse, katılımcıların hem  kek hem
-                de krema lezzetini belirlemesine izin veren bir kek tercihi anketine
+                farklı sorun türleriyle ilgili beyin fırtınası yaparlar.
+              description_teacher: Öğrenciler derse, katılımcıların hem  kek hem de
+                krema lezzetini belirlemesine izin veren bir kek tercihi anketine
                 bakarak başlarlar. Kek ile krema tercihi arasındaki ilişkiyi bilmenin
                 onlara hangi kombinasyonun önerileceğine daha iyi karar vermelerine
                 yardımcı olacağını tartışırlar. Daha sonra onlar farklı tercihlere
                 olan ilişkilerinin grafiklerini çizmelerine yardımcı olan çapraz tablolamayla
                 tanıştırıldılar.  Bir tercih anketindeki ilişkileri bulmak için bu
                 tekniği kullanırlar, daha sonra bu işlemin çözmekte yardımcı olabileceği
-                farklı sorun türleriyle ilgili beyin fırtınası yaparlar."
+                farklı sorun türleriyle ilgili beyin fırtınası yaparlar.
             Automating Data Decisions:
               name: Veri ile kararları otomatikleştirme
               description_student: |-
@@ -6390,32 +6417,32 @@
                 genel 4-bitlik bir sisteme taşırlar.
             8-bit Numbers:
               name: 8- ikilili numaralar
-              description_student: "Öğrenciler ikili sayı kavramını inceler ve bir
+              description_student: Öğrenciler ikili sayı kavramını inceler ve bir
                 dizi biti çözmek için her bir sayının bit uzunluğunu bilmeleri gerektiğini
                 tartışırlar. Daha sonra, 8-bit sayıları (0-255) kodlarlar ve kodlanmamış
                 olanları çözmek için onlara yardımcı olacak bir kağıdı hileli olarak
                 ters çevirirler. Flippy-do ile çalıştıktan sonra, öğrenciler bu standardizasyonun
-                diğer veri türlerine nasıl genişletilebileceğini tartışırlar."
-              description_teacher: "Öğrenciler ikili sayı kavramını inceler ve bir
+                diğer veri türlerine nasıl genişletilebileceğini tartışırlar.
+              description_teacher: Öğrenciler ikili sayı kavramını inceler ve bir
                 dizi biti çözmek için her bir sayının bit uzunluğunu bilmeleri gerektiğini
                 tartışırlar. Daha sonra, 8-bit sayıları (0-255) kodlarlar ve kodlanmamış
                 olanları çözmek için onlara yardımcı olacak bir kağıdı hileli olarak
                 ters çevirirler. Flippy-do ile çalıştıktan sonra, öğrenciler bu standardizasyonun
-                diğer veri türlerine nasıl genişletilebileceğini tartışırlar."
+                diğer veri türlerine nasıl genişletilebileceğini tartışırlar.
             Encryption:
-              name: "Şifreleme"
-              description_student: "Öğrenciler, kişisel veriler için istedikleri farklı
+              name: Şifreleme
+              description_student: Öğrenciler, kişisel veriler için istedikleri farklı
                 güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin
                 önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not
                 şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler.
                 Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile
-                sonuçlanır."
-              description_teacher: "Öğrenciler, kişisel veriler için istedikleri farklı
+                sonuçlanır.
+              description_teacher: Öğrenciler, kişisel veriler için istedikleri farklı
                 güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin
                 önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not
                 şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler.
                 Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile
-                sonuçlanır."
+                sonuçlanır.
             Structuring Data:
               name: Verilerin Yapılandırılması
               description_student: Bu der, ham veri setlerini temizleme ve görselleştirme
@@ -6436,18 +6463,18 @@
                 ve bir insanın karar vermesi için neye ihtiyacı olduğuna bakarlar.
             Keeping Data Secret:
               name: Verileri Gizli Tutmak
-              description_student: "Öğrenciler, kişisel veriler için istedikleri farklı
+              description_student: Öğrenciler, kişisel veriler için istedikleri farklı
                 güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin
                 önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not
                 şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler.
                 Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile
-                sonuçlanır."
-              description_teacher: "Öğrenciler, kişisel veriler için istedikleri farklı
+                sonuçlanır.
+              description_teacher: Öğrenciler, kişisel veriler için istedikleri farklı
                 güvenlik seviyeleri hakkında bir tartışmaya sahip olurlar. Sınıf gizliliğin
                 önemi hakkında bir anlayış geliştirdikten sonra, ortak için bir not
                 şifrelemek ve ortağın notunu çözerek bilgi şifreleme sürecini öğrenirler.
                 Ders, fiziksel ve dijital güvenliğin önemi hakkında bir tartışma ile
-                sonuçlanır."
+                sonuçlanır.
         csd3-old:
           title: CSD ünite 3 (kullanım dışı)
           description_audience: ''
@@ -6480,11 +6507,11 @@
             Velocity:
               name: Hız
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
             Functions:
               name: Fonksiyonlar
             The Game Design Process:
@@ -6514,7 +6541,7 @@
             Processing with Bits:
               name: Bitlerle işlem
             Human vs Computer Processing:
-              name: "İnsan ve Bilgisayar İşlemleri karşılaştırması"
+              name: İnsan ve Bilgisayar İşlemleri karşılaştırması
             Processing with Apps:
               name: Uygulamalar ile işleme
             'Project: Apps and Problem Solving':
@@ -6534,7 +6561,7 @@
             Exploring Websites:
               name: Web Sitelerini Keşfetme
             'Websites for Expression ':
-              name: "İfade Web Siteleri "
+              name: 'İfade Web Siteleri '
             Intro to HTML:
               name: HTML' ye Giriş
             Headers and Lists:
@@ -6580,7 +6607,7 @@
             Inputs and Outputs:
               name: Girdiler ve çıktılar
             Processing:
-              name: "İşleme"
+              name: İşleme
             Storage:
               name: Depolama
             Apps and Problem Solving:
@@ -6598,11 +6625,11 @@
             Programming for Entertainment:
               name: Eğlence için programlama
             Plotting Shapes:
-              name: "Şekiller çizme"
+              name: Şekiller çizme
             Drawing in Game Lab:
               name: Game Lab' da Çizim
             Shapes and Randomness:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
             Variables:
               name: Değişkenler
             Sprites:
@@ -6626,11 +6653,11 @@
             Velocity:
               name: Hız
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
             Functions:
               name: Fonksiyonlar
             The Game Design Process:
@@ -6654,7 +6681,7 @@
             Ice Age Play Lab:
               name: Buz Devri Oyun Laboratuvarı
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Conditionals and Functions in Bee:
               name: Koşullar ve fonksiyonlar- Arı
           title: ''
@@ -6674,7 +6701,7 @@
         fmscsd3preview:
           stages:
             Plotting Shapes:
-              name: "Şekiller çizme"
+              name: Şekiller çizme
             Drawing in Game Lab:
               name: Game Lab' da Çizim
           title: CSD - Oyun Laboratuarı'nda Çizim
@@ -6732,7 +6759,7 @@
             Styling Elements with CSS:
               name: CSS ile Stil Öğeleri
             Multi-Page Websites:
-              name: "Çok Sayfalı Web Siteleri"
+              name: Çok Sayfalı Web Siteleri
             Classes:
               name: Sınıflar
             Peer Review:
@@ -6807,8 +6834,13 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
               description_student: ''
-              description_teacher: |
-                Bu derste öğrenciler, gerçek bir tohum ekerek algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler. Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki durumlara çevirmektir.\r
+              description_teacher: 'Bu derste öğrenciler, gerçek bir tohum ekerek
+                algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
+                Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
+                başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
+                durumlara çevirmektir.\r
+
+'
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
               description_student: ''
@@ -6820,10 +6852,10 @@
             'Programming: Happy Maps':
               name: 'Programlama: Mutlu Haritalar'
               description_student: ''
-              description_teacher: "Öğrenciler bir dizinin planlanması ve bu diziyi
+              description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
                 uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
                 köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve
-                yazma deneyim kazanmalarına yardımcı olacaktır."
+                yazma deneyim kazanmalarına yardımcı olacaktır.
             Programming in Maze:
               name: Labirentte Programlama
               description_student: ''
@@ -6997,7 +7029,7 @@
                 Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
                 kullanabilecekleri fırsatları olacak.
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne
                 anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü
                 yerleştirdiğinizde ne olduğunu öğretecek.
@@ -7026,7 +7058,7 @@
             Debugging in Bee:
               name: Arı - hata ayıklama
             While Loops in Farmer:
-              name: "Çiftçi Döngüleri"
+              name: Çiftçi Döngüleri
               description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu
                 ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
               description_teacher: "Öğrenciler bu dersi aldıklarında 'tekrarlama'
@@ -7054,8 +7086,8 @@
                 verir.
             Conditionals in Bee:
               name: Koşullar-Arı
-              description_student: "Şimdi koşulları anladığınıza göre, nektar ve balı
-                toplaması için arıyı programlama zamanı. "
+              description_student: 'Şimdi koşulları anladığınıza göre, nektar ve balı
+                toplaması için arıyı programlama zamanı. '
               description_teacher: Bu noktaya kadar öğrenciler her çalıştırıldığında
                 aynı biçimde çalışan kod yazıyor - güvenilir, ama bu çok esnek değildir.
                 Bu derste, sınıfınız, koşullu koşullarla kodlamaya başlayacak ve programın
@@ -7074,11 +7106,11 @@
               name: Conditionals & Loops in Farmer
               description_student: Hangi koşulun kullanılacağı her açık net değildir.
                 Bu ders ne yapmanız gerektiğine karar vermenize yardımcı olacak.
-              description_teacher: "Öğrenciler, süresince döngüleri (while loops)
-                '-e kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine
+              description_teacher: Öğrenciler, süresince döngüleri (while loops) '-e
+                kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine
                 çalışacaklar. Bu blokların tamamı koşullar için kullanılır. Bu üç
                 koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek
-                kod yazmayı öğrenecekler."
+                kod yazmayı öğrenecekler.
             Digital Citizenship:
               name: 'Dijital Vatandaşlık: Dijital Vatandaşlık Pratiği'
               description_student: Bazı bilgileri çevrim içi paylaşmak güvenli değildir.
@@ -7115,20 +7147,20 @@
               name: Sanaçtı İkili Taban
               description_student: Pikselleri açmak ve kapatmak için yalnızca komutlar
                 kullanarak ikili bir resim oluşturmak için kendi sanatçınızı yönlendirin.
-              description_teacher: "İkili sistem, bilgisayar dünyasında son derece
+              description_teacher: İkili sistem, bilgisayar dünyasında son derece
                 önemlidir. Bilgisayarların çoğu bugün her türlü bilgiyi ikili biçimde
                 saklarlar. Bu ders, bir şeyi gerçek hayattan nasıl alabileceğinizi
                 göstermekte ve onu bir dizi açık ve kapalı alana çevirmek için yardımcı
                 olmaktadır. Öğrenciler 0'ları ve 1'leri kapalı ve açığa (veya siyahlar
-                ve beyazlar) çevirerek ikili görüntüler oluşturacaklardır."
+                ve beyazlar) çevirerek ikili görüntüler oluşturacaklardır.
             Nested Loops Project in Artist:
               name: Frozen'da İç İçe Döngüler
               description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle
                 biraz İLGİNÇ çizimler yapacaksınız.
-              description_teacher: "Şimdi, öğrenciler döngülerini nasıl kademe kademe
+              description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe
                 yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler.
                 Bu ders, öğrencilerin kendi hazır resim dosyalarını oluşturmaları
-                için bir dizi alıştırma yapmalarını sağlayacak."
+                için bir dizi alıştırma yapmalarını sağlayacak.
             Debugging in Collector:
               name: Toplayıcıda Hata Ayıklama
               description_student: Kodlama esnasında hiç problem yaşadınız mı? Bu
@@ -7172,7 +7204,7 @@
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
-              name: "Şununla Say Döngüsü Eğlencesi"
+              name: Şununla Say Döngüsü Eğlencesi
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
@@ -7237,7 +7269,7 @@
                 Buradaki amaç, gerçek dünyadaki durumları çevrim içi senaryolara dönüştürme
                 veya bunun tam tersini yapma becerileri oluşturmaya başlamak.
             Conditionals:
-              name: "Çiftçi'de Koşullar"
+              name: Çiftçi'de Koşullar
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
                 bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
@@ -7249,10 +7281,10 @@
                 şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde
                 bu döngüler başka bir şey çalıştırır.
             Private and Personal Information:
-              name: "Özel ve Kişisel Bilgiler"
-              description_student: "İnternet eğlenceli ve heyecanlıdır, fakat güvende
+              name: Özel ve Kişisel Bilgiler
+              description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende
                 kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi
-                ile özel bilgi arasındaki farkı öğretecek."
+                ile özel bilgi arasındaki farkı öğretecek.
               description_teacher: |-
                 Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
 
@@ -7279,21 +7311,21 @@
               name: Sanatçı- Fonksiyonlar
               description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay
                 yapın!
-              description_teacher: "Öğrenciler Code.org' da fonksiyonları kullanmayı
+              description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı
                 öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler
                 oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler,
-                bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler."
+                bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
             Functions in Bee:
               name: Arı fonksiyonları
               description_student: Nektarın ve balın tamamını toplamak için çok fazla
                 kod yazmayın. Onun yerine fonksiyonları kullanın!
-              description_teacher: "Çevrim içi fonksiyonlarla ilgili alıştırmanın
-                ikinci kısmında, öğrenciler, karmaşık yollarda gezinecekler, bol miktarda
-                nektar toplayacaklar ve bir sürü bal yapacaklar."
+              description_teacher: Çevrim içi fonksiyonlarla ilgili alıştırmanın ikinci
+                kısmında, öğrenciler, karmaşık yollarda gezinecekler, bol miktarda
+                nektar toplayacaklar ve bir sürü bal yapacaklar.
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
-              description_student: "Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar
-                da sizi işlerin çoğunda kurtarır!"
+              name: Çiftçi fonksiyonları
+              description_student: Çiftçiye hasadında yardımcı olduğunuz gibi fonksiyonlar
+                da sizi işlerin çoğunda kurtarır!
               description_teacher: Students have practiced creating impressive designs
                 in Artist and navigating mazes in Bee, but today they will use functions
                 to harvest crops in Farmer. This lesson will push students to use
@@ -7330,9 +7362,9 @@
                 aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Programlamanın Ötesinde: İnternet'
-              description_student: "İnternet üzerinde bilginin nasıl seyahat ettiğini
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini
                 hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl
-                çalıştığının temellerini öğretecek."
+                çalıştığının temellerini öğretecek.
               description_teacher: Birçok kişi interneti her gün kullanıyor olmasına
                 rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler
                 bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek
@@ -7366,7 +7398,9 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Kurs E
           description_audience: 8-12 yaş grubu
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
@@ -7567,8 +7601,8 @@
               name: Projenizin Sunumu
             Present Your Project:
               name: Projeni sun
-              description_student: "Çalışmanızı gösterme zamanı! Burada, akranlarınıza,
-                muhteşem projenizi sunacaksınız."
+              description_student: Çalışmanızı gösterme zamanı! Burada, akranlarınıza,
+                muhteşem projenizi sunacaksınız.
               description_teacher: Beş ders süresince, öğrenciler programlama ortamı
                 olarak Oyun Labaratuvarını veya Sanatçıyı kullanarak kendi tasarımları
                 olan bir proje oluşturmaya başlayacaklardır.Şimdi öğrencilere Sanatçı
@@ -7618,7 +7652,7 @@
             Tuesday:
               name: Salı
             Wednesday:
-              name: "Çarşamba"
+              name: Çarşamba
             Thursday:
               name: Perşembe
             Welcome:
@@ -7626,7 +7660,7 @@
             Congrats:
               name: Tebrikler
             Wrap Up:
-              name: "Özet"
+              name: Özet
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -7700,11 +7734,11 @@
             Tuesday:
               name: Salı
             Wednesday:
-              name: "Çarşamba"
+              name: Çarşamba
             Thursday:
               name: Perşembe
             Wrap Up:
-              name: "Özet"
+              name: Özet
           title: CS Principles TeacherCon Novice Facilitators
           description_audience: CSP Acemi Kolaylaştırıcılar
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -7917,7 +7951,7 @@
             Nested Loops Project in Artist:
               name: Sanatçı'da İç İçe Döngüler Projesi
             Internet:
-              name: "İnternet"
+              name: İnternet
             Digital Citizenship:
               name: Sayısal Vatandaşlık
             Screen Out the Mean:
@@ -7933,7 +7967,7 @@
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             While Loops in Farmer:
-              name: "Çiftçi Döngüleri"
+              name: Çiftçi Döngüleri
             Conditionals & Loops in Maze:
               name: Labirentte Koşullar ve Döngüler
             Conditionals in Minecraft:
@@ -7947,7 +7981,7 @@
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
-              name: "Şununla Say Döngüsü Eğlencesi"
+              name: Şununla Say Döngüsü Eğlencesi
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
@@ -7995,7 +8029,9 @@
             Building a Foundation:
               name: Bir Temel Oluşturma
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: Hızlı Kurs
           description_audience: 'Yaş: 9-18'
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
@@ -8035,8 +8071,8 @@
               name: Heceleme Yarışması
           title: ''
           description_audience: ''
-          description_short: "Ön okurlar için bilgisayar bilimlerine giriş: anaokulu
-            ve birinci sınıf derslerimizin en iyisini birleştirir."
+          description_short: 'Ön okurlar için bilgisayar bilimlerine giriş: anaokulu
+            ve birinci sınıf derslerimizin en iyisini birleştirir.'
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
@@ -8099,7 +8135,7 @@
             Practice PT - Design a Digital Scene:
               name: PT pratik - dijital bir sahne tasarımı
             Unit 3 Chapter 1 Assessment:
-              name: "Ünite 3 Bölüm 1 değerlendirme"
+              name: Ünite 3 Bölüm 1 değerlendirme
             foo:
               name: foo
             CSP Mid-course survey:
@@ -8205,7 +8241,7 @@
             Loops in Artist:
               name: Sanatçıların Döngüleri
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Intro to Conditionals with Farmer:
@@ -8217,7 +8253,7 @@
             Conditionals:
               name: Koşullar
             Private and Personal Information:
-              name: "Özel ve Kişisel Bilgiler"
+              name: Özel ve Kişisel Bilgiler
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
             'Functions: Songwriting':
@@ -8227,7 +8263,7 @@
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Determine the Concept:
               name: Kavramı Belirme
             Build a Play Lab Game:
@@ -8241,7 +8277,7 @@
             Present Your Project:
               name: Projeni sun
             Internet:
-              name: "İnternet"
+              name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Nested Loops in Bee:
@@ -8263,7 +8299,7 @@
             Events in Bounce:
               name: Sıçrama Olayları
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Nested Loops in Artist:
               name: Sanatçıların İç İçe Döngüleri
             Nested Loops Project in Artist:
@@ -8273,7 +8309,7 @@
             Debugging in Collector:
               name: Toplayıcıda Hata Ayıklama
             While Loops in Farmer:
-              name: "Çiftçi Döngüleri"
+              name: Çiftçi Döngüleri
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             Conditionals in Bee:
@@ -8345,7 +8381,7 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             While Loops in Farmer:
-              name: "Çiftçi Döngüleri"
+              name: Çiftçi Döngüleri
             Conditional Loops in Maze:
               name: Labirentte Koşullu Döngüler
             Conditionals in Minecraft:
@@ -8387,7 +8423,7 @@
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Loops in Artist (UPDATED!):
               name: Sanatçıların Döngüleri (GÜNCELLENDİ!)
             Sarah test stage:
@@ -8435,7 +8471,7 @@
             Conditionals:
               name: Koşullar
             Private and Personal Information:
-              name: "Özel ve Kişisel Bilgiler"
+              name: Özel ve Kişisel Bilgiler
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
             'Functions: Songwriting':
@@ -8445,7 +8481,7 @@
             Functions in Artist:
               name: Sanatçı- Fonksiyonlar
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Determine the Concept:
               name: Kavramı Belirme
             Build a Play Lab Game:
@@ -8459,7 +8495,7 @@
             Present Your Project:
               name: Projeni sun
             Internet:
-              name: "İnternet"
+              name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
           title: E için yeni senaryo
@@ -8503,7 +8539,7 @@
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
-              name: "Şununla Say Döngüsü Eğlencesi"
+              name: Şununla Say Döngüsü Eğlencesi
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
@@ -8545,7 +8581,7 @@
             8-bit Numbers:
               name: 8- ikilili numaralar
             Combining Representations:
-              name: "İfadeleri birleştirme"
+              name: İfadeleri birleştirme
             Project - Create a Representation:
               name: Proje - bir ifade oluşturun
             Problem Solving and Data:
@@ -8562,8 +8598,8 @@
               name: Proje - bir veri sorunu çözmek
           title: CSD ünite 5 - veri ve toplum
           description_audience: ''
-          description_short: "İnsanların veri problemlerini çözmek için bilgisayarı
-            nasıl kullandıklarını öğrenin."
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı
+            nasıl kullandıklarını öğrenin.
           description: 5. ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların
             bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım
             bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri
@@ -8687,12 +8723,14 @@
             Practice PT - Design a Digital Scene:
               name: PT pratik - dijital bir sahne tasarımı
             Unit 3 Chapter 1 Assessment:
-              name: "Ünite 3 Bölüm 1 değerlendirme"
+              name: Ünite 3 Bölüm 1 değerlendirme
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8888,7 +8926,7 @@
         valentine:
           stages:
             special valentine:
-              name: "özel sevgililer günü"
+              name: özel sevgililer günü
             Valentine Puzzles:
               name: Valentine Puzzles
           title: Sevgililer Günü Özel
@@ -8922,7 +8960,7 @@
             Loops in Artist:
               name: Sanatçıların Döngüleri
             Nested Loops:
-              name: "İç İçe Döngüler"
+              name: İç İçe Döngüler
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
@@ -8932,7 +8970,7 @@
             Conditionals:
               name: Koşullar
             Private and Personal Information:
-              name: "Özel ve Kişisel Bilgiler"
+              name: Özel ve Kişisel Bilgiler
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
             MINECRAFT STAGE GOES HERE:
@@ -8942,7 +8980,7 @@
             Functions in Bee:
               name: Arı fonksiyonları
             Functions in Farmer:
-              name: "Çiftçi fonksiyonları"
+              name: Çiftçi fonksiyonları
             Determine the Concept:
               name: Kavramı Belirme
             Build a Play Lab Game:
@@ -8956,11 +8994,13 @@
             Present Your Project:
               name: Projeni sun
             Internet:
-              name: "İnternet"
+              name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Build a Star Wars Game:
               name: Star Wars oyunu oluştur
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -9002,7 +9042,7 @@
             Variables in Play Lab:
               name: Değişkenler - Oyun laboratuarı
             For Loop Fun:
-              name: "Şununla Say Döngüsü Eğlencesi"
+              name: Şununla Say Döngüsü Eğlencesi
             For Loops in Bee:
               name: Arı - şununla say döngüleri
             For Loops in Artist:
@@ -9040,7 +9080,7 @@
             Getters and Setters:
               name: Alıcılar ve Belirleyiciler
             The Circuit Playground:
-              name: "Çember Oyun Alanı"
+              name: Çember Oyun Alanı
             Lists:
               name: Listeler
             Lights:
@@ -9090,11 +9130,11 @@
             Programming for Entertainment:
               name: Eğlence için programlama
             Plotting Shapes:
-              name: "Şekiller çizme"
+              name: Şekiller çizme
             Drawing in Game Lab:
               name: Game Lab' da Çizim
             Shapes and Randomization:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
             Variables:
               name: Değişkenler
             Sprites:
@@ -9118,11 +9158,11 @@
             Velocity:
               name: Hız
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
             Functions:
               name: Fonksiyonlar
             The Game Design Process:
@@ -9185,8 +9225,8 @@
                 bir eğlence biçiminde veya kendini ifade etme aracı olarak nasıl bir
                 rol oynadığını keşfedeceklerdir.
             Plotting Shapes:
-              name: "Şekiller çizme"
-              description_student: "Öğrenciler şekillerle nasıl çizileceğini iletmenin
+              name: Şekiller çizme
+              description_student: Öğrenciler şekillerle nasıl çizileceğini iletmenin
                 zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
                 yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
                 referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
@@ -9196,8 +9236,8 @@
                 takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
                 Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
                 benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
-                önce kendi çizdirecekleri resimlerini oluştururlar."
-              description_teacher: "Öğrenciler şekillerle nasıl çizileceğini iletmenin
+                önce kendi çizdirecekleri resimlerini oluştururlar.
+              description_teacher: Öğrenciler şekillerle nasıl çizileceğini iletmenin
                 zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
                 yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
                 referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
@@ -9207,7 +9247,7 @@
                 takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
                 Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
                 benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
-                önce kendi çizdirecekleri resimlerini oluştururlar."
+                önce kendi çizdirecekleri resimlerini oluştururlar.
             Drawing in Game Lab:
               name: Game Lab' da Çizim
               description_student: Sınıf, bu bölüm için programlama ortamı olan Oyun
@@ -9222,7 +9262,7 @@
                 temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste
                 çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
             Shapes and Randomization:
-              name: "Şekiller ve Rastgelelik"
+              name: Şekiller ve Rastgelelik
               description_student: ''
               description_teacher: ''
             Variables:
@@ -9282,20 +9322,20 @@
                 uygular. Sınıf, bu söz dizimine alıştıktan sonra, hareketli nesne
                 özellikleri ile aynı süreci uygular. Ekran boyunca ilerleyen hareketli
                 bir nesneyi izler.
-              description_teacher: "Öğrenciler bağımsız bir aktivitede değişkenlerin
+              description_teacher: Öğrenciler bağımsız bir aktivitede değişkenlerin
                 arka plandaki davranışlarını keşfeder. Bir programdaki değişkenlerin
                 bir benzerini yapmak için not kartları ve metinleri kullanarak kısa
                 bir program uygular. Öğrenciler bu söz dizimine alıştıktan sonra,
                 ekran boyunca ilerleyen bir nesneyi takip etmek için hareketli nesne
-                özelliklerindeki aynı süreci uygular."
+                özelliklerindeki aynı süreci uygular.
             Sprite Movement:
               name: Hareketli Nesnelerin Hareketi
-              description_student: "Çizim Döngüsü ve Sayaç deseni birleştirilerek
-                sınıf, ekranda hareketli nesneleri hareket ettiren programlar yazar
-                ve bununla birlikte diğer hareketli nesne özelliklerini canlandırır."
-              description_teacher: "Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek
+              description_student: Çizim Döngüsü ve Sayaç deseni birleştirilerek sınıf,
                 ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
-                birlikte diğer hareketli nesne özelliklerini canlandırır."
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
+              description_teacher: Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek
+                ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
             Booleans Unplugged:
               name: Mantıksallar
               description_student: |-
@@ -9318,28 +9358,28 @@
                 Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
                 araştırmak için kullandıktan sonra, sınıf bu mantıksal karşılaştırmalara
                 yanıt veren kodu yazmak için koşullu eğer ifadeleri ekler.
-              description_teacher: "Öğrenciler, hareketli nesne özelliğinin geçerli
+              description_teacher: Öğrenciler, hareketli nesne özelliğinin geçerli
                 değerini bir hedef değerle karşılaştırmak için boolean değerler kullanarak
                 başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki
                 bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü
                 veya sayaç desenini kullanarak başka bir değere ulaştığını belirler.
                 Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
                 araştırmak için kullandıktan sonra, öğrenciler bu mantıksal karşılaştırmalara
-                yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler."
+                yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler.
             Keyboard Input:
               name: Klavye girişi
-              description_student: "Önceki derste boolean ve eğer ifadelerine bir
+              description_student: Önceki derste boolean ve eğer ifadelerine bir girişten
+                sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir blokla
+                tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için koşul
+                ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
+                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
+                girdileri alan programlar yazacaklar.
+              description_teacher: Önceki derste boolean ve _eğer_ ifadelerine bir
                 girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir
                 blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için
                 koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
                 öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
-                girdileri alan programlar yazacaklar."
-              description_teacher: "Önceki derste boolean ve _eğer_ ifadelerine bir
-                girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir
-                blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için
-                koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
-                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
-                girdileri alan programlar yazacaklar."
+                girdileri alan programlar yazacaklar.
             Other Forms of Input:
               name: " Diğer girdi yöntemi"
               description_student: Bu derste öğrenciler, kullanıcı girdilerini almak
@@ -9368,14 +9408,14 @@
                 anlatılır. Öğrenciler, bu yeni özellikleri faklı yollarla kullanırken,
                 ihtiyaç duydukları basit bir oyun kaydırma çubuğunu oluştururken becerilerini
                 geliştirirler.
-              description_teacher: "Önceki derslerde öğrencilerin hareketli nesneleri
+              description_teacher: Önceki derslerde öğrencilerin hareketli nesneleri
                 sayaç deseni ile nasıl hareket ettirdikleriyle ilgili kısa bir bilgilendirmeden
                 sonra, öğrencilere nesnelerin dönme hızlarının ve süratlarinin doğrudan
                 nasıl ayarlanacağını anlatılır. Öğrenciler, bu yeni özellikleri faklı
                 yollarla kullanırken, ihtiyaç duydukları basit bir oyun kaydırma çubuğunu
-                oluştururken becerilerini geliştirirler."
+                oluştururken becerilerini geliştirirler.
             Collision Detection:
-              name: "Çarpışmanın algılanması"
+              name: Çarpışmanın algılanması
               description_student: Sınıf bilgisayarda çarpışmayı bulmayı öğrenir.
                 Çiftler, bir bilgisayarın, hareketli nesnelerin konumunu, boyut özelliklerini
                 ve iki nesnenin birbirine dokunduğunu nasıl belirlediği keşfeder.
@@ -9383,13 +9423,13 @@
                 çarpıştığında farklı efektleri oluşturmak için 'isTouching()' komutunu
                 kullanır.  Son olarak, öğrenciler yeni becerilerini, son derste başladıkları
                 oyun kaydırma çubuğunu geliştirmek için kullanırlar.
-              description_teacher: "Öğrenciler bilgisayarda çarpışmayı bulmayı öğrenir.
+              description_teacher: Öğrenciler bilgisayarda çarpışmayı bulmayı öğrenir.
                 Çiftler halinde çalışıp, bir bilgisayarın, hareketli nesnelerin konumunu,
                 boyut özelliklerini ve iki nesnenin birbirine dokunduğunu nasıl belirlediği
                 keşfederler. Öğrenciler daha sonra oyun sesleri dahil olmak üzere,
                 hareketli nesneler çarpıştığında farklı efektleri oluşturmak için
                 'isTouching()' komutunu kullanır.  Son olarak, öğrenciler yeni becerilerini,
-                son derste başladıkları oyun kaydırma çubuğunu geliştirmek için kullanırlar."
+                son derste başladıkları oyun kaydırma çubuğunu geliştirmek için kullanırlar.
             Complex Sprite Movement:
               name: Karmaşık Hareketli Nesne Hareketi
               description_student: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması,
@@ -9398,16 +9438,16 @@
                 öğrenir. Son seviyelerde sınıf, bu hareketleri bir nesneyi hareket
                 ettirmek ve kontrol etmek için kullanır. Kontrol ettikleri nesneyi
                 uçurarak etraftaki altınları topladıkları basit bir oyun oluştururlar. '
-              description_teacher: "Öğrenciler daha karmaşık nesne hareketleri oluşturmak
+              description_teacher: Öğrenciler daha karmaşık nesne hareketleri oluşturmak
                 için sayaç deseni ile nesnelerin sürat özelliklerini birleştirmeyi
                 öğrenir. Öğrenciler özellikle yer çekimi simülasyonu, bir nesnenin
                 zıplaması ve nesnelerin süzülmelerinin nasıl olacağını öğrenirler.
                 Code Stüdyo'da ilerledikçe öğrenciler bu hareketleri, bir nesneyi
                 hareketlendirmek, kontrol etmek ve basit bir oyunda bir nesneyi uçurarak
                 altın toplamak için kullanırlar. Öğrenciler, son seviyede oyuna kendi
-                istedikleri eklemeyi yapmaları için cesaretlendirilirler."
+                istedikleri eklemeyi yapmaları için cesaretlendirilirler.
             Collisions:
-              name: "Çarpışmalar"
+              name: Çarpışmalar
               description_student: Sınıf, nesnelerin yeni bir yolla etkileşime geçmeleri
                 için program yazarlar.  'isTouching' bloğunu nasıl kullandıklarıyla
                 ilgili kısa bir gözden geçirmeden sonra, sınıf iki nesnenin farklı
@@ -9415,13 +9455,13 @@
                 yaparlar. Dört çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama
                 ve aşağı inme) denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin
                 başka bir nesneyi  ittirmesi için kullanırlar.
-              description_teacher: "Öğrenciler, farklı bir yolla etkileşime geçmeleri
+              description_teacher: Öğrenciler, farklı bir yolla etkileşime geçmeleri
                 için nesneleri programlarlar. 'isTouching' bloğunu nasıl kullandıklarıyla
                 ilgili kısa bir gözden geçirmeden sonra, iki nesnenin farklı şekillerde
                 nasıl etkileşime geçecekleri hakkında beyin fırtınası yaparlar. Dört
                 çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama ve aşağı inme)
                 denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin başka bir
-                nesneyi  ittirmesi için kullanırlar."
+                nesneyi  ittirmesi için kullanırlar.
             Functions:
               name: Fonksiyonlar
               description_student: Bu ders, kodları organize etmeyi, tekrar eden blokları
@@ -9431,7 +9471,7 @@
                 fonksiyonlar oluştururlar. Dersin sonunda sınıf, bu becerilerini,
                 oyun kaydırma çubuğu'nun son versiyonuna özellik eklemek ve düzenlemek
                 için kullanırlar.
-              description_teacher: "Öğrenciler, tekrar eden kod bloklarını kaldırmak,
+              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak,
                 kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları
                 nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması,
                 duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı
@@ -9441,7 +9481,7 @@
                 öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak
                 ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları
                 kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek
-                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar."
+                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
             The Game Design Process:
               name: Oyun tasarım süreci
               description_student: Bu ders, sınıfın, bu ünitenin devamında oyunlar
@@ -9492,7 +9532,7 @@
                 çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir.
                 Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları
                 paylaşır.
-              description_teacher: "Öğrenciler, projelerini yönlendirmek için önceki
+              description_teacher: Öğrenciler, projelerini yönlendirmek için önceki
                 iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak
                 ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler
                 ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun
@@ -9504,7 +9544,7 @@
                 incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
-                ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir."
+                ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
             CS Discoveries End of Semester Survey:
               name: CS Discoveries End of Semester Survey
               description_student: ''
@@ -9536,7 +9576,7 @@
                 ve bu web sitelerinin kullanıcılar için nasıl kullanışlı olduğunu
                 ve onu yaratanlara nasıl hizmet ettiğini çözmeye çalışırlar.
             'Websites for Expression ':
-              name: "İfade Web Siteleri "
+              name: 'İfade Web Siteleri '
               description_student: 'Bu ders, web sitelerini kişisel ifadenin bir aracı
                 olarak tanıtır. Sınıf önce, insanların fikirlerini ve ilgi alanlarını
                 ifade etmek ve paylaşmak için kullandıkları farklı yolları tartışır.
@@ -9613,12 +9653,12 @@
                 Sınıf etiketleri kullanarak alıştırma yapar, sonra kişisel web sayfası
                 projesine giderek bu yeni etiketleri içeren yeni bir HTML sayfası
                 ekler.
-              description_teacher: "Öğrenciler, HTML'de sıralı ve sırasız listeleri
+              description_teacher: Öğrenciler, HTML'de sıralı ve sırasız listeleri
                 öğrenirler ve öğrenciler, &lt;ul&gt;, &lt;ol&gt;, ve &lt;li&gt; etiketlerini
                 kullanacakları birkaç seviyede bunlar üzerine çalışma yaparlar. Sonra
                 projelerine geri gidip yeni bir HTML sayfası eklerler. Yeni sayfa
                 içinde bir tarif, bir ilk on listesi ya da öğrendikleri yeni etiketleri
-                kullanan başka herhangi bir içerik yazarlar."
+                kullanan başka herhangi bir içerik yazarlar.
             Intellectual Property and Images:
               name: Fikri mülkiyet ve görüntüleri
               description_student: Bu derste, bir medyanın yaratıcısının haklarına
@@ -9637,14 +9677,14 @@
                 karmaşık web sayfalarında giderek ortaya bir dizi hatayı düzeltecekler.
                 Ve yorumların, beyaz boşlukların ve web sayfalarını okumayı kolaylaştıran
                 girintilerin önemini öğrenecekler.
-              description_teacher: "Öğrenciler bu derste HTML ile dizayn edilen web
+              description_teacher: Öğrenciler bu derste HTML ile dizayn edilen web
                 sayfalarında ortaya çıkan genel sorunları ele alacaklar. Öğrenciler
                 Code Studio'daki karmaşık web sayfalarında ortaya çıkan bir dizi hatayı
                 düzeltecekler. Süreç içinde; yorumların önemini, beyaz boşluğu ve
                 web sayfaları okumayı kolaylaştıran girintileri öğrenecekler. Dersin
                 sonunda öğrenciler hata ayıklama (debugging) stratejilerinin bir listenin
                 yapacaklar ve kodların kolay okunabilir ve sürdürülebilir olduğundan
-                emin olacaklar."
+                emin olacaklar.
             Project - Multi-Page Websites:
               name: Proje - çok sayfalı web siteleri
               description_student: 'Bu ders, web geliştiricilerin sayfaları bir web
@@ -9682,10 +9722,10 @@
                 daha fazla biçimlendirmek için kullanırlar.
             Sources and Search Engines:
               name: Kaynaklar ve Arama Motorları
-              description_student: "İlk önce bir web araması toplama avı tamamladıktan
+              description_student: İlk önce bir web araması toplama avı tamamladıktan
                 sonra, sınıf arama motorlarının iç işleyişini öğrenir ve analitik
                 becerilerini, tuhaf ve olası olmayan hayvanlar için araştırmaya yönlendirebilme
-                olanağına sahiptirler."
+                olanağına sahiptirler.
               description_teacher: Bu ders internetteki arama motorlarının nasıl çalıştığını
                 ve internette alakalı ve güvenilir bilginin nasıl bulunacağı konusunda
                 daha ciddi düşünmeleri konusunda öğrencileri cesaretlendirecektir.
@@ -9718,8 +9758,15 @@
                 gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
                 kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
                 paylaşır.
-              description_teacher: |
-                Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış katacaklardır.\r
+              description_teacher: 'Öğrenciler, Kişisel Web Sitesi''nde çalışan ünite
+                boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
+                sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
+                yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
+                ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
+                ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
+                katacaklardır.\r
+
+'
         coursea-2018:
           title: Kurs A
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -9744,8 +9791,13 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
               description_student: ''
-              description_teacher: |
-                Bu derste öğrenciler, gerçek bir tohum ekerek algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler. Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki durumlara çevirmektir.\r
+              description_teacher: 'Bu derste öğrenciler, gerçek bir tohum ekerek
+                algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
+                Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
+                başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
+                durumlara çevirmektir.\r
+
+'
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
               description_student: ''
@@ -9757,10 +9809,10 @@
             'Programming: Happy Maps':
               name: 'Programlama: Mutlu Haritalar'
               description_student: ''
-              description_teacher: "Öğrenciler bir dizinin planlanması ve bu diziyi
+              description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
                 uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
                 köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve
-                yazma deneyim kazanmalarına yardımcı olacaktır."
+                yazma deneyim kazanmalarına yardımcı olacaktır.
             Programming in Maze:
               name: Labirentte Programlama
               description_student: ''
@@ -9817,3 +9869,349 @@
                 ve yaratıcı olmanın zamanı!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Hızlı Kurs
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın
+            en iyilerini daha eski öğrenciler için birleştirir.'
+          description_audience: 'Yaş: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Giriş
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: İç İçe Döngüler
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Ortak Düşünce Eğitimi: Dijital Vatandaşlık'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Sıçrama Olayları
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Labirentte Koşullu Döngüler
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Minecraft' da Koşullar
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Değişkenler: Zarf Değişkenleri'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Sanatçı-Değişkenler
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Değişkenler - Oyun laboratuarı
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'Döngüler İçin: Döngü Eğlencesi İçin'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: Arı - şununla say döngüleri
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Fonksiyonlar: Parametrelerle Şarkı Yazarlığı'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Arı fonksiyonları
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Sanatçı Parametrelerinde Fonksiyonlar
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Arıda Parametreli Fonksiyonlar
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Projenizi Gözden Geçirme
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Projeni sun
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Kurs B
+          description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
+            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
+            oluştur.
+          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_audience: 'Yaş: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Sürükleyip Bırakmayı Öğrenin
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Dijital İziniz
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Labirentte Programlama
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Toplayıcıda Döngüler
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        coursed-2018:
+          title: Yeni Kurs D Senaryosu
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Giriş
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Sıçrama Olayları
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Arı -içiçe döngüler
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Sanatçıların İç İçe Döngüleri
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Çiftçi Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Koşullar-Arı
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Labirentte Koşullar ve Döngüler
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Sayısal Vatandaşlık
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Bir Play Lab Oyunu Oluştur
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Bağımsız: İkili Taban (Binary)'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Sanaçtı İkili Taban
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '

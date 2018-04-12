@@ -5,12 +5,13 @@ import React, {PropTypes} from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import applicationDashboardReducers, {
-  setRegionalPartnerName,
+  setRegionalPartnerFilter,
   setRegionalPartnerGroup,
   setRegionalPartners,
   setWorkshopAdminPermission,
   setLockApplicationPermission,
 } from './reducers';
+import {RegionalPartnerFilterPropType} from './constants';
 import Header from '../components/header';
 import {
   Router,
@@ -51,7 +52,7 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string,
+    regionalPartnerFilter: RegionalPartnerFilterPropType,
     regionalPartnerGroup: PropTypes.number,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
@@ -62,8 +63,8 @@ export default class ApplicationDashboard extends React.Component {
   };
 
   componentWillMount() {
-    if (this.props.regionalPartnerName) {
-      store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
+    if (this.props.regionalPartnerFilter.value && this.props.regionalPartnerFilter.label) {
+      store.dispatch(setRegionalPartnerFilter(this.props.regionalPartnerFilter));
     }
 
     if (this.props.regionalPartnerGroup) {

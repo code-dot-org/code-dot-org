@@ -1,16 +1,16 @@
 {
   "expo": {
     "name": "<%- appName %>",
-    "description": "<%- appName %> from code.org App Lab.",
-    "slug": "<%- appName %>",
+    "description": "<%- appName %> from Code.org App Lab.",
+    "slug": "<%- appName.replace(/([^a-zA-Z0-9_\-]+)/gi, '-') %>",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./appassets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./appassets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

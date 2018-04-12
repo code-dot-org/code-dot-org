@@ -2,8 +2,8 @@
   devise:
     confirmations:
       confirmed: I tutuki te whakaū i tō wāhitau īmēra.
-      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
-        e whakamārama ana me pēhea te whakaū i tō pūkete."
+      send_instructions: Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te whakaū i tō pūkete.
       send_paranoid_instructions: Mehemea kei tō mātou pūtengi raraunga tō wāhitau
         īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra me ngā tohutohu kia whakaū
         koe i tō pūkei.
@@ -31,8 +31,8 @@
       no_token: E kore e tutuki tō whai wāhi ki tēnei whārangi ki te kore koe e uru
         mā te īmēra tautuhi kupuhipa anō. Ki te uru koe mā te īmēra tautuhi kupuhipa
         anō, me mātua whakamahi koe i te katoa o te URL i whakaratoa.
-      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
-        e whakamārama ana me pēhea te tautuhi anō i tō kupuhipa."
+      send_instructions: Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te tautuhi anō i tō kupuhipa.
       send_paranoid_instructions: Mehemea kei tō mātou pūtengi raraunga tō wāhitau
         īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra ki tō wāhitau īmēra ki
         te whakaora i tō kupuhipa.
@@ -57,10 +57,10 @@
       signed_in: ''
       signed_out: I angitu tō takiputa.
     unlocks:
-      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
-        e whakamārama ana me pēhea te whakawātea i tō pūkete."
-      send_paranoid_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā
-        tohutohu ki te whakawātea i tō pūkei mēnā rā he tīari tō pūkei."
+      send_instructions: Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te whakawātea i tō pūkete.
+      send_paranoid_instructions: Ākuanei ka tae atu ki a koe tētahi īmēra me ngā
+        tohutohu ki te whakawātea i tō pūkei mēnā rā he tīari tō pūkei.
       unlocked: I angitu te whakawāteatanga o tō pūkei. Tēnā takiuru atu ki te haere
         tonu.
   errors:

@@ -1,0 +1,5 @@
+stage 'Stage1'
+variants
+  level 'Level 1'
+  level 'Level 2', active: false
+endvariants

@@ -12,10 +12,6 @@
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -46,7 +42,8 @@
     "all_animations_single_frame": "false",
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
-    "hide_custom_blocks": "false"
+    "hide_custom_blocks": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

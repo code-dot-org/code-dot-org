@@ -1,10 +1,10 @@
 "si":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: "හායි, මම චිත්‍ර ශිල්පියෙක්. මට ඕනම දෙයක් ඇඳීමට
+      2-3 Artist 1 new_instruction: හායි, මම චිත්‍ර ශිල්පියෙක්. මට ඕනම දෙයක් ඇඳීමට
         පුලුවන් වන ලෙස, මා හට පරිගණක කේතයක් ලිවීමට ඔබට පුලුවන්. ඡායාරූපයේ අළු රේඛා
         උඩින් අඳින්න මාව යොමු කිරීමට බ්ලොක් කිහිපයක් භාවිතා කරන්න.(එක් එක් රේඛාව පික්සල්
-        100 දිගය)"
+        100 දිගය)
       2-3 Artist 11_instruction: |
         පැත්තක දිග පික්සල් 100ක් වන අෂ්ටාස‍්‍රයක් ඇඳීමෙන් මේ නැවතීමේ සංඥ්ඥාව වටේ දාරය සම්පූර්ණ කරන්න. \r
         \r
@@ -20,12 +20,12 @@
         The jump block moves the artist without drawing.
         Draw the dashed line using both the `jump forward` and `move forward` blocks.
         Each line is 50 pixels long.
-      2-3 Artist 3_instruction: "මේ තොප්පිය පික්සල්ස් 100ක් උසයි. ඊට වඩා පික්සල්ස්
-        70කින් අඩු තොප්පියක් අඳින්න."
+      2-3 Artist 3_instruction: මේ තොප්පිය පික්සල්ස් 100ක් උසයි. ඊට වඩා පික්සල්ස්
+        70කින් අඩු තොප්පියක් අඳින්න.
       2-3 Artist 3new_instruction: "රතු තොප්පිය පික්සල්ස් 100ක් උසයි. ඊට වඩා පික්සල්ස්
         70කින් අඩු \nකළු තොප්පිය ඇඳ අවසන් කරන්න. \\r\n(සටහන: සෑම තොප්පියකම පළල පික්සල්ස්
         50ක් වේ.)"
-      2-3 Artist 4_instruction: "මෙම බළලා වෙනුවෙන් නිවස සම්පූර්ණ කිරීමට මට උපකාර කරන්න."
+      2-3 Artist 4_instruction: මෙම බළලා වෙනුවෙන් නිවස සම්පූර්ණ කිරීමට මට උපකාර කරන්න.
       2-3 Artist 5_instruction: මේ නිවසම බ්ලොක් 3ක් පමණක් භාවිතා කර ඇඳීමට "repeat
         times" බ්ලොක් යොදාගන්න.
       2-3 Artist 6_instruction: |-
@@ -39,9 +39,9 @@
         the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
         and 100 pixels tall. There are many different ways to solve this puzzle, so
         have some fun!
-      2-3 Artist 9 NEW_instruction: "මෙම සරුංගලය නිම කරන්න"
-      2-3 Artist 9 REPLACEMENT_instruction: "මෙම පඩිපෙළ ඇඳ අවසන් කරන්න!"
-      2-3 Artist 9_instruction: "මෙම සරුංගලය නිම කරන්න"
+      2-3 Artist 9 NEW_instruction: මෙම සරුංගලය නිම කරන්න
+      2-3 Artist 9 REPLACEMENT_instruction: මෙම පඩිපෙළ ඇඳ අවසන් කරන්න!
+      2-3 Artist 9_instruction: මෙම සරුංගලය නිම කරන්න
       2-3 Artist Assessment 1_instruction: |-
         ඇගයීම: ඉවර කරන්න අඳිමින් අන්තිම දත.
         එය පළල් කොටු 25ක් සහ උස කොටු 25කි.
@@ -100,10 +100,9 @@
         යමක් ලකුණු වේ!\r
         \r
         නටුව සඳහා ඇති කේතනය වැරදියි. ඔබට අඳුනා ගත හැකිද කොහොම ගන්නේ කලාකරුවෙක් සලකුණු කිරීම සඳහා නටුව හරි දිසාවට?
-      2-3 Artist Debugging Assessment 1_instruction: "මෙම හැඩය ඉතා කුඩායි. ඔබට එය
-        විශාල කිරීමට පුලුවන්ද? ඉඟියක්: එය එක් එක් පැත්තේ පික්සල් 75 ක් විය යුතුය."
-      2-3 Artist Free Play_instruction: "නිදහස් ක්‍රීඩාකිරීම! ඔබ කැමති ඕනෑම දෙයක්
-        අඳින්න."
+      2-3 Artist Debugging Assessment 1_instruction: 'මෙම හැඩය ඉතා කුඩායි. ඔබට එය
+        විශාල කිරීමට පුලුවන්ද? ඉඟියක්: එය එක් එක් පැත්තේ පික්සල් 75 ක් විය යුතුය.'
+      2-3 Artist Free Play_instruction: නිදහස් ක්‍රීඩාකිරීම! ඔබ කැමති ඕනෑම දෙයක් අඳින්න.
       2-3 Artist Functions 1_instruction: |-
         "මම පිල්ලි කලාකාරයෙක්. මම ආදරෙයි අඳින්න!" \r
         \r
@@ -158,8 +157,8 @@
         \r
         The squares are now
         45 pixels apart.
-      2-3 Artist Functions 4_instruction: "දැන් චතුරස්‍ර ඇදීම සදහා මෙමලුපය තුල  ක්‍රියාවක්
-        එක්කරන්න.  "
+      2-3 Artist Functions 4_instruction: 'දැන් චතුරස්‍ර ඇදීම සදහා මෙමලුපය තුල  ක්‍රියාවක්
+        එක්කරන්න.  '
       2-3 Artist Functions 7_instruction: |-
         Use the "draw a house" function to draw
         two houses using two different parameters. (Hint: the first house is 100 pixels).
@@ -192,7 +191,7 @@
       2-3 Artist Loops 7_instruction: |-
         We can use loops to make all kinds of polygons.  Can
         you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "අංගයන් දෙකම ලූපයක් තුලට දමමු."
+      2-3 Artist Loops 8_instruction: අංගයන් දෙකම ලූපයක් තුලට දමමු.
       2-3 Artist Loops 9_instruction: |-
         We're going to loop the same elements, but
         now we're going to add some distance between them.\r
@@ -208,8 +207,9 @@
         Rebuild the code from the last puzzle,
         but this time, add a left turn of 30 degrees inside the loop. Now, repeat
         it 24 times instead of 8.
-      2-3 Artist Loops New 12_instruction: |
-        පික්සල 100 පැති සති දියමන්තියක් අඳින්න.
+      2-3 Artist Loops New 12_instruction: 'පික්සල 100 පැති සති දියමන්තියක් අඳින්න.
+
+'
       2-3 Artist Loops New 13_instruction: |-
         We are going to start you with some code
         (in grey) to make one diamond. \r
@@ -220,7 +220,7 @@
         Play around with the code for the diamond
         and see what other patterns you can make. Try changing how many degrees you
         turn and how many times you loop.
-      2-3 Artist Loops New 15_instruction: "දැන් ඔයා කැමති ඕනම එකක් අඳින්න!"
+      2-3 Artist Loops New 15_instruction: දැන් ඔයා කැමති ඕනම එකක් අඳින්න!
       2-3 Artist Loops New 2_instruction: |-
         Here is the same puzzle that we just solved,
         but this time, we can only use one `move forward` block and one `turn` block
@@ -229,17 +229,17 @@
         Can you use a `repeat` to solve this puzzle?
       2-3 Artist Loops New 9_instruction: 'මෙම ඊ තලය සම්පුර්ණ කිරීම සදහා අදින්න සරල
         "v" (ඊ හිසක්) (දෙපසෙහිම අගය පික්සෙල 50 වන  ) '
-      2-3 Artist Match Hex Pic_instruction: "ගලපන්න: සඩස්‍රය ඇඳ අවසන් කිරීමට උදවු
-        කරන්න."
-      2-3 Artist Match Rho Pic_instruction: "ගලපන්න: කේතයේ අඩු පාඩු සම්පූර්ණ කරන්න."
-      2-3 Artist Match Sq Pic_instruction: "ගලපන්න: කේතයේ අඩුපාඩු සම්පූර්ණ කරන්න"
-      2-3 Artist Match Tri pic_instruction: "ගලපන්න: කේතයේ අඩුපාඩු සම්පූර්ණ කරන්න."
+      2-3 Artist Match Hex Pic_instruction: 'ගලපන්න: සඩස්‍රය ඇඳ අවසන් කිරීමට උදවු
+        කරන්න.'
+      2-3 Artist Match Rho Pic_instruction: 'ගලපන්න: කේතයේ අඩු පාඩු සම්පූර්ණ කරන්න.'
+      2-3 Artist Match Sq Pic_instruction: 'ගලපන්න: කේතයේ අඩුපාඩු සම්පූර්ණ කරන්න'
+      2-3 Artist Match Tri pic_instruction: 'ගලපන්න: කේතයේ අඩුපාඩු සම්පූර්ණ කරන්න.'
       2-3 Artist Nested Loops 1_instruction: "මෝස්තරය ඇඳීමට මෙම කේතය \n'repeat' බ්ලොක්
         එකකින් වට කරන්න."
-      2-3 Artist Nested Loops 10_instruction: "රටාව සම්පූර්ණ කිරීම සඳහා මෙම කේතය 12
-        වරක් ලූපනය කරන්න."
-      2-3 Artist Nested Loops 11_instruction: "රටාව සම්පුර්ණ කරන්න මෙම කේතය 4 වරක්
-        නැවත නැවත සිදු කරන්න , එක් එක් රවුම අවසානයේ අංශක 90 හැරෙන්න."
+      2-3 Artist Nested Loops 10_instruction: රටාව සම්පූර්ණ කිරීම සඳහා මෙම කේතය 12
+        වරක් ලූපනය කරන්න.
+      2-3 Artist Nested Loops 11_instruction: රටාව සම්පුර්ණ කරන්න මෙම කේතය 4 වරක්
+        නැවත නැවත සිදු කරන්න , එක් එක් රවුම අවසානයේ අංශක 90 හැරෙන්න.
       2-3 Artist Nested Loops 12_instruction: " කැරලි සම්පුර්ණ කිරීම සදහා මෙම කේතය
         12 වතාවක් නැවත නැවත සිදුකරන්න. "
       2-3 Artist Nested Loops 2_instruction: |-
@@ -289,18 +289,18 @@
         අපි මේ පින්තුරය ඉවර කරයි අපේ මල් එකතු කරමින්. \r
         \r
         දියමතිය 12ස් වතාවක් ලූප් කරමින් අඳින්න මල.
-      2-3 Artist Nested Loops Free Play_instruction: "කැදැලි ලූපයන් සමඟ නිදහස්ව වාදනය
-        කරන්න, කදිම දෙයක් අඳින්න."
-      2-3 Bee Conditionals 1_instruction: "හායි! මම මි මැස්සෙක්. උදව් කරන්න මට මී
-        පැණි ගන්න මල් වලින්."
+      2-3 Artist Nested Loops Free Play_instruction: කැදැලි ලූපයන් සමඟ නිදහස්ව වාදනය
+        කරන්න, කදිම දෙයක් අඳින්න.
+      2-3 Bee Conditionals 1_instruction: හායි! මම මි මැස්සෙක්. උදව් කරන්න මට මී පැණි
+        ගන්න මල් වලින්.
       2-3 Bee Conditionals 10_instruction: |
         Purple flowers may have either 1 or 0
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
         have any.\r
       2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
         fly around the yard and collect nectar only from the flowers that have\nsome. "
-      2-3 Bee Conditionals 12_instruction: "උදව් කරන්න මට ඔක්කොම මි පැණි සොයන්න පුළුවන්
-        අඩුම බ්ලොක් ගානක් භාවිත කරමින්!"
+      2-3 Bee Conditionals 12_instruction: උදව් කරන්න මට ඔක්කොම මි පැණි සොයන්න පුළුවන්
+        අඩුම බ්ලොක් ගානක් භාවිත කරමින්!
       2-3 Bee Conditionals 13_instruction: |-
         There's a lot happening here!\r
         \r
@@ -324,8 +324,8 @@
         යොදා ගනිමින් පැණි සියල්ල එකතු කරගැනීමට මට උදව් කරන්න.
       2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
         collect the nectar and make the honey using as few blocks as you can.  "
-      2-3 Bee Conditionals 4_instruction: "මට උදව් කරන්න මල් වලින්  සියලුම මල් පැණි
-        එකතු කර සියල්ලෙන්ම  මි පැණි හදන්න "
+      2-3 Bee Conditionals 4_instruction: 'මට උදව් කරන්න මල් වලින්  සියලුම මල් පැණි
+        එකතු කර සියල්ලෙන්ම  මි පැණි හදන්න '
       2-3 Bee Conditionals 5_instruction: |-
         Be careful not to collect nectar from
         a purple flower if it doesn't have any. \r
@@ -333,23 +333,23 @@
         is equal to 1 using the `if nectar` block.
       2-3 Bee Conditionals 6_instruction: 'මෙම මලෙහි පැණි තිබේදැයි කියා සොයාබැලීමට  මෙම
         මල "if" වරණයකින් පරීක්ෂා කරන්න '
-      2-3 Bee Conditionals 7_instruction: "මල් පැණි තිබුනොත් පමණක්   එක එක මල් වල
-        පැණි එකතු කරන්න "
+      2-3 Bee Conditionals 7_instruction: 'මල් පැණි තිබුනොත් පමණක්   එක එක මල් වල
+        පැණි එකතු කරන්න '
       2-3 Bee Conditionals 8_instruction: "\nමෙම ක්ෂේත්‍රයේ රතු හා දම් පැහැති මල්
         පවතී . රතු පැහැති මල් වල  දන්නා ප්‍රමාණයකින් පැණි අඩංගු වේ. නමුත් දම් පති
         මල් වල අඩංගු පැණි ප්‍රමාණය නොදනී .සියලුම පැණි  එකතු කරන්න  "
-      2-3 Bee Conditionals 9_instruction: "හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න."
-      2-3 Bee Conditionals Assessment 1_instruction: "තක්සේරුව : සියලුම මල් පැණි එකතු
+      2-3 Bee Conditionals 9_instruction: හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න.
+      2-3 Bee Conditionals Assessment 1_instruction: 'තක්සේරුව : සියලුම මල් පැණි එකතු
         කරන්න .සැලකිලිමත් වන්න දම් පැහැති මල් වල එහි මල් පැණි නොතිබුණහොත් එහි  මල්
-        පැණි එකතු කරන්න උත්සහ නොගන්න."
-      2-3 Bee Debugging 1_instruction: "මෙම වරණ මට  අතෙන්ම කරදරකාරී (දෝෂ සහිත ) වේ.
-        දෝෂ නිවැරදි කිරීම සදහා සියලුම මල් පැණි එකතු කරන්න "
+        පැණි එකතු කරන්න උත්සහ නොගන්න.'
+      2-3 Bee Debugging 1_instruction: 'මෙම වරණ මට  අතෙන්ම කරදරකාරී (දෝෂ සහිත ) වේ.
+        දෝෂ නිවැරදි කිරීම සදහා සියලුම මල් පැණි එකතු කරන්න '
       2-3 Bee Debugging 10_instruction: |-
         This puzzle is making me loopy! \r
         Fix
         the error(s) to collect all of the nectar and make all of the honey.
-      2-3 Bee Debugging 2_instruction: "ඔබට මෙහි ප්‍රශ්නයක් හදුනාගත හැකි වැරදි  නිවැරදි
-        කිරීම සදහා සියලුම පැණි එකතු කරන්න"
+      2-3 Bee Debugging 2_instruction: ඔබට මෙහි ප්‍රශ්නයක් හදුනාගත හැකි වැරදි  නිවැරදි
+        කිරීම සදහා සියලුම පැණි එකතු කරන්න
       2-3 Bee Debugging 3_instruction: |-
         Ooh, this one stings!\r
         \r
@@ -368,8 +368,8 @@
         \r
         Fix the error(s)
         to collect all of the nectar.
-      2-3 Bee Debugging 7_instruction: "දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
-        මී පැණි සැදීමට  "
+      2-3 Bee Debugging 7_instruction: 'දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
+        මී පැණි සැදීමට  '
       2-3 Bee Debugging 8_instruction: |-
         So many beautiful flowers!\r
         \r
@@ -402,7 +402,7 @@
         a task.  \r
         \r
         Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 3_instruction: "හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න."
+      2-3 Bee Functions 3_instruction: හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න.
       2-3 Bee Functions 4_instruction: |-
         The `move and get nectar` function turns
         the bee, collects nectar, and then returns the bee to where it started.  \r
@@ -454,15 +454,15 @@
       2-3 Bee Loops 2_instruction: |-
         Collect all the nectar and make all of the honey
         using the fewest blocks possible.
-      2-3 Bee Loops 2A_instruction: "මේවර, සියලුම මල්පැණි එකතු කරන්න ලූපයක් භාවිතා
-        කරන්න."
+      2-3 Bee Loops 2A_instruction: මේවර, සියලුම මල්පැණි එකතු කරන්න ලූපයක් භාවිතා
+        කරන්න.
       2-3 Bee Loops 3_instruction: |-
         Collect nectar from each flower and make honey
         at each honeycomb using the fewest blocks possible.
       2-3 Bee Loops 3A_instruction: "`repeat` ලූපය භාවිතයෙන් සියලුම මල් පැණි එකතු
         කරන්න."
-      2-3 Bee Loops 3B_instruction: "දැන් `repeat` බ්ලොක් භාවිතා කර සියලුම මල් පැණි
-        එකතු කර මී පැණි සාදන්න."
+      2-3 Bee Loops 3B_instruction: දැන් `repeat` බ්ලොක් භාවිතා කර සියලුම මල් පැණි
+        එකතු කර මී පැණි සාදන්න.
       2-3 Bee Loops 4_instruction: |-
         කෙතරම් අවිවේකි මී මැස්සෙක්ද?\r
         \r
@@ -501,7 +501,7 @@
         collect all of the nectar from these flowers.
       2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
         `move forward` blocks below the `when run` block and press \"Run\". "
-      2-3 Maze 10_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
+      2-3 Maze 10_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
       2-3 Maze 11_instruction: |-
         Get me to the flower I'm hungry! How many times
         do you have to repeat a block?
@@ -535,26 +535,26 @@
         In this puzzle, two `repeat` loops will help you
         get to the pig with the fewest number of blocks!
       2-3 Maze 16 (old)_instruction: Repeat until බ්ලොක් එක යොදාගෙන මාව ඌරා ළඟට ගෙනියන්න!
-      2-3 Maze 16 before_instruction: "මාව ඌරා ළඟට ඉක්මනින්ම ගෙන යාහැකි මාර්ගය කුමක්ද?"
+      2-3 Maze 16 before_instruction: මාව ඌරා ළඟට ඉක්මනින්ම ගෙන යාහැකි මාර්ගය කුමක්ද?
       2-3 Maze 16_instruction: |-
         Loops even work with more than one block inside!  Can
         you loop this sequence to get the zombie to the sunflower?
-      2-3 Maze 2_instruction: "මේ ඌරා මගේ කේන්ති අවුස්සනවා. මට ඔහු ළඟට යන්න උදව් කරන්න!"
+      2-3 Maze 2_instruction: මේ ඌරා මගේ කේන්ති අවුස්සනවා. මට ඔහු ළඟට යන්න උදව් කරන්න!
       2-3 Maze 3_instruction: |-
         මෝඩ ඌරා වෙත යාමට මාර්ගය ලකුණු කර මා හට මග පෙන්නවන්න.
         TNT මගහරින්න, නැතහොත් ඔබට තුවාල වෙයි!
-      2-3 Maze 4_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
-      2-3 Maze 5_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
+      2-3 Maze 4_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
+      2-3 Maze 5_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
       2-3 Maze 6_instruction: |-
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
-      2-3 Maze 7_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
-      2-3 Maze 8_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
-      2-3 Maze 9_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
+      2-3 Maze 7_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
+      2-3 Maze 8_instruction: මාව ඌරා ළඟට ගෙනියන්න!
+      2-3 Maze 9_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
       2-3 Maze Loops 1_instruction: "එකම වර්ගයේ බ්ලොක් 5ක් යොදාගෙන \nමව ඌරා ළඟට ගෙන
         යා හැකිද?"
-      2-3 Maze Loops 17_instruction: "ඔබ උගත් දේවල් භාවිතා කරන්න මාව සුරියකාන්ත මල
-        වෙත ලගාකරවීමට!"
+      2-3 Maze Loops 17_instruction: ඔබ උගත් දේවල් භාවිතා කරන්න මාව සුරියකාන්ත මල
+        වෙත ලගාකරවීමට!
       2-3 Maze Loops 18_instruction: |-
         Get me to the sunflower using the fewest blocks
         possible!  \r
@@ -579,7 +579,7 @@
       2-3 Maze sq2_instruction: |-
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
-      2-3 Maze sq3_instruction: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
+      2-3 Maze sq3_instruction: ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)
       2-3 Maze sq4_instruction: |-
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
@@ -601,17 +601,17 @@
       2-3 maze sq13_instruction: |-
         Dear person. Me zombie. Must... get... to sunflower.
         Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: "බ්ලොක් 4ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල
-        ළඟට යා හැකිද?"
-      2-3 maze sq15_instruction: "බ්ලොක් 5ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල
-        ළඟට යා හැකිද?"
+      2-3 maze sq14_instruction: බ්ලොක් 4ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල
+        ළඟට යා හැකිද?
+      2-3 maze sq15_instruction: බ්ලොක් 5ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල
+        ළඟට යා හැකිද?
       2-3 maze sq16_instruction: "හරි, මේක ඒක වගෙමයි, එත් තරමක් වෙනස්. \nඔබට පුලුවන්ද
         නැවත බ්ලොක් 5 කින් පමණක් මෙය කරන්න?"
       2-3_instruction: |-
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: "කුරුල්ලාට උදව් කරන්න නරක ඌරාව අල්ලා ගැනීමට එය ඉදිරියට
-        ගෙනයාමෙන්"
+      2-3level1_instruction: කුරුල්ලාට උදව් කරන්න නරක ඌරාව අල්ලා ගැනීමට එය ඉදිරියට
+        ගෙනයාමෙන්
       20hr_farmer_stage9_1_instruction: |-
         Hi, I'm a farmer. I need your help to flatten
         the field on my farm so it's ready for planting. Move me to the pile of dirt
@@ -975,9 +975,9 @@
         \r
         Remember:
         Not all clouds hide the same thing!
-      4-5 Bee Conditionals 3_instruction: "දැන් මට උවමනා කර ඇත්තේ පැණි සදීමටයි. මෙයින්
+      4-5 Bee Conditionals 3_instruction: දැන් මට උවමනා කර ඇත්තේ පැණි සදීමටයි. මෙයින්
         ඇතැම් වලාකුළු යට මී වද තිබිය හැකිය. සෑම වලකුලක්ම පරීක්ෂා කිරීමට විමසිලිමත්
-        වන්න!"
+        වන්න!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |-
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
@@ -1031,38 +1031,38 @@
         මෙම බ්ලොක්ස් මට ඇත්තෙන්ම කරදරකාරී.\r
         \r
         ඔබට එය සැකසිය හැකිද?
-      4-5 Bee Debugging 10_instruction: "දෝෂයන් සොයා ඒවා හදන්න."
-      4-5 Bee Debugging 11_instruction: "මෙය නිවැරදිව ගණන් කර තිබේ ද?"
-      4-5 Bee Debugging 2_instruction: "මී මැස්සාට උදව් කරන්න මල් පැණි ලබාගැනීමට සහ
-        පැණි සැදිමට."
-      4-5 Bee Debugging 3_instruction: "දෝෂයන් සොයා ඒවා හදන්න."
-      4-5 Bee Debugging 4_instruction: "මෙම බ්ලොක් වැඩ කරන්නේ නැහැ. මෝස්තරය කුමක්ද?"
-      4-5 Bee Debugging 5_instruction: "යමක් මෙහි නිවැරදි නොවේ..."
+      4-5 Bee Debugging 10_instruction: දෝෂයන් සොයා ඒවා හදන්න.
+      4-5 Bee Debugging 11_instruction: මෙය නිවැරදිව ගණන් කර තිබේ ද?
+      4-5 Bee Debugging 2_instruction: මී මැස්සාට උදව් කරන්න මල් පැණි ලබාගැනීමට සහ
+        පැණි සැදිමට.
+      4-5 Bee Debugging 3_instruction: දෝෂයන් සොයා ඒවා හදන්න.
+      4-5 Bee Debugging 4_instruction: මෙම බ්ලොක් වැඩ කරන්නේ නැහැ. මෝස්තරය කුමක්ද?
+      4-5 Bee Debugging 5_instruction: යමක් මෙහි නිවැරදි නොවේ...
       4-5 Bee Debugging 6_instruction: |-
         The purple flower has a different amount
         of nectar each time you run the puzzle. \r
         \r
         Fix the blocks to get all
         of the nectar from the flower each time.
-      4-5 Bee Debugging 7_instruction: "ශ්‍රිතයේ යමක් අස්ථානගත වී ඇත..."
-      4-5 Bee Debugging 8_instruction: "මෙම හොද ශ්රිත්යකි, නමුත් එය නිවැරදිව භාවිතා
-        කර නැත."
-      4-5 Bee Debugging 9_instruction: "ඇයි මී මැස්සා ප්‍රමාණවත් තරම් පැණි නිපදවන්නේ
-        නැත්තේ?"
-      4-5 Bee Debugging Assessment 1_instruction: "පැවරුම: කේතය හදන්න."
-      4-5 Bee Nested Loops 1_instruction: "ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු කරගැනීම
-        සදහා."
+      4-5 Bee Debugging 7_instruction: ශ්‍රිතයේ යමක් අස්ථානගත වී ඇත...
+      4-5 Bee Debugging 8_instruction: මෙම හොද ශ්රිත්යකි, නමුත් එය නිවැරදිව භාවිතා
+        කර නැත.
+      4-5 Bee Debugging 9_instruction: ඇයි මී මැස්සා ප්‍රමාණවත් තරම් පැණි නිපදවන්නේ
+        නැත්තේ?
+      4-5 Bee Debugging Assessment 1_instruction: 'පැවරුම: කේතය හදන්න.'
+      4-5 Bee Nested Loops 1_instruction: ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු කරගැනීම
+        සදහා.
       4-5 Bee Nested Loops 2_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු
         කර ගන්න.\nකැදලි ලූපයක් භාවිතා කරන්න. "
-      4-5 Bee Nested Loops 3_instruction: "අරම්බක කේතයන් වෙනත් ලූපයක් තුලට ඇතුල් කර
-        සිලයුම මල් පැණි එකතු කරන්න."
+      4-5 Bee Nested Loops 3_instruction: අරම්බක කේතයන් වෙනත් ලූපයක් තුලට ඇතුල් කර
+        සිලයුම මල් පැණි එකතු කරන්න.
       4-5 Bee Nested Loops 4_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු
         කරගෙන මී වදය තුල මී පැණි සාදන්න.\\r\n\\r\nකැදලි ලූපය භාවිතා කරන්න. "
-      4-5 Bee Nested Loops 5_instruction: "කැදලි ලූපයක් භාවිතයෙන් සියලුම මල් පැණි
-        එකතු කරන්න."
-      4-5 Bee Nested Loops 6_instruction: "ඔක්කොම පැණි ටික එකතු කරන්න."
-      4-5 Bee Nested Loops 7_instruction: "මෙම ලූපය තවත් ලූපයක් තුලට දමා කැදලි ලූපයක්
-        සාදා මල් වලින් සියලුම මල් පැණි එකතු කර ගන්න."
+      4-5 Bee Nested Loops 5_instruction: කැදලි ලූපයක් භාවිතයෙන් සියලුම මල් පැණි එකතු
+        කරන්න.
+      4-5 Bee Nested Loops 6_instruction: ඔක්කොම පැණි ටික එකතු කරන්න.
+      4-5 Bee Nested Loops 7_instruction: මෙම ලූපය තවත් ලූපයක් තුලට දමා කැදලි ලූපයක්
+        සාදා මල් වලින් සියලුම මල් පැණි එකතු කර ගන්න.
       4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
         nesting a while loop. Replace the inner repeat times block with a while\nblock. "
       4-5 Bee Nested Loops 9_instruction: |-
@@ -1078,20 +1078,20 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: "බ්ලොක් 4ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල ළඟට
-        යා හැකිද?"
+      4-5 Maze 10_instruction: බ්ලොක් 4ක් පමණක් භාවිතා කරමින් ඔබට සූරියකාන්ත මල ළඟට
+        යා හැකිද?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |-
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
+      4-5 Maze 13_instruction: මාව ඌරා ළඟට ගෙනියන්න!
       4-5 Maze 14_instruction: Repeat until බ්ලොක් එක යොදාගෙන මාව ඌරා ළඟට ගෙනියන්න.
       4-5 Maze 2 (copy 1)_instruction: |-
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: "අවශ්‍යයි.... ලගාවීමට... සුරියකාන්ත මලට."
-      4-5 Maze 3_instruction: "අවශ්‍යයි.... ලගාවීමට... සුරියකාන්ත මලට."
+      4-5 Maze 3 (copy 1)_instruction: අවශ්‍යයි.... ලගාවීමට... සුරියකාන්ත මලට.
+      4-5 Maze 3_instruction: අවශ්‍යයි.... ලගාවීමට... සුරියකාන්ත මලට.
       4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
       4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
       4-5 Maze 5 (copy 1)_instruction: |-
@@ -1263,7 +1263,7 @@
         start you with the 4x2 image Maddie was creating, but we've left out the
         last two squares. Finish off the image by figuring out which two colors are
         missing and encode them.
-      App Lab test_instruction: "පරීක්ෂාව"
+      App Lab test_instruction: පරීක්ෂාව
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
@@ -1315,8 +1315,8 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      Artist - Nested Loops Assessment 1_instruction: "සැලසුම සම්පූර්ණ කිරීමට කැදැලි
-        ලූපයක් භාවිතා කරන්න."
+      Artist - Nested Loops Assessment 1_instruction: සැලසුම සම්පූර්ණ කිරීමට කැදැලි
+        ලූපයක් භාවිතා කරන්න.
       Artist Inspiration_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
@@ -1581,8 +1581,8 @@
       CSD U3 L5 Freeplay_2018_instruction: |-
         Change the value of petalSize multiple
         times. How does it change your drawing?
-      CSD U3 Mouse Input Bee 2_instruction: "මෙය කරන්න"
-      CSD U3 Mouse Input Bee 2_2018_instruction: "මෙය කරන්න"
+      CSD U3 Mouse Input Bee 2_instruction: මෙය කරන්න
+      CSD U3 Mouse Input Bee 2_2018_instruction: මෙය කරන්න
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
         mouth.
@@ -1614,9 +1614,9 @@
         Put all of your code into
         a draw() loop and then add set the background to blue with the background()
         block.
-      CSD U3 Simple Drawing - Personal Animation_instruction: "මෙය කරන්න"
-      CSD U3 Sprites intro sprites_instruction: "මෙය කරන්න"
-      CSD U3 Sprites intro sprites_2018_instruction: "මෙය කරන්න"
+      CSD U3 Simple Drawing - Personal Animation_instruction: මෙය කරන්න
+      CSD U3 Sprites intro sprites_instruction: මෙය කරන්න
+      CSD U3 Sprites intro sprites_2018_instruction: මෙය කරන්න
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
         be displayed in the console?
@@ -1635,7 +1635,7 @@
       CSD U3 Variables Initialize_instruction: |-
         Predict: What will get displayed
         in the console?
-      CSD U3 Variables Intro_instruction: "ඔබේම විචල්‍යයක් සාදන්න "
+      CSD U3 Variables Intro_instruction: 'ඔබේම විචල්‍යයක් සාදන්න '
       CSD U3 Variables Random_instruction: |-
         Predict: What will get displayed in the
         console?
@@ -1722,8 +1722,8 @@
       CSD U3 Variables write_instruction: |-
         Use the write block to display the value
         of size
-      CSD U3 Variables2 expressions in commands_instruction: "ඇඳීමේ විධානයක් ඇතුළත
-        ප්‍රකාශන භාවිතා කරන්න"
+      CSD U3 Variables2 expressions in commands_instruction: ඇඳීමේ විධානයක් ඇතුළත
+        ප්‍රකාශන භාවිතා කරන්න
       CSD U3 Variables2 expressions in variables_instruction: |-
         Assign the value of
         each expression to a variable and console.log that variable.
@@ -2805,8 +2805,8 @@
       Calc Circles of Eval 2 (copy 1)_instruction: |-
         Convert this statement to <some_shape>
         of evaluation.
-      Calc Circles of Eval 2_instruction: "මෙම කේතය සම්පූර්ණ කිරීමට ගුණ කිරීමේ කොටසක්
-        භාවිතා කරන්න."
+      Calc Circles of Eval 2_instruction: මෙම කේතය සම්පූර්ණ කිරීමට ගුණ කිරීමේ කොටසක්
+        භාවිතා කරන්න.
       Calc Circles of Eval 3_instruction: |-
         Complete the Evaluation Blocks to match
         this statement.
@@ -3040,13 +3040,13 @@
       Course 2 Bee Loops 4_instruction: |-
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: "ඔබට පුලුවන්ද මාව ඌරා වෙත යොමු කරවන්න බ්ලොක්
-        5 භාවිතා කරමින්?"
+      Course 2 Maze Loops 1_instruction: ඔබට පුලුවන්ද මාව ඌරා වෙත යොමු කරවන්න බ්ලොක්
+        5 භාවිතා කරමින්?
       Course 4 2_instruction: |-
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "මට කොටුවක් අඳින්න උදවු කරන්න. (එක් එක් පේළිය
-        පික්සල 200ක් දිගුයි) "
+      Course 4 Artist 1_instruction: 'මට කොටුවක් අඳින්න උදවු කරන්න. (එක් එක් පේළිය
+        පික්සල 200ක් දිගුයි) '
       Course 4 Artist 10_instruction: |-
         Click here to see the full instructions again!\r
         \r
@@ -3133,7 +3133,7 @@
       Course 4 Artist Binary 6_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: "ඇඳීම අවසන් කරන්න."
+      Course 4 Artist Binary 7_instruction: ඇඳීම අවසන් කරන්න.
       Course 4 Artist Binary Free Play 2_instruction: |-
         Free Play: Here's a blank
         canvas for you to draw on.  Have fun!
@@ -3143,10 +3143,10 @@
         \r
         See what happens when we
         start to get creative with the bits?
-      Course 4 Artist Binary Free Play 2b_instruction: "ඉඟියක් ලබා ගැනීමට මෙතන ක්ලික්
-        කරන්න."
-      Course 4 Artist Binary Free Play_instruction: "නිදහස්ව ක්‍රීඩා කරන්න: ද්විමය
-        සමඟ ඔබ කැමති ඕනෑම දෙයක් අඳින්න!"
+      Course 4 Artist Binary Free Play 2b_instruction: ඉඟියක් ලබා ගැනීමට මෙතන ක්ලික්
+        කරන්න.
+      Course 4 Artist Binary Free Play_instruction: 'නිදහස්ව ක්‍රීඩා කරන්න: ද්විමය
+        සමඟ ඔබ කැමති ඕනෑම දෙයක් අඳින්න!'
       Course 4 Artist Binary pre1_instruction: |-
         Use the blocks below to have the
         artist draw "01010101" in binary in the first row.
@@ -3330,12 +3330,12 @@
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions Inspiration_instruction: "ඉඟි නැවත දැකීමට මෙතන ක්ලික්
-        කරන්න."
-      Course 4 Artist Functions challenge_instruction: "ඉඟි නැවත දැකීමට මෙතන ක්ලික්
-        කරන්න."
-      Course 4 Artist Functions inspire_instruction: "ප්‍රබෝධමත් කරවීමේ පින්තූරය නැවත
-        බැලීමට මෙතැන ක්ලික් කරන්න."
+      Course 4 Artist Functions Inspiration_instruction: ඉඟි නැවත දැකීමට මෙතන ක්ලික්
+        කරන්න.
+      Course 4 Artist Functions challenge_instruction: ඉඟි නැවත දැකීමට මෙතන ක්ලික්
+        කරන්න.
+      Course 4 Artist Functions inspire_instruction: ප්‍රබෝධමත් කරවීමේ පින්තූරය නැවත
+        බැලීමට මෙතැන ක්ලික් කරන්න.
       Course 4 Artist Inspire_instruction: |-
         Want a second peek at the inspiration
         design or the hints?  Click here!\r
@@ -3654,12 +3654,12 @@
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
-      Course 4 EC 1a_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
-      Course 4 EC 1b_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
-      Course 4 EC 2a_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
-      Course 4 EC 2b_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
-      Course 4 EC 2c_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
-      Course 4 EC 2d_instruction: "රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!"
+      Course 4 EC 1a_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
+      Course 4 EC 1b_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
+      Course 4 EC 2a_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
+      Course 4 EC 2b_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
+      Course 4 EC 2c_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
+      Course 4 EC 2d_instruction: රීති නැත, හෝඩුවාවල් නැත, නිකන්ම අභියෝග කරන්න!
       Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
         image like this. Note: The code becomes more simple if you incorporate\nparameters. "
       Course 4 EC 3a_instruction: |-
@@ -3908,8 +3908,8 @@
         honey with the fewest blocks possible?
       Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
-      Course 4 SCF 3 Fail 1_instruction: "කරන අයුරු ඔබට වටහා ගත හැකිද..."
-      Course 4 SCF 3 Fail 2_instruction: "කරන අයුරු ඔබට වටහා ගත හැකිද..."
+      Course 4 SCF 3 Fail 1_instruction: කරන අයුරු ඔබට වටහා ගත හැකිද...
+      Course 4 SCF 3 Fail 2_instruction: කරන අයුරු ඔබට වටහා ගත හැකිද...
       Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
       Course 4 SCFL 1_instruction: |-
@@ -3937,8 +3937,8 @@
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 SCV 1_instruction: "උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න."
-      Course 4 SCV 2_instruction: "උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න."
+      Course 4 SCV 1_instruction: උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න.
+      Course 4 SCV 2_instruction: උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න.
       Course 4 SCV 3_instruction: |-
         Now for a game of tag!  Tag Cat to get 2 points.
         Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
@@ -3956,7 +3956,7 @@
       Course 4 SCV 5_instruction: |-
         Solve this puzzle with the fewest number of blocks
         possible.
-      Course 4 SCV 6_instruction: "උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න."
+      Course 4 SCV 6_instruction: උපදෙස් නැවත බැලීමට මෙතැන ක්ලික් කරන්න.
       Course 4 SCVP 1_instruction: |-
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
@@ -4033,8 +4033,8 @@
         too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
         2), you should lose a point. Start with 10 points so it's not too hard. Let
         your score drop down from 10 to 0 to pass the level.
-      Crack Random Substitution_instruction: "උපදෙස්"
-      Crack a Caesar Cipher_instruction: "උපදෙස්"
+      Crack Random Substitution_instruction: උපදෙස්
+      Crack a Caesar Cipher_instruction: උපදෙස්
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -4241,7 +4241,7 @@
       Eval Design Recipe Free Play_instruction: |-
         Free Play: Use the Design Recipe
         to create some functions of your own design
-      Eval Free Play_instruction: "නිදහස්ව ක්‍රීඩා කරන්න: කේතය සමඟින් කලාව සාදන්න!"
+      Eval Free Play_instruction: 'නිදහස්ව ක්‍රීඩා කරන්න: කේතය සමඟින් කලාව සාදන්න!'
       Eval Strings Images .1_instruction: |-
         So far we've only dealt with a single
         type of data, Numbers. Another type of data is a String, which is any combination
@@ -4318,7 +4318,7 @@
       FoodFight_2018_instruction: |-
         This is an example of a game you can make in play
         lab.
-      Frequency Analysis_instruction: "පරීක්ෂාව"
+      Frequency Analysis_instruction: පරීක්ෂාව
       Function intro Ryan_instruction: |-
         Use the `build bridge` function twice to
         make a path to the Redstone Torch.
@@ -4329,6 +4329,29 @@
         This Corgi has been a good boy! Drag this carrot
         to him as a special treat.
       GLJ Flappy2_instruction: Click to flap - don't touch the ground!
+      GLJr_Behavior_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Behavior_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Behavior_5_instruction: |-
+        Now we have two sprites! Use behaviors to make
+        the dog jittery and make the cat wander
+      GLJr_Behavior_6_instruction: |-
+        Let's try some more behaviors - make the dog
+        run up and make the cat run right.
+      GLJr_Forever_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Forever_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Forever_5_instruction: |-
+        Now we have two sprites! Use a loop to make the
+        dog jittery and make the cat wander
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4371,7 +4394,7 @@
       Infinity_catch_instruction: |-
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
-      Infinity_finale_instruction: "ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!"
+      Infinity_finale_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
       Infinity_move_collide_instruction: |-
         Hiro is "actor 1".  Move him right to
         Baymax, and play a sound when they touch.
@@ -4392,8 +4415,8 @@
         Hiro is "actor 3".  Make Hiro throw
         a projectile to each of the four characters.  Wait one second between each
         throw.
-      Infinity_test_instruction: "මෙය පරීක්ෂණ අපිරිමිත මට්ටමයි."
-      Infinity_touch_faster_instruction: "තව තවත් හිම පියලි අල්ලන්න!"
+      Infinity_test_instruction: මෙය පරීක්ෂණ අපිරිමිත මට්ටමයි.
+      Infinity_touch_faster_instruction: තව තවත් හිම පියලි අල්ලන්න!
       Infinity_touch_four_instruction: |-
         Move Anna up, down left, and right to touch
         each of the four snowflakes.
@@ -4456,13 +4479,13 @@
         Work with a partner or in
         a small team to develop a protocol that allows you to send formatted text.
         See the worksheet handed out by your teacher for more detailed instructions!
-      Just for Testing_instruction: "පරීක්ෂණ උපදෙස්"
+      Just for Testing_instruction: පරීක්ෂණ උපදෙස්
       K-1 Artist 1 Assessment 1_instruction: |-
         Draw a short line up and a long one
         to the right!
-      K-1 Artist Loops 1_instruction: "හතර වාරයක් නැගෙනහිරට ගෙනයමින් මෙම රේඛාව අදින්න."
-      K-1 Artist Loops 2_instruction: "දැන්, ලූපයන් භාවිතයෙන් එකම පේළිය අඳින්න."
-      K-1 Artist Loops 3_instruction: "ඔබට පුලුවන්ද මෙම බ්ලොක් ලුප කිරීමට රේඛා 6 ඇදිමට?"
+      K-1 Artist Loops 1_instruction: හතර වාරයක් නැගෙනහිරට ගෙනයමින් මෙම රේඛාව අදින්න.
+      K-1 Artist Loops 2_instruction: දැන්, ලූපයන් භාවිතයෙන් එකම පේළිය අඳින්න.
+      K-1 Artist Loops 3_instruction: ඔබට පුලුවන්ද මෙම බ්ලොක් ලුප කිරීමට රේඛා 6 ඇදිමට?
       K-1 Artist Loops 4_instruction: |-
         Could a loop help us draw the top of this
         castle?
@@ -4470,16 +4493,16 @@
       K-1 Artist Loops 6_instruction: |-
         This one needs two loops: one to go up the
         stairs and one to go down.
-      K-1 Artist Loops 7_instruction: "ඔබට රටාව අවසන් කිරීමට ලූපයන්ට උදවු කළ හැකියි."
-      K-1 Artist Loops 8_instruction: "මෙම පියගැටපෙළෙහි දිගු පඩි ඇත."
-      K-1 Artist Loops 9_instruction: "ලේසිම ක්‍රමය කුමක්ද මෙම පියගැටපෙළ ඇදීමට?"
-      K-1 Artist Loops Free Play_instruction: "නිදහස්ව ක්‍රීඩා කරන්න, විනෝදාත්මක යමක්
-        අඳින්න!"
-      K-1 Artist1 1_instruction: "මිනිසාගේ පාදය අදින්න එක ඉරකින්"
+      K-1 Artist Loops 7_instruction: ඔබට රටාව අවසන් කිරීමට ලූපයන්ට උදවු කළ හැකියි.
+      K-1 Artist Loops 8_instruction: මෙම පියගැටපෙළෙහි දිගු පඩි ඇත.
+      K-1 Artist Loops 9_instruction: ලේසිම ක්‍රමය කුමක්ද මෙම පියගැටපෙළ ඇදීමට?
+      K-1 Artist Loops Free Play_instruction: නිදහස්ව ක්‍රීඩා කරන්න, විනෝදාත්මක යමක්
+        අඳින්න!
+      K-1 Artist1 1_instruction: මිනිසාගේ පාදය අදින්න එක ඉරකින්
       K-1 Artist1 10_instruction: |-
         Draw and Jump to make the dashed path to the treasure
         X
-      K-1 Artist1 2_instruction: "පුසාගේ රැවුල් ගස් අදින්න රේඛා දෙකකින්!"
+      K-1 Artist1 2_instruction: පුසාගේ රැවුල් ගස් අදින්න රේඛා දෙකකින්!
       K-1 Artist1 3_instruction: |-
         Draw two lines east and two lines north to finish
         the house!
@@ -4487,58 +4510,58 @@
       K-1 Artist1 5.5_instruction: |-
         Complete the third tower of the castle using
         short lines
-      K-1 Artist1 5_instruction: "මෙම මලේ නැටුව අදින්න රේඛා දෙකකින්!"
-      K-1 Artist1 6_instruction: "පින්තුරය අවසන් කරන්න උඩ පනින බ්ලොක් එක භාවිතා කරමින්!"
+      K-1 Artist1 5_instruction: මෙම මලේ නැටුව අදින්න රේඛා දෙකකින්!
+      K-1 Artist1 6_instruction: පින්තුරය අවසන් කරන්න උඩ පනින බ්ලොක් එක භාවිතා කරමින්!
       K-1 Artist1 7_instruction: |-
         Use the jump block to move without drawing. Jump
         up and draw a line.
       K-1 Artist1 8_instruction: |-
         Draw the dashed line by using both the jump and
         draw blocks
-      K-1 Artist1 9_instruction: "කෙටි ඉරි රේඛාවක් සකස්කිරීමට අඳින්න සහ උඩ පනින්න"
-      K-1 Artist1 Assessment 1_instruction: "දිගු සහ කෙටි රේඛා අදින්න!"
-      K-1 Artist1 Assessment 2_instruction: "කෙටි ඉරි රේඛාව අදින්න!"
-      K-1 Artist2 1_instruction: "සමචතුරස‍්‍රයක් අදින්න ත්‍රිකෝණයට පහළින්."
+      K-1 Artist1 9_instruction: කෙටි ඉරි රේඛාවක් සකස්කිරීමට අඳින්න සහ උඩ පනින්න
+      K-1 Artist1 Assessment 1_instruction: දිගු සහ කෙටි රේඛා අදින්න!
+      K-1 Artist1 Assessment 2_instruction: කෙටි ඉරි රේඛාව අදින්න!
+      K-1 Artist2 1_instruction: සමචතුරස‍්‍රයක් අදින්න ත්‍රිකෝණයට පහළින්.
       K-1 Artist2 2_instruction: Jump and draw a square next to the house.
-      K-1 Artist2 3_instruction: "සමචතුරස‍්‍රයක් අදින්න අනිත් සමචතුරස‍්‍රයට ඉහලින්"
-      K-1 Artist2 4_instruction: "සෘජුකෝණාස්‍රයක් අදින්න පාලම සම්පුර්ණ කිරීම සදහා."
+      K-1 Artist2 3_instruction: සමචතුරස‍්‍රයක් අදින්න අනිත් සමචතුරස‍්‍රයට ඉහලින්
+      K-1 Artist2 4_instruction: සෘජුකෝණාස්‍රයක් අදින්න පාලම සම්පුර්ණ කිරීම සදහා.
       K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: "සෘජුකෝණාස්‍රයක් සැදීමට සමචතුරස්‍ර දෙකක් අදින්න!"
+      K-1 Artist2 6_instruction: සෘජුකෝණාස්‍රයක් සැදීමට සමචතුරස්‍ර දෙකක් අදින්න!
       K-1 Artist2 Assessment1_instruction: |-
         Assessment: Draw a square next to the
         other square.
-      K-1 Artist2 Free Draw_instruction: "ඕනම දෙයක් අඳින්න!"
+      K-1 Artist2 Free Draw_instruction: ඕනම දෙයක් අඳින්න!
       K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
       K-1 Bee 1_instruction: |-
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
-      K-1 Bee 10_instruction: "මල් පැණි හතරක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 11.5_instruction: "මල් පැණි හතරක් ලබාගන්න පැණි හතරක් සකස්කිරීමට!"
-      K-1 Bee 11_instruction: "මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි එකක් සකස්කරන්න"
-      K-1 Bee 12_instruction: "මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 13_instruction: "මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි එකක් සකස්කරන්න!"
+      K-1 Bee 10_instruction: මල් පැණි හතරක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 11.5_instruction: මල් පැණි හතරක් ලබාගන්න පැණි හතරක් සකස්කිරීමට!
+      K-1 Bee 11_instruction: මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි එකක් සකස්කරන්න
+      K-1 Bee 12_instruction: මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 13_instruction: මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි එකක් සකස්කරන්න!
       K-1 Bee 14_instruction: |-
         Get me to the nectar, pick it up, get me to the honey,
         and make honey!
-      K-1 Bee 15_instruction: "මල් පැණි දෙකක් ලබාගන්න පැණි දෙකක් සකස්කිරීමට!"
+      K-1 Bee 15_instruction: මල් පැණි දෙකක් ලබාගන්න පැණි දෙකක් සකස්කිරීමට!
       K-1 Bee 2_instruction: |-
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
       K-1 Bee 3_instruction: |-
         Move me to the flower, get the nectar, then move me
         to the honeycomb, and make honey
-      K-1 Bee 4_instruction: "මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 5_instruction: "මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි තුනක් සකස්කරන්න!"
-      K-1 Bee 6_instruction: "මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 7_instruction: "මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 8_instruction: "මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee 9_instruction: "මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!"
-      K-1 Bee Assessment 1_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!"
-      K-1 Bee Assessment 2_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!"
-      K-1 Bee Loops 1_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!"
+      K-1 Bee 4_instruction: මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 5_instruction: මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි තුනක් සකස්කරන්න!
+      K-1 Bee 6_instruction: මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 7_instruction: මල් පැණි තුනක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 8_instruction: මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee 9_instruction: මල් පැණි දෙකක් ලබාගන්න සහ ඉන්පසුව පැණි දෙකක් සකස්කරන්න!
+      K-1 Bee Assessment 1_instruction: මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!
+      K-1 Bee Assessment 2_instruction: මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!
+      K-1 Bee Loops 1_instruction: මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!
       K-1 Bee Loops 10_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops 11_instruction: "සියලුම මල්පැණි හා පැණි ලබා ගන්න!"
-      K-1 Bee Loops 12_instruction: "සියලුම මල් පැණි සහ පැණි ලබාගන්න."
+      K-1 Bee Loops 11_instruction: සියලුම මල්පැණි හා පැණි ලබා ගන්න!
+      K-1 Bee Loops 12_instruction: සියලුම මල් පැණි සහ පැණි ලබාගන්න.
       K-1 Bee Loops 2_instruction: |-
         Use a `repeat` loop to move and then get the
         nectar and make honey!
@@ -4552,35 +4575,35 @@
       K-1 Bee Loops 6_instruction: |-
         Use a `repeat` loop to get the nectar, get honey,
         and to move!
-      K-1 Bee Loops 7_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!"
-      K-1 Bee Loops 8_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!"
+      K-1 Bee Loops 7_instruction: මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!
+      K-1 Bee Loops 8_instruction: මල් පැණි ලබා ගන්න පැණි සැදීම සදහා!
       K-1 Bee Loops 9_instruction: Use loops to get the nectar, honey, and to move!
       K-1 Bee Loops Assessment 1_instruction: "මල් පැණි ලබා ගන්න පැණි සැදීම සදහා ලුපයක්
         භාවිතා කරන්න \nඑහා මෙහා කිරීමට!"
-      K-1 Bee Loops Assessment 2_instruction: "ලුප භාවිතයෙන් මල් පැණි ලබාගන්න පැණි
-        සකස්කිරීම සදහා!"
+      K-1 Bee Loops Assessment 2_instruction: ලුප භාවිතයෙන් මල් පැණි ලබාගන්න පැණි
+        සකස්කිරීම සදහා!
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
       K-1 Building a Foundation Assessment_instruction: |-
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
         it!
-      K-1 Maze 10_instruction: "මාව ඌර වෙත ගෙනයාමට TNT එක වටින් යන්න! "
+      K-1 Maze 10_instruction: 'මාව ඌර වෙත ගෙනයාමට TNT එක වටින් යන්න! '
       K-1 Maze 11_instruction: |-
         Trace the path and lead me to the silly pig. Avoid
         TNT or the feathers will fly! Hint: He's South of me.
-      K-1 Maze 2_instruction: "මාව නැගෙනහිරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!"
-      K-1 Maze 3_instruction: "මාව දකුණට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!"
-      K-1 Maze 4_instruction: "මාව උතුරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!"
-      K-1 Maze 5_instruction: "මාව නැගෙනහිරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!"
+      K-1 Maze 2_instruction: මාව නැගෙනහිරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!
+      K-1 Maze 3_instruction: මාව දකුණට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!
+      K-1 Maze 4_instruction: මාව උතුරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!
+      K-1 Maze 5_instruction: මාව නැගෙනහිරට ගෙනයන්න ඌරා වෙත ලගා වීම සදහා!
       K-1 Maze 6_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 7_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 8_instruction: Move one way, then another to get me to the pig!
       K-1 Maze 9_instruction: Move one way, then another to get me to the pig!
-      K-1 Maze Assessment 1_instruction: "පැවරුම -- මාව ඌරා ගාවට ගෙනි යන්න!"
-      K-1 Maze Assessment 12_instruction: "ඇගයීම් මට්ටම"
-      K-1 Maze Assessment 13_instruction: "ඇගයීම් මට්ටම"
-      K-1 Maze Assessment 2_instruction: "පැවරුම -- මාව ඌරා ගාවට ගෙනි යන්න!"
-      K-1 Maze Loops 1_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
+      K-1 Maze Assessment 1_instruction: පැවරුම -- මාව ඌරා ගාවට ගෙනි යන්න!
+      K-1 Maze Assessment 12_instruction: ඇගයීම් මට්ටම
+      K-1 Maze Assessment 13_instruction: ඇගයීම් මට්ටම
+      K-1 Maze Assessment 2_instruction: පැවරුම -- මාව ඌරා ගාවට ගෙනි යන්න!
+      K-1 Maze Loops 1_instruction: මාව ඌරා ළඟට ගෙනියන්න!
       K-1 Maze Loops 10_instruction: |-
         Get me to the pig! Using the `repeat` loop
         will make it much easier.
@@ -4591,27 +4614,27 @@
       K-1 Maze Loops 12_instruction: |-
         Get me to the pig! The `repeat` loop will make
         this easier.
-      K-1 Maze Loops 2_instruction: "මාව ඌරා වෙත ලගා කරවීම සදහා 'නැවත' බ්ලොක් එක භාවිතා
-        කරන්න!"
-      K-1 Maze Loops 3_instruction: "මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
-        කරන්න."
-      K-1 Maze Loops 4_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
-      K-1 Maze Loops 5_instruction: "මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
-        කරන්න."
-      K-1 Maze Loops 6_instruction: "මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
-        කරන්න."
-      K-1 Maze Loops 7_instruction: "මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
-        කරන්න."
-      K-1 Maze Loops 8_instruction: "මාව ඌර වෙත ගෙනයාමට 'නැවත සිදුවන' ලුප භාවිතා කරන්න."
-      K-1 Maze Loops 9_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
+      K-1 Maze Loops 2_instruction: මාව ඌරා වෙත ලගා කරවීම සදහා 'නැවත' බ්ලොක් එක භාවිතා
+        කරන්න!
+      K-1 Maze Loops 3_instruction: මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
+        කරන්න.
+      K-1 Maze Loops 4_instruction: මාව ඌරා ළඟට ගෙනියන්න!
+      K-1 Maze Loops 5_instruction: මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
+        කරන්න.
+      K-1 Maze Loops 6_instruction: මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
+        කරන්න.
+      K-1 Maze Loops 7_instruction: මාව ඌරා වෙත යොමු කරවන්න! නිසැකවම 'නැවත' ලුප භාවිතා
+        කරන්න.
+      K-1 Maze Loops 8_instruction: මාව ඌර වෙත ගෙනයාමට 'නැවත සිදුවන' ලුප භාවිතා කරන්න.
+      K-1 Maze Loops 9_instruction: මාව ඌරා ළඟට ගෙනියන්න!
       K-1 Maze Loops Assessment 1_instruction: |-
         Look at all we've learned! Use a
         `repeat` loop to get me to the pig!
       K-1 Maze Loops Assessment 2_instruction: |-
         මාව ඌර වෙත ගෙනයාමට 'නැවත සිදුවන' ලුප භාවිතා
         කරන්න!
-      K-1 Maze Multi 14_instruction: "ඇගයීම් මට්ටම"
-      K-1 Maze Multi 15_instruction: "ඇගයීම් මට්ටම"
+      K-1 Maze Multi 14_instruction: ඇගයීම් මට්ටම
+      K-1 Maze Multi 15_instruction: ඇගයීම් මට්ටම
       K-1 Maze Sequence Assessment 1_instruction: |-
         Let's see what you've learned!\r
         Move
@@ -4625,8 +4648,8 @@
       K-1 artist 1 level 10_instruction: |-
         Draw the dashed line by using both the
         jump and draw blocks
-      K-1 artist 1 level 9_instruction: "ඉරි තුනකින් මේක අඳින්න"
-      K-1 maze debug 1_instruction: "මට ඌර වෙත ළගා වීම සදහා කේතය මාරු කරන්න!"
+      K-1 artist 1 level 9_instruction: ඉරි තුනකින් මේක අඳින්න
+      K-1 maze debug 1_instruction: මට ඌර වෙත ළගා වීම සදහා කේතය මාරු කරන්න!
       K-1 maze debug 10_instruction: |-
         Debug this level by rearranging and changing
         blocks to get me to the pig!
@@ -4658,24 +4681,24 @@
       K-1 maze debug 9_instruction: |-
         Debug this level by rearranging and changing
         blocks to get me to the pig!
-      K2.0 sequence 1_instruction: "දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න."
+      K2.0 sequence 1_instruction: දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න.
       K2.0 sequence 10_instruction: |-
         Challenge: Move me around the TNT to get to
         the pig.
-      K2.0 sequence 12_instruction: "අර ඌරා ගමු! "
-      K2.0 sequence 2_instruction: "මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!"
+      K2.0 sequence 12_instruction: 'අර ඌරා ගමු! '
+      K2.0 sequence 2_instruction: මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!
       K2.0 sequence 3_instruction: |-
         Something is not quite right. REMOVE a block
         to get me to the pig!
       K2.0 sequence 4_instruction: |-
         Time for a shorter puzzle!  Move one way, then
         another to get me to the pig.
-      K2.0 sequence 4a_instruction: "මෙම ප්‍රහේලිකාව ආරම්භයේ සිට නැවත උත්සාහ කරන්න!"
+      K2.0 sequence 4a_instruction: මෙම ප්‍රහේලිකාව ආරම්භයේ සිට නැවත උත්සාහ කරන්න!
       K2.0 sequence 5_instruction: Move one way, then another to get me to the pig!
       K2.0 sequence 6_instruction: |-
         Figure out what is missing and then add blocks
         to get me to the pig!
-      K2.0 sequence 7_instruction: "මෙම මට්ටම විසඳා මාව ඌරා ගාවට ගෙන යන්න!"
+      K2.0 sequence 7_instruction: මෙම මට්ටම විසඳා මාව ඌරා ගාවට ගෙන යන්න!
       K2.0 sequence 8_instruction: |-
         Debug this level by adding blocks to get me to
         the pig!
@@ -4693,10 +4716,10 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
-      Kiki_StarWars_Test_3_instruction: "පෙළ"
-      Kiki_StarWars_Test_4_instruction: "පෙළ"
-      Kiki_StarWars_Test_5_instruction: "පෙළ"
-      Kiki_StarWars_Test_5_Example_instruction: "පෙළ"
+      Kiki_StarWars_Test_3_instruction: පෙළ
+      Kiki_StarWars_Test_4_instruction: පෙළ
+      Kiki_StarWars_Test_5_instruction: පෙළ
+      Kiki_StarWars_Test_5_Example_instruction: පෙළ
       LaurelDebugging4Video1_instruction: |-
         Move Laurel around and get as much gold
         as you can!
@@ -4943,7 +4966,7 @@
         කරන්න)"
       Middle School Hackathon Pt 2_instruction: "(පූර්ණ උපදෙස් බැලීමට මෙහි ක්ලික්
         කරන්න)"
-      Mike Pair Programming_instruction: "මෙන්න උපදෙස්"
+      Mike Pair Programming_instruction: මෙන්න උපදෙස්
       Mike Test Bee Conditionals 1_instruction: |-
         This cloud is blocking my view!
         Check to see if there's a flower under the cloud, and only get nectar if
@@ -4953,12 +4976,12 @@
         only collect nectar from flowers, but you can check any space to see if there
         is a flower.
       MikeAssessment1_instruction: Now do it right!
-      MikeStar_instruction: "මෙය අඳින්න."
-      MikeStarHard_instruction: "මෙය අඳින්න."
-      MikeStarNested_instruction: "මෙය අඳින්න."
+      MikeStar_instruction: මෙය අඳින්න.
+      MikeStarHard_instruction: මෙය අඳින්න.
+      MikeStarNested_instruction: මෙය අඳින්න.
       MikeTest1_instruction: Who knows what you should do?!?!
-      MikeTest2_instruction: "යමක් අඳින්න!"
-      MikeTest3_instruction: "යමක් ගොඩනඟන්න"
+      MikeTest2_instruction: යමක් අඳින්න!
+      MikeTest3_instruction: යමක් ගොඩනඟන්න
       NEW Course 4 Artist Functions 1_instruction: |-
         Can you draw a square that is
         100 pixels in length, using a repeat loop?
@@ -4978,7 +5001,7 @@
         function from the last puzzle to draw this pattern.
       NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
         `draw a line of squares` function?  "
-      NEW Course 4 Artist Functions 14_instruction: "නිදහසේ සෙල්ලම් කල හැකි වේලාව! "
+      NEW Course 4 Artist Functions 14_instruction: 'නිදහසේ සෙල්ලම් කල හැකි වේලාව! '
       NEW Course 4 Artist Functions 2_instruction: |-
         Can you draw 3 squares 20 pixels
         apart from one another? Each square is 100 pixels in size.
@@ -5283,9 +5306,9 @@
       New Course 4 Artist Functions Level 4_instruction: |-
         Use the "draw a square"
         function to draw this pattern.
-      New Gumball Project_instruction: "ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!"
-      New Ice Age Project_instruction: "ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!"
-      New Infinity Project_instruction: "ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!"
+      New Gumball Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
+      New Ice Age Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
+      New Infinity Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
       New Minecraft Hero Project_instruction: |-
         **Freeplay:**  Time to explore on
         your own!
@@ -5498,7 +5521,7 @@
         from a purple flower if it doesn't have any. \r
         You must first check if
         the nectar is equal to 1 using the `if nectar` block.
-      PS predictive Applab level test_instruction: "මෙන්න උපදෙස් කිහිපයක්. "
+      PS predictive Applab level test_instruction: 'මෙන්න උපදෙස් කිහිපයක්. '
       Pattern Bee 1_instruction: |-
         What a strange field of goodies! I wonder if there's
         a pattern here...
@@ -5963,7 +5986,7 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       StepIntro_instruction: Here's how to use the "Step" button.
-      Test Play Lab_instruction: "මෙය පරීක්ෂණ ක්‍රීඩා පරීක්ෂණාගාර මට්ටමයි."
+      Test Play Lab_instruction: මෙය පරීක්ෂණ ක්‍රීඩා පරීක්ෂණාගාර මට්ටමයි.
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
@@ -5974,8 +5997,8 @@
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.\r
         \r
-      The Vigenere Cipher Widget_instruction: "උපදෙස්"
-      The Vigenere Cipher_instruction: "උපදෙස්"
+      The Vigenere Cipher Widget_instruction: උපදෙස්
+      The Vigenere Cipher_instruction: උපදෙස්
       Total Artist Clone Me_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -5998,15 +6021,15 @@
       U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
         you to use Internet Simulator to relay a message. See the worksheet\nfor more
         detailed instructions.  "
-      U1L8 NetSim numbers no decimal_instruction: "පෙරනිමි උපදෙස්"
+      U1L8 NetSim numbers no decimal_instruction: පෙරනිමි උපදෙස්
       U1L8 NetSim numbers with decimal_instruction: |-
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 Vigenere_instruction: "පරීක්ෂාව"
-      U2 frequency caesar_instruction: "උපදෙස්"
-      U2 frequency random sub_instruction: "උපදෙස්"
-      U2 vigenere cipher_instruction: "උපදෙස්"
+      U2 Vigenere_instruction: පරීක්ෂාව
+      U2 frequency caesar_instruction: උපදෙස්
+      U2 frequency random sub_instruction: උපදෙස්
+      U2 vigenere cipher_instruction: උපදෙස්
       U2L04 - NetSim Routers with Addresses_instruction: |-
         Send messages with your
         classmates (Click to see full instructions)
@@ -6029,7 +6052,7 @@
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
-      U2L14 frequency random_instruction: "පරීක්ෂාව"
+      U2L14 frequency random_instruction: පරීක්ෂාව
       U2L2 NetSim Hub Mode_instruction: |
         Now use the Internet Simulator to send the
         battleship moves. For setup, join a Room with your group, and add ships to
@@ -6580,22 +6603,22 @@
       U3 - Search Terms - 6_instruction: |
         Print out the cities that are in California
         or have a population of 2,000,000. (Click to see full instructions)\r
-      U3 - Simple Drawing - Comments_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Ellipse and No Fill_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Fill_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - No Fill_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Order of Blocks_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Oval_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Personal Drawing_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Rectangle Width and Height_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Rectangle_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Road Ellipse_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Road Rects and Color_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Simple Shape Drawing_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - X and Y values_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - regular polygon_instruction: "මෙය කරන්න"
-      U3 - Simple Drawing - text_instruction: "මෙය කරන්න"
+      U3 - Simple Drawing - Comments_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Ellipse and No Fill_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Fill_instruction: මෙය කරන්න
+      U3 - Simple Drawing - No Fill_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Order of Blocks_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Oval_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Personal Drawing_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Rectangle Width and Height_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Rectangle_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Road Ellipse_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Road Rects and Color_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Simple Shape Drawing_instruction: මෙය කරන්න
+      U3 - Simple Drawing - Stroke and Stroke Weight_instruction: මෙය කරන්න
+      U3 - Simple Drawing - X and Y values_instruction: මෙය කරන්න
+      U3 - Simple Drawing - regular polygon_instruction: මෙය කරන්න
+      U3 - Simple Drawing - text_instruction: මෙය කරන්න
       U3 - Simulation - 1_instruction: |-
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -6628,16 +6651,16 @@
       U3 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
-      U3 - Sprites - Intro Sprites_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Mouse Width and Height_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Mouse X and Y_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Rand Around Mouse_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Rand Shape Color_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Shape Color_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - Wrap Many Squares_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - X and Y Prop_instruction: "මෙය කරන්න"
-      U3 - Sprites and Mod - two sprites_instruction: "මෙය කරන්න"
+      U3 - Sprites - Intro Sprites_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Create  and Draw Sprite_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Mouse Width and Height_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Mouse X and Y_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Rand Around Mouse_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Rand Shape Color_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Shape Color_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - Wrap Many Squares_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - X and Y Prop_instruction: මෙය කරන්න
+      U3 - Sprites and Mod - two sprites_instruction: මෙය කරන්න
       U3 - User Input - Save getText To Variable_instruction: |-
         Save the age and name
         of the user in variables (Click to see full instructions)
@@ -6690,7 +6713,7 @@
       U3 - Variables - Set to Expression_instruction: |-
         Test out the new expressions.
         (Click to see full instructions)
-      U3 - images - bee free play_instruction: "මෙය කරන්න"
+      U3 - images - bee free play_instruction: මෙය කරන්න
       U3 Digital Assistant Design_instruction: |-
         Pick a topic for your Digital Assistant
         and create the basic layout with a text input and text area. (Click to show
@@ -6703,7 +6726,7 @@
         Try out a demo of the Digital
         Assistant!
       U3 Digital Assistant Target_instruction: Try out a demo of the Digital Assistant!
-      U3 Digital Assistant Template_instruction: "මෙය ව්‍යාපෘති අච්චුවකි!"
+      U3 Digital Assistant Template_instruction: මෙය ව්‍යාපෘති අච්චුවකි!
       U3 Digital_instruction: |-
         Choose a specialization topic for your digital assistant.
         Create a basic digital assistant that takes the user's input and displays
@@ -6982,7 +7005,7 @@
       U3L1 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
-      U3L12 Chaser Template_instruction: "මෙය ව්‍යාපෘති අච්චුවකි!"
+      U3L12 Chaser Template_instruction: මෙය ව්‍යාපෘති අච්චුවකි!
       U3L13 - Button with ID_instruction: |-
         Drag a button out onto the screen and
         set its text to "Go forth!".  Run the program to make sure you can see the
@@ -7550,7 +7573,7 @@
         Add a second line to your chart to
         show the change in popularity of both “#tbt” and “#nofilter” at the same time.
         (Click to see full instructions)
-      U4 - Charts - Line Chart Template_instruction: "මෙය අච්චුවකි."
+      U4 - Charts - Line Chart Template_instruction: මෙය අච්චුවකි.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -7759,8 +7782,8 @@
       U4 Model Design 1_instruction: |-
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
-      U4 vigenere cipher 2_instruction: "උපදෙස්"
-      U4L02 - Objects - Template1_instruction: "අච්චුව"
+      U4 vigenere cipher 2_instruction: උපදෙස්
+      U4L02 - Objects - Template1_instruction: අච්චුව
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -7878,7 +7901,7 @@
       Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
-      Vigenere_instruction: "පරීක්ෂාව"
+      Vigenere_instruction: පරීක්ෂාව
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
         help her grab as many as she can using only one remove 1 block?
@@ -7908,9 +7931,9 @@
         Take your row of
         14 napkins and sew 14 of those together with another **outer loop** to make
         a cover for our table.
-      aE3alternate_instruction: "විකල්පමය"
-      aE3alternateB_instruction: "විකල්පමය"
-      aE4_instruction: "විකල්පමය"
+      aE3alternate_instruction: විකල්පමය
+      aE3alternateB_instruction: විකල්පමය
+      aE4_instruction: විකල්පමය
       aE5_instruction: Example of puzzle using highest difficulty level shape.
       aE6_instruction: "How many times do you need to loop this to draw half  of\na
         circle? "
@@ -7926,7 +7949,7 @@
         \r
         If looping a 3 degree turn 60 times makes a half circle, which of
         these blocks of code will make an additional quarter circle for the corners?
-      aEfreeplay_instruction: "නොමිලේ ක්‍රීඩා කිරීම!"
+      aEfreeplay_instruction: නොමිලේ ක්‍රීඩා කිරීම!
       allHallows2017_instruction: |-
         Trap the Code.org employees in the crayon box
         by drawing a square with 320 pixel sides!
@@ -7945,8 +7968,8 @@
         (By design, applab levels only work if signed in. Normally, we make people
         sign in, but this is only enforceable for a whole script and would be annoying
         to do for the allthethings script).
-      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: "මෙය
-        කරන්න"
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_instruction: මෙය
+        කරන්න
       allthethings_moviebot_instruction: |-
         This level cloned from "U3 Digital Assistant
         Target"
@@ -8006,6 +8029,23 @@
         This Corgi has been a good boy! Drag this carrot to
         him as a special treat.
       beeDebugVideo1_instruction: "`repeat` ලූපය භාවිතයෙන් සියලුම මල් පැණි එකතු කරන්න."
+      behaviors pet test 2_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
+      behaviors pet test 3_instruction: "**It's time to make your own virtual pet!**\nYou
+        can change whatever code you want to to make your own pet. Here are some\nideas:\\r\n*
+        Can you make your pet start a new behavior when you click on it?\\r\n*\nCan
+        you make your pet run away when you drag the vacuum to it?\\r\n* Can you\nadd
+        other animal friends to your pet's area? "
+      behaviors pet test_instruction: |-
+        Last time, you practiced using "behaviors"
+        to make a sprite do something forever. This time, we will use behaviors to
+        make a virtual pet. \r
+        \r
+        This dog's name is Daisy. Daisy LOVES to snack
+        on carrots. Add the "drag and drop" behavior to the carrot so you can move
+        it to her.
       birdsDebugVideo1_instruction: |-
         Trace the path and lead me to the silly pig.
         Avoid TNT or feathers will fly!
@@ -8013,6 +8053,11 @@
         Attach a block to the "when left arrow" block and
         press "Run". Move the paddle using the left arrow to reach the finish target.
       bounce_10_instruction: |-
+        There is now a goal at the top. Attach the "score
+        point" and "score opponent point" blocks to the "when ball in goal" and
+        "when ball misses paddle" blocks to make a game. See how many points you
+        can score before your opponent scores twice.
+      bounce_10_2018_instruction: |-
         There is now a goal at the top. Attach the "score
         point" and "score opponent point" blocks to the "when ball in goal" and
         "when ball misses paddle" blocks to make a game. See how many points you
@@ -8032,6 +8077,11 @@
         You have to attach the new "launch new ball" block in more than one place.
         Also, try changing the scene or the speed of the paddle and the ball and see
         how many points you can score before your opponent scores twice.
+      bounce_11_2018_instruction: |-
+        You can now attach blocks to the "when run"
+        block. You have to attach the new "launch new ball" block in more than one
+        place. Also, try changing the scene or the speed of the paddle and the ball
+        and see how many points you can score before your opponent scores twice.
       bounce_11_basketball_instruction: |-
         You can now attach blocks to the "when
         run" block. You have to attach the new "throw new ball" block in more than
@@ -8046,6 +8096,10 @@
         Create your own Bounce game. You can change all the
         visuals and the rules. When you're done, click Finish to let friends try
         your game on their phones.
+      bounce_12_2018_instruction: |-
+        Create your own Bounce game. You can change all
+        the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       bounce_12_basketball_instruction: |-
         Create your own Basketball game. You can
         change all the rules. When you're done, click Finish to let friends try your
@@ -8054,6 +8108,10 @@
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
         done, click Finish to let friends try your game on their phones.
+      bounce_1_2018_instruction: |-
+        Attach a block to the "when left arrow" block
+        and press "Run". Move the paddle using the left arrow to reach the finish
+        target.
       bounce_1_basketball_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run". Move the hand using the left arrow to reach the finish
@@ -8064,6 +8122,9 @@
       bounce_2_instruction: |-
         Attach a block to the "when right arrow" and "when
         left arrow" blocks. Move the paddle to reach both finish targets.
+      bounce_2_2018_instruction: |-
+        Attach a block to the "when right arrow" and
+        "when left arrow" blocks. Move the paddle to reach both finish targets.
       bounce_2_basketball_instruction: |-
         Attach a block to the "when right arrow"
         and "when left arrow" blocks. Move the hand to reach both finish targets.
@@ -8073,12 +8134,21 @@
         in two directions.
       bounce_3_instruction: දැන් "when up arrow" කොටස භාවිතා කරලා අර වගේම එකක් හදන්න.
         මුදුනේ ඇති අවසන් ඉලක්කය වෙත යොමු කරන්න.
-      bounce_4_instruction: "දැන් ඔයා කොටස්ක් 4ක් භාවිතා කරන්න ඕනේ. ප්‍රහේලිකාව විසඳීමට
-        ඉලක්ක 4 වෙතම යොමු කරන්න."
+      bounce_3_2018_instruction: දැන් "when up arrow" කොටස භාවිතා කරලා අර වගේම එකක්
+        හදන්න. මුදුනේ ඇති අවසන් ඉලක්කය වෙත යොමු කරන්න.
+      bounce_4_instruction: දැන් ඔයා කොටස්ක් 4ක් භාවිතා කරන්න ඕනේ. ප්‍රහේලිකාව විසඳීමට
+        ඉලක්ක 4 වෙතම යොමු කරන්න.
+      bounce_4_2018_instruction: |-
+        This time you need to add four blocks. Move the
+        paddle to all four finish targets to complete this puzzle.
       bounce_5_instruction: |-
         We're going to send a ball flying down towards the
         paddle. Attach a block to the "when ball hits paddle" block to ensure the
         ball reaches the finish target.
+      bounce_5_2018_instruction: |-
+        We're going to send a ball flying down towards
+        the paddle. Attach a block to the "when ball hits paddle" block to ensure
+        the ball reaches the finish target.
       bounce_5_basketball_instruction: |-
         We're going to send a ball flying down towards
         the hand. Attach a block to the "when ball hits hand" block to ensure the
@@ -8089,11 +8159,16 @@
       bounce_6_instruction: |-
         Now the finish target is on the top. You need to attach
         blocks to both of the "when ball hits" blocks to solve this puzzle.
+      bounce_6_2018_instruction: |-
+        Now the finish target is on the top. You need to
+        attach blocks to both of the "when ball hits" blocks to solve this puzzle.
       bounce_6_basketball_instruction: ඔන්න දැන් කොඩිය මුදුනෙම තියෙන්නේ. ඔයාට ප්‍රහේලිකාව
         විසඳන්න නම් "when ball hits" කොටස් දෙකටම තව කොටස් එකතු කරන්න වෙනවා.
       bounce_6_sports_instruction: ඔන්න දැන් කොඩිය මුදුනෙම තියෙන්නේ. ඔයාට ප්‍රහේලිකාව
         විසඳන්න නම් "when ball hits" කොටස් දෙකටම තව කොටස් එකතු කරන්න වෙනවා.
       bounce_7_instruction: සෑම "when" කොටසකටම තවත් කොටස් එකතු කරන්න. අවසන් ඉලක්කය
+        ට ළඟා වන තුරු බෝලය උඩ පන්නවන්න.
+      bounce_7_2018_instruction: සෑම "when" කොටසකටම තවත් කොටස් එකතු කරන්න. අවසන් ඉලක්කය
         ට ළඟා වන තුරු බෝලය උඩ පන්නවන්න.
       bounce_7_basketball_instruction: සෑම "when" කොටසක් සඳහාම කොටස් සවි කරන්න. බෝලය
         කොඩියේ වැදෙන තුරු පන්නවන්න.
@@ -8603,32 +8678,92 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
+      courseA_harvester_forVideo_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
+      courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
+      courseA_harvester_loops10_instruction: |-
+        Help the harvester pick all five ears
+        of corn!
+      courseA_harvester_loops11_instruction: 'Try one more on your own! '
+      courseA_harvester_loops2_instruction: Make sure to pick all the corn!
+      courseA_harvester_loops3_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
+      courseA_harvester_loops4_instruction: |-
+        Can you help the harvester find the
+        bug in her code?
+      courseA_harvester_loops5_instruction: |-
+        Try it yourself! Can you pick the corn
+        at the end too?
+      courseA_harvester_loops5a_instruction: |-
+        Look at all this corn? Can you pick
+        it all by yourself?
+      courseA_harvester_loops5b_instruction: |-
+        Can you change your code to make the
+        harvester pick all the corn?
+      courseA_harvester_loops6_instruction: |-
+        You will need **one** `Move South` block
+        and **one** `Move West` block.
+      courseA_harvester_loops7_instruction: 'Try it on your own! '
+      courseA_harvester_loops8_instruction: |-
+        This is the same puzzle, but now you
+        have to repeat **three** times!
+      courseA_harvester_loops9_instruction: |-
+        Can you figure out how to pick all the
+        corn?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
-        pick *one* corn.
+        pick the piece of corn.
+      courseA_harvester_seq10_instruction: Make sure to pick all the corn!
+      courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: |-
         Play with these blocks to help the bee
         get *one* nectar.
+      courseA_harvester_seq13_instruction: |-
+        Play with these blocks to help the harvester
+        pick **one** corn.
       courseA_harvester_seq2_instruction: |-
-        Use three `Move West` blocks and one `Pick
-        Corn` block.
+        Use three `move west` blocks and one `pick
+        corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: |-
         Use three `Move North` blocks and one
         `Pick Corn` block.
-      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq4_instruction: |-
+        Add one block to help the harvester pick
+        the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
       courseA_harvester_seq6_instruction: Try it yourself!
       courseA_harvester_seq7_instruction: Try it yourself!
       courseA_harvester_seq8_instruction: |-
         Now the harvester needs to pick corn two
         times!
+      courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
+      courseA_maze_ramp2_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp2a_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseA_maze_ramp3a_2018_instruction: |-
+        Add a `North` block to the bottom of
+        the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
+      courseA_maze_ramp4a_2018_instruction: |-
+        Can you figure out which block you need
+        to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_instruction: Avoid the TNT.
+      courseA_maze_ramp5a_2018_instruction: Get the bird to the pig!
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
-      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
-        to the pig! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Avoid the TNT to get the bird\nto
+        the pig! "
       courseA_maze_seq11_instruction: |-
         Move one way, then another to get the bird
         to the pig.
@@ -8640,9 +8775,8 @@
       courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq13_2018_instruction: Get the pig any way you can!
       courseA_maze_seq1_2018_instruction: Get the bird to the bad pig!
-      courseA_maze_seq2_instruction: "දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න."
-      courseA_maze_seq2_2018_instruction: "දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය
-        හදන්න."
+      courseA_maze_seq2_instruction: දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න.
+      courseA_maze_seq2_2018_instruction: දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න.
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq3_2018_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
@@ -8654,6 +8788,9 @@
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5a_2018_instruction: |-
+        What can you add to the end of this code
+        to get the bird to the pig?
       courseA_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
@@ -8756,72 +8893,143 @@
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
+      courseB_artist_loops10_2018_instruction: |-
+        Use what you have learned to draw
+        a picture of what you think the artist saw when he got home.
+      courseB_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseB_artist_loops2_instruction: |-
         The Artist is trying to draw a line **6**
         times, but can't get it right.  Can you help?
+      courseB_artist_loops2_2018_instruction: |-
+        The Artist is trying to draw a line
+        **6** times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: |-
         Help the artist draw a line 7 times to
         make a garden wall.
+      courseB_artist_loops3_2018_instruction: |-
+        Help the artist draw a line 7 times
+        to make a garden wall.
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
+      courseB_artist_loops4_2018_instruction: |
+        Now we need to get the soil ready
+        to plant. Find the bugs in the code and help the artist prepare the ground.
       courseB_artist_loops5_instruction: |-
         Time to fix the stairs!  Repeat this pattern
         **5** times so the artist can reach the top of the bushes.
+      courseB_artist_loops5_2018_instruction: |-
+        Time to fix the stairs!  Repeat this
+        pattern **5** times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Climb the vine and see where it goes?
+      courseB_artist_loops6_2018_instruction: Climb the vine and see where it goes?
       courseB_artist_loops7_instruction: |-
+        **Challenge:**  It's a hidden garden!
+        Let's walk around.
+      courseB_artist_loops7_2018_instruction: |-
         **Challenge:**  It's a hidden garden!
         Let's walk around.
       courseB_artist_loops8_instruction: |-
         Time to head home. Can you fix this ladder
         using only one block to help the artist get down?
+      courseB_artist_loops8_2018_instruction: |-
+        Time to head home. Can you fix this
+        ladder using only one block to help the artist get down?
       courseB_artist_loops9_instruction: |-
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
+      courseB_artist_loops9_2018_instruction: |-
+        Let's take the short way home, over
+        the pond. Can you help the artist stay on the stones?
       courseB_artist_loops_challenge1_instruction: |-
         "It's time to toss the dice!
         Can you help me draw these?"
+      courseB_artist_loops_challenge1_2018_instruction: |-
+        "It's time to toss the
+        dice! Can you help me draw these?"
       courseB_artist_loops_challenge2_instruction: |-
         Draw as many X's as you can.
         Can you get 3 in a row?
+      courseB_artist_loops_challenge2_2018_instruction: |-
+        Draw as many X's as you
+        can. Can you get 3 in a row?
       courseB_collector_loops1_instruction: |-
         This is Laurel the Adventurer!  Can
         you move her around and get treasure?
       courseB_collector_loops10_instruction: |-
         Help Laurel get all of the treasure
         from this cave.
+      courseB_collector_loops10_2018_instruction: |-
+        Help Laurel get all of the treasure
+        from this cave.
       courseB_collector_loops11_instruction: |-
         Eureka!  Get as much treasure as you
         can!
+      courseB_collector_loops11_2018_instruction: |-
+        Eureka!  Get as much treasure
+        as you can!
+      courseB_collector_loops1_2018_instruction: |-
+        This is Laurel the Adventurer!  Can
+        you move her around and get treasure?
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
+        level.
+      courseB_collector_loops2_2018_instruction: |-
+        Get all four piles to pass this
         level.
       courseB_collector_loops3_instruction: |-
         How can Laurel get all five piles of
         treasure using only one `E -->` block?
+      courseB_collector_loops3_2018_instruction: |-
+        How can Laurel get all five piles
+        of treasure using only one `E -->` block?
       courseB_collector_loops3_predict1_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
       courseB_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
         treasure!
+      courseB_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure!
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
+        get all of the treasure. "
+      courseB_collector_loops5_2018_instruction: "Add to the code from the last puzzle\nto
         get all of the treasure. "
       courseB_collector_loops6_instruction: |-
         Figure out the code to help Laurel get
         all of the treasure!
+      courseB_collector_loops6_2018_instruction: |-
+        Figure out the code to help Laurel
+        get all of the treasure!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
+      courseB_collector_loops7_2018_instruction: |-
+        Write the code to get all of this
+        treasure.
       courseB_collector_loops8_instruction: |-
         **Challenge: ** The treasure goes all
         the way down these stairs!  Write the code to help Laurel get it all.
+      courseB_collector_loops8_2018_instruction: |-
+        **Challenge: ** The treasure goes
+        all the way down these stairs!  Write the code to help Laurel get it all.
       courseB_collector_loops9_instruction: |-
         *"Help me get the treasure from this
         deep valley."*
+      courseB_collector_loops9_2018_instruction: |-
+        *"Help me get the treasure from
+        this deep valley."*
       courseB_collector_loops_challenge1_instruction: "This time you have limited\nblocks.
+        Get all of the treasure! "
+      courseB_collector_loops_challenge1_2018_instruction: "This time you have limited\nblocks.
         Get all of the treasure! "
       courseB_collector_loops_challenge2_instruction: |-
         Let's get the treasure! Help
         me across each row then come back to start the next row. Can you find a pattern?
       courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
+      courseB_collector_loops_challenge2a_2018_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: "This time you can only use\none
@@ -8833,29 +9041,80 @@
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
+      courseB_iceage_loops1_instruction: |-
+        Help Scrat across the ice to get to the
+        acorn!
+      courseB_iceage_loops10_instruction: |-
+        Help Scrat get all the way over to the
+        acorn!
+      courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseB_iceage_loops2_instruction: |-
+        Use two different move blocks to get to
+        the acorn!
+      courseB_iceage_loops3_instruction: |-
+        Can you get to the acorn with just one
+        `W` block?
+      courseB_iceage_loops4_instruction: |-
+        Add one more block to get Scrat all the
+        way to the acorn!
+      courseB_iceage_loops5_instruction: |-
+        Can you add one more loop to get to the
+        acorn?
+      courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
+      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseB_iceage_loops8_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_instruction: |-
+        The acorn is so far away! Can you use loops
+        to help Scrat get there?
       courseB_maze_seq1_instruction: |-
         Play with these blocks to see what they make
         the bird do! \r
         \r
         Get the bird to the pig to complete the level.
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
+      courseB_maze_seq10_2018_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
+      courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Now get that pig any way you can!
+      courseB_maze_seq12_2018_instruction: Now get that pig any way you can!
+      courseB_maze_seq1_2018_instruction: |-
+        Play with these blocks to see what they
+        make Scrat do! \r
+        \r
+        Get Scrat to the acorn to complete the level.
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
+      courseB_maze_seq2_2018_instruction: |-
+        A bug! Fix the code to get Scrat to the
+        acorn!
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
+      courseB_maze_seq4_2018_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
+      courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
+      courseB_maze_seq6_2018_instruction: |-
+        Move one way, then another to get Scrat
+        to the acorn!
       courseB_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
+      courseB_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get Scrat to the acorn!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
+      courseB_maze_seq8_2018_instruction: |-
+        Your turn!  What do you need to do to
+        get Scrat to the acorn?
       courseB_maze_seq9_instruction: |-
         Challenge: Move around the TNT to get the bird
         to the pig.
+      courseB_maze_seq9_2018_instruction: |-
+        Challenge: Move around the broken ice
+        to get Scrat to the acorn.
       courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
       courseB_maze_seqCold_instruction: |-
         Challenge: Debug this level by adding blocks
@@ -8864,33 +9123,64 @@
       courseB_maze_seq_challenge1_instruction: |-
         Can you find a path before you run
         out of blocks?
+      courseB_maze_seq_challenge1_2018_instruction: |-
+        Can you find a path before you
+        run out of blocks?
       courseB_maze_seq_challenge2_instruction: |-
         Debug this level. These are the right
         blocks, but they're in the wrong order!
+      courseB_maze_seq_challenge2_2018_instruction: |-
+        Debug this level. These are
+        the right blocks, but they're in the wrong order!
       courseB_playLab_events1_instruction: |-
         See if you can figure out what each block
         does.
+      courseB_playLab_events1_2018_instruction: |-
+        See if you can figure out what each
+        block does.
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
+      courseB_playlab_events2_2018_instruction: |-
+        Have Daisy the Dragon say something
+        when you click "Run".
       courseB_playlab_events3_instruction: |-
+        Use an event to make Daisy the Dragon
+        switch to a random mood when you click on her.
+      courseB_playlab_events3_2018_instruction: |-
         Use an event to make Daisy the Dragon
         switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: |-
         Knight time!  Add an event so that the
         knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events4_2018_instruction: |-
+        Knight time!  Add an event so that
+        the knight moves toward the dragon when the left arrow is clicked.
       courseB_playlab_events5_instruction: |-
         Now add an event so that the knight runs
         away from the dragon when you press the right arrow.
+      courseB_playlab_events5_2018_instruction: |-
+        Now add an event so that the knight
+        runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Help your knight get all of the flags!\r
         \r
         To
         do this, you'll need to add events to help the knight move up, down, left,
         and right.
+      courseB_playlab_events6_2018_instruction: |-
+        Help your knight get all of the
+        flags!\r
+        \r
+        To do this, you'll need to add events to help the knight move
+        up, down, left, and right.
       courseB_playlab_events7_instruction: |-
         Make this game fun by setting the knight
         to vanish when he runs into the dragon on his way to get the flags!  Play
+        a sound when they collide to make it feel more real.
+      courseB_playlab_events7_2018_instruction: |-
+        Make this game fun by setting the
+        knight to vanish when he runs into the dragon on his way to get the flags!  Play
         a sound when they collide to make it feel more real.
       courseB_playlab_events8_instruction: |-
         Use your imagination. What can you do
@@ -8898,12 +9188,20 @@
       courseB_playlab_eventsFP_instruction: |-
         Use your imagination. What can you do
         to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: |-
+        Use your imagination. What can
+        you do to make this game more fun?
       courseB_playlab_eventsToolbox_instruction: |-
         Finish by playing a sound and making
         the knight vanish when he runs into the dragon!
       courseB_playlab_events_challenge1_instruction: "Make the animals move down\nwhen
         you press ▼. "
+      courseB_playlab_events_challenge1_2018_instruction: "Make the animals move\ndown
+        when you press ▼. "
       courseB_playlab_events_challenge2_instruction: |-
+        Make the animals disappear
+        when you click on them.
+      courseB_playlab_events_challenge2_2018_instruction: |-
         Make the animals disappear
         when you click on them.
       courseB_playlab_events_challenge2_embed_instruction: |-
@@ -8913,23 +9211,47 @@
         Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!
+      courseB_playlab_events_challenge2_template_2018_instruction: |-
+        Let's make the
+        animals disappear when you click on them! You can also add sounds and score
+        points to create a fun game of Animal Tag!
+      courseB_scrat_forVideo_instruction: Get the acorn!
       courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
       courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog10_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseB_starWars_prog11_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog11_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
+      courseB_starWars_prog1_2018_instruction: '"Go get the scrap metal, BB-8!"'
       courseB_starWars_prog2_instruction: |-
         Help BB-8 gather **all** of the glowing
         scrap metal
+      courseB_starWars_prog2_2018_instruction: Get all the metal.
       courseB_starWars_prog3_instruction: |-
         Help BB-8 gather **all** of the glowing
         scrap metal
+      courseB_starWars_prog3_2018_instruction: Get all the scrap metal
       courseB_starWars_prog4_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog4_2018_instruction: Get all the scrap metal
       courseB_starWars_prog5_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog5_2018_instruction: Get the scrap metal
       courseB_starWars_prog6_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog6_2018_instruction: Get all the scrap metal
       courseB_starWars_prog7_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog7_2018_instruction: Go get it!
       courseB_starWars_prog8_instruction: |-
         **Challenge:** Help BB-8 gather the glowing
         scrap metal
+      courseB_starWars_prog8_2018_instruction: |-
+        **Challenge:** Help BB-8 gather the
+        glowing scrap metal
       courseB_starWars_prog9_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog9_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseC_PlayLab_events1_instruction: |-
         Make Jorge the Dog (actor 1) say "Hi
         there."
@@ -8993,28 +9315,36 @@
         him?  \\r\n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a_instruction: "Get the artist to the center of the play\narea,
         then draw a bird using a sticker. "
+      courseC_artist_loops1a_2018_instruction: "Get the artist to the center of the\nplay
+        area, then draw a bird using a sticker. "
       courseC_artist_loops2_instruction: |-
         Now that the zombie knows his way, help
         him dig holes along the path to plant more flowers!
       courseC_artist_loops2a_instruction: |-
         Now, use a loop to spin your bird around
         12 times with a 30 degree turn.
+      courseC_artist_loops2a_2018_instruction: |-
+        Now, use a loop to spin your bird
+        around 12 times with a 30 degree turn.
       courseC_artist_loops3_instruction: |-
         Excellent!  Now that the flowers have sprouted,
         help the zombie place a friend every 50 pixels to guard over them until they
         are grown.
       courseC_artist_loops3a_instruction: Now add a bat!
+      courseC_artist_loops3a_2018_instruction: Now add a bat!
       courseC_artist_loops4_instruction: |-
         The zombie has found an empty farm!  Can
         you help him bring it to life by stamping animal stickers every 100 pixels
         around the border?
       courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
+      courseC_artist_loops4a_2018_instruction: Try jumping forward by 75 pixels.
       courseC_artist_loops5_instruction: |
         Great!  Now it's time to make a fence
         inside to keep the animals out.   \r
         \r
       courseC_artist_loops5a_instruction: Try new stickers!
       courseC_artist_loops5b_instruction: Try adding lines!
+      courseC_artist_loops5b_2018_instruction: Try adding lines!
       courseC_artist_loops6_instruction: |
         What should the zombie put inside of the
         garden?  \r
@@ -9023,6 +9353,7 @@
       courseC_artist_loops6a_instruction: Add another sticker!
       courseC_artist_loops7a_instruction: Play with the loops and angles.
       courseC_artist_loops8a_instruction: Now try something on your own!
+      courseC_artist_loops8a_2018_instruction: Now try something on your own!
       courseC_artist_loopsPre1a_instruction: Time to spin that line around!
       courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
         play area, then draw a line. "
@@ -9032,6 +9363,8 @@
         them until they are grown.
       courseC_artist_loopsTemplateA_instruction: "Get the artist to the center of\nthe
         play area, then draw a bird using a sticker. "
+      courseC_artist_loopsTemplateA_2018_instruction: "Get the artist to the center\nof
+        the play area, then draw a bird using a sticker. "
       courseC_artist_prog1_instruction: |-
         Play with the blocks in the toolbox to see
         what they do!
@@ -9084,8 +9417,9 @@
       courseC_artist_prog_challenge1-doghouse_instruction: |-
         Let's build a dog house
         for Jorge!
-      courseC_artist_prog_challenge1_instruction: |
-        Draw rooms for each of the animals.
+      courseC_artist_prog_challenge1_instruction: 'Draw rooms for each of the animals.
+
+'
       courseC_artist_prog_challenge1_2018_instruction: "Draw rooms for each of the\nanimals. "
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
@@ -9262,7 +9596,13 @@
       courseC_maze_debugging_challenge1_instruction: |-
         Help Scrat decide which way
         to turn to get to the acorn.
+      courseC_maze_debugging_challenge1_2018_instruction: |-
+        Help Scrat decide which
+        way to turn to get to the acorn.
       courseC_maze_debugging_challenge2_instruction: |-
+        Help Scrat reach the acorn
+        with only four `turn` commands.
+      courseC_maze_debugging_challenge2_2018_instruction: |-
         Help Scrat reach the acorn
         with only four `turn` commands.
       courseC_maze_loops1_instruction: |-
@@ -9381,31 +9721,59 @@
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
+      courseD_artist_binary1_2018_instruction: |-
+        Use the blocks below to have the
+        artist draw "01010101" in binary in the first row.
       courseD_artist_binary2_instruction: |-
         Run this code to see how the artist uses
         binary to draw this pattern.
+      courseD_artist_binary2_2018_instruction: |-
+        Run this code to see how the artist
+        uses binary to draw this pattern.
       courseD_artist_binary3_instruction: |-
         Which of the binary strings below could
         you loop 8 times to draw this image?
+      courseD_artist_binary3_2018_instruction: |-
+        Which of the binary strings below
+        could you loop 8 times to draw this image?
       courseD_artist_binary4_instruction: |-
         Can you draw this pattern by looping just
         three binary digits (0s and 1s)?
+      courseD_artist_binary4_2018_instruction: |-
+        Can you draw this pattern by looping
+        just three binary digits (0s and 1s)?
       courseD_artist_binary5_instruction: |-
         Each binary string below represents one
         row of this picture. \r
         \r
         Can you rearrange them so it draws a smiley face
         instead of a frown?
+      courseD_artist_binary5_2018_instruction: |-
+        Each binary string below represents
+        one row of this picture. \r
+        \r
+        Can you rearrange them so it draws a smiley
+        face instead of a frown?
       courseD_artist_binary6_instruction: |-
+        Which 6 digit binary string, repeated
+        11 times, will draw this image?
+      courseD_artist_binary6_2018_instruction: |-
         Which 6 digit binary string, repeated
         11 times, will draw this image?
       courseD_artist_binary7_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
+      courseD_artist_binary7_2018_instruction: |-
+        What is the shortest binary string
+        that you can repeat to draw this image?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
+      courseD_artist_binary8_2018_instruction: Finish the code to create this drawing.
       courseD_artist_binary8_predict1_instruction: |-
         Finish the code to create this
         drawing.
+      courseD_artist_binary8_predict1_2018_instruction: |-
+        Finish the code to create
+        this drawing.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
@@ -9414,6 +9782,12 @@
         get creative with the bits!
       courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
         binary! "
+      courseD_artist_binaryFP_2018_instruction: |-
+        Here's a higher resolution canvas
+        to draw on - 16 pixels by 16 pixels!\r
+        \r
+        See what happens when we start
+        to get creative with the bits!
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -9421,9 +9795,16 @@
         You can only use each binary
         value (0 or 1) once each in this puzzle. Try using nested loops to complete
         this drawing.
+      courseD_artist_binary_challenge1_2018_instruction: |-
+        You can only use each binary
+        value (0 or 1) once each in this puzzle. Try using nested loops to complete
+        this drawing.
       courseD_artist_binary_challenge2_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
+      courseD_artist_binary_challenge2_2018_instruction: |-
+        Are you persistent enough
+        to restore this logo back to normal?
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
@@ -9464,52 +9845,99 @@
       courseD_artist_nestedLoops10_instruction: |-
         Take the squares from before, but
         this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops10_2018_instruction: |-
+        Take the squares from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1_2018_instruction: |-
+        Draw a triangle to kickstart
+        this stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120
+        degrees for each exterior angle.)
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
         each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops1a_2018_instruction: 'Now loop the triangle 6 times.
+
+'
       courseD_artist_nestedLoops2_instruction: |-
         This time, complete the puzzle with
         the fewest number of blocks possible.
+      courseD_artist_nestedLoops2_2018_instruction: |-
+        This time, complete the puzzle
+        with the fewest number of blocks possible.
       courseD_artist_nestedLoops3_instruction: |-
         Use your new skills to quickly draw
         the last row of windows for this building.\r
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
+      courseD_artist_nestedLoops3_2018_instruction: |-
+        Use your new skills to quickly
+        draw the last row of windows for this building.\r
+        \r
+        The windows are 20
+        pixel squares, each 20 pixels apart.
       courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
         circles.
+      courseD_artist_nestedLoops4_2018_instruction: |-
+        Great!  Do the same thing with
+        these circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
+      courseD_artist_nestedLoops5_2018_instruction: |-
+        What happens if you also turn
+        90 degrees between circles?
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
       courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
         this drawing.
+      courseD_artist_nestedLoops7_2018_instruction: |-
+        Use what you've learned to
+        make this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
+      courseD_artist_nestedLoops8_2018_instruction: |-
+        Using what you have learned
+        in the last couple of puzzles, build this image from the beginning.
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
+      courseD_artist_nestedLoops9_2018_instruction: |-
+        **Challenge:** Can you figure
+        out how to make a picture like this?
       courseD_artist_nestedLoops9_predict1_instruction: |-
         **Challenge:** Can you figure
         out how to make a picture like this?
+      courseD_artist_nestedLoops9_predict1_2018_instruction: |-
+        **Challenge:** Can
+        you figure out how to make a picture like this?
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
+      courseD_artist_nestedLoopsFP_2018_instruction: |-
+        Now it's your turn.  Take
+        the skills you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
       courseD_artist_nestedLoops_challenge1_instruction: |-
         Can you figure out how
         to make a picture like this?
+      courseD_artist_nestedLoops_challenge1_2018_instruction: |-
+        Can you figure out
+        how to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: |-
         Fix the code to make this
         picture!
+      courseD_artist_nestedLoops_challenge2_2018_instruction: |-
+        Fix the code to make
+        this picture!
       courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
         pixels wide.  It can be any shape that you like.  "
       courseD_artist_project1_2018_instruction: "Draw a small shape, between **20\nand
@@ -9577,11 +10005,19 @@
       courseD_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
+      courseD_bee_conditionals10_2018_instruction: |-
+        Collect all of the nectar and
+        make all of the honey.
       courseD_bee_conditionals1_predict1_instruction: |-
         Check to see if there's a
         flower under the cloud. If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_2018_instruction: |-
+        Check to see if there's
+        a flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
         it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_2018_instruction: "Check underneath every cloud to\nsee
+        if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
         if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals3_instruction: |-
@@ -9590,32 +10026,67 @@
         \r
         You can only collect nectar from flowers, but you can check any space
         to see if there is a flower.
+      courseD_bee_conditionals3_2018_instruction: |-
+        Help the bee collect all of the
+        nectar. \r
+        \r
+        You can only collect nectar from flowers, but you can check
+        any space to see if there is a flower.
       courseD_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
+      courseD_bee_conditionals4_2018_instruction: |-
+        Get all of the nectar using as
+        few blocks as possible.
       courseD_bee_conditionals5_instruction: |-
         Collect all of the nectar using as
         few blocks as possible
+      courseD_bee_conditionals5_2018_instruction: |-
+        Collect all of the nectar using
+        as few blocks as possible
       courseD_bee_conditionals6_instruction: |-
         Some of these clouds might have honeycombs
         under them.  Be sure to check if a honeycomb is hiding behind each cloud!
+      courseD_bee_conditionals6_2018_instruction: |-
+        Some of these clouds might have
+        honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
+        cloud!
       courseD_bee_conditionals7_instruction: |-
+        Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_2018_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals7_predict2_instruction: |-
         Use the `if/else` block to
         collect nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_predict2_2018_instruction: |-
+        Use the `if/else` block
+        to collect nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals8_instruction: |-
+        Collect nectar if there is a flower.\r
+        Otherwise,
+        make honey (because there is a honeycomb).
+      courseD_bee_conditionals8_2018_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
         make honey (because there is a honeycomb).
       courseD_bee_conditionals9_instruction: |-
         Collect all of the nectar or make all
         the honey.
+      courseD_bee_conditionals9_2018_instruction: |-
+        Collect all of the nectar or make
+        all the honey.
       courseD_bee_conditionals_challenge1_instruction: |-
         Collect all the nectar and
         make all the honey.
+      courseD_bee_conditionals_challenge1_2018_instruction: |-
+        Collect all the nectar
+        and make all the honey.
       courseD_bee_conditionals_challenge2_instruction: |-
+        Collect all of the nectar
+        and make all the honey.
+      courseD_bee_conditionals_challenge2_2018_instruction: |-
         Collect all of the nectar
         and make all the honey.
       courseD_bee_conditionals_challenge3_instruction: |-
@@ -9645,6 +10116,10 @@
         Watch how the bees gets the
         nectar. Can you use the same kind of pattern to help the bee make all of the
         honey?
+      courseD_bee_debugging_challenge1_2018_instruction: |-
+        Watch how the bees gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
       courseD_bee_debugging_challenge1a_instruction: |-
         Watch how the bee gets the
         nectar. Use the same pattern to help the bee make all the honey.
@@ -9718,6 +10193,9 @@
       courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
         ball in goal` event and the `score opponent point` block to the `when\nball
         misses hand` event to make a game. "
+      courseD_bounce_events10s_2018_instruction: "Attach the `score point` block\nto
+        the `when ball in goal` event and the `score opponent point` block to the\n`when
+        ball misses hand` event to make a game. "
       courseD_bounce_events11_instruction: |-
         You can now attach blocks to the "when
         run" block. You have to attach the new "launch new ball" block in more
@@ -9726,6 +10204,8 @@
         twice.
       courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
         of the places where the game needs a new ball. "
+      courseD_bounce_events11s_2018_instruction: "Attach the `throw new ball` block\nin
+        all of the places where the game needs a new ball. "
       courseD_bounce_events12_instruction: |-
         Create your own Bounce game. You can
         change all the visuals and the rules. When you're done, click Finish to let
@@ -9734,15 +10214,25 @@
         Make this game your own. You can change
         all the visuals and the rules. When you're done, click "Finish" to let
         friends try your game on their phones.
+      courseD_bounce_events12s_2018_instruction: |-
+        Make this game your own. You can
+        change all the visuals and the rules. When you're done, click "Finish"
+        to let friends try your game on their phones.
       courseD_bounce_events1s_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the net.
+      courseD_bounce_events1s_2018_instruction: |-
+        Attach a block to the "when left
+        arrow" block and press "Run" to move the player to the net.
       courseD_bounce_events2_instruction: |-
         Attach a block to the "when right arrow"
         and "when left arrow" blocks. Move the paddle to reach both finish targets.
       courseD_bounce_events2s_instruction: |-
         Now, attach a block to the `when right
         event` so that the hand can get to both baskets.
+      courseD_bounce_events2s_2018_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
       courseD_bounce_events3_instruction: |-
         Now try something similar with the "when
         up arrow" block. Move the paddle to the finish target at the top.
@@ -9762,6 +10252,9 @@
       courseD_bounce_events5s_instruction: |-
         Attach a block to the `when ball hits
         hand` event to ensure the ball reaches the basket.
+      courseD_bounce_events5s_2018_instruction: |-
+        Attach a block to the `when ball
+        hits hand` event to ensure the ball reaches the basket.
       courseD_bounce_events6_instruction: |-
         Now the finish target is on the top. You
         need to attach blocks to both of the "when ball hits" blocks to solve this
@@ -9769,6 +10262,9 @@
       courseD_bounce_events6s_instruction: |-
         Attach code to make the ball bounce when
         it hits the wall so you can solve this puzzle.
+      courseD_bounce_events6s_2018_instruction: |-
+        Attach code to make the ball bounce
+        when it hits the wall so you can solve this puzzle.
       courseD_bounce_events7_instruction: |-
         Attach blocks to each of the "when"
         blocks. Bounce the ball until it hits the finish target.
@@ -9776,44 +10272,86 @@
         Attach sound blocks to make the net swish
         when you hit the basket and have the whistle blow when the ball misses your
         hand. Bounce the ball until it hits the finish target.
+      courseD_bounce_events7s_2018_instruction: |-
+        Attach sound blocks to make the
+        net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging1_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging1a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging1a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging2_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging2a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging3_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging3a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging4_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4a_instruction: |-
         Fix the error(s) to collect all
         of the treasure.
+      courseD_collector_debugging4a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging5_instruction: |-
         All of the commands that you need
         are already here...now use your debugging skills to figure out how to solve
         this puzzle.
+      courseD_collector_debugging5_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging5a_instruction: |-
         All of the commands that you need
         are already here...now use your debugging skills to figure out how to solve
         this puzzle.
+      courseD_collector_debugging5a_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging6_instruction: |-
         Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure.
+      courseD_collector_debugging6_2018_instruction: |-
+        Challenge: Use your debugging
+        skills to fix the errors and collect all of the treasure.
       courseD_collector_debugging6a_instruction: |-
         Challenge: Use the code in the
         work area to get at least **6** pieces of treasure!
+      courseD_collector_debugging6a_2018_instruction: |-
+        Challenge: Use the code in
+        the work area to get at least **6** pieces of treasure!
       courseD_collector_debugging7_instruction: |-
         Challenge: All of the commands that
         you need are already here...now use your debugging skills to figure out how
@@ -9821,7 +10359,14 @@
       courseD_collector_debugging_challenge2_instruction: |-
         Are you an expert at nested
         loops? Use what you have learned so far to collect all the treasure!
+      courseD_collector_debugging_challenge2_2018_instruction: |-
+        Are you an expert
+        at nested loops? Use what you have learned so far to collect all the treasure!
       courseD_collector_nested_loops_challenge2_instruction: |-
+        Help the collector
+        reach at least two piles of treasure using only the blocks in your toolbox.
+        It is possible to collect all 4.
+      courseD_collector_nested_loops_challenge2_2018_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
         It is possible to collect all 4.
@@ -9836,8 +10381,8 @@
         loops? Use what you have learned so far to collect all of the treasure!
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
-      courseD_debugging_3_instruction: "දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
-        මී පැණි සැදීමට  "
+      courseD_debugging_3_instruction: 'දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
+        මී පැණි සැදීමට  '
       courseD_debugging_4_instruction: Fix the error(s) to make all of the honey.
       courseD_debugging_5_instruction: |-
         Challenge: All of the commands that you need
@@ -9849,42 +10394,78 @@
       courseD_farmer_condLoops1_instruction: |-
         Use conditionals to make sure that
         you pick corn only when it's there.
+      courseD_farmer_condLoops1_2018_instruction: |-
+        Use conditionals to make sure
+        that you pick corn only when it's there.
       courseD_farmer_condLoops2_instruction: |-
-        Help the farmer collect both corn and
-        lettuce from the field.
+        Help the harvester collect both corn
+        and lettuce from the field.
+      courseD_farmer_condLoops2_2018_instruction: |-
+        Help the harvester collect both
+        corn and lettuce from the field.
       courseD_farmer_condLoops3_instruction: |-
         *"Corn, lettuce, AND pumpkins! Help
         me harvest them all."*
+      courseD_farmer_condLoops3_2018_instruction: |-
+        *"Corn, lettuce, AND pumpkins!
+        Help me harvest them all."*
       courseD_farmer_condLoops4_instruction: |-
-        Help the farmer pick all of the lettuce
-        in each cluster before moving on to the next bunch.
+        Help the harvester pick all of the
+        lettuce in each cluster before moving on to the next bunch.
+      courseD_farmer_condLoops4_2018_instruction: |-
+        Help the harvester pick all of
+        the lettuce in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops5_instruction: |-
         Collect all of the corn and lettuce,
         then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_2018_instruction: |-
+        Collect all of the corn and lettuce,
+        then grab the pumpkin at the end.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
+      courseD_farmer_condLoops6_2018_instruction: |-
+        Can you figure out how to pick
+        the pumpkin?  Make sure to collect all of the corn along the way!
       courseD_farmer_condLoops7_instruction: |-
         Challenge: Collect all of the corn
         and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops7_2018_instruction: |-
+        Challenge: Collect all of the
+        corn and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops8_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
+      courseD_farmer_condLoops8_2018_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
+      courseD_farmer_condLoops9_2018_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
       courseD_farmer_condLoops9_predict1_instruction: |-
         Collect all of the corn and
         lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_2018_instruction: |-
+        Collect all of the corn
+        and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops_challenge1_instruction: |-
         Collect everything to complete
         the level. Each hidden crop has only one corn or lettuce.
+      courseD_farmer_condLoops_challenge1_2018_instruction: |-
+        Collect everything to
+        complete the level. Each hidden crop has only one corn or lettuce.
       courseD_farmer_condLoops_challenge2_instruction: |-
         Collect everything to complete
         the level.
+      courseD_farmer_condLoops_challenge2_2018_instruction: |-
+        Collect everything to
+        complete the level.
       courseD_farmer_condLoops_challenge2_clone_instruction: |-
         Collect everything
         to complete the level.
@@ -9902,8 +10483,9 @@
       courseD_farmer_conditionals4_instruction: |-
         Help the farmer remove this entire
         pile using a `while` loop.
-      courseD_farmer_conditionals5_instruction: |
-        Help me remove all of this dirt.
+      courseD_farmer_conditionals5_instruction: 'Help me remove all of this dirt.
+
+'
       courseD_farmer_conditionals6_instruction: |-
         Use the `while` loop to easily fill
         all of the holes.
@@ -9918,42 +10500,82 @@
         Use If/Else blocks to follow
         the curvy path. At each corner, use the `remove 1` command in a loop to clear
         the piles.
+      courseD_farmer_until_challenge2_2018_instruction: |-
+        Use If/Else blocks to follow
+        the curvy path. At each corner, use the `remove 1` command in a loop to clear
+        the piles.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
       courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while10_2018_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
       courseD_farmer_while10_predict2_instruction: "Flatten all of these piles using\nas
         few blocks as possible. "
+      courseD_farmer_while10_predict2_2018_instruction: "Flatten all of these piles\nusing
+        as few blocks as possible. "
+      courseD_farmer_while1_2018_instruction: |-
+        Move to the pile of dirt and use the
+        `remove` block to remove it.
       courseD_farmer_while2_instruction: |-
         Move to the hole and fill it with six shovelfuls
         of dirt, using the `fill` block.
+      courseD_farmer_while2_2018_instruction: |-
+        Move to the hole and fill it with
+        six shovelfuls of dirt, using the `fill` block.
       courseD_farmer_while3_instruction: |-
+        Use as few blocks as possible to solve
+        this puzzle.
+      courseD_farmer_while3_2018_instruction: |-
         Use as few blocks as possible to solve
         this puzzle.
       courseD_farmer_while4_instruction: |-
         Help the farmer remove this entire pile
         using a `while` loop.
+      courseD_farmer_while4_2018_instruction: |-
+        Help the farmer remove this entire
+        pile using a `while` loop.
       courseD_farmer_while4_predict1_instruction: |-
         Help the farmer remove this entire
         pile using a `while` loop.
+      courseD_farmer_while4_predict1_2018_instruction: |-
+        Help the farmer remove this
+        entire pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
+      courseD_farmer_while5_2018_instruction: 'Help me remove all of this dirt. '
       courseD_farmer_while6_instruction: |-
         Use the `while` loop to easily fill all
         of the holes.
+      courseD_farmer_while6_2018_instruction: |-
+        Use the `while` loop to easily fill
+        all of the holes.
       courseD_farmer_while7_instruction: |-
         Fill in the hole at the end of each of
         these paths.
+      courseD_farmer_while7_2018_instruction: |-
+        Fill in the hole at the end of each
+        of these paths.
       courseD_farmer_while8_instruction: "Challenge: Fill all of these holes using\nas
         few blocks as possible. "
+      courseD_farmer_while8_2018_instruction: "Challenge: Fill all of these holes\nusing
+        as few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while9_2018_instruction: "Flatten all of these piles using as\nfew
+        blocks as possible. "
       courseD_farmer_while_challenge1_instruction: |-
         Fill all of the holes and remove
         all of the piles.
+      courseD_farmer_while_challenge1_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_farmer_while_challenge2_instruction: |-
         Fill all of the holes and remove
         all of the piles.
+      courseD_farmer_while_challenge2_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_harvester_nested_loops_challenge1-broken_instruction: |-
         "I need some
         help on the farm! Help me harvest this corn using only the blocks in your
@@ -9961,6 +10583,10 @@
       courseD_harvester_nested_loops_challenge1_instruction: |-
         "I need some help
         on the farm! Help me harvest this corn using only the blocks in your toolbox."
+      courseD_harvester_nested_loops_challenge1_2018_instruction: |-
+        "I need some
+        help on the farm! Help me harvest this corn using only the blocks in your
+        toolbox."
       courseD_maze_loops_challenge1_instruction: |-
         Let's hunt for treasure - using
         loops! Help the collector reach at least two piles of treasure using only
@@ -10034,23 +10660,41 @@
       courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_predict2_2018_instruction: |-
+        Help the zombie get to the
+        sunflower.
+      courseD_maze_until1_2018_instruction: Get the angry bird to the pig.
       courseD_maze_until2_instruction: |-
         Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn.
       courseD_maze_until3_instruction: Get the bird to the pig.
+      courseD_maze_until3_2018_instruction: Get the bird to the pig.
       courseD_maze_until4_instruction: |-
         Can you get the zombie to the sunflower using
         only the blocks that are available?
+      courseD_maze_until4_2018_instruction: |-
+        Can you get the zombie to the sunflower
+        using only the blocks that are available?
       courseD_maze_until5_instruction: |-
         Use the `if` block to help the zombie decide
         when to turn, then get the zombie to the sunflower.
+      courseD_maze_until5_2018_instruction: |-
+        Use the `if` block to help the zombie
+        decide when to turn, then get the zombie to the sunflower.
       courseD_maze_until6_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until6_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until7_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until7_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until8_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until8_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
+      courseD_maze_until9_2018_instruction: |-
+        **Challenge:** Avoid the chompers and
+        help the zombie get to the sunflower.
       courseD_maze_until_challenge_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
@@ -10060,6 +10704,9 @@
       courseD_maze_until_challenge1_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
+      courseD_maze_until_challenge1_2018_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
@@ -10069,13 +10716,23 @@
       courseD_playLab_cond1_instruction: |-
         Get Pegleg to the dragon to solve this
         puzzle.
+      courseD_playLab_cond1_2018_instruction: |-
+        Get Pegleg to the flags to solve this
+        puzzle.
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
         to the dragon. "
+      courseD_playLab_cond2_2018_instruction: "Give Pegleg a point every time he\nmakes
+        it to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
         second.  "
+      courseD_playLab_cond3_2018_instruction: "Make the dragon change between random\nemotions
+        every second.  "
       courseD_playLab_cond3a_instruction: |-
         Make it so when Pegleg gets to the dragon,
         he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond3a_2018_instruction: |-
+        Make it so when Pegleg gets to the
+        dragon, he gets 2 points if the dragon is happy and 1 otherwise.
       courseD_playLab_cond3b_instruction: |-
         1) Make the dragon change between random
         emotions every second.  \r
@@ -10085,7 +10742,15 @@
         Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
         if the ninja catches him.
+      courseD_playLab_cond4_2018_instruction: |-
+        Add some code so that the ninja (actor
+        3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
+        if the ninja catches him.
       courseD_playLab_cond5_instruction: |-
+        Add a `repeat forever` loop that continuously
+        checks if the score is greater than 5, then ends the game as a win when it
+        is.
+      courseD_playLab_cond5_2018_instruction: |-
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
@@ -10093,14 +10758,25 @@
         set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
+      courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down\nbefore
+        you set him to chase the pirate.  \\r\n2)  If the pirate is greater\nthan
+        225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set\nthe
+        ninja to **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
         If the pirate (actor 1) is in the safe
         zone, wait one second, then deduct a point as long as he stays beneath the
         octopus line.
+      courseD_playLab_cond6a_2018_instruction: |-
+        If the pirate (actor 1) is in the
+        safe zone, wait one second, then deduct a point as long as he stays beneath
+        the octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_condFP_2018_instruction: |-
+        Now, build your own game to show
+        off to your friends!
       courseD_playLab_embedded_instruction: |-
         Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
@@ -10257,6 +10933,7 @@
       courseE_artist_ramp8_instruction: Now make a square using Artist!
       courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp8_2018_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_2018_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
       courseE_artist_ramp9_2_instruction: |-
         Use what you've learned to draw this
@@ -10264,6 +10941,9 @@
       courseE_artist_ramp9_2018_instruction: |-
         Use what you've learned to draw this
         triangle.
+      courseE_artist_ramp9_2_2018_instruction: |-
+        Use what you've learned to draw
+        this triangle.
       courseE_bee_concept1_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු
         කර ගන්න.\nකැදලි ලූපයක් භාවිතා කරන්න. "
       courseE_bee_concept1_2018_instruction: |-
@@ -10273,8 +10953,9 @@
         Help the bee make all of the honey. You
         can only make honey at a honeycomb, but you can check any space to see if
         there is a honeycomb.
-      courseE_bee_concept2_2018_instruction: |
-        Help the bee make all of the honey.
+      courseE_bee_concept2_2018_instruction: 'Help the bee make all of the honey.
+
+'
       courseE_bee_concept3_instruction: |-
         Collect all of the nectar using  as few
         blocks as possible.
@@ -10293,7 +10974,7 @@
       courseE_bee_concept5_2018_instruction: |-
         Help the bee collect the nectar from
         the flowers?
-      courseE_bee_functions1_instruction: "හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න."
+      courseE_bee_functions1_instruction: හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න.
       courseE_bee_functions10_instruction: |-
         Solve this puzzle by creating a function
         that helps the bee go get all of the honey before returning back to the main
@@ -10398,7 +11079,7 @@
         artist back in place to draw the next line. Which of these code blocks can
         you place at the end of the outermost loop to draw the whole grid?
       courseE_farmer_functions1_instruction: |-
-        Help the farmer get to the pumpkin
+        Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
         \ Use `if` statements to write the code to check and harvest each one.   "
@@ -10409,13 +11090,13 @@
         Use your new function twice
         to solve this puzzle.
       courseE_farmer_functions1_2018_instruction: |-
-        Help the farmer get to the pumpkin
-        and pick it.
+        Help the harvester get to the
+        pumpkin and pick it.
       courseE_farmer_functions1a_instruction: |-
-        Now help the farmer pick the corn,
+        Now help the harvester pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions1a_2018_instruction: |-
-        Now help the farmer pick the
+        Now help the harvester pick the
         corn, lettuce, **and** pumpkin.
       courseE_farmer_functions2_instruction: |-
         Now, there will be a different number
@@ -10432,10 +11113,10 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn and
+        Help the harvester pick the corn and
         pumpkins.
       courseE_farmer_functions2b_2018_instruction: |-
-        Help the farmer pick the corn
+        Help the harvester pick the corn
         and pumpkins.
       courseE_farmer_functions2ba_instruction: |-
         Help the farmer pick the corn and
@@ -10501,11 +11182,11 @@
         program to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Help the farmer find her way down
+        Help the harvester find her way down
         this confusing path and to the pumpkin by turning left at the corn and right
         at the lettuce.
       courseE_farmer_functions7b_2018_instruction: |-
-        Help the farmer find her way
+        Help the harvester find her way
         down this confusing path and to the pumpkin by turning left at the corn and
         right at the lettuce.
       courseE_farmer_functions8_instruction: |-
@@ -10594,24 +11275,44 @@
       courseE_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
+      courseE_maze_predict1_2018_instruction: |-
+        This code includes a new block. What
+        do you think would happen if you press the "Run" block?
       courseE_maze_ramp1_instruction: |-
         For this puzzle, drag all of the blocks together
         and click "Run" to watch it go!
       courseE_maze_ramp13_instruction: Time for one last puzzle to pull it all together!
+      courseE_maze_ramp1_2018_instruction: |-
+        For this puzzle, drag all of the blocks
+        together and click "Run" to watch it go!
       courseE_maze_ramp2_instruction: |-
         Drag an extra `move forward` block out of
         the toolbox, then attach all blocks to `when run` to finish your code.
+      courseE_maze_ramp2_2018_instruction: |-
+        Drag an extra `move forward` block out
+        of the toolbox, then attach all blocks to `when run` to finish your code.
       courseE_maze_ramp3_instruction: |-
         There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseE_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseE_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseE_maze_ramp5_instruction: Avoid the TNT.
+      courseE_maze_ramp5_2018_instruction: Avoid the TNT.
       courseE_maze_ramp6_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
+      courseE_maze_ramp6_2018_instruction: |-
+        "Keep calm and help me find the bad
+        pig. Otherwise I might get angry!"
       courseE_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseE_maze_ramp7_2018_instruction: |-
+        Use what you've learned to get the bird
+        to the pig!
       courseE_maze_ramp_predict1_instruction: |-
         This code includes a new block. What
         do you think would happen if you press the "Run" block?
@@ -10925,8 +11626,9 @@
         Build this design where the squares
         have 80 pixel sides and the artist jumps 80 pixels over and down between each
         one.
-      courseF_artist_variables7_instruction: |
-        Draw a triangle with 150 pixels sides.
+      courseF_artist_variables7_instruction: 'Draw a triangle with 150 pixels sides.
+
+'
       courseF_artist_variables7_2018_instruction: "Draw a triangle with 150 pixels\nsides. "
       courseF_artist_variables8_instruction: |-
         Rebuild the triangle code from the
@@ -11015,8 +11717,9 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals2_2018_instruction: "Check underneath each cloud to\nsee
         if it is hiding a flower before you get nectar.  "
-      courseF_bee_conditionals3_instruction: |
-        Help the bee collect all of the nectar.
+      courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar.
+
+'
       courseF_bee_conditionals3_2018_instruction: "Help the bee collect all of the\nnectar. "
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -11392,6 +12095,9 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      coursea_maze_ramp1_2018_instruction: |-
+        For this puzzle, snap the blocks together
+        and click "Run"!
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -11415,31 +12121,66 @@
         Create your own Flappy game. You can change all the
         visuals and all the rules, even the gravity. When you're done, click Finish
         to let friends try your game on their phones.
+      flappy_11_2018_instruction: |-
+        Create your own Flappy game. You can change all
+        the visuals and all the rules, even the gravity. When you're done, click
+        Finish to let friends try your game on their phones.
+      flappy_1_2018_instruction: |-
+        Attach a block to the "when click" block, then
+        press "Run". Click or tap the screen to move Flappy to the target.
       flappy_2_instruction: |-
         Now we've added some ground.  Attach a block to the
         "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
         crashes.
+      flappy_2_2018_instruction: |-
+        Now we've added some ground.  Attach a block to
+        the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
+        crashes.
       flappy_3_instruction: |-
         The "when run" block allows you to run code when your
         game starts.  Try setting the level speed and flapping to the target.
+      flappy_3_2018_instruction: |-
+        The "when run" block allows you to run code when
+        your game starts.  Try setting the level speed and flapping to the target.
       flappy_4_instruction: |-
         Flappy will fly through obstacles unless you write code
         to make him crash. Attach a block to the "when hit an obstacle" block. Your
         code needs to 'END GAME' when Flappy crashes into the first set of pipes.
+      flappy_4_2018_instruction: |-
+        Flappy will fly through obstacles unless you write
+        code to make him crash. Attach a block to the "when hit an obstacle" block.
+        Your code needs to 'END GAME' when Flappy crashes into the first set of
+        pipes.
       flappy_5_instruction: |-
         Let's add a scoreboard, and count points when Flappy
         makes it past obstacles. Add to the "when pass an obstacle" block, and then
         score a point by flying Flappy through the first set of pipes.
-      flappy_6_instruction: "බලන්න ඔයාට පුලුවන්ද කියලා කුරුල්ලාව චුට්ටක් හෝ ගොඩක්
-        තටු ගස්සවලා ලකුණක් ගන්න."
+      flappy_5_2018_instruction: |-
+        Let's add a scoreboard, and count points when
+        Flappy makes it past obstacles. Add to the "when pass an obstacle" block,
+        and then score a point by flying Flappy through the first set of pipes.
+      flappy_6_instruction: බලන්න ඔයාට පුලුවන්ද කියලා කුරුල්ලාව චුට්ටක් හෝ ගොඩක් තටු
+        ගස්සවලා ලකුණක් ගන්න.
+      flappy_6_2018_instruction: |-
+        See if you can still score a point after making
+        Flappy flap either a smaller or larger amount.
       flappy_7_instruction: '"when run" කොටසට තවත් කොටසක් එකතු කර සිදුවීම වෙනස් කිරීමට
         උත්සාහ කරන්න.'
+      flappy_7_2018_instruction: |-
+        Next, try changing the scene by attaching another
+        block to the "when run" block.
       flappy_8_instruction: |-
         You can set visuals anytime, not just when the game
         starts. Try setting a RANDOM scene when other events happen, for example,
         when passing an obstacle.
-      flappy_9_instruction: "බාධයකට අසුවූ විට ක්‍රීඩාව නවත්වනවා වෙනුවට ලකුණු 0 කිරීමට
-        පුලුවන්දැයි බලන්න."
+      flappy_8_2018_instruction: |-
+        You can set visuals anytime, not just when the
+        game starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle.
+      flappy_9_instruction: බාධයකට අසුවූ විට ක්‍රීඩාව නවත්වනවා වෙනුවට ලකුණු 0 කිරීමට
+        පුලුවන්දැයි බලන්න.
+      flappy_9_2018_instruction: බාධයකට අසුවූ විට ක්‍රීඩාව නවත්වනවා වෙනුවට ලකුණු 0
+        කිරීමට පුලුවන්දැයි බලන්න.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
@@ -11572,9 +12313,9 @@
       grade1_artist_loopsFP_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
-      grade1_maze_sequence1_instruction: "දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න."
+      grade1_maze_sequence1_instruction: දෝෂයක්! මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න.
       grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
-      grade1_maze_sequence2_instruction: "මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!"
+      grade1_maze_sequence2_instruction: මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!
       grade1_maze_sequence3_instruction: |
         Can you add 2 blocks to get the bird to
         the pig.
@@ -11591,8 +12332,9 @@
       grade1_maze_sequence8_instruction: |-
         Debug this level by adding blocks to get
         me to the pig!
-      grade1_maze_sequence9_instruction: |
-        Go around the TNT to get me to the pig!
+      grade1_maze_sequence9_instruction: 'Go around the TNT to get me to the pig!
+
+'
       grade1_maze_sequenceA_instruction: |-
         Challenge: Move me around the TNT to get
         to the pig.
@@ -11659,7 +12401,7 @@
       grade2_CaringForNewPet_1_instruction: |-
         Drag an extra `move forward` block out
         of the toolbox to finish your code.
-      grade2_CaringForNewPet_10_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
+      grade2_CaringForNewPet_10_instruction: මාව ඌරා ළඟට ගෙනියන්න!
       grade2_CaringForNewPet_11_instruction: |-
         "Keep calm and help me find the bad
         pig."
@@ -11676,11 +12418,11 @@
       grade2_CaringForNewPet_3_instruction: |-
         "Trace the path and lead me to the
         silly pig. Avoid TNT or feathers will fly!"
-      grade2_CaringForNewPet_3D_instruction: "මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!"
+      grade2_CaringForNewPet_3D_instruction: මාව ඌරා ගාවට ගෙන යාමට මෙම කේතය හදන්න!
       grade2_CaringForNewPet_4_instruction: |-
         "Keep calm and help me find the bad
         pig. Otherwise I might get angry!"
-      grade2_CaringForNewPet_5_instruction: "මාව ඌරා ළඟට ගෙනියන්න!"
+      grade2_CaringForNewPet_5_instruction: මාව ඌරා ළඟට ගෙනියන්න!
       grade2_CaringForNewPet_6_instruction: |-
         Challenge: Guide me to the green evilness!
         (Watch out for TNT)
@@ -11690,14 +12432,14 @@
       grade2_MakeDogTag_1_instruction: |-
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
-      grade2_MakeDogTag_10_instruction: "දැන් ඔයා කැමති ඕනම එකක් අඳින්න!"
+      grade2_MakeDogTag_10_instruction: දැන් ඔයා කැමති ඕනම එකක් අඳින්න!
       grade2_MakeDogTag_2_instruction: |-
         This spaceship needs a window!\r
         \r
         Each
         side of the inner square is 100 pixels and all of the angles are 90 degrees.
-      grade2_MakeDogTag_3_instruction: "මෙම බළලා වෙනුවෙන් නිවස සම්පූර්ණ කිරීමට මට
-        උපකාර කරන්න."
+      grade2_MakeDogTag_3_instruction: මෙම බළලා වෙනුවෙන් නිවස සම්පූර්ණ කිරීමට මට උපකාර
+        කරන්න.
       grade2_MakeDogTag_4_instruction: |-
         මේ නිවසට වහලයක් අවශ්‍යයි! ඒ සඳහා ත්‍රිකෝණයක් අඳින්න.
         ඉඟිය : ත්‍රිකෝණයේ පාද තුනම සමාන දිගින් යුක්ත වේ.
@@ -11706,7 +12448,7 @@
         \r
         Draw this
         diamond with 200 pixel sides.
-      grade2_MakeDogTag_6_instruction: "නිදහස් ක්‍රීඩාකිරීම! ඔබ කැමති ඕනෑම දෙයක් අඳින්න."
+      grade2_MakeDogTag_6_instruction: නිදහස් ක්‍රීඩාකිරීම! ඔබ කැමති ඕනෑම දෙයක් අඳින්න.
       grade2_MakeDogTag_7_instruction: |-
         One more tag.  This is a triangle for Pi.\r
         (Each
@@ -11744,12 +12486,12 @@
       grade2_PuppyLoops_4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_5_instruction: "මාව ඌරා ළඟට ඉක්මනින්ම ගෙන යාහැකි මාර්ගය කුමක්ද?"
+      grade2_PuppyLoops_5_instruction: මාව ඌරා ළඟට ඉක්මනින්ම ගෙන යාහැකි මාර්ගය කුමක්ද?
       grade2_PuppyLoops_6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence to get me to the pig?
-      grade2_PuppyLoops_7_instruction: "ඔබ උගත් දේවල් භාවිතා කරන්න මාව සුරියකාන්ත
-        මල වෙත ලගාකරවීමට!"
+      grade2_PuppyLoops_7_instruction: ඔබ උගත් දේවල් භාවිතා කරන්න මාව සුරියකාන්ත මල
+        වෙත ලගාකරවීමට!
       grade2_PuppyLoops_8_instruction: |-
         බළලා ගේ රැවුල් ගස්වල් සඳහා මෙම කේතය වැරදියි.
         \r
@@ -11802,7 +12544,7 @@
       grade2_maze_debuggingPre_instruction: |-
         Play with these blocks to see what they
         make the bird do!
-      grade2_maze_intro10_instruction: "මෙම ප්‍රහේලිකාව විසඳන්න."
+      grade2_maze_intro10_instruction: මෙම ප්‍රහේලිකාව විසඳන්න.
       grade2_maze_intro2_instruction: |-
         Welcome to Code Studio! Here you will learn
         to use blocks to build programs. Press `Run` to run a program now!
@@ -11821,7 +12563,7 @@
         be hard and will probably take you a couple of tries to solve.  If you don’t
         solve it after several tries, don’t worry!  It will be in the Play Zone at
         the end of the stage and you can try it again when you’ve had more practice.
-      grade2_maze_intro9_instruction: "මෙම ප්‍රහේලිකාව විසඳන්න."
+      grade2_maze_intro9_instruction: මෙම ප්‍රහේලිකාව විසඳන්න.
       grade2_playlab_project_1_instruction: |-
         Now, write a program to make Waddles
         move around using the up / down / left /right keys to hit all of the targets!
@@ -11957,8 +12699,8 @@
         to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Conditionals_1 BAD_instruction: "ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු
-        කරගැනීම සදහා."
+      grade3_Conditionals_1 BAD_instruction: ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු
+        කරගැනීම සදහා.
       grade3_Conditionals_1_instruction: |-
         මම බඩගිනි වුන මී මැස්සෙක්!\r
         අඩුම බ්ලොක් ප්‍රමාණයක්
@@ -11999,12 +12741,12 @@
         is equal to 1 using the `if nectar` block.
       grade3_Conditionals_4_instruction: 'මෙම මලෙහි පැණි තිබේදැයි කියා සොයාබැලීමට  මෙම
         මල "if" වරණයකින් පරීක්ෂා කරන්න '
-      grade3_Conditionals_5_instruction: "මල් පැණි තිබුනොත් පමණක්   එක එක මල් වල පැණි
-        එකතු කරන්න "
+      grade3_Conditionals_5_instruction: 'මල් පැණි තිබුනොත් පමණක්   එක එක මල් වල පැණි
+        එකතු කරන්න '
       grade3_Conditionals_6_instruction: "\nමෙම ක්ෂේත්‍රයේ රතු හා දම් පැහැති මල් පවතී
         . රතු පැහැති මල් වල  දන්නා ප්‍රමාණයකින් පැණි අඩංගු වේ. නමුත් දම් පති මල් වල
         අඩංගු පැණි ප්‍රමාණය නොදනී .සියලුම පැණි  එකතු කරන්න  "
-      grade3_Conditionals_7_instruction: "හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න."
+      grade3_Conditionals_7_instruction: හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න.
       grade3_Conditionals_8_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
         fly around the yard and collect nectar only from the flowers that have\nsome. "
       grade3_Conditionals_9_instruction: |-
@@ -12013,8 +12755,8 @@
       grade3_Conditionals_TeacherIDo_instruction: |-
         Check this flower with an "if"
         block to see if there is any nectar available.
-      grade3_Debugging_1_instruction: "මෙම වරණ මට  අතෙන්ම කරදරකාරී (දෝෂ සහිත ) වේ.
-        දෝෂ නිවැරදි කිරීම සදහා සියලුම මල් පැණි එකතු කරන්න "
+      grade3_Debugging_1_instruction: 'මෙම වරණ මට  අතෙන්ම කරදරකාරී (දෝෂ සහිත ) වේ.
+        දෝෂ නිවැරදි කිරීම සදහා සියලුම මල් පැණි එකතු කරන්න '
       grade3_Debugging_5_instruction: |-
         That flower looks tasty! \r
         \r
@@ -12025,8 +12767,8 @@
         \r
         Fix the error(s)
         to collect all of the nectar.
-      grade3_Debugging_7_instruction: "දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
-        මී පැණි සැදීමට  "
+      grade3_Debugging_7_instruction: 'දෝෂ නිවැරදි කරන්න සියලුම පැණි එකතු කර ඒ සියලෙන්ම
+        මී පැණි සැදීමට  '
       grade3_Debugging_9_instruction: |-
         "Bee" patient with this one!\r
         \r
@@ -12049,7 +12791,7 @@
       grade3_Loops_12_instruction: |-
         Can you find the quickest way for the bee to
         collect all of the nectar and make all of the honey?
-      grade3_Loops_2_instruction: "මේවර, සියලුම මල්පැණි එකතු කරන්න ලූපයක් භාවිතා කරන්න."
+      grade3_Loops_2_instruction: මේවර, සියලුම මල්පැණි එකතු කරන්න ලූපයක් භාවිතා කරන්න.
       grade3_Loops_3_instruction: "`repeat` ලූපය භාවිතයෙන් සියලුම මල් පැණි එකතු කරන්න."
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
@@ -12328,7 +13070,7 @@
       grade4_arist_nested_loop_triangles3_instruction: |-
         Can you draw a hexagon by
         looping the triangle code?
-      grade4_arist_nested_loop_triangles4_instruction: "කිඹුලාගේ කටේ දත් අඳින්න!"
+      grade4_arist_nested_loop_triangles4_instruction: කිඹුලාගේ කටේ දත් අඳින්න!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Create a sun by nesting the
         starter code in another loop.\r
@@ -12560,7 +13302,7 @@
       grade4_bee_functions_instruction: |-
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
-      grade4_bee_functions1_instruction: "හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න."
+      grade4_bee_functions1_instruction: හැම මලකම ඇති පැණි සියල්ලම එකතු කරගන්න.
       grade4_bee_functions10_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
@@ -12578,7 +13320,7 @@
       grade4_bee_functions4_instruction: |-
         Use the `move and get nectar` function
         to collect all of the nectar.
-      grade4_bee_functions5_instruction: "මෙම ප්‍රහේලිකාව මැකෙනු ඇත!"
+      grade4_bee_functions5_instruction: මෙම ප්‍රහේලිකාව මැකෙනු ඇත!
       grade4_bee_functions6_instruction: |-
         Now write the function to collect nectar
         from the flowers.
@@ -12592,17 +13334,17 @@
       grade4_bee_functions9_instruction: |-
         Create a function that collects all of
         the nectar from each flower.
-      grade4_bee_nestedLoops0_instruction: "ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු කරගැනීම
-        සදහා."
+      grade4_bee_nestedLoops0_instruction: ලුපයක් භාවිතා කරන්න පැණි සියල්ල එකතු කරගැනීම
+        සදහා.
       grade4_bee_nestedLoops1_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු
         කර ගන්න.\nකැදලි ලූපයක් භාවිතා කරන්න. "
-      grade4_bee_nestedLoops2_instruction: "ඔබට අස්ථානගත වී ඇති කොටස් නිශ්චය කළ හැකි
-        ද?"
+      grade4_bee_nestedLoops2_instruction: ඔබට අස්ථානගත වී ඇති කොටස් නිශ්චය කළ හැකි
+        ද?
       grade4_bee_nestedLoops2a_instruction: |-
         Collect all of the nectar using  as
         few blocks as possible.
-      grade4_bee_nestedLoops3_instruction: "කැදලි ලූපයක් භාවිතයෙන් සියලුම මල් පැණි
-        එකතු කරන්න."
+      grade4_bee_nestedLoops3_instruction: කැදලි ලූපයක් භාවිතයෙන් සියලුම මල් පැණි
+        එකතු කරන්න.
       grade4_bee_nestedLoops4_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු
         කරගෙන මී වදය තුල මී පැණි සාදන්න.\\r\n\\r\nකැදලි ලූපය භාවිතා කරන්න. "
       grade4_bee_nestedLoops_assess_instruction: |-
@@ -12692,7 +13434,7 @@
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
-      grade4_playLab_proj_example1_instruction: "උපදෙස්"
+      grade4_playLab_proj_example1_instruction: උපදෙස්
       grade4_playLab_proj_example1a_instruction: |-
         Take a look at this project.  Do
         you see how it was made?
@@ -12714,7 +13456,7 @@
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
         function to collect all of the flags by moving the dog with the arrow keys.
-      grade4_prompt_test_instruction: "මෙය පරීක්ෂණ ක්‍රීඩා පරීක්ෂණාගාර මට්ටමයි."
+      grade4_prompt_test_instruction: මෙය පරීක්ෂණ ක්‍රීඩා පරීක්ෂණාගාර මට්ටමයි.
       grade4_review_artist1_instruction: |-
         Hi, I'm an artist. You can write code
         to make me draw almost anything. Use a few blocks to make me draw over the
@@ -12780,7 +13522,7 @@
         provided you with a grid of "pixels" that you can walk through and make
         designs by turning on only certain squares.  Can you have the artist draw
         "01010101" in binary in the first row?
-      grade5_artist_binary10_instruction: "ඉඟියක් ලබා ගැනීමට මෙතන ක්ලික් කරන්න."
+      grade5_artist_binary10_instruction: ඉඟියක් ලබා ගැනීමට මෙතන ක්ලික් කරන්න.
       grade5_artist_binary11_instruction: |-
         Free Play: Here's a blank canvas for
         you to draw on.  Have fun!
@@ -12808,7 +13550,7 @@
       grade5_artist_binary7_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
-      grade5_artist_binary8_instruction: "ඇඳීම අවසන් කරන්න."
+      grade5_artist_binary8_instruction: ඇඳීම අවසන් කරන්න.
       grade5_artist_binary9_instruction: |-
         Here's a higher resolution canvas to draw
         on - 16 pixels by 16 pixels!\r
@@ -13372,8 +14114,9 @@
       iceage_click_hello_2018_instruction: "Can you help Sid call for his friends\nwhen
         you click on him? "
       iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_play_2018_instruction: |
-        Time to create your own game or story!
+      iceage_free_play_2018_instruction: 'Time to create your own game or story!
+
+'
       iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
         story! "
       iceage_hello1_instruction: |-
@@ -13430,9 +14173,9 @@
       iceage_warn_ice_age_2018_instruction: |-
         Change the scene to an icy background
         and set Sid’s (actor 1) speed to fast.
-      jessie-test_instruction: "උපදෙස් බොහෝමයක්"
-      k-1 maze 1_instruction: "ඔබට පුලුවන්ද මාව බටහිර දෙසට යොමු කරවන්න ඌරා වෙත ලගා
-        වීම සදහා?"
+      jessie-test_instruction: උපදෙස් බොහෝමයක්
+      k-1 maze 1_instruction: ඔබට පුලුවන්ද මාව බටහිර දෙසට යොමු කරවන්න ඌරා වෙත ලගා
+        වීම සදහා?
       k1stickerfreeplay_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
@@ -13529,6 +14272,41 @@
         to glitch out! \r
         \r
         Delete the extra bit to restore Mario back to normal!
+      pet game 1_instruction: |-
+        Use the "make a new sprite" block to make yourself
+        a pet!
+      pet game 2_instruction: |-
+        Your pet needs some exercise! Use the "add behavior"
+        block to get them moving.
+      pet game 3_instruction: |-
+        Pets love toys! Use a second "make sprite" block
+        to give your pet a toy, then use the "move towards" behavior to make your
+        pet run to their new toy.
+      pet game 4_instruction: |-
+        When your pet gets to their toy, they get excited!
+        Use the "when touches" block to detect when your pet gets to their toy.\r
+        \r
+        When
+        that happens, use the "remove behavior" block to make them stop walking,
+        and the "add behavior" block to make them have a dance party!
+      pet game 5_instruction: |-
+        You can add lots more things for your pet to interact
+        with! Play around with the "set sprite" block and make more stuff anywhere
+        you want it!
+      pet game 6_instruction: |-
+        It's important for pets to learn to follow commands.
+        Use the "when clicked" block to teach your pet to only start wandering after
+        you click on them.
+      pet game 7_instruction: |-
+        Pets need to learn to stop, too! Use the "when clicked"
+        block to teach your pet to stop wandering after you click on them.
+      pet game 8_instruction: |-
+        Your pet now has two toys! Use the "when clicked"
+        block to get them to move to the toy you click on
+      pet game 9_instruction: |-
+        Your pet has been so good, they deserve a treat. Use
+        the "add behavior" block to make the bone draggable, then drag it to your
+        pet.
       playEventsK1_instruction: |-
         This game is called "Play Lab".  See if you can
         figure out what each block does.
@@ -13634,8 +14412,9 @@
       sample8_instruction: |-
         Look at this trove of coins! How many can you get the
         adventurer to grab?
-      sample9_instruction: |
-        Use loops to help the artist connect all of the dots.
+      sample9_instruction: 'Use loops to help the artist connect all of the dots.
+
+'
       sample9a_instruction: |-
         The wizard has found his potions!  Use everything you
         have learned to help him collect them.
@@ -13678,12 +14457,12 @@
       subgoalU3L2_TurtleSquare_right_instruction: |-
         Draw a square to the front and
         to the right of the starting location. (Click to show full instructions)
-      template test_instruction: "සිදුවන්නේ කුමක්ද"
+      template test_instruction: සිදුවන්නේ කුමක්ද
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,
         but can't get it right.  Can you help?
-      test_sarah_instruction: "හායි හායි"
-      u3-old-drawing-view_instruction: "මෙය කරන්න"
+      test_sarah_instruction: හායි හායි
+      u3-old-drawing-view_instruction: මෙය කරන්න
       valentine_artist_03_instruction: Now try something on your own!
       weird_playLab_instruction: |-
         About My Robot Project! Write code so that clicking

@@ -2,26 +2,26 @@
   data:
     game:
       name:
-        Unplug1: "پێسەكی زانستی كۆمپیتەر"
+        Unplug1: پێسەكی زانستی كۆمپیتەر
         Maze: Labyrint
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
-        Artist: "هونەرەكە"
+        Artist: هونەرەكە
         Unplug4: Algorithms
-        Artist2: "هونەرەكە ٢"
+        Artist2: هونەرەكە ٢
         Unplug5: Functions
-        Farmer: "جوتیارەكە"
+        Farmer: جوتیارەكە
         Unplug6: Conditionals
-        Artist3: "هونەرەكە ٣"
-        Unplug7: "گۆرانی نووسین"
+        Artist3: هونەرەكە ٣
+        Unplug7: گۆرانی نووسین
         Farmer2: The Farmer 2
         Unplug8: Abstraction
-        Artist4: "هونەرەكە ٤"
+        Artist4: هونەرەكە ٤
         Unplug9: Relay Programming
-        Farmer3: "جووتیارەكە ٣"
-        Unplug10: "ئینترنێت"
-        Artist5: "هونەرەكە ٥"
+        Farmer3: جووتیارەكە ٣
+        Unplug10: ئینترنێت
+        Artist5: هونەرەكە ٥
         Unplug11: Wrap-up
         MazeEC: Labyrint
         Bounce: Bounce
@@ -30,7 +30,7 @@
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: App Lab
-        ArtistEC: "هونەرەكە"
+        ArtistEC: هونەرەكە
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
@@ -507,7 +507,7 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
-        C1_happy_maps_unplugged: "نەخشەی دڵخۆش"
+        C1_happy_maps_unplugged: نەخشەی دڵخۆش
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -559,7 +559,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "گرێکان"
+        C4_loops_zombie: گرێکان
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -651,7 +651,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "گرێکان"
+        csp_applab_loops: گرێکان
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -751,6 +751,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -74,13 +74,13 @@
   "penDown": "nuleisk pieštuką",
   "penTooltip": "Pakelia arba nuleidžia pieštuką, kad pradėtų arba sustotų piešti.",
   "penUp": "pakelk pieštuką",
+  "pointTo": "point to",
   "pixels": "pikselių",
   "reinfFeedbackMsg": "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio.",
   "setAlpha": "nustatyti permatomumą",
   "setCharacter": "nustatyti personažą į {character}",
   "setColour": "spalva =",
   "setPattern": "šablonas = ",
-  "setStickerSize": "Set sticker size",
   "setWidth": "plotis = ",
   "shareDrawing": "Pasidalink savo piešiniu:",
   "showMe": "Parodyk man",
@@ -94,5 +94,6 @@
   "turnTooltip": "Pasuka menininką į kairę pasirinktu kampu laipsniais.",
   "turtleVisibilityTooltip": "Padaro menininką matomą arba nematomą.",
   "widthTooltip": "Pakeičia pieštuko plotį.",
+  "withSize": "with size",
   "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1."
 }

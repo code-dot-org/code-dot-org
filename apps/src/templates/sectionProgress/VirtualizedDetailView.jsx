@@ -1,48 +1,59 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
-import ProgressBubble from '../progress/ProgressBubble';
+import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import styleConstants from '../../styleConstants';
+import {
+  sectionDataPropType,
+  scriptDataPropType,
+  studentLevelProgressPropType,
+  getColumnWidthsForDetailView
+} from './sectionProgressRedux';
+import color from "../../util/color";
+import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE, PROGRESS_BUBBLE_WIDTH} from './multiGridConstants';
+import i18n from '@cdo/locale';
+import SectionProgressNameCell from './SectionProgressNameCell';
+
+const ARROW_PADDING = 60;
 
 const styles = {
-  cell: {
-    padding: 10,
-    width: '100%',
+  numberHeader: {
+    ...progressStyles.lessonNumberHeading,
+    margin: 0,
+    paddingLeft: 16,
+    width: 39,
   },
-  multigrid: {
-    border: '1px solid #ddd',
+  lessonHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: 9,
   },
-  bottomLeft: {
-    borderRight: '2px solid #aaa',
-    backgroundColor: '#f7f7f7',
+  // Arrow ---> built with CSS requires negative margin
+  lessonLine: {
+    marginTop: 11,
+    marginRight: -8,
+    width: 100,
+    height: 2,
+    backgroundColor:color.charcoal,
   },
-  topLeft: {
-    borderBottom: '2px solid #aaa',
-    borderRight: '2px solid #aaa',
-    fontWeight: 'bold',
+  lessonArrow: {
+    border: 'solid ' + color.charcoal,
+    borderWidth: '0 2px 2px 0',
+    display: 'inline-block',
+    padding: 3,
+    transform: 'rotate(-45deg)',
+    WebkitTransform: 'rotate(-45deg)',
   },
-  topRight: {
-    borderBottom: '2px solid #aaa',
-    fontWeight: 'bold',
-  }
 };
 
-const columnWidths = [150, 50, 100, 300, 50];
-
-export default class VirtualizedDetailView extends Component {
+class VirtualizedDetailView extends Component {
 
   static propTypes = {
-    section: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      students: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })).isRequired
-    }).isRequired,
-    scriptData: PropTypes.shape({
-      stages: PropTypes.arrayOf(PropTypes.shape({
-        levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      })),
-      id: PropTypes.number.isRequired,
-    }).isRequired,
+    section: sectionDataPropType.isRequired,
+    scriptData: scriptDataPropType.isRequired,
+    studentLevelProgress: studentLevelProgressPropType.isRequired,
+    columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   state = {
@@ -53,63 +64,124 @@ export default class VirtualizedDetailView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
+    // Subtract 2 to account for the 2 header rows.
+    // We don't want leave off the first 2 students.
+    const studentStartIndex = rowIndex-2;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = columnIndex-1;
+
+    // Override default cell style from multigrid
+    let cellStyle = {
+      ...style,
+      ...progressStyles.cell,
+    };
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      cellStyle = {
+        ...cellStyle,
+        backgroundColor: color.background_gray,
+      };
+    }
 
     return (
-      <div className={styles.Cell} key={key} style={style}>
+      <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={styles.cell}>Lesson</span>
-        )}
-        {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={styles.cell}>Level Type</span>
-        )}
-        {(rowIndex >= 2 && columnIndex === 0) && (
-          <span style={styles.cell}>
-            <a href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[rowIndex-2].id}/script/${scriptData.id}`}>
-              {section.students[rowIndex-2].name}
-            </a>
+          <span style={progressStyles.lessonHeading}>
+            {i18n.lesson()}
           </span>
         )}
+        {(rowIndex === 0 && columnIndex >= 1) && (
+          <div style={styles.lessonHeaderContainer}>
+            <div style={styles.numberHeader}>
+              {columnIndex}
+            </div>
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>
+              </div>
+            }
+            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+              <div>
+                <i style={styles.lessonArrow}></i>
+              </div>
+            }
+          </div>
+        )}
+        {(rowIndex === 1 && columnIndex === 0) && (
+          <span style={progressStyles.lessonHeading}>
+            {i18n.levelType()}
+          </span>
+        )}
+        {(rowIndex === 1 && columnIndex >= 1) && (
+          <span>
+            {scriptData.stages[stageIdIndex].levels.map((level, i) =>
+              <FontAwesome
+                className={level.icon ? level.icon: "fas fa-question"}
+                style={progressStyles.icon}
+                key={i}
+              />
+            )}
+          </span>
+        )}
+        {(rowIndex >= 2 && columnIndex === 0) && (
+          <SectionProgressNameCell
+            name={section.students[studentStartIndex].name}
+            studentId={section.students[studentStartIndex].id}
+            sectionId={section.id}
+            scriptId={scriptData.id}
+          />
+        )}
         {rowIndex > 1 && columnIndex > 0 && (
-          <ProgressBubble
-            level={{
-              levelNumber: 3,
-              status: "complete",
-              url: "/foo/bar",
-              icon: "fa-document"
-            }}
-            disabled={false}
+          <StudentProgressDetailCell
+            studentId={section.students[studentStartIndex].id}
+            section={section}
+            studentLevelProgress={studentLevelProgress}
+            stageId={stageIdIndex}
+            scriptData={scriptData}
           />
         )}
       </div>
     );
   };
 
-  getColumnWidth({index}) {
-    return columnWidths[index];
-  }
+  getColumnWidth = ({index}) => {
+    return this.props.columnWidths[index] || 0;
+  };
 
   render() {
-    const {section} = this.props;
+    const {section, scriptData} = this.props;
+    // Add 2 to account for the 2 header rows
     const rowCount = section.students.length + 2;
+    // Add 1 to account for the student name column
+    const columnCount = scriptData.stages.length + 1;
+    // Calculate height based on the number of rows
+    const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
+    // Use a 'maxHeight' of 680 for when there are many rows
+    const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
         <MultiGrid
           {...this.state}
           cellRenderer={this.cellRenderer}
           columnWidth={this.getColumnWidth}
-          columnCount={5}
+          columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={300}
-          rowHeight={40}
+          rowHeight={ROW_HEIGHT}
+          height={tableHeight}
           rowCount={rowCount}
-          style={styles.multigrid}
-          styleBottomLeftGrid={styles.bottomLeft}
-          styleTopLeftGrid={styles.topLeft}
-          styleTopRightGrid={styles.topRight}
-          width={970}
+          style={progressStyles.multigrid}
+          styleBottomLeftGrid={progressStyles.bottomLeft}
+          styleTopLeftGrid={progressStyles.topLeft}
+          styleTopRightGrid={progressStyles.topRight}
+          width={styleConstants['content-width']}
         />
     );
   }
 }
+
+export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
+
+export default connect(state => ({
+  columnWidths: getColumnWidthsForDetailView(state),
+}))(VirtualizedDetailView);

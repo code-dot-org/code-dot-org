@@ -500,3 +500,30 @@
           que són accions que un ordinador supervisa constantment. El mestre polsarà
           botons en un paper a distància i els alumnes reaccionaran depenent de quin
           botó es prem.
+      GraphPaperProgramming_2018:
+        title: Programació de paper quadriculat
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
+          un grup d'ordres predefinides per dirigir els seus companys a reproduir
+          un dibuix.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Activitat sense connexió
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Activitat sense connexió
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionals
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+      DigitalFootprint_2018:
+        title: La vostra empremta digital
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: Imatges binàries
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
+          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
+          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
+          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
+          informació complexa (com ara imatges i colors) en binari, també.

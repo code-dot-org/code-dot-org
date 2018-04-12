@@ -1,16 +1,16 @@
 "ar-SA":
-  hour_of_code: "ساعة البرمجة"
-  hello: "مرحباً بالعالم"
-  'yes': "نعم"
-  'no': "لا"
-  select_language: "من فضلك اختر لغتك"
+  hour_of_code: ساعة البرمجة
+  hello: مرحباً بالعالم
+  'yes': نعم
+  'no': لا
+  select_language: من فضلك اختر لغتك
   upgrade_ie_message: Code.org سوف يوقف الدعم لمستخدم Internet Explorer 8, 9, and
     10. رجاءاً قم بتطوير متصفحك إلى متصفح حديث.
   upgrade_ie_message_csedweek: CSEdWeek.org سوف يوقف التحديث لمتصفح Internet Explorer
     8, 9, and 10. لطفاً قم بتطوير متصفحك لمتصفح حديث.
-  upgrade_ie_link: "اعرف المزيد"
-  en: "علوم الكمبيوتر"
-  computer_science_edweek: "الاسبوع التعليمي لعلوم الكمبيوتر"
+  upgrade_ie_link: اعرف المزيد
+  en: علوم الكمبيوتر
+  computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a
@@ -19,251 +19,250 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>جرّب</h1><h2>ساعة من البرمجة</h2><h3># تم حلّها</h3>"
-  anybody_can_learn: "بإمكان أي شخص أن يتعلم."
-  learn_now: "تعلم الآن"
-  petition_message: "كل طالب في كل مدرسة يجب أن يحصل على الفرصة لتعلم علوم الحاسوب"
-  petition_sign_message: "اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين."
-  petition_sign_message_support: "اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين."
-  petition_join_others: "انضم الى اﻷخرين"
-  name: "الاسم"
-  email: "البريد الإلكتروني"
-  zipcode: "الرمز البريدي أو اسم البلد"
-  submit: "تسجيل"
-  twentyhours_heading: "جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر"
+  anybody_can_learn: بإمكان أي شخص أن يتعلم.
+  learn_now: تعلم الآن
+  petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة لتعلم علوم الحاسوب
+  petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
+  petition_sign_message_support: اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين.
+  petition_join_others: انضم الى اﻷخرين
+  name: الاسم
+  email: البريد الإلكتروني
+  zipcode: الرمز البريدي أو اسم البلد
+  submit: تسجيل
+  twentyhours_heading: جرب  لدينا دورة العلوم مقدمة إلى الكمبيوتر
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
-  og_title: "كل طفل يستحق فرصة"
+  og_title: كل طفل يستحق فرصة
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
-  og_description: "كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير
-    كل شيء."
+  og_description: كل طالب في كل مدرسة يستحق الفرصة ليدرس علوم الحاسب . إنها تغير كل
+    شيء.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "ساعة من البرمجةهنا مدار للتعليمات البرمجية"
-  csedweek_og_description: "الساعة البرنامجية هي حركة عالمية تصل الى عشرات الملايين
+  csedweek_og_title: ساعة من البرمجةهنا مدار للتعليمات البرمجية
+  csedweek_og_description: الساعة البرنامجية هي حركة عالمية تصل الى عشرات الملايين
     من الطلاب على كافة الاعمار في اكثر من مءة ‏وثمانين لغة وفِي كثر من خمسة وأربعين
-    دولة."
+    دولة.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
-  hoc2014_students: "الطلاب"
-  hoc2014_try: "جربها"
-  hoc2014_teachers: "الاساتذة"
-  hoc2014_host: "قم باستضافة الحدث"
-  hoc2014_everyone: "الجميع"
-  hoc2014_support: "ادعم الحدث &#x25BE;"
-  hoc2014_whatishoc: "ماهي الساعة من البرمجة ؟"
+  hoc2014_students: الطلاب
+  hoc2014_try: جربها
+  hoc2014_teachers: الاساتذة
+  hoc2014_host: قم باستضافة الحدث
+  hoc2014_everyone: الجميع
+  hoc2014_support: ادعم الحدث &#x25BE;
+  hoc2014_whatishoc: ماهي الساعة من البرمجة ؟
   csedweek_map_header: '# كسيدويك/"ساعة من قانون" الأحداث في جميع أنحاء العالم#واثق'
-  csedweek_map_signup: "سجل وشارك الحدث الخاص بك"
+  csedweek_map_signup: سجل وشارك الحدث الخاص بك
   csedweek_map_search_placeholder: البحث عن فعاليات "ساعة البرمجة"
-  csedweek_map_search_search: "إبحث"
-  csedweek_map_search_reset: "إعادة تعيين"
-  csedweek_map_legend_title: "دليل"
-  csedweek_map_legend_event: "ساعة حدث التعليمات البرمجية"
-  csedweek_map_legend_cs_tech_jam: "الحدث الخاص"
-  cded_sign_up: "تسجيل"
-  cded_try_it: "جربها"
-  try_now: "جرب الآن"
-  california_heading: "اسأل الخاص بك مدرسة لتعليم علوم الحاسب الآلي"
-  california_text: "يمكن أن تقدم أي مدرس <a href='http://studio.code.org/'> دورات
-    مجانية</a>.  أي مدرسة ابتدائية يمكن <a href='http://code.org/educate/k5'> تدريس
-    علوم الحاسب الآلي</a>. أطلب من المدارس الثانوية إلى < href = 'البند http://code.org/educate/districts'
-    > الشريكة معنا."
-  california_button: "التعرف على المزيد"
-  flappy_heading: "عيد ميلاد flappy Code.org"
-  flappy_text: "تحولت Code.org 1 سنة من العمر فقط. <br/> <br/> يحتفل معنا بجعل اللعبة
-    <b>فلابي</b> المخصصة الخاصة بك. مدونة القواعد الخاصة بك، ومشاركتها مع الأصدقاء!"
-  view_english_site: "عرض الموقع باللغة الإنكليزية"
-  non_english_tutorials: "دروس مترجمة إلى لغات مختلفة:"
-  write_your_first_program: "اكتب برنامجك الاول"
+  csedweek_map_search_search: إبحث
+  csedweek_map_search_reset: إعادة تعيين
+  csedweek_map_legend_title: دليل
+  csedweek_map_legend_event: ساعة حدث التعليمات البرمجية
+  csedweek_map_legend_cs_tech_jam: الحدث الخاص
+  cded_sign_up: تسجيل
+  cded_try_it: جربها
+  try_now: جرب الآن
+  california_heading: اسأل الخاص بك مدرسة لتعليم علوم الحاسب الآلي
+  california_text: يمكن أن تقدم أي مدرس <a href='http://studio.code.org/'> دورات مجانية</a>.  أي
+    مدرسة ابتدائية يمكن <a href='http://code.org/educate/k5'> تدريس علوم الحاسب الآلي</a>.
+    أطلب من المدارس الثانوية إلى < href = 'البند http://code.org/educate/districts'
+    > الشريكة معنا.
+  california_button: التعرف على المزيد
+  flappy_heading: عيد ميلاد flappy Code.org
+  flappy_text: تحولت Code.org 1 سنة من العمر فقط. <br/> <br/> يحتفل معنا بجعل اللعبة
+    <b>فلابي</b> المخصصة الخاصة بك. مدونة القواعد الخاصة بك، ومشاركتها مع الأصدقاء!
+  view_english_site: عرض الموقع باللغة الإنكليزية
+  non_english_tutorials: 'دروس مترجمة إلى لغات مختلفة:'
+  write_your_first_program: اكتب برنامجك الاول
   learn_cs_concepts: تعلم المفاهيم الاساسية في علوم الكمبيوتر من خلال سحب و تركيب
     اوامر البرنامج. هذا الدرس عبارة عن فيديو من بطولة بيل غيتس، مارك زوكيربيررغ، ومن
     ثم لعبة Angry Birds و Plants vs. Zombies. ستتعلم تكرار الدوران "حلقة كرر"  ، اداة
     الشرط  "اذا كان"، و الخوارزميات الاساسية.
-  all_ages: "كل الاعمار"
-  beginner: "مبتدئ"
+  all_ages: كل الاعمار
+  beginner: مبتدئ
   n_participants: "# المشاركين"
-  go: "إبدأ"
-  thank_you_: "شكرا لك!"
-  congratulations: "تهانينا!"
-  congratulations_on_completing_hoc: "تهانينا على اكمالك ساعة واحدة من البرمجة"
+  go: إبدأ
+  thank_you_: شكرا لك!
+  congratulations: تهانينا!
+  congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   congratulations_volunteer: 'تهاني: الآن بعد أن جربت "ساعة من البرمجة"، <a href="https://code.org/volunteer">
     قم بالتسجيل للتطوع في الفصول دراسية</a> ومساعدة الطلاب تعلم "ساعة البرمجة"!'
-  congratulations_on_completing_course1: "تهانينا على إكمال دورة 1"
-  congratulations_on_completing_course2: "تهانينا على إكمال دورة 2"
-  congratulations_on_completing_course3: "تهانينا على إكمال دورة 3"
-  congratulations_on_completing_course4: "تهانينا على إكمال دورة 4"
+  congratulations_on_completing_course1: تهانينا على إكمال دورة 1
+  congratulations_on_completing_course2: تهانينا على إكمال دورة 2
+  congratulations_on_completing_course3: تهانينا على إكمال دورة 3
+  congratulations_on_completing_course4: تهانينا على إكمال دورة 4
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "تهانينا على إكمال دورة المعجل"
-  congrats_next_tutorials_title: "جرب هذه الدروس بعد ذلك"
+  congratulations_on_completing_accelerated: تهانينا على إكمال دورة المعجل
+  congrats_next_tutorials_title: جرب هذه الدروس بعد ذلك
   congrats_next_tutorials_desc: جرب هذه الدروس الأقصر و التي تدوم ساعة واحدة ، أو
     جرب <a href="%{current_path}/next"> دروس شركائنا</a>.
-  get_a_certificate_of_achievement: "أحصل على شهادة الانجاز"
-  view_course: "عرض الدرس"
-  view_unit: "وحدة العرض"
-  make_app: "أنشِئْ تطبيقًا"
-  congrats_guest_speaker_title: "اعثور على المتحدث الضيف لفصلك"
-  congrats_guest_speaker_desc: "والآن بعد أن الطلاب أنهوا دورة علوم الكمبيوتر ، والنظر
+  get_a_certificate_of_achievement: أحصل على شهادة الانجاز
+  view_course: عرض الدرس
+  view_unit: وحدة العرض
+  make_app: أنشِئْ تطبيقًا
+  congrats_guest_speaker_title: اعثور على المتحدث الضيف لفصلك
+  congrats_guest_speaker_desc: والآن بعد أن الطلاب أنهوا دورة علوم الكمبيوتر ، والنظر
     في الاحتفال و توصيله إلى الأشياء التي يمكن أن نبني في العالم الحقيقي من خلال دعوة
     ضيف الشرف ل فصلك. يمكنك استخدام خريطتنا من المتطوعين في الاتصال المتطوعين المحليين
     لزيارة الفصول الدراسية الخاصة بك ، أو البحث في أي مدينة للعثور على طلاب علوم الكمبيوتر
-    أو المهنيين الفنيين الذين هم على استعداد ل إلهام الطلاب عن بعد ، عبر دردشة الفيديو."
-  congrats_guest_speaker_cta: "البحث عن ضيف متكلم"
-  congrats_third_party_title: "استخدام المهارات الجديدة الخاصة بك مع هذه التطبيقات
-    و المواقع"
-  third_party_gradelevel_kto8: "الصفوف من الروضة -8"
-  third_party_gradelevel_kto2: "الصفوف من الروضة -٢"
-  third_party_gradelevel_2to8: "الصفوف 2-8"
-  third_party_gradelevel_4to12: "الصفوف 4-12"
-  third_party_gradelevel_5to12: "الصفوف 5-12"
-  third_party_gradelevel_6plus: "الصفوف 6+"
-  third_party_gradelevel_8plus: "الصفوف 8+"
-  third_party_platform_all: "البرنامج: شبكة الإنترنت، آي باد ونظام الأندرويد"
-  third_party_platform_mobile: "البرنامج: آي باد ونظام الأندرويد"
-  third_party_platform_web: "البرنامج: شبكة الإنترنت"
-  third_party_price_varies: "السعر: تختلف البرامج"
-  third_party_price_free: "السعر: مجانًا"
-  third_party_price_299: "السعر: 2.99$/تحميل"
-  third_party_price_individual: "السعر الفردي : تجربة مجانية  و25$ بالشهر"
-  third_party_price_school: "سعر المدرسة: خطط حرة & واحترافية في 2500 دولار +"
-  third_party_tynker_desc: "منصة الحوسبة الإبداعي تينكير ليساعد الأطفال على تطوير
-    التفكير الحسابي ومهارات البرمجة في متعة، طريقة مبتكرة وبديهية. لغتنا البرمجة المرئية
-    المبتكرة التفاعلية ذاتيان دورات وأنشطة البرمجة المستندة إلى لعبة سهلة بمثابة مقدمة
-    للبرمجة، وتمكين الأطفال من الابتكار وخلق."
-  third_party_tynker_btn_curriculum: "حاول المنهج الدراسي في تينكير للقراء في وقت
-    مبكر"
-  third_party_tynker_btn_site: "زر تينكر"
-  third_party_scratchjr_desc: "الابن الصفر هي لغة برمجة استهلالية التي تمكن صغار الأطفال
+    أو المهنيين الفنيين الذين هم على استعداد ل إلهام الطلاب عن بعد ، عبر دردشة الفيديو.
+  congrats_guest_speaker_cta: البحث عن ضيف متكلم
+  congrats_third_party_title: استخدام المهارات الجديدة الخاصة بك مع هذه التطبيقات
+    و المواقع
+  third_party_gradelevel_kto8: الصفوف من الروضة -8
+  third_party_gradelevel_kto2: الصفوف من الروضة -٢
+  third_party_gradelevel_2to8: الصفوف 2-8
+  third_party_gradelevel_4to12: الصفوف 4-12
+  third_party_gradelevel_5to12: الصفوف 5-12
+  third_party_gradelevel_6plus: الصفوف 6+
+  third_party_gradelevel_8plus: الصفوف 8+
+  third_party_platform_all: 'البرنامج: شبكة الإنترنت، آي باد ونظام الأندرويد'
+  third_party_platform_mobile: 'البرنامج: آي باد ونظام الأندرويد'
+  third_party_platform_web: 'البرنامج: شبكة الإنترنت'
+  third_party_price_varies: 'السعر: تختلف البرامج'
+  third_party_price_free: 'السعر: مجانًا'
+  third_party_price_299: 'السعر: 2.99$/تحميل'
+  third_party_price_individual: 'السعر الفردي : تجربة مجانية  و25$ بالشهر'
+  third_party_price_school: 'سعر المدرسة: خطط حرة & واحترافية في 2500 دولار +'
+  third_party_tynker_desc: منصة الحوسبة الإبداعي تينكير ليساعد الأطفال على تطوير التفكير
+    الحسابي ومهارات البرمجة في متعة، طريقة مبتكرة وبديهية. لغتنا البرمجة المرئية المبتكرة
+    التفاعلية ذاتيان دورات وأنشطة البرمجة المستندة إلى لعبة سهلة بمثابة مقدمة للبرمجة،
+    وتمكين الأطفال من الابتكار وخلق.
+  third_party_tynker_btn_curriculum: حاول المنهج الدراسي في تينكير للقراء في وقت مبكر
+  third_party_tynker_btn_site: زر تينكر
+  third_party_scratchjr_desc: الابن الصفر هي لغة برمجة استهلالية التي تمكن صغار الأطفال
     (الفئة العمرية 5-7) لإنشاء قصص تفاعلية والألعاب الخاصة بهم. الأطفال الأداة معا
     لبنات البرمجة الرسومية لجعل الأحرف التحرك، القفز والرقص والغناء. الأطفال يمكن
     تعديل الأحرف في محرر الطلاء، إضافة أصوات والأصوات الخاصة بهم، حتى إدراج صور لأنفسهم--ثم
-    استخدام كتل البرمجة جعل شخصياتهم تأتي في الحياة."
-  third_party_scratchjr_btn_curriculum: "تحميل المناهج الدراسية الابن الصفر"
-  third_party_scratchjr_btn_site: "زر Scratch Jr."
+    استخدام كتل البرمجة جعل شخصياتهم تأتي في الحياة.
+  third_party_scratchjr_btn_curriculum: تحميل المناهج الدراسية الابن الصفر
+  third_party_scratchjr_btn_site: زر Scratch Jr.
   third_party_scratch_desc: |-
     مع سكراتش, يمكنك برمجة قصصك التفاعلية, الألعاب, و الرسوم المتحركة و مشاركة إبداعاتك مع الأخرين في المجتمع على شبكة الانترنت.
     سكراتش يساعد الأشخاص اليافعين على تعلم التفكير بإبداع, الأسباب المنهجية, والعمل عن طريق مشاركة المهارات الضرورية للحياة في القرن الواحد و العشرين.
-  third_party_scratch_btn_curriculum: "حمّل المنهاج الدراسي لـِ سكراتش"
-  third_party_scratch_btn_forum: "منتدى سكراتش التعليمي"
-  third_party_scratch_btn_site: "زر Scratch"
+  third_party_scratch_btn_curriculum: حمّل المنهاج الدراسي لـِ سكراتش
+  third_party_scratch_btn_forum: منتدى سكراتش التعليمي
+  third_party_scratch_btn_site: زر Scratch
   third_party_lightbot_desc: |-
     في Lightbot, يجب على الطلاب تعلم برمجة روبوت من خلال كتابة الأوامر و حل الألغاز.
     قد يلعب الطلاب الألعاب من خلال المتصفح (يتطلب تحميل Flash Player), أو على الأندرويد أو أجهزة الأيفون و الأيباد. الطلاب يلعبون مجموعة من الالعاب في المستوى "المبتدئ" في Lightbot. و سوف يتعلمون كيف يخبرون جهاز الحاسوب ماذا يفعل من خلال سلسة من الأوامر البسيطة و الحصول على نتيجة العملية وذلك من خلال برنامج حاسوبي الذي قد تمت كتابته.
-  third_party_lightbot_btn_curriculum: "حمّل المنهاج الدراسي لـِ Lightbot"
-  third_party_lightbot_btn_site: "زر Lightbot"
-  third_party_khan_desc: "تعلم كيف تبرمج الرسوم, الحركات, و الألعاب باستخدام الجافا
+  third_party_lightbot_btn_curriculum: حمّل المنهاج الدراسي لـِ Lightbot
+  third_party_lightbot_btn_site: زر Lightbot
+  third_party_khan_desc: تعلم كيف تبرمج الرسوم, الحركات, و الألعاب باستخدام الجافا
     سكريبت (JavaScript بالأنجليزية) و معالجة جون ريسغ (ProcessingJS بالأنجليزية),
     أو تعلم كيف تُنشأ صفحات ويب من خلال (HTML & CSS). يمكنك مشاركة كل شيء قمت بإنشاءه,
-    أستكشف ما قام بصنعه الأخرون و تعلموا من بعضكم!"
-  third_party_khan_btn_learn: "تعلم CS مع أكاديمية خان"
-  third_party_khan_btn_forum: "منتدى أكاديمية خان للـ CS"
+    أستكشف ما قام بصنعه الأخرون و تعلموا من بعضكم!
+  third_party_khan_btn_learn: تعلم CS مع أكاديمية خان
+  third_party_khan_btn_forum: منتدى أكاديمية خان للـ CS
   third_party_appinv_desc: |-
     برنامج MIT هو أداة برمجية مبنية على أسس القطع و التي تسمح للجميع, حتى المبتدئين منهم, لبدأ البرمجة و بناء تطبيقات متاكملة لأجهزة الأندرويد.
     الوافدون الجدد لمجال أختراع التطبيقات يمكن أن يحصلوا على تطبيقهم الأول يعمل و يشتغل في خلال ساعة واحدة أو أقل, ويمكن للمبرمجين بناء تطبيقات أكثر تعقيداً بوقت أقل بكثير من الوقت اللازم لبنائها في الطرق التقليدية التي تستخدمها لغات البرمجة المبنية على الكتابة.
-  third_party_appinv_btn_curriculum: "تحميل منهج مخترع التطبيق 2"
-  third_party_appinv_btn_forum: "منتدى مخترع التطبيق 2"
-  third_party_appinv_btn_site: "زر مخترع التطبيق 2"
-  third_party_codehs_desc: "ويدخل قديس اللبنات الأساسية للبرمجة مع أشرطة الفيديو القصيرة،
+  third_party_appinv_btn_curriculum: تحميل منهج مخترع التطبيق 2
+  third_party_appinv_btn_forum: منتدى مخترع التطبيق 2
+  third_party_appinv_btn_site: زر مخترع التطبيق 2
+  third_party_codehs_desc: ويدخل قديس اللبنات الأساسية للبرمجة مع أشرطة الفيديو القصيرة،
     ومثال التعليمات البرمجية، والكثير من عمليات البرمجة التي تجعل الترميز موجوداً
     وممتعة للمبتدئين. للمدارس والمعلمين يوفر قديس المناهج وأدوات المعلم والمشتريات.
     للمتعلمين الفردية، يمكنك الحصول على التعليمات التي تحتاجها على طول الطريق من شبكة
-    من الأولياء."
-  third_party_codehs_btn_try: "مقدمة علوم الحاسب تعلم المزيد للمدارس"
-  third_party_codecademy_desc: "هي علينا إعادة النظر في التعليم من أسفل إلى أعلى.
-    الويب إعادة التفكير في كل شيء تقريبا--التجارة، والشبكات الاجتماعية، والرعاية الصحية،
-    وأكثر. نقوم ببناء التعليم العالم يحتاج-التعليم الأصلي حقاً الصافية الأولى."
-  third_party_codecademy_btn_curriculum: "تحميل مناهج اكاديمية كود"
-  third_party_codecademy_btn_site: "زر اكاديمية كود"
-  third_party_organization: "منظمة"
-  third_party_curriculum: "المناهج"
-  third_party_pricing: "التسعير"
-  third_party_cost_free: "مجاني للطلبة  والمدرسين"
+    من الأولياء.
+  third_party_codehs_btn_try: مقدمة علوم الحاسب تعلم المزيد للمدارس
+  third_party_codecademy_desc: هي علينا إعادة النظر في التعليم من أسفل إلى أعلى. الويب
+    إعادة التفكير في كل شيء تقريبا--التجارة، والشبكات الاجتماعية، والرعاية الصحية،
+    وأكثر. نقوم ببناء التعليم العالم يحتاج-التعليم الأصلي حقاً الصافية الأولى.
+  third_party_codecademy_btn_curriculum: تحميل مناهج اكاديمية كود
+  third_party_codecademy_btn_site: زر اكاديمية كود
+  third_party_organization: منظمة
+  third_party_curriculum: المناهج
+  third_party_pricing: التسعير
+  third_party_cost_free: مجاني للطلبة  والمدرسين
   third_party_cost_5permonth: 5$/ شهرياً لكل صف
   third_party_cost_299: 2.99$ / تحميل
-  third_party_cost_free_399: "التجربة مجانية, 399$ لكل فصل دراسي"
-  third_party_cost_free_2: "مجاني للتجربة : 2$ للطالب"
-  third_party_cost_free_10: "مجاني للتجربة : 9.99$ بالشهر"
+  third_party_cost_free_399: التجربة مجانية, 399$ لكل فصل دراسي
+  third_party_cost_free_2: 'مجاني للتجربة : 2$ للطالب'
+  third_party_cost_free_10: 'مجاني للتجربة : 9.99$ بالشهر'
   third_party_desc_5_4to8: 5 دروس تقريباً, وقد تصل إلى نحو 4 - 8 صفوف
-  third_party_desc_10to12_kto3: "حوالي 10-12 الدروس، وتوجه نحو الصفوف K-3"
-  third_party_desc_11_kto5: "الدروس حوالي الساعة 11، موجهة نحو درجات K-5"
-  third_party_desc_10to12_kto5: "حوالي 10-12 الدروس، موجهة نحو درجات K-5"
-  third_party_desc_40_4to8: "الدروس أكثر من 40، وتوجه نحو الدرجات 4-8"
-  third_party_desc_dozens_kto8: "العشرات من دروس لجميع الصفوف K-8"
-  third_party_desc_10to15_3to12: "بين الدروس 10 آند 15، موجهة نحو الصفوف 3-12"
-  third_party_desc_25to40_3to12: "من 25-40 الدروس، مخصصة للصفوف 3-12"
-  third_party_desc_20_2to8: "الدروس حوالي 20، موجهة نحو الصفوف 2-8"
-  third_party_desc_7to22_5to12: "بين الدروس 7 & 22، موجهة نحو الصفوف 5-12"
-  third_party_desc_20_4to12: "أكثر من 20 من الدروس، وتوجه نحو الصفوف 4-12"
-  enter_valid_age: "يرجى إختيار عمر صحيح"
-  enter_valid_email: "الرجاء ادخال عنوان بريد الكتروني صالح"
-  get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'>
-    تعلم بعد ساعة واحدة من البرمجة</a>"
-  get_a_certificate_message_after: "اضغط على الشهادة لتحميلها أو لطباعتها . استمر
-    بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات
-    أخرى لـ <a href='/learn/beyond'>تعلم ما وراء ساعة واحدة</a>."
-  thanks_for_submitting: "شكرا لتسجيلك!"
-  if_you_enjoyed: "اذا استمتعت بالتعلم , اسأل اصدقائك ليحاولون هم ايضا! نحن نرغب من
-    العالم كله ان يتعلم."
-  personalize_certificate: "تخصيص شهادتك"
-  share_achievement: "شارك انجازاتك"
-  beyond_hour_message: "إستمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا
-    الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من
-    البرمجة</a>."
-  leaderboards_for_hoc: "المتصدرين لبرنامج ساعة من البرمجة."
+  third_party_desc_10to12_kto3: حوالي 10-12 الدروس، وتوجه نحو الصفوف K-3
+  third_party_desc_11_kto5: الدروس حوالي الساعة 11، موجهة نحو درجات K-5
+  third_party_desc_10to12_kto5: حوالي 10-12 الدروس، موجهة نحو درجات K-5
+  third_party_desc_40_4to8: الدروس أكثر من 40، وتوجه نحو الدرجات 4-8
+  third_party_desc_dozens_kto8: العشرات من دروس لجميع الصفوف K-8
+  third_party_desc_10to15_3to12: بين الدروس 10 آند 15، موجهة نحو الصفوف 3-12
+  third_party_desc_25to40_3to12: من 25-40 الدروس، مخصصة للصفوف 3-12
+  third_party_desc_20_2to8: الدروس حوالي 20، موجهة نحو الصفوف 2-8
+  third_party_desc_7to22_5to12: بين الدروس 7 & 22، موجهة نحو الصفوف 5-12
+  third_party_desc_20_4to12: أكثر من 20 من الدروس، وتوجه نحو الصفوف 4-12
+  enter_valid_age: يرجى إختيار عمر صحيح
+  enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
+  get_a_certificate_message: نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'>
+    تعلم بعد ساعة واحدة من البرمجة</a>
+  get_a_certificate_message_after: اضغط على الشهادة لتحميلها أو لطباعتها . استمر بالتقدم
+    مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات أخرى لـ
+    <a href='/learn/beyond'>تعلم ما وراء ساعة واحدة</a>.
+  thanks_for_submitting: شكرا لتسجيلك!
+  if_you_enjoyed: اذا استمتعت بالتعلم , اسأل اصدقائك ليحاولون هم ايضا! نحن نرغب من
+    العالم كله ان يتعلم.
+  personalize_certificate: تخصيص شهادتك
+  share_achievement: شارك انجازاتك
+  beyond_hour_message: إستمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>,
+    أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما بعد ساعة من البرمجة</a>.
+  leaderboards_for_hoc: المتصدرين لبرنامج ساعة من البرمجة.
   support_url: http://support.code.org/
-  country: "الدولة"
-  city: "المدينة"
-  gender: "الجنس"
-  boys: "الاولاد"
-  girls: "البنات"
-  give_my_hour: "التبرع بساعتي لـ:"
-  girls_team: "فريق البنات"
-  boys_team: "فريق البنين"
-  tell_the_world: "اخبر  العالم باسره!"
-  thanks_for_voting: "شكرا للتصويت!"
-  share_on_facebook: "انشرها على الفيس بوك"
-  share_on_twitter: "انشرها على التويتر"
-  beyond_an_hour: "أبعد من ساعة من البرمجة >"
-  get_started: "إبدأ"
-  i_agree: "أوافق"
+  country: الدولة
+  city: المدينة
+  gender: الجنس
+  boys: الاولاد
+  girls: البنات
+  give_my_hour: 'التبرع بساعتي لـ:'
+  girls_team: فريق البنات
+  boys_team: فريق البنين
+  tell_the_world: اخبر  العالم باسره!
+  thanks_for_voting: شكرا للتصويت!
+  share_on_facebook: انشرها على الفيس بوك
+  share_on_twitter: انشرها على التويتر
+  beyond_an_hour: أبعد من ساعة من البرمجة >
+  get_started: إبدأ
+  i_agree: أوافق
   participant_select: "- اختر -"
-  participant_student: "طالب"
-  participant_parent: "الوالدين"
-  participant_educator: "المعلم"
-  participant_engineer: "مهندس برمجيات"
-  participant_other: "لا شيء من ما ورد أعلاه"
-  print_all: "طباعة الجميع"
-  print_ice_art: |
-    إطبع فن الثلج الخاص بك
-  create_art_with_zombie: "او القيام بعمل فني متقدم مع زومبي"
-  i_am_a: "انا"
-  never_spam: "نحن لن نزعجك"
-  enter_country: "أدخل اسم البلد اذا كنت خارج الولايات المتحدة"
-  used_infrequent_updates: "يستخدم فقط للحصول على تحديثات غير منتظمة"
-  privacy_practices_children: "راجع ممارسات الخصوصية للأطفال"
-  petition_thankyou: "شكرا لك على توقيع العريضة"
-  continue_learning_header: "مواصلة التعلم بعد ساعة واحدة من البرمجة"
-  continue_learning_body: "يوجد الكثير من الخيارات, يمكنك ان تتعلم عبر الانترنت او
-    في مدرسة حكومية او مخيم صيفي."
-  learn_code_studio: "جرب دروس استوديو البرمجة"
-  learn_next_level: "إستمر إلى المستوى التالي"
-  learn_online: "جرب دورات أخرى على الإنترنت"
-  learn_classes: "ابحث عن الفئات المحلية"
-  learn_back_to_minecraft: "تابع التعلم مع Minecraft"
+  participant_student: طالب
+  participant_parent: الوالدين
+  participant_educator: المعلم
+  participant_engineer: مهندس برمجيات
+  participant_other: لا شيء من ما ورد أعلاه
+  print_all: طباعة الجميع
+  print_ice_art: 'إطبع فن الثلج الخاص بك
+
+'
+  create_art_with_zombie: او القيام بعمل فني متقدم مع زومبي
+  i_am_a: انا
+  never_spam: نحن لن نزعجك
+  enter_country: أدخل اسم البلد اذا كنت خارج الولايات المتحدة
+  used_infrequent_updates: يستخدم فقط للحصول على تحديثات غير منتظمة
+  privacy_practices_children: راجع ممارسات الخصوصية للأطفال
+  petition_thankyou: شكرا لك على توقيع العريضة
+  continue_learning_header: مواصلة التعلم بعد ساعة واحدة من البرمجة
+  continue_learning_body: يوجد الكثير من الخيارات, يمكنك ان تتعلم عبر الانترنت او
+    في مدرسة حكومية او مخيم صيفي.
+  learn_code_studio: جرب دروس استوديو البرمجة
+  learn_next_level: إستمر إلى المستوى التالي
+  learn_online: جرب دورات أخرى على الإنترنت
+  learn_classes: ابحث عن الفئات المحلية
+  learn_back_to_minecraft: تابع التعلم مع Minecraft
   hoc_is_here: "#ساعة_البرمجة قادمة مجددأ في ديسمبر 5، 11. https://youtu.be/KsOIlDT145A."
-  just_did_hoc: "انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg"
-  just_did_course1: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 1 - تَفَقَّدْ ذَلِك! @codeorg"
-  just_did_course2: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 2 - تَفَقَّدْ ذَلِك! @codeorg"
-  just_did_course3: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 3 - تَفَقَّدْ ذَلِك! @codeorg"
-  just_did_course4: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 4 - تَفَقَّدْ ذَلِك! @codeorg"
+  just_did_hoc: 'انا عملت هاش تاك #ساعة_من_البرمجة - تحقق من ذلك! @codeorg'
+  just_did_course1: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 1 - تَفَقَّدْ ذَلِك! @codeorg
+  just_did_course2: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 2 - تَفَقَّدْ ذَلِك! @codeorg
+  just_did_course3: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 3 - تَفَقَّدْ ذَلِك! @codeorg
+  just_did_course4: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 4 - تَفَقَّدْ ذَلِك! @codeorg
   just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
@@ -276,8 +275,8 @@
     supporting @codeorg
   just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
     supporting @codeorg
-  just_did_accelerated: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر المُسَرّع - تَفَقَّدْ
-    ذَلِك! @codeorg"
+  just_did_accelerated: لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر المُسَرّع - تَفَقَّدْ ذَلِك!
+    @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
   just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
@@ -305,47 +304,47 @@
   twitter_teach_cs: |-
     يتَّفِقُ 9 مِن بَيْنَ كُلِّ 10 أشخاص، المدارِس يَنْبَغِي أن تُدَرِّسّ عِلْمَ الحَاسُوب.
     http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
-  twitter_cs_foundational: "من الضروري لكل تلميذ أن يتعلم علوم الحاسوب. https://youtu.be/QvyTEx1wyOY."
-  learn_hoc: "تعلم ساعة من البرمجة"
-  beyond_hoc: "بعد تعلم ساعة من البرمجة"
-  what_gender: "ماهو جنسك؟"
-  girl: "فتاة"
-  boy: "ولد"
-  help_recruit_coders: "ساعدنا في توظيف العديد من المبرمجين في فريقك!"
-  help_recruit: "ساعدنا في توظيف العديد من المبرمجين!"
-  lines_of_code: "فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان."
+  twitter_cs_foundational: من الضروري لكل تلميذ أن يتعلم علوم الحاسوب. https://youtu.be/QvyTEx1wyOY.
+  learn_hoc: تعلم ساعة من البرمجة
+  beyond_hoc: بعد تعلم ساعة من البرمجة
+  what_gender: ماهو جنسك؟
+  girl: فتاة
+  boy: ولد
+  help_recruit_coders: ساعدنا في توظيف العديد من المبرمجين في فريقك!
+  help_recruit: ساعدنا في توظيف العديد من المبرمجين!
+  lines_of_code: 'فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان.'
   lines_of_code_alt: "<b>#</b> اسطر الكود البرمجي التي كتبها الطلاب"
-  who_has_done_hoc: "من الذي اكمل #الساعة_من_البرمجة؟ @codeorg"
+  who_has_done_hoc: 'من الذي اكمل #الساعة_من_البرمجة؟ @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "متصدرين الساعة من البرمجة"
+  hoc_leaderboards: متصدرين الساعة من البرمجة
   students_and_lines: "%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines}
     اسطر من الكود البرمجي."
-  start_hoc: "ابدأ ساعة من البرمجة الان"
-  contact_form_topic_press: "الصحافة/وسائل الإعلام (مقابلة أو تحدث المشاركة)"
-  stats_nina: "خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام
-    - نينا نيكولس بيري، معلمة"
+  start_hoc: ابدأ ساعة من البرمجة الان
+  contact_form_topic_press: الصحافة/وسائل الإعلام (مقابلة أو تحدث المشاركة)
+  stats_nina: خلال كل يوم توصلنا لنفس النتائج &mdash;   مائة بالمائة من الالتزام -
+    نينا نيكولس بيري، معلمة
   stats_student: '"عرفت أنها كانت فرصة <b>لمرة واحدة في العمر</b>."- ماريانا الزاتي،
     الصف الخامس'
   stats_michael: '"لم أر طلابي مهتمين بالتعلم هكذا <b>من قبل</b> !." - مايكل كلارك،
     معلم'
-  studiobar_title: "إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>"
-  studiobar_title_nolink: "إستكشف ستوديو البرمجة"
-  studiobar_elementary_title: "الدورات الابتدائية"
-  studiobar_elementary_body: "دوراتنا الثلاث الجديدة لـ K&#8209;5"
-  studiobar_hoc_title: "الساعة من التعليمات البرمجية"
-  studiobar_hoc_body: "تعلم البرمجة مع الطيور الغاضبة"
-  studiobar_flappy_title: "رمز لعبة flappy"
-  studiobar_flappy_body: "اصنع و شارك لعبة فلابي الخاصة بك"
-  studiobar_teacher_title: "صنع من أجل المدرسين"
+  studiobar_title: إستكشف <a href='http://studio.code.org'>ستوديو البرمجة</a>
+  studiobar_title_nolink: إستكشف ستوديو البرمجة
+  studiobar_elementary_title: الدورات الابتدائية
+  studiobar_elementary_body: دوراتنا الثلاث الجديدة لـ K&#8209;5
+  studiobar_hoc_title: الساعة من التعليمات البرمجية
+  studiobar_hoc_body: تعلم البرمجة مع الطيور الغاضبة
+  studiobar_flappy_title: رمز لعبة flappy
+  studiobar_flappy_body: اصنع و شارك لعبة فلابي الخاصة بك
+  studiobar_teacher_title: صنع من أجل المدرسين
   studiobar_teacher_body: يعرض "استوديو التعليمات البرمجية Code Studio " في الفصل
     الدراسي الخاص بك
-  studiobar_frozen_title: "ساعة البرمجة"
-  studiobar_frozen_body: "أنجز شتاء العجائب مع انّا و إلزا"
-  studiobar_donate_title: "تبرع"
-  studiobar_donate_body: "طفل واحد يتعلم البرمجه مع كل دولار تتبرع به"
-  studiobar_shop_title: "تسوق"
-  studiobar_shop_body: "اكسر الصور النمطية. و قم بارتداء شعارنا بكل فخر."
+  studiobar_frozen_title: ساعة البرمجة
+  studiobar_frozen_body: أنجز شتاء العجائب مع انّا و إلزا
+  studiobar_donate_title: تبرع
+  studiobar_donate_body: طفل واحد يتعلم البرمجه مع كل دولار تتبرع به
+  studiobar_shop_title: تسوق
+  studiobar_shop_body: اكسر الصور النمطية. و قم بارتداء شعارنا بكل فخر.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -384,165 +383,165 @@
     " آدم، معلم'
   homepage_hero_text_stat_loc: "#loc  الأسطر من التعليمات البرمجية التي كتبها الطلاب"
   homepage_hero_text_stat_students: '#student_count حساب طالب في "استوديو البرمجة"'
-  homepage_hero_text_stat_served: "ساعة البرمجة: #served خدمة قدمت"
+  homepage_hero_text_stat_served: 'ساعة البرمجة: #served خدمة قدمت'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "الساعة من التعليمات البرمجية"
-  homepage_slot_text_frozen: "ملكة الثلج مع أنّا و إلزا"
-  homepage_slot_text_teacher: "لَوْحَة التَحَكُّم"
-  homepage_slot_text_studio: "كل دروسنا"
-  homepage_slot_text_course4: "الدورة 4"
-  homepage_slot_text_shop: "تسوق"
-  homepage_slot_text_flappy: "رمز لعبة flappy"
-  homepage_action_text_hoc: "ساعة من البرمجة لكل طالب."
+  homepage_slot_text_hoc: الساعة من التعليمات البرمجية
+  homepage_slot_text_frozen: ملكة الثلج مع أنّا و إلزا
+  homepage_slot_text_teacher: لَوْحَة التَحَكُّم
+  homepage_slot_text_studio: كل دروسنا
+  homepage_slot_text_course4: الدورة 4
+  homepage_slot_text_shop: تسوق
+  homepage_slot_text_flappy: رمز لعبة flappy
+  homepage_action_text_hoc: ساعة من البرمجة لكل طالب.
   homepage_action_text_num_served: "#  خدمة قدمت"
-  homepage_action_text_join_us: "انضم إلينا"
-  homepage_action_text_sign_up: "تسجيل"
-  homepage_action_text_try_it: "جربها"
-  homepage_action_text_volunteers: "مطلوب متطوعو اختصاص"
-  homepage_action_text_codevideo: "شاهد الفيديو"
-  homepage_action_text_teachervideo: "شاهد الفيديو"
-  homepage_action_text_watchvideo: "شاهد الفيديو"
-  homepage_action_text_girlvideo: "الهام بنت"
-  homepage_action_text_learn: "ابدأ التعلم"
-  homepage_action_text_signpetition: "وقّع على العريضة"
+  homepage_action_text_join_us: انضم إلينا
+  homepage_action_text_sign_up: تسجيل
+  homepage_action_text_try_it: جربها
+  homepage_action_text_volunteers: مطلوب متطوعو اختصاص
+  homepage_action_text_codevideo: شاهد الفيديو
+  homepage_action_text_teachervideo: شاهد الفيديو
+  homepage_action_text_watchvideo: شاهد الفيديو
+  homepage_action_text_girlvideo: الهام بنت
+  homepage_action_text_learn: ابدأ التعلم
+  homepage_action_text_signpetition: وقّع على العريضة
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "أوافق &#x25BE;"
-  homepage_diversity_pledge: "التعهد بالتنوع"
+  homepage_signpetition_dropdown: أوافق &#x25BE;
+  homepage_diversity_pledge: التعهد بالتنوع
   homepage_banner_text_prizes: 'فعالية "ساعة برمجة" قادمة من جديد. 07 - 13 ديسمبر. '
-  homepage_banner_link_prizes: "انظم لأضخم حدث تعليمي في التاريخ "
+  homepage_banner_link_prizes: 'انظم لأضخم حدث تعليمي في التاريخ '
   homepage_banner_text_main: Code.org ومجلس الكلية يشكل تحالفا لتحسين التنوع في علوم
     الكمبيوتر.
-  homepage_banner_text_link: "اعرف المزيد"
+  homepage_banner_text_link: اعرف المزيد
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "اعرف المزيد"
+  homepage_banner_privacy_link: اعرف المزيد
   homepage_banner_20k_teachers: 20,000 معلم دربوا, والآن يعلمون علم الكمبيوتر في الصفوف
     الدراسية.
-  homepage_banner_20k_teachers_link: "اعرف المزيد"
-  homepage_banner_congress: "قادة أمريكا تدعو الكونغرس إلى تَعَهُد تعليم الحاسوب لمراحل
-    الدراسة الإبتدائية والأساسية والثانوية."
-  homepage_banner_congress_link: "اضف دعمك"
-  homepage_banner_emailprivacy: "نَحْنُ نقوم بتَغْيِير مُهِمّ على كيفية دعْمنا لخُصُوصِيَّة
-    الطالِب."
-  homepage_banner_emailprivacy_link: "مُتَابَعَة َالقِرَاءة"
+  homepage_banner_20k_teachers_link: اعرف المزيد
+  homepage_banner_congress: قادة أمريكا تدعو الكونغرس إلى تَعَهُد تعليم الحاسوب لمراحل
+    الدراسة الإبتدائية والأساسية والثانوية.
+  homepage_banner_congress_link: اضف دعمك
+  homepage_banner_emailprivacy: نَحْنُ نقوم بتَغْيِير مُهِمّ على كيفية دعْمنا لخُصُوصِيَّة
+    الطالِب.
+  homepage_banner_emailprivacy_link: مُتَابَعَة َالقِرَاءة
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "اعرف المزيد"
-  homepage_slot_text_title_hoc: "ساعة البرمجة"
-  homepage_slot_text_blurb_hoc: "بإمكان أي شخص أن يتعلم. ابدأ اليوم"
+  homepage_banner_40k_teachers_link: اعرف المزيد
+  homepage_slot_text_title_hoc: ساعة البرمجة
+  homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "استضافة ساعة البرمجة"
+  homepage_slot_text_link_host: استضافة ساعة البرمجة
   homepage_slot_text_link_hocserved: "#  خدمة قدمت"
   homepage_solot_text_link_volunteer: تطوع لفعالية "ساعة برمجة"
-  homepage_slot_text_title_students: "الطلاب"
-  homepage_slot_text_blurb_students: "استكشف جميع دروسنا"
-  homepage_slot_text_blurb_students_courses: "اكتشف دوراتنا"
-  homepage_slot_text_link_codestudio: "جرّب ستوديو البرمجة"
-  homepage_slot_text_link_local: "البحث عن فصل في الجوار"
-  homepage_slot_text_link_othercourses: "دورات أخرى على الإنترنت"
-  homepage_slot_text_title_educators: "المتعلمون"
-  homepage_slot_text_blurb_educators: "علم طلّابك"
-  homepage_slot_text_link_elementary: "المدرسة الابتدائية"
-  homepage_slot_text_link_middle: "المدرسة الإعدادية"
-  homepage_slot_text_link_high: "المدرسة الثانوية"
-  homepage_slot_text_link_k5: "دورات للروضة حتى الصف الخامس"
-  homepage_slot_text_link_fullcurriculum: "انظر المنهاج الكامل"
-  homepage_slot_text_link_pd: "التنمية المهنية"
-  homepage_slot_text_title_advocates: "دعاة"
-  homepage_slot_text_blurb_advocates: "أدعم عملنا"
-  homepage_slot_text_link_stats: "انظر إلى الإحصائيات"
-  homepage_slot_text_link_buy: "إنضم"
-  homepage_slot_text_link_donate: "تبرع"
-  homepage_slot_text_link_shop: "القمصان, القبعات, و المزيد"
+  homepage_slot_text_title_students: الطلاب
+  homepage_slot_text_blurb_students: استكشف جميع دروسنا
+  homepage_slot_text_blurb_students_courses: اكتشف دوراتنا
+  homepage_slot_text_link_codestudio: جرّب ستوديو البرمجة
+  homepage_slot_text_link_local: البحث عن فصل في الجوار
+  homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
+  homepage_slot_text_title_educators: المتعلمون
+  homepage_slot_text_blurb_educators: علم طلّابك
+  homepage_slot_text_link_elementary: المدرسة الابتدائية
+  homepage_slot_text_link_middle: المدرسة الإعدادية
+  homepage_slot_text_link_high: المدرسة الثانوية
+  homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
+  homepage_slot_text_link_fullcurriculum: انظر المنهاج الكامل
+  homepage_slot_text_link_pd: التنمية المهنية
+  homepage_slot_text_title_advocates: دعاة
+  homepage_slot_text_blurb_advocates: أدعم عملنا
+  homepage_slot_text_link_stats: انظر إلى الإحصائيات
+  homepage_slot_text_link_buy: إنضم
+  homepage_slot_text_link_donate: تبرع
+  homepage_slot_text_link_shop: القمصان, القبعات, و المزيد
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: "انجازات الطالب بستوديو البرمجة"
-  homepage_header_donors: "موقع code.org  يشكر الداعمين له"
-  homepage_donors_seall: "عرض الكل"
-  homepage_donors_donate: "تبرع"
-  contact_form_topic_student: "أنا طالب"
-  contact_form_topic_parent: "أنا والد/والدة"
-  contact_form_topic_teacher: "أنا مدرس/ معلم"
-  contact_form_topic_outside_us: "أنا خارج الولايات المتحدة."
-  contact_form_topic_contribution: "المساهمة الخيرية"
-  contact_form_topic_partner: "أود أن أكون شريك"
-  contact_form_topic_other: "أخرى"
-  contact_form_label_topic: "الموضوع"
-  contact_form_label_email: "بريدك الإلكتروني"
-  contact_form_label_message: "الرسالة"
-  contact_form_label_submit: "إرسال رسالة"
-  class_submission_in_school: "في المدرسة"
-  class_submission_in_school_daily_programming_course: "دورة البرمجة اليومية"
+  homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
+  homepage_header_donors: موقع code.org  يشكر الداعمين له
+  homepage_donors_seall: عرض الكل
+  homepage_donors_donate: تبرع
+  contact_form_topic_student: أنا طالب
+  contact_form_topic_parent: أنا والد/والدة
+  contact_form_topic_teacher: أنا مدرس/ معلم
+  contact_form_topic_outside_us: أنا خارج الولايات المتحدة.
+  contact_form_topic_contribution: المساهمة الخيرية
+  contact_form_topic_partner: أود أن أكون شريك
+  contact_form_topic_other: أخرى
+  contact_form_label_topic: الموضوع
+  contact_form_label_email: بريدك الإلكتروني
+  contact_form_label_message: الرسالة
+  contact_form_label_submit: إرسال رسالة
+  class_submission_in_school: في المدرسة
+  class_submission_in_school_daily_programming_course: دورة البرمجة اليومية
   class_submission_in_school_ap_computer_science: AP علوم الحاسب الآلي
-  class_submission_in_school_full_university_cs_curriculum: "منهج جامعي كامل لعلوم
-    الحاسب"
-  class_submission_in_school_robotics_club: "نادي الروبوتات"
-  class_submission_in_school_programming_integrated_in_other_classes: "البرمجة المتكاملة
-    مع المواد الدراسية الأخرى (الرياضيات، والعلوم، إلخ)"
-  class_submission_in_school_summer_school_cs_program: "برنامج صيفية لعلوم الحاسب"
-  class_submission_in_school_exploring_computer_science: "استكشاف علوم الحاسب الآلي"
-  class_submission_in_school_other: "الأخرى في المدرسة"
-  class_submission_out_of_school: "الخروج من المدرسة"
-  class_submission_out_of_school_summer_camp: "مخيم صيفي"
-  class_submission_out_of_school_afterschool_program: "برنامج بعد المدرسة"
-  class_submission_out_of_school_all-day_workshop: "ورشة عمل اليوم كله (يصل إلى 1
-    في الأسبوع)"
-  class_submission_out_of_school_multi-week_workshop: "ورشة عمل متعددة في الأسبوع"
-  class_submission_out_of_school_other: "الأخرى خارج المدرسة"
-  class_submission_online: "على الإنترنت"
-  class_submission_online_programming_class: "فصل برمجة على الإنترنت"
-  class_submission_online_teacher_resource: "الموارد المعلم أون لاين"
-  class_submission_online_other: "الأخرى على الإنترنت"
-  class_submission_level_preschool: "مرحلة ما قبل المدرسة"
-  class_submission_level_elementary: "المرحلة الابتدائية"
-  class_submission_level_middle_school: "المدرسة الإعدادية"
-  class_submission_level_high_school: "المدرسة الثانوية"
-  class_submission_level_college: "كلية"
-  class_submission_level_vocational: "المهني"
-  class_submission_languages_other: "اللغات الأخرى"
-  videos_more: "المزيد من <a href='%{inspiring_videos_playlist}'>الفيديوات الملهمة</a>
-    مع أبطال ومشاهير"
-  careers_page_more: "المزيد من <a href='%{careers_url}' target='_blank'>الفيديوات
-    الملهمة</a> مع متخصصين في مجال التكنولوجيا"
-  playlab_choose_theme: "اختر سمة مختبر لعبك"
-  playlab_classic_title: "كلاسيكي"
-  playlab_gumball_title: "جومبول"
-  playlab_iceage_title: "العصر الجليدي - قريباً"
-  playlab_iceage_title_live: "العصر الجليدي"
-  starwars_subtitle: "بناء مجرة باستعمال البرمجة"
-  starwars_javascript_title: "جافا سكريبت"
-  starwars_javascript_description: "استعمل تعنية سحب و اسقاط القطع و جافا سكريبت."
-  starwars_javascript_specs: "الإنجليزية فقط | المتصفحات الحديثة | الإعمار 11 +"
-  starwars_blocks_title: "مربعات برمجية"
-  starwars_blocks_description: "استخدام تقنية سحب و اسقاط القطع."
-  starwars_blocks_specs: "العديد من اللغات | المتصفحات الحديثة والهواتف الذكية والاجهزة
-    اللوحية | الذين تتراوح أعمارهم بين 6-10"
-  starwars_platform_text: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  mc_name: "ساعة البرمجة ماين كرافت"
-  mc_longdescription: "استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
-    ماين كرافت."
-  mc_shortdescription: "استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
-    ماين كرافت."
-  mc_gradelevel: "الاعمار 6 +"
-  mc_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  mc_specs: "العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح
-    أعمارهم بين 6-106"
+  class_submission_in_school_full_university_cs_curriculum: منهج جامعي كامل لعلوم
+    الحاسب
+  class_submission_in_school_robotics_club: نادي الروبوتات
+  class_submission_in_school_programming_integrated_in_other_classes: البرمجة المتكاملة
+    مع المواد الدراسية الأخرى (الرياضيات، والعلوم، إلخ)
+  class_submission_in_school_summer_school_cs_program: برنامج صيفية لعلوم الحاسب
+  class_submission_in_school_exploring_computer_science: استكشاف علوم الحاسب الآلي
+  class_submission_in_school_other: الأخرى في المدرسة
+  class_submission_out_of_school: الخروج من المدرسة
+  class_submission_out_of_school_summer_camp: مخيم صيفي
+  class_submission_out_of_school_afterschool_program: برنامج بعد المدرسة
+  class_submission_out_of_school_all-day_workshop: ورشة عمل اليوم كله (يصل إلى 1 في
+    الأسبوع)
+  class_submission_out_of_school_multi-week_workshop: ورشة عمل متعددة في الأسبوع
+  class_submission_out_of_school_other: الأخرى خارج المدرسة
+  class_submission_online: على الإنترنت
+  class_submission_online_programming_class: فصل برمجة على الإنترنت
+  class_submission_online_teacher_resource: الموارد المعلم أون لاين
+  class_submission_online_other: الأخرى على الإنترنت
+  class_submission_level_preschool: مرحلة ما قبل المدرسة
+  class_submission_level_elementary: المرحلة الابتدائية
+  class_submission_level_middle_school: المدرسة الإعدادية
+  class_submission_level_high_school: المدرسة الثانوية
+  class_submission_level_college: كلية
+  class_submission_level_vocational: المهني
+  class_submission_languages_other: اللغات الأخرى
+  videos_more: المزيد من <a href='%{inspiring_videos_playlist}'>الفيديوات الملهمة</a>
+    مع أبطال ومشاهير
+  careers_page_more: المزيد من <a href='%{careers_url}' target='_blank'>الفيديوات
+    الملهمة</a> مع متخصصين في مجال التكنولوجيا
+  playlab_choose_theme: اختر سمة مختبر لعبك
+  playlab_classic_title: كلاسيكي
+  playlab_gumball_title: جومبول
+  playlab_iceage_title: العصر الجليدي - قريباً
+  playlab_iceage_title_live: العصر الجليدي
+  starwars_subtitle: بناء مجرة باستعمال البرمجة
+  starwars_javascript_title: جافا سكريبت
+  starwars_javascript_description: استعمل تعنية سحب و اسقاط القطع و جافا سكريبت.
+  starwars_javascript_specs: الإنجليزية فقط | المتصفحات الحديثة | الإعمار 11 +
+  starwars_blocks_title: مربعات برمجية
+  starwars_blocks_description: استخدام تقنية سحب و اسقاط القطع.
+  starwars_blocks_specs: العديد من اللغات | المتصفحات الحديثة والهواتف الذكية والاجهزة
+    اللوحية | الذين تتراوح أعمارهم بين 6-10
+  starwars_platform_text: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  mc_name: ساعة البرمجة ماين كرافت
+  mc_longdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
+    ماين كرافت.
+  mc_shortdescription: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
+    ماين كرافت.
+  mc_gradelevel: الاعمار 6 +
+  mc_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  mc_specs: العديد من اللغات | المتصفحات الحديثة والاجهزة اللوحية | الذين تتراوح أعمارهم
+    بين 6-106
   minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_designer: "مصمم Minecraft"
-  minecraft_adventurer: "مغامر في Minecraft"
+  minecraft_designer: مصمم Minecraft
+  minecraft_adventurer: مغامر في Minecraft
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "إبدأ"
-  minecraft_designer_description: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
-    الخاص بك من ماينكرافت."
-  minecraft_designer_button: "إبدأ"
+  minecraft_agent_button: إبدأ
+  minecraft_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
+    الخاص بك من ماينكرافت.
+  minecraft_designer_button: إبدأ
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: "إبدأ"
-  minecraft_no_internet: "ليسَ لديكَ إنتِرْنِتّ؟"
+  minecraft_adventurer_button: إبدأ
+  minecraft_no_internet: ليسَ لديكَ إنتِرْنِتّ؟
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_subtitle: "ساعة البرمجة ماين كرافت"
+  minecraft_subtitle: ساعة البرمجة ماين كرافت
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
@@ -583,7 +582,7 @@
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
-  sports_watch_video: "شاهد الفيديو"
+  sports_watch_video: شاهد الفيديو
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -615,31 +614,31 @@
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
   sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
     Heat
-  sports_athlete_Harrison: "هاريسون بارنز، صاحب الميدالية الذهبية الأولمبية وبطل الدوري
-    الأميركي للمحترفين، دالاس مافيريكس"
-  watch_inspirational_videos: "قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة"
+  sports_athlete_Harrison: هاريسون بارنز، صاحب الميدالية الذهبية الأولمبية وبطل الدوري
+    الأميركي للمحترفين، دالاس مافيريكس
+  watch_inspirational_videos: قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "الهام بنت"
-  video_title_cs_intro: "تقديم لعلوم الحاسوب"
-  video_title_schools_dont_teach: "ما لا تدرسه معظم المدارس"
-  video_title_obama: "الرئيس أوباما في علوم الحاسوب"
-  video_title_hoc_is_here: "هنا ساعة البرمجة - يمكن لأي كان أي يتعلم"
-  video_title_anybody_can_learn: "يمكن لأي كان أن يتعلم"
+  video_title_inspire_girl: الهام بنت
+  video_title_cs_intro: تقديم لعلوم الحاسوب
+  video_title_schools_dont_teach: ما لا تدرسه معظم المدارس
+  video_title_obama: الرئيس أوباما في علوم الحاسوب
+  video_title_hoc_is_here: هنا ساعة البرمجة - يمكن لأي كان أي يتعلم
+  video_title_anybody_can_learn: يمكن لأي كان أن يتعلم
   video_title_steph_curry: Hour of Code with Steph Curry
-  video_title_draymond_green: "ساعة البرمجة مع درايمن كرين"
-  video_title_russell_okung: "ساعة البرمجة مع راسل أوكون"
-  video_title_real_madrid: "ساعة البرمجة مع ريال مدريد"
-  video_title_marco_belinelli: "ساعة البرمجة مع ماركو بيلينلي"
-  video_title_chris_bosh: "كريس بوش في علوم الحاسوب"
-  video_1min: "دقيقة"
-  video_2min: "دقيقتان"
+  video_title_draymond_green: ساعة البرمجة مع درايمن كرين
+  video_title_russell_okung: ساعة البرمجة مع راسل أوكون
+  video_title_real_madrid: ساعة البرمجة مع ريال مدريد
+  video_title_marco_belinelli: ساعة البرمجة مع ماركو بيلينلي
+  video_title_chris_bosh: كريس بوش في علوم الحاسوب
+  video_1min: دقيقة
+  video_2min: دقيقتان
   video_5min: 5 دقائق
-  speak_another_language: "هلْ تَتَحَدَثُ لُغَةً أُخْرى؟"
-  help_translate: "سَاعِدْنا في التَرْجَمَة."
-  no_internet: "ليسَ لديكَ إنتِرْنِتّ؟"
-  download_offline: "تَنْزِيلِ النُسْخَةِ الَّتي تَعْمَلُ دونَ إتِصال."
-  are_you_teacher: "هل أنت معلم؟"
-  review_lesson_plan: "قُمْ بإسْتِعْراض خِطَّة الدرس والموارِد الآخرى الخاصة بالمُعَلِّم."
+  speak_another_language: هلْ تَتَحَدَثُ لُغَةً أُخْرى؟
+  help_translate: سَاعِدْنا في التَرْجَمَة.
+  no_internet: ليسَ لديكَ إنتِرْنِتّ؟
+  download_offline: تَنْزِيلِ النُسْخَةِ الَّتي تَعْمَلُ دونَ إتِصال.
+  are_you_teacher: هل أنت معلم؟
+  review_lesson_plan: قُمْ بإسْتِعْراض خِطَّة الدرس والموارِد الآخرى الخاصة بالمُعَلِّم.
   volunteer_engineer_submission_title: ألهم الطلاب و تطوع لأجل "Hour of code".
   volunteer_engineer_submission_subtitle_generic: 100.000 مدرس سيقدمون فعالية "ساعة
     برمجة" في أقسامهم هذه السنة، من 07 إلى 13 ديسمبر 2015. إنهم يحتاجون ساعدتكم
@@ -664,70 +663,70 @@
   volunteer_engineer_submission_intro_links: لا تنوي التطوع ؟ <a href="%{learn_more}">
     معرفة المزيد</a> حول تنظيمك حدث "ساعة برمجة" الخاص بك والعثور على أحد متطوعين
     المحليين على موقعنا <a href="%{volunteer_local}"> خريطة المتطوعين</a>.
-  volunteer_engineer_submission_update_information: "حدث المعلومات الخاصة بك"
-  volunteer_engineer_submission_header_shared: "معلومات مشتركة مع المدرسيين علي خريطة
-    التطوع"
-  volunteer_engineer_submission_field_name: "الاسم"
-  volunteer_engineer_submission_field_name_placeholder: "الأسم بالكامل"
-  volunteer_engineer_submission_field_company: "الشركة ( أو الجامعة)"
-  volunteer_engineer_submission_field_company_placeholder: "الشركة ( أو الجامعة)"
-  volunteer_engineer_submission_field_experience_level: "مستوي الخبرة"
-  volunteer_engineer_submission_field_location: "الموقع"
-  volunteer_engineer_submission_field_location_desc: "أذا وضعت عنوانك الحقيقي فلن
-    نقوم بمشاركته. سيتم أظهره كادبوسة علي الخريطة."
-  volunteer_engineer_submission_field_location_placeholder: "الرمز البريدي ، المدينة
-    و الولاية/البلد ، أو عنوان الشارع"
-  volunteer_engineer_submission_field_location_flexibility: "أنا يمكنني المساعدة في
-    وقت ساعة من البرمجة عن طريق... (أختار كل الذي يطابق)"
-  volunteer_engineer_submission_checkbox_after_hoc: "أنا أرغب في التطويع بعد ساعة
-    من البرمجة"
-  volunteer_engineer_submission_field_time_commitment: "فترة الالتزام بعد ساعة البرمجة"
-  volunteer_engineer_submission_field_linkedin: "حساب LinkedIn"
+  volunteer_engineer_submission_update_information: حدث المعلومات الخاصة بك
+  volunteer_engineer_submission_header_shared: معلومات مشتركة مع المدرسيين علي خريطة
+    التطوع
+  volunteer_engineer_submission_field_name: الاسم
+  volunteer_engineer_submission_field_name_placeholder: الأسم بالكامل
+  volunteer_engineer_submission_field_company: الشركة ( أو الجامعة)
+  volunteer_engineer_submission_field_company_placeholder: الشركة ( أو الجامعة)
+  volunteer_engineer_submission_field_experience_level: مستوي الخبرة
+  volunteer_engineer_submission_field_location: الموقع
+  volunteer_engineer_submission_field_location_desc: أذا وضعت عنوانك الحقيقي فلن نقوم
+    بمشاركته. سيتم أظهره كادبوسة علي الخريطة.
+  volunteer_engineer_submission_field_location_placeholder: الرمز البريدي ، المدينة
+    و الولاية/البلد ، أو عنوان الشارع
+  volunteer_engineer_submission_field_location_flexibility: أنا يمكنني المساعدة في
+    وقت ساعة من البرمجة عن طريق... (أختار كل الذي يطابق)
+  volunteer_engineer_submission_checkbox_after_hoc: أنا أرغب في التطويع بعد ساعة من
+    البرمجة
+  volunteer_engineer_submission_field_time_commitment: فترة الالتزام بعد ساعة البرمجة
+  volunteer_engineer_submission_field_linkedin: حساب LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: "حساب  الفيسبوك "
+  volunteer_engineer_submission_field_facebook: 'حساب  الفيسبوك '
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "الوصف"
-  volunteer_engineer_submission_field_description_desc: "وصف تجربتكم في علوم الحاسوب،
-    \ وكيف ترغب في المشاركة كمتطوع للمدرسين المحليين."
-  volunteer_engineer_submission_field_description_placeholder: "وصف للتجربة و/أو المشاركة.
-    إذا كنت تتكلم لغات مخالفة للغة الإنجليزية، يجب التأكد من أن تدرج ذلك هنا."
-  volunteer_engineer_submission_header_private: "المعلومات تبقى محفوظة و لا يتم مشاركتها"
-  volunteer_engineer_submission_field_email: "البريد الإلكتروني"
-  volunteer_engineer_submission_field_email_desc: "لن يقع مشاركة بريدكم الالكتروني،
-    و لكن سنرسل لكم الطلبات من المعلمين."
-  volunteer_engineer_submission_field_email_placeholder: "البريد الإلكتروني"
-  volunteer_engineer_submission_final_paragraph: "سيقع إدراجكم بالخريطة لتمكين المعلمين
+  volunteer_engineer_submission_field_description: الوصف
+  volunteer_engineer_submission_field_description_desc: وصف تجربتكم في علوم الحاسوب،  وكيف
+    ترغب في المشاركة كمتطوع للمدرسين المحليين.
+  volunteer_engineer_submission_field_description_placeholder: وصف للتجربة و/أو المشاركة.
+    إذا كنت تتكلم لغات مخالفة للغة الإنجليزية، يجب التأكد من أن تدرج ذلك هنا.
+  volunteer_engineer_submission_header_private: المعلومات تبقى محفوظة و لا يتم مشاركتها
+  volunteer_engineer_submission_field_email: البريد الإلكتروني
+  volunteer_engineer_submission_field_email_desc: لن يقع مشاركة بريدكم الالكتروني،
+    و لكن سنرسل لكم الطلبات من المعلمين.
+  volunteer_engineer_submission_field_email_placeholder: البريد الإلكتروني
+  volunteer_engineer_submission_final_paragraph: سيقع إدراجكم بالخريطة لتمكين المعلمين
     المحليين من الإتصال بكم لحدث ساعة البرمجة أو اي فرصة للتطوع. بريدكم الإلكتروني
     و عنوانكم لن يقع مشاركتها. ولكن بقية المعلومات، بما فيها عنوانكم التقريبي، ستكون
-    ظاهرة للعموم و خاصة المعلمين المحليين."
-  volunteer_engineer_submission_checkbox_contact: "أوافق على تمكين المعلمين بالاتصال
-    بي لفرص التطوع (ملاحظة: لن تتم مشاركة عنوان البريد الإلكتروني الخاص بك)"
+    ظاهرة للعموم و خاصة المعلمين المحليين.
+  volunteer_engineer_submission_checkbox_contact: 'أوافق على تمكين المعلمين بالاتصال
+    بي لفرص التطوع (ملاحظة: لن تتم مشاركة عنوان البريد الإلكتروني الخاص بك)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "تسجيل"
+  volunteer_engineer_submission_submit: تسجيل
   volunteer_engineer_submission_thankyou: شكرا على عملكم التطوعي على "حدث ساعة البرمجة".
     للاستعداد لحدث "ساعة  البرمجة" و دعوة  متطوعين آخرين، <a href="%{url}"> معرفة
     المزيد هنا.</a>
-  volunteer_engineer_submission_commitment_uncertain: "غير مؤكد"
-  volunteer_engineer_submission_commitment_one_hr_per_week: "ساعة واحدة أسبوعياً"
-  volunteer_engineer_submission_commitment_three_hrs_per_week: "ثلاث ساعات أسبوعياً"
-  volunteer_engineer_submission_commitment_five_hrs_per_week: "خمس ساعات أسبوعياً"
-  volunteer_engineer_submission_commitment_now_and_then: "من حين لآخر"
+  volunteer_engineer_submission_commitment_uncertain: غير مؤكد
+  volunteer_engineer_submission_commitment_one_hr_per_week: ساعة واحدة أسبوعياً
+  volunteer_engineer_submission_commitment_three_hrs_per_week: ثلاث ساعات أسبوعياً
+  volunteer_engineer_submission_commitment_five_hrs_per_week: خمس ساعات أسبوعياً
+  volunteer_engineer_submission_commitment_now_and_then: من حين لآخر
   volunteer_engineer_submission_commitment_annually: 2-3 مرات في السنة
-  volunteer_engineer_submission_commitment_monthly: "بضع ساعات في الشهر"
-  volunteer_engineer_submission_commitment_weekly: "بضع ساعات في الأسبوع"
-  volunteer_engineer_submission_commitment_more: "المزيد"
-  volunteer_engineer_submission_location_flexibility_onsite: "في المكان المخصص لذلك
-    في المدرسة"
-  volunteer_engineer_submission_location_flexibility_remote: "التوجيه عن بعد (المدرسين
-    أو الطلاب)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "على استعداد للمساهمة
-    في مشاريع المناهج الدراسية المفتوحة المصدر"
-  volunteer_engineer_submission_experience_unspecified: "غير محدد"
-  volunteer_engineer_submission_experience_tech_company: "لست مهندسا في شركة تكنولوجية"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "طالب
-    جامعي حالي (أو باحث)"
-  volunteer_engineer_submission_experience_software_professional: "مهني البرمجيات"
+  volunteer_engineer_submission_commitment_monthly: بضع ساعات في الشهر
+  volunteer_engineer_submission_commitment_weekly: بضع ساعات في الأسبوع
+  volunteer_engineer_submission_commitment_more: المزيد
+  volunteer_engineer_submission_location_flexibility_onsite: في المكان المخصص لذلك
+    في المدرسة
+  volunteer_engineer_submission_location_flexibility_remote: التوجيه عن بعد (المدرسين
+    أو الطلاب)
+  volunteer_engineer_submission_location_flexibility_curriculum: على استعداد للمساهمة
+    في مشاريع المناهج الدراسية المفتوحة المصدر
+  volunteer_engineer_submission_experience_unspecified: غير محدد
+  volunteer_engineer_submission_experience_tech_company: لست مهندسا في شركة تكنولوجية
+  volunteer_engineer_submission_experience_university_student_or_researcher: طالب
+    جامعي حالي (أو باحث)
+  volunteer_engineer_submission_experience_software_professional: مهني البرمجيات
   volunteer_engineer_submission_distance_8: 5 اميال
   volunteer_engineer_submission_distance_16: 10 أميال
   volunteer_engineer_submission_distance_24: 15 ميلا
@@ -736,52 +735,52 @@
   volunteer_engineer_submission_num_volunteers_10: 10 متطوعين
   volunteer_engineer_submission_num_volunteers_25: 25 متطوعا
   volunteer_engineer_submission_num_volunteers_50: 50 متطوعا
-  volunteer_engineer_submission_type_task_onsite: "نريد زيارتكم لقسمي للمساعدة التقنية
-    والإلهام"
-  volunteer_engineer_submission_type_task_remote: "اريد اجراء محادثة باستعمال سكايب
-    معكم لالهام التلاميذ ببعض الكلمات"
-  volunteer_engineer_submission_type_task_mentor: "أنا ابحث عن مؤطر لمساعدتي في إعدادي
-    للبرمجة مع طلابي"
-  petition_age: "العمر"
+  volunteer_engineer_submission_type_task_onsite: نريد زيارتكم لقسمي للمساعدة التقنية
+    والإلهام
+  volunteer_engineer_submission_type_task_remote: اريد اجراء محادثة باستعمال سكايب
+    معكم لالهام التلاميذ ببعض الكلمات
+  volunteer_engineer_submission_type_task_mentor: أنا ابحث عن مؤطر لمساعدتي في إعدادي
+    للبرمجة مع طلابي
+  petition_age: العمر
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "اعرف المزيد"
-  dashboard_landing_title: "الصفحة الرئيسية المعلم"
-  dashboard_landing_welcome: "مرحبا بكم في لوحة المعلم الجديدة والمحسنة."
-  dashboard_landing_video: "شاهد هذا الفيديو"
-  dashboard_landing_watch_video: "القيام بجولة لإستكشاف الميزات الجديدة!"
-  dashboard_landing_view_as_student: "أعرض هذا الموقع كطالب"
-  dashboard_landing_students_title: "طلابك"
-  dashboard_landing_students_manage: "عرض وإدارة طلابك"
-  dashboard_landing_news_title: "موارد لمعلمي المستوى الخامس (باللغة الانكليزية)"
-  dashboard_landing_new_beta: "جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية
-    لطلاب K-5 ."
-  dashboard_landing_new_k5courses: "جديد ! جرب دوراتنا للطلاب K-5."
-  dashboard_landing_useful_links: "روابط أخرى مفيدة"
-  dashboard_landing_classroom_resources: "موارد لفصلك"
-  dashboard_landing_office_hours: "اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات
-    العمل شهريا ."
-  dashboard_landing_print_certificates: "طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
-    التدريبية"
-  dashboard_landing_educator_blog: "أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا"
-  dashboard_landing_video_player: "إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك"
-  dashboard_landing_progress_title: "علمية تقدم الصف الرئيسي"
-  dashboard_landing_progress_biggest: "هذه هي عملية التقدم  للجزء لأكبر الخاص بك."
-  dashboard_landing_view_progress: "عرض عملية التقدم لـ %{biggest_section}"
-  dashboard_landing_print_progress: "طباعة التقدم"
-  dashboard_landing_available_title: "الدورات التدريبية المتاحة"
-  dashboard_landing_available_courses: "هذة هي الدورات المتاحة حاليا لكم ولطلابكم."
-  dashboard_landing_more_tutorials: "هل تريد رؤية المزيد من الشروحات؟"
+  dashboard_announce_learn_more_button: اعرف المزيد
+  dashboard_landing_title: الصفحة الرئيسية المعلم
+  dashboard_landing_welcome: مرحبا بكم في لوحة المعلم الجديدة والمحسنة.
+  dashboard_landing_video: شاهد هذا الفيديو
+  dashboard_landing_watch_video: القيام بجولة لإستكشاف الميزات الجديدة!
+  dashboard_landing_view_as_student: أعرض هذا الموقع كطالب
+  dashboard_landing_students_title: طلابك
+  dashboard_landing_students_manage: عرض وإدارة طلابك
+  dashboard_landing_news_title: موارد لمعلمي المستوى الخامس (باللغة الانكليزية)
+  dashboard_landing_new_beta: جديدنا ! جرب اللآن النسخة التجريبية من دورتنا التدريبية
+    لطلاب K-5 .
+  dashboard_landing_new_k5courses: جديد ! جرب دوراتنا للطلاب K-5.
+  dashboard_landing_useful_links: روابط أخرى مفيدة
+  dashboard_landing_classroom_resources: موارد لفصلك
+  dashboard_landing_office_hours: اسأل سؤالاً شخصيا! قم بزيارة مكاتبنا خلال ساعات
+    العمل شهريا .
+  dashboard_landing_print_certificates: طباعة الشهادات لطلاب الذين أنجزوا هذه الدورة
+    التدريبية
+  dashboard_landing_educator_blog: أقرأ عن أخبار ومستجدات موادنا على مدونة معلمنا
+  dashboard_landing_video_player: إختبر مشغل الفيديو الجديد الخاص بنا في مدرستك
+  dashboard_landing_progress_title: علمية تقدم الصف الرئيسي
+  dashboard_landing_progress_biggest: هذه هي عملية التقدم  للجزء لأكبر الخاص بك.
+  dashboard_landing_view_progress: عرض عملية التقدم لـ %{biggest_section}
+  dashboard_landing_print_progress: طباعة التقدم
+  dashboard_landing_available_title: الدورات التدريبية المتاحة
+  dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
+  dashboard_landing_more_tutorials: هل تريد رؤية المزيد من الشروحات؟
   dashboard_landing_more_tutorials_desc: هناك المزيد من الدروس <a href="/learn/beyond">المقدمة
     من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص
     أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.
-  dashboard_landing_inspire: "إلهام طلابك مع ملصقات، وأشرطة الفيديو، والمزيد."
-  dashboard_landing_video_library: "استخدم فيديو من مكتبة الفيديو لمفاهيم علوم الكمبيوتر."
-  dashboard_landing_report_bug: "طلب ميزة أو الإبلاغ عن خلل."
-  dashboard_landing_teacher_forum: "انضم إلى مجتمع التعلم المهني."
-  dashboard_hoc_courses: "ساعة البرمجة لجميع الأعمار"
-  dashboard_hoc_courses_desc: "قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!"
+  dashboard_landing_inspire: إلهام طلابك مع ملصقات، وأشرطة الفيديو، والمزيد.
+  dashboard_landing_video_library: استخدم فيديو من مكتبة الفيديو لمفاهيم علوم الكمبيوتر.
+  dashboard_landing_report_bug: طلب ميزة أو الإبلاغ عن خلل.
+  dashboard_landing_teacher_forum: انضم إلى مجتمع التعلم المهني.
+  dashboard_hoc_courses: ساعة البرمجة لجميع الأعمار
+  dashboard_hoc_courses_desc: قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!
   dashboard_hoc_courses_desc_and_cta: جرب هذه الدروس القصيرة ، ساعة واحدة مع طلابك.
     <a href="https://hourofcode.com"> انظم إلى ثورة "ساعة من التعليمات البرمجية" من
     خلال "اسبوع تعليم علوم الكمبيوتر".
@@ -792,12 +791,12 @@
     في رياض الأطفال و بدون أي معرفة بالقراءة يمكنهم المشاركة. لمساعدتك على البدء،
     نحن نقدم ورشات عمل في التطوير المهني عالية الجودة حول الولايات المتحدة مجاناً.
     <a href="/professional-development-workshops"> العثور على واحد قريب منك!</a>
-  dashboard_middle_courses: "مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية"
+  dashboard_middle_courses: مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية
   dashboard_middle_courses_desc: منهجنا للمدارس الاعدادية يستعمل علوم الحاسوب و البرمجة
     في نطاق دراسة الرياضيات و العلوم للسنوات الاعدادية - كوسيلة لتعليم مبادئ الرياضيات
     و العلوم. للتسجيل في ورش العمل المتخصصة. قدِّم علي <a href="/educate/districts">
     منحة للمنطقة السكنية الخاصة بك </a> مع Code.org.
-  dashboard_high_courses: "مقررات الثانوية العامة مدى العام"
+  dashboard_high_courses: مقررات الثانوية العامة مدى العام
   dashboard_high_courses_desc: لدينا برنامج المدرسة الثانوية يساعد الدوائر المدرسية
     توفير دروس علوم الكمبيوتر لسنة كاملة بإعداد القائمة التدريس لعرض هذا الحقل الجديد.
     للتسجيل في ورش عمل التطوير المهني، تطبيق <a href="/educate/districts"> المقاطعة
@@ -805,25 +804,25 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: code.org في شراكة مع بوتستراب (Bootstrap) لتطوير منهج
     لتدريس الجبر و الهندسة من خلال مفهوم برمجة الحاسب.
-  dashboard_course_csins: "علوم الحاسوب في مجال العلوم"
+  dashboard_course_csins: علوم الحاسوب في مجال العلوم
   dashboard_course_csins_desc: code.org في شراكة مع مشروع جي يو تي إس (GUTS) لتوصيل
     المفاهيم الأساسية لعلوم الحاسب من خلال سياق النمذجة و المحاكاة.
-  dashboard_course_ecs: "استكشاف علوم الحاسب الآلي"
+  dashboard_course_ecs: استكشاف علوم الحاسب الآلي
   dashboard_course_ecs_desc: 'استكشاف "علم الحاسوب" هو بالطبع حسب تتكون من 6 وحدات:
     البشرية الكمبيوتر التفاعل وحل المشكلة، وتصميم المواقع، البرمجة، الحوسبة وتحليل
     البيانات، والروبوتات.'
-  dashboard_course_csp: "مبادئ علوم الحاسوب بنظام ® AP"
+  dashboard_course_csp: مبادئ علوم الحاسوب بنظام ® AP
   dashboard_course_csp_desc: Code.org صممت دورة صارمة، قائمة على المشاركة الودية من
     أجل اسنكشاف الأفكار التأسيسية للحوسبة.
-  dashboard_landing_loading: "جاري التحميل..."
-  dashboard_action_cancel: "إلغاء"
-  dashboard_action_delete: "حذف"
-  dashboard_action_delete_yes: "نعم"
-  dashboard_action_delete_no: "لا"
-  dashboard_action_confirm: "حذف؟"
+  dashboard_landing_loading: جاري التحميل...
+  dashboard_action_cancel: إلغاء
+  dashboard_action_delete: حذف
+  dashboard_action_delete_yes: نعم
+  dashboard_action_delete_no: لا
+  dashboard_action_confirm: حذف؟
   dashboard_action_done: "‏‏تم"
-  dashboard_action_print_certificates: "إطْبَع الشَهَادَات"
-  dashboard_assessments_view: "عرض التقييمات في:"
+  dashboard_action_print_certificates: إطْبَع الشَهَادَات
+  dashboard_assessments_view: 'عرض التقييمات في:'
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
@@ -833,69 +832,69 @@
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: "الخلاصات"
-  dashboard_assessments_answers: "جميع الأجوبة"
+  dashboard_assessments_summaries: الخلاصات
+  dashboard_assessments_answers: جميع الأجوبة
   dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
-  dashboard_filter_by_stage: "الفلترة حسب المرحلة:"
-  dashboard_filter_all: "جميع"
-  dashboard_download_csv: "تحميل CSV"
-  dashboard_navigation_home_page: "الصفحة الرئيسية للمعلم"
-  dashboard_navigation_section_student_progress: "حسابات و سير الطلاب"
-  dashboard_navigation_section_teacher_progress: "تقدمك فى الدورة"
-  dashboard_navigation_section_lesson_plans: "خطط الدرس والموارد"
-  dashboard_navigation_section_community: "التعليمات والمجتمع"
-  dashboard_navigation_section_pd: "التنمية المهنية"
-  dashboard_navigation_section_speakers: "علوم الحاسب الآلي <br/> المتحدثين الضيوف"
-  dashboard_navigation_all_sections: "حسابات و سير الطلاب"
-  dashboard_navigation_view_progress: "في تقدم"
-  dashboard_navigation_view_text_responses: "استجابات النص"
-  dashboard_navigation_view_assessments: "التقييمات"
+  dashboard_filter_by_stage: 'الفلترة حسب المرحلة:'
+  dashboard_filter_all: جميع
+  dashboard_download_csv: تحميل CSV
+  dashboard_navigation_home_page: الصفحة الرئيسية للمعلم
+  dashboard_navigation_section_student_progress: حسابات و سير الطلاب
+  dashboard_navigation_section_teacher_progress: تقدمك فى الدورة
+  dashboard_navigation_section_lesson_plans: خطط الدرس والموارد
+  dashboard_navigation_section_community: التعليمات والمجتمع
+  dashboard_navigation_section_pd: التنمية المهنية
+  dashboard_navigation_section_speakers: علوم الحاسب الآلي <br/> المتحدثين الضيوف
+  dashboard_navigation_all_sections: حسابات و سير الطلاب
+  dashboard_navigation_view_progress: في تقدم
+  dashboard_navigation_view_text_responses: استجابات النص
+  dashboard_navigation_view_assessments: التقييمات
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_navigation_add_students: "إضافة طلاب"
-  dashboard_navigation_manage_students: "إدارة الطلاب"
-  dashboard_navigation_lesson_plans_resources: "خطط الدرس والموارد"
-  dashboard_navigation_view_stats: "الإحصائيات"
-  dashboard_navigation_section: "القسم: %{section_name}"
-  dashboard_navigation_student: "الطالب: %{student_name}"
-  dashboard_progress_not_started: "لم تبدأ"
-  dashboard_progress_in_progress: "في طور التقدم"
-  dashboard_progress_not_completed: "غير مكتمل"
-  dashboard_progress_completed_too_many_blocks: "أكملت، استخدمت مربعات برمجية كثيرة
-    جداً"
-  dashboard_progress_completed_perfect: "مكتمل, ممتاز"
-  dashboard_progress_furthest_level_attempted: "المستوى الأبعد الذي تمت محاولته"
-  dashboard_progress_submitted: "تم التقديم"
-  dashboard_progress_view: "عرض التقدم في:"
-  dashboard_progress_student_in_script: "معلومات التقدم لــِ %{student_name} في %{script_name}"
+  dashboard_navigation_add_students: إضافة طلاب
+  dashboard_navigation_manage_students: إدارة الطلاب
+  dashboard_navigation_lesson_plans_resources: خطط الدرس والموارد
+  dashboard_navigation_view_stats: الإحصائيات
+  dashboard_navigation_section: 'القسم: %{section_name}'
+  dashboard_navigation_student: 'الطالب: %{student_name}'
+  dashboard_progress_not_started: لم تبدأ
+  dashboard_progress_in_progress: في طور التقدم
+  dashboard_progress_not_completed: غير مكتمل
+  dashboard_progress_completed_too_many_blocks: أكملت، استخدمت مربعات برمجية كثيرة
+    جداً
+  dashboard_progress_completed_perfect: مكتمل, ممتاز
+  dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
+  dashboard_progress_submitted: تم التقديم
+  dashboard_progress_view: 'عرض التقدم في:'
+  dashboard_progress_student_in_script: معلومات التقدم لــِ %{student_name} في %{script_name}
   dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: "عرض استجابات النص في:"
+  dashboard_responses_view: 'عرض استجابات النص في:'
   dashboard_responses_none: No text responses
-  dashboard_sections_new_section: "القسم جديد"
+  dashboard_sections_new_section: القسم جديد
   dashboard_sections_new_google_section: Import section from Google Classroom
-  dashboard_sections_jumbotron_instruction: "انشئ أقسام جديدة وأضف الطلاب إليها، هذة
+  dashboard_sections_jumbotron_instruction: انشئ أقسام جديدة وأضف الطلاب إليها، هذة
     الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة
-    حسابتهم."
-  dashboard_sections_table_section: "القسم"
-  dashboard_sections_table_secret: "نوع تسجيل الدخول"
-  dashboard_sections_table_grade: "الصف الدراسي"
-  dashboard_sections_table_course: "الدرس"
-  dashboard_sections_table_pairing_allowed: "البرمجة الزوجية"
-  dashboard_sections_table_stage_extras: "إضافات المرحلة"
-  dashboard_sections_table_students: "الطلاب"
-  dashboard_sections_table_code: "قسم البرمجة"
-  dashboard_sections_name: "إسم القسم"
-  dashboard_sections_choose_secret: "إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر
-    <b>كلمة</b> أو <b>صورة</b> سرية لهذا القسم."
-  dashboard_sections_secret_word: "يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>."
+    حسابتهم.
+  dashboard_sections_table_section: القسم
+  dashboard_sections_table_secret: نوع تسجيل الدخول
+  dashboard_sections_table_grade: الصف الدراسي
+  dashboard_sections_table_course: الدرس
+  dashboard_sections_table_pairing_allowed: البرمجة الزوجية
+  dashboard_sections_table_stage_extras: إضافات المرحلة
+  dashboard_sections_table_students: الطلاب
+  dashboard_sections_table_code: قسم البرمجة
+  dashboard_sections_name: إسم القسم
+  dashboard_sections_choose_secret: إذا كنت ترغب في تقديم حسابات لطلابك بك، اختر <b>كلمة</b>
+    أو <b>صورة</b> سرية لهذا القسم.
+  dashboard_sections_secret_word: يسمح لك تعيين كلمة سر لكل طالب <b>كلمة سرية</b>.
   dashboard_sections_secret_picture: "<b>صورة</b> يسمح لك بتعيين صورة سرية لكل طالب،
     هذا هو الخيار الأفضل لطلاب الأصغر سنا الذين لم يتمكنو من الكتابة بعد."
-  dashboard_sections_secret_none: "إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة
-    بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>."
-  dashboard_sections_print_secrets: "كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات
-    الحساب وتعطى لكل طالب من طلابك بشكل فردي."
-  dashboard_sections_switch_section: "قسم التبديل:"
-  dashboard_sections_close: "إغلاق"
+  dashboard_sections_secret_none: إذا كنت تريد أن يتمكن طلابك من إدارة الحسابات الخاصة
+    بهم، بما في ذلك اختيار كلمات المرور الخاصة بهم، اختر نوع الحماية <b>بدون</b>.
+  dashboard_sections_print_secrets: كما يمكنك بعد ذلك طباعة بطاقات ورقية تحوي معلومات
+    الحساب وتعطى لكل طالب من طلابك بشكل فردي.
+  dashboard_sections_switch_section: 'قسم التبديل:'
+  dashboard_sections_close: إغلاق
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -927,53 +926,53 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:"
+  dashboard_students_add_multiple: 'اكتب أو إلصق أسماء الطلاب. واحداً في كل سطر:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
-  dashboard_students_new_section: "قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
-    <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه."
-  dashboard_students_name: "الاسم"
-  dashboard_students_progress: "في تقدم"
-  dashboard_students_male: "ذكر"
-  dashboard_students_female: "أنثى"
-  dashboard_students_completed_levels: "المستويات الكاملة"
-  dashboard_students_total_lines: "أسطر الكود البرمجبي"
-  dashboard_students_share_section: "مشاركة صفحة تسجيل الدخول هذة مع الطلاب:"
+  dashboard_students_new_section: قمت بإنشاء قسم جديد! الآن أضف طلابك باستخدام أزرار
+    <b>إضافة الطالب</b> و <b>إضافة العديد من الطلاب</b> أعلاه.
+  dashboard_students_name: الاسم
+  dashboard_students_progress: في تقدم
+  dashboard_students_male: ذكر
+  dashboard_students_female: أنثى
+  dashboard_students_completed_levels: المستويات الكاملة
+  dashboard_students_total_lines: أسطر الكود البرمجبي
+  dashboard_students_share_section: 'مشاركة صفحة تسجيل الدخول هذة مع الطلاب:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
-  dashboard_students_print_info: "طباعة بطاقات معلومات تسجيل الدخول الخاصة بطلابك."
-  dashboard_students_secret_picture_title: "صورة سرية"
-  dashboard_students_secret_picture: "يستخدم هذا المقطع <b>الصورة</b> كنوع السري الخاص
-    به.  وهذا يعني أن كل من الطلاب بصورة سرية تستخدم بدلاً من كلمة مرور لتسجيل الدخول.
-    \ وينبغي أن الطلاب باستخدام العلامة في عنوان موقع ويب المذكور أعلاه لتسجيل الدخول."
-  dashboard_students_reset_picture: "يمكنك إعادة تعيين صورة الطالب سرية في أي وقت
-    عن طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول
-    السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول."
-  dashboard_students_secret_word_title: "الكلمة السرية"
-  dashboard_students_secret_word: "الكلمة السرية"
-  dashboard_students_reset_word: "يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق
+  dashboard_students_print_info: طباعة بطاقات معلومات تسجيل الدخول الخاصة بطلابك.
+  dashboard_students_secret_picture_title: صورة سرية
+  dashboard_students_secret_picture: يستخدم هذا المقطع <b>الصورة</b> كنوع السري الخاص
+    به.  وهذا يعني أن كل من الطلاب بصورة سرية تستخدم بدلاً من كلمة مرور لتسجيل الدخول.  وينبغي
+    أن الطلاب باستخدام العلامة في عنوان موقع ويب المذكور أعلاه لتسجيل الدخول.
+  dashboard_students_reset_picture: يمكنك إعادة تعيين صورة الطالب سرية في أي وقت عن
+    طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول
+    السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول.
+  dashboard_students_secret_word_title: الكلمة السرية
+  dashboard_students_secret_word: الكلمة السرية
+  dashboard_students_reset_word: 'يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق
     اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>.
-    سيتم إنشاء زوج من الكلمات السرية جديدة لهذا الطالب لاستخدامه عند تسجيل الدخول. "
-  dashboard_students_join_link: "أخبر طلابك لينشئوا حساباتهم الخاصة بهم والانضمام
-    إلى القسم الخاص بك في"
-  dashboard_students_no_email: "إذا كان الطلاب ليس لديهم عناوين بريد إلكتروني، أو
-    كنت ترغب في إنشاء حسابات خاصة بهم ، قم بتغيير نوع هذا القسم السري إلى <b>كلمة</b>
-    أو <b>صورة</b>."
-  dashboard_students_print_page: "إطبع هذة الصفحة"
+    سيتم إنشاء زوج من الكلمات السرية جديدة لهذا الطالب لاستخدامه عند تسجيل الدخول. '
+  dashboard_students_join_link: أخبر طلابك لينشئوا حساباتهم الخاصة بهم والانضمام إلى
+    القسم الخاص بك في
+  dashboard_students_no_email: إذا كان الطلاب ليس لديهم عناوين بريد إلكتروني، أو كنت
+    ترغب في إنشاء حسابات خاصة بهم ، قم بتغيير نوع هذا القسم السري إلى <b>كلمة</b>
+    أو <b>صورة</b>.
+  dashboard_students_print_page: إطبع هذة الصفحة
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
-  dashboard_students_url: "عنوان URL"
+  dashboard_students_url: عنوان URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     انقر هنا</a> للحصول على مستند الخصوصية الذي يمكن مشاركته أو طباعته لطلابك .
-  dashboard_curriculum_k5_title: "الموارد لمدرّسي المستوى الخامس K-5"
-  dashboard_curriculum_middle_title: "الموارد لمدرسي المدارس الأعداديّة (المتوسّطة)"
-  dashboard_curriculum_high_title: "الموارد لمدرّسي المرحلة الثانويّة"
-  dashboard_lesson_plans: "مخطّطات الدّروس"
-  dashboard_view_all_lesson_plans: "عرض جميع خطط الدرس"
-  dashboard_course1: "الدرس الأول :"
-  dashboard_course2: "الدرسة الثاني:"
-  dashboard_course3: "الدرس الثالت:"
-  dashboard_course4: "الدّرس 4 (تجريبي):"
+  dashboard_curriculum_k5_title: الموارد لمدرّسي المستوى الخامس K-5
+  dashboard_curriculum_middle_title: الموارد لمدرسي المدارس الأعداديّة (المتوسّطة)
+  dashboard_curriculum_high_title: الموارد لمدرّسي المرحلة الثانويّة
+  dashboard_lesson_plans: مخطّطات الدّروس
+  dashboard_view_all_lesson_plans: عرض جميع خطط الدرس
+  dashboard_course1: 'الدرس الأول :'
+  dashboard_course2: 'الدرسة الثاني:'
+  dashboard_course3: 'الدرس الثالت:'
+  dashboard_course4: 'الدّرس 4 (تجريبي):'
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
@@ -985,68 +984,69 @@
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_tools: 'Tools: '
-  dashboard_curriculum: "المناهج"
-  dashboard_curriculum_overview: "نظرة عامة على منهاج الروضة - صف 5"
-  dashboard_overview: "لمحة عامة"
-  dashboard_sequence: "المتسلسلة"
-  dashboard_framework: "المنصة"
-  dashboard_standards: "المعايير"
-  dashboard_implementation_guide: "دليل التنفيذ"
-  dashboard_glossary: "مسرد المصطلحات"
-  dashboard_classroom_strategies: "استراتيجيات الفصول الدراسية للمدرسين"
-  dashboard_debugging: "تتبع الأخطاء:"
-  dashboard_puzzle_solving: "حل اللغز:"
-  dashboard_student_worksheet: "ورقة عمل التلمبد"
-  dashboard_teacher_worksheet: "ورقة عمل المدرس"
-  dashboard_curriculum_csina: "علوم الحاسوب في الجبر:"
-  dashboard_curriculum_csins: "علوم الحاسوب في مجال العلوم:"
-  dashboard_curriculum_csp: "مبادئ علوم الحاسوب بنظام ® AP:"
-  dashboard_curriculum_ecs: "استكشاف علوم الحاسوب:"
+  dashboard_curriculum: المناهج
+  dashboard_curriculum_overview: نظرة عامة على منهاج الروضة - صف 5
+  dashboard_overview: لمحة عامة
+  dashboard_sequence: المتسلسلة
+  dashboard_framework: المنصة
+  dashboard_standards: المعايير
+  dashboard_implementation_guide: دليل التنفيذ
+  dashboard_glossary: مسرد المصطلحات
+  dashboard_classroom_strategies: استراتيجيات الفصول الدراسية للمدرسين
+  dashboard_debugging: 'تتبع الأخطاء:'
+  dashboard_puzzle_solving: 'حل اللغز:'
+  dashboard_student_worksheet: ورقة عمل التلمبد
+  dashboard_teacher_worksheet: ورقة عمل المدرس
+  dashboard_curriculum_csina: 'علوم الحاسوب في الجبر:'
+  dashboard_curriculum_csins: 'علوم الحاسوب في مجال العلوم:'
+  dashboard_curriculum_csp: 'مبادئ علوم الحاسوب بنظام ® AP:'
+  dashboard_curriculum_ecs: 'استكشاف علوم الحاسوب:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  dashboard_grade_k: "روضة"
-  dashboard_grade_other: "الأخرى"
-  dashboard_login_word: "كلمة"
-  dashboard_login_picture: "الصورة"
-  dashboard_login_none: "البريد الإلكتروني"
-  dashboard_stage: "المرحلة"
-  dashboard_puzzle: "لغز"
-  dashboard_question: "سؤال"
-  dashboard_response: "رد"
+  dashboard_grade_k: روضة
+  dashboard_grade_other: الأخرى
+  dashboard_login_word: كلمة
+  dashboard_login_picture: الصورة
+  dashboard_login_none: البريد الإلكتروني
+  dashboard_stage: المرحلة
+  dashboard_puzzle: لغز
+  dashboard_question: سؤال
+  dashboard_response: رد
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: "صحيح"
+  dashboard_correctness_correct: صحيح
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
-  dashboard_status: "الحالة"
+  dashboard_status: الحالة
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'إحصائيات لا تصدق عن حدث "ساعة من الكود "  للسنة الماضية.
     في أسبوع واحد فقط:'
-  stats_hoc_2013_image_alt: "إحصائيات سنة 2013 لساعة من البرمجة"
-  dashboard_teacher: "المدرس"
-  dashboard_student: "الطالب"
-  dashboard_sections_email_question: "هل جميع يتوفر التلاميد على عنوان بريد إلكتروني
-    صحيح ؟"
-  dashboard_sections_account_creation_question: "من قام بإنشاء حساب للطالب/التلميذ؟"
-  dashboard_sections_password_question: |
-    ماذا استخدام الطلاب ككلمة مرور؟
-  dashboard_sections_picture_account_creation: "صورة تم تعيينها من قبل Code.org"
-  dashboard_sections_word_account_creation: "كلمة بسيطة من طرف Code.org"
-  dashboard_sections_sign_in_question: "أين يقوم الطلاب/التلاميد تسجيل الدخول؟"
+  stats_hoc_2013_image_alt: إحصائيات سنة 2013 لساعة من البرمجة
+  dashboard_teacher: المدرس
+  dashboard_student: الطالب
+  dashboard_sections_email_question: هل جميع يتوفر التلاميد على عنوان بريد إلكتروني
+    صحيح ؟
+  dashboard_sections_account_creation_question: من قام بإنشاء حساب للطالب/التلميذ؟
+  dashboard_sections_password_question: 'ماذا استخدام الطلاب ككلمة مرور؟
+
+'
+  dashboard_sections_picture_account_creation: صورة تم تعيينها من قبل Code.org
+  dashboard_sections_word_account_creation: كلمة بسيطة من طرف Code.org
+  dashboard_sections_sign_in_question: أين يقوم الطلاب/التلاميد تسجيل الدخول؟
   dashboard_sections_sign_in_unique: صفحة ويب متوفرة في علامة التبويب "إدارة الطلاب"
   dashboard_sections_sign_in_main: http://code.org و انقر على "تسجيل الدخول"
-  dashboard_sections_password_account_creation: "كلمة المرور المنشئة من طرف الطلاب"
-  dashboard_sections_login_type_explanation: "هذا الجدول يساعد على تفسير أي من أنواع
-    تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع."
-  dashboard_faq: "الأسئلة الشائعة"
-  dashboard_faq_k5: "الأسئلة المتاوترة الطرح في المستوى الخامس K-5"
-  code_hoc_coming: "إرسال رسالة إلكترونية"
-  code_sign_up: "قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب"
+  dashboard_sections_password_account_creation: كلمة المرور المنشئة من طرف الطلاب
+  dashboard_sections_login_type_explanation: هذا الجدول يساعد على تفسير أي من أنواع
+    تسجيل الدخول هذه، <b>صورة، كلمة، أو البريد الإلكتروني</b>، تريد أن تختار لمقطع.
+  dashboard_faq: الأسئلة الشائعة
+  dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
+  code_hoc_coming: إرسال رسالة إلكترونية
+  code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
   host_an_hour: Host an hour
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
@@ -1055,16 +1055,16 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "جرب الآن"
+  learn_more: جرب الآن
   learn_sign_up_description: قم بالتسجيل للمشاركة في "ساعة البرمجة" خلال أسبوع تعليم
     علوم الحاسوب
-  learn_sign_up_button: "تسجيل"
-  learn_videos_watch: "شاهد هذا الفيديو ملهمة بفصلك"
-  learn_videos_show: "إظهار هذا الفيديو ملهمة للفئة الخاصة بك"
+  learn_sign_up_button: تسجيل
+  learn_videos_watch: شاهد هذا الفيديو ملهمة بفصلك
+  learn_videos_show: إظهار هذا الفيديو ملهمة للفئة الخاصة بك
   learn_videos_before_hoc: مشاهدة فيديو ملهمة قبل "ساعة التعليمات البرمجية" الخاصة
     بك
   learn_educator_resources_description: التعرف على كيفية تعليم "ساعة البرمجة"
-  learn_educator_resources_button: "موارد المعلم"
+  learn_educator_resources_button: موارد المعلم
   learn_are_you_educator: هل أنت معلم؟ التعرف على <a href="http://hourofcode.com/resources/how-to">
     كيفية تعليم "ساعة البرمجة"</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local"> العثور على أحد
@@ -1077,112 +1077,111 @@
     كل معلم.
   learn_inspirational_videos: الهام الطلاب التي تبين لهم <a href="https://code.org/educate/inspire">
     هذه أشرطة الفيديو</a>
-  hoc2014_try_new_tutorials: "جرّب الدروس الجديدة لساعة البرمجة"
+  hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
   hoc2014_try_new_tutorial: جرب درس ساعة من البرمجة الجديد في "بيتا - التجريبي"
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
-  hoc2014_try_frozen: "الفنان مع آنا و إلسا, من Frozen"
-  carousel_heading_codeorg: "الدروس مقدمة لكم عن طريق Code.org"
-  carousel_heading_codeorg_any_device: "الدروس مقدمة لكم عن طريق Code.org ( لجميع
-    الاجهزة)"
-  carousel_heading_3rd_party: "الدروس مقدمة لكم عن طريق طرف ثالث"
-  carousel_heading_third_party: "الدروس مقدمة لكم عن طريق اطراف اخرى"
-  carousel_heading_international: "دروس تعليمية بلغتك"
-  carousel_heading_domestic: "البرامج التعليمية المتوفرة باللغة الإنجليزية"
-  carousel_heading_beginners: "دروس للمبتدئين"
-  carousel_heading_beyond_beginners: "دروس للمبتدئين"
-  carousel_heading_javascript: "دروس تعليم جافا سكريبت"
-  carousel_heading_beyond_javascript: "دروس تعليم جافا سكريبت"
+  hoc2014_try_frozen: الفنان مع آنا و إلسا, من Frozen
+  carousel_heading_codeorg: الدروس مقدمة لكم عن طريق Code.org
+  carousel_heading_codeorg_any_device: الدروس مقدمة لكم عن طريق Code.org ( لجميع الاجهزة)
+  carousel_heading_3rd_party: الدروس مقدمة لكم عن طريق طرف ثالث
+  carousel_heading_third_party: الدروس مقدمة لكم عن طريق اطراف اخرى
+  carousel_heading_international: دروس تعليمية بلغتك
+  carousel_heading_domestic: البرامج التعليمية المتوفرة باللغة الإنجليزية
+  carousel_heading_beginners: دروس للمبتدئين
+  carousel_heading_beyond_beginners: دروس للمبتدئين
+  carousel_heading_javascript: دروس تعليم جافا سكريبت
+  carousel_heading_beyond_javascript: دروس تعليم جافا سكريبت
   carousel_heading_unplugged: لا يوجد جهاز أو إنترت ؟ جرب علم الحاسوب "مفكوك"
-  carousel_heading_devices: "دروس تعليمية للهواتف والألواح"
-  carousel_heading_beyond_devices: "دروس تعليمية للهواتف والألواح"
-  carousel_heading_languages: "دروس في لغات البرمجة الأخرى"
-  carousel_heading_beyond_languages: "دروس في لغات البرمجة الأخرى"
-  carousel_heading_apps_games: "برمج ألعابك او تطبيقاتك الخاصة"
-  carousel_heading_university: "الدورات الجامعية على الإنترنت"
-  carousel_heading_webpages: "تعلم انشاء صفحات الانترنت"
-  carousel_heading_robots: "تعلم البرمجة مع الروبوتات"
-  carousel_heading_ide: "منصات شعبية بين المعلمين"
+  carousel_heading_devices: دروس تعليمية للهواتف والألواح
+  carousel_heading_beyond_devices: دروس تعليمية للهواتف والألواح
+  carousel_heading_languages: دروس في لغات البرمجة الأخرى
+  carousel_heading_beyond_languages: دروس في لغات البرمجة الأخرى
+  carousel_heading_apps_games: برمج ألعابك او تطبيقاتك الخاصة
+  carousel_heading_university: الدورات الجامعية على الإنترنت
+  carousel_heading_webpages: تعلم انشاء صفحات الانترنت
+  carousel_heading_robots: تعلم البرمجة مع الروبوتات
+  carousel_heading_ide: منصات شعبية بين المعلمين
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "ملاحظات المربي"
-  teach_led_lesson_plans: "المعلم قيادة خطط الدرس"
+  educator_notes: ملاحظات المربي
+  teach_led_lesson_plans: المعلم قيادة خطط الدرس
   learn_footer_all_tutorials: الاطلاع على <a href="https://code.org/educate/allhourofcode">
     قائمة شاملة من الدروس "ساعة من التعليمات البرمجية"</a>. لمشاهدة معاييرنا وتقديم
     مبادئ توجيهية "مدار للتعليمات البرمجية" والدروس، <a href="https://hourofcode.com/tutorial-guidelines">
     انقر هنا.</a>
-  how_to_teach_hoc: "كيف تقوم بتدريس ساعة من البرمجة"
-  more_resources_educators: "المزيد من الموارد للمعلمين والمربين"
+  how_to_teach_hoc: كيف تقوم بتدريس ساعة من البرمجة
+  more_resources_educators: المزيد من الموارد للمعلمين والمربين
   beyond_submission: تريد أن تقدم برنامج تعليمي "تتجاوز ساعة"؟ انظر المعايير وتقديم
     النموذج.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "المشتركون"
-  teachers_notes: "ملاحظات المعلم"
-  teachers_notes_hoc: "المعلمين: قراءة ملاحظات المدرس هنا"
-  previous: "السابق"
-  next: "التالي"
-  older_systems: "الدروس التي تعمل على أنظمة قديمة"
+  participants: المشتركون
+  teachers_notes: ملاحظات المعلم
+  teachers_notes_hoc: 'المعلمين: قراءة ملاحظات المدرس هنا'
+  previous: السابق
+  next: التالي
+  older_systems: الدروس التي تعمل على أنظمة قديمة
   older_systems_subheading: هذه يجب أن تعمل على المتصفّحات القديمة. للوصول إلى جميع
     الدروس، يجب تحيين <a href="http://browsehappy.com/" target="_blank"> متصفح الويب
     .</a>
-  mobile_devices: "دروس للأجهزة المحمولة"
-  frozen_name: "برمج مع آنا و إلسا"
-  starwars_name: "حرب النجوم: بناء مجرة باستعمال البرمجة"
-  codeorg_name: "المتاهة الكلاسيكية"
-  codeintl_name: "المتاهة الكلاسيكية"
+  mobile_devices: دروس للأجهزة المحمولة
+  frozen_name: برمج مع آنا و إلسا
+  starwars_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
+  codeorg_name: المتاهة الكلاسيكية
+  codeintl_name: المتاهة الكلاسيكية
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "مقدمة لجافا سكريبت"
-  khanes_name: "مقدمة لجافا سكريبت"
-  khanpt_name: "مقدمة لجافا سكريبت"
-  khanhe_name: "مقدمة لجافا سكريبت"
-  khanfr_name: "مقدمة لجافا سكريبت"
-  khanpl_name: "مقدمة لجافا سكريبت"
-  tynker_name: "أنجز العبة الخاصة بك"
-  scratch_name: "كن مبدعاً مع البرمجة"
+  khan_name: مقدمة لجافا سكريبت
+  khanes_name: مقدمة لجافا سكريبت
+  khanpt_name: مقدمة لجافا سكريبت
+  khanhe_name: مقدمة لجافا سكريبت
+  khanfr_name: مقدمة لجافا سكريبت
+  khanpl_name: مقدمة لجافا سكريبت
+  tynker_name: أنجز العبة الخاصة بك
+  scratch_name: كن مبدعاً مع البرمجة
   lightbot_name: Lightbot
-  thinkersmith_name: "أصدقائي من الروبوت"
-  condcards_name: "الشرطية مع بطاقات"
+  thinkersmith_name: أصدقائي من الروبوت
+  condcards_name: الشرطية مع بطاقات
   lightbotintl_name: Lightbot
-  codehs_name: "تعلم البرمجة مع مع الكلب كاريل"
+  codehs_name: تعلم البرمجة مع مع الكلب كاريل
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: "كوديمونكي"
-  codeavengers_name: "صنع لعبة باستعمال جافا سكريبت"
-  processing_name: "الرسم باستخدام البرمجة"
-  robomind_name: "برمج روبوت افتراضي"
-  groklearning_name: "إليزا الطبيب الذكى"
-  quorum_name: "برمجة سهلة (مع دعم قارئ الشاش)"
-  codespark_name: "فوس (قراءة الترحيب)"
-  kodable_name: "برمجية (مرحبا بالذين لا يستطيعون القراءة بعد)"
-  tynkerapp_name: "تينكير-على التابليت"
-  robomindnl_name: "برمج روبوت افتراضي"
-  flappy_name: "صناعة لعبة فلوبي بيرد"
-  bitsbox_name: "بيتسبوكس--انشاء اللعبة"
-  makeschool_name: "انجاز لعبة آي فون في المتصفح الخاص بك!"
+  codemonkey_name: كوديمونكي
+  codeavengers_name: صنع لعبة باستعمال جافا سكريبت
+  processing_name: الرسم باستخدام البرمجة
+  robomind_name: برمج روبوت افتراضي
+  groklearning_name: إليزا الطبيب الذكى
+  quorum_name: برمجة سهلة (مع دعم قارئ الشاش)
+  codespark_name: فوس (قراءة الترحيب)
+  kodable_name: برمجية (مرحبا بالذين لا يستطيعون القراءة بعد)
+  tynkerapp_name: تينكير-على التابليت
+  robomindnl_name: برمج روبوت افتراضي
+  flappy_name: صناعة لعبة فلوبي بيرد
+  bitsbox_name: بيتسبوكس--انشاء اللعبة
+  makeschool_name: انجاز لعبة آي فون في المتصفح الخاص بك!
   touchdevelop_name: TouchDevelop
-  appinventor_name: "آب آنفانتور ساعة من البرمجة"
-  blockly_name: "بلوكلي"
+  appinventor_name: آب آنفانتور ساعة من البرمجة
+  blockly_name: بلوكلي
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: "الصخرة، الورقة، المقص"
-  hourofcode_name: "المتاهة الكلاسيكية"
-  playlab_name: "مختبر اللعب"
-  infinity_name: "لعبة مختبر اللعب اللانهائية"
-  artist_name: "الرسام"
-  monstercoding_name: "جزيرة الغموض الترميز كويست"
-  allcancode_name: "تشغيل ماركو!"
+  projguts_name: الصخرة، الورقة، المقص
+  hourofcode_name: المتاهة الكلاسيكية
+  playlab_name: مختبر اللعب
+  infinity_name: لعبة مختبر اللعب اللانهائية
+  artist_name: الرسام
+  monstercoding_name: جزيرة الغموض الترميز كويست
+  allcancode_name: تشغيل ماركو!
   csfirst_name: CS الأولى
-  boxisland_name: "جزيرة مربع"
+  boxisland_name: جزيرة مربع
   codesters_name: Codesters
   texasinstruments_name: 10 دقائق من التعليمات البرمجية
-  teacherled_name: "المعلم قيادة خطط الدرس"
-  course1_name: "الدرس الأول"
-  course2_name: "الدورة الثانية"
-  course3_name: "الدورة الثالثة"
-  course4_name: "الدورة 4"
+  teacherled_name: المعلم قيادة خطط الدرس
+  course1_name: الدرس الأول
+  course2_name: الدورة الثانية
+  course3_name: الدورة الثالثة
+  course4_name: الدورة 4
   coursea-draft_name: Course A
   coursea_name: Course A
   courseb-draft_name: Course B
@@ -1195,7 +1194,7 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
-  accelerated_name: "دورة تدريبية مسرّعة"
+  accelerated_name: دورة تدريبية مسرّعة
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unit 1: Digital Information'
@@ -1231,21 +1230,21 @@
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: "دورة تدريبية مسرّعة"
-  algebra_name: "علوم الحاسوب في الجبر"
-  AlgebraA_name: "علوم الحاسوب في الجبر مُقَرّر أ"
-  AlgebraB_name: "علوم الحاسوب في الجبر مُقَرّر ب"
+  20-hour_name: دورة تدريبية مسرّعة
+  algebra_name: علوم الحاسوب في الجبر
+  AlgebraA_name: علوم الحاسوب في الجبر مُقَرّر أ
+  AlgebraB_name: علوم الحاسوب في الجبر مُقَرّر ب
   gumball_name: Gumball
-  classicmaze_name: "المتاهة الكلاسيكية"
-  iceage_name: "العصر الجليدي"
+  classicmaze_name: المتاهة الكلاسيكية
+  iceage_name: العصر الجليدي
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "العمليات الحسابية"
-  hoc_category_name: "ساعة البرمجة"
+  math_category_name: العمليات الحسابية
+  hoc_category_name: ساعة البرمجة
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1254,186 +1253,186 @@
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
-  applab_name: "مختبر التطبيق"
+  applab_name: مختبر التطبيق
   gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
-  applab_gradelevel: "للأعمار 13 +"
+  applab_gradelevel: للأعمار 13 +
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
-  codeorg_gradelevel: "الأعمار 4-104"
-  codeintl_gradelevel: "الأعمار 4-104"
+  codeorg_gradelevel: الأعمار 4-104
+  codeintl_gradelevel: الأعمار 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: "المدرسة المتوسطة +"
-  khanes_gradelevel: "المدرسة المتوسطة +"
-  khanpt_gradelevel: "المدرسة المتوسطة +"
-  khanhe_gradelevel: "المدرسة المتوسطة +"
-  khanfr_gradelevel: "المدرسة المتوسطة +"
-  khanpl_gradelevel: "المدرسة المتوسطة +"
-  tynker_gradelevel: "الذين تتراوح أعمارهم بين 5-13"
-  scratch_gradelevel: "الأعمار 8 +"
-  lightbot_gradelevel: "كل الاعمار"
-  thinkersmith_gradelevel: "كل الاعمار"
-  condcards_gradelevel: "الذين تتراوح أعمارهم بين 8-12"
-  lightbotintl_gradelevel: "كل الاعمار"
-  codehs_gradelevel: "المدرسة الثانوية"
-  codecademy_gradelevel: "المدرسة الثانوية"
-  codecombat_gradelevel: "المدرسة المتوسطة +"
-  codemonkey_gradelevel: "المدرسة المتوسطة +"
-  codeavengers_gradelevel: "المدرسة المتوسطة +"
-  processing_gradelevel: "المدرسة الثانوية"
-  robomind_gradelevel: "الذين تتراوح أعمارهم بين 8-13"
-  groklearning_gradelevel: "المدرسة المتوسطة +"
-  quorum_gradelevel: "المدرسة المتوسطة +"
-  codespark_gradelevel: "المرحلة الابتدائية"
-  kodable_gradelevel: "المرحلة الابتدائية"
-  tynkerapp_gradelevel: "الذين تتراوح أعمارهم بين 5-13"
-  robomindnl_gradelevel: "الذين تتراوح أعمارهم بين 8-13"
-  flappy_gradelevel: "الأعمار 4-104"
-  bitsbox_gradelevel: "المرحلة الابتدائية"
-  makeschool_gradelevel: "المدرسة الثانوية"
-  touchdevelop_gradelevel: "المدرسة الثانوية"
-  appinventor_gradelevel: "المدرسة المتوسطة +"
-  blockly_gradelevel: "كل الاعمار"
-  thinkersmith2_gradelevel: "الأعمار 8 +"
-  kodableunplugged_gradelevel: "الذين تتراوح أعمارهم بين 8-13"
-  projguts_gradelevel: "الذين تتراوح أعمارهم بين 10-13"
-  hourofcode_gradelevel: "الأعمار 4-104"
-  frozen_gradelevel: "الأعمار 8 +"
-  starwars_gradelevel: "الاعمار 6 +"
-  playlab_gradelevel: "الأعمار 4-104"
-  infinity_gradelevel: "الأعمار 4-104"
-  artist_gradelevel: "الأعمار 4-104"
-  monstercoding_gradelevel: "الذين تتراوح أعمارهم بين 5-13"
-  allcancode_gradelevel: "الأعمار من 5-10"
-  csfirst_gradelevel: "الأعمار من 9-14"
-  boxisland_gradelevel: "المرحلة الابتدائية"
-  codesters_gradelevel: "الأعمار من 12-14"
-  texasinstruments_gradelevel: "الأعمار من 13-16"
-  teacherled_gradelevel: "الأعمار من 5+"
-  course1_gradelevel: "الأعمار 4-6"
-  course2_gradelevel: "الأعمار 6-18"
-  course3_gradelevel: "الأعمار 8-18"
-  course4_gradelevel: "الذين تتراوح أعمارهم بين 10-13"
+  khan_gradelevel: المدرسة المتوسطة +
+  khanes_gradelevel: المدرسة المتوسطة +
+  khanpt_gradelevel: المدرسة المتوسطة +
+  khanhe_gradelevel: المدرسة المتوسطة +
+  khanfr_gradelevel: المدرسة المتوسطة +
+  khanpl_gradelevel: المدرسة المتوسطة +
+  tynker_gradelevel: الذين تتراوح أعمارهم بين 5-13
+  scratch_gradelevel: الأعمار 8 +
+  lightbot_gradelevel: كل الاعمار
+  thinkersmith_gradelevel: كل الاعمار
+  condcards_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  lightbotintl_gradelevel: كل الاعمار
+  codehs_gradelevel: المدرسة الثانوية
+  codecademy_gradelevel: المدرسة الثانوية
+  codecombat_gradelevel: المدرسة المتوسطة +
+  codemonkey_gradelevel: المدرسة المتوسطة +
+  codeavengers_gradelevel: المدرسة المتوسطة +
+  processing_gradelevel: المدرسة الثانوية
+  robomind_gradelevel: الذين تتراوح أعمارهم بين 8-13
+  groklearning_gradelevel: المدرسة المتوسطة +
+  quorum_gradelevel: المدرسة المتوسطة +
+  codespark_gradelevel: المرحلة الابتدائية
+  kodable_gradelevel: المرحلة الابتدائية
+  tynkerapp_gradelevel: الذين تتراوح أعمارهم بين 5-13
+  robomindnl_gradelevel: الذين تتراوح أعمارهم بين 8-13
+  flappy_gradelevel: الأعمار 4-104
+  bitsbox_gradelevel: المرحلة الابتدائية
+  makeschool_gradelevel: المدرسة الثانوية
+  touchdevelop_gradelevel: المدرسة الثانوية
+  appinventor_gradelevel: المدرسة المتوسطة +
+  blockly_gradelevel: كل الاعمار
+  thinkersmith2_gradelevel: الأعمار 8 +
+  kodableunplugged_gradelevel: الذين تتراوح أعمارهم بين 8-13
+  projguts_gradelevel: الذين تتراوح أعمارهم بين 10-13
+  hourofcode_gradelevel: الأعمار 4-104
+  frozen_gradelevel: الأعمار 8 +
+  starwars_gradelevel: الاعمار 6 +
+  playlab_gradelevel: الأعمار 4-104
+  infinity_gradelevel: الأعمار 4-104
+  artist_gradelevel: الأعمار 4-104
+  monstercoding_gradelevel: الذين تتراوح أعمارهم بين 5-13
+  allcancode_gradelevel: الأعمار من 5-10
+  csfirst_gradelevel: الأعمار من 9-14
+  boxisland_gradelevel: المرحلة الابتدائية
+  codesters_gradelevel: الأعمار من 12-14
+  texasinstruments_gradelevel: الأعمار من 13-16
+  teacherled_gradelevel: الأعمار من 5+
+  course1_gradelevel: الأعمار 4-6
+  course2_gradelevel: الأعمار 6-18
+  course3_gradelevel: الأعمار 8-18
+  course4_gradelevel: الذين تتراوح أعمارهم بين 10-13
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
-  coursed_gradelevel: "الصفوف 8+"
-  coursee_gradelevel: "الذين تتراوح أعمارهم بين 8-12"
+  coursed_gradelevel: الصفوف 8+
+  coursee_gradelevel: الذين تتراوح أعمارهم بين 8-12
   coursef_gradelevel: Grade 10+
-  accelerated_gradelevel: "الذين تتراوح أعمارهم بين 10-13"
-  codeorg_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  codeintl_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  thinkersmithspanish_platformtext: "غير مربوطة"
-  khan_platformtext: "متصفحات الويب الحديثة"
-  khanes_platformtext: "متصفحات الويب الحديثة"
-  khanpt_platformtext: "متصفحات الويب الحديثة"
-  khanhe_platformtext: "متصفحات الويب الحديثة"
-  khanfr_platformtext: "متصفحات الويب الحديثة"
-  khanpl_platformtext: "متصفحات الويب الحديثة"
-  tynker_platformtext: "متصفحات الويب الحديثة"
-  scratch_platformtext: "متصفحات الواب على الحواسيب (لا تشمل اللّوحات الرقميّة)"
-  lightbot_platformtext: "جميع المتصفحات و iOS، اندرويد، أو محطة ألعاب"
-  thinkersmith_platformtext: "غير مربوطة"
-  condcards_platformtext: "غير مربوطة"
-  lightbotintl_platformtext: "آي أو إس iOS، الأندرويد (أو متصفح ويب)"
-  codehs_platformtext: "المتصفحات الحديثة. (الدرس التالي يتطلب $$)"
-  codecademy_platformtext: "متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد"
-  codecombat_platformtext: "المتصفحات الحديثة. (الدرس التالي يتطلب $$)"
-  codemonkey_platformtext: "متصفحات الويب الحديثة"
-  codeavengers_platformtext: "متصفحات الويب الحديثة"
-  processing_platformtext: "متصفحات الويب الحديثة"
-  robomind_platformtext: "متصفحات الويب الحديثة، الويب المحمول"
-  groklearning_platformtext: "متصفحات الويب الحديثة"
-  quorum_platformtext: "متصفحات الويب الحديثة. دعم قارئات الشاشة"
-  codespark_platformtext: "آي أو إس iOS، الأندرويد (أو متصفح ويب)"
+  accelerated_gradelevel: الذين تتراوح أعمارهم بين 10-13
+  codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  thinkersmithspanish_platformtext: غير مربوطة
+  khan_platformtext: متصفحات الويب الحديثة
+  khanes_platformtext: متصفحات الويب الحديثة
+  khanpt_platformtext: متصفحات الويب الحديثة
+  khanhe_platformtext: متصفحات الويب الحديثة
+  khanfr_platformtext: متصفحات الويب الحديثة
+  khanpl_platformtext: متصفحات الويب الحديثة
+  tynker_platformtext: متصفحات الويب الحديثة
+  scratch_platformtext: متصفحات الواب على الحواسيب (لا تشمل اللّوحات الرقميّة)
+  lightbot_platformtext: جميع المتصفحات و iOS، اندرويد، أو محطة ألعاب
+  thinkersmith_platformtext: غير مربوطة
+  condcards_platformtext: غير مربوطة
+  lightbotintl_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
+  codehs_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
+  codecademy_platformtext: متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد
+  codecombat_platformtext: المتصفحات الحديثة. (الدرس التالي يتطلب $$)
+  codemonkey_platformtext: متصفحات الويب الحديثة
+  codeavengers_platformtext: متصفحات الويب الحديثة
+  processing_platformtext: متصفحات الويب الحديثة
+  robomind_platformtext: متصفحات الويب الحديثة، الويب المحمول
+  groklearning_platformtext: متصفحات الويب الحديثة
+  quorum_platformtext: متصفحات الويب الحديثة. دعم قارئات الشاشة
+  codespark_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: "أيباد، تابليت أندرويد"
-  robomindnl_platformtext: "متصفحات الويب الحديثة، الويب المحمول"
-  flappy_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  bitsbox_platformtext: "متصفحات الويب الحديثة"
-  makeschool_platformtext: "متصفحات الويب الحديثة"
-  touchdevelop_platformtext: "المتصفحات الحديثة، والهواتف الذكية، وكافة الأجهزة"
-  appinventor_platformtext: "المتصفحات الحديثة + اندرويد"
-  blockly_platformtext: "المتصفحات الحديثة فقط"
-  thinkersmith2_platformtext: "غير مربوطة"
-  kodableunplugged_platformtext: "غير مربوطة"
-  projguts_platformtext: "غير مربوطة"
-  hourofcode_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  frozen_platformtext: "المتصفحات الحديثة + اللوحات الرقمية"
-  starwars_platformtext: "المتصفحات الحديثة + اللوحات الرقمية"
-  playlab_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  monstercoding_platformtext: "متصفحات الشبكة الإلكترونية الحديثة, iOS, Android"
-  allcancode_platformtext: "متصفحات الشبكة الإلكترونية الحديثة, iOS"
-  csfirst_platformtext: "متصفحات الويب الحديثة"
+  tynkerapp_platformtext: أيباد، تابليت أندرويد
+  robomindnl_platformtext: متصفحات الويب الحديثة، الويب المحمول
+  flappy_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  bitsbox_platformtext: متصفحات الويب الحديثة
+  makeschool_platformtext: متصفحات الويب الحديثة
+  touchdevelop_platformtext: المتصفحات الحديثة، والهواتف الذكية، وكافة الأجهزة
+  appinventor_platformtext: المتصفحات الحديثة + اندرويد
+  blockly_platformtext: المتصفحات الحديثة فقط
+  thinkersmith2_platformtext: غير مربوطة
+  kodableunplugged_platformtext: غير مربوطة
+  projguts_platformtext: غير مربوطة
+  hourofcode_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  frozen_platformtext: المتصفحات الحديثة + اللوحات الرقمية
+  starwars_platformtext: المتصفحات الحديثة + اللوحات الرقمية
+  playlab_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  monstercoding_platformtext: متصفحات الشبكة الإلكترونية الحديثة, iOS, Android
+  allcancode_platformtext: متصفحات الشبكة الإلكترونية الحديثة, iOS
+  csfirst_platformtext: متصفحات الويب الحديثة
   boxisland_platformtext: iOS, Android
-  codesters_platformtext: "متصفحات الويب الحديثة"
-  texasinstruments_platformtext: "الآلات الحاسبة TI"
-  teacherled_platformtext: "المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية"
-  codeorg_shortdescription: "تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!"
-  codeintl_shortdescription: "تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!"
+  codesters_platformtext: متصفحات الويب الحديثة
+  texasinstruments_platformtext: الآلات الحاسبة TI
+  teacherled_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
+  codeorg_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
+  codeintl_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  khanes_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  khanpt_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  khanhe_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  khanfr_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  khanpl_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  tynker_shortdescription: "تعلم البرمجة بحل الألغاز الممتعة و بناء ألعاب الهاتف الخاصة
-    بك."
-  scratch_shortdescription: "إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة."
-  lightbot_shortdescription: "برمج لايتبوت لحل الألغاز باستخدام الإجراءات والحلقات!"
-  thinkersmith_shortdescription: "الدروس الغير موصولة بالحاسوب لمجموعة لا تملك أجهزة"
-  condcards_shortdescription: "تعلم الخوارزميات مع أوراق اللعب"
-  lightbotintl_shortdescription: "لعبة لتعليم مفاهيم البرمجة"
-  codehs_shortdescription: "إبدء البرمجة مع كاريل الكلب، مقدمة ممتعة للبرمجة!"
-  codecademy_shortdescription: "تعلم برمجة جافا سكريبت، في مستعرض ويب"
-  codecombat_shortdescription: "هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
-    ملحمة البرمجة!"
-  codemonkey_shortdescription: "الطلاب يبرمجون قرد ليلتقط الموز."
-  codeavengers_shortdescription: "تعلم برمجة جافا سكريبت، في مستعرض ويب"
-  processing_shortdescription: "درس تعليمي في اللغات المعالجة"
-  robomind_shortdescription: "كتابة التعليمات البرمجية لروبوت الظاهري"
+  khan_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanes_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanpt_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanhe_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanfr_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  khanpl_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  tynker_shortdescription: تعلم البرمجة بحل الألغاز الممتعة و بناء ألعاب الهاتف الخاصة
+    بك.
+  scratch_shortdescription: إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة.
+  lightbot_shortdescription: برمج لايتبوت لحل الألغاز باستخدام الإجراءات والحلقات!
+  thinkersmith_shortdescription: الدروس الغير موصولة بالحاسوب لمجموعة لا تملك أجهزة
+  condcards_shortdescription: تعلم الخوارزميات مع أوراق اللعب
+  lightbotintl_shortdescription: لعبة لتعليم مفاهيم البرمجة
+  codehs_shortdescription: إبدء البرمجة مع كاريل الكلب، مقدمة ممتعة للبرمجة!
+  codecademy_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
+  codecombat_shortdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
+    ملحمة البرمجة!
+  codemonkey_shortdescription: الطلاب يبرمجون قرد ليلتقط الموز.
+  codeavengers_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
+  processing_shortdescription: درس تعليمي في اللغات المعالجة
+  robomind_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
   groklearning_shortdescription: تعليم "إليزا" الروبوت الذكي لخداع اصدقائك في الظن
     انها إنسان!
   quorum_shortdescription: انضم إلى مري في جولة موجهة وهي تتعلم لغة البرمجة كوروم
     "Quorum".
-  codespark_shortdescription: "فوس لعبة ممتعة، صديقة للأطفال لمعرفة المزيد عن البرمجة."
-  kodable_shortdescription: "لعبة أيباد ممتعة لتعليم مفاهيم البرمجة"
-  tynkerapp_shortdescription: "تعلم البرمجة عن طريق حل أحجية كود ممتعة. "
-  robomindnl_shortdescription: "كتابة التعليمات البرمجية لروبوت الظاهري"
-  flappy_shortdescription: "برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة"
-  bitsbox_shortdescription: "برمج سلسلة من التطبيقات للعب والمشاركة، باستخدام جافا
-    سكريبت."
-  makeschool_shortdescription: "برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات الخاصة
-    بك للوحش !"
-  touchdevelop_shortdescription: "حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على
-    الهاتف الخاص بك. "
-  appinventor_shortdescription: "برمج تطبيقك الخاص! (فقط للأندرويد)"
-  blockly_shortdescription: "للتعلم من دون الإتصال على الشبكة حمل الملف المضغوط"
-  thinkersmith2_shortdescription: "تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل
-    المعلومات"
-  kodableunplugged_shortdescription: "تمارين ممتعة غير موصولة"
-  projguts_shortdescription: "حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة"
-  hourofcode_shortdescription: "تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!"
-  frozen_shortdescription: "هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا
-    في رحلتهم لاستكشاف سحر وجمال الجليد."
-  starwars_shortdescription: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
-    مجرة بعيدة، بعيدة جدا."
-  playlab_shortdescription: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+  codespark_shortdescription: فوس لعبة ممتعة، صديقة للأطفال لمعرفة المزيد عن البرمجة.
+  kodable_shortdescription: لعبة أيباد ممتعة لتعليم مفاهيم البرمجة
+  tynkerapp_shortdescription: 'تعلم البرمجة عن طريق حل أحجية كود ممتعة. '
+  robomindnl_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
+  flappy_shortdescription: برمج وإعمل لعبتك - فلابي بيرد, القرش أو الغواصة
+  bitsbox_shortdescription: برمج سلسلة من التطبيقات للعب والمشاركة، باستخدام جافا
+    سكريبت.
+  makeschool_shortdescription: برمج لعبة للأيفون! تعلم من خلال البرمجة الحركات الخاصة
+    بك للوحش !
+  touchdevelop_shortdescription: 'حل الألغاز ، ابن الألعاب، وتعلم الترميز كل ذلك على
+    الهاتف الخاص بك. '
+  appinventor_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
+  blockly_shortdescription: للتعلم من دون الإتصال على الشبكة حمل الملف المضغوط
+  thinkersmith2_shortdescription: تعلم كيفية استخدام أجهزة الكمبيوتر لل0 وال1 لتمثيل
+    المعلومات
+  kodableunplugged_shortdescription: تمارين ممتعة غير موصولة
+  projguts_shortdescription: حاول إستعمال النمذجة والمحاكاة باستخدام ورقة/مقص/صخرة
+  hourofcode_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و الطيورالغاضبة!
+  frozen_shortdescription: هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا في
+    رحلتهم لاستكشاف سحر وجمال الجليد.
+  starwars_shortdescription: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
+    مجرة بعيدة، بعيدة جدا.
+  playlab_shortdescription: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
-  artist_shortdescription: "ارسم صور رائعة و صمم مع الرسام !"
-  monsterocding_shortdescription: "الذاتي تسترشد ملون المغامرة البرمجة للأطفال."
-  allcancode_shortdescription: "لعبة غامرة على توجيه ماركو مع لغة برمجة visual."
-  csfirst_shortdescription: "تحريك قصة عن اثنين من الشخصيات في المحيط. إضافة النمط
-    الخاص بك!"
-  boxisland_shortdescription: "القيام برحلة ترميز في جزيرة مربع مع هيرو الشجاع."
-  codesters_shortdescription: "قم بإنشاء الخاصة بك الألعاب والرسوم المتحركة والعمل
-    الفني باستخدام بيثون."
-  texasinstruments_shortdescription: "تعلم الأساسية الترميز باستخدام تي-84 &#8482;
-    بالإضافة إلى آلة حاسبة."
+  artist_shortdescription: ارسم صور رائعة و صمم مع الرسام !
+  monsterocding_shortdescription: الذاتي تسترشد ملون المغامرة البرمجة للأطفال.
+  allcancode_shortdescription: لعبة غامرة على توجيه ماركو مع لغة برمجة visual.
+  csfirst_shortdescription: تحريك قصة عن اثنين من الشخصيات في المحيط. إضافة النمط
+    الخاص بك!
+  boxisland_shortdescription: القيام برحلة ترميز في جزيرة مربع مع هيرو الشجاع.
+  codesters_shortdescription: قم بإنشاء الخاصة بك الألعاب والرسوم المتحركة والعمل
+    الفني باستخدام بيثون.
+  texasinstruments_shortdescription: تعلم الأساسية الترميز باستخدام تي-84 &#8482;
+    بالإضافة إلى آلة حاسبة.
   teacherled_shortdescription: أن تكون مصدر الهام لتصميم الحدث "مدار للتعليمات البرمجية"
     الخاصة بك مع هذه الخطط الدرس.
   course2_shortdescription_congrats: For students with basic reading skills, this
@@ -1467,23 +1466,23 @@
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة
-    بك. برمج بنفسك أو مع صفك!"
-  khanes_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  khanpt_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  khanhe_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  khanfr_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  khanpl_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  tynker_longdescription: "بناء الألعاب الخاصة بك ومشاركتها مع الأصدقاء! حل الألغاز
+  khan_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات الخاصة
+    بك. برمج بنفسك أو مع صفك!
+  khanes_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpt_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  khanhe_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  khanfr_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  khanpl_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  tynker_longdescription: بناء الألعاب الخاصة بك ومشاركتها مع الأصدقاء! حل الألغاز
     الترميزية وتعلم مفاهيم البرمجة في كل مستوى. إضفاء الطابع الشخصي لشخصيات الرسوم
     المتحركة، ومستويات متعددة والدعائم الغنية.  إجعل الألعاب واقعية باستخدام الفيزياء.
     انظر للكود ككتل بصرية أو جافا سكريبت. خذ ألعابك للجهازك المحمول أو اللوحي الخاص
-    بك. أكثر من اثنتي عشر نشاط ممتع للاختيار من بينها!"
+    بك. أكثر من اثنتي عشر نشاط ممتع للاختيار من بينها!
   scratch_longdescription: مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك والقصص
     والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة معايدة،
     أو إنشاء لعبة كرة الطاولة.
@@ -1499,85 +1498,85 @@
   condcards_longdescription: تعرف على الخوارزميات والعبارات الشرطية في هذا النشاط
     "الموصول" باستخدام أوراق اللعب. الطلاب تقيم هذا النشاط في فرق، وتحتاج حزمة واحدة
     من البطاقات لكل فريق.
-  lightbotintl_longdescription: "تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
+  lightbotintl_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
     السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم
-    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!"
-  codehs_longdescription: "إعطاء الأوامر إلى جهاز الحاسوب، وهذا ما هو كل شيء عن البرمجة،
+    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
+  codehs_longdescription: إعطاء الأوامر إلى جهاز الحاسوب، وهذا ما هو كل شيء عن البرمجة،
     هو تماما مثل إعطاء الأوامر لكلب. تعلم كيفية البرمجة مع كاريل الكلب &mdash; مقدمة
     في البرمجة بطريقة مرحة وسهلة لتعلم المفاهيم الأساسية للمبتدئين مثل الأوامر والظائف.
     يتم توجيه الطالب عن طريق البرنامج التعليمي ولكن يمكن للمدرسين الاشتراك للوصول
-    إلى أدوات المعلم وتتبع نجاح الطالب!"
-  codecademy_longdescription: "كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
+    إلى أدوات المعلم وتتبع نجاح الطالب!
+  codecademy_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
     CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع
     أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات،
-    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف."
-  codecombat_longdescription: "هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
-    ملحمة البرمجة!"
+    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
+  codecombat_longdescription: هزيمة الغيلان تعلم بيثون أو جافا سكريبت في هذه اللعبة
+    ملحمة البرمجة!
   codemonkey_longdescription: '"كود مونكي" هي لعبة على الانترنت التي تعلم الترميز
     في لغة برمجة حقيقية! الطلاب يبرمجون القرد لإلتقات الموز في حين يزيد أكثر تعقيدا
     في كل مستوى. يحصلالطلاب على عشرات من النجوم في كل حل ويمكن مشاركتها بنقرة واحدة. '
-  codeavengers_longdescription: "ابن لعبة أعلى - أسفل ثنائية الأبعاد للاعبين اثنين
+  codeavengers_longdescription: ابن لعبة أعلى - أسفل ثنائية الأبعاد للاعبين اثنين
     مع جافا سكريبت في 10 خطوات قصيرة . ثم استمر في تعلم بعض أساسيات البرمجة (المتغيرات
     و تركيبة إذا) فيما تقوم بإنشاء مسابقة لتشاركها مع الأصدقاء. اثناء ذلك اكسب النقاط
-    والشارات فيما تتنافس للوصول إلى أعلى قائمة المتصدرين في الصف."
-  processing_longdescription: "مقدمة في البرمجة في سياق الفنون البصرية باستخدام لغة
+    والشارات فيما تتنافس للوصول إلى أعلى قائمة المتصدرين في الصف.
+  processing_longdescription: مقدمة في البرمجة في سياق الفنون البصرية باستخدام لغة
     البرمجة التجهيز. دروس فيديو قصيرة للبرمجة والتمارين التي تؤدي إلى تصميم برنامج
-    الرسم التفاعلي"
-  robomind_longdescription: "يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
+    الرسم التفاعلي
+  robomind_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
     الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات
-    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. "
+    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
   groklearning_longdescription: استخدم لغة البرمجة بايثون لبناء chatbot يسمى "إليزا"
     ليكون بمثابة الطبيب الروبوت النفسي. عليك أن تعلم إليزا كيفية التحدث وصواب القول.
     هل تستطيع أن تخدع أصدقاءك في التفكير انها الإنسان ليس حاسوب أو رجل آلي ؟
-  quorum_longdescription: "هذا البرنامج التعليمي قابل الإستعمال للمعاقين بصريا، ويعمل
+  quorum_longdescription: هذا البرنامج التعليمي قابل الإستعمال للمعاقين بصريا، ويعمل
     مع برامج قراءة الشاشة. إذهب مع ماري في جولة تنضم إلى مختبر البيولوجيا كمبرمج وتتعلم
-    لغة البرمجة كورم. يسترشد الطالب هذا البرنامج التعليمي مع الأنشطة وامثلة على الانترنت."
+    لغة البرمجة كورم. يسترشد الطالب هذا البرنامج التعليمي مع الأنشطة وامثلة على الانترنت.
   codespark_longdescription: '"الفوس" هي وسيلة ممتعة وصديقة للطفل لمعرفة المزيد عن
     برمجة الحاسوب. برمج شخصيات لطيفة لحل الألغاز وجلب الحياة إلى العالم الافتراضي.
     اللعبة هي "خالية من الكلمات" حتى يمكن الجميع اللعب!'
   kodable_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم للأطفال
     5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن ليس من الضروري.'
-  tynkerapp_longdescription: "تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب
+  tynkerapp_longdescription: تعلم أن تبرمج عن طريق حل أحجيات ترميز ممتعة. ابن ألعاب
     وقصص بسهولة باستخدام رسومات معنونة، أكثر من عشر مجموعات ألعاب وشخصيات قابلة للتخصيص.
     لا يلزم الاتصال بالإنترنت. يمكنك أيضا الوصول إلى الإبداعات الخاصة بك على شبكة
-    الإنترنت."
-  robomindnl_longdescription: "يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
+    الإنترنت.
+  robomindnl_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في الروبوت
     الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام، ومسابقات
-    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. "
+    والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
   flappy_longdescription: استخدم برمجة السحب والإفلات لبرمجة وعمل لعبة "الفلابي بيرد"
     الخاص بك، وتخصيصه لتبدو مختلفة (قرش القفاز، القفاز سانتا، Hو أي تصميم آخر). ويمكنك
     إضافة اللعبة إلى هاتفك في نقرة واحدة.
-  bitsbox_longdescription: "قم بتشخيص لوحتك الافتراضية الرقمية، ثم برمج مجموعة من
+  bitsbox_longdescription: 'قم بتشخيص لوحتك الافتراضية الرقمية، ثم برمج مجموعة من
     التطبيقات للعب بها و مشاركتها. أمثلة بسيطة تمكن أي طفل برمجة جافا سكريبت، و كلما
-    تحسنت أكثر كلما تقدّمت. "
-  makeschool_longdescription: "تعلم البرمجة من خلال صنع لعبة للأيفون باستخدام لغة
-    برمجة جديدة وصديقة للمبتدئين تدعى سويفت! إنشئ  لعبة أكشن مستوحاة من بوكيمون وأكتب
-    تعليمات برمجية لتعليم الوحش حركات جديدة. سوف تتعلم كيفية استخدام المتغيرات والأساليب،
-    والأشياء لمساعدة وحشك على الفوز!"
-  touchdevelop_longdescription: "محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز
-    الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . "
-  appinventor_longdescription: "دروس فيديو مسلية وسريعة تمكنك من بناء ثلاثة تطبيقات
+    تحسنت أكثر كلما تقدّمت. '
+  makeschool_longdescription: تعلم البرمجة من خلال صنع لعبة للأيفون باستخدام لغة برمجة
+    جديدة وصديقة للمبتدئين تدعى سويفت! إنشئ  لعبة أكشن مستوحاة من بوكيمون وأكتب تعليمات
+    برمجية لتعليم الوحش حركات جديدة. سوف تتعلم كيفية استخدام المتغيرات والأساليب،
+    والأشياء لمساعدة وحشك على الفوز!
+  touchdevelop_longdescription: 'محرر اللمس سيدلك على كيفية إنشاء الفن بكسل، حل لغز
+    الدب، أو إنشاء لعبة الطيور القافزة خاصة بك . '
+  appinventor_longdescription: دروس فيديو مسلية وسريعة تمكنك من بناء ثلاثة تطبيقات
     بسيطة لهاتفك أو لوحتك الرقميّة على نظام أندرويد. مصممة للمبتدئين والخبراء على
     حد سواء، هذه الساعة سوف تجعلك جاهز للبدء في بناء تطبيقاتك. تخيل ان تشارك تطبيقاتك
-    مع أصدقائك! هذه الأنشطة مناسبة للأفراد والمعلمين في القسم."
-  blockly_longdescription: "حصلت على أجهزة حاسوب مع سرعة الإنترنت بطيئة (أو غير موجودة)؟
+    مع أصدقائك! هذه الأنشطة مناسبة للأفراد والمعلمين في القسم.
+  blockly_longdescription: حصلت على أجهزة حاسوب مع سرعة الإنترنت بطيئة (أو غير موجودة)؟
     حمّل دروس بلوكلي التي كانت السابقة لدروس Code.org-ملف مضغوط واحد بحجم 3 ميغابايت
-    - يمكن تحميلها على أي جهاز كمبيوتر"
-  thinkersmith2_longdescription: "يتعلم الطلاب تمثيل وتخزين الرسائل في ثنائي، كوظائف
+    - يمكن تحميلها على أي جهاز كمبيوتر
+  thinkersmith2_longdescription: يتعلم الطلاب تمثيل وتخزين الرسائل في ثنائي، كوظائف
     مفتوح أو مغلقة. في نهاية المطاف، فإن الصف يحصل غلى ترميز الأحرف الأولى الخاصة
-    بها لاخذها الى المنزل."
-  kodableunplugged_longdescription: "مصممة للاستخدام مع الورق العادي، فوزفاميلي الهيجان
+    بها لاخذها الى المنزل.
+  kodableunplugged_longdescription: 'مصممة للاستخدام مع الورق العادي، فوزفاميلي الهيجان
     مقدمة لمنطق البرمجة للأطفال 5 وما فوق. مدرس ينبغي شرح اللعبة، ثم طلاب برنامج شريك
-    لإكمال دورة عقبة بسيطة. "
+    لإكمال دورة عقبة بسيطة. '
   projguts_longdescription: هذا النشاط "غير موصول" يساعد الطلاب على تعلم صناعة النماذج
     والمحاكاة وذلك من خلال لعب مجموعة من الطلاب نسخ مختلفة من اللعبة المعروفة "الصخور/الورق/المقص"،
     ثم نلاحظ النتائج  من مختلف التجارب.
-  hourofcode_longdescription: "العنصر النائب لجديدة على code.org/hoc"
-  frozen_longdescription: "هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف
+  hourofcode_longdescription: العنصر النائب لجديدة على code.org/hoc
+  frozen_longdescription: هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف
     سحر وجمال الجليد. سوف تصنع ندفات الثلج والرسومات على الجليد عندما تتزلج عليه وأرض
-    الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!"
-  starwars_longdescription: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
-    مجرة بعيدة، بعيدة جدا."
+    الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
+  starwars_longdescription: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة
+    بعيدة، بعيدة جدا.
   playlab_longdescription: تخيّل قصة أو إصنع لعبة مع "مختبر اللعب"! جعل الحيوانات،
     القراصنة، الكسالى، النينجا، و شخصيّات اخرى تتحرك، تصدر الأصوات، تسجل نقاط، و تطلق
     الكرات النّارية !
@@ -1589,178 +1588,177 @@
     دليل ماركو--الشخصية الرئيسية--من خلال كل مستوى بإعطائه الإرشادات خطوة بخطوة في
     شكل مرئي لغة البرمجة المستخدمة من قبل "ساعة من التعليمات البرمجية". أنهم الحصول
     على عرض لتسلسل الأوامر والتكرار والظروف دون أن يلاحظ ذلك.
-  csfirst_longdescription: "إنشاء قصة عن اثنين من الشخصيات في البحر. تحريك الماء،
-    وتخصيص مشهد لإضافة الذوق الخاص بك. استخدام التعليمات البرمجية لتحكي القصة تريد
-    أن تقول!"
-  boxisland_longdescription: "القيام برحلة في جزيرة مربع ومساعدة هيرو جمع جميع الساعات
+  csfirst_longdescription: إنشاء قصة عن اثنين من الشخصيات في البحر. تحريك الماء، وتخصيص
+    مشهد لإضافة الذوق الخاص بك. استخدام التعليمات البرمجية لتحكي القصة تريد أن تقول!
+  boxisland_longdescription: القيام برحلة في جزيرة مربع ومساعدة هيرو جمع جميع الساعات
     المنتشرة في البراري! في هذا البرنامج التعليمي سوف تتعلم أساسيات الخوارزميات وتسلسل
-    والحلقات والشرطية!"
-  codesters_longdescription: "قم بإنشاء الخاصة بك الألعاب والرسوم المتحركة والعمل
+    والحلقات والشرطية!
+  codesters_longdescription: 'قم بإنشاء الخاصة بك الألعاب والرسوم المتحركة والعمل
     الفني باستخدام بيثون.  وبمجرد الانتهاء من ذلك، مشاركتها مع الأصدقاء! استخدام البرنامج
     في بايثون، لغة برمجة حقيقية كل يوم في شركات-لدينا سحب وإسقاط الأدوات يجعل من السهل
-    لتعلم!  محاولة بناء لعبة كرة سلة، تشوريوجرافينج ورقص، أو تصميم بطاقة متحركة! "
-  texasinstruments_longdescription: "يمكن استخدام 10 دقائق الأنشطة التعليمات البرمجية
+    لتعلم!  محاولة بناء لعبة كرة سلة، تشوريوجرافينج ورقص، أو تصميم بطاقة متحركة! '
+  texasinstruments_longdescription: 'يمكن استخدام 10 دقائق الأنشطة التعليمات البرمجية
     في فئة كوسيلة لإثارة اهتمام الطلبة بالترميز مع التكنولوجيا TI يحملونها في حقائب
     الظهر اليومية.  تعلم أساسيات الترميز باستخدام تي-84 &#8482; زائد، والبدء في البرمجة
-    في 10 دقائق فقط – لا الخبرة اللازمة!  "
+    في 10 دقائق فقط – لا الخبرة اللازمة!  '
   teacherled_longdescription: والآن بعد أن حاولت عشرات آلاف معلمين "مدار للتعليمات
     البرمجية"، العديد من الفصول الدراسية مستعدون لأنشطة أكثر إبداعاً، وأقل من حجم
     واحد يناسب الجميع أن تعليم أساسيات علم الحاسوب. لمساعدة المدرسين على العثور على
     الإلهام، ونحن جمع وتنسيق ساعة واحدة يقودها المعلم الدرس وخطط الأنشطة المصممة لمختلف
     المجالات لقدامى المحاربين في "مدار للتعليمات البرمجية".
   codeorg_beyond_name: مقدمة "علوم الحاسوب" (روضة لصف ثامن)
-  khan_beyond_name: "تعلم برمجة الحاسوب"
-  tynker_beyond_name: "تعلم البرمجة في المنزل"
-  scratch_beyond_name: "كن مبدعاً مع البرمجة"
+  khan_beyond_name: تعلم برمجة الحاسوب
+  tynker_beyond_name: تعلم البرمجة في المنزل
+  scratch_beyond_name: كن مبدعاً مع البرمجة
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
-  kodable_beyond_name: "كودابل"
+  kodable_beyond_name: كودابل
   scratchjr_beyond_name: برنامج "سكراتش جر" للأطفال قبل القراء
-  hopscotch_beyond_name: "لعبة المربعات: البرمجة على أيبادك"
-  pocketcode_beyond_name: "برمجة بسيطة"
-  groklearning_beyond_name: "تعلم لغة البرمجة بايثون"
-  hacketyhack_beyond_name: "تعلم اللغة البرمجية روبي"
-  robomind_beyond_name: "برمج روبوت افتراضي"
-  makeschool_beyond_name: "انجاز لعبة آي فون في المتصفح الخاص بك!"
-  appinventor_beyond_name: "آب آنفانتور ساعة من البرمجة"
+  hopscotch_beyond_name: 'لعبة المربعات: البرمجة على أيبادك'
+  pocketcode_beyond_name: برمجة بسيطة
+  groklearning_beyond_name: تعلم لغة البرمجة بايثون
+  hacketyhack_beyond_name: تعلم اللغة البرمجية روبي
+  robomind_beyond_name: برمج روبوت افتراضي
+  makeschool_beyond_name: انجاز لعبة آي فون في المتصفح الخاص بك!
+  appinventor_beyond_name: آب آنفانتور ساعة من البرمجة
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "تعلم البرمجة مع مع الكلب كاريل"
-  udemy_beyond_name: "دورات البرمجة على الإنترنت"
-  lynda_beyond_name: "دورات البرمجة على الإنترنت"
-  edx_beyond_name: "صف CS50 جامعة هارفارد"
-  coursera_beyond_name: "صف CS 101 جامعة ستانفورد"
+  codehs_beyond_name: تعلم البرمجة مع مع الكلب كاريل
+  udemy_beyond_name: دورات البرمجة على الإنترنت
+  lynda_beyond_name: دورات البرمجة على الإنترنت
+  edx_beyond_name: صف CS50 جامعة هارفارد
+  coursera_beyond_name: صف CS 101 جامعة ستانفورد
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "دروس جامعية على الإنترنت"
+  teachingtree_beyond_name: دروس جامعية على الإنترنت
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "تعلم إتش تي أم ال"
-  codeavengers_beyond_name: "تعلم برمجة المواقع الإلكترونية"
+  w3schools_beyond_name: تعلم إتش تي أم ال
+  codeavengers_beyond_name: تعلم برمجة المواقع الإلكترونية
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: "اردوينو مع Sparkfun"
-  processing_beyond_name: "البرنامج مع تجهيز"
+  arduino_beyond_name: اردوينو مع Sparkfun
+  processing_beyond_name: البرنامج مع تجهيز
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "الأعمار 4-104"
-  khan_beyond_gradelevel: "المدرسة المتوسطة +"
-  tynker_beyond_gradelevel: "الذين تتراوح أعمارهم بين 5-13"
-  scratch_beyond_gradelevel: "الأعمار 8 +"
-  lightbot_beyond_gradelevel: "كل الاعمار"
-  codecademy_beyond_gradelevel: "المدرسة الثانوية"
-  kodable_beyond_gradelevel: "المرحلة الابتدائية"
-  scratchjr_beyond_gradelevel: "المرحلة الابتدائية"
-  hopscotch_beyond_gradelevel: "المدرسة المتوسطة +"
-  pocketcode_beyond_gradelevel: "المدرسة المتوسطة +"
-  groklearning_beyond_gradelevel: "المدرسة المتوسطة +"
-  hacketyhack_beyond_gradelevel: "المدرسة الثانوية"
-  robomind_beyond_gradelevel: "الذين تتراوح أعمارهم بين 8-13"
-  makeschool_beyond_gradelevel: "المدرسة الثانوية"
-  appinventor_beyond_gradelevel: "المدرسة المتوسطة +"
-  touchdevelop_beyond_gradelevel: "المدرسة الثانوية"
-  codehs_beyond_gradelevel: "المدرسة الثانوية"
-  udemy_beyond_gradelevel: "الثانوية +"
-  lynda_beyond_gradelevel: "الثانوية +"
-  edx_beyond_gradelevel: "الجامعة"
-  coursera_beyond_gradelevel: "الجامعة"
-  udacity_beyond_gradelevel: "الجامعة"
-  teachingtree_beyond_gradelevel: "الجامعة"
-  kodu_beyond_gradelevel: "الأعمار 8 +"
-  cargobot_beyond_gradelevel: "الأعمار 8 +"
-  kidsruby_beyond_gradelevel: "السن عام 12 +"
-  w3schools_beyond_gradelevel: "السن عام 12 +"
-  codeavengers_beyond_gradelevel: "المدرسة المتوسطة +"
-  mozilla_beyond_gradelevel: "السن عام 12 +"
-  codecombat_beyond_gradelevel: "المدرسة المتوسطة +"
-  codea_beyond_gradelevel: "الثانوية +"
-  lego_beyond_gradelevel: "المدرسة المتوسطة +"
-  finch_beyond_gradelevel: "الأعمار 8 +"
-  arduino_beyond_gradelevel: "الثانوية +"
-  processing_beyond_gradelevel: "المدرسة الثانوية"
-  alice_beyond_gradelevel: "المدرسة المتوسطة +"
-  sphero_beyond_gradelevel: "الأعمار 8 +"
-  codeorg_beyond_platformtext: "المتصفحات الحديثة ، اللوحات الرقمية"
-  khan_beyond_platformtext: "متصفحات الويب الحديثة"
-  tynker_beyond_platformtext: "متصفحات الويب الحديثة ($$ مطلوب)"
-  scratch_beyond_platformtext: "أي متصفح"
-  lightbot_beyond_platformtext: "آي أو إس iOS، الأندرويد (أو متصفح ويب)"
-  codecademy_beyond_platformtext: "متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد"
+  codeorg_beyond_gradelevel: الأعمار 4-104
+  khan_beyond_gradelevel: المدرسة المتوسطة +
+  tynker_beyond_gradelevel: الذين تتراوح أعمارهم بين 5-13
+  scratch_beyond_gradelevel: الأعمار 8 +
+  lightbot_beyond_gradelevel: كل الاعمار
+  codecademy_beyond_gradelevel: المدرسة الثانوية
+  kodable_beyond_gradelevel: المرحلة الابتدائية
+  scratchjr_beyond_gradelevel: المرحلة الابتدائية
+  hopscotch_beyond_gradelevel: المدرسة المتوسطة +
+  pocketcode_beyond_gradelevel: المدرسة المتوسطة +
+  groklearning_beyond_gradelevel: المدرسة المتوسطة +
+  hacketyhack_beyond_gradelevel: المدرسة الثانوية
+  robomind_beyond_gradelevel: الذين تتراوح أعمارهم بين 8-13
+  makeschool_beyond_gradelevel: المدرسة الثانوية
+  appinventor_beyond_gradelevel: المدرسة المتوسطة +
+  touchdevelop_beyond_gradelevel: المدرسة الثانوية
+  codehs_beyond_gradelevel: المدرسة الثانوية
+  udemy_beyond_gradelevel: الثانوية +
+  lynda_beyond_gradelevel: الثانوية +
+  edx_beyond_gradelevel: الجامعة
+  coursera_beyond_gradelevel: الجامعة
+  udacity_beyond_gradelevel: الجامعة
+  teachingtree_beyond_gradelevel: الجامعة
+  kodu_beyond_gradelevel: الأعمار 8 +
+  cargobot_beyond_gradelevel: الأعمار 8 +
+  kidsruby_beyond_gradelevel: السن عام 12 +
+  w3schools_beyond_gradelevel: السن عام 12 +
+  codeavengers_beyond_gradelevel: المدرسة المتوسطة +
+  mozilla_beyond_gradelevel: السن عام 12 +
+  codecombat_beyond_gradelevel: المدرسة المتوسطة +
+  codea_beyond_gradelevel: الثانوية +
+  lego_beyond_gradelevel: المدرسة المتوسطة +
+  finch_beyond_gradelevel: الأعمار 8 +
+  arduino_beyond_gradelevel: الثانوية +
+  processing_beyond_gradelevel: المدرسة الثانوية
+  alice_beyond_gradelevel: المدرسة المتوسطة +
+  sphero_beyond_gradelevel: الأعمار 8 +
+  codeorg_beyond_platformtext: المتصفحات الحديثة ، اللوحات الرقمية
+  khan_beyond_platformtext: متصفحات الويب الحديثة
+  tynker_beyond_platformtext: متصفحات الويب الحديثة ($$ مطلوب)
+  scratch_beyond_platformtext: أي متصفح
+  lightbot_beyond_platformtext: آي أو إس iOS، الأندرويد (أو متصفح ويب)
+  codecademy_beyond_platformtext: متصفحات الويب الحديثة. دآي أو إس iOS، تطبيقات الأندرويد
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "تطبيق المحمول"
-  groklearning_beyond_platformtext: "متصفحات الويب الحديثة"
-  hacketyhack_beyond_platformtext: "تثبيت على سطح المكتب"
-  robomind_beyond_platformtext: "متصفحات الويب الحديثة، الويب المحمول"
-  makeschool_beyond_platformtext: "متصفحات الويب الحديثة"
-  appinventor_beyond_platformtext: "متصفح حديث + اندرويد"
-  touchdevelop_beyond_platformtext: "المتصفحات الحديثة، والهواتف الذكية، وكافة الأجهزة"
-  codehs_beyond_platformtext: "المتصفحات الحديثة ($$ لازمة)"
-  udemy_beyond_platformtext: "القائمة على تكنولوجيا الواب"
-  lynda_beyond_platformtext: "القائمة على تكنولوجيا الواب ($$ لازمة)"
-  edx_beyond_platformtext: "المتصفحات الحديثة"
-  coursera_beyond_platformtext: "المتصفحات الحديثة"
-  udacity_beyond_platformtext: "المتصفحات الحديثة"
-  teachingtree_beyond_platformtext: "القائمة على تكنولوجيا الواب"
+  pocketcode_beyond_platformtext: تطبيق المحمول
+  groklearning_beyond_platformtext: متصفحات الويب الحديثة
+  hacketyhack_beyond_platformtext: تثبيت على سطح المكتب
+  robomind_beyond_platformtext: متصفحات الويب الحديثة، الويب المحمول
+  makeschool_beyond_platformtext: متصفحات الويب الحديثة
+  appinventor_beyond_platformtext: متصفح حديث + اندرويد
+  touchdevelop_beyond_platformtext: المتصفحات الحديثة، والهواتف الذكية، وكافة الأجهزة
+  codehs_beyond_platformtext: المتصفحات الحديثة ($$ لازمة)
+  udemy_beyond_platformtext: القائمة على تكنولوجيا الواب
+  lynda_beyond_platformtext: القائمة على تكنولوجيا الواب ($$ لازمة)
+  edx_beyond_platformtext: المتصفحات الحديثة
+  coursera_beyond_platformtext: المتصفحات الحديثة
+  udacity_beyond_platformtext: المتصفحات الحديثة
+  teachingtree_beyond_platformtext: القائمة على تكنولوجيا الواب
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "تثبيت على سطح المكتب"
-  w3schools_beyond_platformtext: "متصفحات الويب الحديثة"
-  codeavengers_beyond_platformtext: "متصفحات الويب الحديثة"
-  mozilla_beyond_platformtext: "متصفحات الويب الحديثة"
-  codecombat_beyond_platformtext: "القائمة على تكنولوجيا الويب (فايرفوكس، كروم، سفاري،
-    IE9 +)"
+  kidsruby_beyond_platformtext: تثبيت على سطح المكتب
+  w3schools_beyond_platformtext: متصفحات الويب الحديثة
+  codeavengers_beyond_platformtext: متصفحات الويب الحديثة
+  mozilla_beyond_platformtext: متصفحات الويب الحديثة
+  codecombat_beyond_platformtext: القائمة على تكنولوجيا الويب (فايرفوكس، كروم، سفاري،
+    IE9 +)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "شراء روبوت"
-  finch_beyond_platformtext: "شراء روبوت"
-  arduino_beyond_platformtext: "متصفح الويب، ثم شراء المنتوج"
-  processing_beyond_platformtext: "متصفحات الويب الحديثة"
+  lego_beyond_platformtext: شراء روبوت
+  finch_beyond_platformtext: شراء روبوت
+  arduino_beyond_platformtext: متصفح الويب، ثم شراء المنتوج
+  processing_beyond_platformtext: متصفحات الويب الحديثة
   alice_beyond_platformtext: Windows أو Mac (التثبيت مطلوب)
-  sphero_beyond_platformtext: "شراء روبوت"
-  codeorg_beyond_shortdescription: "تعرف على التعليمات البرمجية مع مارك زوكربيرج و
-    الطيورالغاضبة!"
-  khan_beyond_shortdescription: "تعلم كيفية الرسم في جافا سكريبت"
-  tynker_beyond_shortdescription: "درس إنخراطي و ممتع للأطفال في الصفوف 4-8"
-  scratch_beyond_shortdescription: "إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة."
-  lightbot_beyond_shortdescription: "لعبة لتعليم مفاهيم البرمجة"
-  codecademy_beyond_shortdescription: "تعلم برمجة جافا سكريبت، في مستعرض ويب"
-  kodable_beyond_shortdescription: "لعبة أيباد ممتعة لتعليم مفاهيم البرمجة"
-  scratchjr_beyond_shortdescription: "إنشاء قصص تفاعلية وألعاب باستخدام سكراتش جونيور. "
+  sphero_beyond_platformtext: شراء روبوت
+  codeorg_beyond_shortdescription: تعرف على التعليمات البرمجية مع مارك زوكربيرج و
+    الطيورالغاضبة!
+  khan_beyond_shortdescription: تعلم كيفية الرسم في جافا سكريبت
+  tynker_beyond_shortdescription: درس إنخراطي و ممتع للأطفال في الصفوف 4-8
+  scratch_beyond_shortdescription: إنشاء ألعاب تفاعلية، والقصص، والرسوم المتحركة.
+  lightbot_beyond_shortdescription: لعبة لتعليم مفاهيم البرمجة
+  codecademy_beyond_shortdescription: تعلم برمجة جافا سكريبت، في مستعرض ويب
+  kodable_beyond_shortdescription: لعبة أيباد ممتعة لتعليم مفاهيم البرمجة
+  scratchjr_beyond_shortdescription: 'إنشاء قصص تفاعلية وألعاب باستخدام سكراتش جونيور. '
   hopscotch_beyond_shortdescription: تعلم البرمجة المرئية "فيشويل" على الأيباد
-  pocketcode_beyond_shortdescription: "قم بإنشاء لعبة على الهاتف الذكي الخاص بك ومشاركتها
-    مع الأصدقاء للتجريب!"
-  groklearning_beyond_shortdescription: "مقدمة أساسية لبرمجة بايثون PYTHON"
-  hacketyhack_beyond_shortdescription: "تعلم روبي من الاساسيات"
-  robomind_beyond_shortdescription: "كتابة التعليمات البرمجية لروبوت الظاهري"
-  makeschool_beyond_shortdescription: "تعلم صناعة لعبة أي فون في ساعة"
-  appinventor_beyond_shortdescription: "برمج تطبيقك الخاص! (فقط للأندرويد)"
-  touchdevelop_beyond_shortdescription: "برمج التطبيقات مباشرة على هاتفك, الألوح أو
-    الحاسوب المحمول"
-  codehs_beyond_shortdescription: "تعلم برمجة الجافا سكريبت مع بيئة بصرية ممتعة"
-  udemy_beyond_shortdescription: "العشرات من دروس البرمجة على الإنترنت"
-  lynda_beyond_shortdescription: "العشرات من دروس البرمجة على الإنترنت"
-  edx_beyond_shortdescription: "البدرس الأكثر شعبية في جامعة هارفارد"
-  coursera_beyond_shortdescription: "ابدء مع CS101"
-  udacity_beyond_shortdescription: "ابدء مع CS101"
-  teachingtree_beyond_shortdescription: "المعرفة والتعلم على  الانترنت: سريع وغير
-    مقيد"
-  kodu_beyond_shortdescription: "صمّم عالم ثلاثي الابعاد"
-  cargobot_beyond_shortdescription: "برمج ذراع روبوت على أيبادك"
-  kidsruby_beyond_shortdescription: "تعلم البرمجة باستخدام روبي"
-  w3schools_beyond_shortdescription: "تعلم كيفية برمجة مواقع الإنترنت"
-  codeavengers_beyond_shortdescription: "تعلم كيفية برمجة الألعاب والمواقع"
-  mozilla_beyond_shortdescription: "إنشاء وشارك صفحات الويب"
-  codecombat_beyond_shortdescription: "إلعب لعبة وتعلم الجافا سكريبت للفوز"
-  codea_beyond_shortdescription: "برمج تطبيقات على الأيباد الخاصة بك"
-  lego_beyond_shortdescription: "بناء وبرمجة الروبوت"
-  finch_beyond_shortdescription: "روبوت لتعليم علم الحاسوب"
+  pocketcode_beyond_shortdescription: قم بإنشاء لعبة على الهاتف الذكي الخاص بك ومشاركتها
+    مع الأصدقاء للتجريب!
+  groklearning_beyond_shortdescription: مقدمة أساسية لبرمجة بايثون PYTHON
+  hacketyhack_beyond_shortdescription: تعلم روبي من الاساسيات
+  robomind_beyond_shortdescription: كتابة التعليمات البرمجية لروبوت الظاهري
+  makeschool_beyond_shortdescription: تعلم صناعة لعبة أي فون في ساعة
+  appinventor_beyond_shortdescription: برمج تطبيقك الخاص! (فقط للأندرويد)
+  touchdevelop_beyond_shortdescription: برمج التطبيقات مباشرة على هاتفك, الألوح أو
+    الحاسوب المحمول
+  codehs_beyond_shortdescription: تعلم برمجة الجافا سكريبت مع بيئة بصرية ممتعة
+  udemy_beyond_shortdescription: العشرات من دروس البرمجة على الإنترنت
+  lynda_beyond_shortdescription: العشرات من دروس البرمجة على الإنترنت
+  edx_beyond_shortdescription: البدرس الأكثر شعبية في جامعة هارفارد
+  coursera_beyond_shortdescription: ابدء مع CS101
+  udacity_beyond_shortdescription: ابدء مع CS101
+  teachingtree_beyond_shortdescription: 'المعرفة والتعلم على  الانترنت: سريع وغير
+    مقيد'
+  kodu_beyond_shortdescription: صمّم عالم ثلاثي الابعاد
+  cargobot_beyond_shortdescription: برمج ذراع روبوت على أيبادك
+  kidsruby_beyond_shortdescription: تعلم البرمجة باستخدام روبي
+  w3schools_beyond_shortdescription: تعلم كيفية برمجة مواقع الإنترنت
+  codeavengers_beyond_shortdescription: تعلم كيفية برمجة الألعاب والمواقع
+  mozilla_beyond_shortdescription: إنشاء وشارك صفحات الويب
+  codecombat_beyond_shortdescription: إلعب لعبة وتعلم الجافا سكريبت للفوز
+  codea_beyond_shortdescription: برمج تطبيقات على الأيباد الخاصة بك
+  lego_beyond_shortdescription: بناء وبرمجة الروبوت
+  finch_beyond_shortdescription: روبوت لتعليم علم الحاسوب
   arduino_beyond_shortdescription: تعلم "الأردوينو" مع "سبارك فن" في العلبة الرقمية
     التجريبية.
-  processing_beyond_shortdescription: "تعلم لغات المعالجة"
-  alice_beyond_shortdescription: "تعليم البرمجة في بيئة 3D"
+  processing_beyond_shortdescription: تعلم لغات المعالجة
+  alice_beyond_shortdescription: تعليم البرمجة في بيئة 3D
   sphero_beyond_shortdescription: دروس "SPRK" تعطي الاطفال دورة مكثفة ممتعة في برمجة
     الروبوتات في حين تحسين مهاراتهم في الرياضيات والعلوم.
   codeorg_beyond_longdescription: التعرف على المفاهيم الأساسية "علوم الحاسوب" مع سحب
@@ -1768,68 +1766,68 @@
     "موصول" تتخللها دروس مثل لعبة، والموجه ذاتيا بطولة محاضرات الفيديو بيل جيتس ومارك
     زوكربيرج، غاضبون الطيور والنباتات مقابل الكسالى. التعرف على تكرار الحلقات، الشرطية،
     الخوارزميات الأساسية، وظائف، والمتغيرات.
-  khan_beyond_longdescription: "تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
-    الخاصة بك. برمج بنفسك أو مع صفك!"
-  tynker_beyond_longdescription: "تينكير يجعل من المرح آند سهلة لتعلم البرمجة. وهو
+  khan_beyond_longdescription: تعلم أساسيات برمجة الجافا سكريبت من خلال برمجة الرسومات
+    الخاصة بك. برمج بنفسك أو مع صفك!
+  tynker_beyond_longdescription: تينكير يجعل من المرح آند سهلة لتعلم البرمجة. وهو
     يجعل visual. الأطفال بناء ألعاب وتطبيقات الجوال من خلال ترتيب كتل التعليمات البرمجية.
     فإنه يزيل الحاجة إلى معرفة البرمجة بناء الجملة. الأطفال تحويل الأفكار إلى قصص
     الرسوم المتحركة وفن الرياضيات الحق بعيداً. وهو يشجع التعلم التدريجي. كما يتعلم
-    الأطفال أساسيات، تينكير يقدم مفاهيم أكثر تقدما بما في ذلك بناء الجملة مدفوعة برمجة."
+    الأطفال أساسيات، تينكير يقدم مفاهيم أكثر تقدما بما في ذلك بناء الجملة مدفوعة برمجة.
   scratch_beyond_longdescription: مع "سكراتش"، يمكنك إنشاء ألعاب تفاعلية الخاصة بك
     والقصص والرسوم المتحركة &mdash; ومشاركتها مع أصدقائك. إبدأ  اسمك أو إنشاء بطاقة
     معايدة، أو إنشاء لعبة كرة الطاولة.
-  lightbot_beyond_longdescription: "تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
+  lightbot_beyond_longdescription: تعلم منطق البرمجة الأساسية، بدءا من البرمجة الأساسية
     السهلة، للأعمار 4+، على نظام التشغيل iOS والأندرويد (أو متصفح الأنترنت). تعلم
-    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!"
-  codecademy_beyond_longdescription: "كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
+    كيفية تسلسل الأوامر، وتحديد أنماط وإجراءات الاستخدام، والاستفادة من الحلقات!
+  codecademy_beyond_longdescription: كود أكاديمي هو مقدمة تفاعلية يسترشد الطالب لأساسيات
     CS من خلال جافا سكريبت الذي يتم استخدامه من قبل عشرات الملايين من الطلاب في جميع
     أنحاء العالم. لقد تم إعداد ساعة من البرمجة سهلة وبسيطة من خلال إستعمال المسابقات،
-    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف."
+    عرض الشرائح، ومشروع منجز للطلاب في نهاية المطاف.
   kodable_beyond_longdescription: '"كودلبل" هي لعبة أيباد بتوجيه الذاتي الذي يقدم
     للأطفال 5+ إلى الأساسيات البرمجة. وجود المعلم أو أحد الوالدين هو الأمثل، ولكن
     ليس من الضروري.'
-  scratchjr_beyond_longdescription: "سكراتشجر هي لغة برمجة استهلالية التي تمكن الأطفال
+  scratchjr_beyond_longdescription: سكراتشجر هي لغة برمجة استهلالية التي تمكن الأطفال
     الصغار لإنشاء قصص تفاعلية والألعاب الخاصة بهم. الأطفال الأداة معا لبنات البرمجة
-    الرسومية لجعل الأحرف التحرك، القفز والرقص والغناء"
+    الرسومية لجعل الأحرف التحرك، القفز والرقص والغناء
   hopscotch_beyond_longdescription: برنامج تعليمي موجه للطالب على الأيباد باستخدام
     لغة البرمجة "هوب سكوتش". سوف يتمكن الطلاب على بناء ألعاب وتطبيقات للأيباد على
     الأيباد. يمكن للطلاب العمل بشكل فردي أو مع الأصدقاء (تصل إلى 3 على كل أيباد).
   pocketcode_beyond_longdescription: إنشاء اللعبة الخاصة بك على الهاتف الذكي مع "قانون
     الجيب"! مساعدة لاعب القفز الحر Steve لتسليم الطرود له. يمكنك مشاركته مع الأصدقاء
     والمستخدمين الآخرين لمحاولة!
-  groklearning_beyond_longdescription: "مساق تمهيدي يستخدم لغة البرمجة بايثون للأشخاص
+  groklearning_beyond_longdescription: مساق تمهيدي يستخدم لغة البرمجة بايثون للأشخاص
     عديمي الخبرة البرمجية. مزيجنا الفريد من المحتوى التمهيدي و التحديات سوف تقودك
     إلى فهم دقيق لبايثون و البرمجة بحد ذاتها. لقد درسنا هذا المحتوى لطلبة من مختلف
-    المراحل العمرية و من خلفيات متنوعة، و نحن متأكدون أنها ستناسبك أنت أيضاً."
-  hacketyhack_beyond_longdescription: "هاك هاكيتي سوف يعلمك أساسيات البرمجة من الألف
+    المراحل العمرية و من خلفيات متنوعة، و نحن متأكدون أنها ستناسبك أنت أيضاً.
+  hacketyhack_beyond_longdescription: 'هاك هاكيتي سوف يعلمك أساسيات البرمجة من الألف
     إلى الياء مطلقا حتى. هناك حاجة إلى أي خبرة البرمجة السابقة! مع هاك هاكيتي، عليك
     أن تتعلم لغة البرمجة روبي. روبي يستخدم لجميع أنواع البرامج، بما في ذلك تطبيقات
-    سطح المكتب والمواقع. [ملاحظة: تثبيت سطح المكتب المطلوبة]"
-  robomind_beyond_longdescription: "يتعلم الطلاب أساسيات البرمجة من خلال التحكم في
+    سطح المكتب والمواقع. [ملاحظة: تثبيت سطح المكتب المطلوبة]'
+  robomind_beyond_longdescription: 'يتعلم الطلاب أساسيات البرمجة من خلال التحكم في
     الروبوت الافتراضي الخاص بهم. الدورة على شبكة الإنترنت متكامل مع عروض قصيرة، وأفلام،
-    ومسابقات والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. "
-  makeschool_beyond_longdescription: "تعرف بعض أوبجيكتيفيك؟ تعلم لجعل أي فون اللعبة
+    ومسابقات والتوجيه التلقائي/ إقتراحات للمساعدة في عمليات البرمجة. '
+  makeschool_beyond_longdescription: تعرف بعض أوبجيكتيفيك؟ تعلم لجعل أي فون اللعبة
     في ساعة واحدة! سنقوم بإرشادك خلال العملية، إلى رمز، واختبار، ويلعب اللعبة كلياً
     في المتصفح وثم مشاركته على ألفيس بوك للأصدقاء لمحاولة! مطلوب أي خبرة التنمية فون
-    السابقة. يجب أن نفهم ما المتغيرات والأساليب، والكائنات."
-  appinventor_beyond_longdescription: "دروس فيديو مسلية وسريعة تمكنك من بناء ثلاثة
+    السابقة. يجب أن نفهم ما المتغيرات والأساليب، والكائنات.
+  appinventor_beyond_longdescription: دروس فيديو مسلية وسريعة تمكنك من بناء ثلاثة
     تطبيقات بسيطة لهاتفك أو لوحتك الرقميّة على نظام أندرويد. مصممة للمبتدئين والخبراء
     على حد سواء، هذه الساعة سوف تجعلك جاهز للبدء في بناء تطبيقاتك. تخيل ان تشارك تطبيقاتك
-    مع أصدقائك! هذه الأنشطة مناسبة للأفراد والمعلمين في القسم."
+    مع أصدقائك! هذه الأنشطة مناسبة للأفراد والمعلمين في القسم.
   touchdevelop_beyond_longdescription: برنامج "TouchDevelop" يتيح لك إنشاء تطبيقات
     على الأيباد، الأيفون، الأندرويد، أجهزة الحاسوب، أجهزة الماك، ويندوز موبايل. جهودنا
     بالبرمجة من خلال محرر صديق يجعل الترميز مرح، حتى على الهاتف أو الجهاز اللوحي!
-  codehs_beyond_longdescription: "تعلم أساسيات البرمجة مع كاريل الكلب، كمقدمة ممتعة
+  codehs_beyond_longdescription: 'تعلم أساسيات البرمجة مع كاريل الكلب، كمقدمة ممتعة
     وسهلة المنال والبصرية للترميز، وإعطاء الأوامر لجهاز كمبيوتر حيث تماما مثل إعطاء
     الأوامر لكلب. هذا البرنامج التعليمي هو رائع إذا كان يقودها معلم، ولكن يمكن أيضا
-    أن يتم بشكل مستقل. [ملاحظة: مطلوب الدفع]"
-  udemy_beyond_longdescription: "إذا كنت لم ترى سطر من البرمجة أم تبرمج كوظيفة، أوديمي
-    لديها صف لك، تدرس من قبل مدربين محترفين. [ملاحظة: مطلوب الدفع]"
-  lynda_beyond_longdescription: "تعلم كيفية إنشاء التعليمات البرمجية وبناء تطبيقات
+    أن يتم بشكل مستقل. [ملاحظة: مطلوب الدفع]'
+  udemy_beyond_longdescription: 'إذا كنت لم ترى سطر من البرمجة أم تبرمج كوظيفة، أوديمي
+    لديها صف لك، تدرس من قبل مدربين محترفين. [ملاحظة: مطلوب الدفع]'
+  lynda_beyond_longdescription: 'تعلم كيفية إنشاء التعليمات البرمجية وبناء تطبيقات
     الويب، من أسس البرمجة كائنية المنحى في C و ++C، إلى كيفية كتابة Java. لدينا دروس
     مطورين يمكن أن تساعدك على تعلم كيفية تطوير وإنشاء تطبيقات الجوال، العمل مع قواعد
     البيانات PHP و MySQL، والبدء بالمعالجة الإحصائية لغة R، وأكثر من ذلك بكثير. [ملاحظة:
-    مطلوب الدفع]"
+    مطلوب الدفع]'
   edx_beyond_longdescription: CS50x هي مقدمة كلية هارفارد للمؤسسات الفكرية لعلوم الحاسب
     الآلي وفن برمجة للشركات الكبرى وغير الكبرى على حد سواء، مع أو بدون خبرة مسبقة
     في البرمجة. وتشمل المواضيع التجريد وخوارزميات، هياكل البيانات، التغليف، إدارة
@@ -1842,12 +1840,12 @@
     على أجهزة الكمبيوتر. CS101 كما يوفر خلفية عامة عن أجهزة الكمبيوتر اليوم: ما هو
     جهاز كمبيوتر، ما هي الأجهزة، ما هو البرنامج، ما هو الإنترنت. مطلوب أي خبرة سابقة
     عدا القدرة على استخدام مستعرض ويب.'
-  udacity_beyond_longdescription: "في هذه الدورة سوف تعلم المفاهيم الرئيسية في علم
+  udacity_beyond_longdescription: في هذه الدورة سوف تعلم المفاهيم الرئيسية في علم
     الحاسوب وتعلم كيفية كتابة برامج الكمبيوتر الخاصة بك في سياق بناء زاحف على الشبكة
     العالمية. لا يوجد أي معرفة مسبقة البرمجة اللازمة لهذه الدورة. المبتدئين موضع ترحيب!
     في نهاية هذه الدورة، كنت قد تعلمت المفاهيم الرئيسية في علم الكمبيوتر والبرمجة
     ما يكفي يكون قادراً على كتابة برامج بايثون لحل المشاكل بنفسك. هذا بالطبع سوف إعدادك
-    للانتقال إلى دورات متوسطة المستوى الحوسبة."
+    للانتقال إلى دورات متوسطة المستوى الحوسبة.
   teachingtree_beyond_longdescription: '"TeachingTree" هي منصة مفتوحة تتيح لأي شخص
     تنظيم المحتوى التعليمي. هدفنا هو وصول الطلاب بسرعة إلى اللقطات المطلوبة والتي
     يحتاجونها من أجل معرفة المفاهيم الفردية. نطلب من الجميع المساعدة بإضافة أشرطة
@@ -1858,35 +1856,35 @@
     الكبار مع لا تصميم أو مهارات البرمجة. رمز لأجهزة الكمبيوتر المتوفرة للتحميل مجاناً.
     رمز لأجهزة إكس بوكس أيضا متاح في الولايات المتحدة الأمريكية في موقع تسوق XBox،
     في قناة "ألعاب ايندي" لحوالي 5 دولار.
-  cargobot_beyond_longdescription: "الشحن-بوت لغز لعبة حيث يمكنك تعليم روبوت كيفية
+  cargobot_beyond_longdescription: الشحن-بوت لغز لعبة حيث يمكنك تعليم روبوت كيفية
     نقل الصناديق. أصوات بسيطة، أليس كذلك؟ ويضم 36 الألغاز ذكية بوحشية، والمطاردة الموسيقى
     ومذهلة الرسومات الشبكية. يمكنك حتى تسجيل الحلول الخاصة بك ومشاركتها على موقع يوتيوب
-    لإظهار أصدقائك."
-  kidsruby_beyond_longdescription: "إستمتع وبرمج الألعاب أو إختراق الواجب المنزلي
+    لإظهار أصدقائك.
+  kidsruby_beyond_longdescription: 'إستمتع وبرمج الألعاب أو إختراق الواجب المنزلي
     الخاصة بك باستخدام روبي! فقط خبر أهلك أو المدرس كنت تعلم البرمجة روبي ...؛). مجانا
-    ويعمل على أي جهاز حاسوب. [ملاحظة: مطلوب تنزيل برنامج على الحاسوب]"
-  w3schools_beyond_longdescription: "تعلم كيفية إنشاء المواقع على جهاز الحاسوب الخاص
+    ويعمل على أي جهاز حاسوب. [ملاحظة: مطلوب تنزيل برنامج على الحاسوب]'
+  w3schools_beyond_longdescription: تعلم كيفية إنشاء المواقع على جهاز الحاسوب الخاص
     بك. تعلم أساسيات الخادم في أقل من يوم واحد. تعلم قواعد البيانات لإضافتها إلى موقع
-    الويب الخاص بك"
-  codeavengers_beyond_longdescription: "تعلم كيفية برمجة الألعاب والتطبيقات ومواقع
+    الويب الخاص بك
+  codeavengers_beyond_longdescription: تعلم كيفية برمجة الألعاب والتطبيقات ومواقع
     الويب. تصميم من قبل خبراء ذوي مستوى الكمال من صعوبة للمبتدئين، من السهل أن نفهم
     تعليمات ومساعدة كبيرة عندما كنت في حاجة إليها. وتشمل دوراتنا HTML و CSS وجافا
-    سكريبت رمز التحديات ومراجعة الألعاب التي تجعل التعلم متعة وفعالة لجميع الإعمار."
-  mozilla_beyond_longdescription: "كشتبان يجعلها تافهة بسيطة لإنشاء ومشاركة صفحات
-    ويب الخاصة بك. كتابة وتحرير حق HTML و CSS في المتصفح الخاص بك، ثم على الفور معاينة
+    سكريبت رمز التحديات ومراجعة الألعاب التي تجعل التعلم متعة وفعالة لجميع الإعمار.
+  mozilla_beyond_longdescription: كشتبان يجعلها تافهة بسيطة لإنشاء ومشاركة صفحات ويب
+    الخاصة بك. كتابة وتحرير حق HTML و CSS في المتصفح الخاص بك، ثم على الفور معاينة
     عملك. استضافة وحصة المشاريع الخاصة بك الانتهاء بنقرة واحدة. مثالية للمبتدئين والخبراء
-    على حد سواء."
-  codecombat_beyond_longdescription: "إلعب كساحروبرمج (نوبات) للتحكم بالأبطال، اجتاز
+    على حد سواء.
+  codecombat_beyond_longdescription: إلعب كساحروبرمج (نوبات) للتحكم بالأبطال، اجتاز
     المتاهات، أهزم الوحوش، وأخدع الأعداء, وحرر الأحلفاء! تعلم الجافا سكربت للمبتدئين
-    في هذه اللعبة على شبكة الإنترنت والمتصفح HTML 5 ."
-  codea_beyond_longdescription: "كودا لباد يتيح لك إنشاء الألعاب والمحاكاة &mdash;
+    في هذه اللعبة على شبكة الإنترنت والمتصفح HTML 5 .
+  codea_beyond_longdescription: كودا لباد يتيح لك إنشاء الألعاب والمحاكاة &mdash;
     أو مجرد عن أي فكرة البصرية لديك. تحويل أفكارك إلى الإبداعات التفاعلية التي تجعل
     من استخدام ميزات أي باد مثل اللمس المتعدد، والتسارع. ونحن نعتقد كودا عليك استخدام
     محرر التعليمات البرمجية الأكثر جمالا، ومن السهل. كودا صمم للسماح لك باللمس التعليمات
     البرمجية الخاصة بك. هل ترغب في تغيير عدد؟ فقط اضغط واسحب. كيف حول لون، أو صورة؟
-    سيتم طرح التنصت على المحررين البصرية التي تمكنك من اختيار ما تريده بالضبط."
-  lego_beyond_longdescription: "خلق الروبوتات الصغيرة، تخصيصها وبرمجة باستخدام قطع
-    الليجو."
+    سيتم طرح التنصت على المحررين البصرية التي تمكنك من اختيار ما تريده بالضبط.
+  lego_beyond_longdescription: خلق الروبوتات الصغيرة، تخصيصها وبرمجة باستخدام قطع
+    الليجو.
   finch_beyond_longdescription: فينش روبوت جديد لتعليم علوم الحاسوب. التصميم هو نتيجة
     لدراسة أربع سنوات في إنشاء مختبر "جامعة كارنيجي ميلون". فينش يهدف إلى دعم مقدمة
     جذابة للفن البرمجة. فقد الدعم لأكثر اثني عشر لغات البرمجة والبيئات، بما في ذلك
@@ -1895,41 +1893,41 @@
   arduino_beyond_longdescription: '"اردوينو" هو منصة شعبية صممت للسماح للفنانين والمصممين
     للعمل مع أجهزة الاستشعار الحقيقية، المصابيح، بوزيرس، وأكثر من ذلك. فإن معالج الإفتراضي
     التجريبي "سبارك فن" يعلمك برمجة اردوينو الحقيقي في المتصفح.'
-  processing_beyond_longdescription: "المعالجة هي لغة برمجة، وبيئة تطوير، ومجتمع على
+  processing_beyond_longdescription: المعالجة هي لغة برمجة، وبيئة تطوير، ومجتمع على
     الإنترنت. منذ عام 2001 شجعت المعالجة في التعلم وخفض مستوى محو الأمية في البرمجيات
     في الفنون البصرية التكنولوجية. أنشئت في البداية لتكون بمثابة كراسة الرسم للبرمجيات
     وتعليم أساسيات برمجة الحاسوب في سياق البصرية، وتطورت المعالجة إلى أداة للتنمية
     للمحترفين. اليوم، هناك عشرات الآلاف من الطلاب والفنانين والمصممين والباحثين والهواة
-    الذين يستخدمون المعالجة للتعلم، والنماذج، والإنتاج."
-  alice_beyond_longdescription: "باستخدام بيئة البرمجة المبتكرة لدعم إنشاء الرسوم
-    المتحركة 3D، يوفر المشروع أليس الأدوات والمواد اللازمة للتدريس والتعلم التفكير
-    الحسابي، وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية."
+    الذين يستخدمون المعالجة للتعلم، والنماذج، والإنتاج.
+  alice_beyond_longdescription: باستخدام بيئة البرمجة المبتكرة لدعم إنشاء الرسوم المتحركة
+    3D، يوفر المشروع أليس الأدوات والمواد اللازمة للتدريس والتعلم التفكير الحسابي،
+    وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
   sphero_beyond_longdescription: سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة
     للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: "متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى
+  compatibility_unsupported_browser: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى
     <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
-    يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل."
+    يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "رفرف"
+  flappy_shortcode: رفرف
   infinity_shortcode: inf
-  playlab_shortcode: "إلعب"
+  playlab_shortcode: إلعب
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_courses: "الدروس"
+  header_courses: الدروس
   header_course_catalog: Course Catalog
-  header_project_gallery: "المشاريع"
+  header_project_gallery: المشاريع
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "ساعة البرمجة"
+  header_educate_hoc: ساعة البرمجة
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1947,7 +1945,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: "الإحصائيات"
+  header_stats: الإحصائيات
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1958,10 +1956,10 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "مرحباً %{username}"
-  user_header_settings: "حسابي"
-  user_header_logout: "تسجيل الخروج"
-  user_header_signin: "تسجيل الدخول"
+  user_header_label: مرحباً %{username}
+  user_header_settings: حسابي
+  user_header_logout: تسجيل الخروج
+  user_header_signin: تسجيل الدخول
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

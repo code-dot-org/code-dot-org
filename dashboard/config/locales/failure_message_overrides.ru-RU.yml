@@ -49,16 +49,16 @@
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
         Хорошая попытка!
         Попробуй ещё раз, что сделать это правильно.
-      Course 4 Artist Vars 10_failure_message_override: "Убедитесь, что вы используете
-        переменные сторон!"
-      Course 4 Playlab For Loops 4b_failure_message_override: "Помните, что оба персонажа
-        должны доставить свои флаги за определённое количество ходов!"
-      Course 4 Playlab For Loops 5b_failure_message_override: "Помните, что оба персонажа
-        должны остановиться в одном и том же месте."
+      Course 4 Artist Vars 10_failure_message_override: Убедитесь, что вы используете
+        переменные сторон!
+      Course 4 Playlab For Loops 4b_failure_message_override: Помните, что оба персонажа
+        должны доставить свои флаги за определённое количество ходов!
+      Course 4 Playlab For Loops 5b_failure_message_override: Помните, что оба персонажа
+        должны остановиться в одном и том же месте.
       Eval Strings Images .2_failure_message_override: "Убедись, что ты добавил строку
         \n\"Вселенная\", чтобы код создал \"Здравствуй, Вселенная\""
-      Kiki_StarWars_Test_5_failure_message_override: "Игра окончена!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "Игра окончена!"
+      Kiki_StarWars_Test_5_failure_message_override: Игра окончена!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Игра окончена!
       MC HOC 2016 Level 2-2_failure_message_override: Используйте команды "двигаться
         вперёд" и "поворот", чтобы курица пошла.
       MC HOC 2016 Level 3_failure_message_override: Используйте блок "всегда делать"
@@ -73,8 +73,8 @@
         "пройти шаг к игроку" к их событию "когда породились" с циклом, чтобы помочь
         им гнаться за Вами. Если он слишком быстры, добавьте команду "ждать", чтобы
         замедлить их.
-      MC HOC 2016 Level 8_failure_message_override: "Вам нужно использовать взрывающихся
-        Криперов, чтобы взорвать стену, и так мы сможете достигнуть овцы."
+      MC HOC 2016 Level 8_failure_message_override: Вам нужно использовать взрывающихся
+        Криперов, чтобы взорвать стену, и так мы сможете достигнуть овцы.
       MC HOC 2016 New Drop_failure_message_override: Используйте клавиши стрелок,
         чтобы пойти к овце, и нажмите клавишу пробела или кликните на поле игры, чтобы
         использовать овцу. Также, не забудьте добавить блок "Выпасть" в ваш код.
@@ -83,22 +83,22 @@
       MC HOC 2016 New Walk_failure_message_override: Чтобы открыть дверь, нажмите
         на кнопку "пробел" или дотроньтесь до поля игры перед ней. Войдите внутрь,
         чтобы продолжить.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: "Если у вас есть проблема
-        с касание 5 Големов, то попробуйте изменить счёт до 2 баллов за касание."
-      MC HOC 2016 Village Test_failure_message_override: "Вам нужно сделать Железного
-        Голема, преследующий и атакующий зомби, чтобы выиграть."
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Если у вас есть проблема с
+        касание 5 Големов, то попробуйте изменить счёт до 2 баллов за касание.
+      MC HOC 2016 Village Test_failure_message_override: Вам нужно сделать Железного
+        Голема, преследующий и атакующий зомби, чтобы выиграть.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: "Поздравляю! Ты собрал X монет!"
-      courseE_playLab_scaffold3_failure_message_override: "Вы должны добавить двух
-        или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу."
+      WhileAdventure_failure_message_override: Поздравляю! Ты собрал X монет!
+      courseE_playLab_scaffold3_failure_message_override: Вы должны добавить двух
+        или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: "Вы должны добавить двух
-        или более персонажей, которые перейдут в вашу игру."
-      kikiTesta_failure_message_override: "Поздравляю! Вы собрали X монет!"
-      sample1_failure_message_override: "Поздравляю! Вы собрали X монет!"
-      sample4_failure_message_override: "Поздравляю! Вы собрали X монет!"
-      sample6_failure_message_override: "Не сдавайся.  Продолжай пробовать!  [Перейди
-        в Игровую Зону]"
-      sample8_failure_message_override: "Поздравляю! Вы собрали X монет!"
+      grade4_scaffolded_project3_failure_message_override: Вы должны добавить двух
+        или более персонажей, которые перейдут в вашу игру.
+      kikiTesta_failure_message_override: Поздравляю! Вы собрали X монет!
+      sample1_failure_message_override: Поздравляю! Вы собрали X монет!
+      sample4_failure_message_override: Поздравляю! Вы собрали X монет!
+      sample6_failure_message_override: Не сдавайся.  Продолжай пробовать!  [Перейди
+        в Игровую Зону]
+      sample8_failure_message_override: Поздравляю! Вы собрали X монет!

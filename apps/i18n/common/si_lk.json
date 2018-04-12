@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Activity",
   "actions": "ක්‍රියාවන්",
   "add": "එක් කරන්න",
@@ -892,6 +893,7 @@
   "sectionViewProgress": "View Progress",
   "secret": "රහස්‍ය",
   "seeAllTutorials": "See all tutorials",
+  "selectACourse": "Select a course or unit",
   "selectGoogleClassroom": "Select a Google Classroom",
   "selectCleverSection": "Select a Clever section",
   "selectSection": "අංශය තෝරන්න",
@@ -915,6 +917,7 @@
   "shareSettingEnableDialog": "By enabling sharing, your students will be allowed to share their projects created through Code.org’s advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone by sharing their project link.",
   "shareSettingDisableDialog": "An important part of the student experience of using Code.org is the ability to share their projects and creations with others. With sharing disabled, students will not be able to share their creations created with our advanced programming tools (App Lab, Game Lab, and Web Lab) with anyone else besides their Code.org teachers. These advanced tools are designed for students that are over 13 or being used under a teacher or parent’s guidance.  Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.",
   "shareSettingDisableDialogNote": "Note that students will still be able to share projects created using the programming tools designed for younger students like Play Lab and Artist. These tools limit what students can create and do not allow for uploading any of their own assets. To protect students’ privacy, shared creations in the project gallery are labeled only with the first letter of a student’s name and an age range.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "ඔබගේ වයස ලබාදී OK බොත්තම ක්ලික් කරන්න.",
   "shareWarningsMoreInfo": "අපගේ රහස්‍යතා ප්‍රතිපත්තිය",
   "shareWarningsStoreData": "මෙම වැඩසටහන Code Studio මත නිර්මාණය කර ඇති අතර මෙය ඕනෑම අයෙක්ට නැරඹිය හැකිවේ එබැවින් ඔබගේ පුද්ගලික තොරතුරු සැපයීමේදී සැලකිලිමත් වන්න.",

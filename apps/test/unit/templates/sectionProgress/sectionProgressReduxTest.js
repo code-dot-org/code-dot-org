@@ -3,7 +3,10 @@ import sectionProgress, {
   setSection,
   setValidScripts,
   setCurrentView,
-  ViewType
+  ViewType,
+  setScriptId,
+  addScriptData,
+  addStudentLevelProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
@@ -11,6 +14,10 @@ const fakeSectionData = {
   students: {
     id: 1,
     name: 'test1'
+  },
+  script: {
+    id: 300,
+    name: 'csp2',
   }
 };
 
@@ -21,25 +28,84 @@ const fakeValidScripts = [
     id: 456,
     name: 'Script Name',
     position: 23
+  },
+  {
+    category: 'category1',
+    category_priority: 1,
+    id: 300,
+    name: 'csp2',
+    position: 23
   }
 ];
+
+const fakeScriptData789 = {
+  id: 789,
+  stages: [
+    {id: 1, levels: []},
+    {id: 2, levels: []},
+  ],
+};
+
+const fakeScriptData456 = {
+  id: 456,
+  stages: [
+    {id: 3, levels: []},
+    {id: 4, levels: []},
+  ],
+};
+
+const fakeStudentProgress = {
+  1: {242: 1001, 243: 1000},
+  2: {242: 1000, 243: 1000},
+};
 
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
 
+  describe('setScriptId', () => {
+    it('sets the script id', () => {
+      const action = setScriptId(130);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.scriptId, 130);
+    });
+  });
+
   describe('setSection', () => {
-    it('sets the section data', () => {
+    it('sets the section data and assigned scriptId', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.section, fakeSectionData);
+      assert.deepEqual(nextState.scriptId, 300);
+    });
+
+    it('sets the section data with no default scriptId', () => {
+      const sectionDataWithNoScript = {
+        ...fakeSectionData,
+        script: null,
+      };
+      const action = setSection(sectionDataWithNoScript);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.section, sectionDataWithNoScript);
+      assert.deepEqual(nextState.scriptId, null);
     });
   });
 
   describe('setValidScripts', () => {
-    it('sets the script data', () => {
+    it('sets the script data and defaults scriptId', () => {
       const action = setValidScripts(fakeValidScripts);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.validScripts, fakeValidScripts);
+      assert.deepEqual(nextState.scriptId, fakeValidScripts[0].id);
+    });
+
+    it('sets the script data and does not override already assigned scriptId', () => {
+      const action = setValidScripts(fakeValidScripts);
+      const nextState = sectionProgress({
+        ...initialState,
+        scriptId: 100
+      }, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts);
+      assert.deepEqual(nextState.scriptId, 100);
     });
   });
 
@@ -54,6 +120,38 @@ describe('sectionProgressRedux', () => {
       const action = setCurrentView(ViewType.DETAIL);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.currentView, ViewType.DETAIL);
+    });
+  });
+
+  describe('addScriptData', () => {
+    it('adds multiple scriptData info', () => {
+      const action = addScriptData(456, fakeScriptData456);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.scriptDataByScript[456], fakeScriptData456);
+
+      const action2 = addScriptData(789, fakeScriptData789);
+      const nextState2 = sectionProgress(nextState, action2);
+      assert.deepEqual(nextState2.scriptDataByScript[456], fakeScriptData456);
+      assert.deepEqual(nextState2.scriptDataByScript[789], fakeScriptData789);
+    });
+  });
+
+  describe('addStudentLevelProgress', () => {
+    it('adds multiple scriptData info', () => {
+      const action = addStudentLevelProgress(130, fakeStudentProgress);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.studentLevelProgressByScript[130], fakeStudentProgress);
+
+      const action2 = addStudentLevelProgress(132, {
+        ...fakeStudentProgress,
+        3: {},
+      });
+      const nextState2 = sectionProgress(nextState, action2);
+      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(nextState2.studentLevelProgressByScript[132], {
+        ...fakeStudentProgress,
+        3: {},
+      });
     });
   });
 });

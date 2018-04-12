@@ -3,6 +3,7 @@
  */
 
 import color from '@cdo/apps/util/color';
+import {PropTypes} from 'react';
 
 /**
  * Mapping of application statuses to their background and text colors.
@@ -75,15 +76,25 @@ exports.ApplicationFinalStatuses = [
  * Constants for Regional Partner dropdown
  */
 const allPartnersLabel = "All Regional Partners' Applications";
-const allPartnersFilter = "all";
-const unmatchedLabel = "No Partner/Unmatched";
-const unmatchedFilter = "none";
+const allPartnersValue = "all";
+const unmatchedPartnerLabel = "No Partner/Unmatched";
+const unmatchedPartnerValue = "none";
 exports.AllPartnersLabel = allPartnersLabel;
-exports.AllPartnersFilter = allPartnersFilter;
-exports.UnmatchedLabel = unmatchedLabel;
-exports.UnmatchedFilter = unmatchedFilter;
+exports.AllPartnersValue = allPartnersValue;
+exports.UnmatchedPartnerLabel = unmatchedPartnerLabel;
+exports.UnmatchedPartnerValue = unmatchedPartnerValue;
 
 exports.RegionalPartnerDropdownOptions = [
-  {value: unmatchedFilter, label: unmatchedLabel},
-  {value: allPartnersFilter, label: allPartnersLabel}
+  {value: unmatchedPartnerValue, label: unmatchedPartnerLabel},
+  {value: allPartnersValue, label: allPartnersLabel}
 ];
+
+const regionalPartnerFilterValuePropType = PropTypes.oneOfType([
+  PropTypes.number, // regional partner id
+  PropTypes.oneOf([allPartnersValue, unmatchedPartnerValue])
+]);
+exports.RegionalPartnerFilterValuePropType = regionalPartnerFilterValuePropType;
+exports.RegionalPartnerFilterPropType = PropTypes.shape({
+  value: regionalPartnerFilterValuePropType,
+  label: PropTypes.string
+});

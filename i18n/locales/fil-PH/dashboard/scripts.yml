@@ -5686,6 +5686,8 @@ fil:
               name: Naka-Nest na mga Loop sa Frozen
             Nested Loops:
               name: Mga Loops na naka-nest
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Kursong E
           description_audience: 'Mga Edad: 8-12'
           description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
@@ -6120,6 +6122,8 @@ fil:
               name: Gumawa ng Foundation
             Nested Loops:
               name: Mga Loops na naka-nest
+            Conditionals & Loops in Harvester:
+              name: Mga Kondisyonal & Mga Loop sa Harvester
           title: Mabilis na Kurso
           description_audience: 'Mga Edad: 9-18'
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -7046,6 +7050,8 @@ fil:
               name: Pag-crowdsourcing
             Build a Star Wars Game:
               name: Bumuo ng Star Wars na Laro
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Kursong E 2018
           description_audience: ''
           description_short: ''
@@ -7461,3 +7467,343 @@ fil:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Mga Loops sa Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Mabilis na Kurso
+          description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
+          description_audience: 'Mga Edad: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Panimula
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Gumawa ng Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Pagde-debug sa Kolektor
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Mga Loops na naka-nest
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Naka-Nest na Mga Loop na Proyekto sa Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'Paano ito Gumagana: Ang Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital na Pagkamamamayan'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Mga Pangyayari sa Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Mga Pangyayari sa Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Mga Pangyayari sa Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Mga Kondisyonal: Mga Kondisyonal gamit ang mga Baraha'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Mga While Loops sa Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Kondisyonal na mga Loop sa Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Mga Kondisyonal sa Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Mga Kondisyonal & Mga Loop sa Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Mga Variable: Sobreng mga Variable'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Mga Variable sa Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Mga Variable sa Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'Mga For Loop: Saya sa For Loop'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: Mga For Loops sa Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: Mga Loops sa Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Mga Function: Pagsulat ng mga Awit gamit ang mga Parameter'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Mga Functions sa Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Mga Functions na may mga Parameter sa Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Mga Functions na may mga Parameter sa Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Baguhin ang Iyong Proyekto
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Kursong B
+          description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)
+          description_audience: 'Mga Edad: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Pag-dedebug: Hindi nakitang mga Bug'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Matutong Mag-Drag at Mag-Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Ang Iyong Digital na Bakas
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Pag-Program sa Maze
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        coursed-2018:
+          title: Bagong Kursong D na Iskript
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Panimula
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Gumawa ng Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Pagde-debug sa Kolektor
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Mga Pangyayari sa Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Mga Naka-Nest na mga Loop sa Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Naka--nest na mga Loops sa Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: Mga While Loops sa Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Mga Kondisyonal sa Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Mga Kondisyonal & Mga Loops sa Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Mga Kondisyonal & Mga Loop sa Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital na Pagkamamamayan
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Bumuo ng Play Lab na Laro
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artist na Binary
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  '

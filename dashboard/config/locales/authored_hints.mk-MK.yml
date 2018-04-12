@@ -4089,20 +4089,26 @@
         mc_8_c: Your goal is to get into the doorway of the house at the top of the
           screen.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
+        mc_2_a: 'You need to `move forward` twice to stand in front of the tree.
+
+'
         mc_2_b: The `destroy block` command cuts down the tree in front of you.
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
+        mc_2_a: 'You need to `move forward` twice to stand in front of the tree.
+
+'
         mc_2_b: The `destroy block` command cuts down the tree in front of you.
       Overworld Chop Trees_authored_hint:
-        mc_4_a: |
-          You can chop down trees in any order. What path takes the smallest number of blocks?
+        mc_4_a: 'You can chop down trees in any order. What path takes the smallest
+          number of blocks?
+
+'
         mc_4_b: The `destroy block` command cuts down the tree in front of you.
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: |
-          You can chop down trees in any order. What path takes the smallest number of blocks?
+        mc_4_a: 'You can chop down trees in any order. What path takes the smallest
+          number of blocks?
+
+'
         mc_4_b: The `destroy block` command cuts down the tree in front of you.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
@@ -4115,15 +4121,21 @@
           even if you haven't solved the puzzle yet.
         mc_6_c: You can put more than one block inside of a `repeat` loop.
       Overworld Move to Sheep_authored_hint:
-        mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
-        mc_1_b: |
-          Make sure both `move forward` blocks are snapped to the `when run` block.
+        mc_1_a: 'The `move forward` block is at the top of the toolbox.
+
+'
+        mc_1_b: 'Make sure both `move forward` blocks are snapped to the `when run`
+          block.
+
+'
       Overworld Move to Sheep_2018_authored_hint:
-        mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
-        mc_1_b: |
-          Make sure both `move forward` blocks are snapped to the `when run` block.
+        mc_1_a: 'The `move forward` block is at the top of the toolbox.
+
+'
+        mc_1_b: 'Make sure both `move forward` blocks are snapped to the `when run`
+          block.
+
+'
       Overworld Place Wall_authored_hint:
         mc_5_a: Use the `place` block first, and then the `move` block.
         mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
@@ -4155,19 +4167,29 @@
         mc_13_a: Use `place rail` to lay rail on the square you are standing in.
         mc_13_b: Use `repeat` loops to make your code shorter.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: |
-          The `shear` block gets the sheep in front of you. Are you facing the sheep?
-        mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
-        mc_3_c: |
-          Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
+          the sheep?
+
+'
+        mc_3_b: 'If you need to change the way you are facing, use a `turn` block.
+
+'
+        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
+          even if you haven''t solved the puzzle yet.
+
+'
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: |
-          The `shear` block gets the sheep in front of you. Are you facing the sheep?
-        mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
-        mc_3_c: |
-          Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
+          the sheep?
+
+'
+        mc_3_b: 'If you need to change the way you are facing, use a `turn` block.
+
+'
+        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
+          even if you haven''t solved the puzzle yet.
+
+'
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
@@ -4422,8 +4444,10 @@
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
           the cave, but you only need to move and collect 5 times. Do you know why?
       course1_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: |
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+        courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) block to solve this.
+
+'
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
 
@@ -5791,8 +5815,9 @@
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
-        courseA_artist_loops4_b: Since you can only use one East block, try putting
-          it inside of the `repeat` loop.
+        courseA_artist_loops4_b: |-
+          Since you can only use one <xml><block type="simple_move_right"/></xml>
+          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
@@ -6084,8 +6109,10 @@
           </next>
           </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: |
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+        courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) block to solve this.
+
+'
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
 
@@ -6100,8 +6127,11 @@
       courseA_collector_preLoops2_authored_hint: []
       courseA_collector_preLoops3_authored_hint: []
       courseA_collector_preLoops4_authored_hint:
-        courseA_collector_preLoops4_a: |
-          To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
+        courseA_collector_preLoops4_a: 'To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          block to the bottom of the program and click "Run"!
+
+'
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions
           to get even one gem!
@@ -6720,8 +6750,10 @@
         courseB_collector_loops8_challenge_a: 'If you can''t figure out where to put
           the repeat loops, program it out step-by-step and look for a pattern. '
       courseB_collector_loops9_authored_hint:
-        courseB_collector_loops9_a: |
-          Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+        courseB_collector_loops9_a: 'Does this seem too hard?  Break it up into 4
+          little problems to make it feel easier.
+
+'
         courseB_collector_loops9_b: You will need 3 repeat loops, one after the other,
           for this solution.
       courseB_collector_loops_challenge1_authored_hint:
@@ -6869,8 +6901,10 @@
           will either need to add two  <xml> <block type="collector_collect"/></xml>
           blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
-        courseA_collector_loops_challenge2_b: |
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+        courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) block to solve this.
+
+'
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
 
@@ -9026,8 +9060,10 @@
           Where does it go wrong?
         courseD_collector_debugging1_b: Do you see any patterns that could be made
           more simple using a `repeat` loop?
-        courseD_collector_debugging1_c: |
-          Remember to use the `collect` block to pick up treasure once you have moved to it.
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
+          up treasure once you have moved to it.
+
+'
       courseD_collector_debugging10_predict1_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
@@ -9040,8 +9076,10 @@
           How about the second?
 
           Where does it go wrong?
-        courseD_collector_debugging1_c: |
-          Remember to use the `collect` block to pick up treasure once you have moved to it.
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
+          up treasure once you have moved to it.
+
+'
       courseD_collector_debugging2_authored_hint:
         courseD_collector_debugging2_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -12332,8 +12370,10 @@
           with the `set length` block, and start it at 150 pixels.
         courseF_artist_variables8_c: Make sure to use the `repeat` loop to draw your
           triangle.
-        courseF_artist_variables8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables8_a: 'Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)
+          blocks inside your loop at the end.
+
+'
       courseF_artist_variables8_2018_authored_hint:
         courseF_artist_variables8_b: Remember to start your code for the triangle
           with the `set length` block, and start it at 150 pixels.
@@ -12381,8 +12421,10 @@
         courseF_artist_variables6a_a: Remember to use the variable `length` instead
           of an actual number to solve this puzzle.
       courseF_artist_variables_8_authored_hint:
-        courseF_artist_variables_8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables_8_a: 'Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)
+          blocks inside your loop at the end.
+
+'
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Each vertical line has a length of
           `10`. Each horizontal line should have a length of `length`.
@@ -13521,14 +13563,18 @@
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: |
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: 'Remember to build code inside of the function
+          editor.
+
+'
       courseF_bee_functions8a_2018_authored_hint:
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: |
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: 'Remember to build code inside of the function
+          editor.
+
+'
       courseF_bee_functionsPre7_authored_hint:
         courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
           function a little at a time.  \n\nAdd some blocks, then try it out. Add
@@ -13783,8 +13829,10 @@
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: |
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: 'Remember to build code inside of the function
+          editor.
+
+'
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar
           from a flower.
@@ -15078,8 +15126,10 @@
         grade1_adventurer_loops8_challenge_a: Can you find a pattern in the steps?  Where
           can you use a repeat?
       grade1_adventurer_loops9_authored_hint:
-        grade1_adventurer_loops9_a: |
-          Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+        grade1_adventurer_loops9_a: 'Does this seem too hard?  Break it up into 4
+          little problems to make it feel easier.
+
+'
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.

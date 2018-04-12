@@ -34,8 +34,7 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5102,
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

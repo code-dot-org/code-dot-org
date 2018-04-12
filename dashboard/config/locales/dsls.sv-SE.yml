@@ -178,8 +178,8 @@
         "<br/><br/>above": "<br/> <br/> ovan"
         "<br/><br/>below": "<br/> <br/> nedan"
         "<br/><br/>next to": "<br/> <br/> bredvid"
-        Is the square next to, above, or below the ball?: "Är kvadraten bredvid, över
-          eller under bollen?"
+        Is the square next to, above, or below the ball?: Är kvadraten bredvid, över
+          eller under bollen?
         Matching: Matchning
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -500,7 +500,7 @@
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Borsta håret
         Cleaning your room: Städa ditt rum
-        Eating your dessert: "Ät din dessert"
+        Eating your dessert: Ät din dessert
         Multiple Choice: Flervalsfråga
         Washing your face: Tvätta ansiktet
         Which one of these activities would be best for practicing crowdsourcing?: Vilken

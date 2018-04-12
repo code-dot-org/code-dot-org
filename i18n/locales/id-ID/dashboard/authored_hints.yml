@@ -3561,20 +3561,16 @@ id:
         mc_8_b: Gunakan 'repeat' pengulangan untuk menyederhanakan kode Anda.
         mc_8_c: Tujuan anda adalah untuk sampai ke pintu rumah di bagian atas layar.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: |
-          Anda butuh `gerak maju` dua kali untuk berdiri di depan pohon.
+        mc_2_a: 'Anda butuh `gerak maju` dua kali untuk berdiri di depan pohon.'
         mc_2_b: Perintah 'destroy block' penebangan pohon di depan Anda.
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: |
-          Anda butuh `gerak maju` dua kali untuk berdiri di depan pohon.
+        mc_2_a: 'Anda butuh `gerak maju` dua kali untuk berdiri di depan pohon.'
         mc_2_b: Perintah 'destroy block' penebangan pohon di depan Anda.
       Overworld Chop Trees_authored_hint:
-        mc_4_a: |
-          Anda dapat menebang pohon dalam urutan apapun. Apakah mengambil jumlah terkecil dari blok?
+        mc_4_a: 'Anda dapat menebang pohon dalam urutan apapun. Apakah mengambil jumlah terkecil dari blok?'
         mc_4_b: Perintah 'destroy block' penebangan pohon di depan Anda.
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: |
-          Anda dapat menebang pohon dalam urutan apapun. Apakah mengambil jumlah terkecil dari blok?
+        mc_4_a: 'Anda dapat menebang pohon dalam urutan apapun. Apakah mengambil jumlah terkecil dari blok?'
         mc_4_b: Perintah 'destroy block' penebangan pohon di depan Anda.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Klik panah di blok 'tempat' untuk memilih tempat mana yang kamu inginkan.
@@ -3585,15 +3581,11 @@ id:
         mc_6_b: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         mc_6_c: Anda dapat memasukkan lebih dari satu blok kedalam 'repeat' pengulangan.
       Overworld Move to Sheep_authored_hint:
-        mc_1_a: |
-          Blok 'move forward' ada di bagian atas toolbox.
-        mc_1_b: |
-          Pastikan kedua 'bergerak maju' blok akan membentak 'ketika menjalankan' blok.
+        mc_1_a: 'Blok ''move forward'' ada di bagian atas toolbox.'
+        mc_1_b: 'Pastikan kedua ''bergerak maju'' blok akan membentak ''ketika menjalankan'' blok.'
       Overworld Move to Sheep_2018_authored_hint:
-        mc_1_a: |
-          Blok 'move forward' ada di bagian atas toolbox.
-        mc_1_b: |
-          Pastikan kedua 'bergerak maju' blok akan membentak 'ketika menjalankan' blok.
+        mc_1_a: 'Blok ''move forward'' ada di bagian atas toolbox.'
+        mc_1_b: 'Pastikan kedua ''bergerak maju'' blok akan membentak ''ketika menjalankan'' blok.'
       Overworld Place Wall_authored_hint:
         mc_5_a: Gunakan 'tempat' blok pertama, dan kemudian blok 'bergerak'.
         mc_5_b: Pastikan kedua blok dalam lingkaran 'repeat' untuk menjalankan kode lebih dari sekali.
@@ -3617,19 +3609,13 @@ id:
         mc_13_a: Gunakan 'tempat rel' untuk memasang rel di alun-alun tempat kamu berdiri.
         mc_13_b: Gunakan 'repeat' pengulangan untuk membuat kode Anda lebih pendek.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: |
-          Blok 'geser' mendapatkan domba di depan kamu. Apakah kamu bertemu domba?
-        mc_3_b: |
-          Jika Anda perlu mengubah cara Anda menghadapinya, gunakan blok `turn`.
-        mc_3_c: |
-          Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+        mc_3_a: 'Blok ''geser'' mendapatkan domba di depan kamu. Apakah kamu bertemu domba?'
+        mc_3_b: 'Jika Anda perlu mengubah cara Anda menghadapinya, gunakan blok `turn`.'
+        mc_3_c: 'Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.'
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: |
-          Blok 'geser' mendapatkan domba di depan kamu. Apakah kamu bertemu domba?
-        mc_3_b: |
-          Jika Anda perlu mengubah cara Anda menghadapinya, gunakan blok `turn`.
-        mc_3_c: |
-          Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+        mc_3_a: 'Blok ''geser'' mendapatkan domba di depan kamu. Apakah kamu bertemu domba?'
+        mc_3_b: 'Jika Anda perlu mengubah cara Anda menghadapinya, gunakan blok `turn`.'
+        mc_3_c: 'Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.'
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Mulailah dengan memikirkan bagian ini: apa yang berbeda di setiap langkahnya? Blok apa yang bisa Anda gunakan untuk membuat *keputusan* tentang apakah Anda sedang berbunga atau sarang lebah?
@@ -3812,8 +3798,7 @@ id:
         courseA_collector_loops_challenge1_b: Anda tidak perlu menggunakan sebuah lingkaran jika Anda hanya melakukan sesuatu satu waktu.
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua, tetapi anda hanya butuh untuk bergerak dan mengumpulkan 5 kali. Anda tahu kenapa?
       course1_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: |+
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+        courseA_collector_loops_challenge2_b: "You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.\n\n"
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
           
@@ -5223,8 +5208,7 @@ id:
       courseA_collector_preLoops2_authored_hint: [ ]
       courseA_collector_preLoops3_authored_hint: [ ]
       courseA_collector_preLoops4_authored_hint:
-        courseA_collector_preLoops4_a: |+
-          To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click "Run"!
+        courseA_collector_preLoops4_a: "To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click \"Run\"!\n\n"
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: Anda harus pergi dua arah yang berbeda untuk mendapatkan satu permata!
       courseA_collector_preLoops6_authored_hint:
@@ -5234,27 +5218,178 @@ id:
           After you have moved to a square with treasure, use this block to pick it up.
           <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: [ ]
+      courseA_harvester_forVideo_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Use a `repeat` block like this to help you!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+          </block></xml>
+      courseA_harvester_loops1_authored_hint:
+        courseA_harvester_loops1_a: |-
+          Once you move to some corn, use this block to pick it!
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops10_authored_hint: [ ]
+      courseA_harvester_loops11_authored_hint: [ ]
+      courseA_harvester_loops2_authored_hint:
+        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+      courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          Use a `repeat` block like this to help you!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+        courseA_harvester_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+      courseA_harvester_loops4_authored_hint:
+        courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
+        courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
+      courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
+      courseA_harvester_loops5a_authored_hint:
+        courseA_harvester_loops5a_a: Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: Press `Run` and see what happens!
+        courseA_harvester_loops5b_b: Are your loops repeating the right number of times?
+      courseA_harvester_loops6_authored_hint:
+        courseA_harvester_loops6_a: Jika Anda terjebak, cobalah menulis langkah di atas kertas dan mencari pola berulang.
+      courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+      courseA_harvester_loops8_authored_hint: [ ]
+      courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: Break this puzzle up into three different parts. One part to the first corner, one part to the second corner, and one part to the end.
+        courseA_harvester_loops9_b: Don't be afraid to run your code after every part to see what happens!
       courseA_harvester_seq1_authored_hint:
         courseA_harvester_seq1_a: |-
-          Use this block to get nectar once the bee finds a flower.
+          Use this block to pick the corn when the harvester finds it!
           
           <xml>
           <block type="harvester_corn"/>
           </xml>
-      courseA_harvester_seq12_authored_hint:
+        courseA_harvester_seq1_b: |-
+          The harvester will need to move East three times to get to the corn. Use this block:
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_a: Are you stuck? Try writing down the steps on a piece of paper first.
+        courseA_harvester_seq10_b: You need to `Move East`, then `Move North`. Do this two times. Don't forget to get all the corn too!
+      courseA_harvester_seq11_authored_hint: [ ]
+      courseA_harvester_seq12_authored_hint: [ ]
+      courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: |-
-          Use this block to get nectar once the bee finds a flower.
+          Use this block to pick corn once the harvester gets to it.
           
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_harvester_seq2_authored_hint: [ ]
-      courseA_harvester_seq3_authored_hint: [ ]
-      courseA_harvester_seq4_authored_hint: [ ]
-      courseA_harvester_seq5_authored_hint: [ ]
-      courseA_harvester_seq6_authored_hint: [ ]
-      courseA_harvester_seq7_authored_hint: [ ]
+      courseA_harvester_seq2_authored_hint:
+        courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
+        courseA_harvester_seq2_b: Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
+      courseA_harvester_seq3_authored_hint:
+        courseA_harvester_seq3_a: |-
+          Did you remember to use this block?
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: Say the steps out loud and see if it helps you figure out the answer.
+      courseA_harvester_seq4_authored_hint:
+        courseA_harvester_seq4_a: How many spaces are between the Harvester and the corn? How many blocks are already in your workspace?
+        courseA_harvester_seq4_b: |-
+          You will need five `Move East` blocks and one `Pick Corn` block:
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_a: Which block moves the harvester the wrong way?
+        courseA_harvester_seq5_b: You need to remove one block.
+        courseA_harvester_seq5_c: |-
+          Throw this block in the trash!
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: If you're stuck, try saying the steps out loud. It could help you figure out the right path.
+      courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: Try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
       courseA_harvester_seq8_authored_hint: [ ]
+      courseA_harvester_seq9_authored_hint:
+        courseA_harvester_seq9_a: Run the code a few times to see what happens. Where does the harvester stop?
+        courseA_harvester_seq9_b: Don't forget to pick all the corn! You will need **3** pick corn blocks.
+      courseA_maze_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp2a_2018_authored_hint:
+        '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+      courseA_maze_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
+      courseA_maze_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
+        courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseA_maze_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
@@ -5321,8 +5456,13 @@ id:
         courseA_maze_seq5_a: Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
         courseA_maze_seq5_b: Anda memerlukan 2 blok, menunjuk 2 arah.
       courseA_maze_seq5_2018_authored_hint:
-        courseA_maze_seq5_a: Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
-        courseA_maze_seq5_b: Anda memerlukan 2 blok, menunjuk 2 arah.
+        '1': Cobalah menuliskan langkah-langkah di atas kertas untuk menemukan solusinya!
+        '2': |-
+          You will need to use this block:
+          
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018_authored_hint:
+        '1': Say the steps out loud and see if it helps you figure out the answer.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Kode terakhir anda harus memiliki 3 blok gerakan.
         courseA_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
@@ -5607,21 +5747,43 @@ id:
         courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: [ ]
       courseB_artist_loops10_authored_hint: [ ]
+      courseB_artist_loops10_2018_authored_hint: [ ]
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
         courseB_artist_loops2_b: Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir.
+      courseB_artist_loops2_2018_authored_hint:
+        courseB_artist_loops2_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
+        courseB_artist_loops2_b: Coba jalankan kode terlebih dahulu untuk melihat di mana artis berakhir.
       courseB_artist_loops3_authored_hint:
+        courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
+        courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
+      courseB_artist_loops3_2018_authored_hint:
         courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
         courseB_artist_loops4_b: Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.
         courseB_artist_loops4_c: Jangan lupa untuk mengubah berapa kali pengulangan loop.
+      courseB_artist_loops4_2018_authored_hint:
+        courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
+        courseB_artist_loops4_b: Anda akan perlu menambahkan sebuah blok bagian dalam ulangi lingkaran untuk memecahkan ini teka-teki.
+        courseB_artist_loops4_c: Jangan lupa untuk mengubah berapa kali pengulangan loop.
       courseB_artist_loops5_authored_hint:
+        courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
+      courseB_artist_loops5_2018_authored_hint:
         courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
+      courseB_artist_loops6_2018_authored_hint:
+        courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
       courseB_artist_loops7_authored_hint:
+        courseB_artist_loops7_a: Tantangan ini menggunakan loop** 4 **, satu demi satu!
+        courseB_artist_loops7_b: |-
+          Notice that every loop makes a stair pattern that goes a different direction.
+          
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop 4\n  - Left\n  - Down"
+      courseB_artist_loops7_2018_authored_hint:
         courseB_artist_loops7_a: Tantangan ini menggunakan loop** 4 **, satu demi satu!
         courseB_artist_loops7_b: |-
           Notice that every loop makes a stair pattern that goes a different direction.
@@ -5631,8 +5793,15 @@ id:
       courseB_artist_loops8_authored_hint:
         courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat tangga?
         courseB_artist_loops8_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya.
+      courseB_artist_loops8_2018_authored_hint:
+        courseB_artist_loops8_a: Berapa kali anda harus mengulangi pola untuk membuat tangga?
+        courseB_artist_loops8_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang dilakukannya.
       courseB_artist_loops8_predict1_authored_hint: [ ]
       courseB_artist_loops9_authored_hint:
+        courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
+        courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
+        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+      courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
         courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
         courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
@@ -5640,7 +5809,14 @@ id:
         courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
+      courseB_artist_loops_challenge1_2018_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_right"/></xml> will let your artist move at a slant!'
+        courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
+        courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
       courseB_artist_loops_challenge2_authored_hint:
+        courseB_artist_loops_challenge2_a: Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.
+        courseB_artist_loops_challenge2_b: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain.
+      courseB_artist_loops_challenge2_2018_authored_hint:
         courseB_artist_loops_challenge2_a: Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.
         courseB_artist_loops_challenge2_b: Anda bisa menggunakan blok `melompat` untuk pindah ke ruangan lain.
       courseB_collector_loops1_authored_hint:
@@ -5648,10 +5824,21 @@ id:
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
         courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
+      courseB_collector_loops10_2018_authored_hint:
+        courseB_collector_loops10_a: Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.
+        courseB_collector_loops10_b: Cobalah menulis langkah di selembar kertas dan mencari sebuah pola.
+      courseB_collector_loops1_2018_authored_hint:
+        courseB_collector_loops1_a: The <xml><block type="collector_collect_simplified"/></xml> block can be used to pick up treasure when you are standing on top of it.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
         courseB_collector_loops2_b: When you have reached a spot with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
+      courseB_collector_loops2_2018_authored_hint:
+        courseB_collector_loops2_a: Anda harus bergerak sebelum bisa mengumpulkan harta karun.
+        courseB_collector_loops2_b: When you have reached a spot with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
       courseB_collector_loops3_authored_hint:
+        courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
+        courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran.
+      courseB_collector_loops3_2018_authored_hint:
         courseB_collector_prog3_a: Try using a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block></xml> block to collect your treasure.
         courseB_collector_prog3_b: Ingat Anda dapat menempatkan lebih dari satu blok di dalam sebuah berulang lingkaran.
       courseB_collector_loops3_predict1_authored_hint:
@@ -5660,7 +5847,14 @@ id:
         courseB_collector_loops4_a: Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.
         courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
         courseB_collector_loops4_c: Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
+      courseB_collector_loops4_2018_authored_hint:
+        courseB_collector_loops4_a: Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.
+        courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
+        courseB_collector_loops4_c: Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
       courseB_collector_loops5_authored_hint:
+        courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
+        courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
+      courseB_collector_loops5_2018_authored_hint:
         courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
         courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
       courseB_collector_loops6_authored_hint:
@@ -5668,16 +5862,98 @@ id:
         courseB_collector_loops6_b: Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada "3" dan memilih sebuah nomor yang berbeda.
         courseB_collector_loops6_c: Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
         courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
+      courseB_collector_loops6_2018_authored_hint:
+        courseB_collector_loops6_a: Tidak tahu di mana hal-hal yang salah? Gunakan tombol "step" untuk menjalankan program anda satu blok setiap kalinya.
+        courseB_collector_loops6_b: Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada "3" dan memilih sebuah nomor yang berbeda.
+        courseB_collector_loops6_c: Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
+        courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
       courseB_collector_loops7_authored_hint:
+        courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
+        courseB_collector_loops7_b: Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!
+      courseB_collector_loops7_2018_authored_hint:
         courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
         courseB_collector_loops7_b: Anda akan membutuhkan 3 loop berulang untuk memecahkan teka-teki ini, dan jangan lupa harta tambahan di akhir!
       courseB_collector_loops8_authored_hint:
         courseB_collector_loops8_challenge_a: Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola.
+      courseB_collector_loops8_2018_authored_hint:
+        courseB_collector_loops8_challenge_a: Jika anda tidak tahu di mana harus meletakkan loop pengulangan, tuliskan kode langkah demi langkah dan cari sebuah pola.
       courseB_collector_loops9_authored_hint:
-        courseB_collector_loops9_a: |
-          Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.
+        courseB_collector_loops9_a: 'Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.'
+        courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini.
+      courseB_collector_loops9_2018_authored_hint:
+        courseB_collector_loops9_a: 'Apakah ini terasa terlalu sulit? Pecahkanlah menjadi 3 masalah kecil agar terasa lebih mudah.'
         courseB_collector_loops9_b: Anda akan membutuhkan 3 loop berulang, satu demi satu, untuk solusi ini.
       courseB_collector_loops_challenge1_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          Start by looping the following commands:
+          
+          <xml>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"></block>
+          </next>
+          </block>
+          </xml>
+        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
+        courseB_collector_loops_challenge1_d: |-
+          Try this!
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_collector_loops_challenge1_2018_authored_hint:
         courseB_collector_loops_challenge1_b: |
           Start by looping the following commands:
           
@@ -5812,37 +6088,94 @@ id:
         courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah debug itu. Jangan menyerah!
         courseB_collector_loops_challenge2a_b: "Lihatlah pilihan ini untuk melewati labirin.\nApakah Anda melihat sebuah pola yang dapat Anda mengulangi?"
         courseB_collector_loops_challenge2a_c: To collect all of the treasure, you will either need to add two  <xml> <block type="collector_collect"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block.
+      courseB_collector_loops_challenge2a_2018_authored_hint:
+        courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah debug itu. Jangan menyerah!
+        courseB_collector_loops_challenge2a_b: "Lihatlah pilihan ini untuk melewati labirin.\nApakah Anda melihat sebuah pola yang dapat Anda mengulangi?"
+        courseB_collector_loops_challenge2a_c: To collect all of the treasure, you will either need to add two  <xml> <block type="collector_collect"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
-        courseA_collector_loops_challenge2_b: |+
-          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+        courseA_collector_loops_challenge2_b: "You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.\n\n"
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
           
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Coba gunakan blok `repeat` untuk mengumpulkan emas anda.
+      courseB_iceage_loops1_authored_hint:
+        courseB_iceage_loops1_a: Watch out for broken ice! Scrat will fall right through!
+        courseB_iceage_loops1_b: |-
+          You will have to use this block:
+          <xml><block type="maze_moveEast"/></xml>
+      courseB_iceage_loops10_authored_hint:
+        courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the water!
+        courseB_iceage_loops10_b: Try saying the steps out loud or writing them down on a piece of paper. Do you see any patterns?
+      courseB_iceage_loops2_authored_hint:
+        courseB_iceage_loops2_a: Break this puzzle into two pieces, one before the corner, and one after the corner.
+        courseB_iceage_loops2_b: If you get stuck, try saying the steps out loud.
+      courseB_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_a: |-
+          Use this new block!
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+          </block></xml>
+        courseB_iceage_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+      courseB_iceage_loops4_authored_hint:
+        courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
+        courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
+      courseB_iceage_loops6_authored_hint:
+        courseB_iceage_loops6_a: Your final code will have **three** movement blocks.
+        courseB_iceage_loops6_b: You only need to add **one** more loop!
+      courseB_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: If you get stuck, try writing steps down on a piece of paper. Do you see a pattern?
+      courseB_iceage_loops8_authored_hint:
+        courseB_iceage_loops8_a: Are the movement blocks right? What else can you change?
+      courseB_iceage_loops9_authored_hint:
+        courseB_iceage_loops9_a: Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!
+        courseB_iceage_loops9_b: Your final code should have **4** loops.
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml> block to make the bird move!
         courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml> arrows out and connect them to the <xml><block type="when_run"/></xml> block to get your bird to the pig.
       courseB_maze_seq10_authored_hint:
         courseB_maze_seq10_a: Cobalah menuliskan langkah-langkah di selembar kertas terlebih dahulu.
         courseB_maze_seq10_b: Anda perlu bergerak dalam dua arah yang berbeda untuk mencapai babi.
+      courseB_maze_seq10_2018_authored_hint:
+        courseB_maze_seq10_a: Cobalah menuliskan langkah-langkah di selembar kertas terlebih dahulu.
+        courseB_maze_seq10_b: Anda perlu bergerak dalam dua arah yang berbeda untuk mencapai babi.
       courseB_maze_seq10_predict1_authored_hint: [ ]
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: Cobalah menuliskan langkah-langkah di selembar kertas terlebih dahulu.
         courseB_maze_seq11_b: 'Selesaikan teka-teki dalam dua bagian: satu di depan sudut dan satu demi satu.'
+      courseB_maze_seq11_2018_authored_hint:
+        courseB_maze_seq11_a: Cobalah menuliskan langkah-langkah di selembar kertas terlebih dahulu.
+        courseB_maze_seq11_b: 'Selesaikan teka-teki dalam dua bagian: satu di depan sudut dan satu demi satu.'
+      courseB_maze_seq1_2018_authored_hint:
+        courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml> block to make Scrat move!
+        courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml> arrows out and connect them to the <xml><block type="when_run"/></xml> block to get Scrat to the acorn.
       courseB_maze_seq1_predict1_authored_hint: [ ]
       courseB_maze_seq2_authored_hint:
+        courseB_maze_seq2_a: Program ini hilang satu blok. Bisakah kamu mencari tahu yang mana?
+        courseB_maze_seq2_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang perlu dilakukan burung selanjutnya.
+      courseB_maze_seq2_2018_authored_hint:
         courseB_maze_seq2_a: Program ini hilang satu blok. Bisakah kamu mencari tahu yang mana?
         courseB_maze_seq2_b: Cobalah menjalankan kode yang Anda berikan untuk melihat apa yang perlu dilakukan burung selanjutnya.
       courseB_maze_seq3_authored_hint:
         courseB_maze_seq3_a: Salah satu blok memindahkan burung ke arah yang salah. Dapatkah anda mencari tahu yang mana dan menggantinya dengan blok yang benar?
         courseB_maze_seq3_b: Coba gunakan tombol langkah untuk menemukan di mana program berjalan salah. Apakah ini langkah pertama? Kedua?
         courseB_maze_seq3_c: The <xml><block type="maze_moveWest"/></xml> block doesn't seem to be moving the bird in the right direction.
+      courseB_maze_seq3_2018_authored_hint:
+        courseB_maze_seq3_a: Salah satu blok memindahkan burung ke arah yang salah. Dapatkah anda mencari tahu yang mana dan menggantinya dengan blok yang benar?
+        courseB_maze_seq3_b: Coba gunakan tombol langkah untuk menemukan di mana program berjalan salah. Apakah ini langkah pertama? Kedua?
+        courseB_maze_seq3_c: The <xml><block type="maze_moveWest"/></xml> block doesn't seem to be moving the bird in the right direction.
       courseB_maze_seq4_authored_hint:
         courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.
         courseB_maze_seq4_b: You will want to use the <xml><block type="maze_moveEast"/></xml> block to solve this puzzle.
+      courseB_maze_seq4_2018_authored_hint:
+        courseB_maze_seq4_a: Cobalah menambahkan satu instruksi pada satu waktu sampai anda tiba di babi.
+        courseB_maze_seq4_b: You will want to use the <xml><block type="maze_moveEast"/></xml> block to solve this puzzle.
       courseB_maze_seq5_authored_hint:
+        courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.
+        courseB_maze_seq5_b: Terdapat 2 cara untuk memecahkan teka-teki ini!
+        courseB_maze_seq5_c: Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan.
+      courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.
         courseB_maze_seq5_b: Terdapat 2 cara untuk memecahkan teka-teki ini!
         courseB_maze_seq5_c: Tidak yakin bagaimana cara menuju ke babi? Coba ini jalan.
@@ -5851,7 +6184,16 @@ id:
         courseB_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka-teki dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.
         courseB_maze_seq5_c: Ada dua cara untuk memecahkan teka-teki ini.
         courseB_maze_seq5_d: Tidak yakin bagaimana cara menuju ke babi? Coba jalan ini!
+      courseB_maze_seq6_2018_authored_hint:
+        courseB_maze_seq6_a: Kode akhir anda harus memiliki tiga blok gerakan.
+        courseB_maze_seq6_b: Jika Anda terjebak, cobalah memecahkan teka-teki dalam dua bagian, satu menyamping dan satu ke atas dan ke bawah.
+        courseB_maze_seq5_c: Ada dua cara untuk memecahkan teka-teki ini.
+        courseB_maze_seq5_d: Tidak yakin bagaimana cara menuju ke babi? Coba jalan ini!
       courseB_maze_seq7_authored_hint:
+        courseB_maze_seq7_a: Tambahkan 1 blok untuk memindahkan burung ke babi.
+        courseB_maze_seq7_b: Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.
+        courseB_maze_seq7_c: Tidak bisa sampai ke babi? Coba jalan ini!
+      courseB_maze_seq7_2018_authored_hint:
         courseB_maze_seq7_a: Tambahkan 1 blok untuk memindahkan burung ke babi.
         courseB_maze_seq7_b: Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.
         courseB_maze_seq7_c: Tidak bisa sampai ke babi? Coba jalan ini!
@@ -5859,7 +6201,16 @@ id:
         courseB_maze_seq8_a: Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.
         courseB_maze_seq8_b: Ada dua alternatif untuk menyelesaikan teka-teki ini!
         courseB_maze_seq8_c: Tidak tahu pergi ke jalan yang mana? Coba jalan ini!
+      courseB_maze_seq8_2018_authored_hint:
+        courseB_maze_seq8_a: Cobalah menambahkan satu blok pada satu waktu sampai anda memecahkan teka-teki.
+        courseB_maze_seq8_b: Ada dua alternatif untuk menyelesaikan teka-teki ini!
+        courseB_maze_seq8_c: Tidak tahu pergi ke jalan yang mana? Coba jalan ini!
       courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_a: Coba tulis semua langkah di selembar kertas terlebih dahulu.
+        courseB_maze_seq9_b: Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.
+        courseB_maze_seq9_c: Ada dua cara untuk memecahkan teka-teki ini.
+        courseB_maze_seq9_d: Terjebak? Coba jalan ini!
+      courseB_maze_seq9_2018_authored_hint:
         courseB_maze_seq9_a: Coba tulis semua langkah di selembar kertas terlebih dahulu.
         courseB_maze_seq9_b: Bangun program Anda satu blok pada satu waktu dan tes saat Anda membangunnya.
         courseB_maze_seq9_c: Ada dua cara untuk memecahkan teka-teki ini.
@@ -5873,10 +6224,17 @@ id:
       courseB_maze_seq_challenge1_authored_hint:
         courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat ini.
         courseB_maze_seq_challenge1_b: Try using the <xml><block type="maze_moveWest"/></xml> block to start.
+      courseB_maze_seq_challenge1_2018_authored_hint:
+        courseB_maze_seq_challenge1_a: Jalan terpendek mungkin tidak bekerja saat ini.
+        courseB_maze_seq_challenge1_b: Try using the <xml><block type="maze_moveWest"/></xml> block to start.
       courseB_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.
         courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
+      courseB_maze_seq_challenge2_2018_authored_hint:
+        courseB_maze_seq_challenge2_a: Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.
+        courseB_maze_seq_challenge2_b: Susun ulang balok dan ambil jalan pola tangga.
       courseB_playlab_challenge1_Template_authored_hint: [ ]
+      courseB_playlab_challenge1_Template_2018_authored_hint: [ ]
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
@@ -5887,7 +6245,35 @@ id:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
+      courseB_playlab_events2_2018_authored_hint:
+        courseB_playlab_events2_a: |-
+          This is the block to have Daisy say something:
+          
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseB_playlab_events3_authored_hint:
+        courseB_playlab_events3_a: |-
+          This is the block you should use to add the event:
+          
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          </block>
+          </xml>
+        courseB_playlab_events3_b: |-
+          This is the block you need to switch Daisy's mood:
+          
+          <xml>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">random</title>
+          </block>
+          </xml>
+      courseB_playlab_events3_2018_authored_hint:
         courseB_playlab_events3_a: |-
           This is the block you should use to add the event:
           
@@ -5923,10 +6309,48 @@ id:
           <title name="DIR">8</title>
           </block>
           </xml>
+      courseB_playlab_events4_2018_authored_hint:
+        courseB_playlab_events4_a: |-
+          This is the event that controls the left arrow:
+          
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block>
+          </xml>
+        courseB_playlab_events4_b: |-
+          This is the block that makes the knight move left.
+          
+          <xml>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block>
+          </xml>
       courseB_playlab_events5_authored_hint:
         courseB_playlab_events5_a: "This is the event block that controls the right arrow: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
         courseB_playlab_events5_b: "This is the block that makes the knight run away. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      courseB_playlab_events5_2018_authored_hint:
+        courseB_playlab_events5_a: "This is the event block that controls the right arrow: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>"
+        courseB_playlab_events5_b: "This is the block that makes the knight run away. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
       courseB_playlab_events6_authored_hint:
+        courseB_playlab_events6_a: |-
+          You will need these event blocks:
+          
+          <xml>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">up</title>
+          </block>
+          <block type="studio_whenArrow" id="callMe">
+          <title name="VALUE">down</title>
+          </block>
+          </xml>
+        courseB_playlab_events6_b: |-
+          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
+          
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_c: Sampai ke semua bendera yang lewat!
+      courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_a: |-
           You will need these event blocks:
           
@@ -5969,7 +6393,34 @@ id:
           <title name="SPRITE">1</title>
           </block>
           </xml>
+      courseB_playlab_events7_2018_authored_hint:
+        courseB_playlab_events7_a: |-
+          This is the event block that you will need:
+          
+          <xml>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_b: |-
+          This is the block you need to play a sound.
+          
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          </xml>
+        courseB_playlab_events7_c: |-
+          This is the block you need to make the knight vanish:
+          
+          <xml>
+          <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
       courseB_playlab_eventsTemplate_authored_hint: [ ]
+      courseB_playlab_eventsTemplate_2018_authored_hint: [ ]
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: |-
           This is the event block that you will need:
@@ -6005,7 +6456,51 @@ id:
           </next>
           </block>
           </xml>
+      courseB_playlab_events_challenge1_2018_authored_hint:
+        courseB_playlab_events_challenge1_a: "Make the other animals move down when you press `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_b: |
+          Change the speed of the animals by using this block:
+          <xml>
+          <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          What will the everyone say when the race is over? Make them talk with this event:
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Woo hoo!</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_playlab_events_challenge2_authored_hint:
+        courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_b: |-
+          Use other event blocks to make the other animals disappear!
+          
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Use extra commands to play sounds or score points when you click the animals!
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          Campurkan itu!
+          
+          Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
+          Mengubah suasana hati binatang!
+      courseB_playlab_events_challenge2_2018_authored_hint:
         courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
         courseB_playlab_events_challenge2_b: |-
           Use other event blocks to make the other animals disappear!
@@ -6071,19 +6566,62 @@ id:
           
           Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
           Mengubah suasana hati binatang!
+      courseB_playlab_events_challenge2_template_2018_authored_hint:
+        courseB_playlab_events_challenge2_a: Setiap hewan dalam permainan harus lenyap saat disadap. Itu juga harus kembali setelah satu atau dua detik!
+        courseB_playlab_events_challenge2_b: |-
+          Use other event blocks to make the other animals disappear!
+          
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          Use extra commands to play sounds or score points when you click the animals!
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          Campurkan itu!
+          
+          Buat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.
+          Mengubah suasana hati binatang!
+      courseB_scrat_forVideo_authored_hint: [ ]
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run" untuk melihat apa yang terjadi.
         courseB_starWars_prog1_b: |
           You will want to move East to solve this puzzle. How far do you need to move?
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog10_authored_hint: [ ]
+      courseB_starWars_prog10_2018_authored_hint: [ ]
       courseB_starWars_prog11_authored_hint: [ ]
+      courseB_starWars_prog11_2018_authored_hint: [ ]
+      courseB_starWars_prog1_2018_authored_hint:
+        courseB_starWars_prog1_a: Coba tambahkan blok satu per satu, lalu klik "Run" untuk melihat apa yang terjadi.
+        courseB_starWars_prog1_b: |
+          You will want to move East to solve this puzzle. How far do you need to move?
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
+        courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
+      courseB_starWars_prog2_2018_authored_hint:
         courseB_starWars_prog2_a: Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain.
       courseB_starWars_prog3_authored_hint:
         courseB_starWars_prog3_a: Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.
         courseB_starWars_prog3_b: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+      courseB_starWars_prog3_2018_authored_hint:
+        courseB_starWars_prog3_a: Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.
+        courseB_starWars_prog3_b: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
       courseB_starWars_prog4_authored_hint:
+        courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
+        courseB_starWars_prog4_b: |-
+          Try using the `repeat` block for shorter code.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
+      courseB_starWars_prog4_2018_authored_hint:
         courseB_starWars_prog4_a: Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.
         courseB_starWars_prog4_b: |-
           Try using the `repeat` block for shorter code.
@@ -6099,6 +6637,14 @@ id:
           Look what happens if you use the same solution as the stair-step puzzle:
           
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2018_authored_hint:
+        courseB_starWars_prog5_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
+        courseB_starWars_prog5_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
+        courseB_starWars_prog5_c: Trace pola ini dengan jari Anda. Hitung potongan logam saat Anda bergerak.
+        courseB_starWars_prog5_da: |-
+          Look what happens if you use the same solution as the stair-step puzzle:
+          
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!
         courseB_starWars_prog6_b: |-
@@ -6107,7 +6653,19 @@ id:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog6_2018_authored_hint:
+        courseB_starWars_prog6_a: Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!
+        courseB_starWars_prog6_b: |-
+          Try using the `repeat` block for shorter code.
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog7_authored_hint:
+        courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
+        courseB_starWars_prog7_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
+        courseB_starWars_prog7_c: Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?
+      courseB_starWars_prog7_2018_authored_hint:
         courseB_starWars_prog7_a: Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?
         courseB_starWars_prog7_b: BB-8 akan mengambil besi tua saat ia menggulungnya.
         courseB_starWars_prog7_c: Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?
@@ -6121,7 +6679,21 @@ id:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog8_2018_authored_hint:
+        courseB_starWars_prog8_a: Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.
+        courseB_starWars_prog8_b: |-
+          Try using the `repeat` block to see what happens to the code that you put inside.
+          
+          <xml>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog9_authored_hint:
+        courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+        courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
+        courseB_starWars_prog9_c: Bisakah sebuah loop ` ulangi` membantu di sini?
+      courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
         courseB_starWars_prog9_c: Bisakah sebuah loop ` ulangi` membantu di sini?
@@ -6266,13 +6838,49 @@ id:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1a_2018_authored_hint:
+        courseC_artist_loops1a_a: |-
+          This is the first block you will need:
+          
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Use this block to draw the sticker!
+          
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
+        courseC_artist_loops2a_a: Di dalam lingkaran Anda, Anda akan ingin melompat ke 200 lebih dari 200 turun, kemudian menarik para burung stiker, kemudian putar 30 derajat.
+        courseC_artist_loops2a_b: Klik pada nomor di bagian atas ` ulangi ` lingkaran untuk mengubah berapa kali itu mengulangi.
+      courseC_artist_loops2a_2018_authored_hint:
         courseC_artist_loops2a_a: Di dalam lingkaran Anda, Anda akan ingin melompat ke 200 lebih dari 200 turun, kemudian menarik para burung stiker, kemudian putar 30 derajat.
         courseC_artist_loops2a_b: Klik pada nomor di bagian atas ` ulangi ` lingkaran untuk mengubah berapa kali itu mengulangi.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: Anda ingin menambahkan hanya satu blok di dalam lingkaran Anda, setelah burung stiker.
         courseC_artist_loops3a_b: Gunakan menu drop down pada blok ` draw sticker` untuk menemukan stiker kelelawar.
+      courseC_artist_loops3a_2018_authored_hint:
+        courseC_artist_loops3a_a: Anda ingin menambahkan hanya satu blok di dalam lingkaran Anda, setelah burung stiker.
+        courseC_artist_loops3a_b: Gunakan menu drop down pada blok ` draw sticker` untuk menemukan stiker kelelawar.
       courseC_artist_loops4a_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Use this block to jump forward:
+          
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+          
+          Don't forget to change how far!
+      courseC_artist_loops4a_2018_authored_hint:
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
           
@@ -6297,6 +6905,16 @@ id:
       courseC_artist_loops5a_authored_hint:
         courseC_artist_loops5a_a: Gunakan menu drop-down pada blok `gambar stiker` untuk mengubah gambar mereka.
       courseC_artist_loops5b_authored_hint:
+        courseC_artist_loops5b_a: |-
+          Use this block to set the pattern of your lines:
+          
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: Untuk membuat sebuah desain seperti di atas, Anda akan bergerak mundur jumlah yang sama yang Anda bergerak maju.
+      courseC_artist_loops5b_2018_authored_hint:
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
           
@@ -6696,7 +7314,17 @@ id:
         courseC_maze_debugging_challenge1_a: Kiri atau kanan? Terserah kamu!
         courseC_maze_debugging_challenge1_b: Scrat jalan adalah bentuk sebuah persegi panjang! Dia perlu mengubah cara yang sama setiap waktu!
         courseC_maze_debugging_challenge1_c: Jika Anda terjebak, Anda dapat selalu memulai dari awal, atau menghapus semua kode dan menemukan caranya sendiri!
+      courseC_maze_debugging_challenge1_2018_authored_hint:
+        courseC_maze_debugging_challenge1_a: Kiri atau kanan? Terserah kamu!
+        courseC_maze_debugging_challenge1_b: Scrat jalan adalah bentuk sebuah persegi panjang! Dia perlu mengubah cara yang sama setiap waktu!
+        courseC_maze_debugging_challenge1_c: Jika Anda terjebak, Anda dapat selalu memulai dari awal, atau menghapus semua kode dan menemukan caranya sendiri!
       courseC_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_b: Jika Anda terjebak, coba debug kode. Di mana tidak itu salah?
+        courseC_maze_debugging_challenge2_c: |-
+          There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!
+          
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_debugging_challenge2_2018_authored_hint:
         courseC_maze_debugging_challenge2_b: Jika Anda terjebak, coba debug kode. Di mana tidak itu salah?
         courseC_maze_debugging_challenge2_c: |-
           There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!
@@ -6850,31 +7478,63 @@ id:
           This is how you can input your binary code:
           
           ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2018_authored_hint:
+        courseD_artist_binary1_a: Ganti "???" di blok teks dengan gambar biner yang anda inginkan, dalam nol dan satu.
+        courseD_artist_binary1_b: Seniman akan menarik sebuah ruang putih untuk setiap 1 dan sebuha ruang hitam untuk setiap 0.
+        courseD_artist_binary1_c: |-
+          This is how you can input your binary code:
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
+        courseD_artist_binary2_a: Cukup klik `Run` untuk melihat program ini berjalan!
+      courseD_artist_binary2_2018_authored_hint:
         courseD_artist_binary2_a: Cukup klik `Run` untuk melihat program ini berjalan!
       courseD_artist_binary3_authored_hint:
         courseD_artist_binary3_a: Salah satu dari empat pola biner di kotak peralatan akan memecahkan teka-teki ini!
         courseD_artist_binary3_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseD_artist_binary3_2018_authored_hint:
+        courseD_artist_binary3_a: Salah satu dari empat pola biner di kotak peralatan akan memecahkan teka-teki ini!
+        courseD_artist_binary3_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseD_artist_binary4_authored_hint:
+        courseD_artist_binary4_a: Lihatlah tiga kotak pertama di baris paling atas. Bisakah Anda mengulangi ketiganya untuk mendapatkan keseluruhan pola?
+        courseD_artist_binary4_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_artist_binary4_2018_authored_hint:
         courseD_artist_binary4_a: Lihatlah tiga kotak pertama di baris paling atas. Bisakah Anda mengulangi ketiganya untuk mendapatkan keseluruhan pola?
         courseD_artist_binary4_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_artist_binary5_authored_hint:
         courseD_artist_binary5_a: Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.
         courseD_artist_binary5_b: Anda hanya perlu mengganti dua baris untuk membuat senyuman.
         courseD_artist_binary5_c: Jika anda mengalami kesulitan memecahkan teka-teki ini, coba tuliskan baris biner di selembar kertas dan cari sebuah pola.
+      courseD_artist_binary5_2018_authored_hint:
+        courseD_artist_binary5_a: Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.
+        courseD_artist_binary5_b: Anda hanya perlu mengganti dua baris untuk membuat senyuman.
+        courseD_artist_binary5_c: Jika anda mengalami kesulitan memecahkan teka-teki ini, coba tuliskan baris biner di selembar kertas dan cari sebuah pola.
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?
         courseD_artist_binary6_b: Anda dapat membangun string biner anda sedikit demi sedikit, dan terus menguji!
+      courseD_artist_binary6_2018_authored_hint:
+        courseD_artist_binary6_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?
+        courseD_artist_binary6_b: Anda dapat membangun string biner anda sedikit demi sedikit, dan terus menguji!
       courseD_artist_binary7_authored_hint:
+        courseD_artist_binary7_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?
+        courseD_artist_binary7_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseD_artist_binary7_2018_authored_hint:
         courseD_artist_binary7_a: Mulai dari kiri atas. Seberapa jauh anda harus membaca sebelum pola mulai terulang?
         courseD_artist_binary7_b: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda tidak berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_artist_binary8_authored_hint:
         courseD_artist_binary8_a: Spiral terkadang membingungkan. Isolasikan setiap garis horizontal di pikiran anda saat anda membuat desain ini.
         courseD_artist_binary8_b: Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.
         courseD_artist_binary8_c: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseD_artist_binary8_2018_authored_hint:
+        courseD_artist_binary8_a: Spiral terkadang membingungkan. Isolasikan setiap garis horizontal di pikiran anda saat anda membuat desain ini.
+        courseD_artist_binary8_b: Cobalah menjalankan kode terlebih dahulu untuk melihat apa yang harus Anda kerjakan.
+        courseD_artist_binary8_c: Jangan takut membuat kesalahan! Cobalah menulis biner dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseD_artist_binaryFP_authored_hint: [ ]
       courseD_artist_binaryFP8_authored_hint: [ ]
+      courseD_artist_binaryFP_2018_authored_hint: [ ]
       courseD_artist_binary_challenge2_authored_hint:
+        courseD_artist_binary_challenge2_a: Hanya ada beberapa baris yang salah dalam program aslinya.
+      courseD_artist_binary_challenge2_2018_authored_hint:
         courseD_artist_binary_challenge2_a: Hanya ada beberapa baris yang salah dalam program aslinya.
       courseD_artist_binary_challenge3_authored_hint:
         courseD_artist_binary_challenge3_a: |-
@@ -6920,7 +7580,19 @@ id:
         courseD_artist_nestedLoops1_b: Anda bisa menggambar segitiga ini dengan loop `repeat` dengan dua blok di dalamnya. Blok mana yang anda butuhkan?
         courseD_artist_nestedLoops1_c: Coba tuliskan langkah di atas kertas dan cari pola yang bisa disederhanakan dengan loop.
       courseD_artist_nestedLoops10_authored_hint: [ ]
+      courseD_artist_nestedLoops10_2018_authored_hint: [ ]
+      courseD_artist_nestedLoops1_2018_authored_hint:
+        courseD_artist_nestedLoops1_a: Cara termudah untuk menggambar ini adalah bergerak maju dan menggunakan belokan kanan.
+        courseD_artist_nestedLoops1_b: Anda bisa menggambar segitiga ini dengan loop `repeat` dengan dua blok di dalamnya. Blok mana yang anda butuhkan?
+        courseD_artist_nestedLoops1_c: Coba tuliskan langkah di atas kertas dan cari pola yang bisa disederhanakan dengan loop.
       courseD_artist_nestedLoops1a_authored_hint:
+        courseD_artist_nestedLoops1a_a: |-
+          You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
+          
+          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
+        courseD_artist_nestedLoops1a_b: Jika anda membuat segitiga anda dengan sebuah lingkaran, seniman harus menghadap dengan cara yang sama seperti saat mereka memulai. Ini akan membuat 60 derajat jauh lebih mudah.
+        courseD_artist_nestedLoops1a_c: Jika anda menginginkan warna, gunakan blok `set color` dalam kode anda. Anda tidak harus mencocokkan warna pada gambar template.
+      courseD_artist_nestedLoops1a_2018_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
           You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
           
@@ -6930,7 +7602,14 @@ id:
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_a: Siapkan loop anda dengan mengelompokkan kode segitiga anda dengan loop `repeat` lainnya.
         courseD_artist_nestedLoops2_b: Ingatlah untuk menempatkan blok `turn` di dalam loop sehingga seniman mengubah setiap segitiga.
+      courseD_artist_nestedLoops2_2018_authored_hint:
+        courseD_artist_nestedLoops2_a: Siapkan loop anda dengan mengelompokkan kode segitiga anda dengan loop `repeat` lainnya.
+        courseD_artist_nestedLoops2_b: Ingatlah untuk menempatkan blok `turn` di dalam loop sehingga seniman mengubah setiap segitiga.
       courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: "Mencoba menggunakan blok 'jump forwad' untuk mendapatkan dari atas satu persegi ke tempat di mana anda akan memulai berikutnya. Jika kotak anda setinggi 20 piksel dan jaraknya 20 piksel, seberapa jauh anda harus melompat?"
+        courseD_artist_nestedLoops3_b: 'Jangan lupa gunakan loop bersarang untuk memecahkan teka-teki ini dengan cepat. '
+        courseD_artist_nestedLoops3_c: 'Mulailah dengan menggunakan loop `repeat` untuk membuat satu persegi. Selanjutnya, ulangi kuadrat sebanyak 8 kali, lompat 40 piksel di antaranya. '
+      courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: "Mencoba menggunakan blok 'jump forwad' untuk mendapatkan dari atas satu persegi ke tempat di mana anda akan memulai berikutnya. Jika kotak anda setinggi 20 piksel dan jaraknya 20 piksel, seberapa jauh anda harus melompat?"
         courseD_artist_nestedLoops3_b: 'Jangan lupa gunakan loop bersarang untuk memecahkan teka-teki ini dengan cepat. '
         courseD_artist_nestedLoops3_c: 'Mulailah dengan menggunakan loop `repeat` untuk membuat satu persegi. Selanjutnya, ulangi kuadrat sebanyak 8 kali, lompat 40 piksel di antaranya. '
@@ -6943,7 +7622,25 @@ id:
           - Turn left 1 degree
         courseD_artist_nestedLoops4_b: Jangan lupa untuk melompat maju sebesar 50 pixel di antara lingkaran.
         courseD_artist_nestedLoops4_c: Gunakan loop bersarang untuk menarik lingkaran anda sebanyak 4 kali.
+      courseD_artist_nestedLoops4_2018_authored_hint:
+        courseD_artist_nestedLoops4_d: Untuk mengatasi ini dengan benar, anda harus pindah ** sebelum ** anda berpaling, atau lingkaran anda akan dinyalakan dengan jumlah terkecil!
+        courseD_artist_nestedLoops4_a: |-
+          To make a circle:
+          - Repeat 360 times
+          - Move forward 1 pixel
+          - Turn left 1 degree
+        courseD_artist_nestedLoops4_b: Jangan lupa untuk melompat maju sebesar 50 pixel di antara lingkaran.
+        courseD_artist_nestedLoops4_c: Gunakan loop bersarang untuk menarik lingkaran anda sebanyak 4 kali.
       courseD_artist_nestedLoops5_authored_hint:
+        courseD_artist_nestedLoops5_a: |-
+          To do this easily:
+          
+          - repeat 4 times
+          - make a circle
+          - jump forward 50 pixels
+          - turn right 90 degrees
+        courseD_artist_nestedLoops5_b: Untuk membuat lingkaran anda harus menetapkan loop pengulangan untuk mengulang 360 kali. Di dalam loop, bergerak maju 1 pixel dan belok 1 derajat.
+      courseD_artist_nestedLoops5_2018_authored_hint:
         courseD_artist_nestedLoops5_a: |-
           To do this easily:
           
@@ -6964,7 +7661,26 @@ id:
           - make square
           - jump forward by **50 pixels**
           - turn **60 degrees**
+      courseD_artist_nestedLoops7_2018_authored_hint:
+        courseD_artist_nestedLoops7_a: Anda harus menggunakan loop bersarang di sini. Pertama, gunakan satu loop untuk menggambar persegi. Apa yang akan dilakukan loop luar jika loop dalam menggambar persegi?
+        courseD_artist_nestedLoops7_b: |-
+          Use a nested loop, where the inner loop is the code for a square.
+          
+          - repeat 6 times
+          - make square
+          - jump forward by **50 pixels**
+          - turn **60 degrees**
       courseD_artist_nestedLoops8_authored_hint:
+        courseD_artist_nestedLoops8_a: Untuk memiliki 8 segi enam dalam gambar anda, anda perlu memutar **45 derajat ** di antara masing-masing gambar. Mengapa? Karena 360 derajat (putaran penuh sekitar) dibagi 8 (jumlah segi enam) adalah 45 derajat.
+        courseD_artist_nestedLoops8_b: Jika anda terjebak, mulailah dengan melihat teka-teki terakhir, kemudian ubah hal-hal yang berbeda.
+        courseD_artist_nestedLoops8_c: |-
+          Use a nested loop:
+          
+          - Repeat 8 times
+          - draw a hexagon
+          - jump forward 50 pixels
+          - turn right 45 degrees
+      courseD_artist_nestedLoops8_2018_authored_hint:
         courseD_artist_nestedLoops8_a: Untuk memiliki 8 segi enam dalam gambar anda, anda perlu memutar **45 derajat ** di antara masing-masing gambar. Mengapa? Karena 360 derajat (putaran penuh sekitar) dibagi 8 (jumlah segi enam) adalah 45 derajat.
         courseD_artist_nestedLoops8_b: Jika anda terjebak, mulailah dengan melihat teka-teki terakhir, kemudian ubah hal-hal yang berbeda.
         courseD_artist_nestedLoops8_c: |-
@@ -6987,8 +7703,35 @@ id:
           - draw a triangle
           - jump forward 50 pixels
           - turn right by 45 degrees
+      courseD_artist_nestedLoops9_2018_authored_hint:
+        courseD_artist_nestedLoops9_a: Mulailah dengan menggunakan loop bersarang seperti sebelumnya, tapi kali ini, buatlah dengan kotak.
+        courseD_artist_nestedLoops9_b: Tambahkan set kedua loop bersarang sampai akhir set pertama, tapi kali ini gunakan segitiga.
+        courseD_artist_nestedLoops9_c: |-
+          Use two nested loops:
+          - Repeat 8 times
+          - draw a square
+          - jump forward 50 pixels
+          - turn right by 45 degrees
+          - Repeat 8 times
+          - draw a triangle
+          - jump forward 50 pixels
+          - turn right by 45 degrees
       courseD_artist_nestedLoops9_predict1_authored_hint: [ ]
+      courseD_artist_nestedLoops9_predict1_2018_authored_hint: [ ]
       courseD_artist_nestedLoopsFP_authored_hint:
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+          
+          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+          
+          This image was made using similar code to other levels you've done before, but with circles (repeat 360 times: move forward 1, turn 1 degree).
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+          
+          This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+      courseD_artist_nestedLoopsFP_2018_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
           
@@ -7007,7 +7750,15 @@ id:
         courseD_artist_nestedLoops_challenge1_b: Menambahkan kode untuk mengubah warna menjadi hijau, dan membuat sebuah segitiga dengan 50 pixel sisi dan 120 derajat kiri bergantian.
         courseD_artist_nestedLoops_challenge1_c: Setelah Anda menggambar kedua bentuk, Anda harus melompat ke depan dengan 50 piksel sebelum Anda berbelok ke kanan dengan 90 derajat.
         courseD_artist_nestedLoops_challenge1_d: Masukkan semua kode Anda di dalam sebuah `berulang 4 times` lingkaran untuk menyelesaikannya.
+      courseD_artist_nestedLoops_challenge1_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Mulai dengan mengubah warna menjadi biru, lalu buat sebuah segi delapan dengan sisi 50 piksel dan 45 derajat ke kiri.
+        courseD_artist_nestedLoops_challenge1_b: Menambahkan kode untuk mengubah warna menjadi hijau, dan membuat sebuah segitiga dengan 50 pixel sisi dan 120 derajat kiri bergantian.
+        courseD_artist_nestedLoops_challenge1_c: Setelah Anda menggambar kedua bentuk, Anda harus melompat ke depan dengan 50 piksel sebelum Anda berbelok ke kanan dengan 90 derajat.
+        courseD_artist_nestedLoops_challenge1_d: Masukkan semua kode Anda di dalam sebuah `berulang 4 times` lingkaran untuk menyelesaikannya.
       courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Untuk menggambar sebuah segi delapan biasa, artis perlu untuk mengubah 45 derajat 8 kali.
+        courseD_artist_nestedLoops_challenge2_b: Untuk menggambar persegi, sang seniman perlu memutar 90 derajat 4 kali.
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: Untuk menggambar sebuah segi delapan biasa, artis perlu untuk mengubah 45 derajat 8 kali.
         courseD_artist_nestedLoops_challenge2_b: Untuk menggambar persegi, sang seniman perlu memutar 90 derajat 4 kali.
       courseD_artist_project1_authored_hint:
@@ -7113,9 +7864,18 @@ id:
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.
       courseD_bee_conditionals10_authored_hint: [ ]
+      courseD_bee_conditionals10_2018_authored_hint: [ ]
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.
+      courseD_bee_conditionals1_predict1_2018_authored_hint:
+        courseD_bee_conditionals1_a: Anda perlu menggunakan blok `if` untuk memeriksa apakah ada bunga dibawah awan sebelum anda mencoba untuk mendapatkan nektar.
       courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals2_a: Terkadang akan ada bunga di sana, terkadang tidak. Jika anda ingin kode anda berjalan dalam kedua kasus, pastikan untuk menggunakan pernyataan `if`.
+        courseD_bee_conditionals2_b: Anda dapat menggunakan sebuah `ulangi` lingkaran atau suatu ` sementara jalan di depan` untuk bergerak melalui labirin ini.
+        courseD_bee_conditionals2_c: Anda tidak perlu memeriksa sarang lebah, hanya ada bunga atau ruang kosong di bawah awan.
+        courseD_bee_conditionals2_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals2_2018_authored_hint:
         courseD_bee_conditionals2_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
         courseD_bee_conditionals2_a: Terkadang akan ada bunga di sana, terkadang tidak. Jika anda ingin kode anda berjalan dalam kedua kasus, pastikan untuk menggunakan pernyataan `if`.
         courseD_bee_conditionals2_b: Anda dapat menggunakan sebuah `ulangi` lingkaran atau suatu ` sementara jalan di depan` untuk bergerak melalui labirin ini.
@@ -7133,7 +7893,19 @@ id:
         courseD_bee_conditionals3_b: Anda dapat menggunakan sebuah `ulangi` lingkaran atau suatu ` sementara ` lingkaran untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!
         courseD_bee_conditionals3_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseD_bee_conditionals3_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals3_2018_authored_hint:
+        courseD_bee_conditionals3_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals3_a: Pastikan untuk menggunakan pernyataan `if` untuk memeriksa setiap ruang untuk melihat apakah itu berisi bunga atau tidak sama sekali.
+        courseD_bee_conditionals3_b: Anda dapat menggunakan sebuah `ulangi` lingkaran atau suatu ` sementara ` lingkaran untuk menjaga lebah bergerak maju. Gunakan yang mana saja yang kamu suka!
+        courseD_bee_conditionals3_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+        courseD_bee_conditionals3_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
       courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals4_a: Anda masih bisa memperlakukan setiap ruangan seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.
+        courseD_bee_conditionals4_b: 'Gunakan pernyataan `if` di dalam loop anda untuk memeriksa setiap ruang untuk nektar. '
+        courseD_bee_conditionals4_c: Using <xml><block type="maze_untilBlocked"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?
+        courseD_bee_conditionals4_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals4_2018_authored_hint:
         courseD_bee_conditionals4_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
         courseD_bee_conditionals4_a: Anda masih bisa memperlakukan setiap ruangan seolah ada awan di atasnya, walaupun anda bisa melihat keseluruhan jalan.
         courseD_bee_conditionals4_b: 'Gunakan pernyataan `if` di dalam loop anda untuk memeriksa setiap ruang untuk nektar. '
@@ -7145,7 +7917,19 @@ id:
         courseD_bee_conditionals5_c: Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, ` sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu ` bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. ` Jika ada sebuah bunga`, lebah harus` mendapatkan nektar`.
         courseD_bee_conditionals5_b: Di dalam ` sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?
         courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals5_2018_authored_hint:
+        courseD_bee_conditionals5_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals5_a: Pikirkan setiap sisi jalan segi empat sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan sebuah loop` while there is a path ahead ` di bagian dalam. Berapa banyak jalan yang dibutuhkan lebah untuk mereda jika lebah perlu menggulingkan setiap sisi dengan bunga?
+        courseD_bee_conditionals5_c: Ada 3 sisi dari persegi panjang dengan bunga, sehingga kode perlu `mengulang 3 waktu`. Dalam setiap ulangi, lebah akan perlu untuk terus sepanjang jalan, ` sementara ada sebuah jalan di depan`. Untuk terus menyusuri jalan setapak, lebah perlu ` bergerak maju`. Sementara di jalan, lebah perlu memeriksa sebuah bunga. ` Jika ada sebuah bunga`, lebah harus` mendapatkan nektar`.
+        courseD_bee_conditionals5_b: Di dalam ` sementara ada sebuah jalan di depan` blok Anda akan perlu untuk bergerak maju dan memeriksa sebuah bunga. Bagaimana cara Anda memeriksa jika ada sebuah bunga? Apa yang Anda lakukan jika ada sebuah bunga?
+        courseD_bee_conditionals5_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
       courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals6_a: Pastikan untuk menggunakan pernyataan `if` untuk memeriksa sarang lebah di bawah setiap awan.
+        courseD_bee_conditionals6_b: Dalam hal ini, Anda tidak perlu untuk memeriksa bunga di bawah awan.
+        courseD_bee_conditionals6_c: Apakah ada sebuah lingkaran dapat Anda gunakan untuk membuat kode Anda lebih sederhana?
+        courseD_bee_conditionals6_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals6_2018_authored_hint:
         courseD_bee_conditionals6_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
         courseD_bee_conditionals6_a: Pastikan untuk menggunakan pernyataan `if` untuk memeriksa sarang lebah di bawah setiap awan.
         courseD_bee_conditionals6_b: Dalam hal ini, Anda tidak perlu untuk memeriksa bunga di bawah awan.
@@ -7156,7 +7940,14 @@ id:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
         courseD_bee_conditionals7_b: Jika tidak ada satu bunga di bawah awan, harus ada sebuah sarang lebah, sehingga Anda tidak perlu berpikir tentang kasus sebuah ruang kosong.
         courseD_bee_conditionals7_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals7_2018_authored_hint:
+        courseD_bee_conditionals7_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
+        courseD_bee_conditionals7_b: Jika tidak ada satu bunga di bawah awan, harus ada sebuah sarang lebah, sehingga Anda tidak perlu berpikir tentang kasus sebuah ruang kosong.
+        courseD_bee_conditionals7_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
       courseD_bee_conditionals7_predict2_authored_hint:
+        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
+      courseD_bee_conditionals7_predict2_2018_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
@@ -7170,11 +7961,38 @@ id:
           
           ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
+      courseD_bee_conditionals8_2018_authored_hint:
+        courseD_bee_conditionals8_hintVid1: Butuh bantuan untuk memulai? Tonton video itu!
+        courseD_bee_conditionals8_a: "**Ingat.**Teka-teki ini berubah setiap kali di jalankan.  Anda akan ingin menggunakan blok bersyarat ('jika' atau 'jika/lain') untuk memecahkan tantangan."
+        courseD_bee_conditionals8_b: |-
+          Teka-teki ini rumit, karena Anda tidak bisa mengecek kotak kosong, nektar, * dan * madu hanya dengan satu syarat tunggal.
+          Hanya periksa nektar dan madu di ujung jalanmu.
+        courseD_bee_conditionals8_c: Bagaimana Anda bisa memastikan untuk melakukan perjalanan ke akhir setiap jalan, tidak peduli berapa lama jalannya?
+        courseD_bee_conditionals8_d: |-
+          Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the cloud in the bottom right of the square.
+          
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_hintVid2: Tonton video ini untuk membantu memecahkan teka-teki ini.
       courseD_bee_conditionals9_authored_hint: [ ]
+      courseD_bee_conditionals9_2018_authored_hint: [ ]
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Dapatkah Anda menemukan sebuah jalan yang mencapai setiap bunga dan sarang lebah tanpa memukul setiap pohon? Yang terbaik jalan adalah sebuah spiral.
         courseD_bee_conditionals_challenge1_b: Dalam hal teka-teki ini, setiap ruang bisa memiliki sebuah bunga, sebuah sisir madu, atau tidak. Itu berarti Anda bisa mengulangi kata kunci `if / else` Anda di setiap kotak.
+      courseD_bee_conditionals_challenge1_2018_authored_hint:
+        courseD_bee_conditionals_challenge1_a: Dapatkah Anda menemukan sebuah jalan yang mencapai setiap bunga dan sarang lebah tanpa memukul setiap pohon? Yang terbaik jalan adalah sebuah spiral.
+        courseD_bee_conditionals_challenge1_b: Dalam hal teka-teki ini, setiap ruang bisa memiliki sebuah bunga, sebuah sisir madu, atau tidak. Itu berarti Anda bisa mengulangi kata kunci `if / else` Anda di setiap kotak.
       courseD_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:
+          
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge2_2018_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:
           
@@ -7245,6 +8063,11 @@ id:
         courseD_bee_debugging9_c: "Envision one of these stair steps to the flowers.   \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nCan you build either of these with what's in the workspace and toolbox?\n\n"
       courseD_bee_debugging9_predict1_authored_hint: [ ]
       courseD_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Mengapa tidak yang pertama setengah dari program ini bekerja? Pikirkan mengapa lebah perlu bergerak mundur. Berapa banyak nektar yang lebah mengumpulkan setiap kali bergerak lebih sebuah bunga?
+        courseD_bee_debugging_challenge1_b: Dalam perjalanan pulang, mintalah lebah mengikuti pola yang sama. Berapa banyak madu yang lebah perlu membuat setiap kali bergerak lebih sebuah sisir madu?
+        courseD_bee_debugging_challenge1_c: |-
+          Setelah lebah berhasil sampai ke baris bawah, mintalah mengulang perintah ini: * Ulangi 2 kali: * Maju ke depan * Buat 3 madu * Pindah ke belakang
+      courseD_bee_debugging_challenge1_2018_authored_hint:
         courseD_bee_debugging_challenge1_a: Mengapa tidak yang pertama setengah dari program ini bekerja? Pikirkan mengapa lebah perlu bergerak mundur. Berapa banyak nektar yang lebah mengumpulkan setiap kali bergerak lebih sebuah bunga?
         courseD_bee_debugging_challenge1_b: Dalam perjalanan pulang, mintalah lebah mengikuti pola yang sama. Berapa banyak madu yang lebah perlu membuat setiap kali bergerak lebih sebuah sisir madu?
         courseD_bee_debugging_challenge1_c: |-
@@ -7356,15 +8179,43 @@ id:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
+      courseD_bounce_events10s_2018_authored_hint:
+        courseD_bounce_events10s_a: |-
+          You should have both of these events in your code:
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.
+      courseD_bounce_events11s_2018_authored_hint:
+        courseD_bounce_events11s_a: You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.
       courseD_bounce_events12s_authored_hint:
+        courseD_bounce_events12s_a: You can speed up the basketball or the hand by attaching those blocks to the `when run` event.
+        courseD_bounce_events12s_b: Try making each shot worth 2 points and changing the team logo to the one from your home town!
+      courseD_bounce_events12s_2018_authored_hint:
         courseD_bounce_events12s_a: You can speed up the basketball or the hand by attaching those blocks to the `when run` event.
         courseD_bounce_events12s_b: Try making each shot worth 2 points and changing the team logo to the one from your home town!
       courseD_bounce_events1s_authored_hint:
         courseD_bounce_events1s_a: "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n   \n   </xml>"
         courseD_bounce_events1s_b: Don't forget to press "Run" and get the hand to the basket in order to solve this puzzle.
+      courseD_bounce_events1s_2018_authored_hint:
+        courseD_bounce_events1s_a: "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n   \n   </xml>"
+        courseD_bounce_events1s_b: Don't forget to press "Run" and get the hand to the basket in order to solve this puzzle.
       courseD_bounce_events2s_authored_hint:
+        courseD_bounce_events2s_a: |-
+          You will need to have two sets of `move` events coded for this to work:
+          
+          <xml>
+          <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+          <block type="bounce_moveLeft"/>
+          </next>
+          </block>
+          <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+          <block type="bounce_moveRight"/>
+          </next>
+          </block>
+          </xml>
+      courseD_bounce_events2s_2018_authored_hint:
         courseD_bounce_events2s_a: |-
           You will need to have two sets of `move` events coded for this to work:
           
@@ -7385,33 +8236,67 @@ id:
         courseD_bounce_events5s_b: |-
           Make sure you have added this code to your workspace:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2018_authored_hint:
+        courseD_bounce_events5s_a: You do not need to move the hand to solve this puzzle.
+        courseD_bounce_events5s_b: |-
+          Make sure you have added this code to your workspace:
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_authored_hint:
+        courseD_bounce_events6s_a: |-
+          Do you have an event that looks like this?
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
+      courseD_bounce_events6s_2018_authored_hint:
         courseD_bounce_events6s_a: |-
           Do you have an event that looks like this?
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
       courseD_bounce_events7s_authored_hint:
         courseD_bounce_events7s_a: You can add sounds in more places if you feel like it!
+      courseD_bounce_events7s_2018_authored_hint:
+        courseD_bounce_events7s_a: You can add sounds in more places if you feel like it!
       courseD_bounce_events_template_authored_hint: [ ]
+      courseD_bounce_events_template_2018_authored_hint: [ ]
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
           Bagaimana dengan yang kedua?
           Di mana salahnya?
         courseD_collector_debugging1_b: Apakah anda melihat pola yang bisa dibuat lebih sederhana menggunakan loop `repeat`?
-        courseD_collector_debugging1_c: |
-          Remember to use the `collect` block to pick up treasure once you have moved to it.
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick up treasure once you have moved to it.  '
       courseD_collector_debugging10_predict1_authored_hint:
         courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah ini... tapi mereka semuanya melibatkan belokan!
         courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode sesuai dengan apa yang ada di kepala anda.
+      courseD_collector_debugging10_predict1_2018_authored_hint:
+        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah ini... tapi mereka semuanya melibatkan belokan!
+        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode sesuai dengan apa yang ada di kepala anda.
+      courseD_collector_debugging1_2018_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
+          Bagaimana dengan yang kedua?
+          Di mana salahnya?
+        courseD_collector_debugging1_b: Apakah anda melihat pola yang bisa dibuat lebih sederhana menggunakan loop `repeat`?
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick up treasure once you have moved to it.  '
       courseD_collector_debugging1a_authored_hint:
         courseD_collector_debugging1_a: |-
           Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
           Bagaimana dengan yang kedua?
           Di mana salahnya?
-        courseD_collector_debugging1_c: |
-          Remember to use the `collect` block to pick up treasure once you have moved to it.
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick up treasure once you have moved to it.  '
+      courseD_collector_debugging1a_2018_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
+          Bagaimana dengan yang kedua?
+          Di mana salahnya?
+        courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick up treasure once you have moved to it.  '
       courseD_collector_debugging2_authored_hint:
+        courseD_collector_debugging2_a: |-
+          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
+          Bagaimana dengan yang kedua?
+          Di mana salahnya?
+        courseD_collector_debugging2_b: Apakah anda melihat pola yang bisa dibuat lebih sederhana menggunakan loop `repeat`?
+        courseD_collector_debugging2_c: Try collecting treasure for one side of this pattern. Can you repeat this to collect treasure on the other two sides?
+      courseD_collector_debugging2_2018_authored_hint:
         courseD_collector_debugging2_a: |-
           Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
           Bagaimana dengan yang kedua?
@@ -7429,19 +8314,52 @@ id:
           What is supposed to happen?
           
           What does that tell you?
+      courseD_collector_debugging2a_2018_authored_hint:
+        courseD_collector_debugging2a_a: |-
+          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
+          Bagaimana dengan yang kedua?
+          Di mana salahnya?
+        courseD_collector_debugging2a_c: |-
+          What happens?
+          
+          What is supposed to happen?
+          
+          What does that tell you?
       courseD_collector_debugging3_authored_hint:
+        courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
+        courseD_collector_debugging3_b: Cobalah menyederhanakan kode menggunakan loop bersarang.
+      courseD_collector_debugging3_2018_authored_hint:
         courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
         courseD_collector_debugging3_b: Cobalah menyederhanakan kode menggunakan loop bersarang.
       courseD_collector_debugging3a_authored_hint:
         courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
+      courseD_collector_debugging3a_2018_authored_hint:
+        courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
       courseD_collector_debugging4_authored_hint:
+        courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah kamu temukan?
+      courseD_collector_debugging4_2018_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
         courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
         courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah kamu temukan?
       courseD_collector_debugging4a_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
         courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+      courseD_collector_debugging4a_2018_authored_hint:
+        courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
       courseD_collector_debugging5_authored_hint:
+        courseD_collector_debugging5_a: |-
+          Start by looking at just the first loop.
+          
+          What does it do?
+          
+          What is it supposed to do?
+          
+          What does that tell you?
+        courseD_collector_debugging5_b: Setelah anda memiliki loop pertama seperti yang anda inginkan, apa yang tersisa dalam kode anda?
+      courseD_collector_debugging5_2018_authored_hint:
         courseD_collector_debugging5_a: |-
           Start by looking at just the first loop.
           
@@ -7459,13 +8377,33 @@ id:
           
           Apa yang bisa kamu pahami?
         courseD_collector_debugging5a_b: Setelah harta karun terkumpul. Apa yang tertinggal dalam kode anda?
+      courseD_collector_debugging5a_2018_authored_hint:
+        courseD_collector_debugging5a_a: |-
+          Apa yang dilakukannya?
+          
+          Apa yang harus dilakukan?
+          
+          Apa yang bisa kamu pahami?
+        courseD_collector_debugging5a_b: Setelah harta karun terkumpul. Apa yang tertinggal dalam kode anda?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
           Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
           Bagaimana dengan yang kedua?
           Di mana ada yang salah?
         courseD_collector_debugging6_b: Tampaknya semua langkah sudah benar, kamu hanya butuh sedikit lagi. Bagaimana kamu bisa mengulang aksi 'collect' berulang kali?
+      courseD_collector_debugging6_2018_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
+          Bagaimana dengan yang kedua?
+          Di mana ada yang salah?
+        courseD_collector_debugging6_b: Tampaknya semua langkah sudah benar, kamu hanya butuh sedikit lagi. Bagaimana kamu bisa mengulang aksi 'collect' berulang kali?
       courseD_collector_debugging6a_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
+          Bagaimana dengan yang kedua?
+          Di mana ada yang salah?
+        courseD_collector_debugging6_b: It looks like all of the blocks you need are in the workspace. Try clicking "start over" if things get too confusing.
+      courseD_collector_debugging6a_2018_authored_hint:
         courseD_collector_debugging6_a: |-
           Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
           Bagaimana dengan yang kedua?
@@ -7481,11 +8419,19 @@ id:
       courseD_collector_debugging8_authored_hint:
         courseD_collector_debugging8_a: Apakah anda melihat pola yang bisa anda simpulkan dengan sebuah loop?
         courseD_collector_debugging8_b: Coba gunakan loop bersarang untuk membuat kode ini lebih pendek.
+      courseD_collector_debugging8_2018_authored_hint:
+        courseD_collector_debugging8_a: Apakah anda melihat pola yang bisa anda simpulkan dengan sebuah loop?
+        courseD_collector_debugging8_b: Coba gunakan loop bersarang untuk membuat kode ini lebih pendek.
       courseD_collector_debugging8a_authored_hint: [ ]
+      courseD_collector_debugging8a_2018_authored_hint: [ ]
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah ini... tapi mereka semuanya melibatkan belokan!
         courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode sesuai dengan apa yang ada di kepala anda.
+      courseD_collector_debugging9_2018_authored_hint:
+        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah ini... tapi mereka semuanya melibatkan belokan!
+        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode sesuai dengan apa yang ada di kepala anda.
       courseD_collector_debugging9a_authored_hint: [ ]
+      courseD_collector_debugging9a_2018_authored_hint: [ ]
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
@@ -7535,7 +8481,115 @@ id:
           </next>
           </block>
           </xml>
+      courseD_collector_debugging_challenge2_2018_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Here is the complete solution for this puzzle.
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Solution:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_collector_nested_loops_challenge2_2018_authored_hint:
         courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
@@ -7656,7 +8710,14 @@ id:
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: Anda perlu mencari jagung 5 kali, menggunakan pengulangan loop.
         courseD_farmer_condLoops1_b: Pastikan menggunakan blok `if at corn` atau anda mungkin mencoba untuk memilih sesuatu yang tidak ada di sana!
+      courseD_farmer_condLoops1_2018_authored_hint:
+        courseD_farmer_condLoops1_a: Anda perlu mencari jagung 5 kali, menggunakan pengulangan loop.
+        courseD_farmer_condLoops1_b: Pastikan menggunakan blok `if at corn` atau anda mungkin mencoba untuk memilih sesuatu yang tidak ada di sana!
       courseD_farmer_condLoops2_authored_hint:
+        courseD_farmer_condLoops2_a: 'Cara terbaik untuk melakukan ini adalah dengan menyarangkan `if` pernyataan dengan menempatkan satu di bagian yang lain.  '
+        courseD_farmer_condLoops2_b: Untuk teka-teki ini, anda harus memiliki satu pernyataan `if / else` dan satu pernyataan" if "biasa.
+        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+      courseD_farmer_condLoops2_2018_authored_hint:
         courseD_farmer_condLoops2_a: 'Cara terbaik untuk melakukan ini adalah dengan menyarangkan `if` pernyataan dengan menempatkan satu di bagian yang lain.  '
         courseD_farmer_condLoops2_b: Untuk teka-teki ini, anda harus memiliki satu pernyataan `if / else` dan satu pernyataan" if "biasa.
         courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
@@ -7666,7 +8727,19 @@ id:
           
           This means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.
         courseD_farmer_condLoops3_b: Untuk teka-teki ini, anda harus memiliki dua pernyataan `if / else` dan satu pernyataan" if "biasa.
+      courseD_farmer_condLoops3_2018_authored_hint:
+        courseD_farmer_condLoops3_a: |-
+          To get all of the items, try nesting `if` statements three deep.
+          
+          This means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.
+        courseD_farmer_condLoops3_b: Untuk teka-teki ini, anda harus memiliki dua pernyataan `if / else` dan satu pernyataan" if "biasa.
       courseD_farmer_condLoops4_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          Tidak ada yang tahu berapa kepala selada akan tumbuh dari setiap tunas.
+          Gunakan loop ' while there is lettuce ' untuk terus dipetik sampai masing-masing potongan telah dikumpulkan.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Loop `while` akan menangani ruang kosong juga! Karena tidak ada selada, tidak ada yang memilih dan membiarkan kode terus berlanjut.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_c: Anda bisa menggunakan loop `while path ahead` atau loop 'repeat` untuk melewati semua hasil panen.
+      courseD_farmer_condLoops4_2018_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           Tidak ada yang tahu berapa kepala selada akan tumbuh dari setiap tunas.
           Gunakan loop ' while there is lettuce ' untuk terus dipetik sampai masing-masing potongan telah dikumpulkan.
@@ -7679,7 +8752,13 @@ id:
       courseD_farmer_condLoops5_authored_hint:
         courseD_farmer_condLoops5_a: 'Ada loop baru: `repeat until at pumpkin`. Dapatkah anda melihat bagaimana menggunakannya dalam teka-teki ini?'
         courseD_farmer_condLoops5_b: Mungkin ada lebih dari satu tanaman jagung atau selada di setiap tempat. Gunakan loop `while` untuk mengumpulkan semuanya!
+      courseD_farmer_condLoops5_2018_authored_hint:
+        courseD_farmer_condLoops5_a: 'Ada loop baru: `repeat until at pumpkin`. Dapatkah anda melihat bagaimana menggunakannya dalam teka-teki ini?'
+        courseD_farmer_condLoops5_b: Mungkin ada lebih dari satu tanaman jagung atau selada di setiap tempat. Gunakan loop `while` untuk mengumpulkan semuanya!
       courseD_farmer_condLoops6_authored_hint:
+        courseD_farmer_condLoops6_a: Gunakan loop `while path ahead` untuk memindahkan peternak ke bawah setiap bagian dari spiral.
+        courseD_farmer_condLoops6_b: Anda hanya perlu memeriksa jagung selama sebagian besar panen. Pilih satu labu di akhir program anda.
+      courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Gunakan loop `while path ahead` untuk memindahkan peternak ke bawah setiap bagian dari spiral.
         courseD_farmer_condLoops6_b: Anda hanya perlu memeriksa jagung selama sebagian besar panen. Pilih satu labu di akhir program anda.
       courseD_farmer_condLoops7_authored_hint:
@@ -7688,13 +8767,27 @@ id:
           
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Coba gunakan `when path ahead` untuk menjaga agar peternak memindahkan jumlah langkah yang benar.
+      courseD_farmer_condLoops7_2018_authored_hint:
+        courseD_farmer_condLoops7_a: |-
+          Notice that the easiest path to get to all of the crops is still a spiral.
+          
+          ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: Coba gunakan `when path ahead` untuk menjaga agar peternak memindahkan jumlah langkah yang benar.
       courseD_farmer_condLoops8_authored_hint: [ ]
+      courseD_farmer_condLoops8_2018_authored_hint: [ ]
       courseD_farmer_condLoops9_authored_hint: [ ]
+      courseD_farmer_condLoops9_2018_authored_hint: [ ]
       courseD_farmer_condLoops9_predict1_authored_hint: [ ]
+      courseD_farmer_condLoops9_predict1_2018_authored_hint: [ ]
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: Tombol "Langkah" bisa sangat membantu dalam tantangan ini.
         courseD_farmer_condLoops_challenge1_b: Biasanya anda hanya akan `pick pumpkin` jika anda berada di labu. Apa lagi yang perlu anda lakukan jika anda menggunakan labu?
+      courseD_farmer_condLoops_challenge1_2018_authored_hint:
+        courseD_farmer_condLoops_challenge1_a: Tombol "Langkah" bisa sangat membantu dalam tantangan ini.
+        courseD_farmer_condLoops_challenge1_b: Biasanya anda hanya akan `pick pumpkin` jika anda berada di labu. Apa lagi yang perlu anda lakukan jika anda menggunakan labu?
       courseD_farmer_condLoops_challenge2_authored_hint:
+        courseD_farmer_condLoops_challenge2_a: Jumlah masing-masing sayuran di setiap ruang bisa berubah. Sebuah loop `while` bisa membantu!
+      courseD_farmer_condLoops_challenge2_2018_authored_hint:
         courseD_farmer_condLoops_challenge2_a: Jumlah masing-masing sayuran di setiap ruang bisa berubah. Sebuah loop `while` bisa membantu!
       courseD_farmer_condLoops_challenge2_clone_authored_hint: [ ]
       courseD_farmer_conditionals10_authored_hint: [ ]
@@ -7713,22 +8806,42 @@ id:
         courseD_farmer_conditionals8_c: Perhatikan bahwa anda perlu mengulangi kode`while path ahead`,` while there is a hole' enam kali.
       courseD_farmer_conditionals9_authored_hint: [ ]
       courseD_farmer_until_challenge2_authored_hint: [ ]
+      courseD_farmer_until_challenge2_2018_authored_hint: [ ]
       courseD_farmer_while1_authored_hint:
         courseD_farmer_while1_a: Anda akan perlu maju empat kali untuk sampai ke tumpukan. Dapatkah anda menggunakan sebuah loop `repeat` untuk ini?
         courseD_farmer_while1_b: Gunakan blok `remove 1` ketika anda berdiri di atas tumpukan kotoran untuk menghapusnya.
       courseD_farmer_while10_authored_hint: [ ]
+      courseD_farmer_while10_2018_authored_hint: [ ]
       courseD_farmer_while10_predict2_authored_hint: [ ]
+      courseD_farmer_while10_predict2_2018_authored_hint: [ ]
+      courseD_farmer_while1_2018_authored_hint:
+        courseD_farmer_while1_a: Anda akan perlu maju empat kali untuk sampai ke tumpukan. Dapatkah anda menggunakan sebuah loop `repeat` untuk ini?
+        courseD_farmer_while1_b: Gunakan blok `remove 1` ketika anda berdiri di atas tumpukan kotoran untuk menghapusnya.
       courseD_farmer_while2_authored_hint:
+        courseD_farmer_while2_a: Anda hanya perlu bergerak sekali untuk sampai ke lubang.
+        courseD_farmer_while2_b: Anda akan membutuhkan blok `fill 1` enam kali. Dapatkah anda menggunakan sebuah loop untuk membuat ini lebih sederhana?
+      courseD_farmer_while2_2018_authored_hint:
         courseD_farmer_while2_a: Anda hanya perlu bergerak sekali untuk sampai ke lubang.
         courseD_farmer_while2_b: Anda akan membutuhkan blok `fill 1` enam kali. Dapatkah anda menggunakan sebuah loop untuk membuat ini lebih sederhana?
       courseD_farmer_while3_authored_hint:
         courseD_farmer_while3_a: Sebuah loop bisa membantu anda menyederhanakan kode anda di sini.
         courseD_farmer_while3_b: Anda seharusnya tidak memerlukan banyak blok `turn` untuk sampai ke tumpukan.
+      courseD_farmer_while3_2018_authored_hint:
+        courseD_farmer_while3_a: Sebuah loop bisa membantu anda menyederhanakan kode anda di sini.
+        courseD_farmer_while3_b: Anda seharusnya tidak memerlukan banyak blok `turn` untuk sampai ke tumpukan.
       courseD_farmer_while4_authored_hint:
         courseD_farmer_conditionals4_a: Daripada menggunakan loop `repeat`, gunakan loop` while` untuk terus menggali sampai tumpukan hilang.
         courseD_farmer_conditionals4_b: Ini terlihat sangat mirip dengan teka-teki sebelumnya, satu-satunya perbedaan adalah loop yang anda butuhkan.
+      courseD_farmer_while4_2018_authored_hint:
+        courseD_farmer_conditionals4_a: Daripada menggunakan loop `repeat`, gunakan loop` while` untuk terus menggali sampai tumpukan hilang.
+        courseD_farmer_conditionals4_b: Ini terlihat sangat mirip dengan teka-teki sebelumnya, satu-satunya perbedaan adalah loop yang anda butuhkan.
       courseD_farmer_while4_predict1_authored_hint: [ ]
+      courseD_farmer_while4_predict1_2018_authored_hint: [ ]
       courseD_farmer_while5_authored_hint:
+        courseD_farmer_conditionals5a_a: Cobalah menyarangkan loop `while` di dalam loop` repeat`.
+        courseD_farmer_conditionals5a_b: Petani perlu bergerak maju sebanyak lima kali untuk sampai ke akhir baris. Apa lagi yang perlu dilakukan petani?
+        courseD_farmer_conditionals5a_c: Bergerak maju 5 kali. Setiap kali anda bergerak maju, hapus tumpukan kotoran dengan menggunakan blok`while there a pile`.
+      courseD_farmer_while5_2018_authored_hint:
         courseD_farmer_conditionals5a_a: Cobalah menyarangkan loop `while` di dalam loop` repeat`.
         courseD_farmer_conditionals5a_b: Petani perlu bergerak maju sebanyak lima kali untuk sampai ke akhir baris. Apa lagi yang perlu dilakukan petani?
         courseD_farmer_conditionals5a_c: Bergerak maju 5 kali. Setiap kali anda bergerak maju, hapus tumpukan kotoran dengan menggunakan blok`while there a pile`.
@@ -7747,7 +8860,26 @@ id:
           How many times do you need to use this stair step pattern?
           
           Make sure you are using the `while there is a hole` to fill the hole.
+      courseD_farmer_while6_2018_authored_hint:
+        courseD_farmer_conditionals6_a: Pastikan anda menggunakan loop `while` untuk mengetahui berapa kali mengisi setiap lubang.
+        courseD_farmer_conditionals6_b: Perhatikan bahwa petani perlu bergerak maju dan turun beberapa kali dalam pola tangga.
+        courseD_farmer_conditionals6_c: |-
+          The stair step pattern uses the following blocks
+          - move forward
+          - fill hole
+          - turn right
+          - move forward
+          - fill hole
+          - turn left
+          
+          How many times do you need to use this stair step pattern?
+          
+          Make sure you are using the `while there is a hole` to fill the hole.
       courseD_farmer_while7_authored_hint:
+        courseD_farmer_conditionals8_a: Blok `while path ahead` memungkinkan anda terus berjalan, bahkan jika anda tidak tahu berapa banyak kotak berada di jalan.
+        courseD_farmer_conditionals8_b: Menempatkan loop `while path ahead` di dalam loop berulang bisa membantu anda dalam teka-teki ini.
+        courseD_farmer_conditionals8_c: Apa yang perlu anda lakukan di akhir masing-masing jalan?
+      courseD_farmer_while7_2018_authored_hint:
         courseD_farmer_conditionals8_a: Blok `while path ahead` memungkinkan anda terus berjalan, bahkan jika anda tidak tahu berapa banyak kotak berada di jalan.
         courseD_farmer_conditionals8_b: Menempatkan loop `while path ahead` di dalam loop berulang bisa membantu anda dalam teka-teki ini.
         courseD_farmer_conditionals8_c: Apa yang perlu anda lakukan di akhir masing-masing jalan?
@@ -7755,8 +8887,17 @@ id:
         courseD_farmer_conditionals8_a: Anda harus menggunakan lebih dari satu loop`while`.
         courseD_farmer_conditionals8_b: Setiap lubang ada di ujung jalan, jadi gunakan `while path ahead` sebelum menggunakan` while there's a hole`.
         courseD_farmer_conditionals8_c: Perhatikan bahwa anda perlu mengulangi kode`while path ahead`,` while there is a hole' enam kali.
+      courseD_farmer_while8_2018_authored_hint:
+        courseD_farmer_conditionals8_a: Anda harus menggunakan lebih dari satu loop`while`.
+        courseD_farmer_conditionals8_b: Setiap lubang ada di ujung jalan, jadi gunakan `while path ahead` sebelum menggunakan` while there's a hole`.
+        courseD_farmer_conditionals8_c: Perhatikan bahwa anda perlu mengulangi kode`while path ahead`,` while there is a hole' enam kali.
       courseD_farmer_while9_authored_hint: [ ]
+      courseD_farmer_while9_2018_authored_hint: [ ]
       courseD_farmer_while_challenge1_authored_hint:
+        courseD_farmer_while_challenge1_a: Setiap lubang atau tumpukan terletak satu spasi ** terbelakang ** dari ujung jalan.
+        courseD_farmer_while_challenge1_b: Jika anda menggunakan sebuah loop `while`, anda dapat memberitahu petani untuk membuang tumpukan atau mengisi lubang, bahkan jika tidak ada satu pun di sana. Itu berarti Anda bisa memprogramnya untuk menghilangkan kotoran atau mengisi lubang apapun, tidak peduli di mana dia berada.
+        courseD_farmer_conditionals8_c: Hal ini memungkinkan untuk menyelesaikan ini tanpa menggunakan loop `repeat`. Untuk melakukan ini, anda akan perlu untuk menggunakan empat loop `while`.
+      courseD_farmer_while_challenge1_2018_authored_hint:
         courseD_farmer_while_challenge1_a: Setiap lubang atau tumpukan terletak satu spasi ** terbelakang ** dari ujung jalan.
         courseD_farmer_while_challenge1_b: Jika anda menggunakan sebuah loop `while`, anda dapat memberitahu petani untuk membuang tumpukan atau mengisi lubang, bahkan jika tidak ada satu pun di sana. Itu berarti Anda bisa memprogramnya untuk menghilangkan kotoran atau mengisi lubang apapun, tidak peduli di mana dia berada.
         courseD_farmer_conditionals8_c: Hal ini memungkinkan untuk menyelesaikan ini tanpa menggunakan loop `repeat`. Untuk melakukan ini, anda akan perlu untuk menggunakan empat loop `while`.
@@ -7764,9 +8905,17 @@ id:
         courseD_farmer_while_challenge1_a: Setiap lubang atau tumpukan terletak satu spasi ** terbelakang ** dari ujung jalan.
         courseD_farmer_while_challenge1_b: Jika anda menggunakan sebuah loop `while`, anda dapat memberitahu petani untuk membuang tumpukan atau mengisi lubang, bahkan jika tidak ada satu pun di sana. Itu berarti anda bisa memprogramnya untuk menghapus kotoran dan mengisi lubang apapun, sambil berdiri di tempat yang sama.
         courseD_farmer_conditionals8_c: Hal ini memungkinkan untuk menyelesaikan ini tanpa menggunakan loop `repeat`. Untuk melakukan ini, anda akan perlu untuk menggunakan empat loop `while`.
+      courseD_farmer_while_challenge2_2018_authored_hint:
+        courseD_farmer_while_challenge1_a: Setiap lubang atau tumpukan terletak satu spasi ** terbelakang ** dari ujung jalan.
+        courseD_farmer_while_challenge1_b: Jika anda menggunakan sebuah loop `while`, anda dapat memberitahu petani untuk membuang tumpukan atau mengisi lubang, bahkan jika tidak ada satu pun di sana. Itu berarti anda bisa memprogramnya untuk menghapus kotoran dan mengisi lubang apapun, sambil berdiri di tempat yang sama.
+        courseD_farmer_conditionals8_c: Hal ini memungkinkan untuk menyelesaikan ini tanpa menggunakan loop `repeat`. Untuk melakukan ini, anda akan perlu untuk menggunakan empat loop `while`.
       courseD_harvester_nested_loops_challenge1-broken_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: Anda mungkin telah menggunakan sebuah loop untuk membuat pola zig-zag. Jika anda ingat algoritma itu, anda bisa membuat beberapa tambahan di sini.
       courseD_harvester_nested_loops_challenge1_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: 'Cobalah mengikuti jalan ini untuk menjangkau semua jagung! '
+        courseD_harvester_nested_loops_challenge1_b: Untuk mengumpulkan lebih dari satu potong jagung, anda perlu menggunakan `pick corn` lebih dari satu kali.
+        courseD_harvester_nested_loops_challenge1_c: Anda akan perlu meletakkan loop kecil di dalam loop utama anda untuk menyelesaikan teka-teki ini!
+      courseD_harvester_nested_loops_challenge1_2018_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: 'Cobalah mengikuti jalan ini untuk menjangkau semua jagung! '
         courseD_harvester_nested_loops_challenge1_b: Untuk mengumpulkan lebih dari satu potong jagung, anda perlu menggunakan `pick corn` lebih dari satu kali.
         courseD_harvester_nested_loops_challenge1_c: Anda akan perlu meletakkan loop kecil di dalam loop utama anda untuk menyelesaikan teka-teki ini!
@@ -7874,11 +9023,25 @@ id:
         courseD_maze_until1_a: Are there any sequences you can loop to make your code shorter?
         courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
       courseD_maze_until10_authored_hint: [ ]
+      courseD_maze_until10_2018_authored_hint: [ ]
       courseD_maze_until10_predict2_authored_hint: [ ]
+      courseD_maze_until10_predict2_2018_authored_hint: [ ]
+      courseD_maze_until1_2018_authored_hint:
+        courseD_maze_until1_a: Are there any sequences you can loop to make your code shorter?
+        courseD_maze_until1_b: Try using a nested loop to solve this puzzle.
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until you succeed!
       courseD_maze_until2_predict1_authored_hint: [ ]
+      courseD_maze_until2_predict1_2018_authored_hint: [ ]
       courseD_maze_until3_authored_hint:
+        courseD_maze_until3_a: |-
+          - What does your code do?
+          - What is it supposed to do?
+          - What does that tell you?
+        courseD_maze_until3_b: If you are getting stuck, try writing out the steps on a piece of paper and looking for places where they repeat.
+        courseD_maze_until3_c: Is there a stair step pattern you can follow for this puzzle?
+        courseD_maze_until3_d: Don't forget to use the `repeat until` block to make your code shorter.
+      courseD_maze_until3_2018_authored_hint:
         courseD_maze_until3_a: |-
           - What does your code do?
           - What is it supposed to do?
@@ -7895,7 +9058,20 @@ id:
           - Where does it go wrong?
         courseD_maze_until4_b: Is there a stair step pattern you can follow for this puzzle?
         courseD_maze_until4_c: Don't forget to use the `repeat until` block to make your code shorter.
+      courseD_maze_until4_2018_authored_hint:
+        courseD_maze_until4_a: |-
+          Use the "Step" button to go through your code line by line.
+          
+          - Does everything work at the first step?
+          - Does everything work at the second step?
+          - Where does it go wrong?
+        courseD_maze_until4_b: Is there a stair step pattern you can follow for this puzzle?
+        courseD_maze_until4_c: Don't forget to use the `repeat until` block to make your code shorter.
       courseD_maze_until5_authored_hint:
+        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the zombie checking for a place to turn.
+        courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
+        courseD_maze_until5_c: After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?
+      courseD_maze_until5_2018_authored_hint:
         courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the zombie checking for a place to turn.
         courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
         courseD_maze_until5_c: After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?
@@ -7903,7 +9079,15 @@ id:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the zombie on track.
         courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
         courseD_maze_until6_c: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
+      courseD_maze_until6_2018_authored_hint:
+        courseD_maze_until6_a: This time, try the `if path to the right` to keep the zombie on track.
+        courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat until sunflower` block.
+        courseD_maze_until6_c: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
       courseD_maze_until7_authored_hint:
+        courseD_maze_until7_a: You don't need your code to be any longer than last time, just because the maze is!
+        courseD_maze_until7_b: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
+        courseD_maze_until7_c: Remember to check for paths to the left, because turning right will take you down the wrong path!
+      courseD_maze_until7_2018_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer than last time, just because the maze is!
         courseD_maze_until7_b: Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!
         courseD_maze_until7_c: Remember to check for paths to the left, because turning right will take you down the wrong path!
@@ -7911,23 +9095,42 @@ id:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the zombie headed the right direction.
         courseD_maze_until8_b: 'With your `if/else` block: if there is a path ahead, what should you do?'
         courseD_maze_until8_c: 'With your `if/else` block: if there is not a path ahead, which way should you turn?'
+      courseD_maze_until8_2018_authored_hint:
+        courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the zombie headed the right direction.
+        courseD_maze_until8_b: 'With your `if/else` block: if there is a path ahead, what should you do?'
+        courseD_maze_until8_c: 'With your `if/else` block: if there is not a path ahead, which way should you turn?'
       courseD_maze_until9_authored_hint:
+        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.
+        courseD_maze_until8_b: Which direction should you turn if there is no path forward?
+        courseD_maze_until8_c: Remember to use the `repeat until` block to get you to the sunflower!
+      courseD_maze_until9_2018_authored_hint:
         courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.
         courseD_maze_until8_b: Which direction should you turn if there is no path forward?
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you to the sunflower!
       courseD_maze_until_challenge_authored_hint: [ ]
       courseD_maze_until_challenge1-delete-this-copy_authored_hint: [ ]
       courseD_maze_until_challenge1_authored_hint: [ ]
+      courseD_maze_until_challenge1_2018_authored_hint: [ ]
       courseD_maze_until_challenge2_authored_hint: [ ]
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
         courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
         courseD_playLab_cond1_c: Remember to move Pegleg to both of the flags once you click "Run"!
+      courseD_playLab_cond1_2018_authored_hint:
+        courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.
+        courseD_playLab_cond1_b: Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.
+        courseD_playLab_cond1_c: Remember to move Pegleg to both of the flags once you click "Run"!
       courseD_playLab_cond2_authored_hint:
+        courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
+      courseD_playLab_cond2_2018_authored_hint:
         courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
+      courseD_playLab_cond3_2018_authored_hint:
+        courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
+        courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
+      courseD_playLab_cond3a_2018_authored_hint:
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down
@@ -7935,14 +9138,26 @@ id:
         courseD_playLab_cond4_a: You will want to use the `when run` event to get the ninja to chase the pirate.
         courseD_playLab_cond4_b: There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!
         courseD_playLab_cond4_c: Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event.
+      courseD_playLab_cond4_2018_authored_hint:
+        courseD_playLab_cond4_a: You will want to use the `when run` event to get the ninja to chase the pirate.
+        courseD_playLab_cond4_b: There is a special block called `set every masked ninja to chase actor` that will keep the ninja hot on the pirate's trail!
+        courseD_playLab_cond4_c: Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event.
       courseD_playLab_cond5_authored_hint:
+        courseD_playLab_cond5_a: Use an `if` statement that compares whether `score` is `>` 5 to solve this challenge.
+        courseD_playLab_cond5_b: You can have more than one `repeat forever` loop in the workspace.
+      courseD_playLab_cond5_2018_authored_hint:
         courseD_playLab_cond5_a: Use an `if` statement that compares whether `score` is `>` 5 to solve this challenge.
         courseD_playLab_cond5_b: You can have more than one `repeat forever` loop in the workspace.
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
+      courseD_playLab_cond6_2018_authored_hint:
+        courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
+        courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
+      courseD_playLab_cond6a_2018_authored_hint:
+        courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk menjaga poin agar tidak dihapus terlalu cepat.
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: Tambahkan blok `set masked ninja speed` ke awal program untuk membantu memperlambat ninja.
         courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
@@ -8227,6 +9442,7 @@ id:
       courseE_artist_functions_predict2_authored_hint: [ ]
       courseE_artist_functions_predict2_2018_authored_hint: [ ]
       courseE_artist_predict1_authored_hint: [ ]
+      courseE_artist_predict1_2018_authored_hint: [ ]
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
         courseD_artist_ramp10_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
@@ -8263,6 +9479,13 @@ id:
           
           Don't forget to turn afterward!
         courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+      courseE_artist_ramp8_2_2018_authored_hint:
+        courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan ` bergerak maju dengan 100 piksel ` blok, dan mengubah 100 untuk sebuah 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          
+          Don't forget to turn afterward!
+        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
       courseE_artist_ramp9_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
@@ -8272,6 +9495,10 @@ id:
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
       courseE_artist_ramp9_2018_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
+        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+      courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
@@ -8632,19 +9859,33 @@ id:
         courseE_farmer_ramp16_b: Checking for corn or lettuce at every space will help simplify your code. What should you do if there is a crop? What if there is nothing?
         courseE_farmer_ramp16_c: Use an `if/else` block to keep moving forward. Which way do you need to turn when the forward path is blocked?
       courseE_maze_predict1_authored_hint: [ ]
+      courseE_maze_predict1_2018_authored_hint: [ ]
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
         courseC_maze_programming1_b: You don't need any extra blocks from the toolbox for this puzzle!
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
         courseD_maze_ramp11_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+      courseE_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
+        courseC_maze_programming1_b: You don't need any extra blocks from the toolbox for this puzzle!
       courseE_maze_ramp2_authored_hint:
+        courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
+        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+      courseE_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
       courseE_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
         courseC_maze_programming3_b: Remember that turns to the right and left are from the bird's perspective.
+      courseE_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_b: Remember that turns to the right and left are from the bird's perspective.
       courseE_maze_ramp4_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
+        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseE_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
         courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
@@ -8652,11 +9893,23 @@ id:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: How far do you need to move to get to the corner?
         courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
+      courseE_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
+        courseC_maze_programming5_b: How far do you need to move to get to the corner?
+        courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
         courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
         courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseE_maze_ramp6_2018_authored_hint:
+        courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
+        courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
+        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
+        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+      courseE_maze_ramp7_2018_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
         courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
         courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
@@ -9813,8 +11066,7 @@ id:
       courseF_artist_variables_6a_authored_hint:
         courseF_artist_variables6a_a: Remember to use the variable `length` instead of an actual number to solve this puzzle.
       courseF_artist_variables_8_authored_hint:
-        courseF_artist_variables_8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables_8_a: 'Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.  '
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
         courseF_artist_variables_challenge1_b: You will want to increase the value of `length` by 10 **twice** inside the loop.
@@ -10758,12 +12010,10 @@ id:
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger. Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
         courseF_bee_functions8a_a: "Jika teka-teki terlihat menantang, cobalah bangun judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya. Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di sana!"
-        courseF_bee_functions8a_b: |+
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
         courseF_bee_functions8a_a: "Jika teka-teki terlihat menantang, cobalah bangun judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya. Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di sana!"
-        courseF_bee_functions8a_b: |+
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
         courseF_bee_functions7_a: "Jika teka-teki terlihat menantang, cobalah bangun judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya. Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di sana!"
         courseF_bee_functions7_b: |-
@@ -11008,8 +12258,7 @@ id:
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
         courseF_bee_functions8a_a: "Jika teka-teki terlihat menantang, cobalah bangun judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya. Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di sana!"
-        courseF_bee_functions8a_b: |+
-          Remember to build code inside of the function editor.
+        courseF_bee_functions8a_b: "Remember to build code inside of the function editor.\n\n"
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar from a flower.
         courseF_bee_fwp1_b: Continue along the path using a `repeat` block. Make sure you are using a `move forward` block and checking if there is a flower using a `if` statement.
@@ -12146,6 +13395,9 @@ id:
           When everything is done, you should be able to click on either actor and get up to 8 different messages. Is it possible to expand it even further?
           
           Have a friend try your app when it is finished!
+      coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line. Where does something go wrong?
@@ -12171,8 +13423,7 @@ id:
       grade1_adventurer_loops8_challenge_authored_hint:
         grade1_adventurer_loops8_challenge_a: Can you find a pattern in the steps?  Where can you use a repeat?
       grade1_adventurer_loops9_authored_hint:
-        grade1_adventurer_loops9_a: |
-          Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+        grade1_adventurer_loops9_a: 'Does this seem too hard?  Break it up into 4 little problems to make it feel easier.  '
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: Jika Anda ingin lingkaran untuk mengulang lebih dari 4 kali, Anda dapat mengubah angka di atas blok.
       grade1_artist_loops2_authored_hint:

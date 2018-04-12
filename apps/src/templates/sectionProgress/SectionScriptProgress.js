@@ -54,6 +54,7 @@ export default class SectionScriptProgress extends Component {
       levelProgress: studentLevelProgress[studentId],
       currentLevelId: null
     };
+
     return levelsByLesson(fakeState);
   }
 

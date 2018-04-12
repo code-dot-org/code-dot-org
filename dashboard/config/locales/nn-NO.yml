@@ -269,7 +269,7 @@
     edit_model: Rediger %{model}
     update: Oppdater
     submit: Send inn
-    destroy: "Ødelegg"
+    destroy: Ødelegg
     back: Tilbake
     confirm: Er du sikker?
     created: "%{model} blei oppretta."
@@ -684,7 +684,7 @@
   slow_loading: Dette tar lengre tid enn vanleg...
   try_reloading: Last sida på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne lista over oppgåver"
+  download_pdf: Åpne lista over oppgåver
   lesson_plan: Plan over oppgåver
   view_lesson_plan: Vis oversyn over oppgåver
   pdf_download: Last ned PDF

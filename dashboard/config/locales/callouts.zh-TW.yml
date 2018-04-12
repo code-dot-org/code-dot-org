@@ -3,15 +3,15 @@
     callouts:
       2-3 Artist 1 new_callout: []
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: "小藝術家上沒有「步進」按鈕，但你可以使用左側的滑杆來放慢程式運行的速度以便檢查。"
+        2-3_Artist_Debugging_1_a: 小藝術家上沒有「步進」按鈕，但你可以使用左側的滑杆來放慢程式運行的速度以便檢查。
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！"
+        Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Click and drag a "Text Area" onto the screen
         screenSelectorCallout3: Pick the screen you made
@@ -199,7 +199,7 @@
       CSD U3 UP_ARROW_callout: []
       CSD U3 UP_ARROW_2018_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: "在此修改數值"
+        CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
@@ -209,7 +209,7 @@
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: "在此修改數值"
+        CSD_U3_variables: 在此修改數值
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -359,23 +359,23 @@
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 ellipse_2018_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -392,8 +392,8 @@
       CSD U3 keydown conditional_callout: []
       CSD U3 keydown conditional_2018_callout: []
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "這個是「運行」按鈕。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 picture_callout: []
       CSD U3 picture_2018_callout: []
       CSD U3 platform background1_callout:
@@ -417,17 +417,17 @@
       CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "這個是「運行」按鈕。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 rect_2018_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "這個是「運行」按鈕。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 這個是「運行」按鈕。
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+        CSD_U3_rect_c1: 這兒是代碼
+        CSD_U3_rect_c2: 拖曳這個積木到工作區裡。
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: []
@@ -485,90 +485,90 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       Course 4 Artist 4_callout:
-        repeat_full_circle: "殭屍需要移動多少次才能完成一個圓？輸入移動的次數。"
+        repeat_full_circle: 殭屍需要移動多少次才能完成一個圓？輸入移動的次數。
       Course 4 Artist 7_callout:
-        repeat_blocks: "使用「重複」積木，並包住工作區上的所有積木。"
+        repeat_blocks: 使用「重複」積木，並包住工作區上的所有積木。
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: "拖曳計數器變數到這個積木"
+        place_counter_variable: 拖曳計數器變數到這個積木
       Course 4 Artist Functions 4_callout:
-        create_function: "點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。"
+        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: "這個圖案看上去還不像個房子，不過沒關係，我們會在下個關卡修正它。"
+        house_hint: 這個圖案看上去還不像個房子，不過沒關係，我們會在下個關卡修正它。
       Course 4 Artist Functions 8_callout:
-        edit_function: "點擊此處以編輯你的函式。"
+        edit_function: 點擊此處以編輯你的函式。
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: "請注意我們已經排序的所有積木，並把它們依功能分類，讓他們看起來更整潔。
-          點擊此處可找到所有你需要的積木。"
+        Course_4_Artist_Functions_challenge_1: 請注意我們已經排序的所有積木，並把它們依功能分類，讓他們看起來更整潔。
+          點擊此處可找到所有你需要的積木。
       Course 4 Artist Params 2_callout:
-        length_parameter: "你可以更新這個函式，讓它能使用 length（長度）參數嗎？"
+        length_parameter: 你可以更新這個函式，讓它能使用 length（長度）參數嗎？
       Course 4 Artist Params 4_callout:
-        create_function: "點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。"
+        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: "使用「重複」積木，並包住工作區上的所有積木。"
+        repeat_blocks: 使用「重複」積木，並包住工作區上的所有積木。
       Course 4 Artist Vars 10_callout:
-        set_sides: "使用這個積木將 sides（邊數）設置成完成關卡所需的數值。"
+        set_sides: 使用這個積木將 sides（邊數）設置成完成關卡所需的數值。
       Course 4 Artist Vars 12_callout:
-        set_length: "使用這個積木將 length（長度）設置成正確數值。"
+        set_length: 使用這個積木將 length（長度）設置成正確數值。
       Course 4 Artist Vars 13_callout: []
       Course 4 Artist Vars 2_callout:
-        set_length: "使用這個積木將 length（長度）設置成正確數值。"
+        set_length: 使用這個積木將 length（長度）設置成正確數值。
       Course 4 Artist Vars 3_callout:
-        place_variable: "拖曳你的變數到這個積木中"
+        place_variable: 拖曳你的變數到這個積木中
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: "用 360 除以邊數就可以得到每個角的角度。"
+        degrees_per_side: 用 360 除以邊數就可以得到每個角的角度。
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "需要更多的空間？拉動這個條桿讓程式區域更寬一些。"
+        Course_4_Artist_Vars_8_a: 需要更多的空間？拉動這個條桿讓程式區域更寬一些。
       Course 4 Artist Vars 9_callout:
-        set_sides: "使用這個積木將 sides（邊數）設置成完成關卡所需的數值。"
+        set_sides: 使用這個積木將 sides（邊數）設置成完成關卡所需的數值。
       Course 4 Bee 1_callout:
-        if_bee_nectar: "使用「如果」積木來決定蜜蜂應該要採集花蜜還是釀造蜂蜜。"
+        if_bee_nectar: 使用「如果」積木來決定蜜蜂應該要採集花蜜還是釀造蜂蜜。
       Course 4 Bee 3_callout:
-        if_else_bee: "使用「如果…否則」積木，那樣一來就可以讓蜜蜂從花朵採集花蜜，如果不是花朵就釀造蜂蜜。"
+        if_else_bee: 使用「如果…否則」積木，那樣一來就可以讓蜜蜂從花朵採集花蜜，如果不是花朵就釀造蜂蜜。
       Course 4 Bee For Loops 1_callout:
-        get_nectar: "使用新的「採集花蜜」積木。"
+        get_nectar: 使用新的「採集花蜜」積木。
       Course 4 Bee For Loops 6_callout:
-        actions_category: "工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。"
+        actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: "使用這個按鈕來編輯函式，然後改變蜜蜂的轉向，讓牠採集到花蜜。"
+        edit_get_nectar: 使用這個按鈕來編輯函式，然後改變蜜蜂的轉向，讓牠採集到花蜜。
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: "設置這些變數成 0 或是 1，並命為 flag，這個 flag 可以發信號給我們的函式，告訴我們蜜蜂該往哪個方向前進。"
+        Course_4_Bee_Params_4: 設置這些變數成 0 或是 1，並命為 flag，這個 flag 可以發信號給我們的函式，告訴我們蜜蜂該往哪個方向前進。
       Course 4 Bee Params 4_callout: []
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: "點擊「運行」以試試你的程式"
-        Course 4 Maze 1_callout2: "拖曳「移動」積木到工作區上，貼到其它的積木下方。"
+        Course 4 Maze 1_callout1: 點擊「運行」以試試你的程式
+        Course 4 Maze 1_callout2: 拖曳「移動」積木到工作區上，貼到其它的積木下方。
       Course 4 Maze 4_callout:
-        repeat: "將程式積木放在迴圈中來重複執行指令"
+        repeat: 將程式積木放在迴圈中來重複執行指令
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: "點擊「編輯」以更新這個函式，讓它可以使用 height（高度）參數。"
+        Course_4 _Play_Lab_Params_2_1: 點擊「編輯」以更新這個函式，讓它可以使用 height（高度）參數。
       Course 4 Play Lab Params 3_callout:
-        edit_function: "點擊此處以編輯你的函式。"
+        edit_function: 點擊此處以編輯你的函式。
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
       Course 4 Play Lab Vars 1_callout:
-        arrows_move_actor: "使用這些方向鍵來移動角色"
+        arrows_move_actor: 使用這些方向鍵來移動角色
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: "你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。"
+        Course_4_Play_Lab_Vars_9_1: 你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "哇哩！我的程式爆炸了！你能放它放回正確的位置以完成這個關卡嗎？"
+        Course_4_Play_Labs_For_Loops_5: 哇哩！我的程式爆炸了！你能放它放回正確的位置以完成這個關卡嗎？
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: "注意 `counter`（計數器）變數在每個角色上是不是用了不同的名稱？這樣子每個計數迴圈才可以控制自己的計數器。"
-        Course_4_Playlab_For_Loops_4b_2: "這個關卡你只能修改`計數迴圈`中的「增量」。"
+        Course_4_Playlab_For_Loops_4b_1: 注意 `counter`（計數器）變數在每個角色上是不是用了不同的名稱？這樣子每個計數迴圈才可以控制自己的計數器。
+        Course_4_Playlab_For_Loops_4b_2: 這個關卡你只能修改`計數迴圈`中的「增量」。
       Course 4 Playlab For Loops 5b_callout: []
       Course 4 Playlab For Loops 6b_callout: []
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: "這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！"
+        Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
       CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: "使用這些方向鍵來移動角色"
+        arrows_move_actor: 使用這些方向鍵來移動角色
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: "你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。"
+        Course_4_Play_Lab_Vars_9_1: 你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。
       CourseF_PlayLab_vars6_callout: []
       CourseF_PlayLab_vars7_callout: []
       CourseF_PlayLab_vars8_callout: []
@@ -590,7 +590,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: "點擊此處以編輯你的函式。"
+        edit_function: 點擊此處以編輯你的函式。
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -607,26 +607,26 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        Function_intro_Ryan_1: 此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: "當事件發生時播放一個音效。"
+        Infinity_move_collide_callout: 當事件發生時播放一個音效。
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: "當按向上鍵時，哪個積木可以讓杯麵向上移動？"
-        Infinity_move_directions_callout_arrow: "使用這些方向鍵來進行引導"
+        Infinity_move_directions_callout: 當按向上鍵時，哪個積木可以讓杯麵向上移動？
+        Infinity_move_directions_callout_arrow: 使用這些方向鍵來進行引導
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: "添加移動積木到這兒"
+        Infinity_move_right_runbutton: 添加移動積木到這兒
       Infinity_repeat_callout:
-        Infinity_repeat_callout: "放置移動積木到這裡面"
+        Infinity_repeat_callout: 放置移動積木到這裡面
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
@@ -645,26 +645,26 @@
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: "當你準備好時，點擊「運行」試試你的程式。"
+        craft2_run_button_callout: 當你準備好時，點擊「運行」試試你的程式。
       MC HOC 2016 Level 6_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: "點擊「運行」開始移動。"
+        MC_HOC_2016_New_Walk_callout2: 點擊「運行」開始移動。
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: "使用箭頭按鍵或按一下這裡以開始移動玩家。"
+        MC_HOC_2017_01_Cole_2: 使用箭頭按鍵或按一下這裡以開始移動玩家。
       MC_HOC_2017_01_Kiki_callout: []
       MC_HOC_2017_02_Cole_callout: []
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: "現在您的玩家有同伴了！您可以為 Agent 撰寫代碼以協助通關。"
+        MC_HOC_2017_02_Cole_1: 現在您的玩家有同伴了！您可以為 Agent 撰寫代碼以協助通關。
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        MC_HOC_2017_03_Cole_1: 這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。
       MC_HOC_2017_04_Cole_callout:
         MC_HOC_2017_04_Cole_a: Agent 可以在水上漂浮，但玩家不可以！
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: "按一下進入工作空間，然後新增您要重複執行的代碼！"
+        MC_HOC_2017_04_Kiki_1: 按一下進入工作空間，然後新增您要重複執行的代碼！
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: "這些方塊無法丟棄，但可以編輯！"
+        MC_HOC_2017_06_Cole_1: 這些方塊無法丟棄，但可以編輯！
       MC_HOC_2017_08_RY_callout:
         MC_HOC_2017_08_RY_1: 'Agent 可以在熔岩上漂浮，但玩家不可以！ '
       MC_HOC_2017_08_Will_callout:
@@ -678,69 +678,69 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: "點擊此處以編輯新的函式，好讓它能建立一個正方形。"
+        NEW_Course_4_Artist_Functions_3_1: 點擊此處以編輯新的函式，好讓它能建立一個正方形。
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: "點擊此處以編輯你的函式。"
-        function_editor_draw_square: "這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。"
+        edit_function: 點擊此處以編輯你的函式。
+        function_editor_draw_square: 這是你的函式定義。每次你使用 draw a square（畫個正方形）積木時，這些程式就會執行一次。
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: "點擊此處以編輯你的函式。"
+        edit_function: 點擊此處以編輯你的函式。
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: "點擊此處以編輯你的函式。"
+        edit_function: 點擊此處以編輯你的函式。
       NEW Course 4 Artist Params 10_callout:
-        create_function: "點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。"
+        create_function: 點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
-        add_and_drag_parameter: "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: "拖曳 length（長度）參數到這裡以取代問號"
+        place_length_variable: 拖曳 length（長度）參數到這裡以取代問號
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: "輸入你想要讓蜜蜂收集的花蜜最大數量。"
+        bee_for_loop: 輸入你想要讓蜜蜂收集的花蜜最大數量。
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: "工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。"
+        actions_category: 工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。
       New App Lab Project_callout: []
       New Artist Project_callout:
-        New Artist Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Artist Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Artist Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Artist Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       New Frozen Project_callout:
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
-        Ninjacat Demo B: "點擊`運行`來試試這個遊戲"
+        Ninjacat Demo B: 點擊`運行`來試試這個遊戲
       Overworld Chop Trees_callout:
-        craft_callout_preplaced: "我們預先在這裡放了一些積木，方便您開始"
+        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld Chop Trees_2018_callout:
-        craft_callout_preplaced: "我們預先在這裡放了一些積木，方便您開始"
+        craft_callout_preplaced: 我們預先在這裡放了一些積木，方便您開始
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: "此代碼會開始建造你的房屋。你能完成嗎？"
+        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
       Overworld House Frame Chosen_2018_callout:
-        craft_callout_preplaced_house: "此代碼會開始建造你的房屋。你能完成嗎？"
+        craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: "點擊「運行」以試試你的程式"
-        craft_drag_block_callout: "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        craft_run_button_callout: 點擊「運行」以試試你的程式
+        craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: "點擊「運行」以試試你的程式"
-        craft_drag_block_callout: "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        craft_run_button_callout: 點擊「運行」以試試你的程式
+        craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
       Overworld Place Wall_callout:
-        craft_inside_repeat: "將積木放在這裡可以重複執行程式"
+        craft_inside_repeat: 將積木放在這裡可以重複執行程式
       Overworld Place Wall_2018_callout:
-        craft_inside_repeat: "將積木放在這裡可以重複執行程式"
+        craft_inside_repeat: 將積木放在這裡可以重複執行程式
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
       PDAlg Big Game History_callout: []
@@ -751,22 +751,22 @@
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！"
+        Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Play Lab Rocket 2_callout:
-        pass_function: "這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！"
-        play lab rocket 2: "在這裡定義你的 rocket-height（火箭高度）函式。"
+        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
+        play lab rocket 2: 在這裡定義你的 rocket-height（火箭高度）函式。
       Play Lab Rocket 2B_callout:
-        pass_function: "這個黑色的積木可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！"
+        pass_function: 這個黑色的積木可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: "在移到至範例和定義前更新目的陳述式。"
+        Play Lab Rocket 3 1: 在移到至範例和定義前更新目的陳述式。
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: "感覺卡關了？<br />點擊燈炮圖案可以得到提示！"
+        feeling_stuck_callout_test: 感覺卡關了？<br />點擊燈炮圖案可以得到提示！
       Robot Doodle_callout:
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
           label to leave yourself notes inside your program!
@@ -774,19 +774,19 @@
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
           label to leave yourself notes inside your program!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       Rocket Height Course A_callout:
-        pass_function: "這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！"
+        pass_function: 這個開始的積木（函式積木）可以讓你通過你的函式（不是你的函式所返回的一些輸入值）進入動畫庫，你在畫面上所看到的這個動畫實際上是使用你的移動火箭的函式！
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       SG Add Subgoals practice_callout: []
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -801,12 +801,12 @@
         goals_palette_show: Here is a list of subgoals
         goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: "編輯這個函式可以避免讓 Sam 走到右側"
+        Sam the Butterfly 3 1: 編輯這個函式可以避免讓 Sam 走到右側
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -833,44 +833,44 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
       Underground Avoiding Lava_2018_callout:
-        craft_callout_moveforward: "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        craft_callout_moveforward: 此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？
       Underground Iron_callout:
-        craft_what_is_iron: "開採這塊鐵礦！"
+        craft_what_is_iron: 開採這塊鐵礦！
       Underground Iron_2018_callout:
-        craft_what_is_iron: "開採這塊鐵礦！"
+        craft_what_is_iron: 開採這塊鐵礦！
       WebLab PS test - 1-12_callout:
-        version_history_button: "檢查版本紀錄"
+        version_history_button: 檢查版本紀錄
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: "只能有 2 個這個和 2 個轉向"
+        aE1_1: 只能有 2 個這個和 2 個轉向
       aE2_callout:
-        aE2_1: "還是只能有 2 個這個和 2 個轉向"
+        aE2_1: 還是只能有 2 個這個和 2 個轉向
       aE3_callout:
-        aE3_1: "這些之中只有一些是有用的"
+        aE3_1: 這些之中只有一些是有用的
       aE3alternate_callout:
-        aE3_1: "這些之中只有一些是有用的"
+        aE3_1: 這些之中只有一些是有用的
       aE3alternateB_callout:
-        aE3_1: "這些之中只有一些是有用的"
+        aE3_1: 這些之中只有一些是有用的
       aE4_callout:
-        aE3_1: "這些之中只有一些是有用的"
+        aE3_1: 這些之中只有一些是有用的
       aE5_callout:
-        aE3_1: "這些之中只有一些是有用的"
+        aE3_1: 這些之中只有一些是有用的
       aE6_callout:
-        aE6_1: "只能有 1 個向前移動和 1 個轉向積木"
+        aE6_1: 只能有 1 個向前移動和 1 個轉向積木
       aEfreeplay_callout:
-        aEfreeplay_1: "藝術家一出場就站在中間可能會有些尷尬，我們來想個辦法讓藝術家移動到一個固定的位置。"
+        aEfreeplay_1: 藝術家一出場就站在中間可能會有些尷尬，我們來想個辦法讓藝術家移動到一個固定的位置。
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: []
       artistLoopsK2_callout:
-        artistLoopsK2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       course2_collector_loops_challenge2_callout: []
       course2_collector_prog_challenge1_callout: []
       course2_collector_prog_challenge2_callout: []
@@ -885,7 +885,7 @@
         courseE_artist_functions_challenge2_callout2: If you don't like this design,
           change it to anything you want!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       course3_bee_functions_challenge3_callout:
         courseF_bee_functions_challenge1_1: What code should you put in this function?
         courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
@@ -908,15 +908,15 @@
           corn, but what about the other vegetables?
       course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        courseA_artist_loops4_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: "這個數字指的是解答中只可以使用一個這類型的積木"
+        courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: "這個數字指的是解答中只可以使用一個這類型的積木"
+        courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: "這個數字指的是解答中只可以使用一個這類型的積木"
+        courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -924,35 +924,52 @@
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       courseA_collector_loops3_predict1_callout: []
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: "當您需要提示時，點一下燈泡！"
+        courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: "當您需要提示時，點一下燈泡！"
+        courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+        courseA_maze_seqA_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+        courseA_maze_seqA_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
       courseA_maze_seq4_callout:
         made_of_stone: These blocks are made of stone.  You can move them, but you
           can't delete them!
@@ -965,13 +982,13 @@
       courseA_playLab_events3_callout: []
       courseA_playLab_events3_2018_callout: []
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: "這是一個標注"
+        courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: "這是一個標注"
+        courseA_playlab_events4_callout1: 這是一個標注
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: "點擊此處變更方向事件的箭頭方向。"
+        courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: "點擊此處變更方向事件的箭頭方向。"
+        courseA_playLab_events5_1: 點擊此處變更方向事件的箭頭方向。
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
@@ -982,19 +999,38 @@
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: "這個數字指的是工具箱中已經沒有這個積木。"
+        courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
+      courseB_artist_loops5_2018_callout:
+        courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: "當您需要提示時，點一下燈泡！"
+        courseB_maze_seq1: 當您需要提示時，點一下燈泡！
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+        courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: "灰色的積木就像石頭一樣，無法被破壞和丟棄。"
+        courseB_maze_seq3_1: 灰色的積木就像石頭一樣，無法被破壞和丟棄。
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: 灰色的積木就像石頭一樣，無法被破壞和丟棄。
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
@@ -1007,7 +1043,7 @@
       courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        courseC_collector_prog1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you
           need them!
@@ -1018,7 +1054,7 @@
       courseC_collector_prog_challenge1_callout: []
       courseC_collector_prog_challenge2_callout: []
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_debugging5_2018_callout:
@@ -1045,7 +1081,7 @@
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are
           meant to be hard and may take several tries.
-        courseC_maze_programming7_2: "這些積木就像石頭一樣，不能被破壞。"
+        courseC_maze_programming7_2: 這些積木就像石頭一樣，不能被破壞。
       courseC_starWars_loops10_callout: []
       courseC_starWars_loops10_predict2_callout: []
       courseC_starWars_loops11_callout: []
@@ -1066,40 +1102,53 @@
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "你可以修改這個數字。"
-        courseD_artist_ramp11_2: "點擊此處輸入程式要重複的次數。"
+        courseD_artist_ramp11_1: 你可以修改這個數字。
+        courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
           HINTS!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: "試著使用迴圈來重複向前移動的積木。"
+        courseD_bee_conditionals_challenge3_1: 試著使用迴圈來重複向前移動的積木。
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
+      courseD_bee_debugging_challenge1_2018_callout:
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_bee_debugging_challenge1a_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "使用這個積木來收集寶藏。"
+        courseD_collector_ramp8_1: 使用這個積木來收集寶藏。
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1139,11 +1188,14 @@
       courseD_maze_ramp5d_callout: []
       courseD_maze_ramp5d_2018_callout: []
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
@@ -1175,13 +1227,13 @@
       courseD_scrat_ramp5_callout: []
       courseD_scrat_ramp5_2018_callout: []
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_scrat_ramp8_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
@@ -1239,26 +1291,31 @@
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "你可以修改這個數字。"
-        courseD_artist_ramp11_2: "點擊此處輸入程式要重複的次數。"
+        courseD_artist_ramp11_1: 你可以修改這個數字。
+        courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp12_callout: []
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "你可以修改這個數字。"
-        courseE_artist_ramp8_2: "點擊此處輸入程式要重複的次數。"
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: "你可以修改這個數字。"
-        courseE_artist_ramp8_2: "點擊此處輸入程式要重複的次數。"
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: "你可以修改這個數字。"
-        courseE_artist_ramp8_2: "點擊此處輸入程式要重複的次數。"
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "使用這個積木來收集寶藏。"
+        courseD_collector_ramp8_1: 使用這個積木來收集寶藏。
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
         courseE_farmer_functions1_2: The toolbox is organized a little differently
@@ -1311,23 +1368,42 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: []
@@ -1339,9 +1415,9 @@
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: "讓角色移動到這個旗幟以完成這個關卡。"
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: "讓角色移動到這個旗幟以完成這個關卡。"
+        courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
       courseF_IceAge_1_callout:
         playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
       courseF_IceAge_10_callout: []
@@ -1364,9 +1440,9 @@
         arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
       courseF_artist_for1_callout:
-        courseF_artist_for1_1: "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for1_2018_callout:
-        courseF_artist_for1_1: "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for4_callout: []
       courseF_artist_for4_2018_callout: []
       courseF_artist_fwp1_callout:
@@ -1376,9 +1452,9 @@
         courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
           function.
       courseF_artist_fwp4_callout:
-        courseF_artist_fwp4_1: "要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。"
+        courseF_artist_fwp4_1: 要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。
       courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: "要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。"
+        courseF_artist_fwp4_1: 要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。
       courseF_artist_fwp5_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_fwp5_2018_callout:
@@ -1386,8 +1462,8 @@
       courseF_artist_predict1_callout: []
       courseF_artist_ramp10_callout: []
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "你可以修改這個數字。"
-        courseE_artist_ramp8_2: "點擊此處輸入程式要重複的次數。"
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseF_artist_ramp9_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter
@@ -1397,9 +1473,9 @@
       courseF_artist_variables2_callout: []
       courseF_artist_variables2_2018_callout: []
       courseF_artist_variables3_callout:
-        courseF_artist_variables3_a: "使用這個來設置變數 `length`（長度）的值。"
+        courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       courseF_artist_variables3_2018_callout:
-        courseF_artist_variables3_a: "使用這個來設置變數 `length`（長度）的值。"
+        courseF_artist_variables3_a: 使用這個來設置變數 `length`（長度）的值。
       courseF_artist_variables3a_predict1_callout: []
       courseF_artist_variables3a_predict1_2018_callout: []
       courseF_artist_variables4_callout: []
@@ -1429,7 +1505,7 @@
       courseF_artist_variables_10_callout: []
       courseF_artist_variables_2_callout: []
       courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: "使用這個來設置變數 `length`（長度）的值。"
+        courseF_artist_variables_3_a: 使用這個來設置變數 `length`（長度）的值。
       courseF_artist_variables_4_callout: []
       courseF_artist_variables_5_callout: []
       courseF_artist_variables_6_callout:
@@ -1446,13 +1522,13 @@
       courseF_artist_variables_template_2018_callout: []
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: "這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！"
+        courseF_bee_conditionals2_2: 這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！
       courseF_bee_conditionals2_2018_callout:
-        courseF_bee_conditionals2_2: "這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！"
+        courseF_bee_conditionals2_2: 這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: "當路徑的長度改變時（像長方形的邊），使用這個積木。"
+        courseF_bee_conditionals5_1: 當路徑的長度改變時（像長方形的邊），使用這個積木。
       courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: "當路徑的長度改變時（像長方形的邊），使用這個積木。"
+        courseF_bee_conditionals5_1: 當路徑的長度改變時（像長方形的邊），使用這個積木。
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
@@ -1471,13 +1547,13 @@
       courseF_bee_for_challenge1_callout: []
       courseF_bee_for_challenge1_2018_callout: []
       courseF_bee_functions2_callout:
-        courseF_bee_functions2_1: "這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！"
+        courseF_bee_functions2_1: 這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！
       courseF_bee_functions2_2018_callout:
-        courseF_bee_functions2_1: "這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！"
+        courseF_bee_functions2_1: 這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: "別忘了看看這兒，裡頭有更多積木，也許可以幫助你！"
+        courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
       courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: "別忘了看看這兒，裡頭有更多積木，也許可以幫助你！"
+        courseF_bee_functions6_1: 別忘了看看這兒，裡頭有更多積木，也許可以幫助你！
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: What code should you put in this function?
         courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
@@ -1528,14 +1604,14 @@
           of these blocks you have left to use.
       courseF_maze_ramp5_callout: []
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1544,7 +1620,7 @@
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: "這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。"
+        course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
       courseF_playlab_variables2a_callout: []
       courseF_playlab_variables3_callout: []
       courseF_playlab_variables4_callout: []
@@ -1570,46 +1646,49 @@
       courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: "這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。"
+        course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: "這是如何為你的變數設定值的方式。"
+        course_playlab_variables3_1: 這是如何為你的變數設定值的方式。
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
       drawings!_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: "使用「建立一個圓形」積木並修改它的尺寸。"
+        frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross rotate_callout:
-        replace_questions_degree: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions_degree: 使用下拉清單，把「???」換成一個數字。
       frozen cross_callout:
         repeat_blocks_1: "(1) 使用這個積木，把它放到在工作區上的灰色積木周圍。"
         repeat_blocks_2: "(2) 將「重複」積木移到這裡，並將灰色積木放到它裡面。"
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       frozen diamond_callout:
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       frozen freeplay_callout:
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       frozen line_callout:
-        run: "點擊「運行」以試試你的程式！"
-        move_elsa_forward: "拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。"
+        run: 點擊「運行」以試試你的程式！
+        move_elsa_forward: 拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。
       frozen perpendicular_callout:
-        turn_elsa: "使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。"
+        turn_elsa: 使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: "使用「建立雪花分支」積木"
+        frozen_snowflake_branch: 使用「建立雪花分支」積木
       frozen square iterative_callout:
-        frozen_create_square: "添加更多積木到這兒以建立一個正方形"
+        frozen_create_square: 添加更多積木到這兒以建立一個正方形
       frozen square loop 3x_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       frozen square loop_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       frozen square snowflake_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
           will you use it?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: "這些灰色的積木是用石頭做的！這表示他們不能被打掉。"
+        grade1_maze_sequence6_1: 這些灰色的積木是用石頭做的！這表示他們不能被打掉。
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
@@ -1665,11 +1744,11 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: "紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！"
+        Bee_Cond_5_1a: 紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1678,7 +1757,7 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create
           the first square.
@@ -1687,40 +1766,40 @@
           the function will run. What should the artist do after drawing the first
           square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
-        add_and_drag_parameter: "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "使用下拉清單來創建不同的雪花！"
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: "使用「建立一個圓形」積木並修改它的尺寸。"
+        frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: "使用重複積木來創建這個圖形。"
+        frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       grade4_frozen_square_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade4_frozen_square_loop1_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade4_frozen_square_loop2_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade4_frozen_square_loop3_callout:
-        replace_questions: "使用下拉清單，把「???」換成一個數字。"
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1728,16 +1807,16 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        4-5_Artist_Patterns_Free_Play_1: 你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in
           here.
       grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: "要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數）
-          度。"
+        grade5_artist_functionparameters_6_1: 要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數）
+          度。
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
-        add_and_drag_parameter: "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
@@ -1748,17 +1827,17 @@
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
-        add_and_drag_parameter: "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
+        add_and_drag_parameter: 在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "需要更多的空間？拉動這個條桿讓程式區域更寬一些。"
+        Course_4_Artist_Vars_8_a: 需要更多的空間？拉動這個條桿讓程式區域更寬一些。
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: "拖曳 length（長度）參數到這裡以取代問號"
+        place_length_variable: 拖曳 length（長度）參數到這裡以取代問號
       grade5_artist_variables_pentagons12_callout:
-        set_length: "使用這個積木將 length（長度）設置成正確數值。"
+        set_length: 使用這個積木將 length（長度）設置成正確數值。
       grade5_artist_variables_square7_callout:
-        degrees_per_side: "用 360 除以邊數就可以得到每個角的角度。"
+        degrees_per_side: 用 360 除以邊數就可以得到每個角的角度。
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -1766,7 +1845,7 @@
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
       grade5_artist_variables_triangles2_callout:
-        set_length: "使用這個積木將 length（長度）設置成正確數值。"
+        set_length: 使用這個積木將 length（長度）設置成正確數值。
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
@@ -1781,22 +1860,22 @@
         grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
           this function.
       grade5_playlab_variables1_callout:
-        arrows_move_actor: "使用這些方向鍵來移動角色"
+        arrows_move_actor: 使用這些方向鍵來移動角色
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
-        edit_add_parameter: "點一下編輯，在你的函式中添加參數"
+        edit_add_parameter: 點一下編輯，在你的函式中添加參數
       grade5_playlab_variables1ask_callout:
-        arrows_move_actor: "使用這些方向鍵來移動角色"
+        arrows_move_actor: 使用這些方向鍵來移動角色
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: "你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。"
+        Course_4_Play_Lab_Vars_9_1: 你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: "你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。"
+        Course_4_Play_Lab_Vars_9_1: 你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        gradek_adventurer_loops2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+        artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -1878,9 +1957,9 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
-        New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
-        sign_in_to_save_project: "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
+        New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
+        sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
       subgoal U3 L4 introducing subgoal labels_callout: []
       subgoal U3L2 Using Simple Commands_callout: []
       subgoal-test-clone_callout:
@@ -1892,4 +1971,4 @@
         orient_subgoal: This means you want to turn the turtle
       subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
-        testing_code_callout: "這可以讓角色移動！"
+        testing_code_callout: 這可以讓角色移動！

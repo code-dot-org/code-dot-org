@@ -67,10 +67,10 @@
         l'accesso per continuare.
   errors:
     messages:
-      already_confirmed: "è stato già confermato, per favore prova ad accedere"
+      already_confirmed: è stato già confermato, per favore prova ad accedere
       confirmation_period_expired: deve essere confermata entro %{period}, si prega
         di richiederla di nuovo
-      expired: "è scaduta, si prega di richiederne una nuova"
+      expired: è scaduta, si prega di richiederne una nuova
       not_found: non trovato
       not_locked: non è stato bloccato
       not_saved:

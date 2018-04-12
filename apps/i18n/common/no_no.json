@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Aktivitet",
   "actions": "Handlinger",
   "add": "Legg til",
@@ -892,6 +893,7 @@
   "sectionViewProgress": "Vis fremdrift",
   "secret": "Hemmelig",
   "seeAllTutorials": "Se alle opplæringsoppgavene",
+  "selectACourse": "Select a course or unit",
   "selectGoogleClassroom": "Velg et Google Klasserom",
   "selectCleverSection": "Velg en Lur seksjon",
   "selectSection": "Velg avsnitt",
@@ -915,6 +917,7 @@
   "shareSettingEnableDialog": "Ved å aktivere deling, vil studentene dine kunne dele sine prosjekter opprettet gjennom Code.org's avanserte programmeringsverktøy (Applaboratoriet, Spillaboratoriet og Weblaboratoriet) med alle ved å dele lenker til prosjektet.",
   "shareSettingDisableDialog": "En viktig del av studentenes opplevelse av å bruke Code.org er muligheten til å dele sine prosjekter og kreasjoner med andre. Med deling deaktivert vil studenter ikke kunne dele sine kreasjoner laget med vår avanserte programmering verktøy (Applaboratoriet, spillaboratoriet og Weblaboratoriet) med noen andre foruten lærerne. Disse avanserte verktøyene er designet for studenter som er over 13år eller som brukes under en lærer eller forelders veiledning.",
   "shareSettingDisableDialogNote": "Merk at studentene fortsatt vil kunne dele prosjekter som er opprettet ved hjelp av programmerings verktøy designet for yngre studenter, som Spillaboratoriet og Kunstnerprosjekt. Disse verktøyene begrenser hva studentene kan opprette og tillater ikke opplasting av egne ressurser. For å beskytte studentenes personvern, merkes delte kreasjoner i prosjektgalleriet bare med den første bokstaven i studentens navn og en aldersgruppe.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Angi din alder nedenfor og klikk OK for å fortsette.",
   "shareWarningsMoreInfo": "Personvernerklæring",
   "shareWarningsStoreData": "Denne appen - som er laget i Code Studio - lagrer data som kan bli sett av alle andre med denne delte lenken, så unngå å oppgi personlige opplysninger om deg selv eller andre.",

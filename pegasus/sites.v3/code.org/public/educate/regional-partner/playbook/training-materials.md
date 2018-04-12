@@ -23,7 +23,7 @@ ________________
 <br/>
 
 ## Regional Partner Summit (March 2018)
-Please review the following resources for the March 2018 Regional Partner Summit. 
+Please review the following resources for the March 2018 Regional Partner Summit.
 
 - **See all March Summit Resources here: <a href="http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit</a>**
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
@@ -35,6 +35,11 @@ ________________
 <a id="virtual"></a>
 <br/>
 ## Virtual Trainings
+
+
+April 2018
+
+- Apr 5 Preparing for Your First CS Fundamentals Workshop ([Video](https://code.zoom.us/recording/share/JitvrbyVnzbGFQjvDfpHmH201xikzVgEM7Z_JNjkT9k), [Slides](https://drive.google.com/file/d/1_Ovx0cYkaAxOiaSfzJ8ZxtI1x6lrzhqq/view?usp=sharing))
 
 
 March 2018
@@ -293,5 +298,3 @@ ________________
 
 [**Back to the top**](#top)
 <br/>
-
-

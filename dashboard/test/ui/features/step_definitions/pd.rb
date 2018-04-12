@@ -169,10 +169,11 @@ end
 def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
+  user = FactoryGirl.create :teacher
   enrollment = Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,
-    email: "user@example.com",
+    email: user.email,
     school_info: SchoolInfo.find_or_create_by(
       {
         country: 'US',
@@ -184,6 +185,7 @@ def create_enrollment(workshop, name=nil)
     ),
     pd_workshop_id: workshop.id
   )
+
   PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
 end
 
@@ -212,13 +214,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     course: course,
     organizer_id: organizer.id,
     capacity: number.to_i,
-    location_name: 'Buffalo'
-  )
-
-  Pd::Session.create!(
-    pd_workshop_id: workshop.id,
-    start: DateTime.new(2016, 3, 15) + 3.hours,
-    end: DateTime.new(2016, 3, 15) + 9.hours
+    location_name: 'Buffalo',
+    num_sessions: 1,
+    sessions_from: Date.new(2018, 4, 1),
+    enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
   )
 
   # Facilitators
@@ -260,8 +259,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
         responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
       end
 
+      responses['workshop_id_i'] = workshop.id
+
       workshop.enrollments.each do |enrollment|
-        puts "Enrollment ID - #{enrollment.id}"
         PEGASUS_DB[:forms].insert(
           secret: SecureRandom.hex,
           source_id: enrollment.id,

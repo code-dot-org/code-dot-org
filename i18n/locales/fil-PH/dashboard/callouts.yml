@@ -902,6 +902,19 @@ fil:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+        stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq1_2018_callout:
@@ -934,19 +947,36 @@ fil:
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox. Paano mo ito magagamit?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox. Paano mo ito magagamit?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: Ang numerong ito ay nangangahulugan na wala nang blokeng ito ang natira sa loob ng iyong toolbox.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: Ang numerong ito ay nangangahulugan na wala nang blokeng ito ang natira sa loob ng iyong toolbox.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Nakakakita ka na ba ng iilang mga bagong bloke sa loob ng toolbox? Huwag mag-alala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: I-click ang bumbilya kung kinakailangan mo ng isang pahiwatig!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Gamitin hakbang na pindutan para makapunta sa bawat hakbang sa programa. Ito ay makakatulong sa iyo na maghanap ng bug!
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: Ang kulay abo na mga blokeng ito ay yari sa bato at hindi maaaring itapon.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: Ang kulay abo na mga blokeng ito ay yari sa bato at hindi maaaring itapon.
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
       courseC_artist_loopsPrePre1a_callout:
@@ -1006,7 +1036,10 @@ fil:
         courseD_artist_functions8_1: Ang iyong mga bloke para sa paglikha ng mga function ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Hindi ko kinakailangang gumamit ng mga kulay para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color` na bloke ay nagpapadali nito!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Hindi ko kinakailangang gumamit ng mga kulay para makuha nang tama ang palaisipang ito. Kung gusto mo, ang `random color` na bloke ay nagpapadali nito!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Maaari mong baguhin ang numerong ito.
         courseD_artist_ramp11_2: Mag-click dito para ma-type kung ilang beses uulitin ang iyong code.
@@ -1014,14 +1047,21 @@ fil:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
         4_5_Bee_Conditionals_2_2: Kailangan ng tulong? Mag-click dito para sa isang VIDEO na pahiwatig!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
+        4_5_Bee_Conditionals_2_2: Kailangan ng tulong? Mag-click dito para sa isang VIDEO na pahiwatig!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Tandaan, suriin kung makita kung BAWAT ulap ay mayroong BULAKLAK. Hindi mo na kailangang magsuri para sa mga pulot-pukyutan.
         4_5_Bee_Conditionals_2_2: Kailangan ng kaunting tulong? Mag-click dito para makita ang ating bagong VIDEO na mga PAHIWATIG!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Subukang ulitin ang move forward na bloke gamit ang loop na ito.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Gamitin ang utos na ito para mapagalaw ang bubuyog patalikod.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Gamitin ang utos na ito para mapagalaw ang bubuyog patalikod.
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: Gamitin ang utos na ito para mapagalaw ang bubuyog patalikod.
@@ -1030,7 +1070,9 @@ fil:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1080,7 @@ fil:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1117,8 @@ fil:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito para makita kung saan napunta ang lahat.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: aming inayos ang mga bloke ayon sa mga kategorya para mabigyan ka nang mas maraming code para mapaglaruan! Mag-click dito para makita kung saan napunta ang lahat.
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1185,7 @@ fil:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Maaari mong baguhin ang numerong ito.
@@ -1154,9 +1200,13 @@ fil:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin ang iyong code.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
+        courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin ang iyong code.
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Gamitin ang blokeng ito para magkolekta ng isang piraso ng kayamanan.  '
@@ -1203,19 +1253,33 @@ fil:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
@@ -1435,6 +1499,8 @@ fil:
         course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
       drawings!_callout: [ ]

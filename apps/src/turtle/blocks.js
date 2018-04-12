@@ -259,25 +259,65 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-blockly.Blocks.point_to = {
+  function createPointToBlocks(onInit) {
+    return {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(184, 1.00, 0.74);
+        this.setPreviousStatement(true);
+        this.setInputsInline(true);
+        this.setNextStatement(true);
+        this.setTooltip(msg.pointTo());
+        this.appendDummyInput()
+            .appendTitle(msg.pointTo());
+        if (onInit) {
+          onInit(this);
+        }
+      }
+    };
+  }
+
+  blockly.Blocks.point_to = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(msg.pointTo());
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
-          .appendTitle(msg.degrees());
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.pointTo());
-    }
-  };
+    block.appendDummyInput()
+        .appendTitle(new blockly.FieldTextInput(
+            '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+        .appendTitle(msg.degrees());
+  });
 
   generator.point_to = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+    return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
+  // Block for pointing to a specified direction
+    block.appendValueInput('VALUE')
+        .setCheck(blockly.BlockValueType.NUMBER);
+    block.appendDummyInput()
+        .appendTitle(msg.degrees());
+  });
+
+  generator.point_to_param = function () {
+    let value = generator.valueToCode(this, 'VALUE',
+        Blockly.JavaScript.ORDER_NONE);
+    return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.point_to_by_constant_restricted =
+      createPointToBlocks(function (block) {
+    block.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(block.VALUE), 'VALUE')
+        .appendTitle(msg.degrees());
+  });
+
+  blockly.Blocks.point_to_by_constant_restricted.VALUE =
+      [0, 30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
+        return [String(t), String(t)];
+      });
+
+  generator.point_to_by_constant_restricted = function () {
+    let value = window.parseFloat(this.getTitleValue('VALUE'));
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 

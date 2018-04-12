@@ -1226,9 +1226,10 @@ GameLab.prototype.getSerializedAnimationList = function (callback) {
  */
 GameLab.prototype.getExportableAnimationList = function (callback) {
   getStore().dispatch(saveAnimations(() => {
-    const list = getStore().getState().animationList;
+    const state = getStore().getState();
+    const list = state.animationList;
     const serializedList = getSerializedAnimationList(list);
-    const exportableList = withAbsoluteSourceUrls(serializedList);
+    const exportableList = withAbsoluteSourceUrls(serializedList, state.pageConstants && state.pageConstants.channelId);
     callback(exportableList);
   }));
 };

@@ -58,39 +58,39 @@
       Eval Strings Images .2_failure_message_override: |-
         "Hello, Universe"를 생성하는 코드를 만들기 위해서는
         "Universe"라는 문자열을 추가해야 해요.
-      Kiki_StarWars_Test_5_failure_message_override: "게임 오버!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "게임 오버!"
+      Kiki_StarWars_Test_5_failure_message_override: 게임 오버!
+      Kiki_StarWars_Test_5_Example_failure_message_override: 게임 오버!
       MC HOC 2016 Level 2-2_failure_message_override: "`앞으로 움직이기`와 `방향바꾸기` 명령을 사용해서
         \n여러분의 닭을 움직이세요."
       MC HOC 2016 Level 3_failure_message_override: "`영원히 반복` 블럭과 `앞으로 움직이기`와 `방향바꾸기`
         명령을 사용해서 \n여러분의 닭이 계속 나아가도록하세요."
-      MC HOC 2016 Level 4_failure_message_override: "닭들이 한 방향의 끝까지 가면 `랜덤하게 방향 바꾸기`를
-        사용해서 닭들이 랜덤하게 왼쪽 또는 오른쪽으로 방향을 바꾸도록 하세요."
+      MC HOC 2016 Level 4_failure_message_override: 닭들이 한 방향의 끝까지 가면 `랜덤하게 방향 바꾸기`를
+        사용해서 닭들이 랜덤하게 왼쪽 또는 오른쪽으로 방향을 바꾸도록 하세요.
       MC HOC 2016 Level 5_failure_message_override: "'영원히 반복' 과 '플레이어를 향해 한 스텝 움직이기'를
         같이 사용하세요."
       MC HOC 2016 Level 6_failure_message_override: "`밤일 때`와 `좀비 소환` 명령을 사용해서 최소한
         3마리의 좀비를 만드세요. 그런 후 `플레이어에게 한 스텝 움직이기`를 반복문 안에서 좀비의 `소환되었을 때` 이벤트에 추가해서 여러분을
         따라다닐 수 있게 하세요. 만약 좀비가 너무 빠르게 움직인다면 `기다리기` 명령을 추가해서 속도를 느리게 만드세요."
-      MC HOC 2016 Level 8_failure_message_override: "양을 만나려면 벽을 폭팔 크리퍼를 사용해서 날려버려야해요."
-      MC HOC 2016 New Drop_failure_message_override: "화살표 키를 사용해서 양까지 걸어가서 스페이스바 또는
-        게임 보드를 클릭해서 양을 사용하세요. 그리고 여러분의 코드에 '내려놓기' 블록을 추가하는 것도 잊지 마세요."
+      MC HOC 2016 Level 8_failure_message_override: 양을 만나려면 벽을 폭팔 크리퍼를 사용해서 날려버려야해요.
+      MC HOC 2016 New Drop_failure_message_override: 화살표 키를 사용해서 양까지 걸어가서 스페이스바 또는
+        게임 보드를 클릭해서 양을 사용하세요. 그리고 여러분의 코드에 '내려놓기' 블록을 추가하는 것도 잊지 마세요.
       MC HOC 2016 New Spawn_failure_message_override: "`뛸 때` 상황일 때 `양 소환`을 배치하세요."
-      MC HOC 2016 New Walk_failure_message_override: "문을 열려면 문 앞에서 스페이스바를 누르거나 게임
-        보드를 터치하세요. 그리고 안쪽으로 걸어가세요."
+      MC HOC 2016 New Walk_failure_message_override: 문을 열려면 문 앞에서 스페이스바를 누르거나 게임 보드를
+        터치하세요. 그리고 안쪽으로 걸어가세요.
       MC HOC 2016 SCORE LEVEL_failure_message_override: 5마리의 골렘을 태깅하기 힘들다면 태그 점수를
         2로 수정해보세요.
-      MC HOC 2016 Village Test_failure_message_override: "이기기 위해서는 아이언 골렘을 만들어서 좀비를
-        공격해야 해요."
-      Valentine_playlab_01_failure_message_override: "거의 다 되었습니다! 다시 한번 해보세요."
-      WhileAdventure_failure_message_override: "축하합니다! 여러분은 X코인을 얻었어요!"
-      courseE_playLab_scaffold3_failure_message_override: "여러분은 게임에 최소한 2명 이상의 등장인물을
-        추가해야 하고 프로그램 내에서 움직이게 해야 합니다."
-      courseE_playLab_scaffold3_2018_failure_message_override: "여러분은 게임에 최소한 2명 이상의
-        등장인물을 추가해야 프로그램 작성하여 움직이게 해야 합니다."
-      grade4_scaffolded_project3_failure_message_override: "여러분은 게임에 최소한 2명 이상의 등장인물을
-        추가해야 하고 게임 내에서 움직이게 해야 합니다."
-      kikiTesta_failure_message_override: "축하합니다! 여러분은 X코인을 얻었어요!"
-      sample1_failure_message_override: "축하합니다! 여러분은 X코인을 얻었어요!"
-      sample4_failure_message_override: "축하합니다! 여러분은 X코인을 얻었어요!"
-      sample6_failure_message_override: "뭔가 부족하네요. 계속 시도하세요! [플레이 존으로 이동하기]"
-      sample8_failure_message_override: "축하합니다! 여러분은 X코인을 얻었어요!"
+      MC HOC 2016 Village Test_failure_message_override: 이기기 위해서는 아이언 골렘을 만들어서 좀비를
+        공격해야 해요.
+      Valentine_playlab_01_failure_message_override: 거의 다 되었습니다! 다시 한번 해보세요.
+      WhileAdventure_failure_message_override: 축하합니다! 여러분은 X코인을 얻었어요!
+      courseE_playLab_scaffold3_failure_message_override: 여러분은 게임에 최소한 2명 이상의 등장인물을
+        추가해야 하고 프로그램 내에서 움직이게 해야 합니다.
+      courseE_playLab_scaffold3_2018_failure_message_override: 여러분은 게임에 최소한 2명 이상의
+        등장인물을 추가해야 프로그램 작성하여 움직이게 해야 합니다.
+      grade4_scaffolded_project3_failure_message_override: 여러분은 게임에 최소한 2명 이상의 등장인물을
+        추가해야 하고 게임 내에서 움직이게 해야 합니다.
+      kikiTesta_failure_message_override: 축하합니다! 여러분은 X코인을 얻었어요!
+      sample1_failure_message_override: 축하합니다! 여러분은 X코인을 얻었어요!
+      sample4_failure_message_override: 축하합니다! 여러분은 X코인을 얻었어요!
+      sample6_failure_message_override: 뭔가 부족하네요. 계속 시도하세요! [플레이 존으로 이동하기]
+      sample8_failure_message_override: 축하합니다! 여러분은 X코인을 얻었어요!

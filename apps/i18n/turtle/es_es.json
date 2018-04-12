@@ -74,13 +74,13 @@
   "penDown": "bajar lápiz",
   "penTooltip": "Levanta o baja el lápiz, para empezar o dejar de dibujar.",
   "penUp": "levantar lápiz",
+  "pointTo": "point to",
   "pixels": "pixeles",
   "reinfFeedbackMsg": "¡Aquí está tu dibujo! Sigue trabajando en él o continúa al siguiente rompecabezas.",
   "setAlpha": "establecer alfa",
   "setCharacter": "configura el personaje a {character}",
   "setColour": "definir color",
   "setPattern": "establecer patrón",
-  "setStickerSize": "Set sticker size",
   "setWidth": "definir ancho",
   "shareDrawing": "Comparte tu dibujo:",
   "showMe": "Muéstrame",
@@ -94,5 +94,6 @@
   "turnTooltip": "Gira el artista a la izquierda o la derecha en la cantidad de grados especificada.",
   "turtleVisibilityTooltip": "Hace que el artista sea visible o invisible.",
   "widthTooltip": "Cambia el ancho del lápiz.",
+  "withSize": "with size",
   "wrongColour": "Tu imagen es de un color incorrecto. Para este nivel, debe ser %1."
 }

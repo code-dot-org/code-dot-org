@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Verkefni",
   "actions": "Aðgerðir",
   "add": "Bæta við",
@@ -892,6 +893,7 @@
   "sectionViewProgress": "View Progress",
   "secret": "Leyndarmál",
   "seeAllTutorials": "See all tutorials",
+  "selectACourse": "Select a course or unit",
   "selectGoogleClassroom": "Velja Google Classroom",
   "selectCleverSection": "Veldu Clever hóp",
   "selectSection": "Velja hóp",
@@ -915,6 +917,7 @@
   "shareSettingEnableDialog": "Þegar deiling er virk geta nemendur deilt verkefnum sem búin eru til í ítarlegri forritunarverkfærum Code.org (Appsmiðjunni, Leikjasmiðjunni og Vefsmiðjunni) með hverjum sem er með því að láta þá fá tengil á verkefnið.",
   "shareSettingDisableDialog": "Mikilvægur hluti af þeirri reynslu sem nemendur fá við notkun Code.org er að deila verkefnum sínum og sköpunarverkum með öðrum. Þegar deiling er óvirk geta nemendur ekki deilt verkefnum sem þeir búa til í ítarlegri forritunarverkfærum Code.org (Appsmiðjunni, Leikjasmiðjunni og Vefsmiðjunni) með neinum öðrum en Code.org kennurum sínum. Þessi verkfæri eru hugsuð fyrir nemendur eldri en 13 ára eða fyrir notkun undir leiðsögn kennara eða foreldris.",
   "shareSettingDisableDialogNote": "Athugaðu að nemendur geta samt deilt verkefnum sem þeir búa til í verkfærum ætlum yngri nemendum svo sem Leikjasmiðjunni og Listamanni. Þessi verkfæri takmarka hvað nemendur geta búið til og með þeim er ekki unnt að hlaða upp eigin efni. Til að vernda nemendur þá sést aðeins fyrsti stafurinn í nafni nemenda svo og aldurshópurinn á þeim verkefnum sem birt eru í verkefnagalleríinu.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Vinsamlegast færðu inn aldur þinn hér fyrir neðan og smelltu á Í lagi til að halda áfram.",
   "shareWarningsMoreInfo": "Persónuverndarstefna okkar",
   "shareWarningsStoreData": "Þetta app gert með Kóðastúdíóinu geymir gögn sem allir með þennan deilda tengil gætu séð. Farðu því varlega ef einhver biður þig um persónulegar upplýsingar.",

@@ -1,112 +1,112 @@
 "si":
   errors:
     messages:
-      not_saved: "කරුණාකර පහත දෝෂ නිවැරදි කරන්න:"
-      too_young: "මෙම අන්තර්ගතය සදහා වයස් සීමාවක් ඇති අතර තරුණ සිසුන් සඳහා ලබා ගත
-        හැකි නොවේ."
+      not_saved: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
+      too_young: මෙම අන්තර්ගතය සදහා වයස් සීමාවක් ඇති අතර තරුණ සිසුන් සඳහා ලබා ගත හැකි
+        නොවේ.
       teacher_must_accept_terms: මෙම පරිඡේදයේ වයස සීමා ඇති අතර එය ළමුන් සදහා නොමැත.
         එම නිසා ඔබගේ ගුරුතුමා හෝ තුමියගෙ විශේෂ අවසරය ඇතුව මෙම පරිඡේදයට ප්‍රවේශවන්න.
         ඔබගේ ගුරුතුමා හො තුමිය  Code Studio ඇතුලු වී  "Review updated terms"( Code
         Studio මුල් පිටුව උඩම ඇති) button එක ක්ලික් කල පසු ඔබට එය සිදු කල හැකි.
-      pair_programmer: "මෙම අන්තරගතය ට ප්‍රවේශ වීමේ බලය නැති ශිෂ්වයෙක් සමග යුගල වී
-        \ වැඩ කරයි.මෙම අන්තරගතය පරිශීලනය වීමට,යුගල ක්‍රමලේඛනය නවත්වා ආපසු උත්සහ කරන්න "
+      pair_programmer: 'මෙම අන්තරගතය ට ප්‍රවේශ වීමේ බලය නැති ශිෂ්වයෙක් සමග යුගල වී  වැඩ
+        කරයි.මෙම අන්තරගතය පරිශීලනය වීමට,යුගල ක්‍රමලේඛනය නවත්වා ආපසු උත්සහ කරන්න '
   activerecord:
     errors:
       messages:
-        blank: "අවශ්‍යයි"
-        blank_plural: "අවශ්‍ය වේ"
-        invalid_plural: "වලංගු නැත"
+        blank: අවශ්‍යයි
+        blank_plural: අවශ්‍ය වේ
+        invalid_plural: වලංගු නැත
     attributes:
       user:
-        name: "ප්‍රදර්ශක නාමය"
-        name_example: "ප්‍රදර්ශන නම<br/>(e.g. Cool Coder or Jane S.)"
-        email: "විද්‍යුත් තැපැල"
-        parent_email: "මාපිය/භාරකරු e-තැපෑල"
+        name: ප්‍රදර්ශක නාමය
+        name_example: ප්‍රදර්ශන නම<br/>(e.g. Cool Coder or Jane S.)
+        email: විද්‍යුත් තැපැල
+        parent_email: මාපිය/භාරකරු e-තැපෑල
         personal_email: පෞද්ගලික e-තැපැල් ලිපිනය <a href="%{url}">(ඔබට e-තැපැල් ලිපිනයක්
           නැති නම් මෙතන ඔබන්න)</a>
-        username: "පරිශීලක නාමය"
-        password: "මුර පදය"
-        password_confirmation: "මුර පදය ස්ථිර කිරීම"
-        current_password: "දවර්තමාන මුර පදය"
-        locale: "භාෂාව"
-        age: "වයස"
-        gender: "ලිංගභේදය"
+        username: පරිශීලක නාමය
+        password: මුර පදය
+        password_confirmation: මුර පදය ස්ථිර කිරීම
+        current_password: දවර්තමාන මුර පදය
+        locale: භාෂාව
+        age: වයස
+        gender: ලිංගභේදය
         edit_header: "ගිනුමේ තොරතුරු \tසංස්කරණය කරන්න"
         error:
-          future: "අනාගතයේදී විය නොහැකිය"
-  hello: "හේලෝ ලෝකය"
+          future: අනාගතයේදී විය නොහැකිය
+  hello: හේලෝ ලෝකය
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"
-  your_professional_learning_plan: "ඔබේ වෘත්තිමය ඉගෙනුම් සැලැස්ම"
-  see_your_learning_plan: "ඔබගේ ඉගෙනුම් සැලැස්ම දකින්න"
-  submit: "යොමුකරන්න"
-  unsubmit: "යොමු නොකරන්න"
-  previous_page: "පෙර පිටුව"
-  next_page: "ඊළඟ පිටුව"
-  next_resource: "ඊළඟ සම්පත"
+  your_professional_learning_plan: ඔබේ වෘත්තිමය ඉගෙනුම් සැලැස්ම
+  see_your_learning_plan: ඔබගේ ඉගෙනුම් සැලැස්ම දකින්න
+  submit: යොමුකරන්න
+  unsubmit: යොමු නොකරන්න
+  previous_page: පෙර පිටුව
+  next_page: ඊළඟ පිටුව
+  next_resource: ඊළඟ සම්පත
   done_with_module: Done with this Learning Module
-  cancel: "අවලංගු කරන්න"
-  okay: "හරි"
+  cancel: අවලංගු කරන්න
+  okay: හරි
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
   add_teacher_form:
     code:
-      label: "ගුරුවරයෙක් එකතු කරන්න:"
+      label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
-      instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
+      instructions: ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න.
       instructions_short: Enter your 6 letter section code
-    submit: "ගුරුවරයෙක් එකතු කරන්න"
+    submit: ගුරුවරයෙක් එකතු කරන්න
   add_hint_form:
-    placeholder: "කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න"
-    submit: "ඉඟියක් එකතු කරන්න"
+    placeholder: කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න
+    submit: ඉඟියක් එකතු කරන්න
   appname: Code.org
-  stage: "අදියර"
-  stage_number: "අදියර %{number}"
-  puzzle: "ප්‍රහේලිකාව"
-  trophies: "ඵලකයන්"
-  courses: "පාඨමාලාව"
+  stage: අදියර
+  stage_number: අදියර %{number}
+  puzzle: ප්‍රහේලිකාව
+  trophies: ඵලකයන්
+  courses: පාඨමාලාව
   courses_page:
-    title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
+    title_student: කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න
     title_teacher: Teach with Code Studio
-  unplugged_activity: "අපේනුගත ක්‍රියාකාරකම"
-  of: "ගේ"
-  more: "වැඩි"
-  less: "අඩු"
+  unplugged_activity: අපේනුගත ක්‍රියාකාරකම
+  of: ගේ
+  more: වැඩි
+  less: අඩු
   beta: beta
-  try_hoc: "පැයේ කේතය උත්සාහ කරන්න, මෙහි ක්ලික් කරන්න >> >> "
-  try_k8intro: "පරිඝණක විද්‍යා පඨමාලාව සදහා වු අපේ K-8 හැදින්වීම උත්සහකරන්න (පැය 15-25
-    ක්)"
+  try_hoc: 'පැයේ කේතය උත්සාහ කරන්න, මෙහි ක්ලික් කරන්න >> >> '
+  try_k8intro: පරිඝණක විද්‍යා පඨමාලාව සදහා වු අපේ K-8 හැදින්වීම උත්සහකරන්න (පැය 15-25
+    ක්)
   k8intro: K-8 පරිඝණක විද්‍යා පඨමාලාව - හැදින්වීම (පැය 15-25 ක්)
-  already_started: "දැනටමත් ආරම්භකරාද? මෙතනින් නැවත ආරම්භකරන්න >> "
+  already_started: 'දැනටමත් ආරම්භකරාද? මෙතනින් නැවත ආරම්භකරන්න >> '
   demos: 'Admin: සියලු ආදර්ශනය වර්ග'
-  continue: "කරගෙන යන්න"
-  prize: "ත්‍යාගය"
-  more_info: "වැඩිදුර තොරතුරු"
+  continue: කරගෙන යන්න
+  prize: ත්‍යාගය
+  more_info: වැඩිදුර තොරතුරු
   auth:
     sign_in_with: "%{provider} සමඟ පිවිසෙන්න"
-    signed_in: "පුරා ඇත!"
+    signed_in: පුරා ඇත!
     signed_out: ඔබ <a href="%{url}">Code.org</a> වෙතින් නික්මගොස් ඇත.
     sign_out_of: ඔබ පිවිසීම සඳහා %{provider} භාවිතාකර ඇත. %{provider} ගෙන් නික්මීම
       සඳහා <a href="%{url}"> මෙතන ක්ලික් කරන්න </a>.
-    already_signedup: "දැනටමත් ලියාපදිංචී ඇත්ද?"
-    notyet_signedup: "තවමත් ලියාපදිංචි නොමැතිද?"
+    already_signedup: දැනටමත් ලියාපදිංචී ඇත්ද?
+    notyet_signedup: තවමත් ලියාපදිංචි නොමැතිද?
     google_oauth2: Google ගිණුම
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft ගිණුම
-    clever: "දක්ෂ ගිණුම"
-    forgot_password: "ඔබගේ මුරපදය අමතකද?"
-    need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
-    need_unlock: "අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?"
-    not_linked: "සමාවන්න, ඔබගේ Code.org ගිණුම %{provider} ට සම්බන්ධ වී නොමැත. ඔබට
-      ඔබේ මුරපදය (password) යොදා ඇතුලත් විය හැක."
+    clever: දක්ෂ ගිණුම
+    forgot_password: ඔබගේ මුරපදය අමතකද?
+    need_confirmation: තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?
+    need_unlock: අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?
+    not_linked: සමාවන්න, ඔබගේ Code.org ගිණුම %{provider} ට සම්බන්ධ වී නොමැත. ඔබට ඔබේ
+      මුරපදය (password) යොදා ඇතුලත් විය හැක.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
-    student_count: "සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත."
-    teacher_count: "ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත."
+    student_count: සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.
+    teacher_count: ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.
     overview: ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට
       විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න
       වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.
-    hoc_already_signed_up_heading: "ඇතුළත් නොවී ආරම්භ කරන්න"
+    hoc_already_signed_up_heading: ඇතුළත් නොවී ආරම්භ කරන්න
     hoc_already_signed_up_content: ඔබ Hour of Code ඉගැන්වීමට ලියාපදිංචි වී ඇත! ඔබටත්
       ඔබගේ සිසුන් හටත් මෙම වැඩසටහන සඳහා සහභාගී වීමට Code Studio හි ලියාපදිංචි වීමට
       අවශ්‍යතාවයක් නැත. ආරම්භ වීමට, ඔබගේ පන්තිය සඳහා<a href="%{learn_url}">නිබන්ධනයක්
@@ -119,38 +119,38 @@
       to assign courses to students and track their progress. <a href="%{studio_url}">You
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
-    teacher_educator_guide: "අධ්‍යාපක මඟපෙන්වීම දකින්න"
+    teacher_educator_guide: අධ්‍යාපක මඟපෙන්වීම දකින්න
     title: Code.org සඳහා ලියාපදිංචි වන්න
-    school_name: "පාසලේ නම (විකල්ප)"
-    school_address: "පාසලේ ලිපිනය (විකල්ප)"
-    address_placeholder: "ලිපිනය, නගරය, ජනපදය, සිප්"
-    gender: "ලිංගභේදය (විකල්ප)"
-    birthday: "උපන් දිනය (විකල්ප)"
-    age: "වයස"
-    user_type: "ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?"
+    school_name: පාසලේ නම (විකල්ප)
+    school_address: පාසලේ ලිපිනය (විකල්ප)
+    address_placeholder: ලිපිනය, නගරය, ජනපදය, සිප්
+    gender: ලිංගභේදය (විකල්ප)
+    birthday: උපන් දිනය (විකල්ප)
+    age: වයස
+    user_type: ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?
     submit: Sign up
-    teacher: "ඔබ ගුරුවරයෙක් ද?"
-    valid_username: "තිබේ!"
-    invalid_username: "පරිශීලක නාමය අඩු තරමින් අකුරු 5ක් විය යුතුයි"
-    taken_username: "පරිශීලක නාමය දැනටමත් රැගෙන ඇත"
-    valid_password: "මුර පදය වලංගුයි!"
+    teacher: ඔබ ගුරුවරයෙක් ද?
+    valid_username: තිබේ!
+    invalid_username: පරිශීලක නාමය අඩු තරමින් අකුරු 5ක් විය යුතුයි
+    taken_username: පරිශීලක නාමය දැනටමත් රැගෙන ඇත
+    valid_password: මුර පදය වලංගුයි!
     invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
-    mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
+    mismatch_password: යෙදු මුර පද දෙක සමාන වී නැත
     student_terms: "මම එකග වෙනවා  Code.org එකත්  සමග එහි <a href='http://code.org/tos'>නීති
       සහ රෙගුලාසි </a>මට  13ට  වඩා අඩුනම් වයස.මම තහවරු  කරනවා මෙම පත්‍රිකාව මගේ දෙමාපියන්ගේ
       \ හෝ නිත්‍යානුකුල බාරකරුගේ  අනුමැතිය ගත්  බව මෙම  Code.org සේවාව ලබාගනිම <br/><br/>විද්‍යුත්
       තැපෑලය ශිෂ්‍ය   පිට පතෙහි දක්වා නැත.ශිෂ්වයන්  කිසිම දිනෙක  විද්‍යුත් තැපෑලයක්
       \ Code.org  වලින් නොලැබේ මුර පදය වෙනස් කිරීමට හැර.අපේ <a href='http://code.org/privacy'>පෞද්ගලික
       නිතිය </a>මෙම දත වලට \n\n"
-    teacher_terms: "මම Code.org සේවා නියමයන් මගින් බැඳී සිටීමට එකඟ වෙමි. වැඩි විස්තර
+    teacher_terms: මම Code.org සේවා නියමයන් මගින් බැඳී සිටීමට එකඟ වෙමි. වැඩි විස්තර
       සඳහා, අපගේ රහස්‍ය ප්‍රතිපත්තිය බලන්න<a href='http://code.org/privacy'> රහස්‍ය
-      ප්‍රතිපත්තිය </a>."
-    additional_information: "ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත."
-    user_type_label: "ගිණුම් වර්ගය"
-    user_type_teacher: "ගුරු වරයා"
-    user_type_student: "ශිෂ්‍යයා"
-    field_is_required: "අවශ්‍යයි"
-    accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
+      ප්‍රතිපත්තිය </a>.
+    additional_information: ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත.
+    user_type_label: ගිණුම් වර්ගය
+    user_type_teacher: ගුරු වරයා
+    user_type_student: ශිෂ්‍යයා
+    field_is_required: අවශ්‍යයි
+    accept_terms: ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය
     error: An error occurred.
   school_info:
     title: School Information (optional)
@@ -161,7 +161,7 @@
     public: Public
     homeschool: Homeschool
     after_school: After School
-    other: "වෙනත්"
+    other: වෙනත්
     state: State
     district: District
     other_district_not_listed: Other district not listed above
@@ -174,44 +174,44 @@
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "ඔබට ගිණුමක් ඇති නම් ඇතුලු විය හැක"
-    login: "විද්‍යුත් තැපැල"
+    title: ඔබට ගිණුමක් ඇති නම් ඇතුලු විය හැක
+    login: විද්‍යුත් තැපැල
     login_username: Email or Username
-    password: "මුර පදය"
-    remember: "මාව මතක තබා ගන්න"
-    submit: "පුරන්න"
+    password: මුර පදය
+    remember: මාව මතක තබා ගන්න
+    submit: පුරන්න
   signin:
-    try_heading: "ලියාපදිංචි වීමෙන් තොරව කේතනය උත්සාහ කිරීමට අවශ්‍යයි ද?"
-    try_hoc: "කේතන පැය උත්සහ කර බලන්න"
-    try_20hours: "අපේ පැය 20 පරිගණක විද්‍යා හැදින්වීම උත්සාහ කරන්න"
+    try_heading: ලියාපදිංචි වීමෙන් තොරව කේතනය උත්සාහ කිරීමට අවශ්‍යයි ද?
+    try_hoc: කේතන පැය උත්සහ කර බලන්න
+    try_20hours: අපේ පැය 20 පරිගණක විද්‍යා හැදින්වීම උත්සාහ කරන්න
   signinsection:
-    welcome: "පිළිගන්නවා  %{section_name} වෙත"
-    name: "ඔබේ නම තෝරන්න"
-    picture: "දැන් ඔබේ රහස් රූපය සොයන්න"
-    words: "දැන් ඔබේ රහස් වචනය සොයන්න"
-    login: "පුරන්න"
-    invalid_login: "ඔබ විසින් ඇතුලත් කල තොරතුරු වැරදියි. නැවතත් උත්සහ කරන්න"
-    pair_programming: "මා සමග සහායකයෙකු ඇත"
+    welcome: පිළිගන්නවා  %{section_name} වෙත
+    name: ඔබේ නම තෝරන්න
+    picture: දැන් ඔබේ රහස් රූපය සොයන්න
+    words: දැන් ඔබේ රහස් වචනය සොයන්න
+    login: පුරන්න
+    invalid_login: ඔබ විසින් ඇතුලත් කල තොරතුරු වැරදියි. නැවතත් උත්සහ කරන්න
+    pair_programming: මා සමග සහායකයෙකු ඇත
     student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
       target='_blank'>here</a>.
   password:
     reset_form:
-      title: "ඔබගේ මුරපදය අමතකද?"
-      instructions: "ඔබගේ ඊ-තැපැල් ලිපිනය පහත ඇතුලත් කළ පසු අපි ඔබට මුරපදය යළි සැකසීමෙී
-        උපදෙස් එවන්නම්."
-      email: "විද්‍යුත් තැපැල් ලිපිනය"
-      submit: "යොමු කරන්න"
+      title: ඔබගේ මුරපදය අමතකද?
+      instructions: ඔබගේ ඊ-තැපැල් ලිපිනය පහත ඇතුලත් කළ පසු අපි ඔබට මුරපදය යළි සැකසීමෙී
+        උපදෙස් එවන්නම්.
+      email: විද්‍යුත් තැපැල් ලිපිනය
+      submit: යොමු කරන්න
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
-      title: "ඔබේ මුරපදය වෙනස් කරන්න"
-      new_password: "නව මුරපදය"
-      confirm_password: "ඔබේ නව මුරපදය තහවුරු කරන්න"
-      submit: "මගේ මුරපදය වෙනස් කරන්න"
+      title: ඔබේ මුරපදය වෙනස් කරන්න
+      new_password: නව මුරපදය
+      confirm_password: ඔබේ නව මුරපදය තහවුරු කරන්න
+      submit: මගේ මුරපදය වෙනස් කරන්න
   welcome_email:
-    subject: "මාගේ පන්තියට එකතුවෙන්න ( Code.org එකෙන්)"
+    subject: මාගේ පන්තියට එකතුවෙන්න ( Code.org එකෙන්)
     body: |
       Code.org හි ඇති පරිගණක විද්‍යාව සම්බන්ද පාඩම් මාලාවට එකතු වීමට පහත ඇති ලින්කුව ඔබන්න (මම ඔබගේ "ගුරුවරයා" ලෙස සලකන්න):
 
@@ -234,16 +234,16 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: "රහස් පදය"
-      email: "විද්‍යුත් තැපැල"
+      word: රහස් පදය
+      email: විද්‍යුත් තැපැල
       google_classroom: Google Classroom
       clever: Clever
   follower:
-    invite_sent: "ආරාධනාව යවන ලදී"
+    invite_sent: ආරාධනාව යවන ලදී
     added_teacher: "%{name} ඔබේ ගුරුවරයා ලෙස එක් කරන ලදි"
-    registered: "ඔබ %{section_name} සඳහා ලියාපදිංචි වී ඇත."
+    registered: ඔබ %{section_name} සඳහා ලියාපදිංචි වී ඇත.
     error:
-      signed_in: "ඉදිරියට යෑමට පෙර ඉවත් වන්න"
+      signed_in: ඉදිරියට යෑමට පෙර ඉවත් වන්න
       username_not_found: "%{username} පරිශීලක නාමය සොයාගත නොහැකියි"
       username_in_use: "%{username} යන පරිශීලක නාමය මේ වන විටත් වෙන්කරවා ඇත, වෙනත්
         පරිශීලක නාමයක් තෝරා ගන්න"
@@ -251,8 +251,8 @@
         බව සොයාගත නොහැක. ඔවුන් හට මෙහි ලියාපදිංචි වී අනතුරුව ඔවුන් එකතු කිරීමට නැවත
         උත්සහ කරන්න"
       section_not_found: "'%{section_code}' කේතය මගින් ඔබේ අංශය සොයා ගත නොහැක."
-      blank_code: "කරුණාකර Section Code එක ඇතුලත් කරන්න"
-      cant_join_own_section: "ඔබට ඔබේම ඒකකයක් සඳහා එකතු විය නොහැකියි."
+      blank_code: කරුණාකර Section Code එක ඇතුලත් කරන්න
+      cant_join_own_section: ඔබට ඔබේම ඒකකයක් සඳහා එකතු විය නොහැකියි.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
@@ -261,17 +261,17 @@
         subject: '"Code.org" හි නිවේදනයි: %{student_name} තවදුරටත් ඔබගේ ශිෂ්‍යකු නොවේ.'
   reports:
     error:
-      access_denied: "ඔබට මෙම පුද්ගලයාගේ සංඛ්‍යානයන් සඳහා ප්‍රවේශ විය නොහැක"
+      access_denied: ඔබට මෙම පුද්ගලයාගේ සංඛ්‍යානයන් සඳහා ප්‍රවේශ විය නොහැක
   crud:
-    new_model: "නව %{model}"
-    show: "පෙන්වන්න"
-    edit: "සංස්කරණය කරන්න"
-    edit_model: "සංස්කරණය කරන්න %{model}"
-    update: "යාවත්කාලීන කරන්න"
-    submit: "යොමු කරන්න"
-    destroy: "විනාශ කරන්න"
-    back: "ආපසු"
-    confirm: "ඔබට විශ්වාසද?"
+    new_model: නව %{model}
+    show: පෙන්වන්න
+    edit: සංස්කරණය කරන්න
+    edit_model: සංස්කරණය කරන්න %{model}
+    update: යාවත්කාලීන කරන්න
+    submit: යොමු කරන්න
+    destroy: විනාශ කරන්න
+    back: ආපසු
+    confirm: ඔබට විශ්වාසද?
     created: "%{model} සාර්ථකව නිර්මාණය කරන ලදී."
     updated: "%{model} සාර්ථකව යාවත්කාලීන කරන ලදී."
     destroyed: "%{model} සාර්ථකව මකා දමන ලදී."
@@ -287,20 +287,20 @@
           You can now log into Code.org with your username and password
   nav:
     header:
-      finished_hoc: "මා Hour of Code අවසන් කරන ලදි"
-      sign_in_to_save: "කරන ලද වැඩ කොටස සුරැකීමට නම් ඇතුලු වන්න"
+      finished_hoc: මා Hour of Code අවසන් කරන ලදි
+      sign_in_to_save: කරන ලද වැඩ කොටස සුරැකීමට නම් ඇතුලු වන්න
       free_play:
         playlab: App එකක් හදන්න
-        artist: "යමක් අඳින්න"
-        calculate: "යමක් ගණනය කරන්න"
+        artist: යමක් අඳින්න
+        calculate: යමක් ගණනය කරන්න
         applab: App එකක් හදන්න
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
       my_dashboard: My Dashboard
-      courses: "පාඨමාලාව"
+      courses: පාඨමාලාව
       course_catalog: Course Catalog
-      project_gallery: "ව්යාපෘති"
+      project_gallery: ව්යාපෘති
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -312,7 +312,7 @@
       educate_elementary: Elementary School
       educate_middle: Middle School
       educate_high: High School
-      educate_hoc: "පැයේ කේතය"
+      educate_hoc: පැයේ කේතය
       educate_partner: Partner with Us
       educate_beyond: Beyond Code.org
       educate_inspire: Inspire a Student
@@ -329,76 +329,76 @@
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
-      stats: "සංඛ්‍යාන"
+      stats: සංඛ්‍යාන
       help_us: Help Us
       teach: Teach
       about: About
     user:
-      classroom: "ගුරු මුල් පිටුව"
-      district_dashboard: "දිස්ත්‍රික්ක උපකරණ පුවරුව"
-      label: "ආයුබෝවන් %{username}"
-      stats: "කේත මැදිරිය"
-      settings: "මගේ ගිණුම"
-      logout: "නික්මෙන්න"
-      signin: "පුරන්න"
-      signup: "ගිණුමක් තනන්න"
-      already_registered: "පෙර ලියාපදිංචි වී ඇත් ද?"
-      pair_programming: "යුගල වශයෙන් ක්‍රමලේඛනය"
-      team: "කණ්ඩායම"
-      driver: "රියදුරු"
-      navigator: "යාත්‍රිකයා"
+      classroom: ගුරු මුල් පිටුව
+      district_dashboard: දිස්ත්‍රික්ක උපකරණ පුවරුව
+      label: ආයුබෝවන් %{username}
+      stats: කේත මැදිරිය
+      settings: මගේ ගිණුම
+      logout: නික්මෙන්න
+      signin: පුරන්න
+      signup: ගිණුමක් තනන්න
+      already_registered: පෙර ලියාපදිංචි වී ඇත් ද?
+      pair_programming: යුගල වශයෙන් ක්‍රමලේඛනය
+      team: කණ්ඩායම
+      driver: රියදුරු
+      navigator: යාත්‍රිකයා
     popup:
       progress_for_user: "%{name} ගේ ප්‍රගතිය"
-      progress: "ඔබගේ ප්‍රගතිය"
-      lines: "සම්පූර්ණ කේත පේලි ගණන: %{lines}"
-      close: "වහන්න"
-      mastery: "අදහස්"
-      puzzle_map: "අදියරයන්"
-      prizes: "කුසලාන %{total_trophies} ම එකතු කර තෑගි දිනාගන්න!"
-      prize_earned: "සියලුම ඵලක %{total_trophies} එකතු කරගෙන තිබේ. ජයග්‍රහණය කරන ලදි!"
+      progress: ඔබගේ ප්‍රගතිය
+      lines: 'සම්පූර්ණ කේත පේලි ගණන: %{lines}'
+      close: වහන්න
+      mastery: අදහස්
+      puzzle_map: අදියරයන්
+      prizes: කුසලාන %{total_trophies} ම එකතු කර තෑගි දිනාගන්න!
+      prize_earned: සියලුම ඵලක %{total_trophies} එකතු කරගෙන තිබේ. ජයග්‍රහණය කරන ලදි!
       prize_us_only: "( එක්සත් ජනපද සිසුන් පමණි)"
-      prizes_link: "වැඩිදුර තොරතුරු"
+      prizes_link: වැඩිදුර තොරතුරු
   teacher:
-    answer: "පිළිතුර"
-    for_teachers_only: "ගුරුවරුන්ට පමණි"
+    answer: පිළිතුර
+    for_teachers_only: ගුරුවරුන්ට පමණි
     title:
-      one: "ඔබගේ ගුරුවරයා:"
-      other: "ඔබගේ ගුරුවරු:"
+      one: 'ඔබගේ ගුරුවරයා:'
+      other: 'ඔබගේ ගුරුවරු:'
     remove: "(ගුරුවරයා ඉවත්කරන්න)"
     confirm:
-      remove: "ඔබට මෙම ගුරුවරයා ඉවත් කිරීමට උවමනා බව විශ්වාසද?"
+      remove: ඔබට මෙම ගුරුවරයා ඉවත් කිරීමට උවමනා බව විශ්වාසද?
     students:
-      dashboard: "ගුරු උපකරණ පුවරුව වෙත යන්න"
-    user_not_found: "මෙම ගුරුවරයා සොයා ගත නොහැක."
-    student_teacher_disassociated: "ඔබ විසින් %{teacher_name} ඔබේ ගුරුවරයා ලෙස ඉවත්
-      කර ඇත."
+      dashboard: ගුරු උපකරණ පුවරුව වෙත යන්න
+    user_not_found: මෙම ගුරුවරයා සොයා ගත නොහැක.
+    student_teacher_disassociated: ඔබ විසින් %{teacher_name} ඔබේ ගුරුවරයා ලෙස ඉවත්
+      කර ඇත.
     panel:
-      answer_viewer: "ගුරු මණ්ඩලය"
-      student: "ශිෂ්‍යයා"
-      viewing_solution: "විසඳුම නරඔනවා"
-      try_it_yourself: "ඔබ විසින්ම උත්සහකර බලන්න"
-      section: "අංශය"
-      example: "ආදර්ශ පිළිතුරු"
-      example_with_number: "ආදර්ශ විසඳුම %{solution_number}"
-      submitted_on: "ඉදිරිපත් කලේ:"
-      unsubmit: "යොමු නොකරන්න"
-      worked_with: "වැඩ කරන්නේ"
-      update_lock_settings: "අගුලු සැකසුම් මෙහිදී යාවත්කාලීන කරන්න."
-      clear_response: "ප්‍රතිචාරය ඉවත් කරන්න"
+      answer_viewer: ගුරු මණ්ඩලය
+      student: ශිෂ්‍යයා
+      viewing_solution: විසඳුම නරඔනවා
+      try_it_yourself: ඔබ විසින්ම උත්සහකර බලන්න
+      section: අංශය
+      example: ආදර්ශ පිළිතුරු
+      example_with_number: ආදර්ශ විසඳුම %{solution_number}
+      submitted_on: 'ඉදිරිපත් කලේ:'
+      unsubmit: යොමු නොකරන්න
+      worked_with: වැඩ කරන්නේ
+      update_lock_settings: අගුලු සැකසුම් මෙහිදී යාවත්කාලීන කරන්න.
+      clear_response: ප්‍රතිචාරය ඉවත් කරන්න
   user:
-    email_confirm_needed: "විද්යුත් තැපැල් ලිපිනය තහවුරු කර නොමැත:"
-    email_confirm_needed_required: "ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර
-      නොමැත:"
-    email_confirm_wrong_email: "වැරදි විද්යුත් තැපැල් ලිපිනය"
-    email_resend_confirm: "තහවුරු උපදෙස් නැවත භාරදෙන්න"
+    email_confirm_needed: 'විද්යුත් තැපැල් ලිපිනය තහවුරු කර නොමැත:'
+    email_confirm_needed_required: 'ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර
+      නොමැත:'
+    email_confirm_wrong_email: වැරදි විද්යුත් තැපැල් ලිපිනය
+    email_resend_confirm: තහවුරු උපදෙස් නැවත භාරදෙන්න
     new_password_hint: "(ඔබට එය වෙනස් කිරීම අවශ්‍ය නොවේ නම් හිස්ව තබන්න)"
     current_password_hint: "(ඔබ සිදුකළ වෙනස්කම් තහවුරු කිරීමට දැනට භාවිතා කරන මුරපදය
       ලබාදෙන්න)"
-    delete: "ඔබගේ ගිණුම මකන්න"
-    delete_text: "පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත."
-    delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ
-      ගිණුම් ඉවත් නොවේ."
-    delete_confirm: "ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?"
+    delete: ඔබගේ ගිණුම මකන්න
+    delete_text: පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත.
+    delete_text_teacher_note: 'සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ
+      ගිණුම් ඉවත් නොවේ.'
+    delete_confirm: ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?
     deleted_user: deleted user
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -425,63 +425,62 @@
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
   user_level:
-    completed: "සම්පූර්ණයි"
-    tried: "උත්සාහ කරනලදී"
+    completed: සම්පූර්ණයි
+    tried: උත්සාහ කරනලදී
   home:
-    title: "කේත මැදිරිය"
-    description: "කෝඩ් ස්ටුඩියෝව යනු Code.org මගින් නිර්මිත පාඨමාලා සියල්ල ඇරඹෙන ස්ථානයයි"
-    lines_of_code: "කේත පේළි %{lines_count}ක් සිසුන් විසින් ලියා ඇත"
+    title: කේත මැදිරිය
+    description: කෝඩ් ස්ටුඩියෝව යනු Code.org මගින් නිර්මිත පාඨමාලා සියල්ල ඇරඹෙන ස්ථානයයි
+    lines_of_code: කේත පේළි %{lines_count}ක් සිසුන් විසින් ලියා ඇත
     lines_of_code_linebreak: "%{lines_count} කේත පේලි ගණන<br/>ලියා තිබෙන්නේ %{students_count}
       මිලියන ගණනක සිසුන්"
-    all_courses: "පාඨමාලා 1, 2 සහ 3 දළ විශ්ලේෂණය"
-    lesson_plans: "පාඩම් සැලසුම්"
-    signin_message: "ඔබට දැනටමත් මෙහි ලියපදිංචි වී තිබේද?%{link}"
-    student_reg_link: "ශිෂ්‍ය ලියාපදිංචිය"
-    teacher_reg_link: "ගුරුවරුන් ලියාපදිංචිය"
-    signin_directions: "ගිණුමක් භාවිතා කිරීමෙන් ප්‍රගතිය නිරීක්ෂණය කල හැක.<br/>ගුරුවරුන්
-      ඔබගේ මුළු පන්තියම නිරීක්ෂණය කල හැක."
-    teacher_dashboard: "ප්රගතිය උපකරණ පුවරුව බලන්න"
-    teacher_student_count_one: "ඔබට සිසුන් %{count}ක් ඇත"
-    teacher_student_count: "ඔබට සිසුන් %{count}ක් ඇත."
+    all_courses: පාඨමාලා 1, 2 සහ 3 දළ විශ්ලේෂණය
+    lesson_plans: පාඩම් සැලසුම්
+    signin_message: ඔබට දැනටමත් මෙහි ලියපදිංචි වී තිබේද?%{link}
+    student_reg_link: ශිෂ්‍ය ලියාපදිංචිය
+    teacher_reg_link: ගුරුවරුන් ලියාපදිංචිය
+    signin_directions: ගිණුමක් භාවිතා කිරීමෙන් ප්‍රගතිය නිරීක්ෂණය කල හැක.<br/>ගුරුවරුන්
+      ඔබගේ මුළු පන්තියම නිරීක්ෂණය කල හැක.
+    teacher_dashboard: ප්රගතිය උපකරණ පුවරුව බලන්න
+    teacher_student_count_one: ඔබට සිසුන් %{count}ක් ඇත
+    teacher_student_count: ඔබට සිසුන් %{count}ක් ඇත.
     teacher_averages: ඔබගේ සිසුවා ලබා ගත් මධ්‍යන්‍ය %{trophy_average} / %{trophy_max}
       "Concept Mastery" ඵලකයන්.
-    teacher_print_certificates: "පාඨමාලාව අවසන් කල සිසුන් සඳහා සහතිකපත් මුද්‍රණය කරන්න"
+    teacher_print_certificates: පාඨමාලාව අවසන් කල සිසුන් සඳහා සහතිකපත් මුද්‍රණය කරන්න
     teacher_read_blog: Educator බ්ලොග් අඩවියෙන් අපගේ විශය කරුණි පිලිබඳ නව තොරතුරු
       ලබා ගත හැක
-    classroom: "ඔබගේ පන්තිය"
-    student_progress: "ඔබ ඉගෙනගත් මට්ටම"
+    classroom: ඔබගේ පන්තිය
+    student_progress: ඔබ ඉගෙනගත් මට්ටම
     student_stats: ඔබ උපයා තියෙනවා %{trophy_count} ක් "Concept Mastery" කුසලාන %{trophy_max}
       න්.
-    student_left_off: "ඔබ නැවැත්වූ ස්ථානයෙන්:"
-    student_finished: "ඔබ Code.org හි සියලු නිබන්ධන සම්පූර්ණ කර ඇත. තවත් පන්තියක්
-      තෝරාගන්න %{online_link} හෝ %{local_school_link}."
-    local_school: "දේශීය පාසැල"
-    online: "සබැඳි"
-    see_details: "විස්තර බලන්න"
-    view_course: "පාඨමාලාව බලන්න"
-    prize_info: "සහභාගීත්වය සඳහා ත්යාග ( එක්සත් ජනපද රජයේ පාසැල් ගුරුවරුන් පමණයි):
-      පන්ති කාමර පිරිනැමීම $1,000 දක්වා."
-    tryfirst: "හෝ, ඔබට එය මුලින්ම අත්හදා බලා, පසුව ලියාපදිංචි විය හැක:"
-    trynow: "දැන් අත්හදා බලන්න"
-    add_hint_help: "අපට Code.org නිබන්ධන සඳහා ස්මාර්ට් ඉඟි එකතු කිරීමට උදව් කරන්න"
-    20hour_overview: "මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප, ක්‍රමලේඛන
+    student_left_off: 'ඔබ නැවැත්වූ ස්ථානයෙන්:'
+    student_finished: ඔබ Code.org හි සියලු නිබන්ධන සම්පූර්ණ කර ඇත. තවත් පන්තියක් තෝරාගන්න
+      %{online_link} හෝ %{local_school_link}.
+    local_school: දේශීය පාසැල
+    online: සබැඳි
+    see_details: විස්තර බලන්න
+    view_course: පාඨමාලාව බලන්න
+    prize_info: 'සහභාගීත්වය සඳහා ත්යාග ( එක්සත් ජනපද රජයේ පාසැල් ගුරුවරුන් පමණයි):
+      පන්ති කාමර පිරිනැමීම $1,000 දක්වා.'
+    tryfirst: 'හෝ, ඔබට එය මුලින්ම අත්හදා බලා, පසුව ලියාපදිංචි විය හැක:'
+    trynow: දැන් අත්හදා බලන්න
+    add_hint_help: අපට Code.org නිබන්ධන සඳහා ස්මාර්ට් ඉඟි එකතු කිරීමට උදව් කරන්න
+    20hour_overview: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප, ක්‍රමලේඛන
       මූලිකාංග ආවරණය වන අතර පෙර පාසලේ සිට අවුරුදු 8 දක්වා වන ළමුන් සඳහා නිර්මාණය කර
-      ඇත. නමුත් ඕනෑම වයසක අයෙකුට මෙයට සහභාගි විය හැක."
-    test_videos_help: "අපේ නව වීඩියෝ ප්ලෙයරය ඔබේ පාසලේදි පරික්ශා කර බලන්න"
-    try_beta_courses: "අලුත්! K-5 සිසුන් සඳහා අපගේ බීටා පාඨමාලාවන් අත්හදා බලන්න"
-    use_as_teacher: "මෙම අඩවිය ගුරුවරයෙක් වශයෙන් භාවිතා කරන්න"
+      ඇත. නමුත් ඕනෑම වයසක අයෙකුට මෙයට සහභාගි විය හැක.
+    test_videos_help: අපේ නව වීඩියෝ ප්ලෙයරය ඔබේ පාසලේදි පරික්ශා කර බලන්න
+    try_beta_courses: අලුත්! K-5 සිසුන් සඳහා අපගේ බීටා පාඨමාලාවන් අත්හදා බලන්න
+    use_as_teacher: මෙම අඩවිය ගුරුවරයෙක් වශයෙන් භාවිතා කරන්න
     heading_hoc2014: "<h1>සියලු වයස්</h1><h2>සඳහා Hour of Code</h2>"
     heading_elementary: "<h2>20 hour courses</h2><h1>පරිගණක විද්‍යා මූලදර්ම (සෑම වයසකම)</h1>"
     heading_apps: "<h2>සැමට</h2><h1> විනෝදය</h1>"
     heading_tools: "<h2>ඊළඟ පියවර සඳහා සූදානම් ද?</h2><h1> උසස් පාසලේ සඳහා JavaScript
       මෙවලම්</h1>"
     heading_legacy: "<h1>සියලු වයස්</h1><h2>සඳහා අපගේ ත්වරිත පාඨමාලාව</h2>"
-    your_gallery: "ගැලරිය"
-    no_primary_course: "කේත ස්ටූඩියෝ පාඨමාලාවක් හදාරන්න"
-    choose_next_course: "පහතින් එකක් තෝරා ගැනීමෙන් කේත ස්ටූඩියෝ පාඨමාලාවක් උත්සාහ
-      කරන්න"
-    print_certificate: "සහතිකය මුද්‍රණයකරන්න"
-    announcement_title: "නිවේදන"
+    your_gallery: ගැලරිය
+    no_primary_course: කේත ස්ටූඩියෝ පාඨමාලාවක් හදාරන්න
+    choose_next_course: පහතින් එකක් තෝරා ගැනීමෙන් කේත ස්ටූඩියෝ පාඨමාලාවක් උත්සාහ කරන්න
+    print_certificate: සහතිකය මුද්‍රණයකරන්න
+    announcement_title: නිවේදන
     announcement_message_fall2016_features: අපි ගිම්හාන  ඍතුව ගතකලා, ඔබගේ ප්‍රතිචාරය
       නව ලක්ෂණ වලට.දැන් ඔබට  <a href="%{pp_url}" target="_blank">  බහුතරයක්   ශිෂ්‍යයන්ගේ  ප්‍රගතිය
       මැනීමට  </a>ඔව්න්  දෙදෙනෙකු  එකතුව එකම උපකරණය  බවිත කර <a href="%{csp_widgets_url}"
@@ -493,26 +492,26 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "වැඩිදුර ඉගෙන ගන්න"
-    announcement_try_now_button: "දැන් අත්හදා බලන්න"
+    announcement_learn_more_button: වැඩිදුර ඉගෙන ගන්න
+    announcement_try_now_button: දැන් අත්හදා බලන්න
     announcement_host_an_hour_button: Hour of Code වැඩසටහනක් සංවිධානය කරන්න
     announcement_watch_video_button: Watch video
-    announcement_petition: "ඔබ ගුරුවරයෙකු වශයෙන් ඔබේ පාසලේ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව
+    announcement_petition: ඔබ ගුරුවරයෙකු වශයෙන් ඔබේ පාසලේ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව
       පිලිබඳ අධ්‍යාපනය ලබා දෙන වැඩ පිලිවෙලක කොටස් කරුවෙකි. දැන් ඔබේ නියෝජිතයින්ට කතා
       කිරීමට කාලයයි. මෙම සතියේදි අධ්‍යාපනය පිලිබඳ ක්‍රියාධරයින්, ආණ්ඩුකාරවරු 28 දෙනෙක්
       සහ ඇමරිකාවේ ප්‍රධාන සමාගම් වල ප්‍රධානීන් පිරිසක් පෙර පාසලේ සිට අවුරුදු 12 දක්වා
       ළමුන්ගේ පරිගණක අධ්‍යාපනය වෙනුවෙන් මූල්‍ය පහසුකම් සපයන ලෙස එක්සත් ජනපදයේ කොන්ග්‍රසයට
-      විවෘත ලිපියක් යැවීමට ගිවිස ගත්හ."
-    announcement_petition_button: "ඔබේ නම එක් කරන්න"
+      විවෘත ලිපියක් යැවීමට ගිවිස ගත්හ.
+    announcement_petition_button: ඔබේ නම එක් කරන්න
     announcement_go_beyond_button: Go beyond
     announcement_apply_now: Apply now
     announcement_all: teacher blog හි, නව අංග හා යාවත්කාලීන කිරීම් ගැන දැනගැනීමට <a
       href='%{teacher_blog_url}' target='_blank'>පසුගිය නිවේදන බලන්න.</a>
-    announcement_hoc_launch: "ලොවපුරා 180කට වැඩි රටවල් ගණනකින්, අධ්‍යපකයින් දහස් ගණනක්
+    announcement_hoc_launch: ලොවපුරා 180කට වැඩි රටවල් ගණනකින්, අධ්‍යපකයින් දහස් ගණනක්
       මෙම දෙසම්බර් මස 5-11 සතිය තුළ Hour of Code වැඩසටහන ඔස්සේ පරිගණක විද්‍යාව ඉගැන්වීම
       අරඹනු ඇත. පෙර වතාවන් වලට වැඩි සිසුන් ගණනක් මෙවර සහභාගී කරගැනීමට අප ඔබගේ දායකත්වය
       අවශ්‍ය වන අතර තවත් ගුරුවරුන් මේ සඳහා සම්බන්ධ වීමට පොළඹවමින් දැන්ම <a href='%{signup_url}'
-      target='_blank'>ඔබේ Hour of Code වැඩසටහන ලියාපදිංචි කරන්න</a>."
+      target='_blank'>ඔබේ Hour of Code වැඩසටහන ලියාපදිංචි කරන්න</a>.
     announcement_mc_launch: One of our most popular tutorials now has a sequel! The
       all-new Minecraft Hour of Code Designer lets students make the rules of the
       Minecraft world. They can create a totally unique Minecraft experience, and
@@ -589,29 +588,29 @@
       bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
       Learning."
   move_students:
-    new_section_dne: "සමාවෙන්න!, %{new_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ
-      කේතයක් ඇතුල් කරන්න."
-    section_code_cant_be_current_section: "වර්තමාන කොටස සහ නව කොටස සමාන නොවිය යුතුය."
+    new_section_dne: සමාවෙන්න!, %{new_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ
+      කේතයක් ඇතුල් කරන්න.
+    section_code_cant_be_current_section: වර්තමාන කොටස සහ නව කොටස සමාන නොවිය යුතුය.
     current_section_dne: "%{current_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ කේතයක්
       ඇතුල් කරන්න."
-    student_ids_not_entered: "ශිෂ්ය හැඳුනුම් පත් ලබා දෙන්න."
-    student_not_found: "සිසුන් එක් අයෙක් හෝ ඊට වැඩි ගණනක් සොයා ගැනීමට නොහැකි විය."
-    all_students_must_be_in_current_section: "සියලුම සිසුන් දැන් ඔබගේ කොටසට ඇතුළත්
-      වී සිටිය යුතුය."
-    already_enrolled_in_new_section: "මෙම ගුරුවරයා විසින් මෙම සිසුන් වෙනත් කොටසකට
-      ඇතුලත් කර තිබෙන නිසා ඔබට මෙම සිසුන් ඉවත් කල නොහැකියි."
+    student_ids_not_entered: ශිෂ්ය හැඳුනුම් පත් ලබා දෙන්න.
+    student_not_found: සිසුන් එක් අයෙක් හෝ ඊට වැඩි ගණනක් සොයා ගැනීමට නොහැකි විය.
+    all_students_must_be_in_current_section: සියලුම සිසුන් දැන් ඔබගේ කොටසට ඇතුළත්
+      වී සිටිය යුතුය.
+    already_enrolled_in_new_section: මෙම ගුරුවරයා විසින් මෙම සිසුන් වෙනත් කොටසකට ඇතුලත්
+      කර තිබෙන නිසා ඔබට මෙම සිසුන් ඉවත් කල නොහැකියි.
   share:
-    title: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
-    description: "ඕනෑම කෙනෙකුට පරිගණක විද්යාව ඉගෙනගන්න පුළුවන්. කේතය සමඟ ක්රීඩා, යෙදුම්
-      හා කලා කරන්න."
-    try_hour_of_code: "පැයක කේතයක් උත්සාහ කරන්න!"
+    title: කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න
+    description: ඕනෑම කෙනෙකුට පරිගණක විද්යාව ඉගෙනගන්න පුළුවන්. කේතය සමඟ ක්රීඩා, යෙදුම්
+      හා කලා කරන්න.
+    try_hour_of_code: පැයක කේතයක් උත්සාහ කරන්න!
   gender:
-    male: "පිරිමි"
-    female: "ගැහැණු"
-    none: "පිළිතුරු නොදීමට කැමතියි"
+    male: පිරිමි
+    female: ගැහැණු
+    none: පිළිතුරු නොදීමට කැමතියි
   user_type:
-    student: "ශිෂ්‍යයා"
-    teacher: "ගුරු වරයා"
+    student: ශිෂ්‍යයා
+    teacher: ගුරු වරයා
   footer:
     thank_you: අපි අපගේ <a href="https://code.org/about/donors">දායකයින්ට</a>, <a
       href="https://code.org/about/partners">හුල්කරුවන්ට</a>, අපගේ <a href="https://code.org/about/team">විශාල
@@ -620,8 +619,8 @@
       අපට දැක්වූ සහයෝගයට.
     help_from_html: Google, Microsoft, Facebook, Twitter සමාගම් වල ඉන්ජිනේරුවන් සහ
       මෙම විශය කරුණු නිර්මාණය කිරීමට උදව් කල අනෙත් සියලු දෙනාම අප විසින් මතක් කල යුතුයි.
-    help_from_html_old: "ගූගල්, මයික්රොසොෆ්ට්, ෆේස්බුක්, හා Twitter හි ඉංජිනේරුවන්
-      ෙමම ද්රව්ය නිර්මාණය කිරීමට සහයෝගය ලබා දුන්නා."
+    help_from_html_old: ගූගල්, මයික්රොසොෆ්ට්, ෆේස්බුක්, හා Twitter හි ඉංජිනේරුවන්
+      ෙමම ද්රව්ය නිර්මාණය කිරීමට සහයෝගය ලබා දුන්නා.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. සියලුම හිමිකම්
       ඇවිරිණි.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       සියලුම හිමිකම් ඇවිරිණි.<br />Frozen&#8482; &copy; %{current_year} Disney. සියලුම
@@ -640,47 +639,47 @@
       trademark and &copy; %{current_year} Cartoon Network.
     code_from_html: <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>. යටතේ අවසර ලබාගෙන Code.org විසින් p5.play භාවිත කරනු ලබයි.
-    powered_by_aws: "ඇමේසන් වෙබ් සේවා මඟින් බලගැන්වේ"
+    powered_by_aws: ඇමේසන් වෙබ් සේවා මඟින් බලගැන්වේ
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE සංකේතය සහ පැයේ
       කේතය&reg; Code.org හි වෙළඳ ලකුණු වේ."
-    copyright: "ප්‍රකාශන හිමිකම"
-    more: "තවදුරටත්"
-    feedback: "ප්‍රතිපෝෂණය සපයන්න"
-    translate: "ඔබේ භාෂාව පරිවර්තනයෙන් අපට සහාය වන්න"
-    support: "සහාය"
+    copyright: ප්‍රකාශන හිමිකම
+    more: තවදුරටත්
+    feedback: ප්‍රතිපෝෂණය සපයන්න
+    translate: ඔබේ භාෂාව පරිවර්තනයෙන් අපට සහාය වන්න
+    support: සහාය
     support_url: http://support.code.org
-    tos_short: "නියම"
-    tos: "සේවා නියම"
-    privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
-    secure: "සුරක්ෂිත අනුවාදය"
-    report_abuse: "අනිසි භාවිතයක් වාර්තා කරන්න"
-    built_on_code_studio: "කොඩ් ස්ටුඩියො හි සාදන ලදි"
-    make_my_own_app: "මගේම යෙදුම සාදන්න"
-    how_it_works: "එය වැඩ කරන අයුරු"
-    try_hour_of_code: "පැයක කේතයක් උත්සාහ කරන්න!"
+    tos_short: නියම
+    tos: සේවා නියම
+    privacy: රහස්‍යතා ප්‍රතිපත්තිය
+    secure: සුරක්ෂිත අනුවාදය
+    report_abuse: අනිසි භාවිතයක් වාර්තා කරන්න
+    built_on_code_studio: කොඩ් ස්ටුඩියො හි සාදන ලදි
+    make_my_own_app: මගේම යෙදුම සාදන්න
+    how_it_works: එය වැඩ කරන අයුරු
+    try_hour_of_code: පැයක කේතයක් උත්සාහ කරන්න!
   reference_area:
-    title: "උදව්වක් අවශ්‍යද?"
-    subtitle: "මෙම වීඩියෝ සහ ඉඟි දකින්න"
-    teacher: "උත්තරය බලන්න"
+    title: උදව්වක් අවශ්‍යද?
+    subtitle: මෙම වීඩියෝ සහ ඉඟි දකින්න
+    teacher: උත්තරය බලන්න
     teacher_no_solution: Stop seeing solution
-    auth_error: "විසඳුමක දැකීමට ඔබට අවසර නැත."
-    submit: "චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න"
-    direction: "ආරම්භක දිශාව (අංශක වලින්)"
+    auth_error: විසඳුමක දැකීමට ඔබට අවසර නැත.
+    submit: චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න
+    direction: ආරම්භක දිශාව (අංශක වලින්)
   video:
-    tab: "වීඩියෝව."
-    notes: "වීඩියෝවක් නැද්ද? සටහන් පෙන්වන්න."
-    notes_coming_soon: "මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න."
-    autoplay_option: "ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න"
-    download: "වීඩියෝව බාගන්න"
+    tab: වීඩියෝව.
+    notes: වීඩියෝවක් නැද්ද? සටහන් පෙන්වන්න.
+    notes_coming_soon: මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න.
+    autoplay_option: ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න
+    download: වීඩියෝව බාගන්න
     show_notes: Show Notes
     show_video: Show Video
   compatibility:
     upgrade:
-      unsupported_message: "ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ
-        වෙබ් ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක
-        වෙබ් ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක,
-        නමුත් ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක."
-      link: "වැඩිදුර ඉගෙන ගන්න"
+      unsupported_message: ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ වෙබ්
+        ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක වෙබ්
+        ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක, නමුත්
+        ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක.
+      link: වැඩිදුර ඉගෙන ගන්න
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -693,79 +692,79 @@
       weblab_unsupported_locale_storage: You may experience issues using Web Lab in
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
-  slow_loading: "මෙම සාමාන්ය ප්රමාණයට වඩා වැඩි කාලයක් ගනිමින්..."
-  try_reloading: "මෙම පිටුව නැවත පිරවීමට උත්සාහ කරන්න"
-  next_stage: "සම්පූර්ණයි! ඉදිරි පියවර වෙත ගමන් කරන්න"
-  download_pdf: "පාඩම් සැලැස්ම විවෘත කරන්න"
-  lesson_plan: "පාඩම් සැලැස්ම"
-  view_lesson_plan: "පාඩම් සැලැස්ම බලන්න"
+  slow_loading: මෙම සාමාන්ය ප්රමාණයට වඩා වැඩි කාලයක් ගනිමින්...
+  try_reloading: මෙම පිටුව නැවත පිරවීමට උත්සාහ කරන්න
+  next_stage: සම්පූර්ණයි! ඉදිරි පියවර වෙත ගමන් කරන්න
+  download_pdf: පාඩම් සැලැස්ම විවෘත කරන්න
+  lesson_plan: පාඩම් සැලැස්ම
+  view_lesson_plan: පාඩම් සැලැස්ම බලන්න
   pdf_download: PDF බාගන්න
-  download_coming_soon: "බා ගත කර ගත හැකි ක්‍රියාකාරකමක් ළඟදීම නිකුත් වනු ඇත."
-  video_coming_soon: "වීඩියෝව ලගදීම බලාපොරොත්තු වන්න!"
-  not_started: "සිසුවා මෙම මට්ටම උත්සාහ කර නැත."
+  download_coming_soon: බා ගත කර ගත හැකි ක්‍රියාකාරකමක් ළඟදීම නිකුත් වනු ඇත.
+  video_coming_soon: වීඩියෝව ලගදීම බලාපොරොත්තු වන්න!
+  not_started: සිසුවා මෙම මට්ටම උත්සාහ කර නැත.
   share_code:
-    title: "ඔබේ වැඩසටහන ධාවනය කිරීමට, ධාවනය ක්ලික් කරන්න"
-    bounce_og_title: "මගේ බවුන්ස් ගේම් එක බලන්න"
-    flappy_og_title: "මගේ ෆ්ලැපී ගේම් එක බලන්න"
-    studio_og_title: "මගේ Play Lab App එක බලන්න"
-    check_out_what_i_made: "මා කළ දේ පරීක්ෂා කරන්න"
-    og_description: "මෙම කේතය මාවිසින්ම Code.org භාවිතයෙන් නිර්මාණය කරන ලදි"
-    phone_number_not_allowed: "පෙනෙන ආකාරයට එය තුල දුරකථන අංකයක් ඇත. පාඨය වෙනස් කිරීමට
-      උත්සහ කරන්න."
-    address_not_allowed: "පෙනෙන ආකාරයට එය තුල ලිපිනයක් ඇත. පාඨය වෙනස් කිරීමට උත්සහ
-      කරන්න."
-    email_not_allowed: "පෙනෙන ආකාරයට එය තුල විදුලි පණිවිඩයක් ඇත. පාඨය වෙනස් කිරීමට
-      උත්සහ කරන්න."
-    profanity_not_allowed: "එහි අසබ්‍ය වචනයක් ඇති අකාරයක් පෙන්නුම් කරයි . වචන වෙනස්
-      කරන්න උත්සාහ ගන්න "
+    title: ඔබේ වැඩසටහන ධාවනය කිරීමට, ධාවනය ක්ලික් කරන්න
+    bounce_og_title: මගේ බවුන්ස් ගේම් එක බලන්න
+    flappy_og_title: මගේ ෆ්ලැපී ගේම් එක බලන්න
+    studio_og_title: මගේ Play Lab App එක බලන්න
+    check_out_what_i_made: මා කළ දේ පරීක්ෂා කරන්න
+    og_description: මෙම කේතය මාවිසින්ම Code.org භාවිතයෙන් නිර්මාණය කරන ලදි
+    phone_number_not_allowed: පෙනෙන ආකාරයට එය තුල දුරකථන අංකයක් ඇත. පාඨය වෙනස් කිරීමට
+      උත්සහ කරන්න.
+    address_not_allowed: පෙනෙන ආකාරයට එය තුල ලිපිනයක් ඇත. පාඨය වෙනස් කිරීමට උත්සහ
+      කරන්න.
+    email_not_allowed: පෙනෙන ආකාරයට එය තුල විදුලි පණිවිඩයක් ඇත. පාඨය වෙනස් කිරීමට
+      උත්සහ කරන්න.
+    profanity_not_allowed: 'එහි අසබ්‍ය වචනයක් ඇති අකාරයක් පෙන්නුම් කරයි . වචන වෙනස්
+      කරන්න උත්සාහ ගන්න '
   builder:
-    created: "ඔබ නව පිටපතක් සාදා ඇත."
-    destroyed: "ඔබ විසින් පිටපතක් විනාශ කරන ලදි."
-    manage: "තැනුම් මට්ටම්"
-    view: "බලන්න"
-    back: "නැවත කේත රචනයන් වෙත"
-    success: "ඔබ සාර්ථකාව කොටස් සංස්කරණය කර ඇත."
+    created: ඔබ නව පිටපතක් සාදා ඇත.
+    destroyed: ඔබ විසින් පිටපතක් විනාශ කරන ලදි.
+    manage: තැනුම් මට්ටම්
+    view: බලන්න
+    back: නැවත කේත රචනයන් වෙත
+    success: ඔබ සාර්ථකාව කොටස් සංස්කරණය කර ඇත.
     level:
-      create: "නව මට්ටමක් නිර්මාණය කරන්න"
-      current: "වත්මන් තල"
-      unused: "භාවිතා නොකරන තල"
+      create: නව මට්ටමක් නිර්මාණය කරන්න
+      current: වත්මන් තල
+      unused: භාවිතා නොකරන තල
   upsell:
     applab:
-      title: "මෘදුකාංග විද්‍යාගාරය"
+      title: මෘදුකාංග විද්‍යාගාරය
       body: App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක
         . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල
         හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක.
-      body_short: "එය ක්‍රියාත්මක වීම සදහා ලිඛ්ත යෙදුමක්, කේත සහිත බ්ලොක් හෝ JavaScript
-        වැඩසටහනක් නිර්මාණය කරන්න, තප්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහරින්න."
-      audience: "වයස් 13+"
-      cta: "කෙසේදැයි දැනගන්න"
+      body_short: එය ක්‍රියාත්මක වීම සදහා ලිඛ්ත යෙදුමක්, කේත සහිත බ්ලොක් හෝ JavaScript
+        වැඩසටහනක් නිර්මාණය කරන්න, තප්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහරින්න.
+      audience: වයස් 13+
+      cta: කෙසේදැයි දැනගන්න
     hoc:
-      title: "පැරණි වංකගිරිය"
+      title: පැරණි වංකගිරිය
       body: "පරිගණක විද්යාව පිළිබඳ මූලික දේ උත්සාහ කරන්න. මිලියන ගණනක් එයට \nඋත්සාහයක්
         දී ඇත."
     flappy:
       title: Flappy Code
-      body: "විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද? අපගේ Flappy
-        Code නිබන්දනය කියවන්න!"
+      body: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද? අපගේ Flappy
+        Code නිබන්දනය කියවන්න!
     20-hour:
-      title: "කඩිනම් පාඨමාලා"
-      body: "මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය වන අතර 2 සිට
+      title: කඩිනම් පාඨමාලා
+      body: මෙම පැය 20 පාඨමාලා මගින් පරිගණක විද්‍යාවේ හර සංකල්ප ආවරණය වන අතර 2 සිට
         4 දක්වා ඇති පාඨමාලා වලින් ක්‍රමලේඛන මූලිකාංග ආවරණය වේ. අවුරුදු 10-18 අතර සිසුන්
         සඳහා මෙය නිර්මාණය කර ඇත. පරිපූර්ණ අත්දැකීමක් සඳහා 2 සිට 4 දක්වා ඇති පාඨමාලාවන්
-        බලන්න!"
+        බලන්න!
       body_short: "මුලික පරිගණක විද්‍යාව පිළිබඳව වේගවත් ලෙස \nපාඨමාලා 2-4න් ඉගෙනගන්න."
     hoc2014:
-      try_new_tutorial: "බීටා හි අපගේ නව Hour of Code නිබන්ධනය උත්සාහ කරන්න"
-      try_frozen: "චිත්‍රශිල්පියා ෆ්‍රොසන් චිත්‍රපටියේ එල්සා සහ ඇනා සමග"
+      try_new_tutorial: බීටා හි අපගේ නව Hour of Code නිබන්ධනය උත්සාහ කරන්න
+      try_frozen: චිත්‍රශිල්පියා ෆ්‍රොසන් චිත්‍රපටියේ එල්සා සහ ඇනා සමග
     gallery:
-      title: "ගැලරිය"
-      body: "අපගේ පරිශීලකයන් විසින් නිර්මිත app සහ artist images පෙන්වන්න"
+      title: ගැලරිය
+      body: අපගේ පරිශීලකයන් විසින් නිර්මිත app සහ artist images පෙන්වන්න
     gamelab:
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "වයස් 13+"
-      cta: "කෙසේදැයි දැනගන්න"
+      audience: වයස් 13+
+      cta: කෙසේදැයි දැනගන්න
     hoc-encryption:
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
@@ -773,24 +772,24 @@
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "වයස් 13+"
-      cta: "කෙසේදැයි දැනගන්න"
+      audience: වයස් 13+
+      cta: කෙසේදැයි දැනගන්න
     frozen:
       title: Frozen
     starwars:
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: "ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක් හෝ ක්‍රීඩාවක්
-        සාදන්න."
+      body: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක් හෝ ක්‍රීඩාවක්
+        සාදන්න.
     minecraft:
-      title: "මයින්ක්‍රාෆ්ට්"
+      title: මයින්ක්‍රාෆ්ට්
       body: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න.
     minecraft2016:
-      title: "මයින්ක්‍රාෆ්ට්"
+      title: මයින්ක්‍රාෆ්ට්
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
     hero:
-      title: "මයින්ක්‍රාෆ්ට්"
+      title: මයින්ක්‍රාෆ්ට්
       body: Minecraft is back for the Hour of Code with a brand new activity! Journey
         through Minecraft with code.
     sports:
@@ -801,15 +800,15 @@
       body: In this lesson, students will use the Text Compression Widget to compress
         text by substituting patterns with symbols.
     unplugged:
-      title: "එළිදැක්වූ පාඩම්"
-      audience: "වයස අවුරුදු 4+"
-      body: "පරිගණකයක් නැතුව වුවත් කල හැකි පාඩම් අප විසින් නිර්මාණය කර ඇත. ඔබට පරිගණයක්
+      title: එළිදැක්වූ පාඩම්
+      audience: වයස අවුරුදු 4+
+      body: පරිගණකයක් නැතුව වුවත් කල හැකි පාඩම් අප විසින් නිර්මාණය කර ඇත. ඔබට පරිගණයක්
         තිබුණත් නැතත් මේවා මගින් පරිගණක විද්‍යාව ඔබේ පන්තිකාමරයේදි ඉගැන්විය හැක. මෙම
-        පාඩම් තනි පාඩම් වශයෙන් හෝ වෙනත් පාඩම් සමග කල හැක."
-      body_short: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ , පරිගණකයක් අවශ්‍ය නැති,
-        මෙම පාඩම් උත්සාහ කරන්න."
+        පාඩම් තනි පාඩම් වශයෙන් හෝ වෙනත් පාඩම් සමග කල හැක.
+      body_short: ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ , පරිගණකයක් අවශ්‍ය නැති,
+        මෙම පාඩම් උත්සාහ කරන්න.
     unplugged_conditionals:
-      title: "කන්ඩිෂනලස්"
+      title: කන්ඩිෂනලස්
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -818,186 +817,185 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Ages 14+
-      cta: "කෙසේදැයි දැනගන්න"
+      cta: කෙසේදැයි දැනගන්න
   gallery:
-    students_drew_these_with_code: "සිසුන් මේවා ඇන්දේ කේත මගිනි!"
-    students_made_these_with_code: "සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!"
-    picture_count: "පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය
-      කිරීමෙන් චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත
-      ක්ලික් කරන්න."
+    students_drew_these_with_code: සිසුන් මේවා ඇන්දේ කේත මගිනි!
+    students_made_these_with_code: සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!
+    picture_count: පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය කිරීමෙන්
+      චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත ක්ලික් කරන්න.
     activity_count: "අතීතයේ, <b>%{days}</b>  , සිසුන් apps සහ පින්තුර <b>%{count}</b>
       නිමානය කරේ ඔවුන්ගේම \nපරිගණක වැඩසටහන්, එක් එක් වැඩසටහන බැලීමට පින්තූර සහ තිරපිටපත්
       මත ක්ලික් කරන්න."
-    want_to_make_your_own: "ඔබේම නිර්මාණයක් හදමු ද?"
+    want_to_make_your_own: ඔබේම නිර්මාණයක් හදමු ද?
     how_to_save: 'මෙම නිබන්ධන අවසන් මට්ටම වලදී , ගැලරිය හි  ගබඩා කිරීම සදහා "අවසානයි"
       සහ "සුරකින්න" බොත්තම් මත ඔබන්න '
-    more: "තව &rarr;"
+    more: තව &rarr;
     caption_by_name_age: "%{name} විසින්, වයස %{age}"
     caption_time_ago: "%{time_ago} පෙර"
-    header: "ගැලරිය"
-    header_playlab: "කථා සහ ක්‍රීඩා"
-    header_artist: "කේත කලාව"
-    report_abuse: "අනිසි භාවිතයක් වාර්තා කරන්න"
+    header: ගැලරිය
+    header_playlab: කථා සහ ක්‍රීඩා
+    header_artist: කේත කලාව
+    report_abuse: අනිසි භාවිතයක් වාර්තා කරන්න
   landing:
-    prerelease: "මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී. කාලයත්
+    prerelease: මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී. කාලයත්
       සමග ලැබෙන ප්‍රතිචාර අනුව මෙය සංස්කරණ වලට ලක් විය හැක. දැනට පවතින්නේ අවසන් සංස්කරණය
-      නොවේ."
-    prerelease_hoc2014: "මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී.
-      කාලයත් සමග ලැබෙන ප්‍රතිචාර අනුව මෙය සංස්කරණ වලට ලක් විය හැක."
-    report_bug: "දෝෂය වාර්තා කරන්න"
-    support: "උපකාර ලබාගන්න"
+      නොවේ.
+    prerelease_hoc2014: මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී.
+      කාලයත් සමග ලැබෙන ප්‍රතිචාර අනුව මෙය සංස්කරණ වලට ලක් විය හැක.
+    report_bug: දෝෂය වාර්තා කරන්න
+    support: උපකාර ලබාගන්න
     support_url: "//support.code.org"
-    help_resources: "උදවු සහ සම්පත්"
+    help_resources: උදවු සහ සම්පත්
     help_support: Help and Support
     documentation: Documentation
     tutorials: Tutorials
   multi:
-    wrong_title: "පිළිතුර වැරදියි"
-    wrong_body: "ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!"
-    correct_title: "නිවැරදියි"
-    correct_body: "ඒ නිවැරදි පිළිතුර වේ."
-    toofew_title: "පිළිතුරු ගණන අඩුයි."
+    wrong_title: පිළිතුර වැරදියි
+    wrong_body: ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!
+    correct_title: නිවැරදියි
+    correct_body: ඒ නිවැරදි පිළිතුර වේ.
+    toofew_title: පිළිතුරු ගණන අඩුයි.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "ස්තුතියි ඔබට"
-    wrong_body: "පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි."
-    correct_title: "ස්තුතියි ඔබට"
-    correct_body: "පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි."
-    toofew_title: "පිළිතුරු ගණන අඩුයි."
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි.
+    toofew_title: පිළිතුරු ගණන අඩුයි.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "ස්තුතියි ඔබට"
-    wrong_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
-    correct_title: "ස්තුතියි ඔබට"
-    correct_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
-    hide_survey_last_answer: "මෙය අඥාත සමීක්ශණයකි. අවසන් ප්‍රතිඵල සඳහා ඩෑශ්බෝඩය වෙත
-      යන්න. ප්‍රතිඵල දක්වනු ලබන්නේ අවම සිසුන් 5ක් මේ සඳහා සහභාගී වී ඇතිනම් පමණි."
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: පිලිතුරු සැපයුවාට ස්තූතියි.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: පිලිතුරු සැපයුවාට ස්තූතියි.
+    hide_survey_last_answer: මෙය අඥාත සමීක්ශණයකි. අවසන් ප්‍රතිඵල සඳහා ඩෑශ්බෝඩය වෙත
+      යන්න. ප්‍රතිඵල දක්වනු ලබන්නේ අවම සිසුන් 5ක් මේ සඳහා සහභාගී වී ඇතිනම් පමණි.
     survey_submission_thankyou: Thank you for submitting this survey! The survey has
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "ස්තුතියි ඔබට"
-    wrong_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
-    correct_title: "ස්තුතියි ඔබට"
-    correct_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
-    unsubmit-title: "ඔබේ ඇගැයීම යොමු නොකරන්න"
-    unsubmit-body: "ඔබගේ ඇගයීම ඉදිරිපත් නොකිරීම මගින් එහි කාලය හා දිනය නැවත සකස් වේ.
-      ඔබට එය විශ්වාසද?"
-    submit-incomplete-title: "ඔබේ ඇගැයීම බාර දෙන්න"
-    submit-incomplete-body: "ඔබ ඇතැම් ප්‍රශ්න කිහිපයකට පිලිතුරු දී නොමැත. ඇගයීම ඉදිරිපත්
-      කිරීමෙන් පසුව එය නැවත වෙනස් කල නොහැකිය. ඔබට මෙය ඉදිරිපත් කිරීමට අවශ්‍යම ද?"
-    submit-complete-title: "ඔබේ ඇගැයීම බාර දෙන්න"
-    submit-complete-body: "ඇගයීම ඉදිරිපත් කිරීමෙන් පසුව එය නැවත වෙනස් කල නොහැකිය.
-      ඔබට මෙය ඉදිරිපත් කිරීමට අවශ්‍යම ද?"
+    wrong_title: ස්තුතියි ඔබට
+    wrong_body: පිලිතුරු සැපයුවාට ස්තූතියි.
+    correct_title: ස්තුතියි ඔබට
+    correct_body: පිලිතුරු සැපයුවාට ස්තූතියි.
+    unsubmit-title: ඔබේ ඇගැයීම යොමු නොකරන්න
+    unsubmit-body: ඔබගේ ඇගයීම ඉදිරිපත් නොකිරීම මගින් එහි කාලය හා දිනය නැවත සකස් වේ.
+      ඔබට එය විශ්වාසද?
+    submit-incomplete-title: ඔබේ ඇගැයීම බාර දෙන්න
+    submit-incomplete-body: ඔබ ඇතැම් ප්‍රශ්න කිහිපයකට පිලිතුරු දී නොමැත. ඇගයීම ඉදිරිපත්
+      කිරීමෙන් පසුව එය නැවත වෙනස් කල නොහැකිය. ඔබට මෙය ඉදිරිපත් කිරීමට අවශ්‍යම ද?
+    submit-complete-title: ඔබේ ඇගැයීම බාර දෙන්න
+    submit-complete-body: ඇගයීම ඉදිරිපත් කිරීමෙන් පසුව එය නැවත වෙනස් කල නොහැකිය. ඔබට
+      මෙය ඉදිරිපත් කිරීමට අවශ්‍යම ද?
   match:
-    wrong_title: "විසඳුම වැරදියි"
-    wrong_body: "ඔබ විසින් ඇතුල් කරන ලද විසඳුම නිවැරදි නැත. කරුණාකර නැවත උත්සාහ කරන්න!"
-    correct_title: "නිවැරදියි"
-    correct_body: "ඒ නිවැරදි පිළිතුර වේ."
+    wrong_title: විසඳුම වැරදියි
+    wrong_body: ඔබ විසින් ඇතුල් කරන ලද විසඳුම නිවැරදි නැත. කරුණාකර නැවත උත්සාහ කරන්න!
+    correct_title: නිවැරදියි
+    correct_body: ඒ නිවැරදි පිළිතුර වේ.
   contract_match:
-    wrong_title: "පිළිතුර වැරදියි"
-    badname: "ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි නමයි."
-    badname_case: "ශ්‍රිත වල නම් ඉංග්‍රිසි කැපිටල් සිම්පල් අකුරු සමග වෙනස් වේ. නම
-      වෙනස් කර බලන්න."
-    badrange: "ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි පරාසයයි."
-    baddomainsize: "මෙම කාර්යය සඳහා අවශ්‍ය අවම ප්‍රමාණය ඔබ විසින් සපයා නොමැත."
-    baddomainname: "ඔබගේ විෂයපථය ඇති අයිතම එකක හෝ කිහිපයකම වැරදි නම යොදා ඇත."
-    baddomaintype: "ඔබගේ බලවසම් ප්‍රදේශයේ ඇති වස්තුන්ගෙන් එකක් හෝ කිහිපයක් නුසුදුසු
-      තත්වයේ පවතී, හෝ ඒවා වැරදි පිවෙලට පවතී."
+    wrong_title: පිළිතුර වැරදියි
+    badname: ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි නමයි.
+    badname_case: ශ්‍රිත වල නම් ඉංග්‍රිසි කැපිටල් සිම්පල් අකුරු සමග වෙනස් වේ. නම වෙනස්
+      කර බලන්න.
+    badrange: ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි පරාසයයි.
+    baddomainsize: මෙම කාර්යය සඳහා අවශ්‍ය අවම ප්‍රමාණය ඔබ විසින් සපයා නොමැත.
+    baddomainname: ඔබගේ විෂයපථය ඇති අයිතම එකක හෝ කිහිපයකම වැරදි නම යොදා ඇත.
+    baddomaintype: ඔබගේ බලවසම් ප්‍රදේශයේ ඇති වස්තුන්ගෙන් එකක් හෝ කිහිපයක් නුසුදුසු
+      තත්වයේ පවතී, හෝ ඒවා වැරදි පිවෙලට පවතී.
   text_match:
-    placeholder: "ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න"
-    open_response_title: "ස්තූතියි"
-    open_response_body: "ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!"
-    correct_title: "නිවැරදියි"
-    correct_body: "ඒ නිවැරදි පිළිතුර වේ."
+    placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
+    open_response_title: ස්තූතියි
+    open_response_body: ඔබගේ ප්‍රතිචාරය සඳහා ස්තූතියි!
+    correct_title: නිවැරදියි
+    correct_body: ඒ නිවැරදි පිළිතුර වේ.
   dialog:
-    ok: "හරි"
-    startover_title: "නැවත මුල සිට ආරම්භ කිරීමට අවශ්‍ය බව විශ්වාසද?"
-    startover_body: "මෙය ඔබගේ ප්‍රෙහෙලිකාව යලි පටන්ගත් තත්වයටම පත් කරයි. එමෙන්ම ඔබ
-      එකතු කිරීම හෝ වෙනස් කර සියලුම දත්ත නැවත සකස් කරනු ඇත."
-    startover_ok: "මුල සිට නැවත අරඹන්න"
-    startover_cancel: "අවලංගු කරන්න"
+    ok: හරි
+    startover_title: නැවත මුල සිට ආරම්භ කිරීමට අවශ්‍ය බව විශ්වාසද?
+    startover_body: මෙය ඔබගේ ප්‍රෙහෙලිකාව යලි පටන්ගත් තත්වයටම පත් කරයි. එමෙන්ම ඔබ
+      එකතු කිරීම හෝ වෙනස් කර සියලුම දත්ත නැවත සකස් කරනු ඇත.
+    startover_ok: මුල සිට නැවත අරඹන්න
+    startover_cancel: අවලංගු කරන්න
   time:
-    hour: "පැයක්"
-    day: "දිනය"
-    week: "සතිය"
+    hour: පැයක්
+    day: දිනය
+    week: සතිය
   age_interstitial:
-    age: "ඔබගේ වයස"
-    header: "ගිණුම් තොරතුරු යාවත්කාලීන කිරීම"
-    message: "ඔබගේ පෞද්ගලිකත්වය මෙම වෙබ් අඩවිය තුල ආරක්ශා කර ගැනීම සඳහා අප විසින්
-      තව දුරටත් අපගේ ආරක්ශණ ක්‍රමවේද වැඩිදියුණු කරමින් පවතී. එම නිසා මෙම වෙබ් අඩවිය
-      භාවිත කරන්නන් හට ඔවුන්ගේ වයස මෙයට ඇතුලත් කිරීමට සිදුවේ. <br/>සුපුරුදු පරිදි
-      ඔබගේ කිසිම තොරතුරක් වෙනත් කිසිම පාර්ශවයන් වෙත ලබා නොදේ."
+    age: ඔබගේ වයස
+    header: ගිණුම් තොරතුරු යාවත්කාලීන කිරීම
+    message: ඔබගේ පෞද්ගලිකත්වය මෙම වෙබ් අඩවිය තුල ආරක්ශා කර ගැනීම සඳහා අප විසින් තව
+      දුරටත් අපගේ ආරක්ශණ ක්‍රමවේද වැඩිදියුණු කරමින් පවතී. එම නිසා මෙම වෙබ් අඩවිය භාවිත
+      කරන්නන් හට ඔවුන්ගේ වයස මෙයට ඇතුලත් කිරීමට සිදුවේ. <br/>සුපුරුදු පරිදි ඔබගේ කිසිම
+      තොරතුරක් වෙනත් කිසිම පාර්ශවයන් වෙත ලබා නොදේ.
     sign_out: ඔබට ඔබගේ වයස ඉදිරිපත් කල නොහැකි නම් <a href="%{url}">ඉවත් විය</a> හැක.
   terms_interstitial:
-    title: "යාවත්කාලීන කරන ලද සේවා කොන්දේසි සහ පෞද්ගලිකත්වය සුරැකීමේ ප්‍රතිපත්ති"
-    intro_desc: "පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු
+    title: යාවත්කාලීන කරන ලද සේවා කොන්දේසි සහ පෞද්ගලිකත්වය සුරැකීමේ ප්‍රතිපත්ති
+    intro_desc: පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු
       24 සිට මේවා ක්‍රියාත්මක වනු ඇත. සැලකිය යුතු වෙනසක් වන්නේ අප තවදුරටත් සිසුන්ගේ
       ඊ මේල් ලිපින ගබඩා කරගෙන නොතබාගැනීමයි. අධ්‍යාපනයේදි සිසුන්ගේ පෞද්ගලිකත්වය ආරක්ශා
       කිරීමේ එක් වැදගත් පියවරක් ලෙස අප මෙය සලකනු ලබනවා. අනෙකුත් වෙනස් වීම් වල සාරාංශයක්
-      ඔබ වෙත ඊ මේල් එකකින් එවා ඇත."
-    intro_instructions: "කෝඩ් ස්ටුඩියෝ තුල ඇති නවතම සහ සියලුම පහසුකම් ලබා ගැනීමට නම්
+      ඔබ වෙත ඊ මේල් එකකින් එවා ඇත.
+    intro_instructions: කෝඩ් ස්ටුඩියෝ තුල ඇති නවතම සහ සියලුම පහසුකම් ලබා ගැනීමට නම්
       ඔබට අවුරුදු 13න් පහල සිසුන් වෙනුවෙන් නව කොන්දේසි වෙත එකඟ වීමට සිදු වනු ඇත. අවුරුදු
       13න් පහල සිසුන් ලියාපදිංචි කිරීමේදි ඔබට ඒ සඳහා ඔවුන්ගේ දෙමාපිය අනුමැතිය තිබිය
       යුතු අතර, සිසුන්ගේ පෞද්ගලික තොරතුරු භාවිතා කරන්නේ ඔබේ පාසලේ සුභ සිද්ධිය හා වෙනත්
-      අධ්‍යාපන කටයුතු සඳහා පමණක් බවට ඔබ විසින් සහතික විය යුතු වේ."
-    tos: "සේවා නියම"
-    privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
-    privacy_notice: "රහස්‍යතා නිවේදනය"
+      අධ්‍යාපන කටයුතු සඳහා පමණක් බවට ඔබ විසින් සහතික විය යුතු වේ.
+    tos: සේවා නියම
+    privacy: රහස්‍යතා ප්‍රතිපත්තිය
+    privacy_notice: රහස්‍යතා නිවේදනය
     accept_label: යාවත්කාලීන කරන්න එකඟයි<a href="%{tos_url}" target="_blank">සේවා
       නියම<a href="%{privacy_url}" target="_blank">රහස්‍යතා ප්‍රතිපත්තිය</a>
-    accept: "පිළිගන්න"
-    print: "මුද්‍රණය කරන්න"
+    accept: පිළිගන්න
+    print: මුද්‍රණය කරන්න
     reminder_desc: අප අපගේ <a href="%{tos_url}" target="_blank">සේවා කොන්දේසි</a>සහ<a
       href="%{privacy_url}" target="_blank">රහස්‍ය ප්‍රතිපත්ති</a> යාවත්කාලින කර ඇත.
       ඒවා පිළිගැනීමට පෙර හොදින් කියවා බලන්න. නිශ්චිතව අපගේ යාවත්කාලින කිරීමේ කොන්දේසි
       පිළිපදින තෙක් ඔබගේ සිසුවාට JavaScript ඉගැන්වීමේ අපගේ උපාංග නොලැබිය හැකි බව සලකන්න.
-    review_terms: "යාවත්කාලීන නියම සමාලෝචනය කරන්න"
+    review_terms: යාවත්කාලීන නියම සමාලෝචනය කරන්න
   school_info_interstitial:
     title: We want to bring Computer Science to every student - help us track our
       progress!
     message: Please enter your school information below.
     message_with_suggestion: Please verify that the following information is correct,
       or update as necessary.
-    save: "සුරකින්න"
+    save: සුරකින්න
   race_interstitial:
-    title: "විකල්ප: පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිධත්වය වර්ධනය කිරීමට අප දරන ප්‍රයත්නයේ
-      ප්‍රගතිය මැනීමට අපට උදව් කරන්න"
-    message: "ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)"
+    title: 'විකල්ප: පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිධත්වය වර්ධනය කිරීමට අප දරන ප්‍රයත්නයේ
+      ප්‍රගතිය මැනීමට අපට උදව් කරන්න'
+    message: ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)
     races:
-    - white: "සුදු ජාතික"
-    - black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
-    - hispanic: "ලතින් ඇමරිකානු"
-    - asian: "ආසියානු"
-    - hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
-    - american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
-    - other: "වෙනත්"
-    - opt_out: "පිළිතුරු දීමට අකැමතියි"
-    submit: "යොමු කරන්න"
-    decline: "වසන්න"
+    - white: සුදු ජාතික
+    - black: අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත
+    - hispanic: ලතින් ඇමරිකානු
+    - asian: ආසියානු
+    - hawaiian: හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී
+    - american_indian: ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික
+    - other: වෙනත්
+    - opt_out: පිළිතුරු දීමට අකැමතියි
+    submit: යොමු කරන්න
+    decline: වසන්න
   zendesk_too_young_message: සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign
     in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing
     in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.
   progress:
-    not_started: "ආරම්භ වී නැත"
-    in_progress: "ප්‍රගතියේ ඇත"
-    completed_too_many_blocks: "සම්පූර්ණයි, කැබලි ගණන වැඩියි"
-    completed_perfect: "සාර්ථකව සම්පූර්ණ කර ඇත"
-    furthest_level_attempted: "දුරතම මට්ටමට උත්සාහ කර ඇත"
-    assessment: "ඇගයුම්"
-    submitted: "ඉදිරිපත් කලා"
+    not_started: ආරම්භ වී නැත
+    in_progress: ප්‍රගතියේ ඇත
+    completed_too_many_blocks: සම්පූර්ණයි, කැබලි ගණන වැඩියි
+    completed_perfect: සාර්ථකව සම්පූර්ණ කර ඇත
+    furthest_level_attempted: දුරතම මට්ටමට උත්සාහ කර ඇත
+    assessment: ඇගයුම්
+    submitted: ඉදිරිපත් කලා
   studio:
-    courses_working_on: "ඔබේ පාඨමාලා"
-    completed_courses: "සම්පූර්ණ කරන ලද පාඨමාලා"
-    all_courses: "සියලුම පාඨමාලා"
+    courses_working_on: ඔබේ පාඨමාලා
+    completed_courses: සම්පූර්ණ කරන ලද පාඨමාලා
+    all_courses: සියලුම පාඨමාලා
   project:
-    projects: "ව්යාපෘති"
-    create: "ව්යාපෘති නිර්මාණය"
-    create_a_project: "නව ව්යාපෘතියක් සාදන්න:"
-    new: "අලුතෙන් තනන්න"
-    rename: "නැවත නම් කරන්න"
-    save: "සුරකින්න"
-    delete: "මකන්න"
+    projects: ව්යාපෘති
+    create: ව්යාපෘති නිර්මාණය
+    create_a_project: 'නව ව්යාපෘතියක් සාදන්න:'
+    new: අලුතෙන් තනන්න
+    rename: නැවත නම් කරන්න
+    save: සුරකින්න
+    delete: මකන්න
     import: Import
     share_link_import_bad_link_header: Share link not recognized
     share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
@@ -1006,96 +1004,95 @@
     share_link_import_error_header: Something went wrong.
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
-    exit: "පාඨමාලාව වෙත ආපසු යන්න"
-    my_projects: "මගේ ව්යාපෘති"
-    project_gallery: "ව්යාපෘති"
+    exit: පාඨමාලාව වෙත ආපසු යන්න
+    my_projects: මගේ ව්යාපෘති
+    project_gallery: ව්යාපෘති
     publish: Publish
     unpublish: Unpublish
-    share: "බෙදා ගන්න"
-    share_title: "ඔබගේ ව්යාපෘතිය බෙදාහරින්න"
-    share_copy_link: "මෙම සබැඳිය පිටපත් කරගන්න:"
-    share_embed_description: "ඔබට වෙබ් පිටුවක් මත මෙම ව්‍යාපෘතිය ප්‍රදර්ශනය කිරීමට,
-      මෙහිදී embed කේතය HTML වෙබ් පිටුවක් මත පේස්ට් කළ හැකියි."
-    share_u13_warning: "බෙදාහැරීමට පෙර ඔබේ ගුරුවරයාගෙන් උපදෙස් ගන්න. ඔබේ පාසැලේ අනිත්
-      අය සමඟ පමණක් බෙදාගන්න."
-    embed: "ඇතුල් කරන්න"
-    advanced_share: "උසස් විකල්ප පෙන්වන්න"
+    share: බෙදා ගන්න
+    share_title: ඔබගේ ව්යාපෘතිය බෙදාහරින්න
+    share_copy_link: 'මෙම සබැඳිය පිටපත් කරගන්න:'
+    share_embed_description: ඔබට වෙබ් පිටුවක් මත මෙම ව්‍යාපෘතිය ප්‍රදර්ශනය කිරීමට,
+      මෙහිදී embed කේතය HTML වෙබ් පිටුවක් මත පේස්ට් කළ හැකියි.
+    share_u13_warning: බෙදාහැරීමට පෙර ඔබේ ගුරුවරයාගෙන් උපදෙස් ගන්න. ඔබේ පාසැලේ අනිත්
+      අය සමඟ පමණක් බෙදාගන්න.
+    embed: ඇතුල් කරන්න
+    advanced_share: උසස් විකල්ප පෙන්වන්න
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
-    close: "වසන්න"
-    more: "තවදුරටත්"
-    name: "නම"
-    updated: "යාවත් කාලීන"
-    project_type: "ව්යාපෘති වර්ගය"
-    help_text: "ක්ලික් <strong>යෙදුම සකසන්න</strong>හෝ<strong>යමක් අඳින්න</strong>නව
-      ව්යාපෘතියක් ආරම්භ කරන්න<br/>. නැවත පැමිණ වැඩ ආරම්බ කල හැක."
-    need_help: "ඔබේ නව ව්‍යාපෘතිය සඳහා උපදෙස් ලබාගැනීමට මෙම පාඨමාලා උත්සාහ කර බලන්න"
+    close: වසන්න
+    more: තවදුරටත්
+    name: නම
+    updated: යාවත් කාලීන
+    project_type: ව්යාපෘති වර්ගය
+    help_text: ක්ලික් <strong>යෙදුම සකසන්න</strong>හෝ<strong>යමක් අඳින්න</strong>නව
+      ව්යාපෘතියක් ආරම්භ කරන්න<br/>. නැවත පැමිණ වැඩ ආරම්බ කල හැක.
+    need_help: ඔබේ නව ව්‍යාපෘතිය සඳහා උපදෙස් ලබාගැනීමට මෙම පාඨමාලා උත්සාහ කර බලන්න
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
-    really_delete: "මකනවා ද?"
-    delete_yes: "ඔව්"
-    delete_no: "නැහැ"
-    saved: "ගැලරියට සුරකින් ලදී!"
-    not_saved: "ගබඩා වුනේ නැත"
-    cancel: "අවලංගු කරන්න"
-    delete_confirm_title: "මෙම ව්‍යාපෘතිය ඉවත් කිරීමට අවශ්‍ය බව ඔබට විශ්වාස ද?"
-    delete_confirm_text: "මැකිම මගින් ව්යාපෘතිය ස්ථිරවම ඔබගේ ව්යාපෘති ලැයිස්තුවෙන්
-      ඉවත්වේ. සබැදිය බෙදා ගත් පසු තවදුරටත් ව්යාපෘතිය බලන්න නොහැක."
-    view_all: "මගේ ව්යාපෘති බලන්න"
-    remix: "නැවත සංකලනය"
+    really_delete: මකනවා ද?
+    delete_yes: ඔව්
+    delete_no: නැහැ
+    saved: ගැලරියට සුරකින් ලදී!
+    not_saved: ගබඩා වුනේ නැත
+    cancel: අවලංගු කරන්න
+    delete_confirm_title: මෙම ව්‍යාපෘතිය ඉවත් කිරීමට අවශ්‍ය බව ඔබට විශ්වාස ද?
+    delete_confirm_text: මැකිම මගින් ව්යාපෘතිය ස්ථිරවම ඔබගේ ව්යාපෘති ලැයිස්තුවෙන්
+      ඉවත්වේ. සබැදිය බෙදා ගත් පසු තවදුරටත් ව්යාපෘතිය බලන්න නොහැක.
+    view_all: මගේ ව්යාපෘති බලන්න
+    remix: නැවත සංකලනය
     click_to_remix: ඔබේම නව සංස්කරණයක් නිර්මාණය කිරීමට "Remix" මත ක්ලික් කරන්න!
-    edit_project: "ව්යාපෘතිය සංස්කරණය කරන්න"
+    edit_project: ව්යාපෘතිය සංස්කරණය කරන්න
     sharing_disabled: Sorry, this project is not available for sharing. If this is
       your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
       in</a> to your account to view the project.
     abuse:
-      tos: "මෙම ව්‍යාපෘතිය විසින් <a href='http://code.org/tos'>සේවා කොන්දේසි</a>
-        කඩ කිරීම පිලිබඳ වාර්තා වී ඇත. එම නිසා බෙදාගත නොහැකිය."
-      policy_violation: "වෙනත් අය සමග බෙදා ගත නොහැකි තොරතුරු මෙම ව්‍යාපෘතියේ ඇතුලත්
-        ව ඇත. මෙම ගැටලුව විසඳා ගැනීමට මෙහි අයිතිකරු ව විමසන්න."
-      contact_us: "දෝශයක් නම්,කරුණාකර <a href='https://code.org/contact'>සම්මබන්ද
-        කරගන්න</a>"
-      go_to_code_studio: "කොඩ් ස්ටුඩියො වෙත යන්න"
+      tos: මෙම ව්‍යාපෘතිය විසින් <a href='http://code.org/tos'>සේවා කොන්දේසි</a> කඩ
+        කිරීම පිලිබඳ වාර්තා වී ඇත. එම නිසා බෙදාගත නොහැකිය.
+      policy_violation: වෙනත් අය සමග බෙදා ගත නොහැකි තොරතුරු මෙම ව්‍යාපෘතියේ ඇතුලත්
+        ව ඇත. මෙම ගැටලුව විසඳා ගැනීමට මෙහි අයිතිකරු ව විමසන්න.
+      contact_us: දෝශයක් නම්,කරුණාකර <a href='https://code.org/contact'>සම්මබන්ද කරගන්න</a>
+      go_to_code_studio: කොඩ් ස්ටුඩියො වෙත යන්න
       report_abuse_form:
-        intro: "ඔබ විසින් කෝඩ් ස්ටුඩියෝ තුලින් නිර්මාණය කරන ලද කිසියම් නිර්මාණයක්
-          හේතු වන පරිදි ඔබට හිරිහැර කිරීමක්, තර්ජනය කිරීමක්, පිටපත් හිමිකම් කඩ කිරීමක්
+        intro: ඔබ විසින් කෝඩ් ස්ටුඩියෝ තුලින් නිර්මාණය කරන ලද කිසියම් නිර්මාණයක් හේතු
+          වන පරිදි ඔබට හිරිහැර කිරීමක්, තර්ජනය කිරීමක්, පිටපත් හිමිකම් කඩ කිරීමක්
           සිදු වුණි නම් කරුණාකර පහත සඳහන් තොරතුරු සම්පූර්ණ කර අප වෙත එවීමට සලස්වන්න.
           අප මෙවැනි සිදුවීම් අනුමත නොකරන අතර හැකි ඉක්මනින් මේ සඳහා සුදුසු පියවරක්
-          ගන්නා ලෙස දැනුම් දෙමු."
+          ගන්නා ලෙස දැනුම් දෙමු.
         validation:
-          email: "කරුණාකර ඊ-තැපැල් ලිපිනයක් ලබා දෙන්න"
-          age: "වයස් සඳහන් කරන්න"
-          abuse_type: "මෙහි සේවා සහ කොන්දේසි මෙම අන්තර්ගතය තුලින් උල්ලංඝනය වන ආකාරය
-            පිළිබද කරුණාකර පිළිතුරු සපයන්න"
-          abuse_detail: "ඔබ වාර්තා කරන කොටස පිලිබඳ තොරතුරු කරුණාකර ලබා දෙන්න"
-        abusive_url: "වාර්තා කල යුතු කොටසේ වෙබ් ලිපිනය"
+          email: කරුණාකර ඊ-තැපැල් ලිපිනයක් ලබා දෙන්න
+          age: වයස් සඳහන් කරන්න
+          abuse_type: මෙහි සේවා සහ කොන්දේසි මෙම අන්තර්ගතය තුලින් උල්ලංඝනය වන ආකාරය
+            පිළිබද කරුණාකර පිළිතුරු සපයන්න
+          abuse_detail: ඔබ වාර්තා කරන කොටස පිලිබඳ තොරතුරු කරුණාකර ලබා දෙන්න
+        abusive_url: වාර්තා කල යුතු කොටසේ වෙබ් ලිපිනය
         abuse_type:
-          question: "කොහොමද මේ අන්තර්ගතය %{link_start}සේවා කොන්දේසි%{link_end} උල්ලංඝනය
-            කරන්නේ?"
-          harassment: "තර්ජන, සයිබර් දාමරිකම්, හිරිහැර කිරීම්"
-          offensive: "අහිතකර අන්තර්ගතය"
-          infringement: "හිමිකම් උල්ලංඝනයක්"
-          other: "වෙනත්"
-        detail: "ඔබ වාර්තා කරන අන්තර්ගතය සම්බන්ධයෙන් හැකි තරම් විස්තර ලබා දෙන්න."
-        acknowledge: "මෙම තොරතුරු ඉදිරිපත් කිරීම මඟින්, ඔබ එහි ඇති %{link_start_privacy}රහස්‍යතා
+          question: කොහොමද මේ අන්තර්ගතය %{link_start}සේවා කොන්දේසි%{link_end} උල්ලංඝනය
+            කරන්නේ?
+          harassment: තර්ජන, සයිබර් දාමරිකම්, හිරිහැර කිරීම්
+          offensive: අහිතකර අන්තර්ගතය
+          infringement: හිමිකම් උල්ලංඝනයක්
+          other: වෙනත්
+        detail: ඔබ වාර්තා කරන අන්තර්ගතය සම්බන්ධයෙන් හැකි තරම් විස්තර ලබා දෙන්න.
+        acknowledge: මෙම තොරතුරු ඉදිරිපත් කිරීම මඟින්, ඔබ එහි ඇති %{link_start_privacy}රහස්‍යතා
           ප්‍රතිපත්තිය%{link_end} සහ %{link_start_tos}සේවා කොන්දේසි%{link_end} අනුව
-          කටයුතු කරනු ඇත."
+          කටයුතු කරනු ඇත.
   peer_review:
     accepted:
-      name: "පිළිගත්තා"
+      name: පිළිගත්තා
       description: "<strong>ඔව්</strong>, මෙම ඉදිරිපත් කිරීම එහි අවශ්‍යතා වලට <strong>අනුකූලයි</strong>"
     rejected:
-      name: "ප්රතික්දෂේපිත"
+      name: ප්රතික්දෂේපිත
       description: "<strong>නැ ත</strong>, මෙම ඉදිරිපත් කිරීම එහි අවශ්‍යතා වලට <strong>අනුකූල
         නැත</strong>"
     escalated:
-      name: "උත්සන්න වුනා"
-      description: "මම උපදේශකයෙකුට මේ ඉදිරිපත් කිරීම සමාලෝචනය කිරීමට කැමතී"
-    instructor_feedback: "උපදේශක ප්රතිචාර"
-    peer_feedback: "සමූහ ප්‍රතිචාර"
-    outdated: "කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී"
-    review_in_progress: "සමාලෝචනයට සූදානම්"
+      name: උත්සන්න වුනා
+      description: මම උපදේශකයෙකුට මේ ඉදිරිපත් කිරීම සමාලෝචනය කිරීමට කැමතී
+    instructor_feedback: උපදේශක ප්රතිචාර
+    peer_feedback: සමූහ ප්‍රතිචාර
+    outdated: කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී
+    review_in_progress: සමාලෝචනයට සූදානම්
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
     review_count: You must complete %{review_count} reviews for this unit
@@ -1103,12 +1100,12 @@
     no_reviews_at_this_moment_notice: There are no peer reviews available at this
       moment, please check back soon
     review_submitted: Your peer review was submitted
-    review_new_submission: "අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න"
+    review_new_submission: අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න
   flex_category:
-    required: "දළ විශ්ලේෂණය"
-    content: "අන්තර්ගතය"
-    practice: "ඉගැන්වීමේ පිළිවෙත්"
-    peer_review: "සමූහ විමර්ශනය"
+    required: දළ විශ්ලේෂණය
+    content: අන්තර්ගතය
+    practice: ඉගැන්වීමේ පිළිවෙත්
+    peer_review: සමූහ විමර්ශනය
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
@@ -1145,18 +1142,18 @@
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
     dlp: Reflection Prompts
   external_links:
-    disclaimer: "වියාචනය"
-    leaving_domain: "දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි."
-    disclaimer_text: "මෙම වෙබ් අඩවියේ Code.org හි පෞද්ගලිකත්වය පිලිබඳ ප්‍රතිපත්තියෙන්
+    disclaimer: වියාචනය
+    leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.
+    disclaimer_text: මෙම වෙබ් අඩවියේ Code.org හි පෞද්ගලිකත්වය පිලිබඳ ප්‍රතිපත්තියෙන්
       වෙනස් වූ ප්‍රතිපත්ති තිබීමට පුලුවන්. අප මෙම වෙනත් වෙබ් අඩවි තෝරාගෙන තිබෙන්නේ
       ඒවා ඔබට ප්‍රයෝජනවත් විය හැකි බැවින් ය. නමුත් අපි එම වෙබ් අඩවි වල අන්තර්ගතය පිලිබඳව
       වග කියන්නේ නැත. කරුණාකර එම වෙබ් අඩවි වෙත යා නොහැකි නම් හෝ ඒවා පිලිබඳව ගැටලුවක්
-      තිබේ නම් <a href='%{support_url}'>විමසන්න.</a>"
+      තිබේ නම් <a href='%{support_url}'>විමසන්න.</a>
   hoc_download:
-    title: "පැයක කේතයේ බාගැනීම්"
-    capsule_title: "ඔබට අන්තර්ජාල තියෙනවද?"
+    title: පැයක කේතයේ බාගැනීම්
+    capsule_title: ඔබට අන්තර්ජාල තියෙනවද?
     capsule_desc: අන්තර්ජාලයේ ඇති <a href="%{url}">%{app_name}</a> භාවිත කරන්න.
-    instructions_headline: "අන්තර්ජාලය නොමෑතිද?"
+    instructions_headline: අන්තර්ජාලය නොමෑතිද?
     instructions: 'ගුරුවරුන් වෙත උපදෙස්: ඔබගේ අන්තර්ජාල සම්බන්ධතාවය ප්‍රමාණවත් නොවේනම්
       මෙම පාඩම් සියල්ල බාගත කරගෙන අන්තර්ජාලය නොමැතිව භාවිතා කර හැක. ඒ සඳහා ඔබගේ භාශාව
       සහ මෙහෙයුම් පද්ධතිය තෝරාගෙන ඒවා ඔබගේ පරිගණක වල ස්ථාපනය කරගන්න. ඔබට මේ සඳහා පෙන්
@@ -1166,8 +1163,8 @@
     minecraft_name: Minecraft Hour of Code
     starwars_blocks_name: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම (කොටස්)'
     starwars_javascript_name: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
-    download_message: "අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න
-      (136MB)"
+    download_message: අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න
+      (136MB)
     download_in_Albanian: 'Download in Albanian:'
     download_in_Arabic: 'Download in Arabic:'
     download_in_Azerbaijani: 'Download in Azerbaijani:'
@@ -1210,8 +1207,8 @@
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: "ජනේලය"
-    mac: "මැක් OS X"
+    windows: ජනේලය
+    mac: මැක් OS X
   plc:
     preview_assignments:
       content_focus_header: Content Focus Area
@@ -1225,15 +1222,15 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: "මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි
+  locked_stage: මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි
     වැඩ කිරමට පටන්ගත් විට හෝ ඔබගේ පිළිතුරු සමාලෝචනය කිරීමට අවශ්‍ය වූ අවස්ථාවේදී ඔබගේ
-    ගුරුවරයාට එය අගුල් ඇරිය හැක."
-  hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ
-    ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+    ගුරුවරයාට එය අගුල් ඇරිය හැක.
+  hidden_stage: ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ
+    ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න.
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: "ඒකක දළ විශ්ලේෂණයට යන්න"
+  return_course_overview: ඒකක දළ විශ්ලේෂණයට යන්න
   view_all_units: View all units
   pd:
     survey:

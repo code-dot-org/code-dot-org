@@ -47,10 +47,10 @@
         contul tău este blocat.
       signed_up_but_unconfirmed: Un mesaj cu un link de confirmare a fost trimis la
         adresa ta de email. Te rugăm să accesezi link-ul pentru a îți activa contul.
-      update_needs_confirmation: "Ți-ai actualizat contul cu succes, dar noi trebuie
+      update_needs_confirmation: Ți-ai actualizat contul cu succes, dar noi trebuie
         sa verificăm noua ta adresa de email. Te rugăm să îți verifici emailul și
-        să dai click pe linkul de confirmare pentru a finaliza modificarea adresei."
-      updated: "Ți-ai actualizat contul cu succes."
+        să dai click pe linkul de confirmare pentru a finaliza modificarea adresei.
+      updated: Ți-ai actualizat contul cu succes.
     sessions:
       signed_in: "[șir gol]"
       signed_out: Te-ai delogat cu succes.

@@ -6,36 +6,36 @@
         text: hour of code වැඩසටහන සදහා ඔබව සාදරයෙන් පිළිගනිමු.
       2:
         image: notes/hoc1_2.jpg
-        text: "අපිට Blockly වැඩසටහන යොදාගතහැකවෙනවා, දෘශ්‍ය ක්‍රමලේකන භාෂා වල කේත ලිවීමට
-          ඇති තැන වලට අදගේනවිත් අත්හෙරිමට."
+        text: අපිට Blockly වැඩසටහන යොදාගතහැකවෙනවා, දෘශ්‍ය ක්‍රමලේකන භාෂා වල කේත ලිවීමට
+          ඇති තැන වලට අදගේනවිත් අත්හෙරිමට.
       3:
         image: notes/hoc1_3.jpg
-        text: "බොහෝ කේත ලියා ඇති අතර, Blockly වැඩසටහන දෘශ්‍ය වේ. සෑම අච්චුවක්ම කේතනයක
-          එක් තීරුවකට අනුරුප වේ."
+        text: බොහෝ කේත ලියා ඇති අතර, Blockly වැඩසටහන දෘශ්‍ය වේ. සෑම අච්චුවක්ම කේතනයක
+          එක් තීරුවකට අනුරුප වේ.
       4:
         image: notes/hoc1_4.jpg
-        text: "පරිගණක විද්‍යාවේ මූලිකාංග ඔස්සේ, ඔබට පරිගණක යෙදුම් නිර්මාණයේ සිට අඟහරු
-          මත ඇති රෝවර් යානය පාලනය කිරීමට අවශ්‍ය සංකල්ප දක්වා ඉගෙනගත හැකියි."
+        text: පරිගණක විද්‍යාවේ මූලිකාංග ඔස්සේ, ඔබට පරිගණක යෙදුම් නිර්මාණයේ සිට අඟහරු
+          මත ඇති රෝවර් යානය පාලනය කිරීමට අවශ්‍ය සංකල්ප දක්වා ඉගෙනගත හැකියි.
       5:
         image: notes/hoc1_5.jpg
-        text: "කරලේකනයක් යනු ඔබගේ පරිගණකයට අනුගමනය කිරිමටදෙන උපදෙස් මාලාවක් වේ."
+        text: කරලේකනයක් යනු ඔබගේ පරිගණකයට අනුගමනය කිරිමටදෙන උපදෙස් මාලාවක් වේ.
       6:
         image: notes/hoc1_6.jpg
-        text: "ඔබගේ පළමු ක්‍රමලේකනයේ අරමුණ වන්නේ වන්කගිරියකින් Angry Bird කුරුල්ලෙක්
-          ගෙන කොළ පැහැති උරෙකුට ප්‍රහාරය එල්ල කිරීමයි."
+        text: ඔබගේ පළමු ක්‍රමලේකනයේ අරමුණ වන්නේ වන්කගිරියකින් Angry Bird කුරුල්ලෙක්
+          ගෙන කොළ පැහැති උරෙකුට ප්‍රහාරය එල්ල කිරීමයි.
       7:
         image: notes/hoc1_7.jpg
-        text: "වම අත පැත්තේ ඇති වන්කගිරියෙහි ඔබගේ වැඩසටහන ක්‍රියාත්මක වේ. සැම ප්‍රෙහෙලිකාවක්
-          සදහාම උපදෙස් වන්කගිරියට යටින් පෙන්වා ඇත."
+        text: වම අත පැත්තේ ඇති වන්කගිරියෙහි ඔබගේ වැඩසටහන ක්‍රියාත්මක වේ. සැම ප්‍රෙහෙලිකාවක්
+          සදහාම උපදෙස් වන්කගිරියට යටින් පෙන්වා ඇත.
       8:
         image: notes/hoc1_8.jpg
-        text: "මැද ඇති උපකරණ කට්ටලයෙහි Angry Bird කුරුල්ලෙක් සැදීම සදහා උපදෙස් අඩංගු
-          වේ. ඔබට ඒවා ඔබගේ කේතය සැකසීමට යොදාගත හැක."
+        text: මැද ඇති උපකරණ කට්ටලයෙහි Angry Bird කුරුල්ලෙක් සැදීම සදහා උපදෙස් අඩංගු
+          වේ. ඔබට ඒවා ඔබගේ කේතය සැකසීමට යොදාගත හැක.
       9:
         image: notes/hoc1_9.jpg
-        text: "ඔබගේ දකුණු පසින් දිස්වන්නේ ඔබේ පරිගණක වැඩසටහන නිර්මාණයට අවශ්‍ය blocks
+        text: ඔබගේ දකුණු පසින් දිස්වන්නේ ඔබේ පරිගණක වැඩසටහන නිර්මාණයට අවශ්‍ය blocks
           ඇද දැමිය හැකි අවකාශයයි. මෙසේ ඇද දැමූ block එකක් ඉවත් කිරීම සදහා කෙලවරේ ඇති
-          trash bin එකට ඇද දමන්න."
+          trash bin එකට ඇද දමන්න.
       10:
         image: notes/hoc1_10.jpg
         text: Each block is one instruction. If you drag a "move forward" block to
@@ -51,23 +51,23 @@
           කරන්න අවශ්‍ය නම්, "යළි පිහිටුවන්න" බොත්තම මත ඔබන්න.
       13:
         image: notes/hoc1_13.jpg
-        text: "එහෙනම් ගිහින් ඌරන් අල්ලමු!"
+        text: එහෙනම් ගිහින් ඌරන් අල්ලමු!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: "හයි, මම JR! සැම කාර් තරග කණ්ඩායමකටම ජයග්‍රහණය කිරීමට පරිගණක විද්යාඥයන්
-          අවශ්‍ය කරනවා. ඔවුන් කාර් රථයේ දත්ත අධ්‍යනය කර එය වේගවත්ව ගමන්ව කරන සේ සකසනවා."
+        text: හයි, මම JR! සැම කාර් තරග කණ්ඩායමකටම ජයග්‍රහණය කිරීමට පරිගණක විද්යාඥයන්
+          අවශ්‍ය කරනවා. ඔවුන් කාර් රථයේ දත්ත අධ්‍යනය කර එය වේගවත්ව ගමන්ව කරන සේ සකසනවා.
       2:
         image: notes/stage5_2.jpg
-        text: "මේ ප්‍රෙහෙළිකා වලදී, ඔබ ඔවුන් යන පිටුපසින් රේඛාවක් අදින කලා කරුවෙකු
-          බවට පත් වේවි."
+        text: මේ ප්‍රෙහෙළිකා වලදී, ඔබ ඔවුන් යන පිටුපසින් රේඛාවක් අදින කලා කරුවෙකු
+          බවට පත් වේවි.
       3:
         image: notes/stage5_3.jpg
         text: 'මෙම කොටස කියනවා" පික්සල 100කින් ඉදිරියට යොමුකරන්න." පික්සල යනු ඔබගේ
           තිරය මත ඇති සැබැවින් කුඩා තිත් වේ. '
       4:
         image: notes/stage5_4.jpg
-        text: "මෙම බ්ලොක් එක මගින් දකුණු දිශාවට අංශක 90ක් හැරවීම සිදුකරයි."
+        text: මෙම බ්ලොක් එක මගින් දකුණු දිශාවට අංශක 90ක් හැරවීම සිදුකරයි.
       5:
         image: notes/stage5_5.jpg
         text: Click on the arrow in either of these blocks to change the amount the
@@ -76,24 +76,24 @@
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: "හායි, මම Paola! මෙම ප්‍රේහෙලිකාවේදී දී, ඔබ ඇයගේ වගාබිම සම්පුර්ණයෙන්ම
-          සමතලා කර නැවත පැල සිටුවීමට හැකිවෙන සේ කසන ගොවියෙක්."
+        text: හායි, මම Paola! මෙම ප්‍රේහෙලිකාවේදී දී, ඔබ ඇයගේ වගාබිම සම්පුර්ණයෙන්ම
+          සමතලා කර නැවත පැල සිටුවීමට හැකිවෙන සේ කසන ගොවියෙක්.
       2:
         image: notes/stage9_2.jpg
-        text: "ඔබ ඇයට උදව් කරන්න සියලු කුණු ගොඩවල් ඉවත් කිරීම හා සියලු සිදුරු පිරවීමට."
+        text: ඔබ ඇයට උදව් කරන්න සියලු කුණු ගොඩවල් ඉවත් කිරීම හා සියලු සිදුරු පිරවීමට.
       3:
         image: notes/stage9_3.jpg
-        text: "මේ අලුත් බ්ලොක් එක මගින් එක් කසළ කොටසක් කසළ ගොඩින් ඉවත් කර, වලකට දැමීම
-          සිදුකරයි."
+        text: මේ අලුත් බ්ලොක් එක මගින් එක් කසළ කොටසක් කසළ ගොඩින් ඉවත් කර, වලකට දැමීම
+          සිදුකරයි.
       4:
         image: notes/stage9_4.jpg
-        text: "කසළ ගොඩවල් සහ කසළ වලවල් ප්‍රමාණයෙන් වෙනස් වේ, එම නිසා ගොවියාට සවල කීපාරක්
-          භාවිතා කළ යුතු දැයි කියන්න."
+        text: කසළ ගොඩවල් සහ කසළ වලවල් ප්‍රමාණයෙන් වෙනස් වේ, එම නිසා ගොවියාට සවල කීපාරක්
+          භාවිතා කළ යුතු දැයි කියන්න.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: "හායි, මම Katie! පරිගණක විද්‍යාව පිළිබඳ වඩාත් ආකර්ෂණීය දේවල් එක් පරිගණක
-          වැඩසටහනක් අන්තර් විය හැකිය."
+        text: හායි, මම Katie! පරිගණක විද්‍යාව පිළිබඳ වඩාත් ආකර්ෂණීය දේවල් එක් පරිගණක
+          වැඩසටහනක් අන්තර් විය හැකිය.
       2:
         image: notes/flappy02.jpg
         text: Any time somebody clicks or taps or types on a computer or phone, that
@@ -105,8 +105,8 @@
           is clicked, play a sound" '
       4:
         image: notes/flappy04.jpg
-        text: "ඔබ කවද හෝ FlappyBird ක්‍රීඩාව ගැන අසා තිබේද? තත්ව පරිපාලක බාවිතය මහින්,
-          අපි ඉගනගැනීමට යන්නේ අපේම අබිරුචිය පරිදි FlappyBird ක්‍රීඩාව කේතනය කරන ආකාරයයි!"
+        text: ඔබ කවද හෝ FlappyBird ක්‍රීඩාව ගැන අසා තිබේද? තත්ව පරිපාලක බාවිතය මහින්,
+          අපි ඉගනගැනීමට යන්නේ අපේම අබිරුචිය පරිදි FlappyBird ක්‍රීඩාව කේතනය කරන ආකාරයයි!
       5:
         image: notes/flappy05.jpg
         text: The code you'll write involves dragging and dropping blocks that represent
@@ -142,8 +142,8 @@
           times.
       2:
         image: notes/hoc2_2.jpg
-        text: "මෙම ප්‍රහේලිකාවේදි කුරුල්ලාට ඌරාව අල්ලාගැනීමට පියවර 5ක් ඉදිරියට යන්න
-          වෙනවා."
+        text: මෙම ප්‍රහේලිකාවේදි කුරුල්ලාට ඌරාව අල්ලාගැනීමට පියවර 5ක් ඉදිරියට යන්න
+          වෙනවා.
       3:
         image: notes/hoc2_3.jpg
         text: අපිට මේ සඳහා අලුත් "repeat" බ්ලොක් එක උදව් කරගන්න පුළුවන්.
@@ -169,8 +169,8 @@
           until" බ්ලොක් එකයි.
       2:
         image: notes/hoc3_2.jpg
-        text: "කුරුල්ලාට ඌරාව අල්ලගන්න කොච්චර දුරක් යන්න වෙයිද කියලා අපි දන්නේ නැතිනම්
-          මොකද කරන්නේ?"
+        text: කුරුල්ලාට ඌරාව අල්ලගන්න කොච්චර දුරක් යන්න වෙයිද කියලා අපි දන්නේ නැතිනම්
+          මොකද කරන්නේ?
       3:
         image: notes/hoc3_3.jpg
         text: If we put a "move forward" block inside the "repeat until" block, the
@@ -230,7 +230,7 @@
           checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: "බූතයින්ව ඔවුන්ට අදාල තැනට ගෙනයන්න!"
+        text: බූතයින්ව ඔවුන්ට අදාල තැනට ගෙනයන්න!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -250,7 +250,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "අපි දැන් මේ ස්ක්‍රැට් කියන ලේනාට අර පලතුරු ගෙඩිය ගන්න උදව් කරමු!"
+        text: අපි දැන් මේ ස්ක්‍රැට් කියන ලේනාට අර පලතුරු ගෙඩිය ගන්න උදව් කරමු!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -288,8 +288,8 @@
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: "හයි, මම Trina, මම වැඩකරන්නේ Pixar ආයතනයේ, මම චිත්‍රපට සමුහයක් සම්බන්දව
-          කටයුතු කර තිබෙනවා, එයට Shrek චිත්‍රපටය ද ඇතුලත් වේ."
+        text: හයි, මම Trina, මම වැඩකරන්නේ Pixar ආයතනයේ, මම චිත්‍රපට සමුහයක් සම්බන්දව
+          කටයුතු කර තිබෙනවා, එයට Shrek චිත්‍රපටය ද ඇතුලත් වේ.
       2:
         image: notes/stage11_2.jpg
         text: This is our new "counter" loop. It will perform actions over and over
@@ -315,8 +315,8 @@
           be different sizes?
       3:
         image: notes/stage15_3.jpg
-        text: "අපිට මුලු කේතයම අතින් ලියන්න පුලුවන්. නැතිනම් පරාමිති සමග ශ්‍රිතයක්
-          භාවිත කරන්නත් පුලුවන්."
+        text: අපිට මුලු කේතයම අතින් ලියන්න පුලුවන්. නැතිනම් පරාමිති සමග ශ්‍රිතයක්
+          භාවිත කරන්නත් පුලුවන්.
       4:
         image: notes/stage15_4.jpg
         text: To do this, click the blue star on the "draw a triangle" function definition.
@@ -363,7 +363,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: "සටහන් පෙන්වීම ළඟදීම පැමිණේ!"
+        text: සටහන් පෙන්වීම ළඟදීම පැමිණේ!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -446,8 +446,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: "ආයුබෝවන්! මම Chris Bosh. මම වෘත්තිමය බාස්කට්බෝල් ක්‍රීඩයෙක්. මම ඉස්කෝලේ
-          යන කාලෙදි ක්‍රමලේඛනය කර තිබෙනවා."
+        text: ආයුබෝවන්! මම Chris Bosh. මම වෘත්තිමය බාස්කට්බෝල් ක්‍රීඩයෙක්. මම ඉස්කෝලේ
+          යන කාලෙදි ක්‍රමලේඛනය කර තිබෙනවා.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -702,14 +702,14 @@
           Line to make it go up.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: "එම ස්ථානයට ළඟා වීමට අවශ්‍ය දිශාව රවුම් කර පෙන්වන්න."
+        text: එම ස්ථානයට ළඟා වීමට අවශ්‍ය දිශාව රවුම් කර පෙන්වන්න.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: Create your algorithm by gluing arrows next to the map that you're trying
           to solve. The second one it's the same but it's going down.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "මේකත් හරියට අපි කොල වලින් ඉගෙනගන්නවා වගේමයි!"
+        text: මේකත් හරියට අපි කොල වලින් ඉගෙනගන්නවා වගේමයි!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -1060,7 +1060,7 @@
           goes through each block step by step.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "ඔන්න පොඩි ගැටලුවක්. පූසාගේ රැවුල් ගස් පික්සල් 75ක් දිගයි. 25ක් නෙමෙයි."
+        text: ඔන්න පොඩි ගැටලුවක්. පූසාගේ රැවුල් ගස් පික්සල් 75ක් දිගයි. 25ක් නෙමෙයි.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -2755,7 +2755,7 @@
           react to button press events that move him around the screen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: "පියවරෙන් පියවර ඔබේ ගේම් එක තව තවත් ක්‍රියාශීලී වේ."
+        text: පියවරෙන් පියවර ඔබේ ගේම් එක තව තවත් ක්‍රියාශීලී වේ.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2916,8 +2916,8 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: "සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
-          ලදි."
+        text: සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2935,8 +2935,8 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: "සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
-          ලදි."
+        text: සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2949,7 +2949,7 @@
           a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: "දැන් ඔබට අවශ්‍ය ඕනෑම දෙයක් හදන්න පුලුවන්!"
+        text: දැන් ඔබට අවශ්‍ය ඕනෑම දෙයක් හදන්න පුලුවන්!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2976,8 +2976,8 @@
           below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
-          කේත කොටසක් වෙනවා."
+        text: මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා.
       6:
         image: notes/gumball_intro_6.JPG
         text: The white space on the right is called the work space and this is where
@@ -3060,8 +3060,8 @@
           below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
-          කේත කොටසක් වෙනවා."
+        text: මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා.
       6:
         image: notes/iceage_intro_6.JPG
         text: The white space on the right is called the work space and this is where

@@ -9,10 +9,10 @@ module Api::V1::Pd
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
 
-    # GET /api/v1/pd/applications?regional_partner_filter=:regional_partner_filter
-    # :regional_partner_filter can be "all", "none", or a regional_partner_id
+    # GET /api/v1/pd/applications?regional_partner_value=:regional_partner_value
+    # :regional_partner_value can be "all", "none", or a regional_partner_id
     def index
-      regional_partner_filter = params[:regional_partner_filter]
+      regional_partner_value = params[:regional_partner_value]
       application_data = empty_application_data
 
       ROLES.each do |role|
@@ -21,10 +21,10 @@ module Api::V1::Pd
           select(:status, "count(locked_at) AS locked, count(id) AS total").
           group(:status)
 
-        if regional_partner_filter == REGIONAL_PARTNERS_NONE
+        if regional_partner_value == REGIONAL_PARTNERS_NONE
           apps = apps.where(regional_partner_id: nil)
-        elsif regional_partner_filter && regional_partner_filter != REGIONAL_PARTNERS_ALL
-          apps = apps.where(regional_partner_id: regional_partner_filter)
+        elsif regional_partner_value && regional_partner_value != REGIONAL_PARTNERS_ALL
+          apps = apps.where(regional_partner_id: regional_partner_value)
         end
 
         apps.group(:status).each do |group|
@@ -53,8 +53,8 @@ module Api::V1::Pd
       role = params[:role].to_sym
       applications = get_applications_by_role(role)
 
-      unless params[:regional_partner_filter].blank? || params[:regional_partner_filter] == 'all'
-        applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
+      unless params[:regional_partner_value].blank? || params[:regional_partner_value] == 'all'
+        applications = applications.where(regional_partner_id: params[:regional_partner_value] == 'none' ? nil : params[:regional_partner_value])
       end
 
       respond_to do |format|
@@ -78,14 +78,14 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner
+    # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
       role = params[:role]
-      regional_partner_filter = params[:regional_partner_filter]
+      regional_partner_value = params[:regional_partner_value]
       applications = get_applications_by_role(role.to_sym).where(status: ['accepted', 'withdrawn'])
 
-      unless regional_partner_filter.nil? || regional_partner_filter == 'all'
-        applications = applications.where(regional_partner_id: regional_partner_filter == 'none' ? nil : regional_partner_filter)
+      unless regional_partner_value.nil? || regional_partner_value == 'all'
+        applications = applications.where(regional_partner_id: regional_partner_value == 'none' ? nil : regional_partner_value)
       end
 
       serializer =
@@ -149,10 +149,13 @@ module Api::V1::Pd
         JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
 
-      if application_data[:regional_partner_filter] == REGIONAL_PARTNERS_NONE
-        application_data[:regional_partner_filter] = nil
+      if application_data[:regional_partner_value] == REGIONAL_PARTNERS_NONE
+        application_data[:regional_partner_value] = nil
       end
-      application_data["regional_partner_id"] = application_data.delete "regional_partner_filter"
+
+      if application_data.key? :regional_partner_value
+        application_data["regional_partner_id"] = application_data.delete "regional_partner_value"
+      end
 
       application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
 
@@ -211,7 +214,7 @@ module Api::V1::Pd
       params.require(:application).permit(
         :status,
         :notes,
-        :regional_partner_filter,
+        :regional_partner_value,
         :response_scores,
         :pd_workshop_id,
         :fit_workshop_id

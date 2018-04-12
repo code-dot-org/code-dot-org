@@ -36,7 +36,7 @@
         error:
           future: nem lehet a jövőben
   hello: Helló világ
-  welcome_back: "Üdv újra, %{name}"
+  welcome_back: Üdv újra, %{name}
   your_professional_learning_plan: Saját Profi Tanulmányi Terv
   see_your_learning_plan: Tekintsd meg a tanulmányi tervedet
   submit: Elküldés
@@ -58,7 +58,7 @@
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
-    submit: "Írja le a véleményét"
+    submit: Írja le a véleményét
   appname: Code.org
   stage: szakasz
   stage_number: Szint %{number}
@@ -136,7 +136,7 @@
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú
     taken_username: Felhasználónév már foglalt
-    valid_password: "Érvényes jelszó!"
+    valid_password: Érvényes jelszó!
     invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
     student_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
@@ -163,7 +163,7 @@
     homeschool: Homeschool
     after_school: After School
     other: Egyéb
-    state: "Állam"
+    state: Állam
     district: Kerület
     other_district_not_listed: Más, fel nem sorolt kerület
     district_name: Kerület neve
@@ -186,12 +186,12 @@
     try_hoc: Először próbáld meg a Kódolás Óráját
     try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
   signinsection:
-    welcome: "Üdvözlünk itt: %{section_name}"
+    welcome: 'Üdvözlünk itt: %{section_name}'
     name: Válaszd ki a neved
     picture: Keress egy titkos képet
-    words: "Írd be a titkos szavaidat"
+    words: Írd be a titkos szavaidat
     login: Bejelentkezés
-    invalid_login: "Érvénytelen bejelentkezés, kérjük próbáld meg újra"
+    invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
     pair_programming: Van egy társam a számítógépnél
     student_privacy: Tudjon meg többet, hogy miért nem jelenik meg a teljes neve <a
       href='%{student_privacy_blog}' target='_blank'> itt</a>.
@@ -208,7 +208,7 @@
         Please email support@code.org to receive a password recovery link.
     change_form:
       title: Jelszó módosítása
-      new_password: "Új jelszó"
+      new_password: Új jelszó
       confirm_password: Erősítse meg új jelszavát
       submit: Jelszavam módosítása
   welcome_email:
@@ -259,7 +259,7 @@
     error:
       access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
   crud:
-    new_model: "Új %{model}"
+    new_model: Új %{model}
     show: Mutat
     edit: Szerkeszt
     edit_model: "%{model} módosítása"
@@ -304,7 +304,7 @@
       professional_learning: Professzionális tanulás
       documentation: Dokumentáció
       tutorials: Gyakorlatok
-      educate_overview: "Áttekintés oktatóknak"
+      educate_overview: Áttekintés oktatóknak
       educate_elementary: Alsó tagozat
       educate_middle: Felső tagozat
       educate_high: Középiskola
@@ -320,8 +320,8 @@
       about_partners: Partnerek
       about_team: Teljes csapat
       about_news: Sajtósarok
-      about_evaluation: "Értékelés"
-      about_jobs: "Állás"
+      about_evaluation: Értékelés
+      about_jobs: Állás
       about_contact: Kapcsolat
       about_faqs: GYIK
       learn: Tanulj
@@ -332,7 +332,7 @@
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
-      label: "Üdv %{username}"
+      label: Üdv %{username}
       stats: Fejlődésem
       settings: Profilom
       logout: Kijelentkezés
@@ -429,7 +429,7 @@
     lines_of_code_linebreak: "%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
       TANULÓ"
     all_courses: 1., 2. és 3. tanfolyam áttekintése
-    lesson_plans: "Óravázlatok"
+    lesson_plans: Óravázlatok
     signin_message: Már regisztráltál? %{link}
     student_reg_link: Diák Bejelentkezés
     teacher_reg_link: Tanári bejelentkezés
@@ -464,7 +464,7 @@
       alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki
       számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
-    try_beta_courses: "ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak"
+    try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
     heading_hoc2014: "<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>"
     heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai
@@ -694,9 +694,9 @@
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
-  download_pdf: "Óravázlat"
-  lesson_plan: "Óravázlat"
-  view_lesson_plan: "Óravázlat megtekintése"
+  download_pdf: Óravázlat
+  lesson_plan: Óravázlat
+  view_lesson_plan: Óravázlat megtekintése
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
@@ -713,8 +713,8 @@
     address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
     email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
       a szövegen.
-    profanity_not_allowed: "Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
-      módosítani a szövegen."
+    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
+      módosítani a szövegen.
   builder:
     created: Létrehoztál egy új szkriptet.
     destroyed: Töröltél egy szkriptet.
@@ -914,7 +914,7 @@
     startover_title: Biztosan újra szeretnéd kezdeni?
     startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot,
       amit hozzáadtál a programhoz, vagy amit megváltoztattál.
-    startover_ok: "Újrakezdés"
+    startover_ok: Újrakezdés
     startover_cancel: Mégsem
   time:
     hour: 1 óra
@@ -989,7 +989,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
-    assessment: "értékelés"
+    assessment: értékelés
     submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
@@ -998,9 +998,9 @@
   project:
     projects: Projektek
     create: Projekt létrehozása
-    create_a_project: "Új projekt létrehozása:"
-    new: "Új létrehozása"
-    rename: "Átnevezés"
+    create_a_project: 'Új projekt létrehozása:'
+    new: Új létrehozása
+    rename: Átnevezés
     save: Mentés
     delete: Törlés
     import: Importálás
@@ -1114,7 +1114,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Összefoglaló"
+    required: Összefoglaló
     content: Tartalom
     practice: Tanítási gyakorlatok
     peer_review: Peer Review

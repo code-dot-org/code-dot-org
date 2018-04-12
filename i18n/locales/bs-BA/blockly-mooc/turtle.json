@@ -74,13 +74,13 @@
   "penDown": "spusti olovku",
   "penTooltip": "Podiže ili spušta olovku da bi počeo\/la ili prestao\/la crtati.",
   "penUp": "podigni olovku",
+  "pointTo": "point to",
   "pixels": "pikseli",
   "reinfFeedbackMsg": "Evo tvog crteža! Nastavi raditi na njemu ili prijeđi na slijedeći zadatak.",
   "setAlpha": "postavi alfa",
   "setCharacter": "set character to {character}",
   "setColour": "postavi boju",
   "setPattern": "postavi uzorak",
-  "setStickerSize": "Set sticker size",
   "setWidth": "postavi širinu",
   "shareDrawing": "Podijeli svoj crtež:",
   "showMe": "Pokaži mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Okreće crtača lijevo ili desno za zadani broj stepeni.",
   "turtleVisibilityTooltip": "Pokazuje ili skriva crtača.",
   "widthTooltip": "Mijenja širinu olovke.",
+  "withSize": "with size",
   "wrongColour": "Tvoja slika je pogrešne boje. U ovom zadatku se treba koristiti boja %1."
 }

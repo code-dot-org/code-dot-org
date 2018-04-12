@@ -2,67 +2,67 @@
   data:
     game:
       name:
-        Unplug1: "কম্পিউটার বিজ্ঞান পরিচিতি"
-        Maze: "গোলকধাঁধা"
-        Multi: "বহুনির্বাচনী বিষয়াদি"
-        Unplug2: "গণিতিক চিন্তা-ভাবনা"
-        Unplug3: "ছক-কাগজে প্রোগ্রামিং"
-        Artist: "শিল্পী"
-        Unplug4: "অ্যালগরিদম"
-        Artist2: "চিত্রকর ২"
-        Unplug5: "ফাংশনগুলি"
-        Farmer: "কৃষক"
-        Unplug6: "শর্তযুক্ত"
-        Artist3: "পটুয়া ৩"
-        Unplug7: "গান লিখা"
-        Farmer2: "কৃষক ২"
-        Unplug8: "অপসারণ"
-        Artist4: "চিত্রকর ৪"
-        Unplug9: "রিলে-স্যুইচ প্রোগ্রামিং"
-        Farmer3: "কৃষক ৩"
-        Unplug10: "ইন্টারনেট"
-        Artist5: "চিত্রকর ৫"
-        Unplug11: "গুটিয়ে নেয়া"
-        MazeEC: "গোলকধাঁধা"
-        Bounce: "বল লাফানো"
-        Flappy: "ডানা ঝাপটানো পাখি"
-        Jigsaw: "টুকরো কাঠের ধাঁধা"
+        Unplug1: কম্পিউটার বিজ্ঞান পরিচিতি
+        Maze: গোলকধাঁধা
+        Multi: বহুনির্বাচনী বিষয়াদি
+        Unplug2: গণিতিক চিন্তা-ভাবনা
+        Unplug3: ছক-কাগজে প্রোগ্রামিং
+        Artist: শিল্পী
+        Unplug4: অ্যালগরিদম
+        Artist2: চিত্রকর ২
+        Unplug5: ফাংশনগুলি
+        Farmer: কৃষক
+        Unplug6: শর্তযুক্ত
+        Artist3: পটুয়া ৩
+        Unplug7: গান লিখা
+        Farmer2: কৃষক ২
+        Unplug8: অপসারণ
+        Artist4: চিত্রকর ৪
+        Unplug9: রিলে-স্যুইচ প্রোগ্রামিং
+        Farmer3: কৃষক ৩
+        Unplug10: ইন্টারনেট
+        Artist5: চিত্রকর ৫
+        Unplug11: গুটিয়ে নেয়া
+        MazeEC: গোলকধাঁধা
+        Bounce: বল লাফানো
+        Flappy: ডানা ঝাপটানো পাখি
+        Jigsaw: টুকরো কাঠের ধাঁধা
         MazeStep: Maze Step Mode
-        Wordsearch: "শব্দ খোঁজা"
-        Webapp: "অ্যাপ ল্যাব"
-        ArtistEC: "শিল্পী"
-        TextMatch: "লেখা মিলানো"
-        StudioEC: "প্লে ল্যাব"
-        Applab: "অ্যাপ ল্যাব"
+        Wordsearch: শব্দ খোঁজা
+        Webapp: অ্যাপ ল্যাব
+        ArtistEC: শিল্পী
+        TextMatch: লেখা মিলানো
+        StudioEC: প্লে ল্যাব
+        Applab: অ্যাপ ল্যাব
         NetSim: Internet Simulator
-        Custom: "শিল্পী"
-        CustomStudio: "প্লে ল্যাব"
+        Custom: শিল্পী
+        CustomStudio: প্লে ল্যাব
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "ব্রোঞ্জ"
-        Silver: "রৌপ্য"
-        Gold: "স্বর্ণ"
+        Bronze: ব্রোঞ্জ
+        Silver: রৌপ্য
+        Gold: স্বর্ণ
     concept:
       description:
-        sequence: "অনুক্রম"
+        sequence: অনুক্রম
         if: If ব্লক
         if_else: If-else ব্লক
-        loop_times: "পুনরাবৃত্তি ব্লক"
-        loop_until: "অনবধি পুনরাবৃত্তি ব্লক"
+        loop_times: পুনরাবৃত্তি ব্লক
+        loop_until: অনবধি পুনরাবৃত্তি ব্লক
         loop_while: While ব্লক
-        loop_for: "গোণা-গ‌ুনির ব্লক"
-        function: "ফাংশনগুলি"
-        parameters: "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        loop_for: গোণা-গ‌ুনির ব্লক
+        function: ফাংশনগুলি
+        parameters: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
     level:
       instructions:
         maze_2_2: 'তুমি কি সাহায্য করতে পার আমাকে, ওই দুষ্টু শ‌ুকরছানাগুলিকে ধরতে?
           একজোড়া "সামনে এগোও" ব্লক জড়ো করে "রান" এ চাপ দাও আর আমাকে সেখানে পৌঁছাতে
           সাহায্য কর। '
-        maze_2_1: "এই শ‌ুকরছানাটি আমার পালকগুলো অগোছালো করে ফেলছে। ওটাকে খুঁজে পেতে
-          সাহায্য কর আমাকে!"
-        maze_2_2_5: "পথ ধরে আমাকে বোকা শ‌ুকরছানাটির কাছে নিয়ে চল। TNT এড়িয়ে চল নয়তো
-          পালকগুলো সব উড়ে যাবে!"
+        maze_2_1: এই শ‌ুকরছানাটি আমার পালকগুলো অগোছালো করে ফেলছে। ওটাকে খুঁজে পেতে
+          সাহায্য কর আমাকে!
+        maze_2_2_5: পথ ধরে আমাকে বোকা শ‌ুকরছানাটির কাছে নিয়ে চল। TNT এড়িয়ে চল নয়তো
+          পালকগুলো সব উড়ে যাবে!
         maze_2_3: Guide me to the green evilness! (Watch out for TNT)
         maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
           angry!
@@ -101,7 +101,7 @@
           Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
-        turtle_1_3: "শুধুমাত্র ৩টি ব্লক নিয়ে একটি বর্গক্ষেত্র বানাও।"
+        turtle_1_3: শুধুমাত্র ৩টি ব্লক নিয়ে একটি বর্গক্ষেত্র বানাও।
         turtle_1_4: '"এলোমেলো রঙ" ব্লকটি যা প্রতিবার আলাদা রঙ বেছে নেয়, ব্যবহার করে
           একটি ত্রিভূজ আঁক যার বাহুগুলো সব ভিন্ন রঙের। ইঙ্গিত: তোমাকে বুঝে নিতে হবে
           "ঘূর্ণন" ব্লকটির সংখ্যাটিতে ক্লিক করে ঠিক কতটুকু ঘুরাতে হবে।'
@@ -141,8 +141,8 @@
           more blocks to complete the drawing?
         turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
           you turn to complete the drawing? (You probably need to guess a few times)
-        turtle_4_10: "এই হল আগের ধাঁধাটির সমাধান। আঁকাটি সম্পূর্ণ করতে তুমি কতবার
-          পুনরাবৃত্তি করবে?"
+        turtle_4_10: এই হল আগের ধাঁধাটির সমাধান। আঁকাটি সম্পূর্ণ করতে তুমি কতবার পুনরাবৃত্তি
+          করবে?
         turtle_4_11: '"ঘূর্ণন" ও "পুনরাবৃত্তি" ব্লকের নাম্বারগুলি পরিবর্তন করে বিভিন্ন
           নকশা তৈরি করে দেখতে পার। আবার, বাকি কোডগুলি নিয়েও গবেষণা করে যেমন খুশি আঁকতে
           পার।'
@@ -298,8 +298,8 @@
           pig.
         Custom_builder: Drag blocks from the toolbox to the workspace to draw the
           level you wish to create. Press "Run" when you are ready.
-        jigsaw_1: "ব্লকটিতে ক্লিক কর"
-        jigsaw_2: "ব্লকটিকে টেনে তার লক্ষ্যে পৌঁছে দাও।"
+        jigsaw_1: ব্লকটিতে ক্লিক কর
+        jigsaw_2: ব্লকটিকে টেনে তার লক্ষ্যে পৌঁছে দাও।
         jigsaw_3: Arrange the blocks to form the image
         jigsaw_4: Arrange the blocks to form the image
         jigsaw_5: Arrange the blocks to form the image
@@ -310,7 +310,7 @@
         jigsaw_10: Arrange the blocks to form the image
         jigsaw_11: Arrange the blocks to form the image
         jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: "ধাঁধা সমাধান করুন!"
+        jigsaw_13: ধাঁধা সমাধান করুন!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
@@ -484,101 +484,101 @@
           let friends try your game on their phones.
     video:
       name:
-        maze_intro: "মেজ ভুমিকা"
-        artist_intro: "শিল্পী-ভূমিকা"
-        farmer_intro: "চাষী ভূমিকা"
-        flappy_intro: "ফ্লাপি ভুমিকা"
+        maze_intro: মেজ ভুমিকা
+        artist_intro: শিল্পী-ভূমিকা
+        farmer_intro: চাষী ভূমিকা
+        flappy_intro: ফ্লাপি ভুমিকা
         loop_times: Repeat Times Block
         loop_until: Repeat Until Block
-        if: "যদি ব্লক"
-        if_else: "যদি/অথবা ব্লক"
-        if_else_scrat: "যদি/অথবা ব্লক"
-        function: "ফাংশনগুলি"
-        loop_while: "সাদা ব্লক"
+        if: যদি ব্লক
+        if_else: যদি/অথবা ব্লক
+        if_else_scrat: যদি/অথবা ব্লক
+        function: ফাংশনগুলি
+        loop_while: সাদা ব্লক
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: CS কি?
-        Unplug2: "গণিতিক চিন্তা-ভাবনা"
-        Unplug3: "ছক-কাগজে প্রোগ্রামিং"
-        Unplug4: "অ্যালগরিদম"
-        Unplug5: "ফাংশনগুলি"
-        Unplug6: "শর্তযুক্ত"
-        Unplug7: "গান লিখা"
-        Unplug8: "অপসারণ"
-        Unplug9: "রিলে-স্যুইচ প্রোগ্রামিং"
-        Unplug10: "ইন্টারনেট"
-        Unplug11: "গুটিয়ে নেয়া"
-        C1_happy_maps_unplugged: "আনন্দের মানচিত্র"
+        Unplug2: গণিতিক চিন্তা-ভাবনা
+        Unplug3: ছক-কাগজে প্রোগ্রামিং
+        Unplug4: অ্যালগরিদম
+        Unplug5: ফাংশনগুলি
+        Unplug6: শর্তযুক্ত
+        Unplug7: গান লিখা
+        Unplug8: অপসারণ
+        Unplug9: রিলে-স্যুইচ প্রোগ্রামিং
+        Unplug10: ইন্টারনেট
+        Unplug11: গুটিয়ে নেয়া
+        C1_happy_maps_unplugged: আনন্দের মানচিত্র
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: "বড় ঘটনা"
+        C1_bigevent_unplugged: বড় ঘটনা
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
         C1_bee_level_intro: Bee Level - Intro
-        C1_artist_intro: "শিল্পী-ভূমিকা"
+        C1_artist_intro: শিল্পী-ভূমিকা
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: "মেজ লুপ"
-        C1_bee_loops: "মৌমাছি লুপ"
-        C1_maze_loops: "মেজ লুপ"
+        C1_zuck_repeat_loop: মেজ লুপ
+        C1_bee_loops: মৌমাছি লুপ
+        C1_maze_loops: মেজ লুপ
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Going Places Safely
-        C2_maze_intro: "মেজ ভুমিকা"
-        C2_artist_intro: "শিল্পী-ভূমিকা"
-        C2_zuck_repeat_loop: "মেজ লুপ"
-        C2_artist_loops: "শিল্পী লুপ"
+        C2_maze_intro: মেজ ভুমিকা
+        C2_artist_intro: শিল্পী-ভূমিকা
+        C2_zuck_repeat_loop: মেজ লুপ
+        C2_artist_loops: শিল্পী লুপ
         C2_artist_debugging: Artist Debugging
-        C2_bee_loops: "মৌমাছি লুপ"
-        C2_bee_debugging: "মৌমাছি ডিবাগিং"
+        C2_bee_loops: মৌমাছি লুপ
+        C2_bee_debugging: মৌমাছি ডিবাগিং
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: "ছক-কাগজে প্রোগ্রামিং"
-        C2_conditionals_with_cards: "শর্তযুক্ত"
+        C2_graph_paper: ছক-কাগজে প্রোগ্রামিং
+        C2_conditionals_with_cards: শর্তযুক্ত
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: "রিলে-স্যুইচ প্রোগ্রামিং"
+        C2_relay_programming: রিলে-স্যুইচ প্রোগ্রামিং
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_maze_level_4: "মেজ লুপ"
-        C3_artist_intro: "শিল্পী-ভূমিকা"
+        C3_maze_level_4: মেজ লুপ
+        C3_artist_intro: শিল্পী-ভূমিকা
         C3_artist_functions: Artist Functions
-        C3_bee_functions: "মৌমাছি ফাংশন"
+        C3_bee_functions: মৌমাছি ফাংশন
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
-        C3_artist_nested_loops: "নেষ্টেড লুপ"
-        C3_farmer_while: "হোয়াইল লুপ"
-        C3_bee_nested_loops: "নেষ্টেড লুপ"
-        C3_bee_debugging: "মৌমাছি ডিবাগিং"
-        C3_bounce: "বল লাফানো"
+        C3_artist_nested_loops: নেষ্টেড লুপ
+        C3_farmer_while: হোয়াইল লুপ
+        C3_bee_nested_loops: নেষ্টেড লুপ
+        C3_bee_debugging: মৌমাছি ডিবাগিং
+        C3_bounce: বল লাফানো
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "গণিতিক চিন্তা-ভাবনা"
-        C3_dice_race: "পাশার লড়াই"
-        C3_internet: "ইন্টারনেট"
+        C3_computational_thinking: গণিতিক চিন্তা-ভাবনা
+        C3_dice_race: পাশার লড়াই
+        C3_internet: ইন্টারনেট
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: "ভূমিকা"
-        C4_loops_zombie: "চক্র"
+        C4_intro: ভূমিকা
+        C4_loops_zombie: চক্র
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
-        C4_for_loops: "ফর লুপ"
-        C4_for_loops_bee: "ফর লুপ"
-        C4_for_loops_no_bee: "ফর লুপ"
+        C4_for_loops: ফর লুপ
+        C4_for_loops_bee: ফর লুপ
+        C4_for_loops_no_bee: ফর লুপ
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: "শর্তযুক্ত"
+        C4_conditionals: শর্তযুক্ত
         C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: "পাগল Libs"
+        C4_unplugged_madlibs: পাগল Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: "ফর লুপ"
+        C4_unplugged_forloops: ফর লুপ
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: "দ্বি-আঙ্কিক"
+        C4_unplugged_binary: দ্বি-আঙ্কিক
         CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles in Artist
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
@@ -590,7 +590,7 @@
         CSF_EF_cs_matters: Computer Science Matters
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
-        CSF_my_robotic_friends: "আমার রোবোটিক্স বন্ধুরা"
+        CSF_my_robotic_friends: আমার রোবোটিক্স বন্ধুরা
         CSF_Power_of_Words: Power of Words
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
@@ -653,7 +653,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "চক্র"
+        csp_applab_loops: চক্র
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -753,6 +753,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -768,7 +774,7 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: "ব্লকটিতে ক্লিক করুন!"
+        jigsaw_click: ব্লকটিতে ক্লিক করুন!
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down

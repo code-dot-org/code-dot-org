@@ -646,9 +646,9 @@
           til til slutt. '
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Å vera uthaldande handlar om å ikkje gi seg når ein eigentleg har lyst
+        text: Å vera uthaldande handlar om å ikkje gi seg når ein eigentleg har lyst
           å gi opp. Dersom du har lyst å laga noko nytt og annleis, kjem du til å
-          oppleva nokre nederlag undervegs."
+          oppleva nokre nederlag undervegs.
       5:
         image: notes/C1_building_foundation_5.jpg
         text: Kunsten med å vera uthaldande, er å halda fram og læra av feila du gjer,
@@ -709,10 +709,10 @@
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Å debugge er å finne feil og fikse dei. Det er mange metodar å debugge
+        text: Å debugge er å finne feil og fikse dei. Det er mange metodar å debugge
           problemer på. Ein av dei enklaste er å flytte steg for steg til du finn
           noko som går gale. Her prøvar eg å sprette baklengs på bommen men fell av
-          heile tida."
+          heile tida.
       2:
         image: notes/C1_maze_debugging_2.png
         text: Eg gjekk gjennom alle stega og skjønte kvar feilen var. Eg satte ikkje
@@ -1047,7 +1047,7 @@
           går trinnvis gjennom hver blokk.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25."
+        text: Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1568,20 +1568,20 @@
           seg veldig raskt gjennom internett.
       2:
         image: notes/C3_internet_2.png
-        text: "Å illustrere hvordan internett fungerer vil hjelpe deg til å forstå
+        text: Å illustrere hvordan internett fungerer vil hjelpe deg til å forstå
           hva som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer
           seg fra datamaskinen din til et favorittnettsted, eller fra en venn til
           en e-postkasse. Akkurat som det er lettere å navigere i tett trafikk når
           du er kjent på veien og kan lese skiltene, er det ikke så vanskelig å reise
-          på internett når du vet hva som foregår i kulissene."
+          på internett når du vet hva som foregår i kulissene.
       3:
         image: notes/C3_internet_3.png
-        text: "Å sende meldinger på internett er som å sende meldinger i posten, men
+        text: Å sende meldinger på internett er som å sende meldinger i posten, men
           med noen forskjeller. Jeg er her på Google.com. IP-adressen til dette nettstedet
           er dette tallet. Du kan tenke på en IP-adresse som avsenderadressen i posten.
           Tenk deg at jeg ønsker å sende en melding i posten til noen på kontoret
           der nede. Ser du URL-en og IP-adressen på døren? Jeg har skrevet denne meldingen
-          og trykket på send."
+          og trykket på send.
       4:
         image: notes/C3_internet_4.png
         text: I motsetning til posten, er det første som skjer at internett deler
@@ -1912,12 +1912,12 @@
           ha gjort utregningen for datamaskinen selv.
       2:
         image: notes/C4_math_artist_2.png
-        text: "Å gange femti med to i hodet er ikke vanskelig, men datamaskiner er
+        text: Å gange femti med to i hodet er ikke vanskelig, men datamaskiner er
           skikkelig flinke til å regne ut slikt så vi bør la dem gjøre det når vi
           kan. Ved å lage en variabel jeg kaller høyde isteden kan jeg enkelt endre
           høyden til femti og så andre algoritmen min til å be artisten gå opp høyde
           punkter, snu mot høyre og så gå i to ganger høyden. Dette gir oss en rektangel
-          som er dobbelt så bred som den er høy."
+          som er dobbelt så bred som den er høy.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
@@ -2536,8 +2536,8 @@
           men vi ville at du skulle få prøve det.
       3:
         image: notes/starwars_typing_3.JPG
-        text: "Øvst til høgre i arbeidsområdet, kan du klikke knappen Vis tekst på
-          kva som helst oppgave for å bytte fra blokker til å skrive koden som tekst."
+        text: Øvst til høgre i arbeidsområdet, kan du klikke knappen Vis tekst på
+          kva som helst oppgave for å bytte fra blokker til å skrive koden som tekst.
       4:
         image: notes/starwars_typing_4.JPG
         text: I neste leksjon vil du starte opp i skrivemodus. Her kan du fremleis

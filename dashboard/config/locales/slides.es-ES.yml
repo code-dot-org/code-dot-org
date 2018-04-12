@@ -582,8 +582,8 @@
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: "Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
-          donde necesita ir para completar las lineas grises."
+        text: Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
+          donde necesita ir para completar las lineas grises.
       2:
         image: notes/C1_artist_intro_2.png
         text: Estos son bloques de tu salto. Cuando los usas, tu artista se mueve
@@ -946,9 +946,9 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: "Éste es el nivel de ortografía. Utiliza las piezas del rompecabezas
+        text: Éste es el nivel de ortografía. Utiliza las piezas del rompecabezas
           para mover a la abeja. Al moverse, recogerá las letras para deletrear la
-          palabra."
+          palabra.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Intenta deletrear la palabra que se da en el cuadro debajo de la etapa.
@@ -1019,8 +1019,8 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C2_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -1033,8 +1033,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: "Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
-          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!"
+        text: Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
+          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: El binario es una forma de representar información utilizando sólo dos
@@ -1218,11 +1218,11 @@
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C2_bee_loops_2.png
-        text: "Éste es el bloque de repetición. Lo que pongas dentro el bloque de
-          repetición repetirá las acciones el número de veces que le digas. Por ejemplo,
-          en éste nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante
-          y obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada
-          uno y repetiremos la acción tres veces. ¡Ha sido fácil!"
+        text: Éste es el bloque de repetición. Lo que pongas dentro el bloque de repetición
+          repetirá las acciones el número de veces que le digas. Por ejemplo, en éste
+          nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante y
+          obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada uno
+          y repetiremos la acción tres veces. ¡Ha sido fácil!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -1420,8 +1420,8 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C3_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -2548,11 +2548,10 @@
           quien escribirá el siguiente paso.
       3:
         image: notes/unplug9_3.png
-        text: "Ésta es una excelente manera de entender la idea de depuración, la
-          necesidad de corregir tu propio trabajo y la necesidad de revisar el trabajo
-          que la gente hace antes de ti. Rápidamente, entenderás lo importante que
-          es tener cuidado en tu codificación cuando todo el equipo está dependiendo
-          de ti."
+        text: Ésta es una excelente manera de entender la idea de depuración, la necesidad
+          de corregir tu propio trabajo y la necesidad de revisar el trabajo que la
+          gente hace antes de ti. Rápidamente, entenderás lo importante que es tener
+          cuidado en tu codificación cuando todo el equipo está dependiendo de ti.
     unplug10:
       1:
         image: notes/unplug10_1.png
@@ -3161,10 +3160,10 @@
           cosas."
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "Éste es el bloque de repetición por siempre. Cualquier cosa dentro
-          de este bloque pasará por siempre en el juego. Si queremos que un actor
-          haga algo repetidamente sin que el jugador haga nada, pondremos eso bloques
-          dentro del bloque de repetición por siempre."
+        text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
+          este bloque pasará por siempre en el juego. Si queremos que un actor haga
+          algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
+          del bloque de repetición por siempre.
       3:
         image: notes/gumball_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a

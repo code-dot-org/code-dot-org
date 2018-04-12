@@ -26,7 +26,7 @@
         parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Korisničko ime
-        password: "Šifra"
+        password: Šifra
         password_confirmation: Potvrda šifre
         current_password: Trenutna šifra
         locale: Jezik
@@ -51,7 +51,7 @@
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
-      placeholder: "Šifra Odjeljenja (ABCDEF)"
+      placeholder: Šifra Odjeljenja (ABCDEF)
       instructions: Molimo unesite kôd koji je sa vama podijelio vaš učitelj. To je
         kôd od 6 slova tipa "ABCDEF".
       instructions_short: Enter your 6 letter section code
@@ -167,7 +167,7 @@
     district: District
     other_district_not_listed: Other district not listed above
     district_name: District Name
-    school: "Škola"
+    school: Škola
     other_school_not_listed: Druga škola nije navedena iznad
     school_name: School Name
     school_zip: School Zip Code
@@ -178,11 +178,11 @@
     title: Već imate račun? Prijavite se
     login: E-mail ili korisničko ime
     login_username: Email or Username
-    password: "Šifra"
+    password: Šifra
     remember: Zapamti me
     submit: Prijava
   signin:
-    try_heading: "Želite probati kodiranje bez prijave?"
+    try_heading: Želite probati kodiranje bez prijave?
     try_hoc: Prvo isprobaj Sat Kodiranja
     try_20hours: Probaj naš 20-satni Uvod u Informatiku
   signinsection:
@@ -601,7 +601,7 @@
     try_hour_of_code: Try an Hour of Code!
   gender:
     male: Muško
-    female: "Žensko"
+    female: Žensko
     none: Radije ne bih odgovorio/la
   user_type:
     student: Učenik
@@ -724,8 +724,8 @@
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
-      body: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
-        tutorijal izrade Flappy kôda!"
+      body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
+        tutorijal izrade Flappy kôda!
     20-hour:
       title: Ubrzani Kurs
       body: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike.
@@ -808,7 +808,7 @@
     activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
       aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
       i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
+    want_to_make_your_own: Želite li napraviti svoj vlastiti?
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
     more: Više &rarr;
@@ -938,8 +938,8 @@
       updated terms.
     review_terms: Pregledajte ažurirane uslove
   school_info_interstitial:
-    title: "Želimo da donesemo računarstvo do svakog učenika - pomozite nam da pratimo
-      naš napredak!"
+    title: Želimo da donesemo računarstvo do svakog učenika - pomozite nam da pratimo
+      naš napredak!
     message: Molimo ispod unesite informacije o svojoj školi.
     message_with_suggestion: Molimo da potvrdite da je sljedeća informacija tačna,
       ili ažurirajte ako je potrebno.

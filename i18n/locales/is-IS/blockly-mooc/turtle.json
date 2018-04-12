@@ -74,13 +74,13 @@
   "penDown": "pensill niður",
   "penTooltip": "Lyftir eða lækkar pensilinn til að byrja eða hætta að teikna.",
   "penUp": "pensill upp",
+  "pointTo": "point to",
   "pixels": "díla",
   "reinfFeedbackMsg": "Hér er teikningin þín! Haltu áfram með hana eða farðu í næstu þraut.",
   "setAlpha": "stilla alfa",
   "setCharacter": "stilla persónu á {character}",
   "setColour": "stilla lit",
   "setPattern": "stilla mynstur",
-  "setStickerSize": "Set sticker size",
   "setWidth": "stilla breidd",
   "shareDrawing": "Deildu teikningunni:",
   "showMe": "Sýna mig",
@@ -94,5 +94,6 @@
   "turnTooltip": "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða.",
   "turtleVisibilityTooltip": "Gerir listamanninn sýnilegan eða ósýnilegan.",
   "widthTooltip": "Breytir breidd pensilsins.",
+  "withSize": "with size",
   "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."
 }

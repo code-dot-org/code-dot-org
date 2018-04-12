@@ -3,223 +3,223 @@
     script:
       name:
         course1:
-          title: "Курс 1"
-          description: "Почни са првим курсем за ученике који су тек научили да читају.
-            Препоручујемо за узраст до првог разреда."
-          description_short: "Курс је намењен узрасту од 4 до 6 година."
-          description_audience: "Узраст од 4 до 6 година"
+          title: Курс 1
+          description: Почни са првим курсем за ученике који су тек научили да читају.
+            Препоручујемо за узраст до првог разреда.
+          description_short: Курс је намењен узрасту од 4 до 6 година.
+          description_audience: Узраст од 4 до 6 година
           stages:
             'Artist: Loops':
-              name: "Уметник: Петље"
+              name: 'Уметник: Петље'
             'Artist: Sequence':
-              name: "Уметник: Линијски програми"
+              name: 'Уметник: Линијски програми'
             'Artist: Shapes':
-              name: "Уметник: Облици"
+              name: 'Уметник: Облици'
             'Bee: Loops':
-              name: "Пчела: Петље"
+              name: 'Пчела: Петље'
             'Bee: Sequence':
-              name: "Пчела: Линијски програми"
+              name: 'Пчела: Линијски програми'
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Getting Loopy:
-              name: "Запетљанције"
+              name: Запетљанције
             Going Places Safely:
-              name: "Сигурна путања"
+              name: Сигурна путања
             Happy Maps:
-              name: "Веселе мапе"
+              name: Веселе мапе
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             'Maze: Debugging':
-              name: "Лавиринт: Исправљање грешака"
+              name: 'Лавиринт: Исправљање грешака'
             'Maze: Loops':
-              name: "Лавиринт: Петље"
+              name: 'Лавиринт: Петље'
             'Maze: Sequence':
-              name: "Лавиринт: Линијски програми"
+              name: 'Лавиринт: Линијски програми'
             Move it, Move it:
-              name: "Помери га, помери"
+              name: Помери га, помери
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Spelling Bee:
-              name: "Пчелица словарица"
+              name: Пчелица словарица
             'Studio: Create a Story':
-              name: "Студио: Направи причу"
+              name: 'Студио: Направи причу'
             The Big Event:
-              name: "Велики догађај"
+              name: Велики догађај
         course2:
-          title: "Курс 2"
-          description: "Курс 2 могу да раде ученици који знају да читају и немају
-            искуства са програмирањем. У овом курсу ученици ће писати програме који
-            решавају проблеме и развијати интерактивне игре и приче које могу да деле
-            са другима. Препоручено за ученике до петог разреда."
-          description_short: "Курс 2 могу да раде ученици који знају да читају ."
+          title: Курс 2
+          description: Курс 2 могу да раде ученици који знају да читају и немају искуства
+            са програмирањем. У овом курсу ученици ће писати програме који решавају
+            проблеме и развијати интерактивне игре и приче које могу да деле са другима.
+            Препоручено за ученике до петог разреда.
+          description_short: Курс 2 могу да раде ученици који знају да читају .
           description_audience: Ages 6-18
           stages:
             'Artist: Debugging':
-              name: "Уметник: Проналажење грешака"
+              name: 'Уметник: Проналажење грешака'
             'Artist: Loops':
-              name: "Уметник: Петље"
+              name: 'Уметник: Петље'
             'Artist: Nested Loops':
-              name: "Уметник: Угњеждене петље"
+              name: 'Уметник: Угњеждене петље'
             'Artist: Sequence':
-              name: "Уметник: Линијски програми"
+              name: 'Уметник: Линијски програми'
             'Bee: Conditionals':
-              name: "Пчела: Услови"
+              name: 'Пчела: Услови'
             'Bee: Debugging':
-              name: "Пчела: Исправљање грешака"
+              name: 'Пчела: Исправљање грешака'
             'Bee: Loops':
-              name: "Пчела: Петље"
+              name: 'Пчела: Петље'
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Flappy:
-              name: "Флапи"
+              name: Флапи
             Getting Loopy:
-              name: "Запетљанције"
+              name: Запетљанције
             Graph Paper Programming:
-              name: "Графичко програмирање"
+              name: Графичко програмирање
             'Maze: Loops':
-              name: "Лавиринт: Петље"
+              name: 'Лавиринт: Петље'
             'Maze: Sequence':
-              name: "Лавиринт: Линијски програми"
+              name: 'Лавиринт: Линијски програми'
             'Real-life Algorithms: Paper Planes':
-              name: "Стварни алгоритми: Папирни авиони"
+              name: 'Стварни алгоритми: Папирни авиони'
             Relay programming:
               name: Relay programming
             'Studio: Create a Story':
-              name: "Студио: Направи причу"
+              name: 'Студио: Направи причу'
             The Big Event:
-              name: "Велики догађај"
+              name: Велики догађај
             Your Digital Footprint:
-              name: "Твој дигитални траг"
+              name: Твој дигитални траг
         course3:
-          title: "Курс 3"
-          description: "Курс 3 је дизајниран за ученике који су прошли курс 2. До
-            краја овог курса, студенти стварају интерактивне приче и игре могу да
-            деле са другима. Препоручује се за разреде 4-5."
-          description_short: "Курс 3 је наставак курса 2."
-          description_audience: "За године од 8 до 18"
+          title: Курс 3
+          description: Курс 3 је дизајниран за ученике који су прошли курс 2. До краја
+            овог курса, студенти стварају интерактивне приче и игре могу да деле са
+            другима. Препоручује се за разреде 4-5.
+          description_short: Курс 3 је наставак курса 2.
+          description_audience: За године од 8 до 18
           stages:
             Artist:
-              name: "Уметник"
+              name: Уметник
             'Artist: Functions':
-              name: "Уметник: Функције"
+              name: 'Уметник: Функције'
             'Artist: Nested Loops':
-              name: "Уметник: Угњеждене петље"
+              name: 'Уметник: Угњеждене петље'
             'Artist: Patterns':
-              name: "Уметник: Шаблони"
+              name: 'Уметник: Шаблони'
             'Bee: Conditionals':
-              name: "Пчела: Услови"
+              name: 'Пчела: Услови'
             'Bee: Debugging':
-              name: "Пчела: Исправљање грешака"
+              name: 'Пчела: Исправљање грешака'
             'Bee: Functions':
-              name: "Пчела: Функције"
+              name: 'Пчела: Функције'
             'Bee: Nested Loops':
-              name: "Пчела: Угњеждене петље"
+              name: 'Пчела: Угњеждене петље'
             Bounce:
               name: Bounce
             Computational Thinking:
-              name: "Компјутерско Размишљање"
+              name: Компјутерско Размишљање
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
               name: Dice Race
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             'Farmer: While Loops':
-              name: "Фармер: Условне петље"
+              name: 'Фармер: Условне петље'
             Functional Suncatchers:
               name: Functional Suncatchers
             Internet:
-              name: "Интернет"
+              name: Интернет
             Maze:
-              name: "Лавиринт"
+              name: Лавиринт
             'Maze: Conditionals':
-              name: "Лавиринт: Услови"
+              name: 'Лавиринт: Услови'
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
-              name: "Играоница: Направи игру"
+              name: 'Играоница: Направи игру'
             'Studio: Create a Story':
-              name: "Студио: Направи причу"
+              name: 'Студио: Направи причу'
         playlab:
-          title: "Играоница"
-          description: "Направи причу или игру у Играоници!"
-          description_short: "Направи причу или игру у Играоници!"
+          title: Играоница
+          description: Направи причу или игру у Играоници!
+          description_short: Направи причу или игру у Играоници!
           stages:
             Play Lab:
-              name: "Играоница"
+              name: Играоница
         artist:
-          title: "Уметник"
-          description: "Цртај слике са уметником!"
-          description_short: "Цртај слике са уметником!"
+          title: Уметник
+          description: Цртај слике са уметником!
+          description_short: Цртај слике са уметником!
           stages:
             Artist:
-              name: "Уметник"
+              name: Уметник
         hourofcode:
-          title: "Час кода"
-          description: "Испробај основе рачунарских наука са љутим птичицама, цвећем
-            против зомбија, и Скречом из леденог доба!"
+          title: Час кода
+          description: Испробај основе рачунарских наука са љутим птичицама, цвећем
+            против зомбија, и Скречом из леденог доба!
           description_short: Try the basics of computer science with many fun characters!
           stages:
             Maze:
-              name: "Лавиринт"
+              name: Лавиринт
           description_audience: ''
         frozen:
-          title: "Програмирај са Аном и Елзом"
-          description: "Хајде да искористимо програмирање да би се придружили Ани
-            и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
+          title: Програмирај са Аном и Елзом
+          description: Хајде да искористимо програмирање да би се придружили Ани и
+            Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
             док клижете по леду и направићете зимску чаролију коју можете поделити
-            са својим пријатељима!"
-          description_short: "Хајде да искористимо програмирање да би се придружили
-            Ани и Елзи у истраживању магије и лепоте леда."
+            са својим пријатељима!
+          description_short: Хајде да искористимо програмирање да би се придружили
+            Ани и Елзи у истраживању магије и лепоте леда.
           stages:
             Artist:
-              name: "Уметник"
+              name: Уметник
         course4:
           title: Course 4
-          description: "Курс 4 је направљен за ученике који су прошли курсеве 2 и
-            3. Ученици ће научити како да решавају сложеније проблеме док уче како
-            да комбинују различите наредбе којима могу да решавају различите проблеме.
+          description: Курс 4 је направљен за ученике који су прошли курсеве 2 и 3.
+            Ученици ће научити како да решавају сложеније проблеме док уче како да
+            комбинују различите наредбе којима могу да решавају различите проблеме.
             Када заврше курс 4, ученици ће бити способни да праве програме са понављањима
             (петљама), функцијама са параметрима, итд. Препоручено за ученике од 4.
-            до 8. разреда."
-          description_short: "Ученици који пробају курс 4 би требало пре тога да прођу
-            курсеве 2 и 3."
-          description_audience: "Узраст од 10 до 18 година"
+            до 8. разреда.
+          description_short: Ученици који пробају курс 4 би требало пре тога да прођу
+            курсеве 2 и 3.
+          description_audience: Узраст од 10 до 18 година
           stages:
             Artist:
-              name: "Уметник"
+              name: Уметник
             Artist Binary:
-              name: "Уметник Бинарно"
+              name: Уметник Бинарно
             'Artist: For Loops':
-              name: "Уметник: Бројачке петље"
+              name: 'Уметник: Бројачке петље'
             'Artist: Functions':
-              name: "Уметник: Функције"
+              name: 'Уметник: Функције'
             'Artist: Functions with Parameters':
-              name: "Уметник: Функције са параметрима"
+              name: 'Уметник: Функције са параметрима'
             'Artist: Variables':
-              name: "Уметник: Променљиве"
+              name: 'Уметник: Променљиве'
             'Bee: For Loops':
-              name: "Пчела: Бројачке петље"
+              name: 'Пчела: Бројачке петље'
             'Bee: Functions with Parameters':
-              name: "Пчела: Функције са параметрима"
+              name: 'Пчела: Функције са параметрима'
             Extreme Challenge - Comprehensive:
-              name: "Екстремни изазов - Comprehensive"
+              name: Екстремни изазов - Comprehensive
             Maze and Bee:
-              name: "Лавиринт и пчела"
+              name: Лавиринт и пчела
             'Play Lab: For Loops':
-              name: "Играоница: Бројачке петље"
+              name: 'Играоница: Бројачке петље'
             'Play Lab: Functions with Parameters':
-              name: "Играоница: Функције са параметрима"
+              name: 'Играоница: Функције са параметрима'
             'Play Lab: Variables':
-              name: "Играоница: Променљиве"
+              name: 'Играоница: Променљиве'
             Super Challenge - For Loops:
-              name: "Супер изазов - Бројачке петље"
+              name: Супер изазов - Бројачке петље
             Super Challenge - Functions and Parameters:
-              name: "Супер изазов - Функције и параметри"
+              name: Супер изазов - Функције и параметри
             Super Challenge - Variables:
-              name: "Супер изазов - Променљиве"
+              name: Супер изазов - Променљиве
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             'Unplugged: Envelope Variables':
@@ -233,7 +233,7 @@
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
         Course4pre:
-          title: "Предуслови за курс 4"
+          title: Предуслови за курс 4
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           description_short: A brief rampup of concepts for students who have not
@@ -241,23 +241,23 @@
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: "Уметник: Функције"
+              name: 'Уметник: Функције'
             'Artist: Loops':
-              name: "Уметник: Петље"
+              name: 'Уметник: Петље'
             'Artist: Nested Loops':
-              name: "Уметник: Угњеждене петље"
+              name: 'Уметник: Угњеждене петље'
             'Artist: Sequence':
-              name: "Уметник: Линијски програми"
+              name: 'Уметник: Линијски програми'
             'Bee: Conditionals':
-              name: "Пчела: Услови"
+              name: 'Пчела: Услови'
             'Bee: Debugging':
-              name: "Пчела: Исправљање грешака"
+              name: 'Пчела: Исправљање грешака'
             'Bee: Nested Loops':
-              name: "Пчела: Угњеждене петље"
+              name: 'Пчела: Угњеждене петље'
             'Farmer: While Loops':
-              name: "Фармер: Условне петље"
+              name: 'Фармер: Условне петље'
             'Maze: Sequence':
-              name: "Лавиринт: Линијски програми"
+              name: 'Лавиринт: Линијски програми'
         usability:
           title: Usability Testing
           description: A selection of Course 4 levels for usability testing.
@@ -267,13 +267,13 @@
             Binary:
               name: Binary
             For Loops:
-              name: "Бројачке петље"
+              name: Бројачке петље
             Functions and Functions with Parameters:
-              name: "Функције и параметри"
+              name: Функције и параметри
             Intro:
-              name: "Увод"
+              name: Увод
             Variables:
-              name: "Променљиве"
+              name: Променљиве
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -287,7 +287,7 @@
             'Eval: Boolean Operators':
               name: Boolean Operators
             'Eval: Conditionals':
-              name: "Кондиционали"
+              name: Кондиционали
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
@@ -321,12 +321,12 @@
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
-          title: "Дизнијева Играоница"
-          description: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
-          description_short: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
+          title: Дизнијева Играоница
+          description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+          description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
           stages:
             Infinity:
-              name: "Бесконачно"
+              name: Бесконачно
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming
@@ -337,7 +337,7 @@
             Defining Simple Functions:
               name: Defining Simple Functions
             Defining Variables:
-              name: "Дефинисање променљиве"
+              name: Дефинисање променљиве
             Evaluation Blocks:
               name: Evaluation Blocks
             Making Pictures:
@@ -369,7 +369,7 @@
             Reflection:
               name: Reflection
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Unplugged lessons:
               name: Unplugged lessons
             Writing computer programs:
@@ -417,58 +417,58 @@
             Color Pixelation Tutorial:
               name: Color Pixelation Tutorial
         20-hour:
-          title: "К-8 курс Увод у рачунарство (15-25 часова)"
-          description: "Овај 20-часовни  курс представља срж компјутерских наука и
+          title: К-8 курс Увод у рачунарство (15-25 часова)
+          description: Овај 20-часовни  курс представља срж компјутерских наука и
             програмерских основа. Курс је дизајниран за употребу у учионицама за разреде
-            К-8, али је забавно учити у било којем животном периоду."
+            К-8, али је забавно учити у било којем животном периоду.
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          description_audience: "Узраст од 10 до 18 година"
+          description_audience: Узраст од 10 до 18 година
           stages:
             Abstraction:
-              name: "Апстракција"
+              name: Апстракција
             Algorithms:
-              name: "Алгоритми"
+              name: Алгоритми
             Computational Thinking:
-              name: "Компјутерско Размишљање"
+              name: Компјутерско Размишљање
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Functions:
-              name: "Функције"
+              name: Функције
             Graph Paper Programming:
-              name: "Графичко програмирање"
+              name: Графичко програмирање
             Introduction to Computer Science:
-              name: "Увод у Компјутерске Науке"
+              name: Увод у Компјутерске Науке
             Relay Programming:
-              name: "Релејно Програмирање"
+              name: Релејно Програмирање
             Song Writing:
-              name: "Писање Песама"
+              name: Писање Песама
             The Artist:
-              name: "Уметник"
+              name: Уметник
             The Artist 2:
-              name: "Уметник 2"
+              name: Уметник 2
             The Artist 3:
-              name: "Уметник 3"
+              name: Уметник 3
             The Artist 4:
-              name: "Уметник 4"
+              name: Уметник 4
             The Artist 5:
-              name: "Уметник 5"
+              name: Уметник 5
             The Farmer:
-              name: "Фармер"
+              name: Фармер
             The Farmer 2:
-              name: "Фармер 2"
+              name: Фармер 2
             The Farmer 3:
-              name: "Фармер 3"
+              name: Фармер 3
             The Internet:
-              name: "Интернет"
+              name: Интернет
             The Maze:
-              name: "Лавиринт"
+              name: Лавиринт
             Wrap-up:
-              name: "Замотај-Умотај"
+              name: Замотај-Умотај
         edit-code:
-          title: "Уреди код"
-          description: "Уреди код"
-          description_short: "Уреди код"
+          title: Уреди код
+          description: Уреди код
+          description_short: Уреди код
           description_audience: ''
           stages:
             Applab:
@@ -476,15 +476,15 @@
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
-              name: "Играоница"
+              name: Играоница
             The Artist:
-              name: "Уметник"
+              name: Уметник
             The Maze:
-              name: "Лавиринт"
+              name: Лавиринт
         events:
-          title: "Догађаји"
-          description: "Догађаји"
-          description_short: "Догађаји"
+          title: Догађаји
+          description: Догађаји
+          description_short: Догађаји
           description_audience: ''
           stages:
             Bounce:
@@ -499,27 +499,27 @@
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
-          description_short: "Направи своју Флапи игру за мање од 10 минута!"
+          description_short: Направи своју Флапи игру за мање од 10 минута!
           description_audience: ''
           stages:
             Flappy Code:
               name: Flappy Code
         jigsaw:
-          title: "Слагалица"
-          description: "Пробај нашу слагалицу"
-          description_short: "Пробај нашу слагалицу"
+          title: Слагалица
+          description: Пробај нашу слагалицу
+          description_short: Пробај нашу слагалицу
           description_audience: ''
           stages:
             Jigsaw:
-              name: "Слагалица"
+              name: Слагалица
         step:
-          title: "Корак"
+          title: Корак
           description: ''
           description_short: Step tutorial
           description_audience: ''
           stages:
             Step:
-              name: "Корак"
+              name: Корак
         Hour of Code:
           title: Hour of Code 2013
           description: ''
@@ -599,7 +599,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algPDmiami:
@@ -648,7 +648,7 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: "Утицај рачунарских наука"
+              name: Утицај рачунарских наука
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
@@ -675,7 +675,7 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: "Утицај рачунарских наука"
+              name: Утицај рачунарских наука
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
@@ -792,7 +792,7 @@
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: "Понављања са условима"
+              name: Понављања са условима
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -810,7 +810,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             The Big Game:
               name: The Big Game
             The Design Recipe:
@@ -824,7 +824,7 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: "Утицај рачунарских наука"
+              name: Утицај рачунарских наука
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
@@ -842,7 +842,7 @@
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: "Утицај рачунарских наука"
+              name: Утицај рачунарских наука
             Introduction to PD:
               name: Introduction to PD
             Preparing for in-person PD:
@@ -867,7 +867,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
@@ -886,7 +886,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
@@ -997,7 +997,7 @@
             the reliability of network communication, the security of data, and personal privacy. Topics
             include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
             concerns.
-          description_short: "Интернет"
+          description_short: Интернет
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1034,7 +1034,7 @@
             Tell Me a Secret - Encrypting Text:
               name: The Need for Encryption
             The Internet:
-              name: "Интернет је за свакога"
+              name: Интернет је за свакога
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -1059,7 +1059,7 @@
             Booleans:
               name: Booleans
             Defining Variables:
-              name: "Дефинисање променљиве"
+              name: Дефинисање променљиве
             Evaluation Blocks:
               name: Evaluation Blocks
             Free Play:
@@ -1087,9 +1087,9 @@
             AppLab:
               name: AppLab
             Artist:
-              name: "Уметник"
+              name: Уметник
             Bee:
-              name: "Пчела"
+              name: Пчела
             Bounce:
               name: Bounce
             CSinA:
@@ -1097,13 +1097,13 @@
             Farmer:
               name: Farmer
             Flappy:
-              name: "Флапи"
+              name: Флапи
             Free Response:
               name: Free Response
             Gamelab:
               name: Gamelab
             Jigsaw:
-              name: "Слагалица"
+              name: Слагалица
             Long assessment:
               name: Long assessment
             Markdown Details:
@@ -1111,7 +1111,7 @@
             Match:
               name: Match
             Maze:
-              name: "Лавиринт"
+              name: Лавиринт
             Minecraft:
               name: Minecraft
             Multi:
@@ -1167,9 +1167,9 @@
             Course Overview:
               name: Course Overview
             Defining Functions:
-              name: "Дефинисање Функције"
+              name: Дефинисање Функције
             Defining Variables:
-              name: "Дефинисање променљиве"
+              name: Дефинисање променљиве
             'Eval: Conditionals':
               name: 'Eval: Услови'
             Evaluation Blocks:
@@ -1181,7 +1181,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Writing Contracts:
               name: Writing Contracts
         cspfacilitator:
@@ -1263,7 +1263,7 @@
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: "Замотај-Умотај"
+              name: Замотај-Умотај
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1282,7 +1282,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -1405,7 +1405,7 @@
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: "Замотај-Умотај"
+              name: Замотај-Умотај
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1434,7 +1434,7 @@
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: "Замотај-Умотај"
+              name: Замотај-Умотај
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience
@@ -1478,23 +1478,23 @@
           description_audience: Ages 6-13
           stages:
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Getting Loopy:
-              name: "Запетљанције"
+              name: Запетљанције
             Graph Paper Programming:
-              name: "Графичко програмирање"
+              name: Графичко програмирање
             Happy Maps:
-              name: "Веселе мапе"
+              name: Веселе мапе
             Move it, Move it:
-              name: "Помери га, помери"
+              name: Помери га, помери
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Songwriting:
               name: Songwriting
             The Big Event:
-              name: "Велики догађај"
+              name: Велики догађај
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where
@@ -1776,7 +1776,7 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "Узраст од 10 до 18 година"
+          description_audience: Узраст од 10 до 18 година
           description: ''
           stages:
             Halloween 2015:
@@ -1787,20 +1787,20 @@
             might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "Узраст од 10 до 18 година"
+          description_audience: Узраст од 10 до 18 година
           stages:
             Spring 2016:
               name: Spring 2016
             Halloween 2015:
               name: Halloween 2015
         iceage:
-          title: "Ледено доба - Играоница"
+          title: Ледено доба - Играоница
           description: Create a story or make a game with Ice Age Играоница!
           description_short: Create a story or make a game with Ice Age Играоница!
           description_audience: ''
           stages:
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1853,7 +1853,7 @@
             Processing Arrays:
               name: Processing Arrays
             While Loops:
-              name: "Понављања са условима"
+              name: Понављања са условима
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1881,33 +1881,33 @@
             Gumball Play Lab:
               name: Gumball Играоница
         starwars:
-          title: "Ратови Звезда: Изгради галаксије кôдом"
-          description: "Научите да програмирате дроиде и креирате сопствену игру Ратова
-            звезда у галаксији далеко, далеко."
-          description_short: "Научите да програмирате дроиде и креирате сопствену
-            игру Ратова звезда у галаксији далеко, далеко."
+          title: 'Ратови Звезда: Изгради галаксије кôдом'
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "Час кода 2015"
+              name: Час кода 2015
         starwarsblocks:
-          title: "Ратови Звезда: Изгради галаксије кôдом"
-          description: "Научите да програмирате дроиде и креирате сопствену игру Ратова
-            звезда у галаксији далеко, далеко."
-          description_short: "Научите да програмирате дроиде и креирате сопствену
-            игру Ратова звезда у галаксији далеко, далеко."
+          title: 'Ратови Звезда: Изгради галаксије кôдом'
+          description: Научите да програмирате дроиде и креирате сопствену игру Ратова
+            звезда у галаксији далеко, далеко.
+          description_short: Научите да програмирате дроиде и креирате сопствену игру
+            Ратова звезда у галаксији далеко, далеко.
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "Час кода 2015"
+              name: Час кода 2015
         mc:
-          title: "Мајнкрафт час програмирања"
-          description: "Користите блокове кода да поведете Стива или Алекс у авантуру
-            кроз овај Мајнкрафт свет"
-          description_short: "Истражите Мајнкрафт свет кроз кôд"
+          title: Мајнкрафт час програмирања
+          description: Користите блокове кода да поведете Стива или Алекс у авантуру
+            кроз овај Мајнкрафт свет
+          description_short: Истражите Мајнкрафт свет кроз кôд
           stages:
             Hour of Code 2015:
-              name: "Час кода 2015"
+              name: Час кода 2015
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -2090,7 +2090,7 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: "Калкулатор: Дефинисање променљивих"
+              name: 'Калкулатор: Дефинисање променљивих'
             'Calc: Evaluation Blocks':
               name: 'Calc: Evaluation Blocks'
             'Eval: Defining Functions':
@@ -2120,15 +2120,15 @@
             'Eval: Conditionals':
               name: 'Eval: Услови'
             'Play Lab: Animation (Big Game)':
-              name: "Играоница: Анимација (Big Game)"
+              name: 'Играоница: Анимација (Big Game)'
             'Play Lab: Boolean (Big Game)':
-              name: "Играоница: Логичке променљиве(Big Game)"
+              name: 'Играоница: Логичке променљиве(Big Game)'
             'Play Lab: Booleans':
-              name: "Играоница: Booleans"
+              name: 'Играоница: Booleans'
             'Play Lab: Collision Detection (Big Game)':
-              name: "Играоница: Collision Detection (Big Game)"
+              name: 'Играоница: Collision Detection (Big Game)'
             'Play Lab: Defining Variables (Big Game)':
-              name: "Играоница: Дефинисање променљивих (Big Game)"
+              name: 'Играоница: Дефинисање променљивих (Big Game)'
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -2159,7 +2159,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD3c:
@@ -2181,7 +2181,7 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: "Интернет"
+          description_short: Интернет
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2209,7 +2209,7 @@
             Sending Numbers:
               name: Sending Numbers
             The Internet:
-              name: "Интернет"
+              name: Интернет
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -2420,7 +2420,7 @@
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: "Понављања са условима"
+              name: Понављања са условима
             Edited lessons ABOVE this line:
               name: Edited lessons ABOVE this line
             Buttons and Events:
@@ -2553,7 +2553,7 @@
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: "Функције"
+              name: Функције
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2561,7 +2561,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: "Брзина"
+              name: Брзина
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2608,7 +2608,7 @@
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: "За године од 8 до 18"
+          description_audience: За године од 8 до 18
           stages:
             Sample Stage:
               name: Sample Stage
@@ -2644,7 +2644,7 @@
             Introduction to PD:
               name: Introduction to PD
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD1:
@@ -2981,7 +2981,7 @@
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: "Уметник Функције"
+              name: Уметник Функције
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -2992,7 +2992,7 @@
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: "За године од 8 до 18"
+          description_audience: За године од 8 до 18
           stages:
             Artist Exemplar:
               name: Artist Exemplar
@@ -3037,7 +3037,7 @@
           description: ''
           stages:
             'Bee: Conditionals':
-              name: "Пчела: Услови"
+              name: 'Пчела: Услови'
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
@@ -3051,7 +3051,7 @@
             Debugging:
               name: Debugging
             Events:
-              name: "Догађаји"
+              name: Догађаји
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
@@ -3059,7 +3059,7 @@
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
-              name: "Петље"
+              name: Петље
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3073,7 +3073,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             'Programming Unplugged: Happy Maps':
               name: 'Programming Unplugged: Happy Maps'
         grade4:
@@ -3089,7 +3089,7 @@
             Build a Star Wars Game!:
               name: Build a Star Wars Game!
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Explore project ideas:
               name: Explore project ideas
             'Farmer: Functions (New)':
@@ -3121,13 +3121,13 @@
             Debugging:
               name: Debugging
             Events:
-              name: "Догађаји"
+              name: Догађаји
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
-              name: "Петље"
+              name: Петље
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3155,17 +3155,17 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "Уметник: Бројачке петље"
+              name: 'Уметник: Бројачке петље'
             'Artist: Functions with Parameters':
-              name: "Уметник: Функције са параметрима"
+              name: 'Уметник: Функције са параметрима'
             'Artist: Variables':
-              name: "Уметник: Променљиве"
+              name: 'Уметник: Променљиве'
             'Bee: For Loops':
-              name: "Пчела: Бројачке петље"
+              name: 'Пчела: Бројачке петље'
             'Bee: Functions with Parameters':
-              name: "Пчела: Функције са параметрима"
+              name: 'Пчела: Функције са параметрима'
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Explore project ideas:
               name: Explore project ideas
             Final Project - Presentation Day:
@@ -3177,7 +3177,7 @@
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables':
-              name: "Играоница: Променљиве"
+              name: 'Играоница: Променљиве'
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             'Unplugged: Envelope Variables':
@@ -3215,7 +3215,7 @@
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: "Замотај-Умотај"
+              name: Замотај-Умотај
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -3321,9 +3321,9 @@
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: "Уметник: Угњеждене петље"
+              name: 'Уметник: Угњеждене петље'
             Bee Debugging:
-              name: "Пчела Исправљање грешака"
+              name: Пчела Исправљање грешака
             Bounce:
               name: Bounce
             Build a Game:
@@ -3337,7 +3337,7 @@
             Farmer Impacts of Computing:
               name: Farmer Impacts of Computing
             'Farmer: While Loops':
-              name: "Фармер: Условне петље"
+              name: 'Фармер: Условне петље'
             'Maze: Conditionals with Loops':
               name: 'Maze: Conditionals with Loops'
             'Maze: Nested Loops':
@@ -3420,7 +3420,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: "Брзина"
+              name: Брзина
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3479,7 +3479,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "Функције"
+              name: Функције
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -3592,7 +3592,7 @@
                 block. Combining all of these skills students will draw a randomized
                 rainbow snake at the end of the lesson.
             Variables:
-              name: "Променљиве"
+              name: Променљиве
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -3658,7 +3658,7 @@
                 students write programs that move sprites across the screen, as well
                 as animate other sprite properties.
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -3760,7 +3760,7 @@
             Exploring the Neighborhood:
               name: Exploring the Neighborhood
             Flappy:
-              name: "Флапи"
+              name: Флапи
             Getting Loopy with Puppy:
               name: Getting Loopy with Puppy
             Make a Dog Tag:
@@ -3784,11 +3784,11 @@
             Programming at home with my pet:
               name: Programming at home with my pet
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             'Real-life Algorithms: Paper Planes':
-              name: "Стварни алгоритми: Папирни авиони"
+              name: 'Стварни алгоритми: Папирни авиони'
             The Big Event:
-              name: "Велики догађај"
+              name: Велики догађај
         transferring-over:
           title: ''
           description_audience: ''
@@ -3814,23 +3814,23 @@
             Binary:
               name: Binary
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Events:
-              name: "Догађаји"
+              name: Догађаји
             For Loops:
-              name: "Бројачке петље"
+              name: Бројачке петље
             Functions:
-              name: "Функције"
+              name: Функције
             Functions with Parameters:
-              name: "Функције са параметрима"
+              name: Функције са параметрима
             Loops:
-              name: "Петље"
+              name: Петље
             Nested Loops:
               name: Nested Loops
             Variables:
-              name: "Променљиве"
+              name: Променљиве
             While Loops:
-              name: "Понављања са условима"
+              name: Понављања са условима
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -3840,7 +3840,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: "Контролна табла за наставнике"
+              name: Контролна табла за наставнике
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -4190,7 +4190,7 @@
           description: ''
           stages:
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             Binary Images:
               name: Binarne slike
             Binary Artist Puzzles:
@@ -4371,7 +4371,7 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
             Lists:
-              name: "Листе"
+              name: Листе
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -4424,8 +4424,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4499,8 +4506,15 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4564,8 +4578,18 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4786,15 +4810,15 @@
                 including the problem they set out to solve, the ways in which they've
                 incorporated feedback from testing, and their plans for the future.
         minecraft:
-          title: "Мајнкрафт дизајнер - час програмирања"
+          title: Мајнкрафт дизајнер - час програмирања
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your
             own version of Minecraft.
-          description: "Програмирај животиње и друга Minecraft створења у својој верзији
-            Minecraft-а."
+          description: Програмирај животиње и друга Minecraft створења у својој верзији
+            Minecraft-а.
           stages:
             Minecraft Hour of Code Designer:
-              name: "Мајнкрафт дизајнер - час програмирања"
+              name: Мајнкрафт дизајнер - час програмирања
         flappy-impact-study:
           title: Flappy Code with Survey
           description_audience: ''
@@ -4823,7 +4847,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Programming: Happy Maps':
@@ -4845,7 +4869,7 @@
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
-              name: "Сигурна путања"
+              name: Сигурна путања
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
         courseb-draft:
@@ -4887,9 +4911,9 @@
             Keep it Private:
               name: Keep it Private
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Your Digital Footprint:
-              name: "Твој дигитални траг"
+              name: Твој дигитални траг
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
@@ -4901,7 +4925,7 @@
             Programming in Maze:
               name: Programming in Maze
             'Real-life Algorithms: Paper Planes':
-              name: "Стварни алгоритми: Папирни авиони"
+              name: 'Стварни алгоритми: Папирни авиони'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -4921,13 +4945,13 @@
             More CS with Run Marco:
               name: More CS with Run Marco
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             Events in Play Lab:
               name: Events in Play Lab
             Your Digital Footprint:
-              name: "Твој дигитални траг"
+              name: Твој дигитални траг
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
@@ -4957,7 +4981,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "Услови са картама"
+              name: Услови са картама
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
@@ -4973,11 +4997,11 @@
             Conditionals in Bee:
               name: Conditionals in Bee
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: "Уметник Бинарно"
+              name: Уметник Бинарно
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
@@ -4997,7 +5021,7 @@
             in a multi-day project. Recommended for 4th grade.
           stages:
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Build a Star Wars Game:
               name: Build a Star Wars Game
             'Functions: Songwriting':
@@ -5025,7 +5049,7 @@
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
-              name: "Интернет"
+              name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
             Determine the Concept:
@@ -5033,7 +5057,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -5045,7 +5069,7 @@
             in a multi-day project. Recommended for 5th grade.
           stages:
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Envelope Variables:
               name: Envelope Variables
             Variables in Play Lab:
@@ -5083,7 +5107,7 @@
             Introduction:
               name: Introduction
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
             'Algorithms: Tangrams':
@@ -5415,7 +5439,7 @@
             Foo:
               name: Foo
             Lists:
-              name: "Листе"
+              name: Листе
             Lights:
               name: Lights
             Event Types:
@@ -5429,7 +5453,7 @@
             Timed Loops:
               name: Timed Loops
             For Loops:
-              name: "Бројачке петље"
+              name: Бројачке петље
             Physical Input:
               name: Physical Input
             List and For Loops:
@@ -5475,7 +5499,7 @@
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: "Функције са параметрима"
+              name: Функције са параметрима
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5619,7 +5643,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6:
@@ -5693,7 +5717,7 @@
                 elements of the board as an ouput device while relying on App Lab
                 for user input.
             Lists:
-              name: "Листе"
+              name: Листе
               description_student: Learn how lists can be used to store multiple values
                 in a single variable name.
               description_teacher: A list, also commonly known as an array, is a type
@@ -5713,7 +5737,7 @@
                 from the previous lesson, students write programs that control the
                 color LEDs by accessing them from a list.
             For Loops:
-              name: "Бројачке петље"
+              name: Бројачке петље
               description_student: The class learns about repeating instructions using
                 a _for loop_, first by controlling a "robot" through a grid, and then
                 in App Lab.
@@ -5938,7 +5962,7 @@
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
-              name: "Функције са параметрима"
+              name: Функције са параметрима
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -5997,7 +6021,7 @@
             Accelerometer_:
               name: Accelerometer
             Functions with Parameters_:
-              name: "Функције са параметрима"
+              name: Функције са параметрима
             Circuits and Physical Prototypes_:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation_':
@@ -6019,7 +6043,7 @@
             Drawing in Game Lab:
               name: Drawing in Game Lab
             Variables:
-              name: "Променљиве"
+              name: Променљиве
             Programming for Entertainment:
               name: Programming for Entertainment
             Sprites:
@@ -6035,7 +6059,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Taking Input:
               name: Taking Input
             Complex Conditionals:
@@ -6047,7 +6071,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: "Брзина"
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6055,7 +6079,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "Функције"
+              name: Функције
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6436,7 +6460,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: "Брзина"
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6444,7 +6468,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "Функције"
+              name: Функције
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6521,7 +6545,7 @@
             Intellectual Property and Images:
               name: Intellectual Property and Images
             Lists:
-              name: "Листе"
+              name: Листе
         csd1-draft:
           title: ''
           description_audience: ''
@@ -6563,7 +6587,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
-              name: "Променљиве"
+              name: Променљиве
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -6575,7 +6599,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -6583,7 +6607,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: "Брзина"
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6591,7 +6615,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "Функције"
+              name: Функције
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6601,7 +6625,7 @@
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
-              name: "ништа"
+              name: ништа
             temp:
               name: temp
         coursef-ramp:
@@ -6611,7 +6635,7 @@
             Introduction:
               name: Introduction
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Functions in Farmer:
               name: Functions in Farmer
             Conditionals and Functions in Bee:
@@ -6739,7 +6763,7 @@
             D13 no If/While:
               name: D13 no If/While
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Bounce:
               name: Bounce
             NewBounce:
@@ -6766,10 +6790,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -6796,7 +6824,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "Сигурна путања"
+              name: Сигурна путања
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -6854,11 +6882,11 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Your Digital Footprint:
-              name: "Твој дигитални траг"
+              name: Твој дигитални траг
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -6887,13 +6915,13 @@
         coursec:
           stages:
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Programming in Maze:
               name: Programming in Maze
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
-              name: "Стварни алгоритми: Папирни авиони"
+              name: 'Стварни алгоритми: Папирни авиони'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -6913,7 +6941,7 @@
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
-              name: "Бинарне наруквице"
+              name: Бинарне наруквице
             Loops in Artist:
               name: Loops in Artist
             Loops with Rey and BB-8:
@@ -7009,11 +7037,19 @@
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: "Услови са картама"
+              name: Услови са картама
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7042,7 +7078,7 @@
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7069,7 +7105,7 @@
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: "Уметник Бинарно"
+              name: Уметник Бинарно
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7122,7 +7158,7 @@
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Envelope Variables:
               name: Envelope Variables
             Variables in Artist:
@@ -7197,7 +7233,7 @@
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7289,7 +7325,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: "Интернет"
+              name: Интернет
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7311,7 +7347,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7326,6 +7362,8 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Nested Loops
+            Functions in Harvester:
+              name: Functions in Harvester
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7371,7 +7409,7 @@
                 in-person and online communication. Students then brainstorm ways
                 to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
               description_student: Think of your favorite video game. Ever wondered
                 how it was made? In these puzzles you will develop a video game of
                 your own with friends from Ice Age!
@@ -7551,7 +7589,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7876,9 +7914,9 @@
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
-              name: "Интернет"
+              name: Интернет
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Screen Out the Mean:
               name: Screen Out the Mean
             'Events: The Big Event':
@@ -7890,7 +7928,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Conditionals with Cards:
-              name: "Услови са картама"
+              name: Услови са картама
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals & Loops in Maze:
@@ -7952,9 +7990,11 @@
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Nested Loops:
               name: Nested Loops
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -7966,7 +8006,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Online Safety: Your Digital Footprint':
@@ -7988,7 +8028,7 @@
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: "Пчелица словарица"
+              name: Пчелица словарица
           title: ''
           description_audience: ''
           description_short: ''
@@ -8145,7 +8185,7 @@
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8165,7 +8205,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8191,7 +8231,7 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "Интернет"
+              name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
             Nested Loops in Bee:
@@ -8225,7 +8265,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "Услови са картама"
+              name: Услови са картама
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
@@ -8233,15 +8273,15 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Digital Citizenship:
-              name: "Дигитално држављанство"
+              name: Дигитално држављанство
             Build a Play Lab Game:
               name: Build a Play Lab Game
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: "Уметник Бинарно"
+              name: Уметник Бинарно
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee:
@@ -8333,7 +8373,7 @@
             Present Your Project:
               name: Present Your Project
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
@@ -8365,7 +8405,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8383,7 +8423,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8409,7 +8449,7 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "Интернет"
+              name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
           title: New Script for E
@@ -8423,7 +8463,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8443,7 +8483,7 @@
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Envelope Variables:
@@ -8640,8 +8680,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8723,7 +8765,7 @@
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: "Мајнкрафт час програмирања"
+              name: Мајнкрафт час програмирања
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
           description_short: ''
@@ -8851,7 +8893,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8869,7 +8911,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Private and Personal Information:
               name: Private and Personal Information
             'Functions: Songwriting':
@@ -8895,11 +8937,13 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "Интернет"
+              name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -8911,7 +8955,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "Изградња темеља"
+              name: Изградња темеља
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8931,7 +8975,7 @@
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "Ледено доба - Играоница"
+              name: Ледено доба - Играоница
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Envelope Variables:
@@ -8981,11 +9025,11 @@
             The Circuit Playground:
               name: The Circuit Playground
             Lists:
-              name: "Листе"
+              name: Листе
             Lights:
               name: Lights
             For Loops:
-              name: "Бројачке петље"
+              name: Бројачке петље
             Lists and For Loops:
               name: Lists and For Loops
             Timed Loops:
@@ -9035,7 +9079,7 @@
             Shapes and Randomization:
               name: Shapes and Randomization
             Variables:
-              name: "Променљиве"
+              name: Променљиве
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -9047,7 +9091,7 @@
             Booleans Unplugged:
               name: Booleans Unplugged
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -9055,7 +9099,7 @@
             Project - Interactive Card:
               name: Project - Interactive Card
             Velocity:
-              name: "Брзина"
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -9063,7 +9107,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "Функције"
+              name: Функције
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -9164,7 +9208,7 @@
               description_student: ''
               description_teacher: ''
             Variables:
-              name: "Променљиве"
+              name: Променљиве
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -9245,7 +9289,7 @@
 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Conditionals:
-              name: "Кондиционали"
+              name: Кондиционали
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -9294,7 +9338,7 @@
                 plan for and develop an interactive greeting card using all of the
                 programming techniques they've learned to this point.
             Velocity:
-              name: "Брзина"
+              name: Брзина
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -9353,7 +9397,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "Функције"
+              name: Функције
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -9525,7 +9569,7 @@
                 \r
                 The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Lists:
-              name: "Листе"
+              name: Листе
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -9628,8 +9672,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
           title: Course A
           description: Learn the basics of computer science and internet safety. At
@@ -9651,10 +9702,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "Прави алгоритми: Засади семе"
+              name: 'Прави алгоритми: Засади семе'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -9681,7 +9736,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "Сигурна путања"
+              name: Сигурна путања
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -9724,3 +9779,348 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Изградња темеља
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Nested Loops
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Course B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Прави алгоритми: Засади семе'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Твој дигитални траг
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Изградња темеља
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Услови са картама
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Дигитално држављанство
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Уметник Бинарно
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '

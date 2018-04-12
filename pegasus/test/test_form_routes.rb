@@ -20,5 +20,12 @@ class FormRoutesTest < SequelTestCase
         assert_equal 400, @pegasus.last_response.status
       end
     end
+
+    describe 'POST /forms/:kind/query' do
+      it 'returns 400 for non-existent form kind' do
+        @pegasus.post '/forms/nonexistent/query', '{}', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+        assert_equal 400, @pegasus.last_response.status
+      end
+    end
   end
 end

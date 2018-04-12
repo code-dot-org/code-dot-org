@@ -902,6 +902,19 @@ zh-TW:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: 當您需要提示時，點一下燈泡！
       courseA_maze_seq1_2018_callout:
@@ -934,19 +947,36 @@ zh-TW:
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: 這個數字指的是工具箱中已經沒有這個積木。
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseB_maze_seq1_callout:
+        courseB_maze_seq1: 當您需要提示時，點一下燈泡！
+      courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: 當您需要提示時，點一下燈泡！
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: 使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: 灰色的積木就像石頭一樣，無法被破壞和丟棄。
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: 灰色的積木就像石頭一樣，無法被破壞和丟棄。
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_artist_loopsPrePre1a_callout:
@@ -1006,7 +1036,10 @@ zh-TW:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: 你可以修改這個數字。
         courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
@@ -1014,14 +1047,21 @@ zh-TW:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: 試著使用迴圈來重複向前移動的積木。
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: 使用這個指令讓蜜蜂向後移動。
@@ -1030,7 +1070,9 @@ zh-TW:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1080,7 @@ zh-TW:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1117,8 @@ zh-TW:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1185,7 @@ zh-TW:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: 你可以修改這個數字。
@@ -1154,9 +1200,13 @@ zh-TW:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: 你可以修改這個數字。
         courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: 你可以修改這個數字。
+        courseE_artist_ramp8_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
@@ -1203,19 +1253,33 @@ zh-TW:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
@@ -1435,6 +1499,8 @@ zh-TW:
         course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
       course_playlab_variables3_callout:
         course_playlab_variables3_1: 這是如何為你的變數設定值的方式。
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]

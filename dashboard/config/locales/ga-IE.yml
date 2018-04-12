@@ -94,7 +94,7 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuntas Microsoft
-    clever: Clever Account
+    clever: Cuntas Cliste
     forgot_password: Focal faire dearmadta?
     need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
     need_unlock: Nach bhfuair tú na treoracha díghlasála?
@@ -156,7 +156,7 @@
     user_type_student: Dalta
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
-    error: An error occurred.
+    error: Tharla earráid.
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -227,9 +227,9 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Eolas logála isteach do Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Fáilte go dtí Code.org!
   section:
     your_section:
       one: 'Do rannán:'
@@ -239,7 +239,7 @@
       remove: An bhfuil tú cinnte gur mhaith leat an rannán seo a fhágáil?
     remove: "(bain rannán)"
     type:
-      picture: Picture Password
+      picture: Pictiúr mar Fhocal Faire
       word: Focal Rúnda
       email: Seoladh ríomhphoist
       google_classroom: Google Classroom
@@ -250,14 +250,14 @@
     registered: Chláraigh tú le %{section_name}.
     error:
       signed_in: Ba chóir duit logáil amach ar dtús
-      username_not_found: "Úsáideoir %{username} gan aimsiú"
+      username_not_found: Úsáideoir %{username} gan aimsiú
       username_in_use: Tá an t-ainm %{username} in úsáid cheana. Roghnaigh ainm eile
       no_teacher: Níor aimsíodh aon duine cláraithe le '%{teacher_email_or_code}'.
         Iarr ar do mhúinteoir clárú anseo, ansin déan iarracht eile
       section_not_found: Níor aimsíodh aon rannán le cód '%{section_code}'.
       blank_code: Cuir isteach cód an rannáin
-      cant_join_own_section: "Ár leithscéal, níl cead agat dul isteach i do rannán
-        féin."
+      cant_join_own_section: Ár leithscéal, níl cead agat dul isteach i do rannán
+        féin.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
@@ -302,7 +302,7 @@
         gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
         weblab: Make a Web Lab (beta) project
       home: Baile
-      my_dashboard: My Dashboard
+      my_dashboard: Mo Phainéal
       courses: Cúrsaí
       course_catalog: Course Catalog
       project_gallery: Tograí
@@ -402,7 +402,7 @@
     delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais
       do chuid daltaí.'
     delete_confirm: An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?
-    deleted_user: "úsáideoir scriosta"
+    deleted_user: úsáideoir scriosta
     no_password_because_oauth: Ní gá focal faire a roghnú. Logálfaidh tú isteach trí
       sholáthraí tríú páirtí.
     no_password_because_sponsored: Cabhróidh do mhúinteoir leat d'fhocal faire a bhainistiú.
@@ -410,7 +410,7 @@
     create_personal_login_under_13_info: If you want to keep using your Code.org account
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
-    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_username: Ainm úsáideora (ná húsáid d'fhíorainm!)
     create_personal_login_under_13_parent_email: Parent/guardian email address (to
       recover your password)
     create_personal_login_info: Más mian leat Code.org a úsáid fiú tar éis dheireadh
@@ -471,8 +471,8 @@
       agus an ríomhchlárú. Tá an cúrsa dírithe ar dhaltaí bunscoile agus meánscoile,
       ach bhainfeadh daltaí níos sine nó fiú daoine fásta taitneamh as freisin.
     test_videos_help: Bain triail as ár seinnteoir nua físeán i do scoil
-    try_beta_courses: "Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile"
-    use_as_teacher: "Úsáid an suíomh seo mar mhúinteoir"
+    try_beta_courses: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile
+    use_as_teacher: Úsáid an suíomh seo mar mhúinteoir
     heading_hoc2014: "<h2>An Uair Chódála</h2><h1>ó Liath go Leanbh</h1>"
     heading_elementary: "<h2>Cúrsaí 20 uair an chloig ar</h2><h1>Bhuntús na Ríomheolaíochta
       (gach aois)</h1>"
@@ -652,7 +652,7 @@
       é The Amazing World of Gumball agus &copy; 2015 Cartoon Network.
     code_from_html: Baineann Code.org úsáid as p5.play, ar fáil faoin <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: "Á chumhachtú ag Amazon Web Services"
+    powered_by_aws: Á chumhachtú ag Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Is trádmharcanna de chuid Code.org
       iad Code.org&reg;, lógó CODE agus Hour of Code&reg;."
     copyright: Cóipcheart
@@ -683,9 +683,9 @@
     notes: Níl seinnteoir físe agat? Taispeáin nótaí.
     notes_coming_soon: Beidh nótaí don fhíseán seo ar fáil go luath.
     autoplay_option: Seinn físeáin go huathoibríoch
-    download: "Íoslódáil an Físeán"
-    show_notes: Show Notes
-    show_video: Show Video
+    download: Íoslódáil an Físeán
+    show_notes: Taispeáin Nótaí
+    show_video: Taispeáin an Físeán
   compatibility:
     upgrade:
       unsupported_message: Ní thacaímid le do bhrabhsálaí. Ba chóir duit <a href='%{supported_browsers_url}',
@@ -711,7 +711,7 @@
   download_pdf: Oscail an Plean Ceachta
   lesson_plan: Plean Ceachta
   view_lesson_plan: Féach ar an bPlean Ceachta
-  pdf_download: "Íoslódáil PDF"
+  pdf_download: Íoslódáil PDF
   download_coming_soon: Gníomhaíocht in-íoslódáilte le teacht go luath.
   video_coming_soon: Físeán le teacht go luath!
   not_started: Níor bhain an dalta triail as an leibhéal seo fós.
@@ -792,8 +792,8 @@
       title: Star Wars
     infinity:
       title: 'Infinity: Spraotharlann'
-      body: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair
-        Disney Infinity."
+      body: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair
+        Disney Infinity.
     minecraft:
       title: Minecraft
       body: Taiscéal domhan Minecraft le cód.
@@ -986,7 +986,7 @@
     - white: Den chine geal
     - black: Den chine gorm nó Afra-Mheiriceánach
     - hispanic: Easpáinneach nó Latinx
-    - asian: "Áiseach"
+    - asian: Áiseach
     - hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
     - american_indian: Bundúchasach Meiriceánach/Alascach
     - other: Eile
@@ -1093,7 +1093,7 @@
         abuse_type:
           question: Cén chaoi a sáraíonn an t-ábhar seo na %{link_start}Téarmaí Seirbhíse%{link_end}?
           harassment: Bagairtí, cibearbhulaíocht, ciapadh
-          offensive: "Ábhar gránna"
+          offensive: Ábhar gránna
           infringement: Sárú Cóipchirt
           other: Eile
         detail: Tabhair dúinn an méid is féidir mionsonraí maidir leis an ábhar á
@@ -1125,14 +1125,14 @@
     review_new_submission: Review a new submission
   flex_category:
     required: Foramharc
-    content: "Ábhar"
+    content: Ábhar
     practice: Cleachtais Mhúinteoireachta
     peer_review: Athbhreithniú Comhghleacaithe
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Príomhchúrsa
-    extra_course_content: "Ábhar Breise"
+    extra_course_content: Ábhar Breise
     csf_e_1: Ramp Up to Course E (Optional)
     csf_e_2: Course E Content
     csf_f_1: Ramp Up to Course F (Optional)
@@ -1174,7 +1174,7 @@
       dteagmháil linn</a> dá mbeadh ábhar gránna nó maslach air, nó dá mbeadh an nasc
       leis an suíomh briste.
   hoc_download:
-    title: "Íoslódálacha: An Uair Chódála"
+    title: 'Íoslódálacha: An Uair Chódála'
     capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
     capsule_desc: Bain triail as an acmhainn ar líne <a href="%{url}">%{app_name}</a>.
     instructions_headline: Gan ceangal Idirlín?
@@ -1189,49 +1189,49 @@
     minecraft_name: An Uair Chódála Minecraft
     starwars_blocks_name: 'Star Wars: Tóg do Réaltra Féin le Cód (Blocanna)'
     starwars_javascript_name: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
-    download_message: "Íoslódáil %{app_name} lena úsáid as líne (136MB)"
-    download_in_Albanian: "Íoslódáil in Albáinis:"
-    download_in_Arabic: "Íoslódáil in Araibis:"
-    download_in_Azerbaijani: "Íoslódáil in Asarbaiseáinis:"
-    download_in_Basque: "Íoslódáil i mBascais:"
-    download_in_Bosnian: "Íoslódáil i mBoisnis:"
-    download_in_Bulgarian: "Íoslódáil i mBulgáiris:"
-    download_in_Catalan: "Íoslódáil i gCatalóinis:"
-    download_in_Chinese-Taiwan: "Íoslódáil i Sínis na Téaváine:"
-    download_in_Chinese: "Íoslódáil i Sínis:"
-    download_in_Croatian: "Íoslódáil i gCróitis:"
-    download_in_Czech: "Íoslódáil i Seicis:"
-    download_in_Danish: "Íoslódáil i nDanmhairgis:"
-    download_in_Dutch: "Íoslódáil in Ollainnis:"
-    download_in_English: "Íoslódáil i mBéarla:"
-    download_in_Finnish: "Íoslódáil i bhFionlainnis:"
-    download_in_French: "Íoslódáil i bhFraincis:"
-    download_in_German: "Íoslódáil i nGearmáinis:"
-    download_in_Greek: "Íoslódáil i nGréigis:"
-    download_in_Hebrew: "Íoslódáil in Eabhrais:"
-    download_in_Hungarian: "Íoslódáil in Ungáiris:"
-    download_in_Icelandic: "Íoslódáil in Íoslainnis:"
-    download_in_Indonesian: "Íoslódáil in Indinéisis:"
-    download_in_Irish: "Íoslódáil i nGaeilge:"
-    download_in_Italian: "Íoslódáil in Iodáilis:"
-    download_in_Japanese: "Íoslódáil i Seapáinis:"
-    download_in_Korean: "Íoslódáil i gCóiréis:"
-    download_in_Latvian: "Íoslódáil i Laitvis:"
-    download_in_Lithuanian: "Íoslódáil i Liotuáinis:"
-    download_in_Norwegian: "Íoslódáil in Ioruais:"
-    download_in_Norwegian-Nynorsk: "Íoslódáil in Ioruais-Nynorsk:"
-    download_in_Polish: "Íoslódáil i bPolainnis:"
-    download_in_Portuguese-Brazil: "Íoslódáil i bPortaingéilis na Brasaíle:"
-    download_in_Portuguese: "Íoslódáil i bPortaingéilis:"
-    download_in_Romanian: "Íoslódáil i Rómáinis:"
-    download_in_Russian: "Íoslódáil i Rúisis:"
-    download_in_Serbian: "Íoslódáil i Seirbis:"
-    download_in_Slovenian: "Íoslódáil i Slóivéinis:"
-    download_in_Spanish: "Íoslódáil i Spáinnis:"
-    download_in_Swedish: "Íoslódáil i Sualainnis:"
-    download_in_Turkish: "Íoslódáil i dTuircis:"
-    download_in_Ukrainian: "Íoslódáil in Úcráinis:"
-    download_in_Vietnamese: "Íoslódáil i Vítneaimis:"
+    download_message: Íoslódáil %{app_name} lena úsáid as líne (136MB)
+    download_in_Albanian: 'Íoslódáil in Albáinis:'
+    download_in_Arabic: 'Íoslódáil in Araibis:'
+    download_in_Azerbaijani: 'Íoslódáil in Asarbaiseáinis:'
+    download_in_Basque: 'Íoslódáil i mBascais:'
+    download_in_Bosnian: 'Íoslódáil i mBoisnis:'
+    download_in_Bulgarian: 'Íoslódáil i mBulgáiris:'
+    download_in_Catalan: 'Íoslódáil i gCatalóinis:'
+    download_in_Chinese-Taiwan: 'Íoslódáil i Sínis na Téaváine:'
+    download_in_Chinese: 'Íoslódáil i Sínis:'
+    download_in_Croatian: 'Íoslódáil i gCróitis:'
+    download_in_Czech: 'Íoslódáil i Seicis:'
+    download_in_Danish: 'Íoslódáil i nDanmhairgis:'
+    download_in_Dutch: 'Íoslódáil in Ollainnis:'
+    download_in_English: 'Íoslódáil i mBéarla:'
+    download_in_Finnish: 'Íoslódáil i bhFionlainnis:'
+    download_in_French: 'Íoslódáil i bhFraincis:'
+    download_in_German: 'Íoslódáil i nGearmáinis:'
+    download_in_Greek: 'Íoslódáil i nGréigis:'
+    download_in_Hebrew: 'Íoslódáil in Eabhrais:'
+    download_in_Hungarian: 'Íoslódáil in Ungáiris:'
+    download_in_Icelandic: 'Íoslódáil in Íoslainnis:'
+    download_in_Indonesian: 'Íoslódáil in Indinéisis:'
+    download_in_Irish: 'Íoslódáil i nGaeilge:'
+    download_in_Italian: 'Íoslódáil in Iodáilis:'
+    download_in_Japanese: 'Íoslódáil i Seapáinis:'
+    download_in_Korean: 'Íoslódáil i gCóiréis:'
+    download_in_Latvian: 'Íoslódáil i Laitvis:'
+    download_in_Lithuanian: 'Íoslódáil i Liotuáinis:'
+    download_in_Norwegian: 'Íoslódáil in Ioruais:'
+    download_in_Norwegian-Nynorsk: 'Íoslódáil in Ioruais-Nynorsk:'
+    download_in_Polish: 'Íoslódáil i bPolainnis:'
+    download_in_Portuguese-Brazil: 'Íoslódáil i bPortaingéilis na Brasaíle:'
+    download_in_Portuguese: 'Íoslódáil i bPortaingéilis:'
+    download_in_Romanian: 'Íoslódáil i Rómáinis:'
+    download_in_Russian: 'Íoslódáil i Rúisis:'
+    download_in_Serbian: 'Íoslódáil i Seirbis:'
+    download_in_Slovenian: 'Íoslódáil i Slóivéinis:'
+    download_in_Spanish: 'Íoslódáil i Spáinnis:'
+    download_in_Swedish: 'Íoslódáil i Sualainnis:'
+    download_in_Turkish: 'Íoslódáil i dTuircis:'
+    download_in_Ukrainian: 'Íoslódáil in Úcráinis:'
+    download_in_Vietnamese: 'Íoslódáil i Vítneaimis:'
     windows: Windows (64-giotán)
     mac: Mac OS X
   plc:

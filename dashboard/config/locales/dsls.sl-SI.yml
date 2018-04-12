@@ -430,7 +430,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "Čebelica pogoji izbirno vprašanje ena"
+        Bee Conditionals Multiple Choice One: Čebelica pogoji izbirno vprašanje ena
         Which comparison below is true?: Katera spodnja primerjava velja?
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
@@ -439,7 +439,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "Čebelica pogoji izbirno vprašanje dva"
+        Bee Conditionals Multiple Choice Two: Čebelica pogoji izbirno vprašanje dva
         Choose the best blocks.: Izberi najboljše bloke.
       2-3 bee conditionals multi 3:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
@@ -448,7 +448,7 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "Čebelica pogoji izbirno vprašanje dva"
+        Bee Conditionals Multiple Choice Two: Čebelica pogoji izbirno vprašanje dva
         Choose the best blocks.: Izberi najboljše bloke.
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -457,7 +457,7 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
-        Bee Loops Multiple Choice One: "Čebelica zanke izbirno vprašanje ena"
+        Bee Loops Multiple Choice One: Čebelica zanke izbirno vprašanje ena
         Which blocks collect all of the nectar?: S katerim blokom lahko nabereš ves
           nektar?
       2-3 maze multi 1:
@@ -497,8 +497,8 @@
         Which of these pictures best represents crowdsourcing?: Katera od spodnjih
           slik najbolje predstavlja "crowdsourcing"?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "Česanje tvojih las"
-        Cleaning your room: "Čiščenje tvoje sobe"
+        Brushing your hair: Česanje tvojih las
+        Cleaning your room: Čiščenje tvoje sobe
         Eating your dessert: Jesti tvojo sladico
         Multiple Choice: Izbirno vprašanje
         Washing your face: Umivanje tvojega obraza
@@ -511,7 +511,7 @@
         Your address: Tvoj naslov
         Your birthday: Tvoj rojstni dan
         Your favorite food: Tvoja najljubša hrana
-        Your parent's credit card number: "Številko kreditne kartice tvojih staršev"
+        Your parent's credit card number: Številko kreditne kartice tvojih staršev
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
@@ -524,9 +524,9 @@
           pripeljal?
       4-5 Internet Multi 2:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "Če
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Če
           te je DNS poslal na stran z IP naslovom 100.42.50.110, na kateri spletni
-          strani se nahajaš?"
+          strani se nahajaš?
         Multiple Choice: Izbirno vprašanje
         code.org: code.org
         csisfun.com: csisfun.com
@@ -617,7 +617,7 @@
           a purple flower?"
         1: ": Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko. Kateri
           blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?"
-        Bee Conditionals Multiple Choice: "Čebelica pogoji izbirno vprašanje"
+        Bee Conditionals Multiple Choice: Čebelica pogoji izbirno vprašanje
         Choose the best blocks.: Izberi najboljše bloke.
       4-5 bee debug multi 1:
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
@@ -626,7 +626,7 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: "Čebelica razhroščevanje izbirno vprašanje"
+        Bee Debug Multiple Choice: Čebelica razhroščevanje izbirno vprašanje
         Which version of the function will work?: Katera verzija funkcije bo delovala?
       4-5 bee loops multi 1:
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
@@ -634,7 +634,7 @@
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: "Čebelica zanke izbirno vprašanje"
+        Bee Loops Multiple Choice: Čebelica zanke izbirno vprašanje
         Which blocks will solve the puzzle?: Kateri bloki rešijo to uganko?
       4-5 farmer loops multi 1:
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"

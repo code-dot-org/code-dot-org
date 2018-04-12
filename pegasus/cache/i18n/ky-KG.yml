@@ -8,7 +8,7 @@
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: "Дагы кара"
+  upgrade_ie_link: Дагы кара
   en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
@@ -20,39 +20,39 @@
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: Anybody can learn.
-  learn_now: "Азыр үйрөн"
-  petition_message: "Бардык мектептердеги бардык окуучулардын компүтердик билим алуу
-    мүмкүнчүлүгү болушу керек"
-  petition_sign_message: "Макул болсоңуз, атыңарды жазып,  # башкаларга кошулгула."
-  petition_sign_message_support: "Бизди колдосоңор, атыңарды жазып,  # башкаларга
-    кошулгула."
+  learn_now: Азыр үйрөн
+  petition_message: Бардык мектептердеги бардык окуучулардын компүтердик билим алуу
+    мүмкүнчүлүгү болушу керек
+  petition_sign_message: 'Макул болсоңуз, атыңарды жазып,  # башкаларга кошулгула.'
+  petition_sign_message_support: 'Бизди колдосоңор, атыңарды жазып,  # башкаларга
+    кошулгула.'
   petition_join_others: "# Башкаларга кошулгула"
-  name: "Аты"
+  name: Аты
   email: Email
-  zipcode: "Почта индекси же өлкөсү"
-  submit: "Кошуу"
+  zipcode: Почта индекси же өлкөсү
+  submit: Кошуу
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   og_title: 'Code.org: Ар ким үйрөнө алат'
-  og_title_soon: "Код сааты жакындап келатат"
-  og_title_here: "Код сааты башталды!"
-  og_description: "Бардык мектептердеги бардык окуучулардын компүтердик билим алуу
-    мүмкүнчүлүгү болушу керек."
+  og_title_soon: Код сааты жакындап келатат
+  og_title_here: Код сааты башталды!
+  og_description: Бардык мектептердеги бардык окуучулардын компүтердик билим алуу
+    мүмкүнчүлүгү болушу керек.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Computer Science Education Week
   csedweek_og_description: 4-10-декабрь 2017. Компүтердик билим ар бир окуучуга пайдалуу.
-  csedweek_og_description_soon: "Код сааты 4-10-декабрь 2017 башталат. Компүтердик
-    билим алуу ар бир окуучуга пайдалуу."
-  csedweek_og_description_here: "Код сааты башталды. Компүтердик билим алуу ар бир
-    окуучуга пайдалуу."
+  csedweek_og_description_soon: Код сааты 4-10-декабрь 2017 башталат. Компүтердик
+    билим алуу ар бир окуучуга пайдалуу.
+  csedweek_og_description_here: Код сааты башталды. Компүтердик билим алуу ар бир
+    окуучуга пайдалуу.
   hoc2014_heading: <a href="http://hourofcode.com">Код саатына</a> кошулгула<br/>8-14-декабрь,
     2014<br/>
   hoc2014_students: Students
-  hoc2014_try: "Көргүлө"
-  hoc2014_teachers: "Мугалимдер"
-  hoc2014_host: "Кабыл алгыла"
+  hoc2014_try: Көргүлө
+  hoc2014_teachers: Мугалимдер
+  hoc2014_host: Кабыл алгыла
   hoc2014_everyone: Everyone
   hoc2014_support: Support it &#x25BE;
   hoc2014_whatishoc: What is the Hour of Code?
@@ -65,7 +65,7 @@
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: Special Event
   cded_sign_up: Sign up
-  cded_try_it: "Көргүлө"
+  cded_try_it: Көргүлө
   try_now: Try now
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
@@ -359,12 +359,12 @@
   studiobar_donate_body: One child learns for each dollar you donate
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_stats_students: "АКШ окуучуларынын Code.org эсеби бар"
+  homepage_stats_students: АКШ окуучуларынын Code.org эсеби бар
   homepage_stats_female: "- кыздар"
-  homepage_stats_teachers: "мугалим Code.org колдонот"
-  homepage_stats_hourofcodde: "дүйнө жүзүнөн окуучуу Код саатын байкап көрүштү"
-  homepage_stats_policy: "мамлекет компүтердик илимди колдоо саясатын өзгөрттү"
-  homepage_stats_title: "Биз өзгөртүү үстүндөбүз"
+  homepage_stats_teachers: мугалим Code.org колдонот
+  homepage_stats_hourofcodde: дүйнө жүзүнөн окуучуу Код саатын байкап көрүштү
+  homepage_stats_policy: мамлекет компүтердик илимди колдоо саясатын өзгөрттү
+  homepage_stats_title: Биз өзгөртүү үстүндөбүз
   homepage_hero_text_malala: "&ldquo;Мен бардык өлкөлөрдүн кыздарын \nКод саатына
     катышууга чакырам&rdquo; \nМалала, Нобель сыйлыгынын ээси"
   homepage_hero_text_susan: |-
@@ -406,42 +406,42 @@
     тартты жана катыштыра алды.&rdquo;\nАдам, мугалим"
   homepage_hero_text_stat_loc: 8.5 млн кыз Code.org аркылуу үйрөнүп жатышат
   homepage_hero_text_stat_students: "#student_count окуучунун Code.org эсеби бар"
-  homepage_hero_text_stat_served: "Код сааты: #served байкап көрүштү"
-  homepage_hero_hoc_is_coming: "Код сааты жакындап келатат"
-  homepage_hero_hoc_is_here: "Код сааты башталды"
+  homepage_hero_text_stat_served: 'Код сааты: #served байкап көрүштү'
+  homepage_hero_hoc_is_coming: Код сааты жакындап келатат
+  homepage_hero_hoc_is_here: Код сааты башталды
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: "Анна менен Элзага кошулуп тоңдургула"
-  homepage_slot_text_teacher: "Мугалимдин тактасы"
-  homepage_slot_text_studio: "Бардык көнүгүүлөрүбүз"
+  homepage_slot_text_frozen: Анна менен Элзага кошулуп тоңдургула
+  homepage_slot_text_teacher: Мугалимдин тактасы
+  homepage_slot_text_studio: Бардык көнүгүүлөрүбүз
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: "Код сааты ар бир окуучу үчүн."
+  homepage_action_text_hoc: Код сааты ар бир окуучу үчүн.
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: "Бизге кошулгула"
+  homepage_action_text_join_us: Бизге кошулгула
   homepage_action_text_sign_up: Sign up
-  homepage_action_text_try_it: "Көргүлө"
-  homepage_action_text_volunteers: "Техникалык ыктыярчылар керек"
-  homepage_action_text_codevideo: "Видео көргүлө"
-  homepage_action_text_teachervideo: "Видео көргүлө"
-  homepage_action_text_watchvideo: "Видео көргүлө"
-  homepage_action_text_girlvideo: "Кызды шыктандыр"
-  homepage_action_text_learn: "Үйрөнүп баштоо"
-  homepage_action_text_signpetition: "Петицияга кол кой"
-  homepage_action_text_wincelebritychat: "Жылдыз менен чат утуп ал"
-  homepage_signpetition_dropdown: "Макулмун &#x25BE;"
-  homepage_diversity_pledge: "Ар түрдүүлүк петициясына кошулуу"
+  homepage_action_text_try_it: Көргүлө
+  homepage_action_text_volunteers: Техникалык ыктыярчылар керек
+  homepage_action_text_codevideo: Видео көргүлө
+  homepage_action_text_teachervideo: Видео көргүлө
+  homepage_action_text_watchvideo: Видео көргүлө
+  homepage_action_text_girlvideo: Кызды шыктандыр
+  homepage_action_text_learn: Үйрөнүп баштоо
+  homepage_action_text_signpetition: Петицияга кол кой
+  homepage_action_text_wincelebritychat: Жылдыз менен чат утуп ал
+  homepage_signpetition_dropdown: Макулмун &#x25BE;
+  homepage_diversity_pledge: Ар түрдүүлүк петициясына кошулуу
   homepage_banner_text_prizes: '7-13 декабрда Код сааты кайрадан башталат. '
-  homepage_banner_link_prizes: "Тарыхтагы эң чоң үйрөтүү иш-чарасына катыш. "
+  homepage_banner_link_prizes: 'Тарыхтагы эң чоң үйрөтүү иш-чарасына катыш. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: "Дагы кара"
+  homepage_banner_text_link: Дагы кара
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "Дагы кара"
+  homepage_banner_privacy_link: Дагы кара
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "Дагы кара"
+  homepage_banner_20k_teachers_link: Дагы кара
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
@@ -449,7 +449,7 @@
     student privacy.
   homepage_banner_emailprivacy_link: Read more
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "Дагы кара"
+  homepage_banner_40k_teachers_link: Дагы кара
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -602,7 +602,7 @@
   sports_og_description: Champions and gold medalists encourage you to try the Hour
     of Code. Code your own sports game.
   sports_title: Code your own sports game
-  sports_watch_video: "Видео көргүлө"
+  sports_watch_video: Видео көргүлө
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -639,7 +639,7 @@
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "Кызды шыктандыр"
+  video_title_inspire_girl: Кызды шыктандыр
   video_title_cs_intro: Computer Science intro
   video_title_schools_dont_teach: What Most Schools Don't Teach
   video_title_obama: President Obama on computer science
@@ -685,7 +685,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "Аты"
+  volunteer_engineer_submission_field_name: Аты
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -706,7 +706,7 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "Түшүндүрмөсү"
+  volunteer_engineer_submission_field_description: Түшүндүрмөсү
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience or technical background and how you would like to participate as a
     volunteer for local teachers.
@@ -727,7 +727,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "Кошуу"
+  volunteer_engineer_submission_submit: Кошуу
   volunteer_engineer_submission_thankyou: Thank you! Your volunteer information was
     successfully submitted. Teachers will be using <a href="%{url}">this map</a> to
     search for and contact volunteers like you. Please allow 48 hours for your information
@@ -771,7 +771,7 @@
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "Дагы кара"
+  dashboard_announce_learn_more_button: Дагы кара
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -846,7 +846,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_cancel: "Жок кыл"
+  dashboard_action_cancel: Жок кыл
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
@@ -967,7 +967,7 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "Аты"
+  dashboard_students_name: Аты
   dashboard_students_progress: Progress
   dashboard_students_male: Male
   dashboard_students_female: Female
@@ -1279,7 +1279,7 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "Математика"
+  math_category_name: Математика
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International

@@ -27,7 +27,7 @@
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre. Únete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre. Invite a #
     otros.'
-  petition_join_others: "Únete a # otros"
+  petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -36,20 +36,20 @@
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
   og_title: Todos los niños merecen oportunidades
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_soon: Ya viene la Hora del código
+  og_title_here: "¡La Hora del Código está aquí!"
   og_description: Every student in every school deserves the opportunity to study
     computer science.
-  og_description_celeb: "¡Prueba los nuevos tutoriales, gana un video chat de celebridades
+  og_description_celeb: "¡Prueba los nuevos tutoriales, gana un video chat con celebridades
     para ti o para tu clase!"
   csedweek_og_title: La Hora del Código está aquí
   csedweek_og_description: La Hora del Código es un movimiento global que llega a
     decenas de millones de estudiantes de todas las edades de más de 180 países y
     45 idiomas.
-  csedweek_og_description_soon: La Hora del Código llegará del 4 al 10 de diciembre
-    de 2017. La informática es fundamental para que cada alumno aprenda.
-  csedweek_og_description_here: La Hora del Código esta aquí. La informática es fundamental
-    para que todo estudiante aprenda.
+  csedweek_og_description_soon: La Hora del Código llegará del 3 al 9 de diciembre
+    de 2018. Las ciencias de la computación son un aprendizaje fundamental para todos.
+  csedweek_og_description_here: La Hora del Código esta aquí. Las ciencias de la computación
+    son un aprendizaje fundamental para todos.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnos
@@ -281,20 +281,20 @@
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
   learn_back_to_minecraft: Siga aprendiendo con Minecraft
-  hoc_is_here: 'La #HourOfCode viene otra vez del 5 al 11 de diciembre. https://youtu.be/KsOIlDT145A.'
+  hoc_is_here: 'La #HoraDelCódigo viene otra vez del 5 al 11 de diciembre. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
   just_did_course1: He terminado el Curso 1 - ¡mira! @codeorg
   just_did_course2: He terminado el Curso 2 - ¡mira! @codeorg
   just_did_course3: He terminado el Curso 3 – ¡míralo! @codeorg
   just_did_course4: He terminado el Curso 4 – ¡mira! @codeorg
-  just_did_coursea: Acabo de completar el curso A - ¡Dale un vistazo! @codeorg
-  just_did_courseb: Acabo de completar el curso B - ¡Dale un vistazo! @codeorg
-  just_did_coursec: Acabo de completar el curso C - ¡Dale un vistazo! @codeorg
-  just_did_coursed: Acabo de completar el curso D - ¡Dale un vistazo! @codeorg
-  just_did_coursee: Acabo de completar el curso E - ¡Dale un vistazo! @codeorg
-  just_did_coursef: Acabo de completar el curso F - ¡Dale un vistazo! @codeorg
+  just_did_coursea: He terminado el Curso A - ¡mira! @codeorg
+  just_did_courseb: He terminado el Curso B - ¡mira! @codeorg
+  just_did_coursec: He terminado el Curso C - ¡mira! @codeorg
+  just_did_coursed: He terminado el Curso D - ¡mira! @codeorg
+  just_did_coursee: He terminado el Curso E - ¡mira! @codeorg
+  just_did_coursef: He terminado el Curso F – ¡míralo! @codeorg
   just_did_accelerated: He terminado el Curso Acelerado - ¡mira! @codeorg
-  just_did_hoc_donor: 'Acabo de hacer el #HourOfCode - ¡Dale un vistazo! (Gracias
+  just_did_hoc_donor: 'Acabo de hacer la #HoraDelCódigo - ¡Dale un vistazo! (Gracias
     %{donor_twitter} por apoyar a @codeorg)'
   just_did_course1_donor: Acabo de terminar el Curso 1 - ¡Dale un vistazo! Gracias
     %{donor_twitter} por apoyar a @codeorg
@@ -321,8 +321,8 @@
   twitter_teach_cs: "¿Por qué no hay más escuelas que enseñen ciencias de la computación?
     Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para
     obtener más información."
-  twitter_cs_foundational: Las Ciencias de la computación son fundamentales para cualquier
-    estudiante para aprender. https://youtu.be/QvyTEx1wyOY.
+  twitter_cs_foundational: Las Ciencias de la computación son fundamentales para todo
+    estudiante. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de Una Hora
   what_gender: "¿Cuál es tu sexo?"
@@ -334,7 +334,7 @@
     fecha.
   lines_of_code_alt: "<b>#</b> LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES"
   who_has_done_hoc: "¿Quién ha hecho #HourOfCode? @codeorg"
-  who_has_done_hoc_donor: "¿Quien ha hecho el #HourOfCode? (Gracias %{donor_twitter}
+  who_has_done_hoc_donor: "¿Quien ha hecho la #HoraDelCódigo? (Gracias %{donor_twitter}
     por apoyar a @codeorg)"
   hoc_leaderboards: 'Tablero de clasificaciones de La hora del código '
   students_and_lines: "%{students} de estudiantes han hecho La hora de código y escrito
@@ -365,12 +365,13 @@
   studiobar_shop_title: Tienda
   studiobar_shop_body: Rompe los estereotipos. Usa nuestro logotipo con orgullo.
   homepage_stats_students: de estudiantes de EE. UU. tienen cuentas en Code.org
-  homepage_stats_female: de nuestros estudiantes son mujeres
+  homepage_stats_female: de nuestras estudiantes son mujeres
   homepage_stats_teachers: profesores usan Code.org
   homepage_stats_hourofcodde: de los estudiantes a nivel mundial ha probado la Hora
     de Código
-  homepage_stats_policy: estados cambiaron la política para apoyar a la informática
-  homepage_stats_title: Nosotros creamos una diferencia
+  homepage_stats_policy: estados cambiaron la política para apoyar a las ciencias
+    de la computación
+  homepage_stats_title: Nosotros hacemos la diferencia
   homepage_hero_text_malala: “Desafíe a chicas en cada país a aprender una "Hora de
     código"” Malala, ganadora del Premio Nobel de la paz
   homepage_hero_text_susan: '"Si puedes cambiar la tecnología, puedes cambiar el mundo".
@@ -382,7 +383,7 @@
   homepage_hero_text_satya: "“Las ciencias de la computación pueden permitirle acceder
     a las mejores oportunidades en el mundo.” Satya, CEO de Microsoft"
   homepage_hero_text_satya_new: |-
-    &ldquo;La informática permite a los estudiantes crear el mundo del mañana.&rdquo;
+    &ldquo;Las ciencias de la computación permiten a los estudiantes crear el mundo del mañana.&rdquo;
     Satya, CEO de Microsoft
   homepage_hero_text_bosh: '"Si programas, puedes elegir el curso de tu vida". Chris
     Bosh'
@@ -405,8 +406,8 @@
   homepage_hero_text_stat_students: "#student_count cuentas del estudiante en Code
     Studio"
   homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_coming: Ya viene la Hora del código
+  homepage_hero_hoc_is_here: Ya viene la Hora del código
   homepage_slot_text_hoc: La hora de Código
   homepage_slot_text_frozen: Frozen con Anna y Elsa
   homepage_slot_text_teacher: Panel del docente
@@ -416,7 +417,7 @@
   homepage_slot_text_flappy: Código Flappy
   homepage_action_text_hoc: Una hora de código para cada estudiante.
   homepage_action_text_num_served: "# servido"
-  homepage_action_text_join_us: "Únete"
+  homepage_action_text_join_us: Únete
   homepage_action_text_sign_up: Registrarse
   homepage_action_text_try_it: Inténtalo
   homepage_action_text_volunteers: Se necesitan voluntarios técnicos
@@ -426,11 +427,11 @@
   homepage_action_text_girlvideo: Inspira a una chica
   homepage_action_text_learn: Empieza a aprender
   homepage_action_text_signpetition: Firma la petición
-  homepage_action_text_wincelebritychat: Gane un chat de celebridades
+  homepage_action_text_wincelebritychat: Gana un chat con celebridades
   homepage_signpetition_dropdown: Firma nuestra petición ▾
   homepage_diversity_pledge: Toma la promesa de diversidad
   homepage_banner_text_prizes: 'Vuelve la Hora del Código, 7-13 de Diciembre. '
-  homepage_banner_link_prizes: "Únete al mayor evento educativo de la historia."
+  homepage_banner_link_prizes: Únete al mayor evento educativo de la historia.
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la Computación.
   homepage_banner_text_link: Aprende más
@@ -476,7 +477,8 @@
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Haga una donación
   homepage_slot_text_link_shop: Camisetas, sombreros y más
-  homepage_slot_text_link_administrators: Trae a tu escuela o distrito
+  homepage_slot_text_link_administrators: Lleva las ciencias de la computación a tu
+    escuela
   homepage_header_codestudio: Creaciones de los estudiante de Code Studio
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
@@ -524,7 +526,7 @@
   class_submission_level_vocational: Vocacional
   class_submission_languages_other: Otros idiomas
   videos_more: Más <a href='%{inspiring_videos_playlist}'>videos inspiradores</a>
-    con la participación de modelos y celebridades
+    con la participación de celebridades
   careers_page_more: Más <a href='%{careers_url}' target='_blank'>videos inspiradores</a>
     con la participación de profesionales en el campo de la tecnología
   playlab_choose_theme: Elige el tema para tu laboratorio de juego
@@ -558,8 +560,7 @@
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: Inicio
-  minecraft_designer_description: Construye tu propia versión de Minecraft. Crea tus
-    propias versiones de las gallinas, ovejas, Creepers, zombis y más.
+  minecraft_designer_description: Diseña un juego Minecraft.
   minecraft_designer_button: Inicio
   minecraft_adventurer_description: Utiliza código para guiar a Alex o a Steve en
     una aventura.
@@ -571,12 +572,13 @@
     tienda de Microsoft
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>
     Registrate</a>para los talleres gratuitos de Hora del Código de Minecraft en las
-    tiendas de Microsoft en Australia, Canadá, Puerto Rico o los EE. UU. Aprenda cómo
-    la codificación es para todos y combina creatividad, resolución de problemas y
+    tiendas de Microsoft en Australia, Canadá, Puerto Rico o los EE. UU. Aprende cómo
+    la programación es para todos y combina creatividad, resolución de problemas y
     mucha diversión."
   minecraft_host_event: Organiza un evento Minecraft Hora del Código
   minecraft_teach_resources: Recursos para el maestro y plan de lecciones.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_leader_guide: Descarga los recursos para ayudarte a planificar y conducir
+    un evento.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Descarga</a>Guía
     de inicio rápido del facilitador y presentaciones de PowerPoint para estudiantes
     más jóvenes y mayores ahora."
@@ -586,17 +588,18 @@
     a los materiales de facilitadores listos para usar y obtendrás un recorrido por
     el nuevo tutorial de Viaje del héroe del equipo de Minecraft. Comienza a pensar
     en lo que necesitas para llevar Hora del Código a los jóvenes durante la semana
-    de educación en informática (del 4 al 10 de diciembre) y más."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
+    de educación en ciencias de la computación (del 4 al 10 de diciembre) y más."
+  minecraft_continue_learning: 'Ciencias de la computación para todos: más allá de
+    una hora de código en la tienda de Microsoft'
+  minecraft_continue_learning_description: "¡No se requiere experiencia! Ayuda a que
+    todos los jóvenes puedan aprender la valiosa habilidades adquirida a través de
+    la enseñanza de las Ciencias de la computación. Únete a nosotros en la Tienda
+    Microsoft para participar en una serie libre de tres talleres de 1 hora donde
+    experimentarás la programación en un ambiente divertido y libre de estrés, te
+    familiarizaras con conceptos clave de la computadora y prepararás para liderar
+    una Hora del Código en tu aula o comunidad. ¡Vámos! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Registrate hoy</a>."
+  minecraft_future: Ayuda a todos los jovenes a estar listos para el futuro
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
     communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
@@ -810,7 +813,7 @@
   dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de video en su
     escuela
   dashboard_landing_progress_title: Progreso de la clase principal
-  dashboard_landing_progress_biggest: "Éste es el progreso de tu sección más grande."
+  dashboard_landing_progress_biggest: Éste es el progreso de tu sección más grande.
   dashboard_landing_view_progress: Ver progreso de %{biggest_section}
   dashboard_landing_print_progress: Progreso de la impresión
   dashboard_landing_available_title: Cursos disponibles
@@ -824,7 +827,7 @@
   dashboard_landing_video_library: Use un video de la videoteca de los conceptos de
     ciencia de computadoras.
   dashboard_landing_report_bug: Solicitar una característica o notificar un error.
-  dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
+  dashboard_landing_teacher_forum: Únete a la comunidad de aprendizaje profesional.
   dashboard_hoc_courses: La Hora de Código para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
     con tus alumnos!"
@@ -1119,7 +1122,7 @@
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   host_an_hour: Hospeda una hora
-  learn_banner_title: "Únete a nosotros para la Hora de Código"
+  learn_banner_title: Únete a nosotros para la Hora de Código
   learn_banner_desc: La Hora de Código es un movimiento mundial que alcanza más de
     100 millones de alumnos en mas de 180 países. Cualquier persona, en cualquier
     lugar puede organizar un evento de la Hora de Código. ¡Ayúdanos a dar a cada alumno
@@ -1475,8 +1478,8 @@
   robomind_shortdescription: Escribe código para un robot virtual
   groklearning_shortdescription: ¡Enseña a "Eliza", el robot que conversa, a engañar
     a tus amigos y que piensen que es humana!
-  quorum_shortdescription: "Únete a María en un tour guiado mientras aprende el lenguaje
-    de programación Quorum."
+  quorum_shortdescription: Únete a María en un tour guiado mientras aprende el lenguaje
+    de programación Quorum.
   codespark_shortdescription: Los Foos es un juego para aprender programación divertido
     y amigable para niños.
   kodable_shortdescription: Un juego divertido para aprender los conceptos básicos
@@ -2073,23 +2076,23 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  header_home: Inicio
+  header_home: Página principal
   header_my_dashboard: Mi panel de control
   header_courses: cursos
   header_course_catalog: Catálogo de cursos
   header_project_gallery: Proyectos
   header_sections: Secciones
   header_professional_learning: Aprendizaje Profesional
-  header_educate_overview: Resumen del docente
-  header_educate_elementary: Primaria
-  header_educate_middle: Secundaria
-  header_educate_high: Escuela Secundaria
+  header_educate_overview: Resumen del Educador
+  header_educate_elementary: Escuela primaria
+  header_educate_middle: Escuela Secundaria
+  header_educate_high: Preparatoria
   header_educate_hoc: Hora del código
-  header_educate_partner: Asociese con nosotros
+  header_educate_partner: Colabora con nosotros
   header_educate_beyond: Más allá de Code.org
-  header_educate_inspire: Inspire a un estudiante
+  header_educate_inspire: Inspira a un estudiante
   header_educate_community: Comunidad en línea
-  header_educate_tools: Herramientas y videos
+  header_educate_tools: Herramientas y Videos
   header_about_us: Acerca de nosotros
   header_about_leadership: Liderazgo
   header_about_donors: Donantes
@@ -2099,11 +2102,11 @@
   header_about_evaluation: Evaluación
   header_about_jobs: Empleos
   header_about_contact: Contáctanos
-  header_about_faqs: Preguntas Frecuentes
-  header_learn: Aprenda
+  header_about_faqs: Preguntas frecuentes
+  header_learn: Aprender
   header_teach: Enseñar
   header_stats: Estadísticas
-  header_help_us: Ayudenos
+  header_help_us: Ayúdanos
   header_about: Acerca de
   header_teacher_community: Comunidad de profesores
   header_help_support: 'Ayuda y soporte técnico '

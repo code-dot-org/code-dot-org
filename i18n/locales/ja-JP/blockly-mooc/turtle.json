@@ -74,13 +74,13 @@
   "penDown": "鉛筆を置く。\n\n",
   "penTooltip": "鉛筆を持ち上げたり、下げたりして、描くのを始めたり、止めたりします。",
   "penUp": "鉛筆を持ち上げる",
+  "pointTo": "point to",
   "pixels": "ピクセル",
   "reinfFeedbackMsg": "カッコイイ絵が書けたね！もういちど、べつの絵を書いてもいいし、つぎのパズルに すすんでもいいよ。",
   "setAlpha": "アルファ値は",
   "setCharacter": "キャラクターを{character} にする",
   "setColour": "色は",
   "setPattern": "線のかたち",
-  "setStickerSize": "Set sticker size",
   "setWidth": "太さは",
   "shareDrawing": "図面を共有します。",
   "showMe": "見せてください",
@@ -94,5 +94,6 @@
   "turnTooltip": "指定した角度でアーティストを左まはた右に向ける",
   "turtleVisibilityTooltip": "アーティストを表示または非表示",
   "widthTooltip": "鉛筆の幅を変更",
+  "withSize": "with size",
   "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。"
 }

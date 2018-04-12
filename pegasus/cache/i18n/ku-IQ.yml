@@ -1,17 +1,17 @@
 "ku-TR":
-  hour_of_code: "كاژێری كۆدنووسی"
-  hello: "چۆنی جیهان"
+  hour_of_code: كاژێری كۆدنووسی
+  hello: چۆنی جیهان
   'yes': 'Yes'
   'no': 'No'
-  select_language: "تکایە زمانەکەت هەڵبژێرە"
+  select_language: تکایە زمانەکەت هەڵبژێرە
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: "زیاتر فێرببە"
-  en: "زانستی كۆپیتەر"
-  computer_science_edweek: "هەفتەی فێربوونی زانستی کۆمپیوتەر"
-  csedweek_dates: "لە ٨ تا ١٤ ی مانگی ١٢ ساڵی ٢٠١٢"
+  upgrade_ie_link: زیاتر فێرببە
+  en: زانستی كۆپیتەر
+  computer_science_edweek: هەفتەی فێربوونی زانستی کۆمپیوتەر
+  csedweek_dates: لە ٨ تا ١٤ ی مانگی ١٢ ساڵی ٢٠١٢
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">یەك کاژێری کۆد نووسی</a> نزیك بوەتەوە. , بانگەشەیەك بۆ هەموو
     مامۆستا و رێکخەران<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -24,21 +24,21 @@
     <h1>Try an</h1>
     <h2>كاژێری كۆدنووسی</h2>
     <h3> # تەواوبووە </h3>
-  anybody_can_learn: "هەموو کەسێک دەتوانێت فێربێت."
-  learn_now: "ئێستا فێرببە"
-  petition_message: "هەموو قوتابیەك لە هەر قوتابخانەیەك دەبێ دەرفەتی فێربوونی زانستی
-    کۆمپیوتەری بدرێتێ"
-  petition_sign_message: "ئەگەر ڕەزامەندی، ناوت واژووبکە. بەشداربە لەگەڵ # کەسی تر."
-  petition_sign_message_support: "ئەگەر پاڵپشتیمان لێدەكەی، ناوت واژووبکە. بەشداربە
-    لەگەڵ # کەسی تر."
+  anybody_can_learn: هەموو کەسێک دەتوانێت فێربێت.
+  learn_now: ئێستا فێرببە
+  petition_message: هەموو قوتابیەك لە هەر قوتابخانەیەك دەبێ دەرفەتی فێربوونی زانستی
+    کۆمپیوتەری بدرێتێ
+  petition_sign_message: 'ئەگەر ڕەزامەندی، ناوت واژووبکە. بەشداربە لەگەڵ # کەسی تر.'
+  petition_sign_message_support: 'ئەگەر پاڵپشتیمان لێدەكەی، ناوت واژووبکە. بەشداربە
+    لەگەڵ # کەسی تر.'
   petition_join_others: 'Join # others'
-  name: "ناو"
-  email: "ئیمەیڵ"
-  zipcode: "ژمارەی پۆستە یان وولات"
-  submit: "بنێرە"
-  twentyhours_heading: "کۆرسی پێشەکی زانستی کۆمپیوتەر تاقیکەوە"
-  twentyhours_text: "ئایا یەكەم كاژێری كۆدنووسیت تەواوكرد؟ پتر فێری زانستی کۆمپیوتەر
-    و بیرۆکەکانی پرۆگرامسازی بە لەگەڵ ئەم کۆرسە تەواوکاریە."
+  name: ناو
+  email: ئیمەیڵ
+  zipcode: ژمارەی پۆستە یان وولات
+  submit: بنێرە
+  twentyhours_heading: کۆرسی پێشەکی زانستی کۆمپیوتەر تاقیکەوە
+  twentyhours_text: ئایا یەكەم كاژێری كۆدنووسیت تەواوكرد؟ پتر فێری زانستی کۆمپیوتەر
+    و بیرۆکەکانی پرۆگرامسازی بە لەگەڵ ئەم کۆرسە تەواوکاریە.
   og_title: Coding is foundational
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
@@ -46,7 +46,7 @@
     deserves the opportunity to study computer science.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "هەفتەی فێربوونی زانستی کۆمپیوتەر"
+  csedweek_og_title: هەفتەی فێربوونی زانستی کۆمپیوتەر
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
@@ -55,13 +55,13 @@
     for every student to learn.
   hoc2014_heading: "بەشداربە لە \n<a href=\"http://hourofcode.com\">كاژێری كۆدنووسی</a>\n<br/>لە
     ٨ تا ١٤ ی دیسێمبەری ٢٠١٤<br/>"
-  hoc2014_students: "خوێندکارەکان"
-  hoc2014_try: "تاقیبکەوە"
-  hoc2014_teachers: "مامۆستایان"
-  hoc2014_host: "مێوانداری بکە"
-  hoc2014_everyone: "هەمووکەس"
-  hoc2014_support: "پاڵپشتی &#x25BE بکە;"
-  hoc2014_whatishoc: "کاژێری كۆدنووسی چییە؟"
+  hoc2014_students: خوێندکارەکان
+  hoc2014_try: تاقیبکەوە
+  hoc2014_teachers: مامۆستایان
+  hoc2014_host: مێوانداری بکە
+  hoc2014_everyone: هەمووکەس
+  hoc2014_support: پاڵپشتی &#x25BE بکە;
+  hoc2014_whatishoc: کاژێری كۆدنووسی چییە؟
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
@@ -70,32 +70,32 @@
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: "خۆتۆمارکردن"
-  cded_try_it: "تاقیبکەوە"
-  try_now: "ئێستا تاقیبکەوە"
-  california_heading: "داوا لە قوتابخانەکەت بکە وانەی زانستی کۆمپیوتەر بڵێتەوە"
+  cded_sign_up: خۆتۆمارکردن
+  cded_try_it: تاقیبکەوە
+  try_now: ئێستا تاقیبکەوە
+  california_heading: داوا لە قوتابخانەکەت بکە وانەی زانستی کۆمپیوتەر بڵێتەوە
   california_text: "هەموو مامۆستایەك دەتوانی \n<a href='http://studio.code.org/'>کۆرسی
     بەخۆڕایی</a>مان بڵێتەوە.\n هەر قوتابخانەیەکی بنەڕەتی دەتوانی \n <a href='http://code.org/educate/k5'>زانستی
     کۆمپیوتەر فێربکا</a>. \nداوا لە خوێندنگا دواناوەندیەکان بکە\n<a href='http://code.org/educate/districts'>\nهاوکارمان
     بن."
-  california_button: "زیاتر فێرببە"
-  flappy_heading: "ڕۆژی لەدایك بوونی Code.org فلاپی بێ"
+  california_button: زیاتر فێرببە
+  flappy_heading: ڕۆژی لەدایك بوونی Code.org فلاپی بێ
   flappy_text: "Code.org بووە یەك ساڵان.\n<br/><br/>\nیاری\n <b>Flappy</b>\n تایبەت
     بەخۆت دروستبكە. \nبە ڕێسای خۆت کۆدی لۆ بکە و لە نێو برادەرانت بڵاویبکەوە!"
-  view_english_site: "ماڵپەڕی ئینگلیزی ببینە"
-  non_english_tutorials: "فێركاریەكان بۆ چەند زمانێك وەرگێڕدراون:"
-  write_your_first_program: "یەكەم پرۆگرامی خۆت بنوسە"
+  view_english_site: ماڵپەڕی ئینگلیزی ببینە
+  non_english_tutorials: 'فێركاریەكان بۆ چەند زمانێك وەرگێڕدراون:'
+  write_your_first_program: یەكەم پرۆگرامی خۆت بنوسە
   learn_cs_concepts: "چەمکە بەراییەکانی کۆمپیوتەر زانی بە بەکارهێنانی پرۆگرامی ئاساند.
     ئەو فێرکاریە لە شێوەی یاریدایە ڤیدوۆی وانەکان بە پالەوانیەتی بیل گێتس و مارک زوگبێرگ
     و یاری Angry Bird و Plants vs. Zombies پێشکەش دەکرێن. \nفێرە دەستەواژەی سوڕی دووبارەکردنەوە
     و ئەگەر-ئەوا ببە لەگەڵ هەندێك لە سەرەتاکەنی خوارزمیە."
-  all_ages: "هەموو تەمەنەكان"
-  beginner: "شاگرد"
+  all_ages: هەموو تەمەنەكان
+  beginner: شاگرد
   n_participants: "# بەشداربوو"
-  go: "بڕۆ"
-  thank_you_: "زۆر سوپاس!"
-  congratulations: "پیرۆزە!"
-  congratulations_on_completing_hoc: "پیرۆزە بۆ تەواوکردنی كاژێری كۆدنووسی"
+  go: بڕۆ
+  thank_you_: زۆر سوپاس!
+  congratulations: پیرۆزە!
+  congratulations_on_completing_hoc: پیرۆزە بۆ تەواوکردنی كاژێری كۆدنووسی
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
@@ -114,7 +114,7 @@
   congrats_next_tutorials_title: Try these courses next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
-  get_a_certificate_of_achievement: "بڕوانامەی سەرکەوتنەکەت وەرگرەد"
+  get_a_certificate_of_achievement: بڕوانامەی سەرکەوتنەکەت وەرگرەد
   view_course: View course
   view_unit: View unit
   make_app: Make an app
@@ -220,62 +220,62 @@
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Please select a valid age
-  enter_valid_email: "تكايە ئيمێلێكى دروست دا بنێ"
-  get_a_certificate_message: "ئێمە بڕوانامەو زانیاریت بۆ دەنێرین تا بتوانی <a href='/learn/beyond'>
-    زیاتر لە کاژێرێك فێرببی</a>"
-  get_a_certificate_message_after: "کلیك لەسەر بڕوانامەکە بکە تا دایگری یان چاپی بکەی.
+  enter_valid_email: تكايە ئيمێلێكى دروست دا بنێ
+  get_a_certificate_message: ئێمە بڕوانامەو زانیاریت بۆ دەنێرین تا بتوانی <a href='/learn/beyond'>
+    زیاتر لە کاژێرێك فێرببی</a>
+  get_a_certificate_message_after: کلیك لەسەر بڕوانامەکە بکە تا دایگری یان چاپی بکەی.
     هەر ئێستا بەردەوامبە لەگەڵ <a href='http://studio.code.org'> کۆڕسی تر</a> یان
-    سەیری بژاردەی تر بکە بۆ <a href='/learn/beyond'>فێربوون زیاتر لە کاژێرێك</a>."
-  thanks_for_submitting: "سوپاس بۆ پێشكەش كردنت!"
-  if_you_enjoyed: "ئەگەر چێژت لە فێربووندی، داوا لەهاوەلانتبکە با ئەوانیش تاقیبکەنەوە.
-    ئێمە دەمانەوێ هەموو جیهان فێرببی."
-  personalize_certificate: "دەستکاری شێوەی بڕوانامەکەت بکە"
-  share_achievement: "دەستکەوتەكەت بڵاوبکەوە"
-  beyond_hour_message: "بەردەوامبە لەگەڵمان بۆ <a href='http://studio.code.org'> کۆڕسی
-    تر</a> یان سەیری بژاردەی تر بکە بۆ <a href='/learn/beyond'>فێربوون زیاتر لە کاژێرێك</a>."
-  leaderboards_for_hoc: "پێشەنگانی كاژێری كۆدنووسی."
+    سەیری بژاردەی تر بکە بۆ <a href='/learn/beyond'>فێربوون زیاتر لە کاژێرێك</a>.
+  thanks_for_submitting: سوپاس بۆ پێشكەش كردنت!
+  if_you_enjoyed: ئەگەر چێژت لە فێربووندی، داوا لەهاوەلانتبکە با ئەوانیش تاقیبکەنەوە.
+    ئێمە دەمانەوێ هەموو جیهان فێرببی.
+  personalize_certificate: دەستکاری شێوەی بڕوانامەکەت بکە
+  share_achievement: دەستکەوتەكەت بڵاوبکەوە
+  beyond_hour_message: بەردەوامبە لەگەڵمان بۆ <a href='http://studio.code.org'> کۆڕسی
+    تر</a> یان سەیری بژاردەی تر بکە بۆ <a href='/learn/beyond'>فێربوون زیاتر لە کاژێرێك</a>.
+  leaderboards_for_hoc: پێشەنگانی كاژێری كۆدنووسی.
   support_url: http://support.code.org
-  country: "ووڵات"
-  city: "شار"
-  gender: "ڕەگەز"
-  boys: "کوڕان"
-  girls: "كچان"
-  give_my_hour: "یەك کاژێرەکەم بدە بە:"
-  girls_team: "تیپی کچان"
-  boys_team: "تیپی کوڕان"
-  tell_the_world: "بە هەموو جیهان ڕابگەیەنە!"
-  thanks_for_voting: "سوپاس بۆ دەنگدانت!"
-  share_on_facebook: "لە فەیسبوك بڵاویبکەوە"
-  share_on_twitter: "لە تویتەر بڵاویبکەوە"
-  beyond_an_hour: "پاش كاژێری كۆدنووسی"
-  get_started: "دەستپێبکە"
-  i_agree: "من ڕازیم"
+  country: ووڵات
+  city: شار
+  gender: ڕەگەز
+  boys: کوڕان
+  girls: كچان
+  give_my_hour: 'یەك کاژێرەکەم بدە بە:'
+  girls_team: تیپی کچان
+  boys_team: تیپی کوڕان
+  tell_the_world: بە هەموو جیهان ڕابگەیەنە!
+  thanks_for_voting: سوپاس بۆ دەنگدانت!
+  share_on_facebook: لە فەیسبوك بڵاویبکەوە
+  share_on_twitter: لە تویتەر بڵاویبکەوە
+  beyond_an_hour: پاش كاژێری كۆدنووسی
+  get_started: دەستپێبکە
+  i_agree: من ڕازیم
   participant_select: "- هەڵبژێرە -"
-  participant_student: "قوتابی"
-  participant_parent: "باوان"
-  participant_educator: "فێرکار"
-  participant_engineer: "ئەندازیاری سۆفتوێر"
-  participant_other: "هیچ کامیانی ئەوانەی سەرەوە"
-  print_all: "هەمووی چاپبکە"
-  print_ice_art: "هونەری بەفر چاپبکە"
-  create_art_with_zombie: "یان کاری هونەری پێشکەوتو لەگەڵ زۆمبی ئەنجام بدە"
-  i_am_a: "ئەمن "
-  never_spam: "هەرگیز هەراسانت ناکەین"
-  enter_country: "ووڵاتەکەت دیاریبکە ئەگەر لەدەرەوەی ئەمریکای"
-  used_infrequent_updates: "تەنها بەكاردێ بۆ نوێکردنەوەی ناوبەناو"
-  privacy_practices_children: "سەیری بە کردارکردنمان بکە بۆ نهێنێتی مندالان"
-  petition_thankyou: "سوپاس بۆ واژووکردنی ئەو داوایە"
-  continue_learning_header: "بەردەوامبە لە فێربوونی زیاتر لە کاتژێرێك"
-  continue_learning_body: "زۆر بژاردەت لەبەردەستە. دەتانی لەسەر یەتەرنێت فێرببی یان
-    لە قوتابخانە یان لە کامپی هاوینە."
+  participant_student: قوتابی
+  participant_parent: باوان
+  participant_educator: فێرکار
+  participant_engineer: ئەندازیاری سۆفتوێر
+  participant_other: هیچ کامیانی ئەوانەی سەرەوە
+  print_all: هەمووی چاپبکە
+  print_ice_art: هونەری بەفر چاپبکە
+  create_art_with_zombie: یان کاری هونەری پێشکەوتو لەگەڵ زۆمبی ئەنجام بدە
+  i_am_a: 'ئەمن '
+  never_spam: هەرگیز هەراسانت ناکەین
+  enter_country: ووڵاتەکەت دیاریبکە ئەگەر لەدەرەوەی ئەمریکای
+  used_infrequent_updates: تەنها بەكاردێ بۆ نوێکردنەوەی ناوبەناو
+  privacy_practices_children: سەیری بە کردارکردنمان بکە بۆ نهێنێتی مندالان
+  petition_thankyou: سوپاس بۆ واژووکردنی ئەو داوایە
+  continue_learning_header: بەردەوامبە لە فێربوونی زیاتر لە کاتژێرێك
+  continue_learning_body: زۆر بژاردەت لەبەردەستە. دەتانی لەسەر یەتەرنێت فێرببی یان
+    لە قوتابخانە یان لە کامپی هاوینە.
   learn_code_studio: Try Code Studio courses
-  learn_next_level: "بەردەوام بە بۆ ئاستی داهاتوو"
-  learn_online: "کۆرسی تر تاقیکەوە"
-  learn_classes: "پۆلی ناوەخۆ بدۆزەوە"
+  learn_next_level: بەردەوام بە بۆ ئاستی داهاتوو
+  learn_online: کۆرسی تر تاقیکەوە
+  learn_classes: پۆلی ناوەخۆ بدۆزەوە
   learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
-  just_did_hoc: "هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری
-    بکەی"
+  just_did_hoc: 'هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری
+    بکەی'
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
@@ -322,27 +322,27 @@
     for supporting @codeorg
   just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
     Thanks %{donor_twitter} for supporting @codeorg
-  twitter_teach_cs: "لۆ قوتابخانەی زیاتر زانستی کۆمپیوتەر ناڵێنەوە؟ دەتوانیین ئەوە
+  twitter_teach_cs: لۆ قوتابخانەی زیاتر زانستی کۆمپیوتەر ناڵێنەوە؟ دەتوانیین ئەوە
     چارەسەر بکەین. لەو لینکە http://youtu.be/nKIu9yen5nc. Visit http://code.org/  دەتوانی
-    زیاتر فێرببی."
+    زیاتر فێرببی.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "یەك کاژێر فێرە کۆدنووسی ببە"
-  beyond_hoc: "پاش یەك کاتژێر"
-  what_gender: "کوڕیت یان کچ؟"
-  girl: "كچ"
-  boy: "كوڕ"
-  help_recruit_coders: "یارمەتیمان بدە تا کۆدەری زیاتر کۆ بکەینەوە لەناو تیپەکەمان!"
-  help_recruit: "یارمەتیمان بدە تا کۆدنوسی زیاتر کۆبکەینەوە!"
-  lines_of_code: "تا ئئەورۆ پتر لە <b> # هێڵی کۆد</b> نوسراوەتەوە."
+  learn_hoc: یەك کاژێر فێرە کۆدنووسی ببە
+  beyond_hoc: پاش یەك کاتژێر
+  what_gender: کوڕیت یان کچ؟
+  girl: كچ
+  boy: كوڕ
+  help_recruit_coders: یارمەتیمان بدە تا کۆدەری زیاتر کۆ بکەینەوە لەناو تیپەکەمان!
+  help_recruit: یارمەتیمان بدە تا کۆدنوسی زیاتر کۆبکەینەوە!
+  lines_of_code: 'تا ئئەورۆ پتر لە <b> # هێڵی کۆد</b> نوسراوەتەوە.'
   lines_of_code_alt: "<b>#</b> هێڵی کۆدە لەلایەن قوتابیانەوە نووسراوەتەوە"
-  who_has_done_hoc: "کێ #کاتژێری_کۆدنووسی تەواوکردووە؟ @codeorg"
+  who_has_done_hoc: 'کێ #کاتژێری_کۆدنووسی تەواوکردووە؟ @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "پێشەنگانی كاژێری كۆدنووسی"
+  hoc_leaderboards: پێشەنگانی كاژێری كۆدنووسی
   students_and_lines: "%{students} فێرخواز كاژێری كۆدنووسیان تەواو کردووە و %{lines}
     هێڵی كۆدیان نووسیوەتەوە."
-  start_hoc: "ئێستا دەست بە كاژێری كۆدنووسی كە"
+  start_hoc: ئێستا دەست بە كاژێری كۆدنووسی كە
   contact_form_topic_press: "(چاوپێكەوتن و بە قسە بەشداری کردن) ڕۆژنامە/میدیا"
   stats_nina: '"هەموو ڕۆژ هەمان ئەنجام بەدەستهات&mdash; ١٠٠% بەشداریکردن" - نینا نیکۆلس
     پیری. مامۆستا'
@@ -350,22 +350,22 @@
     پۆلی پێنج'
   stats_michael: '"ئەمن <b>قەت و هیچ</b> قوتابیەکانم ئەوەندە پەرۆش نەدیتیە بۆ فێربوون."
     - مایكل کلارك، مامۆستا'
-  studiobar_title: "لەناو كۆد<a href='http://studio.code.org'>كۆد ستۆدیۆدا</a> بگەڕێ"
-  studiobar_title_nolink: "ستۆدیۆی کۆدنووسی بناسە"
-  studiobar_elementary_title: "کۆڕسی بنەڕەتی"
-  studiobar_elementary_body: "سێ كۆرسە نوێیەكەمان بۆ K&#8209;5"
-  studiobar_hoc_title: "كاژێری كۆدنووسی"
-  studiobar_hoc_body: "فێرە کۆدنوسی بە لەگەڵ باڵندە توڕەکان"
+  studiobar_title: لەناو كۆد<a href='http://studio.code.org'>كۆد ستۆدیۆدا</a> بگەڕێ
+  studiobar_title_nolink: ستۆدیۆی کۆدنووسی بناسە
+  studiobar_elementary_title: کۆڕسی بنەڕەتی
+  studiobar_elementary_body: سێ كۆرسە نوێیەكەمان بۆ K&#8209;5
+  studiobar_hoc_title: كاژێری كۆدنووسی
+  studiobar_hoc_body: فێرە کۆدنوسی بە لەگەڵ باڵندە توڕەکان
   studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: "یاری Flappy خۆت دروست بکە و بڵاوی بکەوە"
-  studiobar_teacher_title: "دروستکراوە بۆ مامۆستایان"
-  studiobar_teacher_body: "كۆد ستۆدیۆ بە پۆلی خۆت بناسێنە"
-  studiobar_frozen_title: "كاژێری كۆدنووسی"
-  studiobar_frozen_body: "ووڵاتی سەیروسەمەرە ی زستانە دروست بكە لەگەڵ ئانا و ئێلسا"
-  studiobar_donate_title: "بەخشین"
-  studiobar_donate_body: "قوتابییەک فێردەبێت لەگەڵ هەر دۆلارێک کە تۆ دەیبەخشیت"
-  studiobar_shop_title: "کڕین"
-  studiobar_shop_body: "کڵیشه بشکێنە و هێمایەکەمان بە سەربەرزیەوە هەڵگرە."
+  studiobar_flappy_body: یاری Flappy خۆت دروست بکە و بڵاوی بکەوە
+  studiobar_teacher_title: دروستکراوە بۆ مامۆستایان
+  studiobar_teacher_body: كۆد ستۆدیۆ بە پۆلی خۆت بناسێنە
+  studiobar_frozen_title: كاژێری كۆدنووسی
+  studiobar_frozen_body: ووڵاتی سەیروسەمەرە ی زستانە دروست بكە لەگەڵ ئانا و ئێلسا
+  studiobar_donate_title: بەخشین
+  studiobar_donate_body: قوتابییەک فێردەبێت لەگەڵ هەر دۆلارێک کە تۆ دەیبەخشیت
+  studiobar_shop_title: کڕین
+  studiobar_shop_body: کڵیشه بشکێنە و هێمایەکەمان بە سەربەرزیەوە هەڵگرە.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -411,39 +411,39 @@
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "كاژێری كۆدنووسی"
-  homepage_slot_text_frozen: "کارتۆنی فرۆزن لەگەڵ ئانا و ئێلسا"
+  homepage_slot_text_hoc: كاژێری كۆدنووسی
+  homepage_slot_text_frozen: کارتۆنی فرۆزن لەگەڵ ئانا و ئێلسا
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: "هەموو فێرکاریەکانمان"
+  homepage_slot_text_studio: هەموو فێرکاریەکانمان
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: "کڕین"
+  homepage_slot_text_shop: کڕین
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# خزمەت کراوە"
   homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: "خۆتۆمارکردن"
-  homepage_action_text_try_it: "تاقیبکەوە"
+  homepage_action_text_sign_up: خۆتۆمارکردن
+  homepage_action_text_try_it: تاقیبکەوە
   homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_codevideo: "ڤیدیۆکە ببینە"
-  homepage_action_text_teachervideo: "ڤیدیۆکە ببینە"
-  homepage_action_text_watchvideo: "ڤیدیۆکە ببینە"
+  homepage_action_text_codevideo: ڤیدیۆکە ببینە
+  homepage_action_text_teachervideo: ڤیدیۆکە ببینە
+  homepage_action_text_watchvideo: ڤیدیۆکە ببینە
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: "فێربوون دەستپێبکە"
-  homepage_action_text_signpetition: "داواکە واژووبکە"
+  homepage_action_text_learn: فێربوون دەستپێبکە
+  homepage_action_text_signpetition: داواکە واژووبکە
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "داواکەمان واژوو بکە &#x25BE;"
+  homepage_signpetition_dropdown: داواکەمان واژوو بکە &#x25BE;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: "زیاتر فێرببە"
+  homepage_banner_text_link: زیاتر فێرببە
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "زیاتر فێرببە"
+  homepage_banner_privacy_link: زیاتر فێرببە
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "زیاتر فێرببە"
+  homepage_banner_20k_teachers_link: زیاتر فێرببە
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
@@ -451,60 +451,60 @@
     student privacy.
   homepage_banner_emailprivacy_link: Read more
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "زیاتر فێرببە"
-  homepage_slot_text_title_hoc: "كاژێری كۆدنووسی"
-  homepage_slot_text_blurb_hoc: "هەموو کەسێک دەتوانێت فێربێت. ئەمڕۆ دەستپێبکە"
+  homepage_banner_40k_teachers_link: زیاتر فێرببە
+  homepage_slot_text_title_hoc: كاژێری كۆدنووسی
+  homepage_slot_text_blurb_hoc: هەموو کەسێک دەتوانێت فێربێت. ئەمڕۆ دەستپێبکە
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "خانەخوێی كاژێرێکی كۆدنووسی بە"
+  homepage_slot_text_link_host: خانەخوێی كاژێرێکی كۆدنووسی بە
   homepage_slot_text_link_hocserved: "# خزمەت کراوە"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: "خوێندکارەکان"
-  homepage_slot_text_blurb_students: "لە نێو هەموو وانەکانمان بگەڕێ"
+  homepage_slot_text_title_students: خوێندکارەکان
+  homepage_slot_text_blurb_students: لە نێو هەموو وانەکانمان بگەڕێ
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: "کۆد ستۆدیۆ تاقیکەوە"
-  homepage_slot_text_link_local: "پۆلێكی نزیك بدۆزەوە"
-  homepage_slot_text_link_othercourses: "کۆرسی تری سەر ئینتەرنێت"
-  homepage_slot_text_title_educators: "فێرکارەکان"
-  homepage_slot_text_blurb_educators: "قوتابییەکانت فێرکە"
+  homepage_slot_text_link_codestudio: کۆد ستۆدیۆ تاقیکەوە
+  homepage_slot_text_link_local: پۆلێكی نزیك بدۆزەوە
+  homepage_slot_text_link_othercourses: کۆرسی تری سەر ئینتەرنێت
+  homepage_slot_text_title_educators: فێرکارەکان
+  homepage_slot_text_blurb_educators: قوتابییەکانت فێرکە
   homepage_slot_text_link_elementary: Elementary school
-  homepage_slot_text_link_middle: "قوتابخانەی ناوەندی"
-  homepage_slot_text_link_high: "قوتابخانەی دواناوەندی"
-  homepage_slot_text_link_k5: "وانە بۆ پۆلەکانی سەرەتایی"
-  homepage_slot_text_link_fullcurriculum: "هەموو بابەتەکانی وانەکە سەیرکە"
-  homepage_slot_text_link_pd: "پەرەسەندنى پيشەگەر"
-  homepage_slot_text_title_advocates: "بانگەوازان"
-  homepage_slot_text_blurb_advocates: "پاڵپشتی کارەکانمان بکە"
-  homepage_slot_text_link_stats: "سەیری ئامارەکان بکە"
-  homepage_slot_text_link_buy: "بەشداری بکە"
-  homepage_slot_text_link_donate: "بەخشینێک بکە"
+  homepage_slot_text_link_middle: قوتابخانەی ناوەندی
+  homepage_slot_text_link_high: قوتابخانەی دواناوەندی
+  homepage_slot_text_link_k5: وانە بۆ پۆلەکانی سەرەتایی
+  homepage_slot_text_link_fullcurriculum: هەموو بابەتەکانی وانەکە سەیرکە
+  homepage_slot_text_link_pd: پەرەسەندنى پيشەگەر
+  homepage_slot_text_title_advocates: بانگەوازان
+  homepage_slot_text_blurb_advocates: پاڵپشتی کارەکانمان بکە
+  homepage_slot_text_link_stats: سەیری ئامارەکان بکە
+  homepage_slot_text_link_buy: بەشداری بکە
+  homepage_slot_text_link_donate: بەخشینێک بکە
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: "داهێنانی قوتابیانی كۆد ستۆدیۆ"
+  homepage_header_codestudio: داهێنانی قوتابیانی كۆد ستۆدیۆ
   homepage_header_donors: Code.org سوپاسی هاوکارانی دەکات
-  homepage_donors_seall: "هەمووی ببینە"
-  homepage_donors_donate: "بەخشین"
-  contact_form_topic_student: "من قوتابیم"
-  contact_form_topic_parent: "من باوانم"
-  contact_form_topic_teacher: "من مامۆستام/فێركارم"
-  contact_form_topic_outside_us: "ئەمن لە دەرەوەی ولایەتە یەکگرتوەکانی ئەمەریكام"
-  contact_form_topic_contribution: "بەشداریەکی چاكەكار"
-  contact_form_topic_partner: "دەمەوێ هاوکارتان بم"
-  contact_form_topic_other: "هی تر"
-  contact_form_label_topic: "بابەت"
-  contact_form_label_email: "ئیمێڵەکەت"
-  contact_form_label_message: "نامە"
-  contact_form_label_submit: "نامە بنێرە"
-  class_submission_in_school: "لە قوتابخانە"
-  class_submission_in_school_daily_programming_course: "کۆرسی ڕۆژانەی پرۆگرامینگ"
+  homepage_donors_seall: هەمووی ببینە
+  homepage_donors_donate: بەخشین
+  contact_form_topic_student: من قوتابیم
+  contact_form_topic_parent: من باوانم
+  contact_form_topic_teacher: من مامۆستام/فێركارم
+  contact_form_topic_outside_us: ئەمن لە دەرەوەی ولایەتە یەکگرتوەکانی ئەمەریكام
+  contact_form_topic_contribution: بەشداریەکی چاكەكار
+  contact_form_topic_partner: دەمەوێ هاوکارتان بم
+  contact_form_topic_other: هی تر
+  contact_form_label_topic: بابەت
+  contact_form_label_email: ئیمێڵەکەت
+  contact_form_label_message: نامە
+  contact_form_label_submit: نامە بنێرە
+  class_submission_in_school: لە قوتابخانە
+  class_submission_in_school_daily_programming_course: کۆرسی ڕۆژانەی پرۆگرامینگ
   class_submission_in_school_ap_computer_science: AP زانستی کۆمپیوتەر
-  class_submission_in_school_full_university_cs_curriculum: "بابەتی تەواوی کۆمپیوتەرزانی
-    بۆ زانکۆ"
-  class_submission_in_school_robotics_club: "یانەی ڕۆبۆتیك"
-  class_submission_in_school_programming_integrated_in_other_classes: "پرۆگرامسازی
-    لەگەڵ وانەی تر تێك ئاخنایە (بیرکاری، زانست، هتد.)"
-  class_submission_in_school_summer_school_cs_program: "پرۆگرامی قوتابخانەی هاوینەی
-    زانستی كۆمپیوتەر"
+  class_submission_in_school_full_university_cs_curriculum: بابەتی تەواوی کۆمپیوتەرزانی
+    بۆ زانکۆ
+  class_submission_in_school_robotics_club: یانەی ڕۆبۆتیك
+  class_submission_in_school_programming_integrated_in_other_classes: پرۆگرامسازی
+    لەگەڵ وانەی تر تێك ئاخنایە (بیرکاری، زانست، هتد.)
+  class_submission_in_school_summer_school_cs_program: پرۆگرامی قوتابخانەی هاوینەی
+    زانستی كۆمپیوتەر
   class_submission_in_school_exploring_computer_science: Exploring Computer Science
   class_submission_in_school_other: Other in school
   class_submission_out_of_school: Out of school
@@ -512,16 +512,16 @@
   class_submission_out_of_school_afterschool_program: Afterschool program
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
-  class_submission_out_of_school_other: "هی تری دەرەوەی قوتابخانە"
+  class_submission_out_of_school_other: هی تری دەرەوەی قوتابخانە
   class_submission_online: Online
   class_submission_online_programming_class: Online programming class
-  class_submission_online_teacher_resource: "سەرچاوەی سەرهێڵی مامۆستا"
+  class_submission_online_teacher_resource: سەرچاوەی سەرهێڵی مامۆستا
   class_submission_online_other: Other online
   class_submission_level_preschool: Preschool
-  class_submission_level_elementary: "سەرەتایی"
-  class_submission_level_middle_school: "قوتابخانەی ناوەندی"
-  class_submission_level_high_school: "قوتابخانەی دواناوەندی"
-  class_submission_level_college: "کۆلێژ"
+  class_submission_level_elementary: سەرەتایی
+  class_submission_level_middle_school: قوتابخانەی ناوەندی
+  class_submission_level_high_school: قوتابخانەی دواناوەندی
+  class_submission_level_college: کۆلێژ
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
@@ -557,12 +557,12 @@
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "دەستپێبکە"
+  minecraft_agent_button: دەستپێبکە
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: "دەستپێبکە"
+  minecraft_designer_button: دەستپێبکە
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: "دەستپێبکە"
+  minecraft_adventurer_button: دەستپێبکە
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Hour of Code
@@ -606,7 +606,7 @@
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
-  sports_watch_video: "ڤیدیۆکە ببینە"
+  sports_watch_video: ڤیدیۆکە ببینە
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -662,7 +662,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "ئایا تۆ مامۆستای؟"
+  are_you_teacher: ئایا تۆ مامۆستای؟
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
@@ -692,7 +692,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "ناو"
+  volunteer_engineer_submission_field_name: ناو
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -712,17 +712,17 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "باسکردن"
+  volunteer_engineer_submission_field_description: باسکردن
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: "ناونیشانی ئیمەیڵ"
+  volunteer_engineer_submission_field_email: ناونیشانی ئیمەیڵ
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "ناونیشانی ئیمەیڵ"
+  volunteer_engineer_submission_field_email_placeholder: ناونیشانی ئیمەیڵ
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -731,7 +731,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "بنێرە"
+  volunteer_engineer_submission_submit: بنێرە
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
     like you.
@@ -751,9 +751,9 @@
     to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: "خوێندکاری
-    زانکۆ (یان توێژەر)"
-  volunteer_engineer_submission_experience_software_professional: "ئەندازیاری سۆفتوێر"
+  volunteer_engineer_submission_experience_university_student_or_researcher: خوێندکاری
+    زانکۆ (یان توێژەر)
+  volunteer_engineer_submission_experience_software_professional: ئەندازیاری سۆفتوێر
   volunteer_engineer_submission_distance_8: 5 miles
   volunteer_engineer_submission_distance_16: 10 miles
   volunteer_engineer_submission_distance_24: 15 miles
@@ -768,18 +768,18 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: "تەمەن"
+  petition_age: تەمەن
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "زیاتر فێرببە"
-  dashboard_landing_title: "پەڕەی سەرەکی مامۆستا"
+  dashboard_announce_learn_more_button: زیاتر فێرببە
+  dashboard_landing_title: پەڕەی سەرەکی مامۆستا
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
-  dashboard_landing_watch_video: "بۆ گەشتێک بەناو تایبەتمەندییە نوێکان!"
-  dashboard_landing_view_as_student: "ئەم ماڵپەڕە وەک قوتابی ببینە"
-  dashboard_landing_students_title: "قوتابییەکانت"
-  dashboard_landing_students_manage: "بینین و بەڕێوەبردنی قوتابییەکانت"
+  dashboard_landing_watch_video: بۆ گەشتێک بەناو تایبەتمەندییە نوێکان!
+  dashboard_landing_view_as_student: ئەم ماڵپەڕە وەک قوتابی ببینە
+  dashboard_landing_students_title: قوتابییەکانت
+  dashboard_landing_students_manage: بینین و بەڕێوەبردنی قوتابییەکانت
   dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
   dashboard_landing_new_k5courses: New! Try our courses for K-5 students.
@@ -848,11 +848,11 @@
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
   dashboard_action_cancel: Cancel
-  dashboard_action_delete: "بسڕەوە"
+  dashboard_action_delete: بسڕەوە
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
-  dashboard_action_confirm: "بسڕێتەوە؟"
-  dashboard_action_done: "تەواو"
+  dashboard_action_confirm: بسڕێتەوە؟
+  dashboard_action_done: تەواو
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -871,11 +871,11 @@
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: "پەڕەی سەرەکی مامۆستا"
+  dashboard_navigation_home_page: پەڕەی سەرەکی مامۆستا
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: "یارمەتی و کۆمەڵگا"
+  dashboard_navigation_section_community: یارمەتی و کۆمەڵگا
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
@@ -883,12 +883,12 @@
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_navigation_add_students: "زیادکردنی قوتابییەکان"
-  dashboard_navigation_manage_students: "بەڕێوەبردنی قوتابییەکان"
+  dashboard_navigation_add_students: زیادکردنی قوتابییەکان
+  dashboard_navigation_manage_students: بەڕێوەبردنی قوتابییەکان
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
-  dashboard_navigation_student: "قوتابی: %{student_name}"
+  dashboard_navigation_student: 'قوتابی: %{student_name}'
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
   dashboard_progress_not_completed: not completed
@@ -913,7 +913,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "خوێندکارەکان"
+  dashboard_sections_table_students: خوێندکارەکان
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -967,10 +967,10 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "ناو"
+  dashboard_students_name: ناو
   dashboard_students_progress: Progress
-  dashboard_students_male: "نێر"
-  dashboard_students_female: "مێ"
+  dashboard_students_male: نێر
+  dashboard_students_female: مێ
   dashboard_students_completed_levels: Completed Levels
   dashboard_students_total_lines: Lines of Code
   dashboard_students_share_section: 'Share this section''s sign in page with your
@@ -1038,11 +1038,11 @@
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "هی تر"
+  dashboard_grade_other: هی تر
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: "ئیمەیڵ"
-  dashboard_stage: "قۆناغ"
+  dashboard_login_none: ئیمەیڵ
+  dashboard_stage: قۆناغ
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Response
@@ -1061,8 +1061,8 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: "مامۆستا"
-  dashboard_student: "قوتابی"
+  dashboard_teacher: مامۆستا
+  dashboard_student: قوتابی
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1086,10 +1086,10 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "زیاتر فێرببە"
+  learn_more: زیاتر فێرببە
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: "خۆتۆمارکردن"
+  learn_sign_up_button: خۆتۆمارکردن
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1128,8 +1128,8 @@
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
   carousel_heading_university: University courses online
-  carousel_heading_webpages: "دروستکردنی پەڕەی تۆڕ فێربە"
-  carousel_heading_robots: "بەرنامەسازی ڕۆبۆت فێربە"
+  carousel_heading_webpages: دروستکردنی پەڕەی تۆڕ فێربە
+  carousel_heading_robots: بەرنامەسازی ڕۆبۆت فێربە
   carousel_heading_ide: Platforms popular among teachers
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
@@ -1149,7 +1149,7 @@
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: participants
-  teachers_notes: "تێبینییەکانی مامۆستا"
+  teachers_notes: تێبینییەکانی مامۆستا
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
   previous: Previous
   next: Next
@@ -1160,8 +1160,8 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: "یەكەم پرۆگرامی خۆت بنوسە"
-  codeintl_name: "یەكەم پرۆگرامی خۆت بنوسە"
+  codeorg_name: یەكەم پرۆگرامی خۆت بنوسە
+  codeintl_name: یەكەم پرۆگرامی خۆت بنوسە
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -1193,11 +1193,11 @@
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
-  blockly_name: "بلۆکلی"
+  blockly_name: بلۆکلی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: "یەكەم پرۆگرامی خۆت بنوسە"
+  hourofcode_name: یەكەم پرۆگرامی خۆت بنوسە
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artist
@@ -1273,8 +1273,8 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "بیرکاری"
-  hoc_category_name: "كاژێری كۆدنووسی"
+  math_category_name: بیرکاری
+  hoc_category_name: كاژێری كۆدنووسی
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1302,29 +1302,29 @@
   khanpl_gradelevel: Middle school +
   tynker_gradelevel: Ages 5-13
   scratch_gradelevel: Ages 8+
-  lightbot_gradelevel: "هەموو تەمەنەكان"
-  thinkersmith_gradelevel: "هەموو تەمەنەكان"
+  lightbot_gradelevel: هەموو تەمەنەكان
+  thinkersmith_gradelevel: هەموو تەمەنەكان
   condcards_gradelevel: Ages 8-12
-  lightbotintl_gradelevel: "هەموو تەمەنەكان"
-  codehs_gradelevel: "قوتابخانەی دواناوەندی"
-  codecademy_gradelevel: "قوتابخانەی دواناوەندی"
+  lightbotintl_gradelevel: هەموو تەمەنەكان
+  codehs_gradelevel: قوتابخانەی دواناوەندی
+  codecademy_gradelevel: قوتابخانەی دواناوەندی
   codecombat_gradelevel: Middle school +
   codemonkey_gradelevel: Middle school +
   codeavengers_gradelevel: Middle school +
-  processing_gradelevel: "قوتابخانەی دواناوەندی"
+  processing_gradelevel: قوتابخانەی دواناوەندی
   robomind_gradelevel: Ages 8-13
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: "سەرەتایی"
-  kodable_gradelevel: "سەرەتایی"
+  codespark_gradelevel: سەرەتایی
+  kodable_gradelevel: سەرەتایی
   tynkerapp_gradelevel: Ages 5-13
   robomindnl_gradelevel: Ages 8-13
   flappy_gradelevel: Ages 4-104
-  bitsbox_gradelevel: "سەرەتایی"
-  makeschool_gradelevel: "قوتابخانەی دواناوەندی"
-  touchdevelop_gradelevel: "قوتابخانەی دواناوەندی"
+  bitsbox_gradelevel: سەرەتایی
+  makeschool_gradelevel: قوتابخانەی دواناوەندی
+  touchdevelop_gradelevel: قوتابخانەی دواناوەندی
   appinventor_gradelevel: Middle school +
-  blockly_gradelevel: "هەموو تەمەنەكان"
+  blockly_gradelevel: هەموو تەمەنەكان
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
@@ -1337,11 +1337,11 @@
   monstercoding_gradelevel: Ages 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: "سەرەتایی"
+  boxisland_gradelevel: سەرەتایی
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
-  course1_gradelevel: "تەمەنی ٤-٦"
+  course1_gradelevel: تەمەنی ٤-٦
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18
@@ -1400,8 +1400,8 @@
   codesters_platformtext: Modern web browsers
   texasinstruments_platformtext: TI Calculators
   teacherled_platformtext: Modern browsers, smartphones, tablets
-  codeorg_shortdescription: "فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!"
-  codeintl_shortdescription: "فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!"
+  codeorg_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
+  codeintl_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Learn to draw in JavaScript
   khanes_shortdescription: Learn to draw in JavaScript
@@ -1446,7 +1446,7 @@
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
   kodableunplugged_shortdescription: A fun unplugged exercise
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
-  hourofcode_shortdescription: "فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!"
+  hourofcode_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
   frozen_shortdescription: Let's use code to join Anna and Elsa as they explore the
     magic and beauty of ice.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
@@ -1665,7 +1665,7 @@
   scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: "بەرنامەسازی پایثۆن فێربە"
+  groklearning_beyond_name: بەرنامەسازی پایثۆن فێربە
   hacketyhack_beyond_name: Learn Ruby
   robomind_beyond_name: Program a virtual robot
   makeschool_beyond_name: Build an iPhone game in your browser!
@@ -1696,19 +1696,19 @@
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: "هەموو تەمەنەكان"
-  codecademy_beyond_gradelevel: "قوتابخانەی دواناوەندی"
-  kodable_beyond_gradelevel: "سەرەتایی"
-  scratchjr_beyond_gradelevel: "سەرەتایی"
+  lightbot_beyond_gradelevel: هەموو تەمەنەكان
+  codecademy_beyond_gradelevel: قوتابخانەی دواناوەندی
+  kodable_beyond_gradelevel: سەرەتایی
+  scratchjr_beyond_gradelevel: سەرەتایی
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
-  hacketyhack_beyond_gradelevel: "قوتابخانەی دواناوەندی"
+  hacketyhack_beyond_gradelevel: قوتابخانەی دواناوەندی
   robomind_beyond_gradelevel: Ages 8-13
-  makeschool_beyond_gradelevel: "قوتابخانەی دواناوەندی"
+  makeschool_beyond_gradelevel: قوتابخانەی دواناوەندی
   appinventor_beyond_gradelevel: Middle school +
-  touchdevelop_beyond_gradelevel: "قوتابخانەی دواناوەندی"
-  codehs_beyond_gradelevel: "قوتابخانەی دواناوەندی"
+  touchdevelop_beyond_gradelevel: قوتابخانەی دواناوەندی
+  codehs_beyond_gradelevel: قوتابخانەی دواناوەندی
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
   edx_beyond_gradelevel: University
@@ -1726,7 +1726,7 @@
   lego_beyond_gradelevel: Middle school +
   finch_beyond_gradelevel: Ages 8+
   arduino_beyond_gradelevel: High school +
-  processing_beyond_gradelevel: "قوتابخانەی دواناوەندی"
+  processing_beyond_gradelevel: قوتابخانەی دواناوەندی
   alice_beyond_gradelevel: Middle school +
   sphero_beyond_gradelevel: Ages 8+
   codeorg_beyond_platformtext: Modern browsers, tablets
@@ -1766,8 +1766,8 @@
   processing_beyond_platformtext: Modern web browsers
   alice_beyond_platformtext: Windows or Mac (install required)
   sphero_beyond_platformtext: Robot purchase
-  codeorg_beyond_shortdescription: "فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry
-    Birds!"
+  codeorg_beyond_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry
+    Birds!
   khan_beyond_shortdescription: Learn to draw in JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
     4-8
@@ -1790,10 +1790,10 @@
   udemy_beyond_shortdescription: Dozens of online programming courses
   lynda_beyond_shortdescription: Dozens of online programming courses
   edx_beyond_shortdescription: The most popular class at Harvard
-  coursera_beyond_shortdescription: "لەگەڵ CS101 دەستپێبکە"
-  udacity_beyond_shortdescription: "لەگەڵ CS101 دەستپێبکە"
-  teachingtree_beyond_shortdescription: "زانیاری سەر ئینتەرنێت: خێرایە و بێ سنوورە"
-  kodu_beyond_shortdescription: "جیهانی سێ ڕەهەندی بۆ یاری دابڕێژە"
+  coursera_beyond_shortdescription: لەگەڵ CS101 دەستپێبکە
+  udacity_beyond_shortdescription: لەگەڵ CS101 دەستپێبکە
+  teachingtree_beyond_shortdescription: 'زانیاری سەر ئینتەرنێت: خێرایە و بێ سنوورە'
+  kodu_beyond_shortdescription: جیهانی سێ ڕەهەندی بۆ یاری دابڕێژە
   cargobot_beyond_shortdescription: Program a robot arm on your iPad
   kidsruby_beyond_shortdescription: Learn to program using Ruby
   w3schools_beyond_shortdescription: Learn to make web sites
@@ -1979,7 +1979,7 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "بازدان"
+  flappy_shortcode: بازدان
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
@@ -1994,7 +1994,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "كاژێری كۆدنووسی"
+  header_educate_hoc: كاژێری كۆدنووسی
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -2024,9 +2024,9 @@
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
   user_header_label: Hi %{username}
-  user_header_settings: "هەژمارەکەم"
-  user_header_logout: "دەرچوون"
-  user_header_signin: "چوونەژوورەوە"
+  user_header_settings: هەژمارەکەم
+  user_header_logout: دەرچوون
+  user_header_signin: چوونەژوورەوە
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

@@ -32641,8 +32641,14 @@
         \r
         Enter
         the lesson you selected for your challenge below:
-      CSPPD3-u2 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a dirct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+      CSPPD3-u2 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a dirct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
       CSPPD3-u3 pick a challenge_markdown_instruction: |-
         # Challenge Overview > What's
         your Challenge? \r
@@ -32664,12 +32670,30 @@
         \r
         #### <a href="http://forum.code.org/t/unit-3-challenge-selection/2470"
         target=_blank>Forums <i class="fa fa-external-link-square" /></a>
-      CSPPD3-u3 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
-      CSPPD3-u4 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
-      CSPPD3-u5 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+      CSPPD3-u3 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a direct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
+      CSPPD3-u4 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a direct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
+      CSPPD3-u5 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a direct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
       CSPU5 Add Screens to Chaser Game_markdown_instruction: |
         # Improved Chaser Game\r
         \r
@@ -42775,8 +42799,31 @@
         \r
         #### <a href="http://forum.code.org/c/ecs/ecs-unit3"
         target=_blank>Forums <i class="fa fa-external-link" /></a>
-      ECS Unit 3 Challenge Submission_markdown_instruction: |
-        Submit Link\r\n\r\n##  Share your Artifacts and Advice\r\n**Head to the forum** and share: \r\n\r\n- Any data visualization or other artifact you created in doing the \r\n - Use the “SHARE” button in code studio to get a link to your program:   \r\n- The assessment question or extending learning activity that you produced for this lesson.\r\n- Notes for others who are going to teach this lesson. This should include: \r\n - Advice for someone who is going to teach this lesson (consider what was challenging about doing the lesson, what you think students will struggle with, etc).\r\n - What ideas do you have about how to structure and teach this lesson? what modifications do you plan to make to the lesson?\r\n - What additional resources (if any) might be helpful in teaching this lesson\r\n\r\n\r\n<hr>\r\n### <a href= \"http://forum.code.org/c/ecs/ecs-unit3\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n## Check out what others have posted! \r\nOnce you've posted your own challenge results, check out what others have posted! Be sure to click through the other lessons as well and read through their work. Remember, a big goal here is to learn from one another so let people know when your find their suggestions helpful, or provide your own ideas when you come across questions. Be sure to use the **heart** feature on the forum to vote for posts you find particularly useful! \r\n\r\n<br/><br/>\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nIf you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+      ECS Unit 3 Challenge Submission_markdown_instruction: 'Submit Link\r\n\r\n##  Share
+        your Artifacts and Advice\r\n**Head to the forum** and share: \r\n\r\n- Any
+        data visualization or other artifact you created in doing the \r\n - Use the
+        “SHARE” button in code studio to get a link to your program:   \r\n- The assessment
+        question or extending learning activity that you produced for this lesson.\r\n-
+        Notes for others who are going to teach this lesson. This should include:
+        \r\n - Advice for someone who is going to teach this lesson (consider what
+        was challenging about doing the lesson, what you think students will struggle
+        with, etc).\r\n - What ideas do you have about how to structure and teach
+        this lesson? what modifications do you plan to make to the lesson?\r\n - What
+        additional resources (if any) might be helpful in teaching this lesson\r\n\r\n\r\n<hr>\r\n###
+        <a href= \"http://forum.code.org/c/ecs/ecs-unit3\" target=_blank> Head to
+        the Forum >></a>\r\n<hr>\r\n\r\n## Check out what others have posted! \r\nOnce
+        you''ve posted your own challenge results, check out what others have posted!
+        Be sure to click through the other lessons as well and read through their
+        work. Remember, a big goal here is to learn from one another so let people
+        know when your find their suggestions helpful, or provide your own ideas when
+        you come across questions. Be sure to use the **heart** feature on the forum
+        to vote for posts you find particularly useful! \r\n\r\n<br/><br/>\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nIf you would like to receive
+        payment for this online PD, please submit a link to that forum post here so
+        we can review! \r\n\r\nIn order to get a direct link to your post, click the
+        link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
       ECS Unit 4 Challenge Selection_markdown_instruction: |-
         # Challenge Overview
         > What's your Challenge? \r
@@ -43273,8 +43320,14 @@
         ####
         <a href="http://forum.code.org/c/ecs/ecs-unit5" target=_blank>Forums <i
         class="fa fa-external-link" /></a>
-      ECSPD3-u5 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+      ECSPD3-u5 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a direct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
       ECSPD3-u5 submit_markdown_instruction: |-
         # Share Out and Submit > Submit Link\r
         \r
@@ -43332,12 +43385,47 @@
         \r
         #### <a href="http://forum.code.org/c/ecs/ecs-unit6"
         target=_blank>Head to the Forums <i class="fa fa-external-link-square" /></a>
-      ECSPD3-u6 submit forum link_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link to your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review!\r\n\r\nIn order to get a direct link to your post, click the link icon directly under your post (shown in the picture below): \r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
-      ECSU2 Challenge Submission_markdown_instruction: |
-        Submit Link\r\n\r\n##  Share your Artifacts and Advice\r\n**Head to the forum** and share: \r\n\r\n- Any data visualization or other artifact you created in doing the \r\n - Use the “SHARE” button in code studio to get a link to your program:   \r\n- The assessment question or extending learning activity that you produced for this lesson.\r\n- Notes for others who are going to teach this lesson. This should include: \r\n - Advice for someone who is going to teach this lesson (consider what was challenging about doing the lesson, what you think students will struggle with, etc).\r\n - What ideas do you have about how to structure and teach this lesson? what modifications do you plan to make to the lesson?\r\n - What additional resources (if any) might be helpful in teaching this lesson\r\n\r\n\r\n<hr>\r\n### <a href= \"http://forum.code.org/c/ecs/ecs-unit2\" target=_blank> Head to the Forum >></a>\r\n<hr>\r\n\r\n## Check out what others have posted! \r\nOnce you've posted your own challenge results, check out what others have posted! Be sure to click through the other lessons as well and read through their work. Remember, a big goal here is to learn from one another so let people know when your find their suggestions helpful, or provide your own ideas when you come across questions. Be sure to use the **heart** feature on the forum to vote for posts you find particularly useful! \r\n\r\n<br/><br/>\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nIf you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a dirct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
-      ECSU3 Challenge Submission_markdown_instruction: |
-        Submit Link\r\n\r\n##  Submit the Link for your Forum Post for Review\r\n\r\nYou've just shared your Challenge work on the forum. If you would like to receive payment for this online PD, please submit a link to that forum post here so we can review! \r\n\r\nIn order to get a dirct link to your post, click the link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+      ECSPD3-u6 submit forum link_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link to your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review!\r\n\r\nIn order
+        to get a direct link to your post, click the link icon directly under your
+        post (shown in the picture below): \r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
+      ECSU2 Challenge Submission_markdown_instruction: 'Submit Link\r\n\r\n##  Share
+        your Artifacts and Advice\r\n**Head to the forum** and share: \r\n\r\n- Any
+        data visualization or other artifact you created in doing the \r\n - Use the
+        “SHARE” button in code studio to get a link to your program:   \r\n- The assessment
+        question or extending learning activity that you produced for this lesson.\r\n-
+        Notes for others who are going to teach this lesson. This should include:
+        \r\n - Advice for someone who is going to teach this lesson (consider what
+        was challenging about doing the lesson, what you think students will struggle
+        with, etc).\r\n - What ideas do you have about how to structure and teach
+        this lesson? what modifications do you plan to make to the lesson?\r\n - What
+        additional resources (if any) might be helpful in teaching this lesson\r\n\r\n\r\n<hr>\r\n###
+        <a href= \"http://forum.code.org/c/ecs/ecs-unit2\" target=_blank> Head to
+        the Forum >></a>\r\n<hr>\r\n\r\n## Check out what others have posted! \r\nOnce
+        you''ve posted your own challenge results, check out what others have posted!
+        Be sure to click through the other lessons as well and read through their
+        work. Remember, a big goal here is to learn from one another so let people
+        know when your find their suggestions helpful, or provide your own ideas when
+        you come across questions. Be sure to use the **heart** feature on the forum
+        to vote for posts you find particularly useful! \r\n\r\n<br/><br/>\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nIf you would like to receive
+        payment for this online PD, please submit a link to that forum post here so
+        we can review! \r\n\r\nIn order to get a dirct link to your post, click the
+        link icon directly under your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
+      ECSU3 Challenge Submission_markdown_instruction: 'Submit Link\r\n\r\n##  Submit
+        the Link for your Forum Post for Review\r\n\r\nYou''ve just shared your Challenge
+        work on the forum. If you would like to receive payment for this online PD,
+        please submit a link to that forum post here so we can review! \r\n\r\nIn
+        order to get a dirct link to your post, click the link icon directly under
+        your post (shown in the picture below):\r\n\r\n![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)"
+
+'
       ECSU4 Challenge Submission fin_markdown_instruction: |-
         # Share Out and Submit
         > Submit Link\r
@@ -45269,8 +45357,9 @@
         \r
         Prepare to
         get familiar with functions, learn how to edit them, and create your own!
-      Matt Test Level_markdown_instruction: |
-        Do 0 bits weigh less than 1 bits?
+      Matt Test Level_markdown_instruction: 'Do 0 bits weigh less than 1 bits?
+
+'
       Middle School Hackathon Pt 1_markdown_instruction: |-
         # MS Hackathon: Fancy Drawing\r
         \r
@@ -46285,8 +46374,9 @@
         doesn't have any. \r
         You must first check if the nectar is equal to 1 using
         the `if nectar` block.
-      PS fr prediction q1_markdown_instruction: |
-        What do *you* think will happen?
+      PS fr prediction q1_markdown_instruction: 'What do *you* think will happen?
+
+'
       Peer Review Level 1 - Tuesday Report_markdown_instruction: |-
         Vacations are really
         fun. Please document a short and amusing story about a recent vacation.\r
@@ -49372,10 +49462,75 @@
         \r
         \r
         \r
-      'Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 1. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 1. Your plan should address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n - How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use formative lessons questions (blue bubbles in code studio), project rubrics, AP-style questions (following lesson 7 and lesson 14), practice performance task (lesson 14)\r\n\r\n\r\n- Making your own assessments\r\n\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
-      'Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 1. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/cd0612e68d70f40e2fd058fbf55b4abc-image-1474643895905.19.03 AM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your general plan for managing technology throughout unit 1, as well as a specific plan for one of the technology-dependent lessons highlighted in red on the right. Your plan should be broken into two parts, and address the following things: \r\n\r\n- General strategies that you’ll apply throughout unit 1\r\n - Throughout unit 1, what classroom and technology management techniques will you use to help students stay focused on the lesson tasks? \r\n\r\n\r\n- Strategies specific to a selected lesson\r\n - Which of the highlighted lessons on the right are you discussing? \r\n - What is your plan for managing transitions between your instruction and students being in the tool? *Note: your response should include specifics about the lesson*\r\n - How do you plan to introduce the lesson challenge and the tool that students will use to complete the challenge? *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n"
+      'Teaching Practice Plan: Assessing Student Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 1. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n#
+        Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re
+        going to develop and submit a Teaching Practice Plan, which details your plan
+        for assessing student learning throughout unit 1. Your plan should address
+        the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n - How do
+        you plan to use the assessment opportunities that have been provided in the
+        curriculum? Your response should include how you plan to use formative lessons
+        questions (blue bubbles in code studio), project rubrics, AP-style questions
+        (following lesson 7 and lesson 14), practice performance task (lesson 14)\r\n\r\n\r\n-
+        Making your own assessments\r\n\r\n - What types of assessments might you
+        need to create or use on top of those provided in the curriculum? \r\n - What
+        is your strategy for developing assessment opportunities that are consistent
+        with the philosophy of the curriculum and activities? \r\n\r\nYou can type
+        out your teaching practice plan in the box below, or you can upload a word
+        doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n\r\n"
+
+'
+      'Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 1. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/cd0612e68d70f40e2fd058fbf55b4abc-image-1474643895905.19.03
+        AM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your general plan for managing technology throughout unit 1, as well as a
+        specific plan for one of the technology-dependent lessons highlighted in red
+        on the right. Your plan should be broken into two parts, and address the following
+        things: \r\n\r\n- General strategies that you’ll apply throughout unit 1\r\n
+        - Throughout unit 1, what classroom and technology management techniques will
+        you use to help students stay focused on the lesson tasks? \r\n\r\n\r\n- Strategies
+        specific to a selected lesson\r\n - Which of the highlighted lessons on the
+        right are you discussing? \r\n - What is your plan for managing transitions
+        between your instruction and students being in the tool? *Note: your response
+        should include specifics about the lesson*\r\n - How do you plan to introduce
+        the lesson challenge and the tool that students will use to complete the challenge?
+        *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n \r\n"
+
+'
       'Teaching Practice Plan: Discovery Learning_markdown_instruction': |
         > **NOTE:
         before you start this task, make sure you’ve reviewed the resources in this
@@ -49427,10 +49582,66 @@
         \r
         \r
         \r
-      'Teaching Practice Plan: Group Work and Peer Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 1. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Teaching Practice Plan: Group Work and Peer Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for supporting group work throughout unit 1. Your plan should address the following things: \r\n\r\n- What is your plan for supporting students who are struggling to engage in group work, either because they prefer to work alone, or because they are having issues collaborating with their partner(s)? \r\n- How do you plan to help make sure all members of the team have a voice in their groups’ discussions?\r\n- How can you help students understand and appreciate the importance of learning through and from one another? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n\r\n\r\n\r\n"
-      'Teaching Practice Plan: Group Work and Peer Learning`_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 1. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Teaching Practice Plan: Group Work and Peer Learning`\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for supporting group work throughout unit 1. Your plan should address the following things: \r\n\r\n- What is your plan for supporting students who are struggling to engage in group work, either because they prefer to work alone, or because they are having issues collaborating with their partner(s)? \r\n- How do you plan to help make sure all members of the team have a voice in their groups’ discussions?\r\n- How can you help students understand and appreciate the importance of learning through and from one another? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n\r\n\r\n\r\n"
+      'Teaching Practice Plan: Group Work and Peer Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 1. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Teaching Practice Plan: Group Work and Peer Learning\r\n\r\nFor this task,
+        you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for supporting group work throughout unit 1. Your plan should address
+        the following things: \r\n\r\n- What is your plan for supporting students
+        who are struggling to engage in group work, either because they prefer to
+        work alone, or because they are having issues collaborating with their partner(s)?
+        \r\n- How do you plan to help make sure all members of the team have a voice
+        in their groups’ discussions?\r\n- How can you help students understand and
+        appreciate the importance of learning through and from one another? \r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n\r\n\r\n\r\n\r\n"
+
+'
+      'Teaching Practice Plan: Group Work and Peer Learning`_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 1. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Teaching Practice Plan: Group Work and Peer Learning`\r\n\r\nFor this task,
+        you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for supporting group work throughout unit 1. Your plan should address
+        the following things: \r\n\r\n- What is your plan for supporting students
+        who are struggling to engage in group work, either because they prefer to
+        work alone, or because they are having issues collaborating with their partner(s)?
+        \r\n- How do you plan to help make sure all members of the team have a voice
+        in their groups’ discussions?\r\n- How can you help students understand and
+        appreciate the importance of learning through and from one another? \r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n\r\n\r\n\r\n\r\n"
+
+'
       Teaching and Student Support Plan_markdown_instruction: "> **NOTE: before you\nstart
         this task, make sure you’ve reviewed the lesson resources in this module,\nand
         have a good sense of how the lesson works. If you haven’t already reviewed\nthe
@@ -49635,8 +49846,9 @@
         you've written, and some more for you to play with. Play with the pen width
         to see how different your drawings look!\r
         \r
-      Trent Test Level_markdown_instruction: |
-        More questions!
+      Trent Test Level_markdown_instruction: 'More questions!
+
+'
       'Tuesday Report: Balancing Teachers and Tools in Unit 1_markdown_instruction': |-
         So
         far we've seen four lessons from unit 1 — two model lessons delivered by
@@ -68352,18 +68564,10 @@
         * **Reflect: ** Why wouldn't we want
         this information stored in many variables? Why wouldn't we want this information
         stored in an array?
-      U4L02 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L03 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L04 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L05 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
+      U4L02 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L03 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L04 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L05 Free Response_markdown_instruction: "Free response prompt here.\n\n"
       U4L06 Data Storage 1_markdown_instruction: |-
         ## Create Record\r
         \r
@@ -68423,36 +68627,16 @@
         may need to collect data over multiple screens. Add a second screen to the
         sample app we have been building to capture an image from a user. Return to
         screen 1 after the JSON object has been stored in the table.
-      U4L06 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L07 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L08 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L09 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L10 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L11 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L12 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L13 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L14 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L15 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
+      U4L06 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L07 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L08 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L09 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L10 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L11 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L12 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L13 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L14 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L15 Free Response_markdown_instruction: "Free response prompt here.\n\n"
       U4L15 Read Data 1_markdown_instruction: |
         ## Reading Data\r
         \r
@@ -68492,18 +68676,10 @@
         1.
         Make a variable that holds a random number\r
         1. Use it to get a random record
-      U4L16 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L17 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L18 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L19 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
+      U4L16 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L17 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L18 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L19 Free Response_markdown_instruction: "Free response prompt here.\n\n"
       U4L2 - FR Practice AP response about data_markdown_instruction: |
         ## AP Practice\r
         \r
@@ -68522,21 +68698,11 @@
         by responding the prompt above, summarizing the data innovation you researched
         for this lesson. Your first sentence should name the innovation you are writing
         about.\r
-      U4L20 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L21 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L22 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L23 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
-      U4L24 Free Response_markdown_instruction: |+
-        Free response prompt here.
-
+      U4L20 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L21 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L22 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L23 Free Response_markdown_instruction: "Free response prompt here.\n\n"
+      U4L24 Free Response_markdown_instruction: "Free response prompt here.\n\n"
       U4L3 - FR Identifying people_markdown_instruction: |-
         Consider the following
         scenario:\r
@@ -68586,9 +68752,7 @@
         \r
         Limit
         your response to a few sentences for each point above.
-      U4LXX Free Response_markdown_instruction: |+
-        Free response prompt here.
-
+      U4LXX Free Response_markdown_instruction: "Free response prompt here.\n\n"
       U5 AP Create Practice onEvent Doesnt Count_markdown_instruction: |-
         # AP Practice
         - Create PT - Choosing an Abstraction\r
@@ -70791,10 +70955,80 @@
         make over sixteen million different colors with RGB color mixing.\r
         </p></details>\r
         </div>\r
-      'Unit 2 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 2. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 2 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 2. Your plan should address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n - How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use formative lessons questions (blue bubbles in code studio), project rubrics, AP-style questions (following lesson 6 and lesson 17), practice performance tasks (lessons 6 and 15)\r\n\r\n\r\n- Making your own assessments\r\n\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
-      'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 2. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Unit 2 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/96277a718d83c091b701cf64a816c1ec-image-1477933390543.00.02 PM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your general plan for managing technology throughout unit 2, as well as a specific plan for one of the technology-dependent lessons highlighted in unit overview on the right. Note that the lessons with a `red solid rectangle` all require the use of computers, but for the purpose of students looking at existing information. In lessons with the `dashed purple rectangle` students are creating computational artifacts with spreadsheet tools. Lessons indicated with the `solid dark blue oval` use a widget in Code Studio. \r\n\r\nYour plan should be broken into two parts, and address the following things: \r\n\r\n- General strategies that you’ll apply throughout unit 2\r\n - Throughout unit 2, what classroom and technology management techniques will you use to help students stay focused on the lesson tasks? \r\n\r\n\r\n- Strategies specific to a selected lesson\r\n - Which of the highlighted lessons on the right are you discussing? \r\n - What is your plan for managing transitions between your instruction and students being in the tool? *Note: your response should include specifics about the lesson*\r\n - How do you plan to introduce the lesson challenge and the tool that students will use to complete the challenge? *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n"
+      'Unit 2 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 2. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n#
+        Unit 2 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for assessing student learning throughout unit 2. Your plan should
+        address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n -
+        How do you plan to use the assessment opportunities that have been provided
+        in the curriculum? Your response should include how you plan to use formative
+        lessons questions (blue bubbles in code studio), project rubrics, AP-style
+        questions (following lesson 6 and lesson 17), practice performance tasks (lessons
+        6 and 15)\r\n\r\n\r\n- Making your own assessments\r\n\r\n - What types of
+        assessments might you need to create or use on top of those provided in the
+        curriculum? \r\n - What is your strategy for developing assessment opportunities
+        that are consistent with the philosophy of the curriculum and activities?
+        \r\n\r\nYou can type out your teaching practice plan in the box below, or
+        you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing
+        this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed
+        as  your “focus area”, then your response to the prompt above will be shared
+        anonymously and reviewed by your peers, and you will review the work done
+        by other teachers. Reviewers will be looking for thoughtful and thorough answers
+        that demonstrate that you have spent time considering how this practice will
+        fit into your own classroom. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn
+        order to get credit for completing this task, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to a facilitator
+        to review. You will always have a chance to address feedback from your reviewers
+        and resubmit your task! Reviewer feedback will show up at the bottom of this
+        page, once it’s available. \r\n\r\n"
+
+'
+      'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 2. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Unit 2 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/96277a718d83c091b701cf64a816c1ec-image-1477933390543.00.02
+        PM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your general plan for managing technology throughout unit 2, as well as a
+        specific plan for one of the technology-dependent lessons highlighted in unit
+        overview on the right. Note that the lessons with a `red solid rectangle`
+        all require the use of computers, but for the purpose of students looking
+        at existing information. In lessons with the `dashed purple rectangle` students
+        are creating computational artifacts with spreadsheet tools. Lessons indicated
+        with the `solid dark blue oval` use a widget in Code Studio. \r\n\r\nYour
+        plan should be broken into two parts, and address the following things: \r\n\r\n-
+        General strategies that you’ll apply throughout unit 2\r\n - Throughout unit
+        2, what classroom and technology management techniques will you use to help
+        students stay focused on the lesson tasks? \r\n\r\n\r\n- Strategies specific
+        to a selected lesson\r\n - Which of the highlighted lessons on the right are
+        you discussing? \r\n - What is your plan for managing transitions between
+        your instruction and students being in the tool? *Note: your response should
+        include specifics about the lesson*\r\n - How do you plan to introduce the
+        lesson challenge and the tool that students will use to complete the challenge?
+        *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n \r\n\r\n"
+
+'
       'Unit 2 Teaching Practice Plan: Discovery Learning_markdown_instruction': |
         <br><br>\r
         >
@@ -70901,10 +71135,73 @@
         \r
         \r
         \r
-      'Unit 3 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 3. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 3 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 3. Your plan should address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n - How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use formative lessons questions (blue bubbles in code studio), project rubrics, AP-style questions, practice performance tasks (lesson 10).\r\n\r\n\r\n- Making your own assessments\r\n\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
-      'Unit 3 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 3. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Unit 3 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your general plan for managing technology throughout unit 3, as well as a specific plan for one of the technology-dependent lessons (which are lessons 4 - 10). \r\n\r\nYour plan should be broken into two parts, and address the following things: \r\n\r\n- General strategies that you’ll apply throughout unit 3\r\n - Throughout unit 3, what classroom and technology management techniques will you use to help students stay focused on the lesson tasks? \r\n\r\n\r\n- Strategies specific to a selected lesson\r\n - Which of the plugged-in lessons are you discussing? \r\n - What is your plan for managing transitions between your instruction and students being in the tool? *Note: your response should include specifics about the lesson*\r\n - How do you plan to introduce the lesson challenge and the tool that students will use to complete the challenge? *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n"
+      'Unit 3 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 3. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n#
+        Unit 3 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for assessing student learning throughout unit 3. Your plan should
+        address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n -
+        How do you plan to use the assessment opportunities that have been provided
+        in the curriculum? Your response should include how you plan to use formative
+        lessons questions (blue bubbles in code studio), project rubrics, AP-style
+        questions, practice performance tasks (lesson 10).\r\n\r\n\r\n- Making your
+        own assessments\r\n\r\n - What types of assessments might you need to create
+        or use on top of those provided in the curriculum? \r\n - What is your strategy
+        for developing assessment opportunities that are consistent with the philosophy
+        of the curriculum and activities? \r\n\r\nYou can type out your teaching practice
+        plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n##
+        Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf
+        this module is listed as  your “focus area”, then your response to the prompt
+        above will be shared anonymously and reviewed by your peers, and you will
+        review the work done by other teachers. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        how this practice will fit into your own classroom. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit. \r\n\r\nIn order to get credit for completing this
+        task, two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to a facilitator to review. You will always have a chance
+        to address feedback from your reviewers and resubmit your task! Reviewer feedback
+        will show up at the bottom of this page, once it’s available. \r\n\r\n"
+
+'
+      'Unit 3 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 3. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Unit 3 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n\r\nFor
+        this task, you’re going to develop and submit a Teaching Practice Plan, which
+        details your general plan for managing technology throughout unit 3, as well
+        as a specific plan for one of the technology-dependent lessons (which are
+        lessons 4 - 10). \r\n\r\nYour plan should be broken into two parts, and address
+        the following things: \r\n\r\n- General strategies that you’ll apply throughout
+        unit 3\r\n - Throughout unit 3, what classroom and technology management techniques
+        will you use to help students stay focused on the lesson tasks? \r\n\r\n\r\n-
+        Strategies specific to a selected lesson\r\n - Which of the plugged-in lessons
+        are you discussing? \r\n - What is your plan for managing transitions between
+        your instruction and students being in the tool? *Note: your response should
+        include specifics about the lesson*\r\n - How do you plan to introduce the
+        lesson challenge and the tool that students will use to complete the challenge?
+        *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n \r\n\r\n"
+
+'
       'Unit 3 Teaching Practice Plan: Discovery Learning_markdown_instruction': |
         <br><br>\r
         >
@@ -71011,10 +71308,78 @@
         \r
         \r
         \r
-      'Unit 4 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 4. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 4 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 4. Your plan should address the following: \r\n\r\n- **Using what’s in the curriculum** How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use:\r\n - formative lessons questions (blue bubbles in code studio), \r\n - project rubrics, \r\n - AP-style questions (following lesson 9), \r\n - practice performance tasks (lesson 9).\r\n\r\n- **Making your own assessments**\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
-      'Unit 4 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 4. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Unit 4 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/1cc3effc2c7fbd1003ecb8a8561f893e-image-1481692026401.38.35 PM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your general plan for managing technology throughout unit 4, as well as a specific plan for one of the technology-dependent lessons highlighted in unit overview on the right. Note that lessons with a solid red boarder leverage primarily external tools, while lessons with the dashed line use custom-made widgets and tools that are housed within Code Studio. \r\n\r\n\r\nYour plan should be broken into two parts, and address the following things: \r\n\r\n- General strategies that you’ll apply throughout unit 4\r\n - Throughout unit 4, what classroom and technology management techniques will you use to help students stay focused on the lesson tasks? \r\n\r\n- Strategies specific to a selected lesson\r\n - Which of the highlighted lessons on the right are you discussing? \r\n - What is your plan for managing transitions between your instruction and students being in the tool? *Note: your response should include specifics about the lesson*\r\n - How do you plan to introduce the lesson challenge and the tool that students will use to complete the challenge? *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n"
+      'Unit 4 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 4. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n#
+        Unit 4 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for assessing student learning throughout unit 4. Your plan should
+        address the following: \r\n\r\n- **Using what’s in the curriculum** How do
+        you plan to use the assessment opportunities that have been provided in the
+        curriculum? Your response should include how you plan to use:\r\n - formative
+        lessons questions (blue bubbles in code studio), \r\n - project rubrics, \r\n
+        - AP-style questions (following lesson 9), \r\n - practice performance tasks
+        (lesson 9).\r\n\r\n- **Making your own assessments**\r\n - What types of assessments
+        might you need to create or use on top of those provided in the curriculum?
+        \r\n - What is your strategy for developing assessment opportunities that
+        are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n\r\n"
+
+'
+      'Unit 4 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 4. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Unit 4 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\n<img src=\"https://images.code.org/1cc3effc2c7fbd1003ecb8a8561f893e-image-1481692026401.38.35
+        PM.png\" style=\"float:right; margin-left:30px; width:45%\">\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your general plan for managing technology throughout unit 4, as well as a
+        specific plan for one of the technology-dependent lessons highlighted in unit
+        overview on the right. Note that lessons with a solid red boarder leverage
+        primarily external tools, while lessons with the dashed line use custom-made
+        widgets and tools that are housed within Code Studio. \r\n\r\n\r\nYour plan
+        should be broken into two parts, and address the following things: \r\n\r\n-
+        General strategies that you’ll apply throughout unit 4\r\n - Throughout unit
+        4, what classroom and technology management techniques will you use to help
+        students stay focused on the lesson tasks? \r\n\r\n- Strategies specific to
+        a selected lesson\r\n - Which of the highlighted lessons on the right are
+        you discussing? \r\n - What is your plan for managing transitions between
+        your instruction and students being in the tool? *Note: your response should
+        include specifics about the lesson*\r\n - How do you plan to introduce the
+        lesson challenge and the tool that students will use to complete the challenge?
+        *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou
+        can type out your teaching practice plan in the box below, or you can upload
+        a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n \r\n\r\n"
+
+'
       'Unit 4 Teaching Practice Plan: Discovery Learning_markdown_instruction': |
         <br><br>\r
         >
@@ -71124,10 +71489,76 @@
         \r
         \r
         \r
-      'Unit 5 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 5. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 5 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 5. Your plan should address the following: \r\n\r\n- **Using what’s in the curriculum** How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use:\r\n - code students write while learning about a concept (not the final projects that they build towards)\r\n - submittable projects (which typically come after a set of 2-3 lessons and pull together multiple concepts)\r\n - AP-style questions (following lessons 5, 10, 14, and 17), \r\n - practice performance tasks (lesson 18).\r\n\r\n- **Making your own assessments**\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
-      'Unit 5 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
-        **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 5. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n# Unit 5 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your general plan for managing technology throughout unit 4, as well as a specific plan for a computer-based lesson (which for unit 5, is almost every lesson).\r\n\r\nYour plan should be broken into two parts, and address the following: \r\n\r\n- General strategies that you’ll apply throughout unit 5\r\n - Throughout unit 4, what classroom and technology management techniques will you use to help students stay focused on the lesson tasks? \r\n\r\n- Strategies specific to a selected lesson\r\n - Which lesson are you discussing? \r\n - What is your plan for managing transitions between your instruction and students being in App Lab? *Note: your response should include specifics about the lesson*\r\n - How do you plan to introduce the lesson challenge as well as any new features or programming concepts that have been added to App Lab since the last lesson? *Note: your response should include specifics about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n"
+      'Unit 5 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 5. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n#
+        Unit 5 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this
+        task you’re going to develop and submit a Teaching Practice Plan, which details
+        your plan for assessing student learning throughout unit 5. Your plan should
+        address the following: \r\n\r\n- **Using what’s in the curriculum** How do
+        you plan to use the assessment opportunities that have been provided in the
+        curriculum? Your response should include how you plan to use:\r\n - code students
+        write while learning about a concept (not the final projects that they build
+        towards)\r\n - submittable projects (which typically come after a set of 2-3
+        lessons and pull together multiple concepts)\r\n - AP-style questions (following
+        lessons 5, 10, 14, and 17), \r\n - practice performance tasks (lesson 18).\r\n\r\n-
+        **Making your own assessments**\r\n - What types of assessments might you
+        need to create or use on top of those provided in the curriculum? \r\n - What
+        is your strategy for developing assessment opportunities that are consistent
+        with the philosophy of the curriculum and activities? \r\n\r\nYou can type
+        out your teaching practice plan in the box below, or you can upload a word
+        doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n####
+        Task Review Details\r\n\r\nIf this module is listed as  your “focus area”,
+        then your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other teachers. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering how this practice will fit into your own classroom.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit
+        for completing this task, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to a facilitator to review. You
+        will always have a chance to address feedback from your reviewers and resubmit
+        your task! Reviewer feedback will show up at the bottom of this page, once
+        it’s available. \r\n\r\n"
+
+'
+      'Unit 5 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': '**NOTE:
+        before you start this task, make sure you’ve reviewed the resources in this
+        module, and have a good sense of the connections to unit 5. If you haven’t
+        already reviewed the materials, do that now and come back to this task later.**\r\n\r\n\r\n#
+        Unit 5 Teaching Practice Plan: Balancing Teacher and Tools\r\n\r\nFor this
+        task, you’re going to develop and submit a Teaching Practice Plan, which details
+        your general plan for managing technology throughout unit 4, as well as a
+        specific plan for a computer-based lesson (which for unit 5, is almost every
+        lesson).\r\n\r\nYour plan should be broken into two parts, and address the
+        following: \r\n\r\n- General strategies that you’ll apply throughout unit
+        5\r\n - Throughout unit 4, what classroom and technology management techniques
+        will you use to help students stay focused on the lesson tasks? \r\n\r\n-
+        Strategies specific to a selected lesson\r\n - Which lesson are you discussing?
+        \r\n - What is your plan for managing transitions between your instruction
+        and students being in App Lab? *Note: your response should include specifics
+        about the lesson*\r\n - How do you plan to introduce the lesson challenge
+        as well as any new features or programming concepts that have been added to
+        App Lab since the last lesson? *Note: your response should include specifics
+        about the lesson*\r\n\r\n\r\nYou can type out your teaching practice plan
+        in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting
+        Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf
+        this module is listed as  your “focus area”, then your response to the prompt
+        above will be shared anonymously and reviewed by your peers, and you will
+        review the work done by other teachers. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        how this practice will fit into your own classroom. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit. \r\n\r\nIn order to get credit for completing this
+        task, two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to a facilitator to review. You will always have a chance
+        to address feedback from your reviewers and resubmit your task! Reviewer feedback
+        will show up at the bottom of this page, once it’s available. \r\n \r\n\r\n"
+
+'
       'Unit 5 Teaching Practice Plan: Discovery Learning_markdown_instruction': |
         <br><br>\r
         >
@@ -75852,8 +76283,9 @@
       courseE_farmer_ramp11b_2018_markdown_instruction: |-
         Let's try that again, but
         with more piles!
-      courseE_farmer_ramp12_markdown_instruction: |
-        Pick all of the lettuce.\r
+      courseE_farmer_ramp12_markdown_instruction: 'Pick all of the lettuce.\r
+
+'
       courseE_farmer_ramp12_forswap_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_2018_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto

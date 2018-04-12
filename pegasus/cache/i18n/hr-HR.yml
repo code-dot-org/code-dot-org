@@ -56,7 +56,7 @@
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
   hoc2014_support: Pružite podršku &#x25BE;
-  hoc2014_whatishoc: "Što je Sat Kodiranja?"
+  hoc2014_whatishoc: Što je Sat Kodiranja?
   csedweek_map_header: "# CSEdWeek-ova odn. Sati Kodiranja diljem svijeta"
   csedweek_map_signup: Prijavi svoj događaj
   csedweek_map_search_placeholder: Pretraži događanja Sat kodiranja
@@ -90,8 +90,8 @@
   n_participants: "# sudionika"
   go: Kreni
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
-  congratulations_on_completing_hoc: "Čestitamo na završetku jednog Sata Kodiranja"
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
@@ -227,8 +227,11 @@
     cijeli svijet da nauči.
   personalize_certificate: Osobno uredi svoju potvrdu
   share_achievement: Podijeli svoje postignuće
-  beyond_hour_message: |
-    Nastavi s našim<a href='http://studio.code.org'>drugim tečajevima</a>,  ili istraži više mogućnosti na  <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>.
+  beyond_hour_message: 'Nastavi s našim<a href=''http://studio.code.org''>drugim tečajevima</a>,  ili
+    istraži više mogućnosti na  <a href=''/learn/beyond''>Saznaj više od Jednog sata
+    kodiranja</a>.
+
+'
   leaderboards_for_hoc: Ljestvice poretka za Hour of Code.
   support_url: http://support.code.org/
   country: Država
@@ -490,7 +493,7 @@
   contact_form_topic_teacher: Ja sam učitelj
   contact_form_topic_outside_us: Ja sam izvan SAD-a
   contact_form_topic_contribution: Dobrotvorni doprinos
-  contact_form_topic_partner: "Želim biti partner"
+  contact_form_topic_partner: Želim biti partner
   contact_form_topic_other: Ostalo
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša adresa elektroničke pošte
@@ -919,7 +922,7 @@
   dashboard_sections_table_pairing_allowed: Programiranje u paru
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: "Šifra odjeljenja"
+  dashboard_sections_table_code: Šifra odjeljenja
   dashboard_sections_name: Ime odjeljenja
   dashboard_sections_choose_secret: Ako želite napraviti račune za svoje učenike,
     odaberite tajni tip <b>riječi</b> ili <b>slike</b> za to odjeljenje.
@@ -974,7 +977,7 @@
   dashboard_students_name: Ime
   dashboard_students_progress: Napredak
   dashboard_students_male: Muško
-  dashboard_students_female: "Žensko"
+  dashboard_students_female: Žensko
   dashboard_students_completed_levels: Završeni nivoi
   dashboard_students_total_lines: Linije koda
   dashboard_students_share_section: 'Podijelite stranicu za prijavu u ovo odjeljenje
@@ -1080,7 +1083,7 @@
   dashboard_sections_password_account_creation: Tekstna lozinka koju je napravio učenik
   dashboard_sections_login_type_explanation: Ova tablica pomoći objašnjava koji od
     načina prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
-  dashboard_faq: "Često postavljana pitanja"
+  dashboard_faq: Često postavljana pitanja
   dashboard_faq_k5: K-5 Često postavljana pitanja
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. prosinca!
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike

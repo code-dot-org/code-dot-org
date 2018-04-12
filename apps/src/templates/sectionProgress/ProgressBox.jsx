@@ -3,8 +3,8 @@ import color from "@cdo/apps/util/color";
 
 const styles = {
   box: {
-    height: 20,
-    width: 20,
+    height: 22,
+    width: 22,
     borderWidth: 1,
     borderStyle: 'solid',
   },

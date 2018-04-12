@@ -74,13 +74,13 @@
   "penDown": "déposer le crayon",
   "penTooltip": "Prend ou dépose le crayon, pour commencer ou arrêter de dessiner.",
   "penUp": "prend le crayon",
+  "pointTo": "point to",
   "pixels": "pixels",
   "reinfFeedbackMsg": "Voici ton dessin ! Continue à travailler sur ton dessin ou passe au prochain puzzle.",
   "setAlpha": "définis alpha",
   "setCharacter": "configurer le personnage à {character}",
   "setColour": "définis la couleur",
   "setPattern": "définis le modèle",
-  "setStickerSize": "Set sticker size",
   "setWidth": "définis la largeur",
   "shareDrawing": "Partage ton dessin :",
   "showMe": "Montrez-moi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Tourne l'artiste à gauche ou à droite selon le degré indiqué.",
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie la largeur du crayon.",
+  "withSize": "with size",
   "wrongColour": "Ton image est de la mauvaise couleur. Pour ce puzzle, elle doit être de 1%."
 }

@@ -49,32 +49,32 @@
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
         不错的尝试！
         再试试来得到正确结果。
-      Course 4 Artist Vars 10_failure_message_override: "确保使用了sides（边数）变量！"
-      Course 4 Playlab For Loops 4b_failure_message_override: "请记住，这两个角色应该通过相同数量的移动来拿到他们的旗帜！"
-      Course 4 Playlab For Loops 5b_failure_message_override: "请记住，两个角色需要在同一个地方停下来。"
+      Course 4 Artist Vars 10_failure_message_override: 确保使用了sides（边数）变量！
+      Course 4 Playlab For Loops 4b_failure_message_override: 请记住，这两个角色应该通过相同数量的移动来拿到他们的旗帜！
+      Course 4 Playlab For Loops 5b_failure_message_override: 请记住，两个角色需要在同一个地方停下来。
       Eval Strings Images .2_failure_message_override: 请确保你追加了字符串“Universe"来创造代码”Hello,
         Universe"
-      Kiki_StarWars_Test_5_failure_message_override: "游戏结束！"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "游戏结束！"
-      MC HOC 2016 Level 2-2_failure_message_override: "使用 ‘向前’和‘转弯’ 命令来移动你的小鸡。"
-      MC HOC 2016 Level 3_failure_message_override: "使用‘一直执行'模块、’向前‘和’转弯‘命令让小鸡到处走。"
-      MC HOC 2016 Level 4_failure_message_override: "如果小鸡们都在向同一个方向移动，使用 ’随机转弯‘ 来让小鸡们随机的左转或右转。"
-      MC HOC 2016 Level 5_failure_message_override: "试试 ’永不停止‘ 和 ’向玩家移动一步‘。"
-      MC HOC 2016 Level 6_failure_message_override: "在“当夜晚”下使用”生成僵尸“模块来生成至少三个僵尸。然后，在”当被生成“条件下添加”向玩家移动一步“和一个循环来帮助它们追逐你。如果它们太快了，添加一个”等待“模块来让它们慢下来。"
-      MC HOC 2016 Level 8_failure_message_override: "使用爆破虫来炸掉这堵墙，你就可以到达你的羊了。"
-      MC HOC 2016 New Drop_failure_message_override: "使用箭头键走向小羊，按空格键或者点击游戏板来使用小羊。不要忘了添加“Drop”
-        模块。"
-      MC HOC 2016 New Spawn_failure_message_override: "把 ”母羊“放在“运行”下面。"
-      MC HOC 2016 New Walk_failure_message_override: "当你面对门时，按空格键或者触摸游戏板来打开门。走进去继续游戏。"
-      MC HOC 2016 SCORE LEVEL_failure_message_override: "如果你在标记5个傀儡时遇到困难，请尝试把每个标记的分值改成2."
-      MC HOC 2016 Village Test_failure_message_override: "让铁傀儡追赶并袭击僵尸，你才能赢。"
-      Valentine_playlab_01_failure_message_override: "快要成功了！再试试。"
-      WhileAdventure_failure_message_override: "恭喜！你收集到了X个硬币！"
-      courseE_playLab_scaffold3_failure_message_override: "你必须给游戏添加两个或者更多的人物，并且写程序让他们动起来。"
-      courseE_playLab_scaffold3_2018_failure_message_override: "你必须给游戏添加两个或者更多的人物，并且写程序让他们动起来。"
-      grade4_scaffolded_project3_failure_message_override: "你必须给你的游戏添加两个或者更多的新角色。"
-      kikiTesta_failure_message_override: "恭喜！你收集到了X个硬币！"
-      sample1_failure_message_override: "恭喜！你收集到了X个硬币！"
-      sample4_failure_message_override: "恭喜！你收集到了X个硬币！"
-      sample6_failure_message_override: "还差一点，再试一次！[请到游戏区]"
-      sample8_failure_message_override: "恭喜！你收集到了X个硬币！"
+      Kiki_StarWars_Test_5_failure_message_override: 游戏结束！
+      Kiki_StarWars_Test_5_Example_failure_message_override: 游戏结束！
+      MC HOC 2016 Level 2-2_failure_message_override: 使用 ‘向前’和‘转弯’ 命令来移动你的小鸡。
+      MC HOC 2016 Level 3_failure_message_override: 使用‘一直执行'模块、’向前‘和’转弯‘命令让小鸡到处走。
+      MC HOC 2016 Level 4_failure_message_override: 如果小鸡们都在向同一个方向移动，使用 ’随机转弯‘ 来让小鸡们随机的左转或右转。
+      MC HOC 2016 Level 5_failure_message_override: 试试 ’永不停止‘ 和 ’向玩家移动一步‘。
+      MC HOC 2016 Level 6_failure_message_override: 在“当夜晚”下使用”生成僵尸“模块来生成至少三个僵尸。然后，在”当被生成“条件下添加”向玩家移动一步“和一个循环来帮助它们追逐你。如果它们太快了，添加一个”等待“模块来让它们慢下来。
+      MC HOC 2016 Level 8_failure_message_override: 使用爆破虫来炸掉这堵墙，你就可以到达你的羊了。
+      MC HOC 2016 New Drop_failure_message_override: 使用箭头键走向小羊，按空格键或者点击游戏板来使用小羊。不要忘了添加“Drop”
+        模块。
+      MC HOC 2016 New Spawn_failure_message_override: 把 ”母羊“放在“运行”下面。
+      MC HOC 2016 New Walk_failure_message_override: 当你面对门时，按空格键或者触摸游戏板来打开门。走进去继续游戏。
+      MC HOC 2016 SCORE LEVEL_failure_message_override: 如果你在标记5个傀儡时遇到困难，请尝试把每个标记的分值改成2.
+      MC HOC 2016 Village Test_failure_message_override: 让铁傀儡追赶并袭击僵尸，你才能赢。
+      Valentine_playlab_01_failure_message_override: 快要成功了！再试试。
+      WhileAdventure_failure_message_override: 恭喜！你收集到了X个硬币！
+      courseE_playLab_scaffold3_failure_message_override: 你必须给游戏添加两个或者更多的人物，并且写程序让他们动起来。
+      courseE_playLab_scaffold3_2018_failure_message_override: 你必须给游戏添加两个或者更多的人物，并且写程序让他们动起来。
+      grade4_scaffolded_project3_failure_message_override: 你必须给你的游戏添加两个或者更多的新角色。
+      kikiTesta_failure_message_override: 恭喜！你收集到了X个硬币！
+      sample1_failure_message_override: 恭喜！你收集到了X个硬币！
+      sample4_failure_message_override: 恭喜！你收集到了X个硬币！
+      sample6_failure_message_override: 还差一点，再试一次！[请到游戏区]
+      sample8_failure_message_override: 恭喜！你收集到了X个硬币！

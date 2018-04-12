@@ -90,7 +90,6 @@ group :development, :test do
 
   # For UI testing.
   gem 'chromedriver-helper', '~> 0.0.7'
-  gem 'colorize'
   gem 'cucumber', '~> 2.4.0'
   gem 'eyes_selenium', '3.14.2'
   gem 'minitest', '~> 5.5'
@@ -152,7 +151,7 @@ gem 'devise_invitable', '~> 1.6.0'
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
-gem 'omniauth-facebook', '~> 4.0.0.rc1'
+gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
@@ -294,3 +293,6 @@ end
 install_if require_pg do
   gem 'pg', require: false
 end
+
+gem 'activerecord-import'
+gem 'colorize'

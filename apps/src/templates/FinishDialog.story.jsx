@@ -222,7 +222,6 @@ export default storybook =>
               achievements={achievements}
               studentCode={studentCode}
               showFunometer
-              canShare
             />
           </div>
         ),

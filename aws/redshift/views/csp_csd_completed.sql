@@ -9,6 +9,7 @@ from
     from analysis.user_stages us
     join analysis.course_structure cs on cs.script_id = us.script_id
     join analysis.school_years sy on us.started_at between sy.started_at and sy.ended_at
+    join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'
     where cs.course_name = 'csp'
   )
   where stage_order = 5

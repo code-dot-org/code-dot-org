@@ -902,6 +902,19 @@ tr:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
+        stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq1_2018_callout:
@@ -934,19 +947,36 @@ tr:
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: Bu sayı araç kutusunda blok kalmadığını belirtir.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: Bu sayı araç kutusunda blok kalmadığını belirtir.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseB_maze_seq1_callout:
+        courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Programda adım adım gitmek için adım düğmesini kullanın. Bu hatayı bulmanıza yardımcı olacaktır!
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: Programda adım adım gitmek için adım düğmesini kullanın. Bu hatayı bulmanıza yardımcı olacaktır!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: Gri bloklar taştan yapılmış ve atılabilir değildir.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: Gri bloklar taştan yapılmış ve atılabilir değildir.
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini kullan.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Yönü değiştirmek için yeşil renkli açılır ok işaretini kullan.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka bölümlerine taşımanı sağlar.
       courseC_artist_loopsPrePre1a_callout:
@@ -1006,7 +1036,10 @@ tr:
         courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet kutusunun içindeki bu etiketin altına taşındı.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için renkleri kullanmak zorunda değilsiniz. İsterseniz, bu 'rastgele renk' bloğu işi kolaylaştırır!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için renkleri kullanmak zorunda değilsiniz. İsterseniz, bu 'rastgele renk' bloğu işi kolaylaştırır!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Bu numarayı değiştirebilrisin.
         courseD_artist_ramp11_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı gir.
@@ -1014,14 +1047,21 @@ tr:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
         4_5_Bee_Conditionals_2_2: Yardıma mı ihtiyacınız var? Bir VIDEO ipucu için buraya tıklayın!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
+        4_5_Bee_Conditionals_2_2: Yardıma mı ihtiyacınız var? Bir VIDEO ipucu için buraya tıklayın!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
         4_5_Bee_Conditionals_2_2: Yardıma mı ihtiyacınız var? Yeni VIDEO ipuçlarımızı görmek için buraya tıklayın!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal) bir çiçekten (veya petekten) toplamak için kullanın.
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal) bir çiçekten (veya petekten) toplamak için kullanın.
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Bu döngüyü kullanarak ilerle hareketini tekrarlayın.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu kullanın.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu kullanın.
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: Arıyı geri taşımak için bu komutu kullanın.
@@ -1030,7 +1070,9 @@ tr:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1080,7 @@ tr:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1117,8 @@ tr:
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye gittiğini görmek için buraya tıkla.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye gittiğini görmek için buraya tıkla.
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1185,7 @@ tr:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Bu numarayı değiştirebilrisin.
@@ -1154,9 +1200,13 @@ tr:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
         courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı gir.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Bu numarayı değiştirebilrisin.
+        courseE_artist_ramp8_2: Buraya kodu kaç kere tekrar etmek istediğin sayıyı gir.
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
@@ -1203,19 +1253,33 @@ tr:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen o kadar çalışır sonra devam eden bloklara geçer.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu anlamına gelir ve bir kaç deneme yapman gerekir.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu anlamına gelir ve bir kaç deneme yapman gerekir.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
@@ -1435,6 +1499,8 @@ tr:
         course_playlab_variables2_1: Bu değişkenine nasıl değer atadığını göstermektedir. Bloğa bağlı yazı kısmını değiştir ve değişkenin aldığı değeri atamış ol.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Bu değişkene nasıl değer atadığını göstermektedir.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
       drawings!_callout: [ ]

@@ -5686,6 +5686,8 @@ ka:
               name: Nested Loops with Frozen
             Nested Loops:
               name: ჩასმული ციკლები
+            Functions in Harvester:
+              name: Functions in Harvester
           title: კურსი E
           description_audience: 'ასაკი: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -6120,6 +6122,8 @@ ka:
               name: ფუნდამენტის აშენება
             Nested Loops:
               name: ჩასმული ციკლები
+            Conditionals & Loops in Harvester:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
           title: დაჩქარებული კურსი
           description_audience: 'ასაკი: 9-18'
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
@@ -7046,6 +7050,8 @@ ka:
               name: ქრაუდსორსინგი
             Build a Star Wars Game:
               name: ააწყვეთ ვარსკვლავური ომების თამაში
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -7461,3 +7467,343 @@ ka:
               description_teacher: ამ ონლაინ აქტივობაში, მოსწავლეებს ექნებათ საშუალება შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: დაჩქარებული კურსი
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description_audience: 'ასაკი: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: შესავალი
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: დებაგირება შემგროვებელში
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: ჩასმული ციკლები
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'როგორ მუშაობს ეს: ინტერნეტი'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: მოვლენები ვარსკვლავურ ომებში
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: მოვლენები მოფარფატე ჩიტთან ერთად
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: მოვლენები მხტუნავში
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: პირობითი ციკლები ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: პირობითი წინადადებები Minecraft-ში
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'ცვლადები: ცვლადები კონვერტებში'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: ცვლადები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: ცვლადები სათამაშო ლაბორატორიაში
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For ციკლები: გართობა For ციკლებით'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For ციკლები ფუტკარში
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'ფუნქციები: სიმღერების წერა პარამეტრებით'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: ფუნქციები ფუტკარში
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: ფუნქციები პარამეტრებით მხატვარში
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: ფუნქციები პარამეტრებით ფუტკარში
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: გამოიკვლიეთ პროექტების იდეები
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: დიზაინის პროცესი
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: ააწყვეთ თქვენი პროექტი
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: გადახედეთ თქვენს პროექტს
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: წარმოადგინეთ თქვენი პროექტი
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: კურსი B
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+          description_audience: 'ასაკი: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: თქვენი ციფრული ნაკვალევი
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: ციკლები შემგროვებელში
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: შესავალი
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: დებაგირება შემგროვებელში
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: მოვლენები მხტუნავში
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: ჩადგმული ციკლები ფუტკარში
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: ჩადგმული ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: პირობითი წინადადებები და ციკლები ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: პირობითი წინადადებები და ციკლები ფერმერში
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: ციფრული მოქალაქეობა
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: შექმენით სათამაშო ლაბორატორიის თამაში
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: 'მხატვარი: ორობითი'
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  '

@@ -1,4 +1,5 @@
 {
+  "achievements": "Achievements",
   "activity": "Etkinlik",
   "actions": "Eylemler",
   "add": "Ekle",
@@ -892,6 +893,7 @@
   "sectionViewProgress": "İlerlemeyi Görüntüle",
   "secret": "Gizli",
   "seeAllTutorials": "Tüm eğitimleri görün",
+  "selectACourse": "Select a course or unit",
   "selectGoogleClassroom": "Bir Google Sınıfı Seç",
   "selectCleverSection": "Clever bölümü seçin",
   "selectSection": "Bölüm seçin",
@@ -915,6 +917,7 @@
   "shareSettingEnableDialog": "Paylaşımı etkinleştirdiğinizde, Öğrencilerinizin Code.org gelişmiş araçlarıyla(Uygulama Lab, Oyun Lab, ve Web Lab) hazırlanmış projelerini herhangi biriyle proje linkini paylaşarak paylaşım yapma izni olacak.",
   "shareSettingDisableDialog": "Diğerleri ile icat ve projelerini paylaşma yeteneği Code.org kullanımındaki öğrenci deneymlerinin büyük bir bölümüdür. Paylaşımı kapatmakla, öğrenciler Code.org öğretmenleri haricinde başka kimseyle, gelişmiş araçlarımızla(Uygulama Lab, Oyun Lab, ve Web Lab) oluşturulmuş icatlarını paylaşamayacaklardır. Bu gelişmiş araçlarımız 13 yaşından büyük öğrenciler veya bir öğretmen veya ebeveyn kontrolünde kullanım için tasarlanmıştır.",
   "shareSettingDisableDialogNote": "Öğrencilerin, Oyun Laboratuvarı ve Sanatçı gibi daha genç öğrenciler için tasarlanmış programlama araçlarını kullanarak oluşturulmuş projeleri hala paylaşabileceklerini unutmayın. Bu araçlar, öğrencilerin oluşturabileceklerini sınırlar ve kendi öğelerinden hiçbirini yüklemesine izin vermez. Öğrencilerin gizliliğini korumak için proje galerisinde paylaşılanlar sadece öğrencinin adının ilk harfi ve yaş aralığı ile etiketlenir.",
+  "shareSettingMoreDetailsTooltip": "App Lab / Game Lab / Web Lab sharing enabled?",
   "shareWarningsAge": "Lütfen yaşınızı aşağıya giriniz ve devam etmek için TAMAM'a tıklayınız.",
   "shareWarningsMoreInfo": "Gizlilik Politikamız",
   "shareWarningsStoreData": "Code Studio'da oluşturulmuş bu uygulamada bu paylaşım linki vasıtasıyla herhangi bir kişi tarafın görüntülenebilecek veriler saklanmaktadır, bu yüzden sizin ya da bir başkasının kişisel bilgilerini paylaşmaktan kaçının.",

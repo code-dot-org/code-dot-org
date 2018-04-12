@@ -574,3 +574,36 @@
           mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
           kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
           mga estudyante ay tutugon ayon sa button na napindot.
+      GraphPaperProgramming_2018:
+        title: Graph Paper Programming
+        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
+          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
+          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
+          drowing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Unplugged na Aktibidad
+        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
+          na Mamamayan.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Unplugged na Aktibidad
+        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
+          online.
+      Conditionals_2018:
+        title: Mga conditional
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
+          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
+          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
+          ako ng itim na baraha, makakapuntos ka."
+      DigitalFootprint_2018:
+        title: Ang Iyong Digital na Bakas
+        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
+          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
+          digital na yapak o "bakas" na mayroong kahihinatnan.
+      BinaryImages_2018:
+        title: Binary na mga Larawan
+        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
+          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
+          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
+          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
+          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
+          larawan at mga kulay) pati na rin sa binary.

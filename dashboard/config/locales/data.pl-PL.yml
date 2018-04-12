@@ -59,9 +59,9 @@
         maze_2_2: Czy możesz pomóc mi złapać niesforną świnkę? Poustawiaj na sobie
           kilka bloków "idź do przodu" i naciśnij "Uruchom", aby pomóc mi się tam
           dostać.
-        maze_2_1: "Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!"
-        maze_2_2_5: "Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj
-          TNT, bo inaczej polecą pióra!"
+        maze_2_1: Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!
+        maze_2_2_5: Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj TNT,
+          bo inaczej polecą pióra!
         maze_2_3: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
         maze_2_4: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
           mogę się zezłościć!
@@ -794,6 +794,12 @@
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
         csd_applab_arrays: Wprowadzenie do tablic
         CSF_skinOverview_Harvester: Kombajn
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Pętle z BB-8
+        CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

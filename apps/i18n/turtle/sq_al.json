@@ -74,13 +74,13 @@
   "penDown": "Lapsi poshtë",
   "penTooltip": "Ngri ose ul lapsin, për të filluar ose për të ndaluar vizatimin.",
   "penUp": "lapsin lart",
+  "pointTo": "point to",
   "pixels": "piksela",
   "reinfFeedbackMsg": "Ja ku është dhe vizatimi yt! Vazhdo puno me të ose vazhdo tek puzzle-i tjetër.",
   "setAlpha": "vendosni alfa",
   "setCharacter": "set character to {character}",
   "setColour": "vendos ngjyrën",
   "setPattern": "vendos modelin",
-  "setStickerSize": "Set sticker size",
   "setWidth": "vendos gjerësinë",
   "shareDrawing": "Shpërndaje vizatimin tënd:",
   "showMe": "Më shfaq",
@@ -94,5 +94,6 @@
   "turnTooltip": "Kthen artistin majtas ose djathtas nga numri i përcaktuar i gradëve.",
   "turtleVisibilityTooltip": "Bën artistin të dukshëm ose të padukshëm.",
   "widthTooltip": "Ndryshon gjerësinë e lapsit.",
+  "withSize": "with size",
   "wrongColour": "Figura jote është në ngjyrën e gabuar. Për këtë puzzle duhet të jetë %1."
 }

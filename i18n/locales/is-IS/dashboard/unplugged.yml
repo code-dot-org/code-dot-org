@@ -316,3 +316,21 @@ is:
       BigEvent_2018:
         title: Stórviðburður
         desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.
+      GraphPaperProgramming_2018:
+        title: Forritun rúðublaða
+        desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum til að stýra bekkjarfélögum í að endurskapa teikningu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
+      Conditionals_2018:
+        title: Skilyrði
+        desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart spil, færð þú stig."
+      DigitalFootprint_2018:
+        title: Stafræna fótsporið þitt
+        desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
+      BinaryImages_2018:
+        title: Tvíundarmyndir
+        desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn, kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari upplýsingar (svo sem myndir og liti) með tvíundarsniði.

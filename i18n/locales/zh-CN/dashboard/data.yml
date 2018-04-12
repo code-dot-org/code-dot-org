@@ -522,6 +522,12 @@ zh-CN:
         applab_intro_share: 应用程序实验室 - 共享您的应用程序
         csd_applab_arrays: 数组的简介
         CSF_skinOverview_Harvester: 收获者
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: 与BB-8一起循环
+        CSF_harvester_skinOverview_K-1: 收获者
+        CSF_harvester_loops_K1: 收割机中的循环
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

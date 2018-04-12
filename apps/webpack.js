@@ -40,13 +40,13 @@ var baseConfig = {
   },
   module: {
     rules: [
-      {test: /\.exported.json$/, loader: 'raw-loader'},
+      {test: /\.exported_json$/, loader: 'raw-loader'},
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: `style-loader!css-loader!sass-loader?includePaths=${scssIncludePath}`},
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
-      {test: /\.exported.js$/, loader: 'raw-loader'},
+      {test: /\.exported_js$/, loader: 'raw-loader'},
       {
         test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [

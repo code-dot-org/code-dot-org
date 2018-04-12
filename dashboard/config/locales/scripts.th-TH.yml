@@ -3,88 +3,88 @@
     script:
       name:
         course1:
-          title: "คอร์ส 1"
-          description: "คอร์ส 1 is designed to allow early readers to create computer
+          title: คอร์ส 1
+          description: คอร์ส 1 is designed to allow early readers to create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
             of this คอร์ส, students create their very own custom game or story that
-            they can share. Recommended for grades K-1."
-          description_short: "คอร์ส 1 is designed for early readers."
-          description_audience: "อายุ 4-6 ปี"
+            they can share. Recommended for grades K-1.
+          description_short: คอร์ส 1 is designed for early readers.
+          description_audience: อายุ 4-6 ปี
           stages:
             'Artist: Loops':
-              name: "ศิลปิน: Loops"
+              name: 'ศิลปิน: Loops'
             'Artist: Sequence':
-              name: "ศิลปิน: Sequence"
+              name: 'ศิลปิน: Sequence'
             'Artist: Shapes':
-              name: "ศิลปิน: Shapes"
+              name: 'ศิลปิน: Shapes'
             'Bee: Loops':
-              name: "เขาวงกต: Loops"
+              name: 'เขาวงกต: Loops'
             'Bee: Sequence':
-              name: "ผึ้ง: Sequence"
+              name: 'ผึ้ง: Sequence'
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Getting Loopy:
               name: Getting Loopy
             Going Places Safely:
               name: Going Places Safely
             Happy Maps:
-              name: "แผนที่แห่งความสุข"
+              name: แผนที่แห่งความสุข
             'Jigsaw: Learn to drag and drop':
-              name: "จิ๊กซอว์: เรียนรู้วิธีการลากวาง"
+              name: 'จิ๊กซอว์: เรียนรู้วิธีการลากวาง'
             'Maze: Debugging':
-              name: "เขาวงกต: Debugging"
+              name: 'เขาวงกต: Debugging'
             'Maze: Loops':
-              name: "เขาวงกต: Loops"
+              name: 'เขาวงกต: Loops'
             'Maze: Sequence':
-              name: "เขาวงกต: Sequence"
+              name: 'เขาวงกต: Sequence'
             Move it, Move it:
-              name: "ขยับมันสิ, ขยับมัน"
+              name: ขยับมันสิ, ขยับมัน
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Spelling Bee:
-              name: "การแข่งขันสะกดคำ"
+              name: การแข่งขันสะกดคำ
             'Studio: Create a Story':
               name: 'Play Lab: Create a Story'
             The Big Event:
-              name: "เหตุการณ์ใหญ่"
+              name: เหตุการณ์ใหญ่
         course2:
-          title: "คอร์ส 2"
-          description: "คอร์ส 2 is designed for students who can read and have no
-            prior programming experience. In this คอร์ส students will create programs
-            to solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5."
-          description_short: "คอร์ส 2 is designed for students who can read."
-          description_audience: "อายุ 6-18 ปี"
+          title: คอร์ส 2
+          description: คอร์ส 2 is designed for students who can read and have no prior
+            programming experience. In this คอร์ส students will create programs to
+            solve problems and develop interactive games or stories they can share.
+            Recommended for grades 2-5.
+          description_short: คอร์ส 2 is designed for students who can read.
+          description_audience: อายุ 6-18 ปี
           stages:
             'Artist: Debugging':
-              name: "ศิลปิน: Debugging"
+              name: 'ศิลปิน: Debugging'
             'Artist: Loops':
-              name: "ศิลปิน: Loops"
+              name: 'ศิลปิน: Loops'
             'Artist: Nested Loops':
-              name: "ศิลปิน: Nested Loops"
+              name: 'ศิลปิน: Nested Loops'
             'Artist: Sequence':
-              name: "ศิลปิน: Sequence"
+              name: 'ศิลปิน: Sequence'
             'Bee: Conditionals':
-              name: "ผึ้ง: Conditionals"
+              name: 'ผึ้ง: Conditionals'
             'Bee: Debugging':
-              name: "ผึ้ง: Debugging"
+              name: 'ผึ้ง: Debugging'
             'Bee: Loops':
-              name: "เขาวงกต: Loops"
+              name: 'เขาวงกต: Loops'
             Binary Bracelets:
               name: Binary Bracelets
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Flappy:
               name: Flappy
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: "การเขียนกระดาษกราฟ"
+              name: การเขียนกระดาษกราฟ
             'Maze: Loops':
-              name: "เขาวงกต: Loops"
+              name: 'เขาวงกต: Loops'
             'Maze: Sequence':
-              name: "เขาวงกต: Sequence"
+              name: 'เขาวงกต: Sequence'
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             Relay programming:
@@ -92,39 +92,39 @@
             'Studio: Create a Story':
               name: 'Play Lab: Create a Story'
             The Big Event:
-              name: "เหตุการณ์ใหญ่"
+              name: เหตุการณ์ใหญ่
             Your Digital Footprint:
               name: Your Digital Footprint
         course3:
-          title: "คอร์ส 3"
-          description: "คอร์ส 3 is designed for students who have taken คอร์ส 2. Students
+          title: คอร์ส 3
+          description: คอร์ส 3 is designed for students who have taken คอร์ส 2. Students
             will delve deeper into programming topics introduced in previous คอร์ส
             to flexible solutions to more complex problems. By the end of this คอร์ส,
             students create interactive stories and games they can share with anyone.
-            Recommended for grades 4-5."
-          description_short: "คอร์ส 3 is a follow-up to คอร์ส 2."
-          description_audience: "อายุ 8-18 ปี"
+            Recommended for grades 4-5.
+          description_short: คอร์ส 3 is a follow-up to คอร์ส 2.
+          description_audience: อายุ 8-18 ปี
           stages:
             Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
             'Artist: Functions':
-              name: "ศิลปิน: Functions"
+              name: 'ศิลปิน: Functions'
             'Artist: Nested Loops':
-              name: "ศิลปิน: Nested Loops"
+              name: 'ศิลปิน: Nested Loops'
             'Artist: Patterns':
-              name: "ศิลปิน: Patterns"
+              name: 'ศิลปิน: Patterns'
             'Bee: Conditionals':
-              name: "ผึ้ง: Conditionals"
+              name: 'ผึ้ง: Conditionals'
             'Bee: Debugging':
-              name: "ผึ้ง: Debugging"
+              name: 'ผึ้ง: Debugging'
             'Bee: Functions':
-              name: "ผึ้ง: Functions"
+              name: 'ผึ้ง: Functions'
             'Bee: Nested Loops':
-              name: "ผึ้ง: Nested Loops"
+              name: 'ผึ้ง: Nested Loops'
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
             Computational Thinking:
-              name: "คิดคำนวณ"
+              name: คิดคำนวณ
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
@@ -136,11 +136,11 @@
             Functional Suncatchers:
               name: Functional Suncatchers
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Maze:
-              name: "เขาวงกต"
+              name: เขาวงกต
             'Maze: Conditionals':
-              name: "เขาวงกต: Conditionals"
+              name: 'เขาวงกต: Conditionals'
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
@@ -155,61 +155,61 @@
             Play Lab:
               name: Play Lab
         artist:
-          title: "ศิลปิน"
+          title: ศิลปิน
           description: Draw cool pictures and designs with the ศิลปิน!
           description_short: Draw cool pictures and designs with the ศิลปิน!
           stages:
             Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
         hourofcode:
-          title: "ช่วงเวลาของ Code"
+          title: ช่วงเวลาของ Code
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
           stages:
             Maze:
-              name: "เขาวงกต"
+              name: เขาวงกต
           description_audience: ''
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
-          description_short: "ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง"
+          description_short: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
           stages:
             Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
         course4:
-          title: "คอร์ส 4"
-          description: "คอร์ส 4 is designed for students who have taken คอร์ส 2 and
+          title: คอร์ส 4
+          description: คอร์ส 4 is designed for students who have taken คอร์ส 2 and
             3. Students will delve deeper into programming topics introduced in previous
             คอร์ส to flexible solutions to more complex problems. By the end of this
             คอร์ส, students create interactive stories and games they can share with
-            anyone. Recommended for grades 4-8."
+            anyone. Recommended for grades 4-8.
           description_short: Students taking คอร์ส 4 should have already taken คอร์ส
             2 and 3.
-          description_audience: "อายุ 10-18 ปี"
+          description_audience: อายุ 10-18 ปี
           stages:
             Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
             Artist Binary:
-              name: "ศิลปิน Binary"
+              name: ศิลปิน Binary
             'Artist: For Loops':
-              name: "ศิลปิน: For Loops"
+              name: 'ศิลปิน: For Loops'
             'Artist: Functions':
-              name: "ศิลปิน: Functions"
+              name: 'ศิลปิน: Functions'
             'Artist: Functions with Parameters':
-              name: "ศิลปิน: Functions with Parameters"
+              name: 'ศิลปิน: Functions with Parameters'
             'Artist: Variables':
-              name: "ศิลปิน: Variables"
+              name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: "ผึ้ง: For Loops"
+              name: 'ผึ้ง: For Loops'
             'Bee: Functions with Parameters':
-              name: "ผึ้ง: Functions with Parameters"
+              name: 'ผึ้ง: Functions with Parameters'
             Extreme Challenge - Comprehensive:
               name: Extreme Challenge - Comprehensive
             Maze and Bee:
-              name: "เขาวงกต and ผึ้ง"
+              name: เขาวงกต and ผึ้ง
             'Play Lab: For Loops':
               name: 'Play Lab: For Loops'
             'Play Lab: Functions with Parameters':
@@ -235,7 +235,7 @@
             'Unplugged: Tangrams':
               name: 'Unplugged: Tangrams'
         Course4pre:
-          title: "คอร์ส 4 Prerequisite"
+          title: คอร์ส 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken
             คอร์ส 2 and 3.
           description_short: A brief rampup of concepts for students who have not
@@ -243,23 +243,23 @@
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: "ศิลปิน: Functions"
+              name: 'ศิลปิน: Functions'
             'Artist: Loops':
-              name: "ศิลปิน: Loops"
+              name: 'ศิลปิน: Loops'
             'Artist: Nested Loops':
-              name: "ศิลปิน: Nested Loops"
+              name: 'ศิลปิน: Nested Loops'
             'Artist: Sequence':
-              name: "ศิลปิน: Sequence"
+              name: 'ศิลปิน: Sequence'
             'Bee: Conditionals':
-              name: "ผึ้ง: Conditionals"
+              name: 'ผึ้ง: Conditionals'
             'Bee: Debugging':
-              name: "ผึ้ง: Debugging"
+              name: 'ผึ้ง: Debugging'
             'Bee: Nested Loops':
-              name: "ผึ้ง: Nested Loops"
+              name: 'ผึ้ง: Nested Loops'
             'Farmer: While Loops':
               name: 'Farmer: While Loops'
             'Maze: Sequence':
-              name: "เขาวงกต: Sequence"
+              name: 'เขาวงกต: Sequence'
         usability:
           title: Usability Testing
           description: A selection of Course 4 levels for usability testing.
@@ -269,13 +269,13 @@
             Binary:
               name: Binary
             For Loops:
-              name: "การวนรอบ"
+              name: การวนรอบ
             Functions and Functions with Parameters:
-              name: "ฟังก์ชันและฟังก์ชันกับพารามิเตอร์"
+              name: ฟังก์ชันและฟังก์ชันกับพารามิเตอร์
             Intro:
-              name: "บทนำ"
+              name: บทนำ
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -289,13 +289,13 @@
             'Eval: Boolean Operators':
               name: Boolean Operators
             'Eval: Conditionals':
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
-              name: "สายอักขระและรูปภาพ"
+              name: สายอักขระและรูปภาพ
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
@@ -328,7 +328,7 @@
           description_short: Create a story or make a game with Play Lab!
           stages:
             Infinity:
-              name: "ไม่จำกัด"
+              name: ไม่จำกัด
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming
@@ -377,7 +377,7 @@
             Writing computer programs:
               name: Writing computer programs
         netsim:
-          title: "เครื่องจำลองอินเตอร์เน็ต"
+          title: เครื่องจำลองอินเตอร์เน็ต
           description: ''
           description_short: ''
           description_audience: ''
@@ -425,52 +425,52 @@
             Check out คอร์ส 2-4 for a more complete experience!
           description_short: This 20-hour คอร์ส covers the core computer science and
             programming concepts in คอร์ส 2-4.
-          description_audience: "อายุ 10-18 ปี"
+          description_audience: อายุ 10-18 ปี
           stages:
             Abstraction:
               name: Abstraction
             Algorithms:
-              name: "อัลกอริทึม"
+              name: อัลกอริทึม
             Computational Thinking:
-              name: "คิดคำนวณ"
+              name: คิดคำนวณ
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             Graph Paper Programming:
-              name: "การเขียนกระดาษกราฟ"
+              name: การเขียนกระดาษกราฟ
             Introduction to Computer Science:
-              name: "แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น"
+              name: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
             Relay Programming:
-              name: "โปรแกรมการถ่ายทอดข้อมูล"
+              name: โปรแกรมการถ่ายทอดข้อมูล
             Song Writing:
-              name: "การแต่งเพลง"
+              name: การแต่งเพลง
             The Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
             The Artist 2:
-              name: "ศิลปิน 2"
+              name: ศิลปิน 2
             The Artist 3:
-              name: "ศิลปิน 3"
+              name: ศิลปิน 3
             The Artist 4:
-              name: "ศิลปิน 4"
+              name: ศิลปิน 4
             The Artist 5:
-              name: "ศิลปิน 5"
+              name: ศิลปิน 5
             The Farmer:
-              name: "ชาวนา"
+              name: ชาวนา
             The Farmer 2:
-              name: "ชาวนา 2"
+              name: ชาวนา 2
             The Farmer 3:
-              name: "ชาวนา 3"
+              name: ชาวนา 3
             The Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             The Maze:
-              name: "เขาวงกต"
+              name: เขาวงกต
             Wrap-up:
               name: Wrap-up
         edit-code:
-          title: "แก้ไข Code"
-          description: "แก้ไข Code"
-          description_short: "แก้ไข Code"
+          title: แก้ไข Code
+          description: แก้ไข Code
+          description_short: แก้ไข Code
           description_audience: ''
           stages:
             Applab:
@@ -480,17 +480,17 @@
             Play Lab:
               name: Play Lab
             The Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
             The Maze:
-              name: "เขาวงกต"
+              name: เขาวงกต
         events:
-          title: "เหตุการณ์"
-          description: "เหตุการณ์"
-          description_short: "เหตุการณ์"
+          title: เหตุการณ์
+          description: เหตุการณ์
+          description_short: เหตุการณ์
           description_audience: ''
           stages:
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
             Calc:
               name: Calc
             Eval:
@@ -501,27 +501,27 @@
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
-          description_short: "เขียนเกม Flappy ของตัวเองใน 10 นาที"
+          description_short: เขียนเกม Flappy ของตัวเองใน 10 นาที
           description_audience: ''
           stages:
             Flappy Code:
               name: Flappy Code
         jigsaw:
-          title: "จิ๊กซอว์"
+          title: จิ๊กซอว์
           description: ''
           description_short: Try our Jigsaw tutorial
           description_audience: ''
           stages:
             Jigsaw:
-              name: "จิ๊กซอว์"
+              name: จิ๊กซอว์
         step:
-          title: "ขั้นตอน"
+          title: ขั้นตอน
           description: ''
           description_short: Step tutorial
           description_audience: ''
           stages:
             Step:
-              name: "ขั้นตอน"
+              name: ขั้นตอน
         Hour of Code:
           title: Hour of Code 2013
           description: ''
@@ -623,7 +623,7 @@
             Sam the Bat:
               name: Sam the Bat
             Strings and Images:
-              name: "สายอักขระและรูปภาพ"
+              name: สายอักขระและรูปภาพ
             Your Game - Animation:
               name: Your Game - Animation
             Your Game - Booleans:
@@ -810,7 +810,7 @@
             Next Steps:
               name: Next Steps
             Strings and Images:
-              name: "สายอักขระและรูปภาพ"
+              name: สายอักขระและรูปภาพ
             Teacher Dashboard:
               name: Teacher Dashboard
             The Big Game:
@@ -969,7 +969,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         sciencePD3:
@@ -999,7 +999,7 @@
             the reliability of network communication, the security of data, and personal privacy. Topics
             include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
             concerns.
-          description_short: "อินเทอร์เน็ต"
+          description_short: อินเทอร์เน็ต
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1036,7 +1036,7 @@
             Tell Me a Secret - Encrypting Text:
               name: The Need for Encryption
             The Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -1065,7 +1065,7 @@
             Evaluation Blocks:
               name: Evaluation Blocks
             Free Play:
-              name: "เล่นฟรี"
+              name: เล่นฟรี
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
@@ -1073,7 +1073,7 @@
             Sam the Bat:
               name: Sam the Bat
             Strings and Images:
-              name: "สายอักขระและรูปภาพ"
+              name: สายอักขระและรูปภาพ
             The Design Recipe:
               name: The Design Recipe
         allthethings:
@@ -1089,11 +1089,11 @@
             AppLab:
               name: AppLab
             Artist:
-              name: "ศิลปิน"
+              name: ศิลปิน
             Bee:
-              name: "ผึ้ง"
+              name: ผึ้ง
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
             CSinA:
               name: CSinA
             Farmer:
@@ -1105,15 +1105,15 @@
             Gamelab:
               name: Gamelab
             Jigsaw:
-              name: "จิ๊กซอว์"
+              name: จิ๊กซอว์
             Long assessment:
               name: Long assessment
             Markdown Details:
               name: Markdown Details
             Match:
-              name: "จับคู่"
+              name: จับคู่
             Maze:
-              name: "เขาวงกต"
+              name: เขาวงกต
             Minecraft:
               name: Minecraft
             Multi:
@@ -1169,7 +1169,7 @@
             Course Overview:
               name: Course Overview
             Defining Functions:
-              name: "กำหนดฟังก์ชัน"
+              name: กำหนดฟังก์ชัน
             Defining Variables:
               name: Defining Variables
             'Eval: Conditionals':
@@ -1181,7 +1181,7 @@
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
-              name: "สายอักขระและรูปภาพ"
+              name: สายอักขระและรูปภาพ
             Teacher Dashboard:
               name: Teacher Dashboard
             Writing Contracts:
@@ -1193,11 +1193,11 @@
           description_audience: ''
           stages:
             App Lab:
-              name: "แอ๊ปแล็บ"
+              name: แอ๊ปแล็บ
             Broadcast Lesson:
               name: Broadcast Lesson
             Internet Simulator:
-              name: "เครื่องจำลองอินเตอร์เน็ต"
+              name: เครื่องจำลองอินเตอร์เน็ต
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
@@ -1205,7 +1205,7 @@
             Text Compression Widget:
               name: Text Compression Widget
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1263,7 +1263,7 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-up:
               name: Wrap-up
         equityPD:
@@ -1292,7 +1292,7 @@
             The Design Recipe:
               name: The Design Recipe
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1310,7 +1310,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         equity-pd:
@@ -1340,7 +1340,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         Equity-OnlinePD:
@@ -1376,7 +1376,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         ECSPD2-iZone:
@@ -1405,7 +1405,7 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
@@ -1434,7 +1434,7 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-up:
               name: Wrap-up
         CSPPD2:
@@ -1482,21 +1482,21 @@
             Binary Bracelets:
               name: Binary Bracelets
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: "การเขียนกระดาษกราฟ"
+              name: การเขียนกระดาษกราฟ
             Happy Maps:
-              name: "แผนที่แห่งความสุข"
+              name: แผนที่แห่งความสุข
             Move it, Move it:
-              name: "ขยับมันสิ, ขยับมัน"
+              name: ขยับมันสิ, ขยับมัน
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Songwriting:
               name: Songwriting
             The Big Event:
-              name: "เหตุการณ์ใหญ่"
+              name: เหตุการณ์ใหญ่
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where
@@ -1723,7 +1723,7 @@
             Thinking About Implementation:
               name: Thinking About Implementation
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         algebraPD3b:
@@ -1778,7 +1778,7 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "อายุ 10-18 ปี"
+          description_audience: อายุ 10-18 ปี
           description: ''
           stages:
             Halloween 2015:
@@ -1789,7 +1789,7 @@
             might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "อายุ 10-18 ปี"
+          description_audience: อายุ 10-18 ปี
           stages:
             Spring 2016:
               name: Spring 2016
@@ -1883,29 +1883,29 @@
             Gumball Play Lab:
               name: Gumball Play Lab
         starwars:
-          title: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด"
-          description: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
-          description_short: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด'
+          description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
+          description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "ชั่วโมงของรหัส 2015"
+              name: ชั่วโมงของรหัส 2015
         starwarsblocks:
-          title: "สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด"
-          description: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
-          description_short: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด'
+          description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
+          description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "ชั่วโมงของรหัส 2015"
+              name: ชั่วโมงของรหัส 2015
         mc:
-          title: "ชั่วโมงแห่งการโค้ดด้วย Minecraft"
-          description: "ใช้บล็อกของโค้ดเพื่อนำ Steve หรือ Alex ในการผจญภัยผ่านโลก
-            Minecraft นี้"
-          description_short: "สำรวจโลก Minecraft ผ่านโค้ด"
+          title: ชั่วโมงแห่งการโค้ดด้วย Minecraft
+          description: ใช้บล็อกของโค้ดเพื่อนำ Steve หรือ Alex ในการผจญภัยผ่านโลก Minecraft
+            นี้
+          description_short: สำรวจโลก Minecraft ผ่านโค้ด
           stages:
             Hour of Code 2015:
-              name: "ชั่วโมงของรหัส 2015"
+              name: ชั่วโมงของรหัส 2015
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1929,7 +1929,7 @@
             Assessing Computer Models:
               name: Assessing Computer Models
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-Up:
               name: Wrap-Up
         cspunit5:
@@ -2179,7 +2179,7 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: "อินเทอร์เน็ต"
+          description_short: อินเทอร์เน็ต
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2207,7 +2207,7 @@
             Sending Numbers:
               name: Sending Numbers
             The Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -2551,7 +2551,7 @@
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2606,7 +2606,7 @@
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: "อายุ 8-18 ปี"
+          description_audience: อายุ 8-18 ปี
           stages:
             Sample Stage:
               name: Sample Stage
@@ -2979,7 +2979,7 @@
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: "ศิลปิน Functions"
+              name: ศิลปิน Functions
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -2990,7 +2990,7 @@
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: "อายุ 8-18 ปี"
+          description_audience: อายุ 8-18 ปี
           stages:
             Artist Exemplar:
               name: Artist Exemplar
@@ -3035,7 +3035,7 @@
           description: ''
           stages:
             'Bee: Conditionals':
-              name: "ผึ้ง: Conditionals"
+              name: 'ผึ้ง: Conditionals'
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
@@ -3049,15 +3049,15 @@
             Debugging:
               name: Debugging
             Events:
-              name: "เหตุการณ์"
+              name: เหตุการณ์
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
-              name: "จิ๊กซอว์: เรียนรู้วิธีการลากวาง"
+              name: 'จิ๊กซอว์: เรียนรู้วิธีการลากวาง'
             Loops:
-              name: "ลูป"
+              name: ลูป
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3071,7 +3071,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             'Programming Unplugged: Happy Maps':
               name: 'Programming Unplugged: Happy Maps'
         grade4:
@@ -3119,13 +3119,13 @@
             Debugging:
               name: Debugging
             Events:
-              name: "เหตุการณ์"
+              name: เหตุการณ์
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
-              name: "จิ๊กซอว์: เรียนรู้วิธีการลากวาง"
+              name: 'จิ๊กซอว์: เรียนรู้วิธีการลากวาง'
             Loops:
-              name: "ลูป"
+              name: ลูป
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3153,15 +3153,15 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "ศิลปิน: For Loops"
+              name: 'ศิลปิน: For Loops'
             'Artist: Functions with Parameters':
-              name: "ศิลปิน: Functions with Parameters"
+              name: 'ศิลปิน: Functions with Parameters'
             'Artist: Variables':
-              name: "ศิลปิน: Variables"
+              name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: "ผึ้ง: For Loops"
+              name: 'ผึ้ง: For Loops'
             'Bee: Functions with Parameters':
-              name: "ผึ้ง: Functions with Parameters"
+              name: 'ผึ้ง: Functions with Parameters'
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3211,7 +3211,7 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Wrap-up:
               name: Wrap-up
         ecs-unit2:
@@ -3319,11 +3319,11 @@
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: "ศิลปิน: Nested Loops"
+              name: 'ศิลปิน: Nested Loops'
             Bee Debugging:
-              name: "ผึ้ง Debugging"
+              name: ผึ้ง Debugging
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
             Build a Game:
               name: Build a Game
             Farmer Conditional with Cards:
@@ -3477,7 +3477,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -3590,7 +3590,7 @@
                 block. Combining all of these skills students will draw a randomized
                 rainbow snake at the end of the lesson.
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -3656,7 +3656,7 @@
                 students write programs that move sprites across the screen, as well
                 as animate other sprite properties.
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -3786,7 +3786,7 @@
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             The Big Event:
-              name: "เหตุการณ์ใหญ่"
+              name: เหตุการณ์ใหญ่
         transferring-over:
           title: ''
           description_audience: ''
@@ -3812,21 +3812,21 @@
             Binary:
               name: Binary
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Events:
-              name: "เหตุการณ์"
+              name: เหตุการณ์
             For Loops:
-              name: "การวนรอบ"
+              name: การวนรอบ
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             Functions with Parameters:
-              name: "ฟังก์ชันกับพารามิเตอร์"
+              name: ฟังก์ชันกับพารามิเตอร์
             Loops:
-              name: "ลูป"
+              name: ลูป
             Nested Loops:
               name: Nested Loops
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
             While Loops:
               name: While Loops
         algebrapdnext:
@@ -3846,7 +3846,7 @@
             The Design Recipe:
               name: The Design Recipe
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
         csp-pre-survey:
           title: CS Principles Pre-Survey
           description_audience: ''
@@ -4166,7 +4166,7 @@
           description: ''
           stages:
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
         sample-csp5:
           stages:
             Controlling Memory with Variables:
@@ -4369,7 +4369,7 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
             Lists:
-              name: "รายการ"
+              name: รายการ
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -4422,8 +4422,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4497,8 +4504,15 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4562,8 +4576,18 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4784,15 +4808,15 @@
                 including the problem they set out to solve, the ways in which they've
                 incorporated feedback from testing, and their plans for the future.
         minecraft:
-          title: "นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft"
+          title: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
           description_audience: ''
-          description_short: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม
-            Minecraft ในแบบฉบับของคุณเอง"
-          description: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม
-            Minecraft ในแบบฉบับของคุณเอง"
+          description_short: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม
+            Minecraft ในแบบฉบับของคุณเอง
+          description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม
+            Minecraft ในแบบฉบับของคุณเอง
           stages:
             Minecraft Hour of Code Designer:
-              name: "นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft"
+              name: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
         flappy-impact-study:
           title: Flappy Code with Survey
           description_audience: ''
@@ -4821,7 +4845,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Programming: Happy Maps':
@@ -4885,7 +4909,7 @@
             Keep it Private:
               name: Keep it Private
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Your Digital Footprint:
               name: Your Digital Footprint
         coursec-draft:
@@ -4925,7 +4949,7 @@
             Your Digital Footprint:
               name: Your Digital Footprint
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
@@ -4955,7 +4979,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
@@ -4975,7 +4999,7 @@
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: "ศิลปิน Binary"
+              name: ศิลปิน Binary
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
@@ -5023,7 +5047,7 @@
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Crowdsourcing:
               name: Crowdsourcing
             Determine the Concept:
@@ -5031,7 +5055,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -5051,7 +5075,7 @@
             Variables in Artist:
               name: Variables in Artist
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -5131,7 +5155,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5151,7 +5175,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5247,7 +5271,7 @@
           description: 'Phase 3: Reflect on semester 1 workshop'
           stages:
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Revisiting Complex Adaptive Systems:
               name: Revisiting Complex Adaptive Systems
             Thinking About Implementation:
@@ -5269,7 +5293,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5307,7 +5331,7 @@
           description: 'Phase 3: Prepare for semester 2 workshop'
           stages:
             Welcome!:
-              name: "ยินดีต้อนรับ!"
+              name: ยินดีต้อนรับ!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5413,7 +5437,7 @@
             Foo:
               name: Foo
             Lists:
-              name: "รายการ"
+              name: รายการ
             Lights:
               name: Lights
             Event Types:
@@ -5427,7 +5451,7 @@
             Timed Loops:
               name: Timed Loops
             For Loops:
-              name: "การวนรอบ"
+              name: การวนรอบ
             Physical Input:
               name: Physical Input
             List and For Loops:
@@ -5473,7 +5497,7 @@
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: "ฟังก์ชันกับพารามิเตอร์"
+              name: ฟังก์ชันกับพารามิเตอร์
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5617,7 +5641,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6:
@@ -5691,7 +5715,7 @@
                 elements of the board as an ouput device while relying on App Lab
                 for user input.
             Lists:
-              name: "รายการ"
+              name: รายการ
               description_student: Learn how lists can be used to store multiple values
                 in a single variable name.
               description_teacher: A list, also commonly known as an array, is a type
@@ -5711,7 +5735,7 @@
                 from the previous lesson, students write programs that control the
                 color LEDs by accessing them from a list.
             For Loops:
-              name: "การวนรอบ"
+              name: การวนรอบ
               description_student: The class learns about repeating instructions using
                 a _for loop_, first by controlling a "robot" through a grid, and then
                 in App Lab.
@@ -5936,7 +5960,7 @@
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
-              name: "ฟังก์ชันกับพารามิเตอร์"
+              name: ฟังก์ชันกับพารามิเตอร์
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -5995,7 +6019,7 @@
             Accelerometer_:
               name: Accelerometer
             Functions with Parameters_:
-              name: "ฟังก์ชันกับพารามิเตอร์"
+              name: ฟังก์ชันกับพารามิเตอร์
             Circuits and Physical Prototypes_:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation_':
@@ -6017,7 +6041,7 @@
             Drawing in Game Lab:
               name: Drawing in Game Lab
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
             Programming for Entertainment:
               name: Programming for Entertainment
             Sprites:
@@ -6033,7 +6057,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Taking Input:
               name: Taking Input
             Complex Conditionals:
@@ -6053,7 +6077,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6442,7 +6466,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6519,7 +6543,7 @@
             Intellectual Property and Images:
               name: Intellectual Property and Images
             Lists:
-              name: "รายการ"
+              name: รายการ
         csd1-draft:
           title: ''
           description_audience: ''
@@ -6561,7 +6585,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -6573,7 +6597,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -6589,7 +6613,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6599,7 +6623,7 @@
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
-              name: "ไม่ใช่"
+              name: ไม่ใช่
             temp:
               name: temp
         coursef-ramp:
@@ -6739,7 +6763,7 @@
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Bounce:
-              name: "กระเด้ง"
+              name: กระเด้ง
             NewBounce:
               name: NewBounce
             F PlayLab Variables:
@@ -6764,10 +6788,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -6835,7 +6863,7 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: คอร์ส A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6852,7 +6880,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Your Digital Footprint:
@@ -6875,7 +6903,7 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: คอร์ส B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6885,7 +6913,7 @@
         coursec:
           stages:
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Programming in Maze:
               name: Programming in Maze
             Debugging in Maze:
@@ -6916,7 +6944,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: คอร์ส C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7007,11 +7035,19 @@
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7067,7 +7103,7 @@
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: "ศิลปิน Binary"
+              name: ศิลปิน Binary
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7093,7 +7129,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: คอร์ส D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7128,7 +7164,7 @@
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -7195,7 +7231,7 @@
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7287,7 +7323,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7309,7 +7345,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7324,7 +7360,9 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Nested Loops
-          title: 'CS Fundamentals: Course E'
+            Functions in Harvester:
+              name: Functions in Harvester
+          title: คอร์ส E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7408,7 +7446,7 @@
                 with user input to set the values of their variables, then get space
                 to create their own mini-project with variables.
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
               description_student: You're going to have loads of fun learning about
                 `for` loops!
               description_teacher: 'We know that loops allow us to do things over
@@ -7549,7 +7587,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7562,7 +7600,7 @@
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
+          title: คอร์ส F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7874,7 +7912,7 @@
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Digital Citizenship:
               name: Digital Citizenship
             Screen Out the Mean:
@@ -7888,7 +7926,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Conditionals with Cards:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals & Loops in Maze:
@@ -7904,7 +7942,7 @@
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -7950,9 +7988,11 @@
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Nested Loops:
               name: Nested Loops
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -7964,7 +8004,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Online Safety: Your Digital Footprint':
@@ -7986,7 +8026,7 @@
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: "การแข่งขันสะกดคำ"
+              name: การแข่งขันสะกดคำ
           title: ''
           description_audience: ''
           description_short: ''
@@ -8143,7 +8183,7 @@
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8163,7 +8203,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8189,7 +8229,7 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Crowdsourcing:
               name: Crowdsourcing
             Nested Loops in Bee:
@@ -8223,7 +8263,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
@@ -8237,9 +8277,9 @@
             'Unplugged: Binary':
               name: 'Unplugged: Binary'
             Artist Binary:
-              name: "ศิลปิน Binary"
+              name: ศิลปิน Binary
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee:
@@ -8331,7 +8371,7 @@
             Present Your Project:
               name: Present Your Project
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
@@ -8363,7 +8403,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8381,7 +8421,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8407,7 +8447,7 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Crowdsourcing:
               name: Crowdsourcing
           title: New Script for E
@@ -8421,7 +8461,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8451,7 +8491,7 @@
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -8638,8 +8678,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8721,7 +8763,7 @@
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: "ชั่วโมงแห่งการโค้ดด้วย Minecraft"
+              name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
           description_short: ''
@@ -8849,7 +8891,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8867,7 +8909,7 @@
             Introduction:
               name: Introduction
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Private and Personal Information:
               name: Private and Personal Information
             'Functions: Songwriting':
@@ -8893,11 +8935,13 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "อินเทอร์เน็ต"
+              name: อินเทอร์เน็ต
             Crowdsourcing:
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -8909,7 +8953,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "สร้างพื้นฐาน"
+              name: สร้างพื้นฐาน
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8939,7 +8983,7 @@
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "สนุกกับ For ลูป"
+              name: สนุกกับ For ลูป
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -8979,11 +9023,11 @@
             The Circuit Playground:
               name: The Circuit Playground
             Lists:
-              name: "รายการ"
+              name: รายการ
             Lights:
               name: Lights
             For Loops:
-              name: "การวนรอบ"
+              name: การวนรอบ
             Lists and For Loops:
               name: Lists and For Loops
             Timed Loops:
@@ -9033,7 +9077,7 @@
             Shapes and Randomization:
               name: Shapes and Randomization
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -9045,7 +9089,7 @@
             Booleans Unplugged:
               name: Booleans Unplugged
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -9061,7 +9105,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -9164,7 +9208,7 @@
               description_student: ''
               description_teacher: ''
             Variables:
-              name: "ตัวแปร"
+              name: ตัวแปร
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -9245,7 +9289,7 @@
 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Conditionals:
-              name: "เงื่อนไข"
+              name: เงื่อนไข
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -9353,7 +9397,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "ฟังก์ชัน"
+              name: ฟังก์ชัน
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -9525,7 +9569,7 @@
                 \r
                 The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Lists:
-              name: "รายการ"
+              name: รายการ
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -9628,10 +9672,17 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
-          title: Course A
+          title: คอร์ส A
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
@@ -9651,10 +9702,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -9724,3 +9779,348 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Nested Loops
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: คอร์ส B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Your Digital Footprint
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introduction
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: เงื่อนไข
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital Citizenship
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: ศิลปิน Binary
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '

@@ -6,8 +6,8 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "birds",
-    "instructions": "Figure out what is missing and then add blocks to get the bird to the pig!",
+    "skin": "scrat",
+    "instructions": "Figure out what is missing and then add blocks to get Scrat to the acorn!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add 1 block to move the bird to the pig.\",\"hint_id\":\"courseB_maze_seq7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b0fdd97fa40af52a499052e7237e0eb5/courseB_maze_seq7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try running the code that's given to you and see where you end up.\",\"hint_id\":\"courseB_maze_seq7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91f0cbe2ee8eb1863489acbd16399cc6/courseB_maze_seq7.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Can't get to the pig?  Try this path!\",\"hint_id\":\"courseB_maze_seq7_c\",\"hint_type\":\"general\",\"hint_path\":\"[[5,4],[2,4],[2,2]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f15eb8b2dbd8d9a98abf2b908314004e/courseB_maze_seq7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add 1 block to move Scrat to the acorn.\",\"hint_id\":\"courseB_maze_seq7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d54293bcc4745345960be8780d61bdc8/courseB_maze_seq7_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try running the code that's given to you and see where you end up.\",\"hint_id\":\"courseB_maze_seq7_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91f0cbe2ee8eb1863489acbd16399cc6/courseB_maze_seq7_2018.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Can't get to the acorn?  Try this path!\",\"hint_id\":\"courseB_maze_seq7_c\",\"hint_type\":\"general\",\"hint_path\":\"[[5,4],[2,4],[2,2]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/deec8fe1b01ce054799efbd49a5d67a2/courseB_maze_seq7_2018.mp3\"}]",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -40,20 +40,22 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 22:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-08 22:41:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-08 22:45:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-03 21:06:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-28 22:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-08 22:41:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-08 22:45:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-03 21:06:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-03 23:25:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-09 22:05:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveWest">
+            <block type="maze_moveWest" deletable="false" can_disconnect_from_parent="false">
               <next>
-                <block type="maze_moveWest">
+                <block type="maze_moveWest" deletable="false" can_disconnect_from_parent="false">
                   <next>
-                    <block type="maze_moveNorth" deletable="false" id="callMe">
+                    <block type="maze_moveWest" deletable="false" can_disconnect_from_parent="false">
                       <next>
-                        <block type="maze_moveNorth" deletable="false"/>
+                        <block type="maze_moveNorth" deletable="false" can_disconnect_from_parent="false" id="callMe"/>
                       </next>
                     </block>
                   </next>

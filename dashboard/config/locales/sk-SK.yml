@@ -43,7 +43,7 @@
   unsubmit: Neodoslať
   previous_page: Predchádzajúca strana
   next_page: Nasledujúca strana
-  next_resource: "Ďalší zdroj"
+  next_resource: Ďalší zdroj
   done_with_module: Done with this Learning Module
   cancel: Zrušiť
   okay: Dobre
@@ -60,9 +60,9 @@
     placeholder: Prosím zadaj sem svoj tip
     submit: Pridať tip
   appname: Code.org
-  stage: "Úroveň"
-  stage_number: "Úroveň %{number}"
-  puzzle: "Úloha"
+  stage: Úroveň
+  stage_number: Úroveň %{number}
+  puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
   courses_page:
@@ -152,7 +152,7 @@
       vášho prihlásenia/registrácie.
     user_type_label: Typ účtu
     user_type_teacher: Učiteľ
-    user_type_student: "Študent"
+    user_type_student: Študent
     field_is_required: sa vyžaduje
     accept_terms: Musíte súhlasiť s vytvorením účtu
     error: An error occurred.
@@ -332,7 +332,7 @@
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
-      stats: "Štatistiky"
+      stats: Štatistiky
       help_us: Help Us
       teach: Teach
       about: About
@@ -348,7 +348,7 @@
       already_registered: Ste už zaregistrovaný?
       pair_programming: Pair Programming
       team: Tím
-      driver: Ovládač
+      driver: Prihlásený
       navigator: Navigátor
     popup:
       progress_for_user: Pokrok pre užívateľa %{name}
@@ -376,7 +376,7 @@
     student_teacher_disassociated: Odstránili ste %{teacher_name} ako svojho učiteľa.
     panel:
       answer_viewer: Panel pre učiteľa
-      student: "Študent"
+      student: Študent
       viewing_solution: Prehliadnuť riešenie
       try_it_yourself: Skúste to sami
       section: Sekcia
@@ -429,7 +429,7 @@
     completed: Dokončené
     tried: Vyskúšaný
   home:
-    title: "Štúdio kódu"
+    title: Štúdio kódu
     description: Code Studio je domov pre online kurzy vytvorené Code.org
     lines_of_code: "%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÉ ŠTUDENTAMI"
     lines_of_code_linebreak: "%{lines_count} RIADKOV KÓDU<br/>NAPÍSANÉ %{students_count}
@@ -610,10 +610,10 @@
     try_hour_of_code: Vyskusaj lekciu kódovania!
   gender:
     male: Muž
-    female: "Žena"
+    female: Žena
     none: Preferujem neodpovedať
   user_type:
-    student: "Študent"
+    student: Študent
     teacher: Učiteľ
   footer:
     thank_you: Ďakujeme našim <a href="https://code.org/about/donors"> darcom</a>,
@@ -666,10 +666,10 @@
     teacher_no_solution: Stop seeing solution
     auth_error: Nemáte oprávnenie vidieť riešenie.
     submit: Aktualizovať umiestnenie postavy
-    direction: "Štart smeru (v stupňoch)"
+    direction: Štart smeru (v stupňoch)
   video:
     tab: Video.
-    notes: "Žiadne video? Zobraziť poznámky."
+    notes: Žiadne video? Zobraziť poznámky.
     notes_coming_soon: Poznámky pre toto video už čoskoro.
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
@@ -702,7 +702,7 @@
   pdf_download: Stiahnuť PDF
   download_coming_soon: Stiahnuteľné aktivity už čoskoro.
   video_coming_soon: Video už čoskoro!
-  not_started: "Študent neprešiel túto úroveň."
+  not_started: Študent neprešiel túto úroveň.
   share_code:
     title: Kliknite na 'Beh' na zobrazenie môjho kódu za behu
     bounce_og_title: Pozri sa na moju Skákaciu hru
@@ -815,8 +815,8 @@
       audience: Ages 14+
       cta: Nauč sa ako
   gallery:
-    students_drew_these_with_code: "Študenti toto nakreslil s pomocou kódu!"
-    students_made_these_with_code: "Študenti vytvorili toto s pomocou kódu!"
+    students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
+    students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
     picture_count: V posledných <b>%{days}</b> dňoch, študenti nakreslil <b>%{count}</b>
       obrázkov napísaním vlastného počítačového programu. Kliknutím na obrázok uvidíte
       program v akcii.
@@ -854,17 +854,17 @@
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "Ďakujeme"
-    wrong_body: "Ďakujeme za odoslanie odpovede."
-    correct_title: "Ďakujeme"
-    correct_body: "Ďakujeme za odoslanie odpovede."
+    wrong_title: Ďakujeme
+    wrong_body: Ďakujeme za odoslanie odpovede.
+    correct_title: Ďakujeme
+    correct_body: Ďakujeme za odoslanie odpovede.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "Ďakujeme"
-    wrong_body: "Ďakujeme za odoslanie odpovedí."
-    correct_title: "Ďakujeme"
-    correct_body: "Ďakujeme za odoslanie odpovedí."
+    wrong_title: Ďakujeme
+    wrong_body: Ďakujeme za odoslanie odpovedí.
+    correct_title: Ďakujeme
+    correct_body: Ďakujeme za odoslanie odpovedí.
     hide_survey_last_answer: Tento prieskum je anonymný. Pre súhrnné informácie o
       výsledkoch navštív prosím nástenku svojho učiteľa. Všimni si, že výsledky prieskumu
       budú zobrazené pri účasti minimálne piatich študentov.
@@ -872,10 +872,10 @@
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "Ďakujeme"
-    wrong_body: "Ďakujeme za odoslanie odpovedí."
-    correct_title: "Ďakujeme"
-    correct_body: "Ďakujeme za odoslanie odpovedí."
+    wrong_title: Ďakujeme
+    wrong_body: Ďakujeme za odoslanie odpovedí.
+    correct_title: Ďakujeme
+    correct_body: Ďakujeme za odoslanie odpovedí.
     unsubmit-title: Odvolaj tvoje hodnotenie
     unsubmit-body: Odvolanie tvojho hodnotenia obnoví čas a dátum odoslania.  Si si
       istý?
@@ -902,7 +902,7 @@
   text_match:
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
-    open_response_body: "Ďakujeme za Vašu reakciu!"
+    open_response_body: Ďakujeme za Vašu reakciu!
     correct_title: Správne
     correct_body: To je správna odpoveď.
   dialog:
@@ -965,7 +965,7 @@
     - white: Biela
     - black: Africká alebo Afroamerická
     - hispanic: Hispánska alebo Latinoamerická
-    - asian: "Ázijská"
+    - asian: Ázijská
     - hawaiian: Pôvodná havajská alebo iná tichomorská
     - american_indian: Pôvodná americká alebo alijašská
     - other: Ostatné
@@ -1033,7 +1033,7 @@
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
     really_delete: Odstrániť?
-    delete_yes: "Áno"
+    delete_yes: Áno
     delete_no: Nie
     saved: Uložené
     not_saved: Neuložené
@@ -1154,7 +1154,7 @@
     title: Hodina kódu - súbory na stiahnutie
     capsule_title: Máte prístup na internet?
     capsule_desc: Používaj online webovú aplikáciu <a href="%{url}">%{app_name}</a>.
-    instructions_headline: "Žiadny internet?"
+    instructions_headline: Žiadny internet?
     instructions: 'Pokyny pre učiteľov: ak máte nedostatočné internetové služby, návody
       Hodiny Kódovania sú dostupné na stiahnutie a inštaláciu pre prácu v autonómnom
       režime (angl. offline). Zvoľte svoj jazyk a platformu, stiahnite a nainštalujte

@@ -1,191 +1,191 @@
 "zh-TW":
   errors:
     messages:
-      not_saved: "請修正下列錯誤："
-      too_young: "這內容有年齡限制，年輕學生不可以觀看。"
-      teacher_must_accept_terms: "此內容有年齡限制，年輕學生不可觀看。請詢問你的老師是否能更新服務條款讓你能訪問此內容。你的老師能透過登入
-        Code Studio 並且點擊Code Studio 主頁上方附近的「檢視更新的條款」按鈕來接受條款。"
-      pair_programmer: "目前和你進行小組編程活動的人從來沒有接觸過這些內容。若要存取這個內容，你必須停止小組編程並再試一次。"
+      not_saved: 請修正下列錯誤：
+      too_young: 這內容有年齡限制，年輕學生不可以觀看。
+      teacher_must_accept_terms: 此內容有年齡限制，年輕學生不可觀看。請詢問你的老師是否能更新服務條款讓你能訪問此內容。你的老師能透過登入
+        Code Studio 並且點擊Code Studio 主頁上方附近的「檢視更新的條款」按鈕來接受條款。
+      pair_programmer: 目前和你進行小組編程活動的人從來沒有接觸過這些內容。若要存取這個內容，你必須停止小組編程並再試一次。
   activerecord:
     errors:
       messages:
-        blank: "必填"
-        blank_plural: "必填"
-        invalid_plural: "無效"
+        blank: 必填
+        blank_plural: 必填
+        invalid_plural: 無效
     attributes:
       user:
-        name: "顯示名稱"
-        name_example: "顯示名稱<br/>（例如 Cool Coder 或是 Jane S）"
-        email: "電子信箱"
-        parent_email: "家長或監護人的電子郵件"
+        name: 顯示名稱
+        name_example: 顯示名稱<br/>（例如 Cool Coder 或是 Jane S）
+        email: 電子信箱
+        parent_email: 家長或監護人的電子郵件
         personal_email: 個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>
-        username: "用戶名稱"
-        password: "密碼"
-        password_confirmation: "密碼確認"
-        current_password: "目前的密碼"
-        locale: "語言"
-        age: "年齡"
-        gender: "性別"
-        edit_header: "編輯帳戶資料"
+        username: 用戶名稱
+        password: 密碼
+        password_confirmation: 密碼確認
+        current_password: 目前的密碼
+        locale: 語言
+        age: 年齡
+        gender: 性別
+        edit_header: 編輯帳戶資料
         error:
-          future: "不能選擇將來的時間"
-  hello: "世界您好"
-  welcome_back: "歡迎回來，%{name}"
-  your_professional_learning_plan: "你的專業學習計畫"
-  see_your_learning_plan: "觀看你的學習計劃"
-  submit: "提交"
-  unsubmit: "取消提交"
-  previous_page: "上一頁"
-  next_page: "下一頁"
-  next_resource: "下一個資源"
+          future: 不能選擇將來的時間
+  hello: 世界您好
+  welcome_back: 歡迎回來，%{name}
+  your_professional_learning_plan: 你的專業學習計畫
+  see_your_learning_plan: 觀看你的學習計劃
+  submit: 提交
+  unsubmit: 取消提交
+  previous_page: 上一頁
+  next_page: 下一頁
+  next_resource: 下一個資源
   done_with_module: Done with this Learning Module
-  cancel: "取消"
+  cancel: 取消
   okay: OK！
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
   add_teacher_form:
     code:
-      label: "新增一個教師："
-      placeholder: "學習小組代碼 (ABCDEF)"
-      instructions: "請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。"
-      instructions_short: "輸入您的 6 個字學習小組代碼"
-    submit: "新增教師"
+      label: 新增一個教師：
+      placeholder: 學習小組代碼 (ABCDEF)
+      instructions: 請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。
+      instructions_short: 輸入您的 6 個字學習小組代碼
+    submit: 新增教師
   add_hint_form:
-    placeholder: "請在此處輸入您的提示"
-    submit: "添加提示"
+    placeholder: 請在此處輸入您的提示
+    submit: 添加提示
   appname: Code.org
-  stage: "階段"
-  stage_number: "階段 %{number} "
-  puzzle: "關卡"
-  trophies: "獎盃"
-  courses: "課程"
+  stage: 階段
+  stage_number: '階段 %{number} '
+  puzzle: 關卡
+  trophies: 獎盃
+  courses: 課程
   courses_page:
-    title_student: "在 Code Studio 上學習"
-    title_teacher: "使用 Code Studio 教學"
-  unplugged_activity: "不插電活動"
+    title_student: 在 Code Studio 上學習
+    title_teacher: 使用 Code Studio 教學
+  unplugged_activity: 不插電活動
   of: "／"
-  more: "更多"
-  less: "更少"
-  beta: "測試版"
-  try_hoc: "點擊這裡體驗一小時玩程式 >> "
-  try_k8intro: "試試我們為年級 K-8 所設計的計算機科學課程（15-25 小時）"
+  more: 更多
+  less: 更少
+  beta: 測試版
+  try_hoc: '點擊這裡體驗一小時玩程式 >> '
+  try_k8intro: 試試我們為年級 K-8 所設計的計算機科學課程（15-25 小時）
   k8intro: K-8 資訊科學介紹課程 （15-25 小時）
-  already_started: "已經開始了嗎？從這裡繼續 >>"
-  demos: "管理者：所有範例展示"
-  continue: "繼續"
-  prize: "獎品"
-  more_info: "更多的資訊"
+  already_started: 已經開始了嗎？從這裡繼續 >>
+  demos: 管理者：所有範例展示
+  continue: 繼續
+  prize: 獎品
+  more_info: 更多的資訊
   auth:
-    sign_in_with: "用 %{provider} 登入"
-    signed_in: "已成功登入！"
+    sign_in_with: 用 %{provider} 登入
+    signed_in: 已成功登入！
     signed_out: 您已登出 <a href="%{url}"> Code.org</a>。
     sign_out_of: 您正在使用 %{provider} 登入。<a href="%{url}">點這裡</a>登出 %{provider}。
-    already_signedup: "已經註冊了？"
-    notyet_signedup: "還沒加入？"
+    already_signedup: 已經註冊了？
+    notyet_signedup: 還沒加入？
     google_oauth2: Google 帳戶
     twitter: Twitter
     facebook: Facebook
-    windowslive: "微軟帳戶"
+    windowslive: 微軟帳戶
     clever: Clever 帳號
-    forgot_password: "忘了密碼？"
-    need_confirmation: "沒有收到確認說明嗎？"
-    need_unlock: "沒有收到解鎖說明嗎？"
-    not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
-    use_clever: "對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請登入您的 Clever Portal 來代替。"
+    forgot_password: 忘了密碼？
+    need_confirmation: 沒有收到確認說明嗎？
+    need_unlock: 沒有收到解鎖說明嗎？
+    not_linked: 抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。
+    use_clever: 對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請登入您的 Clever Portal 來代替。
   signup_form:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
     overview: 註冊一個帳號來追蹤你的進度或管理你的班級。<a href="/">你可以瀏覽不同的階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。
-    hoc_already_signed_up_heading: "開始但不登入"
+    hoc_already_signed_up_heading: 開始但不登入
     hoc_already_signed_up_content: 您已註冊指導一小時玩程式活動！你與學生不用登入 Code Studio 就可以參與課程，一開始，可以在您的課堂上<a
       href="%{learn_url}">選擇一個課程</a>並和學生分享這個連結。<br/><br/>如果您覺得一小時玩程式的內容很棒，想要更進一步使用時，你可以在下方申請一個
       Code Studio 帳戶，這樣你就可以替學生註冊參加<a href="%{educate_url}">較長期的課程</a>。
     hoc_already_signed_up_content_post_hoc: 感謝你舉辦了「一小時玩程式」活動。您需要設定一組密碼來註冊 Code Studio。這樣你就能儲存進度和管理班級，並為學生分配課程並追蹤他們的進度。在沒有註冊帳戶之前，<a
       href="%{studio_url}">你還是可以繼續使用</a>。
-    teacher_educator_guide: "參閱教師指引"
-    title: "在 Code.org 上註冊"
-    school_name: "學校名稱 （選填）"
-    school_address: "學校地址 （選填）"
-    address_placeholder: "地址、鄉鎮、 省市、 郵遞區號"
-    gender: "性別（選填）"
-    birthday: "生日 （選填）"
-    age: "年齡"
-    user_type: "你是學生還是教師？"
-    submit: "註冊"
-    teacher: "你是一名教師？"
-    valid_username: "可以使用！"
-    invalid_username: "用戶名稱至少需 5 字元"
-    taken_username: "用戶名稱已被使用"
-    valid_password: "密碼有效！"
-    invalid_password: "密碼必須要 6 個字元以上"
-    mismatch_password: "你輸入的兩次密碼不一致"
-    student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
-      href='http://code.org/privacy'>隱私權政策</a>。"
-    teacher_terms: "我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'>
-      隱私政策</a>。"
-    additional_information: "我們還需要一些其他資訊來完成你的註冊。"
-    user_type_label: "帳戶類型"
-    user_type_teacher: "教師"
-    user_type_student: "學生"
-    field_is_required: "必填"
-    accept_terms: "你必須同意以建立一個帳戶"
-    error: "發生錯誤。"
+    teacher_educator_guide: 參閱教師指引
+    title: 在 Code.org 上註冊
+    school_name: 學校名稱 （選填）
+    school_address: 學校地址 （選填）
+    address_placeholder: 地址、鄉鎮、 省市、 郵遞區號
+    gender: 性別（選填）
+    birthday: 生日 （選填）
+    age: 年齡
+    user_type: 你是學生還是教師？
+    submit: 註冊
+    teacher: 你是一名教師？
+    valid_username: 可以使用！
+    invalid_username: 用戶名稱至少需 5 字元
+    taken_username: 用戶名稱已被使用
+    valid_password: 密碼有效！
+    invalid_password: 密碼必須要 6 個字元以上
+    mismatch_password: 你輸入的兩次密碼不一致
+    student_terms: 我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
+      href='http://code.org/privacy'>隱私權政策</a>。
+    teacher_terms: 我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'>
+      隱私政策</a>。
+    additional_information: 我們還需要一些其他資訊來完成你的註冊。
+    user_type_label: 帳戶類型
+    user_type_teacher: 教師
+    user_type_student: 學生
+    field_is_required: 必填
+    accept_terms: 你必須同意以建立一個帳戶
+    error: 發生錯誤。
   school_info:
-    title: "學校資訊（非必填）"
-    school_country: "學校所屬國家"
-    select_school_type: "選擇學校類型"
-    charter: "實驗學校"
-    private: "私立學校"
-    public: "公立學校"
-    homeschool: "在家教育"
-    after_school: "課後學校"
-    other: "其它"
-    state: "州 / 省"
-    district: "行政區"
-    other_district_not_listed: "上面未列出的其它地區"
-    district_name: "地區名稱"
-    school: "學校"
-    other_school_not_listed: "上面未列出的其它學校"
-    school_name: "學校名稱"
-    school_zip: "學校郵遞區號"
-    school_address: "學校地址"
-    school_organization_name: "學校 / 組織名稱"
-    school_organization_zip: "學校 / 組織郵遞區號"
+    title: 學校資訊（非必填）
+    school_country: 學校所屬國家
+    select_school_type: 選擇學校類型
+    charter: 實驗學校
+    private: 私立學校
+    public: 公立學校
+    homeschool: 在家教育
+    after_school: 課後學校
+    other: 其它
+    state: 州 / 省
+    district: 行政區
+    other_district_not_listed: 上面未列出的其它地區
+    district_name: 地區名稱
+    school: 學校
+    other_school_not_listed: 上面未列出的其它學校
+    school_name: 學校名稱
+    school_zip: 學校郵遞區號
+    school_address: 學校地址
+    school_organization_name: 學校 / 組織名稱
+    school_organization_zip: 學校 / 組織郵遞區號
   signin_form:
-    title: "已經有帳戶了？登入"
-    login: "電子信箱"
-    login_username: "用戶名稱或信箱"
-    password: "密碼"
-    remember: "記住我"
-    submit: "登入"
+    title: 已經有帳戶了？登入
+    login: 電子信箱
+    login_username: 用戶名稱或信箱
+    password: 密碼
+    remember: 記住我
+    submit: 登入
   signin:
-    try_heading: "還沒註冊嗎？先試試再說"
-    try_hoc: "先來試試一小時玩程式"
-    try_20hours: "試試我們的 20 小時介紹計算機科學"
+    try_heading: 還沒註冊嗎？先試試再說
+    try_hoc: 先來試試一小時玩程式
+    try_20hours: 試試我們的 20 小時介紹計算機科學
   signinsection:
-    welcome: "歡迎來到%{section_name}"
-    name: "選取你的名字"
-    picture: "在這裡找到你的通關圖片"
-    words: "在這裡輸入你的通關密語"
-    login: "登入"
-    invalid_login: "登入失敗，請再試一次。"
-    pair_programming: "我在我的電腦上有夥伴"
-    student_privacy: "若要進一步瞭解為何你無法看到你的全名，請<a href='%{student_privacy_blog}' target='_blank'>點擊此處</a>。"
+    welcome: 歡迎來到%{section_name}
+    name: 選取你的名字
+    picture: 在這裡找到你的通關圖片
+    words: 在這裡輸入你的通關密語
+    login: 登入
+    invalid_login: 登入失敗，請再試一次。
+    pair_programming: 我在我的電腦上有夥伴
+    student_privacy: 若要進一步瞭解為何你無法看到你的全名，請<a href='%{student_privacy_blog}' target='_blank'>點擊此處</a>。
   password:
     reset_form:
-      title: "忘記了您的密碼嗎？"
-      instructions: "請在下方輸入您的電子郵件，我們發送重設密碼的指引給您"
-      email: "電子信箱地址"
-      submit: "提交"
+      title: 忘記了您的密碼嗎？
+      instructions: 請在下方輸入您的電子郵件，我們發送重設密碼的指引給您
+      email: 電子信箱地址
+      submit: 提交
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
-      invalid_email: "你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。"
+      invalid_email: 你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。
     change_form:
-      title: "更改您的密碼"
-      new_password: "新密碼"
-      confirm_password: "確認新密碼"
-      submit: "更改我的密碼"
+      title: 更改您的密碼
+      new_password: 新密碼
+      confirm_password: 確認新密碼
+      submit: 更改我的密碼
   welcome_email:
-    subject: "加入我的班級"
+    subject: 加入我的班級
     body: |
       點選下方的連結來報名參加在 Code.org 的資訊科學課程（我會是你的老師）：
 
@@ -197,280 +197,278 @@
   parent_mailer:
     student_associated_subject: Code.org 的登入資訊
   teacher_mailer:
-    new_teacher_subject: "歡迎來到 Code.org ！"
+    new_teacher_subject: 歡迎來到 Code.org ！
   section:
     your_section:
-      one: "你的學習小組："
-      other: "你的學習小組："
+      one: 你的學習小組：
+      other: 你的學習小組：
     code_with_teacher: "%{section_code} - %{teacher_name}"
     confirm:
-      remove: "你確定要退出這個學習小組？"
+      remove: 你確定要退出這個學習小組？
     remove: "（移除學習小組）"
     type:
-      picture: "圖片密碼"
-      word: "通關密語"
-      email: "電子信箱"
+      picture: 圖片密碼
+      word: 通關密語
+      email: 電子信箱
       google_classroom: Google Classroom
       clever: Clever
   follower:
-    invite_sent: "已發送邀請"
+    invite_sent: 已發送邀請
     added_teacher: "%{name} 已成為你的老師"
-    registered: "你已經註冊了 %{section_name}。"
+    registered: 你已經註冊了 %{section_name}。
     error:
-      signed_in: "操作前請先登出"
-      username_not_found: "找不到用戶名稱 %{username}"
+      signed_in: 操作前請先登出
+      username_not_found: 找不到用戶名稱 %{username}
       username_in_use: "%{username} 已經被使用了，請重新挑選一個。"
-      no_teacher: "找不到任何以 %{teacher_email_or_code} 註冊的使用者。請邀請他們到這註冊，然後再試著添加他們。"
-      section_not_found: "找不到代碼是 %{section_code} 的學習小組。"
-      blank_code: "請輸入學習小組代碼"
-      cant_join_own_section: "抱歉, 你不能加入你自己的學習小組。"
-      provider_managed_section: "這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider}
-        將你加入，並重新同步他們的學習小組。"
+      no_teacher: 找不到任何以 %{teacher_email_or_code} 註冊的使用者。請邀請他們到這註冊，然後再試著添加他們。
+      section_not_found: 找不到代碼是 %{section_code} 的學習小組。
+      blank_code: 請輸入學習小組代碼
+      cant_join_own_section: 抱歉, 你不能加入你自己的學習小組。
+      provider_managed_section: 這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider} 將你加入，並重新同步他們的學習小組。
     mail:
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
   reports:
     error:
-      access_denied: "你不能存取此人的統計資料"
+      access_denied: 你不能存取此人的統計資料
   crud:
-    new_model: "新的 %{model}"
-    show: "顯示 "
-    edit: "编辑"
-    edit_model: "編輯 %{model}"
-    update: "更新"
-    submit: "提交"
-    destroy: "摧毀"
-    back: "返回"
-    confirm: "你真的確定嗎？"
+    new_model: 新的 %{model}
+    show: '顯示 '
+    edit: 编辑
+    edit_model: 編輯 %{model}
+    update: 更新
+    submit: 提交
+    destroy: 摧毀
+    back: 返回
+    confirm: 你真的確定嗎？
     created: "%{model} 已建立。"
     updated: "%{model} 已更新。"
     destroyed: "%{model} 已刪除。"
-    access_denied: "你沒有使用 %{model}的權限。"
+    access_denied: 你沒有使用 %{model}的權限。
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "你提供的電子郵件位址與這個帳號的電子郵件位址不符"
-        personal_login_created_email: "你已成功建立個人登入帳號。你現在可以使用你的電子郵件和密碼登入你的帳號"
-        personal_login_created_username: "你已成功建立個人登入帳號。你現在可以使用你的使用者名稱 (%{username})
-          和密碼登入你的帳號"
+        user_type_change_email_mismatch: 你提供的電子郵件位址與這個帳號的電子郵件位址不符
+        personal_login_created_email: 你已成功建立個人登入帳號。你現在可以使用你的電子郵件和密碼登入你的帳號
+        personal_login_created_username: 你已成功建立個人登入帳號。你現在可以使用你的使用者名稱 (%{username})
+          和密碼登入你的帳號
   nav:
     header:
-      finished_hoc: "我完成了一小時玩程式活動"
-      sign_in_to_save: "登入以儲存進度"
+      finished_hoc: 我完成了一小時玩程式活動
+      sign_in_to_save: 登入以儲存進度
       free_play:
-        playlab: "製作一個 Play Lab App"
-        artist: "畫些什麼"
+        playlab: 製作一個 Play Lab App
+        artist: 畫些什麼
         calculate: Calculate Something
-        applab: "製作一個 App Lab app"
-        gamelab: "製作遊戲實驗室專案"
-        weblab: "製作網路實驗室 (測試版) 專案"
-      home: "主頁"
-      my_dashboard: "我的儀表板"
-      courses: "課程"
-      course_catalog: "課程目錄"
-      project_gallery: "所有專案"
-      sections: "學習小組"
-      help_support: "幫助與支援"
-      report_bug: "回報 Bug"
-      teacher_community: "教師社群"
-      professional_learning: "專業學習"
-      documentation: "說明文件"
-      tutorials: "所有教程"
-      educate_overview: "教育工作者概覽"
-      educate_elementary: "國小"
-      educate_middle: "國中"
-      educate_high: "高中"
-      educate_hoc: "一小時玩程式"
-      educate_partner: "與我們合作"
-      educate_beyond: "超越 Code.org"
-      educate_inspire: "激勵學生"
-      educate_community: "線上社群"
-      educate_tools: "工具和影片"
-      about_us: "關於我們"
-      about_leadership: "管理團隊"
-      about_donors: "贊助者"
-      about_partners: "合作夥伴"
-      about_team: "全體成員"
-      about_news: "新聞室"
-      about_evaluation: "評估"
-      about_jobs: "招聘"
-      about_contact: "聯絡我們"
-      about_faqs: "常見問答"
-      learn: "學習"
-      stats: "統計資料"
-      help_us: "幫助我們"
-      teach: "教育"
-      about: "關於"
+        applab: 製作一個 App Lab app
+        gamelab: 製作遊戲實驗室專案
+        weblab: 製作網路實驗室 (測試版) 專案
+      home: 主頁
+      my_dashboard: 我的儀表板
+      courses: 課程
+      course_catalog: 課程目錄
+      project_gallery: 所有專案
+      sections: 學習小組
+      help_support: 幫助與支援
+      report_bug: 回報 Bug
+      teacher_community: 教師社群
+      professional_learning: 專業學習
+      documentation: 說明文件
+      tutorials: 所有教程
+      educate_overview: 教育工作者概覽
+      educate_elementary: 國小
+      educate_middle: 國中
+      educate_high: 高中
+      educate_hoc: 一小時玩程式
+      educate_partner: 與我們合作
+      educate_beyond: 超越 Code.org
+      educate_inspire: 激勵學生
+      educate_community: 線上社群
+      educate_tools: 工具和影片
+      about_us: 關於我們
+      about_leadership: 管理團隊
+      about_donors: 贊助者
+      about_partners: 合作夥伴
+      about_team: 全體成員
+      about_news: 新聞室
+      about_evaluation: 評估
+      about_jobs: 招聘
+      about_contact: 聯絡我們
+      about_faqs: 常見問答
+      learn: 學習
+      stats: 統計資料
+      help_us: 幫助我們
+      teach: 教育
+      about: 關於
     user:
-      classroom: "教師主頁"
-      district_dashboard: "分區控制台"
-      label: "嗨，%{username}"
-      stats: "我的進度"
-      settings: "帳戶設定"
-      logout: "登出"
-      signin: "登入"
-      signup: "建立一個帳戶"
-      already_registered: "已經註冊過了？"
-      pair_programming: "小組編程"
-      team: "團隊"
-      driver: "已登入"
-      navigator: "夥伴"
+      classroom: 教師主頁
+      district_dashboard: 分區控制台
+      label: 嗨，%{username}
+      stats: 我的進度
+      settings: 帳戶設定
+      logout: 登出
+      signin: 登入
+      signup: 建立一個帳戶
+      already_registered: 已經註冊過了？
+      pair_programming: 小組編程
+      team: 團隊
+      driver: 已登入
+      navigator: 夥伴
     popup:
       progress_for_user: "%{name} 的進度"
-      progress: "你的學習進度"
-      lines: "程式碼總計行數：%{lines}"
-      close: "關閉"
-      mastery: "觀念"
-      puzzle_map: "所有階段"
-      prizes: "收集全部的 %{total_trophies} 個獎盃，並贏取獎品 ！"
-      prize_earned: "全部的 %{total_trophies} 個獎盃都收集到了，恭喜你贏得獎品！（僅限美國地區）"
+      progress: 你的學習進度
+      lines: 程式碼總計行數：%{lines}
+      close: 關閉
+      mastery: 觀念
+      puzzle_map: 所有階段
+      prizes: 收集全部的 %{total_trophies} 個獎盃，並贏取獎品 ！
+      prize_earned: 全部的 %{total_trophies} 個獎盃都收集到了，恭喜你贏得獎品！（僅限美國地區）
       prize_us_only: "（僅限美國地區學生）"
-      prizes_link: "更多的資訊"
+      prizes_link: 更多的資訊
   teacher:
-    answer: "答案"
-    for_teachers_only: "僅限教師"
+    answer: 答案
+    for_teachers_only: 僅限教師
     title:
-      one: "你的老師："
-      other: "你的所有老師："
+      one: 你的老師：
+      other: 你的所有老師：
     remove: "（移除教師）"
     confirm:
-      remove: "你確認要刪除這個老師嗎？"
+      remove: 你確認要刪除這個老師嗎？
     students:
-      dashboard: "前往教師控制台"
-    user_not_found: "無法找到此教師。"
-    student_teacher_disassociated: "你已移除 %{teacher_name} 當你的教師。"
+      dashboard: 前往教師控制台
+    user_not_found: 無法找到此教師。
+    student_teacher_disassociated: 你已移除 %{teacher_name} 當你的教師。
     panel:
-      answer_viewer: "教師面板"
-      student: "學生"
-      viewing_solution: "查看解決方案"
-      try_it_yourself: "自己試試"
-      section: "學習小組"
-      example: "解答範例"
-      example_with_number: "解答範例 %{solution_number}"
-      submitted_on: "提交時間："
-      unsubmit: "取消提交"
-      worked_with: "工作伙伴"
-      update_lock_settings: "在此更新上鎖相關設定。"
-      clear_response: "清空回應"
+      answer_viewer: 教師面板
+      student: 學生
+      viewing_solution: 查看解決方案
+      try_it_yourself: 自己試試
+      section: 學習小組
+      example: 解答範例
+      example_with_number: 解答範例 %{solution_number}
+      submitted_on: 提交時間：
+      unsubmit: 取消提交
+      worked_with: 工作伙伴
+      update_lock_settings: 在此更新上鎖相關設定。
+      clear_response: 清空回應
   user:
-    email_confirm_needed: "電子信箱地址尚未被確認："
-    email_confirm_needed_required: "您的信箱 %{email} 尚未驗證："
+    email_confirm_needed: 電子信箱地址尚未被確認：
+    email_confirm_needed_required: 您的信箱 %{email} 尚未驗證：
     email_confirm_wrong_email: "（錯誤的電子信箱？）"
-    email_resend_confirm: "重新發送確認說明"
+    email_resend_confirm: 重新發送確認說明
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: "（我們需要你現在的密碼以確認變更）"
-    delete: "刪除您的帳號"
-    delete_text: "點擊下方按鈕將刪除你的帳號。"
-    delete_text_teacher_note: "請注意：刪除你的帳號並不會也刪除你的學生帳號。"
-    delete_confirm: "確定要刪除你的帳戶？"
-    deleted_user: "已刪除的用戶"
-    no_password_because_oauth: "沒有密碼，因為你使用第三方帳戶登入。"
-    no_password_because_sponsored: "告訴你的老師以管理你的密碼。"
-    create_personal_login: "建立個人登入帳號"
-    create_personal_login_under_13_info: "如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以請你的父母或監護人協助你建立自己的個人登入帳號。"
-    create_personal_login_under_13_username: "使用者名稱 (不要使用你的真實姓名！)"
-    create_personal_login_under_13_parent_email: "家長/監護人的電子郵件"
-    create_personal_login_info: "如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以建立自己的登入帳號。"
-    create_personal_login_terms: "建立個人登入帳號代表我同意遵守 Code.org 的<a href='%{terms_of_service_url}',
-      target='_blank'>服務條款</a>。如果我的年齡小於13歲，我已經取得父母或法定監護人的允許在沒有老師的指導下使用 Code.org 的服務。"
-    create_personal_login_email_note: "注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org
+    delete: 刪除您的帳號
+    delete_text: 點擊下方按鈕將刪除你的帳號。
+    delete_text_teacher_note: 請注意：刪除你的帳號並不會也刪除你的學生帳號。
+    delete_confirm: 確定要刪除你的帳戶？
+    deleted_user: 已刪除的用戶
+    no_password_because_oauth: 沒有密碼，因為你使用第三方帳戶登入。
+    no_password_because_sponsored: 告訴你的老師以管理你的密碼。
+    create_personal_login: 建立個人登入帳號
+    create_personal_login_under_13_info: 如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以請你的父母或監護人協助你建立自己的個人登入帳號。
+    create_personal_login_under_13_username: 使用者名稱 (不要使用你的真實姓名！)
+    create_personal_login_under_13_parent_email: 家長/監護人的電子郵件
+    create_personal_login_info: 如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以建立自己的登入帳號。
+    create_personal_login_terms: 建立個人登入帳號代表我同意遵守 Code.org 的<a href='%{terms_of_service_url}',
+      target='_blank'>服務條款</a>。如果我的年齡小於13歲，我已經取得父母或法定監護人的允許在沒有老師的指導下使用 Code.org 的服務。
+    create_personal_login_email_note: 注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org
       的電子郵件，除了密碼恢復。請參閱我們的 <a href='%{privacy_policy_url}', target='_blank'> 隱私政策</a>
-      的詳細資訊。"
-    enter_new_login_info: "輸入你新的登入資訊"
-    confirm_secret_words: "為了確認是你本人請輸入目前的通關密語"
-    enter_parent_email: "輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)"
+      的詳細資訊。
+    enter_new_login_info: 輸入你新的登入資訊
+    confirm_secret_words: 為了確認是你本人請輸入目前的通關密語
+    enter_parent_email: 輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)
   user_level:
-    completed: "已完成"
-    tried: "已體驗"
+    completed: 已完成
+    tried: 已體驗
   home:
-    title: "程式工作室"
+    title: 程式工作室
     description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。
-    lines_of_code: "學生們已寫了 %{lines_count} 行程式碼"
+    lines_of_code: 學生們已寫了 %{lines_count} 行程式碼
     lines_of_code_linebreak: "%{students_count} 百萬學生參與，共寫了 <br/>%{lines_count} 行程式碼"
-    all_courses: "課程 1、2、3 概覽"
-    lesson_plans: "教學計畫"
-    signin_message: "已經註冊過了？%{link}"
-    student_reg_link: "學生註冊"
-    teacher_reg_link: "教師註冊"
-    signin_directions: "查看每個帳戶進度。<br/>教師可以查看班級所有學生的進度。"
-    teacher_dashboard: "查看進度表"
-    teacher_student_count_one: "您有 %{count} 個學生。"
-    teacher_student_count: "您有 %{count} 個學生。"
-    teacher_averages: "你的學生平均下來獲得了 %{trophy_average} / %{trophy_max} 的概念通（Concept
-      Mastery）獎盃。"
-    teacher_print_certificates: "為完成此課程的所有學生列印證書"
-    teacher_read_blog: "在 Educator Blog 上閱讀關於我們的新消息和教材更新訊息"
-    classroom: "你的教室"
-    student_progress: "你的學習進度"
-    student_stats: "你已經獲得了 %{trophy_count}/%{trophy_max} 的「概念通」獎盃了。"
-    student_left_off: "你上次離開的地方："
-    student_finished: "你已經完成 Code.org 上的所有教程，挑選另一個 %{online_link} 或到 %{local_school_link}
-      學習。"
-    local_school: "本地學校"
-    online: "在線上"
-    see_details: "查看詳細資訊"
-    view_course: "檢視課程"
-    prize_info: "參加獎（僅限美國公立學校教師）：班級獎金最高 $1,000 元美元。"
-    tryfirst: "或者，你可以先體驗，以後再註冊："
-    trynow: "快來試試"
-    add_hint_help: "請協助我們添加小提示到 Code.org 的教程"
-    20hour_overview: "這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。"
-    test_videos_help: "在學校試試我們的新影片播放器"
-    try_beta_courses: "新課程！試試我們為 K-5 學生設計的課程（測試版）。"
-    use_as_teacher: "以教師身份使用此站"
+    all_courses: 課程 1、2、3 概覽
+    lesson_plans: 教學計畫
+    signin_message: 已經註冊過了？%{link}
+    student_reg_link: 學生註冊
+    teacher_reg_link: 教師註冊
+    signin_directions: 查看每個帳戶進度。<br/>教師可以查看班級所有學生的進度。
+    teacher_dashboard: 查看進度表
+    teacher_student_count_one: 您有 %{count} 個學生。
+    teacher_student_count: 您有 %{count} 個學生。
+    teacher_averages: 你的學生平均下來獲得了 %{trophy_average} / %{trophy_max} 的概念通（Concept Mastery）獎盃。
+    teacher_print_certificates: 為完成此課程的所有學生列印證書
+    teacher_read_blog: 在 Educator Blog 上閱讀關於我們的新消息和教材更新訊息
+    classroom: 你的教室
+    student_progress: 你的學習進度
+    student_stats: 你已經獲得了 %{trophy_count}/%{trophy_max} 的「概念通」獎盃了。
+    student_left_off: 你上次離開的地方：
+    student_finished: 你已經完成 Code.org 上的所有教程，挑選另一個 %{online_link} 或到 %{local_school_link}
+      學習。
+    local_school: 本地學校
+    online: 在線上
+    see_details: 查看詳細資訊
+    view_course: 檢視課程
+    prize_info: 參加獎（僅限美國公立學校教師）：班級獎金最高 $1,000 元美元。
+    tryfirst: 或者，你可以先體驗，以後再註冊：
+    trynow: 快來試試
+    add_hint_help: 請協助我們添加小提示到 Code.org 的教程
+    20hour_overview: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
+    test_videos_help: 在學校試試我們的新影片播放器
+    try_beta_courses: 新課程！試試我們為 K-5 學生設計的課程（測試版）。
+    use_as_teacher: 以教師身份使用此站
     heading_hoc2014: "<h2>一小時玩程式</h2> - <h1>所有年齡</h1>"
     heading_elementary: "<h2>20 小時課程</h2> - <h1>計算機科學基本原理（所有年齡）</h1>"
     heading_apps: "<h2>把樂趣</h2><h1>帶給每個人</h1>"
     heading_tools: "<h2>準備要進行下個階段了嗎？</h2><h1>給國高中生的學習工具</h1>"
     heading_legacy: "<h2>我們的速成課程</h2>-<h1>所有年齡</h1>"
-    your_gallery: "藝廊"
-    no_primary_course: "體驗 Code Studio 的課程"
-    choose_next_course: "從下方的 Code Studio 課程中選一個體驗"
-    print_certificate: "列印證書"
-    announcement_title: "公告"
+    your_gallery: 藝廊
+    no_primary_course: 體驗 Code Studio 的課程
+    choose_next_course: 從下方的 Code Studio 課程中選一個體驗
+    print_certificate: 列印證書
+    announcement_title: 公告
     announcement_message_fall2016_features: 我們花了整個夏天設法將來各地的建議功能實踐，從現在起，你可以<a href="%{pp_url}"
       target="_blank">追蹤學生們的進度</a>，即使他們在同一台設備編程。你可以在計算機科學原理課程中使用<a href="%{csp_widgets_url}"
       target="_blank">最棒的互動工具</a>。同時，爲了鼓勵動手實驗，你的學生們可以在他們的工作區上<a href="%{unused_code_url}"
       target="_blank">保存未使用的代碼</a>。檢視所有的新功能，並且讓我們瞭解你的想法。
-    announcement_csp_widgets_message: "想找些有趣的方式來指導你的班級嗎？像是網際網路是怎麼運作的、讓資料變得安全的密碼學…我們已經從我們的計算機科學原理課程中使用了最棒的互動工具，並釋出了獨立的小工具方便你隨時使用！"
-    announcement_learn_more_button: "繼續學習"
-    announcement_try_now_button: "快來試試"
-    announcement_host_an_hour_button: "舉辦一小時活動"
-    announcement_watch_video_button: "觀看影片"
-    announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
-      28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
-    announcement_petition_button: "新增你的名字"
-    announcement_go_beyond_button: "超越"
-    announcement_apply_now: "立即申請"
-    announcement_all: "持續關注我們的教師部落格以追蹤最新特色和更新資訊。<a href='%{teacher_blog_url}' target='_blank'>查看過去公告。</a>"
-    announcement_hoc_launch: "超過 180 個國家、數以千計的教師，在 12 月 5-11日開始用一小時玩程式課程來教導計算機科學，期待你幫助我們引進更多的學生。<a
-      href='%{signup_url}' target='_blank'>登錄你舉辦的一小時玩程式活動</a>，讓其他老師知道他們也可以開始教導計算機科學。"
-    announcement_mc_launch: "我們最受歡迎的一個教程現在推出續集了！全新的「一小時玩 Minecraft 設計師」，學生們可以自己設置
-      Minecraft 世界裡的規則，創造出獨一無二的 Minecraft 體驗，並可以將它分享給朋友，在他們的手機上玩玩你打造的世界。趕快與你的班級一起加入「一小時玩程式」活動吧。"
-    announcement_how_code_studio: "你不需要有任何教授計算機科學的經驗。Code.org 裡提供了所有學習階段需要的東西，包含了課程、教學計畫、專業有品質的學習程序以及一堆的免費工具。不知道要從哪開始？下載<a
-      href='%{video_download_url}'>這個影片吧</a>！"
-    announcement_go_beyond: "超越一小時玩程式，每週和你的學生探索計算機科學概念。Code.org 提供了課程、教學計畫、高品質的專業學習用程式，和一堆超棒的工具給不同年級的人使用&mdash;全部免費
-      :)。您不需要有任何經驗在課堂教授計算機科學的經驗，</b>接下來只要找尋適合你的學生的課程。</b>"
-    announcement_teacher_recruitment: "和你一樣的老師們正主導著計算機科學教育運動，你可以將高品質且專業的 K-12 年級程式學習<strong>免費的帶到你的學校</strong>。成為你的學校裡的計算機科學的領頭羊，並申請專業學習。"
-    announcement_teacher_recruitment2: "像你這樣的老師正領先電腦科學教育運動。你可以參加高品質 K-12th 級專業程式學習計畫
-      <strong>您與您的學校機構完全無需付費</strong> 在電腦科學領域上取得領先，並申請專業學習。國中和高中老師們請3月17日前申請。"
+    announcement_csp_widgets_message: 想找些有趣的方式來指導你的班級嗎？像是網際網路是怎麼運作的、讓資料變得安全的密碼學…我們已經從我們的計算機科學原理課程中使用了最棒的互動工具，並釋出了獨立的小工具方便你隨時使用！
+    announcement_learn_more_button: 繼續學習
+    announcement_try_now_button: 快來試試
+    announcement_host_an_hour_button: 舉辦一小時活動
+    announcement_watch_video_button: 觀看影片
+    announcement_petition: 作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
+      28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。
+    announcement_petition_button: 新增你的名字
+    announcement_go_beyond_button: 超越
+    announcement_apply_now: 立即申請
+    announcement_all: 持續關注我們的教師部落格以追蹤最新特色和更新資訊。<a href='%{teacher_blog_url}' target='_blank'>查看過去公告。</a>
+    announcement_hoc_launch: 超過 180 個國家、數以千計的教師，在 12 月 5-11日開始用一小時玩程式課程來教導計算機科學，期待你幫助我們引進更多的學生。<a
+      href='%{signup_url}' target='_blank'>登錄你舉辦的一小時玩程式活動</a>，讓其他老師知道他們也可以開始教導計算機科學。
+    announcement_mc_launch: 我們最受歡迎的一個教程現在推出續集了！全新的「一小時玩 Minecraft 設計師」，學生們可以自己設置 Minecraft
+      世界裡的規則，創造出獨一無二的 Minecraft 體驗，並可以將它分享給朋友，在他們的手機上玩玩你打造的世界。趕快與你的班級一起加入「一小時玩程式」活動吧。
+    announcement_how_code_studio: 你不需要有任何教授計算機科學的經驗。Code.org 裡提供了所有學習階段需要的東西，包含了課程、教學計畫、專業有品質的學習程序以及一堆的免費工具。不知道要從哪開始？下載<a
+      href='%{video_download_url}'>這個影片吧</a>！
+    announcement_go_beyond: 超越一小時玩程式，每週和你的學生探索計算機科學概念。Code.org 提供了課程、教學計畫、高品質的專業學習用程式，和一堆超棒的工具給不同年級的人使用&mdash;全部免費
+      :)。您不需要有任何經驗在課堂教授計算機科學的經驗，</b>接下來只要找尋適合你的學生的課程。</b>
+    announcement_teacher_recruitment: 和你一樣的老師們正主導著計算機科學教育運動，你可以將高品質且專業的 K-12 年級程式學習<strong>免費的帶到你的學校</strong>。成為你的學校裡的計算機科學的領頭羊，並申請專業學習。
+    announcement_teacher_recruitment2: 像你這樣的老師正領先電腦科學教育運動。你可以參加高品質 K-12th 級專業程式學習計畫
+      <strong>您與您的學校機構完全無需付費</strong> 在電腦科學領域上取得領先，並申請專業學習。國中和高中老師們請3月17日前申請。
     announcement_csf_pilot: "<strong>小學教師：</strong> 加入我們的 CS 基礎課程！我們在冬季和春季正在尋找老師來試用更新的
       CS 基礎課程。我們非常期盼在 2017 年 8 月的這些更新活動之前收到您的反饋。"
-    announcement_student_privacy: "在 Code.org 上，我們非常注重學生安全，為了保護你的學生的隱私，我們已經在你設定的學習小組登入頁面上做了些修改，以避免顯示全名。雖然這個更新可以降低登入頁面的隱私問題，我們還是希望用戶<strong>不要使用全名作為學生的用戶名稱</strong>。"
+    announcement_student_privacy: 在 Code.org 上，我們非常注重學生安全，為了保護你的學生的隱私，我們已經在你設定的學習小組登入頁面上做了些修改，以避免顯示全名。雖然這個更新可以降低登入頁面的隱私問題，我們還是希望用戶<strong>不要使用全名作為學生的用戶名稱</strong>。
     announcement_apcsp_recruitment: "<strong>CSP 的教師：</strong>你的學生可以在 Code.org 的下一個病毒介紹視頻中被鼓勵參加這個年度的
       AP CS Principles 考試。我們將邀請所有 CS Principles 的學生在 Twitter、Instagram或是 Facebook
       ，上提交一個 10-20 秒的片段，影片內容說明為何要參加 APCSP 考式。最棒的提交內容會被放入我們的推薦影片中，並可以獲得 Code.org 提供的禮物！"
-    announcement_apcsp_recruitment2: "今年的 AP CS Principles 考試有望打破記錄。學生在考試中的參與可能急劇轉變多樣性在
-      AP 電腦科學中，但我們需要你的説明。鼓勵每個 CS Principles 學生選修 AP CSP 考試，我們會 <a href='%{gift_url}'
-      target='_blank'> 送你一個禮物</a>。學生也可以到我們的 <a href='%{challenge_url}' target='_blank'>
-      #APCSP 視頻的挑戰</a>，鼓勵在全國各地的同好。"
-    announcement_apcsp_recruitment3: "今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個
+    announcement_apcsp_recruitment2: '今年的 AP CS Principles 考試有望打破記錄。學生在考試中的參與可能急劇轉變多樣性在
+      AP 電腦科學中，但我們需要你的説明。鼓勵每個 CS Principles 學生選修 AP CSP 考試，我們會 <a href=''%{gift_url}''
+      target=''_blank''> 送你一個禮物</a>。學生也可以到我們的 <a href=''%{challenge_url}'' target=''_blank''>
+      #APCSP 視頻的挑戰</a>，鼓勵在全國各地的同好。'
+    announcement_apcsp_recruitment3: 今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個
       CS Principles 學生參與 AP CSP 考試且你將可以贏得 <a href='%{gift_url}' target='_blank'> 一張禮品卡、
-      一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。"
-    announcement_csp_deadline: "最後呼籲高中教師 ！請成為你的學校電腦科學領域的表率，使用我們高品質的專業學習程式，<strong>絕對不對你或你的學校收費</strong>。4
-      月 14 日截止申請。"
-    announcement_applab_export: "應用實驗室，即我們的網頁式程式設計環境，現在支援匯出你的程式碼 ！你可以拖放 JavaScript
-      積木開始構建應用程式與，然後匯出以便在你所選擇的任何專業的開發環境中繼續編輯程式碼。"
+      一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。
+    announcement_csp_deadline: 最後呼籲高中教師 ！請成為你的學校電腦科學領域的表率，使用我們高品質的專業學習程式，<strong>絕對不對你或你的學校收費</strong>。4
+      月 14 日截止申請。
+    announcement_applab_export: 應用實驗室，即我們的網頁式程式設計環境，現在支援匯出你的程式碼 ！你可以拖放 JavaScript
+      積木開始構建應用程式與，然後匯出以便在你所選擇的任何專業的開發環境中繼續編輯程式碼。
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
       CS Principles students taking the AP CS Exam will join over 50,000 other students
       in the largest AP Exam launch in history. Now, let the voices of your students
@@ -484,172 +482,172 @@
       bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
       Learning."
   move_students:
-    new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
-    section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
-    current_section_dne: "抱歉， 學習小組 %{current_section_code} 不存在。請輸入其他的學習小組代碼。"
-    student_ids_not_entered: "請提供 student_ids。"
-    student_not_found: "無法找到其中的一個或多個學生。"
-    all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"
-    already_enrolled_in_new_section: "你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。"
+    new_section_dne: 抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。
+    section_code_cant_be_current_section: 目前的學習小組不可以和新的學習小組相同。
+    current_section_dne: 抱歉， 學習小組 %{current_section_code} 不存在。請輸入其他的學習小組代碼。
+    student_ids_not_entered: 請提供 student_ids。
+    student_not_found: 無法找到其中的一個或多個學生。
+    all_students_must_be_in_current_section: 所有的學生都必須在你的學習小組中。
+    already_enrolled_in_new_section: 你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。
   share:
-    title: "在 Code Studio 上學習"
-    description: "任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。"
-    try_hour_of_code: "試試「一小時玩程式」！"
+    title: 在 Code Studio 上學習
+    description: 任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。
+    try_hour_of_code: 試試「一小時玩程式」！
   gender:
-    male: "男性"
-    female: "女性"
-    none: "不想回答"
+    male: 男性
+    female: 女性
+    none: 不想回答
   user_type:
-    student: "學生"
-    teacher: "教師"
+    student: 學生
+    teacher: 教師
   footer:
     thank_you: 我們感謝所有的<a href="https://code.org/about/donors">贊助者</a>、<a href="https://code.org/about/partners">合作夥伴</a>、我們的<a
       href="https://code.org/about/team">擴展團隊</a>、我們的影片演員陣容，還有我們的<a href="https://code.org/about/advisors">教育顧問</a>，因為他們的支援才有今天的
       Code Studio。
-    help_from_html: "我們特別想認識來自 Google、Microsoft、Facebook、Twitter 以及其他幫助我們完成這些材料的工程師。"
-    help_from_html_old: "來自 Google、Microsoft、Facebook、Twitter 的工程師的協助創造了這些材料。"
-    art_from_html: "當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br
+    help_from_html: 我們特別想認識來自 Google、Microsoft、Facebook、Twitter 以及其他幫助我們完成這些材料的工程師。
+    help_from_html_old: 來自 Google、Microsoft、Facebook、Twitter 的工程師的協助創造了這些材料。
+    art_from_html: 當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br
       />星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。<br />冰雪奇緣
       Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。<br />冰原歷險記 Ice Age &#8482;
       &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。<br />憤怒鳥 Angry Birds &#8482;
       &copy; 2009-%{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。<br />植物大戰殭屍 Plants vs.
       Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。<br />阿甘妙世界 The Amazing
-      World of Gumball &copy;%{current_year} 年卡通頻道著作權所有，並保留一切權利。"
-    art_from_html_old: "當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰
+      World of Gumball &copy;%{current_year} 年卡通頻道著作權所有，並保留一切權利。
+    art_from_html_old: 當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰
       Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。冰雪奇緣 Frozen
       &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。冰原歷險記 Ice Age &#8482; &copy;
       %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。憤怒鳥 Angry Birds &#8482; &copy; 2009-%{current_year}
       Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰殭屍 Plants vs. Zombies &#8482; &copy; %{current_year}
       美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball &copy; %{current_year}
-      卡通頻道著作權所有，並保留一切權利。"
+      卡通頻道著作權所有，並保留一切權利。
     code_from_html: Code.org 使用 p5.play 遊戲資源庫，根據 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a> 之許可。
-    powered_by_aws: "由亞馬遜網路服務系統提供服務"
+    powered_by_aws: 由亞馬遜網路服務系統提供服務
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
       Code&reg; 都是 Code.org.的商標。"
-    copyright: "版權所有"
-    more: "更多"
-    feedback: "提供回饋"
-    translate: "協助我們翻譯"
-    support: "支援"
+    copyright: 版權所有
+    more: 更多
+    feedback: 提供回饋
+    translate: 協助我們翻譯
+    support: 支援
     support_url: http://support.code.org
-    tos_short: "條款"
-    tos: "服務條款"
-    privacy: "隱私政策"
-    secure: "安全版本"
-    report_abuse: "檢舉濫用"
-    built_on_code_studio: "創建自 Code Studio"
-    make_my_own_app: "製作自己的 app"
-    how_it_works: "它是如何運作的（檢視程式碼）"
-    try_hour_of_code: "試試「一小時玩程式」！"
+    tos_short: 條款
+    tos: 服務條款
+    privacy: 隱私政策
+    secure: 安全版本
+    report_abuse: 檢舉濫用
+    built_on_code_studio: 創建自 Code Studio
+    make_my_own_app: 製作自己的 app
+    how_it_works: 它是如何運作的（檢視程式碼）
+    try_hour_of_code: 試試「一小時玩程式」！
   reference_area:
-    title: "需要幫忙嗎？"
-    subtitle: "看看這些影片和提示"
-    teacher: "觀看解決方案"
-    teacher_no_solution: "停止觀看解法"
-    auth_error: "您無權查看該解決方案。"
-    submit: "更新小藝術家的位置"
-    direction: "開始方向（單位：度）"
+    title: 需要幫忙嗎？
+    subtitle: 看看這些影片和提示
+    teacher: 觀看解決方案
+    teacher_no_solution: 停止觀看解法
+    auth_error: 您無權查看該解決方案。
+    submit: 更新小藝術家的位置
+    direction: 開始方向（單位：度）
   video:
-    tab: "影片"
-    notes: "看不到影片嗎？顯示文字說明。"
-    notes_coming_soon: "影片說明即將推出。"
-    autoplay_option: "自動播放影片"
-    download: "下載影片"
-    show_notes: "顯示筆記"
-    show_video: "顯示影片"
+    tab: 影片
+    notes: 看不到影片嗎？顯示文字說明。
+    notes_coming_soon: 影片說明即將推出。
+    autoplay_option: 自動播放影片
+    download: 下載影片
+    show_notes: 顯示筆記
+    show_video: 顯示影片
   compatibility:
     upgrade:
-      unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}',
-        target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
-      link: "繼續學習"
-      applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
-      gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
-      weblab_unsupported_browser: "很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。"
-      weblab_unsupported_locale_storage: "很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。"
-  slow_loading: "請再等等，這次讀取的時間比較久一點......."
-  try_reloading: "請重新載入頁面"
-  next_stage: "完成！繼續下個關卡"
-  download_pdf: "觀看教學計畫"
-  lesson_plan: "教學計畫"
-  view_lesson_plan: "檢視教學計畫"
-  pdf_download: "下載 PDF"
-  download_coming_soon: "可下載的活動內容也即將完成。"
-  video_coming_soon: "影片即將推出！"
-  not_started: "學生尚未試過這個級別。"
+      unsupported_message: 您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}',
+        target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。
+      link: 繼續學習
+      applab_unsupported_tablet: 在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
+      gamelab_unsupported_tablet: 在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
+      weblab_unsupported_browser: 很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。
+      weblab_unsupported_locale_storage: 很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。
+  slow_loading: 請再等等，這次讀取的時間比較久一點.......
+  try_reloading: 請重新載入頁面
+  next_stage: 完成！繼續下個關卡
+  download_pdf: 觀看教學計畫
+  lesson_plan: 教學計畫
+  view_lesson_plan: 檢視教學計畫
+  pdf_download: 下載 PDF
+  download_coming_soon: 可下載的活動內容也即將完成。
+  video_coming_soon: 影片即將推出！
+  not_started: 學生尚未試過這個級別。
   share_code:
     title: 按下"執行"來看看我的程式如何運作
-    bounce_og_title: "看看我的彈跳遊戲"
-    flappy_og_title: "看看我的像素鳥遊戲"
-    studio_og_title: "看看我的 Play Lab App"
-    check_out_what_i_made: "看看我的作品"
-    og_description: "我在 Code.org 自己寫了個程式"
-    phone_number_not_allowed: "看起來裡面有一組電話號碼。請試著改變文字。"
-    address_not_allowed: "看起來裡面有一組地址。請試著改變文字。"
-    email_not_allowed: "看起來裡面有一組電子郵件地址。請試著改變文字。"
-    profanity_not_allowed: "看起來裡面有一些不雅的文字。請試著改變文字。"
+    bounce_og_title: 看看我的彈跳遊戲
+    flappy_og_title: 看看我的像素鳥遊戲
+    studio_og_title: 看看我的 Play Lab App
+    check_out_what_i_made: 看看我的作品
+    og_description: 我在 Code.org 自己寫了個程式
+    phone_number_not_allowed: 看起來裡面有一組電話號碼。請試著改變文字。
+    address_not_allowed: 看起來裡面有一組地址。請試著改變文字。
+    email_not_allowed: 看起來裡面有一組電子郵件地址。請試著改變文字。
+    profanity_not_allowed: 看起來裡面有一些不雅的文字。請試著改變文字。
   builder:
-    created: "您建立了一個新的腳本。"
-    destroyed: "你刪除了一個腳本。"
-    manage: "建立關卡"
-    view: "檢視"
-    back: "返回腳本"
-    success: "你已經成功地編輯程式積木。"
+    created: 您建立了一個新的腳本。
+    destroyed: 你刪除了一個腳本。
+    manage: 建立關卡
+    view: 檢視
+    back: 返回腳本
+    success: 你已經成功地編輯程式積木。
     level:
-      create: "建立新關卡"
-      current: "目前的關卡"
-      unused: "未使用的關卡"
+      create: 建立新關卡
+      current: 目前的關卡
+      unused: 未使用的關卡
   upsell:
     applab:
       title: App Lab
       body: App Lab 是個編程環境，你可以在裡頭做些簡單的應用程式。可以用積木或是 JavaScript 的方式設計，製作完後也能分享。
-      body_short: "設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a"
-      audience: "年齡 13+"
-      cta: "學習如何做"
+      body_short: 設計一個 App（應用程式），用積木或 JavaScript 來編程使它運作，然後在幾秒鐘內分享您的應用程式。 a
+      audience: 年齡 13+
+      cta: 學習如何做
     hoc:
-      title: "經典迷宮"
-      body: "試試數百萬人已經體驗過的計算機科學基礎課程。"
+      title: 經典迷宮
+      body: 試試數百萬人已經體驗過的計算機科學基礎課程。
     flappy:
-      title: "像素鳥程式"
-      body: "想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！"
+      title: 像素鳥程式
+      body: 想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！
     20-hour:
-      title: "速成課程"
-      body: "這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。"
-      body_short: "在速成課程的課程 2-4 中學習基本的計算機科學。"
+      title: 速成課程
+      body: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
+      body_short: 在速成課程的課程 2-4 中學習基本的計算機科學。
     hoc2014:
-      try_new_tutorial: "試試我們新的一小時玩程式教程（測試版）"
-      try_frozen: "來自冰雪奇緣的安娜及艾莎。"
+      try_new_tutorial: 試試我們新的一小時玩程式教程（測試版）
+      try_frozen: 來自冰雪奇緣的安娜及艾莎。
     gallery:
-      title: "藝廊"
-      body: "觀看由用戶建立的應用程式及藝術畫作"
+      title: 藝廊
+      body: 觀看由用戶建立的應用程式及藝術畫作
     gamelab:
       title: Game Lab（測試版）
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "年齡 13+"
-      cta: "學習如何做"
+      audience: 年齡 13+
+      cta: 學習如何做
     hoc-encryption:
-      title: "簡單加密"
+      title: 簡單加密
       body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "年齡 13+"
-      cta: "學習如何做"
+      audience: 年齡 13+
+      cta: 學習如何做
     frozen:
-      title: "冰雪奇緣"
+      title: 冰雪奇緣
     starwars:
-      title: "星際大戰"
+      title: 星際大戰
     infinity:
-      title: "迪士尼無限 Play Lab"
-      body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
+      title: 迪士尼無限 Play Lab
+      body: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
     minecraft:
-      title: "當個創世神"
-      body: "從代碼的角度來探索 Minecraft 世界。"
+      title: 當個創世神
+      body: 從代碼的角度來探索 Minecraft 世界。
     minecraft2016:
-      title: "當個創世神"
-      body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+      title: 當個創世神
+      body: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
     hero:
       title: Minecraft
       body: Minecraft is back for the Hour of Code with a brand new activity! Journey
@@ -662,242 +660,242 @@
       body: In this lesson, students will use the Text Compression Widget to compress
         text by substituting patterns with symbols.
     unplugged:
-      title: "不插電的教學活動"
-      audience: "年齡 4+"
-      body: "我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。"
-      body_short: "如果你沒有電腦，不妨試試這些不插電教學活動。"
+      title: 不插電的教學活動
+      audience: 年齡 4+
+      body: 我們已經編寫一系列的不插電教學內容，讓你能夠在課堂上使用。現在你可以教授計算機科學基礎，不管你的班級裡頭有沒有電腦！試著使用這些教學內容，不管是當作一門獨立課程，還是當作任何計算機課程的補充教材。
+      body_short: 如果你沒有電腦，不妨試試這些不插電教學活動。
     unplugged_conditionals:
-      title: "條件判斷（Conditionals）"
-      body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
+      title: 條件判斷（Conditionals）
+      body: 在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式
     widgets:
-      title: "視窗元件"
+      title: 視窗元件
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: 14 歲以上
-      cta: "學習如何做"
+      cta: 學習如何做
   gallery:
-    students_drew_these_with_code: "學生是用程式畫出這些圖案的喔！"
-    students_made_these_with_code: "學生是用程式做出這些玩意的喔！"
-    picture_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
-    activity_count: "在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了 <b>%{count}</b> 個 App 以及圖畫。你可以點擊縮圖看看這些程式是如何運作的。"
-    want_to_make_your_own: "想要自己創作嗎？"
-    how_to_save: "在這些教程的最後一關裡單擊「完成」和「儲存」，你創作的作品就會像它們一樣留在藝廊裡。"
-    more: "更多 &rarr;"
+    students_drew_these_with_code: 學生是用程式畫出這些圖案的喔！
+    students_made_these_with_code: 學生是用程式做出這些玩意的喔！
+    picture_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了<b>%{count}</b> 個圖畫。你可以點擊縮圖看看這些程式是如何運作的。
+    activity_count: 在過去的 <b>%{days}</b> 天裡，學生們經由編寫電腦程式完成了 <b>%{count}</b> 個 App 以及圖畫。你可以點擊縮圖看看這些程式是如何運作的。
+    want_to_make_your_own: 想要自己創作嗎？
+    how_to_save: 在這些教程的最後一關裡單擊「完成」和「儲存」，你創作的作品就會像它們一樣留在藝廊裡。
+    more: 更多 &rarr;
     caption_by_name_age: "%{name}, %{age} 歲"
     caption_time_ago: "%{time_ago} 前"
-    header: "藝廊"
-    header_playlab: "故事與遊戲"
-    header_artist: "代碼藝術"
-    report_abuse: "檢舉濫用"
+    header: 藝廊
+    header_playlab: 故事與遊戲
+    header_artist: 代碼藝術
+    report_abuse: 檢舉濫用
   landing:
-    prerelease: "此課程還在 <span class='betatext'>beta（測試）</span>階段。意思是它不是這個課程的最後版本，它會依據收到的回饋，作出修訂與改善。"
-    prerelease_hoc2014: "這個教程還在 <span class='betatext'>beta（測試）</span>階段。它會依據收到的回饋，作出修訂與改善。"
-    report_bug: "臭蟲回報"
-    support: "取得協助"
+    prerelease: 此課程還在 <span class='betatext'>beta（測試）</span>階段。意思是它不是這個課程的最後版本，它會依據收到的回饋，作出修訂與改善。
+    prerelease_hoc2014: 這個教程還在 <span class='betatext'>beta（測試）</span>階段。它會依據收到的回饋，作出修訂與改善。
+    report_bug: 臭蟲回報
+    support: 取得協助
     support_url: "//support.code.org"
-    help_resources: "幫助和資源"
-    help_support: "幫助與支援"
-    documentation: "說明文件"
-    tutorials: "所有教程"
+    help_resources: 幫助和資源
+    help_support: 幫助與支援
+    documentation: 說明文件
+    tutorials: 所有教程
   multi:
-    wrong_title: "不正確的答案"
-    wrong_body: "答錯囉！別氣餒，再接再厲！"
-    correct_title: "正確"
-    correct_body: "答對囉，太棒啦。"
+    wrong_title: 不正確的答案
+    wrong_body: 答錯囉！別氣餒，再接再厲！
+    correct_title: 正確
+    correct_body: 答對囉，太棒啦。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "謝謝"
-    wrong_body: "感謝你提交這份答案。"
-    correct_title: "謝謝"
-    correct_body: "感謝你提交這份答案。"
+    wrong_title: 謝謝
+    wrong_body: 感謝你提交這份答案。
+    correct_title: 謝謝
+    correct_body: 感謝你提交這份答案。
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "謝謝"
-    wrong_body: "感謝你提交這份答案。"
-    correct_title: "謝謝"
-    correct_body: "感謝你提交這份答案。"
-    hide_survey_last_answer: "這個調查是匿名的。請造訪教師控制台以匯整調查結果。注意，只有在至少五個學生提交了調查後，報告結果才會可見。"
+    wrong_title: 謝謝
+    wrong_body: 感謝你提交這份答案。
+    correct_title: 謝謝
+    correct_body: 感謝你提交這份答案。
+    hide_survey_last_answer: 這個調查是匿名的。請造訪教師控制台以匯整調查結果。注意，只有在至少五個學生提交了調查後，報告結果才會可見。
     survey_submission_thankyou: Thank you for submitting this survey! The survey has
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "謝謝"
-    wrong_body: "感謝你提交這份答案。"
-    correct_title: "謝謝"
-    correct_body: "感謝你提交這份答案。"
-    unsubmit-title: "取消提交你的評量"
-    unsubmit-body: "取消提交你的評量會重置提交時間與日期，確定要這麼做嗎？"
-    submit-incomplete-title: "提交你的評量"
-    submit-incomplete-body: "有些問題未完成，提交評量後你就無法修改囉，確定要這麼做嗎？"
-    submit-complete-title: "提交你的評量"
-    submit-complete-body: "評量提交後就不能修改囉，確定要提交嗎？"
+    wrong_title: 謝謝
+    wrong_body: 感謝你提交這份答案。
+    correct_title: 謝謝
+    correct_body: 感謝你提交這份答案。
+    unsubmit-title: 取消提交你的評量
+    unsubmit-body: 取消提交你的評量會重置提交時間與日期，確定要這麼做嗎？
+    submit-incomplete-title: 提交你的評量
+    submit-incomplete-body: 有些問題未完成，提交評量後你就無法修改囉，確定要這麼做嗎？
+    submit-complete-title: 提交你的評量
+    submit-complete-body: 評量提交後就不能修改囉，確定要提交嗎？
   match:
-    wrong_title: "不正確的解法"
-    wrong_body: "你的解法不大正確！別氣餒，再接再厲！"
-    correct_title: "正確"
-    correct_body: "答對囉，太棒啦。"
+    wrong_title: 不正確的解法
+    wrong_body: 你的解法不大正確！別氣餒，再接再厲！
+    correct_title: 正確
+    correct_body: 答對囉，太棒啦。
   contract_match:
-    wrong_title: "不正確的答案"
-    badname: "契約上的名稱有誤。"
-    badname_case: "函式名稱是區分英文大小寫的，試著更改契約名稱的大小寫。"
-    badrange: "契約上的範圍有誤。"
-    baddomainsize: "您的契約裡的定義域沒有正確的項目數。"
-    baddomainname: "有一個或多個您的定義域欄位的名稱錯誤。"
-    baddomaintype: "有一個或多個您的定義域欄位的類型錯誤，或順序錯誤。"
+    wrong_title: 不正確的答案
+    badname: 契約上的名稱有誤。
+    badname_case: 函式名稱是區分英文大小寫的，試著更改契約名稱的大小寫。
+    badrange: 契約上的範圍有誤。
+    baddomainsize: 您的契約裡的定義域沒有正確的項目數。
+    baddomainname: 有一個或多個您的定義域欄位的名稱錯誤。
+    baddomaintype: 有一個或多個您的定義域欄位的類型錯誤，或順序錯誤。
   text_match:
-    placeholder: "在這裡輸入你的答案"
-    open_response_title: "謝謝"
-    open_response_body: "感謝您的回應！"
-    correct_title: "正確"
-    correct_body: "答對囉，太棒啦。"
+    placeholder: 在這裡輸入你的答案
+    open_response_title: 謝謝
+    open_response_body: 感謝您的回應！
+    correct_title: 正確
+    correct_body: 答對囉，太棒啦。
   dialog:
-    ok: "確定"
-    startover_title: "你確定要重新開始嗎？"
-    startover_body: "此操作會重置這個關卡到初始狀態，並重設所有你已經添加或變更的資料。"
-    startover_ok: "重新開始"
-    startover_cancel: "取消"
+    ok: 確定
+    startover_title: 你確定要重新開始嗎？
+    startover_body: 此操作會重置這個關卡到初始狀態，並重設所有你已經添加或變更的資料。
+    startover_ok: 重新開始
+    startover_cancel: 取消
   time:
     hour: 1 小時
-    day: "天"
-    week: "週"
+    day: 天
+    week: 週
   age_interstitial:
-    age: "你的年齡"
-    header: "帳戶資訊更新"
-    message: "我們正在更新我們的經驗，為你提供更強的隱私保護，要做到這一點，我們需要現有用戶在這裡輸入自己的年齡。<br/>和以前一樣，Code.org
-      絕不會出租、販售或分享這些資訊給任何第三方。"
+    age: 你的年齡
+    header: 帳戶資訊更新
+    message: 我們正在更新我們的經驗，為你提供更強的隱私保護，要做到這一點，我們需要現有用戶在這裡輸入自己的年齡。<br/>和以前一樣，Code.org
+      絕不會出租、販售或分享這些資訊給任何第三方。
     sign_out: 如果您不想提供年齡，您可以選擇<a href="%{url}">登出</a>。
   terms_interstitial:
-    title: "更新後的服務條款和隱私政策"
-    intro_desc: "我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在
-      Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。"
-    intro_instructions: "若你要小於 13 歲的學生能使用 Code Studio 上的完整功能，你必須接受這些新的條款。若要為 13 歲以下的學生註冊一個帳戶，則需要確認你的學校是否有其父母的同意學校收集並使用學生個人資訊，以利用在包括像
-      Code Studio 這樣的教育計劃。"
-    tos: "服務條款"
-    privacy: "隱私政策"
-    privacy_notice: "隱私聲明"
+    title: 更新後的服務條款和隱私政策
+    intro_desc: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在
+      Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。
+    intro_instructions: 若你要小於 13 歲的學生能使用 Code Studio 上的完整功能，你必須接受這些新的條款。若要為 13 歲以下的學生註冊一個帳戶，則需要確認你的學校是否有其父母的同意學校收集並使用學生個人資訊，以利用在包括像
+      Code Studio 這樣的教育計劃。
+    tos: 服務條款
+    privacy: 隱私政策
+    privacy_notice: 隱私聲明
     accept_label: 我同意更新的 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank">
       隱私政策</a>
-    accept: "接受"
-    print: "列印"
+    accept: 接受
+    print: 列印
     reminder_desc: 我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授
       JavaScript 的工具。
-    review_terms: "查看更新後的條款"
+    review_terms: 查看更新後的條款
   school_info_interstitial:
-    title: "我們想要讓每個學生都能學習計算機科學 - 幫助我們紀錄學生進度！"
-    message: "請在下方輸入你的學校資訊。"
-    message_with_suggestion: "請檢查下方的資料是否正確，若必要時進行更新。"
-    save: "儲存"
+    title: 我們想要讓每個學生都能學習計算機科學 - 幫助我們紀錄學生進度！
+    message: 請在下方輸入你的學校資訊。
+    message_with_suggestion: 請檢查下方的資料是否正確，若必要時進行更新。
+    save: 儲存
   race_interstitial:
-    title: "非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性"
-    message: "請告訴我們你的種族（選擇）"
+    title: 非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性
+    message: 請告訴我們你的種族（選擇）
     races:
-    - white: "白人"
-    - black: "黑人/非裔美國人"
-    - hispanic: "西班牙裔或拉丁裔"
-    - asian: "亞裔"
-    - hawaiian: "夏威夷原住民或其他太平洋群島原住民"
-    - american_indian: "美國印地安人/阿拉斯加原住民"
-    - other: "其它"
-    - opt_out: "不想說"
-    submit: "提交"
-    decline: "關閉"
+    - white: 白人
+    - black: 黑人/非裔美國人
+    - hispanic: 西班牙裔或拉丁裔
+    - asian: 亞裔
+    - hawaiian: 夏威夷原住民或其他太平洋群島原住民
+    - american_indian: 美國印地安人/阿拉斯加原住民
+    - other: 其它
+    - opt_out: 不想說
+    submit: 提交
+    decline: 關閉
   zendesk_too_young_message: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。
   progress:
-    not_started: "未開始"
-    in_progress: "正在進行"
-    completed_too_many_blocks: "完成，過多積木"
-    completed_perfect: "完成，非常完美"
-    furthest_level_attempted: "最高級別嘗試"
-    assessment: "評量"
-    submitted: "已提交"
+    not_started: 未開始
+    in_progress: 正在進行
+    completed_too_many_blocks: 完成，過多積木
+    completed_perfect: 完成，非常完美
+    furthest_level_attempted: 最高級別嘗試
+    assessment: 評量
+    submitted: 已提交
   studio:
-    courses_working_on: "您正在進行的課程"
-    completed_courses: "已完成的課程"
-    all_courses: "所有課程"
+    courses_working_on: 您正在進行的課程
+    completed_courses: 已完成的課程
+    all_courses: 所有課程
   project:
-    projects: "所有專案"
-    create: "創建專案"
-    create_a_project: "創建一個新的專案："
-    new: "建立新專案"
-    rename: "重新命名"
-    save: "儲存"
-    delete: "删除"
-    import: "匯入"
-    share_link_import_bad_link_header: "無法辨識分享連結"
-    share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
-    share_link_import_error_header: "發生錯誤。"
-    share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
-    exit: "返回課程"
-    my_projects: "我的專案"
-    project_gallery: "所有專案"
-    publish: "發佈"
-    unpublish: "取消發佈"
-    share: "分享"
-    share_title: "分享你的專案"
-    share_copy_link: "複製連結："
-    share_embed_description: "你可以把嵌入代碼貼到一個 HTML 頁面，就可以在該網頁上顯示這個專案。"
-    share_u13_warning: "在分享之前問問你的老師。只和你學校裡的其他人分享。"
-    embed: "嵌入"
-    advanced_share: "顯示進階選項"
-    no_projects: "你目前沒有創建任何專案，點擊上方其中一個按鈕來開始一個專案。"
-    close: "關閉"
-    more: "更多"
-    name: "你的名字"
-    updated: "最後更新於"
-    project_type: "專案類型"
-    help_text: "點擊下方的<strong>做一個 App</strong>或<strong>畫一些東西</strong>來開始一個新的專案！<br/>你可以隨時回來繼續你的專案。"
-    need_help: "試試這些課程來幫助你開始新專案"
-    thumbnail_help: "你的專案縮圖不正確嗎？運行你的 app 以產生新的縮圖。注意，可能需要幾個小時後才能看到更新後的圖片。"
-    really_delete: "要刪除嗎？"
-    delete_yes: "是"
-    delete_no: "否"
-    saved: "已儲存"
-    not_saved: "未儲存"
-    cancel: "取消"
-    delete_confirm_title: "確定要刪除這個專案？"
-    delete_confirm_text: "刪除您當前的專案，將會把它從你的專案清單中永久移除，你已分享的連結也會永久失效。"
-    view_all: "檢視我的專案"
-    remix: "改編"
-    click_to_remix: "點擊「改編」，創造自己的版本！"
-    edit_project: "編輯專案"
-    sharing_disabled: "對不起，這個專案不是設定為可共享的。如果這是你的專案或你的學生之一的專案，請 <a href='https://studio.code.org/users/sign_in'>登入</a>到你的帳號，以查看該專案。"
+    projects: 所有專案
+    create: 創建專案
+    create_a_project: 創建一個新的專案：
+    new: 建立新專案
+    rename: 重新命名
+    save: 儲存
+    delete: 删除
+    import: 匯入
+    share_link_import_bad_link_header: 無法辨識分享連結
+    share_link_import_bad_link_body: '我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。'
+    share_link_import_error_header: 發生錯誤。
+    share_link_import_error_body: 匯入分享連結時發生問題。請再試一次。
+    exit: 返回課程
+    my_projects: 我的專案
+    project_gallery: 所有專案
+    publish: 發佈
+    unpublish: 取消發佈
+    share: 分享
+    share_title: 分享你的專案
+    share_copy_link: 複製連結：
+    share_embed_description: 你可以把嵌入代碼貼到一個 HTML 頁面，就可以在該網頁上顯示這個專案。
+    share_u13_warning: 在分享之前問問你的老師。只和你學校裡的其他人分享。
+    embed: 嵌入
+    advanced_share: 顯示進階選項
+    no_projects: 你目前沒有創建任何專案，點擊上方其中一個按鈕來開始一個專案。
+    close: 關閉
+    more: 更多
+    name: 你的名字
+    updated: 最後更新於
+    project_type: 專案類型
+    help_text: 點擊下方的<strong>做一個 App</strong>或<strong>畫一些東西</strong>來開始一個新的專案！<br/>你可以隨時回來繼續你的專案。
+    need_help: 試試這些課程來幫助你開始新專案
+    thumbnail_help: 你的專案縮圖不正確嗎？運行你的 app 以產生新的縮圖。注意，可能需要幾個小時後才能看到更新後的圖片。
+    really_delete: 要刪除嗎？
+    delete_yes: 是
+    delete_no: 否
+    saved: 已儲存
+    not_saved: 未儲存
+    cancel: 取消
+    delete_confirm_title: 確定要刪除這個專案？
+    delete_confirm_text: 刪除您當前的專案，將會把它從你的專案清單中永久移除，你已分享的連結也會永久失效。
+    view_all: 檢視我的專案
+    remix: 改編
+    click_to_remix: 點擊「改編」，創造自己的版本！
+    edit_project: 編輯專案
+    sharing_disabled: 對不起，這個專案不是設定為可共享的。如果這是你的專案或你的學生之一的專案，請 <a href='https://studio.code.org/users/sign_in'>登入</a>到你的帳號，以查看該專案。
     abuse:
-      tos: "這個專案被檢舉違反了 Code.org 的<a href='http://code.org/tos'>服務條款</a>，因此不能跟其它人進行分享。"
-      policy_violation: "這個專案包含了無法分享給其他人的資訊。請聯絡 app 的擁有者以修正它們的 app 內容。"
-      contact_us: "如果你認為這確實是個錯誤，請<a href='Https://code.org/contact'>聯繫我們</a>。"
-      go_to_code_studio: "前往 Code Studio"
+      tos: 這個專案被檢舉違反了 Code.org 的<a href='http://code.org/tos'>服務條款</a>，因此不能跟其它人進行分享。
+      policy_violation: 這個專案包含了無法分享給其他人的資訊。請聯絡 app 的擁有者以修正它們的 app 內容。
+      contact_us: 如果你認為這確實是個錯誤，請<a href='Https://code.org/contact'>聯繫我們</a>。
+      go_to_code_studio: 前往 Code Studio
       report_abuse_form:
-        intro: "若你發覺 Code Studio 製作出來的應用程式中有像是威脅、網路霸淩、騷擾或侵犯版權的內容，請填寫下面的表格。我們非常重視你回報的內容，並會進行相關的調查及採取適當的行動。"
+        intro: 若你發覺 Code Studio 製作出來的應用程式中有像是威脅、網路霸淩、騷擾或侵犯版權的內容，請填寫下面的表格。我們非常重視你回報的內容，並會進行相關的調查及採取適當的行動。
         validation:
-          email: "請提供一個電子信箱"
-          age: "請指定適用年齡"
-          abuse_type: "請說明內容是如何違反服務條款。"
-          abuse_detail: "請提供有關您所回報內容的詳細資訊"
-        abusive_url: "要檢舉的網址"
+          email: 請提供一個電子信箱
+          age: 請指定適用年齡
+          abuse_type: 請說明內容是如何違反服務條款。
+          abuse_detail: 請提供有關您所回報內容的詳細資訊
+        abusive_url: 要檢舉的網址
         abuse_type:
-          question: "這個內容違反了什麼%{link_start}服務條款%{link_end}？"
-          harassment: "威脅，網路霸淩及騷擾"
-          offensive: "冒犯性內容"
-          infringement: "著作權侵權"
-          other: "其它"
-        detail: "依據您所回報的內容，請盡可能提供更詳盡的細節。"
-        acknowledge: "通過提交此訊息，代表你已了解所有的處理及保管都將遵循%{link_start_privacy}隱私政策%{link_end}以及%{link_start_tos}服務條款%{link_end}。"
+          question: 這個內容違反了什麼%{link_start}服務條款%{link_end}？
+          harassment: 威脅，網路霸淩及騷擾
+          offensive: 冒犯性內容
+          infringement: 著作權侵權
+          other: 其它
+        detail: 依據您所回報的內容，請盡可能提供更詳盡的細節。
+        acknowledge: 通過提交此訊息，代表你已了解所有的處理及保管都將遵循%{link_start_privacy}隱私政策%{link_end}以及%{link_start_tos}服務條款%{link_end}。
   peer_review:
     accepted:
-      name: "已接受"
+      name: 已接受
       description: "<strong>同意</strong> ，這個提交 <strong>符合</strong> 要求"
     rejected:
-      name: "已拒絕"
+      name: 已拒絕
       description: "<strong>否決</strong>，這個提交<strong>不符</strong> 要求"
     escalated:
-      name: "升級"
-      description: "我需要一個指導者來審查此提交"
-    instructor_feedback: "教師回饋"
-    peer_feedback: "同伴反饋"
-    outdated: "這是先前版本的回饋內容"
+      name: 升級
+      description: 我需要一個指導者來審查此提交
+    instructor_feedback: 教師回饋
+    peer_feedback: 同伴反饋
+    outdated: 這是先前版本的回饋內容
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -908,31 +906,31 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "概覽"
-    content: "內容"
-    practice: "老師的做法"
-    peer_review: "同儕審查"
+    required: 概覽
+    content: 內容
+    practice: 老師的做法
+    peer_review: 同儕審查
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: "主要課程"
-    extra_course_content: "額外的課程內容"
-    csf_e_1: "升至課程 E (可選擇的)"
-    csf_e_2: "課程 E 內容"
-    csf_f_1: "升至課程 F (可選擇的)"
-    csf_f_2: "課程 F 內容"
-    csd1_1: "第 1 章：解決問題的流程"
-    csd1_2: "第 2 章：計算機與問題解決能力"
-    csd2_1: "第 1 章：網站內容和 HTML"
-    csd2_2: "第 2 章：樣式和 CSS"
-    csd3_1: "第 1 章：圖像和動畫"
-    csd3_2: "第 2 章：創建遊戲"
-    csd4_1: "第 1 章：用戶為中心的設計"
-    csd4_2: "第 2 章︰ 應用程式原型"
-    csd5_1: "第 1 章：表達信息"
-    csd5_2: "第 2 章：解決數據問題"
-    csd6_1: "第 1 章：硬體輸出"
-    csd6_2: "第 2 章：硬體輸入"
+    main_course: 主要課程
+    extra_course_content: 額外的課程內容
+    csf_e_1: 升至課程 E (可選擇的)
+    csf_e_2: 課程 E 內容
+    csf_f_1: 升至課程 F (可選擇的)
+    csf_f_2: 課程 F 內容
+    csd1_1: 第 1 章：解決問題的流程
+    csd1_2: 第 2 章：計算機與問題解決能力
+    csd2_1: 第 1 章：網站內容和 HTML
+    csd2_2: 第 2 章：樣式和 CSS
+    csd3_1: 第 1 章：圖像和動畫
+    csd3_2: 第 2 章：創建遊戲
+    csd4_1: 第 1 章：用戶為中心的設計
+    csd4_2: 第 2 章︰ 應用程式原型
+    csd5_1: 第 1 章：表達信息
+    csd5_2: 第 2 章：解決數據問題
+    csd6_1: 第 1 章：硬體輸出
+    csd6_2: 第 2 章：硬體輸入
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -941,70 +939,70 @@
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: "問卷"
-    cspAssessment: "章節測驗"
+    cspSurvey: 問卷
+    cspAssessment: 章節測驗
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: "反射提示"
+    dlp: 反射提示
   external_links:
-    disclaimer: "免責聲明"
-    leaving_domain: "你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。"
-    disclaimer_text: "這個站台可能包含與 Code.org 不同的隱私策略。我們選擇了這些第三方資源，因為我們認為他們對你有幫助。我們並不直接對該網站的內容負責，如果你發現了讓你反感的內容，或這個鏈接指向的站台已不再可用，請<a
-      href='%{support_url}'>聯絡我們的支援中心</a>。"
+    disclaimer: 免責聲明
+    leaving_domain: 你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。
+    disclaimer_text: 這個站台可能包含與 Code.org 不同的隱私策略。我們選擇了這些第三方資源，因為我們認為他們對你有幫助。我們並不直接對該網站的內容負責，如果你發現了讓你反感的內容，或這個鏈接指向的站台已不再可用，請<a
+      href='%{support_url}'>聯絡我們的支援中心</a>。
   hoc_download:
-    title: "一小時玩程式相關下載"
-    capsule_title: "你有網路嗎？"
+    title: 一小時玩程式相關下載
+    capsule_title: 你有網路嗎？
     capsule_desc: 使用在線 Web 式的 <a href="%{url}">%{app_name}</a>。
-    instructions_headline: "沒有網路？"
+    instructions_headline: 沒有網路？
     instructions: 給教師的指南： 如果你的網路很慢，這些課程都可以下載並離線安裝。選擇你的語言和平台，然後下載和安裝在教室的所有電腦上。你可以使用
       USB 隨身碟一次安裝所有電腦上。註：學生將不能登錄並在 Code Studio 上保存進度，也無法列印證書。你可以提前<a href="%{url}">在這裡列印證書</a>。
-    minecraft_name: "一小時玩 Minecraft"
-    starwars_blocks_name: "星際大戰：用程式建立一個銀河系（程式積木）"
-    starwars_javascript_name: "星際大戰：用程式建立一個銀河系（JavaScript）"
-    download_message: "下載 %{app_name} 以離線使用（136MB）"
-    download_in_Albanian: "下載 Albanian 版："
-    download_in_Arabic: "下載 Arabic 版："
-    download_in_Azerbaijani: "下載 Azerbaijani 版："
-    download_in_Basque: "下載 Basque 版："
-    download_in_Bosnian: "下載 Bosnian 版："
-    download_in_Bulgarian: "下載 Bulgarian 版："
-    download_in_Catalan: "下載 Catalan 版："
-    download_in_Chinese-Taiwan: "下載繁體中文版："
-    download_in_Chinese: "下載簡體中文版："
-    download_in_Croatian: "下載 Croatian 版："
-    download_in_Czech: "下載 Czech 版："
-    download_in_Danish: "下載 Danish 版："
-    download_in_Dutch: "下載 Dutch 版："
-    download_in_English: "下載 English 版："
-    download_in_Finnish: "下載 Finnish 版："
-    download_in_French: "下載 French 版："
-    download_in_German: "下載 German 版："
-    download_in_Greek: "下載 Greek 版："
-    download_in_Hebrew: "下載 Hebrew 版："
-    download_in_Hungarian: "下載 Hungarian 版："
-    download_in_Icelandic: "下載 Icelandic 版："
-    download_in_Indonesian: "下載 Indonesian 版："
-    download_in_Irish: "下載 Irish 版："
-    download_in_Italian: "下載 Italian 版："
-    download_in_Japanese: "下載 Japanese 版："
-    download_in_Korean: "下載 Korean 版："
-    download_in_Latvian: "下載 Latvian 版："
-    download_in_Lithuanian: "下載 Lithuanian 版："
-    download_in_Norwegian: "下載 Norwegian 版："
-    download_in_Norwegian-Nynorsk: "下載 Norwegian-Nynorsk 版："
-    download_in_Polish: "下載 Polish 版："
-    download_in_Portuguese-Brazil: "下載 Portuguese-Brazil 版："
-    download_in_Portuguese: "下載 Portuguese 版："
-    download_in_Romanian: "下載 Romanian 版："
-    download_in_Russian: "下載 Russian 版："
-    download_in_Serbian: "下載 Serbian 版："
-    download_in_Slovenian: "下載 Slovenian 版："
-    download_in_Spanish: "下載 Spanish 版："
-    download_in_Swedish: "下載 Swedish 版："
-    download_in_Turkish: "下載 Turkish 版："
-    download_in_Ukrainian: "下載 Ukrainian 版："
-    download_in_Vietnamese: "下載 Vietnamese 版："
+    minecraft_name: 一小時玩 Minecraft
+    starwars_blocks_name: 星際大戰：用程式建立一個銀河系（程式積木）
+    starwars_javascript_name: 星際大戰：用程式建立一個銀河系（JavaScript）
+    download_message: 下載 %{app_name} 以離線使用（136MB）
+    download_in_Albanian: 下載 Albanian 版：
+    download_in_Arabic: 下載 Arabic 版：
+    download_in_Azerbaijani: 下載 Azerbaijani 版：
+    download_in_Basque: 下載 Basque 版：
+    download_in_Bosnian: 下載 Bosnian 版：
+    download_in_Bulgarian: 下載 Bulgarian 版：
+    download_in_Catalan: 下載 Catalan 版：
+    download_in_Chinese-Taiwan: 下載繁體中文版：
+    download_in_Chinese: 下載簡體中文版：
+    download_in_Croatian: 下載 Croatian 版：
+    download_in_Czech: 下載 Czech 版：
+    download_in_Danish: 下載 Danish 版：
+    download_in_Dutch: 下載 Dutch 版：
+    download_in_English: 下載 English 版：
+    download_in_Finnish: 下載 Finnish 版：
+    download_in_French: 下載 French 版：
+    download_in_German: 下載 German 版：
+    download_in_Greek: 下載 Greek 版：
+    download_in_Hebrew: 下載 Hebrew 版：
+    download_in_Hungarian: 下載 Hungarian 版：
+    download_in_Icelandic: 下載 Icelandic 版：
+    download_in_Indonesian: 下載 Indonesian 版：
+    download_in_Irish: 下載 Irish 版：
+    download_in_Italian: 下載 Italian 版：
+    download_in_Japanese: 下載 Japanese 版：
+    download_in_Korean: 下載 Korean 版：
+    download_in_Latvian: 下載 Latvian 版：
+    download_in_Lithuanian: 下載 Lithuanian 版：
+    download_in_Norwegian: 下載 Norwegian 版：
+    download_in_Norwegian-Nynorsk: 下載 Norwegian-Nynorsk 版：
+    download_in_Polish: 下載 Polish 版：
+    download_in_Portuguese-Brazil: 下載 Portuguese-Brazil 版：
+    download_in_Portuguese: 下載 Portuguese 版：
+    download_in_Romanian: 下載 Romanian 版：
+    download_in_Russian: 下載 Russian 版：
+    download_in_Serbian: 下載 Serbian 版：
+    download_in_Slovenian: 下載 Slovenian 版：
+    download_in_Spanish: 下載 Spanish 版：
+    download_in_Swedish: 下載 Swedish 版：
+    download_in_Turkish: 下載 Turkish 版：
+    download_in_Ukrainian: 下載 Ukrainian 版：
+    download_in_Vietnamese: 下載 Vietnamese 版：
     windows: Windows（64 位元）
     mac: Mac OS X
   plc:
@@ -1020,13 +1018,13 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: "此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。"
-  hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
+  locked_stage: 此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。
+  hidden_stage: 你的老師沒想到你會在這，問問你的老師你該上哪堂課。
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
-  return_unit_overview: "移至單元概覽"
-  return_course_overview: "移至課程概覽"
-  view_all_units: "查看所有單元"
+  return_unit_overview: 移至單元概覽
+  return_course_overview: 移至課程概覽
+  view_all_units: 查看所有單元
   pd:
     survey:
       number_teachers: Number of attending teachers

@@ -3,7 +3,7 @@
     course:
       name:
         csp:
-          title: "컴퓨터 과학의 원리"
+          title: 컴퓨터 과학의 원리
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
             to the foundational concepts of computer science and challenges them to
@@ -20,9 +20,9 @@
             in computer science fields and attracting and engaging those who are traditionally
             underrepresented with essential computing tools and multidisciplinary
             opportunities.
-          description_short: "기초적인 컴퓨터 과학의 원리를 배우기"
+          description_short: 기초적인 컴퓨터 과학의 원리를 배우기
         csd:
-          title: "컴퓨터 과학의 발견"
+          title: 컴퓨터 과학의 발견
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
@@ -34,7 +34,7 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: "모든 것을 포함한 코스"
-          description_short: "이 코스는 모든것을 위한 것입니다."
-          description_student: "이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다."
-          description_teacher: "이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다."
+          title: 모든 것을 포함한 코스
+          description_short: 이 코스는 모든것을 위한 것입니다.
+          description_student: 이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다.
+          description_teacher: 이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다.

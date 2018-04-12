@@ -61,7 +61,7 @@
   appname: Code.org
   stage: Etap
   stage_number: Etap %{number}
-  puzzle: "Łamigłówka"
+  puzzle: Łamigłówka
   trophies: Trofea
   courses: Kursy
   courses_page:
@@ -355,7 +355,7 @@
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
-      lines: "Łączna ilość linii kodu: %{lines}"
+      lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
       mastery: Pojęcia
       puzzle_map: Etapy
