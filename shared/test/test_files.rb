@@ -612,11 +612,11 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
 
-    # Flags the asset as abusive
-    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
-    metadata = asset[:metadata]
-    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    assert_operator 10, :<=, asset_abuse
+    # Flags the thumbnail as abusive
+    thumbnail = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = thumbnail[:metadata]
+    thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_operator 10, :<=, thumbnail_abuse
 
     @api.delete_object(thumbnail_filename)
     assert successful?
@@ -647,11 +647,11 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
 
-    # Flags the asset as abusive
-    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
-    metadata = asset[:metadata]
-    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    assert_operator 10, :<=, asset_abuse
+    # Flags the thumbnail as abusive
+    thumbnail = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = thumbnail[:metadata]
+    thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_operator 10, :<=, thumbnail_abuse
 
     @api.delete_object(thumbnail_filename)
     assert successful?
@@ -675,11 +675,11 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal 0, JSON.parse(last_response.body)['abuse_score']
 
-    # Does not flag the asset as abusive
-    asset = FileBucket.new.get(@channel_id, thumbnail_filename)
-    metadata = asset[:metadata]
-    asset_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    assert_equal 0, asset_abuse
+    # Does not flag the thumbnail as abusive
+    thumbnail = FileBucket.new.get(@channel_id, thumbnail_filename)
+    metadata = thumbnail[:metadata]
+    thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    assert_equal 0, thumbnail_abuse
 
     @api.delete_object(thumbnail_filename)
     assert successful?
