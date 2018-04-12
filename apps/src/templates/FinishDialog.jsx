@@ -14,6 +14,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
+import { shareProject } from '@cdo/apps/code-studio/headerShare';
 
 const styles = {
   pageWrapper: {
@@ -26,7 +27,7 @@ const styles = {
     left: 0,
     right: 0,
     margin: 'auto',
-    zIndex: 1050,
+    zIndex: 1040,
   },
   modal: {
     position: 'relative',
@@ -231,6 +232,7 @@ export class UnconnectedFinishDialog extends Component {
     })),
     showFunometer: PropTypes.bool,
     canShare: PropTypes.bool,
+    getShareUrl: PropTypes.func,
     studentCode: PropTypes.shape({
       message: PropTypes.string,
       code: PropTypes.string,
@@ -506,7 +508,10 @@ export class UnconnectedFinishDialog extends Component {
                           backgroundImage: `url(${thumbnailUrl})`,
                         }}
                       />
-                      <button style={styles.shareButton}>
+                      <button
+                        style={styles.shareButton}
+                        onClick={() => shareProject(this.props.getShareUrl())}
+                      >
                         {msg.share()}
                       </button>
                     </div>
