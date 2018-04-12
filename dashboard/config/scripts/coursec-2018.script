@@ -139,6 +139,9 @@ level 'courseC_flappy_events8_2018'
 level 'courseC_flappy_events9_2018'
 level 'courseC_flappy_events10_2018'
 
+stage 'Screen Out the Mean'
+level 'courseC_Unplugged_ScreenOutTheMean_2018'
+
 stage 'Events in Play Lab'
 level 'courseC_PlayLab_events1_2018'
 level 'courseC_PlayLab_events2_2018'
@@ -152,9 +155,6 @@ level 'courseC_PlayLab_events9_2018'
 level 'courseC_PlayLab_eventsA_2018'
 level 'courseC_PlayLab_eventsFP_2018'
 bonus 'courseC_PlayLab_events_challenge1_2018'
-
-stage 'Screen Out the Mean'
-level 'courseC_Unplugged_ScreenOutTheMean_2018'
 
 stage 'Binary Bracelets'
 level 'BinaryBracelets_2018'
