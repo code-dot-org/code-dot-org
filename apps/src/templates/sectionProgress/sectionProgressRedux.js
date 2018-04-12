@@ -1,5 +1,11 @@
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import { PropTypes } from 'react';
+import {
+  NAME_COLUMN_WIDTH,
+  PROGRESS_BUBBLE_WIDTH,
+  DIAMOND_BUBBLE_WIDTH,
+  PILL_BUBBLE_WIDTH,
+} from './multiGridConstants';
 import _ from 'lodash';
 
 const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
@@ -153,6 +159,34 @@ export const getCurrentProgress = (state) => {
  */
 export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+};
+
+/**
+ * Calculate the width of each column in the detail view based on types of levels
+ * @returns {Array} array of integers indicating the length of each column
+ */
+export const getColumnWidthsForDetailView = (state) => {
+  let columnLengths = [NAME_COLUMN_WIDTH];
+  const stages = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId].stages;
+
+  for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
+    const levels = stages[stageIndex].levels;
+    let width = 0;
+    for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
+      if (levels[levelIndex].kind === 'unplugged') {
+        // Pill shaped bubble
+        width = width + PILL_BUBBLE_WIDTH;
+      } else if (levels[levelIndex].is_concept_level) {
+        // Diamond shaped bubble
+        width = width + DIAMOND_BUBBLE_WIDTH;
+      } else {
+        // Circle bubble
+        width = width + PROGRESS_BUBBLE_WIDTH;
+      }
+    }
+    columnLengths.push(width || 0);
+  }
+  return columnLengths;
 };
 
 
