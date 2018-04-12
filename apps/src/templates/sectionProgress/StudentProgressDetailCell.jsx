@@ -9,7 +9,6 @@ import {
 
 const styles = {
   bubbles: {
-    overflowX: 'scroll',
     whiteSpace: 'nowrap',
   },
   cell: {
