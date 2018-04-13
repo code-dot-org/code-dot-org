@@ -6,8 +6,8 @@ level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
 level 'courseD_maze_ramp3'
-level 'courseD_maze_ramp4'
 level 'courseD_maze_ramp5'
+level 'courseD_maze_ramp4'
 level 'courseD_maze_ramp5a'
 level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
@@ -60,6 +60,20 @@ variants
   level 'courseD_bounce_events12s'
   level 'bounce_12'
 endvariants
+
+stage 'Loops in Ice Age'
+level 'courseD_iceage_loops1'
+level 'courseD_iceage_loops2'
+level 'courseD_iceage_loops_video'
+level 'courseD_iceage_loops3'
+level 'courseD_iceage_loops4'
+level 'courseD_iceage_loops6'
+level 'courseD_iceage_loops7'
+level 'courseD_iceage_loops8'
+level 'courseD_iceage_loops9'
+level 'courseD_iceage_loops10', challenge: true
+level 'courseD_iceage_loops11'
+level 'courseD_iceage_loops12'
 
 stage 'Loops in Artist'
 level 'ramp_video_artistIntro'
