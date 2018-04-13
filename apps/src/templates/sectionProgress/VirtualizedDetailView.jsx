@@ -11,11 +11,18 @@ import {
   getColumnWidthsForDetailView
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE, PROGRESS_BUBBLE_WIDTH} from './multiGridConstants';
+import {
+  progressStyles,
+  ROW_HEIGHT,
+  MAX_TABLE_SIZE,
+  PROGRESS_BUBBLE_WIDTH,
+  DIAMOND_BUBBLE_WIDTH,
+} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
 const ARROW_PADDING = 60;
+const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH);
 
 const styles = {
   numberHeader: {
@@ -105,11 +112,11 @@ class VirtualizedDetailView extends Component {
             <div style={styles.numberHeader}>
               {columnIndex}
             </div>
-            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+            {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
               <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>
               </div>
             }
-            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+            {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
               <div>
                 <i style={styles.lessonArrow}></i>
               </div>
