@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@github:code-dot-org/blockly#01743377bcd8249dfed30ded1874c7b1c056fae0":
-  version "1.8.2"
-  resolved "https://codeload.github.com/code-dot-org/blockly/tar.gz/01743377bcd8249dfed30ded1874c7b1c056fae0"
+"@code-dot-org/blockly@1.8.2-add-anglehelper-options":
+  version "1.8.2-add-anglehelper-options"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.8.2-add-anglehelper-options.tgz#87296200131e0b1b50e38626cebec6cf6084ae2d"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
