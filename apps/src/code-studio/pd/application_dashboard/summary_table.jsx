@@ -66,11 +66,13 @@ export class SummaryTable extends React.Component {
     });
   }
 
-  handleViewClick = () => {
+  handleViewClick = (event) => {
+    event.preventDefault();
     this.context.router.push(`/${this.props.path}`);
   };
 
-  handleViewCohortClick = () => {
+  handleViewCohortClick = (event) => {
+    event.preventDefault();
     this.context.router.push(`/${this.props.path}_cohort`);
   };
 
@@ -97,6 +99,7 @@ export class SummaryTable extends React.Component {
           </tbody>
         </Table>
         <Button
+          href={this.context.router.createHref(`/${this.props.path}`)}
           onClick={this.handleViewClick}
           style={styles.viewApplicationsButton}
         >
@@ -105,6 +108,7 @@ export class SummaryTable extends React.Component {
         {
           this.props.data.accepted.locked + this.props.data.accepted.unlocked > 0 && (
             <Button
+              href={this.context.router.createHref(`/${this.props.path}_cohort`)}
               onClick={this.handleViewCohortClick}
             >
               View accepted cohort

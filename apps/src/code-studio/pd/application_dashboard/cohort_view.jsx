@@ -133,7 +133,7 @@ class CohortView extends React.Component {
               style={styles.button}
               onClick={this.handleViewAllClick}
             >
-              View All Applications
+              View all applications
             </Button>
           </Col>
           <CohortViewTable
