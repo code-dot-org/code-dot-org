@@ -51,8 +51,8 @@ class AdvocacySite
               new_tab: true
             },
             {
-              text_actual: "Current state legislation",
-              url: "/state-legislation"
+              text_actual: "Current state and federal legislation",
+              url: "/current-legislation"
             },
             {
               text_actual: "Nation's leaders support CS",
@@ -104,7 +104,7 @@ class AdvocacySite
         links:
           [
             {
-              text_actual: "AP CS Report",
+              text_actual: "AP CS report",
               url: CDO.code_org_url("/promote/ap")
             },
             {
@@ -113,7 +113,7 @@ class AdvocacySite
               new_tab: true
             },
             {
-              text_actual: "State Planning Toolkit",
+              text_actual: "State planning toolkit",
               url: "https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit",
               new_tab: true
             },

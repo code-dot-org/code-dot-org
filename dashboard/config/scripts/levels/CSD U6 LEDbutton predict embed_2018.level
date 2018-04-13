@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-12T20:52:39.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "# Using Events\r\n\r\nThis program uses events.  Look at the code with a partner and discuss what you think it will do.  Once you have answered the questions click \"Run\" to check your answer.\r\n\r\n* Will the light turn on when the program is \"Run\"?  Why or why not?",
+    "parent_level_id": 10286,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-19 21:25:44 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-19 21:26:34 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-19 21:28:30 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-17 23:12:36 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</FreeResponse>

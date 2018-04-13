@@ -238,7 +238,7 @@ class Visualization {
   }
 
   /**
-   * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
+   * Draw the turtle image based on this.x, this.y, and this.heading.
    */
   drawTurtle() {
     if (!this.avatar.visible) {
@@ -405,6 +405,37 @@ class Visualization {
   setHeading(heading) {
     heading = this.constrainDegrees_(heading);
     this.heading = heading;
+  }
+
+  reset(startDirection = DEFAULT_DIRECTION, initialX = DEFAULT_X, initialY = DEFAULT_Y) {
+    // Standard starting location and heading of the turtle.
+    this.x = initialX;
+    this.y = initialY;
+    this.heading = startDirection;
+    this.penDownValue = true;
+    this.avatar.visible = true;
+    this.resetTurtleFrame();
+
+    // Clear the display.
+    this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
+    this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
+    if (this.isFrozenSkin) {
+      this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+      this.ctxScratch.fillStyle = 'rgb(255,255,255)';
+      this.ctxScratch.lineWidth = 2;
+    } else {
+      this.ctxScratch.strokeStyle = '#000000';
+      this.ctxScratch.fillStyle = '#000000';
+      this.ctxScratch.lineWidth = 5;
+    }
+
+    this.ctxScratch.lineCap = 'round';
+    this.ctxScratch.font = 'normal 18pt Arial';
+    this.display();
+
+    // Clear the feedback.
+    this.ctxFeedback.clearRect(
+      0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   }
 
   /**
@@ -1087,42 +1118,7 @@ Artist.prototype.loadDecorationAnimation = function () {
  *     implementation.
  */
 Artist.prototype.reset = function (ignore) {
-  // Standard starting location and heading of the turtle.
-  this.visualization.x = DEFAULT_X;
-  this.visualization.y = DEFAULT_Y;
-  this.visualization.heading = this.level.startDirection !== undefined ?
-      this.level.startDirection : DEFAULT_DIRECTION;
-  this.visualization.penDownValue = true;
-  this.visualization.avatar.visible = true;
-  this.visualization.resetTurtleFrame();
-
-  // For special cases, use a different initial location.
-  if (this.level.initialX !== undefined) {
-    this.visualization.x = this.level.initialX;
-  }
-  if (this.level.initialY !== undefined) {
-    this.visualization.y = this.level.initialY;
-  }
-  // Clear the display.
-  this.visualization.ctxScratch.canvas.width = this.visualization.ctxScratch.canvas.width;
-  this.visualization.ctxPattern.canvas.width = this.visualization.ctxPattern.canvas.width;
-  if (this.isFrozenSkin()) {
-    this.visualization.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    this.visualization.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    this.visualization.ctxScratch.lineWidth = 2;
-  } else {
-    this.visualization.ctxScratch.strokeStyle = '#000000';
-    this.visualization.ctxScratch.fillStyle = '#000000';
-    this.visualization.ctxScratch.lineWidth = 5;
-  }
-
-  this.visualization.ctxScratch.lineCap = 'round';
-  this.visualization.ctxScratch.font = 'normal 18pt Arial';
-  this.visualization.display();
-
-  // Clear the feedback.
-  this.visualization.ctxFeedback.clearRect(
-      0, 0, this.visualization.ctxFeedback.canvas.width, this.visualization.ctxFeedback.canvas.height);
+  this.visualization.reset(this.level.startDirection, this.level.initialX, this.level.initialY);
 
   this.selectPattern();
 
