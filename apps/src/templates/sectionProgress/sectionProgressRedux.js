@@ -25,18 +25,7 @@ export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
 });
 export const setSection = (section) => {
   // Sort section.students by name.
-  const sortedStudents = section.students.sort((studentA, studentB) => {
-    // Ignore case.
-    const studentNameA = studentA.name.toLowerCase();
-    const studentNameB = studentB.name.toLowerCase();
-    if (studentNameA < studentNameB) {
-      return -1;
-    }
-    if (studentNameA > studentNameB) {
-      return 1;
-    }
-    return 0;
-  });
+  const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
 };
 
