@@ -45,6 +45,15 @@
     %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
       %button
         See a summary of state efforts
+  %p#sources
+    %span
+      Sources:
+    %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
+    and
+    =succeed "." do
+      %a{href: "http://nces.ed.gov/", style: "color: #BCC2C6", target: '_blank'} National Center for Education Statistics
+    =succeed "." do
+      %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
 
 :javascript
   var webServiceLocation = '/promote/state/';

@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
@@ -11,11 +11,19 @@ import {
   getColumnWidthsForDetailView
 } from './sectionProgressRedux';
 import color from "../../util/color";
-import {progressStyles, ROW_HEIGHT, MAX_TABLE_SIZE, PROGRESS_BUBBLE_WIDTH} from './multiGridConstants';
+import {
+  progressStyles,
+  ROW_HEIGHT,
+  MAX_TABLE_SIZE,
+  PROGRESS_BUBBLE_WIDTH,
+  DIAMOND_BUBBLE_WIDTH,
+} from './multiGridConstants';
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
 const ARROW_PADDING = 60;
+// Only show arrow next to lesson numbers if column is larger than a single small bubble
+const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH);
 
 const styles = {
   numberHeader: {
@@ -53,6 +61,7 @@ class VirtualizedDetailView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
+    lessonOfInterest: PropTypes.number.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
@@ -62,6 +71,14 @@ class VirtualizedDetailView extends Component {
     scrollToColumn: 0,
     scrollToRow: 0,
   };
+
+  componentWillReceiveProps(nextProps) {
+    // When we replace the script, re-compute the column widths
+    if (this.props.scriptData.id !== nextProps.scriptData.id) {
+      this.refs.detailView.recomputeGridSize();
+      this.refs.detailView.measureAllCells();
+    }
+  }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
@@ -96,11 +113,11 @@ class VirtualizedDetailView extends Component {
             <div style={styles.numberHeader}>
               {columnIndex}
             </div>
-            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+            {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
               <div style={{...styles.lessonLine, width: columnWidths[columnIndex] - ARROW_PADDING}}>
               </div>
             }
-            {(columnWidths[columnIndex] > PROGRESS_BUBBLE_WIDTH) &&
+            {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
               <div>
                 <i style={styles.lessonArrow}></i>
               </div>
@@ -116,7 +133,7 @@ class VirtualizedDetailView extends Component {
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                className={level.icon ? level.icon: "fas fa-question"}
+                icon={level.icon ? level.icon.replace('fa-', '') : "desktop"}
                 style={progressStyles.icon}
                 key={i}
               />
@@ -149,7 +166,7 @@ class VirtualizedDetailView extends Component {
   };
 
   render() {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, lessonOfInterest} = this.props;
     // Add 2 to account for the 2 header rows
     const rowCount = section.students.length + 2;
     // Add 1 to account for the student name column
@@ -160,22 +177,24 @@ class VirtualizedDetailView extends Component {
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
-        <MultiGrid
-          {...this.state}
-          cellRenderer={this.cellRenderer}
-          columnWidth={this.getColumnWidth}
-          columnCount={columnCount}
-          enableFixedColumnScroll
-          enableFixedRowScroll
-          rowHeight={ROW_HEIGHT}
-          height={tableHeight}
-          rowCount={rowCount}
-          style={progressStyles.multigrid}
-          styleBottomLeftGrid={progressStyles.bottomLeft}
-          styleTopLeftGrid={progressStyles.topLeft}
-          styleTopRightGrid={progressStyles.topRight}
-          width={styleConstants['content-width']}
-        />
+      <MultiGrid
+        {...this.state}
+        cellRenderer={this.cellRenderer}
+        columnWidth={this.getColumnWidth}
+        columnCount={columnCount}
+        enableFixedColumnScroll
+        enableFixedRowScroll
+        rowHeight={ROW_HEIGHT}
+        height={tableHeight}
+        scrollToColumn={lessonOfInterest}
+        rowCount={rowCount}
+        style={progressStyles.multigrid}
+        styleBottomLeftGrid={progressStyles.bottomLeft}
+        styleTopLeftGrid={progressStyles.topLeft}
+        styleTopRightGrid={progressStyles.topRight}
+        width={styleConstants['content-width']}
+        ref="detailView"
+      />
     );
   }
 }

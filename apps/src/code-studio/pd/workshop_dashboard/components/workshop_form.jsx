@@ -305,6 +305,7 @@ export class WorkshopForm extends React.Component {
         <FormControl
           componentClass="select"
           value={this.state.course || ''}
+          id="course"
           name="course"
           onChange={this.handleCourseChange}
           style={this.getInputStyle()}
@@ -384,6 +385,7 @@ export class WorkshopForm extends React.Component {
             </ControlLabel>
             <FormControl
               componentClass="select"
+              id="funded"
               name="funded"
               value={value}
               onChange={this.handleFundingChange}
@@ -471,6 +473,7 @@ export class WorkshopForm extends React.Component {
           Regional Partner
         </ControlLabel>
         <Select
+          id="regional-partner-select"
           name="regional_partner_id"
           onChange={this.handleRegionalPartnerSelect}
           style={this.getInputStyle()}
@@ -496,6 +499,7 @@ export class WorkshopForm extends React.Component {
           <FormControl
             componentClass="select"
             value={this.state.subject || ''}
+            id="subject"
             name="subject"
             onChange={this.handleFieldChange}
             style={this.props.readOnly && styles.readOnlyInput}
@@ -798,6 +802,7 @@ export class WorkshopForm extends React.Component {
                 <FormControl
                   type="text"
                   value={this.state.location_name || ''}
+                  id="location_name"
                   name="location_name"
                   onChange={this.handleFieldChange}
                   maxLength={255}
@@ -816,6 +821,7 @@ export class WorkshopForm extends React.Component {
                   ref={ref => this.locationAddressControl = ReactDOM.findDOMNode(ref)}
                   value={this.state.location_address || ''}
                   placeholder="Enter a location"
+                  id="location_address"
                   name="location_address"
                   onChange={this.handleFieldChange}
                   maxLength={255}
@@ -833,6 +839,7 @@ export class WorkshopForm extends React.Component {
                 <FormControl
                   type="text"
                   value={this.state.capacity || ''}
+                  id="capacity"
                   name="capacity"
                   onChange={this.handleFieldChange}
                   maxLength={4}
@@ -868,6 +875,7 @@ export class WorkshopForm extends React.Component {
                   placeholder="Use this space to tell teachers any important
                   information like building location, lunch options or pre-work."
                   value={this.state.notes || ''}
+                  id="notes"
                   name="notes"
                   onChange={this.handleFieldChange}
                   maxLength={65535}
