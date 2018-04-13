@@ -1,0 +1,14 @@
+#pageheader-wrapper #pageheader #logo-wrapper #logo {
+  width: initial;
+  height: 40px;
+}
+
+#pageheader-wrapper #pageheader #right {
+  float: right;
+  position: initial;
+}
+
+#footer {
+  height: 80px;
+  background-color: #7665a0;
+}

@@ -344,3 +344,6 @@ en:
       BinaryBracelets_2018:
         title: Binary Bracelets
         desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+      MoveItMoveIt_2018:
+        title: Move It, Move It
+        desc: ''

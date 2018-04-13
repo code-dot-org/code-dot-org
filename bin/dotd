@@ -236,8 +236,11 @@ def dotd_menu(dotd_name)
       menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:S) do
-        run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
-        @logger.info 'commits content on staging'
+        if run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
+          @logger.info 'commits content on staging'
+        else
+          @logger.info 'error attempting to commit content on staging'
+        end
       end
       menu.choice(:DTS) do
         dts_pr_number = GitHub.create_and_merge_pull_request(
@@ -282,8 +285,11 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
-        run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
-        @logger.info 'commits content on levelbuilder'
+        if run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
+          @logger.info 'commits content on levelbuilder'
+        else
+          @logger.info 'error attempting to commit content on levelbuilder'
+        end
       end
       menu.choice(:DTL) {do_dtl(dotd_name)}
       menu.choice(:Q) do
@@ -388,6 +394,8 @@ end
 # Runs command on server_name.
 # @param server_name [String] The server to run the command on.
 # @param command [String] The command to be run.
+#
+# @returns true if the command succeeds, false if it fails. See Kernel#system
 def run_on(server_name, command)
   # Double-escape the command string, once for each remote shell we're passing
   # through.
