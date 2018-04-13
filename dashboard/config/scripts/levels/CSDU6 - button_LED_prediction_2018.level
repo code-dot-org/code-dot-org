@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-12T20:52:42.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "markdown_instructions": "# Board Events\r\n\r\nThe `onBoardEvent()` block allows you to start taking input from your Circuit Playground. Look at the program with a partner and discuss what you think it'll do. Once you've come up with an answer, click \"Run\" to check your answer.\r\n\r\n* What will happen when you press the left button down?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10424,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-26 19:25:22 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-02 22:15:57 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-06 19:19:25 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</FreeResponse>
