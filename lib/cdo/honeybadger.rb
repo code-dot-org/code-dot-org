@@ -1,4 +1,4 @@
-require 'honeybadger'
+require 'honeybadger/ruby'
 require_relative 'env'
 
 # Honeybadger extensions for command error logging
@@ -34,12 +34,13 @@ module Honeybadger
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
-    ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
 
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
       config.env = ENV['RACK_ENV']
       config.api_key = CDO.cronjobs_honeybadger_api_key
+      config.logging.path = "STDOUT"
+      config.logging.tty_level = 'ERROR'
     end
 
     error_message, backtrace = parse_exception_dump stderr
