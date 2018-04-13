@@ -587,7 +587,7 @@ GameLab.prototype.reset = function () {
 
 GameLab.prototype.rerunSetupCode = function () {
   if (getStore().getState().runState.isRunning ||
-      !this.gameLabP5.running ||
+      !this.gameLabP5.p5 ||
       !this.areAnimationsReady_()) {
     return;
   }
