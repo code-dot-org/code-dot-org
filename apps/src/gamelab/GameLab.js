@@ -55,6 +55,7 @@ import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
+import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -1184,8 +1185,19 @@ GameLab.prototype.onP5Draw = function () {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
       this.eventHandlers.draw.apply(null);
-    } else {
-      this.JSInterpreter.evalInCurrentScope('drawSprites();');
+    } else if (this.shouldAutoRunSetup) {
+      this.gameLabP5.p5.background('white');
+      switch (this.level.autoRunSetup) {
+        case GamelabAutorunOptions.draw_loop:
+          this.eventHandlers.draw.apply(null);
+          break;
+        case GamelabAutorunOptions.draw_sprites:
+          this.JSInterpreter.evalInCurrentScope('drawSprites();');
+          break;
+        case GamelabAutorunOptions.custom:
+          this.JSInterpreter.evalInCurrentScope(this.level.customSetupCode);
+          break;
+      }
     }
   }
   this.completeRedrawIfDrawComplete();

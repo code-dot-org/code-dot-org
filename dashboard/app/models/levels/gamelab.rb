@@ -47,6 +47,7 @@ class Gamelab < Blockly
     start_animations
     teacher_markdown
     auto_run_setup
+    custom_setup_code
   )
 
   # List of possible skins, the first is used as a default.
