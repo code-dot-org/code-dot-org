@@ -64,6 +64,14 @@ class VirtualizedDetailView extends Component {
     scrollToRow: 0,
   };
 
+  componentWillReceiveProps(nextProps) {
+    // When we replace the script, re-compute the column widths
+    if (this.props.scriptData.id !== nextProps.scriptData.id) {
+      this.refs.detailView.recomputeGridSize();
+      this.refs.detailView.measureAllCells();
+    }
+  }
+
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
@@ -177,6 +185,7 @@ class VirtualizedDetailView extends Component {
         styleTopLeftGrid={progressStyles.topLeft}
         styleTopRightGrid={progressStyles.topRight}
         width={styleConstants['content-width']}
+        ref="detailView"
       />
     );
   }
