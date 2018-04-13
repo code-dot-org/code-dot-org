@@ -13,14 +13,8 @@ Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ 
 
   RegionalPartner.find_or_create_by(name: partner_name, group: 1)
 
-  email, password = generate_user(facilitator_name)
-  facilitator = FactoryGirl.create(:facilitator, name: facilitator_name, email: email, password: password)
-  FactoryGirl.create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF, facilitator: facilitator)
-
-  # CSF Facilitators are also workshop organizers
-  facilitator.permission = UserPermission::WORKSHOP_ORGANIZER
-
   steps %Q{
+    And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSF}"
     And I sign in as "#{facilitator_name}"
   }
 end
@@ -38,10 +32,11 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
-Given /^There is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
+Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
   require_rails_env
 
   email, password = generate_user(name)
+
   FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
     FactoryGirl.create(:facilitator, name: name, email: email, password: password)
   )

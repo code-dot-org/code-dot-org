@@ -34,8 +34,8 @@ Scenario: New workshop: CSF intro
 
 Scenario: New workshop: CSD units 2-3 with 2 facilitators
   Given I am a program manager named "Test CSD PM" for regional partner "Test Partner"
-  Given There is a facilitator named "Test CSD Facilitator 1" for course "CS Discoveries"
-  Given There is a facilitator named "Test CSD Facilitator 2" for course "CS Discoveries"
+  Given there is a facilitator named "Test CSD Facilitator 1" for course "CS Discoveries"
+  Given there is a facilitator named "Test CSD Facilitator 2" for course "CS Discoveries"
   Then I open the new workshop form
   Then I open my eyes to test "New workshop: CSD units 2-3 with 2 facilitators"
 
@@ -67,7 +67,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
 
 Scenario: New workshop: CSP local summer with 1 facilitator
   Given I am a program manager named "Test CSP PM" for regional partner "Test Partner"
-  Given There is a facilitator named "Test CSP Facilitator" for course "CS Principles"
+  Given there is a facilitator named "Test CSP Facilitator" for course "CS Principles"
   Then I open the new workshop form
   Then I open my eyes to test "New workshop: CSP local summer with 1 facilitator"
 
