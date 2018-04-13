@@ -172,8 +172,8 @@ const styles = {
   },
   funometer: {
     marginTop: 5,
+    marginLeft: 20,
     display: 'flex',
-    flexDirection: 'row-reverse',
     minHeight: 32,
   },
   button: {
