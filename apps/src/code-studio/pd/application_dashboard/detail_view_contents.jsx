@@ -121,7 +121,7 @@ export class DetailViewContents extends React.Component {
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
       regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedPartnerLabel,
-      regional_partner_id: this.props.applicationData.regional_partner_id || UnmatchedPartnerValue,
+      regional_partner_value: this.props.applicationData.regional_partner_id || UnmatchedPartnerValue,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
@@ -185,9 +185,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_id = selected ? selected.value : UnmatchedPartnerValue;
+    const regional_partner_value = selected ? selected.value : UnmatchedPartnerValue;
     const regional_partner_name = selected ? selected.label : UnmatchedPartnerLabel;
-    this.setState({ regional_partner_name, regional_partner_id});
+    this.setState({ regional_partner_name, regional_partner_value});
   };
 
   handleSaveClick = () => {
@@ -195,7 +195,7 @@ export class DetailViewContents extends React.Component {
       'status',
       'locked',
       'notes',
-      'regional_partner_id',
+      'regional_partner_value',
       'pd_workshop_id'
     ];
 
@@ -244,7 +244,7 @@ export class DetailViewContents extends React.Component {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
-          regionalPartnerFilter={{value: this.state.regional_partner_id, label: this.state.regional_partner_name}}
+          regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
           regionalPartners={this.props.regionalPartners}
           additionalOptions={[{label: UnmatchedPartnerLabel, value: UnmatchedPartnerValue}]}
         />

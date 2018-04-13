@@ -53,8 +53,8 @@ module Api::V1::Pd
       role = params[:role].to_sym
       applications = get_applications_by_role(role)
 
-      unless params[:regional_partner_value].blank? || params[:regional_partner_value] == 'all'
-        applications = applications.where(regional_partner_id: params[:regional_partner_value] == 'none' ? nil : params[:regional_partner_value])
+      unless params[:regional_partner_value].blank? || params[:regional_partner_value] == REGIONAL_PARTNERS_ALL
+        applications = applications.where(regional_partner_id: params[:regional_partner_value] == REGIONAL_PARTNERS_NONE ? nil : params[:regional_partner_value])
       end
 
       respond_to do |format|
@@ -84,8 +84,8 @@ module Api::V1::Pd
       regional_partner_value = params[:regional_partner_value]
       applications = get_applications_by_role(role.to_sym).where(status: ['accepted', 'withdrawn'])
 
-      unless regional_partner_value.nil? || regional_partner_value == 'all'
-        applications = applications.where(regional_partner_id: regional_partner_value == 'none' ? nil : regional_partner_value)
+      unless regional_partner_value.nil? || regional_partner_value == REGIONAL_PARTNERS_ALL
+        applications = applications.where(regional_partner_id: regional_partner_value == REGIONAL_PARTNERS_NONE ? nil : regional_partner_value)
       end
 
       serializer =
