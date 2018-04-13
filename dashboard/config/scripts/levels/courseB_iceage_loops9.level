@@ -36,8 +36,7 @@
     "markdown_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!\",\"hint_id\":\"courseB_iceage_loops9_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ecafbaf546f02958f58f8ab5142b253/courseB_iceage_loops9.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Your final code should have **4** loops.\",\"hint_id\":\"courseB_iceage_loops9_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/36b412ab38100e052192c59511a84513/courseB_iceage_loops9.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Scrat should follow this path to get the acorn.\",\"hint_id\":\"courseB_iceage_loops9_c\",\"hint_type\":\"general\",\"hint_path\":\"[[1,1],[6,1],[6,6],[3,6],[3,3]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8821566b59dddb48fa9956cbc42d0043/courseB_iceage_loops9.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

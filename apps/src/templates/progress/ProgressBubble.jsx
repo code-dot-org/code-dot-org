@@ -88,6 +88,7 @@ class ProgressBubble extends React.Component {
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
     stageTrophyEnabled: PropTypes.bool,
+    hideToolTips: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -146,7 +147,7 @@ class ProgressBubble extends React.Component {
           levels={[level]}
           text={i18n.unpluggedActivity()}
           fontSize={16}
-          tooltip={tooltip}
+          tooltip={this.props.hideToolTips ? null : tooltip}
         />
       );
     }
@@ -185,7 +186,7 @@ class ProgressBubble extends React.Component {
                 {smallBubble ? '' : number}
               </span>
             )}
-            {tooltip}
+            {!this.props.hideToolTips && tooltip}
           </div>
         </div>
       </div>
