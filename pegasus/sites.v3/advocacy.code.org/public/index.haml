@@ -12,9 +12,8 @@ video_player: false
 ---
 
 -# Put advocacy.css after other CSS files so that it can override them.
-=inline_css 'header.css'
-%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
-%link{:href=>"/css/advocacy.css", :rel=>"stylesheet"}
+=inline_css 'interactive_map.css'
+=inline_css 'advocacy-home.css'
 
 - banner_body = capture_haml do
   Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education.
@@ -59,7 +58,13 @@ video_player: false
 
     .clear
 
-    %h2 Our Coalition
+    .centered
+      %a{href: CDO.code_org_url("/promote/morestats")}
+        %button More resources
 
-    = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+    .coalition
+      %h2 Our Coalition
+
+      = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
 

@@ -9,7 +9,6 @@ import {
 
 const styles = {
   bubbles: {
-    overflowX: 'scroll',
     whiteSpace: 'nowrap',
   },
   cell: {
@@ -47,6 +46,7 @@ export default class StudentProgressDetailCell extends Component {
           <ProgressBubbleSet
             levels={this.studentLevelProgressInStage()}
             disabled={false}
+            hideToolTips={true}
           />
         </div>
       </div>

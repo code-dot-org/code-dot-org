@@ -36,8 +36,7 @@
     "markdown_instructions": "Can you add a loop to get to the acorn?",
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your final code will have **three** movement blocks.\",\"hint_id\":\"courseB_iceage_loops6_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d563ad93f838569a0366996b6193b056/courseB_iceage_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to add **one** more loop!\",\"hint_id\":\"courseB_iceage_loops6_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb87ff4242967ddefde6ea39a2303d74/courseB_iceage_loops6.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your final path should look like this.\",\"hint_id\":\"courseB_iceage_loops6_c\",\"hint_type\":\"general\",\"hint_path\":\"[[2,2],[6,2],[6,6],[2,6]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9431431f8c1bbdaad122360c6292a19a/courseB_iceage_loops6.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
