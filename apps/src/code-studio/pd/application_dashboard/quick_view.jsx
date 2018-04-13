@@ -19,7 +19,7 @@ import $ from 'jquery';
 import {
   ApplicationStatuses,
   RegionalPartnerDropdownOptions as dropdownOptions,
-  RegionalPartnerFilterPropType
+  RegionalPartnerPropType
 } from './constants';
 import {
   Button,
@@ -40,7 +40,7 @@ const styles = {
 
 export class QuickView extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType,
+    regionalPartnerFilter: RegionalPartnerPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -89,7 +89,7 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilterValue = this.props.regionalPartnerFilter.value) {
+  load(regionalPartnerFilterValue) {
     this.abortLoad();
     this.setState({loading: true});
 
@@ -152,7 +152,6 @@ export class QuickView extends React.Component {
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }
