@@ -81,7 +81,7 @@
   = boolean_check_box f, :debugger_disabled
 
 .field
-  = f.label 'Run setup code as you write it (under development)'
+  = f.label 'Immediately show the results of setup code changes in the playspace'
   :ruby
     selector = f.select :auto_run_setup, options_for_select([
       ['none', nil],
