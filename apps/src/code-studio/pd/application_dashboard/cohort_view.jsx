@@ -11,7 +11,7 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
 import {
   RegionalPartnerDropdownOptions as dropdownOptions,
-  RegionalPartnerFilterPropType
+  RegionalPartnerPropType
 } from './constants';
 
 const styles = {
@@ -22,7 +22,7 @@ const styles = {
 
 class CohortView extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType,
+    regionalPartnerFilter: RegionalPartnerPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -51,7 +51,7 @@ class CohortView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
+  load(regionalPartnerFilter) {
     let url = this.getJsonUrl();
     if (this.props.isWorkshopAdmin) {
       url += `&regional_partner_value=${regionalPartnerFilter.value}`;
@@ -117,7 +117,6 @@ class CohortView extends React.Component {
           }
           {this.props.isWorkshopAdmin &&
             <RegionalPartnerDropdown
-              regionalPartnerFilter={this.props.regionalPartnerFilter}
               additionalOptions={dropdownOptions}
             />
           }

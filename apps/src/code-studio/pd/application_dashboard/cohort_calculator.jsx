@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
-import {RegionalPartnerFilterValuePropType} from './constants';
+import {RegionalPartnerValuePropType} from './constants';
 import $ from 'jquery';
 
 const styles = {
@@ -12,7 +12,7 @@ const styles = {
 export default class CohortCalculator extends React.Component {
   static propTypes = {
     role: PropTypes.string.isRequired,
-    regionalPartnerFilterValue: RegionalPartnerFilterValuePropType,
+    regionalPartnerFilterValue: RegionalPartnerValuePropType,
     accepted: PropTypes.number.isRequired,
     registered: PropTypes.number.isRequired
   };

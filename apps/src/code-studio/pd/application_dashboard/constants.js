@@ -89,12 +89,12 @@ exports.RegionalPartnerDropdownOptions = [
   {value: allPartnersValue, label: allPartnersLabel}
 ];
 
-const regionalPartnerFilterValuePropType = PropTypes.oneOfType([
+const regionalPartnerValuePropType = PropTypes.oneOfType([
   PropTypes.number, // regional partner id
   PropTypes.oneOf([allPartnersValue, unmatchedPartnerValue])
 ]);
-exports.RegionalPartnerFilterValuePropType = regionalPartnerFilterValuePropType;
-exports.RegionalPartnerFilterPropType = PropTypes.shape({
-  value: regionalPartnerFilterValuePropType,
-  label: PropTypes.string
+exports.RegionalPartnerValuePropType = regionalPartnerValuePropType;
+exports.RegionalPartnerPropType = PropTypes.shape({
+  value: regionalPartnerValuePropType.isRequired,
+  label: PropTypes.string.isRequired
 });
