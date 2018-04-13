@@ -287,15 +287,15 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.shouldAutoRunSetup) {
+      const changeHandler = this.runSetupCode.bind(this);
       if (this.studioApp_.isUsingBlockly()) {
         const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
         blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
-          this.runSetupCode.bind(this));
+          changeHandler);
       } else {
-        this.studioApp_.editor.on('change', this.runSetupCode.bind(this));
+        this.studioApp_.editor.on('change', changeHandler);
         // Droplet doesn't automatically bubble up aceEditor changes
-        this.studioApp_.editor.aceEditor.on('change',
-          this.runSetupCode.bind(this));
+        this.studioApp_.editor.aceEditor.on('change', changeHandler);
       }
     }
   };
