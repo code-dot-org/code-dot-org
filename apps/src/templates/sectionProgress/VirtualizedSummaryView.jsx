@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
@@ -16,6 +16,7 @@ export default class VirtualizedDetailView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     studentLevelProgress: studentLevelProgressPropType.isRequired,
+    lessonOfInterest: PropTypes.number.isRequired
   };
 
   state = {
@@ -87,7 +88,7 @@ export default class VirtualizedDetailView extends Component {
   };
 
   render() {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, lessonOfInterest} = this.props;
     // Add 1 to account for the header row
     const rowCount = section.students.length + 1;
     // Add 1 to account for the student name column
@@ -98,22 +99,23 @@ export default class VirtualizedDetailView extends Component {
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
-        <MultiGrid
-          {...this.state}
-          cellRenderer={this.cellRenderer}
-          columnWidth={this.getColumnWidth}
-          columnCount={columnCount}
-          enableFixedColumnScroll
-          enableFixedRowScroll
-          rowHeight={ROW_HEIGHT}
-          height={tableHeight}
-          rowCount={rowCount}
-          style={progressStyles.multigrid}
-          styleBottomLeftGrid={progressStyles.bottomLeft}
-          styleTopLeftGrid={progressStyles.topLeft}
-          styleTopRightGrid={progressStyles.topRight}
-          width={styleConstants['content-width']}
-        />
+      <MultiGrid
+        {...this.state}
+        cellRenderer={this.cellRenderer}
+        columnWidth={this.getColumnWidth}
+        columnCount={columnCount}
+        enableFixedColumnScroll
+        enableFixedRowScroll
+        rowHeight={ROW_HEIGHT}
+        height={tableHeight}
+        scrollToColumn={lessonOfInterest}
+        rowCount={rowCount}
+        style={progressStyles.multigrid}
+        styleBottomLeftGrid={progressStyles.bottomLeft}
+        styleTopLeftGrid={progressStyles.topLeft}
+        styleTopRightGrid={progressStyles.topRight}
+        width={styleConstants['content-width']}
+      />
     );
   }
 }
