@@ -526,7 +526,7 @@ GameLab.prototype.startTickTimer = function () {
  */
 GameLab.prototype.resetHandler = function (ignore) {
   if (this.shouldAutoRunSetup) {
-    this.execute(false);
+    this.execute(false /* keepTicking */);
   } else {
     this.reset();
   }
