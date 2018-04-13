@@ -287,7 +287,7 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.shouldAutoRunSetup) {
-      const changeHandler = this.runSetupCode.bind(this);
+      const changeHandler = this.rerunSetupCode.bind(this);
       if (this.studioApp_.isUsingBlockly()) {
         const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
         blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
@@ -585,7 +585,7 @@ GameLab.prototype.reset = function () {
   }
 };
 
-GameLab.prototype.runSetupCode = function () {
+GameLab.prototype.rerunSetupCode = function () {
   if (getStore().getState().runState.isRunning ||
       !this.gameLabP5.running ||
       !this.areAnimationsReady_()) {
