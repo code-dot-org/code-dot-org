@@ -66,4 +66,5 @@ video_player: false
       %h2 Our Coalition
 
       = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
 
