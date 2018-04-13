@@ -1,0 +1,13 @@
+name 'CSD U6 array multi_2018'
+display_name 'Using Arrays'
+title 'Using Arrays'
+description ''
+question 'What will App Lab display when the code on the left is run?'
+wrong '<img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png" width="200px" />'
+wrong '<img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png" width="200px" />'
+wrong '<img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png" width="200px" />'
+right '<img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"'
+
+markdown <<MARKDOWN
+![expandable](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)
+MARKDOWN

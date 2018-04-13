@@ -36,6 +36,14 @@ module Pd::Application
       refute @application_no_workshop.registered_workshop?
     end
 
+    test 'registered_workshop? handles deleted workshops gracefully' do
+      deleted_workshop = create :pd_workshop
+      application = create :pd_workshop_autoenrolled_application, pd_workshop_id: deleted_workshop.id
+      create :pd_enrollment, workshop: deleted_workshop, user: application.user
+      deleted_workshop.destroy
+      refute application.registered_workshop?
+    end
+
     test 'teachercon_cohort' do
       teachercon = create :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Time.new(2018, 7, 22, 9)
 
