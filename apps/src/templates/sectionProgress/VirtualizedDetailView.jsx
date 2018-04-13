@@ -161,25 +161,23 @@ class VirtualizedDetailView extends Component {
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
-      <div>
-        <MultiGrid
-          {...this.state}
-          cellRenderer={this.cellRenderer}
-          columnWidth={this.getColumnWidth}
-          columnCount={columnCount}
-          enableFixedColumnScroll
-          enableFixedRowScroll
-          rowHeight={ROW_HEIGHT}
-          height={tableHeight}
-          scrollToColumn={lessonOfInterest}
-          rowCount={rowCount}
-          style={progressStyles.multigrid}
-          styleBottomLeftGrid={progressStyles.bottomLeft}
-          styleTopLeftGrid={progressStyles.topLeft}
-          styleTopRightGrid={progressStyles.topRight}
-          width={styleConstants['content-width']}
-        />
-      </div>
+      <MultiGrid
+        {...this.state}
+        cellRenderer={this.cellRenderer}
+        columnWidth={this.getColumnWidth}
+        columnCount={columnCount}
+        enableFixedColumnScroll
+        enableFixedRowScroll
+        rowHeight={ROW_HEIGHT}
+        height={tableHeight}
+        scrollToColumn={lessonOfInterest}
+        rowCount={rowCount}
+        style={progressStyles.multigrid}
+        styleBottomLeftGrid={progressStyles.bottomLeft}
+        styleTopLeftGrid={progressStyles.topLeft}
+        styleTopRightGrid={progressStyles.topRight}
+        width={styleConstants['content-width']}
+      />
     );
   }
 }

@@ -46,17 +46,6 @@ export default class VirtualizedDetailView extends Component {
       };
     }
 
-    let lessonNumberStyle = {
-      ...progressStyles.lessonNumberHeading,
-    };
-
-    if (columnIndex === this.state.lessonOfInterest) {
-      lessonNumberStyle = {
-        ...progressStyles.lessonNumberHeading,
-        ...progressStyles.lessonOfInterest
-      };
-    }
-
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
@@ -65,7 +54,7 @@ export default class VirtualizedDetailView extends Component {
           </span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={lessonNumberStyle}>
+          <div style={progressStyles.lessonNumberHeading}>
             {columnIndex}
           </div>
         }
@@ -110,25 +99,23 @@ export default class VirtualizedDetailView extends Component {
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
 
     return (
-      <div>
-        <MultiGrid
-          {...this.state}
-          cellRenderer={this.cellRenderer}
-          columnWidth={this.getColumnWidth}
-          columnCount={columnCount}
-          enableFixedColumnScroll
-          enableFixedRowScroll
-          rowHeight={ROW_HEIGHT}
-          height={tableHeight}
-          scrollToColumn={lessonOfInterest}
-          rowCount={rowCount}
-          style={progressStyles.multigrid}
-          styleBottomLeftGrid={progressStyles.bottomLeft}
-          styleTopLeftGrid={progressStyles.topLeft}
-          styleTopRightGrid={progressStyles.topRight}
-          width={styleConstants['content-width']}
-        />
-      </div>
+      <MultiGrid
+        {...this.state}
+        cellRenderer={this.cellRenderer}
+        columnWidth={this.getColumnWidth}
+        columnCount={columnCount}
+        enableFixedColumnScroll
+        enableFixedRowScroll
+        rowHeight={ROW_HEIGHT}
+        height={tableHeight}
+        scrollToColumn={lessonOfInterest}
+        rowCount={rowCount}
+        style={progressStyles.multigrid}
+        styleBottomLeftGrid={progressStyles.bottomLeft}
+        styleTopLeftGrid={progressStyles.topLeft}
+        styleTopRightGrid={progressStyles.topRight}
+        width={styleConstants['content-width']}
+      />
     );
   }
 }
