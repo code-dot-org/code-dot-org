@@ -1,5 +1,6 @@
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 import { getStore } from '../redux';
+import { getLocation } from './locationPickerModule';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -399,14 +400,15 @@ export default {
         const label = this.appendDummyInput()
             .appendTitle('(0, 0)', 'LABEL')
             .titleRow[0];
-        var button = new Blockly.FieldButton('select', () => {
-            const value = prompt();
-            return value;
+        var button = new Blockly.FieldButton('select', async () => {
+            return JSON.stringify(await getLocation());
           },
           this.getHexColour(),
           value => {
-            const obj = JSON.parse(value);
-            label.setText(`(${obj.x}, ${obj.y})`);
+            if (value) {
+              const obj = JSON.parse(value);
+              label.setText(`(${obj.x}, ${obj.y})`);
+            }
           });
         this.appendDummyInput()
             .appendTitle(button, 'LOCATION');
