@@ -64,6 +64,13 @@ video_player: false
 
     .coalition
       %h2 Our Coalition
+      %br
+      .centered
+        %a{href: "/"}
+          %button Join the newsletter
+        &nbsp;&nbsp;
+        %a{href: "http://bit.ly/joinadvocacycoalition", target: "_blank"}
+          %button Join the coalition
 
       = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
 
