@@ -610,13 +610,13 @@ class FilesTest < FilesApiTestBase
     # Flags the project as abusive.
     get "/v3/channels/#{@channel_id}/abuse"
     assert successful?
-    assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
+    assert_equal 15, JSON.parse(last_response.body)['abuse_score']
 
     # Flags the thumbnail as abusive
     thumbnail = FileBucket.new.get(@channel_id, thumbnail_filename)
     metadata = thumbnail[:metadata]
     thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    assert_operator 10, :<=, thumbnail_abuse
+    assert_equal 15, thumbnail_abuse
 
     @api.delete_object(thumbnail_filename)
     assert successful?
@@ -645,13 +645,13 @@ class FilesTest < FilesApiTestBase
     # Flags the project as abusive.
     get "/v3/channels/#{@channel_id}/abuse"
     assert successful?
-    assert_operator 10, :<=, JSON.parse(last_response.body)['abuse_score']
+    assert_equal 15, JSON.parse(last_response.body)['abuse_score']
 
     # Flags the thumbnail as abusive
     thumbnail = FileBucket.new.get(@channel_id, thumbnail_filename)
     metadata = thumbnail[:metadata]
     thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    assert_operator 10, :<=, thumbnail_abuse
+    assert_equal 15, thumbnail_abuse
 
     @api.delete_object(thumbnail_filename)
     assert successful?
