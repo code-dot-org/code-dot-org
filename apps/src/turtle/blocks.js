@@ -292,8 +292,9 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
     block.appendDummyInput()
-        .appendTitle(new blockly.FieldTextInput(
-            '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+        .appendTitle(new blockly.FieldAngleTextInput('0', {
+          direction: 'turnRight'
+        }), 'DIRECTION')
         .appendTitle(msg.degrees());
   });
 
@@ -305,7 +306,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
   // Block for pointing to a specified direction
     block.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER);
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
+          block,
+          direction: 'turnRight',
+        });
     block.appendDummyInput()
         .appendTitle(msg.degrees());
   });
