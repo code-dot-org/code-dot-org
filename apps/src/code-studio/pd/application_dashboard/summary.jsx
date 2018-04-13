@@ -11,13 +11,13 @@ import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
 import {
   RegionalPartnerDropdownOptions as dropdownOptions,
-  RegionalPartnerFilterPropType
+  RegionalPartnerPropType
 } from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType.isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
 

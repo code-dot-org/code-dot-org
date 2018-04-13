@@ -9,7 +9,7 @@ import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
 import { setRegionalPartnerFilter } from './reducers';
-import { RegionalPartnerFilterPropType } from './constants';
+import { RegionalPartnerPropType } from './constants';
 
 const styles = {
   select: {
@@ -20,7 +20,7 @@ const styles = {
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    regionalPartnerFilter: RegionalPartnerFilterPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
