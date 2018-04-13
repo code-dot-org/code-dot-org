@@ -19,7 +19,7 @@ import $ from 'jquery';
 import {
   ApplicationStatuses,
   RegionalPartnerDropdownOptions as dropdownOptions,
-  RegionalPartnerFilterPropType
+  RegionalPartnerPropType
 } from './constants';
 import {
   Button,
@@ -40,7 +40,7 @@ const styles = {
 
 export class QuickView extends React.Component {
   static propTypes = {
-    regionalPartnerFilter: RegionalPartnerFilterPropType,
+    regionalPartnerFilter: RegionalPartnerPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
