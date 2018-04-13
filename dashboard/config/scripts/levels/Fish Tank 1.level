@@ -46,11 +46,8 @@
     "hide_custom_blocks": "true",
     "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation-=6;\r\n    sprite.x-=3;\r\n  }\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"{SPRITE} starts {BEHAVIOR}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "**Make a prediction**: What do you think will happen when you run this code?"
+    "markdown_instructions": "**Make a prediction**: What do you think will happen when you run this code?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

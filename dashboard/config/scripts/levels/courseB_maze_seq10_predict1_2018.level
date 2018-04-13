@@ -35,7 +35,6 @@
     "parent_level_id": 8510,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null,
     "shape_shift": "false"
   },
   "published": true,

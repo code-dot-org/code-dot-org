@@ -48,10 +48,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"{SPRITE} starts {BEHAVIOR}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "markdown_instructions": "We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.",
     "parent_level_id": 12279,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
