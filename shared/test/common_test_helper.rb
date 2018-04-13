@@ -58,8 +58,6 @@ module SetupTest
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
     cassette_name = "#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}"
-    # Fail on empty/missing cassette in CI environments
-    record_mode = ENV['CI'] ? :none : :once
     credentials = VCR::Cassette.new(cassette_name).recording? ?
       # Load AWS credentials before VCR recording starts.
       Aws::CredentialProviderChain.new.resolve :
@@ -69,7 +67,7 @@ module SetupTest
       any_instance.
       stubs(:static_credentials).
       returns(credentials)
-    VCR.use_cassette(cassette_name, record: record_mode) do
+    VCR.use_cassette(cassette_name) do
       PEGASUS_DB.transaction(rollback: :always) do
         AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
       end
