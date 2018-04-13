@@ -37,10 +37,11 @@ module Honeybadger
     ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
 
     # Configure and start Honeybadger
-    Honeybadger.configure do |config|
-      config.env = ENV['RACK_ENV']
-      config.api_key = CDO.cronjobs_honeybadger_api_key
-    end
+    honeybadger_config = Honeybadger::Config.new(
+      env: ENV['RACK_ENV'],
+      api_key: CDO.cronjobs_honeybadger_api_key
+    )
+    Honeybadger.start(honeybadger_config)
 
     error_message, backtrace = parse_exception_dump stderr
 
