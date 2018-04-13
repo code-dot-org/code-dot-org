@@ -85,9 +85,9 @@
   :ruby
     selector = f.select :auto_run_setup, options_for_select([
       ['none', nil],
-      ['Run the draw loop once', GAMELAB_AUTORUN_OPTIONS.draw_loop],
-      ['Call drawSprites()', GAMELAB_AUTORUN_OPTIONS.draw_sprites],
-      ['Run some other JavaScript', GAMELAB_AUTORUN_OPTIONS.custom],
+      ['Run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
+      ['Call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
+      ['Run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
     ], selected: @level.auto_run_setup)
   = selector
   = f.label 'Custom setup code'
