@@ -6,9 +6,15 @@ export default storybook => {
     .storiesOf('SectionAssessments/CorrectAnswerIcon', module)
     .addStoryTable([
       {
-        name:'CorrectAnswerIcon',
+        name: 'CorrectAnswerIcon',
+        description: `
+            A green check mark is visible if students answer a question
+            correctly.
+        `,
         story: () => (
-          <CorrectAnswerIcon/>
+          <CorrectAnswerIcon
+            percentValue="40%"
+          />
         )
       },
     ]);
