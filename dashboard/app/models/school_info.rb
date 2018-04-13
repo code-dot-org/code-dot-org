@@ -123,6 +123,8 @@ class SchoolInfo < ActiveRecord::Base
             school_id: school.id
           }
         )
+        # Don't interrupt callback chain by returning false
+        return nil
       end
     end
   end
