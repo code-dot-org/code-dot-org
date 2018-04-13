@@ -1,0 +1,5 @@
+name 'courseB_multi_maze_seq1_predict1_2018'
+question 'Look at the program below. What will happen when you click "Run"?'
+right 'Scrat will get to the acorn.', feedback: 'Correct!'
+wrong 'Scrat will not reach the acorn.', feedback: 'Incorrect. The program has all of the blocks needed to get to the acorn.'
+wrong 'I don\'t know.', feedback: 'The program has all of the blocks needed to get to the acorn.'
