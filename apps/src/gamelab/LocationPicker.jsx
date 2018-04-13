@@ -24,7 +24,7 @@ class LocationPicker extends React.Component {
     if (playSpace) {
       playSpace.style.zIndex = this.props.pickingLocation ? 1050 : 0;
       if (this.props.pickingLocation) {
-        playSpace.onclick = e => {
+        playSpace.onmouseup = e => {
           const loc = {x: e.offsetX, y: e.offsetY};
           this.props.select(loc);
         };
