@@ -8,8 +8,8 @@ export default storybook => {
       {
         name: 'CorrectAnswerIcon',
         description: `
-            A green check mark is visible if students answer a question
-            correctly.
+            A green check mark is visible and the percentage of students that
+            that answer a question correctly.
         `,
         story: () => (
           <CorrectAnswerIcon
