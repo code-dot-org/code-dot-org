@@ -135,7 +135,10 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown({
+            directionTitleName: 'DIR',
+            menuGenerator: this.VALUE
+          }), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -184,7 +187,9 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(
           blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldAngleDropdown('DIR'), 'VALUE')
+        .appendTitle(new blockly.FieldAngleDropdown({
+          directionTitleName: 'DIR'
+        }), 'VALUE')
         .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -219,7 +224,10 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown({
+            directionTitleName: 'DIR',
+            menuGenerator: this.VALUE
+          }), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -307,7 +315,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to_by_constant_restricted =
       createPointToBlocks(function (block) {
     block.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(block.VALUE), 'VALUE')
+        .appendTitle(new blockly.FieldAngleDropdown({
+          direction: 'turnRight',
+          menuGenerator: block.VALUE
+        }), 'VALUE')
         .appendTitle(msg.degrees());
   });
 
