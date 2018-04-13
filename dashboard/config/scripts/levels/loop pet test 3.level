@@ -48,10 +48,7 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 12286,
     "markdown_instructions": "**Make Predictions!** Write down your answers to these questions before clicking \"Run\". Then try the code and see what happens!\r\n\r\n* What will Daisy the dog do after you drag the carrot to her?\r\n* What will Daisy the dog do after you press the Up arrow key?\r\n",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

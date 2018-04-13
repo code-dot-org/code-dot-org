@@ -41,8 +41,8 @@
     "step_speed": "1",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

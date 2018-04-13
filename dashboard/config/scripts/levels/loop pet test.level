@@ -48,10 +48,7 @@
     "hide_custom_blocks": "true",
     "instructions": "Last time, you practiced using the \"repeat forever\" loop to make a sprite do something forever. This time, we will use it to make a virtual pet. \r\n\r\nThis dog's name is Daisy. Daisy LOVES to snack on carrots. Use the \"drag and drop\" block to move the carrot to Daisy.",
     "parent_level_id": 12162,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

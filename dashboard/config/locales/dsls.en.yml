@@ -8323,16 +8323,11 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Scrat breaks the ice with his first move.: Incorrect. Scrat breaks the ice with his first move.
-        Incorrect. The bird runs into the TNT with his first move.: Incorrect. The bird runs into the TNT with his first move.
         Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
         Scrat breaks the ice with his first move.: Scrat breaks the ice with his first move.
         Scrat will break the ice right away.: Scrat will break the ice right away.
         Scrat will get to the acorn.: Scrat will get to the acorn.
         Scrat will not move at all.: Scrat will not move at all.
-        The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
-        The bird will get to the pig.: The bird will get to the pig.
-        The bird will not move at all.: The bird will not move at all.
-        The bird will run into the TNT right away.: The bird will run into the TNT right away.
       courseB_multi_maze_seq1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -8345,14 +8340,10 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The program has all of the blocks needed to get to the acorn.: Incorrect. The program has all of the blocks needed to get to the acorn.
-        Incorrect. The program has all of the blocks needed to get to the pig.: Incorrect. The program has all of the blocks needed to get to the pig.
         Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
         Scrat will get to the acorn.: Scrat will get to the acorn.
         Scrat will not reach the acorn.: Scrat will not reach the acorn.
-        The bird will get to the pig.: The bird will get to the pig.
-        The bird will not reach the pig.: The bird will not reach the pig.
         The program has all of the blocks needed to get to the acorn.: The program has all of the blocks needed to get to the acorn.
-        The program has all of the blocks needed to get to the pig.: The program has all of the blocks needed to get to the pig.
       courseC_multi_artist_prog6_predict1:
         Correct!: Correct!
         I don't know.: I don't know.

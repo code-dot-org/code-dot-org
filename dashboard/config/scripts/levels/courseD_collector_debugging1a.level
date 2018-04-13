@@ -41,9 +41,9 @@
     "step_speed": "1",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "video_key": "CSF_collector_text_blocks",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
