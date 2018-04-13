@@ -8,6 +8,11 @@ When(/^I begin to edit the angle of turn block "([^"]*)"$/) do |block|
   @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyEditableText:nth-of-type(2)\")[0], 'mouseup');")
 end
 
+When(/^I begin to edit the value of turn block "([^"]*)"$/) do |block|
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyDraggable > .blocklyEditableText:nth-of-type(1)\")[0], 'mousedown');")
+  @browser.execute_script("Blockly.fireUiEvent($(\"[block-id='#{get_block_id(block)}'] > .blocklyDraggable > .blocklyEditableText:nth-of-type(1)\")[0], 'mouseup');")
+end
+
 When(/^I change the angle text to "(\d*)"$/) do |val|
   @browser.execute_script("$('.blocklyWidgetDiv .blocklyHtmlInput').val(#{val})")
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv .blocklyHtmlInput')[0], 'keyup')")
