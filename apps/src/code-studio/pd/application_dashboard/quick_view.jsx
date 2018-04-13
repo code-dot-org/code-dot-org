@@ -89,7 +89,7 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilterValue = this.props.regionalPartnerFilter.value) {
+  load(regionalPartnerFilterValue) {
     this.abortLoad();
     this.setState({loading: true});
 
@@ -148,7 +148,6 @@ export class QuickView extends React.Component {
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }

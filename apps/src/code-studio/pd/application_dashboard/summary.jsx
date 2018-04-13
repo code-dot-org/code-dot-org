@@ -50,7 +50,7 @@ export class Summary extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
+  load(regionalPartnerFilter) {
     this.abortLoad();
     this.setState({loading: true});
 
@@ -83,7 +83,6 @@ export class Summary extends React.Component {
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }

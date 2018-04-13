@@ -56,6 +56,7 @@ export class RegionalPartnerDropdown extends React.Component {
 export default connect(
   state => ({
     regionalPartners: state.regionalPartners,
+    regionalPartnerFilter: state.regionalPartnerFilter
   }),
   dispatch => ({
     onChange(selected) {
