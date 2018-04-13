@@ -12,9 +12,11 @@ import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
+import {isPickingLocation} from './locationPickerModule';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+const MODAL_Z_INDEX = 1050;
 
 const styles = {
   containedInstructions: {
@@ -27,6 +29,7 @@ class GameLabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
+    pickingLocation: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired
   };
@@ -89,6 +92,9 @@ class GameLabVisualizationColumn extends React.Component {
       width: GAME_WIDTH,
       height: GAME_HEIGHT
     };
+    if (this.props.pickingLocation) {
+      divGameLabStyle.zIndex = MODAL_Z_INDEX;
+    }
     return (
       <span>
         <ProtectedVisualizationDiv>
@@ -132,7 +138,8 @@ class GameLabVisualizationColumn extends React.Component {
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  showGrid: state.gridOverlay
+  showGrid: state.gridOverlay,
+  pickingLocation: isPickingLocation(state.locationPicker),
 }), dispatch => ({
   toggleShowGrid: mode => dispatch(toggleGridOverlay(mode))
 }))(GameLabVisualizationColumn);
