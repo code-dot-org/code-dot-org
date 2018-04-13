@@ -51,8 +51,8 @@ class AdvocacySite
               new_tab: true
             },
             {
-              text_actual: "Current state legislation",
-              url: "/state-legislation"
+              text_actual: "Current state and federal legislation",
+              url: "/current-legislation"
             },
             {
               text_actual: "Nation's leaders support CS",
