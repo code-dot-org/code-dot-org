@@ -20,9 +20,9 @@ const styles = {
     fontSize: '25px',
   },
   text: {
-    color: color.black,
+    color: color.charcoal,
     fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: '14px',
+    fontSize: '16px',
     float: 'left',
     paddingRight: '40px',
     width: '10%',
