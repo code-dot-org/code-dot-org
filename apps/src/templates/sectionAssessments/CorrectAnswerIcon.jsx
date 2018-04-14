@@ -21,8 +21,7 @@ const styles = {
   },
   text: {
     color: color.black,
-    fontWeight: 'bold',
-    fontFamily: 'Gotham 3r',
+    fontFamily: '"Gotham 3r", sans-serif',
     fontSize: '14px',
     float: 'left',
     paddingRight: '40px',
