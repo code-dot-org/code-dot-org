@@ -1409,8 +1409,13 @@ StudioApp.prototype.displayFeedback = function (options) {
   }
 
   if (experiments.isEnabled('bubbleDialog')) {
-    // eslint-disable-next-line no-unused-vars
-    const { level, response, preventDialog, feedbackType, ...otherOptions } = options;
+    const {
+      response, preventDialog, feedbackType, feedbackImage,
+      // Ignored.
+      // eslint-disable-next-line no-unused-vars
+      level, alreadySaved, appStrings, disableSaveToGallery, message, saveToLegacyGalleryUrl, saveToProjectGallery, showingSharing,
+      ...otherOptions
+    } = options;
     if (Object.keys(otherOptions).length === 0) {
       const store = getStore();
       const generatedCodeProperties =
@@ -1419,13 +1424,14 @@ StudioApp.prototype.displayFeedback = function (options) {
         message: generatedCodeProperties.shortMessage,
         code: generatedCodeProperties.code,
       };
+      const canShare = !this.disableSocialShare && !options.disableSocialShare;
       store.dispatch(setFeedbackData({
         isChallenge: this.config.isChallengeLevel,
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
         studentCode,
-        canShare: !this.disableSocialShare && !options.disableSocialShare,
+        feedbackImage: canShare && feedbackImage,
       }));
       store.dispatch(setAchievements(getAchievements(store.getState())));
       if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
