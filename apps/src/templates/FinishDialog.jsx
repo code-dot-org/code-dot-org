@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import { Motion, StaggeredMotion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
@@ -121,6 +119,7 @@ const styles = {
     height: 150,
     backgroundSize: 'cover',
     marginLeft: 15,
+    border: '1px solid',
   },
   shareButton: {
     background: color.cyan,
@@ -231,12 +230,12 @@ export class UnconnectedFinishDialog extends Component {
       message: PropTypes.string,
     })),
     showFunometer: PropTypes.bool,
-    canShare: PropTypes.bool,
     getShareUrl: PropTypes.func,
     studentCode: PropTypes.shape({
       message: PropTypes.string,
       code: PropTypes.string,
     }),
+    feedbackImage: PropTypes.string,
   };
 
   componentWillReceiveProps(nextProps) {
@@ -376,7 +375,7 @@ export class UnconnectedFinishDialog extends Component {
                 <div
                   style={{
                     ...styles.achievementRow,
-                    ...(!this.props.canShare && styles.achievementRowNonShare),
+                    ...(!this.props.feedbackImage && styles.achievementRowNonShare),
                     color: interpolateColors(
                       color.lighter_gray,
                       color.dark_charcoal,
@@ -463,10 +462,6 @@ export class UnconnectedFinishDialog extends Component {
 
     const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
     const showAchievements = this.props.achievements && this.props.achievements.length !== 0;
-    const canShare = this.props.canShare;
-
-    const defaultThumbnailUrl = '/blockly/media/projects/project_default.png';
-    const thumbnailUrl = (window.dashboard && dashboard.project && dashboard.project.getThumbnailUrl && dashboard.project.getThumbnailUrl()) || defaultThumbnailUrl;
 
     return (
       <BaseDialog
@@ -496,16 +491,21 @@ export class UnconnectedFinishDialog extends Component {
                     style={styles.generatedCode}
                   />
                 </div> :
-                <div style={styles.content}>
+                <div
+                  style={{
+                    ...styles.content,
+                    ...(this.props.feedbackImage && {minHeight: 277}),
+                  }}
+                >
                   <div style={styles.mastery}>
                     <StageProgress stageTrophyEnabled />
                   </div>
-                  {canShare &&
+                  {this.props.feedbackImage &&
                     <div style={styles.share}>
                       <div
                         style={{
                           ...styles.thumbnail,
-                          backgroundImage: `url(${thumbnailUrl})`,
+                          backgroundImage: `url(${this.props.feedbackImage})`,
                         }}
                       />
                       <button
@@ -520,7 +520,7 @@ export class UnconnectedFinishDialog extends Component {
                     <div
                       style={{
                         ...styles.achievementWrapper,
-                        ...(canShare && {marginLeft: 180}),
+                        ...(this.props.feedbackImage && {marginLeft: 180}),
                       }}
                     >
                       <div style={styles.achievementsHeading}>
@@ -550,8 +550,8 @@ export default connect(state => ({
   blockLimit: state.feedback.blockLimit,
   achievements: state.feedback.achievements,
   showFunometer: state.feedback.displayFunometer,
-  canShare: state.feedback.canShare,
   studentCode: state.feedback.studentCode,
+  feedbackImage: state.feedback.feedbackImage,
 }), dispatch => ({
   onReplay: () => dispatch(hideFeedback()),
 }))(UnconnectedFinishDialog);
