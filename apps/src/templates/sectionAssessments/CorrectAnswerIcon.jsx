@@ -16,7 +16,7 @@ const styles = {
   icon: {
     color: color.level_perfect,
     float: 'left',
-    width: '10%',
+    width: 20,
     fontSize: 25,
   },
   text: {
@@ -25,7 +25,7 @@ const styles = {
     fontSize: 16,
     float: 'left',
     paddingRight: 40,
-    width: '10%',
+    width: 20,
   },
 };
 
