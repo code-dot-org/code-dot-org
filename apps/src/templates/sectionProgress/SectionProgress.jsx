@@ -17,6 +17,7 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setScriptId,
+  setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
@@ -58,10 +59,8 @@ class SectionProgress extends Component {
     studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
-  };
-
-  state = {
-    lessonOfInterest: 1
+    lessonOfInterest: PropTypes.number.isRequired,
+    setLessonOfInterest: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -74,8 +73,8 @@ class SectionProgress extends Component {
     this.props.loadScript(scriptId);
   };
 
-  onChangeLevel = lessonNumber => {
-    this.setState({lessonOfInterest: lessonNumber});
+  onChangeLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
   };
 
   render() {
@@ -85,7 +84,8 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress
+      studentLevelProgress,
+      lessonOfInterest
     } = this.props;
 
     const levelDataInitialized = scriptData && studentLevelProgress;
@@ -133,7 +133,6 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
               />
               <SummaryViewLegend
                 showCSFProgressBox={true}
@@ -146,7 +145,6 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
               />
             </div>
           }
@@ -163,6 +161,7 @@ export default connect(state => ({
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
   currentView: state.sectionProgress.currentView,
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
 }), dispatch => ({

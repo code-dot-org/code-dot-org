@@ -12,11 +12,13 @@ const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
 const SET_SECTION = 'sectionProgress/SET_SECTION';
 const SET_VALID_SCRIPTS = 'sectionProgress/SET_VALID_SCRIPTS';
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
+const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
 
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
+export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setSection = section => ({ type: SET_SECTION, section });
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
@@ -85,6 +87,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
+  lessonOfInterest: 1,
 };
 
 export default function sectionProgress(state=initialState, action) {
@@ -98,6 +101,12 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       currentView: action.viewType
+    };
+  }
+  if (action.type === SET_LESSON_OF_INTEREST) {
+    return {
+      ...state,
+      lessonOfInterest: action.lessonOfInterest
     };
   }
   if (action.type === SET_SECTION) {
