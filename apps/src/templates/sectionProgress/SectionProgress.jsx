@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
- import _ from 'lodash';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
@@ -89,11 +88,8 @@ class SectionProgress extends Component {
     } = this.props;
 
     const levelDataInitialized = scriptData && studentLevelProgress;
-
-    const lessonNumbers = scriptData ?
-      _.range(1, scriptData.stages.length) : [];
-
     const linkToOverview = scriptData ? scriptData.path : null;
+    const lessons = scriptData ? scriptData.stages : [];
 
     return (
       <div>
@@ -107,10 +103,12 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
-            <LessonSelector
-              lessonNumbers={lessonNumbers}
-              onChange={this.onChangeLevel}
-            />
+            {lessons.length !== 0 &&
+              <LessonSelector
+                lessons={lessons}
+                onChange={this.onChangeLevel}
+              />
+            }
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
