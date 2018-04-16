@@ -12,9 +12,9 @@ def main
   course_scores = {}
 
   Pd::Workshop::COURSES.each do |course|
-    workshops = ::Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: course)
+    workshops = ::Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: course).exclude_summer
 
-    course_scores[course] = get_score_for_workshops(workshops)
+    course_scores[course] = get_score_for_workshops(workshops: workshops, include_free_responses: false, facilitator_name_filter: nil)
   end
 
   course_scores['CSP Local Summer Workshops'] = summarize_workshop_surveys(

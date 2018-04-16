@@ -36,8 +36,7 @@
     "markdown_instructions": "Use a <xml><block type=\"maze_turn\">\r\n    <title name=\"DIR\">turnLeft</title>\r\n  </block></xml> block to get to the acorn!",
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Break this puzzle into two pieces, one before the corner, and one after the corner.\",\"hint_id\":\"courseD_iceage_loops2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/533eb6b80342b0b63f38fc20a0a849aa/courseD_iceage_loops2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you get stuck, try saying the steps out loud.\",\"hint_id\":\"courseD_iceage_loops2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db68d4514fb1ca8bbb665b95a7ebf90d/courseD_iceage_loops2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Follow this path to get Scrat to the acorn.\",\"hint_id\":\"courseD_iceage_loops2_c\",\"hint_type\":\"general\",\"hint_path\":\"[[6,3],[1,3],[1,5]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6094e8d1b96cb4958a5442df7172bca1/courseD_iceage_loops2.mp3\"}]",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\"Free Play\"",
