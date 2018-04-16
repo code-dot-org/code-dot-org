@@ -29,7 +29,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
       thisInterpreter.asyncFunctionList = [];
       thisInterpreter.customMarshaler = customMarshaler;
-      thisInterpreter.globalScope = scope;
       if (opt_initFunc) {
         opt_initFunc(thisInterpreter, scope);
       }
@@ -153,7 +152,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
        * 2. custom marshaled objects can only be mounted on the global scope. Therefore
        *    only look up a native parent if we are asking for a property on the global scope.
        */
-      obj === this.globalScope &&
+      obj === this.global &&
       /**
        * 3. Assuming the above conditions pass, lookup the native parent among the list
        * of global properties specified in the custom marshaler's configuration.
