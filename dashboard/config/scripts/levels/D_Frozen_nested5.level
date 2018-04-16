@@ -33,7 +33,7 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Lines of 2 hexagons and 4 triangles:\\n\\n<img src=\\\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\\\" width=\\\"200px\\\" />\\n\",\"hint_id\":\"courseD_artist_project4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cd72e2c0593cc5942d6f38053fe1215/courseD_artist_project5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Lines of 2 hexagons and 4 triangles:\\n\\n<img src=\\\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\\\" width=\\\"200px\\\" />\\n\",\"hint_id\":\"courseD_artist_project4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cd72e2c0593cc5942d6f38053fe1215/D_Frozen_nested5.mp3\"}]",
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Get creative with shapes and angles to see what kind of new snowflakes we can draw!\"_\r\n",
     "project_template_level_name": "courseD_artist_projectTemplate",
     "tts_markdown_instructions_override": "Be creative - draw whatever you'd like!",
