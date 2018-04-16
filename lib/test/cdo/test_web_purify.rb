@@ -15,7 +15,6 @@ class WebPurifyTest < Minitest::Test
   end
 
   def test_find_potential_profanity
-    skip "Disabling while working on unexpected VCR failures"
     assert_nil WebPurify.find_potential_profanity('not a swear')
     assert_equal 'shit', WebPurify.find_potential_profanity('holy shit')
     assert_equal 'shitstain', WebPurify.find_potential_profanity('shitstain')
@@ -25,7 +24,6 @@ class WebPurifyTest < Minitest::Test
   end
 
   def test_find_potential_profanity_with_language
-    skip "Disabling while working on unexpected VCR failures"
     assert_nil WebPurify.find_potential_profanity('scheiße', ['en'])
     assert_equal 'scheiße', WebPurify.find_potential_profanity('scheiße', ['de'])
     assert_equal 'puta', WebPurify.find_potential_profanity('puta madre', ['es'])
