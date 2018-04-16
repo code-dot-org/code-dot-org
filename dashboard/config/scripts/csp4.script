@@ -6,7 +6,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit4/"], ["teacherForum", "https://forum.code.org/c/csp4"], ["vocabulary", "https://curriculum.code.org/csp/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit4/standards/"], ["professionalLearning", "https://studio.code.org/s/csp4-support"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
 
 stage 'What is Big Data?', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'

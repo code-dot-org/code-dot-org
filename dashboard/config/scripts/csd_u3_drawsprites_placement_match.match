@@ -1,6 +1,6 @@
 name 'CSD U3 drawSprites placement match'
 title 'drawSprites'
-height '200'
+height '150'
 description 'Match the code to the image that it will produce.'
 question '<img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png">'
 answer '<img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png">'
