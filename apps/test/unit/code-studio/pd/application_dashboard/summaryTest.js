@@ -13,8 +13,10 @@ describe("Summary", () => {
     router: fakeRouter
   };
 
+  const regionalPartnerFilter = {value: 1, label: "A Great Organization"};
+
   const createSummary = () => (shallow(
-    <Summary regionalPartnerName="A Great Organization" />,
+    <Summary regionalPartnerFilter={regionalPartnerFilter} />,
     { context },
   ));
 
