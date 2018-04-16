@@ -64,6 +64,12 @@ video_player: false
 
     .coalition
       %h2 Our Coalition
+      .centered
+        %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
+          %button Join the newsletter
+        &nbsp;&nbsp;
+        %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
+          %button Join the coalition
 
       = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
       = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
