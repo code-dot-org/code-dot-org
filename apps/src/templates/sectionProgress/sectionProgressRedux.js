@@ -19,13 +19,17 @@ const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setSection = section => ({ type: SET_SECTION, section });
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addScriptData = (scriptId, scriptData) => ({ type: ADD_SCRIPT_DATA, scriptId, scriptData });
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
+export const setSection = (section) => {
+  // Sort section.students by name.
+  const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
+  return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+};
 
 // Types of views of the progress tab
 export const ViewType = {

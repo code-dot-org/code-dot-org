@@ -203,5 +203,4 @@ export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
 
 export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
-  lessonOfInterest: state.sectionProgress.lessonOfInterest,
 }))(VirtualizedDetailView);

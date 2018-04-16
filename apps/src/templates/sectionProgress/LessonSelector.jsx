@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import {h3Style} from "../../lib/ui/Headings";
+import i18n from '@cdo/locale';
 
 const styles = {
   dropdown: {
-    width: 250,
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
@@ -17,28 +17,28 @@ const styles = {
 
 export default class LessonSelector extends Component {
   static propTypes = {
-    lessonNumbers: PropTypes.arrayOf(PropTypes.number),
+    lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
     onChange: PropTypes.func.isRequired,
   };
 
   render() {
-    const { onChange, lessonNumbers } = this.props;
+    const { onChange, lessons } = this.props;
 
     return (
       <div>
         <div style={{...h3Style, ...styles.heading}}>
-          Jump to lesson:
+          {i18n.jumpToLesson()}
         </div>
         <select
           onChange={event => onChange(parseInt(event.target.value))}
           style={styles.dropdown}
         >
-          {lessonNumbers.map((lessonNumber) => (
+          {lessons.map((lesson) => (
             <option
-              value={lessonNumber}
-              key={lessonNumber}
+              value={lesson.position}
+              key={lesson.id}
             >
-              Lesson {lessonNumber}
+              {lesson.position}: {lesson.name}
             </option>
           ))}
         </select>
