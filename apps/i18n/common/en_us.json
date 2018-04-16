@@ -554,6 +554,7 @@
   "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "joinUs": "Join us",
   "jump": "jump",
+  "jumpToLesson": "Jump to lesson:",
   "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
   "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
   "keepPlaying": "Keep playing",

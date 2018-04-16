@@ -32,7 +32,7 @@
     "impressive": "false",
     "discard_background": "false",
     "disable_sharing": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?\",\"hint_id\":\"courseD_artist_project3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc6dae9b2f891e4d4104ba9391485f80/courseD_artist_project3a.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?\",\"hint_id\":\"courseD_artist_project3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bc6dae9b2f891e4d4104ba9391485f80/D_Frozen_nested8.mp3\"}]",
     "instructions": "Spin that shape around 5 or 6 times in a circle.",
     "project_template_level_name": "courseD_artist_project2Template",
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s spin and make it into a snowflake.\"_\r\n\r\nSpin that shape around 5 or 6 times in a circle.\r\n- If you choose 5 times,  try a turn of 72 degrees\r\n- If you choose 6 times,  try a turn of 60 degrees\r\n<hr/>\r\n\r\nHere's an example of Elsa turning a pattern 6 times:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)",

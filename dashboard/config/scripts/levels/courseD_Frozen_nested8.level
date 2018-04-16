@@ -38,8 +38,8 @@
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s spin and make it into a snowflake.\"_\r\n\r\nSpin that shape around 5 or 6 times in a circle.\r\n- If you choose 5 times,  try a turn of 72 degrees\r\n- If you choose 6 times,  try a turn of 60 degrees\r\n<hr/>\r\n\r\nHere's an example of Elsa turning a pattern 6 times:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9229,
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
