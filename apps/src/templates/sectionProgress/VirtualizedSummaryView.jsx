@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
@@ -10,7 +11,7 @@ import SectionProgressNameCell from './SectionProgressNameCell';
 
 const SUMMARY_COLUMN_WIDTH = 50;
 
-export default class VirtualizedDetailView extends Component {
+class VirtualizedSummaryView extends Component {
 
   static propTypes = {
     section: sectionDataPropType.isRequired,
@@ -119,3 +120,9 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 }
+
+export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
+
+export default connect(state => ({
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+}))(VirtualizedSummaryView);
