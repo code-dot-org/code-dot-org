@@ -1,0 +1,177 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sat, 07 Apr 2018 04:25:08 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>3292F2596670DF0F</RequestId><HostId>xA1bBUVZNTWbhfgKscRwrHaf4tM2Jsldec2klRyPHPvnyx1A/orQh5iUXOmWFp9Wujo9kacPuBs=</HostId></Error>
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:09 GMT
+- request:
+    method: post
+    uri: https://collector.newrelic.com/agent_listener/14//get_redirect_host?marshal_format=json
+    body:
+      encoding: UTF-8
+      string: "[]"
+    headers:
+      Content-Encoding:
+      - identity
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '133'
+    body:
+      encoding: UTF-8
+      string: '{"exception":{"message":"Invalid license key, please contact support@newrelic.com","error_type":"NewRelic::Agent::LicenseException"}}'
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:11 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 07 Apr 2018 04:25:12 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>files_test/1/1/.metadata/thumbnail.png</Key><LastModified>2018-04-07T04:20:11.000Z</LastModified><ETag>&quot;1c70b30125f28a277d619782301c3b27&quot;</ETag><Size>23</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/index.html</Key><LastModified>2018-02-02T01:26:01.000Z</LastModified><ETag>&quot;7c8743c596f5f74e2cd686a2c4d562c9&quot;</ETag><Size>250</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/new-1.css</Key><LastModified>2018-02-02T01:26:20.000Z</LastModified><ETag>&quot;d770583dcb8c55c23ad88995dbc07d9d&quot;</ETag><Size>79</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/new-2.css</Key><LastModified>2018-02-02T01:26:20.000Z</LastModified><ETag>&quot;d770583dcb8c55c23ad88995dbc07d9d&quot;</ETag><Size>79</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>files_test/1/1/style.css</Key><LastModified>2018-02-02T01:26:01.000Z</LastModified><ETag>&quot;76b796b04e57174c64a349a4e3f649db&quot;</ETag><Size>43</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:11 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: stub-thumbnail-contents
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - HHCzASXyiid9YZeCMBw7Jw==
+      Content-Length:
+      - '23'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 07 Apr 2018 04:25:14 GMT
+      X-Amz-Version-Id:
+      - s8_5xezkecxcznS7I7d_tWlfCFbcfGLL
+      Etag:
+      - '"1c70b30125f28a277d619782301c3b27"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:13 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Sat, 07 Apr 2018 04:25:16 GMT
+      X-Amz-Version-Id:
+      - exsRfpTGtNZXBBbaqhgvZsb988.UCDTG
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:15 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sat, 07 Apr 2018 04:25:19 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>4A8713D3AE3DDB1C</RequestId><HostId>99R0Mn+QrjQylR+/k+pzZFyVHPBBEXI6ffeZrojE8c012AtYy6AXOlcE1ShlrV6VsbfnplkVWwQ=</HostId></Error>
+    http_version: 
+  recorded_at: Sat, 07 Apr 2018 04:25:19 GMT
+recorded_with: VCR 3.0.3

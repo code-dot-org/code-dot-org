@@ -39,8 +39,8 @@
     "tts_markdown_instructions_override": "Be creative - draw whatever you'd like!",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9225,
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
