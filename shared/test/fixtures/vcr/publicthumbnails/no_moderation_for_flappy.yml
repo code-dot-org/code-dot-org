@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 17 Apr 2018 20:25:23 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>173A78F8ED03ACA6</RequestId><HostId>LzTZQsebZ/lxqLjKsfKnEwgwshpKbw74ZEO09VY39xwKXR40WTdTS2Eo5B1sbb8BHHjJIbpPGDE=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 20:25:24 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 17 Apr 2018 20:25:24 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>DC8E90DB813960EE</RequestId><HostId>cP/vGOrQ/gn2X5xHIjQQyqHnXND8bvtJO93smHUfV9n1RGXb3UP5R9lWqgzTTo3M67vjYknEufs=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 20:25:24 GMT
+recorded_with: VCR 3.0.3
