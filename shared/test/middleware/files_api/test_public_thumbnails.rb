@@ -103,99 +103,30 @@ class PublicThumbnailsTest < FilesApiTestBase
     assert_moderates_project_type 'gamelab'
   end
 
-  def test_no_moderation_for_artist
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'artist'
-  end
-
-  def test_no_moderation_for_weblab
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'weblab'
-  end
-
-  def test_no_moderation_for_frozen
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'frozen'
-  end
-
-  def test_no_moderation_for_playlab
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'playlab'
-  end
-
-  def test_no_moderation_for_flappy
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'flappy'
-  end
-
-  def test_no_moderation_for_gumball
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'gumball'
-  end
-
-  def test_no_moderation_for_iceage
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'iceage'
-  end
-
-  def test_no_moderation_for_infinity
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'infinity'
-  end
-
-  def test_no_moderation_for_minecraft_adventurer
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'minecraft_adventurer'
-  end
-
-  def test_no_moderation_for_minecraft_designer
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'minecraft_designer'
-  end
-
-  def test_no_moderation_for_minecraft_hero
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'minecraft_hero'
-  end
-
-  def test_no_moderation_for_starwars
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'starwars'
-  end
-
-  def test_no_moderation_for_starwarsblocks
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'starwarsblocks'
-  end
-
-  def test_no_moderation_for_starwarsblocks_hour
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'starwarsblocks_hour'
-  end
-
-  def test_no_moderation_for_bounce
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'bounce'
-  end
-
-  def test_no_moderation_for_sports
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'sports'
-  end
-
-  def test_no_moderation_for_basketball
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'basketball'
-  end
-
-  def test_no_moderation_for_artist_k1
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'artist_k1'
-  end
-
-  def test_no_moderation_for_playlab_k1
-    skip 'Not implemented yet'
-    refute_moderates_project_type 'playlab_k1'
+  def test_no_moderation_for_other_types
+    %w(
+      artist
+      weblab
+      frozen
+      playlab
+      flappy
+      gumball
+      iceage
+      infinity
+      minecraft_adventurer
+      minecraft_designer
+      minecraft_hero
+      starwars
+      starwarsblocks
+      starwarsblocks_hour
+      bounce
+      sports
+      basketball
+      artist_k1
+      playlab_k1
+    ).each do |type|
+      refute_moderates_project_type type
+    end
   end
 
   private
