@@ -93,7 +93,8 @@ export const dropletBuiltinConfigBlocks = [
   {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
   {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
   {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' },
+  {func: 'Math.pow', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathPow' }
 ];
 
 /**
@@ -132,6 +133,7 @@ standardConfig.blocks = [
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
   {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
+  {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
