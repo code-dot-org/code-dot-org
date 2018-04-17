@@ -1619,7 +1619,7 @@ Artist.prototype.step = function (command, values, options) {
  */
 function scaleToBoundingBox(maxSize, width, height) {
   if (width < maxSize && height < maxSize) {
-    return {width: width, height: height};
+    return {width: maxSize, height: maxSize};
   }
 
   var newWidth;
