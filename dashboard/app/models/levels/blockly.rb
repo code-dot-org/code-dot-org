@@ -371,6 +371,13 @@ class Blockly < Level
     end
   end
 
+  def localized_markdown_instructions
+    if should_localize? && markdown_instructions
+      I18n.t("data.markdown_instructions").
+        try(:[], "#{name}_markdown_instruction".to_sym)
+    end
+  end
+
   def self.base_url
     "#{Blockly.asset_host_prefix}/blockly/"
   end
