@@ -418,18 +418,33 @@ ms:
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 colorLeds predict_2018_callout: [ ]
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -945,6 +960,12 @@ ms:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseB_Scrat_ramp2_2018_callout: [ ]
+      courseB_Scrat_ramp3a_2018_callout: [ ]
+      courseB_Scrat_ramp4a_2018_callout: [ ]
+      courseB_Scrat_ramp5a_2018_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops3_2018_callout:
@@ -977,29 +998,46 @@ ms:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
+      courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist to the center of the screen.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog1_2018_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_artist_prog2_2018_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
+      courseC_collector_loops_challenge2_2018_callout: [ ]
       courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
+      courseC_collector_prog8_2018_callout: [ ]
       courseC_collector_prog9_callout: [ ]
+      courseC_collector_prog9_2018_callout: [ ]
       courseC_collector_progA_callout: [ ]
       courseC_collector_progB_callout: [ ]
       courseC_collector_prog_challenge1_callout: [ ]
+      courseC_collector_prog_challenge1_2018_callout: [ ]
       courseC_collector_prog_challenge2_callout: [ ]
+      courseC_collector_prog_challenge2_2018_callout: [ ]
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
+      courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_loops2_callout:
@@ -1008,28 +1046,52 @@ ms:
       courseC_maze_loops_challenge2_callout: [ ]
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
+      courseC_maze_programming5_2018_callout: [ ]
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
         courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
       courseC_starWars_loops10_callout: [ ]
+      courseC_starWars_loops10_2018_callout: [ ]
       courseC_starWars_loops10_predict2_callout: [ ]
+      courseC_starWars_loops10_predict2_2018_callout: [ ]
       courseC_starWars_loops11_callout: [ ]
+      courseC_starWars_loops11_2018_callout: [ ]
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
       courseC_starWars_loops4_callout: [ ]
+      courseC_starWars_loops4_2018_callout: [ ]
       courseC_starWars_loops5_callout: [ ]
+      courseC_starWars_loops5_2018_callout: [ ]
       courseC_starWars_loops6_callout: [ ]
+      courseC_starWars_loops6_2018_callout: [ ]
       courseC_starWars_loops7_callout: [ ]
+      courseC_starWars_loops7_2018_callout: [ ]
       courseC_starWars_loops8_callout: [ ]
+      courseC_starWars_loops8_2018_callout: [ ]
       courseC_starWars_loops9_callout: [ ]
+      courseC_starWars_loops9_2018_callout: [ ]
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
@@ -1500,7 +1562,7 @@ ms:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]
@@ -1553,13 +1615,16 @@ ms:
       grade2_MakeDogTag_1_callout: [ ]
       grade2_MakeDogTag_BFP_callout: [ ]
       grade2_collector_10_callout: [ ]
+      grade2_collector_10_2018_callout: [ ]
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
       grade2_collector_8_callout: [ ]
       grade2_collector_9_callout: [ ]
       grade2_collector_9a_callout: [ ]
       grade2_collector_A_callout: [ ]
+      grade2_collector_A_2018_callout: [ ]
       grade2_collector_A_predict1_callout: [ ]
+      grade2_collector_A_predict1_2018_callout: [ ]
       grade2_maze_intro10_callout: [ ]
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.

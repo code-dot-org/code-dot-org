@@ -536,3 +536,22 @@
           på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
           visa hur en dator kan lagra även mer komplex information(som bilder och
           färger) på binärt sätt.
+      PaperPlanes_2018:
+        title: 'Algoritmer i verkliga livet: Pappersflygplan'
+        desc: Den här lektionen visar hur vi använder uppsättningar i vårt dagliga
+          liv genom att använda exemplet att vika pappersflygplan. Den här lektionen
+          fokuserar också på hur uppsättningar av instruktioner är en viktig del av
+          datorkunskapen.
+      GettingLoopy_2018:
+        title: Att bli snurrig
+        desc: Den här lektionen introducerar konceptet av loops/slingor(upprepade
+          instruktioner) genom en aktivitet med dans. Eleverna får lära sig enkel
+          koreografi och sedan bli uppmanade att repetera.
+      BinaryBracelets_2018:
+        title: Binära armband
+        desc: Eleverna konstruerar armband som är en binär representation av första
+          bokstaven i deras namn. Eleverna lär att data kan presenteras och lagras
+          på mer än ett sätt.
+      MoveItMoveIt_2018:
+        title: Flytta det, flytta den
+        desc: ''

@@ -34,9 +34,9 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
+          title: todasascoisas
+          description_short: Este é um curso para todasascoisas
+          description_student: Este é um curso para todasascoisas e tem uma descrição
+            mais detalhada para os estudantes
+          description_teacher: Este é um curso para todasascoisas e tem uma descrição
+            mais detalhada para os professores

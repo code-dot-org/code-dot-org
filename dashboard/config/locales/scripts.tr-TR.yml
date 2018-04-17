@@ -8332,6 +8332,8 @@
               name: Sanatçıların Döngüleri
             Nested Loops in Bee:
               name: Arı -içiçe döngüler
+            Loops in Ice Age:
+              name: Loops in Ice Age
           title: Yeni Kurs D Senaryosu
           description_audience: ''
           description_short: ''
@@ -10088,6 +10090,10 @@
               name: Programming in Ice Age
             Loops in Ice Age:
               name: Loops in Ice Age
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: Çabuk, Çabuk Taşı
         coursed-2018:
           title: Yeni Kurs D Senaryosu
           description: ''
@@ -10162,6 +10168,8 @@
               name: Sanaçtı İkili Taban
               description_student: ''
               description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
         jr-test:
           stages:
             Programming with Behaviors:
@@ -10174,6 +10182,10 @@
               name: Using Forever Loops
             Virtual Pet - Behaviors:
               name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
           title: ''
           description_audience: ''
           description_short: ''
@@ -10210,8 +10222,194 @@
               name: Unit 2 - Assessment 4
             Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
               name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global
+                Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic,
+                Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays
+                and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables,
+                Procedures, Loops, Conditionals)
           title: CS Principles AP Exam Prep
           description_audience: ''
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment
             questions that appeared in Units 1-5 in the course.  '
+        coursec-2018:
+          title: Kurs C
+          description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
+            baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
+            araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda,
+            kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
+            hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 6-10'
+          stages:
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Labirentte Programlama
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Labirentte Hata Ayıklama
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Paper Planes':
+              name: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Koleksiyoncu programlama
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Sanatçı Programlama
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Döngüler: Loopy Başlarken'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Rey ve BB-8 ile döngüler
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Play Lab' da Olaylar
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Ortalamanın Ekranını Kaldır
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: İkilik Bileklikler
+              description_student: ''
+              description_teacher: ''
+        csd6-2018:
+          title: CSD bilgisayar birimi 6 - fiziksel
+          description: Altıncı bölüm Bilgisayarı keşvetme, Öğrenciler App laboratuvar
+            ve Maker Toolkit ile programlar geliştirir ve fiziksel bir tahta ile iletişim
+            kurar.
+          description_short: Fiziksel aygıtları programlama
+          description_audience: ''
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: ''
+              description_teacher: ''
+            Board Events_:
+              name: Board Events_
+              description_student: ''
+              description_teacher: ''
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: ''
+              description_teacher: ''
+            Analog Input_:
+              name: Analog Input_
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: ''
+              description_teacher: ''
+            Making Music_:
+              name: Making Music_
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: ''
+              description_teacher: ''
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''

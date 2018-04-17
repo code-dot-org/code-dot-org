@@ -802,31 +802,31 @@
         mc_2017_puzzle_3: Minecraft Heure du code - Les boucles
         mc_2017_puzzle_8: Minecraft Hour of Code - Les fonctions
         mc_2017_puzzle_12: Minecraft Hour of Code - Bac à sable
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
+        hint_videos_d_11_3_first: 'Astuces en vidéo: D.11.3 en premier'
+        hint_videos_d_11_3_last: 'Astuces en vidéo: D.11.3 en dernier'
+        hint_videos_d_11_4_first: 'Astuces en vidéo: D.11.4 en premier'
+        hint_videos_d_11_4_last: 'Astuces en vidéo: D.11.4 en dernier'
+        hint_videos_d_11_5_first: 'Astuces en vidéo: D.11.5 en premier'
+        hint_videos_d_11_5_last: 'Astuces en vidéo: D.11.5 en dernier'
+        hint_videos_d_11_6_first: 'Astuces en vidéo: D.11.6 en premier'
+        hint_videos_d_11_6_last: 'Astuces en vidéo: D.11.6 en dernier'
+        hint_videos_d_11_7_first: 'Astuces en vidéo: D.11.7 en premier'
+        hint_videos_d_11_7_last: 'Astuces en vidéo: D.11.7 en dernier'
+        hint_videos_d_11_9_first: 'Astuces en vidéo: D.11.9 en premier'
+        hint_videos_d_11_9_last: 'Astuces en vidéo: D.11.9 en dernier'
+        hint_videos_d_11_11_first: 'Astuces en vidéo: D.11.11 en premier'
+        hint_videos_d_11_11_last: 'Astuces en vidéo: D.11.11 en dernier'
         applab_intro_welcome: App Lab - Démarrage
         applab_intro_events: App Lab - Rendez-le interactif
         applab_intro_sounds: App Lab - Images et sons
         applab_intro_designmode: App Lab - Mode création
         applab_intro_share: App Lab - Partagez votre application
         csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: La moissonneuse
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_skinOverview_K-1: La moissonneuse
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
     callout:
