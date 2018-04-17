@@ -16,7 +16,7 @@ import {
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   }
 };
 
@@ -85,6 +85,10 @@ class CohortView extends React.Component {
     window.open(this.getCsvUrl());
   };
 
+  handleViewAllClick = () => {
+    this.context.router.push(`/${this.props.route.role}`);
+  };
+
   render() {
     if (this.state.loading) {
       return (
@@ -124,6 +128,12 @@ class CohortView extends React.Component {
               onClick={this.handleDownloadCsvClick}
             >
               Download CSV
+            </Button>
+            <Button
+              style={styles.button}
+              onClick={this.handleViewAllClick}
+            >
+              View all applications
             </Button>
           </Col>
           <CohortViewTable
