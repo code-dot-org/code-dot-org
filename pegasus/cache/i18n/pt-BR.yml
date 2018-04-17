@@ -103,11 +103,11 @@
   congratulations_on_completing_course3: Parabéns por ter concluído o Curso 3
   congratulations_on_completing_course4: Parabéns por ter concluído o Curso 4
   congratulations_on_completing_coursea: Parabéns por ter concluído o curso A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_courseb: Parabéns por ter concluído o Curso B
+  congratulations_on_completing_coursec: Parabéns por ter concluído o Curso C
+  congratulations_on_completing_coursed: Parabéns por ter concluído o Curso D
+  congratulations_on_completing_coursee: Parabéns por ter concluído o Curso E
+  congratulations_on_completing_coursef: Parabéns por ter concluído o Curso F
   congratulations_on_completing_accelerated: Parabéns por ter concluído o Curso Acelerado
   congrats_next_tutorials_title: Passe para o próximo nível
   congrats_next_tutorials_desc: Experimente esses tutoriais menores, de 1 hora, ou
@@ -295,18 +295,12 @@
   just_did_course2: Eu acabei de concluir o Curso 2 - confira! @codeorg
   just_did_course3: Eu acabei de concluir o Curso 3 - confira! @codeorg
   just_did_course4: Eu acabei de concluir o Curso 4 - confira! @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: Eu acabei de concluir o Curso A - confira! @codeorg
+  just_did_courseb: Eu acabei de concluir o Curso B - confira! @codeorg
+  just_did_coursec: Eu acabei de concluir o Curso C - confira! @codeorg
+  just_did_coursed: Eu acabei de concluir o Curso D - confira! @codeorg
+  just_did_coursee: Eu acabei de concluir o Curso E - confira! @codeorg
+  just_did_coursef: Eu acabei de concluir o Curso F - confira! @codeorg
   just_did_accelerated: Eu acabei de concluir o Curso Acelerado - confira! @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
