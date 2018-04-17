@@ -14,6 +14,9 @@ export const progressStyles = {
   lessonNumberHeading: {
     margin: '9px 16px',
     fontFamily: '"Gotham 5r", sans-serif',
+    ':hover': {
+      cursor: 'pointer'
+    }
   },
   multigrid: {
     border: '1px solid',

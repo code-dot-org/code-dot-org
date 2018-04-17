@@ -84,6 +84,13 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
   PropTypes.objectOf(PropTypes.number)
 );
 
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
+
 const initialState = {
   scriptId: null,
   section: {},
