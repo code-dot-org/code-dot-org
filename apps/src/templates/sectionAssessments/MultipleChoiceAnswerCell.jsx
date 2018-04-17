@@ -35,8 +35,7 @@ class MultipleChoiceAnswerCell extends Component {
   };
 
   render() {
-    const {percentValue} = this.props;
-    const {isCorrectAnswer} = this.props;
+    const {percentValue, isCorrectAnswer} = this.props;
     return (
       <div style={styles.main}>
         <div style={styles.text}>
@@ -45,7 +44,7 @@ class MultipleChoiceAnswerCell extends Component {
         <div>
           {isCorrectAnswer &&
              <FontAwesome icon="check-circle" style={styles.icon}/>
-         }
+          }
         </div>
       </div>
     );
