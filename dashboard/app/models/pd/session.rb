@@ -85,13 +85,13 @@ class Pd::Session < ActiveRecord::Base
     self.end.end_of_day < Time.zone.now
   end
 
-  def show_links?
+  def show_link?
     code.present? &&
-      !too_soon_for_links? &&
+      !too_soon_for_link? &&
       !too_late_for_attendance?
   end
 
-  def too_soon_for_links?
+  def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
   end
 

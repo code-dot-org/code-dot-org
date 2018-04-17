@@ -424,7 +424,8 @@ export default class Workshop extends React.Component {
       <div>
         <p>
           Every day of the workshop, your participants must visit the attendance URL to receive
-          professional development credit. The attendance URL will not show up until the day of the session.
+          professional development credit. The attendance URL will show up 48 hours early, but
+          participants can't mark themselves as attended until the day of the workshop.
         </p>
         <Row>
           <Col md={2}>
@@ -448,7 +449,7 @@ export default class Workshop extends React.Component {
                   </div>
                 </Col>
                 <Col md={4}>
-                  {session['open_for_attendance?'] &&
+                  {session['show_link?'] &&
                   <div style={styles.attendanceRowText}>
                     {this.getSessionAttendanceLink(session)}
                   </div>
@@ -456,7 +457,7 @@ export default class Workshop extends React.Component {
                 </Col>
                 <Col md={4}>
                   <Button
-                    className={session['open_for_attendance?'] && session.attendance_count === 0 ? "btn-orange" : null}
+                    className={session['show_link?'] && session.attendance_count === 0 ? "btn-orange" : null}
                     data-session_id={session.id}
                     href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
                     onClick={this.handleTakeAttendanceClick}
