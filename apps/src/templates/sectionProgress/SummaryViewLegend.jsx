@@ -9,6 +9,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.lightest_gray,
     backgroundColor: color.white,
+    float: 'left',
     display: 'inline-block',
     marginTop: 20,
   },
