@@ -785,14 +785,18 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     if THUMBNAIL_FILENAME == filename
-      temp_url = FileBucket.new.make_temporary_public_url(encrypted_channel_id, s3_prefix)
-      rating = ImageModeration.rate_image(temp_url)
-      if %i(adult racy).include? rating
-        # Incrementing abuse score by 15 to differentiate from manually reported projects
-        new_score = StorageApps.new(storage_id('user')).increment_abuse(encrypted_channel_id, 15)
-        FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-        response.headers['x-cdo-content-rating'] = rating.to_s
-        cache_for 1.hour
+      begin
+        temp_url = FileBucket.new.make_temporary_public_url(encrypted_channel_id, s3_prefix)
+        rating = ImageModeration.rate_image(temp_url)
+        if %i(adult racy).include? rating
+          # Incrementing abuse score by 15 to differentiate from manually reported projects
+          new_score = StorageApps.new(storage_id('user')).increment_abuse(encrypted_channel_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          response.headers['x-cdo-content-rating'] = rating.to_s
+          cache_for 1.hour
+          not_found
+        end
+      rescue ArgumentError, OpenSSL::Cipher::CipherError
         not_found
       end
     end
