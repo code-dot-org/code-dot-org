@@ -78,7 +78,8 @@ export default class AdminCohortView extends React.Component {
       assigned_workshop: 'Assigned Workshop',
       registered_workshop: 'Registered Workshop',
       accepted_seat: 'Accepted Seat?',
-      course_name: 'Course'
+      course_name: 'Course',
+      regional_partner_name: 'Regional Partner'
     };
 
     const filteredCohortWithFormData = this.state.filteredCohort.map(row => {
