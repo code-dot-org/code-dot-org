@@ -5,11 +5,13 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
+import LoadMoreProgressButton from './LoadMoreProgressButton';
 import {
   ViewType,
   loadScript,
@@ -130,6 +132,7 @@ class SectionProgress extends Component {
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
               />
+              <LoadMoreProgressButton />
               <SummaryViewLegend
                 showCSFProgressBox={true}
               />
@@ -141,6 +144,10 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+              />
+              <LoadMoreProgressButton />
+              <ProgressLegend
+                excludeCsfColumn={true}
               />
             </div>
           }
