@@ -31,7 +31,7 @@ const styles = {
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
     percentValue: PropTypes.string.isRequired,
-    isCorrectAnswer: PropTypes.bool.isRequired,
+    isCorrectAnswer: PropTypes.bool,
   };
 
   render() {
