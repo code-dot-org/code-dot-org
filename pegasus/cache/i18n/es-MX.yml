@@ -1046,12 +1046,12 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
+  dashboard_coursee: 'Curso E: '
+  dashboard_coursef: 'Curso F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
@@ -1392,12 +1392,12 @@
   course2_gradelevel: Edades de 6 a 18 años
   course3_gradelevel: Edades de 8 a 18 años
   course4_gradelevel: Edades de 10 a 18 años
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Edades de 4 a 7 años
+  courseb_gradelevel: Edades de 5 a 8 años
+  coursec_gradelevel: Edades de 6 a 10 años
   coursed_gradelevel: Califación 8+
   coursee_gradelevel: Edad 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1539,12 +1539,16 @@
     flexibles a los problemas más complejos. Al terminar este curso, los estudiantes
     crearán historias interactivas y juegos que puedan compartir con cualquier persona.
     Recomendado para los grados del 4 al 8."
-  coursea_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores.
   courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
+    puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
+    ciencias de la computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,
