@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
-const Artist = require('@cdo/apps/turtle/turtle');
+const Artist = require('@cdo/apps/turtle/artist');
 const constants = require('@cdo/apps/constants');
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
