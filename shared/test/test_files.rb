@@ -685,6 +685,18 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
+  def test_bad_channel_thumbnail
+    ImageModeration.expects(:rate_image).never
+
+    get "/v3/files-public/undefined/.metadata/thumbnail.png"
+    assert not_found?
+
+    # Does not flag the project as abusive
+    get "/v3/channels/#{@channel_id}/abuse"
+    assert successful?
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+  end
+
   private
 
   def delete_all_files(bucket)
