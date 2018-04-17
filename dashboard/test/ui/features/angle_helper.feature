@@ -15,7 +15,7 @@ Scenario: Angle Helper Eyes Tests
   And I begin to edit the angle of turn block "3"
   And I see no difference for "dropdown angle helper"
   And I click block "4"
-  And I begin to edit the angle of turn block "4"
+  And I begin to edit the value of turn block "4"
   And I see no difference for "value input angle helper"
   And I close my eyes
 
