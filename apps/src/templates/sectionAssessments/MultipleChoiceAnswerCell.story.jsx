@@ -8,8 +8,7 @@ export default storybook => {
       {
         name: 'Show Check Mark',
         description: `
-            A green check mark is visible when an answer is
-            question correctly.
+            A green check mark is displayed when the answer is correct.
         `,
         story: () => (
           <MultipleChoiceAnswerCell
@@ -20,7 +19,7 @@ export default storybook => {
       },
       {
         name:'Hide Check Mark',
-        description: 'Incorrect answer',
+        description: 'Check mark is hidden when the answer is wrong.',
         story: () => (
           <MultipleChoiceAnswerCell
             percentValue="40%"
