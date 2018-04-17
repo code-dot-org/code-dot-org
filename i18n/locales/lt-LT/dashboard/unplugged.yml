@@ -334,3 +334,15 @@ lt:
       BinaryImages_2018:
         title: Dvejetainiai vaizdai
         desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus kalbama apie informatiką ir algoritmų svarbą joje.
+      GettingLoopy_2018:
+        title: Kartojimo supratimas
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami) šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+      BinaryBracelets_2018:
+        title: Dvejetainės apyrankės
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi daugiau nei vienu būdu.
+      MoveItMoveIt_2018:
+        title: Judėk, judėk
+        desc: ''

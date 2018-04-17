@@ -541,3 +541,22 @@
           aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
           haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
           gordetzeko gai dela (irudi eta kolore bezalakoak).
+      PaperPlanes_2018:
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
+          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
+          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
+          diren bere zati esentzialetako bat.
+      GettingLoopy_2018:
+        title: Iteratzen
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
+          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
+          egin beharko dute.
+      BinaryBracelets_2018:
+        title: Eskumuturreko bitarrak
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
+          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
+          ikasten dute honela.
+      MoveItMoveIt_2018:
+        title: Mugi ezazu, mugi ezazu!
+        desc: ''
