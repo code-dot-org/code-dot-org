@@ -19,16 +19,16 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 17 Apr 2018 01:45:36 GMT
+      - Tue, 17 Apr 2018 18:58:35 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>C4BD4D4F31CAC8F8</RequestId><HostId>H5xmXcFsEJdILOGAFEMniGqvhM0VNxrj4+rWFJj4uL+vN+BdC7Nv3wlVB3AxtM+MwF+pos7cGuA=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>87154E053E28B6FD</RequestId><HostId>55XbCXFuIVEowMzGBkPmqz8quqf5msPUnH1ICG+e4Pv6RZuTWKalccGJT3YFcKKKsB3Jyy3uXt4=</HostId></Error>
     http_version: 
-  recorded_at: Tue, 17 Apr 2018 01:45:36 GMT
+  recorded_at: Tue, 17 Apr 2018 18:58:36 GMT
 - request:
     method: get
     uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
@@ -48,14 +48,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 17 Apr 2018 01:45:36 GMT
+      - Tue, 17 Apr 2018 18:58:36 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>59F0A3E21C943F70</RequestId><HostId>JOJ5lg/hpskNOr/xoszBOpXBCvTbX1ZyRD2acMMS+mnnzW4/DBX3KKCXae3NU0ehxVzH+4M2Ihs=</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>92CB3FFA57315CC2</RequestId><HostId>Jk93/dxRzRrQSqHqc+x7Szb6rzEf+bRWA+W85B1zmuMEDrdbD5QSB3r3pRSibLqY570GGJTD/iM=</HostId></Error>
     http_version: 
-  recorded_at: Tue, 17 Apr 2018 01:45:36 GMT
+  recorded_at: Tue, 17 Apr 2018 18:58:36 GMT
 recorded_with: VCR 3.0.3
