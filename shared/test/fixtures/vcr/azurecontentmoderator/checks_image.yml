@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: "<ENDPOINT>/moderate/v1.0/ProcessImage/Evaluate"
+    uri: "<AZURE_ENDPOINT>/moderate/v1.0/ProcessImage/Evaluate"
     body:
       encoding: UTF-8
       string: '{"DataRepresentation":"URL","Value":"https://studio.code.org/notfound.jpg"}'
     headers:
       Ocp-Apim-Subscription-Key:
-      - "<API_KEY>"
+      - "<AZURE_API_KEY>"
   response:
     status:
       code: 200
@@ -29,16 +29,16 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Apim-Request-Id:
-      - a670f0e4-1b89-4670-94e0-df4d9d559ab5
+      - a8525501-e4c9-414f-8d9c-9a511d7d64a2
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       Date:
-      - Wed, 11 Apr 2018 22:32:06 GMT
+      - Mon, 16 Apr 2018 22:04:51 GMT
     body:
       encoding: UTF-8
-      string: '{"AdultClassificationScore":0.074573226273059845,"IsImageAdultClassified":false,"RacyClassificationScore":0.086855486035346985,"IsImageRacyClassified":false,"AdvancedInfo":[{"Key":"ImageDownloadTimeInMs","Value":"15"},{"Key":"ImageSizeInBytes","Value":"27109"}],"Result":false,"Status":{"Code":3000,"Description":"OK","Exception":null},"TrackingId":"USE_ibiza_dde113ad-945f-42bf-9488-a1b7ceac729e_ContentModerator.S0_1212d2bf-eec7-46ea-86de-533d244184f7"}'
+      string: '{"AdultClassificationScore":0.074573226273059845,"IsImageAdultClassified":false,"RacyClassificationScore":0.086855486035346985,"IsImageRacyClassified":false,"AdvancedInfo":[{"Key":"ImageDownloadTimeInMs","Value":"11"},{"Key":"ImageSizeInBytes","Value":"27109"}],"Result":false,"Status":{"Code":3000,"Description":"OK","Exception":null},"TrackingId":"USE_ibiza_dde113ad-945f-42bf-9488-a1b7ceac729e_ContentModerator.S0_64cefc4a-43d7-4bf7-a967-32116139f4ce"}'
     http_version: 
-  recorded_at: Wed, 11 Apr 2018 22:32:07 GMT
+  recorded_at: Mon, 16 Apr 2018 22:04:52 GMT
 recorded_with: VCR 3.0.3

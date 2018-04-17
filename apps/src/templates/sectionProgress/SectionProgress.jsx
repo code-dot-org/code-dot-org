@@ -5,17 +5,20 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
+import LoadMoreProgressButton from './LoadMoreProgressButton';
 import {
   ViewType,
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setScriptId,
+  setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
@@ -57,10 +60,7 @@ class SectionProgress extends Component {
     studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
-  };
-
-  state = {
-    lessonOfInterest: 1
+    setLessonOfInterest: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -73,8 +73,8 @@ class SectionProgress extends Component {
     this.props.loadScript(scriptId);
   };
 
-  onChangeLevel = lessonNumber => {
-    this.setState({lessonOfInterest: lessonNumber});
+  onChangeLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
   };
 
   render() {
@@ -84,7 +84,7 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress
+      studentLevelProgress,
     } = this.props;
 
     const levelDataInitialized = scriptData && studentLevelProgress;
@@ -131,8 +131,8 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
               />
+              <LoadMoreProgressButton />
               <SummaryViewLegend
                 showCSFProgressBox={true}
               />
@@ -144,7 +144,10 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
+              />
+              <LoadMoreProgressButton />
+              <ProgressLegend
+                excludeCsfColumn={true}
               />
             </div>
           }
@@ -170,4 +173,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(SectionProgress);
