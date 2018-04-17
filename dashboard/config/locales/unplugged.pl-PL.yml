@@ -541,3 +541,21 @@
           reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest
           rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać
           bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
+      PaperPlanes_2018:
+        title: 'Rzeczywiste algorytmy: Papierowe samoloty'
+        desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym
+          codziennym życiu, w szczególności przy tworzeniu papierowych samolotów.
+          Uwaga jest skupiona na znaczeniu algorytmów w informatyce.
+      GettingLoopy_2018:
+        title: Poznając pętle
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania,
+          z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie
+          są proszeni o powtarzanie jej.
+      BinaryBracelets_2018:
+        title: Binarne bransoletki
+        desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery
+          swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane
+          i przechowywane na wiele sposobów.
+      MoveItMoveIt_2018:
+        title: Przenieść go, przenieść go
+        desc: ''

@@ -334,3 +334,15 @@ sq:
       BinaryImages_2018:
         title: Imazhet Binare
         desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë, kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse (si psh imazhe dhe ngjyra) në binarë, gjithashtu.
+      PaperPlanes_2018:
+        title: 'Algoritmet e Jetës-Reale: Planet në Letër'
+        desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme, në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë një rol të rëndësishëm.
+      GettingLoopy_2018:
+        title: Duke u Çmëndur
+        desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
+      BinaryBracelets_2018:
+        title: Byzylykët Binarë
+        desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
+      MoveItMoveIt_2018:
+        title: Lëvize atë, lëvize atë
+        desc: ''

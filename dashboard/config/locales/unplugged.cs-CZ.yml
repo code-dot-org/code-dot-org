@@ -523,3 +523,21 @@
           binárních volbách.  V této lekci tento koncept posuneme jeden krok dále,
           jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
           (např. obrázky a barvy).
+      PaperPlanes_2018:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě,
+          konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
+          obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      GettingLoopy_2018:
+        title: Bláznit
+        desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
+          taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
+          instruováni to opakovat.
+      BinaryBracelets_2018:
+        title: Binární náramky
+        desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich
+          jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
+          jedním způsobem.
+      MoveItMoveIt_2018:
+        title: Pohyb, pohyb
+        desc: ''

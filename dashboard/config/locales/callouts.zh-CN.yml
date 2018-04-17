@@ -426,18 +426,33 @@
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: 在此处添加代码
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: 在此处添加代码
       CSD U6 colorLeds predict_callout: []
+      CSD U6 colorLeds predict_2018_callout: []
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show_callout:
+        CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: 这条线是做什么用的？
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: 在此处定义 开始游戏
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: 在此处定义 开始游戏
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: 在这里定义 移动玩家 ()
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: 在这里定义 移动玩家 ()
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: 检查玩家是否赢了
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: 检查玩家是否赢了
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -968,6 +983,12 @@
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       courseA_toMakeLoopsVideo_Collector_callout: []
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseB_Scrat_ramp2_2018_callout: []
+      courseB_Scrat_ramp3a_2018_callout: []
+      courseB_Scrat_ramp4a_2018_callout: []
+      courseB_Scrat_ramp5a_2018_callout: []
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops3_2018_callout:
@@ -999,28 +1020,44 @@
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseC_PlayLab_events8_callout:
-        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
-          touch!
+        courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
+      courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
       courseC_artist_prog1_callout: []
       courseC_artist_prog1_2018_callout: []
       courseC_artist_prog2_callout: []
       courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
+      courseC_collector_loops_challenge2_2018_callout: []
       courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: 如果你需要的话，可以从工具箱里取更多的模块！
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: 如果你需要的话，可以从工具箱里取更多的模块！
       courseC_collector_prog8_callout: []
+      courseC_collector_prog8_2018_callout: []
       courseC_collector_prog9_callout: []
+      courseC_collector_prog9_2018_callout: []
       courseC_collector_progA_callout: []
       courseC_collector_progB_callout: []
       courseC_collector_prog_challenge1_callout: []
+      courseC_collector_prog_challenge1_2018_callout: []
       courseC_collector_prog_challenge2_callout: []
+      courseC_collector_prog_challenge2_2018_callout: []
       courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
+      courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
@@ -1032,28 +1069,52 @@
       courseC_maze_loops_challenge2_callout: []
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
         courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseC_maze_programming5_callout: []
+      courseC_maze_programming5_2018_callout: []
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
         courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
       courseC_starWars_loops10_callout: []
+      courseC_starWars_loops10_2018_callout: []
       courseC_starWars_loops10_predict2_callout: []
+      courseC_starWars_loops10_predict2_2018_callout: []
       courseC_starWars_loops11_callout: []
+      courseC_starWars_loops11_2018_callout: []
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: 在这个关卡中，你只能使用一个这样的模块。
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: 在这个关卡中，你只能使用一个这样的模块。
       courseC_starWars_loops4_callout: []
+      courseC_starWars_loops4_2018_callout: []
       courseC_starWars_loops5_callout: []
+      courseC_starWars_loops5_2018_callout: []
       courseC_starWars_loops6_callout: []
+      courseC_starWars_loops6_2018_callout: []
       courseC_starWars_loops7_callout: []
+      courseC_starWars_loops7_2018_callout: []
       courseC_starWars_loops8_callout: []
+      courseC_starWars_loops8_2018_callout: []
       courseC_starWars_loops9_callout: []
+      courseC_starWars_loops9_2018_callout: []
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: 当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？
       courseD_artist_functions8_callout:
@@ -1579,13 +1640,16 @@
       grade2_MakeDogTag_1_callout: []
       grade2_MakeDogTag_BFP_callout: []
       grade2_collector_10_callout: []
+      grade2_collector_10_2018_callout: []
       grade2_collector_7_callout:
         grade2_collector_7_1: 如果你需要的话，可以从工具箱里取更多的模块！
       grade2_collector_8_callout: []
       grade2_collector_9_callout: []
       grade2_collector_9a_callout: []
       grade2_collector_A_callout: []
+      grade2_collector_A_2018_callout: []
       grade2_collector_A_predict1_callout: []
+      grade2_collector_A_predict1_2018_callout: []
       grade2_maze_intro10_callout: []
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to

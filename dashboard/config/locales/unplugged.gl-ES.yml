@@ -549,3 +549,21 @@
           leva ese concepto un paso adiante, unha vez que demostra como un computador
           tamén pode almacenar informacións aínda máis complexas (como imaxes e cores)
           en binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da vida real: avión de papel'
+        desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
+          ao facer avións de papel. Esta lección tamén presenta a informática de forma
+          xeral, e como os algoritmos teñen un papel esencial.
+      GettingLoopy_2018:
+        title: Bucleándose
+        desc: Esta clase introduce o concepto de programación de bucles (loops, ou
+          instrucións repetidas) por medio dunha actividade de danza. Os alumnos van
+          aprender unha coreografia simple e daquela se lles dirá que a repitan.
+      BinaryBracelets_2018:
+        title: Pulseiras Binarias
+        desc: Os alumnos crean pulseiras como representacións binárias da primeira
+          letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados
+          e almacenados de máis dunha forma.
+      MoveItMoveIt_2018:
+        title: Creando camiños
+        desc: ''

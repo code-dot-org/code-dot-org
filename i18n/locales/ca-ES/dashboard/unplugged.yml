@@ -334,3 +334,15 @@ ca:
       BinaryImages_2018:
         title: Imatges binàries
         desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament, els cursos anteriors ens han ensenyat que aquesta informació pot ser representada en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més informació complexa (com ara imatges i colors) en binari, també.
+      PaperPlanes_2018:
+        title: 'Algoritmes de la vida quotidiana: Avions de paper'
+        desc: Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida diària, concretament fent avions de paper. La unitat també se centra en un panorama més ampli de la informàtica i com els algoritmes juguen un rol essencial.
+      GettingLoopy_2018:
+        title: Fent bucles
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies senzilles i, a continuació, aprendran a repetir-ho.
+      BinaryBracelets_2018:
+        title: Polseres binàries
+        desc: Els alumnes creen polseres com una representació binària de la primera lletra del seu nom. Els alumnes aprenen que les dades poden ser representades i emmagatzemades de diferents maneres.
+      MoveItMoveIt_2018:
+        title: Mou-lo, Mou-lo
+        desc: ''

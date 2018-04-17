@@ -15,7 +15,7 @@ tr:
         text: "Bilgisayar biliminin temellerini, Mars aracını kontrol etmekten uygulamalar yapmaya kadar her yerde kullanılan kavramları öğreneceksiniz."
       5:
         image: 'notes/hoc1_5.jpg'
-        text: "Bir program, bilgisayarınızın takip etmesi için yaratılmış bir talimatlar kümesidir."
+        text: "Bir program, bilgisayarınızın takip etmesi için oluşturulmuş bir talimatlar kümesidir."
       6:
         image: 'notes/hoc1_6.jpg'
         text: "İlk programınızın amacı, Yeşil Domuzu vurmak için labirentten geçerek bir Kızgın Kuş elde etmektir."
