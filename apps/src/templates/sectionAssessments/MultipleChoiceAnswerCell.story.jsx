@@ -7,9 +7,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Show Check Mark',
-        description: `
-            A green check mark is displayed when the answer is correct.
-        `,
+        description: 'A green check mark is displayed when the answer is correct.',
         story: () => (
           <MultipleChoiceAnswerCell
             percentValue="40%"
