@@ -132,7 +132,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     workshop_b = create :pd_workshop, started_at: Time.now
     #session starts on Monday
     session_b = create(:pd_session, workshop: workshop_b, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    assert session_b.open_for_attendance?
+    refute session_b.open_for_attendance?
     assert session_b.show_link?
   end
 
