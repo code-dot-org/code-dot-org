@@ -113,7 +113,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     #session starts on Monday
     session_a = create(:pd_session, workshop: workshop_a, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
     refute session_a.open_for_attendance?
-    assert session_a.show_links?
+    assert session_a.show_link?
 
     #current day is Friday
     #workshop started Friday
@@ -121,7 +121,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     #session starts on Monday
     session_a1 = create :pd_session, workshop: workshop_a1, start: Time.now + 3.days
     refute session_a1.open_for_attendance?
-    refute session_a1.show_links?
+    refute session_a1.show_link?
     assert session_a1.too_soon_for_attendance?
     refute session_a1.too_late_for_attendance?
   end
@@ -133,7 +133,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     #session starts on Monday
     session_b = create(:pd_session, workshop: workshop_b, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
     assert session_b.open_for_attendance?
-    assert session_b.show_links?
+    assert session_b.show_link?
   end
 
   test 'attendance links for three day workshop' do
@@ -145,11 +145,11 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session_c2b = create(:pd_session, workshop: workshop_c, start: Time.now + 3.days - 1.minute).tap(&:assign_code)
     session_c3c = create(:pd_session, workshop: workshop_c, start: Time.now + 4.days - 1.minute).tap(&:assign_code)
     refute session_c1a.open_for_attendance?
-    assert session_c1a.show_links?
+    assert session_c1a.show_link?
     refute session_c2b.open_for_attendance?
-    refute session_c2b.show_links?
+    refute session_c2b.show_link?
     refute session_c3c.open_for_attendance?
-    refute session_c3c.show_links?
+    refute session_c3c.show_link?
 
     #current day is Sunday
     #workshop started on Saturday
@@ -159,11 +159,11 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session_c2e = create(:pd_session, workshop: workshop_c1, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
     session_c3f = create(:pd_session, workshop: workshop_c1, start: Time.now + 3.days - 1.minute).tap(&:assign_code)
     refute session_c1d.open_for_attendance?
-    assert session_c1d.show_links?
+    assert session_c1d.show_link?
     refute session_c2e.open_for_attendance?
-    assert session_c2e.show_links?
+    assert session_c2e.show_link?
     refute session_c3f.open_for_attendance?
-    refute session_c3f.show_links?
+    refute session_c3f.show_link?
 
     #current day is Monday
     #workshop created on Saturday
@@ -173,11 +173,11 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session_c2h = create(:pd_session, workshop: workshop_c2, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
     session_c3i = create(:pd_session, workshop: workshop_c2, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
     assert session_c1g.open_for_attendance?
-    assert session_c1g.show_links?
+    assert session_c1g.show_link?
     refute session_c2h.open_for_attendance?
-    assert session_c2h.show_links?
+    assert session_c2h.show_link?
     refute session_c3i.open_for_attendance?
-    assert session_c3i.show_links?
+    assert session_c3i.show_link?
 
     #current day is Tuesday
     #workshop created on Saturday
@@ -187,11 +187,11 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session_c2k = create(:pd_session, workshop: workshop_c3, start: Time.now - 1.minute).tap(&:assign_code)
     session_c3l = create(:pd_session, workshop: workshop_c3, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
     refute session_c1j.open_for_attendance?
-    refute session_c1j.show_links?
+    refute session_c1j.show_link?
     assert session_c2k.open_for_attendance?
-    assert session_c2k.show_links?
+    assert session_c2k.show_link?
     refute session_c3l.open_for_attendance?
-    assert session_c3l.show_links?
+    assert session_c3l.show_link?
   end
 
   test 'attendance link for late start three day workshop' do
@@ -203,10 +203,10 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session_d2 = create(:pd_session, workshop: workshop_d, start: Time.now - 1.minute).tap(&:assign_code)
     session_d3 = create(:pd_session, workshop: workshop_d, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
     refute session_d1.open_for_attendance?
-    refute session_d1.show_links?
+    refute session_d1.show_link?
     assert session_d2.open_for_attendance?
-    assert session_d2.show_links?
+    assert session_d2.show_link?
     refute session_d3.open_for_attendance?
-    assert session_d3.show_links?
+    assert session_d3.show_link?
   end
 end
