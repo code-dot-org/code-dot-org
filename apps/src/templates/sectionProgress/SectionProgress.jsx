@@ -10,6 +10,7 @@ import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
+import LoadMoreProgressButton from './LoadMoreProgressButton';
 import {
   ViewType,
   loadScript,
@@ -133,6 +134,7 @@ class SectionProgress extends Component {
                 studentLevelProgress={studentLevelProgress}
                 lessonOfInterest={this.state.lessonOfInterest}
               />
+              <LoadMoreProgressButton />
               <SummaryViewLegend
                 showCSFProgressBox={true}
               />
@@ -146,6 +148,7 @@ class SectionProgress extends Component {
                 studentLevelProgress={studentLevelProgress}
                 lessonOfInterest={this.state.lessonOfInterest}
               />
+              <LoadMoreProgressButton />
             </div>
           }
         </div>
