@@ -13,38 +13,6 @@ class AzureContentModerator
   end
 
   #
-  # Given a publicly-accessible image URL, requests rating information from
-  # Azure Content Moderation and returns a rating category.
-  #
-  # @param [String] image_url - must be reachable from the Azure service.
-  # @returns [:everyone|:racy|:adult]
-  #
-  def rate_image(image_url)
-    uri = URI(@endpoint + '/moderate/v1.0/ProcessImage/Evaluate')
-
-    request = Net::HTTP::Post.new(uri.request_uri)
-    request['Content-Type'] = 'application/json'
-    request['Ocp-Apim-Subscription-Key'] = @api_key
-    request.body = {
-      DataRepresentation: 'URL',
-      Value: image_url
-    }.to_json
-
-    response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-      http.request(request)
-    end
-
-    result = JSON.parse(response.body)
-    if result['IsImageAdultClassified']
-      :adult
-    elsif result['IsImageRacyClassified']
-      :racy
-    else
-      :everyone
-    end
-  end
-
-  #
   # Give some binary image data and a content type, requests rating information
   # from Azure Content Moderation and returns a rating category.
   #
