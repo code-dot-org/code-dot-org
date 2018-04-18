@@ -246,21 +246,33 @@ class ApiController < ApplicationController
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
+  # TODO(caleybrock) - write a test for this function
   def section_level_progress
     section = load_section
     script = load_script(section)
 
     data = {}
+
+    # Clients are seeing requests time out for large sections as we attempt to
+    # send back all of this data. Allow them to instead request paginated data
+    if params[:page] && params[:per]
+      paged_students = section.students.page(params[:page]).per(params[:per])
+      # As designed, if there are 50 students, the client will ask for both
+      # page 1 and page 2, even though page 2 is out of range. However, it should
+      # never ask for page 3
+      if params[:page].to_i > paged_students.total_pages + 1
+        return head :range_not_satisfiable
+      end
+    else
+      paged_students = section.students
+    end
+
     # TODO: This could likely be constructed more efficiently. At the very least,
     # instead of asking for a summary, and then using only one portion of it (levels)
     # we could probably expose a way to get just levels and have it be in the same
     # form as user_progress. However, we might be able to do even better and query
     # all the data that we need in a single db request
-    # TODO: We'll want to support some form of pagination for this API. One option
-    # would be to imitate the approach used by the section_progress API, however
-    # that has some limitations and was largely meant as a quick and dirty fix for
-    # pagination when it was implemented
-    section.students.each do |student|
+    paged_students.each do |student|
       data[student.id] = summarize_user_progress(script, student)[:levels]
     end
     render json: data
