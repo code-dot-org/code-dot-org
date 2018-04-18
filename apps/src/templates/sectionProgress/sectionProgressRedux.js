@@ -233,6 +233,12 @@ export const getColumnWidthsForDetailView = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
+
+    // Don't load data if it's already stored in redux.
+    if (state.studentLevelProgressByScript[scriptId] && state.scriptDataByScript[scriptId]) {
+      return;
+    }
+
     dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
       // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
