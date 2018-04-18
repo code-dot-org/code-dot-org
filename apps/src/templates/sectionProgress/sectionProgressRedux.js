@@ -242,22 +242,20 @@ export const loadScript = (scriptId) => {
 
     const numStudents = state.section.students.length;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
-    let numPagesRecieved = 0;
-    for (let currentPage = 1; currentPage < numPages + 1; currentPage++) {
-      $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`, data => {
-        const dataByStudent = data.students;
-        // dataByStudent is an object where the keys are student.id and the values
-        // are a map of levelId to status
-        let studentLevelProgress = {};
-        Object.keys(dataByStudent).forEach(studentId => {
-          studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
+
+    const requests = _.range(1, numPages + 1).map((currentPage) => {
+      const url = `/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+      return fetch(url, { credentials: 'include' })
+        .then(response => response.json())
+        .then((data) => {
+          const dataByStudent = data.students;
+          let studentLevelProgress = {};
+          Object.keys(dataByStudent).forEach((studentId) => {
+            studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
+          });
+          dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
         });
-        dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
-        numPagesRecieved = numPagesRecieved + 1;
-        if (numPagesRecieved === numPages) {
-          dispatch(finishLoadingProgress());
-        }
-      });
-    }
+    });
+    Promise.all(requests).then(() => dispatch(finishLoadingProgress()));
   };
 };

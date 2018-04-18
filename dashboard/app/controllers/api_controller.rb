@@ -251,11 +251,13 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     data = {}
+    total_pages = 1
 
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     if params[:page] && params[:per]
       paged_students = section.students.page(params[:page]).per(params[:per])
+      total_pages = paged_students.total_pages
       # As designed, if there are 50 students, the client will ask for both
       # page 1 and page 2, even though page 2 is out of range. However, it should
       # never ask for page 3
@@ -275,7 +277,12 @@ class ApiController < ApplicationController
       data[student.id] = summarize_user_progress(script, student)[:levels]
     end
     render json: {
-      students: data
+      students: data,
+      pagination: {
+        total_pages: total_pages,
+        page: params[:page] || 1,
+        per: params[:per] || paged_students.length,
+      }
     }
   end
 

@@ -1275,6 +1275,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
+    assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
     assert_response :success
@@ -1312,6 +1313,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
+    assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
     assert_response :success
