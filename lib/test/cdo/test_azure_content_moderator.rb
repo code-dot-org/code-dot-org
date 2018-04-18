@@ -24,10 +24,6 @@ class AzureContentModeratorTest < Minitest::Test
     )
   end
 
-  def test_checks_image
-    assert_equal :everyone, @acm.rate_image('https://studio.code.org/notfound.jpg')
-  end
-
   def test_checks_image_data
     image_data = open('https://studio.code.org/notfound.jpg').read
     assert_equal :everyone, @acm.rate_image_data(image_data, 'image/jpeg')
