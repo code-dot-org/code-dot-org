@@ -25,24 +25,24 @@ class AzureContentModeratorTest < Minitest::Test
   end
 
   def test_checks_jpg_image
-    image_data = open('https://studio.code.org/notfound.jpg').read
+    image_data = open('https://studio.code.org/notfound.jpg')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/jpeg')
   end
 
   def test_checks_png_image
-    image_data = open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png').read
+    image_data = open('https://code.org/images/infographics/fit-800/diversity-courses-updated-05-23.png')
     assert_equal :everyone, @acm.rate_image(image_data, 'image/png')
   end
 
   def test_raise_on_image_too_small
     # This image is smaller than the Azure content moderator's minimum size.
-    image_data = open('https://code.org/images/icons/medium-monogram-white.png').read
+    image_data = open('https://code.org/images/icons/medium-monogram-white.png')
     Net::HTTP.expects(:start).once
     assert_raises {@acm.rate_image(image_data, 'image/png')}
   end
 
   def test_raise_on_unacceptable_content_type
     Net::HTTP.expects(:start).never
-    assert_raises {@acm.rate_image('some text content', 'text/plain')}
+    assert_raises {@acm.rate_image(StringIO.new('some text content'), 'text/plain')}
   end
 end
