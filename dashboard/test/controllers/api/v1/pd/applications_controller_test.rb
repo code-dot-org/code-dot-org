@@ -50,6 +50,8 @@ module Api::V1::Pd
           )
         )
       )
+
+      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 
     test_redirect_to_sign_in_for :index
@@ -361,14 +363,9 @@ module Api::V1::Pd
       get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
       response_csv = CSV.parse @response.body
-
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.any? {|x| response_csv.first.exclude?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -380,11 +377,11 @@ module Api::V1::Pd
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.all? {|x| response_csv.first.include?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
-      ).values.any? {|x| response_csv.first.exclude?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'csv download for csf facilitator returns expected columns' do
