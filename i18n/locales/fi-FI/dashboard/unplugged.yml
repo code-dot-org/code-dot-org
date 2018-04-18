@@ -334,3 +334,15 @@ fi:
       BinaryImages_2018:
         title: Binäärikuvat
         desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat kurssimme opettivat opiskelijoille, että informaatiota voidaan esittää monenlaisina binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle, näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota (kuen kuvia ja värejä) myös binäärisenä.
+      PaperPlanes_2018:
+        title: 'Tosielämän algoritmit: paperilentokoneet'
+        desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme, esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
+      GettingLoopy_2018:
+        title: Mennään silmukoille
+        desc: Tällä oppitunnilla tutustutetaan silmukoiden ohjelmointikonseptiin (toistuvat käskyt) tanssin kautta. Oppilaat oppivat yksinkertaisen koreografian, joka heidät opetetaan toistamaan.
+      BinaryBracelets_2018:
+        title: Binäärikorut
+        desc: Opiskelijat luovat rannekoruja nimensä ensimmäisen kirjaimen binäärimuodosta. Oppilaat oppivat, että tietoa voidaan esittää ja tallentaa useammalla kuin yhdellä tavalla.
+      MoveItMoveIt_2018:
+        title: Liikuta, liikuta
+        desc: ''

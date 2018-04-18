@@ -15,7 +15,7 @@
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "never_autoplay_video": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-27 21:55:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-04 22:13:35 +0000\",\"changed\":[\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-11 17:53:05 +0000\",\"changed\":[\"disable_procedure_autopopulate\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-11 17:53:40 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-11 22:10:24 +0000\",\"changed\":[\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-04 20:14:59 +0000\",\"changed\":[\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 21:55:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-04 22:13:35 +0000\",\"changed\":[\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-11 17:53:05 +0000\",\"changed\":[\"disable_procedure_autopopulate\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-11 17:53:40 +0000\",\"changed\":[\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-11 22:10:24 +0000\",\"changed\":[\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-04 20:14:59 +0000\",\"changed\":[\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-18 00:35:45 +0000\",\"changed\":[\"disable_param_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

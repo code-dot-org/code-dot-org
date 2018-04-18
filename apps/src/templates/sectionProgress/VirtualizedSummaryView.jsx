@@ -4,6 +4,7 @@ import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
+import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
 import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
 import i18n from '@cdo/locale';
@@ -55,9 +56,9 @@ class VirtualizedSummaryView extends Component {
           </span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={progressStyles.lessonNumberHeading}>
-            {columnIndex}
-          </div>
+          <SectionProgressLessonNumberCell
+            lessonNumber={columnIndex}
+          />
         }
         {(rowIndex >= 1 && columnIndex === 0) &&
           <SectionProgressNameCell
@@ -110,6 +111,7 @@ class VirtualizedSummaryView extends Component {
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
+        scrollToAlignment={"start"}
         rowCount={rowCount}
         style={progressStyles.multigrid}
         styleBottomLeftGrid={progressStyles.bottomLeft}

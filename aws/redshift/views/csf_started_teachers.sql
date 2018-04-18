@@ -17,7 +17,8 @@ from
   from analysis.csf_started st
     join analysis.school_years sy on st.started_at between sy.started_at and sy.ended_at
     join dashboard_production.followers f on f.student_user_id = st.user_id and f.created_at between sy.started_at and sy.ended_at
-    join dashboard_production.sections se on se.id = f.section_id
+    join dashboard_production.sections se on se.id = f.section_id 
+      and (se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) or se.script_id is null)
 )
 where started_at_order = 5
 with no schema binding;

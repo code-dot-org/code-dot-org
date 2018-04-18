@@ -5,13 +5,12 @@ import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionPr
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
 import SummaryViewLegend from './SummaryViewLegend';
-import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import SmallChevronLink from '../SmallChevronLink';
 import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
-import LoadMoreProgressButton from './LoadMoreProgressButton';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
   loadScript,
@@ -61,6 +60,7 @@ class SectionProgress extends Component {
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
+    isLoadingProgress: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -85,9 +85,10 @@ class SectionProgress extends Component {
       scriptId,
       scriptData,
       studentLevelProgress,
+      isLoadingProgress
     } = this.props;
 
-    const levelDataInitialized = scriptData && studentLevelProgress;
+    const levelDataInitialized = scriptData && !isLoadingProgress;
     const linkToOverview = scriptData ? scriptData.path : null;
     const lessons = scriptData ? scriptData.stages : [];
 
@@ -132,7 +133,6 @@ class SectionProgress extends Component {
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
               />
-              <LoadMoreProgressButton />
               <SummaryViewLegend
                 showCSFProgressBox={true}
               />
@@ -145,7 +145,6 @@ class SectionProgress extends Component {
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
               />
-              <LoadMoreProgressButton />
               <ProgressLegend
                 excludeCsfColumn={true}
               />
@@ -166,6 +165,7 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {
     dispatch(loadScript(scriptId));

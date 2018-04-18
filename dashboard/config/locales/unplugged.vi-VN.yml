@@ -570,3 +570,21 @@
           diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
           xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
           tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      PaperPlanes_2018:
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+      GettingLoopy_2018:
+        title: Tạo vòng lặp
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp
+          lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau
+          đó sẽ được hướng dẫn để lặp lại.
+      BinaryBracelets_2018:
+        title: Vòng đeo tay nhị phân
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
+      MoveItMoveIt_2018:
+        title: Di chuyển nó, di chuyển nó
+        desc: ''
