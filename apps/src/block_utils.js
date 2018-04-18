@@ -368,6 +368,7 @@ exports.cleanBlocks = function (blocksDom) {
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
+const STATEMENT_INPUT = 'statement';
 
 /**
  * Given block text with input names specified in curly braces, returns a list
@@ -384,6 +385,8 @@ const DUMMY_INPUT = 'dummy';
  *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
+ * @param {boolean} args[].statement Indicates that an input is a statement
+ *   input, which is passed as a callback function
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
@@ -402,7 +405,8 @@ const determineInputs = function (text, args, strictTypes=[]) {
     const label = tokens[i];
     const input = tokens[i + 1];
     if (input) {
-      const arg = args.find(arg => arg.name === input);
+      const argIndex = args.findIndex(arg => arg.name === input);
+      const [arg] = args.splice(argIndex, 1);
       const strict = arg.strict || strictTypes.includes(arg.type);
       if (arg.options) {
         inputs.push({
@@ -427,6 +431,19 @@ const determineInputs = function (text, args, strictTypes=[]) {
         label,
       });
     }
+  }
+  const statementInputs = args
+    .filter(arg => arg.statement)
+    .map(arg => ({
+      mode: STATEMENT_INPUT,
+      name: arg.name
+    }));
+  inputs.push(...statementInputs);
+  args = args.filter(arg => !arg.statement);
+
+  if (args.length > 0) {
+    console.warn('Unexpected args in block definition:');
+    console.warn(args);
   }
   return inputs;
 };
@@ -462,6 +479,9 @@ const interpolateInputs = function (blockly, block, inputs) {
       case DUMMY_INPUT:
         block.appendDummyInput()
           .appendTitle(input.label);
+        break;
+      case STATEMENT_INPUT:
+        block.appendStatementInput(input.name);
         break;
     }
   });
@@ -628,6 +648,9 @@ exports.createJsWrapperBlockCreator = function (
       const values = args.map(arg => {
         if (arg.options) {
           return this.getTitleValue(arg.name);
+        } else  if (arg.statement) {
+          const code = Blockly.JavaScript.statementToCode(this, arg.name);
+          return `function () {\n${code}}`;
         } else {
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
