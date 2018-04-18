@@ -89,7 +89,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_bad_channel_thumbnail
-    ImageModeration.expects(:rate_image).never.returns :everyone
+    ImageModeration.expects(:rate_image).never
 
     get "/v3/files-public/undefined/.metadata/thumbnail.png"
     assert not_found?
@@ -140,7 +140,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def refute_moderates_project_type(project_type)
-    ImageModeration.expects(:rate_image).never.returns :everyone
+    ImageModeration.expects(:rate_image).never
     with_project_type project_type do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
       assert successful?
