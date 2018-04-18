@@ -110,6 +110,7 @@ class VirtualizedSummaryView extends Component {
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
+        scrollToAlignment={"start"}
         rowCount={rowCount}
         style={progressStyles.multigrid}
         styleBottomLeftGrid={progressStyles.bottomLeft}
