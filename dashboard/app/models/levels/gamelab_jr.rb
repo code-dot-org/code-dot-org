@@ -54,6 +54,7 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Start">
   <block type="when_run" />
+  <block type="gamelab_setup" />
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />

@@ -33,6 +33,10 @@ let game_over = false;
 let show_score = false;
 let title = '', subTitle = '';
 
+function initialize(setupHandler) {
+  setupHandler();
+}
+
 // Behaviors
 
 function addBehavior(sprite, behavior, name) {
