@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
+import {tableLayoutStyles} from "../tables/tableConstants";
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -149,11 +150,17 @@ class ProjectsList extends React.Component {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
       header: {
-        props: {style: styles.headerCell},
+        props: {
+          style: {
+          ...tableLayoutStyles.headerCell,
+        }},
       },
       cell: {
         format: thumbnailFormatter,
-        props: {style: styles.thumbnailCell}
+        props: {
+          style: {
+          ...tableLayoutStyles.cell,
+        }}
       }
     };
     const standardColumns = [
@@ -161,47 +168,71 @@ class ProjectsList extends React.Component {
         property: 'name',
         header: {
           label: commonMsg.projectName(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+          }},
           transforms: [sortable],
         },
         cell: {
           format: this.nameFormatter,
-          props: {style: styles.nameCell}
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+          }}
         }
       },
       {
         property: 'studentName',
         header: {
           label: commonMsg.studentName(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+          }},
           transforms: [sortable],
         },
         cell: {
-          props: {style: styles.cell}
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+          }}
         }
       },
       {
         property: 'type',
         header: {
           label: commonMsg.projectType(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+          }},
           transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
-          props: {style: styles.cell}
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+          }}
         }
       },
       {
         property: 'updatedAt',
         header: {
           label: commonMsg.lastEdited(),
-          props: {style: styles.headerCell},
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+          }},
           transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
-          props: {style: styles.cell}
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+          }}
         }
       },
     ];
