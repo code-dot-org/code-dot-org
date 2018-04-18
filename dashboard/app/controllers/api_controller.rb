@@ -246,7 +246,6 @@ class ApiController < ApplicationController
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
-  # TODO(caleybrock) - write a test for this function
   def section_level_progress
     section = load_section
     script = load_script(section)
@@ -275,7 +274,9 @@ class ApiController < ApplicationController
     paged_students.each do |student|
       data[student.id] = summarize_user_progress(script, student)[:levels]
     end
-    render json: data
+    render json: {
+      students: data
+    }
   end
 
   def student_progress
