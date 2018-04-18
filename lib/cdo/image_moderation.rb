@@ -10,6 +10,6 @@ module ImageModeration
     AzureContentModerator.new(
       endpoint: CDO.azure_content_moderation_endpoint,
       api_key: CDO.azure_content_moderation_key
-    ).rate_image_data(image_data, content_type)
+    ).rate_image(image_data, content_type)
   end
 end
