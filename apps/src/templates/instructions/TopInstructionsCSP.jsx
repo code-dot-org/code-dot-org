@@ -1,6 +1,6 @@
 
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -13,23 +13,21 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
+import instructions from '../../redux/instructions';
+import color from "../../util/color";
+import styleConstants from '../../styleConstants';
+import commonStyles from '../../commonStyles';
+import Instructions from './Instructions';
+import CollapserIcon from './CollapserIcon';
+import HeightResizer from './HeightResizer';
+import msg from '@cdo/locale';
 
-var instructions = require('../../redux/instructions');
-var color = require("../../util/color");
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
-var HeightResizer = require('./HeightResizer');
-var msg = require('@cdo/locale');
+const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
-
-var MIN_HEIGHT = RESIZER_HEIGHT + 60;
-
-var styles = {
+const styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
@@ -77,7 +75,7 @@ var styles = {
   },
 };
 
-var audioStyle = {
+const audioStyle = {
   wrapper: {
     float: 'right',
   },
@@ -93,8 +91,8 @@ var audioStyle = {
   }
 };
 
-var TopInstructions = React.createClass({
-  propTypes: {
+class TopInstructions extends Component {
+  static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     puzzleNumber: PropTypes.number.isRequired,
@@ -114,11 +112,11 @@ var TopInstructions = React.createClass({
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array
-  },
+  };
 
-  state:{
+  state = {
     helpTabSelected: false,
-  },
+  };
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -131,11 +129,11 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  },
+  }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.adjustMaxNeededHeight);
-  },
+  }
 
   /**
    * Height can get below min height iff we resize the window to be super small.
@@ -146,7 +144,7 @@ var TopInstructions = React.createClass({
         nextProps.height < nextProps.maxHeight) {
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
     }
-  },
+  }
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -154,35 +152,34 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta) {
-    var minHeight = MIN_HEIGHT;
-    var currentHeight = this.props.height;
+  handleHeightResize = (delta) => {
+    const currentHeight = this.props.height;
 
-    var newHeight = Math.max(minHeight, currentHeight + delta);
+    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
-  },
+  };
 
   /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
    * @returns {number}
    */
-  adjustMaxNeededHeight() {
+  adjustMaxNeededHeight = () => {
     const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
     return maxNeededHeight;
-  },
+  };
 
   /**
    * Handle a click of our collapser button by changing our collapse state, and
    * updating our rendered height.
    */
-  handleClickCollapser() {
+  handleClickCollapser = () => {
     const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -192,23 +189,23 @@ var TopInstructions = React.createClass({
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
-  },
+  };
 
   /**
    * Handle a click on the Documentation PaneButton.
    */
-  handleDocumentationClick() {
+  handleDocumentationClick = () => {
     const win = window.open(this.props.documentationUrl, '_blank');
     win.focus();
-  },
+  };
 
-  handleHelpTabClick() {
+  handleHelpTabClick = () => {
     this.setState({helpTabSelected: true});
-  },
+  };
 
-  handleInstructionTabClick() {
+  handleInstructionTabClick = () => {
     this.setState({helpTabSelected: false});
-  },
+  };
 
   render() {
     const mainStyle = [
@@ -305,7 +302,7 @@ var TopInstructions = React.createClass({
       </div>
     );
   }
-});
+}
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
