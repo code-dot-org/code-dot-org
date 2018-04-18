@@ -34,6 +34,12 @@ export const setSection = (section) => {
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
 };
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
 
 // Types of views of the progress tab
 export const ViewType = {
