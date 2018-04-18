@@ -20,7 +20,7 @@ class AzureContentModerator
   # @param [String] content_type - one of image/bmp, image/gif, image/jpeg, image/png
   # @returns [:everyone|:racy|:adult]
   #
-  def rate_image_data(image_data, content_type)
+  def rate_image(image_data, content_type)
     raise StandardError.new("Cannot accept content-type #{content_type}") unless %w(
       image/bmp
       image/gif
