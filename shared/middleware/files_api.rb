@@ -792,7 +792,8 @@ class FilesApi < Sinatra::Base
     if THUMBNAIL_FILENAME == filename
       begin
         storage_apps = StorageApps.new(storage_id('user'))
-        if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type(encrypted_channel_id, storage_apps)
+        project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
+        if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
           temp_url = FileBucket.new.make_temporary_public_url(encrypted_channel_id, s3_prefix)
           rating = ImageModeration.rate_image(temp_url)
           if %i(adult racy).include? rating
@@ -811,12 +812,6 @@ class FilesApi < Sinatra::Base
     file = get_file('files', encrypted_channel_id, s3_prefix)
     cache_for 1.hour
     file
-  end
-
-  def project_type(encrypted_channel_id, storage_apps)
-    storage_apps.get(encrypted_channel_id)[:projectType]
-  rescue
-    'unknown'
   end
 
   #
