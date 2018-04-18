@@ -244,7 +244,8 @@ export const loadScript = (scriptId) => {
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
     let numPagesRecieved = 0;
     for (let currentPage = 1; currentPage < numPages + 1; currentPage++) {
-      $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`, dataByStudent => {
+      $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`, data => {
+        const dataByStudent = data.students;
         // dataByStudent is an object where the keys are student.id and the values
         // are a map of levelId to status
         let studentLevelProgress = {};
