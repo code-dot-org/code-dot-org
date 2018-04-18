@@ -790,14 +790,13 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
-    file_body = file.read
 
     if THUMBNAIL_FILENAME == filename
       storage_apps = StorageApps.new(storage_id('user'))
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
       if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
         file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file_body, file_mime_type)
+        rating = ImageModeration.rate_image(file, file_mime_type)
         if %i(adult racy).include? rating
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
@@ -810,7 +809,7 @@ class FilesApi < Sinatra::Base
     end
 
     cache_for 1.hour
-    file_body
+    file
   end
 
   #

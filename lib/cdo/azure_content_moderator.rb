@@ -16,7 +16,7 @@ class AzureContentModerator
   # Give some binary image data and a content type, requests rating information
   # from Azure Content Moderation and returns a rating category.
   #
-  # @param [String] image_data - binary image data to be rated
+  # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - one of image/bmp, image/gif, image/jpeg, image/png
   # @returns [:everyone|:racy|:adult]
   #
@@ -33,7 +33,8 @@ class AzureContentModerator
     request = Net::HTTP::Post.new(uri.request_uri)
     request['Content-Type'] = content_type
     request['Ocp-Apim-Subscription-Key'] = @api_key
-    request.body = image_data
+    request['Transfer-Encoding'] = 'chunked'
+    request.body_stream = image_data
 
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(request)
