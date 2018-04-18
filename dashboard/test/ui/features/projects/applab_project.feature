@@ -139,3 +139,29 @@ Scenario: Save Script Level After Signing Out
   And I wait for the page to fully load
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"
+
+@dashboard_db_access @as_student
+@no_mobile
+Scenario: Remix project creates and redirects to new channel
+  Given I am on "http://studio.code.org/projects/applab"
+  And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+  And I rotate to landscape
+  And I wait for the page to fully load
+  Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
+  And element "#runButton" is visible
+  And element ".project_updated_at" eventually contains text "Saved"
+  And I click selector ".project_edit"
+  And I type "Code Ninja" into "input.project_name"
+  And I click selector ".project_save"
+  And I wait until element ".project_edit" is visible
+  Then I should see title "Code Ninja - App Lab"
+  And I save the URL
+
+  Then I click selector ".project_remix" to load a new page
+  And I wait for the page to fully load
+  And I should see title "Remix: Code Ninja - App Lab"
+  And check that the URL contains "/edit"
+  And check that the URL contains "http://studio.code.org/projects/applab"
+  And current URL is different from the last saved URL
+  And element "#runButton" is visible
+  And I click selector "#runButton"

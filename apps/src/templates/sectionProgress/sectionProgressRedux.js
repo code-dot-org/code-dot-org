@@ -15,9 +15,13 @@ const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
+const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
+const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
+export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
+export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
@@ -29,6 +33,12 @@ export const setSection = (section) => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+};
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
 };
 
 // Types of views of the progress tab
@@ -92,6 +102,7 @@ const initialState = {
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
   lessonOfInterest: 1,
+  isLoadingProgress: false,
 };
 
 export default function sectionProgress(state=initialState, action) {
@@ -105,6 +116,18 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       currentView: action.viewType
+    };
+  }
+  if (action.type === START_LOADING_PROGRESS) {
+    return {
+      ...state,
+      isLoadingProgress: true
+    };
+  }
+  if (action.type === FINISH_LOADING_PROGRESS) {
+    return {
+      ...state,
+      isLoadingProgress: false
     };
   }
   if (action.type === SET_LESSON_OF_INTEREST) {
@@ -211,6 +234,7 @@ export const getColumnWidthsForDetailView = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
+    dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
       // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
       // it to redux.
@@ -225,6 +249,7 @@ export const loadScript = (scriptId) => {
         studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
       });
       dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+      dispatch(finishLoadingProgress());
     });
   };
 };

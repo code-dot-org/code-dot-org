@@ -8,7 +8,7 @@ style_min: true
 
 ### Importance of computer science education policy
   * [Our state policy agenda](https://code.org/files/Making_CS_Fundamental.pdf)
-  * [Impact of making computer science count](https://docs.google.com/document/d/1Kn60v-9hirBco42GeWTuUoGIqkn3UIHfL0KUvMyb3ZM/edit?usp=sharing)
+  * [Outcomes of K-12 computer science policy in states](https://docs.google.com/document/d/1Kn60v-9hirBco42GeWTuUoGIqkn3UIHfL0KUvMyb3ZM/edit?usp=sharing)
   * [The big three priority policy levers](https://docs.google.com/document/d/1q8yH1_ANquzT0h5ayj-lKp5-rqI1McaAO82arklL4AQ/edit?usp=sharing)
   * [K-12 computer science and cybersecurity](https://docs.google.com/document/d/1iHNKnQkWSbahakoHUnBnjWu_d-d-Kcyp2aPk3LFSsqw/edit?usp=sharing)
 
@@ -32,4 +32,6 @@ style_min: true
 ### Federal resources
   * [Growing K-12 CS using the Perkins Act](https://code.org/files/RethinkingPerkins.pdf)
   * [Using the Every Student Succeeds Act to expand computer science](https://code.org/files/CS_and_ESSA.pdf)
+  * [Recommendations for creating teacher pathways](https://code.org/files/TeacherPathwayRecommendations.pdf)
+  * [Federal funding opportunities](https://medium.com/@codeorg/1-3-trillion-federal-spending-bill-has-good-news-for-cs-46c38e11ccb5)
 
