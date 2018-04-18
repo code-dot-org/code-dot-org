@@ -190,6 +190,15 @@ describe('sectionProgressRedux', () => {
         ...fakeStudentProgress,
         3: {},
       });
+
+      const action3 = addStudentLevelProgress(132, { 4: {} });
+      const nextState3 = sectionProgress(nextState2, action3);
+      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(nextState3.studentLevelProgressByScript[132], {
+        ...fakeStudentProgress,
+        3: {},
+        4: {},
+      });
     });
   });
 });
