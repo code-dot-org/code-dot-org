@@ -11,6 +11,7 @@ export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
   },
+  // For 'hover' to be applied, you should wrap the component using this style in Radium.
   lessonNumberHeading: {
     margin: '9px 16px',
     fontFamily: '"Gotham 5r", sans-serif',
