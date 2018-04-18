@@ -607,9 +607,9 @@ ru:
       title: "Условные операторы"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Виджеты"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Возраст 14+"
       cta: "Узнать подробности"
   gallery:
     students_drew_these_with_code: "Ученики нарисовали это с помощью кода!"

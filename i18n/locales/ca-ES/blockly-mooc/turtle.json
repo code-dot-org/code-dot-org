@@ -74,13 +74,13 @@
   "penDown": "baixa el llapis",
   "penTooltip": "Puja o baixa el llapis per començar o deixar de dibuixar.",
   "penUp": "puja el llapis",
+  "pointTo": "point to",
   "pixels": "píxels",
   "reinfFeedbackMsg": "Aquí tens el dibuix! Segueix treballant-hi o continua al puzzle següent.",
   "setAlpha": "establir alfa",
   "setCharacter": "set character to {character}",
   "setColour": "defineix color",
   "setPattern": "defineix el patró",
-  "setStickerSize": "Set sticker size",
   "setWidth": "defineix l'amplada",
   "shareDrawing": "Comparteix el teu dibuix:",
   "showMe": "Mostra'm",
@@ -94,5 +94,6 @@
   "turnTooltip": "Gira l'artista cap a l'esquerra o dreta segons el nombre especificat de graus.",
   "turtleVisibilityTooltip": "Fer l'artista visible o invisible.",
   "widthTooltip": "Canvia el gruix del llapis.",
+  "withSize": "with size",
   "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1."
 }

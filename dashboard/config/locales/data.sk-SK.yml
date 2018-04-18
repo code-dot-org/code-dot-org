@@ -2,7 +2,7 @@
   data:
     game:
       name:
-        Unplug1: "Úvod do vedy o počítačoch (informatiky)"
+        Unplug1: Úvod do vedy o počítačoch (informatiky)
         Maze: Bludisko
         Multi: Viacnásobný výber
         Unplug2: Algoritmické myslenie
@@ -18,7 +18,7 @@
         Farmer2: Farmár 2
         Unplug8: Abstrakcia
         Artist4: Postava 4
-        Unplug9: "Štafetové programovanie"
+        Unplug9: Štafetové programovanie
         Farmer3: Farmár 3
         Unplug10: Internet
         Artist5: Postava 5
@@ -250,8 +250,8 @@
         maze_karel_debug_seq_1: Vitaj pri ladení programov! Môj kód nepracuje správne.
           Môžeš nájsť problém a opraviť ho tak, aby bolo pole vyrovnané a pripravené
           na sadenie?
-        maze_karel_debug_seq_2: "Čo je zlé v tomto programe? Ako ho opraviť, aby sa
-          odstránila kôpka?"
+        maze_karel_debug_seq_2: Čo je zlé v tomto programe? Ako ho opraviť, aby sa
+          odstránila kôpka?
         maze_karel_debug_repeat: Vylaď tento program tak, aby pole bolo čisté a rovné.
         maze_karel_debug_while: Ako by si zmenil tento program, aby si mi pomohol
           vyplniť jamu?
@@ -479,7 +479,7 @@
         maze_intro: Maze Intro
         artist_intro: Artist Intro
         farmer_intro: Farmer Intro
-        flappy_intro: "Úvod do Flappy"
+        flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovať x-krát
         loop_until: Repeat Until Block
         if: If Block
@@ -490,7 +490,7 @@
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        Unplug1: "Čo je to CS?"
+        Unplug1: Čo je to CS?
         Unplug2: Algoritmické myslenie
         Unplug3: Programovanie na milimetrovom papieri
         Unplug4: Algoritmy
@@ -498,7 +498,7 @@
         Unplug6: Podmienky
         Unplug7: Písanie pesničiek s parametrami
         Unplug8: Abstrakcia
-        Unplug9: "Štafetové programovanie"
+        Unplug9: Štafetové programovanie
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
@@ -530,7 +530,7 @@
         C2_graph_paper: Programovanie na milimetrovom papieri
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
-        C2_relay_programming: "Štafetové programovanie"
+        C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Tvoj digitálny otlačok
         C2_digital_footprint_v2: Tvoj digitálny otlačok
@@ -552,7 +552,7 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Dekorácie
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: "Úvod"
+        C4_intro: Úvod
         C4_loops_zombie: Cykly
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
@@ -561,7 +561,7 @@
         C4_for_loops_bee: For Loops
         C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: "Úprava funkcií"
+        C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
         C4_function_parameters: Functions with Parameters
         C4_conditionals: Podmienky
@@ -588,10 +588,10 @@
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
-        frozen_intro: "Úvod do Hodiny kódu"
-        frozen_loops: "Úvod do cyklov"
-        frozen_functions: "Úvod do funkcií"
-        playlab_intro: "Úvod do Play Lab"
+        frozen_intro: Úvod do Hodiny kódu
+        frozen_loops: Úvod do cyklov
+        frozen_functions: Úvod do funkcií
+        playlab_intro: Úvod do Play Lab
         playlab_events: Play Lab Udalosti
         playlab_repeat_forever: Play Lab Doživotné opakovanie
         tutorial_puzzle_challenge: Tutoriál - Puzzle výzva
@@ -643,7 +643,7 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "Úvod do funkcií"
+        csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Functions with Parameters
         csp_applab_loops: Cykly
         csp_applab_turtle: Turtle Programming
@@ -745,6 +745,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

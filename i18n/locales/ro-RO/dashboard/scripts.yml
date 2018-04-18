@@ -5686,6 +5686,8 @@ ro:
               name: Nested Loops with Frozen
             Nested Loops:
               name: Repetiții imbricate
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Curs E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -6120,6 +6122,8 @@ ro:
               name: Construirea unei Fundaţii
             Nested Loops:
               name: Repetiții imbricate
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -6410,6 +6414,8 @@ ro:
               name: Loops in Artist
             Nested Loops in Bee:
               name: Nested Loops in Bee
+            Loops in Ice Age:
+              name: Loops in Ice Age
           title: New Course D Script
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -7046,6 +7052,8 @@ ro:
               name: Obţinând Informaţii/Critici
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -7461,3 +7469,529 @@ ro:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Introduction:
+              name: Introducere
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops:
+              name: Repetiții imbricate
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            The Design Process:
+              name: The Design Process
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Build Your Project:
+              name: Build Your Project
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Present Your Project:
+              name: Present Your Project
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        courseb-2018:
+          title: Curs B
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+        coursed-2018:
+          title: New Course D Script
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Introduction:
+              name: Introducere
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Digital Citizenship:
+              name: Cetățenia Digitală
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Unplugged: Binary':
+              name: 'Fără calculator: Binar'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Artist Binary:
+              name: Binar cu artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)
+          title: CS Principles AP Exam Prep
+          description_audience: '[șir gol]'
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
+        coursec-2018:
+          title: Curs C
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+          stages:
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Binary Bracelets:
+              name: Brăţări Binare
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd6-2018:
+          title: CSD Unit 6 - Physical Computing
+          description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: '[șir gol]'
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Board Events_:
+              name: Board Events_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Analog Input_:
+              name: Analog Input_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Making Music_:
+              name: Making Music_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'

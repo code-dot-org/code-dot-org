@@ -9,7 +9,7 @@ module Pd
       regional_partner = current_user.regional_partners.first
       @script_data = {
         props: {
-          regionalPartnerName: regional_partner.try(:name),
+          regionalPartner: regional_partner ? {label: regional_partner.name, value: regional_partner.id} : nil,
           regionalPartnerGroup: regional_partner.try(:group),
           regionalPartners: RegionalPartner.select("id, name"),
           isWorkshopAdmin: is_workshop_admin,

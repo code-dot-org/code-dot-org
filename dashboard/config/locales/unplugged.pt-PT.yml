@@ -523,3 +523,49 @@
           que são ações que um computador monitora constantemente. O professor vai
           apertar os botões de forma remota, e os alunos vão reagir de acordo com
           o botão pressionado.
+      GraphPaperProgramming_2018:
+        title: Programação em Papel Quadriculado
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um
+          conjunto predefinido de comandos para orientar seus colegas de classe na
+          reprodução de um desenho.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Atividade offline
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Atividade offline
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
+          cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
+          ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      DigitalFootprint_2018:
+        title: Seu rastro digital
+        desc: Os professores informam aos alunos que colocar informações pessoais
+          online cria um rastro digital, ou uma "trilha" que tem consequências.
+      BinaryImages_2018:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns,
+          nossos cursos anteriores ensinaram aos alunos que as informações podem ser
+          representadas por uma grande variedade de opções binárias. Esta aula leva
+          esse conceito um passo adiante, uma vez que demonstra como um computador
+          também pode armazenar informações ainda mais complexas (como imagens e cores)
+          em binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da Vida Real: Aviões de Papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
+          na hora de fazer aviões de papel. Esta lição também apresenta a ciência
+          da computação de forma geral, e como os algoritmos têm um papel essencial.
+      GettingLoopy_2018:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções
+          repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma
+          coreografia simples e então serão instruídos a repeti-la.
+      BinaryBracelets_2018:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra
+          de seus nomes. Os alunos aprendem que os dados podem ser representados e
+          armazenados de mais de uma forma.
+      MoveItMoveIt_2018:
+        title: Criando caminhos
+        desc: ''

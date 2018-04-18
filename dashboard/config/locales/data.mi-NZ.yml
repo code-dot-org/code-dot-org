@@ -179,8 +179,8 @@
         maze_karel_1_7: Kātahi rā! Kua kitea e ahau tētahi rua tino hōhonu. Kāore
           i aro i au te nui o ngā kārehu me hoatu. E āhei ana koe tētahi papatono
           te tuhi kia ōrite te takoto o te whenua?
-        maze_karel_1_8: "Āwhinatia ahau ki te whakakī i te rua kei te pito o te whīra
-          mā te whakamahi i ngā paraka torutoru noa iho nei."
+        maze_karel_1_8: Āwhinatia ahau ki te whakakī i te rua kei te pito o te whīra
+          mā te whakamahi i ngā paraka torutoru noa iho nei.
         maze_karel_1_9: 'Meatia kia tangohia e ahau ēnei pūkei oneone katoa. Me ngana
           me ngā paraka torutoru noa iho. Tīwhiri: whakamahia tētahi paraka "i te".'
         maze_karel_1_10: Kua roa taku noho ki te mahi, kua pōuri ki waho, ā, kāore
@@ -293,8 +293,8 @@
           papatahi ai hoki taku whīra.
         maze_karel_debug_while: He aha ngā mea o tēnei papatono hei panoni māu kia
           pai ai taku whakakī i te rua?
-        maze_karel_debug_if: "Āwhina mai! Whakatikaina te papatono kia papatahi rawa
-          ai taku whīra."
+        maze_karel_debug_if: Āwhina mai! Whakatikaina te papatono kia papatahi rawa
+          ai taku whīra.
         maze_karel_debug_if_else: Patuhia te iro o tēnei papatono mōku kia pai ai
           taku whakakī i ngā rua ka tahi, ki te tango i ngā pūkei ka rua.
         maze_karel_debug_function_1: He aha ngā mea o tēnei papatono hei panoni māu
@@ -830,6 +830,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Tōia tētahi paraka "neke", kātahi me hoatu ki raro i tērā atu

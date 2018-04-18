@@ -79,7 +79,7 @@
   already_started: 'Keni filluar tashmë? Vazhdoni këtu >> '
   demos: 'Admin: Te gjitha Demot'
   continue: Vazhdo
-  prize: "çmim"
+  prize: çmim
   more_info: Më shumë informacion
   auth:
     sign_in_with: Logohu me %{provider}
@@ -454,8 +454,8 @@
     online: online
     see_details: Shiko detajet
     view_course: Shiko kursin
-    prize_info: "Çmimet për pjesmarrje (vetëm mësues të shkollave publike në SHBA):
-      Mbi 1000$ shpërblime për klasën."
+    prize_info: 'Çmimet për pjesmarrje (vetëm mësues të shkollave publike në SHBA):
+      Mbi 1000$ shpërblime për klasën.'
     tryfirst: 'Ose, mund ta provosh ne fillim, dhe rregjistrohesh më vonë:'
     trynow: Provo tani
     add_hint_help: Ju lutem na ndihmoni të shtojmë udhëzime më të goditura për tutorialet
@@ -599,8 +599,8 @@
       se ky mësues i ka tashmë ato në një seksion tjetër.
   share:
     title: Mëso në Code Studio
-    description: "Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione
-      dhe art me kode."
+    description: Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione
+      dhe art me kode.
     try_hour_of_code: Provo një Orë Kodimi!
   gender:
     male: Mashkull

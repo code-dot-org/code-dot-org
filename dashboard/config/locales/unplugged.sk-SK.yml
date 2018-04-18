@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "Úvod do vedy o počítačoch (informatiky)"
+        title: Úvod do vedy o počítačoch (informatiky)
         desc: Táto hodina predstaví koncept informatiky a vysvetlí, čo informatik
           robí. Zároveň v tejto lekcii budú mať študenti možnosť vžiť sa do role informatika.
           Na konci aktivity každž študentu získa upomienkový predmet s tým, čo sa
@@ -88,7 +88,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Štafetové programovanie"
+        title: Štafetové programovanie
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -113,12 +113,12 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Veselé mapy
-        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov."
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov.
       MoveIt:
         title: Posúvaj, Posúvaj
-        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov."
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov.
       PlantASeed:
         title: 'Algoritmus z reálneho života: Zasaď semienko'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
@@ -135,7 +135,7 @@
           sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
           ktorú budú na základe inštrukcíí opakovať.
       RelayProgramming:
-        title: "Štafetové programovanie"
+        title: Štafetové programovanie
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -196,17 +196,17 @@
           dice race game.
       Internet:
         title: Internet
-        desc: "Študenti posielajú správy predstavujúce rôzne metódy internetového
-          prenosu za pomoci kúskov papiera."
+        desc: Študenti posielajú správy predstavujúce rôzne metódy internetového prenosu
+          za pomoci kúskov papiera.
       Crowdsourcing:
         title: Crowdsourcing
-        desc: "Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
+        desc: Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
           problémov v oblasti počítačových technológií, je oveľa efektívnejšie riešiť
-          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám."
+          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám.
       DigitalCitizenship:
         title: Digitálne Občianstvo
-        desc: "Študenti preskúmajú rozdiely medzi súkromnou informáciu a osobnou informáciou,
-          naučia sa rozlíšiť, čo je bezpečné a nebezpečné zdielať online."
+        desc: Študenti preskúmajú rozdiely medzi súkromnou informáciu a osobnou informáciou,
+          naučia sa rozlíšiť, čo je bezpečné a nebezpečné zdielať online.
       TangramAlgorithms:
         title: Tangram algoritmy
         desc: This lesson shows us something important about algorithms. If you keep
@@ -299,8 +299,8 @@
           picture of computer science and how algorithms play an essential part.
       courseA_unplugged_happyMaps:
         title: Veselé mapy
-        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov."
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov.
       courseA_unplugged_goingPlacesSafely:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
@@ -341,7 +341,7 @@
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: "Štafetové programovanie"
+        title: Štafetové programovanie
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -369,13 +369,13 @@
           and calling functions.
       courseE_unplugged_internet:
         title: Internet
-        desc: "Študenti posielajú správy predstavujúce rôzne metódy internetového
-          prenosu za pomoci kúskov papiera."
+        desc: Študenti posielajú správy predstavujúce rôzne metódy internetového prenosu
+          za pomoci kúskov papiera.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
-        desc: "Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
+        desc: Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
           problémov v oblasti počítačových technológií, je oveľa efektívnejšie riešiť
-          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám."
+          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám.
       courseE_unplugged_songwriting:
         title: Písanie pesničiek s parametrami
         desc: Students use the concept of the chorus in a song to learn about defining
@@ -484,8 +484,8 @@
           picture of computer science and how algorithms play an essential part.
       UnplugHappyMaps_2018:
         title: Veselé mapy
-        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
-          postavu cez bludisko použitím jednoduchých príkazov."
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov.
       GoingPlacesSafely_2018:
         title: Bezpečné premiestňovanie
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
@@ -499,3 +499,48 @@
           ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom
           diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
           je práve stlačené.
+      GraphPaperProgramming_2018:
+        title: Programovanie na milimetrovom papieri
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivity bez počítača
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivity bez počítača
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Podmienky
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      DigitalFootprint_2018:
+        title: Tvoj digitálny otlačok
+        desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe
+          "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje
+          následky.
+      BinaryImages_2018:
+        title: Binárne obrázky
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Algoritmus z reálneho života: Papierové lietadielka'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
+          making paper airplanes. This lesson also focuses on the bigger picture of
+          computer science and how algorithms play an essential part.
+      GettingLoopy_2018:
+        title: Neustále opakovanie
+        desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich
+          sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
+          ktorú budú na základe inštrukcíí opakovať.
+      BinaryBracelets_2018:
+        title: Binárne náramky
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      MoveItMoveIt_2018:
+        title: Move It, Move It
+        desc: ''

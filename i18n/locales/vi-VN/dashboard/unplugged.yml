@@ -316,3 +316,33 @@ vi:
       BigEvent_2018:
         title: Sự kiện lớn
         desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện", đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được nhấn.
+      GraphPaperProgramming_2018:
+        title: lập trình đồ thị trên giấy
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp tái hiện một bản vẽ.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Hoạt động không dùng máy
+        desc: Hôm nay bạn sẽ tìm hiểu một công dân số là thế nào.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Hoạt động không dùng máy
+        desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được ám chỉ là đang online.
+      Conditionals_2018:
+        title: Điều kiện
+        desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+      DigitalFootprint_2018:
+        title: Dấu chân kỹ thuật số 
+        desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
+      BinaryImages_2018:
+        title: Hình ảnh Nhị phân
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực, các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      PaperPlanes_2018:
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
+      GettingLoopy_2018:
+        title: Tạo vòng lặp
+        desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp lại) qua hoạt động nhảy. Học sinh sẽ tìm hiểu về biên đạo múa cơ bản sau đó sẽ được hướng dẫn để lặp lại.
+      BinaryBracelets_2018:
+        title: Vòng đeo tay nhị phân
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu trữ theo nhiều hơn một cách.
+      MoveItMoveIt_2018:
+        title: Di chuyển nó, di chuyển nó
+        desc: ''

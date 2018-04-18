@@ -316,3 +316,33 @@ lv:
       BigEvent_2018:
         title: Lielais notikums
         desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event), kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.
+      GraphPaperProgramming_2018:
+        title: Rūtiņpapīra programmēšana
+        desc: Skolēni raksta algoritmu (darbību secību), izmantojot noteiktas komandas, lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Atvienota aktivitāte
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Atvienota aktivitāte
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sazarojumi
+        desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."
+      DigitalFootprint_2018:
+        title: Tavs digitālais nospiedums
+        desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.
+      BinaryImages_2018:
+        title: Binārie Attēli
+        desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm, mūsu iepriekšējās nodarbības iemācīja skolēniem to, ka informācija var tikt bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā kodā.
+      PaperPlanes_2018:
+        title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+        desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē, šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību kopējo ainu un kādu lomu tajā spēlē algoritmi.
+      GettingLoopy_2018:
+        title: Kļūst ciklisks
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems norādījumus to atkārtot.
+      BinaryBracelets_2018:
+        title: Binārās aproces
+        desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
+      MoveItMoveIt_2018:
+        title: Ej, ej
+        desc: ''

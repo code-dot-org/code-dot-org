@@ -2,7 +2,7 @@
   data:
     game:
       name:
-        Unplug1: "कंप्यूटर विज्ञान का परिचय"
+        Unplug1: कंप्यूटर विज्ञान का परिचय
         Maze: The Maze
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
@@ -10,9 +10,9 @@
         Artist: The Artist
         Unplug4: Algorithms
         Artist2: The Artist 2
-        Unplug5: "कार्य"
+        Unplug5: कार्य
         Farmer: The Farmer
-        Unplug6: "शर्तें"
+        Unplug6: शर्तें
         Artist3: The Artist 3
         Unplug7: Song Writing
         Farmer2: The Farmer 2
@@ -20,7 +20,7 @@
         Artist4: The Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
-        Unplug10: "इंटरनेट"
+        Unplug10: इंटरनेट
         Artist5: The Artist 5
         Unplug11: Wrap-up
         MazeEC: The Maze
@@ -41,8 +41,8 @@
     trophy:
       name:
         Bronze: Bronze
-        Silver: "चाँदी"
-        Gold: "सोना"
+        Silver: चाँदी
+        Gold: सोना
     concept:
       description:
         sequence: Sequence
@@ -52,7 +52,7 @@
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: "कार्य"
+        function: कार्य
         parameters: Functions with parameters
     level:
       instructions:
@@ -492,7 +492,7 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: "कार्य"
+        function: कार्य
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -501,8 +501,8 @@
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: "कार्य"
-        Unplug6: "शर्तें"
+        Unplug5: कार्य
+        Unplug6: शर्तें
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -535,7 +535,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: "शर्तें"
+        C2_conditionals_with_cards: शर्तें
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
@@ -560,7 +560,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "फंदे"
+        C4_loops_zombie: फंदे
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -571,7 +571,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: "शर्तें"
+        C4_conditionals: शर्तें
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -652,7 +652,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "फंदे"
+        csp_applab_loops: फंदे
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -752,6 +752,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -856,11 +862,11 @@
         craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
         craft_drag_block_callout: '"moveForward();" ब्लॉक को खींचें और उसे दूसरे ब्लॉक
           के नीचे इस्तेमाल करें'
-        craft_callout_preplaced: "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक
-          रखे हैं"
-        craft_inside_repeat: "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
-        craft_callout_preplaced_house: "यह कोड आपके घर का निर्माण शुरू करेगा। क्या
-          आप इसे खत्म कर सकते हैं?"
-        craft_what_is_iron: "इस लौह का खनन करें!"
-        craft_callout_moveforward: "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के
-          लिए कमांड जोड़ सकते हैं?"
+        craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक
+          रखे हैं
+        craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
+        craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या
+          आप इसे खत्म कर सकते हैं?
+        craft_what_is_iron: इस लौह का खनन करें!
+        craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के
+          लिए कमांड जोड़ सकते हैं?

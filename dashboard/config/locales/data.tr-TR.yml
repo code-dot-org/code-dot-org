@@ -4,25 +4,25 @@
       name:
         Unplug1: Bilgisayar Bilimlerine Giriş
         Maze: Labirent
-        Multi: "Çok Seçimli Şeyler"
+        Multi: Çok Seçimli Şeyler
         Unplug2: Sayısal Düşünme
         Unplug3: Grafikli Kağıdıyla Programlama
         Artist: Sanatçı
         Unplug4: Algoritmalar
         Artist2: Sanatçı 2
         Unplug5: Fonksiyonlar
-        Farmer: "Çiftçi"
+        Farmer: Çiftçi
         Unplug6: Koşullar
         Artist3: Sanatçı 3
-        Unplug7: "Şarkı Yazma"
-        Farmer2: "Çiftçi 2"
+        Unplug7: Şarkı Yazma
+        Farmer2: Çiftçi 2
         Unplug8: Soyutlama
         Artist4: Sanatçı 4
         Unplug9: Röle Programlama
-        Farmer3: "Çiftçi 3"
-        Unplug10: "İnternet"
+        Farmer3: Çiftçi 3
+        Unplug10: İnternet
         Artist5: Sanatçı 5
-        Unplug11: "Özet"
+        Unplug11: Özet
         MazeEC: Labirent
         Bounce: Sıçrama
         Flappy: Flappy Bird
@@ -34,7 +34,7 @@
         TextMatch: Metin Eşleştirmesi
         StudioEC: Oyun Laboratuvarı
         Applab: App Laboratuvarı
-        NetSim: "İnternet Simülatörü"
+        NetSim: İnternet Simülatörü
         Custom: Sanatçı
         CustomStudio: Oyun Laboratuvarı
         Gamelab: Oyun Laboratuvarı
@@ -107,7 +107,7 @@
           kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar
           uzağa dönmeniz gerektiğini dönüş bloğundaki numaraya tıklayarak bulmanız
           gerek.'
-        turtle_1_5: "Şimdi, bir üçgen ve sonra bir kare çizerek zarf oluşturun."
+        turtle_1_5: Şimdi, bir üçgen ve sonra bir kare çizerek zarf oluşturun.
         turtle_1_6: 'Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz
           mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz
           gerektiğini bulun.'
@@ -117,8 +117,8 @@
         turtle_1_8: Tamam, bu kodu çalıştırıdığınızda ne olduğunu görelim (ya da "Çalıştır"
           düğmesini tıklayın). O halde, çizimi tamalamak için yeteri kadar tekrar
           edin. Renkler her defasında farkı olsun.
-        turtle_1_9: "Çember çizmek için soru işaretli yere gelmesi gereken sayısı
-          bulabilir misiniz?"
+        turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir
+          misiniz?
         turtle_1_10: Başardınız! Şimdi, istediğiniz her hangi bir şeyi çiziniz.Eğlenceli
           olabilecek bazı fikirler:kartanesi ya da spiral olabilir.Ayrıca "kalınlığını
           belirleyin " bloğunu kullanabilirisniz.Eğlenin!
@@ -137,15 +137,15 @@
           bir çember 360 derece döndürülerek oluşturulabilir.)
         turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel lacak bir kare
           çizebilir misiniz?
-        turtle_4_7: "İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
+        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
           merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu:
-          Yalnızca iki bloga daha ihtiyacın var."
-        turtle_4_8: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
-          blok daha ekleyebilir misin?"
-        turtle_4_9: "Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması
-          için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)"
-        turtle_4_10: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
-          gerekli?"
+          Yalnızca iki bloga daha ihtiyacın var.'
+        turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
+          blok daha ekleyebilir misin?
+        turtle_4_9: Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması
+          için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
+        turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
+          gerekli?
         turtle_4_11: Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki
           sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için
           kodun geri kalanını değiştirmeyi dene.
@@ -186,9 +186,9 @@
         turtle_2_3: 100 boyutunda 120 derece aralıklı 3 kare çizmek için döngüler
           kategorisinde ki tekrar et bloğunu kullan.Ve 3 ünüde farklı,rastgele renklerde
           yap.
-        turtle_2_4: "Şimdi biraz kafayı çekeceğiz. Kodu 36 kare çizmek için ayarla,
+        turtle_2_4: 'Şimdi biraz kafayı çekeceğiz. Kodu 36 kare çizmek için ayarla,
           100 piksel genişliğinde ve her biri 10 aşama uzakta olsun. İpucu: Belki
-          daha hızlı gitmem için kaydırgacı kullanmak istersin."
+          daha hızlı gitmem için kaydırgacı kullanmak istersin.'
         turtle_2_5: '"Kare çiz" fonksiyonunu 5 kere kullanarak, 50, 60, 70, 80 ve
           90 piksel boyutlarında kareler çizin.'
         turtle_2_6: 'Pekala,  bu program sonuncu karenin aynısını çizmek için bir
@@ -256,8 +256,8 @@
           çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
-        turtle_3_10: "Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
-          spiral veya bir kar tanesi çizmeye çalışın."
+        turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
+          spiral veya bir kar tanesi çizmeye çalışın.
         maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün
           çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve
           ekim için hazır olur.
@@ -301,14 +301,14 @@
           alanına sürükle. Hazır olduğunda "Çalıştır" a bas.
         jigsaw_1: Bloğu tıklayın
         jigsaw_2: Bloğu hedefe sürükle
-        jigsaw_3: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_4: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_5: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_6: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_7: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_8: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_9: "Şekli oluşturacak biçimde blokları düzenleyin"
-        jigsaw_10: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_3: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_4: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_5: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_6: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_7: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_8: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_9: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_10: Şekli oluşturacak biçimde blokları düzenleyin
         jigsaw_11: Blokları numaralarına göre sıralayın
         jigsaw_12: Blokları numaralarına göre sıralayın
         jigsaw_13: Bulmacayı düzelt!
@@ -452,8 +452,11 @@
           kodlar ekleyerek "aktör zamanında dokunduğunda" olayında ses çıkarmasını
           sağlayın. Ayrıca muz ile Antuan her çarptığında puan kazansın. Oyna tuşuna
           basarak oyunu oynayın.
-        studio_gumball_warn_food_fight: |
-          Darwin yemek atma savaşından kaçtı! Arka Planı "Karakterler arka planı" olarak değiştir. Darwinin daha hızlı hareket etmesini sağla. Sonra Darwinin hızlıca gidip Pennyi uyarmasını sağla.
+        studio_gumball_warn_food_fight: 'Darwin yemek atma savaşından kaçtı! Arka
+          Planı "Karakterler arka planı" olarak değiştir. Darwinin daha hızlı hareket
+          etmesini sağla. Sonra Darwinin hızlıca gidip Pennyi uyarmasını sağla.
+
+'
         studio_gumball_join_food_fight: Yemek atma savaşına katılın! "Aktör fırlattığında"
           bloğunu kullanarak Muz Joe nun Antuan a yemek fırlatmasını sağla. Ayrıca
           Yemek Antuana çarptığında kızgın olmasını sağla.
@@ -504,7 +507,7 @@
       name:
         maze_intro: 'Labirent: Tanıtım'
         artist_intro: 'Ressam: Giriş'
-        farmer_intro: "Çiftçi tanıtım"
+        farmer_intro: Çiftçi tanıtım
         flappy_intro: Flappy Tanıtım
         loop_times: Bloğu tekrarlayın
         loop_until: Blok kadar tekrarlayın
@@ -522,13 +525,13 @@
         Unplug4: Algoritmalar
         Unplug5: Fonksiyonlar
         Unplug6: Koşullar
-        Unplug7: "Şarkı yazma"
+        Unplug7: Şarkı yazma
         Unplug8: Soyutlama
         Unplug9: Röle Programlama
-        Unplug10: "İnternet"
-        Unplug11: "Özet"
+        Unplug10: İnternet
+        Unplug11: Özet
         C1_happy_maps_unplugged: Mutlu Haritalar
-        C1_moveitmoveit_unplugged: "Çabuk, Çabuk Taşı"
+        C1_moveitmoveit_unplugged: Çabuk, Çabuk Taşı
         C1_bigevent_unplugged: Büyük Olay
         C1_getting_loopy: Döngüselleşme
         C1_pair_programming: Eşli Programlama
@@ -555,7 +558,7 @@
         C2_playlab_createstory: Laboratuvar Oyna - Bir Hikaye Oluştur
         C2_graph_paper: Grafikli Kağıdıyla Programlama
         C2_conditionals_with_cards: Koşullar
-        C2_binary_bracelets: "İkilik Bileklikler"
+        C2_binary_bracelets: İkilik Bileklikler
         C2_relay_programming: Röle Programlama
         C2_paper_airplanes: Kağıt Uçaklar
         C2_digital_footprint: Dijital İziniz
@@ -566,15 +569,15 @@
         C3_bee_functions: Arı Fonksiyonları
         C3_bee_conditionals: Arı Koşullandırmaları
         C3_maze_conditionals: Labirent Koşullandırıcıları
-        C3_artist_nested_loops: "İç İçe Döngüler"
+        C3_artist_nested_loops: İç İçe Döngüler
         C3_farmer_while: While(...durumunda) Döngüleri
-        C3_bee_nested_loops: "İç İçe Döngüler"
+        C3_bee_nested_loops: İç İçe Döngüler
         C3_bee_debugging: Arı Ayıklama
         C3_bounce: Sıçrama
         C3_playlab_create_game: 'Oyun Laboratuvarı: Bir Oyun Oluştur'
         C3_computational_thinking: Sayısal Düşünme
         C3_dice_race: Zar Yarışı
-        C3_internet: "İnternet"
+        C3_internet: İnternet
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
         C3_songwriting_with_parameters: Parametrelerle Şarkı Yazmak
@@ -592,11 +595,11 @@
         C4_function_parameters: Fonksiyon parametreleri
         C4_conditionals: Koşullar
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
-        C4_unplugged_madlibs: "Çılgın Kütüphaneler"
+        C4_unplugged_madlibs: Çılgın Kütüphaneler
         C4_unplugged_variables: Zarfların içindeki Değişkenler
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
-        C4_unplugged_binary: "İkili"
+        C4_unplugged_binary: İkili
         CSF_a_b_artist_loops: Sanatçıların Döngüleri
         CSF_artist_angles: Sanatçı açılarda
         CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
@@ -754,20 +757,20 @@
         mc_2017_puzzle_3: Minecraft Kodlama Saati - Döngüler
         mc_2017_puzzle_8: Minecraft Kodlama Saati - Fonksiyonlar
         mc_2017_puzzle_12: Minecraft Kodlama Saati - serbest zaman
-        hint_videos_d_11_3_first: "İpucu videolar: D.11.3 ilk"
-        hint_videos_d_11_3_last: "İpucu videolar: D.11.3 son"
-        hint_videos_d_11_4_first: "İpucu videolar: D.11.4 ilk"
-        hint_videos_d_11_4_last: "İpucu videolar: D.11.4 son"
-        hint_videos_d_11_5_first: "İpucu videolar: D.11.5 ilk"
-        hint_videos_d_11_5_last: "İpucu videolar: D.11.5 son"
-        hint_videos_d_11_6_first: "İpucu videolar: D.11.6 ilk"
-        hint_videos_d_11_6_last: "İpucu videolar: D.11.6 son"
-        hint_videos_d_11_7_first: "İpucu videolar: D.11.7 ilk"
-        hint_videos_d_11_7_last: "İpucu videolar: D.11.7 son"
-        hint_videos_d_11_9_first: "İpucu videolar: D.11.9 ilk"
-        hint_videos_d_11_9_last: "İpucu videolar: D.11.9 son"
-        hint_videos_d_11_11_first: "İpucu videolar: D.11.11 ilk"
-        hint_videos_d_11_11_last: "İpucu videolar: D.11.11 son"
+        hint_videos_d_11_3_first: 'İpucu videolar: D.11.3 ilk'
+        hint_videos_d_11_3_last: 'İpucu videolar: D.11.3 son'
+        hint_videos_d_11_4_first: 'İpucu videolar: D.11.4 ilk'
+        hint_videos_d_11_4_last: 'İpucu videolar: D.11.4 son'
+        hint_videos_d_11_5_first: 'İpucu videolar: D.11.5 ilk'
+        hint_videos_d_11_5_last: 'İpucu videolar: D.11.5 son'
+        hint_videos_d_11_6_first: 'İpucu videolar: D.11.6 ilk'
+        hint_videos_d_11_6_last: 'İpucu videolar: D.11.6 son'
+        hint_videos_d_11_7_first: 'İpucu videolar: D.11.7 ilk'
+        hint_videos_d_11_7_last: 'İpucu videolar: D.11.7 son'
+        hint_videos_d_11_9_first: 'İpucu videolar: D.11.9 ilk'
+        hint_videos_d_11_9_last: 'İpucu videolar: D.11.9 son'
+        hint_videos_d_11_11_first: 'İpucu videolar: D.11.11 ilk'
+        hint_videos_d_11_11_last: 'İpucu videolar: D.11.11 son'
         applab_intro_welcome: App Lab - Başlarken
         applab_intro_events: App Lab - etkileşimli
         applab_intro_sounds: App Lab - resimler ve sesler
@@ -775,6 +778,12 @@
         applab_intro_share: App Lab - Uygulamanı paylaş
         csd_applab_arrays: Dizilere Giriş
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: BB-8 ile Döngüler
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -815,7 +824,7 @@
         get_nectar: Yeni "nektarı al" bloğunu kullan.
         actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
           artık burada.
-        draw_square_hint: "İpucu: Son bulmacada yaptığın kare döngüsünü kullan."
+        draw_square_hint: 'İpucu: Son bulmacada yaptığın kare döngüsünü kullan.'
         edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
         create_function: '"Fonksiyonlar" açılır penceresini açmak için buraya tıkla,
           ardından "Yeni bir fonksiyon oluştur" butonuna tıkla.'
@@ -840,8 +849,8 @@
           unutma
         playlab_move_girl: Tenisçi kızı yürütmek için "sağa git" bloğunu kullan
         playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
-        playlab_arrow_keys: "Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
-          kullanmayı unutma"
+        playlab_arrow_keys: Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
+          kullanmayı unutma
         playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
         playlab_add_score: Skor bloklarını buraya ekle
         playlab_add_blocks: Bloklarını buraya ekle
@@ -854,8 +863,8 @@
         change_here: Değişikliği burada yap
         write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
           sürükle
-        write_draw_triangle_function: "Üçgen çizmek için blokları araç kutusundan
-          buraya sürükle"
+        write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
+          sürükle
         edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
         add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
           ve ardından fonksiyonunuzun tanımına sürükleyin

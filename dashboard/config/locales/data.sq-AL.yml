@@ -277,8 +277,8 @@
         maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet.
           Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet
           fusha dhe të jetë gati për mbjellje?
-        maze_karel_debug_seq_2: "Çfarë problemi ka me këtë program? Si mund ta rregullosh
-          në mënyrë që të heq këtë grumbull?"
+        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh
+          në mënyrë që të heq këtë grumbull?
         maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të
           jetë e sheshtë dhe e mirë.
         maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar
@@ -287,8 +287,8 @@
           e sheshtë.
         maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat
           dhe të heq gjithë grumbujt.
-        maze_karel_debug_function_1: "Çfarë duhet të ndryshosh në këtë program që
-          të më ndihmosh të heq gjithë grumbujt?"
+        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të
+          më ndihmosh të heq gjithë grumbujt?
         maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që
           ta bëj fushën time të sheshtë?
         maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt
@@ -548,7 +548,7 @@
         loop_for: Blloku Counter
         parameters: Funksionet me parametra
         hoc_wrapup: Përmbledhja e Orës së Kodimit
-        Unplug1: "Çfarë është CS?"
+        Unplug1: Çfarë është CS?
         Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter
         Unplug4: Algoritmet
@@ -803,6 +803,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
@@ -849,8 +855,8 @@
         edit_function: Kliko këtu për të redaktuar funksionin tënd.
         create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
           "Krijo një Funksion".
-        house_hint: "Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
-          Ne do ta riparojmë atë në puzzle-in tjetër."
+        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër.
         edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
           në cikël.
         edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho

@@ -18,8 +18,8 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {
   ApplicationStatuses,
-  UnmatchedFilter,
-  RegionalPartnerDropdownOptions as dropdownOptions
+  RegionalPartnerDropdownOptions as dropdownOptions,
+  RegionalPartnerPropType
 } from './constants';
 import {
   Button,
@@ -31,7 +31,7 @@ import {
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   },
   select: {
     width: '200px'
@@ -40,7 +40,7 @@ const styles = {
 
 export class QuickView extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -60,19 +60,23 @@ export class QuickView extends React.Component {
     this.state = {
       loading: true,
       applications: null,
-      filter: '',
-      regionalPartnerName: props.regionalPartnerName,
-      regionalPartnerFilter: props.isWorkshopAdmin ? UnmatchedFilter : ''
+      filter: ''
     };
     this.loadRequest = null;
   }
 
-  componentWillMount() {
-    this.load();
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter.value);
+    }
+  }
 
+  componentWillMount() {
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
     this.statuses.unshift({value: '', label: "All statuses"});
+
+    this.load(this.props.regionalPartnerFilter.value);
   }
 
   componentWillUnmount() {
@@ -85,13 +89,13 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+  load(regionalPartnerFilterValue) {
     this.abortLoad();
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.getJsonUrl(regionalPartnerFilter),
+      url: this.getJsonUrl(regionalPartnerFilterValue),
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -102,31 +106,27 @@ export class QuickView extends React.Component {
     });
   }
 
-  getApiUrl = (format, regionalPartnerFilter) => (
-    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
+  getApiUrl = (format, regionalPartnerFilterValue) => (
+    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilterValue))}`
   );
-  getApiParams = (regionalPartnerFilter) => ({
+  getApiParams = (regionalPartnerFilterValue) => ({
     role: this.props.route.role,
-    regional_partner_filter: regionalPartnerFilter
+    regional_partner_value: regionalPartnerFilterValue
   });
-  getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
-  getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
+  getJsonUrl = (regionalPartnerFilterValue) => this.getApiUrl('', regionalPartnerFilterValue);
+  getCsvUrl = (regionalPartnerFilterValue) => this.getApiUrl('.csv', regionalPartnerFilterValue);
 
   handleDownloadCsvClick = event => {
-    window.open(this.getCsvUrl(this.state.regionalPartnerFilter || ''));
+    window.open(this.getCsvUrl(this.props.regionalPartnerFilter.value || ''));
+  };
+
+  handleViewCohortClick = () => {
+    this.context.router.push(`/${this.props.route.path}_cohort`);
   };
 
   handleStateChange = (selected) => {
     const filter = selected ? selected.value : null;
     this.setState({ filter });
-  };
-
-  handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
-    this.setState({ regionalPartnerName, regionalPartnerFilter });
-
-    this.load(regionalPartnerFilter);
   };
 
   render() {
@@ -145,20 +145,18 @@ export class QuickView extends React.Component {
         {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
             accepted={accepted}
             registered={registered}
           />
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            onChange={this.handleRegionalPartnerChange}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }
         <Row>
-          <h1>{this.state.regionalPartnerName}</h1>
+          <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -167,6 +165,14 @@ export class QuickView extends React.Component {
             >
               Download CSV
             </Button>
+            {accepted > 0 &&
+              <Button
+                style={styles.button}
+                onClick={this.handleViewCohortClick}
+              >
+                View accepted cohort
+              </Button>
+            }
           </Col>
           <Col md={6} sm={6}>
             <FormGroup className="pull-right">
@@ -197,7 +203,7 @@ export class QuickView extends React.Component {
         path={this.props.route.path}
         data={this.state.applications}
         statusFilter={this.state.filter}
-        regionalPartnerName={this.props.regionalPartnerName}
+        regionalPartnerName={this.props.regionalPartnerFilter.label}
         viewType={this.props.route.viewType}
       />
     );
@@ -205,6 +211,6 @@ export class QuickView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);

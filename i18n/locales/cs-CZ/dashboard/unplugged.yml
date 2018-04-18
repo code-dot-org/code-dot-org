@@ -316,3 +316,33 @@ cs:
       BigEvent_2018:
         title: Velká událost
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
+      GraphPaperProgramming_2018:
+        title: Programování na milimetrovém papíru
+        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných příkazů k řízení svých spolužáků k reprodukci výkresu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Podmínky
+        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod" a "Vytáhnu-li černou kartu, dostanu bod."
+      DigitalFootprint_2018:
+        title: Tvé digitální stopy
+        desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      BinaryImages_2018:
+        title: Binární obrázky
+        desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky, naše předchozí kurzy učí studenty, že informace lze znázornit v různých binárních volbách.  V této lekci tento koncept posuneme jeden krok dále, jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace (např. obrázky a barvy).
+      PaperPlanes_2018:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      GettingLoopy_2018:
+        title: Bláznit
+        desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
+      BinaryBracelets_2018:
+        title: Binární náramky
+        desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než jedním způsobem.
+      MoveItMoveIt_2018:
+        title: Pohyb, pohyb
+        desc: ''

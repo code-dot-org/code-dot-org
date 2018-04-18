@@ -90,6 +90,6 @@
         someone_invited_you: Nogen har inviteret dig til %{url}. Du kan acceptere
           den via linket nedenfor.
         accept: Acceptér invitation
-        ignore: "Ønsker du ikke at acceptere invitationen, ignorér da venligst denne
+        ignore: Ønsker du ikke at acceptere invitationen, ignorér da venligst denne
           e-mail. <br/>Din konto vil ikke blive oprettet, før du benytter linket ovenfor,
-          og opretter din adgangskode."
+          og opretter din adgangskode.

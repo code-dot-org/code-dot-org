@@ -16,7 +16,7 @@
   activerecord:
     errors:
       messages:
-        blank: "è un dato obbligatorio"
+        blank: è un dato obbligatorio
         blank_plural: sono richiesti
         invalid_plural: non sono validi
     attributes:
@@ -157,7 +157,7 @@
     user_type_label: Tipo di account
     user_type_teacher: Insegnante
     user_type_student: Studente
-    field_is_required: "è un dato obbligatorio"
+    field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
   school_info:
@@ -674,7 +674,7 @@
     secure: Versione sicura
     report_abuse: Segnala un abuso
     built_on_code_studio: Costruito con Code Studio
-    make_my_own_app: Crea la tua App
+    make_my_own_app: Creo la mia App
     how_it_works: Come funziona
     try_hour_of_code: Prova un Ora di Programmazione!
   reference_area:
@@ -789,7 +789,8 @@
       cta: Scopri come
     hoc-encryption:
       title: Crittografia semplice
-      body: Students will learn techniques to create and crack encrypted messages.
+      body: Gli studenti impareranno tecniche per creare e decifrare un messaggio
+        cifrato.
     weblab:
       title: Sviluppo Web (versione provvisoria)
       body: Sviluppo Web è un ambiente di programmazione in cui si possono realizzare
@@ -964,12 +965,12 @@
       per noi, e speriamo che stabilisca un nuovo standard per la privacy degli studenti
       nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre
       modifiche via e-mail.'
-    intro_instructions: "È necessario accettare questi nuovi termini per gli studenti
+    intro_instructions: È necessario accettare questi nuovi termini per gli studenti
       con un'età minore di 13 anni nella tua classe per avere accesso completo alle
       ultime caratteristiche di Code studio. Registrando uno studente con un'età minore
       di 13 anni, ti verrà chiesto se la tua scuola abbia il consenso dei genitori
       per la raccolta di dati personali dello studente per uso e beneficio della scuola,
-      tra cui programmi educativi come Code studio."
+      tra cui programmi educativi come Code studio.
     tos: Termini di servizio
     privacy: Informativa sulla privacy
     privacy_notice: Informativa sulla privacy
@@ -1045,8 +1046,8 @@
     share: Condividi
     share_title: Condividi il tuo progetto
     share_copy_link: 'Copia il link:'
-    share_embed_description: "È possibile incollare il codice da incorporare in una
-      pagina HTML per visualizzare il progetto in una pagina Web."
+    share_embed_description: È possibile incollare il codice da incorporare in una
+      pagina HTML per visualizzare il progetto in una pagina Web.
     share_u13_warning: Chiedi al tuo insegnante prima di condividere qualcosa. Condividi
       solo con persone della tua classe/scuola.
     embed: Incorpora

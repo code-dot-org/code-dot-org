@@ -509,3 +509,47 @@
           ovat toimenpiteitä, joita tietokone monitoroi koko ajan. Opettaja painelee
           paperisen kaukosäätimen nappuloita ja opiskelijat reagoivat riippuen mitä
           nappulaa painettiin.
+      GraphPaperProgramming_2018:
+        title: Ruutupaperiohjelmointi
+        desc: Opiskelijat kirjoittavat algoritmin (käskyjen joukon) käyttäen tiettyjä
+          ennaltamäärättyjä komentoja joilla ohjataan luokkakavereita piirroksen jäljentämisessä.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Tietokoneeton tekeminen
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Tietokoneeton tekeminen
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Ehtolausekkeet
+        desc: Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat
+          sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan
+          kortin, sinä saat pisteen."
+      DigitalFootprint_2018:
+        title: Digitaalinen jalanjälkesi
+        desc: Opettajat kertovat oppilailleen, että omien tietojensa lisääminen verkkoon
+          luo digitaalisen jalanjäljen tai "polun" jolla on seurauksensa.
+      BinaryImages_2018:
+        title: Binäärikuvat
+        desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat
+          kurssimme opettivat opiskelijoille, että informaatiota voidaan esittää monenlaisina
+          binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle,
+          näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota
+          (kuen kuvia ja värejä) myös binäärisenä.
+      PaperPlanes_2018:
+        title: 'Tosielämän algoritmit: paperilentokoneet'
+        desc: Tällä tunnilla tutkitaan, miten algoritmit esiintyvät arkielämässämme,
+          esimerkkinä paperilennokkien tekeminen. Oppitunti keskittyy myös tietojenkäsittelytieteen
+          kokonaiskuvaan ja kuinka algoritmeillä on siinä oleellinen rooli.
+      GettingLoopy_2018:
+        title: Mennään silmukoille
+        desc: Tällä oppitunnilla tutustutetaan silmukoiden ohjelmointikonseptiin (toistuvat
+          käskyt) tanssin kautta. Oppilaat oppivat yksinkertaisen koreografian, joka
+          heidät opetetaan toistamaan.
+      BinaryBracelets_2018:
+        title: Binäärikorut
+        desc: Opiskelijat luovat rannekoruja nimensä ensimmäisen kirjaimen binäärimuodosta.
+          Oppilaat oppivat, että tietoa voidaan esittää ja tallentaa useammalla kuin
+          yhdellä tavalla.
+      MoveItMoveIt_2018:
+        title: Liikuta, liikuta
+        desc: ''

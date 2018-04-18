@@ -9,15 +9,15 @@
         Bee_Cond_5_1a: У фиолетовых цветов могут быть значения "1" или "0" нектара...
           но вы не будете знать наверняка, пока не запустите выполнение кода!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Click and drag a "Text Area" onto the screen
         screenSelectorCallout3: Pick the screen you made
@@ -205,7 +205,7 @@
       CSD U3 UP_ARROW_callout: []
       CSD U3 UP_ARROW_2018_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: "Поменяйте число здесь"
+        CSD_U3_variables: Поменяйте число здесь
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
@@ -215,7 +215,7 @@
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: "Поменяйте число здесь"
+        CSD_U3_variables: Поменяйте число здесь
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -365,23 +365,23 @@
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 ellipse_2018_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -398,8 +398,8 @@
       CSD U3 keydown conditional_callout: []
       CSD U3 keydown conditional_2018_callout: []
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Здесь находится кнопка «Запустить»."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 picture_callout: []
       CSD U3 picture_2018_callout: []
       CSD U3 platform background1_callout:
@@ -423,31 +423,46 @@
       CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Здесь находится кнопка «Запустить»."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 rect_2018_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Здесь находится кнопка «Запустить»."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: "Вот код"
-        CSD_U3_rect_c2: "Перетащите этот блок в область кода."
+        CSD_U3_rect_c1: Вот код
+        CSD_U3_rect_c2: Перетащите этот блок в область кода.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: []
+      CSD U6 colorLeds predict_2018_callout: []
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -491,63 +506,61 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       Course 4 Artist 4_callout:
-        repeat_full_circle: "Введи,количество перемещений, необходимых зомби для прохождения
-          круга."
+        repeat_full_circle: Введи,количество перемещений, необходимых зомби для прохождения
+          круга.
       Course 4 Artist 7_callout:
-        repeat_blocks: "Используй блок «повторить» и расположи его вокруг блоков на
-          рабочем пространстве"
+        repeat_blocks: Используй блок «повторить» и расположи его вокруг блоков на
+          рабочем пространстве
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: "Перенеси переменную счетчика во внутрь этого блока"
+        place_counter_variable: Перенеси переменную счетчика во внутрь этого блока
       Course 4 Artist Functions 4_callout:
-        create_function: "Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
-          на кнопку «Создать функцию»."
+        create_function: Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
+          на кнопку «Создать функцию».
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: "Ничего страшного, если картинка пока не похожа на домик. Мы исправим
-          это в следующей головоломке."
+        house_hint: Ничего страшного, если картинка пока не похожа на домик. Мы исправим
+          это в следующей головоломке.
       Course 4 Artist Functions 8_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
+        edit_function: Нажмите здесь для редактирования функции.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: "Помните, что мы рассортировали все
+        Course_4_Artist_Functions_challenge_1: Помните, что мы рассортировали все
           блоки и расположили их по категориям для удобства. Нажмите здесь, чтобы
-          найти все необходимые вам блоки."
+          найти все необходимые вам блоки.
       Course 4 Artist Params 2_callout:
-        length_parameter: "Можете изменить эту функцию, чтобы она использовала параметр
-          «длина»?"
+        length_parameter: Можете изменить эту функцию, чтобы она использовала параметр
+          «длина»?
       Course 4 Artist Params 4_callout:
-        create_function: "Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
-          на кнопку «Создать функцию»."
+        create_function: Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
+          на кнопку «Создать функцию».
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: "Используй блок «повторить» и расположи его вокруг блоков на
-          рабочем пространстве"
+        repeat_blocks: Используй блок «повторить» и расположи его вокруг блоков на
+          рабочем пространстве
       Course 4 Artist Vars 10_callout:
-        set_sides: "Воспользуйтесь этим блоком для определения значения «стороны»,
-          чтобы решить эту головоломку."
+        set_sides: Воспользуйтесь этим блоком для определения значения «стороны»,
+          чтобы решить эту головоломку.
       Course 4 Artist Vars 12_callout:
-        set_length: "Воспользуйтесь этим блоком, чтобы задать правильное значение
-          «длины»."
+        set_length: Воспользуйтесь этим блоком, чтобы задать правильное значение «длины».
       Course 4 Artist Vars 13_callout: []
       Course 4 Artist Vars 2_callout:
-        set_length: "Воспользуйтесь этим блоком, чтобы задать правильное значение
-          «длины»."
+        set_length: Воспользуйтесь этим блоком, чтобы задать правильное значение «длины».
       Course 4 Artist Vars 3_callout:
-        place_variable: "Перенеси переменную во внутрь этого блока"
+        place_variable: Перенеси переменную во внутрь этого блока
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: "Раздели 360 на число сторон, чтобы получить значение градуса
-          каждого угла."
+        degrees_per_side: Раздели 360 на число сторон, чтобы получить значение градуса
+          каждого угла.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "Нужно больше пространства? Потяните эту планку,
-          чтобы расширить место для программирования."
+        Course_4_Artist_Vars_8_a: Нужно больше пространства? Потяните эту планку,
+          чтобы расширить место для программирования.
       Course 4 Artist Vars 9_callout:
-        set_sides: "Воспользуйтесь этим блоком для определения значения «стороны»,
-          чтобы решить эту головоломку."
+        set_sides: Воспользуйтесь этим блоком для определения значения «стороны»,
+          чтобы решить эту головоломку.
       Course 4 Bee 1_callout:
         if_bee_nectar: Используйте блок "Если", чтобы решить будет ли пчела собирать
           нектар или делать мёд
@@ -555,13 +568,13 @@
         if_else_bee: Используйте блок "Если/Иначе", чтобы пчёлка могла собрать нектар
           из цветка или сделать мёд, если находится не над цветком
       Course 4 Bee For Loops 1_callout:
-        get_nectar: "Используйте новый блок «собрать нектар»."
+        get_nectar: Используйте новый блок «собрать нектар».
       Course 4 Bee For Loops 6_callout:
-        actions_category: "Панель инструментов теперь выглядит по-новому! Теперь здесь
-          появился блок «Действия»."
+        actions_category: Панель инструментов теперь выглядит по-новому! Теперь здесь
+          появился блок «Действия».
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: "Используйте эту кнопку, чтобы редактировать функцию и изменить
-          направление полета пчелы за нектаром."
+        edit_get_nectar: Используйте эту кнопку, чтобы редактировать функцию и изменить
+          направление полета пчелы за нектаром.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Изменение значения переменной на "0" или "1" называется
@@ -569,47 +582,46 @@
           движения пчёлки.
       Course 4 Bee Params 4_callout: []
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: "Нажмите «Выполнить», чтобы протестировать свою
-          программу"
+        Course 4 Maze 1_callout1: Нажмите «Выполнить», чтобы протестировать свою программу
         Course 4 Maze 1_callout2: Перетащите блок "Переместиться" и привяжите его
           под другими блоками на рабочем пространстве
       Course 4 Maze 4_callout:
-        repeat: "Разместите блоки внутри цикла, чтобы команды повторялись"
+        repeat: Разместите блоки внутри цикла, чтобы команды повторялись
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Нажмите кнопку "Изменить" для обновления этой
           функции, чтобы использовался другой параметр высоты.
       Course 4 Play Lab Params 3_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
+        edit_function: Нажмите здесь для редактирования функции.
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
       Course 4 Play Lab Vars 1_callout:
-        arrows_move_actor: "Используй стрелки для перемещения персонажа"
+        arrows_move_actor: Используй стрелки для перемещения персонажа
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: "Теперь все ваши блоки рассортированы за категориями!
-          Нажмите на метку, чтобы увидеть содержимое внутри."
+        Course_4_Play_Lab_Vars_9_1: Теперь все ваши блоки рассортированы за категориями!
+          Нажмите на метку, чтобы увидеть содержимое внутри.
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "Ого! Мой код взорвался! Можешь собрать его
-          заново, чтобы решить эту головоломку?"
+        Course_4_Play_Labs_For_Loops_5: Ого! Мой код взорвался! Можешь собрать его
+          заново, чтобы решить эту головоломку?
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: Помните, что переменная "счетчик" может иметь
           различные значения для каждого персонажа? Так вот, для управления циклом
           "для" можно ввести свой счетчик.
-        Course_4_Playlab_For_Loops_4b_2: "Вв этой задаче, ты можешь только менять
-          величину приращения цикла."
+        Course_4_Playlab_For_Loops_4b_2: Вв этой задаче, ты можешь только менять величину
+          приращения цикла.
       Course 4 Playlab For Loops 5b_callout: []
       Course 4 Playlab For Loops 6b_callout: []
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: "Этот блок позволяет Вам выбрать почти любой цвет, который
-          Вам хочется! Попробуйте разные значения и посмотрите что из этого получится!"
+        Course_4_SCV_6: Этот блок позволяет Вам выбрать почти любой цвет, который
+          Вам хочется! Попробуйте разные значения и посмотрите что из этого получится!
       CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: "Используй стрелки для перемещения персонажа"
+        arrows_move_actor: Используй стрелки для перемещения персонажа
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: "Теперь все ваши блоки рассортированы за категориями!
-          Нажмите на метку, чтобы увидеть содержимое внутри."
+        Course_4_Play_Lab_Vars_9_1: Теперь все ваши блоки рассортированы за категориями!
+          Нажмите на метку, чтобы увидеть содержимое внутри.
       CourseF_PlayLab_vars6_callout: []
       CourseF_PlayLab_vars7_callout: []
       CourseF_PlayLab_vars8_callout: []
@@ -631,7 +643,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
+        edit_function: Нажмите здесь для редактирования функции.
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -648,36 +660,36 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "Используй данный раскрывающийся список для создания разных
-          снежинок!"
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "Используй данный раскрывающийся список для создания разных
-          снежинок!"
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: "Эта небольшая инструкция дает команду компьютеру выполнить
-          БОЛЬШОЙ фрагмент кода с тем же именем в рабочей области."
+        Function_intro_Ryan_1: Эта небольшая инструкция дает команду компьютеру выполнить
+          БОЛЬШОЙ фрагмент кода с тем же именем в рабочей области.
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: "Воспроизведение звука, когда это событие происходит"
+        Infinity_move_collide_callout: Воспроизведение звука, когда это событие происходит
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: "Какой блок поможет Баймакс двигаться вверх
-          при нажатии стрелки вверх?"
-        Infinity_move_directions_callout_arrow: "Используй эти стрелки для управления"
+        Infinity_move_directions_callout: Какой блок поможет Баймакс двигаться вверх
+          при нажатии стрелки вверх?
+        Infinity_move_directions_callout_arrow: Используй эти стрелки для управления
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: "Добавь сюда блок «переместить»"
+        Infinity_move_right_runbutton: Добавь сюда блок «переместить»
       Infinity_repeat_callout:
-        Infinity_repeat_callout: "Размести блоки «переместить» внутри"
+        Infinity_repeat_callout: Размести блоки «переместить» внутри
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
@@ -704,33 +716,30 @@
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Нажмите "Выполнить", чтобы начать движение.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: "Используйте клавиши со стрелками или щелкните здесь,
-          чтобы перемещать игрока."
+        MC_HOC_2017_01_Cole_2: Используйте клавиши со стрелками или щелкните здесь,
+          чтобы перемещать игрока.
       MC_HOC_2017_01_Kiki_callout: []
       MC_HOC_2017_02_Cole_callout: []
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: "Теперь у вашего игрока есть приятель!  Вы можете писать
-          код для исполнителя, чтобы он помогал вам проходить уровни."
+        MC_HOC_2017_02_Cole_1: Теперь у вашего игрока есть приятель!  Вы можете писать
+          код для исполнителя, чтобы он помогал вам проходить уровни.
       MC_HOC_2017_03_Cole_callout:
-        MC_HOC_2017_03_Cole_1: "Это цикл «повторить»!  Поместите его в рабочую область
-          и добавьте код, который необходимо выполнять снова и снова."
+        MC_HOC_2017_03_Cole_1: Это цикл «повторить»!  Поместите его в рабочую область
+          и добавьте код, который необходимо выполнять снова и снова.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: "Исполнитель может летать над водой, игрок — не может!"
+        MC_HOC_2017_04_Cole_a: Исполнитель может летать над водой, игрок — не может!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: "Поместите это в рабочую область и добавьте код, который
-          необходимо выполнять снова и снова!"
+        MC_HOC_2017_04_Kiki_1: Поместите это в рабочую область и добавьте код, который
+          необходимо выполнять снова и снова!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: "Вы не можете выбросить эти блоки, но можете изменить
-          их!"
+        MC_HOC_2017_06_Cole_1: Вы не можете выбросить эти блоки, но можете изменить
+          их!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: "Исполнитель может парить над лавой, игрок — не может!
-          \ "
+        MC_HOC_2017_08_RY_1: 'Исполнитель может парить над лавой, игрок — не может!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: "Исполнитель может летать над лавой, игрок — не может!
-          \ "
+        MC_HOC_2017_08_RY_1: 'Исполнитель может летать над лавой, игрок — не может!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: "Исполнитель может летать над лавой, игрок — не может!
-          \ "
+        MC_HOC_2017_08_RY_1: 'Исполнитель может летать над лавой, игрок — не может!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -738,98 +747,96 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: "Нажми здесь для измения функции, чтобы
-          она рисовала квадрат."
+        NEW_Course_4_Artist_Functions_3_1: Нажми здесь для измения функции, чтобы
+          она рисовала квадрат.
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
-        function_editor_draw_square: "Это определение вашей функции. Эти блоки выполняются
-          каждый раз, когда используется блок «нарисовать квадрат»"
+        edit_function: Нажмите здесь для редактирования функции.
+        function_editor_draw_square: Это определение вашей функции. Эти блоки выполняются
+          каждый раз, когда используется блок «нарисовать квадрат»
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
+        edit_function: Нажмите здесь для редактирования функции.
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: "Нажмите здесь для редактирования функции."
+        edit_function: Нажмите здесь для редактирования функции.
       NEW Course 4 Artist Params 10_callout:
-        create_function: "Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
-          на кнопку «Создать функцию»."
+        create_function: Нажмите здесь, чтобы открыть меню «Функции». Затем нажмите
+          на кнопку «Создать функцию».
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
-        add_and_drag_parameter: "Напиши здесь название параметра, нажми добавить,
-          и затем перенеси его в определение функции"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
+        add_and_drag_parameter: Напиши здесь название параметра, нажми добавить, и
+          затем перенеси его в определение функции
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: "Перенеси переменную длины сюда, чтобы заменить ею
-          вопросительные знаки"
+        place_length_variable: Перенеси переменную длины сюда, чтобы заменить ею вопросительные
+          знаки
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: "Укажите наибольшее количество нектара, которое вы хотите чтобы
-          пчелы собрали здесь"
+        bee_for_loop: Укажите наибольшее количество нектара, которое вы хотите чтобы
+          пчелы собрали здесь
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: "Панель инструментов теперь выглядит по-новому! Теперь здесь
-          появился блок «Действия»."
+        actions_category: Панель инструментов теперь выглядит по-новому! Теперь здесь
+          появился блок «Действия».
       New App Lab Project_callout: []
       New Artist Project_callout:
-        New Artist Project_callout1: "Нажми на категорию, чтобы увидеть блоки в панели
+        New Artist Project_callout1: Нажми на категорию, чтобы увидеть блоки в панели
           инструментов. Переноси блоки в рабочую область, чтобы добавить их в твою
-          программу"
+          программу
         New Artist Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить и
           запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       New Frozen Project_callout:
-        snowflake_dropdown: "Используй данный раскрывающийся список для создания разных
-          снежинок!"
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Overworld Chop Trees_callout:
-        craft_callout_preplaced: "Мы поместили сюда несколько блоков, чтобы помочь
-          тебе начать работу"
+        craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь
+          тебе начать работу
       Overworld Chop Trees_2018_callout:
-        craft_callout_preplaced: "Мы поместили сюда несколько блоков, чтобы помочь
-          тебе начать работу"
+        craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь
+          тебе начать работу
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: "Этот код начнет строить твой дом. Сможешь
-          закончить эту задачу?"
+        craft_callout_preplaced_house: Этот код начнет строить твой дом. Сможешь закончить
+          эту задачу?
       Overworld House Frame Chosen_2018_callout:
-        craft_callout_preplaced_house: "Этот код начнет строить твой дом. Сможешь
-          закончить эту задачу?"
+        craft_callout_preplaced_house: Этот код начнет строить твой дом. Сможешь закончить
+          эту задачу?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: "Нажмите «Выполнить», чтобы протестировать свою
-          программу"
+        craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать свою программу
         craft_drag_block_callout: Перенеси блок "двигаться вперед" и прикрепи его
           снизу другого блока
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: "Нажмите «Выполнить», чтобы протестировать свою
-          программу"
+        craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать свою программу
         craft_drag_block_callout: Перенеси блок "двигаться вперед" и прикрепи его
           снизу другого блока
       Overworld Place Wall_callout:
-        craft_inside_repeat: "Повторяй действия, помещая блоки сюда"
+        craft_inside_repeat: Повторяй действия, помещая блоки сюда
       Overworld Place Wall_2018_callout:
-        craft_inside_repeat: "Повторяй действия, помещая блоки сюда"
+        craft_inside_repeat: Повторяй действия, помещая блоки сюда
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
       PDAlg Big Game History_callout: []
@@ -845,9 +852,9 @@
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Play Lab Rocket 2_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
@@ -860,8 +867,8 @@
           The animation you see on screen is actually using your function to move
           the rocket!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: "Укажите цель высказывания перед переходом к примерам
-          и определениям."
+        Play Lab Rocket 3 1: Укажите цель высказывания перед переходом к примерам
+          и определениям.
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       Quantum Bee - Ryan_callout:
@@ -874,32 +881,32 @@
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
           label to leave yourself notes inside your program!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
           library. The animation you see on screen is actually using your function
           to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       SG Add Subgoals practice_callout: []
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -918,13 +925,13 @@
           side
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -951,46 +958,46 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: "Этот код проверит наличие лавы, можешь добавить
-          команду движения вперед?"
+        craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить
+          команду движения вперед?
       Underground Avoiding Lava_2018_callout:
-        craft_callout_moveforward: "Этот код проверит наличие лавы, можешь добавить
-          команду движения вперед?"
+        craft_callout_moveforward: Этот код проверит наличие лавы, можешь добавить
+          команду движения вперед?
       Underground Iron_callout:
-        craft_what_is_iron: "Добывайте это железо!"
+        craft_what_is_iron: Добывайте это железо!
       Underground Iron_2018_callout:
-        craft_what_is_iron: "Добывайте это железо!"
+        craft_what_is_iron: Добывайте это железо!
       WebLab PS test - 1-12_callout:
         version_history_button: Check out version history
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: "Здесь можно использовать лишь 2 этих действия и 2 поворота"
+        aE1_1: Здесь можно использовать лишь 2 этих действия и 2 поворота
       aE2_callout:
-        aE2_1: "Все еще только 2 этих действия и 2 поворота"
+        aE2_1: Все еще только 2 этих действия и 2 поворота
       aE3_callout:
-        aE3_1: "Только несколько из них доступно"
+        aE3_1: Только несколько из них доступно
       aE3alternate_callout:
-        aE3_1: "Только несколько из них доступно"
+        aE3_1: Только несколько из них доступно
       aE3alternateB_callout:
-        aE3_1: "Только несколько из них доступно"
+        aE3_1: Только несколько из них доступно
       aE4_callout:
-        aE3_1: "Только несколько из них доступно"
+        aE3_1: Только несколько из них доступно
       aE5_callout:
-        aE3_1: "Только несколько из них доступно"
+        aE3_1: Только несколько из них доступно
       aE6_callout:
-        aE6_1: "Только одно движение вперед и один поворот"
+        aE6_1: Только одно движение вперед и один поворот
       aEfreeplay_callout:
-        aEfreeplay_1: "Помните, начальное положение художника в центре может привести
+        aEfreeplay_1: Помните, начальное положение художника в центре может привести
           к некоторым неприятным последствиям. Мы предлагаем добавить действия, которые
-          приведут художника к абсолютной, наиболее удобной позиции."
+          приведут художника к абсолютной, наиболее удобной позиции.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: []
       artistLoopsK2_callout:
-        artistLoopsK2_1: "Эти числа показывают вам, как много блоков вы можете использовать
-          в этой задаче."
+        artistLoopsK2_1: Эти числа показывают вам, как много блоков вы можете использовать
+          в этой задаче.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: "Эти числа показывают вам, как много блоков вы можете использовать
-          в этой задаче."
+        artistLoopsK2_1: Эти числа показывают вам, как много блоков вы можете использовать
+          в этой задаче.
       comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
@@ -1034,11 +1041,11 @@
           corn, but what about the other vegetables?
       course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: "Эти числа показывают вам, как много блоков вы можете
-          использовать в этой задаче."
+        courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
+          использовать в этой задаче.
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: "Эти числа показывают вам, как много блоков вы можете
-          использовать в этой задаче."
+        courseA_artist_loops4_1: Эти числа показывают вам, как много блоков вы можете
+          использовать в этой задаче.
       courseA_artist_loops7_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block
           can be used in the final answer.
@@ -1055,36 +1062,53 @@
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: "Эти числа показывают вам, как много блоков вы
-          можете использовать в этой задаче."
+        gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
+          можете использовать в этой задаче.
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: "Эти числа показывают вам, как много блоков вы
-          можете использовать в этой задаче."
+        gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
+          можете использовать в этой задаче.
       courseA_collector_loops3_predict1_callout: []
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseA_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq1_2018_callout:
@@ -1123,30 +1147,69 @@
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: []
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseB_Scrat_ramp2_2018_callout: []
+      courseB_Scrat_ramp3a_2018_callout: []
+      courseB_Scrat_ramp4a_2018_callout: []
+      courseB_Scrat_ramp5a_2018_callout: []
       courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_artist_loops3_2018_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this
           block left in the toolbox.
+      courseB_artist_loops5_2018_callout:
+        courseB_artist_loops5_1: This number means that there are no more of this
+          block left in the toolbox.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through
+          the program. This will help you find the bug!
+      courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
+          away.
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
+          parts of the game space.
       courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
+          to the center of the screen.
+      courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Start by using this block to get the artist
           to the center of the screen.
       courseC_artist_prog1_callout: []
@@ -1154,19 +1217,33 @@
       courseC_artist_prog2_callout: []
       courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
+      courseC_collector_loops_challenge2_2018_callout: []
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: "Вы видите несколько новых блоков на панели инструментов?
-          Не волнуйтесь, мы покажем как их использовать позже."
+        courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
+      courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: Вы видите несколько новых блоков на панели инструментов?
+          Не волнуйтесь, мы покажем как их использовать позже.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you
           need them!
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
       courseC_collector_prog8_callout: []
+      courseC_collector_prog8_2018_callout: []
       courseC_collector_prog9_callout: []
+      courseC_collector_prog9_2018_callout: []
       courseC_collector_progA_callout: []
       courseC_collector_progB_callout: []
       courseC_collector_prog_challenge1_callout: []
+      courseC_collector_prog_challenge1_2018_callout: []
       courseC_collector_prog_challenge2_callout: []
+      courseC_collector_prog_challenge2_2018_callout: []
       courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
+          that there are four pumpkins available to pick.
+      courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
           that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
@@ -1181,34 +1258,65 @@
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
         courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseC_maze_programming5_callout: []
+      courseC_maze_programming5_2018_callout: []
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are
           meant to be hard and may take several tries.
         courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
           away.
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown
+          away.
       courseC_starWars_loops10_callout: []
+      courseC_starWars_loops10_2018_callout: []
       courseC_starWars_loops10_predict2_callout: []
+      courseC_starWars_loops10_predict2_2018_callout: []
       courseC_starWars_loops11_callout: []
+      courseC_starWars_loops11_2018_callout: []
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this
           puzzle.
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
       courseC_starWars_loops4_callout: []
+      courseC_starWars_loops4_2018_callout: []
       courseC_starWars_loops5_callout: []
+      courseC_starWars_loops5_2018_callout: []
       courseC_starWars_loops6_callout: []
+      courseC_starWars_loops6_2018_callout: []
       courseC_starWars_loops7_callout: []
+      courseC_starWars_loops7_2018_callout: []
       courseC_starWars_loops8_callout: []
+      courseC_starWars_loops8_2018_callout: []
       courseC_starWars_loops9_callout: []
+      courseC_starWars_loops9_2018_callout: []
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in
           the function will run. What should the artist do after drawing the first
@@ -1219,28 +1327,42 @@
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
           right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
+          right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat
           your code.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
           HINTS!
       courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2018_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
           nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Try repeating the move forward block
           using this loop.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
           backward.
       courseD_bee_debugging_challenge1a_callout:
@@ -1252,7 +1374,9 @@
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
@@ -1260,6 +1384,7 @@
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1306,6 +1431,9 @@
           as you tell it to, then continue to run the rest of the program.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
@@ -1405,27 +1533,33 @@
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
+        courseD_artist_ramp11_1: Вы можете изменить это число.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp12_callout: []
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Вы можете изменить это число.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_1: Вы можете изменить это число.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -1481,24 +1615,44 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
           as you tell it to, then continue to run the rest of the program.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
+          as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: []
@@ -1532,7 +1686,7 @@
       courseF_IceAge_8_callout:
         playlab_add_score: ''
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Add blocks here
+        playlab_add_blocks_1: Добавьте здесь блоки
       courseF_IceAge_template_callout:
         arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
@@ -1720,13 +1874,13 @@
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1735,8 +1889,8 @@
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: "Таким образом вы указываете значение переменной.
-          Измените текст, привязанный для этого блока, чтобы изменить содержимое переменной."
+        course_playlab_variables2_1: Таким образом вы указываете значение переменной.
+          Измените текст, привязанный для этого блока, чтобы изменить содержимое переменной.
       courseF_playlab_variables2a_callout: []
       courseF_playlab_variables3_callout: []
       courseF_playlab_variables4_callout: []
@@ -1762,52 +1916,55 @@
       courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: "Таким образом вы указываете значение переменной.
-          Измените текст, привязанный для этого блока, чтобы изменить содержимое переменной."
+        course_playlab_variables2_1: Таким образом вы указываете значение переменной.
+          Измените текст, привязанный для этого блока, чтобы изменить содержимое переменной.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: "Таким образом вы меняете значение переменной."
+        course_playlab_variables3_1: Таким образом вы меняете значение переменной.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
       drawings!_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: "Используй блок «создать круг»
-          и меняй размер."
+        frozen_circle_function_with_parameter_circle: Используй блок «создать круг»
+          и меняй размер.
       frozen cross rotate_callout:
-        replace_questions_degree: "Используй раскрывающийся список, чтобы заменить
-          «???» на число"
+        replace_questions_degree: Используй раскрывающийся список, чтобы заменить
+          «???» на число
       frozen cross_callout:
         repeat_blocks_1: "(1) Перемести этот блок на рабочее пространство и расположи
           его вокруг серых блоков"
         repeat_blocks_2: "(2) Передвинь сюда блок «повторить» и расположи его вокруг
           серых блоков"
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: "Используй блок «повторить» для создания этой фигуры."
+        frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       frozen diamond_callout:
-        frozen_diamond_repeat: "Используй блок «повторить» для создания этой фигуры."
+        frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       frozen freeplay_callout:
-        snowflake_dropdown: "Используй данный раскрывающийся список для создания разных
-          снежинок!"
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       frozen line_callout:
         run: Нажмите "Выполнить", чтобы запустить вашу программу!
-        move_elsa_forward: "Возьми блок «двигаться вперед» и прицепи его к блоку «При
-          запуске», чтобы Эльза пошла вперед"
+        move_elsa_forward: Возьми блок «двигаться вперед» и прицепи его к блоку «При
+          запуске», чтобы Эльза пошла вперед
       frozen perpendicular_callout:
-        turn_elsa: "Используй блок «поворот», чтобы Эльза повернулась. Число в раскрывающемся
-          списке означает, сколько раз Эльза повернется."
+        turn_elsa: Используй блок «поворот», чтобы Эльза повернулась. Число в раскрывающемся
+          списке означает, сколько раз Эльза повернется.
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: "Используй блок «создать ветвь снежинки»"
+        frozen_snowflake_branch: Используй блок «создать ветвь снежинки»
       frozen square iterative_callout:
-        frozen_create_square: "Присоедини больше блоков, чтобы создать квадрат"
+        frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
       frozen square loop 3x_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       frozen square loop_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       frozen square snowflake_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
           will you use it?
@@ -1838,6 +1995,7 @@
       grade2_MakeDogTag_1_callout: []
       grade2_MakeDogTag_BFP_callout: []
       grade2_collector_10_callout: []
+      grade2_collector_10_2018_callout: []
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need
           them!
@@ -1845,7 +2003,9 @@
       grade2_collector_9_callout: []
       grade2_collector_9a_callout: []
       grade2_collector_A_callout: []
+      grade2_collector_A_2018_callout: []
       grade2_collector_A_predict1_callout: []
+      grade2_collector_A_predict1_2018_callout: []
       grade2_maze_intro10_callout: []
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to
@@ -1869,14 +2029,14 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: У фиолетовых цветов могут быть значения "1" или "0" нектара...
           но вы не будете знать наверняка, пока не запустите выполнение кода!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1885,9 +2045,9 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create
           the first square.
@@ -1896,58 +2056,58 @@
           the function will run. What should the artist do after drawing the first
           square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
-        add_and_drag_parameter: "Напиши здесь название параметра, нажми добавить,
-          и затем перенеси его в определение функции"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
+        add_and_drag_parameter: Напиши здесь название параметра, нажми добавить, и
+          затем перенеси его в определение функции
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "Помните, вам нужно проверить каждое ли облако имеет
-          свой цветок. Вам вовсе не нужно проверять для этого соты."
+        4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
+          свой цветок. Вам вовсе не нужно проверять для этого соты.
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "Используй данный раскрывающийся список для создания разных
-          снежинок!"
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: "Используй блок «создать круг»
-          и меняй размер."
+        frozen_circle_function_with_parameter_circle: Используй блок «создать круг»
+          и меняй размер.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: "Используй блок «повторить» для создания этой фигуры."
+        frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: "Используй блок «повторить» для создания этой фигуры."
+        frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: "Используй блок «повторить» для создания этой фигуры."
+        frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       grade4_frozen_square_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       grade4_frozen_square_loop1_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       grade4_frozen_square_loop2_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       grade4_frozen_square_loop3_callout:
-        replace_questions: "Используй раскрывающийся список, чтобы заменить «???»
-          на число"
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
+          число
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1955,9 +2115,9 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "Теперь все ваши любимые блоки рассортированы
+        4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
-          блоки!"
+          блоки!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in
           here.
@@ -1965,10 +2125,10 @@
         grade5_artist_functionparameters_6_1: To complete your polygon, make sure
           you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
-        add_and_drag_parameter: "Напиши здесь название параметра, нажми добавить,
-          и затем перенеси его в определение функции"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
+        add_and_drag_parameter: Напиши здесь название параметра, нажми добавить, и
+          затем перенеси его в определение функции
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
@@ -1979,23 +2139,22 @@
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
-        add_and_drag_parameter: "Напиши здесь название параметра, нажми добавить,
-          и затем перенеси его в определение функции"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
+        add_and_drag_parameter: Напиши здесь название параметра, нажми добавить, и
+          затем перенеси его в определение функции
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "Нужно больше пространства? Потяните эту планку,
-          чтобы расширить место для программирования."
+        Course_4_Artist_Vars_8_a: Нужно больше пространства? Потяните эту планку,
+          чтобы расширить место для программирования.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: "Перенеси переменную длины сюда, чтобы заменить ею
-          вопросительные знаки"
+        place_length_variable: Перенеси переменную длины сюда, чтобы заменить ею вопросительные
+          знаки
       grade5_artist_variables_pentagons12_callout:
-        set_length: "Воспользуйтесь этим блоком, чтобы задать правильное значение
-          «длины»."
+        set_length: Воспользуйтесь этим блоком, чтобы задать правильное значение «длины».
       grade5_artist_variables_square7_callout:
-        degrees_per_side: "Раздели 360 на число сторон, чтобы получить значение градуса
-          каждого угла."
+        degrees_per_side: Раздели 360 на число сторон, чтобы получить значение градуса
+          каждого угла.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -2003,8 +2162,7 @@
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
       grade5_artist_variables_triangles2_callout:
-        set_length: "Воспользуйтесь этим блоком, чтобы задать правильное значение
-          «длины»."
+        set_length: Воспользуйтесь этим блоком, чтобы задать правильное значение «длины».
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
@@ -2019,27 +2177,27 @@
         grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
           this function.
       grade5_playlab_variables1_callout:
-        arrows_move_actor: "Используй стрелки для перемещения персонажа"
+        arrows_move_actor: Используй стрелки для перемещения персонажа
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
-        edit_add_parameter: "Нажми «Редактировать», чтобы добавить параметр в свою
-          функцию"
+        edit_add_parameter: Нажми «Редактировать», чтобы добавить параметр в свою
+          функцию
       grade5_playlab_variables1ask_callout:
-        arrows_move_actor: "Используй стрелки для перемещения персонажа"
+        arrows_move_actor: Используй стрелки для перемещения персонажа
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: "Теперь все ваши блоки рассортированы за категориями!
-          Нажмите на метку, чтобы увидеть содержимое внутри."
+        Course_4_Play_Lab_Vars_9_1: Теперь все ваши блоки рассортированы за категориями!
+          Нажмите на метку, чтобы увидеть содержимое внутри.
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: "Теперь все ваши блоки рассортированы за категориями!
-          Нажмите на метку, чтобы увидеть содержимое внутри."
+        Course_4_Play_Lab_Vars_9_1: Теперь все ваши блоки рассортированы за категориями!
+          Нажмите на метку, чтобы увидеть содержимое внутри.
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: "Эти числа показывают вам, как много блоков вы
-          можете использовать в этой задаче."
+        gradek_adventurer_loops2_1: Эти числа показывают вам, как много блоков вы
+          можете использовать в этой задаче.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: "Эти числа показывают вам, как много блоков вы можете использовать
-          в этой задаче."
+        artistLoopsK2_1: Эти числа показывают вам, как много блоков вы можете использовать
+          в этой задаче.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -2121,13 +2279,13 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: "Выберите категорию, чтобы увидеть блоки, которые
+        New Play Lab Project_callout1: Выберите категорию, чтобы увидеть блоки, которые
           в неё входят! Перетащите блоки на рабочее пространство, чтобы добавить их
-          в свою программу"
+          в свою программу
         New Play Lab Project_callout2: Нажмите кнопку "Выполнить", чтобы сохранить
           и запустить вашу программу
-        sign_in_to_save_project: "Хотите продолжить проект позже? Войдите, чтобы сохранить
-          ваш проект в своём аккаунте!"
+        sign_in_to_save_project: Хотите продолжить проект позже? Войдите, чтобы сохранить
+          ваш проект в своём аккаунте!
       subgoal U3 L4 introducing subgoal labels_callout: []
       subgoal U3L2 Using Simple Commands_callout: []
       subgoal-test-clone_callout:

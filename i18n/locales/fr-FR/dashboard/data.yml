@@ -363,11 +363,11 @@ fr:
         CSF_maze_intro_k1_blocks: Intro à Code Studio
         CSF_maze_intro_text_blocks: Intro à Code Studio
         CSF_my_robotic_friends: Mes amis les robots
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Le pouvoir des mots
+        CSF_Super_Digital_Citizen: Le super citoyen numérique
         CSF_stevie_big_project: Stevie et le grand projet
         CSF_unspotted_bugs: Bugs passés inaperçus
-        CSF_zuck_loops_short: Bouclers de répétition
+        CSF_zuck_loops_short: Boucles de répétition
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
@@ -378,16 +378,16 @@ fr:
         infinity_playlab_intro: Labo de jeux - Introduction
         infinity_playlab_events: Labo de jeux - Événements 
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_concept_how_computers_work: Introduction sur le fonctionnement des ordinateurs
+        csd_concept_computer: 'Comment fonctionnent les ordinateurs : De quoi est fait un ordinateur?'
+        csd_concept_binary_data: 'Comment fonctionnent les ordinateurs : Binaire & données'
+        csd_concept_circuits_logic: 'Comment fonctionnent les ordinateurs : Circuits & logique'
+        csd_concept_memory_cpu_input_output: 'Comment fonctionnent les ordinateurs : Mémoire, CPU, entrées et sorties'
+        csd_concept_hardware_software: 'Comment fonctionnent les ordinateurs : Matériel et logiciel'
+        csd_concept_search: Comment fonctionne la recherche
+        csd_external_amazon_data: Comment le Big Data est utilisé dans le système de recommandations d'Amazon pour changer nos vies
+        csd_external_netflix_data: Comment Netflix crée des suggestions de films et d'émissions de télévision?
+        csd_external_waze_data: Pourquoi tant d'utilisateurs sont passionnés par Waze?
         csd_gamelab_animation_tab: L’onglet Animation
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -488,40 +488,46 @@ fr:
         mc_2016_events: Minecraft Hour of Code - Événements
         mc_2016_spawn: Minecraft Heure du Code - Spawn
         mc_2016_congrats: Minecraft Hour of Code - Félicitations
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        applab_hoc_welcome: Heure de Code dans App Lab - Bienvenue
+        applab_hoc_setproperty: Heure de Code dans App Lab - setProperty
+        applab_hoc_onevent: Heure de Code dans App Lab - onEvent
+        applab_hoc_designmode: Heure de Code dans App Lab - Mode Création
+        applab_hoc_share: Heure de Code dans App Lab - Partager
+        mc_2017_agent_intro: Minecraft Hour of Code - L'Agent
+        mc_2017_repeat: Minecraft Heure du code - Les boucles
+        mc_2017_functions: Minecraft Hour of Code - Les fonctions
         mc_2017_congratulations: Minecraft Hour of Code - Félicitations
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        mc_2017_puzzle_1: Minecraft Hour of Code - L'Agent
+        mc_2017_puzzle_3: Minecraft Heure du code - Les boucles
+        mc_2017_puzzle_8: Minecraft Hour of Code - Les fonctions
+        mc_2017_puzzle_12: Minecraft Hour of Code - Bac à sable
+        hint_videos_d_11_3_first: 'Astuces en vidéo: D.11.3 en premier'
+        hint_videos_d_11_3_last: 'Astuces en vidéo: D.11.3 en dernier'
+        hint_videos_d_11_4_first: 'Astuces en vidéo: D.11.4 en premier'
+        hint_videos_d_11_4_last: 'Astuces en vidéo: D.11.4 en dernier'
+        hint_videos_d_11_5_first: 'Astuces en vidéo: D.11.5 en premier'
+        hint_videos_d_11_5_last: 'Astuces en vidéo: D.11.5 en dernier'
+        hint_videos_d_11_6_first: 'Astuces en vidéo: D.11.6 en premier'
+        hint_videos_d_11_6_last: 'Astuces en vidéo: D.11.6 en dernier'
+        hint_videos_d_11_7_first: 'Astuces en vidéo: D.11.7 en premier'
+        hint_videos_d_11_7_last: 'Astuces en vidéo: D.11.7 en dernier'
+        hint_videos_d_11_9_first: 'Astuces en vidéo: D.11.9 en premier'
+        hint_videos_d_11_9_last: 'Astuces en vidéo: D.11.9 en dernier'
+        hint_videos_d_11_11_first: 'Astuces en vidéo: D.11.11 en premier'
+        hint_videos_d_11_11_last: 'Astuces en vidéo: D.11.11 en dernier'
+        applab_intro_welcome: App Lab - Démarrage
+        applab_intro_events: App Lab - Rendez-le interactif
+        applab_intro_sounds: App Lab - Images et sons
+        applab_intro_designmode: App Lab - Mode création
+        applab_intro_share: App Lab - Partagez votre application
         csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: La moissonneuse
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: La moissonneuse
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

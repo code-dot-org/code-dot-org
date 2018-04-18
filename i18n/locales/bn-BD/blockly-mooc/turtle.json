@@ -74,13 +74,13 @@
   "penDown": "পেন্সিল নিচে",
   "penTooltip": "Lifts or lowers the pencil, to start or stop drawing.",
   "penUp": "পেন্সিল তোল",
+  "pointTo": "point to",
   "pixels": "পিক্সেলগুলো",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "আলফা সেট করুন",
   "setCharacter": "set character to {character}",
   "setColour": "রঙ স্থির (সেট) করুন",
   "setPattern": "নমুনা সেট করুন",
-  "setStickerSize": "Set sticker size",
   "setWidth": "প্রস্থ স্থির (সেট) করুন",
   "shareDrawing": "Share your drawing:",
   "showMe": "আমাকে দেখান",
@@ -94,5 +94,6 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "পেন্সিলের প্রস্থ পরিবর্তন করে।",
+  "withSize": "with size",
   "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।"
 }

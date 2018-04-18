@@ -53,7 +53,7 @@
         video: Unplug4
       Unplug5:
         title: Funcţii
-        desc: "În această lecție, elevii vor crea un suncatcher din șir, mărgele și
+        desc: În această lecție, elevii vor crea un suncatcher din șir, mărgele și
           un talisman special. Elevii vor urma o serie de pași repetitivi, apoi li
           se va cere să identifice anumite seturi de ”competențe” care vor fi multiplicate
           de câteva ori. Odată definite acele competențe, ele vor fi apelate dintr-un
@@ -63,7 +63,7 @@
           acesta să funcționeze în mod eficient, elevii trebuie să facă abstracție
           de detaliile materialelor lor și să formuleze termeni vagi pentru materialele
           de lucru al unui individ. Această utilizare a unor substituienți generici
-          este o introducere minunată în variabile."
+          este o introducere minunată în variabile.
         pdfs:
         - unplug5
         video: Unplug5
@@ -104,8 +104,8 @@
         video: Unplug9
       Unplug10:
         title: Internetul
-        desc: "În această lecție, elevii își vor imagina că parcurg Internetul, în
-          timp ce vor învăța despre adresele web, IP-uri și DNS."
+        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
+          timp ce vor învăța despre adresele web, IP-uri și DNS.
         pdfs:
         - unplug10
         video: Unplug10
@@ -238,8 +238,8 @@
           noi, distractive și trăznite.
       ForLoopFun:
         title: Pentru distracția cu bucle
-        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată."
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată.
       SongwritingWithParameters:
         title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
@@ -268,10 +268,10 @@
           programare sau o funcție.
       DesignRecipe:
         title: Rețeta pentru design
-        desc: "În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
+        desc: În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
           mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
           o abordare structurată în scrierea funcţiilor, care include teste de scriere
-          menite să verifice dacă funcţia funcționează cum era de aşteptat."
+          menite să verifice dacă funcţia funcționează cum era de aşteptat.
       Booleans:
         title: Boolean și Logică
         desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța
@@ -423,8 +423,8 @@
           cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
       courseF_unplugged_forLoopFun:
         title: Pentru distracția cu bucle
-        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată."
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată.
       courseF_unplugged_songwritingParameters:
         title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
@@ -529,3 +529,50 @@
           reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
           Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
           în funcție de butonul care a fost apăsat.
+      GraphPaperProgramming_2018:
+        title: Programare pe Hârtie Milimetrică
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Activitate fără Calculator
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Activitate fără Calculator
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condiţionale
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+      DigitalFootprint_2018:
+        title: Amprenta ta Digitală
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+      BinaryImages_2018:
+        title: Imagini binare
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+      PaperPlanes_2018:
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+      GettingLoopy_2018:
+        title: Transformând în Buclă
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+      BinaryBracelets_2018:
+        title: Brăţări Binare
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+      MoveItMoveIt_2018:
+        title: Mutaţi-l, mutați-l
+        desc: "[șir gol]"

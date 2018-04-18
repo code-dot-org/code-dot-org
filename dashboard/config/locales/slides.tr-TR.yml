@@ -19,12 +19,12 @@
           yapmaya kadar her yerde kullanılan kavramları öğreneceksiniz.
       5:
         image: notes/hoc1_5.jpg
-        text: Bir program, bilgisayarınızın takip etmesi için yaratılmış bir talimatlar
+        text: Bir program, bilgisayarınızın takip etmesi için oluşturulmuş bir talimatlar
           kümesidir.
       6:
         image: notes/hoc1_6.jpg
-        text: "İlk programınızın amacı, Yeşil Domuzu vurmak için labirentten geçerek
-          bir Kızgın Kuş elde etmektir."
+        text: İlk programınızın amacı, Yeşil Domuzu vurmak için labirentten geçerek
+          bir Kızgın Kuş elde etmektir.
       7:
         image: notes/hoc1_7.jpg
         text: Sol taraf programın çalıştığı labirenttir. Her bulmacanın talimatları
@@ -232,7 +232,7 @@
           bloğu farklı bir yöne dönüp dönemeceğini kontrol edecek.'
       4:
         image: notes/hoc5_4.jpg
-        text: "Şimdi, bu zombileri ait oldukları yere yerleştir!"
+        text: Şimdi, bu zombileri ait oldukları yere yerleştir!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -284,8 +284,8 @@
           olduğu sürece tekrarlanmaya devam eder.'
       3:
         image: notes/stage9_7.jpg
-        text: "Örnek olarak, eğer çiftçi bir yığının üstünde duruyor ise, altındaki
-          yığını SÜRESİNCE birer birer kürekdolusu kaldırmaya devam edecek."
+        text: Örnek olarak, eğer çiftçi bir yığının üstünde duruyor ise, altındaki
+          yığını SÜRESİNCE birer birer kürekdolusu kaldırmaya devam edecek.
     loop_for:
       1:
         image: notes/stage11_1.jpg
@@ -337,8 +337,8 @@
           tıkla ve "uzunlıkla üçgen çiz" fonksiyonunu sürükle.
       8:
         image: notes/stage15_8.jpg
-        text: "Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak
-          farklı numaralar girebilirsin."
+        text: Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak
+          farklı numaralar girebilirsin.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
@@ -473,8 +473,8 @@
         text: 'Bunu "bir kare oluşturun." adında bir fonksiyona tanımlayabilirsiniz '
       6:
         image: notes/frozen3_6.jpg
-        text: "Şimdi kare yapma işlemini birçok kere yapabileceğiniz yeni bir blok
-          oluşturdunuz."
+        text: Şimdi kare yapma işlemini birçok kere yapabileceğiniz yeni bir blok
+          oluşturdunuz.
       7:
         image: notes/frozen3_7.jpg
         text: Basit şekiller çok daha karmaşık desenleri oluşturmak için kullanılabilir.
@@ -666,9 +666,9 @@
           dan edeceğiz.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: "İşte öğrenmen gereken adımlar. El çırp. Ellerini kafanın arkasına koy.
+        text: İşte öğrenmen gereken adımlar. El çırp. Ellerini kafanın arkasına koy.
           Ellerini beline koy. Sol elini kaldır. Sağ elini kaldır. Çok kolay değil
-          mi? Döngü kullanarak dans adımlarını azaltabileceğinizi göreceksiniz."
+          mi? Döngü kullanarak dans adımlarını azaltabileceğinizi göreceksiniz.
       5:
         image: notes/C1_getting_loopy_5.png
         text: Aslında dans sırasında döngüleri kullanırız. Dansçılar bilgisayar giyiyor.
@@ -691,8 +691,8 @@
         text: Orada almak için gitmek zorunda olduğu yönü daire içine al.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Çözmeye çalıştığınız haritanın yanına okları yapıştırarak algorıtmanızı
-          geliştirin. İkincisi de ilkinin aynısıdır, fakat aşağı doğru gider."
+        text: Çözmeye çalıştığınız haritanın yanına okları yapıştırarak algorıtmanızı
+          geliştirin. İkincisi de ilkinin aynısıdır, fakat aşağı doğru gider.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
         text: Bu kağıt ile programlama gibi. Ve bu kadar!
@@ -736,9 +736,9 @@
           işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C1_maze_loops_2.png
-        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
+        text: Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
           herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla
-          Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
+          Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum.
       3:
         image: notes/C1_maze_loops_3.png
         text: Kuşu domuzcuğa götürmek için... üç tane kuzeye git bloğunu kullanmak
@@ -794,11 +794,11 @@
           etmeme rağmen, genellikle bana uygun olan siteleri tercih ederim. Wow, dinozorlar!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: "İnternet süper eğlenceli bir yer. Mahallede karşıdan karşıya geçerken
+        text: 'İnternet süper eğlenceli bir yer. Mahallede karşıdan karşıya geçerken
           olduğu gibi, ayrıca çevrimiçi olduğun zamanda çok dikkatli olmalısın. Burada
           hatırlaman için üç kural. Kural 1: Her zaman ilk başta anne babana sor.
           Kural 2: Sadece tanıdığın kişilerle konuş. Kural 3: Senin sadece doğru olan
-          yerlerde kal."
+          yerlerde kal.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: Vay canına! Bu çok eğlenceliydi! Şimdi yemek vakti. Oturumu kapatın.
@@ -818,9 +818,9 @@
           ve yanlışlık gördüğünde uyarır.
       3:
         image: notes/C1_pair_programming_3.png
-        text: "İletişim eşli programlamanın temelidir. Aşağılamak yasak, saygılı olunmalı,
+        text: İletişim eşli programlamanın temelidir. Aşağılamak yasak, saygılı olunmalı,
           patronluk taslama. Siz ve takım arkadaşınız devamlı konuşmalı.  Sürücü pozisyonunda
-          olan kişi ne yaptığını açıklamalı. Yön bulucu ise ne yapılacağını önerir."
+          olan kişi ne yaptığını açıklamalı. Yön bulucu ise ne yapılacağını önerir.
       4:
         image: notes/C1_pair_programming_4.png
         text: Yön bulucu büyük resmi düşünürken sürücü detaylara konsantre olmalı.
@@ -845,18 +845,18 @@
           seçin ve bunları doğru bir sıraya koyun.
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Şimdi algoritmanızın çalışı çalışmadığını anlamanın zamanı gelmiştir.
+        text: Şimdi algoritmanızın çalışı çalışmadığını anlamanın zamanı gelmiştir.
           Algoritmanın önerdiği adımları dikkatli bir şekilde takip edin. Bunlar doğru
           bir sıradalar mı? Algoritmayı takip ederek tohum ekmeyi başardınız mı? Sanki
-          resimlerle programlama gibi!"
+          resimlerle programlama gibi!
       5:
         image: notes/C1_planting_seed_5.png
-        text: "Çikolata yapmak istediğimizde bu süreçte birçok büyük adımlar vardır
+        text: Çikolata yapmak istediğimizde bu süreçte birçok büyük adımlar vardır
           ve her büyük adımın daha küçük adımlar kümesi vardır ve çikolatayı nasıl
-          tatmak istediğimize bağlı olarak farklı tarifler ya da algoritmalar vardır.Her
-          \ adım önemlidir, küçük olanları bile öyle ki bir adım olmadan diğerleri
-          tamamlanamıyor.Başkalarının anlayabileceği algoritmalar oluşturmak çok önemlidir.
-          Bu yüzden her adım yazılmalıdır ki kim yapacak olursa olsun sonuç aynı olmalı."
+          tatmak istediğimize bağlı olarak farklı tarifler ya da algoritmalar vardır.Her  adım
+          önemlidir, küçük olanları bile öyle ki bir adım olmadan diğerleri tamamlanamıyor.Başkalarının
+          anlayabileceği algoritmalar oluşturmak çok önemlidir. Bu yüzden her adım
+          yazılmalıdır ki kim yapacak olursa olsun sonuç aynı olmalı.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
@@ -893,9 +893,9 @@
           işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
+        text: Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
           herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla
-          Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum."
+          Facebooktaki herkese mesaj atıp iyiki doğdun dileklerimi iletebiliyorum.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla
@@ -952,10 +952,10 @@
           ve arkadaşlarımıza göstereceğiz!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: "İkili sistem elimizdeki bilgileri yalnız iki seçenekle tanımlamaktır.
+        text: İkili sistem elimizdeki bilgileri yalnız iki seçenekle tanımlamaktır.
           Genellikle insanlar bunu 0 (sıfır) ve 1 (bir) diye düşünürler. Fakat aç
           veya kapa, aşağı veya yukarı, içeri veya dışarı gibi birbirlerine ters herhangi
-          bileşimler ikili sistem olarak tanımlanabilir."
+          bileşimler ikili sistem olarak tanımlanabilir.
       3:
         image: notes/C2_binary_bracelets_3.png
         text: Merhaba, benim adım Orion ve ben Play-im firmasında robotları programlıyorum.
@@ -1003,7 +1003,7 @@
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: "Çalışma alanında hazır bazı bloklar var. Fakat bir şeyler yanlış."
+        text: Çalışma alanında hazır bazı bloklar var. Fakat bir şeyler yanlış.
       2:
         image: notes/C2_artist_debugging_2.png
         text: Yavaşlatıp adım adım ilerleyerek bu kodda hata ayıklayalım.
@@ -1017,9 +1017,9 @@
           denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
+        text: Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
           blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp
-          yapmadığını göreceğiz ve gerekirse düzelteceğiz."
+          yapmadığını göreceğiz ve gerekirse düzelteceğiz.
       3:
         image: notes/C2_bee_debugging_3.png
         text: Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha
@@ -1027,12 +1027,12 @@
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "Şapkanı kafanda tut ve aklın sana nerede olduğunu söyleyecek ve hayvanat
+        text: Şapkanı kafanda tut ve aklın sana nerede olduğunu söyleyecek ve hayvanat
           bahçesini düşün, ve sana merhaba için kafa sallamayı ve seni! Çevrimiçi
           olduğunda zihninin içindekileri tutmak ve nasıl güvende olunacağını, hayatına
           nasıl özel bir alan verileceğini bilmek için kafanı kullan! Başından ayak
           parmağına, durdur, düşün. Ayaklarından burnuna kadar, durdur ve çevrimiçi
-          düşün!"
+          düşün!
       2:
         image: notes/C2_digital_footprint_2.png
         text: Kalbini kullanarak büyü ve büyü, ve kendine sağlıklı bir parlaklık ver,
@@ -1071,9 +1071,9 @@
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: "Çevrimiçi eylemleriniz aranabilir kopyalanabilir paylaşılabilir yayımlanabilir
+        text: Çevrimiçi eylemleriniz aranabilir kopyalanabilir paylaşılabilir yayımlanabilir
           ve kalıcı izler bırakır. Siz acaba nasıl dijital izler bırakıyorsunuz? Nasıl
-          dijital izler bırakmak istersiniz?"
+          dijital izler bırakmak istersiniz?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
@@ -1093,10 +1093,10 @@
           bitmiş olacak.
       4:
         image: notes/C2_graph_paper_4.png
-        text: "İşimde algoritmalar kullanırım. Eğer tüm adımları yazarsam aynı seyi
+        text: İşimde algoritmalar kullanırım. Eğer tüm adımları yazarsam aynı seyi
           tekrar oluşturabilirim veya bunu yapmasını başka birine öğretebilirim. Camı
           fırına koyun, eritin, ve geriye kalan talimatları takip ederek çanağı yapın.
-          Algoritmalar size bir işin nasıl yapılacağını gösteren bir yol haritasıdır."
+          Algoritmalar size bir işin nasıl yapılacağını gösteren bir yol haritasıdır.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
@@ -1129,15 +1129,15 @@
           yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız.
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
+        text: Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
           Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç
           kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma
-          alanı olarak söylenir ve buraya programını yazarsın."
+          alanı olarak söylenir ve buraya programını yazarsın.
       3:
         image: notes/C2_maze_intro_3.png
-        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
+        text: İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
           ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız?
-          Bir ilerle bloğu daha ekleyebilirim."
+          Bir ilerle bloğu daha ekleyebilirim.
       4:
         image: notes/C2_maze_intro_4.png
         text: Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar
@@ -1170,18 +1170,18 @@
           gerektirir.
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "Çikolata yapmak istediğimiz zaman, bu süreçte birçok büyük adım vardır.
+        text: Çikolata yapmak istediğimiz zaman, bu süreçte birçok büyük adım vardır.
           Her bir büyük adım kendi küçük adımlarına sahiptir. Nasıl bir çikolata tatmak
           istediğimize bağlı şekilde, değişik tarifler yada algoritmalar vardır. Her
           adım önemlidir, küçük olanları dahi. Bu nedenle herhangi bir adım olmadan,
           geri kalan tamamlanamaz. Başkalarının anlayabildiği algoritmaları oluşturmak
           gerçekten önemlidir. Her adımın not edilmesinin gereklilik nedeni de budur,
-          böylece kimin yaptığının önemi yoktur, sonuç aynıdır."
+          böylece kimin yaptığının önemi yoktur, sonuç aynıdır.
     C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında
-          aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
+        text: Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında aynı
+          şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz.
       2:
         image: notes/C2_playlab_createastory_2.png
         text: Denemek için bazı yeni bloklar var. "Oka basıldığında" ve "hareket et"
@@ -1208,11 +1208,11 @@
           düzeltmektir.
       4:
         image: notes/C2_relay_programming_4.png
-        text: "Şimdi geriye parende atmaya çalışıyorum fakat hep düşüyorum. Verilen
+        text: Şimdi geriye parende atmaya çalışıyorum fakat hep düşüyorum. Verilen
           tarifleri adım adım takip edip nerede yanlış yaptığımı buluyorum. Antrenörüm
           ellerimi kalasa doğru koymadığımı söyledi. Bu verilen bilgi ile parendeyi
           yeniden denedim ve şahane yaptım. Parendemin hatasını ayıkladığıma çok memnunum.
-          Bunun yolunu bulduk. Hata ayıklamak problemleri bulup çözmektir. Aferin!"
+          Bunun yolunu bulduk. Hata ayıklamak problemleri bulup çözmektir. Aferin!
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
@@ -1221,10 +1221,10 @@
           işlemi milyonlarca defa yapar ve sıkılmaz ve gayet güzel yapar.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
-        text: "Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
+        text: Örneğin Eğer Facebooktaki herkese doğum günü mesajı atmak istediğimde
           herkese ayrı mesaj yazsam yıllarca sürer. Fakat sadece birkaç kod satırıyla
           Facebook taki herkese mesaj atıp iyi ki doğdun dileklerimi iletebiliyorum.
-          Döngüler budur işte. Bilgisayarın iyi yaptığı çok faydalı şeylerdir."
+          Döngüler budur işte. Bilgisayarın iyi yaptığı çok faydalı şeylerdir.
       3:
         image: notes/C2_zuck_repeat_loop_3.png
         text: Bu örnekte amacın kızgın kuşu domuzcuğa götürmektir. Şimdi tekrarla
@@ -1307,9 +1307,9 @@
           denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: "Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
+        text: Çalışma alanında zaten bazı bloklar var. Adım adım ilerleyeceğiz ve
           blokların üzerinden geçeceğiz. Böylece her bir bloğun yapması gerekeni yapıp
-          yapmadığını göreceğiz ve gerekirse düzelteceğiz."
+          yapmadığını göreceğiz ve gerekirse düzelteceğiz.
       3:
         image: notes/C3_debugging_bee_3.png
         text: Görünüşe göre bizim problemimiz burada! İlerle bloğundan bir tane daha
@@ -1345,14 +1345,14 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: "Şimdi biz arı ile iç içe geçmiş döngüleri kullanacağız. İlerleyip üç
+        text: Şimdi biz arı ile iç içe geçmiş döngüleri kullanacağız. İlerleyip üç
           nektar alan ve sonra sağa dönen kod hazır olarak verilmiş. Bütün o kodu
-          ve diğer tekrarla bloğu içine koyup üç defa tekrarlayalım. Bitti!"
+          ve diğer tekrarla bloğu içine koyup üç defa tekrarlayalım. Bitti!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "Şimdi kendi bounce oyunun yaratıp arkadaşlarınla paylaşa bileceksin.
-          Harika!"
+        text: Şimdi kendi bounce oyunun yaratıp arkadaşlarınla paylaşa bileceksin.
+          Harika!
       2:
         image: notes/C3_bounce_2.png
         text: Başlamak için kontrolleri klavyedeki ok tuşlarını bağlayacağız.
@@ -1369,10 +1369,10 @@
           gerekebilir.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: "İşin iyi tarafı birkaç düşünce tüyosu ile kendin zamanla problemleri
+        text: İşin iyi tarafı birkaç düşünce tüyosu ile kendin zamanla problemleri
           çözmeyi daha iyi becerirsin. Bu tüyolar problemlere benzersiz bir açıdan
           bakıp çözmekte yardımcı olurlar. Bu derste dört tüyo öğrenip arkadaşlarınla
-          oyunun kurallarını çözeceksiniz."
+          oyunun kurallarını çözeceksiniz.
       3:
         image: notes/C3_computational_thinking_3.png
         text: 'Büyük bir problemi ufak parçalara böldüğünde beynini problemi ayrıştırmak
@@ -1412,12 +1412,12 @@
           istedikleri resimleri sonuçlandırmalarına yardımcı olacaktır.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: "Örneğin Finding Nemo (Nemoyu Bulma) filminde Crush ve Squirt ve arkadaşları
+        text: Örneğin Finding Nemo (Nemoyu Bulma) filminde Crush ve Squirt ve arkadaşları
           doğu Avustralya akıntısında yüzüyorlar. Akıntı suları geçiyor, kaplumbağanın
           üstündeki renkleri izliyorsun, balıkların yanları gözüküyor. Bütün bunlar
           yazdığımız bilgisayar programlarında matematik uygulamalarıyla yapılıyor.
           Sonra bunları artistlere veriyoruz ve onlar da filmin son karelerini güzel
-          ve eğlenceli bir hale getirmek için kullanıyorlar."
+          ve eğlenceli bir hale getirmek için kullanıyorlar.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -1463,10 +1463,10 @@
           ederiz, temizlenmiş ise temizleme işlemini sonlandırırız.
       2:
         image: notes/C3_farmer_while_2.png
-        text: "Çiftçiye yardım etmek için yeni bir görünüm var. Ona sürece bloğu denir.
+        text: Çiftçiye yardım etmek için yeni bir görünüm var. Ona sürece bloğu denir.
           Bu aslında oldukça kolaydır. Üstteki koşul doğru olduğu sürece bir şeyler
           yap. Örneğin, yığında birşeyler var olduğu sürece yığından al. Devam edin
-          çiftçi ile deneyin."
+          çiftçi ile deneyin.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
@@ -1501,11 +1501,11 @@
           neler olduğunu anladığınızda göreceksiniz ki internet çok karmaşık değildir.
       3:
         image: notes/C3_internet_3.png
-        text: "İnternette iletileri gönderme iletileri posta ile gönderme gibidir.
+        text: İnternette iletileri gönderme iletileri posta ile gönderme gibidir.
           Google.com sitesindeyim. Bu Web sitesinin IP adresini bu sayıdır. IP adresini
           mektubun dönüş adresi olarak düşünebilirsiniz. Aşağıda ofiste birine postayla
           bir mesaj göndermek istediğimizi hayal edelim. URL ve IP adresi görüyor
-          musun? Bu mesajı yazdım ve Gönder'e bastım."
+          musun? Bu mesajı yazdım ve Gönder'e bastım.
       4:
         image: notes/C3_internet_4.png
         text: Posta Servisi tersine İleti daha kolay gönderilebilir bu yüzden daha
@@ -1537,10 +1537,10 @@
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: "İnsanlar her gün karar alırlarlar. Dışarı gitmeden önce Örneğin, eğerYağmur
+        text: İnsanlar her gün karar alırlarlar. Dışarı gitmeden önce Örneğin, eğerYağmur
           yağıyor ise, ceketimi almak gerekir diyorum. Bilgisayarlar güvenilir bir
           şekilde karar vermede inanılmaz hızlıdır. Bir bilgisayar programı biraz
-          matematik ve biraz Eğer komutudur."
+          matematik ve biraz Eğer komutudur.
       2:
         image: notes/C3_maze_conditionals_2.png
         text: Eğer bloğu zombinin karar vermesine yardımcı olur. Bir şeyi kontrol
@@ -1549,10 +1549,10 @@
           ve eğer sola yol var ise sola dönmesini söylüyoruz.
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: "İlerle bloğunu kadar tekrarla bloğu içine koyduğumuz zaman gitmek istediği
+        text: İlerle bloğunu kadar tekrarla bloğu içine koyduğumuz zaman gitmek istediği
           sürece ileri gitmesini söylüyoruz. Dönüş olduğunda eğer bloğu kullanarak
           sola dönüş varsa sola dönmesini sağlıyoruz. Böylece sola yol olduğunda sola
-          dönerek diğer durumlarda ilerleyerek hedefimize ulaşıyoruz."
+          dönerek diğer durumlarda ilerleyerek hedefimize ulaşıyoruz.
       4:
         image: notes/C3_maze_conditionals_4.png
         text: 'eğer bloğu bilgisayar programlamanın temel konularından biridir. İlk
@@ -1573,8 +1573,8 @@
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında
-          aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
+        text: Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında aynı
+          şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz.
       2:
         image: notes/playlab_2.png
         text: Denemek için bazı yeni bloklar var. "Oka basıldığında" ve "hareket et"
@@ -1632,11 +1632,11 @@
           kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_2.png
-        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+        text: Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
           sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri
           ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
           ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
-          bitiş değerinden büyük olunca çalıştırma sonlanıyor."
+          bitiş değerinden büyük olunca çalıştırma sonlanıyor.
       3:
         image: notes/C4_for_loops_3.png
         text: Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten
@@ -1656,11 +1656,11 @@
           kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+        text: Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
           sayışın da içindeki kodu çalıştırıyor.  For (Şununla tekrarla) döngüleri
           ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
           ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
-          bitiş değerinden büyük olunca çalıştırma sonlanıyor."
+          bitiş değerinden büyük olunca çalıştırma sonlanıyor.
       3:
         image: notes/C4_for_loops_bee_3.png
         text: Gerçek bir For (şununla tekrarla) döngüsü sayaç değişkenini gerçekten
@@ -1680,12 +1680,12 @@
           kod başlangıç değerinden bitiş değerine kadar belirli bir seri ile sayıyor.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: "Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
+        text: Örneğin tekrarla üç bloğu birden üçe kadar birer birer sayıyor. Her
           sayışın da içindeki kodu çalıştırıyor. For (Şununla tekrarla) döngüleri
           ne kadar çalışacağını içindeki değişkenle biliyor. Önce değişken ilk değere
           ayarlanıyor ve her seferinde artırılarak döngü çalıştırılıyor. Değişken
           bitiş değerinden büyük olunca çalıştırma sonlanıyor. Tekrarla döngüsü yerine
-          şununla say döngüsü kullanmanın faydası döngü değişkenini görmendir."
+          şununla say döngüsü kullanmanın faydası döngü değişkenini görmendir.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1736,10 +1736,10 @@
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: "İşte 50 piksel kenarlara sahip bir kare çizen bir fonksiyon. Bu harika
+        text: İşte 50 piksel kenarlara sahip bir kare çizen bir fonksiyon. Bu harika
           ama eğer bir kenarı 50 piksel olan bir kare ve 100 piksel olan başka bir
           kare çizmek istedin? Hemen hemen aynı şeyi yapmak iki ayrı fonksiyon yazmak
-          zorunda olmamalıyız. Bunun yerine, bir parametre kullanan fonksiyon kullanabilirsiniz."
+          zorunda olmamalıyız. Bunun yerine, bir parametre kullanan fonksiyon kullanabilirsiniz.
       2:
         image: notes/C4_function_parameters_2.png
         text: "Parametreler fonksiyonu içinde kullanılan değişkenleri fonksiyon içine
@@ -1766,15 +1766,15 @@
           yumurtasını çalan kötü domuzcuğa ulaşmasını sağlayacağız.
       2:
         image: notes/C4_intro_2.png
-        text: "Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
+        text: Çalışma alanı üç bölgeye ayrılmıştır. Soldaki kodun çalışacağı labirenttir.
           Ne istendiğiyle ilgili bilgiler labirentin altındadır. Ortadaki bölge araç
           kutusudur. Buradaki her komuta kuş anlar ve yapar. Sağdaki boş bölge çalışma
-          alanı olarak söylenir ve buraya programını yazarsın."
+          alanı olarak söylenir ve buraya programını yazarsın.
       3:
         image: notes/C4_intro_3.png
-        text: "İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
+        text: İlerle bloğunu çalışma alanına sürükleyip Çalıştır düğmesine basınca
           ne olur? Kuş bir adım ilerler. Bir adım daha ilerlemesi için ne yapmalıyız?
-          Bir ilerle bloğu daha ekleyebilirim."
+          Bir ilerle bloğu daha ekleyebilirim.
       4:
         image: notes/C4_intro_4.png
         text: Sağa dön bloğunu çalışma alanına sürükleyip ilerle bloğunu antına kadar
@@ -1834,11 +1834,11 @@
           0 ve 1 vardır.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: "İkili sistemi en yaygın kullandığınız yer eğer komutudur. Programlama
+        text: İkili sistemi en yaygın kullandığınız yer eğer komutudur. Programlama
           için klasik bir şeydir. Program çalışır ve bir şey doğru olup olmadığını
           deniyor, ve doğruysa yapıyor. Ya da doğru değilse başka bir iş yapıyor.
           Peki biraz daha karmaşık bir şey yapmak istiyorsam. Eğer komutu yerine görüntü
-          veya ses kullanacaksın."
+          veya ses kullanacaksın.
       3:
         image: notes/C4_unplugged_binary_3.png
         text: 'Bir bilgisayar sadece ikili sistem bilir, fakat resim ikili değil,
@@ -1985,10 +1985,10 @@
           daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: "Şimdi size farklı oyunların verildiği ve oyunu değiştirmek amacıyla
+        text: Şimdi size farklı oyunların verildiği ve oyunu değiştirmek amacıyla
           hız, yükseklik, skor gibi değişken değerlerini değiştirebileceğiniz playlab'ı
           deneyeceksiniz. Oyunun nasıl oynanacağını değiştirmek için oyunun algoritmasını
-          değiştirmek zorunda kalmayacaksınız, sadece uyuşmazlığı."
+          değiştirmek zorunda kalmayacaksınız, sadece uyuşmazlığı.
       3:
         image: notes/C4_variables_playlab_3.png
         text: Kitaplar için X-ray ve Kindle için yaptığım çalışmada, bir çok farklı
@@ -2113,12 +2113,12 @@
           arısı. Arıyı her çiçeğe götürmem ve nektarı almam gerekiyor.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: "İlk çiçek üç blok ötede, böyle bir durumda 3 kere ileri gitmeliyim.
+        text: İlk çiçek üç blok ötede, böyle bir durumda 3 kere ileri gitmeliyim.
           1, 2, 3. Sonra nektarı al, ve başka bir nektarı daha. Meh, bu işe yaramadı!
           Şimdi nektar almalar arasına başka bir ileri hareket etme ekleyeceğim ve
           tekrar çalıştıracağım. Yuppi, çalıştı! Code Studio artist ve arı bulmacalarını
           nasıl kullanacağınızı öğrendiniz. Code Studio bulmaca meydan okumasında
-          iyi şanslar."
+          iyi şanslar.
     unplug1:
       1:
         image: notes/unplug1_1.png
@@ -2162,18 +2162,18 @@
           birinin takip edebileceği bir dizi talimat yazmak.
       2:
         image: notes/unplug2_2.png
-        text: "Öğrenciler talimatları yazmak için gruplara ayrılır. Daha sonrasında
+        text: 'Öğrenciler talimatları yazmak için gruplara ayrılır. Daha sonrasında
           talimatları canavarı çizecek grup ile değiştirir. Gruplar bilgi işlemsel
           düşünmenin dört aşamasını kullanarak bu talimatları yazacaktır: ayrıştırma,
-          desen konumu, soyutlama ve algoritmalar."
+          desen konumu, soyutlama ve algoritmalar.'
       3:
         image: notes/unplug2_3.png
-        text: "İlk olarak, gruplar görevi ayrıştırırlar. Bu bir oyun prlanı yapmaları
+        text: İlk olarak, gruplar görevi ayrıştırırlar. Bu bir oyun prlanı yapmaları
           anlamına geliyor. Daha sonra, katalogdaki tüm canavarlar arasında desenler
           aramaya başlarlar. Canavarlar arasında bir farklılığa rastlarlarsa bu detayları
           soyutlar veya çıkarırlar. Örneğin, katalogdaki bir canavarın vegitas gözleri
           var, bir diğerinin ise spritem gözleri. Ancak her ikisinin de gözleri vardır,
-          öyleyse canavarın boş gözlerinin olduğu bir satır yazabiliriz."
+          öyleyse canavarın boş gözlerinin olduğu bir satır yazabiliriz.
       4:
         image: notes/unplug2_4.png
         text: Böylece öğrenciler, canavarların parçalarını olması gereken stillere
@@ -2308,10 +2308,10 @@
           yapabiliyor.
       2:
         image: notes/unplug10_2.png
-        text: "Öğrenciler şu üç iletim metodundan birini taklit ederek mesaj iletecekler:
-          Kablosuz internet, DSL yada fiber optik. Wi-fi'yi taklit eden öğrenciler
-          iletecekleri mesajları başlarına takmak zorundalardır, çünkü wifi'nin bazı
-          bilgileri bırakma olasılığı daha yüksektir."
+        text: 'Öğrenciler şu üç iletim metodundan birini taklit ederek mesaj iletecekler:
+          Kablosuz internet, DSL yada fiber optik. Wi-fi''yi taklit eden öğrenciler
+          iletecekleri mesajları başlarına takmak zorundalardır, çünkü wifi''nin bazı
+          bilgileri bırakma olasılığı daha yüksektir.'
       3:
         image: notes/unplug10_3.png
         text: DSL yada kablo bağlantısını taklit eden öğrenciler iletileri ellerinin
@@ -2322,10 +2322,10 @@
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "Şimdi, yaptığın on dokuz etkinlikteki her şeye durup kuş bakışı bakarak
+        text: Şimdi, yaptığın on dokuz etkinlikteki her şeye durup kuş bakışı bakarak
           düşünme zamanı. Bu öğrencilerin yaptıkları şeylerin ne kadar devasa bir
           başarı olduğunu söylemek için mükemmel bir zamandır. Öğrenciler birçok yetişkinin
-          bilgisayar bilimi hakkında bildiğinden daha çok bu dersleri öğrenmişlerdir."
+          bilgisayar bilimi hakkında bildiğinden daha çok bu dersleri öğrenmişlerdir.
       2:
         image: notes/unplug11_2.png
         text: Sınıfça yada gruplar halinde en çok sevilen ders hakkında tartışın.
@@ -2359,18 +2359,18 @@
           inandırıcı olmalarını sağlıyor.
       3:
         image: notes/starwars_intro_3.JPG
-        text: "Önümüzdeki bir saatte kendi Star Wars oyunumuzu inşa edeceğiz. Sana
+        text: Önümüzdeki bir saatte kendi Star Wars oyunumuzu inşa edeceğiz. Sana
           programlamanın temel konseptlerini öğreteceğiz. Normalde programlama hep
           yazıdır ama biz burada blokları sürükleyip bırakarak program yazacağız.
           Aslında hala kod yaratıyor olacaksınız. Temel blokları denedikten sonra
           seni internetteki en popüler programlama dillerinden biri olan JavaScript'e
-          geçireceğiz."
+          geçireceğiz.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "İlk önce, Rey ile beraber BB-8'in yürüyerek hurda parçalarını toplaması
+        text: İlk önce, Rey ile beraber BB-8'in yürüyerek hurda parçalarını toplaması
           için onu programlayacağız. Ekranın üç parçaya ayrılmış durumda. Solda kodun
           çalışacağı Star Wars oyun alanı yer alıyor. Her bölüm için yönergeler oyun
-          alanının altında yazıyor."
+          alanının altında yazıyor.
       5:
         image: notes/starwars_intro_5.JPG
         text: Orta kısım araç kutusu ve burada BB-8'in anlayacağı komutlar olan bloklar
@@ -2413,8 +2413,8 @@
           denemeni istedik.
       3:
         image: notes/starwars_typing_3.JPG
-        text: "Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar
-          ya da yazı ile kod girişi yapmak arasında geçiş yapabilirsin."
+        text: Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar
+          ya da yazı ile kod girişi yapmak arasında geçiş yapabilirsin.
       4:
         image: notes/starwars_typing_4.JPG
         text: Bir sonraki derste, şimdiki yazma modunun dışına çıkarak başlayacağız.
@@ -2481,10 +2481,10 @@
           bloğu koyalım. Ve R2-D2'unun aşağı inmesini sağlamak için aynısını tekrarlayacağız.
       9:
         image: notes/starwars_events_9.JPG
-        text: "Şimdi robotumuzu kontrol etmek için gereken kodu önceden yazmak yerine,
+        text: Şimdi robotumuzu kontrol etmek için gereken kodu önceden yazmak yerine,
           R2-D2'nun çevresinde onu hareket ettiren tuş basım olaylarına reaksiyon
           göstermesine izin verebiliriz. Adım adım, oyununuz dahada etkileşimli hale
-          geliyor."
+          geliyor.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2642,9 +2642,9 @@
           Minecraft'ın en sevdiğim tarafı işte bu.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Önümüzdeki bir saat boyunca Alex ya da Steve ile program yazarak bilgisayar
+        text: Önümüzdeki bir saat boyunca Alex ya da Steve ile program yazarak bilgisayar
           biliminin temellerini ve Minecraft dünyasının simülasyonu çıkarılmış bir
-          parçasında ilerlemeyi öğreneceksiniz."
+          parçasında ilerlemeyi öğreneceksiniz.
       3:
         image: notes/mc_intro_3.JPG
         text: Geleneksel program yazma genelde metinle olur ama bugün blok olarak
@@ -2733,9 +2733,9 @@
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Şimdi eğer komutlarını öğreneceğiz. Eğer komutları, program yazmayı
+        text: Şimdi eğer komutlarını öğreneceğiz. Eğer komutları, program yazmayı
           öğrenmenin temel bir parçasıdır. Bunlar bir bilgisayarın karar vermesine
-          yardımcı olur."
+          yardımcı olur.
       2:
         image: notes/mc_if_statements_2.JPG
         text: Tüm bilgisayarlar eğer komutlarını kullanır, buna telefonum da dahil.
@@ -2765,9 +2765,9 @@
         text: Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: "Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
+        text: Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
           bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz.
-          Seçim size kalmış."
+          Seçim size kalmış.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: "[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir
@@ -2782,16 +2782,16 @@
         text: Tebrikler! Bilgisayar biliminin temel blok yapımını öğrendiniz.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: "Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
+        text: Şimdi bu blokları kullanarak kendi eserlerinizi yapabilirsiniz. Başka
           bir talimat ya da çözülecek başka bir yapboz yok. İstediğiniz her şeyi yapabilirsiniz.
-          Seçim size kalmış."
+          Seçim size kalmış.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: "[öğrenci konuşması] Gerçek olmak üzere. Kırkıyorum. Meşalelerden bir
           L yaptım. Huş kalaslardan bir A yaptım. Oldu, başardık. Yünden bir ev yaptık!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: "Şimdi istediğiniz her şeyi yapabilirsiniz. İyi eğlenceler!"
+        text: Şimdi istediğiniz her şeyi yapabilirsiniz. İyi eğlenceler!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -3095,9 +3095,9 @@
           o kimliği seçin.
       5:
         image: notes/applab_intro_welcome_5.png
-        text: "Ögeler; yazı renkleri, arkaplan renkleri ya da font büyüklükleri gibi
+        text: Ögeler; yazı renkleri, arkaplan renkleri ya da font büyüklükleri gibi
           değiştirebileceğiniz bir çok özellik barındırır. İkinci açılır listede tüm
-          listeyi görebilir ve değiştirmek istediğiniz herhangi bir özelliği seçebilirsiniz."
+          listeyi görebilir ve değiştirmek istediğiniz herhangi bir özelliği seçebilirsiniz.
       6:
         image: notes/applab_intro_welcome_6.png
         text: Son açılır listede ise kullanmak istediğiniz değeri girebilirsiniz.
@@ -3105,10 +3105,10 @@
           numaralarda kendiniz yazabilirsiniz.
       7:
         image: notes/applab_intro_welcome_7.png
-        text: "İşinizi bitirdiğinizde, blok biraz cümle gibi okunabilir:'buton1'in
+        text: İşinizi bitirdiğinizde, blok biraz cümle gibi okunabilir:'buton1'in
           arkaplan rengini yeşil yapın.' Kodda oluşturduğunuz değişiklikleri görmek
           için çalıştır'a basın. Sıfırladıysanız, uygulamanızla alakalı başka değişiklikler
-          yapmak isterseniz içine daha çok blok sürükleyebilirsiniz!"
+          yapmak isterseniz içine daha çok blok sürükleyebilirsiniz!
       8:
         image: notes/applab_intro_welcome_8.png
         text: Bu eğitimde blok modunun üstünde durucaz fakat program labarotuarı yazım
@@ -3135,12 +3135,12 @@
           ve kod ile daha yeni oluşturduğunuz bu iş parçasının sahibisiniz.
       2:
         image: notes/applab_intro_events_2.png
-        text: "Şimdi programının görünümü değiştirebilirsin. Hadi onu etkinliklere
+        text: Şimdi programının görünümü değiştirebilirsin. Hadi onu etkinliklere
           tepki gösterecek şekilde yapalım! Etkinlikler kullanıcı eylemleridir bir
           tuşa tıklamak, menüde gezmek yada bir fotoğrafı yerleştirmek gibi. Etkileşimli
           programlar etkinliklere reaksiyon gösterecek yollara ihtiyaç duyar, bir
           tuşa bastığımda ses çıkması gibi. Bunu program labarotuarında yapabilmek
-          için 'onEvent' isimli yeni bloğu kullanmalısın."
+          için 'onEvent' isimli yeni bloğu kullanmalısın.
       3:
         image: notes/applab_intro_events_3.png
         text: Bu program ekranı maviye çeviriyor. Tuşa bastığımda ekranımın yeşile
@@ -3193,8 +3193,8 @@
           seçtiğiniz sesi çalar.
       5:
         image: notes/applab_intro_sounds_5.png
-        text: "Ögelerinize görüntü eklemek için sadece setProperty bloğunu kullanabilirsiniz.
-          İkinci açılır menüdeki resim özelliğini seçin"
+        text: Ögelerinize görüntü eklemek için sadece setProperty bloğunu kullanabilirsiniz.
+          İkinci açılır menüdeki resim özelliğini seçin
       6:
         image: notes/applab_intro_sounds_6.png
         text: Daha sonra üçüncü açılır listeden "Seç"i seçin.
@@ -3244,8 +3244,8 @@
         text: Bir ekran öğesine sürükleyerek uygulamanıza tamamen yeni ekranlar ekleyebilirsiniz
       8:
         image: notes/applab_intro_designmode_8.png
-        text: "Üst kısımdaki açılır menüden oluşturduğunuz ekranlar arasında hızlıca
-          ileri ve geri geçiş yapabilirsiniz."
+        text: Üst kısımdaki açılır menüden oluşturduğunuz ekranlar arasında hızlıca
+          ileri ve geri geçiş yapabilirsiniz.
       9:
         image: notes/applab_intro_designmode_9.png
         text: Uygulamanızın içinde tüm bu ekranlar arasında geçiş yapmak için bir
@@ -3260,9 +3260,9 @@
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
-        text: "Şimdi, Uygulama Laboratuarının temellerinden bazılarını düğmeler, sesler,
+        text: Şimdi, Uygulama Laboratuarının temellerinden bazılarını düğmeler, sesler,
           resimler, metinler ve yeni ekranlar ekleme gibi öğrendiniz her çeşit uygulama
-          yapabilirsiniz."
+          yapabilirsiniz.
       2:
         image: notes/applab_intro_share_2.png
         text: Bir sonraki seviyede, oluşturmayı tamamladığınız uygulamayı bulacaksınız.
@@ -3428,7 +3428,7 @@
           bulmacaları çözmek için kullanabileceğiniz fonksiyonlara erişiminiz olacak.
       4:
         image: notes/mc_2017_functions_4.png
-        text: "İşlevdeki kodun alet çantasına ne işe yaradığına bak."
+        text: İşlevdeki kodun alet çantasına ne işe yaradığına bak.
       5:
         image: notes/mc_2017_functions_5.png
         text: Daha sonra o isimli bloğu alet kutusundan bulup o bloğu çalıştırmak
@@ -3455,8 +3455,8 @@
           aracı ne işe yara öğrendin.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: "Şimdi sıra senin geliştirici olduğun serbest seviyede. Kalan tüm zamanınla
-          keşfetmek, kurulmak ve maden kazmak için kendi kodlarını yaz."
+        text: Şimdi sıra senin geliştirici olduğun serbest seviyede. Kalan tüm zamanınla
+          keşfetmek, kurulmak ve maden kazmak için kendi kodlarını yaz.
       6:
         image: notes/mc_2017_congratulations_6.png
         text: 'Bu seviyede yazdığınız kodu Minecraft: Eğitim Sürümü ile Minecraft
@@ -3538,10 +3538,10 @@
           yok ama yine de aynı dört şeyi yapıyorlar.
       7:
         image: notes/csd_concept_computer_7.png
-        text: "İlk önce, girdi hakkında konuşacağız. Bilgisayarlara klavye ile ne
-          yapılacağını söyleyebilirsiniz, bilgisayarlara fare, mikrofon ve kamera
-          ile ne yapılacağını söyleyebilirsiniz. Tüm bu farklı girdiler, daha sonra
-          bellekte saklanacak bir bilgisayar bilgisi verir."
+        text: İlk önce, girdi hakkında konuşacağız. Bilgisayarlara klavye ile ne yapılacağını
+          söyleyebilirsiniz, bilgisayarlara fare, mikrofon ve kamera ile ne yapılacağını
+          söyleyebilirsiniz. Tüm bu farklı girdiler, daha sonra bellekte saklanacak
+          bir bilgisayar bilgisi verir.
       8:
         image: notes/csd_concept_computer_8.png
         text: Bilgisayarın işlemcisi bilgileri bellekten alır. Yalnızca bir komut
@@ -3602,7 +3602,7 @@
           var: sıfır ve bir. Bu iki basamak ile herhangi bir sayıyı sayabiliriz.'
       8:
         image: notes/csd_concept_binary_data_8.png
-        text: "İşte böyle işler. Bir onlu sayı sistemine hepimiz alışkınızdır, bir
+        text: İşte böyle işler. Bir onlu sayı sistemine hepimiz alışkınızdır, bir
           sayıdaki her bir konumun değeri farklıdır. 1 konum, 10 konum, 100 konum
           vb. var. Örneğin, 100 pozisyondaki 9, 900'dür. İkili olarak, her konum bir
           değer taşır. Fakat, her defasında 10 ile çarpmak yerine 2 ile çarparsak,
@@ -3614,7 +3614,7 @@
           Ne kadar çok tel kullanırsanız, saklayabileceğiniz sayı da o kadar artar.
           8 tel ile, 0 ile 255 arasında sayıları saklayabilirsiniz. Bu 8 olanıdır.
           Sadece 32 tel ile, 0'dan 4 milyondan fazla depolayabilirsiniz. İkili sayı
-          sistemini kullanarak, istediğiniz herhangi bir sayıyı temsil edebilirsiniz."
+          sistemini kullanarak, istediğiniz herhangi bir sayıyı temsil edebilirsiniz.
       9:
         image: notes/csd_concept_binary_data_9.png
         text: Peki ya diğer bilgi türleri? Metin, görüntü, ses gibi? Tüm bu şeylerin
@@ -3626,8 +3626,8 @@
           bir sistem kullanılarak gösterilir.
       10:
         image: notes/csd_concept_binary_data_10.png
-        text: "Şimdi, fotoğraflar, videolar ve bir ekranda gördüğünüz tüm grafikleri
-          düşünelim."
+        text: Şimdi, fotoğraflar, videolar ve bir ekranda gördüğünüz tüm grafikleri
+          düşünelim.
       11:
         image: notes/csd_concept_binary_data_11.png
         text: Tüm bu görüntüler piksel adı verilen küçük noktalardan oluşur ve her
@@ -3688,20 +3688,20 @@
           karmaşık devreler oluşturabiliriz.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: "Örneğin, toplayıcı adı verilen 2 bit’i bir araya toplayan bir devre
+        text: Örneğin, toplayıcı adı verilen 2 bit’i bir araya toplayan bir devre
           yapabilirsiniz. Bu devre, her biri 1 veya 0 olan 2 ayrı bit alır, ve toplamı
           hesaplamak için onları bir araya toplar. Toplam 0 artı 0 eşittir 0, 0 artı
           1 eşittir 1 veya 1 artı 1 eşittir 2 olabilir. Çıkan iki kabloya da ihtiyacınız
           var, çünkü toplamı temsil etmek için ikili basamak alabilir. İki bit bilgi
           eklemek için tek bir toplayıcıya sahip olduğunuzda, daha büyük sayıları
-          bir araya getirmek için bu toplama devrelerinin katlarını yan yana koyabilirsiniz."
+          bir araya getirmek için bu toplama devrelerinin katlarını yan yana koyabilirsiniz.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: "Örneğin, 8-bitlik bir toplayıcının 25 ve 50 sayılarını nasıl eklediği
+        text: Örneğin, 8-bitlik bir toplayıcının 25 ve 50 sayılarını nasıl eklediği
           işte burada. Her numara 8'lik bitler kullanılarak temsil edilmiş ve devreye
           giren 16 farklı elektrik sinyali elde edilmiş. 8-bit ekleyici için olan
           devrenin içinde bir çok küçük toplayıcı bulunur, bunların hepsi ile toplam
-          hesaplanır."
+          hesaplanır.
       9:
         image: notes/csd_concept_circuits_logic_9.png
         text: Farklı elektrik devreleri, çıkarma veya çarpma gibi diğer basit hesaplamaları
@@ -3752,10 +3752,10 @@
           çıktıya dönüştüren çıktı aygıtları var.
       5:
         image: notes/csd_concept_memory_cpu_input_output_5.png
-        text: "İlk olarak girdiden bahsedelim. Bilgisayarlar, bir bilgisayar klavyesi,
+        text: İlk olarak girdiden bahsedelim. Bilgisayarlar, bir bilgisayar klavyesi,
           bir telefonun dokunmatik yüzeyi, kamera, mikrofon veya GPS gibi bir çok
           farklı girdi türünü alabilir. Fakat bir arabadaki, termostattaki veya dronedaki
-          sensörler bile farklı girdi cihazlarıdır."
+          sensörler bile farklı girdi cihazlarıdır.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
         text: Şimdi, girişin bir bilgisayarda nasıl bir yol izlediği ve çıktı haline
@@ -3851,9 +3851,9 @@
           Aslına bakarsak bu komut dizisi çok basit bir bilgisayar programıdır.
       9:
         image: notes/csd_concept_hardware_software_9.png
-        text: "İkili kodu, yazılımın en temel formu ve bir bilgisayarın tüm donanımını
+        text: İkili kodu, yazılımın en temel formu ve bir bilgisayarın tüm donanımını
           kontrol eder. Şu günlerde kimse ikili olarak yazılım yazmıyor. Bu daima
-          sürer!"
+          sürer!
       10:
         image: notes/csd_concept_hardware_software_10.png
         text: Bugün yazdığımız yazılımlar bu (Python) gibi görünüyor, yada bu (Ruby),
@@ -3878,14 +3878,14 @@
           çalışan Windows işletim sisteminin yaratılmasına yardım ettim.
       14:
         image: notes/csd_concept_hardware_software_14.png
-        text: "İşletim sistemi, bilgisayardaki diğer yazılımların kontrol edilmesine
+        text: İşletim sistemi, bilgisayardaki diğer yazılımların kontrol edilmesine
           izin veren özel becerilere sahip bir programdır. Bilgisayar programınızın
           hafızasına yükleyerek yeni programlar yüklemenizi sağlar. Bir programın
           merkezi işlem birimi tarafından ne zaman çalıştırıldığına ve o programın
           bilgisayarın giriş ve çıkış aygıtlarına erişip erişemeyeceğine karar verir.
           Ve bilgisayarınızın bir anda birden çok programı çalıştırdığını düşündüğünüzde,
           gerçekte, bu CPU'yu saniyenin kesirleri için paylaşan programlar arasında
-          hızla geçiş yapan bir işletim sistemidir."
+          hızla geçiş yapan bir işletim sistemidir.
       15:
         image: notes/csd_concept_hardware_software_15.png
         text: Her bilgisayarın içinde, bilgisayarın donanımını kontrol eden bir işletim

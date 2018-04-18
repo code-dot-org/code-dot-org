@@ -9,5 +9,7 @@ wrong 'It will be different each time'
 
 
 markdown <<MARKDOWN
-![](https://images.code.org/49f5ea1df195407bdc654e501ba9c9bb-image-1483466329439.png)
+<!-- ![](https://images.code.org/49f5ea1df195407bdc654e501ba9c9bb-image-1483466329439.png) -->
+
+<img src="https://images.code.org/5514d861d0b11681e63f901676af7fd3-image-1523299659918.png" style="width: 350px">
 MARKDOWN

@@ -401,8 +401,8 @@
           dla danego poziomu.
       6:
         image: notes/frozen1_6.jpg
-        text: "Środkowy obszar zajmuje przybornik i każdy z bloków w tym obszarze
-          odpowiada działaniu, które może wykonać Elsa i Anna."
+        text: Środkowy obszar zajmuje przybornik i każdy z bloków w tym obszarze odpowiada
+          działaniu, które może wykonać Elsa i Anna.
       7:
         image: notes/frozen1_7.jpg
         text: Po prawej stronie znajduje się obszar roboczy, gdzie będziemy budować
@@ -501,9 +501,9 @@
           wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej.
       3:
         image: notes/playlab_intro_3.png
-        text: "Środkowy obszar zajmuje przybornik, i każdy z bloków w przyborniku
-          jest fragmentem kodu. Obszar po prawej stronie to obszar roboczy, gdzie
-          będziecie budować programy."
+        text: Środkowy obszar zajmuje przybornik, i każdy z bloków w przyborniku jest
+          fragmentem kodu. Obszar po prawej stronie to obszar roboczy, gdzie będziecie
+          budować programy.
       4:
         image: notes/playlab_intro_4.png
         text: Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do

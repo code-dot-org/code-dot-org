@@ -1,7 +1,7 @@
 "hy":
   errors:
     messages:
-      not_saved: "Խնդրում ենք ուղղել հետեւյալ սխալներ:"
+      not_saved: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
       too_young: This content has age restrictions in place and is not available for
         younger students.
       teacher_must_accept_terms: This content has age restrictions in place and is
@@ -15,89 +15,89 @@
   activerecord:
     errors:
       messages:
-        blank: "պարտադիր ե"
+        blank: պարտադիր ե
         blank_plural: are required
         invalid_plural: are invalid
     attributes:
       user:
-        name: "Ցուցադրել Անունը"
+        name: Ցուցադրել Անունը
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
-        email: "Էլ. փոստ"
+        email: Էլ. փոստ
         parent_email: Parent/guardian email
         personal_email: Personal email address <a href="%{url}">(click here if you
           don't have an email address)</a>
-        username: "Օգտանուն"
-        password: "գաղտնաբառ"
-        password_confirmation: "Գաղտնաբառ հաստատումը"
-        current_password: "Ընթացիկ գաղտնաբառը"
-        locale: "Լեզու"
-        age: "Տարիք"
-        gender: "Սեռ"
-        edit_header: "Խմբագրել Հաշիվը Մանրամասներ"
+        username: Օգտանուն
+        password: գաղտնաբառ
+        password_confirmation: Գաղտնաբառ հաստատումը
+        current_password: Ընթացիկ գաղտնաբառը
+        locale: Լեզու
+        age: Տարիք
+        gender: Սեռ
+        edit_header: Խմբագրել Հաշիվը Մանրամասներ
         error:
-          future: "հակում է լինի ապագայում"
-  hello: "Բարև աշխարհ"
-  welcome_back: "Բարի վերադարձ, %{name}"
-  your_professional_learning_plan: "Ձեր Մասնագիտական ​​ուսուցում Plan"
-  see_your_learning_plan: "Տես ձեր ուսուցման ծրագիր"
-  submit: "Հաստատել"
+          future: հակում է լինի ապագայում
+  hello: Բարև աշխարհ
+  welcome_back: Բարի վերադարձ, %{name}
+  your_professional_learning_plan: Ձեր Մասնագիտական ​​ուսուցում Plan
+  see_your_learning_plan: Տես ձեր ուսուցման ծրագիր
+  submit: Հաստատել
   unsubmit: Unsubmit
-  previous_page: "Նախորդ էջ"
-  next_page: "Հաջորդ էջ"
+  previous_page: Նախորդ էջ
+  next_page: Հաջորդ էջ
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "վերացնել"
-  okay: "Լավ"
+  cancel: վերացնել
+  okay: Լավ
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
-      label: "Ավելացնել ուսուցչին:"
-      placeholder: "Բաժին օրենսգրքի (abcdef)"
+      label: 'Ավելացնել ուսուցչին:'
+      placeholder: Բաժին օրենսգրքի (abcdef)
       instructions: Please enter the code shared with you by your teacher. Its a 6
         letter code like ABCDEF.
       instructions_short: Enter your 6 letter section code
-    submit: "Ավելացնել ուսուցիչ"
+    submit: Ավելացնել ուսուցիչ
   add_hint_form:
-    placeholder: "Խնդրում ենք մուտքագրել Ձեր ակնարկ այստեղ"
-    submit: "Ավելացնել ակնարկ"
+    placeholder: Խնդրում ենք մուտքագրել Ձեր ակնարկ այստեղ
+    submit: Ավելացնել ակնարկ
   appname: Code.org
-  stage: "փուլ"
+  stage: փուլ
   stage_number: Stage %{number}
-  puzzle: "վարանում"
+  puzzle: վարանում
   trophies: trophies
-  courses: "Դասընթացներ"
+  courses: Դասընթացներ
   courses_page:
-    title_student: "Սովորել օրենսգրքի Studio"
+    title_student: Սովորել օրենսգրքի Studio
     title_teacher: Teach Computer Science
   unplugged_activity: unplugged Ակտիվություն
-  of: "Հյուրատետր"
-  more: "ԱՎԵԼԻ"
-  less: "ՔԻՉ"
-  beta: "բետա"
-  try_hoc: "Փորձեք ժամը օրենսգրքով, սեղմեք այստեղ >>"
-  try_k8intro: "Փորձեք մեր K-8 Intro է Computer Science դասընթաց (15-25 ժամ)"
+  of: Հյուրատետր
+  more: ԱՎԵԼԻ
+  less: ՔԻՉ
+  beta: բետա
+  try_hoc: Փորձեք ժամը օրենսգրքով, սեղմեք այստեղ >>
+  try_k8intro: Փորձեք մեր K-8 Intro է Computer Science դասընթաց (15-25 ժամ)
   k8intro: K-8 Intro է Համակարգչային գիտություն դասընթաց (15-25 ժամ)
-  already_started: "Արդեն սկսվել է. Պահանջվում է ֆիլմերում նկարահանվողներ այստեղ >>"
+  already_started: Արդեն սկսվել է. Պահանջվում է ֆիլմերում նկարահանվողներ այստեղ >>
   demos: Admin «Բոլոր դեմո տարբերակները
-  continue: "Շարունակել"
-  prize: "մրցանակ"
-  more_info: "Ավելի շատ տեղեկություն"
+  continue: Շարունակել
+  prize: մրցանակ
+  more_info: Ավելի շատ տեղեկություն
   auth:
     sign_in_with: Sign in with %{provider}
-    signed_in: "Ստորագրվել է!"
-    signed_out: "Դուք դուրս կգաք <a href=%{url}> Code.org </a>:"
+    signed_in: Ստորագրվել է!
+    signed_out: 'Դուք դուրս կգաք <a href=%{url}> Code.org </a>:'
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
-    already_signedup: "Արդեն ստորագրել:"
+    already_signedup: 'Արդեն ստորագրել:'
     notyet_signedup: 'Havent միացել:'
     google_oauth2: Google Հաշվի
-    twitter: "ծլվլոց"
+    twitter: ծլվլոց
     facebook: Facebook
     windowslive: Microsoft Հաշվի
     clever: Clever Account
-    forgot_password: "Մոռացել եք Ձեր գաղտնաբառը?"
-    need_confirmation: "Չէի ստանալ հաստատում հրահանգներ."
-    need_unlock: "Չէի ստանում են բացելու հրահանգներ."
+    forgot_password: Մոռացել եք Ձեր գաղտնաբառը?
+    need_confirmation: Չէի ստանալ հաստատում հրահանգներ.
+    need_unlock: Չէի ստանում են բացելու հրահանգներ.
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
@@ -122,23 +122,23 @@
       to assign courses to students and track their progress. <a href="%{studio_url}">You
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
-    teacher_educator_guide: "Տես մանկավարժ ուղեցույցը"
+    teacher_educator_guide: Տես մանկավարժ ուղեցույցը
     title: Sign up for Code.org
     school_name: School Անուն (ըստ ցանկության)
-    school_address: "Դպրոցը հասցեն (ըստ ցանկության)"
-    address_placeholder: "հասցեն, քաղաք, պետություն, փոստային"
-    gender: "Սեռը (ըստ ցանկության)"
-    birthday: "Ծննդյան թիվը (ըստ ցանկության)"
-    age: "Տարիք"
-    user_type: "Դուք ուսանող կամ ուսուցիչ:"
-    submit: "Գրանցվել"
-    teacher: "Դուք ուսուցիչ եք?"
-    valid_username: "Դուք փնտրել էք -."
-    invalid_username: "Մականուն պետք է լինի առնվազն 5 նիշ"
-    taken_username: "Մականուն արդեն ձեռնարկվել"
+    school_address: Դպրոցը հասցեն (ըստ ցանկության)
+    address_placeholder: հասցեն, քաղաք, պետություն, փոստային
+    gender: Սեռը (ըստ ցանկության)
+    birthday: Ծննդյան թիվը (ըստ ցանկության)
+    age: Տարիք
+    user_type: 'Դուք ուսանող կամ ուսուցիչ:'
+    submit: Գրանցվել
+    teacher: Դուք ուսուցիչ եք?
+    valid_username: Դուք փնտրել էք -.
+    invalid_username: Մականուն պետք է լինի առնվազն 5 նիշ
+    taken_username: Մականուն արդեն ձեռնարկվել
     valid_password: 'Valid գաղտնաբառը:'
-    invalid_password: "Գաղտնաբառ պետք է լինի առնվազն 6 նիշ"
-    mismatch_password: "Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում"
+    invalid_password: Գաղտնաբառ պետք է լինի առնվազն 6 նիշ
+    mismatch_password: Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
@@ -148,12 +148,12 @@
       for more information.
     teacher_terms: I agree to be bound by the Code.org terms of service. For more
       information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
-    additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել
-      ստորագրման ձեզ."
+    additional_information: Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել
+      ստորագրման ձեզ.
     user_type_label: Account Type
     user_type_teacher: Teacher
-    user_type_student: "Աշակերտ"
-    field_is_required: "պարտադիր ե"
+    user_type_student: Աշակերտ
+    field_is_required: պարտադիր ե
     accept_terms: You must agree to create an account
     error: An error occurred.
   school_info:
@@ -165,7 +165,7 @@
     public: Public
     homeschool: Homeschool
     after_school: After School
-    other: "Այլ"
+    other: Այլ
     state: State
     district: District
     other_district_not_listed: Other district not listed above
@@ -178,44 +178,44 @@
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "Ունենա հաշիվ արդեն. Մուտք գործել"
-    login: "Էլ. փոստ"
+    title: Ունենա հաշիվ արդեն. Մուտք գործել
+    login: Էլ. փոստ
     login_username: Email or Username
-    password: "գաղտնաբառ"
-    remember: "Հիշիր ինձ"
-    submit: "Մուտք գործել"
+    password: գաղտնաբառ
+    remember: Հիշիր ինձ
+    submit: Մուտք գործել
   signin:
-    try_heading: "Ցանկանում եք փորձել կոդավորման առանց հերթագրման."
-    try_hoc: "Նախ փորձիր մեկ Կոդի Ժամ"
-    try_20hours: "Փորձեք մեր 20 ժամյա Intro համակարգչին գիտության"
+    try_heading: Ցանկանում եք փորձել կոդավորման առանց հերթագրման.
+    try_hoc: Նախ փորձիր մեկ Կոդի Ժամ
+    try_20hours: Փորձեք մեր 20 ժամյա Intro համակարգչին գիտության
   signinsection:
     welcome: Welcome to %{section_name}
-    name: "Ընտրեք ձեր անունը"
-    picture: "Այժմ գտնել ձեր գաղտնի պատկերը,"
-    words: "Այժմ Մուտքագրեք ձեր գաղտնի բառերը"
-    login: "Մուտք գործել"
+    name: Ընտրեք ձեր անունը
+    picture: Այժմ գտնել ձեր գաղտնի պատկերը,
+    words: Այժմ Մուտքագրեք ձեր գաղտնի բառերը
+    login: Մուտք գործել
     invalid_login: Invalid login, please try again
     pair_programming: I have a partner at my computer
     student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
       target='_blank'>here</a>.
   password:
     reset_form:
-      title: "Մոռացել եք Ձեր գաղտնաբառը?"
+      title: Մոռացել եք Ձեր գաղտնաբառը?
       instructions: Enter your email address associated with your account below and
         we'll send you password reset instructions.
-      email: "Էլեկտրոնային հասցե"
-      submit: "Հաստատել"
+      email: Էլեկտրոնային հասցե
+      submit: Հաստատել
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
-      title: "Փոխել ձեր գաղտնաբառը"
-      new_password: "Նոր ծածկագիր"
-      confirm_password: "Հաստատեք նոր գաղտնաբառը"
-      submit: "Փոխել իմ գաղտնաբառը"
+      title: Փոխել ձեր գաղտնաբառը
+      new_password: Նոր ծածկագիր
+      confirm_password: Հաստատեք նոր գաղտնաբառը
+      submit: Փոխել իմ գաղտնաբառը
   welcome_email:
-    subject: "Գրանցման իմ դասարանում է (Code.org)"
+    subject: Գրանցման իմ դասարանում է (Code.org)
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your teacher):
 
@@ -239,22 +239,22 @@
     type:
       picture: Picture Password
       word: Secret Word
-      email: "Էլ. փոստ"
+      email: Էլ. փոստ
       google_classroom: Google Classroom
       clever: Clever
   follower:
-    invite_sent: "Հրավիրել ուղարկվել"
+    invite_sent: Հրավիրել ուղարկվել
     added_teacher: "%{name} added as your teacher"
     registered: You've registered for %{section_name}.
     error:
-      signed_in: "Խնդրում ենք signout մինչեւ վարույթի"
+      signed_in: Խնդրում ենք signout մինչեւ վարույթի
       username_not_found: Username %{username} not found
       username_in_use: "%{username} is already taken, please pick another"
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
-      blank_code: "Խնդրում ենք մուտքագրել մի հատված կոդ"
-      cant_join_own_section: "Ներեցեք, Դուք հակում միանալ ձեր սեփական բաժինը:"
+      blank_code: Խնդրում ենք մուտքագրել մի հատված կոդ
+      cant_join_own_section: 'Ներեցեք, Դուք հակում միանալ ձեր սեփական բաժինը:'
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
@@ -264,17 +264,17 @@
           your student.'
   reports:
     error:
-      access_denied: "Դուք dont պետք է մուտք դեպի այս անձինք վիճակագրությունը"
+      access_denied: Դուք dont պետք է մուտք դեպի այս անձինք վիճակագրությունը
   crud:
     new_model: New %{model}
-    show: "Ցուցադրում"
-    edit: "խմբագրել"
+    show: Ցուցադրում
+    edit: խմբագրել
     edit_model: Edit %{model}
-    update: "Թարմացնել"
-    submit: "Հաստատել"
-    destroy: "ոչնչացնել"
-    back: "Վերադառնալ"
-    confirm: "Համոզված ես?"
+    update: Թարմացնել
+    submit: Հաստատել
+    destroy: ոչնչացնել
+    back: Վերադառնալ
+    confirm: Համոզված ես?
     created: "%{model} was successfully created."
     updated: "%{model} was successfully updated."
     destroyed: "%{model} was successfully deleted."
@@ -291,20 +291,20 @@
           password
   nav:
     header:
-      finished_hoc: "Ես ավարտեցի իմ Կոդի Ժամը"
-      sign_in_to_save: "Մուտք գործեք փրկելու առաջընթացը"
+      finished_hoc: Ես ավարտեցի իմ Կոդի Ժամը
+      sign_in_to_save: Մուտք գործեք փրկելու առաջընթացը
       free_play:
-        playlab: "Կատարել է Play Lab հավելվածը"
-        artist: "Ոչ ոքի մի բան"
+        playlab: Կատարել է Play Lab հավելվածը
+        artist: Ոչ ոքի մի բան
         calculate: Calculate something
-        applab: "Կատարել App Lab հավելվածը"
+        applab: Կատարել App Lab հավելվածը
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
       my_dashboard: My Dashboard
-      courses: "Դասընթացներ"
+      courses: Դասընթացներ
       course_catalog: Course Catalog
-      project_gallery: "ծրագրեր"
+      project_gallery: ծրագրեր
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -316,7 +316,7 @@
       educate_elementary: Elementary School
       educate_middle: Middle School
       educate_high: High School
-      educate_hoc: "Կոդի ժամ"
+      educate_hoc: Կոդի ժամ
       educate_partner: Partner with Us
       educate_beyond: Beyond Code.org
       educate_inspire: Inspire a Student
@@ -333,73 +333,73 @@
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
-      stats: "Վիճակագրություն"
+      stats: Վիճակագրություն
       help_us: Help Us
       teach: Teach
       about: About
     user:
-      classroom: "Ուսուցչի գլխավոր էջը"
+      classroom: Ուսուցչի գլխավոր էջը
       district_dashboard: District Dashboard
-      label: "Բարև %{username}"
+      label: Բարև %{username}
       stats: Code Studio
-      settings: "Իմ էջը"
-      logout: "Դուրս գալ"
-      signin: "Մուտք գործել"
+      settings: Իմ էջը
+      logout: Դուրս գալ
+      signin: Մուտք գործել
       signup: Create an account
-      already_registered: "Արդեն գրանցված եք"
-      pair_programming: "Զույգ Ծրագրավորում"
+      already_registered: Արդեն գրանցված եք
+      pair_programming: Զույգ Ծրագրավորում
       team: Team
       driver: Logged in
       navigator: Partner
     popup:
       progress_for_user: "%{name}-ի առաջընթացը"
-      progress: "Ձեր առաջընթացը"
-      lines: "Ընդհանուր կոդի տողերի քանակի: %{lines}"
-      close: "ՓԱԿԵԼ"
+      progress: Ձեր առաջընթացը
+      lines: 'Ընդհանուր կոդի տողերի քանակի: %{lines}'
+      close: ՓԱԿԵԼ
       mastery: Concepts
-      puzzle_map: "փուլերը"
+      puzzle_map: փուլերը
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
       prize_us_only: "(U.S. students only)"
-      prizes_link: "ավելի շատ տեղեկություն"
+      prizes_link: ավելի շատ տեղեկություն
   teacher:
-    answer: "պատասխան"
-    for_teachers_only: "Ուսուցիչների համար Միայն"
+    answer: պատասխան
+    for_teachers_only: Ուսուցիչների համար Միայն
     title:
-      one: "Ձեր ուսուցիչը."
-      other: "Ձեր ուսուցիչներին:"
+      one: Ձեր ուսուցիչը.
+      other: 'Ձեր ուսուցիչներին:'
     remove: "(remove teacher)"
     confirm:
-      remove: "Համոզված եք, որ ցանկանում եք հեռացնել այս ուսուցիչը:"
+      remove: 'Համոզված եք, որ ցանկանում եք հեռացնել այս ուսուցիչը:'
     students:
       dashboard: Go to Teacher Dashboard
-    user_not_found: "Ուսուցիչը չի կարող գտնվել."
+    user_not_found: Ուսուցիչը չի կարող գտնվել.
     student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
-      answer_viewer: "Ուսուցչի Վահանակ"
-      student: "Աշակերտ"
-      viewing_solution: "Անձնագրի Solution"
-      try_it_yourself: "Փորձեք ինքներդ"
+      answer_viewer: Ուսուցչի Վահանակ
+      student: Աշակերտ
+      viewing_solution: Անձնագրի Solution
+      try_it_yourself: Փորձեք ինքներդ
       section: Section
-      example: "օրինակ, Solution"
+      example: օրինակ, Solution
       example_with_number: Example Solution %{solution_number}
-      submitted_on: "Ներկայացվել է:"
+      submitted_on: 'Ներկայացվել է:'
       unsubmit: Unsubmit
       worked_with: Worked With
       update_lock_settings: Update lock settings here.
       clear_response: Clear response
   user:
-    email_confirm_needed: "Փոստի հասցեն չի հաստատվել:"
+    email_confirm_needed: 'Փոստի հասցեն չի հաստատվել:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(Wrong email address?)"
-    email_resend_confirm: "Շարժական հրահանգներ"
+    email_resend_confirm: Շարժական հրահանգներ
     new_password_hint: "(leave blank if you dont want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
-    delete: "Ջնջել Ձեր հաշիվը"
-    delete_text: "Սեղմելով կոճակը, որը ջնջել Ձեր հաշիվը."
-    delete_text_teacher_note: "Խնդրում ենք նկատի ունենալ, որ «ջնջել Ձեր հաշիվը չի
-      ջնջել ձեր ուսանողներին հաշիվները:"
-    delete_confirm: "Համոզված եք, որ ցանկանում եք ջնջել Ձեր հաշիվը?"
+    delete: Ջնջել Ձեր հաշիվը
+    delete_text: Սեղմելով կոճակը, որը ջնջել Ձեր հաշիվը.
+    delete_text_teacher_note: 'Խնդրում ենք նկատի ունենալ, որ «ջնջել Ձեր հաշիվը չի
+      ջնջել ձեր ուսանողներին հաշիվները:'
+    delete_confirm: Համոզված եք, որ ցանկանում եք ջնջել Ձեր հաշիվը?
     deleted_user: deleted user
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -425,52 +425,52 @@
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
   user_level:
-    completed: "Ավարտված"
-    tried: "փորձել"
+    completed: Ավարտված
+    tried: փորձել
   home:
     title: Code Studio
-    description: "Կոդ Studio տունն է առցանց դասընթացների ստեղծած Code.org"
+    description: Կոդ Studio տունն է առցանց դասընթացների ստեղծած Code.org
     lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
     lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
       MILLION STUDENTS"
-    all_courses: "Ակնարկ դասընթացներ 1, 2, եւ 3-"
-    lesson_plans: "դասերի պլաններ"
+    all_courses: Ակնարկ դասընթացներ 1, 2, եւ 3-
+    lesson_plans: դասերի պլաններ
     signin_message: Already registered? %{link}
-    student_reg_link: "Ուսանողական Գրանցվել"
-    teacher_reg_link: "Ուսուցչուհի Գրանցվել"
-    signin_directions: "Օգտագործեք հաշիվ հետեւելու առաջընթացը: <br/> ուսուցիչները,
-      հետեւել ձեր ամբողջ դաս."
-    teacher_dashboard: "Տես առաջընթաց վահան"
+    student_reg_link: Ուսանողական Գրանցվել
+    teacher_reg_link: Ուսուցչուհի Գրանցվել
+    signin_directions: 'Օգտագործեք հաշիվ հետեւելու առաջընթացը: <br/> ուսուցիչները,
+      հետեւել ձեր ամբողջ դաս.'
+    teacher_dashboard: Տես առաջընթաց վահան
     teacher_student_count_one: You have %{count} student.
     teacher_student_count: You have %{count} students.
     teacher_averages: On average your students have earned %{trophy_average} out of
       %{trophy_max} "Concept Mastery" trophies.
-    teacher_print_certificates: "Տպագիր վկայականներ ուսանողների համար, ովքեր ավարտել
-      այս դասընթացը"
-    teacher_read_blog: "Կարդալ մասին նորություններից եւ թարմացումներից մեր նյութերի
-      մեր մանկավարժ Օրագիր"
-    classroom: "Ձեր դասարան"
-    student_progress: "Ձեր ուսուցման առաջընթացը"
+    teacher_print_certificates: Տպագիր վկայականներ ուսանողների համար, ովքեր ավարտել
+      այս դասընթացը
+    teacher_read_blog: Կարդալ մասին նորություններից եւ թարմացումներից մեր նյութերի
+      մեր մանկավարժ Օրագիր
+    classroom: Ձեր դասարան
+    student_progress: Ձեր ուսուցման առաջընթացը
     student_stats: Youve earned %{trophy_count} out of %{trophy_max} Concept Mastery
       trophies.
-    student_left_off: "Որտեղ դուք թողել դուրս:"
+    student_left_off: 'Որտեղ դուք թողել դուրս:'
     student_finished: You've completed all Code.org tutorials. Pick another class
       %{online_link} or at a %{local_school_link}.
-    local_school: "տեղական դպրոց"
-    online: "առցանց"
-    see_details: "Տես մանրամասները"
-    view_course: "Դիտել դասընթացը"
-    prize_info: "Մրցանակներ մասնակցության (ԱՄՆ հանրակրթական դպրոցների ուսուցիչների
-      միայն) 'մինչեւ $ 1,000 դասարանում պարգեւներով."
-    tryfirst: "Կամ, Դուք կարող եք փորձել այն առաջին, եւ ստորագրել մինչեւ ուշ:"
-    trynow: "Փորձել հիմա"
-    add_hint_help: "Խնդրում ենք օգնել մեզ է ավելացնել խելացի ակնարկներ Code.org ճանապարհները"
-    20hour_overview: "Այս 20-ժամյա դասընթացը ներկայացնում է հիմնական համակարգչային
+    local_school: տեղական դպրոց
+    online: առցանց
+    see_details: Տես մանրամասները
+    view_course: Դիտել դասընթացը
+    prize_info: Մրցանակներ մասնակցության (ԱՄՆ հանրակրթական դպրոցների ուսուցիչների
+      միայն) 'մինչեւ $ 1,000 դասարանում պարգեւներով.
+    tryfirst: 'Կամ, Դուք կարող եք փորձել այն առաջին, եւ ստորագրել մինչեւ ուշ:'
+    trynow: Փորձել հիմա
+    add_hint_help: Խնդրում ենք օգնել մեզ է ավելացնել խելացի ակնարկներ Code.org ճանապարհները
+    20hour_overview: Այս 20-ժամյա դասընթացը ներկայացնում է հիմնական համակարգչային
       գիտության եւ ծրագրավորման հասկացությունները. Դասընթացը նախատեսված է օգտագործման
-      համար դասարանների համար դասարանների K-8, բայց դա հաճելի է իմանալ, թե բոլոր տարիքի."
+      համար դասարանների համար դասարանների K-8, բայց դա հաճելի է իմանալ, թե բոլոր տարիքի.
     test_videos_help: Test մեր նոր տեսամագնիտոֆոն ձեր դպրոցում
     try_beta_courses: New! Փորձեք մեր բետա դասընթացներ K-5 ուսանողների
-    use_as_teacher: "Օգտագործեք այս կայքը, որպես ուսուցիչ"
+    use_as_teacher: Օգտագործեք այս կայքը, որպես ուսուցիչ
     heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
@@ -478,10 +478,10 @@
     heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
       School</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
-    your_gallery: "սրահ"
-    no_primary_course: "Փորձեք մի Code Studio դասընթաց"
-    choose_next_course: "Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ"
-    print_certificate: "Տպել վկայական"
+    your_gallery: սրահ
+    no_primary_course: Փորձեք մի Code Studio դասընթաց
+    choose_next_course: Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ
+    print_certificate: Տպել վկայական
     announcement_title: Announcements
     announcement_message_fall2016_features: We spent the summer turning your feedback
       into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
@@ -495,17 +495,17 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "Սովորել ավելին"
-    announcement_try_now_button: "Փորձել հիմա"
+    announcement_learn_more_button: Սովորել ավելին
+    announcement_try_now_button: Փորձել հիմա
     announcement_host_an_hour_button: Host an Hour
     announcement_watch_video_button: Watch video
-    announcement_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր
+    announcement_petition: 'Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր
       ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային գիտությունը:
       Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ, կրթության
       առաջնորդները, 28 նահանգապետեր, եւ ղեկավարները Ամերիկաների խոշորագույն ընկերությունները
       միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել K-12 համակարգչային
-      գիտության կրթություն:"
-    announcement_petition_button: "Հավելեք ձեր անունը"
+      գիտության կրթություն:'
+    announcement_petition_button: Հավելեք ձեր անունը
     announcement_go_beyond_button: Go beyond
     announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
@@ -593,39 +593,39 @@
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
-    section_code_cant_be_current_section: "Ներկայիս բաժինը չի կարող լինել նույնը,
-      քանի որ նոր բաժնում:"
+    section_code_cant_be_current_section: 'Ներկայիս բաժինը չի կարող լինել նույնը,
+      քանի որ նոր բաժնում:'
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
-    student_ids_not_entered: "Խնդրում ենք տրամադրել student_ids:"
-    student_not_found: "Մեկ կամ ավելի շատ ուսանողներ չեն կարող գտնվել:"
-    all_students_must_be_in_current_section: "Բոլոր ուսանողները պետք է այժմ է գրանցվի
-      ձեր բաժնում."
-    already_enrolled_in_new_section: "Դուք չեք կարող տեղափոխել այդ ուսանողներին, քանի
-      որ այդ ուսուցիչը արդեն ունի դրանք այլ բաժնում:"
+    student_ids_not_entered: 'Խնդրում ենք տրամադրել student_ids:'
+    student_not_found: 'Մեկ կամ ավելի շատ ուսանողներ չեն կարող գտնվել:'
+    all_students_must_be_in_current_section: Բոլոր ուսանողները պետք է այժմ է գրանցվի
+      ձեր բաժնում.
+    already_enrolled_in_new_section: 'Դուք չեք կարող տեղափոխել այդ ուսանողներին, քանի
+      որ այդ ուսուցիչը արդեն ունի դրանք այլ բաժնում:'
   share:
-    title: "Սովորել օրենսգրքի Studio"
-    description: "Յուրաքանչյուրը կարող է սովորել համակարգչային գիտությունը: Կատարել
-      խաղեր, ծրագրեր եւ արվեստը օրենսգրքի:"
-    try_hour_of_code: "Փորձիր Կոդի Ժամը"
+    title: Սովորել օրենսգրքի Studio
+    description: 'Յուրաքանչյուրը կարող է սովորել համակարգչային գիտությունը: Կատարել
+      խաղեր, ծրագրեր եւ արվեստը օրենսգրքի:'
+    try_hour_of_code: Փորձիր Կոդի Ժամը
   gender:
-    male: "արական"
-    female: "իգական"
-    none: "Նախընտրում եմ չպատասխանել"
+    male: արական
+    female: իգական
+    none: Նախընտրում եմ չպատասխանել
   user_type:
-    student: "Աշակերտ"
+    student: Աշակերտ
     teacher: Teacher
   footer:
-    thank_you: "Մենք շնորհակալ ենք մեր <a href=https://code.org/about/donors> դոնորներ
+    thank_you: 'Մենք շնորհակալ ենք մեր <a href=https://code.org/about/donors> դոնորներ
       </a>, <a href=https://code.org/about/partners> գործընկերները </a>, մեր <ա href
       = https: //code.org/about/team> երկարաձգվել թիմը </a>, մեր video Դերերում, եւ
       մեր <a href=https://code.org/about/advisors> կրթության խորհրդականները </a> համար
-      նրանց աջակցությունը ստեղծել Code Studio."
-    help_from_html: "Մենք հատկապես ուզում ենք ճանաչել ճարտարագետներ են Google- ը,
+      նրանց աջակցությունը ստեղծել Code Studio.'
+    help_from_html: 'Մենք հատկապես ուզում ենք ճանաչել ճարտարագետներ են Google- ը,
       Microsoft- ը, Facebook- ը, Twitter- ը, եւ շատ ուրիշներ, ովքեր օգնեց ստեղծել
-      այս նյութերը:"
-    help_from_html_old: "Ինժեներներ Google- ի, Microsoft- ի, Facebook- ի եւ Twitter-
-      ի օգնեց ստեղծել այս նյութերը:"
+      այս նյութերը:'
+    help_from_html_old: 'Ինժեներներ Google- ի, Microsoft- ի, Facebook- ի եւ Twitter-
+      ի օգնեց ստեղծել այս նյութերը:'
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
       />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
       />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
@@ -647,35 +647,35 @@
     powered_by_aws: Powered by Սայլակ վեբ ծառայություններ
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
-    copyright: "հեղինակային իրավունք"
+    copyright: հեղինակային իրավունք
     more: More
-    feedback: "ապահովել հետադարձ կապը"
-    translate: "Օգնեք մեզ թարգմանել Ձեր լեզվով"
-    support: "աջակցություն"
+    feedback: ապահովել հետադարձ կապը
+    translate: Օգնեք մեզ թարգմանել Ձեր լեզվով
+    support: աջակցություն
     support_url: http://support.code.org
-    tos_short: "Պայմաններ"
-    tos: "Ծառայությունների մատուցման պայմաններ"
-    privacy: "Գաղտնիության քաղաքականություն"
+    tos_short: Պայմաններ
+    tos: Ծառայությունների մատուցման պայմաններ
+    privacy: Գաղտնիության քաղաքականություն
     secure: Secure Տարբերակ
-    report_abuse: "Զեկուցել չարաշահման մասին"
-    built_on_code_studio: "Կառուցվել է օրենսգրքի Studio"
-    make_my_own_app: "Կատարել իմ սեփական հավելվածը"
-    how_it_works: "Ինչպես է այն աշխատում"
-    try_hour_of_code: "Փորձիր Կոդի Ժամը"
+    report_abuse: Զեկուցել չարաշահման մասին
+    built_on_code_studio: Կառուցվել է օրենսգրքի Studio
+    make_my_own_app: Կատարել իմ սեփական հավելվածը
+    how_it_works: Ինչպես է այն աշխատում
+    try_hour_of_code: Փորձիր Կոդի Ժամը
   reference_area:
-    title: "Օգնության կարիք ունեմ?"
-    subtitle: "Տես այդ տեսանյութերը եւ ակնարկներ"
-    teacher: "Լուծումը տեսնում"
+    title: Օգնության կարիք ունեմ?
+    subtitle: Տես այդ տեսանյութերը եւ ակնարկներ
+    teacher: Լուծումը տեսնում
     teacher_no_solution: Stop seeing solution
-    auth_error: "Դուք լիազորված չեք տեսնում, լուծում."
-    submit: "Թարմացնել Artist Որտեղից"
-    direction: "Սկսեք ուղղությամբ (ի աստիճանով)"
+    auth_error: Դուք լիազորված չեք տեսնում, լուծում.
+    submit: Թարմացնել Artist Որտեղից
+    direction: Սկսեք ուղղությամբ (ի աստիճանով)
   video:
     tab: 'Video:'
-    notes: "Ոչ տեսանյութ: Ցույց տալ մասնիկներ."
-    notes_coming_soon: "Նշում է, որովհետեւ այս տեսանյութը շուտով:"
-    autoplay_option: "Ինքնանվագարկում տեսանյութեր"
-    download: "ներբեռնել Video"
+    notes: 'Ոչ տեսանյութ: Ցույց տալ մասնիկներ.'
+    notes_coming_soon: 'Նշում է, որովհետեւ այս տեսանյութը շուտով:'
+    autoplay_option: Ինքնանվագարկում տեսանյութեր
+    download: ներբեռնել Video
     show_notes: Show Notes
     show_video: Show Video
   compatibility:
@@ -684,7 +684,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: "Սովորել ավելին"
+      link: Սովորել ավելին
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -697,75 +697,75 @@
       weblab_unsupported_locale_storage: You may experience issues using Web Lab in
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
-  slow_loading: "Սա հաշվի առնելով ավելի երկար, քան սովորական ..."
-  try_reloading: "Փորձեք վերաբեռնել էջը"
-  next_stage: "Ավարտված է! Շարունակել հաջորդ փուլ:"
-  download_pdf: "Բաց դաս Plan"
-  lesson_plan: "Դաս Plan"
-  view_lesson_plan: "Դիտել դասի պլանը"
-  pdf_download: "Բեռնել PDF"
-  download_coming_soon: "Բեռնվող գործունեության շուտով:"
-  video_coming_soon: "Վիդեո Շուտով!"
-  not_started: "Ուսանողը չի փորձել այս մակարդակը."
+  slow_loading: Սա հաշվի առնելով ավելի երկար, քան սովորական ...
+  try_reloading: Փորձեք վերաբեռնել էջը
+  next_stage: 'Ավարտված է! Շարունակել հաջորդ փուլ:'
+  download_pdf: Բաց դաս Plan
+  lesson_plan: Դաս Plan
+  view_lesson_plan: Դիտել դասի պլանը
+  pdf_download: Բեռնել PDF
+  download_coming_soon: 'Բեռնվող գործունեության շուտով:'
+  video_coming_soon: Վիդեո Շուտով!
+  not_started: Ուսանողը չի փորձել այս մակարդակը.
   share_code:
-    title: "Սեղմեք Run տեսնել իմ ծրագիրը գործողության"
+    title: Սեղմեք Run տեսնել իմ ծրագիրը գործողության
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Check out my Flappy Game
     studio_og_title: Check out my Խաղալ Lab App
-    check_out_what_i_made: "Ստուգել, ​​թե ինչ եմ արել"
-    og_description: "Ես գրել եմ, վարքականոնի ինքս ինձ հետ Code.org"
-    phone_number_not_allowed: "Կարծես կա հեռախոսահամար դրան: Փորձեք փոխել տեքստը."
-    address_not_allowed: "Կարծես կա հասցեն դրան: Փորձեք փոխել տեքստը."
-    email_not_allowed: "Կարծես կա Փոստի դրան: Փորձեք փոխել տեքստը."
-    profanity_not_allowed: "Կարծես կա անպարկեշտություն է դրան: Փորձեք փոխել տեքստը."
+    check_out_what_i_made: Ստուգել, ​​թե ինչ եմ արել
+    og_description: Ես գրել եմ, վարքականոնի ինքս ինձ հետ Code.org
+    phone_number_not_allowed: 'Կարծես կա հեռախոսահամար դրան: Փորձեք փոխել տեքստը.'
+    address_not_allowed: 'Կարծես կա հասցեն դրան: Փորձեք փոխել տեքստը.'
+    email_not_allowed: 'Կարծես կա Փոստի դրան: Փորձեք փոխել տեքստը.'
+    profanity_not_allowed: 'Կարծես կա անպարկեշտություն է դրան: Փորձեք փոխել տեքստը.'
   builder:
-    created: "Դուք ստեղծել է նոր սցենար."
-    destroyed: "Դուք ոչնչացվել է մի սցենար:"
-    manage: "Կառուցել մակարդակները"
-    view: "տեսարան"
-    back: "Վերադառնալ սցենարներ"
-    success: "Դուք հաջողությամբ խմբագրվել նյութից."
+    created: Դուք ստեղծել է նոր սցենար.
+    destroyed: 'Դուք ոչնչացվել է մի սցենար:'
+    manage: Կառուցել մակարդակները
+    view: տեսարան
+    back: Վերադառնալ սցենարներ
+    success: Դուք հաջողությամբ խմբագրվել նյութից.
     level:
-      create: "Ստեղծել նոր մակարդակի"
-      current: "Ընթացիկ հարթաչափեր"
-      unused: "չօգտագործված հարթաչափեր"
+      create: Ստեղծել նոր մակարդակի
+      current: Ընթացիկ հարթաչափեր
+      unused: չօգտագործված հարթաչափեր
   upsell:
     applab:
       title: App Lab
       body: App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps.
         Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի,
         ապա կիսվել ձեր ծրագիրը վայրկյաններով.
-      body_short: "Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն
-        աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով."
-      audience: "տարեկան 13-ից ավելի"
-      cta: "Իմացեք, թե ինչպես"
+      body_short: Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն
+        աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.
+      audience: տարեկան 13-ից ավելի
+      cta: Իմացեք, թե ինչպես
     hoc:
       title: Classic Maze
-      body: "Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի."
+      body: Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի.
     flappy:
       title: Flappy-ի կոդը
       body: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy
         Code խնամակալական!'
     20-hour:
-      title: "Արագացված Դասընթացի"
+      title: Արագացված Դասընթացի
       body: This 20-hour course covers the core computer science and programming concepts
         in courses 2-4. The course is designed for use with ages 10-18. Check out
         courses 2-4 for a more complete experience!
-      body_short: "Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով
-        դասընթացներ 2-4:"
+      body_short: 'Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով
+        դասընթացներ 2-4:'
     hoc2014:
-      try_new_tutorial: "Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա"
-      try_frozen: "Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած"
+      try_new_tutorial: Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա
+      try_frozen: Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած
     gallery:
-      title: "սրահ"
-      body: "Դիտելու պատկերասրահում ծրագրի եւ նկարիչ պատկերների կողմից ստեղծված մեր
-        օգտվողներին"
+      title: սրահ
+      body: Դիտելու պատկերասրահում ծրագրի եւ նկարիչ պատկերների կողմից ստեղծված մեր
+        օգտվողներին
     gamelab:
       title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "տարեկան 13-ից ավելի"
-      cta: "Իմացեք, թե ինչպես"
+      audience: տարեկան 13-ից ավելի
+      cta: Իմացեք, թե ինչպես
     hoc-encryption:
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
@@ -773,18 +773,18 @@
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "տարեկան 13-ից ավելի"
-      cta: "Իմացեք, թե ինչպես"
+      audience: տարեկան 13-ից ավելի
+      cta: Իմացեք, թե ինչպես
     frozen:
-      title: "սառած"
+      title: սառած
     starwars:
-      title: "Աստղային պատերազմներ"
+      title: Աստղային պատերազմներ
     infinity:
       title: Infinity Խաղալ Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: "Հետազոտել է Minecraft աշխարհը կոդը:"
+      body: 'Հետազոտել է Minecraft աշխարհը կոդը:'
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -801,14 +801,14 @@
         text by substituting patterns with symbols.
     unplugged:
       title: unplugged Դասեր
-      audience: "տարեկան 4+"
+      audience: տարեկան 4+
       body: 'Weve կազմել ցուցակը unplugged դասերի ձեզ համար օգտագործել ձեր դասարանում.
         Այժմ դուք կարող եք սովորեցնել հիմունքների համակարգչային գիտության, թե արդյոք
         դուք ունեք համակարգիչ է ձեր դասարանում, թե ոչ: Փորձեք օգտագործելով այս դասերը
         որպես առանձին ոլորտ, իհարկե, կամ, ինչպես կոմպլեմենտար դասեր ցանկացած համակարգչային
         գիտության, իհարկե:'
-      body_short: "Եթե ​​դուք dont պետք համակարգիչներ, փորձեք այդ unplugged դասեր
-        ձեր դասարանում."
+      body_short: Եթե ​​դուք dont պետք համակարգիչներ, փորձեք այդ unplugged դասեր ձեր
+        դասարանում.
     unplugged_conditionals:
       title: conditionals
       body: Learn about algorithms and conditional statements in this “unplugged”
@@ -819,58 +819,58 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Ages 14+
-      cta: "Իմացեք, թե ինչպես"
+      cta: Իմացեք, թե ինչպես
   gallery:
-    students_drew_these_with_code: "Ուսանողները ոչ-ոքի դրանք կոդով!"
-    students_made_these_with_code: "Ուսանողները դրանք կոդով!"
+    students_drew_these_with_code: Ուսանողները ոչ-ոքի դրանք կոդով!
+    students_made_these_with_code: Ուսանողները դրանք կոդով!
     picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
       pictures by writing their own computer programs. Click on the pictures to see
       each program in action.
     activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
       apps and pictures by writing their own computer programs. Click on the pictures
       and screenshots to see each program in action.
-    want_to_make_your_own: "Ցանկանում եք, որպեսզի ձեր սեփական."
+    want_to_make_your_own: Ցանկանում եք, որպեսզի ձեր սեփական.
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
     more: More & rarr;
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
-    header: "սրահ"
-    header_playlab: "Պատմություններ եւ խաղեր"
-    header_artist: "ՕՐԵՆՍԳԻՐՔ, հոդված"
-    report_abuse: "Զեկուցել չարաշահման մասին"
+    header: սրահ
+    header_playlab: Պատմություններ եւ խաղեր
+    header_artist: ՕՐԵՆՍԳԻՐՔ, հոդված
+    report_abuse: Զեկուցել չարաշահման մասին
   landing:
-    prerelease: "Այս դասընթացը է <span class = betatext> բետա </ span>. Սա նշանակում
+    prerelease: 'Այս դասընթացը է <span class = betatext> բետա </ span>. Սա նշանակում
       է, որ դա ոչ թե վերջնական տարբերակը, իհարկե, եւ ենթակա է վերանայման, ինչպես նաեւ
-      հետադարձ ստացել եւ բարելավումներ են կատարվում:"
-    prerelease_hoc2014: "Սա Tutorial է <span class = betatext> բետա </ span>. Այն
-      ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:"
+      հետադարձ ստացել եւ բարելավումներ են կատարվում:'
+    prerelease_hoc2014: 'Սա Tutorial է <span class = betatext> բետա </ span>. Այն
+      ենթակա է վերանայման, ինչպես նաեւ հետադարձ ստացել եւ բարելավումներ են կատարվում:'
     report_bug: Report Bug
-    support: "Օգնություն ստանալ"
+    support: Օգնություն ստանալ
     support_url: "//support.code.org"
-    help_resources: "Օգնություն եւ ռեսուրսներ"
+    help_resources: Օգնություն եւ ռեսուրսներ
     help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
-    wrong_title: "Սխալ պատասխանը"
-    wrong_body: "Այս հարցի պատասխանը դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!"
-    correct_title: "ճիշտ"
-    correct_body: "Ճիշտ է!"
+    wrong_title: Սխալ պատասխանը
+    wrong_body: 'Այս հարցի պատասխանը դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!'
+    correct_title: ճիշտ
+    correct_body: Ճիշտ է!
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "Շնորհակալություն"
-    wrong_body: "Շնորհակալություն ներկայացնելու համար պատասխան."
-    correct_title: "Շնորհակալություն"
-    correct_body: "Շնորհակալություն ներկայացնելու համար պատասխան."
+    wrong_title: Շնորհակալություն
+    wrong_body: Շնորհակալություն ներկայացնելու համար պատասխան.
+    correct_title: Շնորհակալություն
+    correct_body: Շնորհակալություն ներկայացնելու համար պատասխան.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "Շնորհակալություն"
-    wrong_body: "Շնորհակալություն ներկայացնելու համար պատասխաններ."
-    correct_title: "Շնորհակալություն"
-    correct_body: "Շնորհակալություն ներկայացնելու համար պատասխաններ."
+    wrong_title: Շնորհակալություն
+    wrong_body: Շնորհակալություն ներկայացնելու համար պատասխաններ.
+    correct_title: Շնորհակալություն
+    correct_body: Շնորհակալություն ներկայացնելու համար պատասխաններ.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -878,60 +878,60 @@
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "Շնորհակալություն"
-    wrong_body: "Շնորհակալություն ներկայացնելու համար պատասխաններ."
-    correct_title: "Շնորհակալություն"
-    correct_body: "Շնորհակալություն ներկայացնելու համար պատասխաններ."
+    wrong_title: Շնորհակալություն
+    wrong_body: Շնորհակալություն ներկայացնելու համար պատասխաններ.
+    correct_title: Շնորհակալություն
+    correct_body: Շնորհակալություն ներկայացնելու համար պատասխաններ.
     unsubmit-title: Unsubmit Ձեր գնահատականը
     unsubmit-body: Unsubmitting Ձեր գնահատականը կլինի վերականգնել ներկայացված ժամանակը
       եւ ամսաթիվը. Համոզված ես?
-    submit-incomplete-title: "Ներկայացրեք Ձեր գնահատումը"
-    submit-incomplete-body: "Դուք թողել որոշ հարցեր թերի: Դուք չեք կարող խմբագրել
-      ձեր գնահատական ​​ներկայացնելուց հետո այն. Համոզված ես?"
-    submit-complete-title: "Ներկայացրեք Ձեր գնահատումը"
-    submit-complete-body: "Դուք չեք կարող խմբագրել ձեր գնահատական ​​ներկայացնելուց
-      հետո այն. Համոզված ես?"
+    submit-incomplete-title: Ներկայացրեք Ձեր գնահատումը
+    submit-incomplete-body: 'Դուք թողել որոշ հարցեր թերի: Դուք չեք կարող խմբագրել
+      ձեր գնահատական ​​ներկայացնելուց հետո այն. Համոզված ես?'
+    submit-complete-title: Ներկայացրեք Ձեր գնահատումը
+    submit-complete-body: Դուք չեք կարող խմբագրել ձեր գնահատական ​​ներկայացնելուց
+      հետո այն. Համոզված ես?
   match:
-    wrong_title: "Սխալ լուծումը"
-    wrong_body: "Լուծումը, դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!"
-    correct_title: "ճիշտ"
-    correct_body: "Ճիշտ է!"
+    wrong_title: Սխալ լուծումը
+    wrong_body: 'Լուծումը, դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!'
+    correct_title: ճիշտ
+    correct_body: Ճիշտ է!
   contract_match:
-    wrong_title: "Սխալ պատասխանը"
-    badname: "Ձեր պայմանագիրը սխալ անունը:"
-    badname_case: "Ֆունկցիան անունները գործի զգայուն. Փորձեք փոխել գործը ձեր պայմանագրերի
-      անունով."
-    badrange: "Ձեր պայմանագիրը սխալ շրջանակը:"
-    baddomainsize: "Ձեր պայմանագիրն Վարկանիշ ունեն ճիշտ քանակությամբ ապրանքների տիրույթում."
-    baddomainname: "Մեկ կամ ավելի ձեր դոմենային իրերի ունի սխալ անունը:"
-    baddomaintype: "Մեկ կամ ավելի ձեր դոմենային իրերի ունի սխալ տեսակի, կամ նրանք
-      են սխալ հերթականությամբ:"
+    wrong_title: Սխալ պատասխանը
+    badname: 'Ձեր պայմանագիրը սխալ անունը:'
+    badname_case: Ֆունկցիան անունները գործի զգայուն. Փորձեք փոխել գործը ձեր պայմանագրերի
+      անունով.
+    badrange: 'Ձեր պայմանագիրը սխալ շրջանակը:'
+    baddomainsize: Ձեր պայմանագիրն Վարկանիշ ունեն ճիշտ քանակությամբ ապրանքների տիրույթում.
+    baddomainname: 'Մեկ կամ ավելի ձեր դոմենային իրերի ունի սխալ անունը:'
+    baddomaintype: 'Մեկ կամ ավելի ձեր դոմենային իրերի ունի սխալ տեսակի, կամ նրանք
+      են սխալ հերթականությամբ:'
   text_match:
-    placeholder: "Մուտքագրեք Ձեր պատասխանն այստեղ"
-    open_response_title: "շնորհակալություն"
-    open_response_body: "Շնորհակալություն Ձեր արձագանքի!"
-    correct_title: "ճիշտ"
-    correct_body: "Ճիշտ է!"
+    placeholder: Մուտքագրեք Ձեր պատասխանն այստեղ
+    open_response_title: շնորհակալություն
+    open_response_body: Շնորհակալություն Ձեր արձագանքի!
+    correct_title: ճիշտ
+    correct_body: Ճիշտ է!
   dialog:
-    ok: "լավ"
-    startover_title: "Համոզված եք, որ ուզում եք սկսել."
-    startover_body: "Սա կլինի վերականգնել է հանելուկ իր մեկնարկ պետական ​​եւ վերականգնել
-      բոլոր տվյալները դու ավելացնել կամ փոխել:"
-    startover_ok: "Վերսկսել"
-    startover_cancel: "վերացնել"
+    ok: լավ
+    startover_title: Համոզված եք, որ ուզում եք սկսել.
+    startover_body: 'Սա կլինի վերականգնել է հանելուկ իր մեկնարկ պետական ​​եւ վերականգնել
+      բոլոր տվյալները դու ավելացնել կամ փոխել:'
+    startover_ok: Վերսկսել
+    startover_cancel: վերացնել
   time:
     hour: 1 hour
-    day: "օր"
-    week: "շաբաթ"
+    day: օր
+    week: շաբաթ
   age_interstitial:
-    age: "Ձեր տարիքը"
-    header: "Հաշվի Տեղեկությունների թարմացման"
-    message: "Էին գործընթացում թարմացնելու մեր փորձը Ձեզ տրամադրել հետ, նույնիսկ ուժեղ
+    age: Ձեր տարիքը
+    header: Հաշվի Տեղեկությունների թարմացման
+    message: 'Էին գործընթացում թարմացնելու մեր փորձը Ձեզ տրամադրել հետ, նույնիսկ ուժեղ
       գաղտնիության պաշտպանության. Որպեսզի դա անել, մենք պետք առկա օգտվողներին մուտք
       գործել իրենց տարիքը Մականուն: <br/> Ինչպես միշտ, code.org երբեք չի վարձակալել,
-      վաճառել կամ կիսվել այս տեղեկատվության հետ որեւէ երրորդ անձանց:"
-    sign_out: "Եթե ​​դուք չեք ցանկանում ձեր տարիքը, դուք կարող եք <a href=%{url}>
-      դուրս գալ </a>:"
+      վաճառել կամ կիսվել այս տեղեկատվության հետ որեւէ երրորդ անձանց:'
+    sign_out: 'Եթե ​​դուք չեք ցանկանում ձեր տարիքը, դուք կարող եք <a href=%{url}>
+      դուրս գալ </a>:'
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
@@ -946,13 +946,13 @@
       asked to confirm that your school has parental consent for the collection of
       the student’s personal information for the use and benefit of the school, including
       educational programs such as Code Studio.
-    tos: "Ծառայությունների մատուցման պայմաններ"
-    privacy: "Գաղտնիության քաղաքականություն"
+    tos: Ծառայությունների մատուցման պայմաններ
+    privacy: Գաղտնիության քաղաքականություն
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
-    print: "տպել"
+    print: տպել
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -977,32 +977,32 @@
     - asian: Asian
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
-    - other: "Այլ"
+    - other: Այլ
     - opt_out: Prefer not to say
-    submit: "Հաստատել"
-    decline: "փակել"
-  zendesk_too_young_message: "Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել
+    submit: Հաստատել
+    decline: փակել
+  zendesk_too_young_message: Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել
     մեր աջակցության կայքում. Դուք կարող եք թերթել <a href=http://support.code.org>
     support.code.org </a> առանց մուտք գործելու, կամ խնդրեք ձեր ծնողի կամ մանկավարժի
-    կապնվել մեզ հետ է ձեզ համար."
+    կապնվել մեզ հետ է ձեզ համար.
   progress:
-    not_started: "չի սկսվել"
-    in_progress: "ընթացքի մեջ է"
-    completed_too_many_blocks: "լրացված, շատ արգելափակում"
-    completed_perfect: "ավարտվել, կատարյալ"
+    not_started: չի սկսվել
+    in_progress: ընթացքի մեջ է
+    completed_too_many_blocks: լրացված, շատ արգելափակում
+    completed_perfect: ավարտվել, կատարյալ
     furthest_level_attempted: furthest մակարդակը փորձել
-    assessment: "գնահատումը"
-    submitted: "ներկայացվել"
+    assessment: գնահատումը
+    submitted: ներկայացվել
   studio:
-    courses_working_on: "Դասընթացներ դու աշխատում է"
-    completed_courses: "Ավարտված դասընթացներ"
-    all_courses: "Բոլոր դասընթացները"
+    courses_working_on: Դասընթացներ դու աշխատում է
+    completed_courses: Ավարտված դասընթացներ
+    all_courses: Բոլոր դասընթացները
   project:
-    projects: "ծրագրեր"
-    create: "Ստեղծել ծրագիրը"
-    create_a_project: "Ստեղծել նոր նախագիծ:"
-    new: "Ստեղծել նոր"
-    rename: "վերանվանել"
+    projects: ծրագրեր
+    create: Ստեղծել ծրագիրը
+    create_a_project: 'Ստեղծել նոր նախագիծ:'
+    new: Ստեղծել նոր
+    rename: վերանվանել
     save: Save
     delete: Delete
     import: Import
@@ -1013,95 +1013,95 @@
     share_link_import_error_header: Something went wrong.
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
-    exit: "Վերադարձ դեպի դասընթաց"
-    my_projects: "Իմ ծրագրեր"
-    project_gallery: "ծրագրեր"
+    exit: Վերադարձ դեպի դասընթաց
+    my_projects: Իմ ծրագրեր
+    project_gallery: ծրագրեր
     publish: Publish
     unpublish: Unpublish
-    share: "Տարածել"
-    share_title: "Կիսեք Ձեր նախագիծը"
-    share_copy_link: "Պատճենահանել հղումը:"
-    share_embed_description: "Դուք կարող եք տեղադրեք embed կոդը վերածել HTML էջում
-      ցուցադրել նախագիծը մի կայքէջում:"
+    share: Տարածել
+    share_title: Կիսեք Ձեր նախագիծը
+    share_copy_link: 'Պատճենահանել հղումը:'
+    share_embed_description: 'Դուք կարող եք տեղադրեք embed կոդը վերածել HTML էջում
+      ցուցադրել նախագիծը մի կայքէջում:'
     share_u13_warning: Ask your teacher before sharing. Only share with others in
       your school.
-    embed: "պառկեցնել"
-    advanced_share: "Ցույց տալ, առաջադեմ տարբերակները"
+    embed: պառկեցնել
+    advanced_share: Ցույց տալ, առաջադեմ տարբերակները
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
-    close: "փակել"
+    close: փակել
     more: More
-    name: "Անուն"
-    updated: "Թարմացվել է"
-    project_type: "Ծրագրի տեսակը"
-    help_text: "Սեղմեք <strong> Կատարել App </ strong> կամ <strong> Ոչ ոքի բան </
+    name: Անուն
+    updated: Թարմացվել է
+    project_type: Ծրագրի տեսակը
+    help_text: 'Սեղմեք <strong> Կատարել App </ strong> կամ <strong> Ոչ ոքի բան </
       strong> ներքեւինը սկսել նոր ծրագիր. <br /> Դուք կարող եք վերադառնալ եւ աշխատում
-      ձեր նախագծերի ցանկացած ժամանակ:"
-    need_help: "Փորձեք այդ դասընթացներ, որոնք կօգնեն ձեզ սկսել ձեր նոր ծրագրի"
+      ձեր նախագծերի ցանկացած ժամանակ:'
+    need_help: Փորձեք այդ դասընթացներ, որոնք կօգնեն ձեզ սկսել ձեր նոր ծրագրի
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
     really_delete: Delete?
-    delete_yes: "այո"
-    delete_no: "ոչ"
-    saved: "փրկվել"
-    not_saved: "չի պահպանվել"
-    cancel: "վերացնել"
-    delete_confirm_title: "Համոզված եք, որ ցանկանում եք ջնջել այս նախագիծը:"
+    delete_yes: այո
+    delete_no: ոչ
+    saved: փրկվել
+    not_saved: չի պահպանվել
+    cancel: վերացնել
+    delete_confirm_title: 'Համոզված եք, որ ցանկանում եք ջնջել այս նախագիծը:'
     delete_confirm_text: 'Deleting Ձեր նախագիծը մշտապես հեռացնել այն ձեր իմ ծրագրերում
       ցուցակում: Յուրաքանչյուրը դուք կիսում հղումը այլեւս չի կարողանա դիտել ձեր նախագիծը.'
-    view_all: "Դիտել Իմ Ծրագրեր"
+    view_all: Դիտել Իմ Ծրագրեր
     remix: remix
-    click_to_remix: "Սեղմեք Remix է վազել դուրս ձեր սեփական տարբերակը:"
-    edit_project: "Խմբագրել Project"
+    click_to_remix: 'Սեղմեք Remix է վազել դուրս ձեր սեփական տարբերակը:'
+    edit_project: Խմբագրել Project
     sharing_disabled: Sorry, this project is not available for sharing. If this is
       your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
       in</a> to your account to view the project.
     abuse:
-      tos: "Այս ծրագիրն արդեն տեղեկացրել խախտելու համար Code.orgs <a href=http://code.org/tos>
-        Ծառայության պայմաններ </a> եւ չի կարող կիսել մյուսների հետ:"
+      tos: 'Այս ծրագիրն արդեն տեղեկացրել խախտելու համար Code.orgs <a href=http://code.org/tos>
+        Ծառայության պայմաններ </a> եւ չի կարող կիսել մյուսների հետ:'
       policy_violation: This project contains information that cannot be shared with
         others. Please contact the app owner to fix the contents of their app.
-      contact_us: "Եթե ​​կարծում եք, որ սա սխալ է, խնդրում ենք <a href=https://code.org/contact>
-        կապնվել մեզ հետ: </a>"
-      go_to_code_studio: "Գնալ օրենսգրքի Studio"
+      contact_us: 'Եթե ​​կարծում եք, որ սա սխալ է, խնդրում ենք <a href=https://code.org/contact>
+        կապնվել մեզ հետ: </a>'
+      go_to_code_studio: Գնալ օրենսգրքի Studio
       report_abuse_form:
-        intro: "Եթե ​​դուք հանդիպել վիրավորական բովանդակություն, սպառնալիքները, cyberbullying,
+        intro: 'Եթե ​​դուք հանդիպել վիրավորական բովանդակություն, սպառնալիքները, cyberbullying,
           ոտնձգությունների, կամ օրինակ է հեղինակային իրավունքի խախտման համար բովանդակության
           Ձեզ պատկանող, իսկ օգտագործելով apps կառուցված է օրենսգրքի Studio, խնդրում
           ենք լրացնել ստորեւ բերված ձեւը. Մենք կունենա ձեր զեկույցը շատ լուրջ է, հետաքննել
-          համապատասխանաբար, եւ ձեռնարկել համապատասխան միջոցներ:"
+          համապատասխանաբար, եւ ձեռնարկել համապատասխան միջոցներ:'
         validation:
-          email: "Խնդրում ենք տրամադրել էլ. Փոստի հասցե"
-          age: "Խնդրում ենք նշեք տարիքը"
-          abuse_type: "Խնդրում ենք պատասխանել, թե ինչպես է այս բովանդակությունը խախտում
-            Ծառայության պայմաններ"
-          abuse_detail: "Խնդրում ենք տրամադրել մանրամասներ վերաբերյալ բովանդակության
-            դուք հաշվետու"
+          email: Խնդրում ենք տրամադրել էլ. Փոստի հասցե
+          age: Խնդրում ենք նշեք տարիքը
+          abuse_type: Խնդրում ենք պատասխանել, թե ինչպես է այս բովանդակությունը խախտում
+            Ծառայության պայմաններ
+          abuse_detail: Խնդրում ենք տրամադրել մանրամասներ վերաբերյալ բովանդակության
+            դուք հաշվետու
         abusive_url: URL բովանդակության հաղորդվում
         abuse_type:
           question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: "Սպառնալիքներ, cyberbullying, harassement"
-          offensive: "Վիրավորական բովանդակության"
-          infringement: "Հեղինակային իրավունք խախտումը"
-          other: "Այլ"
-        detail: "Խնդրում ենք տրամադրել, քանի որ շատ մանրամասն, որքան հնարավոր է կապված
-          բովանդակության դուք հաշվետու:"
+          harassment: Սպառնալիքներ, cyberbullying, harassement
+          offensive: Վիրավորական բովանդակության
+          infringement: Հեղինակային իրավունք խախտումը
+          other: Այլ
+        detail: 'Խնդրում ենք տրամադրել, քանի որ շատ մանրամասն, որքան հնարավոր է կապված
+          բովանդակության դուք հաշվետու:'
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
           and the %{link_start_tos}Terms of Service%{link_end}.
   peer_review:
     accepted:
-      name: "ընդունված է"
+      name: ընդունված է
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: "Մերժվել է"
+      name: Մերժվել է
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
-      name: "փակուղային"
-      description: "Ես կցանկանայի ինստրուկտոր է վերանայել այս ներկայացնելու"
+      name: փակուղային
+      description: Ես կցանկանայի ինստրուկտոր է վերանայել այս ներկայացնելու
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
@@ -1116,8 +1116,8 @@
     review_new_submission: Review a new submission
   flex_category:
     required: Overview
-    content: "պարունակություն"
-    practice: "Ուսուցիչի փորձեր"
+    content: պարունակություն
+    practice: Ուսուցիչի փորձեր
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project

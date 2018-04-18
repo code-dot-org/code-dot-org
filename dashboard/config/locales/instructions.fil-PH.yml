@@ -183,8 +183,10 @@
         Muling buoin ang code mula sa nakaraang palaisipan,
         ngunit sa oras na ito, magdagdag ng kaliwang pagliko mga 30 degrees sa loob ng loop. Ngayon, ulitin
         ito ng 24 na beses sa halip na 8.
-      2-3 Artist Loops New 12_instruction: |
-        Gumuhit ng diyamante na may mga gilid na 100 pixels.
+      2-3 Artist Loops New 12_instruction: 'Gumuhit ng diyamante na may mga gilid
+        na 100 pixels.
+
+'
       2-3 Artist Loops New 13_instruction: |-
         Kami ay magsisimula sa iyo sa iilang code
         (nasa kulay na abo) para makagawa ng isang dyamante.\r
@@ -1013,8 +1015,10 @@
         Kung magawa mo ito ng tama, siya ay makakalakad sa kahit anung baliko na daan anuman ang haba nito!
       4-5 Maze Conditionals 2_instruction: Gamitin ang `repeat until` na bloke para
         mapapunta ang zombie sa mirasol.
-      4-5 Maze Conditionals 3_instruction: |
-        Gamitin ang `if` na bloke para makatulong sa pagdesisyon kung kailan liliko. \r
+      4-5 Maze Conditionals 3_instruction: 'Gamitin ang `if` na bloke para makatulong
+        sa pagdesisyon kung kailan liliko. \r
+
+'
       4-5 Maze Conditionals 4_instruction: Ok, lutasin ang isang ito gaya lang ng
         huling palaisipan, ngunit dapat mong tandaan kung paano mo sama-samang ginamit
         ang `if` at `repeat until`.
@@ -1615,7 +1619,33 @@
         *
         Tawagin ang iyong bagong `moveCloud(name)` na function sa loob ng pangyayari na bloke, isang beses sa bawat pangalan ng ulap.\\r
         * (Hint: ito ay kapareho kung paano ang `loopCloud(name)` na function ay tinawag nang napakaraming beses.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Clouds\r
+        \r
+        This program
+        makes the clouds move when you blow on the sound sensor, but it's not finished.\r
+        \r
+        #
+        Do This\r
+        * Create a new function `moveCloud(name)` that will move any cloud.\r
+          *
+        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
+        *
+        Call your new `moveCloud(name)` function inside the event block, once for
+        each cloud name.\r
+         * (Hint: this is similar to how the `loopCloud(name)`
+        function is called many times.
       CSD U6 params modify planes_instruction: |-
+        # Maraming Lapya na Controller\r
+        \r
+        Ang programang ito ay gumagalaw sa tatlong lapya gamit ang accelerometer at ang on-screen na mga checkbox. Sa ngayon, tanging ang pulang lapya lang ang gumagana.\r
+        \r
+        # Gawin Ito\r
+        * Maglikha ng bagong `movePlane(name)` na function na maaaring maggalaw sa kahit anong lapya.\r
+        * Tawagin ang `movePlane(name)` na function sa loob ng bloke ng pangyayari, para gagalaw lang ito kapag ang checkbox nito ay may tsek.\r
+        \r
+        _Hamon: Sa ngayon ang lapya ay gumagalaw nang masyadong mabilis. Maaari mo bang matukoy kung paano baguhin ang code para mapabagal ang kanilang pagkilos?_
+      CSD U6 params modify planes_2018_instruction: |-
         # Maraming Lapya na Controller\r
         \r
         Ang programang ito ay gumagalaw sa tatlong lapya gamit ang accelerometer at ang on-screen na mga checkbox. Sa ngayon, tanging ang pulang lapya lang ang gumagana.\r
@@ -1748,12 +1778,21 @@
       CSDU6 arrays select rainbow_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
+      CSDU6 arrays select rainbow_2018_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
       CSDU6 arrays select random_instruction: Magsulat ng programa na nagpapakita
         ng isang random na napiling kulay mula sa array. (I-click para makita ang
         buong mga instruksyon)
+      CSDU6 arrays select random_2018_instruction: |-
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays select variable_instruction: Magsulat ng programa na nagpapakita
         ng isang random na napiling kulay mula sa array. (I-click para makita ang
         buong mga instruksyon)
+      CSDU6 arrays select variable_2018_instruction: |-
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: Magsulat ng programa na nagpapakita ng isang
         random na napiling kulay mula sa array. (I-click para makita ang buong mga
         instruksyon)
@@ -2932,8 +2971,10 @@
       Course 4 Artist 8a_instruction: Natandaan ang hugis na ito? Ngayon ay hahayaan
         ka naming bumuo nito nang hindi nagbibigay sa iyo ng kahit anong mga bloke
         sa simula!
-      Course 4 Artist 9_instruction: |
-        I-loop ang disenyong ito nang 10 beses at siguraduhing umikot sa bawat pagitan ng hugis na naiguhit. \r
+      Course 4 Artist 9_instruction: 'I-loop ang disenyong ito nang 10 beses at siguraduhing
+        umikot sa bawat pagitan ng hugis na naiguhit. \r
+
+'
       Course 4 Artist Binary 1_instruction: |-
         Ito ang isang function na kukuha ng binary string ng mga 1 at mga 0 at nagturo sa artista na sundin ang mga ito mula sa kaliwa hanggang sa kanan, sa taas hanggang sa baba. Pupunan ng artista ang mga parisukat kapag nakakita ito ng 1 at isawalang-bahala kapag nakakita ito ng 0. \r
         \r
@@ -3013,8 +3054,12 @@
       Course 4 Artist For Loops 2_instruction: 'Aking inilagay ang code para sa pagguhit
         ng tatsulok sa loob ng isang for loop na nagbibilang mula 50 hanggang 100
         ng 10. Paalala: Siguraduhin na tiningnan mo ang code bago pindutin ang "Run".'
-      Course 4 Artist For Loops 3_instruction: |
-        Gamitin ang huling palaisipan bilang isang reperensya para makumpleto ang isang ito. Ang pinakamaliit na tatsulok ay mayroong 20 pixel na gilid, ang pinakamali ay may 200 pixel na gilid, at bawat tatsulok ay mas malaki nang 20 pixels kaysa sa dati.
+      Course 4 Artist For Loops 3_instruction: 'Gamitin ang huling palaisipan bilang
+        isang reperensya para makumpleto ang isang ito. Ang pinakamaliit na tatsulok
+        ay mayroong 20 pixel na gilid, ang pinakamali ay may 200 pixel na gilid, at
+        bawat tatsulok ay mas malaki nang 20 pixels kaysa sa dati.
+
+'
       Course 4 Artist For Loops 4_instruction: 'Paano mo babaguhin ang iyong natutunan
         dati para maiguhit ang mga parisukat na ito? Sila ay nagsisimula sa haba na
         15 pixels, ang pinakamalaki ay 300 pixels ang haba, at bawat parisukat ay
@@ -3179,8 +3224,11 @@
       Course 4 Artist Params 7_instruction: "Can you draw these shapes by filling\nin
         the \"???\" The square and triangle are 100 pixels in size while the hexagon\nis
         75 pixels in size. "
-      Course 4 Artist Params 8_instruction: |
-        Maaari mo bang malaman kung paano iguhit ang hugis na ito? Narito ang isang higing, maglikha ng bagong function na may 6 na gilid na tinatawag na hexagon.
+      Course 4 Artist Params 8_instruction: 'Maaari mo bang malaman kung paano iguhit
+        ang hugis na ito? Narito ang isang higing, maglikha ng bagong function na
+        may 6 na gilid na tinatawag na hexagon.
+
+'
       Course 4 Artist Params 9_instruction: Natatandaan mo ba noong ginamit natin
         ang counter na loop ngunit nagtanggal tayo ng loop sa loob? Tayo ay magsaya
         at gagamit ng "draw a shape" na function na may "sides" at "length" na mga
@@ -3749,6 +3797,26 @@
         Hayaan ang iyong iskor na bababa mula 10 hanggang sa 0 para maipasa ang antas.
       Crack Random Substitution_instruction: Alituntunin
       Crack a Caesar Cipher_instruction: Alituntunin
+      D_Frozen_nested3_instruction: Ating iikot ang linya ng mga hugis sa paligid!
+      D_Frozen_nested4_instruction: Panahon na para ipagpatung-patung ang mga hugis
+        na ito!
+      D_Frozen_nested5_instruction: Paglaruan ang mga niyebe!
+      D_Frozen_nested6_instruction: |-
+        Draw a stair-step pattern that uses turns between
+        75 and 105 degrees.
+      D_Frozen_nested7_instruction: |-
+        Now, turn around 180 degrees and draw the stair
+        pattern again!
+      D_Frozen_nested8_instruction: Spin that shape around 5 or 6 times in a circle.
+      D_Frozen_nested9_instruction: |-
+        Try playing around with what you've created.
+        Draw whatever you like!\r
+        - What happens if you use two different angles
+        in your stair step pattern?\r
+        - What happens if you make your diamond pattern
+        longer or shorter?\r
+        - What does it look like to draw two snowflakes on top
+        of one another?
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -4040,6 +4108,29 @@
         This Corgi has been a good boy! Drag this carrot
         to him as a special treat.
       GLJ Flappy2_instruction: Click to flap - don't touch the ground!
+      GLJr_Behavior_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Behavior_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Behavior_5_instruction: |-
+        Now we have two sprites! Use behaviors to make
+        the dog jittery and make the cat wander
+      GLJr_Behavior_6_instruction: |-
+        Let's try some more behaviors - make the dog
+        run up and make the cat run right.
+      GLJr_Forever_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Forever_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Forever_5_instruction: |-
+        Now we have two sprites! Use a loop to make the
+        dog jittery and make the cat wander
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4438,8 +4529,11 @@
         mo. Magsaya!
       MC HOC 2016 Level 2-2_instruction: Ang manoy ay hindi makagalaw. Maglagay ng
         `move` at `turn` na mga bloke sa `when spawned` na butas para mapagalaw ito.
-      MC HOC 2016 Level 3_instruction: |
-        Magaling, nakagalaw na ang manok! Ngunit pagkatapos ay tumigil ito. Sa mga laro, ang mga manok ay maglalakad magpakailanman. Gamitin ang `forever do` na loop para panatilihin ang mga manok na ito na gumalaw.\r
+      MC HOC 2016 Level 3_instruction: 'Magaling, nakagalaw na ang manok! Ngunit pagkatapos
+        ay tumigil ito. Sa mga laro, ang mga manok ay maglalakad magpakailanman. Gamitin
+        ang `forever do` na loop para panatilihin ang mga manok na ito na gumalaw.\r
+
+'
       MC HOC 2016 Level 4_instruction: Ngayon ang mga manoy ay mukhang kakaiba sa
         parehang paggalaw. Ang mga laro ay gumagamit ng mga random na mga galaw para
         parang totoo ang mga bagay. Gawin ang mga manok sa pamamagitan ng `turn random`.
@@ -4705,8 +4799,11 @@
         paano nagkaiba ang iyong mga drowing!'
       NEW Course 4 Artist Params 2_instruction: Lumikha ng `draw a triangle` na function
         mula sa wala na gumagawa ng tatsulok na may 50 pixel ang mga gilid.
-      NEW Course 4 Artist Params 3_instruction: |
-        Ngayon ay ating gagamitin ang function para maiguhit ang 5 tatsulok sa isang hanay. Bawat tatsulok ay 30 pixels ang pagitan.\r
+      NEW Course 4 Artist Params 3_instruction: 'Ngayon ay ating gagamitin ang function
+        para maiguhit ang 5 tatsulok sa isang hanay. Bawat tatsulok ay 30 pixels ang
+        pagitan.\r
+
+'
       NEW Course 4 Artist Params 4_instruction: Napansin mo ba ang anumang bagay na
         kakaiba sa function na mga blokeng ito? I-click ang "Run" para makita kung
         ano ang nangyari.
@@ -4742,8 +4839,11 @@
       NEW Course 4 Artist Vars 2.5_instruction: "Take a look at the code, can you\nsee
         how the \"set length\" block and \"length\" block works together? Click\non
         \"Run\" to see it in action. "
-      NEW Course 4 Artist Vars 2_instruction: |
-        I-drag ang number na bloke sa parehong `set length` na bloke at sa `repeat_times` na bloke para maiguhit ang isang hanay ng 50 pixel na mga tatsulok.
+      NEW Course 4 Artist Vars 2_instruction: 'I-drag ang number na bloke sa parehong
+        `set length` na bloke at sa `repeat_times` na bloke para maiguhit ang isang
+        hanay ng 50 pixel na mga tatsulok.
+
+'
       NEW Course 4 Artist Vars 4 5_instruction: |-
         Awesome job on the last puzzle,
         let's try it again this time let's make this cool design with with 60 pixel
@@ -5372,8 +5472,11 @@
         gamit lang ang dot() at penColor() ngunit, paano natin magawang transparent
         ang mga bilog na iyon? Kung hindi ka pa nakakuha ng hint: tingnan muna ang
         dokumentasyon!'
-      SG U3L06 Challenge 6 squiggles_instruction: |
-        Basahin ang dokumentasyon para sa "arcLeft" at "arcRight" na mga utos at pagkatapos ay iguhit ang mga squiggles gaya ng pinakita.
+      SG U3L06 Challenge 6 squiggles_instruction: 'Basahin ang dokumentasyon para
+        sa "arcLeft" at "arcRight" na mga utos at pagkatapos ay iguhit ang mga squiggles
+        gaya ng pinakita.
+
+'
       SG U3L06 Challenge 7 smiley face_instruction: Gamitin ang turnTo() at moveTo()
         para makatulong sa pagguhit ng smiley na mukha. (I-click para makita ang buong
         mga instruksyon)
@@ -5576,6 +5679,28 @@
         move forward na bloke. Bawat gilid ay dapat 100 pixels ang haba.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
+      Test embedded Blockly in instructions_instruction: |-
+        As a block element, we
+        should be able to include XML representing a valid Blockly block or blocks.\r
+        \r
+        <xml>\r
+          <block
+        type="draw_move_by_constant">\r
+            <title name="DIR">moveForward</title>\r
+            <title
+        name="VALUE">100</title>\r
+          </block>\r
+        </xml>\r
+        \r
+        We also support
+        Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title
+        name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>.
+        The difference in input format being that this one is embedded within a paragraph,
+        whereas the previous one is in a text block of its own. The difference in
+        output is comparable.
+      Test embedded K1 Blockly in instructions_instruction: |-
+        Use three `move west`
+        blocks and one `pick corn` block to solve this puzzle.
       Test of comment block_instruction: I-drag palabas ang subgoal label na bloke
         na gusto mo.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
@@ -7620,6 +7745,23 @@
         him as a special treat.
       beeDebugVideo1_instruction: Gamitin ang `repeat` na loop para kolektahin ang
         lahat ng mga nektar.
+      behaviors pet test 2_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
+      behaviors pet test 3_instruction: "**It's time to make your own virtual pet!**\nYou
+        can change whatever code you want to to make your own pet. Here are some\nideas:\\r\n*
+        Can you make your pet start a new behavior when you click on it?\\r\n*\nCan
+        you make your pet run away when you drag the vacuum to it?\\r\n* Can you\nadd
+        other animal friends to your pet's area? "
+      behaviors pet test_instruction: |-
+        Last time, you practiced using "behaviors"
+        to make a sprite do something forever. This time, we will use behaviors to
+        make a virtual pet. \r
+        \r
+        This dog's name is Daisy. Daisy LOVES to snack
+        on carrots. Add the "drag and drop" behavior to the carrot so you can move
+        it to her.
       birdsDebugVideo1_instruction: Sundan ang landas at gabayan ako papunta sa pasaway
         na baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
       bounce_1_instruction: Maglakip ng bloke sa "when left arrow" na bloke at pindutin
@@ -7629,6 +7771,10 @@
         point" at "score opponent point" na mga bloke sa "when ball in goal" at "when
         ball misses paddle" na mga bloke para makagawa ng laro. Tingnan kung ilang
         puntos ang makukuha mo bago makapuntos ng makalawa ang kalaban mo.
+      bounce_10_2018_instruction: Mayroon na tayong mithiin sa itaas. Maglakip ng
+        "score point" at "score opponent point" na mga bloke sa "when ball in goal"
+        at "when ball misses paddle" na mga bloke para makagawa ng laro. Tingnan kung
+        ilang puntos ang makukuha mo bago makapuntos ng makalawa ang kalaban mo.
       bounce_10_basketball_instruction: Ngayon ay may mithiin tayo sa itaas! Ilakip
         ang "score point" at "score opponent point" na mga bloke sa "when ball in
         goal" at "when ball misses hand" na mga bloke para makagawa ng laro. Tingnan
@@ -7642,6 +7788,11 @@
         isang lugar. Gayundin, subukang palitan ang eksena o ang bilis ng pampalo
         at ng bola at tingnan kung ilang puntos ang makukuha mo bago makapuntos ng
         makalawa ang kalaban mo.
+      bounce_11_2018_instruction: |-
+        You can now attach blocks to the "when run"
+        block. You have to attach the new "launch new ball" block in more than one
+        place. Also, try changing the scene or the speed of the paddle and the ball
+        and see how many points you can score before your opponent scores twice.
       bounce_11_basketball_instruction: Maaari mo nang ilakip ang mga bloke sa "when
         run" na bloke. Kailangan mong ilakip ang bagong "throw new ball" na bloke
         sa higit sa isang lugar. Gayundin, subakang baguhin ang eskena o ang bilis
@@ -7655,6 +7806,10 @@
       bounce_12_instruction: Lumikha ng sarili mong Bounce na laro. Maaring mong palitan
         ang lahat ng mga visuals at ang mga patakaran. Kapag tapos ka na, pindutin
         ang Finish para masubukan ng mga kaibigan mo ang laro sa kanilang mga telepono.
+      bounce_12_2018_instruction: |-
+        Create your own Bounce game. You can change all
+        the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       bounce_12_basketball_instruction: Lumikha ng iyong sariling Basketbol na laro.
         Maari mong palitan ang mga patakaran. Kapag tapos ka na, pindutin ang Finish
         para hayaang masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono.
@@ -7662,6 +7817,10 @@
         dito: maari mong baguhin ang mga patakaran, mix at match na palakasan, maging
         malikhain! Kapag tapos ka na, pindutin ang Finish para masubukan ng iyong
         mga kaibigan ang laro sa kanilang mga telepono.'
+      bounce_1_2018_instruction: |-
+        Attach a block to the "when left arrow" block
+        and press "Run". Move the paddle using the left arrow to reach the finish
+        target.
       bounce_1_basketball_instruction: Maglakip ng isang bloke sa "kung kaliwang pana"
         na bloke at pindutin ang "Run". Galawin ang kamay gamit ang kaliwang pana
         para makaabot sa huling layunin.
@@ -7671,6 +7830,9 @@
       bounce_2_instruction: Maglakip ng bloke sa "when right arrow" at "when left
         arrow" na mga bloke. Galawin ang sagwan para makaabot sa parehong huling mga
         layunin.
+      bounce_2_2018_instruction: |-
+        Attach a block to the "when right arrow" and
+        "when left arrow" blocks. Move the paddle to reach both finish targets.
       bounce_2_basketball_instruction: Maglakip ng bloke sa "kung kanang arrow" at
         "kung kaliwang arrow" na mga bloke. Galawin ang kamay para makarating sa parehong
         huling mga layunin.
@@ -7679,12 +7841,21 @@
         iyong manlalaro sa dalawang direksyon.
       bounce_3_instruction: Ngayon subukan mo ang isang bagay na katulad ng "when
         up arrow" na bloke. Galawin ang sagwan para tapusin ang layunin sa itaas.
+      bounce_3_2018_instruction: Ngayon subukan mo ang isang bagay na katulad ng "when
+        up arrow" na bloke. Galawin ang sagwan para tapusin ang layunin sa itaas.
       bounce_4_instruction: Sa pagkakataong ito kakailanganin mong magdagdag ng apat
         na mga bloke. Galawin ang sagwan sa lahat ng apat na mga layunin para makompleto
         ang palaisipang ito.
+      bounce_4_2018_instruction: |-
+        This time you need to add four blocks. Move the
+        paddle to all four finish targets to complete this puzzle.
       bounce_5_instruction: Magpapadala tayo ng bola patungo sa sagwan. Maglakip ng
         bloke sa "when ball hits paddle" na bloke para masiguro na ang bola ay makakarating
         sa huling layunin.
+      bounce_5_2018_instruction: |-
+        We're going to send a ball flying down towards
+        the paddle. Attach a block to the "when ball hits paddle" block to ensure
+        the ball reaches the finish target.
       bounce_5_basketball_instruction: Magpapadala tayo ng bola na lumilipad pababa
         patungo sa kamay. Maglakip ng bloke sa "kung ang bola ay tatama sa kamay"
         na bloke para masiguro na ang bola ay makakarating sa bandila.
@@ -7693,6 +7864,9 @@
       bounce_6_instruction: Ngayon ang huling layunin ay nasa taas. Kailangan mong
         maglakip ng mga bloke sa dalawang "when ball hits" na mga bloke para malutas
         ang mga palaisipan.
+      bounce_6_2018_instruction: |-
+        Now the finish target is on the top. You need to
+        attach blocks to both of the "when ball hits" blocks to solve this puzzle.
       bounce_6_basketball_instruction: Ngayon ang bandila ay nasa taas. Kailangan
         mong maglakip ng mga bloke sa kapwa "kung ang bola ay tumama" na mga bloke
         para malutas ang palaisipan na ito.
@@ -7701,6 +7875,8 @@
         malutas ang palaisipan na ito.
       bounce_7_instruction: Maglakip ng mga bloke sa bawat "when" na mga bloke. Patalbugin
         ang bola hanggang matamaan nito ang huling layunin.
+      bounce_7_2018_instruction: Maglakip ng mga bloke sa bawat "when" na mga bloke.
+        Patalbugin ang bola hanggang matamaan nito ang huling layunin.
       bounce_7_basketball_instruction: Maglakip ng mga bloke sa bawat "kailan" na
         mga bloke. Patalbugin ang bola hanggang matatamaan nito ang bandila.
       bounce_7_sports_instruction: Maglakip ng mga bloke sa bawat "kailan" na mga
@@ -8123,30 +8299,91 @@
         para malampasan ang antas na ito.
       courseA_forVideoTest_artist_instruction: Gamitin ang `repeat` na loop para magdagdag
         ng mga alon sa tubig.
+      courseA_harvester_forVideo_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
+      courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
+      courseA_harvester_loops10_instruction: |-
+        Help the harvester pick all five ears
+        of corn!
+      courseA_harvester_loops11_instruction: 'Try one more on your own! '
+      courseA_harvester_loops2_instruction: Make sure to pick all the corn!
+      courseA_harvester_loops3_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
+      courseA_harvester_loops4_instruction: |-
+        Can you help the harvester find the
+        bug in her code?
+      courseA_harvester_loops5_instruction: |-
+        Try it yourself! Can you pick the corn
+        at the end too?
+      courseA_harvester_loops5a_instruction: |-
+        Look at all this corn! Can you pick
+        it all by yourself?
+      courseA_harvester_loops5b_instruction: |-
+        Can you change your code to make the
+        harvester pick all the corn?
+      courseA_harvester_loops6_instruction: |-
+        You will need **one** `Move South` block
+        and **one** `Move West` block.
+      courseA_harvester_loops7_instruction: 'Try it on your own! '
+      courseA_harvester_loops8_instruction: |-
+        This is the same puzzle, but now you
+        have to repeat **three** times!
+      courseA_harvester_loops9_instruction: |-
+        Can you figure out how to pick all the
+        corn?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
-        pick *one* corn.
+        pick the piece of corn.
+      courseA_harvester_seq10_instruction: Make sure to pick all the corn!
+      courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: |-
         Play with these blocks to help the bee
         get *one* nectar.
+      courseA_harvester_seq13_instruction: |-
+        Play with these blocks to help the harvester
+        pick **one** corn.
       courseA_harvester_seq2_instruction: |-
-        Use three `Move West` blocks and one `Pick
-        Corn` block.
+        Use three `move west` blocks and one `pick
+        corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: |-
         Use three `Move North` blocks and one
         `Pick Corn` block.
-      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq4_instruction: |-
+        Add one block to help the harvester pick
+        the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
       courseA_harvester_seq6_instruction: Try it yourself!
       courseA_harvester_seq7_instruction: Try it yourself!
       courseA_harvester_seq8_instruction: |-
         Now the harvester needs to pick corn two
         times!
+      courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
+      courseA_maze_ramp2_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp2a_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseA_maze_ramp3_2018_instruction: Mayroong isang ekstrang bloke na magiging
+        sanhi na mag-crash ang ibon. Itapon ito sa pamamagitan ng pagkaladkad nito
+        pabalik sa toolbox.
+      courseA_maze_ramp3a_2018_instruction: |-
+        Add a `North` block to the bottom of
+        the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp4_2018_instruction: Iwasan ang TNT para hindi lilipad ang mga
+        balahibo!
+      courseA_maze_ramp4a_2018_instruction: |-
+        Can you figure out which block you need
+        to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp5_2018_instruction: Iwasan ang mga TNT.
+      courseA_maze_ramp5a_2018_instruction: Dalhin ang ibon sa baboy!
       courseA_maze_seq1_instruction: Puntahan ang masamang baboy!
       courseA_maze_seq10_instruction: 'Hamon: Libutin ang TNT para mapapunta ang ibon
         sa baboy! '
-      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
-        to the pig! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Avoid the TNT to get the bird\nto
+        the pig! "
       courseA_maze_seq11_instruction: Galawin ang isang daan, pagkatapos ay ang isa
         pa para mapapunta ang ibon sa baboy.
       courseA_maze_seq11_2018_instruction: |-
@@ -8174,6 +8411,9 @@
         mga bloke na posible.
       courseA_maze_seq5_instruction: Subakan mo ang isang ito mula sa simula.
       courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5a_2018_instruction: |-
+        What can you add to the end of this code
+        to get the bird to the pig?
       courseA_maze_seq6_instruction: Ilipat ang isang daan, pagkatapos ay isa pa para
         mapapunta ang ibon sa baboy!
       courseA_maze_seq6_2018_instruction: |-
@@ -8259,66 +8499,148 @@
       courseA_video_events_instruction: Nangangailangan ng mas mahusay na playlab/pangyayari
         na combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
+      courseB_Scrat_ramp1_2018_instruction: |-
+        For this puzzle, snap the blocks together
+        and click "Run"!
+      courseB_Scrat_ramp2_2018_instruction: |-
+        Snap all blocks together to finish your
+        code, then click "Run".
+      courseB_Scrat_ramp3a_2018_instruction: |-
+        Add a `North` block to the bottom of
+        the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp4a_2018_instruction: |-
+        Can you figure out which block you
+        need to add to the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp5a_2018_instruction: Dalhin ang ibon sa baboy!
       courseB_artist_loops1_instruction: Ito ay isang bagong tipo ng palaisipan na
         tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops10_instruction: Gamitin ang natutunan mo para maiguhit ang
         larawan kung ano ang naisip mo na makikita ng artist pag-uwi niya sa bahay.
+      courseB_artist_loops10_2018_instruction: |-
+        Use what you have learned to draw
+        a picture of what you think the artist saw when he got home.
+      courseB_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseB_artist_loops2_instruction: Ang Artist ay sinusubukang gumuhit ng linya
         mga **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
+      courseB_artist_loops2_2018_instruction: |-
+        The Artist is trying to draw a line
+        **6** times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: Tulungan ang artista na gumuhit ng linya
         ng mga 7 beses para makagawa ng pader sa halamanan.
+      courseB_artist_loops3_2018_instruction: |-
+        Help the artist draw a line 7 times
+        to make a garden wall.
       courseB_artist_loops4_instruction: 'Ngayon ay kailangan nating ihanda ang lupa
         para sa pagtanim. Hanapin ang mga bug sa code at tulungan ang artista na maghanda
         sa lupa. '
+      courseB_artist_loops4_2018_instruction: |
+        Now we need to get the soil ready
+        to plant. Find the bugs in the code and help the artist prepare the ground.
       courseB_artist_loops5_instruction: Oras na para ayusin ang hagdanan! Ulitin
         ang pattern na ito nang **5** beses para maabot ng artista ang itaas ng mga
         palumpong.
+      courseB_artist_loops5_2018_instruction: |-
+        Time to fix the stairs!  Repeat this
+        pattern **5** times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Akyatin ang baging at tingnan kung saan ito
         tutungo?
+      courseB_artist_loops6_2018_instruction: Akyatin ang baging at tingnan kung saan
+        ito tutungo?
       courseB_artist_loops7_instruction: "**Hamon:** Ito ay isang nakatagong halamanan!
         Tayo ay maglakad sa paligid."
+      courseB_artist_loops7_2018_instruction: "**Hamon:** Ito ay isang nakatagong
+        halamanan! Tayo ay maglakad sa paligid."
       courseB_artist_loops8_instruction: Oras na para umuwi. Maaari mo bang ayusin
         ang hagdanang ito gamit ang isang bloke lang para matulungan ang artista na
         bumaba?
+      courseB_artist_loops8_2018_instruction: |-
+        Time to head home. Can you fix this
+        ladder using only one block to help the artist get down?
       courseB_artist_loops9_instruction: Ating daanan ang maikling daan pauwi, sa
         itaas ng lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
+      courseB_artist_loops9_2018_instruction: |-
+        Let's take the short way home, over
+        the pond. Can you help the artist stay on the stones?
       courseB_artist_loops_challenge1_instruction: '"Oras na para ihagis ang dice!
         Maaari mo ba akong tulungan na iguhit ang mga ito?"'
+      courseB_artist_loops_challenge1_2018_instruction: |-
+        "It's time to toss the
+        dice! Can you help me draw these?"
       courseB_artist_loops_challenge2_instruction: Magguhit ng maraming mga X hangga't
         kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_artist_loops_challenge2_2018_instruction: |-
+        Draw as many X's as you
+        can. Can you get 3 in a row?
       courseB_collector_loops1_instruction: Ito si Laurel ang Abenturero! Maaari mo
         ba siyang pagalawin sa paligid at magkuha ng kayamanan?
       courseB_collector_loops10_instruction: Tulungan si Laurel na kunin ang lahat
         ng mga kayamanan mula sa kuwebang ito.
+      courseB_collector_loops10_2018_instruction: Tulungan si Laurel na kunin ang
+        lahat ng mga kayamanan mula sa kuwebang ito.
       courseB_collector_loops11_instruction: Eureka! Magkuha ng maraming mga yaman
         hangga't kaya mo!
+      courseB_collector_loops11_2018_instruction: |-
+        Eureka!  Get as much treasure
+        as you can!
+      courseB_collector_loops1_2018_instruction: Ito si Laurel ang Abenturero! Maaari
+        mo ba siyang pagalawin sa paligid at magkuha ng kayamanan?
       courseB_collector_loops2_instruction: Kunin ang lahat ng apat na mga bunton
         para maipasa ang antas na ito.
+      courseB_collector_loops2_2018_instruction: |-
+        Get all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: Paano makuha ni Laurel ang lahat ng mga
         bunton ng yaman gamit lang ang isang `E -->`na bloke?
+      courseB_collector_loops3_2018_instruction: |-
+        How can Laurel get all five piles
+        of treasure using only one `E -->` block?
       courseB_collector_loops3_predict1_instruction: Paano makolekta ni Laurel ang
         lahat ng 5 mga bunton ng ginto gamit lang ang isang `E -->`na bloke?
       courseB_collector_loops4_instruction: Ayusin ang daanan ni Laurel para makuha
         ang lahat ng mga yaman!
+      courseB_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure!
       courseB_collector_loops5_instruction: 'Magdagdag sa code mula sa huling palaisipan
         para makuha ang lahat ng mga yaman. '
+      courseB_collector_loops5_2018_instruction: 'Magdagdag sa code mula sa huling
+        palaisipan para makuha ang lahat ng mga yaman. '
       courseB_collector_loops6_instruction: Alamin ang code para matulungan si Laurel
         na makuha ang lahat ng mga yaman!
+      courseB_collector_loops6_2018_instruction: |-
+        Figure out the code to help Laurel
+        get all of the treasure!
       courseB_collector_loops7_instruction: Isulat ang code para makuha ang lahat
         ng mga yamang ito.
+      courseB_collector_loops7_2018_instruction: |-
+        Write the code to get all of this
+        treasure.
       courseB_collector_loops8_instruction: "**Hamon:** Ang kayamanan ay umabot hanggang
         sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha
         ang lahat ng ito."
+      courseB_collector_loops8_2018_instruction: |-
+        **Challenge: ** The treasure goes
+        all the way down these stairs!  Write the code to help Laurel get it all.
       courseB_collector_loops9_instruction: '*"Tulungan akong makuha ang kayamanan
         mula sa malalim na lambak na ito."*'
+      courseB_collector_loops9_2018_instruction: |-
+        *"Help me get the treasure from
+        this deep valley."*
       courseB_collector_loops_challenge1_instruction: 'Sa oras na ito, mayroon ka
         lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
+      courseB_collector_loops_challenge1_2018_instruction: 'Sa oras na ito, mayroon
+        ka lang limitadong mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_loops_challenge2_instruction: Ating kunin ang mga kayamanan!
         Tulungan akong makatawid sa bawat isang hanay, at pagkatapos ay babalik para
         simulan ang sunod na hanay. Maaari ka bang makahanap ng pattern?
       courseB_collector_loops_challenge2a_instruction: Tulungan si Laurel na makakuha
         ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang palaisipang
         ito.
+      courseB_collector_loops_challenge2a_2018_instruction: Tulungan si Laurel na
+        makakuha ng hindi bababa sa **5** mga piraso ng kayamanan para matapos ang
+        palaisipang ito.
       courseB_collector_loops_challenge`_instruction: 'Sa oras na ito, maaari ka lang
         gumamit ng isa sa bawat arrow na bloke. Kunin ang lahat ng mga yaman! '
       courseB_collector_prog1_instruction: Ito si Laurel ang Abenturero! Maaari mo
@@ -8327,66 +8649,156 @@
         lahat ng apat.
       courseB_collector_prog3_instruction: Paano makolekta ni Laurel ang lahat ng
         limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
+      courseB_iceage_loops1_instruction: |-
+        Help Scrat across the ice to get to the
+        acorn!
+      courseB_iceage_loops10_instruction: |-
+        Help Scrat get all the way over to the
+        acorn!
+      courseB_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseB_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseB_iceage_loops2_instruction: |-
+        Use two different move blocks to get to
+        the acorn!
+      courseB_iceage_loops3_instruction: |-
+        Can you get to the acorn with just one
+        `W` block?
+      courseB_iceage_loops4_instruction: |-
+        Add one more block to get Scrat all the
+        way to the acorn!
+      courseB_iceage_loops5_instruction: |-
+        Can you add one more loop to get to the
+        acorn?
+      courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
+      courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseB_iceage_loops8_instruction: 'Can you fix this code? '
+      courseB_iceage_loops9_instruction: |-
+        The acorn is so far away! Can you use loops
+        to help Scrat get there?
       courseB_maze_seq1_instruction: |-
         Maglaro sa mga blokeng ito para makita kung ano ang pinagawa nila sa ibon! \r
         \r
         Papuntahin ang ibon sa baboy para makompleto ang antas.
       courseB_maze_seq10_instruction: Ayusin ang mga bugs para mapapunta ang ibon
         sa baboy.
+      courseB_maze_seq10_2018_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: Ang lahat ng ito ay ikaw lang! Papuntahin ang
         ibon sa baboy.
+      courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Ngayon ay kunin ang baboy na iyan sa kahit anong
         paraan na kaya mo!
+      courseB_maze_seq12_2018_instruction: Ngayon ay kunin ang baboy na iyan sa kahit
+        anong paraan na kaya mo!
+      courseB_maze_seq1_2018_instruction: |-
+        Play with these blocks to see what they
+        make Scrat do! \r
+        \r
+        Get Scrat to the acorn to complete the level.
       courseB_maze_seq2_instruction: '*"May bug! Ayusin ang code para mapapunta ako
         sa baboy."*'
+      courseB_maze_seq2_2018_instruction: |-
+        A bug! Fix the code to get Scrat to the
+        acorn!
       courseB_maze_seq4_instruction: Magdagdag ng 2 mga bloke para mapapunta ang ibon
         sa baboy.
+      courseB_maze_seq4_2018_instruction: |-
+        Use **2** movement blocks to get the Scrat
+        to the acorn.
       courseB_maze_seq5_instruction: Ngayon ay subukan ang palaisipang ito mula sa
         simula!
+      courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: Ilipat ang isang daan, pagkatapos ay isa pa para
         mapapunta ang ibon sa baboy!
+      courseB_maze_seq6_2018_instruction: |-
+        Move one way, then another to get Scrat
+        to the acorn!
       courseB_maze_seq7_instruction: Alamin kung ano ang nawala at pagkatapos ay magdagdag
         ng mga bloke para mapapunta ang ibon sa baboy!
+      courseB_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get Scrat to the acorn!
       courseB_maze_seq8_instruction: Ikaw naman! Ano ang kailangan mong gawin para
         mapapunta ang ibon sa baboy?
+      courseB_maze_seq8_2018_instruction: |-
+        Your turn!  What do you need to do to
+        get Scrat to the acorn?
       courseB_maze_seq9_instruction: 'Hamon: Umikot sa TNT para mapapunta ang ibon
         sa baboy.'
+      courseB_maze_seq9_2018_instruction: |-
+        Challenge: Move around the broken ice
+        to get Scrat to the acorn.
       courseB_maze_seq9_challenge1_instruction: "*Nasaan na nagtago ang baboy ngayon?*"
       courseB_maze_seqCold_instruction: 'Hamon: I-debug ang antas na ito sa pamamagitan
         ng pagdagdag ng mga bloke para mapapunta ang ibon sa baboy!'
       courseB_maze_seqOld_instruction: 'Umikot sa TNT para mapapunta ang ibon sa baboy! '
       courseB_maze_seq_challenge1_instruction: Maaari mo bang mahanap ang landas bago
         ka maubusan ng mga bloke?
+      courseB_maze_seq_challenge1_2018_instruction: |-
+        Can you find a path before you
+        run out of blocks?
       courseB_maze_seq_challenge2_instruction: I-debug ang antas na ito. Ito ang tamang
         mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
+      courseB_maze_seq_challenge2_2018_instruction: I-debug ang antas na ito. Ang
+        mga ito ay ang mga tamang bloke, ngunit sila ay nasa maling pagkakasunod-sunod!
       courseB_playLab_events1_instruction: Tingnan kung maaari mong matukoy kung ano
         ang ginagawa ng bawat bloke.
+      courseB_playLab_events1_2018_instruction: |-
+        See if you can figure out what each
+        block does.
       courseB_playlab_events2_instruction: Pasalitain ang Daisy na Dragon kapag na-click
         mo ang "Run".
+      courseB_playlab_events2_2018_instruction: |-
+        Have Daisy the Dragon say something
+        when you click "Run".
       courseB_playlab_events3_instruction: Gumamit ng event para magawa ng Daisy na
         Dragon na magpalit sa isang random na mood kapag na click mo ito.
+      courseB_playlab_events3_2018_instruction: Gumamit ng event para magawa ng Daisy
+        na Dragon na magpalit sa isang random na mood kapag na click mo ito.
       courseB_playlab_events4_instruction: Oras na ng kabalyero! Magdagdag ng pangyayari
         para ang kabalyero ay gagalaw patungo sa dragon kapag ang kaliwang arrow ay
         na-click.
+      courseB_playlab_events4_2018_instruction: |-
+        Knight time!  Add an event so that
+        the knight moves toward the dragon when the left arrow is clicked.
       courseB_playlab_events5_instruction: Ngayon ay magdagdag ng pangyayari para
         ang kabalyero ay tatakbo palayo sa dragon kapag napindot mo ang kanang arrow.
+      courseB_playlab_events5_2018_instruction: |-
+        Now add an event so that the knight
+        runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
+      courseB_playlab_events6_2018_instruction: |-
+        Help your knight get all of the
+        flags!\r
+        \r
+        To do this, you'll need to add events to help the knight move
+        up, down, left, and right.
       courseB_playlab_events7_instruction: Gawing masaya ang laro sa pamamagitan ng
         pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya
         para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga
         para gawin itong mas maging totoo.
+      courseB_playlab_events7_2018_instruction: |-
+        Make this game fun by setting the
+        knight to vanish when he runs into the dragon on his way to get the flags!  Play
+        a sound when they collide to make it feel more real.
       courseB_playlab_events8_instruction: Gamitin ang iyong imahenasyon. Ano ang
         maaari mong gawin para gawing mas masaya ang larong ito?
       courseB_playlab_eventsFP_instruction: Gamitin ang iyong imahenasyon. Ano ang
         maaari mong gawin para gawing mas masaya ang larong ito?
+      courseB_playlab_eventsFP_2018_instruction: |-
+        Use your imagination. What can
+        you do to make this game more fun?
       courseB_playlab_eventsToolbox_instruction: Tapusin sa pamamagitan ng pagpapatunog
         ng tunog at pagpagawa sa kabalyero na maglaho kapag nakatagpo niya ang dragon!
       courseB_playlab_events_challenge1_instruction: 'Gawin ang mga hayop na gumalaw
         pababa kapag napindot mo ang ▼. '
+      courseB_playlab_events_challenge1_2018_instruction: "Make the animals move\ndown
+        when you press ▼. "
       courseB_playlab_events_challenge2_instruction: Pawalain ang mga hayop kapag
+        na-click mo sila.
+      courseB_playlab_events_challenge2_2018_instruction: Pawalain ang mga hayop kapag
         na-click mo sila.
       courseB_playlab_events_challenge2_embed_instruction: Narito ang iyong natapos
         na laro!
@@ -8394,46 +8806,103 @@
         hayop kapag na-click mo ang mga ito! Maaari ka ring magdagdag ng mga tunog
         at mag-iskor ng mga puntos para makalikha ng isang masayang laro ng Animal
         Tag!
+      courseB_playlab_events_challenge2_template_2018_instruction: |-
+        Let's make the
+        animals disappear when you click on them! You can also add sounds and score
+        points to create a fun game of Animal Tag!
+      courseB_scrat_forVideo_instruction: Get the acorn!
       courseB_starWars_prog1_instruction: '"Pumunta at kumuha ng mga metal na scrap,
         BB-8!"'
       courseB_starWars_prog10_instruction: Tulungan si BB-8 na magtipon ng mga nagbabagang
         mga scrap na metal
+      courseB_starWars_prog10_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseB_starWars_prog11_instruction: Tulungan si BB-8 na magtipon ng mga nagbabagang
         mga scrap na metal
+      courseB_starWars_prog11_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
+      courseB_starWars_prog1_2018_instruction: '"Pumunta at kumuha ng mga metal na
+        scrap, BB-8!"'
       courseB_starWars_prog2_instruction: Kunin ang lahat ng mga metal.
+      courseB_starWars_prog2_2018_instruction: Kunin ang lahat ng mga metal.
       courseB_starWars_prog3_instruction: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog3_2018_instruction: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog4_instruction: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog4_2018_instruction: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog5_instruction: Kunin ang scrap na metal
+      courseB_starWars_prog5_2018_instruction: Kunin ang scrap na metal
       courseB_starWars_prog6_instruction: Kunin ang lahat ng mga scrap na metal
+      courseB_starWars_prog6_2018_instruction: Kunin ang lahat ng mga scrap na metal
       courseB_starWars_prog7_instruction: Pumunta at kunin ito!
+      courseB_starWars_prog7_2018_instruction: Pumunta at kunin ito!
       courseB_starWars_prog8_instruction: "**Hamon:** Tulungan si BB-8 na magtipon
         ng mga nagbabagang mga scrap na metal"
+      courseB_starWars_prog8_2018_instruction: |-
+        **Challenge:** Help BB-8 gather the
+        glowing scrap metal
       courseB_starWars_prog9_instruction: Tulungan si BB-8 na magtipon ng mga nagbabagang
         mga scrap na metal
+      courseB_starWars_prog9_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseC_PlayLab_events1_instruction: Pasabihin si Jorge ang Aso (aktor 1) nang
+        "Hi there."
+      courseC_PlayLab_events1_2018_instruction: |-
+        Make Jorge the Dog (actor 1) say
         "Hi there."
       courseC_PlayLab_events2_instruction: Maaari mo bang mapagawa si Jorge ang Aso
         (aktor 1) na magsabi ng isang bagay, pagkatapos pasalitain din si Olive ang
         Pusa (aktor 2) pagkatapos?
+      courseC_PlayLab_events2_2018_instruction: |-
+        Can you make Jorge the Dog (actor
+        1) say something, then have Olive the Cat (actor 2) say something afterward?
       courseC_PlayLab_events3_instruction: Maaari ka bang magsulat ng programa para
         mapagawa si Jorge (aktor 1) na lumapit papunta kay Olive ang Pusa?
+      courseC_PlayLab_events3_2018_instruction: |-
+        Can you write a program to make
+        Jorge (actor 1) move toward Olive the Cat?
       courseC_PlayLab_events4_instruction: Maaari ka bang magsulat ng programa na
         nagpapagawa kay Jorge (aktor 1) na lumakad papunta kay Olive ang Pusa, at
         pasabihin si Olive nang "Hi there." kapag si Jorge ay nakaabot sa kanya?
+      courseC_PlayLab_events4_2018_instruction: |-
+        Can you write a program that makes
+        Jorge (actor 1) move to Olive the Cat, and have Olive say "Hi there." when
+        Jorge reaches her?
       courseC_PlayLab_events5_instruction: Maaari ka bang magsulat ng programa para
         mapagawa si Octavia ang Pugita na magsabi nang "Ano ang bago?" kapag siya
         ay na-click?
+      courseC_PlayLab_events5_2018_instruction: |-
+        Can you write a program to make
+        Octavia the Octopus say "What's new?" when she is clicked?
       courseC_PlayLab_events6_instruction: Ngayon, magsulat ng programa para mapagalaw
         si Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa / kanan
         na mga key para matamaan ang lahat ng mga target!
+      courseC_PlayLab_events6_2018_instruction: Ngayon, magsulat ng programa para
+        mapagalaw si Waddles ang Pingguwino sa paligid gamit ang taas / baba / kaliwa
+        / kanan na mga key para matamaan ang lahat ng mga target!
       courseC_PlayLab_events7_instruction: Ang `repeat forever` na bloke ay nagbibigay-daan
         na mapapatakbo mo ang code nang paulit-ulit magpakailanman. Gamitin ang blokeng
         ito para galawin si Chomp ang Dino (aktor 2) pataas at pababa ng 400 pixels
         magpakailanman.
+      courseC_PlayLab_events7_2018_instruction: |-
+        The `repeat forever` block allows
+        you to run code over and over forever.  Use this block to move Chomp the Dino
+        (actor 2) up and down by 400 pixels forever.
       courseC_PlayLab_events8_instruction: |-
         Maaari mo bang mapapatugtog si Waddles (aktor 1) ng "hit" na tunog at pasabihin ng "Ouch!" kapag nakatagpo niya si Chomp? \r
         Kapag tapos ka na, laruin ang laro para mangyari ito.
+      courseC_PlayLab_events8_2018_instruction: |-
+        Can you have Waddles (actor 1) play
+        a "hit" sound and say "Ouch!" if he runs into Chomp? \r
+        When you're
+        done, play the game to make that happen.
       courseC_PlayLab_events9_instruction: |-
+        Maaari ka bang magdagdag ng bloke para makaiskor ng puntos kapag si Waddles ang Pingguwino (aktor 1) ay nakatagpo kay Octavia ang Pugita (aktor 3)?
+        \r
+        Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makapuntos ka!
+      courseC_PlayLab_events9_2018_instruction: |-
         Maaari ka bang magdagdag ng bloke para makaiskor ng puntos kapag si Waddles ang Pingguwino (aktor 1) ay nakatagpo kay Octavia ang Pugita (aktor 3)?
         \r
         Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makapuntos ka!
@@ -8441,57 +8910,92 @@
         Magdagdag ng mga bloke sa `when run` na pangyayari para palitan ang background na eksena at ang bilis ni Waddles ang Pingguwino.\r
         \r
         Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang makapuntos ka.
+      courseC_PlayLab_eventsA_2018_instruction: |-
+        Add blocks to the `when run` event
+        to change the background scene and the speed of Waddles the Penguin.\r
+        \r
+        Play
+        the game and move Waddles with the arrows until you score.
       courseC_PlayLab_eventsFP_instruction: Maglikha ng iyong sariling kuwento. Kapag
         tapos ka na, i-click ang "Finish" para ibahagi sa iyong mga kaibigan. Tingnan
         ang mga ideyang kuwento sa mga hint.
+      courseC_PlayLab_eventsFP_2018_instruction: Maglikha ng iyong sariling kuwento.
+        Kapag tapos ka na, i-click ang "Finish" para ibahagi sa iyong mga kaibigan.
+        Tingnan ang mga ideyang kuwento sa mga hint.
       courseC_PlayLab_events_challenge1_instruction: |-
         Gumamit ng bagong bloke para awtomatikong mapabalik si Waddles sa simula kung saan natagpuan niya ang Dinosaur at kapag siya ay nakakapuntos.\r
         Laruin ang laro at pagalawin si Waddles gamit ang mga arrow hanggang sa makakuha siya ng sapat na puntos.
+      courseC_PlayLab_events_challenge1_2018_instruction: |-
+        Use a new block to make
+        Waddles automatically move back to the start when he runs into the Dinosaur
+        and when he scores a point. \r
+        Play the game and move Waddles with the arrows
+        until you score enough points.
       courseC_PlayLab_events_challenge1_xy_blocks_instruction: |-
         Narito ang bagong bloke na medyo komplikado. Gamitin ito para mapagalaw si Waddles pabalik sa simula kapag nakatagpo niya ang Dinosaur at kapag siya ay nakakapuntos. Ito ay nagpamanghamon at nagpasaya sa iyong laro!\r
         \r
         Laruin ang laro at galawin si Waddles gamit ang mga arrow hanggang sa makakapuntos ka ng sapat na puntos.
       courseC_artist_loop1_instruction: Tayo ay magdagdag ng pizza!
+      courseC_artist_loop1_2018_instruction: Tayo ay magdagdag ng pizza!
       courseC_artist_loops1_instruction: "*\"Zombie. Gumuhit!\"*\\r\n\\r\nAng zombie
         ay gustong magguhit ng linya mula sa kung saan siya hanggang sa halamanan
         ng mga mirasol. Maaari mo ba siyang matulungan? \\r\n*(Ang garden ay 250 pixels
         ang layo)*  "
       courseC_artist_loops1a_instruction: 'Dalhin ang artista sa gitna ng panglarong
         bahagi, pagkatapos ay iguhit ang ibon gamit ang sticker. '
+      courseC_artist_loops1a_2018_instruction: "Get the artist to the center of the\nplay
+        area, then draw a bird using a sticker. "
       courseC_artist_loops2_instruction: Ngayon na alam na ng zombie ang daan, tulungan
         siyang maghukay ng mga butas sa landas para makatanim pa ng mas maraming mga
         bulaklak!
       courseC_artist_loops2a_instruction: Ngayon, gumamit ng loop para paikutin ang
         iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
+      courseC_artist_loops2a_2018_instruction: |-
+        Now, use a loop to spin your bird
+        around 12 times with a 30 degree turn.
       courseC_artist_loops3_instruction: Mahusay! Ngayon na ang mga bulaklak ay umusbong
         na, tulungan ang zombie na maglagay ng kaibigan sa bawat 50 pixel para magbantay
         sa kanila hanggang sa silay ay lumaki.
       courseC_artist_loops3a_instruction: Ngayon ay magdagdag ng paniki!
+      courseC_artist_loops3a_2018_instruction: Ngayon ay magdagdag ng paniki!
       courseC_artist_loops4_instruction: Ang zombie ay nakakita ng bakanteng bukid!
         Maaari mo ba siyang matulungang magdala ng buhat sa pamamagitan ng pag-stamp
         ng mga sticker ng hayop sa bawat 100 pixels sa paligid ng hangganan?
       courseC_artist_loops4a_instruction: Subukang tumalon pasulong ng 75 pixels.
+      courseC_artist_loops4a_2018_instruction: Subukang tumalon pasulong ng 75 pixels.
       courseC_artist_loops5_instruction: |
         Magaling! Ngayon ay oras na para gumawa ng bagod sa loob para panatilihin ang mga hayop sa labas.  \r
         \r
       courseC_artist_loops5a_instruction: Subukan ang mga bagong sticker!
+      courseC_artist_loops5a_2018_instruction: Subukan ang mga bagong sticker!
       courseC_artist_loops5b_instruction: Subukang magdagdag ng mga linya!
+      courseC_artist_loops5b_2018_instruction: Subukang magdagdag ng mga linya!
       courseC_artist_loops6_instruction: |
         Ano dapat ang ilagay ng zombie sa loob ng halamanan?  \r
         \r
         \r
       courseC_artist_loops6a_instruction: Magdagdag ng isa pang sticker!
+      courseC_artist_loops6a_2018_instruction: Magdagdag ng isa pang sticker!
       courseC_artist_loops7a_instruction: Maglaro sa mga loop at mga anggulo.
+      courseC_artist_loops7a_2018_instruction: Maglaro sa mga loop at mga anggulo.
       courseC_artist_loops8a_instruction: Ngayon ay subukan ang isang bagay nang ikaw
         lang!
+      courseC_artist_loops8a_2018_instruction: Ngayon ay subukan ang isang bagay nang
+        ikaw lang!
       courseC_artist_loopsPre1a_instruction: Oras na para iikot ang linya sa paligid!
+      courseC_artist_loopsPre1a_2018_instruction: Oras na para iikot ang linya sa
+        paligid!
       courseC_artist_loopsPrePre1a_instruction: 'Dalhin ang artista sa gitna nang
         panglarong bahagi, pagkatapos ay gumuhit ng linya. '
+      courseC_artist_loopsPrePre1a_2018_instruction: "Get the artist to the center\nof
+        the play area, then draw a line. "
       courseC_artist_loopsTemplate_instruction: Mahusay! Ngayon na ang mga bulaklak
         ay umusbong na, tulungan ang zombie na maglagay ng kaibigan sa bawat 50 pixel
         para magbantay sa kanila hanggang sa silay ay lumaki.
       courseC_artist_loopsTemplateA_instruction: 'Dalhin ang artista sa gitna ng panglarong
         bahagi, pagkatapos ay gumuhit ng isang ibon gamit ang sticker. '
+      courseC_artist_loopsTemplateA_2018_instruction: "Get the artist to the center\nof
+        the play area, then draw a bird using a sticker. "
       courseC_artist_prog1_instruction: Paglaruan ang mga bloke sa toolbox para makita
         kung ano ang nagagawa nila!
       courseC_artist_prog1_2018_instruction: Paglaruan ang mga bloke sa loob ng toolbox
@@ -8531,8 +9035,10 @@
         (Bawat gilid ay 150 pixels)
       courseC_artist_prog_challenge1-doghouse_instruction: Tayo ay gagawa ng bahat
         ng aso para kay Jorge!
-      courseC_artist_prog_challenge1_instruction: |
-        Gumuhit ng mga silid para sa bawat isa sa mga hayop.
+      courseC_artist_prog_challenge1_instruction: 'Gumuhit ng mga silid para sa bawat
+        isa sa mga hayop.
+
+'
       courseC_artist_prog_challenge1_2018_instruction: 'Magguhit ng mga silid para
         sa bawat isa sa mga hayop. '
       courseC_artist_prog_challenge2_instruction: "*Tulungan akong magpinta ng dilaw
@@ -8543,32 +9049,62 @@
         ng mga dilaw na linya sa kalsadang ito!"*'
       courseC_collector_loops_challenge2_instruction: Kumuha ng hindi bababa sa **5**
         mga piraso ng kayamanan!
+      courseC_collector_loops_challenge2_2018_instruction: Kumuha ng hindi bababa
+        sa **5** mga piraso ng kayamanan!
       courseC_collector_prog1_instruction: Maglaro sa paligid gamit ang mga bloke
         para makita kung ikaw ay makakatulong kay Laurel na magkolekta ng ilang mga
         kayamanan.
+      courseC_collector_prog1_2018_instruction: |-
+        Play around with the blocks to see
+        if you can help Laurel collect some treasure.
       courseC_collector_prog2_instruction: Papuntahin si Laurel sa kayamanan, pagkatapos
         ay gamitin ang `collect` para pulutin ang mga ito.
+      courseC_collector_prog2_2018_instruction: |-
+        Move Laurel to the treasure, then
+        use `collect` to pick it up.
       courseC_collector_prog3_instruction: Mag-order na mga blokeng ito para makolekta
         ang mga yaman at malutas ang palaisipan.
+      courseC_collector_prog3_2018_instruction: |-
+        Order these blocks to collect the
+        treasure and solve the puzzle.
       courseC_collector_prog4_instruction: Ilagay ang mga blokeng ito para makolekta
+        ang lahat ng mga yaman at malutas ang palaisipan.
+      courseC_collector_prog4_2018_instruction: Ilagay ang mga blokeng ito para makolekta
         ang lahat ng mga yaman at malutas ang palaisipan.
       courseC_collector_prog5_instruction: Ang mga blokeng ito ay nasa maling pagkakasunod-sunod.
         Maaari mo bang maayos ang mga ito?
+      courseC_collector_prog5_2018_instruction: Ang mga blokeng ito ay nasa maling
+        pagkakasunod-sunod. Maaari mo bang maayos ang mga ito?
       courseC_collector_prog6_instruction: Baguhin ang pagkaayos sa mga blokeng para
         makolekta ang lahat ng mga kayamanan.
+      courseC_collector_prog6_2018_instruction: |-
+        Reorder the blocks to collect all
+        of the treasure.
       courseC_collector_prog7_instruction: Gamitin ang mga bloke mula sa toolbox para
         kolektahin ang lahat ng mga kayamanan.
+      courseC_collector_prog7_2018_instruction: Gamitin ang mga bloke mula sa toolbox
+        para kolektahin ang lahat ng mga kayamanan.
       courseC_collector_prog8_instruction: '*"Panatilihin ang magandang trabaho! Tulungan
         akong kolektahin ang lahat ng mga kayamanan."*'
+      courseC_collector_prog8_2018_instruction: |-
+        *"Keep up the good work! Help me
+        collect all of the treasure."*
       courseC_collector_prog9_instruction: '*"Ating kunin ang lahat ng mga kayamanan!"*'
+      courseC_collector_prog9_2018_instruction: '*"Ating kunin ang lahat ng mga kayamanan!"*'
       courseC_collector_progA_instruction: Tulungan si Laurel na kolektahin ang lahat
         ng mga kayamanan.
       courseC_collector_progB_instruction: Mangolekta ng maraming mga barya hangga't
         maaari para matapos ang yugto!
       courseC_collector_prog_challenge1_instruction: Tingnang mabuti! Maaari mo bang
         makolekta ang lahat ng **10** mga piraso ng kayamanan?
+      courseC_collector_prog_challenge1_2018_instruction: |-
+        Look carefully! Can you
+        collect all **10** pieces of treasure?
       courseC_collector_prog_challenge2_instruction: Kolektahin ang hindi bababa ng
         **10** na mga piraso ng kayamanan para matapos ang hamon na ito!
+      courseC_collector_prog_challenge2_2018_instruction: |-
+        Collect at least **10**
+        pieces of treasure to finish this challenge!
       courseC_flappy_embed_events_instruction: Narito ang isang halimbawang ng laro
         na ililikha mo nang ikaw lang! Maglaro ng isa o dalawang beses para makakuha
         ng ideya kung ano ang gagawin mo.
@@ -8577,57 +9113,123 @@
         panglaro na lugar para mapagalaw si Flappy papunta sa target.
       courseC_flappy_events10_instruction: 'Maglikha ng iyong sarilling Flappy na
         laro! '
+      courseC_flappy_events10_2018_instruction: 'Maglikha ng iyong sarilling Flappy
+        na laro! '
+      courseC_flappy_events1_2018_instruction: Ilakip ang `flap normal amount` na
+        bloke sa `when click` event, pagkatapos ay pindutin ang "Run". I-click o i-tap
+        ang panglaro na lugar para mapagalaw si Flappy papunta sa target.
       courseC_flappy_events2_instruction: Subukang magdagdag ng bloke na nagtakda
         sa antas na bilis kapag ang "Run" na button ay napindot. Laruin ang laro at
         mag-flap papunta sa target para magpatuloy.
+      courseC_flappy_events2_2018_instruction: |-
+        Try adding a block that sets the
+        level speed when the "Run" button is pressed.  Play the game and flap to
+        the target to continue.
       courseC_flappy_events3_instruction: Ilakip ang `end game` na bloke sa `when
         hit the ground` na pangyayari. Laruin ang laro at i-crash ang ibon sa lupa
         para magpatuloy.
+      courseC_flappy_events3_2018_instruction: |-
+        Attach the `end game` block to the
+        `when hit the ground` event.   Play the game and crash the bird into the ground
+        to continue.
       courseC_flappy_events4_instruction: Maglakip ng bloke sa `when hit an obstacle`
         na pangyayari para magtapos ang laro kapag si Flappy ay bumangga sa unang
         hanay ng mga tubo.
+      courseC_flappy_events4_2018_instruction: |-
+        Attach a block to the `when hit an
+        obstacle` event so that the game ends when Flappy crashes into the first set
+        of pipes.
       courseC_flappy_events5_instruction: Magdagdag ng bloke sa `when pass an obstacle`
         na pangyayari, pagkatapos ay pindutin ang "Run" para makakuha ng puntos sa
         pamamagitan ng pagpalipad ni Flappy sa taas ng unang hanay ng mga tubo.
+      courseC_flappy_events5_2018_instruction: |-
+        Add a block to the `when pass an
+        obstacle` event, then press "Run" to score a point by flying Flappy through
+        the first set of pipes.
       courseC_flappy_events6_instruction: Tingnan kung makakapuntos ka pa rin pagkatapos
         gawin si Flappy na mag-flag nang maliit o malaking halaga sa bawat beses na
         mag-click ka.
+      courseC_flappy_events6_2018_instruction: |-
+        See if you can still score a point
+        after making Flappy flap either a smaller or larger amount each time you click.
       courseC_flappy_events7_instruction: Kasunod nito, subukang baguhin ang eksena
         sa pamamagitan ng paglakip ng bloke sa `when run` na pangyayari.
+      courseC_flappy_events7_2018_instruction: Kasunod nito, subukang baguhin ang
+        eksena sa pamamagitan ng paglakip ng bloke sa `when run` na pangyayari.
       courseC_flappy_events8_instruction: Subukang magtakda ng **random** na eksena
         kapag nangyari ang ibang mga pangyayari... bilang halimbawa, kapag nalampasan
         ang isang balakid.
+      courseC_flappy_events8_2018_instruction: |-
+        Try setting a **random** scene when
+        other events happen...for example, when passing an obstacle.
       courseC_flappy_events9_instruction: Para haluin ang mga bagay, sa halip na tapusin
         ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang
         score pabalik sa 0.
+      courseC_flappy_events9_2018_instruction: |-
+        To mix things up, instead of ending
+        the game when Flappy hits an obstacle, try setting the score back to 0.
       courseC_harvester_loops1_instruction: Gamitin ang mga loop para pulutin ang
         lahat ng mga kalabasa.
       courseC_harvester_loops10_instruction: Kolektahin ang lahat ng mga mais at lahat
         ng mga kalabasa.
+      courseC_harvester_loops10_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops11_instruction: Kolektahin ang lahat ng mga mais at lahat
         ng mga kalabasa.
+      courseC_harvester_loops11_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
+      courseC_harvester_loops1_2018_instruction: Gamitin ang mga loop para pulutin
+        ang lahat ng mga kalabasa.
       courseC_harvester_loops2_instruction: Maaari mo bang haluin ang dalawang iba't
         ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang
         lahat ng mga ito?
+      courseC_harvester_loops2_2018_instruction: Maaari mo bang haluin ang dalawang
+        iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin
+        ang lahat ng mga ito?
       courseC_harvester_loops3_instruction: Kolektahin ang lahat ng mga kalabasa.
+      courseC_harvester_loops3_2018_instruction: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops4_instruction: Kolektahin ang lahat ng mga mais at ang
         lahat ng mga kalabasa.
+      courseC_harvester_loops4_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops5_instruction: Kolektahin ang lahat ng mais at ang lahat
         ng mga kalabasa.
+      courseC_harvester_loops5_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops6_instruction: Kolektahin ang lahat ng mga mais at ang
         lahat ng mga kalabasa.
+      courseC_harvester_loops6_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops7_instruction: Kolektahin ang lahat ng mga mais at ang
         lahat ng mga kalabasa.
+      courseC_harvester_loops7_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops8_instruction: "**Hamon:** Kolektahin ang lahat ng mga
         mais at ang lahat ng mga kalabasa."
+      courseC_harvester_loops8_2018_instruction: |-
+        **Challenge:** Collect all of the
+        corn and all of the pumpkins.
       courseC_harvester_loops9_instruction: Kolektahin ang lahat ng mga mais at lahat
         ng mga kalabasa.
+      courseC_harvester_loops9_2018_instruction: |-
+        Collect all of the corn and all
+        of the pumpkins.
       courseC_harvester_loops_challenge1_instruction: Kolektahin ang lahat ng mga
         mais.
       courseC_harvester_loops_challenge1a_instruction: Kolektahin ang lahat ng mga
         mais.
+      courseC_harvester_loops_challenge1a_2018_instruction: Kolektahin ang lahat ng
+        mga mais.
       courseC_harvester_loops_challenge2_instruction: Kolektahin ang lahat ng mga
         letsugas. Iwasan ang mga kahoy ay mga kabukiran!
+      courseC_harvester_loops_challenge2_2018_instruction: Kolektahin ang lahat ng
+        mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
       courseC_harvester_loops_forVid_instruction: Kolektahin ang lahat ng mga mais,
         lahat ng mga letsugas, at lahat ng mga kalabasa.
       courseC_maze_debugging1_instruction: Ayusin ang code para matulungan si Scrat
@@ -8668,8 +9270,13 @@
         si Scrat sa bunga ng oak.
       courseC_maze_debugging_challenge1_instruction: Tulungan si Scrat na magdesisyon
         kung aling daan ang tatahakin para makuha ang bunga ng oak.
+      courseC_maze_debugging_challenge1_2018_instruction: |-
+        Help Scrat decide which
+        way to turn to get to the acorn.
       courseC_maze_debugging_challenge2_instruction: Tulungan si Scrat na maabot ang
         bunga ng oak gamit ang apat lang na mga `turn` na mga utos.
+      courseC_maze_debugging_challenge2_2018_instruction: Tulungan si Scrat na maabot
+        ang bunga ng oak gamit ang apat lang na mga `turn` na mga utos.
       courseC_maze_loops1_instruction: Maaari mo bang mapapunta ang ibon sa baboy?
       courseC_maze_loops10_instruction: Maganda ang ginagawa mo! Panatilihin ito!
       courseC_maze_loops11_instruction: Ikaw ay malapit na doon! Sa oras na ito, piliin
@@ -8695,36 +9302,71 @@
         gumamit ng mga loop para mahanap ang kanyang bunga ng oak! '
       courseC_maze_loops_challenge1a_instruction: 'Ngayon ay gusto ni Scrat na subukang
         gumamit ng mga loop para mahanap ang kanyang bunga ng oak! '
+      courseC_maze_loops_challenge1a_2018_instruction: "Now Scrat wants to try using\nloops
+        to find his acorn! "
       courseC_maze_loops_challenge2_instruction: Tayo ay maghanap ng mga kayamanan
         - gamit ang mga loop! Tulungan ang kolektor sa pamamagitan ng pag-debug ng
         code na ito. Kunin ang lahat ng mga kayamanan!
       courseC_maze_programming1_instruction: Para sa mga palaisipang ito, i-drag ang
         lahat ng mga blokeng para ipagsama at i-click ang "Run" para tingnan itong
         umalis!
+      courseC_maze_programming1_2018_instruction: |-
+        For this puzzle, drag all of the
+        blocks together and click "Run" to watch it go!
       courseC_maze_programming2_instruction: I-drag ang ekstrang `move forward` na
         bloke palabas sa toolbox para tapusin ang iyong code.
+      courseC_maze_programming2_2018_instruction: I-drag ang ekstrang `move forward`
+        na bloke palabas sa toolbox para tapusin ang iyong code.
       courseC_maze_programming3_instruction: Mayroong isang ekstrang bloke na magiging
         sanhi na mag-crash ang ibon. Itapon ito sa pamamagitan ng pagkaladkad nito
         pabalik sa toolbox.
+      courseC_maze_programming3_2018_instruction: |-
+        There is one extra block that
+        is going to cause the bird to crash. Throw it away by dragging it back to
+        the toolbox.
       courseC_maze_programming4_instruction: Iwasan ang TNT para hindi lilipad ang
         mga balahibo!
+      courseC_maze_programming4_2018_instruction: Iwasan ang TNT para hindi lilipad
+        ang mga balahibo!
       courseC_maze_programming5_instruction: Iwasan ang mga TNT.
+      courseC_maze_programming5_2018_instruction: Iwasan ang mga TNT.
       courseC_maze_programming6_instruction: '"Maging kalmado at tulungan akong hanapin
         ang masamang baboy. Kung hindi baka magalit ako!"'
+      courseC_maze_programming6_2018_instruction: |-
+        "Keep calm and help me find the
+        bad pig. Otherwise I might get angry!"
       courseC_maze_programming7_instruction: "**Hamon:** Ang code na ito ay mayroong
         maraming mga bug. Kailangan mong magtanggal ng iilang mga bloke at magdagdag
         ng iba."
+      courseC_maze_programming7_2018_instruction: |-
+        **Challenge:** This code has a
+        lot of bugs. You'll need to remove some blocks and add others.
       courseC_maze_programming8_instruction: '*"Manatiling kalmado at tulungan akong
         hanapin ang masamang baboy."*'
+      courseC_maze_programming8_2018_instruction: |-
+        *"Keep calm and help me find
+        the bad pig."*
       courseC_maze_programming8_predict1_instruction: '*"Maging kalmado at tulungan
         akong hanapin ang masamang baboy."*'
+      courseC_maze_programming8_predict1_2018_instruction: |-
+        *"Keep calm and help
+        me find the bad pig."*
       courseC_maze_programming9_instruction: '""Ngayon, tulungan akong mag-abang sa
         baboy sa kahit anong paraan na gusto mo!"*'
+      courseC_maze_programming9_2018_instruction: |-
+        *"Now, help me sneak up on the
+        pig any way you want to!"*
       courseC_maze_programming_challenge1_instruction: 'Ang baboy ay nagtatago, at
         ang layunin ay para mahanap ito. '
+      courseC_maze_programming_challenge1_2018_instruction: "The pig is hiding, and\nthe
+        goal is to find it. "
       courseC_maze_programming_challenge2_instruction: Minsan ay mayroong higit sa
         isang pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis
         ang maglakad pabalik kaysa sa pumunta pasulong!
+      courseC_maze_programming_challenge2_2018_instruction: |-
+        Sometimes there is more
+        than one way to solve the same problem. Sometimes it's faster to go backwards
+        than it is to go forwards!
       courseC_playLab_embedded_instruction: |-
         Narito ang isang laro na pede mong paglaruan! Para manalo, gamitin ang iyong mga arrow key para mapagawa ang pingguwino na makatagpo sa pugita.\r
         \r
@@ -8742,64 +9384,163 @@
         bloke para mapapulot ni BB-8 ang lahat ng mga scrap na metal sa lugar na iyong
         paglaruan.
       courseC_starWars_loops10_instruction: Maganda ang ginawa mo! Panatilihin ito!
+      courseC_starWars_loops10_2018_instruction: Maganda ang ginawa mo! Panatilihin
+        ito!
       courseC_starWars_loops10_predict2_instruction: Maganda ang ginawa mo! Panatilihin
         ito!
+      courseC_starWars_loops10_predict2_2018_instruction: |-
+        You are doing great! Keep
+        it up!
       courseC_starWars_loops11_instruction: Ikaw ay malapit na doon! Sa oras na ito,
         piliin ang kahit anong landas na gusto mo!
+      courseC_starWars_loops11_2018_instruction: |-
+        You are almost there! This time,
+        choose any path you like!
+      courseC_starWars_loops1_2018_instruction: |-
+        BB-8 will pick up any metal scraps
+        along the path where he moves. Use 5 of the same block to get BB-8 to pick
+        up all of the scrap metal in the play area.
       courseC_starWars_loops1_predict1_instruction: Si BB-8 ay magpupulot ng kahit
         anong metal na mga scrap na nasa daan na madadaanan niya. Gamitin ang 5 bloke
         para mapulot ni BB-8 ang lahat ng mga tira-tirang mga metal sa lugar na iyong
         paglaruan.
+      courseC_starWars_loops1_predict1_2018_instruction: Si BB-8 ay magpupulot ng
+        kahit anong metal na mga scrap na nasa daan na madadaanan niya. Gamitin ang
+        5 bloke para mapulot ni BB-8 ang lahat ng mga tira-tirang mga metal sa lugar
+        na iyong paglaruan.
       courseC_starWars_loops2_instruction: Para makuha ang lahat ng tira-tirang mga
         metal, subukang maglikha ng loop na gumagamit lang ng isang bloke sa loob
         ng `repeat` na bloke.
+      courseC_starWars_loops2_2018_instruction: |-
+        To get all the scrap metal, try
+        creating a loop that uses only one block inside of a `repeat` block.
       courseC_starWars_loops4_instruction: Sa palaisipang ito, ang dalawang `repeat`
         na mga loop ay makakatulong sa iyo na mapakuha ni BB-8 ang lahat ng mga tira-tirang
         metal gamit ang pinakakaunting bilang ng mga bloke!
+      courseC_starWars_loops4_2018_instruction: |-
+        In this puzzle, two `repeat` loops
+        will help you get BB-8 to all of the scrap metal with the fewest number of
+        blocks!
       courseC_starWars_loops5_instruction: Ipapulot kay BB-8 ang lahat ng mga tira-tirang
         bakal nang mabilis hangga't maaari!
+      courseC_starWars_loops5_2018_instruction: |-
+        Get BB-8 to pick up all the scrap
+        metal as quickly as possible!
       courseC_starWars_loops6_instruction: Ang mga loop ay gumagana pa rin kahit may
         mahigit sa isang bloke ang nasa loob! Maaari mo bang i-loop ang pagkakasunod-sunod
         na ito?
+      courseC_starWars_loops6_2018_instruction: |-
+        Loops even work with more than one
+        block inside!  Can you loop this sequence?
       courseC_starWars_loops7_instruction: Maari mo bang masubukang kunin ang lahat
         ng tira-tirang mga bakal gamit ang isang loop lang? Subukang mag-program sa
         lahat nito ay pagkatapos ay hanapin ang nag-uulit na code para ilagay sa isang
         loop.
+      courseC_starWars_loops7_2018_instruction: |-
+        Can you try to get all the scrap
+        metal using just one loop? Try programming it all out then finding the repeating
+        code to put in a loop.
       courseC_starWars_loops9_instruction: Gamitin ang lahat ng natutunan mo para
         mapulot ang lahat ng mga tira-tirang bakal!
+      courseC_starWars_loops9_2018_instruction: |-
+        Use what you have learned to pick
+        up all of the scrap metal!
+      courseD_Frozen_nested1_instruction: "Draw a small shape, between **20 and 50**\npixels
+        wide.  It can be any shape that you like.  "
+      courseD_Frozen_nested2_instruction: Ngayon ay dalhin ang iyong hugis at gumuhit
+        ng dalawa o tatlo sa isang hanay!
+      courseD_Frozen_nested3_instruction: Ating iikot ang linya ng mga hugis sa paligid!
+      courseD_Frozen_nested4_instruction: Panahon na para ipagpatung-patung ang mga
+        hugis na ito!
+      courseD_Frozen_nested5_instruction: Paglaruan ang mga niyebe!
+      courseD_Frozen_nested6_instruction: |-
+        Draw a stair-step pattern that uses turns
+        between 75 and 105 degrees.
+      courseD_Frozen_nested7_instruction: Ngayon, bumaling ng 180 degrees at iguhit
+        ulit ang hagdanan na pattern!
+      courseD_Frozen_nested8_instruction: |-
+        Spin that shape around 5 or 6 times in
+        a circle.
+      courseD_Frozen_nested9_instruction: |-
+        Try playing around with what you've created.
+        Draw whatever you like!\r
+        - What happens if you use two different angles
+        in your stair step pattern?\r
+        - What happens if you make your diamond pattern
+        longer or shorter?\r
+        - What does it look like to draw two snowflakes on top
+        of one another?
       courseD_artist_binary1_instruction: Gamitin ang mga bloke sa baba para mapaguhit
         ng artista ang "01010101" sa binary sa unang hanay.
+      courseD_artist_binary1_2018_instruction: Gamitin ang mga bloke sa baba para
+        mapaguhit ng artista ang "01010101" na binary sa unang hanay.
       courseD_artist_binary2_instruction: Patakbuhin ang code na ito para makita kung
         paano gumagamit ng binary ang artista para iguhit ang pattern na ito.
+      courseD_artist_binary2_2018_instruction: |-
+        Run this code to see how the artist
+        uses binary to draw this pattern.
       courseD_artist_binary3_instruction: Alin sa mga binary na mga string sa baba
         ang maaari mong i-loop nang 8 beses para maiguhit ang larawang ito?
+      courseD_artist_binary3_2018_instruction: |-
+        Which of the binary strings below
+        could you loop 8 times to draw this image?
       courseD_artist_binary4_instruction: Maaari mo bang iguhit ang pattern na ito
         sa pamamagitan ng pagloop ng tatlong binary na digits (mga 0 at mga 1) lang?
+      courseD_artist_binary4_2018_instruction: Maguguhit mo ba ang pattern na ito
+        sa pamamagitan ng pag-loop ng tatlong binary digits lang (mga 0 at mga 1)?
       courseD_artist_binary5_instruction: |-
         Bawat binary string sa baba ay kinakatawan ng isang hanay ng larawang ito. \r
         \r
         Maaari mo bang baguhin ang pagkakaayos sa mga ito para guguhit ito ng isang smiley na mukha sa halip na ang isang nakasimangot?
+      courseD_artist_binary5_2018_instruction: |-
+        Each binary string below represents
+        one row of this picture. \r
+        \r
+        Can you rearrange them so it draws a smiley
+        face instead of a frown?
       courseD_artist_binary6_instruction: Aling 6 digit na binary string, na kung
         uulitin nang 11 na beses ay makakaguhit sa larawang ito?
+      courseD_artist_binary6_2018_instruction: Aling 6 digit na binary string, na
+        kung uulitin nang 11 na beses ay makakaguhit sa larawang ito?
       courseD_artist_binary7_instruction: Ano ang pinakamaikling binary na string
         ang maaari mong ulit-ulitin para maiguhit ang larawang ito?
+      courseD_artist_binary7_2018_instruction: |-
+        What is the shortest binary string
+        that you can repeat to draw this image?
       courseD_artist_binary8_instruction: Tapusin ang code para ilikha ang drowing
+        na ito.
+      courseD_artist_binary8_2018_instruction: Tapusin ang code para ilikha ang drowing
         na ito.
       courseD_artist_binary8_predict1_instruction: Tapusin ang code para malikha ang
         drowing na ito.
+      courseD_artist_binary8_predict1_2018_instruction: |-
+        Finish the code to create
+        this drawing.
       courseD_artist_binaryFP_instruction: |-
         Narito ang mas mataas na resolusyon ng canvas para maguhitan mo - 16 pixels sa 16 pixels!\r
         \r
         Tingnan kung ano ang mangyayari kapag nagsimula ka nang maging malikhain gamit ang mga bits!
       courseD_artist_binaryFP8_instruction: "**Libreng Laro:** Gumuhit nang anumang
         gusto mo sa binary! "
+      courseD_artist_binaryFP_2018_instruction: |-
+        Here's a higher resolution canvas
+        to draw on - 16 pixels by 16 pixels!\r
+        \r
+        See what happens when we start
+        to get creative with the bits!
       courseD_artist_binary_challenge0_instruction: Subukang gamitin ang mga naka-nest
         na mga loop para makumpleto ang drowing na ito.
       courseD_artist_binary_challenge1_instruction: Maaari ka lang gumamin ng bawat
         halaga ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit
         ng naka-nest na mga loop para makumpleto ang drowing na ito.
+      courseD_artist_binary_challenge1_2018_instruction: Maaari ka lang gumamin ng
+        bawat halaga ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang
+        gumamit ng naka-nest na mga loop para makumpleto ang drowing na ito.
       courseD_artist_binary_challenge2_instruction: Masisigasig ka ba para ibalik
         ang logong ito pabalik sa normal?
+      courseD_artist_binary_challenge2_2018_instruction: |-
+        Are you persistent enough
+        to restore this logo back to normal?
       courseD_artist_binary_challenge3_instruction: Masisigasig ka ba para ibalik
         ang logong ito pabalik sa normal?
       courseD_artist_embed_frozen_instruction: Pindutin ang Run para makakita ng niyebeng
@@ -8808,8 +9549,10 @@
         niyebeng disenyo.
       courseD_artist_functions10_instruction: Sa oras na ito, gamitin ang mga linya
         ng 8 mga hexagon na may mga gilid na 25 pixel.
-      courseD_artist_functions2_instruction: |
-        Sa oras na ito, gamitin ang `draw a square` na function para maglikha ng mga baso. \r
+      courseD_artist_functions2_instruction: 'Sa oras na ito, gamitin ang `draw a
+        square` na function para maglikha ng mga baso. \r
+
+'
       courseD_artist_functions3_instruction: Maaari mong gawin ang drowing na ito
         sa pamamagitan ng pagdagdag ng repeat na bloke.
       courseD_artist_functions4_instruction: Ngayon ay maaari ka nang gumuhit ng isang
@@ -8833,36 +9576,82 @@
       courseD_artist_nestedLoops10_instruction: Kunin ang mga parisukat mula sa nakaraan,
         ngunit sa oras na ito gumawa ng 7 lang sa mga ito, at ilagay ang mga ito sa
         isang hanay.
+      courseD_artist_nestedLoops10_2018_instruction: |-
+        Take the squares from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1_2018_instruction: |-
+        Draw a triangle to kickstart
+        this stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120
+        degrees for each exterior angle.)
       courseD_artist_nestedLoops1a_instruction: 'Ngayon ay i-loop ang tatsulok nang
         6 na beses. '
+      courseD_artist_nestedLoops1a_2018_instruction: 'Now loop the triangle 6 times.
+
+'
       courseD_artist_nestedLoops2_instruction: Sa oras na ito, kumpletohin ang palaisipan
         gamit ang pinakakaunting bilang ng mga bloke na posible.
+      courseD_artist_nestedLoops2_2018_instruction: |-
+        This time, complete the puzzle
+        with the fewest number of blocks possible.
       courseD_artist_nestedLoops3_instruction: |-
         Gamitin ang iyong mga bagong kakayahan para madaling iguhit ang huling hanay ng mga bintana sa gusaling ito.\r
         \r
         Ang mga bintana ay 20 pixel na mga parisukat, bawat isa ay 20 pixel ang pagitan.
+      courseD_artist_nestedLoops3_2018_instruction: |-
+        Use your new skills to quickly
+        draw the last row of windows for this building.\r
+        \r
+        The windows are 20
+        pixel squares, each 20 pixels apart.
       courseD_artist_nestedLoops4_instruction: Mahusay! Gawin ang parehing bagay sa
         mga bilog na ito.
+      courseD_artist_nestedLoops4_2018_instruction: |-
+        Great!  Do the same thing with
+        these circles.
       courseD_artist_nestedLoops5_instruction: Ano ang mangyayari kung ikaw ay iikot
         din ng 90 degrees pagitan ng mga bilog?
+      courseD_artist_nestedLoops5_2018_instruction: |-
+        What happens if you also turn
+        90 degrees between circles?
       courseD_artist_nestedLoops6_instruction: Baguhin ang mga bloke sa loob ng iyong
         umiiral na code para gawin ang larawang ito.
       courseD_artist_nestedLoops7_instruction: Gamitin ang natutunan mo para magawa
         ang drowing na ito.
+      courseD_artist_nestedLoops7_2018_instruction: |-
+        Use what you've learned to
+        make this drawing.
       courseD_artist_nestedLoops8_instruction: Gamit ang natutunan mo sa huling iilang
         mga palaisipan, buoin ang larawang ito mula sa simula.
+      courseD_artist_nestedLoops8_2018_instruction: |-
+        Using what you have learned
+        in the last couple of puzzles, build this image from the beginning.
       courseD_artist_nestedLoops9_instruction: "**Hamon:** Maaari mo bang malaman
+        kung paano gawin ang larawan gaya nito?"
+      courseD_artist_nestedLoops9_2018_instruction: "**Hamon:** Maaari mo bang malaman
         kung paano gawin ang larawan gaya nito?"
       courseD_artist_nestedLoops9_predict1_instruction: "**Hamon:** Maaari mo bang
         malaman kung paano gawin ang larawan gaya nito?"
+      courseD_artist_nestedLoops9_predict1_2018_instruction: |-
+        **Challenge:** Can
+        you figure out how to make a picture like this?
       courseD_artist_nestedLoopsFP_instruction: Ngayon ay turno mo na. Dalhin ang
         iyong mga kakayahan na natutunan at gumawa ng isang bagay na mahal mo!
+      courseD_artist_nestedLoopsFP_2018_instruction: |-
+        Now it's your turn.  Take
+        the skills you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: Maglikha ng tatsulok para simulang
         ang yugtong ito.
       courseD_artist_nestedLoops_challenge1_instruction: Maaari mo bang malaman kung
         paano gumawa ng larawan gaya nito?
+      courseD_artist_nestedLoops_challenge1_2018_instruction: |-
+        Can you figure out
+        how to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: Ayusin ang code para magawa
         ang larawang ito!
+      courseD_artist_nestedLoops_challenge2_2018_instruction: |-
+        Fix the code to make
+        this picture!
       courseD_artist_project1_instruction: 'Gumuhit ng maliit na mga hugis, sa pagitan
         ng **20 at 50** na pixel na haba. Maaari itong kahit anumang hugis na gusto
         mo.  '
@@ -8913,10 +9702,17 @@
         ba sa ilalim ng ulap. Kung mayroong bulaklak, kumuha ng nektar.
       courseD_bee_conditionals10_instruction: Kolektahin ang lahat ng nektar at gawin
         ang lahat ng mga pulot.
+      courseD_bee_conditionals10_2018_instruction: Kolektahin ang lahat ng nektar
+        at gawin ang lahat ng mga pulot.
       courseD_bee_conditionals1_predict1_instruction: Suriin kung makita mo kung mayroong
         bulaklak sa ilalim ng ulap. Kung mayroong bulaklak, kumuha ng nektar.
+      courseD_bee_conditionals1_predict1_2018_instruction: Suriin para makita kung
+        mayroon bang bulaklak sa ilalim ng mga ulap. Kung mayroong bulaklak, kumuha
+        ng nektar.
       courseD_bee_conditionals2_instruction: 'Tingnan ang ilalim ng bawat ulap para
         makita kung ito ay nagtatago ng bulaklak bago ka kumuha ng nektar.  '
+      courseD_bee_conditionals2_2018_instruction: 'Tingnan ang ilalim ng bawat ulap
+        para makita kung ito ay nagtatago ng bulaklak bago ka kumuha ng nektar.  '
       courseD_bee_conditionals2_test_instruction: 'Tingnan ang ilalim ng bawat ulap
         para makita kung ito ay nagtatago ng bulaklak bago ka kumuha ng nektar.  '
       courseD_bee_conditionals3_instruction: |-
@@ -8924,26 +9720,58 @@
         \r
         \r
         Maaari ka lang magkolekta ng nektar mula sa mga bulaklak, pero maaari kang magsuri sa kahit anong lugar para makita kung mayroon bang bulaklak.
+      courseD_bee_conditionals3_2018_instruction: |-
+        Help the bee collect all of the
+        nectar. \r
+        \r
+        You can only collect nectar from flowers, but you can check
+        any space to see if there is a flower.
       courseD_bee_conditionals4_instruction: Kunin ang lahat ng nektar gamit ang iilang
         mga bloke na posible.
+      courseD_bee_conditionals4_2018_instruction: |-
+        Get all of the nectar using as
+        few blocks as possible.
       courseD_bee_conditionals5_instruction: Kolektahin ang lahat ng mga nektar gamit
         ang pinakakaunting mga bloke na possible
+      courseD_bee_conditionals5_2018_instruction: |-
+        Collect all of the nectar using
+        as few blocks as possible
       courseD_bee_conditionals6_instruction: Ang iilan sa mga ulap na ito ay maaaring
         magkaroon ng mga pulot-pukyutan sa ilalim ng mga ito. Siguradohing suriin
         kung ang pulot-pukyutan ay nagtatago sa likod ng mga ulap!
+      courseD_bee_conditionals6_2018_instruction: |-
+        Some of these clouds might have
+        honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
+        cloud!
       courseD_bee_conditionals7_instruction: Gamitin ang `if/else` na bloke para mangolekta
         ng nektar sa mga bulaklak at gumawa ng mga pulot sa pulot-pukyutan.
+      courseD_bee_conditionals7_2018_instruction: |-
+        Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals7_predict2_instruction: Gamitin ang `if/else` na bloke
         para mangolekta ng nektar sa mga bulaklak at gumawa ng mga pulot sa pulot-pukyutan.
+      courseD_bee_conditionals7_predict2_2018_instruction: Gamitin ang `if/else` na
+        bloke para magkolekta ng nektar sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan.
       courseD_bee_conditionals8_instruction: |-
+        Magkolekta ng nektar kung mayroong bulaklak.\r
+        Kung hindi, gumawa ng pulot (dahil mayroong pulot-pukyutan).
+      courseD_bee_conditionals8_2018_instruction: |-
         Magkolekta ng nektar kung mayroong bulaklak.\r
         Kung hindi, gumawa ng pulot (dahil mayroong pulot-pukyutan).
       courseD_bee_conditionals9_instruction: Kolektahin ang lahat ng mga nektar o
         gawin ang lahat ng mga pulot.
+      courseD_bee_conditionals9_2018_instruction: |-
+        Collect all of the nectar or make
+        all the honey.
       courseD_bee_conditionals_challenge1_instruction: Kolektahin ang lahat ng mga
         nektar at gawing pulot ang lahat.
+      courseD_bee_conditionals_challenge1_2018_instruction: |-
+        Collect all the nectar
+        and make all the honey.
       courseD_bee_conditionals_challenge2_instruction: Kolektahin ang lahat ng nektar
         at gawing pulot ang lahat.
+      courseD_bee_conditionals_challenge2_2018_instruction: Kolektahin ang lahat ng
+        nektar at gawing pulot ang lahat.
       courseD_bee_conditionals_challenge3_instruction: Kolektahin ang lahat ng nektar
         o gawing pulot ang lahat.
       courseD_bee_debugging1_instruction: Ayusin ang (mga) problema para makolekta
@@ -8964,6 +9792,10 @@
       courseD_bee_debugging_challenge1_instruction: Tingnan kung paano ang mga bubuyog
         kumuha ng nektar. Maaari mo bang gamitin ang parehong uri ng patter para matulungan
         ang bubuyog na gawing pulot ang lahat?
+      courseD_bee_debugging_challenge1_2018_instruction: |-
+        Watch how the bees gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
       courseD_bee_debugging_challenge1a_instruction: Tingnan kung paano ang bubuyog
         kumuha ng nektar. Gamitin ang parehong pattern para matulungan ang bubuyog
         na gawing pulot ang lahat.
@@ -9032,6 +9864,9 @@
       courseD_bounce_events10s_instruction: 'Maglakip ng `score point` na bloke sa
         `when ball in goal` na pangyayari at ang `score opponent point` na bloke sa
         `when ball misses hand` na pangyayari para makagawa ng laro. '
+      courseD_bounce_events10s_2018_instruction: "Attach the `score point` block\nto
+        the `when ball in goal` event and the `score opponent point` block to the\n`when
+        ball misses hand` event to make a game. "
       courseD_bounce_events11_instruction: Maaari ka na ngayong maglakip ng mga bloke
         sa "when run" na bloke. Dapat kang maglakip ng bagong "launch new ball" na
         bloke sa higit sa isang lugar. Gayundin, subukang palitan ang mga eksena o
@@ -9039,6 +9874,8 @@
         mo bago makapuntos ng makalawa ang iyong kalaban.
       courseD_bounce_events11s_instruction: 'Maglakip ng `throw new ball` na bloke
         sa lahat ng mga lugar kung saan ang laro ay nangangailangan ng bagong bola. '
+      courseD_bounce_events11s_2018_instruction: "Attach the `throw new ball` block\nin
+        all of the places where the game needs a new ball. "
       courseD_bounce_events12_instruction: Maglikha ng iyong sariling Bounce na laro.
         Maaari mong palitan ang lahat ng mga biswal at mga patakaran. Kapag tapos
         ka na, i-click ang Finish para hayaan ang iyong mga kaibigan na subukan ang
@@ -9047,13 +9884,23 @@
         mong baguhin ang lahat ng mga biswal at ang mga patakaran. Kapag tapos ka
         na, i-click ang "Finish" para hayaan ang iyong mga kaibigan ng subukan ang
         laro sa kanilang mga telepono.
+      courseD_bounce_events12s_2018_instruction: |-
+        Make this game your own. You can
+        change all the visuals and the rules. When you're done, click "Finish"
+        to let friends try your game on their phones.
       courseD_bounce_events1s_instruction: Maglakip ng bloke sa "when left arrow"
         na bloke at pindutin ang "Run" para mapagalaw ang manlalaro papunta sa net.
+      courseD_bounce_events1s_2018_instruction: |-
+        Attach a block to the "when left
+        arrow" block and press "Run" to move the player to the net.
       courseD_bounce_events2_instruction: Maglakip ng bloke sa "when right arrow"
         at "when left arrow" na mga bloke. Pagalawin ang sagwan para maabutan ang
         parehong pangtapos na mga layunin.
       courseD_bounce_events2s_instruction: Ngayon, ilakip ang bloke sa `when right
         event` para ang kamay ay maaaring makakuha sa parehong buslo.
+      courseD_bounce_events2s_2018_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
       courseD_bounce_events3_instruction: Ngayon ay subukan ang isang bagay na kapareha
         ng "when up arrow" na bloke. Galawin ang sagwan papunta sa pangtapos na layunin
         na nasa taas.
@@ -9071,52 +9918,107 @@
         masiguro na ang bola ay makakarating sa huling layunin.
       courseD_bounce_events5s_instruction: Maglakip ng bloke sa `when ball hits hand`
         na pangyayari para masiguro na ang bola ay aabot sa buslo.
+      courseD_bounce_events5s_2018_instruction: |-
+        Attach a block to the `when ball
+        hits hand` event to ensure the ball reaches the basket.
       courseD_bounce_events6_instruction: Ngayon na ang huling layunin ay nasa taas.
         Kailangan mong maglakip ng mga bloke sa parehong "when ball hits" na mga bloke
         para malutas ang palaisipang ito.
       courseD_bounce_events6s_instruction: Maglakip ng code para mapatalbog ang bola
         kapag natamaan nito ang pader para malutas mo ang palaisipang ito.
+      courseD_bounce_events6s_2018_instruction: |-
+        Attach code to make the ball bounce
+        when it hits the wall so you can solve this puzzle.
       courseD_bounce_events7_instruction: Maglakip ng mga bloke sa bawat isa sa "when"
         na mga bloke. Patalbugin ang bola hanggang sa maabot nito ang huling layunin.
       courseD_bounce_events7s_instruction: Maglakip ng mga tunog na mga bloke para
         magawa ang pagpasok sa lambat kapag natamaan mo ang basket at paihipan ang
         pito kapag ang bola ay hindi umabot sa iyong kamay. Patalbugin ang bola hanggang
         sa maabot mo ang huling layunin.
+      courseD_bounce_events7s_2018_instruction: |-
+        Attach sound blocks to make the
+        net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging1_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging1a_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging1a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging2_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2a_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging2a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging3_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3a_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging3a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging4_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4a_instruction: Ayusin ang (mga) problema para makolekta
         ang lahat ng mga yaman.
+      courseD_collector_debugging4a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging5_instruction: Lahat ng mga utos na kailangan mo
         ay nandito na... ngayon ay gamitin ang iyong pang-debug na kakayahan para
         matukoy kung paano lutasin ang palaisipang ito.
+      courseD_collector_debugging5_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging5a_instruction: Lahat ng mga utos na kailangan mo
         ay nandito na... ngayon ay gamitin ang iyong pang-debug na kakayahan para
         matukoy kung paano lutasin ang palaisipang ito.
+      courseD_collector_debugging5a_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging6_instruction: 'Hamon: Gamitin ang iyong pang-debug
         na mga kakayahan para ayusin ang mga problema at kolektahin ang lahat ng mga
         kayamanan.'
+      courseD_collector_debugging6_2018_instruction: |-
+        Challenge: Use your debugging
+        skills to fix the errors and collect all of the treasure.
       courseD_collector_debugging6a_instruction: 'Hamon: Gamitin ang code sa loob
         ng pangtrabahong lugar para makakuha ng hindi bababa sa **6** na mga piraso
         ng kayamanan!'
+      courseD_collector_debugging6a_2018_instruction: |-
+        Challenge: Use the code in
+        the work area to get at least **6** pieces of treasure!
       courseD_collector_debugging7_instruction: 'Hamon: Lahat ng mga utos na kakailanganin
         mo ay nandito na... ngayon ay gamitin ang iyong pangdebug na mga kakayahan
         matukoy kung paano lutasin ang palaisipang ito.'
       courseD_collector_debugging_challenge2_instruction: Ikaw ba ay bihasa na sa
         mga naka-nest na mga loop? Gamitin ang natutunan mo para magkolekta ng mga
         yaman!
+      courseD_collector_debugging_challenge2_2018_instruction: |-
+        Are you an expert
+        at nested loops? Use what you have learned so far to collect all the treasure!
       courseD_collector_nested_loops_challenge2_instruction: Tulungan ang kolektor
+        na makaabot ng hindi bababa sa dalawang tumpok ng mga yaman gamit lang ang
+        mga bloke na nasa iyong toolbox. Ito ay posible na makolekta ang lahat ng
+        4.
+      courseD_collector_nested_loops_challenge2_2018_instruction: Tulungan ang kolektor
         na makaabot ng hindi bababa sa dalawang tumpok ng mga yaman gamit lang ang
         mga bloke na nasa iyong toolbox. Ito ay posible na makolekta ang lahat ng
         4.
@@ -9145,30 +10047,63 @@
         ang lahat ng mga nektar at gawing pulot ang lahat.'
       courseD_farmer_condLoops1_instruction: Gumamit ng mga kondisyonal para masiguro
         na pipili ka lang na mais kapag ito ay nandoon.
+      courseD_farmer_condLoops1_2018_instruction: |-
+        Use conditionals to make sure
+        that you pick corn only when it's there.
       courseD_farmer_condLoops2_instruction: Tulungan ang magsasaka ng magkolekta
         ng parehong mais at letsugas mula sa bukid.
+      courseD_farmer_condLoops2_2018_instruction: |-
+        Help the harvester collect both
+        corn and lettuce from the field.
       courseD_farmer_condLoops3_instruction: '*"Mais, letsugas, AT mga kalabasa! Tulungan
         akong anihin ang lahat ng mga ito."*'
+      courseD_farmer_condLoops3_2018_instruction: |-
+        *"Corn, lettuce, AND pumpkins!
+        Help me harvest them all."*
       courseD_farmer_condLoops4_instruction: Tulungan ang magsasaka na anihin ang
         lahat ng mga letsugas sa bawat kumpol bago lilipat sa susunod na grupo.
+      courseD_farmer_condLoops4_2018_instruction: |-
+        Help the harvester pick all of
+        the lettuce in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops4a_instruction: Tulungan ang magsasaka na mag-ani salahat
         ng mga letsugas sa bawat kumpol bago lilipat sa susunod na grupo.
       courseD_farmer_condLoops5_instruction: Kolektahin ang lahat ng mga mais at letsugas,
         pagkatapos ay kunin ang kalabasa na nasa dulo.
+      courseD_farmer_condLoops5_2018_instruction: Kolektahin ang lahat ng mga mais
+        at letsugas, pagkatapos ay kunin ang kalabasa na nasa dulo.
       courseD_farmer_condLoops6_instruction: Maaari mo bang malaman kung paano kukuha
         ng kalabasas? Siguraduhing makolekta ang lahat ng mga mais sa daan!
+      courseD_farmer_condLoops6_2018_instruction: |-
+        Can you figure out how to pick
+        the pumpkin?  Make sure to collect all of the corn along the way!
       courseD_farmer_condLoops7_instruction: 'Hamon: Kolektahin ang lahat ng mais
         at letsugas, pagkatapos ay kunin ang kalabasa.'
+      courseD_farmer_condLoops7_2018_instruction: |-
+        Challenge: Collect all of the
+        corn and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops8_instruction: Kolektahin ang lahat ng bunga ng oak
         at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops8_2018_instruction: Kolektahin ang lahat ng bunga ng
+        oak at letsugas, pagkatapos ay kunin ang kalabasa.
       courseD_farmer_condLoops9_instruction: Kolektahin ang lahat ng bunga ng oak
         at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_2018_instruction: Kolektahin ang lahat ng bunga ng
+        oak at letsugas, pagkatapos ay kunin ang kalabasa.
       courseD_farmer_condLoops9_predict1_instruction: Kolektahin ang lahat ng mais
         at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_predict1_2018_instruction: |-
+        Collect all of the corn
+        and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops_challenge1_instruction: Kolektahin ang lahat para makumpleto
         ang antas. Bawat nakatagong pananim ay mayroon lang isang mais o letsugas.
+      courseD_farmer_condLoops_challenge1_2018_instruction: |-
+        Collect everything to
+        complete the level. Each hidden crop has only one corn or lettuce.
       courseD_farmer_condLoops_challenge2_instruction: Kolektahin ang lahat para makumpleto
         ang antas.
+      courseD_farmer_condLoops_challenge2_2018_instruction: |-
+        Collect everything to
+        complete the level.
       courseD_farmer_condLoops_challenge2_clone_instruction: Kolektahin ang lahat
         para makumpleto ang antas.
       courseD_farmer_conditionals1_instruction: Ilipat ang tumbok ng mga lupa at gamitin
@@ -9181,8 +10116,10 @@
         para malutas ang palaisipang ito.
       courseD_farmer_conditionals4_instruction: Tulungan ang magsasaka na mag-alis
         sa buong tumpok gamit ang `while` na loop.
-      courseD_farmer_conditionals5_instruction: |
-        Tulungan akong tanggalin ang lahat ng mga lupang ito.
+      courseD_farmer_conditionals5_instruction: 'Tulungan akong tanggalin ang lahat
+        ng mga lupang ito.
+
+'
       courseD_farmer_conditionals6_instruction: Gamitin ang `while` na loop para madaling
         punan ang lahat ng mga butas.
       courseD_farmer_conditionals7_instruction: Punan ang mga butas sa dulo ng bawat
@@ -9194,40 +10131,99 @@
       courseD_farmer_until_challenge2_instruction: Gamitin ang If/Else na mga bloke
         para sundan ang balikong landas. Sa bawat sulok, gamitin ang `remove 1` na
         utos sa isang loop para malinaw ang mga tumpok.
+      courseD_farmer_until_challenge2_2018_instruction: Gamitin ang If/Else na mga
+        bloke para sundan ang balikong landas. Sa bawat sulok, gamitin ang `remove
+        1` na utos sa isang loop para malinaw ang mga tumpok.
       courseD_farmer_while1_instruction: Ilipat ang mga tumbok ng lipa at gamitin
         ang `remove` na bloke para tanggalin ito.
       courseD_farmer_while10_instruction: 'Ipatag ang lahat ng mga tumpok na ito gamit
         ang kaunting mga bloke lang na posible. '
+      courseD_farmer_while10_2018_instruction: 'Ipatag ang lahat ng mga tumpok na
+        ito gamitin ang kaunting mga bloke lang hangga''t maaari. '
       courseD_farmer_while10_predict2_instruction: 'Ipatag ang lahat ng mga tumpok
         na ito gamitin ang kaunting mga bloke lang hangga''t maaari. '
+      courseD_farmer_while10_predict2_2018_instruction: "Flatten all of these piles\nusing
+        as few blocks as possible. "
+      courseD_farmer_while1_2018_instruction: |-
+        Move to the pile of dirt and use the
+        `remove` block to remove it.
       courseD_farmer_while2_instruction: Lumipat sa butas at punan ito nang 6 na pala
         ng lupa, gamit ang `fill` na bloke.
+      courseD_farmer_while2_2018_instruction: Ilipat ako sa butas at punan ito ng
+        anim na mga pala ng lupa, gamit ang `fill` na bloke.
       courseD_farmer_while3_instruction: Gamit nang kaunting mga bloke hangga't maaari
         para malutas ang palaisipang ito.
+      courseD_farmer_while3_2018_instruction: Gamit nang kaunting mga bloke hangga't
+        maaari para malutas ang palaisipang ito.
       courseD_farmer_while4_instruction: Tulungan ang magsasaka na tanggalin ang buong
         tumpok gamit ang `while` na loop.
+      courseD_farmer_while4_2018_instruction: Tulungan ang magsasaka na mag-alis sa
+        buong tumpok gamit ang `while` na loop.
       courseD_farmer_while4_predict1_instruction: Tulungan ang magsasaka na mag-alis
         sa buong tumpok gamit ang `while` na loop.
+      courseD_farmer_while4_predict1_2018_instruction: |-
+        Help the farmer remove this
+        entire pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Tulungan akong tanggalin ang lahat ng mga
         lupang ito. '
+      courseD_farmer_while5_2018_instruction: 'Tulungan akong tanggalin ang lahat
+        ng mga lupang ito. '
       courseD_farmer_while6_instruction: Gamitin ang `while` na loop para madaling
+        punan ang lahat ng mga butas.
+      courseD_farmer_while6_2018_instruction: Gamitin ang `while` na loop para madaling
         punan ang lahat ng mga butas.
       courseD_farmer_while7_instruction: Punan ang mga butas sa dulo ng bawat isa
         sa mga landas na ito.
+      courseD_farmer_while7_2018_instruction: Punan ang mga butas sa dulo ng bawat
+        isa sa mga landas na ito.
       courseD_farmer_while8_instruction: 'Hamon: Punan ang lahat ng mga butas na ito
         gamit ang kaunting mga bloke na posible. '
+      courseD_farmer_while8_2018_instruction: 'Hamon: Punan ang lahat ng mga butas
+        na ito gamit ang kaunting mga bloke na posible. '
       courseD_farmer_while9_instruction: 'Ipatag ang lahat ng mga tumpok na ito gamit
         ang kaunting mga bloke lang na posible. '
+      courseD_farmer_while9_2018_instruction: "Flatten all of these piles using as\nfew
+        blocks as possible. "
       courseD_farmer_while_challenge1_instruction: Punan ang lahat ng mga butas at
         tanggalin ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge1_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_farmer_while_challenge2_instruction: Punan ang lahat ng mga butas at
         tanggalin ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge2_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_harvester_nested_loops_challenge1-broken_instruction: '"Kailangan ko
         ng iilang tulong sa bukirin! Tulungan akong anihin ang mga mais gamit lang
         ang mga bloke na nasa iyong toolbox."'
       courseD_harvester_nested_loops_challenge1_instruction: '"Kailangan ko ng iilang
         tulong sa bukirin! Tulungan akong anihin ang mga mais gamit lang ang mga bloke
         na nasa iyong toolbox."'
+      courseD_harvester_nested_loops_challenge1_2018_instruction: '"Kailangan ko ng
+        iilang tulong sa bukirin! Tulungan akong anihin ang mga mais gamit lang ang
+        mga bloke na nasa iyong toolbox."'
+      courseD_iceage_loops1_instruction: |-
+        Help Scrat across the ice to get to the
+        acorn!
+      courseD_iceage_loops10_instruction: |-
+        Help Scrat get all the way over to the
+        acorn!
+      courseD_iceage_loops11_instruction: Help Scrat get to the acorn!
+      courseD_iceage_loops12_instruction: Get to the acorn any way you can!
+      courseD_iceage_loops2_instruction: Use a `turn left` block to get to the acorn!
+      courseD_iceage_loops3_instruction: |-
+        Can you get to the acorn with just one
+        `move forward` block?
+      courseD_iceage_loops4_instruction: |-
+        Add one more block to get Scrat all the
+        way to the acorn!
+      courseD_iceage_loops6_instruction: Can you add a loop to get to the acorn?
+      courseD_iceage_loops7_instruction: 'Scrat really wants that acorn! '
+      courseD_iceage_loops8_instruction: 'Can you fix this code? '
+      courseD_iceage_loops9_instruction: |-
+        The acorn is so far away! Can you use loops
+        to help Scrat get there?
       courseD_maze_loops_challenge1_instruction: Maghanap tayo ng mga kayamanan -
         gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang
         tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
@@ -9287,28 +10283,49 @@
       courseD_maze_ramp7_instruction: Dalhin ang ibon sa baboy!
       courseD_maze_until1_instruction: Dalhin ang galit na ibon papunta sa baboy.
       courseD_maze_until10_instruction: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until10_2018_instruction: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until10_predict2_instruction: Tulungan ang zombie na makapunta
         sa mirasol.
+      courseD_maze_until10_predict2_2018_instruction: |-
+        Help the zombie get to the
+        sunflower.
+      courseD_maze_until1_2018_instruction: Dalhin ang galit na ibon papunta sa baboy.
       courseD_maze_until2_instruction: Ngayon, gamitin ang `repeat until` na loop
         para magawa ang parehong bagay nang hindi tinutukoy kong ilang beses gagalaw
         pasulong at bumaling.
       courseD_maze_until3_instruction: Dalhin ang ibon sa baboy.
+      courseD_maze_until3_2018_instruction: Dalhin ang ibon sa baboy.
       courseD_maze_until4_instruction: Maaari mo bang mapapunta ang zombie sa mirasol
         gamit lang ang mga bloke na magagamit?
+      courseD_maze_until4_2018_instruction: |-
+        Can you get the zombie to the sunflower
+        using only the blocks that are available?
       courseD_maze_until5_instruction: Gamitin ang `if` na bloke para matulungan ang
         zombie na makapagdesisyon kung kailan babaling, pagkatapos ay dalhin ang zombie
         sa mirasol.
+      courseD_maze_until5_2018_instruction: |-
+        Use the `if` block to help the zombie
+        decide when to turn, then get the zombie to the sunflower.
       courseD_maze_until6_instruction: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until6_2018_instruction: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until7_instruction: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until7_2018_instruction: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until8_instruction: Tulungan ang zombie na makapunta sa mirasol.
+      courseD_maze_until8_2018_instruction: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until9_instruction: "**Hamon:** Iwasan ang mga chomper at tulungan
         ang zombie na makapunta sa mirasol."
+      courseD_maze_until9_2018_instruction: |-
+        **Challenge:** Avoid the chompers and
+        help the zombie get to the sunflower.
       courseD_maze_until_challenge_instruction: Walang pahiwatig, hamon lang. Dalhin
         ang zombie sa mirasol.
       courseD_maze_until_challenge1-delete-this-copy_instruction: Walang pahiwatig,
         hamon lang. Dalhin ang zombie sa mirasol.
       courseD_maze_until_challenge1_instruction: Walang pahiwatig, hamon lang. Dalhin
         ang zombie sa mirasol.
+      courseD_maze_until_challenge1_2018_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_instruction: Walang pahiwatig, hamon lang. Dalhin
         ang zombie sa mirasol.
       courseD_pixelation_instruction: I-encode ang larawan na kahit anong gusto mo
@@ -9316,32 +10333,59 @@
         ang '0' at '1' lang.
       courseD_playLab_cond1_instruction: Dalhin si Pegleg sa mga bandila para malutas
         ang palaisipang ito.
+      courseD_playLab_cond1_2018_instruction: |-
+        Get Pegleg to the flags to solve this
+        puzzle.
       courseD_playLab_cond2_instruction: 'Bigyan si Pegleg ng puntos sa bawat oras
         na makarating siya sa dragon. '
+      courseD_playLab_cond2_2018_instruction: "Give Pegleg a point every time he\nmakes
+        it to the dragon. "
       courseD_playLab_cond3_instruction: 'Gawin ang dragon na magbago-bago sa pagitan
         ng mga random na mga emosyon sa bawat segundo.  '
+      courseD_playLab_cond3_2018_instruction: "Make the dragon change between random\nemotions
+        every second.  "
       courseD_playLab_cond3a_instruction: Gawin ito para kapag si Pegleg ay nakaabot
         sa dragon, siya ay makakakuha ng 2 puntos kung ang dragon ay masaya, at kung
         hindi ay 1 puntos lang.
+      courseD_playLab_cond3a_2018_instruction: |-
+        Make it so when Pegleg gets to the
+        dragon, he gets 2 points if the dragon is happy and 1 otherwise.
       courseD_playLab_cond3b_instruction: |-
         1) Pabaguhin ang dragon sa pagitan ng random na mga emosyon sa bawat segundo.  \r
         2) Gawin ito na kapag si Pegleg ay nakaabot sa dragon, makakakuha siya ng 2 puntos kapag masaya ang dragon at 1 kung hindi.
       courseD_playLab_cond4_instruction: Magdagdag ng ilang code para ang ninja (aktor
         3) ay magsisimulang maghabol kay Pegleg kapag nagsimula na ang laro. Wakasan
         ang laro bilang talo kapag nahuli siya ng ninja.
+      courseD_playLab_cond4_2018_instruction: Magdagdag ng ilang code para ang ninja
+        (aktor 3) ay magsisimulang maghabol kay Pegleg kapag nagsimula na ang laro.
+        Wakasan ang laro bilang talo kapag nahuli siya ng ninja.
       courseD_playLab_cond5_instruction: Magdagdag ng `repeat forever` na loop na
         patuloy na nagsusuri kung ang iskor ay higit sa 5, pagkatapos ay magtapos
+        sa laro bilang panalo kapag nangyari ito.
+      courseD_playLab_cond5_2018_instruction: Magdagdag ng `repeat forever` na loop
+        na patuloy na nagsusuri kung ang iskor ay higit sa 5, pagkatapos ay magtapos
         sa laro bilang panalo kapag nangyari ito.
       courseD_playLab_cond6_instruction: "1) Pabagalan ang ninja (aktor 3) bago mo
         siya itakda na hahabol sa pirata. \\r\n2) Kung ang pirata ay mas mataas sa
         225 na pixels pababa, itakda ang ninja na **lalayo** sa pirata. Kung hindi,
         itakda ang ninja na **maghahabol** sa pirata.  "
+      courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down\nbefore
+        you set him to chase the pirate.  \\r\n2)  If the pirate is greater\nthan
+        225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set\nthe
+        ninja to **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: Kung ang pirata (aktor) ay nasa isang ligtas
         na lugar, maghintay ng isang segundo, pagkatapos ay magbawas ng puntos kapag
         siya ay nananatili sa ilalim ng linya ng pugita.
+      courseD_playLab_cond6a_2018_instruction: |-
+        If the pirate (actor 1) is in the
+        safe zone, wait one second, then deduct a point as long as he stays beneath
+        the octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Pagsubok
       courseD_playLab_condFP_instruction: Ngayon, bumuo ng iyong sariling laro para
         ipakita sa iyong mga kaibigan!
+      courseD_playLab_condFP_2018_instruction: |-
+        Now, build your own game to show
+        off to your friends!
       courseD_playLab_embedded_instruction: |-
         Pagalawin si Pegleg ang Pirata gamit ang mga arrow key. Puntahan ang dragon para makakuha ng puntos, ngunit iwasan ang ninja! Ang pagtayo sa ibaba ng linya ng mga pugita ang magpapatigil sa ninja sa paghabol sa iyo, ngunit mag-ingat! Kung matagala kang manitili doon, mas marami ring puntos ang mawawala sa iyo.\r
         \r
@@ -9480,20 +10524,27 @@
         ang Artist!
       courseE_artist_ramp8_2018_instruction: Ngayon ay gumawa ng isang parisukat gamit
         ang Artist!
+      courseE_artist_ramp8_2_2018_instruction: Ngayon ay gumawa ng isang parisukat
+        gamit ang Artist!
       courseE_artist_ramp9_instruction: Gamitin ang iyong natutunan para iguhit ang
         tatsulok na ito.
       courseE_artist_ramp9_2_instruction: Gamitin ang natutunan mo para iguhit ang
         tatsulok na ito.
       courseE_artist_ramp9_2018_instruction: Gamitin ang natutunan mo para iguhit
         ang tatsulok na ito.
+      courseE_artist_ramp9_2_2018_instruction: |-
+        Use what you've learned to draw
+        this triangle.
       courseE_bee_concept1_instruction: Kolektahin ang lahat ng nektar mula sa bawat
         bulaklak.
       courseE_bee_concept1_2018_instruction: Kolektahin ang lahat ng nektar mula sa
         bawat bulaklak.
       courseE_bee_concept2_instruction: 'Tulungan ang bubuyog na gawin ang lahat ng
         mga pulot. '
-      courseE_bee_concept2_2018_instruction: |
-        Tulungan ang bubuyog na gawin ang lahat ng mga pulot.
+      courseE_bee_concept2_2018_instruction: 'Tulungan ang bubuyog na gawin ang lahat
+        ng mga pulot.
+
+'
       courseE_bee_concept3_instruction: Kolektahin ang lahat ng nektar gamit ang iilang
         mga bloke lang na posible.
       courseE_bee_concept3_2018_instruction: |-
@@ -9742,22 +10793,41 @@
         ang pinakakaunting bilang ng mga bloke."
       courseE_maze_predict1_instruction: Ang code na ito ay naglalakip ng bagong bloke.
         Ano sa palagay mo ang mangyayari kapag pinindot mo ang "Run" na bloke?
+      courseE_maze_predict1_2018_instruction: Ang code na ito ay naglalakip ng bagong
+        bloke. Ano sa palagay mo ang mangyayari kapag pinindot mo ang "Run" na bloke?
       courseE_maze_ramp1_instruction: Para sa palaisipang ito, kaladkarin ang lahat
         ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseE_maze_ramp13_instruction: Oras na para sa isang huling palaisipan para
         pagsamahin sa paghila ang mga ito!
+      courseE_maze_ramp1_2018_instruction: |-
+        For this puzzle, drag all of the blocks
+        together and click "Run" to watch it go!
       courseE_maze_ramp2_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke
         palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run`
         para matapos ang iyong code.
+      courseE_maze_ramp2_2018_instruction: Mag-kaladkad ng ekstrang `move forward`
+        na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa
+        `when run` para matapos ang iyong code.
       courseE_maze_ramp3_instruction: Mayroong isang ekstrang bloke na magiging sanhi
         nang pag-crash ng ibon. Itapon ito sa pamamagitan ng pagkaladkad nito palayo
         sa toolbox.
+      courseE_maze_ramp3_2018_instruction: Mayroong isang ekstrang bloke na magiging
+        sanhi na mag-crash ang ibon. Itapon ito sa pamamagitan ng pagkaladkad nito
+        pabalik sa toolbox.
       courseE_maze_ramp4_instruction: Iwasan ang TNT para hindi lilipad ang mga balahibo!
+      courseE_maze_ramp4_2018_instruction: Iwasan ang TNT para hindi lilipad ang mga
+        balahibo!
       courseE_maze_ramp5_instruction: Iwasan ang mga TNT.
+      courseE_maze_ramp5_2018_instruction: Iwasan ang mga TNT.
       courseE_maze_ramp6_instruction: '"Maging kalmado at tulungan akong hanapin ang
         masamang baboy. Kung hindi, baka magalit ako!"'
+      courseE_maze_ramp6_2018_instruction: |-
+        "Keep calm and help me find the bad
+        pig. Otherwise I might get angry!"
       courseE_maze_ramp7_instruction: Gamitin ang natutunan mo para mapapunta ang
         ibon sa baboy!
+      courseE_maze_ramp7_2018_instruction: Gamitin ang iyong natutunan para mapapunta
+        ang ibon sa baboy!
       courseE_maze_ramp_predict1_instruction: Ang code na ito ay naglalakip ng bagong
         bloke. Ano sa palagay mo ang mangyayari kapag pinindot mo ang "Run" na bloke?
       courseE_multi_maze_ramp5_instruction: Iwasan ang mga TNT.
@@ -9838,8 +10908,11 @@
         kanyang mga kaibigan kapag nag-click ka sa kanya? '
       courseF_IceAge_7_instruction: Magsulat ng code para matulungan si Scrat na makuha
         ang lahat ng mga bunga ng ensina!
-      courseF_IceAge_8_instruction: |
-        Maaari mo bang tapusin ang programang ito para mapagawa ito na pareho kang **makapatugtog ng tunog** at **maka-iskor ng puntos** kapag si Sid at si Granny ay nagkabangga?
+      courseF_IceAge_8_instruction: 'Maaari mo bang tapusin ang programang ito para
+        mapagawa ito na pareho kang **makapatugtog ng tunog** at **maka-iskor ng puntos**
+        kapag si Sid at si Granny ay nagkabangga?
+
+'
       courseF_IceAge_9_instruction: Baguhin ang eksesa sa isang mayelong background
         at itakda ang bilis ni Sid (aktor 1) sa mabilis.
       courseF_IceAge_template_instruction: Magsulat ng code para matulungan si Scrat
@@ -9867,8 +10940,11 @@
         nang 20 pixel kaysa sa huli. '
       courseF_artist_for3_2018_instruction: "These triangles go from 20 pixel sides\nto
         200 pixel sides, and each triangle is 20 pixels larger than the last. "
-      courseF_artist_for4_instruction: |
-        Ang mga parisukat na mga ito ay nagsisimula sa haba na 15 pixels. Ang pinakamalaki ay 300 pixels ang haba, at bawat parisukat ay mas malaki ng 15 pixels kaysa sa huli.
+      courseF_artist_for4_instruction: 'Ang mga parisukat na mga ito ay nagsisimula
+        sa haba na 15 pixels. Ang pinakamalaki ay 300 pixels ang haba, at bawat parisukat
+        ay mas malaki ng 15 pixels kaysa sa huli.
+
+'
       courseF_artist_for4_2018_instruction: 'Ang mga parisukat na mga ito ay nagsisimula
         sa haba na 15 pixels. Ang pinakamalaki ay 300 pixels ang haba, at bawat parisukat
         ay mas malaki ng 15 pixels kaysa sa huli. '
@@ -10009,8 +11085,10 @@
       courseF_artist_variables6a_2018_instruction: Buoin ang disenyong ito kung saan
         ang mga parisukat ay may gilid na 80 pixels at ang artista ay tumatalon ng
         80 pixels sa taas at baba ng pagitan ng bawat isa.
-      courseF_artist_variables7_instruction: |
-        Magguhit ng isang tatsulok na may gilid na 150 pixels.
+      courseF_artist_variables7_instruction: 'Magguhit ng isang tatsulok na may gilid
+        na 150 pixels.
+
+'
       courseF_artist_variables7_2018_instruction: 'Magguhit ng tatsulok na may gilid
         na 150 pixels. '
       courseF_artist_variables8_instruction: Muling itayo ang tatsulok na code mula
@@ -10084,8 +11162,10 @@
         makita kung ito ba ay nagtatago ng bulaklak bago ka makakuha ng nektar.  '
       courseF_bee_conditionals2_2018_instruction: 'Tingnan ang ilalim ng bawat ulap
         para makita kung ito ba ay nagtatago ng bulaklak bago ka makakuha ng nektar.  '
-      courseF_bee_conditionals3_instruction: |
-        Tulungan ang bubuyog na magkolekta sa lahat ng nektar.
+      courseF_bee_conditionals3_instruction: 'Tulungan ang bubuyog na magkolekta sa
+        lahat ng nektar.
+
+'
       courseF_bee_conditionals3_2018_instruction: 'Tulungan ang bubuyog na magkolekta
         sa lahat ng nektar. '
       courseF_bee_conditionals4_instruction: Kunin ang lahat ng nektar gamit ang iilang
@@ -10290,10 +11370,16 @@
         para magtago ng mga teksto na gusto mong gamitin mamaya. Gawin si Kiki, ang
         soccer na manlalaro, na sumigaw ng "Goal!" sa pamamagitan ng pag-atas sa tekstong
         iyan sa `shout` na variable.
-      courseF_playlab_variables2_instruction: |
-        Ngayon, i-deoce ang pananalita ni Piratang Pegleg sa pamamagitan ng pagbago sa halaga ng mga variable sa dalawang mga lugar lang! \r
-      courseF_playlab_variables2a_instruction: |
-        Ngayon, i-deoce ang pananalita ni Piratang Pegleg sa pamamagitan ng pagbago sa halaga ng mga variable sa dalawang mga lugar lang! \r
+      courseF_playlab_variables2_instruction: 'Ngayon, i-deoce ang pananalita ni Piratang
+        Pegleg sa pamamagitan ng pagbago sa halaga ng mga variable sa dalawang mga
+        lugar lang! \r
+
+'
+      courseF_playlab_variables2a_instruction: 'Ngayon, i-deoce ang pananalita ni
+        Piratang Pegleg sa pamamagitan ng pagbago sa halaga ng mga variable sa dalawang
+        mga lugar lang! \r
+
+'
       courseF_playlab_variables2b RYAN CLONE_instruction: Maglakip ng variable na
         `color` sa gitna ng pangungusap sa pamamagitan ng paglagay nito sa bakanteng
         slot sa loob ng `join` na bloke.
@@ -10383,6 +11469,9 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      coursea_maze_ramp1_2018_instruction: |-
+        For this puzzle, snap the blocks together
+        and click "Run"!
       coursef_explore_CYOA_Witch_instruction: Maaari mong gawin ang anumang gusto
         mo sa play lab. Narito ang isang halimbawa ng pagpili ng iyong sariling paglalakbay
         na kuwento sa play lab.
@@ -10404,29 +11493,65 @@
         ang lahat ng mga visuals at ang mga patakaran, kahit na ang grabidad. Kapag
         tapos ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro
         sa kanilang mga telepono.
+      flappy_11_2018_instruction: |-
+        Create your own Flappy game. You can change all
+        the visuals and all the rules, even the gravity. When you're done, click
+        Finish to let friends try your game on their phones.
+      flappy_1_2018_instruction: |-
+        Attach a block to the "when click" block, then
+        press "Run". Click or tap the screen to move Flappy to the target.
       flappy_2_instruction: Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke
         sa "when hit the ground" na bloke. Kailangan ng code mo na "TAPUSIN ANG LARO"
         kung bumagsak na si Flappy.
+      flappy_2_2018_instruction: |-
+        Now we've added some ground.  Attach a block to
+        the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
+        crashes.
       flappy_3_instruction: Ang "when run" na bloke ay magbibigay sa iyo ng paraan
         na mapatakbo ang code habang nagsisimula na ang laro. Subukang mag-set ng
         bilis ng antas at ang pagpagaspas papunta sa target.
+      flappy_3_2018_instruction: |-
+        The "when run" block allows you to run code when
+        your game starts.  Try setting the level speed and flapping to the target.
       flappy_4_instruction: Si Flappy ay lilipad sa gitna ng mga balakid maliban nalang
         kung magsulat tayo ng code para babagsak siya. Maglakip ng bloke sa "when
         hit an obstacle" na bloke. Ang code mo ay kailangang matapos kung babagsak
         si Flappy sa unang set ng mga tubo.
+      flappy_4_2018_instruction: |-
+        Flappy will fly through obstacles unless you write
+        code to make him crash. Attach a block to the "when hit an obstacle" block.
+        Your code needs to 'END GAME' when Flappy crashes into the first set of
+        pipes.
       flappy_5_instruction: Magdagdag tayo ng palapuntusan, at bilangin natin ang
         puntos habang nakalampas si Flappy sa mga balakid. Magdagdag ng "when pass
         an obstacle" na block, at pagkatapos ay magkakapuntos sa pamamagitan ng pagpapalipad
         kay Flappy sa unang set ng mga tubo.
+      flappy_5_2018_instruction: |-
+        Let's add a scoreboard, and count points when
+        Flappy makes it past obstacles. Add to the "when pass an obstacle" block,
+        and then score a point by flying Flappy through the first set of pipes.
       flappy_6_instruction: Tingnan kung makakapuntos ka pa rin kung gawin mong maliit
         o malaki ang pag-flap ni Flappy.
+      flappy_6_2018_instruction: |-
+        See if you can still score a point after making
+        Flappy flap either a smaller or larger amount.
       flappy_7_instruction: Kasunod nito, subukan mong baguhin ang eskena sa pamamagitan
         ng paglakip ng isa pang bloke sa "when run" na bloke.
+      flappy_7_2018_instruction: |-
+        Next, try changing the scene by attaching another
+        block to the "when run" block.
       flappy_8_instruction: Maari mong i-set ang mga visual kahit anumang oras, hindi
         lang kapag nagsisimula na ang laro. Subukang itakda ang iba-ibang eskena habang
         nangyayari ang ibang mga pangyayari, halimbawa, kapag madadaan ang isang balakid.
+      flappy_8_2018_instruction: |-
+        You can set visuals anytime, not just when the
+        game starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle.
       flappy_9_instruction: Para mahalo ang mga bagay-bagay, kapag natamaan ang isang
         balakid, sa halip na tapusin ang laro, subukang ibalik ang puntos sa 0.
+      flappy_9_2018_instruction: Para mahalo ang mga bagay-bagay, kapag natamaan ang
+        isang balakid, sa halip na tapusin ang laro, subukang ibalik ang puntos sa
+        0.
       frozen circle function in circle_instruction: Ngayon ay lilikha tayo nang 20
         na nagpatung-patong na mga bilog, sa pamamagitan ng pag-ikot ng 18 degrees
         sa bawat bilog.
@@ -10572,8 +11697,9 @@
       grade1_maze_sequence8_instruction: |-
         Debug this level by adding blocks to get
         me to the pig!
-      grade1_maze_sequence9_instruction: |
-        Go around the TNT to get me to the pig!
+      grade1_maze_sequence9_instruction: 'Go around the TNT to get me to the pig!
+
+'
       grade1_maze_sequenceA_instruction: |-
         Challenge: Move me around the TNT to get
         to the pig.
@@ -10741,6 +11867,9 @@
         Maaari mo ba itong gawing parang C ulit?
       grade2_collector_10_instruction: Malapit ka nang matapos! Magkolekta ng maraming
         mga piraso ng kayamanan hangga't kaya mo para tapusin ang yugto!
+      grade2_collector_10_2018_instruction: |-
+        You're almost done! Collect as many
+        pieces of treasure as you can to finish the stage!
       grade2_collector_2_instruction: Papuntahin si Laurel sa ginto, pagkatapos ay
         gumamit nang `collect` para pulotin ito.
       grade2_collector_3_instruction: Ilagay ang mga blokeng ito para makolekta ang
@@ -10760,6 +11889,8 @@
       grade2_collector_9a_instruction: "**Hamon:** Kunin ang lahat ng mga barya."
       grade2_collector_A_instruction: Tulungan si Laurel na kolektahin ang lahat ng
         mga kayamanan.
+      grade2_collector_A_2018_instruction: Tulungan si Laurel na kolektahin ang lahat
+        ng mga kayamanan.
       grade2_collector_pre1_instruction: |-
         "Hi, ako si Laurel. Ngayon ako ay naghahanap ng mga kayamanan sa pasyalan ng aso!" \r
         \r
@@ -12301,14 +13432,19 @@
         paglimbag!
       harvey_tictactoe_instruction: Tayo ay maglaro ng isang laro! Magguhit nang maraming
         mga X hangga't kaya mo! Maaari ka bang makakuha ng 3 sa isang hanay?
+      iceAgeLoopsforVideo_instruction: |-
+        Can you get to the acorn with just one `move
+        forward` block?
       iceage_click_hello_instruction: 'Maaari mo bang matulungan si Sid na tumawag
         sa kanyang mga kaibigan kapag nag-click ka sa kanya? '
       iceage_click_hello_2018_instruction: 'Maaari mo bang matulungan si Sid na tumawag
         sa kanyang mga kaibigan kapag nag-click ka sa kanya? '
       iceage_free_play_instruction: 'Oras na para maglikha ng iyong sariling laro
         o kuwento! '
-      iceage_free_play_2018_instruction: |
-        Oras na para maglikha ng iyong sariling laro o kuwento!
+      iceage_free_play_2018_instruction: 'Oras na para maglikha ng iyong sariling
+        laro o kuwento!
+
+'
       iceage_free_playcourseF_IceAge_11_instruction: 'Oras na para maglikha ng iyong
         sariling laro o kuwento! '
       iceage_hello1_instruction: Tulungan si Sid na magsabi ng "Hello!" sa pamamagitan
@@ -12422,6 +13558,13 @@
       level grade3_Loops_2_instruction: |-
         This time, use a loop to gather all of the
         nectar.
+      loop pet test_instruction: |-
+        Last time, you practiced using the "repeat forever"
+        loop to make a sprite do something forever. This time, we will use it to make
+        a virtual pet. \r
+        \r
+        This dog's name is Daisy. Daisy LOVES to snack on
+        carrots. Use the "drag and drop" block to move the carrot to Daisy.
       love_spring_1_instruction: |-
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -12453,6 +13596,41 @@
         to glitch out! \r
         \r
         Delete the extra bit to restore Mario back to normal!
+      pet game 1_instruction: |-
+        Use the "make a new sprite" block to make yourself
+        a pet!
+      pet game 2_instruction: |-
+        Your pet needs some exercise! Use the "add behavior"
+        block to get them moving.
+      pet game 3_instruction: |-
+        Pets love toys! Use a second "make sprite" block
+        to give your pet a toy, then use the "move towards" behavior to make your
+        pet run to their new toy.
+      pet game 4_instruction: |-
+        When your pet gets to their toy, they get excited!
+        Use the "when touches" block to detect when your pet gets to their toy.\r
+        \r
+        When
+        that happens, use the "remove behavior" block to make them stop walking,
+        and the "add behavior" block to make them have a dance party!
+      pet game 5_instruction: |-
+        You can add lots more things for your pet to interact
+        with! Play around with the "set sprite" block and make more stuff anywhere
+        you want it!
+      pet game 6_instruction: |-
+        It's important for pets to learn to follow commands.
+        Use the "when clicked" block to teach your pet to only start wandering after
+        you click on them.
+      pet game 7_instruction: |-
+        Pets need to learn to stop, too! Use the "when clicked"
+        block to teach your pet to stop wandering after you click on them.
+      pet game 8_instruction: |-
+        Your pet now has two toys! Use the "when clicked"
+        block to get them to move to the toy you click on
+      pet game 9_instruction: |-
+        Your pet has been so good, they deserve a treat. Use
+        the "add behavior" block to make the bone draggable, then drag it to your
+        pet.
       playEventsK1_instruction: |-
         This game is called "Play Lab".  See if you can
         figure out what each block does.
@@ -12554,8 +13732,9 @@
       sample8_instruction: |-
         Look at this trove of coins! How many can you get the
         adventurer to grab?
-      sample9_instruction: |
-        Use loops to help the artist connect all of the dots.
+      sample9_instruction: 'Use loops to help the artist connect all of the dots.
+
+'
       sample9a_instruction: |-
         The wizard has found his potions!  Use everything you
         have learned to help him collect them.

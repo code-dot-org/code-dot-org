@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Snap both `East` blocks to the bottom of the `when run` block.\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b8e08201e58d8adaaba78bd67d5a9873/courseA_maze_ramp2_2018.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Snap both `East` blocks to the bottom of the `when run` block.\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b8e08201e58d8adaaba78bd67d5a9873/courseA_maze_ramp2a_2018.mp3\"}]",
     "markdown_instructions": "Attach both <xml><block type=\"maze_moveEast\"/></xml> blocks to <xml><block type=\"when_run\"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming2_1\",\r\n  \"callout_text\": \"This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",

@@ -418,18 +418,33 @@ nn:
         CSD_U3_rect_c2: Dra denne blokka inn i kodeområdet.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 colorLeds predict_2018_callout: [ ]
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Definér startSpel her
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Definér startSpel her
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Definér flyttSpelar() her
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Definér flyttSpelar() her
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Sjekk om spelaren har vunne
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Sjekk om spelaren har vunne
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -902,6 +917,19 @@ nn:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        stone_block_2: Grå blokker er laga av stein og kan ikkje bli kasta.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klikk på lyspæra når du treng hjelp!
       courseA_maze_seq1_2018_callout:
@@ -932,41 +960,81 @@ nn:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseB_Scrat_ramp2_2018_callout: [ ]
+      courseB_Scrat_ramp3a_2018_callout: [ ]
+      courseB_Scrat_ramp4a_2018_callout: [ ]
+      courseB_Scrat_ramp5a_2018_callout: [ ]
       courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops3_2018_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker att i verktøykassa.
+      courseB_artist_loops5_2018_callout:
+        courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker att i verktøykassa.
       courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
+      courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Klikk på lyspæra når du treng hjelp!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Klikk på lyspæra når du treng hjelp!
       courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Bruk steg-knappen for å gå steg for steg gjennom programmet. Dette vil hjelpe deg med å finne feilen!
+      courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Bruk steg-knappen for å gå steg for steg gjennom programmet. Dette vil hjelpe deg med å finne feilen!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: Grå blokker er laga av stein og kan ikkje bli kasta.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: Grå blokker er laga av stein og kan ikkje bli kasta.
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
         courseB_playlab_events6_a: Bruk den grøne pila ned for å endre retningar.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: Bruk den grøne pila ned for å endre retningar.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til ulike delar av speleområdet.
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurar til ulike delar av speleområdet.
       courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: Start ved å bruke denne blokka til å få kunstnaren til midten av skjermen.
+      courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Start ved å bruke denne blokka til å få kunstnaren til midten av skjermen.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog1_2018_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_artist_prog2_2018_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
+      courseC_collector_loops_challenge2_2018_callout: [ ]
       courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
+      courseC_collector_prog1_2018_callout:
         courseC_collector_prog1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
+      courseC_collector_prog8_2018_callout: [ ]
       courseC_collector_prog9_callout: [ ]
+      courseC_collector_prog9_2018_callout: [ ]
       courseC_collector_progA_callout: [ ]
       courseC_collector_progB_callout: [ ]
       courseC_collector_prog_challenge1_callout: [ ]
+      courseC_collector_prog_challenge1_2018_callout: [ ]
       courseC_collector_prog_challenge2_callout: [ ]
+      courseC_collector_prog_challenge2_2018_callout: [ ]
       courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: Talet fire på gresskaret fortel deg at du kan plukke fire tilgjengelege gresskar.
+      courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: Talet fire på gresskaret fortel deg at du kan plukke fire tilgjengelege gresskar.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Desse blokkene er låste og kan ikkje slettast!
@@ -978,35 +1046,62 @@ nn:
       courseC_maze_loops_challenge2_callout: [ ]
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         courseC_maze_programming3_3: Desse blokkene er steinar og kan ikkje kastast.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_3: Desse blokkene er steinar og kan ikkje kastast.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
+      courseC_maze_programming5_2018_callout: [ ]
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
         courseC_maze_programming7_2: Desse blokkene er laga av stein og kan ikkje kastast.
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_2: Desse blokkene er laga av stein og kan ikkje kastast.
       courseC_starWars_loops10_callout: [ ]
+      courseC_starWars_loops10_2018_callout: [ ]
       courseC_starWars_loops10_predict2_callout: [ ]
+      courseC_starWars_loops10_predict2_2018_callout: [ ]
       courseC_starWars_loops11_callout: [ ]
+      courseC_starWars_loops11_2018_callout: [ ]
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
       courseC_starWars_loops4_callout: [ ]
+      courseC_starWars_loops4_2018_callout: [ ]
       courseC_starWars_loops5_callout: [ ]
+      courseC_starWars_loops5_2018_callout: [ ]
       courseC_starWars_loops6_callout: [ ]
+      courseC_starWars_loops6_2018_callout: [ ]
       courseC_starWars_loops7_callout: [ ]
+      courseC_starWars_loops7_2018_callout: [ ]
       courseC_starWars_loops8_callout: [ ]
+      courseC_starWars_loops8_2018_callout: [ ]
       courseC_starWars_loops9_callout: [ ]
+      courseC_starWars_loops9_2018_callout: [ ]
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Du treng ikkje bruke fargar for å løyse denne oppgåva. Dersom du ønsker, gjer 'tilfeldig farge'-blokka det lett!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: Du treng ikkje bruke fargar for å løyse denne oppgåva. Dersom du ønsker, gjer 'tilfeldig farge'-blokka det lett!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Du kan endre dette nummeret.
         courseD_artist_ramp11_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
@@ -1014,14 +1109,21 @@ nn:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje å sjå etter bikaker i det heile teke.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje å sjå etter bikaker i det heile teke.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje å sjå etter bikaker i det heile teke.
         4_5_Bee_Conditionals_2_2: Treng du litt hjelp? Klikk her for å sjå våre nye VIDEOTIPS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Bruk denne løkka for å samle all nektar (eller honning) frå ein blom (eller bikake).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Bruk denne løkka for å samle all nektar (eller honning) frå ein blom (eller bikake).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Prøve å gjenta 'flytte framover'-blokka med denne løkka.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: Bruk denne kommandoen til å flytte bia bakover.
@@ -1030,7 +1132,9 @@ nn:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1142,7 @@ nn:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1179,8 @@ nn:
         courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge gongar du seier den skal, og fortsetter deretter med å køyre programmet.
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1247,7 @@ nn:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Du kan endre dette nummeret.
@@ -1154,9 +1262,13 @@ nn:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Du kan endre dette nummeret.
         courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: Du kan endre dette nummeret.
+        courseE_artist_ramp8_2: Klikk her for å skrive kor mange gongar koden skal bli gjenteke.
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bruk denne blokka for å hente ein enkel del av skatten.  '
@@ -1203,19 +1315,33 @@ nn:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge gongar du seier den skal, og fortsetter deretter med å køyre programmet.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Den koden du putter inn her vil bli repetert så monge gongar du seier den skal, og fortsetter deretter med å køyre programmet.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
@@ -1435,6 +1561,8 @@ nn:
         course_playlab_variables2_1: Slik setter du verdien for variabelen.  Endre teksten som er kopla til denne blokka for å endre innhaldet i variabelen.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Slik setter du verdien for variabelen.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]
@@ -1487,13 +1615,16 @@ nn:
       grade2_MakeDogTag_1_callout: [ ]
       grade2_MakeDogTag_BFP_callout: [ ]
       grade2_collector_10_callout: [ ]
+      grade2_collector_10_2018_callout: [ ]
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need them!
       grade2_collector_8_callout: [ ]
       grade2_collector_9_callout: [ ]
       grade2_collector_9a_callout: [ ]
       grade2_collector_A_callout: [ ]
+      grade2_collector_A_2018_callout: [ ]
       grade2_collector_A_predict1_callout: [ ]
+      grade2_collector_A_predict1_2018_callout: [ ]
       grade2_maze_intro10_callout: [ ]
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.

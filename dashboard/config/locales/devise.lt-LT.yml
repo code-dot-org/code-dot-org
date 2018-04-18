@@ -71,8 +71,8 @@
       not_found: nerastas
       not_locked: nebuvo užrakintas
       not_saved:
-        one: "Įvyko klaida, kuri neleido šio %{resource} išsaugoti:"
-        other: "Įvyko %{count} klaidų, kurios neleido  išsaugoti šio %{resource}:"
+        one: 'Įvyko klaida, kuri neleido šio %{resource} išsaugoti:'
+        other: 'Įvyko %{count} klaidų, kurios neleido  išsaugoti šio %{resource}:'
     invitations:
       send_instructions: Laiškas su pakvietimu buvo išsiųstas gavėjui %{email}.
       invitation_token_invalid: Pakvietimas nebegalioja!

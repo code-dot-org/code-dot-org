@@ -16,7 +16,7 @@
   activerecord:
     errors:
       messages:
-        blank: "és obligatori"
+        blank: és obligatori
         blank_plural: are required
         invalid_plural: are invalid
     attributes:
@@ -154,7 +154,7 @@
     user_type_label: Account Type
     user_type_teacher: Mestre
     user_type_student: estudiant
-    field_is_required: "és obligatori"
+    field_is_required: és obligatori
     accept_terms: You must agree to create an account
     error: An error occurred.
   school_info:

@@ -74,13 +74,13 @@
   "penDown": "karandaşı endir",
   "penTooltip": "Şəkil çəkməyi başlamaq və ya dayandırmaq üçün karandaşı endirir və ya qaldırır.",
   "penUp": "karandaşı qaldır",
+  "pointTo": "point to",
   "pixels": "piksel",
   "reinfFeedbackMsg": "Bu da sizin rəsm əsəri! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin.",
   "setAlpha": "alfa seç",
   "setCharacter": "set character to {character}",
   "setColour": "rəngi təyin et",
   "setPattern": "model seç",
-  "setStickerSize": "Set sticker size",
   "setWidth": "eni təyin et",
   "shareDrawing": "Çəkdiyiniz şəkli bölüşün:",
   "showMe": "Mənə göstər",
@@ -94,5 +94,6 @@
   "turnTooltip": "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir.",
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
+  "withSize": "with size",
   "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
 }

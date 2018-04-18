@@ -1,105 +1,105 @@
 "el":
   errors:
     messages:
-      not_saved: "Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:"
-      too_young: "Αυτό το περιεχόμενο έχει περιορισμούς ηλικίας στο περιεχόμενο και
-        δεν είναι διαθέσιμο για τους νεότερους μαθητές."
-      teacher_must_accept_terms: "Αυτό το περιεχόμενο έχει περιορισμό ηλικίας  και
+      not_saved: 'Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:'
+      too_young: Αυτό το περιεχόμενο έχει περιορισμούς ηλικίας στο περιεχόμενο και
+        δεν είναι διαθέσιμο για τους νεότερους μαθητές.
+      teacher_must_accept_terms: Αυτό το περιεχόμενο έχει περιορισμό ηλικίας  και
         δεν είναι διαθέσιμο για τους μικρότερους  μαθητές. Ρωτήστε τον δάσκαλό  σας
         για την αποδοχή των ενημερωμένων όρων της υπηρεσίας για  να σας δώσει πρόσβαση
         σε αυτό το περιεχόμενο. Ο δάσκαλος σας  μπορεί να το κάνει αυτό, με την σύνδεση
         του στο Code Studio και κάνοντας κλικ στο κουμπί «Αναθεωρημένη ενημέρωση  όρων
-        » στην κορυφή της αρχικής σελίδας  Code Studio."
-      pair_programmer: "Αυτή τη στιγμή κάνετε συνεργατικό προγραμματισμό μαζί με έναν
+        » στην κορυφή της αρχικής σελίδας  Code Studio.
+      pair_programmer: Αυτή τη στιγμή κάνετε συνεργατικό προγραμματισμό μαζί με έναν
         μαθητή που δεν έχει ακόμη πρόσβαση σε αυτό το περιεχόμενο. Για να δείτε αυτό
         το περιεχόμενο, πρέπει να σταματήσετε τον συνεργατικό προγραμματισμό και να
-        προσπαθήσετε ξανά."
+        προσπαθήσετε ξανά.
   activerecord:
     errors:
       messages:
-        blank: "απαιτείται"
+        blank: απαιτείται
         blank_plural: are required
         invalid_plural: are invalid
     attributes:
       user:
-        name: "Προβολή ονόματος"
-        name_example: "Εμφανιζόμενο όνομα <br/> (π.χ. Προγραμματιστάκιας ή Μαρία)"
-        email: "Ηλεκτρονικό ταχυδρομείο"
+        name: Προβολή ονόματος
+        name_example: Εμφανιζόμενο όνομα <br/> (π.χ. Προγραμματιστάκιας ή Μαρία)
+        email: Ηλεκτρονικό ταχυδρομείο
         parent_email: Parent/guardian email
         personal_email: Personal email address
-        username: "όνομα χρήστη "
-        password: "κωδικός"
-        password_confirmation: "Επιβεβαίωση κωδικού"
-        current_password: "Τρέχων κωδικός"
-        locale: "Γλώσσα"
-        age: "Ηλικία"
-        gender: "Φύλο"
-        edit_header: "Στοιχεία Λογαριασμού"
+        username: 'όνομα χρήστη '
+        password: κωδικός
+        password_confirmation: Επιβεβαίωση κωδικού
+        current_password: Τρέχων κωδικός
+        locale: Γλώσσα
+        age: Ηλικία
+        gender: Φύλο
+        edit_header: Στοιχεία Λογαριασμού
         error:
-          future: "δεν μπορεί να είναι στο μέλλον"
-  hello: "Γεια σου κόσμε"
-  welcome_back: "Καλώς ήρθες, %{name}"
-  your_professional_learning_plan: "Το επαγγελματικό σας πλάνο εκμάθησης"
-  see_your_learning_plan: "Δείτε το σχέδιο εκμάθησής σας"
-  submit: "Υποβολή"
-  unsubmit: "Ανακλήθηκε"
-  previous_page: "Προηγούμενη σελίδα"
-  next_page: "Επόμενη σελίδα"
-  next_resource: "Επόμενος πόρος"
+          future: δεν μπορεί να είναι στο μέλλον
+  hello: Γεια σου κόσμε
+  welcome_back: Καλώς ήρθες, %{name}
+  your_professional_learning_plan: Το επαγγελματικό σας πλάνο εκμάθησης
+  see_your_learning_plan: Δείτε το σχέδιο εκμάθησής σας
+  submit: Υποβολή
+  unsubmit: Ανακλήθηκε
+  previous_page: Προηγούμενη σελίδα
+  next_page: Επόμενη σελίδα
+  next_resource: Επόμενος πόρος
   done_with_module: Done with this Learning Module
-  cancel: "Άκυρο"
-  okay: "Εντάξει"
+  cancel: Άκυρο
+  okay: Εντάξει
   heading_x_of_y: "%{heading} (σελίδα %{x} του %{y})"
   add_teacher_form:
     code:
-      label: "Προσθέστε ένα δάσκαλο:"
-      placeholder: "Τμήμα κώδικα (ABCDEF)"
+      label: 'Προσθέστε ένα δάσκαλο:'
+      placeholder: Τμήμα κώδικα (ABCDEF)
       instructions: Παρακαλώ να εισάγεις τον κωδικό που μοιράστηκε μαζί σου ο δάσκαλός
         σου. Πρόκειται για έναν κωδικό 6 γραμμάτων όπως "ΑΒΓΔΕΖ".
       instructions_short: Enter your 6 letter section code
-    submit: "Προσθήκη δασκαλου"
+    submit: Προσθήκη δασκαλου
   add_hint_form:
-    placeholder: "Παρακαλούμε εισάγετε την υπόδειξή σας εδώ"
-    submit: "Προσθέστε υπόδειξη"
+    placeholder: Παρακαλούμε εισάγετε την υπόδειξή σας εδώ
+    submit: Προσθέστε υπόδειξη
   appname: Code.org
-  stage: "σκηνή"
-  stage_number: "Σκηνικό %{number}"
-  puzzle: "Παζλ"
-  trophies: "τρόπαια"
-  courses: "Τες"
+  stage: σκηνή
+  stage_number: Σκηνικό %{number}
+  puzzle: Παζλ
+  trophies: τρόπαια
+  courses: Τες
   courses_page:
-    title_student: "Μάθετε με κώδικα Studio"
+    title_student: Μάθετε με κώδικα Studio
     title_teacher: Teach with Code Studio
-  unplugged_activity: "Αποσυνδεδεμένη Δραστηριότητα"
-  of: "του"
-  more: "ΠΕΡΙΣΣΟΤΕΡΑ"
-  less: "ΛΙΓΟΤΕΡΑ"
-  beta: "βήτα"
-  try_hoc: "Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> "
-  try_k8intro: "Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών
-    (15-25 ώρες)"
-  k8intro: "Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)"
-  already_started: "Έχεις ήδη ξεκινήσει; Συνέχισε εδώ >> "
-  demos: "Διαχειριστής: Όλα τα Demo"
-  continue: "Συνέχεια"
-  prize: "βραβείο"
-  more_info: "Περισσότερες πληροφορίες"
+  unplugged_activity: Αποσυνδεδεμένη Δραστηριότητα
+  of: του
+  more: ΠΕΡΙΣΣΟΤΕΡΑ
+  less: ΛΙΓΟΤΕΡΑ
+  beta: βήτα
+  try_hoc: Δοκίμασε την Ώρα του Κώδικα, κάνε κλικ εδώ >> 
+  try_k8intro: Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών
+    (15-25 ώρες)
+  k8intro: Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)
+  already_started: 'Έχεις ήδη ξεκινήσει; Συνέχισε εδώ >> '
+  demos: 'Διαχειριστής: Όλα τα Demo'
+  continue: Συνέχεια
+  prize: βραβείο
+  more_info: Περισσότερες πληροφορίες
   auth:
-    sign_in_with: "Εγγραφή μέσω  %{provider}"
-    signed_in: "Συνδέθηκες!"
+    sign_in_with: Εγγραφή μέσω  %{provider}
+    signed_in: Συνδέθηκες!
     signed_out: Αποσυνδεθήκατε από το <a href="%{url}">Code.org</a>.
     sign_out_of: Χρησιμοποιήσατε το %{provider} για να συνδεθείτε. Κάντε <a href="%{url}">κλικ
       εδώ</a> για να αποσυνδεθείτε από το %{provider}.
-    already_signedup: "Είσαι ήδη γραμμένος;"
-    notyet_signedup: "Δεν έχει γραφτεί ακόμα;"
-    google_oauth2: "Λογαριασμός Google"
+    already_signedup: Είσαι ήδη γραμμένος;
+    notyet_signedup: Δεν έχει γραφτεί ακόμα;
+    google_oauth2: Λογαριασμός Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: "Λογαριασμός Microsoft"
+    windowslive: Λογαριασμός Microsoft
     clever: Clever Account
-    forgot_password: "Ξέχασες τον κωδικό σου;"
-    need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
-    need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"
+    forgot_password: Ξέχασες τον κωδικό σου;
+    need_confirmation: Δεν έλαβες τις οδηγίες επιβεβαίωσης;
+    need_unlock: Δεν έλαβες τις οδηγίες ξεκλειδώματος;
     not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
       have to sign in by typing your password below.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
@@ -111,7 +111,7 @@
       να διαχειριστείτε την τάξη σας. <a href="/">Μπορείτε να περιηγηθείτε σε διάφορα
       επίπεδα και παζλ</a> χωρίς να διαθέτετε λογαριασμό, αλλά θα πρέπει να εγγραφείτε
       για να αποθηκεύσετε την πρόοδό και τα έργα σας.
-    hoc_already_signed_up_heading: "Ξεκινήστε χωρίς να κάνετε είσοδο"
+    hoc_already_signed_up_heading: Ξεκινήστε χωρίς να κάνετε είσοδο
     hoc_already_signed_up_content: Έχετε εγγραφεί για να διδάξετε μια Ώρα Κώδικα!
       Εσείς και οι μαθητές σας δεν χρειάζεται να εγγραφείτε στο Code Studio για να
       συμμετάσχετε σε αυτή τη δραστηριότητα. Για να ξεκινήσετε, <a href="%{learn_url}">επιλέγξτε
@@ -127,103 +127,103 @@
       και να παρακολουθείτε την πορεία των μαθητών σας. <a href="%{studio_url}">Μπορείτε
       επίσης να συνεχίσετε την πλοήγησή σας στις διάφορες δραστηριότητες και παζλ</a>
       χωρίς να δημιουργήσετε λογαριασμό.
-    teacher_educator_guide: "Δείτε τον οδηγό εκπαιδευτικού"
-    title: "Εγγραφείτε στο Code.org"
-    school_name: "Όνομα Σχολείου (προαιρετικά)"
-    school_address: "Διεύθυνση Σχολείου (προαιρετικά)"
-    address_placeholder: "διεύθυνση, πόλη, περιοχή, ΤΚ"
-    gender: "Φύλο (προαιρετικά)"
-    birthday: "Γενέθλια (προαιρετικά)"
-    age: "Ηλικία"
-    user_type: "Είστε ένα μαθητής ή δάσκαλος;"
-    submit: "Εγγραφή"
-    teacher: "Είσαι δάσκαλος;"
-    valid_username: "Διαθέσιμο!"
-    invalid_username: "Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες"
-    taken_username: "Το όνομα χρήστη χρησιμοποιείται ήδη"
-    valid_password: "Έγκυρος κωδικός πρόσβασης!"
-    invalid_password: "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6
-      χαρακτήρες"
-    mismatch_password: "Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν"
-    student_terms: "Συμφωνώ με τους <a href='http://code.org/tos'>όρους χρήσης</a>
+    teacher_educator_guide: Δείτε τον οδηγό εκπαιδευτικού
+    title: Εγγραφείτε στο Code.org
+    school_name: Όνομα Σχολείου (προαιρετικά)
+    school_address: Διεύθυνση Σχολείου (προαιρετικά)
+    address_placeholder: διεύθυνση, πόλη, περιοχή, ΤΚ
+    gender: Φύλο (προαιρετικά)
+    birthday: Γενέθλια (προαιρετικά)
+    age: Ηλικία
+    user_type: Είστε ένα μαθητής ή δάσκαλος;
+    submit: Εγγραφή
+    teacher: Είσαι δάσκαλος;
+    valid_username: Διαθέσιμο!
+    invalid_username: Το όνομα χρήστη πρέπει να αποτελείται τουλάχιστον από 5 χαρακτήρες
+    taken_username: Το όνομα χρήστη χρησιμοποιείται ήδη
+    valid_password: Έγκυρος κωδικός πρόσβασης!
+    invalid_password: Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6
+      χαρακτήρες
+    mismatch_password: Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν
+    student_terms: Συμφωνώ με τους <a href='http://code.org/tos'>όρους χρήσης</a>
       του Code.org. Εάν είμαι κάτω των 13 ετών, με την υποβολή της παρούσας φόρμας
       επιβεβαιώνω ότι διαθέτω άδεια του γονέα ή κηδεμόνα μου για να χρησιμοποιήσω
       τις υπηρεσίες του Code.org.<br/><br/>Οι ηλεκτρονικές διευθύνσεις ταχυδρομείου
       δεν αποθηκεύονται σε μορφές που να επιτρέπουν την επικοινωνία με τους μαθητές.
       Οι μαθητές δεν θα λάβουν ποτέ ηλεκτρονικά μηνύματα από το Code.org εκτός εάν
       πρόκειται για τη διαδικασία ανάκτησης κωδικού. Δείτε την <a href='http://code.org/privacy'>πολιτική
-      ιδιωτικότητας</a> για περισσότερες πληροφορίες."
-    teacher_terms: "Συμφωνώ με τους όρους χρήσης υποηρεσιών του Code.org. Για περισσότερες
+      ιδιωτικότητας</a> για περισσότερες πληροφορίες.
+    teacher_terms: Συμφωνώ με τους όρους χρήσης υποηρεσιών του Code.org. Για περισσότερες
       πληροφορίες σχετικά με την ιδιωτικότητα, δείτε την <a href='http://code.org/privacy'>πολιτική
-      ιδιωτικότητας</a>."
-    additional_information: "Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
-      η εγγραφή σας."
-    user_type_label: "Τύπος λογαριασμού"
-    user_type_teacher: "Καθηγητής"
-    user_type_student: "φοιτητής/μαθητής"
-    field_is_required: "απαιτείται"
-    accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
+      ιδιωτικότητας</a>.
+    additional_information: Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί
+      η εγγραφή σας.
+    user_type_label: Τύπος λογαριασμού
+    user_type_teacher: Καθηγητής
+    user_type_student: φοιτητής/μαθητής
+    field_is_required: απαιτείται
+    accept_terms: Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό
     error: An error occurred.
   school_info:
-    title: "Πληροφορίες σχολείου (προαιρετικό)"
-    school_country: "Χώρα σχολείου"
-    select_school_type: "Επιλέξτε τύπο σχολείου"
+    title: Πληροφορίες σχολείου (προαιρετικό)
+    school_country: Χώρα σχολείου
+    select_school_type: Επιλέξτε τύπο σχολείου
     charter: Charter
-    private: "Ιδιωτικό"
-    public: "Δημόσιο"
-    homeschool: "Κατ' οίκον διδασκαλία"
-    after_school: "Ολοήμερο"
-    other: "Άλλα"
-    state: "Νομός"
-    district: "Περιοχή"
-    other_district_not_listed: "Άλλη περιοχή που δεν περιλαμβάνεται παραπάνω"
-    district_name: "Όνομα περιοχής"
-    school: "Σχολείο"
-    other_school_not_listed: "Άλλο σχολείο που δεν περιλαμβάνεται παραπάνω"
-    school_name: "Όνομα σχολείου"
-    school_zip: "Ταχυδρομικός κώδικας σχολείου"
-    school_address: "Ταχυδρομική διεύθυνση σχολείου"
+    private: Ιδιωτικό
+    public: Δημόσιο
+    homeschool: Κατ' οίκον διδασκαλία
+    after_school: Ολοήμερο
+    other: Άλλα
+    state: Νομός
+    district: Περιοχή
+    other_district_not_listed: Άλλη περιοχή που δεν περιλαμβάνεται παραπάνω
+    district_name: Όνομα περιοχής
+    school: Σχολείο
+    other_school_not_listed: Άλλο σχολείο που δεν περιλαμβάνεται παραπάνω
+    school_name: Όνομα σχολείου
+    school_zip: Ταχυδρομικός κώδικας σχολείου
+    school_address: Ταχυδρομική διεύθυνση σχολείου
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "Έχετε ήδη λογαριασμό; Συνδεθείτε"
-    login: "Ηλεκτρονικό ταχυδρομείο"
-    login_username: "Διεύθυνση ηλεκτρονικού ταχυδρομείου ή όνομα χρήστη"
-    password: "Κωδικός πρόσβασης"
-    remember: "Να με θυμάσαι"
-    submit: "Σύνδεση"
+    title: Έχετε ήδη λογαριασμό; Συνδεθείτε
+    login: Ηλεκτρονικό ταχυδρομείο
+    login_username: Διεύθυνση ηλεκτρονικού ταχυδρομείου ή όνομα χρήστη
+    password: Κωδικός πρόσβασης
+    remember: Να με θυμάσαι
+    submit: Σύνδεση
   signin:
-    try_heading: "Θέλετε να δοκιμάσετε να γράψετε κώδικα χωρίς εγγραφή;"
-    try_hoc: "Δοκιμάστε πρώτα την Ώρα του Κώδικα"
-    try_20hours: "Δοκιμάστε την 20ωρη εισαγωγή μας στην Επιστήμη των Υπολογιστών"
+    try_heading: Θέλετε να δοκιμάσετε να γράψετε κώδικα χωρίς εγγραφή;
+    try_hoc: Δοκιμάστε πρώτα την Ώρα του Κώδικα
+    try_20hours: Δοκιμάστε την 20ωρη εισαγωγή μας στην Επιστήμη των Υπολογιστών
   signinsection:
-    welcome: "Καλώς ήρθατε στο %{section_name}"
-    name: "Επιλέξτε το όνομά σας"
-    picture: "Τώρα βρείτε την μυστική σας εικόνα"
-    words: "Τώρα δώστε τις μυστικές σας λέξεις"
-    login: "Σύνδεση"
-    invalid_login: "Λανθασμένα στοιχεία εισόδου. Παρακαλούμε προσπαθήστε ξανά"
-    pair_programming: "Έχω έναν συνεργάτη στον υπολογιστή μου"
-    student_privacy: "Μάθετε περισσότερα σχετικά με το γιατί δεν βλέπετε ολόκληρο
-      το ονοματεπώνυμό σας <a href='%{student_privacy_blog}' target='_blank'>εδώ</a>."
+    welcome: Καλώς ήρθατε στο %{section_name}
+    name: Επιλέξτε το όνομά σας
+    picture: Τώρα βρείτε την μυστική σας εικόνα
+    words: Τώρα δώστε τις μυστικές σας λέξεις
+    login: Σύνδεση
+    invalid_login: Λανθασμένα στοιχεία εισόδου. Παρακαλούμε προσπαθήστε ξανά
+    pair_programming: Έχω έναν συνεργάτη στον υπολογιστή μου
+    student_privacy: Μάθετε περισσότερα σχετικά με το γιατί δεν βλέπετε ολόκληρο το
+      ονοματεπώνυμό σας <a href='%{student_privacy_blog}' target='_blank'>εδώ</a>.
   password:
     reset_form:
-      title: "Ξέχασες τον κωδικό σου;"
-      instructions: "Παρακαλούμε γράψτε παρακάτω τη διεύθυνση ηλεκτρονικού ταχυδρομείου
-        σας και θα σας στείλουμε οδηγίες για την ανάκτηση του κωδικού σας."
-      email: "Διεύθυνση email"
-      submit: "Υποβολή"
+      title: Ξέχασες τον κωδικό σου;
+      instructions: Παρακαλούμε γράψτε παρακάτω τη διεύθυνση ηλεκτρονικού ταχυδρομείου
+        σας και θα σας στείλουμε οδηγίες για την ανάκτηση του κωδικού σας.
+      email: Διεύθυνση email
+      submit: Υποβολή
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
-      title: "Αλλαγή κωδικού"
-      new_password: "Νέος κωδικός"
-      confirm_password: "Επιβεβαίωση νέου κωδικού"
-      submit: "Άλλαξε τον κωδικό μου"
+      title: Αλλαγή κωδικού
+      new_password: Νέος κωδικός
+      confirm_password: Επιβεβαίωση νέου κωδικού
+      submit: Άλλαξε τον κωδικό μου
   welcome_email:
-    subject: "Μπες στην τάξη μου (στο Code.org)"
+    subject: Μπες στην τάξη μου (στο Code.org)
     body: |
       Κάνε κλικ στον παρακάτω σύνδεσμο να εγγραφείς στα μαθήματα της επιστήμης των υπολογιστών του Code.org (με μένα ως "δάσκαλό" σου):
 
@@ -246,47 +246,47 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: "Μυστική λέξη"
-      email: "Ηλεκτρονικό ταχυδρομείο"
+      word: Μυστική λέξη
+      email: Ηλεκτρονικό ταχυδρομείο
       google_classroom: Google Classroom
-      clever: "Εξυπνο"
+      clever: Εξυπνο
   follower:
-    invite_sent: "Η πρόσκληση στάλθηκε"
-    added_teacher: "Ο %{name} σε πρόσθεσε ως δάσκαλο"
-    registered: "Έχεις εγγραφεί για %{section_name}."
+    invite_sent: Η πρόσκληση στάλθηκε
+    added_teacher: Ο %{name} σε πρόσθεσε ως δάσκαλο
+    registered: Έχεις εγγραφεί για %{section_name}.
     error:
-      signed_in: "Παρακαλώ αποσυνδεθείτε πριν συνεχίσετε"
-      username_not_found: "Δεν βρέθηκε όνομα χρήστη %{username}"
-      username_in_use: "Το %{username} δεν είναι διαθέσιμο, διάλεξε ένα άλλο"
-      no_teacher: "Δεν έχει εγγραφεί κάποιος με το '%{teacher_email_or_code}'. Παρακαλώ
-        ζητείστε τους να εγγραφούν εδώ και προσπάθησε να τους προσθέσεις ξανά"
-      section_not_found: "Δε βρέθηκε η ενότητα με τον κώδικα %{section_code}."
-      blank_code: "Παρακαλώ δώστε μία ενότητα κώδικα"
-      cant_join_own_section: "Λυπούμαι, δεν μπορείτε να συνδέσετε τη δική σας ενότητα."
+      signed_in: Παρακαλώ αποσυνδεθείτε πριν συνεχίσετε
+      username_not_found: Δεν βρέθηκε όνομα χρήστη %{username}
+      username_in_use: Το %{username} δεν είναι διαθέσιμο, διάλεξε ένα άλλο
+      no_teacher: Δεν έχει εγγραφεί κάποιος με το '%{teacher_email_or_code}'. Παρακαλώ
+        ζητείστε τους να εγγραφούν εδώ και προσπάθησε να τους προσθέσεις ξανά
+      section_not_found: Δε βρέθηκε η ενότητα με τον κώδικα %{section_code}.
+      blank_code: Παρακαλώ δώστε μία ενότητα κώδικα
+      cant_join_own_section: Λυπούμαι, δεν μπορείτε να συνδέσετε τη δική σας ενότητα.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
     mail:
       student_disassociated:
-        subject: "Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι
-          πλέον δικός σας."
+        subject: 'Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι
+          πλέον δικός σας.'
   reports:
     error:
-      access_denied: "Δεν έχεις πρόσβαση στα στατιστικά αυτού του ατόμου"
+      access_denied: Δεν έχεις πρόσβαση στα στατιστικά αυτού του ατόμου
   crud:
-    new_model: "Νέο %{model}"
-    show: "Εμφάνιση"
-    edit: "Τροποποίηση"
-    edit_model: "Τροποποίηση %{model}"
-    update: "Ενημέρωση"
-    submit: "Υποβολή"
-    destroy: "Καταστροφή"
-    back: "Πίσω"
-    confirm: "Είσαι σίγουρος;"
-    created: "Το %{model} δημιουργήθηκε με επιτυχία."
-    updated: "Το %{model} ενημερώθηκε με επιτυχία."
+    new_model: Νέο %{model}
+    show: Εμφάνιση
+    edit: Τροποποίηση
+    edit_model: Τροποποίηση %{model}
+    update: Ενημέρωση
+    submit: Υποβολή
+    destroy: Καταστροφή
+    back: Πίσω
+    confirm: Είσαι σίγουρος;
+    created: Το %{model} δημιουργήθηκε με επιτυχία.
+    updated: Το %{model} ενημερώθηκε με επιτυχία.
     destroyed: "%{model} διαγράφηκε με επιτυχία."
-    access_denied: "Δεν έχετε πρόσβαση σε αυτό το %{model}."
+    access_denied: Δεν έχετε πρόσβαση σε αυτό το %{model}.
   devise:
     registrations:
       user:
@@ -298,20 +298,20 @@
           You can now log into Code.org with your username and password
   nav:
     header:
-      finished_hoc: "Ολοκλήρωσα την Ώρα του Κώδικα"
-      sign_in_to_save: "Συνδέσου για να αποθηκεύσεις την πρόοδό σου"
+      finished_hoc: Ολοκλήρωσα την Ώρα του Κώδικα
+      sign_in_to_save: Συνδέσου για να αποθηκεύσεις την πρόοδό σου
       free_play:
-        playlab: "Δημιουργήστε μια εφαρμογή"
-        artist: "Ζωγραφίστε κάτι"
+        playlab: Δημιουργήστε μια εφαρμογή
+        artist: Ζωγραφίστε κάτι
         calculate: Calculate Something
-        applab: "Δημιουργήστε μια εφαρμογή"
+        applab: Δημιουργήστε μια εφαρμογή
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
       my_dashboard: My Dashboard
-      courses: "Τες"
+      courses: Τες
       course_catalog: Course Catalog
-      project_gallery: "Έργα"
+      project_gallery: Έργα
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -323,7 +323,7 @@
       educate_elementary: Elementary School
       educate_middle: Middle School
       educate_high: High School
-      educate_hoc: "Ώρα του Κώδικα"
+      educate_hoc: Ώρα του Κώδικα
       educate_partner: Partner with Us
       educate_beyond: Beyond Code.org
       educate_inspire: Inspire a Student
@@ -345,77 +345,77 @@
       teach: Teach
       about: About
     user:
-      classroom: "Αρχική Σελίδα Εκπαιδευτή"
-      district_dashboard: "Περιοχή Ταμπλό"
-      label: "Γεια σου %{username}"
-      stats: "Η πρόοδός μου"
-      settings: "Ο λογαριασμός μου"
-      logout: "Αποσύνδεση"
-      signin: "Σύνδεση"
-      signup: "Δημιουργήστε ένα λογαριασμό"
-      already_registered: "Έχετε εγγραφεί ήδη;"
-      pair_programming: "Προγραμματισμός κατά ζεύγη"
-      team: "Ομάδα"
-      driver: "Οδηγός-αρχηγός"
-      navigator: "Πλοηγός"
+      classroom: Αρχική Σελίδα Εκπαιδευτή
+      district_dashboard: Περιοχή Ταμπλό
+      label: Γεια σου %{username}
+      stats: Η πρόοδός μου
+      settings: Ο λογαριασμός μου
+      logout: Αποσύνδεση
+      signin: Σύνδεση
+      signup: Δημιουργήστε ένα λογαριασμό
+      already_registered: Έχετε εγγραφεί ήδη;
+      pair_programming: Προγραμματισμός κατά ζεύγη
+      team: Ομάδα
+      driver: Οδηγός-αρχηγός
+      navigator: Πλοηγός
     popup:
-      progress_for_user: "πρόοδος του %{name}"
-      progress: "Η πρόοδός σου"
-      lines: "Συνολικές γραμμές κώδικα: %{lines}"
-      close: "ΚΛΕΙΣΙΜΟ"
-      mastery: "Έννοιες"
-      puzzle_map: "επίπεδα"
-      prizes: "Μάζεψε όλα τα %{total_trophies} βραβεία και κέρδισε δώρα!"
-      prize_earned: "Συλλέχθηκαν και τα %{total_trophies} τρόπαια. Κερδίσατε ένα βραβείο!"
+      progress_for_user: πρόοδος του %{name}
+      progress: Η πρόοδός σου
+      lines: 'Συνολικές γραμμές κώδικα: %{lines}'
+      close: ΚΛΕΙΣΙΜΟ
+      mastery: Έννοιες
+      puzzle_map: επίπεδα
+      prizes: Μάζεψε όλα τα %{total_trophies} βραβεία και κέρδισε δώρα!
+      prize_earned: Συλλέχθηκαν και τα %{total_trophies} τρόπαια. Κερδίσατε ένα βραβείο!
       prize_us_only: "(Μόνο για μαθητές των ΗΠΑ)"
-      prizes_link: "Περισσότερες πληροφορίες"
+      prizes_link: Περισσότερες πληροφορίες
   teacher:
-    answer: "Απάντηση"
-    for_teachers_only: "Μόνο για εκπαιδευτικούς"
+    answer: Απάντηση
+    for_teachers_only: Μόνο για εκπαιδευτικούς
     title:
-      one: "Ο δάσκαλος σας:"
-      other: "Οι δασκάλοι σου:"
+      one: 'Ο δάσκαλος σας:'
+      other: 'Οι δασκάλοι σου:'
     remove: "(αφαιρέστε δάσκαλος)"
     confirm:
-      remove: "Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον δάσκαλο;"
+      remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον δάσκαλο;
     students:
-      dashboard: "Πηγαίνετε στον πίνακα δραστηριοτήτων  δάσκαλος"
-    user_not_found: "Ο δάσκαλος δεν βρέθηκε."
-    student_teacher_disassociated: "Εχετε αφαιρέσει το όνομα %{teacher_name} σαν δάσκαλό
-      σας."
+      dashboard: Πηγαίνετε στον πίνακα δραστηριοτήτων  δάσκαλος
+    user_not_found: Ο δάσκαλος δεν βρέθηκε.
+    student_teacher_disassociated: Εχετε αφαιρέσει το όνομα %{teacher_name} σαν δάσκαλό
+      σας.
     panel:
-      answer_viewer: "Πίνακας Καθηγητών"
-      student: "φοιτητής/μαθητής"
-      viewing_solution: "Προβολή λύσης"
-      try_it_yourself: "Δοκίμασέ το μόνος σου"
-      section: "Ενότητα"
-      example: "Παράδειγμα λύσης"
-      example_with_number: "Παράδειγμα λύσης %{solution_number}"
-      submitted_on: "Υποβλήθηκε στις %{date}"
-      unsubmit: "Ανακλήθηκε"
-      worked_with: "Συνεργάστηκε με"
-      update_lock_settings: "Ενημέρωση ρυθμίσεων κλειδώματος."
-      clear_response: "Εκκαθάριση απάντησης"
+      answer_viewer: Πίνακας Καθηγητών
+      student: φοιτητής/μαθητής
+      viewing_solution: Προβολή λύσης
+      try_it_yourself: Δοκίμασέ το μόνος σου
+      section: Ενότητα
+      example: Παράδειγμα λύσης
+      example_with_number: Παράδειγμα λύσης %{solution_number}
+      submitted_on: Υποβλήθηκε στις %{date}
+      unsubmit: Ανακλήθηκε
+      worked_with: Συνεργάστηκε με
+      update_lock_settings: Ενημέρωση ρυθμίσεων κλειδώματος.
+      clear_response: Εκκαθάριση απάντησης
   user:
-    email_confirm_needed: "Η διεύθυνση email δεν έχει επιβεβαιωθεί:"
-    email_confirm_needed_required: "Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
-      %{email}  δεν έχει επιβεβαιωθεί:"
+    email_confirm_needed: 'Η διεύθυνση email δεν έχει επιβεβαιωθεί:'
+    email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου
+      %{email}  δεν έχει επιβεβαιωθεί:'
     email_confirm_wrong_email: "(Λάθος διεύθυνση ηλεκτρονικού ταχυδρομείου;)"
-    email_resend_confirm: "Επανάληψη αποστολής οδηγιών επιβεβαίωσης"
+    email_resend_confirm: Επανάληψη αποστολής οδηγιών επιβεβαίωσης
     new_password_hint: "(άστο κενό εάν δεν θέλεις να τον αλλάξεις)"
     current_password_hint: "(χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν
       οι αλλαγές)"
-    delete: "Διαγράψτε τον λογαριασμό σας"
-    delete_text: "Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό
-      σας."
-    delete_text_teacher_note: "Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα
-      διαγραφεί ο λογαριασμός των μαθητών σας."
-    delete_confirm: "Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?"
-    deleted_user: "διεγραμμένος χρήστης"
-    no_password_because_oauth: "Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό
-      πάροχο."
-    no_password_because_sponsored: "Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί
-      τον κωδικό σας."
+    delete: Διαγράψτε τον λογαριασμό σας
+    delete_text: Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό
+      σας.
+    delete_text_teacher_note: 'Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα
+      διαγραφεί ο λογαριασμός των μαθητών σας.'
+    delete_confirm: Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?
+    deleted_user: διεγραμμένος χρήστης
+    no_password_because_oauth: Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό
+      πάροχο.
+    no_password_because_sponsored: Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί
+      τον κωδικό σας.
     create_personal_login: Create a personal login
     create_personal_login_under_13_info: If you want to keep using your Code.org account
       even after the end of the school year, ask your parent/guardian to help you
@@ -438,66 +438,66 @@
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
   user_level:
-    completed: "Ολοκληρώθηκε"
-    tried: "Δοκιμάστηκε"
+    completed: Ολοκληρώθηκε
+    tried: Δοκιμάστηκε
   home:
-    title: "Στούντιο Κώδικα"
-    description: "Το Code Studio φιλοξενεί τα online μαθήματα που δημιουργήθηκαν από
-      το Code.org"
+    title: Στούντιο Κώδικα
+    description: Το Code Studio φιλοξενεί τα online μαθήματα που δημιουργήθηκαν από
+      το Code.org
     lines_of_code: "%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ"
     lines_of_code_linebreak: "%{lines_count} ΓΡΑΜΜΈΣ ΚΩΔΙΚΑ<br/> ΓΡΆΦΤΗΚΑΝ ΑΠΟ%{students_count}
       ΕΚΑΤΟΜΜΎΡΙΑ ΜΑΘΗΤΕΣ"
-    all_courses: "Επισκόπηση των μαθημάτων 1, 2 και 3"
-    lesson_plans: "Σχέδια μαθήματος"
-    signin_message: "Ήδη εγγεγραμμένος; %{link}"
-    student_reg_link: "Εγγραφή μαθητή"
-    teacher_reg_link: "Εγγραφή δασκάλου"
-    signin_directions: "Χρησιμοποιήστε ένα λογαριασμό για να παρακολουθείτε την πρόοδό.<br/>
-      Δάσκαλοι, παρακολουθήστε όλη την τάξη σας."
-    teacher_dashboard: "Προβολη σύνοψης προόδου"
-    teacher_student_count_one: "Εχεις %{count} μαθητές."
-    teacher_student_count: "Εχεις %{count} μαθητές."
+    all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
+    lesson_plans: Σχέδια μαθήματος
+    signin_message: Ήδη εγγεγραμμένος; %{link}
+    student_reg_link: Εγγραφή μαθητή
+    teacher_reg_link: Εγγραφή δασκάλου
+    signin_directions: Χρησιμοποιήστε ένα λογαριασμό για να παρακολουθείτε την πρόοδό.<br/>
+      Δάσκαλοι, παρακολουθήστε όλη την τάξη σας.
+    teacher_dashboard: Προβολη σύνοψης προόδου
+    teacher_student_count_one: Εχεις %{count} μαθητές.
+    teacher_student_count: Εχεις %{count} μαθητές.
     teacher_averages: Οι μαθητές σου έχουν κερδίσει κατά μέσο όρο %{trophy_average}
       από %{trophy_max} βραβεία "Μαεστρίας".
-    teacher_print_certificates: "Εκτύπωση πιστοποιητικών για τους μαθητές που ολοκληρώνουν
-      αυτό το μάθημα"
-    teacher_read_blog: "Διαβάστε για τα νέα και τις ενημερώσεις για του υλικό μας
-      στο blog του Παιδαγωγού"
-    classroom: "Η αίθουσά σου"
-    student_progress: "Η πρόοδός σας"
+    teacher_print_certificates: Εκτύπωση πιστοποιητικών για τους μαθητές που ολοκληρώνουν
+      αυτό το μάθημα
+    teacher_read_blog: Διαβάστε για τα νέα και τις ενημερώσεις για του υλικό μας στο
+      blog του Παιδαγωγού
+    classroom: Η αίθουσά σου
+    student_progress: Η πρόοδός σας
     student_stats: Κέρδισες %{trophy_count} από %{trophy_max} τρόπαια "Μαεστρίας".
-    student_left_off: "Εκεί που έφυγες:"
-    student_finished: "Ολοκληρώσατε όλα τα σεμινάρια, διαλέξτε μία άλλη τάξη %{online_link}
-      ή σε %{local_school_link}"
-    local_school: "τοπικό σχολείο"
-    online: "σε σύνδεση"
-    see_details: "Δείτε λεπτομέρειες"
-    view_course: "Προβολή μαθημάτων"
-    prize_info: "Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια
-      σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις."
-    tryfirst: "Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:"
-    trynow: "Δοκιμάστε τώρα"
-    add_hint_help: "Παρακαλούμε βοηθήστε μας να προσθέσουμε έξυπνες συμβουλές στα
-      μαθήματα  του Code.org"
-    20hour_overview: "Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
+    student_left_off: 'Εκεί που έφυγες:'
+    student_finished: Ολοκληρώσατε όλα τα σεμινάρια, διαλέξτε μία άλλη τάξη %{online_link}
+      ή σε %{local_school_link}
+    local_school: τοπικό σχολείο
+    online: σε σύνδεση
+    see_details: Δείτε λεπτομέρειες
+    view_course: Προβολή μαθημάτων
+    prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια
+      σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
+    tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
+    trynow: Δοκιμάστε τώρα
+    add_hint_help: Παρακαλούμε βοηθήστε μας να προσθέσουμε έξυπνες συμβουλές στα μαθήματα  του
+      Code.org
+    20hour_overview: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής
       και προγραμματισμού . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες
-      τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία."
-    test_videos_help: "Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο σχολείο
-      σας"
-    try_beta_courses: "Νέο! Δοκιμάστε τα δοκιμαστικά  μαθήματα για φοιτητές K-5"
-    use_as_teacher: "Χρησιμοποιήστε αυτό τον ιστότοπο  ως δάσκαλος"
+      τάξεις του δημοτικού, αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
+    test_videos_help: Δοκιμάστε το νέο πρόγραμμα αναπαραγωγής βίντεο  στο σχολείο
+      σας
+    try_beta_courses: Νέο! Δοκιμάστε τα δοκιμαστικά  μαθήματα για φοιτητές K-5
+    use_as_teacher: Χρησιμοποιήστε αυτό τον ιστότοπο  ως δάσκαλος
     heading_hoc2014: "<h2>Η Ώρα του Κώδικα για</h2><h1>κάθε ηλικία</h1>"
     heading_elementary: "<h2>Μαθήματα 20 ωρών για</h2><h1>Αρχάριους (κάθε ηλικίας)</h1>"
     heading_apps: "<h2>Διασκέδαση για</h2><h1>όλους</h1>"
     heading_tools: "<h2>Έτοιμοι για το επόμενο βήμα;</h2><h1>JavaScript Tools για
       Λύκεια</h1>"
     heading_legacy: "<h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>"
-    your_gallery: "Συλλογή φωτογραφιών"
-    no_primary_course: "Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα"
-    choose_next_course: "Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα
-      παρακάτω"
-    print_certificate: "Εκτύπωση πιστοποιητικού"
-    announcement_title: "Ανακοινώσεις"
+    your_gallery: Συλλογή φωτογραφιών
+    no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
+    choose_next_course: Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα
+      παρακάτω
+    print_certificate: Εκτύπωση πιστοποιητικού
+    announcement_title: Ανακοινώσεις
     announcement_message_fall2016_features: We spent the summer turning your feedback
       into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
       students' progress</a> even if they're pair programming on one device. You can
@@ -510,16 +510,16 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "Μάθετε περισσότερα"
-    announcement_try_now_button: "Δοκιμάστε τώρα"
-    announcement_host_an_hour_button: "Φιλοξενήστε μια Ώρα"
-    announcement_watch_video_button: "Δείτε το βίντεο"
+    announcement_learn_more_button: Μάθετε περισσότερα
+    announcement_try_now_button: Δοκιμάστε τώρα
+    announcement_host_an_hour_button: Φιλοξενήστε μια Ώρα
+    announcement_watch_video_button: Δείτε το βίντεο
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: "Προσθέστε το όνομά σας"
+    announcement_petition_button: Προσθέστε το όνομά σας
     announcement_go_beyond_button: Go beyond
     announcement_apply_now: Apply now
     announcement_all: Keep up to date with new features and updates on our teacher
@@ -612,33 +612,33 @@
     current_section_dne: Sorry, but section %{current_section_code} does not exist.
       Please enter a different section code.
     student_ids_not_entered: Please provide student_ids.
-    student_not_found: "Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών."
+    student_not_found: Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
   share:
-    title: "Μάθετε με κώδικα Studio"
-    description: "Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια,
-      εφαρμογές και τέχνη με τη χρήση κώδικα."
-    try_hour_of_code: "Δοκιμάστε μια Ωρα Κώδικα!"
+    title: Μάθετε με κώδικα Studio
+    description: Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια,
+      εφαρμογές και τέχνη με τη χρήση κώδικα.
+    try_hour_of_code: Δοκιμάστε μια Ωρα Κώδικα!
   gender:
-    male: "Αγόρι"
-    female: "Κορίτσι"
-    none: "Προτιμώ να μην απαντήσω"
+    male: Αγόρι
+    female: Κορίτσι
+    none: Προτιμώ να μην απαντήσω
   user_type:
-    student: "φοιτητής/μαθητής"
-    teacher: "Καθηγητής"
+    student: φοιτητής/μαθητής
+    teacher: Καθηγητής
   footer:
     thank_you: Ευχαριστούμε τους <a href="https://code.org/about/donors"> χωρηγούς</a>,
       <a href="https://code.org/about/partners"> συνεργάτες</a>, μας <a href="https://code.org/about/team">
       την εκτεταμένη ομάδα</a>, τους ανθρώπους που δούλεψαν στα βίντεο τους <a href="https://code.org/about/advisors">
       συμβούλους εκπαίδευσης</a> για την υποστήριξή τους στη δημιουργία του κώδικα
       Studio.
-    help_from_html: "Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν
-      να δημιουργήσουμε αυτό το σεμινάριο."
-    help_from_html_old: "Μηχανικών από το Google, Microsoft, Facebook και Twitter
-      βοήθησε στη δημιουργία αυτών των εκπαιδεευτικών υλικών."
+    help_from_html: Μηχανικοί από τη Google, Microsoft, Facebook και Twitter βοήθησαν
+      να δημιουργήσουμε αυτό το σεμινάριο.
+    help_from_html_old: Μηχανικών από το Google, Microsoft, Facebook και Twitter βοήθησε
+      στη δημιουργία αυτών των εκπαιδεευτικών υλικών.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
       />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
       />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
@@ -658,38 +658,38 @@
     code_from_html: Το Code.org χρησιμοποιεί το p5.play, το οποίο υπάρχει στην διεύθυνση
       <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
-    powered_by_aws: "Με την υποστήριξη των Amazon Web Services"
+    powered_by_aws: Με την υποστήριξη των Amazon Web Services
     trademark: "© Code.org, οι %{current_year}. Code.org®, το λογότυπο του κώδικα
       και την ώρα του κώδικα ® αποτελούν εμπορικά σήματα της Code.org."
-    copyright: "Πνευματικά δικαιώματα"
-    more: "Περισσότερα"
-    feedback: "Πες τη γνώμη σου"
-    translate: "Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας"
-    support: "Υποστήριξη"
+    copyright: Πνευματικά δικαιώματα
+    more: Περισσότερα
+    feedback: Πες τη γνώμη σου
+    translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
+    support: Υποστήριξη
     support_url: http://support.code.org/
-    tos_short: "Όροι"
-    tos: "Όροι"
-    privacy: "Πολιτική Aπορρήτου"
-    secure: "Ασφαλής έκδοση"
-    report_abuse: "Αναφορά κατάχρησης"
-    built_on_code_studio: "Φτιαγμένο με το Code Studio"
-    make_my_own_app: "Φτιάξε τη δική σου εφαρμογή"
-    how_it_works: "Πως λειτουργεί"
-    try_hour_of_code: "Δοκιμάστε μια Ωρα Κώδικα!"
+    tos_short: Όροι
+    tos: Όροι
+    privacy: Πολιτική Aπορρήτου
+    secure: Ασφαλής έκδοση
+    report_abuse: Αναφορά κατάχρησης
+    built_on_code_studio: Φτιαγμένο με το Code Studio
+    make_my_own_app: Φτιάξε τη δική σου εφαρμογή
+    how_it_works: Πως λειτουργεί
+    try_hour_of_code: Δοκιμάστε μια Ωρα Κώδικα!
   reference_area:
-    title: "Χρειάζεσε βοήθεια;"
-    subtitle: "Δες αυτά τα βίντεο και τις υποδείξεις"
-    teacher: "Δείτε τη λύση"
+    title: Χρειάζεσε βοήθεια;
+    subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
+    teacher: Δείτε τη λύση
     teacher_no_solution: Stop seeing solution
-    auth_error: "Δεν έχετε εξουσιοδήτηση να δείτε τη λύση."
-    submit: "Ενημερώσετε την τοποθεσία του καλλιτέχνη"
-    direction: "Έναρξη κατεύθυνσης (σε μοίρες)"
+    auth_error: Δεν έχετε εξουσιοδήτηση να δείτε τη λύση.
+    submit: Ενημερώσετε την τοποθεσία του καλλιτέχνη
+    direction: Έναρξη κατεύθυνσης (σε μοίρες)
   video:
-    tab: "Βίντεο."
-    notes: "Δεν υπάρχει βίντεο; Δείξε σημειώσεις."
-    notes_coming_soon: "Σημειώσεις για αυτό το βίντεο έρχονται σύντομα."
-    autoplay_option: "Αυτόματη αναπαραγωγή βίντεο"
-    download: "Κατεβάστε το βίντεο"
+    tab: Βίντεο.
+    notes: Δεν υπάρχει βίντεο; Δείξε σημειώσεις.
+    notes_coming_soon: Σημειώσεις για αυτό το βίντεο έρχονται σύντομα.
+    autoplay_option: Αυτόματη αναπαραγωγή βίντεο
+    download: Κατεβάστε το βίντεο
     show_notes: Show Notes
     show_video: Show Video
   compatibility:
@@ -698,7 +698,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: "Μάθετε περισσότερα"
+      link: Μάθετε περισσότερα
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -711,101 +711,101 @@
       weblab_unsupported_locale_storage: You may experience issues using Web Lab in
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
-  slow_loading: "Αυτό διαρκεί περισσότερο από ότι συνήθως..."
-  try_reloading: "Δοκίμασε να φορτώσεις ξανά τη σελίδα"
-  next_stage: "Τελείωσε! Συνέχισε στο επόμενο στάδιο"
-  download_pdf: "Σχέδιο ανοικτού μαθήματος"
-  lesson_plan: "Σχέδιο μαθήματος"
-  view_lesson_plan: "Δες το Σχέδιο μαθήματος"
-  pdf_download: "Κατεβάστε το PDF"
-  download_coming_soon: "Λήψη δραστηριότητας προσεχώς."
-  video_coming_soon: "Βίντεο Σύντομα κοντά σας!"
-  not_started: "Ο μαθητής δε δοκίμασε αυτό το επίπεδο."
+  slow_loading: Αυτό διαρκεί περισσότερο από ότι συνήθως...
+  try_reloading: Δοκίμασε να φορτώσεις ξανά τη σελίδα
+  next_stage: Τελείωσε! Συνέχισε στο επόμενο στάδιο
+  download_pdf: Σχέδιο ανοικτού μαθήματος
+  lesson_plan: Σχέδιο μαθήματος
+  view_lesson_plan: Δες το Σχέδιο μαθήματος
+  pdf_download: Κατεβάστε το PDF
+  download_coming_soon: Λήψη δραστηριότητας προσεχώς.
+  video_coming_soon: Βίντεο Σύντομα κοντά σας!
+  not_started: Ο μαθητής δε δοκίμασε αυτό το επίπεδο.
   share_code:
-    title: "Κάντε κλικ στο κουμπί 'Εκτέλεση' για να δείτε το πρόγραμμά μου σε δράση"
-    bounce_og_title: "Έλεγξε το  αναπήδηση μου παιχνίδι"
-    flappy_og_title: "Ελέγξτε το  Flappy μου παιχνίδι"
-    studio_og_title: "Έλεγξε το  Παιχνίδι μου Εργαστήριο App"
-    check_out_what_i_made: "Δείτε τι έκανα"
-    og_description: "Έγραψα τον κώδικα μόνος μου , με το Code.org"
-    phone_number_not_allowed: "Μοιάζει με έναν αριθμό τηλεφώνου . Προσπαθήστε να αλλάξετε
-      το κείμενο."
-    address_not_allowed: "Μοιάζει με μια διεύθυνση. Προσπαθήστε να αλλάξετε το κείμενο."
-    email_not_allowed: "Φαίνεται σαν να υπάρχει μια διεύθυνση ηλεκτρονικού ταχυδρομείου
-      . Προσπαθήστε να αλλάξετε το κείμενο."
-    profanity_not_allowed: "Αυτό μοιάζει σαν  βωμολοχία . Προσπαθήστε να αλλάξετε
-      το κείμενο."
+    title: Κάντε κλικ στο κουμπί 'Εκτέλεση' για να δείτε το πρόγραμμά μου σε δράση
+    bounce_og_title: Έλεγξε το  αναπήδηση μου παιχνίδι
+    flappy_og_title: Ελέγξτε το  Flappy μου παιχνίδι
+    studio_og_title: Έλεγξε το  Παιχνίδι μου Εργαστήριο App
+    check_out_what_i_made: Δείτε τι έκανα
+    og_description: Έγραψα τον κώδικα μόνος μου , με το Code.org
+    phone_number_not_allowed: Μοιάζει με έναν αριθμό τηλεφώνου . Προσπαθήστε να αλλάξετε
+      το κείμενο.
+    address_not_allowed: Μοιάζει με μια διεύθυνση. Προσπαθήστε να αλλάξετε το κείμενο.
+    email_not_allowed: Φαίνεται σαν να υπάρχει μια διεύθυνση ηλεκτρονικού ταχυδρομείου
+      . Προσπαθήστε να αλλάξετε το κείμενο.
+    profanity_not_allowed: Αυτό μοιάζει σαν  βωμολοχία . Προσπαθήστε να αλλάξετε το
+      κείμενο.
   builder:
-    created: "Δημιουργήσατε ένα νέο σενάριο."
-    destroyed: "Καταστρέψατε  ένα σενάριο."
-    manage: "Οικοδόμηση Επιπέδων"
-    view: "Προβολή"
-    back: "Πίσω σε σενάρια"
-    success: "Επεξεργαστήκατε επιτυχώς τα μπλοκς."
+    created: Δημιουργήσατε ένα νέο σενάριο.
+    destroyed: Καταστρέψατε  ένα σενάριο.
+    manage: Οικοδόμηση Επιπέδων
+    view: Προβολή
+    back: Πίσω σε σενάρια
+    success: Επεξεργαστήκατε επιτυχώς τα μπλοκς.
     level:
-      create: "Δημιούργησε νέο επίπεδο"
-      current: "Τρέχοντα επίπεδα"
-      unused: "Αχρησιμοποίητα επίπεδα"
+      create: Δημιούργησε νέο επίπεδο
+      current: Τρέχοντα επίπεδα
+      unused: Αχρησιμοποίητα επίπεδα
   upsell:
     applab:
-      title: "Εργαστήριο εφαρμογών"
-      body: "Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού
+      title: Εργαστήριο εφαρμογών
+      body: Το App Lab (Εργαστήριο εφαρμογών) είναι ένα περιβάλλον προγραμματισμού
         όπου μπορείς να φτιάξεις απλές εφαρμογές (apps). Σχεδίασε μια εφαρμογή (app),
         γράψε κώδικα ή JavaScript με πακέτα για να την κάνεις να δουλέψει και μετά
-        μοιράσου την εφαρμογή σου σε δευτερόλεπτα."
-      body_short: "Σχεδίασε μια εφαρμογή, κωδικοποίησέ την με μπλοκς ή JavaScript
-        ώστε να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα."
-      audience: "Ηλικίες 13+"
-      cta: "Μάθε πώς"
+        μοιράσου την εφαρμογή σου σε δευτερόλεπτα.
+      body_short: Σχεδίασε μια εφαρμογή, κωδικοποίησέ την με μπλοκς ή JavaScript ώστε
+        να λειτουργεί, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.
+      audience: Ηλικίες 13+
+      cta: Μάθε πώς
     hoc:
-      title: "Κλασικός λαβύρινθος"
-      body: "Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν
-        ήδη δοκιμάσει."
+      title: Κλασικός λαβύρινθος
+      body: Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν
+        ήδη δοκιμάσει.
     flappy:
       title: Flappy κώδικα
-      body: "θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε
-        το σεμινάριο μας για τον Flappy κώδικα!"
+      body: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε
+        το σεμινάριο μας για τον Flappy κώδικα!
     20-hour:
-      title: "Επιταχυνόμενη πορεία μάθησης"
-      body: "Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού
+      title: Επιταχυνόμενη πορεία μάθησης
+      body: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού
         . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού,
-        αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία."
-      body_short: "Μάθετε τις βασικές αρχές Επιστήμης Πληροφορικής σε μια ταχεία έκδοση
-        των μαθημάτων 2-4."
+        αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
+      body_short: Μάθετε τις βασικές αρχές Επιστήμης Πληροφορικής σε μια ταχεία έκδοση
+        των μαθημάτων 2-4.
     hoc2014:
-      try_new_tutorial: "Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική
-        μορφή"
-      try_frozen: "Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen"
+      try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική
+        μορφή
+      try_frozen: Καλλιτέχνης με την Άννα και την Έλσα, από το Frozen
     gallery:
-      title: "Συλλογή φωτογραφιών"
-      body: "Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται
-        από τους χρήστες μας"
+      title: Συλλογή φωτογραφιών
+      body: Δείτε μια συλλογή απο εφαρμογές  και εικόνες καλλιτεχνών που δημιουργούνται
+        από τους χρήστες μας
     gamelab:
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "Ηλικίες 13+"
-      cta: "Μάθε πώς"
+      audience: Ηλικίες 13+
+      cta: Μάθε πώς
     hoc-encryption:
-      title: "Απλή Κρυπτογράφηση"
+      title: Απλή Κρυπτογράφηση
       body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "Ηλικίες 13+"
-      cta: "Μάθε πώς"
+      audience: Ηλικίες 13+
+      cta: Μάθε πώς
     frozen:
-      title: "Ψυχρά κι ανάποδα"
+      title: Ψυχρά κι ανάποδα
     starwars:
       title: Star Wars
     infinity:
-      title: "αιώνιο εργαστήρι παιχνιδιού"
-      body: "Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι
-        με πρωταγωνιστή τους άπειρους Disney χαρακτήρες."
+      title: αιώνιο εργαστήρι παιχνιδιού
+      body: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία ή ένα παιχνίδι
+        με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
     minecraft:
       title: Minecraft
-      body: "Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα."
+      body: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα.
     minecraft2016:
       title: Minecraft
       body: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -822,16 +822,16 @@
         text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
-      audience: "Ηλικίες 6+"
-      body: "Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε
+      audience: Ηλικίες 6+
+      body: Έχουμε συντάξει έναν κατάλογο ανεξάρτητων μαθημάτων για να τα χρησιμοποιήσετε
         στην τάξη σας. Τώρα μπορείτε να διδάξετε τις βασικές αρχές της επιστήμης των
         υπολογιστών, είτε έχετε υπολογιστές στην τάξη σας ή όχι! Δοκιμάστε να χρησιμοποιήσετε
         αυτά τα μαθήματα σαν αυτόνομα ή σαν συμπληρωματικά μαθήματα για κάθε τμήμα
-        επιστήμης υπολογιστών."
-      body_short: "Αν δεν έχετε υπολογιστές, δοκιμάστε αυτά τα αυτόνομα μαθήματα στην
-        τάξη σας."
+        επιστήμης υπολογιστών.
+      body_short: Αν δεν έχετε υπολογιστές, δοκιμάστε αυτά τα αυτόνομα μαθήματα στην
+        τάξη σας.
     unplugged_conditionals:
-      title: "Έλεγχοι"
+      title: Έλεγχοι
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -840,61 +840,61 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Ages 14+
-      cta: "Μάθε πώς"
+      cta: Μάθε πώς
   gallery:
-    students_drew_these_with_code: "Οι μαθητές τα σχεδίασαν αυτά με κώδικα!"
-    students_made_these_with_code: "Οι μαθητές τα δημιούργησαν αυτά με κώδικα!"
-    picture_count: "Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές σχεδίασαν <b>%{count}</b>
+    students_drew_these_with_code: Οι μαθητές τα σχεδίασαν αυτά με κώδικα!
+    students_made_these_with_code: Οι μαθητές τα δημιούργησαν αυτά με κώδικα!
+    picture_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές σχεδίασαν <b>%{count}</b>
       εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε κλικ επάνω στις εικόνες για
-      να δείτε το κάθε πρόγραμμα σε δράση."
-    activity_count: "Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές δημιούργησαν
+      να δείτε το κάθε πρόγραμμα σε δράση.
+    activity_count: Τις τελευταίες <b>%{days}</b> ημέρες, οι μαθητές δημιούργησαν
       <b>%{count}</b> εφαρμογές και εικόνες γράφοντας τα δικά τους προγράμματα. Κάντε
       κλικ επάνω στις εικόνες και τα στιγμιότυπα για να δείτε το κάθε πρόγραμμα σε
-      δράση."
-    want_to_make_your_own: "Θέλετε να φτιάξετε το δικό σας;"
+      δράση.
+    want_to_make_your_own: Θέλετε να φτιάξετε το δικό σας;
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
-    more: "Επιπλέον &rarr;"
-    caption_by_name_age: "από %{name}, ηλικία %{age}"
+    more: Επιπλέον &rarr;
+    caption_by_name_age: από %{name}, ηλικία %{age}
     caption_time_ago: "%{time_ago} πριν"
-    header: "Συλλογή φωτογραφιών"
-    header_playlab: "Εργαστήριο Παιχνιδιού"
-    header_artist: "Καλλιτέχνης"
-    report_abuse: "Αναφορά κατάχρησης"
+    header: Συλλογή φωτογραφιών
+    header_playlab: Εργαστήριο Παιχνιδιού
+    header_artist: Καλλιτέχνης
+    report_abuse: Αναφορά κατάχρησης
   landing:
-    prerelease: "Αυτό το μάθημα είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>.
+    prerelease: Αυτό το μάθημα είναι σε έκδοση <span class='betatext'>βήτα (beta)</span>.
       Αυτό σημαίνει πως δεν είναι η τελική έκδοση του μαθήματος και υπόκειται σε αναθεώρηση
-      καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις."
-    prerelease_hoc2014: "Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα
+      καθώς λαμβάνεται ανατροφοδότηση και γίνονται βελτιώσεις.
+    prerelease_hoc2014: Αυτές οι οδηγίες είναι σε έκδοση <span class='betatext'>βήτα
       (beta)</span>. Αυτό σημαίνει ότι υπόκεινται σε αναθεώρηση καθώς λαμβάνεται ανατροφοδότηση
-      και γίνονται βελτιώσεις."
-    report_bug: "Αναφορά σφάλματος"
-    support: "Λάβετε βοήθεια"
+      και γίνονται βελτιώσεις.
+    report_bug: Αναφορά σφάλματος
+    support: Λάβετε βοήθεια
     support_url: "//support.code.org"
-    help_resources: "Βοήθεια και πόροι"
+    help_resources: Βοήθεια και πόροι
     help_support: Help and Support
     documentation: Documentation
     tutorials: Tutorials
   multi:
-    wrong_title: "Λανθασμένη απάντηση"
-    wrong_body: "Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
-      ξανά!"
-    correct_title: "Σωστό"
-    correct_body: "Αυτή είναι η σωστή απάντηση."
+    wrong_title: Λανθασμένη απάντηση
+    wrong_body: Η απάντηση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
+      ξανά!
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: "Ευχαριστούμε"
-    wrong_body: "Ευχαριστούμε για την υποβολή της απάντησης."
-    correct_title: "Ευχαριστούμε"
-    correct_body: "Ευχαριστούμε για την υποβολή της απάντησης."
+    wrong_title: Ευχαριστούμε
+    wrong_body: Ευχαριστούμε για την υποβολή της απάντησης.
+    correct_title: Ευχαριστούμε
+    correct_body: Ευχαριστούμε για την υποβολή της απάντησης.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: "Ευχαριστούμε"
-    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
-    correct_title: "Ευχαριστούμε"
-    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
+    wrong_title: Ευχαριστούμε
+    wrong_body: Ευχαριστούμε που υπέβαλες απαντήσεις.
+    correct_title: Ευχαριστούμε
+    correct_body: Ευχαριστούμε που υπέβαλες απαντήσεις.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -902,61 +902,60 @@
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: "Ευχαριστούμε"
-    wrong_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
-    correct_title: "Ευχαριστούμε"
-    correct_body: "Ευχαριστούμε που υπέβαλες απαντήσεις."
+    wrong_title: Ευχαριστούμε
+    wrong_body: Ευχαριστούμε που υπέβαλες απαντήσεις.
+    correct_title: Ευχαριστούμε
+    correct_body: Ευχαριστούμε που υπέβαλες απαντήσεις.
     unsubmit-title: Unsubmit your assessment
-    unsubmit-body: "Αναιρώντας την αξιολόγησή σας θα μηδενίσει την ημερομηνία και
-      ώρα υποβολής. Είστε σίγουροι;"
-    submit-incomplete-title: "Υποβάλετε την αξιολόγησή σας"
-    submit-incomplete-body: "Αφήσατε μερικές ερωτήσεις ημιτελείς. Δεν μπορείτε να
-      διορθώσετε την αξιολόγησή σας μετα την υποβολή. Είσαστε σίγουρος;"
-    submit-complete-title: "Υποβάλετε την αξιολόγησή σας"
-    submit-complete-body: "Δεν μπορείτε να διορθώσετε την αξιολόγησή σας μετα την
-      υποβολή. Είσαστε σίγουρος;"
+    unsubmit-body: Αναιρώντας την αξιολόγησή σας θα μηδενίσει την ημερομηνία και ώρα
+      υποβολής. Είστε σίγουροι;
+    submit-incomplete-title: Υποβάλετε την αξιολόγησή σας
+    submit-incomplete-body: Αφήσατε μερικές ερωτήσεις ημιτελείς. Δεν μπορείτε να διορθώσετε
+      την αξιολόγησή σας μετα την υποβολή. Είσαστε σίγουρος;
+    submit-complete-title: Υποβάλετε την αξιολόγησή σας
+    submit-complete-body: Δεν μπορείτε να διορθώσετε την αξιολόγησή σας μετα την υποβολή.
+      Είσαστε σίγουρος;
   match:
-    wrong_title: "Λανθασμένη λύση"
-    wrong_body: "Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
-      ξανά!"
-    correct_title: "Σωστό"
-    correct_body: "Αυτή είναι η σωστή απάντηση."
+    wrong_title: Λανθασμένη λύση
+    wrong_body: Η λύση που πληκτρολογήσατε δεν είναι σωστή.  Παρακαλώ προσπαθήστε
+      ξανά!
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
   contract_match:
-    wrong_title: "Λανθασμένη απάντηση"
-    badname: "Η σύμβασή σας έχει λανθασμένο όνομα."
-    badname_case: "Τα ονόματα των συναρτήσεων κάνουν διάκριση πεζών-κεφαλαίων. Δοκίμασε
-      να αλλάξεις τα πεζά ή τα κεφαλαία του ονόματος της σύμβασή σου."
-    badrange: "Η σύμβασή σου έχει λάθος περιοχή."
-    baddomainsize: "Η σύμβασή σου δεν έχει το σωστό πλήθος αντικειμένων στον τομέα."
-    baddomainname: "Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο
-      όνομα."
-    baddomaintype: "Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο
-      τύπο ή είναι σε λάθος σειρά."
+    wrong_title: Λανθασμένη απάντηση
+    badname: Η σύμβασή σας έχει λανθασμένο όνομα.
+    badname_case: Τα ονόματα των συναρτήσεων κάνουν διάκριση πεζών-κεφαλαίων. Δοκίμασε
+      να αλλάξεις τα πεζά ή τα κεφαλαία του ονόματος της σύμβασή σου.
+    badrange: Η σύμβασή σου έχει λάθος περιοχή.
+    baddomainsize: Η σύμβασή σου δεν έχει το σωστό πλήθος αντικειμένων στον τομέα.
+    baddomainname: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο όνομα.
+    baddomaintype: Ένα ή περισσότερα αντικείμενα στον τομέα σου έχουν λανθασμένο τύπο
+      ή είναι σε λάθος σειρά.
   text_match:
-    placeholder: "Εισάγετε την απάντησή σας εδώ"
-    open_response_title: "Ευχαριστούμε"
-    open_response_body: "Ευχαριστούμε για την απάντησή σου!"
-    correct_title: "Σωστό"
-    correct_body: "Αυτή είναι η σωστή απάντηση."
+    placeholder: Εισάγετε την απάντησή σας εδώ
+    open_response_title: Ευχαριστούμε
+    open_response_body: Ευχαριστούμε για την απάντησή σου!
+    correct_title: Σωστό
+    correct_body: Αυτή είναι η σωστή απάντηση.
   dialog:
     ok: OΚ
-    startover_title: "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;"
-    startover_body: "Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει
-      όλα τα δεδομένα που προσθέσατε ή αλλάξατε."
-    startover_ok: "Ξεκινήστε από την αρχή"
-    startover_cancel: "Άκυρο"
+    startover_title: Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;
+    startover_body: Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει
+      όλα τα δεδομένα που προσθέσατε ή αλλάξατε.
+    startover_ok: Ξεκινήστε από την αρχή
+    startover_cancel: Άκυρο
   time:
     hour: 1 ώρα
-    day: "ημέρα"
-    week: "εβδομάδα"
+    day: ημέρα
+    week: εβδομάδα
   age_interstitial:
-    age: "Η ηλικία σου"
-    header: "Ενημέρωση Πληροφοριών Λογαριασμού"
-    message: "Είμαστε στη διαδικασία της ενημέρωσης της εμπειρίας μας για να σας παρέχουμε
+    age: Η ηλικία σου
+    header: Ενημέρωση Πληροφοριών Λογαριασμού
+    message: Είμαστε στη διαδικασία της ενημέρωσης της εμπειρίας μας για να σας παρέχουμε
       ακόμη ισχυρότερη προστασία προσωπικών δεδομένων. Για να κάνουμε αυτό, χρειαζόμαστε
       τους υπάρχοντες χρήστες να εισαγάγουν την ηλικία τους εδώ. <br/>Όπως πάντα,
       η code.org ποτέ δεν θα νοικιάσει, πωλήσει η μοιράσει αυτή την πληροφορία με
-      τρίτους."
+      τρίτους.
     sign_out: Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε να <a href="%{url}">αποσυνδεθείτε</a>.
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
@@ -972,13 +971,13 @@
       asked to confirm that your school has parental consent for the collection of
       the student’s personal information for the use and benefit of the school, including
       educational programs such as Code Studio.
-    tos: "Όροι"
-    privacy: "Πολιτική Aπορρήτου"
+    tos: Όροι
+    privacy: Πολιτική Aπορρήτου
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
-    print: "Εκτύπωσε"
+    print: Εκτύπωσε
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -991,7 +990,7 @@
     message: Please enter your school information below.
     message_with_suggestion: Please verify that the following information is correct,
       or update as necessary.
-    save: "Αποθήκευση"
+    save: Αποθήκευση
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
       science'
@@ -1003,50 +1002,50 @@
     - asian: Asian
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
-    - other: "Άλλα"
+    - other: Άλλα
     - opt_out: Prefer not to say
-    submit: "Υποβολή"
-    decline: "Κλείσιμο"
+    submit: Υποβολή
+    decline: Κλείσιμο
   zendesk_too_young_message: Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε
     στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a>
     χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει
     μαζί μας.
   progress:
-    not_started: "δεν έχει ξεκινήσει"
-    in_progress: "σε εξέλιξη"
-    completed_too_many_blocks: "ολοκληρώθηκε, πάρα πολλά μπλοκ"
-    completed_perfect: "ολοκληρώθηκε, τέλειο"
-    furthest_level_attempted: "τελευταίο επίπεδο επιχειρήθηκε"
-    assessment: "αξιολόγηση"
-    submitted: "Υποβλήθηκε"
+    not_started: δεν έχει ξεκινήσει
+    in_progress: σε εξέλιξη
+    completed_too_many_blocks: ολοκληρώθηκε, πάρα πολλά μπλοκ
+    completed_perfect: ολοκληρώθηκε, τέλειο
+    furthest_level_attempted: τελευταίο επίπεδο επιχειρήθηκε
+    assessment: αξιολόγηση
+    submitted: Υποβλήθηκε
   studio:
-    courses_working_on: "Μαθήματα τα οποία παρακολουθείτε"
-    completed_courses: "Μαθήματα που ολοκληρώσατε"
-    all_courses: "Όλα τα μαθήματα"
+    courses_working_on: Μαθήματα τα οποία παρακολουθείτε
+    completed_courses: Μαθήματα που ολοκληρώσατε
+    all_courses: Όλα τα μαθήματα
   project:
-    projects: "Έργα"
-    create: "Δημιουργία Έργου"
-    create_a_project: "Δημιουργία ενός νέου έργου:"
-    new: "Δημιουργία Νέου"
-    rename: "Μετονομασία"
-    save: "Αποθήκευση"
-    delete: "Διαγραφή"
-    import: "Εισαγωγή"
-    share_link_import_bad_link_header: "Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται"
-    share_link_import_bad_link_body: "Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης
+    projects: Έργα
+    create: Δημιουργία Έργου
+    create_a_project: 'Δημιουργία ενός νέου έργου:'
+    new: Δημιουργία Νέου
+    rename: Μετονομασία
+    save: Αποθήκευση
+    delete: Διαγραφή
+    import: Εισαγωγή
+    share_link_import_bad_link_header: Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται
+    share_link_import_bad_link_body: 'Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης
       κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent
-      και ότι αντέγραψες ολόκληρη τη σύνδεση."
-    share_link_import_error_header: "Κάτι δεν πήγε καλά."
-    share_link_import_error_body: "Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της
-      σύνδεσης κοινής χρήσης. Δοκίμασε ξανά."
-    exit: "Επιστροφή στο Μάθημα"
-    my_projects: "Τα Έργα μου"
-    project_gallery: "Έργα"
+      και ότι αντέγραψες ολόκληρη τη σύνδεση.'
+    share_link_import_error_header: Κάτι δεν πήγε καλά.
+    share_link_import_error_body: Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της
+      σύνδεσης κοινής χρήσης. Δοκίμασε ξανά.
+    exit: Επιστροφή στο Μάθημα
+    my_projects: Τα Έργα μου
+    project_gallery: Έργα
     publish: Publish
     unpublish: Unpublish
-    share: "Μοιράσου"
-    share_title: "Μοιράσου το έργο σου"
-    share_copy_link: "Αντιγραφή του συνδέσμου:"
+    share: Μοιράσου
+    share_title: Μοιράσου το έργο σου
+    share_copy_link: 'Αντιγραφή του συνδέσμου:'
     share_embed_description: You can paste the embed code into an HTML page to display
       the project on a webpage.
     share_u13_warning: Ask your teacher before sharing. Only share with others in
@@ -1055,70 +1054,70 @@
     advanced_share: Show advanced options
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
-    close: "Κλείσιμο"
-    more: "Περισσότερα"
-    name: "Όνομα"
-    updated: "Ενημερωμένο"
-    project_type: "Τύπος Έργου"
-    help_text: "Κάνε κλικ στο <strong>Φτιάξε μία Εφαρμογή</strong> ή στο <strong>Σχεδίασε
+    close: Κλείσιμο
+    more: Περισσότερα
+    name: Όνομα
+    updated: Ενημερωμένο
+    project_type: Τύπος Έργου
+    help_text: Κάνε κλικ στο <strong>Φτιάξε μία Εφαρμογή</strong> ή στο <strong>Σχεδίασε
       Κάτι</strong> παρακάτω να δημιουργήσεις ένα νέο έργο Play Lab ή Καλλιτέχνης!<br/>
-      Μπορείς να επιστρέψεις και να εργαστείς στα έργα σου οποιαδήποτε στιγμή."
-    need_help: "Χρειάζεστε βοήθεια για να ξεκινήσετε?"
+      Μπορείς να επιστρέψεις και να εργαστείς στα έργα σου οποιαδήποτε στιγμή.
+    need_help: Χρειάζεστε βοήθεια για να ξεκινήσετε?
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
-    really_delete: "Διαγραφή;"
-    delete_yes: "Ναι"
-    delete_no: "Όχι"
-    saved: "Αποθηκευμένο"
-    not_saved: "Δεν έχει αποθηκευτεί"
-    cancel: "Άκυρο"
-    delete_confirm_title: "Είστε σίγουροι οτι θέλετε να διαγράψετε αυτό το έργο?"
-    delete_confirm_text: "Η διαγραφή του έργου σου θα το διαγράψει για πάντα από τον
+    really_delete: Διαγραφή;
+    delete_yes: Ναι
+    delete_no: Όχι
+    saved: Αποθηκευμένο
+    not_saved: Δεν έχει αποθηκευτεί
+    cancel: Άκυρο
+    delete_confirm_title: Είστε σίγουροι οτι θέλετε να διαγράψετε αυτό το έργο?
+    delete_confirm_text: Η διαγραφή του έργου σου θα το διαγράψει για πάντα από τον
       κατάλογο Τα Έργα Μου. Οποιοσδήποτε με τον οποίο έχεις μοιραστεί τον σύνδεσμό
-      του δε θα μπορεί να δει το έργο σου."
-    view_all: "Δείξε τα Έργα μου"
-    remix: "Μιξάρισμα"
-    click_to_remix: "Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!"
-    edit_project: "Επεξεργαστείτε το έργο"
+      του δε θα μπορεί να δει το έργο σου.
+    view_all: Δείξε τα Έργα μου
+    remix: Μιξάρισμα
+    click_to_remix: Κάνε κλικ στο 'Μιξάρισμα' για να ξεκινήσεις τη δική σου έκδοση!
+    edit_project: Επεξεργαστείτε το έργο
     sharing_disabled: Sorry, this project is not available for sharing. If this is
       your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
       in</a> to your account to view the project.
     abuse:
-      tos: "Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών
+      tos: Το έργο αυτό έχει αναφερθεί για την παραβίαση των όρων παροχής υπηρεσιών
         του Code.org <a href='http://code.org/tos'></a> και δεν μπορεί να μοιραστεί
-        με άλλους."
+        με άλλους.
       policy_violation: This project contains information that cannot be shared with
         others. Please contact the app owner to fix the contents of their app.
-      contact_us: "Αν νομίζετε ότι αυτό να είναι ένα λάθος, παρακαλώ <a href='https://code.org/contact'>
-        επικοινωνήστε μαζί μας.</a>"
-      go_to_code_studio: "Πηγαίνετε στο Code Studio"
+      contact_us: Αν νομίζετε ότι αυτό να είναι ένα λάθος, παρακαλώ <a href='https://code.org/contact'>
+        επικοινωνήστε μαζί μας.</a>
+      go_to_code_studio: Πηγαίνετε στο Code Studio
       report_abuse_form:
-        intro: "Αν έχετε αντιμετωπίσει προσβλητικό περιεχόμενο, απειλές, cyberbullying,
+        intro: Αν έχετε αντιμετωπίσει προσβλητικό περιεχόμενο, απειλές, cyberbullying,
           παρενόχληση, ή ένα παράδειγμα της παραβίασης πνευματικών δικαιωμάτων για
           το περιεχόμενο που έχετε στην κατοχή σας ενώ χρησιμοποιώντας apps ενσωματωμένο
           σε κώδικα Studio, παρακαλούμε συμπληρώστε την παρακάτω φόρμα. Θα λάβει έκθεσή
-          σας πολύ σοβαρά, διεξαγάγω, και θα λάβει τα κατάλληλα μέτρα."
+          σας πολύ σοβαρά, διεξαγάγω, και θα λάβει τα κατάλληλα μέτρα.
         validation:
-          email: "Καλείσθε να παράσχετε μια διεύθυνση ηλεκτρονικού ταχυδρομείου"
-          age: "Προσδιορίστε την ηλικία"
-          abuse_type: "Σας παρακαλούμε να απαντήσετε πώς αυτό το περιεχόμενο παραβιάζει
-            τους όρους παροχής υπηρεσιών"
-          abuse_detail: "Παραθέστε λεπτομέρειες σχετικά με το περιεχόμενο που πρόκειται
-            να αναφέρετε"
+          email: Καλείσθε να παράσχετε μια διεύθυνση ηλεκτρονικού ταχυδρομείου
+          age: Προσδιορίστε την ηλικία
+          abuse_type: Σας παρακαλούμε να απαντήσετε πώς αυτό το περιεχόμενο παραβιάζει
+            τους όρους παροχής υπηρεσιών
+          abuse_detail: Παραθέστε λεπτομέρειες σχετικά με το περιεχόμενο που πρόκειται
+            να αναφέρετε
         abusive_url: URL του περιεχομένου που αναφέρθηκαν
         abuse_type:
-          question: "Πόσο αυτό το περιεχόμενο παραβιάζει το %{link_start}Terms της
-            Service%{link_end};"
-          harassment: "Ψηφιακού εκφοβισμού, απειλές, παρενόχληση"
-          offensive: "Προσβλητικό περιεχόμενο"
-          infringement: "Παραβίαση πνευματικών δικαιωμάτων"
-          other: "Άλλα"
-        detail: "Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το
-          περιεχόμενο που πρόκειται να αναφέρετε."
-        acknowledge: "Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε
+          question: Πόσο αυτό το περιεχόμενο παραβιάζει το %{link_start}Terms της
+            Service%{link_end};
+          harassment: Ψηφιακού εκφοβισμού, απειλές, παρενόχληση
+          offensive: Προσβλητικό περιεχόμενο
+          infringement: Παραβίαση πνευματικών δικαιωμάτων
+          other: Άλλα
+        detail: Καλείσθε να παράσχετε τόσο λεπτομερώς όσο το δυνατόν σχετικά με το
+          περιεχόμενο που πρόκειται να αναφέρετε.
+        acknowledge: Υποβάλλοντας αυτές τις πληροφορίες, αναγνωρίζετε ότι θα τη μεταχειριστούμε
           σύμφωνα με τους όρους της Policy%{link_end} το %{link_start_privacy}Privacy
-          και το %{link_start_tos}Terms του Service%{link_end}"
+          και το %{link_start_tos}Terms του Service%{link_end}
   peer_review:
     accepted:
       name: Accepted
@@ -1144,7 +1143,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Επισκόπηση"
+    required: Επισκόπηση
     content: Content
     practice: Teacher Practices
     peer_review: Peer Review

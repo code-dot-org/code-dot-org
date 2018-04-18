@@ -74,13 +74,13 @@
   "penDown": "kalemi indir",
   "penTooltip": "Çizimi başlatmak veya durdurmak için kalemi kaldırır ya da indirir.",
   "penUp": "Kalemi kaldır",
+  "pointTo": "point to",
   "pixels": "piksel",
   "reinfFeedbackMsg": "Çiziminiz burada! Çiziminiz üzerinde çalışmaya devam edin veya sonraki bulmacaya geçin.",
   "setAlpha": "alfa değerini ayarla",
   "setCharacter": "karakteri {character} olarak ayarla",
   "setColour": "renk ayarla",
   "setPattern": "deseni ayarla",
-  "setStickerSize": "Set sticker size",
   "setWidth": "genişliği ayarla",
   "shareDrawing": "Kendi çiziminizi paylaşın:",
   "showMe": "Göster",
@@ -94,5 +94,6 @@
   "turnTooltip": "Sanatçıyı sağa ya da sola belirtilen derecede döndürür.",
   "turtleVisibilityTooltip": "Sanatçıyı, görünür ya da görünmez yapar.",
   "widthTooltip": "Kalemin kalınlığını değiştirir.",
+  "withSize": "with size",
   "wrongColour": "Resiminin rengi yanlış.  Bu bulmaca için %1 olması gerekir."
 }

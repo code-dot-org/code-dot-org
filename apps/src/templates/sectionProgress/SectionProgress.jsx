@@ -4,18 +4,43 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
+import SummaryViewLegend from './SummaryViewLegend';
+import SmallChevronLink from '../SmallChevronLink';
+import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
+import i18n from '@cdo/locale';
+import {h3Style} from "../../lib/ui/Headings";
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setScriptId,
+  setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
   studentLevelProgressPropType,
 } from './sectionProgressRedux';
+
+const styles = {
+  heading: {
+    marginBottom: 0,
+  },
+  scriptSelectorContainer: {
+    float: 'left',
+    marginRight: 20,
+  },
+  viewToggleContainer: {
+    float: 'left',
+    marginTop: 24,
+  },
+  viewCourseLink: {
+    float: 'right',
+    marginTop: 10
+  }
+};
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -26,15 +51,16 @@ import {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.string.isRequired,
+    scriptId: PropTypes.number.isRequired,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
     studentLevelProgress: studentLevelProgressPropType,
-
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
+    setLessonOfInterest: PropTypes.func.isRequired,
+    isLoadingProgress: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -43,7 +69,12 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
+    // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
+  };
+
+  onChangeLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
   };
 
   render() {
@@ -53,37 +84,73 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress
+      studentLevelProgress,
+      isLoadingProgress
     } = this.props;
 
-    const levelDataInitialized = scriptData && studentLevelProgress;
+    const levelDataInitialized = scriptData && !isLoadingProgress;
+    const linkToOverview = scriptData ? scriptData.path : null;
+    const lessons = scriptData ? scriptData.stages : [];
 
     return (
       <div>
-        <ScriptSelector
-          validScripts={validScripts}
-          scriptId={scriptId}
-          onChange={this.onChangeScript}
-        />
-        <SectionProgressToggle />
-        {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
-        {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-          <div>
-            <VirtualizedSummaryView
-              section={section}
-              scriptData={scriptData}
+        <div>
+          <div style={styles.scriptSelectorContainer}>
+            <div style={{...h3Style, ...styles.heading}}>
+              {i18n.selectACourse()}
+            </div>
+            <ScriptSelector
+              validScripts={validScripts}
+              scriptId={scriptId}
+              onChange={this.onChangeScript}
             />
+            {lessons.length !== 0 &&
+              <LessonSelector
+                lessons={lessons}
+                onChange={this.onChangeLevel}
+              />
+            }
           </div>
-        }
-        {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-          <div>
-            <VirtualizedDetailView
-              section={section}
-              scriptData={scriptData}
-              studentLevelProgress={studentLevelProgress}
-            />
+          <div style={styles.viewToggleContainer}>
+            <SectionProgressToggle />
           </div>
-        }
+          <div style={styles.viewCourseLink}>
+            {linkToOverview &&
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            }
+          </div>
+        </div>
+        <div style={{clear: 'both'}}>
+          {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
+          {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
+            <div>
+              <VirtualizedSummaryView
+                section={section}
+                scriptData={scriptData}
+                studentLevelProgress={studentLevelProgress}
+              />
+              <SummaryViewLegend
+                showCSFProgressBox={true}
+              />
+            </div>
+          }
+          {(levelDataInitialized && currentView === ViewType.DETAIL) &&
+            <div>
+              <VirtualizedDetailView
+                section={section}
+                scriptData={scriptData}
+                studentLevelProgress={studentLevelProgress}
+              />
+              <ProgressLegend
+                excludeCsfColumn={true}
+              />
+            </div>
+          }
+        </div>
       </div>
     );
   }
@@ -98,6 +165,7 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {
     dispatch(loadScript(scriptId));
@@ -105,4 +173,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(SectionProgress);

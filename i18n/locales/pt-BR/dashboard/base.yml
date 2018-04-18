@@ -171,7 +171,7 @@ pt-BR:
       email: 'Endereço de email'
       submit: 'Enviar'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Por favor, preencha o CAPTCHA para redefinir sua senha.'
       invalid_email: 'Parece que você se inscreveu com um endereço de e-mail inválido. Envie um e-mail para support@code.org para receber um link de recuperação de senha.'
     change_form:
       title: 'Alterar senha'
@@ -488,7 +488,7 @@ pt-BR:
     title: 'Precisa de ajuda?'
     subtitle: 'Veja os vídeos e as dicas'
     teacher: 'Ver a solução'
-    teacher_no_solution: 'Stop seeing solution'
+    teacher_no_solution: 'Não mostrar a solução'
     auth_error: 'Você não está autorizado a ver a solução.'
     submit: 'Atualize a Localização do Artista'
     direction: 'Direção de início (em graus)'
@@ -498,8 +498,8 @@ pt-BR:
     notes_coming_soon: 'As notas deste vídeo estarão disponíveis em breve.'
     autoplay_option: 'Vídeos com reprodução automática'
     download: 'Baixar Vídeo'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
+    show_notes: 'Mostrar as notas'
+    show_video: 'Mostrar o vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
@@ -605,10 +605,10 @@ pt-BR:
       body_short: "Se não tiver computadores, teste essas lições off-line em sua sala de aula."
     unplugged_conditionals:
       title: "Condições"
-      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+      body: "Saiba mais sobre algoritmos e condicionais nessa atividade \"unplugged\", utilizando um baralho de cartas."
     widgets:
       title: "Widgets"
-      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      body: "Os alunos podem colocar as mãos na massa para explorar os conceitos do nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas digitais. Eles podem usar os \"widgets\" como bem entenderem ou criar uma lição envolvendo um único conceito para suas aulas."
       audience: "Maiores de 14 anos"
       cta: "Saiba como"
   gallery:
@@ -655,7 +655,7 @@ pt-BR:
     correct_title: "Obrigado"
     correct_body: "Obrigado por enviar respostas."
     hide_survey_last_answer: "Esta pesquisa é anônima. Acesse o painel do professor para ver os resultados gerais. Observe que os resultados só poderão ser vistos se, no mínimo, cinco alunos enviarem suas respostas."
-    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
+    survey_submission_thankyou: "Obrigado por responder a esta pesquisa! Suas respostas permanecerão anônimas. Seu professor será capaz de ver respostas da classe como um todo, mas sem os nomes individualmente."
   level_group-submittable:
     wrong_title: "Obrigado"
     wrong_body: "Obrigado por enviar respostas."
@@ -714,9 +714,9 @@ pt-BR:
     reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
     review_terms: "Ver os termos atualizados"
   school_info_interstitial:
-    title: "We want to bring Computer Science to every student - help us track our progress!"
-    message: "Please enter your school information below."
-    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    title: "Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos a acompanhar o nosso progresso!"
+    message: "Por favor, digite abaixo as informações da sua escola."
+    message_with_suggestion: "Por favor, verifique se a informação a seguir está correta, ou atualize-a, caso necessário."
     save: "Salvar"
   race_interstitial:
     title: "Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade na ciência da computação"
@@ -778,7 +778,7 @@ pt-BR:
     share_u13_warning: "Pergunte ao seu professor antes de compartilhar. Compartilhe apenas com pessoas da sua escola."
     embed: "Incorporar"
     advanced_share: "Mostrar opções avançadas"
-    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
+    no_projects: "Você não tem projetos atualmente. Para iniciar um projeto, clique em um dos botões acima."
     close: "Fechar"
     more: "Mais"
     name: "Nome"
@@ -851,37 +851,37 @@ pt-BR:
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Curso Principal'
-    extra_course_content: 'Extra Course Content'
+    extra_course_content: 'Conteúdo do curso extra'
     csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
+    csf_e_2: 'Conteúdo do curso E'
     csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Programming with Hardware'
-    csd6_2: 'Chapter 2: Building Physical Prototypes'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csf_f_2: 'Conteúdo do curso F'
+    csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
+    csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
+    csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
+    csd2_2: 'Capítulo 2: Estilo e CSS'
+    csd3_1: 'Capítulo 1: Imagens e Amimações'
+    csd3_2: 'Capítulo 2: Construindo Jogos'
+    csd4_1: 'Capítulo 1: Desenho orientado ao usuário'
+    csd4_2: 'Capítulo 1: Prototipando o App'
+    csd5_1: 'Capítulo 1: Representando Informação'
+    csd5_2: 'Capítulo 2: Resolvendo Problemas de Informações'
+    csd6_1: 'Capítulo 1: Programando com Hardware'
+    csd6_2: 'Capítulo 2: Construindo protótipos físicos'
+    csp1_1: 'Capítulo 1: Representando e Transmitindo Informação'
+    csp1_2: 'Capítulo 2: Inventando a Internet'
+    csp2_1: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
+    csp2_2: 'Capítulo 2: Manipulando e Visualizando Dados'
+    csp3_1: 'Capítulo 1: Programando Linguagens e Algoritmos'
+    csp4_1: 'Capítulo 1: O mundo do "Big Data" e criptografia'
+    csp5_1: 'Capítulo 1: Programação orientada a eventos'
     csp5_2: 'Chapter 2: Programming with Data Structures'
     cspSurvey: 'Questionário'
     cspAssessment: 'Chapter Assessment'
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: 'Reflection Prompts'
+    dlp: 'Prompts de reflexão'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.
@@ -952,7 +952,7 @@ pt-BR:
   locked_stage: 'O conteúdo desta fase não pode ser visto, pois ela está bloqueada no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar com ela ou quando for revisar suas respostas.'
   hidden_stage: "Seu professor não esperava você por aqui. Pergunte a ele em que aula você deveria estar."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
-  return_unit_overview: 'Go to unit overview'
+  return_unit_overview: 'Ir para visão geral da unidade'
   return_course_overview: 'Ir para visão geral da unidade'
   view_all_units: 'Visualizar todas unidades'
   pd:

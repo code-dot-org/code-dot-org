@@ -2,30 +2,30 @@
   data:
     unplugged:
       Unplug1:
-        title: "היכרות למדעי המחשב"
-        desc: "בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים
+        title: היכרות למדעי המחשב
+        desc: בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים
           יקבלו הזדמנות להתנסות בתפקיד של מהנדס תכנה. בסוף הפעילות, כל תמיד יחזור
           עם רשימת התוכן הנלמד בשיעור. אין צורך להבהל מללמד את הילדים את אוצר המילים
           הנדרש לשיעורים הבאים, פעילות זו יכולה להיות מהנה וקלילה, ותתרום הרבה יותר
-          מלחכות להזדמנויות אחרות."
+          מלחכות להזדמנויות אחרות.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "חשיבה חישובית"
-        desc: "ללא שום דבר מלבד נייר וטושים, התלמידים ילמדו ארבעת השלבים של חשיבה
-          חישובית. לאחר הקדמה קצרה, סטודנטים צריכים להתחלק לקבוצות היכן הם יהיו חייבים
-          ליצור הנחיות לסטודנטים אחרים לצייר מפלצת מסוים (מתוך קטלוג של מפלצות שנבחרו
-          מראש). הפעילות כולה חייבת להיות מפורקת, ולאחר מכן צוותי לנתח את כל המפלצות
-          בקטלוג לחידושים, מופשט פרטים שונים מפני המפלצות ולאחר מכן משתמשים במידע
-          זה כדי ליצור אלגוריתם (הכוונה) עבור קבוצה אחרת לצייר מפלצת מסוימים. צוותי
-          יהיה ואז מתג עם עוד קבוצה והאלגוריתמים לצייר את המפלצת בהתבסס על מה מצביע
-          על אלגוריתם זה. ? האם הציור מיועד לצוות המקורי?"
+        title: חשיבה חישובית
+        desc: ללא שום דבר מלבד נייר וטושים, התלמידים ילמדו ארבעת השלבים של חשיבה חישובית.
+          לאחר הקדמה קצרה, סטודנטים צריכים להתחלק לקבוצות היכן הם יהיו חייבים ליצור
+          הנחיות לסטודנטים אחרים לצייר מפלצת מסוים (מתוך קטלוג של מפלצות שנבחרו מראש).
+          הפעילות כולה חייבת להיות מפורקת, ולאחר מכן צוותי לנתח את כל המפלצות בקטלוג
+          לחידושים, מופשט פרטים שונים מפני המפלצות ולאחר מכן משתמשים במידע זה כדי
+          ליצור אלגוריתם (הכוונה) עבור קבוצה אחרת לצייר מפלצת מסוימים. צוותי יהיה
+          ואז מתג עם עוד קבוצה והאלגוריתמים לצייר את המפלצת בהתבסס על מה מצביע על
+          אלגוריתם זה. ? האם הציור מיועד לצוות המקורי?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "תכנות לנייר משבצות"
+        title: תכנות לנייר משבצות
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -35,7 +35,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "אלגוריתמים"
+        title: אלגוריתמים
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -45,7 +45,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "פונקציות"
+        title: פונקציות
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -60,7 +60,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "תנאים"
+        title: תנאים
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -68,7 +68,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "כתיבת שיר"
+        title: כתיבת שיר
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -78,7 +78,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "הפשטה"
+        title: הפשטה
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -86,7 +86,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "הרץ פעולה בשנית"
+        title: הרץ פעולה בשנית
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -94,14 +94,14 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "האינטרנט"
+        title: האינטרנט
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: "אריזה"
+        title: אריזה
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -110,7 +110,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "מפות שמחות"
+        title: מפות שמחות
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       MoveIt:
@@ -133,18 +133,18 @@
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
       RelayProgramming:
-        title: "הרץ פעולה בשנית"
+        title: הרץ פעולה בשנית
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       Conditionals:
-        title: "תנאים"
+        title: תנאים
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
       BigEvent:
-        title: "האירוע הגדול"
+        title: האירוע הגדול
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -154,7 +154,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: "תכנות לנייר משבצות"
+        title: תכנות לנייר משבצות
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       PaperPlanes:
@@ -172,7 +172,7 @@
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "חשיבה חישובית"
+        title: חשיבה חישובית
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -205,7 +205,7 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: "טנגרם אלגוריתמים"
+        title: טנגרם אלגוריתמים
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -247,41 +247,41 @@
         title: Contracts
         desc: Contracts unplugged lesson description
       DesignRecipe:
-        title: "עיצוב המתכון"
+        title: עיצוב המתכון
         desc: Design Recipe lesson description
       Booleans:
-        title: "בוליאנים ולוגיקה"
+        title: בוליאנים ולוגיקה
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
         title: Collision Detection
-        desc: "קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור
+        desc: קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור
           זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק
           בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק)
-          נוגעות."
+          נוגעות.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
-        title: "פעילות לא מחוברת"
+        title: פעילות לא מחוברת
         desc: Today you will learn about what to do if someone is being mean online.
       deeper learning description:
         title: ''
@@ -292,7 +292,7 @@
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       courseA_unplugged_happyMaps:
-        title: "מפות שמחות"
+        title: מפות שמחות
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       courseA_unplugged_goingPlacesSafely:
@@ -300,7 +300,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       courseABC_unplugged_bigEvent:
-        title: "האירוע הגדול"
+        title: האירוע הגדול
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -330,17 +330,17 @@
           of their name. Students learn that data can be represented and stored in
           more than one way.
       courseD_unplugged_graphPaperProgramming:
-        title: "תכנות לנייר משבצות"
+        title: תכנות לנייר משבצות
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: "הרץ פעולה בשנית"
+        title: הרץ פעולה בשנית
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       courseD_unplugged_conditionalsCards:
-        title: "התניות עם כרטיסים"
+        title: התניות עם כרטיסים
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -374,7 +374,7 @@
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseF_unplugged_tangrams:
-        title: "טנגרם אלגוריתמים"
+        title: טנגרם אלגוריתמים
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -476,7 +476,7 @@
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       UnplugHappyMaps_2018:
-        title: "מפות שמחות"
+        title: מפות שמחות
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       GoingPlacesSafely_2018:
@@ -487,8 +487,52 @@
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       BigEvent_2018:
-        title: "האירוע הגדול"
+        title: האירוע הגדול
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
+      GraphPaperProgramming_2018:
+        title: תכנות לנייר משבצות
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: פעילות לא מחוברת
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: פעילות לא מחוברת
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: תנאים
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      DigitalFootprint_2018:
+        title: Your Digital Footprint
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: Binary Images
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Real-life Algorithms: Paper Planes'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
+          making paper airplanes. This lesson also focuses on the bigger picture of
+          computer science and how algorithms play an essential part.
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: This lesson introduces the programming concept of loops (repeated instructions)
+          through a dance activity. Students will learn simple choreography, then
+          be instructed to repeat it.
+      BinaryBracelets_2018:
+        title: Binary Bracelets
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      MoveItMoveIt_2018:
+        title: זוזו, זוזו
+        desc: ''

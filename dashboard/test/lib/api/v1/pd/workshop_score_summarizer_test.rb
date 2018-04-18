@@ -8,6 +8,14 @@ module Api::V1::Pd
     TEST_FACILITATORS = ["Curly", "Larry", "Moe"]
 
     setup do
+      @facilitators = TEST_FACILITATORS.map do |facilitator_name|
+        create(:facilitator, name: facilitator_name)
+      end
+
+      @workshop = create :pd_workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
+      create(:pd_enrollment, workshop: @workshop)
+      @workshops = Pd::Workshop.where(id: @workshop.id)
+
       # One teacher loved the workshop - they gave the best possible answer to
       # each question
       @happy_teacher_question_responses = {}
@@ -19,6 +27,8 @@ module Api::V1::Pd
       ].flatten.each do |question|
         @happy_teacher_question_responses[question] = get_best_response_for_question(question, PdWorkshopSurvey::OPTIONS)
       end
+      @happy_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
+      @happy_teacher_question_responses['workshop_id_i'] = @workshop.id
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @happy_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
@@ -41,6 +51,8 @@ module Api::V1::Pd
       ].flatten.each do |question|
         @angry_teacher_question_responses[question] = get_worst_response_for_question(question, PdWorkshopSurvey::OPTIONS)
       end
+      @angry_teacher_question_responses['who_facilitated_ss'] = TEST_FACILITATORS
+      @angry_teacher_question_responses['workshop_id_i'] = @workshop.id
 
       OVERALL_SUCCESS_QUESTIONS.each do |question|
         @angry_teacher_question_responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.first
@@ -61,16 +73,8 @@ module Api::V1::Pd
         }.to_json
       }
 
-      @facilitators = TEST_FACILITATORS.map do |facilitator_name|
-        create(:facilitator, name: facilitator_name)
-      end
-
       @pegasus_db_stub = {}
       PEGASUS_DB.stubs(:[]).returns(@pegasus_db_stub)
-
-      @workshop = create :pd_workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
-      create(:pd_enrollment, workshop: @workshop)
-      @workshops = [@workshop]
 
       AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
 
@@ -89,7 +93,8 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Curly' => 'Extremely comfortable'},
           how_often_taught_new_things_s: {'Curly' => 'All the time'},
           things_facilitator_did_well_s: {'Curly' => 'Curly did everything great'},
-          things_facilitator_could_improve_s: {'Curly' => 'Curly was perfect'}
+          things_facilitator_could_improve_s: {'Curly' => 'Curly was perfect'},
+          who_facilitated_ss: ['Curly']
         }
       )
 
@@ -101,7 +106,8 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Curly' => 'Extremely comfortable', 'Larry' => 'Quite comfortable'},
           how_often_taught_new_things_s: {'Curly' => 'All the time', 'Larry' => 'Often'},
           things_facilitator_did_well_s: {'Curly' => 'Curly was awesome', 'Larry' => 'Larry did pretty good'},
-          things_facilitator_could_improve_s: {'Curly' => 'Curly shouldnt change a thing', 'Larry' => 'Larry doesnt need to improve'}
+          things_facilitator_could_improve_s: {'Curly' => 'Curly shouldnt change a thing', 'Larry' => 'Larry doesnt need to improve'},
+          who_facilitated_ss: ['Curly', 'Larry']
         }
       )
 
@@ -117,11 +123,12 @@ module Api::V1::Pd
           how_comfortable_asking_questions_s: {'Moe' => 'Not at all comfortable', 'Larry' => 'Not at all comfortable'},
           how_often_taught_new_things_s: {'Moe' => 'Almost never', 'Larry' => 'Almost never'},
           things_facilitator_did_well_s: {'Moe' => 'Moe did nothing great', 'Larry' => 'Larry did not do great'},
-          things_facilitator_could_improve_s: {'Moe' => 'Moe was awful', 'Larry' => 'Larry was awful'}
+          things_facilitator_could_improve_s: {'Moe' => 'Moe was awful', 'Larry' => 'Larry was awful'},
+          who_facilitated_ss: ['Larry', 'Moe']
         }
       )
       bad_workshop_responses = [{data: bad_response.to_json}, {data: bad_response.to_json}]
-      workshops = [good_workshop, bad_workshop]
+      workshops = Pd::Workshop.where(id: [good_workshop.id, bad_workshop.id])
 
       # Expected response data
       good_workshop_averages = {
@@ -235,7 +242,7 @@ module Api::V1::Pd
 
       @pegasus_db_stub.stubs(:where).returns(good_workshop_responses, good_workshop_responses)
 
-      curly_filter = generate_summary_report(workshop: good_workshop, workshops: [good_workshop], course: good_workshop.course, facilitator_name: 'Curly')
+      curly_filter = generate_summary_report(workshop: good_workshop, workshops: Pd::Workshop.where(id: good_workshop), course: good_workshop.course, facilitator_name: 'Curly')
 
       assert_equal expected_curly_average, curly_filter[:this_workshop]
       assert_equal expected_curly_average.delete_if {|k, _| FREE_RESPONSE_QUESTIONS.include? k}, curly_filter[:all_my_workshops_for_course]

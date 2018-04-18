@@ -3,31 +3,31 @@
     callouts:
       2-3 Artist 1 new_callout: []
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: "小艺术家没有“步进”按钮，但你可以将滑块往左拖动来仔细看看你的程序如何运行的。"
+        2-3_Artist_Debugging_1_a: 小艺术家没有“步进”按钮，但你可以将滑块往左拖动来仔细看看你的程序如何运行的。
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。"
+        Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: 单击并将 "文本区域" 拖到屏幕上
-        screenSelectorCallout3: "选择您制作的屏幕"
+        screenSelectorCallout3: 选择您制作的屏幕
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: "这是屏幕选择器"
-        changePlace1ID: "在此处更改屏幕的 Id。"
+        screenSelectorCallout2: 这是屏幕选择器
+        changePlace1ID: 在此处更改屏幕的 Id。
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: "单击应用程序的标题"
+        applabIntro2_1: 单击应用程序的标题
         appLabIntro2_designMenu: 使用这些菜单更改应用程序的 "文本"
         appLabIntro2_textColor: 向下滚动以更改 "文本颜色"
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: "单击此屏幕上的故事文本"
-        appLabIntro2_editStoryText: "拖动此文本框的右下角以获得更多空间。然后填写你的故事文本。"
-        appLabIntro2_textColor: "试试下面可以改变的一些不同属性"
+        applabIntro2storyText: 单击此屏幕上的故事文本
+        appLabIntro2_editStoryText: 拖动此文本框的右下角以获得更多空间。然后填写你的故事文本。
+        appLabIntro2_textColor: 试试下面可以改变的一些不同属性
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: "将按钮拖到屏幕上。"
+        designToolboxCallOut: 将按钮拖到屏幕上。
         changeButtonID: 为您的按钮选择一个清晰的 "标识"。例如 "呼叫朋友按钮" 或 "出门按钮"
         screenSelectorCallout3: 转到你的 "开始屏幕"
       AppLab Intro 2 - add more buttons 2_callout: []
@@ -38,7 +38,7 @@
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: 屏幕变绿了吗？如果是这样, 请按 "完成"。如果不是, 请点击 "重置", 更改您的代码, 然后再次点击 "运行"。
       AppLab Intro 7 - thisOrThatAddButton_callout:
-        AppLabHoCFinal11: "你现在正处于设计模式中。"
+        AppLabHoCFinal11: 你现在正处于设计模式中。
       AppLab_test02_callout: []
       Applab AllTheThings ResourcesTab AllResources_callout: []
       Applab AllTheThings ResourcesTab MapReference_callout: []
@@ -195,17 +195,17 @@
       CSD U3 UP_ARROW_callout: []
       CSD U3 UP_ARROW_2018_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: "改动这里的数字"
+        CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY Embed_2018_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY_2018_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: "改动这里的数字"
+        CSD_U3_variables: 改动这里的数字
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -355,23 +355,23 @@
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 ellipse_2018_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -388,7 +388,7 @@
       CSD U3 keydown conditional_callout: []
       CSD U3 keydown conditional_2018_callout: []
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: "这是代码"
+        CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 这是"运行"按钮。
       CSD U3 picture_callout: []
       CSD U3 picture_2018_callout: []
@@ -413,32 +413,47 @@
       CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: "这是代码"
+        CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 这是"运行"按钮。
       CSD U3 rect_2018_callout:
-        CSD_U3_rect_c1: "这是代码"
+        CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 这是"运行"按钮。
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: "这是代码"
-        CSD_U3_rect_c2: "拖动此模块放到代码区域。"
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U6 colorLeds intensity_callout:
-        CSDU6L10_rainbow: "在此处添加代码"
+        CSDU6L10_rainbow: 在此处添加代码
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: 在此处添加代码
       CSD U6 colorLeds predict_callout: []
+      CSD U6 colorLeds predict_2018_callout: []
       CSD U6 getProperty input_callout:
         CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
+        CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
-        CSDUDL03P09: "这条线是做什么用的？"
+        CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show_callout:
-        CSDUDL03P09: "这条线是做什么用的？"
+        CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show_2018_callout:
+        CSDUDL03P09: 这条线是做什么用的？
       CSD U6 tugowar variables 1_callout:
-        CSD_U6_startGame: "在此处定义 开始游戏"
+        CSD_U6_startGame: 在此处定义 开始游戏
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: 在此处定义 开始游戏
       CSD U6 tugowar variables 2_callout:
-        CSD_U6_movePlayer: "在这里定义 移动玩家 ()"
+        CSD_U6_movePlayer: 在这里定义 移动玩家 ()
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: 在这里定义 移动玩家 ()
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: "检查玩家是否赢了"
+        CSD_U6_checkWin: 检查玩家是否赢了
+      CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: 检查玩家是否赢了
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click
@@ -481,89 +496,89 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Course 4 Artist 4_callout:
-        repeat_full_circle: "输入僵尸至少需要移动多少次才能完成一个完整的循环"
+        repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环
       Course 4 Artist 7_callout:
-        repeat_blocks: "用重复模块来将工作区的其它模块包起来。"
+        repeat_blocks: 用重复模块来将工作区的其它模块包起来。
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: "将计数器拖拽到这个模块中。"
+        place_counter_variable: 将计数器拖拽到这个模块中。
       Course 4 Artist Functions 4_callout:
-        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
+        create_function: 点击这里来打开函数的选项，然后点击“创建函数”的按钮。
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: "如果这幅画看起来不像一个房子也没关系。我们会在下一关里面修好它。"
+        house_hint: 如果这幅画看起来不像一个房子也没关系。我们会在下一关里面修好它。
       Course 4 Artist Functions 8_callout:
-        edit_function: "单击此处来编辑您的函数。"
+        edit_function: 单击此处来编辑您的函数。
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: "注意，为了井然有序，我们将所有模块都放到类别里，并排好了顺序。点击这里来找到所有你需要的模块。"
+        Course_4_Artist_Functions_challenge_1: 注意，为了井然有序，我们将所有模块都放到类别里，并排好了顺序。点击这里来找到所有你需要的模块。
       Course 4 Artist Params 2_callout:
-        length_parameter: "你能修改这个函数，从而让它用到长度参数吗？"
+        length_parameter: 你能修改这个函数，从而让它用到长度参数吗？
       Course 4 Artist Params 4_callout:
-        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
+        create_function: 点击这里来打开函数的选项，然后点击“创建函数”的按钮。
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: "用重复模块来将工作区的其它模块包起来。"
+        repeat_blocks: 用重复模块来将工作区的其它模块包起来。
       Course 4 Artist Vars 10_callout:
-        set_sides: "用这个模块来设置“边数”为正确的数值来通过这一关。"
+        set_sides: 用这个模块来设置“边数”为正确的数值来通过这一关。
       Course 4 Artist Vars 12_callout:
-        set_length: "用这个模块来设置“长度”为正确的数值。"
+        set_length: 用这个模块来设置“长度”为正确的数值。
       Course 4 Artist Vars 13_callout: []
       Course 4 Artist Vars 2_callout:
-        set_length: "用这个模块来设置“长度”为正确的数值。"
+        set_length: 用这个模块来设置“长度”为正确的数值。
       Course 4 Artist Vars 3_callout:
-        place_variable: "将变量拖拽到这个模块中"
+        place_variable: 将变量拖拽到这个模块中
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: "用360除以边的数量，从而算出每次转的角度。"
+        degrees_per_side: 用360除以边的数量，从而算出每次转的角度。
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "需要更多空间？拉动这条分割线就能让代码区域更宽一些。"
+        Course_4_Artist_Vars_8_a: 需要更多空间？拉动这条分割线就能让代码区域更宽一些。
       Course 4 Artist Vars 9_callout:
-        set_sides: "用这个模块来设置“边数”为正确的数值来通过这一关。"
+        set_sides: 用这个模块来设置“边数”为正确的数值来通过这一关。
       Course 4 Bee 1_callout:
-        if_bee_nectar: "用“如果”模块来决定蜜蜂应该采集花蜜还是酿蜂蜜。"
+        if_bee_nectar: 用“如果”模块来决定蜜蜂应该采集花蜜还是酿蜂蜜。
       Course 4 Bee 3_callout:
-        if_else_bee: "用“如果/否则”模块让蜜蜂从花朵里采集花蜜，否则就酿蜂蜜。"
+        if_else_bee: 用“如果/否则”模块让蜜蜂从花朵里采集花蜜，否则就酿蜂蜜。
       Course 4 Bee For Loops 1_callout:
         get_nectar: 使用新的"得到花蜜"块。
       Course 4 Bee For Loops 6_callout:
-        actions_category: "工具箱里有新的样子了！现在里面有“行动”模块了。"
+        actions_category: 工具箱里有新的样子了！现在里面有“行动”模块了。
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: "用这个按钮来编辑函数，并改变蜜蜂的方向让它到达花蜜。"
+        edit_get_nectar: 用这个按钮来编辑函数，并改变蜜蜂的方向让它到达花蜜。
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: "将这些变量设置为1或0，也被称作设置“标志”。标志能够给我们的函数发出信号，来让蜜蜂往需要的方向前进。"
+        Course_4_Bee_Params_4: 将这些变量设置为1或0，也被称作设置“标志”。标志能够给我们的函数发出信号，来让蜜蜂往需要的方向前进。
       Course 4 Bee Params 4_callout: []
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: 点击"运行"以尝试您的程序
-        Course 4 Maze 1_callout2: "拖动“向前移动”模块到工作区中，并将它接到其它模块的下面。"
+        Course 4 Maze 1_callout2: 拖动“向前移动”模块到工作区中，并将它接到其它模块的下面。
       Course 4 Maze 4_callout:
-        repeat: "在循环中放入模块来重复执行命令"
+        repeat: 在循环中放入模块来重复执行命令
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: "点击“编辑”来更新此函数，以便其可使用高度参数。"
+        Course_4 _Play_Lab_Params_2_1: 点击“编辑”来更新此函数，以便其可使用高度参数。
       Course 4 Play Lab Params 3_callout:
-        edit_function: "单击此处来编辑您的函数。"
+        edit_function: 单击此处来编辑您的函数。
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
       Course 4 Play Lab Vars 1_callout:
-        arrows_move_actor: "使用箭头移动演员"
+        arrows_move_actor: 使用箭头移动演员
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: "现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。"
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "哇！我的代码爆炸了！你能将它放回去并解决这个难题吗？"
+        Course_4_Play_Labs_For_Loops_5: 哇！我的代码爆炸了！你能将它放回去并解决这个难题吗？
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: "你注意到每一个角色的“计数器”变量都有不同的名字吗？所以每一个“计数循环”都可以控制自己的计数器。"
-        Course_4_Playlab_For_Loops_4b_2: "在这道关卡中，你只允许修改“计数循环”中的“增量”。"
+        Course_4_Playlab_For_Loops_4b_1: 你注意到每一个角色的“计数器”变量都有不同的名字吗？所以每一个“计数循环”都可以控制自己的计数器。
+        Course_4_Playlab_For_Loops_4b_2: 在这道关卡中，你只允许修改“计数循环”中的“增量”。
       Course 4 Playlab For Loops 5b_callout: []
       Course 4 Playlab For Loops 6b_callout: []
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: "这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！"
+        Course_4_SCV_6: 这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！
       CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: "使用箭头移动演员"
+        arrows_move_actor: 使用箭头移动演员
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: "现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。"
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       CourseF_PlayLab_vars6_callout: []
       CourseF_PlayLab_vars7_callout: []
       CourseF_PlayLab_vars8_callout: []
@@ -585,7 +600,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: "单击此处来编辑您的函数。"
+        edit_function: 单击此处来编辑您的函数。
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -602,30 +617,30 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       Function intro Ryan_callout:
-        Function_intro_Ryan_1: "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
+        Function_intro_Ryan_1: 这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: "发生此事件时播放声音。"
+        Infinity_move_collide_callout: 发生此事件时播放声音。
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: "当按上方向键时，哪个模块将会让大白向上移动？"
-        Infinity_move_directions_callout_arrow: "使用这些箭头键引导"
+        Infinity_move_directions_callout: 当按上方向键时，哪个模块将会让大白向上移动？
+        Infinity_move_directions_callout_arrow: 使用这些箭头键引导
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: "在这里添加移动模块"
+        Infinity_move_right_runbutton: 在这里添加移动模块
       Infinity_repeat_callout:
-        Infinity_repeat_callout: "放置移动模块到这里面"
+        Infinity_repeat_callout: 放置移动模块到这里面
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: "尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！"
+        InspirationalArtwork_1: 尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: "尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！"
+        InspirationalArtwork_1: 尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -638,32 +653,32 @@
       Luigi's Pizza 3_callout: []
       Luigi's Pizza 4_callout: []
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: "准备就绪后，点击“运行”试试看你的程序。"
+        craft2_run_button_callout: 准备就绪后，点击“运行”试试看你的程序。
       MC HOC 2016 Level 6_callout: []
       MC HOC 2016 New Drop_callout: []
       MC HOC 2016 New Spawn_callout: []
       MC HOC 2016 New Walk_callout:
-        MC_HOC_2016_New_Walk_callout2: "点击“运行”开始移动。"
+        MC_HOC_2016_New_Walk_callout2: 点击“运行”开始移动。
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: "使用方向键或者点击这里开始移动玩家。"
+        MC_HOC_2017_01_Cole_2: 使用方向键或者点击这里开始移动玩家。
       MC_HOC_2017_01_Kiki_callout: []
       MC_HOC_2017_02_Cole_callout: []
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: "现在您的玩家有了小伙伴啦！您可以为代理人写代码来帮助您通关。"
+        MC_HOC_2017_02_Cole_1: 现在您的玩家有了小伙伴啦！您可以为代理人写代码来帮助您通关。
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: 这是一个"重复"循环！点击它进入工作区，并为其添加您想要一遍遍运行的代码。
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: "代理人可以在水上悬停，但是玩家不能！"
+        MC_HOC_2017_04_Cole_a: 代理人可以在水上悬停，但是玩家不能！
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: "点击它进入工作区，并为其添加您想要一遍遍重复的代码。"
+        MC_HOC_2017_04_Kiki_1: 点击它进入工作区，并为其添加您想要一遍遍重复的代码。
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: "您无法将这些方块扔掉，但是您可以编辑它们！"
+        MC_HOC_2017_06_Cole_1: 您无法将这些方块扔掉，但是您可以编辑它们！
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: "代理人可以在岩浆上悬停，但是玩家不能！  "
+        MC_HOC_2017_08_RY_1: '代理人可以在岩浆上悬停，但是玩家不能！  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: "代理人可以在岩浆上悬停，但是玩家不能！  "
+        MC_HOC_2017_08_RY_1: '代理人可以在岩浆上悬停，但是玩家不能！  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
+        MC_HOC_2017_08_RY_1: '代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -671,133 +686,133 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: "点击此处来编辑新的函数，以此绘制一个正方形。"
+        NEW_Course_4_Artist_Functions_3_1: 点击此处来编辑新的函数，以此绘制一个正方形。
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: "单击此处来编辑您的函数。"
-        function_editor_draw_square: "这是你的函数定义。这些模块会在每次使用“画一个正方形”模块时运行。"
+        edit_function: 单击此处来编辑您的函数。
+        function_editor_draw_square: 这是你的函数定义。这些模块会在每次使用“画一个正方形”模块时运行。
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: "单击此处来编辑您的函数。"
+        edit_function: 单击此处来编辑您的函数。
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: "单击此处来编辑您的函数。"
+        edit_function: 单击此处来编辑您的函数。
       NEW Course 4 Artist Params 10_callout:
-        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
+        create_function: 点击这里来打开函数的选项，然后点击“创建函数”的按钮。
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
+        add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: "将长度变量拖拽到这里来替代问号。"
+        place_length_variable: 将长度变量拖拽到这里来替代问号。
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: "输入你想要蜜蜂收集的最大花蜜数量"
+        bee_for_loop: 输入你想要蜜蜂收集的最大花蜜数量
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: "工具箱里有新的样子了！现在里面有“行动”模块了。"
+        actions_category: 工具箱里有新的样子了！现在里面有“行动”模块了。
       New App Lab Project_callout: []
       New Artist Project_callout:
-        New Artist Project_callout1: "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中"
-        New Artist Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Artist Project_callout1: 点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中
+        New Artist Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       New Frozen Project_callout:
-        snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Overworld Chop Trees_callout:
-        craft_callout_preplaced: "我们已将一些方块放在这儿，好方便你开始"
+        craft_callout_preplaced: 我们已将一些方块放在这儿，好方便你开始
       Overworld Chop Trees_2018_callout:
-        craft_callout_preplaced: "我们已将一些方块放在这儿，好方便你开始"
+        craft_callout_preplaced: 我们已将一些方块放在这儿，好方便你开始
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: "此代码将开始建造你的房子。你能完成吗？"
+        craft_callout_preplaced_house: 此代码将开始建造你的房子。你能完成吗？
       Overworld House Frame Chosen_2018_callout:
-        craft_callout_preplaced_house: "此代码将开始建造你的房子。你能完成吗？"
+        craft_callout_preplaced_house: 此代码将开始建造你的房子。你能完成吗？
       Overworld Move to Sheep_callout:
         craft_run_button_callout: 点击"运行"以尝试您的程序
-        craft_drag_block_callout: "拖动一个“向前移动”模块并接到其他模块下方"
+        craft_drag_block_callout: 拖动一个“向前移动”模块并接到其他模块下方
       Overworld Move to Sheep_2018_callout:
         craft_run_button_callout: 点击"运行"以尝试您的程序
-        craft_drag_block_callout: "拖动一个“向前移动”模块并接到其他模块下方"
+        craft_drag_block_callout: 拖动一个“向前移动”模块并接到其他模块下方
       Overworld Place Wall_callout:
-        craft_inside_repeat: "将方块放在这里可以重复行动"
+        craft_inside_repeat: 将方块放在这里可以重复行动
       Overworld Place Wall_2018_callout:
-        craft_inside_repeat: "将方块放在这里可以重复行动"
+        craft_inside_repeat: 将方块放在这里可以重复行动
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
       PDAlg Big Game History_callout: []
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
       PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。"
+        Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: "点击这里显示网格。"
+        grid: 点击这里显示网格。
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Play Lab Rocket 2_callout:
-        pass_function: "这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！"
-        play lab rocket 2: "在此定义火箭高度函数"
+        pass_function: 这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！
+        play lab rocket 2: 在此定义火箭高度函数
       Play Lab Rocket 2B_callout:
-        pass_function: "这个黑模块可以让您传递您的函数 (而不是您的函数返回的值与一些输入) 到火箭动画库中。您在屏幕上看到的动画实际上是使用您的函数来移动火箭!"
+        pass_function: 这个黑模块可以让您传递您的函数 (而不是您的函数返回的值与一些输入) 到火箭动画库中。您在屏幕上看到的动画实际上是使用您的函数来移动火箭!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: "在移动到示例和定义之前更新目的声明。"
+        Play Lab Rocket 3 1: 在移动到示例和定义之前更新目的声明。
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " 感觉卡住了？ <br/> 单击灯泡以得到提示!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: "尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！"
+        4-5_Artist_Patterns_Free_Play_2: 尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: "尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！"
+        4-5_Artist_Patterns_Free_Play_2: 尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Rocket Height Course A_callout:
-        pass_function: "这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！"
+        pass_function: 这个启动（函数）模块允许您将函数（不是您的函数返回的值与一些输入）传递到火箭动画库中。您在屏幕上看到的动画实际上是用您的函数来移动火箭！
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       SG Add Subgoals practice_callout: []
       SG U3L08 how to add comments_callout:
-        comment_highlight: "将注释块从这里拖到代码中"
+        comment_highlight: 将注释块从这里拖到代码中
       SG U3L2 Using Simple Commands part 1_callout: []
       SG U3L2 Using Simple Commands_callout: []
       SG U3L2_Add-subgoals_callout: []
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: "如果你想使用penUp 和 penDown，它们现在在这里。"
-        goals_tab: "从这里拖出目标"
+        pen_functions: 如果你想使用penUp 和 penDown，它们现在在这里。
+        goals_tab: 从这里拖出目标
       SG U3L2_TurtleSquare_right_callout: []
       SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: "这是一个列表的子目标"
-        goals_workspace: "子目标的代码示例"
+        goals_palette_show: 这是一个列表的子目标
+        goals_workspace: 子目标的代码示例
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: "编辑这个函数，以防止山姆从右边掉下来。"
+        Sam the Butterfly 3 1: 编辑这个函数，以防止山姆从右边掉下来。
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -817,250 +832,340 @@
       U3L05_3x3GridEfficiencyChallenge_callout: []
       U3L05_draw3x3GridEfficiently_callout: []
       U3L08 how to add comments_callout:
-        comment_highlight: "将注释块从这里拖到代码中"
+        comment_highlight: 将注释块从这里拖到代码中
       U3L2 Using Simple Commands (no tooltips)_callout: []
       U3L2 Using Simple Commands_callout: []
       U3L2_Turtle3by3Grid_callout: []
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: "此代码会检查岩浆，你能添加一条向前移动的命令吗？"
+        craft_callout_moveforward: 此代码会检查岩浆，你能添加一条向前移动的命令吗？
       Underground Avoiding Lava_2018_callout:
-        craft_callout_moveforward: "此代码会检查岩浆，你能添加一条向前移动的命令吗？"
+        craft_callout_moveforward: 此代码会检查岩浆，你能添加一条向前移动的命令吗？
       Underground Iron_callout:
-        craft_what_is_iron: "开采这块铁矿！"
+        craft_what_is_iron: 开采这块铁矿！
       Underground Iron_2018_callout:
-        craft_what_is_iron: "开采这块铁矿！"
+        craft_what_is_iron: 开采这块铁矿！
       WebLab PS test - 1-12_callout:
-        version_history_button: "检查版本历史记录"
+        version_history_button: 检查版本历史记录
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: "这里只有两个和两个转弯"
+        aE1_1: 这里只有两个和两个转弯
       aE2_callout:
-        aE2_1: "仍然只有两个和两个转弯"
+        aE2_1: 仍然只有两个和两个转弯
       aE3_callout:
-        aE3_1: "只有这几个可用"
+        aE3_1: 只有这几个可用
       aE3alternate_callout:
-        aE3_1: "只有这几个可用"
+        aE3_1: 只有这几个可用
       aE3alternateB_callout:
-        aE3_1: "只有这几个可用"
+        aE3_1: 只有这几个可用
       aE4_callout:
-        aE3_1: "只有这几个可用"
+        aE3_1: 只有这几个可用
       aE5_callout:
-        aE3_1: "只有这几个可用"
+        aE3_1: 只有这几个可用
       aE6_callout:
-        aE6_1: "只有1个前进和1个转弯块"
+        aE6_1: 只有1个前进和1个转弯块
       aEfreeplay_callout:
-        aEfreeplay_1: "请注意, 从中间开始艺术家可能会很尴尬。 我们正在考虑添加动作可以将艺术家移动到不受限制的位置。"
+        aEfreeplay_1: 请注意, 从中间开始艺术家可能会很尴尬。 我们正在考虑添加动作可以将艺术家移动到不受限制的位置。
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: []
       artistLoopsK2_callout:
-        artistLoopsK2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        artistLoopsK2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        artistLoopsK2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。"
+        courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
       course2_collector_loops_challenge2_callout: []
       course2_collector_prog_challenge1_callout: []
       course2_collector_prog_challenge2_callout: []
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge1_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用此命令可将蜜蜂向后移动。"
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       course3_bee_functions_challenge3_callout:
-        courseF_bee_functions_challenge1_1: "在这个函数中您应该放什么代码？"
+        courseF_bee_functions_challenge1_1: 在这个函数中您应该放什么代码？
         courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
       course3_bee_functions_challenge4_callout: []
       course3_collector_debugging_challenge2_callout: []
       course3_farmer_until_challenge2_callout: []
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       course4_artist_concept_challenge2_callout: []
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       course4_bee_for_challenge1_callout: []
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: "这个函数对玉米有很好的作用, 但是其他的蔬菜呢？"
+        courseF_bee_fwp_challenge2_callout1: 这个函数对玉米有很好的作用, 但是其他的蔬菜呢？
       course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        courseA_artist_loops4_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
+        courseA_artist_loops7_1: 这个数字意味着只有一个这样的模块可以在最终的答案中使用。
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: "你知道在任何时候，都能往回画线吗？"
+        courseA_artist_loops8_1: 你知道在任何时候，都能往回画线吗？
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: "你知道在任何时候，都能往回画线吗？"
+        courseA_artist_loops8_1: 你知道在任何时候，都能往回画线吗？
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       courseA_collector_loops3_predict1_callout: []
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: "点击这里来观看代码运行!"
+        courseA_collector_preLoops1_1: 点击这里来观看代码运行!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        stone_block_2: 灰色的块是石头做的, 不能扔掉。
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: "当您需要提示时点击灯泡!"
+        courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: "当您需要提示时点击灯泡!"
+        courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: "使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！"
+        courseA_maze_seqA_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: "使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！"
+        courseA_maze_seqA_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
       courseA_maze_seq4_callout:
-        made_of_stone: "这些块是石头做的。 您可以移动它们, 但不能删除它们!"
+        made_of_stone: 这些块是石头做的。 您可以移动它们, 但不能删除它们!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: "这些块是石头做的。 您可以移动它们, 但不能删除它们!"
+        made_of_stone: 这些块是石头做的。 您可以移动它们, 但不能删除它们!
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events2_2018_callout: []
       courseA_playLab_events3_callout: []
       courseA_playLab_events3_2018_callout: []
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: "这是一个标注"
+        courseA_playlab_events4_callout1: 这是一个标注
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: "这是一个标注"
+        courseA_playlab_events4_callout1: 这是一个标注
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: "单击此处可更改事件箭头的方向。"
+        courseA_playLab_events5_1: 单击此处可更改事件箭头的方向。
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: "单击此处可更改事件箭头的方向。"
+        courseA_playLab_events5_1: 单击此处可更改事件箭头的方向。
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       courseA_toMakeLoopsVideo_Collector_callout: []
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseB_Scrat_ramp2_2018_callout: []
+      courseB_Scrat_ramp3a_2018_callout: []
+      courseB_Scrat_ramp4a_2018_callout: []
+      courseB_Scrat_ramp5a_2018_callout: []
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: "工具箱中只有一个这样的模块。你将如何使用它？"
+        courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: "这个数字意味着工具箱中不再有这个块了。"
+        courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
+      courseB_artist_loops5_2018_callout:
+        courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: "当您需要提示时点击灯泡!"
+        courseB_maze_seq1: 当您需要提示时点击灯泡!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: 当您需要提示时点击灯泡!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: "使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！"
+        courseB_maze_seq2_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: "灰色的块是石头做的, 不能扔掉。"
+        courseB_maze_seq3_1: 灰色的块是石头做的, 不能扔掉。
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: 灰色的块是石头做的, 不能扔掉。
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: "使用绿色下拉箭头可更改方向。"
+        courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: 当企鹅和恐龙碰到一起时，使用这个模块！
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: "开始使用这个块, 让艺术家到屏幕的中心。"
+        courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
+      courseC_artist_loopsPrePre1a_2018_callout:
+        courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
       courseC_artist_prog1_callout: []
       courseC_artist_prog1_2018_callout: []
       courseC_artist_prog2_callout: []
       courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
+      courseC_collector_loops_challenge2_2018_callout: []
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        courseC_collector_prog1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: "如果你需要的话，可以从工具箱里取更多的模块！"
+        courseC_collector_prog7_1: 如果你需要的话，可以从工具箱里取更多的模块！
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: 如果你需要的话，可以从工具箱里取更多的模块！
       courseC_collector_prog8_callout: []
+      courseC_collector_prog8_2018_callout: []
       courseC_collector_prog9_callout: []
+      courseC_collector_prog9_2018_callout: []
       courseC_collector_progA_callout: []
       courseC_collector_progB_callout: []
       courseC_collector_prog_challenge1_callout: []
+      courseC_collector_prog_challenge1_2018_callout: []
       courseC_collector_prog_challenge2_callout: []
+      courseC_collector_prog_challenge2_2018_callout: []
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: "南瓜上的数字四告诉你有四个南瓜可供挑选。"
+        courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
+      courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: "这些块是锁定的, 不能删除!"
+        courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: "这些块是锁定的, 不能删除!"
+        courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: "在这个关卡中，你只能使用一个这样的模块。"
+        courseC_maze_loops2_1: 在这个关卡中，你只能使用一个这样的模块。
       courseC_maze_loops2_predict1_callout: []
       courseC_maze_loops_challenge2_callout: []
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
-        courseC_maze_programming3_3: "这些块是石头, 不能扔掉。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseC_maze_programming5_callout: []
+      courseC_maze_programming5_2018_callout: []
       courseC_maze_programming7_callout:
-        courseC_maze_programming7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
-        courseC_maze_programming7_2: "这些块是石头做的, 不能扔掉。"
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
       courseC_starWars_loops10_callout: []
+      courseC_starWars_loops10_2018_callout: []
       courseC_starWars_loops10_predict2_callout: []
+      courseC_starWars_loops10_predict2_2018_callout: []
       courseC_starWars_loops11_callout: []
+      courseC_starWars_loops11_2018_callout: []
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: "在这个关卡中，你只能使用一个这样的模块。"
+        courseC_starWars_loops2: 在这个关卡中，你只能使用一个这样的模块。
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: 在这个关卡中，你只能使用一个这样的模块。
       courseC_starWars_loops4_callout: []
+      courseC_starWars_loops4_2018_callout: []
       courseC_starWars_loops5_callout: []
+      courseC_starWars_loops5_2018_callout: []
       courseC_starWars_loops6_callout: []
+      courseC_starWars_loops6_2018_callout: []
       courseC_starWars_loops7_callout: []
+      courseC_starWars_loops7_2018_callout: []
       courseC_starWars_loops8_callout: []
+      courseC_starWars_loops8_2018_callout: []
       courseC_starWars_loops9_callout: []
+      courseC_starWars_loops9_2018_callout: []
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        courseD_artist_functions2_1: 当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？
       courseD_artist_functions8_callout:
-        courseD_artist_functions8_1: "用来创建函数的模块已经移动到了工具箱的这个标签里。"
+        courseD_artist_functions8_1: 用来创建函数的模块已经移动到了工具箱的这个标签里。
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: "您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!"
+        courseD_artist_nestedLoops1a_1: 您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: 您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "您可以更改此数字。"
-        courseD_artist_ramp11_2: "单击此处键入重复代码的次数。"
+        courseD_artist_ramp11_1: 您可以更改此数字。
+        courseD_artist_ramp11_2: 单击此处键入重复代码的次数。
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
-        4_5_Bee_Conditionals_2_2: "需要帮助吗？ 点击这里查看视频提示!"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+        4_5_Bee_Conditionals_2_2: 需要帮助吗？ 点击这里查看视频提示!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+        4_5_Bee_Conditionals_2_2: 需要帮助吗？ 点击这里查看视频提示!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
-        4_5_Bee_Conditionals_2_2: "需要点帮助吗？ 点击这里查看我们的新视频提示!"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+        4_5_Bee_Conditionals_2_2: 需要点帮助吗？ 点击这里查看我们的新视频提示!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。"
+        courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: "尝试使用这个循环重复向前移动块。"
+        courseD_bee_conditionals_challenge3_1: 尝试使用这个循环重复向前移动块。
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用此命令可将蜜蜂向后移动。"
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
+      courseD_bee_debugging_challenge1_2018_callout:
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_debugging_challenge1a_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用此命令可将蜜蜂向后移动。"
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: "使用此命令可将蜜蜂向后移动。"
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "使用此块收集一块宝藏。  "
+        courseD_collector_ramp8_1: '使用此块收集一块宝藏。  '
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1068,19 +1173,19 @@
       courseD_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_maze_ramp2_callout:
-        courseC_maze_programming2_1: "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseD_maze_ramp3_callout:
-        courseC_maze_programming3_2: "可以将额外的模块拖动到工具箱中, 以将其丢弃。"
-        stone_block_2: "灰色的块是石头做的, 不能扔掉。"
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
+        stone_block_2: 灰色的块是石头做的, 不能扔掉。
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
-        stone_block_2: "灰色的块是石头做的, 不能扔掉。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        stone_block_2: 灰色的块是石头做的, 不能扔掉。
       courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。 它告诉你还可以使用多少个模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseD_maze_ramp5_callout: []
       courseD_maze_ramp5_2018_callout: []
       courseD_maze_ramp5a_callout: []
@@ -1092,12 +1197,14 @@
       courseD_maze_ramp5d_callout: []
       courseD_maze_ramp5d_2018_callout: []
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: "我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。"
+        courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
+      courseD_playLab_condFP_2018_callout:
+        courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
       courseD_scrat_predict1_callout: []
       courseD_scrat_predict1_2018_callout: []
       courseD_scrat_ramp1_callout:
@@ -1105,109 +1212,114 @@
       courseD_scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseD_scrat_ramp5_callout: []
       courseD_scrat_ramp5_2018_callout: []
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseD_scrat_ramp8_2018_callout:
-        courseD_maze_ramp7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseE_artist_concept_challenge2_callout: []
       courseE_artist_concept_challenge2_2018_callout: []
       courseE_artist_embed_functions8_callout: []
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: "让我们用这个模块来帮助创建第一个正方形。"
+        courseD_artist_functions1_1: 让我们用这个模块来帮助创建第一个正方形。
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: "让我们用这个模块来帮助创建第一个正方形。"
+        courseD_artist_functions1_1: 让我们用这个模块来帮助创建第一个正方形。
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        courseD_artist_functions2_1: 当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        courseD_artist_functions2_1: 当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？
       courseE_artist_functions8_callout:
-        courseD_artist_functions8_1: "用来创建函数的模块已经移动到了工具箱的这个标签里。"
+        courseD_artist_functions8_1: 用来创建函数的模块已经移动到了工具箱的这个标签里。
       courseE_artist_functions8_2018_callout:
-        courseD_artist_functions8_1: "用来创建函数的模块已经移动到了工具箱的这个标签里。"
+        courseD_artist_functions8_1: 用来创建函数的模块已经移动到了工具箱的这个标签里。
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge1_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge1_2018_callout:
-        courseE_artist_functions_challenge1_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge1_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge1_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge1_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_challenge2_2018_callout:
-        courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
-        courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
+        courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "您可以更改此数字。"
-        courseD_artist_ramp11_2: "单击此处键入重复代码的次数。"
+        courseD_artist_ramp11_1: 您可以更改此数字。
+        courseD_artist_ramp11_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp12_callout: []
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "您可以更改此数字。"
-        courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: "您可以更改此数字。"
-        courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: "您可以更改此数字。"
-        courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "使用此块收集一块宝藏。  "
+        courseD_collector_ramp8_1: '使用此块收集一块宝藏。  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
+        courseE_farmer_functions1_2: 这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions10b_2018_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions11_predict_2018_callout: []
       courseE_farmer_functions1_2018_callout:
-        courseE_farmer_functions1_2: "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
+        courseE_farmer_functions1_2: 这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: "这个代码可能和你写的不完全一样，但它能完成工作！"
+        courseE_farmer_functions2a_2: 这个代码可能和你写的不完全一样，但它能完成工作！
       courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: "这个代码可能和你写的不完全一样，但它能完成工作！"
+        courseE_farmer_functions2a_2: 这个代码可能和你写的不完全一样，但它能完成工作！
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions2ba_2018_callout: []
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       courseE_farmer_functions3c_callout: []
       courseE_farmer_functions3c_2018_callout: []
       courseE_farmer_functions4b_callout: []
@@ -1226,30 +1338,44 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseE_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+      courseE_maze_ramp7_2018_callout:
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseE_maze_ramp_predict1_callout: []
       courseE_multi_maze_ramp5_callout: []
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseE_playLab_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
+        courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: "让演员到这个标志移动到下一层。"
+        courseE_playLab_scaffold3_1: 让演员到这个标志移动到下一层。
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: "让演员到这个标志移动到下一层。"
+        courseE_playLab_scaffold3_1: 让演员到这个标志移动到下一层。
       courseF_IceAge_1_callout:
         playlab_drag_say_a: 在这里拖动 "演员1说 ' 模块, 并键入“您好!”
       courseF_IceAge_10_callout: []
@@ -1267,7 +1393,7 @@
       courseF_IceAge_8_callout:
         playlab_add_score: ''
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: "在此处添加块"
+        playlab_add_blocks_1: 在此处添加块
       courseF_IceAge_template_callout:
         arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
@@ -1282,29 +1408,29 @@
       courseF_artist_fwp1_2018_callout:
         courseF_artist_fwp1_1: 单击 "编辑" 按钮以更改函数内的代码。
       courseF_artist_fwp4_callout:
-        courseF_artist_fwp4_1: "要完成你的多边形，确保每次都转向360÷`sides`（边长）度。"
+        courseF_artist_fwp4_1: 要完成你的多边形，确保每次都转向360÷`sides`（边长）度。
       courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: "要完成你的多边形，确保每次都转向360÷`sides`（边长）度。"
+        courseF_artist_fwp4_1: 要完成你的多边形，确保每次都转向360÷`sides`（边长）度。
       courseF_artist_fwp5_callout:
-        courseF_artist_fwp5_1: "你能在这里找到多边形函数。"
+        courseF_artist_fwp5_1: 你能在这里找到多边形函数。
       courseF_artist_fwp5_2018_callout:
-        courseF_artist_fwp5_1: "你能在这里找到多边形函数。"
+        courseF_artist_fwp5_1: 你能在这里找到多边形函数。
       courseF_artist_predict1_callout: []
       courseF_artist_ramp10_callout: []
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "您可以更改此数字。"
-        courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseF_artist_ramp9_callout: []
       courseF_artist_variables1_callout:
-        courseF_artist_variables1_1: "注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！"
+        courseF_artist_variables1_1: 注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！
       courseF_artist_variables10_callout: []
       courseF_artist_variables10_2018_callout: []
       courseF_artist_variables2_callout: []
       courseF_artist_variables2_2018_callout: []
       courseF_artist_variables3_callout:
-        courseF_artist_variables3_a: "用这个来设置变量`length`（长度）的值"
+        courseF_artist_variables3_a: 用这个来设置变量`length`（长度）的值
       courseF_artist_variables3_2018_callout:
-        courseF_artist_variables3_a: "用这个来设置变量`length`（长度）的值"
+        courseF_artist_variables3_a: 用这个来设置变量`length`（长度）的值
       courseF_artist_variables3a_predict1_callout: []
       courseF_artist_variables3a_predict1_2018_callout: []
       courseF_artist_variables4_callout: []
@@ -1312,13 +1438,13 @@
       courseF_artist_variables5_callout: []
       courseF_artist_variables5_2018_callout: []
       courseF_artist_variables6_callout:
-        courseF_artist_variables6_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables6_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables6_2018_callout:
-        courseF_artist_variables6_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables6_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables6a_callout:
-        courseF_artist_variables6a_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables6a_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables6a_2018_callout:
-        courseF_artist_variables6a_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables6a_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables7_callout: []
       courseF_artist_variables7_2018_callout: []
       courseF_artist_variables8_callout: []
@@ -1330,13 +1456,13 @@
       courseF_artist_variables_10_callout: []
       courseF_artist_variables_2_callout: []
       courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: "用这个来设置变量`length`（长度）的值"
+        courseF_artist_variables_3_a: 用这个来设置变量`length`（长度）的值
       courseF_artist_variables_4_callout: []
       courseF_artist_variables_5_callout: []
       courseF_artist_variables_6_callout:
-        courseF_artist_variables_6_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables_6_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables_6a_callout:
-        courseF_artist_variables6a_1: "当你需要改变同一个数字的多份副本时，变量会很有帮助。"
+        courseF_artist_variables6a_1: 当你需要改变同一个数字的多份副本时，变量会很有帮助。
       courseF_artist_variables_7_callout: []
       courseF_artist_variables_8_callout: []
       courseF_artist_variables_9_callout: []
@@ -1345,105 +1471,105 @@
       courseF_artist_variables_template_2018_callout: []
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: "工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!"
+        courseF_bee_conditionals2_2: 工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!
       courseF_bee_conditionals2_2018_callout:
-        courseF_bee_conditionals2_2: "工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!"
+        courseF_bee_conditionals2_2: 工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: "当路径的长度改变时（在矩形的两侧！）使用这个块。"
+        courseF_bee_conditionals5_1: 当路径的长度改变时（在矩形的两侧！）使用这个块。
       courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: "当路径的长度改变时（在矩形的两侧！）使用这个块。"
+        courseF_bee_conditionals5_1: 当路径的长度改变时（在矩形的两侧！）使用这个块。
       courseF_bee_for3_callout:
-        courseF_bee_for3_1: "在我们将工具箱编程分类模式节省空间时，`计数循环`太宽了。你能在这里找到新的`计数循环`！"
+        courseF_bee_for3_1: 在我们将工具箱编程分类模式节省空间时，`计数循环`太宽了。你能在这里找到新的`计数循环`！
       courseF_bee_for3_predict1_callout: []
       courseF_bee_for3_predict1_2018_callout: []
       courseF_bee_for4_callout:
-        courseF_bee_for4_1: "你会在这里发现 ' 计数循环 '!"
+        courseF_bee_for4_1: 你会在这里发现 ' 计数循环 '!
       courseF_bee_for4_2018_callout:
-        courseF_bee_for4_1: "你会在这里发现 ' 计数循环 '!"
+        courseF_bee_for4_1: 你会在这里发现 ' 计数循环 '!
       courseF_bee_for6_callout: []
       courseF_bee_for6_2018_callout: []
       courseF_bee_for9_callout:
-        courseF_bee_for9_1: "你会在这里找到`math`（数学）模块。"
+        courseF_bee_for9_1: 你会在这里找到`math`（数学）模块。
       courseF_bee_for9_2018_callout:
-        courseF_bee_for9_1: "你会在这里找到`math`（数学）模块。"
+        courseF_bee_for9_1: 你会在这里找到`math`（数学）模块。
       courseF_bee_for_challenge1_callout: []
       courseF_bee_for_challenge1_2018_callout: []
       courseF_bee_functions2_callout:
-        courseF_bee_functions2_1: "此模块调用函数。点击这个“编辑”按钮看看里面是什么！"
+        courseF_bee_functions2_1: 此模块调用函数。点击这个“编辑”按钮看看里面是什么！
       courseF_bee_functions2_2018_callout:
-        courseF_bee_functions2_1: "此模块调用函数。点击这个“编辑”按钮看看里面是什么！"
+        courseF_bee_functions2_1: 此模块调用函数。点击这个“编辑”按钮看看里面是什么！
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: "不要忘了在这里寻找更多的模块，可能有助于使这个更容易！"
+        courseF_bee_functions6_1: 不要忘了在这里寻找更多的模块，可能有助于使这个更容易！
       courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: "不要忘了在这里寻找更多的模块，可能有助于使这个更容易！"
+        courseF_bee_functions6_1: 不要忘了在这里寻找更多的模块，可能有助于使这个更容易！
       courseF_bee_functions_challenge1_callout:
-        courseF_bee_functions_challenge1_1: "在这个函数中您应该放什么代码？"
+        courseF_bee_functions_challenge1_1: 在这个函数中您应该放什么代码？
         courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
       courseF_bee_functions_challenge1_2018_callout:
-        courseF_bee_functions_challenge1_1: "在这个函数中您应该放什么代码？"
+        courseF_bee_functions_challenge1_1: 在这个函数中您应该放什么代码？
         courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
       courseF_bee_functions_challenge2_callout: []
       courseF_bee_functions_challenge2_2018_callout: []
       courseF_bee_fwp1_callout:
-        courseF_bee_fwp1_1: "你可以在这里找到`如果`语句。"
+        courseF_bee_fwp1_1: 你可以在这里找到`如果`语句。
       courseF_bee_fwp1_2018_callout:
-        courseF_bee_fwp1_1: "你可以在这里找到`如果`语句。"
+        courseF_bee_fwp1_1: 你可以在这里找到`如果`语句。
       courseF_bee_fwp2_callout:
-        courseF_bee_fwp2_a: "调用函数的模块就住在这里。"
+        courseF_bee_fwp2_a: 调用函数的模块就住在这里。
       courseF_bee_fwp2_2018_callout:
-        courseF_bee_fwp2_a: "调用函数的模块就住在这里。"
+        courseF_bee_fwp2_a: 调用函数的模块就住在这里。
       courseF_bee_fwp3_callout:
-        courseF_bee_fwp3_1: "同样的函数也能够像检查云一样，检查空地。"
+        courseF_bee_fwp3_1: 同样的函数也能够像检查云一样，检查空地。
       courseF_bee_fwp3_2018_callout:
-        courseF_bee_fwp3_1: "同样的函数也能够像检查云一样，检查空地。"
+        courseF_bee_fwp3_1: 同样的函数也能够像检查云一样，检查空地。
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: 点击"编辑"按钮来为函数增加一个参数。
       courseF_bee_fwp4_2018_callout:
         courseF_bee_fwp4_1: 点击"编辑"按钮来为函数增加一个参数。
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: "这个函数对玉米有很好的作用, 但是其他的蔬菜呢？"
+        courseF_bee_fwp_challenge2_callout1: 这个函数对玉米有很好的作用, 但是其他的蔬菜呢？
       courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: "这个函数对玉米有很好的作用, 但是其他的蔬菜呢？"
+        courseF_bee_fwp_challenge2_callout1: 这个函数对玉米有很好的作用, 但是其他的蔬菜呢？
       courseF_maze_predict1_callout: []
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseF_maze_ramp13_callout: []
       courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
+        courseF_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseF_maze_ramp5_callout: []
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: "这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。"
+        courseF_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
-        courseF_playlab_variables1a_1: "工具箱已经进行了分类，这样能够更容易找到你需要的模块。"
+        courseF_playlab_variables1a_1: 工具箱已经进行了分类，这样能够更容易找到你需要的模块。
       courseF_playlab_variables1a_2018_callout:
-        courseF_playlab_variables1a_1: "工具箱已经进行了分类，这样能够更容易找到你需要的模块。"
+        courseF_playlab_variables1a_1: 工具箱已经进行了分类，这样能够更容易找到你需要的模块。
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: "这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。"
+        course_playlab_variables2_1: 这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。
       courseF_playlab_variables2a_callout: []
       courseF_playlab_variables3_callout: []
       courseF_playlab_variables4_callout: []
       courseF_playlab_variables5_callout: []
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables5c_2018_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables6c_2018_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variables7c_callout:
         courseF_playlab_variables7c_1: 在这里找到 "问" 模块!
       courseF_playlab_variables7c_2018_callout:
@@ -1451,38 +1577,40 @@
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variables8c_2018_callout: []
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       courseF_playlab_variablesTemplate_2018_callout:
-        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+        courseF_playlab_variables5c_1: 你会发现你的变量模块在这里。
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: "这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。"
+        course_playlab_variables2_1: 这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: "这是设置变量值的方法。"
+        course_playlab_variables3_1: 这是设置变量值的方法。
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       drawings!_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: "用“创建圆圈”模块，并且改变大小。"
+        frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉菜单来将"???"替换为数字
       frozen cross_callout:
         repeat_blocks_1: "(1) 使用这个模块将工作区的灰色模块包围起来。"
         repeat_blocks_2: (2) 移动"重复"块到这里, 然后将灰色方块放到它里面.
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: "用重复模块来创建这个形状。"
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
       frozen diamond_callout:
-        frozen_diamond_repeat: "用重复模块来创建这个形状。"
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
       frozen freeplay_callout:
-        snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       frozen line_callout:
         run: 点击 "运行" 来尝试你的程序!
-        move_elsa_forward: "拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。"
+        move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
       frozen perpendicular_callout:
-        turn_elsa: "用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。"
+        turn_elsa: 用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: "用“创建一个雪花分支”模块"
+        frozen_snowflake_branch: 用“创建一个雪花分支”模块
       frozen square iterative_callout:
-        frozen_create_square: "添加更多模块来创造一个正方形"
+        frozen_create_square: 添加更多模块来创造一个正方形
       frozen square loop 3x_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       frozen square loop_callout:
@@ -1490,21 +1618,21 @@
       frozen square snowflake_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: "工具箱中只有一个这样的模块。你将如何使用它？"
+        grade1_artist_loops2_1: 工具箱中只有一个这样的模块。你将如何使用它？
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: "这些灰色的块是石头做的! 这意味着他们不能被丢弃。"
+        grade1_maze_sequence6_1: 这些灰色的块是石头做的! 这意味着他们不能被丢弃。
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: "这是工具箱。能找到用来完成此关卡的额外的模块。"
+        grade2_CaringForNewPet_1_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause
           problems.
-        grade2_CaringForNewPet_2_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        grade2_CaringForNewPet_2_2: 你能将多余的模块拖到工具箱来扔掉它们。
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: "你能将多余的模块拖到工具箱来扔掉它们。"
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: "这是你的模块限制。它告诉你还可以使用多少模块。"
+        grade2_CaringForNewPet_3_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       grade2_CaringForNewPet_3D_callout: []
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are
@@ -1512,13 +1640,16 @@
       grade2_MakeDogTag_1_callout: []
       grade2_MakeDogTag_BFP_callout: []
       grade2_collector_10_callout: []
+      grade2_collector_10_2018_callout: []
       grade2_collector_7_callout:
-        grade2_collector_7_1: "如果你需要的话，可以从工具箱里取更多的模块！"
+        grade2_collector_7_1: 如果你需要的话，可以从工具箱里取更多的模块！
       grade2_collector_8_callout: []
       grade2_collector_9_callout: []
       grade2_collector_9a_callout: []
       grade2_collector_A_callout: []
+      grade2_collector_A_2018_callout: []
       grade2_collector_A_predict1_callout: []
+      grade2_collector_A_predict1_2018_callout: []
       grade2_maze_intro10_callout: []
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to
@@ -1539,13 +1670,13 @@
       grade2_maze_intro8_callout: []
       grade2_maze_intro9_callout: []
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: "在这个关卡中，你只能使用一个这样的模块。"
+        grade2_puppy_loops2_callout1: 在这个关卡中，你只能使用一个这样的模块。
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: "紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。"
+        Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1554,31 +1685,31 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: "让我们用这个模块来帮助创建第一个正方形。"
+        grade4_artist_functions1_1: 让我们用这个模块来帮助创建第一个正方形。
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        grade4_artist_funcions2_1: 当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
+        add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: "用“创建圆圈”模块，并且改变大小。"
+        frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: "用重复模块来创建这个形状。"
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: "用重复模块来创建这个形状。"
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: "用重复模块来创建这个形状。"
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
       grade4_frozen_square_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       grade4_frozen_square_loop1_callout:
@@ -1588,12 +1719,12 @@
       grade4_frozen_square_loop3_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1601,14 +1732,14 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade5_artist_functionparameters8_callout:
-        grade5_artist_functionparameters8_1: "你能在这里找到多边形函数。"
+        grade5_artist_functionparameters8_1: 你能在这里找到多边形函数。
       grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: "要完成你的多边形，确保每次都转向360÷`sides`（边长）度。"
+        grade5_artist_functionparameters_6_1: 要完成你的多边形，确保每次都转向360÷`sides`（边长）度。
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
+        add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: 单击 "编辑" 按钮以更改函数内的代码。
       grade5_artist_parameters_stars1_callout:
@@ -1617,53 +1748,53 @@
       grade5_artist_parameters_triangles1_callout:
         grade5_artist_parameters_triangles1_1: 单击 "编辑" 按钮以更改函数内的代码。
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
+        add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "需要更多空间？拉动这条分割线就能让代码区域更宽一些。"
+        Course_4_Artist_Vars_8_a: 需要更多空间？拉动这条分割线就能让代码区域更宽一些。
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: "将长度变量拖拽到这里来替代问号。"
+        place_length_variable: 将长度变量拖拽到这里来替代问号。
       grade5_artist_variables_pentagons12_callout:
-        set_length: "用这个模块来设置“长度”为正确的数值。"
+        set_length: 用这个模块来设置“长度”为正确的数值。
       grade5_artist_variables_square7_callout:
-        degrees_per_side: "用360除以边的数量，从而算出每次转的角度。"
+        degrees_per_side: 用360除以边的数量，从而算出每次转的角度。
       grade5_artist_variables_triangles1_callout:
-        grade5_artist_variables_triangles1_1: "注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！"
+        grade5_artist_variables_triangles1_1: 注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！
       grade5_artist_variables_triangles1_2018_callout:
-        grade5_artist_variables_triangles1_1: "注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！"
+        grade5_artist_variables_triangles1_1: 注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！
       grade5_artist_variables_triangles2_callout:
-        set_length: "用这个模块来设置“长度”为正确的数值。"
+        set_length: 用这个模块来设置“长度”为正确的数值。
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
       grade5_bee_for_loops4_callout: []
       grade5_bee_for_loops6_callout: []
       grade5_bee_parameters_new1_callout:
-        grade5_bee_parameters_new1_a: "你可以在这里找到`如果`语句。"
+        grade5_bee_parameters_new1_a: 你可以在这里找到`如果`语句。
       grade5_bee_parameters_new3_callout:
-        grade5_bee_parameters_new3_1: "同样的函数也能够像检查云一样，检查空地。"
+        grade5_bee_parameters_new3_1: 同样的函数也能够像检查云一样，检查空地。
       grade5_bee_parameters_new4_callout:
         grade5_bee_parameters_new4_1: 点击"编辑"按钮来为函数增加一个参数。
       grade5_playlab_variables1_callout:
-        arrows_move_actor: "使用箭头移动演员"
+        arrows_move_actor: 使用箭头移动演员
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
-        edit_add_parameter: "点击编辑，在你的函数中添加参数"
+        edit_add_parameter: 点击编辑，在你的函数中添加参数
       grade5_playlab_variables1ask_callout:
-        arrows_move_actor: "使用箭头移动演员"
+        arrows_move_actor: 使用箭头移动演员
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: "现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。"
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: "现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。"
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        gradek_adventurer_loops2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        artistLoopsK2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: "你知道在任何时候，都能往回画线吗？"
+        gradek_artist_loops7_1: 你知道在任何时候，都能往回画线吗？
       gradek_playlab_events1c_callout: []
       gradek_playlab_events2c_callout: []
       gradek_playlab_events3c_callout: []
@@ -1671,7 +1802,7 @@
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: 这让你选择一个 "随机" 的声音，这意味着在你听到声音前，不知道你会得到什么!
       harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        courseE_farmer_functions1a_1: 蔬菜类型是未知的。它会在每次运行程序时都改变。
       iceage_click_hello_callout: []
       iceage_click_hello_2018_callout: []
       iceage_free_play_callout: []
@@ -1740,16 +1871,16 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: "点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。"
-        New Play Lab Project_callout2: "点击“运行”来保存并运行程序"
-        sign_in_to_save_project: "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       subgoal U3 L4 introducing subgoal labels_callout: []
       subgoal U3L2 Using Simple Commands_callout: []
       subgoal-test-clone_callout:
         move_subgoal: 这是 "移动龟" 子目标标签。 将它拖到工作区中。
       subgoal-test_callout:
         move_subgoal: 这是 "移动龟" 子目标标签。 将它拖到工作区中。
-        orient_subgoal: "这意味着你想把乌龟转过来。"
+        orient_subgoal: 这意味着你想把乌龟转过来。
       subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
-        testing_code_callout: "这使精灵移动!"
+        testing_code_callout: 这使精灵移动!

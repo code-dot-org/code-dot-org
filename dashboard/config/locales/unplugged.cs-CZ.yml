@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "Úvod do počítačové vědy"
+        title: Úvod do počítačové vědy
         desc: Tato lekce představí koncept informatiky a vysvětlí, co dělá počítačový
           vědec. Také dá studentům možnost zkusit si roli počítačového vědce. Na konci
           lekce každý student shrne to, co se naučil. Možná, že nebudete chtít dětem
@@ -70,11 +70,11 @@
         video: Unplug6
       Unplug7:
         title: Psaní Písně
-        desc: "Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.
-          \ Vezmeme nějakou činnost, která je již všeobecně známo a posuneme ji do
-          solidního vzdělání na definování a volání funkcí. Jakmile se studenti se
-          obeznámí s procesem definování/volání, přidáváme zvláštní schopnosti, které
-          přicházejí spolu s předáváním parametrů do volání těchto funkcí."
+        desc: Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.  Vezmeme
+          nějakou činnost, která je již všeobecně známo a posuneme ji do solidního
+          vzdělání na definování a volání funkcí. Jakmile se studenti se obeznámí
+          s procesem definování/volání, přidáváme zvláštní schopnosti, které přicházejí
+          spolu s předáváním parametrů do volání těchto funkcí.
         pdfs:
         - unplug7
         video: Unplug7
@@ -86,7 +86,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Štafetové Programování"
+        title: Štafetové Programování
         desc: V této lekci vezmeme myšlenku z předchozí aktivity (4. programování
           s milimetrovým papírem) a využití těchto dovednost ke zdůraznění významu
           dokončení programů, které fungují v posloupnosti a často kontrolních programů
@@ -110,7 +110,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "Šťastné mapy"
+        title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
       MoveIt:
@@ -213,7 +213,7 @@
           tuto aktivitu před (nebo spolu s) lekcí abstrakce, aby si se opravdu strefil
           hit do jádra myšlenky.
       MadGlibs:
-        title: "Šílená Glibs hra"
+        title: Šílená Glibs hra
         desc: Abstrakce je jednou z nejdůležitějších dovedností pro počítačového vědce,
           aby pochopil.  Tato aktivita bude mít vaše studenty analýzu příběhů o rozdíly,
           které lze  abstrahovat pryč. Tyto abstrahované příběhy se stávají šablony
@@ -300,7 +300,7 @@
           životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
           na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       courseA_unplugged_happyMaps:
-        title: "Šťastné mapy"
+        title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
       courseA_unplugged_goingPlacesSafely:
@@ -341,7 +341,7 @@
         desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
           příkazů k řízení svých spolužáků k reprodukci výkresu.
       courseD_unplugged_relayProgramming:
-        title: "Štafetové programování"
+        title: Štafetové programování
         desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali
           algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou
           psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat
@@ -482,7 +482,7 @@
           životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
           na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       UnplugHappyMaps_2018:
-        title: "Šťastné mapy"
+        title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
       GoingPlacesSafely_2018:
@@ -497,3 +497,47 @@
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou
           akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
           vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
+      GraphPaperProgramming_2018:
+        title: Programování na milimetrovém papíru
+        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
+          příkazů k řízení svých spolužáků k reprodukci výkresu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Podmínky
+        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
+          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
+          a "Vytáhnu-li černou kartu, dostanu bod."
+      DigitalFootprint_2018:
+        title: Tvé digitální stopy
+        desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
+          vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      BinaryImages_2018:
+        title: Binární obrázky
+        desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky,
+          naše předchozí kurzy učí studenty, že informace lze znázornit v různých
+          binárních volbách.  V této lekci tento koncept posuneme jeden krok dále,
+          jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
+          (např. obrázky a barvy).
+      PaperPlanes_2018:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě,
+          konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
+          obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      GettingLoopy_2018:
+        title: Bláznit
+        desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
+          taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
+          instruováni to opakovat.
+      BinaryBracelets_2018:
+        title: Binární náramky
+        desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich
+          jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
+          jedním způsobem.
+      MoveItMoveIt_2018:
+        title: Pohyb, pohyb
+        desc: ''

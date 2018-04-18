@@ -164,29 +164,29 @@ pt-BR:
         title: Detecção de colisão e o teorema de Pitágoras
         desc: Determinar quando os objetos na tela se tocam é um aspecto importante na maioria dos jogos. Nesta lição, vamos ver como o teorema de Pitágoras e a fórmula da distância podem ser usados para medir a distância entre dois pontos no plano, e então decidir se esses dois pontos (ou personagens do jogo) estão se tocando.
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: Loops off-line
         desc: Nesta aula, você vai aprender mais sobre os laços!
       courseB_unplugged_MRF:
         title: Atividade off-line
         desc: Nesta aula, você vai “programar” os seus amigos!
       courseB_unplugged_loopyMRF:
         title: Atividade off-line
-        desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os teus amigos, mas desta vez com ciclos!
+        desc: Assim como em “Os meus amigos robótidos”, você irá “programar” seus amigos, mas desta vez com loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade off-line
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       courseD_unplugged_digitalCitizenship:
         title: Atividade off-line
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Educação do Senso Comum: Informações privadas e pessoais '
+        desc: Hoje você irá aprender a diferença entre informação privada e pessoal!
       courseF_unplugged_powerOfWords:
         title: Atividade off-line
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'tradução pendente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos da vida real: plante uma semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
@@ -227,7 +227,7 @@ pt-BR:
         title: Imagens binárias
         desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmos da via real: jogo de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso, os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       courseE_unplugged_songwritingParameters:
         title: Composição de música com parâmetros
@@ -254,17 +254,17 @@ pt-BR:
         title: Escrevendo uma canção com parâmetros
         desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  '
       swipeRightPassThrough:
-        title: Recruitment Scenarios Session
+        title: Sessão de cenários de recrutamento
         desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
+        title: Sessão de cenários de recrutamento
         desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ""
         desc: ""
@@ -316,3 +316,33 @@ pt-BR:
       BigEvent_2018:
         title: O grande evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
+      GraphPaperProgramming_2018:
+        title: Programação em Papel Quadriculado
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Atividade off-line
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Atividade off-line
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
+      Conditionals_2018:
+        title: Condições
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      DigitalFootprint_2018:
+        title: Seu rastro digital
+        desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
+      BinaryImages_2018:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da vida real: aviões de papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial.
+      GettingLoopy_2018:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la.
+      BinaryBracelets_2018:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
+      MoveItMoveIt_2018:
+        title: Criando caminhos
+        desc: ''

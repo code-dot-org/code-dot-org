@@ -2,14 +2,14 @@
   devise:
     confirmations:
       confirmed: Thomar email address successfully confirm hoy gatche.
-      send_instructions: "কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে
-        সে সম্পর্কে নির্দেশনা সম্বলিত একটি ইমেইল আপনি পাবেন।"
-      send_paranoid_instructions: "যদি আমাদের ডাটাবেসে আপনার ইমেইল ঠিকানা থাকে, তাহলে
+      send_instructions: কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে
+        সে সম্পর্কে নির্দেশনা সম্বলিত একটি ইমেইল আপনি পাবেন।
+      send_paranoid_instructions: যদি আমাদের ডাটাবেসে আপনার ইমেইল ঠিকানা থাকে, তাহলে
         কয়েক মিনিটের মধ্যে আপনার একাউন্ট কিভাবে নিশ্চিত করতে হবে সে সম্পর্কে নির্দেশনা
-        সম্বলিত একটি ইমেইল পাবেন।"
+        সম্বলিত একটি ইমেইল পাবেন।
     failure:
       already_authenticated: You are already signed in.
-      inactive: "আপনার একাউন্ট এখনও সক্রিয় হয়নি।"
+      inactive: আপনার একাউন্ট এখনও সক্রিয় হয়নি।
       invalid: Invalid email or password.
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
@@ -36,7 +36,7 @@
       send_paranoid_instructions: If your email address exists in our database, you
         will receive a password recovery link at your email address in a few minutes.
       updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: "আপনার পাসওয়ার্ডটি সফলভাবে পরিবর্তন করা হয়েছে।"
+      updated_not_active: আপনার পাসওয়ার্ডটি সফলভাবে পরিবর্তন করা হয়েছে।
     registrations:
       destroyed: Bye! Your account was successfully cancelled. We hope to see you
         again soon.
@@ -66,8 +66,8 @@
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
       expired: has expired, please request a new one
-      not_found: "খুঁজে পাওয়া যায়নি"
-      not_locked: "তালাবদ্ধ ছিল না"
+      not_found: খুঁজে পাওয়া যায়নি
+      not_locked: তালাবদ্ধ ছিল না
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
@@ -78,11 +78,11 @@
       no_invitations_remaining: No invitations remaining
       invitation_removed: Your invitation was removed.
       new:
-        header: "আমন্ত্রণ প্রেরণ করুন"
+        header: আমন্ত্রণ প্রেরণ করুন
         submit_button: Send an invitation
       edit:
         header: Set your password
-        submit_button: "আমার গুপ্ত-সংকেত (পাসওয়ার্ড) নির্ধারণ করুন"
+        submit_button: আমার গুপ্ত-সংকেত (পাসওয়ার্ড) নির্ধারণ করুন
     mailer:
       invitation_instructions:
         subject: Invitation instructions

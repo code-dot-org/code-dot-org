@@ -170,7 +170,7 @@
           Tech na studij računarstva. Isprobajmo naš novi blok "ponavljaj dok".
       2:
         image: notes/hoc3_2.jpg
-        text: "Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?"
+        text: Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?
       3:
         image: notes/hoc3_3.jpg
         text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
@@ -310,8 +310,8 @@
         text: Zdravo ja sam Janete, i ja sam inžinjer u Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: "Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
-          dužina?"
+        text: Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
+          dužina?
       3:
         image: notes/stage15_3.jpg
         text: Možemo napisati sav taj kôd ručno ili možemo koristiti funkciju s parametrima.
@@ -339,10 +339,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: "Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim
-          možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja
-          puteva ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici,
-          svemirskom vozilu ili čak samovozećem automobilu."
+        text: Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim možeš
+          BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja puteva
+          ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici, svemirskom
+          vozilu ili čak samovozećem automobilu.
       2:
         image: notes/hoc6_2.jpg
         text: Osnovni pojmovi koje si koristio/la se nalaze u srcu svake aplikacije
@@ -2908,7 +2908,7 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: "Čestitamo! Upravo ste naučili osnovne elemente računarstva."
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
@@ -2926,7 +2926,7 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: "Čestitamo! Upravo ste naučili osnovne elemente računarstva."
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
@@ -3454,7 +3454,7 @@
           to love it!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: "Čekaj malo - na pruzi ima rupa! (vrištanje)"
+        text: Čekaj malo - na pruzi ima rupa! (vrištanje)
       3:
         image: notes/mc_2017_agent_intro_3.png
         text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a

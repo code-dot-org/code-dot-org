@@ -316,3 +316,33 @@ ko:
       BigEvent_2018:
         title: 큰 이벤트
         desc: 학생들은 컴퓨터가 계속 확인하는 작업인 "이벤트"라는 프로그래밍 개념을 학습하게 된다. 교사가 종이에 그려진 버튼들을 누르면 학생들은 눌려진 버튼에 따라 반응할 것이다.
+      GraphPaperProgramming_2018:
+        title: 모눈종이 프로그래밍
+        desc: 학생들은 미리 정의되어있는 명령들의 집합을 사용하는 알고리즘을 만들어 친구들이 똑같은 그림을 그려낼 수 있도록 하게 된다.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: 언플러그드 활동
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: 언플러그드 활동
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: 조건/선택
+        desc: 학생들은 조건선택 명령문을 학습하기 위해서 카드 게임과 규칙을 만든다. 예를 들어 "빨간 카드를 가져오면 내가 점수를 얻는다"나 "검정 카드를 가져오면 상대방이 점수를 얻는다"등과 같은 규칙이다. 
+      DigitalFootprint_2018:
+        title: 디지털 개인정보 흔적
+        desc: 교사는 학생들에게 온라인에서 자신의 디지털 흔적이 어떻게 만들어져 남고, 나중에 어떻게 되는지와 관련한 이야기들을 소개한다.
+      BinaryImages_2018:
+        title: 2진 이미지
+        desc: 많은 사람들인 2진은 정확히 0과 1들로만 구성된다고 생각하지만, 이전 과정에서 정보가 0과1의 2진 표현으로 다양하게 표현될 수 있다는 것을 배웠습니다. 이번 내용에서는 더 나아가 이미지나 색과 같은 더 복잡한 정보들도 2진 표현으로 표현할 수 있음을 설명합니다. 
+      PaperPlanes_2018:
+        title: '실시간 알고리즘: 종이 비행기'
+        desc: 이 레슨은 일상생활에서 사용하는 알고리즘과 연관된 활동을 하는데, 종이 비행기 접기를 한다. 또한, 컴퓨터과학(정보과학)에서 알고리즘이 어떻게 가장 기초로서 사용되는지에 대한 통찰과 관련된다.
+      GettingLoopy_2018:
+        title: 반복시키기
+        desc: 이 레슨은 춤 활동을 통해서 반복(반복 실행 명령)이라는 프로그래밍 기초 개념을 소개한다. 학생들은 어떤 동작이라는 의미의 안무에 대해서 배울 것이고, 반복적으로 동작을 반복하게 될 것이다.
+      BinaryBracelets_2018:
+        title: 2진 팔찌
+        desc: 학생들은 자신의 이름의 앞글자로 표현되는 2진 팔찌를 만들게 된다. 다양한 방법으로 데이터가 표현되고 저장될 수 있다는 것을 배울 수 있다.
+      MoveItMoveIt_2018:
+        title: 빨리 빨리 움직이자!
+        desc: ''

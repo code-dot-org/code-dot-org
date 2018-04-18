@@ -11,9 +11,9 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        Match the button combination to the dance moves.: "Встанови відповідність
-          між комбінаціями кнопок та танцювальними рухами."
-        Matching: "Зіставлення"
+        Match the button combination to the dance moves.: Встанови відповідність між
+          комбінаціями кнопок та танцювальними рухами.
+        Matching: Зіставлення
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -25,9 +25,9 @@
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
         "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: "Зіставлення"
-        Use the key to match each code to its letter: "Використай ключ, щоб встановити
-          відповідність коду та літери"
+        Matching: Зіставлення
+        Use the key to match each code to its letter: Використай ключ, щоб встановити
+          відповідність коду та літери
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -35,8 +35,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "Встанови відповідність сітки та програми."
-        Matching: "Зіставлення"
+        Match the grid to the program.: Встанови відповідність сітки та програми.
+        Matching: Зіставлення
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -45,10 +45,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "Перетягни блоки для встановлення відповідності."
-        Instructions: "Інструкції"
-        Match the puzzles to the blocks: "Встанови відповідність завдань та блоків"
-        Maze Match: "Лабіринт - встановлення відповідності"
+        Drag the blocks to match.: Перетягни блоки для встановлення відповідності.
+        Instructions: Інструкції
+        Match the puzzles to the blocks: Встанови відповідність завдань та блоків
+        Maze Match: Лабіринт - встановлення відповідності
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -56,8 +56,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "Встанови відповідність сітки та програми"
-        Matching: "Зіставлення"
+        Match the grid to the program: Встанови відповідність сітки та програми
+        Matching: Зіставлення
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -67,8 +67,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "Художник - відповідність - цикли 1"
-        Match the loop to the shape: "Встанови відповідність між циклом та фігурою"
+        Artist Loops Matching One: Художник - відповідність - цикли 1
+        Match the loop to the shape: Встанови відповідність між циклом та фігурою
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -78,9 +78,9 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        Artist Matching: "Художник - відповідність"
-        Match the shape with the blocks that complete it.: "Встанови відповідність
-          між фігурою та блоками, які її завершують."
+        Artist Matching: Художник - відповідність
+        Match the shape with the blocks that complete it.: Встанови відповідність
+          між фігурою та блоками, які її завершують.
       2-3 bounce match 1:
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
@@ -92,9 +92,9 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "Відбивання - відповідність"
-        Match the events with the actions: "Встанови відповідність подій та дій"
-        Matching: "Зіставлення"
+        Bounce Matching: Відбивання - відповідність
+        Match the events with the actions: Встанови відповідність подій та дій
+        Matching: Зіставлення
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -102,9 +102,9 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: "Пурх - відповідність 1"
-        Match the events with the actions: "Встановіть відповідність подій та дій"
-        Matching: "Зіставлення"
+        Flappy Matching One: Пурх - відповідність 1
+        Match the events with the actions: Встановіть відповідність подій та дій
+        Matching: Зіставлення
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -112,8 +112,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "Встановіть відповідність завдань та блоків"
-        Maze Match One: "Лабіринт - відповідність 1"
+        Match the puzzles to the blocks: Встановіть відповідність завдань та блоків
+        Maze Match One: Лабіринт - відповідність 1
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
@@ -125,9 +125,9 @@
           та визначити переможця</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>Гравець 1 кидає кубик</h4>"
         "<h4>Set Player 1 score to 0</h4>": "<h4>Встановити бали гравця 1 в 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "Встанови
-          відповідність між кроками гри в кубики та порядком їх розташування в алгоритмі."
-        Matching: "Зіставлення"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Встанови
+          відповідність між кроками гри в кубики та порядком їх розташування в алгоритмі.
+        Matching: Зіставлення
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -141,10 +141,10 @@
           6</h3>"
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Колеса/сторони: 3<br/>Вікна/сторони:
           2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "Кожен
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Кожен
           із цих автомобілів можна представити у вигляді складових. Встанови відповідність
-          між автомобілем та його складовими."
-        Matching: "Зіставлення"
+          між автомобілем та його складовими.
+        Matching: Зіставлення
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -155,9 +155,9 @@
         "<h4>STACK</h4>": "<h4>STACK</h4>"
         "<h4>STAMP</h4>": "<h4>STAMP</h4>"
         "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: "Встанови
-          відповідність програм та утворених ними слів, використовуючи надані навички."
-        Matching: "Зіставлення"
+        Match each program to the word it makes, using the provided group of skills.: Встанови
+          відповідність програм та утворених ними слів, використовуючи надані навички.
+        Matching: Зіставлення
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -166,10 +166,10 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "Перетягніть блоки для встановлення відповідності."
-        Instructions: "Інструкції"
-        Match the puzzles to the blocks: "Встанови відповідність завдань та блоків"
-        Maze Match: "Лабіринт - встановлення відповідності"
+        Drag the blocks to match.: Перетягніть блоки для встановлення відповідності.
+        Instructions: Інструкції
+        Match the puzzles to the blocks: Встанови відповідність завдань та блоків
+        Maze Match: Лабіринт - встановлення відповідності
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -177,9 +177,9 @@
         "<br/><br/>above": "<br/> <br/> вище"
         "<br/><br/>below": "<br/> <br/> нижче"
         "<br/><br/>next to": "<br/> <br/> поруч"
-        Is the square next to, above, or below the ball?: "Квадрат розміщено поруч,
-          вище чи нижче м'яча?"
-        Matching: "Зіставлення"
+        Is the square next to, above, or below the ball?: Квадрат розміщено поруч,
+          вище чи нижче м'яча?
+        Matching: Зіставлення
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -189,8 +189,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: "Встанови відповідність фігур за типом."
-        Matching: "Зіставлення"
+        Match the shapes based on type.: Встанови відповідність фігур за типом.
+        Matching: Зіставлення
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -200,8 +200,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: "Встанови відповідність фігур за типом."
-        Matching: "Зіставлення"
+        Match the shapes based on type.: Встанови відповідність фігур за типом.
+        Matching: Зіставлення
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -209,9 +209,9 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: "Встанови відповідність коду та сходинок,
-          які малюються."
-        Matching: "Зіставлення"
+        Match the code to the stairs it draws.: Встанови відповідність коду та сходинок,
+          які малюються.
+        Matching: Зіставлення
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -221,8 +221,8 @@
         "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: "Встанови відповідність для блоків"
-        Matching: "Зіставлення"
+        Match the blocks: Встанови відповідність для блоків
+        Matching: Зіставлення
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -231,9 +231,9 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        Match the button combination to the dance moves.: "Встановіть відповідність
-          між комбінаціями кнопок та танцювальними рухами."
-        Matching: "Зіставлення"
+        Match the button combination to the dance moves.: Встановіть відповідність
+          між комбінаціями кнопок та танцювальними рухами.
+        Matching: Зіставлення
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -241,8 +241,8 @@
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: "Встанови відповідність для блоків"
-        Matching: "Зіставлення"
+        Match the blocks: Встанови відповідність для блоків
+        Matching: Зіставлення
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -250,9 +250,9 @@
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Match the Map to the arrow that gets the Flurb to the treasure: "Встанови
-          відповідність карти та стрілок, які доставлять Флурба до скарбу"
-        Matching: "Зіставлення"
+        Match the Map to the arrow that gets the Flurb to the treasure: Встанови відповідність
+          карти та стрілок, які доставлять Флурба до скарбу
+        Matching: Зіставлення
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -263,10 +263,10 @@
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: "Перетягніть блоки для встановлення відповідності."
-        Instructions: "Інструкції"
-        Match the puzzles and blocks: "Встанови відповідність між завданнями і блоками"
-        Matching: "Зіставлення"
+        Drag the blocks to match.: Перетягніть блоки для встановлення відповідності.
+        Instructions: Інструкції
+        Match the puzzles and blocks: Встанови відповідність між завданнями і блоками
+        Matching: Зіставлення
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -274,9 +274,9 @@
         "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
         "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: "Встанови
-          відповідність карти та алгоритму, який доставить Флурба до квітів."
-        Matching: "Зіставлення"
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Встанови
+          відповідність карти та алгоритму, який доставить Флурба до квітів.
+        Matching: Зіставлення
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -287,83 +287,83 @@
         "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
-        Drag the images from right to center.: "Перетягніть зображення справа до центру."
-        Instructions: "Інструкції"
-        Match up all the flowers by colour!: "Встановіть відповідність квітів за кольором!"
-        Matching Images Two: "Відповідність зображень 2"
+        Drag the images from right to center.: Перетягніть зображення справа до центру.
+        Instructions: Інструкції
+        Match up all the flowers by colour!: Встановіть відповідність квітів за кольором!
+        Matching Images Two: Відповідність зображень 2
       test matching text:
-        Matching: "Зіставлення"
-        Some really easy stuff to match.  Drag it around until you get it.: "Деякі
-          відповіді дуже просто зіставити. Просто перетягуйте, поки не отримаєте правильну."
-        Sydney: "Сидней"
-        Van Minnen: "Ван Мінен"
-        What color is the sky?: "Якого кольору небо?"
-        What's Brent's last name?: "Яке прізвище Брента?"
-        What's in the ocean?: "Що в океані?"
-        Where is Brendan from?: "Звідки Брендон?"
-        blue: "синій"
-        salt: "сіль"
+        Matching: Зіставлення
+        Some really easy stuff to match.  Drag it around until you get it.: Деякі
+          відповіді дуже просто зіставити. Просто перетягуйте, поки не отримаєте правильну.
+        Sydney: Сидней
+        Van Minnen: Ван Мінен
+        What color is the sky?: Якого кольору небо?
+        What's Brent's last name?: Яке прізвище Брента?
+        What's in the ocean?: Що в океані?
+        Where is Brendan from?: Звідки Брендон?
+        blue: синій
+        salt: сіль
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: "Вибери алгоритм для поданого
-          зображення."
-        Multiple Choice: "Множинний вибір"
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: "Почни
+        Choose an algorithm for the image provided.: Вибери алгоритм для поданого
+          зображення.
+        Multiple Choice: Множинний вибір
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Почни
           з квадрата<br/>Постав паралелограм над квадратом<br/>Розмісти трикутник
-          праворуч від паралелограма"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "Почни
-          з квадрата<br/>Постав на нього трикутник<br/>Розмісти трикутник під квадратом"
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: "Почни
+          праворуч від паралелограма
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Почни
+          з квадрата<br/>Постав на нього трикутник<br/>Розмісти трикутник під квадратом
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Почни
           з квадрата<br/>Розмісти трикутник під квадратом<br/>Постав паралелограм
-          праворуч від трикутника"
+          праворуч від трикутника
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : "Почніть з квадрат <br/> покласти трикутник праворуч від площі <br/> покласти
-          паралелограм нижче площі <br/> покласти трикутник праворуч від паралелограм"
+        : Почніть з квадрат <br/> покласти трикутник праворуч від площі <br/> покласти
+          паралелограм нижче площі <br/> покласти трикутник праворуч від паралелограм
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "Множинний вибір"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "Почни
+        Multiple Choice: Множинний вибір
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Почни
           з трикутника <br/> Розмісти квадрат під трикутником <br/> Розмісти ще один
-          трикутник під квадратом"
-        Which image does <em>not</em> follow this algorithm?: "Яке зображення <em>не</em>
-          відповідає цьому алгоритму?"
+          трикутник під квадратом
+        Which image does <em>not</em> follow this algorithm?: Яке зображення <em>не</em>
+          відповідає цьому алгоритму?
       2-3 Binary Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "Множинний вибір"
-        Which program makes this image?: "Яка програма зробить це зображення?"
+        Multiple Choice: Множинний вибір
+        Which program makes this image?: Яка програма зробить це зображення?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: "Відповідно
-          до правил гри, для якого набору карт правильно розраховано очки?"
-        Multiple Choice: "Множинний вибір"
+        According to the rules of the game, which set of cards is scored correctly?: Відповідно
+          до правил гри, для якого набору карт правильно розраховано очки?
+        Multiple Choice: Множинний вибір
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "Як можна спростити цю послідовність,
-          використавши цикли?"
-        Multiple Choice: "Множинний вибір"
+        How would you simplify this sequence with loops?: Як можна спростити цю послідовність,
+          використавши цикли?
+        Multiple Choice: Множинний вибір
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "Множинний вибір"
-        Which program makes this image?: "Яка програма зробить це зображення?"
+        Multiple Choice: Множинний вибір
+        Which program makes this image?: Яка програма зробить це зображення?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -371,22 +371,22 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Maze Multiple Choice: "Лабіринт - вибір"
-        Which blocks work?: "Які блоки працюють?"
+        Maze Multiple Choice: Лабіринт - вибір
+        Which blocks work?: Які блоки працюють?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "Множинний вибір"
-        Which program does not create this image?: "Яка програма не створить це зображення?"
+        Multiple Choice: Множинний вибір
+        Which program does not create this image?: Яка програма не створить це зображення?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "Множинний вибір"
-        Which image-program combo does not contain mistakes?: "Яка комбінація зображення
-          та програми не містить помилок?"
+        Multiple Choice: Множинний вибір
+        Which image-program combo does not contain mistakes?: Яка комбінація зображення
+          та програми не містить помилок?
       2-3 artist debug multi 1:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -394,18 +394,18 @@
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Artist Debugging Multiple Choice One: "Художник - відлагодження - вибір 1"
-        Why won't this circle go all the way around?: "Чому це коло не проходить весь
-          шлях?"
+        Artist Debugging Multiple Choice One: Художник - відлагодження - вибір 1
+        Why won't this circle go all the way around?: Чому це коло не проходить весь
+          шлях?
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice One: "Художник - функції- вибір 1"
-        Pick the correct blocks to draw this image using the given functions: "Оберіть
-          правильні блоки, щоб намалювати це зображення, використовуючи подані функції"
+        Artist Functions Multiple Choice One: Художник - функції- вибір 1
+        Pick the correct blocks to draw this image using the given functions: Оберіть
+          правильні блоки, щоб намалювати це зображення, використовуючи подані функції
       2-3 artist loops multi 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
@@ -413,8 +413,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "Художник - цикли - вибір"
-        Which shape is made by this loop?: "Яка фігура утвориться цим циклом?"
+        Artist Loops Multiple Choice: Художник - цикли - вибір
+        Which shape is made by this loop?: Яка фігура утвориться цим циклом?
       2-3 artist loops multi 2:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500"
@@ -422,15 +422,15 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "Художник - цикли - вибір"
-        Which shape is made by this program?: "Яку фігуру утворює ця програма?"
+        Artist Loops Multiple Choice: Художник - цикли - вибір
+        Which shape is made by this program?: Яку фігуру утворює ця програма?
       2-3 bee conditionals multi 1:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "Бджілка - умови - вибір 1"
-        Which comparison below is true?: "Яке порівняння, з поданих нижче, правильне?"
+        Bee Conditionals Multiple Choice One: Бджілка - умови - вибір 1
+        Which comparison below is true?: Яке порівняння, з поданих нижче, правильне?
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
@@ -438,8 +438,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "Бджілка - умови - вибір 2"
-        Choose the best blocks.: "Вибери найкращі блоки."
+        Bee Conditionals Multiple Choice Two: Бджілка - умови - вибір 2
+        Choose the best blocks.: Вибери найкращі блоки.
       2-3 bee conditionals multi 3:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
@@ -447,8 +447,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "Бджола - умови - вибір 2"
-        Choose the best blocks.: "Виберіть найкращі блоки."
+        Bee Conditionals Multiple Choice Two: Бджола - умови - вибір 2
+        Choose the best blocks.: Виберіть найкращі блоки.
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
@@ -456,9 +456,9 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
-        Bee Loops Multiple Choice One: "Бджілка - цикли - вибір 1"
-        Which blocks collect all of the nectar?: "Які блоки допоможуть зібрати увесь
-          нектар?"
+        Bee Loops Multiple Choice One: Бджілка - цикли - вибір 1
+        Which blocks collect all of the nectar?: Які блоки допоможуть зібрати увесь
+          нектар?
       2-3 maze multi 1:
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
@@ -466,64 +466,64 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice One: "Лабіринт множинного вибору 1"
-        Which set of blocks is the correct answer?: "Набір блоків є правильну відповідь?"
+        Maze Multiple Choice One: Лабіринт множинного вибору 1
+        Which set of blocks is the correct answer?: Набір блоків є правильну відповідь?
       4-5 Algorithms Multi 1:
-        Baking cookies: "Випікання печива"
-        Banana: "Банан"
-        Brushing your teeth: "Чищення зубів"
-        Multiple Choice: "Множинний вибір"
-        Shopping from a grocery list: "Купити у відповідності до списку"
-        Which one of these items is hardest to describe an algorithm for?: "Для якого
-          з цих процесів найскладніше описати алгоритм?"
+        Baking cookies: Випікання печива
+        Banana: Банан
+        Brushing your teeth: Чищення зубів
+        Multiple Choice: Множинний вибір
+        Shopping from a grocery list: Купити у відповідності до списку
+        Which one of these items is hardest to describe an algorithm for?: Для якого
+          з цих процесів найскладніше описати алгоритм?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene — _____ місто.
         0: "? Нижче наведено три речення. Який з шаблонів нижче підходить до всіх
           трьох речень?"
         1: ": Нижче наведено три речення. Який з шаблонів нижче підходить до всіх
           трьох речень?"
-        Multiple Choice: "Множинний вибір"
-        Seattle _____ a _____ _____.: "Сіетл _____ це _____ _____."
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: "Сіетл
-          - величезне місто. <br/> Eugene є середні міста <br/> Hillview — місто."
+        Multiple Choice: Множинний вибір
+        Seattle _____ a _____ _____.: Сіетл _____ це _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Сіетл
+          - величезне місто. <br/> Eugene є середні міста <br/> Hillview — місто.
         _____ is _____ a _____.: _____ є _____ за _____.
         _____ is a _____ city.: _____ це _____ місто.
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "Множинний вибір"
-        Which of these pictures best represents crowdsourcing?: "Яке із цих зображень
-          найкраще ілюструє краудсорсинг?"
+        Multiple Choice: Множинний вибір
+        Which of these pictures best represents crowdsourcing?: Яке із цих зображень
+          найкраще ілюструє краудсорсинг?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "Розчесати волосся"
-        Cleaning your room: "Прибрати у кімнаті"
-        Eating your dessert: "З'їсти десерт"
-        Multiple Choice: "Множинний вибір"
-        Washing your face: "Вмитись"
-        Which one of these activities would be best for practicing crowdsourcing?: "Який
-          із цих заходів найкраще використати для краудсорсингу?"
+        Brushing your hair: Розчесати волосся
+        Cleaning your room: Прибрати у кімнаті
+        Eating your dessert: З'їсти десерт
+        Multiple Choice: Множинний вибір
+        Washing your face: Вмитись
+        Which one of these activities would be best for practicing crowdsourcing?: Який
+          із цих заходів найкраще використати для краудсорсингу?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "Множинний вибір"
-        Which piece of information listed below is okay to share on the internet?: "Яку
-          інформацію, з поданої нижче, можна поширювати в Інтернеті?"
-        Your address: "Ваша адреса"
-        Your birthday: "Ваш День народження"
-        Your favorite food: "Ваші улюблені харчі"
-        Your parent's credit card number: "Номер кредитної картки ваших батьків"
+        Multiple Choice: Множинний вибір
+        Which piece of information listed below is okay to share on the internet?: Яку
+          інформацію, з поданої нижче, можна поширювати в Інтернеті?
+        Your address: Ваша адреса
+        Your birthday: Ваш День народження
+        Your favorite food: Ваші улюблені харчі
+        Your parent's credit card number: Номер кредитної картки ваших батьків
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "Множинний вибір"
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "Коли
-          ви заходите на code.org, до якої ІР-адреси Вас найімовірніше скерують?"
+        Multiple Choice: Множинний вибір
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Коли
+          ви заходите на code.org, до якої ІР-адреси Вас найімовірніше скерують?
       4-5 Internet Multi 2:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: DNS
           скерував до ІР-адреси 100.42.50.110, який це сайт?
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -546,19 +546,19 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : "Який найбільший фрагмент пісні можна визначити як приспів, так, щоб цей
-          приспів повторювався точно однаково щоразу, коли його викликають?"
+        : Який найбільший фрагмент пісні можна визначити як приспів, так, щоб цей
+          приспів повторювався точно однаково щоразу, коли його викликають?
       4-5 Suncatchers Multi 1:
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "Множинний вибір"
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: "Які
-          програми нижче <em>не</em> виконують таку ж послідовності, як Програма 1?"
+        Multiple Choice: Множинний вибір
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Які
+          програми нижче <em>не</em> виконують таку ж послідовності, як Програма 1?
       4-5 artist functions multi 1:
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
@@ -566,9 +566,9 @@
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice: "Художник - функції - вибір"
-        Which function creates a rectangle that can change its size?: "Яка функція
-          утворить прямокутник, якому можна змінювати розмір?"
+        Artist Functions Multiple Choice: Художник - функції - вибір
+        Which function creates a rectangle that can change its size?: Яка функція
+          утворить прямокутник, якому можна змінювати розмір?
       4-5 artist loops multi 1:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
@@ -576,32 +576,32 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500"
-        Artist Loops Multiple Choice: "Художник - цикли - вибір"
-        Which blocks will create the design?: "Які блоки створять такий дизайн?"
+        Artist Loops Multiple Choice: Художник - цикли - вибір
+        Which blocks will create the design?: Які блоки створять такий дизайн?
       4-5 artist loops multi 2:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: "Художник - функції - вибір"
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': "Обери
+        Artist Functions Multiple Choice: Художник - функції - вибір
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Обери
           цикл, який створить таку послідовність:  5, 10, 15, 20, 25, 30, 35, 40,
-          45, 50"
+          45, 50'
       4-5 artist multi 1:
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-        Artist Multiple Choice: "Художник - вибір"
-        Which blocks draw a rectangle with a perimeter of 100?: "Які блоки намалюють
-          прямокутник з периметром 100?"
+        Artist Multiple Choice: Художник - вибір
+        Which blocks draw a rectangle with a perimeter of 100?: Які блоки намалюють
+          прямокутник з периметром 100?
       4-5 artist multi 2:
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-        Artist Multiple Choice: "Художник - вибір"
-        Which drawing is symmetric?: "Який малюнок є симетричним?"
+        Artist Multiple Choice: Художник - вибір
+        Which drawing is symmetric?: Який малюнок є симетричним?
       4-5 bee conditionals multi 1:
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
@@ -614,8 +614,8 @@
         1: ": Фіолетова квітка може мати 3, 2 або 1 нектар, але ми не знаємо скільки
           саме. Які блоки правильно перевірять та зберуть весь нектар з фіолетової
           квітки?"
-        Bee Conditionals Multiple Choice: "Бджілка - умови - вибір"
-        Choose the best blocks.: "Вибери найкращі блоки."
+        Bee Conditionals Multiple Choice: Бджілка - умови - вибір
+        Choose the best blocks.: Вибери найкращі блоки.
       4-5 bee debug multi 1:
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
@@ -623,16 +623,16 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: "Бджілка - відлагодження - вибір"
-        Which version of the function will work?: "Яка версія функції буде працювати?"
+        Bee Debug Multiple Choice: Бджілка - відлагодження - вибір
+        Which version of the function will work?: Яка версія функції буде працювати?
       4-5 bee loops multi 1:
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: "Бджілка - цикли -вибір"
-        Which blocks will solve the puzzle?: "Які блоки розв'яжуть задачу?"
+        Bee Loops Multiple Choice: Бджілка - цикли -вибір
+        Which blocks will solve the puzzle?: Які блоки розв'яжуть задачу?
       4-5 farmer loops multi 1:
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
@@ -640,8 +640,8 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "Фермерка - цикли - вибір"
-        Which blocks solve the puzzle?: "Які блоки розв'яжуть задачу?"
+        Famer Loops Multiple Choice: Фермерка - цикли - вибір
+        Which blocks solve the puzzle?: Які блоки розв'яжуть задачу?
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
@@ -649,8 +649,8 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
-        Maze Conditionals Multiple Choice: "Лабіринт - умови - вибір"
-        Which blocks solve the puzzle?: "Які блоки розв'яжуть задачу?"
+        Maze Conditionals Multiple Choice: Лабіринт - умови - вибір
+        Which blocks solve the puzzle?: Які блоки розв'яжуть задачу?
       4-5 maze multi 1:
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
@@ -658,8 +658,8 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice: "Лабіринт - вибір"
-        Which blocks solve the puzzle?: "Які блоки розв'яжуть задачу?"
+        Maze Multiple Choice: Лабіринт - вибір
+        Which blocks solve the puzzle?: Які блоки розв'яжуть задачу?
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -686,8 +686,8 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "Множинний вибір"
-        Which blocks solve this puzzle?: "Які блоки розв'яжуть задачу?"
+        Multiple Choice: Множинний вибір
+        Which blocks solve this puzzle?: Які блоки розв'яжуть задачу?
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
@@ -695,8 +695,8 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "Множинний вибір"
-        Which blocks draw the square?: "Які блоки намалюють квадрат?"
+        Multiple Choice: Множинний вибір
+        Which blocks draw the square?: Які блоки намалюють квадрат?
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
         "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
@@ -704,8 +704,8 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "Множинний вибір"
-        Which shape do these squares combine to make?: "Яку фігуру утворюють ці квадрати?"
+        Multiple Choice: Множинний вибір
+        Which shape do these squares combine to make?: Яку фігуру утворюють ці квадрати?
       K-1 Artist Loops Multi 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
@@ -713,56 +713,56 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "Множинний вибір"
-        Which blocks create this picture?: "Які блоки утворюють це зображення?"
+        Multiple Choice: Множинний вибір
+        Which blocks create this picture?: Які блоки утворюють це зображення?
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "Скільки тут нектару?"
-        Multiple Choice: "Множинний вибір"
+        How many nectars is this?: Скільки тут нектару?
+        Multiple Choice: Множинний вибір
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "Скільки тут нектару?"
-        Multiple Choice: "Множинний вибір"
+        How many nectars is this?: Скільки тут нектару?
+        Multiple Choice: Множинний вибір
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "Множинний вибір"
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: "Яка
-          тварина залишила цифровий слід, який піддає <strong>найбільшій небезпеці</strong>?"
+        Multiple Choice: Множинний вибір
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Яка
+          тварина залишила цифровий слід, який піддає <strong>найбільшій небезпеці</strong>?
       K-1 Getting Loopy Multi 1:
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "Як можна спростити цю послідовність,
-          використавши цикли?"
-        Multiple Choice: "Множинний вибір"
+        How would you simplify this sequence with loops?: Як можна спростити цю послідовність,
+          використавши цикли?
+        Multiple Choice: Множинний вибір
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "Множинний вибір"
-        Which arrow gets the Flurb to the treasure?: "Яка стрілка скерує Флурба до
-          скарбу?"
+        Multiple Choice: Множинний вибір
+        Which arrow gets the Flurb to the treasure?: Яка стрілка скерує Флурба до
+          скарбу?
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "Множинний вибір"
-        Which information should you <strong>not</strong> share online?: "Яку інформацію
-          <strong>не</strong> можна поширювати в Інтернеті?"
+        Multiple Choice: Множинний вибір
+        Which information should you <strong>not</strong> share online?: Яку інформацію
+          <strong>не</strong> можна поширювати в Інтернеті?
       K-1 Maze Debugging Multi 1:
         "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
           700"
@@ -770,15 +770,15 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "Множинний вибір"
-        Which choice should be the final block?: "Яким повинен бути останній блок?"
+        Multiple Choice: Множинний вибір
+        Which choice should be the final block?: Яким повинен бути останній блок?
       K-1 Maze Loops Multi 1:
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
           300"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         Which repeat block is the same?: Які блоки "повторити" є однаковими?
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
@@ -786,8 +786,8 @@
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "Множинний вибір"
-        Pick the correct repeat block.: "Обери правильний блок циклу."
+        Multiple Choice: Множинний вибір
+        Pick the correct repeat block.: Обери правильний блок циклу.
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
           500"
@@ -795,40 +795,40 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "Лабіринт"
-        Which answer solves this level?: "Яке питання розв'яже цей рівень?"
+        Maze: Лабіринт
+        Which answer solves this level?: Яке питання розв'яже цей рівень?
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
         "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "Множинний вибір"
-        Which algorithm gets the Flurb to the flowers?: "Який алгоритм доставить Флурба
-          до квітів?"
+        Multiple Choice: Множинний вибір
+        Which algorithm gets the Flurb to the flowers?: Який алгоритм доставить Флурба
+          до квітів?
       K-1 Plant a Seed Multi 1:
         "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "Множинний вибір"
-        Which step should go at the beginning of this algorithm?: "Який крок повинен
-          бути на початку цього алгоритму?"
+        Multiple Choice: Множинний вибір
+        Which step should go at the beginning of this algorithm?: Який крок повинен
+          бути на початку цього алгоритму?
       K-1 Plant a Seed Multi 2:
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "Множинний вибір"
-        Which step should fill in the blank for this algorithm?: "Яким кроком потрібно
-          заповнити пропуск у цьому алгоритмі?"
+        Multiple Choice: Множинний вибір
+        Which step should fill in the blank for this algorithm?: Яким кроком потрібно
+          заповнити пропуск у цьому алгоритмі?
       K-1 Word Search Multi 1:
         "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
         "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         Which blocks spell "MOVE"?: Які блоки напишуть "MOVE" (РУХАТИСЬ)?
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
@@ -836,33 +836,33 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         Which blocks spell "JUMP"?: Які блоки напишуть "JUMP" (СТРИБАТИ)?
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "Множинний вибір"
+        Multiple Choice: Множинний вибір
         SET: SET (ВСТАНОВИТИ)
         SOUTH: SOUTH (ПІВДЕНЬ)
         SQUARE: SQUARE (КВАДРАТ)
-        Which word is spelled?: "Яке написано слово?"
+        Which word is spelled?: Яке написано слово?
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "Водій та помічник"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Один
-          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>."
-        Which boy is the <large>helper</large>?: "Який хлопчик <large>помічник</large>?"
+        Driver and Helper: Водій та помічник
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Один
+          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>.
+        Which boy is the <large>helper</large>?: Який хлопчик <large>помічник</large>?
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "Водій та помічник"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Один
-          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>."
-        This time, which boy is the <large>driver</large>?: "На цей раз, який хлопчик
-          <large>водій</large>?"
+        Driver and Helper: Водій та помічник
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Один
+          із цих хлопчиків <b>водій</b>. Інший - <b>помічник</b>.
+        This time, which boy is the <large>driver</large>?: На цей раз, який хлопчик
+          <large>водій</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
@@ -883,14 +883,14 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "випадковий"
+        random: випадковий
         top, left, right: top, left, right
       test multi text:
-        Fred Flintstone: "Фред Флінстоун"
-        George Jetson: "Джордж Джетсон"
-        George Washington: "Джордж Вашингтон"
-        Martha Washington: "Марта Вашингтон"
-        Presidents: "Президенти"
-        This multiple choice is all about the presidents of the United States.: "Цей
-          тест з множинними відповідями про президентів Сполучених Штатів."
-        Who was the first president of the USA?: "Хто був першим президентом США?"
+        Fred Flintstone: Фред Флінстоун
+        George Jetson: Джордж Джетсон
+        George Washington: Джордж Вашингтон
+        Martha Washington: Марта Вашингтон
+        Presidents: Президенти
+        This multiple choice is all about the presidents of the United States.: Цей
+          тест з множинними відповідями про президентів Сполучених Штатів.
+        Who was the first president of the USA?: Хто був першим президентом США?

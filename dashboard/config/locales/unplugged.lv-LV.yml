@@ -3,12 +3,12 @@
     unplugged:
       Unplug1:
         title: Ievads datorzinātnēs
-        desc: "Šī nodarbība iepazīstinās Jūs ar datorzinātnes jēdzienu un izskaidros
+        desc: Šī nodarbība iepazīstinās Jūs ar datorzinātnes jēdzienu un izskaidros
           ar ko nodarbojas datorspeciālisti. Tā arī sniegs izglītojamajam iespēju
           uzņemties datorspeciālista lomu. Pēc dalības šajā nodarbībā, katrs izglītojamais
           paturēs atmiņā to, ko viņš būs iemācījies. Jums var rasties kārdinājums
           izlaist terminu apgūšanu mazākiem bērniem, bet pasniegt tos jautrā un rotaļīgā
-          gaisotnē ir labāk nekā atlikt to uz vēlāku laiku."
+          gaisotnē ir labāk nekā atlikt to uz vēlāku laiku.
         pdfs:
         - unplug1
         video: Unplug1
@@ -38,17 +38,17 @@
         video: Unplug3
       Unplug4:
         title: Algoritmi
-        desc: "Šī mācību stunda aptver algoritmus. Izmantojot Tangrama figūras un
-          rūtiņu paoīru, pirmais uzdevums parādīs, cik svarīgi katru instrukciju padarīt
+        desc: Šī mācību stunda aptver algoritmus. Izmantojot Tangrama figūras un rūtiņu
+          paoīru, pirmais uzdevums parādīs, cik svarīgi katru instrukciju padarīt
           pēc iespējas skaidrāku un nepārprotamāku. Pēc tam klase pētīs, cik veidos
           var izlocīt no papīra taisnstūri, ievērojot, ka dažām metodēm nepieciešams
-          mazāk locījumu kā citām."
+          mazāk locījumu kā citām.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Funkcijas
-        desc: "Šajā nodarbībā skolēni izveidos saules ķērāju no auklas, pērlītēm un
+        desc: Šajā nodarbībā skolēni izveidos saules ķērāju no auklas, pērlītēm un
           īpaša piekariņa. Skolēniem būs jāveic atkārtotas darbības, pēc tam jānosaka
           tādu iemaņu kopumu, kas procesā izmantots vairākas reizes. Kad šīs iemaņas
           ir noteiktas, tās tiks izsauktas no galvenās programmas un viss skaistais
@@ -56,15 +56,15 @@
           uz visu klases, neatkarīgi no auklu, pērlīšu un piekariņu veidiem. Skolēniem
           vajadzēs vispārināt viņu specifisko materiālu detaļas un izdomāt plašākus
           jēdzienus saviem materiāliem. Vispārīgo jēdzienu izmantošana ir lielisks
-          ievads par mainīgajiem."
+          ievads par mainīgajiem.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: Apstākļi
-        desc: "Šī ir spēle klasei. Pēc kondicionāļu, IF-nosacījumu un ciklu idejas
+        desc: Šī ir spēle klasei. Pēc kondicionāļu, IF-nosacījumu un ciklu idejas
           iepazīstināšanas, klase var vingrināties, lietojot iepriekš uzrakstītas
-          programmas, kāršu kavu un veiksmīgu dalījumu."
+          programmas, kāršu kavu un veiksmīgu dalījumu.
         pdfs:
         - unplug6
         video: Unplug6
@@ -79,17 +79,17 @@
         video: Unplug7
       Unplug8:
         title: Abstrakcija
-        desc: "Šī aktivitāte apvieno Tavu skolēna ikdienas rutīnu ar unikālu domāšanu,
-          lai palīdzētu apgūt abstrakcijas efektivitāti Tavā klasē."
+        desc: Šī aktivitāte apvieno Tavu skolēna ikdienas rutīnu ar unikālu domāšanu,
+          lai palīdzētu apgūt abstrakcijas efektivitāti Tavā klasē.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
         title: Releju programmēšana
-        desc: "Šī nodarbība ir balstīta uz iepriekšējās aktivitātes, (4. Programmēšana
+        desc: Šī nodarbība ir balstīta uz iepriekšējās aktivitātes, (4. Programmēšana
           uz Milimetrpapīra) un tajā tiks lietotas iepriekš gūtās zināšanas, lai uzsvērtu
           nozīmīgumu pabeigt līdz galam programmas, kas darbojas secīgi un pastāvīgi
-          pārbaudīt programmas kļūdas."
+          pārbaudīt programmas kļūdas.
         pdfs:
         - unplug9
         video: Unplug9
@@ -118,9 +118,9 @@
           tēlu labirintā, lietojot vienu komandu.
       PlantASeed:
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
-        desc: "Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru
-          rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz
-          lielāku priekšstatu par datorzinātnēm kā kopumu."
+        desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
+          sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz lielāku
+          priekšstatu par datorzinātnēm kā kopumu.
       BuildingAFoundation:
         title: Veidot pamatus
         desc: Skolēni veido struktūras, lietojot tikai sniegtos materiālus. Ir nepieciešams
@@ -129,13 +129,13 @@
           sarežģītāki.
       GettingLoopy:
         title: Kļūst ciklisks
-        desc: "Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
           deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
-          norādījumus to atkārtot."
+          norādījumus to atkārtot.
       RelayProgramming:
         title: Releju programmēšana
-        desc: "Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts
-          uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš."
+        desc: Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts
+          uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš.
       Conditionals:
         title: Sazarojumi
         desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
@@ -156,9 +156,9 @@
           lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
       PaperPlanes:
         title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
-        desc: "Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
+        desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
           šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
-          kopējo ainu un kādu lomu tajā spēlē algoritmi."
+          kopējo ainu un kādu lomu tajā spēlē algoritmi.
       BinaryBracelets:
         title: Binārās aproces
         desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
@@ -182,8 +182,8 @@
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       DiceRace:
         title: 'Algoritmi dzīvē: Metamo kauliņu sacīkstes'
-        desc: "Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
-          algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē."
+        desc: Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
+          algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē.
       Internet:
         title: Internets
         desc: Skolēni sūta ziņojumus, pārstāvot dažādas pārraides metodes, lietojot
@@ -199,9 +199,9 @@
           ko ir un ko nav droši publicēt tiešsaistē.
       TangramAlgorithms:
         title: Tangram Algoritms
-        desc: "Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
+        desc: Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
           ir vienkāršs, tad ir daudz iespēju to izmantot. Ja vēlies, ka visi izdara
-          vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam."
+          vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam.
       EnvelopeVariables:
         title: Aplokšņu mainīgie
         desc: Mainīgie datorzinātnēs sniedz lielu brīvību. Šī nodarbība palīdz izskaidrot
@@ -276,9 +276,9 @@
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
-        desc: "Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru
-          rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz
-          lielāku priekšstatu par datorzinātnēm kā kopumu."
+        desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
+          sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz lielāku
+          priekšstatu par datorzinātnēm kā kopumu.
       courseA_unplugged_happyMaps:
         title: Laimīgās kartes
         desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
@@ -304,14 +304,14 @@
           sarežģītāki.
       courseC_unplugged_paperPlanes:
         title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
-        desc: "Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
+        desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
           šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
-          kopējo ainu un kādu lomu tajā spēlē algoritmi."
+          kopējo ainu un kādu lomu tajā spēlē algoritmi.
       courseC_unplugged_gettingLoopy:
         title: Kļūst ciklisks
-        desc: "Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
           deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
-          norādījumus to atkārtot."
+          norādījumus to atkārtot.
       courseC_unplugged_binaryBracelets:
         title: Binārās aproces
         desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
@@ -322,8 +322,8 @@
           lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
       courseD_unplugged_relayProgramming:
         title: Releju programmēšana
-        desc: "Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts
-          uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš."
+        desc: Šajā stafetē skolēni raksta algortimu uz milimetru papīra. Ir atļauts
+          uzzīmēt tikai vienu instrukciju, un ja ir kļūda, tad viss līdz tai ir jānodzēš.
       courseD_unplugged_conditionalsCards:
         title: nosacījumi ar kārtēm
         desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
@@ -338,8 +338,8 @@
           kodā.
       courseE_unplugged_diceRace:
         title: 'Real-Life Algorithms: Dice Race'
-        desc: "Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
-          algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē."
+        desc: Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
+          algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē.
       courseE_unplugged_songwritingParameters:
         title: Dziesmu rakstīšana ar Parametriem
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
@@ -359,9 +359,9 @@
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       courseF_unplugged_tangrams:
         title: Tangram Algoritms
-        desc: "Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
+        desc: Šajā nodarbībā ir pateikts kas svarīgs par algoritmiem. Ja algoritms
           ir vienkāršs, tad ir daudz iespēju to izmantot. Ja vēlies, ka visi izdara
-          vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam."
+          vienu un to pašu, algoritmam jābūt pēc iespējas precīzākam.
       courseF_unplugged_envelopeVariables:
         title: Aplokšņu mainīgie
         desc: Mainīgie datorzinātnēs sniedz lielu brīvību. Šī nodarbība palīdz izskaidrot
@@ -454,9 +454,9 @@
         desc: ''
       PlantASeed_2018:
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
-        desc: "Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru
-          rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz
-          lielāku priekšstatu par datorzinātnēm kā kopumu."
+        desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
+          sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz lielāku
+          priekšstatu par datorzinātnēm kā kopumu.
       UnplugHappyMaps_2018:
         title: Laimīgās kartes
         desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
@@ -473,3 +473,46 @@
         desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event),
           kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas
           uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.
+      GraphPaperProgramming_2018:
+        title: Rūtiņpapīra programmēšana
+        desc: Skolēni raksta algoritmu (darbību secību), izmantojot noteiktas komandas,
+          lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Atvienota aktivitāte
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Atvienota aktivitāte
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sazarojumi
+        desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
+          un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu
+          punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."
+      DigitalFootprint_2018:
+        title: Tavs digitālais nospiedums
+        desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam
+          tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.
+      BinaryImages_2018:
+        title: Binārie Attēli
+        desc: Lai arī daudzi domā par bināro kodu tikai kā par vieniniekiem un nullītēm,
+          mūsu iepriekšējās nodarbības iemācīja skolēniem to, ka informācija var tikt
+          bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī
+          sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
+          kodā.
+      PaperPlanes_2018:
+        title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+        desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
+          šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
+          kopējo ainu un kādu lomu tajā spēlē algoritmi.
+      GettingLoopy_2018:
+        title: Kļūst ciklisks
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+          deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
+          norādījumus to atkārtot.
+      BinaryBracelets_2018:
+        title: Binārās aproces
+        desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
+          apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
+      MoveItMoveIt_2018:
+        title: Ej, ej
+        desc: ''

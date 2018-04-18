@@ -316,3 +316,33 @@ et:
       BigEvent_2018:
         title: Suursündmus
         desc: Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused, mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.
+      GraphPaperProgramming_2018:
+        title: Millimeetripaberi programmeerimine
+        desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida tähendab olla digitaalne kodanik.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida teha, kui keegi on internetis pahatahtlik.
+      Conditionals_2018:
+        title: Tingimuslaused
+        desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'
+      DigitalFootprint_2018:
+        title: Sinu digitaalne jalajälg
+        desc: Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.
+      BinaryImages_2018:
+        title: Binaarsed pildid
+        desc: Kuigi paljude inimeste jaoks on binaarandmed kõigest nullid ja ühed, õppisid õpilased eelmistel kursustel, et teavet saab esitada mitmel binaarsel kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse, kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks pilte ja värve).
+      PaperPlanes_2018:
+        title: 'Päris elu algoritmid: paberlennukid'
+        desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      GettingLoopy_2018:
+        title: Muutub tsükliliseks
+        desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste) programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad peavad siis kordama.
+      BinaryBracelets_2018:
+        title: Binaarsed käevõrud
+        desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul. Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
+      MoveItMoveIt_2018:
+        title: Liiguta, liiguta
+        desc: ''

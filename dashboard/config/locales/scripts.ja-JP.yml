@@ -3,243 +3,243 @@
     script:
       name:
         course1:
-          title: "コース1"
-          description: "コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
-            1 年生 (5-7才) におすすめのコースです。"
-          description_short: "コース１は初心者向けです。"
+          title: コース1
+          description: コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
+            1 年生 (5-7才) におすすめのコースです。
+          description_short: コース１は初心者向けです。
           description_audience: 4-6 才
           stages:
             'Artist: Loops':
-              name: "アーティスト：ループ"
+              name: アーティスト：ループ
             'Artist: Sequence':
-              name: "アーティスト: シーケンス"
+              name: 'アーティスト: シーケンス'
             'Artist: Shapes':
-              name: "アーティスト：いろいろなかたち"
+              name: アーティスト：いろいろなかたち
             'Bee: Loops':
-              name: "みつばち: ループ"
+              name: 'みつばち: ループ'
             'Bee: Sequence':
-              name: "みつばち: シーケンス"
+              name: 'みつばち: シーケンス'
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Getting Loopy:
               name: Getting Loopy
             Going Places Safely:
-              name: "安全な道を通って行く"
+              name: 安全な道を通って行く
             Happy Maps:
-              name: "ハッピーマップ"
+              name: ハッピーマップ
             'Jigsaw: Learn to drag and drop':
-              name: "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
+              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
             'Maze: Debugging':
-              name: "迷路: デバッグ"
+              name: '迷路: デバッグ'
             'Maze: Loops':
-              name: "迷路: ループ"
+              name: '迷路: ループ'
             'Maze: Sequence':
-              name: "迷路: シーケンス"
+              name: '迷路: シーケンス'
             Move it, Move it:
-              name: "動かせ！動かせ！"
+              name: 動かせ！動かせ！
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             Spelling Bee:
-              name: "つづりみつばち"
+              name: つづりみつばち
             'Studio: Create a Story':
-              name: "プレイラボ：お話を作りましょう"
+              name: プレイラボ：お話を作りましょう
             The Big Event:
               name: The Big Event
         course2:
-          title: "コース2"
-          description: "コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。"
-          description_short: "コース2は読み書きができる生徒のためのコースです。"
+          title: コース2
+          description: コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。
+          description_short: コース2は読み書きができる生徒のためのコースです。
           description_audience: 6才以上(読み書きができる)
           stages:
             'Artist: Debugging':
-              name: "アーティスト：デバッグ"
+              name: アーティスト：デバッグ
             'Artist: Loops':
-              name: "アーティスト：ループ"
+              name: アーティスト：ループ
             'Artist: Nested Loops':
-              name: "アーティスト：入れ子のループ"
+              name: アーティスト：入れ子のループ
             'Artist: Sequence':
-              name: "アーティスト: シーケンス"
+              name: 'アーティスト: シーケンス'
             'Bee: Conditionals':
-              name: "みつばち：条件文（じょうけんぶん）"
+              name: みつばち：条件文（じょうけんぶん）
             'Bee: Debugging':
-              name: "みつばち: デバッグ"
+              name: 'みつばち: デバッグ'
             'Bee: Loops':
-              name: "みつばち: ループ"
+              name: 'みつばち: ループ'
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             Conditionals:
-              name: "条件"
+              name: 条件
             Flappy:
-              name: "フラッピー"
+              name: フラッピー
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: "プログラミングのグラフ用紙"
+              name: プログラミングのグラフ用紙
             'Maze: Loops':
-              name: "迷路: ループ"
+              name: '迷路: ループ'
             'Maze: Sequence':
-              name: "迷路: シーケンス"
+              name: '迷路: シーケンス'
             'Real-life Algorithms: Paper Planes':
-              name: "現実世界のアルゴリズム: 紙飛行機を作る場合"
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
             Relay programming:
-              name: "リレー プログラミング"
+              name: リレー プログラミング
             'Studio: Create a Story':
-              name: "プレイラボ：お話を作りましょう"
+              name: プレイラボ：お話を作りましょう
             The Big Event:
               name: The Big Event
             Your Digital Footprint:
-              name: "あなたのデジタルフットプリント"
+              name: あなたのデジタルフットプリント
         course3:
-          title: "コース3"
-          description: "コース3は、コース2を終えた生徒向けに作られています。生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
-          description_short: "コース3はコース２をがくしゅうした人のためのコースです。"
+          title: コース3
+          description: コース3は、コース2を終えた生徒向けに作られています。生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
+          description_short: コース3はコース２をがくしゅうした人のためのコースです。
           description_audience: 8-18 才
           stages:
             Artist:
-              name: "アーティスト"
+              name: アーティスト
             'Artist: Functions':
-              name: "アーティスト：関数"
+              name: アーティスト：関数
             'Artist: Nested Loops':
-              name: "アーティスト：入れ子のループ"
+              name: アーティスト：入れ子のループ
             'Artist: Patterns':
-              name: "アーティスト：法則（ほうそく）"
+              name: アーティスト：法則（ほうそく）
             'Bee: Conditionals':
-              name: "みつばち：条件文（じょうけんぶん）"
+              name: みつばち：条件文（じょうけんぶん）
             'Bee: Debugging':
-              name: "みつばち: デバッグ"
+              name: 'みつばち: デバッグ'
             'Bee: Functions':
-              name: "みつばち: 関数"
+              name: 'みつばち: 関数'
             'Bee: Nested Loops':
-              name: "みつばち：入れ子のループ"
+              name: みつばち：入れ子のループ
             Bounce:
-              name: "はずむ"
+              name: はずむ
             Computational Thinking:
-              name: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+              name: コンピュテーショナル・シンキング（コンピューターの様に考える）
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
             Dice Race:
-              name: "言うレース"
+              name: 言うレース
             Digital Citizenship:
               name: Digital Citizenship
             'Farmer: While Loops':
-              name: "農夫: While Loops"
+              name: '農夫: While Loops'
             Functional Suncatchers:
               name: Functional Suncatchers
             Internet:
-              name: "インターネット"
+              name: インターネット
             Maze:
-              name: "迷路"
+              name: 迷路
             'Maze: Conditionals':
-              name: "迷路：条件文"
+              name: 迷路：条件文
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
-              name: "プレイラボ：ゲームを作りましょう"
+              name: プレイラボ：ゲームを作りましょう
             'Studio: Create a Story':
-              name: "プレイラボ：お話を作りましょう"
+              name: プレイラボ：お話を作りましょう
         playlab:
-          title: "プレイラボ"
-          description: "プレイラボでお話やゲームを作りましょう！"
-          description_short: "プレイラボでお話やゲームを作りましょう！"
+          title: プレイラボ
+          description: プレイラボでお話やゲームを作りましょう！
+          description_short: プレイラボでお話やゲームを作りましょう！
           stages:
             Play Lab:
-              name: "プレイラボ"
+              name: プレイラボ
         artist:
-          title: "アーティスト"
-          description: "アーティストでかっこいい絵やデザインを描きましょう！"
-          description_short: "アーティストでかっこいい絵やデザインを描きましょう！"
+          title: アーティスト
+          description: アーティストでかっこいい絵やデザインを描きましょう！
+          description_short: アーティストでかっこいい絵やデザインを描きましょう！
           stages:
             Artist:
-              name: "アーティスト"
+              name: アーティスト
         hourofcode:
-          title: "古典的な迷路"
-          description: "アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！"
-          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
+          title: 古典的な迷路
+          description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           stages:
             Maze:
-              name: "迷路"
+              name: 迷路
           description_audience: ''
         frozen:
-          title: "アナとエルサとコードを書く"
-          description: "コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！"
-          description_short: "コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう"
+          title: アナとエルサとコードを書く
+          description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
+          description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
           stages:
             Artist:
-              name: "アーティスト"
+              name: アーティスト
         course4:
-          title: "コース4"
-          description: "コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。"
-          description_short: "コース4を始める前に、コース2とコース3を終わらせてください。"
+          title: コース4
+          description: コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。
+          description_short: コース4を始める前に、コース2とコース3を終わらせてください。
           description_audience: 9-18 才
           stages:
             Artist:
-              name: "アーティスト"
+              name: アーティスト
             Artist Binary:
-              name: "アーティスト：バイナリ"
+              name: アーティスト：バイナリ
             'Artist: For Loops':
-              name: "アーティスト：ループ"
+              name: アーティスト：ループ
             'Artist: Functions':
-              name: "アーティスト：関数"
+              name: アーティスト：関数
             'Artist: Functions with Parameters':
-              name: "アーティスト：関数とパラメータ"
+              name: アーティスト：関数とパラメータ
             'Artist: Variables':
-              name: "アーティスト：変数（へんすう）"
+              name: アーティスト：変数（へんすう）
             'Bee: For Loops':
-              name: "みつばち：ループ"
+              name: みつばち：ループ
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター付き関数"
+              name: みつばち：パラメーター付き関数
             Extreme Challenge - Comprehensive:
-              name: "エクストリーム チャレンジ - 総合"
+              name: エクストリーム チャレンジ - 総合
             Maze and Bee:
-              name: "迷路とみつばち"
+              name: 迷路とみつばち
             'Play Lab: For Loops':
-              name: "プレイラボ：ループ"
+              name: プレイラボ：ループ
             'Play Lab: Functions with Parameters':
-              name: "プレイラボ：関数とパラメータ"
+              name: プレイラボ：関数とパラメータ
             'Play Lab: Variables':
-              name: "プレイラボ：変数"
+              name: プレイラボ：変数
             Super Challenge - For Loops:
-              name: "スーパー チャレンジ - ループ"
+              name: スーパー チャレンジ - ループ
             Super Challenge - Functions and Parameters:
-              name: "スーパー チャレンジ - 関数とパラメーター"
+              name: スーパー チャレンジ - 関数とパラメーター
             Super Challenge - Variables:
-              name: "スーパー チャレンジ - 変数"
+              name: スーパー チャレンジ - 変数
             'Unplugged: Binary':
-              name: "アンプラグド: バイナリ"
+              name: 'アンプラグド: バイナリ'
             'Unplugged: Envelope Variables':
-              name: "アンプラグド: 変数"
+              name: 'アンプラグド: 変数'
             'Unplugged: For Loop Fun':
-              name: "アンプラグド：ループ"
+              name: アンプラグド：ループ
             'Unplugged: Madlibs':
-              name: "アンプラグド: マドリブス"
+              name: 'アンプラグド: マドリブス'
             'Unplugged: Songwriting with Parameters':
-              name: "アンプラグド: 作曲"
+              name: 'アンプラグド: 作曲'
             'Unplugged: Tangrams':
-              name: "アンプラグド: タングラム"
+              name: 'アンプラグド: タングラム'
         Course4pre:
-          title: "コース 4 を始める前に"
-          description: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
-          description_short: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
+          title: コース 4 を始める前に
+          description: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
+          description_short: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: "アーティスト：関数"
+              name: アーティスト：関数
             'Artist: Loops':
-              name: "アーティスト：ループ"
+              name: アーティスト：ループ
             'Artist: Nested Loops':
-              name: "アーティスト：入れ子のループ"
+              name: アーティスト：入れ子のループ
             'Artist: Sequence':
-              name: "アーティスト: シーケンス"
+              name: 'アーティスト: シーケンス'
             'Bee: Conditionals':
-              name: "みつばち：条件文（じょうけんぶん）"
+              name: みつばち：条件文（じょうけんぶん）
             'Bee: Debugging':
-              name: "みつばち: デバッグ"
+              name: 'みつばち: デバッグ'
             'Bee: Nested Loops':
-              name: "みつばち：入れ子のループ"
+              name: みつばち：入れ子のループ
             'Farmer: While Loops':
-              name: "農夫: While Loops"
+              name: '農夫: While Loops'
             'Maze: Sequence':
-              name: "迷路: シーケンス"
+              name: '迷路: シーケンス'
         usability:
           title: Usability Testing
           description: A selection of Course 4 levels for usability testing.
@@ -247,15 +247,15 @@
           description_audience: ''
           stages:
             Binary:
-              name: "２しんすう"
+              name: ２しんすう
             For Loops:
-              name: "ループ用"
+              name: ループ用
             Functions and Functions with Parameters:
               name: Functions and Functions with Parameters
             Intro:
-              name: "イントロ"
+              name: イントロ
             Variables:
-              name: "変数"
+              name: 変数
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra.
@@ -269,7 +269,7 @@
             'Eval: Boolean Operators':
               name: Boolean Operators
             'Eval: Conditionals':
-              name: "条件"
+              name: 条件
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
@@ -304,12 +304,11 @@
               name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
           title: Play Lab
-          description: "プレイラボでお話やゲームを作りましょう！"
-          description_short: "プレイラボでお話やゲームを作りましょう！"
+          description: プレイラボでお話やゲームを作りましょう！
+          description_short: プレイラボでお話やゲームを作りましょう！
           stages:
             Infinity:
-              name: |
-                無限
+              name: インフィニティ
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming
@@ -352,13 +351,13 @@
             Reflection:
               name: Reflection
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Unplugged lessons:
               name: Unplugged lessons
             Writing computer programs:
               name: Writing computer programs
         netsim:
-          title: "インターネット シミュレータ"
+          title: インターネット シミュレータ
           description: Learn about how the Internet works.
           description_short: Learn about how the Internet works.
           description_audience: ''
@@ -400,56 +399,56 @@
             Color Pixelation Tutorial:
               name: Color Pixelation Tutorial
         20-hour:
-          title: "コンピュータサイエンスコース （15-25 時間）の入門編"
-          description: "この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。"
+          title: コンピュータサイエンスコース （15-25 時間）の入門編
+          description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           description_audience: 10-18 才
           stages:
             Abstraction:
-              name: "抽象化"
+              name: 抽象化
             Algorithms:
-              name: "アルゴリズム"
+              name: アルゴリズム
             Computational Thinking:
-              name: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+              name: コンピュテーショナル・シンキング（コンピューターの様に考える）
             Conditionals:
-              name: "条件"
+              name: 条件
             Functions:
-              name: "機能"
+              name: 機能
             Graph Paper Programming:
-              name: "プログラミングのグラフ用紙"
+              name: プログラミングのグラフ用紙
             Introduction to Computer Science:
-              name: "コンピューター・サイエンス入門"
+              name: コンピューター・サイエンス入門
             Relay Programming:
-              name: "プログラミングをリレーする"
+              name: プログラミングをリレーする
             Song Writing:
-              name: "作曲"
+              name: 作曲
             The Artist:
-              name: "アーティスト"
+              name: アーティスト
             The Artist 2:
-              name: "アーティスト 2"
+              name: アーティスト 2
             The Artist 3:
-              name: "アーティスト 3"
+              name: アーティスト 3
             The Artist 4:
-              name: "アーティスト 4"
+              name: アーティスト 4
             The Artist 5:
-              name: "アーティスト 5"
+              name: アーティスト 5
             The Farmer:
-              name: "農家"
+              name: 農家
             The Farmer 2:
-              name: "農家 2"
+              name: 農家 2
             The Farmer 3:
-              name: "農家 3"
+              name: 農家 3
             The Internet:
-              name: "インターネット"
+              name: インターネット
             The Maze:
-              name: "迷路"
+              name: 迷路
             Wrap-up:
-              name: "まとめ"
+              name: まとめ
         edit-code:
-          title: "コードを編集します。"
-          description: "コードを編集します。"
-          description_short: "コードを編集します。"
+          title: コードを編集します。
+          description: コードを編集します。
+          description_short: コードを編集します。
           description_audience: ''
           stages:
             Applab:
@@ -457,19 +456,19 @@
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
-              name: "プレイラボ"
+              name: プレイラボ
             The Artist:
-              name: "アーティスト"
+              name: アーティスト
             The Maze:
-              name: "迷路"
+              name: 迷路
         events:
-          title: "イベント"
-          description: "イベント"
-          description_short: "イベント"
+          title: イベント
+          description: イベント
+          description_short: イベント
           description_audience: ''
           stages:
             Bounce:
-              name: "はずむ"
+              name: はずむ
             Calc:
               name: Calc
             Eval:
@@ -477,33 +476,33 @@
             Studio:
               name: Studio
         flappy:
-          title: "フラッピー コード"
+          title: フラッピー コード
           description: 10分以内で自分だけのゲームを作ってみませんか？フラッピー コードを やってみよう！
           description_short: Write your own Flappy game!
           description_audience: ''
           stages:
             Flappy Code:
-              name: "フラッピー コード"
+              name: フラッピー コード
         jigsaw:
-          title: "ジグソーパズル"
+          title: ジグソーパズル
           description: Try our Jigsaw tutorial.
           description_short: Try our Jigsaw tutorial.
           description_audience: ''
           stages:
             Jigsaw:
-              name: "ジグソーパズル"
+              name: ジグソーパズル
         step:
-          title: "ステップ"
+          title: ステップ
           description: ''
           description_short: Step tutorial
           description_audience: ''
           stages:
             Step:
-              name: "ステップ"
+              name: ステップ
         Hour of Code:
           title: Hour of Code 2013
-          description: "基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！"
-          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
+          description: 基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           description_audience: ''
           stages:
             Hour of Code 2013:
@@ -583,7 +582,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algPDmiami:
@@ -730,7 +729,7 @@
             Controlling Memory with Variables:
               name: Controlling Memory with Variables
             Creating Functions:
-              name: "関数の作成"
+              name: 関数の作成
             Creating functions with Parameters:
               name: Creating Functions with Parameters
             Digital Assistant Project:
@@ -794,7 +793,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             The Big Game:
               name: The Big Game
             The Design Recipe:
@@ -851,7 +850,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
@@ -870,7 +869,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
@@ -951,9 +950,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -979,7 +978,7 @@
             and how it functions by building off the concepts learned when sending
             bits in Unit 1. This unit is a pilot version and is no longer supported
             or updated. You can find the new units at code.org/educate/csp.
-          description_short: "インターネット"
+          description_short: インターネット
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1016,7 +1015,7 @@
             Tell Me a Secret - Encrypting Text:
               name: The Need for Encryption
             The Internet:
-              name: "インターネット"
+              name: インターネット
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -1069,23 +1068,23 @@
             AppLab:
               name: AppLab
             Artist:
-              name: "アーティスト"
+              name: アーティスト
             Bee:
-              name: "みつばち"
+              name: みつばち
             Bounce:
-              name: "はずむ"
+              name: はずむ
             CSinA:
               name: CSinA
             Farmer:
               name: Farmer
             Flappy:
-              name: "フラッピー"
+              name: フラッピー
             Free Response:
               name: Free Response
             Gamelab:
               name: Gamelab
             Jigsaw:
-              name: "ジグソーパズル"
+              name: ジグソーパズル
             Long assessment:
               name: Long assessment
             Markdown Details:
@@ -1093,11 +1092,11 @@
             Match:
               name: Match
             Maze:
-              name: "迷路"
+              name: 迷路
             Minecraft:
-              name: "マインクラフト"
+              name: マインクラフト
             Multi:
-              name: "マルチ"
+              name: マルチ
             Multi2:
               name: Multi2
             Netsim:
@@ -1127,7 +1126,7 @@
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: "ウェッブ ラボ"
+              name: ウェッブ ラボ
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -1163,7 +1162,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Writing Contracts:
               name: Writing Contracts
         cspfacilitator:
@@ -1173,11 +1172,11 @@
           description_audience: ''
           stages:
             App Lab:
-              name: "アプリ ラボ"
+              name: アプリ ラボ
             Broadcast Lesson:
               name: Broadcast Lesson
             Internet Simulator:
-              name: "インターネット シミュレータ"
+              name: インターネット シミュレータ
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
@@ -1185,7 +1184,7 @@
             Text Compression Widget:
               name: Text Compression Widget
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1243,9 +1242,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-up:
-              name: "まとめ"
+              name: まとめ
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1264,7 +1263,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -1272,7 +1271,7 @@
             The Design Recipe:
               name: The Design Recipe
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1290,9 +1289,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1320,9 +1319,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1356,9 +1355,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1385,9 +1384,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-up:
-              name: "まとめ"
+              name: まとめ
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1414,9 +1413,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-up:
-              name: "まとめ"
+              name: まとめ
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience
@@ -1461,19 +1460,19 @@
           description_audience: Ages 6-13
           stages:
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: "プログラミングのグラフ用紙"
+              name: プログラミングのグラフ用紙
             Happy Maps:
-              name: "ハッピーマップ"
+              name: ハッピーマップ
             Move it, Move it:
-              name: "動かせ！動かせ！"
+              name: 動かせ！動かせ！
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             Songwriting:
               name: Songwriting
             The Big Event:
@@ -1707,9 +1706,9 @@
             Thinking About Implementation:
               name: Thinking About Implementation
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: CS in Algebra mid year lesson support
@@ -1867,25 +1866,25 @@
             Gumball Play Lab:
               name: Gumball Play Lab
         starwars:
-          title: "スター・ウォーズ: コードを書いて銀河をつくろう"
-          description: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
-          description_short: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
+          title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
+          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_audience: ''
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
         starwarsblocks:
-          title: "スター・ウォーズ: コードを書いて銀河をつくろう"
-          description: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
-          description_short: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
+          title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
+          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_audience: ''
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
         mc:
           title: Minecraftプログラミング入門
-          description: "コードブロックでキャラクターを動かし、世界を探検します"
-          description_short: "マインクラフトの世界を、プログラムで探検しよう"
+          description: コードブロックでキャラクターを動かし、世界を探検します
+          description_short: マインクラフトの世界を、プログラムで探検しよう
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
@@ -1912,9 +1911,9 @@
             Assessing Computer Models:
               name: Assessing Computer Models
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -2140,7 +2139,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD3c:
@@ -2162,7 +2161,7 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: "インターネット"
+          description_short: インターネット
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2190,7 +2189,7 @@
             Sending Numbers:
               name: Sending Numbers
             The Internet:
-              name: "インターネット"
+              name: インターネット
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -2273,7 +2272,7 @@
             APIs and Function Parameters:
               name: APIs and Function Parameters
             Creating Functions:
-              name: "関数の作成"
+              name: 関数の作成
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Creativity in Algorithms:
@@ -2334,7 +2333,7 @@
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Simple Encryption:
-              name: "単純な暗号化"
+              name: 単純な暗号化
             The Cost of Free:
               name: The Cost of Free
             What is Big Data?:
@@ -2535,7 +2534,7 @@
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: "機能"
+              name: 機能
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2543,7 +2542,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: "速度"
+              name: 速度
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2626,7 +2625,7 @@
             Introduction to PD:
               name: Introduction to PD
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD1:
@@ -2736,7 +2735,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: "ゲーム ラボ"
+              name: ゲーム ラボ
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2938,7 +2937,7 @@
             Usability and Accessibility:
               name: Usability and Accessibility
             Peer Review:
-              name: "ピア ・ レビュー"
+              name: ピア ・ レビュー
             Describing Web Pages:
               name: Describing Web Pages
         CSDU5-Draft:
@@ -2968,7 +2967,7 @@
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: "アーティスト関数"
+              name: アーティスト関数
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -3024,7 +3023,7 @@
           description: ''
           stages:
             'Bee: Conditionals':
-              name: "みつばち：条件文（じょうけんぶん）"
+              name: みつばち：条件文（じょうけんぶん）
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
@@ -3038,15 +3037,15 @@
             Debugging:
               name: Debugging
             Events:
-              name: "イベント"
+              name: イベント
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
-              name: "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
+              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
             Loops:
-              name: "ループ"
+              name: ループ
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3060,7 +3059,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             'Programming Unplugged: Happy Maps':
               name: 'Programming Unplugged: Happy Maps'
         grade4:
@@ -3108,13 +3107,13 @@
             Debugging:
               name: Debugging
             Events:
-              name: "イベント"
+              name: イベント
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
-              name: "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
+              name: ジグソーパズル：ドラッグ＆ドロップを学びましょう
             Loops:
-              name: "ループ"
+              name: ループ
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3130,9 +3129,9 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: "気づかれていないバグ"
+              name: 気づかれていないバグ
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
             'Events Unplugged: The Big Event':
               name: 'Events Unplugged: The Big Event'
         grade5:
@@ -3142,15 +3141,15 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "アーティスト：ループ"
+              name: アーティスト：ループ
             'Artist: Functions with Parameters':
-              name: "アーティスト：関数とパラメータ"
+              name: アーティスト：関数とパラメータ
             'Artist: Variables':
-              name: "アーティスト：変数（へんすう）"
+              name: アーティスト：変数（へんすう）
             'Bee: For Loops':
-              name: "みつばち：ループ"
+              name: みつばち：ループ
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター付き関数"
+              name: みつばち：パラメーター付き関数
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3164,15 +3163,15 @@
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables':
-              name: "プレイラボ：変数"
+              name: プレイラボ：変数
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             'Unplugged: Envelope Variables':
-              name: "アンプラグド: 変数"
+              name: 'アンプラグド: 変数'
             'Unplugged: For Loop Fun':
-              name: "アンプラグド：ループ"
+              name: アンプラグド：ループ
             'Unplugged: Songwriting with Parameters':
-              name: "アンプラグド: 作曲"
+              name: 'アンプラグド: 作曲'
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -3200,9 +3199,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Wrap-up:
-              name: "まとめ"
+              name: まとめ
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -3308,11 +3307,11 @@
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: "アーティスト：入れ子のループ"
+              name: アーティスト：入れ子のループ
             Bee Debugging:
-              name: "みつばち デバッグ"
+              name: みつばち デバッグ
             Bounce:
-              name: "はずむ"
+              name: はずむ
             Build a Game:
               name: Build a Game
             Farmer Conditional with Cards:
@@ -3324,7 +3323,7 @@
             Farmer Impacts of Computing:
               name: Farmer Impacts of Computing
             'Farmer: While Loops':
-              name: "農夫: While Loops"
+              name: '農夫: While Loops'
             'Maze: Conditionals with Loops':
               name: 'Maze: Conditionals with Loops'
             'Maze: Nested Loops':
@@ -3413,7 +3412,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: "速度"
+              name: 速度
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -3472,7 +3471,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "機能"
+              name: 機能
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -3585,7 +3584,7 @@
                 block. Combining all of these skills students will draw a randomized
                 rainbow snake at the end of the lesson.
             Variables:
-              name: "変数"
+              name: 変数
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -3651,7 +3650,7 @@
                 students write programs that move sprites across the screen, as well
                 as animate other sprite properties.
             Conditionals:
-              name: "条件"
+              name: 条件
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -3753,7 +3752,7 @@
             Exploring the Neighborhood:
               name: Exploring the Neighborhood
             Flappy:
-              name: "フラッピー"
+              name: フラッピー
             Getting Loopy with Puppy:
               name: Getting Loopy with Puppy
             Make a Dog Tag:
@@ -3777,9 +3776,9 @@
             Programming at home with my pet:
               name: Programming at home with my pet
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             'Real-life Algorithms: Paper Planes':
-              name: "現実世界のアルゴリズム: 紙飛行機を作る場合"
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
             The Big Event:
               name: The Big Event
         transferring-over:
@@ -3805,23 +3804,23 @@
           description: ''
           stages:
             Binary:
-              name: "２しんすう"
+              name: ２しんすう
             Conditionals:
-              name: "条件"
+              name: 条件
             Events:
-              name: "イベント"
+              name: イベント
             For Loops:
-              name: "ループ用"
+              name: ループ用
             Functions:
-              name: "機能"
+              name: 機能
             Functions with Parameters:
-              name: "パラメーター付き関数"
+              name: パラメーター付き関数
             Loops:
-              name: "ループ"
+              name: ループ
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Variables:
-              name: "変数"
+              name: 変数
             While Loops:
               name: Whileループ
         algebrapdnext:
@@ -3833,7 +3832,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: "先生用のダッシュボード"
+              name: 先生用のダッシュボード
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -3841,7 +3840,7 @@
             The Design Recipe:
               name: The Design Recipe
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
         csp-pre-survey:
           title: CS Principles Pre-Survey
           description_audience: ''
@@ -4155,13 +4154,13 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: "チームをえらんで、バスケットボールのゲームを作る"
+          title: チームをえらんで、バスケットボールのゲームを作る
           description_audience: ''
-          description_short: "チームをえらんで、バスケットボールのゲームを作る"
-          description: "チームをえらんで、バスケットボールのゲームを作る"
+          description_short: チームをえらんで、バスケットボールのゲームを作る
+          description: チームをえらんで、バスケットボールのゲームを作る
           stages:
             Bounce:
-              name: "はずむ"
+              name: はずむ
         sample-csp5:
           stages:
             Controlling Memory with Variables:
@@ -4175,17 +4174,17 @@
             and simple techniques for breaking (or cracking) secret messages.
           stages:
             Simple Encryption:
-              name: "単純な暗号化"
+              name: 単純な暗号化
         fesbinary:
-          title: "２しんすう"
+          title: ２しんすう
           description_audience: ''
           description_short: ''
           description: ''
           stages:
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             Binary Images:
-              name: "バイナリ画像"
+              name: バイナリ画像
             Binary Artist Puzzles:
               name: Binary Artist Puzzles
             RGB Color:
@@ -4238,7 +4237,7 @@
             External Style Sheets:
               name: External Style Sheets
             Peer Review:
-              name: "ピア ・ レビュー"
+              name: ピア ・ レビュー
             Box Model and Page Layout:
               name: Box Model and Page Layout
             Digital Footprint:
@@ -4369,7 +4368,7 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
             Lists:
-              name: "リスト"
+              name: リスト
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -4422,8 +4421,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4506,8 +4512,15 @@
                 will each receive a user profile describing a person. They will use
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4589,8 +4602,18 @@
                 basis for the type of app they will make. From there, teams will have
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4676,8 +4699,13 @@
                 With the information and guidance gained from the last round of user
                 testing, each student will have the opportunity to plan for and implement
                 improvements to the team app.
-              description_teacher: |
-                Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student will have the opportunity to plan for and implement improvements to the team app.\r
+              description_teacher: 'Teams have at this point developed an app prototype
+                that has gone through multiple iterations and rounds of user testing.
+                With the information and guidance gained from the last round of user
+                testing, each student will have the opportunity to plan for and implement
+                improvements to the team app.\r
+
+'
             App Presentation:
               name: App Presentation
               description_student: At this point teams have researched a topic of
@@ -4686,8 +4714,14 @@
                 to incorporate new features and bug fixes. Now is the time for them
                 to review what they have done and pull together a coherent presentation
                 to demonstrate their process of creation.
-              description_teacher: |
-                At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation.\r
+              description_teacher: 'At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation.\r
+
+'
             User Interface and Prototype Testing:
               name: User Interface and Prototype Testing
               description_student: Following the mini design project, students look
@@ -4821,8 +4855,8 @@
         minecraft:
           title: Minecraft Hour of Code デザイナー
           description_audience: ''
-          description_short: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
-          description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
+          description_short: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
+          description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
           stages:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code デザイナー
@@ -4838,13 +4872,13 @@
             Pre Hour of Code Survey:
               name: Pre Hour of Code Survey
             Flappy Code:
-              name: "フラッピー コード"
+              name: フラッピー コード
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: "低学年向けのコンピューター サイエンス入門"
+          description_short: 低学年向けのコンピューター サイエンス入門
           description: |-
             Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
             Recommended for grade K.
@@ -4852,37 +4886,37 @@
             'Debugging: Bugs in Codeville':
               name: 'Debugging: Bugs in Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: "スティービーとビーだま"
+              name: スティービーとビーだま
             'Real-life Algorithms: Plant a Seed':
-              name: "アルゴリズム：タネをまく"
+              name: アルゴリズム：タネをまく
             Learn to Drag and Drop:
-              name: "ドラッグ＆ドロップ"
+              name: ドラッグ＆ドロップ
             'Programming: Happy Maps':
-              name: "プログラミング：ハッピー マップ"
+              name: プログラミング：ハッピー マップ
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
-              name: "くりかえし：ハッピー ループ"
+              name: くりかえし：ハッピー ループ
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
-              name: "安全な道を通って行く"
+              name: 安全な道を通って行く
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: "低学年向けのコンピューター サイエンス入門"
+          description_short: 低学年向けのコンピューター サイエンス入門
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4890,37 +4924,37 @@
             they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: "スティービーとビーだま"
+              name: スティービーとビーだま
             Sequence & Algorithms:
               name: Sequence & Algorithms
             Learn to Drag and Drop:
-              name: "ドラッグ＆ドロップ"
+              name: ドラッグ＆ドロップ
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             More Computer Science:
               name: More Computer Science
             Keep it Private:
               name: Keep it Private
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             Your Digital Footprint:
-              name: "あなたのデジタルフットプリント"
+              name: あなたのデジタルフットプリント
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
@@ -4931,9 +4965,9 @@
             2nd grade.
           stages:
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
-              name: "現実世界のアルゴリズム: 紙飛行機を作る場合"
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -4943,7 +4977,7 @@
             Loops in Maze:
               name: Loops in Maze
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Puppy Introduction:
               name: Puppy Introduction
             Online Internet Safety:
@@ -4953,13 +4987,13 @@
             More CS with Run Marco:
               name: More CS with Run Marco
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             Your Digital Footprint:
-              name: "あなたのデジタルフットプリント"
+              name: あなたのデジタルフットプリント
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
@@ -4990,7 +5024,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "カードと条件"
+              name: カードと条件
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
@@ -5008,15 +5042,15 @@
             Digital Citizenship:
               name: Digital Citizenship
             'Unplugged: Binary':
-              name: "アンプラグド: バイナリ"
+              name: 'アンプラグド: バイナリ'
             Artist Binary:
-              name: "アーティスト：バイナリ"
+              name: アーティスト：バイナリ
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Debugging in Collector:
@@ -5059,15 +5093,15 @@
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
-              name: "インターネット"
+              name: インターネット
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
             Determine the Concept:
               name: Determine the Concept
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Conditionals:
-              name: "条件"
+              name: 条件
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -5114,9 +5148,9 @@
             The Power of Words:
               name: The Power of Words
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Conditionals and Functions in Bee:
@@ -5126,7 +5160,7 @@
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
-          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies! This version includes pre and post surveys
             to help us continue to improve Hour of Code. Ask your class to skip ahead
@@ -5141,7 +5175,7 @@
         hoc-impact-study:
           title: Classic Maze with Survey
           description_audience: ''
-          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
+          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies! This version includes pre and post surveys
             to help us continue to improve Hour of Code. Ask your class to skip ahead
@@ -5168,7 +5202,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5180,7 +5214,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         2016_sciencePD_phase2b:
           title: ''
           description_audience: ''
@@ -5188,7 +5222,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5200,7 +5234,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         sciencepd3-2016:
           title: ''
           description_audience: ''
@@ -5284,13 +5318,13 @@
           description: 'Phase 3: Reflect on semester 1 workshop'
           stages:
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Revisiting Complex Adaptive Systems:
               name: Revisiting Complex Adaptive Systems
             Thinking About Implementation:
               name: Thinking About Implementation
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         csp-ca-a:
           title: ''
           description_audience: ''
@@ -5306,7 +5340,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5314,7 +5348,7 @@
             Physical Science Challenges:
               name: Physical Science Challenges
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         csf2harvey:
           title: New Functions Puzzles
           description_audience: ''
@@ -5334,7 +5368,7 @@
             Prepare your snowflake for 3D printing:
               name: Prepare your snowflake for 3D printing
             Binary:
-              name: "２しんすう"
+              name: ２しんすう
             Snowflakes:
               name: Snowflakes
         sciencepd5:
@@ -5344,7 +5378,7 @@
           description: 'Phase 3: Prepare for semester 2 workshop'
           stages:
             Welcome!:
-              name: "ようこそ!"
+              name: ようこそ!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5352,7 +5386,7 @@
             Physical Science Challenges:
               name: Physical Science Challenges
             Wrap-Up:
-              name: "まとめ"
+              name: まとめ
         csp5-support:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
@@ -5450,7 +5484,7 @@
             Foo:
               name: Foo
             Lists:
-              name: "リスト"
+              name: リスト
             Lights:
               name: Lights
             Event Types:
@@ -5464,7 +5498,7 @@
             Timed Loops:
               name: Timed Loops
             For Loops:
-              name: "ループ用"
+              name: ループ用
             Physical Input:
               name: Physical Input
             List and For Loops:
@@ -5510,7 +5544,7 @@
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: "パラメーター付き関数"
+              name: パラメーター付き関数
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5522,7 +5556,7 @@
             to the breadth of Game Lab.
           stages:
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Sprites:
               name: Sprites
             Input:
@@ -5626,7 +5660,7 @@
           description: ''
           stages:
             Introduction:
-              name: "はじめに"
+              name: はじめに
         workshop-maker:
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
@@ -5652,9 +5686,9 @@
           description: ''
           stages:
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Conditionals:
-              name: "条件"
+              name: 条件
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6:
@@ -5725,7 +5759,7 @@
                 students move online where they will learn to write applications that
                 blink an LED and make noise with a buzzer.
             Lists:
-              name: "リスト"
+              name: リスト
               description_student: Students learn to use lists to store a series of
                 related values in a single variable.
               description_teacher: Students learn to use lists to store a series of
@@ -5741,7 +5775,7 @@
                 used to deal with groups of related values, we'll return to the board
                 and look at the color LEDs, which are accessed through the list `colorLeds`.
             For Loops:
-              name: "ループ用"
+              name: ループ用
               description_student: Students are introduced to the for loop in this
                 lesson as a way to repeat some code a certain numbers of times. They
                 spend time practicing in an unplugged context with simple robot commands
@@ -5959,7 +5993,7 @@
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
-              name: "パラメーター付き関数"
+              name: パラメーター付き関数
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -6018,7 +6052,7 @@
             Accelerometer_:
               name: Accelerometer
             Functions with Parameters_:
-              name: "パラメーター付き関数"
+              name: パラメーター付き関数
             Circuits and Physical Prototypes_:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation_':
@@ -6040,7 +6074,7 @@
             Drawing in Game Lab:
               name: Drawing in Game Lab
             Variables:
-              name: "変数"
+              name: 変数
             Programming for Entertainment:
               name: Programming for Entertainment
             Sprites:
@@ -6056,7 +6090,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "条件"
+              name: 条件
             Taking Input:
               name: Taking Input
             Complex Conditionals:
@@ -6068,7 +6102,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: "速度"
+              name: 速度
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6076,7 +6110,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "機能"
+              name: 機能
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6464,7 +6498,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: "速度"
+              name: 速度
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6472,7 +6506,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "機能"
+              name: 機能
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6549,7 +6583,7 @@
             Intellectual Property and Images:
               name: Intellectual Property and Images
             Lists:
-              name: "リスト"
+              name: リスト
         csd1-draft:
           title: ''
           description_audience: ''
@@ -6591,7 +6625,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
-              name: "変数"
+              name: 変数
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -6603,7 +6637,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "条件"
+              name: 条件
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -6611,7 +6645,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: "速度"
+              name: 速度
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6619,7 +6653,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "機能"
+              name: 機能
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6629,7 +6663,7 @@
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
-              name: "ヌル"
+              name: ヌル
             temp:
               name: temp
         coursef-ramp:
@@ -6637,7 +6671,7 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Functions in Farmer:
@@ -6725,7 +6759,7 @@
             Classes:
               name: Classes
             Peer Review:
-              name: "ピア ・ レビュー"
+              name: ピア ・ レビュー
             Digital Footprint:
               name: Digital Footprint
             Publishing a Website:
@@ -6769,7 +6803,7 @@
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Bounce:
-              name: "はずむ"
+              name: はずむ
             NewBounce:
               name: NewBounce
             F PlayLab Variables:
@@ -6781,9 +6815,9 @@
         coursea:
           stages:
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
               description_student: ''
-              description_teacher: "このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。"
+              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
@@ -6792,10 +6826,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -6804,7 +6842,7 @@
                 discussion introducing them to computer lab manners, then they will
                 progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: "プログラミング：ハッピー マップ"
+              name: プログラミング：ハッピー マップ
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be
                 a short one if students understand the difference between planning
@@ -6812,7 +6850,7 @@
                 activity will help students gain experience reading and writing in
                 shorthand code.
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
               description_student: ''
               description_teacher: In this series of online puzzles, students will
                 build on the understanding of algorithms, debugging, and general computer
@@ -6822,7 +6860,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "安全な道を通って行く"
+              name: 安全な道を通って行く
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -6830,19 +6868,19 @@
                 Students also find out that they can go to exciting places online,
                 but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: "くりかえし：ハッピー ループ"
+              name: くりかえし：ハッピー ループ
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming.
                 To understand how helpful loops can be, students will need to be driven
                 to want an easier way to solve mundane problems.
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
               description_student: ''
               description_teacher: Building on the concept of repeating instructions
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -6850,20 +6888,20 @@
                 loops are creating patterns. At the end of this stage, students will
                 be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written
                 algorithm. Sometimes you want your program to be able to respond to
                 the user exactly when the user wants it to. That is what events are
                 for.
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
               description_student: ''
               description_teacher: In this online activity, students will have the
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: "コース A"
+          title: コース A
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: Course A offers computer science curriculum for beginning readers
@@ -6876,34 +6914,34 @@
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Your Digital Footprint:
-              name: "あなたのデジタルフットプリント"
+              name: あなたのデジタルフットプリント
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: "コース B"
+          title: コース B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
           description: |-
@@ -6913,13 +6951,13 @@
         coursec:
           stages:
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
-              name: "現実世界のアルゴリズム: 紙飛行機を作る場合"
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -6931,20 +6969,20 @@
             Loops in Harvester:
               name: Loops in Harvester
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
-              name: "バイナリブレスレット"
+              name: バイナリブレスレット
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: "コース C"
+          title: コース C
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -6955,7 +6993,7 @@
         coursed:
           stages:
             Introduction:
-              name: "はじめに"
+              name: はじめに
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with
@@ -6988,7 +7026,7 @@
                 will have the opportunity to customize their game with different speeds
                 and sounds.
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
               description_student: Loops inside loops inside loops. What does this
                 mean? This lesson will teach you what happens when you place a loop
                 inside another loop.
@@ -7035,11 +7073,19 @@
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: "カードと条件"
+              name: カードと条件
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7085,7 +7131,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: "アンプラグド: バイナリ"
+              name: 'アンプラグド: バイナリ'
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7095,7 +7141,7 @@
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: "芸術家　２進法"
+              name: 芸術家　２進法
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7121,7 +7167,7 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: "コース D"
+          title: コース D
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7134,7 +7180,7 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "はじめに"
+              name: はじめに
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
@@ -7162,7 +7208,7 @@
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
             Functions with Parameters in Artist:
@@ -7223,7 +7269,7 @@
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: "条件"
+              name: 条件
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7315,7 +7361,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: "インターネット"
+              name: インターネット
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7324,7 +7370,7 @@
                 to flow through the internet, all the while learning about connections,
                 URLs, IP Addresses, and the DNS.
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
               description_student: This lesson will teach you about crowdsourcing,
                 the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting
@@ -7337,7 +7383,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7345,14 +7391,16 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Nested Loops:
-              name: "入れ子のループ"
-          title: "コース E"
+              name: 入れ子のループ
+            Functions in Harvester:
+              name: Functions in Harvester
+          title: コース E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7377,7 +7425,7 @@
                 will learn the difference between a detailed and general algorithm
                 while playing with tangrams.
             Introduction:
-              name: "はじめに"
+              name: はじめに
               description_student: This lesson will give you a brief introduction
                 to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to
@@ -7462,7 +7510,7 @@
                 At the end, they will have a chance to create their own art in a freeplay
                 level.
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
               description_student: You just might release the next big hit single!
                 In this lesson, you will be learning what parameters are and how they
                 make some fantastic songs!
@@ -7577,7 +7625,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7585,12 +7633,12 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: "コース F"
+          title: コース F
           description_audience: ''
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
@@ -7888,7 +7936,7 @@
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             'Algorithms: Relay Programming':
@@ -7898,17 +7946,17 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
-              name: "インターネット"
+              name: インターネット
             Digital Citizenship:
               name: Digital Citizenship
             Screen Out the Mean:
               name: Screen Out the Mean
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Build a Star Wars Game:
               name: Build a Star Wars Game
             Events in Bounce:
@@ -7916,7 +7964,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Conditionals with Cards:
-              name: "カードと条件"
+              name: カードと条件
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals & Loops in Maze:
@@ -7938,7 +7986,7 @@
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -7978,9 +8026,11 @@
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -7988,11 +8038,11 @@
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Online Safety: Your Digital Footprint':
@@ -8000,21 +8050,21 @@
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
             Spelling Bee:
-              name: "つづりみつばち"
+              name: つづりみつばち
           title: ''
           description_audience: ''
           description_short: ''
@@ -8028,7 +8078,7 @@
             other:
               name: other
             Thanks:
-              name: "ありがとう"
+              name: ありがとう
             '':
               name: ''
             " ":
@@ -8066,7 +8116,7 @@
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
-              name: "関数の作成"
+              name: 関数の作成
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             APIs and Function Parameters:
@@ -8171,7 +8221,7 @@
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8179,9 +8229,9 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Intro to Conditionals with Farmer:
@@ -8191,7 +8241,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "条件"
+              name: 条件
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8217,9 +8267,9 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "インターネット"
+              name: インターネット
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Bee/Zombie:
@@ -8235,11 +8285,11 @@
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Events in Bounce:
               name: Events in Bounce
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Nested Loops in Artist:
               name: Nested Loops in Artist
             Nested Loops Project in Artist:
@@ -8251,7 +8301,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "カードと条件"
+              name: カードと条件
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
@@ -8263,15 +8313,17 @@
             Build a Play Lab Game:
               name: Build a Play Lab Game
             'Unplugged: Binary':
-              name: "アンプラグド: バイナリ"
+              name: 'アンプラグド: バイナリ'
             Artist Binary:
-              name: "アーティスト：バイナリ"
+              name: アーティスト：バイナリ
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee:
               name: Nested Loops in Bee
+            Loops in Ice Age:
+              name: Loops in Ice Age
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -8293,7 +8345,7 @@
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
@@ -8301,7 +8353,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
@@ -8311,7 +8363,7 @@
             'Common Sense Education: Screen Out the Mean':
               name: 'Common Sense Education: Screen Out the Mean'
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -8359,11 +8411,11 @@
             Present Your Project:
               name: Present Your Project
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Loops in Artist (UPDATED!):
               name: Loops in Artist (UPDATED!)
             Sarah test stage:
@@ -8375,7 +8427,7 @@
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Sequences with Scrat:
               name: Sequences with Scrat
             Testing Template:
@@ -8391,7 +8443,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8399,7 +8451,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8409,7 +8461,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "条件"
+              name: 条件
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8435,9 +8487,9 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "インターネット"
+              name: インターネット
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
           title: New Script for E
           description_audience: ''
           description_short: ''
@@ -8449,7 +8501,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8457,7 +8509,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8485,7 +8537,7 @@
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -8650,7 +8702,7 @@
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
-              name: "関数の作成"
+              name: 関数の作成
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             APIs and Function Parameters:
@@ -8666,8 +8718,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8687,7 +8741,7 @@
             Programming - Hour of Code:
               name: Programming - Hour of Code
             Simple Encryption:
-              name: "単純な暗号化"
+              name: 単純な暗号化
             Web Development - Creating Webpages:
               name: Web Development - Creating Webpages
             App Development Unplugged - User Interfaces:
@@ -8877,7 +8931,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8885,17 +8939,17 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops:
-              name: "入れ子のループ"
+              name: 入れ子のループ
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             Conditionals:
-              name: "条件"
+              name: 条件
             Private and Personal Information:
               name: Private and Personal Information
             'Functions: Songwriting':
@@ -8921,11 +8975,13 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "インターネット"
+              name: インターネット
             Crowdsourcing:
-              name: "クラウドソーシング"
+              name: クラウドソーシング
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -8937,7 +8993,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ピラミッドをたてよう"
+              name: ピラミッドをたてよう
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8945,7 +9001,7 @@
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
@@ -8953,7 +9009,7 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "はじめに"
+              name: はじめに
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
@@ -8973,7 +9029,7 @@
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "パラメーターで歌や曲をつくる"
+              name: パラメーターで歌や曲をつくる
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -9007,11 +9063,11 @@
             The Circuit Playground:
               name: The Circuit Playground
             Lists:
-              name: "リスト"
+              name: リスト
             Lights:
               name: Lights
             For Loops:
-              name: "ループ用"
+              name: ループ用
             Lists and For Loops:
               name: Lists and For Loops
             Timed Loops:
@@ -9061,7 +9117,7 @@
             Shapes and Randomization:
               name: Shapes and Randomization
             Variables:
-              name: "変数"
+              name: 変数
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -9073,7 +9129,7 @@
             Booleans Unplugged:
               name: Booleans Unplugged
             Conditionals:
-              name: "条件"
+              name: 条件
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -9081,7 +9137,7 @@
             Project - Interactive Card:
               name: Project - Interactive Card
             Velocity:
-              name: "速度"
+              name: 速度
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -9089,7 +9145,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "機能"
+              name: 機能
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -9192,7 +9248,7 @@
               description_student: ''
               description_teacher: ''
             Variables:
-              name: "変数"
+              name: 変数
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -9273,7 +9329,7 @@
 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Conditionals:
-              name: "条件"
+              name: 条件
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -9322,7 +9378,7 @@
                 plan for and develop an interactive greeting card using all of the
                 programming techniques they've learned to this point.
             Velocity:
-              name: "速度"
+              name: 速度
               description_student: After a brief review of how the counter pattern
                 is used to move sprites, the class is introduced to the properties
                 that set velocity and rotation speed directly.   As they use these
@@ -9381,7 +9437,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "機能"
+              name: 機能
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -9553,7 +9609,7 @@
                 \r
                 The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Lists:
-              name: "リスト"
+              name: リスト
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -9656,40 +9712,51 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
-          title: "コース A"
+          title: コース A
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: "デバッグ: 気づかれていないバグ"
+              name: 'デバッグ: 気づかれていないバグ'
               description_student: ''
-              description_teacher: "このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。"
+              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
             'Persistence & Frustration: Stevie and the Marbles':
-              name: "スティービーとビーだま"
+              name: スティービーとビーだま
               description_student: ''
               description_teacher: |-
                 When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "現実のアルゴリズム：種を植えましょう"
+              name: 現実のアルゴリズム：種を植えましょう
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
-              name: "ドラッグ＆ドロップ"
+              name: ドラッグ＆ドロップ
               description_student: ''
               description_teacher: This lesson will give students an idea of what
                 to expect when they head to the computer lab. It begins with a brief
                 discussion introducing them to computer lab manners, then they will
                 progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: "プログラミング：ハッピー マップ"
+              name: プログラミング：ハッピー マップ
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be
                 a short one if students understand the difference between planning
@@ -9697,7 +9764,7 @@
                 activity will help students gain experience reading and writing in
                 shorthand code.
             Programming in Maze:
-              name: "めいろ のプログラミング"
+              name: めいろ のプログラミング
               description_student: ''
               description_teacher: In this series of online puzzles, students will
                 build on the understanding of algorithms, debugging, and general computer
@@ -9707,7 +9774,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "安全な道を通って行く"
+              name: 安全な道を通って行く
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -9715,19 +9782,19 @@
                 Students also find out that they can go to exciting places online,
                 but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: "くりかえし：ハッピー ループ"
+              name: くりかえし：ハッピー ループ
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming.
                 To understand how helpful loops can be, students will need to be driven
                 to want an easier way to solve mundane problems.
             Loops in Collector:
-              name: "くりかえし あつめる"
+              name: くりかえし あつめる
               description_student: ''
               description_teacher: Building on the concept of repeating instructions
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: "アーティストくりかえし"
+              name: アーティストくりかえし
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -9735,14 +9802,14 @@
                 loops are creating patterns. At the end of this stage, students will
                 be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: "イベント: おおきなイベント"
+              name: 'イベント: おおきなイベント'
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written
                 algorithm. Sometimes you want your program to be able to respond to
                 the user exactly when the user wants it to. That is what events are
                 for.
             Events in Play Lab:
-              name: "プレイ ラボのイベント"
+              name: プレイ ラボのイベント
               description_student: ''
               description_teacher: In this online activity, students will have the
                 opportunity to learn how to use events in Play Lab and to apply all
@@ -9750,3 +9817,549 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: はじめに
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ピラミッドをたてよう
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: アーティストくりかえし
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: 入れ子のループ
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: コース B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'デバッグ: 気づかれていないバグ'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: スティービーとビーだま
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 現実のアルゴリズム：種を植えましょう
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: あなたのデジタルフットプリント
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: めいろ のプログラミング
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: くりかえし あつめる
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: アーティストくりかえし
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: 動かせ！動かせ！
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: はじめに
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ピラミッドをたてよう
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: アーティストくりかえし
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: カードと条件
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Digital Citizenship
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'アンプラグド: バイナリ'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: アーティスト：バイナリ
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global
+                Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic,
+                Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays
+                and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables,
+                Procedures, Loops, Conditionals)
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '
+        coursec-2018:
+          title: コース C
+          description: Create programs with sequencing, loops, and events. Translate
+            your initials into binary, investigate different problem-solving techniques,
+            and learn how to respond to cyberbullying. At the end of the course, create
+            your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+          stages:
+            Building a Foundation:
+              name: ピラミッドをたてよう
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: めいろ のプログラミング
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Paper Planes':
+              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: アーティストくりかえし
+              description_student: ''
+              description_teacher: ''
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'イベント: おおきなイベント'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: バイナリブレスレット
+              description_student: ''
+              description_teacher: ''
+        csd6-2018:
+          title: CSD Unit 6 - Physical Computing
+          description: Unit 6 explores the role of hardware platforms in computing
+            and how different sensors can provide more effective input and output
+            than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
+            Circuit Playground, you’ll develop programs that utilize the same hardware
+            inputs and outputs that you see in the smart devices, looking at how a
+            simple rough prototype can lead to a finished product. The unit concludes
+            with a design challenge to use the Circuit Playground as the basis for
+            an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: ''
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: ''
+              description_teacher: ''
+            Board Events_:
+              name: Board Events_
+              description_student: ''
+              description_teacher: ''
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: ''
+              description_teacher: ''
+            Analog Input_:
+              name: Analog Input_
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: ''
+              description_teacher: ''
+            Making Music_:
+              name: Making Music_
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: ''
+              description_teacher: ''
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''

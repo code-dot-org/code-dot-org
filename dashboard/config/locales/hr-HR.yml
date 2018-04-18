@@ -51,7 +51,7 @@
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
-      placeholder: "Šifra odjeljenja (ABCDEF)"
+      placeholder: Šifra odjeljenja (ABCDEF)
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
       instructions_short: Enter your 6 letter section code
@@ -181,7 +181,7 @@
     remember: Zapamti me
     submit: Prijava
   signin:
-    try_heading: "Želite probati kodiranje bez prijave?"
+    try_heading: Želite probati kodiranje bez prijave?
     try_hoc: Prvo isprobaj Sat programiranja
     try_20hours: Probajte naš 20-satni Uvod u informatiku
   signinsection:
@@ -602,7 +602,7 @@
     try_hour_of_code: Pokušajte sat vremena programiranja!
   gender:
     male: Muško
-    female: "Žensko"
+    female: Žensko
     none: Radije ne bih odgovorio
   user_type:
     student: Učenik
@@ -735,8 +735,8 @@
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
-      body: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
-        tutorijal izrade Flappy kôda!"
+      body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
+        tutorijal izrade Flappy kôda!
     20-hour:
       title: Ubrzani tečaj
       body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike.
@@ -819,7 +819,7 @@
     activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
       aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
       i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
+    want_to_make_your_own: Želite li napraviti svoj vlastiti?
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
     more: Više &rarr;

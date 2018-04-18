@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: "কম্পিউটার বিজ্ঞান পরিচিতি"
+        title: কম্পিউটার বিজ্ঞান পরিচিতি
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -15,7 +15,7 @@
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "গণিতিক চিন্তা-ভাবনা"
+        title: গণিতিক চিন্তা-ভাবনা
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -30,7 +30,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "ছক-কাগজে প্রোগ্রামিং"
+        title: ছক-কাগজে প্রোগ্রামিং
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -40,7 +40,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "অ্যালগরিদম"
+        title: অ্যালগরিদম
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -50,7 +50,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "ফাংশনগুলি"
+        title: ফাংশনগুলি
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -65,7 +65,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "শর্তসমূহ"
+        title: শর্তসমূহ
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -73,7 +73,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "গান লিখা"
+        title: গান লিখা
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -83,7 +83,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "অপসারণ"
+        title: অপসারণ
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -91,7 +91,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "রিলে-স্যুইচ প্রোগ্রামিং"
+        title: রিলে-স্যুইচ প্রোগ্রামিং
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -99,14 +99,14 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "ইন্টারনেট"
+        title: ইন্টারনেট
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: "গুটিয়ে ফেলা"
+        title: গুটিয়ে ফেলা
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -115,7 +115,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "আনন্দের মানচিত্র"
+        title: আনন্দের মানচিত্র
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       MoveIt:
@@ -138,18 +138,18 @@
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
       RelayProgramming:
-        title: "রিলে-স্যুইচ প্রোগ্রামিং"
+        title: রিলে-স্যুইচ প্রোগ্রামিং
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       Conditionals:
-        title: "শর্তযুক্ত"
+        title: শর্তযুক্ত
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
       BigEvent:
-        title: "বড় ঘটনা"
+        title: বড় ঘটনা
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -159,7 +159,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: "ছক-কাগজে প্রোগ্রামিং"
+        title: ছক-কাগজে প্রোগ্রামিং
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       PaperPlanes:
@@ -177,7 +177,7 @@
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "গণিতিক চিন্তা-ভাবনা"
+        title: গণিতিক চিন্তা-ভাবনা
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -197,7 +197,7 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       Internet:
-        title: "ইন্টারনেট"
+        title: ইন্টারনেট
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       Crowdsourcing:
@@ -239,7 +239,7 @@
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: "দ্বিমিক ছবি"
+        title: দ্বিমিক ছবি
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -294,7 +294,7 @@
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       courseA_unplugged_happyMaps:
-        title: "আনন্দের মানচিত্র"
+        title: আনন্দের মানচিত্র
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       courseA_unplugged_goingPlacesSafely:
@@ -302,7 +302,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       courseABC_unplugged_bigEvent:
-        title: "বড় ঘটনা"
+        title: বড় ঘটনা
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -332,22 +332,22 @@
           of their name. Students learn that data can be represented and stored in
           more than one way.
       courseD_unplugged_graphPaperProgramming:
-        title: "ছক-কাগজে প্রোগ্রামিং"
+        title: ছক-কাগজে প্রোগ্রামিং
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: "রিলে-স্যুইচ প্রোগ্রামিং"
+        title: রিলে-স্যুইচ প্রোগ্রামিং
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       courseD_unplugged_conditionalsCards:
-        title: "কার্ড সঙ্গে শর্ত"
+        title: কার্ড সঙ্গে শর্ত
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
       courseD_unplugged_binaryImages:
-        title: "দ্বিমিক ছবি"
+        title: দ্বিমিক ছবি
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -363,7 +363,7 @@
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseE_unplugged_internet:
-        title: "ইন্টারনেট"
+        title: ইন্টারনেট
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       courseE_unplugged_crowdsourcing:
@@ -478,7 +478,7 @@
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       UnplugHappyMaps_2018:
-        title: "আনন্দের মানচিত্র"
+        title: আনন্দের মানচিত্র
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       GoingPlacesSafely_2018:
@@ -489,8 +489,52 @@
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       BigEvent_2018:
-        title: "বড় ঘটনা"
+        title: বড় ঘটনা
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
+      GraphPaperProgramming_2018:
+        title: ছক-কাগজে প্রোগ্রামিং
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Unplugged Activity
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Unplugged Activity
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: শর্তযুক্ত
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      DigitalFootprint_2018:
+        title: Your Digital Footprint
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: দ্বিমিক ছবি
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Real-life Algorithms: Paper Planes'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
+          making paper airplanes. This lesson also focuses on the bigger picture of
+          computer science and how algorithms play an essential part.
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: This lesson introduces the programming concept of loops (repeated instructions)
+          through a dance activity. Students will learn simple choreography, then
+          be instructed to repeat it.
+      BinaryBracelets_2018:
+        title: Binary Bracelets
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      MoveItMoveIt_2018:
+        title: Move It, Move It
+        desc: ''

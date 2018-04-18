@@ -62,11 +62,11 @@
       MC HOC 2016 New Drop_failure_message_override: Sử dụng phím mũi tên để đi bộ
         đến con cừu và nhấn phím cách hoặc nhấn vào bảng điều khiển game để sử dụng
         con cừu. Đừng quên sử dụng lệnh 'thả' vào nhóm lệnh lập trình của bạn.
-      MC HOC 2016 New Spawn_failure_message_override: "Đặt lệnh 'đẻ trứng' dưới lệnh
-        'khi chạy chương trình'."
-      MC HOC 2016 New Walk_failure_message_override: "Để mở cửa, nhấn phím cách hoặc
+      MC HOC 2016 New Spawn_failure_message_override: Đặt lệnh 'đẻ trứng' dưới lệnh
+        'khi chạy chương trình'.
+      MC HOC 2016 New Walk_failure_message_override: Để mở cửa, nhấn phím cách hoặc
         bấm vào bảng điều khiển game khi đứng trước cánh cửa. Đi vào trong để tiếp
-        tục."
+        tục.
       MC HOC 2016 SCORE LEVEL_failure_message_override: Nếu bạn gặp vấn đề trong việc
         gắn thẻ 5 Golems, thử thay đổi điểm thành 2 cho mỗi thẻ.
       MC HOC 2016 Village Test_failure_message_override: Bạn phải làm cho Iron Golem

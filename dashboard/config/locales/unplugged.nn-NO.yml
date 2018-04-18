@@ -73,11 +73,11 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: "Å lese ein tekst er ein ganske kjend aktivitet for dei fleste elevar.
+        desc: Å lese ein tekst er ein ganske kjend aktivitet for dei fleste elevar.
           Vi skal ta ein aktivitet som allereie er kjend og bruke den for å gi ei
           god forståing i å definere og kalle funksjonar. Når elevane er blitt kjend
           med definere-/kalleprosessen, vil vi legge til ekstra funksjonar som kjem
-          saman med å sende parametrar innanfor desse funksjonane."
+          saman med å sende parametrar innanfor desse funksjonane.
         pdfs:
         - unplug7
         video: Unplug7
@@ -272,11 +272,11 @@
           Det er her vi treng kondisjonar...
       CollisionDetection:
         title: Oppdage kollisjon og Pytagoras læresetning
-        desc: "Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt
+        desc: Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt
           i dei fleste videospel. No skal vi sjå på korleis Pythagoras læresetning
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører
-          kvarandre."
+          kvarandre.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgåve skal du lære om løkker!
@@ -413,7 +413,7 @@
           forstå korleis det å kombinere bitar av kode inn i funksjonar, er en veldig
           nyttig praksis.  '
       swipeRightPassThrough:
-        title: "Økt med rekrutteringsscenariar"
+        title: Økt med rekrutteringsscenariar
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -426,7 +426,7 @@
           \r
           When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
-        title: "Økt med rekrutteringsscenariar"
+        title: Økt med rekrutteringsscenariar
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -507,3 +507,48 @@
         desc: Eleven blir introdusert for programmeringskonseptet "hending" som er
           handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein
           papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
+      GraphPaperProgramming_2018:
+        title: Programmering på millimeterpapir
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei
+          samling med instruksjonar) for å styre klassekameratane sine til å lage
+          e teikning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
+      Conditionals_2018:
+        title: Betingelser
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill
+          og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss
+          eg trekk eit svart kort, får du poeng."
+      DigitalFootprint_2018:
+        title: Dine digitale fotspor
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg
+          sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
+      BinaryImages_2018:
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre
+          kurset vårt at den informasjonen kan bli representert i ei rekke av binære
+          alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer
+          korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til
+          dømes bilete og fargar) binært óg.
+      PaperPlanes_2018:
+        title: 'Verkelege algoritmar: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette
+          tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet
+          av informatikk og korleis algoritmar spelar ei essensiell rolle.
+      GettingLoopy_2018:
+        title: Me blir sløyfete
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt
+          instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi,
+          og deretter bli bedt om å gjenta den.
+      BinaryBracelets_2018:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første
+          bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra
+          på meir enn ein måte.
+      MoveItMoveIt_2018:
+        title: Flytt den, flytt den
+        desc: ''

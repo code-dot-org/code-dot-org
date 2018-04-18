@@ -537,6 +537,7 @@ function transformLevelHtml(levelHtml) {
   appElement.style.display = 'block';
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
+  appElement.style.transform = '';
 
   // NOTE: this also modifies appElement!
   const css = extractCSSFromHTML(appElement);

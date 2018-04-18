@@ -12,6 +12,7 @@ class VideosControllerTest < ActionController::TestCase
 
     Video.stubs(:merge_and_write_i18n)
     Video.stubs(:merge_and_write_attributes)
+    Video.any_instance.stubs(:fetch_thumbnail)
   end
 
   test "should get index" do

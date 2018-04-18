@@ -7,5 +7,7 @@ wrong 'Randomly returns on of the three numbers'
 wrong 'This code will cause an error'
 
 markdown <<MARKDOWN
-![](https://images.code.org/01c1cd1999d749a3d6f25ec39d3dc4f5-image-1483980229022.png)
+<!-- BLOCK ![](https://images.code.org/01c1cd1999d749a3d6f25ec39d3dc4f5-image-1483980229022.png) -->
+
+<img src="https://images.code.org/d41a70927840fc80a8c41d022ec9ca8b-image-1522962110793.png" style="width: 250px">
 MARKDOWN

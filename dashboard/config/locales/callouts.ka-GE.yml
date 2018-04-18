@@ -7,36 +7,36 @@
           გადმოწიოთ სლაიდერი მარცხნივ, რათა უფრო ყურადღებით დააკვირდეთ თქვენი პროგრამის
           მსვლელობას.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
-          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!"
+        Bee_Cond_5_1a: იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
+          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: დააწკაპეთ და გადმოათრიეთ "ტექსტური სივრცე" ეკრანზე
-        screenSelectorCallout3: "აირჩიეთ თქვენს მიერ შექმნილი ეკრანი"
+        screenSelectorCallout3: აირჩიეთ თქვენს მიერ შექმნილი ეკრანი
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: "ეს ეკრანების გადამრთველია"
-        changePlace1ID: "აქ შეგიძლიათ შეცვალოთ თქვენი ეკრანის სახელი."
+        screenSelectorCallout2: ეს ეკრანების გადამრთველია
+        changePlace1ID: აქ შეგიძლიათ შეცვალოთ თქვენი ეკრანის სახელი.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: "შეცვალეთ თქვენი აპლიკაციის სათაური"
+        applabIntro2_1: შეცვალეთ თქვენი აპლიკაციის სათაური
         appLabIntro2_designMenu: გამოიყენეთ მენიუები, რათა შეცვალოთ თქვენი აპლიკაციის
           "ტექსტი"
         appLabIntro2_textColor: ჩამოსქროლეთ ქვემოთ "ტექსტის ფერის" შესავლელად
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: "დააწკაპეთ ამ ეკრანზე განთავსებულ ამბის ტექსტს"
-        appLabIntro2_editStoryText: "ტექსტური ყუთის გასადიდებლად, მოკიდეთ ხელი მის
-          ქვედა მარჯვენა კუთხეს და ჩამოქაჩეთ. ამის შემდეგ შეიყვანეთ თქვენი ამბის ტექსტი"
-        appLabIntro2_textColor: "მოსინჯეთ მონაცემის მახასიათებელის რამდენიმე ღილაკი,
-          იმისათვის რომ მოსინჯოთ მისი განსხვავებული მაჩვენებლები"
+        applabIntro2storyText: დააწკაპეთ ამ ეკრანზე განთავსებულ ამბის ტექსტს
+        appLabIntro2_editStoryText: ტექსტური ყუთის გასადიდებლად, მოკიდეთ ხელი მის
+          ქვედა მარჯვენა კუთხეს და ჩამოქაჩეთ. ამის შემდეგ შეიყვანეთ თქვენი ამბის ტექსტი
+        appLabIntro2_textColor: მოსინჯეთ მონაცემის მახასიათებელის რამდენიმე ღილაკი,
+          იმისათვის რომ მოსინჯოთ მისი განსხვავებული მაჩვენებლები
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: "გადმოათრიეთ სხვა ღილაკი თქვენს აპლიკაციაში"
+        designToolboxCallOut: გადმოათრიეთ სხვა ღილაკი თქვენს აპლიკაციაში
         changeButtonID: 'აირჩიეთ გასაგები "id" თქვენი ღილაკისთვის. მაგალითად: "callFriendButton"
           ან "goOutsideButton"'
         screenSelectorCallout3: გადადით თქვენს "startScreen"-ზე
@@ -206,17 +206,17 @@
       CSD U3 UP_ARROW_callout: []
       CSD U3 UP_ARROW_2018_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: "აქ შეგიძლიათ შეცვალოთ რიცხვი"
+        CSD_U3_variables: აქ შეგიძლიათ შეცვალოთ რიცხვი
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       CSD U3 Variables Predict Where XY_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       CSD U3 Variables Predict Where XY_2018_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       CSD U3 Variables Predict Where X_2018_callout:
-        CSD_U3_variables: "აქ შეგიძლიათ შეცვალოთ რიცხვი"
+        CSD_U3_variables: აქ შეგიძლიათ შეცვალოთ რიცხვი
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -366,23 +366,23 @@
       CSD U3 collisions types_2018_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 debug_2018_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 ellipse_2018_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 fill_2018_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
@@ -399,7 +399,7 @@
       CSD U3 keydown conditional_callout: []
       CSD U3 keydown conditional_2018_callout: []
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
+        CSD_U3_rect_c1: აქ კოდია
         CSD_U3_rect_c2: აქ "გაშვების" ღილაკია.
       CSD U3 picture_callout: []
       CSD U3 picture_2018_callout: []
@@ -424,31 +424,46 @@
       CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
+        CSD_U3_rect_c1: აქ კოდია
         CSD_U3_rect_c2: აქ "გაშვების" ღილაკია.
       CSD U3 rect_2018_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
+        CSD_U3_rect_c1: აქ კოდია
         CSD_U3_rect_c2: აქ "გაშვების" ღილაკია.
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U3 sequence_2018_callout:
-        CSD_U3_rect_c1: "აქ კოდია"
-        CSD_U3_rect_c2: "გადმოათრიეთ ბლოკი კოდირების გარემოში."
+        CSD_U3_rect_c1: აქ კოდია
+        CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Add your code here
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Add your code here
       CSD U6 colorLeds predict_callout: []
+      CSD U6 colorLeds predict_2018_callout: []
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: What does this line do?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: What does this line do?
       CSD U6 light show_callout:
+        CSDUDL03P09: What does this line do?
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: What does this line do?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Define startGame here
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Define startGame here
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Define movePlayer() here
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Check if the player has won
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Check if the player has won
       CSDU4 - Design Mode - 3_callout: []
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -492,33 +507,33 @@
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: []
       Counting_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       Course 4 Artist 4_callout:
-        repeat_full_circle: "რამდენჯერ უნდა გადააგილდეს ზომბი რომ სრული წრე დაარტყას?
-          შეიყვანეთ შესაბამისი რიცხვი"
+        repeat_full_circle: რამდენჯერ უნდა გადააგილდეს ზომბი რომ სრული წრე დაარტყას?
+          შეიყვანეთ შესაბამისი რიცხვი
       Course 4 Artist 7_callout:
         repeat_blocks: გამოიყენეთ ბლოკი "გამეორება" და მოათავსეთ მასში სამუშაო სივრცეში
           მდებარე ბლოკები
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: "მთვლელის ცვლადი ამ ბლოკში გადაიტანეთ"
+        place_counter_variable: მთვლელის ცვლადი ამ ბლოკში გადაიტანეთ
       Course 4 Artist Functions 4_callout:
         create_function: დააჭირეთ აქ და გახსენით ჩანართი "ფუნქციები", შემდეგ აირჩიეთ
           "ფუნქციის შექმნა".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: "არაუშავს, თუ ნახატი ჯერ არ ჰგავს სახლს. ამას შემდეგ თავსატეხში
-          გამოვასწორებთ."
+        house_hint: არაუშავს, თუ ნახატი ჯერ არ ჰგავს სახლს. ამას შემდეგ თავსატეხში
+          გამოვასწორებთ.
       Course 4 Artist Functions 8_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: "ამჩნევთ, რომ ჩვენ გადავანაწილეთ ბლოკები
+        Course_4_Artist_Functions_challenge_1: ამჩნევთ, რომ ჩვენ გადავანაწილეთ ბლოკები
           კატეგორიებში, რათა ყველაფერი უფრო დალაგებული იყოს? დააკლიკეთ აქ, რათა იპოვოთ
-          ყველა საჭირო ბლოკი."
+          ყველა საჭირო ბლოკი.
       Course 4 Artist Params 2_callout:
         length_parameter: შეგიძლიათ განაახლოთ ეს ფუნქცია ისე, რომ მან "სიგრძის" პარამეტრი
           გამოიყენოს?
@@ -532,18 +547,18 @@
         set_sides: გამოიყენეთ ეს ბლოკი და განსაზღვრეთ რამდენი "გვერდია" საჭირო თავსატეხის
           დასასრულებლად.
       Course 4 Artist Vars 12_callout:
-        set_length: "სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი."
+        set_length: სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი.
       Course 4 Artist Vars 13_callout: []
       Course 4 Artist Vars 2_callout:
-        set_length: "სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი."
+        set_length: სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი.
       Course 4 Artist Vars 3_callout:
-        place_variable: "გადაიტანეთ ცვლადი ამ ბლოკში"
+        place_variable: გადაიტანეთ ცვლადი ამ ბლოკში
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: "გაყავით 360 გვერდების რაოდენობაზე და გამოთვალეთ თითოეული
-          კუთხის ზომა."
+        degrees_per_side: გაყავით 360 გვერდების რაოდენობაზე და გამოთვალეთ თითოეული
+          კუთხის ზომა.
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: "მეტი სივრცე გჭირდებათ? გამოწიეთ ეს ფირფიტა, რათა
-          გახადოთ კოდირების გარემო უფრო ფართო."
+        Course_4_Artist_Vars_8_a: მეტი სივრცე გჭირდებათ? გამოწიეთ ეს ფირფიტა, რათა
+          გახადოთ კოდირების გარემო უფრო ფართო.
       Course 4 Artist Vars 9_callout:
         set_sides: გამოიყენეთ ეს ბლოკი და განსაზღვრეთ რამდენი "გვერდია" საჭირო თავსატეხის
           დასასრულებლად.
@@ -559,8 +574,8 @@
         actions_category: ინსტრუმენტების პანელი განახლებულია! ახლა "მოქმედებების"
           ბლოკებიც აქაა.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: "გამოიყენეთ ეს ღილაკი ფუნქციის შესასწორებლად და ნექტარის
-          მოსაპოვებლად ფუტკრის მობრუნების მიმართულების შეცვლით."
+        edit_get_nectar: გამოიყენეთ ეს ღილაკი ფუნქციის შესასწორებლად და ნექტარის მოსაპოვებლად
+          ფუტკრის მობრუნების მიმართულების შეცვლით.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: ამ ცვლადების განსაზღვრას როგორც "0"-ს ან "1"-ს ეწოდება
@@ -572,41 +587,41 @@
         Course 4 Maze 1_callout2: გადმოათრიეთ "მოძრაობის" ბლოკი და განალაგეთ ის სამუშაო
           სივრცეში სხვა ბლოკების ქვემოთ
       Course 4 Maze 4_callout:
-        repeat: "ბრძანებების გასამეორებლად ჩასვით ბლოკები ციკლში"
+        repeat: ბრძანებების გასამეორებლად ჩასვით ბლოკები ციკლში
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: დააკლიკეთ "რედაქტირებას", რათა განაახლოთ ეს
           ფუნქცია ისე, რომ მან გამოიყენოს სიმაღლის პარამეტრი.
       Course 4 Play Lab Params 3_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
       Course 4 Play Lab Vars 1_callout:
-        arrows_move_actor: "პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები"
+        arrows_move_actor: პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: "ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
-          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები."
+        Course_4_Play_Lab_Vars_9_1: ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
+          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები.
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "ვოუ! ჩემი კოდი აფეთქდა! შეგიძლიათ ააწყოთ
-          ის თავიდან, რათა ამოხსნათ ეს თავსატეხი?"
+        Course_4_Play_Labs_For_Loops_5: ვოუ! ჩემი კოდი აფეთქდა! შეგიძლიათ ააწყოთ ის
+          თავიდან, რათა ამოხსნათ ეს თავსატეხი?
       Course 4 Playlab For Loop Freeplay_callout: []
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: "შენიშნეთ, რომ `მთველის` ცვლადს განსხვავებული
+        Course_4_Playlab_For_Loops_4b_1: შენიშნეთ, რომ `მთველის` ცვლადს განსხვავებული
           სახელი აქვს ყოველი ასოსთვის?  ამიტომ `for` ციკლს შეუძლია აკონტროლოს საკუთარი
-          მთვლელი."
+          მთვლელი.
         Course_4_Playlab_For_Loops_4b_2: ამ თავსატეხშო თქვენ შეგიძლიათ მხოლოდ "for"
           ციკლების "ნაზრდის" შეცვლა.
       Course 4 Playlab For Loops 5b_callout: []
       Course 4 Playlab For Loops 6b_callout: []
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: "ეს ბლოკი გაძლევთ საშუალებას შეცვალოთ თქვენი ფერი როგორც მოისურვებთ!
-          გაეთამაშეთ რიცხვებს და ნახეთ რა მოხდება!"
+        Course_4_SCV_6: ეს ბლოკი გაძლევთ საშუალებას შეცვალოთ თქვენი ფერი როგორც მოისურვებთ!
+          გაეთამაშეთ რიცხვებს და ნახეთ რა მოხდება!
       CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: "პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები"
+        arrows_move_actor: პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: "ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
-          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები."
+        Course_4_Play_Lab_Vars_9_1: ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
+          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები.
       CourseF_PlayLab_vars6_callout: []
       CourseF_PlayLab_vars7_callout: []
       CourseF_PlayLab_vars8_callout: []
@@ -628,7 +643,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -645,29 +660,29 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
-          შესაქმნელად!"
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
-          შესაქმნელად!"
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: This little instruction tells the computer to run the
           BIG chunk of code with the same name in the workspace.
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: "ხმის გამოცემა ამ მოვლენისას."
+        Infinity_move_collide_callout: ხმის გამოცემა ამ მოვლენისას.
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: "რომელი ბლოკი გადააადგილებს ბეიმაქს ზემოთ
-          ზემოთა ისრის დაჭერისას?"
-        Infinity_move_directions_callout_arrow: "სამართავად გამოიყენეთ ეს ისრები"
+        Infinity_move_directions_callout: რომელი ბლოკი გადააადგილებს ბეიმაქს ზემოთ
+          ზემოთა ისრის დაჭერისას?
+        Infinity_move_directions_callout_arrow: სამართავად გამოიყენეთ ეს ისრები
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: დაამატეთ ბლოკი "გადაადგილება" აქ
       Infinity_repeat_callout:
@@ -729,26 +744,26 @@
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: "დააკლიკეთ აქ, რათა დაარედაქტიროთ ახალი
-          ფუნქცია, რათა მან შექმნას კვადრატი."
+        NEW_Course_4_Artist_Functions_3_1: დააკლიკეთ აქ, რათა დაარედაქტიროთ ახალი
+          ფუნქცია, რათა მან შექმნას კვადრატი.
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
         function_editor_draw_square: ეს არის თქვენი ფუნქციის განსაზღვრება. ეს ბლოკები
           გაეშვება ყოველთვის, როცა გამოიყენებთ ბლოკს "კვადრატის დახატვა"
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: "ფუნქციის შესასწორებლად დააჭირეთ აქ."
+        edit_function: ფუნქციის შესასწორებლად დააჭირეთ აქ.
       NEW Course 4 Artist Params 10_callout:
         create_function: დააჭირეთ აქ და გახსენით ჩანართი "ფუნქციები", შემდეგ აირჩიეთ
           "ფუნქციის შექმნა".
@@ -757,53 +772,53 @@
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
-        add_and_drag_parameter: "ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას
-          და შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
+        add_and_drag_parameter: ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას და
+          შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: "გადმოიტანეთ აქ სიგრძის ცვლადი და ჩაანაცვლეთ კითხვის
-          ნიშნები"
+        place_length_variable: გადმოიტანეთ აქ სიგრძის ცვლადი და ჩაანაცვლეთ კითხვის
+          ნიშნები
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: "შეიყვანეთ ნექტარის უდიდესი მნიშვნელობა, რომელიც გსურთ, რომ
-          ფუტკარმა მოაგროვოს"
+        bee_for_loop: შეიყვანეთ ნექტარის უდიდესი მნიშვნელობა, რომელიც გსურთ, რომ ფუტკარმა
+          მოაგროვოს
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: ინსტრუმენტების პანელი განახლებულია! ახლა "მოქმედებების"
           ბლოკებიც აქაა.
       New App Lab Project_callout: []
       New Artist Project_callout:
-        New Artist Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+        New Artist Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
           ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
-          ისინი თქვენს პროგრამაში"
+          ისინი თქვენს პროგრამაში
         New Artist Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       New Frozen Project_callout:
-        snowflake_dropdown: "გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
-          შესაქმნელად!"
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Overworld Chop Trees_callout:
-        craft_callout_preplaced: "რამდენიმე ბლოკი უკვე მზად არის"
+        craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
       Overworld Chop Trees_2018_callout:
-        craft_callout_preplaced: "რამდენიმე ბლოკი უკვე მზად არის"
+        craft_callout_preplaced: რამდენიმე ბლოკი უკვე მზად არის
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს.
-          შეგიძლიათ დაასრულოთ?"
+        craft_callout_preplaced_house: ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს.
+          შეგიძლიათ დაასრულოთ?
       Overworld House Frame Chosen_2018_callout:
-        craft_callout_preplaced_house: "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს.
-          შეგიძლიათ დაასრულოთ?"
+        craft_callout_preplaced_house: ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს.
+          შეგიძლიათ დაასრულოთ?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: დააჭირეთ "გაშვებას" და გატესტეთ თქვენი პროგრამა
         craft_drag_block_callout: გადმოათრიეთ "წინ გადაადგილების" ბლოკი და განათავსეთ
@@ -813,40 +828,40 @@
         craft_drag_block_callout: გადმოათრიეთ "წინ გადაადგილების" ბლოკი და განათავსეთ
           ის მეორე ბლოკის ქვემოთ
       Overworld Place Wall_callout:
-        craft_inside_repeat: "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
+        craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით
       Overworld Place Wall_2018_callout:
-        craft_inside_repeat: "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
+        craft_inside_repeat: გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
       PDAlg Big Game History_callout: []
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
       PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: "იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
-          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!"
+        Bee_Cond_5_1a: იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
+          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: "დააკლიკეთ აქ ბადის საჩვენებლად."
+        grid: დააკლიკეთ აქ ბადის საჩვენებლად.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Play Lab Rocket 2_callout:
-        pass_function: "ეს დაწყების(ფუნქციის) ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი
+        pass_function: ეს დაწყების(ფუნქციის) ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი
           ფუნქცია (და არა ფუნქციის ის მნიშვნელობა, რომელსაც ის აბრუნებს რაიმე შეყვანილი
           მნიშვნელობისგან) რაკეტის ანიმაციის ბიბლიოთეკაში. ეს ანიმაცია, რომელსაც ეკრანზე
-          ხედავთ, სინამდვილეში იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!"
-        play lab rocket 2: "განსაზღვრეთ თქვენი რაკეტის-სიმაღლის ფუნქცია აქ"
+          ხედავთ, სინამდვილეში იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!
+        play lab rocket 2: განსაზღვრეთ თქვენი რაკეტის-სიმაღლის ფუნქცია აქ
       Play Lab Rocket 2B_callout:
-        pass_function: "ეს შავი ბლოკი ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი ფუნქცია
+        pass_function: ეს შავი ბლოკი ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი ფუნქცია
           (და არა ფუნქციის ის მნიშვნელობა, რომელსაც ის აბრუნებს რაიმე შეყვანილი მნიშვნელობისგან)
           რაკეტის ანიმაციის ბიბლიოთეკაში. ეს ანიმაცია, რომელსაც ეკრანზე ხედავთ, სინამდვილეში
-          იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!"
+          იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: "განაახლეთ მიზეზის ბრძანება სანამ გადახვალთ მაგალითებზე
-          და განმარტებებზე."
+        Play Lab Rocket 3 1: განაახლეთ მიზეზის ბრძანება სანამ გადახვალთ მაგალითებზე
+          და განმარტებებზე.
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       Quantum Bee - Ryan_callout:
@@ -858,30 +873,30 @@
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
           label to leave yourself notes inside your program!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       Rocket Height Course A_callout:
-        pass_function: "ეს დაწყების(ფუნქციის) ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი
+        pass_function: ეს დაწყების(ფუნქციის) ბლოკი გაძლევთ საშუალებას გადასცეთ თქვენი
           ფუნქცია (და არა ფუნქციის ის მნიშვნელობა, რომელსაც ის აბრუნებს რაიმე შეყვანილი
           მნიშვნელობისგან) რაკეტის ანიმაციის ბიბლიოთეკაში. ეს ანიმაცია, რომელსაც ეკრანზე
-          ხედავთ, სინამდვილეში იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!"
+          ხედავთ, სინამდვილეში იყენებს თქვენს ფუნქციას რაკეტი სამოძრავებლად!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       SG Add Subgoals practice_callout: []
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -896,17 +911,17 @@
         goals_palette_show: Here is a list of subgoals
         goals_workspace: Example of code with subgoals in it
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: "დაარედაქტირეთ ეს ფუნქცია ისე, რომ სემი არ გადავარდეს
-          მარჯვნივ"
+        Sam the Butterfly 3 1: დაარედაქტირეთ ეს ფუნქცია ისე, რომ სემი არ გადავარდეს
+          მარჯვნივ
       Sam the Butterfly 5_callout: []
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -933,102 +948,102 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: "ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ
-          დაუმატოთ წინ გადაადგილების ბრძანება?"
+        craft_callout_moveforward: ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ
+          წინ გადაადგილების ბრძანება?
       Underground Avoiding Lava_2018_callout:
-        craft_callout_moveforward: "ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ
-          დაუმატოთ წინ გადაადგილების ბრძანება?"
+        craft_callout_moveforward: ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ
+          წინ გადაადგილების ბრძანება?
       Underground Iron_callout:
-        craft_what_is_iron: "მოიპოვეთ ეს რკინა!"
+        craft_what_is_iron: მოიპოვეთ ეს რკინა!
       Underground Iron_2018_callout:
-        craft_what_is_iron: "მოიპოვეთ ეს რკინა!"
+        craft_what_is_iron: მოიპოვეთ ეს რკინა!
       WebLab PS test - 1-12_callout:
-        version_history_button: "გადახედეთ ვერსიების ისტორიას"
+        version_history_button: გადახედეთ ვერსიების ისტორიას
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       aE1_callout:
-        aE1_1: "აქ იქნება მხოლოდ ორი ასეთი და ორი მობრუნება"
+        aE1_1: აქ იქნება მხოლოდ ორი ასეთი და ორი მობრუნება
       aE2_callout:
-        aE2_1: "ისევ მხოლოდ ორი ასეთი და ორი მობრუნება"
+        aE2_1: ისევ მხოლოდ ორი ასეთი და ორი მობრუნება
       aE3_callout:
-        aE3_1: "ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი"
+        aE3_1: ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი
       aE3alternate_callout:
-        aE3_1: "ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი"
+        aE3_1: ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი
       aE3alternateB_callout:
-        aE3_1: "ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი"
+        aE3_1: ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი
       aE4_callout:
-        aE3_1: "ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი"
+        aE3_1: ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი
       aE5_callout:
-        aE3_1: "ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი"
+        aE3_1: ამის მხოლოდ მცირე რაოდენობა იქნება ხელმისაწვდომი
       aE6_callout:
-        aE6_1: "მხოლოდ 1 წინ გადაადგილება და 1 მობრუნების ბლოკი"
+        aE6_1: მხოლოდ 1 წინ გადაადგილება და 1 მობრუნების ბლოკი
       aEfreeplay_callout:
-        aEfreeplay_1: "შენიშნეთ, რომ მხატვარს შუაში დაწყები უცნაურია. ჩვენ ვფიქრობთ
-          ქმედებების დამატებას, რომლებიც გადაადგილებე მხატვარს აბსოლუტურ პოზიციებზე."
+        aEfreeplay_1: შენიშნეთ, რომ მხატვარს შუაში დაწყები უცნაურია. ჩვენ ვფიქრობთ
+          ქმედებების დამატებას, რომლებიც გადაადგილებე მხატვარს აბსოლუტურ პოზიციებზე.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: []
       artistLoopsK2_callout:
-        artistLoopsK2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
-          ამ თავსატეხში."
+        artistLoopsK2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
+          ამ თავსატეხში.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
-          ამ თავსატეხში."
+        artistLoopsK2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
+          ამ თავსატეხში.
       comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
-          მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან)."
+        courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
+          მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       course2_collector_loops_challenge2_callout: []
       course2_collector_prog_challenge1_callout: []
       course2_collector_prog_challenge2_callout: []
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge1_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge1_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge1_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge2_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       course3_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
-          ფუტკარი უკანა მიმართულებით."
+        courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
+          ფუტკარი უკანა მიმართულებით.
       course3_bee_functions_challenge3_callout:
-        courseF_bee_functions_challenge1_1: "რა კოდი უნდა განათავსოთ ამ ფუნქციაში?"
+        courseF_bee_functions_challenge1_1: რა კოდი უნდა განათავსოთ ამ ფუნქციაში?
         courseF_bee_functions_challenge1_2: '"შეამოწმე ნექტარი ან თაფლი" ფუნქცია შეიძლება
           გამოივიყენოთ აქ, თუ რამდენჯერმე დაარედაქტირებთ თაფლს.'
       course3_bee_functions_challenge4_callout: []
       course3_collector_debugging_challenge2_callout: []
       course3_farmer_until_challenge2_callout: []
       course3_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
-          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
       course4_artist_concept_challenge2_callout: []
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge2_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       course4_bee_for_challenge1_callout: []
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: "ეს ფუნქცია კარგად მუშაობს სიმინდთან,
-          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?"
+        courseF_bee_fwp_challenge2_callout1: ეს ფუნქცია კარგად მუშაობს სიმინდთან,
+          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?
       course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
-          შეგიძლიათ ამ თავსატეხში."
+        courseA_artist_loops4_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       courseA_artist_loops4_2018_callout:
-        courseA_artist_loops4_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
-          შეგიძლიათ ამ თავსატეხში."
+        courseA_artist_loops4_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       courseA_artist_loops7_callout:
-        courseA_artist_loops7_1: "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
-          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
+        courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
+          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_artist_loops7_2018_callout:
-        courseA_artist_loops7_1: "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
-          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
+        courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
+          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
-          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
+        courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის
+          გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -1036,46 +1051,63 @@
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
-          შეგიძლიათ ამ თავსატეხში."
+        gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       courseA_collector_loops3_2018_callout:
-        gradek_adventurer_loops2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
-          შეგიძლიათ ამ თავსატეხში."
+        gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       courseA_collector_loops3_predict1_callout: []
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_forVideoTest_artist_callout: []
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: Grey blocks are made of stone and cannot be thrown away.
+      courseA_maze_ramp3a_2018_callout: []
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseA_maze_ramp4a_2018_callout: []
+      courseA_maze_ramp5_2018_callout: []
+      courseA_maze_ramp5a_2018_callout: []
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: "დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!"
+        courseA_maze_seq1_1: დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: "დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!"
+        courseA_maze_seq1_1: დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: "გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
-          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!"
+        courseA_maze_seqA_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
+          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!
       courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: "გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
-          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!"
+        courseA_maze_seqA_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
+          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!
       courseA_maze_seq4_callout:
         made_of_stone: These blocks are made of stone.  You can move them, but you
           can't delete them!
@@ -1088,13 +1120,13 @@
       courseA_playLab_events3_callout: []
       courseA_playLab_events3_2018_callout: []
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: "ეს ტექსტური ბუშტია"
+        courseA_playlab_events4_callout1: ეს ტექსტური ბუშტია
       courseA_playLab_events4_2018_callout:
-        courseA_playlab_events4_callout1: "ეს ტექსტური ბუშტია"
+        courseA_playlab_events4_callout1: ეს ტექსტური ბუშტია
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: "დააკლიკეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება."
+        courseA_playLab_events5_1: დააკლიკეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: "დააკლიკეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება."
+        courseA_playLab_events5_1: დააკლიკეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
@@ -1102,57 +1134,111 @@
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: []
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseB_Scrat_ramp2_2018_callout: []
+      courseB_Scrat_ramp3a_2018_callout: []
+      courseB_Scrat_ramp4a_2018_callout: []
+      courseB_Scrat_ramp5a_2018_callout: []
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
       courseB_artist_loops5_callout:
-        courseB_artist_loops5_1: "ეს რიცხვი იმას ნიშნავს, რომ ინსტრუმენტების პანელში
-          ამ სახის ბლოკი აღარაა."
+        courseB_artist_loops5_1: ეს რიცხვი იმას ნიშნავს, რომ ინსტრუმენტების პანელში
+          ამ სახის ბლოკი აღარაა.
+      courseB_artist_loops5_2018_callout:
+        courseB_artist_loops5_1: ეს რიცხვი იმას ნიშნავს, რომ ინსტრუმენტების პანელში
+          ამ სახის ბლოკი აღარაა.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseB_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: "დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!"
+        courseB_maze_seq1: დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: დააკლიკეთ ნათურას თუ გჭირდებათ მითითება!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: "გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
-          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!"
+        courseB_maze_seq2_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
+          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ
+          მთელი პროგრამა. ეს დაგეხმარებათ ბაგის პოვნაში!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: "ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება
-          შეუძლებელია."
+        courseB_maze_seq3_1: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება
+          შეუძლებელია.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება
+          შეუძლებელია.
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: "გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
-          შეცვალოთ მიმართულებები."
+        courseB_playlab_events6_a: გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
+          შეცვალოთ მიმართულებები.
+      courseB_playlab_events6_2018_callout:
+        courseB_playlab_events6_a: გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა
+          შეცვალოთ მიმართულებები.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp
+          touch!
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
-          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
       courseC_artist_loopsPrePre1a_callout:
-        courseC_artist_loopsPrePre1a_1: "იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ,
-          დაიწყეთ ამ ბლოკის გამოყენებით."
+        courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ,
+          დაიწყეთ ამ ბლოკის გამოყენებით.
+      courseC_artist_loopsPrePre1a_2018_callout:
+        courseC_artist_loopsPrePre1a_1: იმისათვის რომ მსახიობი ეკრანის ცენტრში მიიყვანოთ,
+          დაიწყეთ ამ ბლოკის გამოყენებით.
       courseC_artist_prog1_callout: []
       courseC_artist_prog1_2018_callout: []
       courseC_artist_prog2_callout: []
       courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
+      courseC_collector_loops_challenge2_2018_callout: []
       courseC_collector_prog1_callout:
-        courseC_collector_prog1_1: "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
-          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        courseC_collector_prog1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
+      courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში?
+          არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you
           need them!
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
       courseC_collector_prog8_callout: []
+      courseC_collector_prog8_2018_callout: []
       courseC_collector_prog9_callout: []
+      courseC_collector_prog9_2018_callout: []
       courseC_collector_progA_callout: []
       courseC_collector_progB_callout: []
       courseC_collector_prog_challenge1_callout: []
+      courseC_collector_prog_challenge1_2018_callout: []
       courseC_collector_prog_challenge2_callout: []
+      courseC_collector_prog_challenge2_2018_callout: []
       courseC_harvester_loops1_callout:
-        courseC_harvester_loops1_callout1: "გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
-          იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ."
+        courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
+          იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
+      courseC_harvester_loops1_2018_callout:
+        courseC_harvester_loops1_callout1: გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ
+          იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: "ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!"
+        courseC_maze_debugging5_1: ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!
       courseC_maze_debugging5_2018_callout:
-        courseC_maze_debugging5_1: "ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!"
+        courseC_maze_debugging5_1: ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this
           puzzle.
@@ -1161,34 +1247,65 @@
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
         courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        courseC_maze_programming3_3: These blocks are stone and cannot be thrown away.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseC_maze_programming5_callout: []
+      courseC_maze_programming5_2018_callout: []
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are
           meant to be hard and may take several tries.
-        courseC_maze_programming7_2: "ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და
-          მათი გადაგდება შეუძლებელია."
+        courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი
+          გადაგდება შეუძლებელია.
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+        courseC_maze_programming7_2: ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი
+          გადაგდება შეუძლებელია.
       courseC_starWars_loops10_callout: []
+      courseC_starWars_loops10_2018_callout: []
       courseC_starWars_loops10_predict2_callout: []
+      courseC_starWars_loops10_predict2_2018_callout: []
       courseC_starWars_loops11_callout: []
+      courseC_starWars_loops11_2018_callout: []
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: You only have one of these blocks available in this
           puzzle.
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
       courseC_starWars_loops4_callout: []
+      courseC_starWars_loops4_2018_callout: []
       courseC_starWars_loops5_callout: []
+      courseC_starWars_loops5_2018_callout: []
       courseC_starWars_loops6_callout: []
+      courseC_starWars_loops6_2018_callout: []
       courseC_starWars_loops7_callout: []
+      courseC_starWars_loops7_2018_callout: []
       courseC_starWars_loops8_callout: []
+      courseC_starWars_loops8_2018_callout: []
       courseC_starWars_loops9_callout: []
+      courseC_starWars_loops9_2018_callout: []
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in
           the function will run. What should the artist do after drawing the first
@@ -1197,51 +1314,69 @@
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
-        courseD_artist_nestedLoops1a_1: "თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების
+        courseD_artist_nestedLoops1a_1: თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების
           გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი
-          ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!"
+          ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების
+          გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი
+          ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseD_artist_ramp11_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseD_artist_ramp11_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseD_artist_ramp11_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO
           HINTS!
       courseD_bee_conditionals_challenge2_callout:
-        courseD_bee_conditionals_challenge2_1: "გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
-          მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან)."
+        courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
+          მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ
+          მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: "ამ ციკლის გამოყენებით სცადეთ, წინ
-          მოძრაობის ბლოკის გამეორება."
+        courseD_bee_conditionals_challenge3_1: ამ ციკლის გამოყენებით სცადეთ, წინ მოძრაობის
+          ბლოკის გამეორება.
       courseD_bee_debugging_challenge1_callout:
-        courseD_bee_debugging_challenge1_callout1: "გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
-          ფუტკარი უკანა მიმართულებით."
+        courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
+          ფუტკარი უკანა მიმართულებით.
+      courseD_bee_debugging_challenge1_2018_callout:
+        courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
+          ფუტკარი უკანა მიმართულებით.
       courseD_bee_debugging_challenge1a_callout:
-        courseD_bee_debugging_challenge1_callout1: "გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
-          ფუტკარი უკანა მიმართულებით."
+        courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
+          ფუტკარი უკანა მიმართულებით.
       courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: "გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
-          ფუტკარი უკანა მიმართულებით."
+        courseD_bee_debugging_challenge1_callout1: გამოიყენეთ ეს ბრძანება, რათა ამოძრავოთ
+          ფუტკარი უკანა მიმართულებით.
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "გამოიყენეთ ეს ბლოკი, რათა შეაგროვოთ განძეულობის
-          ერთეული.  "
+        courseD_collector_ramp8_1: 'გამოიყენეთ ეს ბლოკი, რათა შეაგროვოთ განძეულობის
+          ერთეული.  '
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1281,13 +1416,16 @@
       courseD_maze_ramp5d_callout: []
       courseD_maze_ramp5d_2018_callout: []
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
@@ -1319,17 +1457,17 @@
       courseD_scrat_ramp5_callout: []
       courseD_scrat_ramp5_2018_callout: []
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseD_scrat_ramp8_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
@@ -1360,71 +1498,77 @@
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge1_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge1_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge1_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge1_2018_callout:
-        courseE_artist_functions_challenge1_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge1_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge1_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge1_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge2_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_challenge2_2018_callout:
-        courseE_artist_functions_challenge2_callout1: "დაამატეთ მეტი კოდი პროგრამის
-          ქვემოთ, რათა განაგრძოთ მისი შესრულება."
-        courseE_artist_functions_challenge2_callout2: "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
-          ის ნებისმიერ მნიშვნელობაზე!"
+        courseE_artist_functions_challenge2_callout1: დაამატეთ მეტი კოდი პროგრამის
+          ქვემოთ, რათა განაგრძოთ მისი შესრულება.
+        courseE_artist_functions_challenge2_callout2: თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ
+          ის ნებისმიერ მნიშვნელობაზე!
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseD_artist_ramp11_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseD_artist_ramp11_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseD_artist_ramp11_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseE_artist_ramp12_callout: []
       courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseE_artist_ramp8_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseE_artist_ramp8_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseE_artist_ramp8_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseE_artist_ramp8_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseE_artist_ramp8_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseE_artist_ramp8_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseE_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseE_artist_ramp8_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseE_artist_ramp8_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseE_artist_ramp8_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseE_artist_ramp8_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: "გამოიყენეთ ეს ბლოკი, რათა შეაგროვოთ განძეულობის
-          ერთეული.  "
+        courseD_collector_ramp8_1: 'გამოიყენეთ ეს ბლოკი, რათა შეაგროვოთ განძეულობის
+          ერთეული.  '
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
+        courseE_farmer_functions1_2: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
           ორგანიზებული. დააკლიკეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
-          გაქვთ."
+          გაქვთ.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions10b_2018_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions11_predict_2018_callout: []
       courseE_farmer_functions1_2018_callout:
-        courseE_farmer_functions1_2: "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
+        courseE_farmer_functions1_2: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
           ორგანიზებული. დააკლიკეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
-          გაქვთ."
+          გაქვთ.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
@@ -1466,40 +1610,60 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: []
       courseE_multi_maze_ramp5_callout: []
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
-          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
       courseE_playLab_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
-          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        courseC_PlayLab_events_challenge1_1: ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ
+          მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ
-          შემდეგ დონეზე."
+        courseE_playLab_scaffold3_1: მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ
+          შემდეგ დონეზე.
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ
-          შემდეგ დონეზე."
+        courseE_playLab_scaffold3_1: მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ
+          შემდეგ დონეზე.
       courseF_IceAge_1_callout:
         playlab_drag_say_a: გადმოათრიეთ აქ `მსახიობი 1 ამბობს` ბლოკი და ჩაწერეთ "გამარჯობა!"
       courseF_IceAge_10_callout: []
@@ -1517,7 +1681,7 @@
       courseF_IceAge_8_callout:
         playlab_add_score: ''
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: "დაამატეთ ბლოკები აქ"
+        playlab_add_blocks_1: დაამატეთ ბლოკები აქ
       courseF_IceAge_template_callout:
         arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []
@@ -1548,9 +1712,9 @@
       courseF_artist_predict1_callout: []
       courseF_artist_ramp10_callout: []
       courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ."
-        courseE_artist_ramp8_2: "დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
-          თუ რამდენჯერ გსურთ კოდის გამეორება."
+        courseE_artist_ramp8_1: თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.
+        courseE_artist_ramp8_2: დააკლიკეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ
+          თუ რამდენჯერ გსურთ კოდის გამეორება.
       courseF_artist_ramp9_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter
@@ -1609,17 +1773,17 @@
       courseF_artist_variables_template_2018_callout: []
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
-        courseF_bee_conditionals2_2: "ინსტრუმენტების პანელი კატეგორიის რეჟიმშია. ყველა
-          თქვენი ბლოკი განთავსებულია ამ იარლიყების ქვეშ!"
+        courseF_bee_conditionals2_2: ინსტრუმენტების პანელი კატეგორიის რეჟიმშია. ყველა
+          თქვენი ბლოკი განთავსებულია ამ იარლიყების ქვეშ!
       courseF_bee_conditionals2_2018_callout:
-        courseF_bee_conditionals2_2: "ინსტრუმენტების პანელი კატეგორიის რეჟიმშია. ყველა
-          თქვენი ბლოკი განთავსებულია ამ იარლიყების ქვეშ!"
+        courseF_bee_conditionals2_2: ინსტრუმენტების პანელი კატეგორიის რეჟიმშია. ყველა
+          თქვენი ბლოკი განთავსებულია ამ იარლიყების ქვეშ!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: "გამოიყენეთ ეს ბლოკი, როდესაც გზის სიგრძე შეიცვლება
-          (როგორც მართკუთხედის გვერდების შემთხვევაში!)"
+        courseF_bee_conditionals5_1: გამოიყენეთ ეს ბლოკი, როდესაც გზის სიგრძე შეიცვლება
+          (როგორც მართკუთხედის გვერდების შემთხვევაში!)
       courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: "გამოიყენეთ ეს ბლოკი, როდესაც გზის სიგრძე შეიცვლება
-          (როგორც მართკუთხედის გვერდების შემთხვევაში!)"
+        courseF_bee_conditionals5_1: გამოიყენეთ ეს ბლოკი, როდესაც გზის სიგრძე შეიცვლება
+          (როგორც მართკუთხედის გვერდების შემთხვევაში!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
@@ -1644,17 +1808,17 @@
         courseF_bee_functions2_1: ეს ბლოკი ფუნქციას იძახებს. დააკლიკეთ "რედაქტირების"
           ღილაკს, რათა ნახოთ თუ რა არის შიგნით!
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: "არ დაგავიწყდეთ შიგნით შემოწმება მეტი ბლოკის არსებობაზე.
-          ამან შეიძლება საქმე გაგიმარტივოთ!"
+        courseF_bee_functions6_1: არ დაგავიწყდეთ შიგნით შემოწმება მეტი ბლოკის არსებობაზე.
+          ამან შეიძლება საქმე გაგიმარტივოთ!
       courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: "არ დაგავიწყდეთ შიგნით შემოწმება მეტი ბლოკის არსებობაზე.
-          ამან შეიძლება საქმე გაგიმარტივოთ!"
+        courseF_bee_functions6_1: არ დაგავიწყდეთ შიგნით შემოწმება მეტი ბლოკის არსებობაზე.
+          ამან შეიძლება საქმე გაგიმარტივოთ!
       courseF_bee_functions_challenge1_callout:
-        courseF_bee_functions_challenge1_1: "რა კოდი უნდა განათავსოთ ამ ფუნქციაში?"
+        courseF_bee_functions_challenge1_1: რა კოდი უნდა განათავსოთ ამ ფუნქციაში?
         courseF_bee_functions_challenge1_2: '"შეამოწმე ნექტარი ან თაფლი" ფუნქცია შეიძლება
           გამოივიყენოთ აქ, თუ რამდენჯერმე დაარედაქტირებთ თაფლს.'
       courseF_bee_functions_challenge1_2018_callout:
-        courseF_bee_functions_challenge1_1: "რა კოდი უნდა განათავსოთ ამ ფუნქციაში?"
+        courseF_bee_functions_challenge1_1: რა კოდი უნდა განათავსოთ ამ ფუნქციაში?
         courseF_bee_functions_challenge1_2: '"შეამოწმე ნექტარი ან თაფლი" ფუნქცია შეიძლება
           გამოივიყენოთ აქ, თუ რამდენჯერმე დაარედაქტირებთ თაფლს.'
       courseF_bee_functions_challenge2_callout: []
@@ -1678,11 +1842,11 @@
       courseF_bee_fwp4_2018_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: "ეს ფუნქცია კარგად მუშაობს სიმინდთან,
-          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?"
+        courseF_bee_fwp_challenge2_callout1: ეს ფუნქცია კარგად მუშაობს სიმინდთან,
+          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?
       courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: "ეს ფუნქცია კარგად მუშაობს სიმინდთან,
-          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?"
+        courseF_bee_fwp_challenge2_callout1: ეს ფუნქცია კარგად მუშაობს სიმინდთან,
+          მაგრამ იქნება თუ არა ის ეფექტური სხვა ბოსტნეულთან?
       courseF_maze_predict1_callout: []
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
@@ -1699,19 +1863,19 @@
           of these blocks you have left to use.
       courseF_maze_ramp5_callout: []
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: "რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
-          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება."
+        courseD_maze_ramp6_1: რა კოდიც არ უნდა განათავსოთ აქ, ის განმეორდება იმდენჯერ,
+          რამდენჯერაც მიუთითებთ. ამის შემდეგ პროგრამა გაგრძელდება.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       courseF_playlab_embed_vars_callout: []
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
@@ -1720,23 +1884,23 @@
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: "ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას.
+        course_playlab_variables2_1: ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას.
           შეცვალეთ ამ ბლოკთან დაკავშირებული ტექსტი, რათა შეცვალოთ ცვლადში შენახული
-          მნიშვნელობა."
+          მნიშვნელობა.
       courseF_playlab_variables2a_callout: []
       courseF_playlab_variables3_callout: []
       courseF_playlab_variables4_callout: []
       courseF_playlab_variables5_callout: []
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variables5c_2018_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variables6c_2018_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variables7c_callout:
         courseF_playlab_variables7c_1: Find the `ask` block here!
       courseF_playlab_variables7c_2018_callout:
@@ -1744,15 +1908,18 @@
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variables8c_2018_callout: []
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       courseF_playlab_variablesTemplate_2018_callout:
-        courseF_playlab_variables5c_1: "აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს."
+        courseF_playlab_variables5c_1: აქ თქვენ იპოვით თქვენს ცვლადის ბლოკს.
       course_playlab_variables2_callout:
-        course_playlab_variables2_1: "ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას.
+        course_playlab_variables2_1: ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას.
           შეცვალეთ ამ ბლოკთან დაკავშირებული ტექსტი, რათა შეცვალოთ ცვლადში შენახული
-          მნიშვნელობა."
+          მნიშვნელობა.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: "ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას."
+        course_playlab_variables3_1: ასე თქვენ საზღვრავთ თქვენი ცვლადის მნიშვნელობას.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -1761,19 +1928,19 @@
         frozen_circle_function_with_parameter_circle: გამოიყენეთ "წრის შექმნის" ბლოკი
           და შეცვალეთ ზომა.
       frozen cross rotate_callout:
-        replace_questions_degree: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions_degree: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen cross_callout:
         repeat_blocks_1: "(1) გამოიყენეთ ეს ბლოკი და ჩასვით მასში სამუშაო სივრცეში
           მდებარე ნაცრისფერი ბლოკები"
         repeat_blocks_2: (2) გადმოიტანეთ "გამეორების" ბლოკი აქ და ჩასვით მასში ნაცრისფერი
           ბლოკები
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: "ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი."
+        frozen_diamond_repeat: ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი.
       frozen diamond_callout:
-        frozen_diamond_repeat: "ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი."
+        frozen_diamond_repeat: ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი.
       frozen freeplay_callout:
-        snowflake_dropdown: "გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
-          შესაქმნელად!"
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       frozen line_callout:
         run: დააჭირეთ "გაშვებას", რათა გამოსცადოთ თქვენი პროგრამა!
         move_elsa_forward: გადმოიტანე ბლოკი "წინ მოძრაობა" "გაშვებისას" ბლოკის ქვემოთ
@@ -1784,19 +1951,19 @@
       frozen snowflake branch_callout:
         frozen_snowflake_branch: გამოიყენეთ ბლოკი "ფიფქის ტოტის შექმნა"
       frozen square iterative_callout:
-        frozen_create_square: "კვადრატის დასახატად მიამაგრეთ კიდევ რამდენიმე ბლოკი"
+        frozen_create_square: კვადრატის დასახატად მიამაგრეთ კიდევ რამდენიმე ბლოკი
       frozen square loop 3x_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen square loop_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen square snowflake_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
           will you use it?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: "ეს ნაცრისფერი ბლოკები ქვისგან შედგება! ეს იმას ნიშნავს,
-          რომ მათი გადაყრა არ შეგიძლიათ."
+        grade1_maze_sequence6_1: ეს ნაცრისფერი ბლოკები ქვისგან შედგება! ეს იმას ნიშნავს,
+          რომ მათი გადაყრა არ შეგიძლიათ.
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
@@ -1821,6 +1988,7 @@
       grade2_MakeDogTag_1_callout: []
       grade2_MakeDogTag_BFP_callout: []
       grade2_collector_10_callout: []
+      grade2_collector_10_2018_callout: []
       grade2_collector_7_callout:
         grade2_collector_7_1: You can take more blocks from the toolbox if you need
           them!
@@ -1828,7 +1996,9 @@
       grade2_collector_9_callout: []
       grade2_collector_9a_callout: []
       grade2_collector_A_callout: []
+      grade2_collector_A_2018_callout: []
       grade2_collector_A_predict1_callout: []
+      grade2_collector_A_predict1_2018_callout: []
       grade2_maze_intro10_callout: []
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to
@@ -1852,14 +2022,14 @@
         grade2_puppy_loops2_callout1: You only have one of these blocks available
           in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: "იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
-          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!"
+        Bee_Cond_5_1a: იასამნისფერ ყვავილებს შეიძლება ჰქონდეთ 1 ან 0 ნექტარი...მაგრამ
+          თქვენ ამას ვერ გაიგებთ სანამ არ გაუშვებთ პროგრამას!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
           and you get to decide how many sides the die has.
@@ -1868,8 +2038,8 @@
           your value: when you use the block labeled `j`, the program will give you
           the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create
           the first square.
@@ -1878,52 +2048,52 @@
           the function will run. What should the artist do after drawing the first
           square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every
           time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
-        add_and_drag_parameter: "ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას
-          და შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
+        add_and_drag_parameter: ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას და
+          შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
-          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        4_5_Bee_Conditionals_2_1: არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ
+          ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება.
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
-          შესაქმნელად!"
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       grade4_frozen_functions3_callout:
         frozen_circle_function_with_parameter_circle: გამოიყენეთ "წრის შექმნის" ბლოკი
           და შეცვალეთ ზომა.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: "ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი."
+        frozen_diamond_repeat: ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: "ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი."
+        frozen_diamond_repeat: ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: "ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი."
+        frozen_diamond_repeat: ამ ფორმის შესაქმნელად გამოიყენეთ გამეორების ბლოკი.
       grade4_frozen_square_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade4_frozen_square_loop1_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade4_frozen_square_loop2_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade4_frozen_square_loop3_callout:
-        replace_questions: "გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით"
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1931,8 +2101,8 @@
           mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: []
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: "ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
-          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!"
+        4-5_Artist_Patterns_Free_Play_1: ამჯერად, ყველა თქვენი საყვარელი ბლოკი დაჯუფებულია
+          კარეგორიებად. დააკლიკეთ ამ სიტყვებს, რათა ნახოთ თუ სად წავიდა ყველაფერი!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in
           here.
@@ -1940,9 +2110,9 @@
         grade5_artist_functionparameters_6_1: To complete your polygon, make sure
           you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
-        add_and_drag_parameter: "ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას
-          და შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
+        add_and_drag_parameter: ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას და
+          შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
@@ -1953,21 +2123,21 @@
         grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
           code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
-        add_and_drag_parameter: "ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას
-          და შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
+        add_and_drag_parameter: ჩაწერეთ აქ პარამეტრის სახელი, დააჭირეთ დამატებას და
+          შემდეგ გადაიტანეთ იგი ფუნქციის განსაზღვრებაში
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "მეტი სივრცე გჭირდებათ? გამოწიეთ ეს ფირფიტა, რათა
-          გახადოთ კოდირების გარემო უფრო ფართო."
+        Course_4_Artist_Vars_8_a: მეტი სივრცე გჭირდებათ? გამოწიეთ ეს ფირფიტა, რათა
+          გახადოთ კოდირების გარემო უფრო ფართო.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: "გადმოიტანეთ აქ სიგრძის ცვლადი და ჩაანაცვლეთ კითხვის
-          ნიშნები"
+        place_length_variable: გადმოიტანეთ აქ სიგრძის ცვლადი და ჩაანაცვლეთ კითხვის
+          ნიშნები
       grade5_artist_variables_pentagons12_callout:
-        set_length: "სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი."
+        set_length: სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი.
       grade5_artist_variables_square7_callout:
-        degrees_per_side: "გაყავით 360 გვერდების რაოდენობაზე და გამოთვალეთ თითოეული
-          კუთხის ზომა."
+        degrees_per_side: გაყავით 360 გვერდების რაოდენობაზე და გამოთვალეთ თითოეული
+          კუთხის ზომა.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -1975,7 +2145,7 @@
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
       grade5_artist_variables_triangles2_callout:
-        set_length: "სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი."
+        set_length: სირგძისთვის სწორი მნიშვნელობის მისანიჭებლად გამოიყენეთ ეს ბლოკი.
       grade5_bee_for_loops3_callout:
         grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
           to change into category mode.  You will find the new `for` loop in here!
@@ -1990,26 +2160,26 @@
         grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
           this function.
       grade5_playlab_variables1_callout:
-        arrows_move_actor: "პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები"
+        arrows_move_actor: პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
-        edit_add_parameter: "დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი"
+        edit_add_parameter: დააჭირეთ რედაქტირებას და დაუმატეთ ფუნქციას ახალი პარამეტრი
       grade5_playlab_variables1ask_callout:
-        arrows_move_actor: "პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები"
+        arrows_move_actor: პერსონაჟის გადასაადგილებლად გამოიყენეთ ისრები
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: "ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
-          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები."
+        Course_4_Play_Lab_Vars_9_1: ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
+          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები.
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: "ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
-          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები."
+        Course_4_Play_Lab_Vars_9_1: ახლა, ყველა თქვენი ბლოკი დალაგებულია კატეგორიებში!
+          დააკლიკეთ იარლიყს, რატა ნახოთ მასში მდებარე ელემენტები.
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
-          შეგიძლიათ ამ თავსატეხში."
+        gradek_adventurer_loops2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება
+          შეგიძლიათ ამ თავსატეხში.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
-          ამ თავსატეხში."
+        artistLoopsK2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ
+          ამ თავსატეხში.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -2091,13 +2261,13 @@
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: "დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები
-          თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა
-          დაამატოთ ისინი თქვენს პროგრამაში"
+        New Play Lab Project_callout1: დააკლიკეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს
+          ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ
+          ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად
           და გასაშვებად
-        sign_in_to_save_project: "გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
-          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!"
+        sign_in_to_save_project: გსურთ მოგვიანებით გაწვდეთ ამ პროექტს? შედით თქვენს
+          ანგარიშში, რათა შეინახოთ ეს პროექტი მასში!
       subgoal U3 L4 introducing subgoal labels_callout: []
       subgoal U3L2 Using Simple Commands_callout: []
       subgoal-test-clone_callout:
@@ -2106,7 +2276,7 @@
       subgoal-test_callout:
         move_subgoal: ეს "კუს გადაადგილების" ქვემიზნის იარლიყია. გადმოათრიეთ ის სამუშაო
           სივრცეში.
-        orient_subgoal: "ეს იმას ნიშნავს, რომ თქვენ გსურთ კუს მობრუნება"
+        orient_subgoal: ეს იმას ნიშნავს, რომ თქვენ გსურთ კუს მობრუნება
       subgoalU3L2_TurtleSquare_right_callout: []
       testing code callout_callout:
-        testing_code_callout: "ეს ამოძრავებს სპრაიტს!"
+        testing_code_callout: ეს ამოძრავებს სპრაიტს!

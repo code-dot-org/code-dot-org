@@ -1,49 +1,49 @@
 "bg":
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: "Добър опит!
-        Опитайте отново, за да го направите."
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Добър опит! Опитайте
+        отново, за да го направите.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Добър опит! Опитайте
+        отново, за да го направите.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Добър опит! Опитайте
+        отново, за да го направите.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Добър опит! Опитайте
+        отново, за да го направите.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Добър опит! Опитайте
+        отново, за да го направите.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Добър опит!
+        Опитайте отново, за да го направите.
       Course 4 Artist Vars 10_failure_message_override: |-
         Make sure you use the sides
         variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: "Не забравяйте, че и
-        двамата героя трябва да стигнат до техните флагове със същия брой ходове!"
-      Course 4 Playlab For Loops 5b_failure_message_override: "Не забравяйте, че героите
-        трябва да спрат на същото място."
+      Course 4 Playlab For Loops 4b_failure_message_override: Не забравяйте, че и
+        двамата героя трябва да стигнат до техните флагове със същия брой ходове!
+      Course 4 Playlab For Loops 5b_failure_message_override: Не забравяйте, че героите
+        трябва да спрат на същото място.
       Eval Strings Images .2_failure_message_override: Уверете се, можете да добавите
         в низа "Вселена", за да направите кода за създаване на "Здравей, Вселена"
-      Kiki_StarWars_Test_5_failure_message_override: "Край на играта!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "Край на играта!"
+      Kiki_StarWars_Test_5_failure_message_override: Край на играта!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Край на играта!
       MC HOC 2016 Level 2-2_failure_message_override: Използвайте "върви напред" и
         команди за завъртане, за да преместите пилето.
       MC HOC 2016 Level 3_failure_message_override: Използвайте "завинаги да" блок
@@ -76,10 +76,10 @@
       MC HOC 2016 SCORE LEVEL_failure_message_override: |-
         If you're having trouble
         tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: "Вие трябва да накарате железният
-        голем Чейс да атакува зомбитата, за да спечелите."
+      MC HOC 2016 Village Test_failure_message_override: Вие трябва да накарате железният
+        голем Чейс да атакува зомбитата, за да спечелите.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: "Поздравления!  Вие събрахте X монети!"
+      WhileAdventure_failure_message_override: Поздравления!  Вие събрахте X монети!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
@@ -89,10 +89,10 @@
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.
-      kikiTesta_failure_message_override: "Поздравления!  Вие се събрахте X монети!"
-      sample1_failure_message_override: "Поздравления!  Вие се събрахте X монети!"
-      sample4_failure_message_override: "Поздравления!  Вие се събрахте X монети!"
+      kikiTesta_failure_message_override: Поздравления!  Вие се събрахте X монети!
+      sample1_failure_message_override: Поздравления!  Вие се събрахте X монети!
+      sample4_failure_message_override: Поздравления!  Вие се събрахте X монети!
       sample6_failure_message_override: |-
         Не съвсем правилно.  Продължете да опитвате!  [Преместете се в Play
         Zone]
-      sample8_failure_message_override: "Поздравления!  Вие се събрахте X монети!"
+      sample8_failure_message_override: Поздравления!  Вие се събрахте X монети!

@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.8.1.tgz#e3cda6161958da7ea9eb7604975a9049686f62e2"
+"@code-dot-org/blockly@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.8.2.tgz#e04873b5bf7c97f13e510390523ce3dfe1391089"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -9954,9 +9954,11 @@ react-idle-timer:
     lodash.bindall "^3.1.0"
     moment "^2.10.3"
 
-react-input-autosize@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.0.tgz#3fe1ac832387d8abab85f6051ceab1c9e5570853"
+react-input-autosize@^2.1.2:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-inspector@^2.2.2:
   version "2.2.2"
@@ -10045,12 +10047,13 @@ react-router@2.6.0:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react-select@^1.0.0-rc.1, react-select@^1.0.0-rc.2:
-  version "1.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.2.tgz#9fc11b149a3dc1ac831289d21b40a59742f82f8d"
+react-select@^1.0.0-rc.2, react-select@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.2.1.tgz#a2fe58a569eb14dcaa6543816260b97e538120d1"
   dependencies:
     classnames "^2.2.4"
-    react-input-autosize "^1.1.0"
+    prop-types "^15.5.8"
+    react-input-autosize "^2.1.2"
 
 react-split-pane@^0.1.74:
   version "0.1.74"

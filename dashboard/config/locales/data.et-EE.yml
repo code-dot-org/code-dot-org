@@ -572,7 +572,7 @@
         C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Täringuralli
         C3_internet: Internet
-        C3_crowdsourcing: "Ühistegevused"
+        C3_crowdsourcing: Ühistegevused
         C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
         C3_songwriting_with_parameters: Laulukirjutamine parameetritega
         C4_intro: Sissejuhatus
@@ -768,6 +768,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
@@ -820,8 +826,8 @@
         length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
           „pikkus“?
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
-        frozen_circle_function_in_circle_turn: "Ära unusta peale igat ringi loomist
-          keerata."
+        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist
+          keerata.
         frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
           muuda suurus.
         frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki

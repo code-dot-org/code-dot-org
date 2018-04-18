@@ -3084,7 +3084,7 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Depuración
             Events:
               name: Eventos
             Events Unplugged:
@@ -3098,7 +3098,7 @@
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: Ciclos desconectados
             Persistence & Frustration:
               name: Persistence & Frustration
             Programming:
@@ -3154,7 +3154,7 @@
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Depuración
             Events:
               name: Eventos
             Events Unplugged:
@@ -3166,7 +3166,7 @@
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: Ciclos desconectados
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
@@ -3180,7 +3180,7 @@
             Unspotted Bugs:
               name: Errores desapercibidos
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
             'Events Unplugged: The Big Event':
               name: 'Events Unplugged: The Big Event'
         grade5:
@@ -4487,8 +4487,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4571,8 +4578,15 @@
                 will each receive a user profile describing a person. They will use
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4656,8 +4670,18 @@
                 basis for the type of app they will make. From there, teams will have
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4743,8 +4767,13 @@
                 With the information and guidance gained from the last round of user
                 testing, each student will have the opportunity to plan for and implement
                 improvements to the team app.
-              description_teacher: |
-                Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student will have the opportunity to plan for and implement improvements to the team app.\r
+              description_teacher: 'Teams have at this point developed an app prototype
+                that has gone through multiple iterations and rounds of user testing.
+                With the information and guidance gained from the last round of user
+                testing, each student will have the opportunity to plan for and implement
+                improvements to the team app.\r
+
+'
             App Presentation:
               name: App Presentation
               description_student: At this point teams have researched a topic of
@@ -4753,8 +4782,14 @@
                 to incorporate new features and bug fixes. Now is the time for them
                 to review what they have done and pull together a coherent presentation
                 to demonstrate their process of creation.
-              description_teacher: |
-                At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation.\r
+              description_teacher: 'At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation.\r
+
+'
             User Interface and Prototype Testing:
               name: User Interface and Prototype Testing
               description_student: Following the mini design project, students look
@@ -4888,8 +4923,7 @@
         minecraft:
           title: 'Minecraft: Hora del Código para diseñar'
           description_audience: ''
-          description_short: Construye tu propia versión de Minecraft. Crea tus propias
-            versiones de las gallinas, ovejas, Creepers, zombis y más.
+          description_short: Diseña un juego Minecraft.
           description: Diseña un juego Minecraft. Crea tus propias versiones de gallinas,
             ovejas, Creepers, zombis y muchos más personajes.
           stages:
@@ -4913,23 +4947,24 @@
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Una introducción a las ciencias de la computación para
+            pre lectores.
           description: |-
             Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
             Recommended for grade K.
           stages:
             'Debugging: Bugs in Codeville':
-              name: 'Debugging: Bugs in Codeville'
+              name: 'Depuración: Errores en Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia y frustración: Stevie y las canicas'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Aprende a arrastrar y soltar
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programación: Mapas felices'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
@@ -4947,11 +4982,12 @@
             Going Places Safely:
               name: Ir a sitios seguros
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Una introducción a las ciencias de la computación para
+            pre lectores.
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4959,19 +4995,19 @@
             they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia y frustración: Stevie y las canicas'
             Sequence & Algorithms:
               name: Sequence & Algorithms
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Aprende a arrastrar y soltar
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -5000,7 +5036,7 @@
             2nd grade.
           stages:
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
             Programming in Collector:
@@ -5231,7 +5267,7 @@
           description: Multideporte
           stages:
             Sports:
-              name: "Спорт"
+              name: Спорт
         2016_sciencePD-phase2b:
           title: ''
           description_audience: ''
@@ -6854,58 +6890,67 @@
         coursea:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps
-                of debugging.  Students will learn the mantra: "What happened?  What
-                was supposed to happen? What does that tell you?"'
+              description_teacher: 'Esta lección guiará a los estudiantes a través
+                de los pasos de depuración. Los estudiantes aprenderán el mantra:
+                "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia: Stevie y el Gran Proyecto'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: Cuando los estudiantes se encuentran con una barrera
+                al responder a una pregunta o trabajando en un proyecto, es tan fácil
+                sentirse frustrado y abandonar.  Esta lección introducirá a los estudiantes
+                a la idea de que la frustración puede ser una parte importante del
+                aprendizaje. Aquí, la frustración se presenta como un paso en el proceso
+                creativo, en lugar de una señal de fracaso. \r \r esta lección puede
+                realizarse en una o dos clases.  Si tienes más tiempo, no dudes en
+                dibujar  el edificio y repasar la lección de Marble Run.
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'En esta lección, los estudiantes relacionan el
+                concepto de algoritmos a actividades cotidianas, plantando una semilla.
+                El objetivo aquí es empezar a construir habilidades para traducir
+                situaciones del mundo real en escenarios en linea y viceversa.\r
+
+'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Secuenciación con arrastrar y soltar
               description_student: ''
-              description_teacher: This lesson will give students an idea of what
-                to expect when they head to the computer lab. It begins with a brief
-                discussion introducing them to computer lab manners, then they will
-                progress into using a computer to complete online puzzles.
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con una discusión como breve introducción a modales de un laboratorio
+                de computación, luego proceden a el uso de un ordenador para completar
+                el acertijo en línea.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programación: Mapas felices'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be
-                a short one if students understand the difference between planning
-                out a sequence and encoding that sequence into the appropriate language.  This
-                activity will help students gain experience reading and writing in
-                shorthand code.
+              description_teacher: El puente de algoritmos a programación puede ser
+                corto si los estudiantes entienden la diferencia entre planificación
+                de una secuencia y codificación de la secuencia en el idioma apropiado.  Esta
+                actividad ayudará a los estudiantes a adquirir experiencia de lectura
+                y escritura de código.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
               description_student: ''
-              description_teacher: In this series of online puzzles, students will
-                build on the understanding of algorithms, debugging, and general computer
-                literacy. Featuring characters from the game Angry Birds, students
-                will develop sequential algorithms to get the bird to the pig without
-                crashing into walls or TNT. Debugging puzzles have also been mixed
-                into this stage for added practice with problem solving and critical
-                thinking.
+              description_teacher: En esta serie de acertijos en linea, los estudiantes
+                aprenderán sobre algoritmos, depuración y conocimientos generales
+                de computación. Presentando personajes del juego Angry Birds, los
+                estudiantes desarrollaran algoritmos secuenciales para llevar el pajaro
+                al puerco sin estrellarse con paredes o TNT. Se han mezclado acertijos
+                de depuración en este nivel para practicar la resolución de problemas
+                y pensamiento crítico.
             Going Places Safely:
-              name: Ir a sitios seguros
+              name: 'Ciudadanía digital: Llegando a lugares con seguridad'
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this
-                lesson helps students learn that many websites ask for information
-                that is private and discusses how to responsibly handle such requests.
-                Students also find out that they can go to exciting places online,
-                but they need to follow certain rules to remain safe.
+              description_teacher: En colaboración con [r common-sense-media], esta
+                lección ayuda a los estudiantes a aprender que muchos sitios piden
+                información privada y discute como manejar esas solicitudes. Los estudiantes
+                tambien descubren que pueden ir a lugares emocionantes en linea, pero
+                necesitan seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: 'Ciclos: Ciclos felices'
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming.
                 To understand how helpful loops can be, students will need to be driven
@@ -6951,19 +6996,19 @@
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia: Stevie y el Gran Proyecto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Secuenciación con arrastrar y soltar
             Your Digital Footprint:
               name: Tu huella dactilar
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -6990,7 +7035,7 @@
             Building a Foundation:
               name: Construir una base
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
@@ -7113,8 +7158,16 @@
               name: Condicionales con tarjetas
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7428,6 +7481,8 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Bucles anidados
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Curso E
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -8057,6 +8112,8 @@
               name: Construir una base
             Nested Loops:
               name: Bucles anidados
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -8064,19 +8121,19 @@
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia: Stevie y el Gran Proyecto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Secuenciación con arrastrar y soltar
             'Online Safety: Your Digital Footprint':
               name: 'Online Safety: Your Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
             'Loops: My Loopy Robotic Friends':
@@ -8348,6 +8405,8 @@
               name: Loops in Artist
             Nested Loops in Bee:
               name: Nested Loops in Bee
+            Loops in Ice Age:
+              name: Loops in Ice Age
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -8742,8 +8801,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -9002,6 +9063,8 @@
               name: Colaboración abierta
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -9745,8 +9808,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
           title: Curso A
           description: Learn the basics of computer science and internet safety. At
@@ -9755,56 +9825,65 @@
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuración: Errores desapercibidos'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps
-                of debugging.  Students will learn the mantra: "What happened?  What
-                was supposed to happen? What does that tell you?"'
+              description_teacher: 'Esta lección guiará a los estudiantes a través
+                de los pasos de depuración. Los estudiantes aprenderán el mantra:
+                "¿Que ocurrió? ¿Qué se suponia que pasara? ¿Eso que te dice?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistencia y frustración: Stevie y las canicas'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: Cuando los estudiantes se encuentran con una barrera
+                al responder a una pregunta o trabajando en un proyecto, es tan fácil
+                sentirse frustrado y abandonar.  Esta lección introducirá a los estudiantes
+                a la idea de que la frustración puede ser una parte importante del
+                aprendizaje. Aquí, la frustración se presenta como un paso en el proceso
+                creativo, en lugar de una señal de fracaso. \r \r esta lección puede
+                realizarse en una o dos clases.  Si tienes más tiempo, no dudes en
+                dibujar  el edificio y repasar la lección de Marble Run.
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'En esta lección, los estudiantes relacionan el
+                concepto de algoritmos a actividades cotidianas, plantando una semilla.
+                El objetivo aquí es empezar a construir habilidades para traducir
+                situaciones del mundo real en escenarios en linea y viceversa.\r
+
+'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Aprende a arrastrar y soltar
               description_student: ''
-              description_teacher: This lesson will give students an idea of what
-                to expect when they head to the computer lab. It begins with a brief
-                discussion introducing them to computer lab manners, then they will
-                progress into using a computer to complete online puzzles.
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con una discusión como breve introducción a modales de un laboratorio
+                de computación, luego proceden a el uso de un ordenador para completar
+                el acertijo en línea.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programación: Mapas felices'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be
-                a short one if students understand the difference between planning
-                out a sequence and encoding that sequence into the appropriate language.  This
-                activity will help students gain experience reading and writing in
-                shorthand code.
+              description_teacher: El puente de algoritmos a programación puede ser
+                corto si los estudiantes entienden la diferencia entre planificación
+                de una secuencia y codificación de la secuencia en el idioma apropiado.  Esta
+                actividad ayudará a los estudiantes a adquirir experiencia de lectura
+                y escritura de código.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programación en Laberinto
               description_student: ''
-              description_teacher: In this series of online puzzles, students will
-                build on the understanding of algorithms, debugging, and general computer
-                literacy. Featuring characters from the game Angry Birds, students
-                will develop sequential algorithms to get the bird to the pig without
-                crashing into walls or TNT. Debugging puzzles have also been mixed
-                into this stage for added practice with problem solving and critical
-                thinking.
+              description_teacher: En esta serie de acertijos en linea, los estudiantes
+                aprenderán sobre algoritmos, depuración y conocimientos generales
+                de computación. Presentando personajes del juego Angry Birds, los
+                estudiantes desarrollaran algoritmos secuenciales para llevar el pajaro
+                al puerco sin estrellarse con paredes o TNT. Se han mezclado acertijos
+                de depuración en este nivel para practicar la resolución de problemas
+                y pensamiento crítico.
             Going Places Safely:
               name: Ir a sitios seguros
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this
-                lesson helps students learn that many websites ask for information
-                that is private and discusses how to responsibly handle such requests.
-                Students also find out that they can go to exciting places online,
-                but they need to follow certain rules to remain safe.
+              description_teacher: En colaboración con [r common-sense-media], esta
+                lección ayuda a los estudiantes a aprender que muchos sitios piden
+                información privada y discute como manejar esas solicitudes. Los estudiantes
+                tambien descubren que pueden ir a lugares emocionantes en linea, pero
+                necesitan seguir ciertas reglas para estar seguros.
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
               description_student: ''
@@ -9841,3 +9920,549 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introducción
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Construir una base
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Bucles anidados
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Eventos en la Guerra de las Galaxias
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Curso B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Depuración: Errores desapercibidos'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistencia y frustración: Stevie y las canicas'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Aprende a arrastrar y soltar
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: Tu huella dactilar
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programación en Laberinto
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: Muévelo, Muévelo
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: Introducción
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Construir una base
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: Ciudadanía digital
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: Artista binario
+              description_student: ''
+              description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global
+                Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic,
+                Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays
+                and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables,
+                Procedures, Loops, Conditionals)
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '
+        coursec-2018:
+          title: Curso C
+          description: Create programs with sequencing, loops, and events. Translate
+            your initials into binary, investigate different problem-solving techniques,
+            and learn how to respond to cyberbullying. At the end of the course, create
+            your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+          stages:
+            Building a Foundation:
+              name: Construir una base
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programación en Laberinto
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmos de la vida real : Aviones de papel'
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: Pulseras binarias
+              description_student: ''
+              description_teacher: ''
+        csd6-2018:
+          title: CSD Unit 6 - Physical Computing
+          description: Unit 6 explores the role of hardware platforms in computing
+            and how different sensors can provide more effective input and output
+            than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
+            Circuit Playground, you’ll develop programs that utilize the same hardware
+            inputs and outputs that you see in the smart devices, looking at how a
+            simple rough prototype can lead to a finished product. The unit concludes
+            with a design challenge to use the Circuit Playground as the basis for
+            an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: ''
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: ''
+              description_teacher: ''
+            Board Events_:
+              name: Board Events_
+              description_student: ''
+              description_teacher: ''
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: ''
+              description_teacher: ''
+            Analog Input_:
+              name: Analog Input_
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: ''
+              description_teacher: ''
+            Making Music_:
+              name: Making Music_
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: ''
+              description_teacher: ''
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''

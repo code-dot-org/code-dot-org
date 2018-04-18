@@ -1,51 +1,50 @@
 "zh-TW":
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: "不錯的嘗試！再試試，讓它更正確。"
-      Course 4 Artist Vars 10_failure_message_override: "確定你使用了 sides（邊數）變數！"
-      Course 4 Playlab For Loops 4b_failure_message_override: "記得，這兩個角色應該要用相同的移動數到達他們的旗子所在地！"
-      Course 4 Playlab For Loops 5b_failure_message_override: "記住，兩個角色要在相同的地方停下來。"
-      Eval Strings Images .2_failure_message_override: "請檢查你是不是在後面加上了「Universe」字串，這樣程式才會創建出「Hello,
-        Universe」"
-      Kiki_StarWars_Test_5_failure_message_override: "遊戲結束！"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "遊戲結束！"
-      MC HOC 2016 Level 2-2_failure_message_override: "使用`移動-向前`和`轉向`指令來讓你的雞產生動作。"
-      MC HOC 2016 Level 3_failure_message_override: "使用一個`重複無限次`積木和`移動-向前`和`轉向`指令來讓你的雞不停的走來走去。"
-      MC HOC 2016 Level 4_failure_message_override: "如果這些雞老是朝著同一個方向移動的話，使用`轉向-隨機`可以讓雞隨意的向左和向右移動。"
-      MC HOC 2016 Level 5_failure_message_override: "試著在「移動一步-向目標」指令外層使用「重複無限次」積木。"
-      MC HOC 2016 Level 6_failure_message_override: "在`當夜晚時`積木下面使用`生成殭屍`指令來生出至少 3
-        個殭屍，接著，在`當生成時`事件下添加`移動一步-向目標`積木帶迴圈，讓牠們不停的追著你跑，如果牠們的速度太快了，可以使用`等待`指令來讓拖住牠們。"
-      MC HOC 2016 Level 8_failure_message_override: "你必須利用會自爆的苦力怕來炸掉這堵牆，這樣你才可以走到羊那兒。"
-      MC HOC 2016 New Drop_failure_message_override: "使用方向鍵走到綿羊那，按下空白鍵或是點一下畫面可以使用羊。還有，別忘了在程式裡添加「掉落」積木。"
-      MC HOC 2016 New Spawn_failure_message_override: "放置`生成綿羊`到`當運行時`積木下。"
-      MC HOC 2016 New Walk_failure_message_override: "若要打開門，請在面對它時按下空白鍵或是點一下畫面，進到裡面以便繼續關卡。"
-      MC HOC 2016 SCORE LEVEL_failure_message_override: "如果要捉到 5 個鐵魔像對你來說有些困難，試著把分數改成抓到一個加
-        2 分。"
-      MC HOC 2016 Village Test_failure_message_override: "你必須要讓鐵魔像追到殭屍並攻擊牠們才能贏得勝利。"
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: 不錯的嘗試！再試試，讓它更正確。
+      Course 4 Artist Vars 10_failure_message_override: 確定你使用了 sides（邊數）變數！
+      Course 4 Playlab For Loops 4b_failure_message_override: 記得，這兩個角色應該要用相同的移動數到達他們的旗子所在地！
+      Course 4 Playlab For Loops 5b_failure_message_override: 記住，兩個角色要在相同的地方停下來。
+      Eval Strings Images .2_failure_message_override: 請檢查你是不是在後面加上了「Universe」字串，這樣程式才會創建出「Hello,
+        Universe」
+      Kiki_StarWars_Test_5_failure_message_override: 遊戲結束！
+      Kiki_StarWars_Test_5_Example_failure_message_override: 遊戲結束！
+      MC HOC 2016 Level 2-2_failure_message_override: 使用`移動-向前`和`轉向`指令來讓你的雞產生動作。
+      MC HOC 2016 Level 3_failure_message_override: 使用一個`重複無限次`積木和`移動-向前`和`轉向`指令來讓你的雞不停的走來走去。
+      MC HOC 2016 Level 4_failure_message_override: 如果這些雞老是朝著同一個方向移動的話，使用`轉向-隨機`可以讓雞隨意的向左和向右移動。
+      MC HOC 2016 Level 5_failure_message_override: 試著在「移動一步-向目標」指令外層使用「重複無限次」積木。
+      MC HOC 2016 Level 6_failure_message_override: 在`當夜晚時`積木下面使用`生成殭屍`指令來生出至少 3 個殭屍，接著，在`當生成時`事件下添加`移動一步-向目標`積木帶迴圈，讓牠們不停的追著你跑，如果牠們的速度太快了，可以使用`等待`指令來讓拖住牠們。
+      MC HOC 2016 Level 8_failure_message_override: 你必須利用會自爆的苦力怕來炸掉這堵牆，這樣你才可以走到羊那兒。
+      MC HOC 2016 New Drop_failure_message_override: 使用方向鍵走到綿羊那，按下空白鍵或是點一下畫面可以使用羊。還有，別忘了在程式裡添加「掉落」積木。
+      MC HOC 2016 New Spawn_failure_message_override: 放置`生成綿羊`到`當運行時`積木下。
+      MC HOC 2016 New Walk_failure_message_override: 若要打開門，請在面對它時按下空白鍵或是點一下畫面，進到裡面以便繼續關卡。
+      MC HOC 2016 SCORE LEVEL_failure_message_override: 如果要捉到 5 個鐵魔像對你來說有些困難，試著把分數改成抓到一個加
+        2 分。
+      MC HOC 2016 Village Test_failure_message_override: 你必須要讓鐵魔像追到殭屍並攻擊牠們才能贏得勝利。
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
-      courseE_playLab_scaffold3_failure_message_override: "你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。"
+      WhileAdventure_failure_message_override: 恭喜！你收集了 X 枚硬幣！
+      courseE_playLab_scaffold3_failure_message_override: 你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: "你必須添加 2 個以上的新角色到你的遊戲中。"
-      kikiTesta_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
-      sample1_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
-      sample4_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
-      sample6_failure_message_override: "不完全正確，再繼續嘗試！[移至遊戲區]"
-      sample8_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
+      grade4_scaffolded_project3_failure_message_override: 你必須添加 2 個以上的新角色到你的遊戲中。
+      kikiTesta_failure_message_override: 恭喜！你收集了 X 枚硬幣！
+      sample1_failure_message_override: 恭喜！你收集了 X 枚硬幣！
+      sample4_failure_message_override: 恭喜！你收集了 X 枚硬幣！
+      sample6_failure_message_override: 不完全正確，再繼續嘗試！[移至遊戲區]
+      sample8_failure_message_override: 恭喜！你收集了 X 枚硬幣！

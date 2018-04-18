@@ -87,8 +87,8 @@
         zombileri kovalayıp saldırmasını sağlamalısın.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Tebrikler! X para topladın!
-      courseE_playLab_scaffold3_failure_message_override: "İki ya da daha fazla aktör
-        eklemelisin ve onları hareket ettirmek için programlamalısın."
+      courseE_playLab_scaffold3_failure_message_override: İki ya da daha fazla aktör
+        eklemelisin ve onları hareket ettirmek için programlamalısın.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.

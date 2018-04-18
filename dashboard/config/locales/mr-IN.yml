@@ -149,7 +149,7 @@
       you up.
     user_type_label: Account Type
     user_type_teacher: Teacher
-    user_type_student: "विध्यार्थी"
+    user_type_student: विध्यार्थी
     field_is_required: is required
     accept_terms: You must agree to create an account
     error: An error occurred.
@@ -374,7 +374,7 @@
       for %{student_name}"
     panel:
       answer_viewer: Answer Viewer
-      student: "विध्यार्थी"
+      student: विध्यार्थी
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
       section: Section
@@ -609,7 +609,7 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: "विध्यार्थी"
+    student: विध्यार्थी
     teacher: Teacher
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
@@ -1002,7 +1002,7 @@
     project_gallery: Project Gallery
     publish: Publish
     unpublish: Unpublish
-    share: "वाटा"
+    share: वाटा
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     share_embed_description: You can paste the embed code into an HTML page to display
@@ -1015,7 +1015,7 @@
       to start a project.
     close: Close
     more: More
-    name: "नाव"
+    name: नाव
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>

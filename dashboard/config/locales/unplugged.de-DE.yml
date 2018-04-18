@@ -263,9 +263,9 @@
           das du selbst erstellen wirst.
       Contracts:
         title: Verträge, Domäne und Bereich
-        desc: "Über Verträge kann das Konzept der Funktionen besser vermittelt und
+        desc: Über Verträge kann das Konzept der Funktionen besser vermittelt und
           besprochen werden. In dieser Lektion helfen uns Verträge, eine neue Programmiersprache
-          oder Funktion besser zu verstehen."
+          oder Funktion besser zu verstehen.
       DesignRecipe:
         title: Das Design-Rezept
         desc: Im letzten Teil haben Studenten einige einfache Funktionen geschrieben.
@@ -530,3 +530,50 @@
           Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt
           auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren
           auf die verschiedenen Tasten.
+      GraphPaperProgramming_2018:
+        title: Programmieren auf Millimeterpapier
+        desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen
+          einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden
+          anweisen, ein Bild zu reproduzieren.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
+          für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
+          einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
+          Punkt" erstellen.
+      DigitalFootprint_2018:
+        title: Dein digitaler Fußabdruck
+        desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck
+          oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins
+          Internet stellt, und erläutern mögliche Konsequenzen.
+      BinaryImages_2018:
+        title: Binärbilder
+        desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen
+          Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen
+          binären Techniken repräsentiert werden können.  Diese Lektion entwickelt
+          das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
+          Bilder und Farben als Binärcode speichern können.
+      PaperPlanes_2018:
+        title: 'Alltagsalgorithmen: Papierflieger'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
+          behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes
+          Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      GettingLoopy_2018:
+        title: Schöne Schleifen
+        desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte
+          Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine
+          einfache Choreografie und werden angewiesen, diese zu wiederholen.
+      BinaryBracelets_2018:
+        title: Binäre Armbänder
+        desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben
+          ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise
+          repräsentiert und gespeichert werden können.
+      MoveItMoveIt_2018:
+        title: Bewegung, Bewegung
+        desc: ''

@@ -316,3 +316,33 @@ id:
       BigEvent_2018:
         title: Acara besar
         desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan.
+      GraphPaperProgramming_2018:
+        title: Pemrograman grafis diatas kertas
+        desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Kegiatan tanpa komputer
+        desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Kegiatan tanpa komputer
+        desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
+      Conditionals_2018:
+        title: Kondisi
+        desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
+      DigitalFootprint_2018:
+        title: Digital Footprint Kamu
+        desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
+      BinaryImages_2018:
+        title: gambar Biner
+        desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
+      PaperPlanes_2018:
+        title: 'Algoritma kehidupan nyata: Pesawat Kertas'
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
+      GettingLoopy_2018:
+        title: Dapat berulang-ulang
+        desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
+      BinaryBracelets_2018:
+        title: Gelang biner
+        desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
+      MoveItMoveIt_2018:
+        title: Gerakkan itu, Gerakkan itu
+        desc: ''

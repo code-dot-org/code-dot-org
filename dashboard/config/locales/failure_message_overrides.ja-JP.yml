@@ -50,34 +50,34 @@
         もう少しです！
         もう一度やってみましょう。
       Course 4 Artist Vars 10_failure_message_override: Sides（辺）の変数を使ってください！
-      Course 4 Playlab For Loops 4b_failure_message_override: "両方のキャラは、同じ回数の動きで、それぞれのハタを取れるべきです！"
-      Course 4 Playlab For Loops 5b_failure_message_override: "両方のキャラは、同じ場所で止まるべきです！"
-      Eval Strings Images .2_failure_message_override: "文字列「うちゅう」を足して、「こんにちは、うちゅう」を作るコードにしてください。"
-      Kiki_StarWars_Test_5_failure_message_override: "ゲーム オーバー！"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "ゲーム オーバー！"
+      Course 4 Playlab For Loops 4b_failure_message_override: 両方のキャラは、同じ回数の動きで、それぞれのハタを取れるべきです！
+      Course 4 Playlab For Loops 5b_failure_message_override: 両方のキャラは、同じ場所で止まるべきです！
+      Eval Strings Images .2_failure_message_override: 文字列「うちゅう」を足して、「こんにちは、うちゅう」を作るコードにしてください。
+      Kiki_StarWars_Test_5_failure_message_override: ゲーム オーバー！
+      Kiki_StarWars_Test_5_Example_failure_message_override: ゲーム オーバー！
       MC HOC 2016 Level 2-2_failure_message_override: "「まえにすすむ」と「まがる」コマンドを使って、ニワトリを動かします。"
       MC HOC 2016 Level 3_failure_message_override: "「ずっとくりかえす」ブロックと「まえにすすむ」、「まがる」コマンドでニワトリをさまよわせます。"
-      MC HOC 2016 Level 4_failure_message_override: "ニワトリが全て同じ方向に動いているなら、ニワトリが左右にランダムに動くよう「ランダムに向きを変える」を使ってください。"
+      MC HOC 2016 Level 4_failure_message_override: ニワトリが全て同じ方向に動いているなら、ニワトリが左右にランダムに動くよう「ランダムに向きを変える」を使ってください。
       MC HOC 2016 Level 5_failure_message_override: "「ずっとくりかえす」と「向かって一歩動く プレイヤー」を同時につかってください。"
       MC HOC 2016 Level 6_failure_message_override: "「夜になった時」に「スポーンする ゾンビ」コマンドを使い、少なくとも
         3 つのゾンビを作ります。あなたを追いかけるように「向かって一歩動く プレイヤー」を「ずっとくりかえす」ループに入れ、それを「出現した時」イベントに入れます。かれらがあまりにも速い場合は、「待つ」コマンドを入れて、おそくします。"
-      MC HOC 2016 Level 8_failure_message_override: "羊のところに行くには、ばくはつするクリーパーを使って、カベを
-        ふきとばしてください。"
-      MC HOC 2016 New Drop_failure_message_override: "矢印キーで羊のほうに歩いて、スペース バーを おすか、ゲームボードをクリックして、羊を使います。「落とす」ブロックを入れてくださいね。"
+      MC HOC 2016 Level 8_failure_message_override: 羊のところに行くには、ばくはつするクリーパーを使って、カベを
+        ふきとばしてください。
+      MC HOC 2016 New Drop_failure_message_override: 矢印キーで羊のほうに歩いて、スペース バーを おすか、ゲームボードをクリックして、羊を使います。「落とす」ブロックを入れてくださいね。
       MC HOC 2016 New Spawn_failure_message_override: "「実行した時」の下に、「スポーンする 羊」を入れてください。"
-      MC HOC 2016 New Walk_failure_message_override: "ドアを開けて、スペース バーをおすか、それがある間、ゲーム
-        ボードをタッチします。歩いて入ってつづけます。"
-      MC HOC 2016 SCORE LEVEL_failure_message_override: "もし、5人の ゴーレムにさわれない場合は、さわられた時に、スコアを2点くわえてください。"
-      MC HOC 2016 Village Test_failure_message_override: "勝つには、アイアン ゴーレムにゾンビを追いかけさせて、こうげきをさせてください。"
+      MC HOC 2016 New Walk_failure_message_override: ドアを開けて、スペース バーをおすか、それがある間、ゲーム
+        ボードをタッチします。歩いて入ってつづけます。
+      MC HOC 2016 SCORE LEVEL_failure_message_override: もし、5人の ゴーレムにさわれない場合は、さわられた時に、スコアを2点くわえてください。
+      MC HOC 2016 Village Test_failure_message_override: 勝つには、アイアン ゴーレムにゾンビを追いかけさせて、こうげきをさせてください。
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
+      WhileAdventure_failure_message_override: おめでとうございます！あなたは X コインを集めました！
       courseE_playLab_scaffold3_failure_message_override: 2 つ以上の新しいキャラをゲームに足して、プログラムでそれらを動かしてください。
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: 2 つ以上のキャラを足して、あなたのゲームで動かしてください。
-      kikiTesta_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
-      sample1_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
-      sample4_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
-      sample6_failure_message_override: "まだまだ。 がんばれ! 【 プレイ ゾーンに行く 】"
-      sample8_failure_message_override: "おめでとうございます！あなたは X コインを集めました！"
+      kikiTesta_failure_message_override: おめでとうございます！あなたは X コインを集めました！
+      sample1_failure_message_override: おめでとうございます！あなたは X コインを集めました！
+      sample4_failure_message_override: おめでとうございます！あなたは X コインを集めました！
+      sample6_failure_message_override: まだまだ。 がんばれ! 【 プレイ ゾーンに行く 】
+      sample8_failure_message_override: おめでとうございます！あなたは X コインを集めました！

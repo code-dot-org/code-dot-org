@@ -25,7 +25,7 @@
         Unplug11: Clabhsúr
         MazeEC: An Chathair Ghríobháin
         Bounce: Preabadh
-        Flappy: "Éan Flapach"
+        Flappy: Éan Flapach
         Jigsaw: Míreanna Mearaí
         MazeStep: 'Cathair Ghríobháin: Mód Céime'
         Wordsearch: Cuardach focal
@@ -42,7 +42,7 @@
       name:
         Bronze: Cré-umha
         Silver: Airgead
-        Gold: "Ór"
+        Gold: Ór
     concept:
       description:
         sequence: Seicheamh
@@ -217,9 +217,9 @@
         turtle_2_10: Seo é cód lenar féidir bíseanna éagsúla a tharraingt. Cad a tharlaíonn
           nuair a athraíonn tú an uillinn? Nó má úsáideann tú dath randamach laistigh
           den lúb? Déan cibé rud is rogha leat.
-        maze_karel_2_1: "Úsáid na blocanna chun cabhrú liom na cairn go léir a bhaint
+        maze_karel_2_1: 'Úsáid na blocanna chun cabhrú liom na cairn go léir a bhaint
           agus na poill go léir a líonadh. Déan iarracht lúba a úsáid in áit go leor
-          blocanna. Leid: is féidir lúb amháin a chur isteach i lúb eile!"
+          blocanna. Leid: is féidir lúb amháin a chur isteach i lúb eile!'
         maze_karel_2_2: Chruthaíomar ár mbloc féin darb ainm "líon 5", atá sa chatagóir
           "Feidhmeanna" anois. Bain úsáid aisti chun cabhrú liom an poll seo a líonadh.
         maze_karel_2_3: Úsáid an fheidhm nua "líon 5" le tabhairt orm na poill go
@@ -811,6 +811,12 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile
@@ -841,12 +847,12 @@
           oibre"
         repeat_blocks_2: (2) Tarraing an bloc "athdhéan" anseo, agus cuir na blocanna
           liatha taobh istigh de
-        snowflake_dropdown: "Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
-          a chruthú!"
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach
           uillinne (céimeanna).
-        set_sides: "Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
-          a chríochnú."
+        set_sides: Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
+          a chríochnú.
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
         which_equation: Cén chothromóid a dhéanfaidh na taobhanna níos giorra i gcruthanna
           a bhfuil níos mó taobhanna acu?
@@ -860,10 +866,10 @@
           cliceáil "Cruthaigh Feidhm".
         house_hint: Ná bí buartha murar cosúil le teach é an pictiúr. Feabhsóimid
           sa chéad dúshlán eile é.
-        edit_draw_square: "Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
-          lúb a chur léi."
-        edit_get_nectar: "Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
-          an treo ina gcasann an Beach le neachtar a fháil a athrú."
+        edit_draw_square: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
+          lúb a chur léi.
+        edit_get_nectar: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
+          an treo ina gcasann an Beach le neachtar a fháil a athrú.
         logic_category: Oscail an rialtán "Loighic" chun teacht ar an mbloc "má/i
           ngach cás eile".
         length_parameter: An féidir leat an fheidhm seo a athrú chun úsáid a bhaint
@@ -877,8 +883,8 @@
         frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
         playlab_drag_say: Tarraing an bloc "abair" anseo agus cuir "dia dhuit" isteach
           ann
-        playlab_use_twice: "Úsáid an bloc seo faoi dhó, agus ná dearmad uimhir an
-          aisteora a athrú"
+        playlab_use_twice: Úsáid an bloc seo faoi dhó, agus ná dearmad uimhir an aisteora
+          a athrú
         playlab_move_girl: Úsáid an bloc "téigh ar dheis" chun an Cailín Leadóige
           a aistriú
         playlab_play_sound: Cuir bloc "seinn fuaim" anseo
@@ -913,13 +919,13 @@
           ciorcal iomlán a dhéanamh
         place_length_variable: Tarraing an athróg "fad" anseo agus cuir in ionad na
           gcomharthaí ceiste í
-        arrows_move_actor: "Úsáid na saighde chun an t-aisteoir a aistriú"
-        right_arrow_fireball: "Úsáid an tsaighead dheas chun meallta tine a chaitheamh"
+        arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
+        right_arrow_fireball: Úsáid an tsaighead dheas chun meallta tine a chaitheamh
         name_function: Scríobh ainm na feidhme anseo
         Infinity_move_right_runbutton: Cuir bloc "téigh" anseo
         Infinity_move_directions_callout: Cén bloc a aistreoidh Baymax suas nuair
           a bhrúifear an tsaighead suas?
-        Infinity_move_directions_callout_arrow: "Úsáid na saighde seo le stiúradh"
+        Infinity_move_directions_callout_arrow: Úsáid na saighde seo le stiúradh
         Infinity_move_collide_callout: Seinn fuaim nuair a tharlaíonn an teagmhas
           seo.
         Infinity_repeat_callout: Cuir blocanna Téigh isteach anseo

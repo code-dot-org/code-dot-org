@@ -25,7 +25,7 @@
         subject: Pokyny k odomknuntiu
     omniauth_callbacks:
       failure: Nemohli sme overiť %{kind} z dôvodu "%{reason}".
-      success: "Úspešné overenie z účtu %{kind}."
+      success: Úspešné overenie z účtu %{kind}.
     passwords:
       no_token: Na stránku, ktorá obnovuje heslo, je možné vstúpiť len cez odkaz,
         ktorý sme poslali emailom. Prosím presvedčte sa, či je URL adresa v plnom
@@ -40,19 +40,19 @@
       destroyed: Dovidenia! Váš účet sa úspešne zmazal. Dúfame, že sa ešte niekedy
         uvidíme.
       signed_up: Vitajte! Úspešne ste sa zaregistrovali.
-      signed_up_but_inactive: "Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie
-        nie je možné, pretože Váš účet ešte nie je aktivovaný."
-      signed_up_but_locked: "Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie
-        nie je možné, pretože Váš účet je uzamknutý."
+      signed_up_but_inactive: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie
+        nie je možné, pretože Váš účet ešte nie je aktivovaný.
+      signed_up_but_locked: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie nie
+        je možné, pretože Váš účet je uzamknutý.
       signed_up_but_unconfirmed: Správa s potvrdzujúcim odkazom bola odoslaná na Vašu
         emailovú adresu. Pre aktivovanie účtu otvorte daný odkaz.
-      update_needs_confirmation: "Úspešne ste aktualizovali konto. Prosím, skontrolujte
+      update_needs_confirmation: Úspešne ste aktualizovali konto. Prosím, skontrolujte
         svoj email a kliknite na potvrdzujúci email, aby sme overili Vašu novú emailovú
-        adresu."
-      updated: "Úspešne ste aktualizovali Vaše konto."
+        adresu.
+      updated: Úspešne ste aktualizovali Vaše konto.
     sessions:
       signed_in: ''
-      signed_out: "Úspešne odhlásení."
+      signed_out: Úspešne odhlásení.
     unlocks:
       send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako odomknúť účet.
       send_paranoid_instructions: Ak Vaše konto existuje, o niekoľko minúť obdržíte

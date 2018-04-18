@@ -316,3 +316,33 @@ gl:
       BigEvent_2018:
         title: O Gran Evento
         desc: Os alumnos son introducidos ao concepto de "eventos" en programación, que son accións que un computador monitora constantemente. O profesor vai apertar os botóns de forma remota, e os alumnos van reaccionar de acordo co botón presionado.
+      GraphPaperProgramming_2018:
+        title: Programación en Papel Cadriculado
+        desc: Os alumnos escriben un algoritmo (un conxunto de instrucións) usando un conxunto predefinido de comandos para orientar os seus compañeiros de clase na reprodución dun debuxo.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Actividade off-line
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Actividade off-line
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o alumno xoga un xogo de cartas e crea regras como "se eu tomo unha carta vermella, eu gaño un punto", e "se eu tomo unha carta negra, vostede gaña un punto"
+      DigitalFootprint_2018:
+        title: A túa pegada dixital
+        desc: Os profesores informan aos alumnos de que colocar informacións persoais online crea unha pegada dixital ou un "rastro" que ten consecuencias.
+      BinaryImages_2018:
+        title: Imaxes binárias
+        desc: Aínda que moitas persoas vexan o binário estritamente como ceros e uns, nosos cursos anteriores ensinaron aos alumnos que as informacións poden ser representadas por unha grande variedade de opcións binárias. Esta clase leva ese concepto un paso adiante, unha vez que demostra como un computador tamén pode almacenar informacións aínda máis complexas (como imaxes e cores) en binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da vida real: avión de papel'
+        desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente ao facer avións de papel. Esta lección tamén presenta a informática de forma xeral, e como os algoritmos teñen un papel esencial.
+      GettingLoopy_2018:
+        title: Bucleándose
+        desc: Esta clase introduce o concepto de programación de bucles (loops, ou instrucións repetidas) por medio dunha actividade de danza. Os alumnos van aprender unha coreografia simple e daquela se lles dirá que a repitan.
+      BinaryBracelets_2018:
+        title: Pulseiras Binarias
+        desc: Os alumnos crean pulseiras como representacións binárias da primeira letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados e almacenados de máis dunha forma.
+      MoveItMoveIt_2018:
+        title: Creando camiños
+        desc: ''

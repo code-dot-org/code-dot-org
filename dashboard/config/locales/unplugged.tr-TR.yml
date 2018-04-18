@@ -74,11 +74,11 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "Şarkı yazma"
-        desc: "Şarkı sözleri okuma oldukça sezgisel bir girişimdir. Biz zaten bilinen
+        title: Şarkı yazma
+        desc: Şarkı sözleri okuma oldukça sezgisel bir girişimdir. Biz zaten bilinen
           bir bilgiyi alıp onu fonksiyon tanımlama ve kullanma bilgisine çevireceğiz.
           Öğrenciler bir defa tanımlama ve çağırma işlemi ile aşina olduktan sonra
-          parametre kullanma kabiliyetini öğrenecekler."
+          parametre kullanma kabiliyetini öğrenecekler.
         pdfs:
         - unplug7
         video: Unplug7
@@ -98,7 +98,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "İnternet"
+        title: İnternet
         desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki
           akışı taklit edecekler.
         pdfs:
@@ -106,20 +106,20 @@
         video: Unplug10
       Unplug11:
         title: Toparlama
-        desc: "İlk 20 saatlik dersin son kısmı öğrencilerin dersler boyunca en sevdiği
+        desc: İlk 20 saatlik dersin son kısmı öğrencilerin dersler boyunca en sevdiği
           kısımları canlandıracak ve kendilerinin bilgisayar bilimleri macerasında
-          yol almak isteyip istemeyeceklerine karar vermelerine destek olacak."
+          yol almak isteyip istemeyeceklerine karar vermelerine destek olacak.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
       MoveIt:
         title: Oynat, Oynat
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
       PlantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
@@ -127,8 +127,8 @@
           algoritmaların bilgisayar bilimindeki önemini göreceğiz.
       BuildingAFoundation:
         title: Bir Temel Oluşturma
-        desc: "Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı
-          ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı."
+        desc: Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı
+          ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı.
       GettingLoopy:
         title: Döngüselleşme
         desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında
@@ -146,63 +146,62 @@
           puan alırsın gibi kurallar yaratacaklar
       BigEvent:
         title: Büyük Olay
-        desc: "Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+        desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
           öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
-          öğrenciler basılan tuşa göre eylemde bulunacak."
+          öğrenciler basılan tuşa göre eylemde bulunacak.
       GoingPlacesSafely:
         title: Biryerlere Güvenle Gitmek
-        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
       GraphPaperProgramming:
         title: Grafik Kağıdı Programlama
-        desc: "Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
-          kullanarak sınfı bir çizim oluşturmaya yönlendirir."
+        desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
+          kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       PaperPlanes:
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük
           hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların
           bilgisayar bilimindeki önemini göreceğiz.
       BinaryBracelets:
-        title: "İkilik Bileklikler"
-        desc: "Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik
-          oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini
-          öğrenirler."
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
+          Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       DigitalFootprint:
         title: Dijital İziniz
-        desc: "Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
+        desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
           yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını
-          tartışacaklar."
+          tartışacaklar.
       ComputationalThinking:
         title: Sayısal Düşünme
-        desc: "Öğrencilerin sayısal düşünme adımları kullanır (parçalama, desen eşleştirme,
+        desc: Öğrencilerin sayısal düşünme adımları kullanır (parçalama, desen eşleştirme,
           soyutlama, algoritma) ve talimatları olmayan bir oyunu nasıl oynayacağını
-          anlar."
+          anlar.
       FunctionalSuncatchers:
         title: Fonksiyonel Güneş Avcıları
-        desc: "Öğrenciler algoritma oluşturmak için değişkenleri ve fonksiyonları
-          (tekrar tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp
-          ve boncuk kullanarak kolye yapın."
+        desc: Öğrenciler algoritma oluşturmak için değişkenleri ve fonksiyonları (tekrar
+          tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp ve boncuk
+          kullanarak kolye yapın.
       SongwritingParameters:
-        title: "Şarkı Yazarlığı"
-        desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
-          parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
+        title: Şarkı Yazarlığı
+        desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
+          geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       DiceRace:
         title: 'Gerçek Yaşam Algoritması: Zar Yarışı'
         desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun
           bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp
           kaydedecekler.
       Internet:
-        title: "İnternet"
-        desc: "Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
-          mesajlar yollayarak gösterecekler."
+        title: İnternet
+        desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
+          mesajlar yollayarak gösterecekler.
       Crowdsourcing:
         title: Kalabalık Kaynaklandırma 'Crowdsourcing'
-        desc: "Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
-          Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır."
+        desc: Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
+          Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır.
       DigitalCitizenship:
         title: Sayısal Vatandaşlık
-        desc: "Öğrenciler kişisel bilgilerle gizli bilgiler arasındaki farkı keşif
-          edecekler. Hangi bilgilerin internetten paylaşılması gerektiğini keşif edecekler."
+        desc: Öğrenciler kişisel bilgilerle gizli bilgiler arasındaki farkı keşif
+          edecekler. Hangi bilgilerin internetten paylaşılması gerektiğini keşif edecekler.
       TangramAlgorithms:
         title: Tangram Algoritmaları
         desc: Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer
@@ -221,7 +220,7 @@
           analiz etmesini, böylece onları soyutlamasını sağlayacak. Bu soyutlanmış
           hikayeler ise daha bir çok eğlenceli hikayeye yol gösterici olacak.
       ForLoopFun:
-        title: "Şununla Say Döngüsü Eğlencesi"
+        title: Şununla Say Döngüsü Eğlencesi
         desc: Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için
           olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı
           öğreneceğiz.
@@ -233,7 +232,7 @@
           neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu
           kavramalarına yardımcı olacaktır.  '
       BinaryImages:
-        title: "İkili Sistemle Resimler"
+        title: İkili Sistemle Resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir.
           Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini
           gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık
@@ -251,10 +250,10 @@
           nasıl katkı sağlayacağını göreceğiz.
       DesignRecipe:
         title: Tasarım Tarifi
-        desc: "Öğrenciler bazı basit fonksiyonlar geliştirdiler. Daha karmaşık fonksiyonlar
+        desc: Öğrenciler bazı basit fonksiyonlar geliştirdiler. Daha karmaşık fonksiyonlar
           daha karmaşık düşünce gerektirir. Tasarım tarifi fonkiyon yazmak için yapısal
           bir yöntemdir. Buna fonksiyonun doğru çalıştığından emin olan testlerde
-          dahildir."
+          dahildir.
       Booleans:
         title: Boolean (olumlu veya olumsuz)) ve mantık
         desc: Boolean (ikili sistem, olumlu veya olumsuz) bu derste öğreneceğimiz
@@ -267,7 +266,7 @@
           bazı parametre değerleri ile bir durum farklı parametre değerleri ile farklı
           durum oluşmasını isteyebiliriz. Koşullar burada devreye girer...
       CollisionDetection:
-        title: "Çarpışmanın algılanması ve Pisagor teoremi"
+        title: Çarpışmanın algılanması ve Pisagor teoremi
         desc: Ekrandaki nesnelerin dokunduklarını belirleme oyunların önemli bir yönüdür.
           Bu derste, Pisagor teoremi ve uzaklık formülü ile iki nokta arasındaki mesafeyi
           ölçmeye bakacağız. Daha sonra bunu iki nokta (veya oyun karakterleri) arası
@@ -305,26 +304,26 @@
           algoritmaların bilgisayar bilimindeki önemini göreceğiz.
       courseA_unplugged_happyMaps:
         title: Mutlu Haritalar
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
       courseA_unplugged_goingPlacesSafely:
         title: Biryerlere Güvenle Gitmek
-        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
       courseABC_unplugged_bigEvent:
         title: Büyük Olay
-        desc: "Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+        desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
           öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
-          öğrenciler basılan tuşa göre eylemde bulunacak."
+          öğrenciler basılan tuşa göre eylemde bulunacak.
       courseB_unplugged_digitalFootprint:
         title: Dijital İziniz
-        desc: "Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
+        desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
           yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını
-          tartışacaklar."
+          tartışacaklar.
       courseC_unplugged_buildingAFoundation:
         title: Bir Temel Oluşturma
-        desc: "Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı
-          ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı."
+        desc: Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı
+          ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı.
       courseC_unplugged_paperPlanes:
         title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
         desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük
@@ -336,14 +335,13 @@
           bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu
           tekrar etmeyi öğrenecekler.
       courseC_unplugged_binaryBracelets:
-        title: "İkilik Bileklikler"
-        desc: "Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik
-          oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini
-          öğrenirler."
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
+          Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       courseD_unplugged_graphPaperProgramming:
         title: Grafikli Kağıdıyla Programlama
-        desc: "Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
-          kullanarak sınfı bir çizim oluşturmaya yönlendirir."
+        desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
+          kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       courseD_unplugged_relayProgramming:
         title: Röle Programlama
         desc: Öğrenciler bayrak yarışı ile koşturup "Grafik kağıdı programlama" algoritma
@@ -355,7 +353,7 @@
           eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir
           puan alırsın gibi kurallar yaratacaklar
       courseD_unplugged_binaryImages:
-        title: "İkili Sistemle Resimler"
+        title: İkili Sistemle Resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir.
           Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini
           gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık
@@ -368,20 +366,20 @@
           kaydedecekler.
       courseE_unplugged_songwritingParameters:
         title: Parametrelerle Şarkı Yazmak
-        desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
-          parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
+        desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
+          geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       courseE_unplugged_internet:
-        title: "İnternet"
-        desc: "Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
-          mesajlar yollayarak gösterecekler."
+        title: İnternet
+        desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
+          mesajlar yollayarak gösterecekler.
       courseE_unplugged_crowdsourcing:
         title: Kalabalık Kaynaklandırma 'Crowdsourcing'
-        desc: "Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
-          Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır."
+        desc: Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
+          Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır.
       courseE_unplugged_songwriting:
-        title: "Şarkı Yazarlığı"
-        desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
-          parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
+        title: Şarkı Yazarlığı
+        desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
+          geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       courseF_unplugged_tangrams:
         title: Tangram Algoritmaları
         desc: Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer
@@ -394,7 +392,7 @@
           nedir ve biz onları nasıl çok farklı şekillerde kullanabilirsiniz onları
           açıklayacağız.. Önce bu aktiviteyi kullanın ve fikri anlayın.
       courseF_unplugged_forLoopFun:
-        title: "Şununla Say Döngüsü Eğlencesi"
+        title: Şununla Say Döngüsü Eğlencesi
         desc: Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için
           olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı
           öğreneceğiz.
@@ -406,7 +404,7 @@
           neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu
           kavramalarına yardımcı olacaktır.  '
       swipeRightPassThrough:
-        title: "İşe Alma Senaryoları Toplantısı"
+        title: İşe Alma Senaryoları Toplantısı
         desc: |-
           # Öğrenci Alım Senaryoları Oturumu\r
           \r
@@ -419,7 +417,7 @@
           \r
           Aşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz.
       swipeRightPassThrough-test123:
-        title: "İşe Alma Senaryoları Toplantısı"
+        title: İşe Alma Senaryoları Toplantısı
         desc: |-
           # Öğrenci Alım Senaryoları Oturumu\r
           \r
@@ -486,17 +484,61 @@
           algoritmaların bilgisayar bilimindeki önemini göreceğiz.
       UnplugHappyMaps_2018:
         title: Mutlu Haritalar
-        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler."
+        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler.
       GoingPlacesSafely_2018:
         title: Biryerlere Güvenle Gitmek
-        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
       courseA_unplugged_loops_2018:
         title: Bağımsız (Unplugged) Döngüler
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       BigEvent_2018:
         title: Büyük Olay
-        desc: "Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+        desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
           öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
-          öğrenciler basılan tuşa göre eylemde bulunacak."
+          öğrenciler basılan tuşa göre eylemde bulunacak.
+      GraphPaperProgramming_2018:
+        title: Grafikli Kağıdıyla Programlama
+        desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
+          kullanarak sınfı bir çizim oluşturmaya yönlendirir.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Bağlantısız Etkinlik
+        desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Bağlantısız Etkinlik
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+      Conditionals_2018:
+        title: Koşullar
+        desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada
+          eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir
+          puan alırsın gibi kurallar yaratacaklar
+      DigitalFootprint_2018:
+        title: Dijital İziniz
+        desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
+          yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını
+          tartışacaklar.
+      BinaryImages_2018:
+        title: İkili Sistemle Resimler
+        desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir.
+          Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini
+          gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık
+          bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu
+          öğretecek.
+      PaperPlanes_2018:
+        title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+        desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük
+          hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların
+          bilgisayar bilimindeki önemini göreceğiz.
+      GettingLoopy_2018:
+        title: Döngüselleşme
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında
+          bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu
+          tekrar etmeyi öğrenecekler.
+      BinaryBracelets_2018:
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
+          Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
+      MoveItMoveIt_2018:
+        title: Çabuk, Çabuk Taşı
+        desc: ''

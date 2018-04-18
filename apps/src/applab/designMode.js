@@ -234,7 +234,10 @@ designMode.updateProperty = function (element, name, value) {
       }
       break;
     case 'text':
-      element.innerHTML = utils.escapeText(value);
+      // If element is a dropdown, do nothing here and use the type-specific setter
+      if (element.nodeName !== 'SELECT') {
+        element.innerHTML = utils.escapeText(value);
+      }
       break;
     case 'textColor':
       element.style.color = value;
@@ -454,7 +457,12 @@ designMode.readProperty = function (element, name) {
     case 'style-height':
       return parseFloat(element.style.height);
     case 'text':
-      return utils.escapeText(element.innerHTML);
+      // If the element is a dropdown, read the selected value
+      if (element.innerHTML && element.nodeName !== 'SELECT') {
+        return utils.escapeText(element.innerHTML);
+      } else {
+        return utils.escapeText(element.value);
+      }
     case 'textColor':
       return element.style.color;
     case 'backgroundColor':

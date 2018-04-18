@@ -316,3 +316,33 @@ tr:
       BigEvent_2018:
         title: Büyük Olay
         desc: Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve öğrenciler basılan tuşa göre eylemde bulunacak.
+      GraphPaperProgramming_2018:
+        title: Grafikli Kağıdıyla Programlama
+        desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut kullanarak sınfı bir çizim oluşturmaya yönlendirir.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Bağlantısız Etkinlik
+        desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Bağlantısız Etkinlik
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+      Conditionals_2018:
+        title: Koşullar
+        desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir puan alırsın gibi kurallar yaratacaklar
+      DigitalFootprint_2018:
+        title: Dijital İziniz
+        desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını tartışacaklar.
+      BinaryImages_2018:
+        title: İkili Sistemle Resimler
+        desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
+      PaperPlanes_2018:
+        title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+        desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      GettingLoopy_2018:
+        title: Döngüselleşme
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu tekrar etmeyi öğrenecekler.
+      BinaryBracelets_2018:
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
+      MoveItMoveIt_2018:
+        title: Çabuk, Çabuk Taşı
+        desc: ''

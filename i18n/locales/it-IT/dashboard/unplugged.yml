@@ -316,3 +316,33 @@ it:
       BigEvent_2018:
         title: Gli Eventi
         desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+      GraphPaperProgramming_2018:
+        title: Programmazione su carta a quadretti
+        desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Attività Tradizionale
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Attività Tradizionale
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Istruzioni condizionali
+        desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
+      DigitalFootprint_2018:
+        title: La tua Impronta Digitale
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
+      BinaryImages_2018:
+        title: Immagini binarie
+        desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
+      PaperPlanes_2018:
+        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso specifico costruire un aeroplano di carta. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
+      GettingLoopy_2018:
+        title: Diventare Ripetitivi
+        desc: Questa lezione introduce il costrutto di programmazione detto <i>ciclo</i> (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice coreografia e sono istruiti a ripeterla.
+      BinaryBracelets_2018:
+        title: Braccialetti Binari
+        desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto binario la prima lettera del loro nome. Imparano quindi che i dati possono essere rappresentati e memorizzati in più di un modo.
+      MoveItMoveIt_2018:
+        title: Muovilo, muovilo
+        desc: ''

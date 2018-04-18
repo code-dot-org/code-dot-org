@@ -33,7 +33,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
-    "hide_animation_mode": true,
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "show_d_pad": "false",
@@ -41,14 +41,16 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction moveBehavior() {\r\n  move.name = \"move\";\r\n  return move;\r\n}",
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction moveBehavior() {\r\n  move.name = \"move\";\r\n  return move;\r\n}\r\n",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveBehavior\",\r\n    \"blockText\": \"move\",\r\n    \"returnType\": \"Function\"\r\n  }\r\n]",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"370b0846-8ab0-40a0-b89e-3b72ca2cb5d4\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"370b0846-8ab0-40a0-b89e-3b72ca2cb5d4\": {\r\n      \"name\": \"elephant\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/O6kdSZZ2xrp6RZfo2qbysQ/370b0846-8ab0-40a0-b89e-3b72ca2cb5d4.png?version=YP87xZOBc4GqgOKcXWLlQ3MGslXeO8Z_\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 81\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"YP87xZOBc4GqgOKcXWLlQ3MGslXeO8Z_\"\r\n    }\r\n  }\r\n}",
+    "hide_custom_blocks": "false",
+    "use_default_sprites": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-03-20 00:05:02 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:07:49 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:08:47 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:10:17 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:13:25 +0000\",\"changed\":[],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:14:01 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:12 +0000\",\"changed\":[\"disable_param_editing\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 00:05:02 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:07:49 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:08:47 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:10:17 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:13:25 +0000\",\"changed\":[],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:14:01 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:12 +0000\",\"changed\":[\"disable_param_editing\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-20 00:44:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-04-11 03:03:29 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

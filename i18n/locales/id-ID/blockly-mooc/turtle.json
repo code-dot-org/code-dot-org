@@ -74,13 +74,13 @@
   "penDown": "pensil kebawah",
   "penTooltip": "Mengangkat atau menurunkan pensil, mulai atau berhenti menggambar.",
   "penUp": "pensil keatas",
+  "pointTo": "point to",
   "pixels": "piksel",
   "reinfFeedbackMsg": "Inilah gambar Anda! Teruslah mengerjakan atau lanjutan ke teka-teki berikutnya.",
   "setAlpha": "mengatur alpha",
   "setCharacter": "set karakter ke {character}",
   "setColour": "Atur warna",
   "setPattern": "tetapkan pola",
-  "setStickerSize": "Set sticker size",
   "setWidth": "atur lebar",
   "shareDrawing": "Bagikan gambar anda:",
   "showMe": "Tunjukkan padaku",
@@ -94,5 +94,6 @@
   "turnTooltip": "Membelok artis ke kiri atau ke kanan dengan beberapa derajat.",
   "turtleVisibilityTooltip": "Membuat artis terlihat atau tidak terlihat.",
   "widthTooltip": "Merubah lebar pensil.",
+  "withSize": "with size",
   "wrongColour": "Gambar Anda memiliki warna yang salah.  Untuk teka-teki ini, perlu untuk menjadi %1."
 }
