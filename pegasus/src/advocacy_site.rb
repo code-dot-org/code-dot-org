@@ -16,11 +16,11 @@ class AdvocacySite
             },
             {
               text_actual: "Letter to local elected official",
-              url: CDO.code_org_url("/files/policy_maker_letter.pdf"),
+              url: "https://www.votervoice.net/Code/campaigns/58463/respond",
               new_tab: true
             },
             {
-              text_actual: "Presentation to make the case for CS",
+              text_actual: "Presentation to advocate for CS",
               url: CDO.code_org_url("/files/computer_science_advocacy.pptx"),
               new_tab: true
             },
@@ -41,7 +41,7 @@ class AdvocacySite
         links:
           [
             {
-              text_actual: "National landscape 1-page summary",
+              text_actual: "1-page summary",
               url: "https://docs.google.com/document/d/15zBdBbXUA-yEzxEq0VeWAEb9nXuGjmNFWNrYp6UdM8U/edit?usp=sharing",
               new_tab: true
             },
@@ -77,7 +77,7 @@ class AdvocacySite
               new_tab: true
             },
             {
-              text_actual: "Growing K-12 CS using the Perkins Act",
+              text_actual: "Grow K-12 CS with the Perkins Act",
               url: CDO.code_org_url("/files/RethinkingPerkins.pdf"),
               new_tab: true
             },

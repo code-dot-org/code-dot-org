@@ -98,4 +98,25 @@ class StorageAppsTest < Minitest::Test
     # If there is a paired_user_level, then the level was paired.
     assert storage_apps.users_paired_on_level?(12345, 123, 124, 67890)
   end
+
+  def test_derive_project_type
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    # Create without type
+    typeless = storage_apps.create({}, ip: 123)
+    assert_equal 'unknown', storage_apps.project_type_from_channel_id(typeless)
+
+    # Create with type argument
+    type_in_column = storage_apps.create({}, ip: 123, type: 'applab')
+    assert_equal 'applab', storage_apps.project_type_from_channel_id(type_in_column)
+
+    # Create with type in value JSON blob
+    type_in_json = storage_apps.create({projectType: 'gamelab'}, ip: 123)
+    assert_equal 'gamelab', storage_apps.project_type_from_channel_id(type_in_json)
+
+    # Create with type that can be derived from the level property in the JSON blob
+    type_in_level = storage_apps.create({level: '/projects/weblab'}, ip: 123)
+    assert_equal 'weblab', storage_apps.project_type_from_channel_id(type_in_level)
+  end
 end

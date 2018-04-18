@@ -6,7 +6,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Consider Skipping Lessons 11 - 14 of Unit 2", "details"=>"Click to read more about this recommendation as well as our overall strategy for updating CS Principles.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/3", "type"=>"bullhorn"}, {"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history—again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Consider Skipping Lessons 11 - 14 of Unit 2", "details"=>"Click to read more about this recommendation as well as our overall strategy for updating CS Principles.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/3", "type"=>"bullhorn"}]
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

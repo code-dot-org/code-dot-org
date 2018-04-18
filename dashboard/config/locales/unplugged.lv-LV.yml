@@ -499,3 +499,20 @@
           bināri atspoguļota dažādos veidos. Šajā nodarbība parādīts, kā dators arī
           sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
           kodā.
+      PaperPlanes_2018:
+        title: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+        desc: Šajā nodabrībā apskatīti veidi, kā algoritmus izmantojam savā sadzīvē,
+          šoreiz - kā veidot papīra lidmašīnas. Šī nodarbība arī fokusējas uz datorzinību
+          kopējo ainu un kādu lomu tajā spēlē algoritmi.
+      GettingLoopy_2018:
+        title: Kļūst ciklisks
+        desc: Šī nodarbība ievieš ciklu (atkārtošanās) ideju programmēšanā, lietojot
+          deju aktivitātes. Skolēni iemācīsies vienkāršu horeogrāfiju, pēc tam saņems
+          norādījumus to atkārtot.
+      BinaryBracelets_2018:
+        title: Binārās aproces
+        desc: Skolēni veido aproces kā sava vārdu pirmo burtu bināru attēlojumu. Skolēni
+          apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
+      MoveItMoveIt_2018:
+        title: Ej, ej
+        desc: ''
