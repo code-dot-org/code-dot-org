@@ -7,10 +7,13 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Creative Commons Search",
-    "teacher_markdown": "# Recommended Search Engines\r\n\r\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\r\n\r\n* [Creative Commons Search](https://search.creativecommons.org/)\r\n* [Google Image Advanced Search](https://www.google.com/advanced_image_search)\r\n* [Wikimedia Commons](https://commons.wikimedia.org/)\r\n* [Flickr Creative Commons](https://www.flickr.com/creativecommons/)",
+    "teacher_markdown": "# Recommended Search Engines\r\n\r\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\r\n\r\n* [Creative Commons Search](https://search.creativecommons.org/)\r\n* [Google Image Advanced Search](https://www.google.com/advanced_image_search)\r\n* [Wikimedia Commons](https://commons.wikimedia.org/)\r\n* [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\r\n\r\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom.  You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.",
     "reference": "/docs/csd/cc_search/index.html"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-17 15:59:53 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

@@ -550,3 +550,22 @@
           i en række binære optioner.  Denne lektion tager konceptet et skridt længere,
           da den illustrerer hvordan en computer også kan gemme endnu mere komplekse
           oplysninger (f.eks. billeder og farver) i binære tal.
+      PaperPlanes_2018:
+        title: 'Real-life algoritmer: Papir fly'
+        desc: Denne lektion viser hvordan vi bruger algoritmer i vores daglige liv,
+          specielt til at lave papirfly. Denne lektion fokuserer også på at give et
+          overblik over programmering, og hvordan algoritmer spiller en væsentlig
+          rolle.
+      GettingLoopy_2018:
+        title: Blive Svimmel
+        desc: Denne lektion introducerer begrebet programmering af løkker/loops (gentagne
+          instrukser) gennem en danse aktivitet. Eleverne vil lære enkel koreografi,
+          derefter instrueres i at gentage den.
+      BinaryBracelets_2018:
+        title: Binære armbånd
+        desc: Eleverne opretter et armbånd som en binært repræsentationer af det første
+          bogstav i deres navn. Eleverne lære at data kan være repræsenteret og gemt
+          på mere end én måde.
+      MoveItMoveIt_2018:
+        title: Flyt det, flyt det
+        desc: ''

@@ -11,6 +11,6 @@ wrong 'Nothing will be displayed'
 markdown <<MARKDOWN
 <!-- TEXT: <img src="https://images.code.org/196329d47bb22e1ba6bacc53a0f0e4ca-image-1482957953096.png" style="width: 250px"> -->
 
-![](https://images.code.org/8f3a25ec210ce1e486a64600434b46c0-image-1482507544205.png)
+<img src="https://images.code.org/8f3a25ec210ce1e486a64600434b46c0-image-1482507544205.png" style="width: 300px">
 
 MARKDOWN

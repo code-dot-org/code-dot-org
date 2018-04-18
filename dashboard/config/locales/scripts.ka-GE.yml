@@ -8407,6 +8407,8 @@
               name: ციკლები მხატვარში
             Nested Loops in Bee:
               name: ჩადგმული ციკლები ფუტკარში
+            Loops in Ice Age:
+              name: Loops in Ice Age
           title: New Course D Script
           description_audience: ''
           description_short: ''
@@ -9917,6 +9919,8 @@
               name: Programming in Harvester
             Loops in Harvester:
               name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
         express-2018:
           title: დაჩქარებული კურსი
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
@@ -10127,6 +10131,14 @@
               name: მოვლენები სათამაშო ლაბორატორიაში
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: ვისწავლოთ გადაადგილება
         coursed-2018:
           title: New Course D Script
           description: ''
@@ -10201,6 +10213,8 @@
               name: 'მხატვარი: ორობითი'
               description_student: ''
               description_teacher: ''
+            Loops in Ice Age:
+              name: Loops in Ice Age
         jr-test:
           stages:
             Programming with Behaviors:
@@ -10211,6 +10225,12 @@
               name: Using Behaviors
             Using Forever Loops:
               name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
           title: ''
           description_audience: ''
           description_short: ''
@@ -10223,3 +10243,223 @@
           description_audience: ''
           description_short: ''
           description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unit 1 - Assessment 1
+            Unit 1 - Assessment 2:
+              name: Unit 1 - Assessment 2
+            Unit 2 - Assessment 1:
+              name: Unit 2 - Assessment 1
+            Unit 2 - Assessment 2:
+              name: Unit 2 - Assessment 2
+            Unit 3 - Assessment 1:
+              name: Unit 3 - Assessment 1
+            Unit 4 - Assessment 1:
+              name: Unit 4 - Assessment 1
+            Unit 5 - Assessment 1:
+              name: Unit 5 - Assessment 1
+            Unit 5 - Assessment 2:
+              name: Unit 5 - Assessment 2
+            Unit 2 - Assessment 3:
+              name: Unit 2 - Assessment 3
+            Unit 2 - Assessment 4:
+              name: Unit 2 - Assessment 4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: Unit 2 - Assessment 5 - Practice AP Pseudocode Questions
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global
+                Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic,
+                Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays
+                and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables,
+                Procedures, Loops, Conditionals)
+          title: CS Principles AP Exam Prep
+          description_audience: ''
+          description_short: CS Principles AP Exam Prep
+          description: 'This page contains copies of all the multiple choice assessment
+            questions that appeared in Units 1-5 in the course.  '
+        coursec-2018:
+          title: კურსი C
+          description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით.
+            გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის
+            გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის
+            ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ.
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
+          description_audience: 'ასაკი: 6-10'
+          stages:
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: დებაგირება ლაბირინთში
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Paper Planes':
+              name: 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: პროგრამირება შემგროვებელში
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: 'Loops: Getting Loopy'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: ციკლები მხატვარში
+              description_student: ''
+              description_teacher: ''
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: ორობითი სამაჯურები
+              description_student: ''
+              description_teacher: ''
+        csd6-2018:
+          title: CSD Unit 6 - Physical Computing
+          description: Unit 6 explores the role of hardware platforms in computing
+            and how different sensors can provide more effective input and output
+            than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
+            Circuit Playground, you’ll develop programs that utilize the same hardware
+            inputs and outputs that you see in the smart devices, looking at how a
+            simple rough prototype can lead to a finished product. The unit concludes
+            with a design challenge to use the Circuit Playground as the basis for
+            an innovation of your own design.
+          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
+          description_audience: ''
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: ''
+              description_teacher: ''
+            Board Events_:
+              name: Board Events_
+              description_student: ''
+              description_teacher: ''
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: ''
+              description_teacher: ''
+            Analog Input_:
+              name: Analog Input_
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: ''
+              description_teacher: ''
+            Making Music_:
+              name: Making Music_
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: ''
+              description_teacher: ''
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''

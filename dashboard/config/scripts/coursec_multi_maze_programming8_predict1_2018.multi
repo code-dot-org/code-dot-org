@@ -1,0 +1,6 @@
+name 'courseC_multi_maze_programming8_predict1_2018'
+question 'Read through the code below very carefully.  What will happen when you click "Run"?'
+wrong 'The bird will end up one step short of the pig.', feedback: 'Incorrect. This code gets the bird perfectly to the pig.'
+right 'The bird will make it to the pig.', feedback: 'Correct!'
+wrong 'The bird will run into the TNT.', feedback: 'Incorrect. This code gets the bird perfectly to the pig.'
+wrong 'I don\'t know.', feedback: 'This code gets the bird perfectly to the pig.'

@@ -1,8 +1,12 @@
 // Tests whether the browser can access an image URL.
 // Useful as a workaround for CORS security to test access to an origin.
-function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
-  timeoutMs = typeof timeoutMs !== 'undefined' ?  timeoutMs : 5000;
-  var img = new Image();
+function testImageAccess(url, successCallback, failureCallback, timeoutMs = 5000, videoElement = false) {
+  var element;
+  if (videoElement) {
+    element = document.createElement('video');
+  } else {
+    element = new Image();
+  }
   var called = false;
   function finish(callback) {
     return function () {
@@ -15,11 +19,15 @@ function testImageAccess(url, successCallback, failureCallback, timeoutMs) {
     };
   }
   var timeout = window.setTimeout(finish(failureCallback), timeoutMs);
-  img.onerror = finish(failureCallback);
-  img.onload = finish(successCallback);
-  img.src = url;
-  // store a reference to the Image so it doesn't get collected
+  element.onerror = finish(failureCallback);
+  if (videoElement) {
+    element.ondurationchange = finish(successCallback);
+  } else {
+    element.onload = finish(successCallback);
+  }
+  element.src = url;
+  // store a reference to the element so it doesn't get collected
   window.testImages = window.testImages || [];
-  window.testImages.push(img);
+  window.testImages.push(element);
 }
 module.exports = testImageAccess;

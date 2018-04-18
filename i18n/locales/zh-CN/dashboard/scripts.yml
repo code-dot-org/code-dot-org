@@ -5677,7 +5677,7 @@ zh-CN:
             Nested Loops:
               name: 循环嵌套
             Functions in Harvester:
-              name: Functions in Harvester
+              name: 收割者中的函数
           title: 课程 E
           description_audience: '年龄：8-12'
           description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
@@ -6404,6 +6404,8 @@ zh-CN:
               name: 艺术家里的循环
             Nested Loops in Bee:
               name: 蜜蜂里的嵌套循环
+            Loops in Ice Age:
+              name: 冰河时代里的循环
           title: 新的课程D脚本
           description_audience: ''
           description_short: ''
@@ -7041,7 +7043,7 @@ zh-CN:
             Build a Star Wars Game:
               name: 建立一个星球大战游戏!
             Functions in Harvester:
-              name: Functions in Harvester
+              name: 收割者中的函数
           title: 课程 E 2018
           description_audience: ''
           description_short: ''
@@ -7458,9 +7460,11 @@ zh-CN:
             Programming in Bee:
               name: 与蜜蜂编程
             Programming in Harvester:
-              name: Programming in Harvester
+              name: 与收割者编程
             Loops in Harvester:
               name: 收割机中的循环
+            Sequencing in Maze:
+              name: 迷宫中的序列
         express-2018:
           title: 快速课程
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -7665,6 +7669,14 @@ zh-CN:
               name: 游戏实验室中的事件
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: 在冰河时代里编程
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Move It, Move It:
+              name: 移动它，移动它！
         coursed-2018:
           title: 新的课程D脚本
           description: ''
@@ -7739,16 +7751,24 @@ zh-CN:
               name: 小艺术家：二进制
               description_student: ''
               description_teacher: ''
+            Loops in Ice Age:
+              name: 冰河时代里的循环
         jr-test:
           stages:
             Programming with Behaviors:
-              name: Programming with Behaviors
+              name: 编程中使用行为
             Programming with Forever:
-              name: Programming with Forever
+              name: 编程与永远
             Using Behaviors:
-              name: Using Behaviors
+              name: 使用行为
             Using Forever Loops:
-              name: Using Forever Loops
+              name: 使用永远的循环
+            Virtual Pet - Behaviors:
+              name: 虚拟宠物 - 行为
+            Fish Tank:
+              name: Fish Tank
+            Virtual Pet - Forever:
+              name: Virtual Pet - Forever
           title: ''
           description_audience: ''
           description_short: ''
@@ -7756,8 +7776,212 @@ zh-CN:
         petgame:
           stages:
             pet game:
-              name: pet game
+              name: 宠物游戏
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: 第1单元 - 评估1
+            Unit 1 - Assessment 2:
+              name: 第1单元 - 评估2
+            Unit 2 - Assessment 1:
+              name: 第2单元 - 评估1
+            Unit 2 - Assessment 2:
+              name: 第2单元 - 评估2
+            Unit 3 - Assessment 1:
+              name: 第3单元 - 评估1
+            Unit 4 - Assessment 1:
+              name: 第4单元 - 评估1
+            Unit 5 - Assessment 1:
+              name: 第5单元 - 评估1
+            Unit 5 - Assessment 2:
+              name: 第5单元 - 评估2
+            Unit 2 - Assessment 3:
+              name: 第2单元 - 评估3
+            Unit 2 - Assessment 4:
+              name: 第2单元 - 评估4
+            Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
+              name: 第2单元 - 评估 5 - 练习 AP 伪代码问题
+            'Unit 1.1 - Binary and Ascii ':
+              name: 'Unit 1.1 - Binary and Ascii '
+            Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
+              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+            Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+            Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+            Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
+              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+            'Unit 1 Assessment 1 - Binary and Ascii ':
+              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+            Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
+              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+            Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
+              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+            Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
+              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts
+            Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
+              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+            Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
+              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+            Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
+              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review
+            Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
+              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+            Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
+              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists
+            Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
+              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+            Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
+              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)
+          title: 计算机科学原理AP测试准备
+          description_audience: ''
+          description_short: 计算机科学原理AP测试准备
+          description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  '
+        coursec-2018:
+          title: 课程 C
+          description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
+          description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
+          description_audience: '年龄：6-10'
+          stages:
+            Building a Foundation:
+              name: 打基础
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: 迷宫编程
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: 迷宫里的调试
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Paper Planes':
+              name: '生活中的算法: 纸飞机'
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: 在收集器中编程
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: 艺术家里的编程
+              description_student: ''
+              description_teacher: ''
+            'Loops: Getting Loopy':
+              name: '循环: 变得糊涂'
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: 与雷伊和BB-8一起循环
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: 艺术家里的循环
+              description_student: ''
+              description_teacher: ''
+            Loops in Harvester:
+              name: 收割机中的循环
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: '事件: 大事件'
+              description_student: ''
+              description_teacher: ''
+            Build a Flappy Game:
+              name: 创作像素鸟游戏
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: 游戏实验室中的事件
+              description_student: ''
+              description_teacher: ''
+            Screen Out the Mean:
+              name: 筛选出平均值
+              description_student: ''
+              description_teacher: ''
+            Binary Bracelets:
+              name: 二进制的手镯
+              description_student: ''
+              description_teacher: ''
+        csd6-2018:
+          title: CSD 6 单元- 物理计算
+          description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和 Adafruit 的电路面板, 您将开发一些利用您在智能设备中看到的相同的硬件输入和输出的程序, 并查看简单粗糙原型是如何变成成品的。该单位的最后是一个设计挑战, 你要以电路操场作为基础来制作自己设计的创新项目。
+          description_short: 学习使用物理设备编程。
+          description_audience: ''
+          stages:
+            Innovations in Computing_:
+              name: Innovations in Computing_
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code_:
+              name: Designing Screens with Code_
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground_:
+              name: The Circuit Playground_
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged_:
+              name: Input Unplugged_
+              description_student: ''
+              description_teacher: ''
+            Board Events_:
+              name: Board Events_
+              description_student: ''
+              description_teacher: ''
+            Getting Properties_:
+              name: Getting Properties_
+              description_student: ''
+              description_teacher: ''
+            Analog Input_:
+              name: Analog Input_
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process_:
+              name: The Program Design Process_
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game__':
+              name: 'Project: Make a Game__'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs__
+              description_student: ''
+              description_teacher: ''
+            Making Music_:
+              name: Making Music_
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops_:
+              name: Arrays and For Loops_
+              description_student: ''
+              description_teacher: ''
+            Accelerometer_:
+              name: Accelerometer_
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters_:
+              name: Functions with Parameters_
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes_
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''

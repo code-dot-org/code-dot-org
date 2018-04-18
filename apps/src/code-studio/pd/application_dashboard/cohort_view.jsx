@@ -11,18 +11,18 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
 import {
   RegionalPartnerDropdownOptions as dropdownOptions,
-  UnmatchedFilter
+  RegionalPartnerPropType
 } from './constants';
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   }
 };
 
 class CohortView extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -39,22 +39,22 @@ class CohortView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: UnmatchedFilter
   };
 
   componentWillMount() {
-    this.load();
+    this.load(this.props.regionalPartnerFilter);
   }
 
-  load(selected = null) {
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
+  }
+
+  load(regionalPartnerFilter) {
     let url = this.getJsonUrl();
     if (this.props.isWorkshopAdmin) {
-      const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
-      const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
-      this.setState({ regionalPartnerName, regionalPartnerFilter });
-
-      url += `&regional_partner_filter=${regionalPartnerFilter}`;
+      url += `&regional_partner_value=${regionalPartnerFilter.value}`;
     }
 
     $.ajax({
@@ -70,16 +70,12 @@ class CohortView extends React.Component {
       });
   }
 
-  handleRegionalPartnerChange = (selected) => {
-    this.load(selected);
-  };
-
   getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
-    if (this.props.isWorkshopAdmin && this.state.regionalPartnerFilter) {
-      url += `&regional_partner_filter=${this.state.regionalPartnerFilter}`;
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter) {
+      url += `&regional_partner_value=${this.props.regionalPartnerFilter.value}`;
     }
 
     return url;
@@ -89,10 +85,14 @@ class CohortView extends React.Component {
     window.open(this.getCsvUrl());
   };
 
+  handleViewAllClick = () => {
+    this.context.router.push(`/${this.props.route.role}`);
+  };
+
   render() {
     if (this.state.loading) {
       return (
-        <Spinner/>
+        <Spinner />
       );
     } else {
       let accepted = 0;
@@ -107,20 +107,20 @@ class CohortView extends React.Component {
       }
       return (
         <div>
-          <CohortCalculator
-            role={this.props.route.role}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
-            accepted={accepted}
-            registered={registered}
-          />
+          {this.state.applications &&
+            <CohortCalculator
+              role={this.props.route.role}
+              regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
+              accepted={accepted}
+              registered={registered}
+            />
+          }
           {this.props.isWorkshopAdmin &&
             <RegionalPartnerDropdown
-              onChange={this.handleRegionalPartnerChange}
-              regionalPartnerFilter={this.state.regionalPartnerFilter}
               additionalOptions={dropdownOptions}
             />
           }
-          <h1>{this.state.regionalPartnerName}</h1>
+          <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -128,6 +128,12 @@ class CohortView extends React.Component {
               onClick={this.handleDownloadCsvClick}
             >
               Download CSV
+            </Button>
+            <Button
+              style={styles.button}
+              onClick={this.handleViewAllClick}
+            >
+              View all applications
             </Button>
           </Col>
           <CohortViewTable
@@ -142,6 +148,6 @@ class CohortView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);

@@ -38,7 +38,7 @@
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
   og_title_soon: L'Heure de Code arrive
-  og_title_here: The Hour of Code is here!
+  og_title_here: L'Heure du Code est ici!
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
@@ -46,10 +46,10 @@
   csedweek_og_description: L’heure de Code est un mouvement mondial qui touche des
     dizaines de millions d’étudiants de tous âges dans plus de 180 pays et plus de
     45 langues.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
+  csedweek_og_description_soon: L'Heure de Code arrive du3 au 9 décembre 2018. L'informatique
+    est un apprentissage indispensable pour chaque élève.
+  csedweek_og_description_here: L'Heure de Code a lieu ici. L'informatique est un
+    apprentissage indispensable pour chaque élève.
   hoc2014_heading: Rejoignez l'<a href="http://hourofcode.com">Heure de Code</a><br/>Du
     8 au 14 décembre 2014<br/>
   hoc2014_students: Élèves
@@ -350,8 +350,8 @@
   lines_of_code: PLUS DE <b># LIGNES DE CODE</b> ÉCRITES À CE JOUR.
   lines_of_code_alt: "<b>#</b> LIGNES DE CODE ÉCRITES PAR DES ÉLÈVES"
   who_has_done_hoc: 'Qui a fait l''Heure de Code #HourOfCode&#160;? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Qui a fini #HeureDeCode? (Merci %{donor_twitter} de supporter
+    @codeorg)'
   hoc_leaderboards: Les classements de l'Heure de Code
   students_and_lines: "%{students} élèves ont fait l’Heure de Code et ont écrit %{lines}
     lignes de code."
@@ -567,14 +567,14 @@
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft : Voyage du héros'
   minecraft_designer: Concepteur de Minecraft
   minecraft_adventurer: Aventurier de Minecraft
   minecraft_tutorials: Minecraft heure de Code tutoriels
   minecraft_specs: Beaucoup de langues | Les navigateurs modernes et comprimés | Grades
     2 +
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: Minecraft est de retour dans l'Heure de Code avec une
+    toute nouvelle activité! Le voyage dans Minecraft avec du code.
   minecraft_agent_button: Commencer
   minecraft_designer_description: Programmez des animaux et d'autres créatures Minecraft
     dans votre propre version de Minecraft.
@@ -590,9 +590,10 @@
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_host_event: Accueillir un évènement Heure de Code Minecraft
+  minecraft_teach_resources: Ressources et plan de la leçon pour les enseignants.
+  minecraft_leader_guide: Téléchargez les ressources pour vous aider à planifier et
+    mener un évènement.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
@@ -611,15 +612,16 @@
     become familiar with key computer science concepts, and get ready to lead an Hour
     of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
     up today</a>.
-  minecraft_future: Help all youth become future ready
+  minecraft_future: Aidez tous les jeunes à se préparer pour le futur
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
     communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
     the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_og_designer: Minecraft est de retour pour une nouvelle activité pour l'Heure
+    de Code. Programmez des animaux et d'autres créatures dans votre version personnelle
+    de Minecraft.
+  minecraft_og_agent: Minecraft est de retour dans l'Heure de Code, et vous êtes le
+    héros! Ecrivez le code pour voyagez à travers les biomes de Minecraft.
   sports_page_title: Heure du Code Sports
   sports_og_title: Heure du Code tutoriels Sports
   sports_og_description: Choisir entre jouer au basket ou mélanger et combiner les
@@ -670,7 +672,7 @@
   video_title_obama: Le président Obama à propos de l'informatique
   video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut apprendre
   video_title_anybody_can_learn: Tout le monde peut apprendre
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Heure de Code avec Steph Curry
   video_title_draymond_green: Heure du Code avec Draymond Green
   video_title_russell_okung: Heure de Code avec Russell Okung
   video_title_real_madrid: Heure de Code avec le Real Madrid
@@ -800,9 +802,9 @@
   volunteer_engineer_submission_type_task_mentor: Je recherche un conseiller pour
     m'aider à me préparer à coder avec mes élèves.
   petition_age: Age
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: Oups! Il y a une forte affluence sur l'Heure
+    de Code. Nous ne pouvons rien sauvegarder cette semaine, mais les sauvegardes
+    réalisées avant cette semaine sont toujours valables.
   dashboard_announce_learn_more_button: Pour en savoir plus
   dashboard_landing_title: Page d'accueil de l'enseignant
   dashboard_landing_welcome: Bienvenue dans la nouvelle version améliorée du tableau
@@ -1075,7 +1077,7 @@
   dashboard_express: 'Express Course: '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
     ces leçons en mode "déconnecté" </a> dans votre classe.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Outils: '
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
   dashboard_overview: Aperçu
@@ -1564,9 +1566,11 @@
     les concepts de programmation vus dans les cours précédents pour résoudre des
     problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires
     interactives et des jeux qu'ils pourront partager. Recommandé du CM1 à la 4e.
-  coursea_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: Une introduction à l’informatique pour les jeunes
+    lecteurs.
   courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: Apprendre les rudiments de l’informatique et
+    de créer vos propres œuvres d’art, vos histoires et vos jeux.
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
@@ -2137,7 +2141,7 @@
   playlab_shortcode: jouer
   artist_shortcode: art
   header_home: Accueil
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Mon tableau de bord
   header_courses: Cours
   header_course_catalog: Catalogue des cours
   header_project_gallery: Projets
@@ -2180,30 +2184,28 @@
   user_header_settings: Mon compte
   user_header_logout: Déconnexion
   user_header_signin: Authentification
-  view_all_sections: View All Sections
-  view_section: View Section
-  view_named_section: View %{section_name}
+  view_all_sections: Afficher toutes les sections
+  view_section: Afficher la section
+  view_named_section: Afficher %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
+  signing_in: Connexion en cours
+  sign_in_overview: 'Vos élèves peuvent se connecter avec leurs comptes Code.org en
+    suivant les étapes suivantes:'
+  sign_in_instruct_website: Aller à %{code_org_url}.
+  sign_in_instruct_code: 'Saisir leur code de section: %{section_code}.'
+  sign_in_instruct_name: Choisir leur nom visible.
+  sign_in_instruct_secret: Choisir leur secret %{secret}.
+  sign_in_instruct_button: Cliquer sur le bouton « Se connecter ».
+  sign_in_overview_cards: Les élèves peuvent trouver toutes ces informations y compris
+    leur secret %{secret} sur les cartes de connexion ci-dessous.
+  reset_student_password: Réinitialiser les mots de passe de l’élève
   reset_student_password_instructions: You can reset the secret <word/picture> for
     any of your students by going to the “Manage Students” tab for the section, clicking
     the “Show secret” button under the “Password” column, and clicking the “Reset
     secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
+  login_cards: Cartes de connexion
+  print_login_cards: Imprimer les cartes de connexion
   joining_section: Joining your section (one-time only)
   joining_section_overview: If a student has not already joined your section, please
     ask them to do the following steps. Note that they only need to do this once.
@@ -2215,10 +2217,10 @@
     they can either sign up with an email address and password, or sign up through
     Google, Facebook, or Microsoft by clicking on one of these buttons:'
   joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
+  joining_section_instruct_code: 'Allez à %{code_org_url} te saisissez le code de
+    la section: %{section_code}.'
+  joining_section_instruct_button: Une fois qu’ils ont appuyé sur le bouton « Go »,
+    ils doivent être ajoutés dans votre section.
   signing_in_single_instruct: Your students can sign in to their Code.org accounts
     by going to https://code.org/ and clicking on the “Sign in” button on the top
     right corner.
@@ -2227,11 +2229,11 @@
     Facebook, Microsoft, or Clever account), you can reset their password by going
     to the “Manage Students” tab for the section, and clicking the “Reset password”
     button under the “Password” column.
-  syncing_students: Syncing your students
+  syncing_students: Synchronisation de vos élèves
   syncing_students_instructions: 'If your Code.org section is ever out of date with
     your list of students in Google Classroom, click on the “Sync students from Google
     Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro
+  google_sign_in_instruct: 'À partir de là, ils doivent choisir l’option « Se connecter
+    avec mon compte Google »:'
+  hero_name: 'Minecraft: Le voyage du héros'
+  applab-intro_name: Introduction pour App Lab

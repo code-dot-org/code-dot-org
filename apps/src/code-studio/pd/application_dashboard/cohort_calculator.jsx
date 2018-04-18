@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
+import {RegionalPartnerValuePropType} from './constants';
 import $ from 'jquery';
 
 const styles = {
@@ -11,10 +12,7 @@ const styles = {
 export default class CohortCalculator extends React.Component {
   static propTypes = {
     role: PropTypes.string.isRequired,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    regionalPartnerFilterValue: RegionalPartnerValuePropType,
     accepted: PropTypes.number.isRequired,
     registered: PropTypes.number.isRequired
   };
@@ -32,11 +30,11 @@ export default class CohortCalculator extends React.Component {
   }
 
   componentWillMount() {
-    this.load(this.props.regionalPartnerFilter);
+    this.load(this.props.regionalPartnerFilterValue);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.load(nextProps.regionalPartnerFilter);
+    this.load(nextProps.regionalPartnerFilterValue);
   }
 
   componentWillUnmount() {
@@ -49,13 +47,13 @@ export default class CohortCalculator extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter) {
+  load(regionalPartnerFilterValue) {
     this.abortLoad();
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_filter=${regionalPartnerFilter}`,
+      url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_value=${regionalPartnerFilterValue}`,
       dataType: 'json'
     })
       .done(data => {

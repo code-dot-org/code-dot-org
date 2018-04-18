@@ -334,3 +334,15 @@ ro:
       BinaryImages_2018:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de asemenea, chiar și informații mai complexe (precum imagini şi culori) în sistem binar.
+      PaperPlanes_2018:
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.
+      GettingLoopy_2018:
+        title: Transformând în Buclă
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie simplă, apoi vor fi instruiți să o repete.
+      BinaryBracelets_2018:
+        title: Brăţări Binare
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai multe feluri.
+      MoveItMoveIt_2018:
+        title: Mutaţi-l, mutați-l
+        desc: '[șir gol]'

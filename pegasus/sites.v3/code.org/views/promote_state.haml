@@ -11,7 +11,7 @@
   -unless data[:cs_jobs_i] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_jobs_i])
-    open computing jobs
+    Open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
   %p.fact.subfact
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
@@ -19,88 +19,89 @@
   -unless data[:cs_graduates] == 0
     %strong.figure
       =format_integer_with_commas(data[:cs_graduates_i])
-    computer science graduates
+    Computer science graduates
 
 %p.fact
   = precede "Policy Environment (" do
     = succeed "):" do
       %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
 
-%div.fact{style: "margin-left: 20px;"}
-  - if data[:pd_funding_s] == "No"
-    %i.fa.fa-times-circle
-    &nbsp;
-    No dedicated state funding for CS PD
-  - elsif data[:pd_funding_s] == "Yes"
-    %i.fa.fa-check-circle
-    &nbsp;
-    Dedicated state funding for CS PD
-  - elsif data[:pd_funding_s] == "Other"
-    %i.fa.fa-check-circle
-    &nbsp;
-    = data[:pd_funding_exception_s]
-  %br
+.icon-facts
+  .fact.icon-fact
+    - if data[:pd_funding_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        No dedicated state funding for CS PD
+    - elsif data[:pd_funding_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Dedicated state funding for CS PD
+    - elsif data[:pd_funding_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:pd_funding_exception_s]
+  .fact.icon-fact
+    - if data[:require_hs_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        Does not require all high schools to offer CS
+    - elsif data[:require_hs_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Requires all high schools to offer CS
+    - elsif data[:require_hs_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:require_hs_exception_s]
 
-  - if data[:require_hs_s] == "No"
-    %i.fa.fa-times-circle
-    &nbsp;
-    Does not require all high schools to offer CS
-  - elsif data[:require_hs_s] == "Yes"
-    %i.fa.fa-check-circle
-    &nbsp;
-    Requires all high schools to offer CS
-  - elsif data[:require_hs_s] == "Other"
-    %i.fa.fa-check-circle
-    &nbsp;
-    = data[:require_hs_exception_s]
-  %br
+  .fact.icon-fact
+    - if data[:cs_standards_s] == "No"
+      %i.fa.fa-times-circle
+      .fact-text
+        No K-12 CS curriculum standards
+    - elsif data[:cs_standards_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        K-12 CS curriculum standards
+    - elsif data[:cs_standards_s] == "Other"
+      %i.fa.fa-check-circle
+      .fact-text
+        = data[:cs_standards_exception_s]
 
-  - if data[:cs_standards_s] == "No"
-    %i.fa.fa-times-circle
-    &nbsp;
-    No K-12 CS curriculum standards
-  - elsif data[:cs_standards_s] == "Yes"
-    %i.fa.fa-check-circle
-    &nbsp;
-    K-12 CS curriculum standards
-  - elsif data[:cs_standards_s] == "Other"
-    %i.fa.fa-check-circle
-    &nbsp;
-    = data[:cs_standards_exception_s]
-
-%p.fact{style: "margin-top: 5px; margin-bottom: 0px;"}
+%p.fact{style: "margin-top: 5px; margin-bottom: 0px; text-align: left"}
   #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; AP Stats
   #hide-ap-stats{style: "display: none;"}
     %div{style: "cursor: pointer;"} &#9660;&nbsp; AP Stats
-    .fact{style: "margin-left: 20px;"}
+    .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
       = "#{data[:percent_schools_ap_cs_i]}% of schools teach AP CS"
-    .fact{style: "margin-left: 20px;"}
+    .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
       = "#{format_integer_with_commas(data[:ap_cs_exams_i])} AP CS exams were taken last year"
-    .fact{style: "margin-left: 20px;"}
+    .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
       = "#{data[:percent_ap_female_i]}% of them were female"
-    .fact{style: "margin-left: 20px;"}
+    .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
       = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
 
--if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
-  %div.download-fact-sheet
-    %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
-      %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
-        View #{statename} fact-sheet
+.state-buttons
+  -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
+    .state-button.download-fact-sheet
+      %a{:href=>CDO.code_org_url("/advocacy/state-facts/#{state}.pdf"), target: '_blank'}
+        %button<
+          View state fact-sheet
 
-- if request.site == "advocacy.code.org"
-  - if ! state.nil_or_empty?
-    %div.take-action
-      %a{:href=>CDO.advocacy_url('/action')}
-        %button{style: 'height:40px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px'}<
-          Take action in your state
+  - if request.site == "advocacy.code.org"
+    - if ! state.nil_or_empty?
+      .state-button.take-action
+        %a{:href=>'https://www.votervoice.net/Code/campaigns/58463/respond', target: '_blank'}
+          %button<
+            Take action in your state
 
 -if data[:text_t]
   %p
@@ -127,26 +128,3 @@
     %a{href: "https://research.collegeboard.org/programs/ap/data", style: "color:#BCC2C6", target: '_blank'} College Board
   =succeed "." do
     %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
-
-:css
-  #state-title {
-    color: rgb(185,191,21);
-    text-shadow: 1px 1px rgba(0, 0, 0, .5);
-    font-size:36px;
-    line-height: 36px;
-    font-weight: bold;
-    text-align:center;
-  }
-  .fact {
-    font-size:15px;
-  }
-  .figure {
-    font-size:20px;
-  }
-  #sources {
-    font-size: 12px;
-    line-height: 12px;
-    text-align: center;
-    opacity: 0.8;
-    color: #BCC2C6;
-  }

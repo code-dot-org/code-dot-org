@@ -16,8 +16,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
-  renderLoginTypeAndSharingControls,
-  unmountLoginTypeAndSharingControls,
+  renderLoginTypeControls,
+  unmountLoginTypeControls,
   renderSectionTable,
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
@@ -397,7 +397,7 @@ function main() {
       });
 
       $scope.$on('login-type-react-rendered', () => {
-        $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
+        $scope.section.$promise.then(section => renderLoginTypeControls(section.id));
       });
 
       $scope.$on('student-table-react-rendered', () => {
@@ -406,7 +406,7 @@ function main() {
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
-        unmountLoginTypeAndSharingControls();
+        unmountLoginTypeControls();
       });
     }
 
@@ -464,8 +464,8 @@ function main() {
           // students then we had zero saved students to begin with.
           // TODO: Once everything is React this should become unnecessary.
           if (newStudents.length === $scope.section.students.length) {
-            unmountLoginTypeAndSharingControls();
-            renderLoginTypeAndSharingControls($scope.section.id);
+            unmountLoginTypeControls();
+            renderLoginTypeControls($scope.section.id);
           }
         }).catch($scope.genericError);
       }
@@ -495,8 +495,8 @@ function main() {
         // the correct options are available.
         // TODO: Once everything is React this should become unnecessary.
         if ($scope.section.students.length <= 0) {
-          unmountLoginTypeAndSharingControls();
-          renderLoginTypeAndSharingControls($scope.section.id);
+          unmountLoginTypeControls();
+          renderLoginTypeControls($scope.section.id);
         }
       }).catch($scope.genericError);
     };

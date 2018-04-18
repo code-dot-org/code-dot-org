@@ -334,3 +334,15 @@ en-GB:
       BinaryImages_2018:
         title: Binary Images
         desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Real-life Algorithms: Paper Planes'
+        desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+      BinaryBracelets_2018:
+        title: Binary Bracelets
+        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+      MoveItMoveIt_2018:
+        title: Move It, Move It
+        desc: ''

@@ -3764,183 +3764,200 @@
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What
-          I want to show you is just over this mesa plateau. I think you''re going
-          to love it!'
+        text: 'Stacy: Stampy, Lizzy, Preston - merci de venir avec moi. Ce que je
+          veux vous montrer est juste au dessus de ce plateau. Je pense que vous allez
+          adorer!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: Wait a minute - there's a hole in the track! (screaming)
+        text: Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)
       3:
         image: notes/mc_2017_agent_intro_3.png
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
-          hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather
-          blocks to fix it. Preston: Let''s make it a race. First one back to the
-          top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather
-          some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy:
-          I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine?
-          Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game
-          broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy:
-          Does anyone know how to write Minecraft code?'
+        text: 'Tout le monde va bien? Stampy: Ah, je vois le problème. Regarde! Il
+          y avait un trou dans la voie. Stacy: Vraiment Stampy? Lizzy: Peut-être qu''on
+          doit assembler des blocs pour la réparer. Preston: Faisons-en une course.
+          Le premier arrivé en haut gagne. Stacy: D''accord, à vos marques, prêts,
+          partez! Ok, je vais juste prendre un peu de cette terre cuite. Attendez.
+          Les amis, je ne peux pas creuser! Preston: Pareil. Lizzy: Je ne peux pas
+          non plus. Stacy: Ok, c''est vraiment bizarre. Stampy, est-ce que tu peux
+          creuser? Stampy: Je n''y arrive pas! Stacy: Ok, tout le monde reste calme.
+          Stampy: Est-ce que le jeu est cassé? Stacy: Si c''est le cas, comment allons-nous
+          le réparer? Lizzy: Aucune idée. Stampy: Est-ce que quelqu''un sait écrire
+          du code pour Minecraft?'
       4:
         image: notes/mc_2017_agent_intro_4.png
-        text: "(poof) Preston: What is that? Stampy: I've never seen one of these
-          before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston:
-          Okay, what is going on? Someone needs to go back to the real world and fix
-          this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
+        text: "(pouf) Preston: Qu'est-ce que c'est que ça? Stampy: Je n'en ai jamais
+          vu avant. Lizzy: C'est trop mignon! Stacy: Est-ce que... est-ce qu'on peut
+          l'apprivoiser? Preston: Ok, qu'est-ce qui se passe? Quelqu'un doit retourner
+          dans le monde réel et réparer. Tous: Pas ça! Stacy: Pas moi (pfffff) Ok,
+          j'y vais."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Oh, okay, hey, so I'm in the real world now. I'm going to go try to
-          find the Minecraft offices.
+        text: Oh, d'accord, donc je suis maintenant dans le monde réel. Je vais voir
+          si je peux trouver les bureaux de Minecraft.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: But, I'm going to need your help. Start doing the tutorial, start learning
-          how to code, and I'll catch up with you guys after a few levels, okay? Wish
-          me luck! I think it's this way. Ow! Cactus! I'm okay!
+        text: Mais je vais avoir besoin de votre aide. Commencez par suivre le tutoriel,
+          commencer à apprendre à coder, et je vous retrouve après quelques niveaux,
+          d'accord? Souhaitez-moi bonne chance! Je pense que c'est par là. Aie! Un
+          cactus! Je vais bien!
       7:
         image: notes/mc_2017_agent_intro_7.png
-        text: To complete the Hour of Code challenge, you'll need to write code to
-          program the agent. You'll work together with The Agent to clear any obstacles
-          in your path, so you can pick up the items you'll need for your journey.
-          Only the Agent can place and break blocks, and only you can collect items.
-          Your screen is split into three main parts. On the left is Minecraft.
+        text: Pour terminer le défi de l'Heure de Code, vous allez devoir coder pour
+          programmer l'agent. Vous allez travailler avec l'Agent pour supprimer les
+          obstacles sur votre chemin, de manière à récolter les objets nécessaires
+          à votre voyage. Seul l'Agent peut placer et casser des blocs, et vous seul
+          pouvez récolter des objets. L'écran est divisé en trois parties principales.
+          À gauche, vous trouvez Minecraft.
       8:
         image: notes/mc_2017_agent_intro_8.png
-        text: The middle area is the toolbox with commands that the Agent can understand.
+        text: La zone centrale est la boîte à outils avec les commandes que l'Agent
+          peut comprendre.
       9:
         image: notes/mc_2017_agent_intro_9.png
-        text: And on the right, is the workspace. That's where you stack the commands
-          to build your program to control the Agent.
+        text: Et sur la droite se trouve l'espace de travail. C'est à cet endroit
+          que vous allez empiler les commandes pour construire le programme contrôlant
+          l'Agent.
       10:
         image: notes/mc_2017_agent_intro_10.png
-        text: The Agent can walk, turn, and activate pressure plates. It can also
-          destroy blocks and place blocks. When it places the block like these minecart
-          rails, it places it underneath itself.
+        text: L'Agent peut avancer, tourner et activer des plaques par pression. Il
+          peut aussi détruire des blocs et placer des blocs. Quand il place un bloc
+          comme des rails de wagonnet, il les place en dessous de lui.
       11:
         image: notes/mc_2017_agent_intro_11.png
         text: Si vous oubliez quoi faire, les instructions de chaque niveau sont en
           haut.
       12:
         image: notes/mc_2017_agent_intro_12.png
-        text: If you want to try again, you can hit the blue reset button to reset
-          everything to where it started. And if you need to delete a block of code,
-          drag it from your workspace to the toolbox. Remember to hit run to get the
-          Agent moving. Okay, go ahead and try out the first few levels. Good luck!
+        text: Si vous voulez recommencer, vous pouvez appuyer sur le bouton bleu réinitialiser
+          pour tout remettre comme au début. Et si vous voulez supprimer un bloc de
+          code, glissez-le de l'espace de travail vers la boîte à outils. N'oubliez
+          pas d'appuyer sur démarrer pour que l'Agent se déplace. Alors allez-y et
+          essayez ces quelques premiers niveaux. Bonne chance!
     mc_2017_repeat:
       1:
         image: notes/mc_2017_repeat_1.png
-        text: 'Stampy: I wonder what Stacy is up to?'
+        text: 'Stampy: Je me demande ce que fait Stacy?'
       2:
         image: notes/mc_2017_repeat_2.png
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+        text: 'Stacy: Ouaah, je pense que je suis au bon endroit. C''est impressionnant!'
       3:
         image: notes/mc_2017_repeat_3.png
-        text: I feel like I'm back in Minecraft! Hello. How are you? Hello?
+        text: C'est comme si j'étais de nouveau dans Minecraft! Bonjour. Comment vas-tu?
+          Bonjour?
       4:
         image: notes/mc_2017_repeat_4.png
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy?
-          Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+        text: 'Oh, il y a une plante grimpante. Tu ne fais rien, n''est-ce pas? Katie:
+          Stacy? Stacy: Bonjour, Katie? Katie: Oui, bienvenue chez Minecraft!'
       5:
         image: notes/mc_2017_repeat_5.png
-        text: 'Stacy: This is amazing. So you work here every day as a developer,
-          right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft
-          marketplace team. Stacy: How many coding languages do you know? Katie: In
-          my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie:
-          Yeah. Stacy: So now, you wouldn''t happen to know anything about this little
-          golem guy that calls himself the Agent? Katie: We use the Agent to do things
-          that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn
-          how to code, and they want to learn how to code, so what is one of the first
-          things that you need to know when you''re learning?'
+        text: 'Stacy: C''est incroyable. Donc tu travailles ici tous les jours comme
+          développeur. Katie: Oui, c''est assez impressionnant. Je suis développeur
+          dans l''équipe qui s''occupe de la place du marché de Minecraft. Stacy:
+          Combien connais-tu de langages de programmation? Katie: Dans ma carrière,
+          j''ai probablement travaillé avec plus d''une douzaine. Stacy: Une douzaine?
+          Katie: Oui. Stacy: Donc maintenant, est-ce que tu connaîtrais des choses
+          sur ce petit golem qui se fait appelé l''Agent? Katie: Nous utilisons l''Agent
+          pour faire des choses que Steve et Alex ne peuvent pas faire, comme survoler
+          la lave. Stacy: Super, je veux apprendre à coder, et ils veulent aussi apprendre
+          à coder, alors quelle est l''une des premières choses à connaître quand
+          on apprend?'
       6:
         image: notes/mc_2017_repeat_6.png
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that
-          developers write to give commands to a computer that can be run over and
-          over again. Stacy: Got it, so I think there''s actually some of that coming
-          up in the levels ahead, so go ahead and give loops a try.'
+        text: 'Katie: Et bien, vous devez apprendre comment utiliser les boucles.
+          Une boucle est ce que les développeurs écrivent pour donner des ordres à
+          un ordinateur qui peuvent être exécuter encore et encore. Stacy: Compris,
+          donc je pense que les niveaux suivant vont aborder le sujet, alors continuez
+          et essayez les boucles.'
       7:
         image: notes/mc_2017_repeat_7.png
-        text: In the next level, you can use a loop to move the Agent along the path.
-          Drag the repeat block into the workspace and place the move forward block
-          inside the repeat block. This tells the computer to do the same thing many
-          times in a row without having to drag a whole bunch of blocks into the workspace.
-          You can choose how many times to repeat by putting a number in the repeat
-          block.
+        text: Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer
+          l'Agent le long du chemin. Glisse le bloc répéter dans l'espace de travail
+          et place un bloc avancer plus à l'intérieur du bloc répéter. Ça signifie
+          que l'ordinateur doit faire plusieurs fois de suite la même chose sans avoir
+          à glisser un tas de blocs à l'intérieur de l'espace de travail. Vous pouvez
+          choisir combien de répétitions effectuer en plaçant un nombre dans le bloc
+          répéter.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: You can put turns and multiple commands in the repeat block too, but
-          for now try using a repeat to move the Agent forward a few steps. Remember,
-          if you get stuck on a puzzle you can always hit the blue reset button and
-          try again.
+        text: Vous pouvez aussi mettre des blocs tourner et plusieurs commandes à
+          l'intérieur d'un bloc répéter, mais pour le moment, essayez d'utiliser répéter
+          pour faire avancer l'Agent de quelques pas. Rappelez-vous, si vous êtes
+          coincés sur un puzzle, vous pouvez toujours utiliser le bouton bleu Réinitialiser
+          et recommencer.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead
-          and click the show code button when you finish every level. That''s going
-          to actually show you the Javascript code that someone like Katie uses when
-          she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: 'Si vous pensez avoir un travail aussi cool que Katie, allez-y et cliquez
+          sur le bouton montrer le code quand vous finissez chaque niveau. Cela va
+          vous montrer le code Javascript que quelqu''un comme Katie utilise quand
+          elle programme Minecraft. Katie: Oui, bonne chance à tous!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour.
-          Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: 'Preston: Ce n''est pas pour frimer mais je suis plutôt bon en parkour.
+          Lizzy: Dormons comme ça il fera jour quand Stacy reviendra.'
       2:
         image: notes/mc_2017_functions_2.png
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I
-          know how to solve the problem I''m having in my game. I think I can use
-          a function. Let me just open this.'
+        text: 'Stacy: Ok les amis, je reviens des bureaux de Minecraft, et je pense
+          que je sais comment résoudre le problème que j''ai dans le jeu. Je pense
+          que je peux utiliser une fonction. J''ouvre juste ceci.'
       3:
         image: notes/mc_2017_functions_3.png
-        text: So a function is a specific set of instructions to accomplish a certain
-          task, kind of like a recipe. In the next few levels, you'll have access
-          to functions that you can use to solve the puzzles.
+        text: Alors une fonction est une liste spécifique d'instructions pour accomplir
+          une certaine tâche, un peu comme une recette. Dans les niveaux suivants,
+          vous aurez accès aux fonctions et vous pourrez les utiliser pour résoudre
+          les puzzles.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Look at the code in the function when it's in the workspace to see what
-          it does.
+        text: Examinez le code dans la fonction quand celle-ci est dans l'espace de
+          travail pour voir ce qu'elle fait.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Then, find the block with that name in the toolbox and drag it from
-          the toolbox to the when run block.
+        text: Ensuite, trouvez le bloc avec ce nom dans la boîte à outils et glissez-le
+          de la boîte à outils vers le bloc quand l'exécution commence.
       6:
         image: notes/mc_2017_functions_6.png
-        text: Remember, you can use the same function every time you need to run the
-          same set of instructions to do something, like build a bridge. Good luck,
-          I know you can do it!
+        text: Rappelez-vous, vous pouvez utiliser la même fonction à chaque fois que
+          vous voulez exécuter la même série d'instructions pour faire quelque chose,
+          comme construire un pont. Bonne chance, je sais que vous allez y arriver!
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'Preston: Félicitations!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'Lizzy: Félicitations!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampy: Félicitations, vous avez réussi!'
       4:
         image: notes/mc_2017_congratulations_4.png
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that
-          you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve
-          learned about loops, functions, and what a software Agent does.'
+        text: 'Stacy: Félicitations les amis, vous avez assuré! Et maintenant que
+          vous avez terminé l''Heure de Code, vous pouvez commencer à coder dans Minecraft.
+          Vous avez appris les boucles, les fonctions et ce que l''Agent peut faire.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Now, it's time for the free play level, where you are the developer.
-          Use any remaining time to write your own functions to explore, mine, and
-          build.
+        text: Maintenant, c'est le moment de jouer sur un niveau libre, où vous êtes
+          le développeur. Utiliser le reste du temps pour écrire vos propres fonctions
+          pour explorer, creuser et construire.
       6:
         image: notes/mc_2017_congratulations_6.png
-        text: 'You can take the code that you write in this level into your Minecraft
-          world on Minecraft: Education Edition. Just click ''Finish'' and follow
-          the instructions for getting the link to use in your world. to continue
-          coding with the Agent. Have fun, and good job!'
+        text: 'Vous pouvez prendre le code que vous avez écrit dans ce niveau pour
+          l''utiliser dans votre monde Minecraft de Minecraft: Education Edition.
+          Cliquez juste sur ''Finir'' et suivez les instructions pour avoir un lien
+          à utiliser dans votre monde, pour continuer à coder avec l''Agent. Amusez-vous
+          bien, et bon travail!'
       7:
         image: notes/mc_2017_congratulations_7.png
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show
-          you what it can do. Look, it''s doing it! I told it to build a staircase
-          out of these terra cotta blocks, now we can just use this to get out of
-          here. And you guys, it''s not just staircases. I can tell the Agent to do
-          anything I want, and it will do it for me.'
+        text: 'Stacy: Et je suis de retour! Donc là les amis, c''est l''Agent! Laissez-moi
+          vous montrer ce qu''il peut faire. Regardez, il le fait! Je lui ai dit de
+          construire un escalier à partir de blocs de terre cuite, et maintenant nous
+          pouvons l''utiliser pour sortir de là. Et en plus, il n''y a pas que des
+          escaliers. Je peux dire à l''Agent de faire tout ce que je veux, et il le
+          fera pour moi.'
       8:
         image: notes/mc_2017_congratulations_8.png
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used
-          code!'
+        text: 'Stampy: Comment tu as fait ça? Stacy: C''était facile en fait. J''ai
+          juste utilisé du code!'
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png

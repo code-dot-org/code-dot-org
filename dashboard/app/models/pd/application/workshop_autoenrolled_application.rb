@@ -134,7 +134,7 @@ module Pd::Application
 
     def registered_workshop?
       # inspect the cached workshop.enrollments rather than querying the DB
-      workshop.enrollments.any? {|e| e.user_id == user.id} if pd_workshop_id
+      workshop&.enrollments&.any? {|e| e.user_id == user.id} if pd_workshop_id
     end
 
     # Assigns the default workshop, if one is not yet assigned

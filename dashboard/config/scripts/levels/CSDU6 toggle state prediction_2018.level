@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-12T20:52:42.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "markdown_instructions": "# More on the Toggle Switch\r\n\r\nYou can also check whether the toggle switch is in the `open` or `close` position anywhere in your program. \r\n\r\nWhat different things does the button do when the toggle switch is `open` or `close`?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10483,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-06 16:50:31 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-17 00:08:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-06 19:31:34 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-19 16:21:17 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</FreeResponse>

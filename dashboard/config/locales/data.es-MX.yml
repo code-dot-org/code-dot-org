@@ -632,8 +632,8 @@
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
           El recolector'
         CSF_create_functions: Crear funciones
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_debugging_k1_blocks: Depuración
+        CSF_debugging_text_blocks: Depuración
         CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
@@ -810,6 +810,9 @@
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: El recolector
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

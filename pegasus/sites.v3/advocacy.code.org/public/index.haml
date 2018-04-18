@@ -3,7 +3,7 @@ theme: responsive_wide
 layout: wide
 social:
   "og:title": "Advocate for computer science education"
-  "og:description": "Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system."
+  "og:description": "Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education."
   "twitter:site": "@codeorg"
   "twitter:title": "Advocate for computer science education"
   "twitter:description": "Learn about our local policy and access resources to support computer science in our state."
@@ -12,29 +12,32 @@ video_player: false
 ---
 
 -# Put advocacy.css after other CSS files so that it can override them.
-%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
-%link{:href=>"/css/advocacy.css", :rel=>"stylesheet"}
+=inline_css 'interactive_map.css'
+=inline_css 'advocacy-home.css'
+
+- banner_body = capture_haml do
+  Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education.
+
+  .learn-more
+    %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf"), target: '_blank'}
+      %button.header-button
+        Learn more
 
 #homepage
 
-  #fullwidth
+  #fullwidth.banner-container
+    .banner
+      .banner-shade
+        .container_responsive
+          %h1 Advocate for computer science education
+          .desktop-feature
+            = banner_body
+
     = view :header
 
-    .banner
-      .container_responsive
-        %h1 Advocate for computer science education
-        Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
-
-        .learn-more
-          %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf")}
-            %button.header-button
-              Learn more
-
-      .clear
-
-    .clear
-
   .container_responsive
+    .non-banner.mobile-feature
+      = banner_body
 
     -state ||= nil
     = view :interactive_map, use_url: false, advocacy_variation: true
@@ -55,7 +58,19 @@ video_player: false
 
     .clear
 
-    %h2 Our Coalition
+    .centered
+      %a{href: CDO.code_org_url("/promote/morestats")}
+        %button More resources
 
-    = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+    .coalition
+      %h2 Our Coalition
+      .centered
+        %a{href: "https://go.pardot.com/l/153401/2018-04-13/kspz3t", target: "_blank"}
+          %button Join the newsletter
+        &nbsp;&nbsp;
+        %a{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
+          %button Join the coalition
+
+      = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
+      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
 

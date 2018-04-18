@@ -10,10 +10,12 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
+  setCsfScriptIds,
   setOAuthProvider,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
@@ -30,6 +32,7 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
+  store.dispatch(setCsfScriptIds(homepageData.csfScriptIds));
   store.dispatch(setOAuthProvider(homepageData.provider));
 
   let courseId;
@@ -70,6 +73,8 @@ function showHomepage() {
     announcementId = announcementOverride.teacher_announce_id;
     announcementType = announcementOverride.teacher_announce_type;
   }
+
+  measureVideoConnectivity();
 
   ReactDOM.render (
     <Provider store={store}>

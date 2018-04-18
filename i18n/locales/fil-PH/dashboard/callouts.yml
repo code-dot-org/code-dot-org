@@ -418,18 +418,33 @@ fil:
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: Idagdag ang iyong code dito
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Idagdag ang iyong code dito
       CSD U6 colorLeds predict_callout: [ ]
+      CSD U6 colorLeds predict_2018_callout: [ ]
       CSD U6 getProperty input_callout:
+        CSD_U6L06P03: Add your block here.
+      CSD U6 getProperty input_2018_callout:
         CSD_U6L06P03: Add your block here.
       CSD U6 light show predict_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
+      CSD U6 light show predict_2018_callout:
+        CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 light show_callout:
+        CSDUDL03P09: Ano ang ginagawa ng linyang ito?
+      CSD U6 light show_2018_callout:
         CSDUDL03P09: Ano ang ginagawa ng linyang ito?
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: Bigyang kahulagan ang startGame dito
+      CSD U6 tugowar variables 1_2018_callout:
+        CSD_U6_startGame: Bigyang kahulagan ang startGame dito
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: Bigyang kahulugan ang movePlayer() dito
+      CSD U6 tugowar variables 2_2018_callout:
+        CSD_U6_movePlayer: Bigyang kahulugan ang movePlayer() dito
       CSD U6 tugowar variables 3_callout:
+        CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
+      CSD U6 tugowar variables 3_2018_callout:
         CSD_U6_checkWin: Suriin kung nanalo ang manlalaro
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
@@ -902,6 +917,19 @@ fil:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+        stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon.
+      courseA_maze_ramp3a_2018_callout: [ ]
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseA_maze_ramp4a_2018_callout: [ ]
+      courseA_maze_ramp5_2018_callout: [ ]
+      courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Click the lightbulb when you need a hint!
       courseA_maze_seq1_2018_callout:
@@ -932,6 +960,12 @@ fil:
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Ito ay nagbibigay-daan sa iyo na makapili ng "random" na tunog, kung saan nangangahulugan na hindi mo alam kung ano ang makukuha mo hanggang marinig mo ito!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
+      courseB_Scrat_ramp2_2018_callout: [ ]
+      courseB_Scrat_ramp3a_2018_callout: [ ]
+      courseB_Scrat_ramp4a_2018_callout: [ ]
+      courseB_Scrat_ramp5a_2018_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox. Paano mo ito magagamit?
       courseB_artist_loops3_2018_callout:
@@ -962,26 +996,45 @@ fil:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon.
       courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon.
+      courseC_PlayLab_events8_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
+      courseC_PlayLab_events8_2018_callout:
+        courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
+      courseC_PlayLab_events_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro.
       courseC_artist_loopsPrePre1a_callout:
+        courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng ito para mapapunta ang artista sa gitna ng screen.
+      courseC_artist_loopsPrePre1a_2018_callout:
         courseC_artist_loopsPrePre1a_1: Magsimula sa pamamagitan ng paggamit ng blokeng ito para mapapunta ang artista sa gitna ng screen.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog1_2018_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_artist_prog2_2018_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
+      courseC_collector_loops_challenge2_2018_callout: [ ]
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto.
+      courseC_collector_prog1_2018_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa toolbox kung kailangan mo ang mga ito!
+      courseC_collector_prog7_2018_callout:
+        courseC_collector_prog7_1: Maaari kang kumuha ng karagdagang mga bloke sa toolbox kung kailangan mo ang mga ito!
       courseC_collector_prog8_callout: [ ]
+      courseC_collector_prog8_2018_callout: [ ]
       courseC_collector_prog9_callout: [ ]
+      courseC_collector_prog9_2018_callout: [ ]
       courseC_collector_progA_callout: [ ]
       courseC_collector_progB_callout: [ ]
       courseC_collector_prog_challenge1_callout: [ ]
+      courseC_collector_prog_challenge1_2018_callout: [ ]
       courseC_collector_prog_challenge2_callout: [ ]
+      courseC_collector_prog_challenge2_2018_callout: [ ]
       courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili.
+      courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: Ang numerong apat na nasa kalabasa ay nagsasabi sa iyo na mayroong apat na mga kalabasa ang magagamit sa pagpili.
       courseC_maze_debugging5_callout:
         courseC_maze_debugging5_1: Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!
@@ -993,28 +1046,52 @@ fil:
       courseC_maze_loops_challenge2_callout: [ ]
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
         courseC_maze_programming3_3: Ang mga blokeng ito ay bato at hindi maaaring itapon.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+        courseC_maze_programming3_3: Ang mga blokeng ito ay bato at hindi maaaring itapon.
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseC_maze_programming5_callout: [ ]
+      courseC_maze_programming5_2018_callout: [ ]
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
         courseC_maze_programming7_2: Ang mga blokeng ito ay yari sa bato at hindi maaaring itapon.
+      courseC_maze_programming7_2018_callout:
+        courseC_maze_programming7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
+        courseC_maze_programming7_2: Ang mga blokeng ito ay yari sa bato at hindi maaaring itapon.
       courseC_starWars_loops10_callout: [ ]
+      courseC_starWars_loops10_2018_callout: [ ]
       courseC_starWars_loops10_predict2_callout: [ ]
+      courseC_starWars_loops10_predict2_2018_callout: [ ]
       courseC_starWars_loops11_callout: [ ]
+      courseC_starWars_loops11_2018_callout: [ ]
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit sa palaisipang ito.
+      courseC_starWars_loops2_2018_callout:
+        courseC_starWars_loops2: Mayroon ka lang isa sa mga blokeng ito ang magagamit sa palaisipang ito.
       courseC_starWars_loops4_callout: [ ]
+      courseC_starWars_loops4_2018_callout: [ ]
       courseC_starWars_loops5_callout: [ ]
+      courseC_starWars_loops5_2018_callout: [ ]
       courseC_starWars_loops6_callout: [ ]
+      courseC_starWars_loops6_2018_callout: [ ]
       courseC_starWars_loops7_callout: [ ]
+      courseC_starWars_loops7_2018_callout: [ ]
       courseC_starWars_loops8_callout: [ ]
+      courseC_starWars_loops8_2018_callout: [ ]
       courseC_starWars_loops9_callout: [ ]
+      courseC_starWars_loops9_2018_callout: [ ]
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: Kapag ang berdeng bloke ito ay tumatakbo, lahat ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos iguhit ang unang parisukat?
       courseD_artist_functions8_callout:
@@ -1484,6 +1561,8 @@ fil:
         course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      coursea_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
       drawings!_callout: [ ]
@@ -1536,13 +1615,16 @@ fil:
       grade2_MakeDogTag_1_callout: [ ]
       grade2_MakeDogTag_BFP_callout: [ ]
       grade2_collector_10_callout: [ ]
+      grade2_collector_10_2018_callout: [ ]
       grade2_collector_7_callout:
         grade2_collector_7_1: Maaari kang kumuha ng karagdagang mga bloke sa toolbox kung kailangan mo ang mga ito!
       grade2_collector_8_callout: [ ]
       grade2_collector_9_callout: [ ]
       grade2_collector_9a_callout: [ ]
       grade2_collector_A_callout: [ ]
+      grade2_collector_A_2018_callout: [ ]
       grade2_collector_A_predict1_callout: [ ]
+      grade2_collector_A_predict1_2018_callout: [ ]
       grade2_maze_intro10_callout: [ ]
       grade2_maze_intro2_callout:
         grade2_maze_intro2_callout1: This is the run button. Press this button to run your program.

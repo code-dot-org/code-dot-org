@@ -4,15 +4,20 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
 import VirtualizedSummaryView from './VirtualizedSummaryView';
+import SummaryViewLegend from './SummaryViewLegend';
+import SmallChevronLink from '../SmallChevronLink';
+import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setScriptId,
+  setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
@@ -31,6 +36,10 @@ const styles = {
     float: 'left',
     marginTop: 24,
   },
+  viewCourseLink: {
+    float: 'right',
+    marginTop: 10
+  }
 };
 
 /**
@@ -48,9 +57,10 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
     studentLevelProgress: studentLevelProgressPropType,
-
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
+    setLessonOfInterest: PropTypes.func.isRequired,
+    isLoadingProgress: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -63,6 +73,10 @@ class SectionProgress extends Component {
     this.props.loadScript(scriptId);
   };
 
+  onChangeLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
+  };
+
   render() {
     const {
       section,
@@ -70,10 +84,13 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress
+      studentLevelProgress,
+      isLoadingProgress
     } = this.props;
 
-    const levelDataInitialized = scriptData && studentLevelProgress;
+    const levelDataInitialized = scriptData && !isLoadingProgress;
+    const linkToOverview = scriptData ? scriptData.path : null;
+    const lessons = scriptData ? scriptData.stages : [];
 
     return (
       <div>
@@ -87,9 +104,24 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
+            {lessons.length !== 0 &&
+              <LessonSelector
+                lessons={lessons}
+                onChange={this.onChangeLevel}
+              />
+            }
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
+          </div>
+          <div style={styles.viewCourseLink}>
+            {linkToOverview &&
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            }
           </div>
         </div>
         <div style={{clear: 'both'}}>
@@ -101,6 +133,9 @@ class SectionProgress extends Component {
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
               />
+              <SummaryViewLegend
+                showCSFProgressBox={true}
+              />
             </div>
           }
           {(levelDataInitialized && currentView === ViewType.DETAIL) &&
@@ -109,6 +144,9 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
+              />
+              <ProgressLegend
+                excludeCsfColumn={true}
               />
             </div>
           }
@@ -127,6 +165,7 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {
     dispatch(loadScript(scriptId));
@@ -134,4 +173,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(SectionProgress);

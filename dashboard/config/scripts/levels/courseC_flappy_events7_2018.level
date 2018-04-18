@@ -1,0 +1,106 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2018-04-11T16:43:55.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "obstacles": "true",
+    "ground": "true",
+    "score": "true",
+    "goal": "{}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
+    "instructions": "Next, try changing the scene by attaching a block to the `when run` event.",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "default_flap": "NORMAL",
+    "shareable": "false",
+    "markdown_instructions": "Next, try changing the scene by attaching a block to the `when run` event.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can change the background using the `set scene` block. \",\"hint_id\":\"courseC_flappy_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e288e3a59cf712ff03ad8ac9ef3d3f2/courseC_flappy_events7.mp3\"}]",
+    "project_template_level_name": "courseC_flappy_events_template_2018",
+    "parent_level_id": 9521,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 18:40:33 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:41:05 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 20:16:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:05:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 00:10:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height"/>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenEnterObstacle" deletable="false">
+          <next>
+            <block type="flappy_incrementPlayerScore"/>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="flappy_flap_height">
+          <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+        </block>
+        <block type="flappy_endGame"/>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_playSound">
+          <title name="VALUE">"sfx_wing"</title>
+        </block>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+        </block>
+        <block type="flappy_setBackground">
+          <title name="VALUE">"night"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_setBackground">
+          <title name="VALUE">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

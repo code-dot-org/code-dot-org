@@ -334,3 +334,15 @@ nn:
       BinaryImages_2018:
         title: Binære bilete
         desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
+      PaperPlanes_2018:
+        title: 'Verkelege algoritmar: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet av informatikk og korleis algoritmar spelar ei essensiell rolle.
+      GettingLoopy_2018:
+        title: Me blir sløyfete
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi, og deretter bli bedt om å gjenta den.
+      BinaryBracelets_2018:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra på meir enn ein måte.
+      MoveItMoveIt_2018:
+        title: Flytt den, flytt den
+        desc: ''
