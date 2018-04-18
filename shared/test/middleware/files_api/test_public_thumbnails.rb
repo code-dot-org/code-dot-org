@@ -11,7 +11,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_adult_thumbnail
-    ImageModeration.stubs(:rate_image_data).once.returns :adult
+    ImageModeration.stubs(:rate_image).once.returns :adult
 
     with_project_type('applab') do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
@@ -39,7 +39,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_racy_thumbnail
-    ImageModeration.stubs(:rate_image_data).once.returns :racy
+    ImageModeration.stubs(:rate_image).once.returns :racy
 
     with_project_type('applab') do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
@@ -67,7 +67,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_everyone_thumbnail
-    ImageModeration.stubs(:rate_image_data).once.returns :everyone
+    ImageModeration.stubs(:rate_image).once.returns :everyone
 
     with_project_type('applab') do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
@@ -89,7 +89,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_bad_channel_thumbnail
-    ImageModeration.expects(:rate_image_data).never
+    ImageModeration.expects(:rate_image).never
 
     get "/v3/files-public/undefined/.metadata/thumbnail.png"
     assert not_found?
@@ -132,7 +132,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   private
 
   def assert_moderates_project_type(project_type)
-    ImageModeration.expects(:rate_image_data).once.returns :everyone
+    ImageModeration.expects(:rate_image).once.returns :everyone
     with_project_type project_type do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
       assert successful?
@@ -140,7 +140,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def refute_moderates_project_type(project_type)
-    ImageModeration.expects(:rate_image_data).never
+    ImageModeration.expects(:rate_image).never
     with_project_type project_type do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
       assert successful?
