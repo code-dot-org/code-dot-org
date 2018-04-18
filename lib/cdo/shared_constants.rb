@@ -52,7 +52,7 @@ module SharedConstants
   GAMELAB_AUTORUN_OPTIONS = OpenStruct.new(
     {
       draw_loop: 'DRAW_LOOP',
-      draw_sprites: 'DRAWP_SPRITES',
+      draw_sprites: 'DRAW_SPRITES',
       custom: 'CUSTOM',
     }
   ).freeze
