@@ -6,7 +6,6 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Encourage Your Students to Take the AP CSP Exam!", "details"=>"We have the chance to make history---again. Encourage your students to sign up for the AP exam! Check in with your AP Coordinator to find out the signup deadline for your school. Click \"Learn more\" for details.", "link"=>"http://teacherblog.code.org/post/169508999644/break-records-for-a-second-year-with-the-ap-cs", "type"=>"bullhorn"}, {"notice"=>"Updates Made January 2018", "details"=>"We've spruced up the Color Sleuth activity in Lesson 10, improved instruction on algorithms, and added a number of questions in the style of the Create PT. Click to learn more.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/69", "type"=>"bullhorn"}]
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'Unit 5 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'

@@ -13,15 +13,15 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import { RegionalPartnerDropdown } from './regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
-  UnmatchedFilter,
-  UnmatchedLabel
+  UnmatchedPartnerValue,
+  UnmatchedPartnerLabel
 } from './constants';
 
 const styles = {
@@ -96,7 +96,11 @@ export class DetailViewContents extends React.Component {
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool,
-    regionalPartnerGroup: PropTypes.number
+    regionalPartnerGroup: PropTypes.number,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    }))
   };
 
   static contextTypes = {
@@ -116,8 +120,8 @@ export class DetailViewContents extends React.Component {
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
-      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-      regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
+      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedPartnerLabel,
+      regional_partner_value: this.props.applicationData.regional_partner_id || UnmatchedPartnerValue,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
@@ -181,9 +185,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_filter = selected ? selected.value : UnmatchedFilter;
-    const regional_partner_name = selected ? selected.label : UnmatchedLabel;
-    this.setState({ regional_partner_name, regional_partner_filter});
+    const regional_partner_value = selected ? selected.value : UnmatchedPartnerValue;
+    const regional_partner_name = selected ? selected.label : UnmatchedPartnerLabel;
+    this.setState({ regional_partner_name, regional_partner_value});
   };
 
   handleSaveClick = () => {
@@ -191,7 +195,7 @@ export class DetailViewContents extends React.Component {
       'status',
       'locked',
       'notes',
-      'regional_partner_filter',
+      'regional_partner_value',
       'pd_workshop_id'
     ];
 
@@ -240,8 +244,9 @@ export class DetailViewContents extends React.Component {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
-          regionalPartnerFilter={this.state.regional_partner_filter}
-          additionalOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
+          regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
+          regionalPartners={this.props.regionalPartners}
+          additionalOptions={[{label: UnmatchedPartnerLabel, value: UnmatchedPartnerValue}]}
         />
       );
     }
@@ -521,6 +526,7 @@ export class DetailViewContents extends React.Component {
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartnerGroup,
+  regionalPartners: state.regionalPartners,
   canLock: state.permissions.lockApplication,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(DetailViewContents);

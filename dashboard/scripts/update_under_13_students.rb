@@ -10,8 +10,13 @@ batch_size = 10000
 min_birthday = Date.today - 13.years
 User.where('birthday IS NULL OR birthday > ?', min_birthday).in_batches(of: batch_size) do |where|
   values = where.pluck(:id, :properties)
-  values.each do |_id, properties|
-    properties['sharing_disabled'] = true
+  values = values.map do |id, properties|
+    if properties
+      properties['sharing_disabled'] = true
+    else
+      properties = {'sharing_disabled': true}
+    end
+    [id, properties]
   end
   User.import([:id, :properties], values, validate: false, on_duplicate_key_update: [:properties])
   num_students_updated += values.length

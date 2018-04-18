@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
+import { setRegionalPartnerFilter } from './reducers';
+import { RegionalPartnerPropType } from './constants';
 
 const styles = {
   select: {
@@ -18,15 +20,12 @@ const styles = {
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    regionalPartnerFilter: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    regionalPartnerFilter: RegionalPartnerPropType.isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
     })),
-    additionalOptions: PropTypes.array,
+    additionalOptions: PropTypes.array
   };
 
   componentWillMount() {
@@ -42,7 +41,7 @@ export class RegionalPartnerDropdown extends React.Component {
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
           clearable={false}
-          value={this.props.regionalPartnerFilter}
+          value={this.props.regionalPartnerFilter.value}
           onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}
@@ -54,6 +53,14 @@ export class RegionalPartnerDropdown extends React.Component {
   }
 }
 
-export default connect(state => ({
-  regionalPartners: state.regionalPartners,
-}))(RegionalPartnerDropdown);
+export default connect(
+  state => ({
+    regionalPartners: state.regionalPartners,
+    regionalPartnerFilter: state.regionalPartnerFilter
+  }),
+  dispatch => ({
+    onChange(selected) {
+      dispatch(setRegionalPartnerFilter(selected));
+    }
+  })
+)(RegionalPartnerDropdown);

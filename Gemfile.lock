@@ -386,7 +386,7 @@ GEM
     hashery (2.1.2)
     hashie (3.4.4)
     highline (1.6.21)
-    honeybadger (2.6.0)
+    honeybadger (3.3.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -857,7 +857,7 @@ DEPENDENCIES
   octokit
   oj
   omniauth-clever (~> 1.2.1)!
-  omniauth-facebook (~> 4.0.0.rc1)
+  omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.3.1)
   omniauth-openid-connect!
   omniauth-windowslive (~> 0.0.11)!

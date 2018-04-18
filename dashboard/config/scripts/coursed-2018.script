@@ -61,6 +61,20 @@ variants
   level 'bounce_12_2018'
 endvariants
 
+stage 'Loops in Ice Age'
+level 'courseD_iceage_loops1'
+level 'courseD_iceage_loops2'
+level 'scrat_loops_C-F_video'
+level 'courseD_iceage_loops3'
+level 'courseD_iceage_loops4'
+level 'courseD_iceage_loops6'
+level 'courseD_iceage_loops7'
+level 'courseD_iceage_loops8'
+level 'courseD_iceage_loops9'
+level 'courseD_iceage_loops10', challenge: true
+level 'courseD_iceage_loops11'
+level 'courseD_iceage_loops12'
+
 stage 'Loops in Artist'
 level 'ramp_video_artistIntro_2018'
 level 'ramp_artist_loops1_2018'

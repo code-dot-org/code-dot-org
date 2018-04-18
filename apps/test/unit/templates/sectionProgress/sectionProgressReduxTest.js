@@ -7,14 +7,40 @@ import sectionProgress, {
   setScriptId,
   addScriptData,
   addStudentLevelProgress,
+  startLoadingProgress,
+  finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
   id: 123,
-  students: {
-    id: 1,
-    name: 'test1'
-  },
+  students: [
+    {
+      id: 1,
+      name: 'studentb'
+    },
+    {
+      id: 2,
+      name: 'studenta'
+    }
+  ],
+  script: {
+    id: 300,
+    name: 'csp2',
+  }
+};
+
+const sortedFakeSectionData = {
+  id: 123,
+  students: [
+    {
+      id: 2,
+      name: 'studenta'
+    },
+    {
+      id: 1,
+      name: 'studentb'
+    },
+  ],
   script: {
     id: 300,
     name: 'csp2',
@@ -74,7 +100,7 @@ describe('sectionProgressRedux', () => {
     it('sets the section data and assigned scriptId', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, fakeSectionData);
+      assert.deepEqual(nextState.section, sortedFakeSectionData);
       assert.deepEqual(nextState.scriptId, 300);
     });
 
@@ -85,8 +111,20 @@ describe('sectionProgressRedux', () => {
       };
       const action = setSection(sectionDataWithNoScript);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, sectionDataWithNoScript);
+      assert.deepEqual(nextState.section, {...sortedFakeSectionData, script: null});
       assert.deepEqual(nextState.scriptId, null);
+    });
+  });
+
+  describe('isLoadingProgress', () => {
+    it('startLoadingProgress sets isLoadingProgress to true', () => {
+      const nextState = sectionProgress(initialState, startLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, true);
+    });
+
+    it('finishLoadingProgress sets isLoadingProgress to false', () => {
+      const nextState = sectionProgress({isLoadingProgress: true}, finishLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, false);
     });
   });
 

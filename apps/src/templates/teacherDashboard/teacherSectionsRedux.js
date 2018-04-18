@@ -39,6 +39,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_CSF_SCRIPT_IDS = 'teacherDashboard/SET_CSF_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -57,13 +58,6 @@ const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
-
-/** Reports server request has started */
-const UPDATE_SHARING_REQUEST = 'teacherDashboard/UPDATE_SHARING_REQUEST';
-/** Reports server request has succeeded */
-const UPDATE_SHARING_SUCCESS = 'teacherDashboard/UPDATE_SHARING_SUCCESS';
-/** Reports server request has failed */
-const UPDATE_SHARING_FAILURE = 'teacherDashboard/UPDATE_SHARING_FAILURE';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
@@ -95,6 +89,7 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
+export const setCsfScriptIds = ids => ({ type: SET_CSF_SCRIPT_IDS, ids });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
@@ -195,29 +190,6 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   dispatch(beginEditingSection(sectionId));
   dispatch(editSectionProperties({loginType}));
   return dispatch(finishEditingSection());
-};
-
-export const updateShareSetting = (sectionId, shareSetting) => dispatch => {
-  dispatch({type: UPDATE_SHARING_REQUEST});
-  return new Promise((resolve, reject) => {
-    $.ajax({
-      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
-      method: 'POST',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({sharing_disabled: shareSetting}),
-    }).done(result => {
-      dispatch({
-        type: UPDATE_SHARING_SUCCESS,
-        sectionId: sectionId,
-        serverSectionShareSetting: result.sharing_disabled,
-        serverStudents: result.students
-      });
-      resolve();
-    }).fail((jqXhr, status) => {
-      dispatch({type: UPDATE_SHARING_FAILURE});
-      reject(status);
-    });
-  });
 };
 
 export const asyncLoadSectionData = (id) => (dispatch) => {
@@ -398,6 +370,13 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_CSF_SCRIPT_IDS) {
+    return {
+      ...state,
+      csfScriptIds: action.ids,
+    };
+  }
+
   if (action.type === SET_VALID_GRADES) {
     return {
       ...state,
@@ -462,16 +441,6 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === UPDATE_SHARING_SUCCESS) {
-    const students = action.serverStudents.map(student =>
-      studentFromServerStudent(student, action.sectionId));
-    return {
-      ...state,
-      saveInProgress: false,
-      selectedStudents: students
-    };
-  }
-
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
@@ -531,20 +500,6 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
-    };
-  }
-
-  if (action.type === UPDATE_SHARING_REQUEST) {
-    return {
-      ...state,
-      saveInProgress: true,
-    };
-  }
-
-  if (action.type === UPDATE_SHARING_FAILURE) {
-    return {
-      ...state,
-      saveInProgress: false
     };
   }
 
@@ -889,6 +844,13 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => assignment ? assignment.path : '');
 };
+
+/**
+ * Is the given script ID a CSF course? `script.rb` owns the list.
+ * @param state
+ * @param id
+ */
+export const isCsfScript = (state, id) => state.teacherSections.csfScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

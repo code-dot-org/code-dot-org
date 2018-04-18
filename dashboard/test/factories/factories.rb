@@ -212,6 +212,42 @@ FactoryGirl.define do
       end
     end
 
+    trait :with_google_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'google_oauth',
+          authentication_id: 'abcd123'
+        )
+      end
+    end
+
+    trait :with_clever_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'clever',
+          authentication_id: '456efgh'
+        )
+      end
+    end
+
+    trait :with_email_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: 'email',
+          authentication_id: user.hashed_email
+        )
+      end
+    end
+
     trait :with_puzzles do
       transient do
         num_puzzles 1
@@ -228,6 +264,21 @@ FactoryGirl.define do
       after(:create) do |user|
         user.destroy!
         user.reload
+      end
+    end
+  end
+
+  factory :authentication_option do
+    association :user
+    email {''}
+    hashed_email {''}
+    credential_type {'email'}
+    authentication_id {''}
+
+    factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
       end
     end
   end

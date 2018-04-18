@@ -50,6 +50,8 @@ module Api::V1::Pd
           )
         )
       )
+
+      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 
     test_redirect_to_sign_in_for :index
@@ -94,7 +96,7 @@ module Api::V1::Pd
 
     test "quick view returns applications with appropriate regional partner filter" do
       sign_in @workshop_admin
-      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
       assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
     end
@@ -108,7 +110,7 @@ module Api::V1::Pd
 
     test "quick view returns applications with regional partner filter set to no partner" do
       sign_in @workshop_admin
-      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: 'none'}
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: 'none'}
       assert_response :success
       assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
     end
@@ -301,11 +303,14 @@ module Api::V1::Pd
 
     test 'workshop admins can update form_data' do
       sign_in @workshop_admin
-      updated_form_data = @csf_facilitator_application_no_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
-      put :update, params: {id: @csf_facilitator_application_no_partner.id, application: {form_data: updated_form_data}}
+      updated_form_data = @csf_facilitator_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
+      put :update, params: {id: @csf_facilitator_application_with_partner.id, application: {form_data: updated_form_data}}
       assert_response :success
       data = JSON.parse(response.body)
       assert_equal 'my.other@email.net', data['form_data']['alternateEmail']
+
+      # Make sure partner is retained
+      assert_equal @regional_partner, @csf_facilitator_application_with_partner.reload.regional_partner
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -358,14 +363,9 @@ module Api::V1::Pd
       get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
       assert_response :success
       response_csv = CSV.parse @response.body
-
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year, :csd_terms_per_year
-      ).values.all? {|x| response_csv.first.include?(x)}
-
-      assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
-        :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.any? {|x| response_csv.first.exclude?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -377,11 +377,11 @@ module Api::V1::Pd
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csp_which_grades, :csp_course_hours_per_week, :csp_course_hours_per_year, :csp_terms_per_year, :csp_how_offer, :csp_ap_exam
-      ).values.all? {|x| response_csv.first.include?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.all? {|x| response_csv.first.include?(x)}
 
       assert Teacher1819ApplicationConstants::ALL_LABELS_WITH_OVERRIDES.slice(
         :csd_which_grades, :csd_course_hours_per_week, :csd_course_hours_per_year
-      ).values.any? {|x| response_csv.first.exclude?(x)}
+      ).values.map {|question| @markdown.render(question).strip}.any? {|x| response_csv.first.exclude?(x)}
     end
 
     test 'csv download for csf facilitator returns expected columns' do
@@ -427,7 +427,7 @@ module Api::V1::Pd
       end
 
       sign_in @workshop_admin
-      get :cohort_view, params: {role: 'csp_teachers', regional_partner_filter: 'none'}
+      get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
       assert_response :success
 
       assert_equal(

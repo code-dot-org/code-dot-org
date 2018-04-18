@@ -171,7 +171,8 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
+    const element = this.state.helpTabSelected ? this.refs.helpTab : this.refs.instructions;
+    const maxNeededHeight = $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
@@ -275,22 +276,25 @@ var TopInstructions = React.createClass({
             {!this.props.hasContainedLevels &&
               <div ref="instructions">
                 {!this.state.helpTabSelected &&
-                  <Instructions
-                    ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
-                    onResize={this.adjustMaxNeededHeight}
-                    inTopPane
-                  />
+                  <div>
+                    <Instructions
+                      ref="instructions"
+                      renderedMarkdown={processMarkdown(this.props.markdown,
+                        { renderer })}
+                      onResize={this.adjustMaxNeededHeight}
+                      inTopPane
+                    />
+                    <TeacherOnlyMarkdown/>
+                  </div>
                 }
                 {this.state.helpTabSelected &&
                   <HelpTabContents
+                    ref="helpTab"
                     videoData={videoData}
                     mapReference={this.props.mapReference}
                     referenceLinks={this.props.referenceLinks}
                   />
                 }
-                <TeacherOnlyMarkdown/>
               </div>
             }
           </div>

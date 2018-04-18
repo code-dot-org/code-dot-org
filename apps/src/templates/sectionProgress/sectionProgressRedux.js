@@ -1,23 +1,45 @@
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import { PropTypes } from 'react';
+import {
+  NAME_COLUMN_WIDTH,
+  PROGRESS_BUBBLE_WIDTH,
+  DIAMOND_BUBBLE_WIDTH,
+  PILL_BUBBLE_WIDTH,
+} from './multiGridConstants';
 import _ from 'lodash';
 
 const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
 const SET_SECTION = 'sectionProgress/SET_SECTION';
 const SET_VALID_SCRIPTS = 'sectionProgress/SET_VALID_SCRIPTS';
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
+const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
+const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
+const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
-export const setSection = section => ({ type: SET_SECTION, section });
+export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
+export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
+export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addScriptData = (scriptId, scriptData) => ({ type: ADD_SCRIPT_DATA, scriptId, scriptData });
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
+export const setSection = (section) => {
+  // Sort section.students by name.
+  const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
+  return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+};
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
 
 // Types of views of the progress tab
 export const ViewType = {
@@ -79,6 +101,8 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
+  lessonOfInterest: 1,
+  isLoadingProgress: false,
 };
 
 export default function sectionProgress(state=initialState, action) {
@@ -92,6 +116,24 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       currentView: action.viewType
+    };
+  }
+  if (action.type === START_LOADING_PROGRESS) {
+    return {
+      ...state,
+      isLoadingProgress: true
+    };
+  }
+  if (action.type === FINISH_LOADING_PROGRESS) {
+    return {
+      ...state,
+      isLoadingProgress: false
+    };
+  }
+  if (action.type === SET_LESSON_OF_INTEREST) {
+    return {
+      ...state,
+      lessonOfInterest: action.lessonOfInterest
     };
   }
   if (action.type === SET_SECTION) {
@@ -155,6 +197,34 @@ export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
 };
 
+/**
+ * Calculate the width of each column in the detail view based on types of levels
+ * @returns {Array} array of integers indicating the length of each column
+ */
+export const getColumnWidthsForDetailView = (state) => {
+  let columnLengths = [NAME_COLUMN_WIDTH];
+  const stages = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId].stages;
+
+  for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
+    const levels = stages[stageIndex].levels;
+    let width = 0;
+    for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
+      if (levels[levelIndex].kind === 'unplugged') {
+        // Pill shaped bubble
+        width = width + PILL_BUBBLE_WIDTH;
+      } else if (levels[levelIndex].is_concept_level) {
+        // Diamond shaped bubble
+        width = width + DIAMOND_BUBBLE_WIDTH;
+      } else {
+        // Circle bubble
+        width = width + PROGRESS_BUBBLE_WIDTH;
+      }
+    }
+    columnLengths.push(width || 0);
+  }
+  return columnLengths;
+};
+
 
 /**
  * Query the server for script data (info about the levels in the script) and
@@ -164,8 +234,9 @@ export const getCurrentScriptData = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
+    dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      // TODO(caleybrock): we don't need all these feilds, clean up this data before dispatching
+      // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
       // it to redux.
       dispatch(addScriptData(scriptId, scriptData));
     });
@@ -178,6 +249,7 @@ export const loadScript = (scriptId) => {
         studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
       });
       dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+      dispatch(finishLoadingProgress());
     });
   };
 };

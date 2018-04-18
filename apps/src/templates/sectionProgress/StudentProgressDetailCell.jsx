@@ -9,8 +9,10 @@ import {
 
 const styles = {
   bubbles: {
-    overflowX: 'scroll',
     whiteSpace: 'nowrap',
+  },
+  cell: {
+    padding: '1px 4px'
   }
 };
 
@@ -39,11 +41,12 @@ export default class StudentProgressDetailCell extends Component {
   render() {
 
     return (
-      <div>
+      <div style={styles.cell}>
         <div style={styles.bubbles}>
           <ProgressBubbleSet
             levels={this.studentLevelProgressInStage()}
             disabled={false}
+            hideToolTips={true}
           />
         </div>
       </div>

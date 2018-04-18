@@ -39,7 +39,7 @@ Over the course of the week, you will join with hundreds of teachers from across
   <br>
 TeacherCon accomodations as well as all conference sessions will take place at:
 
-<a href="http://www.starwoodhotels.com/sheraton/property/photos/gallery.html?propertyID=1144", target=_"blank"><Sheraton Atlanta Downtown</a>
+<a href="http://www.starwoodhotels.com/sheraton/property/photos/gallery.html?propertyID=1144", target=_"blank">Sheraton Atlanta Downtown</a>
 <br> 165 Courtland Street NE
 <br> Atlanta, GA 30303
   

@@ -1,0 +1,119 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-04-17T00:04:01.000Z",
+  "level_num": "custom",
+  "user_id": 53,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "GameLabJr"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_d_pad": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "custom_helper_library": "function draggable() {\r\n  var behavior = function(sprite) {\r\n    var v = createVector(winMouseX - pwinMouseX, winMouseY - pwinMouseY);\r\n    this.position.add(v);\r\n  }\r\n  behavior.name = 'draggable';\r\n  return behavior;\r\n}",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"blockText\": \"drag and drop\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  }\r\n]",
+    "hide_custom_blocks": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-17 00:05:00 +0000\",\"changed\":[],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-04-17 00:22:49 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-04-17 00:27:14 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="sprite_variables_set" inline="false" movable="false" editable="false">
+              <title name="VAR">Daisy</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true" movable="false">
+                  <title name="ANIMATION">"dog"</title>
+                  <value name="X">
+                    <block type="math_number" movable="false">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number" movable="false">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false" movable="false" editable="false">
+                  <title name="VAR">carrot</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true" movable="false">
+                      <title name="ANIMATION">"carrot"</title>
+                      <value name="X">
+                        <block type="math_number" movable="false">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number" movable="false">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple" inline="true" movable="false">
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_draggable" movable="false"/>
+                      </value>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get" movable="false" editable="false">
+                          <title name="VAR">carrot</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>
