@@ -235,7 +235,7 @@ export const loadScript = (scriptId) => {
       dispatch(addScriptData(scriptId, scriptData));
     });
 
-    $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}`, dataByStudent => {
+    $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=1&per=50`, dataByStudent => {
       // dataByStudent is an object where the keys are student.id and the values
       // are a map of levelId to status
       let studentLevelProgress = {};
