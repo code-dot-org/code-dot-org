@@ -286,30 +286,30 @@
           pontos no plano, e então decidir se esses dois pontos (ou personagens do
           jogo) estão se tocando.
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: Loops off-line
         desc: Nesta aula, você vai aprender mais sobre os laços!
       courseB_unplugged_MRF:
         title: Atividade off-line
         desc: Nesta aula, você vai “programar” os seus amigos!
       courseB_unplugged_loopyMRF:
         title: Atividade off-line
-        desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os
-          teus amigos, mas desta vez com ciclos!
+        desc: Assim como em “Os meus amigos robótidos”, você irá “programar” seus
+          amigos, mas desta vez com loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade off-line
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       courseD_unplugged_digitalCitizenship:
         title: Atividade off-line
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       courseE_unplugged_privateInformation:
-        title: Atividade off-line
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Educação do Senso Comum: Informações privadas e pessoais '
+        desc: Hoje você irá aprender a diferença entre informação privada e pessoal!
       courseF_unplugged_powerOfWords:
         title: Atividade off-line
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'tradução pendente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos da vida real: plante uma semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
@@ -381,7 +381,7 @@
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmos da via real: jogo de dados'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
           os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       courseE_unplugged_songwritingParameters:
@@ -427,7 +427,7 @@
           ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos
           de códigos em funções é uma prática útil.  '
       swipeRightPassThrough:
-        title: Recruitment Scenarios Session
+        title: Sessão de cenários de recrutamento
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -440,7 +440,7 @@
           \r
           When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
+        title: Sessão de cenários de recrutamento
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -462,8 +462,8 @@
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ''
         desc: ''
@@ -530,10 +530,10 @@
           reprodução de um desenho.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atividade off-line
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoje você irá aprender o que significa ser um Cidadão Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Atividade off-line
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       Conditionals_2018:
         title: Condições
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
@@ -551,3 +551,21 @@
           esse conceito um passo adiante, uma vez que demonstra como um computador
           também pode armazenar informações ainda mais complexas (como imagens e cores)
           em binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da vida real: aviões de papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
+          na hora de fazer aviões de papel. Esta lição também apresenta a ciência
+          da computação de forma geral, e como os algoritmos têm um papel essencial.
+      GettingLoopy_2018:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções
+          repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma
+          coreografia simples e então serão instruídos a repeti-la.
+      BinaryBracelets_2018:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra
+          de seus nomes. Os alunos aprendem que os dados podem ser representados e
+          armazenados de mais de uma forma.
+      MoveItMoveIt_2018:
+        title: Criando caminhos
+        desc: ''

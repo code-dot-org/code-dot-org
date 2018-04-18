@@ -526,3 +526,20 @@
           kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse,
           kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks
           pilte ja värve).
+      PaperPlanes_2018:
+        title: 'Päris elu algoritmid: paberlennukid'
+        desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas
+          kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust
+          üldisemalt ja algoritmide suurt tähtsust.
+      GettingLoopy_2018:
+        title: Muutub tsükliliseks
+        desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste)
+          programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad
+          peavad siis kordama.
+      BinaryBracelets_2018:
+        title: Binaarsed käevõrud
+        desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul.
+          Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
+      MoveItMoveIt_2018:
+        title: Liiguta, liiguta
+        desc: ''

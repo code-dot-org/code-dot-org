@@ -334,3 +334,15 @@ id:
       BinaryImages_2018:
         title: gambar Biner
         desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
+      PaperPlanes_2018:
+        title: 'Algoritma kehidupan nyata: Pesawat Kertas'
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
+      GettingLoopy_2018:
+        title: Dapat berulang-ulang
+        desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
+      BinaryBracelets_2018:
+        title: Gelang biner
+        desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
+      MoveItMoveIt_2018:
+        title: Gerakkan itu, Gerakkan itu
+        desc: ''
