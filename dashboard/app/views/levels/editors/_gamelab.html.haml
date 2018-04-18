@@ -81,33 +81,17 @@
   = boolean_check_box f, :debugger_disabled
 
 .field
-  = f.label 'Immediately show the results of setup code changes in the playspace'
+  = f.label 'Immediately show the results of setup code changes in the playspace?'
   :ruby
     selector = f.select :auto_run_setup, options_for_select([
-      ['none', nil],
-      ['Run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
-      ['Call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
-      ['Run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
+      ['No', nil],
+      ['Yes, run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
+      ['Yes, call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
+      ['Yes, run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
     ], selected: @level.auto_run_setup)
   = selector
   = f.label 'Custom setup code'
   = f.text_field :custom_setup_code
-  :javascript
-    (function () {
-      var autoRunSetup = document.getElementById('level_auto_run_setup');
-      var customSetupCode = document.getElementById('level_custom_setup_code');
-      var changeHandler = function () {
-        if (autoRunSetup.value === 'CUSTOM') {
-          customSetupCode.previousElementSibling.style.display = '';
-          customSetupCode.style.display = '';
-        } else {
-          customSetupCode.previousElementSibling.style.display = 'none';
-          customSetupCode.style.display = 'none';
-        }
-      }
-      autoRunSetup.onchange = changeHandler;
-      changeHandler();
-    })();
 
 .field
   =f.label 'Animations are paused by default'
