@@ -35,6 +35,8 @@ export const setSection = (section) => {
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
 };
 
+const NUM_STUDENTS_PER_PAGE = 50;
+
 // Types of views of the progress tab
 export const ViewType = {
   SUMMARY: "summary",
@@ -162,7 +164,10 @@ export default function sectionProgress(state=initialState, action) {
       ...state,
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
-        [action.scriptId]: action.studentLevelProgress,
+        [action.scriptId]: {
+          ...state.studentLevelProgressByScript[action.scriptId],
+          ...action.studentLevelProgress,
+        },
       }
     };
   }
@@ -235,15 +240,23 @@ export const loadScript = (scriptId) => {
       dispatch(addScriptData(scriptId, scriptData));
     });
 
-    $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=1&per=50`, dataByStudent => {
-      // dataByStudent is an object where the keys are student.id and the values
-      // are a map of levelId to status
-      let studentLevelProgress = {};
-      Object.keys(dataByStudent).forEach(studentId => {
-        studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
+    const numStudents = state.section.students.length;
+    const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
+    let numPagesRecieved = 0;
+    for (let currentPage = 1; currentPage < numPages + 1; currentPage++) {
+      $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`, dataByStudent => {
+        // dataByStudent is an object where the keys are student.id and the values
+        // are a map of levelId to status
+        let studentLevelProgress = {};
+        Object.keys(dataByStudent).forEach(studentId => {
+          studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
+        });
+        dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+        numPagesRecieved = numPagesRecieved + 1;
+        if (numPagesRecieved === numPages) {
+          dispatch(finishLoadingProgress());
+        }
       });
-      dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
-      dispatch(finishLoadingProgress());
-    });
+    }
   };
 };
