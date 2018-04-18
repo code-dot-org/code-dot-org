@@ -7,6 +7,7 @@ import sectionProgress, {
   setScriptId,
   addScriptData,
   addStudentLevelProgress,
+  setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -84,6 +85,8 @@ const fakeStudentProgress = {
   1: {242: 1001, 243: 1000},
   2: {242: 1000, 243: 1000},
 };
+
+const lessonOfInterest = 16;
 
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
@@ -171,6 +174,14 @@ describe('sectionProgressRedux', () => {
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.scriptDataByScript[456], fakeScriptData456);
       assert.deepEqual(nextState2.scriptDataByScript[789], fakeScriptData789);
+    });
+  });
+
+  describe('setLessonOfInterest', () => {
+    it('sets the lesson of interest', () => {
+      const action = setLessonOfInterest(lessonOfInterest);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
     });
   });
 
