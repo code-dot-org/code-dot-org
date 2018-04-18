@@ -598,6 +598,12 @@ exports.createJsWrapperBlockCreator = function (
     args = args || [];
     color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
+    if (eventLoopBlock) {
+      args.push({
+        name: 'DO',
+        statement: true,
+      });
+    }
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
@@ -633,7 +639,7 @@ exports.createJsWrapperBlockCreator = function (
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {
-          this.appendStatementInput('DO');
+          // No previous or next statement connector
         } else if (eventBlock) {
           this.setNextStatement(true);
           this.skipNextBlockGeneration = true;
@@ -663,16 +669,11 @@ exports.createJsWrapperBlockCreator = function (
         prefix = `${object}.`;
       }
 
-      if (eventLoopBlock || eventBlock) {
-        let handlerCode = '';
-        if (eventBlock) {
-          const nextBlock = this.nextConnection &&
-            this.nextConnection.targetBlock();
-          handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
-          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
-        } else if (eventLoopBlock) {
-          handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
-        }
+      if (eventBlock) {
+        const nextBlock = this.nextConnection &&
+          this.nextConnection.targetBlock();
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         values.push(`function () {\n${handlerCode}}`);
       }
 
