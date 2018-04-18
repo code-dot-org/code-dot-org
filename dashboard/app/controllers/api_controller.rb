@@ -246,26 +246,25 @@ class ApiController < ApplicationController
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
+  # If not specified, the API will default to a page size of 50, providing the first page
+  # of students
   def section_level_progress
     section = load_section
     script = load_script(section)
 
     data = {}
-    total_pages = 1
 
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
-    if params[:page] && params[:per]
-      paged_students = section.students.page(params[:page]).per(params[:per])
-      total_pages = paged_students.total_pages
-      # As designed, if there are 50 students, the client will ask for both
-      # page 1 and page 2, even though page 2 is out of range. However, it should
-      # never ask for page 3
-      if params[:page].to_i > paged_students.total_pages + 1
-        return head :range_not_satisfiable
-      end
-    else
-      paged_students = section.students
+    page = [params[:page].to_i, 1].max
+    per = params[:per].to_i || 50
+
+    paged_students = section.students.page(page).per(per)
+    # As designed, if there are 50 students, the client will ask for both
+    # page 1 and page 2, even though page 2 is out of range. However, it should
+    # never ask for page 3
+    if page > paged_students.total_pages + 1
+      return head :range_not_satisfiable
     end
 
     # TODO: This could likely be constructed more efficiently. At the very least,
@@ -279,9 +278,9 @@ class ApiController < ApplicationController
     render json: {
       students: data,
       pagination: {
-        total_pages: total_pages,
-        page: params[:page] || 1,
-        per: params[:per] || paged_students.length,
+        total_pages: paged_students.total_pages,
+        page: page,
+        per: per,
       }
     }
   end
