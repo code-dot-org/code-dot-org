@@ -7,8 +7,8 @@ class AzureContentModeratorTest < Minitest::Test
   include SetupTest
 
   # Comment these out when regenerating VCR file.
-  # CDO.azure_content_moderation_endpoint = 'https://region.api.cognitive.microsoft.com/contentmoderator'
-  # CDO.azure_content_moderation_key = 'fake_azure_api_key'
+  CDO.azure_content_moderation_endpoint = 'https://region.api.cognitive.microsoft.com/contentmoderator'
+  CDO.azure_content_moderation_key = 'fake_azure_api_key'
 
   # Do additional VCR configuration so as to prevent the api key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
