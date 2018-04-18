@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "true",
-    "start_blocks": "var score = 0;\r\n\r\nvar hero = createSprite(300,200);\r\nhero.setAnimation(\"alienWalkRight\");\r\n\r\nvar cake = createSprite(350,200);\r\ncake.setAnimation(\"cake\");\r\n\r\nvar enemy1 = createSprite();\r\nenemy1.setAnimation(\"ladybug\");\r\nsetEnemy1();\r\n\r\nvar enemy2 = createSprite();\r\nenemy2.setAnimation(\"ladybug\");\r\nsetEnemy2();\r\n\r\nfunction draw() {\r\n  gameBackground();\r\n  moveHero();\r\n  spriteInteractions();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\nfunction gameBackground(){\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction moveHero(){\r\n  if(keyDown(\"left\")){\r\n    hero.x = hero.x - 3;\r\n    hero.setAnimation(\"alienWalkLeft\");\r\n  }\r\n  if(keyDown(\"right\")){\r\n    hero.x = hero.x + 3;\r\n    hero.setAnimation(\"alienWalkRight\");\r\n  }\r\n  if(keyDown(\"up\")){\r\n    hero.y = hero.y - 3;\r\n  }\r\n  if(keyDown(\"down\")){\r\n    hero.y = hero.y + 3;\r\n  }\r\n}\r\n\r\nfunction spriteInteractions(){\r\n  \r\n  enemy1.velocityX = 2;\r\n  enemy2.velocityX = 2;\r\n  \r\n  hero.displace(enemy1);\r\n  hero.displace(enemy2);\r\n  \r\n  if(enemy1.isTouching(cake)){\r\n    score = score - 5;\r\n    setEnemy1();\r\n  }\r\n  if(enemy2.isTouching(cake)){\r\n    score = score - 5;\r\n    setEnemy2();\r\n  }\r\n  if(enemy1.x > 420 || enemy1.y < 140 || enemy1.y > 260){\r\n    setEnemy1();\r\n    score = score + 1;\r\n  }\r\n  if(enemy2.x > 420 || enemy2.y < 140 || enemy2.y > 260){\r\n    setEnemy2();\r\n    score = score + 1;\r\n  }\r\n}\r\n\r\nfunction showScore(){\r\n  textSize(20);\r\n  fill(\"white\");\r\n  text(\"Score\", 20, 20, 100, 100);\r\n  text(score, 20, 40, 200, 100);\r\n}\r\n\r\nfunction setEnemy1(){\r\n  enemy1.x = 0;\r\n  enemy1.y = randomNumber(150,250);\r\n}\r\n\r\nfunction setEnemy2(){\r\n  enemy2.x = 0;\r\n  enemy2.y = randomNumber(150,250);\r\n}",
+    "start_blocks": "var score = 0;\r\n\r\nvar hero = createSprite(300,200);\r\nhero.setAnimation(\"alienWalkRight\");\r\n\r\nvar cake = createSprite(350,200);\r\ncake.setAnimation(\"cake\");\r\n\r\nvar enemy1 = createSprite(0,200);\r\nenemy1.setAnimation(\"ladybug\");\r\nsetEnemy1();\r\n\r\nvar enemy2 = createSprite(0,200);\r\nenemy2.setAnimation(\"ladybug\");\r\nsetEnemy2();\r\n\r\nfunction draw() {\r\n  gameBackground();\r\n  moveHero();\r\n  spriteInteractions();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\nfunction gameBackground(){\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction moveHero(){\r\n  if(keyDown(\"left\")){\r\n    hero.x = hero.x - 3;\r\n    hero.setAnimation(\"alienWalkLeft\");\r\n  }\r\n  if(keyDown(\"right\")){\r\n    hero.x = hero.x + 3;\r\n    hero.setAnimation(\"alienWalkRight\");\r\n  }\r\n  if(keyDown(\"up\")){\r\n    hero.y = hero.y - 3;\r\n  }\r\n  if(keyDown(\"down\")){\r\n    hero.y = hero.y + 3;\r\n  }\r\n}\r\n\r\nfunction spriteInteractions(){\r\n  \r\n  enemy1.velocityX = 2;\r\n  enemy2.velocityX = 2;\r\n  \r\n  hero.displace(enemy1);\r\n  hero.displace(enemy2);\r\n  \r\n  if(enemy1.isTouching(cake)){\r\n    score = score - 5;\r\n    setEnemy1();\r\n  }\r\n  if(enemy2.isTouching(cake)){\r\n    score = score - 5;\r\n    setEnemy2();\r\n  }\r\n  if(enemy1.x > 420 || enemy1.y < 140 || enemy1.y > 260){\r\n    setEnemy1();\r\n    score = score + 1;\r\n  }\r\n  if(enemy2.x > 420 || enemy2.y < 140 || enemy2.y > 260){\r\n    setEnemy2();\r\n    score = score + 1;\r\n  }\r\n}\r\n\r\nfunction showScore(){\r\n  textSize(20);\r\n  fill(\"white\");\r\n  text(\"Score\", 20, 20, 100, 100);\r\n  text(score, 20, 40, 200, 100);\r\n}\r\n\r\nfunction setEnemy1(){\r\n  enemy1.x = 0;\r\n  enemy1.y = randomNumber(150,250);\r\n}\r\n\r\nfunction setEnemy2(){\r\n  enemy2.x = 0;\r\n  enemy2.y = randomNumber(150,250);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -45,11 +45,18 @@
     "expand_debugger": "false",
     "parent_level_id": 8286,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 22:34:07 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-12 22:34:07 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-04-16 22:41:49 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

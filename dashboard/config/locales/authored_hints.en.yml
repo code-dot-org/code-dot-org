@@ -3452,6 +3452,43 @@ en:
           </xml>
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+      D_Frozen_nested3_authored_hint:
+        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
+      D_Frozen_nested4_authored_hint:
+        courseD_artist_project4_a: |
+          Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+
+          Here's a set of hexagons with squares:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then draw a second snowflake.
+      D_Frozen_nested5_authored_hint:
+        courseD_artist_project4_a: |
+          Lines of 2 hexagons and 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      D_Frozen_nested6_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, but using a different angle.
+      D_Frozen_nested7_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      D_Frozen_nested8_authored_hint:
+        courseD_artist_project3a_a: You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?
+      D_Frozen_nested9_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           This is the first hint.
@@ -3863,6 +3900,7 @@ en:
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
       Quantum Bee - Ryan_authored_hint:
         test_hint: This is a test hint.
+      Test embedded K1 Blockly in instructions_authored_hint: {}
       Underground Avoiding Lava_authored_hint:
         mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
         mc_11_b: Should your `move forward` command go inside of the `if` statement or after?
@@ -5489,20 +5527,27 @@ en:
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
+        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
         courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
         courseA_harvester_loops5b_b: Are your loops repeating the right number of times?
+        courseA_harvester_loops5b_c: Move one way, then the other with this path.
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
+        courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: Break this puzzle up into three different parts. One part to the first corner, one part to the second corner, and one part to the end.
         courseA_harvester_loops9_b: Don't be afraid to run your code after every part to see what happens!
+        courseA_harvester_loops9_c: Follow this path to pick all the corn.
       courseA_harvester_seq1_authored_hint:
         courseA_harvester_seq1_a: |-
           Use this block to pick the corn when the harvester finds it!
@@ -5518,6 +5563,7 @@ en:
       courseA_harvester_seq10_authored_hint:
         courseA_harvester_seq10_a: Are you stuck? Try writing down the steps on a piece of paper first.
         courseA_harvester_seq10_b: You need to `Move East`, then `Move North`. Do this two times. Don't forget to get all the corn too!
+        courseA_harvester_seq10_c: Try using this path to pick all the corn.
       courseA_harvester_seq11_authored_hint: {}
       courseA_harvester_seq12_authored_hint: {}
       courseA_harvester_seq13_authored_hint:
@@ -5550,10 +5596,12 @@ en:
         courseA_harvester_seq6_a: If you're stuck, try saying the steps out loud. It could help you figure out the right path.
       courseA_harvester_seq7_authored_hint:
         courseA_harvester_seq7_a: Try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
+        courseA_harvester_seq7_b: Having trouble? This is the path the harvester should take.
       courseA_harvester_seq8_authored_hint: {}
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Run the code a few times to see what happens. Where does the harvester stop?
         courseA_harvester_seq9_b: Don't forget to pick all the corn! You will need **3** pick corn blocks.
+        courseA_harvester_seq9_c: You should take this path to pick all the corn.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -5991,6 +6039,79 @@ en:
         courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: {}
+      courseB_Scrat_ramp1_2018_authored_hint:
+        '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
+        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+      courseB_Scrat_ramp2_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018_authored_hint:
+        '1': |-
+          Your code should look like this:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_artist_loops10_authored_hint: {}
       courseB_artist_loops10_2018_authored_hint: {}
       courseB_artist_loops2_authored_hint:
@@ -6357,9 +6478,11 @@ en:
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the water!
         courseB_iceage_loops10_b: Try saying the steps out loud or writing them down on a piece of paper. Do you see any patterns?
+        courseB_iceage_loops10_c: This is a long puzzle! Follow this path.
       courseB_iceage_loops2_authored_hint:
         courseB_iceage_loops2_a: Break this puzzle into two pieces, one before the corner, and one after the corner.
         courseB_iceage_loops2_b: If you get stuck, try saying the steps out loud.
+        courseB_iceage_loops2_c: Follow this path to get Scrat to the acorn.
       courseB_iceage_loops3_authored_hint:
         courseB_iceage_loops3_a: |-
           Use this new block!
@@ -6370,36 +6493,40 @@ en:
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
+        courseB_iceage_loops4_c: This is the path Scrat should take.
       courseB_iceage_loops6_authored_hint:
         courseB_iceage_loops6_a: Your final code will have **three** movement blocks.
         courseB_iceage_loops6_b: You only need to add **one** more loop!
+        courseB_iceage_loops6_c: Your final path should look like this.
       courseB_iceage_loops7_authored_hint:
         courseB_iceage_loops7_a: If you get stuck, try writing steps down on a piece of paper. Do you see a pattern?
+        courseB_iceage_loops7_b: This is the path Scrat should take to get to the acorn.
       courseB_iceage_loops8_authored_hint:
         courseB_iceage_loops8_a: Are the movement blocks right? What else can you change?
+        courseB_iceage_loops8_b: The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.
+        courseB_iceage_loops8_c: Use loops to help Scrat follow this path.
       courseB_iceage_loops9_authored_hint:
         courseB_iceage_loops9_a: Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!
         courseB_iceage_loops9_b: Your final code should have **4** loops.
+        courseB_iceage_loops9_c: Scrat should follow this path to get the acorn.
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml> block to make the bird move!
         courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml> arrows out and connect them to the <xml><block type="when_run"/></xml> block to get your bird to the pig.
       courseB_maze_seq10_authored_hint:
         courseB_maze_seq10_a: Try writing down the steps on a piece of paper first.
         courseB_maze_seq10_b: You will need to move in two different directions to reach the pig.
-      courseB_maze_seq10_2018_authored_hint:
-        courseB_maze_seq10_a: Try writing down the steps on a piece of paper first.
-        courseB_maze_seq10_b: You will need to move in two different directions to reach the pig.
+      courseB_maze_seq10_2018_authored_hint: {}
       courseB_maze_seq10_predict1_authored_hint: {}
+      courseB_maze_seq10_predict1_2018_authored_hint: {}
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: Try writing down the steps on a piece of paper first.
         courseB_maze_seq11_b: 'Solve the puzzle in two parts: one before the corner and one after the corner.'
-      courseB_maze_seq11_2018_authored_hint:
-        courseB_maze_seq11_a: Try writing down the steps on a piece of paper first.
-        courseB_maze_seq11_b: 'Solve the puzzle in two parts: one before the corner and one after the corner.'
+      courseB_maze_seq11_2018_authored_hint: {}
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml> block to make Scrat move!
         courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml> arrows out and connect them to the <xml><block type="when_run"/></xml> block to get Scrat to the acorn.
       courseB_maze_seq1_predict1_authored_hint: {}
+      courseB_maze_seq1_predict1_2018_authored_hint: {}
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out which one?
         courseB_maze_seq2_b: Try running the code you are given to see what the bird needs to do next.
@@ -6452,7 +6579,7 @@ en:
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: There is more than one way to solve this puzzle!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: Try writing down all of the steps on a piece of paper first.
@@ -6962,7 +7089,28 @@ en:
               <title name="VALUE">Hi there.</title>
             </block>
           </xml>
+      courseC_PlayLab_events1_2018_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Attach this block to the `when run` block:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Attach two of these blocks to the `when run` block:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+        courseC_PlayLab_events2_b: Use the dropdown menu on the second `actor __ say` block to change which actor speaks.
+      courseC_PlayLab_events2_2018_authored_hint:
         courseC_PlayLab_events2_a: |-
           Attach two of these blocks to the `when run` block:
 
@@ -6986,27 +7134,63 @@ en:
               <title name="DISTANCE">25</title>
             </block>
           </xml>
+      courseC_PlayLab_events3_2018_authored_hint:
+        courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
+        courseC_PlayLab_events3_b: Is there a block in the toolbox that looks like it would move an actor?
+        courseC_PlayLab_events3_c: |-
+          Attach this block to the `when run` block:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
         courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
+      courseC_PlayLab_events4_2018_authored_hint:
+        courseC_PlayLab_events4_b: When the "Run" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.
+        courseC_PlayLab_events4_a: You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle.
       courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
+        courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
+      courseC_PlayLab_events5_2018_authored_hint:
         courseC_PlayLab_events5_a: You will need to click the dropdown menu in the `actor say` block to find the text "What's new?"
         courseC_PlayLab_events5_b: Click on Octavia when you run your program to check that it works!
       courseC_PlayLab_events6_authored_hint:
         courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
         courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
         courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
+      courseC_PlayLab_events6_2018_authored_hint:
+        courseC_PlayLab_events6_a: Each green `when arrow` block should have one action below it.
+        courseC_PlayLab_events6_b: Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.
+        courseC_PlayLab_events6_c: When you're done, you should be able to move Waddles around using the arrow keys on your computer!
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
         courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
+      courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_a: 'Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. '
+        courseC_PlayLab_events7_b: The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own.
       courseC_PlayLab_events8_authored_hint:
+        courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
+        courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
+      courseC_PlayLab_events8_2018_authored_hint:
         courseC_PlayLab_events8_a: You will need to connect blocks to the `when actor touches` block to make this happen correctly.
         courseC_PlayLab_events8_b: The `actor say` and `play sound` blocks in the toolbox should help you out!
       courseC_PlayLab_events9_authored_hint:
         courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
         courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
         courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
+      courseC_PlayLab_events9_2018_authored_hint:
+        courseC_PlayLab_events9_a: The `score point` block will help you to solve this puzzle.
+        courseC_PlayLab_events9_b: Make sure that your new `when actor touches` block says actor **1** and actor **3**.
+        courseC_PlayLab_events9_c: You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!
       courseC_PlayLab_eventsA_authored_hint:
+        courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
+        courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
+      courseC_PlayLab_eventsA_2018_authored_hint:
         courseC_PlayLab_eventsA_a: Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.
         courseC_PlayLab_eventsA_b: You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.
       courseC_PlayLab_eventsFP_authored_hint:
@@ -7026,7 +7210,38 @@ en:
           *Need an idea?*
 
           **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+      courseC_PlayLab_eventsFP_2018_authored_hint:
+        idea1: |-
+          *Need an idea?*
+
+          **Who's there?** Make characters appear with random images, so no one knows who's showing up next.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          *Need an idea?*
+
+          **Going on an Adventure** - Change the background, then have the characters talk about where they are now.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          *Need an idea?*
+
+          **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
       courseC_PlayLab_events_challenge1_authored_hint:
+        courseC_PlayLab_events_challenge_a: |
+          You can use this block to move actors to different places on the game space.
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
+        courseC_PlayLab_events_challenge_b: Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!
+        courseC_PlayLab_events_challenge_c: |-
+          You might also want to try changing the speed of the different actors to make the game easier or more challenging!
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
+      courseC_PlayLab_events_challenge1_2018_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           You can use this block to move actors to different places on the game space.
           <xml> <block type="studio_setSpritePosition">
@@ -7063,6 +7278,18 @@ en:
             </block></xml>
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
+        courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
+        courseC_artist_loop1_b: |-
+          This is the block you will need to set a pattern:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          Choose any pattern you like!
+      courseC_artist_loop1_2018_authored_hint:
         courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
@@ -7158,6 +7385,8 @@ en:
           </xml>
       courseC_artist_loops5a_authored_hint:
         courseC_artist_loops5a_a: Use the drop down menus on the `draw sticker` blocks to change their images.
+      courseC_artist_loops5a_2018_authored_hint:
+        courseC_artist_loops5a_a: Use the drop down menus on the `draw sticker` blocks to change their images.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
@@ -7187,14 +7416,32 @@ en:
           <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
       courseC_artist_loops6a_authored_hint:
         courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
+      courseC_artist_loops6a_2018_authored_hint:
+        courseC_artist_loops6a_a: To make a design like the one above, jump forward less than 75 pixels between each sticker.
       courseC_artist_loops7a_authored_hint:
+        courseC_artist_loops7a_a: |-
+          A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
+          Check the suggested rotations to see that this works!
+      courseC_artist_loops7a_2018_authored_hint:
         courseC_artist_loops7a_a: |-
           A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?
           Check the suggested rotations to see that this works!
       courseC_artist_loopsPre1a_authored_hint:
         courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
         courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
+      courseC_artist_loopsPre1a_2018_authored_hint:
+        courseC_artist_loopsPre1a_a: Remember to put the `turn` block inside of the loop.
+        courseC_artist_loopsPre1a_b: 'Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`.'
       courseC_artist_loopsPrePre1a_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          The first block you will need is:
+
+          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+        courseC_artist_loopsPrePre1a_b: |-
+          To move forward 50 pixels, use this block:
+
+          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+      courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
 
@@ -7321,17 +7568,33 @@ en:
         courseC_artist_prog_challenge2_b: After you draw the second line, turn right before you draw your third line.
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
+      courseC_collector_loops_challenge2_2018_authored_hint:
+        courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_collector_prog1_authored_hint:
         courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
         courseC_collector_prog1_b: The most simple solution would be to move forward once, then collect treasure.
+      courseC_collector_prog1_2018_authored_hint:
+        courseC_collector_prog1_a: When you are standing on a space with treasure, use the <xml><block type="collector_collect"/></xml> block to pick it up.
+        courseC_collector_prog1_b: The most simple solution would be to move forward once, then collect treasure.
       courseC_collector_prog2_authored_hint:
+        courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
+        courseC_collector_prog2_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseC_collector_prog2_2018_authored_hint:
         courseC_collector_prog2_a: You can use four <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> blocks or use the <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> block to make your program shorter.
         courseC_collector_prog2_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseC_collector_prog3_authored_hint:
         courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
         courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
         courseC_collector_prog3_c: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+      courseC_collector_prog3_2018_authored_hint:
+        courseC_collector_prog3_a: The program will only run the blocks that are connected to the <xml><block type="when_run"/></xml> block.
+        courseC_collector_prog3_b: Try using the "Step" button to run your code one line at a time.  Do you see where the code goes wrong?
+        courseC_collector_prog3_c: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
       courseC_collector_prog4_authored_hint:
+        courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
+        courseC_collector_prog4_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+        courseC_collector_prog4_c: Try this option for a path.
+      courseC_collector_prog4_2018_authored_hint:
         courseC_collector_prog4_a: If you get stuck, try writing out the steps on a piece of paper.
         courseC_collector_prog4_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
         courseC_collector_prog4_c: Try this option for a path.
@@ -7340,49 +7603,97 @@ en:
         courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
         courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
         courseC_collector_prog5_d: Follow the path to collect the treasure.
+      courseC_collector_prog5_2018_authored_hint:
+        courseC_collector_prog5_a: "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\""
+        courseC_collector_prog5_b: If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.
+        courseC_collector_prog5_c: If you get stuck, try writing out the steps on a piece of paper.
+        courseC_collector_prog5_d: Follow the path to collect the treasure.
       courseC_collector_prog6_authored_hint:
+        courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
+        courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
+      courseC_collector_prog6_2018_authored_hint:
         courseC_collector_prog6_a: "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line."
         courseC_collector_prog6_b: Stuck?  Try this path to collect the treasure.
       courseC_collector_prog7_authored_hint:
         courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
         courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
         courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
+      courseC_collector_prog7_2018_authored_hint:
+        courseC_collector_prog7_a: 'There is already a lot of great code in the workspace.  You don''t need to delete any of it to solve this puzzle.  '
+        courseC_collector_prog7_b: Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.
+        courseC_collector_prog7_c: Having trouble seeing a route to collect all of the treasure?  Try this path!
       courseC_collector_prog8_authored_hint: {}
+      courseC_collector_prog8_2018_authored_hint: {}
       courseC_collector_prog9_authored_hint: {}
+      courseC_collector_prog9_2018_authored_hint: {}
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your code line by line.
       courseC_collector_prog_challenge1_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` block many times to collect the extra treasure.
+      courseC_collector_prog_challenge1_2018_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use the `collect` block many times to collect the extra treasure.
       courseC_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use more than one `collect` block at each space.
+        courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
+      courseC_collector_prog_challenge2_2018_authored_hint:
         courseC_collector_prog_challenge1_a: You can use more than one `collect` block at each space.
         courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve the puzzle!
       courseC_external_events_authored_hint: {}
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events2_authored_hint:
+        courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
+        courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
+      courseC_flappy_events2_2018_authored_hint:
         courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
         courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
       courseC_flappy_events3_authored_hint:
         courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
+      courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
       courseC_flappy_events4_authored_hint:
+        courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
+      courseC_flappy_events4_2018_authored_hint:
         courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
       courseC_flappy_events5_authored_hint:
         courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
+      courseC_flappy_events5_2018_authored_hint:
+        courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
       courseC_flappy_events6_authored_hint:
+        courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
+      courseC_flappy_events6_2018_authored_hint:
         courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
       courseC_flappy_events7_authored_hint:
         courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
+      courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
       courseC_flappy_events8_authored_hint:
+        courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
+      courseC_flappy_events8_2018_authored_hint:
         courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
       courseC_flappy_events9_authored_hint:
         courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.
+      courseC_flappy_events9_2018_authored_hint:
+        courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.
       courseC_flappy_events_template_authored_hint: {}
+      courseC_flappy_events_template_2018_authored_hint: {}
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
         courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
       courseC_harvester_loops10_authored_hint: {}
+      courseC_harvester_loops10_2018_authored_hint: {}
       courseC_harvester_loops11_authored_hint: {}
+      courseC_harvester_loops11_2018_authored_hint: {}
+      courseC_harvester_loops1_2018_authored_hint:
+        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block type="harvester_pumpkin"/></xml> to collect it.
+        courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml> block to pick more than one pumpkin from a square.
       courseC_harvester_loops2_authored_hint:
+        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
+        courseC_harvester_loops2_b: You will need one `repeat` loop after another.
+        courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
+      courseC_harvester_loops2_2018_authored_hint:
         courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
         courseC_harvester_loops2_b: You will need one `repeat` loop after another.
         courseC_harvester_loops2_c: One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command.
@@ -7390,23 +7701,44 @@ en:
         courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
         courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
         courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+      courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.
+        courseC_harvester_loops3_b: For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?
+        courseC_harvester_loops3_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops4_authored_hint:
+        courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
+        courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
+        courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
+      courseC_harvester_loops4_2018_authored_hint:
         courseC_harvester_loops4_a: Use the new `pick corn` block to collect the corn.
         courseC_harvester_loops4_b: You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.
         courseC_harvester_loops4_c: If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
         courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
+      courseC_harvester_loops5_2018_authored_hint:
+        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program and then looking for repeating patterns.
+        courseC_harvester_loops5_b: Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.
       courseC_harvester_loops6_authored_hint:
+        courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
+        courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
+      courseC_harvester_loops6_2018_authored_hint:
         courseC_harvester_loops6_a: Remember you can put multiple blocks in one repeat loop.
         courseC_harvester_loops6_b: Don’t forget to turn at the end of the row of corn.
       courseC_harvester_loops7_authored_hint:
         courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
         courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
+      courseC_harvester_loops7_2018_authored_hint:
+        courseC_harvester_loops7_a: You can solve this puzzle two ways, either get the corn or the pumpkins first.
+        courseC_harvester_loops7_b: You will need multiple `repeat` loops to solve this puzzle.
       courseC_harvester_loops8_authored_hint:
         courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
         courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
+      courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.
+        courseC_harvester_loops8_b: If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.
       courseC_harvester_loops9_authored_hint: {}
+      courseC_harvester_loops9_2018_authored_hint: {}
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: This is too hard without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then turn right at each corner.
@@ -7464,7 +7796,45 @@ en:
                     </block>
                   </statement>
                   </block></xml>
+      courseC_harvester_loops_challenge1a_2018_authored_hint:
+        courseC_harvester_loops_challenge1_a: This is too hard without loops!
+        courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick corn` as many times as you need, then `turn right` at each corner.
+        courseC_harvester_loops_challenge1_c: |-
+          The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag. Another way looks like a spiral! There are lots of different solutions to a puzzle like this. Be persistent!
+        courseC_harvester_loops_challenge2_b: You can repeat `move forward` and `pick lettuce` as many times as you need to, then turn at each corner.
+        courseC_harvester_loops_challenge2_c: |
+          This zig-zag pattern can be repeated twice to finish the puzzle with just 20 blocks!
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          This spiral pattern can be coded with just 18 blocks!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      courseC_harvester_loops_challenge2_2018_authored_hint:
         courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag. Another way looks like a spiral! There are lots of different solutions to a puzzle like this. Be persistent!
         courseC_harvester_loops_challenge2_b: You can repeat `move forward` and `pick lettuce` as many times as you need to, then turn at each corner.
         courseC_harvester_loops_challenge2_c: |
@@ -7638,15 +8008,33 @@ en:
       courseC_maze_loops_challenge1a_authored_hint:
         courseC_maze_loops_challenge1_a: Think about this path as being two different pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat a staircase pattern?
+      courseC_maze_loops_challenge1a_2018_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being two different pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: Can you remember how to use loops to repeat a staircase pattern?
       courseC_maze_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       courseC_maze_programming1_authored_hint:
         courseC_maze_programming1_0: Make sure all of the blocks have been fully snapped together, then click "Run" again.
+      courseC_maze_programming1_2018_authored_hint:
+        courseC_maze_programming1_0: Make sure all of the blocks have been fully snapped together, then click "Run" again.
       courseC_maze_programming2_authored_hint:
         courseC_maze_programming2_a: To use a <xml><block type="maze_moveForward"/></xml> block, drag it out of the toolbox and snap it to the <xml><block type="when_run"/></xml> block.
         courseC_maze_programming2_b: Make sure all of the blocks have been fully snapped together, then click "Run" again.
+      courseC_maze_programming2_2018_authored_hint:
+        courseC_maze_programming2_a: To use a <xml><block type="maze_moveForward"/></xml> block, drag it out of the toolbox and snap it to the <xml><block type="when_run"/></xml> block.
+        courseC_maze_programming2_b: Make sure all of the blocks have been fully snapped together, then click "Run" again.
       courseC_maze_programming3_authored_hint:
+        courseC_maze_programming3_a: Try running the code first to see where it goes wrong.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.
+
+          Drag the block you want to delete back to the toolbox.
+
+          Finally, put your other blocks back where they belong.
+      courseC_maze_programming3_2018_authored_hint:
         courseC_maze_programming3_a: Try running the code first to see where it goes wrong.
         courseC_maze_programming3_b: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
@@ -7665,7 +8053,20 @@ en:
           - move forward
           - turn back the other way
           - move forward
+      courseC_maze_programming4_2018_authored_hint:
+        courseC_maze_programming4_a: Remember that when you turn, you are turning from the *bird's* point of view.  If you turn right, the bird will point down.
+        courseC_maze_programming4_b: |-
+          To follow the path:
+          - move forward
+          - turn one way
+          - move forward
+          - turn back the other way
+          - move forward
       courseC_maze_programming5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+        courseC_maze_programming5_b: The bird will need to make one turn to complete this puzzle. Can you figure out which way?
+        courseC_maze_programming5_c: The solution will have two `move forward` blocks, a turn, and two more `move forward` blocks.
+      courseC_maze_programming5_2018_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
         courseC_maze_programming5_b: The bird will need to make one turn to complete this puzzle. Can you figure out which way?
         courseC_maze_programming5_c: The solution will have two `move forward` blocks, a turn, and two more `move forward` blocks.
@@ -7674,17 +8075,37 @@ en:
         courseC_maze_programming6_b: Follow your finger from the bird to the pig, which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
+      courseC_maze_programming6_2018_authored_hint:
+        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_b: Follow your finger from the bird to the pig, which steps did you take?
+        courseC_maze_programming6_c: Remember you have to turn first, since the bird starts facing a wall.
+        courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming7_authored_hint:
+        courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseC_maze_programming7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
+      courseC_maze_programming7_2018_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
         courseC_maze_programming7_b: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_a: Remember you can use the "Step" button to look through your code line-by-line if you get stuck.
         courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      courseC_maze_programming8_2018_authored_hint:
+        courseC_maze_programming8_a: Remember you can use the "Step" button to look through your code line-by-line if you get stuck.
+        courseC_maze_programming8_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseC_maze_programming8_predict1_authored_hint: {}
+      courseC_maze_programming8_predict1_2018_authored_hint: {}
       courseC_maze_programming9_authored_hint: {}
+      courseC_maze_programming9_2018_authored_hint: {}
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: There are many ways to get to the pig. Use your finger to find a path and then program it!
+      courseC_maze_programming_challenge1_2018_authored_hint:
+        courseC_maze_programming_challenge1_a: There are many ways to get to the pig. Use your finger to find a path and then program it!
       courseC_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra careful that I turn the correct way!"*'
+        courseC_maze_programming_challenge2_b: |-
+          The shortest solution uses only 5 blocks, but it uses this block:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2018_authored_hint:
         courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
           The shortest solution uses only 5 blocks, but it uses this block:
@@ -7711,25 +8132,58 @@ en:
         courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
         courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+      courseC_starWars_loops10_2018_authored_hint:
+        courseC_starWars_loops10_a: Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.
+        courseC_starWars_loops10_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_predict2_authored_hint: {}
+      courseC_starWars_loops10_predict2_2018_authored_hint: {}
       courseC_starWars_loops11_authored_hint: {}
+      courseC_starWars_loops11_2018_authored_hint: {}
+      courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up automatically.
+        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
+      courseC_starWars_loops2_2018_authored_hint:
+        courseC_starWars_loops2_a: To repeat code, drag out a `repeat` loop, then put the block you want inside of it.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
+        courseC_starWars_loops4_a: Use two `repeat` blocks.
+        courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
+      courseC_starWars_loops4_2018_authored_hint:
         courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command inside of it: `move forward`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
+      courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
+        courseC_starWars_loops5_a: The best solution uses a turn, then a single `move forward`, another turn, then a loop.
       courseC_starWars_loops6_authored_hint:
+        courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
+        courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
+      courseC_starWars_loops6_2018_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of paper and looking for a pattern.
         courseC_starWars_loops6_b: "If you want to use less code, you can put one `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
         courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+      courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_a: This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?
+        courseC_starWars_loops7_b: If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.
+        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops8_authored_hint:
+        course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
+        course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
+        course_starWars_loops8_c: |-
+          Take a look at this path.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2018_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!
         course_starWars_loops8_b: Think of the first half of this problem as a stair step problem. How did you solve that before?
         course_starWars_loops8_c: |-
@@ -7742,6 +8196,55 @@ en:
           You do not need to turn left to solve this puzzle. All of your turns can be to the right.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseC_starWars_loops9_2018_authored_hint:
+        course_starWars_loops9_b: You can put more than one block inside a `repeat` loop.
+        course_starWars_loops9_c: |-
+          You do not need to turn left to solve this puzzle. All of your turns can be to the right.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseD_Frozen_nested1_authored_hint:
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project1_b: Remember that `move forward` draws a line, while `jump forward` does not.
+      courseD_Frozen_nested2_authored_hint:
+        courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
+        courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
+      courseD_Frozen_nested3_authored_hint:
+        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to choose the angle you need!
+        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n- Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees if you are repeating the outer loop 6 times"
+      courseD_Frozen_nested4_authored_hint:
+        courseD_artist_project4_a: |
+          Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+
+          Here's a set of hexagons with squares:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then draw a second snowflake.
+      courseD_Frozen_nested5_authored_hint:
+        courseD_artist_project4_a: |
+          Lines of 2 hexagons and 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_Frozen_nested6_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: These patterns are a lot like the stair steps from other puzzles, but using a different angle.
+      courseD_Frozen_nested7_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_Frozen_nested8_authored_hint:
+        courseD_artist_project3a_a: You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?
+      courseD_Frozen_nested9_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary image you want, in zeroes and ones.
         courseD_artist_binary1_b: The artist will draw a white space for every 1 and a black space for every 0.
@@ -9264,6 +9767,45 @@ en:
         courseD_harvester_nested_loops_challenge1_a: 'Try following this path to reach all of the corn! '
         courseD_harvester_nested_loops_challenge1_b: To collect more than one piece of corn, you need to use `pick corn` more than one time.
         courseD_harvester_nested_loops_challenge1_c: You will need to put a small loop inside of your main loop to solve this puzzle!
+      courseD_iceage_loops1_authored_hint:
+        courseD_iceage_loops1_a: Watch out for broken ice! Scrat will fall right through!
+        courseD_iceage_loops1_b: |-
+          You will have to use this block:
+          <xml><block type="maze_moveForward"/></xml>
+      courseD_iceage_loops10_authored_hint:
+        courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the water!
+        courseB_iceage_loops10_b: Try saying the steps out loud or writing them down on a piece of paper. Do you see any patterns?
+        courseB_iceage_loops10_c: This is a long puzzle! Follow this path.
+      courseD_iceage_loops2_authored_hint:
+        courseD_iceage_loops2_a: Break this puzzle into two pieces, one before the corner, and one after the corner.
+        courseD_iceage_loops2_b: If you get stuck, try saying the steps out loud.
+        courseD_iceage_loops2_c: Follow this path to get Scrat to the acorn.
+      courseD_iceage_loops3_authored_hint:
+        courseB_iceage_loops3_a: |-
+          Use this new block!
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put the block you want repeated inside.
+      courseD_iceage_loops4_authored_hint:
+        courseD_iceage_loops4_a: Don't be afraid to run your code and see what happens!
+        courseD_iceage_loops4_b: Try writing down the steps Scrat would take to get to the acorn.  Do you see a pattern?
+        courseD_iceage_loops4_c: This is the path Scrat should take.
+      courseD_iceage_loops6_authored_hint:
+        courseD_iceage_loops6_a: Your final code will have **three** `move forward` blocks.
+        courseD_iceage_loops6_b: You only need to add **one** more loop!
+        courseD_iceage_loops6_c: Your final path should look like this.
+      courseD_iceage_loops7_authored_hint:
+        courseB_iceage_loops7_a: If you get stuck, try writing steps down on a piece of paper. Do you see a pattern?
+        courseB_iceage_loops7_b: This is the path Scrat should take to get to the acorn.
+      courseD_iceage_loops8_authored_hint:
+        courseD_iceage_loops8_a: Are the `turn` blocks right? What else can you change?
+        courseD_iceage_loops8_b: The first loop should repeat **3** times, the second should repeat **5** times, the third loop should repeat **4** times, and the last loop should repeat **4** times.
+        courseD_iceage_loops8_c: Use loops to help Scrat follow this path.
+      courseD_iceage_loops9_authored_hint:
+        courseD_iceage_loops9_a: Having trouble? Try breaking this puzzle into smaller pieces. Don't be afraid to run your puzzle as you code!
+        courseD_iceage_loops9_b: Your final code should have **4** loops.
+        courseD_iceage_loops9_c: Scrat should follow this path to get the acorn.
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!
         courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the *entire* cave!
@@ -13906,6 +14448,7 @@ en:
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_collector_A_authored_hint: {}
+      grade2_collector_A_2018_authored_hint: {}
       grade2_maze_debuggingFP_authored_hint: {}
       grade2_maze_intro4_authored_hint:
         hint_1: Connect a "move forward" block to the bottom of the program.
@@ -14542,6 +15085,7 @@ en:
       harvey_snowflake_artist2_authored_hint: {}
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
+      iceAgeLoopsforVideo_authored_hint: {}
       iceage_click_hello_authored_hint:
         iceage_click_hello_a: Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.
       iceage_click_hello_2018_authored_hint:

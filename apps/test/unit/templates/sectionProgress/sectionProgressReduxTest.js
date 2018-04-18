@@ -7,7 +7,9 @@ import sectionProgress, {
   setScriptId,
   addScriptData,
   addStudentLevelProgress,
-  setLessonOfInterest
+  setLessonOfInterest,
+  startLoadingProgress,
+  finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
@@ -114,6 +116,18 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.section, {...sortedFakeSectionData, script: null});
       assert.deepEqual(nextState.scriptId, null);
+    });
+  });
+
+  describe('isLoadingProgress', () => {
+    it('startLoadingProgress sets isLoadingProgress to true', () => {
+      const nextState = sectionProgress(initialState, startLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, true);
+    });
+
+    it('finishLoadingProgress sets isLoadingProgress to false', () => {
+      const nextState = sectionProgress({isLoadingProgress: true}, finishLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, false);
     });
   });
 
