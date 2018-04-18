@@ -30,6 +30,12 @@ export const setSection = (section) => {
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
 };
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
 
 // Types of views of the progress tab
 export const ViewType = {
@@ -83,13 +89,6 @@ export const scriptDataPropType = PropTypes.shape({
 export const studentLevelProgressPropType = PropTypes.objectOf(
   PropTypes.objectOf(PropTypes.number)
 );
-
-export const jumpToLessonDetails = (lessonOfInterest) => {
-  return (dispatch, getState) => {
-    dispatch(setLessonOfInterest(lessonOfInterest));
-    dispatch(setCurrentView(ViewType.DETAIL));
-  };
-};
 
 const initialState = {
   scriptId: null,
