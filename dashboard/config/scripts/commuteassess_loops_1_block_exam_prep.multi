@@ -7,8 +7,11 @@ wrong '18'
 wrong 'It will be different each time you run it'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/4e5c6dab97c5af51b82b84ddca2ef885-image-1485319052846.png" style="width: 250px">
+<img src="https://images.code.org/ff7734af09a13acfe36bfce2a7b97bb2-image-1522961313207.png" style="width: 250px">
 
+<!-- BLOCK
+<img src="https://images.code.org/4e5c6dab97c5af51b82b84ddca2ef885-image-1485319052846.png" style="width: 250px">
+-->
 
 MARKDOWN
 

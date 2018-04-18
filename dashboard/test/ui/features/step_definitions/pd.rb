@@ -8,6 +8,59 @@ Given(/^I am a workshop administrator with some applications of each type and st
   }
 end
 
+Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
+  require_rails_env
+
+  RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+
+  steps %Q{
+    And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSF}"
+    And I sign in as "#{facilitator_name}"
+  }
+end
+
+Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ do |pm_name, partner_name|
+  require_rails_env
+
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+
+  email, password = generate_user(pm_name)
+  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+
+  steps %Q{
+    And I sign in as "#{pm_name}"
+  }
+end
+
+Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
+  require_rails_env
+
+  email, password = generate_user(name)
+
+  FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
+    FactoryGirl.create(:facilitator, name: name, email: email, password: password)
+  )
+end
+
+Given /^I select the "([^"]*)" facilitator at index (\d+)$/ do |name, index|
+  email = @users[name][:email]
+  facilitator = "#{name} (#{email})"
+
+  steps %Q{
+    And I select the "#{facilitator}" option in dropdown "facilitator#{index}"
+  }
+end
+
+Given /^I open the new workshop form$/ do
+  steps %Q{
+    And I am on "http://studio.code.org/pd/workshop_dashboard"
+    Then I wait until element "button:contains('New Workshop')" is visible
+    Then I press "button:contains('New Workshop')" using jQuery
+
+    And I wait until element "h2:contains('New Workshop')" is visible
+  }
+end
+
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -100,11 +153,6 @@ Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the Teacher
   application = FactoryGirl.create :pd_teacher1819_application, :locked, user: teacher, form_data: application_hash.to_json
   application.update(pd_workshop_id: teachercon.id)
 
-  @users[name] = {
-    email: teacher_email,
-    password: teacher_password
-  }
-
   steps %Q{
     And I sign in as "#{name}"
     And I am on "http://studio.code.org/pd/teachercon_registration/#{application.application_guid}"
@@ -114,7 +162,7 @@ end
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
-  user = User.find_by(name: name)
+  user = User.find_by(email: @users[name][:email])
   user.permission = UserPermission::FACILITATOR
   Pd::CourseFacilitator.create(facilitator_id: user.id, course: course)
 end
@@ -122,14 +170,14 @@ end
 And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   require_rails_env
 
-  user = User.find_by(name: name)
+  user = User.find_by(email: @users[name][:email])
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
 And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
   require_rails_env
 
-  user = User.find_by(name: name)
+  user = User.find_by(email: @users[name][:email])
   user.permission = UserPermission::WORKSHOP_ADMIN
 end
 
@@ -259,8 +307,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
         responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
       end
 
+      responses['workshop_id_i'] = workshop.id
+
       workshop.enrollments.each do |enrollment|
-        puts "Enrollment ID - #{enrollment.id}"
         PEGASUS_DB[:forms].insert(
           secret: SecureRandom.hex,
           source_id: enrollment.id,

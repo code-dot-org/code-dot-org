@@ -1,39 +1,35 @@
 import React, { PropTypes, Component } from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
+import {
+  sectionDataPropType,
+  scriptDataPropType,
+  studentLevelProgressPropType
+} from './sectionProgressRedux';
 
 const styles = {
   bubbles: {
-    overflowX: 'scroll',
     whiteSpace: 'nowrap',
+  },
+  cell: {
+    padding: '1px 4px'
   }
 };
 
 export default class StudentProgressDetailCell extends Component {
   static propTypes = {
-    section: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      students: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })).isRequired
-    }).isRequired,
+    section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
-    scriptData: PropTypes.shape({
-      stages: PropTypes.arrayOf(PropTypes.shape({
-        levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      })),
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-    studentLevelProgress: PropTypes.objectOf(
-      PropTypes.objectOf(PropTypes.number)
-    ).isRequired,
+    scriptData: scriptDataPropType.isRequired,
+    studentLevelProgress: studentLevelProgressPropType.isRequired,
   };
 
-  studentLevelProgressInStage(studentId, stageId) {
-    const { scriptData, studentLevelProgress } = this.props;
+  studentLevelProgressInStage() {
+    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
 
+    // TODO(caleybrock): Modify function call to not require
+    // currentLevelId since we set it to null and don't need it here.
     const levelState = {
       stage: scriptData.stages[stageId],
       levelProgress: studentLevelProgress[studentId],
@@ -43,14 +39,14 @@ export default class StudentProgressDetailCell extends Component {
   }
 
   render() {
-    const { studentId, stageId } = this.props;
 
     return (
-      <div>
+      <div style={styles.cell}>
         <div style={styles.bubbles}>
           <ProgressBubbleSet
-            levels={this.studentLevelProgressInStage(studentId, stageId)}
+            levels={this.studentLevelProgressInStage()}
             disabled={false}
+            hideToolTips={true}
           />
         </div>
       </div>

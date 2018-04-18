@@ -1,16 +1,16 @@
 "fa-AF":
-  hour_of_code: "ساعتی با کد"
-  hello: "سلام دنیا"
+  hour_of_code: ساعتی با کد
+  hello: سلام دنیا
   'yes': 'Yes'
   'no': 'No'
-  select_language: "لطفا زبان خود را انتخاب کنید"
+  select_language: لطفا زبان خود را انتخاب کنید
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Learn more
-  en: "علوم کامپیوتر"
-  computer_science_edweek: "هفته‌ی آموزش علوم رایانه"
+  en: علوم کامپیوتر
+  computer_science_edweek: هفته‌ی آموزش علوم رایانه
   csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را
@@ -21,22 +21,22 @@
     را ببینید</a>'
   n_have_learned_an_hoc: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه
     شده</h3>"
-  anybody_can_learn: "هر کسی می تواند یاد بگیرند."
-  learn_now: "همین حالا یاد بگیرید"
-  petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
-    باشد"
-  petition_sign_message: "اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
-    پیوندید."
-  petition_sign_message_support: "اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
-    #دیگران بپیوندید."
-  petition_join_others: "به #دیگران ملحق شوید"
-  name: "نام"
-  email: "ایمیل"
-  zipcode: "کدپستی یا کشور"
-  submit: "ارسال کنید"
-  twentyhours_heading: "دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید"
-  twentyhours_text: "اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
-    برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید."
+  anybody_can_learn: هر کسی می تواند یاد بگیرند.
+  learn_now: همین حالا یاد بگیرید
+  petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته
+    باشد
+  petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
+    پیوندید.'
+  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
+    #دیگران بپیوندید.'
+  petition_join_others: 'به #دیگران ملحق شوید'
+  name: نام
+  email: ایمیل
+  zipcode: کدپستی یا کشور
+  submit: ارسال کنید
+  twentyhours_heading: دوره‌ی مقدماتی علوم کامپیوتر ما را شروع کنید
+  twentyhours_text: اولین ساعت کدنویسی را به پایان رساندید؟ علوم کامپیوتر و مفاهیم
+    برنامه نویسی را در درس بعدی، بیشتر یاد بگیرید.
   og_title: Coding is foundational
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
@@ -53,48 +53,48 @@
     for every student to learn.
   hoc2014_heading: به <a href="http://hourofcode.com">ساعتِ کدنویسی</a> بپیوندید <br/>از
     8 تا 14 دسامبر  2014<br/>
-  hoc2014_students: "دانش آموزان"
-  hoc2014_try: "آن را امتحان کنید"
-  hoc2014_teachers: "دبیران"
-  hoc2014_host: "آن را میزبانی کنید"
-  hoc2014_everyone: "همه"
-  hoc2014_support: "حمایتش کن &#x25BE;"
-  hoc2014_whatishoc: "ساعتِ کدنویسی چيست؟"
+  hoc2014_students: دانش آموزان
+  hoc2014_try: آن را امتحان کنید
+  hoc2014_teachers: دبیران
+  hoc2014_host: آن را میزبانی کنید
+  hoc2014_everyone: همه
+  hoc2014_support: حمایتش کن &#x25BE;
+  hoc2014_whatishoc: ساعتِ کدنویسی چيست؟
   csedweek_map_header: '#CSEdWeek / رویداد "ساعت کدنویسی" در سرار جهان'
-  csedweek_map_signup: "رویدادتان را ثبت کنید"
+  csedweek_map_signup: رویدادتان را ثبت کنید
   csedweek_map_search_placeholder: جست و جو برای رویداد های "ساعت کدنویسی"
-  csedweek_map_search_search: "جستجو کن"
-  csedweek_map_search_reset: "تنظیم مجدد"
-  csedweek_map_legend_title: "افسانه"
-  csedweek_map_legend_event: "ساعت کد رویداد"
-  csedweek_map_legend_cs_tech_jam: "رویدادهای ویژه"
-  cded_sign_up: "ثبت نام"
-  cded_try_it: "آن را امتحان کنید"
+  csedweek_map_search_search: جستجو کن
+  csedweek_map_search_reset: تنظیم مجدد
+  csedweek_map_legend_title: افسانه
+  csedweek_map_legend_event: ساعت کد رویداد
+  csedweek_map_legend_cs_tech_jam: رویدادهای ویژه
+  cded_sign_up: ثبت نام
+  cded_try_it: آن را امتحان کنید
   try_now: Try now
-  california_heading: "از مدرسه تان بخواهید که علوم کامپیوتر را آموزش بدهد"
-  california_text: "هر دبیری می‌تواند <a href='http://studio.code.org/'>دوره‌های رایگان</a>
+  california_heading: از مدرسه تان بخواهید که علوم کامپیوتر را آموزش بدهد
+  california_text: هر دبیری می‌تواند <a href='http://studio.code.org/'>دوره‌های رایگان</a>
     ما را آموزش دهد. هر دبستانی می‌تواند <a href='http://code.org/educate/k5'>علوم
     کامپیوتر را آموزش دهد</a>. از دبیرستان‌ها بخواهید که <a href='http://code.org/educate/districts'>با
-    ما همکاری کنند."
-  california_button: "بیشتر یاد بگیرید"
-  flappy_heading: "تولد فلاپی در code.org"
+    ما همکاری کنند.
+  california_button: بیشتر یاد بگیرید
+  flappy_heading: تولد فلاپی در code.org
   flappy_text: Code.org یک ساله شد. <br/><br/> با ساختن بازی <b>Flappy</b> مخصوص خودتان،
     همراه با ما جشن بگیرید. قوانین خودتان را کدنویسی کنید و با دوستانتان به اشتراک
     بگذارید!
-  view_english_site: "مشاهده سایت به زبان انگلیسی"
-  non_english_tutorials: "آموزش‎‌هایی که به چندین زبان ترجمه شده‌اند:"
-  write_your_first_program: "اولین برنامه کامپیوتر خودت را بنویس"
-  learn_cs_concepts: "یادگیری پایه اساسی علوم کامپیوتر با برنامه نویسی از طریق کشیدن
+  view_english_site: مشاهده سایت به زبان انگلیسی
+  non_english_tutorials: 'آموزش‎‌هایی که به چندین زبان ترجمه شده‌اند:'
+  write_your_first_program: اولین برنامه کامپیوتر خودت را بنویس
+  learn_cs_concepts: یادگیری پایه اساسی علوم کامپیوتر با برنامه نویسی از طریق کشیدن
     و رها کردن. این خودآموز مانند سخنرانی ضبط شده توسط بیل گیتس و مارک زوکربرگ و پرندگان
     عصبانی و گیاهان در مقابل زامبی است. یادگیری حلقه های تکراری، اگر-سپس بیانیه، و
-    الگوریتم های اساسی."
-  all_ages: "همه‌ی سنین"
-  beginner: "مبتدی"
+    الگوریتم های اساسی.
+  all_ages: همه‌ی سنین
+  beginner: مبتدی
   n_participants: "# شرکت کنندگان"
-  go: "برو"
-  thank_you_: "با سپاس!"
-  congratulations: "آفرین!"
-  congratulations_on_completing_hoc: "تبریک برای کامل کردن یک ساعت کد نویسی"
+  go: برو
+  thank_you_: با سپاس!
+  congratulations: آفرین!
+  congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
@@ -113,7 +113,7 @@
   congrats_next_tutorials_title: Try these courses next
   congrats_next_tutorials_desc: این کوتاه تر را انجام دهید، ۱ ساعت آموزش یا <a href="%{current_path}/next">شریک
     آموزش</a> را امتحان کنید.
-  get_a_certificate_of_achievement: "دریافت گواهی موفقیت"
+  get_a_certificate_of_achievement: دریافت گواهی موفقیت
   view_course: View course
   view_unit: View unit
   make_app: Make an app
@@ -218,61 +218,61 @@
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
-  enter_valid_age: "لطفا یک سن معتبر انتخاب کنید"
-  enter_valid_email: "لطفا یک آدرس ایمیل معتبر را وارد کنید"
-  get_a_certificate_message: "ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری
-    فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد"
-  get_a_certificate_message_after: "برای دانلود یا چاپ مدرک خودتان روی عکس مدرک کلیک
+  enter_valid_age: لطفا یک سن معتبر انتخاب کنید
+  enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
+  get_a_certificate_message: ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری
+    فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد
+  get_a_certificate_message_after: برای دانلود یا چاپ مدرک خودتان روی عکس مدرک کلیک
     کنید. حالا می توانید  <a href='http://studio.code.org'> بقیه درسها</a>ی ما را
     ببینید و یا با مراجعه به بخش  <a href='/learn/beyond'> از یک ساعت برنامه نویسی
-    فراتر بروید</a> امکانات دیگر سایت را مشاهده کنید."
-  thanks_for_submitting: "با سپاس از شما برای ثبت اطلاعات!"
-  if_you_enjoyed: "اگرازاموزش اینجا لذت بردید، به دوستان بگویید تا انها هم امتحان
-    کنند! ما می خواهیم به تمام دنیا اموزش دهیم."
-  personalize_certificate: "گواهینامه خود را طراحی کنید"
-  share_achievement: "موفقیت خود را به اشتراک بگذارید"
-  beyond_hour_message: "همینطور با <a href='http://studio.code.org'>دوره های دیگر</a>
+    فراتر بروید</a> امکانات دیگر سایت را مشاهده کنید.
+  thanks_for_submitting: با سپاس از شما برای ثبت اطلاعات!
+  if_you_enjoyed: اگرازاموزش اینجا لذت بردید، به دوستان بگویید تا انها هم امتحان کنند!
+    ما می خواهیم به تمام دنیا اموزش دهیم.
+  personalize_certificate: گواهینامه خود را طراحی کنید
+  share_achievement: موفقیت خود را به اشتراک بگذارید
+  beyond_hour_message: همینطور با <a href='http://studio.code.org'>دوره های دیگر</a>
     ادامه دهید، یا گزینه های بیشتری را در مورد <a href='/learn/beyond'>یادگیری فراتر
-    از یک ساعت</a> ببینید."
-  leaderboards_for_hoc: "برترین‌های ساعتِ کدنویسی."
+    از یک ساعت</a> ببینید.
+  leaderboards_for_hoc: برترین‌های ساعتِ کدنویسی.
   support_url: http://support.code.org/
-  country: "کشور"
-  city: "شهر"
-  gender: "جنسیت"
-  boys: "پسران"
-  girls: "دختران"
-  give_my_hour: "ساعتی که به کد نوشتن صرف کردم را اهدا کن به:"
-  girls_team: "تیم دختران"
-  boys_team: "تیم پسران"
-  tell_the_world: "به دنیا بگویید!"
-  thanks_for_voting: "با تشکر برای رای دادن!"
-  share_on_facebook: "به اشتراک گذاشتن در فیس بوک"
-  share_on_twitter: "به اشتراک گذاشتن در توییتر"
-  beyond_an_hour: "فراتر از یک ساعت کد نویسی"
-  get_started: "شروع"
-  i_agree: "موافقم"
+  country: کشور
+  city: شهر
+  gender: جنسیت
+  boys: پسران
+  girls: دختران
+  give_my_hour: 'ساعتی که به کد نوشتن صرف کردم را اهدا کن به:'
+  girls_team: تیم دختران
+  boys_team: تیم پسران
+  tell_the_world: به دنیا بگویید!
+  thanks_for_voting: با تشکر برای رای دادن!
+  share_on_facebook: به اشتراک گذاشتن در فیس بوک
+  share_on_twitter: به اشتراک گذاشتن در توییتر
+  beyond_an_hour: فراتر از یک ساعت کد نویسی
+  get_started: شروع
+  i_agree: موافقم
   participant_select: "- انتخاب کنید -"
-  participant_student: "دانش آموز"
-  participant_parent: "پدر/مادر"
-  participant_educator: "مربی"
-  participant_engineer: "مهندس نرم‌افزار"
-  participant_other: "هیچ کدام از موارد فوق"
-  print_all: "همه چیز را پرینت بگیرید"
-  print_ice_art: "هنر یخیتان را پرینت بگیرید"
-  create_art_with_zombie: "یا هنر پیشرفته ای با زامبی بسازید"
-  i_am_a: "من هستم یک"
-  never_spam: "ما هرگز شما را اسپم نمیکنیم"
-  enter_country: "اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید"
-  used_infrequent_updates: "تنها برای به روز کردنهای گاه به گاه"
-  privacy_practices_children: "روشهای ما را برای امنیت حریم خصوصی کودکان ببینید"
-  petition_thankyou: "با سپاس از شما برای شرکت در درخواست"
-  continue_learning_header: "ادامه یادگیری فراتر از یک ساعت"
-  continue_learning_body: "گزینه های بسیاری وجود دارند.  شما می توانید آنلاین، یا
-    در مدرسه محلی و یا دراردوگاه تابستانی به یادگیری ادامه دهید."
+  participant_student: دانش آموز
+  participant_parent: پدر/مادر
+  participant_educator: مربی
+  participant_engineer: مهندس نرم‌افزار
+  participant_other: هیچ کدام از موارد فوق
+  print_all: همه چیز را پرینت بگیرید
+  print_ice_art: هنر یخیتان را پرینت بگیرید
+  create_art_with_zombie: یا هنر پیشرفته ای با زامبی بسازید
+  i_am_a: من هستم یک
+  never_spam: ما هرگز شما را اسپم نمیکنیم
+  enter_country: اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید
+  used_infrequent_updates: تنها برای به روز کردنهای گاه به گاه
+  privacy_practices_children: روشهای ما را برای امنیت حریم خصوصی کودکان ببینید
+  petition_thankyou: با سپاس از شما برای شرکت در درخواست
+  continue_learning_header: ادامه یادگیری فراتر از یک ساعت
+  continue_learning_body: گزینه های بسیاری وجود دارند.  شما می توانید آنلاین، یا در
+    مدرسه محلی و یا دراردوگاه تابستانی به یادگیری ادامه دهید.
   learn_code_studio: Try Code Studio courses
   learn_next_level: Try another Code Studio course
-  learn_online: "درس های آنلاین دیگری را امتحان کن"
-  learn_classes: "پیدا کردن کلاس های محلی"
+  learn_online: درس های آنلاین دیگری را امتحان کن
+  learn_classes: پیدا کردن کلاس های محلی
   learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'I just did the #HourOfCode - check it out! Thanks @Microsoft for
@@ -323,29 +323,29 @@
     for supporting @codeorg
   just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
     Thanks %{donor_twitter} for supporting @codeorg
-  twitter_teach_cs: "چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم
+  twitter_teach_cs: چرا مدرسه های بیشتری علوم کامپیوتر درس نمی دهند؟ ما می توانیم
     این را اصلاح کنیم. http://youtu.be/nKIu9yen5nc. سایت  http://code.org/ را ببینید
-    تا بیشتر بیاموزید."
+    تا بیشتر بیاموزید.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "یک ساعت کدنویسی یاد بگیرید"
-  beyond_hoc: "فراتر از یک ساعت"
-  what_gender: "جنسیت شما چیست؟"
-  girl: "دختر"
-  boy: "پسر"
-  help_recruit_coders: "به ما در پیدا کردنِ برنامه‌نویس‌های بیشتر برای گروهتان کمک
-    کنید!"
-  help_recruit: "به ما در استخدامِ برنامه‌نویس‌های بیشتر کمک کنید!"
-  lines_of_code: "بیش از #<b> تا خطوط کد</b> تا حالا نوشته شده."
+  learn_hoc: یک ساعت کدنویسی یاد بگیرید
+  beyond_hoc: فراتر از یک ساعت
+  what_gender: جنسیت شما چیست؟
+  girl: دختر
+  boy: پسر
+  help_recruit_coders: به ما در پیدا کردنِ برنامه‌نویس‌های بیشتر برای گروهتان کمک
+    کنید!
+  help_recruit: به ما در استخدامِ برنامه‌نویس‌های بیشتر کمک کنید!
+  lines_of_code: 'بیش از #<b> تا خطوط کد</b> تا حالا نوشته شده.'
   lines_of_code_alt: "<b>#</b> خط کد توسط دانش آموزان نوشته شده"
-  who_has_done_hoc: "کیا #HourOfCode رو انجام دادن؟ codeorg@"
+  who_has_done_hoc: 'کیا #HourOfCode رو انجام دادن؟ codeorg@'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "برترین‌های ساعتِ کدنویسی"
+  hoc_leaderboards: برترین‌های ساعتِ کدنویسی
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
     خط کد نوشته شده است."
-  start_hoc: "هم اکنون ساعتِ کدنویسی را آغاز کنید"
-  contact_form_topic_press: "انتشارات/ رسانه ها (مصاحبه یا گپ زدن)"
+  start_hoc: هم اکنون ساعتِ کدنویسی را آغاز کنید
+  contact_form_topic_press: انتشارات/ رسانه ها (مصاحبه یا گپ زدن)
   stats_nina: '"هر روز همان نتایج به دست آمد &mdash; مشارکت صد در صدی." - نینا نیکولز
     پيري، معلم'
   stats_student: '"من می دانستم که این يك فرصت <b> تكرار نشدني</b> است." - ماریانا
@@ -354,20 +354,20 @@
     -  Frank Martinez, Teacher'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: Explore Code Studio
-  studiobar_elementary_title: "دوره‌های مقدماتی"
-  studiobar_elementary_body: "سه درس جدید ما برای کلاس K&#8209;پنجمی ها"
-  studiobar_hoc_title: "ساعتی با کدنویسی"
-  studiobar_hoc_body: "یادگیری  کدنویسی با پرندگان عصبانی"
-  studiobar_flappy_title: "کدنویسی Flappy"
-  studiobar_flappy_body: "با پرنده بال زن، بازیهای خودتان را بسازید و به اشتراک بگذارید"
-  studiobar_teacher_title: "ساخته شده برای دبیران"
+  studiobar_elementary_title: دوره‌های مقدماتی
+  studiobar_elementary_body: سه درس جدید ما برای کلاس K&#8209;پنجمی ها
+  studiobar_hoc_title: ساعتی با کدنویسی
+  studiobar_hoc_body: یادگیری  کدنویسی با پرندگان عصبانی
+  studiobar_flappy_title: کدنویسی Flappy
+  studiobar_flappy_body: با پرنده بال زن، بازیهای خودتان را بسازید و به اشتراک بگذارید
+  studiobar_teacher_title: ساخته شده برای دبیران
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: "ساعتی با کد"
-  studiobar_frozen_body: "یک سرزمین عجایب یخی با آنا و السا بسازید"
-  studiobar_donate_title: "کمک مالی بدهید"
-  studiobar_donate_body: "با هر دلاری که کمک می کنید یک کودک یاد می گیرد"
-  studiobar_shop_title: "فروشگاه"
-  studiobar_shop_body: "شکستن کلیشه ها. لوگوی ما را با غرور بپوش."
+  studiobar_frozen_title: ساعتی با کد
+  studiobar_frozen_body: یک سرزمین عجایب یخی با آنا و السا بسازید
+  studiobar_donate_title: کمک مالی بدهید
+  studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
+  studiobar_shop_title: فروشگاه
+  studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -424,39 +424,39 @@
     Adam, teacher
   homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
-  homepage_hero_text_stat_served: "ساعت کد نویسی: # طی شده گذرانده"
+  homepage_hero_text_stat_served: 'ساعت کد نویسی: # طی شده گذرانده'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "ساعتی با کدنویسی"
-  homepage_slot_text_frozen: "کارتون Frozen با آنا و السا"
+  homepage_slot_text_hoc: ساعتی با کدنویسی
+  homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: "تمام آموزش های ما"
-  homepage_slot_text_course4: "دوره 4"
-  homepage_slot_text_shop: "فروشگاه"
-  homepage_slot_text_flappy: "کدنویسی Flappy"
+  homepage_slot_text_studio: تمام آموزش های ما
+  homepage_slot_text_course4: دوره 4
+  homepage_slot_text_shop: فروشگاه
+  homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# تائید شده"
-  homepage_action_text_join_us: "به ما بپیوندید"
-  homepage_action_text_sign_up: "ثبت نام"
-  homepage_action_text_try_it: "آن را امتحان کنید"
+  homepage_action_text_join_us: به ما بپیوندید
+  homepage_action_text_sign_up: ثبت نام
+  homepage_action_text_try_it: آن را امتحان کنید
   homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_codevideo: "فیلم را تماشا کنید"
-  homepage_action_text_teachervideo: "فیلم را تماشا کنید"
+  homepage_action_text_codevideo: فیلم را تماشا کنید
+  homepage_action_text_teachervideo: فیلم را تماشا کنید
   homepage_action_text_watchvideo: Watch the video
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: "یادگیری را شروع کنید"
-  homepage_action_text_signpetition: "درخواست را امضا کنید"
+  homepage_action_text_learn: یادگیری را شروع کنید
+  homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "درخواست ما را امضا کنید  &#x25BE;"
-  homepage_diversity_pledge: "پیمان احترام و برابری نژاد ها را بپذیرید"
+  homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
+  homepage_diversity_pledge: پیمان احترام و برابری نژاد ها را بپذیرید
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع
     علوم کامپیوتر را بهبود ببخشند.
-  homepage_banner_text_link: "بیشتر بیاموزید"
+  homepage_banner_text_link: بیشتر بیاموزید
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "بیشتر بیاموزید"
+  homepage_banner_privacy_link: بیشتر بیاموزید
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
   homepage_banner_20k_teachers_link: Learn more
@@ -468,103 +468,103 @@
   homepage_banner_emailprivacy_link: Read more
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Learn more
-  homepage_slot_text_title_hoc: "ساعتی با کد"
-  homepage_slot_text_blurb_hoc: "هرکسی می تواند بیاموزد. امروز شروع کنید"
-  homepage_slot_text_link_hoc: "ساعتِ کد نویسی را امتحان کنید"
+  homepage_slot_text_title_hoc: ساعتی با کد
+  homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
+  homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "میزبان یک ساعت کدزنی باشید"
+  homepage_slot_text_link_host: میزبان یک ساعت کدزنی باشید
   homepage_slot_text_link_hocserved: "# تائید شده"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: "دانش آموزان"
-  homepage_slot_text_blurb_students: "تمام آموزش های ما را کشف کنید"
+  homepage_slot_text_title_students: دانش آموزان
+  homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code.org courses
-  homepage_slot_text_link_local: "یک کلاس محلی پیدا کنید"
-  homepage_slot_text_link_othercourses: "دوره های آنلاین دیگر"
-  homepage_slot_text_title_educators: "آموزگاران"
-  homepage_slot_text_blurb_educators: "به دانش آموزانتان درس بدهید"
+  homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
+  homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
+  homepage_slot_text_title_educators: آموزگاران
+  homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: Middle school
   homepage_slot_text_link_high: High school
-  homepage_slot_text_link_k5: "دوره هایی برای بچه های ابتدایی"
-  homepage_slot_text_link_fullcurriculum: "تمام برنامه درسی ما را ببینید"
-  homepage_slot_text_link_pd: "توسعه ی حرفه ای"
-  homepage_slot_text_title_advocates: "مدافعان"
-  homepage_slot_text_blurb_advocates: "از کار ما حمایت کنید"
-  homepage_slot_text_link_stats: "آمار ها را ببینید"
-  homepage_slot_text_link_buy: "شرکت کنید"
+  homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
+  homepage_slot_text_link_fullcurriculum: تمام برنامه درسی ما را ببینید
+  homepage_slot_text_link_pd: توسعه ی حرفه ای
+  homepage_slot_text_title_advocates: مدافعان
+  homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
+  homepage_slot_text_link_stats: آمار ها را ببینید
+  homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: Make a donation
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
-  homepage_donors_seall: "تمامش را ببینید"
-  homepage_donors_donate: "کمک مالی بدهید"
-  contact_form_topic_student: "من یک دانش آموز هستم"
-  contact_form_topic_parent: "من پدر/مادر هستم"
-  contact_form_topic_teacher: "من دبیر/استاد هستم"
-  contact_form_topic_outside_us: "من خارج از آمریکا هستم"
-  contact_form_topic_contribution: "کمک های خیریه"
-  contact_form_topic_partner: "من می‌خواهم شرکت کنم"
-  contact_form_topic_other: "دیگر"
-  contact_form_label_topic: "موضوع"
-  contact_form_label_email: "آدرس ایمیل شما"
-  contact_form_label_message: "پیام"
-  contact_form_label_submit: "فرستادنِ پیام"
-  class_submission_in_school: "در مدرسه"
-  class_submission_in_school_daily_programming_course: "دوره برنامه‌نویسی روزانه"
-  class_submission_in_school_ap_computer_science: "امتحان تعیین سطح پیشرفته‌ی کامپیوتر"
-  class_submission_in_school_full_university_cs_curriculum: "دوره کامل دانشگاهی علوم
-    کامپیوتر"
-  class_submission_in_school_robotics_club: "باشگاه رباتیک"
-  class_submission_in_school_programming_integrated_in_other_classes: "برنامه‌نویسی‌های
-    جاسازی شده در کلاس‌های دیگر (ریاضی، علوم و...)"
-  class_submission_in_school_summer_school_cs_program: "دوره علوم کامپیوتر مدرسه تابستانی"
-  class_submission_in_school_exploring_computer_science: "کاوش در علم کامپیوتر"
-  class_submission_in_school_other: "موارد دیگر در مدرسه"
-  class_submission_out_of_school: "خارج از مدرسه"
-  class_submission_out_of_school_summer_camp: "اردوی تابستانه"
-  class_submission_out_of_school_afterschool_program: "برنامه بعد از مدرسه"
-  class_submission_out_of_school_all-day_workshop: "کارگاه آموزشی یک روز کامل (تا
-    1 هفته)"
-  class_submission_out_of_school_multi-week_workshop: "کارگاه چند هفته ای"
-  class_submission_out_of_school_other: "موارد دیگر خارج از مدرسه"
-  class_submission_online: "آنلاین"
-  class_submission_online_programming_class: "کلاس برنامه نویسی آنلاین"
-  class_submission_online_teacher_resource: "منابع آنلاین معلم"
-  class_submission_online_other: "موارد دیگر آنلاین"
-  class_submission_level_preschool: "پیش دبستانی"
-  class_submission_level_elementary: "دبستان"
-  class_submission_level_middle_school: "راهنمایی"
-  class_submission_level_high_school: "دبیرستان"
-  class_submission_level_college: "دانشگاه"
-  class_submission_level_vocational: "فنی و حرفه ای"
-  class_submission_languages_other: "زبان (های) دیگر"
+  homepage_donors_seall: تمامش را ببینید
+  homepage_donors_donate: کمک مالی بدهید
+  contact_form_topic_student: من یک دانش آموز هستم
+  contact_form_topic_parent: من پدر/مادر هستم
+  contact_form_topic_teacher: من دبیر/استاد هستم
+  contact_form_topic_outside_us: من خارج از آمریکا هستم
+  contact_form_topic_contribution: کمک های خیریه
+  contact_form_topic_partner: من می‌خواهم شرکت کنم
+  contact_form_topic_other: دیگر
+  contact_form_label_topic: موضوع
+  contact_form_label_email: آدرس ایمیل شما
+  contact_form_label_message: پیام
+  contact_form_label_submit: فرستادنِ پیام
+  class_submission_in_school: در مدرسه
+  class_submission_in_school_daily_programming_course: دوره برنامه‌نویسی روزانه
+  class_submission_in_school_ap_computer_science: امتحان تعیین سطح پیشرفته‌ی کامپیوتر
+  class_submission_in_school_full_university_cs_curriculum: دوره کامل دانشگاهی علوم
+    کامپیوتر
+  class_submission_in_school_robotics_club: باشگاه رباتیک
+  class_submission_in_school_programming_integrated_in_other_classes: برنامه‌نویسی‌های
+    جاسازی شده در کلاس‌های دیگر (ریاضی، علوم و...)
+  class_submission_in_school_summer_school_cs_program: دوره علوم کامپیوتر مدرسه تابستانی
+  class_submission_in_school_exploring_computer_science: کاوش در علم کامپیوتر
+  class_submission_in_school_other: موارد دیگر در مدرسه
+  class_submission_out_of_school: خارج از مدرسه
+  class_submission_out_of_school_summer_camp: اردوی تابستانه
+  class_submission_out_of_school_afterschool_program: برنامه بعد از مدرسه
+  class_submission_out_of_school_all-day_workshop: کارگاه آموزشی یک روز کامل (تا 1
+    هفته)
+  class_submission_out_of_school_multi-week_workshop: کارگاه چند هفته ای
+  class_submission_out_of_school_other: موارد دیگر خارج از مدرسه
+  class_submission_online: آنلاین
+  class_submission_online_programming_class: کلاس برنامه نویسی آنلاین
+  class_submission_online_teacher_resource: منابع آنلاین معلم
+  class_submission_online_other: موارد دیگر آنلاین
+  class_submission_level_preschool: پیش دبستانی
+  class_submission_level_elementary: دبستان
+  class_submission_level_middle_school: راهنمایی
+  class_submission_level_high_school: دبیرستان
+  class_submission_level_college: دانشگاه
+  class_submission_level_vocational: فنی و حرفه ای
+  class_submission_languages_other: زبان (های) دیگر
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
     featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: "کلاسیک"
+  playlab_classic_title: کلاسیک
   playlab_gumball_title: Gumball
-  playlab_iceage_title: "عصر یخ--به زودی"
-  playlab_iceage_title_live: "عصر یخبندان"
+  playlab_iceage_title: عصر یخ--به زودی
+  playlab_iceage_title_live: عصر یخبندان
   starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: "ویژوال بیسیک"
-  starwars_javascript_description: "استفاده از کشیدن و رها کردن بلوک و جاوا اسکریپت."
-  starwars_javascript_specs: "فقط انگلیسی | مرورگرهای مدرن | سنین 11 +"
-  starwars_blocks_title: "بلوک ها"
-  starwars_blocks_description: "استفاده از کشیدن و رها کردن بلوک."
-  starwars_blocks_specs: "بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت |
-    سنین 6-106"
-  starwars_platform_text: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
+  starwars_javascript_title: ویژوال بیسیک
+  starwars_javascript_description: استفاده از کشیدن و رها کردن بلوک و جاوا اسکریپت.
+  starwars_javascript_specs: فقط انگلیسی | مرورگرهای مدرن | سنین 11 +
+  starwars_blocks_title: بلوک ها
+  starwars_blocks_description: استفاده از کشیدن و رها کردن بلوک.
+  starwars_blocks_specs: بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت |
+    سنین 6-106
+  starwars_platform_text: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_name: Minecraft Hour of Code
   mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: "سنین 4 تا 104"
-  mc_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
+  mc_gradelevel: سنین 4 تا 104
+  mc_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
@@ -705,42 +705,42 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: "به روز رسانی اطلاعات شما"
+  volunteer_engineer_submission_update_information: به روز رسانی اطلاعات شما
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "نام"
-  volunteer_engineer_submission_field_name_placeholder: "نام و نام خانوادگی"
-  volunteer_engineer_submission_field_company: "شرکت (یا دانشگاه)"
-  volunteer_engineer_submission_field_company_placeholder: "شرکت (یا دانشگاه)"
-  volunteer_engineer_submission_field_experience_level: "سطح تجربه"
-  volunteer_engineer_submission_field_location: "مکان"
-  volunteer_engineer_submission_field_location_desc: "به مکان شما اجازه می دهد تا
-    برای جستجو برای نزدیک ترین داوطلب ، معلمان مورد استفاده قرار گیرد و به عنوان یک
-    سنجاق و یا پین در نقشه نشان داده می شود. اگر شما نگران هستید در مورد حفظ حریم
-    خصوصی، لطفا آدرس کار/مدرسه یا شهر خود را تنها فقط وارد کنید."
-  volunteer_engineer_submission_field_location_placeholder: "کد پستی شهر و ایالت در
-    کشور یا آدرس خیابان"
+  volunteer_engineer_submission_field_name: نام
+  volunteer_engineer_submission_field_name_placeholder: نام و نام خانوادگی
+  volunteer_engineer_submission_field_company: شرکت (یا دانشگاه)
+  volunteer_engineer_submission_field_company_placeholder: شرکت (یا دانشگاه)
+  volunteer_engineer_submission_field_experience_level: سطح تجربه
+  volunteer_engineer_submission_field_location: مکان
+  volunteer_engineer_submission_field_location_desc: به مکان شما اجازه می دهد تا برای
+    جستجو برای نزدیک ترین داوطلب ، معلمان مورد استفاده قرار گیرد و به عنوان یک سنجاق
+    و یا پین در نقشه نشان داده می شود. اگر شما نگران هستید در مورد حفظ حریم خصوصی،
+    لطفا آدرس کار/مدرسه یا شهر خود را تنها فقط وارد کنید.
+  volunteer_engineer_submission_field_location_placeholder: کد پستی شهر و ایالت در
+    کشور یا آدرس خیابان
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
     after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: "پروفایل لینکداین"
+  volunteer_engineer_submission_field_linkedin: پروفایل لینکداین
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/نام_شما
-  volunteer_engineer_submission_field_facebook: "پروفایل فیس بوک"
+  volunteer_engineer_submission_field_facebook: پروفایل فیس بوک
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "توضیحات"
+  volunteer_engineer_submission_field_description: توضیحات
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: "نشانی رایانامه"
+  volunteer_engineer_submission_field_email: نشانی رایانامه
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "نشانی رایانامه"
+  volunteer_engineer_submission_field_email_placeholder: نشانی رایانامه
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -749,29 +749,29 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "ارسال کنید"
+  volunteer_engineer_submission_submit: ارسال کنید
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
     like you.
-  volunteer_engineer_submission_commitment_uncertain: "نامطمئن"
+  volunteer_engineer_submission_commitment_uncertain: نامطمئن
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 ساعت در هفته
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ساعت در هفته
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 ساعت در هفته
-  volunteer_engineer_submission_commitment_now_and_then: "هر از چند گاه"
+  volunteer_engineer_submission_commitment_now_and_then: هر از چند گاه
   volunteer_engineer_submission_commitment_annually: 2-3 times per year
   volunteer_engineer_submission_commitment_monthly: A couple hours per month
   volunteer_engineer_submission_commitment_weekly: A couple hours per week
-  volunteer_engineer_submission_commitment_more: "بیشتر"
-  volunteer_engineer_submission_location_flexibility_onsite: "در داخل مدرسه"
-  volunteer_engineer_submission_location_flexibility_remote: "راهنمایی از راه دور
-    (برای دانش آموزان و معلمان)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "علاقمند به کمک و
-    مشارکت در پروژه های آموزشی منبع باز"
-  volunteer_engineer_submission_experience_unspecified: "نامشخص"
+  volunteer_engineer_submission_commitment_more: بیشتر
+  volunteer_engineer_submission_location_flexibility_onsite: در داخل مدرسه
+  volunteer_engineer_submission_location_flexibility_remote: راهنمایی از راه دور (برای
+    دانش آموزان و معلمان)
+  volunteer_engineer_submission_location_flexibility_curriculum: علاقمند به کمک و
+    مشارکت در پروژه های آموزشی منبع باز
+  volunteer_engineer_submission_experience_unspecified: نامشخص
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: "مشخص
-    نشده"
-  volunteer_engineer_submission_experience_software_professional: "متخصص نرم‌ افزار"
+  volunteer_engineer_submission_experience_university_student_or_researcher: مشخص
+    نشده
+  volunteer_engineer_submission_experience_software_professional: متخصص نرم‌ افزار
   volunteer_engineer_submission_distance_8: 5 miles
   volunteer_engineer_submission_distance_16: 10 miles
   volunteer_engineer_submission_distance_24: 15 miles
@@ -786,40 +786,40 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: "سن"
+  petition_age: سن
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
   dashboard_announce_learn_more_button: Learn more
-  dashboard_landing_title: "صفحه اصلی معلم"
-  dashboard_landing_welcome: "خوش آمدید به صفحهٔ جدید و بهبود یافته معلم  ."
-  dashboard_landing_video: "این ویدیو را مشاهده کنید"
-  dashboard_landing_watch_video: "برای آشنایی با امکانات جدید"
-  dashboard_landing_view_as_student: "مشاهده این سایت به عنوان یک دانش آموز"
-  dashboard_landing_students_title: "دانش آموزان شما"
-  dashboard_landing_students_manage: "مشاهده و مدیریت دانش آموزان خود"
-  dashboard_landing_news_title: "منابع برای معلمین کلاس پنجم (فقط به انگلیسی)"
-  dashboard_landing_new_beta: "جدید! درسهای در حال آماده سازی ما برای کلاس پنجمی ها
-    را امتحان کنید."
-  dashboard_landing_new_k5courses: "جدید! درسهای ما برای کلاس پنجمی ها را امتحان کنید."
-  dashboard_landing_useful_links: "دیگر لینک های مفید (فقط به زبان انگلیسی)"
+  dashboard_landing_title: صفحه اصلی معلم
+  dashboard_landing_welcome: خوش آمدید به صفحهٔ جدید و بهبود یافته معلم  .
+  dashboard_landing_video: این ویدیو را مشاهده کنید
+  dashboard_landing_watch_video: برای آشنایی با امکانات جدید
+  dashboard_landing_view_as_student: مشاهده این سایت به عنوان یک دانش آموز
+  dashboard_landing_students_title: دانش آموزان شما
+  dashboard_landing_students_manage: مشاهده و مدیریت دانش آموزان خود
+  dashboard_landing_news_title: منابع برای معلمین کلاس پنجم (فقط به انگلیسی)
+  dashboard_landing_new_beta: جدید! درسهای در حال آماده سازی ما برای کلاس پنجمی ها
+    را امتحان کنید.
+  dashboard_landing_new_k5courses: جدید! درسهای ما برای کلاس پنجمی ها را امتحان کنید.
+  dashboard_landing_useful_links: دیگر لینک های مفید (فقط به زبان انگلیسی)
   dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_office_hours: "سوالات خود را مستقیماً مطرح کنید! به بخش ساعات
-    تماس تصویری ماهانه ما مراجعه کنید."
-  dashboard_landing_print_certificates: "گواهینامه‌هایی برای دانش‌آموزانی که این دوره
-    را تمام می‌کنند چاپ کنید"
-  dashboard_landing_educator_blog: "درباره اخبار و بروزرسانی مواد درسی، وبلاگ آموزگار
-    ما را مطالعه کنید"
-  dashboard_landing_video_player: "در مدرسه خود پخش کننده جدید ویدئو ما را امتحان
-    کنید "
-  dashboard_landing_progress_title: "پیشرفت کلاس اصلی"
-  dashboard_landing_progress_biggest: "این پیشرفت بزرگترین بخش شما است."
-  dashboard_landing_view_progress: "مشاهده‌ی پیشرفتِ %{biggest_section}"
+  dashboard_landing_office_hours: سوالات خود را مستقیماً مطرح کنید! به بخش ساعات تماس
+    تصویری ماهانه ما مراجعه کنید.
+  dashboard_landing_print_certificates: گواهینامه‌هایی برای دانش‌آموزانی که این دوره
+    را تمام می‌کنند چاپ کنید
+  dashboard_landing_educator_blog: درباره اخبار و بروزرسانی مواد درسی، وبلاگ آموزگار
+    ما را مطالعه کنید
+  dashboard_landing_video_player: 'در مدرسه خود پخش کننده جدید ویدئو ما را امتحان
+    کنید '
+  dashboard_landing_progress_title: پیشرفت کلاس اصلی
+  dashboard_landing_progress_biggest: این پیشرفت بزرگترین بخش شما است.
+  dashboard_landing_view_progress: مشاهده‌ی پیشرفتِ %{biggest_section}
   dashboard_landing_print_progress: Print progress
-  dashboard_landing_available_title: "دوره‌های قابل دسترس"
-  dashboard_landing_available_courses: "دوره های که در  حال حاضر در دسترس  هستند برای
-    شما و دانش آموزان شما در اینجا هستند."
-  dashboard_landing_more_tutorials: "می خواهی بازم هم آموزش های بیشتری را ببینی؟"
+  dashboard_landing_available_title: دوره‌های قابل دسترس
+  dashboard_landing_available_courses: دوره های که در  حال حاضر در دسترس  هستند برای
+    شما و دانش آموزان شما در اینجا هستند.
+  dashboard_landing_more_tutorials: می خواهی بازم هم آموزش های بیشتری را ببینی؟
   dashboard_landing_more_tutorials_desc: آموزش های بیشتری وجود دارند که <a href="/learn/beyond">توسط
     مشارکت کنندگان ما ارائه شده اند.</a> برنامه نویسی با استفاده از روبات ها، ساختن
     صفحات وب و ساختن برنامه شخصی خودتان را یاد بگیرید و در زبان های دیگری مثل C++،
@@ -829,13 +829,13 @@
     science concepts.
   dashboard_landing_report_bug: Request a feature or report a bug.
   dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_hoc_courses: "ساعت کدنویسی برای همه سنین"
-  dashboard_hoc_courses_desc: "این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین
-    کنید!"
+  dashboard_hoc_courses: ساعت کدنویسی برای همه سنین
+  dashboard_hoc_courses_desc: این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین
+    کنید!
   dashboard_hoc_courses_desc_and_cta: این آموزش کوتاه یک ساعته را با دانش آموزان خود
     امتحان کنید. <a href="https://hourofcode.com">پیوستن به جنبش کد نویسی یک ساعته</a>در
     طول هفته آموزش علوم رایانه.
-  dashboard_k5_courses: "دوره های 20 ساعته برای پیش دبستانی"
+  dashboard_k5_courses: دوره های 20 ساعته برای پیش دبستانی
   dashboard_k5_courses_desc: این دوره ها شامل آموزشی های آنلاین، خود هدایت گر و متناسب
     با پیشرفت خود به همراه فعالیت های "غیر متصل" است که اصلا به هیچ کامپیوتری احتیاج
     ندارد. هر دوره شامل حدودا 20 درس است که ممکن است به عنوان یک واحد یا در طول دوره
@@ -843,37 +843,37 @@
     کنند. به منظور کمک به شما برای شروع، ما کارگاه های توسعه ی حرفه ای با کیفیت بالا
     و مجانی در آمریکا ارائه می کنیم. <a href="/professional-development-workshops">
     یکی نزدیکتان پیدا کنید!</a>
-  dashboard_middle_courses: "دوره های 20 ساعته برای راهنمایی"
+  dashboard_middle_courses: دوره های 20 ساعته برای راهنمایی
   dashboard_middle_courses_desc: برنامه ی ما برای دوره ی اول دبیرستان از علوم کامپیوتر
     و برنامه نویسی در زمینه ی ریاضیات و علوم دوره اول دبیرستان استفاده می کند - به
     عنوان یک ابزار برای آموزش مباحث ریاضیات و علوم. برای ثبت نام در کارگاه های پیشرفت
     حرفه ای، درخواست یک<a href="/educate/districts"> عضویت محدوده باز </a> با  Code.org
     را بدهید.
-  dashboard_high_courses: "دوره های سالانه برای دبیرستان"
+  dashboard_high_courses: دوره های سالانه برای دبیرستان
   dashboard_high_courses_desc: برنامه ی دبیرستان ما به آموزش و پرورش کمک می کند تا
     کلاس های علوم کامپیوتر را با آماده کردن کادر تدریس فعلی برای ارائه ی این فیلد
     جدید در تمام طول سال ارائه دهند. برای ثبت نام در کارگاه های پیشرفت حرفه ای، درخواست
     <a href="/educate/districts"> عضویت محدوده باز</a> با Code.org بدهید.
-  dashboard_course_csina: "علوم کامپیوتر در جبر"
+  dashboard_course_csina: علوم کامپیوتر در جبر
   dashboard_course_csina_desc: Code.org با Bootstrap همکار شده تا برنامه ای توسعه
     دهد که مباحث جبری و هندسی را از طریق برنامه نویسی کامپیوتر آموزش دهد.
-  dashboard_course_csins: "علوم کامپیوتر در سایر علوم"
+  dashboard_course_csins: علوم کامپیوتر در سایر علوم
   dashboard_course_csins_desc: Code.org با پروژه ی GUTS همکار شده تا مقدمه ای بر مباحث
     علوم کامپیوتر در زمینه ی مدل سازی و شبیه سازی ارائه دهد.
-  dashboard_course_ecs: "کاوش در علم کامپیوتر"
-  dashboard_course_ecs_desc: "کاوش در علوم کامپیوتر یک دوره ی یک ساله شامل 6 واحد
+  dashboard_course_ecs: کاوش در علم کامپیوتر
+  dashboard_course_ecs_desc: 'کاوش در علوم کامپیوتر یک دوره ی یک ساله شامل 6 واحد
     است: همکاری انسان کامپیوتر، حل مساله، طراحی وب، برنامه نویسی، محاسبه و آنالیز
-    داده ها، و رباتیک."
-  dashboard_course_csp: "مفاهیم AP® علوم کامپیوتر"
+    داده ها، و رباتیک.'
+  dashboard_course_csp: مفاهیم AP® علوم کامپیوتر
   dashboard_course_csp_desc: Code.org یک دوره ی سخت گیرانه، جذاب، و قابل دسترسی طراحی
     کرده که ایده ی بنیادی محاسبه را کشف می کند.
-  dashboard_landing_loading: "در حال بارگذاری..."
-  dashboard_action_cancel: "لغو کن"
-  dashboard_action_delete: "پاک کردن"
-  dashboard_action_delete_yes: "بله"
-  dashboard_action_delete_no: "نه"
-  dashboard_action_confirm: "پاک گردد؟"
-  dashboard_action_done: "انجام شد"
+  dashboard_landing_loading: در حال بارگذاری...
+  dashboard_action_cancel: لغو کن
+  dashboard_action_delete: پاک کردن
+  dashboard_action_delete_yes: بله
+  dashboard_action_delete_no: نه
+  dashboard_action_confirm: پاک گردد؟
+  dashboard_action_done: انجام شد
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -892,32 +892,32 @@
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: "صفحه اصلی معلم"
-  dashboard_navigation_section_student_progress: "حساب کاربری دانش‌ آموزان و پیشرفت
-    آنها"
-  dashboard_navigation_section_teacher_progress: "پیشرفت دوره ی شما"
-  dashboard_navigation_section_lesson_plans: "برنامه‌ها و منابع درس"
-  dashboard_navigation_section_community: "کمک و جامعه"
-  dashboard_navigation_section_pd: "توسعه ی حرفه ای"
-  dashboard_navigation_section_speakers: "علوم کامپیوتر <br/> سخنرانا مهمان"
-  dashboard_navigation_all_sections: "حساب کاربری دانش‌ آموزان و پیشرفت آنها"
-  dashboard_navigation_view_progress: "نمایش پیشرفت"
-  dashboard_navigation_view_text_responses: "مشاهده متن پاسخ"
+  dashboard_navigation_home_page: صفحه اصلی معلم
+  dashboard_navigation_section_student_progress: حساب کاربری دانش‌ آموزان و پیشرفت
+    آنها
+  dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
+  dashboard_navigation_section_lesson_plans: برنامه‌ها و منابع درس
+  dashboard_navigation_section_community: کمک و جامعه
+  dashboard_navigation_section_pd: توسعه ی حرفه ای
+  dashboard_navigation_section_speakers: علوم کامپیوتر <br/> سخنرانا مهمان
+  dashboard_navigation_all_sections: حساب کاربری دانش‌ آموزان و پیشرفت آنها
+  dashboard_navigation_view_progress: نمایش پیشرفت
+  dashboard_navigation_view_text_responses: مشاهده متن پاسخ
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_navigation_add_students: "افزودن دانش آموز"
-  dashboard_navigation_manage_students: "مدیریت دانش آموزان"
+  dashboard_navigation_add_students: افزودن دانش آموز
+  dashboard_navigation_manage_students: مدیریت دانش آموزان
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: "مشاهده وضعیت"
-  dashboard_navigation_section: "بخش: %{section_name}"
-  dashboard_navigation_student: "دانش آموز: %{student_name}"
-  dashboard_progress_not_started: "شروع نشده"
-  dashboard_progress_in_progress: "در حال اجرا"
-  dashboard_progress_not_completed: "تکمیل نشده است"
-  dashboard_progress_completed_too_many_blocks: "تکمیل شده ، با بلوک های زیادی"
-  dashboard_progress_completed_perfect: "تکمیل, کامل"
-  dashboard_progress_furthest_level_attempted: "تلاش برای دسترسی به سطح دسترسی خارج
-    از محدوده "
+  dashboard_navigation_view_stats: مشاهده وضعیت
+  dashboard_navigation_section: 'بخش: %{section_name}'
+  dashboard_navigation_student: 'دانش آموز: %{student_name}'
+  dashboard_progress_not_started: شروع نشده
+  dashboard_progress_in_progress: در حال اجرا
+  dashboard_progress_not_completed: تکمیل نشده است
+  dashboard_progress_completed_too_many_blocks: تکمیل شده ، با بلوک های زیادی
+  dashboard_progress_completed_perfect: تکمیل, کامل
+  dashboard_progress_furthest_level_attempted: 'تلاش برای دسترسی به سطح دسترسی خارج
+    از محدوده '
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
@@ -925,33 +925,33 @@
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
-  dashboard_sections_new_section: "بخش تازه"
+  dashboard_sections_new_section: بخش تازه
   dashboard_sections_new_google_section: Import section from Google Classroom
-  dashboard_sections_jumbotron_instruction: "ایجاد بخش های جدید و افزودن دانش آموزان
+  dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان
     به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
-    کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید."
-  dashboard_sections_table_section: "بخش"
-  dashboard_sections_table_secret: "نوع ورود"
-  dashboard_sections_table_grade: "درجه"
-  dashboard_sections_table_course: "دوره"
+    کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
+  dashboard_sections_table_section: بخش
+  dashboard_sections_table_secret: نوع ورود
+  dashboard_sections_table_grade: درجه
+  dashboard_sections_table_course: دوره
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "دانش آموزان"
-  dashboard_sections_table_code: "بخش کد"
-  dashboard_sections_name: "نام بخش"
-  dashboard_sections_choose_secret: "اگر شما می خواهید به دانش آموزان خود حساب کاربری
-    ارائه کنید، یک <b>کلمه</b> یا <b>تصویر</b> سرّی برای آن بخش را انتخاب کنید."
-  dashboard_sections_secret_word: "یک <b>کلمه</b> به شما اجازه میدهد برای هر دانش
-    آموز یک کلمه سرّی انتخاب نمایید."
-  dashboard_sections_secret_picture: "یک <b>تصویر</b> به شما اجازه میدهد برای هر دانش
+  dashboard_sections_table_students: دانش آموزان
+  dashboard_sections_table_code: بخش کد
+  dashboard_sections_name: نام بخش
+  dashboard_sections_choose_secret: اگر شما می خواهید به دانش آموزان خود حساب کاربری
+    ارائه کنید، یک <b>کلمه</b> یا <b>تصویر</b> سرّی برای آن بخش را انتخاب کنید.
+  dashboard_sections_secret_word: یک <b>کلمه</b> به شما اجازه میدهد برای هر دانش آموز
+    یک کلمه سرّی انتخاب نمایید.
+  dashboard_sections_secret_picture: یک <b>تصویر</b> به شما اجازه میدهد برای هر دانش
     آموز یک تصویر سرّی انتخاب نمایید. این گزینه برای دانش آموزان جوانتر که هنوز توانایی
-    تایپ را ندارند ایده آل می باشد."
-  dashboard_sections_secret_none: "اگر می خواهید دانش آموزان شما توانایی مدیریت حساب
+    تایپ را ندارند ایده آل می باشد.
+  dashboard_sections_secret_none: اگر می خواهید دانش آموزان شما توانایی مدیریت حساب
     کاربری خود، از جمله انتخاب کلمه عبور خود را داشته باشند، گزینه سرّی <b>هیچ کدام</b>
-    را انتخاب کنید."
-  dashboard_sections_print_secrets: "سپس شما میتوانید یک ورق از کارت های حاوی اطلاعات
-    حساب کاربری را چاپ کنید و به صورت جداگانه بین دانش آموزان خود توزیع نمایید."
-  dashboard_sections_switch_section: "بخش تعویض"
+    را انتخاب کنید.
+  dashboard_sections_print_secrets: سپس شما میتوانید یک ورق از کارت های حاوی اطلاعات
+    حساب کاربری را چاپ کنید و به صورت جداگانه بین دانش آموزان خود توزیع نمایید.
+  dashboard_sections_switch_section: بخش تعویض
   dashboard_sections_close: Close
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
@@ -984,56 +984,56 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
-    فقط یک نام در هر خط:"
+  dashboard_students_add_multiple: 'نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
+    فقط یک نام در هر خط:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
-  dashboard_students_new_section: "شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده
+  dashboard_students_new_section: شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده
     از دکمه های <b>افزودن دانش آموز</b> و <b>اضافه کردن چند دانش آموز</b> بالا دانش
-    آموزان خود را اضافه کنید."
-  dashboard_students_name: "نام"
-  dashboard_students_progress: "پیشرفت"
-  dashboard_students_male: "مرد"
-  dashboard_students_female: "زن"
-  dashboard_students_completed_levels: "سطح‌های کامل شده"
-  dashboard_students_total_lines: "خطوطی از کد"
+    آموزان خود را اضافه کنید.
+  dashboard_students_name: نام
+  dashboard_students_progress: پیشرفت
+  dashboard_students_male: مرد
+  dashboard_students_female: زن
+  dashboard_students_completed_levels: سطح‌های کامل شده
+  dashboard_students_total_lines: خطوطی از کد
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
-  dashboard_students_print_info: "کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید."
-  dashboard_students_secret_picture_title: "تصویر محرمانه"
-  dashboard_students_secret_picture: "عکس مخفی"
-  dashboard_students_reset_picture: "شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
+  dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
+  dashboard_students_secret_picture_title: تصویر محرمانه
+  dashboard_students_secret_picture: عکس مخفی
+  dashboard_students_reset_picture: شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام
     این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم
-    تولید خواهد شد."
-  dashboard_students_secret_word_title: "کلمه ی محرمانه"
-  dashboard_students_secret_word: "کلمه محرمانه"
-  dashboard_students_reset_word: "شما در هر زمان میتوانید کلمات محرمانه هر دانش آموز
+    تولید خواهد شد.
+  dashboard_students_secret_word_title: کلمه ی محرمانه
+  dashboard_students_secret_word: کلمه محرمانه
+  dashboard_students_reset_word: 'شما در هر زمان میتوانید کلمات محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش رمز</b> و سپس <b>تغییر رمز</b>. با انجام این
     کار، یک جفت کلمه محرمانه جدید برای استفاده آن دانش آموز در هنگام ورود به سیستم
-    تولید خواهد شد. "
-  dashboard_students_join_link: "به دانش آموزان خود بگویید که حساب کاربری خود را ایجاد
-    کنند و بپیوندند به بخش شما در"
-  dashboard_students_no_email: "اگر دانش آموزان شما آدرس ایمیل ندارند، و یا شما می
+    تولید خواهد شد. '
+  dashboard_students_join_link: به دانش آموزان خود بگویید که حساب کاربری خود را ایجاد
+    کنند و بپیوندند به بخش شما در
+  dashboard_students_no_email: اگر دانش آموزان شما آدرس ایمیل ندارند، و یا شما می
     خواهید برای آنها حساب کاربری ایجاد کنید، نوع رمز این بخش را به <b>کلمه</b> یا
-    <b>تصویر</b> تغییر دهید."
-  dashboard_students_print_page: "چاپ این صفحه"
+    <b>تصویر</b> تغییر دهید.
+  dashboard_students_print_page: چاپ این صفحه
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     اینجا را کلیک کنید</a> برای مشاهده سند حریم خصوصی ما، که می توانید آن رابرای دانش
     آموزان خود به اشتراک بگذارید یا چاپ نمایید.
-  dashboard_curriculum_k5_title: "منابع آموزشی پیش از دبستان"
-  dashboard_curriculum_middle_title: "منابع آموزشی دوره راهنمایی"
-  dashboard_curriculum_high_title: "منابع آموزشی دوره دبیرستان"
-  dashboard_lesson_plans: "برنامه های درسی"
+  dashboard_curriculum_k5_title: منابع آموزشی پیش از دبستان
+  dashboard_curriculum_middle_title: منابع آموزشی دوره راهنمایی
+  dashboard_curriculum_high_title: منابع آموزشی دوره دبیرستان
+  dashboard_lesson_plans: برنامه های درسی
   dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-3
-  dashboard_course1: "دوره 1:"
-  dashboard_course2: "دوره 2:"
-  dashboard_course3: "دوره 3:"
+  dashboard_course1: 'دوره 1:'
+  dashboard_course2: 'دوره 2:'
+  dashboard_course3: 'دوره 3:'
   dashboard_course4: 'Course 4 (beta): '
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
@@ -1046,33 +1046,33 @@
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_tools: 'Tools: '
-  dashboard_curriculum: "برنامه آموزشی"
-  dashboard_curriculum_overview: "بررسی اجمالی برنامه کلاس پنجمی ها"
-  dashboard_overview: "بررسی اجمالی"
-  dashboard_sequence: "دنباله"
-  dashboard_framework: "چارچوب کار"
-  dashboard_standards: "استانداردها"
-  dashboard_implementation_guide: "راهنمای پیاده سازی"
-  dashboard_glossary: "واژه نامه"
-  dashboard_classroom_strategies: "استراتژی‌های کلاس برای دبیران"
-  dashboard_debugging: "اشکال‌زدایی:"
-  dashboard_puzzle_solving: "حل پازل:"
-  dashboard_student_worksheet: "ورقه کار دانش آموزان"
-  dashboard_teacher_worksheet: "ورقه کار معلم"
-  dashboard_curriculum_csina: "علوم کامپیوتر در جبر:"
-  dashboard_curriculum_csins: "علوم کامپیوتر در علم:"
+  dashboard_curriculum: برنامه آموزشی
+  dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
+  dashboard_overview: بررسی اجمالی
+  dashboard_sequence: دنباله
+  dashboard_framework: چارچوب کار
+  dashboard_standards: استانداردها
+  dashboard_implementation_guide: راهنمای پیاده سازی
+  dashboard_glossary: واژه نامه
+  dashboard_classroom_strategies: استراتژی‌های کلاس برای دبیران
+  dashboard_debugging: 'اشکال‌زدایی:'
+  dashboard_puzzle_solving: 'حل پازل:'
+  dashboard_student_worksheet: ورقه کار دانش آموزان
+  dashboard_teacher_worksheet: ورقه کار معلم
+  dashboard_curriculum_csina: 'علوم کامپیوتر در جبر:'
+  dashboard_curriculum_csins: 'علوم کامپیوتر در علم:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: "کاوش در علوم کامپیوتر:"
+  dashboard_curriculum_ecs: 'کاوش در علوم کامپیوتر:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "دیگر"
-  dashboard_login_word: "واژه"
-  dashboard_login_picture: "عکس"
-  dashboard_login_none: "ایمیل"
-  dashboard_stage: "مرحله"
-  dashboard_puzzle: "پازل"
-  dashboard_question: "سوال"
+  dashboard_grade_other: دیگر
+  dashboard_login_word: واژه
+  dashboard_login_picture: عکس
+  dashboard_login_none: ایمیل
+  dashboard_stage: مرحله
+  dashboard_puzzle: پازل
+  dashboard_question: سوال
   dashboard_response: Response
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
@@ -1086,31 +1086,31 @@
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
-  stats_hoc_2013_heading: "آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک
-    هفته:"
-  stats_hoc_2013_image_alt: "وضعیت کد نویسی در سال 2013"
-  dashboard_teacher: "دبیر"
-  dashboard_student: "دانش آموز"
-  dashboard_sections_email_question: "همه دانش آموزان یک آدرس ایمیل معتبر دارید؟"
-  dashboard_sections_account_creation_question: "چه کسی یک حساب کاربری دانش آموزی
-    ساخته است؟"
+  stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک
+    هفته:'
+  stats_hoc_2013_image_alt: وضعیت کد نویسی در سال 2013
+  dashboard_teacher: دبیر
+  dashboard_student: دانش آموز
+  dashboard_sections_email_question: همه دانش آموزان یک آدرس ایمیل معتبر دارید؟
+  dashboard_sections_account_creation_question: چه کسی یک حساب کاربری دانش آموزی ساخته
+    است؟
   dashboard_sections_password_question: دانش آموزان چه چیزی را به عنوان "کلمه عبور"
     استفاده می کنند؟
-  dashboard_sections_picture_account_creation: "یک عکس تعیین شده توسط Code.org"
-  dashboard_sections_word_account_creation: "یک واژه‌ی ساده‌ی تعیین شده توسط Code.org"
-  dashboard_sections_sign_in_question: "دانش آموزان از کجا وارد میشوند؟"
+  dashboard_sections_picture_account_creation: یک عکس تعیین شده توسط Code.org
+  dashboard_sections_word_account_creation: یک واژه‌ی ساده‌ی تعیین شده توسط Code.org
+  dashboard_sections_sign_in_question: دانش آموزان از کجا وارد میشوند؟
   dashboard_sections_sign_in_unique: صفحه وب منحصر به فرد ذکر شده در بند "مدیریت دانش
     آموزان"
   dashboard_sections_sign_in_main: http://code.org و کلیک بر روی "ورود"
-  dashboard_sections_password_account_creation: "کلمه عبور متنی ایجاد شده توسط دانش
-    آموز"
-  dashboard_sections_login_type_explanation: "این جدول به توضیح این که شما کدامیک
-    از روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای
-    یک بخش انتخاب کنید کمک می کند."
-  dashboard_faq: "پرسش و پاسخ‌های متداول"
-  dashboard_faq_k5: "پرسش های متداول پیش از دبستان"
-  code_hoc_coming: "ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!"
-  code_sign_up: "ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر"
+  dashboard_sections_password_account_creation: کلمه عبور متنی ایجاد شده توسط دانش
+    آموز
+  dashboard_sections_login_type_explanation: این جدول به توضیح این که شما کدامیک از
+    روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک
+    بخش انتخاب کنید کمک می کند.
+  dashboard_faq: پرسش و پاسخ‌های متداول
+  dashboard_faq_k5: پرسش های متداول پیش از دبستان
+  code_hoc_coming: ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!
+  code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   host_an_hour: Host an hour
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
@@ -1119,15 +1119,15 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "هم اکنون شروع کنید"
-  learn_sign_up_description: "ثبت نام برای شرکت در یک ساعت کد نویسی در طول هفته آموزشی
-    علوم رایانه"
-  learn_sign_up_button: "ثبت نام"
+  learn_more: هم اکنون شروع کنید
+  learn_sign_up_description: ثبت نام برای شرکت در یک ساعت کد نویسی در طول هفته آموزشی
+    علوم رایانه
+  learn_sign_up_button: ثبت نام
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: "نحوه ی آموزش کد نویسی یک ساعته را یاد بگیرید"
-  learn_educator_resources_button: "منابع مربی"
+  learn_educator_resources_description: نحوه ی آموزش کد نویسی یک ساعته را یاد بگیرید
+  learn_educator_resources_button: منابع مربی
   learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
     to teach an Hour of Code</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
@@ -1140,105 +1140,105 @@
     prizes for every educator.
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
-  hoc2014_try_new_tutorials: "آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید"
-  hoc2014_try_new_tutorial: "ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید"
-  hoc2014_try_scrat: "پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات"
-  hoc2014_try_frozen: "هنرمندی با آنا و السا, از کارتون منجمد"
-  carousel_heading_codeorg: "آموزش توسط Code.org"
-  carousel_heading_codeorg_any_device: "آموزش توسط Code.org (برای همه دستگاه ها)"
+  hoc2014_try_new_tutorials: آموزش‌های تازه‌ی ساعتِ کدنویسی ما را امتحان کنید
+  hoc2014_try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
+  hoc2014_try_scrat: پرندگان عصبانی، گیاهان علیه زامبی‌ها و اسکرات
+  hoc2014_try_frozen: هنرمندی با آنا و السا, از کارتون منجمد
+  carousel_heading_codeorg: آموزش توسط Code.org
+  carousel_heading_codeorg_any_device: آموزش توسط Code.org (برای همه دستگاه ها)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
-  carousel_heading_international: "آموزش به زبان شما"
-  carousel_heading_domestic: "آموزش به زبان انگلیسی"
-  carousel_heading_beginners: "آموزش برای مبتدیان"
+  carousel_heading_international: آموزش به زبان شما
+  carousel_heading_domestic: آموزش به زبان انگلیسی
+  carousel_heading_beginners: آموزش برای مبتدیان
   carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_javascript: "آموزش جاوا اسکریپت"
+  carousel_heading_javascript: آموزش جاوا اسکریپت
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_unplugged: "هیچ وسیله ای یا اینترنت ندارید؟ علوم کامپیوتر روی کاغذ
-    را امتحان کنید"
-  carousel_heading_devices: "برنامه های آموزشی برای تلفن های همراه و تبلت ها"
+  carousel_heading_unplugged: هیچ وسیله ای یا اینترنت ندارید؟ علوم کامپیوتر روی کاغذ
+    را امتحان کنید
+  carousel_heading_devices: برنامه های آموزشی برای تلفن های همراه و تبلت ها
   carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: "آموزش ها به زبان های برنامه نویسی دیگر"
+  carousel_heading_languages: آموزش ها به زبان های برنامه نویسی دیگر
   carousel_heading_beyond_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: "بازی یا نرم افزار خود را بسازید"
+  carousel_heading_apps_games: بازی یا نرم افزار خود را بسازید
   carousel_heading_university: " دوره های آنلاین دانشگاه"
-  carousel_heading_webpages: "یادگیری ساخت صفحات وب"
+  carousel_heading_webpages: یادگیری ساخت صفحات وب
   carousel_heading_robots: Learn to program with robots
-  carousel_heading_ide: "محیط های برنامه ریزی محبوب در میان معلمان"
+  carousel_heading_ide: محیط های برنامه ریزی محبوب در میان معلمان
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "یادداشت های آموزگار"
+  educator_notes: یادداشت های آموزگار
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
-  how_to_teach_hoc: "نحوه تدریس یک ساعت کد نویسی"
-  more_resources_educators: "منابع بیشتر برای معلمان و آموزگاران"
-  beyond_submission: "می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
-    و فرم ثبت را ببینید."
+  how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
+  more_resources_educators: منابع بیشتر برای معلمان و آموزگاران
+  beyond_submission: می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
+    و فرم ثبت را ببینید.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "شرکت کنندگان"
-  teachers_notes: "یادداشت های معلم"
-  teachers_notes_hoc: "معلم ها: نکته های مهم آموزگار را اینجا بخوانید"
-  previous: "قبلی"
-  next: "بعدي"
-  older_systems: "خودآموز هایی برای سیستمهای قدیمی تر"
+  participants: شرکت کنندگان
+  teachers_notes: یادداشت های معلم
+  teachers_notes_hoc: 'معلم ها: نکته های مهم آموزگار را اینجا بخوانید'
+  previous: قبلی
+  next: بعدي
+  older_systems: خودآموز هایی برای سیستمهای قدیمی تر
   older_systems_subheading: این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی
     به تمام آموزش ها، به یک مرورگر وب به روز <a href="http://browsehappy.com/" target="_blank">  ارتقا
     دهید.</a>
-  mobile_devices: "آموزش هایی برای دستگاه های همراه"
-  frozen_name: "کدنویسی با آنا و السا"
-  starwars_name: "جنگ ستارگان: ساختمان کهکشان با کد"
-  codeorg_name: "هزارتوی کلاسیک"
-  codeintl_name: "هزارتوی کلاسیک"
+  mobile_devices: آموزش هایی برای دستگاه های همراه
+  frozen_name: کدنویسی با آنا و السا
+  starwars_name: 'جنگ ستارگان: ساختمان کهکشان با کد'
+  codeorg_name: هزارتوی کلاسیک
+  codeintl_name: هزارتوی کلاسیک
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "آشنایی با جاوا اسکریپت"
-  khanes_name: "آشنایی با جاوا اسکریپت"
-  khanpt_name: "آشنایی با جاوا اسکریپت"
-  khanhe_name: "آشنایی با جاوا اسکریپت"
-  khanfr_name: "آشنایی با جاوا اسکریپت"
-  khanpl_name: "آشنایی با جاوا اسکریپت"
-  tynker_name: "بازی خود را بسازید"
-  scratch_name: "با کد نویسی خلاق شوید"
+  khan_name: آشنایی با جاوا اسکریپت
+  khanes_name: آشنایی با جاوا اسکریپت
+  khanpt_name: آشنایی با جاوا اسکریپت
+  khanhe_name: آشنایی با جاوا اسکریپت
+  khanfr_name: آشنایی با جاوا اسکریپت
+  khanpl_name: آشنایی با جاوا اسکریپت
+  tynker_name: بازی خود را بسازید
+  scratch_name: با کد نویسی خلاق شوید
   lightbot_name: Lightbot
-  thinkersmith_name: "دوستان رباتی من"
-  condcards_name: "شرطی ها با کارتها"
+  thinkersmith_name: دوستان رباتی من
+  condcards_name: شرطی ها با کارتها
   lightbotintl_name: Lightbot
-  codehs_name: "یادگیری کد با کارل سگ"
+  codehs_name: یادگیری کد با کارل سگ
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: "میمون کد نویس"
-  codeavengers_name: "ساخت بازی با جاوا اسکریپت"
-  processing_name: "نقاشی با کد"
-  robomind_name: "برنامه‌نویسیِ یک ربات مجازی"
-  groklearning_name: "الیزا، ربات سخن‌گوی دکتر"
-  quorum_name: "برنامه نویسی قابل دسترس (با پشتیبانی تصویرخوان)"
-  codespark_name: "فوس (خوش آمد گویی پیش دبستانیها)"
+  codemonkey_name: میمون کد نویس
+  codeavengers_name: ساخت بازی با جاوا اسکریپت
+  processing_name: نقاشی با کد
+  robomind_name: برنامه‌نویسیِ یک ربات مجازی
+  groklearning_name: الیزا، ربات سخن‌گوی دکتر
+  quorum_name: برنامه نویسی قابل دسترس (با پشتیبانی تصویرخوان)
+  codespark_name: فوس (خوش آمد گویی پیش دبستانیها)
   kodable_name: Kodable(خوش آمد گویی پیش دبستانیها)
   tynkerapp_name: Tynker - در تبلت
-  robomindnl_name: "برنامه‌نویسیِ یک ربات مجازی"
-  flappy_name: "درست کردن بازی فلاپی"
+  robomindnl_name: برنامه‌نویسیِ یک ربات مجازی
+  flappy_name: درست کردن بازی فلاپی
   bitsbox_name: Bitsbox - یک بازی بسازید
-  makeschool_name: "یک بازی آیفون در مرورگر خود بسازید!"
+  makeschool_name: یک بازی آیفون در مرورگر خود بسازید!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor ساعت کد نویسی
-  blockly_name: "بلوکی"
+  blockly_name: بلوکی
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: "سنگ، کاغذ، قیچی"
-  hourofcode_name: "هزارتوی کلاسیک"
-  playlab_name: "آزمایشگاه بازی"
-  infinity_name: "آزمایشگاه بازی نامحدود"
-  artist_name: "هنرمند"
+  projguts_name: سنگ، کاغذ، قیچی
+  hourofcode_name: هزارتوی کلاسیک
+  playlab_name: آزمایشگاه بازی
+  infinity_name: آزمایشگاه بازی نامحدود
+  artist_name: هنرمند
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: "مارکو را اجرا کنید!"
+  allcancode_name: مارکو را اجرا کنید!
   csfirst_name: CS First
-  boxisland_name: "جعبه جزیره"
+  boxisland_name: جعبه جزیره
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
@@ -1325,56 +1325,56 @@
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
-  codeorg_gradelevel: "سنین 4 تا 104"
-  codeintl_gradelevel: "سنین 4 تا 104"
+  codeorg_gradelevel: سنین 4 تا 104
+  codeintl_gradelevel: سنین 4 تا 104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: "مدارس راهنمایی به بالا"
-  khanes_gradelevel: "مدارس راهنمایی به بالا"
-  khanpt_gradelevel: "مدارس راهنمایی به بالا"
-  khanhe_gradelevel: "مدارس راهنمایی به بالا"
-  khanfr_gradelevel: "مدارس راهنمایی به بالا"
-  khanpl_gradelevel: "مدارس راهنمایی به بالا"
-  tynker_gradelevel: "سنین 5 تا 13"
-  scratch_gradelevel: "سنین بالای 8"
-  lightbot_gradelevel: "همه‌ی سنین"
-  thinkersmith_gradelevel: "همه‌ی سنین"
-  condcards_gradelevel: "سنین 8-12"
-  lightbotintl_gradelevel: "همه‌ی سنین"
-  codehs_gradelevel: "دبیرستان"
-  codecademy_gradelevel: "دبیرستان"
-  codecombat_gradelevel: "مدارس راهنمایی به بالا"
-  codemonkey_gradelevel: "مدارس راهنمایی به بالا"
-  codeavengers_gradelevel: "مدارس راهنمایی به بالا"
-  processing_gradelevel: "دبیرستان"
-  robomind_gradelevel: "سنین 8-13"
-  groklearning_gradelevel: "مدارس راهنمایی به بالا"
-  quorum_gradelevel: "مدارس راهنمایی به بالا"
-  codespark_gradelevel: "دبستان"
-  kodable_gradelevel: "دبستان"
-  tynkerapp_gradelevel: "سنین 5 تا 13"
-  robomindnl_gradelevel: "سنین 8-13"
-  flappy_gradelevel: "سنین 4 تا 104"
-  bitsbox_gradelevel: "دبستان"
-  makeschool_gradelevel: "دبیرستان"
-  touchdevelop_gradelevel: "دبیرستان"
-  appinventor_gradelevel: "مدارس راهنمایی به بالا"
-  blockly_gradelevel: "همه‌ی سنین"
-  thinkersmith2_gradelevel: "سنین بالای 8"
-  kodableunplugged_gradelevel: "سنین 8-13"
-  projguts_gradelevel: "سنین 10-13"
-  hourofcode_gradelevel: "سنین 4 تا 104"
-  frozen_gradelevel: "سنین بالای 8"
-  starwars_gradelevel: "سنین 4 تا 104"
-  playlab_gradelevel: "سنین 4 تا 104"
-  infinity_gradelevel: "سنین 4 تا 104"
-  artist_gradelevel: "سنین بالای 8"
-  monstercoding_gradelevel: "سنین 5 تا 13"
-  allcancode_gradelevel: "سنین 5-10"
-  csfirst_gradelevel: "سنین 9-14"
-  boxisland_gradelevel: "دبستان"
-  codesters_gradelevel: "سنین 12-14"
-  texasinstruments_gradelevel: "سنین 13-16"
-  teacherled_gradelevel: "سنین 5 +"
+  khan_gradelevel: مدارس راهنمایی به بالا
+  khanes_gradelevel: مدارس راهنمایی به بالا
+  khanpt_gradelevel: مدارس راهنمایی به بالا
+  khanhe_gradelevel: مدارس راهنمایی به بالا
+  khanfr_gradelevel: مدارس راهنمایی به بالا
+  khanpl_gradelevel: مدارس راهنمایی به بالا
+  tynker_gradelevel: سنین 5 تا 13
+  scratch_gradelevel: سنین بالای 8
+  lightbot_gradelevel: همه‌ی سنین
+  thinkersmith_gradelevel: همه‌ی سنین
+  condcards_gradelevel: سنین 8-12
+  lightbotintl_gradelevel: همه‌ی سنین
+  codehs_gradelevel: دبیرستان
+  codecademy_gradelevel: دبیرستان
+  codecombat_gradelevel: مدارس راهنمایی به بالا
+  codemonkey_gradelevel: مدارس راهنمایی به بالا
+  codeavengers_gradelevel: مدارس راهنمایی به بالا
+  processing_gradelevel: دبیرستان
+  robomind_gradelevel: سنین 8-13
+  groklearning_gradelevel: مدارس راهنمایی به بالا
+  quorum_gradelevel: مدارس راهنمایی به بالا
+  codespark_gradelevel: دبستان
+  kodable_gradelevel: دبستان
+  tynkerapp_gradelevel: سنین 5 تا 13
+  robomindnl_gradelevel: سنین 8-13
+  flappy_gradelevel: سنین 4 تا 104
+  bitsbox_gradelevel: دبستان
+  makeschool_gradelevel: دبیرستان
+  touchdevelop_gradelevel: دبیرستان
+  appinventor_gradelevel: مدارس راهنمایی به بالا
+  blockly_gradelevel: همه‌ی سنین
+  thinkersmith2_gradelevel: سنین بالای 8
+  kodableunplugged_gradelevel: سنین 8-13
+  projguts_gradelevel: سنین 10-13
+  hourofcode_gradelevel: سنین 4 تا 104
+  frozen_gradelevel: سنین بالای 8
+  starwars_gradelevel: سنین 4 تا 104
+  playlab_gradelevel: سنین 4 تا 104
+  infinity_gradelevel: سنین 4 تا 104
+  artist_gradelevel: سنین بالای 8
+  monstercoding_gradelevel: سنین 5 تا 13
+  allcancode_gradelevel: سنین 5-10
+  csfirst_gradelevel: سنین 9-14
+  boxisland_gradelevel: دبستان
+  codesters_gradelevel: سنین 12-14
+  texasinstruments_gradelevel: سنین 13-16
+  teacherled_gradelevel: سنین 5 +
   course1_gradelevel: Ages 4-6
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
@@ -1386,117 +1386,116 @@
   coursee_gradelevel: Grade 9+
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ages 10-18
-  codeorg_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  codeintl_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  thinkersmithspanish_platformtext: "آنپلاگد"
-  khan_platformtext: "مرورگرهای وب مدرن"
-  khanes_platformtext: "مرورگرهای وب مدرن"
-  khanpt_platformtext: "مرورگرهای وب مدرن"
-  khanhe_platformtext: "مرورگرهای وب مدرن"
-  khanfr_platformtext: "مرورگرهای وب مدرن"
-  khanpl_platformtext: "مرورگرهای وب مدرن"
-  tynker_platformtext: "مرورگرهای وب مدرن"
-  scratch_platformtext: "تنها مرورگر های وب دسک تاپ (نه تبلت)"
-  lightbot_platformtext: "تمام مرورگر ها و iOS، اندروید، یا کنسول های بازی"
-  thinkersmith_platformtext: "آنپلاگد"
-  condcards_platformtext: "آنپلاگد"
+  codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  thinkersmithspanish_platformtext: آنپلاگد
+  khan_platformtext: مرورگرهای وب مدرن
+  khanes_platformtext: مرورگرهای وب مدرن
+  khanpt_platformtext: مرورگرهای وب مدرن
+  khanhe_platformtext: مرورگرهای وب مدرن
+  khanfr_platformtext: مرورگرهای وب مدرن
+  khanpl_platformtext: مرورگرهای وب مدرن
+  tynker_platformtext: مرورگرهای وب مدرن
+  scratch_platformtext: تنها مرورگر های وب دسک تاپ (نه تبلت)
+  lightbot_platformtext: تمام مرورگر ها و iOS، اندروید، یا کنسول های بازی
+  thinkersmith_platformtext: آنپلاگد
+  condcards_platformtext: آنپلاگد
   lightbotintl_platformtext: iOS, Android  (یا مرورگر وب)
-  codehs_platformtext: "مرورگر های به روز. (پیشرفت دوره نیاز به پول دارد)"
-  codecademy_platformtext: "مرورگرهای وب مدرن. نرم افزار آندروید و iOS"
-  codecombat_platformtext: "مرورگر های وب به روز (پیشرفت دوره نیاز به پول دارد)"
-  codemonkey_platformtext: "مرورگرهای وب مدرن"
-  codeavengers_platformtext: "مرورگرهای وب مدرن"
-  processing_platformtext: "مرورگرهای وب مدرن"
-  robomind_platformtext: "مرورگرهای وب مدرن، وب همراه"
-  groklearning_platformtext: "مرورگرهای وب مدرن"
-  quorum_platformtext: "مرورگر های به روز. پشتیبانی شده برای خواندن صفحه نمایش(تکنولوژی
-    برای کمک به نابینایان)"
+  codehs_platformtext: مرورگر های به روز. (پیشرفت دوره نیاز به پول دارد)
+  codecademy_platformtext: مرورگرهای وب مدرن. نرم افزار آندروید و iOS
+  codecombat_platformtext: مرورگر های وب به روز (پیشرفت دوره نیاز به پول دارد)
+  codemonkey_platformtext: مرورگرهای وب مدرن
+  codeavengers_platformtext: مرورگرهای وب مدرن
+  processing_platformtext: مرورگرهای وب مدرن
+  robomind_platformtext: مرورگرهای وب مدرن، وب همراه
+  groklearning_platformtext: مرورگرهای وب مدرن
+  quorum_platformtext: مرورگر های به روز. پشتیبانی شده برای خواندن صفحه نمایش(تکنولوژی
+    برای کمک به نابینایان)
   codespark_platformtext: iOS, Android  (یا مرورگر وب)
   kodable_platformtext: iPad
-  tynkerapp_platformtext: "آی پد و تبلت های آندرویدی"
-  robomindnl_platformtext: "مرورگرهای وب مدرن، وب همراه"
-  flappy_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  bitsbox_platformtext: "مرورگرهای وب مدرن"
-  makeschool_platformtext: "مرورگرهای وب مدرن"
-  touchdevelop_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های"
-  appinventor_platformtext: "مرورگرهای مدرن + آندروید"
-  blockly_platformtext: "تنها مرورگرهای مدرن "
-  thinkersmith2_platformtext: "آنپلاگد"
-  kodableunplugged_platformtext: "آنپلاگد"
-  projguts_platformtext: "آنپلاگد"
-  hourofcode_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  frozen_platformtext: "مرورگرهای جدید +تبلت"
-  starwars_platformtext: "مرورگرهای جدید +تبلت"
-  playlab_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  monstercoding_platformtext: "مرورگرهای وب مدرن, iOS, اندروید"
-  allcancode_platformtext: "مرورگرهای وب مدرن iOS"
-  csfirst_platformtext: "مرورگرهای وب مدرن"
-  boxisland_platformtext: "اندورید, ایفون"
-  codesters_platformtext: "مرورگرهای وب مدرن"
-  texasinstruments_platformtext: "ماشین حساب TI"
-  teacherled_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  codeorg_shortdescription: "کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!"
-  codeintl_shortdescription: "کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!"
+  tynkerapp_platformtext: آی پد و تبلت های آندرویدی
+  robomindnl_platformtext: مرورگرهای وب مدرن، وب همراه
+  flappy_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  bitsbox_platformtext: مرورگرهای وب مدرن
+  makeschool_platformtext: مرورگرهای وب مدرن
+  touchdevelop_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های
+  appinventor_platformtext: مرورگرهای مدرن + آندروید
+  blockly_platformtext: 'تنها مرورگرهای مدرن '
+  thinkersmith2_platformtext: آنپلاگد
+  kodableunplugged_platformtext: آنپلاگد
+  projguts_platformtext: آنپلاگد
+  hourofcode_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  frozen_platformtext: مرورگرهای جدید +تبلت
+  starwars_platformtext: مرورگرهای جدید +تبلت
+  playlab_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  monstercoding_platformtext: مرورگرهای وب مدرن, iOS, اندروید
+  allcancode_platformtext: مرورگرهای وب مدرن iOS
+  csfirst_platformtext: مرورگرهای وب مدرن
+  boxisland_platformtext: اندورید, ایفون
+  codesters_platformtext: مرورگرهای وب مدرن
+  texasinstruments_platformtext: ماشین حساب TI
+  teacherled_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  codeorg_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
+  codeintl_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  khanes_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  khanpt_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  khanhe_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  khanfr_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  khanpl_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  tynker_shortdescription: "کد نویسی را با حل کردن معما های جالب یاد بگیرید و بازی
-    های موبایل خودتان را بسازید."
-  scratch_shortdescription: "بازی های تعاملی، داستان، و انیمیشن بسازید."
+  khan_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  khanes_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  khanpt_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  khanhe_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  khanfr_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  khanpl_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  tynker_shortdescription: کد نویسی را با حل کردن معما های جالب یاد بگیرید و بازی
+    های موبایل خودتان را بسازید.
+  scratch_shortdescription: بازی های تعاملی، داستان، و انیمیشن بسازید.
   lightbot_shortdescription: Lightbot را برای حل معما ها با تابع ها و حلقه ها برنامه
     ریزی کنید!
-  thinkersmith_shortdescription: "آموزش بدون اتصال برای یک گروه با هیچ وسیله ای"
-  condcards_shortdescription: "یادگیری الگوریتم با یک دسته کارت "
-  lightbotintl_shortdescription: "بازی برای آموزش مفاهیم برنامه نویسی"
-  codehs_shortdescription: "کد نویسی را با کارل سگه شروع کنید، یک معرف بصری و جالب
-    به برنامه نویسی!"
-  codecademy_shortdescription: "برنامه نویسی با JavaScrip، را در یک مرورگر وب یاد
-    بگیرید"
-  codecombat_shortdescription: "با غول ها بجنگید تا پیتون یا جاوا اسکریپت را در این
-    بازی برنامه نویسی حماسی یاد بگیرید!"
-  codemonkey_shortdescription: "دانش آموزان برنامه مینویسند برای میمونی که موز میگیرد"
-  codeavengers_shortdescription: "برنامه نویسی با JavaScrip، را در یک مرورگر وب یاد
-    بگیرید"
-  processing_shortdescription: "آموزش یک ساعت در زبان پردازش"
-  robomind_shortdescription: "کدنویسی برای ربات مجازی"
-  groklearning_shortdescription: "به الیزا chatbot را یاد بدهید تا دوستانتان را گول
-    بزنید تا فکر کنند او انسان است!"
-  quorum_shortdescription: "به مری در یک تور هدایت شده که در آن زبان برنامه نویسی
-    کوروم را یاد می گیرد بپیوندید."
-  codespark_shortdescription: "فوز یک بازی جالب، و دوستانه با کودک برای آموختن درباره
-    ی برنامه نویسی است."
-  kodable_shortdescription: "یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه نویسی
-    کامپیوتر"
-  tynkerapp_shortdescription: "لذت یادگیری برنامه نویسی به وسیله حل  پازل سرگرم کننده
-    ."
-  robomindnl_shortdescription: "کدنویسی برای ربات مجازی"
-  flappy_shortdescription: "بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی"
-  bitsbox_shortdescription: "کد یک سری برنامه را، با استفاده از جاوا اسکریپت حقیقی
-    برای بازی و اشتراک بنویسید."
+  thinkersmith_shortdescription: آموزش بدون اتصال برای یک گروه با هیچ وسیله ای
+  condcards_shortdescription: 'یادگیری الگوریتم با یک دسته کارت '
+  lightbotintl_shortdescription: بازی برای آموزش مفاهیم برنامه نویسی
+  codehs_shortdescription: کد نویسی را با کارل سگه شروع کنید، یک معرف بصری و جالب
+    به برنامه نویسی!
+  codecademy_shortdescription: برنامه نویسی با JavaScrip، را در یک مرورگر وب یاد بگیرید
+  codecombat_shortdescription: با غول ها بجنگید تا پیتون یا جاوا اسکریپت را در این
+    بازی برنامه نویسی حماسی یاد بگیرید!
+  codemonkey_shortdescription: دانش آموزان برنامه مینویسند برای میمونی که موز میگیرد
+  codeavengers_shortdescription: برنامه نویسی با JavaScrip، را در یک مرورگر وب یاد
+    بگیرید
+  processing_shortdescription: آموزش یک ساعت در زبان پردازش
+  robomind_shortdescription: کدنویسی برای ربات مجازی
+  groklearning_shortdescription: به الیزا chatbot را یاد بدهید تا دوستانتان را گول
+    بزنید تا فکر کنند او انسان است!
+  quorum_shortdescription: به مری در یک تور هدایت شده که در آن زبان برنامه نویسی کوروم
+    را یاد می گیرد بپیوندید.
+  codespark_shortdescription: فوز یک بازی جالب، و دوستانه با کودک برای آموختن درباره
+    ی برنامه نویسی است.
+  kodable_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه نویسی
+    کامپیوتر
+  tynkerapp_shortdescription: لذت یادگیری برنامه نویسی به وسیله حل  پازل سرگرم کننده
+    .
+  robomindnl_shortdescription: کدنویسی برای ربات مجازی
+  flappy_shortdescription: بازی خودتان را بسازید- فلپی برد, شرک,یا زیردریایی
+  bitsbox_shortdescription: کد یک سری برنامه را، با استفاده از جاوا اسکریپت حقیقی
+    برای بازی و اشتراک بنویسید.
   makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
     your monster new moves!
-  touchdevelop_shortdescription: "حل کردن پازل, ایجاد بازی, و یادگیری برنامه تویسی
-    همه ی این ها بر روی موبایل شما."
-  appinventor_shortdescription: "برنامه خودت را بساز( فقط آندروید)"
-  blockly_shortdescription: "دانلود فایل زیپ برای یادگیری به صورت  آفلاین"
-  thinkersmith2_shortdescription: "یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای
-    نشان دادن اطلاعات استفاده میکنند."
-  kodableunplugged_shortdescription: "یک تمرین بدون اتصال جالب"
-  projguts_shortdescription: "مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی
-    امتحان کنید"
-  hourofcode_shortdescription: "کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!"
-  frozen_shortdescription: "بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
-    و زیبایی یخ را کشف می کنند استفاده کنیم."
+  touchdevelop_shortdescription: حل کردن پازل, ایجاد بازی, و یادگیری برنامه تویسی
+    همه ی این ها بر روی موبایل شما.
+  appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
+  blockly_shortdescription: دانلود فایل زیپ برای یادگیری به صورت  آفلاین
+  thinkersmith2_shortdescription: یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای
+    نشان دادن اطلاعات استفاده میکنند.
+  kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
+  projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
+    کنید
+  hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
+  frozen_shortdescription: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
+    و زیبایی یخ را کشف می کنند استفاده کنیم.
   starwars_shortdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
-  playlab_shortdescription: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
-  infinity_shortdescription: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی
-    بازیگران شخصیت های دیزنی بی نهایت."
-  artist_shortdescription: "با نقاش چند عکس و طرح باحال بکش!"
+  playlab_shortdescription: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+  infinity_shortdescription: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+    شخصیت های دیزنی بی نهایت.
+  artist_shortdescription: با نقاش چند عکس و طرح باحال بکش!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
@@ -1528,53 +1527,53 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
-  codeorg_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
+  codeorg_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
     شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
-    است."
-  codeintl_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
+    است.
+  codeintl_longdescription: با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر
     را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک
     زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری،
     شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس
-    است."
+    است.
   thinkersmithspanish_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده
     دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون
     این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
     ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
-  khan_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+  khan_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
     اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
-    همکلاسی هایتان انجام دهید!"
-  khanes_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
-    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
-  khanpt_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
-    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
-  khanhe_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
-    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
-  khanfr_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
-    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
-  khanpl_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
-    اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
-  tynker_longdescription: "بازی های خودتان را بسازید و با دوستانتان به اشتراک بگذارید!
+    همکلاسی هایتان انجام دهید!
+  khanes_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  khanpt_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  khanhe_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  khanfr_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  khanpl_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید، اصول
+    اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با کمک
+    همکلاسی هایتان انجام دهید!
+  tynker_longdescription: بازی های خودتان را بسازید و با دوستانتان به اشتراک بگذارید!
     معما های جالب کد نویسی را حل کنید و مفاهیم برنامه نویسی را در هر سطح یاد بگیرید.
     بازی ها را با شخصیت های انیمیشنی، سطوح چندگانه و امکانات غنی شخصی سازی کنید. بازی
     خود را با استفاده از فیزیک واقعی کنید. کد را به عنوان بلوک ها ی بصری یا جاوا اسکریپت
     ببینید. بازی های خود را روی آی پد ها یا تبلت های اندروید با خود ببرید. بیش از
-    12 فعالیت جالب برای انتخاب!"
-  scratch_longdescription: "با اسکرچ، شما می توانید بازی های تعاملی، داستان ها، انیمیشن
+    12 فعالیت جالب برای انتخاب!
+  scratch_longdescription: با اسکرچ، شما می توانید بازی های تعاملی، داستان ها، انیمیشن
     های &mdash; خودتان را بسازید و آن ها را با دوستانتان به اشتراک بگذارید. با انیمیشنی
     کردن نامتان، ساختن یک کارت پستال برای تعطیلات، یا درست کردن یک بازی پینگ پنگ دو
-    بعدی شروع کنید."
-  lightbot_longdescription: "ربات لامپی را هدایت کنید تا تمام کاشی های آبی را روشن
+    بعدی شروع کنید.
+  lightbot_longdescription: ربات لامپی را هدایت کنید تا تمام کاشی های آبی را روشن
     کند! ربات لامپی یک بازی معمایی است که از مکانیک برنامه نویسی بازی استفاده می کند
     تا به بازی کنان اجازه دهد یک فهم عملی از کد نویسی ابتدایی بدست آورند. یاد بگیرید
     که دستورالعمل ها را بخش بخش کنید، تابع بنویسید، و حلقه ها را برای حل کردن سطوح
-    بهینه کنید. ایده آل برای تمام سنین."
+    بهینه کنید. ایده آل برای تمام سنین.
   thinkersmith_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده دانش
     آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون این
     که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار ها
@@ -1584,103 +1583,103 @@
   condcards_longdescription: درباره ی الگوریتم ها و جملات شرطی در این فعالیت "بدون
     اتصال" با استفاده از یک دسته کارت بیاموزید. دانش آموزان این فعالیت را در گروه
     ها انجام می دهند، و به یک دسته کارت در هر گروه نیاز دارند.
-  lightbotintl_longdescription: "منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
+  lightbotintl_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
     نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب)
     شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید،
-    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!"
-  codehs_longdescription: "دادن دستورات به یک کامپیوتر، که تمام برنامه نویسی درباره
+    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
+  codehs_longdescription: دادن دستورات به یک کامپیوتر، که تمام برنامه نویسی درباره
     ی آن است، درست مانند دستور دادن به یک سگ است. با کارل سگه یاد بگیرید که چگونه
     کد بنویسید&mdash; یک معرفی جالب، قابل دسترس، و بصری برای برنامه نویسی که مباحث
     بنیادی مانند دستورات و تابع ها را به افراد کاملا مبتدی آموزش می دهد. آموزش توسط
     دانش آموزان هدایت می شود اما معلمان می توانند برای دسترسی به ابزار های معلمان
-    ثبت نام کنند و موفقیت دانش آموزان را دنبال کنند!"
-  codecademy_longdescription: "آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط دانش
+    ثبت نام کنند و موفقیت دانش آموزان را دنبال کنند!
+  codecademy_longdescription: آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط دانش
     آموز در اصول اولیه ی  CS از طریق جاوا اسکریپت است که توسط ده ها میلیون دانش آموز
     در سراسر دنیا مورد استفاده قرار میگیرد. ما یک تجربه ی یک ساعت کد نویسی بدون زحمت
     با امتحانات مرتبط، اسلاید، و در پایان یک پروژه کامل برای دانش آموزان فراهم کرده
-    ایم."
-  codecombat_longdescription: "با غول ها بجنگید تا پیتون یا جاوا اسکریپت را در این
-    بازی برنامه نویسی حماسی یاد بگیرید!"
+    ایم.
+  codecombat_longdescription: با غول ها بجنگید تا پیتون یا جاوا اسکریپت را در این
+    بازی برنامه نویسی حماسی یاد بگیرید!
   codemonkey_longdescription: 'CodeMonkey یک بازی آنلاین است که برنامه نویسی را در
     یک زبان برنامه نویسی واقعی آموزش می دهد! دانش آموزان یک میمون را برای گرفتن موز
     برنامه ریزی می کنند که در هر مرحله به صورت جزئی پیچیده تر می شود. آن ها با هر
     راه حل ستاره امتیاز می گیرند و می توانند با یک کلیک آن را به اشتراک بگذارند. '
-  codeavengers_longdescription: "یک بازی دو نفره دو بعدی با زاویه دید از بالا با جاوا
+  codeavengers_longdescription: یک بازی دو نفره دو بعدی با زاویه دید از بالا با جاوا
     اسکریپت در 10 عمل کوتاه بسازید. سپس به آموختن چند اصل برنامه نویسی (متغیر ها و
     جملات شرطی) ادامه دهید همان طور که یک امتحان برای اشتراک با دوستان می سازید. در
     طول مسیر همان طور که برای رسیدن به صدر رهبران کلاس رقابت می کنید امتیاز و مدال
-    بدست آورید."
-  processing_longdescription: "مقدمه ای بر برنامه نویسی در زمینه ی هنر های بصری با
+    بدست آورید.
+  processing_longdescription: مقدمه ای بر برنامه نویسی در زمینه ی هنر های بصری با
     استفاده از زبان برنامه نویسی پردازشی. درس های ویدئویی کوتاه تمرین های کد نویسی
-    را معرفی می کنند که به طراحی یک برنامه نقاشی تعاملی می انجامند"
-  robomind_longdescription: "دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن
+    را معرفی می کنند که به طراحی یک برنامه نقاشی تعاملی می انجامند
+  robomind_longdescription: 'دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن
     ربات مجازی خودشان می آموزند. آموزش آنلاین با ارائه های کوتاه، فیلم ها، امتحانات
-    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. "
+    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
   groklearning_longdescription: با استفاده از زبان برنامه نویسی پایتون یک chatbot
     به نام "الیزا" بسازید تا به عنوان یک روان درمانگر عمل کند. شما به الیزا یاد میدهید
     چه بگوید و چگونه صحیح صحبت کند. آیا او میتواند دوستان شما را فریب بدهد به اینکه
     فکر کنند اون یک انسان است و نه یک رایانه؟
-  quorum_longdescription: "این آموزش برای افراد با مشکلات بینایی قابل دسترس است، و
+  quorum_longdescription: این آموزش برای افراد با مشکلات بینایی قابل دسترس است، و
     با صفحه خوان ها کار میکند. با یک تور به مری بپیوندید وقتی که به عنوان برنامه نویس
     به یک آزمایشکاه زیست شناسی ملحق می شود و زبان برنامه نویسی Quorum را می آموزد.
-    این آموزش هدایت شده توسط دانش آموز با مثال های آنلاین است."
+    این آموزش هدایت شده توسط دانش آموز با مثال های آنلاین است.
   codespark_longdescription: Foos یک راه جالب و سازگار با کودک برای آموختن درباره
     ی برنامه نویسی کامپیوتر است. شخصیت های جذاب را برای حل کردن معما ها برنامه ریزی
     کنید و دنیای مجازی را زنده کنید. بازی "بدون کلمه" است پس همه می توانند بازی کنند!
   kodable_longdescription: Kodable یک بازی خود هدایت آی پد است که کودکان بالای 5 سال
     را با اصول اولیه ی برنامه نویسی آشنا می کند. داشتن پدر یا مادر یا یک معلم در کنار
     کودک رضایت بخش است، اما ضروری نیست.
-  tynkerapp_longdescription: "برنامه نویسی را از طریق حل پازل های بامزه یاد بگیرید.
+  tynkerapp_longdescription: برنامه نویسی را از طریق حل پازل های بامزه یاد بگیرید.
     به راحتی بازی و داستان با استفاده از گرافیک های تم دار بسازید، بیش از ۱۰ کیت بازی
     و شخصیت های قابل تنظیم. به هیچ ارتباط اینترنتی نیاز ندارید. علاوه بر آن شما می
-    توانید به چیز هایی که خلق کرده اید در اینترنت درترسی پیدا کنید."
-  robomindnl_longdescription: "دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن
+    توانید به چیز هایی که خلق کرده اید در اینترنت درترسی پیدا کنید.
+  robomindnl_longdescription: 'دانش آموزان اصول اولیه برنامه نویسی را با کنترل کردن
     ربات مجازی خودشان می آموزند. آموزش آنلاین با ارائه های کوتاه، فیلم ها، امتحانات
-    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. "
-  flappy_longdescription: "با استفاده از برنامه نویسی به طریق کشیدن-و-انداختن بازی
+    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
+  flappy_longdescription: با استفاده از برنامه نویسی به طریق کشیدن-و-انداختن بازی
     پرنده ی بال زن (فلپی برد) مخصوص خود را بسازید. و آن را تنظیم کنید تا قیافه ی دیگری
     داشته باشد (کوسه ی بال زن، بابانوئل بال زن،‌ یا هر چیز دیگر). بازی را با یک کلیک
-    به گوشی خود انتقال بدهید."
-  bitsbox_longdescription: "تبلت مجازی کاملا شخصی خودتان را سفارشی کنید، سپس کد یک
+    به گوشی خود انتقال بدهید.
+  bitsbox_longdescription: تبلت مجازی کاملا شخصی خودتان را سفارشی کنید، سپس کد یک
     سری برنامه برای بازی و به اشتراک گذاری را بنویسید. راهنمایی های ساده برنامه نویسی
     جاوا اسکریپت حقیقی را حتی برای کودکان امکان پذیر ساخته، و هرچه ماهرتر باشید جلوتر
-    خواهید رفت."
+    خواهید رفت.
   makeschool_longdescription: Learn to code by making an iPhone game using a brand
     new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
     to use variables, methods, and objects to help your monster win!
-  touchdevelop_longdescription: "ویرایشگر touch-friendly شما را در ایجاد هنر پیکسلی،
-    حل معمای خرس، یا ساختن بازی پرنده ی جهنده ی خودتان هدایت خواهد کرد. "
-  appinventor_longdescription: "ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر
+  touchdevelop_longdescription: 'ویرایشگر touch-friendly شما را در ایجاد هنر پیکسلی،
+    حل معمای خرس، یا ساختن بازی پرنده ی جهنده ی خودتان هدایت خواهد کرد. '
+  appinventor_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را در مسیر
     ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این ساعت کد
     نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید برای ساختن
     برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط خودتان
     را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی که
-    کلاس را هدایت می کنند مناسب هستند."
-  blockly_longdescription: "کامپیوتر هایی با اینترنت کند( یا بدون اینترنت) دارید؟
-    آموزش های بلوکی که قبل از آموزش های Code.org بودند را دانلود کنید- یک فایل فشرده
-    ی 3 مگابایتی می تواند در هر کامپیوتری بارگذاری شود یا از روی یک حافظه فلش استفاده
-    شود"
-  thinkersmith2_longdescription: "دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق
+    کلاس را هدایت می کنند مناسب هستند.
+  blockly_longdescription: کامپیوتر هایی با اینترنت کند( یا بدون اینترنت) دارید؟ آموزش
+    های بلوکی که قبل از آموزش های Code.org بودند را دانلود کنید- یک فایل فشرده ی 3
+    مگابایتی می تواند در هر کامپیوتری بارگذاری شود یا از روی یک حافظه فلش استفاده
+    شود
+  thinkersmith2_longdescription: دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق
     دودویی، با عملکرد روشن و خاموش می آموزند. در پایان، بچه های کلاس می توانند حرف
-    اول اسم و فامیلشان را کد کنند تا با خودشان به خانه ببرند."
-  kodableunplugged_longdescription: "طراحی شده برای استفاده با کاغذ ساده، دیوانگی
+    اول اسم و فامیلشان را کد کنند تا با خودشان به خانه ببرند.
+  kodableunplugged_longdescription: 'طراحی شده برای استفاده با کاغذ ساده، دیوانگی
     fuzzfamily مقدمه ای بر منطق برنامه نویسی برای کودکان 5 سال به بالا است. معلم باید
     بازی را توضیح دهد، سپس دانش آموزان برنامه یک شریک را می نویسند تا درس یک مانع
-    ساده را کامل کنند. "
+    ساده را کامل کنند. '
   projguts_longdescription: این فعالیت " بدون اتصال" به دانش آموزان کمک می کند با
     بازی کردن گونه های مختلف سنگ، کاغذ، قیچی، و مشاهده ی نتایج به عنوان تجربه های
     مدل سازی متفاوت، بیاموزند مدل سازی و شبیه سازی چگونه کار می کند.
-  hourofcode_longdescription: "جا نگهدار برای code.org/hoc جدید"
-  frozen_longdescription: "بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
+  hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
+  frozen_longdescription: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
     آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی
     را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود
-    به اشتراک بگذاری!"
+    به اشتراک بگذاری!
   starwars_longdescription: Learn to program droids, and create your own Star Wars
     game in a galaxy far, far away.
-  playlab_longdescription: "با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات،
+  playlab_longdescription: با Play Lab یک داستان خلق کنید یا یک بازی بسازید! حیوانات،
     دزدان دریایی، زامبی ها، نینجا ها، و شخصیت های بسیار بیشتری را مجبور به حرکت کنید،
-    صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!"
+    صدا بسازید، امتیاز بگیرید، و حتی گلوله های آتشی پرتاب کنید!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
     offers a fun filled self guided adventure that teaches several key programming
     concepts to children. Each block based activity builds on the previous, introducing
@@ -1712,194 +1711,193 @@
     activities that teach the basics of computer science. To help teachers find inspiration,
     we collected and curated one-hour teacher-led lesson and activity plans designed
     for different subject areas for Hour of Code veterans.
-  codeorg_beyond_name: "معرفی علوم کامپیوتر  (کلاس K-8)"
-  khan_beyond_name: "یادگیری برنامه نویسی کامپیوتر"
-  tynker_beyond_name: "یادگیری برنامه نویسی در خانه"
-  scratch_beyond_name: "با کد نویسی خلاق شوید"
+  codeorg_beyond_name: معرفی علوم کامپیوتر  (کلاس K-8)
+  khan_beyond_name: یادگیری برنامه نویسی کامپیوتر
+  tynker_beyond_name: یادگیری برنامه نویسی در خانه
+  scratch_beyond_name: با کد نویسی خلاق شوید
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: "اسکرچ جی آر برای پیش خوانندگان"
+  scratchjr_beyond_name: اسکرچ جی آر برای پیش خوانندگان
   hopscotch_beyond_name: 'Hopscotch:  بر روی iPad خودتان برنامه نویسی کنید'
-  pocketcode_beyond_name: "کد جیبی"
-  groklearning_beyond_name: "یادگیری برنامه نویسی پایتون"
-  hacketyhack_beyond_name: "یادگیری روبی"
-  robomind_beyond_name: "برنامه‌نویسیِ یک ربات مجازی"
-  makeschool_beyond_name: "یک بازی آیفون در مرورگر خود بسازید!"
+  pocketcode_beyond_name: کد جیبی
+  groklearning_beyond_name: یادگیری برنامه نویسی پایتون
+  hacketyhack_beyond_name: یادگیری روبی
+  robomind_beyond_name: برنامه‌نویسیِ یک ربات مجازی
+  makeschool_beyond_name: یک بازی آیفون در مرورگر خود بسازید!
   appinventor_beyond_name: AppInventor ساعت کد نویسی
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "یادگیری کد با کارل سگ"
-  udemy_beyond_name: "دوره های برنامه نویسی آنلاین"
-  lynda_beyond_name: "دوره های برنامه نویسی آنلاین"
-  edx_beyond_name: "کلاس دانشگاه هاروارد CS50"
-  coursera_beyond_name: "کلاس 101 حسابهای استنفورد"
+  codehs_beyond_name: یادگیری کد با کارل سگ
+  udemy_beyond_name: دوره های برنامه نویسی آنلاین
+  lynda_beyond_name: دوره های برنامه نویسی آنلاین
+  edx_beyond_name: کلاس دانشگاه هاروارد CS50
+  coursera_beyond_name: کلاس 101 حسابهای استنفورد
   udacity_beyond_name: CS 101
   teachingtree_beyond_name: " دوره های آنلاین دانشگاه"
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "یادگیری اچ تی ام ال"
-  codeavengers_beyond_name: "یاد بگیرید وبسایت بسازید"
+  w3schools_beyond_name: یادگیری اچ تی ام ال
+  codeavengers_beyond_name: یاد بگیرید وبسایت بسازید
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
   arduino_beyond_name: Arduino با Sparkfun
-  processing_beyond_name: "برنامه با پردازش"
+  processing_beyond_name: برنامه با پردازش
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "سنین 4 تا 104"
-  khan_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  tynker_beyond_gradelevel: "سنین 5 تا 13"
-  scratch_beyond_gradelevel: "سنین بالای 8"
-  lightbot_beyond_gradelevel: "همه‌ی سنین"
-  codecademy_beyond_gradelevel: "دبیرستان"
-  kodable_beyond_gradelevel: "دبستان"
-  scratchjr_beyond_gradelevel: "دبستان"
-  hopscotch_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  pocketcode_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  groklearning_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  hacketyhack_beyond_gradelevel: "دبیرستان"
-  robomind_beyond_gradelevel: "سنین 8-13"
-  makeschool_beyond_gradelevel: "دبیرستان"
-  appinventor_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  touchdevelop_beyond_gradelevel: "دبیرستان"
-  codehs_beyond_gradelevel: "دبیرستان"
-  udemy_beyond_gradelevel: "دبیرستان +"
-  lynda_beyond_gradelevel: "دبیرستان +"
-  edx_beyond_gradelevel: "دانشگاه"
-  coursera_beyond_gradelevel: "دانشگاه"
-  udacity_beyond_gradelevel: "دانشگاه"
-  teachingtree_beyond_gradelevel: "دانشگاه"
-  kodu_beyond_gradelevel: "سنین بالای 8"
-  cargobot_beyond_gradelevel: "سنین بالای 8"
-  kidsruby_beyond_gradelevel: "سنین 12 +"
-  w3schools_beyond_gradelevel: "سنین 12 +"
-  codeavengers_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  mozilla_beyond_gradelevel: "سنین 12 +"
-  codecombat_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  codea_beyond_gradelevel: "دبیرستان +"
-  lego_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  finch_beyond_gradelevel: "سنین بالای 8"
-  arduino_beyond_gradelevel: "دبیرستان +"
-  processing_beyond_gradelevel: "دبیرستان"
-  alice_beyond_gradelevel: "مدارس راهنمایی به بالا"
-  sphero_beyond_gradelevel: "سنین بالای 8"
-  codeorg_beyond_platformtext: "مرورگرهای جدید ,تبلت"
-  khan_beyond_platformtext: "مرورگرهای وب مدرن"
-  tynker_beyond_platformtext: "مرورگرهای وب مدرن ($$ مورد نیاز)"
-  scratch_beyond_platformtext: "هر مرورگر"
+  codeorg_beyond_gradelevel: سنین 4 تا 104
+  khan_beyond_gradelevel: مدارس راهنمایی به بالا
+  tynker_beyond_gradelevel: سنین 5 تا 13
+  scratch_beyond_gradelevel: سنین بالای 8
+  lightbot_beyond_gradelevel: همه‌ی سنین
+  codecademy_beyond_gradelevel: دبیرستان
+  kodable_beyond_gradelevel: دبستان
+  scratchjr_beyond_gradelevel: دبستان
+  hopscotch_beyond_gradelevel: مدارس راهنمایی به بالا
+  pocketcode_beyond_gradelevel: مدارس راهنمایی به بالا
+  groklearning_beyond_gradelevel: مدارس راهنمایی به بالا
+  hacketyhack_beyond_gradelevel: دبیرستان
+  robomind_beyond_gradelevel: سنین 8-13
+  makeschool_beyond_gradelevel: دبیرستان
+  appinventor_beyond_gradelevel: مدارس راهنمایی به بالا
+  touchdevelop_beyond_gradelevel: دبیرستان
+  codehs_beyond_gradelevel: دبیرستان
+  udemy_beyond_gradelevel: دبیرستان +
+  lynda_beyond_gradelevel: دبیرستان +
+  edx_beyond_gradelevel: دانشگاه
+  coursera_beyond_gradelevel: دانشگاه
+  udacity_beyond_gradelevel: دانشگاه
+  teachingtree_beyond_gradelevel: دانشگاه
+  kodu_beyond_gradelevel: سنین بالای 8
+  cargobot_beyond_gradelevel: سنین بالای 8
+  kidsruby_beyond_gradelevel: سنین 12 +
+  w3schools_beyond_gradelevel: سنین 12 +
+  codeavengers_beyond_gradelevel: مدارس راهنمایی به بالا
+  mozilla_beyond_gradelevel: سنین 12 +
+  codecombat_beyond_gradelevel: مدارس راهنمایی به بالا
+  codea_beyond_gradelevel: دبیرستان +
+  lego_beyond_gradelevel: مدارس راهنمایی به بالا
+  finch_beyond_gradelevel: سنین بالای 8
+  arduino_beyond_gradelevel: دبیرستان +
+  processing_beyond_gradelevel: دبیرستان
+  alice_beyond_gradelevel: مدارس راهنمایی به بالا
+  sphero_beyond_gradelevel: سنین بالای 8
+  codeorg_beyond_platformtext: مرورگرهای جدید ,تبلت
+  khan_beyond_platformtext: مرورگرهای وب مدرن
+  tynker_beyond_platformtext: مرورگرهای وب مدرن ($$ مورد نیاز)
+  scratch_beyond_platformtext: هر مرورگر
   lightbot_beyond_platformtext: iOS, Android  (یا مرورگر وب)
-  codecademy_beyond_platformtext: "مرورگرهای وب مدرن. نرم افزار آندروید و iOS"
+  codecademy_beyond_platformtext: مرورگرهای وب مدرن. نرم افزار آندروید و iOS
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "نرم افزار موبایل"
-  groklearning_beyond_platformtext: "مرورگرهای وب مدرن"
-  hacketyhack_beyond_platformtext: "نصب دسکتاپ"
-  robomind_beyond_platformtext: "مرورگرهای وب مدرن، وب همراه"
-  makeschool_beyond_platformtext: "مرورگرهای وب مدرن"
-  appinventor_beyond_platformtext: "مرورگر مدرن + آندروید"
-  touchdevelop_beyond_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه
-    های"
-  codehs_beyond_platformtext: "مرورگرهای مدرن ($$ مورد نیاز)"
-  udemy_beyond_platformtext: "مبتنی بر وب"
-  lynda_beyond_platformtext: "مبتنی بر وب ($$ مورد نیاز)"
-  edx_beyond_platformtext: "مرورگرهای مدرن"
-  coursera_beyond_platformtext: "مرورگرهای مدرن"
-  udacity_beyond_platformtext: "مرورگرهای مدرن"
-  teachingtree_beyond_platformtext: "مبتنی بر وب"
+  pocketcode_beyond_platformtext: نرم افزار موبایل
+  groklearning_beyond_platformtext: مرورگرهای وب مدرن
+  hacketyhack_beyond_platformtext: نصب دسکتاپ
+  robomind_beyond_platformtext: مرورگرهای وب مدرن، وب همراه
+  makeschool_beyond_platformtext: مرورگرهای وب مدرن
+  appinventor_beyond_platformtext: مرورگر مدرن + آندروید
+  touchdevelop_beyond_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های
+  codehs_beyond_platformtext: مرورگرهای مدرن ($$ مورد نیاز)
+  udemy_beyond_platformtext: مبتنی بر وب
+  lynda_beyond_platformtext: مبتنی بر وب ($$ مورد نیاز)
+  edx_beyond_platformtext: مرورگرهای مدرن
+  coursera_beyond_platformtext: مرورگرهای مدرن
+  udacity_beyond_platformtext: مرورگرهای مدرن
+  teachingtree_beyond_platformtext: مبتنی بر وب
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "نصب دسکتاپ"
-  w3schools_beyond_platformtext: "مرورگرهای وب مدرن"
-  codeavengers_beyond_platformtext: "مرورگرهای وب مدرن"
-  mozilla_beyond_platformtext: "مرورگرهای وب مدرن"
-  codecombat_beyond_platformtext: "مبتنی بر وب (فایرفاکس، کروم، سافاری، IE9 +)"
+  kidsruby_beyond_platformtext: نصب دسکتاپ
+  w3schools_beyond_platformtext: مرورگرهای وب مدرن
+  codeavengers_beyond_platformtext: مرورگرهای وب مدرن
+  mozilla_beyond_platformtext: مرورگرهای وب مدرن
+  codecombat_beyond_platformtext: مبتنی بر وب (فایرفاکس، کروم، سافاری، IE9 +)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "خرید ربات"
-  finch_beyond_platformtext: "خرید ربات"
-  arduino_beyond_platformtext: "مرورگر وب و سپس خرید کیت"
-  processing_beyond_platformtext: "مرورگرهای وب مدرن"
-  alice_beyond_platformtext: "ویندوز یا مک (نصب مورد نیاز)"
-  sphero_beyond_platformtext: "خرید ربات"
-  codeorg_beyond_shortdescription: "کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد
-    بگیرید!"
-  khan_beyond_shortdescription: "یادگیری نقاشی کشیدن در جاوا اسکریپت"
-  tynker_beyond_shortdescription: "سرگرم کننده و البته جذاب برای کودکان در کلاس های
-    4-8"
-  scratch_beyond_shortdescription: "بازی های تعاملی، داستان، و انیمیشن بسازید."
-  lightbot_beyond_shortdescription: "بازی برای آموزش مفاهیم برنامه نویسی"
-  codecademy_beyond_shortdescription: "برنامه نویسی با JavaScrip، را در یک مرورگر
-    وب یاد بگیرید"
-  kodable_beyond_shortdescription: "یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه
-    نویسی کامپیوتر"
+  lego_beyond_platformtext: خرید ربات
+  finch_beyond_platformtext: خرید ربات
+  arduino_beyond_platformtext: مرورگر وب و سپس خرید کیت
+  processing_beyond_platformtext: مرورگرهای وب مدرن
+  alice_beyond_platformtext: ویندوز یا مک (نصب مورد نیاز)
+  sphero_beyond_platformtext: خرید ربات
+  codeorg_beyond_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد
+    بگیرید!
+  khan_beyond_shortdescription: یادگیری نقاشی کشیدن در جاوا اسکریپت
+  tynker_beyond_shortdescription: سرگرم کننده و البته جذاب برای کودکان در کلاس های
+    4-8
+  scratch_beyond_shortdescription: بازی های تعاملی، داستان، و انیمیشن بسازید.
+  lightbot_beyond_shortdescription: بازی برای آموزش مفاهیم برنامه نویسی
+  codecademy_beyond_shortdescription: برنامه نویسی با JavaScrip، را در یک مرورگر وب
+    یاد بگیرید
+  kodable_beyond_shortdescription: یک بازی سرگرم کننده آی پد برای آموزش مفاهیم برنامه
+    نویسی کامپیوتر
   scratchjr_beyond_shortdescription: " داستان های تعاملی و بازی را با استفاده از ScratchJr
     ایجاد کنید."
-  hopscotch_beyond_shortdescription: "یادگیری برنامه نویسی بصری بر روی iPad"
-  pocketcode_beyond_shortdescription: "سعی کنید برای یجاد یک بازی بر روی گوشی های
-    هوشمند و به اشتراک گذاری با دوستان !"
-  groklearning_beyond_shortdescription: "مقدمه اساسی به برنامه نویسی پایتون"
-  hacketyhack_beyond_shortdescription: "روبی را از پایه یاد بگیرید"
-  robomind_beyond_shortdescription: "کدنویسی برای ربات مجازی"
+  hopscotch_beyond_shortdescription: یادگیری برنامه نویسی بصری بر روی iPad
+  pocketcode_beyond_shortdescription: سعی کنید برای یجاد یک بازی بر روی گوشی های هوشمند
+    و به اشتراک گذاری با دوستان !
+  groklearning_beyond_shortdescription: مقدمه اساسی به برنامه نویسی پایتون
+  hacketyhack_beyond_shortdescription: روبی را از پایه یاد بگیرید
+  robomind_beyond_shortdescription: کدنویسی برای ربات مجازی
   makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: "برنامه خودت را بساز( فقط آندروید)"
-  touchdevelop_beyond_shortdescription: "برنامه های موبایل را مستقیمآ روی موبایل و
-    \ تبلت و کامپیوتر برنامه نویسی کنید"
-  codehs_beyond_shortdescription: "یادگیری برنامه نویسی جاوا اسکریپت با یک محیط بصری
-    سرگرم کننده"
-  udemy_beyond_shortdescription: "تعداد زیادی از دوره های برنامه نویسی آنلاین"
-  lynda_beyond_shortdescription: "تعداد زیادی از دوره های برنامه نویسی آنلاین"
+  appinventor_beyond_shortdescription: برنامه خودت را بساز( فقط آندروید)
+  touchdevelop_beyond_shortdescription: برنامه های موبایل را مستقیمآ روی موبایل و  تبلت
+    و کامپیوتر برنامه نویسی کنید
+  codehs_beyond_shortdescription: یادگیری برنامه نویسی جاوا اسکریپت با یک محیط بصری
+    سرگرم کننده
+  udemy_beyond_shortdescription: تعداد زیادی از دوره های برنامه نویسی آنلاین
+  lynda_beyond_shortdescription: تعداد زیادی از دوره های برنامه نویسی آنلاین
   edx_beyond_shortdescription: " محبوب ترین کلاس در دانشگاه هاروارد"
-  coursera_beyond_shortdescription: "شروع با CS101"
-  udacity_beyond_shortdescription: "شروع با CS101"
-  teachingtree_beyond_shortdescription: "دانش آنلاین: سریع و نامحدود"
-  kodu_beyond_shortdescription: "طراحی  بازی جهان به صورت 3D"
-  cargobot_beyond_shortdescription: "به بازوی روبات به وسیله آی پد برنامه دهید"
-  kidsruby_beyond_shortdescription: "یادگیری با استفاده از  برنامه روبی "
-  w3schools_beyond_shortdescription: "آموزش نوشتن وب سایت"
-  codeavengers_beyond_shortdescription: "یادگیری کدنویسی بازی و وب سایت"
-  mozilla_beyond_shortdescription: "ایجاد و به اشتراک گذاری صفحات وب"
-  codecombat_beyond_shortdescription: "یک بازی را انجام بدهید و جاوا اسکریپت یاد بگیرید
-    و برنده شوید"
-  codea_beyond_shortdescription: "ساختن اپلیکیشن بر روی آی پد خود"
-  lego_beyond_shortdescription: "ساخت و برنامه ربات"
-  finch_beyond_shortdescription: "یک ربات برای آموزش علوم کامپیوتر"
-  arduino_beyond_shortdescription: "برنامه نویسی روی آردوینو را با بازی در زمین بازی
-    مجازی اسپارک فان یاد بگیرید."
-  processing_beyond_shortdescription: "یادگیری زبان های پردازش"
-  alice_beyond_shortdescription: "آموزش برنامه نویسی در یک محیط 3D"
-  sphero_beyond_shortdescription: "درسهای اسپارک(SPRK) همزمان با آموزش فشرده برنامه
-    نویسی برای روبات ها، به افزایش تواناییهای کودکان در ریاضیات و علوم هم کمک می کنند."
-  codeorg_beyond_longdescription: "اصول پایه علوم کامپیوتر را با برنامه نویسی با بلوکهای
+  coursera_beyond_shortdescription: شروع با CS101
+  udacity_beyond_shortdescription: شروع با CS101
+  teachingtree_beyond_shortdescription: 'دانش آنلاین: سریع و نامحدود'
+  kodu_beyond_shortdescription: طراحی  بازی جهان به صورت 3D
+  cargobot_beyond_shortdescription: به بازوی روبات به وسیله آی پد برنامه دهید
+  kidsruby_beyond_shortdescription: 'یادگیری با استفاده از  برنامه روبی '
+  w3schools_beyond_shortdescription: آموزش نوشتن وب سایت
+  codeavengers_beyond_shortdescription: یادگیری کدنویسی بازی و وب سایت
+  mozilla_beyond_shortdescription: ایجاد و به اشتراک گذاری صفحات وب
+  codecombat_beyond_shortdescription: یک بازی را انجام بدهید و جاوا اسکریپت یاد بگیرید
+    و برنده شوید
+  codea_beyond_shortdescription: ساختن اپلیکیشن بر روی آی پد خود
+  lego_beyond_shortdescription: ساخت و برنامه ربات
+  finch_beyond_shortdescription: یک ربات برای آموزش علوم کامپیوتر
+  arduino_beyond_shortdescription: برنامه نویسی روی آردوینو را با بازی در زمین بازی
+    مجازی اسپارک فان یاد بگیرید.
+  processing_beyond_shortdescription: یادگیری زبان های پردازش
+  alice_beyond_shortdescription: آموزش برنامه نویسی در یک محیط 3D
+  sphero_beyond_shortdescription: درسهای اسپارک(SPRK) همزمان با آموزش فشرده برنامه
+    نویسی برای روبات ها، به افزایش تواناییهای کودکان در ریاضیات و علوم هم کمک می کنند.
+  codeorg_beyond_longdescription: اصول پایه علوم کامپیوتر را با برنامه نویسی با بلوکهای
     پیش ساخته یاد بگیرید. سه واحد درسی هر یک شامل 15 تا 20 درس که بدون نیاز به هیچ
     ابزار دیگری محیط کلاس را با خود آموز های شبیه بازی ترکیب می کنند. در این خود آموز
     ها می توانید از بیل گیتس و مارک زاکربرگ تا پرنده های عصبانی و گیاهان بر ضد زامبی
     ها را بیابید. به این ترتیب حلقه های تکرار، شرط ها، الگوریتمهای پایه، مفهوم توابع
-    و متغیر ها را خواهید آموخت."
-  khan_beyond_longdescription: "درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
+    و متغیر ها را خواهید آموخت.
+  khan_beyond_longdescription: درحالی که با کدی که نوشته اید نقاشی های با مزه میکشید،
     اصول اولیه برنامه نویسی جاوا اسکریپت را یاد بگیرید. این کار را به تنهایی یا با
-    کمک همکلاسی هایتان انجام دهید!"
+    کمک همکلاسی هایتان انجام دهید!
   tynker_beyond_longdescription: Tynker آموختن برنامه نویسی را جالب و ساده می کند.
     آموزش را بصری می کند. کودکان با مرتب کردن بلوک های کد برنامه های موبایل و بازی
     می سازند. این نیاز به دانستن نحوه ی نوشتن کد را از بین می برد. بچه ها بلافاصله
     ایده ها را به داستان های انیمیشنی و هنر ریاضی تبدیل می کنند. این کار آموزش خلاقیت
     محور را ارتقا می بخشد. همان طور که بچه ها اصول را می آموزند، Tynker مباحث پیشرفته
     تری را معرفی می کند که شامل برنامه نویسی با توجه به نحوه ی کد نوشتن است.
-  scratch_beyond_longdescription: "با اسکرچ، شما می توانید بازی های تعاملی، داستان
+  scratch_beyond_longdescription: با اسکرچ، شما می توانید بازی های تعاملی، داستان
     ها، انیمیشن های &mdash; خودتان را بسازید و آن ها را با دوستانتان به اشتراک بگذارید.
     با انیمیشنی کردن نامتان، ساختن یک کارت پستال برای تعطیلات، یا درست کردن یک بازی
-    پینگ پنگ دو بعدی شروع کنید."
-  lightbot_beyond_longdescription: "منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
+    پینگ پنگ دو بعدی شروع کنید.
+  lightbot_beyond_longdescription: منطق برنامه نویسی هسته ای را بیاموزید، که از برنامه
     نویسی فوق ابتدایی، برای سنین بالای 4 سال، روی آی او اس یا اندروید (یا مرورگر وب)
     شروع می شود. یاد بگیرید چگونه دستورات را بخش بخش کنید، الگو ها را شناسایی کنید،
-    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!"
-  codecademy_beyond_longdescription: "آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط
+    از تابع ها استفاده کنید، و حلقه ها را بهینه کنید!
+  codecademy_beyond_longdescription: آکادمی کد نویسی یک معرفی تعاملی، هدایت شده توسط
     دانش آموز در اصول اولیه ی  CS از طریق جاوا اسکریپت است که توسط ده ها میلیون دانش
     آموز در سراسر دنیا مورد استفاده قرار میگیرد. ما یک تجربه ی یک ساعت کد نویسی بدون
     زحمت با امتحانات مرتبط، اسلاید، و در پایان یک پروژه کامل برای دانش آموزان فراهم
-    کرده ایم."
+    کرده ایم.
   kodable_beyond_longdescription: Kodable یک بازی خود هدایت آی پد است که کودکان بالای
     5 سال را با اصول اولیه ی برنامه نویسی آشنا می کند. داشتن پدر یا مادر یا یک معلم
     در کنار کودک رضایت بخش است، اما ضروری نیست.
@@ -1907,71 +1905,71 @@
     بچه های کوچک را قادر میسازد که داستان ها و بازی های تعاملی خودشان را بسازند. بچه
     ها بلوک های برنامه نویسی تصویری را برای حرکت دادن، پراندن، رقصاندن، و آواز خواندن
     شخصیت ها کنار هم قرار می دهند
-  hopscotch_beyond_longdescription: "آموزش های هدایت شده توسط دانش آموز بر روی آی
-    پد بااستفاده از زبان برنامه نویسی Hopscotch.دانش آموزان با آی پدشان برای آی پدشان
+  hopscotch_beyond_longdescription: آموزش های هدایت شده توسط دانش آموز بر روی آی پد
+    بااستفاده از زبان برنامه نویسی Hopscotch.دانش آموزان با آی پدشان برای آی پدشان
     بازی و برنامه خواهند ساخت. دانش آموزان می توانند انفرادی یا با دوستان کار کنند(حد
-    اکثر تا 3 نفر با هر آی پد)."
-  pocketcode_beyond_longdescription: "با Pocket Code بازی خودتان را بر روی تلفن هوشمندتان
+    اکثر تا 3 نفر با هر آی پد).
+  pocketcode_beyond_longdescription: با Pocket Code بازی خودتان را بر روی تلفن هوشمندتان
     بسازید! به استیو چترباز کمک کنید بسته هایش را تحویل دهد. شما میتوانید آن را با
-    دوستان و کاربران دیگر به اشتراک بگذارید تا امتحانش کنند!"
-  groklearning_beyond_longdescription: "یک دوره مقدماتی با استفاده از زبان برنامه
-    نویسی پیتون برای افراد بدون هیچ تجربه ی برنامه نویسی. ترکیب بی نظیر محتوای آموزش
-    مقدماتی و چالش ها ی ما شما را به درک کاملی از پیتون و خود برنامه نویسی می رساند.
-    ما این محتوا را به دانش آموزان با سنین متفاوت با پیش زمینه های متفاوت تدریس کرده
-    ایم و مطمئنیم که برای شما هم مناسب خواهد بود."
+    دوستان و کاربران دیگر به اشتراک بگذارید تا امتحانش کنند!
+  groklearning_beyond_longdescription: یک دوره مقدماتی با استفاده از زبان برنامه نویسی
+    پیتون برای افراد بدون هیچ تجربه ی برنامه نویسی. ترکیب بی نظیر محتوای آموزش مقدماتی
+    و چالش ها ی ما شما را به درک کاملی از پیتون و خود برنامه نویسی می رساند. ما این
+    محتوا را به دانش آموزان با سنین متفاوت با پیش زمینه های متفاوت تدریس کرده ایم
+    و مطمئنیم که برای شما هم مناسب خواهد بود.
   hacketyhack_beyond_longdescription: 'Hackety Hack اصول اساسی برنامه نویسی را از
     ابتدا به شما آموزش خواهد داد. هیچ تجربه ی برنامه نویسی نیاز نیست! با Hackety Hack،
     شما زبان برنامه نویسی روبی را خواهید آموخت. روبی برای تمام انواع برنامه ها، از
     جمله برنامه ها ی desktop و وب سایت ها استفاده می شود. [نکته: نصب Desktop لازم
     است]'
-  robomind_beyond_longdescription: "دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل
+  robomind_beyond_longdescription: 'دانش آموزان اصول اولیه ی برنامه نویسی را با کنترل
     ربات مجازی خودشان می آموزند. دوره ی آنلاین با ارائه های کوتاه، فیلم ها، امتحانات
-    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. "
+    و هدایت/راهنمایی های اتوماتیک برای کمک در تمرینات برنامه نویسی بسیار کامل است. '
   makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
     game in an hour! We'll guide you through the process, to code, test, and play
     your game entirely in the browser and then share it on Facebook for friends to
     try! No prior iPhone development experience is required. You must understand what
     variables, methods, and objects are.
-  appinventor_beyond_longdescription: "ویدئو های آموزشی سریع، و سرگرم کننده شما را
+  appinventor_beyond_longdescription: ویدئو های آموزشی سریع، و سرگرم کننده شما را
     در مسیر ساخت سه برنامه ی ساده برای تلفن اندروید یا تبلتتان هدایت می کنند. این
     ساعت کد نویسی، طراحی شده برای مبتدیان و کارشناسان شما را قبل از این که بدانید
     برای ساختن برنامه های خودتان آماده خواهد کرد. تصور کنید برنامه های ساخته شده توسط
     خودتان را با دوستانتان به اشتراک بگذارید! این فعالیت ها برای افراد و همچنین معلمانی
-    که کلاس را هدایت می کنند مناسب هستند."
+    که کلاس را هدایت می کنند مناسب هستند.
   touchdevelop_beyond_longdescription: TouchDeveop به شما اجازه می دهد برنامه ها را
     روی آی پد، آی فون، اندروید، کامپیوتر شخصی، مک، ویندوز فون ایجاد کنید. ویرایشگر
     سازگار با لمس ما کد نویسی را حتی روی تلفن همراه یا تبلتتان، جالب می کند!
-  codehs_beyond_longdescription: "اصول اولیه ی برنامه نویسی را با کارل سگه بیاموزید،
+  codehs_beyond_longdescription: 'اصول اولیه ی برنامه نویسی را با کارل سگه بیاموزید،
     مقدمه ای جالب، قابل دسترسی و بصری بر کد نویسی، که در آن دادن دستورات به یک کامپیوتر
     درست شبیه دادن دستورات به یک سگ است. این آموزش اگر توسط یک معلم هدایت شود عالی
-    است، اما می تواند به طور مستقل هم انجام شود. [توجه: نیاز به پرداخت پول دارد]"
-  udemy_beyond_longdescription: "اگر هرگز یک خط کد ندیدید یا برای گذران زندگی کد می
+    است، اما می تواند به طور مستقل هم انجام شود. [توجه: نیاز به پرداخت پول دارد]'
+  udemy_beyond_longdescription: 'اگر هرگز یک خط کد ندیدید یا برای گذران زندگی کد می
     زنید، Udemy یک دوره برای شما دارد، که توسط مربیان حرفه ای تدریس می شود. [توجه:
-    نیاز به پرداخت پول دارد]"
-  lynda_beyond_longdescription: "بیاموزید که چگونه کد بنویسید، خلق کنید، و برنامه
+    نیاز به پرداخت پول دارد]'
+  lynda_beyond_longdescription: 'بیاموزید که چگونه کد بنویسید، خلق کنید، و برنامه
     های وب بسازید، از پایه های برنامه نویسی شیئ گرا در C و C++، تا چگونگی کد جاوا
     نوشتن. آموزش های توسعه دهنده ما می توانند به شما کمک کنند بیاموزید توسعه دهید
     و برنامه های تلفن همراه بسازید، با PHP و پایگاه داده های MySQL کار کنید، آموختن
-    زبان پردازش آماری R  را شروع کنید، و خیلی بیشتر. [توجه: نیاز به پرداخت پول دارد]"
+    زبان پردازش آماری R  را شروع کنید، و خیلی بیشتر. [توجه: نیاز به پرداخت پول دارد]'
   edx_beyond_longdescription: CS50x معرفی کمپانی فکری علوم کامپیوتر و هنر برنامه نویسی
     است برای حرفه ای ها و غیر حرفه ای ها، با یا بدون تجربه ی برنامه نویسی قبلی که
     دانشگاه هاروارد آماده کرده است. سرفصل ها شامل انتزاع، الگوریتم ها، ساختار داده،
     داخل کپسول قرار دادن، مدیریت منابع، امنیت، مهندسی نرم افزار، و توسعه ی وب است.
     زبان ها شامل C، PHP، و JavaScript به علاوه SQL، CSS، و HTML است. نسخه ی دانشگاهی
     CS50x دومین دوره ی بزرگ هاروارد است.
-  coursera_beyond_longdescription: "کلاس CS 101 استنفورد که توسط نیک پارلانته تدریس
+  coursera_beyond_longdescription: 'کلاس CS 101 استنفورد که توسط نیک پارلانته تدریس
     می شود (رایگان!). CS101 ایده های اساسی علوم کامپیوتر را برای مخاطب با تجربه ی
     قبلی صفر آموزش می دهد. با تکه های کوچک کد بازی و تجربه کنید تا قدرت و محدودیت
     های کامپیوتر ها را به زندگی بیاورید. CS101 همچنین یک پیش زمینه بر کامپیوتر های
     امروزی فراهم می کند: کامپیوتر چیست، سخت افزار چیست، نرم افزار چیست، اینترنت چیست.
-    هیچ تجربه ی قبلی به جز توانایی استفاده از مرورگر وب نیاز نیست."
-  udacity_beyond_longdescription: "در این دوره شما مباحث کلیدی علوم کامپیوتر را خواهید
+    هیچ تجربه ی قبلی به جز توانایی استفاده از مرورگر وب نیاز نیست.'
+  udacity_beyond_longdescription: در این دوره شما مباحث کلیدی علوم کامپیوتر را خواهید
     آموخت و می آموزید چگونه برنامه کامپیوتری خودتان را در زمینه ی ساخت یک web crawler
     بنویسید. برای این دوره هیچ دانش برنامه نویسی قبلی نیاز نیست. از مبتدی ها استقبال
     می شود! در پایان این دوره، شما مباحث کلیدی در علوم کامپیوتر و به اندازه کافی برنامه
     نویسی برای اینکه خودتان بتوانید برنامه هایی به زبان پیتون برای حل مسائل بنویسید
     را آموخته اید. این دوره شما را آماده خواهد کرد تا به دوره های محاسبه ی سطح متوسط
-    بروید."
+    بروید.
   teachingtree_beyond_longdescription: TeachingTree یک پلت فرم باز است که به هر کسی
     اجازه می دهد محتوای آموزشی را سازماندهی کند.هدف ما این است که دانش آموزان به سرعت
     به کلیپ هایی که نیاز دارند تا مباحث خاصی را بیاموزند دسترسی پیدا کنند. همه برای
@@ -1988,25 +1986,25 @@
     36 معمای هوشمندانه ی مشکل، موسیقی به یاد ماندنی و گرافیک خیره کننده است. شما حتی
     می توانید راه حل هایتان را ثبت کنید و آن ها را برای نشان دادن به دوستانتان در
     یو تیوب به اشتراک بگذارید.
-  kidsruby_beyond_longdescription: "خوش بگذرانید و بازی بسازید، یا مشق شبتان را با
+  kidsruby_beyond_longdescription: 'خوش بگذرانید و بازی بسازید، یا مشق شبتان را با
     Ruby هک کنید! به پدر و مادرتان یا معلم هایتان بگویید فقط دارید برنامه نویسی Ruby
     یاد می گیرید... ;). رایگان است و روی هر کامپیوتری کار می کند.[نکته: نیاز به نصب
-    Desktop است]"
-  w3schools_beyond_longdescription: "یادبگیرید بر روی کامپیوتر خود وب سایت بسازید.یادگیری
-    اصول اولیه سرور در کمتر از یک روز.اتصال بانک اطلاعاتی به وب سایت خودتان را یادبگیرید."
-  codeavengers_beyond_longdescription: "یاد بگیرید چگونه بازی، برنامه و وب سایت بنویسید.
+    Desktop است]'
+  w3schools_beyond_longdescription: یادبگیرید بر روی کامپیوتر خود وب سایت بسازید.یادگیری
+    اصول اولیه سرور در کمتر از یک روز.اتصال بانک اطلاعاتی به وب سایت خودتان را یادبگیرید.
+  codeavengers_beyond_longdescription: یاد بگیرید چگونه بازی، برنامه و وب سایت بنویسید.
     طراحی شده توسط کارشناسان با درجه ی سختی عالی برای مبتدیان، دستورالعمل های قابل
     فهم و راهنمایی عالی وقتی که به آن نیاز دارید. دوره های HTML، CSS، و JavaScript
     ما شامل چالش ها و بازی های منتخب است که یادگیری را برای تمام سنین جالب و موثر
-    می کند."
+    می کند.
   mozilla_beyond_longdescription: Thimble ایجاد و به اشتراک گذاری صفحات وب خودتان
     را به طور مسخره ای ساده می کند. HTML و CSS را در مرورگر خود بنویسید و ویرایش کنید،
     سپس بلافاصله پیش نمایش کار خود را ببنید. با یک کلیک پروژه های تمام شده ی خود را
     مدیریت کنید و به اشتراک بگذارید. هم برای مبتدیان و هم برای کارشناسان عالی است.
-  codecombat_beyond_longdescription: "نقش یک جادوگر را بازی کنید با استفاده از کد(جادو
+  codecombat_beyond_longdescription: نقش یک جادوگر را بازی کنید با استفاده از کد(جادو
     می کند) قهرمانانتان را کنترل کنید، در هزارتو ها مسیریابی کنید، غول ها را شکست
     دهید، به دشمنان حقه بزنید، و دوستان را نجات دهید! JavaScript را در این بازی وب
-    HTML 5 برای مبتدیان بیاموزید."
+    HTML 5 برای مبتدیان بیاموزید.
   codea_beyond_longdescription: Codea برای آی پد به شما اجازه می دهد بازی و شبیه سازی
     ایجاد کنید &mdash; یا فقط درباره ی هر ایده ی بصری که دارید. افکارتان را به تولیدات
     تعاملی که از ویژگی های آی پد مانند چند لمسی و شتاب سنج استفاده می کند تبدیل کنید.
@@ -2015,8 +2013,8 @@
     تغییر دهید؟ فقط لمسش کنید و آن را بکشید. در مورد یک رنگ یا عکس چه طور؟ لمس کردن
     ویرایشگر های تصویری را بالا خواهد آورد که به شما اجازه می دهند چیزی که دقیقا می
     خواهید را انتخاب کنید.
-  lego_beyond_longdescription: "روبات های کوچک، قابل تنظیم و قابل برنامه ریزی با استفاده
-    از قطعات لگو را ایجاد کنید."
+  lego_beyond_longdescription: روبات های کوچک، قابل تنظیم و قابل برنامه ریزی با استفاده
+    از قطعات لگو را ایجاد کنید.
   finch_beyond_longdescription: Finch یک ربات جدید برای آموزش علوم کامپیوتر است. طراحی
     آن حاصل یک مطالعه ی 4 ساله در آزمایشگاه خلق Carnegie Mellon است. Finch طراحی شده
     است که یک مقدمه ی جذاب بر هنر برنامه نویسی را پشتیبانی کند. با پشتیبانی بیش از
@@ -2026,20 +2024,20 @@
     طراحان و هنرمندان اجازه دهد با سنسور های واقعی،LED ها، buzzer ها و چیز های بیشتری
     کار کنند. Sparkfun Virtual Sandbox به شما کد Arduino حقیقی را در مرورگرتان خواهد
     آموخت.
-  processing_beyond_longdescription: "پردازش کردن یک زبان برنامه نویسی، محیط توسعه،
+  processing_beyond_longdescription: پردازش کردن یک زبان برنامه نویسی، محیط توسعه،
     و جامعه ی آنلاین است. از سال 2001، پردازش در تکنولوژی قابلیت نرم افزار را در هنر
     های تجسمی و شناسایی تصویر ارتقا داده است. پردازش که ابتدا ایجاد شد تا کتاب طراحی
     نرم افزار باشد و تا اصول برنامه نویسی کامپیوتر را در زمینه تصویری آموزش دهد، به
     یک ابزار توسعه برای حرفه ای ها ارتقا پیدا کرد. امروزه، ده ها هزار دانش آموز، هنرمند،
     طراح، محقق، و علاقه مند وجود دارد که از پردازش برای آموختن، نمونه سازی، و تولید
-    استفاده می کند."
-  alice_beyond_longdescription: "پروژه ی آلیس با استفاده از یک محیط برنامه نویسی جدید
+    استفاده می کند.
+  alice_beyond_longdescription: پروژه ی آلیس با استفاده از یک محیط برنامه نویسی جدید
     برای پشتیبانی تولید انیمیشن های سه بعدی، ابزار ها و مواد برای یاد دادن و یاد گرفتن
     تفکر حل مساله به روش کامپیوتری، حل مساله، و برنامه نویسی کامپیوتر را برای طیفی
-    از سنین و تحصیلات فراهم میکند."
-  sphero_beyond_longdescription: "اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
+    از سنین و تحصیلات فراهم میکند.
+  sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
-    های آن ها در ریاضی و علوم را تقویت می کند."
+    های آن ها در ریاضی و علوم را تقویت می کند.
   compatibility_hide_this_warning: Hide this warning
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
@@ -2049,9 +2047,9 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "پریدن"
+  flappy_shortcode: پریدن
   infinity_shortcode: inf
-  playlab_shortcode: "بازی کن"
+  playlab_shortcode: بازی کن
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard

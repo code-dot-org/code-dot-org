@@ -94,7 +94,7 @@ module Api::V1::Pd
 
     test "quick view returns applications with appropriate regional partner filter" do
       sign_in @workshop_admin
-      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
       assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
     end
@@ -108,7 +108,7 @@ module Api::V1::Pd
 
     test "quick view returns applications with regional partner filter set to no partner" do
       sign_in @workshop_admin
-      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: 'none'}
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: 'none'}
       assert_response :success
       assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
     end
@@ -301,11 +301,14 @@ module Api::V1::Pd
 
     test 'workshop admins can update form_data' do
       sign_in @workshop_admin
-      updated_form_data = @csf_facilitator_application_no_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
-      put :update, params: {id: @csf_facilitator_application_no_partner.id, application: {form_data: updated_form_data}}
+      updated_form_data = @csf_facilitator_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
+      put :update, params: {id: @csf_facilitator_application_with_partner.id, application: {form_data: updated_form_data}}
       assert_response :success
       data = JSON.parse(response.body)
       assert_equal 'my.other@email.net', data['form_data']['alternateEmail']
+
+      # Make sure partner is retained
+      assert_equal @regional_partner, @csf_facilitator_application_with_partner.reload.regional_partner
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -427,7 +430,7 @@ module Api::V1::Pd
       end
 
       sign_in @workshop_admin
-      get :cohort_view, params: {role: 'csp_teachers', regional_partner_filter: 'none'}
+      get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
       assert_response :success
 
       assert_equal(

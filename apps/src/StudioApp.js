@@ -278,6 +278,7 @@ StudioApp.prototype.init = function (config) {
         />
         <FinishDialog
           onContinue={() => this.onContinue()}
+          getShareUrl={() => this.lastShareUrl}
         />
       </div>
     </Provider>,
@@ -1046,6 +1047,7 @@ StudioApp.prototype.onReportComplete = function (response) {
   if (!response) {
     return;
   }
+  this.lastShareUrl = response.level_source;
 
   // Track GA events
   if (response.new_level_completed) {

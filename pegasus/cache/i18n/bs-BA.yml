@@ -55,7 +55,7 @@
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
   hoc2014_support: Pružite podršku &#x25BE;
-  hoc2014_whatishoc: "Šta je to Sat Kodiranja?"
+  hoc2014_whatishoc: Šta je to Sat Kodiranja?
   csedweek_map_header: "# CSEdWeek / Sat Kodiranja događaji širom svijeta"
   csedweek_map_signup: Prijavi svoj događaj
   csedweek_map_search_placeholder: Potraži Sat Kodiranja događaje
@@ -89,22 +89,22 @@
   n_participants: "# učesnika"
   go: Kreni
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
-  congratulations_on_completing_hoc: "Čestitamo na završetku jednog Sata Kodiranja"
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   congratulations_volunteer: 'Čestitamo: Sada kada si probao/la Sat Kodiranja, <a
     href="https://code.org/volunteer"> prijavi se kao volonter u učionici </a> i pomozi
     učenicima da nauče Sat Kodiranja!'
-  congratulations_on_completing_course1: "Čestitamo na završetku Kursa 1"
-  congratulations_on_completing_course2: "Čestitamo na završetku Kursa 2"
-  congratulations_on_completing_course3: "Čestitamo na završetku Kursa 3"
-  congratulations_on_completing_course4: "Čestitamo na završetku Kursa 4"
+  congratulations_on_completing_course1: Čestitamo na završetku Kursa 1
+  congratulations_on_completing_course2: Čestitamo na završetku Kursa 2
+  congratulations_on_completing_course3: Čestitamo na završetku Kursa 3
+  congratulations_on_completing_course4: Čestitamo na završetku Kursa 4
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "Čestitamo na završetku Ubrzanog Kursa"
+  congratulations_on_completing_accelerated: Čestitamo na završetku Ubrzanog Kursa
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
     href="%{current_path}/next">partnerski tutorijal</a>.
@@ -340,7 +340,7 @@
   students_and_lines: "%{students} učenika je učestvovalo u Hour of Code i napisalo
     %{lines} linija koda."
   start_hoc: Započni sa Hour of Code sada
-  contact_form_topic_press: "Štampa/mediji (intervju ili govor)"
+  contact_form_topic_press: Štampa/mediji (intervju ili govor)
   stats_nina: '"Svaki dan je imao isti rezultat&mdash; 100%-tni angažman." - Nina
     Nichols Peery, Nastavnik'
   stats_student: '"Znao sam da ovo je <b>životna</b> prilika."-Mariana Alzate, učenik
@@ -491,7 +491,7 @@
   contact_form_topic_teacher: Ja sam učitelj/edukator
   contact_form_topic_outside_us: Ja sam izvan SAD-a
   contact_form_topic_contribution: Dobrotvorni doprinos
-  contact_form_topic_partner: "Želim biti partner"
+  contact_form_topic_partner: Želim biti partner
   contact_form_topic_other: Ostalo
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša e-mail adresa
@@ -605,8 +605,8 @@
     Write code to journey through Minecraft biomes.
   sports_page_title: Sat Kodiranja - Sportovi
   sports_og_title: Daj sve od sebe. Svako može naučiti.
-  sports_og_description: "Šampioni i dobitnici zlatnih medalja vas ohrabruju da probate
-    Sat Kodiranja. Isprogramiraj vlastite sportske igre."
+  sports_og_description: Šampioni i dobitnici zlatnih medalja vas ohrabruju da probate
+    Sat Kodiranja. Isprogramiraj vlastite sportske igre.
   sports_title: Code your own sports game
   sports_watch_video: Pogledaj video
   sports_video_title: Daj sve od sebe. Svako može naučiti.
@@ -765,10 +765,10 @@
   volunteer_engineer_submission_num_volunteers_10: 10 volontera
   volunteer_engineer_submission_num_volunteers_25: 25 volontera
   volunteer_engineer_submission_num_volunteers_50: 50 volontera
-  volunteer_engineer_submission_type_task_onsite: "Želim da posjetiš moju učionicu
-    zbog tehničke pomoći i inspiracije"
-  volunteer_engineer_submission_type_task_remote: "Želim da putem Skype-a kažeš nekoliko
-    riječi inspiracije djeci u mojoj učionici"
+  volunteer_engineer_submission_type_task_onsite: Želim da posjetiš moju učionicu
+    zbog tehničke pomoći i inspiracije
+  volunteer_engineer_submission_type_task_remote: Želim da putem Skype-a kažeš nekoliko
+    riječi inspiracije djeci u mojoj učionici
   volunteer_engineer_submission_type_task_mentor: Tražim mentora koji bi me pripremio/la
     za kodiranje sa mojim studentima
   petition_age: Starost
@@ -803,7 +803,7 @@
   dashboard_landing_print_progress: Napredak printanja
   dashboard_landing_available_title: Dostupni kursevi
   dashboard_landing_available_courses: Ovo su kursevi trenutno dostupni tvojim učenicima.
-  dashboard_landing_more_tutorials: "Želiš li vidjeti još više tutorijala?"
+  dashboard_landing_more_tutorials: Želiš li vidjeti još više tutorijala?
   dashboard_landing_more_tutorials_desc: Imamo još tutorijala <a href="/learn/beyond">
     naših partnera. </a> Nauči programirati sa robotima, napravi web stranice, napravi
     vlastitu aplikaciju ili istraži druge jezike kao C++, Ruby ili Python!
@@ -916,7 +916,7 @@
   dashboard_sections_table_pairing_allowed: Programiranje u Paru
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: "Šifra odjeljenja"
+  dashboard_sections_table_code: Šifra odjeljenja
   dashboard_sections_name: Ime Odjeljenja
   dashboard_sections_choose_secret: Ako želite napraviti račune za svoje učenike,
     odaberite tajnu<b>riječ</b> ili <b>sliku</b> za to odjeljenje.
@@ -972,7 +972,7 @@
   dashboard_students_name: Ime
   dashboard_students_progress: Napredak
   dashboard_students_male: Muško
-  dashboard_students_female: "Žensko"
+  dashboard_students_female: Žensko
   dashboard_students_completed_levels: Završeni Nivoi
   dashboard_students_total_lines: Linije Koda
   dashboard_students_share_section: 'Podijeli stranicu za prijavu u ovo odjeljenje
@@ -1079,8 +1079,8 @@
   dashboard_sections_password_account_creation: Tekstna šifra koju je napravio učenik
   dashboard_sections_login_type_explanation: Ova tabela objašnjava koji od načina
     prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
-  dashboard_faq: "Često Postavljana Pitanja"
-  dashboard_faq_k5: "Česta pitanja za mlađi uzrast (do petog razreda)"
+  dashboard_faq: Često Postavljana Pitanja
+  dashboard_faq_k5: Česta pitanja za mlađi uzrast (do petog razreda)
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. Decembra!
   code_sign_up: Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu
   host_an_hour: Host an hour
@@ -1149,8 +1149,8 @@
     here.</a>
   how_to_teach_hoc: Kako Predavati Sat Kodiranja
   more_resources_educators: Dodatni resursi za nastavnike i edukatore
-  beyond_submission: "Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
-    i formu za podnošenje tutorijala."
+  beyond_submission: Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
+    i formu za podnošenje tutorijala.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: učesnici

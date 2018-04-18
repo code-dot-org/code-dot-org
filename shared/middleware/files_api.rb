@@ -3,6 +3,7 @@ require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
+require 'cdo/image_moderation'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
@@ -743,9 +744,8 @@ class FilesApi < Sinatra::Base
   #
 
   METADATA_PATH = '.metadata'.freeze
-  METADATA_FILENAMES = %w(
-    thumbnail.png
-  ).freeze
+  THUMBNAIL_FILENAME = 'thumbnail.png'
+  METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
@@ -783,7 +783,24 @@ class FilesApi < Sinatra::Base
   # Read a metadata file, caching the result for 1 hour.
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
-    file = get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+    s3_prefix = "#{METADATA_PATH}/#{filename}"
+    if THUMBNAIL_FILENAME == filename
+      begin
+        temp_url = FileBucket.new.make_temporary_public_url(encrypted_channel_id, s3_prefix)
+        rating = ImageModeration.rate_image(temp_url)
+        if %i(adult racy).include? rating
+          # Incrementing abuse score by 15 to differentiate from manually reported projects
+          new_score = StorageApps.new(storage_id('user')).increment_abuse(encrypted_channel_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          response.headers['x-cdo-content-rating'] = rating.to_s
+          cache_for 1.hour
+          not_found
+        end
+      rescue ArgumentError, OpenSSL::Cipher::CipherError
+        not_found
+      end
+    end
+    file = get_file('files', encrypted_channel_id, s3_prefix)
     cache_for 1.hour
     file
   end

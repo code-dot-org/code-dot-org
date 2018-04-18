@@ -54,18 +54,18 @@
   hoc2014_students: Daltaí
   hoc2014_try: Bain triail as
   hoc2014_teachers: Múinteoirí
-  hoc2014_host: "Óstáil an Uair Chódála"
+  hoc2014_host: Óstáil an Uair Chódála
   hoc2014_everyone: Gach Duine
   hoc2014_support: Sínigh an achainí &#x25BE;
   hoc2014_whatishoc: Cad é An Uair Chódála?
-  csedweek_map_header: "Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain"
+  csedweek_map_header: 'Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain'
   csedweek_map_signup: Cláraigh d'imeacht féin
   csedweek_map_search_placeholder: Cuardaigh ócáidí Uair Chódála
   csedweek_map_search_search: Cuardaigh
   csedweek_map_search_reset: Tosaigh arís
   csedweek_map_legend_title: Eochair Eolais
-  csedweek_map_legend_event: "Ócáid Uair Chódála"
-  csedweek_map_legend_cs_tech_jam: "Ócáid Speisialta"
+  csedweek_map_legend_event: Ócáid Uair Chódála
+  csedweek_map_legend_cs_tech_jam: Ócáid Speisialta
   cded_sign_up: Cláraigh
   cded_try_it: Bain triail as
   try_now: Bain triail as anois
@@ -86,7 +86,7 @@
     is scaoileadh". Is cúrsa teagaisc é seo, cosúil le cluiche, ina bhfuil físléachtaí
     ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim
     lúba, coinníollacha, agus algartaim shimplí.
-  all_ages: "Ó liath go leanbh"
+  all_ages: Ó liath go leanbh
   beginner: Tosaitheoir
   n_participants: "# rannpháirtí"
   go: Ar aghaidh
@@ -122,8 +122,8 @@
     teacht ar mhic léinn ríomheolaíochta nó ar shaineolaithe teicniúla i gcéin a spreagfaidh
     do chuid daltaí trí fhíschomhrá.
   congrats_guest_speaker_cta: Aimsigh aoichainteoir
-  congrats_third_party_title: "Úsáid na scileanna nua atá agat leis na haipeanna seo
-    agus leis na suímh Ghréasáin seo"
+  congrats_third_party_title: Úsáid na scileanna nua atá agat leis na haipeanna seo
+    agus leis na suímh Ghréasáin seo
   third_party_gradelevel_kto8: Aois 5-13
   third_party_gradelevel_kto2: Aois 5-7
   third_party_gradelevel_2to8: Aois 7-13
@@ -156,13 +156,13 @@
     Is féidir leis na páistí carachtair a athrú in eagarthóir péinteála, fuaimeanna
     nó fiú a nguth féin a thaifead, grianghraif dá gcuid féin a úsáid, ansin beocht
     a chur sna carachtair leis an blocanna ríomhchláraithe.
-  third_party_scratchjr_btn_curriculum: "Íoslódáil Curaclam Scratch Jr."
+  third_party_scratchjr_btn_curriculum: Íoslódáil Curaclam Scratch Jr.
   third_party_scratchjr_btn_site: Tabhair Cuairt ar Scratch Jr.
   third_party_scratch_desc: In Scratch, is féidir scéalta idirghníomhacha, cluichí,
     agus beochaintí a chruthú agus a chomhroinnt le daoine eile sa bpobal ar líne.
     Cabhraíonn Scratch le daoine óga smaointeoireacht chruthaitheach, réasúnú córasach,
     agus comhoibriú a fhoghlaim — scileanna riachtanacha don saol ag tús an 21ú haois.
-  third_party_scratch_btn_curriculum: "Íoslódáil Curaclam Scratch"
+  third_party_scratch_btn_curriculum: Íoslódáil Curaclam Scratch
   third_party_scratch_btn_forum: Fóram Scratch do Mhúinteoirí
   third_party_scratch_btn_site: Tabhair Cuairt ar Scratch
   third_party_lightbot_desc: In Lightbot, tugann daltaí orduithe do róbat le puzail
@@ -170,7 +170,7 @@
     nó ar ghléasanna Android nó iOS. Imríonn na daltaí na bunleibhéil in Lightbot.
     Foghlaimeoidh siad conas is féidir treoracha a thabhairt don ríomhaire mar shraith
     orduithe simplí, agus faoin phróiseas ginearálta ríomhchlárúcháín.
-  third_party_lightbot_btn_curriculum: "Íoslódáil Curaclam Lightbot"
+  third_party_lightbot_btn_curriculum: Íoslódáil Curaclam Lightbot
   third_party_lightbot_btn_site: Tabhair cuairt ar Lightbot
   third_party_khan_desc: Foghlaim conas is féidir pictiúir, beochaintí, agus cluichí
     a dhearadh le JavaScript agus ProcessingJS, nó leathanaigh Ghréasáin a dhéanamh
@@ -184,7 +184,7 @@
     núíosach App Inventor in ann a chéad aip a dhéanamh as an nua i gceann uair an
     chloig, nó níos lú. Agus is féidir aipeanna casta a scríobh i bhfad níos tapúla
     ná mar is féidir le teangacha traidisiúnta téacsbhunaithe.
-  third_party_appinv_btn_curriculum: "Íoslódáil Curaclam App Inventor 2"
+  third_party_appinv_btn_curriculum: Íoslódáil Curaclam App Inventor 2
   third_party_appinv_btn_forum: Fóram App Inventor 2
   third_party_appinv_btn_site: Tabhair cuairt ar App Inventor 2
   third_party_codehs_desc: Múineann CodeHS buntús an ríomhchlárúcháin trí ghearrfhíseáin,
@@ -197,7 +197,7 @@
     go scolb. Tá cruth nua ar an saol mar gheall ar an nGréasán - tráchtáil, líonrú
     sóisialta, cúram sláinte, agus níos mó. Táimid ag tógáil an oideachais a theastaíonn
     ón domhan - an chéad chóras oideachais ar an líonra ó dhúchas.
-  third_party_codecademy_btn_curriculum: "Íoslódáil Curaclam Codeacademy"
+  third_party_codecademy_btn_curriculum: Íoslódáil Curaclam Codeacademy
   third_party_codecademy_btn_site: Tabhair cuairt ar Codeacademy
   third_party_organization: Eagraíocht
   third_party_curriculum: Curaclam
@@ -464,7 +464,7 @@
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
   homepage_slot_text_link_about_hoc: Maidir leis an Uair Chódála
-  homepage_slot_text_link_host: "Óstáil Uair Chódála"
+  homepage_slot_text_link_host: Óstáil Uair Chódála
   homepage_slot_text_link_hocserved: "# códálaí"
   homepage_solot_text_link_volunteer: Bí i do shaorálaí don Uair Chódála
   homepage_slot_text_title_students: Daltaí
@@ -542,18 +542,18 @@
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Réaltra a Thógáil le Cód
   starwars_javascript_title: Javascript
-  starwars_javascript_description: "Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript."
+  starwars_javascript_description: Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript.
   starwars_javascript_specs: Béarla amháin | Brabhsálaithe nua-aimseartha | Aois 11+
   starwars_blocks_title: Blocanna
-  starwars_blocks_description: "Úsáid blocanna tarraingt-is-scaoileadh."
+  starwars_blocks_description: Úsáid blocanna tarraingt-is-scaoileadh.
   starwars_blocks_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha, gutháin
     chliste, táibléid | Aois 6-106
   starwars_platform_text: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_name: An Uair Chódála Minecraft
-  mc_longdescription: "Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan
-    Minecraft seo."
-  mc_shortdescription: "Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa
-    domhan Minecraft seo."
+  mc_longdescription: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan
+    Minecraft seo.
+  mc_shortdescription: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan
+    Minecraft seo.
   mc_gradelevel: Aois 6-106
   mc_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois
@@ -570,11 +570,11 @@
   minecraft_designer_description: Códáil ainmhithe agus créatúir eile i do leagan
     féin de Minecraft.
   minecraft_designer_button: Tosaigh
-  minecraft_adventurer_description: "Úsáid cód chun dul ag eachtraíocht le hAlex nó
-    le Steve."
+  minecraft_adventurer_description: Úsáid cód chun dul ag eachtraíocht le hAlex nó
+    le Steve.
   minecraft_adventurer_button: Tosaigh
   minecraft_no_internet: Gan cheangal Idirlín?
-  minecraft_download_adventurer: "Íoslódáil an leagan as líne d'Eachtránaí Minecraft."
+  minecraft_download_adventurer: Íoslódáil an leagan as líne d'Eachtránaí Minecraft.
   minecraft_subtitle: An Uair Chódála Minecraft
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
@@ -673,7 +673,7 @@
   speak_another_language: An bhfuil teanga eile agat?
   help_translate: Cabhraigh leis an aistriúchán.
   no_internet: Gan cheangal Idirlín?
-  download_offline: "Íoslódáil an leagan as líne."
+  download_offline: Íoslódáil an leagan as líne.
   are_you_teacher: An múinteoir thú?
   review_lesson_plan: Féach ar an bplean ceachta agus ar acmhainní eile do mhúinteoirí.
   volunteer_engineer_submission_title: Bí i do shaorálaí agus spreag daltaí
@@ -709,7 +709,7 @@
   volunteer_engineer_submission_field_company: Comhlacht (nó Ollscoil)
   volunteer_engineer_submission_field_company_placeholder: Comhlacht (nó Ollscoil)
   volunteer_engineer_submission_field_experience_level: Taithí
-  volunteer_engineer_submission_field_location: "Áit"
+  volunteer_engineer_submission_field_location: Áit
   volunteer_engineer_submission_field_location_desc: Baintear úsáid as d'áit chónaithe
     chun cuidiú le múinteoirí teacht ar shaorálaithe i ngar dóibh. Má tá imní ort
     faoin phríobháideachas, bain úsáid as do sheoladh ollscoile/oibre nó fiú do chathair
@@ -802,10 +802,10 @@
   dashboard_landing_students_title: Do chuid daltaí
   dashboard_landing_students_manage: Bainistigh do chuid daltaí
   dashboard_landing_news_title: Acmhainní do Mhúinteoirí Bunscoile (Béarla amháin)
-  dashboard_landing_new_beta: "Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí
-    bunscoile."
-  dashboard_landing_new_k5courses: "Úrnua! Bain triail as na cúrsaí dírithe ar dhaltaí
-    bunscoile."
+  dashboard_landing_new_beta: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí
+    bunscoile.
+  dashboard_landing_new_k5courses: Úrnua! Bain triail as na cúrsaí dírithe ar dhaltaí
+    bunscoile.
   dashboard_landing_useful_links: Nascanna úsáideacha eile
   dashboard_landing_classroom_resources: Acmhainní do do sheomra ranga
   dashboard_landing_office_hours: Cuir ceist go pearsanta! Tabhair cuairt ar na huaireanta
@@ -873,7 +873,7 @@
   dashboard_course_csp: Foras Feasa ar an Ríomheolaíocht AP®
   dashboard_course_csp_desc: Chruthaigh Code.org dianchúrsa mealltach sothuigthe a
     thaiscéalann buntús na ríomheolaíochta.
-  dashboard_landing_loading: "Á lódáil..."
+  dashboard_landing_loading: Á lódáil...
   dashboard_action_cancel: Cealaigh
   dashboard_action_delete: Scrios
   dashboard_action_delete_yes: Tá
@@ -897,7 +897,7 @@
   dashboard_percent: Céatadán
   dashboard_filter_by_stage: 'Scagadh de réir na céime:'
   dashboard_filter_all: Uile
-  dashboard_download_csv: "Íoslódáil CSV"
+  dashboard_download_csv: Íoslódáil CSV
   dashboard_navigation_home_page: Leathanach baile do mhúinteoirí
   dashboard_navigation_section_student_progress: Cuntais agus Dul Chun Cinn na nDaltaí
   dashboard_navigation_section_teacher_progress: Do Dhul Chun Cinn
@@ -1044,7 +1044,7 @@
   dashboard_curriculum_middle_title: Acmhainní do mhúinteoirí meánscoile
   dashboard_curriculum_high_title: Acmhainní do mhúinteoirí dara leibhéil
   dashboard_lesson_plans: Pleananna Ceachta
-  dashboard_view_all_lesson_plans: "Íoslódáil curaclam iomlán do Chúrsaí 1-4"
+  dashboard_view_all_lesson_plans: Íoslódáil curaclam iomlán do Chúrsaí 1-4
   dashboard_course1: 'Cúrsa 1:'
   dashboard_course2: 'Cúrsa 2:'
   dashboard_course3: 'Cúrsa 3:'
@@ -1326,7 +1326,7 @@
   hoc_category_name: An Uair Chódála
   csf_category_name: Buntús na Ríomheolaíochta
   csf_international_category_name: CS Fundamentals International
-  csf2_draft_category_name: "Á bhforbairt: Cúrsaí A-F"
+  csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
   csp17_category_name: Foras Feasa ar an Ríomheolaíocht
@@ -1351,10 +1351,10 @@
   khanpl_gradelevel: Meánscoil +
   tynker_gradelevel: Aois 5-13
   scratch_gradelevel: Aois 8+
-  lightbot_gradelevel: "Ó liath go leanbh"
-  thinkersmith_gradelevel: "Ó liath go leanbh"
+  lightbot_gradelevel: Ó liath go leanbh
+  thinkersmith_gradelevel: Ó liath go leanbh
   condcards_gradelevel: Aois 8-12
-  lightbotintl_gradelevel: "Ó liath go leanbh"
+  lightbotintl_gradelevel: Ó liath go leanbh
   codehs_gradelevel: Scoil dara leibhéal
   codecademy_gradelevel: Scoil dara leibhéal
   codecombat_gradelevel: Meánscoil +
@@ -1373,7 +1373,7 @@
   makeschool_gradelevel: Scoil dara leibhéal
   touchdevelop_gradelevel: Scoil dara leibhéal
   appinventor_gradelevel: Meánscoil +
-  blockly_gradelevel: "Ó liath go leanbh"
+  blockly_gradelevel: Ó liath go leanbh
   thinkersmith2_gradelevel: Aois 8+
   kodableunplugged_gradelevel: Aois 8-13
   projguts_gradelevel: Aois 10-13
@@ -1447,7 +1447,7 @@
   csfirst_platformtext: Brabhsálaithe nua-aimseartha
   boxisland_platformtext: Andoid, iOS
   codesters_platformtext: Brabhsálaithe nua-aimseartha
-  texasinstruments_platformtext: "Áireamháin TI"
+  texasinstruments_platformtext: Áireamháin TI
   teacherled_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeorg_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry
     Birds!
@@ -1496,7 +1496,7 @@
   touchdevelop_shortdescription: 'Réitigh fadhbanna, cruthaigh cluichí, agus foghlaim
     an chódáil, gach uile rud ar do ghuthán póca. '
   appinventor_shortdescription: Déan d'aip féin! (Android amháin)
-  blockly_shortdescription: "Íoslódáil comhad ZIP le foghlaim as líne"
+  blockly_shortdescription: Íoslódáil comhad ZIP le foghlaim as líne
   thinkersmith2_shortdescription: Foghlaim cén chaoi a mbaineann an ríomhaire úsáid
     as 0anna agus 1anna chun sonraí a stóráil
   kodableunplugged_shortdescription: Ceacht sultmhar "díphlugáilte"
@@ -1509,8 +1509,8 @@
   starwars_shortdescription: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
     Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
   playlab_shortdescription: Cruthaigh scéal nó cluiche sa Spraotharlann!
-  infinity_shortdescription: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
-    ina bhfuil carachtair Disney Infinity."
+  infinity_shortdescription: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
+    ina bhfuil carachtair Disney Infinity.
   artist_shortdescription: Tarraing pictiúir iontacha leis an Ealaíontóir!
   monsterocding_shortdescription: Eachtra ildaite féintreoraithe sa ríomhchlárú, dírithe
     ar pháistí.
@@ -1589,11 +1589,11 @@
     idirghníomhacha a chruthú &mdash; agus iad a chomhroinnt le cairde freisin. I
     dtosach báire, déan iarracht beochan a dhéanamh as d'ainm, cárta beannachta a
     chruthú, nó cluiche Pong a dhearadh.
-  lightbot_longdescription: "Úsáid Lightbot chun na tíleanna gorma go léir a lasadh!
+  lightbot_longdescription: Úsáid Lightbot chun na tíleanna gorma go léir a lasadh!
     Is éard atá in Lightbot ná puzal a thugann tuiscint phraiticiúil ar an ríomhchlárú
     d'imreoirí trí chluichí a chur i bhfeidhm. Foghlaim le treoracha a chur in ord,
     feidhmeanna a scríobh, agus lúba a úsáid chun na leibhéil éagsúla a réiteach.
-    Oiriúnach do chách ó liath go leanbh."
+    Oiriúnach do chách ó liath go leanbh.
   thinkersmith_longdescription: Tabharfaidh na daltaí treoracha dá chéile, ag baint
     úsáide as stór focal réamhshocraithe do "Róbait", chun tascanna simplí a chur
     i gcrích gan iad a phlé roimh ré. Foghlaimeoidh na daltaí an ceangal idir siombailí
@@ -1781,7 +1781,7 @@
   khan_beyond_gradelevel: Meánscoil +
   tynker_beyond_gradelevel: Aois 5-13
   scratch_beyond_gradelevel: Aois 8+
-  lightbot_beyond_gradelevel: "Ó liath go leanbh"
+  lightbot_beyond_gradelevel: Ó liath go leanbh
   codecademy_beyond_gradelevel: Scoil dara leibhéal
   kodable_beyond_gradelevel: Bunscoil
   scratchjr_beyond_gradelevel: Bunscoil
@@ -2094,7 +2094,7 @@
   playlab_shortcode: play
   artist_shortcode: art
   header_home: Baile
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Mo Phainéal
   header_courses: Cúrsaí
   header_course_catalog: Course Catalog
   header_project_gallery: Tograí

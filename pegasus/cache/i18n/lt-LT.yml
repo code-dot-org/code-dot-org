@@ -232,7 +232,7 @@
     kursą</a>.
   leaderboards_for_hoc: "„Programavimo valandos“ lyderių sąrašas."
   support_url: http://support.code.org/
-  country: "Šalis"
+  country: Šalis
   city: Miestas
   gender: Lytis
   boys: Berniukai
@@ -472,13 +472,13 @@
   homepage_slot_text_title_advocates: Advokatai
   homepage_slot_text_blurb_advocates: Paremkite mūsų darbą
   homepage_slot_text_link_stats: Peržiūrėkite statistiką
-  homepage_slot_text_link_buy: "Įsitraukite"
+  homepage_slot_text_link_buy: Įsitraukite
   homepage_slot_text_link_donate: Paremkite mus
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Kodavimo studijos mokinių kūriniai
   homepage_header_donors: Code.org dėkoja savo rėmėjams
-  homepage_donors_seall: "Žr. viską"
+  homepage_donors_seall: Žr. viską
   homepage_donors_donate: Paremkite
   contact_form_topic_student: Aš esu mokinys
   contact_form_topic_parent: Aš esu tėvas
@@ -537,14 +537,14 @@
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
-  starwars_platform_text: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  starwars_platform_text: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   mc_name: Minecraft programavimo valanda
   mc_longdescription: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
     šiame Minecraft pasaulyje.
   mc_shortdescription: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
     šiame Minecraft pasaulyje.
   mc_gradelevel: Amžius 4-104
-  mc_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  mc_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
@@ -660,7 +660,7 @@
   download_offline: Download the offline version.
   are_you_teacher: Ar jūs mokytojas?
   review_lesson_plan: Review the lesson plan and other teacher resources.
-  volunteer_engineer_submission_title: "Įkvėpk moksleivius ir savanoriauk"
+  volunteer_engineer_submission_title: Įkvėpk moksleivius ir savanoriauk
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
@@ -689,8 +689,8 @@
     volunteer map
   volunteer_engineer_submission_field_name: Vardas
   volunteer_engineer_submission_field_name_placeholder: Pilnas vardas
-  volunteer_engineer_submission_field_company: "Įmonė (ar Universitetas)"
-  volunteer_engineer_submission_field_company_placeholder: "Įmonė (ar Universitetas)"
+  volunteer_engineer_submission_field_company: Įmonė (ar Universitetas)
+  volunteer_engineer_submission_field_company_placeholder: Įmonė (ar Universitetas)
   volunteer_engineer_submission_field_experience_level: Patirties lygis
   volunteer_engineer_submission_field_location: Vieta
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
@@ -792,7 +792,7 @@
   dashboard_landing_view_progress: Peržiūrėti %{biggest_section} pažangą
   dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Galimi kursai
-  dashboard_landing_available_courses: "Šiuos kursus gali bandyti jūsų mokiniai."
+  dashboard_landing_available_courses: Šiuos kursus gali bandyti jūsų mokiniai.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
@@ -953,8 +953,8 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "Įveskite ar įkopijuokite mokinių vardus - po vieną
-    eilutėje:"
+  dashboard_students_add_multiple: 'Įveskite ar įkopijuokite mokinių vardus - po vieną
+    eilutėje:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
@@ -1019,7 +1019,7 @@
   dashboard_framework: Sistema
   dashboard_standards: Standartai
   dashboard_implementation_guide: Diegimo vadovas
-  dashboard_glossary: "Žodynėlis"
+  dashboard_glossary: Žodynėlis
   dashboard_classroom_strategies: Klasės darbo organizavimo strategijos
   dashboard_debugging: 'Programos derinimas (klaidų ieškojimas):'
   dashboard_puzzle_solving: 'Galvosūkių sprendimas:'
@@ -1033,7 +1033,7 @@
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Kita
-  dashboard_login_word: "Žodžiai"
+  dashboard_login_word: Žodžiai
   dashboard_login_picture: Paveikslėlis
   dashboard_login_none: El. paštas
   dashboard_stage: Etapas
@@ -1159,12 +1159,12 @@
   codeorg_name: Klasikinis labirintas
   codeintl_name: Klasikinis labirintas
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "Įvadas į JavaScript"
-  khanes_name: "Įvadas į JavaScript"
-  khanpt_name: "Įvadas į JavaScript"
-  khanhe_name: "Įvadas į JavaScript"
-  khanfr_name: "Įvadas į JavaScript"
-  khanpl_name: "Įvadas į JavaScript"
+  khan_name: Įvadas į JavaScript
+  khanes_name: Įvadas į JavaScript
+  khanpt_name: Įvadas į JavaScript
+  khanhe_name: Įvadas į JavaScript
+  khanfr_name: Įvadas į JavaScript
+  khanpl_name: Įvadas į JavaScript
   tynker_name: Sukurk savo žaidimą
   scratch_name: Programuokite kūrybingai
   lightbot_name: Lightbot
@@ -1195,7 +1195,7 @@
   projguts_name: "„Akmuo, popierius, žirklės“"
   hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
-  infinity_name: "Žaidimų laboratorija „Infinity“"
+  infinity_name: Žaidimų laboratorija „Infinity“
   artist_name: Menininkas
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Paleisti Marko!
@@ -1280,7 +1280,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Programėlių laboratorija
-  gamelab_name: "Žaidimų laboratorija"
+  gamelab_name: Žaidimų laboratorija
   basketball_name: Sukurk kreipšinio žaidimą
   sports_name: Sportas
   applab_gradelevel: Amžius 13+
@@ -1348,8 +1348,8 @@
   coursee_gradelevel: Amžius 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Amžius 10-18
-  codeorg_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
-  codeintl_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
+  codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   thinkersmithspanish_platformtext: Veikla be kompiuterių
   khan_platformtext: Modern web browsers
   khanes_platformtext: Modern web browsers
@@ -1376,7 +1376,7 @@
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android planšetės
   robomindnl_platformtext: Modern web browsers, Mobile web
-  flappy_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  flappy_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   bitsbox_platformtext: Modern web browsers
   makeschool_platformtext: Modernios naršyklės
   touchdevelop_platformtext: Modern browsers, smartphones, all devices
@@ -1385,17 +1385,17 @@
   thinkersmith2_platformtext: Veikla be kompiuterių
   kodableunplugged_platformtext: Veikla be kompiuterių
   projguts_platformtext: Veikla be kompiuterių
-  hourofcode_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  hourofcode_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   frozen_platformtext: Modernios naršyklės bei planšetės
   starwars_platformtext: Modernios naršyklės bei planšetės
-  playlab_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  playlab_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
   csfirst_platformtext: Modern web browsers
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Modern web browsers
   texasinstruments_platformtext: TI Calculators
-  teacherled_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
+  teacherled_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeorg_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   codeintl_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -1412,7 +1412,7 @@
     procedūras!
   thinkersmith_shortdescription: Pamokėlės grupei, kuri neturi kompiuterių
   condcards_shortdescription: Išmokite algoritmus su kortų kalade
-  lightbotintl_shortdescription: "Žaidimas, kuris moko koduoti"
+  lightbotintl_shortdescription: Žaidimas, kuris moko koduoti
   codehs_shortdescription: Išmokite programuoti su šunimi Kareliu – tai linksmas ir
     vaizdingas programavimo įvadas!
   codecademy_shortdescription: Išmokite programuoti su JavaScript, tiesiai interneto
@@ -1444,7 +1444,7 @@
   blockly_shortdescription: Atsisiųsti ZIP failą ir mokykitės be interneto
   thinkersmith2_shortdescription: Sužinokite, kaip kompiuteriai naudoja skaičius 1
     ir 0 atvaizduodami informaciją
-  kodableunplugged_shortdescription: "Įdomios veiklos be kompiuterių"
+  kodableunplugged_shortdescription: Įdomios veiklos be kompiuterių
   projguts_shortdescription: Išmokite modeliuoti ir simuliuoti žaisdami „akmuo, popierius,
     žirklės“
   hourofcode_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
@@ -1608,13 +1608,13 @@
   thinkersmith2_longdescription: Students learn about representing and storing letters
     in binary, as functions of on and off. At the end, the class gets to encode their
     own initials to take home with them.
-  kodableunplugged_longdescription: "Šiai pamokėlei reikės tik paprasto popieriaus.
+  kodableunplugged_longdescription: 'Šiai pamokėlei reikės tik paprasto popieriaus.
     fuzzFamily Frenzy yra įvadas į programavimo logiką vaikams nuo 5 metų. Mokytojas
     paaiškins žaidimo esmę, o mokiniai „programuos“ savo draugą, kad šis įveiktų paprastą
-    kliūčių ruožą. "
-  projguts_longdescription: "Ši veikla be kompiuterio padės mokiniams suprasti, kaip
+    kliūčių ruožą. '
+  projguts_longdescription: Ši veikla be kompiuterio padės mokiniams suprasti, kaip
     vyksta kompiuterių simuliacija ir modeliavimas. Mokiniai grupelėmis žais žaidimą
-    „Akmuo, popierius, žirklės“ ir užfiksuos gautus rezultatus kaip modeliavimo eksperimentus."
+    „Akmuo, popierius, žirklės“ ir užfiksuos gautus rezultatus kaip modeliavimo eksperimentus.
   hourofcode_longdescription: Placeholder for new code.org/hoc
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
@@ -1769,9 +1769,9 @@
   codeorg_beyond_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry
     Birds!
   khan_beyond_shortdescription: Išmokite piešti su JavaScript
-  tynker_beyond_shortdescription: "Įdomus ir įtraukiantis kursas vaikams 4-8 klasėms"
+  tynker_beyond_shortdescription: Įdomus ir įtraukiantis kursas vaikams 4-8 klasėms
   scratch_beyond_shortdescription: Kurkite interaktyvius žaidimus, istorijas ir animacijas.
-  lightbot_beyond_shortdescription: "Žaidimas, kuris moko koduoti"
+  lightbot_beyond_shortdescription: Žaidimas, kuris moko koduoti
   codecademy_beyond_shortdescription: Išmokite programuoti su JavaScript, tiesiai
     interneto naršyklėje
   kodable_beyond_shortdescription: Smagus iPad žaidimas, kuris moko programavimo pagrindų
@@ -1780,7 +1780,7 @@
   hopscotch_beyond_shortdescription: Išmokite grafinio programavimo su iPad
   pocketcode_beyond_shortdescription: Sukurk žaidimą savo išmaniajame telefone ir
     pasidalink juo su draugais!
-  groklearning_beyond_shortdescription: "Įvadas į programavimą su Python"
+  groklearning_beyond_shortdescription: Įvadas į programavimą su Python
   hacketyhack_beyond_shortdescription: Išmokite programuoti su Ruby
   robomind_beyond_shortdescription: Parašykite kodą virtualiam robotui
   makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
@@ -1981,7 +1981,7 @@
   hourofcode_shortcode: code
   flappy_shortcode: plasnok
   infinity_shortcode: inf
-  playlab_shortcode: "žaisti"
+  playlab_shortcode: žaisti
   artist_shortcode: art
   header_home: Pradžia
   header_my_dashboard: Valdymo skydelis
@@ -1997,9 +1997,9 @@
   header_educate_hoc: "„Programavimo valanda“"
   header_educate_partner: Būkite mūsų partneriais
   header_educate_beyond: Už Code.org ribų
-  header_educate_inspire: "Įkvėpkite mokinius"
+  header_educate_inspire: Įkvėpkite mokinius
   header_educate_community: Virtuali bendruomenė
-  header_educate_tools: "Įrankiai ir vaizdo įrašai"
+  header_educate_tools: Įrankiai ir vaizdo įrašai
   header_about_us: About Us
   header_about_leadership: Leadership
   header_about_donors: Donors

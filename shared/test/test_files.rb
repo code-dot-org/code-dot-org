@@ -399,18 +399,6 @@ class FilesTest < FilesApiTestBase
     assert not_found?
   end
 
-  def test_metadata_cached
-    thumbnail_filename = '.metadata/thumbnail.png'
-    thumbnail_body = 'stub-thumbnail-contents'
-
-    @api.put_object(thumbnail_filename, thumbnail_body)
-    assert successful?
-
-    get "/v3/files-public/#{@channel_id}/#{thumbnail_filename}"
-    assert successful?
-    assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
-  end
-
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
     escaped_filename = URI.escape(filename)
@@ -546,6 +534,44 @@ class FilesTest < FilesApiTestBase
     dest_api.delete_object(URI.escape(image_filename))
     dest_api.delete_object(URI.escape(sound_filename))
     delete_channel(dest_channel_id)
+  end
+
+  def test_temporary_public_url
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename)
+
+    # Links to the right file
+    assert_includes temp_url, 'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'
+
+    # Has a 5-minute timeout by default
+    assert_includes temp_url, 'X-Amz-Expires=300'
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+  end
+
+  def test_temporary_public_url_with_custom_timeout
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    temp_url = FileBucket.new.make_temporary_public_url(@channel_id, thumbnail_filename, 1.hour)
+
+    # Links to the right file
+    assert_includes temp_url, 'cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png'
+
+    # Has a 5-minute timeout by default
+    assert_includes temp_url, 'X-Amz-Expires=3600'
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
   end
 
   private

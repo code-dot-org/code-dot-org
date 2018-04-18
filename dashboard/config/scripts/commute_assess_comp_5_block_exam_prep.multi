@@ -6,9 +6,7 @@ right 'Makes sure the value of x is between 10 and 5'
 wrong 'It always sets x equal to 5'
 wrong 'This code will cause an error'
 markdown <<MARKDOWN
+<!-- TEXT: ![](https://images.code.org/c366abfb03cf7e5963c75b7e9dac62ab-image-1482509531074.png) -->
 
-![](https://images.code.org/c366abfb03cf7e5963c75b7e9dac62ab-image-1482509531074.png)
-
-<!-- ![](https://images.code.org/342861ebb49244cdc1500ae5901ac402-image-1482338840941.png) -->
-
+<img src="https://images.code.org/fea3aa2499c72595e672f532e25fe725-image-1522966115761.png" style="width: 150px">
 MARKDOWN

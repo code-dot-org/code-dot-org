@@ -86,7 +86,7 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [<center><img src="/images/csd/teacher_dashboard.png" width="100%">](https://studio.code.org/home)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">Create and manage your classroom sections, as well as check student progress, administer assessments, and integrate with your Google or Clever classroom, all from your <a href="https://studio.code.org/home">Teacher Dashboard</a>.</div>
+<div style="margin-left: 15px; margin-top: 5px;">Create and manage your classroom sections, check student progress, administer assessments, and integrate with your Google or Clever classroom - all from your <a href="https://studio.code.org/home">Teacher Dashboard</a>!</div>
 
 [/col-33]
 
