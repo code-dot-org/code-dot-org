@@ -15,8 +15,10 @@ import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import { RegionalPartnerDropdown } from './regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
+import color from "../../../util/color";
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
@@ -60,6 +62,10 @@ const styles = {
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
+  },
+  deleteButton: {
+    backgroundColor: color.red,
+    color: color.white
   }
 };
 
@@ -92,7 +98,9 @@ export class DetailViewContents extends React.Component {
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
-      attending_teachercon: PropTypes.bool
+      attending_teachercon: PropTypes.bool,
+      registered_teachercon: PropTypes.bool,,
+      registered_fit_weekend: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -224,6 +232,59 @@ export class DetailViewContents extends React.Component {
       if (this.props.onUpdate) {
         this.props.onUpdate(applicationData);
       }
+    });
+  };
+
+  handleDeleteApplicationClick = () => {
+    this.setState({showDeleteApplicationConfirmation: true});
+  };
+
+  handleDeleteApplicationCancel = () => {
+    this.setState({showDeleteApplicationConfirmation: false});
+  };
+
+  handleDeleteApplicationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/api/v1/pd/applications/${this.props.applicationId}`
+    }).success(() => {
+      this.setState({deleted: true, showDeleteApplicationConfirmation: false});
+    }).error(() => {
+      this.setState({deleted: false, showDeleteApplicationConfirmation: false});
+    });
+  };
+
+  handleDeleteTeacherconRegistrationClick = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: true});
+  };
+
+  handleDeleteTeacherconRegistrationCancel = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+  };
+
+  handleDeleteTeacherconRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/teachercon_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+    });
+  };
+
+  handleDeleteFitWeekendRegistrationClick = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
+  };
+
+  handleDeleteFitWeekendRegistrationCancel = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+  };
+
+  handleDeleteFitWeekendRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/fit_weekend_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
     });
   };
 
@@ -359,6 +420,60 @@ export class DetailViewContents extends React.Component {
             <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
             Application is&nbsp;
             {this.state.locked ? 'Locked' : 'Unlocked'}
+          </div>
+        }
+        {
+          this.props.isWorkshopAdmin &&
+          <div>
+            <Button
+              style={{...styles.deleteButton, textAlign}}
+              onClick={this.handleDeleteApplicationClick}
+            >
+              Delete Application
+            </Button>
+            <ConfirmationDialog
+              show={this.state.showDeleteApplicationConfirmation}
+              onOk={this.handleDeleteApplicationConfirmed}
+              onCancel={this.handleDeleteApplicationCancel}
+              headerText="Delete Application"
+              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+            />
+          </div>
+        }
+        {
+          this.props.isWorkshopAdmin && this.props.applicationData.registered_teachercon &&
+          <div>
+            <Button
+              style={{...styles.deleteButton, textAlign}}
+              onClick={this.handleDeleteTeacherconRegistrationClick}
+            >
+              Delete Teachercon Registration
+            </Button>
+            <ConfirmationDialog
+              show={this.state.showDeleteTeacherconRegistrationConfirmation}
+              onOk={this.handleDeleteTeacherconRegistrationConfirmed}
+              onCancel={this.handleDeleteTeacherconRegistrationCancel}
+              headerText="Delete Teachercon Registration"
+              bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
+            />
+          </div>
+        }
+        {
+          this.props.isWorkshopAdmin && this.props.applicationData.registered_fit_weekend &&
+          <div>
+            <Button
+              style={{...styles.deleteButton, textAlign}}
+              onClick={this.handleDeleteFitWeekendRegistrationClick}
+            >
+              Delete FiT Weekend Registration
+            </Button>
+            <ConfirmationDialog
+              show={this.state.showDeleteFitWeekendRegistrationConfirmation}
+              onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
+              onCancel={this.handleDeleteFitWeekendRegistrationCancel}
+              headerText="Delete FiT Weekend Registration"
+              bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
+            />
           </div>
         }
       </div>
@@ -545,6 +660,12 @@ export class DetailViewContents extends React.Component {
   };
 
   render() {
+    if (this.state.hasOwnProperty('deleted')) {
+      const message = this.state.deleted ? "This application has been deleted." : "This application could not be deleted.";
+      return (
+        <h4>{message}</h4>
+      );
+    }
     return (
       <div id="detail-view">
         {this.renderHeader()}
