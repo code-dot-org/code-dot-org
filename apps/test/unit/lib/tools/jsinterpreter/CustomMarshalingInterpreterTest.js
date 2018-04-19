@@ -132,7 +132,7 @@ describe("The CustomMarshalingInterpreter", () => {
         interpreter.setProperty(
           interpreter.global,
           "custom",
-          interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+          interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
         );
       });
 
@@ -150,7 +150,7 @@ describe("The CustomMarshalingInterpreter", () => {
           interpreter.setProperty(
             interpreter.global,
             "custom",
-            interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+            interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
           );
         });
 
@@ -180,7 +180,7 @@ describe("The CustomMarshalingInterpreter", () => {
                 interpreter.setProperty(
                   scope,
                   'value',
-                  interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+                  interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
                 );
               }
             );
@@ -673,7 +673,7 @@ describe("The CustomMarshalingInterpreter", () => {
         const nativeParentObj = {foo: 'bar'};
         const nativeVar = nativeParentObj.foo;
         interpreter.marshalNativeToInterpreter(nativeVar, nativeParentObj);
-        expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(nativeVar, nativeParentObj);
+        expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(interpreter, nativeVar, nativeParentObj);
       });
     });
   });
