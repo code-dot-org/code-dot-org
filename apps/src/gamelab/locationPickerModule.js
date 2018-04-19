@@ -14,7 +14,6 @@ export default function locationPicker(state, action) {
   switch (action.type) {
     case REQUEST_LOCATION:
       return {
-        ...state,
         mode: LocationPickerMode.SELECTING,
         lastSelection: undefined,
       };
