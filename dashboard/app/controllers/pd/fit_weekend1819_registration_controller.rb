@@ -33,4 +33,8 @@ class Pd::FitWeekend1819RegistrationController < ApplicationController
       }.to_json
     }
   end
+
+  def destroy
+    @application.fit_weekend_registration.try(:destroy)
+  end
 end

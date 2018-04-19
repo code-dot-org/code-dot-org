@@ -600,6 +600,10 @@ module Pd::Application
       )
     end
 
+    def fit_weekend_registration
+      Pd::FitWeekend1819Registration.find_by_pd_application_id(id)
+    end
+
     # override
     def self.prefetch_associated_models(applications)
       # also prefetch fit workshops

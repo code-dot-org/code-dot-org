@@ -428,7 +428,7 @@ Dashboard::Application.routes.draw do
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
-      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+      resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
         collection do
           get :quick_view
           get :cohort_view
@@ -468,6 +468,9 @@ Dashboard::Application.routes.draw do
     get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+
+    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
