@@ -133,7 +133,7 @@ class SectionProgress extends Component {
                 studentLevelProgress={studentLevelProgress}
               />
               <SummaryViewLegend
-                showCSFProgressBox={true}
+                showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }
