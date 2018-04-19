@@ -99,7 +99,7 @@ export class DetailViewContents extends React.Component {
       fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
       attending_teachercon: PropTypes.bool,
-      registered_teachercon: PropTypes.bool,,
+      registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -437,6 +437,7 @@ export class DetailViewContents extends React.Component {
               onCancel={this.handleDeleteApplicationCancel}
               headerText="Delete Application"
               bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+              okText="Delete"
             />
           </div>
         }
@@ -455,6 +456,7 @@ export class DetailViewContents extends React.Component {
               onCancel={this.handleDeleteTeacherconRegistrationCancel}
               headerText="Delete Teachercon Registration"
               bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
+              okText="Delete"
             />
           </div>
         }
@@ -473,6 +475,7 @@ export class DetailViewContents extends React.Component {
               onCancel={this.handleDeleteFitWeekendRegistrationCancel}
               headerText="Delete FiT Weekend Registration"
               bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
+              okText="Delete"
             />
           </div>
         }
