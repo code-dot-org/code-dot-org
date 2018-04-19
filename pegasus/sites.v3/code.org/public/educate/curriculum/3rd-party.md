@@ -12,7 +12,7 @@ style_min: true
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
-| [Code Studio](/educate/k5)  (Code.org)| 6 courses, 15-30 hrs each, blending online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
+| [Code.org](/educate/k5) | 6 courses, 15-30 hrs each, blending online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Code Red Education](http://www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
