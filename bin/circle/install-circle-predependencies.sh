@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get --only-upgrade install google-chrome-stable
 
 # Install yarn
-sudo apt-get install yarn=0.23.2-1
+sudo apt-get install yarn=1.6.0-1
 
 # CircleCI on Ubuntu 14 installs yarn 0.18.1 and has it early in the $PATH.
 # Remove it so we can use the version of yarn we installed above.

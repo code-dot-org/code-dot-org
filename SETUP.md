@@ -13,7 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v6.9.0
      npm --version   # --> 3.10.8
-     yarn --version  # --> 0.23.2
+     yarn --version  # --> 1.6.0
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler`
@@ -58,7 +58,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node, npm, and yarn
     1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
-    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
+    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
 1. Prevent future problems related to the `Too many open files` error:
@@ -86,7 +86,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install yarn
     1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
     1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=0.23.2-1`
+    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. Read the following notes, then go back up to the overview and run the commands there. 
