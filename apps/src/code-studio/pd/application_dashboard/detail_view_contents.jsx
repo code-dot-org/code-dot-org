@@ -65,7 +65,8 @@ const styles = {
   },
   deleteButton: {
     backgroundColor: color.red,
-    color: color.white
+    color: color.white,
+    marginTop: 5
   }
 };
 
