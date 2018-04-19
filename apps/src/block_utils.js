@@ -1,4 +1,5 @@
 import xml from './xml';
+import { SVG_NS } from './constants';
 
 const ATTRIBUTES_TO_CLEAN = [
   'uservisible',
@@ -369,6 +370,7 @@ const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
+const LOCATION_PICKER = 'location';
 
 /**
  * Given block text with input names specified in curly braces, returns a list
@@ -387,12 +389,15 @@ const STATEMENT_INPUT = 'statement';
  *   BlockValueType.NONE to accept any block.
  * @param {boolean} args[].statement Indicates that an input is a statement
  *   input, which is passed as a callback function
+ * @param {boolean} args[].locationPicker Add a location picker button for this
+ *   input.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
- * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
+ * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
+ *   'location'
  * @returns {string} return[].label Text to display to the left of the input
  */
 const determineInputs = function (text, args, strictTypes=[]) {
@@ -407,12 +412,23 @@ const determineInputs = function (text, args, strictTypes=[]) {
     if (input) {
       const argIndex = args.findIndex(arg => arg.name === input);
       const [arg] = args.splice(argIndex, 1);
+      if (arg.locationPicker) {
+        arg.type = Blockly.BlockValueType.LOCATION;
+      }
       const strict = arg.strict || strictTypes.includes(arg.type);
       if (arg.options) {
         inputs.push({
           mode: DROPDOWN_INPUT,
           name: arg.name,
           options: arg.options,
+          label,
+          strict,
+        });
+      } else if (arg.locationPicker) {
+        inputs.push({
+          mode: LOCATION_PICKER,
+          name: arg.name,
+          type: arg.type,
           label,
           strict,
         });
@@ -455,11 +471,12 @@ exports.determineInputs = determineInputs;
  * @param {Block} block The block to add the inputs to
  * @param {Object[]} inputs The list of inputs. See determineInputs() for
  *   the fields in each input.
+ * @param {function} callback Function to call when the button on a location
+ *   picker is pressed
  */
-const interpolateInputs = function (blockly, block, inputs) {
+const interpolateInputs = function (blockly, block, inputs, getLocation) {
   inputs.map(input => {
-    let dropdown;
-    let valueInput;
+    let dropdown, valueInput, button, icon, label;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
@@ -482,6 +499,31 @@ const interpolateInputs = function (blockly, block, inputs) {
         break;
       case STATEMENT_INPUT:
         block.appendStatementInput(input.name);
+        break;
+      case LOCATION_PICKER:
+        label = block.appendDummyInput()
+            .appendTitle(`${input.label}(0, 0)`, `${input.name}_LABEL`)
+            .titleRow[0];
+        icon = document.createElementNS(SVG_NS, 'tspan');
+        icon.style.fontFamily = 'FontAwesome';
+        icon.textContent = '\uf276';
+        button = new Blockly.FieldButton(icon, updateValue => {
+            getLocation(loc => {
+              if (loc) {
+                button.setValue(JSON.stringify(loc));
+              }
+            });
+          },
+          block.getHexColour(),
+          value => {
+            if (value) {
+              const loc = JSON.parse(value);
+              label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+            }
+          }
+        );
+        block.appendDummyInput()
+            .appendTitle(button, input.name);
         break;
     }
   });
@@ -521,6 +563,8 @@ const addInputs = function (blockly, block, args) {
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
  *   method call blocks.
+ * @params {function} getLocation Callback to trigger a location picker, only
+ *   needed if using location picker inputs.
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
@@ -529,6 +573,7 @@ exports.createJsWrapperBlockCreator = function (
   blocksModuleName,
   strictTypes,
   defaultObjectType,
+  getLocation,
 ) {
 
   const {

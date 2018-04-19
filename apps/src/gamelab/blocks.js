@@ -8,6 +8,7 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
+const LOCATION_COLOR = [300, 0.46, 0.89];
 
 export default {
   install(blockly, blockInstallOptions) {
@@ -31,6 +32,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
+      getLocation,
     );
 
     createJsWrapperBlock({
@@ -59,7 +61,7 @@ export default {
       blockText: 'make a new {ANIMATION} sprite at {LOCATION}',
       args: [
         { name: 'ANIMATION', options: sprites },
-        { name: 'LOCATION' },
+        { name: 'LOCATION', type: blockly.BlockValueType.LOCATION },
       ],
       returnType: SPRITE_TYPE,
     });
@@ -335,6 +337,19 @@ export default {
       args: [],
     });
 
+    createJsWrapperBlock({
+      color: LOCATION_COLOR,
+      returnArg: true,
+      name: 'location_picker',
+      blockText: '{LOCATION}',
+      args: [{
+        name: 'LOCATION',
+        locationPicker: true,
+      }],
+      returnType: Blockly.BlockValueType.LOCATION,
+      orderPrecedence: ORDER_ATOMIC,
+    });
+
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
@@ -393,32 +408,6 @@ export default {
       },
     };
     generator.sprite_variables_set = generator.variables_set;
-
-    Blockly.Blocks.gamelab_location_picker = {
-      init: function () {
-        this.setHSV(300, 0.46, 0.89);
-        const label = this.appendDummyInput()
-            .appendTitle('(0, 0)', 'LABEL')
-            .titleRow[0];
-        var button = new Blockly.FieldButton('select', async update => {
-            return JSON.stringify(await getLocation(loc => update(JSON.stringify(loc))));
-          },
-          this.getHexColour(),
-          value => {
-            if (value) {
-              const obj = JSON.parse(value);
-              label.setText(`(${obj.x}, ${obj.y})`);
-            }
-          });
-        this.appendDummyInput()
-            .appendTitle(button, 'LOCATION');
-        this.setOutput(true);
-        this.setInputsInline(true);
-      },
-    };
-    generator.gamelab_location_picker = function () {
-      return [this.getTitleValue('LOCATION'), ORDER_ATOMIC];
-    };
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
@@ -428,6 +417,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
+      getLocation,
     ));
 
     if (!hideCustomBlocks) {
