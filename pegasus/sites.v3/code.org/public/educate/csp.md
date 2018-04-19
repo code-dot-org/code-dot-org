@@ -330,7 +330,8 @@ Please see this page about [CS Principles Inspirations](/educate/csp/inspiration
 AP® is a registered trademark of the College Board.
 
 <!--
+### Professional Learning 
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
-
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 -->

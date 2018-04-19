@@ -51,6 +51,16 @@
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnRight</title>
                   <title name="VALUE" config="0,45,60,90,120,180,270">270</title>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">30</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
