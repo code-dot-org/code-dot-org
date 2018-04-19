@@ -217,10 +217,14 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
-        if (this.isa(value, this.FUNCTION)) {
-          // When assigning an interpreter function as a method on a
-          // CustomMarshal object, assume that we expect the method to be
-          // called within the interpreter by student code.
+        if (!obj.data.hasOwnProperty(name) && value instanceof Interpreter.Object) {
+          // When assigning an interpreter object as a property on a
+          // CustomMarshal object that doesn't already have a native property
+          // with the same name, assume that we expect the object to be
+          // used purely within the interpreter by student code.
+
+          // This allows interpreter arrays, objects, and functions to be tacked
+          // on to CustomMarshal objects
           return super.setProperty(obj, name, value, opt_descriptor);
         }
         obj.data[name] = this.marshalInterpreterToNative(value);
