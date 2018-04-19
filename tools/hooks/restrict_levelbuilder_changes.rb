@@ -3,7 +3,7 @@ require_relative 'hooks_utils.rb'
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
 COURSES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/courses', __FILE__).freeze
-VIDEO_THUMBNAILS_DIR = File.expand_path(REPO_DIR + 'dashboard/public/c/video_thumbnails', __FILE__).freeze
+VIDEO_THUMBNAILS_DIR = File.expand_path(REPO_DIR + '/dashboard/public/c/video_thumbnails', __FILE__).freeze
 WHITELISTED_FILES = %w(
   dashboard/config/locales/dsls.en.yml
   dashboard/config/locales/scripts.en.yml
