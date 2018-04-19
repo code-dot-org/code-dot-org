@@ -146,9 +146,8 @@ export default class JSInterpreter {
       this.eventQueue = [];
       // Append our mini-runtime after the user's code. This will spin and process
       // callback functions:
-      options.code += '\nwhile (true) { var obj = getCallback(); ' +
-                      'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
-                      'setCallbackRetVal(ret); }}';
+      options.code += '\n;while(true){var __jsCB=getCallback();' +
+                      'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
 
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = (intFunc) => {
         return (...args) => {
@@ -1046,7 +1045,8 @@ export default class JSInterpreter {
    * Returns the current interpreter state object.
    */
   getCurrentState() {
-    return this.interpreter && this.interpreter.peekStackFrame();
+    const currentInterpreter = this.currentEvalInterpreter || this.interpreter;
+    return currentInterpreter && currentInterpreter.peekStackFrame();
   }
 
   /**
@@ -1063,6 +1063,7 @@ export default class JSInterpreter {
     // NOTE: we are being a little tricky here (we are re-running
     // part of the Interpreter constructor with a different interpreter's
     // scope)
+    evalInterpreter.global = this.interpreter.global;
     evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
     evalInterpreter.setStack([{
       node: evalInterpreter.ast,
@@ -1077,7 +1078,12 @@ export default class JSInterpreter {
      }, this);
 
     // run() may throw if there's a problem in the expression
-    evalInterpreter.run();
+    try {
+      this.currentEvalInterpreter = evalInterpreter;
+      evalInterpreter.run();
+    } finally {
+      this.currentEvalInterpreter = null;
+    }
     return evalInterpreter.value;
   }
 

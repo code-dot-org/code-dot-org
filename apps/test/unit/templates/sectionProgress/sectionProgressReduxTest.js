@@ -7,6 +7,7 @@ import sectionProgress, {
   setScriptId,
   addScriptData,
   addStudentLevelProgress,
+  setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -84,6 +85,8 @@ const fakeStudentProgress = {
   1: {242: 1001, 243: 1000},
   2: {242: 1000, 243: 1000},
 };
+
+const lessonOfInterest = 16;
 
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
@@ -174,6 +177,14 @@ describe('sectionProgressRedux', () => {
     });
   });
 
+  describe('setLessonOfInterest', () => {
+    it('sets the lesson of interest', () => {
+      const action = setLessonOfInterest(lessonOfInterest);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
+    });
+  });
+
   describe('addStudentLevelProgress', () => {
     it('adds multiple scriptData info', () => {
       const action = addStudentLevelProgress(130, fakeStudentProgress);
@@ -189,6 +200,15 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState2.studentLevelProgressByScript[132], {
         ...fakeStudentProgress,
         3: {},
+      });
+
+      const action3 = addStudentLevelProgress(132, { 4: {} });
+      const nextState3 = sectionProgress(nextState2, action3);
+      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(nextState3.studentLevelProgressByScript[132], {
+        ...fakeStudentProgress,
+        3: {},
+        4: {},
       });
     });
   });
