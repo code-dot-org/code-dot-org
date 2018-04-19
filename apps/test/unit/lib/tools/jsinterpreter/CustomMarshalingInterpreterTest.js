@@ -113,12 +113,12 @@ describe("The CustomMarshalingInterpreter", () => {
       interpreter = new CustomMarshalingInterpreter('foo = true; foo.bar = false', customMarshaler);
       interpreter.run();
       expect(Interpreter.prototype.setProperty).to.have.been.calledWith(
-        interpreter.globalScope,
+        interpreter.global,
         'foo',
         interpreter.TRUE
       );
       expect(Interpreter.prototype.setProperty).to.have.been.calledWith(
-        interpreter.getProperty(interpreter.globalScope, 'foo'),
+        interpreter.getProperty(interpreter.global, 'foo'),
         'bar',
         interpreter.FALSE
       );
@@ -130,7 +130,7 @@ describe("The CustomMarshalingInterpreter", () => {
         nativeObject = {};
         interpreter = new CustomMarshalingInterpreter('custom.fromInterpreter = "hello";', customMarshaler);
         interpreter.setProperty(
-          interpreter.globalScope,
+          interpreter.global,
           "custom",
           interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
         );
@@ -148,7 +148,7 @@ describe("The CustomMarshalingInterpreter", () => {
             new CustomMarshaler({blockedProperties: ['fromInterpreter']})
           );
           interpreter.setProperty(
-            interpreter.globalScope,
+            interpreter.global,
             "custom",
             interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
           );
@@ -249,7 +249,7 @@ describe("The CustomMarshalingInterpreter", () => {
       customMarshaler
     );
     interpreter.run();
-    expect(interpreter.getProperty(interpreter.globalScope, 'name').toString()).to.equal("Paul");
+    expect(interpreter.getProperty(interpreter.global, 'name').toString()).to.equal("Paul");
   });
 
   it("will throw an exception when trying to set an undeclared variabled in strict mode", () => {
@@ -277,7 +277,7 @@ describe("The CustomMarshalingInterpreter", () => {
 
   describe("getProperty method", () => {
     it("delegates to the base class's getProperty method by default", () => {
-      let interpreterUndefined = interpreter.getProperty(interpreter.globalScope, 'undefined');
+      let interpreterUndefined = interpreter.getProperty(interpreter.global, 'undefined');
       expect(Interpreter.prototype.getProperty).to.have.been.called;
       expect(interpreterUndefined).to.equal(interpreter.UNDEFINED);
     });
@@ -310,26 +310,26 @@ describe("The CustomMarshalingInterpreter", () => {
     });
 
     it("delegates to the base class's hasProperty method by default", () => {
-      const retVal = interpreter.hasProperty(interpreter.globalScope, 'undefined');
+      const retVal = interpreter.hasProperty(interpreter.global, 'undefined');
       expect(retVal).to.be.true;
       expect(Interpreter.prototype.hasProperty).to.have.been.called;
     });
 
     it("does not find globals that don't exist", () => {
       expect(
-          interpreter.hasProperty(interpreter.globalScope, 'notAGlobalProperty')
+          interpreter.hasProperty(interpreter.global, 'notAGlobalProperty')
       ).to.be.false;
     });
 
     it("finds custom-marshaled globals", () => {
       expect(
-          interpreter.hasProperty(interpreter.globalScope, 'age')
+          interpreter.hasProperty(interpreter.global, 'age')
       ).to.be.true;
     });
 
     it("does not find blocked custom-marshaled globals", () => {
       expect(
-          interpreter.hasProperty(interpreter.globalScope, 'name')
+          interpreter.hasProperty(interpreter.global, 'name')
       ).to.be.false;
     });
 
@@ -812,7 +812,7 @@ describe("The CustomMarshalingInterpreter", () => {
           }
         );
         isPaused = interpreter.run();
-        result = interpreter.getProperty(interpreter.globalScope, 'result');
+        result = interpreter.getProperty(interpreter.global, 'result');
       });
     }
 
@@ -899,12 +899,12 @@ describe("The CustomMarshalingInterpreter", () => {
           const args = options.nativeFunc.firstCall.args;
           window.setTimeout(() => {
             args[args.length - 1]('new value');
-            result = interpreter.getProperty(interpreter.globalScope, 'result');
+            result = interpreter.getProperty(interpreter.global, 'result');
             expect(result).to.equal(interpreter.UNDEFINED);
 
             isPaused = interpreter.run();
             expect(isPaused).to.be.false;
-            result = interpreter.getProperty(interpreter.globalScope, 'result');
+            result = interpreter.getProperty(interpreter.global, 'result');
             expect(result.toString()).to.equal("new value");
             done();
           }, 100);
@@ -955,11 +955,11 @@ describe("The CustomMarshalingInterpreter", () => {
 
         it("will call the interpreter function the next time the interpreter is run", () => {
           returnToInterpreter("a new result");
-          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          result = interpreter.getProperty(interpreter.global, 'result');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toNumber()).to.equal(6);
           interpreter.run();
-          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          result = interpreter.getProperty(interpreter.global, 'result');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toString()).to.equal("a new result");
         });
@@ -967,10 +967,10 @@ describe("The CustomMarshalingInterpreter", () => {
         it("will marshal all the arguments that were passed", () => {
           returnToInterpreter("a new result", "another result");
           interpreter.run();
-          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          result = interpreter.getProperty(interpreter.global, 'result');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toString()).to.equal("a new result");
-          result = interpreter.getProperty(interpreter.globalScope, 'otherResult');
+          result = interpreter.getProperty(interpreter.global, 'otherResult');
           expect(result).to.be.an.instanceOf(Interpreter.Primitive);
           expect(result.toString()).to.equal("another result");
         });
@@ -978,7 +978,7 @@ describe("The CustomMarshalingInterpreter", () => {
         it("will marshall no arguments if none were passed", () => {
           returnToInterpreter();
           interpreter.run();
-          result = interpreter.getProperty(interpreter.globalScope, 'result');
+          result = interpreter.getProperty(interpreter.global, 'result');
           expect(result).to.equal(interpreter.UNDEFINED);
         });
       });
