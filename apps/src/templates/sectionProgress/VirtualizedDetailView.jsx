@@ -187,6 +187,7 @@ class VirtualizedDetailView extends Component {
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
+        scrollToAlignment={"start"}
         rowCount={rowCount}
         style={progressStyles.multigrid}
         styleBottomLeftGrid={progressStyles.bottomLeft}
@@ -203,4 +204,5 @@ export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
 
 export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
+  lessonOfInterest: state.sectionProgress.lessonOfInterest
 }))(VirtualizedDetailView);

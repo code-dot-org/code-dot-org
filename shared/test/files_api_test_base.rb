@@ -24,8 +24,8 @@ class FilesApiTestBase < Minitest::Test
 
   # Create a new channel
   # @return [String] the new encrypted channel ID
-  def create_channel
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+  def create_channel(metadata = {})
+    post '/v3/channels', metadata.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     last_response.location.split('/').last
   end
 

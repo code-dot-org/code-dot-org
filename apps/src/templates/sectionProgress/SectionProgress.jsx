@@ -10,12 +10,14 @@ import LessonSelector from './LessonSelector';
 import { connect } from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from "../../lib/ui/Headings";
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   ViewType,
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setScriptId,
+  setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
@@ -57,10 +59,8 @@ class SectionProgress extends Component {
     studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
-  };
-
-  state = {
-    lessonOfInterest: 1
+    setLessonOfInterest: PropTypes.func.isRequired,
+    isLoadingProgress: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -69,12 +69,11 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
   };
 
-  onChangeLevel = lessonNumber => {
-    this.setState({lessonOfInterest: lessonNumber});
+  onChangeLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
   };
 
   render() {
@@ -84,10 +83,11 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress
+      studentLevelProgress,
+      isLoadingProgress
     } = this.props;
 
-    const levelDataInitialized = scriptData && studentLevelProgress;
+    const levelDataInitialized = scriptData && !isLoadingProgress;
     const linkToOverview = scriptData ? scriptData.path : null;
     const lessons = scriptData ? scriptData.stages : [];
 
@@ -131,7 +131,6 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
               />
               <SummaryViewLegend
                 showCSFProgressBox={true}
@@ -144,7 +143,9 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 studentLevelProgress={studentLevelProgress}
-                lessonOfInterest={this.state.lessonOfInterest}
+              />
+              <ProgressLegend
+                excludeCsfColumn={true}
               />
             </div>
           }
@@ -163,6 +164,7 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
+  isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {
     dispatch(loadScript(scriptId));
@@ -170,4 +172,7 @@ export default connect(state => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
   },
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(SectionProgress);

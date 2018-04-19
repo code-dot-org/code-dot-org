@@ -15,6 +15,7 @@ import {
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
@@ -72,6 +73,8 @@ function showHomepage() {
     announcementId = announcementOverride.teacher_announce_id;
     announcementType = announcementOverride.teacher_announce_type;
   }
+
+  measureVideoConnectivity();
 
   ReactDOM.render (
     <Provider store={store}>
