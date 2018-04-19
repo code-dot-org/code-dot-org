@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
 import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
+import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
 import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './multiGridConstants';
 import i18n from '@cdo/locale';
@@ -10,7 +12,7 @@ import SectionProgressNameCell from './SectionProgressNameCell';
 
 const SUMMARY_COLUMN_WIDTH = 50;
 
-export default class VirtualizedDetailView extends Component {
+class VirtualizedSummaryView extends Component {
 
   static propTypes = {
     section: sectionDataPropType.isRequired,
@@ -54,9 +56,9 @@ export default class VirtualizedDetailView extends Component {
           </span>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
-          <div style={progressStyles.lessonNumberHeading}>
-            {columnIndex}
-          </div>
+          <SectionProgressLessonNumberCell
+            lessonNumber={columnIndex}
+          />
         }
         {(rowIndex >= 1 && columnIndex === 0) &&
           <SectionProgressNameCell
@@ -109,6 +111,7 @@ export default class VirtualizedDetailView extends Component {
         rowHeight={ROW_HEIGHT}
         height={tableHeight}
         scrollToColumn={lessonOfInterest}
+        scrollToAlignment={"start"}
         rowCount={rowCount}
         style={progressStyles.multigrid}
         styleBottomLeftGrid={progressStyles.bottomLeft}
@@ -119,3 +122,9 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 }
+
+export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
+
+export default connect(state => ({
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+}))(VirtualizedSummaryView);

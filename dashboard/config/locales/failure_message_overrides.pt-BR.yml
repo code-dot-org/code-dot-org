@@ -52,20 +52,20 @@
       Course 4 Artist Vars 10_failure_message_override: Certifique-se de que está
         a utilizar a variável de lados!
       Course 4 Playlab For Loops 4b_failure_message_override: Lembre-se, ambos os
-        caracteres deverão deverão chegar às bandeiras com o mesmo número de movimentos!
+        personagens deverão chegar às bandeiras com o mesmo número de movimentos!
       Course 4 Playlab For Loops 5b_failure_message_override: Lembre-se, ambos os
-        caracteres têm que parar no mesmo lugar.
-      Eval Strings Images .2_failure_message_override: Certifique-se de que você acrescenta
+        personagens têm que parar no mesmo lugar.
+      Eval Strings Images .2_failure_message_override: Certifique-se de que você acrescentou
         o string "Universe" para que o código crie "Hello, Universe"
       Kiki_StarWars_Test_5_failure_message_override: Fim de jogo!
       Kiki_StarWars_Test_5_Example_failure_message_override: Fim de jogo!
-      MC HOC 2016 Level 2-2_failure_message_override: Utilize os comandos 'Avançar'
-        e 'Virar' para que a sua galinha se mexa.
+      MC HOC 2016 Level 2-2_failure_message_override: Use os comandos 'Avançar' e
+        'Virar' para que a sua galinha se mexa.
       MC HOC 2016 Level 3_failure_message_override: Utilize um bloco 'Fazer para sempre'
-        e os comandos 'Avançar' e 'virar' para manter a sua galinha a vaguear.
+        e os comandos 'Avançar' e 'virar' para manter a sua galinha a em movimento.
       MC HOC 2016 Level 4_failure_message_override: Se as galinhas estiverem todas
-        a moverem-se para a mesma direção, utilize 'virar aleatório' para fazer com
-        que as galinhas virem-se aleatoriamente para a esquerda ou direita.
+        se movendo para a mesma direção, utilize 'virar aleatório' para que as galinhas
+        virem-se aleatoriamente para a esquerda ou para a direita.
       MC HOC 2016 Level 5_failure_message_override: Experimente utilizar 'Fazer para
         sempre' com 'Mover um passo em direção ao jogador'.
       MC HOC 2016 Level 6_failure_message_override: Utilize o comando 'criar zombi'
@@ -76,30 +76,29 @@
       MC HOC 2016 Level 8_failure_message_override: Você necessita utilizar o Creeper
         a explodir para rebentar a parede, para que consiga alcançar as suas ovelhas.
       MC HOC 2016 New Drop_failure_message_override: Utilize as teclas das setas para
-        andar para as ovelhas e pressione a barra de espaço ou clique no tabuleiro
-        do jogo para utilizar as ovelhas. Por fim, não se esqueça de adicionar o block
-        'Largar' no seu código.
-      MC HOC 2016 New Spawn_failure_message_override: Coloque 'desovar ovelhas' sob
+        andar até as ovelhas e pressione a barra de espaço ou clique no tabuleiro
+        do jogo para usar as ovelhas. E não se esqueça de adicionar o bloco 'Largar'
+        no seu código.
+      MC HOC 2016 New Spawn_failure_message_override: Coloque 'desovar ovelhas' em
         'quando executar'.
       MC HOC 2016 New Walk_failure_message_override: Para abrir a porta, pressione
-        a barra de espaço ou toque no tabuleiro do jogo enquanto o enfrenta. Caminhe
-        dentro para continuar.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: Se você estiver a ter problemas
-        em etiquetar 5 Golems, experimente alterar o marcador para 2 por etiqueta.
-      MC HOC 2016 Village Test_failure_message_override: Você necessita fazer a perseguição
-        do Golem de Ferro e atacar os zumbis para ganhar.
-      Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: Parabéns! Você reuniu X moedas!
-      courseE_playLab_scaffold3_failure_message_override: É necessário adicionar dois
+        a barra de espaço ou toque no tabuleiro do jogo enquanto estiver de frente
+        para ele. Caminhe dentro do tabuleiro para continuar.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Se você estiver com dificuldade
+        para marcar 5 Golems, experimente alterar o marcador para 2 por marca.
+      MC HOC 2016 Village Test_failure_message_override: Você precisa fazer a perseguição
+        do Iron Golem e atacar os zumbis para ganhar.
+      Valentine_playlab_01_failure_message_override: Quase! tente novamente.
+      WhileAdventure_failure_message_override: Parabéns! Você coletou X moedas!
+      courseE_playLab_scaffold3_failure_message_override: Você deve adicionar dois
         ou mais atores ao seu jogo e programá-los para se mexerem.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: É necessário adicionar
-        dois ou mais atores que se movam para o seu jogo.
-      kikiTesta_failure_message_override: Parabéns! Você reuniu X moedas!
-      sample1_failure_message_override: Parabéns! Você reuniu X moedas!
-      sample4_failure_message_override: Parabéns! Você reuniu X moedas!
-      sample6_failure_message_override: Não é bem assim. Continue a tentar! [Mover
+      courseE_playLab_scaffold3_2018_failure_message_override: Você deve adicionar
+        dois ou mais atores ao seu jogo e programá-los para se mexerem.
+      grade4_scaffolded_project3_failure_message_override: Você deve adicionar ao
+        jogo dois ou mais novos atores que se mexem.
+      kikiTesta_failure_message_override: Parabéns! Você coletou X moedas!
+      sample1_failure_message_override: Parabéns! Você coletou X moedas!
+      sample4_failure_message_override: Parabéns! Você coletou X moedas!
+      sample6_failure_message_override: Não é bem assim. Continue tentando! [Mover
         para Play Zone]
-      sample8_failure_message_override: Parabéns! Você reuniu X moedas!
+      sample8_failure_message_override: Parabéns! Você coletou X moedas!

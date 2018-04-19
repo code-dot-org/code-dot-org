@@ -2276,6 +2276,23 @@
         board events (up, down), to play a unique sound or song at each event.\r
         *
         Are there any other events you could use to play even more sounds/songs?
+      CDU U6 Playground Sound Board_2018_markdown_instruction: |-
+        # Sound Board 2.0\r
+        \r
+        You
+        can now play sounds, notes, and songs! With this new knowledge, you can even
+        turn your board into a sound board.\r
+        \r
+        In the toolbox you have all of
+        the buzzer and led-related blocks at your disposal. See what cool stuff you
+        can come up with!\r
+        \r
+        # Do This\r
+        \r
+        * Use all of the button related
+        board events (up, down), to play a unique sound or song at each event.\r
+        *
+        Are there any other events you could use to play even more sounds/songs?
       CSD - Predict - Array Length List Printing_markdown_instruction: |-
         # For Loop
         - Using List Length in For Loop\r
@@ -23008,8 +23025,40 @@
         \r
         Write
         your answer in the box below, then run the code and see what happens.
+      CSD U6 Catch the Mouse prediction_2018_markdown_instruction: |-
+        # Catch the Mouse\r
+        \r
+        This
+        is a clicker game, similar to the one that you built in the last lesson.\r
+        \r
+        Look
+        at the code with your partner and answer the following question:\r
+        \r
+        *
+        How many times do you need to click the mouse before the LED starts to blink?\r
+        \r
+        Write
+        your answer in the box below, then run the code and see what happens.
       CSD U6 Catch the Mouse_markdown_instruction: Embedded Prediction
+      CSD U6 Catch the Mouse_2018_markdown_instruction: Embedded Prediction
       CSD U6 Driver pt 2_markdown_instruction: |-
+        # Limiting Turn\r
+        \r
+        You might
+        have noticed that it was really hard to steer the car unless your hands were
+        moving slowly and carefully. This is because the number that `roll` returns
+        can be a really big number depending on how much the accelerometer is being
+        turned. Remember, `roll` has a range from -90 to 90.\r
+        \r
+        # Do This\r
+        \r
+        Find
+        a way to make `roll` a smaller number while still using it to steer the car.
+        You have all of the math operators available to you for this.\r
+        \r
+        _Challenge_:
+        Can you keep the car from going off the side of the screen?
+      CSD U6 Driver pt 2_2018_markdown_instruction: |-
         # Limiting Turn\r
         \r
         You might
@@ -23045,11 +23094,45 @@
         Think
         back to the programs you've made up until this point, how can you update
         these values?
+      CSD U6 Driver pt1_2018_markdown_instruction: |-
+        # Steering Wheel\r
+        \r
+        This
+        game is similar to the goalie game that you just played, except a little different.
+        Use your board as a steering wheel for the car (moving side to side). You
+        have to get to the checkered flag at while avoiding the red flags along the
+        way!\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Make the car move down the screen while
+        the program runs.\r
+        * Give the car the ability to steer side to side.\r
+        \r
+        Think
+        back to the programs you've made up until this point, how can you update
+        these values?
       CSD U6 LED all_markdown_instruction: |-
         # Multi-function Light\r
         \r
         This app
         should let you choose between three types of lights: on, blink, and pulse.  It
+        should also have a button that turns the light completely off.  Right now
+        only the "on" button works, and the "off" button is completely missing.\r
+        \r
+        #
+        Do This\r
+        * Add code to make the "blink" and "pulse" buttons work.\r
+        *
+        In design mode, add a new "off" button.\r
+        * Add code to make the "off"
+        button work.
+      CSD U6 LED all_2018_markdown_instruction: |-
+        # Multi-function Light\r
+        \r
+        This
+        app should let you choose between three types of lights: on, blink, and pulse.  It
         should also have a button that turns the light completely off.  Right now
         only the "on" button works, and the "off" button is completely missing.\r
         \r
@@ -23076,7 +23159,33 @@
          * If the LED is off, the button should turn it on.\r
 
         * If the LED is on, the button should turn it off.
+      CSD U6 LED toggle_2018_markdown_instruction: |-
+        # Light Switch\r
+        \r
+        There are
+        three more LED blocks that you haven't used yet. One of them can make the
+        button work like a light switch, turning the LED on when it's off, but off
+        when it's on.\r
+        \r
+        # Do This\r
+        * Try the `blink`, `toggle` and `pulse`
+        blocks to see what they do.\r
+        * Use one of the blocks to make the button
+        work like a light switch.\r
+         * If the LED is off, the button should turn
+        it on.\r
+         * If the LED is on, the button should turn it off.
       CSD U6 LEDbutton predict embed_markdown_instruction: |-
+        # Using Events\r
+        \r
+        This
+        program uses events.  Look at the code with a partner and discuss what you
+        think it will do.  Once you have answered the questions click "Run" to check
+        your answer.\r
+        \r
+        * Will the light turn on when the program is "Run"?  Why
+        or why not?
+      CSD U6 LEDbutton predict embed_2018_markdown_instruction: |-
         # Using Events\r
         \r
         This
@@ -23101,7 +23210,36 @@
         \r
         Use the `.color()` command to set each of
         the color LEDs to a different color.
+      CSD U6 LEDs color_2018_markdown_instruction: |-
+        # Adding Some Color\r
+        \r
+        You
+        probably noticed when you used `colorLeds[0].on()` in the last level, the
+        LEDs turned on as white. If you don't specify a color, `on()` will turn on
+        all three parts of the LED (red, green, and blue) to produce white. You'll
+        see a new command in the toolbox called `colorLeds[0].color()` which lets
+        you specify a color, either as a string like "blue" or an RGB value using
+        color `color()` command.\r
+        \r
+        # Do This\r
+        \r
+        Use the `.color()` command
+        to set each of the color LEDs to a different color.
       CSD U6 Pedometer_markdown_instruction: |-
+        # Jogger\r
+        \r
+        This program should
+        use the `shake` event, which is triggered when the board is shaken.  It should
+        add a step to the jogger's total every time the user shakes the board.\r
+        \r
+        #
+        Do This\r
+        \r
+        * Change the event so it triggers every time the board is shaken.\r
+        *
+        Add code inside the event so that `steps` increases every time the board is
+        shaken.
+      CSD U6 Pedometer_2018_markdown_instruction: |-
         # Jogger\r
         \r
         This program should
@@ -23125,7 +23263,23 @@
         # Do This\r
         * Add code so that the second button
         turns the LED off.
+      CSD U6 add LED button_2018_markdown_instruction: |-
+        # Using Events\r
+        \r
+        This
+        program has two buttons.  The "on" button works, but the "off" button
+        still needs to be programmed.\r
+        \r
+        # Do This\r
+        * Add code so that the second
+        button turns the LED off.
       CSD U6 airplane predict markdown_markdown_instruction: |-
+        # Accelerometer\r
+        \r
+        Look
+        at the code below. What do you think it's going to do? Give it a guess, and
+        run the code to find out!
+      CSD U6 airplane predict markdown_2018_markdown_instruction: |-
         # Accelerometer\r
         \r
         Look
@@ -23151,11 +23305,47 @@
         the width, height, or position of a UI element\r
         * Use conditionals to display
         different images based on sensor values
+      CSD U6 analog challenge_2018_markdown_instruction: |-
+        # Challenge\r
+        \r
+        _Check
+        with your teacher before pursuing this challenge_\r
+        \r
+        Now that you've
+        practiced taking input from the various analog sensors and changing their
+        scale to meet your needs, can you come up with an interesting use for sensor
+        data? It's easy to display the raw numbers coming out of a sensor, but far
+        more interesting to present that data in different ways.\r
+        \r
+        Consider the
+        following ways you might communicate sensor data:\r
+        \r
+        * Use the board outputs\r
+        *
+        Change the width, height, or position of a UI element\r
+        * Use conditionals
+        to display different images based on sensor values
       CSD U6 analog change_markdown_instruction: |-
         # Change Event\r
         \r
         The data
         event is fine if you don't mind your code running constantly, but sometimes
+        that's not the most efficient solution to your problem. The sensor "change"
+        event only fires if the sensor value has changed since the last reading, which
+        can make sure your program isn't running code when it's not necessary.\r
+        \r
+        #
+        Do This\r
+        \r
+        Using the provided event handler, write a program that buzzes
+        the buzzer and updates "temp_value" whenever the temperature sensor reading
+        changes. Place your thumb over the temperature sensor to get it to change
+        and see how your program responds.
+      CSD U6 analog change_2018_markdown_instruction: |-
+        # Change Event\r
+        \r
+        The
+        data event is fine if you don't mind your code running constantly, but sometimes
         that's not the most efficient solution to your problem. The sensor "change"
         event only fires if the sensor value has changed since the last reading, which
         can make sure your program isn't running code when it's not necessary.\r
@@ -23185,7 +23375,37 @@
         to respond to sound sensor's "data" event\r
         * Move the existing code into
         your event handler
+      CSD U6 analog data_2018_markdown_instruction: |-
+        # Data Event\r
+        \r
+        Each of
+        these analog sensors emits a special event called "data" which occurs every
+        time new data comes in from the sensor. Using this event, we can write programs
+        that continually update.\r
+        \r
+        # Do This\r
+        \r
+        This is the first program
+        you worked on in this lesson, let's see if we can make it continually update
+        the sound reading using the "data" event.\r
+        \r
+        * Create an event handler
+        to respond to sound sensor's "data" event\r
+        * Move the existing code into
+        your event handler
       CSD U6 analog light_markdown_instruction: |-
+        # Light Sensor Updates\r
+        \r
+        This
+        app is very similar to the last, but we've added a button with the ID "update_button".
+        Write a program that displays the current value of the light sensor every
+        time the update button is clicked.\r
+        \r
+        # Do This\r
+        \r
+        Use an event handler
+        to update the text of "light_value" using the `lightSensor.value` block.
+      CSD U6 analog light_2018_markdown_instruction: |-
         # Light Sensor Updates\r
         \r
         This
@@ -23200,6 +23420,37 @@
       CSD U6 analog rbg 1_markdown_instruction: |-
         # Displaying Sensor Readings in
         Color\r
+        \r
+        In the earlier prediction level you saw how the `setScale()`
+        method can convert the full range of sensor readings (0-1023) into a range
+        that can be used for RGB values (0-255). Let's build on that idea to make
+        an app that can communicate the current value of all three analog sensors
+        with a single color.\r
+        \r
+        # Do This\r
+        \r
+        To start, we just need to set
+        the sensor scales correctly - don't worry about actually setting the color
+        of the background yet.\r
+        \r
+        * Using the `sensor.setScale()` block, set each
+        of light and sound sensors to the right scale for an RGB color channel.\r
+        *
+        Create a variable for each of the three colors and assign each one to the
+        value of a different sensor.\r
+        * Use `console.log()` to test that your variables
+        are in the correct range.\r
+        \r
+        _Hint: Order matters. You need to set the
+        scale of a sensor before checking its value_\r
+        \r
+        _Hint: Remember that the
+        temperature sensor can be read in both Celsius and Fahrenheit - either way
+        it should already give you a value that's within the necessary range for
+        RGB_
+      CSD U6 analog rbg 1_2018_markdown_instruction: |-
+        # Displaying Sensor Readings
+        in Color\r
         \r
         In the earlier prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
@@ -23243,6 +23494,21 @@
         to the last parameter of `setProperty()`.\r
         * Use the three color variables
         you created as inputs to the `rgb()` block.
+      CSD U6 analog rbg 2_2018_markdown_instruction: |-
+        # Putting Color on the Screen\r
+        \r
+        Now
+        that your sensor data is in a scale that works for RGB, you can go about setting
+        the screen color.\r
+        \r
+        # Do This\r
+        \r
+        * Add a `setProperty()` block and
+        set it to change the screen's background color.\r
+        * Add an `rgb()` block
+        to the last parameter of `setProperty()`.\r
+        * Use the three color variables
+        you created as inputs to the `rgb()` block.
       CSD U6 analog rgb 3_markdown_instruction: |-
         # Continuous Updates\r
         \r
@@ -23254,7 +23520,35 @@
         Move
         your `setProperty()` block into a an event handler for one of the sensors
         to make the app update continually.
+      CSD U6 analog rgb 3_2018_markdown_instruction: |-
+        # Continuous Updates\r
+        \r
+        This
+        sensor-to-color app isn't super useful if it only sets the color once when
+        you start the app. You can use the sensors' "data" event to make your app
+        continually update the background color every time the value changes.\r
+        \r
+        Move
+        your `setProperty()` block into a an event handler for one of the sensors
+        to make the app update continually.
       CSD U6 analog sound_markdown_instruction: |-
+        # Reading the Sound Sensor\r
+        \r
+        The
+        `soundSensor.value` block allows you to get the current sound sensor reading\r
+        \r
+        #
+        Do This\r
+        \r
+        In this app we've already added a text label with the id "sound_value".
+        Using the `soundSensor.value` block, display the value of the sound sensor.\r
+        \r
+        _Tip:
+        You can drag the `soundSensor.value` block directly into any other block where
+        you could type a value instead._\r
+        \r
+        ![](https://images.code.org/3bd9ac3f869e42f48aaf190944fe1c22-image-1511293198110.png)
+      CSD U6 analog sound_2018_markdown_instruction: |-
         # Reading the Sound Sensor\r
         \r
         The
@@ -23293,7 +23587,59 @@
         clicked\r
         * Add code to your event handler to read the temperature sensor
         and display the value on screen
+      CSD U6 analog temp_2018_markdown_instruction: |-
+        # Make a Thermometer App\r
+        \r
+        While
+        the light and sound sensors have just a raw value with the `value` property,
+        the temperature sensor is a little bit smarter. Instead of `tempSensor.value`,
+        there are two properties `tempSensor.F` and `tempSensor.C` which convert the
+        raw input value to either Fahrenheit or Celsius.\r
+        \r
+        # Do This\r
+        \r
+        Make
+        a simple thermometer app that reads in values from the temperature sensor.
+        Your app can display the temperature in either Fahrenheit or Celsius (or both!)\r
+        \r
+        *
+        Using Design Mode, create a button for updating and a label to display the
+        temperature\r
+        * Add an event handler to respond to your update button being
+        clicked\r
+        * Add code to your event handler to read the temperature sensor
+        and display the value on screen
       CSD U6 analog threshold_markdown_instruction: |-
+        # Change Threshold\r
+        \r
+        By
+        default a sensor's "change" event fires every time the sensor value changes
+        at all, even by one. The light and sound sensors are constantly fluctuating,
+        so you probably want the "change" event to be a little less responsive.
+        The `threshold` property allows you to set how much a sensor should change
+        before considering it a "change" event - so setting `soundSensor.threshold
+        = 100` would cause the sound sensor's "change" event only to trigger if
+        its value increased or decreased by at least 100.\r
+        \r
+        # Do This\r
+        \r
+        This
+        app changes the background color of the screen whenever the sound sensor value
+        changes, but we want to only respond to big changes in volume (like a loud
+        noise). Use the `soundSensor.threshold` block to fix it.\r
+        \r
+        * Add a `soundSensor.threshold`
+        block before the event handler\r
+        * Test out which how different threshold
+        values impact the "change" event\r
+        * Choose a threshold value that makes
+        the screen background change only when a loud noise is sensed.\r
+        \r
+        _Tip:
+        Your threshold depends on how much ambient noise there is in the room, and
+        how much it changes. A threshold that works in a quiet room may not work in
+        a louder classroom._
+      CSD U6 analog threshold_2018_markdown_instruction: |-
         # Change Threshold\r
         \r
         By
@@ -23346,6 +23692,29 @@
         _Hint: Modifying arrays is much easier in text
         mode.  You can always switch between block and text mode by clicking the button
         at the top right of your code workspace._
+      CSD U6 array piano_2018_markdown_instruction: |-
+        # Piano Panic\r
+        \r
+        So far
+        you’ve just been using the elements of an array. Now, you're going to change
+        what's inside the array.\r
+        \r
+        Our good friend the piano is back, except
+        now it plays notes from two arrays: `notes`, which holds natural notes (C,
+        D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#,
+        G#, A#).\r
+        \r
+        # Do this\r
+        \r
+        The `sharpNotes` array only has one item
+        inside of it right now.\r
+        \r
+        * Fix the array so that the sharp keys on the
+        piano can actually play the right note.\r
+        \r
+        _Hint: Modifying arrays is
+        much easier in text mode.  You can always switch between block and text mode
+        by clicking the button at the top right of your code workspace._
       CSD U6 balloon clicker predict_markdown_instruction: |-
         # Make the Balloon Fly\r
         \r
@@ -23371,6 +23740,15 @@
         \r
         Read through the code and predict
         what the program will do, then hit "Run" to test your prediction.
+      CSD U6 board getters_2018_markdown_instruction: |-
+        # Using the Circuit Playground\r
+        \r
+        You
+        can also use getters and setters with the Circuit Playground.  For this level,
+        you'll need to plug in your board.\r
+        \r
+        Read through the code and predict
+        what the program will do, then hit "Run" to test your prediction.
       CSD U6 challenge motorcycle_markdown_instruction: |-
         # Challenge\r
         \r
@@ -23384,6 +23762,19 @@
         to change the motorcycle's color\r
         * Make the buzzer or LED turn on when
         the motorcycle reaches the top or bottom of the screen.
+      CSD U6 challenge motorcycle_2018_markdown_instruction: |-
+        # Challenge\r
+        \r
+        Use
+        this program to experiment some more with getting and setting properties.
+        Some ideas you might try include:\r
+        \r
+        * Use the toggle switch to change
+        the motorcycle's movement to go up and down.\r
+        * Use a dropdown with color
+        names to change the motorcycle's color\r
+        * Make the buzzer or LED turn on
+        when the motorcycle reaches the top or bottom of the screen.
       CSD U6 change_markdown_instruction: |-
         # Change\r
         \r
@@ -23401,8 +23792,58 @@
         value from the slider and use it to make the LED blink at that new rate.\r
         *
         Run your program, moving the slider to see whether the LED speed changes automatically.
+      CSD U6 change_2018_markdown_instruction: |-
+        # Change\r
+        \r
+        In the last level,
+        the program only got the interval value from the slider when you pressed the
+        left button.  Sometimes, though, you'll want to change the interval of the
+        LED as soon as the user chooses a new value.   For that, you'll need the
+        "change" event.\r
+        \r
+        # Do This\r
+        \r
+        * Look at the first event block
+        in the program and find where it says "change".\r
+        * Inside the event block,
+        get the interval value from the slider and use it to make the LED blink at
+        that new rate.\r
+        * Run your program, moving the slider to see whether the
+        LED speed changes automatically.
       CSD U6 checkbox_markdown_instruction: Predict Level
       CSD U6 circuit createButton scratch_markdown_instruction: |-
+        <div style="float:
+        right" markdown="1">\r
+        \r
+        ![expandable](https://images.code.org/14e51a17975b1eb03a852621f9cd8cac-image-1516048913406.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Make Your Own Buttons\r
+        \r
+        Just like `createLed()` lets us create LED objects
+        that can be used like the built-in `led`, you can use `createButton()` to
+        create button objects that can be used just like the built-in `buttonL` and
+        `buttonR` objects.\r
+        \r
+        # Do This\r
+        \r
+        * Grab two wires.\r
+        * Connect
+        one wire to an free data pin.\r
+        * Connect the second wire to a ground pin.\r
+        *
+        Update line 2 so that it's referencing the pin you chose.\r
+        * Run the provided
+        code.\r
+        * With the program running, touch the unconnected ends of both wires
+        together to "press" the button.\r
+        \r
+        _Tip: A button circuit can be made
+        with many different kinds of materials, as long as they are electrically conductive.
+        Try making buttons with foil, silverware, or paper clips._
+      CSD U6 circuit createButton scratch_2018_markdown_instruction: |-
         <div style="float:
         right" markdown="1">\r
         \r
@@ -23468,7 +23909,74 @@
         circuit can be made with many different kinds of materials, as long as they
         are electrically conductive. Try making buttons with foil, silverware, or
         paper clips._
+      CSD U6 circuit createButton_2018_markdown_instruction: |-
+        <div style="float:
+        right" markdown="1">\r
+        \r
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)\r
+        \r
+        </div>\r
+        \r
+        #
+        Make Your Own Buttons\r
+        \r
+        Similar to LEDs, buttons are a really simple
+        circuit that you can add to your board pretty easily. Like LEDs, buttons should
+        be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit
+        should be disconnected in the middle. When you connect the circuit, it will
+        produce a button press event.\r
+        \r
+        # Do This\r
+        \r
+        * Grab two wires.\r
+        *
+        Connect one wire to an open numbered pin.\r
+        * Connect the second wire to
+        a ground pin.\r
+        * Update line 2 so that it's referencing the pin you chose.\r
+        *
+        Run the provided code.\r
+        * With the program running, touch the unconnected
+        ends of both wires together to "press" the button.\r
+        \r
+        _Tip: A button
+        circuit can be made with many different kinds of materials, as long as they
+        are electrically conductive. Try making buttons with foil, silverware, or
+        paper clips._
       CSD U6 circuit createLed_markdown_instruction: |-
+        # Creating Board Objects\r
+        \r
+        You
+        might have noticed that the new blocks we're using are in a different toolbox
+        drawer. The **Circuit** drawer contains all of the board objects that are
+        built into the Circuit Playground, but when you start wiring your own circuits
+        the Maker Toolkit no longer knows where everything is.\r
+        \r
+        The new **Maker**
+        drawer contains general purpose commands instead of ones that are customized
+        for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()`
+        commands you've seen, it includes commands to create new objects on the board
+        that can be programmed in the same way as the blocks in the **Circuit** drawer.
+        The `var myLed = createLed()` command, for example, creates a new LED object
+        that behaves just like the `led` blocks you've been using.\r
+        \r
+        # Do This\r
+        \r
+        Now
+        that you're creating new board objects that we don't have blocks for, you'll
+        need to work in text mode. You can still drag out blocks that you're familiar
+        with from the **Circuit** drawer, you'll just need to change the name of
+        the object.\r
+        \r
+        * Keep your LED wired just as it was before (connected
+        to pin 2)\r
+        * Make sure you're in text mode, not block mode.\r
+        * Drag out
+        an `led.blink()` block below the comment `// Blink myLed`.\r
+        * Replace the
+        text `led` with `myLed`.\r
+        * Test your code.
+      CSD U6 circuit createLed_2018_markdown_instruction: |-
         # Creating Board Objects\r
         \r
         You
@@ -23555,6 +24063,32 @@
         \r
         _Challenge:
         Try adding a third LED and make all three LED blink at different intervals._
+      CSD U6 circuit multi led_2018_markdown_instruction: |-
+        # Wiring Multiple LEDs\r
+        \r
+        Using
+        the `createLed()` block you can connect and control as many LEDs as your board
+        has room for. Each LED needs to be connected to a separate numbered pin, but
+        they can all share the same ground pin.\r
+        \r
+        # Do This\r
+        \r
+        Leave the
+        current LED connected to pin 2, but add another one to a numbered pin of your
+        choice. For your new LED:\r
+        \r
+        * Add a `var myLed = createLed()` block.\r
+        *
+        Replace the variable label `myLed` with a unique label.\r
+        * Make sure you're
+        in text mode, not block mode.\r
+        * Add an `led.blink()` command.\r
+        * Replace
+        the text `led` with your new LED variable.\r
+        * Test your code.\r
+        \r
+        _Challenge:
+        Try adding a third LED and make all three LED blink at different intervals._
       CSD U6 circuit pinMode_markdown_instruction: |-
         # Wire a Circuit\r
         \r
@@ -23575,7 +24109,35 @@
         _Debugging Tip: LEDs only work if the electricity
         is flowing from positive to negative. If your LED doesn't light up, make
         sure that it's oriented the right way._
+      CSD U6 circuit pinMode_2018_markdown_instruction: |-
+        # Wire a Circuit\r
+        \r
+        You
+        can use any of the numbered pads to add additional circuits to your board.
+        Let's use pin 2 to add another LED.\r
+        \r
+        # Do This\r
+        \r
+        * Using a wire,
+        connect pin 2 to the positive (+) side of an LED\r
+        * Using another wire,
+        connect the negative (-) side of the LED to a ground (GND) pin (it doesn't
+        matter which one)\r
+        * Run this program to test your circuit. If it worked,
+        your LED should turn on.\r
+        \r
+        _Debugging Tip: LEDs only work if the electricity
+        is flowing from positive to negative. If your LED doesn't light up, make
+        sure that it's oriented the right way._
       CSD U6 circuit predict multi_markdown_instruction: |-
+        # Make a Prediction\r
+        \r
+        All
+        of the devices that you've used so far are actually circuits connected to
+        numbered pins! Look for **#13** on your board to see which circuit is connected
+        to pin 13, then read through this code and predict what will happen when the
+        program is run.
+      CSD U6 circuit predict multi_2018_markdown_instruction: |-
         # Make a Prediction\r
         \r
         All
@@ -23604,6 +24166,9 @@
       CSD U6 circuit project template_markdown_instruction: |-
         # Prototyping Circuit
         Project Template
+      CSD U6 circuit project template_2018_markdown_instruction: |-
+        # Prototyping Circuit
+        Project Template
       CSD U6 circuit smart bike blinker buttons_markdown_instruction: |-
         # Smart Bike
         - Blinker Controls\r
@@ -23625,6 +24190,27 @@
         _Hint: You'll need to be in text mode
         to make the blinkers work, since there are no built-in blocks for the elements
         that you add on to the board._
+      CSD U6 circuit smart bike blinker buttons_2018_markdown_instruction: |-
+        # Smart
+        Bike - Blinker Controls\r
+        \r
+        With your turn signal LEDs hooked up, you just
+        need to program some buttons to control them. You may want to place buttons
+        elsewhere on the bike to make controlling your turn signals easier, but for
+        now we'll just use the built in left and right buttons.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Add event handlers to blink the left turn signal when the left button is pressed.\r
+        *
+        Add event handlers to blink the right turn signal when the right button is
+        pressed.\r
+        * Test your code!\r
+        \r
+        _Hint: You'll need to be in text mode
+        to make the blinkers work, since there are no built-in blocks for the elements
+        that you add on to the board._
       CSD U6 circuit smart bike blinkers_markdown_instruction: "# Smart Bike - Blinkers\\r\n\\r\nUsing\nyour
         planning guide, wire up the two LEDs that will serve as the blinkers.\nIn
         order to make sure that the blinkers can be mounted at the end of the handlebars,\nmake
@@ -23635,6 +24221,16 @@
         to create an LED object for each blinker.\\r\n\\r\n_Tip: Make your wiring\neasier
         by considering how your blinkers will be mounted when selecting a pin\nto
         use._ "
+      CSD U6 circuit smart bike blinkers_2018_markdown_instruction: "# Smart Bike\n-
+        Blinkers\\r\n\\r\nUsing your planning guide, wire up the two LEDs that will\nserve
+        as the blinkers. In order to make sure that the blinkers can be mounted\nat
+        the end of the handlebars, make sure you wire them so that they can stretch\nout
+        in opposite directions.\\r\n\\r\n# Do This\\r\n\\r\nUsing alligator clips,\nwire,
+        or other conductive material, connect two LEDs to your board, one for\neach
+        turn signal blinker.\\r\n\\r\n* Hook up each LED to a different numbered\npin
+        on the board.\\r\n* Use the `createLed()` block to create an LED object\nfor
+        each blinker.\\r\n\\r\n_Tip: Make your wiring easier by considering how\nyour
+        blinkers will be mounted when selecting a pin to use._ "
       CSD U6 circuit smart bike buzzer_markdown_instruction: |-
         # Smart Bike - Buzzer\r
         \r
@@ -23655,12 +24251,47 @@
         _Hint: The button object that you create won't
         be in the `onBoardEvent()` dropdown, so you'll need to type the name you've
         chosen in. Make sure not to use quotation marks!_
+      CSD U6 circuit smart bike buzzer_2018_markdown_instruction: |-
+        # Smart Bike -
+        Buzzer\r
+        \r
+        Now that we know how to add more buttons, you can add a button
+        to control the smart bike's horn.\r
+        \r
+        # Do This\r
+        \r
+        Using the button
+        that you've already wired to the board, find a good spot to place your horn
+        button. Then:\r
+        \r
+        * Create a button object for your horn button\r
+        * Add
+        an event handler to buzz when button is pressed\r
+        \r
+        _Hint: The button object
+        that you create won't be in the `onBoardEvent()` dropdown, so you'll need
+        to type the name you've chosen in. Make sure not to use quotation marks!_
       CSD U6 circuit smart bike final_markdown_instruction: |-
         # Smart Bike - Final
         Touches\r
         \r
         At this point your smart bike should have all of its basic
         functionality in place. Now is your chance to add any finishing touches.\r
+        \r
+        #
+        Do This\r
+        \r
+        You may want to divide and conquer at this point, allowing
+        some members of your group to focus on the physical aspects of the prototype
+        while others work on improving the code. As this is a prototype, don't worry
+        about making everything perfect, but do try to ensure that the prototype communicates
+        your design well enough to test and get feedback.
+      CSD U6 circuit smart bike final_2018_markdown_instruction: |-
+        # Smart Bike -
+        Final Touches\r
+        \r
+        At this point your smart bike should have all of its
+        basic functionality in place. Now is your chance to add any finishing touches.\r
         \r
         #
         Do This\r
@@ -23689,7 +24320,43 @@
         _Hint: If you're using the built-in color LEDs, you might need
         to protect the light sensor to make sure that it's responding to the ambient
         light level and not the light from the LEDs._
+      CSD U6 circuit smart bike light_2018_markdown_instruction: |-
+        # Smart Bike -
+        Headlight\r
+        \r
+        The last part of the smart bike plan that we need to figure
+        out is the automatic headlight.\r
+        \r
+        # Do This\r
+        \r
+        First you'll need
+        to decide what to use for your headlight. You could add another LED circuit,
+        or perhaps you can find a way to mount the board that allows for using the
+        color LEDs as a headlight. Once you've figured out the physical layout of
+        your lights, add code to your program that turns on and off the headlight
+        based on how light or dark it is.\r
+        \r
+        _Hint: If you're using the built-in
+        color LEDs, you might need to protect the light sensor to make sure that it's
+        responding to the ambient light level and not the light from the LEDs._
       CSD U6 colorLED on_markdown_instruction: |-
+        <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
+        style="float: right; margin: 10px;">\r
+        \r
+        # colorLeds\r
+        \r
+        The color
+        LEDs can use the same basic commands that you used with the red LED, such
+        as `on()` and `off()`. This program should turn on and off the bottom LEDs
+        as shown in the picture, but only one LED is working.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Read and run the code to see how the program turns the bottom left LED on
+        and off.\r
+        * Add more code to make both bottom LEDs turn on and off.
+      CSD U6 colorLED on_2018_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
         \r
@@ -23715,7 +24382,31 @@
         Can you
         debug the index values so that the rainbow shows up on the board like in the
         picture?
+      CSD U6 colorLeds debug_2018_markdown_instruction: |-
+        <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png"
+        style="width:250px; float:right">\r
+        \r
+        # Debug: colorLeds\r
+        \r
+        Can you
+        debug the index values so that the rainbow shows up on the board like in the
+        picture?
       CSD U6 colorLeds intensity_markdown_instruction: |-
+        # Changing Brightness\r
+        \r
+        The
+        `intensity()` command lets you set an LED's brightness (or _intensity_) from
+        0 - 100. This program lets you choose three levels of brightness for your
+        rainbow lights, but the medium level doesn't work yet.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Read the program and see how the "Bright" and "Dim" buttons work.\r
+        *
+        Add code to make the "Medium" button make the rainbow a medium level of
+        brightness (between "Bright" and "Dim"). ([Show me where](#triggercallout=code_triggered))
+      CSD U6 colorLeds intensity_2018_markdown_instruction: |-
         # Changing Brightness\r
         \r
         The
@@ -23747,6 +24438,23 @@
         After you've created your
         new function, add a button and event handler so that you can switch between
         the two light patterns.
+      CSD U6 colorLeds light pattern_2018_markdown_instruction: |-
+        # Light Patterns\r
+        \r
+        This
+        app already has one light pattern program, which can be activated by clicking
+        a button. Notice that we put this pattern into a function to make the code
+        cleaner and clearer.\r
+        \r
+        # Do This\r
+        \r
+        Create a light pattern function
+        of your own - maybe the colors of your favorite holiday, college, sports team,
+        or try to create an image with the lights.\r
+        \r
+        After you've created your
+        new function, add a button and event handler so that you can switch between
+        the two light patterns.
       CSD U6 colorLeds predict embed_markdown_instruction: |-
         # colorLEDs\r
         \r
@@ -23756,7 +24464,33 @@
         \r
         What do you think this code will do?  Write
         your prediction in the box below, then run the code to see what happens.
+      CSD U6 colorLeds predict embed_2018_markdown_instruction: |-
+        # colorLEDs\r
+        \r
+        This
+        program uses the colorLEDs array, which lets you control the color LEDs in
+        your Circuit Playground.\r
+        \r
+        What do you think this code will do?  Write
+        your prediction in the box below, then run the code to see what happens.
       CSD U6 create LED app 2_markdown_instruction: |-
+        # Make Your App - The Code\r
+        \r
+        Next,
+        you'll need to add the code that makes your app work.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Discuss with your partner what code you will need in your app.  Do you need...\r
+          *
+        Events?\r
+          * Variables?\r
+          * Setters?\r
+          * Random Numbers?\r
+        * In Code
+        Mode, add in the code that will make your app work.
+      CSD U6 create LED app 2_2018_markdown_instruction: |-
         # Make Your App - The Code\r
         \r
         Next,
@@ -23790,7 +24524,41 @@
           * Text?\r
         * In Design Mode, add
         the elements, making sure you give each a meaningful ID.
+      CSD U6 create LED app_2018_markdown_instruction: |-
+        # Make Your App - The Screen\r
+        \r
+        Now,
+        you and your partner can make your own app using the LED.  Discuss with your
+        partner what kind of app you want to make.\r
+        \r
+        # Do This\r
+        \r
+        * Discuss
+        with your partner what screen elements you will need in your app.  Do you
+        want...\r
+          * Buttons?\r
+          * Images?\r
+          * Text?\r
+        * In Design Mode, add
+        the elements, making sure you give each a meaningful ID.
       CSD U6 design motorcycle_markdown_instruction: |-
+        # Add Your Own Elements\r
+        \r
+        Now
+        it's time to add some elements of your own. The motorcycle should be able
+        to move up and down right now, but how can you control its speed?\r
+        \r
+        #
+        Do This\r
+        \r
+        * Add a slider in design mode.\r
+          * Make sure you set the
+        min and max values of the slider in design mode.\r
+        * Create an event that
+        will trigger when the slider value is changed.\r
+        * Add code to get the slider
+        value and store it into the `speed` variable when the event is triggered.
+      CSD U6 design motorcycle_2018_markdown_instruction: |-
         # Add Your Own Elements\r
         \r
         Now
@@ -23839,6 +24607,19 @@
         *
         Use a conditional to change the text for the "direction" element to be either
         "Left" or "Right", depending on the board's orientation.
+      CSD U6 directional LEDs roll_2018_markdown_instruction: |-
+        # Roll\r
+        \r
+        This
+        program should display "Left" or "Right" on the screen, depending on which
+        way the board is tilted.\r
+        \r
+        # Do this\r
+        * Use the "roll" property of
+        the accelerometer to determine whether the board is tilted to the left or
+        right.\r
+        * Use a conditional to change the text for the "direction" element
+        to be either "Left" or "Right", depending on the board's orientation.
       CSD U6 directional leds pitch_markdown_instruction: |-
         # Pitch\r
         \r
@@ -23851,12 +24632,44 @@
         * Use the board's pitch to make LEDs 4 and 5 light up when you tilt
         the board back.\r
         * Run your code and test it a few times.
+      CSD U6 directional leds pitch_2018_markdown_instruction: |-
+        # Pitch\r
+        \r
+        This
+        program lights the top LEDs (0 and 9) when you tilt the board forward. If
+        you tilt the board back, the LEDs at the bottom (4 and 5) should light.\r
+        \r
+        #
+        Do This\r
+        * Use the board's pitch to make LEDs 4 and 5 light up when you
+        tilt the board back.\r
+        * Run your code and test it a few times.
       CSD U6 emoji race demo_markdown_instruction: |-
         # Emoji Race!\r
         \r
         This is
         an example of a race game that you'll build by the end of this lesson. To
         play, pair up with another student. The student on the left will the click
+        the left button on the Circuit Playground as fast as they can, while the student
+        on the right clicks the right button. Whoever can get their emoji to the bottom
+        of the screen first wins.\r
+        \r
+        # Do This\r
+        \r
+        Turn to a classmate and
+        make a list of the following information.\r
+        \r
+        * What components of the
+        board does this program use?\r
+        * What events is this program responding to?\r
+        *
+        What functions might you create to make this program work?
+      CSD U6 emoji race demo_2018_markdown_instruction: |-
+        # Emoji Race!\r
+        \r
+        This
+        is an example of a race game that you'll build by the end of this lesson.
+        To play, pair up with another student. The student on the left will the click
         the left button on the Circuit Playground as fast as they can, while the student
         on the right clicks the right button. Whoever can get their emoji to the bottom
         of the screen first wins.\r
@@ -23897,6 +24710,32 @@
         when you click the last dropdown in the `setProperty` block click "Choose..."
         to go to your media library. From there you can select an icon from our icon
         library or upload an image of your own._
+      CSD U6 emotion machine 1_2018_markdown_instruction: |-
+        # Changing Images\r
+        \r
+        The
+        first thing you'll need your emotion machine to do is change to the appropriate
+        image when a button is clicked. If you look at the starting code, you'll
+        see that we already added `setProperty("face", "image", "icon://fa-smile-o")`
+        to change to a smiley face when you click happy.\r
+        \r
+        # Do This\r
+        \r
+        <div
+        markdown="1" style="float:right; margin: 20px;">\r
+        \r
+        ![expandable](https://curriculum.code.org/media/uploads/select_image.gif)\r
+        \r
+        </div>\r
+        \r
+        Create
+        an event handler for "sad_button" and make it change to a sad emoji. To
+        do this you'll need to set the "image" property of the image with id "face".\r
+        \r
+        _Tip:
+        when you click the last dropdown in the `setProperty` block click "Choose..."
+        to go to your media library. From there you can select an icon from our icon
+        library or upload an image of your own._
       CSD U6 emotion machine 2_markdown_instruction: |-
         # Changing Color\r
         \r
@@ -23909,7 +24748,31 @@
         \r
         In each of the event handlers, set the "icon-color" property
         of "face". Pick a warm color for happy and a cool color for sad.
+      CSD U6 emotion machine 2_2018_markdown_instruction: |-
+        # Changing Color\r
+        \r
+        If
+        you look back at the example for this app, you should notice that not only
+        do the emojis change when you click a button, but their color changes as well.\r
+        \r
+        #
+        Do This\r
+        \r
+        In each of the event handlers, set the "icon-color" property
+        of "face". Pick a warm color for happy and a cool color for sad.
       CSD U6 emotion machine 3_markdown_instruction: |-
+        # Setting Text\r
+        \r
+        Your
+        happy and sad buttons should be almost completely functional now. The only
+        thing they still need to do is change the text at the bottom of the screen.\r
+        \r
+        #
+        Do This\r
+        \r
+        Make each of the event handlers change the text of "feeling"
+        to the appropriate emotion (either "happy" or "sad")
+      CSD U6 emotion machine 3_2018_markdown_instruction: |-
         # Setting Text\r
         \r
         Your
@@ -23937,7 +24800,40 @@
         \r
         When you're all done, feel free
         to add more emotions or features before submitting your final version.
+      CSD U6 emotion machine 4_2018_markdown_instruction: |-
+        # Add Another Emotion\r
+        \r
+        In
+        the example app you saw earlier, you could set the emotion to happy, sad,
+        or meh. Your app only has happy and sad, can you add a third emotion?\r
+        \r
+        #
+        Do This\r
+        \r
+        Using all of the same techniques you used for the happy and
+        sad buttons, create a third emotion button. You could stick with meh, or you
+        could pick an emotion of your own.\r
+        \r
+        When you're all done, feel free
+        to add more emotions or features before submitting your final version.
       CSD U6 emotion machine example_markdown_instruction: |-
+        # The Emotion Machine\r
+        \r
+        Check
+        out this Emotion Machine app that you'll be building next. Try clicking on
+        the buttons to see how it works.\r
+        \r
+        # Do This\r
+        \r
+        Try out the app,
+        and then with a neighbor discuss:\r
+        \r
+        * What events handlers does this
+        app use?\r
+        * Which elements are being changed with code?\r
+        * Which properties
+        are being changed when you click a button?
+      CSD U6 emotion machine example_2018_markdown_instruction: |-
         # The Emotion Machine\r
         \r
         Check
@@ -23975,7 +24871,45 @@
         * Set the "height" property to 50\r
         \r
         ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop button array_2018_markdown_instruction: |-
+        # Looping Over Arrays\r
+        \r
+        One
+        of the most powerful ways to use a for loop is to loop over an array, running
+        code on each item in the array. We can do this by using the for loop counter
+        variable (usually `i`) as the index of your array.\r
+        \r
+        # Do This\r
+        \r
+        This
+        program should loop over the array `buttons` and do two things to each button
+        - change the background color to red, and change the height to 50 px.\r
+        \r
+        *
+        Add a second `setProperty` block inside the loop\r
+        * Change the target to
+        `buttons[i]`\r
+        * Set the "height" property to 50\r
+        \r
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
       CSD U6 for loop click exit_markdown_instruction: |-
+        # Knowing When to Stop\r
+        \r
+        If
+        you clicked the button too many times in the last level, you got an error.
+        Whenever you're writing code that repeats, you should think about when to
+        _stop_ repeating.\r
+        \r
+        # Do This\r
+        \r
+        This program is similar to the previous
+        one, but there is a conditional inside the event handler. You'll need to
+        complete the conditional so that we don't try to toggle an LED that doesn't
+        exist.\r
+        \r
+        _Would your code work without changes for a board with more
+        or fewer LEDs? If not, could you modify it so it would?_
+      CSD U6 for loop click exit_2018_markdown_instruction: |-
         # Knowing When to Stop\r
         \r
         If
@@ -23998,12 +24932,42 @@
         Read
         through the code for this program and predict what will happen each time the
         button is clicked?
+      CSD U6 for loop click predict question_2018_markdown_instruction: |-
+        # Make a
+        Prediction\r
+        \r
+        Read through the code for this program and predict what
+        will happen each time the button is clicked?
       CSD U6 for loop images_markdown_instruction: |-
         # Constructing a for loop from
         scratch\r
         \r
         Now that you've had some practice modifying for loops to process
         arrays, let's see if you can do it yourself.\r
+        \r
+        # Do This\r
+        \r
+        We've
+        provided the design elements and an array to start with, but the rest is on
+        you.\r
+        \r
+        * Add an event handler to respond to the "thumbsup_button" being
+        clicked\r
+        * Place a _for loop_ inside the event handler\r
+        * Modify the exit
+        condition of the _for loop_ so that it will run until it gets to the end of
+        the array `images`\r
+        * Inside your _for loop_ change the current image to
+        "icon://fa-thumbs-o-up"\r
+        \r
+        _Challenge: Can you add a second button that
+        turns all of the images back to thumbs down?_
+      CSD U6 for loop images_2018_markdown_instruction: |-
+        # Constructing a for loop
+        from scratch\r
+        \r
+        Now that you've had some practice modifying for loops
+        to process arrays, let's see if you can do it yourself.\r
         \r
         # Do This\r
         \r
@@ -24033,6 +24997,18 @@
         \r
         Add your new buttons in Design Mode and create event handlers
         to respond to your buttons and change the LED colors.
+      CSD U6 for loop led bonus 1_2018_markdown_instruction: |-
+        # Challenge: Add More
+        Buttons\r
+        \r
+        Extend the program by adding more buttons that change the board
+        to different colors.\r
+        \r
+        # Do This\r
+        \r
+        Add your new buttons in Design
+        Mode and create event handlers to respond to your buttons and change the LED
+        colors.
       CSD U6 for loop led bonus 2_markdown_instruction: |-
         # Challenge: Color Patterns\r
         \r
@@ -24048,7 +25024,33 @@
         _Hint: As you
         design your patterns, consider whether a function with parameters could help
         simplify your program._
+      CSD U6 for loop led bonus 2_2018_markdown_instruction: |-
+        # Challenge: Color
+        Patterns\r
+        \r
+        Extend the program by adding more buttons that create different
+        patterns of light.\r
+        \r
+        # Do This\r
+        \r
+        Add your new buttons in Design
+        Mode and create event handlers to respond to your buttons and change the LED
+        colors.\r
+        \r
+        _Hint: As you design your patterns, consider whether a function
+        with parameters could help simplify your program._
       CSD U6 for loop led bonus 3_markdown_instruction: |-
+        # Challenge: Music\r
+        \r
+        Use
+        what you learned in the Making Music lesson to make the board play music when
+        the lights change.\r
+        \r
+        # Do This\r
+        \r
+        Create some arrays of notes for
+        different songs and add code to your event handlers to play your music.
+      CSD U6 for loop led bonus 3_2018_markdown_instruction: |-
         # Challenge: Music\r
         \r
         Use
@@ -24083,6 +25085,30 @@
         from `n` to "red" (note the quotation marks!)\r
         * Test your program, the
         "Red" button should turn all of your LEDs red
+      CSD U6 for loop led function call_2018_markdown_instruction: |-
+        # Calling Your
+        Function\r
+        \r
+        Now that you've created a function that can behave differently
+        based on the parameter it is passed, we can use it in multiple different event
+        handlers to change the lights to different colors.\r
+        \r
+        # Do This\r
+        \r
+        We'll
+        start simple by just creating an event handler for "button_red"\r
+        \r
+        *
+        Create a new event handler to respond to "button_red"\r
+        * Inside your event
+        handler, add a "call function with parameter" block\r
+        ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)\r
+        *
+        Change the name from `myFunction` to `setLedsColor`\r
+        * Change the parameter
+        from `n` to "red" (note the quotation marks!)\r
+        * Test your program, the
+        "Red" button should turn all of your LEDs red
       CSD U6 for loop led function finish_markdown_instruction: |-
         # Finish the App\r
         \r
@@ -24104,12 +25130,64 @@
         \r
         When you've got all of your buttons working properly,
         click "Submit" to turn your program in.
+      CSD U6 for loop led function finish_2018_markdown_instruction: |-
+        # Finish the
+        App\r
+        \r
+        If your red button worked, the only thing left is to call your
+        new function when all of the remaining buttons is pressed.\r
+        \r
+        # Do This\r
+        \r
+        For
+        each of the remaining buttons (green, blue, and white):\r
+        \r
+        * Create a
+        new event handler\r
+        * Call your `setLedsColor` function with the appropriate
+        color ("green", "blue", or "white")\r
+        * Test your program to make sure
+        all of the buttons work\r
+        \r
+        When you've got all of your buttons working
+        properly, click "Submit" to turn your program in.
       CSD U6 for loop led function_markdown_instruction: |-
         # Switching Colors with
         a Function\r
         \r
         We could write a for loop for each different color that
         we want to set LEDs to, but that would be a lot of duplicate code that's
+        _almost_ the same. This is the perfect place to use a _function with a parameter_!
+        You've seen and used functions with parameters before, but now you're going
+        to make one from scratch.\r
+        \r
+        # Do This\r
+        \r
+        Create a function called
+        `setLedsColor` that takes a parameter `color` and uses it to change the color
+        of all of the LEDs\r
+        \r
+        * At the bottom of your program, drag out a function
+        with parameter block ![expandable](https://images.code.org/bd6ec3d9a651cf760a7dc8e1949658c0-image-1512761901850.png)\r
+        *
+        Change the name from `myFunction` to `setLedsColor`\r
+        * Change the parameter
+        name from `n` to `color`\r
+        * Inside your function, add a _for loop_ that
+        repeats until it reaches the end of `colorLeds`\r
+        * Inside your _for loop_,
+        set the color of the current led to the parameter `color` (eg. `colorLeds[i].color(color)`\r
+        \r
+        We'll
+        add event handlers that use this function in the next level, but for now you
+        can test your function by your program and typing this into the debug console:
+        `setLedsColor("blue")`
+      CSD U6 for loop led function_2018_markdown_instruction: |-
+        # Switching Colors
+        with a Function\r
+        \r
+        We could write a for loop for each different color
+        that we want to set LEDs to, but that would be a lot of duplicate code that's
         _almost_ the same. This is the perfect place to use a _function with a parameter_!
         You've seen and used functions with parameters before, but now you're going
         to make one from scratch.\r
@@ -24146,6 +25224,17 @@
         \r
         Add an event handler
         to "button_off" with a for loop that turns each color LED off.
+      CSD U6 for loop led off_2018_markdown_instruction: |-
+        # Turning all the Color
+        LEDs Off\r
+        \r
+        Now that you've got one button to turn the color LEDs on,
+        you can make another turn them off.\r
+        \r
+        # Do This\r
+        \r
+        Add an event handler
+        to "button_off" with a for loop that turns each color LED off.
       CSD U6 for loop led on_markdown_instruction: |-
         # Turning all the Color LEDs
         On\r
@@ -24166,10 +25255,45 @@
         it reaches in the end of the array `colorLeds`\r
         * Inside the for loop, call
         `colorLeds[i].on()` to turn on the current color LED
+      CSD U6 for loop led on_2018_markdown_instruction: |-
+        # Turning all the Color
+        LEDs On\r
+        \r
+        Now that you know how to use a _for loop_ to process all of
+        the elements in an array, you can turn on all of the Color LEDs much more
+        easily than before.\r
+        \r
+        # Do This\r
+        \r
+        We're going to start an app that
+        will control all of the Color LEDs on your board. The first step is to wire
+        up the button that turns all of the LEDs on.\r
+        \r
+        * Add an event handler
+        for "button_on"\r
+        * Place a _for loop_ in your event handler that repeats
+        until it reaches in the end of the array `colorLeds`\r
+        * Inside the for loop,
+        call `colorLeds[i].on()` to turn on the current color LED
       CSD U6 for loop led template_markdown_instruction: |-
         # Arrays and For Loops
         RGB LED Project Template
+      CSD U6 for loop led template_2018_markdown_instruction: |-
+        # Arrays and For Loops
+        RGB LED Project Template
       CSD U6 for loop list.length_markdown_instruction: |-
+        # Array Length\r
+        \r
+        In
+        the last program we told the loop to run three times with the code `for (var
+        i = 0; i < 3; i++)`. This works, but we could write smarter programs by using
+        the length of the array to decide how many times to loop.\r
+        \r
+        # Do This\r
+        \r
+        Change
+        the exit condition of this for loop so that it runs while `i < buttons.length`.
+      CSD U6 for loop list.length_2018_markdown_instruction: |-
         # Array Length\r
         \r
         In
@@ -24197,7 +25321,31 @@
         * Run your code, then
         change the frequency and the duration to hear the difference in the buzzer.  (Don't
         forget to hit the button after you make a change!)
+      CSD U6 frequency_2018_markdown_instruction: |-
+        # Frequency\r
+        \r
+        This buzzer
+        controller has been expanded to control frequency as well, but the code isn't
+        finished yet.\r
+        \r
+        # Do This\r
+        * Using the `duration` variable as a model,
+        create a `frequency` variable that gets the value from the *frequency* slider.\r
+        *
+        Modify the line of code that makes the buzzer sound so that it uses the `frequency`
+        variable rather than the default frequency of `500`.\r
+        * Run your code, then
+        change the frequency and the duration to hear the difference in the buzzer.  (Don't
+        forget to hit the button after you make a change!)
       CSD U6 game project board events_markdown_instruction: |-
+        # Board Events\r
+        \r
+        Go
+        back to the Events section of your activity guide and find any events that
+        respond to your board (ones that would use `onBoardEvent()`). Create event
+        handlers for each of those now. If these events rely on functions you haven't
+        written yet, just leave yourself a comment in the code.
+      CSD U6 game project board events_2018_markdown_instruction: |-
         # Board Events\r
         \r
         Go
@@ -24217,6 +25365,18 @@
         Once
         you're all done with this version of your program, click Submit to turn it
         in.
+      CSD U6 game project finish_2018_markdown_instruction: |-
+        # Finishing Touches
+        and Testing\r
+        \r
+        At this point you should have most of your program in place.
+        Now you need to add whatever finishing touches are needed and do a little
+        testing. When your app is ready, have your classmates try it out. See if you
+        can find any bugs, confusing design choices, or missing features you'd like
+        to work on.\r
+        \r
+        Once you're all done with this version of your program,
+        click Submit to turn it in.
       CSD U6 game project functions call_markdown_instruction: |-
         # Calling your Functions\r
         \r
@@ -24224,6 +25384,13 @@
         your functions defined, you can can call them wherever you need. Go through
         your event handlers, or anywhere else in your program that your function should
         be used, and add calls to the function you created.
+      CSD U6 game project functions call_2018_markdown_instruction: |-
+        # Calling your
+        Functions\r
+        \r
+        With your functions defined, you can can call them wherever
+        you need. Go through your event handlers, or anywhere else in your program
+        that your function should be used, and add calls to the function you created.
       CSD U6 game project functions define_markdown_instruction: |-
         # Define Your Functions\r
         \r
@@ -24240,6 +25407,22 @@
         \t// Things my function does\r
         }\r
         ```
+      CSD U6 game project functions define_2018_markdown_instruction: |-
+        # Define Your
+        Functions\r
+        \r
+        Define all of your functions at the bottom of the program,
+        under the comment `// Create your functions here`.\r
+        \r
+        Right now we're
+        only worrying about writing the function _definitions_, the part which looks
+        like:\r
+        \r
+        ```\r
+        function myFunction() {\r
+        \t// Things my function does\r
+        }\r
+        ```
       CSD U6 game project screen links_markdown_instruction: |-
         # UI Element Events\r
         \r
@@ -24252,7 +25435,31 @@
         Don't
         worry about making these completely functional yet. If your events rely on
         board elements or your own functions, we'll take care of that in later levels.
+      CSD U6 game project screen links_2018_markdown_instruction: |-
+        # UI Element Events\r
+        \r
+        Now
+        that all of your screens are designed, you can add any event handlers that
+        will respond to _screen interaction_. These should be listed in the "Events"
+        section of your activity guide. If you run into new events that you hadn't
+        thought of in the planning stage, make sure you add them to your project guide.\r
+        \r
+        Don't
+        worry about making these completely functional yet. If your events rely on
+        board elements or your own functions, we'll take care of that in later levels.
       CSD U6 game project screens_markdown_instruction: |-
+        # Create Your Screens\r
+        \r
+        The
+        first thing you'll need to do is create all of the screens that you've sketched
+        in your planning guide.\r
+        \r
+        # Do This\r
+        \r
+        Use Design Mode to create
+        all of the screens that your program will need. Don't forget to **pick sensible
+        IDs** for all of your design elements.
+      CSD U6 game project screens_2018_markdown_instruction: |-
         # Create Your Screens\r
         \r
         The
@@ -24279,7 +25486,32 @@
         * Add
         code to `updateBuzzer` to make the buzzer only turn on when the toggle switch
         is open.
+      CSD U6 get toggle_2018_markdown_instruction: |-
+        # change\r
+        \r
+        This program
+        has events that detect three different changes: the toggle switch, the interval
+        slider, and the duration slider.  Because there are so many different things
+        that cause the LED and buzzer to reset, it uses functions to organize the
+        code.\r
+        \r
+        # Do This\r
+        \r
+        * Read the `updateLED` function to see what
+        it does.\r
+        * Add code to `updateBuzzer` to make the buzzer only turn on when
+        the toggle switch is open.
       CSD U6 getProperty Demo_markdown_instruction: |-
+        # Updating Properties\r
+        \r
+        Here's
+        an example of an app that uses both `getProperty` and `setProperty` to update
+        elements on the screen. Read through the code, and then test it out by filling
+        out the input fields and clicking "Save"\r
+        \r
+        _Note: you don't need to
+        change any code here, but read through the provided code to see how it works._
+      CSD U6 getProperty Demo_2018_markdown_instruction: |-
         # Updating Properties\r
         \r
         Here's
@@ -24313,7 +25545,26 @@
       CSD U6 getProperty board predict_markdown_instruction: |-
         Predict Level (See
         contained level for markdown)
+      CSD U6 getProperty board predict_2018_markdown_instruction: |-
+        Predict Level
+        (See contained level for markdown)
       CSD U6 getProperty buzzer_markdown_instruction: |-
+        # Using the Circuit Playground\r
+        \r
+        Here's
+        the same code you saw in the last level, but this time there's another dropdown
+        menu to control the buzzer.  You'll have to add the code to make it work.\r
+        \r
+        #
+        Do This\r
+        * Using the LED code as a model, add new code inside the buttonL
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the
+        buzzer off when the right button is pressed.\r
+          * (Hint: the event is already
+        in the code.)
+      CSD U6 getProperty buzzer_2018_markdown_instruction: |-
         # Using the Circuit Playground\r
         \r
         Here's
@@ -24363,7 +25614,49 @@
         quotation marks.\r
         * Test your program by picking a color and clicking "Set
         Color".
+      CSD U6 getProperty dropdown_2018_markdown_instruction: |-
+        # Dropdowns\r
+        \r
+        Text
+        Inputs are nice when you want users to be able to enter _anything_ they want,
+        but often you want to restrict them to just a few choices. For example, if
+        you want your user to pick a color, you probably want to make sure they can
+        only choose colors that will actually work.\r
+        \r
+        The provided dropdown with
+        the ID "color_input" allows a user to choose from a handful of background
+        colors. When the "Set Color" button is clicked, the screen will turn that
+        color.\r
+        \r
+        # Do This\r
+        \r
+        * Inside the event block, create a variable
+        called `color` and assign it a value using the `getProperty` block.\r
+          *
+        Hint: You'll need to use the "value" property to get the user's choice.\r
+        *
+        Use the `setProperty` block to set the "background-color" property of "screen1"
+        to your variable `color`.\r
+          * Hint: Make sure you type `color` without
+        quotation marks.\r
+        * Test your program by picking a color and clicking "Set
+        Color".
       CSD U6 getProperty input_markdown_instruction: |-
+        # getProperty and Variables\r
+        \r
+        This
+        program uses the `name` variable to display the name typed into "name_input"
+        when the Submit button is clicked. It should do the same for *friend_input*
+        and *friend_output*, but it's missing a block.\r
+        \r
+        # Do This\r
+        * Read
+        the code and comments, then run the program to see how it works. (Make sure
+        you type in your name and your friend's name before hitting "Submit".)\r
+        *
+        Use a `getProperty` block to store the text property of *friend_input* into
+        your the variable "friend_name". ([Show me where.](#triggercallout=code_triggered))
+      CSD U6 getProperty input_2018_markdown_instruction: |-
         # getProperty and Variables\r
         \r
         This
@@ -24457,7 +25750,30 @@
         * Read the program to understand how it is supposed to work.\r
         *
         Find and correct the bugs so that the program works properly.
+      CSD U6 getters debug_2018_markdown_instruction: |-
+        # LED and Buzzer Controller\r
+        \r
+        This
+        program operates the LED and the buzzer, but it has some problems.\r
+        \r
+        #
+        Do This\r
+        * Read the program to understand how it is supposed to work.\r
+        *
+        Find and correct the bugs so that the program works properly.
       CSD U6 goalie_markdown_instruction: |-
+        # Updating Values with Data\r
+        \r
+        In
+        this program the goalie is trying to block the soccer ball, but right now
+        the ball isn't moving.\r
+        \r
+        \r
+        # Do This\r
+        \r
+        * Use the counter pattern
+        to update the ball's `x` value so that it moves across the screen.
+      CSD U6 goalie_2018_markdown_instruction: |-
         # Updating Values with Data\r
         \r
         In
@@ -24482,8 +25798,57 @@
         *
         Read the code and predict what the program will do, then hit "Run" to test
         your prediction.
+      CSD U6 interval predict_2018_markdown_instruction: |-
+        # Interval\r
+        \r
+        Now we're
+        using the slider to affect the behavior of the LED.   Just as we could change
+        the values for the frequency and duration of the buzzer, we can change the
+        value for the blink or pulse interval of the LED.\r
+        \r
+        # Do This\r
+        \r
+        *
+        Read the code and predict what the program will do, then hit "Run" to test
+        your prediction.
       CSD U6 interval_markdown_instruction: Predict Level
+      CSD U6 interval_2018_markdown_instruction: Predict Level
       CSD U6 investigate orientation_markdown_instruction: |-
+        # Pitch and Roll\r
+        \r
+        This
+        program displays the board's pitch and roll, and it will also change colors
+        depending on their values.  \r
+        \r
+        # Do This\r
+        \r
+        Make the program change
+        the following colors by tilting the board to the correct pitch and roll.\r
+        \r
+        <div
+        style="display:inline-block; background-color: skyblue; height: 30px; width:30px">&nbsp;</div>
+        Pitch: 0 | Roll: -20\r
+        \r
+        <div style="display:inline-block; background-color:
+        burlywood; height: 30px; width:30px">&nbsp;</div> Pitch: 30 | Roll: 0 \r
+        \r
+        <div
+        style="display:inline-block; background-color: mistyrose; height: 30px; width:30px">&nbsp;</div>
+        Pitch: -15 | Roll: 10 \r
+        \r
+        <div style="display:inline-block; background-color:
+        yellowgreen; height: 30px; width:30px">&nbsp;</div> Pitch: 5 | Roll: -25
+        \r
+        \r
+        <div style="display:inline-block; background-color: thistle; height:
+        30px; width:30px">&nbsp;</div> Pitch: 10 | Roll: 30 \r
+        \r
+        Which way should
+        you tilt to get a positive pitch?\r
+        \r
+        Which way should you tilt to get
+        a negative roll?
+      CSD U6 investigate orientation_2018_markdown_instruction: |-
         # Pitch and Roll\r
         \r
         This
@@ -24528,6 +25893,16 @@
         # Do This\r
         * Create a `checkNotes()`
         function that will call `checkNote(note)` on everything in the "notes" array.
+      CSD U6 iter create notes_2018_markdown_instruction: |-
+        # Music Player\r
+        \r
+        This
+        program lets you play music by waving a wand over the different notes, but
+        it's missing a function definition.\r
+        \r
+        # Do This\r
+        * Create a `checkNotes()`
+        function that will call `checkNote(note)` on everything in the "notes" array.
       CSD U6 iter modify bugs_markdown_instruction: |-
         # Bug Shaker\r
         \r
@@ -24540,19 +25915,44 @@
         `moveBug(color)` on every bug color.\r
           * (Hint: Look at the `detectHits()`
         function for clues how to do this.)
+      CSD U6 iter modify bugs_2018_markdown_instruction: |-
+        # Bug Shaker\r
+        \r
+        This
+        program shakes bugs around when the board is shaken, but it's only working
+        for one bug.\r
+        \r
+        # Do This\r
+        * Change the `moveBugs()` function so that
+        it calls `moveBug(color)` on every bug color.\r
+          * (Hint: Look at the `detectHits()`
+        function for clues how to do this.)
       CSD U6 iter predict bubbles contained_markdown_instruction: |-
         # Fish Bubbles\r
         \r
         This
         program uses the sound sensor in the same way as the clouds program.  How
         many bubbles will move when you blow on the board?
+      CSD U6 iter predict bubbles contained_2018_markdown_instruction: |-
+        # Fish Bubbles\r
+        \r
+        This
+        program uses the sound sensor in the same way as the clouds program.  How
+        many bubbles will move when you blow on the board?
       CSD U6 iter predict bubbles_markdown_instruction: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 iter predict bubbles_2018_markdown_instruction: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 light pattern challenge_markdown_instruction: |-
         # Challenge: More Patterns\r
         \r
         Add
         some more patterns to your app. Find a partner and add their pattern as an
         option. Make sure to put each pattern into its own function.
+      CSD U6 light pattern challenge_2018_markdown_instruction: |-
+        # Challenge: More
+        Patterns\r
+        \r
+        Add some more patterns to your app. Find a partner and add
+        their pattern as an option. Make sure to put each pattern into its own function.
       CSD U6 light pattern off_markdown_instruction: |-
         # Turning It Off\r
         \r
@@ -24565,7 +25965,34 @@
         Create a function
         that turns all of the LEDs off, and then add a "Off" button to your app
         and make it turn off all of the color LEDs.
+      CSD U6 light pattern off_2018_markdown_instruction: |-
+        # Turning It Off\r
+        \r
+        When
+        you start this app your lights are off, but as soon as choose a pattern, there's
+        no way to turn the lights back off!\r
+        \r
+        # Do This\r
+        \r
+        Create a function
+        that turns all of the LEDs off, and then add a "Off" button to your app
+        and make it turn off all of the color LEDs.
       CSD U6 light show predict_markdown_instruction: |-
+        # Put on a Light Show\r
+        \r
+        This
+        app lets you put on a light show with the LED.\r
+        \r
+        Look at the code with
+        your partner and answer the following questions:\r
+        \r
+        * What does this line
+        of code do: `setProperty("screen", "background-color", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r
+        \r
+        Once you have answered
+        the question, run the code and click the buttons to see what happens.
+      CSD U6 light show predict_2018_markdown_instruction: |-
         # Put on a Light Show\r
         \r
         This
@@ -24613,6 +26040,22 @@
         button makes the motorcycle go up.\r
         * Using the working left button as an
         example, program the right button to make the motorcycle go down.
+      CSD U6 move motorcycle_2018_markdown_instruction: |-
+        # Movement with Properties\r
+        \r
+        Earlier
+        we used `setProperty` to change the x and y position of elements on the screen,
+        but we could only move them to either a single specific location, or a random
+        location. By using `getProperty` to find out an element's current position,
+        we can use the **counter pattern** from Unit 3 to update that position.\r
+        \r
+        #
+        Do This\r
+        \r
+        * Read the program and discuss with your partner how the left
+        button makes the motorcycle go up.\r
+        * Using the working left button as an
+        example, program the right button to make the motorcycle go down.
       CSD U6 onChange_markdown_instruction: |-
         # onChange\r
         \r
@@ -24644,13 +26087,45 @@
         the given color.\r
         * Call your function in the event blocks so that all the
         buttons work.
+      CSD U6 params create colors_2018_markdown_instruction: |-
+        # Color Picker\r
+        \r
+        In
+        this program, pressing the buttons at the bottom of the screen changes the
+        color of the images and the color LEDs.\r
+        \r
+        # Do This\r
+        * Create a function
+        `chooseColor(color)` that changes each of the images and the color LEDs to
+        the given color.\r
+        * Call your function in the event blocks so that all the
+        buttons work.
       CSD U6 params predict contained_markdown_instruction: |-
         # Bug Crawl\r
         \r
         Look
         at the program below, paying special attention to the function `crawl(bug)`.  What
         happens if you press the left or right button?
+      CSD U6 params predict contained_2018_markdown_instruction: |-
+        # Bug Crawl\r
+        \r
+        Look
+        at the program below, paying special attention to the function `crawl(bug)`.  What
+        happens if you press the left or right button?
       CSD U6 params starchaser 1_markdown_instruction: |-
+        # Make your `loopStar(color)`
+        function\r
+        \r
+        Right now only the red star works, so you'll need to change
+        this code.\r
+        \r
+        # Do This\r
+        * Use the code from the `loopRedStar()` function
+        to create a `loopStar(color)` function that will work with any star.\r
+        *
+        Test your function by calling `loopStar("red")` and `loopStar("blue")`
+        inside the `loopStars()` function.
+      CSD U6 params starchaser 1_2018_markdown_instruction: |-
         # Make your `loopStar(color)`
         function\r
         \r
@@ -24673,7 +26148,32 @@
         *
         Use a `for` loop inside your `loopStars()` function to make every star in
         "starArray" loop around the screen.
+      CSD U6 params starchaser 2_2018_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        you'll need to make all the stars loop around the screen.\r
+        \r
+        # Do This\r
+        *
+        Use a `for` loop inside your `loopStars()` function to make every star in
+        "starArray" loop around the screen.
       CSD U6 params starchaser 3_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        All
+        the stars loop, but you can still only catch the red star.\r
+        \r
+        # Do This\r
+        *
+        Use code from the `moveRedStar()` function to make a `moveStar(color)` function
+        that can move any star.\r
+        * Use code from the `checkRedStar()` function to
+        make a `checkStar(color)` function that works for any star.\r
+        * Test your
+        code by calling `checkStar("red")` and `checkStar("blue")` inside your
+        event block.
+      CSD U6 params starchaser 3_2018_markdown_instruction: |-
         # Star Chaser\r
         \r
         All
@@ -24699,7 +26199,31 @@
         functions that uses a `for` loop to check every star in the star array.\r
         *
         Test your code by calling the `checkStars()` function inside the event block.
+      CSD U6 params starchaser 4_2018_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        make it work for all the stars\r
+        \r
+        # Do This\r
+        * Create a `checkStars()`
+        functions that uses a `for` loop to check every star in the star array.\r
+        *
+        Test your code by calling the `checkStars()` function inside the event block.
       CSD U6 params starchaser 5_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        you can add extra stars, and your functions will work with them, too.\r
+        \r
+        #
+        Do This\r
+        * In design mode, copy one of the stars, and change its name and
+        color to "yellow".\r
+        * Add a new element, "yellow", to your star array.\r
+        *
+        Test the game with your new star.
+      CSD U6 params starchaser 5_2018_markdown_instruction: |-
         # Star Chaser\r
         \r
         Now
@@ -24724,7 +26248,29 @@
         one away every time the user touches the **wrong** star.\r
         * Make an end
         screen, and change to that screen when the user runs out of lives.
+      CSD U6 params starchaser challenge 1_2018_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        that you have a working game, you can challenge yourself with some different
+        features.\r
+        \r
+        # Do This\r
+        * Start the user with 5 "lives", and take
+        one away every time the user touches the **wrong** star.\r
+        * Make an end
+        screen, and change to that screen when the user runs out of lives.
       CSD U6 params starchaser challenge 2_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        that you have a working game, you can challenge yourself with some different
+        features.\r
+        \r
+        # Do This\r
+        * Make the player go back to the middle of the
+        screen when the left button is pressed.
+      CSD U6 params starchaser challenge 2_2018_markdown_instruction: |-
         # Star Chaser\r
         \r
         Now
@@ -24759,7 +26305,21 @@
          * What functions might this program need?\r
          * What parameters
         should these functions have?
+      CSD U6 params starchaser intro_2018_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        In
+        this game, the user tries to catch the stars according to the color of the
+        LEDs.\r
+        \r
+        # Do This\r
+        * Play the game, and discuss the following with
+        a partner:\r
+         * What functions might this program need?\r
+         * What parameters
+        should these functions have?
       CSD U6 params starchaser template_markdown_instruction: Template Level.
+      CSD U6 params starchaser template_2018_markdown_instruction: Template Level.
       CSD U6 plane shake_markdown_instruction: |-
         # Shaking Things Up\r
         \r
@@ -24778,6 +26338,7 @@
         * Update the airplane's x and y coordinates in
         order to move it.
       CSD U6 predict LED button_markdown_instruction: Embedded Prediction
+      CSD U6 predict LED button_2018_markdown_instruction: Embedded Prediction
       CSD U6 random array notes_markdown_instruction: |-
         # Random Song Generator\r
         \r
@@ -24796,7 +26357,38 @@
         and play it.\r
         * Run the program and press the left button to hear your buzzer
         sing its beautiful tune.
+      CSD U6 random array notes_2018_markdown_instruction: |-
+        # Random Song Generator\r
+        \r
+        You're
+        going to make a random song generator. When you press a button, a random note
+        should play. Press it enough times, and you have yourself a beautiful arrangement
+        of bleeps and bloops. \r
+        \r
+        You used `randomNumber()` to select an element
+        from an array in the previous lesson, so this should be familiar.\r
+        \r
+        #
+        Do This\r
+        \r
+        * Add code to randomly select a note from the `notes` array
+        and play it.\r
+        * Run the program and press the left button to hear your buzzer
+        sing its beautiful tune.
       CSD U6 sensor experiment embedded_markdown_instruction: |-
+        # Sensor Experiment\r
+        \r
+        Run
+        the program to the right and experiment with your board. Try interacting with
+        your board in many different ways to figure out what each sensor might be.
+        As you experiment with each sensor, discuss with a neighbor:\r
+        \r
+        * What
+        does this sensor measure?\r
+        * What is its maximum value?\r
+        * What is its
+        minimum value?
+      CSD U6 sensor experiment embedded_2018_markdown_instruction: |-
         # Sensor Experiment\r
         \r
         Run
@@ -24830,7 +26422,47 @@
         _Note: We've removed the Design Mode tab for now so
         you can practice working with `setProperty`, but it'll come back later once
         you're building apps of your own._
+      CSD U6 setProperty Text_2018_markdown_instruction: |-
+        # Changing the Text\r
+        \r
+        The
+        `setProperty` block can be used to change lots of things about your design
+        elements, including the text they contain.\r
+        \r
+        # Do This\r
+        \r
+        * Drag
+        out a `setProperty` block\r
+        * For the first parameter, select "name" (the
+        element's id)\r
+        * For the second parameter, select "text" (the property
+        you want to set)\r
+        * For the third parameter, write your name in quotes (the
+        value to set)\r
+        \r
+        _Note: We've removed the Design Mode tab for now so
+        you can practice working with `setProperty`, but it'll come back later once
+        you're building apps of your own._
       CSD U6 setProperty hidden 2_markdown_instruction: |-
+        # Showing/Hiding\r
+        \r
+        This
+        alarm app isn't super useful if you can't turn the alarm off once it's
+        been triggered. Let's fix that.\r
+        \r
+        # Do This\r
+        \r
+        Add a second `onEvent`
+        block to watch for the "stopAlarmButton" to be clicked. Inside that block:\r
+        \r
+        *
+        Change the status text to "OFF"\r
+        * Hide the "stopAlarmButton"\r
+        \r
+        _Hint:
+        "hidden" is a boolean property. If we used `false` to make the button show
+        up, what should you use to make it hidden again?_
+      CSD U6 setProperty hidden 2_2018_markdown_instruction: |-
         # Showing/Hiding\r
         \r
         This
@@ -24876,6 +26508,33 @@
         _Note:
         the button "stopAlarmButton" is already on the screen, but because its "hidden"
         property is marked true, it isn't shown when the program starts._
+      CSD U6 setProperty hidden_2018_markdown_instruction: |-
+        # Hidden\r
+        \r
+        Design
+        elements have a property called "hidden" that controls whether the element
+        should show on screen or not. We are going to use this property to create
+        an alarm app. Notice that when the program starts one button is hidden, and
+        one is not.\r
+        \r
+        We have already set up an event handler for the "triggerAlarmButton"
+        which will do two things when clicked:\r
+        \r
+        * Change the "text" property
+        of "statusLabel" to "on"\r
+        * Set the "hidden" property of "stopAlarmButton"
+        to `false` (meaning it should _not_ be hidden)\r
+        \r
+        # Do This\r
+        \r
+        * Run
+        the program and click "Trigger Alarm" to see how it works\r
+        * Add code
+        to the provided event handler that hides the "triggerAlarmButton"\r
+        \r
+        _Note:
+        the button "stopAlarmButton" is already on the screen, but because its "hidden"
+        property is marked true, it isn't shown when the program starts._
       CSD U6 setProperty xy click_markdown_instruction: |-
         # Changing With a Click\r
         \r
@@ -24892,7 +26551,43 @@
         two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley.
+      CSD U6 setProperty xy click_2018_markdown_instruction: |-
+        # Changing With a Click\r
+        \r
+        It's
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r
+        \r
+        # Do This\r
+        \r
+        We've provided an empty `onEvent`
+        block that's watching the "smiley" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        matter where for now). Test your program by running it and clicking on the
+        smiley.
       CSD U6 setProperty xy random_markdown_instruction: |-
+        <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif"
+        style="float:right; max-width: 150px; margin: 10px;">\r
+        \r
+        # Randomization\r
+        \r
+        Moving
+        on the first click is fine, but this smiley would be even cooler if it moved
+        somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber`
+        block to do just that.\r
+        \r
+        # Do This\r
+        \r
+        Instead of setting the "x"
+        and "y" properties to a specific number, use the `randomNumber` block to
+        pick a new random "x" and "y" each time the smiley is clicked.\r
+        \r
+        _Tip:
+        The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random
+        numbers will ensure that the smiley is always visible on screen?_
+      CSD U6 setProperty xy random_2018_markdown_instruction: |-
         <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif"
         style="float:right; max-width: 150px; margin: 10px;">\r
         \r
@@ -24934,6 +26629,28 @@
         _Note: We've removed the Design Mode tab for now so
         you can practice working with setProperty, but it'll come back later once
         you're building apps of your own._
+      CSD U6 setProperty xy_2018_markdown_instruction: |-
+        # Changing Position\r
+        \r
+        Every
+        design element (except for the screen) has an "x" and a "y" property that
+        controls its position.\r
+        \r
+        # Do This\r
+        \r
+        <div markdown="1" style="float:right">\r
+        \r
+        ![expandable](https://images.code.org/e5c325d8105a0cf7cf681d6eab898595-image-1507319516043.png)\r
+        \r
+        </div>\r
+        \r
+        Using
+        the `setProperty` block, move "red_button" so that it matches the image
+        to the right.\r
+        \r
+        _Note: We've removed the Design Mode tab for now so
+        you can practice working with setProperty, but it'll come back later once
+        you're building apps of your own._
       CSD U6 slider intro_markdown_instruction: |-
         # Sliders\r
         \r
@@ -24941,6 +26658,23 @@
         users were only able to choose between a short and long buzz.  To give the
         user control over the exact duration of the buzzer, you'll want to use a
         slider.\r
+        \r
+        This slider lets users choose a value between 100 and 1000
+        for the duration of the buzz, but there's something not quite right about
+        how it's working.\r
+        \r
+        # Do This\r
+        * Look over the code and find the bug
+        that's keeping the duration from being set correctly.\r
+        \t* (Hint: Hover
+        over the yellow triangles for clues as to what might be wrong with the code.)
+      CSD U6 slider intro_2018_markdown_instruction: |-
+        # Sliders\r
+        \r
+        Last time,
+        your users were only able to choose between a short and long buzz.  To give
+        the user control over the exact duration of the buzzer, you'll want to use
+        a slider.\r
         \r
         This slider lets users choose a value between 100 and 1000
         for the duration of the buzz, but there's something not quite right about
@@ -24972,6 +26706,27 @@
         Once
         you have found the bugs, run the program and try to pass the board to your
         partner without setting off the alerm.
+      CSD U6 stillness game predict code_2018_markdown_instruction: |-
+        # Change with
+        the Accelerometer\r
+        \r
+        This program uses the change event to increase a
+        movement meter every time the board moves. When the movement meter reaches
+        100, the alarm will sound.\r
+        \r
+        \r
+        # Do This\r
+        This program has two bugs
+        that you need to fix:\r
+        \r
+        * The movement meter is being triggered by a
+        button press, instead of the accelerometer's `change` event.\r
+        * The programmer
+        forgot how to use the counter pattern to increase the movement variable.\r
+        \r
+        Once
+        you have found the bugs, run the program and try to pass the board to your
+        partner without setting off the alerm.
       CSD U6 stillness game predict_markdown_instruction: |
         # Accelerometer Events\r
         \r
@@ -24983,6 +26738,19 @@
         \r
         Now that you
         know your board is working, you can try out the different LED blocks.\r
+        \r
+        #
+        Do This\r
+        * Click "Run" and discuss with your partner how the code works.\r
+        *
+        Try the different LED blocks to see what they do.\r
+          * Hint: Don't forget
+        to hit "Reset" and run your code again after you change it
+      CSD U6 test LED_2018_markdown_instruction: |-
+        # Control the LED\r
+        \r
+        Now that
+        you know your board is working, you can try out the different LED blocks.\r
         \r
         #
         Do This\r
@@ -25007,7 +26775,47 @@
         if a player won, you'll need to add _another_ conditional that checks which
         player it was. If `player == "red"` the buzzer should play a high note,
         otherwise (else) it should play a low note.
+      CSD U6 tugowar buzzer_2018_markdown_instruction: |-
+        # Winning Buzzer\r
+        \r
+        That
+        last thing that that is missing from your project guide's description of
+        this project is the buzzer. It should buzz a high tone if player 1 wins and
+        a low tone if player 2 wins. \r
+        \r
+        # Do This\r
+        \r
+        So far we've been able
+        to just use the `player` parameter directly to report which player won, but
+        that won't work for buzzing different sounds. Inside the conditional that
+        checks if a player won, you'll need to add _another_ conditional that checks
+        which player it was. If `player == "red"` the buzzer should play a high
+        note, otherwise (else) it should play a low note.
       CSD U6 tugowar conditional_markdown_instruction: |-
+        # Check for a Winner\r
+        \r
+        Your
+        game should be pretty playable by now. Two players can click their respective
+        buttons, and their emojies will race down the screen. We still need a way
+        for a player to win though.\r
+        \r
+        # Do This\r
+        \r
+        Using a conditional inside
+        the `checkWin()` function, you want to check if a player has won each time
+        they click. For now, we can just use `console.log` to report the winner.\r
+        \r
+        *
+        Add an if statement to the bottom of `checkWin()`\r
+        * For the condition of
+        your if statement, check if `player_y` is greater than 350 (or use the bottom
+        of screen value you decided on in the last level)\r
+        * In your conditional,
+        add a `console.log` that reports which player won\r
+        * Test your program to
+        make sure that it reports a winner when one of the emojis makes it to the
+        bottom of the screen
+      CSD U6 tugowar conditional_2018_markdown_instruction: |-
         # Check for a Winner\r
         \r
         Your
@@ -25040,7 +26848,31 @@
         button on the Circuit Playground as fast as they can, while the student on
         the right clicks the right button. Whoever can get the bug over to their side
         first wins.
+      CSD U6 tugowar demo_2018_markdown_instruction: |-
+        # Grab that Bug!\r
+        \r
+        This
+        is an example of a tug o' war game that could be built in this lesson. To
+        play, pair up with another student. The student on the left will the click
+        the left button on the Circuit Playground as fast as they can, while the student
+        on the right clicks the right button. Whoever can get the bug over to their
+        side first wins.
       CSD U6 tugowar design 1.5_markdown_instruction: |-
+        # Game Screen Design\r
+        \r
+        We've
+        also added a "game" screen where the game will be played. It just needs
+        a couple of tweaks.\r
+        \r
+        # Do This\r
+        \r
+        Switch to the "game" screen
+        and, using your planning guide, fix this screen by changing the color of the
+        two emoji images.\r
+        \r
+        Feel free to add any other design tweaks that you'd
+        like.
+      CSD U6 tugowar design 1.5_2018_markdown_instruction: |-
         # Game Screen Design\r
         \r
         We've
@@ -25076,7 +26908,42 @@
         \r
         Feel
         free to add any other design tweaks that you'd like.
+      CSD U6 tugowar design 1_2018_markdown_instruction: |-
+        # Getting Started: Screen
+        Design\r
+        \r
+        You should have already reviewed the planning guide for this
+        project. Some of the work to turn this project guide into a working program
+        has already been started. Based on the project guide you're going to do the
+        rest of this work.\r
+        \r
+        # Do This\r
+        \r
+        We've already created a "start"
+        screen and included a title and "play" button. Using your planning guide,
+        finish creating this screen. Specifically you'll want to:\r
+        \r
+        * Update
+        the title text to say "Emoji Race"\r
+        * Add instructions for playing using
+        the ID "instructions"\r
+        \r
+        Feel free to add any other design tweaks that
+        you'd like.
       CSD U6 tugowar design 2_markdown_instruction: |-
+        # Designing the Win Screen\r
+        \r
+        The
+        final screen in this program shows who won. It's totally blank right now.\r
+        \r
+        #
+        Do This\r
+        \r
+        Switch to "win" and design it based on your project guide.
+        Make sure to pay close attention to the ID of each element. Once you've added
+        the required elements, feel free to add any other design tweaks that you'd
+        like.
+      CSD U6 tugowar design 2_2018_markdown_instruction: |-
         # Designing the Win Screen\r
         \r
         The
@@ -25096,6 +26963,29 @@
         walked through someone else's plan for creating a program, so now it's time
         to make it your own. What additional features or challenges do you want to
         create?\r
+        \r
+        # Do This\r
+        \r
+        Select one of the challenges below to add
+        to the game or come up with a challenge of your own.\r
+        \r
+        * Change the look
+        and layout of the screens\r
+        * Use the buzzer or the led to show when one
+        of the buttons has been clicked\r
+        * Set the "icon-color" property of "winner_image"
+        to the winning color\r
+        * Make the emojis start out sad, change to meh halfway,
+        and end up happy\r
+        * Use a variable and conditionals to make sure that players
+        can only move their emojis when the "game" screen is showing
+      CSD U6 tugowar final_2018_markdown_instruction: |-
+        # Make It Your Own\r
+        \r
+        You
+        just walked through someone else's plan for creating a program, so now it's
+        time to make it your own. What additional features or challenges do you want
+        to create?\r
         \r
         # Do This\r
         \r
@@ -25139,6 +27029,18 @@
         Before each call to `setScreen`, add a `setProperty`
         block to change the "text" property of "winner" to display the actual
         winner.
+      CSD U6 tugowar setProperty_2018_markdown_instruction: |-
+        # Display the Winner\r
+        \r
+        The
+        winning screen doesn't actually know _who_ won the game. Let's fix that
+        now.\r
+        \r
+        # Do This\r
+        \r
+        Before each call to `setScreen`, add a `setProperty`
+        block to change the "text" property of "winner" to display the actual
+        winner.
       CSD U6 tugowar setScreen_markdown_instruction: |-
         # Change to the Win Screen\r
         \r
@@ -25152,7 +27054,47 @@
         that you've created to check if a player has reached the bottom, add a `setScreen`
         block to change to the "win" screen. Make sure you test that your new code
         works before moving on!
+      CSD U6 tugowar setScreen_2018_markdown_instruction: |-
+        # Change to the Win Screen\r
+        \r
+        Now
+        that we have conditionals to check which player won, let's switch to the
+        "win" screen when a player wins.\r
+        \r
+        # Do This\r
+        \r
+        Inside the conditional
+        that you've created to check if a player has reached the bottom, add a `setScreen`
+        block to change to the "win" screen. Make sure you test that your new code
+        works before moving on!
       CSD U6 tugowar variables 1_markdown_instruction: |-
+        # The startGame() Function\r
+        \r
+        If
+        you look at the events we planned for in the planning guide, you may notice
+        that two events do essentially the same thing. The events that respond to
+        both the "play" and "replay" buttons could be written with identical code,
+        but duplicate code like this is a perfect place to use a **function**.\r
+        \r
+        #
+        Do This\r
+        \r
+        We've already added blocks that call a new function named
+        `startGame()` to the appropriate event handlers, and we've created an empty
+        function for you to build out. \r
+        \r
+        * Find the `startGame()` function definition
+        ( [Show me where](#triggercallout=block_trigger) )\r
+        * Inside the function:\r
+        \t*
+        Move both of the emoji images to the top of the screen by setting each one's
+        "y" property to 0\r
+        \t* Change the screen to "game"\r
+        \r
+        Once you've
+        fleshed out the `startGame()` function, try clicking the "play" button to
+        check that it's working.
+      CSD U6 tugowar variables 1_2018_markdown_instruction: |-
         # The startGame() Function\r
         \r
         If
@@ -25224,7 +27166,78 @@
         Once
         you've added your code, test it. You should see that _both buttons_ work
         even though we only created one function - cool!
+      CSD U6 tugowar variables 2_2018_markdown_instruction: |-
+        # Functions with Parameters\r
+        \r
+        Most
+        of the existing functions you use in App Lab need inputs, or **parameters**,
+        to pass the function necessary information. For example, when changing a screen,
+        you pass the ID of that screen as a parameter, which looks like `setScreen("win")`.\r
+        \r
+        These
+        parameters show up as a variable that can be used inside the function, and
+        you can create functions that use parameters too!\r
+        \r
+        # Do This\r
+        \r
+        <div
+        markdown="1" style="float:right; margin: 20px;">\r
+        \r
+        ![expandable](https://images.code.org/2eccd9fc9f4887aefd0bfd94d7f332c8-image-1509402194012.png)\r
+        \r
+        <br/>\r
+        \r
+        Click
+        to expand\r
+        \r
+        </div>\r
+        \r
+        Instead of a separate function to move the
+        red and the blue players, we've created one function called `movePlayer()`
+        that takes the ID of the player image as a parameter called `player`. Inside
+        this function, you can use `player` any place where you need to specify the
+        ID of the player you want to control.\r
+        \r
+        * Find where `movePlayer()` is
+        defined ( [Show me where](#triggercallout=block_trigger) )\r
+        * Inside the
+        `movePlayer()` definition:\r
+          * Get the current "y" property of the player
+        and save it to a variable called `player_y`\r
+          * Increase the value of `player_y`
+        by 10\r
+          * Set the "y" property of player to your new value `player_y`\r
+        \r
+        Once
+        you've added your code, test it. You should see that _both buttons_ work
+        even though we only created one function - cool!
       CSD U6 tugowar variables 3_markdown_instruction: |-
+        # The checkWin() Function\r
+        \r
+        The
+        last function that you need to figure out is the `checkWin()` function, which
+        after each player is moved, and is used to both check if that player has made
+        it to the bottom of the screen and to announce the winner if necessary. For
+        now, we're just going to find out where the player is and log it to the console.\r
+        \r
+        #
+        Do This\r
+        \r
+        Just like the `movePlayer()` function, `checkWin()` takes a
+        single parameter called `player`. If you call `checkWin("red")`, then the
+        variable `player` will have the value "red".\r
+        \r
+        * Find where the function
+        is defined ( [Show me where](#triggercallout=block_trigger) )\r
+        * Create
+        a variable called `player_y` and assign it the "y" property of the player\r
+        *
+        Use either a `console.log()` command or a watcher to report the value of `player_y`\r
+        *
+        Play the game with only one button, keeping an eye on the value of `player_y`\r
+        *
+        Decide what value of `player_y` should be considered the bottom of the screen
+      CSD U6 tugowar variables 3_2018_markdown_instruction: |-
         # The checkWin() Function\r
         \r
         The
@@ -25268,6 +27281,24 @@
         \r
         Prepare to get familiar with
         functions, learn how to edit them, and create your own!
+      CSD-Arrays_2018_markdown_instruction: |-
+        Today you’re going to learn how to use
+        and create **functions**.\r
+        \r
+        Creating a function lets you make your own
+        blocks! There are two parts to a function: \r
+        \r
+        Making a newly named block
+        that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       'CSD: Boolean Expressions_markdown_instruction': "# Boolean Expressions Video"
       'CSD: Cake Defender Exemplar_markdown_instruction': |-
         # Defend Your Cake!\r
@@ -30052,6 +32083,25 @@
         \r
         * Add another `onBoardEvent()` block
         to turn the LED off when the right button is pressed down.
+      CSDU6 - LED buttonL_2018_markdown_instruction: |-
+        # Using Board Events\r
+        \r
+        Right
+        now the LED turns on when the left button (`buttonL`) is pressed down. It
+        should turn off when the right button (buttonR) is pressed down.\r
+        \r
+        <div
+        style="float:right;" markdown=1> \r
+        \r
+        ![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)
+        \r
+        \r
+        </div>\r
+        \r
+        # Do this\r
+        \r
+        * Add another `onBoardEvent()` block
+        to turn the LED off when the right button is pressed down.
       CSDU6 - LED toggle buttonL down_markdown_instruction: |-
         # Other Board Events
         with the Buttons\r
@@ -30074,6 +32124,18 @@
         \r
         Instead of using the right button, you can make the LED
         turn off when the left button comes back up.\r
+        \r
+        # Do this\r
+        * Create
+        an 'up' event for the left button.\r
+        * Add code to turn the LED off when
+        the button pops back up.
+      CSDU6 - LED toggle buttonL up_2018_markdown_instruction: |-
+        # Other Board Events
+        with the Buttons\r
+        \r
+        Instead of using the right button, you can make the
+        LED turn off when the left button comes back up.\r
         \r
         # Do this\r
         * Create
@@ -30271,9 +32333,23 @@
         program that turns your board into a sound board when you press the buttons
         or flip the switch. Play around with the duration and frequencies of the sounds,
         and listen to how it turns out.
+      CSDU6 - board event challenge_2018_markdown_instruction: |-
+        # Challenge: Sound
+        Board\r
+        \r
+        Check with your teacher before starting the challenge.\r
+        \r
+        Now
+        that you know how to use board events, the buttons, switch, and the buzzer,
+        try making a program that turns your board into a sound board when you press
+        the buttons or flip the switch. Play around with the duration and frequencies
+        of the sounds, and listen to how it turns out.
       CSDU6 - button LED prediction_markdown_instruction: |-
         See contained level for
         markdown
+      CSDU6 - button LED prediction_2018_markdown_instruction: |-
+        See contained level
+        for markdown
       CSDU6 - button debug_markdown_instruction: |-
         <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/clickdebug.gif"
         style="float: right; margin: 20px; width: 200px;">\r
@@ -30427,6 +32503,16 @@
         answer.\r
         \r
         * What will happen when you press the left button down?
+      CSDU6 - button_LED_prediction_2018_markdown_instruction: |-
+        # Board Events\r
+        \r
+        The
+        `onBoardEvent()` block allows you to start taking input from your Circuit
+        Playground. Look at the program with a partner and discuss what you think
+        it'll do. Once you've come up with an answer, click "Run" to check your
+        answer.\r
+        \r
+        * What will happen when you press the left button down?
       CSDU6 - buzzer duration buttons_markdown_instruction: |-
         # Buzzer and the Buttons\r
         \r
@@ -30437,7 +32523,46 @@
         this\r
         * Change the duration parameter of `buzzer.frequency` to make the
         left button play a long buzz, and the right button play a short buzz.
+      CSDU6 - buzzer duration buttons_2018_markdown_instruction: |-
+        # Buzzer and the
+        Buttons\r
+        \r
+        This program should use the buttons to play long and short
+        buzzes.\r
+        \r
+        # Do this\r
+        * Change the duration parameter of `buzzer.frequency`
+        to make the left button play a long buzz, and the right button play a short
+        buzz.
       CSDU6 - buzzer duration_markdown_instruction: |-
+        # Buzzer Duration\r
+        \r
+        As
+        you've noticed, `buzzer.frequency()` has two parameters: frequency and duration.
+        Both of these take a number as input.\r
+        \r
+        * Frequency changes how the buzzer
+        sounds. The bigger the number you give it, the higher the buzzer's sound
+        will be.\r
+        \r
+        * Duration determines how long the buzzer is going to play
+        a sound for in milliseconds.\r
+        \r
+        For right now we're going to focus on
+        duration, the second parameter.\r
+        \r
+        \r
+        # Do this\r
+        Try out a few things
+        with duration:\r
+        \r
+        * Change the duration of the buzzer to something longer
+        than 100.\r
+        * Try setting the duration to 0, what happens?\r
+        \r
+        Run the
+        program multiple times to see what happens before you move on.
+      CSDU6 - buzzer duration_2018_markdown_instruction: |-
         # Buzzer Duration\r
         \r
         As
@@ -30470,6 +32595,19 @@
         \r
         You can
         use the buzzer in a lot of different ways, but right now we're just going
+        to use the `buzzer.frequency()`.\r
+        \r
+        # Do this\r
+        * Pull out a `buzzer.frequency()`
+        block from the toolbox and play around with it. You'll notice it has two
+        parameters, what happens when you change either, or both of those?\r
+        * Run
+        the program and enjoy the music of your Circuit Playground.
+      CSDU6 - buzzer intro_2018_markdown_instruction: |-
+        # Using the Buzzer\r
+        \r
+        You
+        can use the buzzer in a lot of different ways, but right now we're just going
         to use the `buzzer.frequency()`.\r
         \r
         # Do this\r
@@ -30537,6 +32675,15 @@
         ID. Even if you don't plan on accessing an element with code, making sure
         that all of your IDs are descriptive will help make your program more readable
         and easier to program.
+      CSDU6 - final project 1_2018_markdown_instruction: |-
+        # Designing the User Interface\r
+        \r
+        Before
+        worrying about the code for your program, start by laying out the user interface.
+        As you add elements in Design Mode, make sure to give everything a meaningful
+        ID. Even if you don't plan on accessing an element with code, making sure
+        that all of your IDs are descriptive will help make your program more readable
+        and easier to program.
       CSDU6 - final project 2_markdown_instruction: |-
         # Wiring Up the UI\r
         \r
@@ -30545,7 +32692,22 @@
         elements. At this point you may want to just include `console.log()` commands
         to make sure that your events are working as expected - you can add the functional
         code later one.
+      CSDU6 - final project 2_2018_markdown_instruction: |-
+        # Wiring Up the UI\r
+        \r
+        With
+        your user interface in place, you can now add event handlers for your interface
+        elements. At this point you may want to just include `console.log()` commands
+        to make sure that your events are working as expected - you can add the functional
+        code later one.
       CSDU6 - final project 3_markdown_instruction: |-
+        # Board Input Events\r
+        \r
+        Now
+        you can add the events which will take input from the board. Again, feel free
+        to just use `console.log()` statements at this point to ensure that your events
+        are working.
+      CSDU6 - final project 3_2018_markdown_instruction: |-
         # Board Input Events\r
         \r
         Now
@@ -30561,13 +32723,36 @@
         code that could be better understood of given a name? Don't forget that you
         can use parameters to write functions for repeated code that is _mostly_ the
         same, but varies a bit (such as setting color on multiple LEDs).
+      CSDU6 - final project 4_2018_markdown_instruction: |-
+        # Functions\r
+        \r
+        As you
+        continue to work through your program, look for patterns that can be abstracted
+        into functions. Can you find code that is repeated multiple places, or chunks
+        of code that could be better understood of given a name? Don't forget that
+        you can use parameters to write functions for repeated code that is _mostly_
+        the same, but varies a bit (such as setting color on multiple LEDs).
       CSDU6 - final project 5_markdown_instruction: |-
         # Board Output\r
         \r
         If you
         haven't already, use some of the output elements on the board to communicate
         useful information to the user.
+      CSDU6 - final project 5_2018_markdown_instruction: |-
+        # Board Output\r
+        \r
+        If
+        you haven't already, use some of the output elements on the board to communicate
+        useful information to the user.
       CSDU6 - final project 6_markdown_instruction: |-
+        # Finishing Touches\r
+        \r
+        Add
+        any finishing touches still needed to make your innovation awesome. If you
+        have time, test out your innovation with some potential users to gather feedback
+        and find opportunities for improvement. When you're totally finished, click
+        the "Submit" button to turn it in!
+      CSDU6 - final project 6_2018_markdown_instruction: |-
         # Finishing Touches\r
         \r
         Add
@@ -30823,6 +33008,20 @@
         that is triggered when the switch is flipped to `close`.\r
         * Add code so
         that when the toggle switch is flipped to `close` the light turns off.
+      CSDU6 - lightswitch toggleswitch_2018_markdown_instruction: |-
+        # Using the Toggle
+        Switch\r
+        \r
+        The toggle switch can flip in one of two positions: `open` and
+        `close`.  This program uses it to make a light switch.  Right now it can only
+        turn the light on.\r
+        \r
+        # Do this\r
+        \r
+        * Create a new toggle switch event
+        that is triggered when the switch is flipped to `close`.\r
+        * Add code so
+        that when the toggle switch is flipped to `close` the light turns off.
       CSDU6 - lists - lists 1_markdown_instruction: |-
         # Lists\r
         \r
@@ -30998,6 +33197,14 @@
         Add the finishing touches to your app. Return to your planning
         guide to make sure that the app meets your initial goals.
       CSDU6 - sensors predict question_markdown_instruction: |-
+        # Make a Prediction\r
+        \r
+        Read
+        the code in this program and make a prediction below. What do you think this
+        program will do when you run it? How is the user intended to interact with
+        the board? You may need to blow onto the board to see the full range of this
+        app.
+      CSDU6 - sensors predict question_2018_markdown_instruction: |-
         # Make a Prediction\r
         \r
         Read
@@ -31317,12 +33524,29 @@
       CSDU6 - toggle state LED prediction_markdown_instruction: |-
         See contained level
         for markdown
+      CSDU6 - toggle state LED prediction_2018_markdown_instruction: |-
+        See contained
+        level for markdown
       CSDU6 - toggleswitch state setProp_markdown_instruction: |-
         # State and the Toggle
         Switch\r
         \r
         This program tells you whether the toggle switch is opened or
         closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen`
+        is `true` if the switch is opened and `false` if the switch is closed.\r
+        \r
+        #
+        Do this\r
+        * Complete the if-statement with the `toggleSwitch.isOpen` property.\r
+        *
+        Run the program and press the left button, then flip the toggle switch and
+        press the button again.
+      CSDU6 - toggleswitch state setProp_2018_markdown_instruction: |-
+        # State and
+        the Toggle Switch\r
+        \r
+        This program tells you whether the toggle switch
+        is opened or closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen`
         is `true` if the switch is opened and `false` if the switch is closed.\r
         \r
         #
@@ -31376,6 +33600,22 @@
         3. What does the program do when it gets the right input?\r
         3.
         What is the program doing when there is no input?
+      CSDU6 AppLab Input 1_2018_markdown_instruction: |-
+        # Input in App Lab\r
+        \r
+        _You
+        don't need to make any changes to the code here_\r
+        \r
+        Take a minute to
+        read through the code and run the program. Discuss with a partner:\r
+        \r
+        1.
+        What is the source of input?\r
+        2. Where and how does the program check for
+        input?\r
+        3. What does the program do when it gets the right input?\r
+        3.
+        What is the program doing when there is no input?
       CSDU6 Circuit Playground Test_markdown_instruction: |-
         # Test Your Board\r
         \r
@@ -31407,7 +33647,54 @@
         Try a different board\r
         5. Go to [studio.code.org/maker/setup](/maker/setup)
         to run a more detailed test
+      CSDU6 Circuit Playground Test_2018_markdown_instruction: |-
+        # Test Your Board\r
+        \r
+        This
+        level is just a quick test to make sure your board is working. To run this
+        test, do the following:\r
+        \r
+        1. Plug your board into your computer with
+        a USB cable\r
+        2. Click "Run"\r
+        3. Wait a few seconds for either a Success
+        or Error screen to pop up\r
+        4. If your test was successful, move on to the
+        next level. If not, try some of the troubleshooting steps\r
+        \r
+        ## Troubleshooting\r
+        \r
+        There
+        are a number of things that could prevent your test from passing.\r
+        \r
+        1.
+        Try refreshing the page and running the test again (you should refresh the
+        page for each of the following ideas as well)\r
+        2. Try connecting your board
+        to a different USB port\r
+        3. Try a different USB cable. Some USB cables can
+        only be used for charging, so make sure your cable supports data transfer!\r
+        4.
+        Try a different board\r
+        5. Go to [studio.code.org/maker/setup](/maker/setup)
+        to run a more detailed test
       CSDU6 GameLab Input 1_markdown_instruction: |-
+        # Input in Game Lab\r
+        \r
+        _You
+        don't need to make any changes to the code here_\r
+        \r
+        Take a minute to
+        read through the code and run the program. Discuss with a partner:\r
+        \r
+        1.
+        What is the source of input?\r
+        2. Where and how does the program check for
+        input?\r
+        3. What does the program do when it gets the correct input?\r
+        3.
+        What is the program doing when there is no input?
+      CSDU6 GameLab Input 1_2018_markdown_instruction: |-
         # Input in Game Lab\r
         \r
         _You
@@ -31518,6 +33805,12 @@
         The
         code below will display four things on the screen.  What do you think they
         will be?
+      CSDU6 array index predict contained_2018_markdown_instruction: |-
+        # Predict\r
+        \r
+        The
+        code below will display four things on the screen.  What do you think they
+        will be?
       CSDU6 array length predict_markdown_instruction: |-
         # Playing Notes from an Array\r
         \r
@@ -31536,6 +33829,18 @@
         \r
         * Add code that will display the day as "Thursday" when the
         right button is pressed.
+      CSDU6 array select days_2018_markdown_instruction: |-
+        # Accessing Items in an
+        Array\r
+        \r
+        This program uses the Circuit Playground.  It creates an array
+        of the days of the week.  When the left button is pressed, it displays the
+        day as "Tuesday".\r
+        \r
+        # Do This\r
+        \r
+        * Add code that will display the
+        day as "Thursday" when the right button is pressed.
       CSDU6 arrays rainbow_markdown_instruction: |-
         # Index Practice\r
         \r
@@ -31580,7 +33885,35 @@
         \r
         * Change the index numbers inside each selection block to make
         the rainbow appear as in the picture on the right.
+      CSDU6 arrays select rainbow_2018_markdown_instruction: |-
+        # Index Practice\r
+        \r
+        <img
+        src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45
+        PM.png" style="width: 150px; float: right">\r
+        \r
+        **Starter code** has
+        been provided that creates a list called `colors` and uses it to set the colors
+        of the rectangles on the screen.  Unfortunately, the colors are out of order.\r
+        \r
+        #
+        Do This\r
+        \r
+        * Change the index numbers inside each selection block to make
+        the rainbow appear as in the picture on the right.
       CSDU6 arrays select random_markdown_instruction: |-
+        # Random Selection\r
+        \r
+        You
+        can also select a random element in the list by using the `randomNumber` block
+        instead of an index.  This program selects a random icon from a list and displays
+        it on the screen when the left button is pressed.  Right now, the icons are
+        always blue.\r
+        \r
+        # Do This\r
+        * Add code that will select a random color
+        from the list and use that as the icon color.
+      CSDU6 arrays select random_2018_markdown_instruction: |-
         # Random Selection\r
         \r
         You
@@ -31605,6 +33938,19 @@
         # Do This\r
         * Change the code so that both the icon and its
         color are chosen using the "myIndex" variable.
+      CSDU6 arrays select variable_2018_markdown_instruction: |-
+        # Using Variables\r
+        \r
+        This
+        program is like the last one, but the icons should always match the colors
+        (red heart, yellow star, green leaf, and blue water).  You can do this using
+        the variable "myIndex", which will store the value of a random number so
+        that it can be used to get the icon and the color from the same place on each
+        list.\r
+        \r
+        # Do This\r
+        * Change the code so that both the icon and its
+        color are chosen using the "myIndex" variable.
       CSDU6 arrays variable_markdown_instruction: |-
         # Expressions as Indexes: Using
         Variables\r
@@ -31614,6 +33960,44 @@
         * **Write code** that sets
         the image on the screen to a random icon from the list
       CSDU6 buzzer 2d arrays_markdown_instruction: |-
+        # Challenge: 2D Arrays\r
+        \r
+        Arrays
+        can hold all sorts of data, like numbers, strings, and even other arrays.
+        When we put an array inside another, this becomes a 2D array. The `buzzer.playSong()`
+        block can be used to play songs that sound more precise with 2D arrays.\r
+        \r
+        The
+        structure that you've been using to play notes looks like this:\r
+        \r
+        `buzzer.playNotes(
+        [array of notes to play] , tempo of the whole song);`\r
+        \r
+        The main difference
+        with `buzzer.playSong()` is each element inside the `[array of notes to play]`,
+        is an array with two elements: the note you want to play, and the duration
+        of the note. Sometime you'll want a quarter note in your song, other times
+        you'll want a full note, or maybe somewhere in between. A full song might
+        look something like this:\r
+        \r
+        `buzzer.playSong([\r
+          ["G3",0.25],\r
+          ["C4",0.25],\r
+          ["E4",0.25],\r
+          ["G4",0.125],\r
+          [null,0.375],\r
+          ["E4",0.1875],\r
+          ["G4",1]\r
+        ],
+        120);`\r
+        \r
+        # Do this\r
+        \r
+        * Use the `buzzer.playSong` block to make a
+        different song.\r
+        * When you get comfortable with the structure, add more
+        notes to the song.
+      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |-
         # Challenge: 2D Arrays\r
         \r
         Arrays
@@ -31714,6 +34098,20 @@
         Find a way to get the note to stop playing with `buzzer.stop()`.\r
         * Celebrate
         your win over the endless note!
+      CSDU6 buzzer.stop_2018_markdown_instruction: |-
+        # Stopping the Music\r
+        \r
+        Sometimes
+        you need to be able to stop the music when you want, like in the code below.
+        Duration wasn't specified so now the note plays continuously. Luckily, the
+        `buzzer.stop()` method is here to save your ears.\r
+        \r
+        # Do this\r
+        \r
+        *
+        Find a way to get the note to stop playing with `buzzer.stop()`.\r
+        * Celebrate
+        your win over the endless note!
       CSDU6 challenge play songs_markdown_instruction: |-
         # Challenge: Song Bot\r
         \r
@@ -31736,7 +34134,29 @@
         \r
         * Run the program and play with the piano
         on the screen.
+      CSDU6 circuit playground piano_2018_markdown_instruction: |-
+        # Circuit Piano\r
+        \r
+        Look
+        at the code below. You're not going to be changing it, but try to see what
+        it does. \r
+        \r
+        # Do this\r
+        \r
+        * Run the program and play with the piano
+        on the screen.
       CSDU6 frequency creation_markdown_instruction: |-
+        # Making the Buzzer Buzz\r
+        \r
+        Now
+        that you can use the buzzer's frequency, try to make the buzzer play a high
+        sound when the same button pops back up.\r
+        \r
+        # Do this\r
+        * Add another
+        onBoardEvent block so the buzzer plays a high sound when the left button comes
+        back **up**
+      CSDU6 frequency creation_2018_markdown_instruction: |-
         # Making the Buzzer Buzz\r
         \r
         Now
@@ -31758,7 +34178,20 @@
         # Do this\r
         * Right now the buzzer plays a high note when
         the left button is pressed. Make the buzzer play a low note instead.\r
+      CSDU6 frequency modification_2018_markdown_instruction: |
+        # Making the Buzzer
+        Buzz\r
+        \r
+        The frequency of the buzzer determines how high or how low the
+        buzzer will sound when it plays. The higher the number you give frequency,
+        the higher the buzzer will sound.\r
+        \r
+        # Do this\r
+        * Right now the buzzer
+        plays a high note when the left button is pressed. Make the buzzer play a
+        low note instead.\r
       CSDU6 frequency template_markdown_instruction: Do a thing!
+      CSDU6 frequency template_2018_markdown_instruction: Do a thing!
       CSDU6 light sensor alarm_markdown_instruction: |-
         # Auto Alarm\r
         \r
@@ -31779,6 +34212,20 @@
         _Challenge: Can you make both the buttons and the sensor play
         nicely together?_
       CSDU6 making new arrays_markdown_instruction: |-
+        # Making New Arrays\r
+        \r
+        You
+        know how to change arrays, now it's time for you to make your own.\r
+        \r
+        #
+        Do this\r
+        \r
+        * Make a new array with whatever notes you want. They can be
+        in different octaves, arranged in a certain key, etc. Anything you want!\r
+        *
+        Have the buzzer play a random note from your array when the **right** button
+        is pressed.
+      CSDU6 making new arrays_2018_markdown_instruction: |-
         # Making New Arrays\r
         \r
         You
@@ -31853,6 +34300,22 @@
         \r
         _Hint:
         Remember to put quotes around the notes! e.g `buzzer.note("A4", 100);`_
+      CSDU6 piano with notes_2018_markdown_instruction: |-
+        # Piano Notes\r
+        \r
+        This
+        is the same piano that you saw at the beginning of the lesson, but there are
+        some bugs!\r
+        \r
+        # Do this\r
+        \r
+        * Edit the code so that all keys are using
+        a `buzzer.note()` block to play the corresponding note.\r
+        * Make sure that
+        all the values passed in to `buzzer.note()` are notes, and not frequencies.\r
+        \r
+        _Hint:
+        Remember to put quotes around the notes! e.g `buzzer.note("A4", 100);`_
       CSDU6 play null notes_markdown_instruction: |-
         # Null Notes\r
         \r
@@ -31880,8 +34343,46 @@
         _Tip:
         `null` references a value, just like a variable name. Make sure you don't
         put it in quotation marks!_
+      CSDU6 play null notes_2018_markdown_instruction: |-
+        # Null Notes\r
+        \r
+        You may
+        have noticed that if you put the same note side-by-side in the array, the
+        buzzer just plays that note as one long sound instead of as individual notes.
+        In music we often want a break (or _rest_) between notes. You can get your
+        buzzer to play a rest by sending it the value `null`.\r
+        \r
+        `null` is a special
+        value that represents emptiness in computer science. `playNotes` plays each
+        note for the same duration, so a `null` element in the array is just telling
+        `playNotes` to play nothing for the same duration as everything else.\r
+        \r
+        \r
+        #
+        Do this\r
+        \r
+        * Run the code to hear what it sounds like first.\r
+        * Examine
+        the array inside `buzzer.playNotes()`.\r
+        * Put a pause between notes that
+        are the same and side-by-side, and any other place you deem appropriate.\r
+        \r
+        _Tip:
+        `null` references a value, just like a variable name. Make sure you don't
+        put it in quotation marks!_
       CSDU6 play predict code_markdown_instruction: Markdown is in contained level
+      CSDU6 play predict code_2018_markdown_instruction: |-
+        Markdown is in contained
+        level
       CSDU6 play predict markdown_markdown_instruction: |-
+        # Make a Prediction\r
+        \r
+        Look
+        at the code below. What do you think it's going to do?\r
+        \r
+        Give it a guess
+        and run the code to find out!
+      CSDU6 play predict markdown_2018_markdown_instruction: |-
         # Make a Prediction\r
         \r
         Look
@@ -31910,6 +34411,27 @@
         \r
         _Hint: Don't forget that you can always switch back
         and forth between block and text mode._
+      CSDU6 play songs_2018_markdown_instruction: |-
+        # Making Songs\r
+        \r
+        You can
+        make and play full songs with `buzzer.playNotes()`. It takes two parameters:
+        an array of notes to play, and a tempo at which to play the notes. In previous
+        bubbles you created arrays of notes and played through them randomly, but
+        `buzzer.playNotes()` plays each note consecutively instead.\r
+        \r
+        \r
+        # Do
+        this\r
+        \r
+        * Pull out a `buzzer.playNotes` block and change the starting
+        array inside.\r
+        * Make sure the new array you give it has at least two pairs
+        of notes that are next to each other in the list (Example: `["A5", "A5",
+        "G4", "G4"]`)\r
+        \r
+        _Hint: Don't forget that you can always switch back
+        and forth between block and text mode._
       CSDU6 toggle state prediction_markdown_instruction: |-
         # More on the Toggle Switch\r
         \r
@@ -31919,6 +34441,15 @@
         \r
         What different things does the button do
         when the toggle switch is `open` or `close`?
+      CSDU6 toggle state prediction_2018_markdown_instruction: |-
+        # More on the Toggle
+        Switch\r
+        \r
+        You can also check whether the toggle switch is in the `open`
+        or `close` position anywhere in your program. \r
+        \r
+        What different things
+        does the button do when the toggle switch is `open` or `close`?
       CSDU6- predict event types_markdown_instruction: |-
         # Predict: Event Type\r
         \r
@@ -42431,6 +44962,93 @@
         \r
         <img src="http://code.org/api/hour/begin_encryption.png">\r
         \r
+      D_Frozen_nested3_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s make it into a snowflake."_\r
+        \r
+        Next, jump Elsa back to the center
+        using the `jump to 200 over and 200 down` block, and spin her around to draw
+        the line of shapes again and again in a bunch of different directions.   \r
+        \r
+        What
+        amazing snowflakes you can make!\r
+        <hr/>\r
+        Take a look at these examples
+        with polygons:  \r
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r
+        \r
+        Abstract
+        shapes might make a snowflake more like one of these:  \r
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      D_Frozen_nested4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"What
+        happens if we draw snowflakes on top of each other?\"_\\r\n\\r\nTry\nlayering
+        two different shapes of snowflakes on top of one another with a little\nturn
+        in between - see what you get! "
+      D_Frozen_nested5_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Get creative with shapes and angles to see what kind of new snowflakes
+        we can draw!"_\r
+      D_Frozen_nested6_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s try something new. This time, skate in a zig-zag."_\r
+        \r
+        \r
+        <img
+        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
+        Draw a
+        stair-step pattern that uses turns between 75 and 105 degrees -- but make
+        sure that your left and right turns use the same angle.  \r
+        (You will see
+        why later.)
+      D_Frozen_nested7_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Now let’s turn and go back the way we came."_\r
+        \r
+        Turn around 180 degrees
+        and draw the exact same stair pattern again!  \r
+        \r
+        - The rest of this stage
+        will be easier if you put all of your code inside of a loop to make Elsa  draw,
+        turn around 180 degrees, draw, then turn around 180 degrees again.\r
+        \r
+        <hr/>\r
+        \r
+        Here
+        is an example of stairs that use a 76 degree turn:\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      D_Frozen_nested8_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s spin and make it into a snowflake."_\r
+        \r
+        Spin that shape around
+        5 or 6 times in a circle.\r
+        - If you choose 5 times,  try a turn of 72 degrees\r
+        -
+        If you choose 6 times,  try a turn of 60 degrees\r
+        <hr/>\r
+        \r
+        Here's an
+        example of Elsa turning a pattern 6 times:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      D_Frozen_nested9_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
       Data Visualizations 101_markdown_instruction: |
         ## Data Visualization 101: How
         to design charts and graphs\r
@@ -43527,6 +46145,12 @@
          * **Note**: We'll revisit this game in the next
         lesson where you can improve it.  This is **just version 1**\r
         \r
+      Fish Tank 1_markdown_instruction: |-
+        **Make a prediction**: What do you think
+        will happen when you run this code?
+      Fish Tank 2_markdown_instruction: |-
+        We're going to make a fish tank. Change
+        the Dusty the tumbleweed to a fish.
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.\r
         <hr/>\r
@@ -45085,6 +47709,24 @@
         \r
         Prepare to
         get familiar with functions, learn how to edit them, and create your own!
+      Making Music_2018_markdown_instruction: |-
+        Today you’re going to learn how to
+        use and create **functions**.\r
+        \r
+        Creating a function lets you make your
+        own blocks! There are two parts to a function: \r
+        \r
+        Making a newly named
+        block that has all of the code you want to run inside of it. \r
+        -xml of function
+        definition- \r
+        \r
+        The single green block itself that you use, or call, to
+        run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare to
+        get familiar with functions, learn how to edit them, and create your own!
       Matt Test Level_markdown_instruction: 'Do 0 bits weigh less than 1 bits?
 
 '
@@ -46340,6 +48982,11 @@
         \r
         What will print as a
         result of this loop?
+      Predict Loop I_2018_markdown_instruction: |-
+        # Predict\r
+        \r
+        What will print
+        as a result of this loop?
       Project - Final Image Scroller_markdown_instruction: |-
         # Final Image Scroller\r
         \r
@@ -46597,6 +49244,24 @@
       Revisiting the Counter Pattern_markdown_instruction: |-
         Today you’re going to
         learn how to use and create **functions**.\r
+        \r
+        Creating a function lets
+        you make your own blocks! There are two parts to a function: \r
+        \r
+        Making
+        a newly named block that has all of the code you want to run inside of it.
+        \r
+        -xml of function definition- \r
+        \r
+        The single green block itself that
+        you use, or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
+      Revisiting the Counter Pattern_2018_markdown_instruction: |-
+        Today you’re going
+        to learn how to use and create **functions**.\r
         \r
         Creating a function lets
         you make your own blocks! There are two parts to a function: \r
@@ -49426,6 +52091,11 @@
         Test Markdown prompt
 
 
+      Test embedded K1 Blockly in instructions_markdown_instruction: |-
+        Use <xml><block
+        type="maze_moveWest"/></xml> **three** times to get the harvester to the
+        corn! Don't forget to use <xml><block type="harvester_corn"/></xml> to
+        pick the corn!
       Test of comment block_markdown_instruction: |-
         ## instructions\r
         \r
@@ -49459,6 +52129,24 @@
         \r
         Prepare to
         get familiar with functions, learn how to edit them, and create your own!
+      The Accelerometer_2018_markdown_instruction: |-
+        Today you’re going to learn how
+        to use and create **functions**.\r
+        \r
+        Creating a function lets you make
+        your own blocks! There are two parts to a function: \r
+        \r
+        Making a newly
+        named block that has all of the code you want to run inside of it. \r
+        -xml
+        of function definition- \r
+        \r
+        The single green block itself that you use,
+        or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
       'The Internet: IP Addresses & DNS_markdown_instruction': |-
         [Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
@@ -71409,6 +74097,24 @@
         \r
         Prepare
         to get familiar with functions, learn how to edit them, and create your own!
+      Using Accelerometer Events_2018_markdown_instruction: |-
+        Today you’re going to
+        learn how to use and create **functions**.\r
+        \r
+        Creating a function lets
+        you make your own blocks! There are two parts to a function: \r
+        \r
+        Making
+        a newly named block that has all of the code you want to run inside of it.
+        \r
+        -xml of function definition- \r
+        \r
+        The single green block itself that
+        you use, or call, to run the function you created.\r
+        -xml of function call-\r
+        \r
+        Prepare
+        to get familiar with functions, learn how to edit them, and create your own!
       Valentine_artist_01_markdown_instruction: |-
         Help the artist finish his llama
         heart to change it from llame to llovely! How many llamas does the artist
@@ -73311,6 +76017,22 @@
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseB_Scrat_ramp1_2018_markdown_instruction: |-
+        To get Scrat to the acorn,
+        snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
+        the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      courseB_Scrat_ramp2_2018_markdown_instruction: |-
+        Attach both <xml><block type="maze_moveEast"/></xml>
+        blocks to <xml><block type="when_run"/></xml> to finish your code, then
+        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp3a_2018_markdown_instruction: |-
+        Grab a <xml><block type="maze_moveNorth"/></xml>
+        from the toolbox and add it to the bottom of the other blocks to finish this
+        code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp4a_2018_markdown_instruction: |-
+        Can you figure out which block
+        you need to add to the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseB_artist_loops10_markdown_instruction: |-
         Use what you have learned to
         draw a picture of what you think the artist saw when he got home.\r
@@ -73637,7 +76359,21 @@
         (actor 2) up and down by 400 pixels forever.\r
         \r
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018_markdown_instruction: |-
+        The `repeat forever` block
+        allows you to run code over and over forever.  Use this block to move Chomp
+        the Dino (actor 2) up and down by 400 pixels forever.\r
+        \r
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8_markdown_instruction: |-
+        Can you have Waddles (actor
+        1) say "Ouch!" and play a "hit" sound if he runs into Chomp? \r
+        \r
+        When
+        you're done, play the game to make that happen.\r
+        \r
+        ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
+      courseC_PlayLab_events8_2018_markdown_instruction: |-
         Can you have Waddles (actor
         1) say "Ouch!" and play a "hit" sound if he runs into Chomp? \r
         \r
@@ -73654,12 +76390,27 @@
         Play the game and move Waddles with the arrows until you score
         enough points. Waddles must be moved to the `middle left` position of the
         screen to complete this challenge.
+      courseC_PlayLab_events_challenge1_2018_markdown_instruction: |-
+        Use a new block
+        to make Waddles automatically move back to the start when he runs into the
+        Dinosaur and when he scores a point. This will make your game more challenging
+        and fun!\r
+        \r
+        Play the game and move Waddles with the arrows until you score
+        enough points. Waddles must be moved to the `middle left` position of the
+        screen to complete this challenge.
       courseC_artist_loop1_markdown_instruction: |-
         Fantastic!  \r
         \r
         Let's add
         some style by changing the brush using the `set pattern` block before our
         loop starts.
+      courseC_artist_loop1_2018_markdown_instruction: |-
+        Fantastic!  \r
+        \r
+        Let's
+        add some style by changing the brush using the `set pattern` block before
+        our loop starts.
       courseC_artist_loops1a_markdown_instruction: |-
         **Free Play:** Let's build something
         bigger, one step at a time!  You can make anything you want, but we're going
@@ -73743,6 +76494,11 @@
         one or both of the stickers with a different creature?\r
         ___\r
         ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018_markdown_instruction: |-
+        What happens when you replace
+        one or both of the stickers with a different creature?\r
+        ___\r
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_markdown_instruction: |-
         What happens when you `move forward`
         then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r
@@ -73777,6 +76533,15 @@
         ___\r
         \r
         ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2018_markdown_instruction: |-
+        Add a third sticker anywhere
+        in the loop that you want! What does it look like now?\r
+        - Change the pattern
+        on your brush for more variety!\r
+        \r
+        ___\r
+        \r
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a_markdown_instruction: |-
         Try changing the `repeat` loop
         to run a different number of times.  How far do you have to turn to go around
@@ -73789,6 +76554,20 @@
         This
         image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20
         degree turn.\r
+        \r
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2018_markdown_instruction: |-
+        Try changing the `repeat`
+        loop to run a different number of times.  How far do you have to turn to go
+        around in a full circle?\r
+        - Try changing how many times you spin\r
+          -
+        Try a 60 degree turn for 6 times around\r
+          - Try a 20 degree turn for 18
+        times around\r
+        ___\r
+        This image uses a pirate, a ninja, and a giraffe. They
+        loop 18 times with a 20 degree turn.\r
         \r
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: |-
@@ -73812,9 +76591,22 @@
         `repeat` block and loop it **6** times.\r
         - Notice that we have added a 60
         degree turn at the end of the looped code to get a full rotation.
+      courseC_artist_loopsPre1a_2018_markdown_instruction: |-
+        Now, put this code into  a
+        `repeat` block and loop it **6** times.\r
+        - Notice that we have added a 60
+        degree turn at the end of the looped code to get a full rotation.
       courseC_artist_loopsPrePre1a_markdown_instruction: |-
         Use the <xml><block type="jump_to_xy"
         id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>
+        block to get the artist to the center of the play area.  \r
+        Then draw a line
+        50 pixels long with the <xml><block type="draw_move_by_constant"><title
+        name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
+        block.
+      courseC_artist_loopsPrePre1a_2018_markdown_instruction: |-
+        Use the <xml><block
+        type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>
         block to get the artist to the center of the play area.  \r
         Then draw a line
         50 pixels long with the <xml><block type="draw_move_by_constant"><title
@@ -73958,6 +76750,11 @@
         treasure!"*\r
         \r
         Help the collector get at least **5** pieces of treasure.
+      courseC_collector_loops_challenge2_2018_markdown_instruction: |-
+        *"Let's hunt
+        for treasure!"*\r
+        \r
+        Help the collector get at least **5** pieces of treasure.
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can. Use the
@@ -73966,7 +76763,18 @@
         Drag blocks into the workspace
         and try to figure out how to get treasure.  Get at least one item to pass
         this level.
+      courseC_collector_prog1_2018_markdown_instruction: |-
+        **Free Play:** This is
+        Laurel the Adventurer! Move her around and get as much treasure as you can.
+        Use the `collect` block to pick up the treasure!\r
+        \r
+        Drag blocks into the
+        workspace and try to figure out how to get treasure.  Get at least one item
+        to pass this level.
       courseC_collector_prog2_markdown_instruction: |-
+        Move Laurel to the treasure,
+        then use <xml><block type="collector_collect"/></xml> to pick it up.
+      courseC_collector_prog2_2018_markdown_instruction: |-
         Move Laurel to the treasure,
         then use <xml><block type="collector_collect"/></xml> to pick it up.
       courseC_collector_prog3_markdown_instruction: |-
@@ -73976,7 +76784,22 @@
         blocks you need are already in the workspace, but not connected.  \r
         Order
         these blocks to collect the treasure and solve the puzzle.
+      courseC_collector_prog3_2018_markdown_instruction: |-
+        *"Sequence matters!"*
+        \r
+        \r
+        The blocks you need are already in the workspace, but not connected.  \r
+        Order
+        these blocks to collect the treasure and solve the puzzle.
       courseC_collector_prog4_markdown_instruction: |-
+        *"Sequence matters!"*\r
+        \r
+        The
+        blocks you need are already in the workspace, but not connected.  \r
+        \r
+        Put
+        these blocks in order to collect all of the treasure and solve the puzzle.
+      courseC_collector_prog4_2018_markdown_instruction: |-
         *"Sequence matters!"*\r
         \r
         The
@@ -73989,12 +76812,24 @@
         of treasure!"*\r
         \r
         These blocks are in the wrong order. Can you fix them?
+      courseC_collector_prog5_2018_markdown_instruction: |-
+        *"Help me collect each
+        bit of treasure!"*\r
+        \r
+        These blocks are in the wrong order. Can you fix
+        them?
       courseC_collector_prog6_markdown_instruction: |-
         *"Help me collect all of the
         treasure!"*\r
         \r
         These blocks are in the wrong order. Reorder them to collect
         all of the treasure.
+      courseC_collector_prog6_2018_markdown_instruction: |-
+        *"Help me collect all
+        of the treasure!"*\r
+        \r
+        These blocks are in the wrong order. Reorder them
+        to collect all of the treasure.
       courseC_collector_prog7_markdown_instruction: |-
         **Challenge:** *"What is going
         on here?"*\r
@@ -74002,10 +76837,24 @@
         Even if we put these in the right order, there will still
         be some missing.  \r
         Use blocks from the toolbox to collect all of the treasure.
+      courseC_collector_prog7_2018_markdown_instruction: |-
+        **Challenge:** *"What
+        is going on here?"*\r
+        \r
+        Even if we put these in the right order, there
+        will still be some missing.  \r
+        Use blocks from the toolbox to collect all
+        of the treasure.
       courseC_collector_prog8_markdown_instruction: |-
         *"Keep up the good work! Help
         me collect all of the treasure."*
+      courseC_collector_prog8_2018_markdown_instruction: |-
+        *"Keep up the good work!
+        Help me collect all of the treasure."*
       courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_2018_markdown_instruction: |-
+        *"Let's get all of the
+        treasure!"*
       courseC_collector_progA_markdown_instruction: |-
         Help Laurel collect all of the
         treasure.
@@ -74017,6 +76866,9 @@
       courseC_collector_prog_challenge2_markdown_instruction: |-
         There are 20 pieces
         of treasure in this cave. Collect at least **10** to finish the challenge!
+      courseC_collector_prog_challenge2_2018_markdown_instruction: |-
+        There are 20
+        pieces of treasure in this cave. Collect at least **10** to finish the challenge!
       courseC_flappy_events1_markdown_instruction: |-
         Attach the `flap a normal amount`
         block to the `when click` event, then press "Run".   \r
@@ -74032,9 +76884,35 @@
         You can change the visuals and the rules...even the gravity! \r
         When
         you're done, click "Finish" to share with friends on their phones.
+      courseC_flappy_events10_2018_markdown_instruction: |-
+        Create your own Flappy
+        game! \r
+        \r
+        You can change the visuals and the rules...even the gravity!
+        \r
+        When you're done, click "Finish" to share with friends on their phones.
+      courseC_flappy_events1_2018_markdown_instruction: |-
+        Attach the `flap a normal
+        amount` block to the `when click` event, then press "Run".   \r
+        \r
+        ---\r
+        \r
+        Click
+        or tap on the play space to move Flappy to the target.
       courseC_flappy_events2_markdown_instruction: |-
         The `when run` event allows you
         to run code as soon as your game starts.  \r
+        \r
+        Try adding a block that
+        sets the level speed when the "Run" button is pressed. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and flap to the target to continue.
+      courseC_flappy_events2_2018_markdown_instruction: |-
+        The `when run` event allows
+        you to run code as soon as your game starts.  \r
         \r
         Try adding a block that
         sets the level speed when the "Run" button is pressed. \r
@@ -74053,7 +76931,24 @@
         \r
         Play
         the game and crash the bird into the ground to continue.
+      courseC_flappy_events3_2018_markdown_instruction: |-
+        Now we've added the ground.
+        \r
+        \r
+        Attach the `end game` block to the `when hit the ground` event. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and crash the bird into the ground to continue.
       courseC_flappy_events4_markdown_instruction: |-
+        Flappy will fly right through
+        obstacles unless you write code to make him crash. \r
+        \r
+        Attach a block
+        to the `when hit an obstacle` event so that the game ends when Flappy crashes
+        into the first set of pipes.
+      courseC_flappy_events4_2018_markdown_instruction: |-
         Flappy will fly right through
         obstacles unless you write code to make him crash. \r
         \r
@@ -74067,6 +76962,13 @@
         Add a block to the `when
         pass an obstacle` event that scores a point, then press "Run" to fly Flappy
         through the first set of pipes.
+      courseC_flappy_events5_2018_markdown_instruction: |-
+        We've added a scoreboard
+        to count points when Flappy passes obstacles.  \r
+        \r
+        Add a block to the
+        `when pass an obstacle` event that scores a point, then press "Run" to fly
+        Flappy through the first set of pipes.
       courseC_flappy_events6_markdown_instruction: |-
         Click the down arrow inside of
         the `flap a normal amount` block to pick a different flapping power.  \r
@@ -74074,7 +76976,17 @@
         See
         if you can still score a point after making Flappy flap either a smaller or
         larger amount each time you click.
+      courseC_flappy_events6_2018_markdown_instruction: |-
+        Click the down arrow inside
+        of the `flap a normal amount` block to pick a different flapping power.  \r
+        \r
+        See
+        if you can still score a point after making Flappy flap either a smaller or
+        larger amount each time you click.
       courseC_flappy_events7_markdown_instruction: |-
+        Next, try changing the scene
+        by attaching a block to the `when run` event.
+      courseC_flappy_events7_2018_markdown_instruction: |-
         Next, try changing the scene
         by attaching a block to the `when run` event.
       courseC_flappy_events8_markdown_instruction: |-
@@ -74083,10 +76995,20 @@
         \r
         Try setting a **random**
         scene when other events happen...for example, when passing an obstacle.
+      courseC_flappy_events8_2018_markdown_instruction: |-
+        You can set the background
+        under any event, not just when the game starts. \r
+        \r
+        Try setting a **random**
+        scene when other events happen...for example, when passing an obstacle.
       courseC_flappy_events9_markdown_instruction: |-
         To mix things up, instead of
         ending the game when Flappy hits an obstacle, try setting the score back to
         0.
+      courseC_flappy_events9_2018_markdown_instruction: |-
+        To mix things up, instead
+        of ending the game when Flappy hits an obstacle, try setting the score back
+        to 0.
       courseC_harvester_loops1_markdown_instruction: |-
         Loops can be used to repeat
         more than moves.  \r
@@ -74095,14 +77017,34 @@
       courseC_harvester_loops10_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops10_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_harvester_loops11_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops11_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
+      courseC_harvester_loops1_2018_markdown_instruction: |-
+        Loops can be used to repeat
+        more than moves.  \r
+        \r
+        Use loops to collect all four of the pumpkins.
       courseC_harvester_loops2_markdown_instruction: |-
         Can you combine two different
         loops to move toward the pumpkins, then collect them all?
+      courseC_harvester_loops2_2018_markdown_instruction: |-
+        Can you combine two different
+        loops to move toward the pumpkins, then collect them all?
       courseC_harvester_loops3_markdown_instruction: Collect all of the pumpkins.
+      courseC_harvester_loops3_2018_markdown_instruction: Collect all of the pumpkins.
       courseC_harvester_loops4_markdown_instruction: |-
+        Now there is corn growing,
+        too!\r
+        \r
+        Collect all of the corn and all of the pumpkins.
+      courseC_harvester_loops4_2018_markdown_instruction: |-
         Now there is corn growing,
         too!\r
         \r
@@ -74110,27 +77052,48 @@
       courseC_harvester_loops5_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops5_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_harvester_loops6_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops6_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_harvester_loops7_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops7_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_harvester_loops8_markdown_instruction: |-
         **Challenge:** Collect all
         of the corn and all of the pumpkins.\r
         \r
         You can complete this challenge
         any way you want, but it will either take a lot of work or a lot of thinking!
+      courseC_harvester_loops8_2018_markdown_instruction: |-
+        **Challenge:** Collect
+        all of the corn and all of the pumpkins.\r
+        \r
+        You can complete this challenge
+        any way you want, but it will either take a lot of work or a lot of thinking!
       courseC_harvester_loops9_markdown_instruction: |-
         Collect all of the corn and
         all of the pumpkins.
+      courseC_harvester_loops9_2018_markdown_instruction: |-
+        Collect all of the corn
+        and all of the pumpkins.
       courseC_harvester_loops_challenge1_markdown_instruction: |-
         Collect all of the
         corn.
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Collect all of the
         lettuce. Avoid the trees and fields!
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: |-
+        Collect all
+        of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_forVid_markdown_instruction: |-
         Collect all of the corn
         and all of the pumpkins.
@@ -74206,7 +77169,14 @@
       courseC_maze_programming1_markdown_instruction: |-
         For this puzzle, drag all
         of the blocks together and click "Run" to watch it go!
+      courseC_maze_programming1_2018_markdown_instruction: |-
+        For this puzzle, drag
+        all of the blocks together and click "Run" to watch it go!
       courseC_maze_programming2_markdown_instruction: |-
+        Drag an extra <xml><block
+        type="maze_moveForward"/></xml> block out of the toolbox to finish your
+        code.
+      courseC_maze_programming2_2018_markdown_instruction: |-
         Drag an extra <xml><block
         type="maze_moveForward"/></xml> block out of the toolbox to finish your
         code.
@@ -74218,14 +77188,32 @@
         to crash.  \r
         Throw it away by unhooking it from the grey blocks and dragging
         it back to the toolbox.
+      courseC_maze_programming3_2018_markdown_instruction: |-
+        *"This pig is ruffling
+        my feathers."*\r
+        \r
+        There is one extra block that is going to cause the
+        bird to crash.  \r
+        Throw it away by unhooking it from the grey blocks and
+        dragging it back to the toolbox.
       courseC_maze_programming4_markdown_instruction: |-
         *"Trace the path and lead
         me to the silly pig."* \r
         \r
         Avoid TNT or feathers will fly!
+      courseC_maze_programming4_2018_markdown_instruction: |-
+        *"Trace the path and
+        lead me to the silly pig."* \r
+        \r
+        Avoid TNT or feathers will fly!
       courseC_maze_programming5_markdown_instruction: |-
         *"Follow this path to get
         me to the pig!"*\r
+        \r
+        Avoid the TNT.
+      courseC_maze_programming5_2018_markdown_instruction: |-
+        *"Follow this path to
+        get me to the pig!"*\r
         \r
         Avoid the TNT.
       courseC_maze_programming6_markdown_instruction: |-
@@ -74234,23 +77222,50 @@
         \r
         Get the bird to the pig
         and avoid the TNT.
+      courseC_maze_programming6_2018_markdown_instruction: |-
+        *"Keep calm and help
+        me find the bad pig. Otherwise I might get angry!"*\r
+        \r
+        Get the bird to
+        the pig and avoid the TNT.
       courseC_maze_programming7_markdown_instruction: |-
         *"It's time to get angry!"*\r
         \r
         **Challenge:**
         This code has a lot of bugs. You'll need to remove some blocks and add others.
+      courseC_maze_programming7_2018_markdown_instruction: |-
+        *"It's time to get
+        angry!"*\r
+        \r
+        **Challenge:** This code has a lot of bugs. You'll need
+        to remove some blocks and add others.
       courseC_maze_programming8_markdown_instruction: |-
         *"Keep calm and help me find
         the bad pig."*
+      courseC_maze_programming8_2018_markdown_instruction: |-
+        *"Keep calm and help
+        me find the bad pig."*
       courseC_maze_programming8_predict1_markdown_instruction: |-
         *"Keep calm and
         help me find the bad pig."*
+      courseC_maze_programming8_predict1_2018_markdown_instruction: |-
+        *"Keep calm
+        and help me find the bad pig."*
       courseC_maze_programming9_markdown_instruction: |-
         *"Now, help me sneak up on
         the pig any way you want to!"*
+      courseC_maze_programming9_2018_markdown_instruction: |-
+        *"Now, help me sneak
+        up on the pig any way you want to!"*
       courseC_maze_programming_challenge1_markdown_instruction: "The bird needs your\nhelp!
         The pig is hiding, and the goal is to find it. "
+      courseC_maze_programming_challenge1_2018_markdown_instruction: "The bird needs\nyour
+        help! The pig is hiding, and the goal is to find it. "
       courseC_maze_programming_challenge2_markdown_instruction: |-
+        Sometimes there
+        is more than one way to solve the same problem. Sometimes it's faster to
+        go backwards than it is to go forwards!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: |-
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
         go backwards than it is to go forwards!
@@ -74280,13 +77295,37 @@
         _"Go BB-8!"_\r
         \r
         You are doing great! Keep it up!
+      courseC_starWars_loops10_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r
+
+        _"Go BB-8!"_\r
+        \r
+        You are doing great! Keep it up!
       courseC_starWars_loops11_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep going, BB-8!"_\r
         \r
         You are almost there! This time, choose any
         path you like!
+      courseC_starWars_loops11_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going, BB-8!"_\r
+        \r
+        You are almost there! This time, choose any
+        path you like!
+      courseC_starWars_loops1_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go get the scrap metal, BB-8!"_ \r
+        \r
+        Use five of the same blocks to
+        get the scrap metal. Scrap metal glows like this: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseC_starWars_loops2_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\r
+        \r
+        To get all the scrap metal, try creating a loop that
+        uses only one block inside of a `repeat` block.
+      courseC_starWars_loops2_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_\r
         \r
@@ -74298,10 +77337,25 @@
         \r
         In this puzzle, two `repeat` loops will help
         you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops4_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        In this puzzle, two `repeat` loops will help
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!
       courseC_starWars_loops5_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Go BB-8!"_
+      courseC_starWars_loops5_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_
       courseC_starWars_loops6_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_\r
+        \r
+        Loops even work with more than one block
+        inside!  Can you loop this sequence?
+      courseC_starWars_loops6_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Can you get it all?"_\r
         \r
@@ -74314,7 +77368,20 @@
         Can you try to get all the scrap metal using just
         one loop? Try programming it all out then finding the repeating code to put
         in a loop.
+      courseC_starWars_loops7_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\r
+        \r
+        Can you try to get all the scrap metal using just
+        one loop? Try programming it all out then finding the repeating code to put
+        in a loop.
       courseC_starWars_loops8_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        **Challenge:** Combine ideas from the last
+        few puzzles to complete this level.
+      courseC_starWars_loops8_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep it up, BB-8."_\r
         \r
@@ -74326,6 +77393,149 @@
         \r
         Use what you have learned to pick up all of the scrap
         metal!
+      courseC_starWars_loops9_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_\r
+        \r
+        Use what you have learned to pick up all of the scrap
+        metal!
+      courseD_Frozen_nested1_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r
+        \r
+        Draw a small shape,
+        between **20 and 50** pixels wide.  It can be any shape that you like.  \r
+        <hr/>\r
+        \r
+        You
+        can try making a polygon, like one of these:  \r
+        ![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r
+        ![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r
+        ![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r
+        \r
+          \r
+          \r
+        Or
+        even an abstract shape, like one of these:  \r
+        ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
+        ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
+        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
+      courseD_Frozen_nested2_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Now, let’s draw more than one.”_\r
+        \r
+        Now take your shape and draw two
+        or three in a row by jumping forward some number of pixels.  \r
+        \r
+        - If
+        you jump forward by **less** than the width of your shape, they might overlap\r
+        -
+        If you jump forward by **more** than the width of your shape, you will get
+        a gap\r
+        \r
+        <hr/>\r
+        \r
+        Your row might end up straight like with these:\r
+        \r
+        ![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r
+        ![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r
+        ![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r
+        <br/>  <br/>\r
+        \r
+        \r
+        Or,
+        your shapes might move around like one of these: \r
+        \r
+        ![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r
+        ![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r
+        ![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)
+      courseD_Frozen_nested3_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s make it into a snowflake."_\r
+        \r
+        Next, jump Elsa back to the center
+        using the `jump to 200 over and 200 down` block, and spin her around to draw
+        the line of shapes again and again in a bunch of different directions.   \r
+        \r
+        What
+        amazing snowflakes you can make!\r
+        <hr/>\r
+        Take a look at these examples
+        with polygons:  \r
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r
+        \r
+        Abstract
+        shapes might make a snowflake more like one of these:  \r
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_Frozen_nested4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"What
+        happens if we draw snowflakes on top of each other?\"_\\r\n\\r\nTry\nlayering
+        two different shapes of snowflakes on top of one another with a little\nturn
+        in between - see what you get! "
+      courseD_Frozen_nested5_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Get creative with shapes and angles to see what kind of new snowflakes
+        we can draw!"_\r
+      courseD_Frozen_nested6_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s try something new. This time, skate in a zig-zag."_\r
+        \r
+        \r
+        <img
+        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
+        Draw a
+        stair-step pattern that uses turns between 75 and 105 degrees -- but make
+        sure that your left and right turns use the same angle.  \r
+        (You will see
+        why later.)
+      courseD_Frozen_nested7_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Now let’s turn and go back the way we came."_\r
+        \r
+        Turn around 180 degrees
+        and draw the exact same stair pattern again!  \r
+        \r
+        - The rest of this stage
+        will be easier if you put all of your code inside of a loop to make Elsa  draw,
+        turn around 180 degrees, draw, then turn around 180 degrees again.\r
+        \r
+        <hr/>\r
+        \r
+        Here
+        is an example of stairs that use a 76 degree turn:\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      courseD_Frozen_nested8_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s spin and make it into a snowflake."_\r
+        \r
+        Spin that shape around
+        5 or 6 times in a circle.\r
+        - If you choose 5 times,  try a turn of 72 degrees\r
+        -
+        If you choose 6 times,  try a turn of 60 degrees\r
+        <hr/>\r
+        \r
+        Here's an
+        example of Elsa turning a pattern 6 times:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_Frozen_nested9_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
       courseD_artist_binary1_markdown_instruction: |-
         We've provided you with a grid
         of "pixels" that you can walk through and make designs by turning on only
@@ -75830,6 +79040,38 @@
         *"I
         need some help on the farm! Help me harvest this corn using only the blocks
         in your toolbox."*
+      courseD_iceage_loops1_markdown_instruction: |-
+        Help Scrat across the slippery
+        ice to get to the acorn!
+      courseD_iceage_loops10_markdown_instruction: |-
+        Help Scrat get all the way over
+        to the acorn!
+      courseD_iceage_loops11_markdown_instruction: Help Scrat get to the acorn!
+      courseD_iceage_loops12_markdown_instruction: |-
+        Get to the acorn any way you
+        can!
+      courseD_iceage_loops2_markdown_instruction: |-
+        Use a <xml><block type="maze_turn">\r
+            <title
+        name="DIR">turnLeft</title>\r
+          </block></xml> block to get to the acorn!
+      courseD_iceage_loops3_markdown_instruction: |-
+        Can you get to the acorn with
+        just one <xml><block type="maze_moveForward"/></xml> block? Try using a
+        loop!
+      courseD_iceage_loops4_markdown_instruction: |-
+        Add one more block to get Scrat
+        all the way to the acorn!
+      courseD_iceage_loops6_markdown_instruction: |-
+        Can you add a loop to get to the
+        acorn?
+      courseD_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn!
+
+'
+      courseD_iceage_loops8_markdown_instruction: 'Can you fix this code? '
+      courseD_iceage_loops9_markdown_instruction: |-
+        The acorn is so far away! Can
+        you use loops to help Scrat get there?
       courseD_maze_loops_challenge1_markdown_instruction: |-
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
@@ -78724,7 +81966,13 @@
       csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
         Anything
         else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch1_2018_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
       csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
+        Anything
+        else you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U6Ch2_2018_markdown_instruction: |-
         Anything
         else you’d like your teacher to know?
       csd-pulse-check-survey-1-free-response_markdown_instruction: |-
@@ -82103,6 +85351,11 @@
         \r
         Collect
         as many pieces of treasure as you can to finish the stage!
+      grade2_collector_10_2018_markdown_instruction: |-
+        You're almost done!  \r
+        \r
+        Collect
+        as many pieces of treasure as you can to finish the stage!
       grade2_collector_2_markdown_instruction: |-
         Move Laurel to the gold, then use
         `collect` to pick it up.
@@ -82139,6 +85392,9 @@
       grade2_collector_9_markdown_instruction: '*"Let''s get all of the coins!"*'
       grade2_collector_9a_markdown_instruction: "**Challenge:** Grab all of the coins."
       grade2_collector_A_markdown_instruction: Help Laurel collect all of the treasure.
+      grade2_collector_A_2018_markdown_instruction: |-
+        Help Laurel collect all of the
+        treasure.
       grade2_collector_pre1_markdown_instruction: |-
         *"Hi, I'm Laurel. Today I'm
         searching for treasure at the dog park!"*  \r
@@ -84139,6 +87395,9 @@
         When
         you are finished, right-click to save the image, then send it to me on <a
         href="https://classroom.google.com">Google Classroom</a>.
+      iceAgeLoopsforVideo_markdown_instruction: |-
+        Can you get to the acorn with just
+        one <xml><block type="maze_moveForward"/></xml> block? Try using a loop!
       iceage_click_hello_markdown_instruction: |-
         Can you help Sid call for his friends
         when you click on him? \r
@@ -84324,6 +87583,33 @@
         \r
         Collect
         nectar from each of the flowers using the fewest blocks possible.
+      loop pet test 2_markdown_instruction: |-
+        **CHALLENGE!** When Daisy gets a carrot,
+        she gets excited. Can you make Daisy start doing a dance party? She should
+        never stop, even after you take the carrot away.\r
+        \r
+        You will have to use
+        all these blocks:\r
+        ![](https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06
+        PM.png)
+      loop pet test 3_markdown_instruction: |
+        **Make Predictions!** Write down your
+        answers to these questions before clicking "Run". Then try the code and
+        see what happens!\r
+        \r
+        * What will Daisy the dog do after you drag the carrot
+        to her?\r
+        * What will Daisy the dog do after you press the Up arrow key?\r
+      loop pet test 4_markdown_instruction: |-
+        **It's time to make your own virtual
+        pet!** You can change whatever code you want to to make your own pet. Here
+        are some ideas:\r
+        \r
+        * Can you make your pet start something new when you
+        click on it?\r
+        * Can you make your pet run away when you drag the vacuum
+        to it?\r
+        * Can you add other animal friends to your pet's area?
       love_spring_1_markdown_instruction: |-
         Let's celebrate Spring!  \r
         \r

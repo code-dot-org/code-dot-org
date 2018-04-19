@@ -607,3 +607,24 @@
           Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
           ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
           larawan at mga kulay) pati na rin sa binary.
+      PaperPlanes_2018:
+        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
+          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
+          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
+          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
+          bahagi.
+      GettingLoopy_2018:
+        title: Pagiging Loopy
+        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
+          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
+          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
+          ay tuturan na ulitin ito.
+      BinaryBracelets_2018:
+        title: Binary na mga Pulseras
+        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
+          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
+          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
+      MoveItMoveIt_2018:
+        title: Galawin ito, Galawin ito
+        desc: ''

@@ -1428,6 +1428,15 @@ Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
 end
 
+saved_url = nil
+Then /^I save the URL$/ do
+  saved_url = @browser.current_url
+end
+
+Then /^current URL is different from the last saved URL$/ do
+  expect(@browser.current_url).not_to include(saved_url)
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;

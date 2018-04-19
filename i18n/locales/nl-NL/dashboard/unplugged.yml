@@ -334,3 +334,15 @@ nl:
       BinaryImages_2018:
         title: Binaire afbeeldingen
         desc: Hoewel veel mensen binair zien als enkel nullen en enen, leerde onze vorige lessen de leerlingen dat informatie weergegeven kan worden in een verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen en kleuren) binair kan opslaan.
+      PaperPlanes_2018:
+        title: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+        desc: Deze les Laat zien hoe we dagelijks algoritmes gebruiken, met name bij het maken van papieren vliegtuigjes. Deze les richt zich op het grotere geheel van computerkunde en hoe algoritmen een hoofdrol spelen.
+      GettingLoopy_2018:
+        title: Rondjes lopen
+        desc: Deze les behandelt het programmeerconcept van lussen (herhaalde instructies) door middel van een dansactiviteit. Leerlingen zullen een eenvoudige choreografie leren, waarna ze de instructie krijgen om het te herhalen.
+      BinaryBracelets_2018:
+        title: Binaire armbanden
+        desc: Leerlingen maken armbanden als een binaire weergave van de eerste letter van hun naam. Leerlingen leren dat gegevens op meer dan een manier weergegeven en opgeslagen kunnen worden.
+      MoveItMoveIt_2018:
+        title: verplaats het, verplaats het
+        desc: ''

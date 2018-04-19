@@ -28,7 +28,9 @@ census as
   select 
     school_id,
     max(case when how_many_do_hoc is null then null when how_many_do_hoc = 'I DON\'T KNOW' then null when how_many_do_hoc in ('SOME', 'ALL') then 1 else 0 end) hoc,
-    max(case when how_many_after_school is null then null when how_many_after_school = 'I DON\'T KNOW' then null when how_many_after_school in ('SOME', 'ALL') then 1 else 0 end) after_school
+    max(case when how_many_after_school is null then null when how_many_after_school = 'I DON\'T KNOW' then null when how_many_after_school in ('SOME', 'ALL') then 1 else 0 end) after_school,
+    max(case when how_many_after_school is null then null when how_many_10_hours = 'I DON\'T KNOW' then null when how_many_10_hours in ('SOME', 'ALL') then 1 else 0 end) how_many_10_hours,
+    max(case when how_many_after_school is null then null when how_many_20_hours = 'I DON\'T KNOW' then null when how_many_20_hours in ('SOME', 'ALL') then 1 else 0 end) how_many_20_hours    
   from dashboard_production_pii.census_submissions cs
     join dashboard_production.census_submissions_school_infos cssi on cssi.census_submission_id = cs.id
     join dashboard_production.school_infos si on si.id = cssi.school_info_id
@@ -40,7 +42,9 @@ select
   teaches_csa, 
   teaches_csp, 
   hoc, 
-  after_school
+  after_school,
+  how_many_10_hours,
+  how_many_20_hours
 from analysis.school_stats ss
   left join csp on csp.school_id = ss.school_id
   left join csa on csa.school_id = ss.school_id

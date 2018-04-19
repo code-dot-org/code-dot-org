@@ -273,8 +273,8 @@ We are now accepting applications for the 2017-18 Professional Learning Program 
 
 <a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
-If you are interested in joining in 2018-19, sign up below.
+Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 -->

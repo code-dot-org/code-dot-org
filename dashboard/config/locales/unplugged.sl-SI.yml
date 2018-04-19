@@ -523,3 +523,21 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Življenjski algoritmi: Papirnata letala'
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju na primeru izdelovanja papirnatih letal. Osredotoči se tudi na
+          večjo sliko računalništva in kako so algoritmi bistveni del računalništva.
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: Ta lekcija uvaja koncept programiranja zank (ponavljajočih navodil)
+          s pomočjo plesa. Učenci se bodo naučili preproste koreografije, potem pa
+          dobili navodilo, da jo ponovijo.
+      BinaryBracelets_2018:
+        title: Binary Bracelets
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      MoveItMoveIt_2018:
+        title: Premakni se, premakni
+        desc: ''
