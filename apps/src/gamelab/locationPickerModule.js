@@ -16,6 +16,7 @@ export default function locationPicker(state, action) {
       return {
         ...state,
         mode: LocationPickerMode.SELECTING,
+        lastSelection: undefined,
       };
     case CANCEL_LOCATION_SELECTION:
       return {
@@ -66,19 +67,19 @@ export function isPickingLocation(state) {
   return state.mode === LocationPickerMode.SELECTING;
 }
 
-export async function getLocation(update) {
+export function getLocation(candidateHandler, completeHandler) {
+  candidateHandler = candidateHandler || (() => {});
+  completeHandler = completeHandler || (() => {});
+
   const store = getStore();
   store.dispatch(requestLocation());
-  window.fakeResolve = () => store.dispatch(selectLocation('{"x": 300, "y": 300}'));
-  return new Promise(resolve => {
-    const unsubscribe = store.subscribe(() => {
-      const state = store.getState();
-      if (state.locationPicker.mode === LocationPickerMode.IDLE) {
-        resolve(state.locationPicker.lastSelection);
-        unsubscribe();
-      } else {
-        update(state.locationPicker.lastSelection);
-      }
-    });
+  const unsubscribe = store.subscribe(() => {
+    const state = store.getState();
+    if (state.locationPicker.mode === LocationPickerMode.SELECTING) {
+      candidateHandler(state.locationPicker.lastSelection);
+    } else {
+      completeHandler(state.locationPicker.lastSelection);
+      unsubscribe();
+    }
   });
 }
