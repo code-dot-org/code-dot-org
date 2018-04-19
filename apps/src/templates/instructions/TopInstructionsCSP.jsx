@@ -14,7 +14,7 @@ import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
 import {toggleInstructionsCollapsed,
-    setInstructionsMaxHeightNeeded,
+   setInstructionsMaxHeightNeeded,
    setInstructionsRenderedHeight,
    setInstructionsHeight} from '../../redux/instructions';
 import color from "../../util/color";
