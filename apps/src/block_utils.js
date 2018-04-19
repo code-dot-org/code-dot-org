@@ -633,12 +633,16 @@ exports.createJsWrapperBlockCreator = function (
     eventBlock,
     eventLoopBlock,
     inline,
+    returnArg,
   }) => {
-    if (!func === !expression) {
-      throw new Error('Provide either func or expression, but not both');
+    if (!!func + !!expression + !!returnArg !== 1) {
+      throw new Error('Provide exactly one of func, expression, or returnArg');
     }
-    if (expression && !name) {
-      throw new Error('Expression blocks require a name');
+    if ((expression || returnArg) && !name) {
+      throw new Error('This block requires a name');
+    }
+    if (returnArg && args.length !== 1) {
+      throw new Error('returnArg blocks must have exactly one argument');
     }
     args = args || [];
     color = color || DEFAULT_COLOR;
@@ -673,6 +677,7 @@ exports.createJsWrapperBlockCreator = function (
             blockly,
             this,
             determineInputs(blockText, inputs, strictTypes),
+            getLocation,
           );
           this.setInputsInline(true);
         }
@@ -697,7 +702,7 @@ exports.createJsWrapperBlockCreator = function (
 
     generator[blockName] = function () {
       const values = args.map(arg => {
-        if (arg.options) {
+        if (arg.options || arg.locationPicker) {
           return this.getTitleValue(arg.name);
         } else  if (arg.statement) {
           const code = Blockly.JavaScript.statementToCode(this, arg.name);
@@ -706,6 +711,13 @@ exports.createJsWrapperBlockCreator = function (
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
       });
+
+      if (returnArg) {
+        return [
+          values[0],
+          orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+        ];
+      }
 
       let prefix = '';
       if (methodCall) {
@@ -724,7 +736,10 @@ exports.createJsWrapperBlockCreator = function (
 
       if (expression) {
         if (returnType !== undefined) {
-          return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+          return [
+            `${prefix}${expression}`,
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+          ];
         } else {
           return `${prefix}${expression}`;
         }
