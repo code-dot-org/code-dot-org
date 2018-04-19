@@ -796,7 +796,7 @@ class FilesApi < Sinatra::Base
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
       if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
         file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file, file_mime_type)
+        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
         if %i(adult racy).include? rating
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
