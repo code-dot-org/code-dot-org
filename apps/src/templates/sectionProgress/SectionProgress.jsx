@@ -69,7 +69,6 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
   };
 
