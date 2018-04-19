@@ -1409,12 +1409,10 @@ StudioApp.prototype.displayFeedback = function (options) {
   }
 
   if (experiments.isEnabled('bubbleDialog')) {
+    const ignoredKeys = ['level', 'alreadySaved', 'appStrings', 'disableSaveToGallery', 'message', 'saveToLegacyGalleryUrl', 'saveToProjectGallery', 'showingSharing'];
+    ignoredKeys.forEach(key => delete options[key]);
     const {
-      response, preventDialog, feedbackType, feedbackImage,
-      // Ignored.
-      // eslint-disable-next-line no-unused-vars
-      level, alreadySaved, appStrings, disableSaveToGallery, message, saveToLegacyGalleryUrl, saveToProjectGallery, showingSharing,
-      ...otherOptions
+      response, preventDialog, feedbackType, feedbackImage, ...otherOptions
     } = options;
     if (Object.keys(otherOptions).length === 0) {
       const store = getStore();
