@@ -232,7 +232,7 @@ class ProjectsList extends React.Component {
       <Table.Provider
         className="pure-table pure-table-striped"
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="channel" />
