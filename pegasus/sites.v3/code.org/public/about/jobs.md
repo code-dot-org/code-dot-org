@@ -29,7 +29,7 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 
 - **Engineering**
 	- [Director/VP Engineering](#vpeng)
-	- [Technical Lead](#techlead)
+	- [Lead Software Engineer](#leadsofteng)
 - **Outreach**
  	- [Program Associate](#outreach)
 - **Internships**
@@ -75,25 +75,31 @@ In addition, candidates:
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="techlead"href="#techlead">Technical Lead (Seattle, WA)</a>
+## <a name="leadsofteng"href="#leadsofteng">Lead Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the diverse, competitive workforce of the future.
 
-As Technical Lead at Code.org, you’ll be both a technical leader and a key coding contributor on the team. As a technical leader, you’ll be helping drive technology decisions and investments, architecture, tools and process. You’ll be mentoring (and, depending on experience and desire, managing) other team members.
+As a Lead Software Engineer at Code.org, you’ll be leading a small team of talented software engineers. The team focuses on building tools to manage the process of training teachers to teach computer science. You’ll manage, mentor and grow the people on your team as well as providing technical leadership. You’ll also spend a lot of time writing code and be expected to be a key coding contributor. 
 
-As a direct contributor, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+The tools this team builds are used by Code.org partners around the country to prepare teachers to teach computer science. Training CS teachers is a key part of Code.org’s mission; the current lack of qualified CS teachers is a barrier to adoption of CS in K-12 schools. Code.org and our partners have trained over 72,000 teachers, and we’re still just getting started. A key technical challenge for us now is to provide tools that effectively scale to all our partners around the country, and reach new audiences including international and rural teachers. You’ll help bring many thousands of teachers into CS and affect the lives of the millions of students they go on to teach.
+
+This is full stack position using Ruby on Rails and React.js. You should have experience building professional-grade web applications. Previous experience in our specific technologies is nice to have but not required.
+
 
 **Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Passion for our mission of increasing access to computer science education
+- Desire to support the growth of female and underrepresented minority students
 - Bachelor’s degree with a major in Computer Science
 - 7+ years as a software engineer
 - Top-notch technical ability
-- Proven ability to lead and energize others
+- Ability to lead and energize others
+- Supportive manager with experience helping others grow
+- Previous engineering management experience preferred
 - Expertise in some of these technologies preferred:
 	- JavaScript
 	- React

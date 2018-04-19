@@ -14,6 +14,9 @@ Scenario: Angle Helper Eyes Tests
   And I click block "3"
   And I begin to edit the angle of turn block "3"
   And I see no difference for "dropdown angle helper"
+  And I click block "4"
+  And I begin to edit the value of turn block "4"
+  And I see no difference for "value input angle helper"
   And I close my eyes
 
 Scenario: Free Text Input Angle Helper
@@ -51,3 +54,20 @@ Scenario: Dropdown Angle Helper
   When I drag the Angle Helper circle to coordinates (200,5)
   Then the Angle Helper circle is at coordinates (137,98)
   Then the angle dropdown is at "0"
+
+Scenario: Value Input Angle Helper
+  When I begin to edit the value of turn block "4"
+
+  # defaults to 30
+  Then the angle text is at "30"
+  And the Angle Helper circle is at coordinates (128,106)
+
+  # updating the text input should update the angle helper
+  When I change the angle text to "60"
+  Then the angle text is at "60"
+  And the Angle Helper circle is at coordinates (106,128)
+
+  # updating the angle helper should update the text input
+  When I drag the Angle Helper circle to coordinates (31,118)
+  Then the Angle Helper circle is at coordinates (31,118)
+  Then the angle text is at "136"
