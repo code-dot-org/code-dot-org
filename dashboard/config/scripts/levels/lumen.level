@@ -12,10 +12,6 @@
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -48,7 +44,8 @@
     "pause_animations_by_default": "false",
     "custom_helper_library": "function draggable() {\r\n  var behavior = function(sprite) {\r\n    var v = createVector(winMouseX - pwinMouseX, winMouseY - pwinMouseY);\r\n    this.position.add(v);\r\n  }\r\n  behavior.name = 'draggable';\r\n  return behavior;\r\n}",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"blockText\": \"drag and drop\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  }\r\n]",
-    "hide_custom_blocks": "false"
+    "hide_custom_blocks": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
