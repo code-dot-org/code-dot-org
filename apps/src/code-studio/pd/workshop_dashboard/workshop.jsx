@@ -423,9 +423,10 @@ export default class Workshop extends React.Component {
     return (
       <div>
         <p>
-          Every day of the workshop, your participants must visit the attendance URL to receive
-          professional development credit. The attendance URL will show up 48 hours early, but
-          participants can't mark themselves as attended until the day of the workshop.
+          There is a unique attendance URL for each day of your workshop. On each day of your
+          workshop, your participants must visit that day's attendance URL to receive
+          professional development credit. The attendance URL(s) will be shown below, 2 days in
+          advance, for your convenience.
         </p>
         <Row>
           <Col md={2}>
