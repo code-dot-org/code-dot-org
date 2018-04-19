@@ -135,7 +135,10 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown({
+            directionTitleName: 'DIR',
+            menuGenerator: this.VALUE
+          }), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -166,7 +169,9 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(
           blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldAngleTextInput('DIR', '90'), 'VALUE')
+        .appendTitle(new blockly.FieldAngleTextInput('90', {
+          directionTitle: 'DIR'
+        }), 'VALUE')
         .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -184,7 +189,9 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendTitle(new blockly.FieldDropdown(
           blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldAngleDropdown('DIR'), 'VALUE')
+        .appendTitle(new blockly.FieldAngleDropdown({
+          directionTitleName: 'DIR'
+        }), 'VALUE')
         .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -219,7 +226,10 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleDropdown('DIR', this.VALUE), 'VALUE')
+          .appendTitle(new blockly.FieldAngleDropdown({
+            directionTitleName: 'DIR',
+            menuGenerator: this.VALUE
+          }), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -250,7 +260,9 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(new blockly.FieldDropdown(
               blockly.Blocks.draw_turn.DIRECTIONS), 'DIR');
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleTextInput('DIR', '90'), 'VALUE')
+          .appendTitle(new blockly.FieldAngleTextInput('90', {
+            directionTitle: 'DIR'
+          }), 'VALUE')
           .appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -280,8 +292,9 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
     block.appendDummyInput()
-        .appendTitle(new blockly.FieldTextInput(
-            '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+        .appendTitle(new blockly.FieldAngleTextInput('0', {
+          direction: 'turnRight'
+        }), 'DIRECTION')
         .appendTitle(msg.degrees());
   });
 
@@ -293,7 +306,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
   // Block for pointing to a specified direction
     block.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER);
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
+          block,
+          direction: 'turnRight',
+        });
     block.appendDummyInput()
         .appendTitle(msg.degrees());
   });
@@ -307,7 +324,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.point_to_by_constant_restricted =
       createPointToBlocks(function (block) {
     block.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(block.VALUE), 'VALUE')
+        .appendTitle(new blockly.FieldAngleDropdown({
+          direction: 'turnRight',
+          menuGenerator: block.VALUE
+        }), 'VALUE')
         .appendTitle(msg.degrees());
   });
 
