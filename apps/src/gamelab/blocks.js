@@ -1,3 +1,4 @@
+import { SVG_NS } from '../constants';
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
@@ -9,6 +10,39 @@ const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 const LOCATION_COLOR = [300, 0.46, 0.89];
+
+const customInputTypes = {
+  locationPicker: {
+    addInput(block, input) {
+      const label = block.appendDummyInput()
+          .appendTitle(`${input.label}(0, 0)`, `${input.name}_LABEL`)
+          .titleRow[0];
+      const icon = document.createElementNS(SVG_NS, 'tspan');
+      icon.style.fontFamily = 'FontAwesome';
+      icon.textContent = '\uf276';
+      const button = new Blockly.FieldButton(icon, updateValue => {
+          getLocation(loc => {
+            if (loc) {
+              button.setValue(JSON.stringify(loc));
+            }
+          });
+        },
+        block.getHexColour(),
+        value => {
+          if (value) {
+            const loc = JSON.parse(value);
+            label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+          }
+        }
+      );
+      block.appendDummyInput()
+          .appendTitle(button, input.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
+};
 
 export default {
   install(blockly, blockInstallOptions) {
@@ -32,7 +66,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
-      getLocation,
+      customInputTypes,
     );
 
     createJsWrapperBlock({
@@ -344,7 +378,7 @@ export default {
       blockText: '{LOCATION}',
       args: [{
         name: 'LOCATION',
-        locationPicker: true,
+        customInput: 'locationPicker',
       }],
       returnType: Blockly.BlockValueType.LOCATION,
       orderPrecedence: ORDER_ATOMIC,
@@ -417,7 +451,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
-      getLocation,
+      customInputTypes,
     ));
 
     if (!hideCustomBlocks) {
