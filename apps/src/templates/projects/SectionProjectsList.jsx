@@ -9,7 +9,7 @@ const styles = {
     float: 'right',
   },
   filterRow: {
-    backgroundColor: color.border_light_gray,
+    backgroundColor: color.table_header,
     borderBottom: 'solid 1px white',
     padding: 10,
   },
