@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.8.2",
+    "@code-dot-org/blockly": "1.8.2-add-anglehelper-options",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
