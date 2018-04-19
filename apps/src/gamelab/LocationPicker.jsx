@@ -16,9 +16,6 @@ class LocationPicker extends React.Component {
     update: PropTypes.func.isRequired,
   };
 
-  select(mouseEvent) {
-  }
-
   render() {
     const playSpace = document.getElementById('divGameLab');
     if (playSpace) {
