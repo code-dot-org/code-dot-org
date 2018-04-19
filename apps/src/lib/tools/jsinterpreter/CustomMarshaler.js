@@ -55,18 +55,15 @@ module.exports = class CustomMarshaler {
    * @param {Object} nativeParentObj Parent of object to wrap
    * @return {!Object} New interpreter object.
    */
-  createCustomMarshalObject(nativeObj, nativeParentObj) {
-    var obj = {
-      data: nativeObj,
-      isPrimitive: false,
-      isCustomMarshal: true,
-      type: typeof nativeObj,
-      proto: nativeParentObj, // TODO (cpirich): replace with interpreter object?
-      toBoolean: function () {return Boolean(this.data);},
-      toNumber: function () {return Number(this.data);},
-      toString: function () {return String(this.data);},
-      valueOf: function () {return this.data;}
-    };
+  createCustomMarshalObject(interpreter, nativeObj, nativeParentObj) {
+    var obj = interpreter.createObject();
+    obj.data = nativeObj;
+    obj.isCustomMarshal = true;
+    obj.type = typeof nativeObj;
+    obj.toBoolean = function () {return Boolean(this.data);};
+    obj.toNumber = function () {return Number(this.data);};
+    obj.toString = function () {return String(this.data);};
+    obj.valueOf = function () {return this.data;};
     return obj;
   }
 
