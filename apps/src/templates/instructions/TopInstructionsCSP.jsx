@@ -13,7 +13,10 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
-import instructions from '../../redux/instructions';
+import {toggleInstructionsCollapsed,
+    setInstructionsMaxHeightNeeded,
+   setInstructionsRenderedHeight,
+   setInstructionsHeight} from '../../redux/instructions';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
@@ -303,39 +306,35 @@ class TopInstructions extends Component {
     );
   }
 }
-module.exports = connect(function propsFromStore(state) {
-  return {
-    isEmbedView: state.pageConstants.isEmbedView,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
-    puzzleNumber: state.pageConstants.puzzleNumber,
-    stageTotal: state.pageConstants.stageTotal,
-    height: state.instructions.renderedHeight,
-    expandedHeight: state.instructions.expandedHeight,
-    maxHeight: Math.min(state.instructions.maxAvailableHeight,
-      state.instructions.maxNeededHeight),
-    markdown: state.instructions.longInstructions,
-    noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed,
-    documentationUrl: state.pageConstants.documentationUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
-    levelVideos: state.instructions.levelVideos,
-    mapReference: state.instructions.mapReference,
-    referenceLinks: state.instructions.referenceLinks
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
+export default connect(state => ({
+  isEmbedView: state.pageConstants.isEmbedView,
+  hasContainedLevels: state.pageConstants.hasContainedLevels,
+  puzzleNumber: state.pageConstants.puzzleNumber,
+  stageTotal: state.pageConstants.stageTotal,
+  height: state.instructions.renderedHeight,
+  expandedHeight: state.instructions.expandedHeight,
+  maxHeight: Math.min(state.instructions.maxAvailableHeight,
+    state.instructions.maxNeededHeight),
+  markdown: state.instructions.longInstructions,
+  noVisualization: state.pageConstants.noVisualization,
+  collapsed: state.instructions.collapsed,
+  documentationUrl: state.pageConstants.documentationUrl,
+  ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+  levelVideos: state.instructions.levelVideos,
+  mapReference: state.instructions.mapReference,
+  referenceLinks: state.instructions.referenceLinks
+}), dispatch => ({
     toggleInstructionsCollapsed() {
-      dispatch(instructions.toggleInstructionsCollapsed());
+      dispatch(toggleInstructionsCollapsed());
     },
     setInstructionsHeight(height) {
-      dispatch(instructions.setInstructionsHeight(height));
+      dispatch(setInstructionsHeight(height));
     },
     setInstructionsRenderedHeight(height) {
-      dispatch(instructions.setInstructionsRenderedHeight(height));
+      dispatch(setInstructionsRenderedHeight(height));
     },
     setInstructionsMaxHeightNeeded(height) {
-      dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+      dispatch(setInstructionsMaxHeightNeeded(height));
     }
-  };
-}, null, { withRef: true }
+}), null, { withRef: true }
 )(Radium(TopInstructions));
