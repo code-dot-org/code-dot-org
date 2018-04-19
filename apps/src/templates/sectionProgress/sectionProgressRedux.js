@@ -34,6 +34,14 @@ export const setSection = (section) => {
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
   return { type: SET_SECTION, section: {...section, students: sortedStudents} };
 };
+export const jumpToLessonDetails = (lessonOfInterest) => {
+  return (dispatch, getState) => {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
+
+const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
 export const ViewType = {
@@ -162,7 +170,10 @@ export default function sectionProgress(state=initialState, action) {
       ...state,
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
-        [action.scriptId]: action.studentLevelProgress,
+        [action.scriptId]: {
+          ...state.studentLevelProgressByScript[action.scriptId],
+          ...action.studentLevelProgress,
+        },
       }
     };
   }
@@ -228,6 +239,12 @@ export const getColumnWidthsForDetailView = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
+
+    // Don't load data if it's already stored in redux.
+    if (state.studentLevelProgressByScript[scriptId] && state.scriptDataByScript[scriptId]) {
+      return;
+    }
+
     dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
       // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
@@ -235,15 +252,22 @@ export const loadScript = (scriptId) => {
       dispatch(addScriptData(scriptId, scriptData));
     });
 
-    $.getJSON(`/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}`, dataByStudent => {
-      // dataByStudent is an object where the keys are student.id and the values
-      // are a map of levelId to status
-      let studentLevelProgress = {};
-      Object.keys(dataByStudent).forEach(studentId => {
-        studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
-      });
-      dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
-      dispatch(finishLoadingProgress());
+    const numStudents = state.section.students.length;
+    const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
+
+    const requests = _.range(1, numPages + 1).map((currentPage) => {
+      const url = `/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+      return fetch(url, { credentials: 'include' })
+        .then(response => response.json())
+        .then((data) => {
+          const dataByStudent = data.students;
+          let studentLevelProgress = {};
+          Object.keys(dataByStudent).forEach((studentId) => {
+            studentLevelProgress[studentId] = _.mapValues(dataByStudent[studentId], getLevelResult);
+          });
+          dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
+        });
     });
+    Promise.all(requests).then(() => dispatch(finishLoadingProgress()));
   };
 };

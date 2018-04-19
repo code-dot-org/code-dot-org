@@ -158,10 +158,10 @@ Scenario: Remix project creates and redirects to new channel
   And I save the URL
 
   Then I click selector ".project_remix" to load a new page
+  And I wait for the page to fully load
   And I should see title "Remix: Code Ninja - App Lab"
   And check that the URL contains "/edit"
   And check that the URL contains "http://studio.code.org/projects/applab"
   And current URL is different from the last saved URL
-  And I wait for the page to fully load
   And element "#runButton" is visible
   And I click selector "#runButton"

@@ -27,11 +27,9 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 
 **We are currently hiring for:**
 
-- **Advocacy**
-	- [Director of State Government Affairs](#govaffairs)
 - **Engineering**
 	- [Director/VP Engineering](#vpeng)
-	- [Technical Lead](#techlead)
+	- [Lead Software Engineer](#leadsofteng)
 - **Outreach**
  	- [Program Associate](#outreach)
 - **Internships**
@@ -41,50 +39,6 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (location flexible)</a>
-
-**Job Summary:**
-
-Code.org is a leading voice in the national dialogue on expanding access to K-12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
-
-Our team is working with policymakers and education leaders to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. We’ve helped build a movement for K-12 computer scinece that has changed policies across dozens of states. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally changing existing education policy.
-
-The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) across multiple states. You will develop overall strategy for engagement in your states while leading and carrying out the tactics associated with the strategy. 
-
-In this role, you will be responsible for: 
-
-- Developing and managing campaigns and state-based coalitions in states that you are responsible for
-- Developing and updating policy positions
-- Public speaking at events, including testimony before state authorities and interviews with the media
-- Communicating policy agenda to various audiences (stakeholder groups, legislators, Governors and staff, educators, media, etc.) and tailoring messaging for each
-- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
-- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
-- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and nonprofits with shared goals
-- Creating and managing grassroots support for policy-related efforts
-- Coordinating state and federal policy efforts internally and with partners
-
-**Experience and Qualifications:**
-
-We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
-
-To be successful in this role, your main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. You should have experience with and working knowledge of the legislative process or policy development process within 
-state education authorities. 
-
-We are a non-partisan organization, and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. You should have a demonstrated ability to work across political parties and ideologies.
-
-You must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience a plus, but not required). You should be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
-
-As our ideal candidate, you have:
-
-- Passion for our mission
-- At least a Bachelor’s degree; Master’s degree desired
-- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
-- Ability and willingness to travel. You will be managing multiple states and should expect to travel up to 30% time.
-- Experience in developing K-12 computer science education policy (nice to have, but not required) 
-
-To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 
@@ -121,25 +75,31 @@ In addition, candidates:
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="techlead"href="#techlead">Technical Lead (Seattle, WA)</a>
+## <a name="leadsofteng"href="#leadsofteng">Lead Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the diverse, competitive workforce of the future.
 
-As Technical Lead at Code.org, you’ll be both a technical leader and a key coding contributor on the team. As a technical leader, you’ll be helping drive technology decisions and investments, architecture, tools and process. You’ll be mentoring (and, depending on experience and desire, managing) other team members.
+As a Lead Software Engineer at Code.org, you’ll be leading a small team of talented software engineers. The team focuses on building tools to manage the process of training teachers to teach computer science. You’ll manage, mentor and grow the people on your team as well as providing technical leadership. You’ll also spend a lot of time writing code and be expected to be a key coding contributor. 
 
-As a direct contributor, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+The tools this team builds are used by Code.org partners around the country to prepare teachers to teach computer science. Training CS teachers is a key part of Code.org’s mission; the current lack of qualified CS teachers is a barrier to adoption of CS in K-12 schools. Code.org and our partners have trained over 72,000 teachers, and we’re still just getting started. A key technical challenge for us now is to provide tools that effectively scale to all our partners around the country, and reach new audiences including international and rural teachers. You’ll help bring many thousands of teachers into CS and affect the lives of the millions of students they go on to teach.
+
+This is full stack position using Ruby on Rails and React.js. You should have experience building professional-grade web applications. Previous experience in our specific technologies is nice to have but not required.
+
 
 **Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Passion for our mission of increasing access to computer science education
+- Desire to support the growth of female and underrepresented minority students
 - Bachelor’s degree with a major in Computer Science
 - 7+ years as a software engineer
 - Top-notch technical ability
-- Proven ability to lead and energize others
+- Ability to lead and energize others
+- Supportive manager with experience helping others grow
+- Previous engineering management experience preferred
 - Expertise in some of these technologies preferred:
 	- JavaScript
 	- React
