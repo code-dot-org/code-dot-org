@@ -6,6 +6,7 @@ const EVENT_COLOR = [140, 1.00, 0.74];
 const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
+const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 
 export default {
   install(blockly, blockInstallOptions) {
@@ -30,6 +31,14 @@ export default {
       [SPRITE_TYPE],
       SPRITE_TYPE,
     );
+
+    createJsWrapperBlock({
+      color: WHEN_RUN_COLOR,
+      func: 'initialize',
+      name: 'setup',
+      blockText: 'setup',
+      eventBlock: true,
+    });
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,

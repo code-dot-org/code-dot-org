@@ -33,6 +33,10 @@ let game_over = false;
 let show_score = false;
 let title = '', subTitle = '';
 
+function initialize(setupHandler) {
+  setupHandler();
+}
+
 // Behaviors
 
 function addBehavior(sprite, behavior, name) {
@@ -256,67 +260,70 @@ function hideTitleScreen() {
 function draw() {
   background(World.background_color || "white");
 
-  // Run input events
-  for (var i=0; i<inputEvents.length; i++) {
-    const eventType = inputEvents[i].type;
-    const event = inputEvents[i].event;
-    const param = inputEvents[i].param;
-    if (eventType(param)) {
-      event();
-    }
-  }
-
-
-  // Run collision events
-  for (let i=0; i<collisionEvents.length; i++) {
-    const collisionEvent = collisionEvents[i];
-    const a = collisionEvent.a;
-    const b = collisionEvent.b;
-    if (a.overlap(b)) {
-      if (!collisionEvent.touching || collisionEvent.keepFiring) {
-        collisionEvent.event();
+  if (World.frameCount > 1) {
+    // Run input events
+    for (var i=0; i<inputEvents.length; i++) {
+      const eventType = inputEvents[i].type;
+      const event = inputEvents[i].event;
+      const param = inputEvents[i].param;
+      if (eventType(param)) {
+        event();
       }
-      collisionEvent.touching = true;
-    } else {
-      collisionEvent.touching = false;
     }
-  }
 
-  // Run loops
-  for (let i=0; i<loops.length; i++) {
-    var loop = loops[i];
-    if (!loop.condition()) {
-      loops.splice(i, 1);
-    } else {
-      loop.loop();
+
+    // Run collision events
+    for (let i=0; i<collisionEvents.length; i++) {
+      const collisionEvent = collisionEvents[i];
+      const a = collisionEvent.a;
+      const b = collisionEvent.b;
+      if (a.overlap(b)) {
+        if (!collisionEvent.touching || collisionEvent.keepFiring) {
+          collisionEvent.event();
+        }
+        collisionEvent.touching = true;
+      } else {
+        collisionEvent.touching = false;
+      }
+    }
+
+    // Run loops
+    for (let i=0; i<loops.length; i++) {
+      var loop = loops[i];
+      if (!loop.condition()) {
+        loops.splice(i, 1);
+      } else {
+        loop.loop();
+      }
+    }
+
+
+    for (let i=0; i<sprites.length; i++) {
+      var sprite = sprites[i];
+
+      // Perform sprite behaviors
+
+      for (var j=0; j<sprite.behavior_keys.length; j++) {
+        sprite.behaviors[sprite.behavior_keys[j]](sprite);
+      }
+
+      // Make sprites say things
+      if (sprite.things_to_say.length > 0) {
+        fill("white");
+        rect(sprite.x + 10, sprite.y - 15, sprite.things_to_say[0][0].length * 7, 20);
+        fill("black");
+        text(sprite.things_to_say[0][0], sprite.x + 15, sprite.y);
+
+        if (sprite.things_to_say[0][1] === 0) {
+          sprite.things_to_say.shift();
+        } else if (sprite.things_to_say[0][1] > -1) {
+          sprite.things_to_say[0][1]--;
+        }
+      }
     }
   }
 
   drawSprites();
-
-  for (let i=0; i<sprites.length; i++) {
-    var sprite = sprites[i];
-
-    // Perform sprite behaviors
-
-    for (var j=0; j<sprite.behavior_keys.length; j++) {
-      sprite.behaviors[sprite.behavior_keys[j]](sprite);
-    }
-
-    // Make sprites say things
-    if (sprite.things_to_say.length > 0) {
-      fill("white");
-      rect(sprite.x + 10, sprite.y - 15, sprite.things_to_say[0][0].length * 7, 20);
-      fill("black");
-      text(sprite.things_to_say[0][0], sprite.x + 15, sprite.y);
-
-      if (sprite.things_to_say[0][1] === 0) {
-        sprite.things_to_say.shift();
-      } else if (sprite.things_to_say[0][1] > -1) {
-        sprite.things_to_say[0][1]--;
-      }
-    }
-  }
 
   if (show_score) {
     fill("black");
