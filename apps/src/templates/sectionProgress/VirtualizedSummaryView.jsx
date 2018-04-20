@@ -10,7 +10,7 @@ import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './m
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
-const SUMMARY_COLUMN_WIDTH = 50;
+const SUMMARY_COLUMN_WIDTH = 40;
 
 class VirtualizedSummaryView extends Component {
 
@@ -99,6 +99,11 @@ class VirtualizedSummaryView extends Component {
     const tableHeightFromRowCount = ROW_HEIGHT * rowCount;
     // Use a 'maxHeight' of 680 for when there are many rows
     const tableHeight = Math.min(tableHeightFromRowCount, MAX_TABLE_SIZE);
+    // Use a 'maxWidth' of 'content-width' when there are many columns
+    const tableWidth = Math.min(
+      styleConstants['content-width'],
+      NAME_COLUMN_WIDTH + ((columnCount - 1) * SUMMARY_COLUMN_WIDTH)
+    );
 
     return (
       <MultiGrid
@@ -117,7 +122,7 @@ class VirtualizedSummaryView extends Component {
         styleBottomLeftGrid={progressStyles.bottomLeft}
         styleTopLeftGrid={progressStyles.topLeft}
         styleTopRightGrid={progressStyles.topRight}
-        width={styleConstants['content-width']}
+        width={tableWidth}
       />
     );
   }
