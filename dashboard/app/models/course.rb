@@ -187,7 +187,10 @@ class Course < ApplicationRecord
       ScriptConstants::CATEGORIES[:full_course].map do |base_name|
         # Matches any course whose name is the base_name, with an optional
         # suffix like '-2018'.
-        Course.where('name regexp ?', "^#{base_name}(-[0-9]{4})?$").map(&:assignable_info)
+        Course.
+          where('name regexp ?', "^#{base_name}(-[0-9]{4})?$").
+          map(&:assignable_info).
+          sort_by {|info| info[:version_year]}
       end.flatten
     end
   end
