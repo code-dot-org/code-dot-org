@@ -2,14 +2,13 @@ import React, {Component, PropTypes} from 'react';
 import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
 import _ from 'lodash';
-import color from "../../util/color";
 
 const styles = {
   filterComponent: {
     float: 'right',
   },
   filterRow: {
-    backgroundColor: color.table_header,
+    backgroundColor: 'transparent',
     padding: 10,
   },
   clearDiv: {
