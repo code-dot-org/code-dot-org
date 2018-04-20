@@ -41,6 +41,7 @@ const styles = {
     padding: 10,
     fontSize: 14,
     fontFamily: '"Gotham 5r", sans-serif',
+    color: color.cyan,
   },
   headerCell: {
     border: '1px solid gray',
@@ -143,7 +144,7 @@ class ProjectsList extends React.Component {
     const channel = encodeURIComponent(rowData.channel);
 
     const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
-    return <a href={url} target="_blank">{name}</a>;
+    return <a href={url} style={tableLayoutStyles.link} target="_blank">{name}</a>;
   };
 
   getColumns = (sortable) => {
@@ -178,7 +179,7 @@ class ProjectsList extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
