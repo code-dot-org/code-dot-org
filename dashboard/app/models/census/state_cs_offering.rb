@@ -201,7 +201,7 @@ class Census::StateCsOffering < ApplicationRecord
         row_hash = row.to_hash
         state_school_id = construct_state_school_id(state_code, row_hash)
         courses = get_courses(state_code, row_hash)
-        # state_school_id is unique so there should be at most one school
+        # state_school_id is unique so there should be at most one school.
         school = School.where(state_school_id: state_school_id).first
         if school && state_school_id
           courses.each do |course|
