@@ -3,7 +3,6 @@ import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from "../util/color";
 import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
@@ -211,8 +210,8 @@ export default class DesignProperties extends React.Component {
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
                 {!onlyOneScreen && !isScreen &&
                 <CopyElementToScreenButton
-                    handleCopyElementToScreen={this.props.onCopyElementToScreen}
-                    screenIds={this.props.screenIds}
+                  handleCopyElementToScreen={this.props.onCopyElementToScreen}
+                  screenIds={this.props.screenIds}
                 />
                 }
               </div>
