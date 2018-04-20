@@ -41,7 +41,6 @@ const styles = {
     padding: 10,
     fontSize: 14,
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.cyan,
   },
   headerCell: {
     border: '1px solid gray',
