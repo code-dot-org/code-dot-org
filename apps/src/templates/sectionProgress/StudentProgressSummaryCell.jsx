@@ -71,7 +71,7 @@ class StudentProgressSummaryCell extends Component {
     const statusCounts = this.studentLevelProgressInStage();
     const perfectPixels = Math.floor((statusCounts.completed / statusCounts.total) * totalPixels);
     const imperfectPixels = Math.floor((statusCounts.imperfect / statusCounts.total) * totalPixels);
-    const incompletePixels = 20 - perfectPixels - imperfectPixels;
+    const incompletePixels = totalPixels - perfectPixels - imperfectPixels;
     const started = (statusCounts.attempted > 0) || (statusCounts.incomplete !== statusCounts.total);
 
     return (
