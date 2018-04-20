@@ -53,13 +53,20 @@ class ResourceLink extends React.Component {
   selectResource = () => {
     var dialog = new LegacyDialog({
       body: $('<iframe>')
-        .addClass('markdown-instructions-container')
+        .addClass('instructions-container')
         .width('100%')
         .attr('src', this.props.reference),
-      autoResizeScrollableElement: '.markdown-instructions-container',
+      autoResizeScrollableElement: '.instructions-container',
       id: 'block-documentation-lightbox'
     });
     dialog.show();
+
+    // Documentation that contains the class 'embedded' does not scroll
+    // Removing the class here to allow the content to scroll in the iframe
+    // TODO: EPEACH - explore removing this during transition away from legacy dialog
+    $('.instructions-container').load(() => {
+      $('.instructions-container').contents().find("body").removeClass('embedded');
+    });
   };
 
   render() {
