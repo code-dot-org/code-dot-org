@@ -15,7 +15,6 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import LocationPicker from './LocationPicker';
 import VisualizationResizeBar from "../lib/ui/VisualizationResizeBar";
 
 
@@ -108,7 +107,6 @@ class GameLabView extends React.Component {
         {this.renderAnimationMode()}
         <ErrorDialogStack/>
         <AnimationJsonViewer/>
-        <LocationPicker/>
       </StudioAppWrapper>
     );
   }

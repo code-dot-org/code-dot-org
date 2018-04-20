@@ -12,7 +12,12 @@ import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
-import {isPickingLocation} from './locationPickerModule';
+import {
+  cancelLocationSelection,
+  selectLocation,
+  updateLocation,
+  isPickingLocation
+} from './locationPickerModule';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -31,7 +36,10 @@ class GameLabVisualizationColumn extends React.Component {
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
-    toggleShowGrid: PropTypes.func.isRequired
+    toggleShowGrid: PropTypes.func.isRequired,
+    cancelPicker: PropTypes.func.isRequired,
+    selectPicker: PropTypes.func.isRequired,
+    updatePicker: PropTypes.func.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -40,6 +48,25 @@ class GameLabVisualizationColumn extends React.Component {
     mouseX: -1,
     mouseY: -1
   };
+
+  pickerMouseMove = e => {
+    if (this.props.pickingLocation) {
+      this.props.updatePicker({
+        x: e.nativeEvent.offsetX,
+        y: e.nativeEvent.offsetY,
+      });
+    }
+  };
+
+  pickerMouseUp = e => {
+    if (this.props.pickingLocation) {
+      this.props.selectPicker({
+        x: e.nativeEvent.offsetX,
+        y: e.nativeEvent.offsetY,
+      });
+    }
+  };
+
 
   componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
@@ -52,6 +79,13 @@ class GameLabVisualizationColumn extends React.Component {
         $("#grid-overlay")[0].style.display = 'none';
       }
     }
+    // Also manually raise/lower the zIndex of the playspace when selecting a
+    // location because of the protected div
+    const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
+    const divGameLab = document.getElementById('divGameLab');
+    const visualizationOverlay = document.getElementById('visualizationOverlay');
+    divGameLab.style.zIndex = zIndex;
+    visualizationOverlay.style.zIndex = zIndex;
   }
 
   onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
@@ -98,7 +132,13 @@ class GameLabVisualizationColumn extends React.Component {
     return (
       <span>
         <ProtectedVisualizationDiv>
-          <div id="divGameLab" style={divGameLabStyle} tabIndex="1">
+          <div
+            id="divGameLab"
+            style={divGameLabStyle}
+            tabIndex="1"
+            onMouseUp={this.pickerMouseUp}
+            onMouseMove={this.pickerMouseMove}
+          >
           </div>
           <VisualizationOverlay
             width={GAME_WIDTH}
@@ -130,6 +170,8 @@ class GameLabVisualizationColumn extends React.Component {
           </div>
         )}
         <BelowVisualization />
+        {this.props.pickingLocation &&
+          <div className={"modal-backdrop"} onClick={() => this.props.cancelPicker()} />}
       </span>
     );
   }
@@ -141,5 +183,8 @@ export default connect(state => ({
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
 }), dispatch => ({
-  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode))
+  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
+  cancelPicker: () => dispatch(cancelLocationSelection()),
+  updatePicker: loc => dispatch(updateLocation(loc)),
+  selectPicker: loc => dispatch(selectLocation(loc)),
 }))(GameLabVisualizationColumn);
