@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles} from "../tables/tableConstants";
-import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -28,25 +27,6 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
 };
 
 const styles = {
-  table: {
-    width: '100%',
-  },
-  cell: {
-    border: '1px solid gray',
-    padding: 10,
-    fontSize: 14,
-  },
-  nameCell: {
-    border: '1px solid gray',
-    padding: 10,
-    fontSize: 14,
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  headerCell: {
-    border: '1px solid gray',
-    padding: 10,
-    backgroundColor: color.teal,
-  },
   thumbnailCell: {
     border: '1px solid gray',
     width: THUMBNAIL_SIZE,
