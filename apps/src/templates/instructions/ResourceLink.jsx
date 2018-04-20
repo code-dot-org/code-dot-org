@@ -53,13 +53,20 @@ class ResourceLink extends React.Component {
   selectResource = () => {
     var dialog = new LegacyDialog({
       body: $('<iframe>')
-        .addClass('markdown-instructions-container')
+        .addClass('instructions-container')
         .width('100%')
         .attr('src', this.props.reference),
-      autoResizeScrollableElement: '.markdown-instructions-container',
+      autoResizeScrollableElement: '.instructions-container',
       id: 'block-documentation-lightbox'
     });
     dialog.show();
+
+    // Forces the documentation in the iframe to be scrollable (our documentation
+    // is not consistent about overflow)
+    // TODO: EPEACH - explore removing this during transition away from legacy dialog
+    $('.instructions-container').load(() => {
+      $('.instructions-container').contents().find("body").css({overflow:'auto'});
+    });
   };
 
   render() {
