@@ -30,15 +30,25 @@ FactoryGirl.define do
       enrolled_unattending_users 0
       num_completed_surveys 0
       randomized_survey_answers false
+      assign_session_code false
+    end
+    #assign_session_codes = false
+    trait :assign_session_codes do
+      transient do
+        assign_session_code true
+      end
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(
-          :pd_session,
+        params = [{
           workshop: workshop,
           start: evaluator.sessions_from + i.days,
           duration_hours: evaluator.each_session_hours
+        }]
+        params.prepend :with_assigned_code if evaluator.assign_session_code
+        #traits = evaluator.assign_session_code ? [:with_assigned_code] : []
+        workshop.sessions << build(:pd_session, params
         )
       end
       evaluator.num_enrollments.times do
@@ -86,6 +96,7 @@ FactoryGirl.define do
     num_sessions 1
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
+    #:assign_session_codes
   end
 
   factory :pd_session, class: 'Pd::Session' do
@@ -95,6 +106,10 @@ FactoryGirl.define do
     association :workshop, factory: :pd_workshop
     start {Date.today + 9.hours}
     self.end {start + duration_hours.hours}
+
+    trait :with_assigned_code do
+      after(:build) & :assign_code
+    end
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
