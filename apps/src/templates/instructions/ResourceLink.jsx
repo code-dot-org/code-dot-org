@@ -61,11 +61,11 @@ class ResourceLink extends React.Component {
     });
     dialog.show();
 
-    // Documentation that contains the class 'embedded' does not scroll
-    // Removing the class here to allow the content to scroll in the iframe
+    // Forces the documentation in the iframe to be scrollable (our documentation
+    // is not consistent about overflow)
     // TODO: EPEACH - explore removing this during transition away from legacy dialog
     $('.instructions-container').load(() => {
-      $('.instructions-container').contents().find("body").removeClass('embedded');
+      $('.instructions-container').contents().find("body").css({overflow:'auto'});
     });
   };
 
