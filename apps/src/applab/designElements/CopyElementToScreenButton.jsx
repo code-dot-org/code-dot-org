@@ -4,7 +4,6 @@ import Radium from 'radium';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {connect} from "react-redux";
 import throttle from "lodash/debounce";
-import styleConstants from "../../styleConstants";
 
 const styles = {
   copyElementToScreenButton: {
@@ -49,7 +48,7 @@ class CopyElementToScreenButton extends React.Component {
       this.resizeListener = null;
     }
     super.setState(newState);
-  };
+  }
 
   getMenuLocation() {
     const rect = this.element.firstChild.getBoundingClientRect();
@@ -57,7 +56,7 @@ class CopyElementToScreenButton extends React.Component {
       menuTop: rect.bottom + window.pageYOffset,
       menuLeft: rect.left + window.pageXOffset,
     };
-  };
+  }
 
   updateMenuLocation = () => {
     this.setState(this.getMenuLocation());
@@ -87,27 +86,31 @@ class CopyElementToScreenButton extends React.Component {
         .filter((screenId) => screenId !== this.props.currentScreenId)
             .map((screenId) =>
                 <PopUpMenu.Item
-                    key={screenId}
-                    onClick={() => this.handleMenuClick(screenId)}>{screenId}</PopUpMenu.Item>);
+                  key={screenId}
+                  onClick={() => this.handleMenuClick(screenId)}
+                >{screenId}</PopUpMenu.Item>);
 
     return (
         <div style={styles.main} ref={element => this.element = element}>
-          <button style={[commonStyles.button, styles.copyElementToScreenButton]}
-                  onClick={this.handleDropdownClick}>
+          <button
+            style={[commonStyles.button, styles.copyElementToScreenButton]}
+            onClick={this.handleDropdownClick}
+          >
             Copy to screen <i className="fa fa-chevron-down" />
           </button>
           {this.state.opened &&
             <PopUpMenu
-                isOpen={this.state.opened}
-                targetPoint={targetPoint}
-                offset={{x: 0, y: 0}}
-                beforeClose={this.beforeClose}>
+              isOpen={this.state.opened}
+              targetPoint={targetPoint}
+              offset={{x: 0, y: 0}}
+              beforeClose={this.beforeClose}
+            >
               {otherScreens}
             </PopUpMenu>
           }
         </div>
     );
-  };
+  }
 }
 
 export default connect(function propsFromStore(state) {
