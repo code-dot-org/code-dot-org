@@ -18,8 +18,11 @@ class LocationPicker extends React.Component {
 
   render() {
     const playSpace = document.getElementById('divGameLab');
+    const visualizationOverlay = document.getElementById('visualizationOverlay');
     if (playSpace) {
-      playSpace.style.zIndex = this.props.pickingLocation ? 1050 : 0;
+      const zIndex = this.props.pickingLocation ? 1050 : 0;
+      playSpace.style.zIndex = zIndex;
+      visualizationOverlay.style.zIndex = zIndex;
       if (this.props.pickingLocation) {
         playSpace.onmouseup = e => {
           const loc = {x: e.offsetX, y: e.offsetY};
