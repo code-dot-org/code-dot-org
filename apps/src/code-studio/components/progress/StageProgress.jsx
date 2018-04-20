@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
@@ -44,14 +43,14 @@ const styles = {
 /**
  * Stage progress component used in level header and course overview.
  */
-const StageProgress = React.createClass({
-  propTypes: {
+class StageProgress extends Component {
+  static propTypes = {
     // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
     stageExtrasUrl: PropTypes.string,
     onStageExtras: PropTypes.bool,
     stageTrophyEnabled: PropTypes.bool,
-  },
+  };
 
   render() {
     const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
@@ -102,7 +101,7 @@ const StageProgress = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const UnconnectedStageProgress = StageProgress;
 

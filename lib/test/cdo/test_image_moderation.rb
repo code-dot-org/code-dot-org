@@ -20,6 +20,14 @@ class ImageModerationTest < Minitest::Test
     assert_equal :adult, ImageModeration.rate_image(@image_body, @content_type)
   end
 
+  def test_passes_through_optional_image_url_if_provided
+    CDO.azure_content_moderation_key = 'fakekey'
+    test_image_url = 'test-image-url'
+    AzureContentModerator.any_instance.stubs(:rate_image).
+      with(@image_body, @content_type, test_image_url).returns(:racy).once
+    assert_equal :racy, ImageModeration.rate_image(@image_body, @content_type, test_image_url)
+  end
+
   def test_allow_everything_when_moderation_fails
     CDO.azure_content_moderation_key = 'fakekey'
     test_err = AzureContentModerator::AzureError.new('Test error')

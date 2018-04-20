@@ -23,6 +23,7 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 6,
     minWidth: 70,
+    lineHeight: '18px',
   },
   text: {
     display: 'inline-block',
