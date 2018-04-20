@@ -38,6 +38,19 @@ var GameLabP5 = function () {
       this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
     }
   };
+
+  this.setLoop = (shouldLoop) => {
+    if (!this.p5) {
+      return;
+    }
+    if (shouldLoop) {
+      // Calling p5.loop() invokes p5.draw(), but we might still be waiting for
+      // animations to load.
+      this.p5._loop = true;
+    } else {
+      this.p5.noLoop();
+    }
+  };
 };
 
 module.exports = GameLabP5;
@@ -898,23 +911,28 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
  * @param {AnimationList} animationList
+ *
+ * @return {Promise} promise that resolves when all animations are loaded
  */
 GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationList.orderedKeys.forEach(key => {
+  return Promise.all(animationList.orderedKeys.map(key => {
     const props = animationList.propsByKey[key];
     const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
-    const image = this.p5.loadImage(props.dataURI, () => {
-      const spriteSheet = this.p5.loadSpriteSheet(
-          image,
-          props.frameSize.x,
-          props.frameSize.y,
-          frameCount
-      );
-      this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
-      this.p5.projectAnimations[props.name].looping = props.looping;
-      this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+    return new Promise(resolve => {
+      const image = this.p5.loadImage(props.dataURI, () => {
+        const spriteSheet = this.p5.loadSpriteSheet(
+            image,
+            props.frameSize.x,
+            props.frameSize.y,
+            frameCount
+        );
+        this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+        this.p5.projectAnimations[props.name].looping = props.looping;
+        this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+        resolve();
+      });
     });
-  });
+  }));
 };

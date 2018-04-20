@@ -5,17 +5,19 @@ import DesignProperties from './designProperties';
 
 export default class DesignModeBox extends React.Component {
   static propTypes = {
-    handleDragStart: PropTypes.func,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
+    handleDragStart: PropTypes.func,
+    isDimmed: PropTypes.bool.isRequired,
+    isToolboxVisible: PropTypes.bool.isRequired,
+    onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
-    onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
-    isToolboxVisible: PropTypes.bool.isRequired,
-    isDimmed: PropTypes.bool.isRequired
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
@@ -68,11 +70,13 @@ export default class DesignModeBox extends React.Component {
             element={this.props.element}
             elementIdList={this.props.elementIdList}
             handleChange={this.props.handleChange}
+            onCopyElementToScreen={this.props.onCopyElementToScreen}
             onChangeElement={this.props.onChangeElement}
             onDepthChange={this.props.onDepthChange}
             onDuplicate={this.props.onDuplicate}
             onDelete={this.props.onDelete}
             onInsertEvent={this.props.onInsertEvent}
+            screenIds={this.props.screenIds}
           />
         </div>
         {transparencyLayer}

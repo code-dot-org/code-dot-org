@@ -198,18 +198,13 @@ export class CohortViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         // TODO: (mehal) Build a wrapper for react stories that lets us pass in a context with router
         href={this.context.router && this.context.router.createHref(`/${this.props.path.replace('_cohort', '')}/${id}`)}
-        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
-  };
-
-  handleViewClick = (id, event) => {
-    event.preventDefault();
-    this.context.router.push(`/${this.props.path.replace('_cohort', '')}/${id}`);
   };
 
   render() {

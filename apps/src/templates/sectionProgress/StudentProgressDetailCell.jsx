@@ -2,7 +2,6 @@ import React, { PropTypes, Component } from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
 import {
-  sectionDataPropType,
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
@@ -18,7 +17,6 @@ const styles = {
 
 export default class StudentProgressDetailCell extends Component {
   static propTypes = {
-    section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,

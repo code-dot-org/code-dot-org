@@ -16,6 +16,7 @@ const styles = {
   },
   tdStyle: {
     padding: 10,
+    borderStyle: 'none',
   },
   header: {
     backgroundColor: color.white,
