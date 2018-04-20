@@ -248,9 +248,9 @@ export class DetailViewContents extends React.Component {
     $.ajax({
       method: "DELETE",
       url: `/api/v1/pd/applications/${this.props.applicationId}`
-    }).success(() => {
+    }).done(() => {
       this.setState({deleted: true, showDeleteApplicationConfirmation: false});
-    }).error(() => {
+    }).fail(() => {
       this.setState({deleted: false, showDeleteApplicationConfirmation: false});
     });
   };
@@ -269,6 +269,11 @@ export class DetailViewContents extends React.Component {
       url: `/pd/teachercon_registration/${this.props.applicationData.application_guid}`
     }).done(() => {
       this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_teachercon: false });
+      }
+    }).fail(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
     });
   };
 
@@ -285,6 +290,11 @@ export class DetailViewContents extends React.Component {
       method: "DELETE",
       url: `/pd/fit_weekend_registration/${this.props.applicationData.application_guid}`
     }).done(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_fit_weekend: false });
+      }
+    }).fail(() => {
       this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
     });
   };
