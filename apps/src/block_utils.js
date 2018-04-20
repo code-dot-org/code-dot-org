@@ -395,7 +395,7 @@ const STATEMENT_INPUT = 'statement';
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
  * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
- *   args[].customType
+ *   args[].customInput
  * @returns {string} return[].label Text to display to the left of the input
  */
 const determineInputs = function (text, args, strictTypes=[]) {
