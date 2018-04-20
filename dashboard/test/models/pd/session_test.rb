@@ -54,7 +54,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
 
   test 'assign unique 4 character codes' do
     sessions = 10.times.map do
-      create(:pd_session).tap(&:assign_code)
+      create :pd_session, :with_assigned_code
     end
 
     codes = sessions.pluck(:code)
@@ -63,7 +63,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'find by code' do
-    session = create(:pd_session).tap(&:assign_code)
+    session = create :pd_session, :with_assigned_code
 
     found_session = Pd::Session.find_by_code session.code
     assert_equal session, found_session
@@ -78,7 +78,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     workshop_not_started = create :pd_workshop
     workshop_ended = create :pd_ended_workshop
 
-    session_open = create(:pd_session, workshop: workshop_started).tap(&:assign_code)
+    session_open = create :pd_session, :with_assigned_code, workshop: workshop_started
     assert session_open.open_for_attendance?
 
     session_no_code = create :pd_session, workshop: workshop_started
@@ -100,113 +100,40 @@ class Pd::SessionTest < ActiveSupport::TestCase
     refute session_past.too_soon_for_attendance?
     assert session_past.too_late_for_attendance?
 
-    session_ended = create(:pd_session, workshop: workshop_ended).tap(&:assign_code)
+    session_ended = create :pd_session, :with_assigned_code, workshop: workshop_ended
     assert session_ended.open_for_attendance?
     refute session_ended.too_soon_for_attendance?
     refute session_ended.too_late_for_attendance?
   end
 
-  test 'attendance link for one day workshop' do
-    #current day is Saturday
-    #workshop started Friday
-    workshop_a = create :pd_workshop, started_at: Time.now - 1.day
-    #session starts on Monday
-    session_a = create(:pd_session, workshop: workshop_a, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    refute session_a.open_for_attendance?
-    assert session_a.show_link?
+  test 'workshop with first session in three days does not show links and is not open for attendance' do
+    workshop = create :pd_workshop, :assign_session_codes, started_at: Time.now, num_sessions: 1, sessions_from: Time.now + 3.days
 
-    #current day is Friday
-    #workshop started Friday
-    workshop_a1 = create :pd_workshop, started_at: Time.now
-    #session starts on Monday
-    session_a1 = create :pd_session, workshop: workshop_a1, start: Time.now + 3.days
-    refute session_a1.open_for_attendance?
-    refute session_a1.show_link?
-    assert session_a1.too_soon_for_attendance?
-    refute session_a1.too_late_for_attendance?
+    refute workshop.sessions[0].open_for_attendance?
+    refute workshop.sessions[0].show_link?
+    assert workshop.sessions[0].too_soon_for_attendance?
+    refute workshop.sessions[0].too_late_for_attendance?
   end
 
-  test 'attendance link see immediately' do
-    #current day is Saturday
-    #workshop started Saturday
-    workshop_b = create :pd_workshop, started_at: Time.now
-    #session starts on Monday
-    session_b = create(:pd_session, workshop: workshop_b, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    refute session_b.open_for_attendance?
-    assert session_b.show_link?
+  test 'three day workshop with first session tomorrow shows two links but is not open for attendance' do
+    workshop = create :pd_workshop, :assign_session_codes, started_at: Time.now, num_sessions: 3, sessions_from: Time.now + 1.day - 1.minute
+
+    refute workshop.sessions[0].open_for_attendance?
+    assert workshop.sessions[0].show_link?
+    refute workshop.sessions[1].open_for_attendance?
+    assert workshop.sessions[1].show_link?
+    refute workshop.sessions[2].open_for_attendance?
+    refute workshop.sessions[2].show_link?
   end
 
-  test 'attendance links for three day workshop' do
-    #current day is Saturday
-    #workshop started Saturday
-    workshop_c = create :pd_workshop, started_at: Time.now
-    #session 1 starts on Monday, 2 on Tuesday, 3 on Wednesday
-    session_c1a = create(:pd_session, workshop: workshop_c, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    session_c2b = create(:pd_session, workshop: workshop_c, start: Time.now + 3.days - 1.minute).tap(&:assign_code)
-    session_c3c = create(:pd_session, workshop: workshop_c, start: Time.now + 4.days - 1.minute).tap(&:assign_code)
-    refute session_c1a.open_for_attendance?
-    assert session_c1a.show_link?
-    refute session_c2b.open_for_attendance?
-    refute session_c2b.show_link?
-    refute session_c3c.open_for_attendance?
-    refute session_c3c.show_link?
+  test 'three day workshop started on second day shows two links and has one session open for attendance' do
+    workshop = create :pd_workshop, :assign_session_codes, started_at: Time.now, num_sessions: 3, sessions_from: Time.now - 1.day - 1.minute
 
-    #current day is Sunday
-    #workshop started on Saturday
-    workshop_c1 = create :pd_workshop, started_at: Time.now - 1.day
-    #session 1 starts on Monday, 2 on Tuesday, 3 on Wednesday
-    session_c1d = create(:pd_session, workshop: workshop_c1, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
-    session_c2e = create(:pd_session, workshop: workshop_c1, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    session_c3f = create(:pd_session, workshop: workshop_c1, start: Time.now + 3.days - 1.minute).tap(&:assign_code)
-    refute session_c1d.open_for_attendance?
-    assert session_c1d.show_link?
-    refute session_c2e.open_for_attendance?
-    assert session_c2e.show_link?
-    refute session_c3f.open_for_attendance?
-    refute session_c3f.show_link?
-
-    #current day is Monday
-    #workshop created on Saturday
-    workshop_c2 = create :pd_workshop, started_at: Time.now - 2.days
-    #session 1 starts on Monday, 2 on Tuesday, 3 on Wednesday
-    session_c1g = create(:pd_session, workshop: workshop_c2, start: Time.now - 1.minute).tap(&:assign_code)
-    session_c2h = create(:pd_session, workshop: workshop_c2, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
-    session_c3i = create(:pd_session, workshop: workshop_c2, start: Time.now + 2.days - 1.minute).tap(&:assign_code)
-    assert session_c1g.open_for_attendance?
-    assert session_c1g.show_link?
-    refute session_c2h.open_for_attendance?
-    assert session_c2h.show_link?
-    refute session_c3i.open_for_attendance?
-    assert session_c3i.show_link?
-
-    #current day is Tuesday
-    #workshop created on Saturday
-    workshop_c3 = create :pd_workshop, started_at: Time.now - 3.days
-    #session 1 starts on Monday, 2 on Tuesday, 3 on Wednesday
-    session_c1j = create(:pd_session, workshop: workshop_c3, start: Time.now - 1.day - 1.minute).tap(&:assign_code)
-    session_c2k = create(:pd_session, workshop: workshop_c3, start: Time.now - 1.minute).tap(&:assign_code)
-    session_c3l = create(:pd_session, workshop: workshop_c3, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
-    refute session_c1j.open_for_attendance?
-    refute session_c1j.show_link?
-    assert session_c2k.open_for_attendance?
-    assert session_c2k.show_link?
-    refute session_c3l.open_for_attendance?
-    assert session_c3l.show_link?
-  end
-
-  test 'attendance link for late start three day workshop' do
-    #current day is Tuesday
-    #workshop started Tuesday
-    workshop_d = create :pd_workshop, started_at: Time.now
-    #session 1 starts on Monday, 2 on Tuesday, 3 on Wednesday
-    session_d1 = create(:pd_session, workshop: workshop_d, start: Time.now - 1.day - 1.minute).tap(&:assign_code)
-    session_d2 = create(:pd_session, workshop: workshop_d, start: Time.now - 1.minute).tap(&:assign_code)
-    session_d3 = create(:pd_session, workshop: workshop_d, start: Time.now + 1.day - 1.minute).tap(&:assign_code)
-    refute session_d1.open_for_attendance?
-    refute session_d1.show_link?
-    assert session_d2.open_for_attendance?
-    assert session_d2.show_link?
-    refute session_d3.open_for_attendance?
-    assert session_d3.show_link?
+    refute workshop.sessions[0].open_for_attendance?
+    refute workshop.sessions[0].show_link?
+    assert workshop.sessions[1].open_for_attendance?
+    assert workshop.sessions[1].show_link?
+    refute workshop.sessions[2].open_for_attendance?
+    assert workshop.sessions[2].show_link?
   end
 end
