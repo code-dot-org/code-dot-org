@@ -38,8 +38,8 @@
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Now let’s turn and go back the way we came.\"_\r\n\r\nTurn around 180 degrees and draw the exact same stair pattern again!  \r\n\r\n- The rest of this stage will be easier if you put all of your code inside of a loop to make Elsa  draw, turn around 180 degrees, draw, then turn around 180 degrees again.\r\n\r\n<hr/>\r\n\r\nHere is an example of stairs that use a 76 degree turn:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 9228,
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
