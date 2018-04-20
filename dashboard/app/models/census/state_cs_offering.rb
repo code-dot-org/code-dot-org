@@ -25,6 +25,7 @@ class Census::StateCsOffering < ApplicationRecord
     CA
     GA
     ID
+    IN
     MI
     NC
     SC
@@ -54,6 +55,9 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
+    when 'IN'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES'])&.state_school_id
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
@@ -102,6 +106,15 @@ class Census::StateCsOffering < ApplicationRecord
     11.01900
   ).freeze
 
+  IN_COURSE_CODES = %w(
+    4570
+    4568
+    4801
+    5236
+    4803
+    5612
+    4586
+  ).freeze
   MI_COURSE_CODES = %w(
     10157
     10999
@@ -114,7 +127,7 @@ class Census::StateCsOffering < ApplicationRecord
     10003
     10199
     10197
-  )
+  ).freeze
 
   NC_COURSE_CODES = %w(
     BL03
@@ -186,6 +199,9 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
+    when 'IN'
+      # A column per CS course with a value of 'Y' if the course is offered.
+      IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'NC'
