@@ -123,6 +123,7 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
     'A.P. Computer Science Principles',
@@ -133,12 +134,12 @@ class Census::StateCsOffering < ApplicationRecord
     'Computer Science Principles',
     'Computer Science Principles CE',
     'Exploring Computer Science I  (CS',
-    'Exploring Computer Science II	IB',
-    'Computer Science HL 1	IB',
-    'Computer Science HL 2	IB',
-    'Computer Science SL 1	IB',
-    'Computer Science SL 2	PLtW',
-    'Computer Science & Software Enginee'
+    'Exploring Computer Science II',
+    'IB Computer Science HL 1',
+    'IB Computer Science HL 2',
+    'IB Computer Science SL 1',
+    'IB Computer Science SL 2',
+    'PLtW Computer Science & Software Enginee'
   ]
 
   AR_COURSE_CODES = %w(
