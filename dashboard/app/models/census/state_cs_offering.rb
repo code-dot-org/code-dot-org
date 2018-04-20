@@ -55,6 +55,7 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
     when 'MI'
+      # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
     when 'NC'
       # School code in the spreadsheet from North Carolina is prefixed with the district code
