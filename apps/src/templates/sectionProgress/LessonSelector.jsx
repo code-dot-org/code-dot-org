@@ -8,8 +8,7 @@ const styles = {
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
-    padding: '0.8em',
-    marginBottom: 10,
+    height: 34
   },
   heading: {
     marginBottom: 0,
