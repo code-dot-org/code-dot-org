@@ -78,6 +78,33 @@ class Census::StateCsOffering < ApplicationRecord
 
   UNSPECIFIED_COURSE = 'unspecified'
 
+  AR_COURSE_CODES = %w(
+    565320
+    565310
+    565120
+    565110
+    565020
+    565010
+    465520
+    465510
+    465340
+    465330
+    465320
+    465310
+    465220
+    465210
+    465140
+    465130
+    465120
+    465110
+    465060
+    465050
+    465040
+    465030
+    465020
+    465010
+  ).freeze
+
   CA_COURSE_CODES = %w(
     2451
     2453
@@ -115,6 +142,7 @@ class Census::StateCsOffering < ApplicationRecord
     5612
     4586
   ).freeze
+
   MI_COURSE_CODES = %w(
     10157
     10999
@@ -152,33 +180,6 @@ class Census::StateCsOffering < ApplicationRecord
     WC21
     WC22
   ).freeze
-
-  AR_COURSE_CODES = %w(
-    565320
-    565310
-    565120
-    565110
-    565020
-    565010
-    465520
-    465510
-    465340
-    465330
-    465320
-    465310
-    465220
-    465210
-    465140
-    465130
-    465120
-    465110
-    465060
-    465050
-    465040
-    465030
-    465020
-    465010
-  )
 
   def self.get_courses(state_code, row_hash)
     case state_code
