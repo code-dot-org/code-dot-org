@@ -607,16 +607,16 @@ exports.createJsWrapperBlockCreator = function (
     eventBlock,
     eventLoopBlock,
     inline,
-    returnArg,
+    simpleValue,
   }) => {
-    if (!!func + !!expression + !!returnArg !== 1) {
-      throw new Error('Provide exactly one of func, expression, or returnArg');
+    if (!!func + !!expression + !!simpleValue !== 1) {
+      throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
-    if ((expression || returnArg) && !name) {
+    if ((expression || simpleValue) && !name) {
       throw new Error('This block requires a name');
     }
-    if (returnArg && args.length !== 1) {
-      throw new Error('returnArg blocks must have exactly one argument');
+    if (simpleValue && args.length !== 1) {
+      throw new Error('simpleValue blocks must have exactly one argument');
     }
     args = args || [];
     color = color || DEFAULT_COLOR;
@@ -688,7 +688,7 @@ exports.createJsWrapperBlockCreator = function (
         }
       });
 
-      if (returnArg) {
+      if (simpleValue) {
         return [
           values[0],
           orderPrecedence === undefined ? ORDER_NONE : orderPrecedence

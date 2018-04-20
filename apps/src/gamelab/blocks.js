@@ -373,7 +373,7 @@ export default {
 
     createJsWrapperBlock({
       color: LOCATION_COLOR,
-      returnArg: true,
+      simpleValue: true,
       name: 'location_picker',
       blockText: '{LOCATION}',
       args: [{
