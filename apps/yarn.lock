@@ -93,9 +93,9 @@
   version "1.2.1-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.1-cdo.tgz#0c0a0d9cd12981d13311564ee3bdba2981d78dc8"
 
-"@code-dot-org/piskel@0.13.0-cdo.2":
-  version "0.13.0-cdo.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.2.tgz#ee1134953e54f1644aeee028f1280bc2bee32b64"
+"@code-dot-org/piskel@0.13.0-cdo.3":
+  version "0.13.0-cdo.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.3.tgz#dfda56a2aa8a4dbe449aac55ef81bc6762287f0c"
 
 "@code-dot-org/snack-sdk@^1.0.11":
   version "1.0.11"
