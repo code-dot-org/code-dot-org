@@ -32,8 +32,7 @@ FactoryGirl.define do
       randomized_survey_answers false
       assign_session_code false
     end
-    #assign_session_codes = false
-    trait :assign_session_codes do
+    trait :with_codes_assigned do
       transient do
         assign_session_code true
       end
@@ -94,7 +93,6 @@ FactoryGirl.define do
     num_sessions 1
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
-    #:assign_session_codes
   end
 
   factory :pd_session, class: 'Pd::Session' do
