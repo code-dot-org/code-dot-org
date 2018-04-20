@@ -47,9 +47,7 @@ FactoryGirl.define do
           duration_hours: evaluator.each_session_hours
         }]
         params.prepend :with_assigned_code if evaluator.assign_session_code
-        #traits = evaluator.assign_session_code ? [:with_assigned_code] : []
-        workshop.sessions << build(:pd_session, params
-        )
+        workshop.sessions << build(:pd_session, *params)
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -108,7 +106,7 @@ FactoryGirl.define do
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
-      after(:build) & :assign_code
+      after :build, &:assign_code
     end
   end
 
