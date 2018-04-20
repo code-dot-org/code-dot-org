@@ -27,6 +27,7 @@ class Census::StateCsOffering < ApplicationRecord
     ID
     NC
     SC
+    UT
   ).freeze
 
   # By default we treat the lack of state data for high schools as an
@@ -121,6 +122,24 @@ class Census::StateCsOffering < ApplicationRecord
     WC21
     WC22
   ).freeze
+
+  UT_COURSE_CODES = [
+    'A.P.  Computer Science',
+    'A.P. Computer Science Principles',
+    'Computer Programming I',
+    'Computer Programming I CE',
+    'Computer Programming II',
+    'Computer Programming II CE',
+    'Computer Science Principles',
+    'Computer Science Principles CE',
+    'Exploring Computer Science I  (CS',
+    'Exploring Computer Science II	IB',
+    'Computer Science HL 1	IB',
+    'Computer Science HL 2	IB',
+    'Computer Science SL 1	IB',
+    'Computer Science SL 2	PLtW',
+    'Computer Science & Software Enginee'
+  ]
 
   AR_COURSE_CODES = %w(
     565320
