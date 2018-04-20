@@ -30,5 +30,3 @@ with no schema binding;
 
 GRANT ALL PRIVILEGES ON analysis.csp_csd_started_teachers TO GROUP admin;
 GRANT SELECT ON analysis.csp_csd_started_teachers TO GROUP reader, GROUP reader_pii;
-
-select top 100 * from analysis.csp_csd_started_teachers
