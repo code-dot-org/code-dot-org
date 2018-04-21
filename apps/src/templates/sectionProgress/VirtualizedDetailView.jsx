@@ -10,6 +10,7 @@ import {
   studentLevelProgressPropType,
   getColumnWidthsForDetailView
 } from './sectionProgressRedux';
+import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
 import {
   progressStyles,
@@ -134,7 +135,7 @@ class VirtualizedDetailView extends Component {
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                icon={level.icon ? level.icon.replace('fa-', '') : "desktop"}
+                icon={getIconForLevel(level)}
                 style={progressStyles.icon}
                 key={i}
               />
