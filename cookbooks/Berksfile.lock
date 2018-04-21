@@ -106,7 +106,7 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
-  cdo-mysql (0.1.8)
+  cdo-mysql (0.1.10)
     apt (~> 2.6.0)
   cdo-networking (0.1.1)
     ixgbevf (>= 0.0.0)
