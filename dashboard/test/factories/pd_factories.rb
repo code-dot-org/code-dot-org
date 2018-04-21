@@ -33,9 +33,7 @@ FactoryGirl.define do
       assign_session_code false
     end
     trait :with_codes_assigned do
-      transient do
-        assign_session_code true
-      end
+      assign_session_code true
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
