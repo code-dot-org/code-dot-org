@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
+import experiments from '../../util/experiments';
+
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -195,11 +197,12 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
+  const params = experiments.isEnabled('courseVersions') ? '?allVersions=1' : '';
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    '/dashboardapi/courses',
+    `/dashboardapi/courses${params}`,
     '/v2/sections/valid_scripts'
   ];
   if (id) {
@@ -362,6 +365,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
   };
 }
 
+const defaultVersionYear = '2017';
+
 export default function teacherSections(state=initialState, action) {
   if (action.type === SET_OAUTH_PROVIDER) {
     return {
@@ -387,6 +392,14 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
 
+    // An array of assignment groups. See the assignmentGroupShape PropType.
+    const assignmentGroups = [];
+
+    // Fields to copy from the assignmentInfo when creating an assignmentGroup.
+    const assignmentGroupFields = [
+      'category_priority', 'category', 'position', 'name', 'base_name'
+    ];
+
     // Primary assignment ids are (a) courses and (b) scripts that are not in any
     // of our courses.
     let primaryAssignmentIds = [];
@@ -405,6 +418,16 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `/courses/${course.script_name}`
       };
+
+      // Borrow the fields we need to display the assignment group from the
+      // course in that group with the default version year, 2017. This assumes
+      // that course has a display name suitable or describing all versions in
+      // the group like "CS Discoveries", not a version-specific name like "CS
+      // Discoveries 2017".
+      if (course.version_year === defaultVersionYear) {
+        assignmentGroups.push(_.pick(course, assignmentGroupFields));
+      }
+
       primaryAssignmentIds.push(assignId);
       secondaryAssignmentIds.push(...scriptAssignIds);
     });
@@ -420,6 +443,15 @@ export default function teacherSections(state=initialState, action) {
         path: `/s/${script.script_name}`
       };
 
+      // Scripts currently have only one version.
+      assignmentGroups.push({
+        ..._.pick(script, assignmentGroupFields),
+
+        // Each script will have a unique base name, and will therefore form
+        // its own assignment group.
+        base_name: script.script_name
+      });
+
       if (!secondaryAssignmentIds.includes(assignId)) {
         primaryAssignmentIds.push(assignId);
       }
@@ -429,6 +461,7 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       validAssignments,
       primaryAssignmentIds,
+      assignmentGroups,
     };
   }
 
