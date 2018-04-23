@@ -207,32 +207,6 @@ class Course < ApplicationRecord
     end
   end
 
-  # Get the set of valid courses for the dropdown in our sections table,
-  # including course versions, grouped by base name and then by version. e.g.
-  # {
-  #   "csd":{
-  #     "2017":{"name":"Computer Science Discoveries","script_name":"csd", ...},
-  #     "2018":{"name":"Computer Science Discoveries","script_name":"csd-2018", ...}
-  #   },
-  #   "csp": {
-  #     "2017": {"name":"Computer Science Principles","script_name":"csp", ...}
-  #   }
-  # }
-  # This should be static data for users without experiments enabled, but
-  # contains localized strings so we can only cache on a per locale basis.
-  def self.valid_course_versions
-    Rails.cache.fetch("valid_course_versions/#{I18n.locale}") do
-      ScriptConstants::CATEGORIES[:full_course].map do |base_name|
-        # Matches any course whose name is the base_name, with an optional
-        # suffix like '-2018'.
-        versions = Course.where('name regexp ?', "^#{base_name}(-[0-9]{4})?$").map do |course|
-          [course.version_year, course.assignable_info]
-        end.to_h
-        [base_name, versions]
-      end.to_h
-    end
-  end
-
   # If the course name  (e.g. "foo-2018") has a version suffix, then the first
   # capture group is the base name ("foo") and the second capture group is the
   # version year ("2018"). Does not match course name without version suffix.

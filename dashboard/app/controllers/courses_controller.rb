@@ -22,10 +22,6 @@ class CoursesController < ApplicationController
     end
   end
 
-  def versions
-    render json: Course.valid_course_versions
-  end
-
   def show
     course = Course.get_from_cache(params[:course_name])
     unless course
