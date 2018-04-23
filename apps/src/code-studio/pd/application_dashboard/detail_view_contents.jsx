@@ -411,24 +411,26 @@ export class DetailViewContents extends React.Component {
       </a>
     );
 
-    if (this.props.applicationData.attending_teachercon) {
-      registrationLinks.push((
-        <DetailViewResponse
-          question="TeacherCon Registration Link"
-          layout="lineItem"
-          answer={buildRegistrationLink('teachercon_registration')}
-        />
-      ));
-    }
+    if (this.props.isWorkshopAdmin && this.props.applicationData.status === 'accepted' && this.props.applicationData.locked) {
+      if (this.props.applicationData.attending_teachercon) {
+        registrationLinks.push((
+          <DetailViewResponse
+            question="TeacherCon Registration Link"
+            layout="lineItem"
+            answer={buildRegistrationLink('teachercon_registration')}
+          />
+        ));
+      }
 
-    if (this.props.applicationData.fit_workshop_id) {
-      registrationLinks.push((
-        <DetailViewResponse
-          question="FiT Weekend Registration Link"
-          layout="lineItem"
-          answer={buildRegistrationLink('fit_weekend_registration')}
-        />
-      ));
+      if (this.props.applicationData.fit_workshop_id) {
+        registrationLinks.push((
+          <DetailViewResponse
+            question="FiT Weekend Registration Link"
+            layout="lineItem"
+            answer={buildRegistrationLink('fit_weekend_registration')}
+          />
+        ));
+      }
     }
 
     return registrationLinks;
