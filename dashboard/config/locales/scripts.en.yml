@@ -7625,6 +7625,8 @@ en:
               name: Present Your Project
               description_student: ''
               description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
         courseb-2018:
           title: Course B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
