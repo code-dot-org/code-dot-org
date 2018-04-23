@@ -1,3 +1,4 @@
+drop table if exists analysis.csf_plugged_stage_counts;
 create table analysis.csf_plugged_stage_counts (
 script_id int,
 plugged_stage_counts int
@@ -17,3 +18,6 @@ insert into analysis.csf_plugged_stage_counts values
 (241,10),
 (258,19),
 (259,7);
+
+GRANT ALL PRIVILEGES ON analysis.csf_plugged_stage_counts TO GROUP admin;
+GRANT SELECT ON analysis.csf_plugged_stage_counts TO GROUP reader, GROUP reader_pii;
