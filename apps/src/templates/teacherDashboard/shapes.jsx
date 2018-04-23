@@ -18,6 +18,7 @@ export const sectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
 });
 
+// An assignment is a course or script that a user can be assigned to.
 export const assignmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   courseId: PropTypes.number,
@@ -28,6 +29,29 @@ export const assignmentShape = PropTypes.shape({
   position: PropTypes.number,
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
+  script_name: PropTypes.string.isRequired,
+  // The base name of the course or script, e.g. "csd" for course csd-2018.
+  // Assignments with the same base_name will form an assignment group.
+  base_name: PropTypes.string,
+  version_year: PropTypes.string,
+});
+
+// An assignment group is a collection of versions of a course or script like
+// "csd" or "coursea". For example, the assignment group "csd" could contain the
+// courses csd-2017 and csd-2018.
+//
+// This is a bit confusing because we want to be able to just call csd a
+// "course" instead of an "assignment group", but we can't because the term
+// "course" is already used to refer to a specific version of a course such as
+// csd-2018.
+export const assignmentGroupShape = PropTypes.shape({
+  category_priority: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  position: PropTypes.number,
+  // Display name
+  name: PropTypes.string.isRequired,
+  // The assignment group contains all assignments which have this base_name, e.g "csd".
+  base_name: PropTypes.string.isRequired,
 });
 
 export const classroomShape = PropTypes.shape({
