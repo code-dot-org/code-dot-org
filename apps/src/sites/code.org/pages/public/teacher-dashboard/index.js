@@ -28,11 +28,6 @@ const scriptData = JSON.parse(script.dataset.teacherdashboard);
 
 main(scriptData);
 
-// Check the experiment at the top level, so that the enableExperiments and
-// disableExperiments url params will cause a persistent setting to be stored
-// from any page in teacher dashboard.
-const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
-
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
@@ -48,7 +43,7 @@ function renderSectionProjects(sectionId) {
       <SectionProjectsList
         projectsData={projectsData}
         studioUrlPrefix={studioUrlPrefix}
-        showProjectThumbnails={showProjectThumbnails}
+        showProjectThumbnails={true}
       />,
       element);
   });
