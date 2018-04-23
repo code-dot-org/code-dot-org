@@ -12,6 +12,7 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import SurveySupportSection from './SurveySupportSection';
+import i18n from '@cdo/applab/locale';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -129,7 +130,7 @@ export default class SetupChecklist extends Component {
   }
 
   /**
-   * Helper to be used on second/subsequent attempts at detecing board usability.
+   * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
     if (
@@ -154,7 +155,7 @@ export default class SetupChecklist extends Component {
       // Maker Toolkit Standalone App
       return (
         <ValidationStep
-          stepName="Code.org Browser"
+          stepName={i18n.maker_setup_step_maker_app()}
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
@@ -162,7 +163,7 @@ export default class SetupChecklist extends Component {
       // Chromebooks - Chrome App
       return (
         <ValidationStep
-          stepName={'Chrome App installed' + (isChromeOS() ? '' : ' (Legacy)')}
+          stepName={i18n.maker_setup_step_chrome_app() + (isChromeOS() ? '' : ' (Legacy)')}
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
           Please install the
@@ -184,7 +185,7 @@ export default class SetupChecklist extends Component {
       // Unsupported Browser
       return (
         <ValidationStep
-          stepName="Using a supported browser"
+          stepName={i18n.maker_setup_step_supported_browser()}
           stepStatus={Status.FAILED}
         >
           Your current browser is not supported at this time.
@@ -223,7 +224,7 @@ export default class SetupChecklist extends Component {
             {this.renderPlatformSpecificSteps()}
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
-              stepName="Board plugged in"
+              stepName={i18n.maker_setup_step_board_plugged()}
             >
               {this.state.caughtError && this.state.caughtError.reason &&
                 <pre>
@@ -244,7 +245,7 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_CONNECT]}
-              stepName="Board connectable"
+              stepName={i18n.maker_setup_step_board_connectable()}
             >
               We found a board but it didn't respond properly when we tried to connect to it.
               {linuxPermissionError &&
@@ -279,7 +280,7 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-              stepName="Board components usable"
+              stepName={i18n.maker_setup_step_board_components()}
             >
               Oh no! Something unexpected went wrong while verifying the board components.
               <br/>You should make sure your board has the right firmware sketch installed.
