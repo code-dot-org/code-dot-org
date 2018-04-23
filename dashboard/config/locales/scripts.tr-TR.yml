@@ -10170,6 +10170,8 @@
               description_teacher: ''
             Loops in Ice Age:
               name: Loops in Ice Age
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler
         jr-test:
           stages:
             Programming with Behaviors:

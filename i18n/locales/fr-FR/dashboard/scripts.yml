@@ -346,7 +346,7 @@ fr:
             'Programming Concept: Loops':
               name: 'Concept de programmation : boucles'
             Reflection:
-              name: Reflection
+              name: Réflexion
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Unplugged lessons:
@@ -551,9 +551,9 @@ fr:
             Sending Bits in the Real World:
               name: Sending Bits in the Real World
             Sending Complex Messages:
-              name: Sending Complex Messages
+              name: Envoyer des messages complexes
             Sending Formatted Text:
-              name: Sending Formatted Text
+              name: Envoyer du texte formaté
             Sending Numbers:
               name: Sending Numbers
             Text Compression:
@@ -576,7 +576,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Pourquoi les sciences informatiques dépendent de l'algèbre
         algPDmiami:
           title: Informatique en DP d'algèbre
           description: Enseigner l'algèbre par le biais de la programmation fonctionnelle
@@ -623,7 +623,7 @@ fr:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Impacte des sciences informatiques
             Introduction to PD:
               name: Introduction au développement professionnel
             Preparing for in-person PD:
@@ -650,7 +650,7 @@ fr:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Impacte des sciences informatiques
             Introduction to PD:
               name: Introduction au développement professionnel
             Preparing for in-person PD:
@@ -682,7 +682,7 @@ fr:
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Le tutoriel
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
@@ -799,7 +799,7 @@ fr:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Impacte des sciences informatiques
             Introduction to PD:
               name: Introduction au développement professionnel
             Preparing for in-person PD:
@@ -817,7 +817,7 @@ fr:
             Growth Mindset:
               name: Growth Mindset
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: Impacte des sciences informatiques
             Introduction to PD:
               name: Introduction au développement professionnel
             Preparing for in-person PD:
@@ -844,7 +844,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Pourquoi les sciences informatiques dépendent de l'algèbre
         algebraPD-iZone:
           title: Informatique en DP d'algèbre
           description: 'Apprendre la programmation fonctionnelle par l''algèbre'
@@ -863,7 +863,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Pourquoi les sciences informatiques dépendent de l'algèbre
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Apprendre la programmation fonctionnelle par l''algèbre'
@@ -888,7 +888,7 @@ fr:
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Le tutoriel
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
@@ -919,7 +919,7 @@ fr:
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Le tutoriel
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
@@ -2084,7 +2084,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Pourquoi les sciences informatiques dépendent de l'algèbre
         algebraPD3c:
           title: Informatique en DP d'algèbre
           description: CS in Algebra end of year reflection
@@ -2490,7 +2490,7 @@ fr:
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Le tutoriel
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
@@ -2546,7 +2546,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: Pourquoi les sciences informatiques dépendent de l'algèbre
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -2570,7 +2570,7 @@ fr:
             Post-Survey:
               name: Post-Survey
             The Tutorial:
-              name: The Tutorial
+              name: Le tutoriel
             Using Computer Models in Science:
               name: Using Computer Models in Science
             Using Models in the Classroom:
@@ -7763,6 +7763,8 @@ fr:
               description_teacher: ''
             Loops in Ice Age:
               name: Loops in Ice Age
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
         jr-test:
           stages:
             Programming with Behaviors:

@@ -7669,6 +7669,14 @@
         him as a special treat.
       beeDebugVideo1_instruction: Bisakah Anda menggunakan perulangan untuk mengumpulkan
         semua nektar itu?
+      behaviors pet test 123 copy_instruction: |-
+        When Daisy gets a carrot, she gets
+        excited. Use the **"when touches"** event and the "add behavior" block
+        to make Daisy do something fun when she gets the carrot.
+      behaviors pet test 123_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
       behaviors pet test 2_instruction: |-
         When Daisy gets a carrot, she gets excited.
         Use the **"when touches"** event and the "add behavior" block to make
@@ -9603,6 +9611,35 @@
         Spin that shape around 5 or 6 times in
         a circle.
       courseD_Frozen_nested9_instruction: |-
+        Try playing around with what you've created.
+        Draw whatever you like!\r
+        - What happens if you use two different angles
+        in your stair step pattern?\r
+        - What happens if you make your diamond pattern
+        longer or shorter?\r
+        - What does it look like to draw two snowflakes on top
+        of one another?
+      courseD_artist_1_2018_instruction: |
+        Draw a small square with **30** pixel long
+        sides.  \r
+      courseD_artist_2_2018_instruction: |
+        Now, turn right by **60** degrees, then
+        draw a straight line **150** pixels long and jump back to the center of the
+        play area.\r
+      courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
+        loop and run it a total of **6** times. "
+      courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
+      courseD_artist_5_2018_instruction: Play with the snowflakes!
+      courseD_artist_6_2018_instruction: |-
+        Draw a stair-step pattern that uses turns
+        between 75 and 105 degrees.
+      courseD_artist_7_2018_instruction: |-
+        Now, turn around 180 degrees and draw the
+        stair pattern again!
+      courseD_artist_8_2018_instruction: |-
+        Spin that shape around 5 or 6 times in
+        a circle.
+      courseD_artist_9_2018_instruction: |-
         Try playing around with what you've created.
         Draw whatever you like!\r
         - What happens if you use two different angles
@@ -14067,6 +14104,29 @@
         \r
         This dog's name is Daisy. Daisy LOVES to snack on
         carrots. Use the "drag and drop" block to move the carrot to Daisy.
+      loops_forvideo_angrybirds_ab_instruction: |-
+        Use loops to get the bird to the
+        pig!
+      loops_forvideo_angrybirds_cf_instruction: |-
+        Use loops to get the bird to the
+        pig!
+      loops_forvideo_bee_cf_instruction: |-
+        Use loops to help the bee get nectar from
+        all the flowers!
+      loops_forvideo_collector_ab_instruction: |-
+        Use loops to help the collector get
+        all the gems!
+      loops_forvideo_collector_cf_instruction: |-
+        Use loops to help Laurel collect
+        gems!
+      loops_forvideo_harvester_ab_instruction: |-
+        Use loops to help the harvester pick
+        the corn!
+      loops_forvideo_harvester_cf_instruction: |-
+        Use loops to help the harvester pick
+        her crops!
+      loops_forvideo_iceage_ab_instruction: Use loops to get Scrat to the acorn!
+      loops_forvideo_iceage_cf_instruction: Use loops to get Scrat to the acorn!
       love_spring_1_instruction: |-
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up

@@ -8144,6 +8144,34 @@ ka:
           აქ ორი განსხვავებული სიგრძის მქონე ფიფქია, ერთი დახატულია მეორის შემდეგ (მათ შორის 30 გრადუსიანი მობრუნებით.)
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
+        courseD_artist_project1_b: გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს, ხოლო `წინ გადახტომა` - არა.
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump` does not.
+        courseD_artist_project1_a: გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
+      courseD_artist_3_2018_authored_hint: [ ]
+      courseD_artist_4_2018_authored_hint: [ ]
+      courseD_artist_5_2018_authored_hint: [ ]
+      courseD_artist_6_2018_authored_hint:
+        courseD_artist_project1a_a: |
+          ეს კიბის საფეხური იყენებს 76-გრადუსიან ბრუნს და მეორდება 4-ჯერ.
+          
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: ეს ორნამენტები ძალიან ჰგავს კიბის საფეხურებს სხვა თავსატეხებიდან, ოღონდ სხვა ზომის კუთხეა გამოყენებული.
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: |
+          ეს ნახატი შეიქმნა 4 კიბის ციკლისა და `მარჯვნივ 180 გრადუსით მობრუნების` ბლოკის `ორჯერ გამეორების` ბლოკში მოთავსებით.
+          
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: ფიგურის სატრიალებლად განსხვავებული სიდიდეების გამოყენება შეგიძლიათ! რას იტყვით 18-ჯერ 20 გრადუსიან მობრუნებაზე?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          აქ ორი განსხვავებული სიგრძის მქონე ფიფქია, ერთი დახატულია მეორის შემდეგ (მათ შორის 30 გრადუსიანი მობრუნებით.)
+          
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: [ ]
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: ჩაანაცვლეთ "???" ტექსტსის ბლოკში იმ ორობითი სურათით, რომელიც გსურთ, ნულებისა და ერთების გამოყენებით.
         courseD_artist_binary1_b: მხატვარი დახატავს თეთრ სივრცეს თითოეული 1-სათვის და შავ სივრცეს თითოეული 0-ისათვის.

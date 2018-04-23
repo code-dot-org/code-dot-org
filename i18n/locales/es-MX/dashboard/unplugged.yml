@@ -165,25 +165,25 @@ es-MX:
         desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se tocan los dos puntos (o juego de caracteres).
       courseA_unplugged_loops:
         title: Ciclos desconectados
-        desc: In this lesson, you will learn about loops!
+        desc: '¡En esta lección aprenderas sobre ciclos!'
       courseB_unplugged_MRF:
         title: Actividad fuera de línea
-        desc: In this lesson, you will 'program' your friends!
+        desc: '¡En esta lección ''programarás'' a tus amigos!'
       courseB_unplugged_loopyMRF:
         title: Actividad fuera de línea
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: '¡Al igual que en "Mis amigos robóticos", "programarás" tus amigos, pero esta vez con ciclos!'
       courseC_Unplugged_ScreenOutTheMean:
-        title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        title: Actividad desconectada
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       courseD_unplugged_digitalCitizenship:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -263,8 +263,8 @@ es-MX:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ""
         desc: ""
@@ -312,7 +312,7 @@ es-MX:
         desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
       courseA_unplugged_loops_2018:
         title: Ciclos desconectados
-        desc: In this lesson, you will learn about loops!
+        desc: '¡En esta lección aprenderas sobre ciclos!'
       BigEvent_2018:
         title: El gran evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que una computadora monitoréa constántemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.
@@ -321,10 +321,10 @@ es-MX:
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones) usando un conjunto de comandos predefinidos para dirigir a sus compañeros en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       Conditionals_2018:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
