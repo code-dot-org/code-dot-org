@@ -1402,9 +1402,10 @@ StudioApp.prototype.clearHighlighting = function () {
 /**
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
-* @param {FeedbackOptions} options
+* @param {FeedbackOptions} opts
 */
-StudioApp.prototype.displayFeedback = function (options) {
+StudioApp.prototype.displayFeedback = function (opts) {
+  const options = {...opts};
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
