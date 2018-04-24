@@ -18,6 +18,7 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {
   ApplicationStatuses,
+  RegionalPartnerDropdownOptions as dropdownOptions,
   RegionalPartnerPropType
 } from './constants';
 import {
@@ -40,7 +41,7 @@ const styles = {
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType,
-    showRegionalPartnerDropdown: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
@@ -149,8 +150,10 @@ export class QuickView extends React.Component {
             registered={registered}
           />
         }
-        {this.props.showRegionalPartnerDropdown &&
-          <RegionalPartnerDropdown/>
+        {this.props.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            additionalOptions={dropdownOptions}
+          />
         }
         <Row>
           <h1>{this.props.regionalPartnerFilter.label}</h1>
@@ -209,5 +212,5 @@ export class QuickView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.length > 1
+  isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);

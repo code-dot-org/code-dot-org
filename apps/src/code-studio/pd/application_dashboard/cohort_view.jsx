@@ -9,7 +9,10 @@ import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
-import {RegionalPartnerPropType} from './constants';
+import {
+  RegionalPartnerDropdownOptions as dropdownOptions,
+  RegionalPartnerPropType
+} from './constants';
 
 const styles = {
   button: {
@@ -20,7 +23,7 @@ const styles = {
 class CohortView extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType,
-    showRegionalPartnerDropdown: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
@@ -50,7 +53,7 @@ class CohortView extends React.Component {
 
   load(regionalPartnerFilter) {
     let url = this.getJsonUrl();
-    if (this.props.showRegionalPartnerDropdown) {
+    if (this.props.isWorkshopAdmin) {
       url += `&regional_partner_value=${regionalPartnerFilter.value}`;
     }
 
@@ -71,7 +74,7 @@ class CohortView extends React.Component {
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
-    if (this.props.showRegionalPartnerDropdown && this.props.regionalPartnerFilter) {
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter) {
       url += `&regional_partner_value=${this.props.regionalPartnerFilter.value}`;
     }
 
@@ -112,8 +115,10 @@ class CohortView extends React.Component {
               registered={registered}
             />
           }
-          {this.props.showRegionalPartnerDropdown &&
-            <RegionalPartnerDropdown/>
+          {this.props.isWorkshopAdmin &&
+            <RegionalPartnerDropdown
+              additionalOptions={dropdownOptions}
+            />
           }
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
@@ -144,5 +149,5 @@ class CohortView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.length > 1
+  isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);
