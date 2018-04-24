@@ -28,6 +28,7 @@ class Census::StateCsOffering < ApplicationRecord
     GA
     ID
     IN
+    MA
     MI
     NC
     SC
@@ -67,6 +68,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'MA'
+      School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
@@ -176,6 +179,17 @@ class Census::StateCsOffering < ApplicationRecord
     4586
   ).freeze
 
+  MA_COURSE_CODES = %w(
+    10011
+    10012
+    10019
+    10153
+    10154
+    10155
+    10156
+    10158
+  )
+
   MI_COURSE_CODES = %w(
     10157
     10999
@@ -241,7 +255,7 @@ class Census::StateCsOffering < ApplicationRecord
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'CT'
       enrollment = row_hash['CourseEnrollments']
-      # Don't consider a course as offered at a school if there is no enrollment ("*") and it is a positive number
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
       CT_COURSE_CODES.select {|course| course == row_hash['Course'] && enrollment != '*' && enrollment.to_i > 0}
     when 'FL'
       FL_COURSE_CODES.select {|course| course == row_hash['Course']}
@@ -261,6 +275,15 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'MA'
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
+      MA_COURSE_CODES.select do |course|
+        course == row_hash['Course Code'] &&
+        row_hash['Progrmming Included'] == 'Y' &&
+        # Massachusetts has a note in their spreadsheet indicating that "*" means fewer than 6 students are enrolled
+        row_hash['Total Enrollment'] != '*' &&
+        row_hash['Total Enrollment'].to_i > 0
+      end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'NC'
