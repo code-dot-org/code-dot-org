@@ -16,6 +16,7 @@ import {
   PUBLISH_FAILURE,
 } from './templates/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
+import testImageAccess from './code-studio/url_test';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -889,6 +890,22 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
       sharingInput.select();
       sharingInput.setSelectionRange(0, 9999);
     });
+  }
+
+  var sharingFacebook = sharingDiv.querySelector('#sharing-facebook');
+  if (sharingFacebook) {
+    testImageAccess(
+      'https://facebook.com/favicon.ico'  + "?" + Math.random(),
+      () => $(sharingFacebook).show()
+    );
+  }
+
+  var sharingTwitter = sharingDiv.querySelector('#sharing-twitter');
+  if (sharingTwitter) {
+    testImageAccess(
+      'https://twitter.com/favicon.ico'  + "?" + Math.random(),
+      () => $(sharingTwitter).show()
+    );
   }
 
   //  SMS-to-phone feature
