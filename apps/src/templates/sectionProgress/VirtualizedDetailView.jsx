@@ -63,7 +63,7 @@ class VirtualizedDetailView extends Component {
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    levelsByLesson: PropTypes.object,
+    levelsByLessonByStudent: PropTypes.object,
   };
 
   state = {
@@ -82,7 +82,7 @@ class VirtualizedDetailView extends Component {
   }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, columnWidths, levelsByLesson} = this.props;
+    const {section, scriptData, columnWidths, levelsByLessonByStudent} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -153,7 +153,7 @@ class VirtualizedDetailView extends Component {
           <StudentProgressDetailCell
             studentId={section.students[studentStartIndex].id}
             stageId={stageIdIndex}
-            levelsByLesson={levelsByLesson[section.students[studentStartIndex].id][stageIdIndex]}
+            levelsWithStatus={levelsByLessonByStudent[section.students[studentStartIndex].id][stageIdIndex]}
           />
         )}
       </div>

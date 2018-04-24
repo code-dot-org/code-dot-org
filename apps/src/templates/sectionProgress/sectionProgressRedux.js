@@ -26,6 +26,9 @@ export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
+export const addLevelsByLesson = (scriptId, levelsByLesson) => (
+  { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
+);
 export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
@@ -71,7 +74,7 @@ export const processScriptAndProgress = (scriptId) => {
         currentLevelId: null
       });
     }
-    dispatch({ type: ADD_LEVELS_BY_LESSON, scriptId: scriptId, levelsByLesson: levelsByStudentByLesson });
+    dispatch(addLevelsByLesson(scriptId, levelsByStudentByLesson));
     dispatch(finishLoadingProgress());
   };
 };

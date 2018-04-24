@@ -7,22 +7,22 @@ class StudentProgressSummaryCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     style: PropTypes.object,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.object),
+    levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
   };
 
   studentLevelProgressInStage() {
-    const { levelsByLesson } = this.props;
+    const { levelsWithStatus } = this.props;
 
     // Get counts of statuses
     let statusCounts = {
-      total: levelsByLesson.length,
+      total: levelsWithStatus.length,
       completed: 0,
       imperfect: 0,
       incomplete: 0,
       attempted: 0,
     };
-    for (let i = 0; i <levelsByLesson.length; i++) {
-      const status = levelsByLesson[i].status;
+    for (let i = 0; i <levelsWithStatus.length; i++) {
+      const status = levelsWithStatus[i].status;
       switch (status) {
         case LevelStatus.perfect:
         case LevelStatus.submitted:

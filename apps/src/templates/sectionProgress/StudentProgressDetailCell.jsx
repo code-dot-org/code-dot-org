@@ -14,7 +14,7 @@ export default class StudentProgressDetailCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.object),
+    levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
   };
 
   render() {
@@ -23,7 +23,7 @@ export default class StudentProgressDetailCell extends Component {
       <div style={styles.cell}>
         <div style={styles.bubbles}>
           <ProgressBubbleSet
-            levels={this.props.levelsByLesson}
+            levels={this.props.levelsWithStatus}
             disabled={false}
             hideToolTips={true}
           />
