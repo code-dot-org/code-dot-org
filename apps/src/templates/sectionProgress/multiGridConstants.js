@@ -1,7 +1,7 @@
 import color from "../../util/color";
 
 export const ROW_HEIGHT = 42;
-export const NAME_COLUMN_WIDTH = 150;
+export const NAME_COLUMN_WIDTH = 170;
 export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 39;
 export const DIAMOND_BUBBLE_WIDTH = 42;
@@ -65,6 +65,9 @@ export const progressStyles = {
   },
   nameCell: {
     margin: 10,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   cell: {
     borderRight: '1px solid',
