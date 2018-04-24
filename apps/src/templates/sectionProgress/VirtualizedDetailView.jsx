@@ -36,7 +36,12 @@ const styles = {
   lessonHeaderContainer: {
     display: 'flex',
     justifyContent: 'flex-start',
-    marginTop: 4,
+    marginTop: 2,
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+  },
+  levelTypeContainer: {
+    lineHeight: '42px',
   },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
@@ -44,7 +49,7 @@ const styles = {
     marginRight: -8,
     width: 100,
     height: 2,
-    backgroundColor:color.charcoal,
+    backgroundColor: color.charcoal,
   },
   lessonArrow: {
     border: 'solid ' + color.charcoal,
@@ -132,7 +137,7 @@ class VirtualizedDetailView extends Component {
           </span>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span>
+          <span style={styles.levelTypeContainer}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 icon={getIconForLevel(level)}

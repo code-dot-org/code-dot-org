@@ -17,7 +17,7 @@ export const progressStyles = {
     fontFamily: '"Gotham 5r", sans-serif',
     ':hover': {
       cursor: 'pointer'
-    }
+    },
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -48,7 +48,9 @@ export const progressStyles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    padding: '3px 10px',
+    marginTop: '3px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
     width: 38,
     fontSize: 20,
   },
