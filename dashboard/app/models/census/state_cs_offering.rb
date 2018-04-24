@@ -30,6 +30,7 @@ class Census::StateCsOffering < ApplicationRecord
     IN
     MA
     MI
+    MS
     NC
     SC
     UT
@@ -70,6 +71,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.find_by(id: row_hash['NCES'])&.state_school_id
     when 'MA'
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MS'
+      School.find_by(id: row_hash['NCES School ID'])&.state_school_id
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
@@ -204,6 +207,16 @@ class Census::StateCsOffering < ApplicationRecord
     10197
   ).freeze
 
+  MS_COURSE_CODES = %w(
+    561005
+    000283
+    110142
+    232050
+    232060
+    232070
+    110141
+  )
+
   NC_COURSE_CODES = %w(
     BL03
     BL08
@@ -286,6 +299,8 @@ class Census::StateCsOffering < ApplicationRecord
       end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
+    when 'MS'
+      MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
     when 'UT'
