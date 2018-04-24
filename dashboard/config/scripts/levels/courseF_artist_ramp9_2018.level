@@ -1,0 +1,96 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-04-23T23:09:52.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "artist",
+    "embed": "false",
+    "instructions": "Use what you've learned to draw this triangle.",
+    "markdown_instructions": "Use what you've learned to draw this triangle.\r\n___\r\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
+    "instructions_important": "true",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "start_direction": "90",
+    "x": "150",
+    "y": "150",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "callout_json": "[]",
+    "ideal": "7",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseF_artist_ramp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseF_artist_ramp9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menu on the turn blocks to see which angle you need!\",\"hint_id\":\"courseF_artist_ramp9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5b76af7795f852f315ac145422b8ea2/courseF_artist_ramp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type=\\\"controls_repeat\\\"><title name=\\\"TIMES\\\">3</title></block></xml> loop to make your code shorter?\",\"hint_id\":\"courseF_artist_ramp9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eb45156e94e08292c5c09e00a32f268c/courseF_artist_ramp9.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 8934,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:35:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 02:15:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-08 15:08:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant" limit="1" id="callMe">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="controls_repeat" id="callMe2">
+          <title name="TIMES">3</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#843179</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">100</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">120</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

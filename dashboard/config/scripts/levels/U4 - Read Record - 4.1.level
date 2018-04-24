@@ -25,7 +25,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Use indexes and dot notation to reference values in the response from the database. (Click to see full instructions)\r\n",
-    "markdown_instructions": "# Using Your Records\r\n\r\nThe `records` parameter in your callback function is **an array of objects**. \r\n\r\nIt can be used exactly the same as other arrays of objects you have seen before.\r\n\r\n| You can... | code|\r\n|:-- |:--|\r\n|**refence each object (record) by an index**| `records[5]`|\r\n|**reference each property of an object using dot notation**| `records[5].title`|\r\n|**find out the number of objects in the array** | `records.length`|\r\n\r\n# Do This:\r\n\r\n**Starter code is provided** which reads records from the same **\"topMovies\" table** you saw in the previous level.\r\n\r\n**Add code** inside the callback function of `readRecords` that:\r\n\r\n * Displays the **first movie in the array** (i.e. displays `records[0]`).\r\n * Displays the **last movie in the array.**\r\n \t* Try using `records.length-1` rather than a hard-coded number.\r\n * Displays the `title` of the **third movie in the array**.\r\n\r\n**Run the program** and confirm that you are displaying the correct movie.  Your output should look like this:\r\n\r\n![](https://images.code.org/c945453f2f4c708a31d7f362a98bceb5-image-1456870788450.7-console.png)",
+    "markdown_instructions": "# Using Your Records\r\n\r\nThe `records` parameter in your callback function is **an array of objects**. \r\n\r\nIt can be used exactly the same as other arrays of objects you have seen before.\r\n\r\n| You can... | code|\r\n|:-- |:--|\r\n|**refence each object (record) by an index**| `records[5]`|\r\n|**reference each property of an object using dot notation**| `records[5].title`|\r\n|**find out the number of objects in the array** | `records.length`|\r\n\r\n# Do This:\r\n\r\n**Starter code is provided** which reads records from the same **\"topMovies\" table** you saw in the previous level.\r\n\r\n**Add code** inside the callback function of `readRecords` that:\r\n\r\n * Displays the **first movie in the array** (i.e. displays `records[0]`).\r\n * Displays the **last movie in the array.**\r\n \t* Try using `records.length-1` rather than a hard-coded number.\r\n * Displays the `title` of the **third movie in the array**.\r\n\r\n**Run the program** and confirm that you are displaying the correct movie.  Your output should look like this:\r\n\r\n![](https://images.code.org/d3c0f6bd73b637828f0057fa91d6f56f-image-1524524661772.03.55 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -57,9 +57,22 @@
     "debugger_disabled": "false",
     "start_blocks": "readRecords(\"topMovies\",{},function(records){\r\n\r\n});",
     "encrypted_examples": "GglTWkyC1McL642uJtw/9/UM/y0YXb9ORRbHRbVkRbx9xBT3cbnO/ugXVXG9\nFVYQ\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-23 23:04:32 +0000\",\"changed\":[\"notes\",\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
