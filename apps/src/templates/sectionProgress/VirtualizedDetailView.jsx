@@ -153,7 +153,6 @@ class VirtualizedDetailView extends Component {
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
             studentId={section.students[studentStartIndex].id}
-            section={section}
             studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
             scriptData={scriptData}

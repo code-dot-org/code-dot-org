@@ -67,7 +67,15 @@ class PublicThumbnailsTest < FilesApiTestBase
   end
 
   def test_everyone_thumbnail
-    ImageModeration.stubs(:rate_image).once.returns :everyone
+    ImageModeration.stubs(:rate_image).once.returns(:everyone).with do |file, _, _|
+      # Real ImageModeration reads the IO stream in order to do its work.
+      # As a result, the caller needs to rewind the stream before using it as
+      # the response body.
+      # Here, I'm ensuring our stubbed ImageModeration simulates that behavior.
+      file.read
+      # Return true so this expectation matches any arguments.
+      true
+    end
 
     with_project_type('applab') do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
