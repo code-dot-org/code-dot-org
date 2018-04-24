@@ -789,6 +789,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: GameLabWorld },
     {
       instance: this.p5.Sprite,
+      ensureIdenticalMarshalInstances: true,
       methodOpts: {
         nativeCallsBackInterpreter: true
       }

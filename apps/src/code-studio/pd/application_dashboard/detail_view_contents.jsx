@@ -99,7 +99,6 @@ export class DetailViewContents extends React.Component {
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
-      attending_teachercon: PropTypes.bool,
       registered_teachercon: PropTypes.bool,
       registered_fit_weekend: PropTypes.bool
     }).isRequired,
@@ -530,38 +529,6 @@ export class DetailViewContents extends React.Component {
     );
   };
 
-  renderRegistrationLinks = () => {
-    const registrationLinks = [];
-
-    const buildRegistrationLink = (urlKey) => (
-      <a href={`/pd/${urlKey}/${this.props.applicationData.application_guid}`}>
-        {`${window.location.host}/pd/${urlKey}/${this.props.applicationData.application_guid}`}
-      </a>
-    );
-
-    if (this.props.applicationData.attending_teachercon) {
-      registrationLinks.push((
-        <DetailViewResponse
-          question="TeacherCon Registration Link"
-          layout="lineItem"
-          answer={buildRegistrationLink('teachercon_registration')}
-        />
-      ));
-    }
-
-    if (this.props.applicationData.fit_workshop_id) {
-      registrationLinks.push((
-        <DetailViewResponse
-          question="FiT Weekend Registration Link"
-          layout="lineItem"
-          answer={buildRegistrationLink('fit_weekend_registration')}
-        />
-      ));
-    }
-
-    return registrationLinks;
-  };
-
   renderRegionalPartnerPanel = () => {
     if (this.props.applicationData.application_type === 'Teacher') {
       return (
@@ -632,7 +599,6 @@ export class DetailViewContents extends React.Component {
           onChange={this.handleFitWorkshopChange}
         />
       }
-      {this.props.isWorkshopAdmin && this.renderRegistrationLinks()}
       {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
     </div>
   );
