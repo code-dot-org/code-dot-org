@@ -71,7 +71,6 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            section={section}
             studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
             scriptData={scriptData}

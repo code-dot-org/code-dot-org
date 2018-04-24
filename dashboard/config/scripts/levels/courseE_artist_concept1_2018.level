@@ -38,6 +38,7 @@
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

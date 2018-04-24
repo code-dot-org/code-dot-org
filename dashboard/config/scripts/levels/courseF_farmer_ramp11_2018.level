@@ -1,0 +1,91 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-04-23T23:09:53.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":5,\"range\":5,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "instructions_important": "true",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "start_direction": "2",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "instructions": "This puzzle also uses nested loops.  Can you figure out how?",
+    "ideal": "5",
+    "step_speed": "2",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.\",\"hint_id\":\"courseF_farmer_ramp11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/010fa616b7e7ad80b94c1e33a714dd06/courseF_farmer_ramp11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How can you use a <xml><block type=\\\"controls_repeat\\\"><title name=\\\"TIMES\\\">???</title></block></xml> loop to pick lettuce, instead of dragging out 5 <xml><block type=\\\"harvester_lettuce\\\"/></xml> blocks?\",\"hint_id\":\"courseF_farmer_ramp11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0ebfa0b9bdaf0ddfed8a4af22cb18ba4/courseF_farmer_ramp11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a <xml><block type=\\\"maze_moveForward\\\"/></xml> block, and you'll have it!)\",\"hint_id\":\"courseF_farmer_ramp11_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7367652adc97bebb4e831a4ece9b71f/courseF_farmer_ramp11.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "parent_level_id": 8937,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:42:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:14:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="harvester_lettuce"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="harvester_lettuce"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>
