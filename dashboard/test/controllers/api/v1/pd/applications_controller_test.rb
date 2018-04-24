@@ -675,7 +675,7 @@ module Api::V1::Pd
       assert_response :success
       response_csv = CSV.parse @response.body
 
-      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop'], response_csv.first
+      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop', 'Status'], response_csv.first
     end
 
     test 'cohort csv download returns expected columns for facilitators' do
