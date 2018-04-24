@@ -440,7 +440,9 @@ export default function teacherSections(state=initialState, action) {
         courseId: null,
         scriptId: script.id,
         assignId,
-        path: `/s/${script.script_name}`
+        path: `/s/${script.script_name}`,
+        base_name: script.script_name,
+        version_year: defaultVersionYear,
       };
 
       // Scripts currently have only one version.
