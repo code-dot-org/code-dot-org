@@ -112,6 +112,9 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         return this.UNDEFINED;
       } else {
         customMarshalValue = obj.data[name];
+        if (typeof customMarshalValue === 'undefined') {
+          return super.getProperty(obj, name);
+        }
       }
     } else {
       const nativeParent = this.getNativeParent_(obj, name);
@@ -183,7 +186,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
         return false;
       } else {
-        return name in obj.data;
+        return (name in obj.data) || super.hasProperty(obj, name);
       }
     } else {
       if (this.getNativeParent_(obj, name)) {
@@ -214,6 +217,16 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
+        if (!obj.data.hasOwnProperty(name) && value instanceof Interpreter.Object) {
+          // When assigning an interpreter object as a property on a
+          // CustomMarshal object that doesn't already have a native property
+          // with the same name, assume that we expect the object to be
+          // used purely within the interpreter by student code.
+
+          // This allows interpreter arrays, objects, and functions to be tacked
+          // on to CustomMarshal objects
+          return super.setProperty(obj, name, value, opt_descriptor);
+        }
         obj.data[name] = this.marshalInterpreterToNative(value);
       }
     } else {
@@ -487,7 +500,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       maxDepth = Infinity; // default to infinite levels of depth
     }
     if (this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
-      return this.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
+      return this.customMarshaler.createCustomMarshalObject(this, nativeVar, nativeParentObj);
     }
     if (nativeVar instanceof Array) {
       retVal = this.createObject(this.ARRAY);

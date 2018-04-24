@@ -25,14 +25,31 @@ export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
-export const addScriptData = (scriptId, scriptData) => ({ type: ADD_SCRIPT_DATA, scriptId, scriptData });
+export const addScriptData = (scriptId, scriptData) => {
+  // Filter to match scriptDataPropType
+  const filteredScriptData = {
+    id: scriptData.id,
+    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    title: scriptData.title,
+    path: scriptData.path,
+    stages: scriptData.stages,
+  };
+  return { type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData };
+};
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
 export const setSection = (section) => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
-  return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+
+  // Filter data to match sectionDataPropType
+  const filteredSectionData = {
+    id: section.id,
+    script: section.script,
+    students: sortedStudents,
+  };
+  return { type: SET_SECTION, section: filteredSectionData };
 };
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
@@ -57,6 +74,7 @@ export const ViewType = {
  */
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  script: PropTypes.object,
   students: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -81,10 +99,13 @@ export const validScriptPropType = PropTypes.shape({
  * The important part is scriptData.stages, which gets used by levelsWithLesson
  */
 export const scriptDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  excludeCsfColumnInLegend: PropTypes.bool,
+  title: PropTypes.string,
+  path: PropTypes.string,
   stages: PropTypes.arrayOf(PropTypes.shape({
     levels: PropTypes.arrayOf(PropTypes.object).isRequired
   })),
-  id: PropTypes.number.isRequired,
 });
 
 /**
@@ -96,6 +117,8 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
   PropTypes.objectOf(PropTypes.number)
 );
 
+const INITIAL_LESSON_OF_INTEREST = 1;
+
 const initialState = {
   scriptId: null,
   section: {},
@@ -103,7 +126,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
-  lessonOfInterest: 1,
+  lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
 };
 
@@ -112,6 +135,7 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
   if (action.type === SET_CURRENT_VIEW) {
@@ -247,8 +271,6 @@ export const loadScript = (scriptId) => {
 
     dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
-      // it to redux.
       dispatch(addScriptData(scriptId, scriptData));
     });
 

@@ -5,6 +5,7 @@
   "level_num": "custom",
   "user_id": 684,
   "properties": {
+    "name_suffix": "_2018"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-07-19 16:11:16 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
