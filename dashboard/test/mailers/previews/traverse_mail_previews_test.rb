@@ -10,11 +10,20 @@ class TraverseMailPreviewsTest < ActiveSupport::TestCase
     classes.each do |klass|
       methods =  klass.instance_methods - FactoryGirl::Syntax::Methods.methods - FactoryGirl::Syntax::Methods.instance_methods
 
+      failed_runs = []
+
       methods.each do |method|
         # Call each method on each mailer preview class. For now its enough to make sure
         # that the mailer preview can successfully run
-        klass.new.send(method.to_sym)
+        begin
+          klass.new.send(method.to_sym)
+        rescue Exception => e
+          puts e
+          failed_runs << "#{klass}: #{method}"
+        end
       end
+
+      assert_empty failed_runs
     end
   end
 end

@@ -16,6 +16,7 @@ mysql_defaults: &mysql_defaults
   collation: utf8_unicode_ci
   pool: 5
   connect_timeout: 2
+  reconnect: true
   default_group: 'cdo'
   master:
     username: <%= writer.user || 'root' %>
@@ -61,6 +62,8 @@ test:
   host: 'localhost'
   pool: <%= ENV['CI'] ? 20 : 5 %>
   database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
+  connect_timeout: 2
+  reconnect: true
   default_group: 'cdo'
 
 production:

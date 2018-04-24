@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
-import {tableLayoutStyles} from "../tables/tableConstants";
+import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -192,10 +192,6 @@ class ProjectsList extends React.Component {
   };
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(255, 255, 255, 0.2 )'}
-    };
 
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);

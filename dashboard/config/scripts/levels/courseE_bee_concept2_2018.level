@@ -38,6 +38,7 @@
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "markdown_instructions": "Help the bee make all of the honey.  \r\n\r\nYou can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb.",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
