@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 
@@ -9,11 +9,15 @@ const style = {
 };
 
 class ManageStudentsHeader extends Component {
+  static propTypes = {
+    studentData: PropTypes.array.isRequired
+  };
+
   render() {
     return (
       <div style={style.container}>
         <AddMultipleStudents/>
-        <MoveStudents/>
+        <MoveStudents studentData={this.props.studentData}/>
       </div>
     );
   }

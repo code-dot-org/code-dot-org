@@ -467,7 +467,7 @@ class ManageStudentsTable extends Component {
           />
         }
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-          <ManageStudentsHeader/>
+          <ManageStudentsHeader studentData={this.props.studentData}/>
         }
         <Table.Provider
           columns={columns}
