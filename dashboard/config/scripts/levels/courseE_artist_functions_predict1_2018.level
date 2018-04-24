@@ -42,7 +42,8 @@
       "courseE_prediction_artistFunction1_2018"
     ],
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",

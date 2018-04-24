@@ -38,6 +38,7 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

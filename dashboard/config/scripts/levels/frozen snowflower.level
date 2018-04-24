@@ -34,12 +34,12 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "discard_background": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

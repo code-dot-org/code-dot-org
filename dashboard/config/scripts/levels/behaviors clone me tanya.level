@@ -49,10 +49,7 @@
     "instructions": "Clone this level and make your own blocks!",
     "parent_level_id": 12612,
     "auto_run_setup": "DRAW_LOOP",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
