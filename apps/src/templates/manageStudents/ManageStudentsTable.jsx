@@ -8,6 +8,7 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import ManageStudentsHeader from './ManageStudentsHeader';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
@@ -18,7 +19,6 @@ import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
-import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
 
 const styles = {
@@ -467,7 +467,7 @@ class ManageStudentsTable extends Component {
           />
         }
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-          <AddMultipleStudents/>
+          <ManageStudentsHeader/>
         }
         <Table.Provider
           columns={columns}
