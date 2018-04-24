@@ -75,7 +75,7 @@
         %br/
         Project info:
         %ul
-          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) rescue [nil, nil]
           - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
           %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
           %li= "owner storage id: #{owner_storage_id}"
