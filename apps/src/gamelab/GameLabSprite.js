@@ -64,6 +64,14 @@ module.exports.createSprite = function (x, y, width, height) {
     set: setHeight
   });
 
+  // Define these native properties that may be called by the Sprite class
+  // (ensures hasOwnProperty() will return true, signalling to CustomMarshaler
+  // that we need this to be stored on the "native" object)
+  s.onMouseOver = undefined;
+  s.onMouseOut = undefined;
+  s.onMousePressed = undefined;
+  s.onMouseReleased = undefined;
+
   // Attach our custom/override methods to the sprite
   s.setAnimation = setAnimation.bind(s, this);
   s.frameDidChange = frameDidChange;

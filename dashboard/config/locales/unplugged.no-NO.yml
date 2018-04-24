@@ -537,3 +537,21 @@
           rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
           videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
           informasjon (som for eksempel bilder og farger) binært også.
+      PaperPlanes_2018:
+        title: 'Algoritmer fra virkeligheten: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      GettingLoopy_2018:
+        title: Gå i spinn
+        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer
+          (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
+          koreografi, og deretter bli bedt om å gjenta den.
+      BinaryBracelets_2018:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som en binær representasjon av den første
+          bokstaven i navnet. Elevene lærer at data kan være representert og lagret
+          på mer enn én måte.
+      MoveItMoveIt_2018:
+        title: Flytt den, flytt den
+        desc: ''

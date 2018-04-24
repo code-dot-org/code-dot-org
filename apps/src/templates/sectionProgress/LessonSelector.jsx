@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import {h3Style} from "../../lib/ui/Headings";
+import { connect } from 'react-redux';
+import { h3Style } from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -7,18 +8,18 @@ const styles = {
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
-    padding: '0.8em',
-    marginBottom: 10,
+    height: 34
   },
   heading: {
     marginBottom: 0,
   },
 };
 
-export default class LessonSelector extends Component {
+class LessonSelector extends Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
     onChange: PropTypes.func.isRequired,
+    lessonOfInterest: PropTypes.number.isRequired,
   };
 
   render() {
@@ -32,6 +33,7 @@ export default class LessonSelector extends Component {
         <select
           onChange={event => onChange(parseInt(event.target.value))}
           style={styles.dropdown}
+          value={this.props.lessonOfInterest}
         >
           {lessons.map((lesson) => (
             <option
@@ -46,3 +48,9 @@ export default class LessonSelector extends Component {
     );
   }
 }
+
+export const UnconnectedLessonSelector = LessonSelector;
+
+export default connect(state => ({
+  lessonOfInterest: state.sectionProgress.lessonOfInterest
+}))(LessonSelector);

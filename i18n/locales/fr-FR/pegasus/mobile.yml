@@ -1146,9 +1146,9 @@
   course2_shortdescription_congrats: "Pour les élèves qui savent lire, ce cours s'appuie sur le Cours 1. Les élèves créeront des programmes pour résoudre des problèmes et développer des jeux interactifs ou des histoires qu'ils peuvent partager. Recommandé du CP au CM1."
   course3_shortdescription_congrats: "Prêt pour le prochain niveau ? Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires interactives et des jeux qu'ils pourront partager. Recommandé pour les CM1–CM2."
   course4_shortdescription_congrats: "Prêt à aller plus loin ? Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires interactives et des jeux qu'ils pourront partager. Recommandé du CM1 à la 4e."
-  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  coursea_shortdescription_congrats: "Une introduction à l’informatique pour les jeunes lecteurs."
   courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursec_shortdescription_congrats: "Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux."
   coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
   coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
   coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
@@ -1439,32 +1439,32 @@
   user_header_settings: "Mon compte"
   user_header_logout: "Déconnexion"
   user_header_signin: "Authentification"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
+  view_all_sections: "Afficher toutes les sections"
+  view_section: "Afficher la section"
+  view_named_section: "Afficher %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
+  signing_in: "Connexion en cours"
+  sign_in_overview: 'Vos élèves peuvent se connecter avec leurs comptes Code.org en suivant les étapes suivantes:'
+  sign_in_instruct_website: "Aller à %{code_org_url}."
+  sign_in_instruct_code: 'Saisir leur code de section: %{section_code}.'
+  sign_in_instruct_name: "Choisir leur nom visible."
+  sign_in_instruct_secret: "Choisir leur secret %{secret}."
+  sign_in_instruct_button: "Cliquer sur le bouton « Se connecter »."
+  sign_in_overview_cards: "Les élèves peuvent trouver toutes ces informations y compris leur secret %{secret} sur les cartes de connexion ci-dessous."
+  reset_student_password: "Réinitialiser les mots de passe de l’élève"
   reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
+  login_cards: "Cartes de connexion"
+  print_login_cards: "Imprimer les cartes de connexion"
   joining_section: "Joining your section (one-time only)"
   joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
   joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
   joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  joining_section_instruct_code: 'Allez à %{code_org_url} te saisissez le code de la section: %{section_code}.'
+  joining_section_instruct_button: "Une fois qu’ils ont appuyé sur le bouton « Go », ils doivent être ajoutés dans votre section."
   signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
   reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
+  syncing_students: "Synchronisation de vos élèves"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  google_sign_in_instruct: 'À partir de là, ils doivent choisir l’option « Se connecter avec mon compte Google »:'
   hero_name: 'Minecraft: Le voyage du héros'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: Introduction pour App Lab

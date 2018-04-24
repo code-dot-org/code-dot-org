@@ -441,3 +441,17 @@
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
+      BinaryBracelets_2018:
+        title: バイナリブレスレット
+        desc: Students create bracelets as a binary representations of the first letter
+          of their name. Students learn that data can be represented and stored in
+          more than one way.
+      MoveItMoveIt_2018:
+        title: 動かせ！動かせ！
+        desc: ''

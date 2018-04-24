@@ -18,7 +18,7 @@ describe('feedback redux module', () => {
         message: '',
         code: '',
       },
-      canShare: false,
+      feedbackImage: null,
     });
   });
 
@@ -82,7 +82,7 @@ describe('feedback redux module', () => {
         blocksUsed: 19,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
-        canShare: true,
+        feedbackImage: 'fake_image.png',
       }));
       expect(newState).to.deep.equal({
         isChallenge: true,
@@ -90,7 +90,7 @@ describe('feedback redux module', () => {
         blocksUsed: 19,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
-        canShare: true,
+        feedbackImage: 'fake_image.png',
       });
     });
   });

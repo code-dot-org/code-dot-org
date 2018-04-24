@@ -74,7 +74,7 @@
   "penDown": "abaixe o lápis",
   "penTooltip": "Levanta ou abaixa o lápis, para começar ou parar de desenhar.",
   "penUp": "levante o lápis",
-  "pointTo": "point to",
+  "pointTo": "aponte para",
   "pixels": "pixels",
   "reinfFeedbackMsg": "Aqui está o seu desenho! Continue trabalhando nele, ou siga para o próximo desafio.",
   "setAlpha": "definir alfa",
@@ -94,6 +94,6 @@
   "turnTooltip": "Vira o artista à direita ou à esquerda usando o número especificado de graus.",
   "turtleVisibilityTooltip": "Faz o artista ficar visível ou invisível.",
   "widthTooltip": "Altera a largura do lápis.",
-  "withSize": "with size",
+  "withSize": "com tamanho",
   "wrongColour": "Sua figura está com a cor errada. Para este desafio, ela precisa ser %1."
 }

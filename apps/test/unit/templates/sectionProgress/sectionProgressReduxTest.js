@@ -7,6 +7,9 @@ import sectionProgress, {
   setScriptId,
   addScriptData,
   addStudentLevelProgress,
+  setLessonOfInterest,
+  startLoadingProgress,
+  finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
@@ -64,6 +67,9 @@ const fakeValidScripts = [
 
 const fakeScriptData789 = {
   id: 789,
+  excludeCsfColumnInLegend: false,
+  title: 'Title 789',
+  path: '/',
   stages: [
     {id: 1, levels: []},
     {id: 2, levels: []},
@@ -72,6 +78,9 @@ const fakeScriptData789 = {
 
 const fakeScriptData456 = {
   id: 456,
+  excludeCsfColumnInLegend: false,
+  title: 'Title 456',
+  path: '/',
   stages: [
     {id: 3, levels: []},
     {id: 4, levels: []},
@@ -83,6 +92,8 @@ const fakeStudentProgress = {
   2: {242: 1000, 243: 1000},
 };
 
+const lessonOfInterest = 16;
+
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
 
@@ -91,6 +102,15 @@ describe('sectionProgressRedux', () => {
       const action = setScriptId(130);
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.scriptId, 130);
+    });
+
+    it('seting the script id resets the lesson of interest', () => {
+      const action = setLessonOfInterest(lessonOfInterest);
+      const nextState = sectionProgress(initialState, action);
+
+      const action2 = setScriptId(130);
+      const nextState2 = sectionProgress(nextState, action2);
+      assert.deepEqual(nextState2.lessonOfInterest, 1);
     });
   });
 
@@ -111,6 +131,18 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.section, {...sortedFakeSectionData, script: null});
       assert.deepEqual(nextState.scriptId, null);
+    });
+  });
+
+  describe('isLoadingProgress', () => {
+    it('startLoadingProgress sets isLoadingProgress to true', () => {
+      const nextState = sectionProgress(initialState, startLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, true);
+    });
+
+    it('finishLoadingProgress sets isLoadingProgress to false', () => {
+      const nextState = sectionProgress({isLoadingProgress: true}, finishLoadingProgress());
+      assert.deepEqual(nextState.isLoadingProgress, false);
     });
   });
 
@@ -160,6 +192,14 @@ describe('sectionProgressRedux', () => {
     });
   });
 
+  describe('setLessonOfInterest', () => {
+    it('sets the lesson of interest', () => {
+      const action = setLessonOfInterest(lessonOfInterest);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
+    });
+  });
+
   describe('addStudentLevelProgress', () => {
     it('adds multiple scriptData info', () => {
       const action = addStudentLevelProgress(130, fakeStudentProgress);
@@ -175,6 +215,15 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState2.studentLevelProgressByScript[132], {
         ...fakeStudentProgress,
         3: {},
+      });
+
+      const action3 = addStudentLevelProgress(132, { 4: {} });
+      const nextState3 = sectionProgress(nextState2, action3);
+      assert.deepEqual(nextState2.studentLevelProgressByScript[130], fakeStudentProgress);
+      assert.deepEqual(nextState3.studentLevelProgressByScript[132], {
+        ...fakeStudentProgress,
+        3: {},
+        4: {},
       });
     });
   });

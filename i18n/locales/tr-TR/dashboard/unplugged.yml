@@ -334,3 +334,15 @@ tr:
       BinaryImages_2018:
         title: İkili Sistemle Resimler
         desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir. Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu öğretecek.
+      PaperPlanes_2018:
+        title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+        desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      GettingLoopy_2018:
+        title: Döngüselleşme
+        desc: Bu ders bir dans etkinliği ile döngülerle (tekrar) programlama hakkında bilgilendirme yapar.Öğrenciler kolay koreografi yapmayı öğrenecek ve bunu tekrar etmeyi öğrenecekler.
+      BinaryBracelets_2018:
+        title: İkilik Bileklikler
+        desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
+      MoveItMoveIt_2018:
+        title: Çabuk, Çabuk Taşı
+        desc: ''

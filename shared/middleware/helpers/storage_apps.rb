@@ -248,4 +248,58 @@ class StorageApps
       }
     )
   end
+
+  #
+  # Given an encrypted channel id, attempt to determine the channel's
+  # project type.
+  # This isn't always possible - we aren't consistent about storing project
+  # type information with the channel.
+  #
+  # @param [String] channel_id - an encrypted channel id
+  # @return [String] The discovered project type, or 'unknown' if the type
+  #   can't be determiend with given information.
+  # @raise [NotFound] if the channel does not exist or is not shareable.
+  #
+  def project_type_from_channel_id(channel_id)
+    project_type_from_merged_row(get(channel_id))
+  end
+
+  private
+
+  #
+  # Discovering a channel's project type is a real mess.  We don't usually
+  # need to do this because the project type is usually part of the URL,
+  # but for a few APIs this is needed.
+  #
+  # @param [Hash] row - A storage_apps merged row value as returned by
+  #   `merged_row_value` or `get`.
+  # @returns [String] The discovered project type, or 'unknown' if the type
+  #   can't be determined with given information.
+  #
+  def project_type_from_merged_row(row)
+    # We can derive channel project type from a few places.
+    #
+    # 1. The `project_type` column in the storage_apps table.
+    #    This is often NULL for "hidden" levels, which includes project-backed
+    #    script levels.
+    return row[:projectType] if row[:projectType]
+
+    # 2. The projectType property in the `value` JSON column.
+    #    Apparently this is sometimes filled out _instead_ of the column.
+    return row['projectType'] if row['projectType']
+
+    # 3. The level property in the `value` JSON column.
+    #    These are consistently values like "/projects/gamelab" or
+    #    "/projects/calc" and can be used to reconstruct a project type if
+    #    the `project_type` column doesn't have it.
+    level = row['level']
+    match_data = /^#{'/projects/'}([^\/]+)$/.match(level)
+    return match_data[1] if match_data
+
+    # Some number of projects don't contain a project type in any of these
+    # places.  We suspect a number of them are pixelation widget projects.
+    # Others have no content on S3, and may be just-created stub projects.
+    # Report these as 'unknown'.
+    'unknown'
+  end
 end

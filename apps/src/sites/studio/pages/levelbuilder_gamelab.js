@@ -58,4 +58,27 @@ $(document).ready(function () {
   if (document.getElementById('level_custom_helper_library')) {
     initializeCodeMirror('level_custom_helper_library', 'javascript');
   }
+  const autoRunSetup = document.getElementById('level_auto_run_setup');
+  const customSetupCode = document.getElementById('level_custom_setup_code');
+  if (autoRunSetup && customSetupCode) {
+    const changeHandler = () => {
+      if (autoRunSetup.value === 'CUSTOM') {
+        customSetupCode.previousElementSibling.style.display = '';
+        if (customSetupCode.editor) {
+          customSetupCode.editor.getWrapperElement().style.display = '';
+        } else {
+          customSetupCode.editor = initializeCodeMirror(
+            'level_custom_setup_code', 'javascript');
+        }
+      } else {
+        customSetupCode.previousElementSibling.style.display = 'none';
+        customSetupCode.style.display = 'none';
+        if (customSetupCode.editor) {
+          customSetupCode.editor.getWrapperElement().style.display = 'none';
+        }
+      }
+    };
+    autoRunSetup.onchange = changeHandler;
+    changeHandler();
+  }
 });
