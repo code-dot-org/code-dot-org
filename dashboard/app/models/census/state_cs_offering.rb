@@ -23,12 +23,14 @@ class Census::StateCsOffering < ApplicationRecord
   SUPPORTED_STATES = %w(
     AR
     CA
+    FL
     GA
     ID
     IN
     MI
     NC
     SC
+    UT
   ).freeze
 
   # By default we treat the lack of state data for high schools as an
@@ -50,6 +52,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
       School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
+    when 'FL'
+      row_hash['State School ID']
     when 'GA'
       school_id = format("%04d", row_hash['SCHOOL_ID'].to_i)
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
@@ -71,6 +75,9 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('NC', district_code, school_code)
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
+    when 'UT'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -123,6 +130,19 @@ class Census::StateCsOffering < ApplicationRecord
     5612
     8131
   ).freeze
+
+  FL_COURSE_CODES = %w(
+    9003450
+    9007210
+    9007220
+    9007230
+    9007240
+    9007250
+    0200320
+    0200325
+    0200810
+    0200820
+  )
 
   GA_COURSE_CODES = %w(
     11.01600
@@ -181,12 +201,33 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  # Utah did not provide codes, but did provide course titles.
+  UT_COURSE_CODES = [
+    'A.P.  Computer Science',
+    'A.P. Computer Science Principles',
+    'Computer Programming I',
+    'Computer Programming I CE',
+    'Computer Programming II',
+    'Computer Programming II CE',
+    'Computer Science Principles',
+    'Computer Science Principles CE',
+    'Exploring Computer Science I  (CS)',
+    'Exploring Computer Science II',
+    'IB Computer Science HL 1',
+    'IB Computer Science HL 2',
+    'IB Computer Science SL 1',
+    'IB Computer Science SL 2',
+    'PLtW Computer Science & Software Enginee'
+  ]
+
   def self.get_courses(state_code, row_hash)
     case state_code
     when 'AR'
       AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
+    when 'FL'
+      FL_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'GA'
       # One course per row
       # Courses are in the form of XX.XXXXX but
@@ -207,6 +248,8 @@ class Census::StateCsOffering < ApplicationRecord
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'UT'
+      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
