@@ -471,6 +471,179 @@ class SourcesTest < FilesApiTestBase
     assert_restores_main_json_with_animation_version nil
   end
 
+  def test_remix_source_file
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+    @destination_animation_api = FilesApiTestHelper.new(current_session, 'animations', @destination_channel)
+
+    # Create two animations
+    animation_key_1 = @api.add_random_suffix('animation-key')
+    animation_key_2 = @api.add_random_suffix('animation-key-1')
+    animation_filename_1 = "#{animation_key_1}.png"
+    animation_filename_2 = "#{animation_key_2}.png"
+    delete_all_animation_versions(animation_filename_1)
+    delete_all_animation_versions(animation_filename_2)
+
+    # Upload the two animations
+    animation_1 = 'stub-png-1'
+    animation_2 = 'stub-png-2'
+    animation_1_vid = put_animation(animation_filename_1, animation_1)
+    animation_2_vid = put_animation(animation_filename_2, animation_2)
+
+    # Update main.json
+    main_json_v1 = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [animation_key_1, animation_key_2],
+        "propsByKey": {
+          "#{animation_key_1}": {
+            "name": "Remix First",
+            "sourceUrl": nil,
+            "version": animation_1_vid
+          },
+          "#{animation_key_2}": {
+            "name": "Remix Second",
+            "sourceUrl": nil,
+            "version": animation_2_vid
+          }
+        }
+      }
+    }.stringify_keys
+    put_main_json(main_json_v1)
+
+    # Remix
+    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
+
+    # Check that source manifest exists in destination channel
+    # Check that destination source includes a reference to the
+    # animation with a different version than that in the original destination
+    remixed_source = @destination_api.get_object(MAIN_JSON)
+    assert successful?
+    props = JSON.parse(remixed_source)['animations']['propsByKey']
+    refute_includes [animation_1_vid, animation_2_vid], props[animation_key_1]['version']
+    refute_includes [animation_1_vid, animation_2_vid], props[animation_key_2]['version']
+
+    # Check that manifest in destination references the version id of the animation
+    # that exists in the destination
+    remixed_animation_versions_1 = @destination_animation_api.list_object_versions(animation_filename_1)
+    remixed_animation_versions_2 = @destination_animation_api.list_object_versions(animation_filename_2)
+    assert successful?
+    assert_includes [props[animation_key_1]['version'], props[animation_key_2]['version']], remixed_animation_versions_1[0]['versionId']
+    assert_includes [props[animation_key_1]['version'], props[animation_key_2]['version']], remixed_animation_versions_2[0]['versionId']
+
+    # Clear original and remixed buckets
+    delete_all_source_versions(MAIN_JSON)
+    delete_all_animation_versions(animation_filename_1)
+    delete_all_animation_versions(animation_filename_2)
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_1}")
+    delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_2}")
+  end
+
+  def test_remix_source_file_with_library_animations
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+    @destination_animation_api = FilesApiTestHelper.new(current_session, 'animations', @destination_channel)
+
+    animation_key = @api.add_random_suffix('animation-key')
+
+    # Update main.json
+    main_json_v1 = {
+      "source": "Remix Library",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "bear_1",
+            "sourceUrl": "https://studio.code.org/api/test/url/category_animals/bear.png",
+            "version": "1234"
+          }
+        }
+      }
+    }.stringify_keys
+    put_main_json(main_json_v1)
+
+    # Remix
+    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
+
+    # Check that source manifest exists in destination channel
+    # Check that destination source includes a reference to the
+    # animation with a different version than that in the original destination
+    remixed_source = @destination_api.get_object(MAIN_JSON)
+    assert successful?
+    props = JSON.parse(remixed_source)['animations']['propsByKey']
+    assert_equal "1234", props[animation_key]['version']
+
+    # Clear original and remixed buckets
+    delete_all_source_versions(MAIN_JSON)
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+  end
+
+  def test_remix_not_main
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+
+    # Create non-main file
+    src_file_v1 = {
+      "source": "this is not a main.json file"
+    }.stringify_keys
+    @api.put_object('test.json', src_file_v1.to_json, {'CONTENT_TYPE' => 'application/json'})
+
+    # Remix
+    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
+
+    # Check that source exists in destination channel
+    # Check that remix-ed file is equal to the original file
+    remixed_source = @destination_api.get_object('test.json')
+    assert successful?
+    assert_equal src_file_v1.to_json, remixed_source
+
+    # Clear original and remixed buckets
+    delete_all_source_versions('test.json')
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/test.json")
+  end
+
+  def test_remix_no_animations
+    # Mock destination
+    @destination_channel = create_channel
+    @destination_api = FilesApiTestHelper.new(current_session, 'sources', @destination_channel)
+
+    # Update main.json
+    main_json_v1 = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [],
+        "propsByKey": {}
+      }
+    }.stringify_keys
+    put_main_json(main_json_v1)
+
+    # Remix
+    animation_list = AnimationBucket.new.copy_files @channel, @destination_channel
+    SourceBucket.new.remix_source @channel, @destination_channel, animation_list
+
+    # Check that source exists in destination channel
+    # Check that remixed source does not contain animations
+    remixed_source = @destination_api.get_object(MAIN_JSON)
+    assert successful?
+    props = JSON.parse(remixed_source)['animations']
+    assert_equal props["orderedKeys"], []
+
+    # Clear original and remixed buckets
+    delete_all_source_versions(MAIN_JSON)
+
+    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+  end
+
   private
 
   def assert_restores_main_json_with_animation_version(version_value)

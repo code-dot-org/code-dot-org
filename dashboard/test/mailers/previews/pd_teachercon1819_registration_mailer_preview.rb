@@ -45,7 +45,7 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
 
     application_hash = build :pd_teacher1819_application_hash, school: School.first
     application = build :pd_teacher1819_application, user: user, form_data: application_hash.to_json
-    workshop = application.find_teachercon_workshop(course: 'CS Discoveries', city: 'Phoenix', year: 2018) ||
+    workshop = application.find_teachercon_workshop(course: Pd::Workshop::COURSE_CSD, city: 'Phoenix', year: 2018) ||
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON, processed_location: {city: 'Phoenix'}, num_sessions: 5)
     application.pd_workshop_id = workshop.id
 
@@ -58,7 +58,7 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
     application_hash = build :pd_facilitator1819_application_hash
     application = build :pd_facilitator1819_application, user: user, form_data: application_hash.to_json
 
-    workshop = application.find_teachercon_workshop(course: 'CS Discoveries', city: 'Phoenix', year: 2018) ||
+    workshop = application.find_teachercon_workshop(course: Pd::Workshop::COURSE_CSD, city: 'Phoenix', year: 2018) ||
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON, processed_location: {city: 'Phoenix'}, num_sessions: 5)
 
     application.pd_workshop_id = workshop.id
