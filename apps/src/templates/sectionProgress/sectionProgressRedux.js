@@ -25,7 +25,17 @@ export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
-export const addScriptData = (scriptId, scriptData) => ({ type: ADD_SCRIPT_DATA, scriptId, scriptData });
+export const addScriptData = (scriptId, scriptData) => {
+  // Filter to match scriptDataPropType
+  const filteredScriptData = {
+    id: scriptData.id,
+    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    title: scriptData.title,
+    path: scriptData.path,
+    stages: scriptData.stages,
+  };
+  return { type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData };
+};
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
@@ -81,10 +91,13 @@ export const validScriptPropType = PropTypes.shape({
  * The important part is scriptData.stages, which gets used by levelsWithLesson
  */
 export const scriptDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  excludeCsfColumnInLegend: PropTypes.bool,
+  title: PropTypes.string,
+  path: PropTypes.string,
   stages: PropTypes.arrayOf(PropTypes.shape({
     levels: PropTypes.arrayOf(PropTypes.object).isRequired
   })),
-  id: PropTypes.number.isRequired,
 });
 
 /**
@@ -247,8 +260,6 @@ export const loadScript = (scriptId) => {
 
     dispatch(startLoadingProgress());
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
-      // it to redux.
       dispatch(addScriptData(scriptId, scriptData));
     });
 
