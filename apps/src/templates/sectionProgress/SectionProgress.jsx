@@ -38,7 +38,7 @@ const styles = {
   },
   viewToggleContainer: {
     float: 'left',
-    marginTop: 24,
+    marginTop: 34,
   },
   lessonSelectorContainer: {
     float: 'right',
