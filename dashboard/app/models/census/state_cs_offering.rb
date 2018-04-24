@@ -332,7 +332,7 @@ class Census::StateCsOffering < ApplicationRecord
   def self.seed_from_s3
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
-    # The first school year where we have data is 2016-2017
+    # The first school year where we have data is 2015-2016
     current_year = Date.today.year
     (2015..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
