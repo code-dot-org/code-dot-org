@@ -9,11 +9,7 @@ import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
 import { setRegionalPartnerFilter } from './reducers';
-import {
-  RegionalPartnerPropType,
-  ALL_PARTNERS_OPTION,
-  UNMATCHED_PARTNER_OPTION
-} from './constants';
+import { RegionalPartnerPropType } from './constants';
 
 const styles = {
   select: {
@@ -29,30 +25,19 @@ export class RegionalPartnerDropdown extends React.Component {
       id: PropTypes.number,
       name: PropTypes.string
     })),
-    additionalOptions: PropTypes.array,
-    isWorkshopAdmin: PropTypes.bool
+    additionalOptions: PropTypes.array
   };
-
-  getDefaultAdditionalOptions() {
-    let additionalOptions = [ALL_PARTNERS_OPTION];
-    if (this.props.isWorkshopAdmin) {
-      additionalOptions.push(UNMATCHED_PARTNER_OPTION);
-    }
-    return additionalOptions;
-  }
 
   componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({value: v.id, label: v.name}));
-
-    let additionalOptions = this.props.additionalOptions || this.getDefaultAdditionalOptions();
-    if (additionalOptions) {
-      additionalOptions.forEach((option) => this.regionalPartners.unshift({value: option.value, label: option.label}));
+    if (this.props.additionalOptions) {
+      this.props.additionalOptions.forEach((option) => this.regionalPartners.unshift({value: option.value, label: option.label}));
     }
   }
 
   render() {
     return (
-      <FormGroup style={styles.select}>
+      <FormGroup>
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
           clearable={false}
@@ -60,6 +45,7 @@ export class RegionalPartnerDropdown extends React.Component {
           onChange={this.props.onChange}
           placeholder={null}
           options={this.regionalPartners}
+          style={styles.select}
           {...SelectStyleProps}
         />
       </FormGroup>
@@ -70,8 +56,7 @@ export class RegionalPartnerDropdown extends React.Component {
 export default connect(
   state => ({
     regionalPartners: state.regionalPartners,
-    regionalPartnerFilter: state.regionalPartnerFilter,
-    isWorkshopAdmin: state.permissions.workshopAdmin
+    regionalPartnerFilter: state.regionalPartnerFilter
   }),
   dispatch => ({
     onChange(selected) {
