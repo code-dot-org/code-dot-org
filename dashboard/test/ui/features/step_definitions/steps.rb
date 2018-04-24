@@ -87,7 +87,7 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
-# Can switch out of iframe context
+# Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.window $default_window
 end
