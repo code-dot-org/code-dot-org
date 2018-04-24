@@ -37,6 +37,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.\",\"hint_id\":\"courseE_farmer_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e8edb14c2fca62d676f7caa0da458a68/courseE_farmer_functions1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to pick one pumpkin, but could you use a loop to get to it?\",\"hint_id\":\"courseE_farmer_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/128f7d380e51569185a8664ce926e99e/courseE_farmer_functions1.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
