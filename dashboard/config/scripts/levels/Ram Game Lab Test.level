@@ -41,14 +41,14 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "parent_level_id": 4190,
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"5da1c198-8780-4619-a89f-41477a4872ce\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"5da1c198-8780-4619-a89f-41477a4872ce\": {\r\n      \"name\": \"alienGreen_jump_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh\"\r\n    }\r\n  }\r\n}"
+    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"5da1c198-8780-4619-a89f-41477a4872ce\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"5da1c198-8780-4619-a89f-41477a4872ce\": {\r\n      \"name\": \"alienGreen_jump_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh\"\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

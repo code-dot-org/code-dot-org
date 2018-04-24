@@ -48,10 +48,7 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 12299,
     "markdown_instructions": "Clone this level, and then make your own programs!",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
