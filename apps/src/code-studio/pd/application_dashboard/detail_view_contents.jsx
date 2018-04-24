@@ -20,8 +20,8 @@ import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
-  UnmatchedPartnerValue,
-  UnmatchedPartnerLabel
+  UNMATCHED_PARTNER_VALUE,
+  UNMATCHED_PARTNER_LABEL
 } from './constants';
 
 const styles = {
@@ -120,8 +120,8 @@ export class DetailViewContents extends React.Component {
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
-      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedPartnerLabel,
-      regional_partner_value: this.props.applicationData.regional_partner_id || UnmatchedPartnerValue,
+      regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
+      regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
@@ -185,8 +185,8 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_value = selected ? selected.value : UnmatchedPartnerValue;
-    const regional_partner_name = selected ? selected.label : UnmatchedPartnerLabel;
+    const regional_partner_value = selected ? selected.value : UNMATCHED_PARTNER_VALUE;
+    const regional_partner_name = selected ? selected.label : UNMATCHED_PARTNER_LABEL;
     this.setState({ regional_partner_name, regional_partner_value});
   };
 
@@ -240,13 +240,14 @@ export class DetailViewContents extends React.Component {
   };
 
   renderRegionalPartnerAnswer = () => {
+
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
           regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
           regionalPartners={this.props.regionalPartners}
-          additionalOptions={[{label: UnmatchedPartnerLabel, value: UnmatchedPartnerValue}]}
+          additionalOptions={[{label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE}]}
         />
       );
     }
