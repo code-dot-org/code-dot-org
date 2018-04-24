@@ -40,9 +40,6 @@ const styles = {
     borderBottom: '2px solid',
     borderColor: color.border_gray,
   },
-  levelTypeContainer: {
-    lineHeight: '42px',
-  },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
     marginTop: 18,

@@ -48,9 +48,9 @@ export const progressStyles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    marginTop: '3px',
     paddingLeft: '10px',
     paddingRight: '10px',
+    paddingTop: '12px',
     width: 38,
     fontSize: 20,
   },
