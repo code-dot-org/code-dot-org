@@ -26,6 +26,7 @@ import TooltipWithIcon from './TooltipWithIcon';
 
 const styles = {
   main: {
+    boxSizing: 'content-box',
     fontFamily: '"Gotham 5r", sans-serif',
     width: DOT_SIZE,
     height: DOT_SIZE,

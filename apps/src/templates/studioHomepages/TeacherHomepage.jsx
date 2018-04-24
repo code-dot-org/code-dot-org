@@ -121,6 +121,9 @@ export default class TeacherHomepage extends Component {
     const { teacherId, teacherName, teacherEmail } = this.props;
     const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
 
+    // Don't show the special announcement for now.
+    const showSpecialAnnouncement = false;
+
     return (
       <div>
         <HeaderBanner
@@ -133,7 +136,7 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        {(isEnglish &&
+        {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock/>
         )}
         {this.state.showCensusBanner && (

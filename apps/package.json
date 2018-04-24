@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.8.2",
+    "@code-dot-org/blockly": "1.8.2-add-anglehelper-options",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
@@ -176,7 +176,7 @@
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-tether": "^0.5.2",
     "react-tooltip": "^3.2.7",
-    "react-virtualized": "^9.7.3",
+    "react-virtualized": "^9.18.5",
     "react-virtualized-select": "^3.0.1",
     "react-with-context": "^2.0.0",
     "reactabular": "^2.0.3",

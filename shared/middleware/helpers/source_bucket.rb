@@ -66,6 +66,50 @@ class SourceBucket < BucketHelper
     response.to_h
   end
 
+  # Copies the files in the src_channel to the dest_channel
+  # Update the animation manifest to include the version ids of the animations
+  # in dest_channel
+  # Note: this function assumes that the animations have already been copied
+  def remix_source(src_channel, dest_channel, animation_list)
+    src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
+    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
+
+    src_prefix = s3_path src_owner_id, src_channel_id
+
+    # For each file, copy it, update the animations, return it
+    s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
+      filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
+
+      dest = s3_path dest_owner_id, dest_channel_id, filename
+
+      # Get animation manifest
+      key = s3_path src_owner_id, src_channel_id, filename
+      src_object = s3.get_object(bucket: @bucket, key: key)
+      src_body = src_object.body.read
+
+      # Only update version ids for main.json files
+      if filename.casecmp?(MAIN_JSON_FILENAME) && !animation_list.empty?
+        src_body = ProjectSourceJson.new(src_body)
+
+        if src_body.animation_manifest?
+          # Update the manifest to reference the newest version of the animations
+          # in the destination channel
+          src_body.each_animation do |a|
+            next if library_animation? a
+            anim_response = animation_list.find do |item|
+              item[:filename] == "#{a['key']}.png"
+            end
+            src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response.empty?
+          end
+        end
+
+        src_body = src_body.to_json
+      end
+      # Write the updated main.json file back to S3 as the latest version
+      s3.put_object(bucket: @bucket, key: dest, body: src_body)
+    end
+  end
+
   private
 
   def library_animation?(animation_props)

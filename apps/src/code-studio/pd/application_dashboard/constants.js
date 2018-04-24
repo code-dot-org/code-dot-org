@@ -8,7 +8,7 @@ import {PropTypes} from 'react';
 /**
  * Mapping of application statuses to their background and text colors.
  */
-exports.StatusColors = {
+export const StatusColors = {
   'unreviewed': {
     backgroundColor: color.charcoal,
     color: color.white
@@ -42,7 +42,7 @@ exports.StatusColors = {
 /**
  * Valid statuses for Applications.
  */
-exports.ApplicationStatuses = {
+export const ApplicationStatuses = {
   'teacher': [
     'Unreviewed',
     'Pending',
@@ -65,7 +65,7 @@ exports.ApplicationStatuses = {
 /**
  * Statuses that represent "finalized" applications
  */
-exports.ApplicationFinalStatuses = [
+export const ApplicationFinalStatuses = [
   'accepted',
   'declined',
   'waitlisted',
@@ -75,26 +75,20 @@ exports.ApplicationFinalStatuses = [
 /**
  * Constants for Regional Partner dropdown
  */
-const allPartnersLabel = "All Regional Partners' Applications";
-const allPartnersValue = "all";
-const unmatchedPartnerLabel = "No Partner/Unmatched";
-const unmatchedPartnerValue = "none";
-exports.AllPartnersLabel = allPartnersLabel;
-exports.AllPartnersValue = allPartnersValue;
-exports.UnmatchedPartnerLabel = unmatchedPartnerLabel;
-exports.UnmatchedPartnerValue = unmatchedPartnerValue;
+export const ALL_PARTNERS_LABEL = "All Regional Partners' Applications";
+export const ALL_PARTNERS_VALUE = "all";
+export const UNMATCHED_PARTNER_LABEL = "No Partner/Unmatched";
+export const UNMATCHED_PARTNER_VALUE = "none";
 
-exports.RegionalPartnerDropdownOptions = [
-  {value: unmatchedPartnerValue, label: unmatchedPartnerLabel},
-  {value: allPartnersValue, label: allPartnersLabel}
-];
+export const ALL_PARTNERS_OPTION = {label: ALL_PARTNERS_LABEL, value: ALL_PARTNERS_VALUE};
+export const UNMATCHED_PARTNER_OPTION = {label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE};
 
-const regionalPartnerValuePropType = PropTypes.oneOfType([
+export const RegionalPartnerValuePropType = PropTypes.oneOfType([
   PropTypes.number, // regional partner id
-  PropTypes.oneOf([allPartnersValue, unmatchedPartnerValue])
+  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE])
 ]);
-exports.RegionalPartnerValuePropType = regionalPartnerValuePropType;
-exports.RegionalPartnerPropType = PropTypes.shape({
-  value: regionalPartnerValuePropType.isRequired,
+
+export const RegionalPartnerPropType = PropTypes.shape({
+  value: RegionalPartnerValuePropType.isRequired,
   label: PropTypes.string.isRequired
 });

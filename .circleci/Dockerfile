@@ -99,7 +99,17 @@ RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.co
       && sudo chmod +x /usr/local/bin/chromedriver
 
 # install mysql
-RUN apt-get update && apt-get install -y mysql-server-5.6
+RUN curl -sSL -o /tmp/mysql-apt-config_0.8.9-1_all.deb https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb \
+  && echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections \
+  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/mysql-apt-config_0.8.9-1_all.deb || apt-get -fy install \
+  && rm -rf /tmp/mysql-apt-config_0.8.9-1_all.deb \
+  && apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    mysql-server \
+    libmysqlclient-dev
+RUN service mysql start \
+  && echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql \
+  && service mysql stop
 
 # install a couple more things from config.yml
 RUN apt-get update && apt-get -y install parallel libmagickwand-dev imagemagick

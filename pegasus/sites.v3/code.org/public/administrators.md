@@ -41,18 +41,9 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<div class="col-50" style="margin-bottom: 20px;">
-
-<%= view :course_wide_block, cta_link: CDO.code_org_url('/educate/professional-learning/cs-fundamentals-directory'), cta_text: 'Contact a Facilitator', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-5', description: 'Code.org\'s no-cost CS Fundamentals courses are designed for elementary school teachers. They align to ISTE, Common Core and CSTA standards for grades K-5. Code.org\'s free professional development workshops support teachers with no background in computer science. If you are located in United States, contact a local K5 Facilitator to set up a free workshop for elementary school teachers in your district. Internationally, try <a href="/educate/professional-development-online">our online self-paced courses</a>.' %>
-
-</div>
-
-[col-50]
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades 6-12', description: 'CS Discoveries and CS Principles are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world. In the US, Code.org\'s network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.' %>
-
-[/col-50]
-
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science.  Code.org's <a href='/educate/curriculum/elementary-school'>Computer Science Fundamentals courses</a> are designed for elementary school teachers. <a href='/educate/csd'>CS Discoveries</a> and <a href='/educate/csp'>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world.
+In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.
+Internationally, try <a href='/educate/professional-development-online'>our online self-paced courses</a>." %>
 <div style="clear:both"></div>
 
 ## Start Planning Now
@@ -85,7 +76,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Identify a computer science course pathway for your existing teachers</h3>
 
 - The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
-- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](https://code.org/professional-development-workshops), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
+- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
 - If you want to consider alternatives to the Code.org courses, see our recommendations of [3rd party computer science curriculum](/educate/curriculum/3rd-party), and particularly our recommendations for [AP Computer Science A](/educate/curriculum/apcsa).
 - You can also supplement the Code.org curriculum by offering computer science integrated [into math](/educate/algebra) and [into science](/curriculum/science).
 - Once you've decided on your course offerings, make sure to set up district-level course codes for your new computer science courses. Work with your principals to recruit teachers to attend workshops and to implement changes in master schedules.
@@ -141,7 +132,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 - Highlight the importance of all students learning CS! Use these [sample emails and announcements](/educate/resources/recruit#blurbs) to let your community know about your new computer science programs.
 - Add [these recruitment videos](/educate/resources/recruit#videos) to websites and school updates.
 - Provide guidance to school counselors and schedulers on why computer science is important for all students.
-- Ask your principal to [email your community](/educate/resources/recruit#blurbs) and recruit administrators and parents to advocate for expanding computer science in your school district. 
+- Ask your principal to [email your community](/educate/resources/recruit#blurbs) and recruit administrators and parents to advocate for expanding computer science in your school district.
 
 [/col-80]
 
@@ -181,7 +172,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 ## Curriculum Options
 
 ### Code.org Programs
-The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. All the curriculum is offered at no cost to your school. 
+The Code.org curriculum is the most popular in K-12 computer science, with courses for every grade band. All the curriculum is offered at no cost to your school.
 
 <%= view :course_explorer_table, responsive: true %>
 
@@ -189,7 +180,7 @@ The Code.org curriculum is the most popular in K-12 computer science, with cours
 
 <br>
 ### AP Computer Science A Resources
-There are two AP computer science offerings, and students can take either course in any order. If your school does not yet offer AP Computer Science, we recommend starting with the new AP Computer Science Principles course. This course aims to broaden participation in computer science by introducing students to the foundational concepts and challenging them to explore how computing and technology can impact the world. 
+There are two AP computer science offerings, and students can take either course in any order. If your school does not yet offer AP Computer Science, we recommend starting with the new AP Computer Science Principles course. This course aims to broaden participation in computer science by introducing students to the foundational concepts and challenging them to explore how computing and technology can impact the world.
 
 The AP Computer Sience A course and exam complement AP Computer Science Principles with a focus on computing skills related to programming in Java.
 
@@ -210,4 +201,3 @@ Every day more schools and districts are pledging to bring computer science educ
 
 <br>
 <br>
-
