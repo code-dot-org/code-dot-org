@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
-import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
+import { sectionDataPropType, scriptDataPropType } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
@@ -17,8 +17,8 @@ class VirtualizedSummaryView extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
-    studentLevelProgress: studentLevelProgressPropType.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired
+    lessonOfInterest: PropTypes.number.isRequired,
+    levelsByLesson: PropTypes.object,
   };
 
   state = {
@@ -29,7 +29,7 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, studentLevelProgress} = this.props;
+    const {section, scriptData, levelsByLesson} = this.props;
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -71,9 +71,7 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            studentLevelProgress={studentLevelProgress}
-            stageId={stageIdIndex}
-            scriptData={scriptData}
+            levelsByLesson={levelsByLesson[section.students[studentStartIndex].id][stageIdIndex]}
             style={progressStyles.summaryCell}
           />
         }

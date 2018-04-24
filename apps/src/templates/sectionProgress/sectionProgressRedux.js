@@ -255,6 +255,14 @@ export const getCurrentScriptData = (state) => {
 };
 
 /**
+ * Retrieves the combined script and progress data
+ * TODO(caleybrock) write a test for this function
+ */
+export const getLevelsByLesson = (state) => {
+  return state.sectionProgress.levelsByLessonByScript[state.sectionProgress.scriptId];
+};
+
+/**
  * Calculate the width of each column in the detail view based on types of levels
  * @returns {Array} array of integers indicating the length of each column
  */
@@ -298,10 +306,6 @@ export const loadScript = (scriptId) => {
     }
 
     dispatch(startLoadingProgress());
-    // turn this into a promise and make line 314 rely on it to finish
-    /*$.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      dispatch(addScriptData(scriptId, scriptData));
-    });*/
     const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {credentials: 'include'})
       .then(response => response.json())
       .then((scriptData) => {
