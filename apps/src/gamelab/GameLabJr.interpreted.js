@@ -39,25 +39,64 @@ function initialize(setupHandler) {
 
 // Behaviors
 
-function addBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
+function addBehavior(sprite, behavior) {
+  if (!sprite || !behavior) {
+    return;
+  }
+  behavior = normalizeBehavior(behavior);
+
+  if (findBehavior(sprite, behavior) !== -1) {
+    return;
+  }
+  sprite.behaviors.push(behavior);
+}
+
+function removeBehavior(sprite, behavior) {
+  if (!sprite || !behavior) {
+    return;
+  }
+  behavior = normalizeBehavior(behavior);
+
+  var index = findBehavior(sprite, behavior);
   if (index === -1) {
-    sprite.behavior_keys.push(name);
+    return;
   }
-
-  sprite.behaviors[name] = behavior;
+  sprite.behaviors.splice(index, 1);
 }
 
-function removeBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
-  if (index > -1) {
-    sprite.behavior_keys.splice(index, 1);
+function normalizeBehavior(behavior) {
+  if (typeof behavior === 'function')  {
+    behavior = {
+      func: behavior,
+      args: [],
+    };
   }
+  return behavior;
 }
 
-function hasBehavior(sprite, behavior, name) {
-  var index = sprite.behavior_keys.indexOf(name);
-  return index > -1;
+function findBehavior(sprite, behavior) {
+  for (var i = 0; i < sprite.behaviors.length; i++) {
+    var myBehavior = sprite.behaviors[i];
+    if (myBehavior.func !== behavior.func) {
+      console.log('funcs not equal');
+      continue;
+    }
+    if (behavior.args.length !== myBehavior.args.length) {
+      continue;
+    }
+    var argsEqual = true;
+    for (var j = 0; j < myBehavior.args.length; j++) {
+      if (behavior.args[j] !== myBehavior.args[j]) {
+        argsEqual = false;
+        break;
+      }
+    }
+    if (!argsEqual) {
+      continue;
+    }
+    return i;
+  }
+  return -1;
 }
 
 function patrol(sprite, direction) {
@@ -167,8 +206,7 @@ function makeNewSprite(animation, x, y) {
   sprite.speed = 10;
   sprite.patrolling = false;
   sprite.things_to_say = [];
-  sprite.behavior_keys = [];
-  sprite.behaviors = {};
+  sprite.behaviors = [];
 
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
@@ -221,9 +259,9 @@ function makeNewSprite(animation, x, y) {
 
 function makeNewGroup() {
   var group = createGroup();
-  group.addBehaviorEach = function (behavior, name) {
+  group.addBehaviorEach = function (behavior) {
     for (var i=0; i < group.length; i++) {
-      addBehavior(group[i], behavior, name);
+      addBehavior(group[i], behavior);
     }
   };
   group.destroy = group.destroyEach;
@@ -302,14 +340,12 @@ function draw() {
     }
 
 
-    for (let i=0; i<sprites.length; i++) {
-      var sprite = sprites[i];
+    sprites.forEach(function (sprite) {
 
       // Perform sprite behaviors
-
-      for (var j=0; j<sprite.behavior_keys.length; j++) {
-        sprite.behaviors[sprite.behavior_keys[j]](sprite);
-      }
+      sprite.behaviors.forEach(function (behavior) {
+        behavior.func.apply(null, [sprite].concat(behavior.args));
+      });
 
       // Make sprites say things
       if (sprite.things_to_say.length > 0) {
@@ -324,7 +360,7 @@ function draw() {
           sprite.things_to_say[0][1]--;
         }
       }
-    }
+    });
   }
 
   drawSprites();
