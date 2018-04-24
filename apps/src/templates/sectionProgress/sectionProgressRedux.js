@@ -42,7 +42,14 @@ export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
 export const setSection = (section) => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
-  return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+
+  // Filter data to match sectionDataPropType
+  const filteredSectionData = {
+    id: section.id,
+    script: section.script,
+    students: sortedStudents,
+  };
+  return { type: SET_SECTION, section: filteredSectionData };
 };
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
@@ -85,6 +92,7 @@ export const ViewType = {
  */
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  script: PropTypes.object,
   students: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
