@@ -72,6 +72,9 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('NC', district_code, school_code)
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
+    when 'UT'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -192,7 +195,7 @@ class Census::StateCsOffering < ApplicationRecord
     'Computer Programming II CE',
     'Computer Science Principles',
     'Computer Science Principles CE',
-    'Exploring Computer Science I  (CS',
+    'Exploring Computer Science I  (CS)',
     'Exploring Computer Science II',
     'IB Computer Science HL 1',
     'IB Computer Science HL 2',
@@ -227,6 +230,8 @@ class Census::StateCsOffering < ApplicationRecord
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'UT'
+      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
