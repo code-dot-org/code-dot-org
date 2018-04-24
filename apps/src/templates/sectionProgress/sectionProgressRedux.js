@@ -109,6 +109,8 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
   PropTypes.objectOf(PropTypes.number)
 );
 
+const INITIAL_LESSON_OF_INTEREST = 1;
+
 const initialState = {
   scriptId: null,
   section: {},
@@ -116,7 +118,7 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
-  lessonOfInterest: 1,
+  lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
 };
 
@@ -125,6 +127,7 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
   if (action.type === SET_CURRENT_VIEW) {

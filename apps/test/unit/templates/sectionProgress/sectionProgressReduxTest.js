@@ -103,6 +103,15 @@ describe('sectionProgressRedux', () => {
       const nextState = sectionProgress(initialState, action);
       assert.deepEqual(nextState.scriptId, 130);
     });
+
+    it('seting the script id resets the lesson of interest', () => {
+      const action = setLessonOfInterest(lessonOfInterest);
+      const nextState = sectionProgress(initialState, action);
+
+      const action2 = setScriptId(130);
+      const nextState2 = sectionProgress(nextState, action2);
+      assert.deepEqual(nextState2.lessonOfInterest, 1);
+    });
   });
 
   describe('setSection', () => {
