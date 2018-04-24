@@ -40,6 +40,12 @@ const styles = {
     borderBottom: '2px solid',
     borderColor: color.border_gray,
   },
+  lessonLabelContainer: {
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 44,
+    paddingTop: 8,
+  },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
     marginTop: 18,
@@ -108,9 +114,11 @@ class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
-            {i18n.lesson()}
-          </span>
+          <div style={styles.lessonLabelContainer}>
+            <span style={progressStyles.lessonHeading}>
+              {i18n.lesson()}
+            </span>
+          </div>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
           <div style={styles.lessonHeaderContainer}>
@@ -129,12 +137,12 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
+          <div style={progressStyles.lessonHeading}>
             {i18n.levelType()}
-          </span>
+          </div>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span style={styles.levelTypeContainer}>
+          <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 icon={getIconForLevel(level)}
