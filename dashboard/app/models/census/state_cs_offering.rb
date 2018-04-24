@@ -188,7 +188,7 @@ class Census::StateCsOffering < ApplicationRecord
     10155
     10156
     10158
-  )
+  ).freeze
 
   MI_COURSE_CODES = %w(
     10157
@@ -245,7 +245,7 @@ class Census::StateCsOffering < ApplicationRecord
     'IB Computer Science SL 1',
     'IB Computer Science SL 2',
     'PLtW Computer Science & Software Enginee'
-  ]
+  ].freeze
 
   def self.get_courses(state_code, row_hash)
     case state_code
