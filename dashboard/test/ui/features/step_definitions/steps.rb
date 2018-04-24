@@ -4,7 +4,6 @@ require 'cdo/url_converter'
 # coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
-
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
@@ -84,7 +83,13 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I switch to the first iframe$/ do
+  $default_window = @browser.window_handle
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
+end
+
+# Can switch out of iframe context
+When /^I switch to the default content$/ do
+  @browser.switch_to.window $default_window
 end
 
 When /^I close the instructions overlay if it exists$/ do
