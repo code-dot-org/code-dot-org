@@ -18,7 +18,7 @@ class VirtualizedSummaryView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelsByLesson: PropTypes.object,
+    levelsByLessonByStudent: PropTypes.object,
   };
 
   state = {
@@ -29,7 +29,7 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, levelsByLesson} = this.props;
+    const {section, scriptData, levelsByLessonByStudent} = this.props;
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -71,7 +71,7 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            levelsByLesson={levelsByLesson[section.students[studentStartIndex].id][stageIdIndex]}
+            levelsWithStatus={levelsByLessonByStudent[section.students[studentStartIndex].id][stageIdIndex]}
             style={progressStyles.summaryCell}
           />
         }
