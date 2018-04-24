@@ -22,6 +22,7 @@ const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
+export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
@@ -57,10 +58,9 @@ export const jumpToLessonDetails = (lessonOfInterest) => {
     dispatch(setCurrentView(ViewType.DETAIL));
   };
 };
-export const finishLoadingProgress = (scriptId) => {
+export const processScriptAndProgress = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
-    // calculate levelsbylesson and dispatch to redux
     const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
     const scriptData = state.scriptDataByScript[scriptId];
     let levelsByStudentByLesson = {};
@@ -72,7 +72,7 @@ export const finishLoadingProgress = (scriptId) => {
       });
     }
     dispatch({ type: ADD_LEVELS_BY_LESSON, scriptId: scriptId, levelsByLesson: levelsByStudentByLesson });
-    dispatch({ type: FINISH_LOADING_PROGRESS });
+    dispatch(finishLoadingProgress());
   };
 };
 
@@ -255,7 +255,7 @@ export const getCurrentScriptData = (state) => {
 };
 
 /**
- * Retrieves the combined script and progress data
+ * Retrieves the combined script and progress data for the current scriptId
  * TODO(caleybrock) write a test for this function
  */
 export const getLevelsByLesson = (state) => {
@@ -328,6 +328,6 @@ export const loadScript = (scriptId) => {
           dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
         });
     });
-    Promise.all([requests, scriptRequest]).then(() => dispatch(finishLoadingProgress(scriptId)));
+    Promise.all([requests, scriptRequest]).then(() => dispatch(processScriptAndProgress(scriptId)));
   };
 };
