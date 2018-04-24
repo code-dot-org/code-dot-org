@@ -13,11 +13,18 @@ export const progressStyles = {
   },
   // For 'hover' to be applied, you should wrap the component using this style in Radium.
   lessonNumberHeading: {
-    margin: '9px 16px',
+    padding: '9px 11px',
     fontFamily: '"Gotham 5r", sans-serif',
     ':hover': {
       cursor: 'pointer'
     }
+  },
+  lessonOfInterest: {
+    backgroundColor: color.teal,
+    color: color.white,
+    fontSize: 18,
+    padding: 10,
+    paddingLeft: 16
   },
   multigrid: {
     border: '1px solid',
@@ -49,7 +56,7 @@ export const progressStyles = {
     color: color.teal,
   },
   summaryCell: {
-    margin: '9px 12px',
+    margin: '9px 7px',
   },
   nameCell: {
     margin: 10,

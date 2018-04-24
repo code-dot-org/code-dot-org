@@ -23,7 +23,7 @@ class Pd::Teacher1819ApplicationMailerPreview < ActionMailer::Preview
     application_hash = build :pd_teacher1819_application_hash, school: School.first
     regional_partner = matched ? RegionalPartner.first : nil
     application = build :pd_teacher1819_application, user: user, course: 'csp', form_data: application_hash.to_json, regional_partner: regional_partner
-    application.pd_workshop_id = Pd::Workshop.first.id
+    application.pd_workshop_id = Pd::Workshop.first.try(:id) || (create :pd_workshop).id
     application.generate_application_guid
     application
   end

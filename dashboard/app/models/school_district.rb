@@ -47,7 +47,8 @@ class SchoolDistrict < ActiveRecord::Base
     # Skip seeding if the data is already present. Note that this logic will
     # not re-seed data if the number of records in the DB is greater than or
     # equal to that in the TSV file, even if the data is different.
-    if options[:force] || SchoolDistrict.count < expected_count
+    # Stubbed data is small enough to seed it every time.
+    if options[:stub_school_data] || options[:force] || SchoolDistrict.count < expected_count
       CDO.log.debug "seeding school districts (#{expected_count} rows)"
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)

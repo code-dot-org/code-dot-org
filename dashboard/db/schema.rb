@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403024415) do
+ActiveRecord::Schema.define(version: 20180418221021) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -118,6 +118,14 @@ ActiveRecord::Schema.define(version: 20180403024415) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.index ["school_id"], name: "fk_rails_06131f8f87", using: :btree
+  end
+
+  create_table "census_state_course_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "state"
+    t.string   "course"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state", "course"], name: "index_census_state_course_codes_on_state_and_course", unique: true, using: :btree
   end
 
   create_table "census_submission_form_maps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
