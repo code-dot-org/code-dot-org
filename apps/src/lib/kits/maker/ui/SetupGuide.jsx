@@ -32,15 +32,37 @@ export default class SetupGuide extends React.Component {
 class Downloads extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      platform: isWindows() ? WINDOWS :
-        isOSX() ? MAC :
-          isLinux() ? LINUX :
-            WINDOWS
-    };
+    this.state = {platform: Downloads.platformFromHash()};
   }
 
+  componentDidMount() {
+    window.addEventListener('hashchange', this.onHashChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this.onHashChange);
+  }
+
+  static platformFromHash() {
+    const hash = window.location.hash.slice(1);
+    if ([WINDOWS, MAC, LINUX, CHROMEBOOK].includes(hash)) {
+      return hash;
+    } else if (isWindows()) {
+      return WINDOWS;
+    } else if (isOSX()) {
+      return MAC;
+    } else if (isLinux()) {
+      return LINUX;
+    }
+    return WINDOWS;
+  }
+
+  onHashChange = () => {
+    this.setState({platform: Downloads.platformFromHash()});
+  };
+
   onPlatformChange = (platform) => {
+    window.location.hash = '#' + platform;
     this.setState({platform});
   };
 
