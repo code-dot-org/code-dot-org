@@ -328,6 +328,8 @@ export const loadScript = (scriptId) => {
           dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
         });
     });
-    Promise.all([requests, scriptRequest]).then(() => dispatch(processScriptAndProgress(scriptId)));
+
+    requests.push(scriptRequest);
+    Promise.all(requests).then(() => dispatch(processScriptAndProgress(scriptId)));
   };
 };
