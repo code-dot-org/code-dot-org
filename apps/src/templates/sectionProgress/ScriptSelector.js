@@ -11,6 +11,7 @@ const styles = {
     boxSizing: 'border-box',
     fontSize: 'medium',
     padding: '0.8em',
+    height: 34
   },
 };
 
