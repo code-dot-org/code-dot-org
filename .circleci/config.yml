@@ -10,7 +10,7 @@ jobs:
   build:
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:ruby-2.5
+      - image: wjordan/code-dot-org:0.5
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -60,7 +60,7 @@ jobs:
 
       # restore gems cache
       - restore_cache:
-          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+          key: code-dot-org-bundle-v7-{{ checksum "Gemfile.lock" }}
 
       # restore npm cache
       - restore_cache:
@@ -111,7 +111,7 @@ jobs:
             RAKE_VERBOSE: true
 
       - save_cache:
-          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+          key: code-dot-org-bundle-v7-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 

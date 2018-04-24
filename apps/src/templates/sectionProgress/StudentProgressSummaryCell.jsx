@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
 import {
-  sectionDataPropType,
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
@@ -11,7 +10,6 @@ import Radium from 'radium';
 
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
-    section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,
@@ -71,7 +69,7 @@ class StudentProgressSummaryCell extends Component {
     const statusCounts = this.studentLevelProgressInStage();
     const perfectPixels = Math.floor((statusCounts.completed / statusCounts.total) * totalPixels);
     const imperfectPixels = Math.floor((statusCounts.imperfect / statusCounts.total) * totalPixels);
-    const incompletePixels = 20 - perfectPixels - imperfectPixels;
+    const incompletePixels = totalPixels - perfectPixels - imperfectPixels;
     const started = (statusCounts.attempted > 0) || (statusCounts.incomplete !== statusCounts.total);
 
     return (
