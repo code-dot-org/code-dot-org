@@ -124,7 +124,7 @@ describe("The CustomMarshalingInterpreter", () => {
       );
     });
 
-    describe("when used for setting properties on custom marshaled objects", () => {
+    describe("when used for setting string primitive properties on custom marshaled objects", () => {
       let nativeObject;
       beforeEach(() => {
         nativeObject = {};
@@ -132,7 +132,7 @@ describe("The CustomMarshalingInterpreter", () => {
         interpreter.setProperty(
           interpreter.global,
           "custom",
-          interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+          interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
         );
       });
 
@@ -150,7 +150,7 @@ describe("The CustomMarshalingInterpreter", () => {
           interpreter.setProperty(
             interpreter.global,
             "custom",
-            interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+            interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
           );
         });
 
@@ -176,17 +176,85 @@ describe("The CustomMarshalingInterpreter", () => {
               assertion,
               new CustomMarshaler({}),
               (interpreter, scope) => {
-                attachAssertToInterpreter(interpreter, scope, `assert(value.someProp === "hello")`);
+                attachAssertToInterpreter(interpreter, scope, assertion);
                 interpreter.setProperty(
                   scope,
                   'value',
-                  interpreter.customMarshaler.createCustomMarshalObject(nativeObject)
+                  interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
                 );
               }
             );
             interpreter.run();
           });
         });
+      });
+    });
+
+    describe("when used for setting object/array/function properties on custom marshaled objects", () => {
+      let nativeObject;
+      let existingFunction = function () { return 5; };
+      beforeEach(() => {
+        nativeObject = {
+          existingFunction,
+          existingArray: [5],
+          existingObject: { prop: 5 },
+        };
+        interpreter = new CustomMarshalingInterpreter(
+          'assert(custom.existingFunction() === 5);' +
+          'assert(custom.existingArray[0] === 5);' +
+          'assert(custom.existingObject.prop === 5);' +
+          'custom.newFunction = function () { return 2; };' +
+          'custom.newArray = [2];' +
+          'custom.newObject = { prop: 2 };' +
+          'custom.existingFunction = function () { return 1; };' +
+          'custom.existingArray = [1];' +
+          'custom.existingObject = { prop: 1 };' +
+          'assert(custom.newFunction() === 2);' +
+          'assert(custom.newArray[0] === 2);' +
+          'assert(custom.newObject.prop === 2);' +
+          'assert(custom.existingFunction() !== 5);' +
+          'assert(custom.existingArray[0] === 1);' +
+          'assert(custom.existingObject.prop === 1);',
+          customMarshaler,
+          (interpreter, scope) => {
+            attachAssertToInterpreter(interpreter, scope, "property changed as expected");
+          });
+        interpreter.setProperty(
+          interpreter.global,
+          "custom",
+          interpreter.customMarshaler.createCustomMarshalObject(interpreter, nativeObject)
+        );
+      });
+
+      it("will not set a new function property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.newFunction).to.be.undefined;
+      });
+
+      it("will not set a new array property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.newArray).to.be.undefined;
+      });
+
+      it("will not set a new object property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.newObject).to.be.undefined;
+      });
+
+      it("will set an existing function property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.existingFunction).not.to.equal(existingFunction);
+      });
+
+      it("will set an existing array property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.existingArray.length).to.equal(1);
+        expect(nativeObject.existingArray[0]).to.equal(1);
+      });
+
+      it("will set an existing object property on the native object", () => {
+        interpreter.run();
+        expect(nativeObject.existingObject.prop).to.equal(1);
       });
     });
 
@@ -673,7 +741,7 @@ describe("The CustomMarshalingInterpreter", () => {
         const nativeParentObj = {foo: 'bar'};
         const nativeVar = nativeParentObj.foo;
         interpreter.marshalNativeToInterpreter(nativeVar, nativeParentObj);
-        expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(nativeVar, nativeParentObj);
+        expect(interpreter.customMarshaler.createCustomMarshalObject).to.have.been.calledWith(interpreter, nativeVar, nativeParentObj);
       });
     });
   });

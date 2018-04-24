@@ -27,20 +27,163 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 
 **We are currently hiring for:**
 
+- **Curriculum**
+	- [Curriculum Writer, High School](#writer1)
+	- [Curriculum Writer, Upper Elementary](#writer2)
+	- [Curriculum Writer, Lower Elementary](#writer3)
 - **Engineering**
 	- [Director/VP Engineering](#vpeng)
 	- [Lead Software Engineer](#leadsofteng)
 - **Outreach**
+ 	- [Program Manager](#outreachpm)
  	- [Program Associate](#outreach)
+ 	- [Regional Manager](#regional)
+- **Professional Learning**
+ 	- [Program Manager, K-5 Program](#k5program)
 - **Internships**
-	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
+	- [Education Team Intern](#edintern)
 	
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="writer1"href="#writer1">Curriculum Writer, High School</a>
 
+**Job Summary:**
+
+Code.org is looking for an experienced high school CS educator with curriculum writing experience and a passion for creating equitable courses that encourage girls and underrepresented minorities. AP Computer Science Principles is growing at unprecedented rates across the country and we’re building our team to make sure our course continues to improve. Join our team to help us update and expand the curriculum with best practices we’ve learned from thousands of teachers and tens of thousands of students. Most teachers today have no background in computer science - help us build curriculum that supports them in teaching this foundational subject! 
+
+While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same curriculum values and contribute to a cohesive K-12 CS pathway.
+
+Responsibilities of the position include: 
+
+- Collaborating with our high school Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s CS Principles curriculum.
+- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all students and their teachers.
+- Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
+- Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
+- Travel up to 10% of working time, depending on location 
+
+
+**Experience and Qualifications:**
+
+The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is quick to pick up new technology, effectively prioritizes and multi-tasks, and excels under pressure. 
+
+The candidate should also have: 
+
+- Comprehensive knowledge of computer science, including the concepts covered in the high school grade band of the K-12 CS Framework (required) 
+- Prior collaborative curriculum writing / activity design experience (required)
+- Recent high school computer science teaching experience (required)
+- Understanding of best practices to support an equitable classroom environment (required)
+- Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Experience/familiarity with the CS Principles Framework (preferred) 
+- Experience/familiarity with the Code.org CS Principles curriculum (preferred) 
+- Experience supporting and collaborating with other CS teachers (preferred)
+
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Our team is based in Seattle and Chicago so those locations are preferred, but remote candidates are welcome and encouraged to apply
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing and developing curricular materials. 
+You may also choose to include a LinkedIn or related online profile.
+
+## <a name="writer2"href="#writer2">Curriculum Writer, Upper Elementary</a>
+
+**Job Summary:**
+
+Code.org is looking for an experienced Elementary educator with computer science experience, curriculum writing experience, and a passion for creating equitable courses that encourage girls and underrepresented minorities. Most teachers today have no background in computer science - help us build curriculum that supports them in teaching this foundational subject. Our K-5 course, CS Fundamentals is growing at unprecedented rates across the world and we’re building our team to make sure the courses continue to improve. Join our team to help us revise the curriculum with best practices we’ve learned from tens of thousands of teachers and millions of students. 
+
+While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same curriculum values and contribute to a cohesive K-12 CS pathway.
+
+Responsibilities of the position include: 
+
+- Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
+- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
+- Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
+- Travel up to 10% of working time, depending on location  
+
+**Experience and Qualifications:**
+
+The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is quick to pick up new technology, effectively prioritize and multi-task, and excel under pressure. 
+
+The candidate should also have: 
+
+- Comprehensive knowledge of computer science, including the concepts covered in the elementary through high school grade bands of the K-12 CS Framework (required) 
+- Prior collaborative curriculum writing experience / activity design (required)
+- Recent upper elementary school (grades 4-6) classroom teaching experience (required, preferably experience across multiple grade bands)
+- Recent experience teaching elementary computer science (preferred, not required) 
+- Fluency with and deep understanding of elementary pedagogy (required)
+Understanding of best practices to support an equitable classroom environment (required)
+- Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Experience/familiarity with the Code.org CS Fundamentals curriculum (preferred) 
+- Experience/familiarity with other elementary school computer science products and courses (preferred)
+- Experience supporting and collaborating with other teachers on computer science lessons (preferred)
+
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Our team is based in Seattle and Chicago so those locations are preferred, but remote candidates are welcome and encouraged to apply
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing and developing curricular materials. 
+You may also choose to include a LinkedIn or related online profile.
+
+
+## <a name="writer3"href="#writer3">Curriculum Writer, Lower Elementary</a>
+
+**Job Summary:**
+
+Code.org is looking for an experienced early Elementary educator with computer science experience, curriculum writing experience, and a passion for creating equitable courses that encourage girls and underrepresented minorities. Most teachers today have no background in computer science - help us build curriculum that supports them in teaching this foundational subject. Our K-5 course, CS Fundamentals, is growing at unprecedented rates across the world and we’re building our team to make sure the courses continue to improve. Join our team to help us revise the curriculum with best practices we’ve learned from tens of thousands of teachers and millions of students. 
+
+While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same curriculum values and contribute to a cohesive K-12 CS pathway.
+
+Responsibilities of the position include: 
+
+- Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
+- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
+- Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
+- Travel up to 10% of working time, depending on location  
+ 
+**Experience and Qualifications:**
+
+The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is quick to pick up new technology, effectively prioritize and multi-task, and excel under pressure. 
+
+The candidate should also have: 
+
+- Knowledge of the computer science concepts covered in the elementary grade bands of the K-12 CS Framework (required) 
+- Prior collaborative curriculum writing experience / activity design (required)
+- Recent early elementary school (grades K-3) classroom teaching experience (required, preferably experience across multiple grade bands)
+- Fluency with and deep understanding of elementary pedagogy (required)
+- Understanding of best practices to support an equitable classroom environment (required)
+- Recent experience teaching computer science to elementary school students (preferred)
+- Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Experience/familiarity with the Code.org CS Fundamentals curriculum (preferred) 
+- Experience/familiarity with other elementary school computer science products and courses (preferred)
+- Experience supporting and collaborating with other teachers on computer science lessons (preferred)
+ 
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+Our team is based in Seattle and Chicago so those locations are preferred, but remote candidates are welcome and encouraged to apply
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+Please include lesson plan samples that are your original work, and highlight relevant experience designing and developing curricular materials. 
+You may also choose to include a LinkedIn or related online profile.
 
 ## <a name="vpeng"href="#vpeng">Director/VP Engineering (Seattle, WA)</a>
 
@@ -147,7 +290,95 @@ You will be successful in this role if you have:
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
+## <a name="regional"href="#regional">Regional Manager (location flexible)</a>
 
+**Job Summary:**
+
+Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
+
+In this role, you will:
+
+- Manage and support implementation for all partners in region at K-12 grade levels
+	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
+	- Develop working relationship with partners to implement partnership model, and collaborate with partners roadmap development, including metrics and oversight of partner goals
+	- Assist regional partners in district, school, and teacher recruitment, selection, and retention
+	- Troubleshoot regional partnership issues
+	- Work with our Education team to coordinate regional professional learning workshops for teachers
+- Recruit Regional Partners to partner with Code.org and recruit school districts to teach Computer Science in K-12 schools.
+	- Present Code.org partnership model
+	- Track partnership status
+- Collaborate with your partners to market the programs in partner regions
+- Represent Code.org and present the partnership model at conferences and other venues, as needed
+- Contribute to our mission and needs through collateral development, professional development, operational support and other assigned duties
+
+Ability and willingness to travel up to 25% of the time is required.
+
+
+**Experience and Qualifications:**
+
+Our ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
+
+- Demonstrated ability to pitch the Code.org regional partner model to potential partners
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle, including potential mediation between different parties involved in partnership
+- Advanced organizational and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+
+Additional desired strengths include:
+
+- Experience working with schools districts or STEM education based organizations in a project implementation capacity
+- Desire to be in a collaborative, team-based work enviroment
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+- Candidates must be extremely detail-oriented, team-focused, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. 
+
+Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+In addition, candidates:
+
+- Must be authorized to work in the United States
+- Must pass a pre-employment background check
+
+
+To apply, please email your cover letter and resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="k5program"href="k5program">Program Manager, K-5 Program</a>
+
+**Job Summary:**
+
+In the last 4 years, Code.org has prepared over 72,000 teachers to teach computer science via workshops run by a network of over 400 facilitators. Our largest scale program is our elementary school CS Fundamentals program, with over 250 facilitators across the U.S. running one-day workshops for grade K-5 teachers interested in the CS Fundamentals curriculum.
+
+We're looking for a passionate, data-driven Education Program Manager to support the community and development of our amazing CS Fundamentals facilitators, and to engage and retain CS Fundamentals teachers, especially those coming out of our workshops. In addition to collaborating within the Education team, the Program Manager in this role will frequently work with teams across the organization, including Outreach, Product, Finance, Marketing, and the Code.org Leadership Team, to ensure we are successful in supporting the facilitator and teacher audiences, and are meeting the increasing demand for computer science in the elementary grade band.
+
+In this role you will:
+
+- Support the community of 250+ CS Fundamentals Facilitators via development opportunities and communicating relevant updates. Facilitators should be well-prepared to deliver high quality (and fun!) professional learning workshops aligned to our professional learning values to support teachers implementing the CS Fundamentals curriculum
+- Serve as both a facilitator community cheerleader and coach. The Program Manager will help amplify successes as well as identify and drive opportunities for improvement for facilitators. Data from workshop survey results will help identify these opportunities 
+- Ensure successful program implementation by quickly resolving and responding to incoming facilitator questions and concerns
+- Analyze data to develop and implement strategies that will result in an increase in the number of teachers who participate in workshops month over month, go on to implement the course after completing a workshop, and teach the course year over year
+- Collaborate with:
+	- Code.org's Outreach team and our 57+ Regional Partners across the U.S. to monitor the regional growth of the program and address issues that might be impeding the success of the program locally, including the need for more facilitators
+	- Professional Learning managers to support the design, development, and improvement, and successful rollout of teacher and facilitator-facing professional learning experiences
+	- The CS Fundamentals curriculum team to understand planned curriculum changes and help manage any broader program impact 
+	- The Finance team on long-term budget planning for the program and specific workshop payment questions
+	- The Product Management team to ensure the successful design and rollout of all tools that facilitators and regional partners use to plan and execute CS Fundamentals workshops
+
+**Experience and Qualifications:**
+
+We are looking for an experienced Program Manager to lead, execute, and support the cross-team work that is necessary to both sustain the current CS Fundamentals Program as well as drive change in pursuit of organizational goals. Must have a passion for Code.org’s mission of ensuring equitable access to a high-quality computer science education for all students. 
+
+Our ideal candidate is/has:
+
+- 4+ years experience as a program manager, preferably in the education sector
+- Demonstrated project management skills in a dynamic environment; ability to effectively prioritize and drive multiple projects with broad cross-team impact
+- Excellent written and verbal communication skills to create and deliver a range of communications to both individual and large group audiences (i.e. newsletters, emails, webinars, in-person conference sessions)
+- Exceptional interpersonal skills with an empathetic and collaborative approach to problem solving
+- Supported multiple external-facing partnerships or managed teams of people (part/full-time or contractors) (preferred)
+- Direct experience facilitating professional development experiences for teachers or industry professionals, or other relevant experience in the education space (preferred)
+- Tech-savvy (computer science experience/degree not required, but proficiency in working with Microsoft Office and Google Docs is a must). A successful candidate will have solid knowledge and experience using Excel and/or Google Sheets to manage and analyze program data.
+- Flexible, embraces multi-tasking, and thrives in a fast-paced work environment
+- A Bachelor’s degree in Education, Business, Computer Science or other related field 
+
+To apply, please email your cover letter and resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL or Seattle, WA preferred)</a>
 
