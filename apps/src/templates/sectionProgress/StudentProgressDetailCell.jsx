@@ -1,10 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
-import {
-  scriptDataPropType,
-  studentLevelProgressPropType
-} from './sectionProgressRedux';
 
 const styles = {
   bubbles: {
@@ -19,22 +14,8 @@ export default class StudentProgressDetailCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
-    scriptData: scriptDataPropType.isRequired,
-    studentLevelProgress: studentLevelProgressPropType.isRequired,
+    levelsByLesson: PropTypes.arrayOf(PropTypes.object),
   };
-
-  studentLevelProgressInStage() {
-    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
-
-    // TODO(caleybrock): Modify function call to not require
-    // currentLevelId since we set it to null and don't need it here.
-    const levelState = {
-      stage: scriptData.stages[stageId],
-      levelProgress: studentLevelProgress[studentId],
-      currentLevelId: null
-    };
-    return levelByLesson(levelState);
-  }
 
   render() {
 
@@ -42,7 +23,7 @@ export default class StudentProgressDetailCell extends Component {
       <div style={styles.cell}>
         <div style={styles.bubbles}>
           <ProgressBubbleSet
-            levels={this.studentLevelProgressInStage()}
+            levels={this.props.levelsByLesson}
             disabled={false}
             hideToolTips={true}
           />

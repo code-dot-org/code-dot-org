@@ -1,9 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
-import {
-  scriptDataPropType,
-  studentLevelProgressPropType
-} from './sectionProgressRedux';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
@@ -11,35 +6,23 @@ import Radium from 'radium';
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    stageId: PropTypes.number.isRequired,
-    scriptData: scriptDataPropType.isRequired,
-    studentLevelProgress: studentLevelProgressPropType.isRequired,
     style: PropTypes.object,
+    levelsByLesson: PropTypes.arrayOf(PropTypes.object),
   };
 
   studentLevelProgressInStage() {
-    const { scriptData, studentLevelProgress, studentId, stageId } = this.props;
-
-    // TODO(caleybrock): It's likely more efficient to combine getting
-    // a level by lesson and calculating the level statuses at the same time.
-    // Move this calculation to progressRedux and activityUtils.
-    const levelState = {
-      stage: scriptData.stages[stageId],
-      levelProgress: studentLevelProgress[studentId],
-      currentLevelId: null
-    };
-    const results = levelByLesson(levelState);
+    const { levelsByLesson } = this.props;
 
     // Get counts of statuses
     let statusCounts = {
-      total: results.length,
+      total: levelsByLesson.length,
       completed: 0,
       imperfect: 0,
       incomplete: 0,
       attempted: 0,
     };
-    for (let i = 0; i <results.length; i++) {
-      const status = results[i].status;
+    for (let i = 0; i <levelsByLesson.length; i++) {
+      const status = levelsByLesson[i].status;
       switch (status) {
         case LevelStatus.perfect:
         case LevelStatus.submitted:

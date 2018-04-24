@@ -16,12 +16,12 @@ import {
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
+  getLevelsByLesson,
   setScriptId,
   setLessonOfInterest,
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
-  studentLevelProgressPropType,
 } from './sectionProgressRedux';
 
 const styles = {
@@ -69,11 +69,11 @@ class SectionProgress extends Component {
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
-    studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
+    levelsByLesson: PropTypes.object,
   };
 
   componentDidMount() {
@@ -96,7 +96,6 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress,
       isLoadingProgress
     } = this.props;
 
@@ -147,7 +146,7 @@ class SectionProgress extends Component {
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
+                levelsByLesson={this.props.levelsByLesson}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
@@ -159,7 +158,7 @@ class SectionProgress extends Component {
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
+                levelsByLesson={this.props.levelsByLesson}
               />
               <ProgressLegend
                 excludeCsfColumn={true}
@@ -181,6 +180,7 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
+  levelsByLesson: getLevelsByLesson(state),
   isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {
