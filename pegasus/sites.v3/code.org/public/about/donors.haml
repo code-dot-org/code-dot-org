@@ -1,9 +1,32 @@
----
-title: Donors
-nav: about_nav
-theme: responsive
-style_min: true
----
-%h1 Donors
 
-= view :donors
+%p
+  Code.org&reg; is dedicated to the vision that every student in every school should have the opportunity to learn computer science. We are supported by philanthropic donations from corporations, foundations, and generous individuals.  Code.org is a public 501c3. All donations to Code.org are tax-deductible.
+
+%p
+  %a{href:"/donate"}
+    %button
+      Please consider a donation
+
+- categories = []
+- categories << { level: 'diamond', title: 'Diamond Supporters ($10,000,000+ contribution)', size: "large" }
+- categories << { level: 'platinum', title: 'Platinum Supporters ($3,000,000+ contribution)', size: "large" }
+- categories << { level: 'gold', title: 'Gold Supporters ($1,000,000+ contribution)', size: "medium" }
+- categories << { level: 'silver', title: 'Silver Supporters ($500,000+ contribution)', size: "small" }
+- categories.each do |category|
+  %h2
+    =category[:title]
+  %p
+    = view :about_donors_image, supporters: DB[:cdo_donors].where(level_s: category[:level]).where("show_s != 'none'"), size: category[:size]
+
+- categories = []
+- categories << { level: 'bronze', title: 'Bronze Supporters ($100,000+ contribution)' }
+- categories << { level: 'supporter', title: 'Supporters ($25,000+ contribution)'}
+- categories.each do |category|
+  %h2
+    =category[:title]
+  %p
+    = view :about_donors_text, supporters: DB[:cdo_donors].where(level_s: category[:level]).where("show_s != 'none'")
+
+%hr
+%a{href:"/about/donors-other"}
+  View all other supporters

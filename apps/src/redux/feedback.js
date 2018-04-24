@@ -21,7 +21,7 @@ const initialState = {
     message: '',
     code: '',
   },
-  canShare: false,
+  feedbackImage: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -53,7 +53,7 @@ export default function reducer(state = initialState, action) {
       blocksUsed,
       displayFunometer,
       studentCode,
-      canShare,
+      feedbackImage,
     } = action;
     return {
       ...state,
@@ -62,7 +62,7 @@ export default function reducer(state = initialState, action) {
       blocksUsed,
       displayFunometer,
       studentCode,
-      canShare,
+      feedbackImage,
     };
   }
   if (action.type === SET_ACHIEVEMENTS) {
