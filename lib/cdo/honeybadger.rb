@@ -40,7 +40,9 @@ module Honeybadger
       config.env = ENV['RACK_ENV']
       config.api_key = CDO.cronjobs_honeybadger_api_key
       config.logging.path = "STDOUT"
+      config.logging.level = "ERROR"
       config.logging.tty_level = 'ERROR'
+      config.report_data = true
     end
 
     error_message, backtrace = parse_exception_dump stderr

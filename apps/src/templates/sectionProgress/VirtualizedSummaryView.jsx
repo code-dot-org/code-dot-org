@@ -10,7 +10,7 @@ import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './m
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
-const SUMMARY_COLUMN_WIDTH = 50;
+const SUMMARY_COLUMN_WIDTH = 40;
 
 class VirtualizedSummaryView extends Component {
 
@@ -71,7 +71,6 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            section={section}
             studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
             scriptData={scriptData}
