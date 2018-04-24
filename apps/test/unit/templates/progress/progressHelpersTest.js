@@ -156,6 +156,14 @@ describe('progressHelpers', () => {
       assert.equal(getIconForLevel(level), 'desktop');
     });
 
+    it('uses scissors icon if unplugged level', () => {
+      const level1 = {kind: 'unplugged'};
+      assert.equal(getIconForLevel(level1), 'scissors');
+
+      const level2 = {isUnplugged: true};
+      assert.equal(getIconForLevel(level2), 'scissors');
+    });
+
     it('throws if icon is invalid', () => {
       assert.throws(function () {
         const level = {
