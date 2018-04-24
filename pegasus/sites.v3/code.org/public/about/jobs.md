@@ -36,8 +36,10 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 	- [Lead Software Engineer](#leadsofteng)
 - **Outreach**
  	- [Program Associate](#outreach)
+- **Professional Learning**
+ 	- [Program Manager, K-5 Program](#k5program)
 - **Internships**
-	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
+	- [Education Team Intern](#edintern)
 	
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
@@ -285,8 +287,44 @@ You will be successful in this role if you have:
 
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="k5program"href="k5program">Program Manager, K-5 Program</a>
 
+**Job Summary:**
 
+In the last 4 years, Code.org has prepared over 72,000 teachers to teach computer science via workshops run by a network of over 400 facilitators. Our largest scale program is our elementary school CS Fundamentals program, with over 250 facilitators across the U.S. running one-day workshops for grade K-5 teachers interested in the CS Fundamentals curriculum.
+
+We're looking for a passionate, data-driven Education Program Manager to support the community and development of our amazing CS Fundamentals facilitators, and to engage and retain CS Fundamentals teachers, especially those coming out of our workshops. In addition to collaborating within the Education team, the Program Manager in this role will frequently work with teams across the organization, including Outreach, Product, Finance, Marketing, and the Code.org Leadership Team, to ensure we are successful in supporting the facilitator and teacher audiences, and are meeting the increasing demand for computer science in the elementary grade band.
+
+In this role you will:
+
+- Support the community of 250+ CS Fundamentals Facilitators via development opportunities and communicating relevant updates. Facilitators should be well-prepared to deliver high quality (and fun!) professional learning workshops aligned to our professional learning values to support teachers implementing the CS Fundamentals curriculum
+- Serve as both a facilitator community cheerleader and coach. The Program Manager will help amplify successes as well as identify and drive opportunities for improvement for facilitators. Data from workshop survey results will help identify these opportunities 
+- Ensure successful program implementation by quickly resolving and responding to incoming facilitator questions and concerns
+- Analyze data to develop and implement strategies that will result in an increase in the number of teachers who participate in workshops month over month, go on to implement the course after completing a workshop, and teach the course year over year
+- Collaborate with:
+	- Code.org's Outreach team and our 57+ Regional Partners across the U.S. to monitor the regional growth of the program and address issues that might be impeding the success of the program locally, including the need for more facilitators
+	- Professional Learning managers to support the design, development, and improvement, and successful rollout of teacher and facilitator-facing professional learning experiences
+	- The CS Fundamentals curriculum team to understand planned curriculum changes and help manage any broader program impact 
+	- The Finance team on long-term budget planning for the program and specific workshop payment questions
+	- The Product Management team to ensure the successful design and rollout of all tools that facilitators and regional partners use to plan and execute CS Fundamentals workshops
+
+**Experience and Qualifications:**
+
+We are looking for an experienced Program Manager to lead, execute, and support the cross-team work that is necessary to both sustain the current CS Fundamentals Program as well as drive change in pursuit of organizational goals. Must have a passion for Code.org’s mission of ensuring equitable access to a high-quality computer science education for all students. 
+
+Our ideal candidate is/has:
+
+- 4+ years experience as a program manager, preferably in the education sector
+- Demonstrated project management skills in a dynamic environment; ability to effectively prioritize and drive multiple projects with broad cross-team impact
+- Excellent written and verbal communication skills to create and deliver a range of communications to both individual and large group audiences (i.e. newsletters, emails, webinars, in-person conference sessions)
+- Exceptional interpersonal skills with an empathetic and collaborative approach to problem solving
+- Supported multiple external-facing partnerships or managed teams of people (part/full-time or contractors) (preferred)
+- Direct experience facilitating professional development experiences for teachers or industry professionals, or other relevant experience in the education space (preferred)
+- Tech-savvy (computer science experience/degree not required, but proficiency in working with Microsoft Office and Google Docs is a must). A successful candidate will have solid knowledge and experience using Excel and/or Google Sheets to manage and analyze program data.
+- Flexible, embraces multi-tasking, and thrives in a fast-paced work environment
+- A Bachelor’s degree in Education, Business, Computer Science or other related field 
+
+To apply, please email your cover letter and resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL or Seattle, WA preferred)</a>
 
