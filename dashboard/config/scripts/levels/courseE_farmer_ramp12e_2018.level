@@ -36,6 +36,7 @@
     "markdown_instructions": "The lettuce is scattered all over the garden.  \r\nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
