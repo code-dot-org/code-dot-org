@@ -77,7 +77,7 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
-  if (level.isUnplugged) {
+  if (level.isUnplugged || level.kind === 'unplugged') {
     return 'scissors';
   }
 

@@ -48,10 +48,7 @@
     "hide_custom_blocks": "false",
     "instructions": "When Daisy gets a carrot, she gets excited. Use the **\"when touches\"** event and the \"add behavior\" block to make Daisy do something fun when she gets the carrot.",
     "parent_level_id": 12163,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

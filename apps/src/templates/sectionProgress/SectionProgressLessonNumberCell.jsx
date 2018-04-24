@@ -8,13 +8,23 @@ class SectionProgressLessonNumberCell extends Component {
   static propTypes = {
     lessonNumber: PropTypes.number.isRequired,
     jumpToLessonDetails: PropTypes.func.isRequired,
+    lessonOfInterest: PropTypes.number.isRequired
   };
 
   render() {
-    const {lessonNumber, jumpToLessonDetails} = this.props;
+    const {lessonNumber, jumpToLessonDetails, lessonOfInterest} = this.props;
+
+    let cellStyle = progressStyles.lessonNumberHeading;
+    if (lessonNumber === lessonOfInterest) {
+      cellStyle = {
+        ...cellStyle,
+        ...progressStyles.lessonOfInterest
+      };
+    }
+
     return (
       <div
-        style={progressStyles.lessonNumberHeading}
+        style={cellStyle}
         onClick={() => jumpToLessonDetails(lessonNumber)}
       >
         {lessonNumber}
@@ -25,7 +35,9 @@ class SectionProgressLessonNumberCell extends Component {
 
 export const UnconnectedSectionProgressLessonNumberCell = SectionProgressLessonNumberCell;
 
-export default connect(state => ({}), dispatch => ({
+export default connect(state => ({
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+}), dispatch => ({
   jumpToLessonDetails(lessonOfInterest) {
     dispatch(jumpToLessonDetails(lessonOfInterest));
   }

@@ -153,7 +153,7 @@ export default storybook =>
               achievements={achievements}
               studentCode={studentCode}
               showFunometer
-              canShare
+              feedbackImage="base64..image"
             />
           </div>
         ),

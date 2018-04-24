@@ -789,27 +789,25 @@ class FilesApi < Sinatra::Base
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
+    file = get_file('files', encrypted_channel_id, s3_prefix)
+
     if THUMBNAIL_FILENAME == filename
-      begin
-        storage_apps = StorageApps.new(storage_id('user'))
-        project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
-        if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
-          temp_url = FileBucket.new.make_temporary_public_url(encrypted_channel_id, s3_prefix)
-          rating = ImageModeration.rate_image(temp_url)
-          if %i(adult racy).include? rating
-            # Incrementing abuse score by 15 to differentiate from manually reported projects
-            new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
-            FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-            response.headers['x-cdo-content-rating'] = rating.to_s
-            cache_for 1.hour
-            not_found
-          end
+      storage_apps = StorageApps.new(storage_id('user'))
+      project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
+      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
+        file_mime_type = mime_type(File.extname(filename.downcase))
+        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
+        if %i(adult racy).include? rating
+          # Incrementing abuse score by 15 to differentiate from manually reported projects
+          new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          response.headers['x-cdo-content-rating'] = rating.to_s
+          cache_for 1.hour
+          not_found
         end
-      rescue ArgumentError, OpenSSL::Cipher::CipherError
-        not_found
       end
     end
-    file = get_file('files', encrypted_channel_id, s3_prefix)
+
     cache_for 1.hour
     file
   end

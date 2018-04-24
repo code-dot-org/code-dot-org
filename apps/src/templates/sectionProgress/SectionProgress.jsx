@@ -28,18 +28,31 @@ const styles = {
   heading: {
     marginBottom: 0,
   },
+  selectorContainer: {
+    width: '100%',
+    display: 'inline-block'
+  },
   scriptSelectorContainer: {
     float: 'left',
-    marginRight: 20,
+    marginRight: 10,
   },
   viewToggleContainer: {
     float: 'left',
-    marginTop: 24,
+    marginTop: 34,
+  },
+  lessonSelectorContainer: {
+    float: 'right',
   },
   viewCourseLink: {
     float: 'right',
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
+  viewCourseLinkBox: {
+    width: '100%',
+    height: 10,
+    lineHeight: '10px',
+    clear: 'both'
+  },
 };
 
 /**
@@ -69,7 +82,6 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    // TODO(caleybrock): Only load data if the script has not already been loaded.
     this.props.loadScript(scriptId);
   };
 
@@ -94,7 +106,18 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <div>
+        <div style={styles.viewCourseLinkBox}>
+          <div style={styles.viewCourseLink}>
+            {linkToOverview &&
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            }
+          </div>
+        </div>
+        <div style={styles.selectorContainer}>
           <div style={styles.scriptSelectorContainer}>
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
@@ -104,22 +127,15 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
-            {lessons.length !== 0 &&
-              <LessonSelector
-                lessons={lessons}
-                onChange={this.onChangeLevel}
-              />
-            }
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
           </div>
-          <div style={styles.viewCourseLink}>
-            {linkToOverview &&
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
+          <div style={styles.lessonSelectorContainer}>
+            {lessons.length !== 0 &&
+              <LessonSelector
+                lessons={lessons}
+                onChange={this.onChangeLevel}
               />
             }
           </div>
@@ -134,7 +150,7 @@ class SectionProgress extends Component {
                 studentLevelProgress={studentLevelProgress}
               />
               <SummaryViewLegend
-                showCSFProgressBox={true}
+                showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }

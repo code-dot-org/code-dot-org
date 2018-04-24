@@ -11,7 +11,7 @@ class ZendeskError < StandardError
 
   def to_honeybadger_context
     {
-      details: @error_details
+      details: JSON.parse(@error_details)
     }
   end
 end
