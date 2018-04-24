@@ -93,6 +93,14 @@ def credit_count
   DB[:cdo_state_promote].where("cs_counts_t = 'Yes' || cs_counts_t = 'Other'").count
 end
 
+def hs_access_count
+  DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
+end
+
+def k12_access_count
+  DB[:cdo_state_promote].where(require_k12_s: 'Yes').count
+end
+
 def jobs_nationwide
   DB[:cdo_state_promote].where(state_code_s: "Sum_states").first[:cs_jobs_i]
 end

@@ -36,6 +36,7 @@
     "markdown_instructions": "Now the harvester needs to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop to get it all!",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

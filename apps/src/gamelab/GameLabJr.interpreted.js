@@ -155,6 +155,10 @@ function forever(loop) {
 
 // Sprite and Group creation
 
+function makeNewSpriteLocation(animation, loc) {
+  return makeNewSprite(animation, loc.x, loc.y);
+}
+
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
 
