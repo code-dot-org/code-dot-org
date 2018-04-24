@@ -14,10 +14,7 @@ class SectionProgressLessonNumberCell extends Component {
   render() {
     const {lessonNumber, jumpToLessonDetails, lessonOfInterest} = this.props;
 
-    let cellStyle = {
-      ...progressStyles.lessonNumberHeading
-    };
-
+    let cellStyle = progressStyles.lessonNumberHeading;
     if (lessonNumber === lessonOfInterest) {
       cellStyle = {
         ...cellStyle,

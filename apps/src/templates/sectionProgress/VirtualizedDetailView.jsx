@@ -10,6 +10,7 @@ import {
   studentLevelProgressPropType,
   getColumnWidthsForDetailView
 } from './sectionProgressRedux';
+import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
 import {
   progressStyles,
@@ -35,11 +36,11 @@ const styles = {
   lessonHeaderContainer: {
     display: 'flex',
     justifyContent: 'flex-start',
-    marginTop: 9,
+    marginTop: 4,
   },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
-    marginTop: 11,
+    marginTop: 18,
     marginRight: -8,
     width: 100,
     height: 2,
@@ -50,6 +51,7 @@ const styles = {
     borderWidth: '0 2px 2px 0',
     display: 'inline-block',
     padding: 3,
+    marginTop: 15,
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)',
   },
@@ -133,7 +135,7 @@ class VirtualizedDetailView extends Component {
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                icon={level.icon ? level.icon.replace('fa-', '') : "desktop"}
+                icon={getIconForLevel(level)}
                 style={progressStyles.icon}
                 key={i}
               />
