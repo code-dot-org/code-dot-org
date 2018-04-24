@@ -9,7 +9,8 @@
     "instructions": "We don't have a video for creating functions, yet. This is a placeholder.",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",
