@@ -12,7 +12,11 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
+    paddingTop: 20,
     paddingBottom: 20
+  },
+  table: {
+    width: 300
   }
 };
 
@@ -98,7 +102,7 @@ class MoveStudents extends Component {
         >
           <Table.Provider
             columns={columns}
-            style={tableLayoutStyles.table}
+            style={styles.table}
           >
             <Table.Header />
             <Table.Body rows={sortedRows} rowKey="id" />
