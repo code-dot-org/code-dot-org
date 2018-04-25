@@ -669,6 +669,7 @@
   "noMenuItemsAvailable": "No menu items available.",
   "none": "None",
   "note": "*Note:",
+  "notAnswered": "Not Answered",
   "notStarted": "Not started",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
   "numBlocksNeeded": "Congratulations! You completed Puzzle {puzzleNumber}. (However, you could have used only {numBlocks, plural, one {1 block} other {# blocks}}.)",
