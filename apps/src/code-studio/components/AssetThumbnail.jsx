@@ -41,6 +41,7 @@ export const styles = {
 class AssetThumbnail extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    timestamp: PropTypes.string,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: PropTypes.object,
     iconStyle: PropTypes.object,
@@ -49,19 +50,34 @@ class AssetThumbnail extends React.Component {
   };
 
   render() {
-    const {type, name} = this.props;
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    if (this.props.projectId) {
-      api = api.withProjectId(this.props.projectId);
+    const {
+      timestamp,
+      type,
+      name,
+      useFilesApi,
+      projectId,
+      iconStyle,
+      style
+    } = this.props;
+    let api = useFilesApi ? filesApi : assetsApi;
+    if (projectId) {
+      api = api.withProjectId(projectId);
     }
+    const basePath = api.basePath(name);
+    let cacheBustSuffix = '';
+    if (timestamp) {
+      const date = new Date(timestamp);
+      cacheBustSuffix = `?t=${date.valueOf()}`;
+    }
+    const srcPath = `${basePath}${cacheBustSuffix}`;
 
     return (
-      <div className="assetThumbnail" style={[styles.wrapper, this.props.style]}>
+      <div className="assetThumbnail" style={[styles.wrapper, style]}>
         {type === 'image' ?
-         <img src={api.basePath(name)} style={assetThumbnailStyle} /> :
+         <img src={srcPath} style={assetThumbnailStyle} /> :
          <i
            className={defaultIcons[type] || defaultIcons.unknown}
-           style={[assetIconStyle, this.props.iconStyle]}
+           style={[assetIconStyle, iconStyle]}
          />
         }
       </div>
