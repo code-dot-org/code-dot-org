@@ -80,7 +80,7 @@ class BucketHelper
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       category = category_from_file_type(File.extname(filename))
 
-      {filename: filename, category: category, size: fileinfo.size}
+      {filename: filename, category: category, size: fileinfo.size, timestamp: fileinfo.last_modified}
     end
   end
 
