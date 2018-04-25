@@ -41,6 +41,8 @@ module Pd::Application
     include ApplicationConstants
     include Pd::Form
 
+    acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
     YES = 'Yes'.freeze
