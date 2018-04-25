@@ -72,7 +72,7 @@ class MultipleChoiceAnswerTable extends Component {
       {
         property: 'answerOptionOne',
         header: {
-          label: commonmsg.answerOptionOne(),
+          label: commonMsg.answerOptionOne(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
