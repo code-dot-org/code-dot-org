@@ -79,7 +79,6 @@ class MultipleChoiceOverviewTable extends Component {
             ...tableLayoutStyles.headerCell,
             width: 90,
           }},
-          transforms: [sortable],
         },
         cell: {
           props: {
@@ -98,7 +97,6 @@ class MultipleChoiceOverviewTable extends Component {
             ...tableLayoutStyles.headerCell,
             width: 90,
           }},
-          transforms: [sortable],
         },
         cell: {
           props: {
@@ -117,7 +115,6 @@ class MultipleChoiceOverviewTable extends Component {
             ...tableLayoutStyles.headerCell,
             width: 120,
           }},
-          transforms: [sortable],
         },
         cell: {
           props: {
