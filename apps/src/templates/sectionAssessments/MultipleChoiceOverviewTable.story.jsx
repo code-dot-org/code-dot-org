@@ -1,5 +1,5 @@
 import React from 'react';
-import MultipleChoiceAnswerTable from './MultipleChoiceAnswerTable';
+import MultipleChoiceOverviewTable from './MultipleChoiceOverviewTable';
 
 const multipleChoiceData = [
   {
@@ -24,13 +24,13 @@ const multipleChoiceData = [
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionAssessments/MultipleChoiceAnswerTable', module)
+    .storiesOf('SectionAssessments/MultipleChoiceOverviewTable', module)
     .addStoryTable([
       {
         name: 'Table for assessments',
         description: 'Ability to see assessment overview for the entire class',
         story: () => (
-            <MultipleChoiceAnswerTable
+            <MultipleChoiceOverviewTable
               questionAnswerData={multipleChoiceData}
             />
         )

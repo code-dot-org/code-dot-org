@@ -18,7 +18,7 @@ const questionAnswerDataPropType = PropTypes.shape({
   answerOptionTwo: PropTypes.string,
 });
 
-class MultipleChoiceAnswerTable extends Component {
+class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
   };
@@ -134,4 +134,4 @@ class MultipleChoiceAnswerTable extends Component {
   }
 }
 
-export default MultipleChoiceAnswerTable;
+export default MultipleChoiceOverviewTable;
