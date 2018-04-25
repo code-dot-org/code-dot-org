@@ -51,7 +51,9 @@ const styles = {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
     borderRadius: 4,
-    transform: 'rotate(45deg)'
+    transform: 'rotate(45deg)',
+    marginTop: 6,
+    marginBottom: 6,
   },
   small: {
     width: SMALL_DOT_SIZE,
