@@ -26,6 +26,7 @@ describe('MoveStudents', () => {
 
   describe('#closeDialog', () => {
     it('sets isDialogOpen state to false', () => {
+      wrapper.instance().isDialogOpen = true;
       wrapper.instance().closeDialog();
       expect(wrapper.instance().state.isDialogOpen).to.equal(false);
     });
