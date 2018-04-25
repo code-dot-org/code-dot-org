@@ -29,7 +29,7 @@ const customInputTypes = {
         },
         block.getHexColour(),
         value => {
-          if (value) {
+          if (value && value !== "undefined") {
             const loc = JSON.parse(value);
             label.setText(`${input.label}(${loc.x}, ${loc.y})`);
           }
