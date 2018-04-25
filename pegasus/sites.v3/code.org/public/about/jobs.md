@@ -59,7 +59,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with our high school Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s CS Principles curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location 
@@ -104,7 +104,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all elementary students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location  
@@ -151,7 +151,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all elementary students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location  
