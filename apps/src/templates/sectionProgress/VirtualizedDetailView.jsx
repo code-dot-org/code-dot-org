@@ -23,8 +23,8 @@ import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
 const ARROW_PADDING = 60;
-// Only show arrow next to lesson numbers if column is larger than a single small bubble
-const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH);
+// Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
+const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH) + 10;
 
 const styles = {
   numberHeader: {
