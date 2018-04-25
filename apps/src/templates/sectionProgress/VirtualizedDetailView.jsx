@@ -36,7 +36,16 @@ const styles = {
   lessonHeaderContainer: {
     display: 'flex',
     justifyContent: 'flex-start',
-    marginTop: 4,
+    marginTop: 2,
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 42,
+  },
+  lessonLabelContainer: {
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 44,
+    paddingTop: 8,
   },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
@@ -44,7 +53,7 @@ const styles = {
     marginRight: -8,
     width: 100,
     height: 2,
-    backgroundColor:color.charcoal,
+    backgroundColor: color.charcoal,
   },
   lessonArrow: {
     border: 'solid ' + color.charcoal,
@@ -106,9 +115,11 @@ class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
-            {i18n.lesson()}
-          </span>
+          <div style={styles.lessonLabelContainer}>
+            <span style={progressStyles.lessonHeading}>
+              {i18n.lesson()}
+            </span>
+          </div>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
           <div style={styles.lessonHeaderContainer}>
@@ -127,16 +138,18 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
+          <div style={progressStyles.lessonHeading}>
             {i18n.levelType()}
-          </span>
+          </div>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
           <span>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 icon={getIconForLevel(level)}
-                style={progressStyles.icon}
+                style={
+                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                }
                 key={i}
               />
             )}

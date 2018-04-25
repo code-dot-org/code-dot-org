@@ -20,7 +20,7 @@ class SectionTest < ActiveSupport::TestCase
   test "destroying section destroys appropriate followers" do
     delete_time = Time.now - 1.day
     already_deleted_follower = create :follower, section: @section
-    Timecop.travel(delete_time) do
+    Timecop.freeze(delete_time) do
       already_deleted_follower.destroy
     end
     follower = create :follower, section: @section
@@ -35,7 +35,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
-    Timecop.travel(Time.now - 1.day) do
+    Timecop.freeze(Time.now - 1.day) do
       old_deleted_follower.reload.destroy
     end
     new_deleted_follower = create :follower, section: @section

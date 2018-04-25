@@ -1,0 +1,18 @@
+name 'markdown_textbook'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# In this lesson...
+
+Have you ever wanted to tell someone exactly what to do? Do they always listen to you?
+
+Today, you'll be telling a machine what to do, step by step- and it will listen!
+
+## Blocks to Know
+
+![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+MARKDOWN

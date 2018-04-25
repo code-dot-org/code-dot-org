@@ -49,17 +49,33 @@ Then /^I see (\d+) animations in the animation column$/ do |num_animations|
 end
 
 Then /^I open the animation picker$/ do
-  @browser.execute_script("$(\".animationList>div>div\")[0].click();")
+  @browser.execute_script("$(\".newListItem\")[0].click();")
 end
 
 Then /^I select a blank animation$/ do
   @browser.execute_script("$(\".uitest-animation-picker-item\")[0].click();")
 end
 
+Then /^I select the animal category of the animation library$/ do
+  @browser.execute_script("$(\"img[src*='/category_animals.png']\")[0].click();")
+end
+
+Then /^I select the bear animation from the animal category$/ do
+  @browser.execute_script("$(\"img[style*='/category_animals/bear.png']\")[0].click();")
+end
+
 Then /^I add a new, blank animation$/ do
   steps <<-STEPS
     And I open the animation picker
     And I select a blank animation
+  STEPS
+end
+
+Then /^I add the bear animation from the library$/ do
+  steps <<-STEPS
+    And I open the animation picker
+    And I select the animal category of the animation library
+    And I select the bear animation from the animal category
   STEPS
 end
 

@@ -10,7 +10,6 @@ import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
-import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
 
@@ -223,15 +222,13 @@ var TopInstructions = React.createClass({
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
-    // If we are in the additional resources experiment, only display the help tab
-    // when there are one or more videos or additional resource links.
-    // Otherwise, display the help tab when there are level videos to display.
+    // Only display the help tab when there are one or more videos or
+    // additional resource links.
     const videosAvailable = this.props.levelVideos && this.props.levelVideos.length > 0;
     const levelResourcesAvailable = this.props.mapReference !== null ||
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
-    const additionalResourcesDisplayTab = experiments.isEnabled('additionalResources') && levelResourcesAvailable;
-    const displayHelpTab = videosAvailable || additionalResourcesDisplayTab;
+    const displayHelpTab = videosAvailable || levelResourcesAvailable;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
