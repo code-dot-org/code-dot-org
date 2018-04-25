@@ -68,7 +68,7 @@ function normalizeBehavior(behavior) {
   if (typeof behavior === 'function')  {
     behavior = {
       func: behavior,
-      args: [],
+      extraArgs: [],
     };
   }
   return behavior;
@@ -81,17 +81,17 @@ function findBehavior(sprite, behavior) {
       console.log('funcs not equal');
       continue;
     }
-    if (behavior.args.length !== myBehavior.args.length) {
+    if (behavior.extraArgs.length !== myBehavior.extraArgs.length) {
       continue;
     }
-    var argsEqual = true;
-    for (var j = 0; j < myBehavior.args.length; j++) {
-      if (behavior.args[j] !== myBehavior.args[j]) {
-        argsEqual = false;
+    var extraArgsEqual = true;
+    for (var j = 0; j < myBehavior.extraArgs.length; j++) {
+      if (behavior.extraArgs[j] !== myBehavior.extraArgs[j]) {
+        extraArgsEqual = false;
         break;
       }
     }
-    if (!argsEqual) {
+    if (!extraArgsEqual) {
       continue;
     }
     return i;
@@ -344,7 +344,7 @@ function draw() {
 
       // Perform sprite behaviors
       sprite.behaviors.forEach(function (behavior) {
-        behavior.func.apply(null, [sprite].concat(behavior.args));
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
       });
 
       // Make sprites say things
