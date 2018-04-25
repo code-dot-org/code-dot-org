@@ -18,6 +18,25 @@ const answerOptionsFormatter = (percentAnsweredOptionOne, {rowData}) => {
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={rowData.percentAnsweredOptionOne}
+        isCorrectAnswer={rowData.percentAnsweredOptionTwo}
+      />
+  );
+};
+
+const correctAnswerFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.percentAnsweredOptionTwo}
+      />
+  );
+};
+
+const notAnsweredFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.notAnswered}
       />
   );
 };
@@ -94,7 +113,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
-          format: answerOptionsFormatter,
+          format: correctAnswerFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -132,7 +151,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
-          format: answerOptionsFormatter,
+          format: notAnsweredFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
