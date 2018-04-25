@@ -8,6 +8,7 @@ import AssetThumbnail from './AssetThumbnail';
 export default class AssetRow extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    timestamp: PropTypes.string,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: PropTypes.number,
     useFilesApi: PropTypes.bool.isRequired,
@@ -111,6 +112,7 @@ export default class AssetRow extends React.Component {
           <AssetThumbnail
             type={this.props.type}
             name={this.props.name}
+            timestamp={this.props.timestamp}
             useFilesApi={this.props.useFilesApi}
           />
         </td>
