@@ -4,12 +4,22 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   QUESTION: 0,
   ANSWER_1: 1,
   ANSWER_2: 2,
   NOT_ANSWERED: 3,
+};
+
+const answerOptionsFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.percentAnsweredOptionOne}
+      />
+  );
 };
 
 const questionAnswerDataPropType = PropTypes.shape({
@@ -25,12 +35,15 @@ class MultipleChoiceOverviewTable extends Component {
     questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
   };
 
-  state = {
-    [COLUMNS.NAME]: {
-      direction: 'desc',
-      position: 0
-    }
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      [COLUMNS.NAME]: {
+        direction: 'desc',
+        position: 0
+      }
+    };
+  }
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -81,6 +94,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
+          format: answerOptionsFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -99,6 +113,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
+          format: answerOptionsFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -113,14 +128,15 @@ class MultipleChoiceOverviewTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 120,
+            width: 90,
           }},
         },
         cell: {
+          format: answerOptionsFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 120,
+            width: 90,
           }}
         }
       },
