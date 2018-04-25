@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { levelByLesson } from '@cdo/apps/code-studio/progressRedux';
 import {
-  sectionDataPropType,
   scriptDataPropType,
   studentLevelProgressPropType
 } from './sectionProgressRedux';
@@ -11,7 +10,6 @@ import Radium from 'radium';
 
 class StudentProgressSummaryCell extends Component {
   static propTypes = {
-    section: sectionDataPropType.isRequired,
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,

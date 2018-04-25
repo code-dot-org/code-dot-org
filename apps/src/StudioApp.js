@@ -2324,9 +2324,14 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     this.loadBlocks(startBlocks);
   } catch (e) {
     if (loadLastAttempt) {
-      Blockly.mainBlockSpace.clear();
-      // Try loading the default start blocks instead.
-      this.setStartBlocks_(config, false);
+      try {
+        Blockly.mainBlockSpace.clear();
+        // Try loading the default start blocks instead.
+        this.setStartBlocks_(config, false);
+      } catch (otherException) {
+        // re-throw the original exception
+        throw e;
+      }
     } else {
       throw e;
     }
