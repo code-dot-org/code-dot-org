@@ -35,6 +35,7 @@ export default storybook => {
         story: () => (
             <MultipleChoiceOverviewTable
               questionAnswerData={multipleChoiceData}
+              percentValue = "80%"
             />
         )
       },
