@@ -60,6 +60,10 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
     }
   end
 
+  def destroy
+    @application.teachercon_registration.try(:destroy)
+  end
+
   def partner
     unless current_user.try(:permission?, UserPermission::PROGRAM_MANAGER)
       render :please_sign_in

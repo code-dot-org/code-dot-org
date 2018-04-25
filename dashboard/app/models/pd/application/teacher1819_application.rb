@@ -20,6 +20,7 @@
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
 #  properties                          :text(65535)
+#  deleted_at                          :datetime
 #
 # Indexes
 #
@@ -503,6 +504,10 @@ module Pd::Application
     # @override
     def check_idempotency
       Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def teachercon_registration
+      Pd::Teachercon1819Registration.find_by_pd_application_id(id)
     end
 
     def meets_criteria

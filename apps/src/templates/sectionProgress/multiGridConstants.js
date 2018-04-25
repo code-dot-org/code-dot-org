@@ -3,9 +3,9 @@ import color from "../../util/color";
 export const ROW_HEIGHT = 42;
 export const NAME_COLUMN_WIDTH = 170;
 export const MAX_TABLE_SIZE = 680;
-export const PROGRESS_BUBBLE_WIDTH = 39;
-export const DIAMOND_BUBBLE_WIDTH = 42;
-export const PILL_BUBBLE_WIDTH = 190;
+export const PROGRESS_BUBBLE_WIDTH = 38;
+export const DIAMOND_BUBBLE_WIDTH = 38;
+export const PILL_BUBBLE_WIDTH = 180;
 
 export const progressStyles = {
   lessonHeading: {
@@ -55,11 +55,18 @@ export const progressStyles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    paddingLeft: '10px',
-    paddingRight: '10px',
-    paddingTop: '12px',
-    width: 38,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 12,
+    width: PROGRESS_BUBBLE_WIDTH,
     fontSize: 20,
+  },
+  unpluggedIcon: {
+    width: PILL_BUBBLE_WIDTH,
+    fontSize: 20,
+    paddingRight: 10,
+    paddingLeft: 10,
+    paddingTop: 12,
   },
   link: {
     color: color.teal,

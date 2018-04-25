@@ -6,7 +6,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
-    :attending_teachercon
+    :registered_teachercon, :registered_fit_weekend, :attending_teachercon
 
   def email
     object.user.email
@@ -57,6 +57,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   def fit_workshop_url
     workshop = object.try(:fit_workshop)
     url_for(controller: 'pd/workshop_dashboard', path: "workshops/#{workshop.id}") if workshop
+  end
+
+  def registered_teachercon
+    !!object.try(:teachercon_registration)
+  end
+
+  def registered_fit_weekend
+    !!object.try(:fit_weekend_registration)
   end
 
   def attending_teachercon
