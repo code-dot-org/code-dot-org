@@ -434,6 +434,10 @@ class ManageStudentsTable extends Component {
     return dataColumns;
   };
 
+  studentDataMinusBlankRows = () => {
+    return this.props.studentData.filter(sd => sd.rowType === RowType.STUDENT);
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -467,7 +471,7 @@ class ManageStudentsTable extends Component {
           />
         }
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-          <ManageStudentsHeader studentData={this.props.studentData}/>
+          <ManageStudentsHeader studentData={this.studentDataMinusBlankRows()}/>
         }
         <Table.Provider
           columns={columns}
