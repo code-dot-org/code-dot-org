@@ -1,8 +1,6 @@
 import React from 'react';
 import MultipleChoiceAnswerTable from './MultipleChoiceAnswerTable';
 
-// Student names out of alphabetical order to demonstrate
-// sorting functionality in the storybook
 const multipleChoiceData = [
   {
     id: 1,
