@@ -48,10 +48,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"{SPRITE} starts {BEHAVIOR}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"swimming\",\r\n    \"blockText\": \"swimming side to side\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
     "markdown_instructions": "All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.",
     "parent_level_id": 12284,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

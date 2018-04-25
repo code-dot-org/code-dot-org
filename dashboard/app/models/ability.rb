@@ -154,6 +154,7 @@ class Ability
           group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
           unless group_3_partner_ids.empty?
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
+            cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
         end
       end
