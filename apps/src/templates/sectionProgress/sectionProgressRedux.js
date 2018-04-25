@@ -236,7 +236,8 @@ export const getColumnWidthsForDetailView = (state) => {
 
   for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
     const levels = stages[stageIndex].levels;
-    let width = 0;
+    // Left and right padding surrounding bubbles
+    let width = 10;
     for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
       if (levels[levelIndex].kind === 'unplugged') {
         // Pill shaped bubble
