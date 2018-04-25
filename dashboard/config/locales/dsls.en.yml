@@ -8733,12 +8733,15 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
         ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
         : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
         ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
         : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
         Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
         The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
         The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
         The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
       courseD_multi_maze_until2_predict1:
