@@ -3,6 +3,7 @@ import i18n from "@cdo/locale";
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import Immutable from 'immutable';
 import orderBy from 'lodash/orderBy';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
@@ -41,12 +42,33 @@ class MoveStudents extends Component {
     });
   };
 
+  getStudentIds = () => {
+    return this.props.studentData.map(s => s.id);
+  };
+
   areAllSelected = () => {
-    // TODO: implement this
+    return Immutable.Set(this.state.selectedIds).isSuperset(this.getStudentIds());
   };
 
   toggleSelectAll = () => {
-    // TODO: implement this
+    if (this.areAllSelected()) {
+      this.setState({selectedIds: []});
+    } else {
+      this.setState({selectedIds: this.getStudentIds()});
+    }
+  };
+
+  toggleStudentSelected = (studentId) => {
+    let selectedIds = [...this.state.selectedIds];
+
+    if (this.state.selectedIds.includes(studentId)) {
+      const studentIndex = selectedIds.indexOf(studentId);
+      selectedIds.splice(studentIndex, 1);
+    } else {
+      selectedIds.push(studentId);
+    }
+
+    this.setState({selectedIds});
   };
 
   selectedStudentHeaderFormatter = () => {
@@ -60,19 +82,15 @@ class MoveStudents extends Component {
   };
 
   selectedStudentFormatter = (_, {rowData}) => {
+    const isChecked = this.state.selectedIds.includes(rowData.id);
+
     return (
       <input
         type="checkbox"
-        checked={rowData.isSelected}
+        checked={isChecked}
         onChange={() => this.toggleStudentSelected(rowData.id)}
       />
     );
-  };
-
-  toggleStudentSelected = (studentId) => {
-    let selectedIds = [...this.state.selectedIds];
-    selectedIds.push(studentId);
-    this.setState({selectedIds});
   };
 
   getColumns = (sortable) => {
