@@ -5,22 +5,22 @@ const multipleChoiceData = [
   {
     id: 1,
     question: 'What is a variable?',
-    answerOptionOne: '80%',
-    answerOptionTwo: '15%',
+    percentAnsweredOptionOne: '80%',
+    percentAnsweredOptionTwo: '15%',
     notAnswered: '5%',
   },
   {
     id: 2,
     question: 'What is a 4-bit number for the decimal number Ten(10)',
-    answerOptionOne: '20%',
-    answerOptionTwo: '60%',
+    percentAnsweredOptionOne: '20%',
+    percentAnsweredOptionTwo: '60%',
     notAnswered: '20%'
   },
   {
     id: 3,
     question: 'What is the minimum number of bits you will need to encode the 26 letters of the alphabet',
-    answerOptionOne: '35%',
-    answerOptionTwo: '65%',
+    percentAnsweredOptionOne: '35%',
+    percentAnsweredOptionTwo: '65%',
     notAnswered: '0%'
   }
 ];

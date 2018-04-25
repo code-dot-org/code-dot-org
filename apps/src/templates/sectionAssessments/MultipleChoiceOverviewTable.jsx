@@ -7,16 +7,16 @@ import orderBy from 'lodash/orderBy';
 
 export const COLUMNS = {
   QUESTION: 0,
-  answerOptionOne: 1,
-  answerOptionTwo: 2,
-  NotAnswered: 3,
+  ANSWER_1: 1,
+  ANSWER_2: 2,
+  NOT_ANSWERED: 3,
 };
 
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
-  percentAnsweredOption1: PropTypes.string,
-  percentAnsweredOption2: PropTypes.string,
+  percentAnsweredOptionOne: PropTypes.string,
+  percentAnsweredOptionTwo: PropTypes.string,
   notAnswered: PropTypes.string,
 });
 
@@ -73,7 +73,7 @@ class MultipleChoiceOverviewTable extends Component {
       {
         property: 'percentAnsweredOptionOne',
         header: {
-          label: commonMsg.percentAnsweredOptionOne(),
+          label: commonMsg.answerOptionA(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
@@ -92,7 +92,7 @@ class MultipleChoiceOverviewTable extends Component {
       {
         property: 'percentAnsweredOptionTwo',
         header: {
-          label: commonMsg.percentAnsweredOptionTwo(),
+          label: commonMsg.answerOptionB(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
