@@ -51,6 +51,7 @@
     "markdown_instructions": "*The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?*\r\n\r\nRules:\r\n1. *Touching the squirrels scores you points.*\r\n2. *Touching the dinosaur takes many points away.*\r\n\r\nHere is a different kind of game that has already been started for you! Play it to see how it works. \r\n\r\n\r\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \r\nClick the hints for ideas!",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/d6bcf8271b38b3049f8d1c2e349bf48e=levelbuilder/26096.png",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
