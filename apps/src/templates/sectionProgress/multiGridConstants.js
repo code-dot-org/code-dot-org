@@ -55,11 +55,18 @@ export const progressStyles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    paddingLeft: '10px',
-    paddingRight: '10px',
-    paddingTop: '12px',
-    width: 38,
+    paddingLeft: 12,
+    paddingRight: 10,
+    paddingTop: 12,
+    width: PROGRESS_BUBBLE_WIDTH-1,
     fontSize: 20,
+  },
+  unpluggedIcon: {
+    width: PILL_BUBBLE_WIDTH-7,
+    fontSize: 20,
+    paddingRight: 10,
+    paddingLeft: 10,
+    paddingTop: 12,
   },
   link: {
     color: color.teal,
