@@ -505,6 +505,10 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
+    def teachercon_registration
+      Pd::Teachercon1819Registration.find_by_pd_application_id(id)
+    end
+
     def meets_criteria
       response_scores = response_scores_hash
       scored_questions =
@@ -620,7 +624,7 @@ module Pd::Application
     def self.cohort_csv_header
       CSV.generate do |csv|
         csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
-                'Email', 'Assigned Workshop', 'Registered Workshop']
+                'Email', 'Assigned Workshop', 'Registered Workshop', 'Status']
       end
     end
 
@@ -661,7 +665,8 @@ module Pd::Application
           school_name,
           user.email,
           workshop_date_and_location,
-          registered_workshop? ? 'Yes' : 'No'
+          registered_workshop? ? 'Yes' : 'No',
+          status
         ]
       end
     end

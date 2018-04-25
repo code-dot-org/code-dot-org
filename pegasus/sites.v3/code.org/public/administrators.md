@@ -41,14 +41,9 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<div class="col-50" style="margin-bottom: 20px;">
-
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: '<p> Code.org's <a href="https://code.org/educate/curriculum/elementary-school" target=_blank>Computer Science Fundamentals courses</a> are designed for elementary school teachers.  Code.org's professional development workshops support teachers with no background in computer science.</p>
-<p><a href="https://code.org/educate/csd" target=_blank>CS Discoveries</a> and <a href="https://code.org/educate/csp" target=_blank>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world. In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.</p>
-<p>Internationally, try <a href="/educate/professional-development-online">our online self-paced courses</a>.</p>'%>
-
-</div>
-
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science.  Code.org's <a href='/educate/curriculum/elementary-school'>Computer Science Fundamentals courses</a> are designed for elementary school teachers. <a href='/educate/csd'>CS Discoveries</a> and <a href='/educate/csp'>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world.
+In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.
+Internationally, try <a href='/educate/professional-development-online'>our online self-paced courses</a>." %>
 <div style="clear:both"></div>
 
 ## Start Planning Now
@@ -81,7 +76,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Identify a computer science course pathway for your existing teachers</h3>
 
 - The [Code.org curriculum](https://studio.code.org/courses?view=teacher) is the most popular in K-12 computer science, with courses for every grade band. It's free of charge, and is also the highest-rated by teachers. Your students will love it!
-- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-5, [contact a workshop facilitator](https://code.org/professional-development-workshops), and for grades 6-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
+- Teachers from other subject areas should attend a professional learning workshop before they begin teaching. For Code.org courses in grades K-12, [contact a regional partner](<%= CDO.studio_url('/pd/regional_partner_contact/new') %>).
 - If you want to consider alternatives to the Code.org courses, see our recommendations of [3rd party computer science curriculum](/educate/curriculum/3rd-party), and particularly our recommendations for [AP Computer Science A](/educate/curriculum/apcsa).
 - You can also supplement the Code.org curriculum by offering computer science integrated [into math](/educate/algebra) and [into science](/curriculum/science).
 - Once you've decided on your course offerings, make sure to set up district-level course codes for your new computer science courses. Work with your principals to recruit teachers to attend workshops and to implement changes in master schedules.

@@ -38,7 +38,8 @@
     "contained_level_names": [
       "courseE_multi_farmer_functions11_predict_2018"
     ],
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",
