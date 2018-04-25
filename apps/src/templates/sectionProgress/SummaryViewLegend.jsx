@@ -6,18 +6,23 @@ import i18n from '@cdo/locale';
 const styles = {
   legendBox: {
     borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.lightest_gray,
-    backgroundColor: color.white,
     float: 'left',
     display: 'inline-block',
     marginTop: 20,
+    boxSizing: 'content-box',
   },
   progressBox: {
     float: 'left',
-    padding: 10,
     width: 130,
-    marginLeft: 10,
+    borderColor: color.lightest_gray,
+    borderWidth: 2,
+    borderBottomStyle: 'solid',
+    borderRightStyle: 'solid',
+  },
+  leftBorder: {
+    borderColor: color.lightest_gray,
+    borderWidth: 2,
+    borderLeftStyle: 'solid',
   },
   heading: {
     fontSize: 18,
@@ -38,9 +43,13 @@ const styles = {
     color: color.charcoal,
   },
   labelBox: {
-    height: 40,
+    padding: 10,
+    height: 60,
     width: '100%',
-    marginBottom: 5,
+    backgroundColor: color.lightest_gray,
+  },
+  boxContainer: {
+    padding: '15px 30px',
   }
 };
 
@@ -68,23 +77,27 @@ export default class SummaryViewLegend extends Component {
           <div style={styles.labelBox}>
             <div>{i18n.notStarted()}</div>
           </div>
-          <ProgressBox
-            started={false}
-            incomplete={20}
-            imperfect={0}
-            perfect={0}
-          />
+          <div style={{...styles.boxContainer, ...styles.leftBorder}}>
+            <ProgressBox
+              started={false}
+              incomplete={20}
+              imperfect={0}
+              perfect={0}
+            />
+          </div>
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
             <div>{i18n.inProgress()}</div>
           </div>
-          <ProgressBox
-            started={true}
-            incomplete={20}
-            imperfect={0}
-            perfect={0}
-          />
+          <div style={styles.boxContainer}>
+            <ProgressBox
+              started={true}
+              incomplete={20}
+              imperfect={0}
+              perfect={0}
+            />
+          </div>
         </div>
         <div style={styles.progressBox}>
           <div style={styles.labelBox}>
@@ -93,12 +106,14 @@ export default class SummaryViewLegend extends Component {
               <div style={styles.parenthetical}>({i18n.perfect()})</div>
             }
           </div>
-          <ProgressBox
-            started={true}
-            incomplete={0}
-            imperfect={0}
-            perfect={20}
-          />
+          <div style={styles.boxContainer}>
+            <ProgressBox
+              started={true}
+              incomplete={0}
+              imperfect={0}
+              perfect={20}
+            />
+          </div>
         </div>
         {showCSFProgressBox &&
           <div style={styles.progressBox}>
@@ -106,12 +121,14 @@ export default class SummaryViewLegend extends Component {
               <div>{i18n.completed()}</div>
               <div style={styles.parenthetical}>({i18n.tooManyBlocks()})</div>
             </div>
-            <ProgressBox
-              started={true}
-              incomplete={0}
-              imperfect={20}
-              perfect={0}
-            />
+            <div style={styles.boxContainer}>
+              <ProgressBox
+                started={true}
+                incomplete={0}
+                imperfect={20}
+                perfect={0}
+              />
+            </div>
           </div>
         }
       </div>
