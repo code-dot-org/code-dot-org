@@ -66,15 +66,15 @@ export const processScriptAndProgress = (scriptId) => {
     const state = getState().sectionProgress;
     const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
     const scriptData = state.scriptDataByScript[scriptId];
-    let levelsByStudentByLesson = {};
+    let levelsByLessonByStudent = {};
     for (const studentId of Object.keys(studentLevelProgress)) {
-      levelsByStudentByLesson[studentId] = levelsByLesson({
+      levelsByLessonByStudent[studentId] = levelsByLesson({
         stages: scriptData.stages,
         levelProgress: studentLevelProgress[studentId],
         currentLevelId: null
       });
     }
-    dispatch(addLevelsByLesson(scriptId, levelsByStudentByLesson));
+    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
     dispatch(finishLoadingProgress());
   };
 };
