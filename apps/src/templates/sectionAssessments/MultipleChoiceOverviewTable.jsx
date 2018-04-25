@@ -15,8 +15,8 @@ export const COLUMNS = {
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
-  answerOptionOne: PropTypes.string,
-  answerOptionTwo: PropTypes.string,
+  percentAnsweredOption1: PropTypes.string,
+  percentAnsweredOption2: PropTypes.string,
   notAnswered: PropTypes.string,
 });
 
@@ -71,9 +71,9 @@ class MultipleChoiceOverviewTable extends Component {
         }
       },
       {
-        property: 'answerOptionOne',
+        property: 'percentAnsweredOptionOne',
         header: {
-          label: commonMsg.answerOptionOne(),
+          label: commonMsg.percentAnsweredOptionOne(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
@@ -90,9 +90,9 @@ class MultipleChoiceOverviewTable extends Component {
         }
       },
       {
-        property: 'answerOptionTwo',
+        property: 'percentAnsweredOptionTwo',
         header: {
-          label: commonMsg.answerOptionTwo(),
+          label: commonMsg.percentAnsweredOptionTwo(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
