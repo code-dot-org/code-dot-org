@@ -266,7 +266,6 @@ class Pd::Workshop < ActiveRecord::Base
   def end!
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
-    sessions.each(&:remove_code)
     save!
   end
 
