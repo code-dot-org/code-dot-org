@@ -337,14 +337,6 @@ function main() {
       }
     );
 
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'control',
-        event: 'stats'
-      }
-    );
-
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
@@ -394,6 +386,18 @@ function main() {
 
     $scope.bulk_import = {editing: false, students: ''};
 
+    if ($scope.tab === 'stats') {
+      $scope.$on('stats-table-rendered', () => {
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'control',
+            event: 'stats'
+          }
+        );
+      });
+    }
+
     if ($scope.tab === 'manage') {
       $scope.$on('react-sync-oauth-section-rendered', () => {
         $scope.section.$promise.then(section =>
@@ -410,6 +414,13 @@ function main() {
 
       $scope.$on('student-table-react-rendered', () => {
         $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'control',
+            event: 'manage'
+          }
+        );
       });
 
       $scope.$on('$destroy', () => {
