@@ -4,7 +4,7 @@ theme: none
 content-type: text/ng-template
 ---
 
-#uitest-stats-tab{style: "padding-left:20px"}
+#uitest-stats-tab{style: "padding-left:20px", 'ng-init' => '$emit("stats-table-rendered");'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
     %colgroup
       %col{width: "200"}/
