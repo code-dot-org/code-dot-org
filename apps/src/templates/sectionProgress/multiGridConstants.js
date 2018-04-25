@@ -1,7 +1,7 @@
 import color from "../../util/color";
 
 export const ROW_HEIGHT = 42;
-export const NAME_COLUMN_WIDTH = 150;
+export const NAME_COLUMN_WIDTH = 170;
 export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 39;
 export const DIAMOND_BUBBLE_WIDTH = 42;
@@ -10,6 +10,8 @@ export const PILL_BUBBLE_WIDTH = 190;
 export const progressStyles = {
   lessonHeading: {
     fontFamily: '"Gotham 5r", sans-serif',
+    paddingTop: 10,
+    paddingLeft: 8
   },
   // For 'hover' to be applied, you should wrap the component using this style in Radium.
   lessonNumberHeading: {
@@ -20,7 +22,7 @@ export const progressStyles = {
     fontFamily: '"Gotham 5r", sans-serif',
     ':hover': {
       cursor: 'pointer'
-    }
+    },
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -34,6 +36,7 @@ export const progressStyles = {
   multigrid: {
     border: '1px solid',
     borderColor: color.border_gray,
+    padding: 0,
   },
   bottomLeft: {
     borderRight: '2px solid',
@@ -43,7 +46,6 @@ export const progressStyles = {
     borderBottom: '2px solid',
     borderRight: '2px solid',
     borderColor: color.border_gray,
-    padding: '8px 10px',
     backgroundColor: color.table_header,
   },
   topRight: {
@@ -53,7 +55,9 @@ export const progressStyles = {
     backgroundColor: color.table_header,
   },
   icon: {
-    padding: '3px 10px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    paddingTop: '12px',
     width: 38,
     fontSize: 20,
   },
@@ -65,6 +69,9 @@ export const progressStyles = {
   },
   nameCell: {
     margin: 10,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   cell: {
     borderRight: '1px solid',

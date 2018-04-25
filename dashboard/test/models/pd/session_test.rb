@@ -54,7 +54,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
 
   test 'assign unique 4 character codes' do
     sessions = 10.times.map do
-      create(:pd_session).tap(&:assign_code)
+      create :pd_session, :with_assigned_code
     end
 
     codes = sessions.pluck(:code)
@@ -63,7 +63,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'find by code' do
-    session = create(:pd_session).tap(&:assign_code)
+    session = create :pd_session, :with_assigned_code
 
     found_session = Pd::Session.find_by_code session.code
     assert_equal session, found_session
@@ -78,7 +78,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     workshop_not_started = create :pd_workshop
     workshop_ended = create :pd_ended_workshop
 
-    session_open = create(:pd_session, workshop: workshop_started).tap(&:assign_code)
+    session_open = create :pd_session, :with_assigned_code, workshop: workshop_started
     assert session_open.open_for_attendance?
 
     session_no_code = create :pd_session, workshop: workshop_started
@@ -100,9 +100,40 @@ class Pd::SessionTest < ActiveSupport::TestCase
     refute session_past.too_soon_for_attendance?
     assert session_past.too_late_for_attendance?
 
-    session_ended = create :pd_session, workshop: workshop_ended
-    refute session_ended.open_for_attendance?
+    session_ended = create :pd_session, :with_assigned_code, workshop: workshop_ended
+    assert session_ended.open_for_attendance?
     refute session_ended.too_soon_for_attendance?
-    assert session_ended.too_late_for_attendance?
+    refute session_ended.too_late_for_attendance?
+  end
+
+  test 'workshop with first session in three days does not show links and is not open for attendance' do
+    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 1, sessions_from: Time.now + 3.days
+
+    refute workshop.sessions[0].open_for_attendance?
+    refute workshop.sessions[0].show_link?
+    assert workshop.sessions[0].too_soon_for_attendance?
+    refute workshop.sessions[0].too_late_for_attendance?
+  end
+
+  test 'three day workshop with first session tomorrow shows two links but is not open for attendance' do
+    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 3, sessions_from: Time.now + 1.day - 1.minute
+
+    refute workshop.sessions[0].open_for_attendance?
+    assert workshop.sessions[0].show_link?
+    refute workshop.sessions[1].open_for_attendance?
+    assert workshop.sessions[1].show_link?
+    refute workshop.sessions[2].open_for_attendance?
+    refute workshop.sessions[2].show_link?
+  end
+
+  test 'three day workshop started on second day shows two links and has one session open for attendance' do
+    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 3, sessions_from: Time.now - 1.day - 1.minute
+
+    refute workshop.sessions[0].open_for_attendance?
+    refute workshop.sessions[0].show_link?
+    assert workshop.sessions[1].open_for_attendance?
+    assert workshop.sessions[1].show_link?
+    refute workshop.sessions[2].open_for_attendance?
+    assert workshop.sessions[2].show_link?
   end
 end
