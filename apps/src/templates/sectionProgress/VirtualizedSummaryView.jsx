@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
-import { sectionDataPropType, scriptDataPropType } from './sectionProgressRedux';
+import { sectionDataPropType, scriptDataPropType, getLevels } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
@@ -18,7 +18,7 @@ class VirtualizedSummaryView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelsByLessonByStudent: PropTypes.object,
+    getLevels: PropTypes.func,
   };
 
   state = {
@@ -29,7 +29,7 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, levelsByLessonByStudent} = this.props;
+    const {section, scriptData, getLevels} = this.props;
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -71,7 +71,7 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            levelsWithStatus={levelsByLessonByStudent[section.students[studentStartIndex].id][stageIdIndex]}
+            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
             style={progressStyles.summaryCell}
           />
         }
@@ -124,4 +124,5 @@ export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 
 export default connect(state => ({
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
+  getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
 }))(VirtualizedSummaryView);

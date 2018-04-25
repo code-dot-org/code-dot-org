@@ -16,7 +16,6 @@ import {
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
-  getLevelsByLesson,
   setScriptId,
   setLessonOfInterest,
   sectionDataPropType,
@@ -73,7 +72,6 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    levelsByLessonByStudent: PropTypes.object,
   };
 
   componentDidMount() {
@@ -97,7 +95,6 @@ class SectionProgress extends Component {
       scriptId,
       scriptData,
       isLoadingProgress,
-      levelsByLessonByStudent,
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -147,7 +144,6 @@ class SectionProgress extends Component {
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
-                levelsByLessonByStudent={levelsByLessonByStudent}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
@@ -159,7 +155,6 @@ class SectionProgress extends Component {
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
-                levelsByLessonByStudent={levelsByLessonByStudent}
               />
               <ProgressLegend
                 excludeCsfColumn={true}
@@ -181,7 +176,6 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
-  levelsByLessonByStudent: getLevelsByLesson(state),
   isLoadingProgress: state.sectionProgress.isLoadingProgress,
 }), dispatch => ({
   loadScript(scriptId) {

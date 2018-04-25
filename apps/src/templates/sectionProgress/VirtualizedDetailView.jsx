@@ -7,7 +7,8 @@ import styleConstants from '../../styleConstants';
 import {
   sectionDataPropType,
   scriptDataPropType,
-  getColumnWidthsForDetailView
+  getColumnWidthsForDetailView,
+  getLevels,
 } from './sectionProgressRedux';
 import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
@@ -63,7 +64,7 @@ class VirtualizedDetailView extends Component {
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
-    levelsByLessonByStudent: PropTypes.object,
+    getLevels: PropTypes.func,
   };
 
   state = {
@@ -82,7 +83,7 @@ class VirtualizedDetailView extends Component {
   }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, columnWidths, levelsByLessonByStudent} = this.props;
+    const {section, scriptData, columnWidths, getLevels} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -153,7 +154,7 @@ class VirtualizedDetailView extends Component {
           <StudentProgressDetailCell
             studentId={section.students[studentStartIndex].id}
             stageId={stageIdIndex}
-            levelsWithStatus={levelsByLessonByStudent[section.students[studentStartIndex].id][stageIdIndex]}
+            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
           />
         )}
       </div>
@@ -203,5 +204,6 @@ export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
 
 export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
-  lessonOfInterest: state.sectionProgress.lessonOfInterest
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+  getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
 }))(VirtualizedDetailView);

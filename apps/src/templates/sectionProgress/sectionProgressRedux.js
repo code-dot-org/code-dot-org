@@ -258,12 +258,20 @@ export const getCurrentScriptData = (state) => {
 };
 
 /**
- * Retrieves the combined script and progress data for the current scriptId
- * TODO(caleybrock) write a test for this function
+ * Retrieves the combined script and progress data for the current scriptId for the entire section.
  */
 export const getLevelsByLesson = (state) => {
   return state.sectionProgress.levelsByLessonByScript[state.sectionProgress.scriptId];
 };
+
+/**
+ * Retrieves the combined script and progress data for student for the stage.
+ * This represents the data for a single cell.
+ */
+export const getLevels = (state, studentId, stageId) => {
+  return getLevelsByLesson(state)[studentId][stageId];
+};
+
 
 /**
  * Calculate the width of each column in the detail view based on types of levels
