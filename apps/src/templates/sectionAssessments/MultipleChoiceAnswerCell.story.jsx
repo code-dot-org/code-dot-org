@@ -1,5 +1,6 @@
 import React from 'react';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+// import MultipleChoiceTable from './MultipleChoiceTable';
 
 export default storybook => {
   storybook
