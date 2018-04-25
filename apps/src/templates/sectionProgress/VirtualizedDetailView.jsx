@@ -64,6 +64,9 @@ const styles = {
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)',
   },
+  bubbleSet: {
+    paddingLeft: 4,
+  },
 };
 
 class VirtualizedDetailView extends Component {
@@ -143,7 +146,7 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span>
+          <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 icon={getIconForLevel(level)}
