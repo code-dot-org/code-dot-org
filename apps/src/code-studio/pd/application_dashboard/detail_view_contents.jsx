@@ -18,7 +18,6 @@ import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignm
 import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
-import color from "../../../util/color";
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
@@ -62,11 +61,6 @@ const styles = {
   lockedStatus: {
     fontFamily: '"Gotham 7r"',
     marginTop: 10
-  },
-  deleteButton: {
-    backgroundColor: color.red,
-    color: color.white,
-    marginTop: 5
   }
 };
 
@@ -358,6 +352,60 @@ export class DetailViewContents extends React.Component {
             >
               (Admin) Edit Form Data
             </MenuItem>
+            <MenuItem
+              style={styles.delete}
+              onSelect={this.handleDeleteApplicationClick}
+            >
+              Delete Application
+            </MenuItem>
+            <ConfirmationDialog
+              show={this.state.showDeleteApplicationConfirmation}
+              onOk={this.handleDeleteApplicationConfirmed}
+              onCancel={this.handleDeleteApplicationCancel}
+              headerText="Delete Application"
+              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+              okText="Delete"
+            />
+            {
+              this.props.applicationData.registered_teachercon &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteTeacherconRegistrationClick}
+              >
+                Delete Teachercon Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_teachercon &&
+              <ConfirmationDialog
+                show={this.state.showDeleteTeacherconRegistrationConfirmation}
+                onOk={this.handleDeleteTeacherconRegistrationConfirmed}
+                onCancel={this.handleDeleteTeacherconRegistrationCancel}
+                headerText="Delete Teachercon Registration"
+                bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteFitWeekendRegistrationClick}
+              >
+                Delete FiT Weekend Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <ConfirmationDialog
+                show={this.state.showDeleteFitWeekendRegistrationConfirmation}
+                onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
+                onCancel={this.handleDeleteFitWeekendRegistrationCancel}
+                headerText="Delete FiT Weekend Registration"
+                bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
           </SplitButton>
         </div>
       );
@@ -430,63 +478,6 @@ export class DetailViewContents extends React.Component {
             <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
             Application is&nbsp;
             {this.state.locked ? 'Locked' : 'Unlocked'}
-          </div>
-        }
-        {
-          this.props.isWorkshopAdmin &&
-          <div>
-            <Button
-              style={{...styles.deleteButton, textAlign}}
-              onClick={this.handleDeleteApplicationClick}
-            >
-              Delete Application
-            </Button>
-            <ConfirmationDialog
-              show={this.state.showDeleteApplicationConfirmation}
-              onOk={this.handleDeleteApplicationConfirmed}
-              onCancel={this.handleDeleteApplicationCancel}
-              headerText="Delete Application"
-              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
-              okText="Delete"
-            />
-          </div>
-        }
-        {
-          this.props.isWorkshopAdmin && this.props.applicationData.registered_teachercon &&
-          <div>
-            <Button
-              style={{...styles.deleteButton, textAlign}}
-              onClick={this.handleDeleteTeacherconRegistrationClick}
-            >
-              Delete Teachercon Registration
-            </Button>
-            <ConfirmationDialog
-              show={this.state.showDeleteTeacherconRegistrationConfirmation}
-              onOk={this.handleDeleteTeacherconRegistrationConfirmed}
-              onCancel={this.handleDeleteTeacherconRegistrationCancel}
-              headerText="Delete Teachercon Registration"
-              bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
-              okText="Delete"
-            />
-          </div>
-        }
-        {
-          this.props.isWorkshopAdmin && this.props.applicationData.registered_fit_weekend &&
-          <div>
-            <Button
-              style={{...styles.deleteButton, textAlign}}
-              onClick={this.handleDeleteFitWeekendRegistrationClick}
-            >
-              Delete FiT Weekend Registration
-            </Button>
-            <ConfirmationDialog
-              show={this.state.showDeleteFitWeekendRegistrationConfirmation}
-              onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
-              onCancel={this.handleDeleteFitWeekendRegistrationCancel}
-              headerText="Delete FiT Weekend Registration"
-              bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
-              okText="Delete"
-            />
           </div>
         }
       </div>
