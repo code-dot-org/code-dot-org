@@ -39,6 +39,7 @@ const styles = {
     marginTop: 2,
     borderBottom: '2px solid',
     borderColor: color.border_gray,
+    height: 42,
   },
   lessonLabelContainer: {
     borderBottom: '2px solid',
@@ -146,7 +147,9 @@ class VirtualizedDetailView extends Component {
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 icon={getIconForLevel(level)}
-                style={progressStyles.icon}
+                style={
+                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                }
                 key={i}
               />
             )}
