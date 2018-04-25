@@ -560,6 +560,13 @@ $small-footer-standard-width: 400px;
   }
 }
 
+@media screen and (max-height: 780px) {
+  div.small-footer-base {
+    position: static;
+    margin-top: 0;
+  }
+}
+
 .small-footer-base {
   position: absolute;
   bottom: 0;
