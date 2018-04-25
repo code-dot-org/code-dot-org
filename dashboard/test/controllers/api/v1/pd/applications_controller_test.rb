@@ -743,5 +743,25 @@ module Api::V1::Pd
       result = JSON.parse response.body
       assert_equal [], result
     end
+
+    test 'destroy deletes application' do
+      sign_in @workshop_admin
+      application = create :pd_teacher1819_application
+      assert_destroys(Pd::Application::Teacher1819Application) do
+        delete :destroy, params: {id: application.id}
+      end
+    end
+
+    test 'group 3 partner cannot call delete api' do
+      application = create :pd_teacher1819_application
+      group_3_partner = create :regional_partner, group: 3
+      group_3_program_manager = create :teacher
+      create :regional_partner_program_manager, regional_partner: group_3_partner, program_manager: group_3_program_manager
+
+      sign_in group_3_program_manager
+      assert_does_not_destroy(Pd::Application::Teacher1819Application) do
+        delete :destroy, params: {id: application.id}
+      end
+    end
   end
 end
