@@ -624,7 +624,7 @@ module Pd::Application
     def self.cohort_csv_header
       CSV.generate do |csv|
         csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
-                'Email', 'Assigned Workshop', 'Registered Workshop']
+                'Email', 'Assigned Workshop', 'Registered Workshop', 'Status']
       end
     end
 
@@ -665,7 +665,8 @@ module Pd::Application
           school_name,
           user.email,
           workshop_date_and_location,
-          registered_workshop? ? 'Yes' : 'No'
+          registered_workshop? ? 'Yes' : 'No',
+          status
         ]
       end
     end

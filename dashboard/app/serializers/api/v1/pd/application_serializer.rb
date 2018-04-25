@@ -6,7 +6,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
-    :registered_teachercon, :registered_fit_weekend
+    :registered_teachercon, :registered_fit_weekend, :attending_teachercon
 
   def email
     object.user.email
@@ -65,5 +65,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def registered_fit_weekend
     !!object.try(:fit_weekend_registration)
+  end
+
+  def attending_teachercon
+    object&.workshop&.teachercon?
   end
 end

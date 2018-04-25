@@ -82,7 +82,17 @@ class Pd::Session < ActiveRecord::Base
   end
 
   def too_late_for_attendance?
-    workshop.ended_at || self.end + 12.hours < Time.zone.now
+    (self.end + 1.day).change({hour: 7}) < Time.zone.now
+  end
+
+  def show_link?
+    code.present? &&
+      !too_soon_for_link? &&
+      !too_late_for_attendance?
+  end
+
+  def too_soon_for_link?
+    workshop.started_at.nil? || start - 48.hours > Time.zone.now
   end
 
   private
