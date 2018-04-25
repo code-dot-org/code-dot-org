@@ -7,24 +7,26 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
+import queryString from 'query-string';
 
 registerReducers({isRtl, responsive});
 
 $(document).ready(initYourSchool);
 
 function showYourSchool() {
-  const rawSchoolId = $('#your-school').data("parameters-schoolId");
-  const rawSchoolZip = $('#your-school').data("parameters-schoolZip");
+  const query = queryString.parse(location.search);
+  const rawSchoolId = query['schoolId'];
+  const rawSchoolZip = query['zip'];
   const yourschoolElement = $('#your-school');
   const prefillData = {
-    userName: yourschoolElement.data("parameters-user-name"),
-    userEmail: yourschoolElement.data("parameters-user-email"),
-    isTeacher: yourschoolElement.data("parameters-is-teacher"),
-    schoolCountry: yourschoolElement.data("parameters-school-country"),
+    userName: query['name'],
+    userEmail: query['email'],
+    isTeacher: query['isTeacher'],
+    schoolCountry: query['country'],
     schoolId: rawSchoolId ? rawSchoolId.toString() : undefined,
-    schoolType: yourschoolElement.data("parameters-school-type"),
-    schoolName: yourschoolElement.data("parameters-school-name"),
-    schoolState: yourschoolElement.data("parameters-school-state"),
+    schoolType: query['schoolType'],
+    schoolName: query['schoolName'],
+    schoolState: query['state'],
     schoolZip: rawSchoolZip ? rawSchoolZip.toString() : undefined,
   };
 
