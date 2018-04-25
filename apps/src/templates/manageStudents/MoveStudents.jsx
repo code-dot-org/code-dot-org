@@ -9,12 +9,13 @@ import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 
+const PADDING = 20;
 const styles = {
   dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 20,
-    paddingBottom: 20
+    paddingLeft: PADDING,
+    paddingRight: PADDING,
+    paddingTop: PADDING,
+    paddingBottom: PADDING
   },
   table: {
     width: 300
