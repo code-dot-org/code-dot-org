@@ -9,6 +9,7 @@ stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF_2018'
 
 stage 'Sequence in Maze', flex_category: 'csf_f_1'
+level 'markdown_textbook'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
 level 'courseD_maze_ramp2_2018'
@@ -20,6 +21,7 @@ level 'courseD_maze_ramp5a_2018'
 level 'courseD_maze_ramp5b_2018', challenge: true
 level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
+level 'markdown_textbook2'
 
 stage 'Building a Foundation', flex_category: 'csf_f_1'
 level 'BuildingAFoundation_2018'
