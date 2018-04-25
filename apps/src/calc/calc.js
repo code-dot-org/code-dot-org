@@ -25,7 +25,7 @@ var jsnums = require('@code-dot-org/js-numbers');
 var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');
