@@ -1,0 +1,156 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2018-04-24T16:59:44.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "skin": "studio",
+    "failure_condition": "function () {\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "instructions": "Score as many points as you can!",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-24 17:00:33 +0000\",\"changed\":[\"notes\",\"maze_data\",\"failure_condition\",\"success_condition\",\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:03:05 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:09:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:09:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:09:30 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:16:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:16:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:16:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:30:16 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:30:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:30:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:30:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 17:30:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 18:25:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-24 18:34:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">wall</title>
+        </block>
+        <block type="when_run"/>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1" else="1"/>
+          <value name="IF0">
+            <block type="logic_compare" inline="true">
+              <title name="OP">EQ</title>
+              <value name="A">
+                <block type="studio_getScore"/>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="studio_saySprite">
+              <title name="TEXT">You have 5 points!</title>
+            </block>
+          </statement>
+          <value name="IF1">
+            <block type="logic_compare" inline="true">
+              <title name="OP">EQ</title>
+              <value name="A">
+                <block type="studio_getScore"/>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO1">
+            <block type="studio_saySprite">
+              <title name="TEXT">You have 10 points!</title>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="studio_saySprite">
+              <title name="TEXT">Get more points!</title>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_ifActorHasEmotionElse">
+          <title name="EMOTION">1</title>
+          <statement name="DO">
+            <block type="studio_saySprite">
+              <title name="TEXT">Yay!</title>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="studio_setSpriteEmotion">
+              <title name="VALUE">1</title>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_ifActorHasEmotion">
+          <title name="EMOTION">1</title>
+          <statement name="DO">
+            <block type="studio_saySprite">
+              <title name="TEXT">Yay!</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_ifActorHasEmotion">
+          <title name="EMOTION">1</title>
+        </block>
+        <block type="when_run"/>
+        <block type="controls_if" inline="false"/>
+        <block type="logic_compare" inline="true">
+          <title name="OP">GT</title>
+          <value name="A">
+            <block type="studio_getScore"/>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_saySprite">
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1"/>
+        </block>
+        <block type="controls_if" inline="false">
+          <mutation elseif="1" else="1"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>
