@@ -10,6 +10,9 @@ import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 
 const PADDING = 20;
+const TABLE_WIDTH = 300;
+const CHECKBOX_CELL_WIDTH = 50;
+
 const styles = {
   dialog: {
     paddingLeft: PADDING,
@@ -18,7 +21,14 @@ const styles = {
     paddingBottom: PADDING
   },
   table: {
-    width: 300
+    width: TABLE_WIDTH
+  },
+  checkboxCell: {
+    width: CHECKBOX_CELL_WIDTH,
+    textAlign: 'center'
+  },
+  checkbox: {
+    margin: 0
   }
 };
 
@@ -75,6 +85,7 @@ class MoveStudents extends Component {
   selectedStudentHeaderFormatter = () => {
     return (
       <input
+        style={styles.checkbox}
         type="checkbox"
         checked={this.areAllSelected()}
         onChange={this.toggleSelectAll}
@@ -87,6 +98,7 @@ class MoveStudents extends Component {
 
     return (
       <input
+        style={styles.checkbox}
         type="checkbox"
         checked={isChecked}
         onChange={() => this.toggleStudentSelected(rowData.id)}
@@ -103,7 +115,7 @@ class MoveStudents extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            ...{width: 50}
+            ...styles.checkboxCell
           }},
         },
         cell: {
@@ -111,7 +123,7 @@ class MoveStudents extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            ...{width: 50}
+            ...styles.checkboxCell
           }}
         }
       },
@@ -122,8 +134,14 @@ class MoveStudents extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-            }},
-            transforms: [sortable],
+          }},
+          transforms: [sortable],
+        },
+        cell: {
+          props: {
+            style: {
+              ...tableLayoutStyles.cell
+          }}
         }
       }];
     };
