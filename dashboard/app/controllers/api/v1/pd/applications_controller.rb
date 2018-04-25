@@ -48,7 +48,7 @@ module Api::V1::Pd
       render json: serialized_application
     end
 
-    # GET /api/v1/pd/applications/quick_view?role=:role
+    # GET /api/v1/pd/applications/quick_view?role=:role&regional_partner_filter=:regional_partner_filter
     def quick_view
       role = params[:role].to_sym
       applications = get_applications_by_role(role)
@@ -173,6 +173,11 @@ module Api::V1::Pd
       end
 
       render json: @application, serializer: ApplicationSerializer
+    end
+
+    # DELETE /api/v1/pd/applications/1
+    def destroy
+      @application.destroy
     end
 
     # GET /api/v1/pd/applications/search
