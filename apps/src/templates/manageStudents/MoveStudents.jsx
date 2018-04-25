@@ -26,7 +26,8 @@ class MoveStudents extends Component {
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
+    selectedIds: []
   };
 
   openDialog = () => {
@@ -34,11 +35,68 @@ class MoveStudents extends Component {
   };
 
   closeDialog = () => {
-    this.setState({isDialogOpen: false});
+    this.setState({
+      isDialogOpen: false,
+      selectedIds: []
+    });
+  };
+
+  areAllSelected = () => {
+    // TODO: implement this
+  };
+
+  toggleSelectAll = () => {
+    // TODO: implement this
+  };
+
+  selectedStudentHeaderFormatter = () => {
+    return (
+      <input
+        type="checkbox"
+        checked={this.areAllSelected()}
+        onChange={this.toggleSelectAll}
+      />
+    );
+  };
+
+  selectedStudentFormatter = (_, {rowData}) => {
+    return (
+      <input
+        type="checkbox"
+        checked={rowData.isSelected}
+        onChange={() => this.toggleStudentSelected(rowData.id)}
+      />
+    );
+  };
+
+  toggleStudentSelected = (studentId) => {
+    let selectedIds = [...this.state.selectedIds];
+    selectedIds.push(studentId);
+    this.setState({selectedIds});
   };
 
   getColumns = (sortable) => {
     return [{
+      property: 'selected',
+        header: {
+          label: '', // TODO: what should this label be?,
+          format: this.selectedStudentHeaderFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: 50}
+          }},
+        },
+        cell: {
+          format: this.selectedStudentFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+            ...{width: 50}
+          }}
+        }
+      },
+      {
       property: 'name',
         header: {
           label: i18n.name(),
