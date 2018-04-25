@@ -34,7 +34,12 @@ const styles = {
 
 class MoveStudents extends Component {
   static propTypes = {
-    studentData: PropTypes.array.isRequired
+    studentData: PropTypes.arrayOf(
+      React.PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired
   };
 
   state = {
@@ -107,35 +112,35 @@ class MoveStudents extends Component {
   };
 
   getColumns = (sortable) => {
-    return [{
-      property: 'selected',
+    return [
+      {
+        property: 'selected',
         header: {
-          label: '', // TODO: what should this label be?,
+          label: '',
           format: this.selectedStudentHeaderFormatter,
           props: {
             style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.checkboxCell
-          }},
+              ...tableLayoutStyles.headerCell,
+              ...styles.checkboxCell
+          }}
         },
         cell: {
           format: this.selectedStudentFormatter,
           props: {
             style: {
-            ...tableLayoutStyles.cell,
-            ...styles.checkboxCell
+              ...tableLayoutStyles.cell,
+              ...styles.checkboxCell
           }}
         }
-      },
-      {
-      property: 'name',
+      }, {
+        property: 'name',
         header: {
           label: i18n.name(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.headerCell
           }},
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
           props: {
@@ -143,8 +148,9 @@ class MoveStudents extends Component {
               ...tableLayoutStyles.cell
           }}
         }
-      }];
-    };
+      }
+    ];
+  };
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -166,10 +172,6 @@ class MoveStudents extends Component {
     });
   };
 
-  sortRows = (data, columnIndexList, orderList) => {
-    return orderBy(data, columnIndexList, orderList);
-  };
-
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -179,7 +181,7 @@ class MoveStudents extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: this.sortRows,
+      sort: orderBy,
     })(this.props.studentData);
 
     return (
