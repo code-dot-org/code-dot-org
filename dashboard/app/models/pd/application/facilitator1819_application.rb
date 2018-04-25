@@ -65,7 +65,7 @@ module Pd::Application
     end
 
     PROGRAMS = {
-      csf: 'CS Fundamentals (Pre-K - 5th grade)',
+      csf: 'CS Fundamentals (K - 5th grade)',
       csd: 'CS Discoveries (6 - 10th grade)',
       csp: 'CS Principles (9 - 12th grade)'
     }.freeze
