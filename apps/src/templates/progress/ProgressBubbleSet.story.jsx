@@ -66,5 +66,17 @@ export default storybook => {
           />
         )
       },
+      {
+        name:'only level is unplugged',
+        description: 'Should get a pill for unplugged',
+        story: () => (
+          <ProgressBubbleSet
+            levels={[
+              fakeLevel({ isUnplugged: true }),
+            ]}
+            disabled={false}
+          />
+        )
+      },
     ]);
 };
