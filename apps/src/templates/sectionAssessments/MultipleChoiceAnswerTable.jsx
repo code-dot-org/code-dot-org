@@ -62,7 +62,6 @@ class MultipleChoiceAnswerTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: this.nameFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -81,7 +80,6 @@ class MultipleChoiceAnswerTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: this.ageFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -101,7 +99,6 @@ class MultipleChoiceAnswerTable extends Component {
           transforms: [sortable],
         },
         cell: {
-          format: this.genderFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
