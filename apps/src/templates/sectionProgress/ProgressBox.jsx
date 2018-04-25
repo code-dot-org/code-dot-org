@@ -3,10 +3,11 @@ import color from "@cdo/apps/util/color";
 
 const styles = {
   box: {
-    height: 22,
-    width: 22,
+    height: 20,
+    width: 20,
     borderWidth: 1,
     borderStyle: 'solid',
+    boxSizing: 'content-box',
   },
   filler: {
     width: 20
