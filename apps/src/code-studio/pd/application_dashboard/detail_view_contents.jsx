@@ -15,6 +15,7 @@ import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
 import { RegionalPartnerDropdown } from './regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
 import {
@@ -92,6 +93,8 @@ export class DetailViewContents extends React.Component {
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string,
+      registered_teachercon: PropTypes.bool,
+      registered_fit_weekend: PropTypes.bool,
       attending_teachercon: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -227,6 +230,69 @@ export class DetailViewContents extends React.Component {
     });
   };
 
+  handleDeleteApplicationClick = () => {
+    this.setState({showDeleteApplicationConfirmation: true});
+  };
+
+  handleDeleteApplicationCancel = () => {
+    this.setState({showDeleteApplicationConfirmation: false});
+  };
+
+  handleDeleteApplicationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/api/v1/pd/applications/${this.props.applicationId}`
+    }).done(() => {
+      this.setState({deleted: true, showDeleteApplicationConfirmation: false});
+    }).fail(() => {
+      this.setState({deleted: false, showDeleteApplicationConfirmation: false});
+    });
+  };
+
+  handleDeleteTeacherconRegistrationClick = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: true});
+  };
+
+  handleDeleteTeacherconRegistrationCancel = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+  };
+
+  handleDeleteTeacherconRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/teachercon_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_teachercon: false });
+      }
+    }).fail(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+    });
+  };
+
+  handleDeleteFitWeekendRegistrationClick = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
+  };
+
+  handleDeleteFitWeekendRegistrationCancel = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+  };
+
+  handleDeleteFitWeekendRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/fit_weekend_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_fit_weekend: false });
+      }
+    }).fail(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+    });
+  };
+
   renderLockButton = () => {
     const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
     return (
@@ -288,6 +354,60 @@ export class DetailViewContents extends React.Component {
             >
               (Admin) Edit Form Data
             </MenuItem>
+            <MenuItem
+              style={styles.delete}
+              onSelect={this.handleDeleteApplicationClick}
+            >
+              Delete Application
+            </MenuItem>
+            <ConfirmationDialog
+              show={this.state.showDeleteApplicationConfirmation}
+              onOk={this.handleDeleteApplicationConfirmed}
+              onCancel={this.handleDeleteApplicationCancel}
+              headerText="Delete Application"
+              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+              okText="Delete"
+            />
+            {
+              this.props.applicationData.registered_teachercon &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteTeacherconRegistrationClick}
+              >
+                Delete Teachercon Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_teachercon &&
+              <ConfirmationDialog
+                show={this.state.showDeleteTeacherconRegistrationConfirmation}
+                onOk={this.handleDeleteTeacherconRegistrationConfirmed}
+                onCancel={this.handleDeleteTeacherconRegistrationCancel}
+                headerText="Delete Teachercon Registration"
+                bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteFitWeekendRegistrationClick}
+              >
+                Delete FiT Weekend Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <ConfirmationDialog
+                show={this.state.showDeleteFitWeekendRegistrationConfirmation}
+                onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
+                onCancel={this.handleDeleteFitWeekendRegistrationCancel}
+                headerText="Delete FiT Weekend Registration"
+                bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
           </SplitButton>
         </div>
       );
@@ -548,6 +668,12 @@ export class DetailViewContents extends React.Component {
   };
 
   render() {
+    if (this.state.hasOwnProperty('deleted')) {
+      const message = this.state.deleted ? "This application has been deleted." : "This application could not be deleted.";
+      return (
+        <h4>{message}</h4>
+      );
+    }
     return (
       <div id="detail-view">
         {this.renderHeader()}

@@ -505,6 +505,10 @@ module Pd::Application
       Pd::Application::Teacher1819Application.find_by(user: user)
     end
 
+    def teachercon_registration
+      Pd::Teachercon1819Registration.find_by_pd_application_id(id)
+    end
+
     def meets_criteria
       response_scores = response_scores_hash
       scored_questions =
