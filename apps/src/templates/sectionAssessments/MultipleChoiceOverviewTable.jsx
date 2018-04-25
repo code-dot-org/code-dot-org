@@ -7,8 +7,9 @@ import orderBy from 'lodash/orderBy';
 
 export const COLUMNS = {
   QUESTION: 0,
-  A: 1,
-  B: 2,
+  answerOptionOne: 1,
+  answerOptionTwo: 2,
+  NotAnswered: 3,
 };
 
 const questionAnswerDataPropType = PropTypes.shape({
@@ -16,6 +17,7 @@ const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.string,
   answerOptionOne: PropTypes.string,
   answerOptionTwo: PropTypes.string,
+  notAnswered: PropTypes.string,
 });
 
 class MultipleChoiceOverviewTable extends Component {
@@ -91,6 +93,25 @@ class MultipleChoiceOverviewTable extends Component {
         property: 'answerOptionTwo',
         header: {
           label: commonMsg.answerOptionTwo(),
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+            width: 90,
+          }},
+          transforms: [sortable],
+        },
+        cell: {
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+            width: 90,
+          }}
+        }
+      },
+      {
+        property: 'notAnswered',
+        header: {
+          label: commonMsg.notAnswered(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
