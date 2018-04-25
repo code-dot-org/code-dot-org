@@ -36,6 +36,7 @@ HTTP cache layers.
     - Note: Objects are already cached based on the `Host` header by default.
     - Note: `headers` is currently only used by CloudFront, while Varnish
       caches objects based on the `Vary` HTTP response header.
+  - `query`: Forward query strings to the origin. If so, specify `true`; if not, specify `false`.
   - `cookies`: A whitelist array of HTTP cookie keys to pass to the origin and
     include in the cache key.
     To whitelist all cookies for the path, pass `'all'`.

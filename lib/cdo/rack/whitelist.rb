@@ -7,7 +7,7 @@ require 'cdo/aws/cloudfront'
 
 module Rack
   module Whitelist
-    # Downstream middleware filters out unwanted HTTP request headers and cookies,
+    # Downstream middleware filters out unwanted HTTP request headers, query parameters and cookies,
     # and extracts cookies into HTTP headers before the request reaches the cache.
     class Downstream
       attr_reader :config
@@ -22,6 +22,13 @@ module Rack
         request = Rack::Request.new(env)
         path = request.path
         behavior = behavior_for_path((config[:behaviors] + [config[:default]]), path)
+
+        # Filter query string.
+        unless behavior[:query]
+          env[Rack::RACK_REQUEST_QUERY_STRING] = ''
+          env[Rack::QUERY_STRING] = ''
+          env[Rack::RACK_REQUEST_QUERY_HASH].clear
+        end
 
         # Filter whitelisted request headers.
         headers = behavior[:headers]

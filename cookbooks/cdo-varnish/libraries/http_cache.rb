@@ -72,6 +72,7 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
+            query: true,
             # Allow the company cookie to be read and set to track company users for tutorials.
             cookies: whitelisted_cookies + ['company']
           },
@@ -99,13 +100,30 @@ class HttpCache
               /poste*
             ),
             headers: LANGUAGE_HEADER,
+            query: true,
             cookies: whitelisted_cookies
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: LANGUAGE_HEADER,
+            query: true,
             cookies: whitelisted_cookies
+          },
+          # Cached paths that vary based on query-parameters.
+          {
+            path: %w(
+              /curriculum/*
+              /advocacy*
+              /yourschool
+              /certificates
+              /congrats
+              /custom-certificates
+              /printcertificate*
+            ),
+            query: true,
+            headers: LANGUAGE_HEADER,
+            cookies: default_cookies
           }
         ],
         # Remaining Pegasus paths are cached, and vary only on language and default cookies.
@@ -131,6 +149,7 @@ class HttpCache
               /v3/files/*
             ),
             headers: LANGUAGE_HEADER,
+            query: true,
             cookies: whitelisted_cookies
           },
           {
@@ -143,6 +162,7 @@ class HttpCache
               /milestone/*
             ),
             headers: LANGUAGE_HEADER + ['User-Agent'],
+            query: true,
             cookies: whitelisted_cookies
           },
           {
@@ -158,6 +178,7 @@ class HttpCache
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
+            query: true,
             cookies: whitelisted_cookies
           },
           {
@@ -170,6 +191,7 @@ class HttpCache
             path: '/v2/*',
             proxy: 'pegasus',
             headers: LANGUAGE_HEADER,
+            query: true,
             cookies: whitelisted_cookies
           },
           {
@@ -181,6 +203,7 @@ class HttpCache
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
         default: {
           headers: LANGUAGE_HEADER,
+          query: true,
           cookies: whitelisted_cookies
         }
       }
