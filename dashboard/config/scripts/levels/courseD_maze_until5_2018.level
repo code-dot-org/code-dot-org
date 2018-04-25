@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "pvz",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,1,0,0]]",
+    "maze": "[[0,0,0,0,0,1,0,0],[0,1,1,1,1,1,0,0],[0,1,0,0,0,3,0,0],[0,1,0,0,0,1,0,0],[0,1,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,1,0,0]]",
     "instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "markdown_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "instructions_important": "false",
@@ -28,18 +28,23 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use `if path to the left` to keep the zombie checking for a place to turn.\",\"hint_id\":\"courseD_maze_until5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec7f5609f025178b0830e2c228c7bd3c/courseD_maze_until5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To use only one `move forward`, put it inside the `repeat until sunflower` block.\",\"hint_id\":\"courseD_maze_until5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/619efbf260d1b1289e1e784d5647637f/courseD_maze_until5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?\",\"hint_id\":\"courseD_maze_until5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/24836ce537d2a376b6f6f8dcc52ce533/courseD_maze_until5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To use only one `move forward`, put it inside the `repeat until sunflower` block.\",\"hint_id\":\"courseD_maze_until5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/619efbf260d1b1289e1e784d5647637f/courseD_maze_until5_2018.mp3\"}]",
     "ideal": "5",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "parent_level_id": 7548,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 16:31:42 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:31:42 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-04-25 17:36:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 17:38:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 17:41:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 17:42:20 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 17:43:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:42:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -51,10 +56,13 @@
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_forever"/>
         <block type="maze_if">
           <title name="DIR">isPathLeft</title>
         </block>
-        <block type="maze_forever"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -63,16 +71,16 @@
           <next>
             <block type="maze_forever">
               <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="maze_untilBlockedOrNotClear">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </statement>
                   <next>
-                    <block type="maze_if">
-                      <title name="DIR">isPathLeft</title>
-                      <statement name="DO">
-                        <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
-                        </block>
-                      </statement>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
                     </block>
                   </next>
                 </block>
