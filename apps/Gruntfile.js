@@ -532,8 +532,7 @@ describe('entry tests', () => {
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
 
-    'code.org/views/congrats_share': './src/sites/code.org/pages/views/congrats_share.js',
-    'code.org/views/video_player_social_helper': './src/sites/code.org/pages/views/video_player_social_helper.js'
+    'code.org/views/congrats_share': './src/sites/code.org/pages/views/congrats_share.js'
   };
 
   // Create a config for each of our bundles
