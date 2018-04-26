@@ -168,6 +168,7 @@ export default class AssetManager extends React.Component {
           <AssetRow
             key={asset.filename}
             name={asset.filename}
+            timestamp={asset.timestamp}
             type={asset.category}
             size={asset.size}
             useFilesApi={this.props.useFilesApi}
