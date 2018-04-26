@@ -2969,6 +2969,10 @@ en:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_algorithms_intro:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_debugging_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_debugging_intro:
@@ -2977,6 +2981,18 @@ en:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_events_intro:
         Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functions_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functions_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functionsparam_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functionsparam_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_loops_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_loops_intro:
@@ -2984,6 +3000,10 @@ en:
       courseF_markdown_nestedloops_end:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_intro:
         Test Markdown Textbook Page: Test Markdown Textbook Page
       coursee-privateandpersonalinformation: {}
       coursef_functionsSummary_map:
