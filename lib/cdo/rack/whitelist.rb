@@ -27,7 +27,7 @@ module Rack
         unless behavior[:query]
           env[Rack::RACK_REQUEST_QUERY_STRING] = ''
           env[Rack::QUERY_STRING] = ''
-          env[Rack::RACK_REQUEST_QUERY_HASH].clear
+          env[Rack::RACK_REQUEST_QUERY_HASH]&.clear
         end
 
         # Filter whitelisted request headers.

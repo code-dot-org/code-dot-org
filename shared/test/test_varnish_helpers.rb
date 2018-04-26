@@ -74,18 +74,20 @@ STR
   BEHAVIOR = {
     dashboard: {
       behaviors: [],
-      default: {cookies: 'all', headers: HEADERS}
+      default: {cookies: 'all', query: true, headers: HEADERS}
     },
     pegasus: {
       behaviors: [
         {
           path: '/api/*',
           headers: HEADERS,
+          query: true,
           cookies: 'all'
         },
         {
           path: '/',
           headers: HEADERS,
+          query: true,
           cookies: ['1']
         }
       ],
@@ -108,6 +110,7 @@ if (req.http.host ~ "(dashboard|studio)") {
     cookie.filter_except("1");
   } else {
     cookie.filter_except("NO_CACHE");
+    set req.url = regsub(req.url, \"\\?.*$\", \"\");
   }
 }
 STR
