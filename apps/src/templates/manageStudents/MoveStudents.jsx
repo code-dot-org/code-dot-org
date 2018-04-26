@@ -279,7 +279,7 @@ class MoveStudents extends Component {
               {otherTeacherSelected &&
                 <form>
                   <label htmlFor="sectionCode">
-                    Enter section code:
+                    {`${i18n.enterSectionCode()}:`}
                   </label>
                   <input
                     required
@@ -287,11 +287,9 @@ class MoveStudents extends Component {
                     style={styles.inputBox}
                     value={otherTeacherSectionValue}
                     onChange={this.onChangeTeacherSection}
-                    placeholder="6-character code (ABCDEF)"
+                    placeholder={i18n.sectionCodePlaceholder()}
                   />
-                  <label htmlFor="moveOrCopy">
-                    Would you like the student(s) to be in both sections?
-                  </label>
+                  <label htmlFor="moveOrCopy">{i18n.bothSectionsQuestion()}</label>
                   <label>
                     <input
                       type="radio"
@@ -299,7 +297,7 @@ class MoveStudents extends Component {
                       checked={copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    Yes, I want to copy student(s) to be in this current section AND the new section.
+                    {i18n.copyStudentsConfirm()}
                   </label>
                   <label>
                     <input
@@ -308,7 +306,7 @@ class MoveStudents extends Component {
                       checked={!copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    No, I want to move student(s) to be in the new section only.
+                    {i18n.moveStudentsConfirm()}
                   </label>
                 </form>
               }
