@@ -181,7 +181,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenUpArrow',
-      blockText: 'when up arrow presssed',
+      blockText: 'when up arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -189,7 +189,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenDownArrow',
-      blockText: 'when down arrow presssed',
+      blockText: 'when down arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -197,7 +197,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenLeftArrow',
-      blockText: 'when left arrow presssed',
+      blockText: 'when left arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -205,7 +205,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenRightArrow',
-      blockText: 'when right arrow presssed',
+      blockText: 'when right arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -213,7 +213,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileUpArrow',
-      blockText: 'while up arrow presssed',
+      blockText: 'while up arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -221,7 +221,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileDownArrow',
-      blockText: 'while down arrow presssed',
+      blockText: 'while down arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -229,7 +229,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileLeftArrow',
-      blockText: 'while left arrow presssed',
+      blockText: 'while left arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -237,7 +237,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileRightArrow',
-      blockText: 'while right arrow presssed',
+      blockText: 'while right arrow pressed',
       args: [],
       eventLoopBlock: true,
     });

@@ -381,6 +381,18 @@ function main() {
 
     $scope.bulk_import = {editing: false, students: ''};
 
+    if ($scope.tab === 'stats') {
+      $scope.$on('stats-table-rendered', () => {
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'control',
+            event: 'stats'
+          }
+        );
+      });
+    }
+
     if ($scope.tab === 'manage') {
       $scope.$on('react-sync-oauth-section-rendered', () => {
         $scope.section.$promise.then(section =>
@@ -397,6 +409,13 @@ function main() {
 
       $scope.$on('student-table-react-rendered', () => {
         $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'control',
+            event: 'manage'
+          }
+        );
       });
 
       $scope.$on('$destroy', () => {
@@ -566,6 +585,7 @@ function main() {
         event: 'MovingStudentsController'
       }
     );
+
     var self = this;
 
     // 'Other Section' selected
@@ -703,6 +723,13 @@ function main() {
         event: 'SectionProjectsController'
       }
     );
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'control',
+        event: 'projects'
+      }
+    );
 
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -740,6 +767,14 @@ function main() {
       }
     );
 
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'control',
+        event: 'progress-summary'
+      }
+    );
+
     $scope.tab = 'progress';
     $scope.page = {zoom: false};
     $scope.react_progress = false;
@@ -765,6 +800,30 @@ function main() {
     $scope.sections.$promise.then(sections => {
       $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
     });
+
+    // Logs the request for detailed progress and sets the zoom state
+    $scope.progressDetailRequest = function () {
+      $scope.page = {zoom: true};
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'control',
+          event: 'progress-detailed'
+        }
+      );
+    };
+
+    // Logs the request for summarized progress view and sets the zoom state
+    $scope.progressSummaryRequest = function () {
+      $scope.page = {zoom: false};
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'control',
+          event: 'progress-summary'
+        }
+      );
+    };
 
     if (experiments.isEnabled('sectionProgressRedesign')) {
       $scope.react_progress = true;
@@ -905,6 +964,14 @@ function main() {
       }
     );
 
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'control',
+        event: 'text-responses'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -976,6 +1043,14 @@ function main() {
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionAssessmentsController'
+      }
+    );
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'control',
+        event: 'assessments'
       }
     );
 

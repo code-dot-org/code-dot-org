@@ -9,7 +9,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
 import {getStore} from '../redux';

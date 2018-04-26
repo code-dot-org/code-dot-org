@@ -21,7 +21,6 @@ import {
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
-  studentLevelProgressPropType,
 } from './sectionProgressRedux';
 
 const styles = {
@@ -64,12 +63,11 @@ const styles = {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.number.isRequired,
+    scriptId: PropTypes.number,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
-    studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
@@ -96,8 +94,7 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress,
-      isLoadingProgress
+      isLoadingProgress,
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -147,7 +144,6 @@ class SectionProgress extends Component {
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
@@ -159,7 +155,6 @@ class SectionProgress extends Component {
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
               />
               <ProgressLegend
                 excludeCsfColumn={true}
