@@ -4,10 +4,9 @@ require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
 
 def main
-  ten_days_ago = Time.now - 10.days
   three_days_ago = Time.now - 3.days
   Pd::Session.
-    where('end > ?', ten_days_ago).
+    where.not(code: nil).
     where('end < ?', three_days_ago).
     find_each(&:remove_code)
 end
