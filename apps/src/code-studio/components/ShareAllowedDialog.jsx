@@ -178,11 +178,11 @@ class ShareAllowedDialog extends React.Component {
       // check if twitter and facebook are actually available
       // and not blocked by network firewall
       checkImageReachability(
-        'https://graph.facebook.com/Code.org/picture',
+        'https://facebook.com/favicon.ico',
         isFacebookAvailable => this.setState({isFacebookAvailable})
       );
       checkImageReachability(
-        'https://twitter.com/codeorg/profile_image?size=mini',
+        'https://twitter.com/favicon.ico',
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
