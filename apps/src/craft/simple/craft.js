@@ -13,7 +13,7 @@ var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
 var MusicController = require('../../MusicController');
 var Provider = require('react-redux').Provider;
-var AppView = require('../../templates/AppView');
+import AppView from '../../templates/AppView';
 var CraftVisualizationColumn = require('./CraftVisualizationColumn');
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';

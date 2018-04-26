@@ -11,8 +11,8 @@ import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
-const AppView = React.createClass({
-  propTypes: {
+class AppView extends React.Component {
+  static propTypes = {
     hideSource: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
@@ -20,13 +20,13 @@ const AppView = React.createClass({
     // not provided by redux
     visualizationColumn: PropTypes.element,
     onMount: PropTypes.func.isRequired,
-  },
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.props.onMount();
-  },
+  }
 
-  render: function () {
+  render() {
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
       pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
@@ -45,9 +45,11 @@ const AppView = React.createClass({
       </StudioAppWrapper>
     );
   }
-});
-module.exports = connect(state => ({
+}
+
+export const UnconnectedAppView = AppView;
+export default connect(state => ({
   hideSource: state.pageConstants.hideSource,
   isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
-}))(AppView);
+}))(UnconnectedAppView);
