@@ -27,7 +27,7 @@ const FAKE_API_RESPONSE = {
     start: "2017-10-07T09:00:00.000Z",
     end: "2017-10-07T17:00:00.000Z",
     code: null,
-    'open_for_attendance?': false,
+    'show_link?': false,
     attendance_count: 17
   },
   attendance: [

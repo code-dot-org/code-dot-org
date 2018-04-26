@@ -163,7 +163,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.end!
     assert_equal 'Ended', @workshop.state
     assert_equal 'Ended', @workshop.state
-    assert @workshop.sessions.first.code.nil?
+    assert_not_nil @workshop.sessions.first.code
   end
 
   test 'start is idempotent' do

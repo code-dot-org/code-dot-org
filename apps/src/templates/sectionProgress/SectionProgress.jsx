@@ -21,25 +21,37 @@ import {
   sectionDataPropType,
   validScriptPropType,
   scriptDataPropType,
-  studentLevelProgressPropType,
 } from './sectionProgressRedux';
 
 const styles = {
   heading: {
     marginBottom: 0,
   },
+  selectorContainer: {
+    width: '100%',
+    display: 'inline-block'
+  },
   scriptSelectorContainer: {
     float: 'left',
-    marginRight: 20,
+    marginRight: 10,
   },
   viewToggleContainer: {
     float: 'left',
-    marginTop: 24,
+    marginTop: 34,
+  },
+  lessonSelectorContainer: {
+    float: 'right',
   },
   viewCourseLink: {
     float: 'right',
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
+  viewCourseLinkBox: {
+    width: '100%',
+    height: 10,
+    lineHeight: '10px',
+    clear: 'both'
+  },
 };
 
 /**
@@ -51,12 +63,11 @@ const styles = {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.number.isRequired,
+    scriptId: PropTypes.number,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
-    studentLevelProgress: studentLevelProgressPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
@@ -83,8 +94,7 @@ class SectionProgress extends Component {
       currentView,
       scriptId,
       scriptData,
-      studentLevelProgress,
-      isLoadingProgress
+      isLoadingProgress,
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
@@ -93,7 +103,18 @@ class SectionProgress extends Component {
 
     return (
       <div>
-        <div>
+        <div style={styles.viewCourseLinkBox}>
+          <div style={styles.viewCourseLink}>
+            {linkToOverview &&
+              <SmallChevronLink
+                link={linkToOverview}
+                linkText={i18n.viewCourse()}
+                isRtl={false}
+              />
+            }
+          </div>
+        </div>
+        <div style={styles.selectorContainer}>
           <div style={styles.scriptSelectorContainer}>
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
@@ -103,22 +124,15 @@ class SectionProgress extends Component {
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
-            {lessons.length !== 0 &&
-              <LessonSelector
-                lessons={lessons}
-                onChange={this.onChangeLevel}
-              />
-            }
           </div>
           <div style={styles.viewToggleContainer}>
             <SectionProgressToggle />
           </div>
-          <div style={styles.viewCourseLink}>
-            {linkToOverview &&
-              <SmallChevronLink
-                link={linkToOverview}
-                linkText={i18n.viewCourse()}
-                isRtl={false}
+          <div style={styles.lessonSelectorContainer}>
+            {lessons.length !== 0 &&
+              <LessonSelector
+                lessons={lessons}
+                onChange={this.onChangeLevel}
               />
             }
           </div>
@@ -130,10 +144,9 @@ class SectionProgress extends Component {
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
               />
               <SummaryViewLegend
-                showCSFProgressBox={true}
+                showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }
@@ -142,7 +155,6 @@ class SectionProgress extends Component {
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
-                studentLevelProgress={studentLevelProgress}
               />
               <ProgressLegend
                 excludeCsfColumn={true}

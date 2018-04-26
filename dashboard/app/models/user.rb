@@ -580,6 +580,8 @@ class User < ActiveRecord::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
     User.find(user_id)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    nil
   end
 
   validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
@@ -1647,16 +1649,11 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
-  # rubocop:disable Lint/UnreachableCode
   def show_census_teacher_banner?
-    # Temporarily hide the banner
-    return false
-
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
-  # rubocop:enable Lint/UnreachableCode
 
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip

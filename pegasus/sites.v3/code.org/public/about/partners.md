@@ -30,13 +30,6 @@ Code.org has over 100 historical partnerships with school districts around the U
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'infrastructure') %>
 
 <HR>
-<a name="promotional"></a>
-
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'promotional') %>
-
-<HR>
 <a name="international"></a>
 
 # International Partners
@@ -46,7 +39,7 @@ Code.org has over 100 historical partnerships with school districts around the U
 <HR>
 <a name="activity"></a>
 
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'tutorial') %>
 

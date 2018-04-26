@@ -1,0 +1,20 @@
+name 'courseF_markdown_debugging_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "debugging"!**
+
+### **A bug is something that goes wrong.** It is an error in a program. When you find and fix those errors, you are **debugging** a problem.
+
+### You have to practice **persistence**, another word for not giving up, in order to find and fix all the bugs.
+
+---
+
+## **Vocab to Know**
+
+* ### **Bug** - Part of a program that does not work correctly
+
+* ### **Debugging** - Finding and fixing problems in an algorithm or program
+
+* ### **Persistence** - Not giving up
+MARKDOWN

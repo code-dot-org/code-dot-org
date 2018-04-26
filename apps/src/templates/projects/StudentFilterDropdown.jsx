@@ -16,7 +16,8 @@ const styles = {
     color: 'dimgray'
   },
   filterText: {
-    color: color.white,
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 };
 

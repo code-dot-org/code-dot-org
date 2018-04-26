@@ -428,7 +428,7 @@ Dashboard::Application.routes.draw do
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
-      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+      resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
         collection do
           get :quick_view
           get :cohort_view
@@ -468,6 +468,9 @@ Dashboard::Application.routes.draw do
     get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+
+    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -592,7 +595,7 @@ Dashboard::Application.routes.draw do
   # the constraint on :q to match anything but a slash.
   # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
   get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
-  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+  get '/dashboardapi/v1/schoolsearch/:q/:limit(/:use_new_search)', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}

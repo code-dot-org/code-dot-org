@@ -9,15 +9,13 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
-import {
-  RegionalPartnerDropdownOptions as dropdownOptions,
-  RegionalPartnerPropType
-} from './constants';
+import {RegionalPartnerPropType} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType.isRequired,
+    showRegionalPartnerDropdown: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -81,10 +79,8 @@ export class Summary extends React.Component {
         {this.props.isWorkshopAdmin &&
           <AdminNavigationButtons/>
         }
-        {this.props.isWorkshopAdmin &&
-          <RegionalPartnerDropdown
-            additionalOptions={dropdownOptions}
-          />
+        {this.props.showRegionalPartnerDropdown &&
+          <RegionalPartnerDropdown/>
         }
         <h1>{this.props.regionalPartnerFilter.label}</h1>
         <div className="row">
@@ -127,4 +123,5 @@ export class Summary extends React.Component {
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
+  showRegionalPartnerDropdown: state.regionalPartners.length > 1
 }))(Summary);

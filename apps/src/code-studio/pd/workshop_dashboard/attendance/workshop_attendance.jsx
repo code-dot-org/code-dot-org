@@ -155,7 +155,7 @@ export class WorkshopAttendance extends React.Component {
         </p>
       );
     } else {
-      const activeSession = this.state.sessions.find(s => s['open_for_attendance?']);
+      const activeSession = this.state.sessions.find(s => s['show_link?']);
       const attendanceUrl = activeSession ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${activeSession.code}` : null;
       intro = (
         <div>
