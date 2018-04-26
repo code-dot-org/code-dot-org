@@ -1,5 +1,3 @@
-%script{type: 'text/javascript', src: minifiable_asset_path('js/code.org/views/congrats_share.js')}
-
 :ruby
   cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
   user_type = request.cookies[cookie_key]
@@ -27,24 +25,24 @@
   }
 
 - unless user_type == "student_y"
-  #congrats-share-buttons{:style=>'display:none'}
+  #congrats-share-buttons.share-button-container{:style=>'display:none'}
     %h2{:style=>'margin-top: 0; margin-bottom: 0;'}=I18n.t :share_achievement
 
     .share-buttons.clear
-      %div#share-fb{:style=>"display:none; margin-bottom: 10px; margin-right: 20px"}
+      %div#share-fb.share-button-facebook-link{:style=>"display: none; display: inline-block; margin-bottom: 10px; margin-right: 20px"}
         %a.window-popup{:href=>"https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}", onclick: "trackSocialEvent('facebook');"}<
           %button.button-color-share.share-button-facebook<
             %i{:class=>"fa fa-facebook"}<
             =I18n.t(:share_on_facebook)
 
-      %span#like-fb{:style=>'display:none; margin-bottom: 10px; margin-right: 20px'}
+      %span#like-fb{:style=>'display: none; margin-bottom: 10px; margin-right: 20px'}
         %iframe{allowtransparency: "true", frameborder: "0", scrolling: "no", src: "//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FCode.org&width=200&layout=standard&action=like&show_faces=true&share=true&height=80&appId=293113697493179", style: "border:none; overflow:hidden; width:200px; height:80px; vertical-align:top"}
 
-      %span#share-twitter{:style=>"display:none; margin-top: 10px"}
+      %span#share-twitter.share-button-twitter-link{:style=>"display: none; display: inline-block; margin-top: 10px"}
         %a.window-popup{:href=>"https://twitter.com/share?#{twitter.to_query}", onclick: "trackSocialEvent('twitter');"}<
           %button.button-color-share.share-button-twitter<
             %i{:class=>"fa fa-twitter"}<
             =I18n.t(:share_on_twitter)
 
-      %span#follow-twitter{:style=>'display:none; margin-top: 10px'}
+      %span#follow-twitter{:style=>'display: none; margin-top: 10px'}
         %iframe{allowtransparency: "true", frameborder: "0", scrolling: "no", src: "//platform.twitter.com/widgets/follow_button.html?screen_name=codeorg", style: "width:200px; height:20px; vertical-align:top"}
