@@ -18,7 +18,7 @@ const answerOptionsFormatter = (percentAnsweredOptionOne, {rowData}) => {
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={rowData.percentAnsweredOptionOne}
-        isCorrectAnswer={rowData.percentAnsweredOptionTwo}
+        isCorrectAnswer={rowData.optionOneIsCorrect}
       />
   );
 };
@@ -28,6 +28,7 @@ const correctAnswerFormatter = (percentAnsweredOptionOne, {rowData}) => {
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={rowData.percentAnsweredOptionTwo}
+        isCorrectAnswer={rowData.optionTwoIsCorrect}
       />
   );
 };
@@ -46,6 +47,8 @@ const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.string,
   percentAnsweredOptionOne: PropTypes.string,
   percentAnsweredOptionTwo: PropTypes.string,
+  optionOneIsCorrect: true,
+  optionTwoIsCorrect: false,
   notAnswered: PropTypes.string,
 });
 
