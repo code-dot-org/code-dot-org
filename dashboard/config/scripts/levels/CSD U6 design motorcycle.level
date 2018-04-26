@@ -59,10 +59,7 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "CSD U6 motorcycle template",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

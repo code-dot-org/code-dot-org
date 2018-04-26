@@ -76,10 +76,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
