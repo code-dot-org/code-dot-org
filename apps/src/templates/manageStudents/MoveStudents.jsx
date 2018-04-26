@@ -15,6 +15,7 @@ const PADDING = 20;
 const TABLE_WIDTH = 300;
 const CHECKBOX_CELL_WIDTH = 50;
 const OTHER_TEACHER = "otherTeacher";
+const COPY = "copy";
 
 const styles = {
   dialog: {
@@ -223,7 +224,7 @@ class MoveStudents extends Component {
 
   onChangeMoveOrCopy = (event) => {
     this.setState({
-      copyStudents: event.target.value === "copy"
+      copyStudents: event.target.value === COPY
     });
   };
 
@@ -294,7 +295,7 @@ class MoveStudents extends Component {
                   <label>
                     <input
                       type="radio"
-                      value="copy"
+                      value={COPY}
                       checked={copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
