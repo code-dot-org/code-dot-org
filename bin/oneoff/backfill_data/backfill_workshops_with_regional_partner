@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+no_partner = []
+new_partner = []
+
+Pd::Workshop.find_each do |workshop|
+  unless workshop.regional_partner_id
+    workshop.regional_partner_id = workshop.organizer.try(:regional_partners).try(:first).try(:id) || nil
+    workshop.save
+
+    if workshop.errors.full_messages.length > 1
+      puts "workshop #{workshop.id} save errors: #{workshop.errors.full_messages}"
+    else
+      if workshop.regional_partner_id.nil?
+        no_partner.push workshop.id
+      else
+        new_partner.push workshop.id
+      end
+    end
+  end
+end
+
+puts "Workshops with a newly assigned regional partner: #{new_partner}"
+
+puts "Workshops with no regional partner: #{no_partner}"
