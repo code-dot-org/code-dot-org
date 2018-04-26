@@ -62,14 +62,11 @@ jobs:
       - restore_cache:
           key: code-dot-org-bundle-v7-{{ checksum "Gemfile.lock" }}
 
-      # as recommended: https://circleci.com/docs/2.0/yarn/
+      # restore npm cache
       - restore_cache:
-          name: Restore Yarn Package Cache
           keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "apps/yarn.lock" }}
-            - yarn-packages-{{ .Branch }}
-            - yarn-packages-production
-            - yarn-packages-
+            - code-dot-org-node-v8-{{ checksum "apps/package.json" }}
+            - code-dot-org-node-v8-
 
       # start mysql
       - run: sudo service mysql start && mysql -V
@@ -78,10 +75,6 @@ jobs:
           name: install dependencies
           command: |
             bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
-
-      - run:
-          name: set yarn version
-          command: sudo apt-get install yarn=1.6.0-1
 
       - run:
           name: setup locals.yml
@@ -108,6 +101,7 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
+            yarn -V
 
       - run:
           name: rake install
@@ -127,12 +121,10 @@ jobs:
           command: |
             mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
-      # as recommended: https://circleci.com/docs/2.0/yarn/
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ .Branch }}-{{ checksum "apps/yarn.lock" }}
+          key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
           paths:
-            - apps/node_modules/
+            - apps/node_modules
             - /home/circleci/.cache/yarn
 
       - run:
