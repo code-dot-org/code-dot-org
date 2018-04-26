@@ -13,10 +13,12 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
-import {toggleInstructionsCollapsed,
-   setInstructionsMaxHeightNeeded,
-   setInstructionsRenderedHeight,
-   setInstructionsHeight} from '../../redux/instructions';
+import {
+  toggleInstructionsCollapsed,
+  setInstructionsMaxHeightNeeded,
+  setInstructionsRenderedHeight,
+  setInstructionsHeight
+} from '../../redux/instructions';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
