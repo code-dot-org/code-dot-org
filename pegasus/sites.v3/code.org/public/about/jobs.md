@@ -35,7 +35,9 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 	- [Director/VP Engineering](#vpeng)
 	- [Lead Software Engineer](#leadsofteng)
 - **Outreach**
+ 	- [Program Manager](#outreachpm)
  	- [Program Associate](#outreach)
+ 	- [Regional Manager](#regional)
 - **Professional Learning**
  	- [Program Manager, K-5 Program](#k5program)
 - **Internships**
@@ -57,7 +59,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with our high school Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s CS Principles curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location 
@@ -102,7 +104,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all elementary students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location  
@@ -149,7 +151,7 @@ While each Education team member takes ownership of large parts of projects, we 
 Responsibilities of the position include: 
 
 - Collaborating with the CS Fundamentals Curriculum Development Manager and the broader Education team to design, develop, write, and improve Code.org’s elementary school curriculum.
-- Incorporating best practices for equity and pegagogy to create an engaging and approachable course for all elementary students and their teachers.
+- Incorporating best practices for equity and pedagogy to create an engaging and approachable course for all elementary students and their teachers.
 - Actively seeking and incorporating feedback from the team and through ongoing testing and evaluation of curriculum.
 - Supporting teachers of our curriculum by triaging and responding to helpdesk tickets and forum posts.
 - Travel up to 10% of working time, depending on location  
@@ -286,6 +288,58 @@ You will be successful in this role if you have:
 - Ability and willingness to travel up to 15% time 
 
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## <a name="regional"href="#regional">Regional Manager (location flexible)</a>
+
+**Job Summary:**
+
+Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
+
+In this role, you will:
+
+- Manage and support implementation for all partners in region at K-12 grade levels
+	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
+	- Develop working relationship with partners to implement partnership model, and collaborate with partners roadmap development, including metrics and oversight of partner goals
+	- Assist regional partners in district, school, and teacher recruitment, selection, and retention
+	- Troubleshoot regional partnership issues
+	- Work with our Education team to coordinate regional professional learning workshops for teachers
+- Recruit Regional Partners to partner with Code.org and recruit school districts to teach Computer Science in K-12 schools.
+	- Present Code.org partnership model
+	- Track partnership status
+- Collaborate with your partners to market the programs in partner regions
+- Represent Code.org and present the partnership model at conferences and other venues, as needed
+- Contribute to our mission and needs through collateral development, professional development, operational support and other assigned duties
+
+Ability and willingness to travel up to 25% of the time is required.
+
+
+**Experience and Qualifications:**
+
+Our ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
+
+- Demonstrated ability to pitch the Code.org regional partner model to potential partners
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle, including potential mediation between different parties involved in partnership
+- Advanced organizational and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+
+Additional desired strengths include:
+
+- Experience working with schools districts or STEM education based organizations in a project implementation capacity
+- Desire to be in a collaborative, team-based work enviroment
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+- Candidates must be extremely detail-oriented, team-focused, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. 
+
+Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+In addition, candidates:
+
+- Must be authorized to work in the United States
+- Must pass a pre-employment background check
+
+
+To apply, please email your cover letter and resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="k5program"href="k5program">Program Manager, K-5 Program</a>
 

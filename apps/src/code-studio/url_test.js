@@ -5,8 +5,8 @@ function testImageAccess(
   successCallback = () => {},
   failureCallback = () => {},
   timeoutMs = 5000,
-  videoElement = false) {
-
+  videoElement = false
+) {
   var element;
   if (videoElement) {
     element = document.createElement('video');
