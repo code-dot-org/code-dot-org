@@ -1,4 +1,4 @@
-import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
+import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import { PropTypes } from 'react';
 import {
   NAME_COLUMN_WIDTH,
@@ -17,6 +17,7 @@ const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
+const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
 
 // Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
@@ -25,19 +26,56 @@ export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
 export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
-export const addScriptData = (scriptId, scriptData) => ({ type: ADD_SCRIPT_DATA, scriptId, scriptData });
+export const addLevelsByLesson = (scriptId, levelsByLesson) => (
+  { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
+);
+export const addScriptData = (scriptId, scriptData) => {
+  // Filter to match scriptDataPropType
+  const filteredScriptData = {
+    id: scriptData.id,
+    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    title: scriptData.title,
+    path: scriptData.path,
+    stages: scriptData.stages,
+  };
+  return { type: ADD_SCRIPT_DATA, scriptId, scriptData: filteredScriptData };
+};
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
 export const setSection = (section) => {
   // Sort section.students by name.
   const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
-  return { type: SET_SECTION, section: {...section, students: sortedStudents} };
+
+  // Filter data to match sectionDataPropType
+  const filteredSectionData = {
+    id: section.id,
+    script: section.script,
+    students: sortedStudents,
+  };
+  return { type: SET_SECTION, section: filteredSectionData };
 };
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
+  };
+};
+export const processScriptAndProgress = (scriptId) => {
+  return (dispatch, getState) => {
+    const state = getState().sectionProgress;
+    const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
+    const scriptData = state.scriptDataByScript[scriptId];
+    let levelsByLessonByStudent = {};
+    for (const studentId of Object.keys(studentLevelProgress)) {
+      levelsByLessonByStudent[studentId] = levelsByLesson({
+        stages: scriptData.stages,
+        levelProgress: studentLevelProgress[studentId],
+        currentLevelId: null
+      });
+    }
+    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
+    dispatch(finishLoadingProgress());
   };
 };
 
@@ -57,6 +95,7 @@ export const ViewType = {
  */
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  script: PropTypes.object,
   students: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -81,10 +120,13 @@ export const validScriptPropType = PropTypes.shape({
  * The important part is scriptData.stages, which gets used by levelsWithLesson
  */
 export const scriptDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  excludeCsfColumnInLegend: PropTypes.bool,
+  title: PropTypes.string,
+  path: PropTypes.string,
   stages: PropTypes.arrayOf(PropTypes.shape({
     levels: PropTypes.arrayOf(PropTypes.object).isRequired
   })),
-  id: PropTypes.number.isRequired,
 });
 
 /**
@@ -96,6 +138,8 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
   PropTypes.objectOf(PropTypes.number)
 );
 
+const INITIAL_LESSON_OF_INTEREST = 1;
+
 const initialState = {
   scriptId: null,
   section: {},
@@ -103,7 +147,8 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
-  lessonOfInterest: 1,
+  levelsByLessonByScript: {},
+  lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
 };
 
@@ -112,6 +157,7 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
   if (action.type === SET_CURRENT_VIEW) {
@@ -165,6 +211,15 @@ export default function sectionProgress(state=initialState, action) {
       }
     };
   }
+  if (action.type === ADD_LEVELS_BY_LESSON) {
+    return {
+      ...state,
+      levelsByLessonByScript: {
+        ...state.levelsByLessonByScript,
+        [action.scriptId]: action.levelsByLesson,
+      }
+    };
+  }
   if (action.type === ADD_STUDENT_LEVEL_PROGRESS) {
     return {
       ...state,
@@ -203,6 +258,22 @@ export const getCurrentScriptData = (state) => {
 };
 
 /**
+ * Retrieves the combined script and progress data for the current scriptId for the entire section.
+ */
+export const getLevelsByLesson = (state) => {
+  return state.sectionProgress.levelsByLessonByScript[state.sectionProgress.scriptId];
+};
+
+/**
+ * Retrieves the combined script and progress data for student for the stage.
+ * This represents the data for a single cell.
+ */
+export const getLevels = (state, studentId, stageId) => {
+  return getLevelsByLesson(state)[studentId][stageId];
+};
+
+
+/**
  * Calculate the width of each column in the detail view based on types of levels
  * @returns {Array} array of integers indicating the length of each column
  */
@@ -212,7 +283,8 @@ export const getColumnWidthsForDetailView = (state) => {
 
   for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
     const levels = stages[stageIndex].levels;
-    let width = 0;
+    // Left and right padding surrounding bubbles
+    let width = 10;
     for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
       if (levels[levelIndex].kind === 'unplugged') {
         // Pill shaped bubble
@@ -246,11 +318,11 @@ export const loadScript = (scriptId) => {
     }
 
     dispatch(startLoadingProgress());
-    $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
-      // TODO(caleybrock): we don't need all these fields, clean up this data before dispatching
-      // it to redux.
-      dispatch(addScriptData(scriptId, scriptData));
-    });
+    const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {credentials: 'include'})
+      .then(response => response.json())
+      .then((scriptData) => {
+        dispatch(addScriptData(scriptId, scriptData));
+      });
 
     const numStudents = state.section.students.length;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
@@ -268,6 +340,8 @@ export const loadScript = (scriptId) => {
           dispatch(addStudentLevelProgress(scriptId, studentLevelProgress));
         });
     });
-    Promise.all(requests).then(() => dispatch(finishLoadingProgress()));
+
+    requests.push(scriptRequest);
+    Promise.all(requests).then(() => dispatch(processScriptAndProgress(scriptId)));
   };
 };

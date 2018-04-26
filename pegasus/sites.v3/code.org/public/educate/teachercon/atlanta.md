@@ -61,7 +61,7 @@ We also have a room set aside for you at our conference hotel, so you don’t ne
 <summary>**What if I choose to drive to TeacherCon?**</summary>
   <p>
   <br>
-If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card to help cover the cost of mileage. For those who choose to carpool with another attendee, please note that only one gift card will be provided per vehicle. **No additional reimbursements will be provided for driving**.
 </p>
 </details>
 
@@ -89,7 +89,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 
 **These include:**
 
-* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
+* Flights to and from your assigned TeacherCon Location **OR** a $150 gift card for attendees driving over 25 miles one-way.
 * A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 

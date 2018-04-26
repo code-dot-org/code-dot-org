@@ -16,6 +16,13 @@ const levels = fakeLevels(5).map((level, index) => ({
 }));
 levels[0].isConceptLevel = true;
 
+const diamondLevels = fakeLevels(2).map((level, index) => ({
+  ...level,
+  status: statusForLevel[index]
+}));
+diamondLevels[0].isConceptLevel = true;
+diamondLevels[1].isConceptLevel = true;
+
 export default storybook => {
   storybook
     .storiesOf('Progress/ProgressBubbleSet', module)
@@ -54,6 +61,16 @@ export default storybook => {
         )
       },
       {
+        name:'diamond bubbles only',
+        description: 'diamonds should be aligned',
+        story: () => (
+          <ProgressBubbleSet
+            levels={diamondLevels}
+            disabled={false}
+          />
+        )
+      },
+      {
         name:'first level is unplugged',
         description: 'Should get a pill for unplugged',
         story: () => (
@@ -61,6 +78,18 @@ export default storybook => {
             levels={[
               fakeLevel({ isUnplugged: true }),
               ...fakeLevels(5)
+            ]}
+            disabled={false}
+          />
+        )
+      },
+      {
+        name:'only level is unplugged',
+        description: 'Should get a pill for unplugged',
+        story: () => (
+          <ProgressBubbleSet
+            levels={[
+              fakeLevel({ isUnplugged: true }),
             ]}
             disabled={false}
           />

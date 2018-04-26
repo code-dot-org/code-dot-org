@@ -24,7 +24,7 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 
 We are transitioning all workshop payments to ACH Direct Deposit, allowing us to process payments more efficiently, provide better tracking, and allow Partners to receive their payments faster.
 
-In order to make this transition, we will need you to submit your organization’s W9 and banking information through this secure <a href="" target=_blank>DocuSign banking form</a>. Please respond to survey questions with information about your organization, and not your personal banking information.
+In order to make this transition, we will need you to submit your organization’s W9 and banking information through this secure <a href="https://na2.docusign.net/member/PowerFormSigning.aspx?PowerFormId=f26e94bf-8578-4b60-a263-7a246bee9ea4" target=_blank>DocuSign banking form</a>. Please respond to survey questions with information about your organization, and not your personal banking information.
 
 - All CS Fundamentals workshops will be paid via ACH Direct Deposit effective immediately (April 4, 2018).
 - All CS Discoveries and CS Principles workshops will be paid via ACH Direct Deposit starting June 1, 2018.

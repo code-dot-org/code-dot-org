@@ -69,6 +69,8 @@ class GamelabJr < Gamelab
 </category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
+  <block type="gamelab_makeNewSpriteLocation" />
+  <block type="gamelab_location_picker" />
   <block type="gamelab_setAnimation" />
   <block type="gamelab_setTint">
     <value name="COLOR">

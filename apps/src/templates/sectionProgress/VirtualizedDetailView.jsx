@@ -7,9 +7,10 @@ import styleConstants from '../../styleConstants';
 import {
   sectionDataPropType,
   scriptDataPropType,
-  studentLevelProgressPropType,
-  getColumnWidthsForDetailView
+  getColumnWidthsForDetailView,
+  getLevels,
 } from './sectionProgressRedux';
+import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
 import {
   progressStyles,
@@ -22,8 +23,8 @@ import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
 const ARROW_PADDING = 60;
-// Only show arrow next to lesson numbers if column is larger than a single small bubble
-const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH);
+// Only show arrow next to lesson numbers if column is larger than a single small bubble and it's margin.
+const MAX_COLUMN_WITHOUT_ARROW = Math.max(PROGRESS_BUBBLE_WIDTH, DIAMOND_BUBBLE_WIDTH) + 10;
 
 const styles = {
   numberHeader: {
@@ -35,7 +36,16 @@ const styles = {
   lessonHeaderContainer: {
     display: 'flex',
     justifyContent: 'flex-start',
-    marginTop: 4,
+    marginTop: 2,
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 42,
+  },
+  lessonLabelContainer: {
+    borderBottom: '2px solid',
+    borderColor: color.border_gray,
+    height: 44,
+    paddingTop: 8,
   },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
@@ -43,7 +53,7 @@ const styles = {
     marginRight: -8,
     width: 100,
     height: 2,
-    backgroundColor:color.charcoal,
+    backgroundColor: color.charcoal,
   },
   lessonArrow: {
     border: 'solid ' + color.charcoal,
@@ -54,6 +64,9 @@ const styles = {
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)',
   },
+  bubbleSet: {
+    paddingLeft: 4,
+  },
 };
 
 class VirtualizedDetailView extends Component {
@@ -61,9 +74,9 @@ class VirtualizedDetailView extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
-    studentLevelProgress: studentLevelProgressPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
+    getLevels: PropTypes.func,
   };
 
   state = {
@@ -82,7 +95,7 @@ class VirtualizedDetailView extends Component {
   }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, studentLevelProgress, columnWidths} = this.props;
+    const {section, scriptData, columnWidths, getLevels} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -105,9 +118,11 @@ class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
-            {i18n.lesson()}
-          </span>
+          <div style={styles.lessonLabelContainer}>
+            <span style={progressStyles.lessonHeading}>
+              {i18n.lesson()}
+            </span>
+          </div>
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
           <div style={styles.lessonHeaderContainer}>
@@ -126,16 +141,18 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {(rowIndex === 1 && columnIndex === 0) && (
-          <span style={progressStyles.lessonHeading}>
+          <div style={progressStyles.lessonHeading}>
             {i18n.levelType()}
-          </span>
+          </div>
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
-          <span>
+          <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
-                icon={level.icon ? level.icon.replace('fa-', '') : "desktop"}
-                style={progressStyles.icon}
+                icon={getIconForLevel(level)}
+                style={
+                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                }
                 key={i}
               />
             )}
@@ -152,10 +169,8 @@ class VirtualizedDetailView extends Component {
         {rowIndex > 1 && columnIndex > 0 && (
           <StudentProgressDetailCell
             studentId={section.students[studentStartIndex].id}
-            section={section}
-            studentLevelProgress={studentLevelProgress}
             stageId={stageIdIndex}
-            scriptData={scriptData}
+            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
           />
         )}
       </div>
@@ -205,5 +220,6 @@ export const UnconnectedVirtualizedDetailView = VirtualizedDetailView;
 
 export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
-  lessonOfInterest: state.sectionProgress.lessonOfInterest
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+  getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
 }))(VirtualizedDetailView);
