@@ -358,7 +358,10 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
+    getVars: function (category) {
+      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
+        return [];
+      }
       return [this.getTitleValue('VAR')];
     }
   };
@@ -377,7 +380,10 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
+    getVars: function (category) {
+      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
+        return [];
+      }
       return [this.getTitleValue('VAR')];
     }
   };
@@ -396,7 +402,10 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function () {
+    getVars: function (category) {
+      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
+        return [];
+      }
       return [this.getTitleValue('VAR')];
     }
   };
@@ -511,7 +520,10 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1', this.getTitleValue('VAR')));
     },
-    getVars: function () {
+    getVars: function (category) {
+      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
+        return [];
+      }
       return [this.getTitleValue('VAR')];
     },
     // serialize the counter variable name to xml so that it can be used across
