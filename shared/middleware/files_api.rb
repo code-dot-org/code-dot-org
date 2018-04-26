@@ -809,6 +809,9 @@ class FilesApi < Sinatra::Base
     end
 
     cache_for 1.hour
+    # Because we _might_ have already read from this IO object during image
+    # moderation, rewind to the start of the file before responding with it.
+    file.seek(0, IO::SEEK_SET)
     file
   end
 

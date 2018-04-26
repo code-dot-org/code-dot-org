@@ -39,6 +39,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need a `while` loop to collect all of the honey, since it varies between honeycombs.\",\"hint_id\":\"courseE_bee_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/73f88f2d419710757b6d89623a4bace3/courseE_bee_functions10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Include the turns and movement in your function, so you can call it when the bee is on the main path.\",\"hint_id\":\"courseE_bee_functions10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/af02f483b778baab4581ac1e784c805c/courseE_bee_functions10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to call your function in the main program!\",\"hint_id\":\"courseE_bee_functions10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a980736e2a17e633fe5151aaf9205c2/courseE_bee_functions10.mp3\"}]",
     "shape_shift": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

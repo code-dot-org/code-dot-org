@@ -11,6 +11,11 @@ export const HIDE_ANIMATION_JSON = 'gamelab/HIDE_ANIMATION_JSON';
 
 export const TOGGLE_GRID_OVERLAY = 'gamelab/TOGGLE_GRID_OVERLAY';
 
+export const REQUEST_LOCATION = 'gamelab/REQUEST_LOCATION';
+export const CANCEL_LOCATION_SELECTION = 'gamelab/CANCEL_LOCATION_SELECTION';
+export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
+export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
