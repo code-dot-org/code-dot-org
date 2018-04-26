@@ -9,7 +9,7 @@ stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF_2018'
 
 stage 'Sequence in Maze', flex_category: 'csf_f_1'
-level 'markdown_textbook'
+level 'courseF_markdown_algorithms_intro'
 level 'courseD_video_ramp1_2018'
 level 'courseD_maze_ramp1_2018'
 level 'courseD_maze_ramp2_2018'
@@ -21,12 +21,13 @@ level 'courseD_maze_ramp5a_2018'
 level 'courseD_maze_ramp5b_2018', challenge: true
 level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
-level 'markdown_textbook2'
+level 'courseF_markdown_algorithms_end'
 
 stage 'Building a Foundation', flex_category: 'csf_f_1'
 level 'BuildingAFoundation_2018'
 
 stage 'Debugging with Scrat', flex_category: 'csf_f_1'
+level 'courseF_markdown_debugging_intro'
 level 'courseC_video_debugging_2018'
 level 'courseC_maze_debugging1_2018'
 level 'courseC_maze_debugging2_2018'
@@ -37,6 +38,7 @@ level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
 assessment 'courseC_maze_debugging8_predict1_2018'
 level 'courseC_maze_debugging9_2018'
+level 'courseF_markdown_debugging_end'
 
 stage 'Programming in Artist', flex_category: 'csf_f_1'
 level 'courseC_video_artist_2018'
@@ -56,6 +58,7 @@ stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_loopyMRF_2018'
 
 stage 'Loops in Artist', flex_category: 'csf_f_1'
+level 'courseF_markdown_loops_intro'
 level 'ramp_video_artistIntro_2018'
 level 'ramp_artist_loops1_2018'
 level 'ramp_artist_loops2_2018'
@@ -67,6 +70,7 @@ level 'ramp_artist_loops6_2018'
 level 'ramp_artist_loops7_2018'
 level 'ramp_artist_loops8_2018', challenge: true
 level 'ramp_artist_loops9_2018'
+level 'courseF_markdown_loops_end'
 
 stage 'Nested Loops in Bee/Zombie', flex_category: 'csf_f_1'
 level 'courseD_bee_nestedLoops1a_2018'
@@ -82,6 +86,7 @@ level 'courseD_bee_nestedLoops7_2018', challenge: true
 level 'courseD_bee_nestedLoops8_2018'
 level 'courseD_bee_nestedLoops9_2018'
 assessment 'courseD_bee_nestedLoops9_predict2_2018'
+level 'courseF_markdown_nestedloops_end'
 
 stage 'Nested Loops with Frozen', flex_category: 'csf_f_1'
 level 'courseD_artist_project1_2018'
