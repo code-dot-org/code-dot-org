@@ -4,6 +4,7 @@ import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger';
 import {loadVideos} from '@cdo/apps/util/loadVideos';
+import testImageAccess from '@cdo/apps/code-studio/url_test';
 
 // Prevent filtered errors from being passed to New Relic.
  if (window.newrelic) {
@@ -25,4 +26,15 @@ $(window).load(function () {
   if (document.getElementsByClassName('insert_video_player').length > 0) {
     loadVideos(window.location.search.indexOf("force_youtube_fallback") !== -1);
   }
+});
+
+$(document).ready(function () {
+  testImageAccess(
+    'https://facebook.com/favicon.ico' + "?" + Math.random(),
+    () => $(".share-button-facebook-link").show()
+  );
+  testImageAccess(
+    'https://twitter.com/favicon.ico' + "?" + Math.random(),
+    () => $(".share-button-twitter-link").show()
+  );
 });
