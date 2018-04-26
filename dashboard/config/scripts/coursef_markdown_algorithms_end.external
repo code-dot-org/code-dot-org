@@ -1,4 +1,4 @@
-name 'markdown_textbook2'
+name 'courseF_markdown_algorithms_end'
 title 'Test Markdown Textbook Page'
 description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
@@ -17,9 +17,4 @@ markdown <<MARKDOWN
 * ### **Algorithm** - A list of steps to finish a task
 
 * ### **Program** - An algorithm that has been coded into something that can be run by a machine
-
-
-## **Up Next**
-
-### Be careful! If your steps aren't just right, some bugs might crawl their way into your program.
 MARKDOWN

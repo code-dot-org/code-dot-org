@@ -2965,6 +2965,26 @@ en:
       courseF_firstFunctions_map:
         description here: description here
         title: title
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       coursee-privateandpersonalinformation: {}
       coursef_functionsSummary_map:
         description here: description here
@@ -8732,14 +8752,11 @@ en:
       courseD_multi_maze_until10_predict2_2018:
         Correct!: Correct!
         I don't know.: I don't know.
-        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
-        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
         Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
         The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
-        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
         The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
       courseD_multi_maze_until2_predict1:
         Correct!: Correct!
