@@ -1,12 +1,14 @@
-name 'markdown_textbook'
+name 'courseF_markdown_debugging_intro'
 title 'Test Markdown Textbook Page'
 description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # In this lesson...
 
-### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?
+### What do you think of when you think about bugs? 
 
-### Today, you'll be telling a machine what to do, step by step- and it will listen!
+### When most people think about bugs, they think about creepy crawly things. In computer science, bugs aren't alive, but they can still be tricky.
+
+### The puzzles in this lesson have already been solved for you! But not so fast- they don't seem to be working yet. Are bugs behind all this? 
 
 ---
 
