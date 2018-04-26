@@ -17,14 +17,14 @@
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
-      <a href='<%= options.facebookUrl %>' target="_blank" class="popup-window">
+      <a id='sharing-facebook' href='<%= options.facebookUrl %>' target="_blank" class="popup-window" style="display: none">
         <button>
           <i class="fa fa-facebook fa-lg"></i>
         </button>
       </a>
     <% } -%>
     <% if (options.twitterUrl) { -%>
-      <a href='<%= options.twitterUrl %>' target="_blank" class="popup-window">
+      <a id='sharing-twitter' href='<%= options.twitterUrl %>' target="_blank" class="popup-window" style="display: none">
         <button>
           <i class="fa fa-twitter fa-lg"></i>
         </button>
