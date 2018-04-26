@@ -122,6 +122,15 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.scriptId, 300);
     });
 
+    it('resets all non-section data to initial state', () => {
+      const action = setSection(fakeSectionData);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.section, sortedFakeSectionData);
+      assert.deepEqual(nextState.scriptDataByScript, {});
+      assert.deepEqual(nextState.studentLevelProgressByScript, {});
+      assert.deepEqual(nextState.levelsByLessonByScript, {});
+    });
+
     it('sets the section data with no default scriptId', () => {
       const sectionDataWithNoScript = {
         ...fakeSectionData,

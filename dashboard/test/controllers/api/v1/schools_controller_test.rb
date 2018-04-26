@@ -34,6 +34,28 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     longitude: "-162.273056"
   }.deep_stringify_keys.freeze
 
+  QUALITY_EDUCATION_ACADEMY = {
+    nces_id: '370002502096',
+    name: 'Quality Education Academy',
+    city: "Winston Salem",
+    state: 'NC',
+    zip: '27105',
+    school_type: 'charter',
+    latitude: "36.15115",
+    longitude: "-80.21101",
+  }.deep_stringify_keys.freeze
+
+  CHILDRENS_VILLAGE = {
+    nces_id: "530537003179",
+    name: "Children's Village",
+    city: "Moxee",
+    state: "WA",
+    zip: "98936",
+    school_type: "public",
+    latitude: "46.552088",
+    longitude: "-120.381461"
+  }.deep_stringify_keys.freeze
+
   test 'search by school name prefix' do
     get :search, params: {q: 'glad', limit: 40}
     assert_response :success
@@ -86,5 +108,57 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     get :search, params: {q: 'JOANN A. ALEXIE', limit: 40}
     assert_response :success
     assert_equal [JOANN_A_ALEXIE_MEMORIAL_SCHOOL], JSON.parse(@response.body)
+  end
+
+  test 'search with hyphen' do
+    get :search, params: {q: 'winston-salem', limit: 40}
+    assert_response :success
+    assert_equal [QUALITY_EDUCATION_ACADEMY], JSON.parse(@response.body)
+  end
+
+  test 'search with apostrophe' do
+    get :search, params: {q: "children's village", limit: 40}
+    assert_response :success
+    assert_equal [CHILDRENS_VILLAGE], JSON.parse(@response.body)
+  end
+
+  test 'new search with apostrophe' do
+    get :search, params: {q: "children's village", limit: 40, use_new_search: true}
+    assert_response :success
+    assert_equal [CHILDRENS_VILLAGE], JSON.parse(@response.body)
+  end
+
+  test 'new search with hyphen' do
+    get :search, params: {q: 'winston-salem', limit: 40, use_new_search: true}
+    assert_response :success
+    assert_equal [QUALITY_EDUCATION_ACADEMY], JSON.parse(@response.body)
+  end
+
+  test 'new search with non-matching term' do
+    get :search, params: {q: 'Albert Einstein Elementary OTHERTERM', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with zip and text term' do
+    get :search, params: {q: 'Einstein 91355', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with name and city' do
+    get :search, params: {q: 'Jung Bethel', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with name, zip, city, and non-matching term' do
+    get :search, params: {q: 'Jung Bethel 99559 OTHERTERM', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
   end
 end
