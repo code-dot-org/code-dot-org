@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.8.2-add-anglehelper-options":
-  version "1.8.2-add-anglehelper-options"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.8.2-add-anglehelper-options.tgz#87296200131e0b1b50e38626cebec6cf6084ae2d"
+"@code-dot-org/blockly@1.9.2":
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.9.2.tgz#785cda013630d601ec658a0aaa2a0029c505bc30"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -93,9 +93,9 @@
   version "1.2.1-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.1-cdo.tgz#0c0a0d9cd12981d13311564ee3bdba2981d78dc8"
 
-"@code-dot-org/piskel@0.13.0-cdo.2":
-  version "0.13.0-cdo.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.2.tgz#ee1134953e54f1644aeee028f1280bc2bee32b64"
+"@code-dot-org/piskel@0.13.0-cdo.3":
+  version "0.13.0-cdo.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.3.tgz#dfda56a2aa8a4dbe449aac55ef81bc6762287f0c"
 
 "@code-dot-org/snack-sdk@^1.0.11":
   version "1.0.11"

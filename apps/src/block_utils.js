@@ -387,12 +387,15 @@ const STATEMENT_INPUT = 'statement';
  *   BlockValueType.NONE to accept any block.
  * @param {boolean} args[].statement Indicates that an input is a statement
  *   input, which is passed as a callback function
+ * @param {string} args[].customInput Use the customInput type under this name
+ *   to add this input to the block.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
- * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
+ * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
+ *   args[].customInput
  * @returns {string} return[].label Text to display to the left of the input
  */
 const determineInputs = function (text, args, strictTypes=[]) {
@@ -413,6 +416,14 @@ const determineInputs = function (text, args, strictTypes=[]) {
           mode: DROPDOWN_INPUT,
           name: arg.name,
           options: arg.options,
+          label,
+          strict,
+        });
+      } else if (arg.customInput) {
+        inputs.push({
+          mode: arg.customInput,
+          name: arg.name,
+          type: arg.type,
           label,
           strict,
         });
@@ -455,11 +466,13 @@ exports.determineInputs = determineInputs;
  * @param {Block} block The block to add the inputs to
  * @param {Object[]} inputs The list of inputs. See determineInputs() for
  *   the fields in each input.
+ * @param {object} customInputTypes A map of customType input names to their
+ *   definitions, which are objects that have `addInput` and `generateCode`
+ *   methods.
  */
-const interpolateInputs = function (blockly, block, inputs) {
+const interpolateInputs = function (blockly, block, inputs, customInputTypes) {
   inputs.map(input => {
-    let dropdown;
-    let valueInput;
+    let dropdown, valueInput;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
@@ -482,6 +495,9 @@ const interpolateInputs = function (blockly, block, inputs) {
         break;
       case STATEMENT_INPUT:
         block.appendStatementInput(input.name);
+        break;
+      default:
+        customInputTypes[input.mode].addInput(block, input);
         break;
     }
   });
@@ -521,6 +537,8 @@ const addInputs = function (blockly, block, args) {
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
  *   method call blocks.
+ * @param {object} customInputTypes customType input definitions, see
+ *   interpolateInputs()
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
@@ -529,6 +547,7 @@ exports.createJsWrapperBlockCreator = function (
   blocksModuleName,
   strictTypes,
   defaultObjectType,
+  customInputTypes,
 ) {
 
   const {
@@ -588,12 +607,16 @@ exports.createJsWrapperBlockCreator = function (
     eventBlock,
     eventLoopBlock,
     inline,
+    simpleValue,
   }) => {
-    if (!func === !expression) {
-      throw new Error('Provide either func or expression, but not both');
+    if (!!func + !!expression + !!simpleValue !== 1) {
+      throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
-    if (expression && !name) {
-      throw new Error('Expression blocks require a name');
+    if ((expression || simpleValue) && !name) {
+      throw new Error('This block requires a name');
+    }
+    if (simpleValue && args.length !== 1) {
+      throw new Error('simpleValue blocks must have exactly one argument');
     }
     args = args || [];
     color = color || DEFAULT_COLOR;
@@ -628,6 +651,7 @@ exports.createJsWrapperBlockCreator = function (
             blockly,
             this,
             determineInputs(blockText, inputs, strictTypes),
+            customInputTypes,
           );
           this.setInputsInline(true);
         }
@@ -652,7 +676,9 @@ exports.createJsWrapperBlockCreator = function (
 
     generator[blockName] = function () {
       const values = args.map(arg => {
-        if (arg.options) {
+        if (arg.customInput) {
+          return customInputTypes[arg.customInput].generateCode(this, arg);
+        } else if (arg.options) {
           return this.getTitleValue(arg.name);
         } else  if (arg.statement) {
           const code = Blockly.JavaScript.statementToCode(this, arg.name);
@@ -661,6 +687,13 @@ exports.createJsWrapperBlockCreator = function (
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
       });
+
+      if (simpleValue) {
+        return [
+          values[0],
+          orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+        ];
+      }
 
       let prefix = '';
       if (methodCall) {
@@ -679,7 +712,10 @@ exports.createJsWrapperBlockCreator = function (
 
       if (expression) {
         if (returnType !== undefined) {
-          return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+          return [
+            `${prefix}${expression}`,
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+          ];
         } else {
           return `${prefix}${expression}`;
         }

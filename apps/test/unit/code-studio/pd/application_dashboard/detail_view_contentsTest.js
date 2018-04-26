@@ -24,6 +24,8 @@ describe("DetailViewContents", () => {
       email: 'email',
       application_type: applicationType,
       course_name: 'CS Fundamentals',
+      registered_fit_weekend: false,
+      registered_teachercon: false,
       form_data: {
         firstName: 'First Name',
         lastName: 'Last Name',
@@ -139,7 +141,7 @@ describe("DetailViewContents", () => {
         expect(detailView.find("#admin-edit")).to.have.length(2);
       });
 
-      it("Redirects to edit page", () => {
+      it("Edit redirects to edit page", () => {
         const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
         const mockRouter = sinon.mock(context.router);
 
@@ -149,6 +151,42 @@ describe("DetailViewContents", () => {
         mockRouter.expects("push").withExactArgs("/1/edit");
         adminEditMenuitem.simulate("click");
         mockRouter.verify();
+      });
+
+      it("Has Delete Application menu item", () =>{
+        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        detailView.find("#admin-edit").first().simulate("click");
+        const deleteApplicationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Application");
+
+        expect(deleteApplicationMenuitem).to.have.length(1);
+      });
+
+      it("Has Delete Teachercon Registration menu item if there is a teachercon registration", () =>{
+        const overrides = {isWorkshopAdmin: true, applicationData: {registered_teachercon: true}};
+        const detailView = mountDetailView(applicationData.type, overrides);
+        detailView.find("#admin-edit").first().simulate("click");
+        const deleteTeacherconRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Teachercon Registration");
+
+        expect(deleteTeacherconRegistrationMenuitem).to.have.length(1);
+      });
+
+      it("Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration", () =>{
+        const overrides = {isWorkshopAdmin: true, applicationData: {registered_fit_weekend: true}};
+        const detailView = mountDetailView(applicationData.type, overrides);
+        detailView.find("#admin-edit").first().simulate("click");
+        const deleteFitWeekendRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete FiT Weekend Registration");
+
+        expect(deleteFitWeekendRegistrationMenuitem).to.have.length(1);
+      });
+
+      it("Does not have delete registration menu items if there are not registrations", () =>{
+        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        detailView.find("#admin-edit").first().simulate("click");
+        const deleteTeacherconRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete Teachercon Registration");
+        const deleteFitWeekendRegistrationMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "Delete FiT Weekend Registration");
+
+        expect(deleteTeacherconRegistrationMenuitem).to.have.length(0);
+        expect(deleteFitWeekendRegistrationMenuitem).to.have.length(0);
       });
     });
 

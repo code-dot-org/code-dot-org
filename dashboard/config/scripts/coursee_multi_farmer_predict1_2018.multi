@@ -1,0 +1,12 @@
+name 'courseE_multi_farmer_predict1_2018'
+question 'Look closely at the code below.  What do you think will happen when you click "Run"? '
+wrong 'Nothing. The farmer will remain standing still', feedback: 'Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+wrong 'The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.', feedback: 'Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+right 'The farmer will correctly travel the path, picking all of the lettuce along the way.', feedback: 'Correct!'
+wrong 'I don\'t know', feedback: 'The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+
+markdown <<MARKDOWN
+Now there is lettuce at the end of each path.  If there is a path ahead, the farmer can keep moving. Otherwise, she needs to pick all of the lettuce, and turn left to take another path.  
+
+
+MARKDOWN

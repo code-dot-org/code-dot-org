@@ -1,5 +1,7 @@
+import { SVG_NS } from '../constants';
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 import { getStore } from '../redux';
+import { getLocation } from './locationPickerModule';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -7,11 +9,45 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
+const LOCATION_COLOR = [300, 0.46, 0.89];
+
+const customInputTypes = {
+  locationPicker: {
+    addInput(block, input) {
+      const label = block.appendDummyInput()
+          .appendTitle(`${input.label}(0, 0)`, `${input.name}_LABEL`)
+          .titleRow[0];
+      const icon = document.createElementNS(SVG_NS, 'tspan');
+      icon.style.fontFamily = 'FontAwesome';
+      icon.textContent = '\uf276';
+      const button = new Blockly.FieldButton(icon, updateValue => {
+          getLocation(loc => {
+            if (loc) {
+              button.setValue(JSON.stringify(loc));
+            }
+          });
+        },
+        block.getHexColour(),
+        value => {
+          if (value) {
+            const loc = JSON.parse(value);
+            label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+          }
+        }
+      );
+      block.appendDummyInput()
+          .appendTitle(button, input.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
+};
 
 export default {
   install(blockly, blockInstallOptions) {
     const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
-    const { ORDER_MEMBER } = Blockly.JavaScript;
+    const { ORDER_MEMBER, ORDER_ATOMIC } = Blockly.JavaScript;
 
     const sprites = () => {
       const animationList = getStore().getState().animationList;
@@ -30,6 +66,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
+      customInputTypes,
     );
 
     createJsWrapperBlock({
@@ -48,6 +85,17 @@ export default {
         { name: 'ANIMATION', options: sprites },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      ],
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'makeNewSpriteLocation',
+      blockText: 'make a new {ANIMATION} sprite at {LOCATION}',
+      args: [
+        { name: 'ANIMATION', options: sprites },
+        { name: 'LOCATION', type: blockly.BlockValueType.LOCATION },
       ],
       returnType: SPRITE_TYPE,
     });
@@ -133,7 +181,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenUpArrow',
-      blockText: 'when up arrow presssed',
+      blockText: 'when up arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -141,7 +189,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenDownArrow',
-      blockText: 'when down arrow presssed',
+      blockText: 'when down arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -149,7 +197,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenLeftArrow',
-      blockText: 'when left arrow presssed',
+      blockText: 'when left arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -157,7 +205,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenRightArrow',
-      blockText: 'when right arrow presssed',
+      blockText: 'when right arrow pressed',
       args: [],
       eventBlock: true,
     });
@@ -165,7 +213,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileUpArrow',
-      blockText: 'while up arrow presssed',
+      blockText: 'while up arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -173,7 +221,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileDownArrow',
-      blockText: 'while down arrow presssed',
+      blockText: 'while down arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -181,7 +229,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileLeftArrow',
-      blockText: 'while left arrow presssed',
+      blockText: 'while left arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -189,7 +237,7 @@ export default {
     createJsWrapperBlock({
       color: EVENT_LOOP_COLOR,
       func: 'whileRightArrow',
-      blockText: 'while right arrow presssed',
+      blockText: 'while right arrow pressed',
       args: [],
       eventLoopBlock: true,
     });
@@ -323,6 +371,19 @@ export default {
       args: [],
     });
 
+    createJsWrapperBlock({
+      color: LOCATION_COLOR,
+      simpleValue: true,
+      name: 'location_picker',
+      blockText: '{LOCATION}',
+      args: [{
+        name: 'LOCATION',
+        customInput: 'locationPicker',
+      }],
+      returnType: Blockly.BlockValueType.LOCATION,
+      orderPrecedence: ORDER_ATOMIC,
+    });
+
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
@@ -390,6 +451,7 @@ export default {
       'gamelab',
       [SPRITE_TYPE],
       SPRITE_TYPE,
+      customInputTypes,
     ));
 
     if (!hideCustomBlocks) {
