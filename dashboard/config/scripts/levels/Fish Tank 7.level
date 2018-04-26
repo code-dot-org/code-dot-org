@@ -1,0 +1,109 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-04-23T16:43:27.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "GameLabJr"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_d_pad": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"64d0d5ae-6038-4f02-85ba-ca5db6a03d27\",\r\n    \"8aea38dd-f919-47f0-82be-18b74c4ae08c\",\r\n    \"163dc7ea-619b-41d5-9285-f0bfbd6600c4\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"64d0d5ae-6038-4f02-85ba-ca5db6a03d27\": {\r\n      \"name\": \"fish\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/vRUSjp1KxgNHpgD7Ljogaw/64d0d5ae-6038-4f02-85ba-ca5db6a03d27.png?version=tHiJgwp46yeRprLgyImU1QXKXh17vdzv\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"tHiJgwp46yeRprLgyImU1QXKXh17vdzv\"\r\n    },\r\n    \"8aea38dd-f919-47f0-82be-18b74c4ae08c\": {\r\n      \"name\": \"tumbleweed\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/vRUSjp1KxgNHpgD7Ljogaw/8aea38dd-f919-47f0-82be-18b74c4ae08c.png?version=7HdhwfAAYeLpryFaAeDJIzpYTQi7gfpk\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"7HdhwfAAYeLpryFaAeDJIzpYTQi7gfpk\"\r\n    },\r\n    \"163dc7ea-619b-41d5-9285-f0bfbd6600c4\": {\r\n      \"name\": \"cactus\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/vRUSjp1KxgNHpgD7Ljogaw/163dc7ea-619b-41d5-9285-f0bfbd6600c4.png?version=WE5jFaTZzJaTbT.sFemB6i.YLmERTMQh\",\r\n      \"frameSize\": {\r\n        \"x\": 73,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"WE5jFaTZzJaTbT.sFemB6i.YLmERTMQh\"\r\n    }\r\n  }\r\n}",
+    "hide_custom_blocks": "false",
+    "custom_helper_library": "function tumbling(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation-=6;\r\n    sprite.x-=3;\r\n  }\r\n  behavior.name = 'tumbling';\r\n  return behavior;\r\n}\r\nfunction swimming(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (sprite.mirrorX() == 1) {\r\n     \tsprite.x+=6; \r\n    }\r\n    if (sprite.mirrorX() == -1) {\r\n     \tsprite.x-=6; \r\n    }\r\n\tif (sprite.x<=40) {\r\n\t    sprite.mirrorX(1);\r\n    } if (sprite.x>=360) {\r\n      sprite.mirrorX(-1);\r\n    }\r\n  }\r\n  behavior.name = 'swimming';\r\n  return behavior;\r\n}\r\n\r\n\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"{SPRITE} starts {BEHAVIOR}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"tumbling\",\r\n    \"blockText\": \"tumbling\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"swimming\",\r\n    \"blockText\": \"swimming side to side\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      136,\r\n      \".84\",\r\n      \".80\"\r\n    ]\r\n  }\r\n]",
+    "markdown_instructions": "There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.",
+    "parent_level_id": 12610,
+    "auto_run_setup": "DRAW_LOOP",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-12 17:29:51 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:30:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:31:54 +0000\",\"changed\":[\"use_default_sprites\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:32:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:33:27 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:35:18 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:41:22 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:45:12 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:45:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:47:39 +0000\",\"changed\":[\"start_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:49:55 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:50:21 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:50:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 17:54:06 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:37:47 +0000\",\"changed\":[\"start_blocks\",\"custom_helper_library\",\"custom_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:38:32 +0000\",\"changed\":[\"start_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:39:46 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:40:29 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:40:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:41:57 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:42:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:43:04 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:43:58 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:47:45 +0000\",\"changed\":[\"start_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 18:42:09 +0000\",\"changed\":[\"start_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-24 23:49:26 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_setBackground" inline="true">
+              <value name="COLOR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ccffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">dusty</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true">
+                      <title name="ANIMATION">"fish"</title>
+                      <value name="X">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple" inline="true">
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">dusty</title>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_swimming"/>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

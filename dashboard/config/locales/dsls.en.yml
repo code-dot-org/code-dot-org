@@ -2965,6 +2965,26 @@ en:
       courseF_firstFunctions_map:
         description here: description here
         title: title
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       coursee-privateandpersonalinformation: {}
       coursef_functionsSummary_map:
         description here: description here
@@ -3133,6 +3153,10 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      markdown_textbook:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      markdown_textbook2:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       more encryption algorithms:
         description here: description here
         title: title
@@ -8728,14 +8752,11 @@ en:
       courseD_multi_maze_until10_predict2_2018:
         Correct!: Correct!
         I don't know.: I don't know.
-        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
-        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
         Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
         The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
-        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
         The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
       courseD_multi_maze_until2_predict1:
         Correct!: Correct!
@@ -8856,7 +8877,30 @@ en:
         : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
         The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
+      courseE_multi_farmer_predict1_2018:
+        Correct!: Correct!
+        I don't know: I don't know
+        ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
+        Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
+        ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
       courseE_multi_farmer_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: The farmer will not walk anywhere because there's no pumpkin in the first place.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+        What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
+      courseE_multi_farmer_predict2_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
@@ -8947,6 +8991,19 @@ en:
         The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
         What will happen when you run this program?: What will happen when you run this program?
       courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseF_multi_artist_predict1_2018:
         Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
         Correct!: Correct!
         I don't know.: I don't know.

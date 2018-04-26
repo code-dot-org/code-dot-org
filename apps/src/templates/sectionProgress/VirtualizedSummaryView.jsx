@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { MultiGrid } from 'react-virtualized';
 import styleConstants from '../../styleConstants';
-import { sectionDataPropType, scriptDataPropType, studentLevelProgressPropType } from './sectionProgressRedux';
+import { sectionDataPropType, scriptDataPropType, getLevels } from './sectionProgressRedux';
 import StudentProgressSummaryCell from '../sectionProgress/StudentProgressSummaryCell';
 import SectionProgressLessonNumberCell from '../sectionProgress/SectionProgressLessonNumberCell';
 import color from "../../util/color";
@@ -10,15 +10,15 @@ import {progressStyles, ROW_HEIGHT, NAME_COLUMN_WIDTH, MAX_TABLE_SIZE} from './m
 import i18n from '@cdo/locale';
 import SectionProgressNameCell from './SectionProgressNameCell';
 
-const SUMMARY_COLUMN_WIDTH = 50;
+const SUMMARY_COLUMN_WIDTH = 40;
 
 class VirtualizedSummaryView extends Component {
 
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
-    studentLevelProgress: studentLevelProgressPropType.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired
+    lessonOfInterest: PropTypes.number.isRequired,
+    getLevels: PropTypes.func,
   };
 
   state = {
@@ -29,7 +29,7 @@ class VirtualizedSummaryView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, studentLevelProgress} = this.props;
+    const {section, scriptData, getLevels} = this.props;
     // Subtract 1 to account for the header row.
     const studentStartIndex = rowIndex-1;
     // Subtract 1 to account for the student name column.
@@ -51,9 +51,9 @@ class VirtualizedSummaryView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) &&
-          <span style={progressStyles.lessonHeading}>
+          <div style={progressStyles.lessonHeading}>
             {i18n.lesson()}
-          </span>
+          </div>
         }
         {(rowIndex === 0 && columnIndex >= 1) &&
           <SectionProgressLessonNumberCell
@@ -71,10 +71,7 @@ class VirtualizedSummaryView extends Component {
         {(rowIndex >= 1 && columnIndex > 0) &&
           <StudentProgressSummaryCell
             studentId={section.students[studentStartIndex].id}
-            section={section}
-            studentLevelProgress={studentLevelProgress}
-            stageId={stageIdIndex}
-            scriptData={scriptData}
+            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
             style={progressStyles.summaryCell}
           />
         }
@@ -127,4 +124,5 @@ export const UnconnectedVirtualizedSummaryView = VirtualizedSummaryView;
 
 export default connect(state => ({
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
+  getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
 }))(VirtualizedSummaryView);

@@ -368,6 +368,7 @@ exports.cleanBlocks = function (blocksDom) {
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
+const STATEMENT_INPUT = 'statement';
 
 /**
  * Given block text with input names specified in curly braces, returns a list
@@ -384,12 +385,17 @@ const DUMMY_INPUT = 'dummy';
  *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
+ * @param {boolean} args[].statement Indicates that an input is a statement
+ *   input, which is passed as a callback function
+ * @param {string} args[].customInput Use the customInput type under this name
+ *   to add this input to the block.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
- * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
+ * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
+ *   args[].customInput
  * @returns {string} return[].label Text to display to the left of the input
  */
 const determineInputs = function (text, args, strictTypes=[]) {
@@ -402,13 +408,22 @@ const determineInputs = function (text, args, strictTypes=[]) {
     const label = tokens[i];
     const input = tokens[i + 1];
     if (input) {
-      const arg = args.find(arg => arg.name === input);
+      const argIndex = args.findIndex(arg => arg.name === input);
+      const [arg] = args.splice(argIndex, 1);
       const strict = arg.strict || strictTypes.includes(arg.type);
       if (arg.options) {
         inputs.push({
           mode: DROPDOWN_INPUT,
           name: arg.name,
           options: arg.options,
+          label,
+          strict,
+        });
+      } else if (arg.customInput) {
+        inputs.push({
+          mode: arg.customInput,
+          name: arg.name,
+          type: arg.type,
           label,
           strict,
         });
@@ -428,6 +443,19 @@ const determineInputs = function (text, args, strictTypes=[]) {
       });
     }
   }
+  const statementInputs = args
+    .filter(arg => arg.statement)
+    .map(arg => ({
+      mode: STATEMENT_INPUT,
+      name: arg.name
+    }));
+  inputs.push(...statementInputs);
+  args = args.filter(arg => !arg.statement);
+
+  if (args.length > 0) {
+    console.warn('Unexpected args in block definition:');
+    console.warn(args);
+  }
   return inputs;
 };
 exports.determineInputs = determineInputs;
@@ -438,11 +466,13 @@ exports.determineInputs = determineInputs;
  * @param {Block} block The block to add the inputs to
  * @param {Object[]} inputs The list of inputs. See determineInputs() for
  *   the fields in each input.
+ * @param {object} customInputTypes A map of customType input names to their
+ *   definitions, which are objects that have `addInput` and `generateCode`
+ *   methods.
  */
-const interpolateInputs = function (blockly, block, inputs) {
+const interpolateInputs = function (blockly, block, inputs, customInputTypes) {
   inputs.map(input => {
-    let dropdown;
-    let valueInput;
+    let dropdown, valueInput;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
@@ -462,6 +492,12 @@ const interpolateInputs = function (blockly, block, inputs) {
       case DUMMY_INPUT:
         block.appendDummyInput()
           .appendTitle(input.label);
+        break;
+      case STATEMENT_INPUT:
+        block.appendStatementInput(input.name);
+        break;
+      default:
+        customInputTypes[input.mode].addInput(block, input);
         break;
     }
   });
@@ -501,6 +537,8 @@ const addInputs = function (blockly, block, args) {
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
  *   method call blocks.
+ * @param {object} customInputTypes customType input definitions, see
+ *   interpolateInputs()
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
@@ -509,6 +547,7 @@ exports.createJsWrapperBlockCreator = function (
   blocksModuleName,
   strictTypes,
   defaultObjectType,
+  customInputTypes,
 ) {
 
   const {
@@ -568,16 +607,26 @@ exports.createJsWrapperBlockCreator = function (
     eventBlock,
     eventLoopBlock,
     inline,
+    simpleValue,
   }) => {
-    if (!func === !expression) {
-      throw new Error('Provide either func or expression, but not both');
+    if (!!func + !!expression + !!simpleValue !== 1) {
+      throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
-    if (expression && !name) {
-      throw new Error('Expression blocks require a name');
+    if ((expression || simpleValue) && !name) {
+      throw new Error('This block requires a name');
+    }
+    if (simpleValue && args.length !== 1) {
+      throw new Error('simpleValue blocks must have exactly one argument');
     }
     args = args || [];
     color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
+    if (eventLoopBlock) {
+      args.push({
+        name: 'DO',
+        statement: true,
+      });
+    }
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
@@ -602,6 +651,7 @@ exports.createJsWrapperBlockCreator = function (
             blockly,
             this,
             determineInputs(blockText, inputs, strictTypes),
+            customInputTypes,
           );
           this.setInputsInline(true);
         }
@@ -613,7 +663,7 @@ exports.createJsWrapperBlockCreator = function (
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {
-          this.appendStatementInput('DO');
+          // No previous or next statement connector
         } else if (eventBlock) {
           this.setNextStatement(true);
           this.skipNextBlockGeneration = true;
@@ -626,12 +676,24 @@ exports.createJsWrapperBlockCreator = function (
 
     generator[blockName] = function () {
       const values = args.map(arg => {
-        if (arg.options) {
+        if (arg.customInput) {
+          return customInputTypes[arg.customInput].generateCode(this, arg);
+        } else if (arg.options) {
           return this.getTitleValue(arg.name);
+        } else  if (arg.statement) {
+          const code = Blockly.JavaScript.statementToCode(this, arg.name);
+          return `function () {\n${code}}`;
         } else {
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
       });
+
+      if (simpleValue) {
+        return [
+          values[0],
+          orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+        ];
+      }
 
       let prefix = '';
       if (methodCall) {
@@ -640,22 +702,20 @@ exports.createJsWrapperBlockCreator = function (
         prefix = `${object}.`;
       }
 
-      if (eventLoopBlock || eventBlock) {
-        let handlerCode = '';
-        if (eventBlock) {
-          const nextBlock = this.nextConnection &&
-            this.nextConnection.targetBlock();
-          handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
-          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
-        } else if (eventLoopBlock) {
-          handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
-        }
+      if (eventBlock) {
+        const nextBlock = this.nextConnection &&
+          this.nextConnection.targetBlock();
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         values.push(`function () {\n${handlerCode}}`);
       }
 
       if (expression) {
         if (returnType !== undefined) {
-          return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+          return [
+            `${prefix}${expression}`,
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+          ];
         } else {
           return `${prefix}${expression}`;
         }

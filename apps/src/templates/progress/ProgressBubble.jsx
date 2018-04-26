@@ -26,6 +26,7 @@ import TooltipWithIcon from './TooltipWithIcon';
 
 const styles = {
   main: {
+    boxSizing: 'content-box',
     fontFamily: '"Gotham 5r", sans-serif',
     width: DOT_SIZE,
     height: DOT_SIZE,
@@ -50,7 +51,9 @@ const styles = {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
     borderRadius: 4,
-    transform: 'rotate(45deg)'
+    transform: 'rotate(45deg)',
+    marginTop: 6,
+    marginBottom: 6,
   },
   small: {
     width: SMALL_DOT_SIZE,

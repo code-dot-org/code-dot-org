@@ -3,7 +3,8 @@ select
   us.script_id, 
   sc.name script_name, 
   us.user_id, 
-  started_at
+  started_at,
+  last_progress_at
 from dashboard_production.user_scripts us
   join dashboard_production.scripts sc on sc.id = us.script_id
   join dashboard_production.users u on u.id = us.user_id and u.user_type = 'student'

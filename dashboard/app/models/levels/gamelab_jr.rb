@@ -54,6 +54,7 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Start">
   <block type="when_run" />
+  <block type="gamelab_setup" />
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
@@ -68,6 +69,8 @@ class GamelabJr < Gamelab
 </category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
+  <block type="gamelab_makeNewSpriteLocation" />
+  <block type="gamelab_location_picker" />
   <block type="gamelab_setAnimation" />
   <block type="gamelab_setTint">
     <value name="COLOR">

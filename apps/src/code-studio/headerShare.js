@@ -27,8 +27,8 @@ export function shareProject(shareUrl) {
     const appType = dashboard.project.getStandaloneApp();
 
     // Allow publishing for any project type that older students can publish.
-    // Younger students should never be able to get to the share dialog in the
-    // first place, so there's no need to check age against project types here.
+    // Younger students can now get to the share dialog if their teacher allows
+    // it, and should be able to publish in that case.
     const canPublish = !!appOptions.isSignedIn &&
       PublishableProjectTypesOver13.includes(appType);
 

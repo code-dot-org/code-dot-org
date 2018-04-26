@@ -10,6 +10,7 @@ Scenario Outline: Simple page view
   And I sign out
 Examples:
   | url                                                               | test_name                  |
+  | http://advocacy.code.org/                                         | advocacy.code.org home     |
   | http://csedweek.org/                                              | csedweek.org home          |
   | http://csedweek.org/about                                         | csedweek.org about         |
   | http://uk.code.org/                                               | uk.code.org home           |

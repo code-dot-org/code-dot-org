@@ -1,0 +1,339 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-04-20T23:22:43.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "GameLabJr"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "embed": "false",
+    "instructions_important": "true",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_d_pad": "false",
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\",\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\",\r\n    \"1bcc10f3-b99e-4f09-a4ca-1597fbd1674f\",\r\n    \"406c0770-b798-4b05-b891-5e49dea00f95\",\r\n    \"e3a7b57b-21fa-450a-993f-c7de36cb268f\",\r\n    \"5648b28d-dd41-4af1-9132-b52078215b65\",\r\n    \"f394d0aa-bc5a-4224-91b6-4de1e828f983\",\r\n    \"f84963c5-9aac-45fd-a3a0-95500c3963c0\",\r\n    \"4704746b-90fb-40bd-aa82-6aada67c41e0\",\r\n    \"8675c677-cc7e-4b86-abd0-f998c0a16662\",\r\n    \"f2390376-9112-403d-bf1d-0f197397c4d9\",\r\n    \"73243e2d-bfdf-48ce-858f-b35b3f11eefb\",\r\n    \"f3c3203a-49ab-4e65-9bb2-38a32f9cfc9c\",\r\n    \"d8ef077f-e2fa-4c52-967a-a75b3bd5b54c\",\r\n    \"735c5317-dca6-4619-bc2b-7a2e65bea477\",\r\n    \"12e42be6-cf5d-4f7f-8eed-78f6db1c621f\",\r\n    \"ceafa1b4-e5d0-4ce8-b478-cf969298bbd0\",\r\n    \"fea5a70f-c68b-4674-a786-e1a97ef345e1\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Fstudio.code.org%252Fv3%252Fanimations%252FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%252Fd19383c3-9b64-482d-811d-07f8997533ea.png%253Fversion%253Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Fstudio.code.org%252Fv3%252Fanimations%252FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%252F62c23e14-37e1-4b40-9dc8-68553ff35ff9.png%253Fversion%253Dt7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    },\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FaI5VRmuwZNqKpmYz1bFBfwJU1pnMe1Q36YmU_QaYKZ4%2Fc3971151-dd41-4ab2-83be-11951180825e.png%3Fversion%3Df0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 89\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\"\r\n    },\r\n    \"1bcc10f3-b99e-4f09-a4ca-1597fbd1674f\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F1bcc10f3-b99e-4f09-a4ca-1597fbd1674f.png%3Fversion%3D_c7xXqd2si95f3Fl6daAB4qlFKFDzVJ7\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_c7xXqd2si95f3Fl6daAB4qlFKFDzVJ7\"\r\n    },\r\n    \"406c0770-b798-4b05-b891-5e49dea00f95\": {\r\n      \"name\": \"cow\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F406c0770-b798-4b05-b891-5e49dea00f95.png%3Fversion%3DCejvYpAI.dc9Zb14ugc9C8D6IBWEi4tB\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 113\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"CejvYpAI.dc9Zb14ugc9C8D6IBWEi4tB\"\r\n    },\r\n    \"e3a7b57b-21fa-450a-993f-c7de36cb268f\": {\r\n      \"name\": \"bear\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2Fe3a7b57b-21fa-450a-993f-c7de36cb268f.png%3Fversion%3D1IqqEvqnnxx.yvgUV7xd97M2FJfuBsO6\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"1IqqEvqnnxx.yvgUV7xd97M2FJfuBsO6\"\r\n    },\r\n    \"5648b28d-dd41-4af1-9132-b52078215b65\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F5648b28d-dd41-4af1-9132-b52078215b65.png%3Fversion%3DWP9BxCDtkRJgcIwG2yxTa5.bVsd5ODMN\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"WP9BxCDtkRJgcIwG2yxTa5.bVsd5ODMN\"\r\n    },\r\n    \"f394d0aa-bc5a-4224-91b6-4de1e828f983\": {\r\n      \"name\": \"book\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FfirWv5nhwyb9ycg5ivInks6Lbb_uIFt6%2Fcategory_generic_items%2Fbook.png\",\r\n      \"frameSize\": {\r\n        \"x\": 109,\r\n        \"y\": 125\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"firWv5nhwyb9ycg5ivInks6Lbb_uIFt6\"\r\n    },\r\n    \"f84963c5-9aac-45fd-a3a0-95500c3963c0\": {\r\n      \"name\": \"teapot\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2F9_4OVrgkBp1ZkDiA1Buybml2cKrfq53s%2Fcategory_generic_items%2Fteapot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 152,\r\n        \"y\": 116\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9_4OVrgkBp1ZkDiA1Buybml2cKrfq53s\"\r\n    },\r\n    \"4704746b-90fb-40bd-aa82-6aada67c41e0\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2F_C2x10SnwauWvJRCQq.u2jEtcmNrPifb%2Fcategory_food%2Fapple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_C2x10SnwauWvJRCQq.u2jEtcmNrPifb\"\r\n    },\r\n    \"8675c677-cc7e-4b86-abd0-f998c0a16662\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FfCiFCbsTDOoiLsbStivUZ249XH0TOxIY%2Fcategory_food%2Fcarrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"fCiFCbsTDOoiLsbStivUZ249XH0TOxIY\"\r\n    },\r\n    \"f2390376-9112-403d-bf1d-0f197397c4d9\": {\r\n      \"name\": \"cupcake\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2Ff2390376-9112-403d-bf1d-0f197397c4d9.png%3Fversion%3DwsxP7ZjkAKUoQ9P.EfNazEEPV3.FA1KB\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"wsxP7ZjkAKUoQ9P.EfNazEEPV3.FA1KB\"\r\n    },\r\n    \"73243e2d-bfdf-48ce-858f-b35b3f11eefb\": {\r\n      \"name\": \"watermelon\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F73243e2d-bfdf-48ce-858f-b35b3f11eefb.png%3Fversion%3Du8MBe5jNW3GZELtoEAhA2Vx1qIxDwbpz\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 80\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"u8MBe5jNW3GZELtoEAhA2Vx1qIxDwbpz\"\r\n    },\r\n    \"f3c3203a-49ab-4e65-9bb2-38a32f9cfc9c\": {\r\n      \"name\": \"pizza\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2Ff3c3203a-49ab-4e65-9bb2-38a32f9cfc9c.png%3Fversion%3DIn50_1x6woMP1.aRX.xBf0Z8Fd__tvyP\",\r\n      \"frameSize\": {\r\n        \"x\": 60,\r\n        \"y\": 40\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"In50_1x6woMP1.aRX.xBf0Z8Fd__tvyP\"\r\n    },\r\n    \"d8ef077f-e2fa-4c52-967a-a75b3bd5b54c\": {\r\n      \"name\": \"coin\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fi9_exqo4EZveb7Cs3ci67bPuExMkYfuQ%2Fcategory_gameplay%2Fcoin_gold.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"i9_exqo4EZveb7Cs3ci67bPuExMkYfuQ\"\r\n    },\r\n    \"735c5317-dca6-4619-bc2b-7a2e65bea477\": {\r\n      \"name\": \"cactus\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F735c5317-dca6-4619-bc2b-7a2e65bea477.png%3Fversion%3DNcRh83d1UrKhdzY4JlWIyI3WUqiMcX_e\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 109\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"NcRh83d1UrKhdzY4JlWIyI3WUqiMcX_e\"\r\n    },\r\n    \"12e42be6-cf5d-4f7f-8eed-78f6db1c621f\": {\r\n      \"name\": \"wheat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2F12e42be6-cf5d-4f7f-8eed-78f6db1c621f.png%3Fversion%3DyVw3MJZPBC9MyD0yHiDbbc5A_mYQabcV\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 80\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"yVw3MJZPBC9MyD0yHiDbbc5A_mYQabcV\"\r\n    },\r\n    \"ceafa1b4-e5d0-4ce8-b478-cf969298bbd0\": {\r\n      \"name\": \"bone\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FBM2gtAVVVBUKBW_yP8zROtbjxkvS3stT%2Fcategory_generic_items%2Fbone.png\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 119\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"BM2gtAVVVBUKBW_yP8zROtbjxkvS3stT\"\r\n    },\r\n    \"fea5a70f-c68b-4674-a786-e1a97ef345e1\": {\r\n      \"name\": \"suitcase\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2Fe0aIKr0mnhhc8iY90ZSZMA%2Ffea5a70f-c68b-4674-a786-e1a97ef345e1.png%3Fversion%3DN9IO3hRjOmrqzHSfK_f2R8nhmEH2mj57\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 143\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"N9IO3hRjOmrqzHSfK_f2R8nhmEH2mj57\"\r\n    }\r\n  }\r\n}",
+    "custom_helper_library": "/***********/\r\nfunction randomizeLocation(sprite) {\r\n   sprite.x=Math.floor(Math.random()*400);\r\n   sprite.y=Math.floor(Math.random()*400);\r\n}\r\n\r\nfunction drag(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n}\r\nfunction jitter(sprite) {\r\n  sprite.scale = 1 + (randomNumber(-1, 1) / 50);\r\n}\r\n\r\nfunction grow(sprite) {\r\n  sprite.scale += 0.01;\r\n}\r\n\r\nfunction shrink(sprite) {\r\n  sprite.scale -= 0.01;\r\n}\r\n\r\nfunction spin(sprite) {\r\n  sprite.rotation++;\r\n}\r\n\r\nfunction wander(sprite) {\r\n  if (!sprite.xoff) {\r\n    sprite.xoff = randomNumber(0, 1000);\r\n    sprite.yoff = randomNumber(0, 1000);\r\n  }\r\n  sprite.xoff += 0.01;\r\n  sprite.yoff += 0.01;\r\n  sprite.x = map(noise(sprite.xoff), 0, 1, 0, World.width);\r\n  sprite.y = map(noise(sprite.yoff), 0, 1, 0, World.height);\r\n}\r\n\r\n\r\nfunction danceParty(sprite) {\r\n  if (World.frameCount % 10 === 0) {\r\n    sprite.rotation += randomNumber(-5, 5);\r\n  }\r\n  if (World.frameCount % 20 === 0) {\r\n    sprite.scale = 1 + (randomNumber(-1, 1) / 10);\r\n  }\r\n}\r\n",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"drag\",\r\n    \"blockText\": \"drag and drop {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"grow\",\r\n    \"blockText\": \"make {SPRITE} bigger\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"shrink\",\r\n    \"blockText\": \"make {SPRITE} smaller\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"spin\",\r\n    \"blockText\": \"rotate {SPRITE} right\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"jitter\",\r\n    \"blockText\": \"{SPRITE} jitter\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"wander\",\r\n    \"blockText\": \"{SPRITE} wander\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"danceParty\",\r\n    \"blockText\": \"{SPRITE} dance party\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"isTouching\",\r\n    \"blockText\": \"{THIS} is touching {SPRITE}\",\r\n    \"methodCall\": true,\r\n    \"returnType\": \"Boolean\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  }\r\n]",
+    "hide_custom_blocks": "true",
+    "parent_level_id": 12299,
+    "markdown_instructions": "Clone this level, and then make your own programs!",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-05 02:25:50 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:27:00 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:27:56 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\",\"custom_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:34:05 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:35:36 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:37:38 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:38:45 +0000\",\"changed\":[\"instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:42:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:42:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:44:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 02:45:44 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 03:20:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 18:02:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 18:03:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 18:04:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_custom_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 18:28:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:33:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:35:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:36:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:38:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:38:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:39:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:42:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:45:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"markdown_instructions\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:46:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:46:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_important\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:51:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:54:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:55:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:56:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 19:58:27 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:03:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:21:26 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:22:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:22:46 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:23:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-12 20:35:35 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-23 16:31:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-24 22:52:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-24 22:54:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-24 23:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-24 23:07:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="sprite_variables_set" inline="false">
+              <title name="VAR">Daisy</title>
+              <value name="VALUE">
+                <block type="gamelab_makeNewSprite" inline="true">
+                  <title name="ANIMATION">"dog"</title>
+                  <value name="X">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <value name="Y">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="sprite_variables_set" inline="false">
+                  <title name="VAR">carrot</title>
+                  <value name="VALUE">
+                    <block type="gamelab_makeNewSprite" inline="true">
+                      <title name="ANIMATION">"carrot"</title>
+                      <value name="X">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                      <value name="Y">
+                        <block type="math_number">
+                          <title name="NUM">300</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">gotCarrot?</title>
+                      <value name="VALUE">
+                        <block type="logic_boolean">
+                          <title name="BOOL">FALSE</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_forever" deletable="false">
+          <statement name="DO">
+            <block type="gamelab_drag" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">carrot</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" inline="false">
+                  <value name="IF0">
+                    <block type="logic_compare" inline="true">
+                      <title name="OP">EQ</title>
+                      <value name="A">
+                        <block type="variables_get">
+                          <title name="VAR">gotCarrot?</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="logic_boolean">
+                          <title name="BOOL">TRUE</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_danceParty" inline="true">
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">Daisy</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="gamelab_whenTouching" inline="true">
+          <value name="SPRITE1">
+            <block type="sprite_variables_get">
+              <title name="VAR">Daisy</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="sprite_variables_get">
+              <title name="VAR">carrot</title>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">gotCarrot?</title>
+              <value name="VALUE">
+                <block type="logic_boolean">
+                  <title name="BOOL">TRUE</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenUpArrow">
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">gotCarrot?</title>
+              <value name="VALUE">
+                <block type="logic_boolean">
+                  <title name="BOOL">FALSE</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="gamelab_drag" inline="true"/>
+          <block type="gamelab_grow" inline="true"/>
+          <block type="gamelab_shrink" inline="true"/>
+          <block type="gamelab_spin" inline="true"/>
+          <block type="gamelab_jitter" inline="true"/>
+          <block type="gamelab_wander" inline="true"/>
+          <block type="gamelab_danceParty" inline="true"/>
+          <block type="gamelab_setAnimation" inline="true">
+            <title name="ANIMATION">"dog"</title>
+          </block>
+          <block type="gamelab_setTint" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint" inline="true"/>
+          <block type="gamelab_moveUp" inline="true"/>
+          <block type="gamelab_moveDown" inline="true"/>
+          <block type="gamelab_moveLeft" inline="true"/>
+          <block type="gamelab_moveRight" inline="true"/>
+        </category>
+        <category name="Sprites">
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">mySprite</title>
+            <value name="VALUE">
+              <block type="gamelab_makeNewSprite" inline="true">
+                <title name="ANIMATION">"dog"</title>
+                <value name="X">
+                  <block type="math_number">
+                    <title name="NUM">200</title>
+                  </block>
+                </value>
+                <value name="Y">
+                  <block type="math_number">
+                    <title name="NUM">200</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy" inline="true"/>
+          <block type="sprite_variables_get">
+            <title name="VAR">mySprite</title>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">Daisy</title>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">carrot</title>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_change" inline="false">
+            <title name="VAR">i</title>
+            <value name="DELTA">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int" inline="true">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false"/>
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation" inline="true">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_negate" inline="false"/>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
+          </block>
+          <block type="logic_boolean">
+            <title name="BOOL">FALSE</title>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE"/>
+        <category name="Loops">
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_for" inline="true">
+            <title name="VAR">j</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="World">
+          <block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_showTitleScreen" inline="false"/>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Events">
+          <block type="gamelab_whenTouching" inline="true"/>
+          <block type="gamelab_clickedOn" inline="true"/>
+          <block type="gamelab_whenUpArrow"/>
+          <block type="gamelab_whenRightArrow"/>
+          <block type="gamelab_whenDownArrow"/>
+          <block type="gamelab_whenLeftArrow"/>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

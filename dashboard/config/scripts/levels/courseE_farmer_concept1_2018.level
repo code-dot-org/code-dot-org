@@ -38,6 +38,7 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "step_speed": "2",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

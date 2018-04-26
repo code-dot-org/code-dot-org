@@ -48,6 +48,15 @@ module SharedConstants
     }
   )
 
+  # The set of gamelab autorun options
+  GAMELAB_AUTORUN_OPTIONS = OpenStruct.new(
+    {
+      draw_loop: 'DRAW_LOOP',
+      draw_sprites: 'DRAW_SPRITES',
+      custom: 'CUSTOM',
+    }
+  ).freeze
+
   # Valid milestone post modes
   POST_MILESTONE_MODE = OpenStruct.new(
     {

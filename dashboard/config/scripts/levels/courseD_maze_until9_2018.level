@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "pvz",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,1,4,1,4,0,0],[0,0,1,0,0,1,0,0],[1,1,1,1,1,1,1,4],[3,0,1,0,4,0,1,0],[0,0,1,0,1,0,1,0],[0,0,1,4,1,0,2,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,1,1,1,2,1,4,1],[0,1,0,0,0,1,0,4],[0,4,0,0,0,1,0,0],[0,1,1,1,1,1,1,1],[0,1,0,0,0,1,0,1],[0,3,0,0,0,1,0,1],[0,1,4,1,1,1,1,1],[0,1,1,1,1,0,0,4]]",
     "instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "markdown_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "instructions_important": "false",
@@ -26,10 +26,10 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
+    "start_direction": "3",
     "step_mode": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Using `if path ahead` will keep you going forward whenever possible, helping you miss the paths with chompers.\",\"hint_id\":\"courseD_maze_until8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1ba6cb74fe098c9b7817bc85f62345d/courseD_maze_until9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Which direction should you turn if there is no path forward?\",\"hint_id\":\"courseD_maze_until8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44cf690f3c8124d069d3a49e431c4e59/courseD_maze_until9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use the `repeat until` block to get you to the sunflower!\",\"hint_id\":\"courseD_maze_until8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a4903127f3f7c59c648e2f9eabd96d55/courseD_maze_until9.mp3\"}]",
-    "ideal": "5",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use the `repeat until` block to get you to the sunflower!\",\"hint_id\":\"courseD_maze_until8_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a4903127f3f7c59c648e2f9eabd96d55/courseD_maze_until9_2018.mp3\"}]",
+    "ideal": "9",
     "video_key": "if_else",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -37,51 +37,74 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 7553,
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 16:44:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:44:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-25 18:49:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:52:26 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:56:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 18:57:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:02:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:04:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:05:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:07:06 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_moveForward" limit="2"/>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="maze_if">
+        <block type="maze_untilBlockedOrNotClear">
           <title name="DIR">isPathForward</title>
         </block>
         <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_forever">
-              <statement name="DO">
-                <block type="maze_ifElse">
-                  <title name="DIR">isPathForward</title>
-                  <statement name="DO">
+            <block type="maze_turn">
+              <title name="DIR">turnRight</title>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                          <next>
+                            <block type="maze_forever">
+                              <statement name="DO">
+                                <block type="maze_untilBlockedOrNotClear">
+                                  <title name="DIR">isPathForward</title>
+                                  <statement name="DO">
+                                    <block type="maze_move">
+                                      <title name="DIR">moveForward</title>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
                     </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                    </block>
-                  </statement>
+                  </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>

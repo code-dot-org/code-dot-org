@@ -4,11 +4,21 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
   # @param query [String] the user-define query string
   # @param limit [int] the maximum number of results to return
   # @return [Array] an array of JSON formatted schools
-  def self.get_matches(query, limit)
+  def self.get_matches(query, limit, use_new_search)
     limit = format_limit(limit)
 
     rows = School.limit(limit)
-    if search_by_zip?((query = query.strip))
+    if use_new_search
+      terms = get_query_terms query
+      match_terms = []
+      terms.each do |term|
+        match_terms.push "CASE when (MATCH(name, city) AGAINST('#{term}' IN BOOLEAN MODE) OR zip = '#{term}') THEN 1 ELSE 0 END"
+      end
+      matches = match_terms.join ' + '
+      rows = rows.
+        where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", terms.join(' ')).
+        order("(#{matches}) DESC, state, city, name")
+    elsif search_by_zip?((query = query.strip))
       query = "#{query[0, 5]}%"
       rows = rows.where("zip LIKE ?", query)
     else
