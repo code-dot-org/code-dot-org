@@ -13,7 +13,7 @@ export const COLUMNS = {
   NOT_ANSWERED: 3,
 };
 
-const answerOptionsFormatter = (percentAnsweredOptionOne, {rowData}) => {
+const answerOptionsOneFormatter = (percentAnsweredOptionOne, {rowData}) => {
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -23,7 +23,7 @@ const answerOptionsFormatter = (percentAnsweredOptionOne, {rowData}) => {
   );
 };
 
-const correctAnswerFormatter = (percentAnsweredOptionOne, {rowData}) => {
+const answerOptionsTwoFormatter = (percentAnsweredOptionOne, {rowData}) => {
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -57,15 +57,13 @@ class MultipleChoiceOverviewTable extends Component {
     questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      [COLUMNS.NAME]: {
-        direction: 'desc',
-        position: 0
-      }
-    };
-  }
+  state = {
+    [COLUMNS.QUESTION]: {
+      direction: 'desc',
+      position: 0
+    }
+  };
+
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -116,7 +114,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
-          format: correctAnswerFormatter,
+          format: answerOptionsOneFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -135,7 +133,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
-          format: answerOptionsFormatter,
+          format: answerOptionsTwoFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
