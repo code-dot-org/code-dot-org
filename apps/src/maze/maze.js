@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
 const timeoutList = require('../lib/util/timeoutList');
-const AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter');
 const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');

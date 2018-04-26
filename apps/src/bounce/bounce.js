@@ -12,7 +12,7 @@ var tiles = require('./tiles');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
