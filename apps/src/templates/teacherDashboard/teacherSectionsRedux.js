@@ -197,13 +197,32 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const params = experiments.isEnabled('courseVersions') ? '?allVersions=1' : '';
+  const courseVersions = experiments.isEnabled('courseVersions');
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    `/dashboardapi/courses${params}`,
-    '/v2/sections/valid_scripts'
+
+    // Because there is no notion of hidden courses, the server by default looks
+    // up only our specified list of courses (csp and csd). When the
+    // courseVersions experiment is enabled, we also ask the server for other
+    // versions (e.g. csd-2018) of those courses.
+    `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
+
+    // Let users in the courseVersions experiment see hidden scripts (e.g.
+    // csd3-2018) associated with unreleased course versions (e.g. csd-2018) by
+    // letting them see all hidden scripts. This clutters the UI for people in
+    // the experiment, but avoids doing a bunch of work to temporarily un-hide
+    // certain scripts that will already have been made visible by the time this
+    // experiment launches.
+    //
+    // Prior to the launch of this experiment, any hidden scripts associated
+    // with new versions of multi-unit courses like csp and csd should be made
+    // visible, and the includeHidden url param should be removed.
+    //
+    // When launching this experiment, includeHidden MUST NOT be set by
+    // default here.
+    `/v2/sections/valid_scripts${courseVersions ? '?includeHidden=1' : ''}`
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
