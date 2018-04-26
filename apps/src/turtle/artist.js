@@ -34,7 +34,7 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 var ArtistAPI = require('./api');
 var apiJavascript = require('./apiJavascript');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
 var utils = require('../utils');
 var Slider = require('../slider');
