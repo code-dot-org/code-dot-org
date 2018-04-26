@@ -99,7 +99,7 @@ class SourceBucket < BucketHelper
             anim_response = animation_list.find do |item|
               item[:filename] == "#{a['key']}.png"
             end
-            src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response&.empty? || anim_response.nil?
+            src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response.nil? || anim_response.empty?
           end
         end
 
