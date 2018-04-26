@@ -7627,6 +7627,8 @@ en:
               description_teacher: ''
             Conditionals in Bee:
               name: Conditionals in Bee
+            Until Loops in Maze:
+              name: Until Loops in Maze
         courseb-2018:
           title: Course B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.

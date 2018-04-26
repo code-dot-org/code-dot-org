@@ -1,8 +1,8 @@
-name 'markdown_textbook'
+name 'courseF_markdown_algorithms_intro'
 title 'Test Markdown Textbook Page'
 description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
-# In this lesson...
+# **In this lesson...**
 
 ### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?
 
@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 ---
 
-## Blocks to Know
+## **Blocks to Know**
 
 ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
 
