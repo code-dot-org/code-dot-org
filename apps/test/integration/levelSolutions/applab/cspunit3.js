@@ -1,7 +1,7 @@
 import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 /**
  * This is based off of the currently version of U3L2_TurtleSquare_right.level,
