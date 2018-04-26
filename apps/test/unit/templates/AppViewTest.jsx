@@ -12,7 +12,7 @@ describe('AppView', () => {
     onMount: () => {},
   };
 
-  it('no class names', () => {
+  it('sets no classes on the visualization column in default configuration', () => {
     const wrapper = shallow(
       <AppView
         {...DEFAULT_PROPS}
@@ -26,7 +26,7 @@ describe('AppView', () => {
     expect(wrapper.find("#visualizationColumn")).not.to.have.className('pin_bottom');
   });
 
-  it('responsive', () => {
+  it('sets `responsive` class on visualization column when `isResponsive` is set', () => {
     const wrapper = shallow(
       <AppView
         {...DEFAULT_PROPS}
@@ -40,7 +40,7 @@ describe('AppView', () => {
     expect(wrapper.find("#visualizationColumn")).not.to.have.className('pin_bottom');
   });
 
-  it('pin_bottom', () => {
+  it('sets `pin_bottom` class on visualization column when `pinWorkspaceToBottom` is set', () => {
     const wrapper = shallow(
       <AppView
         {...DEFAULT_PROPS}
