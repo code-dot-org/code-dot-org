@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
+import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 
 const studentData = [
   {id: 1, name: 'studentb'},

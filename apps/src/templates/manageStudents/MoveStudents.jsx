@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -8,17 +9,19 @@ import orderBy from 'lodash/orderBy';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
+import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
 const CHECKBOX_CELL_WIDTH = 50;
+const OTHER_TEACHER = "otherTeacher";
 
 const styles = {
   dialog: {
-    paddingLeft: PADDING,
-    paddingRight: PADDING,
-    paddingTop: PADDING,
-    paddingBottom: PADDING
+    padding: PADDING
+  },
+  container: {
+    display: 'flex'
   },
   table: {
     width: TABLE_WIDTH
@@ -29,7 +32,19 @@ const styles = {
   },
   checkbox: {
     margin: 0
+  },
+  inputBox: {
+    width: 225
   }
+};
+
+const DEFAULT_STATE = {
+  isDialogOpen: false,
+  selectedIds: [],
+  selectedSectionId: null,
+  otherTeacherSelected: false,
+  otherTeacherSectionValue: '',
+  copyStudents: true
 };
 
 class MoveStudents extends Component {
@@ -39,23 +54,25 @@ class MoveStudents extends Component {
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
       })
-    ).isRequired
+    ).isRequired,
+
+    // redux provided
+    sections: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired
+      }).isRequired
+    )
   };
 
-  state = {
-    isDialogOpen: false,
-    selectedIds: []
-  };
+  state = DEFAULT_STATE;
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
   };
 
   closeDialog = () => {
-    this.setState({
-      isDialogOpen: false,
-      selectedIds: []
-    });
+    this.setState({...DEFAULT_STATE});
   };
 
   getStudentIds = () => {
@@ -172,6 +189,44 @@ class MoveStudents extends Component {
     });
   };
 
+  renderOptions = () => {
+    let options = this.props.sections.map(section => <option key={section.id} value={section.id}>{section.name}</option>);
+    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>Other Teacher</option>); // TODO: i18n
+
+    return options;
+  };
+
+  onChangeSection = (event) => {
+    const val = event.target.value;
+    let newState;
+
+    if (val === OTHER_TEACHER) {
+      newState = {
+        otherTeacherSelected: true,
+        selectedSectionId: null
+      };
+    } else {
+      newState = {
+        otherTeacherSelected: false,
+        selectedSectionId: parseInt(event.target.value)
+      };
+    }
+
+    this.setState({...newState});
+  };
+
+  onChangeTeacherSection = (event) => {
+    this.setState({
+      otherTeacherSectionValue: event.target.value
+    });
+  };
+
+  onChangeMoveOrCopy = (event) => {
+    this.setState({
+      copyStudents: event.target.value === "copy"
+    });
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -184,6 +239,8 @@ class MoveStudents extends Component {
       sort: orderBy,
     })(this.props.studentData);
 
+    const {isDialogOpen, otherTeacherSelected, otherTeacherSectionValue, copyStudents} = this.state;
+
     return (
       <div>
         <Button
@@ -193,17 +250,69 @@ class MoveStudents extends Component {
         />
         <BaseDialog
           useUpdatedStyles
-          isOpen={this.state.isDialogOpen}
+          isOpen={isDialogOpen}
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <Table.Provider
-            columns={columns}
-            style={styles.table}
-          >
-            <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="id" />
-          </Table.Provider>
+          <div style={styles.container}>
+            <Table.Provider
+              columns={columns}
+              style={styles.table}
+            >
+              <Table.Header />
+              <Table.Body rows={sortedRows} rowKey="id" />
+            </Table.Provider>
+            <div>
+              <div>{i18n.selectStudentsToMove()}</div>
+              <form>
+                <label htmlFor="sections">
+                  {`${i18n.moveToSection()}:`}
+                </label>
+                <select
+                  name="sections"
+                  onChange={this.onChangeSection}
+                >
+                  {this.renderOptions()}
+                </select>
+              </form>
+              {otherTeacherSelected &&
+                <form>
+                  <label htmlFor="sectionCode">
+                    Enter section code:
+                  </label>
+                  <input
+                    required
+                    name="sectionCode"
+                    style={styles.inputBox}
+                    value={otherTeacherSectionValue}
+                    onChange={this.onChangeTeacherSection}
+                    placeholder="6-character code (ABCDEF)"
+                  />
+                  <label htmlFor="moveOrCopy">
+                    Would you like the student(s) to be in both sections?
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="copy"
+                      checked={copyStudents}
+                      onChange={this.onChangeMoveOrCopy}
+                    />
+                    Yes, I want to copy student(s) to be in this current section AND the new section.
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="move"
+                      checked={!copyStudents}
+                      onChange={this.onChangeMoveOrCopy}
+                    />
+                    No, I want to move student(s) to be in the new section only.
+                  </label>
+                </form>
+              }
+            </div>
+          </div>
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
@@ -222,4 +331,8 @@ class MoveStudents extends Component {
   }
 }
 
-export default MoveStudents;
+export const UnconnectedMoveStudents = MoveStudents;
+
+export default connect(state => ({
+  sections: sectionsNameAndId(state.teacherSections)
+}))(MoveStudents);
