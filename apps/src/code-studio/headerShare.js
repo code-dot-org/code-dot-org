@@ -7,7 +7,7 @@ import ShareDialog from './components/ShareDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
-import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
+import { PublishableProjectTypes } from '../util/sharedConstants';
 import experiments from '../util/experiments';
 
 export function shareProject(shareUrl) {
@@ -26,11 +26,11 @@ export function shareProject(shareUrl) {
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
     const appType = dashboard.project.getStandaloneApp();
 
-    // Allow publishing for any project type that older students can publish.
+    // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
     // it, and should be able to publish in that case.
     const canPublish = !!appOptions.isSignedIn &&
-      PublishableProjectTypesOver13.includes(appType);
+      PublishableProjectTypes.includes(appType);
 
     const exportExpoApp = (expoOpts) => {
       if (window.Applab) {

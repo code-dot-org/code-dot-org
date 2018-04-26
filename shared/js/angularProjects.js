@@ -1,9 +1,5 @@
 /* global $, angular */
 
-var script = document.querySelector('script[data-under13]');
-var isUnder13 = JSON.parse(script.dataset.under13);
-var userSharingDisabled = JSON.parse(script.dataset.sharingdisabled);
-
 // Declare app level module which depends on filters, and services
 angular.module('projectsApp', [
   'ngRoute',
@@ -65,9 +61,7 @@ services.factory('projectsService', ['$resource',
 
     Project.prototype.isPublishableProjectType = function () {
       var projectType = this.getType();
-      var publishableTypes = isUnder13 || userSharingDisabled ?
-        window.PublishableProjectTypesUnder13 :
-        window.PublishableProjectTypesOver13;
+      var publishableTypes = window.PublishableProjectTypes;
       return publishableTypes.indexOf(projectType) > -1;
     };
 

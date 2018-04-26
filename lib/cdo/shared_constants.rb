@@ -66,7 +66,7 @@ module SharedConstants
     }
   )
 
-  PUBLISHABLE_PROJECT_TYPES_UNDER_13 = %w(
+  PUBLISHABLE_PROJECT_TYPES = %w(
     artist
     frozen
     playlab
@@ -85,9 +85,6 @@ module SharedConstants
     basketball
     artist_k1
     playlab_k1
-  ).freeze
-
-  PUBLISHABLE_PROJECT_TYPES_OVER_13 = PUBLISHABLE_PROJECT_TYPES_UNDER_13 + %w(
     applab
     gamelab
   ).freeze
