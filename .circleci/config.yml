@@ -77,6 +77,14 @@ jobs:
             bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
 
       - run:
+          name: install preferred yarn version
+          command: sudo apt-get install yarn=1.6.0-1
+
+      - run:
+          name: check yarn version
+          command: yarn -V
+
+      - run:
           name: setup locals.yml
           command: |
             echo "
@@ -101,7 +109,6 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
-            yarn -V
 
       - run:
           name: rake install
