@@ -1589,11 +1589,13 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 @media screen and (max-height: 780px) {
   .legacy-share-view {
     div#visualizationColumn.wireframeShare {
-      width: 400px !important;
-      height: 600px !important;
-      background-size: 400px 600px;
+      width: 402px !important;
+      height: 602px !important;
+      background-size: 402px 602px;
 
       div#phoneFrameScreen {
+        border-width: 1px;
+        border-color: gray;
         top: 0;
         left: 0;
       }
