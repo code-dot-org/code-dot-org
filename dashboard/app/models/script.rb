@@ -697,10 +697,9 @@ class Script < ActiveRecord::Base
         script_level_attributes.all? do |k, v|
           expected = sl.send(k)
           if k == :properties
-            v == expected.except('hint_prompt_attempts_threshold')
-          else
-            v == expected
+            expected = expected.except('hint_prompt_attempts_threshold')
           end
+          v == expected
         end && sl.levels == levels
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
