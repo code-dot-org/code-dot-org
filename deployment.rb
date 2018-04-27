@@ -11,6 +11,7 @@ require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
 require 'cdo/aws/cdo_google_credentials'
+require 'cdo/git_utils'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -107,7 +108,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => rack_env == :production ? 'sources' : "sources_#{rack_env}",
+    'sources_s3_directory'        => sources_s3_dir,
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -414,4 +415,19 @@ end
 
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
+end
+
+# Since channel ids are derived from user id and other sequential integer ids
+# use a new S3 sources directory for each Test Build to prevent a UI test
+# from inadvertently using a channel id from a previous Test Build.
+# CircleCI environments already suffix the Circle Build number on the sources directory:
+# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+def sources_s3_dir
+  if rack_env == :production
+    'sources'
+  elsif rack_env == :test && !ENV[CI]
+    "sources_#{rack_env}/#{GitUtils.git_revision_short}"
+  else
+    "sources_#{rack_env}"
+  end
 end
