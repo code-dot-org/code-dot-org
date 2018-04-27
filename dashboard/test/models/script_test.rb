@@ -197,6 +197,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal original_count, ScriptLevel.count
   end
 
+  test 'should preserve existing hint-prompt-threshold when reseeding' do
+    scripts, _ = Script.setup([@script_file])
+    sl = scripts[0].script_levels[4]
+    sl.hint_prompt_attempts_threshold = 123
+    sl.save!
+
+    scripts, _ = Script.setup([@script_file])
+    assert_equal 123, scripts[0].script_levels[4].hint_prompt_attempts_threshold
+  end
+
   test 'unplugged in script' do
     @script_file = File.join(self.class.fixture_path, 'test-unplugged.script')
     scripts, _ = Script.setup([@script_file])

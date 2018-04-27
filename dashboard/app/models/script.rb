@@ -694,8 +694,14 @@ class Script < ActiveRecord::Base
       }
       script_level_attributes[:properties] = properties.with_indifferent_access
       script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels == levels
+        script_level_attributes.all? do |k, v|
+          expected = sl.send(k)
+          if k == :properties
+            v == expected.except('hint_prompt_attempts_threshold')
+          else
+            v == expected
+          end
+        end && sl.levels == levels
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
