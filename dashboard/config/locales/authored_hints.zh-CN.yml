@@ -5310,29 +5310,27 @@
         courseA_harvester_loops4_b: 有多少块玉米？你的代码重复了多少次？
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
-        courseA_harvester_loops5_c: Use this path to pick all the corn!
+        courseA_harvester_loops5_b: 最终的代码会有**一个**`重复`循环，**一个**`向南移动`模块和**一个**`向东`移动的模块。
+        courseA_harvester_loops5_c: 通过这条路来采摘所有的玉米。
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: 你需要一个`重复`循环连着另一个。
         courseA_harvester_loops5a_b: 一个循环要重复`向南移动`，另一个要重复`向东移动`。
-        courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
+        courseA_harvester_loops5a_c: 走这条路，先往一个方向走，再往另一个方向走。
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: 点击`运行`看看会发生什么！
         courseA_harvester_loops5b_b: 你的循环重复了正确的次数吗？
-        courseA_harvester_loops5b_c: Move one way, then the other with this path.
+        courseA_harvester_loops5b_c: 沿着这条路往一个方向移动，然后往另一个方向移动。
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: 如果你被难住了，试着在纸上写下步骤, 寻找重复的规律。
-        courseA_harvester_loops6_b: This is the path you should take to pick all the
-          corn.
+        courseA_harvester_loops6_b: 想要采摘所有玉米就得走这条路。
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: 你需要两个`重复`循环相连！
-        courseA_harvester_loops7_b: Use two loops to follow this path.
+        courseA_harvester_loops7_b: 用两个循环来沿着这条路走。
       courseA_harvester_loops8_authored_hint: []
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: 将这一关分成三个不同部分，一部分到达第一个角落，一部分到达第二个角落，最后一部分到达终点。
         courseA_harvester_loops9_b: 在每个部分完成后，别害怕运行代码，看看会发生什么！
-        courseA_harvester_loops9_c: Follow this path to pick all the corn.
+        courseA_harvester_loops9_c: 沿这条路来收获所有的玉米。
       courseA_harvester_seq1_authored_hint:
         courseA_harvester_seq1_a: |-
           用这个模块来让收割者一旦找到玉米，就采摘它！
@@ -5348,7 +5346,7 @@
       courseA_harvester_seq10_authored_hint:
         courseA_harvester_seq10_a: 被难住了？请试着先在一张纸上写下步骤。
         courseA_harvester_seq10_b: 你需要`向东移动`，然后`向北移动`。这样做两次。别忘了还要采摘所有的玉米！
-        courseA_harvester_seq10_c: Try using this path to pick all the corn.
+        courseA_harvester_seq10_c: 试着用这条路捡起所有橡子。
       courseA_harvester_seq11_authored_hint: []
       courseA_harvester_seq12_authored_hint: []
       courseA_harvester_seq13_authored_hint:
@@ -5381,13 +5379,12 @@
         courseA_harvester_seq6_a: 如果被难住了，试着大声的说出这些步骤。这会帮你找到正确的路径。
       courseA_harvester_seq7_authored_hint:
         courseA_harvester_seq7_a: 试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
-        courseA_harvester_seq7_b: Having trouble? This is the path the harvester should
-          take.
+        courseA_harvester_seq7_b: 有困难了？这是收割者应该走的路。
       courseA_harvester_seq8_authored_hint: []
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: 运行代码几次来看看发生了什么。收割者在哪里停下来了？
         courseA_harvester_seq9_b: 别忘了采摘所有的玉米！你需要**3**个采摘玉米模块。
-        courseA_harvester_seq9_c: You should take this path to pick all the corn.
+        courseA_harvester_seq9_c: 你应该用这条路来捡起所有橡子。
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           你的代码应该会像这样：
@@ -5917,8 +5914,7 @@
           name=\"SPRITE\">7</title>\n</block>\n</next>\n</block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: []
       courseB_Scrat_ramp1_2018_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
+        '1': 如果斯奎特做的和你想的不一样，确保两个模块都完全链接到了一起，然后再点击"运行"。
         '2': 别害怕犯错误！试试一些办法，如果不起作用，就试试别的办法！
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
@@ -6382,11 +6378,11 @@
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
         courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
-        courseB_iceage_loops10_c: This is a long puzzle! Follow this path.
+        courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
       courseB_iceage_loops2_authored_hint:
         courseB_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
         courseB_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
-        courseB_iceage_loops2_c: Follow this path to get Scrat to the acorn.
+        courseB_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
       courseB_iceage_loops3_authored_hint:
         courseB_iceage_loops3_a: |-
           用这个新的模块！
@@ -6397,25 +6393,22 @@
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: 写下斯奎特要到达橡子的步骤。找到规律了吗？
         courseB_iceage_loops4_b: 别害怕运行你的代码，看看会发生什么！
-        courseB_iceage_loops4_c: This is the path Scrat should take.
+        courseB_iceage_loops4_c: 这是斯奎特应该走的路。
       courseB_iceage_loops6_authored_hint:
         courseB_iceage_loops6_a: 最终的代码会有**三个**移动模块。
         courseB_iceage_loops6_b: 你只需要再添加**一个**循环！
-        courseB_iceage_loops6_c: Your final path should look like this.
+        courseB_iceage_loops6_c: 最终的路应该像这样。
       courseB_iceage_loops7_authored_hint:
         courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
-        courseB_iceage_loops7_b: This is the path Scrat should take to get to the
-          acorn.
+        courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
       courseB_iceage_loops8_authored_hint:
         courseB_iceage_loops8_a: 这些移动模块正确吗？你还能改什么？
-        courseB_iceage_loops8_b: The first loop should repeat **3** times, the second
-          should repeat **5** times, the third loop should repeat **4** times, and
-          the last loop should repeat **4** times.
-        courseB_iceage_loops8_c: Use loops to help Scrat follow this path.
+        courseB_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
+        courseB_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
       courseB_iceage_loops9_authored_hint:
         courseB_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
         courseB_iceage_loops9_b: 最后的代码会有**4**个循环。
-        courseB_iceage_loops9_c: Scrat should follow this path to get the acorn.
+        courseB_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: 将模块连接到 <xml><block type="when_run"/></xml>模块以使鸟移动!
         courseB_maze_seq1_b: 拖动三个 <xml><block type="maze_moveSouth"/></xml>箭头并将它们连接到<xml><block
@@ -8177,6 +8170,32 @@
           这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+        courseD_artist_project1_b: 请记住, `向前移动`会画一条线, 而`向前跳`则不会。
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
+          does not.
+        courseD_artist_project1_a: 使用`转向`块上的下拉菜单选择您需要的角度!
+      courseD_artist_3_2018_authored_hint: []
+      courseD_artist_4_2018_authored_hint: []
+      courseD_artist_5_2018_authored_hint: []
+      courseD_artist_6_2018_authored_hint:
+        courseD_artist_project1a_a: "这台阶使用76度转弯并且重复4次。 \n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+          width=\"200px\" />\n"
+        courseD_artist_project1a_b: 这些模式很像从其他关卡里的楼梯台阶, 但使用不同的角度。
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: "这幅画是通过在`重复两次` 块内嵌套一个4个楼梯和一个`右转180度 `模块来制作的。 \n\n<img
+          src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\"
+          width=\"200px\" />\n"
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: 你可以选择不同的数量来旋转你的形状！转向18次，每次20度如何？
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          这里有两个不同长度的雪花, 在一个后接着画另一个。（在两者之间转30度）
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: []
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: 将文本块中的 "？？" 替换为0 和1 所需的二进制图像。
         courseD_artist_binary1_b: 艺术家将每个1，画成一个白色的空间, 每个0画成一个黑色的空间。
@@ -9800,48 +9819,42 @@
       courseD_iceage_loops1_authored_hint:
         courseD_iceage_loops1_a: 小心破冰！斯奎特会掉下去的！
         courseD_iceage_loops1_b: |-
-          You will have to use this block:
+          你需要用这个模块：
+
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: 小心破冰！斯奎特会掉到水里的！
         courseB_iceage_loops10_b: 试试大声说出步骤，或将它们写到纸上。找到什么规律了吗？
-        courseB_iceage_loops10_c: This is a long puzzle! Follow this path.
+        courseB_iceage_loops10_c: 这是一个很长的迷宫！沿这条路走。
       courseD_iceage_loops2_authored_hint:
         courseD_iceage_loops2_a: 将这一关分成两部分，一个在角落前，另一个在角落后。
         courseD_iceage_loops2_b: 如果被难住了，试着大声说出步骤来。
-        courseD_iceage_loops2_c: Follow this path to get Scrat to the acorn.
+        courseD_iceage_loops2_c: 修复这条路，来帮助斯奎特到达橡子。
       courseD_iceage_loops3_authored_hint:
         courseB_iceage_loops3_a: |-
-          Use this new block!
-          <xml><block type="controls_repeat_dropdown">
-          <title name="TIMES" config="2-10">5</title>
+          用这个新的模块！
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="2-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put
-          the block you want repeated inside.
+        courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复 `循环, 然后把想要重复的模块放到它里面。
       courseD_iceage_loops4_authored_hint:
         courseD_iceage_loops4_a: 别害怕运行你的代码，看看会发生什么！
-        courseD_iceage_loops4_b: Try writing down the steps Scrat would take to get
-          to the acorn.  Do you see a pattern?
-        courseD_iceage_loops4_c: This is the path Scrat should take.
+        courseD_iceage_loops4_b: 写下斯奎特要到达橡子的步骤。找到规律了吗？
+        courseD_iceage_loops4_c: 这是斯奎特应该走的路。
       courseD_iceage_loops6_authored_hint:
-        courseD_iceage_loops6_a: Your final code will have **three** `move forward`
-          blocks.
+        courseD_iceage_loops6_a: 最终的代码会有**三个**`向前移动`模块。
         courseD_iceage_loops6_b: 你只需要再添加**一个**循环！
-        courseD_iceage_loops6_c: Your final path should look like this.
+        courseD_iceage_loops6_c: 最终的路应该像这样。
       courseD_iceage_loops7_authored_hint:
         courseB_iceage_loops7_a: 如果被难住了，试着在纸上写下步骤。找到规律了吗？
-        courseB_iceage_loops7_b: This is the path Scrat should take to get to the
-          acorn.
+        courseB_iceage_loops7_b: 斯奎特想要拿到橡子就得走这条路。
       courseD_iceage_loops8_authored_hint:
-        courseD_iceage_loops8_a: Are the `turn` blocks right? What else can you change?
-        courseD_iceage_loops8_b: The first loop should repeat **3** times, the second
-          should repeat **5** times, the third loop should repeat **4** times, and
-          the last loop should repeat **4** times.
-        courseD_iceage_loops8_c: Use loops to help Scrat follow this path.
+        courseD_iceage_loops8_a: 这些`转向`模块正确吗？你还能改什么？
+        courseD_iceage_loops8_b: 第一个循环应当重复**3**次，第二个应当重复**5**次，第三个循环应当重复**4**次，最后一个循环应当重复**4**次。
+        courseD_iceage_loops8_c: 使用循环帮助斯奎特沿着这条路走。
       courseD_iceage_loops9_authored_hint:
         courseD_iceage_loops9_a: 有困难吗？试着将这一关分成更小的部分。别害怕运行你的代码！
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
-        courseD_iceage_loops9_c: Scrat should follow this path to get the acorn.
+        courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: 不要忘记, 你可以`重复`一个单一的命令或较长的模式。你甚至可以`重复`一个`重复`模块!
         courseD_bee_nested_loops_challenge1_b: 要获得所有4个宝石, 首先使用一个循环离开中心。向左或向右转, 然后使用嵌套循环从第一堆宝藏移动到第二个。如果重复嵌套循环足够多次,

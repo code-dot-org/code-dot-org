@@ -505,7 +505,7 @@
             Eval:
               name: Eval
             Studio:
-              name: Studio
+              name: استودیو
         flappy:
           title: کدنویسی Flappy
           description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
@@ -681,9 +681,9 @@
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: درس 14
             Lesson 15:
-              name: Lesson 15
+              name: درس 15
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -700,7 +700,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: ECS چیست؟
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -849,7 +849,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: ECS چیست؟
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -867,7 +867,7 @@
             Teaching Strategies:
               name: Teaching Strategies
             What is ECS?:
-              name: What is ECS?
+              name: ECS چیست؟
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -1152,7 +1152,7 @@
             Star wars:
               name: Star wars
             Studio:
-              name: Studio
+              name: استودیو
             Swapped Levels:
               name: Swapped Levels
             Text Compression:
@@ -2774,7 +2774,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: کارگاه بازی سازی
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -10159,6 +10159,8 @@
               description_teacher: ''
             Loops in Ice Age:
               name: Loops in Ice Age
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
         jr-test:
           stages:
             Programming with Behaviors:

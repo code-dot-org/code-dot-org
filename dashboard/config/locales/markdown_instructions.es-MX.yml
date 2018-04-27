@@ -22,124 +22,73 @@
         The jump block moves the artist without
         drawing. Draw the dashed line using both the `jump forward` and `move forward`
         blocks. Each line is 50 pixels long.
-      2-3 Artist 3new_markdown_instruction: |-
-        El gorro rojo tiene 100 píxeles de alto. Termina
-        de dibujar un gorro negro 70 píxeles más corto. \r
-        \r
-        *(Nota: El ancho de cada
-        gorro es de 50 píxeles)*
+      2-3 Artist 3new_markdown_instruction: 'El gorro rojo tiene 100 píxeles de alto.
+        Termina de dibujar un gorro negro 70 píxeles más corto. \ r \ r * (Nota: El
+        ancho de cada gorro es de 50 píxeles) *'
       2-3 Artist 4_markdown_instruction: Ayúdame a completar la casa para este gato.
-      2-3 Artist 6_markdown_instruction: |-
-        ¡Esta casa necesita un techo! Dibuja el triángulo. \r
-        \r
-        Pista:
-        los tres lados son igual de anchos.\r
-        \r
-        <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif"
-        width="300"/>
-      2-3 Artist 7_markdown_instruction: "Termina de dibujar el último grupo de ventanas\nen
-        la escuela para que todos en la clase vean el exterior. \\r\n\\r\nLos lados\nde
-        cada panel de ventana cuadrado miden 25 píxeles. "
-      2-3 Artist 8_markdown_instruction: |-
-        ¡Hora de construir un granero!\r
-        \r
-        Haz las habitaciones
-        para cada animal separando el granero en 2 cuadrados de igual tamaño.\r
-        \r
-        Pista:
-        El rectángulo mide 200 píxeles de ancho y 100 de alto.\r
-        \r
-        Hay muchas
-        formas diferentes de resolver este puzle.
+      2-3 Artist 6_markdown_instruction: "¡Esta casa necesita un techo! Dibuja el
+        triángulo.  \\ r \n\\ r \nSugerencia: los tres lados tienen la misma longitud.
+        \\ r \n\\ r \n<img src = \"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+        width = \"300\" />"
+      2-3 Artist 7_markdown_instruction: "Termine dibujando el último conjunto de
+        ventanas en la escuela para que todos en clase puedan ver afuera. \\ r \n\\
+        r \nLos lados \nde cada panel de ventana cuadrado tienen 25 píxeles de longitud. "
+      2-3 Artist 8_markdown_instruction: "¡Es hora de construir un granero! \\ r \n\\
+        r \nHaga las habitaciones\n para cada animal dividiendo el establo en 2 cuadrados
+        del mismo tamaño. \\ r \n\\ r \nSugerencia: el rectángulo tiene 200 píxeles
+        de ancho y 100 píxeles de alto. \\ r \n\\ r \nHay muchas formas diferentes
+        de resolver este rompecabezas."
       2-3 Artist 9 NEW_markdown_instruction: Termina esta cometa
       2-3 Artist 9 REPLACEMENT_markdown_instruction: Termina de dibujar estas escaleras!
       2-3 Artist 9_markdown_instruction: Termina esta cometa
-      2-3 Artist Assessment 1_markdown_instruction: |-
-        **Evaluación:** Termina de dibujar
-        el último diente. Mide 25 píxeles de ancho y alto.
-      2-3 Artist Debugging 1_markdown_instruction: |
-        Este gorro debería tener 50 píxeles
-        de ancho.\r
-        ¿Puedes arreglarlo?\r
-        \r
-        <br/>\r
-      2-3 Artist Debugging 10_markdown_instruction: |-
-        La cruceta de mi juego
-        es demasiado estrecha.\r
-        \r
-        ¿Puedes hacerla 10 píxeles más ancha?\r
-        \r
-        Intenta
-        ejecutar el código antes para ver el problema.
+      2-3 Artist Assessment 1_markdown_instruction: "** Evaluación: ** Termine dibujando
+        \nel último diente. Es 25 píxeles de ancho y 25 pixeles de alto."
+      2-3 Artist Debugging 1_markdown_instruction: "Este sombrero solo debe tener
+        50 píxeles de \nancho. \\ r \nSe puede solucionar esto? \\ r \n\\ r \n<br/>
+        \\ r\n"
+      2-3 Artist Debugging 10_markdown_instruction: "La almohadilla de dirección en
+        mi dispositivo de juego es demasiado estrecha. \n¿Puede usted hacer más ancho
+        por 10 píxeles? \nIntenta ejecutar el código primero para ver qué está mal."
       2-3 Artist Debugging 11_markdown_instruction: Ayúdame a terminar mi hermoso
         copo de nieve. ¿Cuántas veces necesito "Repetir" para finalizarlo?
-      2-3 Artist Debugging 2_markdown_instruction: |-
-        Este código para los bigotes del gato
-        es incorrecto. \r
+      2-3 Artist Debugging 2_markdown_instruction: "Este código para los bigotes del
+        gato \nes incorrecto. \\ r \n\\ r \nCorrige este código para dibujar bigotes
+        que tengan la misma longitud."
+      2-3 Artist Debugging 3_markdown_instruction: "¡Mi barco tiene un agujero! ¿Qué
+        es lo que se necesita para abrir los lados?"
+      2-3 Artist Debugging 5_markdown_instruction: El código que tenemos para la pierna
+        y el pie es incorrecto. \ r \ r ¿Puedes arreglarlo?
+      2-3 Artist Debugging 6_markdown_instruction: "¡Parece que estoy en una silla
+        a la que le falta una pata! Edita el código para dibujar la última pata."
+      2-3 Artist Debugging 7_markdown_instruction: ¡Parace que la C en "código" está
+        dibujada al revés! \ r \ r ¿Puedes hacer que parezca una C de nuevo?
+      2-3 Artist Debugging 8_markdown_instruction: "¡Mi maestra dice que debería acabar
+        lo que empiezo! Ayúdame a terminar mi molinillo. ¿Puedes ver qué parte está
+        mal?"
+      2-3 Artist Debugging 9_markdown_instruction: "¡Algo raro pasa aquí! El código
+        de este tallo está mal. ¿Puedes averiguar cómo hacer la artista lo pinte bien?"
+      2-3 Artist Debugging Assessment 1_markdown_instruction: "** Evaluación: ** ¿Por
+        qué este cuadrado acaba siendo 75 píxeles más corto de la cuenta en cada lado?
+        \\ r \\ r ¿Dónde está mal el código?"
+      2-3 Artist Free Play_markdown_instruction: "¡Juego gratis! Dibuja lo que quieras."
+      2-3 Artist Functions 1_markdown_instruction: "\"Yo artista zombie. ¡Me encanta
+        dibujar!\"\n\\ r \n\\ r \nAyuda al zombie a dibujar gafas cuadradas.  \\ r
+        \n\\ r \nEl puente entre las gafas es 25 píxeles más corto que el ancho de
+        los cuadrados, que es de 100 píxeles. \\ r \n\\ r\n"
+      2-3 Artist Functions 10_markdown_instruction: "** Freeplay: ** Aquí hay dos
+        funciones, una para dibujar un gran engranaje y otra para dibujar un pequeño
+        engranaje.  \\ r \n\\ r ¡ \nÚselos para\n dibujar el interior de una máquina!"
+      2-3 Artist Functions 11.5_markdown_instruction: |-
+        Aquí está la misma función `dibujar un hexagon`. \r
         \r
-        Arréglalo para dibujar bigotes que sean todos del mismo tamaño.
-      2-3 Artist Debugging 3_markdown_instruction: |-
-        ¡Mi barco tiene un agujero! \r
+        ¿Qué pasa si colocas un ciclo al programa principal por 6 veces, dan vuelta 60 grados cada vez que se ejecuta el ciclo?
+      2-3 Artist Functions 11_markdown_instruction: |-
+        Hemos cambiado el nombre de la función "dibujar un cuadrado" a "dibujar un hexágono", pero todavía nos está dando cuadrados!  \r
         \r
-        ¿Qué
-        necesitas arreglar para que se unan los lados?
-      2-3 Artist Debugging 5_markdown_instruction: |-
-        El código que tenemos para la
-        pierna y el pie es incorrecto. \r
-        \r
-        ¿Puedes arreglarlo?
-      2-3 Artist Debugging 6_markdown_instruction: |-
-        ¡Parece ser que estoy en una
-        silla a la que le falta una pata!\r
-        \r
-        Edita el código para dibujar la última pata.
-      2-3 Artist Debugging 7_markdown_instruction: |-
-        ¡Parace que la C en "code" está dibujada
-        al revés!\r
-        \r
-        ¿Puedes hacer que parezca una C de nuevo?
-      2-3 Artist Debugging 8_markdown_instruction: |-
-        ¡Mi profe dice que debería
-        acabar lo que empiezo!\r
-        \r
-        Ayúdame a terminar mi molinillo. ¿Puedes ver
-        qué parte está mal?
-      2-3 Artist Debugging 9_markdown_instruction: |-
-        ¡Algo raro pasa aquí!\r
-        \r
-        El
-        código de este tallo está mal. ¿Puedes averiguar cómo hacer que el artista
-        lo pinte bien?
-      2-3 Artist Debugging Assessment 1_markdown_instruction: |-
-        **Evaluación:**\r
-        ¿Por qué
-        este cuadrado acaba siendo 75 píxeles más corto de la cuenta en cada lado? \r
-        \r
-        ¡Dónde
-        está mal el código?
-      2-3 Artist Free Play_markdown_instruction: "¡Juego libre! Dibuja lo que quieras."
-      2-3 Artist Functions 1_markdown_instruction: |
-        "Yo ser artista zombi. ¡Yo gustar dibujar!"
+        ¿Se puede modificar la función ` dibujar un hexagon` para dibujar un hexágono con 50 píxeles  lados?
         \r
         \r
-        Ayuda al zombi a dibujar gafas cuadradas. \r
-        \r
-        El puente entre las gafas
-        es 25 píxeles más corto que el ancho de los acuadrados, que es 100 píxeles.\r
-        \r
-      2-3 Artist Functions 10_markdown_instruction: |-
-        **Juego libre:* Aquí hay dos funciones,
-        una para dibujar un engranaje grande y otra para un engranaje pequeño. \r
-        \r
-        ¡Úsalas para
-        dibujar el interior de una máquina!
-      2-3 Artist Functions 11.5_markdown_instruction: Aquí es esa misma función 'dibujar
-        un hexágono'. \r \r ¿qué pasa si lazo el programa principal 6 veces, girar
-        60 grados cada vez que lazo?
-      2-3 Artist Functions 11_markdown_instruction: Hemos rebautizado la función 'dibujar
-        un cuadrado' a 'dibuja un hexágono', pero del que todavía nos da plazas!  ¿\r
-        \r puede modificar la función 'dibujar un hexágono' para dibujar un hexágono
-        con lados de pixel 50? \r \r dibujar la imagen usando la nueva función!
+        Dibuje la imagen usando la nueva función!
       2-3 Artist Functions 12 Mike_markdown_instruction: |-
         Functions are really great
         for drawing complex things multiple times. \r
@@ -148,67 +97,67 @@
         flower` function to fill the rest of the planter box?\r
         The plants are all
         100 pixels apart.
-      2-3 Artist Functions 12_markdown_instruction: Las funciones son realmente grandes
-        para cosas complejas de dibujo varias veces. \r \r puede utilizar la función
-        'dibujar una flor' para llenar el resto de la caja de la jardinera? \r las
-        plantas son todas 100 píxeles separados.
-      2-3 Artist Functions 2_markdown_instruction: ¡Las funciones permiten definir
-        nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función
-        llamada "dibuja un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado"
-        para crear los lentes? Los cuadrados están separados por 75 píxeles.
-      2-3 Artist Functions 3_markdown_instruction: Edita la función para dibujar un
-        cuadrado con una longitud lateral de 115 y dibuja los anteojos mas grandes.
-        los cuadrados están ahora separados a 45 píxeles.
+      2-3 Artist Functions 12_markdown_instruction: "Las funciones son realmente geniales
+        para \ndibujar cosas complejas varias veces. \\r\n\\r\n¿Se puede utilizar
+        la función` dibujar una flor`\npara llenar el resto de la maceta? \\ r \nLas
+        plantas son todos los 100 píxeles \nde diferencia."
+      2-3 Artist Functions 2_markdown_instruction: "¡Las funciones te permiten definir
+        nuevos\n bloques! \\r\n\\r\nHemos movido los bloques necesarios para dibujar
+        un cuadrado en una\n función llamada ` dibujar un cuadrado`. Esta vez, utilice
+        el ` dibujar un square` función \npara crear las gafas \\r\n\\r\nLos cuadrados
+        están separados por 75 píxeles."
+      2-3 Artist Functions 3_markdown_instruction: |-
+        Edita la función para dibujar un cuadrado con una longitud lateral de 115 para dibujar los vasos más grandes. \r
+        \r
+        Los cuadrados están ahora a 45 píxeles de distancia.
       2-3 Artist Functions 4_markdown_instruction: Usa el bloque "repetir" para dibujar
         estos 3 cuadrados.
-      2-3 Artist Functions 9_markdown_instruction: "** Freeplay: ** esta es una función
-        del copo de nieve. ¡Experimentar con él para crear una escena de invierno!
-        \\r \\r este es un nivel de juego libre, por lo que no hay rompecabezas para
-        resolver. ¡Que te diviertas!"
+      2-3 Artist Functions 9_markdown_instruction: |-
+        ** Freeplay: ** Aquí hay una función de copo de nieve. ¡Experimenta con él para crear una escena de invierno!\r
+        \r
+        Este es un nivel de juego libre, por lo que no hay ningún rompecabezas para resolver. ¡Que te diviertas!
       2-3 Artist Loops 1_markdown_instruction: "¿Puedes hacer un hexágono con lados
-        de 100 píxeles de largo para terminar la celda? Recuerda, esto significa que
-        solo necesitas girar ¡60 grados!"
-      2-3 Artist Loops 2_markdown_instruction: Ahora utilice un bloque de repetición
-        para hacer la célula una cáscara.
-      2-3 Artist Loops New 1_markdown_instruction: 'Vamos a dibujar la cabeza de la
-        robusteza! ¿Se puede hacer un cuadrado con lados que son 100 píxeles? \r \r
-        <br/> \r
-
-'
+        \nque tengan 100 píxeles de largo para terminar la celda? Recuerde, eso significa
+        que solo tendrá que girar 60 grados!"
+      2-3 Artist Loops 2_markdown_instruction: Ahora, usa un bloque de repetición
+        para que la célula se convierta en una concha.
+      2-3 Artist Loops New 1_markdown_instruction: |
+        Vamos a dibujar la cabeza de este robot! ¿Puedes hacer un cuadrado con lados de 100 píxeles?\r
+        \r
+        <br/>\r
       2-3 Artist Loops New 10_markdown_instruction: Ahora conectemos un montón de
-        V juntos, dibujándolos en un bucle.
-      2-3 Artist Loops New 11_markdown_instruction: "¡Tiempo para hacer algo elegante!
-        \\r \\r reconstruir el código del último puzzle, pero esta vez, añadir un
-        giro a la izquierda 30 grados dentro del bucle. Ahora, repita 24 veces en
-        lugar de 8."
+        V juntas en un ciclo.
+      2-3 Artist Loops New 11_markdown_instruction: |-
+        ¡Es hora de hacer algo elegante!
+        \r
+        \r
+        Reconstruye el código del último rompecabezas, pero esta vez, agrega un giro a la izquierda de 30 grados dentro del ciclo. Ahora, repítelo 24 veces en lugar de 8.
       2-3 Artist Loops New 12_markdown_instruction: 'Dibuja un diamante con lados
         de 100 píxeles. '
-      2-3 Artist Loops New 13_markdown_instruction: Vamos a empezar con algo de código
-        (en gris) para hacer un diamante. \r \r bucle el código gris para crear un
-        divertido patrón!
-      2-3 Artist Loops New 14_markdown_instruction: Jugar con el código para el diamante
-        y ver qué otros patrones que usted puede hacer. \r \r prueba cambiando cuántos
-        grados gira y cuántas veces te lazo.
-      2-3 Artist Loops New 15_markdown_instruction: 'Ahora, dibujar cualquier cosa
-        que te gusta! \r <br/> <br/> \r \r
-
-'
-      2-3 Artist Loops New 2_markdown_instruction: Aquí es el mismo rompecabezas que
-        sólo solucionamos, pero esta vez, sólo podemos utilizar un bloque de 'avanzar'
-        y 'girar' cuadra que este tiempo. \r \r puede utiliza una 'repetición' para
-        resolver este rompecabezas?
-      2-3 Artist Loops New 9_markdown_instruction: Dibuja una simple V donde ambos
-        lados sean de 50 píxeles para completar la flecha.
-      2-3 Artist Nested Loops 1_markdown_instruction: 'Has usado loops para dibujar
-        formas antes, pero ahora vamos a poner bucles dentro de otros bucles! \r \r
-        poner un bloque ''repetición'' alrededor de esta pila de entero de código
-        para dibujar el patrón de. \r \r <br/> \r \r
-
-'
-      2-3 Artist Nested Loops 10_markdown_instruction: Itera este código 12 veces
-        para completar el patrón.
+      2-3 Artist Loops New 13_markdown_instruction: "Vamos a comenzar con\n algo de
+        código para hacer un diamante \\r\n\\r el código gris para crear \nun patrón
+        divertido!"
+      2-3 Artist Loops New 14_markdown_instruction: "Juega un poco con el código para
+        \nel diamante y ve lo que otros patrones pueden hacer \\r\n\\r\nIntenta cambiar
+        \ncuántos grados se activa y cuántas veces usas el ciclo."
+      2-3 Artist Loops New 15_markdown_instruction: |
+        ¡Ahora, dibuja lo que quieras!\r
+        <br/><br/>\r
+        \r
+      2-3 Artist Loops New 2_markdown_instruction: |-
+        Aquí está el mismo rompecabezas que acabamos de resolver, pero esta vez sólo puedes utilizar un bloque`avanzar` y un bloque` girar`.\r
+        \r
+        ¿Puedes usar repetición para resolver este rompecabezas?
+      2-3 Artist Loops New 9_markdown_instruction: "Dibuje una V simple (donde ambos
+        lados \nson 50 píxeles) para completar la flecha."
+      2-3 Artist Nested Loops 1_markdown_instruction: "Usaste ciclos para dibujar
+        \nformas antes, pero ahora vamos a poner ciclos dentro de otros ciclos.\\r\n\\r\nPonga
+        un bloque `repetición` alrededor de toda esta pila de código para dibujar
+        el patrón.\\r\n\\r\n<br/>\\r\n\\r\n"
+      2-3 Artist Nested Loops 10_markdown_instruction: Pasa este código 12 veces para
+        completar el patrón.
       2-3 Artist Nested Loops 11_markdown_instruction: Itera este código 4 veces para
-        completar el patrón, gira 90 grados después de cada circulo.
+        completar el patrón, gire 90 grados después de cada círculo.
       2-3 Artist Nested Loops 12_markdown_instruction: Itera este código 12 veces
         para completar los rizos.
       2-3 Artist Nested Loops 2_markdown_instruction: "Ahora usaremos un bucle para
@@ -26611,11 +26560,11 @@
         \r
         Using
         the `setProperty` block, move "red_button" so that it matches the image
-        to the right.\r
+        to the right. (Click on the image to see the full size.)\r
         \r
-        _Note: We've removed the Design Mode tab for now so
-        you can practice working with setProperty, but it'll come back later once
-        you're building apps of your own._
+        _Note: We've
+        removed the Design Mode tab for now so you can practice working with setProperty,
+        but it'll come back later once you're building apps of your own._
       CSD U6 setProperty xy_2018_markdown_instruction: |-
         # Changing Position\r
         \r
@@ -26633,11 +26582,11 @@
         \r
         Using
         the `setProperty` block, move "red_button" so that it matches the image
-        to the right.\r
+        to the right. (Click on the image to see the full size.)\r
         \r
-        _Note: We've removed the Design Mode tab for now so
-        you can practice working with setProperty, but it'll come back later once
-        you're building apps of your own._
+        _Note: We've
+        removed the Design Mode tab for now so you can practice working with setProperty,
+        but it'll come back later once you're building apps of your own._
       CSD U6 slider intro_markdown_instruction: |-
         # Sliders\r
         \r
@@ -35626,7 +35575,7 @@
         style="float: right">\r
         \r
         Well, now we have the beginnings of a little
-        game!  Time to go back to design mode to start embelishing our program.\r
+        game!  Time to go back to design mode to start embellishing our program.\r
         \r
         **You
         try it:** - Add a text label that says "Try to Catch the Button!"\r
@@ -75087,8 +75036,7 @@
       course1_artist_loops_challenge3_markdown_instruction: |-
         **Tweet!**\r
         \r
-        *"Can
-        you help me make two bird houses?"*
+        *"¿Puedes ayudarme a hacer dos casas de pájaros?"*
       course1_artist_loops_challenge4_markdown_instruction: |-
         *"It's time to toss
         the dice! Can you help me draw these?"*
@@ -75412,284 +75360,193 @@
         \r
         Check the hints if you need help
         with these challenges!
-      courseA_artist_loops10_markdown_instruction: |-
-        ## Time to head back to land.
-        Help me put down stones so I don't fall in!\r
-        \r
-        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
-      courseA_artist_loops10_2018_markdown_instruction: |-
-        ## Time to head back to
-        land. Help me put down stones so I don't fall in!\r
-        \r
-        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
-      courseA_artist_loops11_markdown_instruction: |-
-        ## Help me build steps to watch
-        the ship sail away.\r
-        \r
-        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
-      courseA_artist_loops11_2018_markdown_instruction: |-
-        ## Help me build steps to
-        watch the ship sail away.\r
-        \r
-        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
-      courseA_artist_loops12_markdown_instruction: |-
-        The artist saw something funny
-        in the distance.  Draw what you think he saw.\r
-        \r
-        ___\r
-        ### Ideas\r
-        \r
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
-        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
-      courseA_artist_loops12_2018_markdown_instruction: |-
-        The artist saw something
-        funny in the distance.  Draw what you think he saw.\r
-        \r
-        ___\r
-        ### Ideas\r
-        \r
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
-        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
-      courseA_artist_loops2_markdown_instruction: |-
-        Help the artist draw this line
-        two times forward.\r
-        \r
-        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
-      courseA_artist_loops2_2018_markdown_instruction: |-
-        Help the artist draw this
-        line two times forward.\r
-        \r
-        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
-      courseA_artist_loops3_markdown_instruction: |-
-        Our artist is trying to draw a
-        line five times, but can't get it right. Can you help?\r
-        \r
-        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
-      courseA_artist_loops3_2018_markdown_instruction: |-
-        Our artist is trying to draw
-        a line five times, but can't get it right. Can you help?\r
-        \r
-        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops10_markdown_instruction: "## Es hora de regresar a la tierra.
+        ¡Ayúdame a poner piedras para que no me caiga! \\ r \n\\ r \n! [expandable]
+        (https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
+      courseA_artist_loops10_2018_markdown_instruction: "## Es hora de regresar a
+        la tierra. ¡Ayúdame a poner piedras para que no me caiga! \\ r \\ r! [expandable]
+        (https://images.code.[expandable]org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
+      courseA_artist_loops11_markdown_instruction: "## Ayúdame a construir pasos para
+        ver cómo navega el barco. \\ r \n\\ r \n! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)\n "
+      courseA_artist_loops11_2018_markdown_instruction: "## Ayúdame a construir pasos
+        para ver cómo navegar el barco. \\ r \\ r! [expandable] (https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)\n"
+      courseA_artist_loops12_markdown_instruction: "El artista vio algo gracioso en
+        la distancia.  Dibuja lo que crees que vio. \\ r \n\\ r \n___ \\ r \n### Ideas
+        \\ r \n\\ r \n! [] (https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        \\ r \n! [] (https: //images.code .org / 126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        \\ r \n! [] (https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        \\ r \n! [] (https://images.code.org /55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseA_artist_loops12_2018_markdown_instruction: "El artista vio algo gracioso
+        en la distancia.  Dibuja lo que crees que vio. \\ r \n\\ r \n___ \\ r \n###
+        Ideas \\ r \n\\ r \n! [] (https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        \\ r \n! [] (https: //images.code .org / 126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        \\ r \n! [] (https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        \\ r \n! [] (https://images.code.org /55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
+      courseA_artist_loops2_markdown_instruction: "Ayude al artista a dibujar esta
+        línea dos veces hacia adelante. \\ r \n\\ r \n! [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
+      courseA_artist_loops2_2018_markdown_instruction: "Ayude al artista a dibujar
+        esta línea dos veces hacia adelante. \\ r \n\\ r \n! [] (https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
+      courseA_artist_loops3_markdown_instruction: "Nuestro artista está tratando de
+        trazar una línea cinco veces, pero no puede hacerlo bien. ¿Puede usted ayudar?
+        \\ r \n\\ r \n! [expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif"
+      courseA_artist_loops3_2018_markdown_instruction: "Nuestro artista está tratando
+        de trazar \nuna línea cinco veces, pero no puede hacerlo bien. ¿Puede usted
+        ayudar? \\ r \n\\ r \n! [expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
-        five times!\r
-        \r
+        Ahora, utiliza un <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> bucle para dibujar esta línea cinco veces!
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018_markdown_instruction: |-
-        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
-        five times!\r
-        \r
+        Ahora, utiliza un <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> bucle para dibujar esta línea cinco veces!
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
-      courseA_artist_loops5_markdown_instruction: |-
-        ## Draw a line seven steps long.
-        This will become our horizon.\r
-        \r
-        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
-      courseA_artist_loops5_2018_markdown_instruction: |-
-        ## Draw a line seven steps
-        long. This will become our horizon.\r
-        \r
-        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
-      courseA_artist_loops6_markdown_instruction: |-
-        ## Let's put a nice hill in the
-        back.\r
-        \r
-        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
-      courseA_artist_loops6_2018_markdown_instruction: |-
-        ## Let's put a nice hill
-        in the back.\r
-        \r
-        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops5_markdown_instruction: "## Dibuja una línea de siete pasos
+        de largo. Esto se convertirá en nuestro horizonte. \\ r \n\\ r \n! [expandable]
+        (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
+      courseA_artist_loops5_2018_markdown_instruction: "## Dibuja una línea de siete
+        pasos de largo. Esto se convertirá en nuestro horizonte. \\ r \n\\ r \n![expandable]
+        (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
+      courseA_artist_loops6_markdown_instruction: "## Pongamos una buena colina en
+        la parte posterior. \\ r \n\\ r \n! [expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
+      courseA_artist_loops6_2018_markdown_instruction: "## Pongamos una buena colina
+        en la parte posterior. \\ r \n\\ r \n! [expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
       courseA_artist_loops7_markdown_instruction: |-
-        ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
-        to the water.\r
-        \r
+        ## Use el <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> ciclo para agregar olas al gua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018_markdown_instruction: |-
-        ## Use the <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
-        to the water.\r
-        \r
+        ## Use el <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> ciclo para agregar olas al gua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_forVideo_markdown_instruction: |-
-        ## Use the <xml><block
+        ## Use el <xml><block
         type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-        loop to add waves to the water.\r
-        \r
+        ciclo para agregar olas al agua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
-      courseA_artist_loops8_markdown_instruction: |-
-        ## We need a ladder up to the
-        boat.\r
-        \r
-        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_markdown_instruction: "## Necesitamos una escalera hasta
+        el bote. \\ r \n\\ r \n! [expandable] (https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
       courseA_artist_loops8_2018_markdown_instruction: |-
-        ## We need a ladder up to
-        the boat.\r
+        ## Necesitamos una escalera hasta el bote.\r
         \r
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
-        ##**Challenge:** The stairs down
-        to the dock are broken.  Help me fix them.\r
+        ## ** Desafío: ** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlos .\r
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018_markdown_instruction: |-
-        ##**Challenge:** The stairs
-        down to the dock are broken.  Help me fix them.\r
+        ## ** Desafío: ** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlos .\r
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
-        You can use a loop to
-        draw many lines in a row.\r
+        Puede usar un ciclo para
+         dibujar muchas líneas en una fila.\r
         \r
-        Can you draw a house? Make it look just the
-        way you like it!  Try looking for patterns that repeat!\r
+        ¿Puedes dibujar una casa ? ¡Haz que se vea como a ti te gusta! Intente buscar por patrones que se repiten!\r
         \r
-        Here are some
+        Aquí hay algunas
         ideas:\r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
-      courseA_artist_loops_challenge1_2018_markdown_instruction: |-
-        You can use a loop
-        to draw many lines in a row.\r
-        \r
-        Can you draw a house? Make it look just
-        the way you like it!  Try looking for patterns that repeat!\r
-        \r
-        Here are
-        some ideas:\r
-        \r
-        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018_markdown_instruction: "Puede usar un ciclo
+        \npara dibujar muchas líneas en una fila.\\r\n\\r\n¿Puedes dibujar una casa
+        ? ¡Haz que se vea como a ti te gusta! Intente buscar por patrones que se repiten\\r\n\\r\nAquí
+        algunas ideas:\\r\n\\r\n![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)"
       courseA_artist_loops_challenge2_markdown_instruction: |-
         **Tweet!**\r
         \r
-        *"Can
-        you help me make two bird houses?"*
+        *"¿Puedes ayudarme a hacer dos casas de pájaros?"*
       courseA_artist_loops_challenge2a_markdown_instruction: |-
-        *"Help me get the
-        camp site ready!"*\r
+        *"¡Ayúdame a preparar el campamento!*\r
         \r
-        Use the blocks in the toolbox to draw these three
-        tents.
+        Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
       courseA_artist_loops_challenge2a_2018_markdown_instruction: |-
-        *"Help me get
-        the camp site ready!"*\r
+        *"¡Ayúdame a preparar el campamento!"*\r
         \r
-        Use the blocks in the toolbox to draw these
-        three tents.
-      courseA_bee_seq1_markdown_instruction: Help the bee get one nectar!
-      courseA_bee_seq10_markdown_instruction: Try it by yourself! Get all the nectar.
-      courseA_bee_seq11_markdown_instruction: |-
-        You've been a busy bee! Get all the
-        nectar.
-      courseA_bee_seq12_markdown_instruction: Help the bee get one nectar!
+        Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
+      courseA_bee_seq1_markdown_instruction: "¡Ayuda a la abeja a obtener un néctar!"
+      courseA_bee_seq10_markdown_instruction: Pruébelo usted mismo! Obtenga todo el
+        néctar.
+      courseA_bee_seq11_markdown_instruction: "¡Has sido una abeja ocupada! Obtenga
+        todo el néctar."
+      courseA_bee_seq12_markdown_instruction: "¡Ayuda a la abeja a obtener un néctar!"
       courseA_bee_seq13_markdown_instruction: |-
         *Buzz buzz!*\r
         \r
-        Use <xml><block
-        type="maze_moveWest"/></xml> **three** times to get the bee to the flower!
-        Don't forget to use <xml><block type="maze_nectar"/></xml> to get nectar!
+        Usa <xml><block
+        type="maze_moveWest"/></xml> ** tres ** veces para llevar la abeja a la flor. ¡No olvides usar <xml><block type="maze_nectar"/></xml>para obtener el néctar!
       courseA_bee_seq14_markdown_instruction: |-
         *Buzz buzz!*\r
         \r
-        Use <xml><block
-        type="maze_moveNorth"/></xml> **three** times to get the bee to the flower!
-        Don't forget to get nectar at the end.
-      courseA_bee_seq2_markdown_instruction: |-
-        Add *one* block to help the bee get
-        nectar from the flower.
-      courseA_bee_seq3_markdown_instruction: |-
-        Can you figure out what is wrong with
-        this code? Help the bee get to the flower!
-      courseA_bee_seq4_markdown_instruction: Try it yourself!
-      courseA_bee_seq5_markdown_instruction: |-
-        You have to move in two directions
-        to get to the flower! Help the bee pick the right direction.
-      courseA_bee_seq6_markdown_instruction: |-
-        Now the bee needs to get nectar from
-        two flowers!
-      courseA_bee_seq7_markdown_instruction: Add two blocks to finish this puzzle!
-      courseA_bee_seq8_markdown_instruction: |-
-        This maze looks familiar... can you
-        figure out what looks different?
-      courseA_bee_seq9_markdown_instruction: |-
-        This bee needs nectar! Do you see a
-        pattern?
+        Usa <xml><block
+        type="maze_moveNorth"/></xml> ** tres ** veces para llevar la abeja a la flor. No te olvides de obtener el néctar al final.
+      courseA_bee_seq2_markdown_instruction: Agregue * un * bloque para ayudar a la
+        abeja a obtener el néctar de la flor.
+      courseA_bee_seq3_markdown_instruction: "¿Puedes descubrir qué está mal con este
+        código? ¡Ayuda a la abeja a llegar a la flor!"
+      courseA_bee_seq4_markdown_instruction: Inténtalo tú mismo!
+      courseA_bee_seq5_markdown_instruction: "¡Tienes que moverte en dos direcciones
+        para llegar a la flor! Ayuda a la abeja a elegir la dirección correcta."
+      courseA_bee_seq6_markdown_instruction: "¡Ahora la abeja necesita obtener el
+        néctar de dos flores!"
+      courseA_bee_seq7_markdown_instruction: "¡Agrega dos bloques para terminar este
+        rompecabezas!"
+      courseA_bee_seq8_markdown_instruction: Este laberinto parece familiar... ¿puedes
+        descubrir qué se ve diferente?
+      courseA_bee_seq9_markdown_instruction: "¡Esta abeja necesita néctar! ¿Ves un
+        patrón?"
       courseA_collector_loops1_markdown_instruction: |-
-        **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        **** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Arrastra
+         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
       courseA_collector_loops12_markdown_instruction: |-
-        *"Eureka!  Get as much treasure
-        as you can!"*  \r
-        (You do not have to get it all.)
+        *"¡Eureka, consigue tanto tesoro como puedas!"*  \r
+        (No tienes que obtenerlo todo)
       courseA_collector_loops12_2018_markdown_instruction: |-
-        *"Eureka!  Get as much
-        treasure as you can!"*  \r
-        (You do not have to get it all.)
+        *"¡Eureka, consigue tanto tesoro como puedas!"*  \r
+        (No tienes que obtenerlo todo)
       courseA_collector_loops1_2018_markdown_instruction: |-
-        **Free Play:** This is
-        Laurel the Adventurer! Move her around and get as much treasure as you can.\r
+        ** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Arrastra
+         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
       courseA_collector_loops2_markdown_instruction: |-
-        Get all three piles! Move Laurel
-        to each piece of treasure, then use this block:\r
+        ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_markdown_instruction: |-
-        Get all three piles! Move
-        Laurel to each piece of treasure, then use this block:\r
+        ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_markdown_instruction: |-
-        How can Laurel get all five
-        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
-        block?
+        ¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type="maze_moveEast"/></xml>
+        bloque?
       courseA_collector_loops3_2018_markdown_instruction: |-
-        How can Laurel get all
-        five piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
-        block?
-      courseA_collector_loops_challenge1_markdown_instruction: |-
-        *"Can you help me
-        spot some bugs? I know which way I want to go, but I'm not sure how many
-        steps to take."*
-      courseA_collector_loops_challenge1_2018_markdown_instruction: |-
-        *"Can you help
-        me spot some bugs? I know which way I want to go, but I'm not sure how many
-        steps to take."*
+        ¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type="maze_moveEast"/></xml>
+        bloque?
+      courseA_collector_loops_challenge1_markdown_instruction: '* "¿Puedes ayudarme
+        a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro
+        de cuántos pasos dar". ** "¿Puedes ayudarme a detectar algunos errores? Sé
+        de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
+      courseA_collector_loops_challenge1_2018_markdown_instruction: '* "¿Puedes ayudarme
+        a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro
+        de cuántos pasos dar". *'
       courseA_collector_preLoops1_markdown_instruction: |-
-        This is Laurel the Adventurer!
+        ¡Esta es Laurel la Aventurera!
         \r
         \r
-        Press "Run" to see her walk up to the treasure and grab it.
+        Pulse el botón "Ejecutar" para verla caminar hasta el tesoro y lo agarra.
       courseA_collector_preLoops2_markdown_instruction: |-
-        Great!  Now you get to add
-        code yourself!  \r
+        ¡Estupendo! ¡Ahora puedes agregar el código tú mismo!  \r
         \r
-        Snap a ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-        block to the bottom of the program and click "Run"!
+        Coloque un ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) bloque en la parte inferior del programa y haga clic en "Ejecutar"!
       courseA_collector_preLoops3_markdown_instruction: |-
-        To grab the treasure, snap
-        two ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
-        blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-        block to the bottom of the program and click "Run"!
+        Para agarrar el tesoro, ¡encaje dos! [](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+         bloques y uno ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+         bloque en la parte inferior del programa y haga clic en "Ejecutar"!
       courseA_collector_preLoops7_markdown_instruction: |-
-        Get all three piles! Move
-        Laurel to each piece of treasure, then use this block:\r
+        ¡Consigue las tres pilas! Mueva Laurel a cada tesoro, luego use este bloque:\r
           <xml><block type="collector_collect"/></xml>
-      courseA_forVideoTest_artist_markdown_instruction: |-
-        Repeat loops work for Artist,
-        too!
+      courseA_forVideoTest_artist_markdown_instruction: "¡Los bucles de repetición
+        también funcionan para Artist!"
       courseA_harvester_forVideo_markdown_instruction: |-
         Can you pick all the corn
         using only **one** move block?
@@ -75726,7 +75583,7 @@
         You will need **one** <xml><block
         type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml>
         block to finish this puzzle!
-      courseA_harvester_loops7_markdown_instruction: 'Try it on your own! '
+      courseA_harvester_loops7_markdown_instruction: "¡Inténtalo! "
       courseA_harvester_loops8_markdown_instruction: |-
         This is the same puzzle, but
         now you have to repeat **three** times instead of two! Use this block:\r
@@ -75768,7 +75625,7 @@
       courseA_harvester_seq5_markdown_instruction: |-
         Can you figure out what is wrong
         with this code? Help the harvester pick the corn!
-      courseA_harvester_seq6_markdown_instruction: Try it yourself!
+      courseA_harvester_seq6_markdown_instruction: Inténtalo tú mismo!
       courseA_harvester_seq7_markdown_instruction: |-
         You have to move in two directions
         to get to the corn! Help the harvester pick the right direction.
@@ -75880,24 +75737,18 @@
         Try this one yourself from the beginning.\r
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
-      courseA_maze_seq5_2018_markdown_instruction: |-
-        Try this one yourself from the
-        beginning.\r
-        \r
-        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_2018_markdown_instruction: Dale una oportunidad a este.
       courseA_maze_seq5a_2018_markdown_instruction: |-
         *"Here piggy, piggy!"*\r
         \r
         What
         can you add to the end of this code to get the bird to the pig?
       courseA_maze_seq6_markdown_instruction: |-
-        Move one way, then another to get
-        the bird to the pig!\r
+        ¡Muéveme en una dirección, luego en otra para llevarme el cerdo!\r
         \r
         ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
-      courseA_maze_seq6_2018_markdown_instruction: |-
-        Move one way, then another to
-        get the bird to the pig!
+      courseA_maze_seq6_2018_markdown_instruction: "¡Muéveme en una dirección, luego
+        en otra para llevarme el cerdo!"
       courseA_maze_seq7_markdown_instruction: |-
         Figure out what is missing and then
         add blocks to get the bird to the pig!\r
@@ -75922,126 +75773,97 @@
         \r
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq9_2018_markdown_instruction: |-
-        **Challenge:** Debug this level
-        by adding blocks to get the bird to the pig!\r
+        ** Desafío: ** Depura este nivel agregando bloques para llevar al pájaro al cerdo.\r
         \r
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
-      courseA_maze_seq_challenge1_markdown_instruction: |-
-        Debug this level. Remove
-        the extra blocks, and add the missing blocks. Get the bird to the pig!
-      courseA_maze_seq_challenge1_2018_markdown_instruction: |-
-        Debug this level. Remove
-        the extra blocks, and add the missing blocks. Get the bird to the pig!
+      courseA_maze_seq_challenge1_markdown_instruction: Depurar este nivel Elimine
+        los bloques adicionales y agregue los bloques faltantes. ¡Lleva el pájaro
+        al cerdo!
+      courseA_maze_seq_challenge1_2018_markdown_instruction: Depurar este nivel Elimine
+        los bloques adicionales y agregue los bloques faltantes. ¡Lleva el pájaro
+        al cerdo!
       courseA_playLab_events3_markdown_instruction: |-
-        Help Jorge the Dog get moving
-        by connecting the <xml><block type="studio_move">\r
+        Ayuda a Jorge el perro a moverse conectando el <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
             <title
         name="DIR">8</title>\r
-          </block></xml> block to the <xml><block type="studio_whenArrow">\r
+          </block></xml> bloque a la <xml><block type="studio_whenArrow">\r
             <title
-        name="VALUE">left</title>\r
-          </block></xml> event block that is already
-        in the workspace.\r
+        name="VALUE">izquierdo</title>\r
+          </block></xml> evento bloque que ya está en el área de trabajo.\r
         \r
-        Get Jorge to the flag to finish this level!
+        ¡Lleva a Jorge a la bandera para terminar este nivel!
       courseA_playLab_events3_2018_markdown_instruction: |-
-        Help Jorge the Dog get
-        moving by connecting the <xml><block type="studio_move">\r
+        Ayuda a Jorge el perro a moverse conectando el <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
             <title
         name="DIR">8</title>\r
-          </block></xml> block to the <xml><block type="studio_whenArrow">\r
+          </block></xml> bloque a la <xml><block type="studio_whenArrow">\r
             <title
-        name="VALUE">left</title>\r
-          </block></xml> event block that is already
-        in the workspace.\r
+        name="VALUE">izquierdo</title>\r
+          </block></xml> evento bloque que ya está en el área de trabajo.\r
         \r
-        Get Jorge to the flag to finish this level!
-      courseA_playLab_events4_markdown_instruction: |-
-        Now, get Jorge to move right
-        when the right arrow button is clicked.
-      courseA_playLab_events4_2018_markdown_instruction: |-
-        Now, get Jorge to move
-        right when the right arrow button is clicked.
-      courseA_playLab_events5_markdown_instruction: |-
-        Add events to have Jorge move
-        up and down when the up arrow and down arrow buttons are pressed.
-      courseA_playLab_events5_2018_markdown_instruction: |-
-        Add events to have Jorge
-        move up and down when the up arrow and down arrow buttons are pressed.
+        ¡Lleva a Jorge a la bandera para terminar este nivel!
+      courseA_playLab_events4_markdown_instruction: Ahora, haga que Jorge se mueva
+        hacia la derecha cuando haga clic en el botón de flecha hacia la derecha.
+      courseA_playLab_events4_2018_markdown_instruction: Ahora, haga que Jorge se
+        mueva hacia la derecha cuando haga clic en el botón de flecha hacia la derecha.
+      courseA_playLab_events5_markdown_instruction: Agregue eventos para que Jorge
+        se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha
+        arriba y flecha abajo.
+      courseA_playLab_events5_2018_markdown_instruction: Agregue eventos para que
+        Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones
+        de flecha arriba y flecha abajo.
       courseA_playlab_events_challenge1_markdown_instruction: |-
-        Clicking Olive will
-        make Robin appear! Can you write code to show the rest of the characters too?\r
+        Al hacer clic en Olive
+         aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
         \r
-        In
-        this puzzle, make sure to click for hints! The hints will help you do this
-        project step-by-step!\r
+        En este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos te ayudarán a hacer este proyecto paso a paso!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge1_2018_markdown_instruction: |-
-        Clicking Olive
-        will make Robin appear! Can you write code to show the rest of the characters
-        too?\r
+        Al hacer clic en Olive
+         aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
         \r
-        In this puzzle, make sure to click for hints! The hints will help
-        you do this project step-by-step!\r
+        En este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos te ayudarán a hacer este proyecto paso a paso!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
-      courseA_playlab_events_challenge1a_markdown_instruction: |-
-        Where are my friends
-        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
-        Olive will make Robin appear! Can you write code to show the rest of my friends
-        too?\r
-        \r
-        \r
-        In this puzzle, make sure to click for hints! The hints will
-        help you do this project step-by-step!\r
-        \r
-        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
-        PM.png)
+      courseA_playlab_events_challenge1a_markdown_instruction: "¿Dónde se esconden
+        mis amigos\n ? En este juego, al hacer clic en mí, ¡se mostrará a mi amigo
+        Olive, el gato! Al hacer clic en \nOlive aparecerá Robin. ¿Puedes escribir
+        código para mostrarle al resto de mis amigos también?\\r\n\\r\n\\r\nEn este
+        rompecabezas , hacer asegúrese de hacer clic para consejos ! ¡Los consejos
+        te ayudarán a hacer este proyecto paso a paso!\\r\n\\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challenge2_markdown_instruction: |-
-        Give everyone something
-        to do when you click on them. What will the animals say? What else will happen?\r
+        Dé a cada uno algo que hacer cuando haga clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?\r
         \r
-        In
-        this puzzle, make sure to click for hints. The hints will give you fun things
-        to try!\r
+        En este rompecabezas , hacer asegúrese de hacer clic para consejos . ¡Los consejos te darán cosas divertidas para probar!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge2_2018_markdown_instruction: |-
-        Give everyone
-        something to do when you click on them. What will the animals say? What else
-        will happen?\r
+        Dé a cada uno algo que hacer cuando haga clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?\r
         \r
-        In this puzzle, make sure to click for hints. The hints
-        will give you fun things to try!\r
+        En este rompecabezas , hacer asegúrese de hacer clic para consejos . ¡Los consejos te darán cosas divertidas para probar!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
-      courseA_playlab_events_challengeClone_markdown_instruction: |-
-        Where are my friends
-        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
-        Olive will make Robin appear! Can you write code to show the rest of my friends
-        too?\r
-        \r
-        \r
-        In this puzzle, make sure to click for hints! The hints will
-        help you do this project step-by-step!\r
-        \r
-        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
-        PM.png)
+      courseA_playlab_events_challengeClone_markdown_instruction: "¿Dónde se esconden
+        mis amigos\n ? En este juego, al hacer clic en mí, ¡se mostrará a mi amigo
+        Olive, el gato! Al hacer clic en \nOlive aparecerá Robin. ¿Puedes escribir
+        código para mostrarle al resto de mis amigos también?\\r\n\\r\n\\r\nEn este
+        rompecabezas , hacer asegúrese de hacer clic para consejos ! ¡Los consejos
+        te ayudarán a hacer este proyecto paso a paso!\\r\n\\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseB_Scrat_ramp1_2018_markdown_instruction: |-
         To get Scrat to the acorn,
         snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
         the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       courseB_Scrat_ramp2_2018_markdown_instruction: |-
-        Attach both <xml><block type="maze_moveEast"/></xml>
-        blocks to <xml><block type="when_run"/></xml> to finish your code, then
-        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+        Snap both <xml><block type="maze_moveEast"/></xml>
+        blocks to the bottom of the <xml><block type="when_run"/></xml> block to
+        finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseB_Scrat_ramp3a_2018_markdown_instruction: |-
         Grab a <xml><block type="maze_moveNorth"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
@@ -76100,19 +75922,15 @@
         Draw as many X's
         as you can. Can you get 3 in a row?
       courseB_collector_loops1_markdown_instruction: |-
-        **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        **** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Arrastra
+         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
       courseB_collector_loops1_2018_markdown_instruction: |-
-        **Free Play:** This is
-        Laurel the Adventurer! Move her around and get as much treasure as you can.\r
+        ** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Arrastra
+         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure,
         then use the<xml><block type="collector_collect"/></xml>block to pick it
@@ -76132,9 +75950,8 @@
         piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
         block?
       courseB_collector_loops3_2018_markdown_instruction: |-
-        How can Laurel get all
-        five piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
-        block?
+        ¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type="maze_moveEast"/></xml>
+        bloque?
       courseB_collector_loops3_predict1_markdown_instruction: |-
         How can Laurel collect
         all five piles of gold using only one `E -->` block?
@@ -77542,6 +77359,129 @@
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_Frozen_nested9_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
+      courseD_artist_1_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r
+        \r
+        Draw a hexagon
+        with 50 pixel long sides.  \r
+        \r
+        ---\r
+        \r
+        To draw a hexagon, you will
+        need to: \r
+        - move forward by **50** pixels\r
+        - turn right by **60** degrees\r
+        -
+        repeat a total of **6** times\r
+        \r
+      courseD_artist_2_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Good job!”_\r
+        \r
+        After your hexagon, turn right by **60** degrees, then
+        draw a line that is **150** pixels long.   \r
+        \r
+        Finish by putting Elsa
+        back to the center of the play area, using the <xml><block type="jump_to"><title
+        name="VALUE">middle center</title></block></xml> block.\r
+        \r
+        \r
+      courseD_artist_3_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Let’s make a snowflake.”_\r
+        \r
+        To turn this code into a snowflake, nest
+        all of the code inside of another `repeat` loop and run it a total of **6**
+        times.  You should only need to add one block.\r
+        \r
+      courseD_artist_4_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let's make our snowflakes special!"_\r
+        \r
+        **Inspiration:** Where do
+        you need to add code if you want to draw a tiny square at the tip of each
+        long line?\r
+        \r
+        ---\r
+        You can try whatever you want in this puzzle, but
+        here is an idea:\r
+        \r
+        Try making a tiny square at the end of each line\r
+        -
+        Each side should be 15 pixels long\r
+        - You should turn right by 90 degrees\r
+        -
+        Repeat those actions a total of 4 times
+      courseD_artist_5_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Try changing the shapes or the lengths of the lines to make this your own!"_\r
+        \r
+        <br/>  \r
+        \r
+        **Inspiration:**
+        You can change your drawing in any way you want, but here is an idea:\r
+        \r
+        -
+        Try switching the types of shape in the middle of the snowflake with the one
+        at the end of each line!
+      courseD_artist_6_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s try something new. This time, skate in a zig-zag."_\r
+        \r
+        \r
+        <img
+        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
+        Draw a
+        stair-step pattern that uses turns between 75 and 105 degrees -- but make
+        sure that your left and right turns use the same angle.  \r
+        (You will see
+        why later.)
+      courseD_artist_7_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Now let’s turn and go back the way we came."_\r
+        \r
+        Turn around 180 degrees
+        and draw the exact same stair pattern again!  \r
+        \r
+        - The rest of this stage
+        will be easier if you put all of your code inside of a loop to make Elsa  draw,
+        turn around 180 degrees, draw, then turn around 180 degrees again.\r
+        \r
+        <hr/>\r
+        \r
+        Here
+        is an example of stairs that use a 76 degree turn:\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      courseD_artist_8_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s spin and make it into a snowflake."_\r
+        \r
+        Spin that shape around
+        5 or 6 times in a circle.\r
+        - If you choose 5 times,  try a turn of 72 degrees\r
+        -
+        If you choose 6 times,  try a turn of 60 degrees\r
+        <hr/>\r
+        \r
+        Here's an
+        example of Elsa turning a pattern 6 times:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_9_2018_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\r
         \r
@@ -81937,10 +81877,9 @@
         "arrrg" should be "a" \r
         - "ye" should be "e"\r
         \r
-      coursea_maze_ramp1_2018_markdown_instruction: |-
-        To get the bird to the pig,
-        snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
-        the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      coursea_maze_ramp1_2018_markdown_instruction: Para obtener el ave al cerdo,
+        encaje el <xml><block type="maze_moveEast"/></xml> bloque a la parte inferior
+        del <xml><block type="when_run"/></xml> bloque , ¡luego presione![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3_markdown_instruction: |-
         *"This pig is ruffling my feathers."*\r
         \r
@@ -85358,16 +85297,11 @@
       grade2_PuppyLoops_4_markdown_instruction: |-
         In this puzzle, two `repeat` loops
         will help you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_8_markdown_instruction: |-
-        Este código para los bigotes del gato
-        es incorrecto. \r
-        \r
-        Arréglalo para dibujar bigotes que sean todos del mismo tamaño.
-      grade2_PuppyLoops_9_markdown_instruction: |-
-        ¡Parace que la C en "code" está dibujada
-        al revés!\r
-        \r
-        ¿Puedes hacer que parezca una C de nuevo?
+      grade2_PuppyLoops_8_markdown_instruction: "Este código para los bigotes del
+        gato \nes incorrecto. \\ r \n\\ r \nCorrige este código para dibujar bigotes
+        que tengan la misma longitud."
+      grade2_PuppyLoops_9_markdown_instruction: ¡Parace que la C en "código" está
+        dibujada al revés! \ r \ r ¿Puedes hacer que parezca una C de nuevo?
       grade2_collector_10_markdown_instruction: |-
         You're almost done!  \r
         \r
@@ -85910,10 +85844,11 @@
         100 pixels.  \r
         The bridge between the glasses is 75 pixels long.\r
         \r
-      grade4_artist_functions2_markdown_instruction: ¡Las funciones permiten definir
-        nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función
-        llamada "dibuja un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado"
-        para crear los lentes? Los cuadrados están separados por 75 píxeles.
+      grade4_artist_functions2_markdown_instruction: "¡Las funciones te permiten definir
+        nuevos\n bloques! \\r\n\\r\nHemos movido los bloques necesarios para dibujar
+        un cuadrado en una\n función llamada ` dibujar un cuadrado`. Esta vez, utilice
+        el ` dibujar un square` función \npara crear las gafas \\r\n\\r\nLos cuadrados
+        están separados por 75 píxeles."
       grade4_artist_functions2a_markdown_instruction: |-
         Create this image using only
         the blocks provided.\r
