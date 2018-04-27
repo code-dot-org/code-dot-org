@@ -484,7 +484,6 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    autoRecoverFileSystem: true,
     url: "//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
@@ -584,8 +583,24 @@ function load(Bramble) {
       error: err && err.message
     });
 
-    if (err && err.code === "EFILESYSTEMERROR") {
+    const showFSErrorAlert = () => {
       alert("Sorry, it looks like we cannot load this project because you are running low on disk space. Please clear some disk space and try again. If you still see errors, please contact support@code.org.");
+    };
+
+    if (err && err.code === "EFILESYSTEMERROR") {
+      if (!brambleProxy_) {
+        // We haven't completed loading yet, try to format the FS and re-load
+        Bramble.formatFileSystem(formatErr => {
+          if (formatErr) {
+            console.error("Bramble formatFileSystem error", formatErr);
+            showFSErrorAlert();
+          } else {
+            load(Bramble);
+          }
+        });
+      } else {
+        showFSErrorAlert();
+      }
     } else {
       alert("Fatal Error: " + err.message + ". If you're in Private Browsing mode, data can't be written.");
     }
