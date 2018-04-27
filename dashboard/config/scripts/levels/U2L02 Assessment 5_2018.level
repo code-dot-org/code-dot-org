@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:18.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "The Need For Addressing",
+    "markdown_instructions": "Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?",
+    "encrypted_solution": "JxjBmqtSEDWl7UJ2fp4f7ArNqeqUwMJ+fKn2cxzTOgFmPF1owmXVm6tAjz34\nFEKBU5/lLEGg3vpHlq8dCbPK2EV5WX5lccGQx4NfBxkGOUxviWsY6ZkuVGCG\nZqkGXMlkm9jsC02lmgxCUQs7atOGJnqMvg72oz2CMNnZkESx2l18luLvQTXU\nvgUFZ8uw5BGUkszOMTANmQgM3VHjABTFI+s44LorYIHn7Dj1mzV4KNZrSNao\n2YIhMJbEenyhFltA47l+jPG7Xj13aUDOJHsqIn+VZSja1VZYcsUczA5EMVMa\nt3dAywWyDmSVE0Z5inyaL9UeAt7BzOyq8CY92KK90g==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2702,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

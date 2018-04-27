@@ -1,0 +1,12 @@
+name 'U1L8 Multiple Choice_2018'
+title 'Sending Numbers: Multiple Choice Assessment'
+description ''
+question 'You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?'
+wrong '16'
+right '14'
+wrong '13'
+wrong '10'
+
+teacher_markdown <<MARKDOWN
+14 bits because you need 7 bits each for the x and y coordinates.  7 bits lets you encode 128 different numbers (0-127) so that is enough to span a 96 cell grid.  6 bits each would only let you encode 64 different numbers.
+MARKDOWN
