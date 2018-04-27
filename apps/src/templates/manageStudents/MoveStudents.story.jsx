@@ -1,5 +1,5 @@
 import React from 'react';
-import MoveStudents from './MoveStudents';
+import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
 
 const studentData = [
   {
@@ -16,6 +16,21 @@ const studentData = [
   }
 ];
 
+const sections = [
+  {
+    id: 1,
+    name: 'Section A'
+  },
+  {
+    id: 2,
+    name: 'Section B'
+  },
+  {
+    id: 3,
+    name: 'Section C'
+  }
+];
+
 export default storybook => {
   storybook
     .storiesOf('MoveStudents', module)
@@ -24,7 +39,10 @@ export default storybook => {
         name: 'Move students dialog',
         description: 'Ability to move students in a certain section to a different section or teacher',
         story: () => (
-          <MoveStudents studentData={studentData} />
+          <MoveStudents
+            studentData={studentData}
+            sections={sections}
+          />
         )
       }
     ]);
