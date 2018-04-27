@@ -33,9 +33,12 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     object.try(:registered_workshop?)
   end
 
+  def teachercon_assigned_at_registration
+    tc_registration.try(:teachercon_city)
+  end
+
   def accepted_teachercon
-    # object is either an application (with possibly a linked TC registration), or itself a TC registration
-    (object.try(:pd_teachercon1819_registration) || object).try(:accepted_seat_simplified)
+    tc_registration.try(:accepted_seat_simplified)
   end
 
   def assigned_fit
@@ -44,6 +47,10 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
 
   def registered_fit
     object.try(:registered_fit_workshop?)
+  end
+
+  def fit_assigned_at_registration
+    object.try(:pd_fit_weekend1819_registration).try(:fit_city)
   end
 
   def accepted_fit
@@ -76,5 +83,12 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     else # fit
       object.try(:pd_fit_weekend1819_registration).try(:form_data_hash)
     end
+  end
+
+  private
+
+  def tc_registration
+    # object is either an application (with possibly a linked TC registration), or itself a TC registration
+    object.try(:pd_teachercon1819_registration) || object
   end
 end
