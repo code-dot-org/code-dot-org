@@ -42,12 +42,15 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING
   },
-  moveToSectionLabel: {
-    paddingTop: PADDING,
-    paddingBottom: PADDING
+  label: {
+    paddingTop: PADDING / 2
   },
-  inputBox: {
-    width: 225
+  input: {
+    marginLeft: PADDING / 2
+  },
+  radioOption: {
+    paddingLeft: PADDING / 2,
+    fontWeight: 'normal'
   }
 };
 
@@ -280,12 +283,13 @@ class MoveStudents extends Component {
               <form>
                 <label
                   htmlFor="sections"
-                  style={styles.moveToSectionLabel}
+                  style={styles.label}
                 >
                   {`${i18n.moveToSection()}:`}
                 </label>
                 <select
                   name="sections"
+                  style={styles.input}
                   onChange={this.onChangeSection}
                 >
                   {this.renderOptions()}
@@ -293,33 +297,42 @@ class MoveStudents extends Component {
               </form>
               {otherTeacherSelected &&
                 <form>
-                  <label htmlFor="sectionCode">{`${i18n.enterSectionCode()}:`}</label>
+                  <label
+                    htmlFor="sectionCode"
+                    style={styles.label}
+                  >
+                    {`${i18n.enterSectionCode()}:`}
+                  </label>
                   <input
                     required
                     name="sectionCode"
-                    style={styles.inputBox}
+                    style={{...styles.input, width: 225}}
                     value={otherTeacherSectionValue}
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
                   />
-                  <label>{i18n.bothSectionsQuestion()}</label>
-                  <label>
+                <label style={styles.label}>{i18n.bothSectionsQuestion()}</label>
+                  <label style={styles.input}>
                     <input
                       type="radio"
                       value={COPY}
                       checked={copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    {i18n.copyStudentsConfirm()}
+                    <span style={styles.radioOption}>
+                      {i18n.copyStudentsConfirm()}
+                    </span>
                   </label>
-                  <label>
+                  <label style={styles.input}>
                     <input
                       type="radio"
                       value="move"
                       checked={!copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    {i18n.moveStudentsConfirm()}
+                    <span style={styles.radioOption}>
+                      {i18n.moveStudentsConfirm()}
+                    </span>
                   </label>
                 </form>
               }
