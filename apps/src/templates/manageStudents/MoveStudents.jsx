@@ -54,7 +54,7 @@ const styles = {
   }
 };
 
-const DEFAULT_STATE = {
+export const DEFAULT_STATE = {
   isDialogOpen: false,
   selectedIds: [],
   selectedSectionId: null,
