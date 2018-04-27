@@ -1,0 +1,13 @@
+name 'U2L02 Assessment 4_2018'
+title 'The Need For Addressing'
+question 'Which of the following information is not necessary in your protocol to play battleship?'
+wrong 'Grid Coordinates'
+wrong 'From'
+wrong 'To'
+right 'Time of Day'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Time
+MARKDOWN

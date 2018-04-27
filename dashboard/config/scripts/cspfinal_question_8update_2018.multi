@@ -1,0 +1,40 @@
+name 'CSPFinal_Question_8update_2018'
+question ' '
+
+wrong ‘<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+right '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+wrong ‘<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+wrong ‘<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>’
+
+markdown <<MARKDOWN
+Consider the following three binary numbers:
+
+<code style="color: black;">&nbsp;01010</code>
+
+<code style="color: black;">010000</code>
+
+<code style="color: black;">&nbsp;&nbsp;1110</code>
+
+Which of the following lists the numbers in order from **least to greatest**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The decimal value for each of the given numbers is:
+
+<code style="color: black;">&nbsp;01010</code> 10
+
+<code style="color: black;">010000</code> 16
+
+<code style="color: black;">&nbsp;&nbsp;1110</code> 14
+
+Thus the correct ordering of the answer is:
+
+<code style="color: black; background-color: #c9f9c0">&nbsp;01010</code> 10
+
+<code style="color: black; background-color: #c9f9c0">&nbsp;&nbsp;1110</code> 14
+
+<code style="color: black; background-color: #c9f9c0">010000</code> 16
+
+
+
+MARKDOWN
