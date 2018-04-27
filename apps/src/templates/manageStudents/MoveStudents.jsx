@@ -49,8 +49,7 @@ const styles = {
     marginLeft: PADDING / 2
   },
   radioOption: {
-    paddingLeft: PADDING / 2,
-    fontWeight: 'normal'
+    paddingLeft: PADDING / 2
   }
 };
 
