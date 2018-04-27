@@ -8,13 +8,7 @@ nav: about_nav
 
 ---
 
-# Major Promotional Partners
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'promotional') %>
-
----
-
-# Activity Partners
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'tutorial') %>
 
