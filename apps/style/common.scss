@@ -1586,7 +1586,26 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   background-size: 432px 757px;
 }
 
+@media screen and (max-height: 780px) {
+  .legacy-share-view {
+    div#visualizationColumn.wireframeShare {
+      width: 402px !important;
+      height: 602px !important;
+      background-size: 402px 602px;
+
+      div#phoneFrameScreen {
+        border-width: 1px;
+        border-color: gray;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
 .legacy-share-view {
+  overflow: hidden;
+
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
   }
