@@ -460,6 +460,10 @@ export default function teacherSections(state=initialState, action) {
         scriptId: script.id,
         assignId,
         path: `/s/${script.script_name}`,
+
+        // For now we put each script in its own assignment group. When we
+        // implement versioning for scripts we will start computing these values
+        // on the server.
         base_name: script.script_name,
         version_year: defaultVersionYear,
       };
