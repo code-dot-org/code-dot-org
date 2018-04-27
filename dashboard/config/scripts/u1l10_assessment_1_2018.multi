@@ -1,0 +1,13 @@
+name 'U1L10 Assessment 1_2018'
+title 'Assessment: Encoding Text'
+description ''
+question 'What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?' 
+wrong '2 bits'
+wrong '3 bits'
+wrong '4 bits'
+right '5 bits'
+wrong '6 bits'
+
+markdown <<MARKDOWN
+
+MARKDOWN

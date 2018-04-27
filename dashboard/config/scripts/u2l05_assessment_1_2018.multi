@@ -1,0 +1,13 @@
+name 'U2L05 Assessment 1_2018'
+title 'Packets and Making a Reliable Internet: Question 1'
+type 'multi2'
+
+question 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
+wrong 'Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent'
+right 'TCP ensures messages can be reliably transmitted across the Internet'
+wrong 'TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission'
+right 'TCP must account for the fact that packets may not arrive at a destination computer in the intended order'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
