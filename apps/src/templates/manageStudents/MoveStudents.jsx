@@ -207,7 +207,7 @@ class MoveStudents extends Component {
 
   renderOptions = () => {
     let options = this.props.sections.map(section => <option key={section.id} value={section.id}>{section.name}</option>);
-    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>{i18n.otherTeacher()}</option>); // TODO: i18n
+    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>{i18n.otherTeacher()}</option>);
 
     return options;
   };
