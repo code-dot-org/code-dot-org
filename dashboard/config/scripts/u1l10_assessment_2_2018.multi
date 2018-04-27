@@ -1,0 +1,19 @@
+name 'U1L10 Assessment 2_2018'
+title 'Assessment: Encoding Text'
+description ''
+question 'The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the “Shift” key at the same time.
+
+How many bits would you need to encode everything that could be typed on this keyboard?'
+wrong '3 bits'
+wrong '4 bits'
+wrong '5 bits'
+wrong '6 bits'
+right '7 bits'
+wrong '12 bits'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+47 character + another 47 with shift = 94 total characters.  You'd need 7 bits to encode that many characters.
+MARKDOWN

@@ -1,0 +1,32 @@
+name 'v2 U1 Internet is for Everyone Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 8 - The Internet Is for Everyone
+
+## Background
+
+So far in this class you have solved a few problems by creating and using small protocols for transmitting data over a wire, but the Internet is obviously much bigger than a single wire connecting two people. It connects billions of people and even more billions of machines.  For it to work there must be open standards and protocols that anyone can follow, so that any machine can communicate with any other.  Without protocols it would be like machines speaking different languages. We’re going to look at some of the technical issues involved with having lots of machines trying to communicate at the same time in the next several lessons. In order to set the stage we want to consider some of the big societal questions about the importance of the Internet and issues and threats to its existence.
+
+## Vocabulary
+
+* **Request for Comments (RFC)** documents are how standards and protocols are defined and published for all to see on the IETF website.
+
+## Lesson
+
+* Brief history on the IETF, and RFCs
+* Read/Skim RFC 3271 - The Internet Is For Everyone
+* Report and share examples from student experience that apply to these challenges
+
+## Resources
+
+* Primary Source: "The Internet is for Everyone" - Activity Guide ([PDF](https://docs.google.com/document/d/1Wk_gWNLaFJHHgPKmWwasjKFZpVR5tHqxKY5M9ecbFC8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Wk_gWNLaFJHHgPKmWwasjKFZpVR5tHqxKY5M9ecbFC8/export?format=doc))
+* The Internet Is For Everyone - Abbreviated Version - Resource ([PDF](https://docs.google.com/document/d/1Ir6-we2SdZXtm81gVjGfd2ewkGC6CKEU3tCzo5CdrNg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Ir6-we2SdZXtm81gVjGfd2ewkGC6CKEU3tCzo5CdrNg/export?format=doc))
+* KWL Chart - Handout ([PDF](https://docs.google.com/document/d/1eeh7T0eTLY0xLq8SIA-q_cmElODwhZ2De28E4mgnZcQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eeh7T0eTLY0xLq8SIA-q_cmElODwhZ2De28E4mgnZcQ/export?format=doc))
+
+
+
+MARKDOWN

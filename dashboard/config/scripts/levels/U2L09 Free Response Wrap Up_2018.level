@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "The Need for DNS: Wrap Up",
+    "markdown_instructions": "Why don’t we need to know the IP addresses for our favorite sites?\n",
+    "encrypted_solution": "f6AVAUtx8xAubjy+rqJdS35jswFfBBTM/5LrNQqC7eaI816vklAHukX+vxQ7\nTbyDInoL+i4jcHOk/Le8bPm6TA4bofmsLaDIWokRN+ZyJNR3AMPWfsqAs57c\nh/uRjSBG5cORS9ioHnvPoY0ta2iL2ZkI5UOKQVNyNznvuQqzOXLuzJ7LbPJ+\naCvPS3sJQAnadkJ7ycik3Q5coM5CmAN6M3e/LLPnYRnU3v+hfhf1i/+CHSqq\nSlepEraG++IOvUg3\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2479,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

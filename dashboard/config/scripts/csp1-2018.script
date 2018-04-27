@@ -1,0 +1,128 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
+has_verified_resources true
+has_lesson_plan true
+
+stage 'CS Principles Pre-survey', lockable: true
+assessment 'csp-pre-survey-2017-levelgroup_2018'
+
+stage 'Personal Innovations', flex_category: 'csp1_1'
+level 'U1L1 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'
+variants
+  level 'csp_socialBelonging_control_2018', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_intervention_2018', experiments: ["rene-belonging-control","rene-belonging-affirmation"], progression: 'Reflection: starting out in computer science'
+endvariants
+
+stage 'Sending Binary Messages', flex_category: 'csp1_1'
+level 'v2 U1L2 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U1L2 Multiple Choice Assessment Question_2018', progression: 'Check Your Understanding'
+assessment 'U1L3 Free response reflection question_2018', progression: 'Check Your Understanding'
+assessment 'U1L2 Free response assessment question_2018', progression: 'Check Your Understanding'
+assessment 'U1L3 Free Response_2018', progression: 'Check Your Understanding'
+
+stage 'Sending Binary Messages with the Internet Simulator', flex_category: 'csp1_1'
+level 'v2 U1L3 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Sending Binary Messages_2018', progression: 'Internet Simulator: Sending Binary Messages'
+named_level 'The Internet: Wires, Cables, and Wifi_2018', progression: 'The Internet: Wires, Cables, and Wifi'
+assessment 'U1L4 Multiple Choice_2018', progression: 'Check Your Understanding'
+assessment 'U1L3 Multiple Choice_2018', progression: 'Check Your Understanding'
+assessment 'U1L4 Free Response Reflection_2018', progression: 'Check Your Understanding'
+assessment 'U1L5 Matching Assessment_2018', progression: 'Check Your Understanding'
+
+stage 'Number Systems', flex_category: 'csp1_1'
+level 'v2 U1L4 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U1L6 Assessment multiple choice_2018', progression: 'Check Your Understanding'
+assessment 'U1L6 Free Response Reflection_2018', progression: 'Check Your Understanding'
+
+stage 'Binary Numbers', flex_category: 'csp1_1'
+level 'v2 U1L5 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Widget: Binary Odometer_2018', progression: 'Widget: Binary Odometer'
+assessment 'U1L7 Free Response Assessment_2018', progression: 'Check Your Understanding'
+assessment 'U1L7 Free Response Reflection_2018', progression: 'Check Your Understanding'
+
+stage 'Sending Numbers', flex_category: 'csp1_1'
+level 'v2 U1L6 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet Simulator: Sending Numbers'
+assessment 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding'
+assessment 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding'
+
+stage 'Encoding and Sending Formatted Text', flex_category: 'csp1_1'
+level 'v2 U1L8 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text'
+assessment 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L10 Assessment 2_2018', progression: 'Check Your Understanding'
+assessment 'U1L10 Assessment Free Response_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Assessment 2_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Reflection Free Response_2018', progression: 'Check Your Understanding'
+assessment 'U1L11 Collaboration Reflection_2018', progression: 'Check Your Understanding'
+
+stage 'Unit 1 Chapter 1 Assessment', lockable: true, flex_category: 'csp1_1'
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018'
+
+stage 'The Internet', flex_category: 'csp1_2'
+level 'v2 U1 Internet is for Everyone Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'What is the Internet?_2018', progression: 'What is the Internet?'
+assessment 'U2L01 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L01 Assessment 2_2018', progression: 'Check Your Understanding'
+assessment 'U2L01 Assessment 3_2018', progression: 'Check Your Understanding'
+assessment 'U2L01 Assessment 4_2018', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-1-levelgroup-U1Ch2_2018', progression: 'Quick Check-In'
+
+stage 'The Need for Addressing', flex_category: 'csp1_2'
+level 'v2 U1L9 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Broadcast_2018', progression: 'Internet Simulator: Broadcast'
+named_level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS'
+assessment 'U2L02 Free Response Reflection_2018', progression: 'Check Your Understanding'
+assessment 'U2L02 Assessment 3_2018', progression: 'Check Your Understanding'
+assessment 'U2L02 Assessment 4_2018', progression: 'Check Your Understanding'
+assessment 'U2L02 Assessment 5_2018', progression: 'Check Your Understanding'
+assessment 'U2L3 Assessment 2_2018', progression: 'Check Your Understanding'
+
+stage 'Routers and Redundancy', flex_category: 'csp1_2'
+level 'v2 U1L10 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Routers_2018', progression: 'Internet Simulator: Routers'
+assessment 'U2L04 Assessment1_2018', progression: 'Check Your Understanding'
+assessment 'U2L04 Assessment4_2018', progression: 'Check Your Understanding'
+assessment 'U2L04 Assessment5_2018', progression: 'Check Your Understanding'
+assessment 'U2L04 Assessment2_2018', progression: 'Check Your Understanding'
+assessment 'U2L04 Assessment3_2018', progression: 'Check Your Understanding'
+
+stage 'Packets and Making a Reliable Internet', flex_category: 'csp1_2'
+level 'v2 U1L11 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: Packets_2018', progression: 'Internet Simulator: Packets'
+named_level 'The Internet: Packets, Routing, and Reliability_2018', progression: 'The Internet: Packets, Routing, and Reliability'
+assessment 'U2L05 Reflection 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Assessment 2_2018', progression: 'Check Your Understanding'
+assessment 'U2L3 Assessment_2018', progression: 'Check Your Understanding'
+
+stage 'The Need for DNS', flex_category: 'csp1_2'
+level 'v2 U1L12 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS'
+named_level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS'
+assessment 'U2L09 Assessment1_2018', progression: 'Check Your Understanding'
+assessment 'U2L09 Assessment2_2018', progression: 'Check Your Understanding'
+assessment 'U2L09 Free Response Wrap Up_2018', progression: 'Check Your Understanding'
+assessment 'U2L10 Assessment1_2018', progression: 'Check Your Understanding'
+
+stage 'HTTP and Abstraction', flex_category: 'csp1_2'
+level 'v2 U1L13 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'The Internet: HTTP and HTML_2018', progression: 'The Internet: HTTP and HTML'
+assessment 'U2L11 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L11 Assessment 2_2018', progression: 'Check Your Understanding'
+assessment 'U2L11 Free Response_2018', progression: 'Check Your Understanding'
+
+stage 'Practice PT - The Internet and Society', flex_category: 'csp1_2'
+level 'v2 U1L14 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Unit 1 Chapter 2 Assessment', lockable: true, flex_category: 'csp1_2'
+variants
+  level 'csp_affirmation_control_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
+assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018'

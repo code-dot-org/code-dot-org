@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:50.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Sending Formatted Text",
+    "markdown_instructions": "Respond to this prompt or to another as directed by your teacher.\n\nHow long did it take to send a formatted text message using your protocol? \n\nHow many extra bits did your encoding scheme need to communicate the text?  Calculate the percentage of bits that were used for formatting instead of sending the actual text message. \n\npercent = (formatting bits)/(total bits) * 100\n\n\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1933,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

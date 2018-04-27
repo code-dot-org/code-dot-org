@@ -1,0 +1,17 @@
+name 'U2L04 Assessment5_2018'
+title 'Routers and Redundancy: Question 3'
+type 'multi2'
+height 'auto'
+
+question 'Which two of the following statements are true about routing on the Internet.'
+wrong 'Information travelling between two computers over the Internet will always take the same path.'
+wrong 'Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.'
+wrong 'There is one router which receives and redirects all the traffic of the Internet.'
+right 'A packet travelling between two computers on the Internet may be rerouted many times along the way.'
+right 'A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.'
+teacher_markdown <<MARKDOWN
+Answers:
+
+- D: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+- E: A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+MARKDOWN
