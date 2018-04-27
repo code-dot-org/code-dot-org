@@ -420,12 +420,13 @@ end
 # Since channel ids are derived from user id and other sequential integer ids
 # use a new S3 sources directory for each Test Build to prevent a UI test
 # from inadvertently using a channel id from a previous Test Build.
-# CircleCI environments already suffix the Circle Build number on the sources directory:
+# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
 # https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+# Detect Circle environment just to be safe.
 def sources_s3_dir
   if rack_env?(:production)
     'sources'
-  elsif rack_env?(:test) && !ENV['CI']
+  elsif rack_env?(:test) && !ENV['CIRCLECI']
     "sources_#{rack_env}/#{GitUtils.git_revision_short}"
   else
     "sources_#{rack_env}"
