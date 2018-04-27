@@ -13,13 +13,16 @@ import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSec
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
+const DIALOG_WIDTH = 800;
 const CHECKBOX_CELL_WIDTH = 50;
 const OTHER_TEACHER = "otherTeacher";
 const COPY = "copy";
 
 const styles = {
   dialog: {
-    padding: PADDING
+    padding: PADDING,
+    width: DIALOG_WIDTH,
+    marginLeft: -(DIALOG_WIDTH / 2)
   },
   container: {
     display: 'flex'
@@ -33,6 +36,15 @@ const styles = {
   },
   checkbox: {
     margin: 0
+  },
+  rightColumn: {
+    flex: 1,
+    paddingLeft: PADDING,
+    paddingRight: PADDING
+  },
+  moveToSectionLabel: {
+    paddingTop: PADDING,
+    paddingBottom: PADDING
   },
   inputBox: {
     width: 225
@@ -192,7 +204,7 @@ class MoveStudents extends Component {
 
   renderOptions = () => {
     let options = this.props.sections.map(section => <option key={section.id} value={section.id}>{section.name}</option>);
-    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>Other Teacher</option>); // TODO: i18n
+    options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>{i18n.otherTeacher()}</option>); // TODO: i18n
 
     return options;
   };
@@ -263,10 +275,13 @@ class MoveStudents extends Component {
               <Table.Header />
               <Table.Body rows={sortedRows} rowKey="id" />
             </Table.Provider>
-            <div>
+            <div style={styles.rightColumn}>
               <div>{i18n.selectStudentsToMove()}</div>
               <form>
-                <label htmlFor="sections">
+                <label
+                  htmlFor="sections"
+                  style={styles.moveToSectionLabel}
+                >
                   {`${i18n.moveToSection()}:`}
                 </label>
                 <select
@@ -278,9 +293,7 @@ class MoveStudents extends Component {
               </form>
               {otherTeacherSelected &&
                 <form>
-                  <label htmlFor="sectionCode">
-                    {`${i18n.enterSectionCode()}:`}
-                  </label>
+                  <label htmlFor="sectionCode">{`${i18n.enterSectionCode()}:`}</label>
                   <input
                     required
                     name="sectionCode"
@@ -289,7 +302,7 @@ class MoveStudents extends Component {
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
                   />
-                  <label htmlFor="moveOrCopy">{i18n.bothSectionsQuestion()}</label>
+                  <label>{i18n.bothSectionsQuestion()}</label>
                   <label>
                     <input
                       type="radio"
