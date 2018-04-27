@@ -484,7 +484,6 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    autoRecoverFileSystem: true,
     url: "//downloads.computinginthecore.org/bramble_0.1.26/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
