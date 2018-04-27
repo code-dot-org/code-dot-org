@@ -149,7 +149,7 @@ const initialState = {
   studentLevelProgressByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
-  isLoadingProgress: false,
+  isLoadingProgress: true,
 };
 
 export default function sectionProgress(state=initialState, action) {
@@ -187,8 +187,11 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_SECTION) {
     // Default the scriptId to the script assigned to the section
     const defaultScriptId = action.section.script ? action.section.script.id : null;
+    // Setting the section is the first action to be called when switching
+    // sections, which requires us to reset our state. This might need to change
+    // once switching sections is in react/redux.
     return {
-      ...state,
+      ...initialState,
       section: action.section,
       scriptId: defaultScriptId,
     };
