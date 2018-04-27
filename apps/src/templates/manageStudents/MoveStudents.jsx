@@ -14,6 +14,7 @@ import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSec
 const PADDING = 20;
 const TABLE_WIDTH = 300;
 const DIALOG_WIDTH = 800;
+const INPUT_WIDTH = 225;
 const CHECKBOX_CELL_WIDTH = 50;
 const OTHER_TEACHER = "otherTeacher";
 const COPY = "copy";
@@ -47,6 +48,10 @@ const styles = {
   },
   input: {
     marginLeft: PADDING / 2
+  },
+  sectionInput: {
+    marginLeft: PADDING / 2,
+    width: INPUT_WIDTH
   },
   radioOption: {
     paddingLeft: PADDING / 2
@@ -212,10 +217,10 @@ class MoveStudents extends Component {
   };
 
   onChangeSection = (event) => {
-    const val = event.target.value;
+    const sectionValue = event.target.value;
     let newState;
 
-    if (val === OTHER_TEACHER) {
+    if (sectionValue === OTHER_TEACHER) {
       newState = {
         otherTeacherSelected: true,
         selectedSectionId: null
@@ -223,7 +228,7 @@ class MoveStudents extends Component {
     } else {
       newState = {
         otherTeacherSelected: false,
-        selectedSectionId: parseInt(event.target.value)
+        selectedSectionId: parseInt(sectionValue)
       };
     }
 
@@ -303,7 +308,7 @@ class MoveStudents extends Component {
                   <input
                     required
                     name="sectionCode"
-                    style={{...styles.input, width: 225}}
+                    style={styles.sectionInput}
                     value={otherTeacherSectionValue}
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
