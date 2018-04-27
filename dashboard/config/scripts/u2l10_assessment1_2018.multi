@@ -1,0 +1,17 @@
+name 'U2L10 Assessment1_2018'
+title 'Assessment Question 1'
+
+question 'What feature of DNS and IP allow the internet to scale?'
+wrong 'A. Redundancy'
+right 'B. Hierarchy'
+wrong 'C. Multiple servers' 
+wrong 'D. Government control'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer: 
+
+- B. Hierarchy
+MARKDOWN
