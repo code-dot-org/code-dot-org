@@ -95,7 +95,7 @@ class VirtualizedDetailView extends Component {
   }
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData, columnWidths, getLevels} = this.props;
+    const {scriptData, columnWidths} = this.props;
     // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
@@ -107,14 +107,13 @@ class VirtualizedDetailView extends Component {
       ...style,
       ...progressStyles.cell,
     };
-    // Alternate background colour of each row
-    if (studentStartIndex%2 === 1) {
-      cellStyle = {
-        ...cellStyle,
-        backgroundColor: color.background_gray,
-      };
+
+    // Student rows
+    if (studentStartIndex >= 0) {
+      return this.studentCellRenderer(studentStartIndex, stageIdIndex, key, cellStyle);
     }
 
+    // Header rows
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {(rowIndex === 0 && columnIndex === 0) && (
@@ -158,19 +157,38 @@ class VirtualizedDetailView extends Component {
             )}
           </span>
         )}
-        {(rowIndex >= 2 && columnIndex === 0) && (
+      </div>
+    );
+  };
+
+  studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
+    const {section, scriptData, getLevels} = this.props;
+
+    // Alternate background colour of each row
+    if (studentStartIndex%2 === 1) {
+      style = {
+        ...style,
+        backgroundColor: color.background_gray,
+      };
+    }
+
+    const student = section.students[studentStartIndex];
+
+    return (
+      <div className={progressStyles.Cell} key={key} style={style}>
+        {(stageIdIndex < 0) && (
           <SectionProgressNameCell
-            name={section.students[studentStartIndex].name}
-            studentId={section.students[studentStartIndex].id}
+            name={student.name}
+            studentId={student.id}
             sectionId={section.id}
             scriptId={scriptData.id}
           />
         )}
-        {rowIndex > 1 && columnIndex > 0 && (
+        {stageIdIndex >= 0 && (
           <StudentProgressDetailCell
-            studentId={section.students[studentStartIndex].id}
+            studentId={student.id}
             stageId={stageIdIndex}
-            levelsWithStatus={getLevels(section.students[studentStartIndex].id, stageIdIndex)}
+            levelsWithStatus={getLevels(student.id, stageIdIndex)}
           />
         )}
       </div>

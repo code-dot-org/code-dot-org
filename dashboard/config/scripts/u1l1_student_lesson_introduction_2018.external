@@ -1,0 +1,28 @@
+name 'U1L1 Student Lesson Introduction_2018'
+title 'Impact of Innovation'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 1: Lesson 1 - Personal Innovations
+
+## Background
+
+Welcome to Computer Science Principles! Computer science is all about being innovative—finding ways to solve problems. In this class, you will discover lots of connections between people and computing, explore how technology impacts absolutely everything in your life, and work with others in fun and creative ways. Today, you will take the first step in becoming an innovative computer scientist.
+
+## Lesson
+
+* You're an expert: teach us something you know
+* In a team, design a prototype for a technological innovation
+* Learn more about innovation in a video
+
+## Vocabulary
+
+**Prototype:** A preliminary sketch of an idea or model for something new. It’s the original drawing from which something real might be built or created.
+
+## Resources
+* Personal Innovations - Activity Guide ([PDF](https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/export?format=doc))
+* [Computer Science is Changing Everything](https://youtu.be/1x54GqfL3UY) - Video ([download](https://videos.code.org/2015/csp/cs_is_changing_everything.mp4))
+* Personal Innovations - Rubric ([PDF](https://docs.google.com/document/d/1_ULIYnSwsMxOEZr0SHP_ueopo4qlIHFCyrfFcMhuDgE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1_ULIYnSwsMxOEZr0SHP_ueopo4qlIHFCyrfFcMhuDgE/export?format=doc))
+
+MARKDOWN

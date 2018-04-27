@@ -8252,3 +8252,77 @@ en:
               name: Conditionals with Cards
             Conditionals:
               name: Conditionals
+        csp1-2018:
+          title: CSP Unit 1 - The Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: Personal Innovations
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: Sending Binary Messages
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending Binary Messages with the Internet Simulator
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: Number Systems
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: Binary Numbers
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: Sending Numbers
+              description_student: ''
+              description_teacher: ''
+            Encoding and Sending Formatted Text:
+              name: Encoding and Sending Formatted Text
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: The Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: The Need for Addressing
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: Routers and Redundancy
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: Packets and Making a Reliable Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: The Need for DNS
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP and Abstraction
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: Practice PT - The Internet and Society
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Chapter 2 Assessment
+              description_student: ''
+              description_teacher: ''
