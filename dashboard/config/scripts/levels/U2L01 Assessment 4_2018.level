@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:08.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "markdown_instructions": "## The Internet is for Everyone: Assessment 4\n\nExplain one challenge raised by Vint Cerf in “The Internet is for Everyone - but it won’t be if….” and give one example of it that you know about.\n",
+    "encrypted_solution": "E4dtA+xK6eqJJEI4mhmxrtJ8VDUKP5gXcc3gSV9wHjD4WsUnfc4F9iWeAiMF\n/zc7c993zNXo7MOUen6QLL2F1LfOvIUhr41ih0A+pKX28cs4+KNJQsuIyjX8\nb5o1zGpCzcvbR2bRO0rn/9MGGc/VIbBywIdisSlWkNs3k0IDZj1ujtcNlJ6Y\nYlqu4zb4gSchBIdSJhy8b8qE0FarExar4tU7s9K50cN/1SuAFLKiHaEjeh+I\ncoOM39vqPAk4j+5zH6g4sUPqvIPdTxkIssG3sot+SBQ8X01FVnn5raOYQvpJ\ne8DceTvJCs+MYvWuO5+jE6S42VnE0z7cxLRrNDAolotRFq/SuSy01NdJSv+k\nbjmEkHpNnBxQWMPgwIxKsRXO8wGOLgzcyaYE+R5kmrI/Kyx2tDjytEcXZeM5\n63FoVBOFj2CBxTT4PK0ZFlZZS6UCcpTYl3mhJX+LpG28dEu0Ao1yNTf6fJWf\n4QOKu00SlDlDD89t9VlZg/qT1mGOAMrnfL4jOjJL5CssiGM0SUKB4s+hAMgc\ngjFePFLCyDbaKmE=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2707,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

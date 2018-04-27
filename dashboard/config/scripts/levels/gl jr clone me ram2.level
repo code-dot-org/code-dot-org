@@ -48,11 +48,8 @@
     "hide_custom_blocks": "true",
     "parent_level_id": 12606,
     "markdown_instructions": "Clone this level, and then make your own programs!",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "auto_run_setup": "DRAW_LOOP"
+    "auto_run_setup": "DRAW_LOOP",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

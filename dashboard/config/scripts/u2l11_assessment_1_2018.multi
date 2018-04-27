@@ -1,0 +1,14 @@
+name 'U2L11 Assessment 1_2018'
+title 'HTTP and Abstraction on the Internet: Question 1'
+question 'HTTP is considered to be a high level protocol because:'
+wrong 'HTTP requests are given higher priority for fast delivery when being routed on the Internet.'
+wrong 'HTTP requests are encoded using higher frequency radio waves.'
+wrong 'HTTP messages can be either requests or responses.'
+right 'HTTP requests make use of abstractions provided by lower level protocols.'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- HTTP requests make use of abstractions provided by lower level protocols.
+
+MARKDOWN

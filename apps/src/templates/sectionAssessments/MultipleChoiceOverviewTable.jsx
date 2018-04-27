@@ -4,6 +4,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -12,11 +13,42 @@ export const COLUMNS = {
   NOT_ANSWERED: 3,
 };
 
+const answerOptionsOneFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.percentAnsweredOptionOne}
+        isCorrectAnswer={rowData.optionOneIsCorrect}
+      />
+  );
+};
+
+const answerOptionsTwoFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.percentAnsweredOptionTwo}
+        isCorrectAnswer={rowData.optionTwoIsCorrect}
+      />
+  );
+};
+
+const notAnsweredFormatter = (percentAnsweredOptionOne, {rowData}) => {
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={rowData.notAnswered}
+      />
+  );
+};
+
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
   percentAnsweredOptionOne: PropTypes.string,
   percentAnsweredOptionTwo: PropTypes.string,
+  optionOneIsCorrect: PropTypes.bool,
+  optionTwoIsCorrect: PropTypes.bool,
   notAnswered: PropTypes.string,
 });
 
@@ -26,11 +58,12 @@ class MultipleChoiceOverviewTable extends Component {
   };
 
   state = {
-    [COLUMNS.NAME]: {
+    [COLUMNS.QUESTION]: {
       direction: 'desc',
       position: 0
     }
   };
+
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -81,6 +114,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
+          format: answerOptionsOneFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -99,6 +133,7 @@ class MultipleChoiceOverviewTable extends Component {
           }},
         },
         cell: {
+          format: answerOptionsTwoFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
@@ -113,14 +148,15 @@ class MultipleChoiceOverviewTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 120,
+            width: 90,
           }},
         },
         cell: {
+          format: notAnsweredFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 120,
+            width: 90,
           }}
         }
       },
