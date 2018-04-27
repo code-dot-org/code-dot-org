@@ -26,6 +26,22 @@ def load_languages(path)
   end
 end
 
+# Since channel ids are derived from user id and other sequential integer ids
+# use a new S3 sources directory for each Test Build to prevent a UI test
+# from inadvertently using a channel id from a previous Test Build.
+# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
+# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+# Detect Circle environment just to be safe.
+def sources_s3_dir(environment)
+  if environment == :production
+    'sources'
+  elsif environment == :test && !ENV['CIRCLECI']
+    "sources_#{environment}/#{GitUtils.git_revision_short}"
+  else
+    "sources_#{environment}"
+  end
+end
+
 def load_configuration
   root_dir = File.expand_path('..', __FILE__)
   root_dir = '/home/ubuntu/website-ci' if root_dir == '/home/ubuntu/Dropbox (Code.org)'
@@ -108,7 +124,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => sources_s3_dir,
+    'sources_s3_directory'        => sources_s3_dir(rack_env),
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -415,20 +431,4 @@ end
 
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
-end
-
-# Since channel ids are derived from user id and other sequential integer ids
-# use a new S3 sources directory for each Test Build to prevent a UI test
-# from inadvertently using a channel id from a previous Test Build.
-# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
-# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
-# Detect Circle environment just to be safe.
-def sources_s3_dir
-  if rack_env?(:production)
-    'sources'
-  elsif rack_env?(:test) && !ENV['CIRCLECI']
-    "sources_#{rack_env}/#{GitUtils.git_revision_short}"
-  else
-    "sources_#{rack_env}"
-  end
 end
