@@ -177,13 +177,7 @@ export default class AssignmentSelector extends Component {
     const { assignments, assignmentGroups, dropdownStyle, disabled } = this.props;
     const { selectedPrimaryId, selectedSecondaryId, selectedBaseName, selectedVersionYear } = this.state;
     const versionYears = this.getVersionYears(selectedBaseName);
-
-    // let primaryAssignIds = primaryAssignmentIds;
-    // if (isValidAssignment(selectedPrimaryId) &&
-    //     !primaryAssignmentIds.includes(selectedPrimaryId)) {
-    //   primaryAssignIds = [selectedPrimaryId].concat(primaryAssignIds);
-    // }
-
+    
     const assignmentGroupsByCategory = categorizeAssignmentGroups(assignmentGroups);
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
