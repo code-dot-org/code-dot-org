@@ -1,0 +1,37 @@
+name 'v2 U1L8 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 7 - Encoding and Sending Formatted Text
+
+## Background
+
+Since all information sent by a computer is encoded in bits, we need protocols to help us interpret these bits as meaningful information. In previous lessons we learned how to use the binary number system to allow us to represent numbers in bits. We now address the challenge of encoding text in bits and find that we can reuse and build upon much of the work we did to encode numbers. This pattern of reusing solutions to other problems arises frequently in computer science and allows the development of more complex systems.
+
+ASCII encoding is the standard number-to-text encoding scheme used in computers and on the Internet. This protocol is 7 bits long and so can encode 128 different symbols, each corresponding to one of the binary numbers between 0 and 127. Originally the encoding was designed for older printers and so the codes associated with the numbers 0-31 were designated as "control codes" which instruct the printer to perform certain actions. These codes are now largely out of use. Codes 32-126, however, contain many of the most commonly used symbols you use on the internet, including the lowercase and capital letters, the numbers 0-9, and most commonly-used punctuation marks. Perhaps more remarkably, this printable character set is also used to represent all of the text formatting we use to add variety and emphasis to "plain-text" documents. The ability to represent formatting using only ASCII symbols is the result of cleverly designed protocols.
+
+## Vocabulary
+
+* **ASCII** - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.
+* **code** - (v) to write code, or to write instructions for a computer.
+* **Protocol** - A set of rules governing the exchange or transmission of data between devices.
+
+## Lesson
+
+* Learn about the ASCII encoding scheme.
+* Invent a text formatting language
+* Design a protocol for sending formatted text.
+* Discover the challenges of encoding meta-information.
+
+## Resources
+
+* Sending Formatted Text - Activity Guide ([PDF](https://docs.google.com/document/d/15VJXucAcWWkp5L1Uq03SQvecUIp2lTLK0gf8L0HF92A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/15VJXucAcWWkp5L1Uq03SQvecUIp2lTLK0gf8L0HF92A/export?format=doc))
+* Rubric - Sending Formatted Text - Rubric ([PDF](https://docs.google.com/document/d/1eDbEX3Rk_4EAIrE-26so4DGIpGRH0vjNw7w8U5filrM/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eDbEX3Rk_4EAIrE-26so4DGIpGRH0vjNw7w8U5filrM/export?format=doc))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
