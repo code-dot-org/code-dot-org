@@ -26,8 +26,6 @@ const categorizeAssignmentGroups = assignmentGroups => (
     .value()
   );
 
-const defaultVersionYear = '2017';
-
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -108,10 +106,8 @@ export default class AssignmentSelector extends Component {
   }
   onChangeBaseName = event => {
     const baseName = event.target.value;
-
-    // For now we can assume that every assignment group has a version for the
-    // default version year.
-    this.setPrimary(baseName, defaultVersionYear);
+    const versionYears = this.getVersionYears(baseName);
+    this.setPrimary(baseName, versionYears[0]);
   };
 
   onChangeVersionYear = event => {
@@ -177,7 +173,7 @@ export default class AssignmentSelector extends Component {
     const { assignments, assignmentGroups, dropdownStyle, disabled } = this.props;
     const { selectedPrimaryId, selectedSecondaryId, selectedBaseName, selectedVersionYear } = this.state;
     const versionYears = this.getVersionYears(selectedBaseName);
-    
+
     const assignmentGroupsByCategory = categorizeAssignmentGroups(assignmentGroups);
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
@@ -226,7 +222,14 @@ export default class AssignmentSelector extends Component {
                   key={versionYear}
                   value={versionYear}
                 >
-                  {versionYear}
+                  {
+                    // If present, the 2018 version is the recommended one,
+                    // because this will be the recommended version of csp and
+                    // csd, which are the only two versioned courses we will
+                    // show initially. This information will need to be provided
+                    // by the server once we support versioning of scripts.
+                  }
+                  {versionYear === '2018' ? `${versionYear} (Recommended)` : versionYear}
                 </option>
               ))
             }

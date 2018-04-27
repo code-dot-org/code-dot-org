@@ -32,8 +32,8 @@ export const assignmentShape = PropTypes.shape({
   script_name: PropTypes.string.isRequired,
   // The base name of the course or script, e.g. "csd" for course csd-2018.
   // Assignments with the same base_name will form an assignment group.Sorry, it looks like we cannot load this project because you are running low on disk space
-  base_name: PropTypes.string,
-  version_year: PropTypes.string,
+  base_name: PropTypes.string.isRequired,
+  version_year: PropTypes.string.isRequired,
 });
 
 // An assignment group is a collection of versions of a course or script like
