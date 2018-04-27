@@ -26788,11 +26788,11 @@
         \r
         Using
         the `setProperty` block, move "red_button" so that it matches the image
-        to the right.\r
+        to the right. (Click on the image to see the full size.)\r
         \r
-        _Note: We've removed the Design Mode tab for now so
-        you can practice working with setProperty, but it'll come back later once
-        you're building apps of your own._
+        _Note: We've
+        removed the Design Mode tab for now so you can practice working with setProperty,
+        but it'll come back later once you're building apps of your own._
       CSD U6 setProperty xy_2018_markdown_instruction: |-
         # Changing Position\r
         \r
@@ -26810,11 +26810,11 @@
         \r
         Using
         the `setProperty` block, move "red_button" so that it matches the image
-        to the right.\r
+        to the right. (Click on the image to see the full size.)\r
         \r
-        _Note: We've removed the Design Mode tab for now so
-        you can practice working with setProperty, but it'll come back later once
-        you're building apps of your own._
+        _Note: We've
+        removed the Design Mode tab for now so you can practice working with setProperty,
+        but it'll come back later once you're building apps of your own._
       CSD U6 slider intro_markdown_instruction: |-
         # Sliders\r
         \r
@@ -35803,7 +35803,7 @@
         style="float: right">\r
         \r
         Well, now we have the beginnings of a little
-        game!  Time to go back to design mode to start embelishing our program.\r
+        game!  Time to go back to design mode to start embellishing our program.\r
         \r
         **You
         try it:** - Add a text label that says "Try to Catch the Button!"\r
@@ -76283,9 +76283,9 @@
         snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
         the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       courseB_Scrat_ramp2_2018_markdown_instruction: |-
-        Attach both <xml><block type="maze_moveEast"/></xml>
-        blocks to <xml><block type="when_run"/></xml> to finish your code, then
-        click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+        Snap both <xml><block type="maze_moveEast"/></xml>
+        blocks to the bottom of the <xml><block type="when_run"/></xml> block to
+        finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseB_Scrat_ramp3a_2018_markdown_instruction: |-
         Grab a <xml><block type="maze_moveNorth"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
@@ -77786,6 +77786,129 @@
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_Frozen_nested9_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
+      courseD_artist_1_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r
+        \r
+        Draw a hexagon
+        with 50 pixel long sides.  \r
+        \r
+        ---\r
+        \r
+        To draw a hexagon, you will
+        need to: \r
+        - move forward by **50** pixels\r
+        - turn right by **60** degrees\r
+        -
+        repeat a total of **6** times\r
+        \r
+      courseD_artist_2_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Good job!”_\r
+        \r
+        After your hexagon, turn right by **60** degrees, then
+        draw a line that is **150** pixels long.   \r
+        \r
+        Finish by putting Elsa
+        back to the center of the play area, using the <xml><block type="jump_to"><title
+        name="VALUE">middle center</title></block></xml> block.\r
+        \r
+        \r
+      courseD_artist_3_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Let’s make a snowflake.”_\r
+        \r
+        To turn this code into a snowflake, nest
+        all of the code inside of another `repeat` loop and run it a total of **6**
+        times.  You should only need to add one block.\r
+        \r
+      courseD_artist_4_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let's make our snowflakes special!"_\r
+        \r
+        **Inspiration:** Where do
+        you need to add code if you want to draw a tiny square at the tip of each
+        long line?\r
+        \r
+        ---\r
+        You can try whatever you want in this puzzle, but
+        here is an idea:\r
+        \r
+        Try making a tiny square at the end of each line\r
+        -
+        Each side should be 15 pixels long\r
+        - You should turn right by 90 degrees\r
+        -
+        Repeat those actions a total of 4 times
+      courseD_artist_5_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Try changing the shapes or the lengths of the lines to make this your own!"_\r
+        \r
+        <br/>  \r
+        \r
+        **Inspiration:**
+        You can change your drawing in any way you want, but here is an idea:\r
+        \r
+        -
+        Try switching the types of shape in the middle of the snowflake with the one
+        at the end of each line!
+      courseD_artist_6_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s try something new. This time, skate in a zig-zag."_\r
+        \r
+        \r
+        <img
+        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
+        Draw a
+        stair-step pattern that uses turns between 75 and 105 degrees -- but make
+        sure that your left and right turns use the same angle.  \r
+        (You will see
+        why later.)
+      courseD_artist_7_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Now let’s turn and go back the way we came."_\r
+        \r
+        Turn around 180 degrees
+        and draw the exact same stair pattern again!  \r
+        \r
+        - The rest of this stage
+        will be easier if you put all of your code inside of a loop to make Elsa  draw,
+        turn around 180 degrees, draw, then turn around 180 degrees again.\r
+        \r
+        <hr/>\r
+        \r
+        Here
+        is an example of stairs that use a 76 degree turn:\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      courseD_artist_8_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"Let’s spin and make it into a snowflake."_\r
+        \r
+        Spin that shape around
+        5 or 6 times in a circle.\r
+        - If you choose 5 times,  try a turn of 72 degrees\r
+        -
+        If you choose 6 times,  try a turn of 60 degrees\r
+        <hr/>\r
+        \r
+        Here's an
+        example of Elsa turning a pattern 6 times:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_9_2018_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\r
         \r

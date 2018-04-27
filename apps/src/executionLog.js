@@ -1,4 +1,4 @@
-var TestResults = require('./constants').TestResults;
+import {TestResults} from './constants';
 var utils = require('./utils');
 
 /**

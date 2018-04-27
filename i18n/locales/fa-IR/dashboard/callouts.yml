@@ -443,9 +443,9 @@ fa:
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: Define movePlayer() here
       CSD U6 tugowar variables 3_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: چک کن که بازیکن برنده شده است
       CSD U6 tugowar variables 3_2018_callout:
-        CSD_U6_checkWin: Check if the player has won
+        CSD_U6_checkWin: چک کن که بازیکن برنده شده است
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.

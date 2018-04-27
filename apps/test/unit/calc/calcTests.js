@@ -6,8 +6,7 @@ var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');
 var Equation = require('@cdo/apps/calc/equation.js');
 var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var ResultType = require('@cdo/apps/constants.js').ResultType;
+import {TestResults, ResultType} from '@cdo/apps/constants';
 var calcMsg = require('@cdo/apps/calc/locale');
 
 describe('evaluateResults_/evaluateFunction_', function () {

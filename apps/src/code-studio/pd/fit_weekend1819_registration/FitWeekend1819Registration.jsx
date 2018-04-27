@@ -27,7 +27,9 @@ export default class FitWeekend1819Registration extends FormController {
       email: this.props.email,
       preferredFirstName: this.props.firstName,
       lastName: this.props.lastName,
-      phone: this.props.phone
+      phone: this.props.phone,
+      city: this.props.city,
+      date: this.props.date
     };
   }
 
