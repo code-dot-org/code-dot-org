@@ -108,7 +108,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => sources_s3_dir,
+    'sources_s3_directory'        => sources_s3_dir(rack_env),
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -423,9 +423,9 @@ end
 # CircleCI environments already suffix the Circle Build number on the sources directory:
 # https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
 def sources_s3_dir
-  if rack_env == :production
+  if rack_env?(:production)
     'sources'
-  elsif rack_env == :test && !ENV[CI]
+  elsif rack_env?(:test) && !ENV['CI']
     "sources_#{rack_env}/#{GitUtils.git_revision_short}"
   else
     "sources_#{rack_env}"
