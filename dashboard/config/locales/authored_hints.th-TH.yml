@@ -3,29 +3,26 @@
     authored_hints:
       2-3 Artist 1 new_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา
+          90 องศา'
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
-          in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'มีปัญหากับมุมหรือไม่? คุณต้องสร้างมุม 360 องศาไม่เกิน 8
+          ตรั้ง ดังนั้น 360/8 ได้เท่าไร? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns
-          1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: วงกลมมี 360 องศาดังนั้นหากอาร์ตติสต้องการหันทีละ 1 องศา เขาจะต้องหันถึง
+          360 ครั้ง
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct
-          direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: อาร์ตติสดูเหมือนจะไม่ได้ชี้ไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหมุนก่อนที่จะวาดเส้นได้ไหม?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how
-          tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction.
-          Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: 100-70 ได้เท่าไร ขึ้นอยู่กับเรื่องราวที่เกี่ยวข้อง เพราะนั่นคือความสูงของหมวก
+        2-3_Artist_3new_b: อาร์ตติสดูเหมือนจะไม่ได้ชี้ไปในทิศทางที่ถูกต้อง คุณช่วยให้พวกเขาหมุนก่อนที่จะวาดเส้นได้ไหม?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: เพื่อที่จะสร้างบ้านให้เสร็จ ที่เราต้องทำก็คือวาดสี่เหลี่ยมจตุรัสขึ้นมารูปหนึ่ง
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
+        2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้*
+          แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
+        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
+          แล้วเลี้ยวซ้ายเพื่อสร้างรูปสามเหลี่ยม
         2-3_Artist_6_c: Each side of the triangle is the same length as each side
           of the square...100 pixels!
       2-3 Artist 7_authored_hint:
@@ -38,7 +35,7 @@
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: This diamond is really just a square on its side
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: ก้าวแต่ละก้าวมีขนาดกว้าง 100 พิ๊กเซิล และสูง 100 พิ๊กเซิล
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
         2-3_Artist_9_b: |-
@@ -9635,6 +9632,40 @@
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
+          choose the angle you need!
+        courseD_artist_project1_b: Remember that `move forward` draws a line, while
+          `jump forward` does not.
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
+          does not.
+        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
+          choose the angle you need!
+      courseD_artist_3_2018_authored_hint: []
+      courseD_artist_4_2018_authored_hint: []
+      courseD_artist_5_2018_authored_hint: []
+      courseD_artist_6_2018_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: These patterns are a lot like the stair steps
+          from other puzzles, but using a different angle.
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: You can choose different amounts to rotate your
+          shape! What about 18 times with a 20 degree turn in between?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: []
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Replace the "???" in the text block with the binary
           image you want, in zeroes and ones.
@@ -17624,8 +17655,8 @@
           block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา
+          90 องศา'
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -18215,13 +18246,13 @@
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวหัวมุมหรือเปล่า? ให้ใช้ปุ่ม 'เลี้ยวขวา
+          90 องศา'
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
+        2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้*
+          แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
+        2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า
+          แล้วเลี้ยวซ้ายเพื่อสร้างรูปสามเหลี่ยม
         2-3_Artist_6_c: Each side of the triangle is the same length as each side
           of the square...100 pixels!
       grade4_review_bee1_authored_hint:

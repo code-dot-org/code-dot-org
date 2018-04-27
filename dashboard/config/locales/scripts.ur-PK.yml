@@ -10085,6 +10085,8 @@
               description_teacher: ''
             Loops in Ice Age:
               name: Loops in Ice Age
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
         jr-test:
           stages:
             Programming with Behaviors:

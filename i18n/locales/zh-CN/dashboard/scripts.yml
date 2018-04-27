@@ -7674,7 +7674,7 @@ zh-CN:
             Loops in Ice Age:
               name: 冰河时代里的循环
             Sequencing with Scrat:
-              name: Sequencing with Scrat
+              name: 斯奎特和序列
             Move It, Move It:
               name: 移动它，移动它！
         coursed-2018:
@@ -7753,6 +7753,8 @@ zh-CN:
               description_teacher: ''
             Loops in Ice Age:
               name: 冰河时代里的循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7766,9 +7768,9 @@ zh-CN:
             Virtual Pet - Behaviors:
               name: 虚拟宠物 - 行为
             Fish Tank:
-              name: Fish Tank
+              name: 鱼缸
             Virtual Pet - Forever:
-              name: Virtual Pet - Forever
+              name: 虚拟宠物 - 永远
           title: ''
           description_audience: ''
           description_short: ''
@@ -7806,49 +7808,49 @@ zh-CN:
             Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
               name: 第2单元 - 评估 5 - 练习 AP 伪代码问题
             'Unit 1.1 - Binary and Ascii ':
-              name: 'Unit 1.1 - Binary and Ascii '
+              name: '单元 1.1 - 二进制和Ascii码 '
             Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
-              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+              name: 单元1.2 - 互联网协议，TCP/IP，DNS，HTTP，等等。
             Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+              name: 单元 2 - 1. 比特，字节，十六进制和压缩
             Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元2 - 2. 解释数据、图标、大数据、全局影响
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
-              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+              name: 单元3 - 1. 编程 - 乌龟、循环、函数、抽象
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
-              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+              name: 单元3 - 1. 编程 - 乌龟、循环、函数、抽象
             'Unit 1 Assessment 1 - Binary and Ascii ':
-              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+              name: '单元1 评估1 - 二进制和Ascii码 '
             Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
-              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+              name: 单元1 评估 2 - 互联网协议，TCP/IP，DNS，HTTP，等等。
             Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+              name: 单元 2-1 - 比特，字节，十六进制和压缩
             Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元 2-2 - 解释数据、图标、大数据、全局影响
             Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+              name: 单元3 测验1 - 乌龟编程，循环，函数，抽象
             Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+              name: 单元2 评估1 - 比特，字节，十六进制和压缩
             Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元2 评估2 - 解释数据、图标、大数据、全局影响
             Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+              name: 单元3 评估1 - 乌龟编程，循环，函数，抽象
             Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
-              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+              name: 单元4 评估1 - 隐私，网络安全，加密
             Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
-              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review
+              name: 单元5 评估1 - 事件，变量，调试，算术，乌龟评论
             Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
-              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+              name: 单元5 评估2 - 如果语句，布尔表达式，字符串
             Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
-              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists
+              name: 单元5 评估3 - 当循环，布尔表达式，数组和列表
             Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
-              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+              name: 单元5 评估4 - 列表算法， 有返回值的函数
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
-              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)
+              name: 单元5 评估5 - 练习AP伪代码问题（变量，过程，循环，条件）
           title: 计算机科学原理AP测试准备
           description_audience: ''
           description_short: 计算机科学原理AP测试准备
-          description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  '
+          description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  学生们可能会想通过重新做这些小测试来练习多选测验。  '
         coursec-2018:
           title: 课程 C
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
@@ -7922,66 +7924,66 @@ zh-CN:
           description_audience: ''
           stages:
             Innovations in Computing_:
-              name: Innovations in Computing_
+              name: 计算中的创新_
               description_student: ''
               description_teacher: ''
             Designing Screens with Code_:
-              name: Designing Screens with Code_
+              name: 使用代码设计屏幕_
               description_student: ''
               description_teacher: ''
             The Circuit Playground_:
-              name: The Circuit Playground_
+              name: 电路游戏板_
               description_student: ''
               description_teacher: ''
             Input Unplugged_:
-              name: Input Unplugged_
+              name: 线下输入_
               description_student: ''
               description_teacher: ''
             Board Events_:
-              name: Board Events_
+              name: 主板事件_
               description_student: ''
               description_teacher: ''
             Getting Properties_:
-              name: Getting Properties_
+              name: 取值器属性_
               description_student: ''
               description_teacher: ''
             Analog Input_:
-              name: Analog Input_
+              name: 模拟输入_
               description_student: ''
               description_teacher: ''
             The Program Design Process_:
-              name: The Program Design Process_
+              name: 程序设计过程_
               description_student: ''
               description_teacher: ''
             'Project: Make a Game__':
-              name: 'Project: Make a Game__'
+              name: '项目: 创建游戏_'
               description_student: ''
               description_teacher: ''
             Arrays and Color LEDs__:
-              name: Arrays and Color LEDs__
+              name: 数组和彩色LED灯_
               description_student: ''
               description_teacher: ''
             Making Music_:
-              name: Making Music_
+              name: 制作音乐_
               description_student: ''
               description_teacher: ''
             Arrays and For Loops_:
-              name: Arrays and For Loops_
+              name: 数组和计数循环_
               description_student: ''
               description_teacher: ''
             Accelerometer_:
-              name: Accelerometer_
+              name: 加速度_
               description_student: ''
               description_teacher: ''
             Functions with Parameters_:
-              name: Functions with Parameters_
+              name: 有参数的函数_
               description_student: ''
               description_teacher: ''
             Circuits and Physical Prototypes_:
-              name: Circuits and Physical Prototypes_
+              name: 电路和物理原型_
               description_student: ''
               description_teacher: ''
             'Project: Prototype an Innovation_':
-              name: 'Project: Prototype an Innovation_'
+              name: '项目：创新原型_'
               description_student: ''
               description_teacher: ''

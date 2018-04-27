@@ -528,6 +528,7 @@ pl:
         CSF_harvester_skinOverview_K-1: Kombajn
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
