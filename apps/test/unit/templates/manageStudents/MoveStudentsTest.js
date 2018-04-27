@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
+import {UnconnectedMoveStudents as MoveStudents, DEFAULT_STATE} from '@cdo/apps/templates/manageStudents/MoveStudents';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -9,12 +9,22 @@ const studentData = [
   {id: 0, name: ''},
   {id: 2, name: 'studentf'}
 ];
+const sections = [
+  {id: 0, name: 'sectiona'},
+  {id: 1, name: 'sectionb'},
+  {id: 2, name: 'sectionc'}
+];
 
 describe('MoveStudents', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<MoveStudents studentData={studentData}/>);
+    wrapper = shallow(
+      <MoveStudents
+        studentData={studentData}
+        sections={sections}
+      />
+    );
   });
 
   describe('#openDialog', () => {
@@ -25,17 +35,12 @@ describe('MoveStudents', () => {
   });
 
   describe('#closeDialog', () => {
-    it('sets isDialogOpen state to false', () => {
+    it('sets state to DEFAULT_STATE', () => {
       wrapper.instance().isDialogOpen = true;
-      wrapper.instance().closeDialog();
-      expect(wrapper.instance().state.isDialogOpen).to.equal(false);
-    });
+      wrapper.instance().selectedIds = [1,2];
 
-    it('clears selectedIds in state', () => {
-      wrapper.instance().state.selectedIds = [1,2];
-      expect(wrapper.instance().state.selectedIds).to.have.members([1,2]);
       wrapper.instance().closeDialog();
-      expect(wrapper.instance().state.selectedIds).to.have.members([]);
+      expect(wrapper.instance().state).to.deep.equal(DEFAULT_STATE);
     });
   });
 
