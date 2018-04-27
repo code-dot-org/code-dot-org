@@ -1,4 +1,4 @@
-const SVG_NS = require('../constants').SVG_NS;
+import {SVG_NS} from '../constants';
 const drawMap = require('./drawMap');
 const displayPegman = drawMap.displayPegman;
 const getPegmanYForRow = drawMap.getPegmanYForRow;
