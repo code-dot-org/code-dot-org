@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
 import RGBColor from 'rgbcolor';
-import constants from './constants';
+import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
 
@@ -526,35 +526,35 @@ export function normalize(vector) {
  */
 export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
   switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMOUTLEFT:
+    case Position.OUTTOPOUTLEFT:
+    case Position.TOPOUTLEFT:
+    case Position.MIDDLEOUTLEFT:
+    case Position.BOTTOMOUTLEFT:
+    case Position.OUTBOTTOMOUTLEFT:
       return -spriteWidth;
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
+    case Position.OUTTOPLEFT:
+    case Position.TOPLEFT:
+    case Position.MIDDLELEFT:
+    case Position.BOTTOMLEFT:
+    case Position.OUTBOTTOMLEFT:
       return 0;
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.TOPCENTER:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.OUTBOTTOMCENTER:
+    case Position.OUTTOPCENTER:
+    case Position.TOPCENTER:
+    case Position.MIDDLECENTER:
+    case Position.BOTTOMCENTER:
+    case Position.OUTBOTTOMCENTER:
       return (containerWidth - spriteWidth) / 2;
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMRIGHT:
+    case Position.OUTTOPRIGHT:
+    case Position.TOPRIGHT:
+    case Position.MIDDLERIGHT:
+    case Position.BOTTOMRIGHT:
+    case Position.OUTBOTTOMRIGHT:
       return containerWidth - spriteWidth;
-    case constants.Position.OUTTOPOUTRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
+    case Position.OUTTOPOUTRIGHT:
+    case Position.TOPOUTRIGHT:
+    case Position.MIDDLEOUTRIGHT:
+    case Position.BOTTOMOUTRIGHT:
+    case Position.OUTBOTTOMOUTRIGHT:
       return containerWidth;
   }
 }
@@ -568,35 +568,35 @@ export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
  */
 export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
   switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.OUTTOPOUTRIGHT:
+    case Position.OUTTOPOUTLEFT:
+    case Position.OUTTOPLEFT:
+    case Position.OUTTOPCENTER:
+    case Position.OUTTOPRIGHT:
+    case Position.OUTTOPOUTRIGHT:
       return -spriteHeight;
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.TOPCENTER:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.TOPOUTRIGHT:
+    case Position.TOPOUTLEFT:
+    case Position.TOPLEFT:
+    case Position.TOPCENTER:
+    case Position.TOPRIGHT:
+    case Position.TOPOUTRIGHT:
       return 0;
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
+    case Position.MIDDLEOUTLEFT:
+    case Position.MIDDLELEFT:
+    case Position.MIDDLECENTER:
+    case Position.MIDDLERIGHT:
+    case Position.MIDDLEOUTRIGHT:
       return (containerHeight - spriteHeight) / 2;
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
+    case Position.BOTTOMOUTLEFT:
+    case Position.BOTTOMLEFT:
+    case Position.BOTTOMCENTER:
+    case Position.BOTTOMRIGHT:
+    case Position.BOTTOMOUTRIGHT:
       return containerHeight - spriteHeight;
-    case constants.Position.OUTBOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-    case constants.Position.OUTBOTTOMCENTER:
-    case constants.Position.OUTBOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
+    case Position.OUTBOTTOMOUTLEFT:
+    case Position.OUTBOTTOMLEFT:
+    case Position.OUTBOTTOMCENTER:
+    case Position.OUTBOTTOMRIGHT:
+    case Position.OUTBOTTOMOUTRIGHT:
       return containerHeight;
   }
 }

@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 // Bee level which requires initialization blocks to work
 // inspired by Course 4 Bee Params 5: https://studio.code.org/s/course4/stage/16/puzzle/5
