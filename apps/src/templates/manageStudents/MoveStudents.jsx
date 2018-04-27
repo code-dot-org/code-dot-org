@@ -280,23 +280,21 @@ class MoveStudents extends Component {
             </Table.Provider>
             <div style={styles.rightColumn}>
               <div>{i18n.selectStudentsToMove()}</div>
-              <form>
-                <label
-                  htmlFor="sections"
-                  style={styles.label}
-                >
-                  {`${i18n.moveToSection()}:`}
-                </label>
-                <select
-                  name="sections"
-                  style={styles.input}
-                  onChange={this.onChangeSection}
-                >
-                  {this.renderOptions()}
-                </select>
-              </form>
+              <label
+                htmlFor="sections"
+                style={styles.label}
+              >
+                {`${i18n.moveToSection()}:`}
+              </label>
+              <select
+                name="sections"
+                style={styles.input}
+                onChange={this.onChangeSection}
+              >
+                {this.renderOptions()}
+              </select>
               {otherTeacherSelected &&
-                <form>
+                <div>
                   <label
                     htmlFor="sectionCode"
                     style={styles.label}
@@ -311,7 +309,7 @@ class MoveStudents extends Component {
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
                   />
-                <label style={styles.label}>{i18n.bothSectionsQuestion()}</label>
+                  <label style={styles.label}>{i18n.bothSectionsQuestion()}</label>
                   <label style={styles.input}>
                     <input
                       type="radio"
@@ -319,9 +317,7 @@ class MoveStudents extends Component {
                       checked={copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    <span style={styles.radioOption}>
-                      {i18n.copyStudentsConfirm()}
-                    </span>
+                    <span style={styles.radioOption}>{i18n.copyStudentsConfirm()}</span>
                   </label>
                   <label style={styles.input}>
                     <input
@@ -330,11 +326,9 @@ class MoveStudents extends Component {
                       checked={!copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
-                    <span style={styles.radioOption}>
-                      {i18n.moveStudentsConfirm()}
-                    </span>
+                    <span style={styles.radioOption}>{i18n.moveStudentsConfirm()}</span>
                   </label>
-                </form>
+                </div>
               }
             </div>
           </div>
