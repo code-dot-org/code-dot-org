@@ -910,7 +910,6 @@ class ContactRollups
         > 0
     eos
     )
-    #User.find_by_sql('SELECT * from users LEFT JOIN authentication_options ON users.primary_authentication_option_id = authentication_options.id where IF(COALESCE(users.email, "") = "", authentication_options.email, users.email) = "fidget@spinner.com"')
 
     users.find_each do |user|
       unless user.ops_school.nil?
