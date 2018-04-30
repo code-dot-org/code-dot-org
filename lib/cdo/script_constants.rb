@@ -127,6 +127,14 @@ module ScriptConstants
     ],
   }.freeze
 
+  # If the course name (e.g. "foo-2018") has a version suffix, then the first
+  # capture group is the assignment group name ("foo") and the second capture
+  # group is the version year ("2018"). Does not match course name without
+  # version suffix.
+  VERSIONED_COURSE_NAME_REGEX = /^(.*)-(\d{4})$/
+
+  DEFAULT_VERSION_YEAR = '2017'
+
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
