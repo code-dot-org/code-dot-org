@@ -70,7 +70,7 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
-  questionOption = (index) => (
+  answerOptions = (index) => (
     {
       header: {
         label: alphabetMapper[index],
@@ -97,7 +97,7 @@ class MultipleChoiceOverviewTable extends Component {
           style: {
           ...tableLayoutStyles.headerCell,
         }},
-
+        transforms: [sortable],
       },
       cell: {
         props: {
@@ -113,7 +113,6 @@ class MultipleChoiceOverviewTable extends Component {
       if (cur.answers.length > acc) {
         return cur.answers.length;
       }
-
       return acc;
     }, 0);
 
@@ -121,14 +120,14 @@ class MultipleChoiceOverviewTable extends Component {
     let columns = this.questionColumn(sortable) ;
 
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.questionOption(i);
+      let questionOption = this.answerOptions(i);
       if (i === 0) {
         dataColumns.push({property: 'question', ...columns});
       } else {
         dataColumns.push({property: 'percentAnswered' , ...questionOption});
       }
     }
-      dataColumns.push({property: 'notAnswered', ...this.questionOption(7)});
+      dataColumns.push({property: 'notAnswered', ...this.answerOptions(7)});
 
       return dataColumns;
   };
