@@ -5,23 +5,34 @@ const multipleChoiceData = [
   {
     id: 1,
     question: '1. What is a variable?',
-    answers: [80, 15],
-    percentAnsweredOptionOne: '35%',
-    optionOneIsCorrect: true,
+    answers: [{},{percentAnswered: '40', isCorrectAnswer: true},
+                 {percentAnswered: '20', isCorrectAnswer: false},
+
+    ],
+    //
+    notAnswered: "5%"
   },
   {
     id: 2,
     question: '2. What is a 4-bit number for the decimal number Ten(10)',
-    answers: [20, 60, 10, 3, 5 , 6],
-    percentAnsweredOptionOne: '35%',
-    optionOneIsCorrect: true,
+    answers: [{},{percentAnswered: '30', isCorrectAnswer: false},
+                 {percentAnswered: '10', isCorrectAnswer: true},
+                 {percentAnswered: '10', isCorrectAnswer: false},
+                 {percentAnswered: '10', isCorrectAnswer: false},
+                 {percentAnswered: '20', isCorrectAnswer: false},
+                 {percentAnswered: '10', isCorrectAnswer: false},
+    ],
+    notAnswered: "5%"
   },
   {
     id: 3,
     question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet',
-    answers: [40, 35, 5, 5],
-    percentAnsweredOptionOne: '35%',
-    optionOneIsCorrect: true,
+    answers: [{},{percentAnswered: '50', isCorrectAnswer: false},
+                 {percentAnswered: '15', isCorrectAnswer: false},
+                 {percentAnswered: '20', isCorrectAnswer: true},
+                 {percentAnswered: '5', isCorrectAnswer: false},
+    ],
+    notAnswered: "5%"
   },
 ];
 
