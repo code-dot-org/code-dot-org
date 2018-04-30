@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -119,8 +120,11 @@ export const handleShareSetting = (disable) => {
  };
 };
 
-export const transferStudents = (studentIds, currentSectionCode, newSectionCode, copyStudents) => {
+export const transferStudents = (studentIds, newSectionCode, copyStudents) => {
   return (dispatch, getState) => {
+    const state = getState();
+    const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
+
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       if (error) {
         console.error(error);
