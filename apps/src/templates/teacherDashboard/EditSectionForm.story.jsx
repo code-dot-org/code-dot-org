@@ -47,6 +47,23 @@ const validAssignments = {
   },
 };
 
+const assignmentGroups = [
+  {
+    name: "CS Discoveries",
+    category: "Full Courses",
+    position: 1,
+    category_priority: 0,
+    assignment_group_name: 'csd',
+  },
+  {
+    name: "Unit 1: Problem Solving",
+    category: "CS Discoveries",
+    position: 0,
+    category_priority: 7,
+    assignment_group_name: 'csd1',
+  }
+];
+
 export default storybook => storybook
   .storiesOf('EditSectionForm', module)
   .add('Basic options', () => {
@@ -58,6 +75,7 @@ export default storybook => storybook
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
+        assignmentGroups={assignmentGroups}
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
@@ -75,6 +93,7 @@ export default storybook => storybook
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
+        assignmentGroups={assignmentGroups}
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
