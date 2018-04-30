@@ -248,7 +248,12 @@ button.arrow:disabled {
   background-color: #C7C7C7;
 }
 
-$dpad-red: #F78183;
+$dpad-button: #FFFFFF;
+$dpad-border: #EFEFEF;
+$dpad-shadow: #7F7F7F;
+$dpad-active-border: #F78183;
+$dpad-cone-active: #FFD080;
+$dpad-cone-inactive: #9C9C9C;
 
 #studio-dpad {
   display: inline-block;
@@ -260,14 +265,58 @@ $dpad-red: #F78183;
   }
 }
 
+#studio-dpad-cone {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 37px solid $dpad-cone-inactive;
+  border-right: 37px solid $dpad-cone-inactive;
+  border-top: 37px solid $dpad-cone-inactive;
+  border-bottom: 37px solid $dpad-cone-inactive;
+  border-radius: 37px;
+  &.left {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(270deg);
+    &.down {
+      transform: rotate(225deg);
+    }
+    &.up {
+      transform: rotate(315deg);
+    }
+  }
+  &.right {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(90deg);
+    &.down {
+      transform: rotate(135deg);
+    }
+    &.up {
+      transform: rotate(45deg);
+    }
+  }
+  &.up {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(0deg);
+  }
+  &.down {
+    border-top-color: $dpad-cone-active;
+    transform: rotate(180deg);
+  }
+}
+
 #studio-dpad-button {
   display: inline;
   position: relative;
-  border-radius: 21px;
-  margin: 5px;
+  border-radius: 22px;
+  width: 44px;
+  height: 44px;
+  margin: 15px 5px 5px 15px;
+  border: 1px solid $dpad-border;
+  background-color: $dpad-button;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
   &.active {
-    background: $dpad-red;
-    border: 1px solid $dpad-red;
+    border: 1px solid $dpad-active-border;
+    box-shadow: none;
   }
   &.left {
     left: -5px;
