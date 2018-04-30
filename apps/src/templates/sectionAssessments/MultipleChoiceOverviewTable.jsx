@@ -30,10 +30,6 @@ const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.string,
   percentAnswered: PropTypes.string,
   isCorrectAnswer: PropTypes.bool,
-  percentAnsweredOptionOne: PropTypes.string,
-  percentAnsweredOptionTwo: PropTypes.string,
-  optionOneIsCorrect: PropTypes.bool,
-  optionTwoIsCorrect: PropTypes.bool,
   notAnswered: PropTypes.string,
 });
 
