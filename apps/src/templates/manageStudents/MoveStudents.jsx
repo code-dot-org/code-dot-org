@@ -9,7 +9,7 @@ import orderBy from 'lodash/orderBy';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
-import {sectionsNameAndId, sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {transferStudents} from './manageStudentsRedux';
 
 const PADDING = 20;
@@ -84,7 +84,6 @@ class MoveStudents extends Component {
         id: PropTypes.number.isRequired
       }).isRequired
     ),
-    sectionCode: PropTypes.string.isRequired,
     transferStudents: PropTypes.func.isRequired
   };
 
@@ -252,7 +251,6 @@ class MoveStudents extends Component {
 
   transfer = () => {
     const {otherTeacherSelected, otherTeacherSectionValue, selectedIds, copyStudents} = this.state;
-    const {transferStudents, sectionCode: currentSectionCode} = this.props;
     let newSectionCode;
 
     if (otherTeacherSelected) {
@@ -261,7 +259,7 @@ class MoveStudents extends Component {
       // TODO: newSectionCode = section code chosen from dropdown
     }
 
-    transferStudents(selectedIds, currentSectionCode, newSectionCode, copyStudents);
+    this.props.transferStudents(selectedIds, newSectionCode, copyStudents);
   };
 
   render() {
@@ -374,8 +372,7 @@ class MoveStudents extends Component {
 export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(state => ({
-  sections: sectionsNameAndId(state.teacherSections),
-  sectionCode: sectionCode(state, state.manageStudents.sectionId),
+  sections: sectionsNameAndId(state.teacherSections)
 }), dispatch => ({
   transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents) {
     dispatch(transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents));
