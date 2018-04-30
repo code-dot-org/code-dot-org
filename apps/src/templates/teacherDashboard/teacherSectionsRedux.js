@@ -416,7 +416,7 @@ export default function teacherSections(state=initialState, action) {
 
     // Fields to copy from the assignmentInfo when creating an assignmentGroup.
     const assignmentGroupFields = [
-      'category_priority', 'category', 'position', 'name', 'base_name'
+      'category_priority', 'category', 'position', 'name', 'assignment_group_name'
     ];
 
     // Primary assignment ids are (a) courses and (b) scripts that are not in any
@@ -464,17 +464,15 @@ export default function teacherSections(state=initialState, action) {
         // For now we put each script in its own assignment group. When we
         // implement versioning for scripts we will start computing these values
         // on the server.
-        base_name: script.script_name,
+        assignment_group_name: script.script_name,
         version_year: defaultVersionYear,
       };
 
-      // Scripts currently have only one version.
+      // Scripts currently have only one version, so each script will form its
+      // own assignment group.
       assignmentGroups.push({
         ..._.pick(script, assignmentGroupFields),
-
-        // Each script will have a unique base name, and will therefore form
-        // its own assignment group.
-        base_name: script.script_name
+        assignment_group_name: script.script_name
       });
 
       if (!secondaryAssignmentIds.includes(assignId)) {
