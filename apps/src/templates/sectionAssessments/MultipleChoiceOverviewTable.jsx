@@ -103,11 +103,11 @@ class MultipleChoiceOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((acc, cur) => {
-      if (cur.answers.length > acc) {
-        return cur.answers.length;
+    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
+      if (currentAnswerCount.answers.length > answersTotal) {
+        return currentAnswerCount.answers.length;
       }
-      return acc;
+      return answersTotal;
     }, 0);
 
     let dataColumns = [];
