@@ -16,7 +16,6 @@ export const COLUMNS = {
 const alphabetMapper =  ['-', 'A', 'B', 'C', 'D', 'E', 'F', 'Not Answered'];
 
 const answerOptionsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
-
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -49,7 +48,6 @@ class MultipleChoiceOverviewTable extends Component {
       position: 0
     }
   };
-
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
