@@ -6,7 +6,7 @@
  * Enumeration of user program execution outcomes.
  * These are determined by each app.
  */
-exports.ResultType = {
+export const ResultType = {
   UNSET: 0,       // The result has not yet been computed.
   SUCCESS: 1,     // The program completed successfully, achieving the goal.
   FAILURE: -1,    // The program ran without error but did not achieve goal.
@@ -30,7 +30,7 @@ exports.ResultType = {
  *
  * @enum {number}
  */
-exports.TestResults = {
+export const TestResults = {
   // Default value before any tests are run.
   NO_TESTS_RUN: -1,
 
@@ -105,7 +105,7 @@ exports.TestResults = {
   REVIEW_ACCEPTED_RESULT: 2000,
 };
 
-exports.BeeTerminationValue = {
+export const BeeTerminationValue = {
   FAILURE: false,
   SUCCESS: true,
   INFINITE_LOOP: Infinity,
@@ -120,13 +120,13 @@ exports.BeeTerminationValue = {
   DID_NOT_COLLECT_EVERYTHING: 9 // For quantum levels, didn't try to collect all available honey/nectar
 };
 
-exports.HarvesterTerminationValue = {
+export const HarvesterTerminationValue = {
   WRONG_CROP : 1,
   EMPTY_CROP : 2,
   DID_NOT_COLLECT_EVERYTHING: 3
 };
 
-exports.KeyCodes = {
+export const KeyCodes = {
   BACKSPACE: 8,
   ENTER: 13,
   SPACE: 32,
@@ -139,7 +139,7 @@ exports.KeyCodes = {
   DELETE: 127
 };
 
-exports.Position = {
+export const Position = {
   OUTTOPOUTLEFT:    1,
   OUTTOPLEFT:       2,
   OUTTOPCENTER:     3,
@@ -168,7 +168,7 @@ exports.Position = {
 };
 
 /** @const {string} SVG element namespace */
-exports.SVG_NS = 'http://www.w3.org/2000/svg';
+export const SVG_NS = 'http://www.w3.org/2000/svg';
 
-exports.ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-exports.CIPHER = 'Iq61F8kiaUHPGcsY7DgX4yAu3LwtWhnCmeR5pVrJoKfQZMx0BSdlOjEv2TbN9z';
+export const ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+export const CIPHER = 'Iq61F8kiaUHPGcsY7DgX4yAu3LwtWhnCmeR5pVrJoKfQZMx0BSdlOjEv2TbN9z';

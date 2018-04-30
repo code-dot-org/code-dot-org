@@ -1,7 +1,5 @@
-var constants = require('./constants');
+import {TestResults} from './constants';
 var parseXmlElement = require('./xml').parseElement;
-
-var TestResults = constants.TestResults;
 
 /**
  * @typedef {Object} DisplayBlocks
