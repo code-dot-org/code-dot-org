@@ -31,7 +31,8 @@ let sprites = [];
 let score = 0;
 let game_over = false;
 let show_score = false;
-let title = '', subTitle = '';
+let title = '';
+let subTitle = '';
 
 function initialize(setupHandler) {
   setupHandler();
@@ -77,25 +78,28 @@ function normalizeBehavior(behavior) {
 function findBehavior(sprite, behavior) {
   for (var i = 0; i < sprite.behaviors.length; i++) {
     var myBehavior = sprite.behaviors[i];
-    if (myBehavior.func !== behavior.func) {
-      continue;
+    if (behaviorsEqual(behavior, myBehavior)) {
+      return i;
     }
-    if (behavior.extraArgs.length !== myBehavior.extraArgs.length) {
-      continue;
-    }
-    var extraArgsEqual = true;
-    for (var j = 0; j < myBehavior.extraArgs.length; j++) {
-      if (behavior.extraArgs[j] !== myBehavior.extraArgs[j]) {
-        extraArgsEqual = false;
-        break;
-      }
-    }
-    if (!extraArgsEqual) {
-      continue;
-    }
-    return i;
   }
   return -1;
+}
+
+function behaviorsEqual(behavior1, behavior2) {
+  if (behavior1.func !== behavior2.func) {
+    return false;
+  }
+  if (behavior2.extraArgs.length !== behavior1.extraArgs.length) {
+    return false;
+  }
+  var extraArgsEqual = true;
+  for (var j = 0; j < behavior1.extraArgs.length; j++) {
+    if (behavior2.extraArgs[j] !== behavior1.extraArgs[j]) {
+      extraArgsEqual = false;
+      break;
+    }
+  }
+  return extraArgsEqual;
 }
 
 function patrol(sprite, direction) {
@@ -200,7 +204,9 @@ function makeNewSpriteLocation(animation, loc) {
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
 
-  sprite.setAnimation(animation);
+  if (animation) {
+    sprite.setAnimation(animation);
+  }
   sprites.push(sprite);
   sprite.speed = 10;
   sprite.patrolling = false;
