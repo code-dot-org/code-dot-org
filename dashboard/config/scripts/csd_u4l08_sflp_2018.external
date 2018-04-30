@@ -1,0 +1,13 @@
+name 'CSD U4L08 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+To kick off the app design project, the class organizes into teams and starts exploring app topics. Several example socially impactful apps serve as inspiration for the project.
+
+
+## Resources
+
+* [App Design Kickoff](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - Activity Guide
+
+MARKDOWN
