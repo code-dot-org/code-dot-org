@@ -1266,14 +1266,22 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
  *   are found.
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
-  var emptyBlock = this.getEmptyContainerBlock_();
+  const emptyBlock = this.getEmptyContainerBlock_();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }
 
-  var type = emptyBlock.type;
+  const type = emptyBlock.type;
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    const findUsages = block =>
+      block.type === type.replace('_def', '_call') &&
+      block.getTitleValue('NAME') === emptyBlock.getTitleValue('NAME');
+
+    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    } else {
+      return TestResults.ALL_PASS;
+    }
   }
 
   // Block is assumed to be "if" or "repeat" if we reach here.
