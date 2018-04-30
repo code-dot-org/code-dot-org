@@ -70,7 +70,13 @@ const initialState = {
   sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
-  transferData: {copy: true}
+  transferData: {
+    selectedIds: [],
+    selectedSectionId: null,
+    otherTeacherSelected: false,
+    otherTeacherSectionValue: '',
+    copy: true
+  }
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';

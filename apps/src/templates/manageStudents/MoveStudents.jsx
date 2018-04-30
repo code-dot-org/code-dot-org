@@ -60,11 +60,7 @@ const styles = {
 };
 
 export const DEFAULT_STATE = {
-  isDialogOpen: false,
-  selectedIds: [],
-  selectedSectionId: null,
-  otherTeacherSelected: false,
-  otherTeacherSectionValue: ''
+  isDialogOpen: false
 };
 
 class MoveStudents extends Component {
@@ -103,28 +99,30 @@ class MoveStudents extends Component {
   };
 
   areAllSelected = () => {
-    return Immutable.Set(this.state.selectedIds).isSuperset(this.getStudentIds());
+    return Immutable.Set(this.props.transferData.selectedIds).isSuperset(this.getStudentIds());
   };
 
   toggleSelectAll = () => {
-    if (this.areAllSelected()) {
-      this.setState({selectedIds: []});
-    } else {
-      this.setState({selectedIds: this.getStudentIds()});
+    let selectedIds = [];
+
+    if (!this.areAllSelected()) {
+      selectedIds = this.getStudentIds();
     }
+
+    this.props.startTransferringStudents({selectedIds});
   };
 
   toggleStudentSelected = (studentId) => {
-    let selectedIds = [...this.state.selectedIds];
+    let selectedIds = [...this.props.transferData.selectedIds];
 
-    if (this.state.selectedIds.includes(studentId)) {
+    if (selectedIds.includes(studentId)) {
       const studentIndex = selectedIds.indexOf(studentId);
       selectedIds.splice(studentIndex, 1);
     } else {
       selectedIds.push(studentId);
     }
 
-    this.setState({selectedIds});
+    this.props.startTransferringStudents({selectedIds});
   };
 
   selectedStudentHeaderFormatter = () => {
@@ -139,7 +137,7 @@ class MoveStudents extends Component {
   };
 
   selectedStudentFormatter = (_, {rowData}) => {
-    const isChecked = this.state.selectedIds.includes(rowData.id);
+    const isChecked = this.props.transferData.selectedIds.includes(rowData.id);
 
     return (
       <input
@@ -221,25 +219,25 @@ class MoveStudents extends Component {
 
   onChangeSection = (event) => {
     const sectionValue = event.target.value;
-    let newState;
+    let newTransferData;
 
     if (sectionValue === OTHER_TEACHER) {
-      newState = {
+      newTransferData = {
         otherTeacherSelected: true,
         selectedSectionId: null
       };
     } else {
-      newState = {
+      newTransferData = {
         otherTeacherSelected: false,
         selectedSectionId: parseInt(sectionValue)
       };
     }
 
-    this.setState({...newState});
+    this.props.startTransferringStudents({...newTransferData});
   };
 
   onChangeTeacherSection = (event) => {
-    this.setState({
+    this.props.startTransferringStudents({
       otherTeacherSectionValue: event.target.value
     });
   };
@@ -251,17 +249,16 @@ class MoveStudents extends Component {
   };
 
   transfer = () => {
-    const {otherTeacherSelected, otherTeacherSectionValue, selectedIds} = this.state;
     const {transferData} = this.props;
     let newSectionCode;
 
-    if (otherTeacherSelected) {
-      newSectionCode = otherTeacherSectionValue;
+    if (transferData.otherTeacherSelected) {
+      newSectionCode = transferData.otherTeacherSectionValue;
     } else {
       // TODO: newSectionCode = section code chosen from dropdown
     }
 
-    this.props.transferStudents(selectedIds, newSectionCode, transferData.copy);
+    this.props.transferStudents(transferData.selectedIds, newSectionCode, transferData.copy);
   };
 
   render() {
@@ -276,7 +273,7 @@ class MoveStudents extends Component {
       sort: orderBy,
     })(this.props.studentData);
 
-    const {isDialogOpen, otherTeacherSelected, otherTeacherSectionValue} = this.state;
+    const {isDialogOpen} = this.state;
     const {transferData} = this.props;
 
     return (
@@ -315,7 +312,7 @@ class MoveStudents extends Component {
               >
                 {this.renderOptions()}
               </select>
-              {otherTeacherSelected &&
+              {transferData.otherTeacherSelected &&
                 <div>
                   <label
                     htmlFor="sectionCode"
@@ -327,7 +324,7 @@ class MoveStudents extends Component {
                     required
                     name="sectionCode"
                     style={styles.sectionInput}
-                    value={otherTeacherSectionValue}
+                    value={transferData.otherTeacherSectionValue}
                     onChange={this.onChangeTeacherSection}
                     placeholder={i18n.sectionCodePlaceholder()}
                   />
