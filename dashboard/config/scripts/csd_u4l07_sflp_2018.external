@@ -1,0 +1,13 @@
+name 'CSD U4L07 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Based on the interview you conducted in the last lesson, design an app that could help your classmate overcome some obstacle to learning something new.
+
+
+## Resources
+
+* [Paper Prototype Rubric](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Rubric
+* [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide
+MARKDOWN
