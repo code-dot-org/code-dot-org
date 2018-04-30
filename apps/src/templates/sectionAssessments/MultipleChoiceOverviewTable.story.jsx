@@ -7,9 +7,9 @@ const multipleChoiceData = [
     question: '1. What is a variable?',
     answers: [{},{percentAnswered: '40', isCorrectAnswer: true},
                  {percentAnswered: '20', isCorrectAnswer: false},
-
+                 {percentAnswered: '20', isCorrectAnswer: false},
+                 {percentAnswered: '20', isCorrectAnswer: false},
     ],
-    //
     notAnswered: "5%"
   },
   {
@@ -30,6 +30,7 @@ const multipleChoiceData = [
     answers: [{},{percentAnswered: '50', isCorrectAnswer: false},
                  {percentAnswered: '15', isCorrectAnswer: false},
                  {percentAnswered: '20', isCorrectAnswer: true},
+                 {percentAnswered: '5', isCorrectAnswer: false},
                  {percentAnswered: '5', isCorrectAnswer: false},
     ],
     notAnswered: "5%"
