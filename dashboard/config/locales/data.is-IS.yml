@@ -612,17 +612,18 @@
         infinity_playlab_intro: Leikjasmiðja - kynning
         infinity_playlab_events: Leikjasmiðja - Atvik
         infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
-        csd_concept_how_computers_work: Introducing How Computers Work
+        csd_concept_how_computers_work: Kynning á hvernig tölvur virka
         csd_concept_computer: 'Hvernig tölvur virka: Hvað gerir tölvu að tölvu?'
         csd_concept_binary_data: 'Hvernig tölvur virka: Tvenndir & Gögn'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_circuits_logic: 'Hvernig tölvur virka: rásir og rökvísi'
+        csd_concept_memory_cpu_input_output: 'Hvernig tölvur viirka: minni, örgjörvi,
+          inntak og úttak'
+        csd_concept_hardware_software: 'Hvernig tölvur virka: vélbúnaður og hugbúnaður'
         csd_concept_search: Hvernig leit virkar
         csd_external_amazon_data: Hvernig stórgögn eru notuð í Amazon Recommendation
           Systems til að breyta lífi okkar
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_netflix_data: Hvernig gerir Netflix tillögur að sjónvarpsþáttum
+          og kvikmyndum?
         csd_external_waze_data: Af hverju eru svo margir notendur með Waze á heilanum?
         csd_gamelab_animation_tab: Hreyfingasíðan
         csd_gamelab_conditionals_1: Kynning á skilyrðingum - 1. hluti
@@ -741,29 +742,29 @@
         mc_2017_puzzle_12: Klukkustund kóðunar - Minecraft - Frjáls æfing
         hint_videos_d_11_3_first: 'Myndbandahjálp: D.11.3 Fyrst'
         hint_videos_d_11_3_last: 'Myndbandahjálp: D.11.3 Síðast'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        hint_videos_d_11_4_first: 'Hjálparmyndbönd: D.11.4 fyrst'
+        hint_videos_d_11_4_last: 'Hjálparmyndbönd: D.11.4 síðast'
+        hint_videos_d_11_5_first: 'Hjálparmyndbönd: D.11.5 fyrst'
+        hint_videos_d_11_5_last: 'Hjálparmyndbönd: D.11.5 síðast'
+        hint_videos_d_11_6_first: 'Hjálparmyndbönd: D.11.6 fyrst'
+        hint_videos_d_11_6_last: 'Hjálparmyndbönd: D.11.6 síðast'
+        hint_videos_d_11_7_first: 'Hjálparmyndbönd: D.11.7 fyrst'
+        hint_videos_d_11_7_last: 'Hjálparmyndbönd: D.11.7 síðast'
+        hint_videos_d_11_9_first: 'Hjálparmyndbönd: D.11.9 fyrst'
+        hint_videos_d_11_9_last: 'Hjálparmyndbönd: D.11.9 síðast'
+        hint_videos_d_11_11_first: 'Hjálparmyndbönd: D.11.11 fyrst'
+        hint_videos_d_11_11_last: 'Hjálparmyndbönd: D.11.11 síðast'
+        applab_intro_welcome: Appsmiðjan - Fyrstu skref
+        applab_intro_events: Appsmiðjan - Gerðu það gagnvirkt
+        applab_intro_sounds: Appsmiðjan - Myndir og hljóð
+        applab_intro_designmode: Appsmiðjan - Hönnunarstaða
+        applab_intro_share: Appsmiðjan - Deildu appinu
         csd_applab_arrays: Kynning á fylkjum
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: Sláttuvélin
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_skinOverview_K-1: Sláttuvélin
         CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Loops in Ice Age
         CSF_scrat_loops_CF: Loops in Ice Age
