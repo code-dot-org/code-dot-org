@@ -210,24 +210,16 @@ class Course < ApplicationRecord
     end
   end
 
-  # If the course name  (e.g. "foo-2018") has a version suffix, then the first
-  # capture group is the assignment group name ("foo") and the second capture
-  # group is the version year ("2018"). Does not match course name without
-  # version suffix.
-  VERSIONED_NAME_REGEX = /^(.*)-(\d{4})$/
-
   def assignment_group_name
-    m = VERSIONED_NAME_REGEX.match(name)
+    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
     m ? m[1] : name
   end
-
-  DEFAULT_VERSION_YEAR = '2017'
 
   # return the 4-digit year from the suffix of the course name if one exists,
   # otherwise return the DEFAULT_VERSION_YEAR.
   def version_year
-    m = VERSIONED_NAME_REGEX.match(name)
-    m ? m[2] : DEFAULT_VERSION_YEAR
+    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(name)
+    m ? m[2] : ScriptConstants::DEFAULT_VERSION_YEAR
   end
 
   # @param user [User]
