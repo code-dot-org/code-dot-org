@@ -61,6 +61,7 @@ const blankNewStudentRow = {
  * in the edit fields on the client which has not yet been persisted to the server.
  * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ * TODO: transferData info
  */
 const initialState = {
   loginType: '',
@@ -69,6 +70,7 @@ const initialState = {
   sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
+  transferData: {copy: true}
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -89,6 +91,7 @@ const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
+const START_TRANSFERRING_STUDENTS = 'manageStudents/START_TRANSFERRING_STUDENTS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -104,6 +107,7 @@ export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
+export const startTransferringStudents = transferData => ({ type: START_TRANSFERRING_STUDENTS, transferData });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -487,6 +491,15 @@ export default function manageStudents(state=initialState, action) {
     return {
       ...state,
       showSharingColumn: !state.showSharingColumn,
+    };
+  }
+  if (action.type === START_TRANSFERRING_STUDENTS) {
+    return {
+      ...state,
+      transferData: {
+        ...state.transferData,
+        ...action.transferData
+      }
     };
   }
 

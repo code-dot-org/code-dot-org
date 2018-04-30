@@ -10,7 +10,7 @@ import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {transferStudents} from './manageStudentsRedux';
+import {startTransferringStudents, transferStudents} from './manageStudentsRedux';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -64,8 +64,7 @@ export const DEFAULT_STATE = {
   selectedIds: [],
   selectedSectionId: null,
   otherTeacherSelected: false,
-  otherTeacherSectionValue: '',
-  copyStudents: true
+  otherTeacherSectionValue: ''
 };
 
 class MoveStudents extends Component {
@@ -76,6 +75,7 @@ class MoveStudents extends Component {
         name: PropTypes.string.isRequired,
       })
     ).isRequired,
+    transferData: PropTypes.object.isRequired,
 
     // redux provided
     sections: PropTypes.arrayOf(
@@ -84,6 +84,7 @@ class MoveStudents extends Component {
         id: PropTypes.number.isRequired
       }).isRequired
     ),
+    startTransferringStudents: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired
   };
 
@@ -244,13 +245,14 @@ class MoveStudents extends Component {
   };
 
   onChangeMoveOrCopy = (event) => {
-    this.setState({
-      copyStudents: event.target.value === COPY
+    this.props.startTransferringStudents({
+      copy: event.target.value === COPY
     });
   };
 
   transfer = () => {
-    const {otherTeacherSelected, otherTeacherSectionValue, selectedIds, copyStudents} = this.state;
+    const {otherTeacherSelected, otherTeacherSectionValue, selectedIds} = this.state;
+    const {transferData} = this.props;
     let newSectionCode;
 
     if (otherTeacherSelected) {
@@ -259,7 +261,7 @@ class MoveStudents extends Component {
       // TODO: newSectionCode = section code chosen from dropdown
     }
 
-    this.props.transferStudents(selectedIds, newSectionCode, copyStudents);
+    this.props.transferStudents(selectedIds, newSectionCode, transferData.copy);
   };
 
   render() {
@@ -274,7 +276,8 @@ class MoveStudents extends Component {
       sort: orderBy,
     })(this.props.studentData);
 
-    const {isDialogOpen, otherTeacherSelected, otherTeacherSectionValue, copyStudents} = this.state;
+    const {isDialogOpen, otherTeacherSelected, otherTeacherSectionValue} = this.state;
+    const {transferData} = this.props;
 
     return (
       <div>
@@ -333,7 +336,7 @@ class MoveStudents extends Component {
                     <input
                       type="radio"
                       value={COPY}
-                      checked={copyStudents}
+                      checked={transferData.copy}
                       onChange={this.onChangeMoveOrCopy}
                     />
                     <span style={styles.radioOption}>{i18n.copyStudentsConfirm()}</span>
@@ -342,7 +345,7 @@ class MoveStudents extends Component {
                     <input
                       type="radio"
                       value="move"
-                      checked={!copyStudents}
+                      checked={!transferData.copy}
                       onChange={this.onChangeMoveOrCopy}
                     />
                     <span style={styles.radioOption}>{i18n.moveStudentsConfirm()}</span>
@@ -374,6 +377,9 @@ export const UnconnectedMoveStudents = MoveStudents;
 export default connect(state => ({
   sections: sectionsNameAndId(state.teacherSections)
 }), dispatch => ({
+  startTransferringStudents(transferData) {
+    dispatch(startTransferringStudents(transferData));
+  },
   transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents) {
     dispatch(transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents));
   }
