@@ -301,7 +301,7 @@ GameLab.prototype.init = function (config) {
   };
 
   // Always hide DPad until better UI is created.
-  this.level.showDPad = false;
+  // this.level.showDPad = false;
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
@@ -772,7 +772,8 @@ GameLab.prototype.onDPadButtonDown = function (e) {
 var DPAD_DEAD_ZONE = 3;
 
 GameLab.prototype.onDPadMouseMove = function (e) {
-  var dPadButton = $('#studio-dpad-button');
+  const dPadButton = $('#studio-dpad-button');
+  const dPadCone = $('#studio-dpad-cone');
   var self = this;
 
   function notifyKeyHelper(keyCode, cssClass, start, prev, cur, invert) {
@@ -787,10 +788,12 @@ GameLab.prototype.onDPadMouseMove = function (e) {
       if (prev >= start) {
         self.gameLabP5.notifyKeyCodeDown(keyCode);
         dPadButton.addClass(cssClass);
+        dPadCone.addClass(cssClass);
       }
     } else if (prev < start) {
       self.gameLabP5.notifyKeyCodeUp(keyCode);
       dPadButton.removeClass(cssClass);
+      dPadCone.removeClass(cssClass);
     }
   }
 
