@@ -78,7 +78,6 @@ function findBehavior(sprite, behavior) {
   for (var i = 0; i < sprite.behaviors.length; i++) {
     var myBehavior = sprite.behaviors[i];
     if (myBehavior.func !== behavior.func) {
-      console.log('funcs not equal');
       continue;
     }
     if (behavior.extraArgs.length !== myBehavior.extraArgs.length) {
