@@ -83,7 +83,8 @@ class MoveStudents extends Component {
         name: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired
       }).isRequired
-    )
+    ),
+    transferStudents: PropTypes.func.isRequired
   };
 
   state = DEFAULT_STATE;
@@ -259,7 +260,7 @@ class MoveStudents extends Component {
     }
 
     // TODO: get current section code
-    transferStudents(selectedIds, "NQJLYX", newSectionCode, copyStudents);
+    this.props.transferStudents(selectedIds, "NQJLYX", newSectionCode, copyStudents);
   };
 
   render() {
@@ -373,4 +374,8 @@ export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(state => ({
   sections: sectionsNameAndId(state.teacherSections)
+}), dispatch => ({
+  transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents) {
+    dispatch(transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents));
+  }
 }))(MoveStudents);
