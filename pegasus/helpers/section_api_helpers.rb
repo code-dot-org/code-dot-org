@@ -395,10 +395,19 @@ class DashboardSection
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
-      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course_assignment_group(course))}.
       map {|course| assignable_info(course)}
     @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
     courses
+  end
+
+  # This only applies to courses because scripts are currently assumed to be in
+  # their own assignment group, e.g. "coursea-2018" would be in assignment group
+  # "coursea-2018" not "coursea". This will change once we start recognizing
+  # multiple versions of scripts.
+  def self.course_assignment_group(course)
+    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(course[:name])
+    m ? m[1] : course[:name]
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via
