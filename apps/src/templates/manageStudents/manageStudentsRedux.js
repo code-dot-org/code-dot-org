@@ -119,6 +119,15 @@ export const handleShareSetting = (disable) => {
  };
 };
 
+export const transferStudents = (studentIds, currentSectionCode, newSectionCode, copyStudents) => {
+  transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+    if (error) {
+      console.error(error);
+    }
+    // TODO: update studentData or any other state that has changed
+  });
+};
+
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
@@ -553,6 +562,26 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(students),
   }).done((data) => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, null);
+  });
+};
+
+// Make a post request to transfer students.
+const transferStudentsOnServer = (studentIds, currentSectionCode, newSectionCode, stayEnrolledInCurrentSection, onComplete) => {
+  const payload = {
+    student_ids: studentIds,
+    current_section_code: currentSectionCode,
+    new_section_code: newSectionCode,
+    stay_enrolled_in_current_section: stayEnrolledInCurrentSection
+  };
+  $.ajax({
+    url: '/dashboardapi/sections/transfers',
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(payload)
+  }).done(data => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
     onComplete(status, null);

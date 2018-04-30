@@ -10,6 +10,7 @@ import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {transferStudents} from './manageStudentsRedux';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -247,6 +248,20 @@ class MoveStudents extends Component {
     });
   };
 
+  transfer = () => {
+    const {otherTeacherSelected, otherTeacherSectionValue, selectedIds, copyStudents} = this.state;
+    let newSectionCode;
+
+    if (otherTeacherSelected) {
+      newSectionCode = otherTeacherSectionValue;
+    } else {
+      // TODO: newSectionCode = section code chosen from dropdown
+    }
+
+    // TODO: get current section code
+    transferStudents(selectedIds, "NQJLYX", newSectionCode, copyStudents);
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -344,7 +359,7 @@ class MoveStudents extends Component {
             />
             <Button
               text={i18n.moveStudents()}
-              onClick={() => {}}
+              onClick={this.transfer}
               color={Button.ButtonColor.orange}
             />
           </DialogFooter>
