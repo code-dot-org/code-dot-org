@@ -29,9 +29,13 @@ const customInputTypes = {
         },
         block.getHexColour(),
         value => {
-          if (value && value !== "undefined") {
-            const loc = JSON.parse(value);
-            label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+          if (value) {
+            try {
+              const loc = JSON.parse(value);
+              label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+            } catch (e) {
+              // Just ignore bad values
+            }
           }
         }
       );
