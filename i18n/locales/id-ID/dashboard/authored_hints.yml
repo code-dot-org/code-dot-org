@@ -7973,6 +7973,34 @@ id:
           Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
+        courseD_artist_project1_b: Ingat bahwa `move forward` menarik garis, sementara`jump forward` tidak.
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump` does not.
+        courseD_artist_project1_a: Gunakan menu drop down pada blok `ubah` untuk memilih sudut yang Anda butuhkan!
+      courseD_artist_3_2018_authored_hint: [ ]
+      courseD_artist_4_2018_authored_hint: [ ]
+      courseD_artist_5_2018_authored_hint: [ ]
+      courseD_artist_6_2018_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+          
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: Pola-pola ini banyak seperti anak tangga dari teka-teki lain, tetapi menggunakan sebuah sudut yang berbeda.
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+          
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: Anda dapat memilih jumlah yang berbeda untuk memutar bentuk Anda! Bagaimana 18 kali dengan sebuah turn 20 derajat di antara?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: [ ]
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Ganti "???" di blok teks dengan gambar biner yang anda inginkan, dalam nol dan satu.
         courseD_artist_binary1_b: Seniman akan menarik sebuah ruang putih untuk setiap 1 dan sebuha ruang hitam untuk setiap 0.

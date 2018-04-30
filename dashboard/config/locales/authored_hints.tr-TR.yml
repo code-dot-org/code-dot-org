@@ -6352,6 +6352,39 @@
           Burada 2 farklı uzunlukta birbiri ardına çizilen kar tanesi var (aralarında 30 derece dönüş ile).
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
+        courseD_artist_project1_b: "'ileri git' komutu bir çizgi çizerek ilerler,
+          fakat 'ileri zıpla' komutu çizmeden ileri atlatır."
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
+          does not.
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
+      courseD_artist_3_2018_authored_hint: []
+      courseD_artist_4_2018_authored_hint: []
+      courseD_artist_5_2018_authored_hint: []
+      courseD_artist_6_2018_authored_hint:
+        courseD_artist_project1a_a: |
+          Bu basamak merdiveni 76 derece dönüş içerir ve bunu 4 kere tekrarlar.
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+        courseD_artist_project1a_b: Bu desenler, diğer bulmacalardaki merdiven basamaklarına
+          oldukça benziyor, yalnızca açı farklı.
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: "Bu çizim 4 basamağın iç içe döngüsünden ve '2
+          defa tekrarla' bloğunun içinde '180 derece' sağa dön bloğuyla oluşturulmuştur.
+          \n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\"
+          width=\"200px\" />\n"
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: Şeklinizi döndürmek için farklı yollar da seçebilirsiniz!
+          18 defa, 20 derece döndürmeye ne dersin?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Burada 2 farklı uzunlukta birbiri ardına çizilen kar tanesi var (aralarında 30 derece dönüş ile).
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: []
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Metin bloğundaki "???" yazısını birler halindeki
           istediğin ikili resim ile değiştir.

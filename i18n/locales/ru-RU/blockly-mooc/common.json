@@ -554,7 +554,7 @@
   "joinTextTooltip": "Создаёт фрагмент текста, объединяя любое число элементов.",
   "joinUs": "Присоединяйтесь к нам",
   "jump": "прыгнуть",
-  "jumpToLesson": "Jump to lesson:",
+  "jumpToLesson": "Jump to lesson",
   "justDidHourOfCode": "Я только что закончил(а) #HourOfCode, посмотрите! @codeorg",
   "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
   "keepPlaying": "Продолжить игру",

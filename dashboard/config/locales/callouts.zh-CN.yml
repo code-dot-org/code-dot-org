@@ -1060,7 +1060,7 @@
       courseC_harvester_loops1_2018_callout:
         courseC_harvester_loops1_callout1: 南瓜上的数字四告诉你有四个南瓜可供挑选。
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
+        courseC_maze_debugging5_1: 灰色模块不能被删除！
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
       courseC_maze_loops2_callout:

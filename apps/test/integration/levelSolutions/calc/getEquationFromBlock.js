@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 var studioApp = require('@cdo/apps/StudioApp').singleton;
 var EquationSet = require('@cdo/apps/calc/equationSet');

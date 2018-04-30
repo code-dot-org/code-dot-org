@@ -291,26 +291,26 @@
           dos puntos (o juego de caracteres).
       courseA_unplugged_loops:
         title: Ciclos desconectados
-        desc: In this lesson, you will learn about loops!
+        desc: "¡En esta lección aprenderas sobre ciclos!"
       courseB_unplugged_MRF:
         title: Actividad fuera de línea
-        desc: In this lesson, you will 'program' your friends!
+        desc: "¡En esta lección 'programarás' a tus amigos!"
       courseB_unplugged_loopyMRF:
         title: Actividad fuera de línea
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: ¡Al igual que en "Mis amigos robóticos", "programarás" tus amigos, pero
+          esta vez con ciclos!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        title: Actividad desconectada
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       courseD_unplugged_digitalCitizenship:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
         title: Actividad fuera de línea
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -468,8 +468,8 @@
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ''
         desc: ''
@@ -522,7 +522,7 @@
           muestran cómo mantenerse a salvo mientras se navega en Internet.
       courseA_unplugged_loops_2018:
         title: Ciclos desconectados
-        desc: In this lesson, you will learn about loops!
+        desc: "¡En esta lección aprenderas sobre ciclos!"
       BigEvent_2018:
         title: El gran evento
         desc: Se presenta a los estudiantes el concepto de "eventos" en programación,
@@ -536,10 +536,10 @@
           en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Actividad fuera de línea
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hoy aprenderas que significa que alguién esté en linea.
       Conditionals_2018:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes
