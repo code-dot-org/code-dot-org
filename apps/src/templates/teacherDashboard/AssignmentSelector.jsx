@@ -184,6 +184,7 @@ export default class AssignmentSelector extends Component {
     return (
       <div>
         <select
+          id="uitest-assignment-group"
           value={selectedBaseName}
           onChange={this.onChangeBaseName}
           style={dropdownStyle}
