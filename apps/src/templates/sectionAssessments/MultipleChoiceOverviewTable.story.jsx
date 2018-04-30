@@ -5,27 +5,24 @@ const multipleChoiceData = [
   {
     id: 1,
     question: '1. What is a variable?',
-    percentAnsweredOptionOne: '80%',
-    percentAnsweredOptionTwo: '15%',
+    answers: [80, 15],
+    percentAnsweredOptionOne: '35%',
     optionOneIsCorrect: true,
-    notAnswered: '5%',
   },
   {
     id: 2,
     question: '2. What is a 4-bit number for the decimal number Ten(10)',
-    percentAnsweredOptionOne: '20%',
-    percentAnsweredOptionTwo: '60%',
-    optionTwoIsCorrect: true,
-    notAnswered: '20%'
+    answers: [20, 60, 10, 3, 5 , 6],
+    percentAnsweredOptionOne: '35%',
+    optionOneIsCorrect: true,
   },
   {
     id: 3,
     question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet',
+    answers: [40, 35, 5, 5],
     percentAnsweredOptionOne: '35%',
-    percentAnsweredOptionTwo: '65%',
     optionOneIsCorrect: true,
-    notAnswered: '0%'
-  }
+  },
 ];
 
 export default storybook => {
