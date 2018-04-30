@@ -13,31 +13,15 @@ export const COLUMNS = {
   NOT_ANSWERED: 3,
 };
 
-const answerOptionsOneFormatter = (percentAnsweredOptionOne, {rowData}) => {
-  return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        percentValue={rowData.percentAnsweredOptionOne}
-        isCorrectAnswer={rowData.optionOneIsCorrect}
-      />
-  );
-};
+const alphabetMapper =  ['-', 'A', 'B', 'C', 'D', 'E', 'F', 'Not Answered'];
 
-const answerOptionsTwoFormatter = (percentAnsweredOptionOne, {rowData}) => {
-  return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        percentValue={rowData.percentAnsweredOptionTwo}
-        isCorrectAnswer={rowData.optionTwoIsCorrect}
-      />
-  );
-};
+const answerOptionsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
 
-const notAnsweredFormatter = (percentAnsweredOptionOne, {rowData}) => {
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={rowData.notAnswered}
+        percentValue={rowData.answers[columnIndex] && `${rowData.answers[columnIndex].percentAnswered}%` || '-'}
+        isCorrectAnswer={rowData.answers[columnIndex] && rowData.answers[columnIndex].isCorrectAnswer || false}
       />
   );
 };
@@ -45,6 +29,8 @@ const notAnsweredFormatter = (percentAnsweredOptionOne, {rowData}) => {
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
+  percentAnswered: PropTypes.string,
+  isCorrectAnswer: PropTypes.bool,
   percentAnsweredOptionOne: PropTypes.string,
   percentAnsweredOptionTwo: PropTypes.string,
   optionOneIsCorrect: PropTypes.bool,
@@ -84,84 +70,67 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
+  questionOption = (index) => (
+    {
+      header: {
+        label: alphabetMapper[index],
+        props: {
+          style: {
+          ...tableLayoutStyles.headerCell,
+        }},
+      },
+      cell: {
+        format: answerOptionsFormatter,
+        props: {
+          style: {
+          ...tableLayoutStyles.cell,
+        }}
+      }
+    }
+  );
+
+  questionColumn = (sortable) => (
+    {
+      header: {
+        label: commonMsg.question(),
+        props: {
+          style: {
+          ...tableLayoutStyles.headerCell,
+        }},
+
+      },
+      cell: {
+        props: {
+          style: {
+          ...tableLayoutStyles.cell,
+        }}
+      },
+    }
+  );
+
   getColumns = (sortable) => {
-    let dataColumns = [
-      {
-        property: 'question',
-        header: {
-          label: commonMsg.question(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-          }},
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-          }}
-        }
-      },
-      {
-        property: 'percentAnsweredOptionOne',
-        header: {
-          label: commonMsg.answerOptionA(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
-        },
-        cell: {
-          format: answerOptionsOneFormatter,
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
-        }
-      },
-      {
-        property: 'percentAnsweredOptionTwo',
-        header: {
-          label: commonMsg.answerOptionB(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
-        },
-        cell: {
-          format: answerOptionsTwoFormatter,
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
-        }
-      },
-      {
-        property: 'notAnswered',
-        header: {
-          label: commonMsg.notAnswered(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
-        },
-        cell: {
-          format: notAnsweredFormatter,
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
-        }
-      },
-    ];
-    return dataColumns;
+    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((acc, cur) => {
+      if (cur.answers.length > acc) {
+        return cur.answers.length;
+      }
+
+      return acc;
+    }, 0);
+
+    let dataColumns = [];
+    let columns = this.questionColumn(sortable) ;
+
+    for (let i = 0; i < maxAnswerChoicesLength; i++) {
+      let questionOption = this.questionOption(i);
+      if (i === 0) {
+        dataColumns.push({property: 'question', ...columns});
+      } else {
+        dataColumns.push({property: 'percentAnswered' , ...questionOption});
+      }
+    }
+      dataColumns.push({property: 'notAnswered', ...this.questionOption(7)});
+
+      return dataColumns;
   };
 
   render() {
