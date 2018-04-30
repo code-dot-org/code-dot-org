@@ -127,3 +127,13 @@ def get_section_id_from_table(row_index)
   expect(section_id).to be > 0
   section_id
 end
+
+And(/^I save the section url$/) do
+  section_code = @browser.execute_script <<-SCRIPT
+    return document
+      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
+      .textContent
+      .trim();
+  SCRIPT
+  @section_url = "http://studio.code.org/join/#{section_code}"
+end
