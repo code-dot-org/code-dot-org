@@ -120,12 +120,17 @@ export const handleShareSetting = (disable) => {
 };
 
 export const transferStudents = (studentIds, currentSectionCode, newSectionCode, copyStudents) => {
-  transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
-    if (error) {
-      console.error(error);
-    }
-    // TODO: update studentData or any other state that has changed
-  });
+  return (dispatch, getState) => {
+    transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        studentIds.forEach(id => {
+          dispatch(removeStudent(id));
+        });
+      }
+    });
+  };
 };
 
 export const saveStudent = (studentId) => {
