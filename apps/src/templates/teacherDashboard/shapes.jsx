@@ -30,9 +30,7 @@ export const assignmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
-  // The base name of the course or script, e.g. "csd" for course csd-2018.
-  // Assignments with the same base_name will form an assignment group.Sorry, it looks like we cannot load this project because you are running low on disk space
-  base_name: PropTypes.string.isRequired,
+  assignment_group_name: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
 });
 
@@ -50,8 +48,7 @@ export const assignmentGroupShape = PropTypes.shape({
   position: PropTypes.number,
   // Display name
   name: PropTypes.string.isRequired,
-  // The assignment group contains all assignments which have this base_name, e.g "csd".
-  base_name: PropTypes.string.isRequired,
+  assignment_group_name: PropTypes.string.isRequired,
 });
 
 export const classroomShape = PropTypes.shape({
