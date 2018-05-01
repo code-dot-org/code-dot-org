@@ -46,7 +46,6 @@ class EditSectionForm extends Component {
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
@@ -70,7 +69,6 @@ class EditSectionForm extends Component {
       title,
       validGrades,
       validAssignments,
-      primaryAssignmentIds,
       assignmentFamilies,
       isSaveInProgress,
       editSectionProperties,
@@ -101,7 +99,6 @@ class EditSectionForm extends Component {
             section={section}
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
-            primaryAssignmentIds={primaryAssignmentIds}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
           />
@@ -145,7 +142,6 @@ export const UnconnectedEditSectionForm = EditSectionForm;
 export default connect(state => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
-  primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
@@ -215,7 +211,6 @@ const AssignmentField = ({
   section,
   onChange,
   validAssignments,
-  primaryAssignmentIds,
   assignmentFamilies,
   disabled,
 }) => (
@@ -229,7 +224,6 @@ const AssignmentField = ({
     <AssignmentSelector
       section={section}
       onChange={ids => onChange(ids)}
-      primaryAssignmentIds={primaryAssignmentIds}
       assignments={validAssignments}
       assignmentFamilies={assignmentFamilies}
       chooseLaterOption={true}
@@ -242,7 +236,6 @@ AssignmentField.propTypes = {
   section: sectionShape,
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-  primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
 };

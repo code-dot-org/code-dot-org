@@ -81,7 +81,6 @@ const defaultProps = {
       assignment_family_name: 'flappy',
     }
   ],
-  primaryAssignmentIds: ['29_null', 'null_6'],
 };
 
 const hiddenSectionProps = {
@@ -99,7 +98,6 @@ const hiddenSectionProps = {
   },
   assignments: defaultProps.assignments,
   assignmentFamilies: defaultProps.assignmentFamilies,
-  primaryAssignmentIds: defaultProps.primaryAssignmentIds,
 };
 
 describe('AssignmentSelector', () => {
