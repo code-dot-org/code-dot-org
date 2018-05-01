@@ -22,7 +22,7 @@ const alphabetMapper =  [
                           commonMsg.notAnswered(),
                         ];
 
-const answerOptionsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
+const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -71,42 +71,29 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
-  answerOptions = (index) => (
+  getAnswerColumns = (index) => (
     {
       header: {
         label: alphabetMapper[index],
-        props: {
-          style: {
-          ...tableLayoutStyles.headerCell,
-        }},
+        props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
-        format: answerOptionsFormatter,
-        props: {
-          style: {
-          ...tableLayoutStyles.cell,
-        }}
+        format: answerColumnsFormatter,
+        props: {style: tableLayoutStyles.cell},
       }
     }
   );
 
-
-  questionColumn = (sortable) => (
+  getQuestionColumn = (sortable) => (
     {
       header: {
         label: commonMsg.question(),
-        props: {
-          style: {
-          ...tableLayoutStyles.headerCell,
-        }},
+        props: {style: tableLayoutStyles.headerCell},
         transforms: [sortable],
       },
       cell: {
-        props: {
-          style: {
-          ...tableLayoutStyles.cell,
-        }}
-      },
+        props: {style: tableLayoutStyles.cell},
+      }
     }
   );
 
@@ -119,17 +106,17 @@ class MultipleChoiceOverviewTable extends Component {
     }, 0);
 
     let dataColumns = [];
-    let columns = this.questionColumn(sortable) ;
+    let columns = this.getQuestionColumn(sortable) ;
 
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.answerOptions(i);
+      let questionOption = this.getAnswerColumns(i);
       if (i === 0) {
         dataColumns.push({property: 'question', ...columns});
       } else {
         dataColumns.push({property: 'percentAnswered' , ...questionOption});
       }
     }
-      dataColumns.push({property: 'notAnswered', ...this.answerOptions(8)});
+        dataColumns.push({property: 'notAnswered', ...this.createAnswerColumns(8)});
 
       return dataColumns;
   };
