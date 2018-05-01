@@ -6,6 +6,7 @@ findBehavior
 behaviorsEqual
 */
 
+import _ from 'lodash';
 import GameLabJrLib from '@cdo/apps/gamelab/GameLabJr.interpreted';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {expect} from '../../util/configuredChai';
@@ -14,7 +15,9 @@ import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 
 describe('Game Lab Jr Helper Library', () => {
   const noop = () => {};
+  let extraKeys;
   before(() => {
+    const oldKeys = Object.keys(window);
     const gameLabP5 = new GameLabP5();
     gameLabP5.init({
       onExecutionStarting: noop,
@@ -43,6 +46,13 @@ describe('Game Lab Jr Helper Library', () => {
         .replace(/^var /gm, 'window.');
 
     eval(lib); // eslint-disable-line no-eval
+
+    const newKeys = Object.keys(window);
+    extraKeys = _.difference(newKeys, oldKeys);
+  });
+
+  after(() => {
+    extraKeys.forEach(key => delete window[key]);
   });
 
   describe('findBehavior', () => {
