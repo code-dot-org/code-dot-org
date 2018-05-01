@@ -21,8 +21,7 @@ const alphabetMapper =  [
 ];
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
-  const column = (columnIndex - 1);
-  const cell = rowData.answers[column];
+  const cell = rowData.answers[columnIndex - 1];
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
