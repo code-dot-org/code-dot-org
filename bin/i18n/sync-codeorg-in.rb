@@ -46,7 +46,7 @@ end
 # sanitize a string before uploading to crowdin. Currently only performs
 # CRLF -> LF conversion, but could be extended to do more
 def sanitize(string)
-  return string.gsub(/\r\n?/, "\n");
+  return string.gsub(/\r\n?/, "\n")
 end
 
 # Pull in various fields for levelbuilder levels from .level files and
