@@ -252,7 +252,7 @@ export const transferStudents = () => {
       if (error) {
         console.error(error);
       } else {
-        if (!copyStudents) {
+        if (!copyStudents || !otherTeacher) {
           studentIds.forEach(id => {
             dispatch(removeStudent(id));
           });
