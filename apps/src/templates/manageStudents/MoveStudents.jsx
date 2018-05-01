@@ -70,7 +70,12 @@ class MoveStudents extends Component {
       sectionId: PropTypes.number,
       otherTeacher: PropTypes.bool.isRequired,
       otherTeacherSection: PropTypes.string.isRequired,
-      copyStudents: PropTypes.bool.isRequired
+      copyStudents: PropTypes.bool.isRequired,
+      transferStatus: PropTypes.shape({
+        status: PropTypes.string.isRequired,
+        numStudents: PropTypes.number.isRequired,
+        sectionDisplay: PropTypes.string.isRequired
+      })
     }),
 
     // redux provided
