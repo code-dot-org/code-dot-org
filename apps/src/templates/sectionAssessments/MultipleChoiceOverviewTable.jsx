@@ -11,7 +11,6 @@ export const COLUMNS = {
 };
 
 const alphabetMapper =  [
-                          '-',
                           commonMsg.answerOptionA(),
                           commonMsg.answerOptionB(),
                           commonMsg.answerOptionC(),
@@ -19,15 +18,16 @@ const alphabetMapper =  [
                           commonMsg.answerOptionE(),
                           commonMsg.answerOptionF(),
                           commonMsg.answerOptionG(),
-                          commonMsg.notAnswered(),
                         ];
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
+  const column = (columnIndex - 1);
+  const cell = rowData.answers[column];
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={rowData.answers[columnIndex] && `${rowData.answers[columnIndex].percentAnswered}%` || '-'}
-        isCorrectAnswer={rowData.answers[columnIndex] && rowData.answers[columnIndex].isCorrectAnswer || false}
+        percentValue={cell && `${cell.percentAnswered}%` || '-'}
+        isCorrectAnswer={cell && cell.isCorrectAnswer || false}
       />
   );
 };
@@ -71,6 +71,18 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
+  getNotAnsweredColumn = (index) => (
+    {
+      header: {
+        label: commonMsg.notAnswered(),
+        props: {style: tableLayoutStyles.headerCell},
+      },
+      cell: {
+        props: {style: tableLayoutStyles.cell},
+      }
+    }
+  );
+
   getAnswerColumns = (index) => (
     {
       header: {
@@ -109,14 +121,16 @@ class MultipleChoiceOverviewTable extends Component {
     let columns = this.getQuestionColumn(sortable) ;
 
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.getAnswerColumns(i);
+      let questionOption = this.getAnswerColumns(i - 1);
       if (i === 0) {
         dataColumns.push({property: 'question', ...columns});
       } else {
         dataColumns.push({property: 'percentAnswered' , ...questionOption});
       }
     }
-        dataColumns.push({property: 'notAnswered', ...this.getAnswerColumns(8)});
+      // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
+      // maxAnswerChoicesLength does not include Question column.
+        dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
 
       return dataColumns;
   };
