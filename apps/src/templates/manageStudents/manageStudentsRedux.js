@@ -23,6 +23,21 @@ export const RowType = {
 export const OTHER_TEACHER = "otherTeacher";
 export const COPY_STUDENTS = "copy";
 
+/** Initial state for manageStudents.transferData redux store.
+  * studentIds - student ids selected to be moved to another section
+  * sectionId - section id to which new students will be moved
+  * otherTeacher - students are being moved to a section owned by a different teacher
+  * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
+  * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
+**/
+export const blankStudentTransfer = {
+  studentIds: [],
+  sectionId: null,
+  otherTeacher: false,
+  otherTeacherSection: '',
+  copyStudents: true
+};
+
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
 const addRowId = 0;
@@ -57,21 +72,6 @@ const blankNewStudentRow = {
   sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
-};
-
-/** Initial state for manageStudents.transferData redux store.
-  * studentIds - student ids selected to be moved to another section
-  * sectionId - section id to which new students will be moved
-  * otherTeacher - students are being moved to a section owned by a different teacher
-  * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
-  * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
-**/
-const blankStudentTransfer = {
-  studentIds: [],
-  sectionId: null,
-  otherTeacher: false,
-  otherTeacherSection: '',
-  copyStudents: true
 };
 
 /** Initial state for the manageStudents redux store.
@@ -128,6 +128,7 @@ export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
+export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -144,12 +145,18 @@ export const handleShareSetting = (disable) => {
  };
 };
 
-export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
-
-export const transferStudents = (studentIds, newSectionCode, copyStudents) => {
+export const transferStudents = () => {
   return (dispatch, getState) => {
     const state = getState();
     const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
+    const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
+    let newSectionCode;
+
+    if (otherTeacher && otherTeacherSection) {
+      newSectionCode = otherTeacherSection;
+    } else {
+      newSectionCode = sectionCode(state, newSectionId);
+    }
 
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       if (error) {
@@ -158,6 +165,7 @@ export const transferStudents = (studentIds, newSectionCode, copyStudents) => {
         studentIds.forEach(id => {
           dispatch(removeStudent(id));
         });
+        updateStudentTransfer({...blankStudentTransfer});
       }
     });
   };

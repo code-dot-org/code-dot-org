@@ -10,7 +10,7 @@ import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {updateStudentTransfer, transferStudents, OTHER_TEACHER, COPY_STUDENTS} from './manageStudentsRedux';
+import {updateStudentTransfer, transferStudents, OTHER_TEACHER, COPY_STUDENTS, blankStudentTransfer} from './manageStudentsRedux';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -93,9 +93,8 @@ class MoveStudents extends Component {
   };
 
   closeDialog = () => {
-    this.setState({
-      isDialogOpen: false
-    });
+    this.setState({isDialogOpen: false});
+    this.props.updateStudentTransfer({...blankStudentTransfer});
   };
 
   getStudentIds = () => {
@@ -253,16 +252,8 @@ class MoveStudents extends Component {
   };
 
   transfer = () => {
-    const {transferData} = this.props;
-    let newSectionCode;
-
-    if (transferData.otherTeacher) {
-      newSectionCode = transferData.otherTeacherSection;
-    } else {
-      // TODO: newSectionCode = section code chosen from dropdown
-    }
-
-    this.props.transferStudents(transferData.studentIds, newSectionCode, transferData.copyStudents);
+    this.props.transferStudents();
+    this.closeDialog();
   };
 
   render() {
