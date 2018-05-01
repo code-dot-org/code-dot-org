@@ -80,6 +80,7 @@ class MoveStudents extends Component {
         id: PropTypes.number.isRequired
       }).isRequired
     ),
+    currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired
   };
@@ -214,7 +215,17 @@ class MoveStudents extends Component {
   };
 
   renderOptions = () => {
-    let options = this.props.sections.map(section => <option key={section.id} value={section.id}>{section.name}</option>);
+    const {sections, currentSectionId} = this.props;
+    let options = sections.map(section => {
+      if (section.id === currentSectionId) {
+        return null;
+      } else {
+        return <option key={section.id} value={section.id}>{section.name}</option>;
+      }
+    });
+
+    // Add initial empty and final 'other teacher' options
+    options.unshift(<option key="empty" value=""></option>);
     options.push(<option key={OTHER_TEACHER} value={OTHER_TEACHER}>{i18n.otherTeacher()}</option>);
 
     return options;
@@ -257,8 +268,12 @@ class MoveStudents extends Component {
   };
 
   isButtonDisabled = () => {
-    const {studentIds, sectionId} = this.props.transferData;
-    return (studentIds.length === 0) || !sectionId;
+    const {studentIds, sectionId, otherTeacher, otherTeacherSection} = this.props.transferData;
+    if (otherTeacher) {
+      return (studentIds.length === 0) || !otherTeacherSection;
+    } else {
+      return (studentIds.length === 0) || !sectionId;
+    }
   };
 
   render() {
@@ -372,7 +387,8 @@ class MoveStudents extends Component {
 export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(state => ({
-  sections: sectionsNameAndId(state.teacherSections)
+  sections: sectionsNameAndId(state.teacherSections),
+  currentSectionId: state.manageStudents.sectionId
 }), dispatch => ({
   updateStudentTransfer(transferData) {
     dispatch(updateStudentTransfer(transferData));
