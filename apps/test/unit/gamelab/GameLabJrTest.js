@@ -15,10 +15,9 @@ import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 
 describe('Game Lab Jr Helper Library', () => {
   const noop = () => {};
-  let extraKeys;
+  let extraKeys, gameLabP5;
   before(() => {
-    const oldKeys = Object.keys(window);
-    const gameLabP5 = new GameLabP5();
+    gameLabP5 = new GameLabP5();
     gameLabP5.init({
       onExecutionStarting: noop,
       onPreload: noop,
@@ -27,8 +26,15 @@ describe('Game Lab Jr Helper Library', () => {
       scale: 1,
     });
     gameLabP5.startExecution();
+    const oldKeys = Object.keys(window);
     const props = gameLabP5.getGlobalPropertyList();
     for (let propName in props) {
+      if (propName === 'p5') {
+        // The p5 exposed on window in "real javascript land" is different from
+        // the p5 exposed as a global within the interpreter. Fortunately the
+        // latter isn't needed
+        continue;
+      }
       const prop = props[propName];
       let value = prop[0];
       if (value && value.bind && prop.length >= 2) {
@@ -52,6 +58,7 @@ describe('Game Lab Jr Helper Library', () => {
   });
 
   after(() => {
+    gameLabP5.resetExecution();
     extraKeys.forEach(key => delete window[key]);
   });
 
