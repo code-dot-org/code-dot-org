@@ -1,5 +1,6 @@
 import React from 'react';
 import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
+import {blankStudentTransfer} from './manageStudentsRedux';
 
 const studentData = [
   {
@@ -31,6 +32,14 @@ const sections = [
   }
 ];
 
+const transferToOtherTeacher = {
+  ...blankStudentTransfer,
+  studentIds: [1,2,3],
+  otherTeacher: true,
+  otherTeacherSection: 'ABCDEF',
+  copyStudents: false
+};
+
 export default storybook => {
   storybook
     .storiesOf('MoveStudents', module)
@@ -41,6 +50,20 @@ export default storybook => {
         story: () => (
           <MoveStudents
             studentData={studentData}
+            transferData={blankStudentTransfer}
+            currentSectionId={1}
+            sections={sections}
+          />
+        )
+      },
+      {
+        name: 'Move students dialog',
+        description: 'Ability to move students in a certain section to a different section or teacher',
+        story: () => (
+          <MoveStudents
+            studentData={studentData}
+            transferData={transferToOtherTeacher}
+            currentSectionId={1}
             sections={sections}
           />
         )
