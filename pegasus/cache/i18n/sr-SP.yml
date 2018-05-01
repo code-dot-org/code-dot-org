@@ -668,8 +668,10 @@
   video_title_real_madrid: Hour of Code са Реал Мадридом
   video_title_marco_belinelli: Hour of Code са Марком Белинелијем
   video_title_chris_bosh: Крис Бош о рачунарским наукама
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 мин
   video_2min: 2 мин
+  video_3min: 3 min
   video_5min: 5 мин
   speak_another_language: Знаш ли неки други језик?
   help_translate: Помози нам да преведемо.
@@ -2094,5 +2096,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

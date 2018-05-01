@@ -676,8 +676,10 @@
   video_title_real_madrid: Hora do Código com Real Madrid
   video_title_marco_belinelli: Hora do Código com Marco Belinelli
   video_title_chris_bosh: Chris Bosh fala sobre Ciência da Computação
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Você fala outra língua?
   help_translate: Ajude-nos a traduzir.
@@ -2140,7 +2142,7 @@
   user_header_settings: Minha conta
   user_header_logout: Sair
   user_header_signin: Entrar
-  view_all_sections: View All Sections
+  view_all_sections: Ver todas as turmas
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2194,5 +2196,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
