@@ -10,7 +10,6 @@ const multipleChoiceData = [
                  {percentAnswered: '20', isCorrectAnswer: false},
                  {percentAnswered: '20', isCorrectAnswer: false},
     ],
-    notAnswered: "5%"
   },
   {
     id: 2,
@@ -22,7 +21,6 @@ const multipleChoiceData = [
                  {percentAnswered: '20', isCorrectAnswer: false},
                  {percentAnswered: '10', isCorrectAnswer: false},
     ],
-    notAnswered: "5%"
   },
   {
     id: 3,
@@ -33,7 +31,6 @@ const multipleChoiceData = [
                  {percentAnswered: '5', isCorrectAnswer: false},
                  {percentAnswered: '5', isCorrectAnswer: false},
     ],
-    notAnswered: "5%"
   },
   {
     id: 4,
