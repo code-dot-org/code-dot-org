@@ -77,10 +77,7 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
-  // level.kind === unplugged is only needed for level data from server
-  // that hasn't been processed
-  // TODO(caleybrock) Remove string check once all level data is processed
-  if (level.isUnplugged || level.kind === 'unplugged') {
+  if (level.isUnplugged) {
     return 'scissors';
   }
 
