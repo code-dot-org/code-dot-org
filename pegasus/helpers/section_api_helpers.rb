@@ -614,6 +614,7 @@ class DashboardSection
     # querying all students together (as below) is significantly more performant.
     student_ids = @students.map {|s| s[:id]}
     level_counts = Dashboard.db[:user_levels].
+      server(:read_only). # we're experiencing disruption from this query on the master, so move it to the replica
       group_and_count(:user_id).
       where(user_id: student_ids).
       where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
