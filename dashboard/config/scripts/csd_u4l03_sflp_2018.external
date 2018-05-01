@@ -1,0 +1,11 @@
+name 'CSD U4L03 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll design a product from scratch to meet a user's needs. Along the way you'll learn how brainstorming and then categorizing ideas is a useful skill when there are many potential options you could choose.
+
+## Resources
+
+* [User Centered Design](https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Activity Guide
+MARKDOWN

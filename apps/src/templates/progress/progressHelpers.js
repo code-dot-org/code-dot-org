@@ -1,7 +1,7 @@
 import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -77,10 +77,69 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
-  if (level.isUnplugged || level.kind === 'unplugged') {
+  if (level.isUnplugged) {
     return 'scissors';
   }
 
   // default to desktop
   return 'desktop';
 }
+
+/**
+ * Summarizes stage progress data.
+ * @param {[]} levelsWithStatus An array of objects each representing
+ * students progress in a level
+ * @returns {object} An object with a total count of levels in each of the
+ * following buckets: total, completed, imperfect, incomplete, attempted.
+ */
+export function summarizeProgressInStage(levelsWithStatus) {
+  // Get counts of statuses
+  let statusCounts = {
+    total: levelsWithStatus.length,
+    completed: 0,
+    imperfect: 0,
+    incomplete: 0,
+    attempted: 0,
+  };
+  for (let i = 0; i <levelsWithStatus.length; i++) {
+    const status = levelsWithStatus[i].status;
+    switch (status) {
+      case LevelStatus.perfect:
+      case LevelStatus.submitted:
+        statusCounts.completed = statusCounts.completed + 1;
+        break;
+      case LevelStatus.not_tried:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+        break;
+      case LevelStatus.attempted:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.attempted = statusCounts.attempted + 1;
+        break;
+      case LevelStatus.passed:
+        statusCounts.imperfect = statusCounts.imperfect + 1;
+        break;
+      // All others are assumed to be not tried
+      default:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+    }
+
+  }
+  return statusCounts;
+}
+
+/**
+ * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * contains more data than we need. This filters to the parts our views care about.
+ */
+export const processedLevel = (level) => {
+  return {
+    url: level.url,
+    name: level.name,
+    progression: level.progression,
+    kind: level.kind,
+    icon: level.icon,
+    isUnplugged: level.kind === LevelKind.unplugged,
+    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    isConceptLevel: level.is_concept_level,
+  };
+};

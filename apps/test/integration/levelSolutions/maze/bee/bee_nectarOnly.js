@@ -1,7 +1,5 @@
-var constants = require('@cdo/apps/constants.js');
+import {TestResults, BeeTerminationValue as TerminationValue} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
-var TestResults = constants.TestResults;
-var TerminationValue = constants.BeeTerminationValue;
 
 // Nectar goal of 2.  Two directly in front of us, one more a square later
 var levelDef = {
