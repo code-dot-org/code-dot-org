@@ -77,10 +77,55 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
+  // level.kind === unplugged is only needed for level data from server
+  // that hasn't been processed
+  // TODO(caleybrock) Remove string check once all level data is processed
   if (level.isUnplugged || level.kind === 'unplugged') {
     return 'scissors';
   }
 
   // default to desktop
   return 'desktop';
+}
+
+/**
+ * Summarizes stage progress data.
+ * @param {[]} levelsWithStatus An array of objects each representing
+ * students progress in a level
+ * @returns {object} An object with a total count of levels in each of the
+ * following buckets: total, completed, imperfect, incomplete, attempted.
+ */
+export function summarizeProgressInStage(levelsWithStatus) {
+  // Get counts of statuses
+  let statusCounts = {
+    total: levelsWithStatus.length,
+    completed: 0,
+    imperfect: 0,
+    incomplete: 0,
+    attempted: 0,
+  };
+  for (let i = 0; i <levelsWithStatus.length; i++) {
+    const status = levelsWithStatus[i].status;
+    switch (status) {
+      case LevelStatus.perfect:
+      case LevelStatus.submitted:
+        statusCounts.completed = statusCounts.completed + 1;
+        break;
+      case LevelStatus.not_tried:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+        break;
+      case LevelStatus.attempted:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+        statusCounts.attempted = statusCounts.attempted + 1;
+        break;
+      case LevelStatus.passed:
+        statusCounts.imperfect = statusCounts.imperfect + 1;
+        break;
+      // All others are assumed to be not tried
+      default:
+        statusCounts.incomplete = statusCounts.incomplete + 1;
+    }
+
+  }
+  return statusCounts;
 }
