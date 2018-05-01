@@ -17,6 +17,12 @@ export const RowType = {
   STUDENT: "studentRow",
 };
 
+// Constants around moving students to another section.
+// OTHER_TEACHER - value determines whether students will be moved to a section owned by a different teacher
+// COPY_STUDENTS - value determines whether students will be copied to the new section or moved (and subsequently removed from current section)
+export const OTHER_TEACHER = "otherTeacher";
+export const COPY_STUDENTS = "copy";
+
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
 const addRowId = 0;
@@ -53,6 +59,21 @@ const blankNewStudentRow = {
   rowType: RowType.NEW_STUDENT,
 };
 
+/** Initial state for manageStudents.transferData redux store.
+  * studentIds - student ids selected to be moved to another section
+  * sectionId - section id to which new students will be moved
+  * otherTeacher - students are being moved to a section owned by a different teacher
+  * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
+  * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
+**/
+const blankStudentTransfer = {
+  studentIds: [],
+  sectionId: null,
+  otherTeacher: false,
+  otherTeacherSection: '',
+  copyStudents: true
+};
+
 /** Initial state for the manageStudents redux store.
  * loginType - a SectionLoginType for the active section.
  * sectionId - the sectionId number for the active section.
@@ -61,7 +82,7 @@ const blankNewStudentRow = {
  * in the edit fields on the client which has not yet been persisted to the server.
  * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
- * TODO: transferData info
+ * transferData - initial state described above in blankStudentTransfer assignment
  */
 const initialState = {
   loginType: '',
@@ -70,13 +91,7 @@ const initialState = {
   sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
-  transferData: {
-    selectedIds: [],
-    selectedSectionId: null,
-    otherTeacherSelected: false,
-    otherTeacherSectionValue: '',
-    copy: true
-  }
+  transferData: {...blankStudentTransfer}
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -97,7 +112,7 @@ const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
-const START_TRANSFERRING_STUDENTS = 'manageStudents/START_TRANSFERRING_STUDENTS';
+const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -113,7 +128,6 @@ export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
-export const startTransferringStudents = transferData => ({ type: START_TRANSFERRING_STUDENTS, transferData });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -129,6 +143,8 @@ export const handleShareSetting = (disable) => {
    dispatch(updateAllShareSetting(disable));
  };
 };
+
+export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
 
 export const transferStudents = (studentIds, newSectionCode, copyStudents) => {
   return (dispatch, getState) => {
@@ -499,7 +515,7 @@ export default function manageStudents(state=initialState, action) {
       showSharingColumn: !state.showSharingColumn,
     };
   }
-  if (action.type === START_TRANSFERRING_STUDENTS) {
+  if (action.type === UPDATE_STUDENT_TRANSFER) {
     return {
       ...state,
       transferData: {
