@@ -31,6 +31,7 @@ def under_13?
 end
 
 def sharing_disabled?
+  # raise "#{current_user[:properties]}"
   get_sharing_disabled_from_properties(current_user[:properties])
 end
 
