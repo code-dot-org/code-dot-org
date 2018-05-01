@@ -208,7 +208,7 @@
       email: E-posta adresi
       submit: Gönder
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Şifreni değiştirmek için lütfen robot olmadığını kanıtla.
       invalid_email: Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor.
         Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.
     change_form:

@@ -38,7 +38,7 @@
   "drawUpperWave": "tarraing tonn uachtarach",
   "drawLowerWave": "tarraing tonn íochtarach",
   "drawSticker": "tarraing greamán",
-  "drawStickerWithSize": "draw sticker with size",
+  "drawStickerWithSize": "tarraing greamán de mhéid",
   "heightParameter": "airde",
   "hideTurtle": "cuir an t-ealaíontóir i bhfolach",
   "jump": "léim",
@@ -74,7 +74,7 @@
   "penDown": "peann síos",
   "penTooltip": "Ardaíonn nó íslíonn seo an peann, chun tarraingt a thosú nó a stopadh.",
   "penUp": "peann suas",
-  "pointTo": "point to",
+  "pointTo": "tabhair aghaidh ar",
   "pixels": "picteilín",
   "reinfFeedbackMsg": "Seo é do líníocht! Lean ort ag obair uirthi, nó téigh ar aghaidh go dtí an chéad dúshlán eile.",
   "setAlpha": "socraigh alfa",
@@ -94,6 +94,6 @@
   "turnTooltip": "Casann seo an t-ealaíontóir ar chlé tríd an uillinn shonraithe.",
   "turtleVisibilityTooltip": "Taispeáin nó folaigh an t-ealaíontóir.",
   "widthTooltip": "Athraíonn seo leithead an phinn.",
-  "withSize": "with size",
+  "withSize": "de mhéid",
   "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo."
 }

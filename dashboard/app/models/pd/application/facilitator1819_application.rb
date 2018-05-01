@@ -20,6 +20,7 @@
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
 #  properties                          :text(65535)
+#  deleted_at                          :datetime
 #
 # Indexes
 #
@@ -598,6 +599,10 @@ module Pd::Application
         course: workshop_course,
         city: find_default_fit_teachercon[:city]
       )
+    end
+
+    def fit_weekend_registration
+      Pd::FitWeekend1819Registration.find_by_pd_application_id(id)
     end
 
     # override

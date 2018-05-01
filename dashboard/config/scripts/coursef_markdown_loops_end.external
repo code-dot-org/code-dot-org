@@ -1,0 +1,20 @@
+name 'courseF_markdown_loops_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "loops"!**  
+
+### **A loop is the action of doing something over and over again.** Another word for doing something again is repeat.
+
+### Loops are really useful for repeating patterns. It might be helpful to write out your program without any loops first, then try to find a pattern. 
+
+### When you see one, stick that pattern into a `repeat` block!
+
+---
+
+## **Vocab to Know**
+
+* ### **Loop** - The action of doing something over and over again
+
+* ### **Repeat** - Do something again
+MARKDOWN

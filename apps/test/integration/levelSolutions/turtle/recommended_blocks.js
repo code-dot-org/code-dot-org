@@ -1,5 +1,5 @@
 var requiredBlockUtils = require('@cdo/apps//required_block_utils');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 
 var levelDef = {

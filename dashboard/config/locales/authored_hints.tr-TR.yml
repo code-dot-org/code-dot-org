@@ -66,21 +66,39 @@
           dönmesi lazım!
         2-3_Artist_Debugging_9_b: Tam dönüş için blok eklemene gerek yok. Sadece programdaki
           sola dön bloğuna 60 derece ekle!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Karelerin kenarları 100 piksel genişliğinde, buda
+          demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
+        2-3_Artist_Functions_1_b: Gözlük yapmak için çakışan çizgiler olabilir.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: Karelerin kenarları 100 piksel genişliğinde, buda
           demek oluyor ki ikinci kareyi çizmeden önce 175 piksel ilerlemelisin.
         2-3_Artist_Functions_1_b: Gözlük yapmak için çakışan çizgiler olabilir.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Fonksiyonun içinde sadece kenar sayısını ve kenar
+          uzunluğunu değil, bir de sanatçının her kenar arasında dönmesi gereken açıyı
+          değiştirmelisin .
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: Fonksiyonun içinde sadece kenar sayısını ve kenar
           uzunluğunu değil, bir de sanatçının her kenar arasında dönmesi gereken açıyı
           değiştirmelisin .
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Önce kodu çalıştır ve ne eklemen gerektiğini gör.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Önce kodu çalıştır ve ne eklemen gerektiğini gör.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: "Programınız: \n-Fonksiyon kullanmalıdır.\n - ileri
+          100 + 75 piksel ilerlemelidir\n- Fonksiyon kullanmalıdır\n"
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: "Programınız: \n-Fonksiyon kullanmalıdır.\n - ileri
           100 + 75 piksel ilerlemelidir\n- Fonksiyon kullanmalıdır\n"
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: Sanatçının bu tasarımı tamamlaması için her kare
+          arasında 120 derece dönmesi gerekiyor.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: Sanatçının bu tasarımı tamamlaması için her kare
           arasında 120 derece dönmesi gerekiyor.
@@ -1440,6 +1458,7 @@
           to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what
           would have happened if you turned the other way?
+      conditionals_forvideo_harvester_authored_hint: []
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Bu tarz döngüleri duvarlar ve çatı oluşturmak için kullanabilirsiniz. Farklı blokları tekrar deneyin. !
@@ -6352,6 +6371,36 @@
           Burada 2 farklı uzunlukta birbiri ardına çizilen kar tanesi var (aralarında 30 derece dönüş ile).
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_1_2018_authored_hint:
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
+        courseD_artist_project1_b: "'ileri git' komutu bir çizgi çizerek ilerler,
+          fakat 'ileri zıpla' komutu çizmeden ileri atlatır."
+      courseD_artist_2_2018_authored_hint:
+        courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
+          does not.
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
+      courseD_artist_3_2018_authored_hint: []
+      courseD_artist_4_2018_authored_hint: []
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_6_2018_authored_hint: []
+      courseD_artist_7_2018_authored_hint:
+        courseD_artist_project2a_a: "Bu çizim 4 basamağın iç içe döngüsünden ve '2
+          defa tekrarla' bloğunun içinde '180 derece' sağa dön bloğuyla oluşturulmuştur.
+          \n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\"
+          width=\"200px\" />\n"
+      courseD_artist_8_2018_authored_hint:
+        courseD_artist_project3a_a: Şeklinizi döndürmek için farklı yollar da seçebilirsiniz!
+          18 defa, 20 derece döndürmeye ne dersin?
+      courseD_artist_9_2018_authored_hint:
+        courseD_artist_project4a_a: |
+          Burada 2 farklı uzunlukta birbiri ardına çizilen kar tanesi var (aralarında 30 derece dönüş ile).
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_Template_2018_authored_hint: []
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Metin bloğundaki "???" yazısını birler halindeki
           istediğin ikili resim ile değiştir.
@@ -8696,12 +8745,8 @@
         courseD_maze_until5_c: Her adımdan sonra, zombi sol tarafa bir yol olup olmadığını
           kontrol etmeli. Eğer bir yol bulursa ne yapması gerekir?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the
-          zombie checking for a place to turn.
         courseD_maze_until5_b: Yalnız bir adet 'ilerme' kullanmak için, 'ayçiçeğine
           kadar tekrarla' bloğunun içine 'ilerle' yerleştirin.
-        courseD_maze_until5_c: Her adımdan sonra, zombi sol tarafa bir yol olup olmadığını
-          kontrol etmeli. Eğer bir yol bulursa ne yapması gerekir?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the
           zombie on track.
@@ -8710,12 +8755,8 @@
         courseD_maze_until6_c: Son bulmacadan daha fazla dönüş olmasına rağmen, 'kadar
           tekrarla' bloğu sebebiyle kodun neredeyse aynı!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the
-          zombie on track.
         courseD_maze_until6_b: Yalnız bir adet 'ilerme' kullanmak için, 'ayçiçeğine
           kadar tekrarla' bloğunun içine 'ilerle' yerleştirin.
-        courseD_maze_until6_c: Son bulmacadan daha fazla dönüş olmasına rağmen, 'kadar
-          tekrarla' bloğu sebebiyle kodun neredeyse aynı!
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer, just because
           the maze is!
@@ -8728,8 +8769,6 @@
           time, just because the maze is!
         courseD_maze_until7_b: Son bulmacadan daha fazla dönüş olmasına rağmen, 'kadar
           tekrarla' bloğu sebebiyle kodun neredeyse aynı!
-        courseD_maze_until7_c: Sol taraftaki yolları kontrol etmeyi unutma, çünkü
-          sağa dönmek sizi yoldan çıkarır!
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
           zombie headed the right direction.
@@ -8752,10 +8791,6 @@
         courseD_maze_until8_c: Ayçiçeğine ulaşmak için 'kadar tekrarla' bloğunu kullanmayı
           unutmayın!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
-          possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: Eğer ileriye doğru bir yol yoksa hangi yöne dönmen
-          gerekir?
         courseD_maze_until8_c: Ayçiçeğine ulaşmak için 'kadar tekrarla' bloğunu kullanmayı
           unutmayın!
       courseD_maze_until_challenge_authored_hint: []
@@ -9580,6 +9615,14 @@
           bundan dolayı 'sürece' döngüsü kullanarak hepsini aldığından emin ol!
         courseE_bee_ramp14_c: Bu bulmacayla önceki ile neredeyse aynıdır, sadece sebzelerin
           yerine bal ve nektarla.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: Arı, önceki bulmacadaki çiftçi gibi çalışır. Eğer nektar
+          varsa yol boyunca ilerle ve nektar topla (nektar>0 süresince), ve bütün
+          balı yap.
+        courseE_bee_ramp14_b: Her boşlukta birden fazla çiçek veya petek olabilir,
+          bundan dolayı 'sürece' döngüsü kullanarak hepsini aldığından emin ol!
+        courseE_bee_ramp14_c: Bu bulmacayla önceki ile neredeyse aynıdır, sadece sebzelerin
+          yerine bal ve nektarla.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Tekrarla bloğunu belirli bir sayıda bir şey yapmak için
           kullanamıyorum, yol boyunca ilerlemek için ne kullanmalıyım?
@@ -9815,7 +9858,11 @@
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: İhtiyacın olursa önceki bulmacaya geri dönün ve **süresince**bloğu
           ile nasıl ürün toplandığını görün.
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: İhtiyacın olursa önceki bulmacaya geri dönün ve **süresince**bloğu
+          ile nasıl ürün toplandığını görün.
       courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_predict2_2018_authored_hint: []
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: Eğer döngüyü nereye koyacağın konusunda zorlanıyorsan
           önce kodla sonra tekrarlayan kısımları bulmaya çalış.
@@ -9843,6 +9890,9 @@
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_b: Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek
           için tekrarla bloğuna ihtiyacın var.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek
+          için tekrarla bloğuna ihtiyacın var.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek
           için tekrarla bloğuna ihtiyacın var.
@@ -9850,6 +9900,13 @@
         courseE_farmer_ramp12_b: Çiftçiye kaç gere ilerleyip kaç marul almasını söylemek
           için tekrarla bloğuna ihtiyacın var.
       courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12b: Bu bulmacayı çözmek için 'eğer' ifadeni 21 defa kontrol
+          etmen gerekir.
+        courseE_farmer_ramp12c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+        courseE_farmer_ramp12d: Sadece marul olacak, bu yüzden boşluklar, mısır ve
+          kabaklar için endişeye kapılma.
+      courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12b: Bu bulmacayı çözmek için 'eğer' ifadeni 21 defa kontrol
           etmen gerekir.
         courseE_farmer_ramp12c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
@@ -9895,7 +9952,20 @@
           'eğer' ifadesi yazmanız gerekmez."
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
           writing your code step-by-step and look for patterns.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: Her boşlukta bitkiler birden fazla olabilir, bundan
+          dolayı 'süresince' döngüsü kullanarak hepsini aldığından emin ol!
+        courseE_farmer_ramp13_b: "'tekrarla' döngüsü kullanın böylece her kare için
+          'eğer' ifadesi yazmanız gerekmez."
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
+          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Kadar Tekrarla bloğu kullanarak kabağa kadar gidin.
+        courseE_farmer_ramp15_b: Kabağa doğru yol boyunca ilerlerken, başka neyin
+          yapılmasına ihtiyaç vardır?
+        courseE_farmer_ramp15_c: Kabak yolunda hasar etmek için filizler çeşitli miktarlarda
+          mısır ya da marulu gizler.
+      courseE_farmer_ramp15_2018_authored_hint:
         courseE_farmer_ramp15_a: Kadar Tekrarla bloğu kullanarak kabağa kadar gidin.
         courseE_farmer_ramp15_b: Kabağa doğru yol boyunca ilerlerken, başka neyin
           yapılmasına ihtiyaç vardır?
@@ -11052,7 +11122,17 @@
           değişkeni tarafından kontrol edilir.
         courseF_artist_fwp_challenge1_f: "** Çözüm: **! [Çözüm] blokları (https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)"
       courseF_artist_predict1_authored_hint: []
+      courseF_artist_predict1_2018_authored_hint: []
       courseF_artist_ramp10_authored_hint:
+        courseF_artist_ramp10_a: Her üçgenden sonra 60 derece dönmeyi unutma. Hangi
+          föngü içine ilgili komutları koyman gerekiyor?
+        courseF_artist_ramp10_b: Eğer üçgen için olan kodun bir 'tekrarla' döngüsünün
+          için olursa, bu görev çok daha kolay olacak.
+        courseF_artist_ramp10_c: |-
+          Bu tasarımda toplamda altı tane üçgen çizeceksin:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
         courseF_artist_ramp10_a: Her üçgenden sonra 60 derece dönmeyi unutma. Hangi
           föngü içine ilgili komutları koyman gerekiyor?
         courseF_artist_ramp10_b: Eğer üçgen için olan kodun bir 'tekrarla' döngüsünün
@@ -11068,7 +11148,21 @@
           bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin
           olun. Daha sonra dönmeyi unutma!
         courseF_artist_ramp8_c: Dönüşün de 'tekrarla' döngüsünün içine girecek.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan
+          ve 100 yerine 200 gir.
+        courseF_artist_ramp8_b: 4 tarafı çizmek için bir döngü içinde 'ileri 100 piksel'
+          bloğunu döngü içine yerleştirin ve 4 kez çizmek için ayarlandığından emin
+          olun. Daha sonra dönmeyi unutma!
+        courseF_artist_ramp8_c: Dönüşün de 'tekrarla' döngüsünün içine girecek.
       courseF_artist_ramp9_authored_hint:
+        courseF_artist_ramp9_a: Bu kareye benzer bir şekil. Farklı olan nedir?
+        courseF_artist_ramp9_b: Hangi açıya ihtiyacın olduğunu görmek için açılır
+          menüdeki 'dön' bloğunu kullanabilirsin!
+        courseF_artist_ramp9_c: 100 piksel ilerlemek sonra her taraf için 120 derece
+          dönmek isteyeceksin. Kodunuzu kısaltmak için bir tane 'tekrarla' döngüsü
+          kullanabilir misin?
+      courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: Bu kareye benzer bir şekil. Farklı olan nedir?
         courseF_artist_ramp9_b: Hangi açıya ihtiyacın olduğunu görmek için açılır
           menüdeki 'dön' bloğunu kullanabilirsin!
@@ -13362,6 +13456,14 @@
         courseF_farmer_ramp11_c: Bütün marulları toplamak için 5 tane tekrarla bloğuna
           ihtiyacın yok. Bunun yerine bir döngü içine bir döngü daha yerleştirin (içine
           de 'ilerle' bloğu koymayı unutmayın!)
+      courseF_farmer_ramp11_2018_authored_hint:
+        courseF_farmer_ramp11_a: Eğer döngüyü nereye koyacağın konusunda zorlanıyorsan
+          önce kodla sonra tekrarlayan kısımları bulmaya çalış.
+        courseF_farmer_ramp11_b: 5 tane "Marul topla" bloğu kullanmak yerine, Tekrarla
+          döngüsü kullanarak nasıl marul toplarsın?
+        courseF_farmer_ramp11_c: Bütün marulları toplamak için 5 tane tekrarla bloğuna
+          ihtiyacın yok. Bunun yerine bir döngü içine bir döngü daha yerleştirin (içine
+          de 'ilerle' bloğu koymayı unutmayın!)
       courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların tam
@@ -13382,12 +13484,29 @@
           block by block and look for errors.
         courseF_maze_ramp7_a: Tekrarla bloğu kullanarak bir yada daha fazla bloğu
           tekrarlı çalıştırman mümkündür.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: Eğer Kuş domuza doğru gitmiyorsa, tüm blokların tam
+          olarak birleştiğinden emin olun, sonra tekrar "Çalıştır" ı tıklayın.
+        courseF_maze_ramp1_b: Burada araç kutusundan hiç bir ilave bloğa ihtiyacınız
+          yok!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: Yeni bir blok kullanmak için, onu araç kutusundan çalışma
           alanına sürükleyin ve `çalıştırıldığında 'bloğuna bağlı olan programa bağlayın.
         courseF_maze_ramp2_b: "'İlerle' bloğunun döngünün içinde olduğundan emin olun,
           böylece 'ilerle' bloğu tekrarlanır."
+      courseF_maze_ramp2_2018_authored_hint:
+        courseF_maze_ramp2_a: Yeni bir blok kullanmak için, onu araç kutusundan çalışma
+          alanına sürükleyin ve `çalıştırıldığında 'bloğuna bağlı olan programa bağlayın.
+        courseF_maze_ramp2_b: "'İlerle' bloğunun döngünün içinde olduğundan emin olun,
+          böylece 'ilerle' bloğu tekrarlanır."
       courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: Yolu takip etmek için, ilerle ve bir yöne dön, sonra
+          3 tere ilerle ve ters yöne dön. Son bir kez daha ilerle ve domuz ulaş.
+        courseF_maze_ramp4_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      courseF_maze_ramp4_2018_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of
           view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: Yolu takip etmek için, ilerle ve bir yöne dön, sonra
@@ -13400,7 +13519,19 @@
         courseF_maze_ramp5_b: Domuza ulaşmak için birden fazla yol var.
         courseF_maze_ramp5_c: Daha kısa kod için bir tane 'tekrarla' döngüsü kullanmayı
           unutmayın!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
+          line. Can you figure out what you need to do next?
+        courseF_maze_ramp5_b: Domuza ulaşmak için birden fazla yol var.
+        courseF_maze_ramp5_c: Daha kısa kod için bir tane 'tekrarla' döngüsü kullanmayı
+          unutmayın!
       courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: Bu bulmacayı çözmek için iki yol vardır!
+        courseF_maze_ramp6_b: Kuş bir duvara bakıyor, bu yüzden hareket etmeden önce
+          döndürmeyi unutmayın!
+        courseF_maze_ramp6_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
+          düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Bu bulmacayı çözmek için iki yol vardır!
         courseF_maze_ramp6_b: Kuş bir duvara bakıyor, bu yüzden hareket etmeden önce
           döndürmeyi unutmayın!
@@ -13846,6 +13977,14 @@
         courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something,
           and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_b: Programda satır satır ilerlemek için adım butonunu kullanın.
+          İşler nerede ters gidiyor?
+      coursef_maze_ramp3_2018_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
           delete a block from the middle of your code, drag all of the blocks underneath
           it away to the right and let them sit in the workspace for a while.  \n\nClick

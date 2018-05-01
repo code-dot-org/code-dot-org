@@ -678,8 +678,10 @@
   video_title_real_madrid: Heure de Code avec le Real Madrid
   video_title_marco_belinelli: Heure de Code avec Marco Belinelli
   video_title_chris_bosh: Chris Bosh à propos de l'informatique
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 minutes
   video_2min: 2 minutes
+  video_3min: 3 min
   video_5min: 5 minutes
   speak_another_language: Tu parles d'autres langues ?
   help_translate: Aidez-nous à traduire.
@@ -2237,5 +2239,3 @@
     avec mon compte Google »:'
   hero_name: 'Minecraft: Le voyage du héros'
   applab-intro_name: Introduction pour App Lab
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

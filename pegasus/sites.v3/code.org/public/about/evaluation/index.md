@@ -13,7 +13,7 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 
 ## Available reports
 
-- [Student-Teacher Demographics in Computer Science Principles Classrooms 2018 (PDF)](/files/Student-Teacher-Demographics-in-CSP.pdf)
+- [Associations Between the Race and Gender of Computer Science Principles Teachers and Classroom Diversity 2018 (PDF)](/files/associations-teacher-student-demographics-in-csp.pdf)
 - [Measuring student proficiency: 2015-16 ](/about/evaluation/proficiency2016)
 - [Hour of Code impact study 2016 (PDF)](/files/HourOfCodeImpactStudy_Jan2017.pdf)
 - [Code.org Evaluation Report 2015-16 (PDF)](/files/EvaluationReport2015-16.pdf)

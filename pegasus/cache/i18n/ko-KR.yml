@@ -583,8 +583,10 @@
   video_title_real_madrid: Real Madrid와 함께하는 Hour of Code
   video_title_marco_belinelli: Marco Belinelli와 함께하는 Hour of Code
   video_title_chris_bosh: 컴퓨터공학을 지지하는 크리스 보쉬
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1분
   video_2min: 2분
+  video_3min: 3 min
   video_5min: 5분
   speak_another_language: 다른 언어를 할 줄 아나요?
   help_translate: 번역하는 것을 도와주세요.
@@ -1817,5 +1819,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:51:16.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "The Need for Addressing: Reflection",
+    "markdown_instructions": "Describe the addressing system your group devised.\n\nHow did your group decide upon a system for sending messages in the Battleship simulator? \n\nWere there disagreements or problems? How were they resolved?\n\n\n",
+    "encrypted_solution": "ncZFuAeuP3Lvmwu1sa8hHGQKrmgVmTt60ngD2z2f23FukFArUIe/tKG1v9hB\ngfGV0dKnkl3/w5X8GyhZHo80Qs9+Dy3w3YVbr6MpFtRNv3pzJP9nFN5ft49p\ncmZAbeS/bJ5IpAsNrTyLcqn2JtXZ/I8fn9+C6WCRlqMbphQDQEHDybbIm3SC\nLG9q2bacUuCZm4ofn0V4oPdw77tEcsh35QACkiRX9Z6u96O/Oznfae7+1qAl\nO6iRbZSLNzGL/mMjE6eqkpT22pV/Vdft5uQUVsSTku9EP/BsFZ5Ml1zy46fL\nkdLfsp2x72gdzwMjhqDEHiRWxxO5exxFyycvqaJPs+Vs8DunoXDk9D0wRcJt\n3T+2vOcxg+uW5xn+M5i+yVknVBLmXrv+ZW8T17TlmgZ2exGqYfPkQsxnU2Xq\n7EYKIJY74hNTkUig10myo7i5iGTp9VOFWkeOvpZ/yLtGcDlSBJYBd5AdNY4a\nDvr7pi6ZJGPGpAhqe6HVhcLhb8MfYBbIvqbJ8NLP4hP8TlkXxOTYZtYWRnCP\nWrEwCKCybxrEUkPmEnNhzQO5VIkFnkxh7so9DaF6jNK3dnwGi0BGBMail0j0\nS/0k7pKxSyE/SD3+X3HzaL9h28Pw61stEtL/alGwsaQnZ7yzuSg5IbPxVGUM\nt/18oJ9l9PGgu+oFJYVnWnM=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2463,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
