@@ -145,32 +145,6 @@ export const handleShareSetting = (disable) => {
  };
 };
 
-export const transferStudents = () => {
-  return (dispatch, getState) => {
-    const state = getState();
-    const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
-    const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
-    let newSectionCode;
-
-    if (otherTeacher && otherTeacherSection) {
-      newSectionCode = otherTeacherSection;
-    } else {
-      newSectionCode = sectionCode(state, newSectionId);
-    }
-
-    transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
-      if (error) {
-        console.error(error);
-      } else {
-        studentIds.forEach(id => {
-          dispatch(removeStudent(id));
-        });
-        updateStudentTransfer({...blankStudentTransfer});
-      }
-    });
-  };
-};
-
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
@@ -258,6 +232,32 @@ export const addMultipleAddRows = (studentNames) => {
       };
     }
     dispatch(addMultipleRows(studentData));
+  };
+};
+
+export const transferStudents = () => {
+  return (dispatch, getState) => {
+    const state = getState();
+    const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
+    const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
+    let newSectionCode;
+
+    if (otherTeacher && otherTeacherSection) {
+      newSectionCode = otherTeacherSection;
+    } else {
+      newSectionCode = sectionCode(state, newSectionId);
+    }
+
+    transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        studentIds.forEach(id => {
+          dispatch(removeStudent(id));
+        });
+        updateStudentTransfer({...blankStudentTransfer});
+      }
+    });
   };
 };
 
