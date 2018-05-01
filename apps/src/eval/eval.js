@@ -27,7 +27,7 @@ var evalMsg = require('./locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var EvalVisualizationColumn = require('./EvalVisualizationColumn');
 var dom = require('../dom');
 var blockUtils = require('../block_utils');

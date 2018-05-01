@@ -37,29 +37,32 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 7554,
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 16:46:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 17:29:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:46:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:26:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 17:29:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-25 19:08:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:34:05 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_moveForward"/>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathForward</title>
-        </block>
-        <block type="maze_if">
+        <block type="maze_untilBlockedOrNotClear">
           <title name="DIR">isPathForward</title>
         </block>
         <block type="maze_forever"/>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -68,18 +71,16 @@
           <next>
             <block type="maze_forever">
               <statement name="DO">
-                <block type="maze_ifElse">
+                <block type="maze_untilBlockedOrNotClear">
                   <title name="DIR">isPathForward</title>
                   <statement name="DO">
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                    </block>
+                    <block type="maze_moveForward"/>
                   </statement>
-                  <statement name="ELSE">
+                  <next>
                     <block type="maze_turn">
                       <title name="DIR">turnRight</title>
                     </block>
-                  </statement>
+                  </next>
                 </block>
               </statement>
             </block>
