@@ -83,7 +83,7 @@ class MultipleChoiceOverviewTable extends Component {
     }
   );
 
-  getAnswerColumns = (index) => (
+  getAnswerColumn = (index) => (
     {
       header: {
         label: alphabetMapper[index],
@@ -123,15 +123,15 @@ class MultipleChoiceOverviewTable extends Component {
     dataColumns.push({property: 'question', ...columns});
 
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.getAnswerColumns(i);
+      let questionOption = this.getAnswerColumn(i);
 
       dataColumns.push({property: 'percentAnswered' , ...questionOption});
     }
-      // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
-      // maxAnswerChoicesLength does not include Question column.
-      dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
+    // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
+    // maxAnswerChoicesLength does not include Question column.
+    dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
 
-      return dataColumns;
+    return dataColumns;
   };
 
   render() {
