@@ -252,9 +252,11 @@ export const transferStudents = () => {
       if (error) {
         console.error(error);
       } else {
-        studentIds.forEach(id => {
-          dispatch(removeStudent(id));
-        });
+        if (!copyStudents) {
+          studentIds.forEach(id => {
+            dispatch(removeStudent(id));
+          });
+        }
         updateStudentTransfer({...blankStudentTransfer});
       }
     });
