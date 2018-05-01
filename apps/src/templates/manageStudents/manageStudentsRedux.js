@@ -238,6 +238,7 @@ export const addMultipleAddRows = (studentNames) => {
 export const transferStudents = () => {
   return (dispatch, getState) => {
     const state = getState();
+    // Get section code for current section from teacherSectionsRedux
     const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
     const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
     let newSectionCode;

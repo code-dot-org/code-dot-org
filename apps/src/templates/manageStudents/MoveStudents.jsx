@@ -10,7 +10,13 @@ import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {updateStudentTransfer, transferStudents, OTHER_TEACHER, COPY_STUDENTS, blankStudentTransfer} from './manageStudentsRedux';
+import {
+  updateStudentTransfer,
+  transferStudents,
+  OTHER_TEACHER,
+  COPY_STUDENTS,
+  blankStudentTransfer
+} from './manageStudentsRedux';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -179,7 +185,7 @@ class MoveStudents extends Component {
         header: {
           label: i18n.name(),
           props: {
-            id: 'name-header',
+            id: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
           }},
@@ -187,7 +193,7 @@ class MoveStudents extends Component {
         },
         cell: {
           props: {
-            className: 'name-cell',
+            className: 'uitest-name-cell',
             style: {
               ...tableLayoutStyles.cell
           }}
@@ -329,7 +335,7 @@ class MoveStudents extends Component {
                 {this.renderOptions()}
               </select>
               {transferData.otherTeacher &&
-                <div id="otherTeacher">
+                <div id="uitest-other-teacher">
                   <label
                     htmlFor="sectionCode"
                     style={styles.label}
