@@ -613,7 +613,7 @@ class DashboardSection
     # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
     # querying all students together (as below) is significantly more performant.
     student_ids = @students.map {|s| s[:id]}
-    level_counts = Dashboard.db_reader[:user_levels].
+    level_counts = Dashboard.db_reporting_reader[:user_levels].
       group_and_count(:user_id).
       where(user_id: student_ids).
       where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
