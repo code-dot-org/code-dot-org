@@ -254,7 +254,7 @@ GameLabP5.prototype.init = function (options) {
   };
 
   window.p5.prototype.mousePressedOver = function (sprite) {
-    return this.mouseIsPressed && this.mouseIsOver(sprite);
+    return (this.mouseIsPressed || this.touchIsDown) && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';

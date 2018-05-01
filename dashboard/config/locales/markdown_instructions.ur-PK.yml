@@ -123,6 +123,16 @@
       2-3 Artist Free Play_markdown_instruction: |-
         Free-play! Draw anything you'd
         like.
+      2-3 Artist Functions 1 a_markdown_instruction: |
+        "Me zombie artist. Me love
+        drawing!" \r
+        \r
+        Help the zombie draw square glasses.  \r
+        \r
+        The bridge
+        between the glasses is 25 pixels shorter than the width of the squares, which
+        is 100 pixels.\r
+        \r
       2-3 Artist Functions 1_markdown_instruction: |
         "Me zombie artist. Me love drawing!"
         \r
@@ -138,6 +148,21 @@
         \r
         Use them to
         draw the inside of a machine!
+      2-3 Artist Functions 11 a_markdown_instruction: |-
+        We've renamed the `draw a
+        square` function to `draw a hexagon`, but it's still giving us squares!  \r
+        \r
+        Can
+        you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides?
+        \r
+        \r
+        Draw the image using the new function!
+      2-3 Artist Functions 11.5 a_markdown_instruction: |-
+        Here's that same `draw
+        a hexagon` function. \r
+        \r
+        What happens if you loop the main program **6**
+        times, turning **60** degrees each time you loop?
       2-3 Artist Functions 11.5_markdown_instruction: |-
         Here's that same `draw a
         hexagon` function. \r
@@ -161,6 +186,14 @@
         flower` function to fill the rest of the planter box?\r
         The plants are all
         100 pixels apart.
+      2-3 Artist Functions 12 a_markdown_instruction: |-
+        Functions are really great
+        for drawing complex things multiple times. \r
+        \r
+        Can you use the `draw a
+        flower` function to fill the rest of the planter box?\r
+        The plants are all
+        100 pixels apart.
       2-3 Artist Functions 12_markdown_instruction: |-
         Functions are really great for
         drawing complex things multiple times. \r
@@ -169,6 +202,16 @@
         function to fill the rest of the planter box?\r
         The plants are all 100 pixels
         apart.
+      2-3 Artist Functions 2 a_markdown_instruction: |-
+        Functions let you define new
+        blocks! \r
+        \r
+        We've moved the blocks needed for drawing a square into a
+        function called `draw a square`. This time, use the small green `draw a square`
+        block to call this new function and create the glasses. \r
+        \r
+        The squares
+        in this drawing are 75 pixels apart.
       2-3 Artist Functions 2_markdown_instruction: |-
         Functions let you define new
         blocks! \r
@@ -178,12 +221,21 @@
         to create the glasses. \r
         \r
         The squares are 75 pixels apart.
+      2-3 Artist Functions 3 a_markdown_instruction: |-
+        Edit the "draw a square"
+        function to draw glasses with frames that are 115px on each side. \r
+        \r
+        The
+        squares are now 45 pixels apart.
       2-3 Artist Functions 3_markdown_instruction: |-
         Edit the function to draw a square
         with a side length of 115 to draw the bigger glasses. \r
         \r
         The squares
         are now 45 pixels apart.
+      2-3 Artist Functions 4 a_markdown_instruction: |-
+        Now, put the function inside
+        of a loop and add an extra turn to draw these three squares.
       2-3 Artist Functions 4_markdown_instruction: |-
         Now, put the function inside
         of a loop to draw these three squares.
@@ -46330,6 +46382,21 @@
       Fish Tank 2_markdown_instruction: |-
         We're going to make a fish tank. Change
         the Dusty the tumbleweed to a fish.
+      Fish Tank 3_markdown_instruction: |-
+        All this spinning is going to make our fish
+        dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 4_markdown_instruction: |-
+        Our fish tank needs some water! Use the
+        `set background color` block to make the background blue.
+      Fish Tank 5_markdown_instruction: |-
+        Our fish is getting a little lonely. Create
+        a new sprite inside the fish tank.
+      Fish Tank 6_markdown_instruction: |-
+        What do you want your fish’s friend to do?
+        Add a behavior and watch them go!
+      Fish Tank 7_markdown_instruction: |-
+        There are a lot of new blocks in the toolbox.
+        Play with them to make your fish tank special.
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.\r
         <hr/>\r
@@ -46813,6 +46880,21 @@
         student's address. You can keep track of the responses in the Notes section
         in the DNS tab.  \r
         ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+      'Internet Simulator: DNS_2018_markdown_instruction': |-
+        ## The Need for DNS\r
+        \r
+        In
+        this version of the Internet Simulator, a Domain Name System (DNS) is provided
+        for you and knows the IP addresses of all connected computers. You can only
+        see the hostnames of other connected computers.   \r
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)\r
+        \r
+        The
+        address of the DNS is always &lt;yourRouterNumber&gt;.15. Send a message with
+        protocol `GET [hostname]`, for example `GET Bob2`, to the DNS to get another
+        student's address. You can keep track of the responses in the Notes section
+        in the DNS tab.  \r
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
       'Internet Simulator: Packets_markdown_instruction': |-
         ## Packets and Making
         a Reliable Internet\r
@@ -46850,7 +46932,84 @@
         message is not known beforehand.)\r
         - The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed.
+      'Internet Simulator: Packets_2018_markdown_instruction': |-
+        ## Packets and Making
+        a Reliable Internet\r
+        \r
+        **Challenge:** Develop a protocol for reliably
+        sending a message across an unreliable network\r
+        \r
+        **An Unreliable Internet
+        Simulator:** The current version of the Internet Simulator is modeled after
+        some actual constraints of the Internet\r
+        - Messages must be divided into
+        packets which may contain <em><strong> at most eight (8) ASCII characters
+        </em></strong>\r
+        - Messages should be long enough to require at least 10
+        packets\r
+        - Packets may not arrive in the order sent\r
+        - Packets may be
+        dropped while in transmission\r
+        \r
+        **Directions:** In a group or individually
+        join a router in the Internet Simulator and practice sending messages given
+        these new constraints. Once you are comfortable with the challenge, iteratively
+        design a protocol that can reliably send a message to a partner. You and your
+        partner should join <em><strong> DIFFERENT </strong></em> routers.\r
+        \r
+        **Protocol
+        Requirements:**\r
+        - All communication can only be done through the Internet
+        Simulator\r
+        - You must send a message that spans at least 10 packets (i.e.
+        an 80 character ASCII message). \r
+        - The protocol should account for the
+        possibility that the characters might be entirely random (i.e. not necessarily
+        English - do not count on human intuition to reconstruct the message. The
+        message is not known beforehand.)\r
+        - The sender and receiver must be confident
+        the full message was successfully transmitted and reconstructed.
       'Internet Simulator: Routers_markdown_instruction': |-
+        # An Updated Internet
+        Simulator\r
+        Many changes have been made to the Internet Simulator. \r
+        \r
+        **Routers:**
+        Rather than being connected to your entire class you are now connected to
+        a single router. You can see who else is on your router in the network diagram.\r
+        \r
+        ![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
+        PM.png)\r
+        \r
+        \r
+        **IP Addresses:** Every user has a unique IP address. The
+        first portion is the number of your router and the second is your own unique
+        number. You can figure out the IP addresses of people on the router by looking
+        at the network diagram.\r
+        \r
+        ![](https://images.code.org/b03d841ebd8299ca43197ee4df35d273-image-1442008949041.51.59
+        PM.png)\r
+        \r
+        **Sending Messages: ** You can now send messages to a single
+        other user. Fill in the "To" portion of the message with the IP address
+        (including the period) of the person you'd like to send your message to.\r
+        \r
+        ![](https://images.code.org/8e9b073526f24e69147d5c7f34492bec-image-1442009069243.52.34
+        PM.png)\r
+        \r
+        **Router Statistics: ** You can see useful information about
+        the functioning of your router in the "Router" tab.\r
+        \r
+        ![](https://images.code.org/7390cfa12f65b933145a391fa65ab4b1-image-1442009194697.58.23
+        PM.png)\r
+        \r
+        **Router Logs: ** You can read a log of traffic both at the
+        level of your router and the entire network by clicking the "Log Browser"
+        button.\r
+        \r
+        ![](https://images.code.org/b24975e33f1a2b10fc6a2ca8cf1c9ad2-image-1442009358166.58.48
+        PM.png)
+      'Internet Simulator: Routers_2018_markdown_instruction': |-
         # An Updated Internet
         Simulator\r
         Many changes have been made to the Internet Simulator. \r
@@ -46930,6 +47089,26 @@
         \r
         Document your protocol on the worksheet provided, and test
         your protocol using the Internet Simulator
+      'Internet Simulator: Sending Binary Messages_2018_markdown_instruction': |-
+        ##
+        Coordination and Binary Messages Activity\r
+        \r
+        **Develop your Protocol**\r
+        Develop
+        a protocol that allows you to use Internet Simulator to relay a message, i.e.
+        one member sends a message and the other member sends the same message back.
+        You or a teacher will say “Go” to begin the exchange but otherwise all communication
+        must be through the widget. As you’re working, consider:\r
+        \r
+        - How will
+        you know when the exchange is supposed to begin?\r
+        - How will you know whose
+        turn it is to send or receive the message?\r
+        - How will you coordinate your
+        actions?\r
+        \r
+        Document your protocol on the worksheet provided, and test
+        your protocol using the Internet Simulator
       'Internet Simulator: Sending Numbers_markdown_instruction': |-
         ## Sending Numbers
         Activity\r
@@ -46955,7 +47134,63 @@
         of your protocol on the worksheet provided by your teacher.\r
         \r
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
+      'Internet Simulator: Sending Numbers_2018_markdown_instruction': |-
+        ## Sending
+        Numbers Activity\r
+        \r
+        **Challenge:** Develop a protocol or set of rules
+        for communicating a drawing to your partners using only bits.\r
+        \r
+        **Challenge
+        Rules:**\r
+        The image will be a line drawing created by connecting points
+        on a grid, like the one seen here.\r
+        You can discuss and agree on a protocol
+        ahead of time, but the image exchange must happen without communication between
+        the two parties other than through using the Internet Simulator.\r
+        \r
+        **Things
+        to Consider:**\r
+        - How will your points be formatted?\r
+        - How does the recipient
+        know when one number ends and the next begins?\r
+        \r
+        **Your Protocol:** Write
+        the steps of your protocol on the worksheet provided by your teacher.\r
+        \r
+        ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       'Internet Simulator: Sending Text_markdown_instruction': |
+        ## Sending Formatted
+        Text Activity\r
+        \r
+        **Directions:**  \r
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. \r
+        \r
+        **Guidelines:**  \r
+        -
+        Both the text and the formatting instructions must be derived from the printable
+        ASCII character set (i.e. codes 32-126).\r
+        - Your protocol must encode at
+        least:\r
+        \t- bold, italics, and underlining\r
+        \t- three different font sizes
+        (large, medium, and small)\r
+        \t- three different font colors (red, black,
+        blue)\r
+        - You will demonstrate that your protocol works by having the recipient
+        be able to faithfully draw (or produce in some fashion) the formatted text
+        based only on the data she received through an ASCII-text version of the Internet
+        Simulator. A sample message can be found below.\r
+        \r
+        ![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\r
+        \r
+        **Develop
+        Your Protocol:**  \r
+        Use the worksheet handed out by your teacher to brainstorm
+        ideas for your protocol. Iteratively improve your protocol by testing it out
+        with simple sample messages.\r
+      'Internet Simulator: Sending Text_2018_markdown_instruction': |
         ## Sending Formatted
         Text Activity\r
         \r
@@ -52424,9 +52659,15 @@
       'The Internet: IP Addresses & DNS_markdown_instruction': |-
         [Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
+      'The Internet: IP Addresses & DNS_2018_markdown_instruction': |-
+        [Video guide
+        and questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
         and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
+      'The Internet: Wires, Cables, and Wifi_2018_markdown_instruction': |-
+        [Video
+        guide and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -52641,6 +52882,13 @@
         how many characters would need to be encoded and calculate the number of bits
         that would be required per character. Then discuss the benefits and drawbacks
         of using this single unified system.
+      U1L10 Assessment Free Response_2018_markdown_instruction: |
+        Many languages do
+        not use the characters of U.S. English. Suppose you wanted to be able to encode
+        the characters of every language on earth within a single protocol. Guess
+        how many characters would need to be encoded and calculate the number of bits
+        that would be required per character. Then discuss the benefits and drawbacks
+        of using this single unified system.
       U1L10 Journal Free Response_markdown_instruction: |
         Respond to this prompt or
         to another as directed by your teacher.
@@ -52663,6 +52911,13 @@
 
         Describe one instance in which collaboration with
         a partner influenced the final protocol your team produced.
+      U1L11 Collaboration Reflection_2018_markdown_instruction: |
+        What problems arose
+        in your efforts to create a working protocol? How did you think about the
+        problem(s) in order to solve it?
+
+        Describe one instance in which collaboration
+        with a partner influenced the final protocol your team produced.
       U1L11 NetSim numbers with Ascii_markdown_instruction: |
         ## Sending Formatted
         Text Activity\r
@@ -52698,6 +52953,12 @@
         to another as directed by your teacher.\n\nHow long did it take to send\na
         formatted text message using your protocol? \n\nHow many extra bits did\nyour
         encoding scheme need to communicate the text?  Calculate the percentage\nof
+        bits that were used for formatting instead of sending the actual text message.\n\n\npercent
+        = (formatting bits)/(total bits) * 100\n\n\n"
+      U1L11 Reflection Free Response_2018_markdown_instruction: "Respond to this\nprompt
+        or to another as directed by your teacher.\n\nHow long did it take\nto send
+        a formatted text message using your protocol? \n\nHow many extra bits\ndid
+        your encoding scheme need to communicate the text?  Calculate the percentage\nof
         bits that were used for formatting instead of sending the actual text message.\n\n\npercent
         = (formatting bits)/(total bits) * 100\n\n\n"
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt\nor
@@ -52776,6 +53037,12 @@
         why this is the case, making reference to the definition of a binary message.
         \r
         \r
+      U1L2 Free response assessment question_2018_markdown_instruction: |
+        Provide
+        an example of a question that could NOT be answered with a single binary message.
+        Explain why this is the case, making reference to the definition of a binary
+        message. \r
+        \r
       U1L2 Free response reflection question_markdown_instruction: |2+
          Modify your
         question so that it could be answered with a binary message. Explain why it
@@ -52786,16 +53053,33 @@
         How did collaboration impact the
         development of your protocol? What challenges did working in a group present
         and in what ways did it positively impact your final product?
+      U1L3 Free Response_2018_markdown_instruction: |-
+        How did collaboration impact
+        the development of your protocol? What challenges did working in a group present
+        and in what ways did it positively impact your final product?
       U1L3 Free response reflection question_markdown_instruction: |
         Recall when you
         built your binary message sending device. Why did we decide to send a message
         as a sequence of states (A and B) rather than modifying our devices to represent
         more states (State C, State D, State E, ...)?\r
+      U1L3 Free response reflection question_2018_markdown_instruction: |
+        Recall when
+        you built your binary message sending device. Why did we decide to send a
+        message as a sequence of states (A and B) rather than modifying our devices
+        to represent more states (State C, State D, State E, ...)?\r
       U1L4 Free Response Reflection_markdown_instruction: |+
         A binary message was recorded
         as a wave as shown in the image below. Can you decode the message? Explain
         what information you would need in order to successfully decode the message
         into A’s and B’s.
+
+        ![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
+
+      U1L4 Free Response Reflection_2018_markdown_instruction: |+
+        A binary message
+        was recorded as a wave as shown in the image below. Can you decode the message?
+        Explain what information you would need in order to successfully decode the
+        message into A’s and B’s.
 
         ![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
 
@@ -52849,11 +53133,22 @@
       U1L6 Free Response Reflection_markdown_instruction: " In 50 words or less,\ndescribe
         the concept of a number system. \n\nWhy are rules required for a\nnumber system
         to be useful?\n"
+      U1L6 Free Response Reflection_2018_markdown_instruction: " In 50 words or less,\ndescribe
+        the concept of a number system. \n\nWhy are rules required for a\nnumber system
+        to be useful?\n"
       U1L7 Free Response Assessment_markdown_instruction: |
         In 100 words or less describe
         how place value is used in the binary number system. How is it similar or
         different from the way place value is used in the base 10 number system.
+      U1L7 Free Response Assessment_2018_markdown_instruction: |
+        In 100 words or less
+        describe how place value is used in the binary number system. How is it similar
+        or different from the way place value is used in the base 10 number system.
       U1L7 Free Response Reflection_markdown_instruction: "Reflect on your learning\nin
+        this lesson. In the space below, enter:\n\n3 recollections (things you\nremember),
+        \n\n2 observations (things you noticed), and \n\n1 insight (something\nyou
+        fully understand the significance of).\n"
+      U1L7 Free Response Reflection_2018_markdown_instruction: "Reflect on your learning\nin
         this lesson. In the space below, enter:\n\n3 recollections (things you\nremember),
         \n\n2 observations (things you noticed), and \n\n1 insight (something\nyou
         fully understand the significance of).\n"
@@ -52866,6 +53161,15 @@
       U1L8 Free Response Reflection_markdown_instruction: |
         <strong>Complete the Sending
         Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit"
+        target="_blank">Sending Number activity guide</a>) and then respond to the
+        following prompt.</strong>
+
+        What problems arose in your efforts to create
+        a working protocol? How did you think about the problem(s) in order to solve
+        it?
+      U1L8 Free Response Reflection_2018_markdown_instruction: |
+        <strong>Complete
+        the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit"
         target="_blank">Sending Number activity guide</a>) and then respond to the
         following prompt.</strong>
 
@@ -53524,9 +53828,20 @@
         Explain one challenge raised by Vint Cerf in “The Internet
         is for Everyone - but it won’t be if….” and give one example of it that you
         know about.
+      U2L01 Assessment 4_2018_markdown_instruction: |
+        ## The Internet is for Everyone:
+        Assessment 4
+
+        Explain one challenge raised by Vint Cerf in “The Internet
+        is for Everyone - but it won’t be if….” and give one example of it that you
+        know about.
       U2L02 Assessment 5_markdown_instruction: |-
         Even with a good protocol, what are
         some privacy and security challenges while playing battleship on the Internet
+        Simulator?
+      U2L02 Assessment 5_2018_markdown_instruction: |-
+        Even with a good protocol, what
+        are some privacy and security challenges while playing battleship on the Internet
         Simulator?
       U2L02 Assessment1_markdown_instruction: |
         Why was it necessary to include the
@@ -53547,6 +53862,10 @@
         game of Battleship? \n\nWhat rules did you follow? \n\nDid you have a\nstrategy
         for winning?\n"
       U2L02 Free Response Reflection_markdown_instruction: "Describe the addressing\nsystem
+        your group devised.\n\nHow did your group decide upon a system for\nsending
+        messages in the Battleship simulator? \n\nWere there disagreements\nor problems?
+        How were they resolved?\n\n\n"
+      U2L02 Free Response Reflection_2018_markdown_instruction: "Describe the addressing\nsystem
         your group devised.\n\nHow did your group decide upon a system for\nsending
         messages in the Battleship simulator? \n\nWere there disagreements\nor problems?
         How were they resolved?\n\n\n"
@@ -53594,9 +53913,17 @@
         Describe the relative benefits of
         routing over a broadcast style of communication. Is routed traffic more secure
         than broadcasting? Justify your answer.
+      U2L04 Assessment2_2018_markdown_instruction: |
+        Describe the relative benefits
+        of routing over a broadcast style of communication. Is routed traffic more
+        secure than broadcasting? Justify your answer.
       U2L04 Assessment3_markdown_instruction: |
         Can you know in advance the path a
         message will take between you and another computer on the Internet? Justify
+        your answer.
+      U2L04 Assessment3_2018_markdown_instruction: |
+        Can you know in advance the path
+        a message will take between you and another computer on the Internet? Justify
         your answer.
       U2L04 Free Response Wrap Up_markdown_instruction: |
         How do you think the routers
@@ -53642,6 +53969,10 @@
         In your own words, what were the
         primary obstacles you needed to overcome in today’s challenge? How do these
         obstacles mirror actual problems encountered on the Internet?
+      U2L05 Reflection 1_2018_markdown_instruction: |
+        In your own words, what were
+        the primary obstacles you needed to overcome in today’s challenge? How do
+        these obstacles mirror actual problems encountered on the Internet?
       U2L07 Assessment5_markdown_instruction: |
         When analyzing algorithms why doesn't
         the amount of real time (clock time) tell us very much about the algorithm's
@@ -53668,9 +53999,15 @@
       U2L09 Assessment2_markdown_instruction: |
         Why do computers need to periodically
         check the DNS for websites you have already visited?
+      U2L09 Assessment2_2018_markdown_instruction: |
+        Why do computers need to periodically
+        check the DNS for websites you have already visited?
       U2L09 Free Response Wrap Up_markdown_instruction: |
         Why don’t we need to know
         the IP addresses for our favorite sites?
+      U2L09 Free Response Wrap Up_2018_markdown_instruction: |
+        Why don’t we need to
+        know the IP addresses for our favorite sites?
       U2L10 Assessment3_markdown_instruction: |
         Why do multiple websites at your school
         and the computers in your classroom all have IP addresses that start with
@@ -53734,6 +54071,10 @@
         The definition of HTTP makes use
         of the ASCII character set without reference to how these characters are encoded.
         Explain why this is an example of abstraction.
+      U2L11 Free Response_2018_markdown_instruction: |
+        The definition of HTTP makes
+        use of the ASCII character set without reference to how these characters are
+        encoded. Explain why this is an example of abstraction.
       U2L12 FR reflection on collaboration_markdown_instruction: |-
         *NOTE: The following
         is modification of one of the prompts given on the AP Create Performance task.*\r
@@ -69770,7 +70111,8 @@
         and confirm that you are displaying the correct movie.  Your output should
         look like this:\r
         \r
-        ![](https://images.code.org/c945453f2f4c708a31d7f362a98bceb5-image-1456870788450.7-console.png)
+        ![](https://images.code.org/d3c0f6bd73b637828f0057fa91d6f56f-image-1524524661772.03.55
+        PM.png)
       U4 - Read Record - 4_markdown_instruction: |-
         # Reading Records: Printing Individual
         Records\r
@@ -75338,6 +75680,9 @@
         Comments
         are only used for **you**. Your Play Area won't look different because of
         a comment.
+      conditionals_forvideo_harvester_markdown_instruction: |-
+        Collect all of the corn
+        and lettuce, then pick the pumpkin.
       course1_artist_loops_challenge2_markdown_instruction: |-
         Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?
@@ -77861,7 +78206,7 @@
         Try making a tiny square at the end of each line\r
         -
         Each side should be 15 pixels long\r
-        - You should turn right by 90 degrees\r
+        - You should turn by 90 degrees\r
         -
         Repeat those actions a total of 4 times
       courseD_artist_5_2018_markdown_instruction: |-
@@ -77880,15 +78225,18 @@
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Let’s try something new. This time, skate in a zig-zag."_\r
         \r
+        <br/>  \r
         \r
-        <img
-        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
-        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
-        Draw a
-        stair-step pattern that uses turns between 75 and 105 degrees -- but make
-        sure that your left and right turns use the same angle.  \r
-        (You will see
-        why later.)
+        **Inspiration:**
+        Try changing your long 150 pixel line into 6 short lines of **25** pixels\r
+        \r
+        -
+        Turn by **45** degrees in alternate directions after each short line to get
+        a zig-zag look\r
+        - Where do you need to put a new `repeat` block to make
+        this happen?\r
+        - How many times do you have to repeat your pattern of 2 short
+        lines to get 6 total?
       courseD_artist_7_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Now let’s turn and go back the way we came."_\r
@@ -80274,6 +80622,17 @@
         \r
         \r
         \r
+      courseE_bee_ramp14_2018_markdown_instruction: |
+        The same technique works with
+        nectar and honey!  \r
+        \r
+        Look at all of these clouds. Some of them will
+        turn into honey, and others into nectar.   \r
+        Help the bee follow the path
+        and solve this puzzle.\r
+        \r
+        \r
+        \r
       courseE_bee_ramp17_markdown_instruction: "For the final puzzle in this stage,\nuse
         what you have learned to collect all of the nectar and make all of the\nhoney.
         \ "
@@ -80504,6 +80863,17 @@
         \r
         \r
         \r
+      courseE_farmer_predict1_2018_markdown_instruction: |
+        Help the farmer walk the
+        path to find all of the lettuce\r
+        \r
+        In this puzzle, lettuce is growing
+        at the end of every path.  If there is a path in front of her, the farmer
+        can keep moving forward.  Otherwise, she needs to pick all of the lettuce,
+        then turn to stay on the path. \r
+        \r
+        \r
+        \r
       courseE_farmer_ramp11a_markdown_instruction: "Oh my!  This pile is so big that\nit's
         hard to guess how much dirt is in it.  \\r\n\\r\n___\\r\n\\r\nWe've added\na
         new block to the toolbox called the `while there is a pile` block.  Use\nthis
@@ -80521,6 +80891,7 @@
       courseE_farmer_ramp12_markdown_instruction: 'Pick all of the lettuce.\r
 
 '
+      courseE_farmer_ramp12_2018_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_2018_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto
@@ -80528,6 +80899,11 @@
         of every path.  If there is a path in front of her, the farmer can keep\nmoving
         forward.  Otherwise, she needs to pick all of the lettuce, then turn\nto stay
         on the path. "
+      courseE_farmer_ramp12a_2018_markdown_instruction: "Help the farmer walk the\npath
+        to find all of the lettuce\\r\n\\r\nIn this puzzle, lettuce is growing\nat
+        the end of every path.  If there is a path in front of her, the farmer\ncan
+        keep moving forward.  Otherwise, she needs to pick all of the lettuce,\nthen
+        turn to stay on the path. "
       courseE_farmer_ramp12b_markdown_instruction: |-
         Now the harvester needs to pick
         all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop
@@ -80578,6 +80954,14 @@
         to the ends of the path to pick lettuce while there is lettuce, and pick corn
         while there is corn. \r
         \r
+      courseE_farmer_ramp13_2018_markdown_instruction: |
+        Goodness!  Look at all of
+        these sprouts. Some of them will turn into corn, and others into lettuce.  \r
+        \r
+        Travel
+        to the ends of the path to pick lettuce while there is lettuce, and pick corn
+        while there is corn. \r
+        \r
       courseE_farmer_ramp15_markdown_instruction: |-
         Solve this puzzle using only the
         blocks available.\r
@@ -80585,6 +80969,13 @@
         This level will help give you practice with the `repeat
         until` block.  Collect all of the corn and lettuce until you get to the pumpkin.
         (Don't forget to collect the pumpkin, too!)
+      courseE_farmer_ramp15_2018_markdown_instruction: |-
+        Solve this puzzle using only
+        the blocks available.\r
+        \r
+        This level will help give you practice with the
+        `repeat until` block.  Collect all of the corn and lettuce until you get to
+        the pumpkin. (Don't forget to collect the pumpkin, too!)
       courseE_farmer_ramp16_markdown_instruction: |-
         **Challenge:** Solve this puzzle
         with the fewest number of blocks.
@@ -81186,6 +81577,18 @@
         \r
         *(You will need
         to spin it 6 times at 60 degrees to get this pattern.)*
+      courseF_artist_ramp10_2018_markdown_instruction: |-
+        Did you know you can put
+        loops inside of other loops to make them more powerful?  That's called making
+        a "nested loop".\r
+        \r
+        ___\r
+        \r
+        Drag the code for the last triangle into
+        a new loop to spin it around and make a snowflake!\r
+        \r
+        *(You will need
+        to spin it 6 times at 60 degrees to get this pattern.)*
       courseF_artist_ramp8_markdown_instruction: |-
         Great!  Now let's make a square
         using Artist!  The blocks for artist are a little different than other puzzles,
@@ -81193,12 +81596,25 @@
         ___\r
         Each side of the square has a length of
         200 pixels, and you will need to turn 90 degrees to make each angle.
+      courseF_artist_ramp8_2018_markdown_instruction: |-
+        Great!  Now let's make a
+        square using Artist!  The blocks for artist are a little different than other
+        puzzles, but the idea is the same.\r
+        ___\r
+        Each side of the square has a
+        length of 200 pixels, and you will need to turn 90 degrees to make each angle.
       courseF_artist_ramp9_markdown_instruction: |-
         Use what you've learned to draw
         this triangle.\r
         ___\r
         ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
+      courseF_artist_ramp9_2018_markdown_instruction: |-
+        Use what you've learned to
+        draw this triangle.\r
+        ___\r
+        ##### The sides are each 100 pixels long. You
+        will need to turn 120 degrees at each corner.
       courseF_artist_variables10_markdown_instruction: |-
         Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r
@@ -81981,7 +82397,18 @@
         \r
         **Challenge:**
         Use what you've learned to get the bird to the pig!
+      courseF_maze_ramp1_2018_markdown_instruction: |-
+        For this puzzle, connect all
+        of the blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp2_markdown_instruction: |-
+        Drag a <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml> block out of the toolbox and attach
+        it to the <xml><block type="when_run"/></xml> event.\r
+        \r
+        Place the <xml><block
+        type="maze_moveForward"/></xml> block inside the loop to finish your code.
+      courseF_maze_ramp2_2018_markdown_instruction: |-
         Drag a <xml><block type="controls_repeat"><title
         name="TIMES">7</title></block></xml> block out of the toolbox and attach
         it to the <xml><block type="when_run"/></xml> event.\r
@@ -81993,9 +82420,19 @@
         the silly pig."* \r
         \r
         Avoid TNT or feathers will fly!
+      courseF_maze_ramp4_2018_markdown_instruction: |-
+        *"Trace the path and lead me
+        to the silly pig."* \r
+        \r
+        Avoid TNT or feathers will fly!
       courseF_maze_ramp5_markdown_instruction: |-
         *"Follow this path to get me to
         the pig!"*\r
+        \r
+        Avoid the TNT.
+      courseF_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me
+        to the pig!"*\r
         \r
         Avoid the TNT.
       courseF_maze_ramp6_markdown_instruction: |-
@@ -82004,6 +82441,14 @@
         \r
         When you have several blocks
         in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
+      courseF_maze_ramp6_2018_markdown_instruction: |-
+        *"Keep calm and help me find
+        the bad pig. Otherwise I might get angry!"*\r
+        \r
+        When you have several
+        blocks in a row, try moving them inside of a <xml><block type="controls_repeat"><title
         name="TIMES">???</title></block></xml> loop.  This will do the same thing
         with less code!
       courseF_maze_ramp7_markdown_instruction: |-
@@ -82324,6 +82769,13 @@
         snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
         the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3_markdown_instruction: |-
+        *"This pig is ruffling my feathers."*\r
+        \r
+        There
+        is one extra block that is going to cause the bird to crash.  \r
+        Throw it
+        away by dragging it back to the toolbox.
+      coursef_maze_ramp3_2018_markdown_instruction: |-
         *"This pig is ruffling my feathers."*\r
         \r
         There
@@ -83348,12 +83800,21 @@
       csp-pre-survey-2017-q36-e_markdown_instruction: |-
         I worry because of another
         reason:
+      csp-pre-survey-2017-q36-e_2018_markdown_instruction: |-
+        I worry because of another
+        reason:
       csp-pre-survey-2017-q38_markdown_instruction: |-
+        If yes, what computer science
+        course(s) had you taken before your current computer science class?
+      csp-pre-survey-2017-q38_2018_markdown_instruction: |-
         If yes, what computer science
         course(s) had you taken before your current computer science class?
       csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: |-
         Anything else you’d
         like your teacher to know?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018_markdown_instruction: |-
+        Anything else
+        you’d like your teacher to know?
       csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: |-
         Anything else you’d
         like your teacher to know?
@@ -84327,6 +84788,34 @@
         *Write
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
+      csp_affirmation_control_2018_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
       csp_affirmation_control_3_markdown_instruction: |-
         This brief activity allows
         you to reflect about what you have learned in this course so far. It is provided
@@ -84509,6 +84998,96 @@
         Below is a list
         of values and qualities. Some of them may be important to you, others may
         be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
+      csp_affirmation_intervention_2018_markdown_instruction: |-
+        This brief activity
+        allows you to reflect about what’s most important to you. It is provided to
+        you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is
+        a list of values and qualities. Some of them may be important to you, others
+        may be unimportant. \r
         \r
         <strong>\r
         &#49;. What's most important to you?</strong>
@@ -84973,9 +85552,234 @@
         *Please
         write a short paragraph. Don't worry about spelling, grammar, or how well
         written it is.*
+      csp_socialBelonging_control_2018_markdown_instruction: |-
+        \r
+        ## Starting out
+        in Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        Everyone can learn computer science and make a difference.\r
+        \r
+        ***\r
+        \r
+        ##
+        Quotes from students\r
+        \r
+        Still, we understand that taking a computer science
+        course can be difficult at first. Here are a few student quotes describing
+        their strategies and tips for taking this course. **Please read the quotes
+        carefully and respond to the prompt below**. \r
+        \r
+        <div style="background-color:
+        #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
+        0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size: 70px; margin-bottom:
+        -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p style="line-height:
+        1.5; margin-left: 10px; margin-right: 30px; ">\r
+        In the first week of this
+        class I was falling behind quickly. There was a lot of new information to
+        learn. To keep up, I had to find a better way to study. I tried to find connections
+        between the material and what I already know. That really helped me remember
+        things. I also tried to not overdo it. I started taking small breaks in-between
+        lessons and when I came back I checked if I still remembered what I was studying
+        before. It helped a lot\r
+         </p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">Some days I felt tired and would drift away in my thoughts. It was
+        a real problem because I would miss so much of what we were learning. So I
+        started going to bed a bit earlier and I tried my best to pay attention. At
+        the end of every class our teacher summarized\r
+         what we learned that day
+        and that was really helpful. I started taking more notes because that also
+        kept my mind from wandering. These little tricks got me through the class
+        and I learned more.</p>\r
+        <p style="font-size: 70px; text-align: right;
+        opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I\r
+
+        can be pretty forgetful sometimes and it was a problem in this class. I think
+        it's because we did so much on the computer. For my other classes I take
+        notes on paper and read through them again at home. So the trick that I found
+        helpful in this class was to take notes on paper anyway and to test myself
+        about the concepts. I wasn't sure if it would work at first, but I think
+        it ended up being a big help.</p>\r
+        \r
+        <p style="font-size: 70px; text-align:
+        right; opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size:
+        125%;  font-style: italic; margin-right: 30px; margin-top: -20px">\r
+        Sam
+        J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p style="font-size: 125%">Now
+        consider the strategies and insights for how to learn best that you just read.
+        </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        <p style="font-size: 150%;
+        color: black; font-weight: bolder; line-height: 1.5">What are your own strategies
+        and insights about how to learn best? And, how are they similar or different
+        to the ones that you just heard about from other students? </p>\r
+        \r
+        *Please
+        write a short paragraph. Don't worry about spelling, grammar, or how well
+        written it is.*
       csp_socialBelonging_intervention_markdown_instruction: |-
         ## Starting out in
         Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        **Everyone can learn computer science and make a difference:** It really does
+        not matter how much or little experience you have with computer science already,
+        or what age, gender, or skin color you have.\r
+        \r
+        ***\r
+        \r
+        ## Quotes from
+        students\r
+        \r
+        Still, we understand that it can be daunting at first to take
+        a computer science course. So here are a few student quotes describing their
+        experiences. **Please read the quotes carefully and respond to the prompt
+        below**. \r
+        \r
+        \r
+        <div style="background-color: #d9eff7; border-radius:
+        40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px; ">\r
+        At the start of the class I worried that I was different from
+        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
+        do it and that the teacher and other students would look down on me. A few
+        days after I started, I realized that almost everyone who takes the class
+        isn’t sure if they fit in at first. It's something everyone goes through.
+        Now it seems ironic – everybody feels different at first, when really we're
+        all going through the same thing.</p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">I loved this computer science class! I've met some cool people and
+        learned a lot. But it was a difficult transition. The first few days I was
+        intimidated and not sure why I should learn computer science. Why would I
+        need it? But then we talked in class about things I’m interested in, like
+        music and design, and I realized that I can learn how to do cool new things.
+        I had the wrong picture in my head about CS, it’s actually very creative!
+        I just had to be patient and find ways to connect the class to what I really
+        care about.</p>\r
+        <p style="font-size: 70px; text-align: right; opacity:
+        0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I didn’t
+        have any experience with code, and I worried that I was not prepared for this
+        class. Other students did some programming at home or in summer camps. On
+        my first day, I was so nervous about getting bad grades and looking stupid.
+        But then, I started to feel better – I talked with other students and enjoyed
+        the class more. I became more comfortable asking for help when I had a problem.
+        It turned out that the students with CS experience had the same issues as
+        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r
+        \r
+        <p
+        style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%;  font-style: italic; margin-right:
+        30px; margin-top: -20px">\r
+        Sam J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p
+        style="font-size: 125%"> Each of these students had similar experiences
+        and realizations. </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        \r
+        <p style="font-size:
+        150%; color: black; font-weight: bolder; line-height: 1.5">Why do you think
+        the students worry at first about whether they belong in the class? How did
+        they become comfortable with it over time?</p>\r
+        \r
+        *Please write a short
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*
+      csp_socialBelonging_intervention_2018_markdown_instruction: |-
+        ## Starting out
+        in Computer Science\r
         \r
         Computer science has changed the way we communicate
         with each other, make art and movies, grow food, and even treat illnesses.
@@ -85501,6 +86305,12 @@
         Can you create a snowflake using
         the “Repeat” block to make a square 10 times, and the “Turn” block to turn
         36 degrees between each square?
+      gl jr clone me ram2_markdown_instruction: |-
+        Clone this level, and then make
+        your own programs!
+      gl jr clone me_markdown_instruction: |-
+        Clone this level, and then make your
+        own programs!
       grade1_adventurer_loops2_markdown_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
