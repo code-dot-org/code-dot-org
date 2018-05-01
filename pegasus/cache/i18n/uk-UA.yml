@@ -653,8 +653,10 @@
   video_title_real_madrid: Година коду з Реал Мадрид
   video_title_marco_belinelli: Година коду з Марко Белінеллі
   video_title_chris_bosh: Кріс Бош про інформатику
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 хв
   video_2min: 2 хв
+  video_3min: 3 min
   video_5min: 5 хв
   speak_another_language: Інша мова?
   help_translate: Допоможіть нам з перекладом.
@@ -2089,5 +2091,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

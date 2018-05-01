@@ -7621,6 +7621,10 @@ fil:
               name: Ipakita ang Iyong Proyekto
               description_student: ''
               description_teacher: ''
+            Conditionals in Bee:
+              name: Mga Kondisyonal sa Bee
+            Until Loops in Maze:
+              name: Until Loops in Maze
         courseb-2018:
           title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -7765,6 +7769,10 @@ fil:
               name: Loops in Ice Age
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
+            Until Loops in Maze:
+              name: Until Loops in Maze
+            Conditionals in Maze:
+              name: Conditionals in Maze
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7927,6 +7935,8 @@ fil:
               name: Binary na mga Pulseras
               description_student: ''
               description_teacher: ''
+            Looking Ahead:
+              name: Masdan ang Hinaharap
         csd6-2018:
           title: CSD Yunit 6 - Pisikal na Pag-Compute
           description: Ang yunit 6 ay tutuklas sa mga papel ng ginagampanan ng mga hardware na mga plataporma sa pag-compute at paano ang iba't ibang mga sensor ay maaaring magbigay ng mas epektibong input at output kaysa sa mga tradisyonal na keyboard, mouse, at monitor. Gamit ang App Lab at Circuit Playground ng Adafruit, ikaw ay gagawa ng mga programa na gumagamit sa parehong hardware na mga input at output na makikita mo sa mga smart na mga kagamitan, pagtingin sa kung paano ang simpleng hindi pa tapos na prototype ay hahantong sa isang natapos na produkto. Ang yunit ay magtatapos sa isang hamon sa pag-disenyo para gamitin ang Circuit Playground bilang isang basihan para sa pagbabago ng iyong sarling disenyo.
@@ -7995,5 +8005,320 @@ fil:
               description_teacher: ''
             'Project: Prototype an Innovation_':
               name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''
+        coursee-2018:
+          title: Kursong E
+          description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
+          description_audience: 'Mga Edad: 8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Pagkakasunod-sunod sa Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Gumawa ng Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Pag-program sa Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Mga Loops na naka-nest
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Dice Race':
+              name: 'Mga Algoritmo: Dice Race'
+              description_student: Alamin kung paano maglarawan ng laro mula sa pananaw ng kompyuter sa aralin na ito tungkol sa mga algoritmo.
+              description_teacher: Sa araling ito, ang mga estudyante ay mag-uugnay sa konsepto ng mga algoritmo pabalik sa tunay na buhay na mga gawain sa pamamagitan ng paglaro ng Dice Race na laro. Ang layunin dito ay para magsimulang bumuo ng mga kakayahan sa pagsalin ng mga tunay na buhay na mga sitwasyon papunta sa online na mga senaryo at ang kabaliktaran nito.
+            Introduction:
+              name: Panimula
+              description_student: Ang mabilisang introduksyon na ito ay magbibigay sa iyo ng pagkakataon na makapagsanay sa karamihan sa mga kakayahan na kakailanganin mo para maglutas sa mga palaisipan sa kursong ito.
+              description_teacher: Sa pag-unlad na ito, ang mga estudyante ay magsisimula sa isang introduksyon (o magbalik-aral depende sa karanasan ng iyong klase) sa online na workspace ng Code.org. Ang mga estudyante ay matututo sa mga pangunahing gawain ng interface kalakip na ang `Run`, `Reset`, at `Step` na mga buttons. Pag-drag, pagbura, at pag-ugnay ng mga Blockly na mga bloke ay ipinapakilala din sa simula ng video. Sa mga palaisipan, ang mga estudyante ay magsasanay sa kanilang pagsunod-sunod at pag-debg na mga kakayahan sa Maze at Artist.
+            Conditionals:
+              name: Mga conditional
+              description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
+              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+              description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
+              description_teacher: |-
+                Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
+                
+                Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
+            Build a Star Wars Game:
+              name: Bumuo ng Star Wars na Laro
+              description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
+              description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+              description_student: Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin.
+              description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.
+            Functions in Artist:
+              name: Mga Function sa Artist
+              description_student: Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!
+              description_teacher: Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.
+            Functions in Bee:
+              name: Mga Functions sa Bee
+              description_student: Huwag magsulat nang masyadong maraming code para matipon ang lahat ng mga nektar at pulot. Sa halip ay gumamit ng mga function!
+              description_teacher: Sa pangalawang ikot ng pagsasanay sa mga online na mga function, ang mga estudyante ay maglalayag sa mga masalimuot na mga landas, magkokolekta ng maraming mga nektar, at maggagawa ng napakaraming mga pulot.
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+              description_student: "Hindi kami mamimigay ng kahit na anong mga sekreto! \nAng araling ito ay maaring gumamit sa kahit anong mga kakayahan ang natutunan mo na."
+              description_teacher: Ang araling ito ay pinagsama-sama ang mga konsepto mula sa mga nakaraang aralin at nagbibigay sa mga estudyante ng pagkakataon na kritikal na makapag-isip tungkol sa kung paano nilang lulutasin ang bawat problema, nang hindi sila sinasabihan kung aling konsepto ang gagamitin nila. Ang mga estudyante ay magbabalik-aral sa mga pangunahing konsepto sa mga algoritmo, pag-debug, `pag-ulit` ng mga loop, mga kondisyonal, `while` na mga loop, at mga function.
+            Build a Play Lab Game:
+              name: Bumuo ng Play Lab na Laro
+              description_student: Magsanay sa paggawa ng mga laro para ibahagi sa iyong mga kaibigan at pamilya.
+              description_teacher: Ang araling ito ay nagpapakita sa Play Lab, isang plataporma kung saan ang mga estudyante ay maaring maglikha ng sarili nilang mga laro at magkaroon ng mga pakikipag-ugnayan sa pagitan ng mga karakter at input ng gumagamit. Ang mga estudyante ay gagamit ng mga events para makalikha ng mga keyboard na mga kontrol. Ang hanay ng mga palaisipang ito ay maluwag na naggagabay sa mga estudyante sa paggawa ng laro, ngunit libre silang magdagdag ng kanilang sariling mga ideya.
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+              description_student: Narito ang iilang mga laro at mga drowings. Paglaruan ang bawat isa sa kanila para makakuha ng mga ideya para sa iyong sariling proyekto!
+              description_teacher: "Ang susunod na apat na mga aralin ay mabibigay ng oportunidad para sa mga estudyante na magamit ang kanilang kakayahan sa pag-code sa isang capstone na proyekto. Ang proyektong ito ay makakatulong sa mga indibidwal na makakakuha ng karanasan sa pag-code at maggawa ng isang halimbawa na maibahagi sa mga kasamahan at sa mga mahal sa buhay. Layunin na maging isang maraming-aralin o maraming-linggo na karanasan, ang mga estudyante ay gugugol ng oras para sa pagtuklas sa pag-brainstorm, pag-aaral tungkol sa proseso ng pag-disenyo, pagbuo, at pagpapakita ng kanilang huling gawain. \n\nSa pagtuklas na yugto, ang mga estudyante ay maaaring makakita ng nagawa nang mga halimbawa ng mga proyekto sa parehong Artist at Play Lab para gawing inspirasyon. Sa sunod, ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo at kung paano magamit ang mga ito sa kanilang sariling mga proyekto. Sila ay bibigyan ng lugar kung saan makakalikha sila ng sarili nilang proyekto alinman sa Artist o Play Lab (malamang ito ang pinakahabang yugto ng proyekto). Sa wakas, ang mga estudyante ay makakapakita sa kanilang natapos na gawa sa kanilang mga kasamahan."
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+              description_student: Ang mga proyekto na kasing laki nito ay gugugol ng oras at maraming pagpaplano. Dito, matutunan mo ang tungkol sa proseso ng pag-disenyo na gagamitin mo para mabuo ang iyong sariling nilikha.
+              description_teacher: Sa loob ng apat na aralin, ang mga estudyante ay maaaring magtatayo ng pag-program ng proyekto na sarili nila ang disenyo gamit ang alinman sa Play Lab o Artist bilang kanilang pag-program na kapaligiran. Sa bahaging ito ng proyekto, ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo at kung paano ipatupad ito sa kanilang sariling mga proyekto. Ang gabay ng aralin para sa apat na yugto ng proseso ay maaaring makita sa unang yugto ng proseso ng proyektong ito [here](https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+              description_student: Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.
+              description_teacher: Sa loob ng apat na aralin, ang mga estudyante ay maaaring magtatayo ng pag-program ng proyekto na sarili nila ang disenyo gamit ang alinman sa Play Lab o Artist bilang kanilang pag-program na kapaligiran. Ngayon ang mga estudyante ay bibigyan ng sarili nilang lugar para makalikha ng kanilang proyekto alinman sa Artist o Play Lab. Ito marahil ang pinakamahabang yugto g proyekto. Ang gabay ng aralin para sa apat na mga yugto ay maaaring makita sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+              description_student: Maghandang magpakitang gilas! Oras na para ipakita ang iyong natapos na proyekto sa iyong mga kasamahan.
+              description_teacher: Sa loob ng apat na mga aralin, ang mga estudyante ay magtatayo ng pag-program na proyekto gamit ang sarili nilang disenyo sa alinman sa Play Lab o Artist bilang pang-program na kapaligiran nila. Sa wakas, ang mga estudyante ay makakapakita na sa kanilang natapos na gawa sa kanilang mga kasamahan o magbahagi sa kanilang mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin para sa lahat ng apat na mga yugto ng proseso ay maaaring makita sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: Internet
+              description_student: Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana.
+              description_teacher: Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+              description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
+              description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+        coursef-2018:
+          title: Kursong F
+          description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+          description_audience: 'Mga Edad: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Pagkakasunod-sunod sa Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Gumawa ng Foundation
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Pag-program sa Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee/Zombie:
+              name: Naka-Nest na mga Loops sa Bee/Zombie
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Tangrams':
+              name: 'Mga Algoritmo: Mga Tangrams'
+              description_student: Dito matutunan mo ang tungkol sa mga algoritmo gamit ang mga palaisipan na tinatawag na mga tangrams!
+              description_teacher: Ang araling ito ay nagpapakita sa atin sa isang bagay na importante tungkol sa mga algoritmo. Basta't papanatilihin mo lang ang algoritmo na simple, mayroong napakaraming mga pamamaraan ang paggamit nito. Gayunpaman kung nais mong masiguro na lahat ay makakagawa ng parehong resulta, kakailanganin ng iyong algoritmo ng mas marami pang detalye. Ang mga estudyante ay matututo sa kaibahan ng detalyado at pangkaraniwan na algoritmo habang naglalaro ng mga tangrams.
+            Introduction:
+              name: Panimula
+              description_student: Ang araling ito ay magbibigay sa iyo ng isang maikling pagpapakilala sa iilang kahanga-hangang mga bagay na matutunan mo sa kursong ito!
+              description_teacher: 'Sa araling ito, ang mga estudyante ay ipapakila sa mga pagkakasunod-sunod, mga loop at mga naka-nest na mga loop para mahanda sila sa mga mas kumplikadong mga konsepto sa huling bahagi ng kurso. Ang "ramp up" na araling ito ay naghahalintulad sa paglaro ng field sa pagitan ng mga eksperto at mga baguhan sa iyong klase. '
+            The Power of Words:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online.
+              description_teacher: "Ang mga estudyante ay magbigay pansin na habang sila ay nagsasaya sa kanilang mga paboritong mga website, maaari silang makakatagpo ng mga mensahe mula sa ibang mga bata na makakagawa sa kanilang makaramdam ng galit, sakit, lungkot, o pagkakatakot. Sila ay tutuklas sa mga pamamaraan para harapin ang pang-aapi online at kung paano sila tutugon sa harap ng hindi kaaaya-ayang mga lenggwahe online.\n\nAng mga estudyante ay tatalakay sa lahat ng mga pamamaraan na magagamit nilang ang teknolohiya para sa komunikasyon at magtuklas sa mga pagkakatulad at pagkakaiba ng harapan at online na pakikipag-usap. Ang mga estudyante ay mag-iisip ng mga pamamaraan para tumugon sa pang-aapi online. "
+            Ice Age Play Lab:
+              name: Ice Age na Play Lab
+              description_student: Isipin ang iyong paboritong video game. Naisip mo ba kung paano ito nagawa? Sa mga palaisipang ito ikaw ay gagawa ng sarili mong video game kasama ang iyong mga kaibigan mula sa Ice Age!
+              description_teacher: Sa araling ito, ang mga estudyante ay gagabayan sa isang istorya na nagpapakita ng mga karakter mula sa Ice Age. Ang mga estudyante ay magtatrabaho gamit ang mga event at mga loop para mapagalaw ang mga karakter sa screen at makakakuha ng pagkakataon na makalikha ng sarili nilang laro o istorya pagkatapos ng mga ginabayang mga antas.
+            Conditionals in Minecraft:
+              name: Mga Kondisyonal sa Minecraft
+              description_student: Iwasan ang laba! Dito matutunan mo ang tungkol sa mga kondisyonal sa mundo ng Minecraft.
+              description_teacher: Ang aaraling ito ay nagbibigay sa mga estudyante ng pagkakataon na matuto at makapagsanay sa mga kondisyonal. Ito ay nagpapakita sa mga karakter at mga esksena mula sa Minecraft, ang mga estudyante ay kukumpleto sa gawain gaya ng pagmina at paggawa ng mga istraktura gamit ang kanilang mga programa.
+            Envelope Variables:
+              name: Balot ng mga Variables
+              description_student: 'Ang mga sobre at mga variable ay mayroong isang bagay na magkatulad: pareho silang maaaring humawak ng mga mahahalagang mga bagay. Dito matutunan mo kung ano ang mga variables at ang mga kasindak-sindak na mga bagay na magagawa nila.'
+              description_teacher: Ang mga variable ay ginagamit bilang mga placeholder para sa mga halaga gaya ng mga numero o mga salita. Ang mga variable ay nagbibigay daan sa napakaraming kalayaan sa pag-program. Sa halip na kailangang i-type ang isang parirala ng maraming beses o kailangan tandaan ang isang malabong numero, ang mga siyentista sa kompyuter ay maaaring gumagamit ng mga variable para mag-reperensya sa kanila. Ang araling ito ay nakakatulong para ipaliwanag kung ano ang mga variables at kung paano natin maaaring gamitin ang mga ito sa napakaraming iba't ibang pamamaraan. Ang ideya ng mga variable hindi isang madaling konsepto na maintindihan, kaya aming inirerekomenda na maglaan ng malaking oras para sa diskusyon sa dulo ng aralin.
+            Variables in Artist:
+              name: Mga Variable sa Artist
+              description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang mga drowing gamit ang mga variable.
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.
+            Variables in Play Lab:
+              name: Mga Variable sa Play Lab
+              description_student: Hindi magtatagal ay matutunan nila ang tungkol sa paggawa sa mga karakter na makipag-ugnayan sa isang laro gamit ang mga variables!
+              description_teacher: Ang mga estudyante ay makakakuha ng karagdagang pagsasanay gamit ang mga variables sa araling ito sa pamamagitan ng paglikha ng mga esksena sa Play Lab. Ang mga estudyante ay magtatrabaho sa mga input ng gumagamit para magtakda ng mga halaga sa kanilang mga variable, pagkatapos ay makakuha sila ng lugar kung saan ililikha nila ang kanilang maliit na proyekto gamit ang mga variables.
+            For Loop Fun:
+              name: Saya sa For Loop
+              description_student: Magkakaroon ka ng napakasayang pag-aaral tungkol sa mga `for` loop!
+              description_teacher: 'Alam natin na ang mga loop ay nagbibigay-daan sa atin para magawa ang mga bagay-bagay nang paulit-ulit, ngunit ngayon ay pag-aaralan natin kung paano gumamit ng mga loop na mayroong karagdagang istraktura na binuo sa loob nito. Ang mga bagong istrakturang ito ay nagbibigay-daan sa mga estudyante na makalikha ng code na mas makapangyarihan at mas dynamic. '
+            For Loops in Bee:
+              name: Mga For Loops sa Bee
+              description_student: Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!
+              description_teacher: Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.
+            For Loops in Artist:
+              name: Mga Loops sa Artist
+              description_student: Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.
+            Songwriting with Parameters:
+              name: Pagsulat ng Awit na may mga Paremeters
+              description_student: Maaring maipalabas mo ang susunod na napakatampok na single! Sa araling ito, ikaw ay matututo kung ano ang mga parameter at kung paano sila makakagawa ng iilang pambihirang mga awitin!
+              description_teacher: Isa sa pinakahanga-hangang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsan ay tinatawag na mga pamamaraan) ay mga maliliit na mga programa na maaari mong gamitin ng paulit-ulit sa loob ng isang mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na mauunawaan kung paano ang pagsama-sama ng mga piaso ng code sa isang mga function ay ganap na nakakatulong na mga gawi, at paano nila maaaring gamitin ang mga istraktura ng ito kahit na ang mga piraso ng code ay medyo kakaiba.
+            Functions in Bee:
+              name: Mga Functions sa Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Mga Functions na may mga Parameter sa Artist
+              description_student: Ihanda na ang iyong mga pang-program na mga daliri. Sa mga palaisipang ito, ikaw ay gagawa ng kahanga-hangang mga drowing sa Artist gamit ang mga function na may mga parameter.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magtatrabaho gamit ang mga function na mayroon at walang mga parameter. Ang mga estudyante ay magkakaroon ng pagkakataon na makalikha ng kanilang sariling mga drowing na mayroon at walang mga parameter, bago baguhin ang mga function sa libreng laro na antas.
+            Functions with Parameters in Bee:
+              name: Mga Functions na may mga Parameter sa Bee
+              description_student: Nagkakaroon ka na ng kaunting pagsasanay sa paggamit ng mga function na may mga parameter. Ang araling ito ay magpapatuloy sa iyong pagsasanay gamit ang Bee!
+              description_teacher: Ang mga araling ito ay nagpapakita sa bee na kapaligiran, at nagpapatuloy sa konsepto ng mga function na may mga parameter mula sa naunang yugto ng Artist. Ang mga estudyante ay magsasanay sa pagsulat at paggamit ng mga functions para masundan ang mga kumplikadong mga landas at makakolekta ng mga pattern ng nektar at pulot.
+            Explore Project Ideas:
+              name: Tuklasin ang mga Ideya sa Proyekto
+              description_student: Oras na para magkuha ng iilang inspirasyon! Ang mga palaisipang ito ay nagpapakita sa iyo ng iilang nagawa nang mga laro at mga ilustrasyon para makatulong sa paggawa ng iyong plano para sa iyong MALAKING proyekto.
+              description_teacher: "Ang susunod na limang mga aralin ay nagbibigay ng oportunidad sa mga estudyante ang magamit ang kanilang mga kakayahan sa pag-code sa isang capstone na proyekto. Ang proyektong ito ay makakatulong sa mga indibidwal na makakakuha ng karanasan sa pag-code at makabuo ng isang halimbawa na maibahagi sa kanilang mga kasamahan at mga mahal sa buhay. Ito ay ginawa para maging isang maraming-aralin o maraming-linggo na proyekto kung saan ang mga estudyante ay gugugol ng oras para mag-brainstorm, matuto tungkol sa proseso ng pagdisenyo, pagbuo, at pagkatapos ay magpapakita sa kanilang huling nagawa. \n\nSa sunod na pagtuklas na yugto, ang mga estudyante ay makakatingin sa mga halimbawang mga proyekto sa parehong Artist at Play Lab para magbigay ng inspirasyon. Sa sunod, ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo at kung paano gamitin ito sa kanilang sariling mga proyekto. Sila ay bibigyan din ng lugar para malikha nila ang kanilang sariling proyekto sa alinman sa Artist o Play Lab (marahil ito ang pinakamahabang yugto ng proyekto). Ang mga estudyante ay magbabago sa kanilang mga proyekto, pagkatapos mag-test at karagdagang mag-isip. Sa wakas, ang mga estudyante ay magpapakita sa kanilang natapos na gawain sa kanilang mga kasamahan."
+            The Design Process:
+              name: Ang Proseso ng Pag-Disenyo
+              description_student: Ang mga proyekto na kasing laki nito ay gugugol ng oras at maraming pagpaplano. Dito, matutunan mo ang tungkol sa proseso ng pag-disenyo na gagamitin mo para mabuo ang iyong sariling nilikha.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay magtatayo papunta sa pagbuo ng proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran. Sa bahaging ito ng proyekto, ang mga estudyante ay matututo tungkol sa proseso ng pagdisenyo at kung paano ipatupad ito sa kanilang mga proyekto. Ang gabay sa aralin na nagbibigay buod sa lahat ng limang yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Bumuo ng Iyong Proyekto
+              description_student: Sa wakas maaari ka nang magsimulang bumuo ng iyong proyekto!
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay magbubuo hanggang sa mabuo nila ang isang proyekto na sarili niang disenyo gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran. Ngayon ang mga estudyante ay bibigyan ng kanilang sariling lugar para ilikha ang kanilang proyekto gamit ang alinman sa Artist o Play Lab. Ito ang magiging pinakamahabang bahagi ng proyekto. Ang gabay ng aralin na nagpapakita sa lahat ng limang yugto ng proseso ay maaaring mahanap sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Baguhin ang Iyong Proyekto
+              description_student: Ang Roma ay hindi nabuo sa isang araw at ang iyong proyekto ay dapat hindi rin. Maggugol ng oras para baguhin at ayusin ang iyong proyekto para maging pinakamahusay ito hangga't maaari.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay bubuo hanggang sa mabuo nila ang proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang pang-program na kapaligiran. Ngayon na nabuo na ang proyekto, ang mga estudyante ay bibigyan ng oportunidad na makakuha ng feedback mula sa kanilang mga kasamahan at maayos ang kanilang mga proyekto. Ang gabay ng aralin na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Ipakita ang Iyong Proyekto
+              description_student: Oras na para ipakita ang iyong gawain! Diyo ipapakita mo ang iyong kamangha-mangha na proyekto sa iyong mga kasamahan.
+              description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay bubuo hanggang sa maubo nila ang proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang kapaligiran sa kanilang pag-program. Sa wakas, ang mga estudyante ay maaaring makakapakita sa kanilang natapos na gawain sa kanilang mga kasamahan at sa mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            Conditionals:
+              name: Mga conditional
+        csp1-2018:
+          title: CSP Unit 1 - The Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: Mga Personal na Pagbabago
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: Pagpapadala ng Binary na mga Mensahe
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: Pagpapadala ng mga Binary na Mensahe sa mga Simulator ng Internet
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: Mga Sistema ng Pagbilang
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: Binary na mga Numero
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: Pagpapadala ng mga Numero
+              description_student: ''
+              description_teacher: ''
+            Encoding and Sending Formatted Text:
+              name: Pag-eencode at Pagpapadala ng Nakaformat na mga Teksto
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: Yunit 1 Kabanata 1 Pagtatasa
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: The Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: Ang Pangangailangan ng Addressing
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: Mga Routers at Redundancy
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: Mga Packets at Paggawa ng Maaasahang Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: Ang Pangangailangan ng DNS
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP at Paglalahat
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: Pagsasanay sa PT - Ang Internet at ang Lipunan
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: Yunit 1 Kabanata 2 Pagtatasa
               description_student: ''
               description_teacher: ''
