@@ -1,5 +1,5 @@
 import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
-//import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
+import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import { PropTypes } from 'react';
 import {
   NAME_COLUMN_WIDTH,
@@ -32,8 +32,6 @@ export const addLevelsByLesson = (scriptId, levelsByLesson) => (
 );
 export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
-
-  // TODO - filter levels using processedLevel
   const filteredScriptData = {
     id: scriptData.id,
     excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
@@ -260,7 +258,24 @@ export const getCurrentProgress = (state) => {
  * TODO(caleybrock) write a test for this function
  */
 export const getCurrentScriptData = (state) => {
-  return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+  const script = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+
+  if (script) {
+    const stages = script.stages.map(stage => {
+      return {
+        ...stage,
+        levels: stage.levels.map(level => {
+          return processedLevel(level);
+        })
+      };
+    });
+    return {
+      ...script,
+      stages: stages,
+    };
+  }
+
+  return script;
 };
 
 /**
@@ -285,14 +300,14 @@ export const getLevels = (state, studentId, stageId) => {
  */
 export const getColumnWidthsForDetailView = (state) => {
   let columnLengths = [NAME_COLUMN_WIDTH];
-  const stages = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId].stages;
+  const stages = getCurrentScriptData(state).stages;
 
   for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
     const levels = stages[stageIndex].levels;
     // Left and right padding surrounding bubbles
     let width = 10;
     for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
-      if (levels[levelIndex].kind === 'unplugged') {
+      if (levels[levelIndex].isUnplugged) {
         // Pill shaped bubble
         width = width + PILL_BUBBLE_WIDTH;
       } else if (levels[levelIndex].is_concept_level) {
