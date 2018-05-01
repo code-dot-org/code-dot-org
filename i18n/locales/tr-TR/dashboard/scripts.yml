@@ -7047,7 +7047,7 @@ tr:
               name: Star Wars oyunu oluştur
             Functions in Harvester:
               name: Functions in Harvester
-          title: Course E 2018
+          title: Course E 2018 (Outdated!)
           description_audience: ''
           description_short: ''
           description: ''
@@ -7111,7 +7111,7 @@ tr:
               name: Projenizi Gözden Geçirme
             Present Your Project:
               name: Projeni sun
-          title: Course F 2018
+          title: Course F 2018 (Outdated)
           description_audience: ''
           description_short: ''
           description: ''
@@ -7614,6 +7614,10 @@ tr:
               name: Projeni sun
               description_student: ''
               description_teacher: ''
+            Conditionals in Bee:
+              name: Koşullar-Arı
+            Until Loops in Maze:
+              name: Until Loops in Maze
         courseb-2018:
           title: Kurs B
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
@@ -7758,6 +7762,10 @@ tr:
               name: Loops in Ice Age
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
+            Until Loops in Maze:
+              name: Until Loops in Maze
+            Conditionals in Maze:
+              name: Conditionals in Maze
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7920,6 +7928,8 @@ tr:
               name: İkilik Bileklikler
               description_student: ''
               description_teacher: ''
+            Looking Ahead:
+              name: Geleceğe bakış
         csd6-2018:
           title: CSD bilgisayar birimi 6 - fiziksel
           description: Altıncı bölüm Bilgisayarı keşvetme, Öğrenciler App laboratuvar ve Maker Toolkit ile programlar geliştirir ve fiziksel bir tahta ile iletişim kurar.
@@ -7988,5 +7998,320 @@ tr:
               description_teacher: ''
             'Project: Prototype an Innovation_':
               name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''
+        coursee-2018:
+          title: Kurs E
+          description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: '8-12 yaş grubu'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Labirentte dizi
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Sanatçı Programlama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: İç İçe Döngüler
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Dice Race':
+              name: 'Algoritmalar: Zar yarışı'
+              description_student: Bilgisayarın bakış açısına göre bu derste algoritmalar üzerinden bir oyunun nasıl tanımlandığını öğrenin.
+              description_teacher: Bu derste, öğrenciler Zar Yarışı oyununu oynayarak, algoritma kavramını gerçek hayat etkinlikleri ile ilişkilendirecekler. Buradaki amaç, gerçek dünyadaki durumları çevrim içi senaryolara dönüştürme veya bunun tam tersini yapma becerileri oluşturmaya başlamak.
+            Introduction:
+              name: Giriş
+              description_student: Bu hızlı-tempolu giriş, bu derste bulmaca çözmek için ihtiyaç duyacağınız becerilerin çoğunu uygulama şansı verecektir.
+              description_teacher: Bu aşamada, öğrenciler Code.org' un çevrim içi çalışma alanına bir giriş ile başlayacaklar (veya sınıfın deneyimine bağlı olarak gözden geçirme). 'Çalıştır', 'Sıfırla' ve 'Atla' butonlarının dahil olduğu arayüzün basit işlevlerini öğrenecekler. Başlangıç videosu aynı zamanda Sürükleme, Silme ve Blockly bloklarını bağlamayı anlatır. Bulmacalarda, öğrenciler, Labirent ve Sanatçı' da hata ayıklama ve dizileri kullanma yeteneklerini geliştirirler.
+            Conditionals:
+              name: Koşullar
+              description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin.
+              description_teacher: Bu ders öğrencilere `while` döngüleri ve` if / else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.
+            Private and Personal Information:
+              name: Özel ve Kişisel Bilgiler
+              description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
+              description_teacher: |-
+                Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
+                
+                Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
+            Build a Star Wars Game:
+              name: Star Wars oyunu oluştur
+              description_student: Bu derste kendi Star Wars oyununu kurarken gücünü hissedin.
+              description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+              description_student: Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
+              description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+              description_student: Fonksiyonlar ile daha karmaşık çizimleri daha kolay yapın!
+              description_teacher: Öğrenciler Code.org' da fonksiyonları kullanmayı öğrenirler. Aktörler içinde fonksiyonları kullanarak muhteşem görüntüler oluşturacak ve düzenleyecekler. Daha karmaşık desenler için, öğrenciler, bir fonksiyonun içinde çağrılan başka bir fonksiyonu öğrenecekler.
+            Functions in Bee:
+              name: Arı fonksiyonları
+              description_student: Nektarın ve balın tamamını toplamak için çok fazla kod yazmayın. Onun yerine fonksiyonları kullanın!
+              description_teacher: Çevrim içi fonksiyonlarla ilgili alıştırmanın ikinci kısmında, öğrenciler, karmaşık yollarda gezinecekler, bol miktarda nektar toplayacaklar ve bir sürü bal yapacaklar.
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: Kavramı Belirme
+              description_student: "We aren't giving away any secrets! \nThis lesson could use any of the skills you've learned so far."
+              description_teacher: This lesson brings together concepts from the previous lessons and gives students a chance to think critically about how they would solve each problem, but without telling them which concept to apply. Students will review basic algorithms, debugging, `repeat` loops, conditionals, `while` loops, and functions.
+            Build a Play Lab Game:
+              name: Bir Play Lab Oyunu Oluştur
+              description_student: Arkadaşlarınızla ve ailenizle paylaşmak için oyun hazırlama alıştırması.
+              description_teacher: Bu ders öğrencilerin kendi oyunlarını oluşturabildikleri ve karakterler ile kullanıcı girişi arasında etkileşimleri olabilecek bir platform olan Oyun Laboratuvarı'nı içeriyor. Öğrenciler klavye denetimleri oluşturmak için etkinliklerle çalışacaklar. Bu bulmaca setleri ayrıca öğrencileri oyun gelişimi boyunca gevşekçe yönlendirecek, ancak kendi fikirlerini eklemeleri için özgürlük sağlayacaktır.
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: Burada birkaç oyun ve çizim var. Kendi proje fikrinizi oluşturmak için onların hepsini oynayın!
+              description_teacher: "Bir sonraki dört proje öğrencilerin kodlama becerilerini bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır, öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek, inşa ederek ve bitirme çalışmalarını sunarak vakit geçirecekler. \n\nKeşfetme etabında öğrenciler ilham almak için hem Sanatçı hem de Oyun Laboratuvarında önceden hazırlanmış projelerin örneklerini görebilecekler.\nSonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini Sanatçı ya da Oyun Laboratuvarında oluşturmak için alana sahip olacaklar ( bu muhtemelen projenin en uzun etabı). En sonunda öğrenciler bitmiş çalışmalarını akranlarına sunabilecekler."
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: Bu büyük projeler zaman alıyor ve çok planlanıyor. Burada, kendi tasarımınızı oluşturmak için kullanacağınız tasarım sürecini öğreneceksiniz.
+              description_teacher: Dört ders süresince, öğrenciler programlama ortamı olarak Play Lab'ı ya da Artist kullanarak kendi tasarımlarının bir projesini programlamak üzere inşa edileceklerdir. Projenin bu bölümünde, öğrenciler tasarım sürecini ve projelerini kendi projelerinde nasıl uygulayacaklarını öğreneceklerdir. Sürecin dört aşamasının tamamı için ders rehberi, bu proje sürecinin ilk aşamasında bulunabilir (https://curriculum.code.org/csf/coursee/12/).
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi.
+              description_teacher: Dört ders süresince, programlama ortamı olarak Oyun Laboratuvarı veya Sanatçı'yı kullanarak öğrenciler kendi tasarımları olan projelerini programlamayı öğrenecekler. Şimdi öğrencilere, Sanatçı veya Oyun Laboratuvarı'nı kullanarak projelerini oluşturmaları için kendi alanları verilecek. Sürecin tüm dört aşaması için ders rehberi bu proje sürecinin ilk aşamasında bulunabilir [here](https://curriculum.code.org/csf/coursee/12/).
+            Present Your Project:
+              name: Projeni sun
+              description_student: Göstermeye hazır ol! Bitirdiğiniz projeyi akranlarınıza sunma zaman.
+              description_teacher: Dört ders boyunca, öğrenciler, programlama ortamı olarak Play Lab ya da Sanatçı' yı kullanarak kendi tasarımlarını kullandıkları bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler. Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).
+            Internet:
+              name: İnternet
+              description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl çalıştığının temellerini öğretecek.
+              description_teacher: Birçok kişi interneti her gün kullanıyor olmasına rağmen, çok fazla insan nasıl çalıştığını bilmiyor. Bu derste, öğrenciler bağlantıları, URL'ler, IP Adresleri ve DNS hakkında bilgi edinecek ve internet üzerinden akmaya devam edeceklerini iddia edeceklerdir.
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+              description_student: Bu ders size kitle hakkında, bir ekiple bir proje oluşturma sürecini öğretecektir.
+              description_teacher: Bilgisayar bilimlerinde, bazı büyük, korkutucu problemler ile karşı karşıyayız. Büyük asal sayı bulma ya da DNA dizilimi yapma gibi zorlukların birey olarak yapılması neredeyse imkansızdır. Başkalarının gücünü eklemek bu görevleri yönetilebilir yapar. Bu ders öğrencilere, ekip çalışmasının bilgisayar bilimleri endüstrisinde nasıl faydalı olabileceğini gösterecektir.
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+        coursef-2018:
+          title: Kurs F
+          description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
+          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description_audience: 'Yaş: 9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Labirentte dizi
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Sanatçı Programlama
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Sanatçıların Döngüleri
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Tangrams':
+              name: 'Algoritmalar: Tangramlar'
+              description_student: Burada, tangram olarak adlandıran bulmacaları kullanarak algoritmaları öğreneceksiniz!
+              description_teacher: Bu ders bize algoritmaların önemini gösterecek. Bir algoritmayı basit tuttuğunuz sürece onu kullanmanın bir çok yolu vardır. Ancak, eğer herkesin aynı sonuca varmasını istiyorsanız, algoritmanız daha detaylı olmalı. Öğrenciler tangramlarla oynarken, genel ve detaylandırılmış bir algoritma arasındaki farkı öğrenecekler.
+            Introduction:
+              name: Giriş
+              description_student: Bu ders, size, bu kursta öğreneceğiniz bazı şaşırtıcı şeyler hakkında kısa bilgiler verecek!
+              description_teacher: 'Bu derste, kursun sonraki bölümlerinde yer alan daha karmaşık kavramlara, öğrencileri hazırlamak için diziler, döngüler ve iç içe döngüler anlatılır. Bu ''ramp up'' dersi, sınıfınızdaki uzmanlar ve yeni başlayanlar arasındaki oyun alanını dengeler. '
+            The Power of Words:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir.
+              description_teacher: "Öğrenciler, en sevdikleri web sitelerinde eğlenirken, diğer çocukların onları kızdıracak, incitecek, üzecek ya da korkutacak mesajları ile karşılaşacaklarını düşünürler. Siber zorbalıkla başa çıkmanın yollarını ve çevrimiçi rahatsız edici dil karşısında nasıl cevap vereceklerini keşfederler. \n\nÖğrenciler, iletişim için kullandıkları teknolojinin tüm araçlarını tartışırlar ve yüz yüze ve çevrimiçi iletişimin benzerlik ve farklılıklarını keşfederler. Daha sonra öğrenciler, siber zorbalığa tepki verme yöntemleri hakkında beyin fırtınası yaparlar. "
+            Ice Age Play Lab:
+              name: Buz Devri Oyun Laboratuvarı
+              description_student: En sevdiğiniz video oyunu dününün. Nasıl yapıldığını hiç merak ettiniz mi? Bu bulmacalarda, Ice Age' deki kendi arkadaşlarınızla kendi video oyununuzu geliştireceksiniz!
+              description_teacher: Bu derste, öğrencilere Buz Devri'nden karakterler içeren bir hikaye anlatılıyor. Öğrenciler olaylar ve döngülerle karakterlerin ekranda hareket etmesini sağlamak için çalışacak ve rehberli seviyelerin ardından kendi oyunlarını veya hikayelerini oluşturma fırsatı bulacaklar.
+            Conditionals in Minecraft:
+              name: Minecraft' da Koşullar
+              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğreneceksiniz.
+              description_teacher: Bu ders, öğrencilere, koşulları uygulamaları ve öğrenmeleri için bir şans verir. Minecraft'ın karakterlerini ve özelliklerini karakterize eder ve öğrenciler kendi programlarını kullanarak madencilik ve yapıları inşa etmek gibi görevleri tamamlarlar.
+            Envelope Variables:
+              name: Zarf değişkenleri
+              description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların yapabileceği harika şeyleri öğreneceksiniz.'
+              description_teacher: Değişkenler sayılar ya da sözcükler gibi değerler için yer tutucu olarak kullanılır. Değişkenler programlamada çok fazla özgürlüğe izin verir. Bir ifadeyi defalarca yazmak veya belirsiz bir numarayı hatırlamak yerine, bilgisayar bilimcileri değişkenleri kendilerine referans olarak kullanabilir. Bu ders değişkenlerin ne olduğunu ve bunları farklı şekillerde nasıl kullanabileceğimizin açıklamada yardımcı olur. Değişkenler fikri kavramak için kolay bir görüş değil bu yüzden dersin sonunda tartışma için bol bol vakit ayırmanızı öneririz.
+            Variables in Artist:
+              name: Sanatçı-Değişkenler
+              description_student: Sınıfa yaratıcılık getirmeyi unutmayın! Bu bulmacalarda değişkenleri kullanarak muhteşem çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler, Sanatçı çevresindeki değişkenleri kullanarak tekrar eden tasarımların oluşturulmasını tecrübe edecekler. Öğrenciler, kodların daha kolay yazılmasını ve okunması daha kolay hale getirilebilmesi için değişkenlerin nasıl kullanılacağını öğrenecek. Kılavuzlu bulmacalardan sonra, öğrenciler öğrendiklerini göstermek ve kendi tasarımlarını oluşturmak için serbest seviye seviyesinde sona ereceklerdir.
+            Variables in Play Lab:
+              name: Değişkenler - Oyun laboratuarı
+              description_student: Yakında değişkenleri kullanarak bir oyunda etkileşimli karakterler yapmayı öğreneceksiniz!
+              description_teacher: Play Lab' da sahneler oluşturarak bu derste değişkenler ile daha fazla çalışacaklar. Öğrenciler, kullanıcıdan girdi almak ve değişkenlere değer atamak için çalışacaklar, sonra değişkenler ile kendi küçük projelerini oluşturacaklar.
+            For Loop Fun:
+              name: Şununla Say Döngüsü Eğlencesi
+              description_student: '`for` döngülerini öğrenmek için eğlenceli şeyler bulacaksınız!'
+              description_teacher: 'Döngüler, bazı şeyleri tekrar tekrar yapmamıza izin veriyor biliyoruz, fakat şimdi ekstra yapıların inşa edildiği döngülerin nasıl kullanılacağını öğreneceğiz. Bu yeni yapılar, öğrencilerin daha güçlü ve dinamik kodlar oluşturmalarını sağlayacak. '
+            For Loops in Bee:
+              name: Arı - şununla say döngüleri
+              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
+              description_teacher: Arı özelliğiyle bu ders, döngüler ve daha karmaşık bulmacaları çözmek için artan bir değişken kullanmaya odaklanıyor. Öğrenciler önceki derslerdeki döngüleri inceleyerek başlayacak, ardından döngüleri kullanarak karmaşık problemleri daha etkili bir şekilde çözmeye başlayacak.
+            For Loops in Artist:
+              name: Sanatçı-Şununla say Döngüleri
+              description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
+              description_teacher: Bu derste öğrenciler, döngülerde pratik yapmaya devam ediyor, bu kez sanatçı ile. Öğrenciler değişkenlerin, döngülerin ve döngülerin karmaşık tasarımlar oluşturması için bulmaca tamamlayacaklar. En sonunda, serbest oyunda kendi sanatlarını oluşturma şansına sahip olacaklar.
+            Songwriting with Parameters:
+              name: Parametrelerle Şarkı Yazmak
+              description_student: Yalnızca bir sonraki büyük hit single'ı serbest bırakabilirsin! Bu derste, hangi parametrelerin ve hangi fantastik şarkılar ürettiklerinin öğrenileceksiniz!
+              description_teacher: Bilgisayar bilimi dünyasındaki en görkemli yapılardan biri de fonksiyondur. Fonksiyonlar (bazen prosedürler denir), daha büyük programınızın içinde ve üzerinde kullanabileceğiniz mini programlardır. Bu ders, öğrencilerin kod bölümlerini işlevlere nasıl bağdaştırmanın neden bu kadar yararlı bir uygulama olduğunu sezgisel olarak anlamalarına, ve kod bölümleri biraz farklı olsa bile bu yapıları nasıl kullanabileceklerine yardımcı olacaktır.
+            Functions in Bee:
+              name: Arı fonksiyonları
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Sanatçı Parametrelerinde Fonksiyonlar
+              description_student: Programlama yapacağınız parmaklarınızı hazırlayın. Bu bulmacalarda, parametrelerle fonksiyonları kullanarak, Aktörlerde etkileyici çizimler yapacaksınız.
+              description_teacher: Bu derste öğrenciler parametre olan ve olmayan fonksiyonlarla çalışmaya devam etmektedir. Öğrenciler, fonksiyonları serbest bırakma düzeyinde değiştirmeden önce kendi çizimlerini parametreler olmadan yaratma şansına sahip olacaklardır.
+            Functions with Parameters in Bee:
+              name: Arıda Parametreli Fonksiyonlar
+              description_student: Parametrelerle fonksiyonları kullanarak biraz alıştırma yaptın. Bu ders, Arı ile alıştırma yapmaya devam edecek!
+              description_teacher: Bu ders arı ortamını öne çıkarır ve önceki Sanatçı aşamasındaki parametrelerle fonksiyonlar kavramı boyunca devam eder. Öğrenciler, fonksiyonlar yazarak ve onları kullanarak karmaşık yolları takip edecekler ve nektar ve bal desenleri toplayacaklar.
+            Explore Project Ideas:
+              name: Proje fikirleri keşfetmek
+              description_student: Biraz ilham alma zamanı! Bu bulmacalar; önceden oluşturulmuş bir avuç oyun ve canlandırmaları size gösterecek. Böylece kendi büyük projenizi geliştirmenizde bunlar size yardımcı olacaklar.
+              description_teacher: "Sonraki beş ders, öğrencilere, kodlama becerilerini yayınlamak için bir bitirme projesinde kullanmalarına olanak sağlar. Bu proje, bireylere, kodlama tecrübesi kazanmalarında ve akranları ve sevdikleri ile paylaşmaları için bir model üretmelerinde yardımcı olacak. Bu, öğrencilerin beyin fırtınası yapmaları, tasarım sürecini öğrenmeleri, inşa etmeleri ve sonrasında nihai çalışmalarını sunmalarına zaman harcamaları için çok dersli veya çok haftalı bir proje olması için planlanmaktadır. \n\nKeşif etabında, öğrenciler esinlenmek için hem sanatçı hem de oyun laboratuvarındaki projelerin örneklerini inceleyebilecek. Sonrasında, öğrenciler, tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Ardından, onlara, kendi projelerini ya Sanatçı ya da Oyun laboratuvarında oluşturmaları için alan verilecek(bu, muhtemelen projenin en uzun aşamasıdır). Test etme ve ekstra düşünmeden sonra öğrenciler, projelerini gözden geçirip düzeltecek. Son olarak, öğrenciler, bitirmiş oldukları çalışmalarını akranlarına sunabilecekler."
+            The Design Process:
+              name: Tasarım işlemi
+              description_student: Bu büyük projeler zaman alıyor ve çok planlanıyor. Burada, kendi tasarımınızı oluşturmak için kullanacağınız tasarım sürecini öğreneceksiniz.
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Projenizi oluşturun
+              description_student: Sonunda projeni oluşturmaya başlayabilirsin!
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Projenizi Gözden Geçirme
+              description_student: Roma bir günde inşa edilmedi, sizin projeniz de bir günde bitmemeli. Projenizi olabilecek en iyi hale getirmek için, projenizi gözden geçirmeye ve düzenlemeye zaman ayırın.
+              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Projeni sun
+              description_student: Çalışmanızı gösterme zamanı! Burada, akranlarınıza, muhteşem projenizi sunacaksınız.
+              description_teacher: Beş ders süresince, öğrenciler programlama ortamı olarak Oyun Labaratuvarını veya Sanatçıyı kullanarak kendi tasarımları olan bir proje oluşturmaya başlayacaklardır.Şimdi öğrencilere Sanatçı ya da Oyun Laboratuvarı ile projelerini yaratacakları alanlar verilecek. Bu projenin en uzun bölümü olacak.Sürecin beş aşamasını da inceleyen ders rehberi, proje sürecinin başında, [here](https://curriculum.code.org/csf/coursef/15/) bulunabilir.
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            Conditionals:
+              name: Koşullar
+        csp1-2018:
+          title: CSP Unit 1 - The Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: Kişisel yenilikler
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: İkili Mesajları Gönderiyor
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: Internet simülatörü ile ikili ileti gönderme
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: Sayı Sistemleri
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: İkili Sayılar
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: Sayı gönderme
+              description_student: ''
+              description_teacher: ''
+            Encoding and Sending Formatted Text:
+              name: Biçimlendirilmiş metin kodlama ve gönderme
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: Ünite 1 Bölüm 1 değerlendirme
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: İnternet
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: Adresleme için ihtiyaç
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: Yönlendiriciler ve yedeklilik
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: Paketler ve güvenilir bir Internet oluşturma
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: DNS için ihtiyaç
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP ve soyutlama
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: Uygulama PT - Internet ve toplum
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: Ünite 1 Bölüm 2 değerlendirme
               description_student: ''
               description_teacher: ''

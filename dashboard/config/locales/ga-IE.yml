@@ -22,8 +22,9 @@
         name: Ainm Taispeána
         name_example: Ainm Taispeána<br/>(m.sh. Sárchódálaí nó Sinéad S.)
         email: Seoladh ríomhphoist
-        parent_email: Parent/guardian email
-        personal_email: Seoladh ríomhphoist pearsanta
+        parent_email: Seoladh ríomhphoist do thuismitheoir
+        personal_email: Seoladh ríomhphoist pearsanta <a href="%{url}">(cliceáil anseo
+          mura bhfuil seoladh ríomhphoist agat)</a>
         username: Ainm úsáideora
         password: Focal faire
         password_confirmation: Deimhniú an fhocail faire
@@ -53,7 +54,7 @@
       placeholder: Cód an Rannáin (ABCDEF)
       instructions: Cuir isteach an cód a thug do mhúinteoir duit. Cód sé litir atá
         ann, cosúil le "ABCDEF".
-      instructions_short: Enter your 6 letter section code
+      instructions_short: Cuir isteach cód an rannáin le 6 litir
     submit: Cuir múinteoir leis
   add_hint_form:
     placeholder: Cuir do leid isteach anseo
@@ -66,7 +67,7 @@
   courses: Cúrsaí
   courses_page:
     title_student: Foghlaim sa Stiúideo Códála
-    title_teacher: Teach with Code Studio
+    title_teacher: An Ríomheolaíocht a Mhúineadh
   unplugged_activity: Gníomhaíocht Dhíphlugáilte
   of: as
   more: NÍOS MÓ
@@ -94,14 +95,14 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Cuntas Microsoft
-    clever: Cuntas Cliste
+    clever: Cuntas Clever
     forgot_password: Focal faire dearmadta?
     need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
     need_unlock: Nach bhfuair tú na treoracha díghlasála?
     not_linked: Níl do chuntas Code.org ceangailte le do chuntas %{provider}. Caithfidh
       tú d'fhocal faire a chur isteach thíos.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    use_clever: Ár leithscéal, ach níl do chuntas Code.org nasctha le %{provider}.
+      Ní mór duit logáil isteach trí do thairseach Clever.
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
@@ -207,7 +208,7 @@
       email: Seoladh ríomhphoist
       submit: Seol
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Líon isteach an CAPTCHA chun d'fhocal faire a athshocrú.
       invalid_email: Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí.
         Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar
         féidir d'fhocal faire a athshocrú.
@@ -240,7 +241,7 @@
     remove: "(bain rannán)"
     type:
       picture: Pictiúr mar Fhocal Faire
-      word: Focal Rúnda
+      word: Focail Rúnda
       email: Seoladh ríomhphoist
       google_classroom: Google Classroom
       clever: Clever
@@ -258,9 +259,9 @@
       blank_code: Cuir isteach cód an rannáin
       cant_join_own_section: Ár leithscéal, níl cead agat dul isteach i do rannán
         féin.
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Tá an rannán seo faoi stiúir soláthraí eile agus ní
+        féidir leat dul ann. Iarr ar do mhúinteoir tusa a chur leis trí %{provider}
+        agus an rannán a shioncronú arís.
     mail:
       student_disassociated:
         subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
@@ -284,12 +285,13 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
-        personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+        user_type_change_email_mismatch: Ní ionann an seoladh ríomhphoist a thug tú
+          agus an ceann atá nasctha leis an gcuntas seo
+        personal_login_created_email: D'éirigh leat cuntas pearsanta a chruthú. Anois
+          is féidir leat logáil isteach le do sheoladh ríomhphoist agus focal faire
+        personal_login_created_username: D'éirigh leat cuntas pearsanta a chruthú.
+          Anois is féidir leat logáil isteach le d'ainm úsáideora (%{username}) agus
+          focal faire
   nav:
     header:
       finished_hoc: Chríochnaigh mé an Uair Chódála
@@ -298,13 +300,13 @@
         playlab: Déan aip sa Spraotharlann
         artist: Tarraing pictiúr
         calculate: Calculate Something
-        applab: Déan aip sa Spraotharlann
+        applab: Déan aip sa tSaotharlann Aipeanna
         gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
-        weblab: Make a Web Lab (beta) project
+        weblab: Tosaigh togra nua i Saotharlann an Ghréasáin (béite)
       home: Baile
       my_dashboard: Mo Phainéal
       courses: Cúrsaí
-      course_catalog: Course Catalog
+      course_catalog: Cúrsaí
       project_gallery: Tograí
       sections: Rannáin
       help_support: Cabhair agus tacaíocht
@@ -407,26 +409,26 @@
       sholáthraí tríú páirtí.
     no_password_because_sponsored: Cabhróidh do mhúinteoir leat d'fhocal faire a bhainistiú.
     create_personal_login: Cruthaigh do chuntas féin
-    create_personal_login_under_13_info: If you want to keep using your Code.org account
-      even after the end of the school year, ask your parent/guardian to help you
-      create your own personal login below.
+    create_personal_login_under_13_info: Más mian leat Code.org a úsáid fiú tar éis
+      dheireadh na scoilbhliana, iarr ar thuismitheoir cabhrú leat do chuntas pearsanta
+      féin a chruthú thíos.
     create_personal_login_under_13_username: Ainm úsáideora (ná húsáid d'fhíorainm!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Seoladh ríomhphoist do thuismitheoir
     create_personal_login_info: Más mian leat Code.org a úsáid fiú tar éis dheireadh
       na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.
     create_personal_login_terms: Má chruthaíonn tú cuntas pearsanta, glacann tú le
       <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>.
       Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir
       nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: Enter your new login information
-    confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    create_personal_login_email_note: 'Nóta: Ní stórálaimid seoltaí ríomhphoist ar
+      bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon
+      ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár <a href=''%{privacy_policy_url}'',
+      target=''_blank''>bpolasaí príobháideachais</a> chun tuilleadh eolais a fháil.'
+    enter_new_login_info: Tabhair do shonraí nua logála isteach
+    confirm_secret_words: Deimhnigh gur tusa atá ann trí na focail rúnda atá agat
+      a chur isteach
+    enter_parent_email: Cuir isteach seoladh ríomhphoist do thuismitheora (i gcás
+      gur gá duit d'fhocal faire a athshocrú)
   user_level:
     completed: Críochnaithe
     tried: Iarracht déanta
@@ -552,11 +554,11 @@
       of updating our CS Fundamentals courses! We're looking for teachers to pilot
       an updated CS Fundamentals curriculum during the winter and spring of 2017.
       We're eager to hear your feedback before these updates go live in August 2017."
-    announcement_student_privacy: At Code.org, we take student privacy very seriously.
-      To protect your students’ privacy, we have made a change to your section’s login
-      page to avoid displaying full names. Even though this update should reduce privacy
-      concerns for the login page, we still encourage users to <i>not use full names
-      for students</i>.
+    announcement_student_privacy: Tá Code.org i ndáiríre faoi phríobháideachas na
+      ndaltaí a úsáideann an suíomh. Dá bharr sin, d'athraíomar an leathanach logála
+      isteach sa chaoi nach dtaispeánann sé ainmneacha iomlána a thuilleadh. Cé go
+      laghdóidh sé seo imní faoin phríobháideachas ar an leathanach seo, molaimid
+      do dhaltaí <i>gan a n-ainm iomlán a úsáid</i> mar sin féin.
     announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
       Your students could be featured in Code.org''s next viral video encouraging
       students to take the AP CS Principles exam this year. We''re inviting all CS
@@ -577,14 +579,15 @@
       gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
       video</a> so your students can hear from their peers around the country who
       are taking the exam.
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
-    announcement_applab_export: App Lab, our web-based programming environment, now
-      supports exporting your code! You can start building apps with drag-and-drop
-      JavaScript blocks, then export the code to continue editing in any professional
-      development environment of your choice.
+    announcement_csp_deadline: Gairm dheiridh do mhúinteoirí dara leibhéil! Bí ar
+      thús cadhnaíochta i do scoil ó thaobh ríomheolaíochta, agus cuir iarratas isteach
+      ar chlár foghlamtha proifisiúnta den chéad scoth, <strong>go hiomlán saor in
+      aisce</strong>. Dúnfar iarratais ar 14 Aibreán.
+    announcement_applab_export: Anois is féidir leat cód a easpórtáil ón tSaotharlann
+      Aipeanna, ár dtimpeallacht ríomhchláraithe ar an nGréasán. Is féidir leat aipeanna
+      a thosú le blocanna JavaScript mar is gnáth, ansin an cód a easpórtáil sa chaoi
+      go mbeidh tú in ann é a chur in eagar i do rogha timpeallachta ríomhchláraithe
+      proifisiúnta.
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
       CS Principles students taking the AP CS Exam will join over 50,000 other students
       in the largest AP Exam launch in history. Now, let the voices of your students
@@ -693,18 +696,18 @@
         féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
         ar an leathanach briste.
       link: Tuilleadh eolais
-      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
-        with loading Web Lab on this browser. You may want to use a different browser
-        until this is resolved. Sorry for the inconvenience.
-      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
-        Private Browsing mode. Please reload your project in normal mode. Sorry for
-        the inconvenience.
+      applab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Aipeanna ar
+        ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go mbeidh
+        fadhbanna agat ar an ngléas seo.
+      gamelab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Cluichíochta
+        ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go
+        mbeidh fadhbanna agat ar an ngléas seo.
+      weblab_unsupported_browser: Faraor ní féidir Saotharlann an Ghréasáin a lódáil
+        sa mbrabhsálaí seo faoi láthair. Molaimid duit brabhsálaí difriúil a úsáid
+        go dtí go réiteoimid an fhadhb seo. Gabh ár leithscéal.
+      weblab_unsupported_locale_storage: Seans go mbeidh fadhbanna agat le Saotharlann
+        an Ghréasáin i bhfuinneog phríobháideach. Ba chóir duit an togra a athlódáil
+        i ngnáthfhuinneog. Gabh ár leithscéal.
   slow_loading: Moill as an ngnáth air seo...
   try_reloading: Déan iarracht an leathanach a lódáil arís
   next_stage: Críochnaithe! Ar aghaidh go dtí an chéad chéim eile
@@ -744,9 +747,9 @@
   upsell:
     applab:
       title: Saotharlann Aipeanna
-      body: Is timpeallacht ríomhchláraithe é App Lab lenar féidir aipeanna simplí
-        a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript í, ansin foilsigh
-        an aip ar an toirt.
+      body: Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir
+        aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript
+        í, ansin foilsigh an aip ar an toirt.
       body_short: Dear d'aip, códáil le blocanna nó le JavaScript í, ansin foilsigh
         an aip ar an toirt.
       audience: Aois 13+
@@ -781,9 +784,10 @@
       title: Criptiú Simplí
       body: Students will learn techniques to create and crack encrypted messages.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      title: Saotharlann an Ghréasáin (béite)
+      body: Is éard atá i Saotharlann an Ghréasáin ná timpeallacht ríomhchláraithe
+        lenar féidir leathanaigh Ghréasáin shimplí a chruthú in HTML agus CSS. Dear
+        do leathanaigh féin agus foilsigh do shuíomh ar an bpointe.
       audience: Aois 13+
       cta: Foghlaim anois
     frozen:
@@ -806,7 +810,7 @@
         through Minecraft with code.
     sports:
       title: Sports
-      body: Make a basketball game or mix and match across sports.
+      body: Is féidir leat cluiche cispheile a chruthú nó spóirt éagsúla a mheascadh.
     text-compression:
       title: Text Compression
       body: In this lesson, students will use the Text Compression Widget to compress
@@ -1017,14 +1021,14 @@
     rename: Ainm Nua
     save: Sábháil
     delete: Scrios
-    import: Import
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    import: Iompórtáil
+    share_link_import_bad_link_header: Nasc comhroinnte neamhaitheanta
+    share_link_import_bad_link_body: 'Níorbh fhéidir linn an nasc comhroinnte sin
+      a iompórtáil. Deimhnigh gur tháinig an nasc ó dhúshlán Minecraft: Gníomhaire,
+      agus gur chóipeáil tú an nasc iomlán.'
+    share_link_import_error_header: Tharla earráid.
+    share_link_import_error_body: Tharla earráid agus an nasc comhroinnte sin á iompórtáil.
+      Bain triail eile as.
     exit: Fill ar an gCúrsa
     my_projects: Mo Chuid Tograí
     project_gallery: Tograí
@@ -1039,8 +1043,8 @@
       é ach le daoine eile i do scoil.
     embed: Leabaigh
     advanced_share: Taispeáin na hardroghanna
-    no_projects: You currently have no projects. Click on one of the buttons above
-      to start a project.
+    no_projects: Níl aon togra agat faoi láthair. Cliceáil ceann de na cnaipí thuas
+      le togra nua a thosú.
     close: Dún
     more: Tuilleadh
     name: Ainm
@@ -1068,9 +1072,9 @@
     remix: Athmheascadh
     click_to_remix: Cliceáil "Athmheascadh" le do leagan féin a dhéanamh!
     edit_project: Cuir an Togra in Eagar
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
+    sharing_disabled: Ár leithscéal, ach níl an togra seo ar fáil le foilsiú. Más
+      leatsa nó le dalta de do chuid é, <a href='https://studio.code.org/users/sign_in'>logáil
+      isteach</a> i do chuntas le breathnú air.
     abuse:
       tos: Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí
         Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt.
@@ -1128,15 +1132,15 @@
     content: Ábhar
     practice: Cleachtais Mhúinteoireachta
     peer_review: Athbhreithniú Comhghleacaithe
-    ramp_up: Ramp-Up
+    ramp_up: Réamhullmhúchán
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Príomhchúrsa
     extra_course_content: Ábhar Breise
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
+    csf_e_1: Réamhullmhúchán do Chúrsa E (Roghnach)
+    csf_e_2: Ábhar Cúrsa E
+    csf_f_1: Réamhullmhúchán do Chúrsa F (Roghnach)
+    csf_f_2: Ábhar Cúrsa F
     csd1_1: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
     csd1_2: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
     csd2_1: 'Caibidil 1: Ábhar Gréasáin agus HTML'
@@ -1162,7 +1166,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    dlp: Reflection Prompts
+    dlp: Ábhar Machnaimh
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt
@@ -1252,9 +1256,9 @@
     nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.
   hidden_stage: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
     cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
+  hidden_script: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
+    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
+  return_unit_overview: Féach ar fhoramharc an aonaid
   return_course_overview: Féach ar fhoramharc an aonaid
   view_all_units: Gach aonad
   pd:

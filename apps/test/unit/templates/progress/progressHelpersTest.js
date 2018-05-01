@@ -7,6 +7,7 @@ import {
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
+  summarizeProgressInStage,
 } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -171,6 +172,55 @@ describe('progressHelpers', () => {
         };
         getIconForLevel(level);
       }, /Unknown iconType: /);
+    });
+  });
+
+  describe('summarizeProgressInState', () => {
+    it('summarizes all untried levels', () => {
+      const levels = fakeLevels(3);
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 3);
+      assert.equal(summarizedStage.incomplete, 3);
+      assert.equal(summarizedStage.completed, 0);
+    });
+
+    it('summarizes all completed levels', () => {
+      const levels = fakeLevels(4).map(level => ({
+        ...level,
+        status: LevelStatus.perfect
+      }));
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 4);
+      assert.equal(summarizedStage.incomplete, 0);
+      assert.equal(summarizedStage.completed, 4);
+    });
+
+    it('summarizes all attempted levels', () => {
+      const levels = fakeLevels(2).map(level => ({
+        ...level,
+        status: LevelStatus.attempted
+      }));
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 2);
+      assert.equal(summarizedStage.incomplete, 2);
+      assert.equal(summarizedStage.completed, 0);
+      assert.equal(summarizedStage.attempted, 2);
+    });
+
+    it('summarizes a mix of levels', () => {
+      const levels = fakeLevels(6);
+      levels[0].status = LevelStatus.submitted;
+      levels[1].status = LevelStatus.perfect;
+      levels[2].status = LevelStatus.attempted;
+      levels[3].status = LevelStatus.passed;
+      levels[4].status = 'other';
+
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 6);
+      assert.equal(summarizedStage.incomplete, 3);
+      assert.equal(summarizedStage.completed, 2);
+      assert.equal(summarizedStage.imperfect, 1);
+      assert.equal(summarizedStage.attempted, 1);
     });
   });
 });
