@@ -1718,12 +1718,19 @@
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_predict1_callout: []
+      courseF_artist_predict1_2018_callout: []
       courseF_artist_ramp10_callout: []
+      courseF_artist_ramp10_2018_callout: []
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Tu puedes cambiar este número.
         courseE_artist_ramp8_2: Haz clic aquí para ingresar la cantidad de veces que
           se repite tu código.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Tu puedes cambiar este número.
+        courseE_artist_ramp8_2: Haz clic aquí para ingresar la cantidad de veces que
+          se repite tu código.
       courseF_artist_ramp9_callout: []
+      courseF_artist_ramp9_2018_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter
           numbers. These `math` blocks can be pulled out and moved around!
@@ -1865,14 +1872,27 @@
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseF_maze_ramp5_callout: []
+      courseF_maze_ramp5_2018_callout: []
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
+          veces como le indique, luego continuará ejecutando el resto del programa.
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas
           veces como le indique, luego continuará ejecutando el resto del programa.
       courseF_maze_ramp7_callout:
@@ -1930,6 +1950,9 @@
         grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona
           "Ejecutar" para iniciar tu programa.
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
       drawings!_callout: []

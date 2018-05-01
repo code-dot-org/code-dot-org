@@ -1416,11 +1416,17 @@
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: 你能在这里找到多边形函数。
       courseF_artist_predict1_callout: []
+      courseF_artist_predict1_2018_callout: []
       courseF_artist_ramp10_callout: []
+      courseF_artist_ramp10_2018_callout: []
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseF_artist_ramp9_callout: []
+      courseF_artist_ramp9_2018_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: 注意，模块可以用新的方法来输入数字了。这些`math`（数学）模块能被拖出来，并且四处移动了！
       courseF_artist_variables10_callout: []
@@ -1536,12 +1542,21 @@
       courseF_maze_ramp13_callout: []
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseF_maze_ramp5_callout: []
+      courseF_maze_ramp5_2018_callout: []
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
@@ -1587,6 +1602,8 @@
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       drawings!_callout: []
       frozen circle function with parameter_callout:

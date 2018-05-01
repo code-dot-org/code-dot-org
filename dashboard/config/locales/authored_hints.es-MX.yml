@@ -77,27 +77,51 @@
         2-3_Artist_Debugging_9_b: "¡No necesitas añadir otro bloque para que puedas
           girar completamente, solo añade 60 grados 'a la izquierda' al bloque que
           ya tienes ahí!"
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: Cada cuadrado tiene 100 pixeles de lado, eso significa
+          que deberás avanzar hacia adelante 175 pixeles antes de dibujar el segundo
+          cuadrado.
+        2-3_Artist_Functions_1_b: Es correcto dibujar líneas solapadas para hacer
+          tus lentes.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: Cada cuadrado tiene 100 pixeles de lado, eso significa
           que deberás avanzar hacia adelante 175 pixeles antes de dibujar el segundo
           cuadrado.
         2-3_Artist_Functions_1_b: Es correcto dibujar líneas solapadas para hacer
           tus lentes.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: Vas a cambiar no solo el número y longitud de los
+          lados dentro de la función, sino también el ángulo que el artista toma entre
+          cada lado.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: Vas a cambiar no solo el número y longitud de los
           lados dentro de la función, sino también el ángulo que el artista toma entre
           cada lado.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: Prmero intenta ejecutar el código para ver lo que
+          necesitas agregar.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: Prmero intenta ejecutar el código para ver lo que
           necesitas agregar.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          El programa debe:
+          - Usar la función
+          - Avanzar 100 + 75 pixeles
+          - Usar la función
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           El programa debe:
           - Usar la función
           - Avanzar 100 + 75 pixeles
           - Usar la función
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: El artista debe girar 120 grados entre cada cuadrado
+          para completar este diseño.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: El artista debe girar 120 grados entre cada cuadrado
           para completar este diseño.
@@ -4195,6 +4219,7 @@
           personas intentan leer su código.
         courseC_maze_programming4_b: 'Agregue un comentario cuando cambie de dirección:
           ¿qué hubiera pasado si hubiera girado en sentido contrario?'
+      conditionals_forvideo_harvester_authored_hint: []
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: 'Puede usar ciclo como este para crear
           las paredes y el techo. Intenta repetir diferentes bloques . ! [] (https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
@@ -5615,15 +5640,15 @@
       courseA_artist_loops3_authored_hint:
         courseA_artist_loops3_a: Rastree lentamente el programa con el dedo para ver
           dónde esta el error.
-        courseA_artist_loops3_b: Querrá utilizar un bloque como este para resolver
-          este rompecabezas . ! [] (https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
-          AM.png)
+        courseA_artist_loops3_b: "Querrá utilizar un bloque como este para resolver
+          este rompecabezas . \n\n![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
+          AM.png)"
       courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_a: Rastree lentamente el programa con el dedo para ver
           dónde esta el error.
-        courseA_artist_loops3_b: Querrá utilizar un bloque como este para resolver
-          este rompecabezas . ! [] (https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
-          AM.png)
+        courseA_artist_loops3_b: "Querrá utilizar un bloque como este para resolver
+          este rompecabezas . \n\n![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49
+          AM.png)"
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Si desea que el ciclo se repita más de 4 veces, puede
           cambiar el número en la parte superior del bloque.
@@ -9379,14 +9404,10 @@
           de 'giro' para ver qué ángulo necesitas!"
       courseD_artist_3_2018_authored_hint: []
       courseD_artist_4_2018_authored_hint: []
-      courseD_artist_5_2018_authored_hint: []
-      courseD_artist_6_2018_authored_hint:
-        courseD_artist_project1a_a: |
-          Este paso de la escalera utiliza un giro de 76 grados y se repite 4 veces.
-
-          <img src = "https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width = "200px" />
-        courseD_artist_project1a_b: Estos patrones son muy parecidos a los pasos de
-          la escalera de otros acertijos, pero usando un ángulo diferente.
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_6_2018_authored_hint: []
       courseD_artist_7_2018_authored_hint:
         courseD_artist_project2a_a: |
           Este dibujo se hizo por ciclos anidados de 4 escaleras y una vuelta a la derecha `180 degrees` bloque dentro de un times`` repetición 2 bloque.
@@ -11614,12 +11635,8 @@
         courseD_maze_until5_c: Después de cada paso, el zombie deberia revisar si
           hay un camino a la izquierda. ¿Qué deberia hacer si encuentra uno?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: No te olvides de usar 'si camino a la izquierda´para
-          evitar que el zombie revise a donde voltear.
         courseD_maze_until5_b: Para usar solo un 'ir hacia adelante', ponlo dentro
           del ciclo 'repetir hasta girasol'.
-        courseD_maze_until5_c: Después de cada paso, el zombie deberia revisar si
-          hay un camino a la izquierda. ¿Qué deberia hacer si encuentra uno?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: Esta vez, intenta usar 'si camino entonces a la derecha'
           para mantener al zombie en el camino.
@@ -11628,12 +11645,8 @@
         courseD_maze_until6_c: "¡Aunque hay mas vueltas aquí que en el ultimo acertijo,
           tu código puede ser casí identico por el bloque ´repetir hasta´!"
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: Esta vez, intenta usar 'si camino entonces a la derecha'
-          para mantener al zombie en el camino.
         courseD_maze_until6_b: Para usar solo un 'ir hacia adelante', ponlo dentro
           del ciclo 'repetir hasta girasol'.
-        courseD_maze_until6_c: "¡Aunque hay mas vueltas aquí que en el ultimo acertijo,
-          tu código puede ser casí identico por el bloque ´repetir hasta´!"
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: "¡No necesitas que tu código sea más largo que la vez
           pasada solo porque el laberinto lo es!"
@@ -11646,8 +11659,6 @@
           pasada solo porque el laberinto lo es!"
         courseD_maze_until7_b: "¡Aunque hay mas vueltas aquí que en el ultimo acertijo,
           tu código puede ser casí identico por el bloque ´repetir hasta´!"
-        courseD_maze_until7_c: "¡Recuerde revisar las rutas a la izquierda, ya que
-          girar a la derecha le llevará por el camino equivocado!"
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Asegúrate de estar usando un bloque `if / else` para
           mantener al zombi en la dirección correcta.
@@ -11670,10 +11681,6 @@
         courseD_maze_until8_c: Recuerda usar el bloque `repetir hasta` para llevarte
           al girasol!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Si usas ` if camino adelante` te mantendrá adelante
-          siempre que sea posible, ayudándote a perder los caminos con chompers.
-        courseD_maze_until8_b: "¿En qué dirección debes girar si no hay un camino
-          hacia adelante?"
         courseD_maze_until8_c: Recuerda usar el bloque `repetir hasta` para llevarte
           al girasol!
       courseD_maze_until_challenge_authored_hint: []
@@ -12525,6 +12532,14 @@
           espacio, ¡así que asegúrese de usar los ciclos `while` para obtenerlos todos!
         courseE_bee_ramp14_c: El acertijo es casi identico al anterior, solo con miel
           y nectar en vez de vegetales.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: La abeja funciona igual que el agricultor en el rompecabezas
+          anterior. Zumba a lo largo del camino y recoge el néctar mientras hay néctar
+          (mientras néctar> 0) y haz toda la miel.
+        courseE_bee_ramp14_b: Puede haber más de una flor o nido de abeja en cada
+          espacio, ¡así que asegúrese de usar los ciclos `while` para obtenerlos todos!
+        courseE_bee_ramp14_c: El acertijo es casi identico al anterior, solo con miel
+          y nectar en vez de vegetales.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: Dado que no tenemos un bloque de repetición que haga
           algo un cierto número de veces, ¿qué bloque deberiamos usar para mover algo
@@ -12774,7 +12789,12 @@
         courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
           un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
           para recoger.
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
+          un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
+          para recoger.
       courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_predict2_2018_authored_hint: []
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
           intenta programarlo y buscar patrones.
@@ -12804,6 +12824,10 @@
         courseE_farmer_ramp12_b: Todavía necesitará usar un ciclo de repetición en
           el exterior para decirle al agricultor cuántas veces debe caminar y obtener
           lechuga.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: Todavía necesitará usar un ciclo de repetición en
+          el exterior para decirle al agricultor cuántas veces debe caminar y obtener
+          lechuga.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: Todavía necesitará usar un ciclo de repetición en
           el exterior para decirle al agricultor cuántas veces debe caminar y obtener
@@ -12813,6 +12837,14 @@
           el exterior para decirle al agricultor cuántas veces debe caminar y obtener
           lechuga.
       courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12b: Usted tendrá que comprobar sus declaraciones ` si
+          ' 21 veces para resolver este rompecabezas.
+        courseE_farmer_ramp12c: "¡No tengas miedo de cometer un error! Intenta agregar
+          bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
+          resuelto el rompecabezas."
+        courseE_farmer_ramp12d: Solo habrá lechuga, por lo que no tendrá que preocuparse
+          por los espacios vacíos, el maíz o las calabazas.
+      courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12b: Usted tendrá que comprobar sus declaraciones ` si
           ' 21 veces para resolver este rompecabezas.
         courseE_farmer_ramp12c: "¡No tengas miedo de cometer un error! Intenta agregar
@@ -12859,7 +12891,21 @@
           no tiene que escribir una por separado si la declaración de cada cuadrado.
         courseE_farmer_ramp13_c: Si no se puede averiguar dónde colocar los ciclos,
           intentar escribir el código paso a paso y buscar para los patrones.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: Puede haber más de uno de los cultivos en un espacio,
+          así que asegúrese de usar los ciclos`while` para elegirlos a todos!
+        courseE_farmer_ramp13_b: Utilizar un ciclo de repetición de modo que usted
+          no tiene que escribir una por separado si la declaración de cada cuadrado.
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
+          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: Usar el bloque de 'repetir hasta en calabaza' para
+          llegar al final de la ruta.
+        courseE_farmer_ramp15_b: "¿Qué más se debe hacer cuando se mueve a lo largo
+          de la ruta de acceso a la calabaza?"
+        courseE_farmer_ramp15_c: Los brotes esconden varias cantidades de maíz o de
+          lechuga a la cosecha en su camino a la calabaza.
+      courseE_farmer_ramp15_2018_authored_hint:
         courseE_farmer_ramp15_a: Usar el bloque de 'repetir hasta en calabaza' para
           llegar al final de la ruta.
         courseE_farmer_ramp15_b: "¿Qué más se debe hacer cuando se mueve a lo largo
@@ -14184,11 +14230,21 @@
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_predict1_authored_hint: []
+      courseF_artist_predict1_2018_authored_hint: []
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
           ¿Qué ciclo necesitas para poner esa instrucción adentro?
         courseF_artist_ramp10_b: If your code for a triangle is in a `repeat` loop,
           this task will be a lot simpler.
+        courseF_artist_ramp10_c: |-
+          You will draw six triangles in total for this design:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
+        courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
+          ¿Qué ciclo necesitas para poner esa instrucción adentro?
+        courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title
+          name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
         courseF_artist_ramp10_c: |-
           You will draw six triangles in total for this design:
 
@@ -14201,6 +14257,16 @@
 
           Don't forget to turn afterward!
         courseF_artist_ramp8_c: Your turn will also go inside of the `repeat` loop.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: To draw a side, use the <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          block, and change the 100 to a 200.
+        courseF_artist_ramp8_b: |-
+          To draw 4 sides, put the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
         courseF_artist_ramp9_b: You can use the drop down menu on the `turn` blocks
@@ -14208,6 +14274,13 @@
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn
           right 120 degrees for each side. Can you use a `repeat` loop to make your
           code shorter?
+      courseF_artist_ramp9_2018_authored_hint:
+        courseF_artist_ramp9_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
+        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks
+          to see which angle you need!
+        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn
+          right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes
           can do to your code.
@@ -16562,6 +16635,16 @@
         courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of
           the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
           loop (along with a `move forward` block, and you'll have it!)
+      courseF_farmer_ramp11_2018_authored_hint:
+        courseF_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
+          intenta programarlo y buscar patrones.
+        courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> loop to pick lettuce, instead of
+          dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
+        courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of
+          the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
+          loop (along with a <xml><block type="maze_moveForward"/></xml> block, and
+          you'll have it!)
       courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
@@ -16583,13 +16666,32 @@
           bloque por bloque y busca errores.
         courseF_maze_ramp7_a: Usa bloques de repetición para ejecutar un solo bloque
           o un fragmento de código una y otra vez.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
+          of the blocks have been fully snapped together, then click "Run" again.
+        courseF_maze_ramp1_b: You don't need any extra blocks from the toolbox here!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
           the workspace and connect it to the program that is attached to the `when
           run` block.
         courseF_maze_ramp2_b: Make sure the `move forward` block is inside of the
           loop, so that it is repeated.
+      courseF_maze_ramp2_2018_authored_hint:
+        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
+          the workspace and connect it to the program that is attached to the <xml><block
+          type="when_run"/></xml> block.
+        courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml>
+          block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete tres veces antes de girar en el sentido opuesto. Avanza una
+          vez más para alcanzar al cerdo.
+        courseF_maze_ramp4_c: "¡No tengas miedo de cometer un error! Intenta agregar
+          bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
+          resuelto el rompecabezas."
+      courseF_maze_ramp4_2018_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of
           view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
@@ -16603,7 +16705,20 @@
           línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Intente usar el botón "Paso" para ejecutar su código
+          línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
+        courseF_maze_ramp5_b: There is more than one way to get to the pig.
+        courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: "¡Hay dos formas de resolver este rompecabezas!"
+        courseF_maze_ramp6_b: El pájaro comienza a mirar hacia la pared, ¡así que
+          recuerda girar antes de moverte!
+        courseF_maze_ramp6_c: "¡No tengas miedo de cometer un error! Intenta agregar
+          bloques y ejecutar el código para ver qué sucederá, incluso si crees que
+          aún no has resuelto el rompecabezas."
+      courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseF_maze_ramp6_b: El pájaro comienza a mirar hacia la pared, ¡así que
           recuerda girar antes de moverte!
@@ -17058,6 +17173,15 @@
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! ¡Prueba
           algo y si no funciona, prueba con algo más!"
       coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques
+          debajo de él hacia la derecha y permite que se queden en el espacio de trabajo
+          por un tiempo. \n\nHaz clic en el bloque que desea eliminar y arrástralo
+          nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques
+          en su lugar.\n"
+        courseF_maze_ramp3_b: Use el botón de paso para recorrer el programa línea
+          por línea. ¿Dónde hay un error?
+      coursef_maze_ramp3_2018_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques
           debajo de él hacia la derecha y permite que se queden en el espacio de trabajo

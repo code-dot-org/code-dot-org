@@ -57,23 +57,42 @@
         2-3_Artist_Debugging_9_a: 화가는 그리기를 시작하기 전에 60도 더 왼쪽으로 회전 되어야만 해요.
         2-3_Artist_Debugging_9_b: 여러분은 전체 회전을 하기 위에 또 다른 블록을 추가할 필요는 없습니다. 단지, 이미
           있는 '왼쪽 회전' 블럭에 60도를 추가하세요.
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: 이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은 앞쪽으로
+          175픽셀을 이동해야 할 것입니다.
+        2-3_Artist_Functions_1_b: 안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: 이 사각형들은 각 면이 100픽셀입니다. 즉, 두번째 사각형을 그리기 전에 여러분은 앞쪽으로
           175픽셀을 이동해야 할 것입니다.
         2-3_Artist_Functions_1_b: 안경을 만들기 위해 선이 겹쳐서 그려지더라도 괜찮아요.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: 여러분은 함수 내에서 면의 수와 면의  길이 뿐 아니라 각 면들 사이에서 화가의 회전
+          각도까지 변경해야만 할 것입니다.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: 여러분은 함수 내에서 면의 수와 면의  길이 뿐 아니라 각 면들 사이에서 화가의 회전
           각도까지 변경해야만 할 것입니다.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: 무엇을 추가해야 할지 알기 위해, 먼저 코드를 실행하세요.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: 무엇을 추가해야 할지 알기 위해, 먼저 코드를 실행하세요.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          여러분의 프로그램은 반드시:
+          -함수 사용
+          -100 + 75픽셀 앞으로 이동
+          -함수 사용
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           여러분의 프로그램은 반드시:
           -함수 사용
           -100 + 75픽셀 앞으로 이동
           -함수 사용
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**\n"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**\n"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: 이 디자인을 완성하기 위해, 화가는 각 사각형 사이에서 120도 회전해야만 합니다.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: 이 디자인을 완성하기 위해, 화가는 각 사각형 사이에서 120도 회전해야만 합니다.
       2-3 Artist Loops New 11_authored_hint:
@@ -143,78 +162,64 @@
         2-3_Bee_Functions_6_a: 반복문을 함수와 함께 사용 하지 않아도 됩니다. 이동한 후 함수를 사용하고, 또 이동하고나서
           함수를 사용해보세요.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
-
+          녹색 함수 블럭 안에 코드를 구현해야 한다는 것을 기억하세요.
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 반복문 안에는 4개의 블럭이 있어야 합니다.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: 반복문 안에는 6개의 블럭을 가지고 있어야 합니다.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 하나씩 다른 두 개의 반복문이 필요합니다.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: 반복문 안에는 5개의 블럭이 있어야 합니다.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_4A_b: 프로그램의 마지막 부분은 루프 외부의 프로그램 끝 부분에 코드를 작성하여 끝낼 수 있습니다.
+        2-3_Bee_Loops_4A_c: 아직 반복문을 발견 할 수 없다면 먼저 코딩을 하고 나서 '반복'문으로 합 할 수 있는지 확인하세요.
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 아직 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭으로 코딩 해보고 패턴을 보세요.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: 만약 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭을 한개씩 가져온 뒤 패턴이 있는지 보세요.
+        2-3_Bee_Loops_6_b: 코딩이 완료되었을 때는 '반복'문 안에 6개의 블럭이 있어야 합니다.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
-          try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_7_b: '처음부터 반복문을 볼 수 없다면 코딩을 먼저 길게 한 후 패턴을 보세요.  '
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
-          out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: "'앞으로 이동' 블럭을 사용하기 위해서는 블럭들 모음 메뉴에서 마우스를 클릭한채 이동하여 작업 영역의 '실행하면'
+          위치에 연결합니다."
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지 찾아봅니다.
+        2-3_Maze_16_b: |-
+          많은 블럭을 '반복'문 안에 넣기 위해서는 마우스로 클릭하여 작업 영역으로 이동 한 뒤 모든 블럭을 시작 프로그램 안으로 옮깁니다.
+
+          모든 블럭을 '실행하면' 블럭을 다시 연결 한 뒤 확인해 봅니다.
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       2-3 Maze Loops 17_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
-          to get it back!
+        2-3_Maze_Loops_17_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
+        2-3_Maze_Loops_17_b: 시작할 시 기본 코드가 지워졌나요? '다시 시작하기' 버튼을 누르면 다시 볼 수 있습니다.
       2-3 Maze Loops 18_authored_hint:
-        2-3_Maze_Loops_18_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_18_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
       2-3 Maze Loops 19_authored_hint:
-        2-3_Maze_Loops_19_a: If you are stuck, try writing out the code without loops
-          first and looking for patterns.
-        2-3_Maze_Loops_19_b: Putting one repeat loop inside of another can help decrease
-          the number of blocks used.
+        2-3_Maze_Loops_19_a: 문제가 어려워 해결하지 못하고 있다면 반복문이 없이 먼저 코드를 작성해보고 패턴을 있는지 봅니다.
+        2-3_Maze_Loops_19_b: 하나의 반복 루프를 다른 반복 루프에 넣으면 사용되는 블록 수를 줄일 수 있습니다.
       2-3 Maze Loops 20_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
-          a loop can be used.
+        2-3_Maze_Loops_20_a: 반복문을 사용할 수 있는 곳을 찾기 위해 이 미로에서 계단 모양의 패턴을 찾습니다.
       2-3 Maze Loops 21_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern,
-          try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: 계간 모양 패턴을 찾기 어렵다면, 막힌 길을 손가락으로 가려보세요.
       4-5 Artist 1_authored_hint:
         4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
@@ -355,8 +360,8 @@
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
-          out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: "'앞으로 이동' 블럭을 사용하기 위해서는 블럭들 모음 메뉴에서 마우스를 클릭한채 이동하여 작업 영역의 '실행하면'
+          위치에 연결합니다."
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
           by **60 degrees**.  '
@@ -4308,6 +4313,7 @@
           to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what
           would have happened if you turned the other way?
+      conditionals_forvideo_harvester_authored_hint: []
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           You can use loops like this to create the walls and the roof. Try repeating different blocks.
@@ -4725,15 +4731,17 @@
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -7417,7 +7425,7 @@
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
           you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
@@ -9152,14 +9160,13 @@
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out
           first and see what repeats over and over before you put the loops in.
-        courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just
-          drag a loop out into the workspace, then drag all of the blocks from the
-          starting program inside of it.  \n\nConnect it all back to the `when run`
-          block and you're good to go!"
+        courseC_maze_loops6_b: |-
+          많은 블럭을 '반복'문 안에 넣기 위해서는 마우스로 클릭하여 작업 영역으로 이동 한 뒤 모든 블럭을 시작 프로그램 안으로 옮깁니다.
+
+          모든 블럭을 '실행하면' 블럭을 다시 연결 한 뒤 확인해 봅니다.
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        courseC_maze_loops7_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem
           in small parts. Take your time. You don't need to solve it on the first
@@ -9261,14 +9268,14 @@
         courseC_maze_programming5_c: The solution will have two `move forward` blocks,
           a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
           starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
@@ -9527,14 +9534,10 @@
           choose the angle you need!
       courseD_artist_3_2018_authored_hint: []
       courseD_artist_4_2018_authored_hint: []
-      courseD_artist_5_2018_authored_hint: []
-      courseD_artist_6_2018_authored_hint:
-        courseD_artist_project1a_a: |
-          This stair step uses a 76 degree turn and repeats 4 times.
-
-          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps
-          from other puzzles, but using a different angle.
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_6_2018_authored_hint: []
       courseD_artist_7_2018_authored_hint:
         courseD_artist_project2a_a: |
           This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
@@ -11880,7 +11883,7 @@
       courseD_maze_ramp5d_authored_hint: []
       courseD_maze_ramp5d_2018_authored_hint: []
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code
@@ -11963,12 +11966,8 @@
         courseD_maze_until5_c: After each step, the zombie should check whether there
           is a path to the left. What should he do if he finds one?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the
-          zombie checking for a place to turn.
         courseD_maze_until5_b: To use only one `move forward`, put it inside the `repeat
           until sunflower` block.
-        courseD_maze_until5_c: After each step, the zombie should check whether there
-          is a path to the left. What should he do if he finds one?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the
           zombie on track.
@@ -11977,12 +11976,8 @@
         courseD_maze_until6_c: Although there are more turns than the last puzzle,
           your code can be almost identical because of the `repeat until` block!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the
-          zombie on track.
         courseD_maze_until6_b: To use only one `move forward`, put it inside the `repeat
           until sunflower` block.
-        courseD_maze_until6_c: Although there are more turns here than the last puzzle,
-          your code can be almost identical because of the `repeat until` block!
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer, just because
           the maze is!
@@ -11995,8 +11990,6 @@
           time, just because the maze is!
         courseD_maze_until7_b: Although there are more turns here than the last puzzle,
           your code can be almost identical because of the `repeat until` block!
-        courseD_maze_until7_c: Remember to check for paths to the left, because turning
-          right will take you down the wrong path!
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
           zombie headed the right direction.
@@ -12019,10 +12012,6 @@
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you
           to the sunflower!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
-          possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: Which direction should you turn if there is no path
-          forward?
         courseD_maze_until8_c: Remember to use the `repeat until` block to get you
           to the sunflower!
       courseD_maze_until_challenge_authored_hint: []
@@ -12201,14 +12190,14 @@
       courseD_scrat_ramp6_2018_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -12778,41 +12767,47 @@
           move forward\n- collect all of the nectar\n- move backward\n- turn back
           to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
-
+          녹색 함수 블럭 안에 코드를 구현해야 한다는 것을 기억하세요.
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
-
+          녹색 함수 블럭 안에 코드를 구현해야 한다는 것을 기억하세요.
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
@@ -12845,33 +12840,45 @@
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle.
           Buzz along the path and collect nectar if there is nectar, otherwise make
           honey!
+        courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each
+          space, so make sure to use `while` loops to get them all!
+        courseE_bee_ramp14_c: This puzzle is nearly identical to the previous one,
+          just with honey and nectar instead of vegetables.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle.
+          Buzz along the path and collect nectar while there is nectar (while nectar
+          > 0) and make all of the honey.
         courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each
           space, so make sure to use `while` loops to get them all!
         courseE_bee_ramp14_c: This puzzle is nearly identical to the previous one,
@@ -13121,7 +13128,11 @@
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
           a reminder of how to pick produce only **while** there is produce to pick.
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
+          a reminder of how to pick produce only **while** there is produce to pick.
       courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_predict2_2018_authored_hint: []
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops
           should go, try coding it all out then looking for a pattern.
@@ -13152,6 +13163,10 @@
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the
           outside of it all to tell the farmer how many times to walk forward and
           get lettuce.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the
+          outside of it all to tell the farmer how many times to walk forward and
+          get lettuce.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the
           outside of it all to tell the farmer how many times to walk forward and
@@ -13166,6 +13181,14 @@
         courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+        courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry
+          about empty spaces, corn, or pumpkins.
+      courseE_farmer_ramp12a_2018_authored_hint:
+        courseE_farmer_ramp12b: You will need to check your `if` statement 21 times
+          to solve this puzzle.
+        courseE_farmer_ramp12c: Don't be afraid to make a mistake! Try adding blocks
+          and running the code to see what will happen, even if you haven't solved
+          the puzzle yet.
         courseE_farmer_ramp12d: There will only be lettuce, so you don't need to worry
           about empty spaces, corn, or pumpkins.
       courseE_farmer_ramp12b_authored_hint: []
@@ -13207,8 +13230,22 @@
           a separate if statement for each square.
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
           writing your code step-by-step and look for patterns.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: There can be more than one of either crop in a space,
+          so make sure to use `while` loops to pick them all!
+        courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write
+          a separate if statement for each square.
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
+          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
         courseE_farmer_ramp15_a: Use the 'repeat until at pumpkin' block to make it
+          to the end of the path.
+        courseE_farmer_ramp15_b: What else needs to be done while moving along the
+          path to the pumpkin?
+        courseE_farmer_ramp15_c: The sprouts hide various amounts of either corn or
+          lettuce to harvest on your way to the pumpkin.
+      courseE_farmer_ramp15_2018_authored_hint:
+        courseE_farmer_ramp15_a: Use the `repeat until at pumpkin` block to make it
           to the end of the path.
         courseE_farmer_ramp15_b: What else needs to be done while moving along the
           path to the pumpkin?
@@ -13298,14 +13335,14 @@
         courseC_maze_programming5_c: You will need to turn left at the corner to get
           to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseE_maze_ramp6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -14515,11 +14552,21 @@
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_predict1_authored_hint: []
+      courseF_artist_predict1_2018_authored_hint: []
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which
           loop do you need to put that instruction inside?
         courseF_artist_ramp10_b: If your code for a triangle is in a `repeat` loop,
           this task will be a lot simpler.
+        courseF_artist_ramp10_c: |-
+          You will draw six triangles in total for this design:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
+        courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which
+          loop do you need to put that instruction inside?
+        courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title
+          name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
         courseF_artist_ramp10_c: |-
           You will draw six triangles in total for this design:
 
@@ -14532,6 +14579,16 @@
 
           Don't forget to turn afterward!
         courseF_artist_ramp8_c: Your turn will also go inside of the `repeat` loop.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: To draw a side, use the <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
+          block, and change the 100 to a 200.
+        courseF_artist_ramp8_b: |-
+          To draw 4 sides, put the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+        courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
         courseF_artist_ramp9_b: You can use the drop down menu on the `turn` blocks
@@ -14539,6 +14596,13 @@
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn
           right 120 degrees for each side. Can you use a `repeat` loop to make your
           code shorter?
+      courseF_artist_ramp9_2018_authored_hint:
+        courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
+        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks
+          to see which angle you need!
+        courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn
+          right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes
           can do to your code.
@@ -15824,17 +15888,21 @@
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward,
           then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
           only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
@@ -15850,25 +15918,28 @@
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger.
           Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
 '
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
 '
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -15876,9 +15947,10 @@
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb?
           What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -16116,9 +16188,10 @@
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
@@ -16891,6 +16964,16 @@
         courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of
           the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
           loop (along with a `move forward` block, and you'll have it!)
+      courseF_farmer_ramp11_2018_authored_hint:
+        courseF_farmer_ramp11_a: If you're having a hard time seeing where the loops
+          should go, try coding it all out then looking for a pattern.
+        courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> loop to pick lettuce, instead of
+          dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
+        courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of
+          the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
+          loop (along with a <xml><block type="maze_moveForward"/></xml> block, and
+          you'll have it!)
       courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
@@ -16909,12 +16992,22 @@
           block by block and look for errors.
         courseF_maze_ramp7_a: Use repeat blocks to run either a single block or a
           chunk of code over and over.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
+          of the blocks have been fully snapped together, then click "Run" again.
+        courseF_maze_ramp1_b: You don't need any extra blocks from the toolbox here!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
           the workspace and connect it to the program that is attached to the `when
           run` block.
         courseF_maze_ramp2_b: Make sure the `move forward` block is inside of the
           loop, so that it is repeated.
+      courseF_maze_ramp2_2018_authored_hint:
+        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
+          the workspace and connect it to the program that is attached to the <xml><block
+          type="when_run"/></xml> block.
+        courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml>
+          block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of
           view. If you are facing right, turning right will make you point downwards.
@@ -16924,13 +17017,35 @@
         courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then
+          move three times before turning the opposite way. Move forward one more
+          time to reach the pig.
+        courseF_maze_ramp4_c: Don't be afraid to make a mistake! Try adding blocks
+          and running the code to see what will happen, even if you haven't solved
+          the puzzle yet.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
           line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
+          line. Can you figure out what you need to do next?
+        courseF_maze_ramp5_b: There is more than one way to get to the pig.
+        courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+        courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
+          moving!
+        courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
+          and running the code to see what will happen, even if you don't think you've
+          solved the puzzle yet.
+      courseF_maze_ramp6_2018_authored_hint:
+        courseF_maze_ramp6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
@@ -17389,6 +17504,14 @@
           put your other blocks back in place where they belong.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
           Where does something go wrong?
+      coursef_maze_ramp3_2018_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
+          Where does something go wrong?
       drawings!_authored_hint:
         triangle_geometry_hint: 'Remember: an equilateral triangle has three sides,
           with a 60 degree turn between each!'
@@ -17519,7 +17642,7 @@
           and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: []
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
           saying the steps that your bird will take out loud one-by-one and see if
@@ -17571,18 +17694,15 @@
       grade2_PuppyLoops_5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지 찾아봅니다.
+        2-3_Maze_16_b: |-
+          많은 블럭을 '반복'문 안에 넣기 위해서는 마우스로 클릭하여 작업 영역으로 이동 한 뒤 모든 블럭을 시작 프로그램 안으로 옮깁니다.
+
+          모든 블럭을 '실행하면' 블럭을 다시 연결 한 뒤 확인해 봅니다.
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
-          to get it back!
+        2-3_Maze_Loops_17_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
+        2-3_Maze_Loops_17_b: 시작할 시 기본 코드가 지워졌나요? '다시 시작하기' 버튼을 누르면 다시 볼 수 있습니다.
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: '힌트: 각 수염은 75픽셀입니다. '
       grade2_PuppyLoops_9_authored_hint:
@@ -17629,16 +17749,14 @@
       grade2_puppy_loops5_authored_hint:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first
-          and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a
-          loop out into the workspace, then drag all of the blocks from the starting
-          program inside of it.  \n\nConnect it all back to the `when run` block and
-          you're good to go!"
+        2-3_Maze_16_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지 찾아봅니다.
+        2-3_Maze_16_b: |-
+          많은 블럭을 '반복'문 안에 넣기 위해서는 마우스로 클릭하여 작업 영역으로 이동 한 뒤 모든 블럭을 시작 프로그램 안으로 옮깁니다.
+
+          모든 블럭을 '실행하면' 블럭을 다시 연결 한 뒤 확인해 봅니다.
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        2-3_Maze_Loops_17_a: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll
           want to use a conditional block (`if` or `if/else`) to solve the challenge."
@@ -17729,33 +17847,25 @@
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: 벌이 잘 못 움직이는 곳이 곳이 있나요? 블럭을 옮기면 어떻나요?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: 반복문 안에는 5개의 블럭이 있어야 합니다.
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 아직 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭으로 코딩 해보고 패턴을 보세요.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: 만약 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭을 한개씩 가져온 뒤 패턴이 있는지 보세요.
+        2-3_Bee_Loops_6_b: 코딩이 완료되었을 때는 '반복'문 안에 6개의 블럭이 있어야 합니다.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 하나씩 다른 두 개의 반복문이 필요합니다.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
-          try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_7_b: '처음부터 반복문을 볼 수 없다면 코딩을 먼저 길게 한 후 패턴을 보세요.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_4A_b: 프로그램의 마지막 부분은 루프 외부의 프로그램 끝 부분에 코드를 작성하여 끝낼 수 있습니다.
+        2-3_Bee_Loops_4A_c: 아직 반복문을 발견 할 수 없다면 먼저 코딩을 하고 나서 '반복'문으로 합 할 수 있는지 확인하세요.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 반복문 안에는 4개의 블럭이 있어야 합니다.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: 반복문 안에는 6개의 블럭을 가지고 있어야 합니다.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
           loop.
@@ -17843,9 +17953,8 @@
           Try using this path through the maze.
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        grade3_maze_loops2_b: If the pattern is hard to see, try coding it all out
-          first and see what things repeat over and over before you put the loops
-          in.
+        grade3_maze_loops2_b: 패턴을 보기 어렵다면 먼저 한개씩 코딩을 완료하고 반복문안에 넣기 전에 무엇이 반복 되고 있는지
+          찾아봅니다.
         grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
           down on the amount of code you need.
       grade3_maze_loops2a_authored_hint:
@@ -17862,8 +17971,7 @@
         2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
           a nested loop can be used.
       grade3_maze_loops5_authored_hint:
-        2-3_Maze_Loops_21_a: If you are having trouble finding the stair-step pattern,
-          try covering the blocked paths with your finger.
+        2-3_Maze_Loops_21_a: 계간 모양 패턴을 찾기 어렵다면, 막힌 길을 손가락으로 가려보세요.
       grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: []
       grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: []
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
@@ -18057,16 +18165,18 @@
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          퍼즐이 어려울 경우 한번에 함수를 조금씩 구현해보세요.
+          일부 블럭을 추가 하여 시도해보세요. 그리고 나서 조금 더 추가하고 다시 시도해보세요.
+          곧 성공 할 것입니다!
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
-
+          녹색 함수 블럭 안에 코드를 구현해야 한다는 것을 기억하세요.
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
@@ -18116,12 +18226,11 @@
           위해 왼쪽으로 돌립니다.
         2-3_Artist_6_c: 삼각형의 각 면은 사각형(100픽셀)의 각 면의 길이와 같습니다.
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 하나씩 다른 두 개의 반복문이 필요합니다.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: 반복문 안에는 6개의 블럭을 가지고 있어야 합니다.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: 반복문 안에는 5개의 블럭이 있어야 합니다.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -18593,33 +18702,25 @@
           have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: []
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: 반복문 안에는 5개의 블럭이 있어야 합니다.
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
-          away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 아직 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭으로 코딩 해보고 패턴을 보세요.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop,
-          try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
-          you're done.
+        2-3_Bee_Loops_6_a: 만약 블럭을 '반복'에 바로 넣을 수 없다면 먼저 각 블럭을 한개씩 가져온 뒤 패턴이 있는지 보세요.
+        2-3_Bee_Loops_6_b: 코딩이 완료되었을 때는 '반복'문 안에 6개의 블럭이 있어야 합니다.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 하나씩 다른 두 개의 반복문이 필요합니다.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
-          try coding it out the long way, then look for a pattern.  '
+        2-3_Bee_Loops_7_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_7_b: '처음부터 반복문을 볼 수 없다면 코딩을 먼저 길게 한 후 패턴을 보세요.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
-          long way first, then see what you can combine into a `repeat` loop at the
-          end.
+        2-3_Bee_Loops_4A_a: 처음 동작은 이동이 아닌 회전 입니다.
+        2-3_Bee_Loops_4A_b: 프로그램의 마지막 부분은 루프 외부의 프로그램 끝 부분에 코드를 작성하여 끝낼 수 있습니다.
+        2-3_Bee_Loops_4A_c: 아직 반복문을 발견 할 수 없다면 먼저 코딩을 하고 나서 '반복'문으로 합 할 수 있는지 확인하세요.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 반복문 안에는 4개의 블럭이 있어야 합니다.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: 반복문 안에는 6개의 블럭을 가지고 있어야 합니다.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"

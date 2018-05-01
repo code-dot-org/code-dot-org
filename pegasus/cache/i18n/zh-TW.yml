@@ -541,8 +541,10 @@
   video_title_real_madrid: 和 Real Madrid 玩一小時程式
   video_title_marco_belinelli: 和 Marco Belinelli 玩一小時程式
   video_title_chris_bosh: Chris Bosh 談計算機科學
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 分鐘
   video_2min: 2 分鐘
+  video_3min: 3 min
   video_5min: 5 分鐘
   speak_another_language: 使用其它語言？
   help_translate: 協助我們翻譯。
@@ -1564,7 +1566,7 @@
   user_header_settings: 帳戶設定
   user_header_logout: 登出
   user_header_signin: 登入
-  view_all_sections: View All Sections
+  view_all_sections: 檢視所有的學習小組
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -1619,5 +1621,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
