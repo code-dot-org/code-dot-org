@@ -52,10 +52,6 @@
         %label
           = f.radio_button :status, :rejected, disabled: reviewed
           != t('peer_review.rejected.description')
-        %label
-          = f.radio_button :status, :escalated, disabled: reviewed
-          %span{style: 'font-size: 0.8em;'}
-            != t('peer_review.escalated.description')
     .field
       %p Review notes:
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed
