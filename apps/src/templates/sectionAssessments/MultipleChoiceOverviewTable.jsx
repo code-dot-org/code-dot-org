@@ -8,12 +8,19 @@ import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   QUESTION: 0,
-  ANSWER_1: 1,
-  ANSWER_2: 2,
-  NOT_ANSWERED: 3,
 };
 
-const alphabetMapper =  ['-', 'A', 'B', 'C', 'D', 'E', 'F', 'Not Answered'];
+const alphabetMapper =  [
+                          '-',
+                          commonMsg.answerOptionA(),
+                          commonMsg.answerOptionB(),
+                          commonMsg.answerOptionC(),
+                          commonMsg.answerOptionD(),
+                          commonMsg.answerOptionE(),
+                          commonMsg.answerOptionF(),
+                          commonMsg.answerOptionG(),
+                          commonMsg.notAnswered(),
+                        ];
 
 const answerOptionsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
   return (
@@ -83,6 +90,7 @@ class MultipleChoiceOverviewTable extends Component {
     }
   );
 
+
   questionColumn = (sortable) => (
     {
       header: {
@@ -121,7 +129,7 @@ class MultipleChoiceOverviewTable extends Component {
         dataColumns.push({property: 'percentAnswered' , ...questionOption});
       }
     }
-      dataColumns.push({property: 'notAnswered', ...this.answerOptions(7)});
+      dataColumns.push({property: 'notAnswered', ...this.answerOptions(8)});
 
       return dataColumns;
   };
