@@ -1,7 +1,7 @@
 import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import { isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -129,3 +129,20 @@ export function summarizeProgressInStage(levelsWithStatus) {
   }
   return statusCounts;
 }
+
+/**
+ * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * contains more data than we need. This filters to the parts our views care about.
+ */
+export const processedLevel = (level) => {
+  return {
+    url: level.url,
+    name: level.name,
+    progression: level.progression,
+    kind: level.kind,
+    icon: level.icon,
+    isUnplugged: level.kind === LevelKind.unplugged,
+    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    isConceptLevel: level.is_concept_level,
+  };
+};

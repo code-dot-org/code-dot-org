@@ -1,4 +1,5 @@
 import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+//import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import { PropTypes } from 'react';
 import {
   NAME_COLUMN_WIDTH,
@@ -31,6 +32,8 @@ export const addLevelsByLesson = (scriptId, levelsByLesson) => (
 );
 export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
+
+  // TODO - filter levels using processedLevel
   const filteredScriptData = {
     id: scriptData.id,
     excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
