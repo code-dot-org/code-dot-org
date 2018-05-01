@@ -614,7 +614,7 @@ class DashboardSection
     # querying all students together (as below) is significantly more performant.
     student_ids = @students.map {|s| s[:id]}
 
-    level_counts_db = Gatekeeper.allows('use_reporting_db_for_progress', false) ? Dashboard.db_reporting_reader : Dashboard.db
+    level_counts_db = Gatekeeper.allows('use_reporting_db_for_progress', default: false) ? Dashboard.db_reporting_reader : Dashboard.db
 
     level_counts = level_counts_db[:user_levels].
       group_and_count(:user_id).
