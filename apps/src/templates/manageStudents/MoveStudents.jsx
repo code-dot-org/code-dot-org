@@ -179,6 +179,7 @@ class MoveStudents extends Component {
         header: {
           label: i18n.name(),
           props: {
+            id: 'name-header',
             style: {
               ...tableLayoutStyles.headerCell
           }},
@@ -186,6 +187,7 @@ class MoveStudents extends Component {
         },
         cell: {
           props: {
+            className: 'name-cell',
             style: {
               ...tableLayoutStyles.cell
           }}
@@ -327,7 +329,7 @@ class MoveStudents extends Component {
                 {this.renderOptions()}
               </select>
               {transferData.otherTeacher &&
-                <div>
+                <div id="otherTeacher">
                   <label
                     htmlFor="sectionCode"
                     style={styles.label}
@@ -372,6 +374,7 @@ class MoveStudents extends Component {
               color={Button.ButtonColor.gray}
             />
             <Button
+              id="submit"
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
