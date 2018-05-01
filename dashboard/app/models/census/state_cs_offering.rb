@@ -26,6 +26,7 @@ class Census::StateCsOffering < ApplicationRecord
     CT
     FL
     GA
+    IA
     ID
     IN
     MA
@@ -64,6 +65,9 @@ class Census::StateCsOffering < ApplicationRecord
     when 'GA'
       school_id = format("%04d", row_hash['SCHOOL_ID'].to_i)
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
+    when 'IA'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
     when 'IN'
@@ -282,6 +286,9 @@ class Census::StateCsOffering < ApplicationRecord
       suffix = format("%-5.5s", course_parts.second).tr(' ', '0')
       course_code = "#{prefix}.#{suffix}"
       GA_COURSE_CODES.select {|course| course == course_code}
+    when 'IA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
