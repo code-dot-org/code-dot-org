@@ -11,14 +11,14 @@ export const COLUMNS = {
 };
 
 const alphabetMapper =  [
-                          commonMsg.answerOptionA(),
-                          commonMsg.answerOptionB(),
-                          commonMsg.answerOptionC(),
-                          commonMsg.answerOptionD(),
-                          commonMsg.answerOptionE(),
-                          commonMsg.answerOptionF(),
-                          commonMsg.answerOptionG(),
-                        ];
+  commonMsg.answerOptionA(),
+  commonMsg.answerOptionB(),
+  commonMsg.answerOptionC(),
+  commonMsg.answerOptionD(),
+  commonMsg.answerOptionE(),
+  commonMsg.answerOptionF(),
+  commonMsg.answerOptionG(),
+];
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
   const column = (columnIndex - 1);
