@@ -1276,7 +1276,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
-      block.getProcedureInfo().name === emptyBlockInfo.name;
+      block.getTitleValue('NAME') === emptyBlockInfo.name;
 
     if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
