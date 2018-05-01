@@ -171,7 +171,7 @@ is:
       email: 'Netfang'
       submit: 'Senda inn'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Vinsamlegast kláraðu skynprófið til að endurstilla leyniorðið.'
       invalid_email: 'Svo virðist sem þú hafir skráð þig með ógildu netfangi. Vinsamlegast sendu póst á support@code.org til að fá tengil fyrir endurstillingu lykilorðs.'
     change_form:
       title: 'Breyta lykilorði'
@@ -570,7 +570,7 @@ is:
       cta: "Læra hvernig"
     hoc-encryption:
       title: "Einföld dulkóðun"
-      body: "Students will learn techniques to create and crack encrypted messages."
+      body: "Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð."
     weblab:
       title: "Vefsmiðja (beta)"
       body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
@@ -655,7 +655,7 @@ is:
     correct_title: "Takk fyrir"
     correct_body: "Takk fyrir að senda inn svör."
     hide_survey_last_answer: "Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur hafi svarað."
-    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
+    survey_submission_thankyou: "Kærar þakkir fyrir að senda inn þessa könnun! Allar upplýsingar um þig hafa verið fjarlægðar úr svörunum. Athugaðu að kennarinn mun samt geta séð hvernig allur bekkurinn svaraði en án þess að nöfn komi fram."
   level_group-submittable:
     wrong_title: "Takk fyrir"
     wrong_body: "Takk fyrir að senda inn svör."
@@ -847,7 +847,7 @@ is:
     content: 'Innihald'
     practice: 'Kennsluaðferðir'
     peer_review: 'Álit samnemenda'
-    ramp_up: 'Ramp-Up'
+    ramp_up: 'Efling'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Aðalnámskeið'

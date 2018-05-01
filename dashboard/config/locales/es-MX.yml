@@ -196,8 +196,8 @@
     picture: Ahora encuentra tu foto secreta
     words: Introduce ahora tus palabras secretas
     login: Iniciar Sesión
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Inicio de sesión no válido, por favor intente de nuevo
+    pair_programming: Tengo a mi pareja en mi ordenador
     student_privacy: Aprende más acerca de por qué no estás viendo tu nombre completo
       <a href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
@@ -351,9 +351,9 @@
       signup: Crear una cuenta
       already_registered: "¿Ya estás registrado?"
       pair_programming: Programación de pares
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Equipo
+      driver: Conductor
+      navigator: Navegador
     popup:
       progress_for_user: progreso de %{name}
       progress: Tu progreso
@@ -389,7 +389,7 @@
       example_with_number: Ejemplo de solución %{solution_number}
       submitted_on: Enviado el %{date}
       unsubmit: NO enviado
-      worked_with: Worked With
+      worked_with: Trabajado con
       update_lock_settings: Actualizar los ajustes de bloqueo aquí.
       clear_response: Respuesta clara
   user:

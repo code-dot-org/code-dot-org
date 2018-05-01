@@ -207,7 +207,7 @@
   third_party_curriculum: Currículum
   third_party_pricing: Precios
   third_party_cost_free: Gratis para los estudiantes y profesores
-  third_party_cost_5permonth: "$5USD al mes por cada clas"
+  third_party_cost_5permonth: "$5USD al mes por cada clase"
   third_party_cost_299: "$2.99USD por descarga"
   third_party_cost_free_399: Plazo Gratis, $399USD por salón
   third_party_cost_free_2: Plazo Gratis, $2USD por estudiante
@@ -445,9 +445,9 @@
   homepage_banner_congress: Líderes de Estados Unidos están pidiendo al Congreso financiar
     la informática K-12.
   homepage_banner_congress_link: Añadir su apoyo
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Estamos haciendo un cambio importante en la manera
+    en que apoyamos la privacidad de los alumnos.
+  homepage_banner_emailprivacy_link: Leer más
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Código
@@ -565,7 +565,7 @@
   minecraft_adventurer_description: Utiliza código para guiar a Alex o a Steve en
     una aventura.
   minecraft_adventurer_button: Inicio
-  minecraft_no_internet: Don't have Internet?
+  minecraft_no_internet: "¿No tienes Internet?"
   minecraft_download_adventurer: Descarga la versión offline del Aventurero de Minecraft.
   minecraft_subtitle: Hora de Código de Minecraft
   minecraft_store_camps: Campamentos gratuitos de Minecraft Hora del Código en la
@@ -649,8 +649,7 @@
     Miami Heat
   sports_athlete_Harrison: Harrison Barnes, medallista de oro olímpico y campeón de
     la NBA, Dallas Mavericks
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
+  watch_inspirational_videos: Antes de empezar, ve uno de estos videos inspiradores
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspira a una chica
   video_title_cs_intro: Introducción a las Ciencias de la Computación
@@ -664,15 +663,17 @@
   video_title_real_madrid: Hora de código con el Real Madrid
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  speak_another_language: "¿Hablas otro idioma?"
+  help_translate: Ayúdanos a traducir.
+  no_internet: "¿No tienes Internet?"
+  download_offline: Descarga la versión fuera de línea.
   are_you_teacher: "¿Eres un maestro/a?"
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Revisa el plan de lecciones y otros recursos del maestro.
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la
     Hora de Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar
@@ -906,7 +907,7 @@
   dashboard_navigation_view_progress: Progreso
   dashboard_navigation_view_text_responses: Respuestas de texto
   dashboard_navigation_view_assessments: Evaluaciones
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Evaluaciones/Encuestas
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
   dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
@@ -1541,12 +1542,15 @@
     Recomendado para los grados del 4 al 8."
   coursea_shortdescription_congrats: Una introducción a las ciencias de la computación
     para pre lectores.
-  courseb_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
+    mas avanzados)
   coursec_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
     de la computación y crea tu propio arte, historias y juegos.
   coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
     puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
+    de C y D y luego ir más allá con funciones.
   coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
     ciencias de la computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
@@ -2124,7 +2128,7 @@
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
-  view_all_sections: View All Sections
+  view_all_sections: Ver todas las secciones
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2179,5 +2183,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

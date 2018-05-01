@@ -162,7 +162,7 @@ level 'courseD_maze_until9_2018', challenge: true
 level 'courseD_maze_until10_2018'
 assessment 'courseD_maze_until10_predict2_2018'
 
-stage 'Conditionals in Maze'
+stage 'Conditionals in Bee'
 level 'courseD_bee_conditionalsVid1_2018'
 level 'courseD_bee_conditionals1_predict1_2018'
 level 'courseD_bee_conditionals2_2018'
@@ -179,7 +179,7 @@ level 'courseD_bee_conditionals10_2018'
 bonus 'courseD_bee_conditionals_challenge1_2018'
 bonus 'courseD_bee_conditionals_challenge2_2018'
 
-stage 'Conditionals & Loops in Farmer'
+stage 'Conditionals & Loops in Harvester'
 level 'harvester_skinOverview_video'
 level 'courseD_farmer_condLoops1_2018'
 level 'courseD_farmer_condLoops2_2018'

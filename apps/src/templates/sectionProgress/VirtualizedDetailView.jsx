@@ -150,7 +150,7 @@ class VirtualizedDetailView extends Component {
               <FontAwesome
                 icon={getIconForLevel(level)}
                 style={
-                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                  level.isUnplugged ? progressStyles.unpluggedIcon : progressStyles.icon
                 }
                 key={i}
               />

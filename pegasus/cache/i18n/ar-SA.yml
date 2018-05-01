@@ -630,8 +630,10 @@
   video_title_real_madrid: ساعة البرمجة مع ريال مدريد
   video_title_marco_belinelli: ساعة البرمجة مع ماركو بيلينلي
   video_title_chris_bosh: كريس بوش في علوم الحاسوب
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: دقيقة
   video_2min: دقيقتان
+  video_3min: 3 min
   video_5min: 5 دقائق
   speak_another_language: هلْ تَتَحَدَثُ لُغَةً أُخْرى؟
   help_translate: سَاعِدْنا في التَرْجَمَة.
@@ -2015,5 +2017,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
