@@ -9338,6 +9338,7 @@ en:
       courseE_multi_farmer_functions11_predict_2018:
         Correct!: Correct!
         Incorrect.  The harvester does not call "check and pick" until she gets to the corn.: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
         Incorrect. The harvester only makes one turn, and ends at the corn.: Incorrect. The harvester only makes one turn, and ends at the corn.
         Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
         The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
