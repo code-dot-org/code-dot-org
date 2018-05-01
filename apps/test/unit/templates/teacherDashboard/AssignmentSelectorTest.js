@@ -31,7 +31,7 @@ const defaultProps = {
       scriptAssignIds: ['null_168'],
       assignId: "29_null",
       path: '//localhost-studio.code.org:3000/courses/csd',
-      assignment_group_name: 'csd',
+      assignment_family_name: 'csd',
       version_year: '2017',
     },
     // script in course
@@ -46,7 +46,7 @@ const defaultProps = {
       scriptId: 168,
       assignId: "null_168",
       path: "//localhost-studio.code.org:3000/s/csd1",
-      assignment_group_name: 'csd1',
+      assignment_family_name: 'csd1',
       version_year: '2017',
     },
     // script not in course
@@ -61,24 +61,24 @@ const defaultProps = {
       scriptId: 6,
       assignId: "null_6",
       path: "//localhost-studio.code.org:3000/s/flappy",
-      assignment_group_name: 'flappy',
+      assignment_family_name: 'flappy',
       version_year: '2017',
     }
   },
-  assignmentGroups: [
+  assignmentFamilies: [
     {
       name: "CS Discoveries",
       category: "Full Courses",
       position: 1,
       category_priority: 0,
-      assignment_group_name: 'csd',
+      assignment_family_name: 'csd',
     },
     {
       name: "Make a Flappy game",
       category: "Hour of Code",
       position: 4,
       category_priority: 2,
-      assignment_group_name: 'flappy',
+      assignment_family_name: 'flappy',
     }
   ],
   primaryAssignmentIds: ['29_null', 'null_6'],
@@ -98,7 +98,7 @@ const hiddenSectionProps = {
     scriptId: 36,
   },
   assignments: defaultProps.assignments,
-  assignmentGroups: defaultProps.assignmentGroups,
+  assignmentFamilies: defaultProps.assignmentFamilies,
   primaryAssignmentIds: defaultProps.primaryAssignmentIds,
 };
 
@@ -221,13 +221,13 @@ describe('AssignmentSelector', () => {
     const wrapper = shallow(
       <AssignmentSelector
         {...defaultProps}
-        assignmentGroups={[{
+        assignmentFamilies={[{
           name: "Unit 1: Problem Solving",
           category: "CS Discoveries",
           position: 0,
           category_priority: 7,
-          assignment_group_name: 'csd1',
-        }].concat(defaultProps.assignmentGroups)}
+          assignment_family_name: 'csd1',
+        }].concat(defaultProps.assignmentFamilies)}
         section={{
           ...defaultProps.section,
           courseId: null,

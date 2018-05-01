@@ -28,7 +28,7 @@ const validAssignments = {
     scriptId: null,
     assignId: "29_null",
     path: '//localhost-studio.code.org:3000/courses/csd',
-    assignment_group_name: 'csd',
+    assignment_family_name: 'csd',
     version_year: '2017',
   },
   'null_168': {
@@ -42,25 +42,25 @@ const validAssignments = {
     scriptId: 168,
     assignId: "null_168",
     path: "//localhost-studio.code.org:3000/s/csd1",
-    assignment_group_name: 'csd1',
+    assignment_family_name: 'csd1',
     version_year: '2017',
   },
 };
 
-const assignmentGroups = [
+const assignmentFamilies = [
   {
     name: "CS Discoveries",
     category: "Full Courses",
     position: 1,
     category_priority: 0,
-    assignment_group_name: 'csd',
+    assignment_family_name: 'csd',
   },
   {
     name: "Unit 1: Problem Solving",
     category: "CS Discoveries",
     position: 0,
     category_priority: 7,
-    assignment_group_name: 'csd1',
+    assignment_family_name: 'csd1',
   }
 ];
 
@@ -75,7 +75,7 @@ export default storybook => storybook
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentGroups={assignmentGroups}
+        assignmentFamilies={assignmentFamilies}
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
@@ -93,7 +93,7 @@ export default storybook => storybook
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentGroups={assignmentGroups}
+        assignmentFamilies={assignmentFamilies}
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}

@@ -4,7 +4,7 @@ import {Heading1, h3Style} from "../../lib/ui/Headings";
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import { sectionShape, assignmentShape, assignmentGroupShape } from './shapes';
+import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
@@ -47,7 +47,7 @@ class EditSectionForm extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-    assignmentGroups: PropTypes.arrayOf(assignmentGroupShape).isRequired,
+    assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
@@ -71,7 +71,7 @@ class EditSectionForm extends Component {
       validGrades,
       validAssignments,
       primaryAssignmentIds,
-      assignmentGroups,
+      assignmentFamilies,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
@@ -102,7 +102,7 @@ class EditSectionForm extends Component {
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
             primaryAssignmentIds={primaryAssignmentIds}
-            assignmentGroups={assignmentGroups}
+            assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
           />
           {isCsfScript(section.scriptId) &&
@@ -146,7 +146,7 @@ export default connect(state => ({
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
-  assignmentGroups: state.teacherSections.assignmentGroups,
+  assignmentFamilies: state.teacherSections.assignmentFamilies,
   sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
@@ -216,7 +216,7 @@ const AssignmentField = ({
   onChange,
   validAssignments,
   primaryAssignmentIds,
-  assignmentGroups,
+  assignmentFamilies,
   disabled,
 }) => (
   <div>
@@ -231,7 +231,7 @@ const AssignmentField = ({
       onChange={ids => onChange(ids)}
       primaryAssignmentIds={primaryAssignmentIds}
       assignments={validAssignments}
-      assignmentGroups={assignmentGroups}
+      assignmentFamilies={assignmentFamilies}
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
@@ -243,7 +243,7 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-  assignmentGroups: PropTypes.arrayOf(assignmentGroupShape).isRequired,
+  assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
 };
 

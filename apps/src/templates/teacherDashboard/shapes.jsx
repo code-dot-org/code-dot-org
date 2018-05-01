@@ -30,25 +30,25 @@ export const assignmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
-  assignment_group_name: PropTypes.string.isRequired,
+  assignment_family_name: PropTypes.string.isRequired,
   version_year: PropTypes.string.isRequired,
 });
 
-// An assignment group is a collection of versions of a course or script like
-// "csd" or "coursea". For example, the assignment group "csd" could contain the
+// An assignment family is a collection of versions of a course or script like
+// "csd" or "coursea". For example, the assignment family "csd" could contain the
 // courses csd-2017 and csd-2018.
 //
 // This is a bit confusing because we want to be able to just call csd a
-// "course" instead of an "assignment group", but we can't because the term
+// "course" instead of an "assignment family", but we can't because the term
 // "course" is already used to refer to a specific version of a course such as
 // csd-2018.
-export const assignmentGroupShape = PropTypes.shape({
+export const assignmentFamilyShape = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,
   // Display name
   name: PropTypes.string.isRequired,
-  assignment_group_name: PropTypes.string.isRequired,
+  assignment_family_name: PropTypes.string.isRequired,
 });
 
 export const classroomShape = PropTypes.shape({
