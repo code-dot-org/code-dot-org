@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionCode, sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -15,6 +15,12 @@ export const RowType = {
   ADD: "addRow",
   NEW_STUDENT: "newStudentRow",
   STUDENT: "studentRow",
+};
+
+// TODO: add description
+export const TransferStatus = {
+  TRANSFER: "transfer",
+  COPY: "copy"
 };
 
 // Constants around moving students to another section.
@@ -35,7 +41,12 @@ export const blankStudentTransfer = {
   sectionId: null,
   otherTeacher: false,
   otherTeacherSection: '',
-  copyStudents: true
+  copyStudents: true,
+  transferStatus: {
+    status: TransferStatus.COPY,
+    numStudents: 0,
+    sectionDisplay: ''
+  }
 };
 
 // This doesn't get used to make a server call, but does
@@ -113,6 +124,7 @@ const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
+const TRANSFER_STUDENT_SUCCESS = 'manageStudents/TRANSFER_STUDENT_SUCCESS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -129,6 +141,7 @@ export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTI
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
+export const transferStudentsSuccess = transferStatus => ({ type: TRANSFER_STUDENT_SUCCESS, transferStatus });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -257,6 +270,13 @@ export const transferStudents = () => {
             dispatch(removeStudent(id));
           });
         }
+        const transferStatus = {
+          status: copyStudents ? TransferStatus.COPY : TransferStatus.TRANSFER,
+          numStudents: studentIds.length,
+          sectionDisplay: otherTeacher ? otherTeacherSection : sectionName(state, state.manageStudents.sectionId)
+        };
+        console.log(transferStatus);
+        transferStudentsSuccess(transferStatus);
         updateStudentTransfer({...blankStudentTransfer});
       }
     });
@@ -531,6 +551,17 @@ export default function manageStudents(state=initialState, action) {
       transferData: {
         ...state.transferData,
         ...action.transferData
+      }
+    };
+  }
+  if (action.type === TRANSFER_STUDENT_SUCCESS) {
+    return {
+      ...state,
+      transferData: {
+        ...state.transferData,
+        transferStatus: {
+          ...action.transferData
+        }
       }
     };
   }
