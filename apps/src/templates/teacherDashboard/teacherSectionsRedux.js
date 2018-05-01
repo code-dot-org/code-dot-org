@@ -468,15 +468,15 @@ export default function teacherSections(state=initialState, action) {
         version_year: defaultVersionYear,
       };
 
-      // Scripts currently have only one version, so each script will form its
-      // own assignment group.
-      assignmentGroups.push({
-        ..._.pick(script, assignmentGroupFields),
-        assignment_group_name: script.script_name
-      });
-
       if (!secondaryAssignmentIds.includes(assignId)) {
         primaryAssignmentIds.push(assignId);
+
+        // Scripts currently have only one version, so each script will form its
+        // own assignment group.
+        assignmentGroups.push({
+          ..._.pick(script, assignmentGroupFields),
+          assignment_group_name: script.script_name
+        });
       }
     });
 

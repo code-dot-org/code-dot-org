@@ -70,8 +70,8 @@ export default class AssignmentSelector extends Component {
       selectedSecondaryId = noAssignment;
     }
 
-    if (selectedPrimaryId !== noAssignment) {
-      const primaryAssignment = assignments[selectedPrimaryId];
+    const primaryAssignment = assignments[selectedPrimaryId];
+    if (primaryAssignment) {
       selectedAssignmentGroup = primaryAssignment.assignment_group_name;
       selectedVersionYear = primaryAssignment.version_year;
     }
@@ -130,24 +130,8 @@ export default class AssignmentSelector extends Component {
   }
 
   setPrimary = (selectedAssignmentGroup, selectedVersionYear) => {
-
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentGroup, selectedVersionYear);
-
-    const { assignments, section } = this.props;
-    let currentSecondaryId;
-    if (!section) {
-      currentSecondaryId = noAssignment;
-    } else {
-      currentSecondaryId = assignmentId(null, section.scriptId);
-    }
-
-    const scriptAssignIds = isValidAssignment(selectedPrimaryId)
-      ? (assignments[selectedPrimaryId].scriptAssignIds || [])
-      : [];
-
-    // If our current secondaryId is in this course, default to that
-    const selectedSecondaryId = scriptAssignIds.includes(currentSecondaryId) ?
-      currentSecondaryId : noAssignment;
+    const selectedSecondaryId = noAssignment;
 
     this.setState({
       selectedAssignmentGroup,
