@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2018-03-26T16:35:57.000Z",
+  "created_at": "2018-05-01T19:51:19.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
@@ -46,12 +46,11 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_playLab_condFP_1\",\r\n  \"callout_text\": \"we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Now, build your own game to show off to your friends!",
     "parent_level_id": 7968,
-    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-01 19:52:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>
