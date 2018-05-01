@@ -62,6 +62,14 @@ describe('Game Lab Jr Helper Library', () => {
     extraKeys.forEach(key => delete window[key]);
   });
 
+  it ('defines some globals', () => {
+    expect(makeNewSprite).to.exist;
+    expect(addBehavior).to.exist;
+    expect(findBehavior).to.exist;
+    expect(behaviorsEqual).to.exist;
+  });
+
+
   describe('findBehavior', () => {
     it ('returns -1 if behavior is not found', () => {
       const sprite = makeNewSprite(null, 200, 200);
