@@ -1,0 +1,18 @@
+name 'Unit 1 Lesson 4 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll start thinking about how computers help solve certain kinds of problems and learn the key features of every computer.
+
+## Resources
+
+* [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[What is a Computer - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+
+MARKDOWN
