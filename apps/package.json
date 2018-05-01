@@ -48,7 +48,7 @@
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
-    "@code-dot-org/p5.play": "1.2.1-cdo",
+    "@code-dot-org/p5.play": "1.2.2-cdo",
     "@code-dot-org/piskel": "0.13.0-cdo.3",
     "@storybook/addon-info": "3.2.11",
     "@storybook/addon-options": "^3.3.15",

@@ -70,7 +70,9 @@ class GamelabJr < Gamelab
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_makeNewSpriteLocation" />
-  <block type="gamelab_location_picker" />
+  <block type="gamelab_location_picker">
+    <title name="LOCATION">{"x": 0, "y": 0}</title>
+  </block>
   <block type="gamelab_setAnimation" />
   <block type="gamelab_setTint">
     <value name="COLOR">

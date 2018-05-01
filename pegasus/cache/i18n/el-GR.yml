@@ -687,8 +687,10 @@
   video_title_real_madrid: Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης
   video_title_marco_belinelli: Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι
   video_title_chris_bosh: Ο Κρις Μπος για την Πληροφορική
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 λεπτό
   video_2min: 2 λεπτά
+  video_3min: 3 min
   video_5min: 5 λεπτά
   speak_another_language: Μιλάτε άλλη γλώσσα;
   help_translate: Βοηθήστε μας με τη μετάφραση.
@@ -2245,5 +2247,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

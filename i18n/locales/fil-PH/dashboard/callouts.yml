@@ -1393,11 +1393,17 @@ fil:
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_predict1_callout: [ ]
+      courseF_artist_predict1_2018_callout: [ ]
       courseF_artist_ramp10_callout: [ ]
+      courseF_artist_ramp10_2018_callout: [ ]
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
         courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin ang iyong code.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Maaari mong baguhin ang numerong ito.
+        courseE_artist_ramp8_2: Mag-click dito para ma-type kung ilang beses uulitin ang iyong code.
       courseF_artist_ramp9_callout: [ ]
+      courseF_artist_ramp9_2018_callout: [ ]
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
       courseF_artist_variables10_callout: [ ]
@@ -1513,12 +1519,21 @@ fil:
       courseF_maze_ramp13_callout: [ ]
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseF_maze_ramp5_callout: [ ]
+      courseF_maze_ramp5_2018_callout: [ ]
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: Ito ang iyong unang hamon na palaisipan! Ang mga ito ay sinadyang mahirap at maaaring tatagal ng ilang mga pagsubok.
@@ -1564,6 +1579,8 @@ fil:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
       drawings!_callout: [ ]
       frozen circle function with parameter_callout:

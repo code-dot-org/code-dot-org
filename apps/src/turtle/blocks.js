@@ -25,11 +25,9 @@
 var Colours = require('./colours');
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-
 var customLevelBlocks = require('./customLevelBlocks');
-var constants = require('../constants');
+import {Position} from '../constants';
 
-const Position = constants.Position;
 const RANDOM_VALUE = 'RAND';
 
 const POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],

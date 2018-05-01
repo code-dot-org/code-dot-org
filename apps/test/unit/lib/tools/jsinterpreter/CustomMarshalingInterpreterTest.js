@@ -212,6 +212,7 @@ describe("The CustomMarshalingInterpreter", () => {
           'assert(custom.newFunction() === 2);' +
           'assert(custom.newArray[0] === 2);' +
           'assert(custom.newObject.prop === 2);' +
+          // NOTE: not testing existingFunction() === 1 because func is async
           'assert(custom.existingFunction() !== 5);' +
           'assert(custom.existingArray[0] === 1);' +
           'assert(custom.existingObject.prop === 1);',

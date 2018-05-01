@@ -478,7 +478,7 @@
   homepage_slot_text_link_buy: Принять участие
   homepage_slot_text_link_donate: Сделать пожертвование
   homepage_slot_text_link_shop: Футболки, головные уборы, и многое другое
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Познакомить вашу школу с Информатикой
   homepage_header_codestudio: Творения учеников Студии Кода
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: Просмотреть всё
@@ -651,14 +651,16 @@
   video_title_obama: Президент Обама в компьютерной науке
   video_title_hoc_is_here: Час Кода здесь - Каждый может научиться
   video_title_anybody_can_learn: Каждый может научиться
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Код за один час с Steph Curry
   video_title_draymond_green: Час кода с Дреймонд Грин
   video_title_russell_okung: Час кода с Расселом Оукунг
   video_title_real_madrid: Час кода с Реал Мадрид
   video_title_marco_belinelli: Час кода с Марко Белинелли
   video_title_chris_bosh: Крис Бош в компьютерной науке
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 мин
   video_2min: 2 мин
+  video_3min: 3 min
   video_5min: 5 мин
   speak_another_language: Говорите на другом языке?
   help_translate: Помогите нам перевести.
@@ -1033,12 +1035,12 @@
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4 (бета-версия): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Курс A: '
+  dashboard_courseb: 'Курс B: '
+  dashboard_coursec: 'Курс C: '
+  dashboard_coursed: 'Курс D: '
+  dashboard_coursee: 'Курс Е: '
+  dashboard_coursef: 'Курс F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
@@ -2165,5 +2167,3 @@
     Account” option:'
   hero_name: 'Майнкрафт: Путешествие Героя'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

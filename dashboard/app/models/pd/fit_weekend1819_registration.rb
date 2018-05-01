@@ -133,4 +133,9 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
   def course_name
     pd_application.try(&:course_name)
   end
+
+  # at time of registration
+  def fit_city
+    sanitize_form_data_hash[:city]
+  end
 end

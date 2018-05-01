@@ -9,8 +9,8 @@ fa:
     errors:
       messages:
         blank: "%s لازم است"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "ضروری هستند"
+        invalid_plural: "معتبر نیستند"
     attributes:
       user:
         name: 'نمایش نام'
@@ -94,11 +94,11 @@ fa:
     student_count: '%{count} دانش آموز تا حالا ثبت نام کرده اند.'
     teacher_count: '%{count} معلم تا حالا ثبت نام کرده اند.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_heading: 'بدون وارد شدن به سیستم شروع به کار کنید'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'به راهنمای معلم مراجعه کنید'
-    title: "Sign up for Code.org"
+    title: "در code.org ثبت نام کنید"
     school_name: 'نام مدرسه (اختیاری)'
     school_address: 'نشانی مدرسه (اختیاری)'
     address_placeholder: 'نشانی، شهر، استان، کدپستی'
@@ -122,14 +122,14 @@ fa:
     user_type_student: "دانش آموز"
     field_is_required: "%s لازم است"
     accept_terms: "You must agree to create an account"
-    error: "An error occurred."
+    error: "خطایی رخ داد."
   school_info:
-    title: 'School Information (optional)'
+    title: 'اطلاعات مدرسه(اختیاری)'
     school_country: 'School Country'
-    select_school_type: 'School Type'
+    select_school_type: 'نوع مدرسه'
     charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
+    private: 'خصوصی'
+    public: 'عمومی'
     homeschool: 'Homeschool'
     after_school: 'After School'
     other: 'دیگر'
@@ -137,17 +137,17 @@ fa:
     district: 'District'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
+    school: 'مدرسه'
     other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
+    school_name: 'نام مدرسه'
     school_zip: 'School Zip Code'
-    school_address: 'School Address'
+    school_address: 'آدرس مدرسه'
     school_organization_name: 'School/Organization Name'
     school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'دارای حساب کاربری در حال حاضر؟ ورود'
     login: 'ایمیل'
-    login_username: 'Email or Username'
+    login_username: 'ایمیل یا نام کاربری'
     password: 'کلمه عبور'
     remember: 'مرا به خاطر بسپار'
     submit: 'ورود'
@@ -161,7 +161,7 @@ fa:
     picture: 'اکنون عکس مخفی خود را پیدا کنید'
     words: 'حالا کلمات مخفی خود را وارد کنید'
     login: 'ورود'
-    invalid_login: 'Invalid login, please try again'
+    invalid_login: 'ورود نامعتبر, لطفا دوباره سعی کنید'
     pair_programming: 'I have a partner at my computer'
     student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
@@ -192,8 +192,8 @@ fa:
     new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
+      one: 'بخش شما:'
+      other: 'بخش‌های شما:'
     code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
@@ -418,7 +418,7 @@ fa:
     announcement_learn_more_button: "بیشتر بیاموزید"
     announcement_try_now_button: "هم اکنون شروع کنید"
     announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "ویدیو را تماشا کنید"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "نام خود را اضافه کنید"
     announcement_go_beyond_button: "Go beyond"
@@ -562,7 +562,7 @@ fa:
       title: "گالری"
       body: "دیدن یگ گالری از برنامه ها و تصاویر هنرمندانه ایجاد شده توسط کاربران ما"
     gamelab:
-      title: "Game Lab"
+      title: "کارگاه بازی سازی"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "سنین سیزده به بالا"
       cta: "یادبگیر چگونه"

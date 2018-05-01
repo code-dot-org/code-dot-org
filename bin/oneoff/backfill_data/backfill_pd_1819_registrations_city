@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+def backfill_registrations(klass)
+  count = 0
+  klass.where.not(pd_application_id: nil).find_each do |registration|
+    hash = registration.form_data_hash
+    next if hash.key? 'city'
+
+    workshop = registration&.pd_application&.workshop
+    raise "No workshop found for #{klass} #{registration.id}" unless workshop
+
+    hash['city'] = workshop.location_city
+    hash['date'] = workshop.friendly_date_range
+    registration.form_data_hash = hash
+    registration.save!
+
+    count += 1
+  end
+
+  puts "#{count} #{klass.name.pluralize} backfilled with city and date"
+end
+
+backfill_registrations Pd::Teachercon1819Registration
+backfill_registrations Pd::FitWeekend1819Registration
