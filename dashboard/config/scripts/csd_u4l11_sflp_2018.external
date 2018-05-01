@@ -1,0 +1,13 @@
+name 'CSD U4L11 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson teams test out their paper prototypes with other members of the class. With one student role playing the computer, one narrating, and the rest observing, teams will get immediate feedback on their app designs which will inform the next version of their app prototypes.
+
+
+## Resources
+
+* [Paper Prototype User Testing](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Activity Guide
+* [What's For Lunch Testing](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video
+MARKDOWN
