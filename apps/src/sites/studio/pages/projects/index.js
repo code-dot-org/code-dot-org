@@ -15,7 +15,7 @@ import projects, {
 import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
-import { PublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
+import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
@@ -86,7 +86,9 @@ window.onShowConfirmPublishDialog = function (projectId, projectType) {
   getStore().dispatch(showPublishDialog(projectId, projectType));
 };
 
-window.PublishableProjectTypes = PublishableProjectTypes;
+window.AlwaysPublishableProjectTypes = AlwaysPublishableProjectTypes;
+
+window.AllPublishableProjectTypes = AllPublishableProjectTypes;
 
 function setupReduxSubscribers(store) {
   let state = {};
