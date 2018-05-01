@@ -256,6 +256,11 @@ class MoveStudents extends Component {
     this.closeDialog();
   };
 
+  isButtonDisabled = () => {
+    const {studentIds, sectionId} = this.props.transferData;
+    return (studentIds.length === 0) || !sectionId;
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -355,6 +360,7 @@ class MoveStudents extends Component {
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
+              disabled={this.isButtonDisabled()}
             />
           </DialogFooter>
         </BaseDialog>
