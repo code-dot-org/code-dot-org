@@ -26,8 +26,8 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={cell && `${cell.percentAnswered}%` || '-'}
-        isCorrectAnswer={cell && cell.isCorrectAnswer || false}
+        percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
+        isCorrectAnswer={cell && cell.isCorrectAnswer}
       />
   );
 };
@@ -120,17 +120,16 @@ class MultipleChoiceOverviewTable extends Component {
     let dataColumns = [];
     let columns = this.getQuestionColumn(sortable) ;
 
+    dataColumns.push({property: 'question', ...columns});
+
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.getAnswerColumns(i - 1);
-      if (i === 0) {
-        dataColumns.push({property: 'question', ...columns});
-      } else {
-        dataColumns.push({property: 'percentAnswered' , ...questionOption});
-      }
+      let questionOption = this.getAnswerColumns(i);
+
+      dataColumns.push({property: 'percentAnswered' , ...questionOption});
     }
       // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
       // maxAnswerChoicesLength does not include Question column.
-        dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
+      dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
 
       return dataColumns;
   };
