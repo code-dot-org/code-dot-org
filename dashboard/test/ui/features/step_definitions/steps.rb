@@ -924,9 +924,9 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
     Then I should see the new section dialog
 
     When I select email login
-    Then I wait to see "#uitest-assignment-group"
+    Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{primary}" option in dropdown "uitest-assignment-group"
+    When I select the "#{primary}" option in dropdown "uitest-assignment-family"
   }
 
   if secondary

@@ -411,12 +411,12 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
 
-    // An array of assignment groups. See the assignmentGroupShape PropType.
-    const assignmentGroups = [];
+    // An array of assignment families. See the assignmentFamilyShape PropType.
+    const assignmentFamilies = [];
 
-    // Fields to copy from the assignmentInfo when creating an assignmentGroup.
-    const assignmentGroupFields = [
-      'category_priority', 'category', 'position', 'name', 'assignment_group_name'
+    // Fields to copy from the assignmentInfo when creating an assignmentFamily.
+    const assignmentFamilyFields = [
+      'category_priority', 'category', 'position', 'name', 'assignment_family_name'
     ];
 
     // Primary assignment ids are (a) courses and (b) scripts that are not in any
@@ -438,13 +438,13 @@ export default function teacherSections(state=initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      // Borrow the fields we need to display the assignment group from the
-      // course in that group with the default version year, 2017. This assumes
+      // Borrow the fields we need to display the assignment family from the
+      // course in that family with the default version year, 2017. This assumes
       // that course has a display name suitable or describing all versions in
-      // the group like "CS Discoveries", not a version-specific name like "CS
+      // the family like "CS Discoveries", not a version-specific name like "CS
       // Discoveries 2017".
       if (course.version_year === defaultVersionYear) {
-        assignmentGroups.push(_.pick(course, assignmentGroupFields));
+        assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
       }
 
       primaryAssignmentIds.push(assignId);
@@ -461,10 +461,10 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `/s/${script.script_name}`,
 
-        // For now we put each script in its own assignment group. When we
+        // For now we put each script in its own assignment family. When we
         // implement versioning for scripts we will start computing these values
         // on the server.
-        assignment_group_name: script.script_name,
+        assignment_family_name: script.script_name,
         version_year: defaultVersionYear,
       };
 
@@ -472,10 +472,10 @@ export default function teacherSections(state=initialState, action) {
         primaryAssignmentIds.push(assignId);
 
         // Scripts currently have only one version, so each script will form its
-        // own assignment group.
-        assignmentGroups.push({
-          ..._.pick(script, assignmentGroupFields),
-          assignment_group_name: script.script_name
+        // own assignment family.
+        assignmentFamilies.push({
+          ..._.pick(script, assignmentFamilyFields),
+          assignment_family_name: script.script_name
         });
       }
     });
@@ -484,7 +484,7 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       validAssignments,
       primaryAssignmentIds,
-      assignmentGroups,
+      assignmentFamilies,
     };
   }
 
