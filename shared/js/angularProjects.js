@@ -1,4 +1,6 @@
 /* global $, angular */
+var script = document.querySelector('script[data-under13]');
+var userSharingDisabled = JSON.parse(script.dataset.sharingdisabled);
 
 // Declare app level module which depends on filters, and services
 angular.module('projectsApp', [
@@ -61,7 +63,9 @@ services.factory('projectsService', ['$resource',
 
     Project.prototype.isPublishableProjectType = function () {
       var projectType = this.getType();
-      var publishableTypes = window.PublishableProjectTypes;
+      var publishableTypes = userSharingDisabled ?
+        window.AlwaysPublishableProjectTypes :
+        window.AllPublishableProjectTypes;
       return publishableTypes.indexOf(projectType) > -1;
     };
 

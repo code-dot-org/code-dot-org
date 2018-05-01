@@ -7,7 +7,7 @@ import ShareDialog from './components/ShareDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
-import { PublishableProjectTypes } from '../util/sharedConstants';
+import { AllPublishableProjectTypes } from '../util/sharedConstants';
 import experiments from '../util/experiments';
 
 export function shareProject(shareUrl) {
@@ -30,7 +30,7 @@ export function shareProject(shareUrl) {
     // Younger students can now get to the share dialog if their teacher allows
     // it, and should be able to publish in that case.
     const canPublish = !!appOptions.isSignedIn &&
-      PublishableProjectTypes.includes(appType);
+      AllPublishableProjectTypes.includes(appType);
 
     const exportExpoApp = (expoOpts) => {
       if (window.Applab) {
