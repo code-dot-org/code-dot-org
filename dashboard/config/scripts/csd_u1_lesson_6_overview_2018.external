@@ -1,0 +1,20 @@
+name 'CSD U1 Lesson 6 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn how processing is used by humans and computers to turn inputs into outputs.
+
+## Vocabulary
+
+* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
+
+## Resources
+
+* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Card Sorting Algorithm](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))
+MARKDOWN
