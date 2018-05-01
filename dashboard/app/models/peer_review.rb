@@ -270,7 +270,7 @@ class PeerReview < ActiveRecord::Base
   # A review is done if there is either a marked status, or if there is any feedback in
   # the written section
   def review_completed?
-    !status.nil? || !data.nil?
+    (status == 'accepted' || status == 'rejected') || data?
   end
 
   def create_escalated_duplicate
