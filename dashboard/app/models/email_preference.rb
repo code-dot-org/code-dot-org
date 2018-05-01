@@ -13,7 +13,7 @@
 #
 # Indexes
 #
-#  index_email_preferences_on_email  (email)
+#  index_email_preferences_on_email  (email) UNIQUE
 #
 
 class EmailPreference < ApplicationRecord

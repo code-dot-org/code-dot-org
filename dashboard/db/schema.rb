@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425175740) do
+ActiveRecord::Schema.define(version: 20180501192249) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -332,6 +332,17 @@ ActiveRecord::Schema.define(version: 20180425175740) do
     t.integer "district_id", null: false
     t.index ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
     t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
+  end
+
+  create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.boolean  "opt_in",     null: false
+    t.string   "ip_address", null: false
+    t.string   "source",     null: false
+    t.string   "form_kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_email_preferences_on_email", unique: true, using: :btree
   end
 
   create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
