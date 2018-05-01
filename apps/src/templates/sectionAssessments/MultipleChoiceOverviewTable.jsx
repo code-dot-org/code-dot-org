@@ -116,7 +116,7 @@ class MultipleChoiceOverviewTable extends Component {
         dataColumns.push({property: 'percentAnswered' , ...questionOption});
       }
     }
-        dataColumns.push({property: 'notAnswered', ...this.createAnswerColumns(8)});
+        dataColumns.push({property: 'notAnswered', ...this.getAnswerColumns(8)});
 
       return dataColumns;
   };
