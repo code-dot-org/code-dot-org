@@ -67,7 +67,7 @@ class MoveStudents extends Component {
     ).isRequired,
     transferData: PropTypes.shape({
       studentIds: PropTypes.array.isRequired,
-      sectionId: PropTypes.number.isRequired,
+      sectionId: PropTypes.number,
       otherTeacher: PropTypes.bool.isRequired,
       otherTeacherSection: PropTypes.string.isRequired,
       copyStudents: PropTypes.bool.isRequired
