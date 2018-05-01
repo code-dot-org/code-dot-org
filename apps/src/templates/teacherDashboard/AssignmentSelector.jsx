@@ -34,7 +34,6 @@ export default class AssignmentSelector extends Component {
   static propTypes = {
     section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
-    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
