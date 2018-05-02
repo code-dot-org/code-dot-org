@@ -55,7 +55,7 @@ describe('MoveStudents', () => {
     );
 
     wrapper.find('Button').simulate('click');
-    const nameCells = wrapper.find('.name-cell');
+    const nameCells = wrapper.find('.uitest-name-cell');
     expect(nameCells).to.have.length(3);
   });
 
@@ -69,8 +69,8 @@ describe('MoveStudents', () => {
     );
 
     wrapper.find('Button').simulate('click');
-    wrapper.find('#name-header').simulate('click');
-    const nameCells = wrapper.find('.name-cell');
+    wrapper.find('#uitest-name-header').simulate('click');
+    const nameCells = wrapper.find('.uitest-name-cell');
     expect(nameCells.at(0).text()).to.equal('studenta');
     expect(nameCells.at(1).text()).to.equal('studentb');
     expect(nameCells.at(2).text()).to.equal('studentc');
@@ -111,7 +111,7 @@ describe('MoveStudents', () => {
     );
 
     wrapper.find('Button').simulate('click');
-    expect(wrapper.find('#otherTeacher').exists()).to.be.true;
+    expect(wrapper.find('#uitest-other-teacher').exists()).to.be.true;
   });
 
   it('calls transferStudents on submit', () => {
