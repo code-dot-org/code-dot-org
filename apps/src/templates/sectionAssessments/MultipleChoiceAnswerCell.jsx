@@ -40,7 +40,7 @@ class MultipleChoiceAnswerCell extends Component {
     return (
       <div>
         <div>
-          {percentValue || notAnswered}
+          {notAnswered || percentValue}
         </div>
         <div>
           {isCorrectAnswer &&
