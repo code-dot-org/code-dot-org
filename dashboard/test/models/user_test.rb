@@ -2351,6 +2351,8 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.uid
     refute_nil user.reset_password_token
     refute_nil user.full_address
+    refute_nil user.secret_picture_id
+    refute_nil user.secret_words
     refute_equal({"sharing_disabled" => false}, user.properties)
     assert_nil user.purged_at
 
@@ -2388,6 +2390,8 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.uid
     refute_nil user.reset_password_token
     assert_nil user.full_address
+    refute_nil user.secret_picture_id
+    refute_nil user.secret_words
     refute_equal({"sharing_disabled" => false}, user.properties)
     assert_nil user.purged_at
 
@@ -2433,6 +2437,8 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.uid
     assert_nil user.reset_password_token
     assert_nil user.full_address
+    assert_nil user.secret_picture_id
+    assert_nil user.secret_words
     assert_equal({"sharing_disabled" => false}, user.properties)
   end
 
