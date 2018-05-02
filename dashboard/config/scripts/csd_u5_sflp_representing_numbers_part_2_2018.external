@@ -1,0 +1,16 @@
+name 'CSD-U5-SFLP Representing Numbers Part 2_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson addresses how people can keep data secret, even when other people can see it.  The class will look at an encoding method for emojis, then learn a way to encrypt their emoji messages using a keyword.
+
+
+## Resources
+
+* [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Keeping Data Secret - Exemplar ([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))
+MARKDOWN

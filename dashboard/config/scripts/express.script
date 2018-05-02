@@ -245,7 +245,7 @@ assessment 'courseD_farmer_while10_predict2'
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-stage 'Conditional Loops in Maze'
+stage 'Until Loops in Maze'
 level 'courseD_maze_until1'
 level 'courseD_video_repeatUntil'
 level 'courseD_maze_until2_predict1'

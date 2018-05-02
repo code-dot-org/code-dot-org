@@ -67,8 +67,8 @@
     "makerlab_enabled": "true",
     "start_blocks": "// check for changes in LED controls\r\nonBoardEvent(toggleSwitch, \"change\", function(event) {\r\n  updateLED();\r\n});\r\nonEvent(LEDtype, \"change\", function(event) {\r\n  updateLED();\r\n});\r\nonEvent(LEDspeed, \"change\", function(event) {\r\n  updateLED();\r\n});\r\n\r\n// check for changes in buzzer controls\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  playBuzzer();\r\n});\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  buzzer.off();\r\n});\r\nonBoardEvent(\"duration\", \"change\", function(event) {\r\n  playBuzzer();\r\n});\r\nonEvent(\"buzzerFrequency\", \"change\", function(event) {\r\n  playBuzzer();\r\n});\r\n\r\n// update LED according to controls\r\nfunction updateLED() {\r\n  if (toggleSwitch.isOpen()) {\r\n    var LEDtype = getProperty(\"LEDtype\", \"value\");\r\n    var LEDinterval = getProperty(\"LEDspeed\", \"value\");\r\n    if (LEDtype == \"constant\") {\r\n      LED.on();\r\n    }\r\n    if (LEDtype == \"blink\") {\r\n      led.blink(LEDinterval);\r\n    }\r\n    if (LEDtype == \"pulse\") {\r\n      led.pulse(LEDinterval);\r\n    }\r\n  } else {\r\n    led.off();\r\n  }\r\n}\r\n\r\n// play buzzer according to controls\r\nfunction playBuzzer() {\r\n  var frequency = getProperty(\"frequency\", \"value\");\r\n  var duration = getProperty(\"duration\", \"value\");\r\n  buzzer.frequency(frequency, duration);\r\n}",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "n1+8jgHVPIfH5E70HdjRug70PQcLrI9IQjHkMtJ0PsFyQveOVaeC1X0X/ZlM\nf6YE\n"
+    "encrypted_examples": "n1+8jgHVPIfH5E70HdjRug70PQcLrI9IQjHkMtJ0PsFyQveOVaeC1X0X/ZlM\nf6YE\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

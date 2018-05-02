@@ -658,8 +658,10 @@
   video_title_real_madrid: Sat Kodiranja sa Real Madrid
   video_title_marco_belinelli: Sat Kodiranja sa Marco Belinelli
   video_title_chris_bosh: Chris Bosh o Računarstvu
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Da li govoriš neki drugi jezik?
   help_translate: Pomozi nam da prevedemo.
@@ -2099,5 +2101,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

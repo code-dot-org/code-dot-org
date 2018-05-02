@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "You can make this drawing by adding a repeat block.",
+    "instructions": "Build a function that will create this star.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -14,9 +14,8 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "ideal": "5",
+    "ideal": "7",
     "embed": "false",
-    "markdown_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \r\n\r\nYou can make this drawing by adding a repeat block.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,40 +32,35 @@
     "disable_sharing": "false",
     "never_autoplay_video": "true",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.\\n\\nIf you can't remember what the starter code was, click \\\"start over\\\" in the upper right corner of the workspace.\",\"hint_id\":\"courseD_artist_functions3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f19457b322a3d1c9cc5f440af586e26/courseE_artist_functions3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your loop should have all 3 starter code blocks inside of it.\",\"hint_id\":\"courseD_artist_functions3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a43c606f55eee0215d19b44b48cad02d/courseE_artist_functions3.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "markdown_instructions": "Build a function that will create this star.\r\n\r\n---\r\n\r\n- Each arm of the star is 25 pixels long\r\n- You need to turn 45 degrees to get 8 arms\r\n- It is okay to go forward and backward over the same arm",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-13 03:30:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:30:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:35:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-01 18:49:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 18:50:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 18:58:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 19:00:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_move_by_constant">
-              <title name="DIR">moveForward</title>
-              <title name="VALUE">25</title>
-              <next>
-                <block type="draw_move_by_constant">
-                  <title name="DIR">moveBackward</title>
-                  <title name="VALUE">25</title>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">45</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
+            <block type="procedures_callnoreturn" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <mutation name="draw a star"/>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false" x="200" y="200">
+          <mutation/>
+          <title name="NAME">draw a star</title>
         </block>
       </xml>
     </start_blocks>
@@ -76,13 +70,17 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">25</title>
         </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">25</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -105,6 +103,15 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
+            <block type="procedures_callnoreturn" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <mutation name="draw a star"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">8</title>
               <statement name="DO">
@@ -116,9 +123,9 @@
                       <title name="DIR">moveBackward</title>
                       <title name="VALUE">25</title>
                       <next>
-                        <block type="draw_turn_by_constant_dropdown">
+                        <block type="draw_turn_by_constant">
                           <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <title name="VALUE">45</title>
                         </block>
                       </next>
                     </block>
@@ -126,7 +133,7 @@
                 </block>
               </statement>
             </block>
-          </next>
+          </statement>
         </block>
       </xml>
     </solution_blocks>

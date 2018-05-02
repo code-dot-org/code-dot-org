@@ -11,7 +11,7 @@
   upgrade_ie_link: Tuilleadh eolais
   en: Ríomheolaíocht
   computer_science_edweek: Seachtain an Oideachais Ríomheolaíochta
-  csedweek_dates: 8-14 Nollaig 2014
+  csedweek_dates: 3-9 Nollaig 2018
   csedweek_banner_hoc: 'Tá <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">An Uair Chódála </a> ag teacht go luath. Glaotar ar gach múinteoir
     agus ar gach eagraí, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -36,19 +36,19 @@
   twentyhours_text: Ar chríochnaigh tú An Uair Chódála? Foghlaim níos mó faoin ríomheolaíocht
     agus faoi ríomhchlárú sa dara cúrsa seo.
   og_title: 'Code.org: Is féidir le héinne foghlaim'
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_soon: Tá an Uair Chódála le teacht
+  og_title_here: Tá an Uair Chódála anseo!
   og_description: Tugaimis deis do gach dalta i ngach scoil staidéar a dhéanamh ar
     an ríomheolaíocht.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Tá an Uair Chódála anseo
-  csedweek_og_description: 4-10 Nollaig 2017. Ba chóir do gach dalta buntús na ríomheolaíochta
+  csedweek_og_description: 3-9 Nollaig 2018. Ba chóir do gach dalta buntús na ríomheolaíochta
     a fhoghlaim.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
+  csedweek_og_description_soon: Tá an Uair Chódála le teacht 3-9 Nollaig 2018. Ba
+    chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
+  csedweek_og_description_here: Tá an Uair Chódála anseo. Ba chóir do gach dalta buntús
+    na ríomheolaíochta a fhoghlaim.
   hoc2014_heading: Glac páirt san <a href="http://hourofcode.com">Uair Chódála</a><br/>8-14
     Nollaig 2014<br/>
   hoc2014_students: Daltaí
@@ -291,32 +291,32 @@
     @codeorg
   just_did_coursef: Táim go díreach tar éis Cúrsa F a chríochnú - bain triail as!
     @codeorg
-  just_did_accelerated: Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail
+  just_did_accelerated: Táim tar éis an Cúrsa Luathaithe a chríochnú - bain triail
     as! @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
+  just_did_hoc_donor: 'Tá mé go díreach tar éis an #HourOfCode a dhéanamh! (Tá mé
+    buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg)'
+  just_did_course1_donor: Tá mé go díreach tar éis Cúrsa 1 a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_course2_donor: Tá mé go díreach tar éis Cúrsa 2 a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_course3_donor: Tá mé go díreach tar éis Cúrsa 3 a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_course4_donor: Tá mé go díreach tar éis Cúrsa 4 a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_coursea_donor: Tá mé go díreach tar éis Cúrsa A a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_courseb_donor: Tá mé go díreach tar éis Cúrsa B a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_coursec_donor: Tá mé go díreach tar éis Cúrsa C a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_coursed_donor: Tá mé go díreach tar éis Cúrsa D a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_coursee_donor: Tá mé go díreach tar éis Cúrsa E a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_coursef_donor: Tá mé go díreach tar éis Cúrsa F a chríochnú! Tá mé buíoch
+    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_accelerated_donor: Tá mé go díreach tar éis an Cúrsa Luathaithe a chríochnú!
+    Tá mé buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
     a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.
   twitter_cs_foundational: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
@@ -417,8 +417,8 @@
   homepage_hero_text_stat_loc: Tá 8.5 milliún cailín cláraithe le Code.org
   homepage_hero_text_stat_students: "#student_count dalta cláraithe le Code.org"
   homepage_hero_text_stat_served: 'An Uair Chódála: #served códálaí'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_coming: Tá an Uair Chódála le teacht
+  homepage_hero_hoc_is_here: Tá an Uair Chódála anseo
   homepage_slot_text_hoc: An Uair Chódála
   homepage_slot_text_frozen: Frozen in éindí le hAnna agus Elsa
   homepage_slot_text_teacher: Painéal na Múinteoirí
@@ -558,7 +558,7 @@
   mc_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   mc_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid | Aois
     6-106
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Scéal Gaisce'
   minecraft_designer: Dearthóir Minecraft
   minecraft_adventurer: Eachtránaí Minecraft
   minecraft_tutorials: Cúrsaí Teagaisc Minecraft don Uair Chódála
@@ -582,8 +582,9 @@
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_teach_resources: Acmhainní agus pleananna ceachta do mhúinteoirí.
+  minecraft_leader_guide: Íoslódáil acmhainní a chabhróidh leat ócáid a phleanáil
+    agus a stiúradh.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
@@ -661,14 +662,16 @@
   video_title_obama: An tUachtarán Obama ar an ríomheolaíocht
   video_title_hoc_is_here: Tá an Uair Chódála anseo - Is féidir le héinne foghlaim
   video_title_anybody_can_learn: Is féidir le héinne foghlaim
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: An Uair Chódála le Steph Curry
   video_title_draymond_green: An Uair Chódála le Draymond Green
   video_title_russell_okung: An Uair Chódála le Russell Okung
   video_title_real_madrid: An Uair Chódála le Real Madrid
   video_title_marco_belinelli: An Uair Chódála le Marco Belinelli
   video_title_chris_bosh: Chris Bosh ar an Ríomheolaíocht
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 nóim
   video_2min: 2 nóim
+  video_3min: 3 min
   video_5min: 5 nóim
   speak_another_language: An bhfuil teanga eile agat?
   help_translate: Cabhraigh leis an aistriúchán.
@@ -1020,7 +1023,7 @@
   dashboard_students_reset_picture: Is féidir leat an pictiúr rúnda ag aon dalta a
     athshocrú am ar bith trí <b>Taispeáin an rún</b> a roghnú, ansin <b>Athshocraigh
     an rún</b>. Déanfar pictiúr rúnda nua don dalta sin.
-  dashboard_students_secret_word_title: Focal Rúnda
+  dashboard_students_secret_word_title: Focail Rúnda
   dashboard_students_secret_word: Baineann an rannán seo úsáid as <b>focail rúnda</b>.
     Ciallaíonn sé seo go bhfuil focal rúnda ag gach dalta in ionad focail fhaire lena
     logáil isteach. Ba chóir do na daltaí an seoladh Gréasáin thuas a úsáid chun logáil
@@ -1055,11 +1058,11 @@
   dashboard_coursed: 'Cúrsa D: '
   dashboard_coursee: 'Cúrsa E: '
   dashboard_coursef: 'Cúrsa F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
+  dashboard_pre-express: 'Luaschúrsa do Réamhléitheoirí: '
+  dashboard_express: 'Luaschúrsa: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Uirlisí: '
   dashboard_curriculum: Curaclam
   dashboard_curriculum_overview: Foramharc ar an gCuraclam Bunscoile
   dashboard_overview: Foramharc
@@ -1075,10 +1078,10 @@
   dashboard_teacher_worksheet: bileog oibre do mhúinteoirí
   dashboard_curriculum_csina: 'An Ríomheolaíocht san Ailgéabar:'
   dashboard_curriculum_csins: 'An Ríomheolaíocht san Eolaíocht:'
-  dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht AP®:'
+  dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht:'
   dashboard_curriculum_ecs: 'Taiscéalaíocht na Ríomheolaíochta:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  dashboard_curriculum_apcsa: 'Ríomheolaíocht AP in Java: '
   dashboard_grade_k: Naíscoil
   dashboard_grade_other: Eile
   dashboard_login_word: Focal
@@ -1165,29 +1168,29 @@
   carousel_heading_beginners: 'Cúrsaí teagaisc ó eagraíochtaí eile: Blianta 1-8'
   carousel_heading_beyond_beginners: Cúrsaí Teagaisc do Thosaitheoirí
   carousel_heading_javascript: Cúrsaí teagaisc tríú páirtí a mhúineann JavaScript
-  carousel_heading_beyond_javascript: Cúrsaí teagaisc JavaScript
+  carousel_heading_beyond_javascript: Foghlaim JavaScript
   carousel_heading_unplugged: Níl gléas ná ceangal Idirlín agat? Bain triail as an
     ríomheolaíocht "díphlugáilte"
   carousel_heading_devices: Aipeanna teagaisc tríú páirtí do ghutháin agus do tháibléid
-  carousel_heading_beyond_devices: Aipeanna teagaisc do ghutháin agus do tháibléid
+  carousel_heading_beyond_devices: Aipeanna do ghutháin agus do tháibléid
   carousel_heading_languages: Cúrsaí teagaisc tríú páirtí a mhúineann teangacha ríomhchláraithe
     eile
-  carousel_heading_beyond_languages: Cúrsaí teagaisc a mhúineann teangacha ríomhchláraithe
-    eile
+  carousel_heading_beyond_languages: Foghlaim teangacha ríomhchláraithe eile
   carousel_heading_apps_games: Déan do chluiche nó aip féin
   carousel_heading_university: Cúrsaí ollscoile ar líne
   carousel_heading_webpages: Foghlaim le leathanaigh Ghréasáin a chruthú
-  carousel_heading_robots: Foghlaim an ríomhchlárúchán le róbait
+  carousel_heading_robots: Foghlaim an ríomhchlárúchán le róbait agus le gléasanna
   carousel_heading_ide: Ardáin a thaitníonn le múinteoirí
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_desktop: Foghlaim códáil ar ríomhaire
+  carousel_heading_mobtabelem: Ar ghutháin agus ar tháibléid
+  carousel_heading_prereader: Do réamhléitheoirí
+  carousel_heading_beyondblocks: Dul thar blocanna - foghlaim teanga ríomhchláraithe
+  carousel_heading_nointernet: Droch-cheangal Idirlín? Suiteáil na haipeanna seo ar
+    do ríomhaire
   educator_notes: Nótaí do Mhúinteoirí
   teach_led_lesson_plans: Ceachtanna faoi cheannas múinteoirí
-  learn_footer_all_tutorials: Féach <a href="https://code.org/educate/allhourofcode">liosta
-    cuimsitheach de chúrsaí teagaisc don Uair Chódála</a>. <a href="https://hourofcode.com/tutorial-guidelines">Cliceáil
+  learn_footer_all_tutorials: Féach <a href="https://code.org/learn">liosta cuimsitheach
+    de chúrsaí teagaisc don Uair Chódála</a>. <a href="https://hourofcode.com/activity-guidelines">Cliceáil
     anseo</a> chun teacht ar na critéir agus ar na treoirlínte a bhaineann le cúrsaí
     teagaisc.
   how_to_teach_hoc: Conas an Uair Chódála a mhúineadh
@@ -1275,7 +1278,7 @@
   coursef_name: Cúrsa F
   accelerated_name: Cúrsa Luathaithe
   express_name: Express Course
-  pre-express_name: Pre-reader Express Course
+  pre-express_name: Luaschúrsa do Réamhléitheoirí
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
   cspunit3_name: 'Aonad 3: Ríomhchlárú'
@@ -1394,12 +1397,12 @@
   course2_gradelevel: Aois 6-18
   course3_gradelevel: Aois 8-18
   course4_gradelevel: Aois 10-18
-  coursea_gradelevel: Aois 10+
-  courseb_gradelevel: Aois 11+
-  coursec_gradelevel: Aois 12+
+  coursea_gradelevel: Aois 4-7
+  courseb_gradelevel: Aois 5-8
+  coursec_gradelevel: Aois 6-10
   coursed_gradelevel: Aois 13+
   coursee_gradelevel: Aois 14+
-  coursef_gradelevel: Aois 15+
+  coursef_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -2096,7 +2099,7 @@
   header_home: Baile
   header_my_dashboard: Mo Phainéal
   header_courses: Cúrsaí
-  header_course_catalog: Course Catalog
+  header_course_catalog: Cúrsaí
   header_project_gallery: Tograí
   header_sections: Rannáin
   header_professional_learning: Oideachas Proifisiúnta
@@ -2137,30 +2140,28 @@
   user_header_settings: Mo chuntas
   user_header_logout: Logáil amach
   user_header_signin: Logáil isteach
-  view_all_sections: View All Sections
-  view_section: View Section
-  view_named_section: View %{section_name}
+  view_all_sections: Féach ar an rannán go léir
+  view_section: Féach ar an Rannán
+  view_named_section: Féach Rannán %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
     or printed for your students.
-  signing_in: Signing In
+  signing_in: Logáil Isteach
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
+  sign_in_instruct_website: Tabhair cuairt ar %{code_org_url}.
+  sign_in_instruct_code: 'Cuir isteach cód an rannáin: %{section_code}.'
+  sign_in_instruct_name: Roghnaigh ainm taispeána.
+  sign_in_instruct_secret: Roghnaigh focal rúnda %{secret}.
+  sign_in_instruct_button: Cliceáil an cnaipe "Logáil isteach".
   sign_in_overview_cards: Students can find all of this information, including their
     secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
+  reset_student_password: Focail fhaire a athshocrú
   reset_student_password_instructions: You can reset the secret <word/picture> for
     any of your students by going to the “Manage Students” tab for the section, clicking
     the “Show secret” button under the “Password” column, and clicking the “Reset
     secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
+  login_cards: Cártaí Logála Isteach
+  print_login_cards: Priontáil cártaí logála isteach
   joining_section: Joining your section (one-time only)
   joining_section_overview: If a student has not already joined your section, please
     ask them to do the following steps. Note that they only need to do this once.
@@ -2171,20 +2172,20 @@
     done so. They can do this at https://studio.code.org/users/sign_up. Note that
     they can either sign up with an email address and password, or sign up through
     Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
+  joining_section_instruct_account: Logáil isteach ina gcuntas Code.org.
+  joining_section_instruct_code: 'Oscail %{code_org_url} agus cuir isteach cód an
+    rannáin: %{section_code}.'
+  joining_section_instruct_button: Cuirfear le do rannán iad chomh luath agus a chliceálfaidh
+    siad an cnaipe "Téigh".
+  signing_in_single_instruct: Is féidir le do chuid daltaí logáil isteach ina gcuntas
+    Code.org trí cuairt a thabhairt ar https://code.org/ agus an cnaipe "Logáil isteach"
+    a chliceáil ag barr an scáileáin ar dheis.
   reset_student_password_email: If your student created a Code.org account by using
     their email address and password (instead of signing in through their Google,
     Facebook, Microsoft, or Clever account), you can reset their password by going
     to the “Manage Students” tab for the section, and clicking the “Reset password”
     button under the “Password” column.
-  syncing_students: Syncing your students
+  syncing_students: Daltaí a shioncronú
   syncing_students_instructions: 'If your Code.org section is ever out of date with
     your list of students in Google Classroom, click on the “Sync students from Google
     Classroom” button on the “Manage students” tab:'
@@ -2192,5 +2193,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
