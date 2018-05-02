@@ -76,6 +76,7 @@ Dashboard::Application.routes.draw do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
+          get 'completed_levels_count'
         end
         member do
           post 'remove'
