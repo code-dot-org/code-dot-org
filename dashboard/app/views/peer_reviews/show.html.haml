@@ -24,7 +24,7 @@
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/free_response', locals: {in_level_group: true}
 
-  - if current_user.permission?(UserPermission::PLC_REVIEWER)
+  - if current_user.permission? UserPermission::PLC_REVIEWER
     #previous-reviews
       %p Previous reviews
       - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
