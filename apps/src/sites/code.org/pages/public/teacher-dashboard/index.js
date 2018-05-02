@@ -25,7 +25,7 @@ import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
-const cacheSectionsService = script.dataset.cachesectionsservice;
+const cacheSectionsService = JSON.parse(script.dataset.cachesectionsservice);
 
 main(scriptData);
 
