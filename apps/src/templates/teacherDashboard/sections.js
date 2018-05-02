@@ -71,13 +71,22 @@ export function renderLoginTypeControls(sectionId) {
 }
 
 export function renderStatsTable(section) {
+  const dataUrl = `/dashboardapi/sections/${section.id}/students/completed_levels_count`;
   const element = document.getElementById('stats-table-react');
-  ReactDOM.render(
-    <StatsTable
-      section={section}
-    />,
-    element
-  );
+
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(studentsCompletedLevelCount => {
+    ReactDOM.render(
+      <StatsTable
+        section={section}
+        studentsCompletedLevelCount={studentsCompletedLevelCount}
+      />,
+      element
+    );
+  });
 }
 
 export function renderSectionTable(sectionId, loginType, courseName) {
