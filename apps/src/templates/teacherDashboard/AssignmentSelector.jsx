@@ -168,7 +168,7 @@ export default class AssignmentSelector extends Component {
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
-      if (!hasAssignmentFamily(primaryAssignment)) {
+      if (!hasAssignmentFamily(assignmentFamilies, primaryAssignment)) {
         assignmentFamilies = [_.pick(primaryAssignment, assignmentFamilyFields)]
           .concat(assignmentFamilies);
       }
