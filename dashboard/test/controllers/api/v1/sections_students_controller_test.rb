@@ -41,9 +41,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
     get :completed_levels_count, params: {section_id: @section.id}
     assert_response :success
-    expected_level_count = [
-      {student_id: @student.id, completed_levels_count: 0}
-    ].to_json
+    expected_level_count = {
+      @student.id => 0
+    }.to_json
     assert_equal expected_level_count, @response.body
   end
 
@@ -61,9 +61,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
     get :completed_levels_count, params: {section_id: @section.id}
     assert_response :success
-    expected_level_count = [
-      {student_id: @student.id, completed_levels_count: completed_levels_count}
-    ].to_json
+    expected_level_count = {
+      @student.id => completed_levels_count
+    }.to_json
     assert_equal expected_level_count, @response.body
   end
 
