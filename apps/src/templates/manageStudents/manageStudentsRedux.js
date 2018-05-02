@@ -106,6 +106,7 @@ const initialState = {
   transferStatus: {
     status: null,
     type: null,
+    error: null,
     numStudents: 0,
     sectionDisplay: ''
   }
@@ -271,17 +272,11 @@ export const transferStudents = () => {
     }
 
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
-      const numStudents = studentIds.length;
-      const transferType = copyStudents ? TransferType.COPY_STUDENTS : TransferType.MOVE_STUDENTS;
-      // Get section name for new section from teacherSectionsRedux
-      const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
-
       if (error) {
         console.error(error);
         dispatch(transferStudentsFailure({
           status: TransferStatus.FAIL,
-          numStudents: numStudents,
-          sectionDisplay: sectionDisplay
+          error: data.error
         }));
       } else {
         if (!copyStudents || !otherTeacher) {
@@ -289,10 +284,13 @@ export const transferStudents = () => {
             dispatch(removeStudent(id));
           });
         }
+        const transferType = copyStudents ? TransferType.COPY_STUDENTS : TransferType.MOVE_STUDENTS;
+        // Get section name for new section from teacherSectionsRedux
+        const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
         dispatch(transferStudentsSuccess({
           status: TransferStatus.SUCCESS,
           type: transferType,
-          numStudents: numStudents,
+          numStudents: studentIds.length,
           sectionDisplay: sectionDisplay
         }));
         dispatch(updateStudentTransfer({...blankStudentTransfer}));
@@ -694,6 +692,6 @@ const transferStudentsOnServer = (studentIds, currentSectionCode, newSectionCode
   }).done(data => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
-    onComplete(status, null);
+    onComplete(status, jqXhr.responseJSON);
   });
 };
