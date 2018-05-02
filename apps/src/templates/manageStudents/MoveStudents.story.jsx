@@ -53,6 +53,8 @@ export default storybook => {
             transferData={blankStudentTransfer}
             currentSectionId={1}
             sections={sections}
+            updateStudentTransfer={() => console.log('updating...')}
+            transferStudents={() => console.log('transferring...')}
           />
         )
       },
@@ -65,6 +67,8 @@ export default storybook => {
             transferData={transferToOtherTeacher}
             currentSectionId={1}
             sections={sections}
+            updateStudentTransfer={() => console.log('updating...')}
+            transferStudents={() => console.log('transferring...')}
           />
         )
       }
