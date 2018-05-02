@@ -308,6 +308,13 @@ function draw() {
   background(World.background_color || "white");
 
   if (World.frameCount > 1) {
+    // Perform sprite behaviors
+    sprites.forEach(function (sprite) {
+      sprite.behaviors.forEach(function (behavior) {
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      });
+    });
+
     // Run input events
     for (var i=0; i<inputEvents.length; i++) {
       const eventType = inputEvents[i].type;
@@ -317,7 +324,6 @@ function draw() {
         event();
       }
     }
-
 
     // Run collision events
     for (let i=0; i<collisionEvents.length; i++) {
@@ -343,29 +349,6 @@ function draw() {
         loop.loop();
       }
     }
-
-
-    sprites.forEach(function (sprite) {
-
-      // Perform sprite behaviors
-      sprite.behaviors.forEach(function (behavior) {
-        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
-      });
-
-      // Make sprites say things
-      if (sprite.things_to_say.length > 0) {
-        fill("white");
-        rect(sprite.x + 10, sprite.y - 15, sprite.things_to_say[0][0].length * 7, 20);
-        fill("black");
-        text(sprite.things_to_say[0][0], sprite.x + 15, sprite.y);
-
-        if (sprite.things_to_say[0][1] === 0) {
-          sprite.things_to_say.shift();
-        } else if (sprite.things_to_say[0][1] > -1) {
-          sprite.things_to_say[0][1]--;
-        }
-      }
-    });
   }
 
   drawSprites();
