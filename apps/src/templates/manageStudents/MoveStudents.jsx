@@ -402,7 +402,7 @@ export default connect(state => ({
   updateStudentTransfer(transferData) {
     dispatch(updateStudentTransfer(transferData));
   },
-  transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents) {
-    dispatch(transferStudents(studentIds, currentSectionCode, newSectionCode, copyStudents));
+  transferStudents() {
+    dispatch(transferStudents());
   }
 }))(MoveStudents);
