@@ -386,6 +386,11 @@ function newSectionData(id, courseId, scriptId, loginType) {
 
 const defaultVersionYear = '2017';
 
+// Fields to copy from the assignmentInfo when creating an assignmentFamily.
+export const assignmentFamilyFields = [
+  'category_priority', 'category', 'position', 'name', 'assignment_family_name'
+];
+
 export default function teacherSections(state=initialState, action) {
   if (action.type === SET_OAUTH_PROVIDER) {
     return {
@@ -413,11 +418,6 @@ export default function teacherSections(state=initialState, action) {
 
     // An array of assignment families. See the assignmentFamilyShape PropType.
     const assignmentFamilies = [];
-
-    // Fields to copy from the assignmentInfo when creating an assignmentFamily.
-    const assignmentFamilyFields = [
-      'category_priority', 'category', 'position', 'name', 'assignment_family_name'
-    ];
 
     // Primary assignment ids are (a) courses and (b) scripts that are not in any
     // of our courses.

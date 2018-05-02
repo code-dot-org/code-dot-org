@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
-import { assignmentId } from './teacherSectionsRedux';
+import { assignmentId, assignmentFamilyFields } from './teacherSectionsRedux';
 
 const styles = {
   secondary: {
@@ -14,6 +14,12 @@ const noAssignment = assignmentId(null, null);
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
+
+const hasAssignmentFamily = (assignmentFamilies, assignment)  => (
+  assignment && !!assignmentFamilies.find(assignmentFamily => (
+    assignmentFamily.assignment_family_name === assignment.assignment_family_name
+  ))
+);
 
 /**
  * Group our assignment families by category for our dropdown
@@ -153,16 +159,22 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, assignmentFamilies, dropdownStyle, disabled } = this.props;
+    const { assignments, dropdownStyle, disabled } = this.props;
+    let { assignmentFamilies } = this.props;
     const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, selectedVersionYear } = this.state;
     const versionYears = this.getVersionYears(selectedAssignmentFamily);
 
-    const assignmentFamiliesByCategory = categorizeAssignmentFamilies(assignmentFamilies);
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
+      if (!hasAssignmentFamily(primaryAssignment)) {
+        assignmentFamilies = [_.pick(primaryAssignment, assignmentFamilyFields)]
+          .concat(assignmentFamilies);
+      }
     }
+
+    const assignmentFamiliesByCategory = categorizeAssignmentFamilies(assignmentFamilies);
 
     return (
       <div>
