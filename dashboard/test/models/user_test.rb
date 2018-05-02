@@ -2331,26 +2331,109 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'clear_user removes all PII and other information' do
+  test 'clear_user_and_mark_purged on teacher removes all PII and other information' do
     user = create :teacher
+    user.sign_in_count = 2
+    user.current_sign_in_at = Time.now
+    user.last_sign_in_at = Time.now - 1.day
+    user.current_sign_in_ip = '192.168.0.1'
+    user.last_sign_in_ip = '10.0.0.1'
+    user.provider = 'clever'
+    user.uid = 'fake-clever-uid'
+    user.reset_password_token = 'fake-reset-password-token'
+    user.full_address = 'fake-full-address'
+    user.save
+    user.reload
 
+    # Verify presence of information we expect to purge
+    assert user.valid?
+    refute_nil user.name
+    refute_nil user.username
+    refute_match /^sys_deleted_\w{8}$/, user.username
+    refute_nil user.current_sign_in_ip
+    refute_nil user.last_sign_in_ip
+    refute_empty user.email
+    refute_empty user.hashed_email
+    assert_nil user.parent_email
+    refute_nil user.encrypted_password
+    assert_equal user.provider, 'clever'
+    refute_nil user.uid
+    refute_nil user.reset_password_token
+    refute_nil user.full_address
+    refute_equal({"sharing_disabled" => false}, user.properties)
+    assert_nil user.purged_at
+
+    # Purge the user account
     user.clear_user_and_mark_purged
     user.reload
 
     assert user.valid?
+    assert_sensitive_info_was_purged user
+    refute_nil user.purged_at
+
+    # Also check information intentionally not purged
+    assert_equal user.user_type, 'teacher'
+    assert_equal user.provider, 'clever'
+  end
+
+  test 'clear_user_and_mark_purged on student removes all PII and other information' do
+    user = create :student
+    user.sign_in_count = 2
+    user.current_sign_in_at = Time.now
+    user.last_sign_in_at = Time.now - 1.day
+    user.current_sign_in_ip = '192.168.0.1'
+    user.last_sign_in_ip = '10.0.0.1'
+    user.parent_email = 'fake-parent-email'
+    user.provider = 'clever'
+    user.uid = 'fake-clever-uid'
+    user.reset_password_token = 'fake-reset-password-token'
+    user.save
+    user.reload
+
+    # Verify presence of information we expect to purge
+    assert user.valid?
+    refute_nil user.name
+    refute_nil user.username
+    refute_match /^sys_deleted_\w{8}$/, user.username
+    refute_nil user.current_sign_in_ip
+    refute_nil user.last_sign_in_ip
+    assert_empty user.email
+    refute_empty user.hashed_email
+    refute_empty user.parent_email
+    refute_nil user.encrypted_password
+    assert_equal user.provider, 'clever'
+    refute_nil user.uid
+    refute_nil user.reset_password_token
+    assert_nil user.full_address
+    refute_equal({"sharing_disabled" => false}, user.properties)
+    assert_nil user.purged_at
+
+    # Purge the user account
+    user.clear_user_and_mark_purged
+    user.reload
+
+    assert user.valid?
+    assert_sensitive_info_was_purged user
+    refute_nil user.purged_at
+
+    # Also check information intentionally not purged
+    assert_equal user.user_type, 'student'
+    assert_equal user.provider, 'clever'
+  end
+
+  def assert_sensitive_info_was_purged(user)
     assert_nil user.name
-    refute_nil user.username =~ /sys_deleted_\w{8}/
+    assert_match /^sys_deleted_\w{8}$/, user.username
     assert_nil user.current_sign_in_ip
     assert_nil user.last_sign_in_ip
-    assert_equal '', user.email
-    assert_equal '', user.hashed_email
+    assert_empty user.email
+    assert_empty user.hashed_email
     assert_nil user.parent_email
     assert_nil user.encrypted_password
     assert_nil user.uid
     assert_nil user.reset_password_token
     assert_nil user.full_address
     assert_equal({"sharing_disabled" => false}, user.properties)
-    refute_nil user.purged_at
   end
 
   test 'omniauth login stores auth token' do
