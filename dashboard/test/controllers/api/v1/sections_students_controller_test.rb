@@ -36,6 +36,37 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal expected_summary, @response.body
   end
 
+  test 'calculates completed levels count for each new student' do
+    sign_in @teacher
+
+    get :completed_levels_count, params: {section_id: @section.id}
+    assert_response :success
+    expected_level_count = [
+      {student_id: @student.id, completed_levels_count: 0}
+    ].to_json
+    assert_equal expected_level_count, @response.body
+  end
+
+  test 'accurately calculates completed levels count for each student' do
+    sign_in @teacher
+
+    @level = create(:level)
+    UserLevel.create(
+      user: @student,
+      level: @level,
+      attempts: 1,
+      best_result: 100
+    )
+    completed_levels_count = UserLevel.where(user_id: @student.id, best_result: 100).length
+
+    get :completed_levels_count, params: {section_id: @section.id}
+    assert_response :success
+    expected_level_count = [
+      {student_id: @student.id, completed_levels_count: completed_levels_count}
+    ].to_json
+    assert_equal expected_level_count, @response.body
+  end
+
   test 'teacher can update gender, name and age info for their student' do
     sign_in @teacher
     put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname'}}
