@@ -1691,6 +1691,8 @@ class User < ActiveRecord::Base
     self.full_address = nil
     self.secret_picture_id = nil
     self.secret_words = nil
+    self.school = nil
+    self.school_info_id = nil
     self.properties = {}
 
     self.purged_at = Time.zone.now
