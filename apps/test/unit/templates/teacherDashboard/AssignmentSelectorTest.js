@@ -219,13 +219,6 @@ describe('AssignmentSelector', () => {
     const wrapper = shallow(
       <AssignmentSelector
         {...defaultProps}
-        assignmentFamilies={[{
-          name: "Unit 1: Problem Solving",
-          category: "CS Discoveries",
-          position: 0,
-          category_priority: 7,
-          assignment_family_name: 'csd1',
-        }].concat(defaultProps.assignmentFamilies)}
         section={{
           ...defaultProps.section,
           courseId: null,
