@@ -16,10 +16,27 @@ class StatsTable extends Component {
     section: PropTypes.shape({
       id: PropTypes.number,
       students: PropTypes.array
-    })
+    }),
+    studentsCompletedLevelCount: PropTypes.array
   };
 
   state = {};
+
+  completedLevels = {
+    3: 10,
+    4: 20
+  };
+
+  studentsWithCompletedLevelCount = () => {
+    const {students} = this.props.section;
+    return students.map(student => {
+      return {
+        ...student,
+        // won't be this.completedLevels anymore
+        completedLevelsCount: this.completedLevels[student.id] || 0
+      };
+    });
+  };
 
   nameFormatter = (name, {rowData}) => {
     const {id: sectionId} = this.props.section;
@@ -59,7 +76,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'completed_levels_count',
+        property: 'completedLevelsCount',
         header: {
           label: 'Completed Levels', // TODO: i18n
           props: {
@@ -121,7 +138,7 @@ class StatsTable extends Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.section.students);
+    })(this.studentsWithCompletedLevelCount());
 
     return (
       <Table.Provider
