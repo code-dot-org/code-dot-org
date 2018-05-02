@@ -20,12 +20,11 @@ const alphabetMapper =  [
   commonMsg.answerOptionG(),
 ];
 
-const calculateNotAnswered = (arrRef) => {
+const calculateNotAnswered = (multipleChoiceDataArr) => {
     let total = 0;
-    arrRef.forEach(obj => {
-        if (obj.percentAnswered) {
-            const percent = (obj.percentAnswered);
-            total += percent;
+  multipleChoiceDataArr.forEach (studentsAnswersObj => {
+        if (studentsAnswersObj.percentAnswered) {
+            total += studentsAnswersObj.percentAnswered;
         }
     });
 
@@ -44,7 +43,7 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
+        percentValue={(cell && `${cell.percentAnswered}%`) || '0%'}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
         notAnswered={notAnswered}
       />
@@ -97,6 +96,7 @@ class MultipleChoiceOverviewTable extends Component {
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
+        format: answerColumnsFormatter,
         props: {style: tableLayoutStyles.cell},
       }
     }
