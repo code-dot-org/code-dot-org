@@ -6,6 +6,7 @@ import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
+import * as utils from '../../utils';
 
 const styles = {
   main: {
@@ -54,7 +55,7 @@ export default class CourseOverview extends Component {
   onChangeVersion = event => {
     const courseName = event.target.value;
     if (courseName !== this.props.name) {
-      window.location.href = `/courses/${courseName}`;
+      utils.navigateToHref(`/courses/${courseName}`);
     }
   };
 
