@@ -27,7 +27,7 @@ class StatsTable extends Component {
     return section.students.map(student => {
       return {
         ...student,
-        completedLevelsCount: studentsCompletedLevelCount[student.id] || 0
+        completed_levels_count: studentsCompletedLevelCount[student.id] || 0
       };
     });
   };
@@ -70,7 +70,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'completedLevelsCount',
+        property: 'completed_levels_count',
         header: {
           label: 'Completed Levels', // TODO: i18n
           props: {
