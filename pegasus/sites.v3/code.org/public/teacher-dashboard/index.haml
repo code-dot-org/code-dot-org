@@ -65,6 +65,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 /We Intentionally take the non-minified JS file here, as it contains a bunch of
 /angular code that runs into problems when minified. Ideally we will fix those
 /issues and minify this code.
-%script{src: asset_path('js/code.org/public/teacher-dashboard/index.js'), data: {teacherdashboard: data.to_json}}
+%script{src: asset_path('js/code.org/public/teacher-dashboard/index.js'), data: {teacherdashboard: data.to_json, cachesectionsservice: DCDO.get('cache_sections_service', false)}}
 
 %div{'ng-view' => ''}
