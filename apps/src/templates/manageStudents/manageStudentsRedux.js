@@ -19,7 +19,7 @@ export const RowType = {
 
 
 // Constants around moving students to another section.
-// TODO: add description
+// Response from server after moving student(s) to a new section
 export const TransferStatus = {
   TRANSFER_SUCCESS: "transferSuccess",
   COPY_SUCCESS: "copySuccess",
