@@ -95,6 +95,7 @@ export default class CourseOverview extends Component {
               onChange={this.onChangeVersion}
               value={name}
               style={styles.versionDropdown}
+              className="version-selector"
             >
               {versions.map(version => (
                 <option key={version.name} value={version.name}>

@@ -1,4 +1,4 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
@@ -106,6 +106,50 @@ describe('CourseOverview', () => {
         />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+    });
+  });
+
+  describe('versions dropdown', () => {
+    it('appears when two versions are present', () => {
+      const versions = [
+        {name: 'csp', version_year: '2017'},
+        {name: 'csp-2018', version_year: '2018'},
+      ];
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          versions={versions}
+          isTeacher={true}
+        />
+      );
+      // Enzyme makes it intentionally difficult to test the actual html/dom
+      // contents that gets rendered, so just test that the dropdown exists.
+      // https://github.com/airbnb/enzyme/issues/634
+      expect(wrapper.find('select.version-selector').length).to.equal(1);
+    });
+
+    it('does not appear when only one version is present', () => {
+      const versions = [
+        {name: 'csp', version_year: '2017'},
+      ];
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          versions={versions}
+          isTeacher={true}
+        />
+      );
+      expect(wrapper.find('select.version-selector').length).to.equal(0);
+    });
+
+    it('does not appear when no versions are present', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          isTeacher={true}
+        />
+      );
+      expect(wrapper.find('select.version-selector').length).to.equal(0);
     });
   });
 });
