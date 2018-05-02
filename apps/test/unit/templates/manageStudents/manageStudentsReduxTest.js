@@ -21,7 +21,8 @@ import manageStudents, {
   toggleSharingColumn,
   updateAllShareSetting,
   setSharingDefault,
-  updateStudentTransfer
+  updateStudentTransfer,
+  transferStudentsSuccess
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -235,6 +236,19 @@ describe('manageStudentsRedux', () => {
       const action = updateStudentTransfer(transferData);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferData, transferData);
+    });
+  });
+
+  describe('transferStudentsSuccess', () => {
+    it('sets transferStatus from action', () => {
+      const transferStatus = {
+        status: 'copy',
+        numStudents: 3,
+        sectionDisplay: 'ABCDEF'
+      };
+      const action = transferStudentsSuccess(transferStatus);
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.transferStatus, transferStatus);
     });
   });
 
