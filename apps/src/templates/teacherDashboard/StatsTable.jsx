@@ -138,7 +138,7 @@ class StatsTable extends Component {
       <Table.Provider
         columns={columns}
         style={styles.table}
-        id="#uitest-stats-table"
+        id="uitest-stats-table"
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />
