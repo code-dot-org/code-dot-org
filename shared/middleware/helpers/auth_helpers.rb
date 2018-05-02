@@ -30,6 +30,10 @@ def under_13?
   age < 13
 end
 
+def sharing_disabled?
+  get_sharing_disabled_from_properties(current_user[:properties])
+end
+
 # Returns the sharing_disabled property of a user with a given user_id,
 # always defaulting sharing to enabled.
 def get_user_sharing_disabled(user_id)
