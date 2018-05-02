@@ -48,8 +48,9 @@ describe('Game Lab Jr Helper Library', () => {
     // strict mode. Replace global variable/function declarations with explicit
     // window property declarations.
     const lib = GameLabJrLib
-        .replace(/^function (\w*)/gm, 'window.$1 = function ')
-        .replace(/^var /gm, 'window.');
+        .replace(/}function (\w+)/gm, '};window.$1 = function ')
+        .replace(/\bfunction (\w+)/gm, 'window.$1 = function ')
+        .replace(/\bvar /gm, 'window.');
 
     eval(lib); // eslint-disable-line no-eval
 
