@@ -32,9 +32,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
     get :index, params: {section_id: @section.id}
     assert_response :success
-    expected_summary = [
-      @student.summarize.merge(completed_levels_count: @student.user_levels.passing.count)
-    ].to_json
+    expected_summary = [@student.summarize].to_json
     assert_equal expected_summary, @response.body
   end
 
