@@ -18,18 +18,18 @@ export const RowType = {
 };
 
 // Constants around moving students to another section.
-// OTHER_TEACHER - value determines whether students will be moved to a section owned by a different teacher
-// COPY_STUDENTS - value determines whether students will be copied to the new section or moved (and subsequently removed from current section)
+// whether students will be moved to a section owned by a different teacher
 export const OTHER_TEACHER = "otherTeacher";
-export const COPY_STUDENTS = "copy";
+// whether students will be copied to the new section or moved (and subsequently removed from current section)
+export const COPY_STUDENTS = "copyStudents";
 
 /** Initial state for manageStudents.transferData redux store.
-  * studentIds - student ids selected to be moved to another section
-  * sectionId - section id to which new students will be moved
-  * otherTeacher - students are being moved to a section owned by a different teacher
-  * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
-  * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
-**/
+ * studentIds - student ids selected to be moved to another section
+ * sectionId - section id to which new students will be moved
+ * otherTeacher - students are being moved to a section owned by a different teacher
+ * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
+ * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
+ */
 export const blankStudentTransfer = {
   studentIds: [],
   sectionId: null,
