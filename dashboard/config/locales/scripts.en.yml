@@ -8134,6 +8134,12 @@ en:
               name: Minecraft Hour of Code
             Functions in Minecraft:
               name: Functions in Minecraft
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
         coursef-2018:
           title: Course F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -8260,6 +8266,18 @@ en:
               name: Conditionals with Cards
             Conditionals:
               name: Conditionals
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
