@@ -609,8 +609,8 @@ class DashboardSection
           }
         )
       end
-    # completed_levels_count is no longer needed on the UI,
-    # but adding this feild to not break anything unexpected.
+    # completed_levels_count is deprecated and is no longer needed on the UI,
+    # but adding this field to not break anything unexpected.
     @students.each do |datum|
       datum[:completed_levels_count] = 0
     end

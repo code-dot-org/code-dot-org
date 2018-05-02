@@ -857,6 +857,7 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
+                # completed_levels_count is deprecated and will always be 0
                 completed_levels_count: 0
               }
             ],
@@ -894,6 +895,7 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
+                # completed_levels_count is deprecated and will always be 0
                 completed_levels_count: 0
               }
             ],
