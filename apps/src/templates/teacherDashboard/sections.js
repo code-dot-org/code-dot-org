@@ -17,6 +17,7 @@ import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionCont
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -67,6 +68,11 @@ export function renderLoginTypeControls(sectionId) {
     </Provider>,
     loginTypeControlsMountPoint()
   );
+}
+
+export function renderStatsTable() {
+  const element = document.getElementById('stats-table-react');
+  ReactDOM.render(<StatsTable/>, element);
 }
 
 export function renderSectionTable(sectionId, loginType, courseName) {
