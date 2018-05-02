@@ -16,7 +16,7 @@ const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
 const hasAssignmentFamily = (assignmentFamilies, assignment)  => (
-  assignment && !!assignmentFamilies.find(assignmentFamily => (
+  assignment && assignmentFamilies.some(assignmentFamily => (
     assignmentFamily.assignment_family_name === assignment.assignment_family_name
   ))
 );
