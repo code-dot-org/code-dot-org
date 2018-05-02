@@ -251,7 +251,8 @@ class MoveStudents extends Component {
     } else {
       newTransferData = {
         otherTeacher: false,
-        sectionId: parseInt(sectionValue)
+        sectionId: parseInt(sectionValue),
+        copyStudents: false
       };
     }
 
