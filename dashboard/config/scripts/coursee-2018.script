@@ -186,10 +186,12 @@ level 'courseE_artist_functions5_2018'
 level 'courseE_artist_functions7_2018'
 level 'courseE_artist_functions8a_2018'
 level 'courseE_artist_functions8b_2018'
+level 'courseE_artist_functions8c_2018'
 level 'courseE_artist_functions8_2018'
 level 'courseE_artist_functions9_2018', challenge: true
 level 'courseE_artist_functions10_2018'
 level 'courseE_artist_functions_predict2_2018'
+level 'courseE_artist_functionsProj_2018'
 bonus 'courseE_artist_functions_challenge1_2018'
 bonus 'courseE_artist_functions_challenge2_2018'
 
