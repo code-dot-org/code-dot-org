@@ -2333,19 +2333,10 @@ class UserTest < ActiveSupport::TestCase
 
   test 'clear_user_and_mark_purged on teacher removes all PII and other information' do
     user = create :teacher
-    user.sign_in_count = 2
-    user.current_sign_in_at = Time.now
-    user.last_sign_in_at = Time.now - 1.day
-    user.current_sign_in_ip = '192.168.0.1'
-    user.last_sign_in_ip = '10.0.0.1'
-    user.provider = 'clever'
-    user.uid = 'fake-clever-uid'
-    user.reset_password_token = 'fake-reset-password-token'
-    user.full_address = 'fake-full-address'
-    user.save
+    add_sensitive_info_to_user user
     user.reload
 
-    # Verify presence of information we expect to purge
+    # Verify presence of information we expect to purge from a teacher
     assert user.valid?
     refute_nil user.name
     refute_nil user.username
@@ -2354,7 +2345,7 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.last_sign_in_ip
     refute_empty user.email
     refute_empty user.hashed_email
-    assert_nil user.parent_email
+    refute_nil user.parent_email # odd for a teacher, but it can happen
     refute_nil user.encrypted_password
     assert_equal user.provider, 'clever'
     refute_nil user.uid
@@ -2378,19 +2369,10 @@ class UserTest < ActiveSupport::TestCase
 
   test 'clear_user_and_mark_purged on student removes all PII and other information' do
     user = create :student
-    user.sign_in_count = 2
-    user.current_sign_in_at = Time.now
-    user.last_sign_in_at = Time.now - 1.day
-    user.current_sign_in_ip = '192.168.0.1'
-    user.last_sign_in_ip = '10.0.0.1'
-    user.parent_email = 'fake-parent-email'
-    user.provider = 'clever'
-    user.uid = 'fake-clever-uid'
-    user.reset_password_token = 'fake-reset-password-token'
-    user.save
+    add_sensitive_info_to_user user
     user.reload
 
-    # Verify presence of information we expect to purge
+    # Verify presence of information we expect to purge from a student
     assert user.valid?
     refute_nil user.name
     refute_nil user.username
@@ -2419,6 +2401,22 @@ class UserTest < ActiveSupport::TestCase
     # Also check information intentionally not purged
     assert_equal user.user_type, 'student'
     assert_equal user.provider, 'clever'
+  end
+
+  def add_sensitive_info_to_user(user)
+    # Can add things that only make sense for a student or a teacher here;
+    # Model should perform some clean-up on save anyway.
+    user.sign_in_count = 2
+    user.current_sign_in_at = Time.now
+    user.last_sign_in_at = Time.now - 1.day
+    user.current_sign_in_ip = '192.168.0.1'
+    user.last_sign_in_ip = '10.0.0.1'
+    user.parent_email = 'fake-parent-email'
+    user.provider = 'clever'
+    user.uid = 'fake-clever-uid'
+    user.reset_password_token = 'fake-reset-password-token'
+    user.full_address = 'fake-full-address'
+    user.save
   end
 
   def assert_sensitive_info_was_purged(user)
