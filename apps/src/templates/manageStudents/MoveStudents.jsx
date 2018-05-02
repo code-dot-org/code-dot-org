@@ -59,7 +59,8 @@ const styles = {
     width: INPUT_WIDTH
   },
   radioOption: {
-    paddingLeft: PADDING / 2
+    paddingLeft: PADDING / 2,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
