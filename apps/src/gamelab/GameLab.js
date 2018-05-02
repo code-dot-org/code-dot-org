@@ -75,7 +75,8 @@ var ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
+  SPACE: 'studio-space-button',
 };
 
 /**
@@ -172,6 +173,7 @@ GameLab.prototype.init = function (config) {
   this.skin.winAvatar = null;
   this.skin.failureAvatar = null;
   this.level = config.level;
+  this.showDPad = config.level.showDPad && config.share && dom.isMobile();
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
@@ -299,9 +301,6 @@ GameLab.prototype.init = function (config) {
       }
     }
   };
-
-  // Always hide DPad until better UI is created.
-  // this.level.showDPad = false;
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
@@ -452,7 +451,7 @@ GameLab.prototype.afterInject_ = function (config) {
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
-  if (this.level.showDPad) {
+  if (this.showDPad) {
     dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
         this.onDPadButtonDown.bind(this));
   }
@@ -579,7 +578,7 @@ GameLab.prototype.reset = function () {
     $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
-  if (this.level.showDPad) {
+  if (this.showDPad) {
     $('#studio-dpad').removeClass('studio-dpad-none');
     this.resetDPad();
   }
@@ -725,6 +724,8 @@ function p5KeyCodeFromArrow(idBtn) {
       return window.p5.prototype.UP_ARROW;
     case ArrowIds.DOWN:
       return window.p5.prototype.DOWN_ARROW;
+    case ArrowIds.SPACE:
+      return window.p5.prototype.KEY.SPACE;
   }
 }
 
@@ -841,6 +842,11 @@ GameLab.prototype.resetDPad = function () {
 GameLab.prototype.onMouseUp = function (e) {
   // Reset all arrow buttons on "global mouse up" - this handles the case where
   // the mouse moved off the arrow button and was released somewhere else
+
+  if (e.touches && e.touches.length > 0) {
+    return;
+  }
+
   for (var buttonId in this.btnState) {
     if (this.btnState[buttonId] === ButtonState.DOWN) {
 
