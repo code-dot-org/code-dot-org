@@ -11,11 +11,11 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "free_play": "false",
+    "free_play": "true",
     "instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "ideal": "14",
     "embed": "false",
-    "markdown_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
+    "markdown_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \r\n\r\nCan you make something like this pinwheel?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "impressive": "true",
+    "impressive": "false",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
     "authored_hints": "[]",
@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 22:22:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-13 22:37:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 22:54:55 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:55:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-09 18:06:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-02 17:29:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:33:31 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:35:31 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:38:21 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:38:56 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 22:22:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-13 22:37:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 22:54:55 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:55:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-09 18:06:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-02 17:29:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:33:31 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:35:31 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:38:21 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:38:56 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 19:39:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 19:41:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"markdown_instructions\",\"impressive\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -161,37 +161,21 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move" inline="true">
+          <block type="draw_move_by_constant">
             <title name="DIR">moveForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnRight</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnLeft</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
-          <block type="jump" inline="true">
+          <block type="jump_by_constant">
             <title name="DIR">jumpForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
           <block type="jump_to">
             <title name="VALUE">7</title>
@@ -200,12 +184,8 @@
             <title name="XPOS">0</title>
             <title name="YPOS">0</title>
           </block>
-          <block type="point_to_param" inline="true">
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+          <block type="point_to_by_constant_restricted">
+            <title name="VALUE">0</title>
           </block>
         </category>
         <category name="Brushes">
@@ -245,16 +225,12 @@
           <block type="alpha" inline="false">
             <value name="VALUE">
               <block type="math_number">
-                <title name="NUM">???</title>
+                <title name="NUM">50</title>
               </block>
             </value>
           </block>
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+          <block type="draw_width_inline">
+            <title name="WIDTH">1</title>
           </block>
           <block type="draw_line_style_pattern">
             <title name="VALUE">DEFAULT</title>
@@ -272,30 +248,8 @@
           </block>
         </category>
         <category name="Loops">
-          <block type="controls_for" inline="true">
-            <title name="VAR">i</title>
-            <value name="FROM">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-            <value name="TO">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-            <value name="BY">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+          <block type="controls_repeat">
+            <title name="TIMES">4</title>
           </block>
         </category>
         <category name="Math">
@@ -312,15 +266,6 @@
             <value name="B">
               <block type="math_number">
                 <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-        </category>
-        <category name="Logic">
-          <block type="controls_if" inline="false">
-            <value name="IF0">
-              <block type="logic_compare" inline="true">
-                <title name="OP">EQ</title>
               </block>
             </value>
           </block>
@@ -359,17 +304,6 @@
               <arg name="length"/>
               <arg name="repeat"/>
             </mutation>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">sides</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
           </block>
         </category>
       </xml>
