@@ -37,7 +37,7 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
-  after_update :mark_user_level, if: proc {|review| review.status_changed? || review.data_changed?}
+  after_update :mark_user_level, if: -> {review.status_changed? || review.data_changed?}
 
   SYSTEM_DELETED_DATA = ''.freeze
 
