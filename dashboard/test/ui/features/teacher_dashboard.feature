@@ -33,8 +33,7 @@ Feature: Using the teacher dashboard
 
     When I click selector "a:contains('View New Section')" once I see it
     And I click selector "#learn-tabs a:contains('Stats')" once I see it
-    And I wait until element "#uitest-stats-tab td:nth(0)" is visible
-    And element "#uitest-stats-tab td:nth(0)" contains text "Sally"
+    And I wait until element "#uitest-stats-table" is visible
 
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
