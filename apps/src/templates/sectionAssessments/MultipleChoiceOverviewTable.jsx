@@ -20,7 +20,7 @@ const alphabetMapper =  [
   commonMsg.answerOptionG(),
 ];
 
-const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}, index) => {
+const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
   return (
       <MultipleChoiceAnswerCell
@@ -70,7 +70,7 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
-  getNotAnsweredColumn = (index) => (
+  getNotAnsweredColumn = () => (
     {
       header: {
         label: commonMsg.notAnswered(),
@@ -110,10 +110,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getColumns = (sortable) => {
     const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
-      if (currentAnswerCount.answers.length > answersTotal) {
-        return currentAnswerCount.answers.length;
-      }
-      return answersTotal;
+      return Math.max(answersTotal, currentAnswerCount.answers.length);
     }, 0);
 
     let dataColumns = [];
