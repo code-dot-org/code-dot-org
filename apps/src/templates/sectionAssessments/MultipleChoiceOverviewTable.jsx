@@ -20,13 +20,33 @@ const alphabetMapper =  [
   commonMsg.answerOptionG(),
 ];
 
+const calculateNotAnswered = (arrRef) => {
+    let total = 0;
+    arrRef.forEach(obj => {
+        if (obj.percentAnswered) {
+            const percent = (obj.percentAnswered);
+            total += percent;
+        }
+    });
+
+    return `${(100 - total)}%`;
+};
+
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
+
+  let notAnswered = undefined;
+
+  if (property === 'notAnswered') {
+    notAnswered = calculateNotAnswered(rowData.answers);
+  }
+
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
         percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
+        notAnswered={notAnswered}
       />
   );
 };
