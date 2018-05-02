@@ -13,11 +13,24 @@ const styles = {
   },
   description: {
     marginBottom: 20
+  },
+  titleWrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+  },
+  title: {
+    display: 'inline-block',
+  },
+  versionDropdown: {
+    display: 'inline-block',
+    marginBottom: 13,
   }
 };
 
 export default class CourseOverview extends Component {
   static propTypes = {
+    name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     descriptionStudent: PropTypes.string,
@@ -32,10 +45,22 @@ export default class CourseOverview extends Component {
     scripts: PropTypes.array.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    versions: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      version_year: PropTypes.string.isRequired
+    })).isRequired,
+  };
+
+  onChangeVersion = event => {
+    const courseName = event.target.value;
+    if (courseName !== this.props.name) {
+      window.location.href = `/courses/${courseName}`;
+    }
   };
 
   render() {
     const {
+      name,
       title,
       id,
       descriptionStudent,
@@ -47,6 +72,7 @@ export default class CourseOverview extends Component {
       scripts,
       isVerifiedTeacher,
       hasVerifiedResources,
+      versions,
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -62,7 +88,22 @@ export default class CourseOverview extends Component {
 
     return (
       <div style={mainStyle}>
-        <h1>{title}</h1>
+        <div style={styles.titleWrapper}>
+          <h1 style={styles.title}>{title}</h1>
+          {versions.length > 1 &&
+            <select
+              onChange={this.onChangeVersion}
+              value={name}
+              style={styles.versionDropdown}
+            >
+              {versions.map(version => (
+                <option key={version.name} value={version.name}>
+                  {version.version_year}
+                </option>
+              ))}
+            </select>
+          }
+        </div>
         <div style={styles.description}>
           {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
         </div>

@@ -5,6 +5,7 @@ import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
+  name: 'csp',
   title: 'Computer Science Principles',
   id: 30,
   descriptionStudent: 'Desc here',
@@ -28,6 +29,7 @@ const defaultProps = {
   }],
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
+  versions: [],
 };
 
 describe('CourseOverview', () => {
