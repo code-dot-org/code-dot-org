@@ -72,6 +72,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getNotAnsweredColumn = () => (
     {
+      property: 'notAnswered',
       header: {
         label: commonMsg.notAnswered(),
         props: {style: tableLayoutStyles.headerCell},
@@ -84,6 +85,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getAnswerColumn = (index) => (
     {
+      property: 'percentAnswered',
       header: {
         label: alphabetMapper[index],
         props: {style: tableLayoutStyles.headerCell},
@@ -97,6 +99,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getQuestionColumn = (sortable) => (
     {
+      property: 'question',
       header: {
         label: commonMsg.question(),
         props: {style: tableLayoutStyles.headerCell},
@@ -114,19 +117,11 @@ class MultipleChoiceOverviewTable extends Component {
     }, 0);
 
     let dataColumns = [];
-    let columns = this.getQuestionColumn(sortable) ;
-
-    dataColumns.push({property: 'question', ...columns});
-
+    dataColumns.push(this.getQuestionColumn(sortable));
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.getAnswerColumn(i);
-
-      dataColumns.push({property: 'percentAnswered' , ...questionOption});
+      dataColumns.push(this.getAnswerColumn(i));
     }
-
-    // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
-    // maxAnswerChoicesLength does not include question column.
-    dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
+    dataColumns.push(this.getNotAnsweredColumn(maxAnswerChoicesLength + 2));
 
     return dataColumns;
   };
