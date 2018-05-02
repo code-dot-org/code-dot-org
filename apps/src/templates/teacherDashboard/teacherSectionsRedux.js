@@ -333,9 +333,6 @@ const initialState = {
   sectionIds: [],
   selectedSectionId: NO_SECTION,
   validAssignments: {},
-  // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
-  // that are not in a course)
-  primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited
@@ -419,9 +416,6 @@ export default function teacherSections(state=initialState, action) {
     // An array of assignment families. See the assignmentFamilyShape PropType.
     const assignmentFamilies = [];
 
-    // Primary assignment ids are (a) courses and (b) scripts that are not in any
-    // of our courses.
-    let primaryAssignmentIds = [];
     let secondaryAssignmentIds = [];
 
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
@@ -447,7 +441,6 @@ export default function teacherSections(state=initialState, action) {
         assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
       }
 
-      primaryAssignmentIds.push(assignId);
       secondaryAssignmentIds.push(...scriptAssignIds);
     });
     secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
@@ -469,8 +462,6 @@ export default function teacherSections(state=initialState, action) {
       };
 
       if (!secondaryAssignmentIds.includes(assignId)) {
-        primaryAssignmentIds.push(assignId);
-
         // Scripts currently have only one version, so each script will form its
         // own assignment family.
         assignmentFamilies.push({
@@ -483,7 +474,6 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       validAssignments,
-      primaryAssignmentIds,
       assignmentFamilies,
     };
   }
