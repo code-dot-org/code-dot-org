@@ -21,8 +21,9 @@ export const RowType = {
 // Constants around moving students to another section.
 // TODO: add description
 export const TransferStatus = {
-  TRANSFER: "transfer",
-  COPY: "copy"
+  TRANSFER_SUCCESS: "transferSuccess",
+  COPY_SUCCESS: "copySuccess",
+  FAIL: "fail"
 };
 // whether students will be moved to a section owned by a different teacher
 export const OTHER_TEACHER = "otherTeacher";
@@ -125,6 +126,7 @@ const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
 const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
+const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -142,6 +144,7 @@ export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, 
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
 export const transferStudentsSuccess = transferStatus => ({ type: TRANSFER_STUDENTS_SUCCESS, transferStatus });
+export const transferStudentsFailure = transferStatus => ({ type: TRANSFER_STUDENTS_FAILURE, transferStatus });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -263,21 +266,28 @@ export const transferStudents = () => {
     }
 
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+      const numStudents = studentIds.length;
+      // Get section name for new section from teacherSectionsRedux
+      const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
+
       if (error) {
         console.error(error);
+        dispatch(transferStudentsFailure({
+          status: TransferStatus.FAIL,
+          numStudents: numStudents,
+          sectionDisplay: sectionDisplay
+        }));
       } else {
         if (!copyStudents || !otherTeacher) {
           studentIds.forEach(id => {
             dispatch(removeStudent(id));
           });
         }
-        const transferStatus = {
-          status: copyStudents ? TransferStatus.COPY : TransferStatus.TRANSFER,
-          numStudents: studentIds.length,
-          // Get section name for new section from teacherSectionsRedux
-          sectionDisplay: otherTeacher ? otherTeacherSection : sectionName(state, newSectionId)
-        };
-        dispatch(transferStudentsSuccess(transferStatus));
+        dispatch(transferStudentsSuccess({
+          status: copyStudents ? TransferStatus.COPY_SUCCESS : TransferStatus.TRANSFER_SUCCESS,
+          numStudents: numStudents,
+          sectionDisplay: sectionDisplay
+        }));
         dispatch(updateStudentTransfer({...blankStudentTransfer}));
       }
     });
@@ -556,6 +566,15 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === TRANSFER_STUDENTS_SUCCESS) {
+    return {
+      ...state,
+      transferStatus: {
+        ...state.transferStatus,
+        ...action.transferStatus
+      }
+    };
+  }
+  if (action.type === TRANSFER_STUDENTS_FAILURE) {
     return {
       ...state,
       transferStatus: {
