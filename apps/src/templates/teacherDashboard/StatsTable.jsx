@@ -17,23 +17,17 @@ class StatsTable extends Component {
       id: PropTypes.number,
       students: PropTypes.array
     }),
-    studentsCompletedLevelCount: PropTypes.array
+    studentsCompletedLevelCount: PropTypes.object
   };
 
   state = {};
 
-  completedLevels = {
-    3: 10,
-    4: 20
-  };
-
   studentsWithCompletedLevelCount = () => {
-    const {students} = this.props.section;
-    return students.map(student => {
+    const {section, studentsCompletedLevelCount} = this.props;
+    return section.students.map(student => {
       return {
         ...student,
-        // won't be this.completedLevels anymore
-        completedLevelsCount: this.completedLevels[student.id] || 0
+        completedLevelsCount: studentsCompletedLevelCount[student.id] || 0
       };
     });
   };
