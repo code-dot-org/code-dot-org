@@ -12,11 +12,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   # GET /sections/<section_id>/students/completed_levels_count
   def completed_levels_count
     passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students.pluck(:id))
-    completed_levels_count_per_student = @section.students.map do |student|
-      {
-        student_id: student.id,
-        completed_levels_count: passing_level_counts[student.id] || 0
-      }
+    completed_levels_count_per_student = {}
+    @section.students.each do |student|
+      completed_levels_count_per_student[student.id] = passing_level_counts[student.id] || 0
     end
     render json: completed_levels_count_per_student
   end
