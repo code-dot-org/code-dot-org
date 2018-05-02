@@ -25,6 +25,7 @@
 
 createEdgeSprites();
 let inputEvents = [];
+let touchEvents = [];
 let collisionEvents = [];
 let loops = [];
 let sprites = [];
@@ -166,11 +167,11 @@ function whileSpace(event) {
 }
 
 function whenMouseClicked(event) {
-  inputEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+  touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
 function clickedOn(sprite, event) {
-  inputEvents.push({type: mousePressedOver, event: event, param: sprite});
+  touchEvents.push({type: mousePressedOver, event: event, param: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -315,8 +316,8 @@ function draw() {
       });
     });
 
-    // Run input events
-    for (var i=0; i<inputEvents.length; i++) {
+    // Run key events
+    for (let i = 0; i < inputEvents.length; i++) {
       const eventType = inputEvents[i].type;
       const event = inputEvents[i].event;
       const param = inputEvents[i].param;
@@ -325,8 +326,18 @@ function draw() {
       }
     }
 
+    // Run touch events
+    for (let i = 0; i < touchEvents.length; i++) {
+      const eventType = touchEvents[i].type;
+      const event = touchEvents[i].event;
+      const param = touchEvents[i].param;
+      if (eventType(param)) {
+        event();
+      }
+    }
+
     // Run collision events
-    for (let i=0; i<collisionEvents.length; i++) {
+    for (let i = 0; i<collisionEvents.length; i++) {
       const collisionEvent = collisionEvents[i];
       const a = collisionEvent.a;
       const b = collisionEvent.b;
@@ -341,7 +352,7 @@ function draw() {
     }
 
     // Run loops
-    for (let i=0; i<loops.length; i++) {
+    for (let i = 0; i<loops.length; i++) {
       var loop = loops[i];
       if (!loop.condition()) {
         loops.splice(i, 1);
