@@ -21,9 +21,13 @@ export const RowType = {
 // Constants around moving students to another section.
 // Response from server after moving student(s) to a new section
 export const TransferStatus = {
-  TRANSFER_SUCCESS: "transferSuccess",
-  COPY_SUCCESS: "copySuccess",
+  SUCCESS: "success",
   FAIL: "fail"
+};
+// TODO: description
+export const TransferType = {
+  MOVE_STUDENTS: "moveStudents",
+  COPY_STUDENTS: "copyStudents"
 };
 // whether students will be moved to a section owned by a different teacher
 export const OTHER_TEACHER = "otherTeacher";
@@ -101,6 +105,7 @@ const initialState = {
   transferData: {...blankStudentTransfer},
   transferStatus: {
     status: null,
+    type: null,
     numStudents: 0,
     sectionDisplay: ''
   }
@@ -267,6 +272,7 @@ export const transferStudents = () => {
 
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       const numStudents = studentIds.length;
+      const transferType = copyStudents ? TransferType.COPY_STUDENTS : TransferType.MOVE_STUDENTS;
       // Get section name for new section from teacherSectionsRedux
       const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
 
@@ -284,7 +290,8 @@ export const transferStudents = () => {
           });
         }
         dispatch(transferStudentsSuccess({
-          status: copyStudents ? TransferStatus.COPY_SUCCESS : TransferStatus.TRANSFER_SUCCESS,
+          status: TransferStatus.SUCCESS,
+          type: transferType,
           numStudents: numStudents,
           sectionDisplay: sectionDisplay
         }));
