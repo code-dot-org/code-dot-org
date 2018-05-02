@@ -1218,15 +1218,6 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
-Then /^I select the first section$/ do
-  steps %{
-    And I wait to see ".uitest-sectionselect"
-  }
-  @browser.execute_script(
-    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
-  )
-end
-
 def refute_bad_gateway_or_site_unreachable
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to end_with('Bad Gateway')

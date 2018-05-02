@@ -35,6 +35,15 @@ And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do 
   }
 end
 
+Then /^I select the first section$/ do
+  steps %{
+    And I wait to see ".uitest-sectionselect"
+  }
+  @browser.execute_script(
+    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
+  )
+end
+
 And(/^I save the section url$/) do
   section_code = @browser.execute_script <<-SCRIPT
     return document
@@ -126,14 +135,4 @@ def get_section_id_from_table(row_index)
   section_id = href.split('/').last.to_i
   expect(section_id).to be > 0
   section_id
-end
-
-And(/^I save the section url$/) do
-  section_code = @browser.execute_script <<-SCRIPT
-    return document
-      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
-      .textContent
-      .trim();
-  SCRIPT
-  @section_url = "http://studio.code.org/join/#{section_code}"
 end
