@@ -17,13 +17,13 @@ export const RowType = {
   STUDENT: "studentRow",
 };
 
+
+// Constants around moving students to another section.
 // TODO: add description
 export const TransferStatus = {
   TRANSFER: "transfer",
   COPY: "copy"
 };
-
-// Constants around moving students to another section.
 // whether students will be moved to a section owned by a different teacher
 export const OTHER_TEACHER = "otherTeacher";
 // whether students will be copied to the new section or moved (and subsequently removed from current section)
@@ -124,7 +124,7 @@ const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
-const TRANSFER_STUDENT_SUCCESS = 'manageStudents/TRANSFER_STUDENT_SUCCESS';
+const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -141,7 +141,7 @@ export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTI
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
-export const transferStudentsSuccess = transferStatus => ({ type: TRANSFER_STUDENT_SUCCESS, transferStatus });
+export const transferStudentsSuccess = transferStatus => ({ type: TRANSFER_STUDENTS_SUCCESS, transferStatus });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -276,9 +276,8 @@ export const transferStudents = () => {
           numStudents: studentIds.length,
           sectionDisplay: otherTeacher ? otherTeacherSection : sectionName(state, state.manageStudents.sectionId)
         };
-        console.log(transferStatus);
-        transferStudentsSuccess(transferStatus);
-        updateStudentTransfer({...blankStudentTransfer});
+        dispatch(transferStudentsSuccess(transferStatus));
+        dispatch(updateStudentTransfer({...blankStudentTransfer}));
       }
     });
   };
@@ -555,13 +554,14 @@ export default function manageStudents(state=initialState, action) {
       }
     };
   }
-  if (action.type === TRANSFER_STUDENT_SUCCESS) {
+  if (action.type === TRANSFER_STUDENTS_SUCCESS) {
     return {
       ...state,
       transferData: {
         ...state.transferData,
         transferStatus: {
-          ...action.transferData
+          ...state.transferStatus,
+          ...action.transferStatus
         }
       }
     };
