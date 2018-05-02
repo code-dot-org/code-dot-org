@@ -70,9 +70,14 @@ export function renderLoginTypeControls(sectionId) {
   );
 }
 
-export function renderStatsTable() {
+export function renderStatsTable(section) {
   const element = document.getElementById('stats-table-react');
-  ReactDOM.render(<StatsTable/>, element);
+  ReactDOM.render(
+    <StatsTable
+      section={section}
+    />,
+    element
+  );
 }
 
 export function renderSectionTable(sectionId, loginType, courseName) {
