@@ -609,7 +609,7 @@ class DashboardSection
           }
         )
       end
-    # Ccompleted_levels_count is no longer needed on the UI,
+    # completed_levels_count is no longer needed on the UI,
     # but adding this feild to not break anything unexpected.
     @students.each do |datum|
       datum[:completed_levels_count] = 0
