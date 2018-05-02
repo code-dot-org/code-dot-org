@@ -1,0 +1,74 @@
+name 'CSD U5 student record_2018'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Student record
+
+<div style="float: right; height:209px; width: 456px; background-color: black;">
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">0</div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">1</div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">2</div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  
+  <div style="float:left; height:53px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">3</div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+</div>
+
+## The student record holds information according to the following rules:
+
+ * <h4>The first eight bits store the student's grade as a binary number.</h4>
+ * <h4>The second eight store the student's age as a binary number.</h4>
+ * <h4>The next eight store the student's first initial in ASCII.</h4>
+ * <h4>The last eight store the student's last initial in ASCII.</h4>
+
+<br />
+<br />
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[key]
+
+**Byte 0:** The student is in Grade 9.
+
+**Byte 1:** The student is 15 years old.
+
+**Byte 2** The student's first initial is "J".
+
+**Byte 3** The second initial is "H".
+
+[/key]
+
+To hide this box when you display the level, click the teacher panel on the right hand side of this page and choose the "View as Student" option.
+MARKDOWN

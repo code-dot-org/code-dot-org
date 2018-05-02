@@ -18,7 +18,7 @@ def sync_in
   run_bash_script "bin/i18n-codeorg/in.sh"
 end
 
-def copy_to_yml(label, data, allow_full_length=false)
+def copy_to_yml(label, data, allow_full_length=true)
   args = allow_full_length ? {line_width: -1} : {}
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
     data = ({"en" => {"data" => {label => data}}}).to_yaml(**args)
@@ -41,6 +41,12 @@ def reformat_quotes
     temp_file.close
     FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
   end
+end
+
+# sanitize a string before uploading to crowdin. Currently only performs
+# CRLF -> LF conversion, but could be extended to do more
+def sanitize(string)
+  return string.gsub(/\r\n?/, "\n")
 end
 
 # Pull in various fields for levelbuilder levels from .level files and
@@ -75,13 +81,13 @@ def localize_level_content
         # Instructions
         instruction_match = line.match instruction_pattern
         if instruction_match
-          level_instructions[level] = instruction_match.captures.first
+          level_instructions[level] = sanitize instruction_match.captures.first
         end
 
         # Markdown Instructions
         markdown_instruction_match = line.match markdown_instruction_pattern
         if markdown_instruction_match
-          level_markdown_instructions[markdown_level] = markdown_instruction_match.captures.first
+          level_markdown_instructions[markdown_level] = sanitize markdown_instruction_match.captures.first
         end
 
         # Failure message overrides
