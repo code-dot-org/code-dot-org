@@ -187,6 +187,7 @@ function main() {
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
          surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
+         completedLevelsCount: {method:'GET', url:'/dashboardapi/sections/:id/students/completed_levels_count', isArray: true}
       });
     }]).config(['$httpProvider', function ($httpProvider) {
       // X-Requested-With header required for CSRF requests protected by Rack::Protection::JsonCsrf included by Sinatra.
