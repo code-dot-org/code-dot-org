@@ -5,6 +5,7 @@ content-type: text/ng-template
 ---
 
 #uitest-stats-tab{style: "padding-left:20px", 'ng-init' => '$emit("stats-table-rendered");'}
+  %div.alert.alert-warning The Completed Level count is temporarily disabled and will return in a few days. In the meantime, you can still access level-by-level student progress on the Progress tab.
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
     %colgroup
       %col{width: "200"}/
@@ -14,13 +15,9 @@ content-type: text/ng-template
       %th.manage-th
         %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
       %th.manage-th
-        %a{href: "", "ng-click" => "order = 'completed_levels_count'"}= I18n.t('dashboard_students_completed_levels')
-      %th.manage-th
         %a{href: "", "ng-click" => "order = 'total_lines'"}= I18n.t('dashboard_students_total_lines')
     %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
       %td
         %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
-      %td
-        {{student.completed_levels_count}}
       %td
         {{student.total_lines}}
