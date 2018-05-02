@@ -123,8 +123,9 @@ class MultipleChoiceOverviewTable extends Component {
 
       dataColumns.push({property: 'percentAnswered' , ...questionOption});
     }
+
     // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
-    // maxAnswerChoicesLength does not include Question column.
+    // maxAnswerChoicesLength does not include question column.
     dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
 
     return dataColumns;
