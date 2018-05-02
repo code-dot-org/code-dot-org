@@ -82,10 +82,11 @@ class ChannelsApi < Sinatra::Base
     timestamp = Time.now
 
     published_at = nil
+
     if data['shouldPublish']
       project_type = data['projectType']
-      bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
-      forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
       # The client decides whether to publish the project, but we rely on the
       # server to generate the timestamp. Remove shouldPublish from the project
@@ -179,8 +180,8 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
-    bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
-    forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
