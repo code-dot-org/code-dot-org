@@ -251,9 +251,10 @@ button.arrow:disabled {
 $dpad-button: #FFFFFF;
 $dpad-border: #EFEFEF;
 $dpad-shadow: #7F7F7F;
-$dpad-active-border: #F78183;
+$dpad-active-border: #9F9F9F;
 $dpad-cone-active: #FFD080;
 $dpad-cone-inactive: #9C9C9C;
+$dpad-rim: #FFFFFF;
 
 #studio-dpad {
   display: inline-block;
@@ -265,15 +266,22 @@ $dpad-cone-inactive: #9C9C9C;
   }
 }
 
-#studio-dpad-cone {
+#studio-dpad-rim {
   position: absolute;
   width: 0px;
   height: 0px;
-  border-left: 37px solid $dpad-cone-inactive;
-  border-right: 37px solid $dpad-cone-inactive;
-  border-top: 37px solid $dpad-cone-inactive;
-  border-bottom: 37px solid $dpad-cone-inactive;
-  border-radius: 37px;
+  border: 76px solid $dpad-rim;
+  border-radius: 76px;
+  box-shadow: 1px 1px 1px 0 $dpad-shadow;
+}
+
+#studio-dpad-cone {
+  position: absolute;
+  margin: 2px;
+  width: 0px;
+  height: 0px;
+  border: 74px solid $dpad-cone-inactive;
+  border-radius: 74px;
   &.left {
     border-top-color: $dpad-cone-active;
     transform: rotate(270deg);
@@ -307,10 +315,10 @@ $dpad-cone-inactive: #9C9C9C;
 #studio-dpad-button {
   display: inline;
   position: relative;
-  border-radius: 22px;
-  width: 44px;
-  height: 44px;
-  margin: 15px 5px 5px 15px;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  margin: 36px 5px 5px 36px;
   border: 1px solid $dpad-border;
   background-color: $dpad-button;
   box-shadow: 1px 1px 1px 0 $dpad-shadow;
@@ -319,16 +327,38 @@ $dpad-cone-inactive: #9C9C9C;
     box-shadow: none;
   }
   &.left {
-    left: -5px;
+    left: -17px;
   }
   &.right {
-    left: 5px;
+    left: 17px;
   }
   &.up {
-    top: -5px;
+    top: -17px;
   }
   &.down {
-    top: 5px;
+    top: 17px;
+  }
+}
+
+$space-fill: #FFA000;
+$space-shadow: #FFD07F;
+$space-border: #666666;
+$space-active-border: #9F9F9F;
+
+#studio-space-button {
+  position: absolute;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  right: 10px;
+  border-color: $space-border;
+  background-color: $space-fill;
+  box-shadow: inset 1px 1px 0px 0 $space-shadow;
+  &.active {
+    border: 1px solid $space-active-border;
+  }
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -1654,6 +1684,7 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
 .legacy-share-view {
   overflow: hidden;
+  position: fixed;
 
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
