@@ -40,7 +40,7 @@ const multipleChoiceData = [
                {percentAnswered: 10, isCorrectAnswer: false},
                {percentAnswered: 9, isCorrectAnswer: false},
                {percentAnswered: 5, isCorrectAnswer: false},
-               {percentAnswered: 45, isCorrectAnswer: true},
+               {percentAnswered: 32, isCorrectAnswer: true},
                {percentAnswered: 5, isCorrectAnswer: false},
     ],
   },
