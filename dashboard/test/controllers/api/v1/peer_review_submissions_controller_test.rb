@@ -104,7 +104,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
-      [[@level_1_reviews.first.id, nil], [@escalated_reviews.second.id, 'escalated']],
+      [[@level_1_reviews.first.id, nil], [@level_1_reviews.second.id, 'escalated']],
       [[@level_2_reviews.first.id, nil], [@level_2_reviews.second.id, 'accepted']],
       [[@level_3_reviews.first.id, nil], [@level_3_reviews.second.id, 'escalated']],
     ], response.map {|submission| submission['review_ids']}
