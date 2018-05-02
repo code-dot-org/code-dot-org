@@ -332,7 +332,12 @@ const initialState = {
   validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
+  // A map from assignmentId to assignment (see assignmentShape PropType).
   validAssignments: {},
+  // Array of assignment families, to populate the assignment family dropdown
+  // with options like "CSD", "Course A", or "Frozen". See the
+  // assignmentFamilyShape PropType.
+  assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited
@@ -412,10 +417,9 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
-
-    // An array of assignment families. See the assignmentFamilyShape PropType.
     const assignmentFamilies = [];
 
+    // Array of assignment ids of scripts which belong to any valid courses.
     let secondaryAssignmentIds = [];
 
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
@@ -461,6 +465,9 @@ export default function teacherSections(state=initialState, action) {
         version_year: defaultVersionYear,
       };
 
+      // Do not add assignment families for scripts belonging to courses. To assign
+      // them, one must first select the corresponding course from the assignment
+      // family dropdown, and then select the script from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
         // Scripts currently have only one version, so each script will form its
         // own assignment family.
