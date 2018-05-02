@@ -41,12 +41,7 @@ export const blankStudentTransfer = {
   sectionId: null,
   otherTeacher: false,
   otherTeacherSection: '',
-  copyStudents: true,
-  transferStatus: {
-    status: TransferStatus.COPY,
-    numStudents: 0,
-    sectionDisplay: ''
-  }
+  copyStudents: true
 };
 
 // This doesn't get used to make a server call, but does
@@ -102,7 +97,12 @@ const initialState = {
   sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
-  transferData: {...blankStudentTransfer}
+  transferData: {...blankStudentTransfer},
+  transferStatus: {
+    status: null,
+    numStudents: 0,
+    sectionDisplay: ''
+  }
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -274,7 +274,8 @@ export const transferStudents = () => {
         const transferStatus = {
           status: copyStudents ? TransferStatus.COPY : TransferStatus.TRANSFER,
           numStudents: studentIds.length,
-          sectionDisplay: otherTeacher ? otherTeacherSection : sectionName(state, state.manageStudents.sectionId)
+          // Get section name for new section from teacherSectionsRedux
+          sectionDisplay: otherTeacher ? otherTeacherSection : sectionName(state, newSectionId)
         };
         dispatch(transferStudentsSuccess(transferStatus));
         dispatch(updateStudentTransfer({...blankStudentTransfer}));
@@ -557,12 +558,9 @@ export default function manageStudents(state=initialState, action) {
   if (action.type === TRANSFER_STUDENTS_SUCCESS) {
     return {
       ...state,
-      transferData: {
-        ...state.transferData,
-        transferStatus: {
-          ...state.transferStatus,
-          ...action.transferStatus
-        }
+      transferStatus: {
+        ...state.transferStatus,
+        ...action.transferStatus
       }
     };
   }
