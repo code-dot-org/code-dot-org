@@ -121,7 +121,7 @@ class MultipleChoiceOverviewTable extends Component {
     for (let i = 0; i < maxAnswerChoicesLength; i++) {
       dataColumns.push(this.getAnswerColumn(i));
     }
-    dataColumns.push(this.getNotAnsweredColumn(maxAnswerChoicesLength + 2));
+    dataColumns.push(this.getNotAnsweredColumn());
 
     return dataColumns;
   };
