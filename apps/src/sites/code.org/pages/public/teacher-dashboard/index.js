@@ -19,6 +19,7 @@ import {
   renderLoginTypeControls,
   unmountLoginTypeControls,
   renderSectionTable,
+  renderStatsTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -387,6 +388,7 @@ function main() {
 
     if ($scope.tab === 'stats') {
       $scope.$on('stats-table-rendered', () => {
+        $scope.section.$promise.then(renderStatsTable);
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
