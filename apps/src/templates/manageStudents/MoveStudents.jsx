@@ -15,8 +15,10 @@ import {
   transferStudents,
   OTHER_TEACHER,
   COPY_STUDENTS,
-  blankStudentTransfer
+  blankStudentTransfer,
+  TransferStatus
 } from './manageStudentsRedux';
+import color from "@cdo/apps/util/color";
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -60,6 +62,10 @@ const styles = {
   },
   radioOption: {
     paddingLeft: PADDING / 2
+  },
+  error: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red
   }
 };
 
@@ -77,6 +83,12 @@ class MoveStudents extends Component {
       otherTeacher: PropTypes.bool.isRequired,
       otherTeacherSection: PropTypes.string.isRequired,
       copyStudents: PropTypes.bool.isRequired
+    }),
+    transferStatus: PropTypes.shape({
+      status: PropTypes.string,
+      type: PropTypes.string,
+      numStudents: PropTypes.number,
+      sectionDisplay: PropTypes.string
     }),
 
     // redux provided
@@ -272,8 +284,11 @@ class MoveStudents extends Component {
   };
 
   transfer = () => {
-    this.props.transferStudents();
-    this.closeDialog();
+    const {transferStudents, transferStatus} = this.props;
+    transferStudents();
+    if (transferStatus.status === TransferStatus.SUCCESS) {
+      this.closeDialog();
+    }
   };
 
   isButtonDisabled = () => {
@@ -297,7 +312,7 @@ class MoveStudents extends Component {
       sort: orderBy,
     })(this.props.studentData);
 
-    const {transferData} = this.props;
+    const {transferData, transferStatus} = this.props;
 
     return (
       <div>
@@ -321,6 +336,9 @@ class MoveStudents extends Component {
               <Table.Body rows={sortedRows} rowKey="id" />
             </Table.Provider>
             <div style={styles.rightColumn}>
+              {transferStatus.status === TransferStatus.FAIL &&
+                <div style={styles.error}>{transferStatus.error}</div>
+              }
               <div>{i18n.selectStudentsToMove()}</div>
               <label
                 htmlFor="sections"
