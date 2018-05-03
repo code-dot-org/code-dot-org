@@ -143,7 +143,7 @@ class CourseTest < ActiveSupport::TestCase
 
     assert_equal [:name, :id, :title, :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
-                  :has_verified_resources], summary.keys
+                  :has_verified_resources, :versions], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -156,6 +156,10 @@ class CourseTest < ActiveSupport::TestCase
     # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
     assert_equal 'script1', summary[:scripts][0][:name]
     assert_equal 'script1-description', summary[:scripts][0]['description']
+
+    assert_equal 1, summary[:versions].length
+    assert_equal 'my-course', summary[:versions].first[:name]
+    assert_equal '2017', summary[:versions].first[:version_year]
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
