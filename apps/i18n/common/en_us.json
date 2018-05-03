@@ -886,7 +886,6 @@
   "schoolInfoInterstitialUnknownError": "We encountered an error with your submission. Please try again.",
   "schoolInfoRequired": "School information is required.",
   "schoolInformationHeader": "School / Organization Information",
-  "schoolInformationOptionalHeader": "School / Organization Information (optional)",
   "schoolLocationSearchPlaceholder": "Search for your city / town location",
   "schoolName": "School Name",
   "schoolState": "School State",

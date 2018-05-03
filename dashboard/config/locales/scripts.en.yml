@@ -8134,6 +8134,12 @@ en:
               name: Minecraft Hour of Code
             Functions in Minecraft:
               name: Functions in Minecraft
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
         coursef-2018:
           title: Course F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -8260,6 +8266,18 @@ en:
               name: Conditionals with Cards
             Conditionals:
               name: Conditionals
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+            Pet Giraffe with Sprite Lab:
+              name: Pet Giraffe with Sprite Lab
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8521,3 +8539,167 @@ en:
               name: Project - Solve a Data Problem
               description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+        csp2-2018:
+          title: CSP Unit 2 - Digital Information
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
+          description_audience: ''
+          stages:
+            Bytes and File Sizes:
+              name: Bytes and File Sizes
+              description_student: ''
+              description_teacher: ''
+            Text Compression:
+              name: Text Compression
+              description_student: ''
+              description_teacher: ''
+            Encoding B&W Images:
+              name: Encoding B&W Images
+              description_student: ''
+              description_teacher: ''
+            Encoding Color Images:
+              name: Encoding Color Images
+              description_student: ''
+              description_teacher: ''
+            Lossy Compression and File Formats:
+              name: Lossy Compression and File Formats
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Encode an Experience:
+              name: Practice PT - Encode an Experience
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Chapter 1 Assessment:
+              name: Unit 2 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            Intro to Data:
+              name: Intro to Data
+              description_student: ''
+              description_teacher: ''
+            Finding Trends with Visualizations:
+              name: Finding Trends with Visualizations
+              description_student: ''
+              description_teacher: ''
+            Check Your Assumptions:
+              name: Check Your Assumptions
+              description_student: ''
+              description_teacher: ''
+            Good and Bad Data Visualizations:
+              name: Good and Bad Data Visualizations
+              description_student: ''
+              description_teacher: ''
+            Making Data Visualizations:
+              name: Making Data Visualizations
+              description_student: ''
+              description_teacher: ''
+            Discover a Data Story:
+              name: Discover a Data Story
+              description_student: ''
+              description_teacher: ''
+            Cleaning Data:
+              name: Cleaning Data
+              description_student: ''
+              description_teacher: ''
+            Creating Summary Tables:
+              name: Creating Summary Tables
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Tell a Data Story:
+              name: Practice PT - Tell a Data Story
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Chapter 2 Assessment:
+              name: Unit 2 Chapter 2 Assessment
+              description_student: ''
+              description_teacher: ''
+        csp3-2018:
+          title: CSP Unit 3 - Intro to Programming
+          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r\n\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_audience: ''
+          stages:
+            The Need For Programming Languages:
+              name: The Need For Programming Languages
+              description_student: ''
+              description_teacher: ''
+            The Need for Algorithms:
+              name: The Need for Algorithms
+              description_student: ''
+              description_teacher: ''
+            Creativity in Algorithms:
+              name: Creativity in Algorithms
+              description_student: ''
+              description_teacher: ''
+            Using Simple Commands:
+              name: Using Simple Commands
+              description_student: ''
+              description_teacher: ''
+            Creating Functions:
+              name: Creating Functions
+              description_student: ''
+              description_teacher: ''
+            Functions and Top-Down Design:
+              name: Functions and Top-Down Design
+              description_student: ''
+              description_teacher: ''
+            APIs and Function Parameters:
+              name: APIs and Function Parameters
+              description_student: ''
+              description_teacher: ''
+            Creating functions with Parameters:
+              name: Creating functions with Parameters
+              description_student: ''
+              description_teacher: ''
+            Looping and Random Numbers:
+              name: Looping and Random Numbers
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Design a Digital Scene:
+              name: Practice PT - Design a Digital Scene
+              description_student: ''
+              description_teacher: ''
+            Unit 3 Chapter 1 Assessment:
+              name: Unit 3 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
+              description_student: ''
+              description_teacher: ''
+        csp-explore-2018:
+          title: Explore - AP Performance Task Prep
+          description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
+          description_audience: ''
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+              description_student: ''
+              description_teacher: ''
+        csp-create-2018:
+          title: Create - AP Performance Task Prep
+          description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
+          description_audience: ''
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+              description_student: ''
+              description_teacher: ''
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+              description_student: ''
+              description_teacher: ''
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+              description_student: ''
+              description_teacher: ''
