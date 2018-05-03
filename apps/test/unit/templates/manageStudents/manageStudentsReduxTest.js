@@ -20,7 +20,8 @@ import manageStudents, {
   RowType,
   toggleSharingColumn,
   updateAllShareSetting,
-  setSharingDefault
+  setSharingDefault,
+  updateStudentTransfer
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -219,6 +220,21 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.showSharingColumn,
         !initialState.showSharingColumn);
+    });
+  });
+
+  describe('updateStudentTransfer', () => {
+    it('sets transferData from action', () => {
+      const transferData = {
+        studentIds: [0,1,3],
+        sectionId: 2,
+        otherTeacher: false,
+        otherTeacherSection: '',
+        copyStudents: false
+      };
+      const action = updateStudentTransfer(transferData);
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.transferData, transferData);
     });
   });
 

@@ -20,7 +20,7 @@ import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
 import * as utils from './utils';
-import AbuseError from './code-studio/components/abuse_error';
+import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
@@ -55,6 +55,7 @@ import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning} from './redux/runState';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
+import {mergeProgress} from './code-studio/progressRedux';
 import {
   setAchievements,
   setBlockLimit,
@@ -1408,6 +1409,10 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
+  // Write updated progress to Redux.
+  const store = getStore();
+  store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
+
   if (experiments.isEnabled('bubbleDialog')) {
     const ignoredKeys = ['level', 'alreadySaved', 'appStrings', 'disableSaveToGallery', 'message', 'saveToLegacyGalleryUrl', 'saveToProjectGallery', 'showingSharing'];
     ignoredKeys.forEach(key => delete options[key]);
@@ -1415,7 +1420,6 @@ StudioApp.prototype.displayFeedback = function (options) {
       response, preventDialog, feedbackType, feedbackImage, ...otherOptions
     } = options;
     if (Object.keys(otherOptions).length === 0) {
-      const store = getStore();
       const generatedCodeProperties =
         this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
       const studentCode = {
