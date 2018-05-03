@@ -506,7 +506,8 @@ class Level < ActiveRecord::Base
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
   def clone_with_suffix(new_suffix)
-    new_name = "#{base_name}#{new_suffix}"
+    # Make sure we don't go over the 70 character limit.
+    new_name = "#{base_name[0..64]}#{new_suffix}"
 
     level = Level.find_by_name(new_name) || clone_with_name(new_name)
 
