@@ -11,7 +11,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute_nil user.name
 
-    test_configured_helper.purge_user(user)
+    purge_user user
 
     user.reload
     assert_nil user.name
@@ -23,7 +23,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user.username
     refute_match /^sys_deleted_\w{8}$/, user.username
 
-    test_configured_helper.purge_user(user)
+    purge_user user
 
     user.reload
     assert_match /^sys_deleted_\w{8}$/, user.username
@@ -31,7 +31,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   private
 
-  def test_configured_helper
+  def purge_user(user)
     DeleteAccountsHelper.new(
       solr: nil,
       pegasus_db: PEGASUS_DB,
@@ -39,6 +39,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         CDO.pegasus_reporting_db_writer,
         CDO.pegasus_reporting_db_reader
       )
-    )
+    ).purge_user(user)
   end
 end
