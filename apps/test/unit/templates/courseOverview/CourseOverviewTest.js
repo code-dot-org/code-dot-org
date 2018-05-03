@@ -1,10 +1,13 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import * as utils from '@cdo/apps/utils';
+import sinon from 'sinon';
 
 const defaultProps = {
+  name: 'csp',
   title: 'Computer Science Principles',
   id: 30,
   descriptionStudent: 'Desc here',
@@ -28,6 +31,7 @@ const defaultProps = {
   }],
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
+  versions: [],
 };
 
 describe('CourseOverview', () => {
@@ -104,6 +108,64 @@ describe('CourseOverview', () => {
         />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+    });
+  });
+
+  describe('versions dropdown', () => {
+    beforeEach(() => {
+      sinon.stub(utils, 'navigateToHref');
+    });
+
+    afterEach(() => {
+      utils.navigateToHref.restore();
+    });
+
+    it('appears when two versions are present', () => {
+      const versions = [
+        {name: 'csp', version_year: '2017'},
+        {name: 'csp-2018', version_year: '2018'},
+      ];
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          versions={versions}
+          isTeacher={true}
+        />
+      );
+      // Enzyme makes it intentionally difficult to test the actual html/dom
+      // contents that gets rendered, so just test that the dropdown exists.
+      // https://github.com/airbnb/enzyme/issues/634
+      const select = wrapper.find('select.version-selector');
+      expect(select.length).to.equal(1);
+      expect(utils.navigateToHref).not.to.have.been.called;
+      select.simulate('change', {target: {value: 'csp-2018'}});
+      expect(utils.navigateToHref).to.have.been.calledOnce;
+    });
+
+    it('does not appear when only one version is present', () => {
+      const versions = [
+        {name: 'csp', version_year: '2017'},
+      ];
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          versions={versions}
+          isTeacher={true}
+        />
+      );
+      expect(wrapper.find('select.version-selector').length).to.equal(0);
+      expect(utils.navigateToHref).not.to.have.been.called;
+    });
+
+    it('does not appear when no versions are present', () => {
+      const wrapper = shallow(
+        <CourseOverview
+          {...defaultProps}
+          isTeacher={true}
+        />
+      );
+      expect(wrapper.find('select.version-selector').length).to.equal(0);
+      expect(utils.navigateToHref).not.to.have.been.called;
     });
   });
 });
