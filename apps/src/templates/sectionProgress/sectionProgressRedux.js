@@ -12,7 +12,6 @@ import _ from 'lodash';
 const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
 const SET_SECTION = 'sectionProgress/SET_SECTION';
 const SET_VALID_SCRIPTS = 'sectionProgress/SET_VALID_SCRIPTS';
-const SET_STUDENT_SCRIPT_IDS = 'sectionProgress/SET_STUDENT_SCRIPT_IDS';
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
@@ -26,8 +25,7 @@ export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
-export const setStudentScriptIds = studentScriptIds => ({type: SET_STUDENT_SCRIPT_IDS, studentScriptIds});
+export const setValidScripts = (validScripts, studentScriptIds) => ({type: SET_VALID_SCRIPTS, validScripts, studentScriptIds});
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
   { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
@@ -147,7 +145,6 @@ const initialState = {
   scriptId: null,
   section: {},
   validScripts: [],
-  studentScriptIds: [],
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
@@ -203,16 +200,19 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_VALID_SCRIPTS) {
     // If no scriptId is assigned, use the first valid script.
     const defaultScriptId = state.scriptId || action.validScripts[0].id;
+
+    const studentScriptIds = action.studentScriptIds || [];
+    let validScripts = action.validScripts;
+    if (studentScriptIds.length > 0) {
+      const idMap = {};
+      studentScriptIds.forEach(id => idMap[id] = true);
+      validScripts = validScripts.filter(script => idMap[script.id]);
+    }
+
     return {
       ...state,
-      validScripts: action.validScripts,
+      validScripts,
       scriptId: defaultScriptId,
-    };
-  }
-  if (action.type === SET_STUDENT_SCRIPT_IDS) {
-    return {
-      ...state,
-      studentScriptIds: action.studentScriptIds
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {

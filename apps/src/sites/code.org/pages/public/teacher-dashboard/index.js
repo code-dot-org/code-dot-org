@@ -22,7 +22,7 @@ import {
   renderStatsTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
-import sectionProgress, {setSection, setValidScripts, setStudentScriptIds} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -55,7 +55,6 @@ function renderSectionProgress(section, validScripts) {
   registerReducers({sectionProgress});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(setValidScripts(validScripts));
 
   if (experiments.isEnabled('courseVersions')) {
     $.ajax({
@@ -64,10 +63,11 @@ function renderSectionProgress(section, validScripts) {
       dataType: 'json'
     }).done(data => {
       const { studentScriptIds } = data;
-      store.dispatch(setStudentScriptIds(studentScriptIds));
+      store.dispatch(setValidScripts(validScripts, studentScriptIds));
       renderSectionProgressReact(store);
     });
     } else {
+    store.dispatch(setValidScripts(validScripts));
     renderSectionProgressReact(store);
   }
 }
