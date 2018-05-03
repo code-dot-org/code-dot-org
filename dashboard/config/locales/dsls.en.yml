@@ -966,6 +966,7 @@ en:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Abstraction in Programming: {}
       CSP Abstraction in Programming 2: {}
+      CSP Abstraction in Programming 2_2018: {}
       CSP Algorithms Map: {}
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
@@ -1163,6 +1164,9 @@ en:
       CSPU5_FirstTimeDesignMode:
         description here: description here
         title: title
+      CSPU5_FirstTimeDesignMode_2018:
+        description here: description here
+        title: title
       CSPU5_HowImagesWork:
         description here: description here
         title: title
@@ -1247,6 +1251,7 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
+      Categorizing Data_2018: {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
       'Chirpr: @johnsnow': {}
@@ -1256,9 +1261,12 @@ en:
       'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
+      Cleaning Data_2018: {}
       Click Here!: {}
       'Collection A: Good and Bad Visualizations': {}
+      'Collection A: Good and Bad Visualizations_2018': {}
       'Collection B: Good and Bad Visualizations': {}
+      'Collection B: Good and Bad Visualizations_2018': {}
       Color Sleuth - Epilogue:
         description here: description here
         title: title
@@ -1320,6 +1328,7 @@ en:
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
+      Downloading the Data Set_2018: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
       ECS PD1 teaching strategies:
@@ -1666,6 +1675,7 @@ en:
       ECSPD3-u6 why study robotics: {}
       ECSU4 Challenge Submission: {}
       Editing Chart Appearance: {}
+      Editing Chart Appearance_2018: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
       Embedded Video Test: {}
@@ -1697,6 +1707,9 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Event-Driven Programming Patterns_2018:
+        description here: description here
+        title: title
       Events Overview: {}
       Events Practice: {}
       Example App Types: {}
@@ -1715,6 +1728,7 @@ en:
       'Facespace: Lizzie Dell': {}
       'Facespace: Soleil M': {}
       Favicon Instructions: {}
+      Favicon Instructions_2018: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
@@ -1727,6 +1741,7 @@ en:
       'Game Lab Workshop: Variables to Sprites': {}
       Getting Better User Input: {}
       Getting to Know Your Data: {}
+      Getting to Know Your Data_2018: {}
       GoodBadVisualizations_v1:
         description here: description here
         title: title
@@ -1759,12 +1774,19 @@ en:
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How Secure Is Your Password?_2018:
+        description here: description here
+        title: title
       How Set Property Works:
         description here: description here
         title: title
       'How To: Share Code with Teammates': {}
+      'How To: Share Code with Teammates_2018': {}
       How are Images Encoded?: {}
       How onEvent Works:
+        description here: description here
+        title: title
+      How onEvent Works_2018:
         description here: description here
         title: title
       How setPosition and screen dimensions work:
@@ -1793,6 +1815,9 @@ en:
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
       Intro to Debugging and Common Problems:
+        description here: description here
+        title: title
+      Intro to Debugging and Common Problems_2018:
         description here: description here
         title: title
       Introduction to Functions with Parameters: {}
@@ -1828,13 +1853,18 @@ en:
         description here: description here
         title: title
       Making Pivot Tables Part 1 - The Basics: {}
+      Making Pivot Tables Part 1 - The Basics_2018: {}
       Making Pivot Tables Part 2 - Manipulation and Visualization: {}
+      Making Pivot Tables Part 2 - Manipulation and Visualization_2018: {}
       Making a Bar Chart: {}
+      Making a Bar Chart_2018: {}
       Making a Line Chart: {}
+      Making a Line Chart_2018: {}
       Making a Multi Screen Chaser Game v.2:
         description here: description here
         title: title
       Making a Scatter Plot: {}
+      Making a Scatter Plot_2018: {}
       MarbleMaze:
         Marble Maze: Marble Maze
         Marble Maze Activity for K Level: Marble Maze Activity for K Level
@@ -1847,6 +1877,9 @@ en:
         description here: description here
         title: title
       New Challenge Introduction:
+        description here: description here
+        title: title
+      New Challenge Introduction_2018:
         description here: description here
         title: title
       OPD-K5 About: {}
@@ -2149,6 +2182,9 @@ en:
       Rules About Choosing Good IDs:
         description here: description here
         title: title
+      Rules About Choosing Good IDs_2018:
+        description here: description here
+        title: title
       SFLP - Web - Describing Webpages: {}
       SFLP - Web - Designing Code for Computers: {}
       SFLP - Web - Designing Webpages: {}
@@ -2223,7 +2259,13 @@ en:
       'Technique: Frequency Analysis':
         How to crack a substitution cipher: How to crack a substitution cipher
         description here: description here
+      'Technique: Frequency Analysis_2018':
+        How to crack a substitution cipher: How to crack a substitution cipher
+        description here: description here
       Terminology Recap:
+        That was easy, what's next?: That was easy, what's next?
+        description here: description here
+      Terminology Recap_2018:
         That was easy, what's next?: That was easy, what's next?
         description here: description here
       Test External Markdown:
@@ -2371,6 +2413,9 @@ en:
       U3 Simulation Updating Hypotheses: {}
       U3 Simulations Hypotheses Reflections: {}
       U3 whats a comment:
+        description here: description here
+        title: title
+      U3 whats a comment_2018:
         description here: description here
         title: title
       U3- L12 -Design Mode SFLP: {}
@@ -2539,6 +2584,9 @@ en:
       U4 - Making Data Visualizations - Free Play:
         description here: description here
         title: title
+      U4 - Making Data Visualizations - Free Play_2018:
+        description here: description here
+        title: title
       U4 - Making Data Visualizations - Getting Started:
         description here: description here
         title: title
@@ -2625,6 +2673,9 @@ en:
         description here: description here
         title: title
       U4L08v2 Making Pivot Tables Part 3:
+        description here: description here
+        title: title
+      U4L08v2 Making Pivot Tables Part 3_2018:
         description here: description here
         title: title
       U4L08v2 Student Intro:
@@ -2738,17 +2789,33 @@ en:
       U6 Create PT - Complete the Task - Student Links:
         description here: description here
         title: title
+      U6 Create PT - Complete the Task - Student Links_2018:
+        description here: description here
+        title: title
       U6 Create PT - Make a Plan - Student Links: {}
+      U6 Create PT - Make a Plan - Student Links_2018: {}
       U6 Create PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT Review - Student Links_2018:
         description here: description here
         title: title
       U6 Explore PT - Complete the Task - Student Links:
         description here: description here
         title: title
+      U6 Explore PT - Complete the Task - Student Links_2018:
+        description here: description here
+        title: title
       U6 Explore PT - Make a Plan - Student Links:
         description here: description here
         title: title
+      U6 Explore PT - Make a Plan - Student Links_2018:
+        description here: description here
+        title: title
       U6 Explore PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT Review - Student Links_2018:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
@@ -2801,15 +2868,28 @@ en:
       Unit 4 Lesson 1 Introduction:
         description here: description here
         title: title
+      Unit 4 Lesson 1 Introduction_2018:
+        description here: description here
+        title: title
       Unit 4 Lesson 2 Introduction:
         description here: description here
         title: title
+      Unit 4 Lesson 2 Introduction_2018:
+        description here: description here
+        title: title
       Unit 4 Lesson 3 Introduction: {}
+      Unit 4 Lesson 3 Introduction_2018: {}
       Unit 4 Lesson 4 Introduction: {}
+      Unit 4 Lesson 4 Introduction_2018: {}
       Unit 4 Lesson 5 Introduction:
         description here: description here
         title: title
+      Unit 4 Lesson 5 Introduction_2018:
+        description here: description here
+        title: title
       Unit 4 Lesson 6 Introduction:
+        Cracking the Code: Cracking the Code
+      Unit 4 Lesson 6 Introduction_2018:
         Cracking the Code: Cracking the Code
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
@@ -2821,6 +2901,9 @@ en:
         description here: description here
         title: title
       Unit 5 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 1 Introduction_2018:
         description here: description here
         title: title
       Unit 5 Lesson 10 Introduction:
@@ -2882,6 +2965,7 @@ en:
       Variables Overview: {}
       Variables Practice: {}
       Video - The Future of Big Data: {}
+      Video - The Future of Big Data_2018: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
@@ -3091,14 +3175,23 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp-post-survey-2017 preamble 1: {}
+      csp-post-survey-2017 preamble 1_2018: {}
       csp-post-survey-2017 preamble 3 this class: {}
+      csp-post-survey-2017 preamble 3 this class_2018: {}
       csp-post-survey-2017 preamble 4 future and outlook: {}
+      csp-post-survey-2017 preamble 4 future and outlook_2018: {}
       csp-post-survey-2017 preamble how often did teacher ask you to: {}
+      csp-post-survey-2017 preamble how often did teacher ask you to_2018: {}
       csp-post-survey-2017 preamble how often did teacher do: {}
+      csp-post-survey-2017 preamble how often did teacher do_2018: {}
       csp-post-survey-2017 preamble how often did you: {}
+      csp-post-survey-2017 preamble how often did you_2018: {}
       csp-post-survey-2017-preamble 5 implementation-teacher: {}
+      csp-post-survey-2017-preamble 5 implementation-teacher_2018: {}
       csp-post-survey-2017-thanks: {}
+      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2017-wrapup-preamble: {}
+      csp-post-survey-2017-wrapup-preamble_2018: {}
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 1_2018: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
@@ -3112,9 +3205,11 @@ en:
       csp-pre-survey-2017-q36-preamble: {}
       csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pt-tech-setup-and-tools: {}
+      csp-pt-tech-setup-and-tools_2018: {}
       csp-pulse-check-survey-preamble: {}
       csp-pulse-check-survey-preamble_2018: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
+      csp3_subgoal_mc_levelgroup_preamble_2018: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
       csp_subgoal_labels_consent_intro: {}
@@ -3678,70 +3773,136 @@ en:
       v2 U2L1 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L1 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U2L10 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L10 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U2L11 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L11 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U2L12 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L12 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U2L13 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L13 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U2L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L14 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U2L15 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L15 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U2L2 Student Lesson Summary:
+        description here: description here
+        title: title
+      v2 U2L2 Student Lesson Summary_2018:
         description here: description here
         title: title
       v2 U2L3 Student Lesson Summary:
         description here: description here
         title: title
+      v2 U2L3 Student Lesson Summary_2018:
+        description here: description here
+        title: title
       v2 U2L4 Student Lesson Summary:
+        description here: description here
+        title: title
+      v2 U2L4 Student Lesson Summary_2018:
         description here: description here
         title: title
       v2 U2L5 Student Lesson Introduction:
         Lossy Compression and File Formats: Lossy Compression and File Formats
         description here: description here
+      v2 U2L5 Student Lesson Introduction_2018:
+        Lossy Compression and File Formats: Lossy Compression and File Formats
+        description here: description here
       v2 U2L6 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L6 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U2L7 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L7 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U2L8 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U2L8 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U2L9 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U2L9 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U3L01 Student Lesson Introduction:
+        Why Programming and Programming Languages?: Why Programming and Programming Languages?
+      v2 U3L01 Student Lesson Introduction_2018:
         Why Programming and Programming Languages?: Why Programming and Programming Languages?
       v2 U3L02 Student Lesson Introduction:
         The Need for Algorithms: The Need for Algorithms
+      v2 U3L02 Student Lesson Introduction_2018:
+        The Need for Algorithms: The Need for Algorithms
       v2 U3L03 Student Lesson Introduction:
+        Creativity in Algorithms: Creativity in Algorithms
+      v2 U3L03 Student Lesson Introduction_2018:
         Creativity in Algorithms: Creativity in Algorithms
       v2 U3L04 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U3L04 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U3L05 Student Lesson Introduction:
+        Creating Functions: Creating Functions
+      v2 U3L05 Student Lesson Introduction_2018:
         Creating Functions: Creating Functions
       v2 U3L07 Student Lesson Introduction:
         APIs and Function Parameters: APIs and Function Parameters
+      v2 U3L07 Student Lesson Introduction_2018:
+        APIs and Function Parameters: APIs and Function Parameters
       v2 U3L08 Student Lesson Introduction:
         Creating Functions with Parameters: Creating Functions with Parameters
+      v2 U3L08 Student Lesson Introduction_2018:
+        Creating Functions with Parameters: Creating Functions with Parameters
       v2 U3L09 Student Lesson Introduction:
+        Looping and Random Numbers: Looping and Random Numbers
+      v2 U3L09 Student Lesson Introduction_2018:
         Looping and Random Numbers: Looping and Random Numbers
       v2 U3L10 Student Lesson Introduction:
         Design a Digital Scene: Design a Digital Scene
       v2 U3L10 Student Lesson Introduction - stage mods only:
         Design a Digital Scene: Design a Digital Scene
+      v2 U3L10 Student Lesson Introduction_2018:
+        Design a Digital Scene: Design a Digital Scene
       v2 U3L6 Student Lesson Introduction:
+        Functions and Top-Down Design: Functions and Top-Down Design
+      v2 U3L6 Student Lesson Introduction_2018:
         Functions and Top-Down Design: Functions and Top-Down Design
       v2 U4L05 Student Lesson Intro Encryption Caesar:
         description here: description here
@@ -3767,10 +3928,13 @@ en:
         CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch1 Cumulative Assessment MC_2018: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC: {}
+        CSP Unit 2 Ch2 Cumulative Assessment MC_2018: {}
         CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group: {}
+        CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018: {}
         CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep: {}
@@ -3832,17 +3996,23 @@ en:
         csd-pulse-check-survey-1-levelgroup U6Ch2: {}
         csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
         csp-post-survey-2017-levelgroup: {}
+        csp-post-survey-2017-levelgroup_2018: {}
         csp-pre-survey-2017-levelgroup: {}
         csp-pre-survey-2017-levelgroup_2018: {}
         csp-pulse-check-survey-1-levelgroup-U1Ch2: {}
         csp-pulse-check-survey-1-levelgroup-U1Ch2_2018: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
+        csp-pulse-check-survey-2-levelgroup-U2Ch1_2018: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
+        csp-pulse-check-survey-3-levelgroup-U2Ch2_2018: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
+        csp-pulse-check-survey-4-levelgroup-U3Ch1_2018: {}
         csp-pulse-check-survey-5-levelgroup-U4Ch1: {}
+        csp-pulse-check-survey-5-levelgroup-U4Ch1_2018: {}
         csp-pulse-check-survey-6-levelgroup-U5Ch1: {}
         csp-pulse-check-survey-7-levelgroup-U5Ch2: {}
         csp3_U3_turtle_subgoal_mc_levelgroup: {}
+        csp3_U3_turtle_subgoal_mc_levelgroup_2018: {}
         csp_ap_questions: {}
         csp_subgoal_consent_levelgroup: {}
         subgoal_assessments_levelgroup_test: {}
@@ -4606,6 +4776,22 @@ en:
         Uncompressed Sound: Uncompressed Sound
         WAV: WAV
         ZIP: ZIP
+      U1L16 - Matching File Compression Types_2018:
+        BMP: BMP
+        Compressed Files - Lossless: Compressed Files - Lossless
+        Compressed Image - Lossless: Compressed Image - Lossless
+        Compressed Image - Lossless (256 color limit): Compressed Image - Lossless (256 color limit)
+        Compressed Image - Lossy: Compressed Image - Lossy
+        Compressed Sound - Lossy: Compressed Sound - Lossy
+        GIF: GIF
+        JPEG: JPEG
+        MP3: MP3
+        Match the type of file with the most accurate description: Match the type of file with the most accurate description
+        PNG: PNG
+        Uncompressed Image: Uncompressed Image
+        Uncompressed Sound: Uncompressed Sound
+        WAV: WAV
+        ZIP: ZIP
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -4667,6 +4853,22 @@ en:
         The Caesar Cipher: The Caesar Cipher
         Vigenere Cipher: Vigenere Cipher
         Which encryption technique?: Which encryption technique?
+      U2L14 Assessment_2018:
+        Caesar cipher: Caesar cipher
+        Computationally Hard: Computationally Hard
+        Terminology Matching: Terminology Matching
+        Vigenere Cipher: Vigenere Cipher
+        a problem that cannot be solved in a reasonable amount of time: a problem that cannot be solved in a reasonable amount of time
+        another term for encrypted message: another term for encrypted message
+        cipher: cipher
+        decrypt: decrypt
+        encrypt: encrypt
+        encryption in which arbitrary symbols replace letters: encryption in which arbitrary symbols replace letters
+        encryption scheme based on shifting the alphabet: encryption scheme based on shifting the alphabet
+        encryption that shifts the alphabet differently per character: encryption that shifts the alphabet differently per character
+        random substitution cipher: random substitution cipher
+        use an algorithm to decode a message: use an algorithm to decode a message
+        use an algorithm to encode a message: use an algorithm to encode a message
       U2L17 - Vocabulary matching:
         " <br>Brute force": " <br>Brute force"
         "<br>Computationally hard": "<br>Computationally hard"
@@ -5186,6 +5388,11 @@ en:
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
         When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
         When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
+      CB_Question_11_2018:
+        When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
+        When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
+        When the problem cannot be solved in a reasonable time and an approximate solution is acceptable: When the problem cannot be solved in a reasonable time and an approximate solution is acceptable
+        When the problem cannot be solved in a reasonable time and an exact solution is needed: When the problem cannot be solved in a reasonable time and an exact solution is needed
       CB_Question_11_exam_prep:
         When the problem can be solved in a reasonable time and an approximate solution is acceptable: When the problem can be solved in a reasonable time and an approximate solution is acceptable
         When the problem can be solved in a reasonable time and an exact solution is needed: When the problem can be solved in a reasonable time and an exact solution is needed
@@ -5216,6 +5423,11 @@ en:
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
         Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
         In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
+      CB_Question_15_2018:
+        Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
+        Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
+        Does the animal travel in groups with other tracked animals?: Does the animal travel in groups with other tracked animals?
+        In what geographic locations does the animal typically travel?: In what geographic locations does the animal typically travel?
       CB_Question_15_exam_prep:
         Approximately how many miles did the animal travel in one week?: Approximately how many miles did the animal travel in one week?
         Do the movement patterns of the animal vary according to the weather?: Do the movement patterns of the animal vary according to the weather?
@@ -5236,6 +5448,11 @@ en:
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
         Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
         There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
+      CB_Question_18_2018:
+        Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
+        Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
+        Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.: Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.
+        There are trade-offs involved in choosing a compression technique for storing and transmitting data.: There are trade-offs involved in choosing a compression technique for storing and transmitting data.
       CB_Question_18_exam_prep:
         Data compression is only useful for files being transmitted over the Internet.: Data compression is only useful for files being transmitted over the Internet.
         Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.: Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.
@@ -5246,6 +5463,11 @@ en:
         "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)": "(onFloor1 AND callTo2) OR (onFloor2 AND callTo1)"
         "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) AND (onFloor2 OR callTo1)"
         "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)": "(onFloor1 OR callTo2) OR (onFloor2 OR callTo1)"
+      CB_Question_1_2018:
+        2 times as many values can be represented.: 2 times as many values can be represented.
+        2^32 times as many values can be represented.: 2^32 times as many values can be represented.
+        32 times as many values can be represented.: 32 times as many values can be represented.
+        32^2 times as many values can be represented.: 32^2 times as many values can be represented.
       CB_Question_1_copy:
         2 times as many values can be represented.: 2 times as many values can be represented.
         2^32 times as many values can be represented.: 2^32 times as many values can be represented.
@@ -5330,6 +5552,11 @@ en:
         To determine the topics that many users are posting about: To determine the topics that many users are posting about
         To determine the users who post messages most frequently: To determine the users who post messages most frequently
         To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
+      CB_Question_7_2018:
+        To determine the time of day that the site is most active: To determine the time of day that the site is most active
+        To determine the topics that many users are posting about: To determine the topics that many users are posting about
+        To determine the users who post messages most frequently: To determine the users who post messages most frequently
+        To determine which posts from a particular user have received the greatest number of comments: To determine which posts from a particular user have received the greatest number of comments
       CB_Question_7_exam_prep:
         To determine the time of day that the site is most active: To determine the time of day that the site is most active
         To determine the topics that many users are posting about: To determine the topics that many users are posting about
@@ -5352,6 +5579,13 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossless compression_2018:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossless compression_exam_prep:
         " ": " "
         Compression: Compression
@@ -5360,6 +5594,13 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CPS Unit2 Ch 1 MC lossy compression:
+        " ": " "
+        Compression: Compression
+        Fast Fourier Transform compression: Fast Fourier Transform compression
+        Lossless compression: Lossless compression
+        Lossy compression: Lossy compression
+        Tailored compression: Tailored compression
+      CPS Unit2 Ch 1 MC lossy compression_2018:
         " ": " "
         Compression: Compression
         Fast Fourier Transform compression: Fast Fourier Transform compression
@@ -5652,6 +5893,13 @@ en:
         100,000 times bigger: 100,000 times bigger
         Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
         How much bigger?: How much bigger?
+      CSP Unit 2 Ch 1 MC kilo v mega_2018:
+        1,000 times bigger: 1,000 times bigger
+        1,000,000 times bigger: 1,000,000 times bigger
+        1,000,000,000 times bigger: 1,000,000,000 times bigger
+        100,000 times bigger: 100,000 times bigger
+        Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
+        How much bigger?: How much bigger?
       CSP Unit 2 Ch 1 MC kilo v mega_exam_prep:
         1,000 times bigger: 1,000 times bigger
         1,000,000 times bigger: 1,000,000 times bigger
@@ -5660,6 +5908,13 @@ en:
         Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?: Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?
         How much bigger?: How much bigger?
       CSP Unit 2 Ch 1 metadata:
+        " ": " "
+        data: data
+        megadata: megadata
+        metadata: metadata
+        predata: predata
+        superdata: superdata
+      CSP Unit 2 Ch 1 metadata_2018:
         " ": " "
         data: data
         megadata: megadata
@@ -5708,6 +5963,14 @@ en:
         : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
         She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
         She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
+      CSP Unit 2 Ch 2 MC data bias_2018:
+        " ": " "
+        Data Bias: Data Bias
+        She learns that responses were collected only by mobile app.: She learns that responses were collected only by mobile app.
+        ? She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        : She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.
+        She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
+        She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
       CSP Unit 2 Ch 2 MC data bias_exam_prep:
         " ": " "
         Data Bias: Data Bias
@@ -5717,6 +5980,16 @@ en:
         She learns that the survey was only available to students who scored at the top 10% on the PSAT.: She learns that the survey was only available to students who scored at the top 10% on the PSAT.
         She learns the survey was available to complete in both digital and paper form.: She learns the survey was available to complete in both digital and paper form.
       CSP Unit 2 Ch 2 MC google trends:
+        " ": " "
+        ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
+        ? Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        : Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.
+        Since sometime around 2009, red has become the favorite color of more people: Since sometime around 2009, red has become the favorite color of more people
+        ? The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
+        What's it showing?: What's it showing?
+      CSP Unit 2 Ch 2 MC google trends_2018:
         " ": " "
         ? Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
         : Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"
@@ -5767,6 +6040,13 @@ en:
         Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
         Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
         Which is the Best?: Which is the Best?
+      CSP Unit 2 Ch 2 MC worst viz_2018:
+        " ": " "
+        Chart A (Line Chart): Chart A (Line Chart)
+        Chart B (Vertical Bar Chart): Chart B (Vertical Bar Chart)
+        Chart C (Stacked Line Chart): Chart C (Stacked Line Chart)
+        Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
+        Which is the Best?: Which is the Best?
       CSP Unit 2 Ch 2 MC worst viz_exam_prep:
         " ": " "
         Chart A (Line Chart): Chart A (Line Chart)
@@ -5775,6 +6055,14 @@ en:
         Chart D (Stacked Vertical Bar Chart): Chart D (Stacked Vertical Bar Chart)
         Which is the Best?: Which is the Best?
       CSP Unit 2 Ch2 MC data cleaning:
+        " ": " "
+        Data Cleaning: Data Cleaning
+        ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        : 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+        Removing the entire row with home state "adsfas" and recomputing: Removing the entire row with home state "adsfas" and recomputing
+        Round up all non-integer values for "Likelihood of staying in state": Round up all non-integer values for "Likelihood of staying in state"
+        Translate all states into their two-letter state code: Translate all states into their two-letter state code
+      CSP Unit 2 Ch2 MC data cleaning_2018:
         " ": " "
         Data Cleaning: Data Cleaning
         ? 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
@@ -5797,6 +6085,13 @@ en:
         Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
         Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
         Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
+      CSP Unit 2 ch 2 MC trends as predictors_2018:
+        " ": " "
+        Search Trends: Search Trends
+        Search trends are accurate and reliable predictors of future events that fully represent society at large.: Search trends are accurate and reliable predictors of future events that fully represent society at large.
+        Search trends are accurate and reliable predictors of future events that may not fully represent society at large.: Search trends are accurate and reliable predictors of future events that may not fully represent society at large.
+        Search trends are imperfect predictors of future events that fully represent society at large.: Search trends are imperfect predictors of future events that fully represent society at large.
+        Search trends are imperfect predictors of future events that may not fully represent society at large.: Search trends are imperfect predictors of future events that may not fully represent society at large.
       CSP Unit 2 ch 2 MC trends as predictors_exam_prep:
         " ": " "
         Search Trends: Search Trends
@@ -5811,6 +6106,13 @@ en:
         F00: F00
         FF00: FF00
         FF0000: FF0000
+      CSP Unit2 Ch 1 MC hex rgb_2018:
+        " ": " "
+        00F: 00F
+        12-bit Red: 12-bit Red
+        F00: F00
+        FF00: FF00
+        FF0000: FF0000
       CSP Unit2 Ch 1 MC hex rgb_exam_prep:
         " ": " "
         00F: 00F
@@ -5819,6 +6121,13 @@ en:
         FF00: FF00
         FF0000: FF0000
       CSP Unit2 Ch1 MC megabyte:
+        How big is it?: How big is it?
+        Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
+        gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
+        gigabyte, terabyte, megabyte: gigabyte, terabyte, megabyte
+        kilobyte, gigabyte, terabyte: kilobyte, gigabyte, terabyte
+        megabyte, terabyte, kilobyte: megabyte, terabyte, kilobyte
+      CSP Unit2 Ch1 MC megabyte_2018:
         How big is it?: How big is it?
         Select the answer that lists the units of bytes in ascending order (from smallest to largest): Select the answer that lists the units of bytes in ascending order (from smallest to largest)
         gigabyte, megabyte, terabyte: gigabyte, megabyte, terabyte
@@ -5908,6 +6217,13 @@ en:
         Multiband transformation: Multiband transformation
         ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
         : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+      CSPFinal_Question_18_2018:
+        Chrome Sampling transformation: Chrome Sampling transformation
+        Lossless transformation: Lossless transformation
+        Lossy transformation: Lossy transformation
+        Multiband transformation: Multiband transformation
+        ? The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
+        : The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?
       CSPFinal_Question_18_exam_prep:
         Chrome Sampling transformation: Chrome Sampling transformation
         Lossless transformation: Lossless transformation
@@ -5940,12 +6256,24 @@ en:
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
+      CSPFinal_Question_20_2018:
+        Days when certain items sell the most.: Days when certain items sell the most.
+        The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
+        The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
+        Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_20_exam_prep:
         Days when certain items sell the most.: Days when certain items sell the most.
         The item bought in the highest quantity in the past week.: The item bought in the highest quantity in the past week.
         The total income from sales the bakery received in the past month.: The total income from sales the bakery received in the past month.
         Which customer most frequently purchases bread.: Which customer most frequently purchases bread.
       CSPFinal_Question_21:
+        ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
+        Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
+        Scalability of the system.: Scalability of the system.
+        Structuring the metadata of the information for analysis.: Structuring the metadata of the information for analysis.
+        The frequency of a particular item occurring in a data set.: The frequency of a particular item occurring in a data set.
+      CSPFinal_Question_21_2018:
         ? A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         : A programmer is writing a system that is intended to be able to store large amounts of personal data.  As the programmer develops the data system, which of the following is LEAST likely to impact the programmer's choices in designing the structure of the system?
         Maintaining privacy of the information stored in the data set.: Maintaining privacy of the information stored in the data set.
@@ -6129,6 +6457,11 @@ en:
         5 bits: 5 bits
         6 bits: 6 bits
       CSPFinal_Question_8:
+        'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
+        'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
+        'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+      CSPFinal_Question_8_2018:
         'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>': 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>': 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
         'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>': 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
@@ -7907,6 +8240,13 @@ en:
         The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
         The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
         What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
+      U2L13 Assessment3_2018:
+        A secret word only know by Caesar.: A secret word only know by Caesar.
+        'Assessment: Question 2': 'Assessment: Question 2'
+        The day of the month that the encrypted message was sent.: The day of the month that the encrypted message was sent.
+        The letter that occurs most often in the encrypted message.: The letter that occurs most often in the encrypted message.
+        The number of characters to shift each letter in the alphabet.: The number of characters to shift each letter in the alphabet.
+        What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?: What is the "key" to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?
       U2L13 Assessment4:
         '26': '26'
         26 x 25: 26 x 25
@@ -7914,7 +8254,21 @@ en:
         26^26: 26^26
         'Assessment: Question 3': 'Assessment: Question 3'
         The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
+      U2L13 Assessment4_2018:
+        '26': '26'
+        26 x 25: 26 x 25
+        26 x 25 x 24 x***x 3 x 2 x 1: 26 x 25 x 24 x***x 3 x 2 x 1
+        26^26: 26^26
+        'Assessment: Question 3': 'Assessment: Question 3'
+        The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?: The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?
       U2L13 Cleaning Data MC:
+        Cleaning and Filtering Data: Cleaning and Filtering Data
+        Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
+        Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
+        Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process: Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process
+        Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions: Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions
+        Which of the following is the most accurate statement about cleaning and filtering data?: Which of the following is the most accurate statement about cleaning and filtering data?
+      U2L13 Cleaning Data MC_2018:
         Cleaning and Filtering Data: Cleaning and Filtering Data
         Filtering and cleaning data is a fully automated process that should not require human input or intervention: Filtering and cleaning data is a fully automated process that should not require human input or intervention
         Filtering and cleaning data is a human process that does not require the use of computers: Filtering and cleaning data is a human process that does not require the use of computers
@@ -7933,7 +8287,21 @@ en:
         Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
         What's it good for?: What's it good for?
         Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
+      U2L14 Summary Tables MC_2018:
+        Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data: Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data
+        Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight: Pivot tables are used to generate a summarized view of a large dataset which is helpful for gaining insight
+        Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data: Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data
+        Pivot tables are used to quickly remove errors and inconsistencies from a dataset.: Pivot tables are used to quickly remove errors and inconsistencies from a dataset.
+        What's it good for?: What's it good for?
+        Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.: Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.
       U2L15 Assessment1:
+        A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
+        One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
+        The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
+        The key length is variable and potentially very long: The key length is variable and potentially very long
+        Vigenere Cipher: Vigenere Cipher
+        Why is the Vigenere cipher hard to crack? (select 2): Why is the Vigenere cipher hard to crack? (select 2)
+      U2L15 Assessment1_2018:
         A Vigenere cipher relies upon an "alphabet shift" algorithm.: A Vigenere cipher relies upon an "alphabet shift" algorithm.
         One cannot solve using frequency analysis directly.: One cannot solve using frequency analysis directly.
         The key is always secret to both the sender and receiver of the message.: The key is always secret to both the sender and receiver of the message.
@@ -8025,6 +8393,15 @@ en:
         30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
         How many bytes does it take...?: How many bytes does it take...?
         How many bytes?: How many bytes?
+      U2L5 Color Pixel MC Question_2018:
+        " ": " "
+        1,250 bytes (10,000 bits): 1,250 bytes (10,000 bits)
+        1,253 bytes (10,024 bits): 1,253 bytes (10,024 bits)
+        3,750 bytes (30,000 bits): 3,750 bytes (30,000 bits)
+        3,753 bytes (30,024 bits): 3,753 bytes (30,024 bits)
+        30,003 bytes (240,024 bits): 30,003 bytes (240,024 bits)
+        How many bytes does it take...?: How many bytes does it take...?
+        How many bytes?: How many bytes?
       U2L8 google trends MC:
         " ": " "
         People like dogs more than cats: People like dogs more than cats
@@ -8032,7 +8409,25 @@ en:
         The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
         There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
         What does the visualization actually show?: What does the visualization actually show?
+      U2L8 google trends MC_2018:
+        " ": " "
+        People like dogs more than cats: People like dogs more than cats
+        People search for "dogs" more frequently than "cats": People search for "dogs" more frequently than "cats"
+        The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat: The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat
+        There was a sharp increase in the dog population sometime between 2014 and 2015: There was a sharp increase in the dog population sometime between 2014 and 2015
+        What does the visualization actually show?: What does the visualization actually show?
       U2L9 What is digital divide MC:
+        ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
+        "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
+        ? "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        : "...people's access to computing technology is affected by the fact that newer devices that use new protocols makes it more difficult for them to communicate with older devices and technology"
+        ? "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        : "...the amount of data on the Internet is growing so fast that the amount computing power and time we have to process it is lagging behind"
+        What is the digital divide?: What is the digital divide?
+        ? Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+        : Which of the following is the most accurate description of what is known as the "digital divide". <br><br>The digital divide is about how...
+      U2L9 What is digital divide MC_2018:
         ? "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         : "...people's access to computing and digital technology increases over time through a process of dividing and growing quickly - it is often likened to the biological processes of cell growth"
         "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics.": "...people's access to computing and the Internet differs based on socioeconomic or geographic characteristics."
@@ -8059,7 +8454,22 @@ en:
         Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
         Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
         Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
+      U3L03 - multiselect - properties of functions_2018:
+        'Choose Two: True Statements about Functions': 'Choose Two: True Statements about Functions'
+        Choose the two (2) statements that are true about functions: Choose the two (2) statements that are true about functions
+        Functions in programming are named groupings of programming instructions.<br>: Functions in programming are named groupings of programming instructions.<br>
+        Functions in programming are useful mathematical tools for doing complex computations.<br>: Functions in programming are useful mathematical tools for doing complex computations.<br>
+        Meaningful function names help <em>computers</em> better understand programs.<br>: Meaningful function names help <em>computers</em> better understand programs.<br>
+        Meaningful function names help <em>people</em> better understand programs.<br>: Meaningful function names help <em>people</em> better understand programs.<br>
       U3L03 Assessment:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        'Multiple Choice: False Statements about Functions': 'Multiple Choice: False Statements about Functions'
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+        Which of the following is NOT a true statement about functions?: Which of the following is NOT a true statement about functions?
+      U3L03 Assessment_2018:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions written by the same programmer.: Functions cannot make calls to other functions written by the same programmer.
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
@@ -8075,7 +8485,22 @@ en:
         Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
         Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
         Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
+      U3L04 Assessment2_2018:
+        'Multiple Choice: Functions and Top-Down Design': 'Multiple Choice: Functions and Top-Down Design'
+        Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.: Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.
+        Top-Down Design leads to programs which feature multiple layers of abstraction.: Top-Down Design leads to programs which feature multiple layers of abstraction.
+        Top-Down Design relies upon identifying sub-problems of a larger problem.: Top-Down Design relies upon identifying sub-problems of a larger problem.
+        Two programmers solving the same problem using Top-Down Design should arrive at identical programs.: Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+        Which of the following statements about writing functions and Top-Down Design is NOT true?: Which of the following statements about writing functions and Top-Down Design is NOT true?
+        Writing functions helps manage complexity in a program.: Writing functions helps manage complexity in a program.
       U3L06 Assessment2:
+        A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
+        A named memory location.: A named memory location.
+        A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
+        Another name for the purpose of a function.: Another name for the purpose of a function.
+        'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
+        'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
+      U3L06 Assessment2_2018:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
@@ -8089,7 +8514,21 @@ en:
         Applied Power Implementation: Applied Power Implementation
         Artificial Parameter Intelligence: Artificial Parameter Intelligence
         'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
+      U3L06-API-multichoice_2018:
+        Abstract Parameter Interface: Abstract Parameter Interface
+        Abstract Programming Inheritance: Abstract Programming Inheritance
+        Application Program Interface: Application Program Interface
+        Applied Power Implementation: Applied Power Implementation
+        Artificial Parameter Intelligence: Artificial Parameter Intelligence
+        'Multiple Choice: What is an API?': 'Multiple Choice: What is an API?'
       U3L07 - MC remove line of code loops:
+        '1': '1'
+        '14': '14'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        Which line of code should be removed to make the program do what it's supposed to?: Which line of code should be removed to make the program do what it's supposed to?
+      U3L07 - MC remove line of code loops_2018:
         '1': '1'
         '14': '14'
         '5': '5'
@@ -8106,6 +8545,13 @@ en:
         forward283( ): forward283( )
         forward50( ): forward50( )
       U3L08 Assessment1:
+        'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
+        Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
+        Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
+        Parameters help generalize the solution of a specific problem.: Parameters help generalize the solution of a specific problem.
+        'Select the two true statements about functions with parameters:': 'Select the two true statements about functions with parameters:'
+        Values do not need to be provided to a function with parameters in any particular order.: Values do not need to be provided to a function with parameters in any particular order.
+      U3L08 Assessment1_2018:
         'Choose Two: Functions with Parameters': 'Choose Two: Functions with Parameters'
         Functions with parameters can be used to prevent the creation of duplicated code.: Functions with parameters can be used to prevent the creation of duplicated code.
         Parameters can only be used once within the body of a function.: Parameters can only be used once within the body of a function.
@@ -8459,7 +8905,20 @@ en:
         That there is so much data it's virtually impossible to process.: That there is so much data it's virtually impossible to process.
         There is enough data that traditional data processing applications are inadequate.: There is enough data that traditional data processing applications are inadequate.
         When a computer scientist uses the term "Big Data" what do they typically mean?: When a computer scientist uses the term "Big Data" what do they typically mean?
+      U4L1 - MC big data def_2018:
+        Big Data: Big Data
+        It implies that the findings from the data are potentially hugely important for society.: It implies that the findings from the data are potentially hugely important for society.
+        That a dataset is larger than 5TB which is the common "Big Data" threshold.: That a dataset is larger than 5TB which is the common "Big Data" threshold.
+        That there is so much data it's virtually impossible to process.: That there is so much data it's virtually impossible to process.
+        There is enough data that traditional data processing applications are inadequate.: There is enough data that traditional data processing applications are inadequate.
+        When a computer scientist uses the term "Big Data" what do they typically mean?: When a computer scientist uses the term "Big Data" what do they typically mean?
       U4L1 - MC moores law:
+        Boolean's Conjecture: Boolean's Conjecture
+        'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
+        Moore's Law: Moore's Law
+        Powers of 2 Principle: Powers of 2 Principle
+        The "Big Data Effect": The "Big Data Effect"
+      U4L1 - MC moores law_2018:
         Boolean's Conjecture: Boolean's Conjecture
         'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
         Moore's Law: Moore's Law
@@ -8676,6 +9135,13 @@ en:
         wrong3: wrong3
         wrong4: wrong4
       U4L4 - MC cost of free:
+        Companies are required by law to give users options to personalize what data they collect about them: Companies are required by law to give users options to personalize what data they collect about them
+        Companies can sell the personal information of users to advertisers or other businesses: Companies can sell the personal information of users to advertisers or other businesses
+        Companies frequently offer services free of charge in exchange for access to data about their users: Companies frequently offer services free of charge in exchange for access to data about their users
+        Personal data about users may be saved by a company permanently, never to be deleted.: Personal data about users may be saved by a company permanently, never to be deleted.
+        ? Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
+        : Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
+      U4L4 - MC cost of free_2018:
         Companies are required by law to give users options to personalize what data they collect about them: Companies are required by law to give users options to personalize what data they collect about them
         Companies can sell the personal information of users to advertisers or other businesses: Companies can sell the personal information of users to advertisers or other businesses
         Companies frequently offer services free of charge in exchange for access to data about their users: Companies frequently offer services free of charge in exchange for access to data about their users
@@ -10569,7 +11035,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q10_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q11:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q11_2018:
         Agree: Agree
         Disagree: Disagree
         'I think computer science is interesting. ': 'I think computer science is interesting. '
@@ -10587,7 +11071,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q12_2018:
+        Agree: Agree
+        Disagree: Disagree
+        'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q13:
+        Agree: Agree
+        Disagree: Disagree
+        I am better at computer science than other kids at my school.: I am better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q13_2018:
         Agree: Agree
         Disagree: Disagree
         I am better at computer science than other kids at my school.: I am better at computer science than other kids at my school.
@@ -10605,7 +11107,25 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
         When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
+      csp-post-survey-2017-q14_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q16:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q16_2018:
         Agree: Agree
         Disagree: Disagree
         It is important to me to be good at computer science.: It is important to me to be good at computer science.
@@ -10623,7 +11143,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q17_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q18:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q18_2018:
         Agree: Agree
         Disagree: Disagree
         I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
@@ -10636,6 +11174,24 @@ en:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q19_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -10659,7 +11215,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q20_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q22:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Sometimes I feel unsure whether I belong in this class.: Sometimes I feel unsure whether I belong in this class.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q22_2018:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -10677,7 +11251,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q23_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students in this computer science class.: I am treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q24:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like I can be myself in this computer science class.: I feel like I can be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q24_2018:
         Agree: Agree
         Disagree: Disagree
         I feel like I can be myself in this computer science class.: I feel like I can be myself in this computer science class.
@@ -10695,7 +11287,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q25_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like my opinions are taken seriously in this computer science class.: I feel like my opinions are taken seriously in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q26:
+        Agree: Agree
+        Disagree: Disagree
+        It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q26_2018:
         Agree: Agree
         Disagree: Disagree
         It has been hard for people like me to to be accepted in this computer science class.: It has been hard for people like me to to be accepted in this computer science class.
@@ -10713,6 +11323,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q28_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q29:
         Agree: Agree
         Computer science is important for my future.: Computer science is important for my future.
@@ -10722,6 +11341,24 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q29_2018:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-post-survey-2017-q3:
         Agree: Agree
         Disagree: Disagree
@@ -10740,7 +11377,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q30_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q31:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q31_2018:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -10758,7 +11413,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q32_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I often take a step back and think about what is most important to me.: I often take a step back and think about what is most important to me.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q33:
+        Agree: Agree
+        Disagree: Disagree
+        Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q33_2018:
         Agree: Agree
         Disagree: Disagree
         Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
@@ -10776,7 +11449,25 @@ en:
         Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q34_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q35:
+        Agree: Agree
+        Disagree: Disagree
+        I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q35_2018:
         Agree: Agree
         Disagree: Disagree
         I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
@@ -10790,7 +11481,17 @@ en:
         A lot: A lot
         I worry because I'm not good at math.: I worry because I'm not good at math.
         Not at all: Not at all
+      csp-post-survey-2017-q36-a_2018:
+        A little: A little
+        A lot: A lot
+        I worry because I'm not good at math.: I worry because I'm not good at math.
+        Not at all: Not at all
       csp-post-survey-2017-q36-b:
+        A little: A little
+        A lot: A lot
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        Not at all: Not at all
+      csp-post-survey-2017-q36-b_2018:
         A little: A little
         A lot: A lot
         I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
@@ -10800,12 +11501,40 @@ en:
         A lot: A lot
         I worry because of my gender.: I worry because of my gender.
         Not at all: Not at all
+      csp-post-survey-2017-q36-c_2018:
+        A little: A little
+        A lot: A lot
+        I worry because of my gender.: I worry because of my gender.
+        Not at all: Not at all
       csp-post-survey-2017-q36-d:
         A little: A little
         A lot: A lot
         I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
         Not at all: Not at all
+      csp-post-survey-2017-q36-d_2018:
+        A little: A little
+        A lot: A lot
+        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
+        Not at all: Not at all
+      csp-post-survey-2017-q3_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q4:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q4_2018:
         Agree: Agree
         Disagree: Disagree
         It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
@@ -10821,7 +11550,21 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q50_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        'Analyze data (organize, process, manipulate, or evaluate data). ': 'Analyze data (organize, process, manipulate, or evaluate data). '
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q51:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q51_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Explain the logic and reasoning supporting my solutions to problems.: Explain the logic and reasoning supporting my solutions to problems.
@@ -10835,7 +11578,21 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q52_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Explain why I agreed or disagreed with the work of other students in class.: Explain why I agreed or disagreed with the work of other students in class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q53:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Communicate my thought processes to others.: Communicate my thought processes to others.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q53_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Communicate my thought processes to others.: Communicate my thought processes to others.
@@ -10849,6 +11606,13 @@ en:
         Never: Never
         Once or more per class session: Once or more per class session
         Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
+      csp-post-survey-2017-q54_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Problem solve when something didn't work the way I wanted it to work.: Problem solve when something didn't work the way I wanted it to work.
       csp-post-survey-2017-q55:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
@@ -10856,7 +11620,22 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q55_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Consider alternative approaches to my work.: Consider alternative approaches to my work.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q56:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q56_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         ? Consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
@@ -10872,6 +11651,14 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q57_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        : Connected a lesson or classroom activities to my own life (e.g., by asking about my past experiences, or applying content to my daily life).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q58:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
@@ -10879,7 +11666,21 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q58_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.: Made activities and projects interesting to me by sharing relevant stories, using humor, bringing in guest speakers, etc.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q59:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Connected lesson content with current events.: Connected lesson content with current events.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q59_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Connected lesson content with current events.: Connected lesson content with current events.
@@ -10902,7 +11703,21 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csp-post-survey-2017-q60_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked questions when I was confused about activities or assignments.: Asked questions when I was confused about activities or assignments.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csp-post-survey-2017-q61:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        'Tried new things in class even when I was not sure how to do them. ': 'Tried new things in class even when I was not sure how to do them. '
+      csp-post-survey-2017-q61_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Many class sessions: Many class sessions
@@ -10914,11 +11729,30 @@ en:
         : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
         'No': 'No'
         'Yes': 'Yes'
+      csp-post-survey-2017-q64_2018:
+        ? 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        : 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+        'No': 'No'
+        'Yes': 'Yes'
       csp-post-survey-2017-q65:
         I don't know: I don't know
         Is this computer science course required for you?: Is this computer science course required for you?
         'No': 'No'
         'Yes': 'Yes'
+      csp-post-survey-2017-q65_2018:
+        I don't know: I don't know
+        Is this computer science course required for you?: Is this computer science course required for you?
+        'No': 'No'
+        'Yes': 'Yes'
+      csp-post-survey-2017-q6_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q8:
         Agree: Agree
         Disagree: Disagree
@@ -10928,7 +11762,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q8_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2017-q9:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2017-q9_2018:
         Agree: Agree
         Disagree: Disagree
         I can really be myself at school.: I can really be myself at school.
@@ -11732,7 +12584,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q1-U2Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q2-U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q2-U2Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -11750,7 +12620,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q3-U2Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-2-q4-U2Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q4-U2Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
@@ -11768,7 +12656,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-2-q5-U2Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q1-U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q1-U2Ch2_2018:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
@@ -11786,7 +12692,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q2-U2Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q3-U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q3-U2Ch2_2018:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
@@ -11804,7 +12728,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q4-U2Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-3-q5-U2Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-3-q5-U2Ch2_2018:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -11822,7 +12764,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q1-U3Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q2-U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q2-U3Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -11840,7 +12800,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q3-U3Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-4-q4-U3Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q4-U3Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
@@ -11858,7 +12836,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-4-q5-U3Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q1-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q1-U4Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I like computer science.: I like computer science.
@@ -11876,7 +12872,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q2-U4Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q3-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q3-U4Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I like this computer science class.: I like this computer science class.
@@ -11894,7 +12908,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q4-U4Ch1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-5-q5-U4Ch1:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-5-q5-U4Ch1_2018:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -12004,7 +13036,23 @@ en:
         ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
         : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
         Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
+      csp_U3_subgoal_q4_mc_2018:
+        ? Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        : Calling the parameters of a function<br><img src="https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png">
+        ? Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        : Defining the parameters of a function<br><img src="https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png">
+        ? Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        : Moving the turtle around the screen<br><img src="https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png">
+        None of the above: None of the above
+        ? Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        : Orienting the direction of the turtle <br><img src="https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png">
+        Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">: Setting pen properties <br><img src="https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png">
       csp_U3_turtle_subgoal_q1_mc:
+        <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
+        <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
+        <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
+        <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">: <img src="https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png">
+      csp_U3_turtle_subgoal_q1_mc_2018:
         <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">: <img src="https://images.code.org/06b629c906b5b6c3ed4349addd600afd-image-1506461600674.png">
         <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">: <img src="https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png">
         <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">: <img src="https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png">
@@ -12014,7 +13062,18 @@ en:
         <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
         <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
         <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
+      csp_U3_turtle_subgoal_q2_mc_2018:
+        <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">: <img src="https://images.code.org/55925716649b3728c2f0d471daa15d76-image-1506462044543.png">
+        <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">: <img src="https://images.code.org/97bd0addc524083097425b6b83074aa9-image-1506462021794.png">
+        <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">: <img src="https://images.code.org/d20710c046c8c2d44e9e174ab3dad959-image-1506462130363.png">
+        <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">: <img src="https://images.code.org/dba8d990163d04d9a6b157aff67de6e1-image-1506461991549.png">
       csp_U3_turtle_subgoal_q3_mc:
+        Adding code to the body of the function: Adding code to the body of the function
+        Giving the function a name: Giving the function a name
+        Giving the parameters a value: Giving the parameters a value
+        Identifying the parameters of the function: Identifying the parameters of the function
+        Which of the following is NOT part of defining a function?: Which of the following is NOT part of defining a function?
+      csp_U3_turtle_subgoal_q3_mc_2018:
         Adding code to the body of the function: Adding code to the body of the function
         Giving the function a name: Giving the function a name
         Giving the parameters a value: Giving the parameters a value
@@ -12052,6 +13111,12 @@ en:
         <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
         <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
         <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
+      cspu3_assess1_callfunction_2018:
+        <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
+        <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
+        <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>: <img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>
+        <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>: <img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>
+        <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>: <img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>
       cspu3_assess1_callfunction_exam_prep:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
@@ -12063,12 +13128,24 @@ en:
         The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
         The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
         The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
+      cspu3_assess1_codeoutcome_2018:
+        It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
+        The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
+        The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
+        The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
       cspu3_assess1_codeoutcome_exam_prep:
         It will draw a star with each side 150 pixels long.: It will draw a star with each side 150 pixels long.
         The program will run without error, but will not draw anything.: The program will run without error, but will not draw anything.
         The program will stop with an error at line 3 because parameters may not be used in for loops.: The program will stop with an error at line 3 because parameters may not be used in for loops.
         The program will stop with an error at line 5 because it is dividing by 0.: The program will stop with an error at line 5 because it is dividing by 0.
       cspu3_assess1_collaboration:
+        Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
+        In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
+        ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        : Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
+        Programmers can write functions without needing to know what they do or how they should work.: Programmers can write functions without needing to know what they do or how they should work.
+        Team members can rely on one another to explain their code.: Team members can rely on one another to explain their code.
+      cspu3_assess1_collaboration_2018:
         Abstraction allows programmers to brainstorm more creative solutions to problems.: Abstraction allows programmers to brainstorm more creative solutions to problems.
         In order for programmers to work together, they must work in the same room.: In order for programmers to work together, they must work in the same room.
         ? Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.
@@ -12088,6 +13165,12 @@ en:
         Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
         Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
         Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
+      cspu3_assess1_functionsfalse_2018:
+        Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
+        Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
+        Functions help break a problem into logical chunks.: Functions help break a problem into logical chunks.
+        Functions help reduce the complexity of writing and maintaining programs.: Functions help reduce the complexity of writing and maintaining programs.
+        Once defined, a function can be called many times from different parts of a program.: Once defined, a function can be called many times from different parts of a program.
       cspu3_assess1_functionsfalse_exam_prep:
         Functions are reusable programming abstractions.: Functions are reusable programming abstractions.
         Functions cannot make calls to other functions within the same program.: Functions cannot make calls to other functions within the same program.
@@ -12097,10 +13180,16 @@ en:
       cspu3_assess1_loop_or_function1:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function1_2018:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function1_exam_prep:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function2:
+        Function(s): Function(s)
+        Loop: Loop
+      cspu3_assess1_loop_or_function2_2018:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function2_exam_prep:
@@ -12109,16 +13198,28 @@ en:
       cspu3_assess1_loop_or_function3:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function3_2018:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function3_exam_prep:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_loop_or_function4:
         Function(s): Function(s)
         Loop: Loop
+      cspu3_assess1_loop_or_function4_2018:
+        Function(s): Function(s)
+        Loop: Loop
       cspu3_assess1_loop_or_function4_exam_prep:
         Function(s): Function(s)
         Loop: Loop
       cspu3_assess1_namingconvention:
+        A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
+        A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
+        Function names should be organized alphabetically.: Function names should be organized alphabetically.
+        The function name should begin with a number that indicates the order in which it should be executed.: The function name should begin with a number that indicates the order in which it should be executed.
+        Two functions with similar behavior should be given identical names to indicate the relationship between them.: Two functions with similar behavior should be given identical names to indicate the relationship between them.
+      cspu3_assess1_namingconvention_2018:
         A function name should be as descriptive as possible to indicate what the function does.: A function name should be as descriptive as possible to indicate what the function does.
         A function name should indicate how long the function takes to run.: A function name should indicate how long the function takes to run.
         Function names should be organized alphabetically.: Function names should be organized alphabetically.
@@ -12135,12 +13236,23 @@ en:
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
+      cspu3_assess1_naturallanguage_2018:
+        Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
+        Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
+        The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
+        There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       cspu3_assess1_naturallanguage_exam_prep:
         Ambiguities in natural language necessitate the creation of programming languages for controlling a computer: Ambiguities in natural language necessitate the creation of programming languages for controlling a computer
         Compared to the number of words in a natural language, the number of defined words in a programming language is very small.: Compared to the number of words in a natural language, the number of defined words in a programming language is very small.
         The number of defined words in a programming language is about the same as the number of words in a natural language.: The number of defined words in a programming language is about the same as the number of words in a natural language.
         There are typically many possible ways to interpret an instruction written in a programming language.: There are typically many possible ways to interpret an instruction written in a programming language.
       cspu3_assess1_outputdrawing:
+        <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
+        <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
+        <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
+        <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
+        <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
+      cspu3_assess1_outputdrawing_2018:
         <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
         <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
         <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
@@ -12157,12 +13269,22 @@ en:
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
+      cspu3_assess1_parameters_2018:
+        Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
+        Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
+        Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
+        Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
       cspu3_assess1_parameters_exam_prep:
         Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
         Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.: Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.
         Parameters change the order of operations within a function.: Parameters change the order of operations within a function.
         Parameters determine the number of times the function will run.: Parameters determine the number of times the function will run.
       cspu3_assess1_removeline:
+        Line 3 and Line 4: Line 3 and Line 4
+        Line 8 and Line 9: Line 8 and Line 9
+        Line 9: Line 9
+        Lines 5, 6, 7, 8 and 9: Lines 5, 6, 7, 8 and 9
+      cspu3_assess1_removeline_2018:
         Line 3 and Line 4: Line 3 and Line 4
         Line 8 and Line 9: Line 8 and Line 9
         Line 9: Line 9
@@ -12178,6 +13300,12 @@ en:
         <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
         <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
         <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
+      cspu3_assess1_robotpath_2018:
+        <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
+        <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
+        <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">: <img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">
+        <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
+        <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
       cspu3_assess1_robotpath_exam_prep:
         <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">: <img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">
         <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">: <img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">
@@ -12185,6 +13313,12 @@ en:
         <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">: <img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">
         <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">: <img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">
       cspu3_assess1_truefunctions:
+        A function can change names over the course of a program.: A function can change names over the course of a program.
+        Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
+        Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
+        Two functions can be given identical names as long as their code is identical.: Two functions can be given identical names as long as their code is identical.
+        Two functions in a single program can have different names but contain identical code.: Two functions in a single program can have different names but contain identical code.
+      cspu3_assess1_truefunctions_2018:
         A function can change names over the course of a program.: A function can change names over the course of a program.
         Code can be added or removed dynamically from a function while the program is running.: Code can be added or removed dynamically from a function while the program is running.
         Functions can be called using different names depending on where in the program they are called.: Functions can be called using different names depending on where in the program they are called.
@@ -13846,6 +14980,9 @@ en:
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
       U1L13 - Assess Text Compression reverse process:
+        Act as the computer!: Act as the computer!
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 - Assess Text Compression reverse process_2018:
         Act as the computer!: Act as the computer!
         the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
       U2L07 Assessment4:

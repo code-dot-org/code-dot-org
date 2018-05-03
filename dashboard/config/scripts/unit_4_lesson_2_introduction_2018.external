@@ -1,0 +1,53 @@
+name 'Unit 4 Lesson 2 Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 4: Lesson 2 - Rapid Research - Data Innovations
+
+## Background
+
+In this lesson you will conduct a small amount of research to explore a computing innovation that leverages the use of data.  You will research a topic of personal interest and respond to questions about how that innovation produces, uses or consumes data. 
+
+## Vocabulary
+
+* **One-pager:** A business/corporate term for a one-page document that summarizes a large issue, topic or plan.  The purpose is to distill and highlight the most important pieces of information in a digestible manner so that the reader can be quickly acquainted with the relevant details of the "big picture."
+
+## Lesson
+
+* Watch a video about big data  
+* Choose and research a Data Innovation.
+* Prepare your one-pager.
+
+## Resources
+
+**Video: (choose at least one)**
+
+* [Computer Science is Changing Everything](https://youtu.be/1x54GqfL3UY) - Video ([download](https://videos.code.org/2015/csp/cs_is_changing_everything.mp4))
+* [Data and Medicine](https://youtu.be/bMrDHtGHFR4) - Video ([download](http://videos.code.org/2015/csp/concept_bigdata_medicine.mp4))
+* [The Math Behind Basketball's Wildest Moves](https://www.ted.com/talks/rajiv_maheswaran_the_math_behind_basketball_s_wildest_moves) - Video ([download](http://download.ted.com/talks/RajivMaheswaran_2015-480p.mp4))
+
+**Activity Guides**
+
+* [Rapid Research - Data Innovations](https://docs.google.com/document/d/1u5L0whsWQ5YQbUqf8SbrJFIcIX91d2bvaYPwC_zP8nI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1u5L0whsWQ5YQbUqf8SbrJFIcIX91d2bvaYPwC_zP8nI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1u5L0whsWQ5YQbUqf8SbrJFIcIX91d2bvaYPwC_zP8nI/copy))
+* [Data Innovation One-Pager](https://docs.google.com/document/d/1fybRqfbfWRYHhUGBMA_dZedXXaaVezt3gYks8gsza0E/export?format=pdf) - Template (copy as [MS Word](https://docs.google.com/document/d/1fybRqfbfWRYHhUGBMA_dZedXXaaVezt3gYks8gsza0E/export?format=doc), [Google Doc](https://docs.google.com/document/d/1fybRqfbfWRYHhUGBMA_dZedXXaaVezt3gYks8gsza0E/copy))
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+---
+
+**Older versions of documents. Deprecated Nov. 2017**
+
+*In November 2017 we updated these student documents to better reflect and mimic changes to the AP Performance Tasks announced in August. The original documents are here in the event you or your class were doing work based on them. The new documents are above.*
+
+* [Deprecated] [Activity Guide - Rapid Research - Data Innovations](https://docs.google.com/document/d/1nh9_-EpTSogWpEF0F0L8eO_JLcZZnzT87MC3xPFNlx4/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1nh9_-EpTSogWpEF0F0L8eO_JLcZZnzT87MC3xPFNlx4/export?format=doc), [Google Doc](https://docs.google.com/document/d/1nh9_-EpTSogWpEF0F0L8eO_JLcZZnzT87MC3xPFNlx4/copy))
+
+* [Deprecated] [Worksheet - Data Innovation One-Pager Template](https://docs.google.com/document/d/1Env_QFc75DK7mq0H_Hy3_jtfk9IplV6hqQNl49vNoEU/export?format=pdf) (copy as [MS Word](https://docs.google.com/document/d/1Env_QFc75DK7mq0H_Hy3_jtfk9IplV6hqQNl49vNoEU/export?format=doc), [Google Doc](https://docs.google.com/document/d/1Env_QFc75DK7mq0H_Hy3_jtfk9IplV6hqQNl49vNoEU/copy))
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
