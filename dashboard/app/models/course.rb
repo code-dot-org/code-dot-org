@@ -257,8 +257,19 @@ class Course < ApplicationRecord
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end,
       teacher_resources: teacher_resources,
-      has_verified_resources: has_verified_resources?
+      has_verified_resources: has_verified_resources?,
+      versions: summarize_versions
     }
+  end
+
+  # Returns an array of objects showing the name and version year for all courses
+  # sharing the assignment_family_name of this course, including this one.
+  def summarize_versions
+    Course.
+      where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
+      map {|c| {name: c.name, version_year: c.version_year}}.
+      sort_by {|info| info[:version_year]}.
+      reverse
   end
 
   # If a user has no experiments enabled, return the default set of scripts.
