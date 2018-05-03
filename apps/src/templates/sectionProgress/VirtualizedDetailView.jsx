@@ -187,6 +187,7 @@ class VirtualizedDetailView extends Component {
         {stageIdIndex >= 0 && (
           <StudentProgressDetailCell
             studentId={student.id}
+            sectionId={section.id}
             stageId={stageIdIndex}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
           />

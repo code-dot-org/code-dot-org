@@ -1,0 +1,40 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit1/standards/"]]
+has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+
+stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'csd-pre-survey-2017-levelgroup_2018'
+
+stage 'Intro to Problem Solving', flex_category: 'csd1_1'
+named_level 'Unit 1 Lesson 1 Overview_2018'
+
+stage 'The Problem Solving Process', flex_category: 'csd1_1'
+named_level 'Unit 1 Lesson 2 Overview_2018'
+
+stage 'Exploring Problem Solving', flex_category: 'csd1_1'
+named_level 'Unit 1 Lesson 3 Overview_2018'
+
+stage 'What is a Computer?', flex_category: 'csd1_2'
+named_level 'Unit 1 Lesson 4 Overview_2018'
+named_level 'CSD What Makes a Computer a Computer Video_2018'
+
+stage 'Input and Output', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 5 Overview_2018'
+
+stage 'Processing', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 6 Overview_2018'
+
+stage 'Storage', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 7 Overview_2018'
+
+stage 'Apps and Problem Solving', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 8 Overview_2018'
+
+stage 'Project - Propose an App', flex_category: 'csd1_2'
+named_level 'CSD U1 Lesson 9 Overview_2018'
+assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018', progression: 'Reflection'

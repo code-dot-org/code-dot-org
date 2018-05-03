@@ -4,11 +4,12 @@ description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # **You just learned "conditionals"!**
 
-### **A *conditional* is a statement that only runs under a certain condition.** 
+### Conditionals are super useful in computer science. Imagine logging in to your favorite website and typing in your password. The website has to use conditionals to check *if* the password you entered matches the password it has saved for your username. 
 
-### A *condition* is a statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.
+### `If` it matches, log in! 
 
-### Conditionals are super useful in computer science. Imagine logging in to your favorite website and typing in your password. The website has to use conditionals to check *if* the password you entered matches the password it has saved for your username. *If* it matches, log in! *Else*, give the user an error. 
+### `Else`, give the user an error.  
+
 ---
 
 ## **Vocab to Know**

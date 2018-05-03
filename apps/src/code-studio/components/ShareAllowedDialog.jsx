@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import PendingButton from '../../templates/PendingButton';
 import AdvancedShareOptions from './AdvancedShareOptions';
-import AbuseError from './abuse_error';
+import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';

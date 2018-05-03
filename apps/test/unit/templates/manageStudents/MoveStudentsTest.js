@@ -1,98 +1,137 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {UnconnectedMoveStudents as MoveStudents, DEFAULT_STATE} from '@cdo/apps/templates/manageStudents/MoveStudents';
+import sinon from 'sinon';
+import {blankStudentTransfer} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 
 const studentData = [
   {id: 1, name: 'studentb'},
-  {id: 3, name: 'studenta'},
-  {id: 0, name: ''},
-  {id: 2, name: 'studentf'}
+  {id: 3, name: 'studentc'},
+  {id: 0, name: 'studenta'}
 ];
 const sections = [
   {id: 0, name: 'sectiona'},
   {id: 1, name: 'sectionb'},
   {id: 2, name: 'sectionc'}
 ];
+const DEFAULT_PROPS = {
+  studentData: studentData,
+  transferData: blankStudentTransfer,
+  sections: sections,
+  currentSectionId: 1
+};
 
 describe('MoveStudents', () => {
-  let wrapper;
+  let updateStudentTransfer;
+  let transferStudents;
 
   beforeEach(() => {
-    wrapper = shallow(
+    updateStudentTransfer = sinon.spy();
+    transferStudents = sinon.spy();
+  });
+
+  it('opens a dialog with a table', () => {
+    const wrapper = mount(
       <MoveStudents
-        studentData={studentData}
-        sections={sections}
+        {...DEFAULT_PROPS}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
       />
     );
+
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.find('BaseDialog').exists()).to.be.true;
+    expect(wrapper.find('table').exists()).to.be.true;
   });
 
-  describe('#openDialog', () => {
-    it('sets isDialogOpen state to true', () => {
-      wrapper.instance().openDialog();
-      expect(wrapper.instance().state.isDialogOpen).to.equal(true);
-    });
+  it('renders students as rows', () => {
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+      />
+    );
+
+    wrapper.find('Button').simulate('click');
+    const nameCells = wrapper.find('.uitest-name-cell');
+    expect(nameCells).to.have.length(3);
   });
 
-  describe('#closeDialog', () => {
-    it('sets state to DEFAULT_STATE', () => {
-      wrapper.instance().isDialogOpen = true;
-      wrapper.instance().selectedIds = [1,2];
+  it('sorts students by name (ascending) on click', () => {
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+      />
+    );
 
-      wrapper.instance().closeDialog();
-      expect(wrapper.instance().state).to.deep.equal(DEFAULT_STATE);
-    });
+    wrapper.find('Button').simulate('click');
+    wrapper.find('#uitest-name-header').simulate('click');
+    const nameCells = wrapper.find('.uitest-name-cell');
+    expect(nameCells.at(0).text()).to.equal('studenta');
+    expect(nameCells.at(1).text()).to.equal('studentb');
+    expect(nameCells.at(2).text()).to.equal('studentc');
   });
 
-  describe('#getStudentIds', () => {
-    it('returns all student ids', () => {
-      expect(wrapper.instance().getStudentIds()).to.have.members([0,1,2,3]);
-    });
+  it('shows all sections minus current section in dropdown', () => {
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+      />
+    );
+
+    wrapper.find('Button').simulate('click');
+    const dropdownOptions = wrapper.find('select').find('option');
+    // Dropdown options should include initial empty option, list of
+    // sections (excluding current section), and 'Other teacher' option
+    expect(dropdownOptions).to.have.length(4);
+    expect(dropdownOptions.at(0).text()).to.equal('');
+    expect(dropdownOptions.at(1).text()).to.equal('sectiona');
+    expect(dropdownOptions.at(2).text()).to.equal('sectionc');
+    expect(dropdownOptions.at(3).text()).to.equal('Other teacher');
   });
 
-  describe('#areAllSelected', () => {
-    it('returns true if all student ids are in selectedIds', () => {
-      wrapper.instance().state.selectedIds = [0,1,2,3];
-      expect(wrapper.instance().areAllSelected()).to.equal(true);
-    });
+  it('renders additional inputs if other teacher is selected', () => {
+    const transferData = {
+      ...blankStudentTransfer,
+      otherTeacher: true
+    };
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        transferData={transferData}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+      />
+    );
 
-    it('returns false if all student ids are not in selectedIds', () => {
-      wrapper.instance().state.selectedIds = [0,1,2];
-      expect(wrapper.instance().areAllSelected()).to.equal(false);
-    });
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.find('#uitest-other-teacher').exists()).to.be.true;
   });
 
-  describe('#toggleSelectAll', () => {
-    it('clears selectedIds in state if all ids are selected', () => {
-      wrapper.instance().state.selectedIds = [0,1,2,3];
-      wrapper.instance().toggleSelectAll();
-      expect(wrapper.instance().state.selectedIds).to.have.members([]);
-    });
+  it('calls transferStudents on submit', () => {
+    const transferData = {
+      ...blankStudentTransfer,
+      studentIds: [1],
+      sectionId: 2
+    };
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        transferData={transferData}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+      />
+    );
 
-    it('adds all ids to selectedIds in state if some ids are selected', () => {
-      wrapper.instance().state.selectedIds = [0,1];
-      wrapper.instance().toggleSelectAll();
-      expect(wrapper.instance().state.selectedIds).to.have.members([0,1,2,3]);
-    });
-
-    it('adds all ids to selectedIds in state if no ids are selected', () => {
-      wrapper.instance().state.selectedIds = [];
-      wrapper.instance().toggleSelectAll();
-      expect(wrapper.instance().state.selectedIds).to.have.members([0,1,2,3]);
-    });
-  });
-
-  describe('#toggleStudentSelected', () => {
-    it('removes student id from selectedIds in state if already present', () => {
-      wrapper.instance().state.selectedIds = [1];
-      wrapper.instance().toggleStudentSelected(1);
-      expect(wrapper.instance().state.selectedIds).to.have.members([]);
-    });
-
-    it('adds student id to selectedIds in state if not already present', () => {
-      wrapper.instance().state.selectedIds = [1];
-      wrapper.instance().toggleStudentSelected(0);
-      expect(wrapper.instance().state.selectedIds).to.have.members([0,1]);
-    });
+    wrapper.find('Button').simulate('click');
+    expect(transferStudents.callCount).to.equal(0);
+    wrapper.find('#submit').simulate('click');
+    expect(transferStudents.callCount).to.equal(1);
   });
 });

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import AbuseError from './abuse_error';
+import AbuseError from './AbuseError';
 
 /**
  * A big blue box with an exclamation mark on the left and our abuse text on
