@@ -452,7 +452,11 @@ export class WorkshopForm extends React.Component {
       !(this.props.permission.has(CsfFacilitator) && !this.props.workshop)
     );
 
-    const options = [{value: '', label: 'None'}];
+    const options = [];
+    if (this.props.permission.has(CsfFacilitator) || this.props.permission.has(WorkshopAdmin)) {
+      options.push({value: '', label: 'None'});
+    }
+
     if (this.state.regionalPartners) {
       const sortedPartners = _.sortBy(this.state.regionalPartners, partner => partner.name);
       options.push(...sortedPartners.map(partner => ({
@@ -472,17 +476,26 @@ export class WorkshopForm extends React.Component {
         <ControlLabel>
           Regional Partner
         </ControlLabel>
-        <Select
-          id="regional-partner-select"
-          name="regional_partner_id"
-          onChange={this.handleRegionalPartnerSelect}
-          style={this.getInputStyle()}
-          value={this.state.regional_partner_id || ''}
-          options={options}
+        {
+          options.length > 1 &&
+          <Select
+            id="regional-partner-select"
+            name="regional_partner_id"
+            onChange={this.handleRegionalPartnerSelect}
+            style={this.getInputStyle()}
+            value={this.state.regional_partner_id || ''}
+            options={options}
 
-          // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
-          disabled={editDisabled}
-        />
+            // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
+            disabled={editDisabled}
+          />
+        }
+        {
+          options.length === 1 &&
+          <p>
+            {options[0].label}
+          </p>
+        }
       </FormGroup>
     );
   }
