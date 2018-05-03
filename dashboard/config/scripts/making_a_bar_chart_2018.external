@@ -1,0 +1,62 @@
+name 'Making a Bar Chart_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making a Bar Chart
+
+In this exercise, you will use some different columns in the spreadsheet to create a **bar chart**. Bar charts are useful for viewing data grouped by different categories.
+
+---
+
+## Select Data
+
+**Do This:** Select the **“age,”** **“number of women,”** and **“number of men”** columns
+
+* Select the first column of data using the mouse
+* Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data
+
+<details>
+<summary>Using Hotkeys</summary>
+<span>To select cells in non-adjacent columns you can also use hotkeys:</span>
+<ol>
+<li>Select the cells from the first column (i.e., A1 through A62) using the <strong>SHIFT+click</strong> combination.</li>
+<li>Hold down <strong>COMMAND</strong> (if using a Mac) or <strong>CONTROL</strong> (if using Windows) and click to select the first cell of the next column (i.e., E1).</li>
+<li>Hold <strong>COMMAND/CONTROL</strong> **and** <strong>SHIFT</strong> simultaneously, then click to select the last cell in the new column (i.e., E62).</li>
+<li>Repeat steps 2-3 for any additional columns you want to select (i.e., G1 through G62).</li>
+</ol>
+</details><br>
+
+![](https://images.code.org/4208af40200c99a749ddeddbba3a1ebe-image-1454103069438.gif)
+*Select the "age," "number of women," and "number of men" columns.
+
+---
+
+## Insert Chart
+
+**Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
+
+* Set the chart type to **“Column chart.”**
+* Check the boxes for **“Use row 1 as headers”** and **“Use column A as labels.”**
+* Click **“Insert”** to add your chart to the spreadsheet.
+![](https://images.code.org/700f3ade7e049c608d06c9d56952079c-image-1454103075843.gif)
+*Change chart type and insert your bar chart into the spreadsheet.*
+
+---
+
+## Do a Visual Check
+
+At this point, your chart should look something like this:
+![](https://images.code.org/30203a328d0aada8c5d4f027f4c286d6-image-1479268355801.png)
+
+Once your chart looks close to the one above, switch to View mode and take a moment to look at your visualization.
+
+* What does this chart help you notice about the data?
+* For which ages were the number of ratings similar between men and women?
+* For which ages were they different?
+* What other connections and trends can you see from this chart?
+
+After you’ve thought about these questions, move on to the next section to learn how to further customize your chart.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
