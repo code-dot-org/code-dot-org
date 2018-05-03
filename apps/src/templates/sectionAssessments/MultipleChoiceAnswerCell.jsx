@@ -16,7 +16,6 @@ const styles = {
     color: color.level_perfect,
     float: 'left',
     width: 20,
-    fontSize: 25,
   },
   text: {
     color: color.charcoal,
@@ -25,22 +24,22 @@ const styles = {
     float: 'left',
     paddingRight: 40,
     width: 20,
+    textAlign: 'center',
   },
 };
 
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
-    percentValue: PropTypes.string.isRequired,
+    percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
-    notAnswered: PropTypes.string,
   };
 
   render() {
-    const {percentValue, isCorrectAnswer, notAnswered} = this.props;
+    const {percentValue, isCorrectAnswer} = this.props;
     return (
       <div>
         <div>
-          {notAnswered || percentValue}
+          {`${percentValue}%`}
         </div>
         <div>
           {isCorrectAnswer &&
