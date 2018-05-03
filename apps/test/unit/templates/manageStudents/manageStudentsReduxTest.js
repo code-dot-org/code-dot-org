@@ -21,7 +21,12 @@ import manageStudents, {
   toggleSharingColumn,
   updateAllShareSetting,
   setSharingDefault,
+  TransferStatus,
+  TransferType,
   updateStudentTransfer,
+  blankStudentTransfer,
+  blankStudentTransferStatus,
+  cancelStudentTransfer,
   transferStudentsSuccess,
   transferStudentsFailure
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
@@ -240,27 +245,60 @@ describe('manageStudentsRedux', () => {
     });
   });
 
+  describe('cancelStudentTransfer', () => {
+    it('sets transferData to blank state', () => {
+      const transferData = {
+        studentIds: [0,1,3],
+        sectionId: 2,
+        otherTeacher: false,
+        otherTeacherSection: '',
+        copyStudents: false
+      };
+      const updateAction = updateStudentTransfer(transferData);
+      const stateAfterUpdating = manageStudents(initialState, updateAction);
+      assert.deepEqual(stateAfterUpdating.transferData, transferData);
+      const cancelAction = cancelStudentTransfer();
+      const stateAfterCancelling = manageStudents(stateAfterUpdating, cancelAction);
+      assert.deepEqual(stateAfterCancelling.transferData, blankStudentTransfer);
+    });
+
+    it('sets transferStatus error to null', () => {
+      const error = 'section does not exist';
+      const failureAction = transferStudentsFailure(error);
+      const stateAfterFailure = manageStudents(initialState, failureAction);
+      assert.deepEqual(stateAfterFailure.transferStatus.error, error);
+      const cancelAction = cancelStudentTransfer();
+      const stateAfterCancelling = manageStudents(stateAfterFailure, cancelAction);
+      assert.deepEqual(stateAfterCancelling.transferStatus.error, null);
+    });
+  });
+
   describe('transferStudentsSuccess', () => {
     it('sets transferStatus from action', () => {
       const transferStatus = {
-        status: 'copySuccess',
+        status: TransferStatus.SUCCESS,
+        type: TransferType.MOVE_STUDENTS,
+        error: null,
         numStudents: 3,
         sectionDisplay: 'ABCDEF'
       };
-      const action = transferStudentsSuccess(transferStatus);
+
+      const {type, numStudents, sectionDisplay} = transferStatus;
+      const action = transferStudentsSuccess(type, numStudents, sectionDisplay);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, transferStatus);
     });
   });
 
   describe('transferStudentsFailure', () => {
-    it('sets transferStatus from action', () => {
+    it('sets transferStatus status and error from action', () => {
       const transferStatus = {
-        status: 'fail',
-        numStudents: 3,
-        sectionDisplay: 'ABCDEF'
+        ...blankStudentTransferStatus,
+        status: TransferStatus.FAIL,
+        error: 'student already exists in new section'
       };
-      const action = transferStudentsFailure(transferStatus);
+
+      const action = transferStudentsFailure(transferStatus.error);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, transferStatus);
     });
