@@ -2,7 +2,11 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
-import {blankStudentTransfer} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {
+  blankStudentTransfer,
+  blankStudentTransferStatus,
+  TransferStatus
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 
 const studentData = [
@@ -18,6 +22,7 @@ const sections = [
 const DEFAULT_PROPS = {
   studentData: studentData,
   transferData: blankStudentTransfer,
+  transferStatus: blankStudentTransferStatus,
   sections: sections,
   currentSectionId: 1
 };
@@ -25,10 +30,12 @@ const DEFAULT_PROPS = {
 describe('MoveStudents', () => {
   let updateStudentTransfer;
   let transferStudents;
+  let cancelStudentTransfer;
 
   beforeEach(() => {
     updateStudentTransfer = sinon.spy();
     transferStudents = sinon.spy();
+    cancelStudentTransfer = sinon.spy();
   });
 
   it('opens a dialog with a table', () => {
@@ -37,6 +44,7 @@ describe('MoveStudents', () => {
         {...DEFAULT_PROPS}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -51,6 +59,7 @@ describe('MoveStudents', () => {
         {...DEFAULT_PROPS}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -65,6 +74,7 @@ describe('MoveStudents', () => {
         {...DEFAULT_PROPS}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -82,6 +92,7 @@ describe('MoveStudents', () => {
         {...DEFAULT_PROPS}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -107,6 +118,7 @@ describe('MoveStudents', () => {
         transferData={transferData}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -126,12 +138,50 @@ describe('MoveStudents', () => {
         transferData={transferData}
         updateStudentTransfer={updateStudentTransfer}
         transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
     wrapper.find('Button').simulate('click');
     expect(transferStudents.callCount).to.equal(0);
-    wrapper.find('#submit').simulate('click');
+    wrapper.find('#uitest-submit').simulate('click');
     expect(transferStudents.callCount).to.equal(1);
+  });
+
+  it('calls cancelStudentTransfer on close', () => {
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
+      />
+    );
+
+    wrapper.find('Button').simulate('click');
+    expect(cancelStudentTransfer.callCount).to.equal(0);
+    wrapper.find("#uitest-cancel").simulate('click');
+    expect(cancelStudentTransfer.callCount).to.equal(1);
+  });
+
+  it('renders an error message if the transfer status is fail', () => {
+    const transferStatus = {
+      status: TransferStatus.FAIL,
+      error: 'failed to transfer students!'
+    };
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        transferStatus={transferStatus}
+        updateStudentTransfer={updateStudentTransfer}
+        transferStudents={transferStudents}
+        cancelStudentTransfer={cancelStudentTransfer}
+      />
+    );
+
+    wrapper.find('Button').simulate('click');
+    const errorElement = wrapper.find("#uitest-error");
+    expect(errorElement.exists()).to.be.true;
+    expect(errorElement.text()).to.equal(transferStatus.error);
   });
 });
