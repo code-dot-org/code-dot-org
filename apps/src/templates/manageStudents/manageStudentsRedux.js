@@ -270,7 +270,7 @@ export const addMultipleAddRows = (studentNames) => {
   };
 };
 
-export const transferStudents = () => {
+export const transferStudents = (onComplete) => {
   return (dispatch, getState) => {
     const state = getState();
     // Get section code for current section from teacherSectionsRedux
@@ -299,6 +299,7 @@ export const transferStudents = () => {
         const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
         dispatch(transferStudentsSuccess(transferType, studentIds.length, sectionDisplay));
         dispatch(updateStudentTransfer({...blankStudentTransfer}));
+        onComplete();
       }
     });
   };
