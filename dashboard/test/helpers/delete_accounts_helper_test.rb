@@ -84,6 +84,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.secret_words
   end
 
+  test 'clears provider uid but not provider type' do
+    user = create :student
+    user.provider = 'clever'
+    user.uid = 'fake-clever-uid'
+    user.save
+
+    user.reload
+    assert_equal user.provider, 'clever'
+    refute_nil user.uid
+
+    purge_user user
+
+    user.reload
+    assert_equal user.provider, 'clever'
+    assert_nil user.uid
+  end
+
   private
 
   def purge_user(user)
