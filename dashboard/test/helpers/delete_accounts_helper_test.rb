@@ -1,11 +1,22 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
 
+#
+# This test is the comprehensive spec on the desired behavior when purging a
+# user from our system (that is, hard-deleting a user).  If you need to change
+# the user purge process, start by testing the desired behavior here, then work
+# your way down to the appropriate implementation point.
+#
+# Purging a user is an irreversible operation.  We don't delete every row that
+# has ever been associated with that user, but we do remove all sensitive
+# information, anything that might possibly be used to identify the particular
+# user, and anything we don't need to keep around for our metrics.
+#
+# Getting this right is important for compliance with various privacy
+# regulations around the globe, so changes to this behavior should be carefully
+# reviewed by the product team.
+#
 class DeleteAccountsHelperTest < ActionView::TestCase
-  def setup
-    SolrHelper.stubs(:delete_document).once
-  end
-
   test 'clears user.name' do
     user = create :student
 
@@ -104,6 +115,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   private
 
   def purge_user(user)
+    SolrHelper.stubs(:delete_document).once
     DeleteAccountsHelper.new(
       solr: nil,
       pegasus_db: PEGASUS_DB,
