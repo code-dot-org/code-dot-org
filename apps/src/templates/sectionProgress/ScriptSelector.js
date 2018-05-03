@@ -10,8 +10,9 @@ const styles = {
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
-    padding: '0.8em',
-    height: 34
+    height: 34,
+    paddingLeft: 5,
+    paddingRight: 5
   },
 };
 
