@@ -64,6 +64,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.parent_email
   end
 
+  test 'clears password fields' do
+    user = create :student
+    user.reset_password_token = 'fake-reset-password-token'
+    user.save
+
+    user.reload
+    refute_nil user.encrypted_password
+    refute_nil user.reset_password_token
+    refute_nil user.secret_picture
+    refute_nil user.secret_words
+
+    purge_user user
+
+    user.reload
+    assert_nil user.encrypted_password
+    assert_nil user.reset_password_token
+    assert_nil user.secret_picture
+    assert_nil user.secret_words
+  end
+
   private
 
   def purge_user(user)
