@@ -259,7 +259,6 @@ describe('manageStudentsRedux', () => {
         otherTeacherSection: '',
         copyStudents: false
       };
-
       const {type, numStudents, sectionDisplay} = transferStatus;
       const successAction = transferStudentsSuccess(type, numStudents, sectionDisplay);
       const stateAfterSuccess = manageStudents(initialState, successAction);
@@ -307,7 +306,6 @@ describe('manageStudentsRedux', () => {
         numStudents: 3,
         sectionDisplay: 'ABCDEF'
       };
-
       const {type, numStudents, sectionDisplay} = transferStatus;
       const action = transferStudentsSuccess(type, numStudents, sectionDisplay);
       const nextState = manageStudents(initialState, action);
@@ -322,7 +320,6 @@ describe('manageStudentsRedux', () => {
         status: TransferStatus.FAIL,
         error: 'student already exists in new section'
       };
-
       const action = transferStudentsFailure(transferStatus.error);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, transferStatus);
