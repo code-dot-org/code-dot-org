@@ -160,8 +160,10 @@ export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTI
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
-export const transferStudentsSuccess = transferStatus => ({ type: TRANSFER_STUDENTS_SUCCESS, transferStatus });
-export const transferStudentsFailure = transferStatus => ({ type: TRANSFER_STUDENTS_FAILURE, transferStatus });
+export const transferStudentsSuccess = (transferType, numStudents, sectionDisplay) => (
+  { type: TRANSFER_STUDENTS_SUCCESS, transferType, numStudents, sectionDisplay }
+);
+export const transferStudentsFailure = error => ({ type: TRANSFER_STUDENTS_FAILURE, error });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -285,10 +287,7 @@ export const transferStudents = () => {
     transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
       if (error) {
         console.error(error);
-        dispatch(transferStudentsFailure({
-          status: TransferStatus.FAIL,
-          error: data.error
-        }));
+        dispatch(transferStudentsFailure(data.error));
       } else {
         if (!copyStudents || !otherTeacher) {
           studentIds.forEach(id => {
@@ -298,12 +297,7 @@ export const transferStudents = () => {
         const transferType = copyStudents ? TransferType.COPY_STUDENTS : TransferType.MOVE_STUDENTS;
         // Get section name for new section from teacherSectionsRedux
         const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
-        dispatch(transferStudentsSuccess({
-          status: TransferStatus.SUCCESS,
-          type: transferType,
-          numStudents: studentIds.length,
-          sectionDisplay: sectionDisplay
-        }));
+        dispatch(transferStudentsSuccess(transferType, studentIds.length, sectionDisplay));
         dispatch(updateStudentTransfer({...blankStudentTransfer}));
       }
     });
@@ -586,7 +580,10 @@ export default function manageStudents(state=initialState, action) {
       ...state,
       transferStatus: {
         ...state.transferStatus,
-        ...action.transferStatus
+        status: TransferStatus.SUCCESS,
+        type: action.transferType,
+        numStudents: action.numStudents,
+        sectionDisplay: action.sectionDisplay
       }
     };
   }
@@ -595,7 +592,8 @@ export default function manageStudents(state=initialState, action) {
       ...state,
       transferStatus: {
         ...state.transferStatus,
-        ...action.transferStatus
+        status: TransferStatus.FAIL,
+        error: action.error
       }
     };
   }
