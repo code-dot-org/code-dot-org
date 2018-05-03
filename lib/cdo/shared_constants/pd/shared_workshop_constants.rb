@@ -8,7 +8,8 @@ module Pd
       COURSE_CS_IN_S = 'CS in Science'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze
+      COURSE_ADMIN = 'Admin'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze
     ].freeze
 
     STATES = [
