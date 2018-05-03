@@ -20,7 +20,7 @@ import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
 import * as utils from './utils';
-import AbuseError from './code-studio/components/abuse_error';
+import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
