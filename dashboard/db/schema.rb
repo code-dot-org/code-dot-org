@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180501223904) do
+ActiveRecord::Schema.define(version: 20180502182615) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -775,6 +775,21 @@ ActiveRecord::Schema.define(version: 20180501223904) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["pd_enrollment_id"], name: "index_pd_teachercon_surveys_on_pd_enrollment_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "form_id",                      null: false
+    t.integer "submission_id",                null: false
+    t.integer "user_id",                      null: false
+    t.integer "pd_session_id"
+    t.integer "pd_workshop_id",               null: false
+    t.text    "form_data",      limit: 65535
+    t.index ["form_id", "user_id", "pd_session_id"], name: "index_pd_workshop_daily_surveys_on_user_form_day", unique: true, using: :btree
+    t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
+    t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_workshop_daily_surveys_on_pd_workshop_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_workshop_daily_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_daily_surveys_on_user_id", using: :btree
   end
 
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
