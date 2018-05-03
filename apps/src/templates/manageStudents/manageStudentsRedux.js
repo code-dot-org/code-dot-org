@@ -17,7 +17,6 @@ export const RowType = {
   STUDENT: "studentRow",
 };
 
-
 // Constants around moving students to another section.
 // Response from server after moving student(s) to a new section
 export const TransferStatus = {
@@ -30,11 +29,6 @@ export const TransferType = {
   MOVE_STUDENTS: "moveStudents",
   COPY_STUDENTS: "copyStudents"
 };
-
-// whether students will be moved to a section owned by a different teacher
-export const OTHER_TEACHER = "otherTeacher";
-// whether students will be copied to the new section or moved (and subsequently removed from current section)
-export const COPY_STUDENTS = "copyStudents";
 
 /** Initial state for manageStudents.transferData redux store.
  * studentIds - student ids selected to be moved to another section
