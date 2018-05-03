@@ -243,6 +243,31 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferData, transferData);
     });
+
+    it('sets transferStatus to blank state', () => {
+      const transferStatus = {
+        status: TransferStatus.SUCCESS,
+        type: TransferType.MOVE_STUDENTS,
+        error: null,
+        numStudents: 2,
+        sectionDisplay: 'ABCDEF'
+      };
+      const transferData = {
+        studentIds: [0,1,3],
+        sectionId: 2,
+        otherTeacher: false,
+        otherTeacherSection: '',
+        copyStudents: false
+      };
+
+      const {type, numStudents, sectionDisplay} = transferStatus;
+      const successAction = transferStudentsSuccess(type, numStudents, sectionDisplay);
+      const stateAfterSuccess = manageStudents(initialState, successAction);
+      assert.deepEqual(stateAfterSuccess.transferStatus, transferStatus);
+      const updateAction = updateStudentTransfer(transferData);
+      const stateAfterUpdate = manageStudents(stateAfterSuccess, updateAction);
+      assert.deepEqual(stateAfterUpdate.transferStatus, blankStudentTransferStatus);
+    });
   });
 
   describe('cancelStudentTransfer', () => {
