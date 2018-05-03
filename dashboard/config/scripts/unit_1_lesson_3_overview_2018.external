@@ -1,0 +1,15 @@
+name 'Unit 1 Lesson 3 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+In this lesson you'll apply the problem solving process to a variety of problems to explore how each step helps you develop and improve solutions to problems.
+
+## Resources
+
+* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[Solving Problems KEY](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/) - Activity Guide ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))
+MARKDOWN

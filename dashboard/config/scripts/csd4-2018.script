@@ -1,0 +1,89 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit4/"], ["teacherForum", "https://forum.code.org/c/csd4"], ["vocabulary", "https://curriculum.code.org/csd/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit4/code/"]]
+has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+
+stage 'Analysis of Design', flex_category: 'csd4_1'
+named_level 'CSD U4L01 SFLP_2018'
+
+stage 'Understanding Your User', flex_category: 'csd4_1'
+named_level 'CSD U4L02 SFLP_2018'
+
+stage 'User-Centered Design Micro Activity', flex_category: 'csd4_1'
+named_level 'CSD U4L03 SFLP_2018'
+
+stage 'User Interfaces', flex_category: 'csd4_1'
+named_level 'CSD U4L04 SFLP_2018'
+
+stage 'Feedback and Testing', flex_category: 'csd4_1'
+named_level 'CSD U4L05 SFLP_2018'
+
+stage 'Identifying User Needs', flex_category: 'csd4_1'
+named_level 'CSD U4L06 SFLP_2018'
+
+stage 'Project - Paper Prototype', flex_category: 'csd4_1'
+named_level 'CSD U4L07 SFLP_2018'
+assessment 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018', progression: 'Reflection'
+
+stage 'Designing Apps for Good', flex_category: 'csd4_2'
+named_level 'CSD U4L08 SFLP_2018'
+
+stage 'Market Research', flex_category: 'csd4_2'
+named_level 'CSD U4L09 SFLP_2018'
+
+stage 'Paper Prototypes', flex_category: 'csd4_2'
+named_level 'CSD U4L10 SFLP_2018'
+named_level 'Example App Types_2018'
+level 'CSDU4 Quiz App Demo_2018', progression: 'Demo Apps'
+level 'CSDU4 Decision App Demo_2018', progression: 'Demo Apps'
+level 'CSDU4 List App Demo_2018', progression: 'Demo Apps'
+level 'CSDU4 Crowdsource App Demo_2018', progression: 'Demo Apps'
+
+stage 'Prototype Testing', flex_category: 'csd4_2'
+named_level 'CSD U4L11 SFLP_2018'
+
+stage 'Digital Design', flex_category: 'csd4_2'
+named_level 'CSD U4L12 SFLP_2018'
+named_level 'CSD U4 Design Mode Map_2018'
+named_level 'CSDU4 Design Mode Video_2018'
+level 'U4 Model Design 1_2018', progression: 'Build a Screen'
+level 'U4 Model Design 2_2018', progression: 'Build a Screen'
+level 'U4 Model Design 3_2018', progression: 'Build a Screen'
+level 'U4 Model Design 4_2018', progression: 'Build a Screen'
+named_level 'CSD U4 Design Elements Map_2018'
+level 'U4 Model Design 5_2018', progression: 'Finish a Screen'
+level 'U4 Model Design 6_2018', progression: 'Finish a Screen'
+level 'U4 Model Design 7_2018', progression: 'Finish a Screen'
+named_level 'Design a Screen for your App_2018'
+assessment 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design'
+
+stage 'Linking Screens', flex_category: 'csd4_2'
+named_level 'CSD U4L13 SFLP_2018'
+level 'CSD U4 Mult Screen Map_2018', progression: 'Adding Screens'
+level 'U4 Model Program 1_2018', progression: 'Adding Screens'
+level 'U4 Model Program 1.5_2018', progression: 'Adding Screens'
+level 'CSD U4 Importing Screens Map_2018', progression: 'Adding Screens'
+level 'U4 Model Program 2_2018', progression: 'Adding Screens'
+level 'U4 Model Program 2.5_2018', progression: 'Adding Screens'
+level 'CSD U4 User Input Map_2018', progression: 'Events'
+level 'U4 Model Program 3_2018', progression: 'Events'
+level 'CSD U4 Change Screen Map_2018', progression: 'Linking Screens'
+level 'U4 Model Program 4_2018', progression: 'Linking Screens'
+level 'U4 Model Program 5_2018', progression: 'Linking Screens'
+named_level 'CSDU4 Project Import_2018'
+named_level 'CSDU4 Project Events_2018'
+
+stage 'Testing the App', flex_category: 'csd4_2'
+named_level 'CSD U4L15 SFLP_2018'
+
+stage 'Improving and Iterating', flex_category: 'csd4_2'
+named_level 'CSD U4L16 SFLP_2018'
+named_level 'CSDU4 Project Bug Feature_2018'
+
+stage 'Project - App Presentation', flex_category: 'csd4_2'
+named_level 'CSD U4L17 SFLP_2018'
+assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018', progression: 'Reflection'

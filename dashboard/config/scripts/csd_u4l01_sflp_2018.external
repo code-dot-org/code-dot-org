@@ -1,0 +1,18 @@
+name 'CSD U4L01 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn how empathy for a user's needs is a critical component of the design process. Then you'll investigate a set of products and consider and critique how well they meet a variety of needs.
+
+## Vocabulary
+
+* **Critique** - To critically evaluate in a detailed and constructive manner.
+* **Empathy** - In design, paying attention to a user's feelings and needs when designing a product.
+* **User** - Someone who uses an object, including software and hardware.
+
+## Resources
+
+* [Determine the User](https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/export?format=pdf) - Activity Guide
+* [Problem Solving Process with Empathy](https://staging.code.org/curriculum/docs/csd/PSPE.png) - Image
+MARKDOWN

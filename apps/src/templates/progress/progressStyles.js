@@ -62,9 +62,12 @@ export const levelProgressStyle = (level, disabled) => {
       ...style,
       ...!disabled && hoverStyle
     };
-  } else if (level.kind === LevelKind.assessment && level.status !== LevelStatus.not_tried) {
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status !== LevelStatus.perfect
+  ) {
     style.borderColor = color.level_submitted;
-    if (level.status === LevelStatus.perfect) {
+    if (level.status !== LevelStatus.not_tried) {
       style.backgroundColor = color.level_submitted;
       style.color = color.white;
     }
