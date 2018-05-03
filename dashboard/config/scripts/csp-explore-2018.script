@@ -1,0 +1,16 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/csp-explore/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp/csp-explore/standards/"]]
+has_verified_resources true
+has_lesson_plan true
+
+stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
+level 'U6 Explore PT Review - Student Links_2018', progression: 'Explore PT - Review the Task'
+level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
+
+stage 'Explore PT - Making a Plan', flex_category: 'csp_ap_2'
+level 'U6 Explore PT - Make a Plan - Student Links_2018', progression: 'Explore PT - Make a Plan'
+
+stage 'Explore PT - Complete the Task', flex_category: 'csp_ap_2'
+level 'U6 Explore PT - Complete the Task - Student Links_2018', progression: 'Explore PT - Complete the Task'

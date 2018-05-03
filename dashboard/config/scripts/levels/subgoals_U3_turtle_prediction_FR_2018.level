@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:12.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "## Code Trace\r\n\r\nIn 1-2 sentences, explain what you think the following code does.\r\n\r\n![](https://images.code.org/5bc66acc4712cf1c835daac0c45422a8-image-1506532056958.png)",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "wnUMHavNPlOmCo18NJEWdHt1eTzKD98qr5mFzvsIC1wRUaNegNHhHfEtHj5i\ncI6rt5cwGrHrzJG2yq31qjBWMugxlzXUjFSUzkrJgJUIdRHLydIYxjZGdTc/\nB8iR0FoKJpnDOqSfUopeuTPpGvProZUHogW2HK6LbE21xSFbEJswjrcQ7SCY\n69AnHZ6Au4JiHbFMlw1h6HY6Un1ThAKLdXVU5aSi5NwcQpHdkFLBx8I/Fv4D\ncN7Cp2yyEYa15KO03SYZrc/CRLxg40TT2A2Zp9FFEYtaGTK/W0zdJ4xfnwck\nO9ELEETOJXN1b626/vFnAKghmwoUHq3E2W1BtqbldAPR3+HIRcoSqXeJoKxc\npDmHz3m7jZ3Ph+XqTHI+yQ4eoVODi9Xdt94mVidU7XuHE3qqoS7eRF6Jd1I2\nqxEAFmHAlIlOT+oRSuFl2clMrilQcu+doFl3EyFR8/HmCSjzAH9J0c8au+Ul\n+ANQM5uLTsC4B97+UTELbLMpPTq27fdDULRj2ifs/yLkoSpxnAVoqO+CJXvI\n5QGx1TBo0c8HxG/2tVYgnuye37hFY0FQ9lpRDgAl7P4RR+maBkgbC6rPTD2O\nlGn5uI488o4X2zwXXkZPFLnmAwQ8ht/27ylt313Pim3omeMfp7iPe8qksgHD\nRYrBx9fDvLxqEaPnc+cjpks=\n",
+    "parent_level_id": 10029,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-27 17:08:37 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-29 15:43:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-03 17:25:47 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+</FreeResponse>
