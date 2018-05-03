@@ -140,6 +140,8 @@ level 'courseF_external_variableConstant_2018'
 
 stage 'Variables that Change in Bee', flex_category: 'csf_f_2'
 level 'courseF_bee_functions_1_2018'
+level 'courseF_bee_functions_2_2018'
+level 'courseF_bee_functions_3_2018'
 
 stage 'Variables that Change in Artist', flex_category: 'csf_f_2'
 level 'courseF_artist_variables7_2018'
