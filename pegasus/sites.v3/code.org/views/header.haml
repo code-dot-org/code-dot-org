@@ -1,6 +1,7 @@
 :ruby
   cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
   user_type = request.cookies[cookie_key]
+  user_type = "student" if user_type == "student_y"
 
   hamburger_options = {}
   hamburger_options[:level] = nil
