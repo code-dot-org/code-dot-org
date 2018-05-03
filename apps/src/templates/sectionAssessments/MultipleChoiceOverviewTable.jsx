@@ -28,24 +28,26 @@ const calculateNotAnswered = (multipleChoiceDataArr) => {
         }
     });
 
-    return `${(100 - total)}%`;
+    return (100 - total);
 };
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
 
-  let notAnswered = undefined;
+  let percentValue = 0;
 
   if (property === 'notAnswered') {
-    notAnswered = calculateNotAnswered(rowData.answers);
+     percentValue = calculateNotAnswered(rowData.answers);
+  } else {
+     percentValue = (cell && cell.percentAnswered) || '-';
   }
 
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={(cell && `${cell.percentAnswered}%`) || '0%'}
+        percentValue={percentValue}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
-        notAnswered={notAnswered}
+
       />
   );
 };
@@ -55,7 +57,6 @@ const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.string,
   percentAnswered: PropTypes.string,
   isCorrectAnswer: PropTypes.bool,
-  notAnswered: PropTypes.string,
 });
 
 class MultipleChoiceOverviewTable extends Component {
