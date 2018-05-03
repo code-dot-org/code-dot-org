@@ -172,6 +172,14 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.validScripts, fakeValidScripts);
       assert.deepEqual(nextState.scriptId, 100);
     });
+
+    it('filters validScripts to those included in studentScriptIds', () => {
+      const studentScriptIds = [456];
+      const validCourses = [];
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.id === 456));
+    });
   });
 
   describe('setCurrentView', () => {
