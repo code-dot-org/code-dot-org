@@ -568,7 +568,9 @@ export default function manageStudents(state=initialState, action) {
       transferData: {
         ...state.transferData,
         ...action.transferData
-      }
+      },
+      // clear any previous status if transfer data has changed
+      transferStatus: blankStudentTransferStatus
     };
   }
   if (action.type === CANCEL_STUDENT_TRANSFER) {
