@@ -66,6 +66,7 @@ class SectionProgress extends Component {
     scriptId: PropTypes.number,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    studentScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     scriptData: scriptDataPropType,
     loadScript: PropTypes.func.isRequired,
@@ -91,11 +92,14 @@ class SectionProgress extends Component {
     const {
       section,
       validScripts,
+      studentScriptIds,
       currentView,
       scriptId,
       scriptData,
       isLoadingProgress,
     } = this.props;
+
+    console.log('render studentScriptIds', studentScriptIds);
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const linkToOverview = scriptData ? scriptData.path : null;
@@ -173,6 +177,7 @@ export default connect(state => ({
   scriptId: state.sectionProgress.scriptId,
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
+  studentScriptIds: state.sectionProgress.studentScriptIds,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
