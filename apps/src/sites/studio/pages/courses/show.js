@@ -10,6 +10,7 @@ import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux'
 import { setUserSignedIn } from '@cdo/apps/code-studio/progressRedux';
 import { getUserSignedInFromCookieAndDom } from '@cdo/apps/code-studio/initSigninState';
 import { setVerified, setVerifiedResources } from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showCourseOverview);
 
@@ -47,10 +48,13 @@ function showCourseOverview() {
     store.dispatch(initializeHiddenScripts(scriptData.hidden_scripts));
   }
 
+  const versions = experiments.isEnabled('courseVersions') ? courseSummary.versions : [];
+
   // Eventually we want to do this all via redux
   ReactDOM.render(
     <Provider store={store}>
       <CourseOverview
+        name={courseSummary.name}
         title={courseSummary.title}
         id={courseSummary.id}
         descriptionStudent={courseSummary.description_student}
@@ -62,6 +66,7 @@ function showCourseOverview() {
         scripts={courseSummary.scripts}
         isVerifiedTeacher={!!scriptData.is_verified_teacher}
         hasVerifiedResources={!!courseSummary.has_verified_resources}
+        versions={versions}
       />
     </Provider>,
   document.getElementById('course_overview'));

@@ -19,6 +19,7 @@ import {
   renderLoginTypeControls,
   unmountLoginTypeControls,
   renderSectionTable,
+  renderStatsTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -192,6 +193,7 @@ function main() {
       // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
       // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
       $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+      $httpProvider.defaults.cache = true;
     }]);
 
   services.factory('studentsService', ['$resource',
@@ -383,6 +385,7 @@ function main() {
 
     if ($scope.tab === 'stats') {
       $scope.$on('stats-table-rendered', () => {
+        $scope.section.$promise.then(renderStatsTable);
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
