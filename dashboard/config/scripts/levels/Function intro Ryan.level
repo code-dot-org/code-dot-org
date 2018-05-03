@@ -109,8 +109,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you call the functions correctly, this is the path you will travel...\",\"hint_id\":\"Function_intro_Ryan_b\",\"hint_type\":\"general\",\"hint_path\":\"[[3,7],[3,3],[7,3]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42b1200839d78ba9253b9b8f751f61c5/Function intro Ryan.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You can call a function many times inside of your program!  Try calling it twice to solve this puzzle.\",\"hint_id\":\"Function_intro_Ryan_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/315fb431e41b2411eb5266de22f2b1c1/Function intro Ryan.mp3\"}]",
     "songs": "[\"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\", \"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\"]",
     "video_key": "mc_2017_functions",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
