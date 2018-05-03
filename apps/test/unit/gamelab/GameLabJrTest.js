@@ -1,15 +1,20 @@
 /* global
 
+draw
 addBehavior
 makeNewSprite
 findBehavior
 behaviorsEqual
+whenUpArrow
+whenMouseClicked
+whenTouching
 */
 
 import _ from 'lodash';
 import GameLabJrLib from '@cdo/apps/gamelab/GameLabJr.interpreted';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {expect} from '../../util/configuredChai';
+import {stub} from 'sinon';
 import "script-loader!@code-dot-org/p5.play/examples/lib/p5";
 import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 
@@ -140,5 +145,36 @@ describe('Game Lab Jr Helper Library', () => {
       };
       expect(behaviorsEqual(b1, b2)).to.be.true;
     });
+  });
+
+  it('runs things in the expected order', () => {
+    const sprite = makeNewSprite(null, 200, 200);
+    const otherSprite = makeNewSprite(null, 200, 200);
+    const keyWentDownStub = stub(window, 'keyWentDown').returns(true);
+    const mouseWentDownStub = stub(window, 'mouseWentDown').returns(true);
+    const shouldUpdateStub = stub(window, 'shouldUpdate').returns(true);
+    const overlapStub = stub(sprite, 'overlap').returns(true);
+
+    const eventLog = [];
+    addBehavior(sprite, () => eventLog.push('behavior 1 ran'));
+    addBehavior(sprite, () => eventLog.push('behavior 2 ran'));
+    whenUpArrow(() => eventLog.push('key event ran'));
+    whenMouseClicked(() => eventLog.push('touch event ran'));
+    whenTouching(sprite, otherSprite, () => eventLog.push('collision event ran'));
+
+    draw();
+
+    expect(eventLog).to.deep.equal([
+      'behavior 1 ran',
+      'behavior 2 ran',
+      'key event ran',
+      'touch event ran',
+      'collision event ran',
+    ]);
+
+    shouldUpdateStub.restore();
+    overlapStub.restore();
+    keyWentDownStub.restore();
+    mouseWentDownStub.restore();
   });
 });

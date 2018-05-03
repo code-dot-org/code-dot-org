@@ -305,10 +305,14 @@ function hideTitleScreen() {
   title = subTitle = '';
 }
 
+function shouldUpdate() {
+  return World.frameCount > 1;
+}
+
 function draw() {
   background(World.background_color || "white");
 
-  if (World.frameCount > 1) {
+  if (shouldUpdate) {
     // Perform sprite behaviors
     sprites.forEach(function (sprite) {
       sprite.behaviors.forEach(function (behavior) {
