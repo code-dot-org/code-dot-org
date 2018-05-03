@@ -49,6 +49,21 @@ export const blankStudentTransfer = {
   copyStudents: true
 };
 
+/** Initial state for manageStudents.transferStatus redux store.
+ * status (TransferStatus) - whether transfer was successful or failed
+ * type (TransferType) - whether transfer moved students (and subsequently removed them from current section) or copied them
+ * error - error text returned from server
+ * numStudents - number of students transferred to new section
+ * sectionDisplay - how section should be displayed to user. if user owns new section, they see the section name; otherwise, they see section code
+ */
+ export const blankStudentTransferStatus = {
+   status: null,
+   type: null,
+   error: null,
+   numStudents: 0,
+   sectionDisplay: ''
+ };
+
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
 const addRowId = 0;
@@ -103,13 +118,7 @@ const initialState = {
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
   transferData: {...blankStudentTransfer},
-  transferStatus: {
-    status: null,
-    type: null,
-    error: null,
-    numStudents: 0,
-    sectionDisplay: ''
-  }
+  transferStatus: {...blankStudentTransferStatus}
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
