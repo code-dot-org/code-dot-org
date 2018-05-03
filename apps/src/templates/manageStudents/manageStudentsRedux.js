@@ -24,11 +24,13 @@ export const TransferStatus = {
   SUCCESS: "success",
   FAIL: "fail"
 };
-// TODO: description
+
+// Type of student transfer - whether students are being moved (and subsequently removed from current section) or copied to new section
 export const TransferType = {
   MOVE_STUDENTS: "moveStudents",
   COPY_STUDENTS: "copyStudents"
 };
+
 // whether students will be moved to a section owned by a different teacher
 export const OTHER_TEACHER = "otherTeacher";
 // whether students will be copied to the new section or moved (and subsequently removed from current section)
@@ -54,7 +56,7 @@ export const blankStudentTransfer = {
  * type (TransferType) - whether transfer moved students (and subsequently removed them from current section) or copied them
  * error - error text returned from server
  * numStudents - number of students transferred to new section
- * sectionDisplay - how section should be displayed to user. if user owns new section, they see the section name; otherwise, they see section code
+ * sectionDisplay - how section should be displayed to user. most likely the section name or section code
  */
  export const blankStudentTransferStatus = {
    status: null,
