@@ -142,6 +142,7 @@ const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
+const CANCEL_STUDENT_TRANSFER = 'manageStudents/CANCEL_STUDENT_TRANSFER';
 const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
 
@@ -160,6 +161,7 @@ export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTI
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
+export const cancelStudentTransfer = () => ({ type: CANCEL_STUDENT_TRANSFER });
 export const transferStudentsSuccess = (transferType, numStudents, sectionDisplay) => (
   { type: TRANSFER_STUDENTS_SUCCESS, transferType, numStudents, sectionDisplay }
 );
@@ -298,7 +300,6 @@ export const transferStudents = (onComplete) => {
         // Get section name for new section from teacherSectionsRedux
         const sectionDisplay = otherTeacher ? otherTeacherSection : sectionName(state, newSectionId);
         dispatch(transferStudentsSuccess(transferType, studentIds.length, sectionDisplay));
-        dispatch(updateStudentTransfer({...blankStudentTransfer}));
         onComplete();
       }
     });
@@ -573,6 +574,16 @@ export default function manageStudents(state=initialState, action) {
       transferData: {
         ...state.transferData,
         ...action.transferData
+      }
+    };
+  }
+  if (action.type === CANCEL_STUDENT_TRANSFER) {
+    return {
+      ...state,
+      transferData: blankStudentTransfer,
+      transferStatus: {
+        ...state.transferStatus,
+        error: null
       }
     };
   }

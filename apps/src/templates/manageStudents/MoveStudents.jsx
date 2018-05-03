@@ -15,7 +15,8 @@ import {
   transferStudents,
   OTHER_TEACHER,
   COPY_STUDENTS,
-  TransferStatus
+  TransferStatus,
+  cancelStudentTransfer
 } from './manageStudentsRedux';
 import color from "@cdo/apps/util/color";
 
@@ -99,7 +100,8 @@ class MoveStudents extends Component {
     ),
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
-    transferStudents: PropTypes.func.isRequired
+    transferStudents: PropTypes.func.isRequired,
+    cancelStudentTransfer: PropTypes.func.isRequired
   };
 
   state = {
@@ -112,7 +114,7 @@ class MoveStudents extends Component {
 
   closeDialog = () => {
     this.setState({isDialogOpen: false});
-    // TODO: clear transferStatus error... clear everything?
+    this.props.cancelStudentTransfer();
   };
 
   getStudentIds = () => {
@@ -418,5 +420,8 @@ export default connect(state => ({
   },
   transferStudents(onComplete) {
     dispatch(transferStudents(onComplete));
+  },
+  cancelStudentTransfer() {
+    dispatch(cancelStudentTransfer());
   }
 }))(MoveStudents);
