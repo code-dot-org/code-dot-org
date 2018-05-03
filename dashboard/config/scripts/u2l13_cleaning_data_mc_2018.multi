@@ -1,0 +1,22 @@
+name 'U2L13 Cleaning Data MC_2018'
+title 'Cleaning and Filtering Data'
+description ''
+question 'Which of the following is the most accurate statement about cleaning and filtering data?'
+wrong 'Using computing tools to filter and clean raw data makes it impossible to analyze or draw accurate conclusions’
+wrong 'Filtering and cleaning data is a fully automated process that should not require human input or intervention’
+wrong 'Filtering and cleaning data is a human process that does not require the use of computers’
+right 'Filtering and cleaning data is necessary to ensure that data is in a form that is better for computers to process’
+
+markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For reference, this question is based on the CSP Framework essential knowledge statement:
+
+`3.1.1B Digital information can be filtered and cleaned by using computers to process information.`
+
+
+MARKDOWN

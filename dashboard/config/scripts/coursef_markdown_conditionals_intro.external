@@ -4,17 +4,18 @@ description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # **In this lesson...**
 
-### "The class gets five minutes of extra recess under one condition- you all have to finish your worksheets." If your teacher said this, it means that while everyone meets the condition and finishes their worksheets, then everyone gets five extra minutes of recess. 
+### **Conditions** are things that can be true or false. 
 
-### You can use this idea in computer science too! Let's get started!
-
+### You will learn how to use conditions in a program to make things happen `while`, `until`, or `if` something is true!
 ---
 
 ## **Blocks to Know**
 
-![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)
-
 ![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)
 
 ![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)
+
+![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)
+
+
 MARKDOWN

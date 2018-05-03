@@ -15,6 +15,7 @@ style_min: true
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
+- user_type = "student" if user_type == "student_y"
 - if ["student", "teacher"].include?(user_type)
   - redirect CDO.studio_url('/home', CDO.default_scheme)
 

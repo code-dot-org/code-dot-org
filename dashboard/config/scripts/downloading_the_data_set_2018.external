@@ -1,0 +1,22 @@
+name 'Downloading the Data Set_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making Data Visualizations
+
+There are many different kinds of charts that are used to visualize data. In this lesson, you will learn to make scatter, line, and bar charts, but there are many other types of visualizations that people use to interpret data in different ways. Look through the <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank">Data Visualization 101 Guide</a> and familiarize yourself with the different chart types, paying particular attention to the scatter, line, and bar charts.
+
+* **Disclaimer:** This lesson is about using charts to explore trends in the data - **not about creating the world’s greatest chart**. While the early parts of the lesson will walk you through very specific steps to make a particular chart, by the end of the lesson you will be creating your own customized charts to **see what trends you can discover in the data**.
+
+---
+
+## Downloading the Data Set
+
+**Do This:** Click the link below to see the data set you will be using for the next few levels:
+
+* <a href="https://drive.google.com/open?id=0B78N8p4zhHFgaHR2TG1QQ2NZQTg" target="_blank">MovieRating_avgRatingByAgeByGender.csv</a>
+
+To make your own copy in your local Google Drive, click here: <a href="https://docs.google.com/spreadsheets/d/1S0AfxlpbG92Uj-p85puhQG2A-Yew1EMorizv5MiNGpQ/copy" target="_blank">MovieRating_avgRatingByAgeByGender</a>
+(You will need to make sure that you are logged into your Google Drive account.)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

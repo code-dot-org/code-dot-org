@@ -1,0 +1,12 @@
+name 'U2L13 Assessment3_2018'
+title 'Assessment: Question 2'
+question 'What is the “key” to a Caesar Cipher that someone needs to know (or discover) to decrypt the message?'
+wrong 'A secret word only know by Caesar.'
+right 'The number of characters to shift each letter in the alphabet.'
+wrong 'The letter that occurs most often in the encrypted message.'
+wrong 'The day of the month that the encrypted message was sent.'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- The number of characters to shift each letter in the alphabet.
+MARKDOWN

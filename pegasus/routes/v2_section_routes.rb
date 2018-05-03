@@ -34,8 +34,9 @@ get '/v2/sections/valid_scripts' do
   only_for 'code.org'
   dont_cache
   forbidden! unless dashboard_user_id
+  include_hidden = !!params[:includeHidden]
   content_type :json
-  JSON.pretty_generate(DashboardSection.valid_scripts(dashboard_user_id))
+  JSON.pretty_generate(DashboardSection.valid_scripts(dashboard_user_id, include_hidden))
 end
 
 # DEPRECATED: Use GET /dashboardapi/sections/<id> instead

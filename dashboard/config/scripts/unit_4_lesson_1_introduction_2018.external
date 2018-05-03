@@ -1,0 +1,43 @@
+name 'Unit 4 Lesson 1 Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 4: Lesson 1 - What is Big Data?
+
+## Overview
+
+Introduction to the concept of "big data," where it comes from, what makes it "big," and how people use big data to solve problems, and how much of their lives are "datafied" or could be.
+
+The lesson concludes with a brief introduction to the AP Explore Performance Task which students are recommended to complete at the end of the unit.
+
+## Vocabulary
+
+<div style="width: 250px; text-align: center; float: right; margin-left: 50px">
+  <a href="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" target="_blank">
+    <img src="https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png" style="width: 250px; float: right">
+  </a>
+  <i>Click to enlarge.</i>
+</div>
+* **Moore's Law:** the observation that computing power roughly doubles every two years.
+* **Big Data:** a broad term for datasets so large or complex that traditional data processing applications are inadequate.
+
+## Lesson
+
+* Video - Big Data is Better Data
+* Where do we use data? Where does it come from?
+* Explore a data visualization and identify its sources
+* Introduce the Explore PT
+
+## Resources
+
+* Video: <a href='https://www.ted.com/talks/kenneth_cukier_big_data_is_better_data' target='_blank'>Big Data is Better Data</a>
+* [Activity Guide - Big Data Sleuth Card](https://docs.google.com/document/d/1rGwDE3QzvLsiQHUfDz4n9JHjgEZBDqoQ--yleDXZm3s/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1rGwDE3QzvLsiQHUfDz4n9JHjgEZBDqoQ--yleDXZm3s/export?format=doc), [Google Doc](https://docs.google.com/document/d/1rGwDE3QzvLsiQHUfDz4n9JHjgEZBDqoQ--yleDXZm3s/copy))
+* [College Board - Assessment Overview and Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

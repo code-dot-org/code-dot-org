@@ -1,0 +1,13 @@
+name 'CSD U4L05 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn how to read feedback on a product carefully to identify the needs that are being expressed. Then you'll update a paper prototype in order to better meet those needs.
+
+## Resources
+
+* [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide
+* [Prototype Feedback](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Activity Guide
+* [Improve a Screen](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Activity Guide
+MARKDOWN

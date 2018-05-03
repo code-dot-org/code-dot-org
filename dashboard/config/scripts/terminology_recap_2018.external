@@ -1,0 +1,22 @@
+name 'Terminology Recap_2018'
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Pause and Recap
+
+Messages encrypted with the **Caesar cipher** are very easy to crack, especially with a computational tool. Now that you've had a little practice cracking an alphabetic shift cipher (pretty easy, huh?) let's try something more difficult.
+
+**Recap terminology:**
+
+* **Encryption** - a process of encoding messages to keep them secret, so only "authorized" parties can read it.
+* **Decryption** - a process that reverses encryption, taking a secret message and reproducing the original plain text
+* **Cipher** - the generic term for a technique (or algorithm) that performs encryption
+* **Caesar's Cipher** - a technique for encryption that shifts the alphabet by some number of characters.
+* **Cracking encryption** - When you attempt to decode a secret message *without* knowing all the specifics of the cipher, you are trying to **crack** the encryption. 
+
+
+Click Continue to see the **Next Challenge**...
+
+ 
+MARKDOWN

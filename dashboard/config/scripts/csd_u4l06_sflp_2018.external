@@ -1,0 +1,12 @@
+name 'CSD U4L06 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Up to this point we have focused on designing for users who are, to some degree, distanced from us. Whether through brainstorming, profiles, or text feedback, the connection to an end user has never been direct. In this lesson you'll directly interview one of your classmates as you look to design an app that meets their needs.
+
+## Resources
+
+* [User Interview](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Activity Guide
+* [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide
+MARKDOWN

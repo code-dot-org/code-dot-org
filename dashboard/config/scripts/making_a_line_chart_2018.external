@@ -1,0 +1,59 @@
+name 'Making a Line Chart_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making a Line Chart
+
+You can use many different kinds of charts to look at the same data. You'll now investigate different columns of your data with a **line chart**. Line charts are helpful for showing the progression of values over time. In this case you will be showing how the average movie rating changes with the reviewer’s age.
+
+---
+
+## Select Data
+
+**Do This:** Select the **“age,”** **“avg rating women,”** and **“avg rating men"** columns.
+
+* Select the first column of data using the mouse.
+* Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data.
+
+<details><summary>Using Hotkeys</summary>
+To select cells in non-adjacent columns, you need to use some fancy hotkeys: <br><br>
+1. First select the cells from the first column (i.e., A1 through A62) using the SHIFT+click combination. <br>
+2. Then, hold down COMMAND (if using a Mac) or CONTROL (if using Windows) and click to select the first cell of the next column (i.e., D1).<br>
+3. Finally, hold COMMAND/CONTROL **and** SHIFT simultaneously, then click to select the last cell in the new column (i.e., D62).<br>
+4. Repeat steps 2-3 for any additional columns you want to select (i.e., F1 through F62).
+</details><br>
+
+![](https://images.code.org/19de3c9486f50fe1fc1aa7fa8a1da283-image-1454102836246.gif)
+*Select the cells to include in the chart.*
+
+---
+
+## Insert Chart
+
+**Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
+
+* Set the chart type to **“Line chart.”**
+* Check the boxes for **“Use row 1 as headers”** and **“Use column A as labels.”**
+* Click **“Insert”** to add your chart to the spreadsheet.
+
+![](https://images.code.org/210a6d48dd0266ee192d7cd374839ddf-image-1454102597958.gif)
+*Change chart type and insert your line chart into the spreadsheet.*
+
+---
+
+## Do a Visual Check
+
+At this point, your chart should look something like this:
+
+![](https://images.code.org/87f354db26d09449f68a4fa56cb57352-image-1454102624517.PNG)
+
+Once your chart looks close to the one above, switch to **View** mode and take a moment to look at your visualization.
+
+* What does this chart help you notice about the data?
+* For which ages were the average ratings similar between men and women?
+* For which ages were they different?
+* What other connections and trends can you see from this chart?
+
+After you’ve thought about these questions, move your line chart off to the side of your spreadsheet. **Don’t delete it!** You will be coming back to it later in the lesson. Then move on to the next section to learn how to make a bar chart.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
