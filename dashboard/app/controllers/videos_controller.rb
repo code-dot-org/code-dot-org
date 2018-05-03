@@ -37,6 +37,7 @@ class VideosController < ApplicationController
   end
 
   def edit
+    @s3_metadata = Video.s3_metadata(@video.download)
   end
 
   def create

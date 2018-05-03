@@ -23,5 +23,12 @@
     = f.label 'S3 download link'
     %br/
     = f.text_field :download
+    - if @s3_metadata.present?
+      %p
+        Size:
+        = number_to_human_size(@s3_metadata.content_length)
+      %p{title: @s3_metadata.last_modified.to_formatted_s(:long_ordinal)}
+        Last modified:
+        = time_ago_in_words(@s3_metadata.last_modified) + ' ago'
   .actions
     = f.submit
