@@ -46,6 +46,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.last_sign_in_ip
   end
 
+  test 'clears user email fields' do
+    user = create :teacher
+    user.parent_email = 'fake-parent-email@example.com'
+    user.save
+
+    user.reload
+    refute_nil user.email
+    refute_nil user.hashed_email
+    refute_nil user.parent_email
+
+    purge_user user
+
+    user.reload
+    assert_empty user.email
+    assert_empty user.hashed_email
+    assert_nil user.parent_email
+  end
+
   private
 
   def purge_user(user)
