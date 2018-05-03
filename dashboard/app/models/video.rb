@@ -74,6 +74,13 @@ class Video < ActiveRecord::Base
     'https://www.youtube.com'
   end
 
+  def self.s3_metadata(url)
+    key = url.sub(/^https?:\/\/videos.code.org\//, '')
+    AWS::S3.create_client.head_object(bucket: 'videos.code.org', key: key)
+  rescue Aws::S3::Errors::NoSuchKey
+    {}
+  end
+
   def fetch_thumbnail
     return unless Rails.application.config.levelbuilder_mode
 
