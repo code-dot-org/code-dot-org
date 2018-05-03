@@ -13,13 +13,13 @@ import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSec
 import {
   updateStudentTransfer,
   transferStudents,
-  OTHER_TEACHER,
-  COPY_STUDENTS,
+  TransferType,
   TransferStatus,
   cancelStudentTransfer
 } from './manageStudentsRedux';
 import color from "@cdo/apps/util/color";
 
+const OTHER_TEACHER = "otherTeacher";
 const PADDING = 20;
 const TABLE_WIDTH = 300;
 const DIALOG_WIDTH = 800;
@@ -87,8 +87,7 @@ class MoveStudents extends Component {
     transferStatus: PropTypes.shape({
       status: PropTypes.string,
       type: PropTypes.string,
-      numStudents: PropTypes.number,
-      sectionDisplay: PropTypes.string
+      error: PropTypes.string
     }),
 
     // redux provided
@@ -280,7 +279,7 @@ class MoveStudents extends Component {
 
   onChangeMoveOrCopy = (event) => {
     this.props.updateStudentTransfer({
-      copyStudents: event.target.value === COPY_STUDENTS
+      copyStudents: event.target.value === TransferType.COPY_STUDENTS
     });
   };
 
@@ -334,7 +333,12 @@ class MoveStudents extends Component {
             </Table.Provider>
             <div style={styles.rightColumn}>
               {transferStatus.status === TransferStatus.FAIL &&
-                <div style={styles.error}>{transferStatus.error}</div>
+                <div
+                  id="uitest-error"
+                  style={styles.error}
+                >
+                  {transferStatus.error}
+                </div>
               }
               <div>{i18n.selectStudentsToMove()}</div>
               <label
@@ -370,7 +374,7 @@ class MoveStudents extends Component {
                   <label style={styles.input}>
                     <input
                       type="radio"
-                      value={COPY_STUDENTS}
+                      value={TransferType.COPY_STUDENTS}
                       checked={transferData.copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
@@ -391,12 +395,13 @@ class MoveStudents extends Component {
           </div>
           <DialogFooter>
             <Button
+              id="uitest-cancel"
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              id="submit"
+              id="uitest-submit"
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
