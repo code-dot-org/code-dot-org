@@ -25,7 +25,9 @@ export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = (validScripts, studentScriptIds) => ({type: SET_VALID_SCRIPTS, validScripts, studentScriptIds});
+export const setValidScripts = (validScripts, studentScriptIds, validCourses) => (
+  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses}
+);
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
   { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
@@ -201,11 +203,22 @@ export default function sectionProgress(state=initialState, action) {
     // If no scriptId is assigned, use the first valid script.
     const defaultScriptId = state.scriptId || action.validScripts[0].id;
 
-    const studentScriptIds = action.studentScriptIds || [];
     let validScripts = action.validScripts;
-    if (studentScriptIds.length > 0) {
+    if (action.studentScriptIds && action.validCourses) {
+
+      // First, construct an id map consisting only of script ids which a
+      // student has participated in.
       const idMap = {};
-      studentScriptIds.forEach(id => idMap[id] = true);
+      action.studentScriptIds.forEach(id => idMap[id] = true);
+
+      // If the student has participated in a script which is a unit in a
+      // course, make sure that all units in that course are included.
+      action.validCourses.forEach(course => {
+        if (course.script_ids.some(id => idMap[id])) {
+          course.script_ids.forEach(id => idMap[id] = true);
+        }
+      });
+
       validScripts = validScripts.filter(script => idMap[script.id]);
     }
 

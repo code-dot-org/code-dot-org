@@ -57,16 +57,25 @@ function renderSectionProgress(section, validScripts) {
   store.dispatch(setSection(section));
 
   if (experiments.isEnabled('courseVersions')) {
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/section/${section.id}/student_script_ids`,
-      dataType: 'json'
-    }).done(data => {
-      const { studentScriptIds } = data;
-      store.dispatch(setValidScripts(validScripts, studentScriptIds));
+    const promises = [
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/section/${section.id}/student_script_ids`,
+        dataType: 'json'
+      }),
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/courses?allVersions=1`,
+        dataType: 'json'
+      })
+    ];
+    Promise.all(promises).then(data => {
+      let [studentScriptsData, validCourses] = data;
+      const { studentScriptIds } = studentScriptsData;
+      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses));
       renderSectionProgressReact(store);
     });
-    } else {
+  } else {
     store.dispatch(setValidScripts(validScripts));
     renderSectionProgressReact(store);
   }
