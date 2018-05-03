@@ -1,7 +1,7 @@
 import { assert } from '../../../util/configuredChai';
-import {getChannelIdFromUrl} from '@cdo/apps/code-studio/components/report_abuse_form';
+import {getChannelIdFromUrl} from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
-describe('report_abuse_form', () => {
+describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {
     assert.equal(getChannelIdFromUrl('https://codeprojects.org/123abc/'), "123abc");
     assert.equal(getChannelIdFromUrl('http://localhost.codeprojects.org:3000/abc123/'), "abc123");

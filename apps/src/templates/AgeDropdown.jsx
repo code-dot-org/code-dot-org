@@ -7,7 +7,7 @@ export const ages = ['', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  * NOTE: this is pretty similarly to a component in dashboard's
- * report_abuse_form.jsx. In an ideal world, we would have a better way of
+ * ReportAbuseForm.jsx. In an ideal world, we would have a better way of
  * sharing components between dashboard/apps and have any difference between
  * the two version controlled by props.
  */
