@@ -56,7 +56,18 @@ class VideosController < ApplicationController
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
-    if @video.update(video_params)
+    raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
+
+    filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
+    download = AWS::S3.upload_to_bucket(
+      'videos.code.org',
+      "levelbuilder/#{filename}",
+      video_params[:download],
+      acl: 'public-read',
+      no_random: true,
+    )
+
+    if @video.update(video_params.merge(download: "https://videos.code.org/#{download}"))
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
       Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
 

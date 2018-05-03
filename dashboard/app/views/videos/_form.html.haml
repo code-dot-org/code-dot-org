@@ -21,14 +21,16 @@
     = f.text_field :youtube_code
   .field
     = f.label 'S3 download link'
-    %br/
-    = f.text_field :download
     - if @s3_metadata.present?
+      %p
+        = link_to @video.download, @video.download
       %p
         Size:
         = number_to_human_size(@s3_metadata.content_length)
       %p{title: @s3_metadata.last_modified.to_formatted_s(:long_ordinal)}
         Last modified:
         = time_ago_in_words(@s3_metadata.last_modified) + ' ago'
+    %br/
+    = f.file_field :download, style: 'line-height: initial'
   .actions
     = f.submit
