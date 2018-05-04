@@ -8,6 +8,8 @@
 #  question_text :string(255)
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  question_type :string(255)      not null
+#  parent_id     :integer
 #
 # Indexes
 #

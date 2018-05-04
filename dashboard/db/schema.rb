@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180502182615) do
+ActiveRecord::Schema.define(version: 20180504225917) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -750,6 +750,8 @@ ActiveRecord::Schema.define(version: 20180502182615) do
     t.string   "question_text"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "question_type", null: false
+    t.integer  "parent_id",                  comment: "Parent pd_survey_question id for hierarchical question types, such as matrices."
     t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", using: :btree
     t.index ["question_id"], name: "index_pd_survey_questions_on_question_id", using: :btree
   end
@@ -794,7 +796,7 @@ ActiveRecord::Schema.define(version: 20180502182615) do
     t.integer "user_id",                      null: false
     t.integer "pd_session_id"
     t.integer "pd_workshop_id",               null: false
-    t.text    "form_data",      limit: 65535
+    t.text    "form_data",      limit: 65535, null: false
     t.index ["form_id", "user_id", "pd_session_id"], name: "index_pd_workshop_daily_surveys_on_user_form_day", unique: true, using: :btree
     t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
