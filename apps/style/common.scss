@@ -1684,7 +1684,10 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 
 .legacy-share-view {
   overflow: hidden;
-  position: fixed;
+
+  &.legacy-share-view-mobile {
+    position: fixed;
+  }
 
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
