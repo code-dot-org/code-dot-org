@@ -42,7 +42,7 @@ class MultipleChoiceAnswerCell extends Component {
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
           }
-          {(percentValue === undefined) &&
+          {(percentValue < 0 ) &&
             <span>{'-'}</span>
           }
         </div>
@@ -55,5 +55,10 @@ class MultipleChoiceAnswerCell extends Component {
     );
   }
 }
+
+
+MultipleChoiceAnswerCell.defaultProps = {
+  percentValue: -1
+};
 
 export default MultipleChoiceAnswerCell;
