@@ -10,7 +10,7 @@ const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    sectionId: null,
+    sectionId: 1,
     addStatus: {},
   },
 };
