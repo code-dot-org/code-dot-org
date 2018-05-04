@@ -2,7 +2,11 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
-import {blankStudentTransfer} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {
+  blankStudentTransfer,
+  blankStudentTransferStatus,
+  TransferStatus
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 
 const studentData = [
@@ -15,29 +19,32 @@ const sections = [
   {id: 1, name: 'sectionb'},
   {id: 2, name: 'sectionc'}
 ];
-const DEFAULT_PROPS = {
-  studentData: studentData,
-  transferData: blankStudentTransfer,
-  sections: sections,
-  currentSectionId: 1
-};
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;
   let transferStudents;
+  let cancelStudentTransfer;
+  let DEFAULT_PROPS;
 
   beforeEach(() => {
     updateStudentTransfer = sinon.spy();
     transferStudents = sinon.spy();
+    cancelStudentTransfer = sinon.spy();
+    DEFAULT_PROPS = {
+      studentData,
+      transferData: blankStudentTransfer,
+      transferStatus: blankStudentTransferStatus,
+      sections,
+      currentSectionId: 1,
+      updateStudentTransfer,
+      transferStudents,
+      cancelStudentTransfer
+    };
   });
 
   it('opens a dialog with a table', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -47,11 +54,7 @@ describe('MoveStudents', () => {
 
   it('renders students as rows', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -61,11 +64,7 @@ describe('MoveStudents', () => {
 
   it('sorts students by name (ascending) on click', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -78,11 +77,7 @@ describe('MoveStudents', () => {
 
   it('shows all sections minus current section in dropdown', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -105,8 +100,6 @@ describe('MoveStudents', () => {
       <MoveStudents
         {...DEFAULT_PROPS}
         transferData={transferData}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
       />
     );
 
@@ -124,14 +117,41 @@ describe('MoveStudents', () => {
       <MoveStudents
         {...DEFAULT_PROPS}
         transferData={transferData}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
       />
     );
 
     wrapper.find('Button').simulate('click');
-    expect(transferStudents.callCount).to.equal(0);
-    wrapper.find('#submit').simulate('click');
-    expect(transferStudents.callCount).to.equal(1);
+    expect(transferStudents).not.to.have.been.called;
+    wrapper.find('#uitest-submit').simulate('click');
+    expect(transferStudents).to.have.been.calledOnce;
+  });
+
+  it('calls cancelStudentTransfer on close', () => {
+    const wrapper = mount(
+      <MoveStudents {...DEFAULT_PROPS}/>
+    );
+
+    wrapper.find('Button').simulate('click');
+    expect(cancelStudentTransfer).not.to.have.been.called;
+    wrapper.find("#uitest-cancel").simulate('click');
+    expect(cancelStudentTransfer).to.have.been.calledOnce;
+  });
+
+  it('renders an error message if the transfer status is fail', () => {
+    const transferStatus = {
+      status: TransferStatus.FAIL,
+      error: 'failed to transfer students!'
+    };
+    const wrapper = mount(
+      <MoveStudents
+        {...DEFAULT_PROPS}
+        transferStatus={transferStatus}
+      />
+    );
+
+    wrapper.find('Button').simulate('click');
+    const errorElement = wrapper.find("#uitest-error");
+    expect(errorElement.exists()).to.be.true;
+    expect(errorElement.text()).to.equal(transferStatus.error);
   });
 });
