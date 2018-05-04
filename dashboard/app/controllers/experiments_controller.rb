@@ -47,12 +47,17 @@ class ExperimentsController < ApplicationController
   def disable_single_user_experiment
     experiment_name = params[:experiment_name]
 
-    unless Experiment.enabled?(experiment_name: experiment_name, user: current_user)
-      redirect_to '/', flash: {alert: "You are not in the '#{params[:experiment_name]}' experiment."}
+    unless VALID_EXPERIMENTS.include?(experiment_name)
+      redirect_to '/', flash: {alert: "'#{params[:experiment_name]}' is not a valid experiment."}
       return
     end
 
-    experiment = SingleUserExperiment.where(min_user_id: current_user.id, name: experiment_name).first
+    unless Experiment.enabled?(experiment_name: experiment_name, user: current_user)
+      redirect_to '/', flash: {alert: "Unable to leave experiment '#{params[:experiment_name]}'."}
+      return
+    end
+
+    experiment = SingleUserExperiment.find_by(min_user_id: current_user.id, name: experiment_name)
     experiment.destroy
     redirect_to '/', flash: {notice: "You have successfully disabled the experiment '#{params[:experiment_name]}'."}
   end
