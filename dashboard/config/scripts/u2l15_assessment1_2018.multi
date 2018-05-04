@@ -1,0 +1,21 @@
+name 'U2L15 Assessment1_2018'
+title 'Vigenere Cipher'
+type 'multi2'
+question 'Why is the Vigenere cipher hard to crack? (select 2)'
+right 'One cannot solve using frequency analysis directly.'
+right 'The key length is variable and potentially very long'
+wrong 'The key is always secret to both the sender and receiver of the message.'
+wrong 'A Vigenere cipher relies upon an "alphabet shift" algorithm.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- One cannot solve using frequency analysis directly.
+- Long keys create exponential growth possibilities.
+
+Note that a Caesar cipher relies upon an alphabetic shift
+MARKDOWN

@@ -1,0 +1,33 @@
+name 'Unit 4 Lesson 4 Introduction_2018'
+markdown <<MARKDOWN
+# Unit 4: Lesson 4 - The Cost of Free
+
+## Background
+
+Why is so much of the stuff you use online free? Who is paying for it? Many people are unaware of how information about them is being collected and tracked by the technology they use every day. Often, you "pay" for it with your data. The maker of an app can use data they collect from you to make money, and provide you with a service or app for free. This carries some risks to your personal privacy and security. Most companies make great efforts to balance the tradeoffs between providing you with a useful service and protecting your privacy, but the issues can be tricky and raise confounding ethical dilemmas.
+
+## Lesson
+
+* Video: The Future of Big Data
+* What do you know about data collected about you every day?
+* Reading: Wall Street Journal: Users Get as Much as They Give
+* Read a real data privacy policy
+
+## Resources
+
+* Video: 
+	* External Link: <a href="http://www.fwthinking.com/video/clips/future-big-data-video/">The Future of Big Data</a>
+    * Video is also embeded in code studio (just click *Continue* below)
+    
+* Article: **Wall Street Journal: Users Get as Much as They Give** 
+ * WSJ article (annotated) ([PDF](https://docs.google.com/document/d/1IM0rBFF1CP4icPU6pmPrXXStYWwQ1gURtvFoJsbFV1A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1IM0rBFF1CP4icPU6pmPrXXStYWwQ1gURtvFoJsbFV1A/export?format=doc))
+ * <a href="http://www.wsj.com/articles/SB10001424052748703748904575411530096840958">WSJ.com article (original)</a>
+* Activity Guide - Privacy Policies - Activity Guide ([PDF](https://docs.google.com/document/d/1K_v_0Qup_864h4c2p3WKwbhlvFCdobbekmff05caPI0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1K_v_0Qup_864h4c2p3WKwbhlvFCdobbekmff05caPI0/export?format=doc))
+* *Free Flashlight App* permissions screen <a href="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" target="_blank">[Click to view image]</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Activity Guide EXEMPLAR: <a href="https://docs.google.com/document/d/1x-7ihDxLpu08983_7r1YTErz8iVgqqoG4usjbRgc4c8/edit?usp=sharing" target="_blank">Privacy Policies</a>
+MARKDOWN

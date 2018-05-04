@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:42.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "Imagine that you have an image that is too dark or too bright. Describe how you would alter the RGB settings to brighten or darken it. Give an example.\r\n",
+    "submittable": "true",
+    "title": "How to brighten or darken an image",
+    "encrypted_solution": "3lhO2Bpcr5TZjqEG6eQvfXI1U5rrad+XxVbVSpiEzK3EqwEOQhrwzbOrXcg/\n6ZONKhHHYMqvfmeY8fDaf1IRqedWR0vfo+E6ehS2hliJ3WNAiEwF1TpxyJik\nnhStB0BedX+QJrPCFkEcfm0MulsNpTbW5DcihkpveNLCN+FWsiDYDUx+prRU\nty0mu2IVxAWcxwWTZfLak86OZrCSorDb9nrnuaM1kuwC1NisvCL6K8wBGhux\nu3+X9sQW/ZoT3+d5z2OFmkG9RT6LTTyQ1696iByuKFxOHUqEv6ibg89jDV0u\nMBvy2/5O0V/LJagBvXMeNTnHrIaywK0CLtNUiFMtKF5WXv5bcd5R2UmWIRJt\nVvOhkv9jji24XDQH/S9r/zxI4SqTE8g8YugCAljKNnjOiEBB8+SY9SVkxQwL\nEHsEtRFamP53EWKJ/Zqech1AiJ3tfaWeP2E5lhoAg0sL4NKvEulfNe6sp34F\n4rLt+GY7C3oG0E+apz3KvKumSdpZE/ROgRtsZMpua0RQaHLGJ4IF8tSIOgXH\n2XfrP95JAjLUK9MrSRge6UOqvpeCFTUI6sfofVvLoR5TtMDEy3z/MAbysf/b\n7u1250JEavVhMpKEQ+lv7R1NcEg3Xqwpq6bAC39Ig9xHVNz3dzrBZJ/WZOYD\nrIhCDC+WC1+6faN+yPIVe57+22XT9CxekWh4fJc0+5N1RKjQy/cDgfyBA/t4\nGdOMrtuoe7q0M2Q7mRB79C78Ow9axbtejA1gCZzcrB5HkCJWKbG478G2S/YY\n1qGwKyENx4OH4MizibUJC10+Iv7xUQ8/kcWJxq9GIQbb/xrcKmctGyD558Wi\n0Cgfk2hDKOyvc5vN79I2U3GZF/rG1IqmFBPIOBDGsJsGHTMvuRMY5UQ5A5+o\n2MGSEdycFAcJI4KlYuC12cxsY91RZv1DDOPANT9sfymZ7psWLYJR723JVT/i\nX4k8PhmUuobYLFFUWcgbgn0ftnX5use4L3TJGwWF7HZOJUfbxh3SmfGjZv5q\n/n5Ylq+zP+T/6ft7Xs0xkDYCGkEMV7F76MbapGsw8YDJYeS+49BNqFsSDala\nWBOyqwlg\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5613,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

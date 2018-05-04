@@ -49,6 +49,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-01 19:54:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,
@@ -268,6 +269,7 @@
           <block type="studio_endGame">
             <title name="VALUE">win</title>
           </block>
+          <block type="studio_getScore"/>
         </category>
       </xml>
     </toolbox_blocks>
