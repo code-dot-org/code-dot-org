@@ -121,9 +121,9 @@ describe('MoveStudents', () => {
     );
 
     wrapper.find('Button').simulate('click');
-    expect(transferStudents.callCount).to.equal(0);
+    expect(transferStudents).not.to.have.been.called;
     wrapper.find('#uitest-submit').simulate('click');
-    expect(transferStudents.callCount).to.equal(1);
+    expect(transferStudents).to.have.been.calledOnce;
   });
 
   it('calls cancelStudentTransfer on close', () => {
@@ -132,9 +132,9 @@ describe('MoveStudents', () => {
     );
 
     wrapper.find('Button').simulate('click');
-    expect(cancelStudentTransfer.callCount).to.equal(0);
+    expect(cancelStudentTransfer).not.to.have.been.called;
     wrapper.find("#uitest-cancel").simulate('click');
-    expect(cancelStudentTransfer.callCount).to.equal(1);
+    expect(cancelStudentTransfer).to.have.been.calledOnce;
   });
 
   it('renders an error message if the transfer status is fail', () => {
