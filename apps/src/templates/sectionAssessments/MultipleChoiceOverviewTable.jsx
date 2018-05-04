@@ -39,7 +39,7 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   if (property === 'notAnswered') {
      percentValue = calculateNotAnswered(rowData.answers);
   } else {
-     percentValue = (cell && cell.percentAnswered) || '-';
+     percentValue = (cell && cell.percentAnswered);
   }
 
   return (
@@ -47,7 +47,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
         id={rowData.id}
         percentValue={percentValue}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
-
       />
   );
 };
