@@ -1,0 +1,17 @@
+name 'CSD U4L10 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson teams explore some example apps created in App Lab, using those apps to help inform the first paper prototypes of their apps.
+## Vocabulary
+
+* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.
+
+
+## Resources
+
+* [Phone Paper Prototype](https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - Template
+* [What's for Lunch](https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - Prototype
+* [Prototype Brainstorming](https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - Activity Guide
+MARKDOWN

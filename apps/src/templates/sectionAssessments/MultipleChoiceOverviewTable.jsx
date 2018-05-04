@@ -81,6 +81,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getNotAnsweredColumn = () => (
     {
+      property: 'notAnswered',
       header: {
         label: commonMsg.notAnswered(),
         props: {style: tableLayoutStyles.headerCell},

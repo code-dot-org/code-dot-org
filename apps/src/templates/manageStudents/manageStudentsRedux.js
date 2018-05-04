@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {sectionCode} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -14,6 +15,27 @@ export const RowType = {
   ADD: "addRow",
   NEW_STUDENT: "newStudentRow",
   STUDENT: "studentRow",
+};
+
+// Constants around moving students to another section.
+// whether students will be moved to a section owned by a different teacher
+export const OTHER_TEACHER = "otherTeacher";
+// whether students will be copied to the new section or moved (and subsequently removed from current section)
+export const COPY_STUDENTS = "copyStudents";
+
+/** Initial state for manageStudents.transferData redux store.
+ * studentIds - student ids selected to be moved to another section
+ * sectionId - section id to which new students will be moved
+ * otherTeacher - students are being moved to a section owned by a different teacher
+ * otherTeacherSection - if new section is owned by a different teacher, current teacher inputs new section code
+ * copyStudents - whether or not students will be copied to new section or moved (and subsequently removed from current section)
+ */
+export const blankStudentTransfer = {
+  studentIds: [],
+  sectionId: null,
+  otherTeacher: false,
+  otherTeacherSection: '',
+  copyStudents: true
 };
 
 // This doesn't get used to make a server call, but does
@@ -60,6 +82,7 @@ const blankNewStudentRow = {
  * in the edit fields on the client which has not yet been persisted to the server.
  * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ * transferData - initial state described above in blankStudentTransfer assignment
  */
 const initialState = {
   loginType: '',
@@ -68,6 +91,7 @@ const initialState = {
   sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
+  transferData: {...blankStudentTransfer}
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -88,6 +112,7 @@ const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
+const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -103,6 +128,7 @@ export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
+export const updateStudentTransfer = transferData => ({ type: UPDATE_STUDENT_TRANSFER, transferData });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
   { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
 );
@@ -206,6 +232,35 @@ export const addMultipleAddRows = (studentNames) => {
       };
     }
     dispatch(addMultipleRows(studentData));
+  };
+};
+
+export const transferStudents = () => {
+  return (dispatch, getState) => {
+    const state = getState();
+    // Get section code for current section from teacherSectionsRedux
+    const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
+    const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
+    let newSectionCode;
+
+    if (otherTeacher && otherTeacherSection) {
+      newSectionCode = otherTeacherSection;
+    } else {
+      newSectionCode = sectionCode(state, newSectionId);
+    }
+
+    transferStudentsOnServer(studentIds, currentSectionCode, newSectionCode, copyStudents, (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        if (!copyStudents || !otherTeacher) {
+          studentIds.forEach(id => {
+            dispatch(removeStudent(id));
+          });
+        }
+        updateStudentTransfer({...blankStudentTransfer});
+      }
+    });
   };
 };
 
@@ -471,6 +526,15 @@ export default function manageStudents(state=initialState, action) {
       showSharingColumn: !state.showSharingColumn,
     };
   }
+  if (action.type === UPDATE_STUDENT_TRANSFER) {
+    return {
+      ...state,
+      transferData: {
+        ...state.transferData,
+        ...action.transferData
+      }
+    };
+  }
 
   return state;
 }
@@ -553,6 +617,26 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(students),
   }).done((data) => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, null);
+  });
+};
+
+// Make a post request to transfer students.
+const transferStudentsOnServer = (studentIds, currentSectionCode, newSectionCode, stayEnrolledInCurrentSection, onComplete) => {
+  const payload = {
+    student_ids: studentIds,
+    current_section_code: currentSectionCode,
+    new_section_code: newSectionCode,
+    stay_enrolled_in_current_section: stayEnrolledInCurrentSection
+  };
+  $.ajax({
+    url: '/dashboardapi/sections/transfers',
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(payload)
+  }).done(data => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
     onComplete(status, null);

@@ -291,41 +291,41 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Definición de Variables y sustitución
+              name: Definición de Variables y Sustitución
             'Calc: Evaluation Blocks':
-              name: Bloques de evaluación y expresiones aritméticas
+              name: Bloques de Evaluación y Expresiones Aritméticas
             'Eval: Boolean Operators':
-              name: Operadores booleanos
+              name: Operadores Booleanos
             'Eval: Conditionals':
               name: Condicionales
             'Eval: Defining Functions':
-              name: Funciones compuestas
+              name: Funciones Compuestas
             'Eval: Functions':
-              name: Resolución de problemas con la receta de diseño
+              name: Solución de Problemas de Palabras con la Receta de Diseño
             'Eval: Strings and Images':
               name: Cadenas de texto e imágenes
             'Eval: Writing Contracts':
               name: Contratos de redacción
             'Play Lab: Animation (Big Game)':
-              name: El gran juego - animación
+              name: El Gran Juego - Animación
             'Play Lab: Boolean (Big Game)':
-              name: El gran juego - valores booleanos
+              name: El Gran Juego - Booleanos
             'Play Lab: Booleans':
-              name: Sam el Bat
+              name: Sam el murciélago
             'Play Lab: Collision Detection (Big Game)':
-              name: El gran juego - detección de colisiones
+              name: El Gran Juego - Detección de Colisión
             'Play Lab: Defining Functions':
               name: Altura del cohete
             'Play Lab: Defining Variables (Big Game)':
-              name: El gran juego - Variables
+              name: El Gran Juego - Variables
             'Unplugged: Booleans':
-              name: 'Desconectado: Booleanos y lógica'
+              name: 'Desconectado: Booleanos y Lógica'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Desconectado: Detección de colisiones y el teorema de Pitágoras'
+              name: 'Desconectado: Detección de Colisión y el Teorema de Pitágoras'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Desconectado: Condicionales y funciones por partes'
             'Unplugged: Contracts':
-              name: 'Desconectado: Contratos, dominio y rango'
+              name: 'Desconectado: Contratos, Dominio y Rango'
             'Unplugged: The Design Recipe':
               name: 'Desconectado: La receta de diseño'
             'Unplugged: Video Games and Coordinate Planes':
@@ -347,13 +347,13 @@
             de programación utilizado en Code.org CS en Álgebra
           stages:
             Defining Simple Functions:
-              name: Definiendo funciones simples
+              name: Definición de Funciones Simples
             Defining Variables:
               name: Definición de variables
             Evaluation Blocks:
               name: Bloques de evaluación
             Making Pictures:
-              name: Haciendo Fotos
+              name: Hacer fotos
             The Design Recipe:
               name: La receta de diseño
         K5PD:
@@ -363,13 +363,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Pedagogía de la ciencia informática
+              name: Pedagogía en Ciencias de la Computación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             K-5 Courses:
-              name: Cursos de K-5
+              name: Cursos K-5
             Next Steps:
-              name: Próximos pasos
+              name: Siguientes pasos
             'Programming Concept: Conditionals':
               name: 'Concepto de programación: Condicionales'
             'Programming Concept: Events':
@@ -383,7 +383,7 @@
             Teacher Dashboard:
               name: Panel del docente
             Unplugged lessons:
-              name: Clases sin conección
+              name: Lecciones desconectadas
             Writing computer programs:
               name: Programas informáticos de escritura
         netsim:
@@ -403,7 +403,7 @@
             Overview and Setup Instructions:
               name: Instrucciones generales y de la configuración
             Packets and Reliability:
-              name: Paquetes y seguridad
+              name: Paquetes y fiabilidad
             Peer to Peer - Sending Ascii:
               name: Red de Pares - Envío de Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
@@ -425,9 +425,9 @@
             Color Pixelation Examples:
               name: Ejemplos de la pixelación con color
             Color Pixelation Freeplay:
-              name: Color Pixelation Freeplay
+              name: Reproducción de la pixelación en color
             Color Pixelation Tutorial:
-              name: Color Pixelation Tutorial
+              name: Tutorial de pixelación de color
         20-hour:
           title: Curso acelerado de introducción a CS
           description: Este curso de 20 horas introduce el núcleo de la informática
@@ -571,11 +571,11 @@
             Bytes and File Sizes:
               name: Bytes y tamaños de los archivos
             Encode a Complex Thing:
-              name: Cifrar una experiencia
+              name: Codificar una experiencia
             Encoding B&W Images:
-              name: Cifrado de las imágenes en blanco y negro
+              name: Codificación de imágenes B&W
             Encoding Color Images:
-              name: Cifrado de las imágenes de color
+              name: Codificación de imágenes a color
             Encoding Numbers in the Real World:
               name: Cifrado de los números en el mundo real
             Encoding and Sending Text:
@@ -612,7 +612,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -636,7 +636,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam el Bat
+              name: Sam el murciélago
             Strings and Images:
               name: Cadenas de texto e imágenes
             Your Game - Animation:
@@ -668,7 +668,7 @@
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -695,7 +695,7 @@
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -720,7 +720,7 @@
             Introduction to Computational Science:
               name: Presentación a la ciencia computacional
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -824,13 +824,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Pedagogía de la ciencia informática
+              name: Pedagogía en Ciencias de la Computación
             Course Overview:
               name: Resumenes del curso
             Evaluation Blocks:
               name: Bloques de evaluación
             Next Steps:
-              name: Próximos pasos
+              name: Siguientes pasos
             Strings and Images:
               name: Cadenas de texto e imágenes
             Teacher Dashboard:
@@ -850,7 +850,7 @@
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -868,7 +868,7 @@
             Impact of Computer Science:
               name: Impresión de la informática
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -887,7 +887,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -906,7 +906,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -932,7 +932,7 @@
             Introduction to Computational Science:
               name: Presentación a la ciencia computacional
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -964,7 +964,7 @@
             Introduction to Computational Science:
               name: Presentación a la ciencia computacional
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -1095,7 +1095,7 @@
             Rocket-Height:
               name: Rocket-Height
             Sam the Bat:
-              name: Sam el Bat
+              name: Sam el murciélago
             Strings and Images:
               name: Cadenas de texto e imágenes
             The Design Recipe:
@@ -1203,7 +1203,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Next Steps:
-              name: Próximos pasos
+              name: Siguientes pasos
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1259,7 +1259,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Dominar lo básico: secuenciación'
             Next Steps:
-              name: Próximos pasos
+              name: Siguientes pasos
             Planning:
               name: Planning
         ECSPD2:
@@ -1380,7 +1380,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Próximos pasos
+              name: Siguientes pasos
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: Enseñar programación funcional a través de álgebra
@@ -2182,7 +2182,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -2278,9 +2278,9 @@
             Encode a Complex Thing:
               name: Encode a Complex Thing
             Encoding B&W Images:
-              name: Cifrado de las imágenes en blanco y negro
+              name: Codificación de imágenes B&W
             Encoding Color Images:
-              name: Cifrado de las imágenes de color
+              name: Codificación de imágenes a color
             Finding Trends with Visualizations:
               name: Finding Trends with Visualizations
             Good and Bad Data Visualizations:
@@ -2612,7 +2612,7 @@
             Introduction to Computational Science:
               name: Presentación a la ciencia computacional
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2671,7 +2671,7 @@
             Evaluation Blocks:
               name: Bloques de evaluación
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Teacher Dashboard:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
@@ -2694,7 +2694,7 @@
             Introduction to Computational Science:
               name: Presentación a la ciencia computacional
             Introduction to PD:
-              name: Introducción al DP
+              name: Introducción a PD
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -5081,35 +5081,35 @@
             3rd grade.
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritmos: programación papel milimetrado'
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
             Nested Loops in Maze:
-              name: Nested Loops in Maze
+              name: Ciclos anidados en Maze
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Ciclos anidados en Artist
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Algoritmos: Programación de relevos'
             Debugging in Bee:
-              name: Debugging in Bee
+              name: Depuración en Bee
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Conditionals with Bee:
-              name: Conditionals with Bee
+              name: Condicionales con Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: Condicionales y ciclos en Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Condicionales y ciclos en Harvester
             Impacts of Computing:
-              name: Impacts of Computing
+              name: Impactos de la computación
             More Programming with CS4FN:
               name: More Programming with CS4FN
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: Condicionales en Bee
             Digital Citizenship:
               name: Ciudadanía digital
             'Unplugged: Binary':
@@ -5117,15 +5117,15 @@
             Artist Binary:
               name: Artista binario
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Ciclos anidados en Bee
             Nested Loops:
               name: Bucles anidados
             Introduction:
               name: Introducción
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Ciclos anidados en Artist
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Depuración en Collector
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
@@ -5138,43 +5138,43 @@
             Digital Citizenship:
               name: Ciudadanía digital
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: 'Funciones: composición'
             Functions in Artist:
-              name: Functions in Artist
+              name: Funciones de artista
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Determine the Concept in Bee:
-              name: Determine the Concept in Bee
+              name: Determinar el concepto en Bee
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             More Programming with Scratch:
               name: More Programming with Scratch
             Private and Personal Information:
-              name: Private and Personal Information
+              name: Información privada y personal
             Internet:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
             Determine the Concept:
-              name: Determine the Concept
+              name: Determinar el concepto
             Introduction:
               name: Introducción
             Conditionals:
               name: Condicionales
             'Algorithms: Dice Race':
-              name: 'Algorithms: Dice Race'
+              name: 'Algoritmos: Carrera de dados'
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
@@ -5189,35 +5189,35 @@
             Envelope Variables:
               name: Variables de sobre
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             'Functions with Parameters: Songwriting with Parameters':
-              name: 'Functions with Parameters: Songwriting with Parameters'
+              name: 'Funciones con parámetros: composición con parámetros'
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Presenta tu proyecto
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             The Power of Words:
-              name: The Power of Words
+              name: El poder de las palabras
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Introduction:
@@ -5225,9 +5225,9 @@
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: Condicionales y funciones en Bee
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmos: Tanagramas'
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
@@ -5429,15 +5429,15 @@
           description: Testing for Mr. Harvey's class
           stages:
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: 'Funciones: composición'
             Functions in Artist:
-              name: Functions in Artist
+              name: Funciones de artista
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Determine the Concept:
-              name: Determine the Concept
+              name: Determinar el concepto
             Prepare your snowflake for 3D printing:
               name: Prepare your snowflake for 3D printing
             Binary:
@@ -5727,7 +5727,7 @@
             Getters and Setters:
               name: Getters and Setters
         coursed-ramp:
-          title: 'CS Fundamentals: Course D'
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           description_audience: ''
           description_short: ''
           description: ''
@@ -6744,15 +6744,15 @@
         coursef-ramp:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmos: Tanagramas'
             Introduction:
               name: Introducción
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: Condicionales y funciones en Bee
           title: ''
           description_audience: ''
           description_short: ''
@@ -7073,660 +7073,625 @@
         coursed:
           stages:
             Introduction:
-              name: Introducción
-              description_student: This lesson will give you practice in the skills
-                you will need for this course.
-              description_teacher: 'In this set of puzzles, students will begin with
-                an introduction (or review depending on the experience of your class)
-                of Code.org''s online workspace. There will be videos pointing out
-                the basic functionality of the workspace including the `Run`, `Reset`,
-                and `Step` buttons. Also discussed in these videos: dragging Blockly
-                blocks, deleting Blockly blocks, and connecting Blockly blocks. Next,
-                students will practice their _sequencing_ and _debugging_ skills in
-                maze. From there, students will see new types of puzzles like Collector,
-                Artist, and Harvester when they learn the very basics of _loops_.'
+              name: Introducción a los acertijos en línea
+              description_student: Esta lección te dará práctica en las habilidades
+                que necesitarás para este curso.
+              description_teacher: 'En este conjunto de acertijos, los estudiantes
+                empezaran con una introducción (o repaso, dependiendo de la experiencia
+                de tu clase) del espacio de trabajo en linea de Code.org. Habrá videos
+                señalando la funcionalidad básica del espacio de trabajo, incluyendo
+                los botones ''Ejecutar'', ''Volver a empezar'' y ''Paso''. También
+                se discuten en estos videos: arrastrar, eliminar y conectar bloques
+                Blockly. Despues, los estudiantes practicarán sus habilidades de _secuencia_y_depuración
+                en Maze. De ahí, los estudiantes veran nuevos tipos de acertijos como
+                Collector, Artist y Harvester cuando aprendan los básicos de _cliclos_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
-              description_student: In this lesson, you will program your friend to
-                draw pictures!
-              description_teacher: By "programming" one another to draw pictures,
-                students will begin to understand what coding is really about. The
-                class will begin by having students instruct each other to color squares
-                on graph paper in an effort to reproduce an existing picture. If there’s
-                time, the lesson can conclude with images that the students create
-                themselves.
+              name: 'Programación: programación papel milimetrado'
+              description_student: "! En esta lección programarás a tu amigo para
+                que dibuje!"
+              description_teacher: Al programar algunos dibujos, los estudiantes empezarán
+                a comprender de qué se trata la programación. Para comenzar la clase,
+                los estudiantes intercambiarán instrucciones para colorear cuadrados
+                en una hoja cuadriculada, con el fin de reproducir una imagen en la
+                hoja. La clase puede terminar exhibiendo los dibujos que los estudiantes
+                realizaron.
             Events in Bounce:
-              name: Events in Bounce
-              description_student: Ever wish you could play video games in school?
-                In this lesson, you will get to make your own!
-              description_teacher: In this online activity, students will learn what
-                events are, and how computers use them in programs like video games.
-                Students will work through puzzles making the program react to events
-                (like arrow buttons being pressed.) At the end of the puzzle, students
-                will have the opportunity to customize their game with different speeds
-                and sounds.
+              name: Eventos en Bounce
+              description_student: "¿Alguna vez has deseado jugar videojuegos en la
+                escuela? ¡En esta lección harás tu propio juego!"
+              description_teacher: En esta actividad en línea, los alumnos aprenderán
+                qué son los eventos y cómo las computadoras los utilizan en programas
+                como juegos de video. Los alumnos trabajarán a través de acertijos
+                haciendo que el programa reaccione a eventos (como presionar los botones
+                de dirección). Al final del rompecabezas, los estudiantes tendrán
+                la oportunidad de personalizar su juego con diferentes sonidos y velocidades.
             Nested Loops:
               name: Bucles anidados
-              description_student: Loops inside loops inside loops. What does this
-                mean? This lesson will teach you what happens when you place a loop
-                inside another loop.
-              description_teacher: In this online activity, students will have the
-                opportunity to push their understanding of loops to a whole new level.
-                Playing with the Bee and Plants vs Zombies, students will learn how
-                to program a loop to be inside of another loop. They will also be
-                encouraged to figure out how little changes in either loop will affect
-                their program when they click `Run`.
+              description_student: Ciclos dentro de ciclos dentro de ciclos. ¿Qué
+                significa? Esta lección te enseñara que sucede cuando colocas un ciclo
+                dentro de otro.
+              description_teacher: En esta actividad en linea, los estudiantes tendrán
+                la oportunidad de llevar su entendimiento de los ciclos a un nuevo
+                nivel. Jugando con Bee y Plants vs. Zombies, los estudiantes aprenderán
+                a programar un ciclo dentro de otro. También serán alentados a descubrir
+                como pequeños cambios en cada ciclo afectarán su programa cuando hagan
+                clic en "Ejecutar".
             Nested Loops in Artist:
-              name: Nested Loops in Artist
-              description_student: More nested loops! This time, you get to make some
-                AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist
-                in today's set of puzzles. By continuing to practice nested loops
-                with new goals, students will see more uses of loops in general. This
-                set of puzzles also offers a lot more potential for creativity with
-                an opportunity for students to create their own design at the end
-                of the stage.
+              name: Ciclos anidados en Artist
+              description_student: Aquí usarás ciclos anidados para hacer dibujos
+                que puedes enseñarle a tu familia y amigos.
+              description_teacher: Ahora que los estudiantes saben como anidar sus
+                ciclos, pueden crear muchas cosas bellas. Esta lección llevará a los
+                estudiantes a traves de una serie de ejercicios para ayudarlos a crear
+                su propio portafolio de imágenes.
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
-              description_student: Remember at the beginning of the course when you
-                made drawings with code? In this lesson, you will be working with
-                a team to do something very similar!
-              description_teacher: This activity will begin with a short review of
-                "Graph Paper Programming," then will quickly move to a race against
-                the clock, as students break into teams and work together to write
-                a program one instruction at a time.
+              name: 'Depuración: Programación en relevos'
+              description_student: "¿Recuerdas al principio del curso cuando hiciste
+                dibujos con código? ¡En esta lección se trabajará con un equipo para
+                hacer algo muy similar!"
+              description_teacher: Esta actividad comenzará con una breve revisión
+                de la programación en "papel cuadriculado", entonces se moverá rápidamente
+                a una carrera contra el reloj al diidir a los estudiantes en equipos
+                y hacerlos trabajar juntos para escribir una instrucción de un programa
+                a la vez.
             Debugging in Bee:
-              name: Debugging in Bee
+              name: Depuración en Bee
             While Loops in Farmer:
-              name: While Loops in Farmer
-              description_student: 'Loops are so useful in coding. This lesson will
-                teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should
-                already have plenty of practice using `repeat` loops, so now it's
-                time to mix things up. \n\n_While loops_ are loops that continue to
-                repeat commands while a condition is met. While loops are used when
-                the programmer doesn't know the exact number of times commands need
-                to be repeated, but does know what condition needs to be true in order
-                for the loop to continue repeating. For example, students will be
-                working to fill holes and dig dirt in Farmer. They will not know the
-                size of the holes or the height of the mountains of dirt, but the
-                students will know they need to keep filling the holes and digging
-                the dirt as long as the ground is not flat."
-            Conditionals with Cards:
-              name: Condicionales con tarjetas
-              description_student: It's time to play a game where you earn points
-                only under certain conditions!
-              description_teacher: 'This lesson demonstrates how conditionals can
-                be used to tailor a program to specific information. We don’t always
-                have all of the information we need when writing a program. Sometimes
-                you will want to do something different in one situation than in another,
-                even if you don''t know what situation will be true when your code
-                runs. That is where conditionals come in. Conditionals allow a computer
-                to make a decision, based on the information that is true any time
-                your code is run.
-
-'
-            Conditionals in Bee:
-              name: Conditionals in Bee
-              description_student: 'Now that you understand conditionals, it''s time
-                to program Bee to use them when collecting honey and nectar. '
-              description_teacher: Up until this point students have been writing
-                code that executes exactly the same way each time it is run - reliable,
-                but not very flexible. In this lesson, your class will begin to code
-                with conditionals, allowing them to write code that functions differently
-                depending on the specific conditions the program encounters.
-            Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
-              description_student: You can do some amazing things when you use conditionals
-                and loops together!
-              description_teacher: 'In this lesson, students will be pairing together
-                two key concepts: loops and conditionals. This set of puzzles bridges
-                the gaps in understanding that occur when working on puzzles that
-                use multiple kinds of blocks. By bringing two ideas together, students
-                will create more complex code that shows both impressive creativity
-                and critical thinking!'
-            Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
-              description_student: It's not always clear when to use each conditional.  This
-                lesson will help you get practice deciding what to do.
-              description_teacher: Students will practice `while` loops, `until` loops,
-                and `if / else` statements. All of these blocks use conditionals.
-                By practicing all three, students will learn to write complex and
-                flexible code.
-            Digital Citizenship:
-              name: Ciudadanía digital
-              description_student: Some information is not safe to share online. This
-                lesson will help you learn the difference between safe and private
-                information.
+              name: Ciclos "mientras" en Farmer
+              description_student: 'Los ciclos son muy útiles en la programación.
+                ¡Esta lección te enseñará acerca de un nuevo tipo de ciclo: ciclos
+                ''mientras''!'
               description_teacher: |-
-                In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
+                Para cuando los estudiantes alcanzan esta lección, ya deberian tener mucha practica usando ciclos de reptición, así que es tiempo de cambiar las cosas.
 
-                Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
+                _Los ciclos 'Mientras'_ son ciclos que continuan repitiendo comandos mientras se cumple una condición. Los ciclos 'mientras' son usados cuando el programador no sabe el numero exacto de veces que un comando se debe repetir, pero sabe que condición necesita ser cierta para que el ciclo continúe. Por ejemplo, los estudiantes llenaran hoyos en Farmer. No sabrán el tamaño de los hoyos o la altura de los montes de tierra, pero los estudiantes sabrán que necesitan llenar los hoyos y excavar la tierra mientras la tierra no esté plana.
+            Conditionals with Cards:
+              name: 'Si/Entonces: Condicionales con Cards'
+              description_student: "¡Es hora de jugar un juego donde ganas puntos
+                solo bajo ciertas condiciones!"
+              description_teacher: "Esta lección muestra cómo se pueden utilizar condicionales
+                para adaptar un programa para obtener información específica. No siempre
+                tenemos toda la información que necesitamos al escribir un programa.
+                A veces tienes que hacer algo diferente en una situación que en otra,
+                incluso si no sabes qué situación ocurrirá cuando se ejecuta tu código.
+                Es donde las condicionales entran en juego. Las condicionales permiten
+                a un ordenador tomar una decisión, basándose en la información que
+                es cierta cuando se ejecuta tu código.\n\n"
+            Conditionals in Bee:
+              name: Condicionales en Bee
+              description_student: 'Ahora que entiendes condicionales, es tiempo de
+                programar Bee para que las use al recolectar avejas y nectar. '
+              description_teacher: Hasta este punto los estudiantes han estado escribiendo
+                código que se ejecuta exactamente de la misma manera cada vez que
+                se ejecute - confiable, pero no muy flexible. En esta lección, la
+                clase empezará a escribir código con condicionales, que les permite
+                escribir código que funcione diferentemente dependiendo de las condiciones
+                específicas que el programa encuentré.
+            Conditionals & Loops in Maze:
+              name: Condicionales y ciclos en Maze
+              description_student: "¡Puedes hacer cosas sorprendentes cuando se utilizan
+                condicionales y ciclos juntos!"
+              description_teacher: 'En esta lección, los estudiantes se ser emparejado
+                juntos dos conceptos clave: ciclos y condicionales. Este conjunto
+                de acertios cierra las brechas en la comprensión que se producen al
+                trabajar en acertijos que utilizan múltiples tipos de bloques. ¡Al
+                unir dos ideas, los estudiantes crearán código más complejo que muestra
+                la impresionante creatividad y pensamiento crítico!'
+            Conditionals & Loops in Farmer:
+              name: Condicionales y ciclos en Harvester
+              description_student: No siempre es claro cuando usar cada condicional.
+                Esta lección te dara practica decidiendo.
+              description_teacher: Los estudiantes practicarán ciclos "mientras",
+                "hasta" y condicionales. Todos estos bloques usan condicionales. Practicando
+                los tres, los estudiantes aprenden a escribir codigo funcional y complejo.
+            Digital Citizenship:
+              name: 'Ciudadania digital: Practicando ciudadania digital'
+              description_student: No toda la información es facil de compartir en
+                linea. Esta lección te ayudara a saber la diferencia entre información
+                privada y segura de compartir.
+              description_teacher: |-
+                En colaboración con Common Sense Education, esta lección ayuda a los estudiantes a pensar criticamente acerca de la información que algunos sitios solicitan o requieren. Los estudiantes aprenden la diferencia entre información privada e información personal, distinguiendo lo que es seguro compartir y lo que no.
+
+                Los estudiantes explorarán lo que significa ser responsable y respetuoso hacia las comunidades como un paso hacia aprender como ser buenos ciudadanos digitales.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
-              description_student: This lesson will guide you through making your
-                very own video game.
-              description_teacher: In this online activity, students will have the
-                opportunity to learn how to use events in Play Lab and to apply all
-                of the coding skills they've learned to create an animated game. It's
-                time to get creative and make a game in Play Lab!
+              name: Construye un juego de Play Lab
+              description_student: Esta lección te guiará a traves de hacer tu propio
+                videojuego.
+              description_teacher: En esta sesión en linea, los estudiantes tendrán
+                la oportunidad de aprender como usar eventos en Play Lab y de aplicar
+                todas las habilidades de código que han aprendido para crear un juego
+                animado. ¡Es hora de ponerse creativos y hacer un juego en Play Lab!
             'Unplugged: Binary':
               name: 'Desconectado: binario'
-              description_student: 'Learn how computers store pictures using simple
-                ideas like on and off. '
-              description_teacher: Though many people think of binary as strictly
-                zeros and ones, students will be introduced to the idea that information
-                can be represented in a variety of binary options. This lesson takes
-                that concept one step further as it illustrates how a computer can
-                store even more complex information (such as images and colors) in
-                binary, as well.
+              description_student: 'Aprende como las computadoras almacenan imagenes
+                usando ideas simples como encendido y apagado. '
+              description_teacher: Aunque muchas personas piensan que el binario es
+                estrictamente ceros y unos, nuestros cursos anteriores enseñaron a
+                los alumnos que la información puede ser representada en una variedad
+                de opciones binarias. Esta clase lleva ese concepto un paso más allá
+                que ilustra cómo una computadora también puede almacenar información
+                aún más compleja (por ejemplo, imágenes y colores) en binario.
             Artist Binary:
               name: Artista binario
-              description_student: Direct your own artist to create a binary image
-                using only commands to turn pixels on and off.
-              description_teacher: Binary is extremely important in the world of computers.
-                The majority of computers today store all sorts of information in
-                binary form. This lesson helps demonstrate how it is possible to take
-                something from real life and translate it into a series of ons and
-                offs. Students will build binary images in Artist by translating 0s
-                and 1s to offs and ons (or blacks and whites).
+              description_student: Dirige a tu propio artista a crear una imagen binaria
+                usando solo comandos para prender y apagar pixeles.
+              description_teacher: El binario es extremadamente importante en el mundo
+                de las computadoras. La mayoria de las computadoras hoy en día utilizan
+                todo tipo de información en forma binaria. Esta lección ayuda a demostrar
+                como es posible tomar algo de la vida real y traducirlo a una serie
+                de encendidos y apagados. Los estudiantes construiran iagenes binarias
+                en Artis usando 1s y 0s (o blancos y negros).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool
-                projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops,
-                they can create so many beautiful things.  This lesson will take students
-                through a series of exercises to help them create their own portfolio-ready
-                images.
+              name: Ciclos anidados con Frozen
+              description_student: "¡Más ciclos anidados! Esta vez, puedes hacer dibujos
+                INCREIBLES con ciclos anidados."
+              description_teacher: Los estudiantes crearan diseños complejos usando
+                Artist en los acertijos de hoy. Practicando ciclos anidados con nuevas
+                metas, los estudiantes verán mas usos de los ciclos en general. Este
+                conjunto de acertijos ofrece mucho más potencial para creatividad
+                con una oportunidad para que los estudiantes creen su propio diseño
+                al final de la etapa.
             Debugging in Collector:
-              name: Debugging in Collector
-              description_student: Have you ever run into problems while coding? In
-                this lesson, you will learn about the secrets of debugging. Debugging
-                is the process of finding and fixing problems in your code.
-              description_teacher: In this online activity, students will practice
-                debugging in the "collector" environment. Students will get to practice
-                reading and editing code to fix puzzles with simple algorithms, loops
-                and nested loops.
+              name: Depuración en Collector
+              description_student: "¿Alguna vez te has metido en problemas programando?
+                En esta lección, aprenderas sobre los secretos de la depuración. Depuración
+                es el proceso de encontrar y arreglar problemas en tu código."
+              description_teacher: En esta actividad en linea, los estudiantes practicarán
+                la depuración en el ambiente "collector". Los estudiantes practicarán
+                leer y editar código para resolver acertijos con algoritmos sencillos,
+                ciclos y ciclos anidados.
           title: Curso D
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: |-
-            Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\r
-            \r
-            The course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics.
+          description_audience: Edades de 7 a 11 años
+          description_short: Rápidamente repasa conceptos del Curso C, luego puedes
+            ir más allá con algoritmos, ciclos anidados, condicionales y más.
+          description: Aprende nuevos conceptos de programación incluyendo algoritmos,
+            ciclos anidados, ciclos, condicionales y eventos. Recibe una introducción
+            a la ciudadanía digital antes de crear tu propio juego o historia que
+            puede compartir.
         coursee:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmos: Tanagramas'
             Introduction:
-              name: Introducción
-              description_student: This fast-paced introduction will give you the
-                chance to practice most of the skills that you will need to solve
-                the puzzles in this course.
-              description_teacher: In this progression, students will begin with an
-                introduction (or review depending on the experience of your class)
-                of Code.org's online workspace. Students will learn the basic functionality
-                of the interface including the `Run`, `Reset`, and `Step` buttons.
-                Dragging, deleting, and connecting Blockly blocks is also introduced
-                in the beginning video. In the puzzles, students will practice their
-                sequencing and debugging skills in Maze and Artist.
+              name: Introducción a los acertijos en línea
+              description_student: Esta introducción rápida te dará la oportunidad
+                de practicar la mayoría de las habilidades que necesitas para resolver
+                los acertijos en este curso.
+              description_teacher: En esta progresión, los alumnos se iniciará con
+                una introducción (o repaso dependiendo de la experiencia de la clase)
+                del espacio de trabajo online de Code.org. Los estudiantes aprenden
+                la funcionalidad básica de la interfaz, incluyendo los botones "Ejecutar",
+                "Volver a empezar" y "Paso". Arrastrar, eliminar y conectar bloques
+                Blockly se presentan también en el video del principio. En los acertijos,
+                los estudiantes practicarán sus habilidades de secuencia y depuración
+                en Maze y Artist.
             The Power of Words:
-              name: The Power of Words
+              name: El poder de las palabras
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Envelope Variables:
               name: Variables de sobre
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
+              name: Condicionales y funciones en Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
-              description_student: Here are several games and drawings. Play with
-                each of them to get ideas for projects of your own!
-              description_teacher: "The next four lessons provide an opportunity for
-                students to put their coding skills to use in a capstone project.
-                This project will help individuals gain experience with coding and
-                produce an exemplar to share with peers and loved ones. Intended to
-                be a multi-lesson or multi-week experience, students will spend time
-                exploring brainstorming, learning about the design process, building,
-                and presenting their final work. \n\nIn the explore stage, students
-                will be able to view pre-built examples of projects in both Artist
-                and Play Lab for inspiration. Next, students will learn about the
-                design process and how to implement it in their own projects. They
-                will then be given the space to create their own project in either
-                Artist or Play Lab (this is likely the longest stage of the project).
-                Finally, students will be able to present their finished work to their
-                peers."
-            The Design Process:
-              name: The Design Process
-              description_student: Projects this big take time and plenty planning.
-                Here, you will learn about the design process that you'll use to build
-                your own creation.
-              description_teacher: Over the course of four lessons, students will
-                be building up to programming a project of their own design using
-                either Play Lab or Artist as their programming environment. In this
-                portion of the project, students will learn about the design process
-                and how to implement it in their own projects. The lesson guide for
-                all four stages of the process can be found in the first stage of
-                this project process [here](https://curriculum.code.org/csf/coursee/12/).
-            Build Your Project:
-              name: Build Your Project
-              description_student: Get those hands ready for plenty of coding! It's
-                time to start building your project.
-              description_teacher: Over the course of four lessons, students will
-                be building up to programming a project of their own design using
-                either Play Lab or Artist as their programming environment. Now the
-                students will be given their own space to create their project with
-                either Artist or Play Lab. This is likely to be the longest stage
-                of the project. The lesson guide for all four stages of the process
-                can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
-            Revise Your Project:
-              name: Revise Your Project
-            Presentation Your Project:
-              name: Presentation Your Project
-            'Algorithms: Dice Race':
-              name: 'Algorithms: Dice Race'
-              description_student: Learn how to describe a game from the computer's
-                point of view in this lesson on algorithms.
-              description_teacher: In this lesson, students will relate the concept
-                of algorithms back to real-life activities by playing the Dice Race
-                game. The goal here is to start building the skills to translate real-world
-                situations to online scenarios and vice versa.
-            Conditionals:
-              name: Condicionales
-              description_student: You will get to tell the computer what to do under
-                certain conditions in this fun and challenging series.
-              description_teacher: This lesson introduces students to `while` loops
-                and `if / else` statements. _While loops_ are loops that continue
-                to repeat commands as long as a condition is true. While loops are
-                used when the programmer doesn't know the exact number of times the
-                commands need to be repeated, but the programmer does know what condition
-                needs to be true in order for the loop to continue looping. `If /
-                Else` statements offer flexibility in programming by running entire
-                sections of code only if something is true, otherwise it runs something
-                else.
-            Private and Personal Information:
-              name: Private and Personal Information
-              description_student: The internet is fun and exciting, but it's important
-                to stay safe too. This lesson teaches you the difference between information
-                that is safe to share and information that is private.
+              name: Explora ideas de proyectos
+              description_student: Aquí hay varios juegos y dibujos. ¡Juega con cada
+                uno de ellos para obtener ideas para tus proyectos!
               description_teacher: |-
-                Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
+                Las siguientes cuatro lecciones proveen una oportunidad a los estudiantes de usar sus habilidades de programación en un proyecto climatico. Este proyecto ayudara a los individuos a adquirir experiencia con la programación y producir un ejemplo para compartir con sus seres queridos y compañeros. Se pretende que sea un proyecto multi lección o multi semana donde los estudiantes pasen tiempo haciendo lluvia de ideas, aprendiendo sobre diseño, construyendo y presentando su trabajo final.
 
-                As students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online.
+                En la etapa de exploración, los estudiantes podrán ver ejemplos de sus proyectos para inspirarse. Despues, los estudiantes aprenderán sobre el proceso de diseño y como implementarlo en sus propios proyectos. Luego tendran el espacio para crear su propio proyecto en Artist o Play Lab (esta será la parte más larga del proyecto). Los estudiantes mejorarán sus proyectos despus de probarlos y pensar. Finalmente, los estuiantes presentarán su trabajo terminado a sus compañeros.
+            The Design Process:
+              name: El proceso de diseño
+              description_student: Los proyectos de este tamaño toman tiempo y mucha
+                planeación. Aquí, aprenderas sobre el proceso de diseño que usaras
+                para construir algo propio.
+              description_teacher: Durante cuatro lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes aprenderan sobre el proceso de diseño y como implementarlo
+                en sus propios proyectos. La guia de lecciones que cubre las 5 etapas
+                del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Construye tu proyecto
+              description_student: Prepara esas manos para mucha programación. Es
+                tiempo de comenzar a construir tu proyecto.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. Ahora los estudiantes podrán crear
+                su propio proyecto con Artist o Play Lab. Esta será la sección más
+                larga del proyecto. La guia de lecciones que cubre las 5 etapas del
+                proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Mejora tu proyecto
+            Presentation Your Project:
+              name: Presentando tu proyecto
+            'Algorithms: Dice Race':
+              name: 'Algoritmos: Carrera de dados'
+              description_student: Aprende a describir un juego desde la perspectiva
+                de una computadora en esta lección de algoritmos.
+              description_teacher: En esta lección, los estudiantes relacionan el
+                concepto de algoritmos a actividades cotidiana jugando Dice Race.
+                El objetivo aquí es empezar a construir habilidades para traducir
+                situaciones del mundo real en escenarios en linea y viceversa.
+            Conditionals:
+              name: Condicionales en Farmer
+              description_student: Podrás decirle a la computadora que hacer bajo
+                ciertas condiciones en en esta divertida y retadora serie.
+              description_teacher: Esta lección introduce a los estudiantes a los
+                ciclos 'mientras' y condicionales. _While loops_ son ciclos que repiten
+                comandos mientras una condición sea cierta. Los ciclos mientras son
+                usados cuando el programador no conoce el número exacto de veces que
+                los comandos deben ser repetidos, pero el programador sabe la condición
+                que debe ser cierta para que el ciclo continue. Las condicionales
+                ofrecen flexibilidad en programación ejecutando código solo si algo
+                es cierto, de otra manera ejecuta otra cosa.
+            Private and Personal Information:
+              name: 'Ciudadanía digital: Información privada y personal'
+              description_student: Internet es divertida y emocionante, pero es importante
+                mantenerse seguro también. Esta lección te enseña la diferencia entre
+                información que es segura de compartir e información privada.
+              description_teacher: |-
+                Desarrollada por Common Sense Education, esta leccíón es sobre la diferencia entre información que es segura compartir e información que no lo es.
+
+                Confome un usuario visita sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los empodera a protegerse a sí mismo y sus familias del robo de identidad. En esta lección, los estudiantes aprenden a pensar criticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, así como como distinguir lo que es seguro de lo que no lo es.
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
               description_student: Siente la fuerza cuando construyes tu propio juego
-                de la Guerra de las Galaxias en esta lección.
+                de Star Wars en esta lección.
               description_teacher: En esta lección, los estudiantes pondrán en práctica
-                utilizando eventos para construir un juego que pueden compartir en
-                línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes
-                serán guiados a través de eventos, luego le dadas espacio para crear
-                su propio juego.
+                eventos para construir un juego que pueden compartir en línea. Con
+                R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados
+                a través de eventos, luego podrán crear su propio juego.
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
-              description_student: Even rockstars need programming skills. This lesson
-                will teach you about functions using lyrics from songs.
-              description_teacher: One of the most magnificent structures in the computer
-                science world is the function. Functions (sometimes called procedures)
-                are mini programs that you can use over and over inside of your bigger
-                program. This lesson will help students intuitively understand why
-                combining chunks of code into functions can be such a helpful practice.
+              name: 'Funciones: composición'
+              description_student: Incluso los rockstars necesita conocimientos de
+                programación. Esta lección le enseñará acerca de las funciones utilizando
+                Letras de canciones.
+              description_teacher: Una de las estructuras más magníficas en el mundo
+                de las ciencias de la computación es la función. Las Funciones (a
+                veces llamadas procedimientos) son mini programas que puedes utilizar
+                una y otra vez dentro de tu programa más grande. Esta clase ayudará
+                a los alumnos a entender intuitivamente por qué la combinación de
+                partes de código en funciones es una práctica tan útil.
             Functions in Artist:
-              name: Functions in Artist
-              description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be introduced to using functions
-                on Code.org. Magnificent images will be created and modified with
-                functions in Artist. For more complicated patterns, students will
-                learn about nesting functions by calling one function from inside
-                another.
+              name: Funciones de artista
+              description_student: "¡Haz dibujos complejos más fácilmente con funciones!"
+              description_teacher: Los estudiantes conoceran las funciones en Code.org.
+                Magníficas imágenes serán creadas y modificadas con funciones de Artist.
+                Para patrones más complicados, los estudiantes aprenderán sobre anidar
+                funciones llamando a una función desde dentro de otra.
             Functions in Bee:
-              name: Functions in Bee
-              description_student: Don't write too much code to gather all of the
-                nectar and honey. Use functions instead!
-              description_teacher: In the second round of practice with online functions,
-                students will navigate complex paths, collect plenty of nectar, and
-                make lots of honey.
+              name: Funciones en Bee
+              description_student: No escribas demasiado código para recoger todo
+                el néctar y miel. ¡Utiliza funciones en su lugar!
+              description_teacher: En la segunda ronda de prácticas con funciones
+                en línea, los estudiantes navegan rutas complejas, recogen gran cantidad
+                de néctar y hacen un montón de miel.
             Functions in Farmer:
-              name: Functions in Farmer
-              description_student: Functions will save you lots of work as you help
-                the farmer with her harvest!
-              description_teacher: Students have practiced creating impressive designs
-                in Artist and navigating mazes in Bee, but today they will use functions
-                to harvest crops in Farmer. This lesson will push students to use
-                functions in the new ways by combining them with `while` loops and
-                `if / else` statements.
+              name: Funciones en Farmer
+              description_student: "¡Las funciones te ahorrarán mucho trabajo mientras
+                ayudas a los agricultores con su cosecha!"
+              description_teacher: Los estudiantes han practicado crear diseños impresionantes
+                en artista y navegar por laberintos en Bee, pero hoy se utilizan funciones
+                para cosechar cultivos en granjero. Esta lección hará a los alumnos
+                utilizar las funciones de nuevas manera, combinando ciclos y condicionales.
             Determine the Concept:
-              name: Determine the Concept
-              description_student: "We aren't giving away any secrets! \nThis lesson
-                could use any of the skills you've learned so far."
-              description_teacher: This lesson brings together concepts from the previous
-                lessons and gives students a chance to think critically about how
-                they would solve each problem, but without telling them which concept
-                to apply. Students will review basic algorithms, debugging, `repeat`
-                loops, conditionals, `while` loops, and functions.
+              name: Determinar el concepto
+              description_student: "¡No estamos regalando secretos! Esta lección podría
+                utilizar cualquiera de las habilidades que has aprendido hasta ahora."
+              description_teacher: Esta lección reúne conceptos de lecciones anteriores
+                y da a los estudiantes una oportunidad para pensar críticamente sobre
+                cómo resuelven cada problema, pero sin decirles que concepto aplicar.
+                Los estudiantes revisarán algoritmos básicos, depurar, condicionales
+                y ciclos.
             Build a Play Lab Game:
-              name: Build a Play Lab Game
-              description_student: Practice making games to share with your friends
-                and family.
-              description_teacher: This lesson features Play Lab, a platform where
-                students can create their own games and have interactions between
-                characters and user input. Students will work with events to create
-                keyboard controls. This set of puzzles will also loosely guide students
-                through game development, but with freedom to add their own ideas.
+              name: Construye un juego de Play Lab
+              description_student: Práctica hacer juegos para compartir con tus amigos
+                y familiares.
+              description_teacher: Esta lección presenta Play Lab, una plataforma
+                donde los estudiantes pueden crear sus propios juegos y tener interacciones
+                entre personajes y la entrada del usuario. Los estudiantes trabajarán
+                con eventos para crear controles de teclado. Este conjunto de acertijos
+                también guiará a los estudiantes a través del desarrollo de un juego,
+                pero con libertad de agregar sus propias ideas.
             Present Your Project:
-              name: Present Your Project
-              description_student: Get ready to show off! It's time to present your
-                finished project to your peers.
-              description_teacher: Over the course of four lessons, students will
-                be building up to programming a project of their own design using
-                either Play Lab or Artist as their programming environment. Finally,
-                students will be able to present their finished work to their peers
-                or share with their loved ones with a special link. The lesson guide
-                for all four stages of the process can be found in the first stage
-                of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              name: Presenta tu proyecto
+              description_student: "¡Prepárate para lucir! Es el momento de presentar
+                tu proyecto terminado a tus compañeros."
+              description_teacher: Durante cuatro lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes presentarán sus proyectos terminados a sus compañeros
+                o los compartián con sus seres queridos con un vinculo especial. La
+                guia de lecciones que cubre las 5 etapas del proceso puede encontrarse
+                al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             Internet:
-              name: Internet
-              description_student: Ever wondered how information travels across the
-                internet? It's not magic! This lesson will teach you the basics of
-                how the internet works.
-              description_teacher: Even though many people use the internet daily,
-                not very many know how it works. In this lesson, students will pretend
-                to flow through the internet, all the while learning about connections,
-                URLs, IP Addresses, and the DNS.
+              name: 'Más allá de programación: Internet'
+              description_student: "¿Alguna vez te preguntaste cómo viaja la información
+                a través de internet? ¡No es magia! Esta lección te enseñará los conceptos
+                básicos de cómo funciona internet."
+              description_teacher: A pesar de que muchas personas utilizan internet
+                todos los días, no muchos saben cómo funciona. En esta lección, los
+                estudiantes viajaran a través de internet, todo el tiempo aprendiendo
+                acerca de las conexiones, URLs, direcciones IP y los DNS.
             Crowdsourcing:
-              name: Colaboración abierta
-              description_student: This lesson will teach you about crowdsourcing,
-                the process of building a project with a team.
-              description_teacher: In computer science, we face some big, daunting
-                problems. Challenges such as finding large prime numbers or sequencing
-                DNA are almost impossible to do as an individual. Adding the power
-                of others makes these tasks manageable. This lesson will show your
-                students how helpful teamwork can be in the industry of computer science.
+              name: 'Más allá de la programación: Crowdsourcing'
+              description_student: Esta lección le enseñará sobre crowdsourcing, el
+                proceso de construcción de un proyecto con un equipo.
+              description_teacher: En Ciencias de la computación, nos enfrentamos
+                a algunos problemas enormes. Retos como encontrar números primos grandes
+                o secuenciar el ADN son casi imposibles de hacer como un individuo.
+                Sumar la capacidad de otros hace que estas tareas sean manejables.
+                Esta lección le mostrará a sus estudiantes lo útil que el trabajo
+                en equipo puede ser en la industria de las ciencias de la computación.
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: Depuración con Scrat
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Ciclos: Mis amigos roboticos'
             Loops in Artist:
-              name: Loops in Artist
+              name: Ciclos en Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Ciclos anidados en Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Ciclos anidados con Frozen
             Nested Loops:
               name: Bucles anidados
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Funciones en Harvester
           title: Curso E
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins
-            with a brief review of concepts previously taught in courses C and D.
-            This introduction is intended to inspire beginners and remind the experts
-            of the wonders of computer science. Students will practice coding with
-            algorithms, loops, conditionals, and events before they are introduced
-            to functions. At the end of the course, students will have the opportunity
-            to create a capstone project that they can proudly share with peers and
-            loved ones.
+          description_audience: Edades de 8 a 12 años
+          description_short: Cubrir rápidamente los conceptos en el curso de C y D
+            y luego ir más allá con funciones.
+          description: Empieza a programar con algoritmos, ciclos, condicionales,
+            y eventos y luego te moverás en funciones. En la segunda parte de este
+            curso, diseñarás y crearás un proyecto final que puedes compartir con
+            tus amigos y familiares.
         coursef:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
-              description_student: Here you will learn about algorithms using puzzles
-                called tangrams!
-              description_teacher: This lesson shows us something important about
-                algorithms. As long as you keep an algorithm simple, there are lots
-                of ways to use it. However, if you want to make sure everyone produces
-                the same outcome, then your algorithm needs more detail. Students
-                will learn the difference between a detailed and general algorithm
-                while playing with tangrams.
+              name: 'Algoritmos: Tanagramas'
+              description_student: "¡Aquí usted aprenderá acerca de algoritmos usando
+                acertijos llamados Tangramas!"
+              description_teacher: Esta lección nos muestra algo importante acerca
+                de los algoritmos. Siempre y cuando mantengas un algoritmo simple,
+                hay muchas maneras de usarlo. Sin embargo, si quieres asegurarte de
+                que todos producen el mismo resultado, el algoritmo necesita más detalles.
+                Los estudiantes aprenderán la diferencia entre un algoritmo detallado
+                y general jugando con tanagramas.
             Introduction:
-              name: Introducción
-              description_student: This lesson will give you a brief introduction
-                to some of the amazing things you will learn in this course!
-              description_teacher: 'In this lesson, students will be introduced to
-                sequences, loops, and nested loops to prepare them for more complicated
-                concepts in the later part of the course. This "ramp up" lesson equalizes
-                the playing field between the experts and the beginners in your class. '
+              name: Introducción a los acertijos en línea
+              description_student: "¡Esta lección te dará una breve introducción a
+                algunas de las cosas asombrosas que aprenderás en este curso!"
+              description_teacher: 'En esta lección, los estudiantes conoceran secuencias,
+                ciclos y ciclos anidados para prepararlos para los conceptos más complicados
+                en la parte posterior del curso. Esta lección de "rampa para arriba"
+                iguala el terreno de juego entre los expertos y los principiantes
+                en la clase. '
             The Power of Words:
-              name: The Power of Words
-              description_student: Bullying is never okay. This lesson will teach
-                you about what is and isn't okay to say online.
-              description_teacher: "Students consider that while they are enjoying
-                their favorite websites they may encounter messages from other kids
-                that can make them feel angry, hurt, sad, or fearful. They explore
-                ways to handle cyberbullying and how to respond in the face of upsetting
-                language online.\n\nStudents discuss all the ways they use technology
-                for communication and explore the similarities and differences between
-                in-person and online communication. Students then brainstorm ways
-                to respond to cyberbullying. "
+              name: 'Ciudadanía digital: El poder de las palabras'
+              description_student: La intimidación no es aceptable. Esta lección le
+                enseñará acerca de lo que es y no es correcto decir en línea.
+              description_teacher: "Los estudiantes consideran que mientras que ellos
+                están disfrutando de su sitios web favoritos puede encontrar mensajes
+                de otros niños que pueden hacerles sentir enojados, heridos, tristes
+                o temerosos. Exploran formas de manejar la intimidación por internet
+                y cómo responder ante lenguaje perturbador en linea. \n\nLos estudiantes
+                discuten todas las formas que utilizan la tecnología para la comunicación
+                y exploran las similitudes y diferencias entre comunicación en persona
+                y en línea. Los estudiantes entonces piensan en maneras de responder
+                a la intimidación por el Internet. "
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
-              description_student: Think of your favorite video game. Ever wondered
-                how it was made? In these puzzles you will develop a video game of
-                your own with friends from Ice Age!
-              description_teacher: In this lesson, students are guided through a story
-                featuring characters from Ice Age. Students will work with events
-                and loops to make characters move on the screen, and will get the
-                chance to create their own game or story after the guided levels.
+              description_student: Piensa en tu videojuego favorito. ¿Te has preguntado
+                alguna vez cómo se hizo? ¡En estos acertijos desarrollarás un videojuego
+                propio con amigos de Ice Age!
+              description_teacher: En esta lección, los estudiantes son guiados a
+                través de una historia con los personajes de Ice Age. Los alumnos
+                trabajarán con eventos y ciclos para mover personajes en la pantalla
+                y tienen la oportunidad de crear su propio juego o historia después
+                de los niveles guíados.
             Envelope Variables:
-              name: Variables de sobre
-              description_student: 'Envelopes and variables have something in common:
-                both can hold valuable things. Here you will learn what variables
-                are and the awesome things they can do.'
-              description_teacher: Variables are used as placeholders for values such
-                as numbers or words. Variables allow for a lot of freedom in programming.
-                Instead of having to type out a phrase many times or remember an obscure
-                number, computer scientists can use variables to reference them. This
-                lesson helps to explain what variables are and how we can use them
-                in many different ways. The idea of variables isn't an easy concept
-                to grasp, so we recommend allowing plenty of time for discussion at
-                the end of the lesson.
+              name: 'Variables: Variables de Sobre'
+              description_student: 'Los sobres y las variables tienen algo en común:
+                ambas pueden contener cosas valiosas. Aprenderás qué son las vairables
+                y lo que pueden hacer.'
+              description_teacher: Las variables son usadas como objetos temporales
+                para valores como números o palabras. Las variables permiten mucha
+                libertad en programación. En lugar de tener que escribir una frase
+                muchas veces o recordar un numero, los cientificos de la computación
+                pueden usar variables para hacer referencia a ellos. Esta lección
+                ayuda a explicar qué son las variables y como podemos usarlas de distintas
+                formas. La idea de una variable puede no ser facil de comprender,
+                así que recomendamos permitir mucho tiemo para la discusión al final
+                de la lección.
             Variables in Artist:
-              name: Variables in Artist
-              description_student: Don't forget to bring creativity to class! In these
-                puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation
-                of repetitive designs using variables in the Artist environment. Students
-                will learn how variables can be used to make code easier to write
-                and easier to read. After guided puzzles, students will end in a freeplay
-                level to show what they have learned and create their own designs.
+              name: Variables en Artist
+              description_student: No olvides traer tu creatividad. En estos acertijos,
+                harás dibujos fantasticos usando variables.
+              description_teacher: En esta lección, los estudiantes explorarán la
+                creación de diseños repetitivos usando variables en el ambiente Artist.
+                Los estudiantes aprenderán como las variables son usadas para hacer
+                el codigo más facil de leer. Despues de lecciones guiadas, los estudiantesterminarán
+                en un nivel libre para demostrar lo que han aprendido y crear sus
+                propios diseños.
             Variables in Play Lab:
-              name: Variables in Play Lab
-              description_student: Soon you will learn about making characters interact
-                in a game using variables!
-              description_teacher: Students will get further practice with variables
-                in this lesson by creating scenes in Play Lab. Students will work
-                with user input to set the values of their variables, then get space
-                to create their own mini-project with variables.
+              name: Variables en Play Lab
+              description_student: "¡Pronto aprenderas sobre hacer que los personajes
+                interactuén en un juego usando variables!"
+              description_teacher: Los estudiantes obtendrán más practica con variables
+                en esta lección creando escenas en Play Lab. Los estudiantes trabajarán
+                con entradas del usuario para establecer los valores de sus variables,
+                luego tendran esacio para crear sus propios mini proyectos con variables.
             For Loop Fun:
-              name: Diversión con bucles Para
-              description_student: You're going to have loads of fun learning about
-                `for` loops!
-              description_teacher: 'We know that loops allow us to do things over
-                and over again, but now we’re going to learn how to use loops that
-                have extra structures built right in. These new structures will allow
-                students to create code that is more powerful and dynamic. '
+              name: 'Ciclos: Diversión con ciclos'
+              description_student: "¡Vas a tener montones de diversión aprendiendo
+                acerca de ciclos!"
+              description_teacher: 'Sabemos que los ciclos nos permiten hacer cosas
+                una y otra vez, pero ahora vamos a aprender cómo usar ciclos con estructuras
+                adicionales. Estas nuevas estructuras permitirán a los alumnos crear
+                código más potente y dinámico. '
             For Loops in Bee:
-              name: For Loops in Bee
-              description_student: Buzz buzz. In these puzzles you will be guiding
-                a bee to nectar and honey using `for` loops!
-              description_teacher: Featuring Bee, this lesson focuses on for loops
-                and using an incrementing variable to solve more complicated puzzles.
-                Students will begin by reviewing loops from previous lessons, then
-                walked through using for loops to more effectively solve complicated
-                problems.
+              name: Ciclos en Bee
+              description_student: "¡Buzz buzz. En estos rompecabezas guiarás una
+                abeja a néctar y miel con ciclos!"
+              description_teacher: Con la abeja, esta lección se centra en ciclos
+                y usar una variable creciente para solucionar acertijo más complicados.
+                Los estudiantes comenzarán repasando ciclos de lecciones anteriores.
             For Loops in Artist:
-              name: For Loops in Artist
-              description_student: Get ready to make your next masterpiece. Here you
-                will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice for
-                loops, this time with Artist. Students will complete puzzles combining
-                the ideas of variables, loops, and for loops to create complex designs.
-                At the end, they will have a chance to create their own art in a freeplay
-                level.
+              name: Ciclos en Artist
+              description_student: Prepárate hacer su siguiente obra maestra. Aquí
+                usarás ciclos para tomar fotos asombrosas.
+              description_teacher: En esta lección, los estudiantes siguen prácticando
+                ciclos, esta vez con Artist. Los estudiantes completarán acertijos
+                combinando las ideas de variables, ciclos y ciclos 'for'. Al final,
+                tendrán la oportunidad de crear su propio arte en un nivel de libre.
             Songwriting with Parameters:
-              name: Composicion musical con parámetros
-              description_student: You just might release the next big hit single!
-                In this lesson, you will be learning what parameters are and how they
-                make some fantastic songs!
-              description_teacher: One of the most magnificent structures in the computer
-                science world is the function. Functions (sometimes called procedures)
-                are mini programs that you can use over and over inside of your bigger
-                program. This lesson will help students intuitively understand why
-                combining chunks of code into functions is such a helpful practice,
-                and how they can use those structures even when chunks of code are
-                slightly different.
+              name: 'Funciones: Composicion musical con parámetros'
+              description_student: "¡Puede que compongas el próximo éxito!¡En esta
+                lección, aprenderás que son los parametros y como crean canciones!"
+              description_teacher: Una de las estructuras más magníficas en el mundo
+                de las ciencias de la computación es la función. Las Funciones (a
+                veces llamadas procedimientos) son mini programas que puedes utilizar
+                una y otra vez dentro de tu programa más grande. Esta clase ayudará
+                a los alumnos a entender intuitivamente por qué la combinación de
+                partes de código en funciones es una práctica tan útil.
             Conditionals and Functions in Bee:
-              name: Conditionals and Functions in Bee
-              description_student: The bee needs your help again! Here you will be
-                using functions to get nectar and make honey!
-              description_teacher: 'This lesson teaches students how to create simple
-                functions using our sophisticated “modal” function editor, preparing
-                the way for them to incorporate parameters in future lessons. '
+              name: Condicionales y funciones en Bee
+              description_student: "¡La abeja necesita de tu ayuda otra vez! Aquí
+                vas a utilizar las funciones para obtener néctar y miel!"
+              description_teacher: 'Esta lección enseña a los estudiantes cómo crear
+                funciones simples utilizando nuestra sofisticado editor "modal", preparando
+                el camino para que puedan incorporar parámetros en futuras lecciones. '
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
-              description_student: Get your programming fingers ready. In these puzzles
-                you will make impressive drawings in Artist using functions with parameters.
-              description_teacher: In this lesson, students continue working with
-                functions with and without parameters. Students will get the chance
-                to create their own drawings with and without parameters, before modifying
-                functions in a freeplay level.
+              name: Funciones con parámetros en Artist
+              description_student: Prepara tu dedos para laprogramación. En estos
+                acertijos se hacen dibujos impresionantes en Artist utilizando funciones
+                con parámetros.
+              description_teacher: En esta lección, los estudiantes continuan trabajando
+                con funciones con y sin parametros. Los estudiantes tendrán la oportunidad
+                de crear sus propios dibujos con y sin parametros, antes de modificar
+                funciones en un nivel libre.
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
-              description_student: You've had a little practice using functions with
-                parameters. This lesson will continue your practice with Bee!
-              description_teacher: This lesson features the bee environment, and continues
-                along the concept of functions with parameters from the previous Artist
-                stage. Students will practice writing and using functions to follow
-                complex paths and collect patterns of nectar and honey.
+              name: Funciones con parámetros en Bee
+              description_student: Has tenido poca practica usando funciones con parametros.
+                ¡Esta lección continua tu practica con Bee!
+              description_teacher: Esta lección presenta el ambiente de abeja, y continua
+                con el concepto de funciones con parametros del escenario Artist.
+                Los estudiantes practicarán el escribir y usar funciones para seguir
+                caminos complejos y recolectar patrones de nectar y miel.
             Explore Project Ideas:
-              name: Explore Project Ideas
-              description_student: Time to get some inspiration! These puzzles will
-                show you a handful of pre-built games and illustrations to help develop
-                your plan for your BIG project.
-              description_teacher: "The next five lessons provide an opportunity for
-                students to put their coding skills to use in a capstone project.
-                This project will help individuals gain experience with coding and
-                produce an exemplar to share with peers and loved ones. This is intended
-                to be a multi-lesson or multi-week project where students spend time
-                brainstorming, learning about the design process, building, and then
-                presenting their final work. \n\nIn the explore stage, students will
-                be able to view examples of projects in both Artist and Play Lab for
-                inspiration. Next, students will learn about the design process and
-                how to implement it in their own projects. They will then be given
-                the space to create their own project in either Artist or Play Lab
-                (this is most likely the longest stage of the project). Students will
-                then revise their projects, after testing and extra thought. Finally,
-                students will be able to present their finished work to their peers."
+              name: Explora ideas de proyectos
+              description_student: "¡Hora de obtener inspiración! Estos acertijos
+                te mostrarán algunos juego pre hechos e ilustraciones para ayudarte
+                a desarrollar un plan para tu GRAN proyecto."
+              description_teacher: |-
+                Las siguientes cinco lecciones proveen una oportunidad a los estudiantes de usar sus habilidades de programación en un proyecto climatico. Este proyecto ayudara a los individuos a adquirir experiencia con la programación y producir un ejemplo para compartir con sus seres queridos y compañeros. Se pretende que sea un proyecto multi lección o multi semana donde los estudiantes pasen tiempo haciendo lluvia de ideas, aprendiendo sobre diseño, construyendo y presentando su trabajo final.
+
+                En la etapa de exploración, los estudiantes podrán ver ejemplos de sus proyectos para inspirarse. Despues, los estudiantes aprenderán sobre el proceso de diseño y como implementarlo en sus propios proyectos. Luego tendran el espacio para crear su propio proyecto en Artist o Play Lab (esta será la parte más larga del proyecto). Los estudiantes mejorarán sus proyectos despus de probarlos y pensar. Finalmente, los estuiantes presentarán su trabajo terminado a sus compañeros.
             The Design Process:
-              name: The Design Process
-              description_student: Projects this big take time and plenty planning.
-                Here, you will learn about the design process that you'll use to build
-                your own creation.
-              description_teacher: Over the course of five lessons, students will
-                be building up to building a project of their own design using either
-                Play Lab or Artist as their programming environment. In this portion
-                of the project, students will learn about the design process and how
-                to implement it in their own projects. The lesson guide overviewing
-                all five stages of the process can be found in the beginning of the
-                project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              name: El proceso de diseño
+              description_student: Los proyectos de este tamaño toman tiempo y mucha
+                planeación. Aquí, aprenderas sobre el proceso de diseño que usaras
+                para construir algo propio.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes aprenderan sobre el proceso de diseño y como implementarlo
+                en sus propios proyectos. La guia de lecciones que cubre las 5 etapas
+                del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
-              name: Build Your Project
-              description_student: Finally you can start building your project!
-              description_teacher: Over the course of five lessons, students will
-                be building up to building a project of their own design using either
-                Play Lab or Artist as their programming environment. Now the students
-                will be given their own space to create their project with either
-                Artist or Play Lab. This will be the longest portion of the project.
-                The lesson guide overviewing all five stages of the process can be
-                found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              name: Construye tu proyecto
+              description_student: "¡Finalmente puedes empezar a construir tu proyecto!"
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. La guia de lecciones que cubre las
+                5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
-              name: Revise Your Project
-              description_student: Rome wasn't built in a day and your project shouldn't
-                be, either. Take time to edit and revise your project to make it the
-                best it can be.
-              description_teacher: Over the course of five lessons, students will
-                be building up to building a project of their own design using either
-                Play Lab or Artist as their programming environment. Now that the
-                projects are built, students are given the opportunity to get feedback
-                from peers and revise their projects. The lesson guide overviewing
-                all five stages of the process can be found in the beginning of the
-                project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              name: Mejora tu proyecto
+              description_student: Roma no se construyó en un dia y tu proyecto no
+                debería, tampoco. Tómate el tiempo de editar y mejorar tu proyecto
+                para que sea la mejor versión de sí.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes tendrán la oportunidad de obtener retroalimentación de
+                compañeros y mejorar sus proyectos. La guia de lecciones que cubre
+                las 5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Presentando tu proyecto
             Present Your Project:
-              name: Present Your Project
-              description_student: Time to show your work! Here you will be presenting
-                your awesome project to your peers.
-              description_teacher: Over the course of five lessons, students will
-                be building up to building a project of their own design using either
-                Play Lab or Artist as their programming environment. Finally, students
-                will be able to present their finished work to their peers or share
-                with their loved ones with a special link. The lesson guide overviewing
-                all five stages of the process can be found in the beginning of the
-                project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              name: Presenta tu proyecto
+              description_student: "¡Hora de mostrar tu trabajo! Aquí presentarás
+                tu proyecto a tus compañeros."
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes presentarán sus proyectos terminados a sus compañeros
+                lo los compartián con sus seres queridos con un vinculo especial.
+                La guia de lecciones que cubre las 5 etapas del proceso puede encontrarse
+                al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals
-                in the world of Minecraft.
-              description_teacher: This lesson gives students a chance to learn and
-                practice conditionals. It features characters and settings from Minecraft,
-                and students will complete tasks such as mining and building structures
-                using their programs.
+              name: Condicionales en Minecraft
+              description_student: "¡Evita la lava! Aquí aprenderás sobre condicionales
+                en el mundo de Minecraft."
+              description_teacher: Esta lección da a los estudiantes la oportunidad
+                de aprender y practicar condicionales. Presenta personajes y ajustes
+                de Minecraft, y los estudiantes completarán tareas como mineria y
+                construcción usando sus programas.
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: Depuración con Scrat
             Programming in Artist:
               name: Programación en Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Ciclos: Mis amigos roboticos'
             Loops in Artist:
-              name: Loops in Artist
+              name: Ciclos en Artist
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Ciclos anidados en Bee/Zombie
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: Ciclos anidados con Frozen
           title: Curso F
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: |-
-            The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\r
-            \r
-            In these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family.
+          description_audience: 9 a 13 años
+          description_short: Aprende todos los conceptos de Fundamentos de ciencias
+            de la computación y crea tu propio arte, historia o juego.
+          description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
+            y condicionales. Investiga distintas técnicas de solución de problemas
+            y discute impactos sociales de la computación y el internet. En esta segunda
+            parte del curso, diseña y crea un proyecto climático que puedes compartir
+            con amigos y familia.
         csdnovice:
           stages:
             Tuesday:
@@ -8019,9 +7984,9 @@
             Introduction:
               name: Introducción
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Programación: programación papel milimetrado'
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Depuración: Programación en relevos'
             Debugging in Collector:
               name: Debugging in Collector
             'Loops: My Loopy Robotic Friends':
@@ -8029,7 +7994,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Ciclos anidados en Artist
             Internet:
               name: Internet
             Digital Citizenship:
@@ -8039,57 +8004,57 @@
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
             Build a Flappy Game:
               name: Construye un juego Flappy
             Conditionals with Cards:
               name: Condicionales con tarjetas
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: Condicionales y ciclos en Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Condicionales en Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
               name: Variables de sobre
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Ciclos anidados con Frozen
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Más allá de programación: Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: 'Ciudadania digital: Practicando ciudadania digital'
             'Common Sense Education: Screen Out the Mean':
               name: 'Ciudadania digital: Bloquea lo negativo'
             Events in Star Wars:
@@ -8099,19 +8064,19 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: Condicionales y ciclos en Maze
             'Variables: Envelope Variables':
-              name: 'Variables: Envelope Variables'
+              name: 'Variables: Variables de Sobre'
             'For Loops: For Loop Fun':
-              name: 'For Loops: For Loop Fun'
+              name: 'Ciclos: Diversión con ciclos'
             'Functions: Songwriting with Parameters':
-              name: 'Functions: Songwriting with Parameters'
+              name: 'Funciones: Composicion musical con parámetros'
             Building a Foundation:
               name: Construir una base
             Nested Loops:
               name: Bucles anidados
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Condicionales y ciclos en Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -8320,45 +8285,45 @@
             Intro to Conditionals with Farmer:
               name: Intro to Conditionals with Farmer
             'Algorithms: Dice Race':
-              name: 'Algorithms: Dice Race'
+              name: 'Algoritmos: Carrera de dados'
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
               name: Condicionales
             Private and Personal Information:
-              name: Private and Personal Information
+              name: Información privada y personal
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: 'Funciones: composición'
             Functions in Artist:
-              name: Functions in Artist
+              name: Funciones de artista
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Determine the Concept:
-              name: Determine the Concept
+              name: Determinar el concepto
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Ciclos anidados en Bee
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
           title: Course E & F Ramp
           description_audience: ''
           description_short: ''
@@ -8366,35 +8331,35 @@
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritmos: programación papel milimetrado'
             Introduction:
               name: Introducción
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
             Nested Loops:
               name: Bucles anidados
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Ciclos anidados en Artist
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
+              name: Ciclos anidados en Artist
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Algoritmos: Programación de relevos'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Depuración en Collector
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: Condicionales en Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: Condicionales y ciclos en Maze
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Digital Citizenship:
               name: Ciudadanía digital
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             'Unplugged: Binary':
               name: 'Desconectado: binario'
             Artist Binary:
@@ -8404,7 +8369,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Ciclos anidados en Bee
             Loops in Ice Age:
               name: Ciclos en Ice Age
           title: New Course D Script
@@ -8426,13 +8391,13 @@
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritmos: programación papel milimetrado'
             Introduction:
               name: Introducción
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Algoritmos: Programación de relevos'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Depuración en Collector
             'Loops: My Loopy Robotic Friends':
               name: 'Ciclos: Mis amigos roboticos'
             Loops in Artist:
@@ -8452,47 +8417,47 @@
             Events with Flappy:
               name: Events with Flappy
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Condicionales en Minecraft
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             'Variables: Envelope Variables':
-              name: 'Variables: Envelope Variables'
+              name: 'Variables: Variables de Sobre'
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             'For Loops: For Loop Fun':
-              name: 'For Loops: For Loop Fun'
+              name: 'Ciclos: Diversión con ciclos'
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             'Functions: Songwriting with Parameters':
-              name: 'Functions: Songwriting with Parameters'
+              name: 'Funciones: Composicion musical con parámetros'
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
@@ -8524,7 +8489,7 @@
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
@@ -8540,35 +8505,35 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
-              name: 'Algorithms: Dice Race'
+              name: 'Algoritmos: Carrera de dados'
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
               name: Condicionales
             Private and Personal Information:
-              name: Private and Personal Information
+              name: Información privada y personal
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: 'Funciones: composición'
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions in Artist:
-              name: Functions in Artist
+              name: Funciones de artista
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Determine the Concept:
-              name: Determine the Concept
+              name: Determinar el concepto
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -8582,7 +8547,7 @@
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
@@ -8598,45 +8563,45 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmos: Tanagramas'
             Course E Introduction:
               name: Course E Introduction
             The Power of Words:
-              name: The Power of Words
+              name: El poder de las palabras
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Condicionales en Minecraft
             Envelope Variables:
               name: Variables de sobre
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
           title: New Script for F
           description_audience: ''
           description_short: ''
@@ -9012,7 +8977,7 @@
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
@@ -9028,43 +8993,43 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
-              name: 'Algorithms: Dice Race'
+              name: 'Algoritmos: Carrera de dados'
             Introduction:
               name: Introducción
             Conditionals:
               name: Condicionales
             Private and Personal Information:
-              name: Private and Personal Information
+              name: Información privada y personal
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: 'Funciones: composición'
             MINECRAFT STAGE GOES HERE:
               name: MINECRAFT STAGE GOES HERE
             Functions in Artist:
-              name: Functions in Artist
+              name: Funciones de artista
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions in Farmer:
-              name: Functions in Farmer
+              name: Funciones en Farmer
             Determine the Concept:
-              name: Determine the Concept
+              name: Determinar el concepto
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
             Internet:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
             Build a Star Wars Game:
-              name: Construye un juego de la Guerra de las Galaxias
+              name: Construye un juego de Star Wars
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Funciones en Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -9074,7 +9039,7 @@
             'Programming: My Robotic Friends':
               name: 'Programación: Mis amigos robóticos'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Secuencias en Maze
             Building a Foundation:
               name: Construir una base
             Debugging with Scrat:
@@ -9090,45 +9055,45 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Tangrams':
-              name: 'Algorithms: Tangrams'
+              name: 'Algoritmos: Tanagramas'
             Introduction:
               name: Introducción
             The Power of Words:
-              name: The Power of Words
+              name: El poder de las palabras
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Condicionales en Minecraft
             Envelope Variables:
               name: Variables de sobre
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
             Songwriting with Parameters:
               name: Composicion musical con parámetros
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
           title: Course F 2018
           description_audience: ''
           description_short: ''
@@ -9938,7 +9903,7 @@
           description_audience: 'Ages: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritmos: programación papel milimetrado'
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -9950,7 +9915,7 @@
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Depuración en Collector
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
@@ -9994,7 +9959,7 @@
               description_student: ''
               description_teacher: ''
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
               description_student: ''
               description_teacher: ''
             'Conditionals: Conditionals with Cards':
@@ -10002,7 +9967,7 @@
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
               description_student: ''
               description_teacher: ''
             Conditional Loops in Maze:
@@ -10010,7 +9975,7 @@
               description_student: ''
               description_teacher: ''
             Conditionals in Minecraft:
-              name: Conditionals in Minecraft
+              name: Condicionales en Minecraft
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Farmer:
@@ -10018,65 +9983,69 @@
               description_student: ''
               description_teacher: ''
             'Variables: Envelope Variables':
-              name: 'Variables: Envelope Variables'
+              name: 'Variables: Variables de Sobre'
               description_student: ''
               description_teacher: ''
             Variables in Artist:
-              name: Variables in Artist
+              name: Variables en Artist
               description_student: ''
               description_teacher: ''
             Variables in Play Lab:
-              name: Variables in Play Lab
+              name: Variables en Play Lab
               description_student: ''
               description_teacher: ''
             'For Loops: For Loop Fun':
-              name: 'For Loops: For Loop Fun'
+              name: 'Ciclos: Diversión con ciclos'
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Ciclos en Bee
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Ciclos en Artist
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
-              name: 'Functions: Songwriting with Parameters'
+              name: 'Funciones: Composicion musical con parámetros'
               description_student: ''
               description_teacher: ''
             Functions in Bee:
-              name: Functions in Bee
+              name: Funciones en Bee
               description_student: ''
               description_teacher: ''
             Functions with Parameters in Artist:
-              name: Functions with Parameters in Artist
+              name: Funciones con parámetros en Artist
               description_student: ''
               description_teacher: ''
             Functions with Parameters in Bee:
-              name: Functions with Parameters in Bee
+              name: Funciones con parámetros en Bee
               description_student: ''
               description_teacher: ''
             Explore Project Ideas:
-              name: Explore Project Ideas
+              name: Explora ideas de proyectos
               description_student: ''
               description_teacher: ''
             The Design Process:
-              name: The Design Process
+              name: El proceso de diseño
               description_student: ''
               description_teacher: ''
             Build Your Project:
-              name: Build Your Project
+              name: Construye tu proyecto
               description_student: ''
               description_teacher: ''
             Revise Your Project:
-              name: Revise Your Project
+              name: Mejora tu proyecto
               description_student: ''
               description_teacher: ''
             Present Your Project:
-              name: Present Your Project
+              name: Presenta tu proyecto
               description_student: ''
               description_teacher: ''
+            Conditionals in Bee:
+              name: Condicionales en Bee
+            Until Loops in Maze:
+              name: Until Loops in Maze
         courseb-2018:
           title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet.
@@ -10153,7 +10122,7 @@
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritmos: programación papel milimetrado'
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10165,11 +10134,11 @@
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Depuración en Collector
               description_student: ''
               description_teacher: ''
             Events in Bounce:
-              name: Events in Bounce
+              name: Eventos en Bounce
               description_student: ''
               description_teacher: ''
             Loops in Artist:
@@ -10177,15 +10146,15 @@
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Ciclos anidados en Bee
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Ciclos anidados en Artist
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: Ciclos "mientras" en Farmer
               description_student: ''
               description_teacher: ''
             Conditionals with Cards:
@@ -10193,11 +10162,11 @@
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: Condicionales en Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: Condicionales y ciclos en Maze
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Farmer:
@@ -10209,7 +10178,7 @@
               description_student: ''
               description_teacher: ''
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Construye un juego de Play Lab
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
@@ -10223,7 +10192,11 @@
             Loops in Ice Age:
               name: Ciclos en Ice Age
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Ciclos anidados con Frozen
+            Until Loops in Maze:
+              name: Until Loops in Maze
+            Conditionals in Maze:
+              name: Condicionales en Maze
         jr-test:
           stages:
             Programming with Behaviors:
@@ -10395,6 +10368,8 @@
               name: Pulseras binarias
               description_student: ''
               description_teacher: ''
+            Looking Ahead:
+              name: Observando hacia el futuro
         csd6-2018:
           title: CSD Unit 6 - Physical Computing
           description: Unit 6 explores the role of hardware platforms in computing
@@ -10470,5 +10445,525 @@
               description_teacher: ''
             'Project: Prototype an Innovation_':
               name: 'Project: Prototype an Innovation_'
+              description_student: ''
+              description_teacher: ''
+        coursee-2018:
+          title: Curso E
+          description: Empieza a programar con algoritmos, ciclos, condicionales,
+            y eventos y luego te moverás en funciones. En la segunda parte de este
+            curso, diseñarás y crearás un proyecto final que puedes compartir con
+            tus amigos y familiares.
+          description_short: Cubrir rápidamente los conceptos en el curso de C y D
+            y luego ir más allá con funciones.
+          description_audience: Edades de 8 a 12 años
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Secuencias en Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Construir una base
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programación en Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: Bucles anidados
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Dice Race':
+              name: 'Algoritmos: Carrera de dados'
+              description_student: Aprende a describir un juego desde la perspectiva
+                de una computadora en esta lección de algoritmos.
+              description_teacher: En esta lección, los estudiantes relacionan el
+                concepto de algoritmos a actividades cotidiana jugando Dice Race.
+                El objetivo aquí es empezar a construir habilidades para traducir
+                situaciones del mundo real en escenarios en linea y viceversa.
+            Introduction:
+              name: Introducción
+              description_student: Esta introducción rápida te dará la oportunidad
+                de practicar la mayoría de las habilidades que necesitas para resolver
+                los acertijos en este curso.
+              description_teacher: En esta progresión, los alumnos se iniciará con
+                una introducción (o repaso dependiendo de la experiencia de la clase)
+                del espacio de trabajo online de Code.org. Los estudiantes aprenden
+                la funcionalidad básica de la interfaz, incluyendo los botones "Ejecutar",
+                "Volver a empezar" y "Paso". Arrastrar, eliminar y conectar bloques
+                Blockly se presentan también en el video del principio. En los acertijos,
+                los estudiantes practicarán sus habilidades de secuencia y depuración
+                en Maze y Artist.
+            Conditionals:
+              name: Condicionales
+              description_student: Podrás decirle a la computadora que hacer bajo
+                ciertas condiciones en en esta divertida y retadora serie.
+              description_teacher: Esta lección introduce a los estudiantes a los
+                ciclos 'mientras' y condicionales. _While loops_ son ciclos que repiten
+                comandos mientras una condición sea cierta. Los ciclos mientras son
+                usados cuando el programador no conoce el número exacto de veces que
+                los comandos deben ser repetidos, pero el programador sabe la condición
+                que debe ser cierta para que el ciclo continue. Las condicionales
+                ofrecen flexibilidad en programación ejecutando código solo si algo
+                es cierto, de otra manera ejecuta otra cosa.
+            Private and Personal Information:
+              name: Información privada y personal
+              description_student: Internet es divertida y emocionante, pero es importante
+                mantenerse seguro también. Esta lección te enseña la diferencia entre
+                información que es segura de compartir e información privada.
+              description_teacher: |-
+                Desarrollada por Common Sense Education, esta leccíón es sobre la diferencia entre información que es segura compartir e información que no lo es.
+
+                Confome un usuario visita sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los empodera a protegerse a sí mismo y sus familias del robo de identidad. En esta lección, los estudiantes aprenden a pensar criticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, así como como distinguir lo que es seguro de lo que no lo es.
+            Build a Star Wars Game:
+              name: Construye un juego de Star Wars
+              description_student: Siente la fuerza cuando construyes tu propio juego
+                de Star Wars en esta lección.
+              description_teacher: En esta lección, los estudiantes pondrán en práctica
+                eventos para construir un juego que pueden compartir en línea. Con
+                R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados
+                a través de eventos, luego podrán crear su propio juego.
+            'Functions: Songwriting':
+              name: 'Funciones: composición'
+              description_student: Incluso los rockstars necesita conocimientos de
+                programación. Esta lección le enseñará acerca de las funciones utilizando
+                Letras de canciones.
+              description_teacher: Una de las estructuras más magníficas en el mundo
+                de las ciencias de la computación es la función. Las Funciones (a
+                veces llamadas procedimientos) son mini programas que puedes utilizar
+                una y otra vez dentro de tu programa más grande. Esta clase ayudará
+                a los alumnos a entender intuitivamente por qué la combinación de
+                partes de código en funciones es una práctica tan útil.
+            Functions in Artist:
+              name: Funciones de artista
+              description_student: "¡Haz dibujos complejos más fácilmente con funciones!"
+              description_teacher: Los estudiantes conoceran las funciones en Code.org.
+                Magníficas imágenes serán creadas y modificadas con funciones de Artist.
+                Para patrones más complicados, los estudiantes aprenderán sobre anidar
+                funciones llamando a una función desde dentro de otra.
+            Functions in Bee:
+              name: Funciones en Bee
+              description_student: No escribas demasiado código para recoger todo
+                el néctar y miel. ¡Utiliza funciones en su lugar!
+              description_teacher: En la segunda ronda de prácticas con funciones
+                en línea, los estudiantes navegan rutas complejas, recogen gran cantidad
+                de néctar y hacen un montón de miel.
+            Functions in Harvester:
+              name: Funciones en Harvester
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: Determinar el concepto
+              description_student: "¡No estamos regalando secretos! Esta lección podría
+                utilizar cualquiera de las habilidades que has aprendido hasta ahora."
+              description_teacher: Esta lección reúne conceptos de lecciones anteriores
+                y da a los estudiantes una oportunidad para pensar críticamente sobre
+                cómo resuelven cada problema, pero sin decirles que concepto aplicar.
+                Los estudiantes revisarán algoritmos básicos, depurar, condicionales
+                y ciclos.
+            Build a Play Lab Game:
+              name: Construye un juego de Play Lab
+              description_student: Práctica hacer juegos para compartir con tus amigos
+                y familiares.
+              description_teacher: Esta lección presenta Play Lab, una plataforma
+                donde los estudiantes pueden crear sus propios juegos y tener interacciones
+                entre personajes y la entrada del usuario. Los estudiantes trabajarán
+                con eventos para crear controles de teclado. Este conjunto de acertijos
+                también guiará a los estudiantes a través del desarrollo de un juego,
+                pero con libertad de agregar sus propias ideas.
+            Explore Project Ideas:
+              name: Explora ideas de proyectos
+              description_student: Aquí hay varios juegos y dibujos. ¡Juega con cada
+                uno de ellos para obtener ideas para tus proyectos!
+              description_teacher: |-
+                Las siguientes cuatro lecciones proveen una oportunidad a los estudiantes de usar sus habilidades de programación en un proyecto climatico. Este proyecto ayudara a los individuos a adquirir experiencia con la programación y producir un ejemplo para compartir con sus seres queridos y compañeros. Se pretende que sea un proyecto multi lección o multi semana donde los estudiantes pasen tiempo haciendo lluvia de ideas, aprendiendo sobre diseño, construyendo y presentando su trabajo final.
+
+                En la etapa de exploración, los estudiantes podrán ver ejemplos de sus proyectos para inspirarse. Despues, los estudiantes aprenderán sobre el proceso de diseño y como implementarlo en sus propios proyectos. Luego tendran el espacio para crear su propio proyecto en Artist o Play Lab (esta será la parte más larga del proyecto). Los estudiantes mejorarán sus proyectos despus de probarlos y pensar. Finalmente, los estuiantes presentarán su trabajo terminado a sus compañeros.
+            The Design Process:
+              name: El proceso de diseño
+              description_student: Los proyectos de este tamaño toman tiempo y mucha
+                planeación. Aquí, aprenderas sobre el proceso de diseño que usaras
+                para construir algo propio.
+              description_teacher: Durante cuatro lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes aprenderan sobre el proceso de diseño y como implementarlo
+                en sus propios proyectos. La guia de lecciones que cubre las 5 etapas
+                del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Construye tu proyecto
+              description_student: Prepara esas manos para mucha programación. Es
+                tiempo de comenzar a construir tu proyecto.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. Ahora los estudiantes podrán crear
+                su propio proyecto con Artist o Play Lab. Esta será la sección más
+                larga del proyecto. La guia de lecciones que cubre las 5 etapas del
+                proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Presenta tu proyecto
+              description_student: "¡Prepárate para lucir! Es el momento de presentar
+                tu proyecto terminado a tus compañeros."
+              description_teacher: Durante cuatro lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes presentarán sus proyectos terminados a sus compañeros
+                o los compartián con sus seres queridos con un vinculo especial. La
+                guia de lecciones que cubre las 5 etapas del proceso puede encontrarse
+                al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Internet:
+              name: Internet
+              description_student: "¿Alguna vez te preguntaste cómo viaja la información
+                a través de internet? ¡No es magia! Esta lección te enseñará los conceptos
+                básicos de cómo funciona internet."
+              description_teacher: A pesar de que muchas personas utilizan internet
+                todos los días, no muchos saben cómo funciona. En esta lección, los
+                estudiantes viajaran a través de internet, todo el tiempo aprendiendo
+                acerca de las conexiones, URLs, direcciones IP y los DNS.
+            Crowdsourcing:
+              name: Colaboración abierta
+              description_student: Esta lección le enseñará sobre crowdsourcing, el
+                proceso de construcción de un proyecto con un equipo.
+              description_teacher: En Ciencias de la computación, nos enfrentamos
+                a algunos problemas enormes. Retos como encontrar números primos grandes
+                o secuenciar el ADN son casi imposibles de hacer como un individuo.
+                Sumar la capacidad de otros hace que estas tareas sean manejables.
+                Esta lección le mostrará a sus estudiantes lo útil que el trabajo
+                en equipo puede ser en la industria de las ciencias de la computación.
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+        coursef-2018:
+          title: Curso F
+          description: Aprende a usar diferentes tipos de ciclos, eventos, funciones
+            y condicionales. Investiga distintas técnicas de solución de problemas
+            y discute impactos sociales de la computación y el internet. En esta segunda
+            parte del curso, diseña y crea un proyecto climático que puedes compartir
+            con amigos y familia.
+          description_short: Aprende todos los conceptos de Fundamentos de ciencias
+            de la computación y crea tu propio arte, historia o juego.
+          description_audience: 9 a 13 años
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programación: Mis amigos robóticos'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: Secuencias en Maze
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: Construir una base
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: Debugging with Scrat
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programación en Artist
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Ciclos: Mis amigos roboticos'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Tangrams':
+              name: 'Algoritmos: Tanagramas'
+              description_student: "¡Aquí usted aprenderá acerca de algoritmos usando
+                acertijos llamados Tangramas!"
+              description_teacher: Esta lección nos muestra algo importante acerca
+                de los algoritmos. Siempre y cuando mantengas un algoritmo simple,
+                hay muchas maneras de usarlo. Sin embargo, si quieres asegurarte de
+                que todos producen el mismo resultado, el algoritmo necesita más detalles.
+                Los estudiantes aprenderán la diferencia entre un algoritmo detallado
+                y general jugando con tanagramas.
+            Introduction:
+              name: Introducción
+              description_student: "¡Esta lección te dará una breve introducción a
+                algunas de las cosas asombrosas que aprenderás en este curso!"
+              description_teacher: 'En esta lección, los estudiantes conoceran secuencias,
+                ciclos y ciclos anidados para prepararlos para los conceptos más complicados
+                en la parte posterior del curso. Esta lección de "rampa para arriba"
+                iguala el terreno de juego entre los expertos y los principiantes
+                en la clase. '
+            The Power of Words:
+              name: El poder de las palabras
+              description_student: La intimidación no es aceptable. Esta lección le
+                enseñará acerca de lo que es y no es correcto decir en línea.
+              description_teacher: "Los estudiantes consideran que mientras que ellos
+                están disfrutando de su sitios web favoritos puede encontrar mensajes
+                de otros niños que pueden hacerles sentir enojados, heridos, tristes
+                o temerosos. Exploran formas de manejar la intimidación por internet
+                y cómo responder ante lenguaje perturbador en linea. \n\nLos estudiantes
+                discuten todas las formas que utilizan la tecnología para la comunicación
+                y exploran las similitudes y diferencias entre comunicación en persona
+                y en línea. Los estudiantes entonces piensan en maneras de responder
+                a la intimidación por el Internet. "
+            Ice Age Play Lab:
+              name: Laboratorio de juegos de la Edad de hielo
+              description_student: Piensa en tu videojuego favorito. ¿Te has preguntado
+                alguna vez cómo se hizo? ¡En estos acertijos desarrollarás un videojuego
+                propio con amigos de Ice Age!
+              description_teacher: En esta lección, los estudiantes son guiados a
+                través de una historia con los personajes de Ice Age. Los alumnos
+                trabajarán con eventos y ciclos para mover personajes en la pantalla
+                y tienen la oportunidad de crear su propio juego o historia después
+                de los niveles guíados.
+            Conditionals in Minecraft:
+              name: Condicionales en Minecraft
+              description_student: "¡Evita la lava! Aquí aprenderás sobre condicionales
+                en el mundo de Minecraft."
+              description_teacher: Esta lección da a los estudiantes la oportunidad
+                de aprender y practicar condicionales. Presenta personajes y ajustes
+                de Minecraft, y los estudiantes completarán tareas como mineria y
+                construcción usando sus programas.
+            Envelope Variables:
+              name: Variables de sobre
+              description_student: 'Los sobres y las variables tienen algo en común:
+                ambas pueden contener cosas valiosas. Aprenderás qué son las vairables
+                y lo que pueden hacer.'
+              description_teacher: Las variables son usadas como objetos temporales
+                para valores como números o palabras. Las variables permiten mucha
+                libertad en programación. En lugar de tener que escribir una frase
+                muchas veces o recordar un numero, los cientificos de la computación
+                pueden usar variables para hacer referencia a ellos. Esta lección
+                ayuda a explicar qué son las variables y como podemos usarlas de distintas
+                formas. La idea de una variable puede no ser facil de comprender,
+                así que recomendamos permitir mucho tiemo para la discusión al final
+                de la lección.
+            Variables in Artist:
+              name: Variables en Artist
+              description_student: No olvides traer tu creatividad. En estos acertijos,
+                harás dibujos fantasticos usando variables.
+              description_teacher: En esta lección, los estudiantes explorarán la
+                creación de diseños repetitivos usando variables en el ambiente Artist.
+                Los estudiantes aprenderán como las variables son usadas para hacer
+                el codigo más facil de leer. Despues de lecciones guiadas, los estudiantesterminarán
+                en un nivel libre para demostrar lo que han aprendido y crear sus
+                propios diseños.
+            Variables in Play Lab:
+              name: Variables en Play Lab
+              description_student: "¡Pronto aprenderas sobre hacer que los personajes
+                interactuén en un juego usando variables!"
+              description_teacher: Los estudiantes obtendrán más practica con variables
+                en esta lección creando escenas en Play Lab. Los estudiantes trabajarán
+                con entradas del usuario para establecer los valores de sus variables,
+                luego tendran esacio para crear sus propios mini proyectos con variables.
+            For Loop Fun:
+              name: Diversión con bucles Para
+              description_student: "¡Vas a tener montones de diversión aprendiendo
+                acerca de ciclos!"
+              description_teacher: 'Sabemos que los ciclos nos permiten hacer cosas
+                una y otra vez, pero ahora vamos a aprender cómo usar ciclos con estructuras
+                adicionales. Estas nuevas estructuras permitirán a los alumnos crear
+                código más potente y dinámico. '
+            For Loops in Bee:
+              name: Ciclos en Bee
+              description_student: "¡Buzz buzz. En estos rompecabezas guiarás una
+                abeja a néctar y miel con ciclos!"
+              description_teacher: Con la abeja, esta lección se centra en ciclos
+                y usar una variable creciente para solucionar acertijo más complicados.
+                Los estudiantes comenzarán repasando ciclos de lecciones anteriores.
+            For Loops in Artist:
+              name: Ciclos en Artist
+              description_student: Prepárate hacer su siguiente obra maestra. Aquí
+                usarás ciclos para tomar fotos asombrosas.
+              description_teacher: En esta lección, los estudiantes siguen prácticando
+                ciclos, esta vez con Artist. Los estudiantes completarán acertijos
+                combinando las ideas de variables, ciclos y ciclos 'for'. Al final,
+                tendrán la oportunidad de crear su propio arte en un nivel de libre.
+            Songwriting with Parameters:
+              name: Composicion musical con parámetros
+              description_student: "¡Puede que compongas el próximo éxito!¡En esta
+                lección, aprenderás que son los parametros y como crean canciones!"
+              description_teacher: Una de las estructuras más magníficas en el mundo
+                de las ciencias de la computación es la función. Las Funciones (a
+                veces llamadas procedimientos) son mini programas que puedes utilizar
+                una y otra vez dentro de tu programa más grande. Esta clase ayudará
+                a los alumnos a entender intuitivamente por qué la combinación de
+                partes de código en funciones es una práctica tan útil.
+            Functions in Bee:
+              name: Funciones en Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Funciones con parámetros en Artist
+              description_student: Prepara tu dedos para laprogramación. En estos
+                acertijos se hacen dibujos impresionantes en Artist utilizando funciones
+                con parámetros.
+              description_teacher: En esta lección, los estudiantes continuan trabajando
+                con funciones con y sin parametros. Los estudiantes tendrán la oportunidad
+                de crear sus propios dibujos con y sin parametros, antes de modificar
+                funciones en un nivel libre.
+            Functions with Parameters in Bee:
+              name: Funciones con parámetros en Bee
+              description_student: Has tenido poca practica usando funciones con parametros.
+                ¡Esta lección continua tu practica con Bee!
+              description_teacher: Esta lección presenta el ambiente de abeja, y continua
+                con el concepto de funciones con parametros del escenario Artist.
+                Los estudiantes practicarán el escribir y usar funciones para seguir
+                caminos complejos y recolectar patrones de nectar y miel.
+            Explore Project Ideas:
+              name: Explora ideas de proyectos
+              description_student: "¡Hora de obtener inspiración! Estos acertijos
+                te mostrarán algunos juego pre hechos e ilustraciones para ayudarte
+                a desarrollar un plan para tu GRAN proyecto."
+              description_teacher: |-
+                Las siguientes cinco lecciones proveen una oportunidad a los estudiantes de usar sus habilidades de programación en un proyecto climatico. Este proyecto ayudara a los individuos a adquirir experiencia con la programación y producir un ejemplo para compartir con sus seres queridos y compañeros. Se pretende que sea un proyecto multi lección o multi semana donde los estudiantes pasen tiempo haciendo lluvia de ideas, aprendiendo sobre diseño, construyendo y presentando su trabajo final.
+
+                En la etapa de exploración, los estudiantes podrán ver ejemplos de sus proyectos para inspirarse. Despues, los estudiantes aprenderán sobre el proceso de diseño y como implementarlo en sus propios proyectos. Luego tendran el espacio para crear su propio proyecto en Artist o Play Lab (esta será la parte más larga del proyecto). Los estudiantes mejorarán sus proyectos despus de probarlos y pensar. Finalmente, los estuiantes presentarán su trabajo terminado a sus compañeros.
+            The Design Process:
+              name: El proceso de diseño
+              description_student: Los proyectos de este tamaño toman tiempo y mucha
+                planeación. Aquí, aprenderas sobre el proceso de diseño que usaras
+                para construir algo propio.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes aprenderan sobre el proceso de diseño y como implementarlo
+                en sus propios proyectos. La guia de lecciones que cubre las 5 etapas
+                del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Build Your Project:
+              name: Construye tu proyecto
+              description_student: "¡Finalmente puedes empezar a construir tu proyecto!"
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. La guia de lecciones que cubre las
+                5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Revise Your Project:
+              name: Mejora tu proyecto
+              description_student: Roma no se construyó en un dia y tu proyecto no
+                debería, tampoco. Tómate el tiempo de editar y mejorar tu proyecto
+                para que sea la mejor versión de sí.
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes tendrán la oportunidad de obtener retroalimentación de
+                compañeros y mejorar sus proyectos. La guia de lecciones que cubre
+                las 5 etapas del proceso puede encontrarse al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Present Your Project:
+              name: Presenta tu proyecto
+              description_student: "¡Hora de mostrar tu trabajo! Aquí presentarás
+                tu proyecto a tus compañeros."
+              description_teacher: Durante cinco lecciones, los estudiantes construirán
+                un proyecto diseñado por ellos mismos usando ya sea Play Lab o Artist
+                como su ambiente de programación. En esta parte del proyecto, los
+                estudiantes presentarán sus proyectos terminados a sus compañeros
+                lo los compartián con sus seres queridos con un vinculo especial.
+                La guia de lecciones que cubre las 5 etapas del proceso puede encontrarse
+                al inicio del proceso [here](https://curriculum.code.org/csf/coursef/15/).
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Conditionals:
+              name: Condicionales
+        csp1-2018:
+          title: CSP Unit 1 - The Internet
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. The unit then explores
+            the structure and design of the internet and the implications of those
+            design decisions.
+          description_short: Explore the challenges about representing information
+            as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: Invenciones que son personales
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de los mensajes que son binarios con el simulador de internet
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: Sistemas de numeración
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: Números binarios
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: Envío de los números
+              description_student: ''
+              description_teacher: ''
+            Encoding and Sending Formatted Text:
+              name: Encoding and Sending Formatted Text
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: Unit 1 Chapter 1 Assessment
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: Internet
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: La necesidad para el redireccionamiento
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: Enrutadores y reiteración
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: Paquetes y realización de una internet que sea de confianza
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: La necesidad para el DNS
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP and Abstraction
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: Practice PT - The Internet and Society
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''

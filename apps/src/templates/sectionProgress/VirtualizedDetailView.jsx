@@ -150,7 +150,7 @@ class VirtualizedDetailView extends Component {
               <FontAwesome
                 icon={getIconForLevel(level)}
                 style={
-                  level.kind === "unplugged" ? progressStyles.unpluggedIcon : progressStyles.icon
+                  level.isUnplugged ? progressStyles.unpluggedIcon : progressStyles.icon
                 }
                 key={i}
               />
@@ -187,6 +187,7 @@ class VirtualizedDetailView extends Component {
         {stageIdIndex >= 0 && (
           <StudentProgressDetailCell
             studentId={student.id}
+            sectionId={section.id}
             stageId={stageIdIndex}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
           />

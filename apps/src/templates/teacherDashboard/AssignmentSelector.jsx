@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import { sectionShape, assignmentShape } from './shapes';
-import { assignmentId } from './teacherSectionsRedux';
+import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
+import { assignmentId, assignmentFamilyFields } from './teacherSectionsRedux';
 
 const styles = {
   secondary: {
@@ -15,11 +15,17 @@ const noAssignment = assignmentId(null, null);
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
+const hasAssignmentFamily = (assignmentFamilies, assignment)  => (
+  assignment && assignmentFamilies.some(assignmentFamily => (
+    assignmentFamily.assignment_family_name === assignment.assignment_family_name
+  ))
+);
+
 /**
- * Group our assignments into categories for our dropdown
+ * Group our assignment families by category for our dropdown
  */
-const groupedAssignments = assignments => (
-  _(assignments)
+const categorizeAssignmentFamilies = assignmentFamilies => (
+  _(assignmentFamilies)
     .values()
     .orderBy(['category_priority', 'category', 'position', 'name'])
     .groupBy('category')
@@ -34,19 +40,30 @@ export default class AssignmentSelector extends Component {
   static propTypes = {
     section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
-    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
   };
 
+  getVersionYears = assignmentFamilyName => {
+    if (!assignmentFamilyName) {
+      return [];
+    }
+    return _.values(this.props.assignments)
+      .filter(assignment => assignment.assignment_family_name === assignmentFamilyName)
+      .map(assignment => assignment.version_year)
+      .sort()
+      .reverse();
+  };
+
   constructor(props) {
     super(props);
 
-    const { section } = props;
+    const { section, assignments } = props;
 
-    let selectedPrimaryId, selectedSecondaryId;
+    let selectedAssignmentFamily, selectedVersionYear, selectedPrimaryId, selectedSecondaryId;
     if (!section) {
       selectedPrimaryId = noAssignment;
       selectedSecondaryId = noAssignment;
@@ -58,7 +75,15 @@ export default class AssignmentSelector extends Component {
       selectedSecondaryId = noAssignment;
     }
 
+    const primaryAssignment = assignments[selectedPrimaryId];
+    if (primaryAssignment) {
+      selectedAssignmentFamily = primaryAssignment.assignment_family_name;
+      selectedVersionYear = primaryAssignment.version_year;
+    }
+
     this.state = {
+      selectedAssignmentFamily,
+      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId,
     };
@@ -84,26 +109,38 @@ export default class AssignmentSelector extends Component {
       };
     }
   }
+  onChangeAssignmentFamily = event => {
+    const assignmentFamily = event.target.value;
+    const versionYears = this.getVersionYears(assignmentFamily);
+    this.setPrimary(assignmentFamily, versionYears[0]);
+  };
 
-  onChangePrimary = (event) => {
-    const { assignments, section } = this.props;
-    let currentSecondaryId;
-    if (!section) {
-      currentSecondaryId = noAssignment;
-    } else {
-      currentSecondaryId = assignmentId(null, section.scriptId);
+  onChangeVersionYear = event => {
+    const { selectedAssignmentFamily } = this.state;
+    const versionYear = event.target.value;
+    this.setPrimary(selectedAssignmentFamily, versionYear);
+  };
+
+  getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear) {
+    const primaryAssignment = _.values(this.props.assignments).find(assignment => (
+      assignment.assignment_family_name === selectedAssignmentFamily &&
+      assignment.version_year === selectedVersionYear
+    ));
+
+    if (!primaryAssignment) {
+      return noAssignment;
     }
 
-    let selectedPrimaryId = event.target.value;
-    const scriptAssignIds = isValidAssignment(selectedPrimaryId)
-      ? (assignments[selectedPrimaryId].scriptAssignIds || [])
-      : [];
+    return assignmentId(primaryAssignment.courseId, primaryAssignment.scriptId);
+  }
 
-    // If our current secondaryId is in this course, default to that
-    const selectedSecondaryId = scriptAssignIds.includes(currentSecondaryId) ?
-      currentSecondaryId : noAssignment;
+  setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
+    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
+    const selectedSecondaryId = noAssignment;
 
     this.setState({
+      selectedAssignmentFamily,
+      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId
     }, this.reportChange);
@@ -122,51 +159,78 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, primaryAssignmentIds, dropdownStyle, disabled } = this.props;
-    const { selectedPrimaryId, selectedSecondaryId } = this.state;
+    const { assignments, dropdownStyle, disabled } = this.props;
+    let { assignmentFamilies } = this.props;
+    const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, selectedVersionYear } = this.state;
+    const versionYears = this.getVersionYears(selectedAssignmentFamily);
 
-    let primaryAssignIds = primaryAssignmentIds;
-    if (isValidAssignment(selectedPrimaryId) &&
-        !primaryAssignmentIds.includes(selectedPrimaryId)) {
-      primaryAssignIds = [selectedPrimaryId].concat(primaryAssignIds);
-    }
-
-    const grouped = groupedAssignments(primaryAssignIds.map(id => assignments[id]));
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
+      if (!hasAssignmentFamily(assignmentFamilies, primaryAssignment)) {
+        assignmentFamilies = [_.pick(primaryAssignment, assignmentFamilyFields)]
+          .concat(assignmentFamilies);
+      }
     }
+
+    const assignmentFamiliesByCategory = categorizeAssignmentFamilies(assignmentFamilies);
 
     return (
       <div>
         <select
-          id="uitest-primary-assignment"
-          value={selectedPrimaryId}
-          onChange={this.onChangePrimary}
+          id="uitest-assignment-family"
+          value={selectedAssignmentFamily}
+          onChange={this.onChangeAssignmentFamily}
           style={dropdownStyle}
           disabled={disabled}
         >
-          <option key="default" value={noAssignment}/>
+          <option key="default"/>
           {this.props.chooseLaterOption &&
             <option key="later" value={decideLater}>
               {i18n.decideLater()}
             </option>
           }
-          {Object.keys(grouped).map((groupName, index) => (
-            <optgroup key={index} label={groupName}>
-              {grouped[groupName].map((assignment) => (
-                (assignment !== undefined) &&
+          {Object.keys(assignmentFamiliesByCategory).map((categoryName, index) => (
+            <optgroup key={index} label={categoryName}>
+              {assignmentFamiliesByCategory[categoryName].map(assignmentFamily => (
+                (assignmentFamily !== undefined) &&
                   <option
-                    key={assignment.assignId}
-                    value={assignment.assignId}
+                    key={assignmentFamily.assignment_family_name}
+                    value={assignmentFamily.assignment_family_name}
                   >
-                    {assignment.name}
+                    {assignmentFamily.name}
                   </option>
               ))}
             </optgroup>
           ))}
         </select>
+        {versionYears.length > 1 && (
+          <select
+            value={selectedVersionYear}
+            onChange={this.onChangeVersionYear}
+            style={dropdownStyle}
+            disabled={disabled}
+          >
+            {
+              versionYears.map(versionYear => (
+                <option
+                  key={versionYear}
+                  value={versionYear}
+                >
+                  {
+                    // If present, the 2018 version is the recommended one,
+                    // because this will be the recommended version of csp and
+                    // csd, which are the only two versioned courses we will
+                    // show initially. This information will need to be provided
+                    // by the server once we support versioning of scripts.
+                  }
+                  {versionYear === '2018' ? `${versionYear} (Recommended)` : versionYear}
+                </option>
+              ))
+            }
+          </select>
+        )}
         {secondaryOptions && (
           <div style={styles.secondary}>
             <div>Select current unit:</div>

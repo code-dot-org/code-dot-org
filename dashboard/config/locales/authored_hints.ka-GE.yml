@@ -78,27 +78,51 @@
         2-3_Artist_Debugging_9_b: სრულად მობრუნებისთვის თქვენ არ გიწევთ კიდევ ერთი
           ბლოკის დამატება, უბრალოდ დაუმატეთ 60 გრადუსი `შეტრიალდი მარცხნივ` ბლოკს,
           რომელიც უკვე გვაქვს!
+      2-3 Artist Functions 1 a_authored_hint:
+        2-3_Artist_Functions_1_a: ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი, რაც
+          იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება, სანამ მეორე
+          კვადრატის ხატვას დაიწყებთ.
+        2-3_Artist_Functions_1_b: სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების
+          დახატვა დაშვებულია.
       2-3 Artist Functions 1_authored_hint:
         2-3_Artist_Functions_1_a: ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი, რაც
           იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება, სანამ მეორე
           კვადრატის ხატვას დაიწყებთ.
         2-3_Artist_Functions_1_b: სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების
           დახატვა დაშვებულია.
+      2-3 Artist Functions 11 a_authored_hint:
+        2-3_Artist_Functions_11_a: თქვენ მოგიწევთ ფუნქციის საშუალებით არა მხოლოდ გვერდების
+          რაოდენობისა და სიგრძის შეცვლა, არამედ იმ კუთხის შეცვლა, რომლითაც მხატვარი
+          ბრუნდება გვერდებს შორის.
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: თქვენ მოგიწევთ ფუნქციის საშუალებით არა მხოლოდ გვერდების
           რაოდენობისა და სიგრძის შეცვლა, არამედ იმ კუთხის შეცვლა, რომლითაც მხატვარი
           ბრუნდება გვერდებს შორის.
+      2-3 Artist Functions 12 a_authored_hint:
+        2-3_Artist_Functions_12_a: სცადეთ ჯერ გაუშვათ კოდი, რათა ნახოთ, თუ რისი დამატება
+          გჭირდებათ.
       2-3 Artist Functions 12_authored_hint:
         2-3_Artist_Functions_12_a: სცადეთ ჯერ გაუშვათ კოდი, რათა ნახოთ, თუ რისი დამატება
           გჭირდებათ.
+      2-3 Artist Functions 2 a_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          თქვენი პროგრამა უნდა:
+          - იყენებდეს ფუნქციას
+          - მოძრაობდეს წინ 100 + 75 პიქსელით
+          - იყენებდეს ფუნქციას
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           თქვენი პროგრამა უნდა:
           - იყენებდეს ფუნქციას
           - მოძრაობდეს წინ 100 + 75 პიქსელით
           - იყენებდეს ფუნქციას
+      2-3 Artist Functions 3 a_authored_hint:
+        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Artist Functions 4 a_authored_hint:
+        2-3_Artist_Functions_4_a: კვადრატებს შორის მხატვარი უნდა ბრუნდებოდეს 120 გრადუსით,
+          რათა დაასრულოს ეს დიზაინი.
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: კვადრატებს შორის მხატვარი უნდა ბრუნდებოდეს 120 გრადუსით,
           რათა დაასრულოს ეს დიზაინი.
@@ -4524,6 +4548,7 @@
           to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what
           would have happened if you turned the other way?
+      conditionals_forvideo_harvester_authored_hint: []
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           კედლების და სახურავის შესაქმნელად შეგიძლიათ გამოიყენოთ ციკლები. სცადეთ სხვადასხვა ბლოკის გამეორება.
@@ -9702,14 +9727,10 @@
           რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!
       courseD_artist_3_2018_authored_hint: []
       courseD_artist_4_2018_authored_hint: []
-      courseD_artist_5_2018_authored_hint: []
-      courseD_artist_6_2018_authored_hint:
-        courseD_artist_project1a_a: |
-          ეს კიბის საფეხური იყენებს 76-გრადუსიან ბრუნს და მეორდება 4-ჯერ.
-
-          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: ეს ორნამენტები ძალიან ჰგავს კიბის საფეხურებს სხვა
-          თავსატეხებიდან, ოღონდ სხვა ზომის კუთხეა გამოყენებული.
+      courseD_artist_5_2018_authored_hint:
+        '1': If you are switching your shapes, don't forget that you will need to
+          switch their angles, too!
+      courseD_artist_6_2018_authored_hint: []
       courseD_artist_7_2018_authored_hint:
         courseD_artist_project2a_a: |
           ეს ნახატი შეიქმნა 4 კიბის ციკლისა და `მარჯვნივ 180 გრადუსით მობრუნების` ბლოკის `ორჯერ გამეორების` ბლოკში მოთავსებით.
@@ -12168,12 +12189,8 @@
         courseD_maze_until5_c: თითოეული ნაბიჯის შემდეგ ზომბმა უნდა შეამოწმოს, არის
           თუ არა გზა მარცხნივ. როგორ უნდა მოიქცეს ის, როდესაც გზას იპოვის?
       courseD_maze_until5_2018_authored_hint:
-        courseD_maze_until5_a: Don't forget to use `if path to the left` to keep the
-          zombie checking for a place to turn.
         courseD_maze_until5_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
           ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
-        courseD_maze_until5_c: თითოეული ნაბიჯის შემდეგ ზომბმა უნდა შეამოწმოს, არის
-          თუ არა გზა მარცხნივ. როგორ უნდა მოიქცეს ის, როდესაც გზას იპოვის?
       courseD_maze_until6_authored_hint:
         courseD_maze_until6_a: This time, try the `if path to the right` to keep the
           zombie on track.
@@ -12183,13 +12200,8 @@
           მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
           სანამ` ბლოკს გამოიყენებთ!
       courseD_maze_until6_2018_authored_hint:
-        courseD_maze_until6_a: This time, try the `if path to the right` to keep the
-          zombie on track.
         courseD_maze_until6_b: იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`,
           ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში.
-        courseD_maze_until6_c: მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ
-          მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
-          სანამ` ბლოკს გამოიყენებთ!
       courseD_maze_until7_authored_hint:
         courseD_maze_until7_a: You don't need your code to be any longer, just because
           the maze is!
@@ -12204,8 +12216,6 @@
         courseD_maze_until7_b: მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ
           მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება
           სანამ` ბლოკს გამოიყენებთ!
-        courseD_maze_until7_c: არ დაგავიწყდეთ მარცხნივ გზების შემოწმება, რადგან მარჯვნივ
-          მობრუნება არასწორ გზაზე დაგაყენებთ!
       courseD_maze_until8_authored_hint:
         courseD_maze_until8_a: Make sure you're using an `if/else` block to keep the
           zombie headed the right direction.
@@ -12225,9 +12235,6 @@
         courseD_maze_until8_c: არ დაგავიწყდეთ თქვენი `გამეორება სანამ` ბლოკის გამოყენება,
           მზესუმზირასთან მისასვლელად!
       courseD_maze_until9_2018_authored_hint:
-        courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
-          possible, helping you miss the paths with chompers.
-        courseD_maze_until8_b: რა მიმართულებით უნდა შებრუნდეთ, თუ წინ გზა არ არის?
         courseD_maze_until8_c: არ დაგავიწყდეთ თქვენი `გამეორება სანამ` ბლოკის გამოყენება,
           მზესუმზირასთან მისასვლელად!
       courseD_maze_until_challenge_authored_hint: []
@@ -13123,6 +13130,14 @@
           ამიტომ გამოიყენეთ `სანამ` ციკლი ყველა მათგანის შესაგროვებლად!
         courseE_bee_ramp14_c: ეს და წინა თავსატეხი თითქმის იდენტურია, უბრალოდ ბოსტნეულის
           მაგივრად თაფლი და ნექტარი გვაქვს.
+      courseE_bee_ramp14_2018_authored_hint:
+        courseE_bee_ramp14_a: ფუტკარი მოქმედებს ისევე, როგორც ფერმერი წინა თავსატეხში.
+          იმოძრავეთ გზის გასწვრივ და შეაგროვოთ ნექტარი მაშინ, როდესაც ის იქ არის (სანამ
+          ნექტარი > 0) და გააკეთეთ მთელი თაფლი.
+        courseE_bee_ramp14_b: ერთ სივრცეში ერთზე მეტი ყვავილი ან ფიჭა შეიძლება იყოს,
+          ამიტომ გამოიყენეთ `სანამ` ციკლი ყველა მათგანის შესაგროვებლად!
+        courseE_bee_ramp14_c: ეს და წინა თავსატეხი თითქმის იდენტურია, უბრალოდ ბოსტნეულის
+          მაგივრად თაფლი და ნექტარი გვაქვს.
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_a: იქიდან გამომდინარე, რომ ჩვენ არ გვაქვს გამეორების ბლოკი,
           რომელი ბლოკი უნდა გამოვიყენოთ გზაზე სამოძრაოდ?
@@ -13370,7 +13385,12 @@
         courseE_farmer_ramp12a: შეგიძლიათ თავისუფლად დაუბრუნდეთ წინა თავსატეხს, თუ
           გჭირდებათ გახსენება, თუ როგორ უნდა აიღოთ პროდუქტი მხოლოდ მაშინ, **სანამ**
           კვლავ არის დარჩენილი ასაღები პროდუქტი.
+      courseE_farmer_predict1_2018_authored_hint:
+        courseE_farmer_ramp12a: შეგიძლიათ თავისუფლად დაუბრუნდეთ წინა თავსატეხს, თუ
+          გჭირდებათ გახსენება, თუ როგორ უნდა აიღოთ პროდუქტი მხოლოდ მაშინ, **სანამ**
+          კვლავ არის დარჩენილი ასაღები პროდუქტი.
       courseE_farmer_predict2_authored_hint: []
+      courseE_farmer_predict2_2018_authored_hint: []
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: თუ გიჭირთ დანახვა, სად უნდა გამოიყენოთ ციკლები, ჯერ
           მთლიანად დაწერეთ კოდი, შემდეგ კი დააკვირდით, რა ნაწილები მეორდება.
@@ -13399,6 +13419,10 @@
         courseE_farmer_ramp12_b: თქვენ კვლავ დაგჭირდებათ `გამეორების` ციკლსი გამოყენება
           ამ ყველაფრის გარეთ, რომ უთხრათ ფერმერს, რამდენჯერ გადაადგილდეს წინ და აიღოს
           სალათი.
+      courseE_farmer_ramp12_2018_authored_hint:
+        courseE_farmer_ramp12_b: თქვენ კვლავ დაგჭირდებათ `გამეორების` ციკლსი გამოყენება
+          ამ ყველაფრის გარეთ, რომ უთხრათ ფერმერს, რამდენჯერ გადაადგილდეს წინ და აიღოს
+          სალათი.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: თქვენ კვლავ დაგჭირდებათ `გამეორების` ციკლსი გამოყენება
           ამ ყველაფრის გარეთ, რომ უთხრათ ფერმერს, რამდენჯერ გადაადგილდეს წინ და აიღოს
@@ -13408,6 +13432,14 @@
           ამ ყველაფრის გარეთ, რომ უთხრათ ფერმერს, რამდენჯერ გადაადგილდეს წინ და აიღოს
           სალათი.
       courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12b: საჭიროა, შეამოწმოთ თქვენი`თუ` დებულება 21-ჯერ, რომ
+          ამოხსნათ ეს თავსატეხი.
+        courseE_farmer_ramp12c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება
+          და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით,
+          რა ხდება.
+        courseE_farmer_ramp12d: იქ იქნება მხოლოდ სალათი, ასე რომ არ დაგჭირდებათ ცარიელ
+          ადგილებზე, სიმინდსა თუ გოგრებზე ზრუნვა.
+      courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12b: საჭიროა, შეამოწმოთ თქვენი`თუ` დებულება 21-ჯერ, რომ
           ამოხსნათ ეს თავსატეხი.
         courseE_farmer_ramp12c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება
@@ -13454,7 +13486,21 @@
           კვადრატისათვის ცალკე "თუ" დებულების დაწერა.
         courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
           writing your code step-by-step and look for patterns.
+      courseE_farmer_ramp13_2018_authored_hint:
+        courseE_farmer_ramp13_a: ერთ ადგილას მხოლოდ რომელიმე ერთი სახის მოსავალი შეიძლება
+          იყოს, ასე რომ, აუცილებლად გამოიყენეთ `სანამ` ციკლები, მათ მთლიანად ასაღებად!
+        courseE_farmer_ramp13_b: გამოიყენეთ `გამეორების` ციკლი, რათა არ მოგიწიოთ თითოეული
+          კვადრატისათვის ცალკე "თუ" დებულების დაწერა.
+        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
+          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
+        courseE_farmer_ramp15_a: გამოიყენეთ `გამეორება გოგრამდე` ბლოკი, რომ მიაღწოთ
+          გზის ბოლომდე.
+        courseE_farmer_ramp15_b: კიდევ რისი გაკეთებაა საჭირო გოგრისაკენ მიმავალ გზაზე
+          მოძრაობისას?
+        courseE_farmer_ramp15_c: გოგრისაკენ მიმავალ გზაზე დალაგებულ ყლორტებში იმალება
+          სხვადასხვა რაოდენობის სიმინდი ან სალათი, თქვენ კი ის უნდა მოიმკოთ.
+      courseE_farmer_ramp15_2018_authored_hint:
         courseE_farmer_ramp15_a: გამოიყენეთ `გამეორება გოგრამდე` ბლოკი, რომ მიაღწოთ
           გზის ბოლომდე.
         courseE_farmer_ramp15_b: კიდევ რისი გაკეთებაა საჭირო გოგრისაკენ მიმავალ გზაზე
@@ -14770,7 +14816,18 @@
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_predict1_authored_hint: []
+      courseF_artist_predict1_2018_authored_hint: []
       courseF_artist_ramp10_authored_hint:
+        courseF_artist_ramp10_a: არ დაგავიწყდეთ, თითოეული სამკუთხედის შემდეგ 60 გრადუსით
+          მობრუნება. რომელი ციკლში უნდა მოათავსოთ ეს ინსტრუქცია?
+        courseF_artist_ramp10_b: თუ თქვენი კოდი სამკუთხედისთვის <xml><block type="controls_repeat"><title
+          name="TIMES">6</title></block></xml> ციკლია, ეს დავალება გაცილებით უფრო
+          მარტივი იქნება.
+        courseF_artist_ramp10_c: |-
+          ამ დიზაინისთვის, ჯამში ექვსი სამკუთხედი უნდა დახატოთ:
+
+          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_ramp10_2018_authored_hint:
         courseF_artist_ramp10_a: არ დაგავიწყდეთ, თითოეული სამკუთხედის შემდეგ 60 გრადუსით
           მობრუნება. რომელი ციკლში უნდა მოათავსოთ ეს ინსტრუქცია?
         courseF_artist_ramp10_b: თუ თქვენი კოდი სამკუთხედისთვის <xml><block type="controls_repeat"><title
@@ -14790,7 +14847,24 @@
           ამის შემდეგ არ დაგავიწყდეთ შებრუნდეთ!
         courseF_artist_ramp8_c: თქვენი მობრუნება ასევე მოთავსდება <xml><block type="controls_repeat"><title
           name="TIMES">3</title></block></xml> ციკლში.
+      courseF_artist_ramp8_2018_authored_hint:
+        courseF_artist_ramp8_a: გვერდის დასახატად გამოიყენეთ <xml><block type="draw_move_by_constant"><title
+          name="DIR">მოძრაობაწინ</title><title name="VALUE">100</title></block></xml>
+          ბლოკი და შეცვალეთ 100 200-ზე.
+        courseF_artist_ramp8_b: |-
+          4 გვერდის დასახატად განათავსეთ <xml><block type="draw_move_by_constant"><title name="DIR">მოძრაობაწინ</title><title name="VALUE">200</title></block></xml> ბლოკი გამეორების ციკლში და დარწმუნდით, რომ ციკლი ხატავს 4-ჯერ.
+
+          ამის შემდეგ არ დაგავიწყდეთ შებრუნდეთ!
+        courseF_artist_ramp8_c: თქვენი მობრუნება ასევე მოთავსდება <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> ციკლში.
       courseF_artist_ramp9_authored_hint:
+        courseF_artist_ramp9_a: რა საერთო აქვს ამას კვადრატთან? რით განსხვავდება?
+        courseF_artist_ramp9_b: სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება,
+          რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!
+        courseF_artist_ramp9_c: თქვენ მოგიწევთ 100 პიქსელით წინ გადაადგილება, შემდეგ
+          ყოველი მხარეს 120 გრადუსით მობრუნება. შეგიძლიათ გამოიყენოთ <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> ციკლი, თქვენი კოდის გასამარტივებლად?
+      courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: რა საერთო აქვს ამას კვადრატთან? რით განსხვავდება?
         courseF_artist_ramp9_b: სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება,
           რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!
@@ -17173,6 +17247,17 @@
           სალათის შესაგროვებლად. ამის მაგივრად, გადმოათრიეთ სალათის შემგროვებელი გამეორების
           ციკლი სხვა გამეორების ციკლის შიგნით (ამ ბლოკთან ერთად - <xml><block type="maze_moveForward"/></xml>
           - და გამოგივათ!)
+      courseF_farmer_ramp11_2018_authored_hint:
+        courseF_farmer_ramp11_a: თუ გიჭირთ დანახვა, სად უნდა გამოიყენოთ ციკლები, ჯერ
+          მთლიანად დაწერეთ კოდი, შემდეგ კი დააკვირდით, რა ნაწილები მეორდება.
+        courseF_farmer_ramp11_b: როგორ შეგიძლიათ <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> ციკლის გამოყენება ისე, რომ მან შეაგროვოს
+          სალათი და არ მოგიწიოთ 5 <xml><block type="harvester_lettuce"/></xml> ბლოკის
+          გადმოთრევა?
+        courseF_farmer_ramp11_c: თქვენ არ გიწევთ 5 გამეორების ციკლის გამოყენება მთელი
+          სალათის შესაგროვებლად. ამის მაგივრად, გადმოათრიეთ სალათის შემგროვებელი გამეორების
+          ციკლი სხვა გამეორების ციკლის შიგნით (ამ ბლოკთან ერთად - <xml><block type="maze_moveForward"/></xml>
+          - და გამოგივათ!)
       courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: თუ ჩიტი ვერ აღწევს გოჭამდე, დარწმუნდით, რომ ყველა ბლოკი
@@ -17194,7 +17279,17 @@
           block by block and look for errors.
         courseF_maze_ramp7_a: გამოიყენეთ გამეორების ბლოკები, რათა მრავალჯერ გაუშვათ
           ერთი ბლოკი ან კოდის რაღაც ნაწილი.
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: თუ ჩიტი ვერ აღწევს გოჭამდე, დარწმუნდით, რომ ყველა ბლოკი
+          სრულადაა დაკავშირებული ერთმანეთთან, შემდეგ კი ისევ დააკლიკეთ "გაშვებას".
+        courseF_maze_ramp1_b: აქ არ გჭირდებათ დამატებითი ბლოკები ინსტრუმენტების პანელიდან!
       courseF_maze_ramp2_authored_hint:
+        courseF_maze_ramp2_a: ახალი ბლოკის გამოსაყენებლად გადმოათრიეთ ის ინსტრუმენტების
+          პანელიდან სამუშაო სივრცეში და დააკავშირეთ ეს ბლოკი პროგრამაში არსებულ <xml><block
+          type="when_run"/></xml> ბლოკთან.
+        courseF_maze_ramp2_b: დარწმუნდით, რომ <xml><block type="maze_moveForward"/></xml>
+          ბლოკი ციკლის შიგნითაა და მეორდება.
+      courseF_maze_ramp2_2018_authored_hint:
         courseF_maze_ramp2_a: ახალი ბლოკის გამოსაყენებლად გადმოათრიეთ ის ინსტრუმენტების
           პანელიდან სამუშაო სივრცეში და დააკავშირეთ ეს ბლოკი პროგრამაში არსებულ <xml><block
           type="when_run"/></xml> ბლოკთან.
@@ -17209,13 +17304,35 @@
         courseF_maze_ramp4_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება
           და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით,
           რა ხდება.
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: იმისათვის, რომ გზას გაუყვეთ, იმოძრავეთ წინ და შეუხვიეთ
+          ერთ ადგილას, შემდეგ იმოძრავეთ სამჯერ, სანამ შეუხვევთ საპირისპირო მიმართულებით.
+          გადაადგილდით წინ კიდევ ერთხელ, რათა მიაღწიოთ გოჭთან.
+        courseF_maze_ramp4_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება
+          და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით,
+          რა ხდება.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
           line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: გოჭთან მოხვედრის ერთზე მეტი გზა არსებობს.
         courseF_maze_ramp5_c: სცადეთ <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml>
           ციკლის გამოყენება უფრო მოკლე კოდის მისაღებად!
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
+          line. Can you figure out what you need to do next?
+        courseF_maze_ramp5_b: გოჭთან მოხვედრის ერთზე მეტი გზა არსებობს.
+        courseF_maze_ramp5_c: სცადეთ <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml>
+          ციკლის გამოყენება უფრო მოკლე კოდის მისაღებად!
       courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!
+        courseF_maze_ramp6_b: ჩიტი თავიდან დგას სახით კედლისკენ, ამიტომ არ დაგავიწყდეთ
+          მოძრაობის დაწყებამდე მობრუნება!
+        courseF_maze_ramp6_c: არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება,
+          კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ
+          გქონდეთ.
+      courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!
         courseF_maze_ramp6_b: ჩიტი თავიდან დგას სახით კედლისკენ, ამიტომ არ დაგავიწყდეთ
           მოძრაობის დაწყებამდე მობრუნება!
@@ -17676,6 +17793,14 @@
         courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something,
           and if it doesn't work, try something else!
       coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_b: გამოიყენეთ ნაბიჯის ღილაკი, რათა გაიაროთ პროგრამა ხაზ-ხაზად.
+          სად ხდება შეცდომა?
+      coursef_maze_ramp3_2018_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
           delete a block from the middle of your code, drag all of the blocks underneath
           it away to the right and let them sit in the workspace for a while.  \n\nClick
