@@ -1,0 +1,768 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:25 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:24 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 0cWYZM2ydY5WCu/qD2X2/Q==
+      Content-Length:
+      - '460'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:26 GMT
+      X-Amz-Version-Id:
+      - W0HNs4WKdzPnHcyxbcpSwtT6jRLcuRUo
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:25 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:27 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:26 GMT
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - W0HNs4WKdzPnHcyxbcpSwtT6jRLcuRUo
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '460'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:26 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:28 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:26 GMT
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - W0HNs4WKdzPnHcyxbcpSwtT6jRLcuRUo
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '460'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:27 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:28 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-05-04T20:48:26.000Z</LastModified><ETag>&quot;d1c59864cdb2758e560aefea0f65f6fd&quot;</ETag><Size>460</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:27 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - mQ8rrN8FH9rlL1wLQJ/B8g==
+      Content-Length:
+      - '634'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:29 GMT
+      X-Amz-Version-Id:
+      - BtLqPYBYbc4UNVVXd_MjyjHoJ6FfiM3F
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:28 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:29 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:29 GMT
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - BtLqPYBYbc4UNVVXd_MjyjHoJ6FfiM3F
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '634'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:28 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:29 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:29 GMT
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - BtLqPYBYbc4UNVVXd_MjyjHoJ6FfiM3F
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '634'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:29 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:30 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-05-04T20:48:29.000Z</LastModified><ETag>&quot;990f2bacdf051fdae52f5c0b409fc1f2&quot;</ETag><Size>634</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:29 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 0cWYZM2ydY5WCu/qD2X2/Q==
+      Content-Length:
+      - '460'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:30 GMT
+      X-Amz-Version-Id:
+      - lIB6aNfWBQV1B__sSNoqnAlx6c_d1Ked
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:29 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:31 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:30 GMT
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - lIB6aNfWBQV1B__sSNoqnAlx6c_d1Ked
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '460'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:30 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:31 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:30 GMT
+      Etag:
+      - '"d1c59864cdb2758e560aefea0f65f6fd"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - lIB6aNfWBQV1B__sSNoqnAlx6c_d1Ked
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '460'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"variables_set\"
+        inline=\"false\"><title name=\"VAR\">i</title><value name=\"VALUE\"><block
+        type=\"math_number\"><title name=\"NUM\">0</title></block></value><next><block
+        type=\"comment\"><title name=\"TEXT\">second comment</title></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:30 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:31 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-05-04T20:48:30.000Z</LastModified><ETag>&quot;d1c59864cdb2758e560aefea0f65f6fd&quot;</ETag><Size>460</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:31 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - mQ8rrN8FH9rlL1wLQJ/B8g==
+      Content-Length:
+      - '634'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:32 GMT
+      X-Amz-Version-Id:
+      - 2ewj69liOUl_Zs4MFm0RKxAeYNNyPbcs
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:31 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:32 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:32 GMT
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 2ewj69liOUl_Zs4MFm0RKxAeYNNyPbcs
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '634'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:31 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/main.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:33 GMT
+      Last-Modified:
+      - Fri, 04 May 2018 20:48:32 GMT
+      Etag:
+      - '"990f2bacdf051fdae52f5c0b409fc1f2"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - 2ewj69liOUl_Zs4MFm0RKxAeYNNyPbcs
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '634'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '{"source":"<xml><block type=\"when_run\" deletable=\"false\" id=\"when_run\"><next><block
+        type=\"comment\"><title name=\"TEXT\">first comment</title><next><block type=\"comment\"><title
+        name=\"TEXT\">third comment</title><next><block type=\"variables_set\" inline=\"false\"><title
+        name=\"VAR\">i</title><value name=\"VALUE\"><block type=\"math_number\"><title
+        name=\"NUM\">0</title></block></value><next><block type=\"comment\"><title
+        name=\"TEXT\">fourth comment</title><next><block type=\"comment\"><title name=\"TEXT\">fifth
+        comment</title></block></next></block></next></block></next></block></next></block></next></block></xml>"}'
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:32 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/main.json&versions
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:33 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/main.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/main.json</Key><VersionId>2ewj69liOUl_Zs4MFm0RKxAeYNNyPbcs</VersionId><IsLatest>true</IsLatest><LastModified>2018-05-04T20:48:32.000Z</LastModified><ETag>&quot;990f2bacdf051fdae52f5c0b409fc1f2&quot;</ETag><Size>634</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>sources_test/1/1/main.json</Key><VersionId>lIB6aNfWBQV1B__sSNoqnAlx6c_d1Ked</VersionId><IsLatest>false</IsLatest><LastModified>2018-05-04T20:48:30.000Z</LastModified><ETag>&quot;d1c59864cdb2758e560aefea0f65f6fd&quot;</ETag><Size>460</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>sources_test/1/1/main.json</Key><VersionId>BtLqPYBYbc4UNVVXd_MjyjHoJ6FfiM3F</VersionId><IsLatest>false</IsLatest><LastModified>2018-05-04T20:48:29.000Z</LastModified><ETag>&quot;990f2bacdf051fdae52f5c0b409fc1f2&quot;</ETag><Size>634</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>sources_test/1/1/main.json</Key><VersionId>W0HNs4WKdzPnHcyxbcpSwtT6jRLcuRUo</VersionId><IsLatest>false</IsLatest><LastModified>2018-05-04T20:48:26.000Z</LastModified><ETag>&quot;d1c59864cdb2758e560aefea0f65f6fd&quot;</ETag><Size>460</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:32 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>sources_test/1/1/main.json</Key>
+            <VersionId>2ewj69liOUl_Zs4MFm0RKxAeYNNyPbcs</VersionId>
+          </Object>
+          <Object>
+            <Key>sources_test/1/1/main.json</Key>
+            <VersionId>lIB6aNfWBQV1B__sSNoqnAlx6c_d1Ked</VersionId>
+          </Object>
+          <Object>
+            <Key>sources_test/1/1/main.json</Key>
+            <VersionId>BtLqPYBYbc4UNVVXd_MjyjHoJ6FfiM3F</VersionId>
+          </Object>
+          <Object>
+            <Key>sources_test/1/1/main.json</Key>
+            <VersionId>W0HNs4WKdzPnHcyxbcpSwtT6jRLcuRUo</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - UvWexDpRoOXyvEcJCDubEQ==
+      Content-Length:
+      - '589'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:33 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:32 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:34 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:33 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 04 May 2018 20:48:34 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 04 May 2018 20:48:33 GMT
+recorded_with: VCR 3.0.3
