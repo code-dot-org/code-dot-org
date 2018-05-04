@@ -51,6 +51,10 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING
   },
+  infoText: {
+    paddingTop: PADDING / 4,
+    paddingBottom: PADDING / 2
+  },
   label: {
     paddingTop: PADDING / 2
   },
@@ -343,7 +347,7 @@ class MoveStudents extends Component {
                   {transferStatus.error}
                 </div>
               }
-              <div>{i18n.selectStudentsToMove()}</div>
+              <div style={styles.infoText}>{i18n.selectStudentsToMove()}</div>
               <label
                 htmlFor="sections"
                 style={styles.label}
