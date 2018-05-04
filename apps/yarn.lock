@@ -93,9 +93,9 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/maze@github:code-dot-org/maze#799c92348e4a29092ec6d798c1f777d561bcf862":
+"@code-dot-org/maze@github:code-dot-org/maze#dca2c2d65fa0ab5941c1dcc757e0ae176546124c":
   version "1.0.0"
-  resolved "https://codeload.github.com/code-dot-org/maze/tar.gz/799c92348e4a29092ec6d798c1f777d561bcf862"
+  resolved "https://codeload.github.com/code-dot-org/maze/tar.gz/dca2c2d65fa0ab5941c1dcc757e0ae176546124c"
 
 "@code-dot-org/p5.play@1.2.2-cdo":
   version "1.2.2-cdo"
