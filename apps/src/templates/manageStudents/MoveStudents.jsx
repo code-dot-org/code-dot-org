@@ -66,7 +66,8 @@ const styles = {
   },
   error: {
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    color: color.red,
+    paddingBottom: PADDING / 2
   }
 };
 
