@@ -58,4 +58,62 @@ class ExperimentsControllerTest < ActionController::TestCase
     assert_nil flash[:notice]
     assert_nil Experiment.first
   end
+
+  test_redirect_to_sign_in_for(
+    :set_single_user_experiment,
+    params: -> {{experiment_name: @experiment_name}}
+  )
+
+  test_user_gets_response_for(
+    :set_single_user_experiment,
+    name: 'single user can set valid experiment name',
+    response: :redirect,
+    user: :teacher,
+    params: -> {{experiment_name: '2018-teacher-experience'}}
+  ) do
+    assert_nil flash[:alert]
+    assert_includes flash[:notice], "You have successfully joined the experiment"
+    assert SingleUserExperiment.where(name: "2018-teacher-experience", min_user_id: @teacher.id)
+  end
+
+  test_user_gets_response_for(
+    :set_single_user_experiment,
+    name: 'single user cannot set invalid experiment name',
+    response: :redirect,
+    user: :teacher,
+    params: -> {{experiment_name: 'invalid-experiment-name'}}
+  ) do
+    assert_includes flash[:alert], "not a valid experiment"
+    assert_nil flash[:notice]
+    assert_nil Experiment.first
+  end
+
+  test_redirect_to_sign_in_for(
+    :disable_single_user_experiment,
+    params: -> {{experiment_name: @experiment_name}}
+  )
+
+  test_user_gets_response_for(
+    :disable_single_user_experiment,
+    name: 'single user cannot set disable experiment they are not in',
+    response: :redirect,
+    user: :teacher,
+    params: -> {{experiment_name: 'invalid-experiment-name'}}
+  ) do
+    assert_includes flash[:alert], "You are not in the 'invalid-experiment-name' experiment."
+    assert_nil flash[:notice]
+    assert_nil Experiment.first
+  end
+
+  test 'user can disable an experiment user is in' do
+    student = create :user
+    sign_in(student)
+    SingleUserExperiment.create(min_user_id: student.id, name: '2018-teacher-experience')
+
+    get :disable_single_user_experiment, params: {experiment_name: '2018-teacher-experience'}
+    assert_response :redirect
+    assert_nil flash[:alert]
+    assert_includes flash[:notice], "You have successfully disabled the experiment"
+    assert_nil Experiment.first
+  end
 end
