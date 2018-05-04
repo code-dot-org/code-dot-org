@@ -76,6 +76,13 @@ const styles = {
   }
 };
 
+const DEFAULT_SORT = {
+  1: {
+    direction: 'asc',
+    position: 0
+  }
+};
+
 class MoveStudents extends Component {
   static propTypes = {
     studentData: PropTypes.arrayOf(
@@ -111,7 +118,8 @@ class MoveStudents extends Component {
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
+    sortingColumns: DEFAULT_SORT
   };
 
   openDialog = () => {
