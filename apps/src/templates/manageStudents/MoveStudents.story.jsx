@@ -1,6 +1,10 @@
 import React from 'react';
 import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
-import {blankStudentTransfer} from './manageStudentsRedux';
+import {
+  blankStudentTransfer,
+  blankStudentTransferStatus,
+  TransferStatus
+} from './manageStudentsRedux';
 
 const studentData = [
   {
@@ -40,35 +44,60 @@ const transferToOtherTeacher = {
   copyStudents: false
 };
 
+const errorTransferStatus = {
+  status: TransferStatus.FAIL,
+  error: 'You cannot move these students because they are already in the new section.'
+};
+
 export default storybook => {
   storybook
     .storiesOf('MoveStudents', module)
     .addStoryTable([
       {
         name: 'Move students dialog',
-        description: 'Ability to move students in a certain section to a different section or teacher',
+        description: 'Empty dialog',
         story: () => (
           <MoveStudents
             studentData={studentData}
             transferData={blankStudentTransfer}
+            transferStatus={blankStudentTransferStatus}
             currentSectionId={1}
             sections={sections}
             updateStudentTransfer={() => console.log('updating...')}
             transferStudents={() => console.log('transferring...')}
+            cancelStudentTransfer={() => console.log('cancelling...')}
           />
         )
       },
       {
         name: 'Move students dialog',
-        description: 'Ability to move students in a certain section to a different section or teacher',
+        description: 'Dialog when "other teacher" option is chosen',
         story: () => (
           <MoveStudents
             studentData={studentData}
             transferData={transferToOtherTeacher}
+            transferStatus={blankStudentTransferStatus}
             currentSectionId={1}
             sections={sections}
             updateStudentTransfer={() => console.log('updating...')}
             transferStudents={() => console.log('transferring...')}
+            cancelStudentTransfer={() => console.log('cancelling...')}
+          />
+        )
+      },
+      {
+        name: 'Move students dialog',
+        description: 'Dialog when an error has occurred',
+        story: () => (
+          <MoveStudents
+            studentData={studentData}
+            transferData={transferToOtherTeacher}
+            transferStatus={errorTransferStatus}
+            currentSectionId={1}
+            sections={sections}
+            updateStudentTransfer={() => console.log('updating...')}
+            transferStudents={() => console.log('transferring...')}
+            cancelStudentTransfer={() => console.log('cancelling...')}
           />
         )
       }
