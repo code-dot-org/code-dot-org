@@ -158,6 +158,8 @@ level 'courseF_bee_variables_2_2018'
 level 'courseF_bee_variables_3_2018'
 level 'courseF_bee_variables_4_2018'
 level 'courseF_bee_variables_5_2018'
+level 'courseF_bee_variables_6_2018', challenge: true
+level 'courseF_bee_variables_7_2018'
 
 stage 'Variables that Change in Artist', flex_category: 'csf_f_2'
 level 'courseF_artist_variables7_2018'
