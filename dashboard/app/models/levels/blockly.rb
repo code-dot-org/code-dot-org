@@ -317,19 +317,26 @@ class Blockly < Level
     options.freeze
   end
 
-  def localized_failure_message_override
-    if should_localize? && failure_message_override
-      I18n.t("data.failure_message_overrides").
-        try(:[], "#{name}_failure_message_override".to_sym)
+  def get_localized_property(property_name)
+    if should_localize? && try(property_name)
+      I18n.t("data.#{property_name.pluralize}").
+        try(:[], "#{name}_#{property_name}".to_sym)
     end
+  end
+
+  def localized_failure_message_override
+    get_localized_property("failure_message_override")
+  end
+
+  def localized_markdown_instructions
+    get_localized_property("markdown_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      translations = I18n.t("data.authored_hints").
-        try(:[], "#{name}_authored_hint".to_sym)
+      translations = get_localized_property("authored_hint")
 
       return unless translations.instance_of? Hash
 
@@ -360,7 +367,7 @@ class Blockly < Level
 
   def localized_instructions
     if custom?
-      loc_val = I18n.t("data.instructions").try(:[], "#{name}_instruction".to_sym)
+      loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -369,13 +376,6 @@ class Blockly < Level
         I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
       end.compact.first
       return val unless val.nil?
-    end
-  end
-
-  def localized_markdown_instructions
-    if should_localize? && markdown_instructions
-      I18n.t("data.markdown_instructions").
-        try(:[], "#{name}_markdown_instruction".to_sym)
     end
   end
 
