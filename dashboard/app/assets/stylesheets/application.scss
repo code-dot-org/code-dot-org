@@ -3072,3 +3072,12 @@ code {
   color: $purple;
   font-size: 18px;
 }
+
+hr.danger {
+  border-color: $red;
+  border-width: medium;
+}
+
+h2.danger {
+  color: $red;
+}

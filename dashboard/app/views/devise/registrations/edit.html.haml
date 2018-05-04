@@ -86,7 +86,8 @@
   %div#submit-update= f.submit t('crud.update'), class: 'btn btn-default'
 
 - if current_user.can_delete_own_account?
-  %h2= t('user.delete')
+  %hr.danger
+  %h2.danger= t('user.delete')
   %p
     = t('user.delete_text')
     - if current_user.teacher?
