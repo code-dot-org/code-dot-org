@@ -26,9 +26,12 @@ class Census::StateCsOffering < ApplicationRecord
     CT
     FL
     GA
+    IA
     ID
     IN
+    MA
     MI
+    MS
     NC
     SC
     UT
@@ -62,11 +65,18 @@ class Census::StateCsOffering < ApplicationRecord
     when 'GA'
       school_id = format("%04d", row_hash['SCHOOL_ID'].to_i)
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
+    when 'IA'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'MA'
+      School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MS'
+      School.find_by(id: row_hash['NCES School ID'])&.state_school_id
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
@@ -176,6 +186,17 @@ class Census::StateCsOffering < ApplicationRecord
     4586
   ).freeze
 
+  MA_COURSE_CODES = %w(
+    10011
+    10012
+    10019
+    10153
+    10154
+    10155
+    10156
+    10158
+  ).freeze
+
   MI_COURSE_CODES = %w(
     10157
     10999
@@ -189,6 +210,16 @@ class Census::StateCsOffering < ApplicationRecord
     10199
     10197
   ).freeze
+
+  MS_COURSE_CODES = %w(
+    561005
+    000283
+    110142
+    232050
+    232060
+    232070
+    110141
+  )
 
   NC_COURSE_CODES = %w(
     BL03
@@ -231,7 +262,7 @@ class Census::StateCsOffering < ApplicationRecord
     'IB Computer Science SL 1',
     'IB Computer Science SL 2',
     'PLtW Computer Science & Software Enginee'
-  ]
+  ].freeze
 
   def self.get_courses(state_code, row_hash)
     case state_code
@@ -241,7 +272,7 @@ class Census::StateCsOffering < ApplicationRecord
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'CT'
       enrollment = row_hash['CourseEnrollments']
-      # Don't consider a course as offered at a school if there is no enrollment ("*") and it is a positive number
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
       CT_COURSE_CODES.select {|course| course == row_hash['Course'] && enrollment != '*' && enrollment.to_i > 0}
     when 'FL'
       FL_COURSE_CODES.select {|course| course == row_hash['Course']}
@@ -255,14 +286,28 @@ class Census::StateCsOffering < ApplicationRecord
       suffix = format("%-5.5s", course_parts.second).tr(' ', '0')
       course_code = "#{prefix}.#{suffix}"
       GA_COURSE_CODES.select {|course| course == course_code}
+    when 'IA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'MA'
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
+      MA_COURSE_CODES.select do |course|
+        course == row_hash['Course Code'] &&
+        row_hash['Progrmming Included'] == 'Y' &&
+        # Massachusetts has a note in their spreadsheet indicating that "*" means fewer than 6 students are enrolled
+        row_hash['Total Enrollment'] != '*' &&
+        row_hash['Total Enrollment'].to_i > 0
+      end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
+    when 'MS'
+      MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
     when 'UT'

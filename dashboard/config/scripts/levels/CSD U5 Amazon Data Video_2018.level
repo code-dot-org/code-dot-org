@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-30T18:05:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_external_amazon_data",
+    "markdown_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.",
+    "instructions_important": "false",
+    "display_name": "Collecting Information About Users",
+    "encrypted_teacher_markdown": "8xk8aU5ltTT48iZJ7k4qE9DZNw3Q0Pwqys4R7eobEOxxBXg5tpvRBwItUnHO\nR3SXu0cBsl5Tu/SrulITugD/K5yp0rPD9JPSC0XSc62UOcw3NCsLSuK+pXZx\noqsIN2fVj7lgsSoeoxOLNqz5TD5dgJjKB3AO1uD/TjINzoLs6+/Uwn3bnTF0\nlxFCFCv+CG/zpILM63CukwTbfp8Bpguy4zYwVVvjgco32CaZBilucAQVdGrg\nKz6tdKbdg6S4IBMC\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10413,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 22:42:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

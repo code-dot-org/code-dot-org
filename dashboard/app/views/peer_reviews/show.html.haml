@@ -1,7 +1,7 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/plc.js')}
 .peer-review
-  - reviewed = @peer_review.escalated? ? @peer_review.reviewer_id? : @peer_review.status?
+  - reviewed = @peer_review.review_completed?
 
   - if @peer_review.script.professional_learning_course?
     #breadcrumb
@@ -24,7 +24,7 @@
       var appOptions = #{app_options.to_json};
     = render partial: 'levels/free_response', locals: {in_level_group: true}
 
-  - if @peer_review.escalated? && current_user.permission?(UserPermission::PLC_REVIEWER)
+  - if current_user.permission? UserPermission::PLC_REVIEWER
     #previous-reviews
       %p Previous reviews
       - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
@@ -44,17 +44,14 @@
         %ul
           - @peer_review.errors.full_messages.each do |msg|
             %li= msg
-    .field
-      %label
-        = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
-        != t('peer_review.accepted.description')
-      %label
-        = f.radio_button :status, :rejected, disabled: reviewed
-        != t('peer_review.rejected.description')
-      %label
-        = f.radio_button :status, :escalated, disabled: reviewed
-        %span{style: 'font-size: 0.8em;'}
-          != t('peer_review.escalated.description')
+    - if current_user.permission? UserPermission::PLC_REVIEWER
+      .field
+        %label
+          = f.radio_button :status, :accepted, disabled: reviewed, checked: ['accepted', nil].include?(@peer_review.status)
+          != t('peer_review.accepted.description')
+        %label
+          = f.radio_button :status, :rejected, disabled: reviewed
+          != t('peer_review.rejected.description')
     .field
       %p Review notes:
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed

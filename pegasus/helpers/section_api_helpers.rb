@@ -309,11 +309,13 @@ class DashboardSection
   # on language and whether hidden scripts are included.
   # @param user_id [Integer]
   # @return AssignableInfo[]
-  def self.valid_scripts(user_id = nil)
+  def self.valid_scripts(user_id = nil, force_show_hidden = false)
     has_any_experiment = DashboardCourseExperiments.has_any_experiment?(user_id)
     # Users with course experiments enabled effectively lose their hidden
     # script access permissions to avoid unnecessary complexity.
-    with_hidden = !has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)
+    with_hidden =
+      (!has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)) ||
+      force_show_hidden
     scripts = valid_default_scripts(user_id, with_hidden)
     return scripts unless has_any_experiment
     scripts.map {|script| alternate_script_info(user_id, script)}
@@ -393,10 +395,19 @@ class DashboardSection
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
-      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course_assignment_family(course))}.
       map {|course| assignable_info(course)}
     @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
     courses
+  end
+
+  # This only applies to courses because scripts are currently assumed to be in
+  # their own assignment family, e.g. "coursea-2018" would be in assignment family
+  # "coursea-2018" not "coursea". This will change once we start recognizing
+  # multiple versions of scripts.
+  def self.course_assignment_family(course)
+    m = ScriptConstants::VERSIONED_COURSE_NAME_REGEX.match(course[:name])
+    m ? m[1] : course[:name]
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via
@@ -609,18 +620,10 @@ class DashboardSection
           }
         )
       end
-    # Though it would be simpler to query the level counts for each student via
-    # DashboardStudent#completed_levels and inject them to @students via the row.merge above,
-    # querying all students together (as below) is significantly more performant.
-    student_ids = @students.map {|s| s[:id]}
-    level_counts = Dashboard.db[:user_levels].
-      group_and_count(:user_id).
-      where(user_id: student_ids).
-      where("best_result >= #{ActivityConstants::MINIMUM_PASS_RESULT}").
-      all
+    # completed_levels_count is deprecated and is no longer needed on the UI,
+    # but adding this field to not break anything unexpected.
     @students.each do |datum|
-      level_count = level_counts.find {|x| x[:user_id] == datum[:id]}
-      datum[:completed_levels_count] = level_count ? level_count[:count] : 0
+      datum[:completed_levels_count] = 0
     end
 
     @students

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Catch the Coin, Increase the Score\r\n\r\nLet's make that score change now too to complete the game. You'll need to be able to tell when the bunny is touching the coin and the reset it.\r\n\r\n# Do This\r\n\r\n* Use an **if-statement** and the **isTouching** block to increase the score when the bunny catches the coin.\r\n* Make sure you're **calling your function** to reset the coin once it's been caught.\r\n* Play the game and **randomize the velocity of the coin** to a range that you think is fun.",
+    "markdown_instructions": "# Catch the Coin, Increase the Score\r\n\r\nLet's make that score change now, too, to complete the game. You'll need to be able to tell when the bunny is touching the coin and then reset it.\r\n\r\n# Do This\r\n\r\n* Use an **if-statement** and the **isTouching** block to increase the score when the bunny catches the coin.\r\n* Make sure you're **calling your function** to reset the coin once it's been caught.\r\n* Play the game and **randomize the velocity of the coin** to a range that you think is fun.",
     "start_blocks": "var coin = createSprite(200,10);\r\ncoin.setAnimation(\"coin_gold_1\");\r\nsetCoin();\r\n\r\nvar bunny = createSprite(200,350);\r\nbunny.setAnimation(\"bunny1_ready_1\");\r\n\r\nvar score = 0;\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  if(keyDown(\"left\")){\r\n    bunny.x = bunny.x - 2;\r\n  }\r\n  \r\n  if(keyDown(\"right\")){\r\n    bunny.x = bunny.x + 2;\r\n  }\r\n  \r\n  if(coin.y > 400){\r\n    setCoin();\r\n  }\r\n  \r\n  textSize(20);\r\n  text(\"Score: \" + score, 10, 10, 100, 100);\r\n  drawSprites();\r\n}\r\n\r\nfunction setCoin(){\r\n\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -46,11 +46,15 @@
     "expand_debugger": "false",
     "parent_level_id": 6412,
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:38:58 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-01 18:44:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
