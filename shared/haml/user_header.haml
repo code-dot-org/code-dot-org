@@ -1,7 +1,8 @@
 -# Locals: current_user, loc_prefix, [session_pairings]
 - if current_user
-  -# This only returns data on dashboard
-  #user-experiment_info{"data-user-experiments" => current_user.get_active_experiment_names}
+  - experiments = current_user.get_active_experiment_names
+  - if experiments
+    #user-experiment-info{"data-user-experiments" => experiments}
   .header_button.header_user.user_menu
     - if current_user.can_pair? && session_pairings.present?
       %i.fa.fa-users

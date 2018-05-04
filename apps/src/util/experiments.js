@@ -26,6 +26,14 @@ experiments.getQueryString_ = function () {
 };
 
 experiments.getStoredExperiments_ = function () {
+  // Get experiments on current user (loaded into user_header.haml).
+  let userExperiments = [];
+  const experimentElement = document.getElementById('user-experiment-info');
+  if (experimentElement) {
+    userExperiments = JSON.parse(experimentElement.dataset.userExperiments);
+  }
+
+  // Get experiments stored in local storage.
   try {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
@@ -37,9 +45,9 @@ experiments.getStoredExperiments_ = function () {
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
     }
-    return enabledExperiments;
+    return userExperiments.concat(enabledExperiments);
   } catch (e) {
-    return [];
+    return userExperiments;
   }
 };
 
@@ -73,11 +81,6 @@ experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-
-  const experimentElement = document.getElementById('user-experiment_info');
-  console.log(experimentElement);
-  // Get data tag of experiment list from this element.
-
   let enabled = this.getStoredExperiments_()
     .some(experiment => experiment.key === key) ||
     !!(window.appOptions &&
