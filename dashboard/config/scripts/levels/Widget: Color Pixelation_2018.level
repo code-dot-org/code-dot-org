@@ -1,0 +1,21 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2018-05-03T16:35:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "Requirements: The icon must be 16x16 pixels. You must use the Pixelation Widget to encode the bits of color information. The image must be encoded with at least 12 bits per pixel.",
+    "markdown_instructions": "# Personal Favicon\r\n**Requirements:**\r\n<img src = \"https://images.code.org/28fc33ea82996a10863688702af55e65-image-1439596268865.png\" align=right hspace=20>\r\n\r\n* The icon must be 16x16 pixels. \r\n* You must use the Pixelation Widget to encode the bits of color information.\r\n* The image must be encoded with at least 12 bits per pixel.\r\n\r\n",
+    "version": "3",
+    "data": "0000 0001\r\n0000 0001\r\n0000 0001",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "hex": "false",
+    "parent_level_id": 1820,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Pixelation>

@@ -1,0 +1,27 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2018-05-03T16:35:36.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. That extra bit bumps all of the other bits down the line which makes the logo look messed up. Hunt down the extra bit and remove it to fix the Code.org logo.",
+    "markdown_instructions": "# Oh no! An image got messed up during transmission!\r\n\r\n<img src = \"https://images.code.org/1f78b53ad4892dc8f9b50111fce35c7e-image-1439474859998.17.43 PM.png\" align=right width=200 hspace=20>\r\n\r\n**The problem:** A single extra bit was inserted into the stream of bits that make up the C of the Code.org logo. <br>That extra bit bumps all of the other bits down the line which makes the logo look messed up.\r\n<br>**Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. \r\n<br>**HINT:** One bit early on would make it look like many bits were out of order. \r\n",
+    "version": "2",
+    "data": "0000 1011\r\n0000 1011\r\n1 0 0 0 0 0 0 0 0 0 1 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 1 1 1 0 0 0 0 \r\n0 0 0 1 0 0 0 0 0 0 0 \r\n0 0 1 0 1 0 0 0 0 0 0 \r\n0 0 0 0 1 0 0 0 0 0 0 \r\n0 0 0 0 0 1 1 1 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 0 0 0 0 0 0 0 0 0 0 \r\n0 1 0 0 0 0 0 0 0 0 0 \r\n1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 1791,
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-03 23:58:00 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>
