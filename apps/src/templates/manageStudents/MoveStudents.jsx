@@ -36,7 +36,8 @@ const styles = {
     display: 'flex'
   },
   table: {
-    width: TABLE_WIDTH
+    width: TABLE_WIDTH,
+    margin: 2
   },
   checkboxCell: {
     width: CHECKBOX_CELL_WIDTH,
