@@ -42,6 +42,9 @@ const styles = {
   },
   buttonRow: {
     display: 'flex'
+  },
+  buttonWithMargin: {
+    marginRight: 5
   }
 };
 
@@ -512,7 +515,9 @@ class ManageStudentsTable extends Component {
         {transferStatus.status === TransferStatus.SUCCESS && this.renderTransferSuccessNotification()}
         <div style={styles.buttonRow}>
           {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-            <AddMultipleStudents/>
+            <div style={styles.buttonWithMargin}>
+              <AddMultipleStudents/>
+            </div>
           }
           <MoveStudents
             studentData={this.studentDataMinusBlanks()}
