@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:34.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Why is compression \"hard\"?",
+    "markdown_instructions": "Why is compression a \"hard problem\" for computers?  Draw on your own experience compressing text with the text compression widget. Is there a way to know when you've compressed it the most? Explain why you can or can't know.\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "u2tUa80clYKhUSwq5mM/1xzZjxQLwkmsBexXfKEmKkoC9hLMVsijWwUBRrJZ\nAXGXFdEsOpIoFpqEie/xwbH5aKInx3njNwii4QPIGl6lNXFHydGQS/m+Yxfk\nE2Rp2U3VP/5ZnIoA7+sYQkPmj2Dk/8mUG7DtpWDVKXJD9UYMNtWgCOyRAKjW\n0Nq1TYKXFTcQe41cFm0qy3NBNNiG53BxWWwhljnwEhTGFj7aDRgPR7CB/6JC\nChFXmMopB/NN45KqB/kdhgNnLWlKwiw9OpJ2MEQRH9cmd08h2TRokjLl8fSU\nTF/Bkzr3J3MxjnrFNnmjy2DhHdz78BZNr4pSMh+6DOqy3x7JLb2jjRo+AGZp\nMpgH1Bux2latFdZqAYXjGtfiAt7B2cGOZuxNmnb95P1gUOWvBq/cmPixYPhs\nq6oUDlPkRpAxZIyEaP+PfQnxv1dSm2Zr8GmqX34EbJ+aDJ00AmfswOGq6vH9\nIJPoWPSOrh0WbVeHzf+t0wykGJ8oEF//UxuypBXoKgoB30e1VsxdFO8z6zh6\npE3QcMC2WetPaNhe1Pb3EOlyqMzUgA6Ae5Z4b+Gq6x7Pg12YJM3V2VogyQ==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 1938,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

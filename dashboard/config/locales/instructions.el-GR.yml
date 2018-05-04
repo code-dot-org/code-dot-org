@@ -78,6 +78,10 @@
         Μπορείς να το μεγαλόσεις; Υπόδειξη: θα πρέπει να είναι 75 εικονοστοιχεία μακρύτερο
         σε κάθε πλευρα.'
       2-3 Artist Free Play_instruction: Ελεύθερο παιχνίδι. Σχεδιάστε ότι θέλετε.
+      2-3 Artist Functions 1 a_instruction: 'Γεια σου. Εγώ καλλιτέχνης ζόμπι. Εμένα
+        αρέσει σχεδιάζω! Βοήθησέ με να σχεδιάσω τα τετράγωνα γυαλιά.  Υπόδειξη: η
+        γέφυρα μεταξύ των φακών είναι 25 εικονοστοιχεία μικρότερη από το μήκος του
+        τετραγώνου.'
       2-3 Artist Functions 1_instruction: 'Γεια σου. Εγώ καλλιτέχνης ζόμπι. Εμένα
         αρέσει σχεδιάζω! Βοήθησέ με να σχεδιάσω τα τετράγωνα γυαλιά.  Υπόδειξη: η
         γέφυρα μεταξύ των φακών είναι 25 εικονοστοιχεία μικρότερη από το μήκος του
@@ -85,6 +89,16 @@
       2-3 Artist Functions 10_instruction: Εδώ είναι δύο συναρτήσεις, μία που σχεδιάζει
         ένα μεγάλο γρανάζι και μία που σχεδιάζει ένα μικρό γρανάζι. Χρησιμοποιήστε
         τες για να σχεδιάσετε το εσωτερικό μιας μηχανής!
+      2-3 Artist Functions 11 a_instruction: |-
+        We've renamed the `draw a square`
+        function to `draw a hexagon`, but it's still giving us squares! Can you modify
+        the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r
+        \r
+        Draw
+        the image using the new function!
+      2-3 Artist Functions 11.5 a_instruction: Εδώ είναι ότι η ίδια συνάρτηση "Σχεδιάστε
+        ένα εξάγωνο". Τι θα συμβεί αν απλά στρίβετε κατά 60 μοίρες κάθε φορά που μπαίνετε
+        στο βρόχο;
       2-3 Artist Functions 11.5_instruction: Εδώ είναι ότι η ίδια συνάρτηση "Σχεδιάστε
         ένα εξάγωνο". Τι θα συμβεί αν απλά στρίβετε κατά 60 μοίρες κάθε φορά που μπαίνετε
         στο βρόχο;
@@ -97,6 +111,10 @@
         για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε
         τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας;
         (Υπόδειξη: όλα τα φυτά απέχουν μήκος 100 εικονστοιχείων)  '
+      2-3 Artist Functions 12 a_instruction: 'Οι συναρτήσεις είναι πραγματικά εξαιρετικές
+        για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε
+        τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας;
+        (Υπόδειξη: όλα τα φυτά απέχουν μήκος 100 εικονστοιχείων)  '
       2-3 Artist Functions 12_instruction: 'Οι συναρτήσεις είναι πραγματικά εξαιρετικές
         για να σχεδιάζουμε σύνθετα πράγματα πολλές φορές. Μπορείτε να χρησιμοποιήσετε
         τη συνάρτηση "σχεδίασε ένα λουλούδι" για να συμπληρώσετε το υπόλοιπο της γλάστρας;
@@ -104,14 +122,25 @@
       2-3 Artist Functions 13_instruction: |-
         Σου παρέχουμε τέσσερις συναρτήσεις.
         Χρησιμοποίησέ τις με οποιονδήποτε τρόπο θέλεις μέσα σε έναν ή περισσότερους βρόχους για να δημιουργήσεις εικόνες που μπορείς να μοιραστείς με τους φίλους σου. Πάτησε τρέξε για να δεις ένα παράδειγμα.
+      2-3 Artist Functions 2 a_instruction: "Use the small green `draw a square`\nblock
+        to call this new function and create the glasses. "
       2-3 Artist Functions 2_instruction: Με τις συναρτήσεις μπορείτε να καθορίσετε
         νέα μπλοκ! Έχουμε μετακινήσει τα μπλοκ για να σχεδιάσετε ένα τετράγωνο σε
         μία συνάρτηση που ονομάζεται "Σχεδιάστε ένα τετράγωνο". Μπορείτε να χρησιμοποιήσετε
         την συνάρτηση "Σχεδιάστε ένα τετράγωνο" για να δημιουργήσετε τα γυαλιά; Τα
         τετράγωνα απέχουν 75 εικονοστοιχεία το ένα από το άλλο.
+      2-3 Artist Functions 3 a_instruction: |-
+        Edit the "draw a square" function
+        to draw glasses with frames that are 115px on each side. \r
+        \r
+        The squares
+        are now 45 pixels apart.
       2-3 Artist Functions 3_instruction: Επεξεργαστείτε τη συνάρτηση για να σχεδιάστε
         ένα τετράγωνο με μήκος πλευράς 115 και σχεδιάστε τα μεγαλύτερα γυαλιά. Τα
         τετράγωνα απέχουν τώρα 45 εικονοστοιχεία το ένα από το άλλο.
+      2-3 Artist Functions 4 a_instruction: |-
+        Now, put the function inside of a loop
+        and add an extra turn to draw these three squares.
       2-3 Artist Functions 4_instruction: Χρησιμοποίησε το κουτι "Επανάληψη" για να
         σχεδιάσεις αυτά τα 3 τετράγωνα.
       2-3 Artist Functions 7_instruction: 'Χρησιμοποιήστε τη συνάρτηση "Σχεδιάστε
@@ -4043,6 +4072,11 @@
         to send the battleship moves. For setup, join a Room with your group, and
         add ships to your paper board for each opponent. When playing, all communication
         must be done through the tool, so no talking, but have fun!\r
+      'Internet Simulator: Broadcast_2018_instruction': |
+        Now use the Internet Simulator
+        to send the battleship moves. For setup, join a Room with your group, and
+        add ships to your paper board for each opponent. When playing, all communication
+        must be done through the tool, so no talking, but have fun!\r
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -4053,7 +4087,21 @@
         a Domain Name System (DNS) is provided for you and knows the IP addresses
         of all connected computers. Send a message in the form GET [hostname] to the
         DNS service at address <yourRouterNumber>.15 to get a student's address.
+      'Internet Simulator: DNS_2018_instruction': |-
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
       'Internet Simulator: Packets_instruction': |-
+        Develop a Protocol for Reliably
+        Sending a Message.\r
+        \r
+        Constraints:\r
+        - Packets may contain only 8 characters\r
+        -
+        Packets may drop with small probability\r
+        - Packets may not arrive in order
+      'Internet Simulator: Packets_2018_instruction': |-
         Develop a Protocol for Reliably
         Sending a Message.\r
         \r
@@ -4065,19 +4113,33 @@
       'Internet Simulator: Routers_instruction': |-
         Send messages with your classmates
         (Click to see full instructions)
+      'Internet Simulator: Routers_2018_instruction': |-
+        Send messages with your classmates
+        (Click to see full instructions)
       'Internet Simulator: Sending Binary Messages 1_instruction': "Develop, document,\nand
         test a protocol that allows you to use Internet Simulator to relay a message.\nSee
         the worksheet for more detailed instructions.  "
       'Internet Simulator: Sending Binary Messages_instruction': "Develop, document,\nand
         test a protocol that allows you to use Internet Simulator to relay a message.\nSee
         the worksheet for more detailed instructions.  "
+      'Internet Simulator: Sending Binary Messages_2018_instruction': "Develop, document,\nand
+        test a protocol that allows you to use Internet Simulator to relay a message.\nSee
+        the worksheet for more detailed instructions.  "
       'Internet Simulator: Sending Numbers_instruction': |-
         With your partner, develop
         a protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
+      'Internet Simulator: Sending Numbers_2018_instruction': |-
+        With your partner,
+        develop a protocol or set of rules for communicating a drawing using only
+        bits. See the worksheet handed out by your teacher for more detailed instructions!
       'Internet Simulator: Sending Text_instruction': |-
         Work with a partner or in
         a small team to develop a protocol that allows you to send formatted text.
+        See the worksheet handed out by your teacher for more detailed instructions!
+      'Internet Simulator: Sending Text_2018_instruction': |-
+        Work with a partner or
+        in a small team to develop a protocol that allows you to send formatted text.
         See the worksheet handed out by your teacher for more detailed instructions!
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Σχεδίασε μια σύντομη γραμμή επάνω και
@@ -7589,6 +7651,21 @@
         him as a special treat.
       beeDebugVideo1_instruction: Μπορείς να φτιάξεις ένα βρόχο επανάληψης για να
         μαζέψεις όλο αυτό το νέκταρ;
+      behavior bash mary_instruction: Clone this level and make your own blocks!
+      behaviors clone me 2_instruction: Clone this level and make your own blocks!
+      behaviors clone me Ram_instruction: Clone this level and make your own blocks!
+      behaviors clone me joshl_instruction: Clone this level and make your own blocks!
+      behaviors clone me nk_instruction: Clone this level and make your own blocks!
+      behaviors clone me tanya_instruction: Clone this level and make your own blocks!
+      behaviors clone me_instruction: Clone this level and make your own blocks!
+      behaviors pet test 123 copy_instruction: |-
+        When Daisy gets a carrot, she gets
+        excited. Use the **"when touches"** event and the "add behavior" block
+        to make Daisy do something fun when she gets the carrot.
+      behaviors pet test 123_instruction: |-
+        When Daisy gets a carrot, she gets excited.
+        Use the **"when touches"** event and the "add behavior" block to make
+        Daisy do something fun when she gets the carrot.
       behaviors pet test 2_instruction: |-
         When Daisy gets a carrot, she gets excited.
         Use the **"when touches"** event and the "add behavior" block to make
@@ -7606,6 +7683,8 @@
         This dog's name is Daisy. Daisy LOVES to snack
         on carrots. Add the "drag and drop" behavior to the carrot so you can move
         it to her.
+      behaviors_caley_instruction: Clone this level and make your own blocks!
+      ben's first level_instruction: Clone this level and make your own blocks!
       birdsDebugVideo1_instruction: |-
         Trace the path and lead me to the silly pig.
         Avoid TNT or feathers will fly!
@@ -7734,9 +7813,11 @@
       bounce_7_sports_instruction: |-
         Attach blocks to each of the "when" blocks.
         Bounce the ball until it hits the flag.
+      brendan behaviors clone_instruction: Clone this level and make your own blocks!
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
+      clone me mary_instruction: Clone this level and make your own blocks!
       collector example_instruction: |-
         Put these blocks in order to collect all of
         the gold and solve the puzzle.
@@ -7748,6 +7829,10 @@
       comment_intro_maze_2018_instruction: |-
         Use the new `comment` block to leave
         yourself quick reminders.
+      conditionals_forvideo_harvester_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
+      conditionals_forvideo_playlab_instruction: Score as many points as you can!
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9545,6 +9630,35 @@
         longer or shorter?\r
         - What does it look like to draw two snowflakes on top
         of one another?
+      courseD_artist_1_2018_instruction: |
+        Draw a small square with **30** pixel long
+        sides.  \r
+      courseD_artist_2_2018_instruction: |
+        Now, turn right by **60** degrees, then
+        draw a straight line **150** pixels long and jump back to the center of the
+        play area.\r
+      courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
+        loop and run it a total of **6** times. "
+      courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
+      courseD_artist_5_2018_instruction: Play with the snowflakes!
+      courseD_artist_6_2018_instruction: |
+        Try changing your long 150 pixel line into
+        6 short lines of **25** pixels, with little turns at the end.\r
+      courseD_artist_7_2018_instruction: |-
+        Now, turn around 180 degrees and draw the
+        stair pattern again!
+      courseD_artist_8_2018_instruction: |-
+        Spin that shape around 5 or 6 times in
+        a circle.
+      courseD_artist_9_2018_instruction: |-
+        Try playing around with what you've created.
+        Draw whatever you like!\r
+        - What happens if you use two different angles
+        in your stair step pattern?\r
+        - What happens if you make your diamond pattern
+        longer or shorter?\r
+        - What does it look like to draw two snowflakes on top
+        of one another?
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
@@ -10903,6 +11017,9 @@
       courseE_bee_ramp14_instruction: |-
         Help the bee follow the path to gather all
         of the honey and all of the nectar.
+      courseE_bee_ramp14_2018_instruction: |-
+        Help the bee follow the path to gather
+        all of the honey and all of the nectar.
       courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
@@ -11057,6 +11174,9 @@
       courseE_farmer_predict1_instruction: |-
         Pick all of the lettuce (only while there
         is some to pick.)
+      courseE_farmer_predict1_2018_instruction: |-
+        Pick all of the lettuce (only while
+        there is some to pick.)
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
@@ -11068,6 +11188,9 @@
       courseE_farmer_ramp12_instruction: |-
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.
+      courseE_farmer_ramp12_2018_instruction: |-
+        Now use nested loops to solve this
+        puzzle.
       courseE_farmer_ramp12_forswap_instruction: |-
         Now use nested loops to solve this
         puzzle.
@@ -11077,6 +11200,9 @@
       courseE_farmer_ramp12a_instruction: |-
         Help the farmer correctly travel the path
         to gather all of the lettuce.
+      courseE_farmer_ramp12a_2018_instruction: |-
+        Help the farmer correctly travel
+        the path to gather all of the lettuce.
       courseE_farmer_ramp12b_instruction: While there is lettuce, pick lettuce!
       courseE_farmer_ramp12b_2018_instruction: While there is lettuce, pick lettuce!
       courseE_farmer_ramp12c_instruction: |-
@@ -11114,7 +11240,13 @@
       courseE_farmer_ramp13_instruction: |-
         Pick corn if there is corn, and pick lettuce
         while there is lettuce.
+      courseE_farmer_ramp13_2018_instruction: |-
+        Pick corn if there is corn, and pick
+        lettuce while there is lettuce.
       courseE_farmer_ramp15_instruction: |-
+        Solve this puzzle using only the blocks
+        available.
+      courseE_farmer_ramp15_2018_instruction: |-
         Solve this puzzle using only the blocks
         available.
       courseE_farmer_ramp16_instruction: |-
@@ -11430,8 +11562,15 @@
       courseF_artist_ramp10_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
+      courseF_artist_ramp10_2018_instruction: |-
+        Now, drag the code for the last triangle
+        into a new loop to spin it around and make a snowflake!
       courseF_artist_ramp8_instruction: Now make a square using Artist!
+      courseF_artist_ramp8_2018_instruction: Now make a square using Artist!
       courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseF_artist_ramp9_2018_instruction: |-
+        Use what you've learned to draw this
+        triangle.
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -11793,6 +11932,9 @@
       courseF_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
+      courseF_farmer_ramp11_2018_instruction: |-
+        This puzzle also uses nested loops.  Can
+        you figure out how?
       courseF_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
@@ -11803,10 +11945,15 @@
         Use what you've learned to get the bird
         to the pig!
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseF_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
+      courseF_maze_ramp5_2018_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
+      courseF_maze_ramp6_2018_instruction: |-
+        "Keep calm and help me find the bad
+        pig. Otherwise I might get angry!"
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
@@ -11960,6 +12107,9 @@
       coursef_maze_ramp3_instruction: |-
         There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      coursef_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       drawings!_instruction: |-
         Draw the equilateral triangle - all the sides are the
         same!
@@ -14002,6 +14152,29 @@
         \r
         This dog's name is Daisy. Daisy LOVES to snack on
         carrots. Use the "drag and drop" block to move the carrot to Daisy.
+      loops_forvideo_angrybirds_ab_instruction: |-
+        Use loops to get the bird to the
+        pig!
+      loops_forvideo_angrybirds_cf_instruction: |-
+        Use loops to get the bird to the
+        pig!
+      loops_forvideo_bee_cf_instruction: |-
+        Use loops to help the bee get nectar from
+        all the flowers!
+      loops_forvideo_collector_ab_instruction: |-
+        Use loops to help the collector get
+        all the gems!
+      loops_forvideo_collector_cf_instruction: |-
+        Use loops to help Laurel collect
+        gems!
+      loops_forvideo_harvester_ab_instruction: |-
+        Use loops to help the harvester pick
+        the corn!
+      loops_forvideo_harvester_cf_instruction: |-
+        Use loops to help the harvester pick
+        her crops!
+      loops_forvideo_iceage_ab_instruction: Use loops to get Scrat to the acorn!
+      loops_forvideo_iceage_cf_instruction: Use loops to get Scrat to the acorn!
       love_spring_1_instruction: |-
         Let's celebrate Spring!  We have put some seeds
         in the ground to prepare for the season's flowers.  Can you cover them up
@@ -14016,6 +14189,7 @@
         \r
         When you're ready, press "Run"
         and play until you guess Robin's number!
+      marina_gameLab_play_instruction: Clone this level and make your own blocks!
       mike3bit_instruction: |-
         We start you with the 4x2 image Maddie was creating,
         but we've left out the last few pixels. Finish off the image by figuring

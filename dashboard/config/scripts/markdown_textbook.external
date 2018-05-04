@@ -4,9 +4,11 @@ description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # In this lesson...
 
-Have you ever wanted to tell someone exactly what to do? Do they always listen to you?
+### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?
 
-Today, you'll be telling a machine what to do, step by step- and it will listen!
+### Today, you'll be telling a machine what to do, step by step- and it will listen!
+
+---
 
 ## Blocks to Know
 

@@ -1,5 +1,5 @@
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
 
 var levelDef = {

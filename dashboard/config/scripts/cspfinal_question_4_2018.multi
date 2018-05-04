@@ -1,0 +1,11 @@
+name 'CSPFinal_Question_4_2018'
+question 'The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?'
+
+wrong '32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity'
+wrong 'IPv6 will allow problems with IPv4\’s address hierarchy to be resolved'
+wrong 'IPv4 proved unreliable in some cases where network redundancy could not be ensured'
+right '32-bit addresses could not ensure that every internet-connected device can receive a unique IP address'
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -882,7 +882,7 @@ es-MX:
         courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con el maíz, pero ¿y las otras verduras?
       course4_collector_nested_loops_challenge2_callout: [ ]
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
+        courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden utilizar en este acertjo.
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
       courseA_artist_loops7_callout:
@@ -892,20 +892,20 @@ es-MX:
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: Este número significa que solo uno de este tipo de bloque se puede usar en la respuesta final.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: '¿Sabias que puedes dibujar sobre una linea cuando lo necesites?'
       courseA_artist_loops8_2018_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: '¿Sabias que puedes dibujar sobre una linea cuando lo necesites?'
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
       courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
+        gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se pueden utilizar en este acertjo.
       courseA_collector_loops3_2018_callout:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: '¡Clica aquí para ver el código ejecutado!'
+        courseA_collector_preLoops1_1: '¡Haz clic aquí para ver el código ejecutase!'
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
       courseA_collector_preLoops3_callout:
@@ -931,17 +931,17 @@ es-MX:
       courseA_maze_ramp5_2018_callout: [ ]
       courseA_maze_ramp5a_2018_callout: [ ]
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: '¡Clica en la bombilla cuando necesites una pista!'
+        courseA_maze_seq1_1: '¡Haz clic en la bombilla cuando necesites ayuda!'
       courseA_maze_seq1_2018_callout:
-        courseA_maze_seq1_1: '¡Clica en la bombilla cuando necesites una pista!'
+        courseA_maze_seq1_1: '¡Haz clic en la bombilla cuando necesites ayuda!'
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Usa el botón de paso para ir paso a paso a través del programa. ¡Esto te ayudará a encontrar el error!
       courseA_maze_seq2_2018_callout:
         courseA_maze_seqA_callout1: Usa el botón de paso para ir paso a paso a través del programa. ¡Esto te ayudará a encontrar el error!
       courseA_maze_seq4_callout:
-        made_of_stone: Estos bloques están hechos de piedra. Puede moverlos, pero no puede eliminarlos!
+        made_of_stone: Estos bloques están hechos de piedra. ¡Puedes moverlos, pero no eliminarlos!
       courseA_maze_seq4_2018_callout:
-        made_of_stone: Estos bloques están hechos de piedra. Puede moverlos, pero no puede eliminarlos!
+        made_of_stone: Estos bloques están hechos de piedra. ¡Puedes moverlos, pero no eliminarlos!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events2_2018_callout: [ ]
@@ -952,13 +952,13 @@ es-MX:
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Esta es una llamada
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Haga clic aquí para cambiar la dirección de la flecha del evento.
+        courseA_playLab_events5_1: Haz clic aquí para cambiar la dirección de la flecha del evento.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: Haga clic aquí para cambiar la dirección de la flecha del evento.
+        courseA_playLab_events5_1: Haz clic aquí para cambiar la dirección de la flecha del evento.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Esto te permite elegir un sonido "aleatorio", lo que significa que no sabes que vas a escuchar!
       courseA_playLab_events6_2018_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Esto te permite elegir un sonido "aleatorio", lo que significa que no sabes que vas a escuchar!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -967,9 +967,9 @@ es-MX:
       courseB_Scrat_ramp4a_2018_callout: [ ]
       courseB_Scrat_ramp5a_2018_callout: [ ]
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo se utilizará?
       courseB_artist_loops3_2018_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+        courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo se utilizará?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Este número significa que no hay más que este bloque en la caja de herramientas.
       courseB_artist_loops5_2018_callout:
@@ -979,23 +979,23 @@ es-MX:
       courseB_collector_loops1_2018_callout:
         courseB_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: '¡Clica en la bombilla cuando necesites una pista!'
+        courseB_maze_seq1: '¡Haz clic en la bombilla cuando necesites ayuda!'
       courseB_maze_seq1_2018_callout:
-        courseB_maze_seq1: '¡Clica en la bombilla cuando necesites una pista!'
+        courseB_maze_seq1: '¡Haz clic en la bombilla cuando necesites ayuda!'
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Usa el botón de paso para ir paso a paso a través del programa. ¡Esto te ayudará a encontrar el error!
       courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Usa el botón de paso para ir paso a paso a través del programa. ¡Esto te ayudará a encontrar el error!
       courseB_maze_seq3_callout:
-        courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden tirarse.
+        courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden desecharse.
       courseB_maze_seq3_2018_callout:
-        courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden tirarse.
+        courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden desecharse.
       courseB_maze_seq7_callout: [ ]
       courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use la flecha verde desplegable para cambiar las direcciones.
+        courseB_playlab_events6_a: Usa la flecha verde desplegable para cambiar la direccion.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Use la flecha verde desplegable para cambiar las direcciones.
+        courseB_playlab_events6_a: Usa la flecha verde desplegable para cambiar la direccion.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Use this block for when Waddles and Chomp touch!
       courseC_PlayLab_events8_2018_callout:
@@ -1274,13 +1274,13 @@ es-MX:
         courseD_collector_ramp8_1: 'Usa este bloque para recolectar una sola pieza de tesoro.  '
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: '¡La caja de herramientas está organizado un poco diferente esta vez! Haz clic en las diferentes categorías para ver que bloques tienes.'
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions10b_2018_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions11_predict_2018_callout: [ ]
       courseE_farmer_functions1_2018_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: '¡La caja de herramientas está organizado un poco diferente esta vez! Haz clic en las diferentes categorías para ver que bloques tienes.'
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions1a_2018_callout:
@@ -1393,11 +1393,17 @@ es-MX:
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_predict1_callout: [ ]
+      courseF_artist_predict1_2018_callout: [ ]
       courseF_artist_ramp10_callout: [ ]
+      courseF_artist_ramp10_2018_callout: [ ]
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Tu puedes cambiar este número.
         courseE_artist_ramp8_2: Haz clic aquí para ingresar la cantidad de veces que se repite tu código.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Tu puedes cambiar este número.
+        courseE_artist_ramp8_2: Haz clic aquí para ingresar la cantidad de veces que se repite tu código.
       courseF_artist_ramp9_callout: [ ]
+      courseF_artist_ramp9_2018_callout: [ ]
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
       courseF_artist_variables10_callout: [ ]
@@ -1513,12 +1519,21 @@ es-MX:
       courseF_maze_ramp13_callout: [ ]
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseF_maze_ramp5_callout: [ ]
+      courseF_maze_ramp5_2018_callout: [ ]
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas veces como le indique, luego continuará ejecutando el resto del programa.
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Cualquier código que ingrese aquí se repetirá tantas veces como le indique, luego continuará ejecutando el resto del programa.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
@@ -1562,8 +1577,10 @@ es-MX:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Así es como se establece el valor de tu variable.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press "Run" to start your program.
+        grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona "Ejecutar" para iniciar tu programa.
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]
       frozen circle function with parameter_callout:
@@ -1595,7 +1612,7 @@ es-MX:
       frozen square snowflake_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How will you use it?
+        grade1_artist_loops2_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo se utilizará?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: '¡Estos bloques grises están hechos de piedra! Eso significa que no pueden ser destruidos.'
       grade2_CaringForNewPet_0_callout:
@@ -1756,13 +1773,13 @@ es-MX:
       gradek_artist_loops3_callout:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
+        gradek_artist_loops7_1: '¿Sabias que puedes dibujar sobre una linea cuando lo necesites?'
       gradek_playlab_events1c_callout: [ ]
       gradek_playlab_events2c_callout: [ ]
       gradek_playlab_events3c_callout: [ ]
       gradek_playlab_events4c_callout: [ ]
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Esto te permite elegir un sonido "aleatorio", lo que significa que no sabes que vas a escuchar!
       harvester_Kahoot_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       iceage_click_hello_callout: [ ]

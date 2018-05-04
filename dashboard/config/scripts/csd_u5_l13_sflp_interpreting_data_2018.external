@@ -1,0 +1,18 @@
+name 'CSD U5 L13 SFLP Interpreting Data_2018'
+display_name 'Overview'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+Go further into the interpreting of data by finding looking at the relationships between two different types of data. Look at how finding relationships can help you solve problems.
+
+## Resources
+
+* [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide
+* [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Interpreting Data - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))
+MARKDOWN

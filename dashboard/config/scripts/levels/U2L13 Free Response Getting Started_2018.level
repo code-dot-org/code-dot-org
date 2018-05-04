@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Tell Me a Secret: Getting Started",
+    "markdown_instructions": "In what situations on the Internet do you typically want to keep information secret? \n\nFrom whom do you want to keep it to be secret? \n\nHow do you think your privacy is maintained on the Internet now?\n\n\n",
+    "encrypted_solution": "10NUU7ZqSKJa4Deg0Fsfm+ad4Ls9mTLxFnORZRSCFJQ=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2542,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

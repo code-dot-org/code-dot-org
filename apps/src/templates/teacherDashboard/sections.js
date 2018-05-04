@@ -17,6 +17,7 @@ import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionCont
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -67,6 +68,25 @@ export function renderLoginTypeControls(sectionId) {
     </Provider>,
     loginTypeControlsMountPoint()
   );
+}
+
+export function renderStatsTable(section) {
+  const dataUrl = `/dashboardapi/sections/${section.id}/students/completed_levels_count`;
+  const element = document.getElementById('stats-table-react');
+
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(studentsCompletedLevelCount => {
+    ReactDOM.render(
+      <StatsTable
+        section={section}
+        studentsCompletedLevelCount={studentsCompletedLevelCount}
+      />,
+      element
+    );
+  });
 }
 
 export function renderSectionTable(sectionId, loginType, courseName) {

@@ -13,7 +13,7 @@ module Pd::Application
       'Allegheny Intermediate Unit 3' => TC_PHOENIX,
       'Teachers Teaching Tech (ND, SD, WY)' => TC_PHOENIX,
       'Fresno County Superintendent of Schools' => TC_ATLANTA,
-      'Institute for School Partnership  Washington University in St. Louis' => TC_ATLANTA,
+      'Institute for School Partnership Washington University in St. Louis' => TC_ATLANTA,
       'Mississippi State University' => TC_ATLANTA,
       'Sacramento County Office of Education' => TC_PHOENIX,
       'Tampa Bay STEM Network' => TC_ATLANTA,

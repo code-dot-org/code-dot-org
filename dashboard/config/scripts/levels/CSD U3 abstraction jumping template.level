@@ -104,10 +104,7 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

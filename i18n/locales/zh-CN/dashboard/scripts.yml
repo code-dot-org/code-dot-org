@@ -4072,7 +4072,7 @@ zh-CN:
             Debugging in Maze:
               name: 迷宫里的调试
             Loops in Harvester:
-              name: 收割机中的循环
+              name: 收割者中的循环
         coursed-draft:
           title: 'CS Fundamentals: Course D'
           description_audience: ''
@@ -4100,7 +4100,7 @@ zh-CN:
             Conditionals & Loops in Maze:
               name: 迷宫里的条件和循环
             Conditionals & Loops in Farmer:
-              name: 收割机里的条件和循环
+              name: 收割者里的条件和循环
             Impacts of Computing:
               name: 计算的影响
             More Programming with CS4FN:
@@ -5457,7 +5457,7 @@ zh-CN:
             Loops in Maze:
               name: 循环在迷宫中
             Loops in Harvester:
-              name: 收割机中的循环
+              name: 收割者中的循环
             'Events: The Big Event':
               name: '事件: 大事件'
             Build a Flappy Game:
@@ -5481,7 +5481,7 @@ zh-CN:
             Introduction:
               name: 在线拼图简介
               description_student: 这堂课会让你练习在这个课程中所需要的技巧。
-              description_teacher: '在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割机。'
+              description_teacher: '在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割者。'
             'Algorithms: Graph Paper Programming':
               name: '编程：图纸编程'
               description_student: 在这一课中，你会给你的朋友编程来画画！
@@ -5521,7 +5521,7 @@ zh-CN:
               description_student: 当你把条件和循环一起使用时，你能做出一些令人惊奇的事情！
               description_teacher: '这堂课程，学生们会同时学习两个关键概念：循环和条件。这个关卡会在使用多种类型的模块后，帮助理解这些概念。通过将这两个概念放到一起，学生们能够床操更复杂的代码来展示创造力和批判性思维。'
             Conditionals & Loops in Farmer:
-              name: 收割机里的条件和循环
+              name: 收割者里的条件和循环
               description_student: 当使用条件时，不是每次都会很清楚。这一课会帮助你练习决定应该做什么。
               description_teacher: 学生们会练习`当`循环，`直到`循环和`如果/否则`语句。所有这些模块都用了条件语句。通过练习这三种语句，学生们能学会写复杂而灵活的代码。
             Digital Citizenship:
@@ -6113,7 +6113,7 @@ zh-CN:
             Nested Loops:
               name: 循环嵌套
             Conditionals & Loops in Harvester:
-              name: 收割机里的条件和循环
+              name: 收割者里的条件和循环
           title: 快速课程
           description_audience: '年龄：9-18'
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
@@ -7462,7 +7462,7 @@ zh-CN:
             Programming in Harvester:
               name: 与收割者编程
             Loops in Harvester:
-              name: 收割机中的循环
+              name: 收割者中的循环
             Sequencing in Maze:
               name: 迷宫中的序列
         express-2018:
@@ -7611,6 +7611,10 @@ zh-CN:
               name: 介绍您的项目
               description_student: ''
               description_teacher: ''
+            Conditionals in Bee:
+              name: 蜜蜂里的条件
+            Until Loops in Maze:
+              name: Until Loops in Maze
         courseb-2018:
           title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -7674,7 +7678,7 @@ zh-CN:
             Loops in Ice Age:
               name: 冰河时代里的循环
             Sequencing with Scrat:
-              name: Sequencing with Scrat
+              name: 斯奎特和序列
             Move It, Move It:
               name: 移动它，移动它！
         coursed-2018:
@@ -7753,6 +7757,12 @@ zh-CN:
               description_teacher: ''
             Loops in Ice Age:
               name: 冰河时代里的循环
+            Nested Loops in Frozen:
+              name: 冰雪奇缘里的嵌套循环
+            Until Loops in Maze:
+              name: Until Loops in Maze
+            Conditionals in Maze:
+              name: Conditionals in Maze
         jr-test:
           stages:
             Programming with Behaviors:
@@ -7766,9 +7776,9 @@ zh-CN:
             Virtual Pet - Behaviors:
               name: 虚拟宠物 - 行为
             Fish Tank:
-              name: Fish Tank
+              name: 鱼缸
             Virtual Pet - Forever:
-              name: Virtual Pet - Forever
+              name: 虚拟宠物 - 永远
           title: ''
           description_audience: ''
           description_short: ''
@@ -7806,49 +7816,49 @@ zh-CN:
             Unit 2 - Assessment 5 - Practice AP Pseudocode Questions:
               name: 第2单元 - 评估 5 - 练习 AP 伪代码问题
             'Unit 1.1 - Binary and Ascii ':
-              name: 'Unit 1.1 - Binary and Ascii '
+              name: '单元 1.1 - 二进制和Ascii码 '
             Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.:
-              name: Unit 1.2 - Internet Protocols, TCP/IP, DNS, HTTP, etc.
+              name: 单元1.2 - 互联网协议，TCP/IP，DNS，HTTP，等等。
             Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2 - 1. Bits, Bytes, Hexadecimal and Compression
+              name: 单元 2 - 1. 比特，字节，十六进制和压缩
             Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2 - 2. Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元2 - 2. 解释数据、图标、大数据、全局影响
             Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction:
-              name: Unit 3 - 1. Programming - Turtle, Loops, Functions, Abstraction
+              name: 单元3 - 1. 编程 - 乌龟、循环、函数、抽象
             Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction:
-              name: Unit 3 - 1 Programming - Turtle, Loops, Functions, Abstraction
+              name: 单元3 - 1. 编程 - 乌龟、循环、函数、抽象
             'Unit 1 Assessment 1 - Binary and Ascii ':
-              name: 'Unit 1 Assessment 1 - Binary and Ascii '
+              name: '单元1 评估1 - 二进制和Ascii码 '
             Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc:
-              name: Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc
+              name: 单元1 评估 2 - 互联网协议，TCP/IP，DNS，HTTP，等等。
             Unit 2-1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2-1 - Bits, Bytes, Hexadecimal and Compression
+              name: 单元 2-1 - 比特，字节，十六进制和压缩
             Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2-2 - Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元 2-2 - 解释数据、图标、大数据、全局影响
             Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Unit 3 Quiz 1 - Turtle Programming, Loops, Functions, Abstraction
+              name: 单元3 测验1 - 乌龟编程，循环，函数，抽象
             Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression:
-              name: Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression
+              name: 单元2 评估1 - 比特，字节，十六进制和压缩
             Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts:
-              name: Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts
+              name: 单元2 评估2 - 解释数据、图标、大数据、全局影响
             Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction:
-              name: Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction
+              name: 单元3 评估1 - 乌龟编程，循环，函数，抽象
             Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption:
-              name: Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption
+              name: 单元4 评估1 - 隐私，网络安全，加密
             Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review:
-              name: Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review
+              name: 单元5 评估1 - 事件，变量，调试，算术，乌龟评论
             Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings:
-              name: Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings
+              name: 单元5 评估2 - 如果语句，布尔表达式，字符串
             Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists:
-              name: Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists
+              name: 单元5 评估3 - 当循环，布尔表达式，数组和列表
             Unit 5 Assessment 4 - List Algorithms, Functions with Return Values:
-              name: Unit 5 Assessment 4 - List Algorithms, Functions with Return Values
+              name: 单元5 评估4 - 列表算法， 有返回值的函数
             Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals):
-              name: Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)
+              name: 单元5 评估5 - 练习AP伪代码问题（变量，过程，循环，条件）
           title: 计算机科学原理AP测试准备
           description_audience: ''
           description_short: 计算机科学原理AP测试准备
-          description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  '
+          description: '这一页包含了所有出现在课程单元1-5中的多个选择的评估问题的副本。  学生们可能会想通过重新做这些小测试来练习多选测验。  '
         coursec-2018:
           title: 课程 C
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
@@ -7892,7 +7902,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
-              name: 收割机中的循环
+              name: 收割者中的循环
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -7915,6 +7925,8 @@ zh-CN:
               name: 二进制的手镯
               description_student: ''
               description_teacher: ''
+            Looking Ahead:
+              name: 展望未来
         csd6-2018:
           title: CSD 6 单元- 物理计算
           description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和 Adafruit 的电路面板, 您将开发一些利用您在智能设备中看到的相同的硬件输入和输出的程序, 并查看简单粗糙原型是如何变成成品的。该单位的最后是一个设计挑战, 你要以电路操场作为基础来制作自己设计的创新项目。
@@ -7922,66 +7934,381 @@ zh-CN:
           description_audience: ''
           stages:
             Innovations in Computing_:
-              name: Innovations in Computing_
+              name: 计算中的创新_
               description_student: ''
               description_teacher: ''
             Designing Screens with Code_:
-              name: Designing Screens with Code_
+              name: 使用代码设计屏幕_
               description_student: ''
               description_teacher: ''
             The Circuit Playground_:
-              name: The Circuit Playground_
+              name: 电路游戏板_
               description_student: ''
               description_teacher: ''
             Input Unplugged_:
-              name: Input Unplugged_
+              name: 线下输入_
               description_student: ''
               description_teacher: ''
             Board Events_:
-              name: Board Events_
+              name: 主板事件_
               description_student: ''
               description_teacher: ''
             Getting Properties_:
-              name: Getting Properties_
+              name: 取值器属性_
               description_student: ''
               description_teacher: ''
             Analog Input_:
-              name: Analog Input_
+              name: 模拟输入_
               description_student: ''
               description_teacher: ''
             The Program Design Process_:
-              name: The Program Design Process_
+              name: 程序设计过程_
               description_student: ''
               description_teacher: ''
             'Project: Make a Game__':
-              name: 'Project: Make a Game__'
+              name: '项目: 创建游戏_'
               description_student: ''
               description_teacher: ''
             Arrays and Color LEDs__:
-              name: Arrays and Color LEDs__
+              name: 数组和彩色LED灯_
               description_student: ''
               description_teacher: ''
             Making Music_:
-              name: Making Music_
+              name: 制作音乐_
               description_student: ''
               description_teacher: ''
             Arrays and For Loops_:
-              name: Arrays and For Loops_
+              name: 数组和计数循环_
               description_student: ''
               description_teacher: ''
             Accelerometer_:
-              name: Accelerometer_
+              name: 加速度_
               description_student: ''
               description_teacher: ''
             Functions with Parameters_:
-              name: Functions with Parameters_
+              name: 有参数的函数_
               description_student: ''
               description_teacher: ''
             Circuits and Physical Prototypes_:
-              name: Circuits and Physical Prototypes_
+              name: 电路和物理原型_
               description_student: ''
               description_teacher: ''
             'Project: Prototype an Innovation_':
-              name: 'Project: Prototype an Innovation_'
+              name: '项目：创新原型_'
+              description_student: ''
+              description_teacher: ''
+        coursee-2018:
+          title: 课程 E
+          description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+          description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
+          description_audience: '年龄：8-12'
+          stages:
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: 迷宫中的序列
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: 打基础
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: 斯奎特和调试
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: 艺术家里的编程
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: 艺术家里的循环
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: 循环嵌套
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Dice Race':
+              name: '算法: 骰子竞赛'
+              description_student: 在这堂课中，学习如何从计算机的角度来描述一个游戏。
+              description_teacher: 在这堂课中，学生们将会将算法的概念通过骰子游戏来带到真实生活的活动中。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。
+            Introduction:
+              name: 介绍
+              description_student: 这个快节奏的介绍能让你有机会练习大多数技能，你需要在这个课程中用它们来解决难题。
+              description_teacher: 在这个过程中，学生们会从一个Code.org的在线工作区的介绍（或者回顾）开始。学生们会学习到界面的基本功能，比如`运行`，`重置`和`步进`按钮。拖拽、删除和连接模块也会在开始的视频中。在这些关卡中，学生们会在迷宫和艺术中练习序列和调试技巧。
+            Conditionals:
+              name: 条件语句
+              description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
+              description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
+            Private and Personal Information:
+              name: 私人和个人信息
+              description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
+              description_teacher: |-
+                由常识教育开发，这堂课关于什么信息能够安全的在线共享，但什么不能共享。
+                
+                当学生们参观网站时，会要求他们的个人信息，他们会学会采取批判性的思维来保护他们和家庭远离信息窃贼。在这堂课中，学生们会学会批判性的思考一些网站请求或强制要求的个人信息。他们会学会隐私信息和个人信息间的不同，也会区别能不能安全的共享的不同。
+            Build a Star Wars Game:
+              name: 建立一个星球大战游戏!
+              description_student: 在这堂课程，创建自己的星球大战游戏来体会原力吧。
+              description_teacher: 在这堂课中，学生们会练习使用事件来创建一个能在线共享的游戏。学生们会被引导学习事件，用R2-D2和其它星球大战的角色，来创造他们自己的游戏。
+            'Functions: Songwriting':
+              name: '功能: 作曲'
+              description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
+              description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
+            Functions in Artist:
+              name: 艺术家之间的功能
+              description_student: 用函数来让复杂的图画变得更简单！
+              description_teacher: 学生们会学习Code.org上的函数。小艺术家中的大部分图片都会通过函数来创造或更改。为了一些更复杂的模式，学生们会学习一个函数内部调用另一个函数的嵌套函数。
+            Functions in Bee:
+              name: 蜜蜂中的函数
+              description_student: 不要写太多的代码来收集所有的花蜜和蜂蜜。用函数！
+              description_teacher: 在在线函数的第二轮练习中，学生们会通过复杂的路径，收集大量的花蜜，酿出大量的蜂蜜。
+            Functions in Harvester:
+              name: 收割者中的函数
+              description_student: ''
+              description_teacher: ''
+            Determine the Concept:
+              name: 确定概念
+              description_student: "我们不会放弃任何秘密！\n这一课会用到你学到的所有技能。"
+              description_teacher: 这堂课将以前课程的概念带到了一起，给了学生一次批判性思考来解决问题的机会。但没有告诉他们哪些概念会被用到。学生们会回顾基本的算法，调试，`重复`循环，条件，`当`循环和函数。
+            Build a Play Lab Game:
+              name: 建立一个剧本实验室游戏
+              description_student: 练习制作游戏来与朋友和亲人共享。
+              description_teacher: 这堂课程学习剧本实验室，这是一个学生们能创造自己的游戏的平台，还能在角色和用户输入间互动。学生们会通过事件来创建键盘输入。这组关卡会松散的指导学生学习游戏开发，但会让学生们能自由的加入自己的创意。
+            Explore Project Ideas:
+              name: 探索项目理念
+              description_student: 这里有几个游戏和绘画。每个都玩一下来获得自己项目的灵感！
+              description_teacher: "接下来的4堂课会给学生们一个机会来将他们的代码技巧用到一个实际项目中。这个项目会帮助他们获得编码经验，并制造一个能够分享给伙伴和亲人的样例。在一堂多节课和多周的体验中，学生们会花时间来进行头脑风暴，学习调试的过程，建立和演示他们的最终作品。 \n\n在探索阶段，学生们能浏览小艺术家和剧本实验室中的样例项目来获得灵感。接下来，学生们会学习设计过程，如何在它们自己的项目中实现这些。然后会考虑在小艺术家或剧本实验室中创建他们自己的项目（这应该是这个项目最长的一个阶段）。最终，学生们会相互演示他们的最终作品。"
+            The Design Process:
+              name: 设计过程
+              description_student: 大项目会花很多时间来计划。在这里，你会学习关于设计的流程，然后用它来创建自己的作品。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。学生们会学习设计过程，和如何在自己的项目中实现它。这堂课指导的这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Build Your Project:
+              name: 创建项目
+              description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在学生们会有自己的空间来使用小艺术家或剧本实验室来创建他们自己的项目了。这可能是四堂课中最长的一个阶段。这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Present Your Project:
+              name: 介绍您的项目
+              description_student: 准备好展示！是时候把你完成的项目向伙伴们展示了。
+              description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最终，学生们将能向伙伴们展示他们的最终作品，或者给他们的亲友共享一个链接。这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
+            Internet:
+              name: 互联网
+              description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
+              description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
+            Crowdsourcing:
+              name: 众包
+              description_student: 这堂课会教你众包的概念，这是通过团队来完成一个项目的过程。
+              description_teacher: 在计算机科学中，我们面对一些很大的，令人气馁的问题。这些挑战像是找到最大的质数，或给DNS测序，这些基本上不可能由人来完成。增加一些来自其它人的力量会让这些任务可以被管理。这堂课会给你的学生展示团队合作如何在计算机科学的工业中有帮助的。
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+        coursef-2018:
+          title: 课程 F
+          description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
+          description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
+          description_audience: '年龄：9-13'
+          stages:
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+              description_student: ''
+              description_teacher: ''
+            Sequence in Maze:
+              name: 迷宫中的序列
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: 打基础
+              description_student: ''
+              description_teacher: ''
+            Debugging with Scrat:
+              name: 斯奎特和调试
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: 艺术家里的编程
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: 艺术家里的循环
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee/Zombie:
+              name: 蜜蜂/僵尸里的嵌套循环
+              description_student: ''
+              description_teacher: ''
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+              description_student: ''
+              description_teacher: ''
+            'Algorithms: Tangrams':
+              name: '算法：七巧板'
+              description_student: 在这里，你会用叫做七巧板的关卡学习算法！
+              description_teacher: 这趟课程向我们展示了算法有时的重要性。如果你让算法保持简单，就会有很多种办法来使用它。无论如何，如果你想让确保每个人都由童谣的输出，那么你的算法需要更具体。学生们会在玩七巧板时学习到具体算法和通用算法的区别。
+            Introduction:
+              name: 介绍
+              description_student: 这节课会给你一个大致的介绍，让你知道你会在这门课程中学到的一些令人惊奇的东西。
+              description_teacher: '在这节课中，学生们会被介绍到序列、循环和嵌套循环，从而准备这门课程后面部分的复杂概念。这节"提升"课程等于你的班级中专家和新手之间的水平。 '
+            The Power of Words:
+              name: 语言的力量
+              description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
+              description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
+            Ice Age Play Lab:
+              name: 冰河世界游戏实验室
+              description_student: 想想你喜欢的电子游戏。有没有好奇过它是怎么做出来的？在这些关卡中，你会开发一个自己的冰川时代电子游戏！
+              description_teacher: 这节课中，学生们会被指导通过一个冰河世纪故事中角色的故事。学生们会用事件、循环来让角色在屏幕上移动，然后会有机会在向导关卡后创造自己的游戏或故事。
+            Conditionals in Minecraft:
+              name: '《我的世界》中的条件'
+              description_student: 躲开岩浆！在《我的世界》里，你会学习条件。
+              description_teacher: 这节课会让学生们学习并练习条件。这是《我的世界》里的角色和设定，学生们会用程序完成一些任务，比如挖矿、创建建筑物。
+            Envelope Variables:
+              name: 封装变量
+              description_student: '封装和变量有一些相同之处：两者都能保存有用的东西。这里你会学到什么是变量，和它们令人惊奇的作用。'
+              description_teacher: 变量被用作值的占位符，例如数字或词语。变量在编程中带来了很大的自由性。在编程中不需要打出同样的内容很多词，或者记住一个隐晦的数字，计算机科学家们用变量来引用它们。这节课帮助解释什么是变量，怎样通过不同的方法使用它们。变量的理念不容易领会，因此我们推荐在课程的结尾允许大量时间的讨论。
+            Variables in Artist:
+              name: 艺术家中的变量
+              description_student: 别忘了将创意带到课堂中！在这些关卡中，你会用变量做出了不起的图画。
+              description_teacher: 这节课中，学生们会在小艺术家环境中用变量来探索重复的设计。学生们会学习到变量如何能被用来让代码更容易书写和阅读。在指导的关卡后，学生们会在自由关卡中结束，他们能展示他们学到了什么，创造他们自己的图案。
+            Variables in Play Lab:
+              name: 戏剧实验室里的变量
+              description_student: 很快你会学到如何在游戏中使用变量来和角色互动！
+              description_teacher: 这节课中，学生们会通过在剧本实验室中创建场景来进一步练习变量。学生们会用用户输入来设置他们的变量，然后有机会用变量来创造他们的迷你项目。
+            For Loop Fun:
+              name: 计数循环的乐趣
+              description_student: 你会在学习`计数循环`中获得很多乐趣！
+              description_teacher: '我们知道，循环让我们能一遍一遍的做一些事情，但现在，我们要学习如何用循环来构建正确的额外结构。这些新结构允许学生们创建更强大和动态的代码。 '
+            For Loops in Bee:
+              name: 蜜蜂式里的循环
+              description_student: 嗡嗡嗡。在这些关卡中，将会有一只蜜蜂来引导你用`计数循环`来采花蜜、酿蜂蜜。
+              description_teacher: 以蜜蜂为特点，这节课着重在计数循环，并用一个增量来解决复杂的关卡。学生们会从回顾前面课程的循环开始，然后学会用计数循环来更有效的解决复杂的问题。
+            For Loops in Artist:
+              name: 对于艺术家里的循环
+              description_student: 准备好制作你的下一个杰作。这里，你会用`计数循环`来制作一些令人惊叹的图片。
+              description_teacher: 在这节课中，学生们会继续练习计数循环，这次是和小艺术家一起。学生们会组合变量、循环、和计数循环创建复杂的图像，来完成关卡。结束时，他们有机会在自由关卡中创建他们自己的艺术。
+            Songwriting with Parameters:
+              name: 通过输入参数来作曲。
+              description_student: 你刚刚可能发布了下一个著名的主打单曲！在这课中，你会学习参数是什么，他们如何写出一些令人惊叹的歌。
+              description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的，并且他们应该怎样在代码有些不同的时候，利用这些结构。
+            Functions in Bee:
+              name: 蜜蜂中的函数
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: 在艺术家里有参数的函数
+              description_student: 把你的编程的手指头放好。在这些关卡中，你会用有参数的函数和小艺术家一起画一些令人静态的图画。
+              description_teacher: 这节课中，学生们会继续用有或没有参数的函数。学生们有机会在自由关卡更改函数前，用有或者没有参数的函数创建他们自己的图画。
+            Functions with Parameters in Bee:
+              name: 蜜蜂里有参数的函数
+              description_student: 你需要在使用有参数的函数时多一点练习。这堂课会继续你和蜜蜂的项目。
+              description_teacher: 这堂课描写了蜜蜂环境，并继续从前一个小艺术家舞台的学习有参数函数的概念。学生们会练习书写，并用函数来跟进复杂的路径，收集有规律的花蜜并酿蜂蜜。
+            Explore Project Ideas:
+              name: 探索项目理念
+              description_student: 是时候获得一些鼓励了！这些关卡会显示少量的内置程序，并显示你的大项目的计划。
+              description_teacher: "接下来的5堂课会给学生们一个机会来将他们的代码技巧用到一个实际项目中。这个项目会帮助他们获得编码经验，并制造一个能够分享给伙伴和亲人的样例。在多节课和多周的体验中，学生们会花时间来进行头脑风暴，学习调试的过程，建立和演示他们的最终作品。 \n\n在探索阶段，学生们能浏览小艺术家和剧本实验室中的样例项目来获得灵感。接下来，学生们会学习设计过程，如何在它们自己的项目中实现这些。然后会考虑在小艺术家或剧本实验室中创建他们自己的项目（这应该是这个项目最长的一个阶段）。学生们会在测试并多思考后，修改他们的项目。最终，学生们会相互演示他们的最终作品。"
+            The Design Process:
+              name: 设计过程
+              description_student: 大项目会花很多时间来计划。在这里，你会学习关于设计的流程，然后用它来创建自己的作品。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。学生们会学习设计过程，和如何在自己的项目中实现它。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Build Your Project:
+              name: 创建项目
+              description_student: 最后，你可以开始构建你的项目了！
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在，学生们有自己的空间来用小艺术家或剧本实验室来创建他们自己的项目了。这会是这个项目中最长的部分了。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Revise Your Project:
+              name: 修改您的项目
+              description_student: 罗马不是一天建成的，你的项目也不是。花时间来编辑并修订你的项目来让它成为最好的项目。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在，项目已经构建好了，学生们有机会来从同伴那里获得反馈并修改项目。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Present Your Project:
+              name: 介绍您的项目
+              description_student: 是时间展示你的工作了！这里，你会给你的同伴展示你的令人惊奇的项目。
+              description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最后，学生们能向同伴们展示他们完成的工作，或者通过链接分享给亲友们。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Conditionals:
+              name: 条件语句
+        csp1-2018:
+          title: CSP Unit 1 - The Internet
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          description_short: Explore the challenges about representing information as bits and how to get those bits from one place to another.
+          description_audience: ''
+          stages:
+            CS Principles Pre-survey:
+              name: 计算机科学原理预调查
+              description_student: ''
+              description_teacher: ''
+            Personal Innovations:
+              name: 个人发明
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages:
+              name: 发送二进制消息
+              description_student: ''
+              description_teacher: ''
+            Sending Binary Messages with the Internet Simulator:
+              name: 在互联网模拟器上发送二进制消息
+              description_student: ''
+              description_teacher: ''
+            Number Systems:
+              name: 数字系统
+              description_student: ''
+              description_teacher: ''
+            Binary Numbers:
+              name: 二进制数
+              description_student: ''
+              description_teacher: ''
+            Sending Numbers:
+              name: 发送数字
+              description_student: ''
+              description_teacher: ''
+            Encoding and Sending Formatted Text:
+              name: 编码和发送格式化文本
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 1 Assessment:
+              name: 第1单元 第1章 评估
+              description_student: ''
+              description_teacher: ''
+            The Internet:
+              name: 互联网
+              description_student: ''
+              description_teacher: ''
+            The Need for Addressing:
+              name: 寻址的需要
+              description_student: ''
+              description_teacher: ''
+            Routers and Redundancy:
+              name: 路由和冗余
+              description_student: ''
+              description_teacher: ''
+            Packets and Making a Reliable Internet:
+              name: 数据包和构建一个可信赖的互联网
+              description_student: ''
+              description_teacher: ''
+            The Need for DNS:
+              name: 域名服务器的需要
+              description_student: ''
+              description_teacher: ''
+            HTTP and Abstraction:
+              name: HTTP 和抽象
+              description_student: ''
+              description_teacher: ''
+            Practice PT - The Internet and Society:
+              name: PT练习 - 互联网和社会
+              description_student: ''
+              description_teacher: ''
+            Unit 1 Chapter 2 Assessment:
+              name: 第1单元 第2章 评估
               description_student: ''
               description_teacher: ''

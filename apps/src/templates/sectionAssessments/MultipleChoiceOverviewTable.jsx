@@ -4,19 +4,38 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
   QUESTION: 0,
-  ANSWER_1: 1,
-  ANSWER_2: 2,
-  NOT_ANSWERED: 3,
+};
+
+const alphabetMapper =  [
+  commonMsg.answerOptionA(),
+  commonMsg.answerOptionB(),
+  commonMsg.answerOptionC(),
+  commonMsg.answerOptionD(),
+  commonMsg.answerOptionE(),
+  commonMsg.answerOptionF(),
+  commonMsg.answerOptionG(),
+];
+
+const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
+  const cell = rowData.answers[columnIndex - 1];
+  return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
+        isCorrectAnswer={cell && cell.isCorrectAnswer}
+      />
+  );
 };
 
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
-  percentAnsweredOptionOne: PropTypes.string,
-  percentAnsweredOptionTwo: PropTypes.string,
+  percentAnswered: PropTypes.string,
+  isCorrectAnswer: PropTypes.bool,
   notAnswered: PropTypes.string,
 });
 
@@ -26,7 +45,7 @@ class MultipleChoiceOverviewTable extends Component {
   };
 
   state = {
-    [COLUMNS.NAME]: {
+    [COLUMNS.QUESTION]: {
       direction: 'desc',
       position: 0
     }
@@ -51,80 +70,59 @@ class MultipleChoiceOverviewTable extends Component {
     });
   };
 
+  getNotAnsweredColumn = () => (
+    {
+      property: 'notAnswered',
+      header: {
+        label: commonMsg.notAnswered(),
+        props: {style: tableLayoutStyles.headerCell},
+      },
+      cell: {
+        props: {style: tableLayoutStyles.cell},
+      }
+    }
+  );
+
+  getAnswerColumn = (index) => (
+    {
+      property: 'percentAnswered',
+      header: {
+        label: alphabetMapper[index],
+        props: {style: tableLayoutStyles.headerCell},
+      },
+      cell: {
+        format: answerColumnsFormatter,
+        props: {style: tableLayoutStyles.cell},
+      }
+    }
+  );
+
+  getQuestionColumn = (sortable) => (
+    {
+      property: 'question',
+      header: {
+        label: commonMsg.question(),
+        props: {style: tableLayoutStyles.headerCell},
+        transforms: [sortable],
+      },
+      cell: {
+        props: {style: tableLayoutStyles.cell},
+      }
+    }
+  );
+
   getColumns = (sortable) => {
-    let dataColumns = [
-      {
-        property: 'question',
-        header: {
-          label: commonMsg.question(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-          }},
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-          }}
-        }
-      },
-      {
-        property: 'percentAnsweredOptionOne',
-        header: {
-          label: commonMsg.answerOptionA(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
-        },
-        cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
-        }
-      },
-      {
-        property: 'percentAnsweredOptionTwo',
-        header: {
-          label: commonMsg.answerOptionB(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
-        },
-        cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
-        }
-      },
-      {
-        property: 'notAnswered',
-        header: {
-          label: commonMsg.notAnswered(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 120,
-          }},
-        },
-        cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 120,
-          }}
-        }
-      },
-    ];
+    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
+      return Math.max(answersTotal, currentAnswerCount.answers.length);
+    }, 0);
+
+    let dataColumns = [];
+    dataColumns.push(this.getQuestionColumn(sortable));
+    for (let i = 0; i < maxAnswerChoicesLength; i++) {
+      dataColumns.push(this.getAnswerColumn(i));
+    }
+    dataColumns.push(this.getNotAnsweredColumn());
+
     return dataColumns;
   };
 

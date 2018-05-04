@@ -63,7 +63,7 @@ const styles = {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.number.isRequired,
+    scriptId: PropTypes.number,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
@@ -173,6 +173,7 @@ export default connect(state => ({
   scriptId: state.sectionProgress.scriptId,
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
+  studentScriptIds: state.sectionProgress.studentScriptIds,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),

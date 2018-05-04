@@ -11,7 +11,12 @@ export default () => {
       if (dashboard.project.isFrozen()) {
         $('.project_admin').html($('<span>&#x2744; Frozen! To use as an example, copy this id: <input type="text" disabled value="' +
           dashboard.project.getCurrentId() +
-          '"/></span>'));
+          '"/><div><button id="unfreeze" class="btn btn-default btn-sm">Unfreeze</button><div></span>'));
+          $('#unfreeze').click(function () {
+            dashboard.project.unfreeze(function () {
+              window.location.reload();
+            });
+          });
       } else {
         $('.project_admin').html($('<button id="freeze" class="btn btn-default btn-sm">Freeze for use as an exemplar &#x2744;</button>'));
         $('#freeze').click(function () {

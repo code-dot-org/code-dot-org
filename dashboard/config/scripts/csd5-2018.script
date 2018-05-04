@@ -1,0 +1,78 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd/unit5/standards/"]]
+has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+
+stage 'Representation Matters', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representation Matters_2018'
+
+stage 'Patterns and Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Patterns and Representation_2018'
+
+stage 'ASCII and Binary Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP ASCII and Binary Representation_2018'
+
+stage 'Representing Images', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Images_2018'
+level 'CSD U5 black white images pixelation_2018', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 2_2018', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 3_2018', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 4_2018', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 5_2018', progression: 'Representing Images'
+
+stage 'Representing Numbers', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 1_2018'
+level 'CSD U5 binary 1_2018', progression: 'Binary Numbers'
+level 'CSD U5 binary 2_2018', progression: 'Binary Numbers'
+level 'CSD U5 binary 4-new_2018', progression: 'Binary Numbers'
+level 'CSD U5 binary 5-new_2018', progression: 'Binary Numbers'
+level 'CSD U5 binary 6-new_2018', progression: 'Binary Numbers'
+level 'CSD U5 binary 7-new_2018', progression: 'Binary Numbers'
+named_level 'CSD U5 binary video_2018'
+
+stage 'Keeping Data Secret', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 2_2018'
+level 'CSD U5 Encryption 2_2018', progression: 'Keeping Data Secret'
+level 'CSD U5 Encryption 1_2018', progression: 'Keeping Data Secret'
+
+stage 'Combining Representations', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Combining Representations_2018'
+level 'CSD U3 combining rep_2018', progression: 'Combining Representations'
+level 'CSD U5 student record_2018', progression: 'Combining Representations'
+
+stage 'Project - Create a Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Create a Representation_2018'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018', progression: 'Reflection'
+
+stage 'Problem Solving and Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving and Data_2018'
+
+stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving with Big Data_2018'
+level 'CSD U5 Netflix Data Video_2018', progression: 'Problem Solving'
+level 'CSD U5 Waze Data Video_2018', progression: 'Problem Solving'
+level 'CSD U5 Amazon Data Video_2018', progression: 'Problem Solving'
+
+stage 'Structuring Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Interpreting Data_2018'
+level 'CSD U5 data visualization_2018', progression: 'Data Visualization'
+level 'CSD U5 Pizza_2018', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2_2018', progression: 'Data Visualization'
+
+stage 'Making Decisions with Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Making Decisions with Data_2018'
+
+stage 'Interpreting Data', flex_category: 'csd5_2'
+named_level 'CSD U5 L13 SFLP Interpreting Data_2018'
+named_level 'CSD U5 crosstab warmup_2018'
+
+stage 'Automating Data Decisions', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Automating Data Decisions_2018'
+
+stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Solve a Data Problem_2018'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018', progression: 'Reflection'

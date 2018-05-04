@@ -1743,12 +1743,19 @@
       courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: Kamu akan menemukan fungsi poligon disini.
       courseF_artist_predict1_callout: []
+      courseF_artist_predict1_2018_callout: []
       courseF_artist_ramp10_callout: []
+      courseF_artist_ramp10_2018_callout: []
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
+          pembuatan kode kamu.
       courseF_artist_ramp9_callout: []
+      courseF_artist_ramp9_2018_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Perhatikan bahwa blok-blok sekarang memiliki
           cara baru untuk memasukkan nomor. Blok-blok `matematika` tersebut bisa ditarik
@@ -1897,14 +1904,28 @@
       courseF_maze_ramp15_callout:
         courseF_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
           Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
+          untuk memulai program mu.
       courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
+          menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
+      courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan
           menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseF_maze_ramp4_callout:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
+          kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseF_maze_ramp5_callout: []
+      courseF_maze_ramp5_2018_callout: []
       courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
+          sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
+          program itu.
+      courseF_maze_ramp6_2018_callout:
         courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
           sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
           program itu.
@@ -1964,6 +1985,9 @@
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
       coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
+          kotak perlengkapan untuk membuangnya.
+      coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam
           kotak perlengkapan untuk membuangnya.
       drawings!_callout: []

@@ -14,6 +14,6 @@ fa:
           description_short: An introductory computer science course that empowers students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer description for students
-          description_teacher: This is a course for allthethings and has a longer description for teachers
+          description_short: این یک دوره برای (allthethings)همه‌ی چیزهاست
+          description_student: این یک دوره برای (allthethings) همه‌ی چیزهاست و توضیحات طولانی‌تری برای دانش‌آموزان دارد
+          description_teacher: این یک دوره برای (allthethings) همه‌ی چیزهاست و توضیحات طولانی‌تری برای معلم ها دارد

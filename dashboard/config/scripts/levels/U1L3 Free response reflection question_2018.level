@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:34.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Sending Complex Messages",
+    "placeholder": "Enter your reflection here.",
+    "markdown_instructions": "Recall when you built your binary message sending device. Why did we decide to send a message as a sequence of states (A and B) rather than modifying our devices to represent more states (State C, State D, State E, ...)?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 1897,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

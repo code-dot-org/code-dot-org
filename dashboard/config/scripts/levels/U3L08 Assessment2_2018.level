@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:10.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Functions with Parameters",
+    "markdown_instructions": "“Abstraction” is often used to focus on a general case and ignore a specific instance of a problem. \n\nGiven this meaning of the word, how are functions with parameters an example of abstraction?\n",
+    "encrypted_solution": "VPoNLyQgNILcxoOlGGFKe5smMVaplHRnr9AeDRKFt7Vv8fyWPUZzeSht2VFm\nL19gfM8UlJhXTlEcKfwaLFTIsF1z5afXF7xD84sTJ+p6ZyCWtgnXFa/OXbtg\nLmJ2z1AEgCP14lXYszZZX3/lA/poHGDK5gOspD1ioywo1V9tnQPtzVjxF3x3\nhlSHQ9UtnAwZN4hopgIWyddT1uSKInen3iLfmFTvYcIL18IvtcVJF3Hgp+xT\nzuRk3dkBuwQMGo0EI7BkTSILPt6dcQ8SLBjdD04FzS7111UaB+/3FlpgO8sG\nv6ZMdvxPIU/CFwo52ugg2RcPeNxER6lYWbONjLY01n2CPHrEQJe88k/fp5nY\n8FnikpjKudeb0xa/0vTPQM9g74DzmIN55/x7ramuXNvdToIlil2uesOo/krI\nCQaD7aCVqocvsApcR7hVJzL+IS0vzltAFm09R6ghQqryq4gvIhSF2Wbys1fl\nsF6j6tkgc266x+6N26z7akkl3eQLRAunQ4ZO4ovAiJnBdkDi5yRIDw==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2447,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

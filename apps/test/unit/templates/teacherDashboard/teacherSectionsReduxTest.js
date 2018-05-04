@@ -108,6 +108,8 @@ const validCourses = [
     category: "Full Courses",
     position: 1,
     category_priority: 0,
+    assignment_family_name: 'csd',
+    version_year: '2017',
   },
   {
     id: 30,
@@ -117,6 +119,8 @@ const validCourses = [
     position: 0,
     category_priority: 0,
     script_ids: [112, 113],
+    assignment_family_name: 'csp',
+    version_year: '2017',
   }];
 
 const validScripts = [
@@ -268,23 +272,23 @@ describe('teacherSectionsRedux', () => {
         [assignmentId(null, 112), assignmentId(null, 113)]);
     });
 
-    it('adds primaryAssignmentId for a course', () => {
-      const primaryIds = nextState.primaryAssignmentIds;
-      validCourses.forEach(course => {
-        assert(primaryIds.includes(assignmentId(course.id, null)));
+    it('adds assignmentFamily for a course', () => {
+      const assignmentFamilies = nextState.assignmentFamilies;
+      ['csd', 'csp'].forEach(courseName => {
+        assert(assignmentFamilies.find(af => af.assignment_family_name === courseName));
       });
     });
 
-    it('adds primaryAssignmentId for a script that is not in a course', () => {
-      const primaryIds = nextState.primaryAssignmentIds;
+    it('adds assignmentFamily for a script that is not in a course', () => {
+      const assignmentFamilies = nextState.assignmentFamilies;
       const courselessScript = validScripts[0];
-      assert(!primaryIds.includes(courselessScript.id));
+      assert(assignmentFamilies.find(af => af.assignment_family_name === courselessScript.script_name));
     });
 
-    it('does not add primaryAssignmentId for a script that is in a course', () => {
-      const primaryIds = nextState.primaryAssignmentIds;
+    it('does not add assignmentFamily for a script that is in a course', () => {
+      const assignmentFamilies = nextState.assignmentFamilies;
       const scriptInCourse = validScripts[4];
-      assert(!primaryIds.includes(scriptInCourse.id));
+      assert(assignmentFamilies.find(af => af.assignment_family_name === scriptInCourse.script_name));
     });
   });
 

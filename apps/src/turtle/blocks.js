@@ -25,11 +25,9 @@
 var Colours = require('./colours');
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-
 var customLevelBlocks = require('./customLevelBlocks');
-var constants = require('../constants');
+import {Position} from '../constants';
 
-const Position = constants.Position;
 const RANDOM_VALUE = 'RAND';
 
 const POSITION_VALUES = [[commonMsg.positionRandom(), RANDOM_VALUE],
@@ -921,11 +919,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'XPOS')
-          .appendTitle("over");
+          .appendTitle(commonMsg.positionAbsoluteOver());
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'YPOS')
-          .appendTitle("down");
+          .appendTitle(commonMsg.positionAbsoluteDown());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

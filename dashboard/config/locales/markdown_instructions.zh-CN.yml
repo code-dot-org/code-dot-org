@@ -89,6 +89,16 @@
         \r
         代码哪里错了？
       2-3 Artist Free Play_markdown_instruction: 自己玩吧！想画什么就画什么。
+      2-3 Artist Functions 1 a_markdown_instruction: |
+        "Me zombie artist. Me love
+        drawing!" \r
+        \r
+        Help the zombie draw square glasses.  \r
+        \r
+        The bridge
+        between the glasses is 25 pixels shorter than the width of the squares, which
+        is 100 pixels.\r
+        \r
       2-3 Artist Functions 1_markdown_instruction: |
         “我，僵尸艺术家。我，爱画画 ！”\r
         \r
@@ -100,6 +110,21 @@
         自由发挥：这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。\r
         \r
         用它们来绘制一个机器的内部结构！
+      2-3 Artist Functions 11 a_markdown_instruction: |-
+        We've renamed the `draw a
+        square` function to `draw a hexagon`, but it's still giving us squares!  \r
+        \r
+        Can
+        you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides?
+        \r
+        \r
+        Draw the image using the new function!
+      2-3 Artist Functions 11.5 a_markdown_instruction: |-
+        Here's that same `draw
+        a hexagon` function. \r
+        \r
+        What happens if you loop the main program **6**
+        times, turning **60** degrees each time you loop?
       2-3 Artist Functions 11.5_markdown_instruction: |-
         这里同样是"画一个六边形"的功能。\r
         \r
@@ -118,11 +143,29 @@
         flower` function to fill the rest of the planter box?\r
         The plants are all
         100 pixels apart.
+      2-3 Artist Functions 12 a_markdown_instruction: |-
+        Functions are really great
+        for drawing complex things multiple times. \r
+        \r
+        Can you use the `draw a
+        flower` function to fill the rest of the planter box?\r
+        The plants are all
+        100 pixels apart.
       2-3 Artist Functions 12_markdown_instruction: |-
         函数对于多次画一个复杂的事物非常有帮助。\r
         \r
         你能用“画一朵花”函数来填满整个花盆吗？\r
         提示：每株花应该相隔100像素。
+      2-3 Artist Functions 2 a_markdown_instruction: |-
+        Functions let you define new
+        blocks! \r
+        \r
+        We've moved the blocks needed for drawing a square into a
+        function called `draw a square`. This time, use the small green `draw a square`
+        block to call this new function and create the glasses. \r
+        \r
+        The squares
+        in this drawing are 75 pixels apart.
       2-3 Artist Functions 2_markdown_instruction: |-
         函数能让你定义新的模块。\r
         \r
@@ -130,10 +173,19 @@
         \r
         \r
         正方形间隔75像素。
+      2-3 Artist Functions 3 a_markdown_instruction: |-
+        Edit the "draw a square"
+        function to draw glasses with frames that are 115px on each side. \r
+        \r
+        The
+        squares are now 45 pixels apart.
       2-3 Artist Functions 3_markdown_instruction: |-
         编辑这个函数来画一个边长115像素的正方形，从而能够画出一个更大的眼镜。\r
         \r
         正方形的间隔为45个像素。
+      2-3 Artist Functions 4 a_markdown_instruction: |-
+        Now, put the function inside
+        of a loop and add an extra turn to draw these three squares.
       2-3 Artist Functions 4_markdown_instruction: 现在，将函数放到循环里来画这三个正方形。
       2-3 Artist Functions 9_markdown_instruction: |-
         自由发挥：这里有个雪花函数。试试用它创造出冬季的景色！\r
@@ -19289,24 +19341,17 @@
         \r
         再想想以前做的程序，怎么才能更新这些值？
       CSD U6 Driver pt1_2018_markdown_instruction: |-
-        # Steering Wheel\r
+        # 方向盘\r
         \r
-        This
-        game is similar to the goalie game that you just played, except a little different.
-        Use your board as a steering wheel for the car (moving side to side). You
-        have to get to the checkered flag at while avoiding the red flags along the
-        way!\r
+        这个游戏和你刚刚玩的守门员游戏很像，只有一点不同。用你的主板来作为汽车的方向盘（从这边移动到那边）。你需要避开红色的旗帜，并到达方格旗！\r
         \r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Make the car move down the screen while
-        the program runs.\r
-        * Give the car the ability to steer side to side.\r
+        * 当程序开始时，让汽车往屏幕的下方移动。\r
+        * 让汽车能往两侧运动。\r
         \r
-        Think
-        back to the programs you've made up until this point, how can you update
-        these values?
+        再想想以前做的程序，怎么才能更新这些值？
       CSD U6 LED all_markdown_instruction: |-
         # 多功能灯\r
         \r
@@ -19319,20 +19364,16 @@
         在设计模式，添加一个新的“关闭”按钮。\r
         * 添加代码让“关闭”按钮起作用。
       CSD U6 LED all_2018_markdown_instruction: |-
-        # Multi-function Light\r
+        # 多功能灯\r
         \r
-        This
-        app should let you choose between three types of lights: on, blink, and pulse.  It
-        should also have a button that turns the light completely off.  Right now
-        only the "on" button works, and the "off" button is completely missing.\r
+        这个应用能够让你选择三种类型的灯：开，闪烁和跳动。它也应该有个按钮让灯完全关掉。现在只有“开”按钮起作用，而“关”按钮完全没有。\r
         \r
         #
-        Do This\r
-        * Add code to make the "blink" and "pulse" buttons work.\r
+        这样做\r
+        * 添加代码让“闪烁”和“跳动”按钮起作用。\r
         *
-        In design mode, add a new "off" button.\r
-        * Add code to make the "off"
-        button work.
+        在设计模式，添加一个新的“关闭”按钮。\r
+        * 添加代码让“关闭”按钮起作用。
       CSD U6 LED toggle_markdown_instruction: |-
         # 灯开关\r
         \r
@@ -19345,21 +19386,15 @@
 
         * 如果LED是开着的，这个按钮能让它关闭。
       CSD U6 LED toggle_2018_markdown_instruction: |-
-        # Light Switch\r
+        # 灯开关\r
         \r
-        There are
-        three more LED blocks that you haven't used yet. One of them can make the
-        button work like a light switch, turning the LED on when it's off, but off
-        when it's on.\r
+        这里多了三个你还没用过的LED模块。其中一个会让按钮像灯的开关一样工作，LED关闭时会点亮它，而打开时会关闭它。\r
         \r
-        # Do This\r
-        * Try the `blink`, `toggle` and `pulse`
-        blocks to see what they do.\r
-        * Use one of the blocks to make the button
-        work like a light switch.\r
-         * If the LED is off, the button should turn
-        it on.\r
-         * If the LED is on, the button should turn it off.
+        # 这样做\r
+        * 试试`blink`（闪动），`toggle`（切换）和`pulse`（脉动）默默快来看看它们能做什么。\r
+        * 用其中一个模块让按钮像灯开关一样工作。\r
+        * 如果LED是关着的，这个按钮能让它打开。\r
+        * 如果LED是开着的，这个按钮能让它关闭。
       CSD U6 LEDbutton predict embed_markdown_instruction: |-
         # 使用事件\r
         \r
@@ -19381,20 +19416,13 @@
         \r
         使用`.color()`命令把每个LED设置为不同颜色。
       CSD U6 LEDs color_2018_markdown_instruction: |-
-        # Adding Some Color\r
+        # 增加一些颜色\r
         \r
-        You
-        probably noticed when you used `colorLeds[0].on()` in the last level, the
-        LEDs turned on as white. If you don't specify a color, `on()` will turn on
-        all three parts of the LED (red, green, and blue) to produce white. You'll
-        see a new command in the toolbox called `colorLeds[0].color()` which lets
-        you specify a color, either as a string like "blue" or an RGB value using
-        color `color()` command.\r
+        你可能已经注意到当你在上一级中使用`colorLeds[0].on()`时，LED点亮时是白色的。如果你不指定一个颜色，`on()`将点亮全部三个LED (红、绿、蓝)从而变成白色。你将在工具箱中看到一个叫`colorLeds[0].color()`的新命令，可以让你用类似"蓝"这样的字符串或者一个用`color()`命令的RGB数值指定颜色。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Use the `.color()` command
-        to set each of the color LEDs to a different color.
+        使用`.color()`命令把每个LED设置为不同颜色。
       CSD U6 Pedometer_markdown_instruction: |-
         # 计步器\r
         \r
@@ -19421,15 +19449,12 @@
         # 这样做\r
         * 添加代码让第二个按钮能关闭LED灯。
       CSD U6 add LED button_2018_markdown_instruction: |-
-        # Using Events\r
+        # 使用事件\r
         \r
-        This
-        program has two buttons.  The "on" button works, but the "off" button
-        still needs to be programmed.\r
+        这个程序有两个按钮。“on”（开）按钮能工作，但是“off”（关）按钮还需要编写程序。\r
         \r
-        # Do This\r
-        * Add code so that the second
-        button turns the LED off.
+        # 这样做\r
+        * 添加代码让第二个按钮能关闭LED灯。
       CSD U6 airplane predict markdown_markdown_instruction: |-
         # 加速传感器\r
         \r
@@ -19472,21 +19497,14 @@
         \r
         用提供的事件处理函数，在当温度传感器读到改变时，让蜂鸣器名叫并更新"temp_value"（临时值）。将你的拇指放到温度传感器上让它改变温度，然后看看你的程序是如何响应的。
       CSD U6 analog change_2018_markdown_instruction: |-
-        # Change Event\r
+        # 变化的事件\r
         \r
-        The
-        data event is fine if you don't mind your code running constantly, but sometimes
-        that's not the most efficient solution to your problem. The sensor "change"
-        event only fires if the sensor value has changed since the last reading, which
-        can make sure your program isn't running code when it's not necessary.\r
+        数据又一直很好，如果你又不介意，代码能一直运行。但有时候这不是你的问题的最有效的解决方案。传感器的"变化"事件，会在传感器的值从上次读数后发生改变时触发。这让你的程序在不需要的时候，就不用接着运行了。\r
         \r
         #
-        Do This\r
+        这样做\r
         \r
-        Using the provided event handler, write a program that buzzes
-        the buzzer and updates "temp_value" whenever the temperature sensor reading
-        changes. Place your thumb over the temperature sensor to get it to change
-        and see how your program responds.
+        用提供的事件处理函数，在当温度传感器读到改变时，让蜂鸣器名叫并更新"temp_value"（临时值）。将你的拇指放到温度传感器上让它改变温度，然后看看你的程序是如何响应的。
       CSD U6 analog data_markdown_instruction: |-
         # 数据事件\r
         \r
@@ -19499,23 +19517,16 @@
         * 创建一个事件处理函数来响应光线传感器的“数据”事件。\r
         * 将已有的代码移动到你的事件处理函数中。
       CSD U6 analog data_2018_markdown_instruction: |-
-        # Data Event\r
+        # 数据事件\r
         \r
-        Each of
-        these analog sensors emits a special event called "data" which occurs every
-        time new data comes in from the sensor. Using this event, we can write programs
-        that continually update.\r
+        每个模拟传感器在有新数据时，都会发出一个特殊的事件叫做“数据”。通过这个事件，我们能写出持续更新的程序。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        This is the first program
-        you worked on in this lesson, let's see if we can make it continually update
-        the sound reading using the "data" event.\r
+        这是课程里，你写的第一个程序，让我们看看是否能用“数据”事件来持续更新声音。\r
         \r
-        * Create an event handler
-        to respond to sound sensor's "data" event\r
-        * Move the existing code into
-        your event handler
+        * 创建一个事件处理函数来响应光线传感器的“数据”事件。\r
+        * 将已有的代码移动到你的事件处理函数中。
       CSD U6 analog light_markdown_instruction: |-
         # 光线传感器的更新\r
         \r
@@ -19549,36 +19560,21 @@
         _提示：顺序很重要。你需要在读取值之前设置好传感器的范围。_\r
         _提示：记住温度传感器可以读取摄氏和华氏温度 - 它可能已经给了你RGB范围内的值了。_
       CSD U6 analog rbg 1_2018_markdown_instruction: |-
-        # Displaying Sensor Readings
-        in Color\r
+        # 用颜色显示传感器读数\r
         \r
-        In the earlier prediction level you saw how the `setScale()`
-        method can convert the full range of sensor readings (0-1023) into a range
-        that can be used for RGB values (0-255). Let's build on that idea to make
-        an app that can communicate the current value of all three analog sensors
-        with a single color.\r
+        在早先的预测关卡中，你已经见过如何用`setScale()`（设置范围）方法来将传感器读数的整个范围（0-1023）转换到RGB值得范围（0-255）。让我们用这个办法来做一个应用，来用一个颜色来表达三个模拟传感器的值。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        To start, we just need to set
-        the sensor scales correctly - don't worry about actually setting the color
-        of the background yet.\r
+        要开始，我们只需要将传感器范围设置正确 - 不用担心实际的背景颜色。\r
         \r
-        * Using the `sensor.setScale()` block, set each
-        of light and sound sensors to the right scale for an RGB color channel.\r
+        * 使用`sensor.setScale()`模块来设置每个灯光和声音传感器的范围为一个RGB颜色通道的范围。\r
         *
-        Create a variable for each of the three colors and assign each one to the
-        value of a different sensor.\r
-        * Use `console.log()` to test that your variables
-        are in the correct range.\r
+        为这三个颜色的每一个创建一个变量，并分派给不同的传感器。\r
+        * 用`console.log()`来测试你的变量是否在正确的范围里。\r
         \r
-        _Hint: Order matters. You need to set the
-        scale of a sensor before checking its value_\r
-        \r
-        _Hint: Remember that the
-        temperature sensor can be read in both Celsius and Fahrenheit - either way
-        it should already give you a value that's within the necessary range for
-        RGB_
+        _提示：顺序很重要。你需要在读取值之前设置好传感器的范围。_\r
+        _提示：记住温度传感器可以读取摄氏和华氏温度 - 它可能已经给了你RGB范围内的值了。_
       CSD U6 analog rbg 2_markdown_instruction: |-
         # 将颜色放到屏幕上\r
         \r
@@ -19713,28 +19709,20 @@
         \r
         _提示：在文本模式修改数组会非常容易。你随时可以通过点击代码工作区右上角的按钮来在文本和模块模式间切换。_
       CSD U6 array piano_2018_markdown_instruction: |-
-        # Piano Panic\r
+        # 钢琴恐慌\r
         \r
-        So far
-        you’ve just been using the elements of an array. Now, you're going to change
-        what's inside the array.\r
+        现在，你已经用了数组中的元素了。现在，你需要改变数组中的内容。\r
         \r
-        Our good friend the piano is back, except
-        now it plays notes from two arrays: `notes`, which holds natural notes (C,
-        D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#,
-        G#, A#).\r
+        我们的好朋友钢琴回来了，除了它现在从两个数组来弹奏音符：`notes`（音符），会按住普通音符（C, D, E, F, G, A, B），并且`sharpNotes`会按下升音音符（C#, D#, F#, G#, A#）。\r
         \r
-        # Do this\r
+        #
+        这样做\r
         \r
-        The `sharpNotes` array only has one item
-        inside of it right now.\r
+        `sharpNotes`数组现在只有一个元素。\r
         \r
-        * Fix the array so that the sharp keys on the
-        piano can actually play the right note.\r
+        * 修复数组，使得钢琴上的升音键能够正常弹奏音符。\r
         \r
-        _Hint: Modifying arrays is
-        much easier in text mode.  You can always switch between block and text mode
-        by clicking the button at the top right of your code workspace._
+        _提示：在文本模式修改数组会非常容易。你随时可以通过点击代码工作区右上角的按钮来在文本和模块模式间切换。_
       CSD U6 balloon clicker predict_markdown_instruction: |-
         # 让气球飞起来\r
         \r
@@ -19768,18 +19756,13 @@
         * 用有颜色名称的下拉框来改变摩托车的颜色。\r
         * 当摩托车到达屏幕的最顶端或最低端时，打开蜂鸣器或LED灯。
       CSD U6 challenge motorcycle_2018_markdown_instruction: |-
-        # Challenge\r
+        # 挑战\r
         \r
-        Use
-        this program to experiment some more with getting and setting properties.
-        Some ideas you might try include:\r
+        用这个程序来对取值和赋值属性进行更多的试验。你可以尝试以下办法：\r
         \r
-        * Use the toggle switch to change
-        the motorcycle's movement to go up and down.\r
-        * Use a dropdown with color
-        names to change the motorcycle's color\r
-        * Make the buzzer or LED turn on
-        when the motorcycle reaches the top or bottom of the screen.
+        * 用切换开关来改变摩托车的移动方向，向上并向下移动。\r
+        * 用有颜色名称的下拉框来改变摩托车的颜色。\r
+        * 当摩托车到达屏幕的最顶端或最低端时，打开蜂鸣器或LED灯。
       CSD U6 change_markdown_instruction: |-
         # 变化\r
         \r
@@ -19792,23 +19775,15 @@
         *
         运行程序，移动滑动条，看看LED的闪烁速度是否能自动变化。
       CSD U6 change_2018_markdown_instruction: |-
-        # Change\r
+        # 当改变\r
         \r
-        In the last level,
-        the program only got the interval value from the slider when you pressed the
-        left button.  Sometimes, though, you'll want to change the interval of the
-        LED as soon as the user chooses a new value.   For that, you'll need the
-        "change" event.\r
+        在上一关，程序只会在你点击了左按钮时从滑动条获得间隔值。有时，你会希望当用户选择了新的值以后，尽快改变LED的间隔值。为了做到这一点，你需要使用“change”（改变）事件。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Look at the first event block
-        in the program and find where it says "change".\r
-        * Inside the event block,
-        get the interval value from the slider and use it to make the LED blink at
-        that new rate.\r
-        * Run your program, moving the slider to see whether the
-        LED speed changes automatically.
+        * 看看程序里的第一个事件模块，并找到它在哪里放了“change”。\r
+        * 在事件模块中，获得从滑动条里获得间隔值，并将它用到LED闪烁的新速度上。\r
+        * 运行你的程序，移动滑动条来看看LED的速度是否自动变化了。
       CSD U6 checkbox_markdown_instruction: 预测关卡
       CSD U6 circuit createButton scratch_markdown_instruction: |-
         <div style="float:
@@ -19882,39 +19857,30 @@
         \r
         _提示：有很多种物质都能用来做按钮电路，只要它们导电就行。试着用铝箔，银器或者回形针来做按钮。_
       CSD U6 circuit createButton_2018_markdown_instruction: |-
-        <div style="float:
-        right" markdown="1">\r
+        <div style="float: right"
+        markdown="1">\r
         \r
         ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)\r
         \r
         </div>\r
         \r
         #
-        Make Your Own Buttons\r
+        制作自己的按钮\r
         \r
-        Similar to LEDs, buttons are a really simple
-        circuit that you can add to your board pretty easily. Like LEDs, buttons should
-        be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit
-        should be disconnected in the middle. When you connect the circuit, it will
-        produce a button press event.\r
+        和LED灯一样，按钮是非常简单的电路，很容易加到你的主板上。同样，按钮也应该从一个有需要的针上连接到一个地线针上。但是和LED灯不一样的是，按钮电路应该在中间被断开。当连上电路时，就会触发一个按钮按下的事件。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Grab two wires.\r
+        * 找出两条电线。\r
         *
-        Connect one wire to an open numbered pin.\r
-        * Connect the second wire to
-        a ground pin.\r
-        * Update line 2 so that it's referencing the pin you chose.\r
+        将一条线连接到一个空闲的有序号的针脚上。\r
+        * 将另一条线连接到地线针脚上。\r
+        * 更新第二条线，让它能够引用选择的针脚。\r
         *
-        Run the provided code.\r
-        * With the program running, touch the unconnected
-        ends of both wires together to "press" the button.\r
+        运行提供的代码。\r
+        * 程序运行后，将两条电线没接的那头碰在一起来"按下"按钮。\r
         \r
-        _Tip: A button
-        circuit can be made with many different kinds of materials, as long as they
-        are electrically conductive. Try making buttons with foil, silverware, or
-        paper clips._
+        _提示：有很多种物质都能用来做按钮电路，只要它们导电就行。试着用铝箔，银器或者回形针来做按钮。_
       CSD U6 circuit createLed_markdown_instruction: |-
         # 创建主板对象\r
         \r
@@ -20010,25 +19976,17 @@
         \r
         _调试提示: LED只有在电流从正向负值流动时才会亮。如果你的LED灯不亮，请确保它的方向是正确的。_
       CSD U6 circuit pinMode_2018_markdown_instruction: |-
-        # Wire a Circuit\r
+        # 连接电路\r
         \r
-        You
-        can use any of the numbered pads to add additional circuits to your board.
-        Let's use pin 2 to add another LED.\r
+        你可以使用任何编号的垫片来将额外的电路添加到主板上。让我们使用针脚2 来添加另一个 LED. \r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Using a wire,
-        connect pin 2 to the positive (+) side of an LED\r
-        * Using another wire,
-        connect the negative (-) side of the LED to a ground (GND) pin (it doesn't
-        matter which one)\r
-        * Run this program to test your circuit. If it worked,
-        your LED should turn on.\r
+        * 用一根电线把针脚2连接到 led 的正极 (+) 侧。\r
+        * 用另一根电线把LED的负 (-) 端连接到接地 (地线) 针脚 (具体是哪个针脚没关系)\r
+        * 运行此程序来测试你的电路。如果正常工作的话, 你的LED灯应该会亮。\r
         \r
-        _Debugging Tip: LEDs only work if the electricity
-        is flowing from positive to negative. If your LED doesn't light up, make
-        sure that it's oriented the right way._
+        _调试提示: LED只有在电流从正向负值流动时才会亮。如果你的LED灯不亮，请确保它的方向是正确的。_
       CSD U6 circuit predict multi_markdown_instruction: |-
         #做一个预测\r
         \r
@@ -20065,39 +20023,23 @@
         \r
         _提示：你需要在文本模式中让闪光灯工作，因为没有给这个加到主板上的元素内置模块。_
       CSD U6 circuit smart bike blinker buttons_2018_markdown_instruction: |-
-        # Smart
-        Bike - Blinker Controls\r
+        # 智能自行车- 方向灯控件\r
         \r
-        With your turn signal LEDs hooked up, you just
-        need to program some buttons to control them. You may want to place buttons
-        elsewhere on the bike to make controlling your turn signals easier, but for
-        now we'll just use the built in left and right buttons.\r
+        转弯信号被连接上后，你需要编程一些按钮来控制它们。你可能想要把按钮放在自行车上别的地方来更好地控制你的转弯信号，但我们现在只用嵌入式的左和右按钮。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        *
-        Add event handlers to blink the left turn signal when the left button is pressed.\r
-        *
-        Add event handlers to blink the right turn signal when the right button is
-        pressed.\r
-        * Test your code!\r
+        * 添加事件处理器让左转信号在左按钮被压下去的时候亮起。\r
+        * 添加事件处理器让右转信号在右按钮被压下去的时候亮起。\r
+        * 测试你的代码！\r
         \r
-        _Hint: You'll need to be in text mode
-        to make the blinkers work, since there are no built-in blocks for the elements
-        that you add on to the board._
+        _提示：你需要在文本模式中让闪光灯工作，因为没有给这个加到主板上的元素内置模块。_
       CSD U6 circuit smart bike blinkers_markdown_instruction: "# 智能自行车 - 方向灯\\r\n\\r\n使用你的规划指南，把两个可以作为方向灯的LED连接到一起。为了确保转向灯撞到了正确的把手上，确保它们的电线向相反的方向延伸。\\r\n\\r\n#
         这样做\\r\n\\r\n使用弹簧夹，电线，或其它导电材料把两个LED 连接到主板上，作为每个转向方向灯。\\r\n\\r\n* 把每个LED 连接到主板上不同编码的针脚上。\\r\n*
         使用 `createLed()`模块来为每个方向灯来创建一个LED 对象。\\r\n\\r\n_提示：在选择要使用的针脚时，考虑方向灯如何安装可以使得布线更容易一些。_ "
-      CSD U6 circuit smart bike blinkers_2018_markdown_instruction: "# Smart Bike\n-
-        Blinkers\\r\n\\r\nUsing your planning guide, wire up the two LEDs that will\nserve
-        as the blinkers. In order to make sure that the blinkers can be mounted\nat
-        the end of the handlebars, make sure you wire them so that they can stretch\nout
-        in opposite directions.\\r\n\\r\n# Do This\\r\n\\r\nUsing alligator clips,\nwire,
-        or other conductive material, connect two LEDs to your board, one for\neach
-        turn signal blinker.\\r\n\\r\n* Hook up each LED to a different numbered\npin
-        on the board.\\r\n* Use the `createLed()` block to create an LED object\nfor
-        each blinker.\\r\n\\r\n_Tip: Make your wiring easier by considering how\nyour
-        blinkers will be mounted when selecting a pin to use._ "
+      CSD U6 circuit smart bike blinkers_2018_markdown_instruction: "# 智能自行车 - 方向灯\\r\n\\r\n使用你的规划指南，把两个可以作为方向灯的LED连接到一起。为了确保转向灯撞到了正确的把手上，确保它们的电线向相反的方向延伸。\\r\n\\r\n#
+        这样做\\r\n\\r\n使用弹簧夹，电线，或其它导电材料把两个LED 连接到主板上，作为每个转向方向灯。\\r\n\\r\n* 把每个LED 连接到主板上不同编码的针脚上。\\r\n*
+        使用 `createLed()`模块来为每个方向灯来创建一个LED 对象。\\r\n\\r\n_提示：在选择要使用的针脚时，考虑方向灯如何安装可以使得布线更容易一些。_ "
       CSD U6 circuit smart bike buzzer_markdown_instruction: |-
         # 智能自行车-蜂鸣器\r
         \r
@@ -20112,25 +20054,18 @@
         \r
         _提示：你创建的按钮对象不会在 "onBoardEvent ()" （当主板上发生事件时）下拉列表中, 因此需要键入已选的名称。一定不要使用引号！_
       CSD U6 circuit smart bike buzzer_2018_markdown_instruction: |-
-        # Smart Bike -
-        Buzzer\r
+        # 智能自行车-蜂鸣器\r
         \r
-        Now that we know how to add more buttons, you can add a button
-        to control the smart bike's horn.\r
+        现在我们知道如何添加更多的按钮，你可以添加一个按钮来控制智能自行车的喇叭。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        Using the button
-        that you've already wired to the board, find a good spot to place your horn
-        button. Then:\r
+        使用已连接到主板的按钮, 找到一个放置喇叭按钮的好位置。然后：\r
         \r
-        * Create a button object for your horn button\r
-        * Add
-        an event handler to buzz when button is pressed\r
+        * 为喇叭按钮创建一个按钮对象\r
+        * 添加一个事件处理器，在按下按钮时发出嗡嗡声\r
         \r
-        _Hint: The button object
-        that you create won't be in the `onBoardEvent()` dropdown, so you'll need
-        to type the name you've chosen in. Make sure not to use quotation marks!_
+        _提示：你创建的按钮对象不会在 "onBoardEvent ()" （当主板上发生事件时）下拉列表中, 因此需要键入已选的名称。一定不要使用引号！_
       CSD U6 circuit smart bike final_markdown_instruction: |-
         # 智能自行车-最终润色\r
         \r
@@ -20141,20 +20076,14 @@
         \r
         这时候，你可能要分组来完成任务, 让小组的一些成员专注于原型的物理方面, 其他人则致力于改进代码。由于这是一个原型, 不要想着一切都完美, 但要确保原型足够体现你的设计，可以进行测试并收集回馈。
       CSD U6 circuit smart bike final_2018_markdown_instruction: |-
-        # Smart Bike -
-        Final Touches\r
+        # 智能自行车-最终润色\r
         \r
-        At this point your smart bike should have all of its
-        basic functionality in place. Now is your chance to add any finishing touches.\r
+        此时, 你的智能自行车应该具备其所有基本功能。现在是做最后润色的时候了。\r
         \r
         #
-        Do This\r
+        这样做\r
         \r
-        You may want to divide and conquer at this point, allowing
-        some members of your group to focus on the physical aspects of the prototype
-        while others work on improving the code. As this is a prototype, don't worry
-        about making everything perfect, but do try to ensure that the prototype communicates
-        your design well enough to test and get feedback.
+        这时候，你可能要分组来完成任务, 让小组的一些成员专注于原型的物理方面, 其他人则致力于改进代码。由于这是一个原型, 不要想着一切都完美, 但要确保原型足够体现你的设计，可以进行测试并收集回馈。
       CSD U6 circuit smart bike light_markdown_instruction: |-
         # 智能自行车-车灯\r
         \r
@@ -20167,24 +20096,16 @@
         \r
         _提示: 如果使用的是内置的彩色LED灯，你可能需要保护光传感器，确保它相应的是周围光线的水平, 而不是指示灯的光线。_
       CSD U6 circuit smart bike light_2018_markdown_instruction: |-
-        # Smart Bike -
-        Headlight\r
+        # 智能自行车-车灯\r
         \r
-        The last part of the smart bike plan that we need to figure
-        out is the automatic headlight.\r
+        我们需要弄清楚的智能自行车计划的最后一部分是自动车头灯。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        First you'll need
-        to decide what to use for your headlight. You could add another LED circuit,
-        or perhaps you can find a way to mount the board that allows for using the
-        color LEDs as a headlight. Once you've figured out the physical layout of
-        your lights, add code to your program that turns on and off the headlight
-        based on how light or dark it is.\r
+        首先要决定你的车头灯要用什么。你可以添加另一个 LED 电路, 或者你可以找到一种方式来安装主板使之允许使用有颜色的LED灯作为车灯。
+        一旦你想出车灯的物理布局, 添加代码到程序中，让它依照亮度的明暗来打开和关掉车灯。\r
         \r
-        _Hint: If you're using the built-in
-        color LEDs, you might need to protect the light sensor to make sure that it's
-        responding to the ambient light level and not the light from the LEDs._
+        _提示: 如果使用的是内置的彩色LED灯，你可能需要保护光传感器，确保它相应的是周围光线的水平, 而不是指示灯的光线。_
       CSD U6 colorLED on_markdown_instruction: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
         style="float: right; margin: 10px;">\r
@@ -20382,32 +20303,24 @@
         * 用加速传感器的"roll"（转动）属性来检测现在主板是往左还是右倾斜。\r
         * 用条件语句根据主板的方向，来改变"direction"（方向）元素的文本为"左"或"右"。
       CSD U6 directional LEDs roll_2018_markdown_instruction: |-
-        # Roll\r
+        # 转动\r
         \r
-        This
-        program should display "Left" or "Right" on the screen, depending on which
-        way the board is tilted.\r
+        程序应该能根据主板倾斜的方向，在屏幕上显示"左"或"右"了。\r
         \r
-        # Do this\r
-        * Use the "roll" property of
-        the accelerometer to determine whether the board is tilted to the left or
-        right.\r
-        * Use a conditional to change the text for the "direction" element
-        to be either "Left" or "Right", depending on the board's orientation.
+        # 这样做\r
+        * 用加速传感器的"roll"（转动）属性来检测现在主板是往左还是右倾斜。\r
+        * 用条件语句根据主板的方向，来改变"direction"（方向）元素的文本为"左"或"右"。
       CSD U6 directional leds pitch_markdown_instruction: "# 强度\\r\n\\r\n当你往前倾斜主板时，程序会点亮最顶上的LED灯（0和9）。如果向后倾斜主板，最下面的LED灯（4和5）就会亮。\\r\n\\r\n#
         这样做\\r\n\\r\n* 请使用主板的强度使得LED灯4 和5，在你把主板向后倾斜时亮起来。\\r\n* 运行您的代码并进行多次测试. "
       CSD U6 directional leds pitch_2018_markdown_instruction: |-
-        # Pitch\r
+        # 强度\r
         \r
-        This
-        program lights the top LEDs (0 and 9) when you tilt the board forward. If
-        you tilt the board back, the LEDs at the bottom (4 and 5) should light.\r
+        当你往前倾斜主板时，程序会点亮最顶上的LED灯（0和9）。如果向后倾斜主板，最下面的LED灯（4和5）就会亮。\r
         \r
-        #
-        Do This\r
-        * Use the board's pitch to make LEDs 4 and 5 light up when you
-        tilt the board back.\r
-        * Run your code and test it a few times.
+        # 这样做\r
+        \r
+        * 请使用主板的强度使得LED灯4 和5，在你把主板向后倾斜时亮起来。\r
+        * 运行你的代码并进行多次测试.
       CSD U6 emoji race demo_markdown_instruction: |-
         # 表情比赛！\r
         \r
@@ -20422,25 +20335,18 @@
         *
         你可能要创建什么函数来让这个程序工作起来？
       CSD U6 emoji race demo_2018_markdown_instruction: |-
-        # Emoji Race!\r
+        # 表情比赛！\r
         \r
-        This
-        is an example of a race game that you'll build by the end of this lesson.
-        To play, pair up with another student. The student on the left will the click
-        the left button on the Circuit Playground as fast as they can, while the student
-        on the right clicks the right button. Whoever can get their emoji to the bottom
-        of the screen first wins.\r
+        这是一个竞速游戏，你会在课程结束时创建它。和另一位同学一起玩一下吧。左边的同学要点击电路游戏板的左按钮，越快越好。同样，在右边的同学要点击右按钮。赢了的人会在屏幕底下得到表情符号。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Turn to a classmate and
-        make a list of the following information.\r
+        和旁边的同学一起列一下下面的信息。\r
         \r
-        * What components of the
-        board does this program use?\r
-        * What events is this program responding to?\r
+        * 这个程序中使用了主板上的什么组件？\r
+        * 这个程序会响应什么事件？\r
         *
-        What functions might you create to make this program work?
+        你可能要创建什么函数来让这个程序工作起来？
       CSD U6 emotion machine 1_markdown_instruction: |-
         # 改变图片\r
         \r
@@ -20612,11 +20518,9 @@
         \r
         阅读该程序的代码并预测每次点击按钮时会发生什么？
       CSD U6 for loop click predict question_2018_markdown_instruction: |-
-        # Make a
-        Prediction\r
+        #做出预测\r
         \r
-        Read through the code for this program and predict what
-        will happen each time the button is clicked?
+        阅读该程序的代码并预测每次点击按钮时会发生什么？
       CSD U6 for loop images_markdown_instruction: |-
         # 从头开始构建计数循环\r
         \r
@@ -20633,29 +20537,20 @@
         \r
         _挑战：你是否能够添加第二个按钮把所有的图像都转回到拇指朝下？_
       CSD U6 for loop images_2018_markdown_instruction: |-
-        # Constructing a for loop
-        from scratch\r
+        # 从头开始构建计数循环\r
         \r
-        Now that you've had some practice modifying for loops
-        to process arrays, let's see if you can do it yourself.\r
+        现在, 您已经练习一些修改计数循环来处理数组, 让我们看看你是否能够自己完成。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        We've
-        provided the design elements and an array to start with, but the rest is on
-        you.\r
+        我们已经为你提供了设计元素和一个数组, 剩下的就靠你自己了.\r
         \r
-        * Add an event handler to respond to the "thumbsup_button" being
-        clicked\r
-        * Place a _for loop_ inside the event handler\r
-        * Modify the exit
-        condition of the _for loop_ so that it will run until it gets to the end of
-        the array `images`\r
-        * Inside your _for loop_ change the current image to
-        "icon://fa-thumbs-o-up"\r
+        * 添加一个事件处理程序来响应单击"thumbsup_button"的动作。\r
+        * 把 _计数循环_放进事件处理函数中\r
+        * 修改 _计数循环_ 的退出条件，这样它可以一直运行直到它到达数组`images`（图片）的最后。\r
+        * 在 _计数循环_的里面把当前的图像改为"icon://fa-thumbs-o-up"\r
         \r
-        _Challenge: Can you add a second button that
-        turns all of the images back to thumbs down?_
+        _挑战：你是否能够添加第二个按钮把所有的图像都转回到拇指朝下？_
       CSD U6 for loop led bonus 1_markdown_instruction: |-
         #挑战：添加更多的按钮\r
         \r
@@ -20665,17 +20560,13 @@
         \r
         在设计模式中添加新的按钮，并创建事件处理函数来响应按钮，并更改LED灯的颜色。
       CSD U6 for loop led bonus 1_2018_markdown_instruction: |-
-        # Challenge: Add More
-        Buttons\r
+        #挑战：添加更多的按钮\r
         \r
-        Extend the program by adding more buttons that change the board
-        to different colors.\r
+        通过添加更多的按钮来扩展程序，让它能将主板变成不同的颜色。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Add your new buttons in Design
-        Mode and create event handlers to respond to your buttons and change the LED
-        colors.
+        在设计模式中添加新的按钮，并创建事件处理函数来响应按钮，并更改LED灯的颜色。
       CSD U6 for loop led bonus 2_markdown_instruction: |-
         挑战: 颜色图案\r
         \r
@@ -20687,20 +20578,15 @@
         \r
         _提示：在设计模式时, 请考虑带有参数的函数是否有助于简化你的程序。_
       CSD U6 for loop led bonus 2_2018_markdown_instruction: |-
-        # Challenge: Color
-        Patterns\r
+        挑战: 颜色图案\r
         \r
-        Extend the program by adding more buttons that create different
-        patterns of light.\r
+        通过添加更多能够创建不同图案大的灯的按钮来扩展程序。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Add your new buttons in Design
-        Mode and create event handlers to respond to your buttons and change the LED
-        colors.\r
+        在设计模式中添加新按钮, 并创建事件处理器来响应按钮并更改 LED 颜色。\r
         \r
-        _Hint: As you design your patterns, consider whether a function
-        with parameters could help simplify your program._
+        _提示：在设计模式时, 请考虑带有参数的函数是否有助于简化你的程序。_
       CSD U6 for loop led bonus 3_markdown_instruction: |-
         # 挑战: 音乐\r
         \r
@@ -20733,29 +20619,20 @@
         * 将参数从 `n`更改为 "red"（红色） (注意引号!）\r
         * 测试您的程序, "Red"（红色）按钮应将所有LED都变为红色。
       CSD U6 for loop led function call_2018_markdown_instruction: |-
-        # Calling Your
-        Function\r
+        # 调用你的函数\r
         \r
-        Now that you've created a function that can behave differently
-        based on the parameter it is passed, we can use it in multiple different event
-        handlers to change the lights to different colors.\r
+        现在, 您已经创建了一个随着它所通过的参数而改变的函数，我们可以在不同的事件处理函数中多次使用它来把灯光变为不同的颜色。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        We'll
-        start simple by just creating an event handler for "button_red"\r
+        我们将从创建一个简单的"button_red"（红按钮）事件处理函数开始\r
         \r
-        *
-        Create a new event handler to respond to "button_red"\r
-        * Inside your event
-        handler, add a "call function with parameter" block\r
+        *创建一个新的事件处理函数来响应"button_red"\r
+        * 在事件处理器中添加一个 "call function with parameter"（调用有参数的函数）模块\r
         ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)\r
-        *
-        Change the name from `myFunction` to `setLedsColor`\r
-        * Change the parameter
-        from `n` to "red" (note the quotation marks!)\r
-        * Test your program, the
-        "Red" button should turn all of your LEDs red
+        * 将名称从 `myFunction`更改为`setLedsColor`\r
+        * 将参数从 `n`更改为 "red"（红色） (注意引号!）\r
+        * 测试您的程序, "Red"（红色）按钮应将所有LED都变为红色。
       CSD U6 for loop led function finish_markdown_instruction: |-
         # 完成应用程序\r
         \r
@@ -20771,26 +20648,19 @@
          \r
         当你已经让所有的按钮都正常工作后, 点击 "提交"来提交你的程序。
       CSD U6 for loop led function finish_2018_markdown_instruction: |-
-        # Finish the
-        App\r
+        # 完成应用程序\r
         \r
-        If your red button worked, the only thing left is to call your
-        new function when all of the remaining buttons is pressed.\r
+        如果您的红色按钮正常工作，那么剩下要做的就是在其它按钮按下时，调用你的新函数。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        For
-        each of the remaining buttons (green, blue, and white):\r
+        对每个剩余的按钮 (绿色、蓝色和白色) ：\r
         \r
-        * Create a
-        new event handler\r
-        * Call your `setLedsColor` function with the appropriate
-        color ("green", "blue", or "white")\r
-        * Test your program to make sure
-        all of the buttons work\r
-        \r
-        When you've got all of your buttons working
-        properly, click "Submit" to turn your program in.
+        * 创建新的事件处理函数\r
+        * 用合适的颜色（"绿色", "蓝色", 或 "白色") 来调用`setLedsColor`（设置LED灯颜色）函数\r
+        * 测试您的程序, 确保所有的按钮都正常工作\r
+         \r
+        当你已经让所有的按钮都正常工作后, 点击 "提交"来提交你的程序。
       CSD U6 for loop led function_markdown_instruction: |-
         # 用函数切换颜色\r
         \r
@@ -20810,36 +20680,23 @@
         \r
         我们会在下一关卡添加使用此函数的事件处理函数，但现在，你可以用程序测试你的函数，并在调试控制台输入：`setLedsColor("blue")`
       CSD U6 for loop led function_2018_markdown_instruction: |-
-        # Switching Colors
-        with a Function\r
+        # 用函数切换颜色\r
         \r
-        We could write a for loop for each different color
-        that we want to set LEDs to, but that would be a lot of duplicate code that's
-        _almost_ the same. This is the perfect place to use a _function with a parameter_!
-        You've seen and used functions with parameters before, but now you're going
-        to make one from scratch.\r
+        我们可以为所要设置的LED灯的不同颜色编写计数循环，但这基本上是很多相同的代码。这是个使用 _带参数的函数_的好地方！
+        你已经使用过带参数的函数，但现在你要从头创建一个。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        Create a function called
-        `setLedsColor` that takes a parameter `color` and uses it to change the color
-        of all of the LEDs\r
+        创建一个名为`setLedsColor`（设LED 灯颜色） 的函数, 它采用参数`color`（颜色）, 并用它来更改 所有LED 灯的颜色。\r
         \r
-        * At the bottom of your program, drag out a function
-        with parameter block ![expandable](https://images.code.org/bd6ec3d9a651cf760a7dc8e1949658c0-image-1512761901850.png)\r
-        *
-        Change the name from `myFunction` to `setLedsColor`\r
-        * Change the parameter
-        name from `n` to `color`\r
-        * Inside your function, add a _for loop_ that
-        repeats until it reaches the end of `colorLeds`\r
-        * Inside your _for loop_,
-        set the color of the current led to the parameter `color` (eg. `colorLeds[i].color(color)`\r
+        *在程序的底部，拖出一个带参数的函数模块
+        ![expandable](https://images.code.org/bd6ec3d9a651cf760a7dc8e1949658c0-image-1512761901850.png)\r
+        * 把`myFunction`（我的函数）的名字改为`setLedsColor`（设LED 灯颜色） \r
+        * 把参数名字从`n`改为`color`（颜色）\r
+        * 在函数内，添加一个_计数循环_一直重复直到到达`colorLeds`（彩色LED灯）的最后\r
+        * 在_计数循环_内，把当前LED 灯颜色设置为参数`color`（颜色）（比如`colorLeds[i].color(color)`\r
         \r
-        We'll
-        add event handlers that use this function in the next level, but for now you
-        can test your function by your program and typing this into the debug console:
-        `setLedsColor("blue")`
+        我们会在下一关卡添加使用此函数的事件处理函数，但现在，你可以用程序测试你的函数，并在调试控制台输入：`setLedsColor("blue")`
       CSD U6 for loop led off_markdown_instruction: |-
         # 关闭所有的彩色指示灯\r
         \r
@@ -20849,16 +20706,13 @@
         \r
         将一个事件处理函数添加到 "button_off"（关闭按钮） 中, 并使用 计数循环将每个彩色指示灯都熄灭。
       CSD U6 for loop led off_2018_markdown_instruction: |-
-        # Turning all the Color
-        LEDs Off\r
+        # 关闭所有的彩色指示灯\r
         \r
-        Now that you've got one button to turn the color LEDs on,
-        you can make another turn them off.\r
+        现在你有一个按钮来打开彩色指示灯，你能做另一个把它们关掉。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        Add an event handler
-        to "button_off" with a for loop that turns each color LED off.
+        将一个事件处理函数添加到 "button_off"（关闭按钮） 中, 并使用 计数循环将每个彩色指示灯都熄灭。
       CSD U6 for loop led on_markdown_instruction: |-
         #打开所有彩色LED灯\r
         \r
@@ -20872,25 +20726,17 @@
         * 在事件处理函数中放置一个_计数循环_,一直重复直到它到达数组 "colorLeds"（彩色LED 灯） 的最后。\r
         * 在计数循环内部，调用 `colorLeds[i].on()`来打开当前的彩色LED灯。
       CSD U6 for loop led on_2018_markdown_instruction: |-
-        # Turning all the Color
-        LEDs On\r
+        #打开所有彩色LED灯\r
         \r
-        Now that you know how to use a _for loop_ to process all of
-        the elements in an array, you can turn on all of the Color LEDs much more
-        easily than before.\r
+        现在你知道如何使用_计数循环_来处理数组中的所有元素，你可以比之前更容易打开所有彩色LED 灯了。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        We're going to start an app that
-        will control all of the Color LEDs on your board. The first step is to wire
-        up the button that turns all of the LEDs on.\r
+        我们要启动一个应用程序, 它将控制主板上的所有彩色LED灯。第一步是将接接上打开所有LED灯的按钮。\r
         \r
-        * Add an event handler
-        for "button_on"\r
-        * Place a _for loop_ in your event handler that repeats
-        until it reaches in the end of the array `colorLeds`\r
-        * Inside the for loop,
-        call `colorLeds[i].on()` to turn on the current color LED
+        * 为 "button_on"（打开按钮） 添加一个事件处理函数\r
+        * 在事件处理函数中放置一个_计数循环_,一直重复直到它到达数组 "colorLeds"（彩色LED 灯） 的最后。\r
+        * 在计数循环内部，调用 `colorLeds[i].on()`来打开当前的彩色LED灯。
       CSD U6 for loop led template_markdown_instruction: |-
         # 数组和计数循环
         彩色LED灯项目模板
@@ -20926,21 +20772,15 @@
         改变让蜂鸣器发声的那行代码，让它使用`frequency`的值，而不是默认的频率`500`。\r
         * 运行代码，然后改变频率和持续时间，听听看蜂鸣器声音有什么不同。（别忘了改变后点击按钮！）
       CSD U6 frequency_2018_markdown_instruction: |-
-        # Frequency\r
+        # 频率\r
         \r
-        This buzzer
-        controller has been expanded to control frequency as well, but the code isn't
-        finished yet.\r
+        这个蜂鸣器控制器也被扩展为可以控制频率了，但代码还没有完成。\r
         \r
-        # Do This\r
-        * Using the `duration` variable as a model,
-        create a `frequency` variable that gets the value from the *frequency* slider.\r
+        # 这样做\r
+        * 按照`duration`（持续时间）变量，创建一个`frequency`（频率）变量，从*frequency*（频率）滑动条上取值。\r
         *
-        Modify the line of code that makes the buzzer sound so that it uses the `frequency`
-        variable rather than the default frequency of `500`.\r
-        * Run your code, then
-        change the frequency and the duration to hear the difference in the buzzer.  (Don't
-        forget to hit the button after you make a change!)
+        改变让蜂鸣器发声的那行代码，让它使用`frequency`的值，而不是默认的频率`500`。\r
+        * 运行代码，然后改变频率和持续时间，听听看蜂鸣器声音有什么不同。（别忘了改变后点击按钮！）
       CSD U6 game project board events_markdown_instruction: |-
         # 主板事件\r
         \r
@@ -20956,28 +20796,19 @@
         \r
         一旦完成了这个版本的程序，点击提交按钮。
       CSD U6 game project finish_2018_markdown_instruction: |-
-        # Finishing Touches
-        and Testing\r
+        # 完成润色和测试\r
         \r
-        At this point you should have most of your program in place.
-        Now you need to add whatever finishing touches are needed and do a little
-        testing. When your app is ready, have your classmates try it out. See if you
-        can find any bugs, confusing design choices, or missing features you'd like
-        to work on.\r
+        现在，你几乎完成了整个程序了。你可以加一些润色，然后做一些测试。当你的应用准备好后，让你的同学试一试。看看你是否能找到任何缺陷，混乱的选项设计，或者少了什么功能。\r
         \r
-        Once you're all done with this version of your program,
-        click Submit to turn it in.
+        一旦完成了这个版本的程序，点击提交按钮。
       CSD U6 game project functions call_markdown_instruction: |-
         # 调用你的函数\r
         \r
         函数定义好后，要在需要的地方调用它。找找你的事件处理函数或程序的其它地方，是否需要调用函数，然后添加一个函数调用。
       CSD U6 game project functions call_2018_markdown_instruction: |-
-        # Calling your
-        Functions\r
+        # 调用你的函数\r
         \r
-        With your functions defined, you can can call them wherever
-        you need. Go through your event handlers, or anywhere else in your program
-        that your function should be used, and add calls to the function you created.
+        函数定义好后，要在需要的地方调用它。找找你的事件处理函数或程序的其它地方，是否需要调用函数，然后添加一个函数调用。
       CSD U6 game project functions define_markdown_instruction: |-
         # 定义你的函数\r
         \r
@@ -20993,19 +20824,17 @@
         }\r
         ```
       CSD U6 game project functions define_2018_markdown_instruction: |-
-        # Define Your
-        Functions\r
+        # 定义你的函数\r
         \r
-        Define all of your functions at the bottom of the program,
-        under the comment `// Create your functions here`.\r
+        在程序的注释下添加你的所有函数。 `//
+        Create your functions here`（在这里创建你的函数）.\r
         \r
-        Right now we're
-        only worrying about writing the function _definitions_, the part which looks
-        like:\r
+        现在，我们要开始写函数_定义_了，这部分看起来会像下面这样：\r
         \r
         ```\r
-        function myFunction() {\r
-        \t// Things my function does\r
+        function
+        myFunction() {\r
+        \t// Things my function does（函数要做的事情）\r
         }\r
         ```
       CSD U6 game project screen links_markdown_instruction: |-
@@ -21046,21 +20875,9 @@
         \r
         * 阅读`updateLED`（更新LED灯）函数，看看它做了什么。\r
         * 在`updateBuzzer`（更新蜂鸣器）函数中添加代码，来让它只在切换开关打开时才打开。
-      CSD U6 get toggle_2018_markdown_instruction: |-
-        # change\r
-        \r
-        This program
-        has events that detect three different changes: the toggle switch, the interval
-        slider, and the duration slider.  Because there are so many different things
-        that cause the LED and buzzer to reset, it uses functions to organize the
-        code.\r
-        \r
-        # Do This\r
-        \r
-        * Read the `updateLED` function to see what
-        it does.\r
-        * Add code to `updateBuzzer` to make the buzzer only turn on when
-        the toggle switch is open.
+      CSD U6 get toggle_2018_markdown_instruction: '# onChange \r \r 此程序具有检测三不同更改的事件:
+        切换开关、间隔滑块和持续时间滑块。 因为有这么多不同的东西可以导致 LED 和蜂鸣器复位, 它使用函数来组织代码.\r\r#请操作以下\r\r* 请阅读
+        "updateLED" 函数以查看它的作用. \r* 将代码添加到 "updateBuzzer", 使蜂鸣器只在切换时打开时打开开关。'
       CSD U6 getProperty Demo_markdown_instruction: |-
         # 更新属性\r
         \r
@@ -21087,9 +20904,7 @@
         \r
         _注意：我们已经移除了设计模式标签页，这样你能开始练习使用`setProperty()`（设置属性）。它会在晚一点你需要构建自己的应用时再出现。_
       CSD U6 getProperty board predict_markdown_instruction: 预测级别 (请参见标记的包含关卡)
-      CSD U6 getProperty board predict_2018_markdown_instruction: |-
-        Predict Level
-        (See contained level for markdown)
+      CSD U6 getProperty board predict_2018_markdown_instruction: 预测级别 (请参见标记的包含关卡)
       CSD U6 getProperty buzzer_markdown_instruction: |-
         # 使用电路游戏板\r
         \r
@@ -21344,17 +21159,13 @@
         * 更改`moveBugs()`（移动虫子） 函数, 使其为每个颜色的虫子调用`moveBug(color)`. \r
         * （提示：查看`detectHits()`函数来获得一些提示。）
       CSD U6 iter modify bugs_2018_markdown_instruction: |-
-        # Bug Shaker\r
+        # 虫子振动器\r
         \r
-        This
-        program shakes bugs around when the board is shaken, but it's only working
-        for one bug.\r
+        这个程序在主板摇晃的时候振动虫子，但它只对一只虫子起作用。\r
         \r
-        # Do This\r
-        * Change the `moveBugs()` function so that
-        it calls `moveBug(color)` on every bug color.\r
-          * (Hint: Look at the `detectHits()`
-        function for clues how to do this.)
+        #这样做\r
+        * 更改`moveBugs()`（移动虫子） 函数, 使其为每个颜色的虫子调用`moveBug(color)`. \r
+        * （提示：查看`detectHits()`函数来获得一些提示。）
       CSD U6 iter predict bubbles contained_markdown_instruction: |-
         # 鱼泡泡\r
         \r
@@ -21370,11 +21181,9 @@
         \r
         添加更多的一些模式。找个伙伴，将他们的模式作为一个选项。确保将每个模式都放到它自己的函数中。
       CSD U6 light pattern challenge_2018_markdown_instruction: |-
-        # Challenge: More
-        Patterns\r
+        # 挑战：更多模式\r
         \r
-        Add some more patterns to your app. Find a partner and add
-        their pattern as an option. Make sure to put each pattern into its own function.
+        添加更多的一些模式。找个伙伴，将他们的模式作为一个选项。确保将每个模式都放到它自己的函数中。
       CSD U6 light pattern off_markdown_instruction: |-
         # 关掉它\r
         \r
@@ -21742,32 +21551,21 @@
         \r
         _注意："stopAlarmButton"按钮已经在屏幕上了，但它的"hidden"属性被设置为真了，所以程序启动时它不会显示出来。_
       CSD U6 setProperty hidden_2018_markdown_instruction: |-
-        # Hidden\r
+        # 隐藏\r
         \r
-        Design
-        elements have a property called "hidden" that controls whether the element
-        should show on screen or not. We are going to use this property to create
-        an alarm app. Notice that when the program starts one button is hidden, and
-        one is not.\r
+        设计元素有个属性叫做”hidden"（隐藏），它控制元素应该显示或隐藏。我们将会用这个属性来创建一个警报应用。注意，当程序开始时，一个按钮是隐藏的，另一个不是。\r
         \r
-        We have already set up an event handler for the "triggerAlarmButton"
-        which will do two things when clicked:\r
+        我们已经为"triggerAlarmButton"（触发警报按钮）设置了一个事件处理函数。点击它时会做两件事：\r
         \r
-        * Change the "text" property
-        of "statusLabel" to "on"\r
-        * Set the "hidden" property of "stopAlarmButton"
-        to `false` (meaning it should _not_ be hidden)\r
+        * 将"statusLabel"（状态标签）的"text"（文本） 属性设置为"打开"\r
+        * 设置"stopAlarmButton"的"hidden"属性为`false`（假）（这意味着它_不会_被隐藏起来）)\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        * Run
-        the program and click "Trigger Alarm" to see how it works\r
-        * Add code
-        to the provided event handler that hides the "triggerAlarmButton"\r
+        * 运行程序，并点击"Trigger Alarm"（触发警报）来看看它是如何工作的\r
+        * 将代码添加到"triggerAlarmButton"对应的事件处理函数中\r
         \r
-        _Note:
-        the button "stopAlarmButton" is already on the screen, but because its "hidden"
-        property is marked true, it isn't shown when the program starts._
+        _注意："stopAlarmButton"按钮已经在屏幕上了，但它的"hidden"属性被设置为真了，所以程序启动时它不会显示出来。_
       CSD U6 setProperty xy click_markdown_instruction: |-
         # 点击时改变\r
         \r
@@ -21825,7 +21623,7 @@
         \r
         </div>\r
         \r
-        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片位置一样。\r
+        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）\r
         \r
         _注意：我们已经去掉了设计模式，这样你能练习使用setProperty（设置属性），但我们会在你创建自己应用的时候，再把它加回来。_
       CSD U6 setProperty xy_2018_markdown_instruction: |-
@@ -21841,7 +21639,7 @@
         \r
         </div>\r
         \r
-        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片位置一样。\r
+        用`setProperty()`（设置属性）模块来移动"red_button"（红色按钮），让它和右边的图片一样。（点击图片查看大图）\r
         \r
         _注意：我们已经去掉了设计模式，这样你能练习使用setProperty（设置属性），但我们会在你创建自己应用的时候，再把它加回来。_
       CSD U6 slider intro_markdown_instruction: |-
@@ -21855,22 +21653,15 @@
         * 查看一下代码，找到让持续时间无法正常设置的缺陷。\r
         \t* (暗示：将鼠标悬停到黄色的三角上来查看关于代码什么地方错了的提示。)
       CSD U6 slider intro_2018_markdown_instruction: |-
-        # Sliders\r
+        # 滑动条\r
         \r
-        Last time,
-        your users were only able to choose between a short and long buzz.  To give
-        the user control over the exact duration of the buzzer, you'll want to use
-        a slider.\r
+        上次，你的用户只能在短和长的蜂鸣声中选择一个。为了让用户能够精确的控制蜂鸣器的持续时间，你需要一个滑动条。\r
         \r
-        This slider lets users choose a value between 100 and 1000
-        for the duration of the buzz, but there's something not quite right about
-        how it's working.\r
+        滑动条让用户可以选择一个在100到1000之间的值，作为蜂鸣声的持续时间。但是这里没弄对，所以它无法工作。\r
         \r
-        # Do This\r
-        * Look over the code and find the bug
-        that's keeping the duration from being set correctly.\r
-        \t* (Hint: Hover
-        over the yellow triangles for clues as to what might be wrong with the code.)
+        # 这样做\r
+        * 查看一下代码，找到让持续时间无法正常设置的缺陷。\r
+        \t* (暗示：将鼠标悬停到黄色的三角上来查看关于代码什么地方错了的提示。)
       CSD U6 stillness game predict code_markdown_instruction: |-
         # 随加速度计而变\r
         \r
@@ -21885,26 +21676,18 @@
         \r
         一旦找到了缺陷，运行该程序，并尝试在不触发报警器的情况下将主板传递给你的合作伙伴。
       CSD U6 stillness game predict code_2018_markdown_instruction: |-
-        # Change with
-        the Accelerometer\r
+        # 随加速度计而变\r
         \r
-        This program uses the change event to increase a
-        movement meter every time the board moves. When the movement meter reaches
-        100, the alarm will sound.\r
+        此程序使用更改事件在每次主板移动时增加移动计量器。当移动计量器达到100, 警报就会响起。\r
         \r
         \r
-        # Do This\r
-        This program has two bugs
-        that you need to fix:\r
+        # 这样做\r
+        此程序有两个需要修复的缺陷：\r
         \r
-        * The movement meter is being triggered by a
-        button press, instead of the accelerometer's `change` event.\r
-        * The programmer
-        forgot how to use the counter pattern to increase the movement variable.\r
+        * 移动仪表由按键按压触发, 而非加速度计的`change`事件。\r
+        * 程序员忘记了如何使用计数器模式来增加移动变量。\r
         \r
-        Once
-        you have found the bugs, run the program and try to pass the board to your
-        partner without setting off the alerm.
+        一旦找到了缺陷，运行该程序，并尝试在不触发报警器的情况下将主板传递给你的合作伙伴。
       CSD U6 stillness game predict_markdown_instruction: |
         # 加速度计事件\r
         \r
@@ -21921,18 +21704,16 @@
         试试不同的LED模块，看看它们能做什么。\r
         * 暗示：别忘了在改了代码后，点击"重置"来再次运行你的代码。
       CSD U6 test LED_2018_markdown_instruction: |-
-        # Control the LED\r
+        # 控制LED灯\r
         \r
-        Now that
-        you know your board is working, you can try out the different LED blocks.\r
+        现在，你知道你的主板在工作了，你可以试试不同的LED模块。\r
         \r
         #
-        Do This\r
-        * Click "Run" and discuss with your partner how the code works.\r
+        这样做\r
+        * 点击"运行"，然后和你的伙伴讨论一下代码是如何工作的。\r
         *
-        Try the different LED blocks to see what they do.\r
-          * Hint: Don't forget
-        to hit "Reset" and run your code again after you change it
+        试试不同的LED模块，看看它们能做什么。\r
+        * 暗示：别忘了在改了代码后，点击"重置"来再次运行你的代码。
       CSD U6 tugowar buzzer_markdown_instruction: |-
         # 胜利的蜂鸣器\r
         \r
@@ -21942,21 +21723,13 @@
         \r
         现在，我们已经能直接用`player`（玩家）参数来报告哪个玩家赢了，但这不能让蜂鸣器播放不同的声音。在条件里，要判断是否一个玩家赢了， 需要加入_另一个_条件来检查是哪一个玩家。如果(if)`player == "red"`（玩家等于红色）蜂鸣器应该播放一个高音，否则（else）播放一个低音。
       CSD U6 tugowar buzzer_2018_markdown_instruction: |-
-        # Winning Buzzer\r
+        # 胜利的蜂鸣器\r
         \r
-        That
-        last thing that that is missing from your project guide's description of
-        this project is the buzzer. It should buzz a high tone if player 1 wins and
-        a low tone if player 2 wins. \r
+        现在，你的项目向导描述中剩下的最后一件事情，就是蜂鸣器了。他应该在玩家1胜利时播放一个高的声音，在玩家2胜利时播放一个低的声音。\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        So far we've been able
-        to just use the `player` parameter directly to report which player won, but
-        that won't work for buzzing different sounds. Inside the conditional that
-        checks if a player won, you'll need to add _another_ conditional that checks
-        which player it was. If `player == "red"` the buzzer should play a high
-        note, otherwise (else) it should play a low note.
+        现在，我们已经能直接用`player`（玩家）参数来报告哪个玩家赢了，但这不能让蜂鸣器播放不同的声音。在条件里，要判断是否一个玩家赢了， 需要加入_另一个_条件来检查是哪一个玩家。如果(if)`player == "red"`（玩家等于红色）蜂鸣器应该播放一个高音，否则（else）播放一个低音。
       CSD U6 tugowar conditional_markdown_instruction: |-
         # 检查赢家\r
         \r
@@ -21990,14 +21763,9 @@
         \r
         这是一个拔河比赛的例子，你会在课程结束时创建一个。为了玩这个游戏，需要和另一个同学配对。一个同学在左边尽可能快的点击电路游戏板上的左按钮，另一个同学在右边也一样点击右按钮。谁先让虫子到达它们这边的，就取得了胜利。
       CSD U6 tugowar demo_2018_markdown_instruction: |-
-        # Grab that Bug!\r
+        # 抓住那个虫子！\r
         \r
-        This
-        is an example of a tug o' war game that could be built in this lesson. To
-        play, pair up with another student. The student on the left will the click
-        the left button on the Circuit Playground as fast as they can, while the student
-        on the right clicks the right button. Whoever can get the bug over to their
-        side first wins.
+        这是一个拔河比赛的例子，你会在课程结束时创建一个。为了玩这个游戏，需要和另一个同学配对。一个同学在左边尽可能快的点击电路游戏板上的左按钮，另一个同学在右边也一样点击右按钮。谁先让虫子到达它们这边的，就取得了胜利。
       CSD U6 tugowar design 1.5_markdown_instruction: |-
         # 游戏屏幕设计\r
         \r
@@ -22033,27 +21801,19 @@
         \r
         可以随意添加其它想要的设计。
       CSD U6 tugowar design 1_2018_markdown_instruction: |-
-        # Getting Started: Screen
-        Design\r
+        # 入门：屏幕设计\r
         \r
-        You should have already reviewed the planning guide for this
-        project. Some of the work to turn this project guide into a working program
-        has already been started. Based on the project guide you're going to do the
-        rest of this work.\r
+        你应该已经看过来这个项目的计划向导。这个项目向导中已经添加了一些工作了。基于项目向导，你能够完成剩下的工作。\r
         \r
-        # Do This\r
+        #
+        这样做\r
         \r
-        We've already created a "start"
-        screen and included a title and "play" button. Using your planning guide,
-        finish creating this screen. Specifically you'll want to:\r
+        我们已经创建了一个"start"（开始）屏幕，并且包含了标题和一个"play"（开始）按钮。使用你的计划向导，完成这个屏幕的创建。你需要：\r
         \r
-        * Update
-        the title text to say "Emoji Race"\r
-        * Add instructions for playing using
-        the ID "instructions"\r
+        * 更新标题文本为："表情符号比赛"\r
+        * 用ID（标识）"instructions"来增加一个游戏说明。\r
         \r
-        Feel free to add any other design tweaks that
-        you'd like.
+        可以随意添加其它想要的设计。
       CSD U6 tugowar design 2_markdown_instruction: |-
         # 设计胜利的屏幕\r
         \r
@@ -22087,28 +21847,19 @@
         * 将表情符号在开始时设置为悲伤的，然后半路上改为无表情的，到终点后改为高兴的。\r
         * 用变量和条件来确保玩家只能在"game"屏幕显示后，才能移动它们的表情符号。
       CSD U6 tugowar final_2018_markdown_instruction: |-
-        # Make It Your Own\r
+        # 自己动手吧\r
         \r
-        You
-        just walked through someone else's plan for creating a program, so now it's
-        time to make it your own. What additional features or challenges do you want
-        to create?\r
+        刚刚你使用了别人的计划来创建一个程序，现在是时候自己动手了。你想要创造什么功能或者挑战呢?\r
         \r
-        # Do This\r
+        # 这样做\r
         \r
-        Select one of the challenges below to add
-        to the game or come up with a challenge of your own.\r
+        在下面选择一个挑战，或者自己想一个。\r
         \r
-        * Change the look
-        and layout of the screens\r
-        * Use the buzzer or the led to show when one
-        of the buttons has been clicked\r
-        * Set the "icon-color" property of "winner_image"
-        to the winning color\r
-        * Make the emojis start out sad, change to meh halfway,
-        and end up happy\r
-        * Use a variable and conditionals to make sure that players
-        can only move their emojis when the "game" screen is showing
+        * 改变屏幕的外观和布局\r
+        * 用蜂鸣器或LED灯来标识哪个按钮被按了。\r
+        * 设置"winner_image"（胜利者图片）的"icon-color"（图标颜色）属性为胜利者的颜色。\r
+        * 将表情符号在开始时设置为悲伤的，然后半路上改为无表情的，到终点后改为高兴的。\r
+        * 用变量和条件来确保玩家只能在"game"屏幕显示后，才能移动它们的表情符号。
       CSD U6 tugowar movement 1_markdown_instruction: |
         # 跟踪分数\r
         \r
@@ -27080,17 +26831,13 @@
         * 为左按钮创建一个'up'事件。\r
         * 添加代码来让LED灯在释放按钮时熄灭。
       CSDU6 - LED toggle buttonL up_2018_markdown_instruction: |-
-        # Other Board Events
-        with the Buttons\r
+        # 按钮的其它主板事件\r
         \r
-        Instead of using the right button, you can make the
-        LED turn off when the left button comes back up.\r
+        你可能注意到了，LED灯会在按钮释放后，仍然是亮着的。因为事件只在按钮按下时触发了。为了关掉它，你需要在按钮弹起时也触发一个事件。\r
         \r
-        # Do this\r
-        * Create
-        an 'up' event for the left button.\r
-        * Add code to turn the LED off when
-        the button pops back up.
+        # 这样做\r
+        * 为左按钮创建一个'up'事件。\r
+        * 添加代码来让LED灯在释放按钮时熄灭。
       CSDU6 - LED toggle buttonL_markdown_instruction: |-
         # 使用LED的主板事件\r
         \r
@@ -27276,16 +27023,11 @@
         \r
         现在，你知道如何使用主板事件，按钮，开关和蜂鸣器了。试着创造一个程序，当按下按钮，或滑动开关时，让你的主板变成一个声音面板。试一试声音的持续时间和频率，并听一听。
       CSDU6 - board event challenge_2018_markdown_instruction: |-
-        # Challenge: Sound
-        Board\r
+        # 挑战：声音面板\r
         \r
-        Check with your teacher before starting the challenge.\r
+        开始挑战前，先和你的老师询问一下。\r
         \r
-        Now
-        that you know how to use board events, the buttons, switch, and the buzzer,
-        try making a program that turns your board into a sound board when you press
-        the buttons or flip the switch. Play around with the duration and frequencies
-        of the sounds, and listen to how it turns out.
+        现在，你知道如何使用主板事件，按钮，开关和蜂鸣器了。试着创造一个程序，当按下按钮，或滑动开关时，让你的主板变成一个声音面板。试一试声音的持续时间和频率，并听一听。
       CSDU6 - button LED prediction_markdown_instruction: 请参见降价的包含级别
       CSDU6 - button LED prediction_2018_markdown_instruction: 请参见包含的降价级别
       CSDU6 - button debug_markdown_instruction: |-
@@ -27451,16 +27193,12 @@
         # 这样做\r
         * 改变`buzzer.frequency` （蜂鸣器.频率）的持续时间参数，来让左按钮播放一个长的蜂鸣，右按钮播放一个短的蜂鸣。
       CSDU6 - buzzer duration buttons_2018_markdown_instruction: |-
-        # Buzzer and the
-        Buttons\r
+        # 蜂鸣器和按钮\r
         \r
-        This program should use the buttons to play long and short
-        buzzes.\r
+        这个程序会通过按钮来播放长的和短的蜂鸣声。\r
         \r
-        # Do this\r
-        * Change the duration parameter of `buzzer.frequency`
-        to make the left button play a long buzz, and the right button play a short
-        buzz.
+        # 这样做\r
+        * 改变`buzzer.frequency` （蜂鸣器.频率）的持续时间参数，来让左按钮播放一个长的蜂鸣，右按钮播放一个短的蜂鸣。
       CSDU6 - buzzer duration_markdown_instruction: |-
         # 蜂鸣器持续时间\r
         \r
@@ -27508,18 +27246,13 @@
         * 从工具箱中拖出一个`buzzer.frequency()`模块，然后使用它。你会注意到它有两个参数，试试改变其中一个或两个，看看会发生什么？\r
         * 运行一下程序，享受一下你的电路游戏板播放的音乐。
       CSDU6 - buzzer intro_2018_markdown_instruction: |-
-        # Using the Buzzer\r
+        # 使用蜂鸣器\r
         \r
-        You
-        can use the buzzer in a lot of different ways, but right now we're just going
-        to use the `buzzer.frequency()`.\r
+        你可以有很多方法来使用蜂鸣器，但现在，我们只使用`buzzer.frequency()`（蜂鸣器.频率）。\r
         \r
-        # Do this\r
-        * Pull out a `buzzer.frequency()`
-        block from the toolbox and play around with it. You'll notice it has two
-        parameters, what happens when you change either, or both of those?\r
-        * Run
-        the program and enjoy the music of your Circuit Playground.
+        # 这样做\r
+        * 从工具箱中拖出一个`buzzer.frequency()`模块，然后使用它。你会注意到它有两个参数，试试改变其中一个或两个，看看会发生什么？\r
+        * 运行一下程序，享受一下你的电路游戏板播放的音乐。
       CSDU6 - ch 1 exemplar LEDs_markdown_instruction: |-
         # An Example Using Color
         LEDs\r
@@ -27596,24 +27329,17 @@
         \r
         当你一直在你的程序上工作时，找找是否有一些规律能够被抽象为函数。你能找到重复了多次的代码，或者某些命名后能够更好理解的代码吗？别忘了在写函数的时候，你能使用参数来_最大可能_重用一些只有少量不同的代码（比如为多个LED灯设置不同的颜色）。
       CSDU6 - final project 4_2018_markdown_instruction: |-
-        # Functions\r
+        # 函数\r
         \r
-        As you
-        continue to work through your program, look for patterns that can be abstracted
-        into functions. Can you find code that is repeated multiple places, or chunks
-        of code that could be better understood of given a name? Don't forget that
-        you can use parameters to write functions for repeated code that is _mostly_
-        the same, but varies a bit (such as setting color on multiple LEDs).
+        当你一直在你的程序上工作时，找找是否有一些规律能够被抽象为函数。你能找到重复了多次的代码，或者某些命名后能够更好理解的代码吗？别忘了在写函数的时候，你能使用参数来_最大可能_重用一些只有少量不同的代码（比如为多个LED灯设置不同的颜色）。
       CSDU6 - final project 5_markdown_instruction: |-
         # 主板输出\r
         \r
         如果还没有开始, 请使用主板上的一些输出元素向用户传达有用的信息。
       CSDU6 - final project 5_2018_markdown_instruction: |-
-        # Board Output\r
+        # 主板输出\r
         \r
-        If
-        you haven't already, use some of the output elements on the board to communicate
-        useful information to the user.
+        如果还没有开始, 请使用主板上的一些输出元素向用户传达有用的信息。
       CSDU6 - final project 6_markdown_instruction: |-
         # 完成润色\r
         \r
@@ -28261,9 +27987,7 @@
         to a random x position every second, can you make the image also move to a
         random y?
       CSDU6 - toggle state LED prediction_markdown_instruction: 请参见包含的降价级别
-      CSDU6 - toggle state LED prediction_2018_markdown_instruction: |-
-        See contained
-        level for markdown
+      CSDU6 - toggle state LED prediction_2018_markdown_instruction: 请参见降价的包含级别
       CSDU6 - toggleswitch state setProp_markdown_instruction: |-
         # 状态和切换开关\r
         \r
@@ -28273,19 +27997,13 @@
         * 用`toggleSwitch.isOpen`属性完成这个如果语句。\r
         * 运行程序，并点击左按钮，然后将切换开关滑动，并再次点击按钮。
       CSDU6 - toggleswitch state setProp_2018_markdown_instruction: |-
-        # State and
-        the Toggle Switch\r
+        # 状态和切换开关\r
         \r
-        This program tells you whether the toggle switch
-        is opened or closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen`
-        is `true` if the switch is opened and `false` if the switch is closed.\r
+        这个程序能告诉你这个切换开关时开着的还是关着的，但它需要让`toggleSwitch.isOpen`模块正常工作。`toggleSwitch.isOpen`为`true`（真）时表示时开着的，如果是关着的就是`false`（假）。\r
         \r
-        #
-        Do this\r
-        * Complete the if-statement with the `toggleSwitch.isOpen` property.\r
-        *
-        Run the program and press the left button, then flip the toggle switch and
-        press the button again.
+        # 这样做\r
+        * 用`toggleSwitch.isOpen`属性完成这个如果语句。\r
+        * 运行程序，并点击左按钮，然后将切换开关滑动，并再次点击按钮。
       CSDU6 - toggleswitch state_markdown_instruction: |-
         # 状态和切换开关\r
         \r
@@ -28539,17 +28257,13 @@
         \r
         * 添加代码，让它在按下右按钮时，显示日期为"星期四" 。
       CSDU6 array select days_2018_markdown_instruction: |-
-        # Accessing Items in an
-        Array\r
+        # 访问数组中的条目\r
         \r
-        This program uses the Circuit Playground.  It creates an array
-        of the days of the week.  When the left button is pressed, it displays the
-        day as "Tuesday".\r
+        这个程序使用电路游戏板。它创建一周中的每天的数组。按下左键时，它将显示 "星期二" 。\r
         \r
-        # Do This\r
+        #这样做\r
         \r
-        * Add code that will display the
-        day as "Thursday" when the right button is pressed.
+        * 添加代码，让它在按下右按钮时，显示日期为"星期四" 。
       CSDU6 arrays rainbow_markdown_instruction: |-
         # 索引练习\r
         \r
@@ -28798,17 +28512,12 @@
         # 这样做\r
         * 现在，当左键按下时，蜂鸣器会播放一个高音。改为让蜂鸣器播放一个低音。\r
       CSDU6 frequency modification_2018_markdown_instruction: |
-        # Making the Buzzer
-        Buzz\r
+        # 让蜂鸣器蜂鸣\r
         \r
-        The frequency of the buzzer determines how high or how low the
-        buzzer will sound when it plays. The higher the number you give frequency,
-        the higher the buzzer will sound.\r
+        蜂鸣器的频率决定了当它发出声音时，音调的高低。你给的频率的数字越大，蜂鸣器的发出的声调越高。\r
         \r
-        # Do this\r
-        * Right now the buzzer
-        plays a high note when the left button is pressed. Make the buzzer play a
-        low note instead.\r
+        # 这样做\r
+        * 现在，当左键按下时，蜂鸣器会播放一个高音。改为让蜂鸣器播放一个低音。\r
       CSDU6 frequency template_markdown_instruction: 做一件事!
       CSDU6 frequency template_2018_markdown_instruction: 做一件事!
       CSDU6 light sensor alarm_markdown_instruction: |-
@@ -28880,21 +28589,16 @@
         \r
         _提示：记住在音符周围使用引号！例如：`buzzer.note("A4", 100);`_
       CSDU6 piano with notes_2018_markdown_instruction: |-
-        # Piano Notes\r
+        # 钢琴音符\r
         \r
-        This
-        is the same piano that you saw at the beginning of the lesson, but there are
-        some bugs!\r
+        这是你在课程刚开始看到的一样的钢琴，但有一些缺陷！\r
         \r
-        # Do this\r
+        # 这样做\r
         \r
-        * Edit the code so that all keys are using
-        a `buzzer.note()` block to play the corresponding note.\r
-        * Make sure that
-        all the values passed in to `buzzer.note()` are notes, and not frequencies.\r
+        * 编辑代码，让所有的键都使用`buzzer.note()`模块来播放正确的音符。\r
+        * 确保所有传递到`buzzer.note()`里的值都是音符，不是频率。\r
         \r
-        _Hint:
-        Remember to put quotes around the notes! e.g `buzzer.note("A4", 100);`_
+        _提示：记住在音符周围使用引号！例如：`buzzer.note("A4", 100);`_
       CSDU6 play null notes_markdown_instruction: |-
         # Null（空）音符\r
         \r
@@ -28911,36 +28615,22 @@
         \r
         _提示：`null`引用了一个值，就像一个变量名。确保不要把它放到引号里！_
       CSDU6 play null notes_2018_markdown_instruction: |-
-        # Null Notes\r
+        # Null（空）音符\r
         \r
-        You may
-        have noticed that if you put the same note side-by-side in the array, the
-        buzzer just plays that note as one long sound instead of as individual notes.
-        In music we often want a break (or _rest_) between notes. You can get your
-        buzzer to play a rest by sending it the value `null`.\r
+        你可能注意到了，蜂鸣器有些局限性。例如，如果你将相同的音符挨着放到数组里，蜂鸣器就会播放一个音符的长音。你可以用`null`来绕过这个问题。\r
         \r
-        `null` is a special
-        value that represents emptiness in computer science. `playNotes` plays each
-        note for the same duration, so a `null` element in the array is just telling
-        `playNotes` to play nothing for the same duration as everything else.\r
+        `null`是计算机科学中表达空的一种方式。`playNotes`会用同样的长度来播放每个音符，因此数组中的`null`元素只是告诉`playNotes`在同样长度的时间内什么也不要放。\r
         \r
         \r
-        #
-        Do this\r
+        #这样做\r
         \r
-        * Run the code to hear what it sounds like first.\r
-        * Examine
-        the array inside `buzzer.playNotes()`.\r
-        * Put a pause between notes that
-        are the same and side-by-side, and any other place you deem appropriate.\r
+        * 运行代码先听听声音如何。\r
+        * 检查`playNotes()`内的数组。\r
+        * 在一样的两个音符间或其它你觉得合适的地方放个暂停。\r
         \r
-        _Tip:
-        `null` references a value, just like a variable name. Make sure you don't
-        put it in quotation marks!_
+        _提示：`null`引用了一个值，就像一个变量名。确保不要把它放到引号里！_
       CSDU6 play predict code_markdown_instruction: 记号在包含的关卡里
-      CSDU6 play predict code_2018_markdown_instruction: |-
-        Markdown is in contained
-        level
+      CSDU6 play predict code_2018_markdown_instruction: 记号在包含的关卡里
       CSDU6 play predict markdown_markdown_instruction: |-
         #做出预测\r
         \r
@@ -28967,26 +28657,18 @@
         \r
         _提示：别忘了你随时都可以在模块和文本模式之间来回转换。_
       CSDU6 play songs_2018_markdown_instruction: |-
-        # Making Songs\r
+        # 制作歌曲\r
         \r
-        You can
-        make and play full songs with `buzzer.playNotes()`. It takes two parameters:
-        an array of notes to play, and a tempo at which to play the notes. In previous
-        bubbles you created arrays of notes and played through them randomly, but
-        `buzzer.playNotes()` plays each note consecutively instead.\r
+        你可以用`buzzer.playNotes()`（蜂鸣器.播放音符）来制作一首完整的歌。它需要两个参数：一个用来播放的音符数组，和一个播放音符的节奏。在前面的泡泡里，你已经创建了音符的数组，并随机的播放了它的元素。但是`buzzer.playNotes()`会按照顺序播放每个音符。\r
         \r
         \r
-        # Do
-        this\r
+        # 这样做\r
         \r
-        * Pull out a `buzzer.playNotes` block and change the starting
-        array inside.\r
-        * Make sure the new array you give it has at least two pairs
-        of notes that are next to each other in the list (Example: `["A5", "A5",
-        "G4", "G4"]`)\r
+        * 拖出一个`buzzer.playNotes`模块，并改变里面初始的数组。\r
+        *
+        确保在新数组里，至少有两组同一个音符成对出现的。（例如：`["A5", "A5", "G4", "G4"]`）\r
         \r
-        _Hint: Don't forget that you can always switch back
-        and forth between block and text mode._
+        _提示：别忘了你随时都可以在模块和文本模式之间来回转换。_
       CSDU6 toggle state prediction_markdown_instruction: |-
         # 切换开关提高\r
         \r
@@ -28994,14 +28676,11 @@
         \r
         如果切换开关是`open`或是`close`时，按下按钮会发生什么不同的事情吗？
       CSDU6 toggle state prediction_2018_markdown_instruction: |-
-        # More on the Toggle
-        Switch\r
+        # 切换开关提高\r
         \r
-        You can also check whether the toggle switch is in the `open`
-        or `close` position anywhere in your program. \r
+        你也可以在程序的任何位置检查切换开关的值是`open`还是`close`。\r
         \r
-        What different things
-        does the button do when the toggle switch is `open` or `close`?
+        如果切换开关是`open`或是`close`时，按下按钮会发生什么不同的事情吗？
       CSDU6- predict event types_markdown_instruction: |-
         # Predict: Event Type\r
         \r
@@ -30182,7 +29861,7 @@
         style="float: right">\r
         \r
         Well, now we have the beginnings of a little
-        game!  Time to go back to design mode to start embelishing our program.\r
+        game!  Time to go back to design mode to start embellishing our program.\r
         \r
         **You
         try it:** - Add a text label that says "Try to Catch the Button!"\r
@@ -40200,12 +39879,23 @@
          * **Note**: We'll revisit this game in the next
         lesson where you can improve it.  This is **just version 1**\r
         \r
-      Fish Tank 1_markdown_instruction: |-
-        **Make a prediction**: What do you think
-        will happen when you run this code?
-      Fish Tank 2_markdown_instruction: |-
-        We're going to make a fish tank. Change
-        the Dusty the tumbleweed to a fish.
+      Fish Tank 1_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
+      Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
+      Fish Tank 3_markdown_instruction: |-
+        All this spinning is going to make our fish
+        dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 4_markdown_instruction: |-
+        Our fish tank needs some water! Use the
+        `set background color` block to make the background blue.
+      Fish Tank 5_markdown_instruction: |-
+        Our fish is getting a little lonely. Create
+        a new sprite inside the fish tank.
+      Fish Tank 6_markdown_instruction: |-
+        What do you want your fish’s friend to do?
+        Add a behavior and watch them go!
+      Fish Tank 7_markdown_instruction: |-
+        There are a lot of new blocks in the toolbox.
+        Play with them to make your fish tank special.
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.\r
         <hr/>\r
@@ -40636,6 +40326,21 @@
         student's address. You can keep track of the responses in the Notes section
         in the DNS tab.  \r
         ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+      'Internet Simulator: DNS_2018_markdown_instruction': |-
+        ## The Need for DNS\r
+        \r
+        In
+        this version of the Internet Simulator, a Domain Name System (DNS) is provided
+        for you and knows the IP addresses of all connected computers. You can only
+        see the hostnames of other connected computers.   \r
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)\r
+        \r
+        The
+        address of the DNS is always &lt;yourRouterNumber&gt;.15. Send a message with
+        protocol `GET [hostname]`, for example `GET Bob2`, to the DNS to get another
+        student's address. You can keep track of the responses in the Notes section
+        in the DNS tab.  \r
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
       'Internet Simulator: Packets_markdown_instruction': |-
         ## Packets and Making
         a Reliable Internet\r
@@ -40673,7 +40378,84 @@
         message is not known beforehand.)\r
         - The sender and receiver must be confident
         the full message was successfully transmitted and reconstructed.
+      'Internet Simulator: Packets_2018_markdown_instruction': |-
+        ## Packets and Making
+        a Reliable Internet\r
+        \r
+        **Challenge:** Develop a protocol for reliably
+        sending a message across an unreliable network\r
+        \r
+        **An Unreliable Internet
+        Simulator:** The current version of the Internet Simulator is modeled after
+        some actual constraints of the Internet\r
+        - Messages must be divided into
+        packets which may contain <em><strong> at most eight (8) ASCII characters
+        </em></strong>\r
+        - Messages should be long enough to require at least 10
+        packets\r
+        - Packets may not arrive in the order sent\r
+        - Packets may be
+        dropped while in transmission\r
+        \r
+        **Directions:** In a group or individually
+        join a router in the Internet Simulator and practice sending messages given
+        these new constraints. Once you are comfortable with the challenge, iteratively
+        design a protocol that can reliably send a message to a partner. You and your
+        partner should join <em><strong> DIFFERENT </strong></em> routers.\r
+        \r
+        **Protocol
+        Requirements:**\r
+        - All communication can only be done through the Internet
+        Simulator\r
+        - You must send a message that spans at least 10 packets (i.e.
+        an 80 character ASCII message). \r
+        - The protocol should account for the
+        possibility that the characters might be entirely random (i.e. not necessarily
+        English - do not count on human intuition to reconstruct the message. The
+        message is not known beforehand.)\r
+        - The sender and receiver must be confident
+        the full message was successfully transmitted and reconstructed.
       'Internet Simulator: Routers_markdown_instruction': |-
+        # An Updated Internet
+        Simulator\r
+        Many changes have been made to the Internet Simulator. \r
+        \r
+        **Routers:**
+        Rather than being connected to your entire class you are now connected to
+        a single router. You can see who else is on your router in the network diagram.\r
+        \r
+        ![](https://images.code.org/0311148470dc358fe435568e2b333062-image-1442008896037.51.04
+        PM.png)\r
+        \r
+        \r
+        **IP Addresses:** Every user has a unique IP address. The
+        first portion is the number of your router and the second is your own unique
+        number. You can figure out the IP addresses of people on the router by looking
+        at the network diagram.\r
+        \r
+        ![](https://images.code.org/b03d841ebd8299ca43197ee4df35d273-image-1442008949041.51.59
+        PM.png)\r
+        \r
+        **Sending Messages: ** You can now send messages to a single
+        other user. Fill in the "To" portion of the message with the IP address
+        (including the period) of the person you'd like to send your message to.\r
+        \r
+        ![](https://images.code.org/8e9b073526f24e69147d5c7f34492bec-image-1442009069243.52.34
+        PM.png)\r
+        \r
+        **Router Statistics: ** You can see useful information about
+        the functioning of your router in the "Router" tab.\r
+        \r
+        ![](https://images.code.org/7390cfa12f65b933145a391fa65ab4b1-image-1442009194697.58.23
+        PM.png)\r
+        \r
+        **Router Logs: ** You can read a log of traffic both at the
+        level of your router and the entire network by clicking the "Log Browser"
+        button.\r
+        \r
+        ![](https://images.code.org/b24975e33f1a2b10fc6a2ca8cf1c9ad2-image-1442009358166.58.48
+        PM.png)
+      'Internet Simulator: Routers_2018_markdown_instruction': |-
         # An Updated Internet
         Simulator\r
         Many changes have been made to the Internet Simulator. \r
@@ -40753,6 +40535,26 @@
         \r
         Document your protocol on the worksheet provided, and test
         your protocol using the Internet Simulator
+      'Internet Simulator: Sending Binary Messages_2018_markdown_instruction': |-
+        ##
+        Coordination and Binary Messages Activity\r
+        \r
+        **Develop your Protocol**\r
+        Develop
+        a protocol that allows you to use Internet Simulator to relay a message, i.e.
+        one member sends a message and the other member sends the same message back.
+        You or a teacher will say “Go” to begin the exchange but otherwise all communication
+        must be through the widget. As you’re working, consider:\r
+        \r
+        - How will
+        you know when the exchange is supposed to begin?\r
+        - How will you know whose
+        turn it is to send or receive the message?\r
+        - How will you coordinate your
+        actions?\r
+        \r
+        Document your protocol on the worksheet provided, and test
+        your protocol using the Internet Simulator
       'Internet Simulator: Sending Numbers_markdown_instruction': |-
         ## Sending Numbers
         Activity\r
@@ -40778,7 +40580,63 @@
         of your protocol on the worksheet provided by your teacher.\r
         \r
         ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
+      'Internet Simulator: Sending Numbers_2018_markdown_instruction': |-
+        ## Sending
+        Numbers Activity\r
+        \r
+        **Challenge:** Develop a protocol or set of rules
+        for communicating a drawing to your partners using only bits.\r
+        \r
+        **Challenge
+        Rules:**\r
+        The image will be a line drawing created by connecting points
+        on a grid, like the one seen here.\r
+        You can discuss and agree on a protocol
+        ahead of time, but the image exchange must happen without communication between
+        the two parties other than through using the Internet Simulator.\r
+        \r
+        **Things
+        to Consider:**\r
+        - How will your points be formatted?\r
+        - How does the recipient
+        know when one number ends and the next begins?\r
+        \r
+        **Your Protocol:** Write
+        the steps of your protocol on the worksheet provided by your teacher.\r
+        \r
+        ![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)
       'Internet Simulator: Sending Text_markdown_instruction': |
+        ## Sending Formatted
+        Text Activity\r
+        \r
+        **Directions:**  \r
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. \r
+        \r
+        **Guidelines:**  \r
+        -
+        Both the text and the formatting instructions must be derived from the printable
+        ASCII character set (i.e. codes 32-126).\r
+        - Your protocol must encode at
+        least:\r
+        \t- bold, italics, and underlining\r
+        \t- three different font sizes
+        (large, medium, and small)\r
+        \t- three different font colors (red, black,
+        blue)\r
+        - You will demonstrate that your protocol works by having the recipient
+        be able to faithfully draw (or produce in some fashion) the formatted text
+        based only on the data she received through an ASCII-text version of the Internet
+        Simulator. A sample message can be found below.\r
+        \r
+        ![](https://images.code.org/6fa1d53e4d36a9d0bac5b9b8fb4bc81d-image-1434427211242.PNG)\r
+        \r
+        **Develop
+        Your Protocol:**  \r
+        Use the worksheet handed out by your teacher to brainstorm
+        ideas for your protocol. Iteratively improve your protocol by testing it out
+        with simple sample messages.\r
+      'Internet Simulator: Sending Text_2018_markdown_instruction': |
         ## Sending Formatted
         Text Activity\r
         \r
@@ -42775,10 +42633,9 @@
         \r
         此循环将打印什么结果？
       Predict Loop I_2018_markdown_instruction: |-
-        # Predict\r
+        # 预测\r
         \r
-        What will print
-        as a result of this loop?
+        此循环将打印什么结果？
       Project - Final Image Scroller_markdown_instruction: |-
         # Final Image Scroller\r
         \r
@@ -43020,23 +42877,17 @@
         \r
         准备熟悉函数，学习如何编辑它们，并创建自己的函数！
       Revisiting the Counter Pattern_2018_markdown_instruction: |-
-        Today you’re going
-        to learn how to use and create **functions**.\r
+        今天，你会学习如何创建和使用**函数**。\r
         \r
-        Creating a function lets
-        you make your own blocks! There are two parts to a function: \r
+        创建函数会让你制作自己的模块！制作函数有两部分：\r
         \r
-        Making
-        a newly named block that has all of the code you want to run inside of it.
+        制作一个有名字的新模块，将你想要运行的代码都放在它里面。\r
+        -函数的xml定义- \r
         \r
-        -xml of function definition- \r
+        单个绿色的模块，是你使用或调用创建的函数。\r
+        -函数调用的xml-\r
         \r
-        The single green block itself that
-        you use, or call, to run the function you created.\r
-        -xml of function call-\r
-        \r
-        Prepare
-        to get familiar with functions, learn how to edit them, and create your own!
+        准备熟悉函数，学习如何编辑它们，并创建自己的函数！
       Robot Doodle_markdown_instruction: "**项目想法：** 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！"
       Robot Doodle_2018_markdown_instruction: |-
         **Project Idea:** Create a picture
@@ -45110,10 +44961,8 @@
 
 
       Test embedded K1 Blockly in instructions_markdown_instruction: |-
-        Use <xml><block
-        type="maze_moveWest"/></xml> **three** times to get the harvester to the
-        corn! Don't forget to use <xml><block type="harvester_corn"/></xml> to
-        pick the corn!
+        用<xml><block type="maze_moveNorth"/></xml>模块 3 次来让收割者到达玉米的位置，最后别忘了用<xml><block
+        type="harvester_corn"/></xml>模块捡起玉米！
       Test of comment block_markdown_instruction: |-
         ## 指示\r
         \r
@@ -45141,29 +44990,29 @@
         \r
         做好熟悉函数的准备，学习如何编辑它们，并创建自己的函数！
       The Accelerometer_2018_markdown_instruction: |-
-        Today you’re going to learn how
-        to use and create **functions**.\r
+        今天，你会学习如何创建和使用**函数**。\r
         \r
-        Creating a function lets you make
-        your own blocks! There are two parts to a function: \r
+        创建函数会让你制作自己的模块！制作函数有两部分：\r
         \r
-        Making a newly
-        named block that has all of the code you want to run inside of it. \r
-        -xml
-        of function definition- \r
+        制作一个有名字的新模块，将你想要运行的代码都放在它里面。\r
+        -函数的xml定义- \r
         \r
-        The single green block itself that you use,
-        or call, to run the function you created.\r
-        -xml of function call-\r
+        单个绿色的模块，是你使用或调用创建的函数。\r
+        -函数调用的xml-\r
         \r
-        Prepare
-        to get familiar with functions, learn how to edit them, and create your own!
+        准备熟悉函数，学习如何编辑它们，并创建自己的函数！
       'The Internet: IP Addresses & DNS_markdown_instruction': |-
         [Video guide and
         questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
+      'The Internet: IP Addresses & DNS_2018_markdown_instruction': |-
+        [Video guide
+        and questions](https://docs.google.com/document/d/1ngw37cKFH4Dl_lhWXuXROH5WDdgHatz3gJo3pAdpqkg/edit?usp=sharing)
       'The Internet: Wires, Cables, and Wifi_markdown_instruction': |-
         [Video guide
         and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
+      'The Internet: Wires, Cables, and Wifi_2018_markdown_instruction': |-
+        [Video
+        guide and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)
       The Official Peer Instruction Blog_markdown_instruction: "The following link\nis
         to a recent blog post describing the basic approach to and benefits of\npeer
         learning: "
@@ -45378,6 +45227,13 @@
         how many characters would need to be encoded and calculate the number of bits
         that would be required per character. Then discuss the benefits and drawbacks
         of using this single unified system.
+      U1L10 Assessment Free Response_2018_markdown_instruction: |
+        Many languages do
+        not use the characters of U.S. English. Suppose you wanted to be able to encode
+        the characters of every language on earth within a single protocol. Guess
+        how many characters would need to be encoded and calculate the number of bits
+        that would be required per character. Then discuss the benefits and drawbacks
+        of using this single unified system.
       U1L10 Journal Free Response_markdown_instruction: |
         Respond to this prompt or
         to another as directed by your teacher.
@@ -45400,6 +45256,13 @@
 
         Describe one instance in which collaboration with
         a partner influenced the final protocol your team produced.
+      U1L11 Collaboration Reflection_2018_markdown_instruction: |
+        What problems arose
+        in your efforts to create a working protocol? How did you think about the
+        problem(s) in order to solve it?
+
+        Describe one instance in which collaboration
+        with a partner influenced the final protocol your team produced.
       U1L11 NetSim numbers with Ascii_markdown_instruction: |
         ## Sending Formatted
         Text Activity\r
@@ -45435,6 +45298,12 @@
         to another as directed by your teacher.\n\nHow long did it take to send\na
         formatted text message using your protocol? \n\nHow many extra bits did\nyour
         encoding scheme need to communicate the text?  Calculate the percentage\nof
+        bits that were used for formatting instead of sending the actual text message.\n\n\npercent
+        = (formatting bits)/(total bits) * 100\n\n\n"
+      U1L11 Reflection Free Response_2018_markdown_instruction: "Respond to this\nprompt
+        or to another as directed by your teacher.\n\nHow long did it take\nto send
+        a formatted text message using your protocol? \n\nHow many extra bits\ndid
+        your encoding scheme need to communicate the text?  Calculate the percentage\nof
         bits that were used for formatting instead of sending the actual text message.\n\n\npercent
         = (formatting bits)/(total bits) * 100\n\n\n"
       U1L12 Reflection Free Response_markdown_instruction: "Respond to this prompt\nor
@@ -45513,6 +45382,12 @@
         why this is the case, making reference to the definition of a binary message.
         \r
         \r
+      U1L2 Free response assessment question_2018_markdown_instruction: |
+        Provide
+        an example of a question that could NOT be answered with a single binary message.
+        Explain why this is the case, making reference to the definition of a binary
+        message. \r
+        \r
       U1L2 Free response reflection question_markdown_instruction: |2+
          Modify your
         question so that it could be answered with a binary message. Explain why it
@@ -45523,16 +45398,33 @@
         How did collaboration impact the
         development of your protocol? What challenges did working in a group present
         and in what ways did it positively impact your final product?
+      U1L3 Free Response_2018_markdown_instruction: |-
+        How did collaboration impact
+        the development of your protocol? What challenges did working in a group present
+        and in what ways did it positively impact your final product?
       U1L3 Free response reflection question_markdown_instruction: |
         Recall when you
         built your binary message sending device. Why did we decide to send a message
         as a sequence of states (A and B) rather than modifying our devices to represent
         more states (State C, State D, State E, ...)?\r
+      U1L3 Free response reflection question_2018_markdown_instruction: |
+        Recall when
+        you built your binary message sending device. Why did we decide to send a
+        message as a sequence of states (A and B) rather than modifying our devices
+        to represent more states (State C, State D, State E, ...)?\r
       U1L4 Free Response Reflection_markdown_instruction: |+
         A binary message was recorded
         as a wave as shown in the image below. Can you decode the message? Explain
         what information you would need in order to successfully decode the message
         into A’s and B’s.
+
+        ![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
+
+      U1L4 Free Response Reflection_2018_markdown_instruction: |+
+        A binary message
+        was recorded as a wave as shown in the image below. Can you decode the message?
+        Explain what information you would need in order to successfully decode the
+        message into A’s and B’s.
 
         ![](https://images.code.org/c8ba0db14fabb778dc034ac4656259fa-image-1434429617999.png)
 
@@ -45586,11 +45478,22 @@
       U1L6 Free Response Reflection_markdown_instruction: " In 50 words or less,\ndescribe
         the concept of a number system. \n\nWhy are rules required for a\nnumber system
         to be useful?\n"
+      U1L6 Free Response Reflection_2018_markdown_instruction: " In 50 words or less,\ndescribe
+        the concept of a number system. \n\nWhy are rules required for a\nnumber system
+        to be useful?\n"
       U1L7 Free Response Assessment_markdown_instruction: |
         In 100 words or less describe
         how place value is used in the binary number system. How is it similar or
         different from the way place value is used in the base 10 number system.
+      U1L7 Free Response Assessment_2018_markdown_instruction: |
+        In 100 words or less
+        describe how place value is used in the binary number system. How is it similar
+        or different from the way place value is used in the base 10 number system.
       U1L7 Free Response Reflection_markdown_instruction: "Reflect on your learning\nin
+        this lesson. In the space below, enter:\n\n3 recollections (things you\nremember),
+        \n\n2 observations (things you noticed), and \n\n1 insight (something\nyou
+        fully understand the significance of).\n"
+      U1L7 Free Response Reflection_2018_markdown_instruction: "Reflect on your learning\nin
         this lesson. In the space below, enter:\n\n3 recollections (things you\nremember),
         \n\n2 observations (things you noticed), and \n\n1 insight (something\nyou
         fully understand the significance of).\n"
@@ -45603,6 +45506,15 @@
       U1L8 Free Response Reflection_markdown_instruction: |
         <strong>Complete the Sending
         Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit"
+        target="_blank">Sending Number activity guide</a>) and then respond to the
+        following prompt.</strong>
+
+        What problems arose in your efforts to create
+        a working protocol? How did you think about the problem(s) in order to solve
+        it?
+      U1L8 Free Response Reflection_2018_markdown_instruction: |
+        <strong>Complete
+        the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit"
         target="_blank">Sending Number activity guide</a>) and then respond to the
         following prompt.</strong>
 
@@ -46260,9 +46172,20 @@
         Explain one challenge raised by Vint Cerf in “The Internet
         is for Everyone - but it won’t be if….” and give one example of it that you
         know about.
+      U2L01 Assessment 4_2018_markdown_instruction: |
+        ## The Internet is for Everyone:
+        Assessment 4
+
+        Explain one challenge raised by Vint Cerf in “The Internet
+        is for Everyone - but it won’t be if….” and give one example of it that you
+        know about.
       U2L02 Assessment 5_markdown_instruction: |-
         Even with a good protocol, what are
         some privacy and security challenges while playing battleship on the Internet
+        Simulator?
+      U2L02 Assessment 5_2018_markdown_instruction: |-
+        Even with a good protocol, what
+        are some privacy and security challenges while playing battleship on the Internet
         Simulator?
       U2L02 Assessment1_markdown_instruction: |
         Why was it necessary to include the
@@ -46283,6 +46206,10 @@
         game of Battleship? \n\nWhat rules did you follow? \n\nDid you have a\nstrategy
         for winning?\n"
       U2L02 Free Response Reflection_markdown_instruction: "Describe the addressing\nsystem
+        your group devised.\n\nHow did your group decide upon a system for\nsending
+        messages in the Battleship simulator? \n\nWere there disagreements\nor problems?
+        How were they resolved?\n\n\n"
+      U2L02 Free Response Reflection_2018_markdown_instruction: "Describe the addressing\nsystem
         your group devised.\n\nHow did your group decide upon a system for\nsending
         messages in the Battleship simulator? \n\nWere there disagreements\nor problems?
         How were they resolved?\n\n\n"
@@ -46330,9 +46257,17 @@
         Describe the relative benefits of
         routing over a broadcast style of communication. Is routed traffic more secure
         than broadcasting? Justify your answer.
+      U2L04 Assessment2_2018_markdown_instruction: |
+        Describe the relative benefits
+        of routing over a broadcast style of communication. Is routed traffic more
+        secure than broadcasting? Justify your answer.
       U2L04 Assessment3_markdown_instruction: |
         Can you know in advance the path a
         message will take between you and another computer on the Internet? Justify
+        your answer.
+      U2L04 Assessment3_2018_markdown_instruction: |
+        Can you know in advance the path
+        a message will take between you and another computer on the Internet? Justify
         your answer.
       U2L04 Free Response Wrap Up_markdown_instruction: |
         How do you think the routers
@@ -46378,6 +46313,10 @@
         In your own words, what were the
         primary obstacles you needed to overcome in today’s challenge? How do these
         obstacles mirror actual problems encountered on the Internet?
+      U2L05 Reflection 1_2018_markdown_instruction: |
+        In your own words, what were
+        the primary obstacles you needed to overcome in today’s challenge? How do
+        these obstacles mirror actual problems encountered on the Internet?
       U2L07 Assessment5_markdown_instruction: |
         When analyzing algorithms why doesn't
         the amount of real time (clock time) tell us very much about the algorithm's
@@ -46404,9 +46343,15 @@
       U2L09 Assessment2_markdown_instruction: |
         Why do computers need to periodically
         check the DNS for websites you have already visited?
+      U2L09 Assessment2_2018_markdown_instruction: |
+        Why do computers need to periodically
+        check the DNS for websites you have already visited?
       U2L09 Free Response Wrap Up_markdown_instruction: |
         Why don’t we need to know
         the IP addresses for our favorite sites?
+      U2L09 Free Response Wrap Up_2018_markdown_instruction: |
+        Why don’t we need to
+        know the IP addresses for our favorite sites?
       U2L10 Assessment3_markdown_instruction: |
         Why do multiple websites at your school
         and the computers in your classroom all have IP addresses that start with
@@ -46470,6 +46415,10 @@
         The definition of HTTP makes use
         of the ASCII character set without reference to how these characters are encoded.
         Explain why this is an example of abstraction.
+      U2L11 Free Response_2018_markdown_instruction: |
+        The definition of HTTP makes
+        use of the ASCII character set without reference to how these characters are
+        encoded. Explain why this is an example of abstraction.
       U2L12 FR reflection on collaboration_markdown_instruction: |-
         *NOTE: The following
         is modification of one of the prompts given on the AP Create Performance task.*\r
@@ -62363,7 +62312,8 @@
         and confirm that you are displaying the correct movie.  Your output should
         look like this:\r
         \r
-        ![](https://images.code.org/c945453f2f4c708a31d7f362a98bceb5-image-1456870788450.7-console.png)
+        ![](https://images.code.org/d3c0f6bd73b637828f0057fa91d6f56f-image-1524524661772.03.55
+        PM.png)
       U4 - Read Record - 4_markdown_instruction: |-
         # Reading Records: Printing Individual
         Records\r
@@ -67350,6 +67300,7 @@
         使用新的`comment`（注释）模块来给自己留下快速提醒。它们可以帮助你记起你在做什么以及原因！\r
         \r
         注释只用于**你**使用。你的游戏区域不会因为注释看起来不一样。
+      conditionals_forvideo_harvester_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
       course1_artist_loops_challenge2_markdown_instruction: 让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？
       course1_artist_loops_challenge3_markdown_instruction: |-
         ** 小鸟啾啾！**\r
@@ -67957,10 +67908,9 @@
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: |-
-        To get Scrat to the acorn,
-        snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of
-        the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      courseB_Scrat_ramp1_2018_markdown_instruction: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
+        type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)
+        ！
       courseB_Scrat_ramp2_2018_markdown_instruction: |-
         将<xml><block type="maze_moveEast"/></xml>
         模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
@@ -68193,9 +68143,7 @@
         \r
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events7_2018_markdown_instruction: |-
-        The `repeat forever` block
-        allows you to run code over and over forever.  Use this block to move Chomp
-        the Dino (actor 2) up and down by 400 pixels forever.\r
+        `一直重复`模块能让你一遍又一遍的一直运行代码。用这个代码来将恐龙迪诺（演员2）不停的上下移动400像素。\r
         \r
         ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
       courseC_PlayLab_events8_markdown_instruction: |-
@@ -68217,24 +68165,17 @@
         \r
         玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
       courseC_PlayLab_events_challenge1_2018_markdown_instruction: |-
-        Use a new block
-        to make Waddles automatically move back to the start when he runs into the
-        Dinosaur and when he scores a point. This will make your game more challenging
-        and fun!\r
+        用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！\r
         \r
-        Play the game and move Waddles with the arrows until you score
-        enough points. Waddles must be moved to the `middle left` position of the
-        screen to complete this challenge.
+        玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
       courseC_artist_loop1_markdown_instruction: |-
         太棒了！\r
         \r
         在开始循环前，让我们用`设置图案`模块来改变刷子的样式。
       courseC_artist_loop1_2018_markdown_instruction: |-
-        Fantastic!  \r
+        太棒了！\r
         \r
-        Let's
-        add some style by changing the brush using the `set pattern` block before
-        our loop starts.
+        在开始循环前，让我们用`设置图案`模块来改变刷子的样式。
       courseC_artist_loops1a_markdown_instruction: |-
         **自由发挥：** 让我们创建一些更大的，一次一步的东西！你能创造任何想要的事物，但先看看如何创造这样的！\r
         \r
@@ -68337,17 +68278,12 @@
         \r
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2018_markdown_instruction: |-
-        Try changing the `repeat`
-        loop to run a different number of times.  How far do you have to turn to go
-        around in a full circle?\r
-        - Try changing how many times you spin\r
-          -
-        Try a 60 degree turn for 6 times around\r
-          - Try a 20 degree turn for 18
-        times around\r
+        尝试更改`重复`循环以运行不同的次数。 你在一个完整的圆圈内要转多远才能绕完一圈？\r
+        - 试着改变你旋转的次数。 \r
+        - 尝试转弯6次，每次60度\r
+        - 尝试转18次，每次20度\r
         ___\r
-        This image uses a pirate, a ninja, and a giraffe. They
-        loop 18 times with a 20 degree turn.\r
+        这张图片使用的是海盗，忍者和长颈鹿。他们循环了18次，每次转弯20度。\r
         \r
         ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: "现在自己做点什么吧。当你制作两个不同的贴纸圈时会发生什么？\\r
@@ -68368,13 +68304,12 @@
         name="DIR">向前移动</title><title name="VALUE">50</title></block></xml>
         模块来画一条50 像素的线。
       courseC_artist_loopsPrePre1a_2018_markdown_instruction: |-
-        Use the <xml><block
+        使用<xml><block
         type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>
-        block to get the artist to the center of the play area.  \r
-        Then draw a line
-        50 pixels long with the <xml><block type="draw_move_by_constant"><title
-        name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
-        block.
+        模块把艺术家带到游戏区的中心。\r
+        然后用 <xml><block type="draw_move_by_constant"><title
+        name="DIR">向前移动</title><title name="VALUE">50</title></block></xml>
+        模块来画一条50 像素的线。
       courseC_artist_loopsTemplateA_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心,
         然后使用`画一个标签`模块来使一只鸟出现。 '
       courseC_artist_loopsTemplateA_2018_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心,
@@ -68468,22 +68403,17 @@
         \r
         帮助收集者至少得到 ** 5 **件宝物。
       courseC_collector_loops_challenge2_2018_markdown_instruction: |-
-        *"Let's hunt
-        for treasure!"*\r
+        * "让我们寻宝吧!"* \r
         \r
-        Help the collector get at least **5** pieces of treasure.
+        帮助收集者至少得到 ** 5 **件宝物。
       courseC_collector_prog1_markdown_instruction: |-
         ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。使用`收集`模块来捡起宝藏！\r
         \r
         将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种宝物来通过此关卡。
       courseC_collector_prog1_2018_markdown_instruction: |-
-        **Free Play:** This is
-        Laurel the Adventurer! Move her around and get as much treasure as you can.
-        Use the `collect` block to pick up the treasure!\r
+        ** 自由发挥: ** 这是冒险家罗瑞尔！四处移动她，并获得尽可能多的宝藏。使用`收集`模块来捡起宝藏！\r
         \r
-        Drag blocks into the
-        workspace and try to figure out how to get treasure.  Get at least one item
-        to pass this level.
+        将模块拖到工作区中，并尝试找出如何获取宝藏。 获得至少一种宝物来通过此关卡。
       courseC_collector_prog2_markdown_instruction: 把罗瑞尔移到宝藏那里，然后使用 <xml><block type="collector_collect"/></xml>
         把它捡起来。
       courseC_collector_prog2_2018_markdown_instruction: 把罗瑞尔移到宝藏那里，然后使用 <xml><block
@@ -68495,12 +68425,11 @@
         \r
         命令这些模块来收集所有的宝藏并通过此关。
       courseC_collector_prog3_2018_markdown_instruction: |-
-        *"Sequence matters!"*
+        *"顺序很重要！"*\r
         \r
+        你需要的模块已经在工作区了，但还没有连起来。\r
         \r
-        The blocks you need are already in the workspace, but not connected.  \r
-        Order
-        these blocks to collect the treasure and solve the puzzle.
+        命令这些模块来收集所有的宝藏并通过此关。
       courseC_collector_prog4_markdown_instruction: |-
         *"顺序很重要！"*\r
         \r
@@ -68518,42 +68447,31 @@
         \r
         这些模块的顺序错了。你能修好它们吗？
       courseC_collector_prog5_2018_markdown_instruction: |-
-        *"Help me collect each
-        bit of treasure!"*\r
+        *"帮我收集每个宝藏！"*\r
         \r
-        These blocks are in the wrong order. Can you fix
-        them?
+        这些模块的顺序错了。你能修好它们吗？
       courseC_collector_prog6_markdown_instruction: |-
         *"帮我收集所有的宝藏！"\r
         \r
         这些模块的顺序错了。重新排列它们来收集所有的宝藏。
       courseC_collector_prog6_2018_markdown_instruction: |-
-        *"Help me collect all
-        of the treasure!"*\r
+        *"帮我收集所有的宝藏！"\r
         \r
-        These blocks are in the wrong order. Reorder them
-        to collect all of the treasure.
+        这些模块的顺序错了。重新排列它们来收集所有的宝藏。
       courseC_collector_prog7_markdown_instruction: |-
         **挑战：** *这里怎么了？”*\r
         \r
         即使我们将顺序都排好了，还有一些东西缺失。\r
         使用工具箱中的模块来收集所有的宝藏。
       courseC_collector_prog7_2018_markdown_instruction: |-
-        **Challenge:** *"What
-        is going on here?"*\r
+        **挑战：** *这里怎么了？”*\r
         \r
-        Even if we put these in the right order, there
-        will still be some missing.  \r
-        Use blocks from the toolbox to collect all
-        of the treasure.
+        即使我们将顺序都排好了，还有一些东西缺失。\r
+        使用工具箱中的模块来收集所有的宝藏。
       courseC_collector_prog8_markdown_instruction: '*"继续保持良好的工作! 帮我收集所有的宝藏。“*'
-      courseC_collector_prog8_2018_markdown_instruction: |-
-        *"Keep up the good work!
-        Help me collect all of the treasure."*
+      courseC_collector_prog8_2018_markdown_instruction: '*"继续保持良好的工作! 帮我收集所有的宝藏。“*'
       courseC_collector_prog9_markdown_instruction: '*"让我们得到所有的宝藏!*'
-      courseC_collector_prog9_2018_markdown_instruction: |-
-        *"Let's get all of the
-        treasure!"*
+      courseC_collector_prog9_2018_markdown_instruction: '*"让我们得到所有的宝藏!*'
       courseC_collector_progA_markdown_instruction: 帮助罗瑞尔收集所有的宝藏。
       courseC_collector_progB_markdown_instruction: |-
         快要完成了！\r
@@ -68561,9 +68479,8 @@
         收集尽可能多的金币来完成这个阶段！
       courseC_collector_prog_challenge2_markdown_instruction: 在此洞穴中有20件宝藏。收集至少**10**
         来完成这一挑战！
-      courseC_collector_prog_challenge2_2018_markdown_instruction: |-
-        There are 20
-        pieces of treasure in this cave. Collect at least **10** to finish the challenge!
+      courseC_collector_prog_challenge2_2018_markdown_instruction: 在此洞穴中有20件宝藏。收集至少**10**
+        来完成这一挑战！
       courseC_flappy_events1_markdown_instruction: |-
         将`拍打正常数量`模块附加到`当点击时`事件, 然后按 "运行"。\r
         \r
@@ -68576,20 +68493,16 @@
         你可以改变视觉和规则... 甚至重力！\r
         当你完成后, 点击 "完成" 分享到朋友们的手机上。
       courseC_flappy_events10_2018_markdown_instruction: |-
-        Create your own Flappy
-        game! \r
+        创建你自己的像素鸟游戏！\r
         \r
-        You can change the visuals and the rules...even the gravity!
-        \r
-        When you're done, click "Finish" to share with friends on their phones.
+        你可以改变视觉和规则... 甚至重力！\r
+        当你完成后, 点击 "完成" 分享到朋友们的手机上。
       courseC_flappy_events1_2018_markdown_instruction: |-
-        Attach the `flap a normal
-        amount` block to the `when click` event, then press "Run".   \r
+        将`拍打正常数量`模块附加到`当点击时`事件, 然后按 "运行"。\r
         \r
         ---\r
         \r
-        Click
-        or tap on the play space to move Flappy to the target.
+        单击或点击播放空间，将像素鸟移动到目标处。
       courseC_flappy_events2_markdown_instruction: |-
         `当运行时`事件允许你在游戏启动后立即运行代码。 \r
         \r
@@ -68598,16 +68511,13 @@
         ---\r
         播放游戏并拍打目标继续。
       courseC_flappy_events2_2018_markdown_instruction: |-
-        The `when run` event allows
-        you to run code as soon as your game starts.  \r
+        `当运行时`事件允许你在游戏启动后立即运行代码。 \r
         \r
-        Try adding a block that
-        sets the level speed when the "Run" button is pressed. \r
+        尝试添加在按下 "运行" 按钮时设置级别速度的模块。\r
         \r
         ---\r
         \r
-        Play
-        the game and flap to the target to continue.
+        播放游戏并拍打目标继续。
       courseC_flappy_events3_markdown_instruction: |-
         现在我们已经增加了地面。\r
         \r
@@ -68635,23 +68545,17 @@
         \r
         增加一个模块到`当通过了一个障碍`时间来得一分，然后点击"运行"让它飞过第一组管道。
       courseC_flappy_events5_2018_markdown_instruction: |-
-        We've added a scoreboard
-        to count points when Flappy passes obstacles.  \r
+        我们已经增加了分数板来统计像素鸟通过的障碍数。\r
         \r
-        Add a block to the
-        `when pass an obstacle` event that scores a point, then press "Run" to fly
-        Flappy through the first set of pipes.
+        增加一个模块到`当通过了一个障碍`时间来得一分，然后点击"运行"让它飞过第一组管道。
       courseC_flappy_events6_markdown_instruction: |-
         点击`拍打正常数量`模块中的下箭头，来选择一个不同的拍打力量。\r
         \r
         看看把像素鸟的拍打每次改小或改大后，你还能否一直得分。
       courseC_flappy_events6_2018_markdown_instruction: |-
-        Click the down arrow inside
-        of the `flap a normal amount` block to pick a different flapping power.  \r
+        点击`拍打正常数量`模块中的下箭头，来选择一个不同的拍打力量。\r
         \r
-        See
-        if you can still score a point after making Flappy flap either a smaller or
-        larger amount each time you click.
+        看看把像素鸟的拍打每次改小或改大后，你还能否一直得分。
       courseC_flappy_events7_markdown_instruction: 接下来, 尝试通过将一个模块附加到`当运行时`事件来更改场景。
       courseC_flappy_events7_2018_markdown_instruction: 接下来, 尝试通过将一个模块附加到`当运行时`事件来更改场景。
       courseC_flappy_events8_markdown_instruction: |-
@@ -68659,16 +68563,11 @@
         \r
         试着当其它时间发生时，设置一个**随机**的场景...例如，当通过一个障碍。
       courseC_flappy_events8_2018_markdown_instruction: |-
-        You can set the background
-        under any event, not just when the game starts. \r
+        不只在游戏开始时，你能在任何事件下设置背景。\r
         \r
-        Try setting a **random**
-        scene when other events happen...for example, when passing an obstacle.
+        试着当其它时间发生时，设置一个**随机**的场景...例如，当通过一个障碍。
       courseC_flappy_events9_markdown_instruction: 把东西串起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。
-      courseC_flappy_events9_2018_markdown_instruction: |-
-        To mix things up, instead
-        of ending the game when Flappy hits an obstacle, try setting the score back
-        to 0.
+      courseC_flappy_events9_2018_markdown_instruction: 把事情混合起来, 在像素鸟击倒障碍物的时候不是让游戏停止，试着把分数归零。
       courseC_harvester_loops1_markdown_instruction: |-
         循环不仅能重复移动。\r
         \r
@@ -68704,18 +68603,14 @@
         \r
         你可以用任何方法完成这个挑战，但要么会做很多工作，要么多思考一下！
       courseC_harvester_loops8_2018_markdown_instruction: |-
-        **Challenge:** Collect
-        all of the corn and all of the pumpkins.\r
+        **挑战：**收集所有的玉米和南瓜。\r
         \r
-        You can complete this challenge
-        any way you want, but it will either take a lot of work or a lot of thinking!
+        你可以用任何方法完成这个挑战，但要么会做很多工作，要么多思考一下！
       courseC_harvester_loops9_markdown_instruction: 收集所有玉米和南瓜。
       courseC_harvester_loops9_2018_markdown_instruction: 收集所有玉米和南瓜。
       courseC_harvester_loops_challenge1_markdown_instruction: 收集所有的玉米。
       courseC_harvester_loops_challenge2_markdown_instruction: 收集所有的莴苣。避开树木和田野！
-      courseC_harvester_loops_challenge2_2018_markdown_instruction: |-
-        Collect all
-        of the lettuce. Avoid the trees and fields!
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: 收集所有的莴苣。避开树木和田野!
       courseC_harvester_loops_forVid_markdown_instruction: 收集所有玉米和南瓜。
       courseC_maze_debugging1_markdown_instruction: |-
         这个代码不太正确！\r
@@ -68763,9 +68658,8 @@
       courseC_maze_loops8_markdown_instruction: "**挑战：**将前几关的主意组合起来，完成这一关。"
       courseC_maze_loops_challenge2_markdown_instruction: 让我们使用循环来寻找宝藏！通过找出此代码错误来帮助收集者得到所有的宝藏！
       courseC_maze_programming1_markdown_instruction: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始！
-      courseC_maze_programming1_2018_markdown_instruction: |-
-        For this puzzle, drag
-        all of the blocks together and click "Run" to watch it go!
+      courseC_maze_programming1_2018_markdown_instruction: 对于这个关卡, 把所有的方块拖在一起, 并点击
+        "运行" 开始!
       courseC_maze_programming2_markdown_instruction: |-
         从工具箱中拖出一个额外的<xml><block
         type="maze_moveForward"/></xml>模块来完成你的代码。
@@ -68778,69 +68672,54 @@
         这里有一个额外的模块会让小鸟坠落。\r
         将它从灰色的模块中取下，并拖回工具箱来扔掉。
       courseC_maze_programming3_2018_markdown_instruction: |-
-        *"This pig is ruffling
-        my feathers."*\r
+        *"这只猪把我的羽毛弄皱了。"*\r
         \r
-        There is one extra block that is going to cause the
-        bird to crash.  \r
-        Throw it away by unhooking it from the grey blocks and
-        dragging it back to the toolbox.
+        这里有一个额外的模块会让小鸟坠落。\r
+        将它从灰色的模块中取下，并拖回工具箱来扔掉。
       courseC_maze_programming4_markdown_instruction: |-
         *"沿着这条路带我去找那只笨猪。"*\r
         \r
         躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseC_maze_programming4_2018_markdown_instruction: |-
-        *"Trace the path and
-        lead me to the silly pig."* \r
+        *"沿着这条路带我去找那只笨猪。"*\r
         \r
-        Avoid TNT or feathers will fly!
+        躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseC_maze_programming5_markdown_instruction: |-
         *"沿着这条路，让我到猪那里！"*\r
         \r
         躲开TNT炸药。
       courseC_maze_programming5_2018_markdown_instruction: |-
-        *"Follow this path to
-        get me to the pig!"*\r
+        *"沿着这条路，让我到猪那里！"*\r
         \r
-        Avoid the TNT.
+        躲开TNT炸药。
       courseC_maze_programming6_markdown_instruction: |-
         *"保持冷静，帮我找到那只坏猪。否则，我会生气的！"*\r
         \r
         让小鸟到达坏猪，还要躲开TNT炸药。
       courseC_maze_programming6_2018_markdown_instruction: |-
-        *"Keep calm and help
-        me find the bad pig. Otherwise I might get angry!"*\r
+        *"保持冷静，帮我找到那只坏猪。否则，我会生气的！"*\r
         \r
-        Get the bird to
-        the pig and avoid the TNT.
+        让小鸟到达坏猪，还要躲开TNT炸药。
       courseC_maze_programming7_markdown_instruction: |-
         *"该生气了！"*\r
         \r
         **挑战：**
         这个代码有很多缺陷。你需要移除一些模块，并加上一些。
       courseC_maze_programming7_2018_markdown_instruction: |-
-        *"It's time to get
-        angry!"*\r
+        *"该生气了！"*\r
         \r
-        **Challenge:** This code has a lot of bugs. You'll need
-        to remove some blocks and add others.
+        **挑战：**
+        这个代码有很多缺陷。你需要移除一些模块，并加上一些。
       courseC_maze_programming8_markdown_instruction: '*"保持冷静，帮我找到那只坏猪。"*'
-      courseC_maze_programming8_2018_markdown_instruction: |-
-        *"Keep calm and help
-        me find the bad pig."*
+      courseC_maze_programming8_2018_markdown_instruction: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming8_predict1_markdown_instruction: |-
         *"保持冷静
          帮我找到那只坏蛋猪。"*
-      courseC_maze_programming8_predict1_2018_markdown_instruction: |-
-        *"Keep calm
-        and help me find the bad pig."*
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"保持冷静，帮我找到那只坏猪。"*'
       courseC_maze_programming9_markdown_instruction: '*"现在，用任何方法让我偷偷到达猪那里！"*'
-      courseC_maze_programming9_2018_markdown_instruction: |-
-        *"Now, help me sneak
-        up on the pig any way you want to!"*
+      courseC_maze_programming9_2018_markdown_instruction: '*"现在，用任何方法让我偷偷到达猪那里！"*'
       courseC_maze_programming_challenge1_markdown_instruction: '小鸟需要你的帮助！猪躲起来了，目标是找到它。 '
-      courseC_maze_programming_challenge1_2018_markdown_instruction: "The bird needs\nyour
-        help! The pig is hiding, and the goal is to find it. "
+      courseC_maze_programming_challenge1_2018_markdown_instruction: '小鸟需要你的帮助！猪躲起来了，目标是找到它。 '
       courseC_maze_programming_challenge2_markdown_instruction: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快！
       courseC_maze_programming_challenge2_2018_markdown_instruction: 有时, 解决同一问题的方法不止一种。有时候向后走比前进快！
       courseC_playLab_embedded_markdown_instruction: |-
@@ -69050,6 +68929,105 @@
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_Frozen_nested9_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"现在，我们应该做什么？让我们浏览并创造自己的冬季仙境！"_\r
+        \r
+        试着摆弄你自己创建的。画自己喜欢的！\r
+        - 如果你在楼梯图案那里转两个不同的角度会发生什么？\r
+        - 如果你的钻石图案长一点或短一点会发生什么？\r
+        - 如果在一个雪花上画另一个雪花看起来会是什么样子？\r
+      courseD_artist_1_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“嗨，我是阿伦达尔的爱莎，帮我画个图形吧。”_\r
+        \r
+        画一个边长50像素的六边形。  \r
+        \r
+        ---\r
+        \r
+        要画这个六边形，你需要： \r
+        - 向前移动**50**像素\r
+        - 向右转**60**度\r
+        -
+        一共重复**6**次\r
+        \r
+      courseD_artist_2_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“做得好！”_\r
+        \r
+        画完六边形后，向右转**60**度，然后画一条**150**像素长的线。   \r
+        \r
+        使用<xml><block type="jump_to"><title
+        name="VALUE">中心位置</title></block></xml>模块，将爱莎放到区域中心来结束。\r
+        \r
+        \r
+      courseD_artist_3_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“我们来画一个雪花。”_\r
+        \r
+        为了将这段代码变成一个雪花，将所有代码嵌入到另一个`重复`循环中，并运行它**6**次。你只需要增加一个模块。\r
+        \r
+      courseD_artist_4_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"我们来画一个特别的雪花！"_\r
+        \r
+        **灵感：** 如果要在每条线的顶端画一个小正方形，需要在哪里增加代码？\r
+        \r
+        ---\r
+        你可以试试在这一关试试任何想做的事情，下面是一个主意：\r
+        \r
+        试着在每条线的顶端画一个小正方形\r
+        -
+        每条边都是15像素长\r
+        - 需要转90度\r
+        -
+        总共重复4次
+      courseD_artist_5_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"试着改变形状或线条长度来画出自己的！"_\r
+        \r
+        <br/>  \r
+        \r
+        **灵感：**
+        你可以用任何方法来画自己的形状，这里是一个主意:\r
+        \r
+        -
+        试着改变雪花顶端的图案！
+      courseD_artist_6_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"让我们试试一些新东西。这次沿着之字形滑冰。"_\r
+        \r
+        \r
+        <img
+        src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />\r
+        用75到105度间的转向来画出楼梯图案 -- 但要确保左右转都有同样的角度。 \r
+        （过会儿你会明白为什么。）
+      courseD_artist_7_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"现在，让我们转向并回到来的路。"_\r
+        \r
+        转向180度，并再画出完全一样的楼梯图案！  \r
+        \r
+        - 如果你把所有代码都放到循环里让爱莎画画，这个阶段剩下的都会很简单。转180度，画画，然后再转180度。\r
+        \r
+        <hr/>\r
+        \r
+        这是转向76度的楼梯的例子：\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      courseD_artist_8_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _"让我们转圈，来做雪花。"_\r
+        \r
+        在一个圆里，围着这个形状转5或6次。\r
+        - 如果选择了5次，每次转72度\r
+        -
+        如果选择了6次，每次转60度\r
+        <hr/>\r
+        \r
+        这是爱莎转6次的图案：\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_9_2018_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"现在，我们应该做什么？让我们浏览并创造自己的冬季仙境！"_\r
         \r
         试着摆弄你自己创建的。画自己喜欢的！\r
@@ -70038,14 +70016,11 @@
       courseD_iceage_loops11_markdown_instruction: 帮助斯奎特得到橡子！
       courseD_iceage_loops12_markdown_instruction: 用各种方法来拿到橡子！
       courseD_iceage_loops2_markdown_instruction: |-
-        Use a <xml><block type="maze_turn">\r
+        用一个<xml><block type="maze_turn">\r
             <title
         name="DIR">turnLeft</title>\r
-          </block></xml> block to get to the acorn!
-      courseD_iceage_loops3_markdown_instruction: |-
-        Can you get to the acorn with
-        just one <xml><block type="maze_moveForward"/></xml> block? Try using a
-        loop!
+          </block></xml>模块来到达橡子！
+      courseD_iceage_loops3_markdown_instruction: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops4_markdown_instruction: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseD_iceage_loops6_markdown_instruction: 你能增加一个循环到达橡子吗？
       courseD_iceage_loops7_markdown_instruction: '斯奎特真的想要那个橡子！
@@ -70569,6 +70544,17 @@
         \r
         \r
         \r
+      courseE_bee_ramp14_2018_markdown_instruction: |
+        The same technique works with
+        nectar and honey!  \r
+        \r
+        Look at all of these clouds. Some of them will
+        turn into honey, and others into nectar.   \r
+        Help the bee follow the path
+        and solve this puzzle.\r
+        \r
+        \r
+        \r
       courseE_bee_ramp17_markdown_instruction: '在这个阶段的最后一关，用你学过的所有知识来收集所有花蜜，酿造所有蜂蜜。  '
       courseE_collector_ramp10_markdown_instruction: '采取和以前一样的路，但这次要收集遭到的所有宝藏。\r
 
@@ -70707,16 +70693,33 @@
         \r
         \r
         \r
+      courseE_farmer_predict1_2018_markdown_instruction: |
+        Help the farmer walk the
+        path to find all of the lettuce\r
+        \r
+        In this puzzle, lettuce is growing
+        at the end of every path.  If there is a path in front of her, the farmer
+        can keep moving forward.  Otherwise, she needs to pick all of the lettuce,
+        then turn to stay on the path. \r
+        \r
+        \r
+        \r
       courseE_farmer_ramp11a_markdown_instruction: "天哪！土堆太大了，很难猜有多少土。  \\r\n\\r\n___\\r\n\\r\n我们在工具箱里增加了一个新模块，叫做`当有土堆时`。使用它，当有土时，就不停的用它来移除土！ "
       courseE_farmer_ramp11a_2018_markdown_instruction: "天哪！土堆太大了，很难猜有多少土。  \\r\n\\r\n___\\r\n\\r\n我们在工具箱里增加了一个新模块，叫做`当有土堆时`。使用它，当有土时，就不停的用它来移除土！ "
       courseE_farmer_ramp11b_markdown_instruction: 让我们再试试，但有更多的土堆了！
       courseE_farmer_ramp11b_2018_markdown_instruction: 让我们再试试，但有更多的土堆了！
       courseE_farmer_ramp12_markdown_instruction: 捡起所有的莴苣。
+      courseE_farmer_ramp12_2018_markdown_instruction: 捡起所有的莴苣。
       courseE_farmer_ramp12_forswap_markdown_instruction: 捡起所有的莴苣。
       courseE_farmer_ramp12_forswap_2018_markdown_instruction: 捡起所有的莴苣。
       courseE_farmer_ramp12a_markdown_instruction: "帮助农夫走过这条路来找到所有的莴苣\\r\n\\r\n这一关中，莴苣会在每条路的最末端生长。如果她的前面有路，农夫会一直往前走。否则，她需要采摘所有的莴苣，然后转弯继续在路上走。 "
-      courseE_farmer_ramp12b_markdown_instruction: 现在收割机需要采摘所有莴苣。在一个`重复`循环里使用`当有莴苣时`来收获所有的！
-      courseE_farmer_ramp12b_2018_markdown_instruction: 现在收割机需要采摘所有莴苣。在一个`重复`循环里使用`当有莴苣时`来收获所有的！
+      courseE_farmer_ramp12a_2018_markdown_instruction: "Help the farmer walk the\npath
+        to find all of the lettuce\\r\n\\r\nIn this puzzle, lettuce is growing\nat
+        the end of every path.  If there is a path in front of her, the farmer\ncan
+        keep moving forward.  Otherwise, she needs to pick all of the lettuce,\nthen
+        turn to stay on the path. "
+      courseE_farmer_ramp12b_markdown_instruction: 现在收割者需要采摘所有莴苣。在一个`重复`循环里使用`当有莴苣时`来收获所有的！
+      courseE_farmer_ramp12b_2018_markdown_instruction: 现在收割者需要采摘所有莴苣。在一个`重复`循环里使用`当有莴苣时`来收获所有的！
       courseE_farmer_ramp12c_markdown_instruction: "莴苣现在只在路的尽头。\\r\n沿着路走，**直到**碰到一颗莴苣，然后**当这里还有莴苣时**，不断的采摘它。
         \ "
       courseE_farmer_ramp12c_2018_markdown_instruction: "莴苣现在只在路的尽头。\\r\n沿着路走，**直到**碰到一颗莴苣，然后**当这里还有莴苣时**，不断的采摘它。
@@ -70738,11 +70741,26 @@
         \r
         一直走到路的尽头，当有莴苣时，采摘莴苣，当有玉米时，采摘玉米。 \r
         \r
+      courseE_farmer_ramp13_2018_markdown_instruction: |
+        Goodness!  Look at all of
+        these sprouts. Some of them will turn into corn, and others into lettuce.  \r
+        \r
+        Travel
+        to the ends of the path to pick lettuce while there is lettuce, and pick corn
+        while there is corn. \r
+        \r
       courseE_farmer_ramp15_markdown_instruction: |-
         只有已有的模块来通过这关。\r
         \r
         这关会让你练习`重复直到`哦模块。采摘所有的玉米和莴苣，直到到达南瓜。
         （别忘了也要捡起南瓜！）
+      courseE_farmer_ramp15_2018_markdown_instruction: |-
+        Solve this puzzle using only
+        the blocks available.\r
+        \r
+        This level will help give you practice with the
+        `repeat until` block.  Collect all of the corn and lettuce until you get to
+        the pumpkin. (Don't forget to collect the pumpkin, too!)
       courseE_farmer_ramp16_markdown_instruction: "** 挑战: ** 用最少的块数解决这个关卡。"
       courseE_maze_ramp1_markdown_instruction: 对于这个关卡，把所有的模块都拖到一起，并点击"运行"来看看！
       courseE_maze_ramp13_markdown_instruction: |-
@@ -71125,11 +71143,34 @@
         拖拽上一个三角形的代码到新循环里来旋转它，并制作一个雪花！\r
         \r
         *(需要旋转它6次60度，来画出这个图案。)*
+      courseF_artist_ramp10_2018_markdown_instruction: |-
+        Did you know you can put
+        loops inside of other loops to make them more powerful?  That's called making
+        a "nested loop".\r
+        \r
+        ___\r
+        \r
+        Drag the code for the last triangle into
+        a new loop to spin it around and make a snowflake!\r
+        \r
+        *(You will need
+        to spin it 6 times at 60 degrees to get this pattern.)*
       courseF_artist_ramp8_markdown_instruction: |-
         太好了！现在让我们用小艺术家画正方形！小艺术家的模块和别的关有点不同，但概念是一样的。\r
         ___\r
         正方形的每条边都是200像素长，你需要转90度来制造每个角。
+      courseF_artist_ramp8_2018_markdown_instruction: |-
+        Great!  Now let's make a
+        square using Artist!  The blocks for artist are a little different than other
+        puzzles, but the idea is the same.\r
+        ___\r
+        Each side of the square has a
+        length of 200 pixels, and you will need to turn 90 degrees to make each angle.
       courseF_artist_ramp9_markdown_instruction: |-
+        用你学会的来画这个三角形。\r
+        ___\r
+        ##### 这些边每条都是100像素长。你需要在每个角落转120度。
+      courseF_artist_ramp9_2018_markdown_instruction: |-
         用你学会的来画这个三角形。\r
         ___\r
         ##### 这些边每条都是100像素长。你需要在每个角落转120度。
@@ -71632,7 +71673,17 @@
         \r
         \r
         **挑战：**用你学到的知识来帮小鸟抓到猪！
+      courseF_maze_ramp1_2018_markdown_instruction: |-
+        For this puzzle, connect all
+        of the blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp2_markdown_instruction: |-
+        将一个 <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml>模块拖出工具箱，并附加到<xml><block type="when_run"/></xml> 事件下。\r
+        \r
+        将<xml><block
+        type="maze_moveForward"/></xml>模块放到循环里来完成代码。
+      courseF_maze_ramp2_2018_markdown_instruction: |-
         将一个 <xml><block type="controls_repeat"><title
         name="TIMES">7</title></block></xml>模块拖出工具箱，并附加到<xml><block type="when_run"/></xml> 事件下。\r
         \r
@@ -71642,7 +71693,15 @@
         *"沿着这条路带我去找那只笨猪。"*\r
         \r
         躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
+      courseF_maze_ramp4_2018_markdown_instruction: |-
+        *"沿着这条路带我去找那只笨猪。"*\r
+        \r
+        躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseF_maze_ramp5_markdown_instruction: |-
+        *"沿着这条路，让我到猪那里！"*\r
+        \r
+        躲开TNT炸药。
+      courseF_maze_ramp5_2018_markdown_instruction: |-
         *"沿着这条路，让我到猪那里！"*\r
         \r
         躲开TNT炸药。
@@ -71651,6 +71710,14 @@
         \r
         当你将几个同样的模块排成一列时，试试将它们挪到<xml><block type="controls_repeat"><title
         name="TIMES">???</title></block></xml>循环里。这会用更少的代码来做相同的事情！
+      courseF_maze_ramp6_2018_markdown_instruction: |-
+        *"Keep calm and help me find
+        the bad pig. Otherwise I might get angry!"*\r
+        \r
+        When you have several
+        blocks in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
       courseF_maze_ramp7_markdown_instruction: |-
         *"我该生气了！"* \r
         \r
@@ -71848,6 +71915,11 @@
         type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)
         ！
       coursef_maze_ramp3_markdown_instruction: |-
+        *"这只猪把我的羽毛弄皱了。"*\r
+        \r
+        这里有一个额外的模块会让小鸟坠落。\r
+        将其拖回工具箱来扔掉它。
+      coursef_maze_ramp3_2018_markdown_instruction: |-
         *"这只猪把我的羽毛弄皱了。"*\r
         \r
         这里有一个额外的模块会让小鸟坠落。\r
@@ -72316,8 +72388,11 @@
       csp-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
       csp-post-survey-2017-q36-e_markdown_instruction: 因为别的原因担心：
       csp-pre-survey-2017-q36-e_markdown_instruction: 因为别的原因担心：
+      csp-pre-survey-2017-q36-e_2018_markdown_instruction: 因为别的原因担心：
       csp-pre-survey-2017-q38_markdown_instruction: 如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
+      csp-pre-survey-2017-q38_2018_markdown_instruction: 如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
       csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018_markdown_instruction: 有什么你想让老师知道别的事情吗？
       csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: 有什么你想让老师知道别的事情吗？
       csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？
       csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: 有什么你想让老师知道别的事情吗？
@@ -72804,6 +72879,28 @@
         </strong>\r
         \r
         *写下一些句子，集中在你的想法和感觉上，别担心写得好不好。*
+      csp_affirmation_control_2018_markdown_instruction: |-
+        这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是*你不会在这里被评分*。\r
+        \r
+        你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\r
+        \r
+        <strong>\r
+        &#49;.
+        写下一到两个你最感兴趣的主题：\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\r
+        </strong>\r
+        \r
+        *写下一些句子，集中在你的想法和感觉上，别担心写得好不好。*
       csp_affirmation_control_3_markdown_instruction: |-
         这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是*你不会在这里被评分*。\r
         \r
@@ -73036,6 +73133,96 @@
         </strong>\r
         \r
         *写下一些句子。集中在你的思考和感想，别担心写得好不好。*
+      csp_affirmation_intervention_2018_markdown_instruction: |-
+        This brief activity
+        allows you to reflect about what’s most important to you. It is provided to
+        you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is
+        a list of values and qualities. Some of them may be important to you, others
+        may be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_affirmation_intervention_3_markdown_instruction: |-
         这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是*你不会在这里被评分*。\r
         \r
@@ -73367,6 +73554,118 @@
         color: black; font-weight: bolder; line-height: 1.5">你自己的关于学习的最佳策略和领悟是什么？并且，它们和你刚才从其他同学那里听到的有什么相似或不同？ </p>\r
         \r
         *写下一小段。别担心拼写、语法或写得怎样。*
+      csp_socialBelonging_control_2018_markdown_instruction: |-
+        \r
+        ## Starting out
+        in Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        Everyone can learn computer science and make a difference.\r
+        \r
+        ***\r
+        \r
+        ##
+        Quotes from students\r
+        \r
+        Still, we understand that taking a computer science
+        course can be difficult at first. Here are a few student quotes describing
+        their strategies and tips for taking this course. **Please read the quotes
+        carefully and respond to the prompt below**. \r
+        \r
+        <div style="background-color:
+        #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
+        0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size: 70px; margin-bottom:
+        -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p style="line-height:
+        1.5; margin-left: 10px; margin-right: 30px; ">\r
+        In the first week of this
+        class I was falling behind quickly. There was a lot of new information to
+        learn. To keep up, I had to find a better way to study. I tried to find connections
+        between the material and what I already know. That really helped me remember
+        things. I also tried to not overdo it. I started taking small breaks in-between
+        lessons and when I came back I checked if I still remembered what I was studying
+        before. It helped a lot\r
+         </p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">Some days I felt tired and would drift away in my thoughts. It was
+        a real problem because I would miss so much of what we were learning. So I
+        started going to bed a bit earlier and I tried my best to pay attention. At
+        the end of every class our teacher summarized\r
+         what we learned that day
+        and that was really helpful. I started taking more notes because that also
+        kept my mind from wandering. These little tricks got me through the class
+        and I learned more.</p>\r
+        <p style="font-size: 70px; text-align: right;
+        opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I\r
+
+        can be pretty forgetful sometimes and it was a problem in this class. I think
+        it's because we did so much on the computer. For my other classes I take
+        notes on paper and read through them again at home. So the trick that I found
+        helpful in this class was to take notes on paper anyway and to test myself
+        about the concepts. I wasn't sure if it would work at first, but I think
+        it ended up being a big help.</p>\r
+        \r
+        <p style="font-size: 70px; text-align:
+        right; opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size:
+        125%;  font-style: italic; margin-right: 30px; margin-top: -20px">\r
+        Sam
+        J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p style="font-size: 125%">Now
+        consider the strategies and insights for how to learn best that you just read.
+        </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        <p style="font-size: 150%;
+        color: black; font-weight: bolder; line-height: 1.5">What are your own strategies
+        and insights about how to learn best? And, how are they similar or different
+        to the ones that you just heard about from other students? </p>\r
+        \r
+        *Please
+        write a short paragraph. Don't worry about spelling, grammar, or how well
+        written it is.*
       csp_socialBelonging_intervention_markdown_instruction: |-
         ## 开始计算机科学\r
         \r
@@ -73448,6 +73747,119 @@
         150%; color: black; font-weight: bolder; line-height: 1.5">为什么你觉得学生们一开始会担心自己是否属于这个课程？他们如何过段时间感觉到放松的？</p>\r
         \r
         *请写下一个短的段落。别担心拼写或者字写得好不好。*
+      csp_socialBelonging_intervention_2018_markdown_instruction: |-
+        ## Starting out
+        in Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        **Everyone can learn computer science and make a difference:** It really does
+        not matter how much or little experience you have with computer science already,
+        or what age, gender, or skin color you have.\r
+        \r
+        ***\r
+        \r
+        ## Quotes from
+        students\r
+        \r
+        Still, we understand that it can be daunting at first to take
+        a computer science course. So here are a few student quotes describing their
+        experiences. **Please read the quotes carefully and respond to the prompt
+        below**. \r
+        \r
+        \r
+        <div style="background-color: #d9eff7; border-radius:
+        40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px; ">\r
+        At the start of the class I worried that I was different from
+        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
+        do it and that the teacher and other students would look down on me. A few
+        days after I started, I realized that almost everyone who takes the class
+        isn’t sure if they fit in at first. It's something everyone goes through.
+        Now it seems ironic – everybody feels different at first, when really we're
+        all going through the same thing.</p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">I loved this computer science class! I've met some cool people and
+        learned a lot. But it was a difficult transition. The first few days I was
+        intimidated and not sure why I should learn computer science. Why would I
+        need it? But then we talked in class about things I’m interested in, like
+        music and design, and I realized that I can learn how to do cool new things.
+        I had the wrong picture in my head about CS, it’s actually very creative!
+        I just had to be patient and find ways to connect the class to what I really
+        care about.</p>\r
+        <p style="font-size: 70px; text-align: right; opacity:
+        0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I didn’t
+        have any experience with code, and I worried that I was not prepared for this
+        class. Other students did some programming at home or in summer camps. On
+        my first day, I was so nervous about getting bad grades and looking stupid.
+        But then, I started to feel better – I talked with other students and enjoyed
+        the class more. I became more comfortable asking for help when I had a problem.
+        It turned out that the students with CS experience had the same issues as
+        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r
+        \r
+        <p
+        style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%;  font-style: italic; margin-right:
+        30px; margin-top: -20px">\r
+        Sam J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p
+        style="font-size: 125%"> Each of these students had similar experiences
+        and realizations. </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        \r
+        <p style="font-size:
+        150%; color: black; font-weight: bolder; line-height: 1.5">Why do you think
+        the students worry at first about whether they belong in the class? How did
+        they become comfortable with it over time?</p>\r
+        \r
+        *Please write a short
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
@@ -73785,6 +74197,12 @@
         after each square. Be sure to turn by 120 degrees before each new square.
       frozen square loop_markdown_instruction: 你好！我是艾伦代尔的安娜公主！我们一起应用“重复“块绘制一个正方形。这样一来，我们可以减少必须使用的代码块。你觉得“重复”块必须循环多少次（???）才能让里面的代码块绘制出一个正方形呢？
       frozen square snowflake_markdown_instruction: 你可以试试绘制一朵雪花。用“重复”块绘制10个正方形，而且记得在绘制成每个正方形移之后，先把它移转36度后才开始画下一个正方形。
+      gl jr clone me ram2_markdown_instruction: |-
+        Clone this level, and then make
+        your own programs!
+      gl jr clone me_markdown_instruction: |-
+        Clone this level, and then make your
+        own programs!
       grade1_adventurer_loops2_markdown_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
@@ -75882,9 +76300,7 @@
             </block></xml>\r
             完成后，右击来保存图片，然后将它通过<a
         href="https://classroom.google.com">Google课堂</a>发给我。
-      iceAgeLoopsforVideo_markdown_instruction: |-
-        Can you get to the acorn with just
-        one <xml><block type="maze_moveForward"/></xml> block? Try using a loop!
+      iceAgeLoopsforVideo_markdown_instruction: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
       iceage_click_hello_markdown_instruction: |-
         当你点击喜得时，能帮助他呼唤他的朋友吗？\r
         完成后，点击"运行"来开始。点击喜得来让你的代码起作用！
@@ -76015,32 +76431,23 @@
         Collect
         nectar from each of the flowers using the fewest blocks possible.
       loop pet test 2_markdown_instruction: |-
-        **CHALLENGE!** When Daisy gets a carrot,
-        she gets excited. Can you make Daisy start doing a dance party? She should
-        never stop, even after you take the carrot away.\r
+        **挑战！** 当黛西得到胡萝卜时，会非常激动。你能让她跳一段派对舞蹈吗？在你拿开胡萝卜之前，她应该一直跳。\r
         \r
-        You will have to use
-        all these blocks:\r
+        你会需要用到所有这些模块：\r
         ![](https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06
         PM.png)
       loop pet test 3_markdown_instruction: |
-        **Make Predictions!** Write down your
-        answers to these questions before clicking "Run". Then try the code and
-        see what happens!\r
+        **做出预测！** 在点击"运行"前，写下这些问题的答案。然后试试代码，看看会发生什么！\r
         \r
-        * What will Daisy the dog do after you drag the carrot
-        to her?\r
-        * What will Daisy the dog do after you press the Up arrow key?\r
+        * 将胡萝卜拖到黛西狗那里后，她会做什么？\r
+        * 当你按下上方向键后，黛西狗会做什么？\r
       loop pet test 4_markdown_instruction: |-
-        **It's time to make your own virtual
-        pet!** You can change whatever code you want to to make your own pet. Here
-        are some ideas:\r
-        \r
-        * Can you make your pet start something new when you
-        click on it?\r
-        * Can you make your pet run away when you drag the vacuum
-        to it?\r
-        * Can you add other animal friends to your pet's area?
+        **是时候做你自己的虚拟宠物了！**
+        你能为自己的宠物改变任何代码。这是一些主意：\r
+        * 你能在点击宠物时，让它开始一个新的事情吗？\r
+        *
+        你能在将吸尘器拖动到宠物那里时，让它跑掉吗？\r
+        * 你能给宠物增加别的动物朋友吗？
       love_spring_1_markdown_instruction: |-
         Let's celebrate Spring!  \r
         \r

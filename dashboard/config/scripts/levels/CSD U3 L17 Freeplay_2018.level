@@ -107,12 +107,9 @@
     "expand_debugger": "false",
     "parent_level_id": 9374,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

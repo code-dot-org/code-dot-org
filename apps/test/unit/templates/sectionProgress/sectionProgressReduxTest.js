@@ -57,11 +57,26 @@ const fakeValidScripts = [
     position: 23
   },
   {
-    category: 'category1',
+    category: 'csp',
     category_priority: 1,
     id: 300,
+    name: 'csp1',
+    position: 23
+  },
+  {
+    // use a different category to make sure we aren't relying on it to group
+    // units within courses.
+    category: 'other csp',
+    category_priority: 1,
+    id: 301,
     name: 'csp2',
     position: 23
+  }
+];
+
+const fakeValidCourses = [
+  {
+    script_ids: [300, 301]
   }
 ];
 
@@ -122,6 +137,15 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.scriptId, 300);
     });
 
+    it('resets all non-section data to initial state', () => {
+      const action = setSection(fakeSectionData);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.section, sortedFakeSectionData);
+      assert.deepEqual(nextState.scriptDataByScript, {});
+      assert.deepEqual(nextState.studentLevelProgressByScript, {});
+      assert.deepEqual(nextState.levelsByLessonByScript, {});
+    });
+
     it('sets the section data with no default scriptId', () => {
       const sectionDataWithNoScript = {
         ...fakeSectionData,
@@ -162,6 +186,23 @@ describe('sectionProgressRedux', () => {
       }, action);
       assert.deepEqual(nextState.validScripts, fakeValidScripts);
       assert.deepEqual(nextState.scriptId, 100);
+    });
+
+    it('filters validScripts to those included in studentScriptIds', () => {
+      const studentScriptIds = [456];
+      const validCourses = [];
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.id === 456));
+    });
+
+    it('includes other course units when filtering validScripts', () => {
+      const studentScriptIds = [300];
+      const validCourses = fakeValidCourses;
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
+      assert.deepEqual(expectedScripts, nextState.validScripts);
     });
   });
 

@@ -38,7 +38,7 @@
   "drawUpperWave": "teikna efri bylgju",
   "drawLowerWave": "teikna neðri bylgju",
   "drawSticker": "teikna límmiða",
-  "drawStickerWithSize": "draw sticker with size",
+  "drawStickerWithSize": "teikna límmiða með stærð",
   "heightParameter": "hæð",
   "hideTurtle": "fela listamann",
   "jump": "stökkva",
@@ -74,7 +74,7 @@
   "penDown": "pensill niður",
   "penTooltip": "Lyftir eða lækkar pensilinn til að byrja eða hætta að teikna.",
   "penUp": "pensill upp",
-  "pointTo": "point to",
+  "pointTo": "benda á",
   "pixels": "díla",
   "reinfFeedbackMsg": "Hér er teikningin þín! Haltu áfram með hana eða farðu í næstu þraut.",
   "setAlpha": "stilla alfa",
@@ -94,6 +94,6 @@
   "turnTooltip": "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða.",
   "turtleVisibilityTooltip": "Gerir listamanninn sýnilegan eða ósýnilegan.",
   "widthTooltip": "Breytir breidd pensilsins.",
-  "withSize": "with size",
+  "withSize": "með stærð",
   "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."
 }

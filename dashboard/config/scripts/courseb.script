@@ -1,10 +1,10 @@
 hidden false
 hideable_stages true
 stage_extras_available true
-project_widget_visible true
 has_lesson_plan true
+project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Relevant Common Core and NGSS standards are now listed in Courses A-F!", "details"=>"Check out the full standards alignment document ", "link"=>"https://curriculum.code.org/csf-1718/courseb/standards/", "type"=>"bullhorn"}]
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
