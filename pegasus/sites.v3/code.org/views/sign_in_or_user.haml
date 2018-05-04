@@ -14,6 +14,7 @@
     can_pair?: false
   )
 
+  # This is not a dashboard object so it doesn't have access to get_active_experiment_names
   user_header_options = {}
   user_header_options[:current_user] = sign_in_user
   user_header_options[:show_pairing_dialog] = false
