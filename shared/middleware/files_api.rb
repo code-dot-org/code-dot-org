@@ -230,7 +230,8 @@ class FilesApi < Sinatra::Base
     return false if owns_channel?(encrypted_channel_id)
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    under_13?(owner_storage_id)
+    owner_id = user_id_for_storage_id(owner_storage_id)
+    under_13?(owner_id)
   end
 
   # Perform sanitization for sources created by under-13 users.
