@@ -59,7 +59,7 @@ function renderSectionProgress(section, validScripts) {
     const promises = [
       $.ajax({
         method: 'GET',
-        url: `/dashboardapi/section/${section.id}/student_script_ids`,
+        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
         dataType: 'json'
       }),
       $.ajax({
