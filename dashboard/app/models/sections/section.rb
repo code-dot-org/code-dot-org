@@ -322,6 +322,14 @@ class Section < ActiveRecord::Base
     false
   end
 
+  # Returns the ids of all scripts which any student in this section has ever
+  # been assigned to or made progress on.
+  def student_script_ids
+    # This performs two queries, but could be optimized to perform only one by
+    # doing additional joins.
+    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+  end
+
   private
 
   def unused_random_code
