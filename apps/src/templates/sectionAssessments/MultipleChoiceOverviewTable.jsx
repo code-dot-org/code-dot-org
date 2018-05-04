@@ -125,18 +125,15 @@ class MultipleChoiceOverviewTable extends Component {
 
     dataColumns.push(this.getQuestionColumn(sortable));
 
-    let answersColumnTitleObject = {};
-    this.props.questionAnswerData.forEach((multipleChoiceArr) => {
-      multipleChoiceArr.answers.forEach((answerObj) => {
-        answersColumnTitleObject[answerObj.multipleChoiceOption] = '';
-      });
+    const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
+      question1.answers.length - question2.answers.length
+    )).pop();
+
+    let columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
+      return this.getAnswerColumn(answer.multipleChoiceOption);
     });
 
-    let columnLabelBuilder = Object.keys(answersColumnTitleObject).map((columnTitle) => {
-      return this.getAnswerColumn(columnTitle);
-    });
-
-    return [...dataColumns, ...columnLabelBuilder, ...[{property: 'notAnswered', ...this.getNotAnsweredColumn()}]];
+    return [...dataColumns, ...columnLabelNames, ...[{property: 'notAnswered', ...this.getNotAnsweredColumn()}]];
 
   };
 
