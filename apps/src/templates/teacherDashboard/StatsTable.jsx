@@ -24,16 +24,14 @@ class StatsTable extends Component {
 
   studentsWithCompletedLevelCount = () => {
     const {section, studentsCompletedLevelCount} = this.props;
-    return section.students.map(student => {
-      return {
-        ...student,
-        completed_levels_count: studentsCompletedLevelCount[student.id] || 0
-      };
-    });
+    return section.students.map(student => ({
+      ...student,
+      completed_levels_count: studentsCompletedLevelCount[student.id] || 0
+    }));
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {id: sectionId} = this.props.section;
+    const sectionId = this.props.section.id;
     return (
       <a
         style={tableLayoutStyles.link}
