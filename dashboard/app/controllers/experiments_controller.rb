@@ -22,12 +22,13 @@ class ExperimentsController < ApplicationController
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end
 
+  VALID_EXPERIMENTS = ['2018-teacher-experience']
+
   # GET /experiments/set_single_user_experiment/:experiment_name
   def set_single_user_experiment
-    valid_experiments = ['2018-teacher-experience']
     experiment_name = params[:experiment_name]
 
-    unless valid_experiments.include?(experiment_name)
+    unless VALID_EXPERIMENTS.include?(experiment_name)
       redirect_to '/', flash: {alert: "'#{params[:experiment_name]}' is not a valid experiment."}
       return
     end

@@ -95,7 +95,7 @@ class ExperimentsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for(
     :disable_single_user_experiment,
-    name: 'single user cannot set disable experiment they are not in',
+    name: 'single user cannot disable experiment they are not in',
     response: :redirect,
     user: :teacher,
     params: -> {{experiment_name: 'invalid-experiment-name'}}
