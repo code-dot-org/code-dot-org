@@ -5,6 +5,7 @@ require 'timecop'
 require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
+COMMENT_BLOCK_SOURCES = File.join(__dir__, 'fixtures', 'comment-block-sources.json')
 
 class SourcesTest < FilesApiTestBase
   def setup
@@ -642,6 +643,46 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(MAIN_JSON)
 
     delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+  end
+
+  def test_remove_under_13_comments
+    comment_block_sources = JSON.parse(IO.read(COMMENT_BLOCK_SOURCES))
+    birthdays = [Date.parse("1900-01-01"), Date.today]
+    sources = ["short_source_with_comments", "long_source_with_comments"]
+
+    birthdays.each do |birthday|
+      mock_select = stub
+      mock_select.stubs(:first).returns({birthday: birthday})
+      mock_table = stub
+      mock_table.stubs(:select).returns(mock_select)
+      DASHBOARD_DB.stubs(:[]).with(:users).returns(mock_table)
+      sources.each do |source|
+        put_main_json({"source": comment_block_sources[source]}.stringify_keys)
+
+        # owner sees unchanged
+        @api.get_object(MAIN_JSON)
+        assert successful?
+        assert_equal comment_block_sources[source], JSON.parse(last_response.body)['source']
+
+        #with_session(:admin) do
+        #end
+
+        # iff owner is under 13, non-owner sees version without comments
+        with_session(:non_owner) do
+          non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+          non_owner_api.get_object(MAIN_JSON)
+          assert successful?
+          response_source = JSON.parse(last_response.body)['source']
+          if UserHelpers.age_from_birthday(birthday) < 13
+            assert_equal comment_block_sources["source_without_comments"], response_source
+          else
+            assert_equal comment_block_sources[source], response_source
+          end
+        end
+      end
+    end
+
+    delete_all_source_versions(MAIN_JSON)
   end
 
   private
