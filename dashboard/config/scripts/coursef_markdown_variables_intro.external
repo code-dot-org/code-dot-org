@@ -4,9 +4,7 @@ description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # **In this lesson...**
 
-### Imagine you are trying to write a program that adds two numbers together. It would be no fun if the program added the same two numbers together every time. 
-
-### If we have a way to tell the program to always add the first number to the second number, no matter what the numbers are, wouldn't that be helpful?
+### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!
 
 
 ---
@@ -15,7 +13,5 @@ markdown <<MARKDOWN
 
 ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
-![](https://images.code.org/f3eef380bb78fa624a78e25d41ee373e-image-1524772419845.png)
 
-![](https://images.code.org/df6559a5d210174eed6dfa8b249c0cc5-image-1524772444704.png)
 MARKDOWN

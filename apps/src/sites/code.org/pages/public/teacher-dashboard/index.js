@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, { COURSE_VERSIONS } from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
@@ -26,7 +26,6 @@ import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
-const cacheSectionsService = JSON.parse(script.dataset.cachesectionsservice);
 
 main(scriptData);
 
@@ -55,8 +54,33 @@ function renderSectionProgress(section, validScripts) {
   registerReducers({sectionProgress});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(setValidScripts(validScripts));
 
+  if (experiments.isEnabled(COURSE_VERSIONS)) {
+    const promises = [
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
+        dataType: 'json'
+      }),
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/courses?allVersions=1`,
+        dataType: 'json'
+      })
+    ];
+    Promise.all(promises).then(data => {
+      let [studentScriptsData, validCourses] = data;
+      const { studentScriptIds } = studentScriptsData;
+      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses));
+      renderSectionProgressReact(store);
+    });
+  } else {
+    store.dispatch(setValidScripts(validScripts));
+    renderSectionProgressReact(store);
+  }
+}
+
+function renderSectionProgressReact(store) {
   ReactDOM.render(
     <Provider store={store}>
       <SectionProgress />
@@ -194,9 +218,7 @@ function main() {
       // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
       // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
       $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-      if (cacheSectionsService) {
-        $httpProvider.defaults.cache = true;
-      }
+      $httpProvider.defaults.cache = true;
     }]);
 
   services.factory('studentsService', ['$resource',

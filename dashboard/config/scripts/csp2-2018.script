@@ -1,0 +1,113 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
+has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Consider Skipping Lessons 11 - 14 of Unit 2", "details"=>"Click to read more about this recommendation as well as our overall strategy for updating CS Principles.", "link"=>"http://forum.code.org/t/curriculum-updates-2017-18/10762/3", "type"=>"bullhorn"}]
+
+stage 'Bytes and File Sizes', flex_category: 'csp2_1'
+level 'v2 U2L1 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U1L12 Reflection Free Response_2018', progression: 'Check Your Understanding'
+assessment 'CSP_U2_Shakespeare_Question_2018', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-2-levelgroup-U2Ch1_2018', progression: 'Quick Check-In'
+
+stage 'Text Compression', flex_category: 'csp2_1'
+level 'v2 U2L2 Student Lesson Summary_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Text Compression_2018', progression: 'Text Compression'
+named_level 'Widget: Text Compression_2018', progression: 'Widget: Text Compression'
+assessment 'U1L13 - Assess Text Compression reverse process_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assess Text Compression amount_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assessment 2_2018', progression: 'Check Your Understanding'
+
+stage 'Encoding B&W Images', flex_category: 'csp2_1'
+level 'v2 U2L3 Student Lesson Summary_2018', progression: 'Lesson Vocabulary & Resources'
+level 'Pixelation - Lesson 14 - Make the Letter A_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+level 'Pixelation - Lesson 14 - Fix bit offset_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+named_level 'Widget: Black and White Pixelation_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+assessment 'U1L14 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L14 - Assessment 2_2018', progression: 'Check Your Understanding'
+
+stage 'Encoding Color Images', flex_category: 'csp2_1'
+level 'v2 U2L4 Student Lesson Summary_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Images, Pixels, and RGB_2018', progression: 'Images, Pixels, and RGB'
+level 'Pixelation - Lesson 15 - Complete 3-bit color_2018', progression: 'Pixelation'
+level 'Pixelation - Lesson 15 - Color Shades_2018', progression: 'Pixelation'
+level 'Pixelation - Lesson 15 - Color Shades 4x4_2018', progression: 'Pixelation'
+level 'Pixelation Flappy_2018', progression: 'Pixelation'
+level 'Pixelation Bee_2018', progression: 'Pixelation'
+named_level 'Favicon Instructions_2018', progression: 'Favicon Instructions'
+named_level 'Widget: Color Pixelation_2018', progression: 'Widget: Color Pixelation'
+assessment 'U2L5 Color Pixel MC Question_2018', progression: 'Check Your Understanding'
+assessment 'U2L5 FR brighten darken image_2018', progression: 'Check Your Understanding'
+
+stage 'Lossy Compression and File Formats', flex_category: 'csp2_1'
+level 'v2 U2L5 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U1L16 - Matching File Compression Types_2018', progression: 'Check Your Understanding'
+
+stage 'Practice PT - Encode an Experience', flex_category: 'csp2_1'
+level 'v2 U2L6 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Unit 2 Chapter 1 Assessment', lockable: true, flex_category: 'csp2_1'
+assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018'
+
+stage 'Intro to Data', flex_category: 'csp2_2'
+level 'v2 U2L7 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In'
+
+stage 'Finding Trends with Visualizations', flex_category: 'csp2_2'
+level 'v2 U2L8 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U2L8 google trends MC_2018', progression: 'Check Your Understanding'
+assessment 'U2L8 google trends hypothesis_2018', progression: 'Check Your Understanding'
+
+stage 'Check Your Assumptions', flex_category: 'csp2_2'
+level 'v2 U2L9 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U2L9 What is digital divide MC_2018', progression: 'Check Your Understanding'
+assessment 'U2L9 FR digital divide issue_2018', progression: 'Check Your Understanding'
+
+stage 'Good and Bad Data Visualizations', flex_category: 'csp2_2'
+level 'v2 U2L10 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Collection A: Good and Bad Visualizations_2018', progression: 'Collection A: Good and Bad Visualizations'
+named_level 'Collection B: Good and Bad Visualizations_2018', progression: 'Collection B: Good and Bad Visualizations'
+assessment 'U2L10 FR why best worst viz_2018', progression: 'Check Your Understanding'
+
+stage 'Making Data Visualizations', flex_category: 'csp2_2'
+level 'v2 U2L11 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Downloading the Data Set_2018', progression: 'Downloading the Data Set'
+named_level 'Making a Scatter Plot_2018', progression: 'Making a Scatter Plot'
+named_level 'Making a Line Chart_2018', progression: 'Making a Line Chart'
+named_level 'Making a Bar Chart_2018', progression: 'Making a Bar Chart'
+named_level 'Editing Chart Appearance_2018', progression: 'Editing Chart Appearance'
+level 'U4 - Making Data Visualizations - Free Play_2018', progression: 'Making Data Visualizations - Free Play'
+assessment 'U2L10 FR describe what you made from lesson prompt_2018', progression: 'Check Your Understanding'
+
+stage 'Discover a Data Story', flex_category: 'csp2_2'
+level 'v2 U2L12 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+assessment 'U2L12 FR reflection on collaboration_2018', progression: 'Check Your Understanding'
+
+stage 'Cleaning Data', flex_category: 'csp2_2'
+level 'v2 U2L13 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Getting to Know Your Data_2018', progression: 'Getting to Know Your Data'
+named_level 'Cleaning Data_2018', progression: 'Cleaning Data'
+named_level 'Categorizing Data_2018', progression: 'Categorizing Data'
+assessment 'U2L13 Cleaning Data MC_2018', progression: 'Check Your Understanding'
+assessment 'U2L13 FR Reflection data analysis objective_2018', progression: 'Check Your Understanding'
+
+stage 'Creating Summary Tables', flex_category: 'csp2_2'
+level 'v2 U2L14 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+named_level 'Making Pivot Tables Part 1 - The Basics_2018', progression: 'Making Pivot Tables Part 1 - The Basics'
+named_level 'Making Pivot Tables Part 2 - Manipulation and Visualization_2018', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations'
+level 'U4L08v2 Making Pivot Tables Part 3_2018', progression: 'Making Pivot Tables Part 3'
+assessment 'U2L14 Summary Tables MC_2018', progression: 'Check Your Understanding'
+
+stage 'Practice PT - Tell a Data Story', flex_category: 'csp2_2'
+level 'v2 U2L15 Student Lesson Introduction_2018', progression: 'Lesson Vocabulary & Resources'
+
+stage 'Unit 2 Chapter 2 Assessment', lockable: true, flex_category: 'csp2_2'
+variants
+  level 'csp_affirmation_control_2_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_2_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+endvariants
+assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018'

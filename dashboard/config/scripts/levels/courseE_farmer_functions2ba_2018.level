@@ -39,8 +39,7 @@
     "step_speed": "1",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
