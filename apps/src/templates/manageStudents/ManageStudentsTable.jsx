@@ -189,6 +189,11 @@ class ManageStudentsTable extends Component {
     return this.props.studentData.filter(sd => sd.rowType === RowType.STUDENT);
   };
 
+  isMoveStudentsEnabled = () => {
+    const {loginType} = this.props;
+    return loginType === SectionLoginType.word || loginType === SectionLoginType.picture || loginType === SectionLoginType.email;
+  };
+
   ageFormatter = (age, {rowData}) => {
     const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].age : 0;
     return (
@@ -519,11 +524,13 @@ class ManageStudentsTable extends Component {
               <AddMultipleStudents/>
             </div>
           }
-          <MoveStudents
-            studentData={this.studentDataMinusBlanks()}
-            transferData={transferData}
-            transferStatus={transferStatus}
-          />
+          {this.isMoveStudentsEnabled() &&
+            <MoveStudents
+              studentData={this.studentDataMinusBlanks()}
+              transferData={transferData}
+              transferStatus={transferStatus}
+            />
+          }
         </div>
         <Table.Provider
           columns={columns}
