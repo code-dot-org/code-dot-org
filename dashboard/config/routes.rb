@@ -321,7 +321,10 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
+  get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
+  get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
