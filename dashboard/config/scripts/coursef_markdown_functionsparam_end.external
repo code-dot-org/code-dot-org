@@ -1,0 +1,21 @@
+name 'courseF_markdown_functionsparam_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "parameters"!**
+
+### **A parameter is an extra piece of information passed to a function to customize it for a specific need.** 
+
+### Parameters are really helpful when you want to reuse code in different places, but want something a little bit different to happen every time you "call" your function. This makes parameters a really powerful tool in computer science.
+
+### Hope you had fun *para*ding around your new tool: *para*meters!
+
+---
+
+## **Vocab to Know**
+
+* ### **Function** - A named group of programming instructions.
+
+* ### **Parameter** - An extra piece of information passed to a function to customize it for a specific need
+
+MARKDOWN

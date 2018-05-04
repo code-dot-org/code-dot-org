@@ -1,0 +1,11 @@
+name 'U4L4 - MC cost of free_2018'
+question 'Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?'
+wrong 'Companies frequently offer services free of charge in exchange for access to data about their users'
+wrong 'Personal data about users may be saved by a company permanently, never to be deleted.'
+wrong 'Companies can sell the personal information of users to advertisers or other businesses'
+right 'Companies are required by law to give users options to personalize what data they collect about them'
+
+
+teacher_markdown <<MARKDOWN
+This one is potentially tricky because you have to use test-taking strategy to interpret the "LEAST TRUE" framing of the question. Laws about data collection and disclosure vary widely by country - the EU has a lot of laws required informed consent to collect data - and even varies by state in the US.  But there is nothing that says a company is required to give you options.
+MARKDOWN

@@ -1,0 +1,20 @@
+name 'courseF_markdown_algorithms_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "algorithms"!**  
+
+
+
+### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  
+
+### When you write an algorithm for a machine, this is called a **program**.  
+
+---
+
+## **Vocab to Know**
+
+* ### **Algorithm** - A list of steps to finish a task
+
+* ### **Program** - An algorithm that has been coded into something that can be run by a machine
+MARKDOWN

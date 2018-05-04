@@ -1,6 +1,6 @@
 var tickWrapper = require('../../util/tickWrapper');
 
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
   app: "studio",

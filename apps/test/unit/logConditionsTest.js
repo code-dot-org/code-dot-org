@@ -1,5 +1,5 @@
 import {assert} from '../util/configuredChai';
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 var executionLog = require('@cdo/apps/executionLog');
 

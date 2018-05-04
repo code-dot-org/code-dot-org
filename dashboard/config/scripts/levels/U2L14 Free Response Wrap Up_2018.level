@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Frequency Analysis",
+    "markdown_instructions": "Knowing what you know now about frequency analysis, would you feel comfortable sending your password over the Internet using a substitution cipher?\r\n\r\nWhy or why not?\r\n",
+    "encrypted_solution": "sCGeUGI2w2YbUU/UpwjAnvnG/GlQDL0KSv0EnLXg362OBQFXs/DsR8CoYzS3\np2v9QP6pn+BsrB13OjT9mTsn78ZFFb7UjzssIQZUmJVPdiarow0ySumMMZd9\nfYn5EOn9oCObd2xmQTxVQBs2uKu2wBj5pEmTHvjMFLg4g3axwH6/mR+q1S2F\nZfodBix+3lUd4MjrDB8Ky9JyIRcj0946a8hYNa3iiTXTYXw6uKzfJE4GryXq\nRfXxBucrtto+0vJDsKg4JKdLxyupESNlMsvibjGD8SfxKNA0H7vhxhCKS2Ii\neuCBeh3jJddQgLiBKP+T7W/u1IghgzVrcPJRtzVmpT08KUIq4zNAhyFZpMDB\nG/5Y966Xd6fHuYs4BwuCSqq5wHURT4kxF6grdrRW5DMDbjN8N9+E3GM5q7mq\nrH4Aj9kR+L1JveICgGWe+h1Rf8d3\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2548,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

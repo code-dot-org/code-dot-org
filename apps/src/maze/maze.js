@@ -8,9 +8,7 @@ const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMa
 const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');
 const utils = require('../utils');
-const constants = require('../constants');
-const TestResults = constants.TestResults;
-const ResultType = constants.ResultType;
+import {TestResults, ResultType} from '../constants';
 const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;

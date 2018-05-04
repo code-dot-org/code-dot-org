@@ -7,8 +7,8 @@ content-type: text/ng-template
 #nav{"ng-show"=>"section.id"}
   #goback{style: "float:left"}
     %div
-      %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
-      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}=I18n.t('view_all_sections')
+      %span{style: "color: #00adbc; font-size: 25px; font-weight: 700; margin-right: 8px; line-height: 25px;"} &#8249;
+      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight: 700; line-height: 25px; text-decoration: none"}=I18n.t('view_all_sections')
       %div{style: "font-size: 24px; font-weight: 'bolder'; padding: 12px;"}= '{{section.name}}'
 
   .section-select{style: "float:right"}

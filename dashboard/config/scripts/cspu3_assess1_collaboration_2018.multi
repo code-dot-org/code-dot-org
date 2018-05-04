@@ -1,0 +1,16 @@
+name 'cspu3_assess1_collaboration_2018'
+wrong 'Team members can rely on one another to explain their code.'
+wrong 'Programmers can write functions without needing to know what they do or how they should work.'
+right 'Programmers can use functions created by their partners, relying on the functionality without needing to know the specific details of how the function is implemented.'
+wrong 'In order for programmers to work together, they must work in the same room.'
+wrong 'Abstraction allows programmers to brainstorm more creative solutions to problems.'
+
+markdown <<MARKDOWN
+When programmers work together, what is an example of how abstraction in programming can promote collaboration?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Abstraction in programming: Where the programmer makes their code more readable by hiding irrelevant material in their code. It allows an easier interaction with the program.
+
+With this in mind, when programmers work together it is imperative that one's code is easy to read at first glance. Most notably, it should be clear to every team member what a function does so the programmer does not need to explain their code multiple times. Abstraction and clean code makes team programming more efficient.
+MARKDOWN

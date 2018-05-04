@@ -37,7 +37,7 @@
     de bază și conceptele programării în cadrul cursului următor.
   og_title: Fiecare copil merită o portunitate
   og_title_soon: Ora de Cod este aproape
-  og_title_here: The Hour of Code is here!
+  og_title_here: Ora De Cod e aici!
   og_description: Hour of Code este o mişcare globală care ajunge la zeci de milioane
     de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -362,9 +362,9 @@
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
   studiobar_shop_title: Magazin
   studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_students: din studenții Americii au un cont pe Code.org
+  homepage_stats_female: din stundeții noștri sunt femei
+  homepage_stats_teachers: profesori folosesc Code.org
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
   homepage_stats_policy: states changed policy to support computer science
   homepage_stats_title: We're making a difference
@@ -667,8 +667,10 @@
   video_title_real_madrid: Oră de cod cu Real Madrid
   video_title_marco_belinelli: Oră de cod cu Marco Belinelli
   video_title_chris_bosh: Chris Bosh despre Informatică
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Vorbesti o alta limba?
   help_translate: Ajuta-ne sa traducem.
@@ -2181,5 +2183,3 @@
     contul Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

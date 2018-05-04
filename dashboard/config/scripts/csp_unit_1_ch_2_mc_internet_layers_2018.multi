@@ -1,0 +1,18 @@
+name 'CSP Unit 1 Ch 2 MC internet layers_2018'
+title 'Layers of Protocols'
+description ' '
+type 'multi2'
+question ' '
+wrong 'TCP/IP relies on HTTP'
+right 'HTTP relies on TCP/IP'
+right 'DNS relies on TCP/IP'
+wrong 'TCP/IP relies on DNS'
+
+markdown <<MARKDOWN
+The various protocols in use on the internet are said to operate in layers in which the protocol(s) at each layer solve one problem related to networked communication, and higher layers are built on top of, and *rely on*, the lower layers to do their jobs.  
+
+From the list provided *choose the two (2)* answers that correctly describe which internet protocol *relies on* the other.  For example: if protocol A *relies on* protocol B, it means that A is a higher level protocol than B, and thus protocol B must exist and work properly in order for protocol A to do its job.
+
+Select <u>two</u> answers.
+
+MARKDOWN

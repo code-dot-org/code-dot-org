@@ -1,7 +1,5 @@
-var constants = require('@cdo/apps/constants.js');
-var TerminationValue = constants.BeeTerminationValue;
+import {TestResults, BeeTerminationValue as TerminationValue} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
-var TestResults = constants.TestResults;
 
 // Honey goal of 1.  No specific hive goals
 var levelDef = {

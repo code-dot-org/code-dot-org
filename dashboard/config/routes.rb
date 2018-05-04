@@ -76,6 +76,7 @@ Dashboard::Application.routes.draw do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
+          get 'completed_levels_count'
         end
         member do
           post 'remove'
@@ -85,6 +86,7 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
+        get 'student_script_ids'
       end
     end
   end
@@ -286,7 +288,7 @@ Dashboard::Application.routes.draw do
 
   # internal support tools
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
-  post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
+  post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
@@ -320,7 +322,10 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
+  get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
+  get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews

@@ -1,0 +1,19 @@
+name 'CSD U4L04 SFLP_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn what an app is and how they are designed to help meet a user's needs. You'll also learn how prototypes are used to create a rough draft of a piece of software.
+
+## Vocabulary
+
+* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.
+* **User Interface** - The visual elements of an program through which a user controls or communicates with the application. Often abbreviated UI.
+
+
+## Resources
+
+* [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide
+* [User Testing (Computer)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - Activity Guide
+* [User Testing (User)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - Activity Guide
+MARKDOWN
