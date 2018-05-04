@@ -10,16 +10,6 @@ export const COLUMNS = {
   QUESTION: 0,
 };
 
-const alphabetMapper =  [
-  commonMsg.answerOptionA(),
-  commonMsg.answerOptionB(),
-  commonMsg.answerOptionC(),
-  commonMsg.answerOptionD(),
-  commonMsg.answerOptionE(),
-  commonMsg.answerOptionF(),
-  commonMsg.answerOptionG(),
-];
-
 const calculateNotAnswered = (multipleChoiceDataArr) => {
     let total = 0;
   multipleChoiceDataArr.forEach (studentsAnswersObj => {
@@ -102,10 +92,11 @@ class MultipleChoiceOverviewTable extends Component {
     }
   );
 
-  getAnswerColumn = (index) => (
+  getAnswerColumn = (columnLabel) => (
     {
+      property: 'percentAnswered',
       header: {
-        label: alphabetMapper[index],
+        label: columnLabel,
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
@@ -117,6 +108,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getQuestionColumn = (sortable) => (
     {
+      property: 'question',
       header: {
         label: commonMsg.question(),
         props: {style: tableLayoutStyles.headerCell},
@@ -129,26 +121,23 @@ class MultipleChoiceOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
-      return Math.max(answersTotal, currentAnswerCount.answers.length);
-    }, 0);
-
     let dataColumns = [];
-    let columns = this.getQuestionColumn(sortable) ;
 
-    dataColumns.push({property: 'question', ...columns});
+    dataColumns.push(this.getQuestionColumn(sortable));
 
-    for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      let questionOption = this.getAnswerColumn(i);
+    let answersColumnTitleObject = {};
+    this.props.questionAnswerData.forEach((multipleChoiceArr) => {
+      multipleChoiceArr.answers.forEach((answerObj) => {
+        answersColumnTitleObject[answerObj.multipleChoiceOption] = '';
+      });
+    });
 
-      dataColumns.push({property: 'percentAnswered' , ...questionOption});
-    }
+    let columnLabelBuilder = Object.keys(answersColumnTitleObject).map((columnTitle) => {
+      return this.getAnswerColumn(columnTitle);
+    });
 
-    // Add 2 to maxAnswerChoicesLength to ensure notAnswered is the last column.
-    // maxAnswerChoicesLength does not include question column.
-    dataColumns.push({property: 'notAnswered', ...this.getNotAnsweredColumn(maxAnswerChoicesLength + 2)});
+    return [...dataColumns, ...columnLabelBuilder, ...[{property: 'notAnswered', ...this.getNotAnsweredColumn()}]];
 
-    return dataColumns;
   };
 
   render() {
