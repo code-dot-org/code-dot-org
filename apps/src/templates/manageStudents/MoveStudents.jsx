@@ -13,11 +13,13 @@ import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSec
 import {
   updateStudentTransfer,
   transferStudents,
-  OTHER_TEACHER,
-  COPY_STUDENTS,
-  blankStudentTransfer
+  TransferType,
+  TransferStatus,
+  cancelStudentTransfer
 } from './manageStudentsRedux';
+import color from "@cdo/apps/util/color";
 
+const OTHER_TEACHER = "otherTeacher";
 const PADDING = 20;
 const TABLE_WIDTH = 300;
 const DIALOG_WIDTH = 800;
@@ -60,6 +62,10 @@ const styles = {
   },
   radioOption: {
     paddingLeft: PADDING / 2
+  },
+  error: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red
   }
 };
 
@@ -78,6 +84,11 @@ class MoveStudents extends Component {
       otherTeacherSection: PropTypes.string.isRequired,
       copyStudents: PropTypes.bool.isRequired
     }),
+    transferStatus: PropTypes.shape({
+      status: PropTypes.string,
+      type: PropTypes.string,
+      error: PropTypes.string
+    }),
 
     // redux provided
     sections: PropTypes.arrayOf(
@@ -88,7 +99,8 @@ class MoveStudents extends Component {
     ),
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
-    transferStudents: PropTypes.func.isRequired
+    transferStudents: PropTypes.func.isRequired,
+    cancelStudentTransfer: PropTypes.func.isRequired
   };
 
   state = {
@@ -101,7 +113,7 @@ class MoveStudents extends Component {
 
   closeDialog = () => {
     this.setState({isDialogOpen: false});
-    this.props.updateStudentTransfer({...blankStudentTransfer});
+    this.props.cancelStudentTransfer();
   };
 
   getStudentIds = () => {
@@ -251,7 +263,8 @@ class MoveStudents extends Component {
     } else {
       newTransferData = {
         otherTeacher: false,
-        sectionId: parseInt(sectionValue)
+        sectionId: parseInt(sectionValue),
+        copyStudents: false
       };
     }
 
@@ -266,13 +279,12 @@ class MoveStudents extends Component {
 
   onChangeMoveOrCopy = (event) => {
     this.props.updateStudentTransfer({
-      copyStudents: event.target.value === COPY_STUDENTS
+      copyStudents: event.target.value === TransferType.COPY_STUDENTS
     });
   };
 
   transfer = () => {
-    this.props.transferStudents();
-    this.closeDialog();
+    this.props.transferStudents(this.closeDialog);
   };
 
   isButtonDisabled = () => {
@@ -296,7 +308,7 @@ class MoveStudents extends Component {
       sort: orderBy,
     })(this.props.studentData);
 
-    const {transferData} = this.props;
+    const {transferData, transferStatus} = this.props;
 
     return (
       <div>
@@ -320,6 +332,14 @@ class MoveStudents extends Component {
               <Table.Body rows={sortedRows} rowKey="id" />
             </Table.Provider>
             <div style={styles.rightColumn}>
+              {transferStatus.status === TransferStatus.FAIL &&
+                <div
+                  id="uitest-error"
+                  style={styles.error}
+                >
+                  {transferStatus.error}
+                </div>
+              }
               <div>{i18n.selectStudentsToMove()}</div>
               <label
                 htmlFor="sections"
@@ -354,7 +374,7 @@ class MoveStudents extends Component {
                   <label style={styles.input}>
                     <input
                       type="radio"
-                      value={COPY_STUDENTS}
+                      value={TransferType.COPY_STUDENTS}
                       checked={transferData.copyStudents}
                       onChange={this.onChangeMoveOrCopy}
                     />
@@ -375,12 +395,13 @@ class MoveStudents extends Component {
           </div>
           <DialogFooter>
             <Button
+              id="uitest-cancel"
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              id="submit"
+              id="uitest-submit"
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
@@ -402,7 +423,10 @@ export default connect(state => ({
   updateStudentTransfer(transferData) {
     dispatch(updateStudentTransfer(transferData));
   },
-  transferStudents() {
-    dispatch(transferStudents());
+  transferStudents(onComplete) {
+    dispatch(transferStudents(onComplete));
+  },
+  cancelStudentTransfer() {
+    dispatch(cancelStudentTransfer());
   }
 }))(MoveStudents);
