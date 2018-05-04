@@ -1,0 +1,26 @@
+name 'Click Here!_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+
+## Participate in Code.org's Long-Range Study! (free gift cards)
+If you're 18 years or older, you can choose to participate in a longitudinal study with us - a long-range study that will try to capture the decisions, stories, and paths of students, such as yourself, in your post-high school life.
+
+*Participation in this study is entirely optional, and only available to students over the age of 18. If you choose to participate, you will be asked to provide your contact information, in order to ask you to participate in short surveys in the future.*
+
+If you want to participate, [please fill out this simple form (it will take 1 minute or less)](https://docs.google.com/forms/d/e/1FAIpQLScfLsr5G1HI1PFZOtShBnP6uIKG4c4N_HC_TUyKftzLKzk3-Q/viewform?usp=pp_url&entry.1045781291&entry.1166974658&entry.839337160&entry.2049495650=<user_id/>)
+
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScfLsr5G1HI1PFZOtShBnP6uIKG4c4N_HC_TUyKftzLKzk3-Q/viewform?usp=pp_url&entry.1045781291&entry.1166974658&entry.839337160&entry.2049495650=<user_id/>"> Yes, add me to the study !!!</a>
+
+As a thank you, we will give you a &#36;10 gift card each time you respond to a survey in the future.
+
+## Your privacy
+Any contact information you provide will not be shared with third parties, nor used in any way outside the purpose of such a study. If we learn that we have inadvertently collected this information from a child under 18, we will delete such information immediately.
+
+If you are not 18 yet but are interested in participating in the study, you can contact us once you turn 18.
+
+
+
+
+
+
+MARKDOWN
