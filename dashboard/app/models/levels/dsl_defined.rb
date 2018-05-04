@@ -66,7 +66,7 @@ class DSLDefined < Level
       data[:properties].merge! level_params
 
       if old_name && data[:name] != old_name
-        raise 'Renaming of DSLDefined levels is not allowed'
+        raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
       end
 
       level = setup data
@@ -128,6 +128,11 @@ class DSLDefined < Level
     raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     level = super(new_name)
     new_dsl = dsl_text.try(:sub, "name '#{name}'", "name '#{new_name}'")
+
+    # raises unless the name is formatted with single, non-curly quotes, e.g.:
+    # name 'level-name'
+    raise "name not formatted correctly in dsl text for level: '#{name}'" if new_dsl == dsl_text
+
     level.update!(dsl_text: new_dsl) if new_dsl
     level
   end
