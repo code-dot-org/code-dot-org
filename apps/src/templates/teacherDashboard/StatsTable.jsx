@@ -9,7 +9,7 @@ const styles = {
   table: {
     width: '100%'
   },
-  cell: {
+  rightAlignText: {
     textAlign: 'right'
   }
 };
@@ -76,7 +76,8 @@ class StatsTable extends Component {
           label: i18n.completedLevels(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...styles.rightAlignText
           }},
           transforms: [sortable]
         },
@@ -84,7 +85,7 @@ class StatsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cell
+              ...styles.rightAlignText
           }}
         }
       },
@@ -94,7 +95,8 @@ class StatsTable extends Component {
           label: i18n.linesOfCode(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...styles.rightAlignText
           }},
           transforms: [sortable]
         },
@@ -102,7 +104,7 @@ class StatsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cell
+              ...styles.rightAlignText
           }}
         }
       }
