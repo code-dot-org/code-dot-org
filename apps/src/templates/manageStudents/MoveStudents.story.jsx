@@ -1,4 +1,5 @@
 import React from 'react';
+import {action} from '@storybook/addon-actions';
 import {UnconnectedMoveStudents as MoveStudents} from './MoveStudents';
 import {
   blankStudentTransfer,
@@ -49,6 +50,17 @@ const errorTransferStatus = {
   error: 'You cannot move these students because they are already in the new section.'
 };
 
+const DEFAULT_PROPS = {
+  studentData,
+  transferData: blankStudentTransfer,
+  transferStatus: blankStudentTransferStatus,
+  currentSectionId: 1,
+  sections,
+  updateStudentTransfer: action('Update'),
+  transferStudents: action('Transfer'),
+  cancelStudentTransfer: action('Cancel')
+};
+
 export default storybook => {
   storybook
     .storiesOf('MoveStudents', module)
@@ -57,16 +69,7 @@ export default storybook => {
         name: 'Move students dialog',
         description: 'Empty dialog',
         story: () => (
-          <MoveStudents
-            studentData={studentData}
-            transferData={blankStudentTransfer}
-            transferStatus={blankStudentTransferStatus}
-            currentSectionId={1}
-            sections={sections}
-            updateStudentTransfer={() => console.log('updating...')}
-            transferStudents={() => console.log('transferring...')}
-            cancelStudentTransfer={() => console.log('cancelling...')}
-          />
+          <MoveStudents {...DEFAULT_PROPS} />
         )
       },
       {
@@ -74,14 +77,8 @@ export default storybook => {
         description: 'Dialog when "other teacher" option is chosen',
         story: () => (
           <MoveStudents
-            studentData={studentData}
+            {...DEFAULT_PROPS}
             transferData={transferToOtherTeacher}
-            transferStatus={blankStudentTransferStatus}
-            currentSectionId={1}
-            sections={sections}
-            updateStudentTransfer={() => console.log('updating...')}
-            transferStudents={() => console.log('transferring...')}
-            cancelStudentTransfer={() => console.log('cancelling...')}
           />
         )
       },
@@ -90,14 +87,9 @@ export default storybook => {
         description: 'Dialog when an error has occurred',
         story: () => (
           <MoveStudents
-            studentData={studentData}
+            {...DEFAULT_PROPS}
             transferData={transferToOtherTeacher}
             transferStatus={errorTransferStatus}
-            currentSectionId={1}
-            sections={sections}
-            updateStudentTransfer={() => console.log('updating...')}
-            transferStudents={() => console.log('transferring...')}
-            cancelStudentTransfer={() => console.log('cancelling...')}
           />
         )
       }
