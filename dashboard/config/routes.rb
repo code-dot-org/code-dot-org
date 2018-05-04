@@ -86,6 +86,7 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
+        get 'student_script_ids'
       end
     end
   end
@@ -321,7 +322,10 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
+  get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
+  get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
@@ -515,7 +519,6 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
-  get '/dashboardapi/section/:section_id/student_script_ids', to: 'sections#student_script_ids'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
