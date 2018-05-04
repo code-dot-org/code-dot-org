@@ -8,6 +8,9 @@ import orderBy from 'lodash/orderBy';
 const styles = {
   table: {
     width: '100%'
+  },
+  cell: {
+    textAlign: 'right'
   }
 };
 
@@ -70,7 +73,7 @@ class StatsTable extends Component {
       {
         property: 'completed_levels_count',
         header: {
-          label: 'Completed Levels', // TODO: i18n
+          label: i18n.completedLevels(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell
@@ -80,14 +83,15 @@ class StatsTable extends Component {
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
+              ...tableLayoutStyles.cell,
+              ...styles.cell
           }}
         }
       },
       {
         property: 'total_lines',
         header: {
-          label: 'Lines of Code', // TODO: i18n
+          label: i18n.linesOfCode(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell
@@ -97,7 +101,8 @@ class StatsTable extends Component {
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
+              ...tableLayoutStyles.cell,
+              ...styles.cell
           }}
         }
       }
