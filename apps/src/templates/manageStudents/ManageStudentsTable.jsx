@@ -510,16 +510,16 @@ class ManageStudentsTable extends Component {
           />
         }
         {transferStatus.status === TransferStatus.SUCCESS && this.renderTransferSuccessNotification()}
-        {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-          <div style={styles.buttonRow}>
+        <div style={styles.buttonRow}>
+          {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
             <AddMultipleStudents/>
-            <MoveStudents
-              studentData={this.studentDataMinusBlanks()}
-              transferData={transferData}
-              transferStatus={transferStatus}
-            />
-          </div>
-        }
+          }
+          <MoveStudents
+            studentData={this.studentDataMinusBlanks()}
+            transferData={transferData}
+            transferStatus={transferStatus}
+          />
+        </div>
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
