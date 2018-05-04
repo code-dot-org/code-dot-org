@@ -745,9 +745,9 @@ ActiveRecord::Schema.define(version: 20180504225917) do
   end
 
   create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "form_id"
-    t.string   "question_id"
-    t.string   "question_text"
+    t.integer  "form_id",       null: false
+    t.string   "question_id",   null: false
+    t.string   "question_text", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "question_type", null: false

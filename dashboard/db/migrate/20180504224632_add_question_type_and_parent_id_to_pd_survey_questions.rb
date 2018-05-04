@@ -6,5 +6,9 @@ class AddQuestionTypeAndParentIdToPdSurveyQuestions < ActiveRecord::Migration[5.
       t.column :parent_id, :integer, null: true,
         comment: 'Parent pd_survey_question id for hierarchical question types, such as matrices.'
     end
+
+    change_column_null :pd_survey_questions, :form_id, false
+    change_column_null :pd_survey_questions, :question_id, false
+    change_column_null :pd_survey_questions, :question_text, false
   end
 end

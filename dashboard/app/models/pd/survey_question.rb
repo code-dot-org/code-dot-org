@@ -3,9 +3,9 @@
 # Table name: pd_survey_questions
 #
 #  id            :integer          not null, primary key
-#  form_id       :integer
-#  question_id   :string(255)
-#  question_text :string(255)
+#  form_id       :integer          not null
+#  question_id   :string(255)      not null
+#  question_text :string(255)      not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  question_type :string(255)      not null
