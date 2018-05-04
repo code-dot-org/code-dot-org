@@ -39,7 +39,12 @@ class MultipleChoiceAnswerCell extends Component {
     return (
       <div>
         <div>
-          {`${percentValue}%`}
+          {(percentValue >= 0) &&
+            <span>{`${percentValue}%`}</span>
+          }
+          {(percentValue === undefined) &&
+            <span>{'-'}</span>
+          }
         </div>
         <div>
           {isCorrectAnswer &&
