@@ -4,6 +4,7 @@
   # Use a single 'user_type' cookie to render the button details.
   cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
   user_type = request.cookies[cookie_key]
+  user_type = "student" if user_type == "student_y"
 
   # Stub a 'User' model to pass to the shared partial, if usertype is provided.
   # Pass nil for anonymous users.
