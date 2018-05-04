@@ -47,6 +47,7 @@ class SectionsController < ApplicationController
   end
 
   def student_script_ids
+    return head :unauthorized unless current_user
     section = Section.find(params[:section_id])
     authorize! :manage, section
     render json: {studentScriptIds: section.student_script_ids}
