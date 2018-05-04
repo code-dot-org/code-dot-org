@@ -159,4 +159,66 @@ module Pd::WorkshopSurveyResultsHelper
 
     sum_hash
   end
+
+  def generate_workshop_daily_session_summary(workshop, related_workshops)
+    # TODO: (mehal) - Logic to only allow this for selected summer workshops
+    summary = {
+      this_workshop: {},
+      all_my_workshops: {},
+      all_workshops: {}
+    }
+    summary['questions'] = get_questions_for_form
+
+    workshop.sessions.each_with_index do |session, day|
+      summary[:this_workshop]["Day #{day + 1}"] = generate_sessions_survey_summary([session], include_free_response: true)
+    end
+
+    session_count = workshop.sessions.count
+    session_count.times do |session_index|
+      sessions = related_workshops.map {|related_workshop| related_workshop.sessions[session_index]}
+      summary[:all_my_workshops]["Day #{session_index + 1}"] = generate_sessions_survey_summary(sessions)
+    end
+
+    summary
+  end
+
+  def generate_sessions_survey_summary(sessions, include_free_response: false)
+    surveys = get_surveys_for_sessions(sessions)
+
+    questions = get_questions_for_form
+    session_summary = {
+      attending_teachers: sessions.map(&:attendances).map(&:count).reduce(:+),
+      completed_surveys: surveys.count
+    }
+    questions.each do |q_key, question|
+      if include_free_response && question[:free_response]
+        sum = surveys.map {|survey| survey[q_key]}.reduce([], :append)
+        session_summary[q_key] = sum
+      elsif question[:free_response].nil?
+        puts surveys.map {|survey| survey[q_key]}
+        sum = surveys.map {|survey| survey[q_key]}.reduce(0, :+)
+        session_summary[q_key] = (sum / surveys.count.to_f).round(2)
+      end
+    end
+
+    session_summary
+  end
+
+  def get_surveys_for_sessions(sessions)
+    (rand(10..20) * sessions.count).times.map do |_|
+      {
+        how_was_session: rand(3..5),
+        how_was_food: rand(3..5),
+        how_was_session_free_response: "It was #{%w(excellent great good fair poor).sample}"
+      }
+    end
+  end
+
+  def get_questions_for_form
+    {
+      how_was_session: {text: 'How was the session?'},
+      how_was_food: {text: 'How was the food?'},
+      how_was_session_free_response: {text: 'Tell us what you thought', free_response: true}
+    }
+  end
 end
