@@ -988,8 +988,6 @@
   "stringEquals": "string=?",
   "student": "Student",
   "students": "Students",
-  "studentsFailedToMoveNotice": "Students could not be moved",
-  "studentsFailedToMoveDetails": "{numStudents} student(s) could not be moved from this section to section \"{section}.\"",
   "studentsSuccessfullyMovedNotice": "Students successfully moved",
   "studentsSuccessfullyMovedDetails": "{numStudents} student(s) were successfully moved from this section to section \"{section}.\"",
   "studentsSuccessfullyCopiedNotice": "Students successfully copied",
