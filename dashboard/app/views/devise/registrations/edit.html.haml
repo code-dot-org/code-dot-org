@@ -126,7 +126,7 @@
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
-  %hr.danger
+  %hr.danger#delete-account-spacer
   %h2.danger= t('user.delete')
   %p
     = t('user.delete_text')
