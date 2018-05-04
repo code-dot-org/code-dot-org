@@ -509,7 +509,9 @@ class Level < ActiveRecord::Base
     # Make sure we don't go over the 70 character limit.
     new_name = "#{base_name[0..64]}#{new_suffix}"
 
-    level = Level.find_by_name(new_name) || clone_with_name(new_name)
+    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+
+    level = clone_with_name(new_name)
 
     update_params = {name_suffix: new_suffix}
 
