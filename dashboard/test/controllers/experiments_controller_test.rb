@@ -100,7 +100,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     user: :teacher,
     params: -> {{experiment_name: 'invalid-experiment-name'}}
   ) do
-    assert_includes flash[:alert], "You are not in the 'invalid-experiment-name' experiment."
+    assert_includes flash[:alert], "not a valid experiment"
     assert_nil flash[:notice]
     assert_nil Experiment.first
   end
