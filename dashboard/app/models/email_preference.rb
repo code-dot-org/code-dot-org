@@ -27,8 +27,7 @@ class EmailPreference < ApplicationRecord
   end
 
   def self.upsert!(email, opt_in, ip_address, source, form_kind)
-    email_preference = EmailPreference.find_or_initialize_by(email: email)
-    email_preference.update!(
+    EmailPreference.find_or_initialize_by(email: email).update!(
       email: email,
       opt_in: opt_in,
       ip_address: ip_address,
