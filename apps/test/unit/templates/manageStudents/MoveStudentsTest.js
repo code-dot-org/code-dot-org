@@ -69,9 +69,9 @@ describe('MoveStudents', () => {
 
     wrapper.find('Button').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0).text()).to.equal('studenta');
-    expect(nameCells.at(1).text()).to.equal('studentb');
-    expect(nameCells.at(2).text()).to.equal('studentc');
+    expect(nameCells.at(0)).to.have.text('studenta');
+    expect(nameCells.at(1)).to.have.text('studentb');
+    expect(nameCells.at(2)).to.have.text('studentc');
   });
 
   it('sorts students by name (descending) on click', () => {
@@ -82,9 +82,9 @@ describe('MoveStudents', () => {
     wrapper.find('Button').simulate('click');
     wrapper.find('#uitest-name-header').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0).text()).to.equal('studentc');
-    expect(nameCells.at(1).text()).to.equal('studentb');
-    expect(nameCells.at(2).text()).to.equal('studenta');
+    expect(nameCells.at(0)).to.have.text('studentc');
+    expect(nameCells.at(1)).to.have.text('studentb');
+    expect(nameCells.at(2)).to.have.text('studenta');
   });
 
   it('shows all sections minus current section in dropdown', () => {
@@ -97,10 +97,10 @@ describe('MoveStudents', () => {
     // Dropdown options should include initial empty option, list of
     // sections (excluding current section), and 'Other teacher' option
     expect(dropdownOptions).to.have.length(4);
-    expect(dropdownOptions.at(0).text()).to.equal('');
-    expect(dropdownOptions.at(1).text()).to.equal('sectiona');
-    expect(dropdownOptions.at(2).text()).to.equal('sectionc');
-    expect(dropdownOptions.at(3).text()).to.equal('Other teacher');
+    expect(dropdownOptions.at(0)).to.have.text('');
+    expect(dropdownOptions.at(1)).to.have.text('sectiona');
+    expect(dropdownOptions.at(2)).to.have.text('sectionc');
+    expect(dropdownOptions.at(3)).to.have.text('Other teacher');
   });
 
   it('renders additional inputs if other teacher is selected', () => {
@@ -164,6 +164,6 @@ describe('MoveStudents', () => {
     wrapper.find('Button').simulate('click');
     const errorElement = wrapper.find("#uitest-error");
     expect(errorElement.exists()).to.be.true;
-    expect(errorElement.text()).to.equal(transferStatus.error);
+    expect(errorElement).to.have.text(transferStatus.error);
   });
 });
