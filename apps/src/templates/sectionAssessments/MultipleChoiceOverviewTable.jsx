@@ -10,6 +10,8 @@ export const COLUMNS = {
   QUESTION: 0,
 };
 
+const NOT_ANSWERED = 'notAnswered';
+
 const calculateNotAnswered = (multipleChoiceDataArr) => {
     let total = 0;
   multipleChoiceDataArr.forEach (studentsAnswersObj => {
@@ -134,7 +136,7 @@ class MultipleChoiceOverviewTable extends Component {
       return this.getAnswerColumn(answer.multipleChoiceOption);
     });
 
-    return [...dataColumns, ...columnLabelNames, ...[{property: 'notAnswered', ...this.getNotAnsweredColumn()}]];
+    return [...dataColumns, ...columnLabelNames, ...[{property: NOT_ANSWERED, ...this.getNotAnsweredColumn()}]];
 
   };
 
