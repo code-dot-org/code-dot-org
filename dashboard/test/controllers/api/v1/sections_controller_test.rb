@@ -16,6 +16,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
 
     @script = create(:script)
+    @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
+    @student_with_script = create(:follower, section: @section_with_script).student_user
 
     @csp_course = create(:course, name: 'csp')
     @csp_script = create(:script, name: 'csp1')
@@ -624,44 +626,30 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'anonymous user cannot access student_script_ids' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, script_id: Script.flappy_script.id)
-    get :student_script_ids, params: {id: section.id}
+    get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
   end
 
   test 'teacher can access student_script_ids' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, script_id: Script.flappy_script.id)
-    student = create(:student)
+    sign_in @teacher
 
-    # this creates a UserScript for the student and the flappy script
-    create(:follower, student_user: student, section: section)
-
-    sign_in teacher
-
-    get :student_script_ids, params: {id: section.id}
+    get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :success
     ids = JSON.parse(@response.body)
     assert_equal({'studentScriptIds' => [Script.flappy_script.id]}, ids)
 
     # make sure we include other scripts which the student has progress in
-    create(:user_script, user: student, script: Script.frozen_script)
+    create(:user_script, user: @student_with_script, script: Script.frozen_script)
 
-    get :student_script_ids, params: {id: section.id}
+    get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :success
     ids = JSON.parse(@response.body)
     assert_equal({'studentScriptIds' => [Script.flappy_script.id, Script.frozen_script.id]}, ids)
   end
 
   test 'student cannot access student_script_ids' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, script_id: Script.flappy_script.id)
-    student = create(:student)
-    create(:follower, student_user: student, section: section)
-
-    sign_in student
-    get :student_script_ids, params: {id: section.id}
+    sign_in @student_with_script
+    get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
   end
 end
