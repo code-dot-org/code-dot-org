@@ -37,6 +37,7 @@ class StatsTable extends Component {
     const sectionId = this.props.section.id;
     return (
       <a
+        className="uitest-name-cell"
         style={tableLayoutStyles.link}
         href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`}
         target="_blank"
@@ -57,6 +58,7 @@ class StatsTable extends Component {
         header: {
           label: i18n.name(),
           props: {
+            className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
           }},
