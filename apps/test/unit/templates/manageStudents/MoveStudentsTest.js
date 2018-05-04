@@ -62,7 +62,19 @@ describe('MoveStudents', () => {
     expect(nameCells).to.have.length(3);
   });
 
-  it('sorts students by name (ascending) on click', () => {
+  it('sorts students by name (ascending) by default', () => {
+    const wrapper = mount(
+      <MoveStudents {...DEFAULT_PROPS}/>
+    );
+
+    wrapper.find('Button').simulate('click');
+    const nameCells = wrapper.find('.uitest-name-cell');
+    expect(nameCells.at(0).text()).to.equal('studenta');
+    expect(nameCells.at(1).text()).to.equal('studentb');
+    expect(nameCells.at(2).text()).to.equal('studentc');
+  });
+
+  it('sorts students by name (descending) on click', () => {
     const wrapper = mount(
       <MoveStudents {...DEFAULT_PROPS}/>
     );
@@ -70,9 +82,9 @@ describe('MoveStudents', () => {
     wrapper.find('Button').simulate('click');
     wrapper.find('#uitest-name-header').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0).text()).to.equal('studenta');
+    expect(nameCells.at(0).text()).to.equal('studentc');
     expect(nameCells.at(1).text()).to.equal('studentb');
-    expect(nameCells.at(2).text()).to.equal('studentc');
+    expect(nameCells.at(2).text()).to.equal('studenta');
   });
 
   it('shows all sections minus current section in dropdown', () => {
