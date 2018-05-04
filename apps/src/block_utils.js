@@ -686,6 +686,12 @@ exports.createJsWrapperBlockCreator = function (
         } else {
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
+      }).map(value => {
+        if (value === "") {
+          // Missing inputs should be passed into func as undefined
+          return "undefined";
+        }
+        return value;
       });
 
       if (simpleValue) {
