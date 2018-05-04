@@ -73,6 +73,11 @@ experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
+
+  const experimentElement = document.getElementById('user-experiment_info');
+  console.log(experimentElement);
+  // Get data tag of experiment list from this element.
+
   let enabled = this.getStoredExperiments_()
     .some(experiment => experiment.key === key) ||
     !!(window.appOptions &&
