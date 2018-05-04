@@ -51,11 +51,11 @@ const errorTransferStatus = {
 };
 
 const DEFAULT_PROPS = {
-  studentData: studentData,
+  studentData,
   transferData: blankStudentTransfer,
   transferStatus: blankStudentTransferStatus,
   currentSectionId: 1,
-  sections: sections,
+  sections,
   updateStudentTransfer: action('Update'),
   transferStudents: action('Transfer'),
   cancelStudentTransfer: action('Cancel')

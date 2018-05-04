@@ -19,33 +19,32 @@ const sections = [
   {id: 1, name: 'sectionb'},
   {id: 2, name: 'sectionc'}
 ];
-const DEFAULT_PROPS = {
-  studentData: studentData,
-  transferData: blankStudentTransfer,
-  transferStatus: blankStudentTransferStatus,
-  sections: sections,
-  currentSectionId: 1
-};
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;
   let transferStudents;
   let cancelStudentTransfer;
+  let DEFAULT_PROPS;
 
   beforeEach(() => {
     updateStudentTransfer = sinon.spy();
     transferStudents = sinon.spy();
     cancelStudentTransfer = sinon.spy();
+    DEFAULT_PROPS = {
+      studentData,
+      transferData: blankStudentTransfer,
+      transferStatus: blankStudentTransferStatus,
+      sections,
+      currentSectionId: 1,
+      updateStudentTransfer,
+      transferStudents,
+      cancelStudentTransfer
+    };
   });
 
   it('opens a dialog with a table', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -55,12 +54,7 @@ describe('MoveStudents', () => {
 
   it('renders students as rows', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -70,12 +64,7 @@ describe('MoveStudents', () => {
 
   it('sorts students by name (ascending) on click', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -88,12 +77,7 @@ describe('MoveStudents', () => {
 
   it('shows all sections minus current section in dropdown', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -116,9 +100,6 @@ describe('MoveStudents', () => {
       <MoveStudents
         {...DEFAULT_PROPS}
         transferData={transferData}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -136,9 +117,6 @@ describe('MoveStudents', () => {
       <MoveStudents
         {...DEFAULT_PROPS}
         transferData={transferData}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
@@ -150,12 +128,7 @@ describe('MoveStudents', () => {
 
   it('calls cancelStudentTransfer on close', () => {
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
-      />
+      <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
@@ -173,9 +146,6 @@ describe('MoveStudents', () => {
       <MoveStudents
         {...DEFAULT_PROPS}
         transferStatus={transferStatus}
-        updateStudentTransfer={updateStudentTransfer}
-        transferStudents={transferStudents}
-        cancelStudentTransfer={cancelStudentTransfer}
       />
     );
 
