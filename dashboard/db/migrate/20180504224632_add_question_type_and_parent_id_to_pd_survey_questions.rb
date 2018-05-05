@@ -13,5 +13,6 @@ class AddQuestionTypeAndParentIdToPdSurveyQuestions < ActiveRecord::Migration[5.
     change_column_null :pd_survey_questions, :form_id, false
     change_column_null :pd_survey_questions, :question_id, false
     change_column_null :pd_survey_questions, :question_text, false
+    change_column :pd_survey_questions, :question_text, :text, null: false
   end
 end
