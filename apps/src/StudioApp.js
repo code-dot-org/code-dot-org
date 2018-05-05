@@ -2684,7 +2684,7 @@ function rectFromElementBoundingBox(element) {
 
 /**
  * Displays a small alert box inside the workspace
- * @param {string} type - Alert type (error or warning)
+ * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
@@ -2704,15 +2704,27 @@ StudioApp.prototype.displayWorkspaceAlert = function (type, alertContents) {
 };
 
 /**
- * Displays a small aert box inside the playspace
- * @param {string} type - Alert type (error or warning)
+ * Displays a small alert box inside the playspace
+ * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   StudioApp.prototype.displayAlert("#visualization", {
     type: type,
-    sideMargin: 20
+    sideMargin: 20,
   }, alertContents);
+};
+
+/**
+ * Displays a small notification box inside the playspace that goes away after 2 seconds
+ * @param {React.Component} notificationContents
+ */
+StudioApp.prototype.displayPlayspaceNotification = function (notificationContents) {
+  StudioApp.prototype.displayAlert("#visualization", {
+    type: "notification",
+    sideMargin: 20,
+    closeDelayMillis: 2000,
+  }, notificationContents);
 };
 
 /**
@@ -2744,7 +2756,8 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
     ReactDOM.unmountComponentAtNode(renderElement);
   };
   ReactDOM.render(
-    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}>
+    <Alert onClose={handleAlertClose} type={props.type} sideMargin={props.sideMargin}
+        closeDelayMillis={props.closeDelayMillis}>
       {alertContents}
     </Alert>, renderElement);
 

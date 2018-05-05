@@ -572,6 +572,12 @@ designMode.onCopyElementToScreen = function (element, destScreen) {
   if (madeUndraggable) {
     makeDraggable(sourceElement.children());
   }
+  debugger;
+  const alert = (
+      <div>
+        Copied {elementUtils.getId(sourceElement)} to {destScreen} as {elementUtils.getId(duplicateElement)}
+      </div>);
+  studioApp().displayPlayspaceNotification(alert);
 };
 
 designMode.onDeletePropertiesButton = function (element, event) {
