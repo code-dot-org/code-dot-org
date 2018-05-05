@@ -11,7 +11,7 @@
  * | |  error messages about your new entry point not conforming to naming        |-|
  * |-|  conventions.                                                              | |
  * | |                                                                            |-|
- * |-|  But what are the conventions you may ask?                                | |
+ * |-|  But what are the conventions you may ask?                                 | |
  * | |                                                                            |-|
  * |-|  1) Entry points should be in the src/sites/<site-name>/pages directory!   | |
  * | |  2) Entry points should only be referenced by one template file!           |-|
@@ -82,6 +82,7 @@ const SILENCED = [
   'studio',
   'turtle',
   'tutorialExplorer',
+  'user-header',
   'weblab',
   'learn/index',
 ];
@@ -276,7 +277,7 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
  * @param options.verbose bool - whether or not to log verbosely
  *
  * @returns Promise<{failed: number, silenced: number, passed: number}> -
- *   a promise that resolves to a statsu object containing the number of
+ *   a promise that resolves to a status object containing the number of
  *   entry points that passed/failed or were silenced.
  */
 module.exports = function (webpackConfig, options={verbose: false}) {
