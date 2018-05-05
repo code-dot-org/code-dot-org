@@ -751,6 +751,7 @@ ActiveRecord::Schema.define(version: 20180504225917) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "question_type", null: false
+    t.string   "question_name", null: false, comment: "Unique name to identify a question within a form, but not as strong as id since it can change"
     t.integer  "parent_id",                  comment: "Parent pd_survey_question id for hierarchical question types, such as matrices."
     t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", using: :btree
     t.index ["question_id"], name: "index_pd_survey_questions_on_question_id", using: :btree
