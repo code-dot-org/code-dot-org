@@ -71,6 +71,6 @@ export function environmentSpecificCookieName(name) {
   return `${name}_${rack_env}`;
 }
 
-export function getTopLevelDomainFromHostname(hostname) {
+export function getRootDomainFromHostname(hostname) {
   return hostname.split('.').slice(-2).join('.');
 }
