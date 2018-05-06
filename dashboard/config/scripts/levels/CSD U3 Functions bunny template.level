@@ -58,7 +58,9 @@
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "setAnimation": null
+      "setAnimation": null,
+      "visible": null,
+      "scale": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -75,10 +77,19 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-04 22:50:29 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
