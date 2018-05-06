@@ -6,6 +6,7 @@
  * Experiment state is persisted across page loads using local storage.
  */
 import { trySetLocalStorage } from '../utils';
+import Cookie from 'js-cookie';
 import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
@@ -26,12 +27,11 @@ experiments.getQueryString_ = function () {
 };
 
 experiments.getStoredExperiments_ = function () {
-  // Get experiments on current user (loaded into user_header.haml).
-  let userExperiments = [];
-  const experimentElement = document.getElementById('user-experiment-info');
-  if (experimentElement) {
-    userExperiments = JSON.parse(experimentElement.dataset.userExperiments);
-  }
+  // Get experiments on current user from experiments cookie
+  const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
+  const userExperiments = experimentsCookie ?
+    JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({key: name})) :
+    [];
 
   // Get experiments stored in local storage.
   try {
