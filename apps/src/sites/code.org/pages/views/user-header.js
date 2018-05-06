@@ -1,4 +1,8 @@
 /* globals dashboard */
+import Cookie from 'js-cookie';
+
+const SHORT_NAME = '_shortName';
+
 const script = document.querySelector('script[data-user-header]');
 const { cookieSuffix, pairingUrl, showPairingDialog } = JSON.parse(script.dataset.userHeader);
 
@@ -9,9 +13,7 @@ const nameSpan = document.querySelector('.header_button.header_user.user_menu .u
 if (nameSpan) {
   const dataName = nameSpan.dataset.shortname;
   const id = nameSpan.dataset.id;
-  const cookieKey = `_shortName${cookieSuffix}`;
-  const cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
-  const storedName = cookieMatch && cookieMatch[2];
+  const storedName = Cookie.get(SHORT_NAME + cookieSuffix);
   if (storedName && !id) {
     nameSpan.innerHTML = nameSpan.innerHTML.replace(dataName, storedName);
   }
