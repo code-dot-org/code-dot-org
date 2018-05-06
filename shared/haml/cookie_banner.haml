@@ -1,0 +1,20 @@
+:ruby
+  cookie_key = "_cookieBanner" + (rack_env?(:production) ? '' : "_#{rack_env}")
+
+%link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
+%script{src: minifiable_asset_path("js/cookieBanner.js")}
+
+#cookie-banner{style: "display: none"}
+  .text
+    By continuing to browse or by clicking "Accept all cookies," you agree to the storing of first- and third-party cookies on your device to enhance site navigation and analyze site usage.
+    %a{href: codeorg_url('/privacy'), target: '_blank'} More information
+
+  .buttons
+    %button#accept-cookies
+      Accept all cookies
+    %i.fa.fa-times.close-icon
+
+:javascript
+  $(document).ready(function() {
+    window.setupCookieBanner("#{cookie_key}");
+  });
