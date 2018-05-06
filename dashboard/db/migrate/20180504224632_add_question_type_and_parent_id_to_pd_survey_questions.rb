@@ -6,13 +6,21 @@ class AddQuestionTypeAndParentIdToPdSurveyQuestions < ActiveRecord::Migration[5.
       t.column :question_name, :string, null: false,
         comment: 'Unique name to identify a question within a form, but not as strong as id since it can change'
 
-      t.column :parent_id, :integer, null: true,
-        comment: 'Parent pd_survey_question id for hierarchical question types, such as matrices.'
+      t.column :order, :integer, null: false,
+        comment: 'Order the question appears on the form, starting with 1'
     end
 
     change_column_null :pd_survey_questions, :form_id, false
     change_column_null :pd_survey_questions, :question_id, false
     change_column_null :pd_survey_questions, :question_text, false
-    change_column :pd_survey_questions, :question_text, :text, null: false
+
+    reversible do |dir|
+      dir.up do
+        change_column :pd_survey_questions, :question_text, :text, null: false
+      end
+      dir.down do
+        change_column :pd_survey_questions, :question_text, :string, null: true
+      end
+    end
   end
 end

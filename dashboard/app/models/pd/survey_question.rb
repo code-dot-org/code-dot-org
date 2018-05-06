@@ -10,7 +10,7 @@
 #  updated_at    :datetime         not null
 #  question_type :string(255)      not null
 #  question_name :string(255)      not null
-#  parent_id     :integer
+#  order         :integer          not null
 #
 # Indexes
 #
