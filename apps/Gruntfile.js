@@ -515,6 +515,7 @@ describe('entry tests', () => {
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/pd-workshop-survey/splat': './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    'user-header': './src/sites/code.org/pages/views/user-header.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
