@@ -76,6 +76,7 @@ const fakeValidScripts = [
 
 const fakeValidCourses = [
   {
+    id: 99,
     script_ids: [300, 301]
   }
 ];
@@ -204,6 +205,17 @@ describe('sectionProgressRedux', () => {
       const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
       assert.deepEqual(expectedScripts, nextState.validScripts);
     });
+
+    it('includes units of the assigned course when filtering validScripts', () => {
+      const studentScriptIds = [];
+      const validCourses = fakeValidCourses;
+      const assignedCourseId = 99;
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses, assignedCourseId);
+      const nextState = sectionProgress(initialState, action);
+      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
+      assert.deepEqual(expectedScripts, nextState.validScripts);
+    });
+
   });
 
   describe('setCurrentView', () => {
