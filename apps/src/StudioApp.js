@@ -1416,7 +1416,21 @@ StudioApp.prototype.displayFeedback = function (opts) {
   store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
 
   if (experiments.isEnabled('bubbleDialog')) {
-    const ignoredKeys = ['level', 'alreadySaved', 'appStrings', 'disableSaveToGallery', 'message', 'saveToLegacyGalleryUrl', 'saveToProjectGallery', 'showingSharing'];
+    const ignoredKeys = [
+      'level',
+      'alreadySaved',
+      'appStrings',
+      'disableSaveToGallery',
+      'message',
+      'saveToLegacyGalleryUrl',
+      'saveToProjectGallery',
+      'showingSharing',
+      'continueText',
+      'disablePrinting',
+      'executionError',
+      'tryAgainText',
+      'twitter',
+    ];
     ignoredKeys.forEach(key => delete options[key]);
     const {
       response, preventDialog, feedbackType, feedbackImage, ...otherOptions
