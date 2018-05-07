@@ -19,7 +19,6 @@ require 'cdo/delete_accounts_helper'
 class DeleteAccountsHelperTest < ActionView::TestCase
   test 'clears user.name' do
     user = create :student
-
     refute_nil user.name
 
     purge_user user
@@ -30,7 +29,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test 'anonymizes user.username' do
     user = create :student
-
     refute_nil user.username
     refute_match /^sys_deleted_\w{8}$/, user.username
 
@@ -41,12 +39,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user.*_sign_in_ip' do
-    user = create :student
-    user.current_sign_in_ip = '192.168.0.1'
-    user.last_sign_in_ip = '10.0.0.1'
-    user.save
-
-    user.reload
+    user = create :student,
+      current_sign_in_ip: '192.168.0.1',
+      last_sign_in_ip: '10.0.0.1'
     refute_nil user.current_sign_in_ip
     refute_nil user.last_sign_in_ip
 
@@ -58,11 +53,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user email fields' do
-    user = create :teacher
-    user.parent_email = 'fake-parent-email@example.com'
-    user.save
-
-    user.reload
+    user = create :teacher,
+      parent_email: 'fake-parent-email@example.com'
     refute_nil user.email
     refute_nil user.hashed_email
     refute_nil user.parent_email
@@ -76,11 +68,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears password fields' do
-    user = create :student
-    user.reset_password_token = 'fake-reset-password-token'
-    user.save
-
-    user.reload
+    user = create :student,
+      reset_password_token: 'fake-reset-password-token'
     refute_nil user.encrypted_password
     refute_nil user.reset_password_token
     refute_nil user.secret_picture
@@ -96,12 +85,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears provider uid but not provider type' do
-    user = create :student
-    user.provider = 'clever'
-    user.uid = 'fake-clever-uid'
-    user.save
-
-    user.reload
+    user = create :student,
+      provider: 'clever',
+      uid: 'fake-clever-uid'
     assert_equal user.provider, 'clever'
     refute_nil user.uid
 
@@ -113,13 +99,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears school information' do
-    user = create :teacher
-    user.full_address = 'fake-full-address'
-    user.school = 'fake-school-info'
-    user.school_info = create :school_info
-    user.save
-
-    user.reload
+    user = create :teacher,
+      full_address: 'fake-full-address',
+      school: 'fake-school-info',
+      school_info: create(:school_info)
     refute_nil user.full_address
     refute_nil user.school
     refute_nil user.school_info_id
@@ -135,7 +118,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'leaves urm and races for US users' do
     user = create :student, races: 'white,hispanic'
     create :user_geo, :seattle, user_id: user.id
-
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -149,7 +131,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'clears urm and races for non-US users' do
     user = create :student, races: 'white,hispanic'
     create :user_geo, :sydney, user_id: user.id
-
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -163,7 +144,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'clears sensitive user location data' do
     user = create :student
     user_geo = create :user_geo, :seattle, user_id: user.id
-
     refute_nil user_geo.ip_address
     refute_nil user_geo.city
     refute_nil user_geo.state
@@ -180,7 +160,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user_geo.postal_code
     assert_nil user_geo.latitude
     assert_nil user_geo.longitude
-
     # Note: Does not delete state or country
     refute_nil user_geo.state
     refute_nil user_geo.country
