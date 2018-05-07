@@ -132,6 +132,60 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.school_info_id
   end
 
+  test 'leaves urm and races for US users' do
+    user = create :student, races: 'white,hispanic'
+    create :user_geo, :seattle, user_id: user.id
+
+    assert_equal true, user.urm
+    assert_equal 'white,hispanic', user.races
+
+    purge_user user
+
+    user.reload
+    assert_equal true, user.urm
+    assert_equal 'white,hispanic', user.races
+  end
+
+  test 'clears urm and races for non-US users' do
+    user = create :student, races: 'white,hispanic'
+    create :user_geo, :sydney, user_id: user.id
+
+    assert_equal true, user.urm
+    assert_equal 'white,hispanic', user.races
+
+    purge_user user
+
+    user.reload
+    assert_nil user.urm
+    assert_nil user.races
+  end
+
+  test 'clears sensitive user location data' do
+    user = create :student
+    user_geo = create :user_geo, :seattle, user_id: user.id
+
+    refute_nil user_geo.ip_address
+    refute_nil user_geo.city
+    refute_nil user_geo.state
+    refute_nil user_geo.country
+    refute_nil user_geo.postal_code
+    refute_nil user_geo.latitude
+    refute_nil user_geo.longitude
+
+    purge_user user
+
+    user_geo.reload
+    assert_nil user_geo.ip_address
+    assert_nil user_geo.city
+    assert_nil user_geo.postal_code
+    assert_nil user_geo.latitude
+    assert_nil user_geo.longitude
+
+    # Note: Does not delete state or country
+    refute_nil user_geo.state
+    refute_nil user_geo.country
+  end
+
   # TODO: Delete all attached studio_persons
   # TODO: Delete attached school_infos?
 
