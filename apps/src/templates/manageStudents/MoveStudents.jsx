@@ -36,7 +36,8 @@ const styles = {
     display: 'flex'
   },
   table: {
-    width: TABLE_WIDTH
+    width: TABLE_WIDTH,
+    margin: 2
   },
   checkboxCell: {
     width: CHECKBOX_CELL_WIDTH,
@@ -50,6 +51,10 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING
   },
+  infoText: {
+    paddingTop: PADDING / 4,
+    paddingBottom: PADDING / 2
+  },
   label: {
     paddingTop: PADDING / 2
   },
@@ -61,11 +66,20 @@ const styles = {
     width: INPUT_WIDTH
   },
   radioOption: {
-    paddingLeft: PADDING / 2
+    paddingLeft: PADDING / 2,
+    fontFamily: '"Gotham 4r", sans-serif'
   },
   error: {
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    color: color.red,
+    paddingBottom: PADDING / 2
+  }
+};
+
+const DEFAULT_SORT = {
+  1: {
+    direction: 'asc',
+    position: 0
   }
 };
 
@@ -104,7 +118,8 @@ class MoveStudents extends Component {
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
+    sortingColumns: DEFAULT_SORT
   };
 
   openDialog = () => {
@@ -340,7 +355,7 @@ class MoveStudents extends Component {
                   {transferStatus.error}
                 </div>
               }
-              <div>{i18n.selectStudentsToMove()}</div>
+              <div style={styles.infoText}>{i18n.selectStudentsToMove()}</div>
               <label
                 htmlFor="sections"
                 style={styles.label}
