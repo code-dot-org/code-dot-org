@@ -8,8 +8,8 @@ nav: regional_partner_playbook_nav
 # Training Materials
 
 ## Table of Contents
-- [Regional Partner Summit - Mar 2018](#mar18)
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
 - [Regional Partner Summit - Feb 2017] (#feb17)
 - [TeacherCon - Summer 2016](#teachercon16)
@@ -19,26 +19,18 @@ nav: regional_partner_playbook_nav
 
 
 ________________
-<a id="mar18"></a>
-<br/>
-
-## Regional Partner Summit (March 2018)
-Please review the following resources for the March 2018 Regional Partner Summit.
-
-- **See all March Summit Resources here: <a href="http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit</a>**
-- [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
-
-[**Back to the top**](#top)
-<br/>
-
-________________
 <a id="virtual"></a>
 <br/>
 ## Virtual Trainings
 
 
+May 2018
+
+- May 1 View into the Code.org Funding Model ([Recording](https://code.zoom.us/recording/share/W5BoJRfbxk_LRq1MgcQye8dlD7VXYKZk0ORiGBf0tEqwIumekTziMw), [Slides](https://drive.google.com/file/d/1kackyrWrkMLQbxPhYzlctIhjQRTRHj-h/view?usp=sharing))
+
 April 2018
 
+- Apr 27 Federal EIR Grant Q&A with Michelle ([Recording](https://code.zoom.us/recording/share/5KSPF0GpkNSoDF1L7ZgBIljrp-BzgKA4PZkGw2Otq6WwIumekTziMw), [Slides](https://drive.google.com/file/d/1Ty_EX5loAj_mqG41gbioK1VDqkWu3USj/view?usp=sharing))
 - Apr 5 Preparing for Your First CS Fundamentals Workshop ([Video](https://code.zoom.us/recording/share/JitvrbyVnzbGFQjvDfpHmH201xikzVgEM7Z_JNjkT9k), [Slides](https://drive.google.com/file/d/1_Ovx0cYkaAxOiaSfzJ8ZxtI1x6lrzhqq/view?usp=sharing))
 
 
@@ -152,6 +144,19 @@ January 2017:
 [**Back to the top**](#top)
 <br/>
 
+
+________________
+<a id="mar18"></a>
+<br/>
+
+## Regional Partner Summit (March 2018)
+Please review the following resources for the March 2018 Regional Partner Summit.
+
+- **See all March Summit Resources here: <a href="http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit</a>**
+- [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
+
+[**Back to the top**](#top)
+<br/>
 
 ________________
 <a id="sep17"></a>

@@ -1,0 +1,17 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-05-03T16:39:55.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csp_concept_bigdata_medicine",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 4288,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

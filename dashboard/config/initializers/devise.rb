@@ -328,7 +328,15 @@ Devise.setup do |config|
 
   require 'cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
-    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    user_type =
+      if user.teacher?
+        "teacher"
+      elsif user.under_13?
+        "student_y"
+      else
+        "student"
+      end
+    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
   end
 

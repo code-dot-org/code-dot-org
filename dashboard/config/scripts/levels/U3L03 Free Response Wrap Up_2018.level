@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:47.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Why Functions?",
+    "markdown_instructions": "In your own words, explain at least one reason why programming languages have functions.  Include an example of something you did in this lesson that demonstrates the reason you describe.\n\n",
+    "encrypted_solution": "ksMzNj6kf/j6oMngQOo5lE1XCvA4iK3F3XuJZr0KpTMpqvxlYX0njH4CgamI\n23N3486sqAUf7i3OITf0LTox+kDwdnSvtdoCTzh1TAUz55MVTYLWSpPhxoYs\nUM+Q34GMGEHIhQtJ3lIqH5/XS0t+iI3eD6mf5pIVc2/4meC+bJfN090os6Fg\nmYNrFytrspDXkFvTq4iG/JF+XONUqv2cvawNGVI41oWzoOaRQ2STaRhsTwKu\nuYpODLQRCeiBAm6rODfaGpYsnGSdcMzKDeLLp4BqH9ABQtAqf71wnj34RMrR\nJ7HhibXATBHnXvgn6aaUmIiIUD2LksSY3YJgDZIzSB8MwZT3UidvjVoVkWJf\nNems9RzAsXGURNLgE27Xsx+ian7PKDT3DviC1pwddTRrJ/dYJDuDVuwA3pXy\ncpp6EwhYyT258iRAc9kNutgk5jgR3lbX8f4vSmYLQlo9VbKBmFrRMTUWn+1a\nmoULN3HMTBB/kVyU5hIUDCxy62mqgTiT3bC/zJoBqWFJvmOnpiAJNCZ3YfCV\n1tL1nf2FRTMn5Bx1i4s86BScRFE5baUCsYkVx5Gmqe1nQS7ehZfb8bUcbCsp\nMdmifmYuW+t6Q++Uxv5evou7JP3IagZehDfT8hloZEFrU0mduLSIrO1aM9Wd\n4aX/7mtYK9ssaC1zLbfZmyemgv4ekdDwQLNT72sfkRTjdrW87dc1pQGXhfZe\n2y6WXXgVUtNYdu/y4XaY3qJvHkwfLxxoOgRc4mNJjnftxLJZH1mEZJGhk2op\nODMIEoS7Oc4ZcVoUCzfbfF+xvw16hpK4QSQmyW3+SEnfNR17+nMX\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2406,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

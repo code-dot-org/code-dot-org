@@ -1,0 +1,34 @@
+name 'Unit 5 Lesson 3 Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 3 - Make your own Multi-Screen App
+
+## Background
+
+In the last two lessons we looked at Design Mode and Event-Driven Programming in App Lab. This lesson is all about you getting a chance to use those new skills to make a multi-screen app. Use your creativity and personal interests to make your app unique.
+
+## Vocabulary
+
+Review 
+
+* **User Interface (UI)** - The "User Interface" or UI of an app refers to how a person (user) interacts with the computer or app.
+* **Event-driven program** -  a program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
+* **Event handling** - an overarching term for the coding tasks involved in making your app respond to events by triggering functions.
+
+## Lesson
+
+* Choose the theme of your app.
+* Complete the Planning Guide.
+* Share your plan with a classmate.
+* Program your app.
+* Give and receive feedback on apps.
+
+## Resources
+
+* Activity Guide: Multi-screen App ([PDF](https://docs.google.com/document/d/1UE3nIhlDkD8-6fdSQX8qHI-URxFgwTLABSHvGHGh870/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1UE3nIhlDkD8-6fdSQX8qHI-URxFgwTLABSHvGHGh870/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -919,11 +919,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'XPOS')
-          .appendTitle("over");
+          .appendTitle(commonMsg.positionAbsoluteOver());
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0',
             blockly.FieldTextInput.numberValidator), 'YPOS')
-          .appendTitle("down");
+          .appendTitle(commonMsg.positionAbsoluteDown());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
