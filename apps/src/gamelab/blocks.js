@@ -421,7 +421,8 @@ export default {
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_variables_get = generator.variables_get;
-    Blockly.Variables.getters[Blockly.BlockValueType.SPRITE] = 'sprite_variables_get';
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_get');
 
     Blockly.Blocks.sprite_variables_set = {
       // Variable setter.
@@ -454,7 +455,8 @@ export default {
       },
     };
     generator.sprite_variables_set = generator.variables_set;
-    Blockly.Variables.setters[Blockly.BlockValueType.SPRITE] = 'sprite_variables_set';
+    Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_set');
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
