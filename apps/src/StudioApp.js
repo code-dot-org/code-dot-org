@@ -943,6 +943,7 @@ StudioApp.prototype.inject = function (div, options) {
     rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
+    typeHints: options.showTypeHints,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
@@ -2409,6 +2410,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
+    showTypeHints: utils.valueOr(config.showTypeHints, false),
   };
 
   // Never show unused blocks or disable autopopulate in edit mode
