@@ -657,6 +657,7 @@ class SourcesTest < FilesApiTestBase
       mock_table = stub
       mock_table.stubs(:select).returns(mock_select)
       DASHBOARD_DB.stubs(:[]).with(:users).returns(mock_table)
+
       sources.each do |source|
         put_main_json({"source": comment_block_sources[source]}.stringify_keys)
 
@@ -681,6 +682,8 @@ class SourcesTest < FilesApiTestBase
           end
         end
       end
+
+      DASHBOARD_DB.unstub(:[])
     end
 
     delete_all_source_versions(MAIN_JSON)
