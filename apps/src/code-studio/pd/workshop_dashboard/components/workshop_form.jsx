@@ -492,7 +492,9 @@ export class WorkshopForm extends React.Component {
         }
         {
           options.length === 1 &&
-          <p>
+          <p
+            id="regional-partner-name"
+          >
             {options[0].label}
           </p>
         }
