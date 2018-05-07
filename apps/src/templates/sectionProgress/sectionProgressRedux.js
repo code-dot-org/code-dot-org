@@ -217,7 +217,7 @@ export default function sectionProgress(state=initialState, action) {
       action.validCourses.forEach(course => {
         if (
           course.script_ids.some(id => idMap[id]) ||
-          course.id === action.assignedCourseId
+          (action.assignedCourseId && action.assignedCourseId === course.id)
         ) {
           course.script_ids.forEach(id => idMap[id] = true);
         }
