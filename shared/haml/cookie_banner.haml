@@ -1,7 +1,7 @@
 %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
 %script{src: minifiable_asset_path("js/cookieBanner.js")}
 
--# dashboard is passed as a parameter when the dashboard is rendering theis banner.
+-# dashboard is passed as a parameter when the dashboard is rendering this banner.
 - dashboard ||= false
 - if dashboard
   - message = I18n.t('cookie_banner.message')
