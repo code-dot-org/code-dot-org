@@ -66,15 +66,13 @@ export default storybook => {
     .storiesOf('MoveStudents', module)
     .addStoryTable([
       {
-        name: 'Move students dialog',
-        description: 'Empty dialog',
+        name: 'Move students empty dialog',
         story: () => (
           <MoveStudents {...DEFAULT_PROPS} />
         )
       },
       {
-        name: 'Move students dialog',
-        description: 'Dialog when "other teacher" option is chosen',
+        name: 'Move students dialog when "other teacher" option is chosen',
         story: () => (
           <MoveStudents
             {...DEFAULT_PROPS}
@@ -83,8 +81,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Move students dialog',
-        description: 'Dialog when an error has occurred',
+        name: 'Move students dialog when an error has occurred',
         story: () => (
           <MoveStudents
             {...DEFAULT_PROPS}
