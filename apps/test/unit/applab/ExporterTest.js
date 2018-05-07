@@ -42,6 +42,7 @@ a.third-rule {
 
 const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
+const FONTAWESOME_CONTENT = 'fontawesome content';
 
 describe('The Exporter,', function () {
   var server;
@@ -78,6 +79,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       /\/_karma_webpack_\/.*\.png/,
       PNG_ASSET_CONTENT
+    );
+    server.respondWith(
+      /\/assets\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      FONTAWESOME_CONTENT
     );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
