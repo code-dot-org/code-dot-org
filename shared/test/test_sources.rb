@@ -649,6 +649,7 @@ class SourcesTest < FilesApiTestBase
     comment_block_sources = JSON.parse(IO.read(COMMENT_BLOCK_SOURCES))
     birthdays = [Date.parse("1900-01-01"), Date.today]
     sources = ["short_source_with_comments", "long_source_with_comments"]
+    sessions = [:admin, :non_owner]
 
     birthdays.each do |birthday|
       mock_select = stub
@@ -664,19 +665,19 @@ class SourcesTest < FilesApiTestBase
         assert successful?
         assert_equal comment_block_sources[source], JSON.parse(last_response.body)['source']
 
-        #with_session(:admin) do
-        #end
-
-        # iff owner is under 13, non-owner sees version without comments
-        with_session(:non_owner) do
-          non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
-          non_owner_api.get_object(MAIN_JSON)
-          assert successful?
-          response_source = JSON.parse(last_response.body)['source']
-          if UserHelpers.age_from_birthday(birthday) < 13
-            assert_equal comment_block_sources["source_without_comments"], response_source
-          else
-            assert_equal comment_block_sources[source], response_source
+        # iff owner is under 13, non-owners (including admins) should see
+        # version without comments
+        sessions.each do |session|
+          with_session(session) do
+            non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+            non_owner_api.get_object(MAIN_JSON)
+            assert successful?
+            response_source = JSON.parse(last_response.body)['source']
+            if UserHelpers.age_from_birthday(birthday) < 13
+              assert_equal comment_block_sources["source_without_comments"], response_source
+            else
+              assert_equal comment_block_sources[source], response_source
+            end
           end
         end
       end
