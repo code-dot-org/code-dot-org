@@ -13,8 +13,7 @@ def backfill_registrations(klass)
 
     hash['city'] = workshop.location_city
     hash['date'] = workshop.friendly_date_range
-    registration.form_data_hash = hash
-    registration.save!
+    registration.update_column :form_data, hash.to_json
 
     count += 1
   end

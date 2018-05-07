@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
+    "@code-dot-org/artist": "github:code-dot-org/artist#9c3ad003522aeab9d652fb1d8703a95d7ebde393",
     "@code-dot-org/blockly": "1.9.2",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf",

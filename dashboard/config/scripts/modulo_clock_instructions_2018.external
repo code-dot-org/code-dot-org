@@ -1,0 +1,57 @@
+name 'Modulo Clock Instructions_2018'
+markdown <<MARKDOWN
+# Clock Arithmetic (Modulo)
+
+The kind of “Clock Arithmetic” discussed (officially known as “modular arithmetic”) is a one-way function because you can’t tell what the input number was, just by looking at the clock face.
+
+### Modulo
+
+The mathematical operation **modulo** is the remainder after dividing two whole numbers.
+
+We can visualize this idea as trying to count up to some number using a clock and seeing where the hand ends up.
+
+* For example: if you're trying to count up to 43 on a normal clock with 12 numbers.  
+* You are doing: `43 MOD 12`.  
+* The result of `43 MOD 12` is: `7`.  Reason: 43 ÷ 12 = 3 **remainder 7**
+
+The clock helps you see another way to think about division - how many times can I count up by 12s until I get to 43 without going over?  12...24...36.   Then how much do I need to add to 36 to make it 43? Answer: 7 - that's the remainder.
+
+<img src="https://images.code.org/807ba58f1c95b777bbb796d93b61179a-image-1475160906403.gif" style="float: right; width: 200px">
+
+# Do this: Experiment with the “Modulo Clock”
+
+* On the next page is a widget that let's you play with this idea
+* The widget helps you visualize the result of modular arithmetic
+* You can also **make a clock of any size** - you don't have to limit yourself to 12.
+* Experiment with different clock sizes and numbers.
+
+## Using the Modulo Clock
+
+You get to set two values - a number and the clock size.  For example if you set number 45 with clock size 37 then 
+
+Try the following for each:
+
+| "Enter a number" | "with clock size..." |
+|:-----:|:-----:|
+| 45 | 311 |
+| 300 | 311 |
+| 356 | 311 |
+
+Also try:
+
+* Numbers that are much smaller and **much bigger** than the clock size.
+* Try VERY large clock sizes too.
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Modulo Clock Instructions
+
+* You can have students read these instructions or you can **explain modulo** and **demonstrate how to use the widget yourself.**
+
+* There is nothing special about the numbers we suggest using.
+* Make sure that students do experiment with small and large numbers for both the input value and clock size.
+
+MARKDOWN
