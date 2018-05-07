@@ -414,39 +414,45 @@
           nyttig praksis.  '
       swipeRightPassThrough:
         title: Økt med rekrutteringsscenariar
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Økt med rekrutteringsscenariar
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
       courseB_unplugged_MRF_2018:
         title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
