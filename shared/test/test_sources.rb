@@ -652,11 +652,8 @@ class SourcesTest < FilesApiTestBase
     sessions = [:admin, :non_owner]
 
     birthdays.each do |birthday|
-      mock_select = stub
-      mock_select.stubs(:first).returns({birthday: birthday})
-      mock_table = stub
-      mock_table.stubs(:select).returns(mock_select)
-      DASHBOARD_DB.stubs(:[]).with(:users).returns(mock_table)
+      user_age = UserHelpers.age_from_birthday(birthday)
+      FilesApi.any_instance.stubs(:under_13?).returns(user_age < 13)
 
       sources.each do |source|
         put_main_json({"source": comment_block_sources[source]}.stringify_keys)
@@ -664,7 +661,11 @@ class SourcesTest < FilesApiTestBase
         # owner sees unchanged
         @api.get_object(MAIN_JSON)
         assert successful?
-        assert_equal comment_block_sources[source], JSON.parse(last_response.body)['source']
+        assert_equal(
+          comment_block_sources[source],
+          JSON.parse(last_response.body)['source'],
+          "#{user_age}-year-old user sees own complete #{source}"
+        )
 
         # iff owner is under 13, non-owners (including admins) should see
         # version without comments
@@ -674,16 +675,24 @@ class SourcesTest < FilesApiTestBase
             non_owner_api.get_object(MAIN_JSON)
             assert successful?
             response_source = JSON.parse(last_response.body)['source']
-            if UserHelpers.age_from_birthday(birthday) < 13
-              assert_equal comment_block_sources["source_without_comments"], response_source
+            if user_age < 13
+              assert_equal(
+                comment_block_sources["source_without_comments"],
+                response_source,
+                "#{session} user sees sanitized source for #{user_age}-year-old user's #{source}"
+              )
             else
-              assert_equal comment_block_sources[source], response_source
+              assert_equal(
+                comment_block_sources[source],
+                response_source,
+                "#{session} user sees complete source for #{user_age}-year-old user's #{source}"
+              )
             end
           end
         end
       end
 
-      DASHBOARD_DB.unstub(:[])
+      FilesApi.any_instance.unstub(:under_13?)
     end
 
     delete_all_source_versions(MAIN_JSON)
