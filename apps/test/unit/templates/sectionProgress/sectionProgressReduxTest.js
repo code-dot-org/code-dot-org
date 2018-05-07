@@ -57,11 +57,27 @@ const fakeValidScripts = [
     position: 23
   },
   {
-    category: 'category1',
+    category: 'csp',
     category_priority: 1,
     id: 300,
+    name: 'csp1',
+    position: 23
+  },
+  {
+    // use a different category to make sure we aren't relying on it to group
+    // units within courses.
+    category: 'other csp',
+    category_priority: 1,
+    id: 301,
     name: 'csp2',
     position: 23
+  }
+];
+
+const fakeValidCourses = [
+  {
+    id: 99,
+    script_ids: [300, 301]
   }
 ];
 
@@ -172,6 +188,34 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.validScripts, fakeValidScripts);
       assert.deepEqual(nextState.scriptId, 100);
     });
+
+    it('filters validScripts to those included in studentScriptIds', () => {
+      const studentScriptIds = [456];
+      const validCourses = [];
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.id === 456));
+    });
+
+    it('includes other course units when filtering validScripts', () => {
+      const studentScriptIds = [300];
+      const validCourses = fakeValidCourses;
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
+      assert.deepEqual(expectedScripts, nextState.validScripts);
+    });
+
+    it('includes units of the assigned course when filtering validScripts', () => {
+      const studentScriptIds = [];
+      const validCourses = fakeValidCourses;
+      const assignedCourseId = 99;
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses, assignedCourseId);
+      const nextState = sectionProgress(initialState, action);
+      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
+      assert.deepEqual(expectedScripts, nextState.validScripts);
+    });
+
   });
 
   describe('setCurrentView', () => {

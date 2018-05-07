@@ -1646,10 +1646,9 @@
               name: Ünite 6 dersleri
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |-
-            Collect, analyze, and extract knowledge from data by programming and\r
-            building apps. Process data imported from other sources and also pull\r
-            data from live data APIs.
+          description: "Collect, analyze, and extract knowledge from data by programming
+            and\r\nbuilding apps. Process data imported from other sources and also
+            pull\r\ndata from live data APIs."
           description_short: Data
           description_audience: ''
           stages:
@@ -2287,10 +2286,13 @@
               name: Uygulama PT - Bir deneyim kodlamak
         csp3:
           title: CSP Unit 3 - Programming
-          description: |-
-            Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r
-            \r
-            Bu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates.
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
+            ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
+            Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama
+            ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu
+            ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle
+            ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
           description_short: Programlama
           description_audience: ''
           stages:
@@ -2334,10 +2336,12 @@
               name: Lütfen CSP kurs ortası anketini tamamlayın!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -3894,9 +3898,13 @@
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4280,12 +4288,23 @@
                 ne tür bilgilerin bilerek veya bilmeyerek paylaşıldığına bakar. Sonunda,
                 sınıf, çevrim içi bilgi paylaşırken, uyulması gereken bir dizi yönerge
                 ortaya koyar.
-              description_teacher: |-
-                Öğrenciler son zamanlarda kişisel web sitelerine girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması) bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden çıkması düşüncesini güçlendirir. \r
-                \r
-                Öğrenciler, verilen kişisel bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler. Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere uygun oldukları üzerinde derinlemesine düşünürler.\r
-                \r
-                Bu dersin temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır.
+              description_teacher: "Öğrenciler son zamanlarda kişisel web sitelerine
+                girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından
+                dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel
+                bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak
+                için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması)
+                bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin
+                çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden
+                çıkması düşüncesini güçlendirir. \r\n\r\nÖğrenciler, verilen kişisel
+                bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun
+                kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların
+                kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını
+                belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler.
+                Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere
+                uygun oldukları üzerinde derinlemesine düşünürler.\r\n\r\nBu dersin
+                temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de
+                bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam
+                olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır."
             Publishing a Website:
               name: Bir Websitesini Yayınlama
             Sources and Search Engines:
@@ -4427,19 +4446,26 @@
                 müzik gibi medyaların bir web sitesi içinde nasıl kullanılacağı anlatılmaktadır.
                 İlk olarak Creative Commons incelendikten sonra, sınıf, web sayfalarına
                 görüntü eklemeyi ve bunu yaparken uygun atfı nasıl yapacağını öğrenir.
-              description_teacher: |-
-                Sınıf, başkalarının çalışmalarını  kullanmalarına nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna  bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r
-                \r
-                En sonunda, öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet sitelerine nasıl resim ekleyeceklerini öğrenirler.
+              description_teacher: "Sınıf, başkalarının çalışmalarını  kullanmalarına
+                nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma
+                ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları
+                için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli
+                Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna
+                \ bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r\n\r\nEn sonunda,
+                öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda
+                ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet
+                sitelerine nasıl resim ekleyeceklerini öğrenirler."
             Project - Multi-Page Websites:
               name: Proje - çok sayfalı web siteleri
               description_student: 'Bu ders, web geliştiricilerin sayfaları bir web
                 sitesinde bir araya getirmesine yarayan bağlantıları içerir. Sınıf,
                 önceki tüm sayfaların hepsini bir projeye bağlar, ve tüm siteyi Web''e
                 yayınlamadan önce her sayfa için gezinti çubukları oluşturur.  '
-              description_teacher: |
-                Web sayfalarını birbirine nasıl bağlanacağını öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r
-                \r
+              description_teacher: "Web sayfalarını birbirine nasıl bağlanacağını
+                öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini
+                artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce
+                daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni
+                sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r\n\r\n"
             RGB Colors and Classes:
               name: RGB Renkleri ve Sınıfları
               description_student: Bu ders sınıfları ve özel renkleri anlatır. İlk
@@ -4464,15 +4490,13 @@
                 gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
                 kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
                 paylaşır.
-              description_teacher: 'Öğrenciler, Kişisel Web Sitesi''nde çalışan ünite
+              description_teacher: "Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite
                 boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
                 sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
                 yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
-                katacaklardır.\r
-
-'
+                katacaklardır.\r\n"
             Headings:
               name: Başlıklar
               description_student: Bu derste HTML etiketleri tanıtmaya devam ediyor,
@@ -4554,16 +4578,14 @@
                 kullanıcıların çeşitli ürünlere nasıl tepki gösterebileceklerini araştırıyor.
                 Rol farklı bir kişi olarak oynuyor, sınıfın her üyesi başkasının gözüyle
                 tasarımlar tecrübe edinecek.
-              description_teacher: 'Kullanışlı ürünler meydana getirmek için tasarımcıların,
+              description_teacher: "Kullanışlı ürünler meydana getirmek için tasarımcıların,
                 kullanıcılarının ihtiyaçlarını anlamaları gerekir. Bu ders öğrencileri,
                 Bu ders öğrencileri, bir kullanıcı profili kullanıp başka biriymiş
                 gibi rol yaparak ve bir dizi ürüne o kullanıcı gibi tepki vererek
                 başka bir insan için nasıl tasarlayacakları hakkında düşünmek için
                 cesaretlendirir. Her öğrenci bir kişiyi tanımlayan, daha sonra uygun
                 ürünleri seçmeyi, ürün tasarımını eleştirmeyi ve tasarım için geliştirmeler
-                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r
-
-'
+                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r\n"
             Discovering Users:
               name: Kullanıcıları keşfetmek
             User-Centered Design Micro Activity:
@@ -4634,10 +4656,10 @@
                 uygulama laboratuvarında bir kaç örnek uygulama yapmayı keşfeder,
                 bu uygulamalar, kendi uygulamalarının ilk kağıt prototipleri hakkında
                 bilgi vermeye yardımcı olurlar.
-              description_teacher: 'Uygulamaları tasarlamaya başlamadan önce öğrencilerin
+              description_teacher: "Uygulamaları tasarlamaya başlamadan önce öğrencilerin
                 beklentilerini daha iyi araştırmalarına yardımcı olmamız gerekir.
                 Çünkü öğrenciler eninde sonunda bu uygulamaları Uygulama Labaratuarında
-                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı''nda
+                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı'nda
                 kolayca ön model haline getirilebilen uygulama türleriyle uyumluysa
                 daha iyi bir halde olacaklar. Takımlar bu araştırmaya uygulama laboratuarı
                 ile oluşturulabilecek uygulamaları göstermek için tasarlanmış birkaç
@@ -4645,9 +4667,7 @@
                 uygulamayı kendisine bir temel olarak seçebilir. Buradan itibaren,
                 takımların kağıt ön modellerini geliştirmek için 3x5 dizin kartlarını
                 kullanmadan önce uygulamanın temel işlevselliğini tartışmak için zamanı
-                var.\r
-
-'
+                var.\r\n"
             Prototype Testing:
               name: Prototip testi
               description_student: Bu derste takımlar sınıflarındaki diğer üyelerle
@@ -4905,9 +4925,11 @@
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
-          description: |-
-            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
-            Recommended for grade K.
+          description: "Course A is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. \r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
               name: 'Hata ayıklama: Codeville''deki Hatalar'
@@ -6827,20 +6849,23 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
-              description_teacher: |-
-                Öğrenciler bir soruyu cevaplarken veya bir projede çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının, öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada, hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım sürecinin bir adımı olarak anlatılır.\r
-                \r
-                Bu dersler bir veya iki sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını çizmekten çekinmeyin.
+              description_teacher: "Öğrenciler bir soruyu cevaplarken veya bir projede
+                çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına
+                uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının,
+                öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada,
+                hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım
+                sürecinin bir adımı olarak anlatılır.\r\n\r\nBu dersler bir veya iki
+                sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer
+                Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını
+                çizmekten çekinmeyin."
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
               description_student: ''
-              description_teacher: 'Bu derste öğrenciler, gerçek bir tohum ekerek
+              description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek
                 algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
                 Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
                 başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
-                durumlara çevirmektir.\r
-
-'
+                durumlara çevirmektir.\r\n"
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
               description_student: ''
@@ -8729,10 +8754,8 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: 'This is a replica of live levels in /s/csp3 with new and modified
-            stages added.  DO NOT EDIT LIVE LEVELS.\r
-
-'
+          description: "This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
         pwc:
           stages:
             new stage:
@@ -8865,10 +8888,15 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her "ders", öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli unsurlarının araçlarını kapsar.\r
-            \r
-            Bu ünite en son  Kasım 2017'de güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinden alabilirsiniz.
+          description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun
+            için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\",
+            öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı
+            belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci
+            öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji
+            kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli
+            unsurlarının araçlarını kapsar.\r\n\r\nBu ünite en son  Kasım 2017'de
+            güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates
+            adresinden alabilirsiniz."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8888,7 +8916,7 @@
             size her yönüyle yardım edebileceği yardımcı belgelerle bağlantılar içerir.
             \nNOT: birinci dersteki ilk öge, doğrudan PT Oluşturma ile ilgili değildir,
             ancak hem Keşfet hem de Oluştur görevlerinin çeşitli ögelerini yapmanız
-            için gerekli olan genel teknik kurulumu ve araçları kapsar.\\r\n\\r\nBu
+            için gerekli olan genel teknik kurulumu ve araçları kapsar.\r\n\r\nBu
             birim son olarak Aralık, 2017 ‘de güncellendi. Müfredat güncellemeleri
             hakkında forum.code.org/c/csp/updates adresinden devamını okuyunuz."
         csp3-reovery:
@@ -9642,12 +9670,23 @@
                 ne tür bilgilerin bilerek veya bilmeyerek paylaşıldığına bakar. Sonunda,
                 sınıf, çevrim içi bilgi paylaşırken, uyulması gereken bir dizi yönerge
                 ortaya koyar.
-              description_teacher: |-
-                Öğrenciler son zamanlarda kişisel web sitelerine girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması) bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden çıkması düşüncesini güçlendirir. \r
-                \r
-                Öğrenciler, verilen kişisel bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler. Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere uygun oldukları üzerinde derinlemesine düşünürler.\r
-                \r
-                Bu dersin temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır.
+              description_teacher: "Öğrenciler son zamanlarda kişisel web sitelerine
+                girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından
+                dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel
+                bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak
+                için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması)
+                bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin
+                çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden
+                çıkması düşüncesini güçlendirir. \r\n\r\nÖğrenciler, verilen kişisel
+                bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun
+                kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların
+                kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını
+                belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler.
+                Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere
+                uygun oldukları üzerinde derinlemesine düşünürler.\r\n\r\nBu dersin
+                temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de
+                bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam
+                olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır."
             Lists:
               name: Listeler
               description_student: Bu ders, sıralı ve sıralı olmayan listeleri ve
@@ -9668,10 +9707,15 @@
                 müzik gibi medyaların bir web sitesi içinde nasıl kullanılacağı anlatılmaktadır.
                 İlk olarak Creative Commons incelendikten sonra, sınıf, web sayfalarına
                 görüntü eklemeyi ve bunu yaparken uygun atfı nasıl yapacağını öğrenir.
-              description_teacher: |-
-                Sınıf, başkalarının çalışmalarını  kullanmalarına nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna  bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r
-                \r
-                En sonunda, öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet sitelerine nasıl resim ekleyeceklerini öğrenirler.
+              description_teacher: "Sınıf, başkalarının çalışmalarını  kullanmalarına
+                nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma
+                ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları
+                için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli
+                Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna
+                \ bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r\n\r\nEn sonunda,
+                öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda
+                ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet
+                sitelerine nasıl resim ekleyeceklerini öğrenirler."
             Clean Code and Debugging:
               name: Temiz Kod ve Debugging (Hata Ayıklama)
               description_student: Bu ders, HTML ile dizayn edilen web sayfalarında
@@ -9693,9 +9737,11 @@
                 sitesinde bir araya getirmesine yarayan bağlantıları içerir. Sınıf,
                 önceki tüm sayfaların hepsini bir projeye bağlar, ve tüm siteyi Web''e
                 yayınlamadan önce her sayfa için gezinti çubukları oluşturur.  '
-              description_teacher: |
-                Web sayfalarını birbirine nasıl bağlanacağını öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r
-                \r
+              description_teacher: "Web sayfalarını birbirine nasıl bağlanacağını
+                öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini
+                artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce
+                daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni
+                sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r\n\r\n"
             Styling Text with CSS:
               name: CSS ile Metin Biçimlendirme
               description_student: Bu derste, web sayfasındaki ögeleri biçimlendirmenin
@@ -9760,15 +9806,13 @@
                 gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
                 kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
                 paylaşır.
-              description_teacher: 'Öğrenciler, Kişisel Web Sitesi''nde çalışan ünite
+              description_teacher: "Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite
                 boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
                 sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
                 yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
                 ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
-                katacaklardır.\r
-
-'
+                katacaklardır.\r\n"
         coursea-2018:
           title: Kurs A
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
@@ -9786,20 +9830,23 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
-              description_teacher: |-
-                Öğrenciler bir soruyu cevaplarken veya bir projede çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının, öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada, hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım sürecinin bir adımı olarak anlatılır.\r
-                \r
-                Bu dersler bir veya iki sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını çizmekten çekinmeyin.
+              description_teacher: "Öğrenciler bir soruyu cevaplarken veya bir projede
+                çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına
+                uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının,
+                öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada,
+                hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım
+                sürecinin bir adımı olarak anlatılır.\r\n\r\nBu dersler bir veya iki
+                sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer
+                Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını
+                çizmekten çekinmeyin."
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
               description_student: ''
-              description_teacher: 'Bu derste öğrenciler, gerçek bir tohum ekerek
+              description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek
                 algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
                 Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
                 başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
-                durumlara çevirmektir.\r
-
-'
+                durumlara çevirmektir.\r\n"
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
               description_student: ''
