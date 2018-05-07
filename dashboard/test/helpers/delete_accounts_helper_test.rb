@@ -112,6 +112,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.uid
   end
 
+  test 'purged student still passes validations' do
+    user = create :student
+    assert user.valid?
+
+    purge_user user
+
+    user.reload
+    assert user.valid?
+  end
+
+  test 'purged teacher still passes validations' do
+    user = create :teacher
+    assert user.valid?
+
+    purge_user user
+
+    user.reload
+    assert user.valid?
+  end
+
   private
 
   def purge_user(user)
