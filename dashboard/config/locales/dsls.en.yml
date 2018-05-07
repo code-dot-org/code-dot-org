@@ -3339,6 +3339,30 @@ en:
       csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2017-wrapup-preamble: {}
       csp-post-survey-2017-wrapup-preamble_2018: {}
+      csp-post-survey-2018-unit-feedback-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-createPT-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-explorePT-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-unit1-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-unit2-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-unit3-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-unit4-preamble:
+        description here: description here
+        title: title
+      csp-post-survey-unit5-preamble:
+        description here: description here
+        title: title
       csp-pre-survey-2017 preamble 1: {}
       csp-pre-survey-2017 preamble 1_2018: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
@@ -12171,6 +12195,41 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-post-survey-2018-U1-I-learned:
+        For the topics covered in this unit I felt I learned...: For the topics covered in this unit I felt I learned...
+        about the right amount: about the right amount
+        nothing: nothing
+        too little: too little
+        too much: too much
+        way too much: way too much
+      csp-post-survey-2018-U1-I-liked:
+        For the topics covered in this unit I felt I learned...: For the topics covered in this unit I felt I learned...
+        I don't remember this unit: I don't remember this unit
+        I really liked the lessons and topics covered in this unit.: I really liked the lessons and topics covered in this unit.
+        It was my favorite unit: It was my favorite unit
+        Not at all: Not at all
+        a little: a little
+        a lot: a lot
+        about the right amount: about the right amount
+        nothing: nothing
+        somewhat: somewhat
+        too little: too little
+        too much: too much
+        way too much: way too much
+      csp-post-survey-2018-U1-time-spent:
+        I don't remember this unit: I don't remember this unit
+        I really liked the lessons and topics covered in this unit.: I really liked the lessons and topics covered in this unit.
+        I think the amount of time we spent on the topics in this unit was...: I think the amount of time we spent on the topics in this unit was...
+        It was my favorite unit: It was my favorite unit
+        Not at all: Not at all
+        a bit too little: a bit too little
+        a bit too much: a bit too much
+        a little: a little
+        a lot: a lot
+        about right: about right
+        somewhat: somewhat
+        way too little: way too little
+        way too much: way too much
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
