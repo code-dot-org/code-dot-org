@@ -22,7 +22,7 @@ Examples:
   | url                                                               | test_name                  |
   | http://hourofcode.com/                                            | hourofcode.com home        |
   | http://hourofcode.com/promote                                     | hourofcode.com promote     |
-  | http://csedweek.org                                               | csedweek.org home          |
+  | http://csedweek.org/                                              | csedweek.org home          |
   | http://csedweek.org/about                                         | csedweek.org about         |
   | http://uk.code.org/                                               | uk.code.org home           |
   | http://uk.code.org/about                                          | uk.code.org about          |
