@@ -320,23 +320,23 @@ class Blockly < Level
   def get_localized_property(property_name)
     if should_localize? && try(property_name)
       I18n.t("data.#{property_name.pluralize}").
-        try(:[], "#{name}_#{property_name}".to_sym)
+        try(:[], "#{name}_#{property_name.singularize}".to_sym)
     end
   end
 
   def localized_failure_message_override
-    get_localized_property("failure_message_override")
+    get_localized_property("failure_message_overrides")
   end
 
   def localized_markdown_instructions
-    get_localized_property("markdown_instruction")
+    get_localized_property("markdown_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      translations = get_localized_property("authored_hint")
+      translations = get_localized_property("authored_hints")
 
       return unless translations.instance_of? Hash
 
@@ -367,7 +367,7 @@ class Blockly < Level
 
   def localized_instructions
     if custom?
-      loc_val = get_localized_property("instruction")
+      loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
