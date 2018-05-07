@@ -10441,8 +10441,10 @@ en:
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
       courseF_multi_bee_for3_predict1_2018:
         Correct!: Correct!
+        'I don''t know. ': 'I don''t know. '
         Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
         Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
         The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
@@ -11601,8 +11603,12 @@ en:
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
+        Slightly<br>agree: Slightly<br>agree
+        Slightly<br>disagree: Slightly<br>disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+        Strongly<br>agree: Strongly<br>agree
+        Strongly<br>disagree: Strongly<br>disagree
       csp-post-survey-2017-q2:
         Agree: Agree
         Disagree: Disagree
