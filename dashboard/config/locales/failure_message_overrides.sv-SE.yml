@@ -85,9 +85,7 @@
         You need to make the Iron
         Golem chase and attack the zombies to win.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
+      WhileAdventure_failure_message_override: Grattis!  Du samlat X mynt!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.

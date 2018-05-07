@@ -91,9 +91,9 @@
       WhileAdventure_failure_message_override: Поздравляю! Ты собрал X монет!
       courseE_playLab_scaffold3_failure_message_override: Вы должны добавить двух
         или больше новых персонажей в вашу игру, а также запрограммировать их на ходьбу.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: Вы должны добавить
+        двух или больше новых персонажей в вашу игру, а также запрограммировать их
+        на ходьбу.
       grade4_scaffolded_project3_failure_message_override: Вы должны добавить двух
         или более персонажей, которые перейдут в вашу игру.
       kikiTesta_failure_message_override: Поздравляю! Вы собрали X монет!

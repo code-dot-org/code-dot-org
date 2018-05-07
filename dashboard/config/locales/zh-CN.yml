@@ -373,6 +373,7 @@
     enter_new_login_info: 输入新的登录信息
     confirm_secret_words: 输入你当前的秘密单词来确认你的身份
     enter_parent_email: 输入你的父母或监护人的电子邮件地址（用于恢复密码）
+    update: Update Account
   user_level:
     completed: 已完成
     tried: 试过了

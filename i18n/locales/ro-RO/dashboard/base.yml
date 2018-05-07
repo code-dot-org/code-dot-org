@@ -368,6 +368,7 @@ ro:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Finalizat'
     tried: 'Încercat'
@@ -723,21 +724,21 @@ ro:
     message: "Va rog sa ne spuneti rasa dvs"
     races:
       - 
-        white: Alb
+        white: "Alb"
       - 
-        black: Negru sau afro-americani
+        black: "Negru sau afro-americani"
       - 
-        hispanic: Hispanic sau Latino
+        hispanic: "Hispanic sau Latino"
       - 
-        asian: Asiatic
+        asian: "Asiatic"
       - 
-        hawaiian: Nativ hawaian sau din zona Pacificului
+        hawaiian: "Nativ hawaian sau din zona Pacificului"
       - 
-        american_indian: American Indian/Nativ Alaska
+        american_indian: "American Indian/Nativ Alaska"
       - 
-        other: Alte
+        other: "Alte"
       - 
-        opt_out: Prefer să nu răspund
+        opt_out: "Prefer să nu răspund"
     submit: "Trimite"
     decline: "Închide"
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a> fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'

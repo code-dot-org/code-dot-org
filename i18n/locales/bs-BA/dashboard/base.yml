@@ -365,6 +365,7 @@ bs:
     enter_new_login_info: 'Unesite svoje nove podatke za prijavu'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Unesi email adresu od svog roditelja ili staratelja (za obnovu lozinke)"
+    update: "Update Account"
   user_level:
     completed: 'Kompletirano'
     tried: 'Pokušano'
@@ -720,21 +721,21 @@ bs:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Ostalo
+        other: "Ostalo"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Potvrdi"
     decline: "Zatvori"
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'

@@ -368,6 +368,7 @@ fil:
     enter_new_login_info: 'Ipasok ang iyong bagong login na impormasyon'
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Nakompleto'
     tried: 'Sinubukan'
@@ -723,21 +724,21 @@ fil:
     message: "Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop sa iyo)"
     races:
       - 
-        white: Puti
+        white: "Puti"
       - 
-        black: Itim o Aprikano-Amerikano
+        black: "Itim o Aprikano-Amerikano"
       - 
-        hispanic: Hispano o Latino
+        hispanic: "Hispano o Latino"
       - 
-        asian: Asyano
+        asian: "Asyano"
       - 
-        hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
+        hawaiian: "Katutubong Hawayano o ibang pang nasa Pasipiko"
       - 
-        american_indian: Amerikanong-Indiyano/Katutubong Alaska
+        american_indian: "Amerikanong-Indiyano/Katutubong Alaska"
       - 
-        other: Iba
+        other: "Iba"
       - 
-        opt_out: Mas gustong hindi sabihin
+        opt_out: "Mas gustong hindi sabihin"
     submit: "Ipasa"
     decline: "Isara"
   zendesk_too_young_message: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'
