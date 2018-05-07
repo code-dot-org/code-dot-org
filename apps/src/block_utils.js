@@ -369,6 +369,7 @@ const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
+const FIELD_INPUT = 'field';
 
 /**
  * Given block text with input names specified in curly braces, returns a list
@@ -418,6 +419,13 @@ const determineInputs = function (text, args, strictTypes=[]) {
           options: arg.options,
           label,
           strict,
+        });
+      } else if (arg.field) {
+        inputs.push({
+          mode: FIELD_INPUT,
+          name: arg.name,
+          type: arg.type,
+          label,
         });
       } else if (arg.customInput) {
         inputs.push({
@@ -495,6 +503,11 @@ const interpolateInputs = function (blockly, block, inputs, customInputTypes) {
         break;
       case STATEMENT_INPUT:
         block.appendStatementInput(input.name);
+        break;
+      case FIELD_INPUT:
+        block.appendDummyInput()
+            .appendTitle(input.label)
+            .appendTitle(new Blockly.FieldTextInput(''), input.name);
         break;
       default:
         customInputTypes[input.mode].addInput(block, input);
@@ -680,7 +693,13 @@ exports.createJsWrapperBlockCreator = function (
           return customInputTypes[arg.customInput].generateCode(this, arg);
         } else if (arg.options) {
           return this.getTitleValue(arg.name);
-        } else  if (arg.statement) {
+        } else if (arg.field) {
+          let code = this.getTitleValue(arg.name);
+          if (arg.type === Blockly.BlockValueType.STRING) {
+            code = `"${code}"`;
+          }
+          return code;
+        } else if (arg.statement) {
           const code = Blockly.JavaScript.statementToCode(this, arg.name);
           return `function () {\n${code}}`;
         } else {
