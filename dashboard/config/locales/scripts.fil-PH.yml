@@ -1679,10 +1679,9 @@
               name: Yunit 6 na mga aralin
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |-
-            Collect, analyze, and extract knowledge from data by programming and\r
-            building apps. Process data imported from other sources and also pull\r
-            data from live data APIs.
+          description: "Collect, analyze, and extract knowledge from data by programming
+            and\r\nbuilding apps. Process data imported from other sources and also
+            pull\r\ndata from live data APIs."
           description_short: Data
           description_audience: ''
           stages:
@@ -2326,10 +2325,15 @@
               name: Pagsasanay PT - Pag-encode ng Karanasan
         csp3:
           title: CSP Unit 3 - Programming
-          description: |-
-            Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\r
-            \r
-            Ang yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
+            konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
+            na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay
+            gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang
+            kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto
+            na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program
+            at mga kagamitan.\r\n\r\nAng yunit na ito ay huling binago noong ika-30
+            ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa
+            forum.code.org/c/csp/updates."
           description_short: Programming
           description_audience: ''
           stages:
@@ -2374,10 +2378,12 @@
               name: Mangyaring kumpletohin ang surbey ng kalagitnaang kurso ng CSP!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -4023,9 +4029,13 @@
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4457,12 +4467,25 @@
                 sinasadya o hindi sinasadya. Sa wakas, ang klase ay gagawa ng isang
                 listahan ng mga tagubilin na dapat sundin habang naglalagay ng impormasyon
                 online.
-              description_teacher: |-
-                Dahil ang mga estudyante ay bago lang naglaan ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta sa kanilang personal na website, ang araling ito ay bumabalik sa isang buong yunit na proyekto (paglathala ng personal na website) para matulungan ang mga estudyante na susihin kung ano ang personal na impormasyon ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa sa panahong napalabas mo na ito. \r
-                \r
-                Ang mga estudyante ay magsisimula sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal na impormasyon. Sila ay titingin sa iilang social media na mga pahina para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post ng mga impormasyon online.\r
-                \r
-                Ang pinakapunto ng araling ito ay hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol na wala sila tungkol sa pagpalabas ng mga impormasyon sa web.
+              description_teacher: "Dahil ang mga estudyante ay bago lang naglaan
+                ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta
+                sa kanilang personal na website, ang araling ito ay bumabalik sa isang
+                buong yunit na proyekto (paglathala ng personal na website) para matulungan
+                ang mga estudyante na susihin kung ano ang personal na impormasyon
+                ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito
+                rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon
+                na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa
+                sa panahong napalabas mo na ito. \r\n\r\nAng mga estudyante ay magsisimula
+                sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung
+                saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal
+                na impormasyon. Sila ay titingin sa iilang social media na mga pahina
+                para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng
+                mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante
+                ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post
+                ng mga impormasyon online.\r\n\r\nAng pinakapunto ng araling ito ay
+                hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan
+                ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol
+                na wala sila tungkol sa pagpalabas ng mga impormasyon sa web."
             Publishing a Website:
               name: Paglathala ng Website
             Sources and Search Engines:
@@ -4497,9 +4520,16 @@
                 rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto
                 sa mga teksto na mga elemento ng HTML. Sa wakas, ang lahat ay gagamit
                 ng mga istilo ng teksto sa kanilang mga personal na website.
-              description_teacher: |
-                Ang araling ito ay nagpapakilala sa CSS bilang pamamaran para malagyan ng istilo ang mga elemento na nasa pahina. Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho sa isang HTML na page tungkol sa mga Guiness World Record holders, magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol sa mga istilo para sa mga teksto na elemento sa kanilang personal na web na pahina.\r
-                \r
+              description_teacher: "Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para
+                sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na
+                nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho
+                sa isang HTML na page tungkol sa mga Guiness World Record holders,
+                magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
+                antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
+                sa mga istilo para sa mga teksto na elemento sa kanilang personal
+                na web na pahina.\r\n\r\n"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -4623,10 +4653,16 @@
                 ang klase ay matututo kung paano magdagdag ng mga larawan sa kanilang
                 mga pahina sa web, at kung paano magbigay ng wastong pagpalagay kapag
                 ginawa ito.
-              description_teacher: |-
-                Magsisimula sa isang diskusyon tungkol sa kanilang personal na mga opinyon kung paano papayagan ang iba na gagamit sa kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman. Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan sa pagpangasiwa ng copyright. \r
-                \r
-                Sa huli, sa isang karaniwang pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag.
+              description_teacher: "Magsisimula sa isang diskusyon tungkol sa kanilang
+                personal na mga opinyon kung paano papayagan ang iba na gagamit sa
+                kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright
+                para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman.
+                Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't
+                ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan
+                sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
+                pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
+                Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
+                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
             Project - Multi-Page Websites:
               name: Proyekto - Maraming-Pahina na mga Website
               description_student: 'Ang araling ito ay sumasaklaw sa mga hyperlinks,
@@ -4635,9 +4671,12 @@
                 sa lahat ng naunang mga pahina sa isang proyekto, at maglikha ng mga
                 navigation bar para sa bawat pahina bago ilathala ang buong site sa
                 Web.  '
-              description_teacher: |
-                Matapos mapag-aralan ang tungkol sa kung paano mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay sa waka maglathala sa kanilang website na ginagawa. Sa araling ito, sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r
-                \r
+              description_teacher: "Matapos mapag-aralan ang tungkol sa kung paano
+                mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay
+                sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
+                sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
+                sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
             RGB Colors and Classes:
               name: RGB na mga Kulay at mga Klase
               description_student: Ang araling ito ay sumasaklaw sa mga class at mga
@@ -4667,7 +4706,7 @@
                 rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin
                 ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung
                 paano nila ito nagawa.
-              description_teacher: 'Ang mga estudyante ay gumugol ng maraming oras
+              description_teacher: "Ang mga estudyante ay gumugol ng maraming oras
                 sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa
                 huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang
                 mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan
@@ -4675,9 +4714,7 @@
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r
-
-'
+                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
             Headings:
               name: Mga Heading
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon
@@ -4771,7 +4808,7 @@
                 sa sari-saring mga produkto. Ang pagganap bilang iba-ibang tao, ang
                 bawat miyembro ng klase ay makakakuha ng karanasan sa mga disenyo
                 sa pamamagitan ng mata ng ibang tao.
-              description_teacher: 'Ang mga taga-disenyo ay kailangang makakaintindi
+              description_teacher: "Ang mga taga-disenyo ay kailangang makakaintindi
                 sa pangangailangan ng kanilang mga gumagamit para makalikha ng mga
                 kapaki-pakinabang na mga produkto. Ang araling ito ay naghihikayat
                 sa mga estudyante na mag-isip kung paano magdisenyo para sa ibang
@@ -4780,9 +4817,7 @@
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r
-
-'
+                ng mga pagpapahusay sa disenyo.\r\n"
             Discovering Users:
               name: Pagtutuklas ng mga Gumagamit
             User-Centered Design Micro Activity:
@@ -4860,7 +4895,7 @@
                 koponan ay tutuklas sa iilang mga halimbawang mga app na nalikha sa
                 App Lab, gamit ang mga apps na iyon para makatulong sa paggawa ng
                 unang papel na mga prototype ng kanilang mga app.
-              description_teacher: 'Bago magsimulang magdisenyo ng mga app, kailangan
+              description_teacher: "Bago magsimulang magdisenyo ng mga app, kailangan
                 nating tulungan ang mga estudyante na mas mabuti nilang malagyan ng
                 lawak ang kanilang mga inaasahan. Dahil ang mga estudyante ay di-magtatagal
                 mag-prototype sa mga app na ito sa App Lab, sila ay nasa mahusay na
@@ -4872,9 +4907,7 @@
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r
-
-'
+                para gawin ang papel na mga prototype.\r\n"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -5178,9 +5211,11 @@
           description_audience: ''
           description_short: Isang panimula sa computer science para sa mga bagong
             mambabasa.
-          description: |-
-            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
-            Recommended for grade K.
+          description: "Course A is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. \r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
               name: 'Pagde-debug: Mga Bugs sa Codeville'
@@ -7306,21 +7341,25 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Pagtitiyaga: Si Stevie at ang Malaking Proyekto'
               description_student: ''
-              description_teacher: |-
-                Kapag ang mga estudyante ay nakakatagpo ng mga balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang proyekto, napakadali lang silang mainis at titigil. Ang araling ito ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip na isang palatandaan ng pagkabigo.\r
-                \r
-                Ang araling ito ay maaaring gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto ng gawain na Marble Run.
+              description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga
+                balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang
+                proyekto, napakadali lang silang mainis at titigil. Ang araling ito
+                ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring
+                maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis
+                ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip
+                na isang palatandaan ng pagkabigo.\r\n\r\nAng araling ito ay maaaring
+                gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami
+                pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto
+                ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
               description_student: ''
-              description_teacher: 'Sa araling ito, ang mga estudyante ay mag-uugnay
+              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
                 sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
                 na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
                 Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
                 ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r
-
-'
+                at ang kabaliktaran nito.\r\n"
             Learn to Drag and Drop:
               name: Pagsunod-sunod gamit ang Drag at Drop
               description_student: ''
@@ -9375,11 +9414,9 @@
           description_audience: ''
           description_short: Pansamantalang staging na lugar para sa Oct. na mga pagbabago
             sa csp3
-          description: 'Ito ay isang replika ng live na mga antas sa /s/csp3 na may
+          description: "Ito ay isang replika ng live na mga antas sa /s/csp3 na may
             mga bago at binagong mga yugto na idinagdag. HUWAG BAGUHIN ANG MGA LIVE
-            NA MGA ANTAS.\r
-
-'
+            NA MGA ANTAS.\r\n"
         pwc:
           stages:
             new stage:
@@ -9519,10 +9556,15 @@
           description_short: Mga aralin at mapagkukunan ng kaalaman para makayulong
             sa mga estudyante na maghanda at para makumpleto ang AP Pagtuklas sa Performance
             na mga Gawain.
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -9538,10 +9580,15 @@
           description_short: Mga aralin at mapagkukunan ng kaalaman para makatulong
             sa mga estudyante na maghanda at makumpleto ang AP na Paglikha ng mga
             Performance Task.
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -10375,12 +10422,25 @@
                 sinasadya o hindi sinasadya. Sa wakas, ang klase ay gagawa ng isang
                 listahan ng mga tagubilin na dapat sundin habang naglalagay ng impormasyon
                 online.
-              description_teacher: |-
-                Dahil ang mga estudyante ay bago lang naglaan ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta sa kanilang personal na website, ang araling ito ay bumabalik sa isang buong yunit na proyekto (paglathala ng personal na website) para matulungan ang mga estudyante na susihin kung ano ang personal na impormasyon ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa sa panahong napalabas mo na ito. \r
-                \r
-                Ang mga estudyante ay magsisimula sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal na impormasyon. Sila ay titingin sa iilang social media na mga pahina para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post ng mga impormasyon online.\r
-                \r
-                Ang pinakapunto ng araling ito ay hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol na wala sila tungkol sa pagpalabas ng mga impormasyon sa web.
+              description_teacher: "Dahil ang mga estudyante ay bago lang naglaan
+                ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta
+                sa kanilang personal na website, ang araling ito ay bumabalik sa isang
+                buong yunit na proyekto (paglathala ng personal na website) para matulungan
+                ang mga estudyante na susihin kung ano ang personal na impormasyon
+                ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito
+                rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon
+                na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa
+                sa panahong napalabas mo na ito. \r\n\r\nAng mga estudyante ay magsisimula
+                sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung
+                saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal
+                na impormasyon. Sila ay titingin sa iilang social media na mga pahina
+                para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng
+                mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante
+                ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post
+                ng mga impormasyon online.\r\n\r\nAng pinakapunto ng araling ito ay
+                hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan
+                ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol
+                na wala sila tungkol sa pagpalabas ng mga impormasyon sa web."
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered
@@ -10406,10 +10466,16 @@
                 ang klase ay matututo kung paano magdagdag ng mga larawan sa kanilang
                 mga pahina sa web, at kung paano magbigay ng wastong pagpalagay kapag
                 ginawa ito.
-              description_teacher: |-
-                Magsisimula sa isang diskusyon tungkol sa kanilang personal na mga opinyon kung paano papayagan ang iba na gagamit sa kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman. Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan sa pagpangasiwa ng copyright. \r
-                \r
-                Sa huli, sa isang karaniwang pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag.
+              description_teacher: "Magsisimula sa isang diskusyon tungkol sa kanilang
+                personal na mga opinyon kung paano papayagan ang iba na gagamit sa
+                kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright
+                para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman.
+                Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't
+                ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan
+                sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
+                pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
+                Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
+                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
             Clean Code and Debugging:
               name: Linisin ang Code at Pag-Debug
               description_student: Ang araling ito ay sumasaklaw sa mga karaniwang
@@ -10435,9 +10501,12 @@
                 sa lahat ng naunang mga pahina sa isang proyekto, at maglikha ng mga
                 navigation bar para sa bawat pahina bago ilathala ang buong site sa
                 Web.  '
-              description_teacher: |
-                Matapos mapag-aralan ang tungkol sa kung paano mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay sa waka maglathala sa kanilang website na ginagawa. Sa araling ito, sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r
-                \r
+              description_teacher: "Matapos mapag-aralan ang tungkol sa kung paano
+                mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay
+                sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
+                sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
+                sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
             Styling Text with CSS:
               name: Pag-style ng Teksto gamit ang CSS
               description_student: Ang araling ito ay nagpapakilala sa CSS bilang
@@ -10446,9 +10515,16 @@
                 rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto
                 sa mga teksto na mga elemento ng HTML. Sa wakas, ang lahat ay gagamit
                 ng mga istilo ng teksto sa kanilang mga personal na website.
-              description_teacher: |
-                Ang araling ito ay nagpapakilala sa CSS bilang pamamaran para malagyan ng istilo ang mga elemento na nasa pahina. Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho sa isang HTML na page tungkol sa mga Guiness World Record holders, magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol sa mga istilo para sa mga teksto na elemento sa kanilang personal na web na pahina.\r
-                \r
+              description_teacher: "Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para
+                sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na
+                nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho
+                sa isang HTML na page tungkol sa mga Guiness World Record holders,
+                magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
+                antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
+                sa mga istilo para sa mga teksto na elemento sa kanilang personal
+                na web na pahina.\r\n\r\n"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -10511,7 +10587,7 @@
                 rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin
                 ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung
                 paano nila ito nagawa.
-              description_teacher: 'Ang mga estudyante ay gumugol ng maraming oras
+              description_teacher: "Ang mga estudyante ay gumugol ng maraming oras
                 sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa
                 huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang
                 mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan
@@ -10519,9 +10595,7 @@
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r
-
-'
+                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
         coursea-2018:
           title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science
@@ -10541,21 +10615,25 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Pagtitiyaga & Mga Kabiguan: Si Stevie at ang mga Holen'
               description_student: ''
-              description_teacher: |-
-                Kapag ang mga estudyante ay nakakatagpo ng mga balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang proyekto, napakadali lang silang mainis at titigil. Ang araling ito ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip na isang palatandaan ng pagkabigo.\r
-                \r
-                Ang araling ito ay maaaring gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto ng gawain na Marble Run.
+              description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga
+                balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang
+                proyekto, napakadali lang silang mainis at titigil. Ang araling ito
+                ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring
+                maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis
+                ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip
+                na isang palatandaan ng pagkabigo.\r\n\r\nAng araling ito ay maaaring
+                gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami
+                pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto
+                ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
               description_student: ''
-              description_teacher: 'Sa araling ito, ang mga estudyante ay mag-uugnay
+              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
                 sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
                 na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
                 Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
                 ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r
-
-'
+                at ang kabaliktaran nito.\r\n"
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
               description_student: ''
