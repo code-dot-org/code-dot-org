@@ -9,9 +9,10 @@ window.setupCookieBanner = (environment) => {
   const value = cookies.get(cookieName);
 
   // Only show the cookie banner on test environment if there is a special
-  // URL parameter, which will be used for testing.
+  // URL parameter, which will be used for UI testing.
+  // Also temporarily hide it on production while we test internally.
   const hideCookie =
-    environment === 'test' &&
+    (environment === 'test' || environment === 'production') &&
     window.location.search.indexOf("show_cookie_banner_on_test") === -1;
 
   if (!value && !hideCookie) {
