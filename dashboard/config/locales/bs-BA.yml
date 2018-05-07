@@ -417,6 +417,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
+    update: Update Account
   user_level:
     completed: Kompletirano
     tried: Pokušano

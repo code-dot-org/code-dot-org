@@ -368,6 +368,7 @@ vi:
     enter_new_login_info: 'Nhập thông tin đăng nhập mới của bạn'
     confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
     enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
+    update: "Update Account"
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -723,21 +724,21 @@ vi:
     message: "Vui lòng cho chúng tôi biết chủng tộc của bạn (hãy đánh dấu vào tất cả các mục thích hợp)"
     races:
       - 
-        white: Màu trắng
+        white: "Màu trắng"
       - 
-        black: Người da đen hoặc người Mỹ gốc Phi
+        black: "Người da đen hoặc người Mỹ gốc Phi"
       - 
-        hispanic: Người Hispanic hoặc Latino
+        hispanic: "Người Hispanic hoặc Latino"
       - 
-        asian: Châu á
+        asian: "Châu á"
       - 
-        hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
+        hawaiian: "Người bản địa hoặc người Đảo Thái Bình Dương khác"
       - 
-        american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
+        american_indian: "Thổ Dân Mỹ Da Đỏ/Alaska"
       - 
-        other: Khác
+        other: "Khác"
       - 
-        opt_out: Không thích nói
+        opt_out: "Không thích nói"
     submit: "Gửi"
     decline: "Đóng"
   zendesk_too_young_message: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a> mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'

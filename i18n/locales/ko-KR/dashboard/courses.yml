@@ -17,3 +17,8 @@ ko:
           description_short: 이 코스는 모든것을 위한 것입니다.
           description_student: 이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다.
           description_teacher: 이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다.
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

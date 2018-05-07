@@ -368,6 +368,7 @@ uk:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Завершено'
     tried: 'Спробував'
@@ -723,21 +724,21 @@ uk:
     message: "Вкажіть свою расову приналежність (позначте всі потрібні варіанти)"
     races:
       - 
-        white: Білий
+        white: "Білий"
       - 
-        black: Чорний або Афроамериканець
+        black: "Чорний або Афроамериканець"
       - 
-        hispanic: Іспаномовний або латиноамериканець
+        hispanic: "Іспаномовний або латиноамериканець"
       - 
-        asian: Азіат
+        asian: "Азіат"
       - 
-        hawaiian: Корінний житель Гавайських островів або інших островів Тихого океану
+        hawaiian: "Корінний житель Гавайських островів або інших островів Тихого океану"
       - 
-        american_indian: Американський індіанець/корінний житель Аляски
+        american_indian: "Американський індіанець/корінний житель Аляски"
       - 
-        other: Інше
+        other: "Інше"
       - 
-        opt_out: Не волію відповідати
+        opt_out: "Не волію відповідати"
     submit: "Надіслати"
     decline: "Закрити"
   zendesk_too_young_message: 'На жаль, молодші користувачі не можуть входити на цей сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a> не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв''язатися з нами.'

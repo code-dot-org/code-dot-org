@@ -318,6 +318,7 @@
   "moveSpriteN": "flytt figur {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "flytt droid {spriteIndex}",
+  "to": "til",
   "toXY": "til x, y",
   "moveDown": "flytt ned",
   "moveDownTooltip": "Flytt en figur ned.",
