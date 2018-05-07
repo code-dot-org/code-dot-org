@@ -4,11 +4,7 @@ description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
 # **You just learned "variables"!**
 
-### **A variable is a placeholder for a piece of information that can change.** Variables can be helpful when you don't know what certain information will be until you press Run and the user is interacting with your program. 
-
-### In order to use a variable, it needs a name and a value. The name never changes, but the value can. This way you can just use the name of the variable as a placeholder wherever you want in your program! 
-
-### Now, when the value changes, you only have to change the value in one place.
+### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! 
 
 ---
 
