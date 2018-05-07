@@ -50,7 +50,8 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -263,6 +264,7 @@
           <block type="studio_endGame">
             <title name="VALUE">win</title>
           </block>
+          <block type="studio_getScore"/>
         </category>
       </xml>
     </toolbox_blocks>

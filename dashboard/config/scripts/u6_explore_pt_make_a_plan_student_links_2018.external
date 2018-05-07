@@ -1,0 +1,44 @@
+name 'U6 Explore PT - Make a Plan - Student Links_2018'
+css 'unplugged'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Explore PT Prep - Making a Plan
+
+## Background
+
+Make a plan to prioritize what you will do and when in order to complete the Explore PT in the allotted time.
+
+## Lesson
+
+* Introduce The Explore PT Survival Guide
+    * Picking a Good Computing Innovation
+    * Computing Innovation Brainstorm Activity 
+    * Harmful effects v. data security concerns 
+    * Rapid Research - Harmful Effects
+* Making a plan to complete the Explore PT
+
+
+## Resources
+
+**College Board Documents**
+
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Explore Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf?course=ap-computer-science-principles) - College Board Doc
+
+**Review and Planning Documents**
+
+* [Explore PT Survival Guide](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=pdf) - Student Guide (copy as [MS Word](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/copy))
+    * [Explore PT Planning Organizer -- page 5 from survival guide](https://cdo-curriculum.s3.amazonaws.com/media/uploads/explore-pt-planning-organizer-hires.pdf) - High Resolution PDF
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+Please note: the Review and Planning documents are **new resources** for this lesson.
+
+We’ve included links to college board documents from the previous lesson for reference so they don’t have to go back and forth.
+MARKDOWN

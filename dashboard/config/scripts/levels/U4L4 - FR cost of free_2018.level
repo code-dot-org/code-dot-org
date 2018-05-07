@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:03.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "## AP Practice\r\n\r\nThe AP *Explore Performance task* requires you to provide short written responses about an innovation that you research.  Here are portions of the prompts to consider:\r\n\r\n\r\n1. *Explain at least one beneficial effect and at least one harmful effect the computing innovation has had, or has the potential to have, on society, economy, or culture.*\r\n\r\n2. *Using specific details, describe: at least one data storage concern, data privacy concern, or data security concern directly related to the computing innovation.*\r\n\r\n\r\nRespond to both of those prompts in light of what you learned about data privacy policies in this lesson. The \"innovation\" you choose could be narrow, like a specific app, or if it makes sense broad, like an entire company.  \r\n\r\nThe main objectives of your response are to:\r\n\r\n* Name one benefit (or potential benefit)\r\n* Name one harmful effect (or potentially harmful)\r\n* Be specific about the data that (presumably) leads to the harmful effect.\r\n\r\nLimit your response to a few sentences for each point above.",
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 7465,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

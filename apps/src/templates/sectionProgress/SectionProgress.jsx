@@ -173,6 +173,7 @@ export default connect(state => ({
   scriptId: state.sectionProgress.scriptId,
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
+  studentScriptIds: state.sectionProgress.studentScriptIds,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),

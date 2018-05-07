@@ -1,0 +1,57 @@
+name 'Unit 4 Lesson 8 Introduction_2018'
+markdown <<MARKDOWN
+# Unit 4: Lesson 8 - Rapid Research - Cybercrime
+
+## Background
+
+Learn about various types of cyber attacks and cyber crimes and do a small amount of research to learn more about one. The lesson caps off learning about encryption by taking a moment to look at the kinds of attacks and threats encryption (among other things) is intended to thwart.
+
+## Vocabulary
+
+* **Antivirus Software** - usually keeps big lists of known viruses and scans your computer looking for the virus programs in order to get rid of them.
+* **DDoS Attack** - Distributed Denial of Service Attack. Typically a virus installed on many computers (thousands) activate at the same time and flood a target with traffic to the point the server becomes overwhelmed.
+* **Firewall** - software that runs on servers (often routers) that only allows traffic through according to some set of security rules.
+* **Phishing Scam** - a thief trying to trick you into sending them sensitive information. Typically these include emails about system updates asking you send your username and password, social security number or other things.
+* **SSL/TLS** - Secure Sockets layer / Transport Layer Security - An encryption layer of HTTP that uses public key cryptography to establish a secure connection.
+* **Virus** - a program that runs on a computer to do something the owner of the computer does not intend.
+
+## Lesson
+
+* Watch Video - Cybersecurity & Crime
+* Read *How Not to Get Hacked*
+* Reseach a cybercrime event
+* Complete a one-pager presenting your findings
+* Review cybersecurity terms
+
+
+## Resources
+
+
+
+
+* [The Internet: Cybersecurity and Crime](https://youtu.be/AuYNXgO_f3Y) - Video ([download](https://videos.code.org/2015/csp/concept_cybercrime.mp4))
+* [Cybersecurity and Crime Video Worksheet (Optional)](https://docs.google.com/document/d/1Qv4lgMMtP42sRlofUmGtElViD1AJ7yETvQ4pCh0rDjw/export?format=pdf) - Video Worksheet (copy as [MS Word](https://docs.google.com/document/d/1Qv4lgMMtP42sRlofUmGtElViD1AJ7yETvQ4pCh0rDjw/export?format=doc), [Google Doc](https://docs.google.com/document/d/1Qv4lgMMtP42sRlofUmGtElViD1AJ7yETvQ4pCh0rDjw/copy))
+
+* [How Not To Get Hacked](https://code.org/curriculum/csp/docs/hownottogethacked) - Web Resource
+
+* [Rapid Research - Cybercrime](https://docs.google.com/document/d/1ZitYyB3zpCct-2ZnGwEO_dPNapMJIwWAR5hgf24oneo/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ZitYyB3zpCct-2ZnGwEO_dPNapMJIwWAR5hgf24oneo/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ZitYyB3zpCct-2ZnGwEO_dPNapMJIwWAR5hgf24oneo/copy))
+* [Cybersecurity One-Pager](https://docs.google.com/document/d/1g0X-FYr-JtzQWPCcQ0ZTA9zzy_bKRDvpFeJHKobebcI/export?format=pdf) - Template (copy as [MS Word](https://docs.google.com/document/d/1g0X-FYr-JtzQWPCcQ0ZTA9zzy_bKRDvpFeJHKobebcI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1g0X-FYr-JtzQWPCcQ0ZTA9zzy_bKRDvpFeJHKobebcI/copy))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+---
+**Older versions of documents. Deprectated Nov. 2017**
+
+*In November 2017 we updated these student documents to better reflect and mimic changes to the AP Performance Tasks announced in August.  The original documents are here in the event you or your class were doing work based on them. The new documents are above.*
+
+
+* [Deprecated] [Guide: Rapid Research - Cybersecurity and Crime](https://docs.google.com/document/d/1PHOND-ZUzevI6A02E7PhNUAAfbhOt5250YwXz4KWtpM/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1PHOND-ZUzevI6A02E7PhNUAAfbhOt5250YwXz4KWtpM/export?format=doc), [Google Doc](https://docs.google.com/document/d/1PHOND-ZUzevI6A02E7PhNUAAfbhOt5250YwXz4KWtpM/copy))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY]
+
+* <a href="https://docs.google.com/document/d/1bwlzsEreq3_YyGxJb-12L2aJtG6PJAtx5E4Aosnem3I/edit?usp=sharing" target="_blank">KEY: Video Guide “Cybersecurity and Crime”</a>
+
+[/KEY]
+MARKDOWN
