@@ -25,8 +25,8 @@ export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = (validScripts, studentScriptIds, validCourses) => (
-  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses}
+export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
+  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
 );
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
@@ -212,9 +212,13 @@ export default function sectionProgress(state=initialState, action) {
       action.studentScriptIds.forEach(id => idMap[id] = true);
 
       // If the student has participated in a script which is a unit in a
-      // course, make sure that all units in that course are included.
+      // course, or if this section is assigned to a course, make sure that
+      // all units in that course are included.
       action.validCourses.forEach(course => {
-        if (course.script_ids.some(id => idMap[id])) {
+        if (
+          course.script_ids.some(id => idMap[id]) ||
+          course.id === action.assignedCourseId
+        ) {
           course.script_ids.forEach(id => idMap[id] = true);
         }
       });
