@@ -1,0 +1,23 @@
+name 'v2 U2L8 Student Lesson Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 2: Lesson 8 - Finding Trends with Visualizations
+
+## Background
+
+When you post information to a social network, watch a video online, or simply search for information on a search engine, some of that data is collected, and you reveal what topics are currently on your mind. When a topic is quickly growing in popularity it is often said to be trending, but there are many different trends or patterns we might find in this data, including historical trends. These patterns might help us to identify, understand, and predict how our world is changing.
+
+## Lesson
+
+* Learn to use Google Trends.
+* Explore Google Trends tool - find interesting patterns and trends, tell a story.
+* Share findings and plausible explanations for trends.
+
+## Resources
+
+* <a href="https://www.google.com/trends/" target="_blank">Google Trends</a>
+* Exploring Trends - Activity Guide ([PDF](https://docs.google.com/document/d/1J9bwOirLAdrN48UFw4p9BdqJT6Js3kRWhDqsOZi4Pyg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1J9bwOirLAdrN48UFw4p9BdqJT6Js3kRWhDqsOZi4Pyg/export?format=doc))
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

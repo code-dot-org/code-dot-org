@@ -147,7 +147,9 @@ We expect you to attend for the full conference. Make plans to be with us from R
 
 <a id="previous"></a>
 ## **Previous Email Updates**
-This section will be updated as emails are sent for this event.
+We will update this section as emails are sent for this event.
+
+<a href="http://go.pardot.com/webmail/153401/389422696/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 1: Book your travel to Code.org's TeacherCon!</a>
 
 <a id="prework"></a>
 ## **Prework**
