@@ -4,6 +4,29 @@ submittable 'true'
 anonymous 'true'
 
 page
+text 'csp-post-survey-2018-unit-feedback-preamble'
+text 'csp-post-survey-unit1-preamble'
+level 'csp-post-survey-2018-U1-I-liked'
+level 'csp-post-survey-2018-U1-time-spent'
+level 'csp-post-survey-2018-U1-I-learned'
+text 'csp-post-survey-unit2-preamble'
+text 'csp-post-survey-unit3-preamble'
+text 'csp-post-survey-unit4-preamble'
+text 'csp-post-survey-unit5-preamble'
+level 'csp-post-survey-2018-topics-liked-FR'
+level 'csp-post-survey-2018-topics-want-FR'
+
+page
+text 'post-assessment survey heading4'
+level 'post-assessment survey q34'
+level 'post-assessment survey q35'
+level 'post-assessment survey q36'
+text 'csp-post-survey-explorePT-preamble'
+text 'csp-post-survey-createPT-preamble'
+level 'csp-post-survey-2018-PT-feedback-FR'
+
+
+page
 text 'csp-post-survey-2017 preamble 1_2018'
 level 'csp-post-survey-2017-q1_2018'
 level 'csp-post-survey-2017-q2_2018'
@@ -74,3 +97,4 @@ text 'csp-post-survey-2017-wrapup-preamble_2018'
 level 'csp-post-survey-2017-q64_2018'
 level 'csp-post-survey-2017-q65_2018'
 level 'csp-post-survey-2017-FR_2018'
+
