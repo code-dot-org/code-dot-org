@@ -1694,10 +1694,19 @@ class User < ActiveRecord::Base
     self.school = nil
     self.school_info_id = nil
     self.properties = {}
+    unless within_united_states?
+      self.urm = nil
+      self.races = nil
+    end
 
     self.purged_at = Time.zone.now
 
     save!
+  end
+
+  def within_united_states?
+    latest_geo = UserGeo.where(user_id: id).order(updated_at: :desc).first
+    latest_geo && 'United States' == latest_geo[:country]
   end
 
   def associate_with_potential_pd_enrollments

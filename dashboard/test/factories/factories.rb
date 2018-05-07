@@ -915,4 +915,28 @@ FactoryGirl.define do
     ip_address '10.0.0.1'
     source 'form'
   end
+
+  factory :user_geo do
+    # Space Needle
+    trait :seattle do
+      ip_address '10.0.0.1'
+      city 'Seattle'
+      state 'Washington'
+      country 'United States'
+      postal_code '98109'
+      latitude 47.620470
+      longitude (-122.349181)
+    end
+
+    # Sydney Opera House
+    trait :sydney do
+      ip_address '10.0.0.1'
+      city 'Sydney'
+      state 'New South Wales'
+      country 'Australia'
+      postal_code '2000'
+      latitude (-33.859100)
+      longitude 151.200200
+    end
+  end
 end
