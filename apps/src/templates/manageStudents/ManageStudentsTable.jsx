@@ -15,10 +15,19 @@ import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
+import {
+  convertStudentDataToArray,
+  AddStatus,
+  RowType,
+  saveAllStudents,
+  editAll,
+  TransferStatus,
+  TransferType
+} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
+import MoveStudents from './MoveStudents';
 import Button from '../Button';
 
 const styles = {
@@ -30,6 +39,12 @@ const styles = {
   headerIcon : {
     width: '20%',
     float: 'left',
+  },
+  buttonRow: {
+    display: 'flex'
+  },
+  buttonWithMargin: {
+    marginRight: 5
   }
 };
 
@@ -134,6 +149,8 @@ class ManageStudentsTable extends Component {
     saveAllStudents: PropTypes.func,
     showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
+    transferData: PropTypes.object,
+    transferStatus: PropTypes.object
   };
 
   state = {
@@ -141,6 +158,40 @@ class ManageStudentsTable extends Component {
       direction: 'desc',
       position: 0
     }
+  };
+
+  renderTransferSuccessNotification = () => {
+    const {type, numStudents, sectionDisplay} = this.props.transferStatus;
+    let notification = {};
+
+    switch (type) {
+      case TransferType.MOVE_STUDENTS:
+        notification.notice = i18n.studentsSuccessfullyMovedNotice;
+        notification.details = i18n.studentsSuccessfullyMovedDetails;
+        break;
+      case TransferType.COPY_STUDENTS:
+        notification.notice = i18n.studentsSuccessfullyCopiedNotice;
+        notification.details = i18n.studentsSuccessfullyCopiedDetails;
+        break;
+    }
+
+    return (
+      <Notification
+        type={NotificationType.success}
+        notice={notification.notice()}
+        details={notification.details({numStudents: numStudents, section: sectionDisplay})}
+        dismissible={false}
+      />
+    );
+  };
+
+  studentDataMinusBlanks = () => {
+    return this.props.studentData.filter(sd => sd.rowType === RowType.STUDENT);
+  };
+
+  isMoveStudentsEnabled = () => {
+    const {loginType} = this.props;
+    return loginType === SectionLoginType.word || loginType === SectionLoginType.picture || loginType === SectionLoginType.email;
   };
 
   ageFormatter = (age, {rowData}) => {
@@ -446,7 +497,7 @@ class ManageStudentsTable extends Component {
       sort: sortRows,
     })(this.props.studentData);
 
-    const {addStatus, loginType} = this.props;
+    const {addStatus, loginType, transferStatus, transferData} = this.props;
 
     return (
       <div>
@@ -466,9 +517,21 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
-        {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
-          <AddMultipleStudents/>
-        }
+        {transferStatus.status === TransferStatus.SUCCESS && this.renderTransferSuccessNotification()}
+        <div style={styles.buttonRow}>
+          {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
+            <div style={styles.buttonWithMargin}>
+              <AddMultipleStudents/>
+            </div>
+          }
+          {this.isMoveStudentsEnabled() &&
+            <MoveStudents
+              studentData={this.studentDataMinusBlanks()}
+              transferData={transferData}
+              transferStatus={transferStatus}
+            />
+          }
+        </div>
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
@@ -489,6 +552,8 @@ export default connect(state => ({
   editingData: state.manageStudents.editingData,
   showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
+  transferData: state.manageStudents.transferData,
+  transferStatus: state.manageStudents.transferStatus
 }), dispatch => ({
   saveAllStudents() {
     dispatch(saveAllStudents());

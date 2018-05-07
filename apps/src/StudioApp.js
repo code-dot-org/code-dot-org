@@ -258,6 +258,7 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {
+      $("body").addClass("legacy-share-view-mobile");
       $('#main-logo').hide();
     }
     if (dom.isIOS() && !window.navigator.standalone) {
