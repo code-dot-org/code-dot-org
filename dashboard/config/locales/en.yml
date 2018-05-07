@@ -1000,3 +1000,7 @@ en:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse or by clicking "Accept all cookies," you agree to the storing of first- and third-party cookies on your device to enhance site navigation and analyze site usage.'
+    more_information: 'More information'
+    accept: 'Accept all cookies'
