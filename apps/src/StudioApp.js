@@ -1404,8 +1404,7 @@ StudioApp.prototype.clearHighlighting = function () {
 * explicitly provided.
 * @param {FeedbackOptions} opts
 */
-StudioApp.prototype.displayFeedback = function (opts) {
-  const options = {...opts};
+StudioApp.prototype.displayFeedback = function (options) {
   // Special test code for edit blocks.
   if (options.level.edit_blocks) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
@@ -1416,26 +1415,19 @@ StudioApp.prototype.displayFeedback = function (opts) {
   store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
 
   if (experiments.isEnabled('bubbleDialog')) {
-    const ignoredKeys = [
-      'level',
-      'alreadySaved',
-      'appStrings',
-      'disableSaveToGallery',
-      'message',
-      'saveToLegacyGalleryUrl',
-      'saveToProjectGallery',
-      'showingSharing',
-      'continueText',
-      'disablePrinting',
-      'executionError',
-      'tryAgainText',
-      'twitter',
-    ];
-    ignoredKeys.forEach(key => delete options[key]);
-    const {
-      response, preventDialog, feedbackType, feedbackImage, ...otherOptions
-    } = options;
-    if (Object.keys(otherOptions).length === 0) {
+    const {response, preventDialog, feedbackType, feedbackImage} = options;
+
+    const newFinishDialogApps = {
+      turtle: true,
+      karel: true,
+      maze: true,
+      studio: true,
+      flappy: true,
+      bounce: true,
+    };
+    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
+
+    if (hasNewFinishDialog && !this.hasContainedLevels) {
       const generatedCodeProperties =
         this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
       const studentCode = {
@@ -1457,9 +1449,6 @@ StudioApp.prototype.displayFeedback = function (opts) {
         this.onFeedback(options);
         return;
       }
-    } else {
-      console.warn('Unexpected feedback props:');
-      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
