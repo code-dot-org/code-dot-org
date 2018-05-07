@@ -390,6 +390,9 @@ const FIELD_INPUT = 'field';
  *   input, which is passed as a callback function
  * @param {string} args[].customInput Use the customInput type under this name
  *   to add this input to the block.
+ * @param {boolean} args[].field Indicates that an input is a field input, i.e.
+ *   a textbox. The generated code will be wrapped in quotes if the arg has type
+ *   "String".
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
