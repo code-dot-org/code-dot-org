@@ -329,7 +329,7 @@ class Blockly < Level
   end
 
   def localized_markdown_instructions
-    get_localized_property("markdown_instructions")
+    get_localized_property("markdown_instruction")
   end
 
   def localized_authored_hints
@@ -367,7 +367,7 @@ class Blockly < Level
 
   def localized_instructions
     if custom?
-      loc_val = get_localized_property("instructions")
+      loc_val = get_localized_property("instruction")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
