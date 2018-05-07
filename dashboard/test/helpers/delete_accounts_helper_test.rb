@@ -112,6 +112,29 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.uid
   end
 
+  test 'clears school information' do
+    user = create :teacher
+    user.full_address = 'fake-full-address'
+    user.school = 'fake-school-info'
+    user.school_info = create :school_info
+    user.save
+
+    user.reload
+    refute_nil user.full_address
+    refute_nil user.school
+    refute_nil user.school_info_id
+
+    purge_user user
+
+    user.reload
+    assert_nil user.full_address
+    assert_nil user.school
+    assert_nil user.school_info_id
+  end
+
+  # TODO: Delete all attached studio_persons
+  # TODO: Delete attached school_infos?
+
   test 'purged student still passes validations' do
     user = create :student
     assert user.valid?
