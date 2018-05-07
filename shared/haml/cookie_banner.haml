@@ -1,6 +1,3 @@
-:ruby
-  cookie_key = "_cookieBanner" + (rack_env?(:production) ? '' : "_#{rack_env}")
-
 %link{rel:'stylesheet', type:'text/css', href:'/shared/css/cookie-banner.css'}
 %script{src: minifiable_asset_path("js/cookieBanner.js")}
 
@@ -16,5 +13,5 @@
 
 :javascript
   $(document).ready(function() {
-    window.setupCookieBanner("#{cookie_key}");
+    window.setupCookieBanner("#{rack_env}");
   });
