@@ -1402,7 +1402,7 @@ StudioApp.prototype.clearHighlighting = function () {
 /**
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
-* @param {FeedbackOptions} opts
+* @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
   // Special test code for edit blocks.
