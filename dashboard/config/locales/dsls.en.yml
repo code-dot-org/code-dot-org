@@ -10432,7 +10432,6 @@ en:
         The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
-        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
       courseF_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
@@ -11587,12 +11586,8 @@ en:
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
-        Slightly<br>agree: Slightly<br>agree
-        Slightly<br>disagree: Slightly<br>disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
-        Strongly<br>agree: Strongly<br>agree
-        Strongly<br>disagree: Strongly<br>disagree
       csp-post-survey-2017-q2:
         Agree: Agree
         Disagree: Disagree
