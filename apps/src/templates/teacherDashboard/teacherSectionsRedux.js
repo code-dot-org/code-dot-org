@@ -209,20 +209,7 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
     // versions (e.g. csd-2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
-    // Let users in the courseVersions experiment see hidden scripts (e.g.
-    // csd3-2018) associated with unreleased course versions (e.g. csd-2018) by
-    // letting them see all hidden scripts. This clutters the UI for people in
-    // the experiment, but avoids doing a bunch of work to temporarily un-hide
-    // certain scripts that will already have been made visible by the time this
-    // experiment launches.
-    //
-    // Prior to the launch of this experiment, any hidden scripts associated
-    // with new versions of multi-unit courses like csp and csd should be made
-    // visible, and the includeHidden url param should be removed.
-    //
-    // When launching this experiment, includeHidden MUST NOT be set by
-    // default here.
-    `/v2/sections/valid_scripts${courseVersions ? '?includeHidden=1' : ''}`
+    '/v2/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
