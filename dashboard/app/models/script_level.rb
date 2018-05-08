@@ -51,7 +51,6 @@ class ScriptLevel < ActiveRecord::Base
     progression
     target
     challenge
-    hint_prompt_attempts_threshold
   )
 
   def script
