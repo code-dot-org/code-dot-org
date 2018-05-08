@@ -1,4 +1,4 @@
-var Direction = require('./tiles').Direction;
+var Direction = require('@code-dot-org/maze/src/tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
 
