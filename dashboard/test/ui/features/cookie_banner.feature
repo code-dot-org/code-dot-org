@@ -20,12 +20,5 @@ Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
 
 Examples:
   | url                                                               | test_name                  |
-  | http://hourofcode.com/                                            | hourofcode.com home        |
-  | http://hourofcode.com/promote                                     | hourofcode.com promote     |
-  | http://csedweek.org/                                              | csedweek.org home          |
-  | http://csedweek.org/about                                         | csedweek.org about         |
-  | http://uk.code.org/                                               | uk.code.org home           |
-  | http://uk.code.org/about                                          | uk.code.org about          |
-  | http://ro.code.org/                                               | ro.code.org home           |
-  | http://ro.code.org/about                                          | ro.code.org about          |
-  | http://advocacy.code.org/                                         | advocacy.code.org home     |
+  | http://code.org/about                                             | code.org about             |
+  | http://studio.code.org/s/frozen/stage/1/puzzle/1                  | studio.code.org puzzle     |
