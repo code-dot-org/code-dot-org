@@ -73,7 +73,7 @@ class TextResponses extends Component {
           href={url}
           target="_blank"
         >
-          ...see full response
+          {` ...${i18n.seeFullResponse()}`}
         </a>
       </div>
     );
@@ -107,7 +107,7 @@ class TextResponses extends Component {
       {
         property: 'stage',
         header: {
-          label: 'Stage', // TODO: i18n
+          label: i18n.stage(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -126,7 +126,7 @@ class TextResponses extends Component {
       {
         property: 'puzzle',
         header: {
-          label: 'Puzzle', // TODO: i18n
+          label: i18n.puzzle(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -145,7 +145,7 @@ class TextResponses extends Component {
       {
         property: 'question',
         header: {
-          label: 'Question', // TODO: i18n
+          label: i18n.question(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -164,7 +164,7 @@ class TextResponses extends Component {
       {
         property: 'response',
         header: {
-          label: 'Response', // TODO: i18n
+          label: i18n.response(),
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
