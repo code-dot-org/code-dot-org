@@ -42,6 +42,7 @@ a.third-rule {
 
 const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
+const FONTAWESOME_CONTENT = 'fontawesome content';
 
 describe('The Exporter,', function () {
   var server;
@@ -78,6 +79,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       /\/_karma_webpack_\/.*\.png/,
       PNG_ASSET_CONTENT
+    );
+    server.respondWith(
+      /\/assets\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      FONTAWESOME_CONTENT
     );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
@@ -309,6 +314,7 @@ describe('The Exporter,', function () {
           'my-app/applab/assets/blockly/media/bar.jpg',
           'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
+          'my-app/applab/fontawesome-webfont.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
           'my-app/assets/foo.png',
@@ -464,6 +470,7 @@ describe('The Exporter,', function () {
           'my-app/assets/applab/assets/blockly/media/bar.jpg',
           'my-app/assets/applab/assets/blockly/media/foo.png',
           'my-app/assets/applab/assets/blockly/media/third.jpg',
+          'my-app/assets/applab/fontawesome-webfont.woff2',
           'my-app/assets/bar.png',
           'my-app/assets/code.j',
           'my-app/assets/foo.png',
