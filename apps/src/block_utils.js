@@ -393,6 +393,9 @@ const FIELD_INPUT = 'field';
  * @param {boolean} args[].field Indicates that an input is a field input, i.e.
  *   a textbox. The generated code will be wrapped in quotes if the arg has type
  *   "String".
+ * @param {boolean} args[].empty Indicates that an input should not render a
+ *   connection or generate any code. Mostly just useful as a line break for
+ *   non-inlined blocks.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
