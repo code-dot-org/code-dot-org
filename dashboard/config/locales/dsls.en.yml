@@ -2677,7 +2677,12 @@ en:
         title: title
       U4 - Read Record - Local vs Remote Data External:
         Local vs. Remote Data: Local vs. Remote Data
+      U4 - Read Record - Local vs Remote Data External_2018:
+        Local vs. Remote Data: Local vs. Remote Data
       U4 - Unique Ids Explanation:
+        Records Have Unique IDs: Records Have Unique IDs
+        title: title
+      U4 - Unique Ids Explanation_2018:
         Records Have Unique IDs: Records Have Unique IDs
         title: title
       U4 Cleaning Data Activity Guide Pt2:
@@ -2699,16 +2704,25 @@ en:
       U4L02 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L02 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       U4L02v2 - Finding Trends:
         description here: description here
         title: title
       U4L03 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L03 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       U4L03v2 - Student Introduction:
         description here: description here
         title: title
       U4L04 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L04 Student Lesson Introduction_2018:
         description here: description here
         title: title
       U4L04v2 - Student Introduction:
@@ -2844,19 +2858,37 @@ en:
       U6 - Charts - Student Introduction:
         description here: description here
         title: title
+      U6 - Charts - Student Introduction_2018:
+        description here: description here
+        title: title
       U6 - Final Project - Student Introduction:
+        description here: description here
+        title: title
+      U6 - Final Project - Student Introduction_2018:
         description here: description here
         title: title
       U6 - ImportExport - Student Introduction:
         description here: description here
         title: title
+      U6 - ImportExport - Student Introduction_2018:
+        description here: description here
+        title: title
       U6 - Sample Apps - Student Introduction:
+        description here: description here
+        title: title
+      U6 - Sample Apps - Student Introduction_2018:
         description here: description here
         title: title
       U6 - deleteRecord - Student Introduction:
         description here: description here
         title: title
+      U6 - deleteRecord - Student Introduction_2018:
+        description here: description here
+        title: title
       U6 - updateRecord - Student Introduction:
+        description here: description here
+        title: title
+      U6 - updateRecord - Student Introduction_2018:
         description here: description here
         title: title
       U6 AP Performance Task Tech Setup - Student Links:
@@ -10432,7 +10464,6 @@ en:
         The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
-        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
       courseF_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
@@ -11587,12 +11618,8 @@ en:
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
-        Slightly<br>agree: Slightly<br>agree
-        Slightly<br>disagree: Slightly<br>disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
-        Strongly<br>agree: Strongly<br>agree
-        Strongly<br>disagree: Strongly<br>disagree
       csp-post-survey-2017-q2:
         Agree: Agree
         Disagree: Disagree
