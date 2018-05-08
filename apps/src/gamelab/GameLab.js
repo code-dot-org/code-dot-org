@@ -1217,7 +1217,7 @@ GameLab.prototype.onP5Draw = function () {
           if (validationResult.state === 'succeeded') {
             console.log('success!');
             const testResult = validationResult.result ||
-                TestResults.MINIMUM_OPTIMAL_RESULT;
+                TestResults.ALL_PASS;
             this.onPuzzleComplete(false, testResult);
           } else if (validationResult === 'failed') {
             // TODO(ram): Show failure feedback
