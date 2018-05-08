@@ -24,3 +24,8 @@ en:
           description_short: The 2018 version of the CS Discoveries course.
           description_student: ''
           description_teacher: ''
+        csp-2018:
+          title: Computer Science Principles
+          description_short: The 2018 version of the CS Principles course.
+          description_student: ''
+          description_teacher: ''
