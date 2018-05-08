@@ -10,9 +10,21 @@ import {h3Style} from "../../lib/ui/Headings";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const styles = {
-  emptyInfoText: {
-    paddingTop: 20
+  header: {
+    marginBottom: 0
+  },
+  table: {
+    paddingTop: 10
   }
+};
+
+const TABLE_WIDTH = tableLayoutStyles.table.width;
+const TABLE_COLUMN_WIDTHS = {
+  name: TABLE_WIDTH / 5,
+  stage: TABLE_WIDTH / 5,
+  puzzle: TABLE_WIDTH / 6,
+  question: TABLE_WIDTH / 5,
+  response: TABLE_WIDTH / 4
 };
 
 class TextResponses extends Component {
@@ -57,7 +69,8 @@ class TextResponses extends Component {
           label: i18n.name(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.name}
           }},
           transforms: [sortable]
         },
@@ -75,7 +88,8 @@ class TextResponses extends Component {
           label: 'Stage', // TODO: i18n
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.stage}
           }}
         },
         cell: {
@@ -92,7 +106,8 @@ class TextResponses extends Component {
           label: 'Puzzle', // TODO: i18n
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.puzzle}
           }}
         },
         cell: {
@@ -109,7 +124,8 @@ class TextResponses extends Component {
           label: 'Question', // TODO: i18n
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.question}
           }}
         },
         cell: {
@@ -126,7 +142,8 @@ class TextResponses extends Component {
           label: 'Response', // TODO: i18n
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.response}
           }}
         },
         cell: {
@@ -163,7 +180,7 @@ class TextResponses extends Component {
   renderResponsesTable = () => {
     const {responses} = this.props;
     if (!responses.length) {
-      return <div style={styles.emptyInfoText}>{i18n.emptyTextResponsesTable()}</div>;
+      return i18n.emptyTextResponsesTable();
     }
 
     // Define a sorting transform that can be applied to each column
@@ -194,7 +211,7 @@ class TextResponses extends Component {
     return (
       <div>
         <div>
-          <div style={h3Style}>
+          <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
           <ScriptSelector
@@ -203,7 +220,9 @@ class TextResponses extends Component {
             onChange={this.onChangeScript}
           />
         </div>
-        {this.renderResponsesTable()}
+        <div style={styles.table}>
+          {this.renderResponsesTable()}
+        </div>
       </div>
     );
   }
