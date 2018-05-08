@@ -252,13 +252,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def purge_user(user)
     SolrHelper.stubs(:delete_document).once
-    DeleteAccountsHelper.new(
-      solr: nil,
-      pegasus_db: PEGASUS_DB,
-      pegasus_reporting_db: sequel_connect(
-        CDO.pegasus_reporting_db_writer,
-        CDO.pegasus_reporting_db_reader
-      )
-    ).purge_user(user)
+    DeleteAccountsHelper.new(solr: {}).purge_user(user)
   end
 end

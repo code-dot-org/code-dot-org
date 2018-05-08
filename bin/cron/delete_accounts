@@ -5,7 +5,7 @@ require 'cdo/delete_accounts_helper'
 require 'cdo/only_one'
 
 def main
-  delete_accounts_helper = DeleteAccountsHelper.create
+  delete_accounts_helper = DeleteAccountsHelper.new
 
   # Delete inactive users, e.g., those users with no account activity in the past seven years.
   seven_years_ago = Time.now - 7.years

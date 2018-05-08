@@ -12,24 +12,13 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
-  def initialize(solr:, pegasus_db:, pegasus_reporting_db:)
-    @solr = solr
-    @pegasus_db = pegasus_db
-    @pegasus_reporting_db = pegasus_reporting_db
-  end
-
-  # Creates a helper for purging user accounts with default configuration for
-  # the current environment.
-  # @raise unless CDO.solr_server is set
-  def self.create
-    raise 'No SOLR server configured' unless CDO.solr_server
-    DeleteAccountsHelper.new(
-      solr: Solr::Server.new(host: CDO.solr_server),
-      pegasus_db: PEGASUS_DB,
-      pegasus_reporting_db: sequel_connect(
-        CDO.pegasus_reporting_db_writer,
-        CDO.pegasus_reporting_db_reader
-      )
+  def initialize(solr: nil)
+    raise 'No SOLR server configured' unless solr || CDO.solr_server
+    @solr = solr || Solr::Server.new(host: CDO.solr_server)
+    @pegasus_db = PEGASUS_DB
+    @pegasus_reporting_db = sequel_connect(
+      CDO.pegasus_reporting_db_writer,
+      CDO.pegasus_reporting_db_reader
     )
   end
 
