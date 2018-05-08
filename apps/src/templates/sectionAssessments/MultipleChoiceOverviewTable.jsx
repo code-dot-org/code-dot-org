@@ -48,11 +48,15 @@ const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.string,
   percentAnswered: PropTypes.string,
   isCorrectAnswer: PropTypes.bool,
+  questions: PropTypes.object,
+  studentAnswers: PropTypes.object,
 });
 
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
+    // questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
+    questions: PropTypes.object,
+    studentAnswers: PropTypes.object
   };
 
   state = {
@@ -128,13 +132,14 @@ class MultipleChoiceOverviewTable extends Component {
 
     dataColumns.push(this.getQuestionColumn(sortable));
 
-    const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
-      question1.answers.length - question2.answers.length
-    )).pop();
+    const columnLabelNames = Object.keys(this.props.questions).reduce((accumulator, currentVal) => {
+      const question = this.props.questions[currentVal] ;
 
-    let columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
-      return this.getAnswerColumn(answer.multipleChoiceOption);
-    });
+      if(accumulator.length < question.answerOptions.length){
+        accumulator = question.answerOptions.map( answerOptionsObj => answerOptionsObj.option );
+      }
+      return accumulator; 
+    },[])
 
     return [
       this.getQuestionColumn(sortable),
