@@ -136,7 +136,11 @@ class MultipleChoiceOverviewTable extends Component {
       return this.getAnswerColumn(answer.multipleChoiceOption);
     });
 
-    return [...dataColumns, ...columnLabelNames, ...[{property: NOT_ANSWERED, ...this.getNotAnsweredColumn()}]];
+    return [
+      this.getQuestionColumn(sortable),
+      ...columnLabelNames,
+      this.getNotAnsweredColumn(),
+    ];
 
   };
 
@@ -165,3 +169,4 @@ class MultipleChoiceOverviewTable extends Component {
 }
 
 export default MultipleChoiceOverviewTable;
+
