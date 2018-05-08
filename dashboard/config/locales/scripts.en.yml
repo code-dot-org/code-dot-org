@@ -8933,3 +8933,13 @@ en:
               name: Final Project
               description_student: ''
               description_teacher: ''
+        spritelab:
+          stages:
+            'Fish Tank: Creating Sprites':
+              name: 'Fish Tank: Creating Sprites'
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+          title: Introduction to Sprite Lab (PILOT)
+          description_audience: ''
+          description_short: ''
+          description: ''
