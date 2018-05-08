@@ -112,7 +112,7 @@ describe('ProgressBubble', () => {
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment,
-          status: LevelStatus.submitted
+          status: LevelStatus.perfect
         }}
       />
     );

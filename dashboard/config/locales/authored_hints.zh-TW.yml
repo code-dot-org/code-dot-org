@@ -389,7 +389,7 @@
 
           ![solution](https://images.code.org/b282dd6324910b7d604e24182cbbccbb-image-1469641477135.png)
       Course 4 Artist For Loops 11_authored_hint:
-        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
+        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
       Course 4 Artist For Loops 11a_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 除以多邊形的邊數，就是你要轉向的度數。 '
         Course_4_Artist_For_Loops_11a_b: '每一次你需要向前移動，共 10 次。移動的長度相當於多邊形的邊數。 '
@@ -14186,7 +14186,7 @@
       grade5_artist_for_loops7a_authored_hint: []
       grade5_artist_for_loops7b_authored_hint: []
       grade5_artist_for_loops8_authored_hint:
-        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
+        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
       grade5_artist_for_loops9_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 除以多邊形的邊數，就是你要轉向的度數。 '
         Course_4_Artist_For_Loops_11a_b: '每一次你需要向前移動，共 10 次。移動的長度相當於多邊形的邊數。 '

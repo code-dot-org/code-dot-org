@@ -1585,6 +1585,13 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  # Whether the current user has permission to delete their own account from
+  # the account edit page.
+  def can_delete_own_account?
+    # All accounts except teacher-managed accounts may delete their own account.
+    !teacher_managed_account?
+  end
+
   # Users who might otherwise have orphaned accounts should have the option
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.

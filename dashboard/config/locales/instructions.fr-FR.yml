@@ -80,13 +80,10 @@
       2-3 Artist Functions 10_instruction: Voici deux fonctions, une pour dessiner
         un grand engrenage et l'autre pour dessiner un petit engrenage. Utilise les
         pour dessiner l'intérieur d'une machine!
-      2-3 Artist Functions 11 a_instruction: |-
-        We've renamed the `draw a square`
-        function to `draw a hexagon`, but it's still giving us squares! Can you modify
-        the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r
-        \r
-        Draw
-        the image using the new function!
+      2-3 Artist Functions 11 a_instruction: "We've renamed the `draw a square`\nfunction
+        to `draw a hexagon`, but it's still giving us squares! Can you modify\nthe
+        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r\n\r\nDraw\nthe
+        image using the new function!"
       2-3 Artist Functions 11.5 a_instruction: Voici cette même fonction « dessiner
         un hexagone ». Que se passe-t-il si tu mets seulement 60 degrés à chaque fois
         que tu boucles ?
@@ -121,12 +118,9 @@
         une fonction appelée «Dessiner un carré». Peut-tu utiliser la fonction «Dessiner
         un carré» pour créer les lunettes ? Les carrés sont à 75 pixels les uns des
         autres.
-      2-3 Artist Functions 3 a_instruction: |-
-        Edit the "draw a square" function
-        to draw glasses with frames that are 115px on each side. \r
-        \r
-        The squares
-        are now 45 pixels apart.
+      2-3 Artist Functions 3 a_instruction: "Edit the \"draw a square\" function\nto
+        draw glasses with frames that are 115px on each side. \r\n\r\nThe squares\nare
+        now 45 pixels apart."
       2-3 Artist Functions 3_instruction: Modifie la fonction pour dessiner un carré
         de 115 pixels de côté et dessine de plus grands verres. Les carrés sont maintenant
         à 45 pixels les uns des autres.
@@ -174,10 +168,9 @@
         un bloc « Répéter ».
       2-3 Artist Loops New 12_instruction: Dessine un losange avec des côtés de 100
         pixels.
-      2-3 Artist Loops New 13_instruction: |-
-        Je t'aide un peu (code gris) pour créer un losange. \r
-        \r
-        Répète 3 fois le dessin du losange pour créer un motif amusant !
+      2-3 Artist Loops New 13_instruction: "Je t'aide un peu (code gris) pour créer
+        un losange. \r\n\r\nRépète 3 fois le dessin du losange pour créer un motif
+        amusant !"
       2-3 Artist Loops New 14_instruction: Maintenant dessinons le losange 10 fois
         mais en pivotant de 90 degrés entre chaque losange.
       2-3 Artist Loops New 15_instruction: Dessine quelque chose d'amusant.
@@ -836,9 +829,9 @@
       4-5 Maze Assessment 1_instruction: 'Évaluation : Va jusqu''au tournesol !'
       4-5 Maze Conditionals 1_instruction: Utilise le bloc « Répéter jusqu'à » pour
         amener le zombie au tournesol.
-      4-5 Maze Conditionals 10_instruction: Peux tu rajouter juste 3 blocs pour aider
+      4-5 Maze Conditionals 10_instruction: "Peux tu rajouter juste 3 blocs pour aider
         le zombie à résoudre un labyrinthe plus complexe ? \r \r Si tu le fais bien,
-        il peut parcourir n'importe quel chemin sinueux peu importe la longueur!
+        il peut parcourir n'importe quel chemin sinueux peu importe la longueur!"
       4-5 Maze Conditionals 2_instruction: Utilise le bloc « Répéter jusqu'à » pour
         amener le zombie au tournesol.
       4-5 Maze Conditionals 3_instruction: 'Utilise le bloc « Si » pour me laisser
@@ -981,9 +974,8 @@
       Artist - Nested Loops 2_instruction: "Now nest this loop inside another loop\nto
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
         a 360 degree rotation.  "
-      Artist - Nested Loops 3_instruction: |
-        Create a sun by nesting the starter code
-        in another loop. This is called a nested loop.\r
+      Artist - Nested Loops 3_instruction: "Create a sun by nesting the starter code\nin
+        another loop. This is called a nested loop.\r\n"
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: |-
         Can you draw a hexagon by looping the
@@ -999,7 +991,7 @@
         pour terminer le dessin.
       Artist Inspiration_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
         to know how our inspiration pattern was made? "
       Auto Open Function Editor_instruction: 'Tu peux appeler les fonctions à partir
         d''autres fonctions ! En utilisant ta fonction «Forme» comme base, crée 3
@@ -1422,70 +1414,34 @@
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
-      CSD U6 params modify clouds_instruction: |-
-        # Clouds\r
-        \r
-        This program makes
-        the clouds move when you blow on the sound sensor, but it's not finished.\r
-        \r
-        #
-        Do This\r
-        * Create a new function `moveCloud(name)` that will move any cloud.\r
-          *
-        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
-        *
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r
-         * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times.
-      CSD U6 params modify clouds_2018_instruction: |-
-        # Clouds\r
-        \r
-        This program
-        makes the clouds move when you blow on the sound sensor, but it's not finished.\r
-        \r
-        #
-        Do This\r
-        * Create a new function `moveCloud(name)` that will move any cloud.\r
-          *
-        (Hint: you will use almost all the same code as the `moveCloud0` function)\r
-        *
-        Call your new `moveCloud(name)` function inside the event block, once for
-        each cloud name.\r
-         * (Hint: this is similar to how the `loopCloud(name)`
-        function is called many times.
-      CSD U6 params modify planes_instruction: |-
-        # Multi-plane Controller\r
-        \r
-        This
-        program moves the three planes using the board accelerometer and the on-screen
-        check boxes.  Right now, only the red plane works.\r
-        \r
-        # Do This\r
-        * Create
-        a new `movePlane(name)` function that can move any plane.\r
-        * Call the `movePlane(name)`
-        function inside the event block, such that it only moves when its checkbox
-        is checked.\r
-        \r
-        _Challenge: Right now the planes move way too fast.  Can
-        you figure out how to change the code so they move more slowly?_
-      CSD U6 params modify planes_2018_instruction: |-
-        # Multi-plane Controller\r
-        \r
-        This
-        program moves the three planes using the board accelerometer and the on-screen
-        check boxes.  Right now, only the red plane works.\r
-        \r
-        # Do This\r
-        * Create
-        a new `movePlane(name)` function that can move any plane.\r
-        * Call the `movePlane(name)`
-        function inside the event block, such that it only moves when its checkbox
-        is checked.\r
-        \r
-        _Challenge: Right now the planes move way too fast.  Can
-        you figure out how to change the code so they move more slowly?_
+      CSD U6 params modify clouds_instruction: "# Clouds\r\n\r\nThis program makes\nthe
+        clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#\nDo
+        This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
+        \ *\n(Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*\nCall
+        your new `moveCloud(name)` function inside the event block, once for\neach
+        cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`\nfunction
+        is called many times."
+      CSD U6 params modify clouds_2018_instruction: "# Clouds\r\n\r\nThis program\nmakes
+        the clouds move when you blow on the sound sensor, but it's not finished.\r\n\r\n#\nDo
+        This\r\n* Create a new function `moveCloud(name)` that will move any cloud.\r\n
+        \ *\n(Hint: you will use almost all the same code as the `moveCloud0` function)\r\n*\nCall
+        your new `moveCloud(name)` function inside the event block, once for\neach
+        cloud name.\r\n * (Hint: this is similar to how the `loopCloud(name)`\nfunction
+        is called many times."
+      CSD U6 params modify planes_instruction: "# Multi-plane Controller\r\n\r\nThis\nprogram
+        moves the three planes using the board accelerometer and the on-screen\ncheck
+        boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create\na
+        new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)`\nfunction
+        inside the event block, such that it only moves when its checkbox\nis checked.\r\n\r\n_Challenge:
+        Right now the planes move way too fast.  Can\nyou figure out how to change
+        the code so they move more slowly?_"
+      CSD U6 params modify planes_2018_instruction: "# Multi-plane Controller\r\n\r\nThis\nprogram
+        moves the three planes using the board accelerometer and the on-screen\ncheck
+        boxes.  Right now, only the red plane works.\r\n\r\n# Do This\r\n* Create\na
+        new `movePlane(name)` function that can move any plane.\r\n* Call the `movePlane(name)`\nfunction
+        inside the event block, such that it only moves when its checkbox\nis checked.\r\n\r\n_Challenge:
+        Right now the planes move way too fast.  Can\nyou figure out how to change
+        the code so they move more slowly?_"
       CSDU4 - AppLab - 1_instruction: |-
         Read the documentation for penColor() and
         penWidth() before using them to draw the blue square.
@@ -1628,34 +1584,15 @@
       CSDU6 arrays variable_instruction: |-
         Write a program that displays a randomly
         chosen color from the array. (Click to see full instructions)
-      CSP Data Unit - Counting Multiple Things_instruction: |-
-        If you can count one
-        thing you can count multiple things\r
-        \r
-        Find out how many people like something
-        other than dogs and cats\r
-        \r
-        Count dogs\r
-        Count cats\r
-        Count total\r
-        Do
-        the math\r
-        \r
-        blank/ blank toal\r
-        \r
-        Can also use this to find percents
-        from this\r
-        \r
-        x% are dog lovers
-      CSP Data Unit -Counting Records - Easy Way_instruction: |
-        ReadRecords with specific
-        criteria \r
-        find the length of an array\r
-      CSP Data Unit -Counting Records - Hard Way_instruction: |
-        \r
-        1. ReadRecords
-        for all records\r
-        2. Way to loop through and count\r
+      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one\nthing
+        you can count multiple things\r\n\r\nFind out how many people like something\nother
+        than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo\nthe
+        math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents\nfrom
+        this\r\n\r\nx% are dog lovers"
+      CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific\ncriteria
+        \r\nfind the length of an array\r\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
+        all records\r\n2. Way to loop through and count\r\n"
       CSP U4 - JSON Object Intro - Bad Way_instruction: |-
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -1950,10 +1887,9 @@
         Add an else-if statement in order
         to tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      CSPU5_U3 - High Low - Else_instruction: |
-        Add an else statement so that the
-        program will tell the user when they are right and when they are wrong. (Click
-        to see full instructions)\r
+      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the\nprogram
+        will tell the user when they are right and when they are wrong. (Click\nto
+        see full instructions)\r\n"
       CSPU5_U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -2149,9 +2085,8 @@
         Keep track of how many heads (1's)
         your program generates and print the results to the screen. (Click to see
         full instructions)
-      CSPU5_U3 - Simulation - 3_instruction: |
-        Add functionality that counts how many
-        heads in a row are flipped. (Click to see full instructions)\r
+      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many\nheads
+        in a row are flipped. (Click to see full instructions)\r\n"
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -2581,46 +2516,29 @@
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: |-
-        Your school is holding a bake sale, and
-        you need to track the cost of making each cookie, the money paid, and the
-        total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r
-        \r
-        Write
-        the function cost, which takes in the number of cookies you intend to sell,
-        and returns the cost of making those cookies.\r
-        \r
-        Test your function by
-        calculating the cost of 42 cookies
-      Calc Design Recipe 3_instruction: |-
-        Write the function sales which takes in
-        the number of cookies sold, and produces the amount of money customers spent
-        to buy those cookies (each cookie is sold at $1.50).\r
-        \r
-        Test your function
-        by calculating the sales for 135 cookies
-      Calc Design Recipe 4_instruction: |-
-        Using the two functions we just wrote, write
-        the function profit, which takes in the number of cookies you sold, and gives
-        you back the total profit you make from selling your cookies, accounting for
-        the cost of baking them.\r
-        \r
-        Test your function by calculating the total
-        profit for 15 cookies.
+      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and\nyou
+        need to track the cost of making each cookie, the money paid, and the\ntotal
+        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\n\r\nWrite\nthe
+        function cost, which takes in the number of cookies you intend to sell,\nand
+        returns the cost of making those cookies.\r\n\r\nTest your function by\ncalculating
+        the cost of 42 cookies"
+      Calc Design Recipe 3_instruction: "Write the function sales which takes in\nthe
+        number of cookies sold, and produces the amount of money customers spent\nto
+        buy those cookies (each cookie is sold at $1.50).\r\n\r\nTest your function\nby
+        calculating the sales for 135 cookies"
+      Calc Design Recipe 4_instruction: "Using the two functions we just wrote, write\nthe
+        function profit, which takes in the number of cookies you sold, and gives\nyou
+        back the total profit you make from selling your cookies, accounting for\nthe
+        cost of baking them.\r\n\r\nTest your function by calculating the total\nprofit
+        for 15 cookies."
       Calc Free Play_instruction: |-
         Free Play: Write functions and algorithms of your
         own design!
-      Calc Rocket 1 (copy 1)_instruction: |
-        In the last puzzle you wrote a contract
-        for the function "rocket-height" that states it has a range of Number, domain
-        of Number, and should return the height of the rocket traveling at 15 m/s
-        after a given number of seconds. Let's write an example case now for the
-        height of the rocket at 3 seconds.\r
-        \r
-        \r
-        \r
-          \r
-        \r
+      Calc Rocket 1 (copy 1)_instruction: "In the last puzzle you wrote a contract\nfor
+        the function \"rocket-height\" that states it has a range of Number, domain\nof
+        Number, and should return the height of the rocket traveling at 15 m/s\nafter
+        a given number of seconds. Let's write an example case now for the\nheight
+        of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
       Calc Rocket 1_instruction: |-
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -2917,10 +2835,8 @@
         **Défi:** Utilise toutes les choses que tu as apprises pour créer cette image constituée de polygones, tous de côtés 40 pixels ?
 
         Besoin d'un indice ? Clique ici.
-      Course 4 Artist For Loops Challenge_a_instruction: |-
-        Utilise tout ce que tu as appris afin de créer cette image!\r
-        \r
-        Besoin d'un conseil? Clique ici.
+      Course 4 Artist For Loops Challenge_a_instruction: "Utilise tout ce que tu as
+        appris afin de créer cette image!\r\n\r\nBesoin d'un conseil? Clique ici."
       Course 4 Artist For Loops inspire_instruction: |-
         Idées pour l’activité libre : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.
 
@@ -3400,10 +3316,10 @@
         compté le carré de chaque nombre. Essaie de changer «Compteur ^ 2» en «Compteur
         ^ 3» pour compter le cube de chaque numéro (1, 8, 27, 64, 125, 216, 343, ...)
       Course 4 Play Labs For Loops 5a_instruction: "Dans ce puzzle, le chien va être
-        ton \nchronométreur.\\r\n\\r\nLe chien va compter de 0 à 30 en utilisant \"incrément\".
-        La variable \"incrément\" va commencer avec la valeur de 1.\\r\n\\r\nPeux-tu
+        ton \nchronométreur.\r\n\r\nLe chien va compter de 0 à 30 en utilisant \"incrément\".
+        La variable \"incrément\" va commencer avec la valeur de 1.\r\n\r\nPeux-tu
         faire en sorte que chaque\nfois que tu cliques sur le chien, l'incrément augmente
-        de 2? Clique sur la flèche \"avancer\" pour exécuter la boucle \"pour\".\\r\n\\r\nExécute
+        de 2? Clique sur la flèche \"avancer\" pour exécuter la boucle \"pour\".\r\n\r\nExécute
         la boucle quelques fois, en appuyant sur le chien avant\nchacune."
       Course 4 Play Labs For Loops 6_instruction: Tu te souviens qu'un nombre premier
         est un nombre entier qui n'est divisible que par lui-même et 1. Utilise la
@@ -3433,13 +3349,15 @@
       Course 4 Playlab For Loop Freeplay_instruction: 'Jeu libre : Utilisez tout ce
         que vous avez appris jusqu’ici pour faire un jeu qui inclut une boucle « for
         » !'
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Maintenant, ces deux personnages vont faire la course !  \r
-        \r Chacun d’eux se déplacera les étapes 'compteur' à un moment, mais leurs compteurs auront des valeurs différentes en raison de la boucle 'for'.  \r \r pouvez-vous changer l’incrément dans une des boucles afin que la course soit une équitable ?
+      Course 4 Playlab For Loops 4b_instruction: "Maintenant, ces deux personnages
+        vont faire la course !  \r\n\r Chacun d’eux se déplacera les étapes 'compteur'
+        à un moment, mais leurs compteurs auront des valeurs différentes en raison
+        de la boucle 'for'.  \r \r pouvez-vous changer l’incrément dans une des boucles
+        afin que la course soit une équitable ?"
       Course 4 Playlab For Loops 5b_instruction: Ajuste le pas de ces boucles "for"
         pour que les deux personnages terminent exactement au même endroit.
       Course 4 Playlab For Loops 6b_instruction: "Modifiez cette boucle «for » pour
-        créer un jeu amusant! \\r\n\\r\nAppuyez sur \"Exécuter\" et cliquez sur Madame
+        créer un jeu amusant! \r\n\r\nAppuyez sur \"Exécuter\" et cliquez sur Madame
         Licorne quatre fois pour gagner. "
       Course 4 SCF 1_instruction: Utilise les fonctions suggérées pour dessiner quatre
         rangées d'hexagones. Remarque comment nos lignes paires sont décalées vers
@@ -3491,28 +3409,19 @@
         une variable pour les côtés ? Chaque ligne doit mesurer 50 pixels.
       Course1BeePuzzle12_instruction: Recueille trois nectars et fabrique ensuite
         deux miels
-      Course1MazeAssessment1_instruction: |-
-        This is a test!\r
-        Move one way, then
-        another to get me to the pig
-      Course1MazeAssessment2_instruction: |-
-        This is a test!\r
-        Move one way, then
-        another to get me to the pig.
+      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
+        to get me to the pig"
+      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother
+        to get me to the pig."
       CourseF_PlayLab_vars1_instruction: 'Pour jouer à ce jeu, tu n''as besoin d''écrire
         aucun code, juste d''appuyer sur "Run"! '
-      CourseF_PlayLab_vars10_instruction: |-
-        Free Play time! Here are all of the variables
-        we've played with so far in this stage, as well as a few more in case you
-        want them. \r
-        \r
-        Notice that there are now so many blocks in our toolbox
-        that they need to be organized!  Here, we've put each piece into an appropriate
-        category.  Take some time to explore everything that is available. When you're
-        done browsing, make a game or story using repeats, variables, and events.  \r
-        \r
-        Hint:
-        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars10_instruction: "Free Play time! Here are all of the variables\nwe've
+        played with so far in this stage, as well as a few more in case you\nwant
+        them. \r\n\r\nNotice that there are now so many blocks in our toolbox\nthat
+        they need to be organized!  Here, we've put each piece into an appropriate\ncategory.
+        \ Take some time to explore everything that is available. When you're\ndone
+        browsing, make a game or story using repeats, variables, and events.  \r\n\r\nHint:\nscroll
+        down to see all the commands in the workspace."
       CourseF_PlayLab_vars2_instruction: La course dans ce dernier puzzle n'était
         pas très équitable! Change la variable "vitesse du chien" pour être sur de
         collecter plus de drapeaux que le chat. Le premier à collecter 10 drapeaux
@@ -3556,15 +3465,11 @@
         Now, turn around 180 degrees and draw the stair
         pattern again!
       D_Frozen_nested8_instruction: Spin that shape around 5 or 6 times in a circle.
-      D_Frozen_nested9_instruction: |-
-        Try playing around with what you've created.
-        Draw whatever you like!\r
-        - What happens if you use two different angles
-        in your stair step pattern?\r
-        - What happens if you make your diamond pattern
-        longer or shorter?\r
-        - What does it look like to draw two snowflakes on top
-        of one another?
+      D_Frozen_nested9_instruction: "Try playing around with what you've created.\nDraw
+        whatever you like!\r\n- What happens if you use two different angles\nin your
+        stair step pattern?\r\n- What happens if you make your diamond pattern\nlonger
+        or shorter?\r\n- What does it look like to draw two snowflakes on top\nof
+        one another?"
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -3635,28 +3540,22 @@
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: |-
-        Write a function called food-critic, which takes
-        in the name of a food and produces a String that says how you feel about that
-        food. For example, (food-critic “pizza”) might evaluate to “delicious”, but
-        (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two
-        foods to review, but you can you write more if you like!  Don’t forget to
-        add an “else” clause!\r
-        One example - and part of the definition -  has already
-        been done for you!
-      Eval Cond 7_instruction: |
-        Free Play: Write a function called green-shape, which
-        takes in the name of a shape and produces a solid green shape. Your function
-        should work with at least “circle”, “star” and “rectangle”, but you can add
-        other shapes if you like. You can choose the size of each shape. Don’t forget
-        to add an “else” clause!\r
-        One example - and part of the definition -  has
-        already been done for you!\r
-      Eval Cond 8_instruction: |
-        Free Play: Suppose you want to own a car at 21, or
-        have your own business by 30. Write a function called life-goals, which takes
-        in an age and produces a string that describes your life goals by then. Don’t
-        forget to add an “else” clause!\r
+      Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
+        the name of a food and produces a String that says how you feel about that\nfood.
+        For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
+        “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review,
+        but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne
+        example - and part of the definition -  has already\nbeen done for you!"
+      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes
+        in the name of a shape and produces a solid green shape. Your function\nshould
+        work with at least “circle”, “star” and “rectangle”, but you can add\nother
+        shapes if you like. You can choose the size of each shape. Don’t forget\nto
+        add an “else” clause!\r\nOne example - and part of the definition -  has\nalready
+        been done for you!\r\n"
+      Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave
+        your own business by 30. Write a function called life-goals, which takes\nin
+        an age and produces a string that describes your life goals by then. Don’t\nforget
+        to add an “else” clause!\r\n"
       Eval Contracts 1_instruction: |-
         Use the "star" function to produce a red star
         with a 60 pixel radius
@@ -3836,10 +3735,10 @@
       Find the Wizard_2018_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
-      Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
+      Food Fight!_instruction: "We've added one last function for you. \r\n\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
-        when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
+        when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
+        \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3\nto move
         to the next puzzle. "
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
@@ -3947,27 +3846,24 @@
         chaque flocon de neige une fois.
       Inspirational Artwork_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
         to know how our inspiration pattern was made? "
       InspirationalArtwork_instruction: Si cette image t'inspire, essaye de créer
         quelque chose de similaire. Sinon, crée quelque chose de ton invention.
       InspirationalArtwork_2018_instruction: Si cette image t'inspire, essaye de créer
         quelque chose de similaire. Sinon, crée quelque chose de ton invention.
-      'Internet Simulator: Broadcast Mode_instruction': |
-        Now use the Internet Simulator
-        to send the battleship moves. For setup, join a Room with your group, and
-        add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r
-      'Internet Simulator: Broadcast_instruction': |
-        Now use the Internet Simulator
-        to send the battleship moves. For setup, join a Room with your group, and
-        add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r
-      'Internet Simulator: Broadcast_2018_instruction': |
-        Now use the Internet Simulator
-        to send the battleship moves. For setup, join a Room with your group, and
-        add ships to your paper board for each opponent. When playing, all communication
-        must be done through the tool, so no talking, but have fun!\r
+      'Internet Simulator: Broadcast Mode_instruction': "Now use the Internet Simulator\nto
+        send the battleship moves. For setup, join a Room with your group, and\nadd
+        ships to your paper board for each opponent. When playing, all communication\nmust
+        be done through the tool, so no talking, but have fun!\r\n"
+      'Internet Simulator: Broadcast_instruction': "Now use the Internet Simulator\nto
+        send the battleship moves. For setup, join a Room with your group, and\nadd
+        ships to your paper board for each opponent. When playing, all communication\nmust
+        be done through the tool, so no talking, but have fun!\r\n"
+      'Internet Simulator: Broadcast_2018_instruction': "Now use the Internet Simulator\nto
+        send the battleship moves. For setup, join a Room with your group, and\nadd
+        ships to your paper board for each opponent. When playing, all communication\nmust
+        be done through the tool, so no talking, but have fun!\r\n"
       'Internet Simulator: DNS Mode_instruction': |-
         In this version of the Internet
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
@@ -3983,24 +3879,12 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      'Internet Simulator: Packets_instruction': |-
-        Develop a Protocol for Reliably
-        Sending a Message.\r
-        \r
-        Constraints:\r
-        - Packets may contain only 8 characters\r
-        -
-        Packets may drop with small probability\r
-        - Packets may not arrive in order
-      'Internet Simulator: Packets_2018_instruction': |-
-        Develop a Protocol for Reliably
-        Sending a Message.\r
-        \r
-        Constraints:\r
-        - Packets may contain only 8 characters\r
-        -
-        Packets may drop with small probability\r
-        - Packets may not arrive in order
+      'Internet Simulator: Packets_instruction': "Develop a Protocol for Reliably\nSending
+        a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 8 characters\r\n-\nPackets
+        may drop with small probability\r\n- Packets may not arrive in order"
+      'Internet Simulator: Packets_2018_instruction': "Develop a Protocol for Reliably\nSending
+        a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 8 characters\r\n-\nPackets
+        may drop with small probability\r\n- Packets may not arrive in order"
       'Internet Simulator: Routers_instruction': |-
         Send messages with your classmates
         (Click to see full instructions)
@@ -4254,9 +4138,8 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      KIKI GLJ Test Response_instruction: |
-        Look carefully at the code below.  What
-        do you think the plane will do when you click "Run"?\r
+      KIKI GLJ Test Response_instruction: "Look carefully at the code below.  What\ndo
+        you think the plane will do when you click \"Run\"?\r\n"
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -4679,11 +4562,10 @@
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      NetSim Standalone Broadcast_instruction: |
-        In this version of the Internet Simulator,
-        you can connect to up to 5 other people in a room. When you send messages
-        in the room, everyone receives them. What are some of the challenges of this
-        system, and how might you solve them?\r
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
       NetSim Standalone Classroom Routers_instruction: |-
         In this version of the Internet
         Simulator, everyone connects to a router and has a specific address. To send
@@ -4705,14 +4587,11 @@
         gets dropped. In this version of the Internet Simulator, there is a 10% chance
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
-      NetSim Standalone Routers Addresses_instruction: |-
-        For this activity, connect
-        to a router with the others in your group. Important note: The router will
-        only properly route messages where the first 4 bits are the To: address and
-        the second 4 bits are the From: address.\r
-        \r
-        [TODO: NetSim needs to support
-        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
       NetSim Standalone SendAB_instruction: |-
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -4786,17 +4665,10 @@
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
         done, click Finish to let friends try your game on their phones.
-      Ninjacat Demo B (copy 1)_instruction: |
-        \r
-        Let’s begin by exploring a simple
-        videogame, and then figuring out how it works. You can use the arrow keys
-        to move the ninja left, right and jump - try to catch the unicorn and avoid
-        the dragon!\r
-        \r
-        \r
-        \r
-          \r
-        \r
+      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame,
+        and then figuring out how it works. You can use the arrow keys\nto move the
+        ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
+        \ \r\n\r\n"
       Ninjacat Demo B_instruction: |-
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -4810,9 +4682,8 @@
       October15 JoL 1_instruction: |-
         Program the artist to design a face for your
         jack-o-lantern!
-      October15 bat_instruction: |
-        Freeplay: Here are some functions to play with.  Can
-        you draw a bat?\r
+      October15 bat_instruction: "Freeplay: Here are some functions to play with.
+        \ Can\nyou draw a bat?\r\n"
       October15 ghost 1_instruction: |-
         Give the ghost eyes, using the "draw a circle"
         function.
@@ -4914,13 +4785,10 @@
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: |-
-        Here's your Big Game as you last left it.
-        Try clicking the Remix button to spin off a new remix of your project.\r
-        \r
-        Any
-        changes you make after you click Remix will be saved on your new remix and
-        not on your main Big Game.
+      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.\nTry
+        clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny\nchanges
+        you make after you click Remix will be saved on your new remix and\nnot on
+        your main Big Game."
       PDAlg Design Recipe Delete_instruction: |-
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -4981,11 +4849,9 @@
         Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to
         see full instructions)
-      PS copy 2-3 Bee Conditionals 5_instruction: |-
-        Be careful not to collect nectar
-        from a purple flower if it doesn't have any. \r
-        You must first check if
-        the nectar is equal to 1 using the `if nectar` block.
+      PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar\nfrom
+        a purple flower if it doesn't have any. \r\nYou must first check if\nthe nectar
+        is equal to 1 using the `if nectar` block."
       PS predictive Applab level test_instruction: 'Here are some instructions. '
       Pattern Bee 1_instruction: |-
         What a strange field of goodies! I wonder if there's
@@ -5170,11 +5036,11 @@
       Ryan Test Locked Blocks_instruction: Voici une fonction appelée «Patrouille».
         Modifie-la pour déplacer le Chat vers le haut de 400 pixels, puis vers le
         bas de 400 pixels.
-      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\\r\n\\r\nUse
+      Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
-        move to the next puzzle. "
+        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
+        \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move
+        to the next puzzle. "
       RyanTest3_instruction: |-
         This level has shape-shifting turned on! Refresh to
         see different variants.
@@ -5182,10 +5048,8 @@
         Draw a 3x3 grid to the front and right
         of the turtle as efficiently as possible. The turtle should end at its original
         location, facing its original direction. (Click to see full instructions)
-      SG U3L03 - draw rect function_instruction: |-
-        Write a function called drawRectangle().\r
-        (Click
-        to see full instructions)
+      SG U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
+        see full instructions)"
       SG U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -5441,38 +5305,25 @@
         et du bloc «Avancer». Chaque côté doit mesurer 100 pixels.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test embedded Blockly in instructions_instruction: |-
-        As a block element, we
-        should be able to include XML representing a valid Blockly block or blocks.\r
-        \r
-        <xml>\r
-          <block
-        type="draw_move_by_constant">\r
-            <title name="DIR">moveForward</title>\r
-            <title
-        name="VALUE">100</title>\r
-          </block>\r
-        </xml>\r
-        \r
-        We also support
-        Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title
-        name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>.
-        The difference in input format being that this one is embedded within a paragraph,
-        whereas the previous one is in a text block of its own. The difference in
-        output is comparable.
+      Test embedded Blockly in instructions_instruction: "As a block element, we\nshould
+        be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n
+        \ <block\ntype=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n
+        \   <title\nname=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also
+        support\nBlockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title\nname=\"DIR\">moveForward</title><title
+        name=\"VALUE\">100</title></block></xml>.\nThe difference in input format
+        being that this one is embedded within a paragraph,\nwhereas the previous
+        one is in a text block of its own. The difference in\noutput is comparable."
       Test embedded K1 Blockly in instructions_instruction: |-
         Use three `move west`
         blocks and one `pick corn` block to solve this puzzle.
       Test of comment block_instruction: Drag out the subgoal label block you want.
-      Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
-        many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
+      Testing Quantum Farmer_instruction: "Wow, look at that! \r\n\r\nI don't know\nhow
+        many shovelfuls of dirt this hole needs.  \r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
-      Text Compression 1_instruction: |
-        Look for patterns (repeated words or phrases)
-        in the text. Enter the patterns you see into the dictionary on the right.
-        As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern.\r
-        \r
+      Text Compression 1_instruction: "Look for patterns (repeated words or phrases)\nin
+        the text. Enter the patterns you see into the dictionary on the right.\nAs
+        you type entries into the dictionary, the symbol for the entry is inserted\ninto
+        the text in place of the pattern.\r\n\r\n"
       The Vigenere Cipher Widget_instruction: Consignes
       The Vigenere Cipher_instruction: Consignes
       Total Artist Clone Me_instruction: |-
@@ -5509,16 +5360,10 @@
       U2L04 - NetSim Routers with Addresses_instruction: |-
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: |-
-        Develop a Protocol
-        for Reliably Sending a Message.\r
-        \r
-        Constraints:\r
-        - Packets may contain
-        only 6 characters\r
-        - Packets may drop with small probability\r
-        - Packets
-        may not arrive in order
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |-
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -5529,29 +5374,23 @@
         can't see the other students' addresses.  Instead, one of you must act as
         a name service, to help share addresses with each other.
       U2L14 frequency random_instruction: Test
-      U2L2 NetSim Hub Mode_instruction: |
-        Now use the Internet Simulator to send the
-        battleship moves. For setup, join a Room with your group, and add ships to
-        your paper board for each opponent. When playing, all communication must be
-        done through the tool, so no talking, but have fun!\r
+      U2L2 NetSim Hub Mode_instruction: "Now use the Internet Simulator to send the\nbattleship
+        moves. For setup, join a Room with your group, and add ships to\nyour paper
+        board for each opponent. When playing, all communication must be\ndone through
+        the tool, so no talking, but have fun!\r\n"
       U2L3 NetSim Hub Mode_instruction: |-
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: |-
-        For this activity, connect to a
-        router with the others in your group. Important note: The router will only
-        properly route messages where the first 4 bits are the To: address and the
-        second 4 bits are the From: address.\r
-        \r
-        [TODO: NetSim needs to support
-        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
-      U2L5 NetSim Classroom Internet_instruction: |
-        For this activity, connect to
-        a router with the others in your group. The Internet Simulator now provides
-        a place for you to put the To and From addresses, so you don't have to type
-        out the bits manually.\r
-        \r
+      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a\nrouter
+        with the others in your group. Important note: The router will only\nproperly
+        route messages where the first 4 bits are the To: address and the\nsecond
+        4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to\na
+        router with the others in your group. The Internet Simulator now provides\na
+        place for you to put the To and From addresses, so you don't have to type\nout
+        the bits manually.\r\n\r\n"
       U2L7 NetSim Need for Packets_instruction: |-
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -5789,10 +5628,9 @@
         Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
-      U3 - High Low - Else_instruction: |
-        Add an else statement so that the program
-        will tell the user when they are right and when they are wrong. (Click to
-        see full instructions)\r
+      U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill
+        tell the user when they are right and when they are wrong. (Click to\nsee
+        full instructions)\r\n"
       U3 - High Low - If_instruction: |-
         Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
@@ -5996,36 +5834,26 @@
       U3 - Practice Create Performance Task_instruction: |-
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
-      U3 - Read Record - 1.2_instruction: |
-        Console.log the records returned by a
-        call to readRecords. (Click to see full instructions)\r
-      U3 - Read Record - 1.5_instruction: |
-        Console.log the records returned by a
-        call to readRecords. (Click to see full instructions)\r
-      U3 - Read Record - 1.6_instruction: |
-        Console.log the records returned by a
-        call to readRecords. (Click to see full instructions)\r
-      U3 - Read Record - 1_instruction: |
-        Console.log the records returned by a call
-        to readRecords. (Click to see full instructions)\r
-      U3 - Read Record - 2_instruction: |
-        Change the table name so that the records
-        are read from the new table.(Click to see full instructions)\r
-      U3 - Read Record - 3_instruction: |
-        Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r
-      U3 - Read Record - 4.1_instruction: |
-        Print out each record return from the
-        readRecords call individually. (Click to see full instructions)\r
-      U3 - Read Record - 4_instruction: |
-        Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r
-      U3 - Read Record - 5 and half_instruction: |
-        Print out the name of each movie
-        in the records return from the readRecords call. (Click to see full instructions)\r
-      U3 - Read Record - 5_instruction: |
-        Print out the name of each movie in the
-        records return from the readRecords call. (Click to see full instructions)\r
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
+        readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
+        call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
+        the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
+        return from the readRecords call. (Click to see full instructions)\r\n"
       U3 - Return Values - constrainTurtle_instruction: |-
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
@@ -6061,24 +5889,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
-      U3 - Search Terms - 1_instruction: |
-        Create an array of all the movies made
-        in 2008 and print it out. (Click to see full instructions)\r
-      U3 - Search Terms - 2_instruction: |
-        Print out all the movies with year 2008
-        using the readRecords search terms. (Click to see full instructions)\r
-      U3 - Search Terms - 3_instruction: |
-        Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r
-      U3 - Search Terms - 4_instruction: |
-        Print whether or not there are movies matching
-        the search criteria (Click to see full instructions)\r
-      U3 - Search Terms - 5_instruction: |
-        Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r
-      U3 - Search Terms - 6_instruction: |
-        Print out the cities that are in California
-        or have a population of 2,000,000. (Click to see full instructions)\r
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
+        2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
+        the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simple Drawing - Comments_instruction: Do this
       U3 - Simple Drawing - Ellipse and No Fill_instruction: Do this
       U3 - Simple Drawing - Fill_instruction: Do This
@@ -6108,9 +5930,8 @@
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
         instructions)
-      U3 - Simulation - 3_instruction: |
-        Add functionality that counts how many heads
-        in a row are flipped. (Click to see full instructions)\r
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
+        a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |-
         Update your while loop's condition so the
         the coin flips until there are three heads in a row. (Click to see full instructions)
@@ -6267,10 +6088,8 @@
         Run a program with two buttons that have the
         same id to see the warning message in the console. Change the ids to make
         the program run without getting a warning message.
-      U3L03 - draw rect function_instruction: |-
-        Write a function called drawRectangle().\r
-        (Click
-        to see full instructions)
+      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click\nto
+        see full instructions)"
       U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -6491,16 +6310,13 @@
       U3L13 - Debug Id Problem_instruction: |-
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
-      U3L13 - Debug Id plus logic problem_instruction: |-
-        The last problem was an example
-        of syntax error.  App Lab did not understand which object it should be listening
-        to for a "click" event so it showed an error message in the console to let
-        you know.  Another kind of error is a logical error - the program is valid,
-        but it's not doing what you want it to do.\r
-        \r
-        This program has 2 errors.
-        A (tricky) syntax error and logical error.  Find them, fix them, and make
-        the program work as expected.
+      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example\nof
+        syntax error.  App Lab did not understand which object it should be listening\nto
+        for a \"click\" event so it showed an error message in the console to let\nyou
+        know.  Another kind of error is a logical error - the program is valid,\nbut
+        it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.\nA
+        (tricky) syntax error and logical error.  Find them, fix them, and make\nthe
+        program work as expected."
       U3L13 - Debugging 1_instruction: |-
         Debug the program by verifying your IDs are
         being referenced properly. (Click to see full instructions)
@@ -6791,16 +6607,12 @@
       U3L19 - Target Clicker App_instruction: |-
         Investigate the new elements of the
         'chaser-game'
-      U3L19 - do concatenate string with var_instruction: |
-        We've given you a piece
-        of code from the previous screen.  Try changing the value assigned to foo
-        to see the string change. \r
-        Do this: \r
-        1. Try changing the value assigned
-        to foo to see the string change. \r
-        2. By only modifying the lines of code
-        that were given to you, try to get the output to say: “The value of foo is:
-        9.  And isn’t that fine.” \r
+      U3L19 - do concatenate string with var_instruction: "We've given you a piece\nof
+        code from the previous screen.  Try changing the value assigned to foo\nto
+        see the string change. \r\nDo this: \r\n1. Try changing the value assigned\nto
+        foo to see the string change. \r\n2. By only modifying the lines of code\nthat
+        were given to you, try to get the output to say: “The value of foo is:\n9.
+        \ And isn’t that fine.” \r\n"
       U3L19 - fix the var name syntax error v2_instruction: |-
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -6822,18 +6634,14 @@
         Add another variable called
         "lives" and set the value to 3. Print the value of the variable to the console.
         (Click to see full instructions)
-      U3L19 - try out console log_instruction: |-
-        Try out console.log.  Do this: replace
-        the statement write("foo is: " + foo) with console.log("foo is: " + foo).  Run
-        the program and you should see the output show up in the console area below
-        the workspace.  Then try adding a few more console.log statements.  Display
-        some text.  Make another variable and display that.  \r
-        The app screen will
-        be blank -- that's the point.  With console.log you can test output behind
-        the scenes in a way the user cannot see.  \r
-        \r
-        \r
-        GIF: U3L19-useconsolelog.gif
+      U3L19 - try out console log_instruction: "Try out console.log.  Do this: replace\nthe
+        statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
+        \ Run\nthe program and you should see the output show up in the console area
+        below\nthe workspace.  Then try adding a few more console.log statements.
+        \ Display\nsome text.  Make another variable and display that.  \r\nThe app
+        screen will\nbe blank -- that's the point.  With console.log you can test
+        output behind\nthe scenes in a way the user cannot see.  \r\n\r\n\r\nGIF:
+        U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |-
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -6984,11 +6792,9 @@
         You are given the string "Wisdom begins
         with wonder." Use the string.substring(begin, end) function to print "begin"
         and "nder" to the console.
-      U3L25 String Parsing 5_instruction: |
-        Fill in the function, findBeginNder()
-        to get the strings "begin" and "nder" from a sentence no matter where
-        in the sentence they exist.\r
-        Print the strings and their index to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
       U3L25 String Parsing 6_instruction: |-
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -7178,33 +6984,24 @@
       U4 - Objects - writeWrap_instruction: |-
         Use the wrap function to prevent currentIndex
         from leaving the bounds of your array. (Click to see full instructions)
-      U4 - Read Record - 1.2_instruction: |
-        Place a console.log command below the
-        readRecords command. (Click to see full instructions)\r
-      U4 - Read Record - 1.3_instruction: |
-        Add a console.log command inside the callback
-        function. (Click to see full instructions)\r
-      U4 - Read Record - 1_instruction: |
-        Use console.log to display the records returned
-        by a call to readRecords. (Click to see full instructions)\r
-      U4 - Read Record - 2_instruction: |
-        Change the table name so that the records
-        are read from the new table. (Click to see full instructions)\r
-      U4 - Read Record - 3_instruction: |
-        Change the name of the table in a readRecords
-        command to read from a table that does not exist. (Click to see full instructions)\r
-      U4 - Read Record - 4.1_instruction: |
-        Use indexes and dot notation to reference
-        values in the response from the database. (Click to see full instructions)\r
-      U4 - Read Record - 4_instruction: |
-        Print out each record return from the readRecords
-        call individually. (Click to see full instructions)\r
-      U4 - Read Record - 5_instruction: |
-        Using a for loop, display the title of each
-        movie in your database. (Click to see full instructions)\r
-      U4 - Read Record - part 1 - template_instruction: |
-        Use console.log to display
-        the records returned by a call to readRecords. (Click to see full instructions)\r
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
+        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
+        (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
+        a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
+        in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
+        in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
+        records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -7268,16 +7065,14 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L06 Data Storage 1_instruction: |
-        Fill in your name instead of "Enter Your
-        Name", run the app and click the button. Run it multiple times with different
-        names! Watch the console and use the ‘View Data” button to see how the table
-        is updated. As you play around make sure you can explain the purpose of each
-        of the circled parts of the diagram.\r
-        \r
+      U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
+        run the app and click the button. Run it multiple times with different\nnames!
+        Watch the console and use the ‘View Data” button to see how the table\nis
+        updated. As you play around make sure you can explain the purpose of each\nof
+        the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none
         we started. Add a text label to collect the users name and use that as\nthe
-        data input for the record.\\r\n\\r\nRun the app and click the button multiple\ntimes
+        data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes
         and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |-
         We want to improve the user experience.
@@ -7298,20 +7093,13 @@
       U4L15 Read Data 1_instruction: |-
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: |-
-        Student should create a sentence which puts
-        together all the pieces from a record.\r
-        \r
-        <<Name>> is <<Age>> years old
-        and like <<Food>>
-      U4L15 Read Data 3_instruction: |
-        Print the sentence using the first JSON object
-        in the array\r
-        \r
-      U4L15 Read Data 4_instruction: |-
-        \r
-        Use a random record from the list of records
-        to display your sentence.
+      U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether
+        all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like
+        <<Food>>"
+      U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin
+        the array\r\n\r\n"
+      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
+        display your sentence."
       U5 if-else-if movie example_instruction: |-
         Add an else-if statement in order
         to tell the user if their guess is high or low instead of just wrong. (Click
@@ -7393,30 +7181,27 @@
         the right. As you type entries into the dictionary, the symbol for the entry
         is inserted into the text in place of the pattern.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests
-      aE1_instruction: "Tu as choisi de faire une serviette carrée ! \\r\n\\r\nPour
+      aE1_instruction: "Tu as choisi de faire une serviette carrée ! \r\n\r\nPour
         terminer, trace un carré de 20 pixels de côté. "
       aE2_instruction: Si tu places ta boucle de carré à l'intérieur d'une autre boucle,
         on appelle ça une boucle imbriquée. Que faut-il ajouter à ta boucle externe
         pour s'assurer que les 14 serviettes sont bien alignées côte à côte ?
-      aE3_instruction: |-
-        Nous devons avoir une nappe!  \r
-        \r
-        Prenez votre rangée de 14 serviettes et cousez-les ensemble grâce à une autre **boucle externe** pour fabriquer une nappe.
+      aE3_instruction: "Nous devons avoir une nappe!  \r\n\r\nPrenez votre rangée
+        de 14 serviettes et cousez-les ensemble grâce à une autre **boucle externe**
+        pour fabriquer une nappe."
       aE3alternate_instruction: Alternative
       aE3alternateB_instruction: Alternative
       aE4_instruction: Alternative
       aE5_instruction: Exemple de puzzle avec la forme la plus difficile.
       aE6_instruction: 'Combien de fois dois-tu boucler cela pour dessiner un demi-cercle? '
-      aE7_instruction: |-
-        Si tu crées une autre boucle comme celle-ci, mais que tu tournes à gauche au lieu de tourner à droite, que se passe-t-il? \r
-        \r
-        Peux-tu répéter le tout pour dessiner cette vague?
-      aE8_instruction: |-
-        Maintenant, faisons une boucle qui répète la totalité du programme 4 fois
-        pour créer ce cadre photo. Attention aux coins, tu ne peux pas juste tourner de 90 degrés!
-        \r
-        \r
-        Si une boucle répétant 60 fois un virage de 3 degrés crée un demi-cercle, lequel de ces blocs de code créera un quart de cercle supplémentaire pour les coins?
+      aE7_instruction: "Si tu crées une autre boucle comme celle-ci, mais que tu tournes
+        à gauche au lieu de tourner à droite, que se passe-t-il? \r\n\r\nPeux-tu répéter
+        le tout pour dessiner cette vague?"
+      aE8_instruction: "Maintenant, faisons une boucle qui répète la totalité du programme
+        4 fois\npour créer ce cadre photo. Attention aux coins, tu ne peux pas juste
+        tourner de 90 degrés!\n\r\n\r\nSi une boucle répétant 60 fois un virage de
+        3 degrés crée un demi-cercle, lequel de ces blocs de code créera un quart
+        de cercle supplémentaire pour les coins?"
       aEfreeplay_instruction: Activité libre!
       allHallows2017_instruction: |-
         Trap the Code.org employees in the crayon box
@@ -7520,18 +7305,15 @@
         Use the **"when touches"** event and the "add behavior" block to make
         Daisy do something fun when she gets the carrot.
       behaviors pet test 3_instruction: "**It's time to make your own virtual pet!**\nYou
-        can change whatever code you want to to make your own pet. Here are some\nideas:\\r\n*
-        Can you make your pet start a new behavior when you click on it?\\r\n*\nCan
-        you make your pet run away when you drag the vacuum to it?\\r\n* Can you\nadd
+        can change whatever code you want to to make your own pet. Here are some\nideas:\r\n*
+        Can you make your pet start a new behavior when you click on it?\r\n*\nCan
+        you make your pet run away when you drag the vacuum to it?\r\n* Can you\nadd
         other animal friends to your pet's area? "
-      behaviors pet test_instruction: |-
-        Last time, you practiced using "behaviors"
-        to make a sprite do something forever. This time, we will use behaviors to
-        make a virtual pet. \r
-        \r
-        This dog's name is Daisy. Daisy LOVES to snack
-        on carrots. Add the "drag and drop" behavior to the carrot so you can move
-        it to her.
+      behaviors pet test_instruction: "Last time, you practiced using \"behaviors\"\nto
+        make a sprite do something forever. This time, we will use behaviors to\nmake
+        a virtual pet. \r\n\r\nThis dog's name is Daisy. Daisy LOVES to snack\non
+        carrots. Add the \"drag and drop\" behavior to the carrot so you can move\nit
+        to her."
       behaviors_caley_instruction: Clone this level and make your own blocks!
       ben's first level_instruction: Clone this level and make your own blocks!
       birdsDebugVideo1_instruction: |-
@@ -7677,12 +7459,9 @@
         Collect all of the corn and lettuce,
         then pick the pumpkin.
       conditionals_forvideo_playlab_instruction: Score as many points as you can!
-      course1_artist_loops_challenge1_instruction: |-
-        You can use a loop to draw many
-        lines in a row.\r
-        \r
-        Can you draw a house? Make it look just the way you
-        like it!  Try looking for patterns that repeat!
+      course1_artist_loops_challenge1_instruction: "You can use a loop to draw many\nlines
+        in a row.\r\n\r\nCan you draw a house? Make it look just the way you\nlike
+        it!  Try looking for patterns that repeat!"
       course1_artist_loops_challenge2_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7850,12 +7629,10 @@
       course3_maze_until_challenge1_instruction: |-
         No hints, just challenge. Get the
         zombie to the sunflower.
-      course3_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
+      course3_playLab_challenge1_instruction: "Something should happen when you get\nenough
+        points or when you run out of points. Add some code to the `win game`\nand
+        `lose game` functions to make the game work the way it should. \r\nClick\nthe
+        hints for ideas!"
       course3_playlab_challenge2_instruction: |-
         Can you figure out how this "Fortune
         Teller" app works? Click `MORE` to see your challenges.
@@ -8116,16 +7893,11 @@
       courseA_collector_loops_challenge2kp_2018_instruction: |-
         Collect at least **3**
         pieces of treasure to pass this level.
-      courseA_collector_preLoops1_instruction: |-
-        This is Laurel the Adventurer! \r
-        \r
-        Press
-        "Run" to see her walk up to the treasure and grab it.
-      courseA_collector_preLoops2_instruction: |-
-        Great!  Now you get to add code yourself!  \r
-        \r
-        Snap
-        a `get treasure` block to the bottom of the program and click "Run".
+      courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \r\n\r\nPress\n\"Run\"
+        to see her walk up to the treasure and grab it."
+      courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!
+        \ \r\n\r\nSnap\na `get treasure` block to the bottom of the program and click
+        \"Run\"."
       courseA_collector_preLoops3_instruction: |-
         Snap two `E -->` blocks and one `get
         treasure` block to the bottom of the program, then click "Run".
@@ -8544,22 +8316,16 @@
       courseB_iceage_loops9_instruction: |-
         The acorn is so far away! Can you use loops
         to help Scrat get there?
-      courseB_maze_seq1_instruction: |-
-        Play with these blocks to see what they make
-        the bird do! \r
-        \r
-        Get the bird to the pig to complete the level.
+      courseB_maze_seq1_instruction: "Play with these blocks to see what they make\nthe
+        bird do! \r\n\r\nGet the bird to the pig to complete the level."
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq10_2018_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Now get that pig any way you can!
       courseB_maze_seq12_2018_instruction: Now get that pig any way you can!
-      courseB_maze_seq1_2018_instruction: |-
-        Play with these blocks to see what they
-        make Scrat do! \r
-        \r
-        Get Scrat to the acorn to complete the level.
+      courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they\nmake
+        Scrat do! \r\n\r\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: |-
         A bug! Fix the code to get Scrat to the
@@ -8641,18 +8407,12 @@
       courseB_playlab_events5_2018_instruction: |-
         Now add an event so that the knight
         runs away from the dragon when you press the right arrow.
-      courseB_playlab_events6_instruction: |-
-        Help your knight get all of the flags!\r
-        \r
-        To
-        do this, you'll need to add events to help the knight move up, down, left,
-        and right.
-      courseB_playlab_events6_2018_instruction: |-
-        Help your knight get all of the
-        flags!\r
-        \r
-        To do this, you'll need to add events to help the knight move
-        up, down, left, and right.
+      courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo\ndo
+        this, you'll need to add events to help the knight move up, down, left,\nand
+        right."
+      courseB_playlab_events6_2018_instruction: "Help your knight get all of the\nflags!\r\n\r\nTo
+        do this, you'll need to add events to help the knight move\nup, down, left,
+        and right."
       courseB_playlab_events7_instruction: |-
         Make this game fun by setting the knight
         to vanish when he runs into the dragon on his way to get the flags!  Play
@@ -8779,69 +8539,48 @@
         The `repeat forever` block allows
         you to run code over and over forever.  Use this block to move Chomp the Dino
         (actor 2) up and down by 400 pixels forever.
-      courseC_PlayLab_events8_instruction: |-
-        Can you have Waddles (actor 1) play a
-        "hit" sound and say "Ouch!" if he runs into Chomp? \r
-        When you're done,
-        play the game to make that happen.
-      courseC_PlayLab_events8_2018_instruction: |-
-        Can you have Waddles (actor 1) play
-        a "hit" sound and say "Ouch!" if he runs into Chomp? \r
-        When you're
-        done, play the game to make that happen.
-      courseC_PlayLab_events9_instruction: |-
-        Can you add a block to score a point
-        when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
-        \r
-        Play the game and move Waddles with the arrows until you score!
-      courseC_PlayLab_events9_2018_instruction: |-
-        Can you add a block to score a point
-        when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
-        \r
-        Play the game and move Waddles with the arrows until you score!
-      courseC_PlayLab_eventsA_instruction: |-
-        Add blocks to the `when run` event to
-        change the background scene and the speed of Waddles the Penguin.\r
-        \r
-        Play
-        the game and move Waddles with the arrows until you score.
-      courseC_PlayLab_eventsA_2018_instruction: |-
-        Add blocks to the `when run` event
-        to change the background scene and the speed of Waddles the Penguin.\r
-        \r
-        Play
-        the game and move Waddles with the arrows until you score.
+      courseC_PlayLab_events8_instruction: "Can you have Waddles (actor 1) play a\n\"hit\"
+        sound and say \"Ouch!\" if he runs into Chomp? \r\nWhen you're done,\nplay
+        the game to make that happen."
+      courseC_PlayLab_events8_2018_instruction: "Can you have Waddles (actor 1) play\na
+        \"hit\" sound and say \"Ouch!\" if he runs into Chomp? \r\nWhen you're\ndone,
+        play the game to make that happen."
+      courseC_PlayLab_events9_instruction: "Can you add a block to score a point\nwhen
+        Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\r\nPlay
+        the game and move Waddles with the arrows until you score!"
+      courseC_PlayLab_events9_2018_instruction: "Can you add a block to score a point\nwhen
+        Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?\n\r\nPlay
+        the game and move Waddles with the arrows until you score!"
+      courseC_PlayLab_eventsA_instruction: "Add blocks to the `when run` event to\nchange
+        the background scene and the speed of Waddles the Penguin.\r\n\r\nPlay\nthe
+        game and move Waddles with the arrows until you score."
+      courseC_PlayLab_eventsA_2018_instruction: "Add blocks to the `when run` event\nto
+        change the background scene and the speed of Waddles the Penguin.\r\n\r\nPlay\nthe
+        game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: |-
         Create your own story. When you're
         done, click "Finish" to share with friends. See story ideas in the hints.
       courseC_PlayLab_eventsFP_2018_instruction: |-
         Create your own story. When you're
         done, click "Finish" to share with friends. See story ideas in the hints.
-      courseC_PlayLab_events_challenge1_instruction: |-
-        Use a new block to make Waddles
-        automatically move back to the start when he runs into the Dinosaur and when
-        he scores a point. \r
-        Play the game and move Waddles with the arrows until
-        you score enough points.
-      courseC_PlayLab_events_challenge1_2018_instruction: |-
-        Use a new block to make
-        Waddles automatically move back to the start when he runs into the Dinosaur
-        and when he scores a point. \r
-        Play the game and move Waddles with the arrows
-        until you score enough points.
-      courseC_PlayLab_events_challenge1_xy_blocks_instruction: |-
-        Here is a new block
-        that is somewhat complicated. Use it to move Waddles back to the start when
-        he runs into the Dinosaur and when he scores a point. This will make your
-        game more challenging and fun!\r
-        \r
-        Play the game and move Waddles with
-        the arrows until you score enough points.
+      courseC_PlayLab_events_challenge1_instruction: "Use a new block to make Waddles\nautomatically
+        move back to the start when he runs into the Dinosaur and when\nhe scores
+        a point. \r\nPlay the game and move Waddles with the arrows until\nyou score
+        enough points."
+      courseC_PlayLab_events_challenge1_2018_instruction: "Use a new block to make\nWaddles
+        automatically move back to the start when he runs into the Dinosaur\nand when
+        he scores a point. \r\nPlay the game and move Waddles with the arrows\nuntil
+        you score enough points."
+      courseC_PlayLab_events_challenge1_xy_blocks_instruction: "Here is a new block\nthat
+        is somewhat complicated. Use it to move Waddles back to the start when\nhe
+        runs into the Dinosaur and when he scores a point. This will make your\ngame
+        more challenging and fun!\r\n\r\nPlay the game and move Waddles with\nthe
+        arrows until you score enough points."
       courseC_artist_loop1_instruction: Let's add some pizazz!
       courseC_artist_loop1_2018_instruction: Let's add some pizazz!
-      courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\\r\n\\r\nThe zombie\nwants
+      courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\r\n\r\nThe zombie\nwants
         to draw a line from where he is to the garden of sunflowers.  Can you\nhelp
-        him?  \\r\n*(The garden is 250 pixels away)*  "
+        him?  \r\n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a_instruction: "Get the artist to the center of the play\narea,
         then draw a bird using a sticker. "
       courseC_artist_loops1a_2018_instruction: "Get the artist to the center of the\nplay
@@ -8867,19 +8606,14 @@
         around the border?
       courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
       courseC_artist_loops4a_2018_instruction: Try jumping forward by 75 pixels.
-      courseC_artist_loops5_instruction: |
-        Great!  Now it's time to make a fence
-        inside to keep the animals out.   \r
-        \r
+      courseC_artist_loops5_instruction: "Great!  Now it's time to make a fence\ninside
+        to keep the animals out.   \r\n\r\n"
       courseC_artist_loops5a_instruction: Try new stickers!
       courseC_artist_loops5a_2018_instruction: Try new stickers!
       courseC_artist_loops5b_instruction: Try adding lines!
       courseC_artist_loops5b_2018_instruction: Try adding lines!
-      courseC_artist_loops6_instruction: |
-        What should the zombie put inside of the
-        garden?  \r
-        \r
-        \r
+      courseC_artist_loops6_instruction: "What should the zombie put inside of the\ngarden?
+        \ \r\n\r\n\r\n"
       courseC_artist_loops6a_instruction: Add another sticker!
       courseC_artist_loops6a_2018_instruction: Add another sticker!
       courseC_artist_loops7a_instruction: Play with the loops and angles.
@@ -8927,11 +8661,9 @@
         chase her pet.
       courseC_artist_prog5_instruction: 'Cette maison a besoin d''un toit ! Dessine
         le triangle.  Indice : les trois côtés sont de la même longueur.'
-      courseC_artist_prog5_2018_instruction: |-
-        Finish this tag by drawing a rectangle
-        around the outside.\r
-        (The long sides are 200 pixels each and the short sides
-        are each 100 pixels)
+      courseC_artist_prog5_2018_instruction: "Finish this tag by drawing a rectangle\naround
+        the outside.\r\n(The long sides are 200 pixels each and the short sides\nare
+        each 100 pixels)"
       courseC_artist_prog6_instruction: Draw this diamond with 200 pixel sides.
       courseC_artist_prog6_2018_instruction: Draw this diamond with 200 pixel sides.
       courseC_artist_prog7_instruction: |-
@@ -8940,14 +8672,10 @@
       courseC_artist_prog7_2018_instruction: |-
         **Challenge:** This tag is a special
         one!  Can you figure out how to draw the outline?
-      courseC_artist_prog8_instruction: |-
-        One more tag.  This is a triangle for Pi.\r
-        (Each
-        side is 150 pixels)
-      courseC_artist_prog8_2018_instruction: |-
-        One more tag.  This is a triangle for
-        Pi.\r
-        (Each side is 150 pixels)
+      courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each\nside
+        is 150 pixels)"
+      courseC_artist_prog8_2018_instruction: "One more tag.  This is a triangle for\nPi.\r\n(Each
+        side is 150 pixels)"
       courseC_artist_prog_challenge1-doghouse_instruction: |-
         Let's build a dog house
         for Jorge!
@@ -9328,12 +9056,9 @@
         Sometimes there is more
         than one way to solve the same problem. Sometimes it's faster to go backwards
         than it is to go forwards!
-      courseC_playLab_embedded_instruction: |-
-        Here's a game for you to play! To win,
-        use your arrow keys to get the penguin to run into the octopus.\r
-        \r
-        Once
-        you are done, you will learn how to make this game!
+      courseC_playLab_embedded_instruction: "Here's a game for you to play! To win,\nuse
+        your arrow keys to get the penguin to run into the octopus.\r\n\r\nOnce\nyou
+        are done, you will learn how to make this game!"
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -9431,44 +9156,33 @@
       courseD_Frozen_nested8_instruction: |-
         Spin that shape around 5 or 6 times in
         a circle.
-      courseD_Frozen_nested9_instruction: |-
-        Try playing around with what you've created.
-        Draw whatever you like!\r
-        - What happens if you use two different angles
-        in your stair step pattern?\r
-        - What happens if you make your diamond pattern
-        longer or shorter?\r
-        - What does it look like to draw two snowflakes on top
-        of one another?
-      courseD_artist_1_2018_instruction: |
-        Draw a small square with **30** pixel long
-        sides.  \r
-      courseD_artist_2_2018_instruction: |
-        Now, turn right by **60** degrees, then
-        draw a straight line **150** pixels long and jump back to the center of the
-        play area.\r
+      courseD_Frozen_nested9_instruction: "Try playing around with what you've created.\nDraw
+        whatever you like!\r\n- What happens if you use two different angles\nin your
+        stair step pattern?\r\n- What happens if you make your diamond pattern\nlonger
+        or shorter?\r\n- What does it look like to draw two snowflakes on top\nof
+        one another?"
+      courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long\nsides.
+        \ \r\n"
+      courseD_artist_2_2018_instruction: "Now, turn right by **60** degrees, then\ndraw
+        a straight line **150** pixels long and jump back to the center of the\nplay
+        area.\r\n"
       courseD_artist_3_2018_instruction: "Nest all of the code inside of another\n`repeat`
         loop and run it a total of **6** times. "
       courseD_artist_4_2018_instruction: Add a tiny shape to the end of your line!
       courseD_artist_5_2018_instruction: Play with the snowflakes!
-      courseD_artist_6_2018_instruction: |
-        Try changing your long 150 pixel line into
-        6 short lines of **25** pixels, with little turns at the end.\r
+      courseD_artist_6_2018_instruction: "Try changing your long 150 pixel line into\n6
+        short lines of **25** pixels, with little turns at the end.\r\n"
       courseD_artist_7_2018_instruction: |-
         Now, turn around 180 degrees and draw the
         stair pattern again!
       courseD_artist_8_2018_instruction: |-
         Spin that shape around 5 or 6 times in
         a circle.
-      courseD_artist_9_2018_instruction: |-
-        Try playing around with what you've created.
-        Draw whatever you like!\r
-        - What happens if you use two different angles
-        in your stair step pattern?\r
-        - What happens if you make your diamond pattern
-        longer or shorter?\r
-        - What does it look like to draw two snowflakes on top
-        of one another?
+      courseD_artist_9_2018_instruction: "Try playing around with what you've created.\nDraw
+        whatever you like!\r\n- What happens if you use two different angles\nin your
+        stair step pattern?\r\n- What happens if you make your diamond pattern\nlonger
+        or shorter?\r\n- What does it look like to draw two snowflakes on top\nof
+        one another?"
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
@@ -9493,18 +9207,12 @@
         three binary digits (0s and 1s)?
       courseD_artist_binary4_2018_instruction: Peux-tu dessiner ce modèle en bouclant
         une chaîne binaire à trois chiffres ?
-      courseD_artist_binary5_instruction: |-
-        Each binary string below represents one
-        row of this picture. \r
-        \r
-        Can you rearrange them so it draws a smiley face
-        instead of a frown?
-      courseD_artist_binary5_2018_instruction: |-
-        Each binary string below represents
-        one row of this picture. \r
-        \r
-        Can you rearrange them so it draws a smiley
-        face instead of a frown?
+      courseD_artist_binary5_instruction: "Each binary string below represents one\nrow
+        of this picture. \r\n\r\nCan you rearrange them so it draws a smiley face\ninstead
+        of a frown?"
+      courseD_artist_binary5_2018_instruction: "Each binary string below represents\none
+        row of this picture. \r\n\r\nCan you rearrange them so it draws a smiley\nface
+        instead of a frown?"
       courseD_artist_binary6_instruction: Quelle chaîne binaire de 6 chiffres répétée
         11 fois dessinera cette image ?
       courseD_artist_binary6_2018_instruction: Quelle chaîne binaire de 6 chiffres
@@ -9522,20 +9230,14 @@
       courseD_artist_binary8_predict1_2018_instruction: |-
         Finish the code to create
         this drawing.
-      courseD_artist_binaryFP_instruction: |-
-        Here's a higher resolution canvas to
-        draw on - 16 pixels by 16 pixels!\r
-        \r
-        See what happens when we start to
-        get creative with the bits!
+      courseD_artist_binaryFP_instruction: "Here's a higher resolution canvas to\ndraw
+        on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to\nget
+        creative with the bits!"
       courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
         binary! "
-      courseD_artist_binaryFP_2018_instruction: |-
-        Here's a higher resolution canvas
-        to draw on - 16 pixels by 16 pixels!\r
-        \r
-        See what happens when we start
-        to get creative with the bits!
+      courseD_artist_binaryFP_2018_instruction: "Here's a higher resolution canvas\nto
+        draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start\nto
+        get creative with the bits!"
       courseD_artist_binary_challenge0_instruction: |-
         Try using nested loops to complete
         this drawing.
@@ -9561,9 +9263,8 @@
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseD_artist_functions2_instruction: |
-        This time, use the `draw a square`
-        function to create the glasses. \r
+      courseD_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
+        to create the glasses. \r\n"
       courseD_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -9585,26 +9286,20 @@
       courseD_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
-      courseD_artist_nestedLoops1_instruction: |-
-        Draw a triangle to kickstart this
-        stage.  \r
-        (Each side is 100 pixels long and you'll need to turn 120 degrees
-        for each exterior angle.)
+      courseD_artist_nestedLoops1_instruction: "Draw a triangle to kickstart this\nstage.
+        \ \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees\nfor
+        each exterior angle.)"
       courseD_artist_nestedLoops10_instruction: |-
         Take the squares from before, but
         this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops10_2018_instruction: |-
         Take the squares from before,
         but this time only make 7 of them, and lay them out in a row.
-      courseD_artist_nestedLoops1_2018_instruction: |-
-        Draw a triangle to kickstart
-        this stage.  \r
-        (Each side is 100 pixels long and you'll need to turn 120
-        degrees for each exterior angle.)
-      courseD_artist_nestedLoops1a_instruction: |-
-        Now loop the triangle 6 times. \r
-        After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops1_2018_instruction: "Draw a triangle to kickstart\nthis
+        stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120\ndegrees
+        for each exterior angle.)"
+      courseD_artist_nestedLoops1a_instruction: "Now loop the triangle 6 times. \r\nAfter\neach
+        triangle, you'll need to turn 60 degrees before drawing the next."
       courseD_artist_nestedLoops1a_2018_instruction: 'Now loop the triangle 6 times.
 
 '
@@ -9614,18 +9309,12 @@
       courseD_artist_nestedLoops2_2018_instruction: |-
         This time, complete the puzzle
         with the fewest number of blocks possible.
-      courseD_artist_nestedLoops3_instruction: |-
-        Use your new skills to quickly draw
-        the last row of windows for this building.\r
-        \r
-        The windows are 20 pixel
-        squares, each 20 pixels apart.
-      courseD_artist_nestedLoops3_2018_instruction: |-
-        Use your new skills to quickly
-        draw the last row of windows for this building.\r
-        \r
-        The windows are 20
-        pixel squares, each 20 pixels apart.
+      courseD_artist_nestedLoops3_instruction: "Use your new skills to quickly draw\nthe
+        last row of windows for this building.\r\n\r\nThe windows are 20 pixel\nsquares,
+        each 20 pixels apart."
+      courseD_artist_nestedLoops3_2018_instruction: "Use your new skills to quickly\ndraw
+        the last row of windows for this building.\r\n\r\nThe windows are 20\npixel
+        squares, each 20 pixels apart."
       courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
         circles.
@@ -9720,24 +9409,16 @@
         in a circle.
       courseD_artist_project4_instruction: Time to layer those shapes!
       courseD_artist_project4_2018_instruction: Time to layer those shapes!
-      courseD_artist_project4a_instruction: |-
-        Try playing around with what you've
-        created. Draw whatever you like!\r
-        - What happens if you use two different
-        angles in your stair step pattern?\r
-        - What happens if you make your diamond
-        pattern longer or shorter?\r
-        - What does it look like to draw two snowflakes
-        on top of one another?
-      courseD_artist_project4a_2018_instruction: |-
-        Try playing around with what you've
-        created. Draw whatever you like!\r
-        - What happens if you use two different
-        angles in your stair step pattern?\r
-        - What happens if you make your diamond
-        pattern longer or shorter?\r
-        - What does it look like to draw two snowflakes
-        on top of one another?
+      courseD_artist_project4a_instruction: "Try playing around with what you've\ncreated.
+        Draw whatever you like!\r\n- What happens if you use two different\nangles
+        in your stair step pattern?\r\n- What happens if you make your diamond\npattern
+        longer or shorter?\r\n- What does it look like to draw two snowflakes\non
+        top of one another?"
+      courseD_artist_project4a_2018_instruction: "Try playing around with what you've\ncreated.
+        Draw whatever you like!\r\n- What happens if you use two different\nangles
+        in your stair step pattern?\r\n- What happens if you make your diamond\npattern
+        longer or shorter?\r\n- What does it look like to draw two snowflakes\non
+        top of one another?"
       courseD_artist_project5_instruction: Play with the snowflakes!
       courseD_artist_project5_2018_instruction: Play with the snowflakes!
       courseD_artist_project_embedded_instruction: |-
@@ -9768,18 +9449,12 @@
         if it is hiding a flower before you get nectar.  "
       courseD_bee_conditionals2_test_instruction: "Check underneath every cloud to\nsee
         if it is hiding a flower before you get nectar.  "
-      courseD_bee_conditionals3_instruction: |-
-        Help the bee collect all of the nectar.
-        \r
-        \r
-        You can only collect nectar from flowers, but you can check any space
-        to see if there is a flower.
-      courseD_bee_conditionals3_2018_instruction: |-
-        Help the bee collect all of the
-        nectar. \r
-        \r
-        You can only collect nectar from flowers, but you can check
-        any space to see if there is a flower.
+      courseD_bee_conditionals3_instruction: "Help the bee collect all of the nectar.\n\r\n\r\nYou
+        can only collect nectar from flowers, but you can check any space\nto see
+        if there is a flower."
+      courseD_bee_conditionals3_2018_instruction: "Help the bee collect all of the\nnectar.
+        \r\n\r\nYou can only collect nectar from flowers, but you can check\nany space
+        to see if there is a flower."
       courseD_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
@@ -9811,14 +9486,10 @@
       courseD_bee_conditionals7_predict2_2018_instruction: |-
         Use the `if/else` block
         to collect nectar at flowers and make honey at honeycomb.
-      courseD_bee_conditionals8_instruction: |-
-        Collect nectar if there is a flower.\r
-        Otherwise,
-        make honey (because there is a honeycomb).
-      courseD_bee_conditionals8_2018_instruction: |-
-        Collect nectar if there is a flower.\r
-        Otherwise,
-        make honey (because there is a honeycomb).
+      courseD_bee_conditionals8_instruction: "Collect nectar if there is a flower.\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
+      courseD_bee_conditionals8_2018_instruction: "Collect nectar if there is a flower.\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
       courseD_bee_conditionals9_instruction: |-
         Collect all of the nectar or make all
         the honey.
@@ -10502,11 +10173,9 @@
       courseD_playLab_cond3a_2018_instruction: |-
         Make it so when Pegleg gets to the
         dragon, he gets 2 points if the dragon is happy and 1 otherwise.
-      courseD_playLab_cond3b_instruction: |-
-        1) Make the dragon change between random
-        emotions every second.  \r
-        2) Make it so when Pegleg gets to the dragon,
-        he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond3b_instruction: "1) Make the dragon change between random\nemotions
+        every second.  \r\n2) Make it so when Pegleg gets to the dragon,\nhe gets
+        2 points if the dragon is happy and 1 otherwise."
       courseD_playLab_cond4_instruction: |-
         Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
@@ -10524,13 +10193,13 @@
         checks if the score is greater than 5, then ends the game as a win when it
         is.
       courseD_playLab_cond6_instruction: "1)  Slow the ninja (actor 3) down before\nyou
-        set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
+        set him to chase the pirate.  \r\n2)  If the pirate is greater than 225\npixels
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
       courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down\nbefore
-        you set him to chase the pirate.  \\r\n2)  If the pirate is greater\nthan
-        225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set\nthe
-        ninja to **chase** the pirate.  "
+        you set him to chase the pirate.  \r\n2)  If the pirate is greater\nthan 225
+        pixels down, set the ninja to **flee** the pirate.  Otherwise, set\nthe ninja
+        to **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: |-
         If the pirate (actor 1) is in the safe
         zone, wait one second, then deduct a point as long as he stays beneath the
@@ -10546,13 +10215,10 @@
       courseD_playLab_condFP_2018_instruction: |-
         Now, build your own game to show
         off to your friends!
-      courseD_playLab_embedded_instruction: |-
-        Move Pegleg the Pirate with the arrow
-        keys. Get to the dragon to score points, but avoid the ninja! Standing below
-        the line of octopuses will make the ninja stop chasing you, but beware! The
-        longer you stay there, the more points you lose. \r
-        \r
-        Get 5 points to win!
+      courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow\nkeys.
+        Get to the dragon to score points, but avoid the ninja! Standing below\nthe
+        line of octopuses will make the ninja stop chasing you, but beware! The\nlonger
+        you stay there, the more points you lose. \r\n\r\nGet 5 points to win!"
       courseD_scrat_ramp1_instruction: |-
         For this puzzle, snap all of the blocks together
         and click "Run" to watch it go!
@@ -10609,22 +10275,18 @@
         What kind of functions do you see a program needing in order to create a design
         like this. You'll soon make this on your own, so come back here if you need
         help.
-      courseE_artist_functions1_instruction: |-
-        Help the zombie draw glasses using
-        squares with sides of 100 pixels.  \r
-        The bridge between the glasses is 75
-        pixels long.
+      courseE_artist_functions1_instruction: "Help the zombie draw glasses using\nsquares
+        with sides of 100 pixels.  \r\nThe bridge between the glasses is 75\npixels
+        long."
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
       courseE_artist_functions10_2018_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions1_2018_instruction: |-
-        Help the zombie draw glasses using
-        squares with sides of 100 pixels.  \r
-        The bridge between the glasses is 75
-        pixels long.
+      courseE_artist_functions1_2018_instruction: "Help the zombie draw glasses using\nsquares
+        with sides of 100 pixels.  \r\nThe bridge between the glasses is 75\npixels
+        long."
       courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
         to create the glasses. "
       courseE_artist_functions2_2018_instruction: "This time, use the `draw a square`\nfunction
@@ -10871,12 +10533,9 @@
       courseE_farmer_functions1a_2018_instruction: |-
         Now help the harvester pick the
         corn, lettuce, **and** pumpkin.
-      courseE_farmer_functions2_instruction: |-
-        Now, there will be a different number
-        of pumpkins each time you run the program.   \r
-        \r
-        Use the `while` block
-        to pick only as many pumpkins as you need.
+      courseE_farmer_functions2_instruction: "Now, there will be a different number\nof
+        pumpkins each time you run the program.   \r\n\r\nUse the `while` block\nto
+        pick only as many pumpkins as you need."
       courseE_farmer_functions2a_instruction: |-
         We're going to check lots of squares
         for crops in the next few puzzles.  Let's move everything into a function
@@ -10897,12 +10556,8 @@
       courseE_farmer_functions2ba_2018_instruction: |-
         Help the farmer pick the corn
         and pumpkins using the `corn and pumpkin` function.
-      courseE_farmer_functions3_instruction: |-
-        What happens when the paths to the
-        pumpkins are all different lengths?   \r
-        \r
-        Get them all with as few blocks
-        as possible.
+      courseE_farmer_functions3_instruction: "What happens when the paths to the\npumpkins
+        are all different lengths?   \r\n\r\nGet them all with as few blocks\nas possible."
       courseE_farmer_functions3b_instruction: |-
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
@@ -10914,13 +10569,10 @@
         Now, fill-in the function yourself
         by pulling the blocks from the code and dropping them into the **function
         definition**.
-      courseE_farmer_functions4_instruction: |-
-        Great!  Now you have code that will
-        work to get pumpkins from any size path.\r
-        \r
-        Let's drag that code into
-        a function so we can use it in lots of ways...but first use it to solve this
-        puzzle again.
+      courseE_farmer_functions4_instruction: "Great!  Now you have code that will\nwork
+        to get pumpkins from any size path.\r\n\r\nLet's drag that code into\na function
+        so we can use it in lots of ways...but first use it to solve this\npuzzle
+        again."
       courseE_farmer_functions4b_instruction: |-
         Use your new function to solve this
         puzzle.
@@ -10940,12 +10592,9 @@
       courseE_farmer_functions5c_2018_instruction: |-
         Your function will come in handy
         here.
-      courseE_farmer_functions6_instruction: |-
-        *"Lettuce try something new!"*\r
-        \r
-        Here's
-        some code to collect all of the lettuce.  Move it into a function so we can
-        use it later.
+      courseE_farmer_functions6_instruction: "*\"Lettuce try something new!\"*\r\n\r\nHere's\nsome
+        code to collect all of the lettuce.  Move it into a function so we can\nuse
+        it later."
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
@@ -11105,18 +10754,14 @@
         This code includes a new block. What
         do you think would happen if you press the "Run" block?
       courseE_multi_maze_ramp5_instruction: Avoid the TNT.
-      courseE_playLab_challenge1_instruction: |-
-        Something should happen when you get
-        enough points or when you run out of points. Add some code to the `win game`
-        and `lose game` functions to make the game work the way it should. \r
-        Click
-        the hints for ideas!
-      courseE_playLab_challenge1_2018_instruction: |-
-        Something should happen when
-        you get enough points or when you run out of points. Add some code to the
-        `win game` and `lose game` functions to make the game work the way it should.
-        \r
-        Click the hints for ideas!
+      courseE_playLab_challenge1_instruction: "Something should happen when you get\nenough
+        points or when you run out of points. Add some code to the `win game`\nand
+        `lose game` functions to make the game work the way it should. \r\nClick\nthe
+        hints for ideas!"
+      courseE_playLab_challenge1_2018_instruction: "Something should happen when\nyou
+        get enough points or when you run out of points. Add some code to the\n`win
+        game` and `lose game` functions to make the game work the way it should.\n\r\nClick
+        the hints for ideas!"
       courseE_playLab_embedded_instruction: |-
         This is an example game you can play
         around with. Move the dog with your arrow keys. When the dog touches one of
@@ -11447,35 +11092,25 @@
         and make your own drawing. "
       courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.
         \ Try\nediting the variable in other ways.  "
-      courseF_artist_variables_2_instruction: |
-        Now use another loop to draw three
-        of those triangles right next to each other.   \r
-        You can nest the code from
-        your last puzzle inside.\r
+      courseF_artist_variables_2_instruction: "Now use another loop to draw three\nof
+        those triangles right next to each other.   \r\nYou can nest the code from\nyour
+        last puzzle inside.\r\n"
       courseF_artist_variables_5_instruction: |-
         Add another set of loops at the end
         of your code to add three more triangles. This time, move forward and up!
-      courseF_artist_variables_6_instruction: |-
-        OOPS! We actually need the triangles
-        to be 60 pixels wide, with 60 pixel jumps.  \r
-        Aren't you glad you're using
-        a variable?
+      courseF_artist_variables_6_instruction: "OOPS! We actually need the triangles\nto
+        be 60 pixels wide, with 60 pixel jumps.  \r\nAren't you glad you're using\na
+        variable?"
       courseF_artist_variables_6a_instruction: |-
         Build this design where the squares
         have 80 pixel sides and the artist jumps 80 pixels over and down between each
         one.
-      courseF_artist_variables_9_instruction: |-
-        See what happens when you repeat the
-        code from the last puzzle 30 times instead of only 3!\r
-        \r
-        Feel free to
-        make your lines any color or pattern for some extra zest.
-      courseF_artist_variables_FP_instruction: |-
-        **Freeplay:** Take what you've learned
-        and make your own drawing. \r
-        \r
-        How can you use variables with squares,
-        pentagons, or hexagons?
+      courseF_artist_variables_9_instruction: "See what happens when you repeat the\ncode
+        from the last puzzle 30 times instead of only 3!\r\n\r\nFeel free to\nmake
+        your lines any color or pattern for some extra zest."
+      courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned\nand
+        make your own drawing. \r\n\r\nHow can you use variables with squares,\npentagons,
+        or hexagons?"
       courseF_artist_variables_challenge1_instruction: |-
         Can you create a `length`
         variable and use it to create this pattern?
@@ -11534,14 +11169,10 @@
       courseF_bee_conditionals7_predict2_2018_instruction: |-
         Use the `if/else` block
         to collect nectar at flowers and make honey at honeycomb.
-      courseF_bee_conditionals8_instruction: |-
-        Collect nectar if there is a flower.\r
-        Otherwise,
-        make honey (because there is a honeycomb).
-      courseF_bee_conditionals8_2018_instruction: |-
-        Collect nectar if there is a flower.\r
-        Otherwise,
-        make honey (because there is a honeycomb).
+      courseF_bee_conditionals8_instruction: "Collect nectar if there is a flower.\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
+      courseF_bee_conditionals8_2018_instruction: "Collect nectar if there is a flower.\r\nOtherwise,\nmake
+        honey (because there is a honeycomb)."
       courseF_bee_for1_instruction: |-
         Collect the nectar from each flower using the
         fewest blocks possible.
@@ -11781,12 +11412,10 @@
         Variables can be used to store
         text that you want to use later.  Have Kiki, the soccer player,  scream "Goal!"
         by assigning that text to the `shout` variable.
-      courseF_playlab_variables2_instruction: |
-        Now, decode Pirate Pegleg's speech
-        by changing the value of the variables in just two places! \r
-      courseF_playlab_variables2a_instruction: |
-        Now, decode Pirate Pegleg's speech
-        by changing the value of the variables in just two places! \r
+      courseF_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech\nby
+        changing the value of the variables in just two places! \r\n"
+      courseF_playlab_variables2a_instruction: "Now, decode Pirate Pegleg's speech\nby
+        changing the value of the variables in just two places! \r\n"
       courseF_playlab_variables2b RYAN CLONE_instruction: |-
         Insert the variable `color`
         into the middle of a sentence by putting it into the empty slot in the `join`
@@ -11892,12 +11521,10 @@
       course_playlab_variables1_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
-      course_playlab_variables2_instruction: |
-        Now, decode Pirate Pegleg's speech
-        by changing the value of the variables in just two places! \r
-      course_playlab_variables3_instruction: |
-        Now, decode Pirate Pegleg's speech
-        by changing the value of the variables in just two places! \r
+      course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech\nby
+        changing the value of the variables in just two places! \r\n"
+      course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech\nby
+        changing the value of the variables in just two places! \r\n"
       coursea_maze_ramp1_2018_instruction: |-
         For this puzzle, snap the blocks together
         and click "Run"!
@@ -12137,9 +11764,8 @@
       grade1_playlab_events2a_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
-      grade1_playlab_events3_instruction: |
-        This program makes Robin fly.  Can you
-        make the robot jump when you press the up button?\r
+      grade1_playlab_events3_instruction: "This program makes Robin fly.  Can you\nmake
+        the robot jump when you press the up button?\r\n"
       grade1_playlab_events3a_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -12189,12 +11815,9 @@
       grade2_CaringForNewPet_11_instruction: |-
         "Keep calm and help me find the bad
         pig."
-      grade2_CaringForNewPet_2_instruction: |-
-        "This pig is ruffling my feathers."\r
-        \r
-        There
-        is one extra block that is going to cause the bird to crash. Throw it away
-        by dragging it back to the toolbox.
+      grade2_CaringForNewPet_2_instruction: "\"This pig is ruffling my feathers.\"\r\n\r\nThere\nis
+        one extra block that is going to cause the bird to crash. Throw it away\nby
+        dragging it back to the toolbox."
       grade2_CaringForNewPet_2courseC_maze_programming3_instruction: |-
         There is one
         extra block that is going to cause the bird to crash. Throw it away by dragging
@@ -12219,36 +11842,25 @@
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
       grade2_MakeDogTag_10_instruction: Dessine quelque chose d'amusant.
-      grade2_MakeDogTag_2_instruction: |-
-        This spaceship needs a window!\r
-        \r
-        Each
-        side of the inner square is 100 pixels and all of the angles are 90 degrees.
+      grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach\nside
+        of the inner square is 100 pixels and all of the angles are 90 degrees."
       grade2_MakeDogTag_3_instruction: Aide-moi à terminer la maison pour ce chat.
       grade2_MakeDogTag_4_instruction: 'Cette maison a besoin d''un toit ! Dessine
         le triangle.  Indice : les trois côtés sont de la même longueur.'
-      grade2_MakeDogTag_5_instruction: |-
-        "Now a tag for Belle!"\r
-        \r
-        Draw this
-        diamond with 200 pixel sides.
+      grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this\ndiamond
+        with 200 pixel sides."
       grade2_MakeDogTag_6_instruction: Activité libre ! Dessine tout ce que tu veux.
-      grade2_MakeDogTag_7_instruction: |-
-        One more tag.  This is a triangle for Pi.\r
-        (Each
-        side is 150 pixels)
+      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each\nside
+        is 150 pixels)"
       grade2_MakeDogTag_8_instruction: Maintenant connectons ensemble plusieurs « V »
         en les dessinant dans une boucle.
       grade2_MakeDogTag_9_instruction: |-
         Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
         times instead of 8.
-      grade2_MakeDogTag_BFP_instruction: |-
-        "Hi, I'm an artist. You can write code
-        to make me draw almost anything."\r
-        \r
-        Play with the blocks in the toolbox
-        to see what they do!
+      grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code\nto
+        make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox\nto
+        see what they do!"
       grade2_MakeDogTag_FP_instruction: |-
         Freeplay: What shape will you make the tag
         for your pet?
@@ -12295,11 +11907,8 @@
       grade2_collector_5_instruction: |-
         These blocks are in the wrong order. Can you
         fix them?
-      grade2_collector_6_instruction: |-
-        "Help me collect each gold coin!"\r
-        \r
-        These
-        blocks are in the wrong order.
+      grade2_collector_6_instruction: "\"Help me collect each gold coin!\"\r\n\r\nThese\nblocks
+        are in the wrong order."
       grade2_collector_7_instruction: |-
         Challenge puzzle! Use blocks from the toolbox
         to collect all of the treasure.
@@ -12310,12 +11919,9 @@
       grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
       grade2_collector_A_instruction: Help Laurel collect all of the treasure.
       grade2_collector_A_2018_instruction: Help Laurel collect all of the treasure.
-      grade2_collector_pre1_instruction: |-
-        "Hi, I'm Laurel. Today I'm searching
-        for treasure at the dog park!" \r
-        \r
-        Play around with the blocks to see
-        if you can help Laurel collect some gold.
+      grade2_collector_pre1_instruction: "\"Hi, I'm Laurel. Today I'm searching\nfor
+        treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see\nif
+        you can help Laurel collect some gold."
       grade2_maze_debuggingFP_instruction: |-
         "Now, help me sneak up on the pig any
         way you want to!"
@@ -12349,46 +11955,31 @@
         The `repeat forever` block allows you
         to run code over and over forever. Can you attach blocks to move Chomp the
         Dino (actor 2) up and down forever?
-      grade2_playlab_project_3_instruction: |-
-        Can you have Waddles (actor 1) say "Ouch!"
-        and play a "hit" sound if he runs into Chomp? \r
-        \r
-        When you're done,
-        play the game to make that happen.
+      grade2_playlab_project_3_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"\nand
+        play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're done,\nplay
+        the game to make that happen."
       grade2_playlab_project_4_instruction: Peux-tu ajouter un bloc qui marque un
         point lorsque Waddles touche la pieuvre, puis déplaces le avec les flèches
         jusqu'à ce que tu marques ?
-      grade2_playlab_project_5_instruction: |-
-        Add blocks to the `when run` event to
-        change the background and the speed of Waddles.\r
-        \r
-        Play the game and move
-        Waddles with the arrows until you score.
+      grade2_playlab_project_5_instruction: "Add blocks to the `when run` event to\nchange
+        the background and the speed of Waddles.\r\n\r\nPlay the game and move\nWaddles
+        with the arrows until you score."
       grade2_playlab_project_6_instruction: |-
         Create your own story. When you're
         done, click "Finish" to share with friends.
       grade2_puppy_loops2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
-      grade2_puppy_loops3_instruction: |-
-        "Get me to the pig!"\r
-        \r
-         Solve this
-        puzzle by creating a loop!
+      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this\npuzzle
+        by creating a loop!"
       grade2_puppy_loops4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
       grade2_puppy_loops5_instruction: Amène-moi au cochon.
-      grade2_puppy_loops6_instruction: |-
-        "This pig is ruffling my feathers!"\r
-        \r
-        Loops
-        even work with more than one block inside!  Can you loop this sequence?
-      grade2_puppy_loops7_instruction: |-
-        "Get me to the pig!"\r
-        \r
-        Use what you
-        learned in other puzzles!
+      grade2_puppy_loops6_instruction: "\"This pig is ruffling my feathers!\"\r\n\r\nLoops\neven
+        work with more than one block inside!  Can you loop this sequence?"
+      grade2_puppy_loops7_instruction: "\"Get me to the pig!\"\r\n\r\nUse what you\nlearned
+        in other puzzles!"
       grade3_AboutMyRobot_1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.
@@ -12421,50 +12012,27 @@
         un gâteau de miel. Utilise le bloc «Si/Sinon» pour récupérer le nectar si
         c'est une fleur, et le bloc «Sinon» pour fabriquer du miel (parce que c'est
         un gâteau de miel).
-      grade3_ConditionalsElse_5_instruction: |-
-        There will be either a flower or a
-        honeycomb under each of those clouds!\r
-        \r
-        Use the `if/else` block to collect
-        nectar if there is a flower.\r
-        Otherwise, make honey (because there is a
-        honeycomb).
-      grade3_ConditionalsElse_6_instruction: |-
-        I am not sure how much nectar this
-        flower has, but I know it has either 1, 2, or 3 nectar. \r
-        \r
-        Combine the
-        conditional blocks (`if` and/or `if/else`) to only get as much nectar as the
-        flower has. \r
-        \r
-        Remember, the amount of nectar can change each time you
-        run the puzzle!
+      grade3_ConditionalsElse_5_instruction: "There will be either a flower or a\nhoneycomb
+        under each of those clouds!\r\n\r\nUse the `if/else` block to collect\nnectar
+        if there is a flower.\r\nOtherwise, make honey (because there is a\nhoneycomb)."
+      grade3_ConditionalsElse_6_instruction: "I am not sure how much nectar this\nflower
+        has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the\nconditional
+        blocks (`if` and/or `if/else`) to only get as much nectar as the\nflower has.
+        \r\n\r\nRemember, the amount of nectar can change each time you\nrun the puzzle!"
       grade3_ConditionalsElse_7_instruction: N'oublie pas que les fleurs pourpres
         peuvent avoir 3, 2 ou 1 nectar(s). Termine la fonction «Vérifier la fleur
         pourpre» et utilise-la pour recueillir tout le nectar des fleurs.
-      grade3_ConditionalsElse_8_instruction: |-
-        Write the function for `check flower
-        make honey`. \r
-        \r
-        Your function should check if the purple flower has 3,
-        2, or 1 nectar and get all of the nectar. \r
-        Then, move forward and make
-        honey.
-      grade3_ConditionalsElse_9_instruction: |
-        **Assessment:** This cloud is either
-        hiding a flower with one nectar or a honeycomb that needs one honey.  \r
-        \r
-        Complete
-        the `get nectar or make honey` function, then call it to collect the nectar
-        or honey. \r
-      grade3_ConditionalsElse_TeacherIDo_instruction: |-
-        There will be either a flower
-        or a honeycomb under each of those clouds!\r
-        \r
-        Use the `if/else` block
-        to collect nectar if there is a flower.\r
-        Otherwise, make honey (because
-        there is a honeycomb).
+      grade3_ConditionalsElse_8_instruction: "Write the function for `check flower\nmake
+        honey`. \r\n\r\nYour function should check if the purple flower has 3,\n2,
+        or 1 nectar and get all of the nectar. \r\nThen, move forward and make\nhoney."
+      grade3_ConditionalsElse_9_instruction: "**Assessment:** This cloud is either\nhiding
+        a flower with one nectar or a honeycomb that needs one honey.  \r\n\r\nComplete\nthe
+        `get nectar or make honey` function, then call it to collect the nectar\nor
+        honey. \r\n"
+      grade3_ConditionalsElse_TeacherIDo_instruction: "There will be either a flower\nor
+        a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block\nto
+        collect nectar if there is a flower.\r\nOtherwise, make honey (because\nthere
+        is a honeycomb)."
       grade3_Conditionals_1 BAD_instruction: Utilise une boucle pour recueillir tout
         le nectar.
       grade3_Conditionals_1_instruction: Salut, je suis une abeille ! Aide-moi à recueillir
@@ -12485,11 +12053,9 @@
         have any.
       grade3_Conditionals_2_instruction: Aide-moi à recueillir tout le nectar des
         fleurs et à fabriquer du miel. Utilise une boucle.
-      grade3_Conditionals_3_instruction: |-
-        Be careful not to collect nectar from a
-        purple flower if it doesn't have any. \r
-        You must first check if the nectar
-        is equal to 1 using the `if nectar` block.
+      grade3_Conditionals_3_instruction: "Be careful not to collect nectar from a\npurple
+        flower if it doesn't have any. \r\nYou must first check if the nectar\nis
+        equal to 1 using the `if nectar` block."
       grade3_Conditionals_4_instruction: Vérifie cette fleur avec un bloc « Si » pour
         voir s'il y a du nectar disponible.
       grade3_Conditionals_5_instruction: Butine chaque fleur qui a du nectar.
@@ -12506,11 +12072,8 @@
         block to see if there is any nectar available.
       grade3_Debugging_1_instruction: Ces blocs-là me gênent vraiment. Corrige l’erreur
         ou les erreurs afin de récolter tout le nectar et fabriquer tout le miel.
-      grade3_Debugging_5_instruction: |-
-        That flower looks tasty! \r
-        \r
-        Fix the error(s)
-        to collect all of the nectar.  You can now use both run and step.
+      grade3_Debugging_5_instruction: "That flower looks tasty! \r\n\r\nFix the error(s)\nto
+        collect all of the nectar.  You can now use both run and step."
       grade3_Debugging_6_instruction: Ces blocs-là me gênent vraiment. Corrige l’erreur
         ou les erreurs afin de récolter tout le nectar.
       grade3_Debugging_7_instruction: Ces blocs-là me gênent vraiment. Corrige l’erreur
@@ -12544,11 +12107,8 @@
         produire du miel.
       grade3_Loops_9_instruction: Recueille le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel.
-      grade3_Loops_TeacherIDo_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect
-        nectar from each of the flowers using the fewest blocks possible.
+      grade3_Loops_TeacherIDo_instruction: "Those flowers look tasty!\r\n\r\nCollect\nnectar
+        from each of the flowers using the fewest blocks possible."
       grade3_RunningFarm_1_instruction: |-
         Use conditionals to make sure that you pick
         all of the corn, but don't disturb the stalks where nothing is growing yet.
@@ -12597,12 +12157,9 @@
       grade3_bee_Conditionals_new4_instruction: |-
         Now try checking all of these flowers
         with "if" blocks to see if there is any nectar available.
-      grade3_bee_conditionals_new1a_instruction: |-
-        Help the bee collect all of the
-        nectar. \r
-        \r
-        You can only collect nectar from flowers, but you can check
-        any space to see if there is a flower.
+      grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the\nnectar.
+        \r\n\r\nYou can only collect nectar from flowers, but you can check\nany space
+        to see if there is a flower."
       grade3_bee_conditionals_new1b_instruction: |-
         Help the bee collect all of the
         nectar. You can only collect nectar from flowers, but you can check any space
@@ -12642,11 +12199,8 @@
       grade3_bee_conditionals_quantum4_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
-      grade3_bee_conditionals_quantum5_instruction: |-
-        Use the `if/else` block to collect
-        nectar if there is a flower.\r
-        Otherwise, make honey (because there is a
-        honeycomb).
+      grade3_bee_conditionals_quantum5_instruction: "Use the `if/else` block to collect\nnectar
+        if there is a flower.\r\nOtherwise, make honey (because there is a\nhoneycomb)."
       grade3_maze_Loop1_instruction: "Assessment:  Get me to the sunflower using\nonly
         5 blocks! "
       grade3_maze_loops1_instruction: Get the zombie to the sunflower.
@@ -12715,12 +12269,9 @@
       grade3_robotFarmer_ConditionalsIntro4_instruction: |-
         Help the farmer remove
         this entire pile using a `while` loop.
-      grade3_robotFarmer_ConditionalsIntro_1_instruction: |-
-        *"Hi, I'm a farmer.
-        I need your help to flatten the field on my farm so it's ready for planting!"*  \r
-        \r
-        Move
-        to the pile of dirt and use the `remove` block to remove it.
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Hi, I'm a farmer.\nI
+        need your help to flatten the field on my farm so it's ready for planting!\"*
+        \ \r\n\r\nMove\nto the pile of dirt and use the `remove` block to remove it."
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
@@ -12740,24 +12291,18 @@
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
         *"Move to the pile of
         dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
-      grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
-        *"I don't know how much
-        dirt is in this pile!"*\r
-        \r
-        Help the farmer remove this entire pile using
-        a `while` loop.
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: "*\"I don't know how much\ndirt
+        is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using\na
+        `while` loop."
       grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
         dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: |-
         Remove all the piles of
         dirt, using as few blocks as possible. The new options in the dropdown menu
         on the "while" block tell me if I'm standing on a pile or a hole.
-      grade3_robotFarmer_ConditionalsIntro_7_instruction: |-
-        Look at all of those holes!  Each
-        one needs a different amount of dirt.   \r
-        \r
-        You can use the `while` loop
-        to easily fill them all!
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!
+        \ Each\none needs a different amount of dirt.   \r\n\r\nYou can use the `while`
+        loop\nto easily fill them all!"
       grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
         Fill in the hole at the
         end of each of these paths.
@@ -12782,12 +12327,9 @@
       grade4_arist_nested_loop_flags1_instruction: |-
         Loop the given code to create
         a windmill.
-      grade4_arist_nested_loop_polygons1_instruction: |-
-        Loop this design 10 times.
-        \r
-        \r
-        How much do you have to turn each time you loop?
-      grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \\r\n\\r\nHow\nmuch
+      grade4_arist_nested_loop_polygons1_instruction: "Loop this design 10 times.\n\r\n\r\nHow
+        much do you have to turn each time you loop?"
+      grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \r\n\r\nHow\nmuch
         do you have to turn each time you loop? "
       grade4_arist_nested_loop_squares1_instruction: |-
         Can you draw these 10 squares
@@ -12800,13 +12342,9 @@
       grade4_arist_nested_loop_triangles4_instruction: |-
         Draw the teeth in the alligator's
         mouth!
-      grade4_arist_nested_loop_triangles5_instruction: |-
-        Create a sun by nesting the
-        starter code in another loop.\r
-        \r
-        To get this cool design with a hollow
-        center, you'll need to jump forward by the length of the triangle before
-        turning.
+      grade4_arist_nested_loop_triangles5_instruction: "Create a sun by nesting the\nstarter
+        code in another loop.\r\n\r\nTo get this cool design with a hollow\ncenter,
+        you'll need to jump forward by the length of the triangle before\nturning."
       grade4_arist_nested_loop_triangles6_instruction: |-
         Can you draw these 36 triangles
         using a nested loop?
@@ -12818,15 +12356,10 @@
       grade4_artist_functions1_instruction: 'Salut. Moi artiste zombie. Moi aime dessiner !
         Toi aider moi à dessiner les verres carrés. Astuce : le pont entre les verres
         fait 25 pixels de moins que la longueur du carré.'
-      grade4_artist_functions2_instruction: |-
-        Functions let you define new blocks!
-        \r
-        \r
-        We've moved the blocks needed for drawing a square into a function
-        called `draw a square`. This time, use the `draw a square` function to create
-        the glasses. \r
-        \r
-        The squares are 75 pixels apart.
+      grade4_artist_functions2_instruction: "Functions let you define new blocks!\n\r\n\r\nWe've
+        moved the blocks needed for drawing a square into a function\ncalled `draw
+        a square`. This time, use the `draw a square` function to create\nthe glasses.
+        \r\n\r\nThe squares are 75 pixels apart."
       grade4_artist_functions2a_instruction: |-
         Create this image using only the blocks
         provided.
@@ -12873,24 +12406,17 @@
         If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
         Don't forget the jump block!
-      grade4_artist_functions_windows2_instruction: |-
-        Try solving this puzzle by creating
-        `draw a window` and calling it five times. Watch out for the door!\r
-        \r
-        -
-        The top windows are 50 pixels away from each other.  \r
-        - The bottom windows
-        are 100 pixels below the top set.
-      grade4_artist_nestedLoops_challenge_instruction: |-
-        Click here to see the full
-        instructions again!\r
-        \r
-        Here is the code for an interesting shape.  What
-        happens when you repeat it multiple times, turning between each iteration?   Notice
-        that the turns in this shape add up to 420 degrees, which means that when
-        your artist is done drawing, it will be facing a different direction than
-        when you started.  That new direction is exactly 60 degrees to the right of
-        where you began.
+      grade4_artist_functions_windows2_instruction: "Try solving this puzzle by creating\n`draw
+        a window` and calling it five times. Watch out for the door!\r\n\r\n-\nThe
+        top windows are 50 pixels away from each other.  \r\n- The bottom windows\nare
+        100 pixels below the top set."
+      grade4_artist_nestedLoops_challenge_instruction: "Click here to see the full\ninstructions
+        again!\r\n\r\nHere is the code for an interesting shape.  What\nhappens when
+        you repeat it multiple times, turning between each iteration?   Notice\nthat
+        the turns in this shape add up to 420 degrees, which means that when\nyour
+        artist is done drawing, it will be facing a different direction than\nwhen
+        you started.  That new direction is exactly 60 degrees to the right of\nwhere
+        you began."
       grade4_artist_nestedLoops_challenge2_instruction: |-
         Now for a challenge!  Feel
         free to use trial and error. You are not expected to get the image perfect
@@ -12901,13 +12427,10 @@
       grade4_artist_nested_loop_flags1_instruction: |-
         Loop the given code to create
         a windmill.
-      grade4_artist_nested_loop_polygons1_instruction: |-
-        Loop this design 10 times.
-        \r
-        \r
-        How much do you have to turn each time you loop?
+      grade4_artist_nested_loop_polygons1_instruction: "Loop this design 10 times.\n\r\n\r\nHow
+        much do you have to turn each time you loop?"
       grade4_artist_nested_loop_polygons2_instruction: "Hi, I'm the Artist! Let's\ncreate
-        some drawings together! For starters, try repeating this shape 6 times.\n\\r\n\\r\nHow
+        some drawings together! For starters, try repeating this shape 6 times.\n\r\n\r\nHow
         much do you have to turn each time you loop? "
       grade4_artist_nested_loop_squares1_instruction: |-
         Can you draw these 10 squares
@@ -12916,25 +12439,17 @@
         Complete the code to draw
         these triangles.  The first one is done for you.  Hint:  3 triangles in a
         360 degree rotation.
-      grade4_artist_nested_loop_triangles2_instruction: |-
-        Let's make a quick adjustment
-        to get completely different image!  \r
-        Hint: ? × 10 = 360
-      grade4_artist_nested_loop_triangles3_instruction: |-
-        Can you draw a hexagon by
-        looping the triangle code?\r
-        Hint: 6 × ? = 360
+      grade4_artist_nested_loop_triangles2_instruction: "Let's make a quick adjustment\nto
+        get completely different image!  \r\nHint: ? × 10 = 360"
+      grade4_artist_nested_loop_triangles3_instruction: "Can you draw a hexagon by\nlooping
+        the triangle code?\r\nHint: 6 × ? = 360"
       grade4_artist_nested_loop_triangles4_instruction: |-
         Hi! I'm the Artist. Let's
         try some different types of drawings together. Can you help me draw the bottom
         teeth in the alligator's mouth?
-      grade4_artist_nested_loop_triangles5_instruction: |-
-        Create a sun by nesting
-        the starter code in another loop.\r
-        \r
-        To get this cool design with a hollow
-        center, you'll need to jump forward by the length of the triangle before
-        turning.
+      grade4_artist_nested_loop_triangles5_instruction: "Create a sun by nesting\nthe
+        starter code in another loop.\r\n\r\nTo get this cool design with a hollow\ncenter,
+        you'll need to jump forward by the length of the triangle before\nturning."
       grade4_artist_nested_loop_triangles6_instruction: |-
         Can you draw these 36 triangles
         using a nested loop?
@@ -13014,14 +12529,10 @@
         Sometimes this cloud covers
         a flower, and sometimes it covers a honeycomb! Use the if/else block to collect
         nectar if it is a flower, else to make honey (because it is a honeycomb).
-      grade4_bee_conditionals_quantum5_instruction: |-
-        There will be either a flower
-        or a honeycomb under each of those clouds!\r
-        \r
-        Use the `if/else` block
-        to collect nectar if there is a flower.\r
-        Otherwise, make honey (because
-        there is a honeycomb).
+      grade4_bee_conditionals_quantum5_instruction: "There will be either a flower\nor
+        a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block\nto
+        collect nectar if there is a flower.\r\nOtherwise, make honey (because\nthere
+        is a honeycomb)."
       grade4_bee_functions_instruction: |-
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
@@ -13071,20 +12582,14 @@
         boucle imbriquée.
       grade4_bee_nestedLoops4_instruction: Recueille tout le nectar de chaque fleur
         et fabrique du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
-      grade4_bee_nestedLoops_assess_instruction: |-
-        **Assessment:** Collect all of
-        the nectar and make all of the honey using loops.\r
-        \r
-        Hint: There are several
-        possible solutions!
+      grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of\nthe
+        nectar and make all of the honey using loops.\r\n\r\nHint: There are several\npossible
+        solutions!"
       grade4_designProcess_vid_instruction: |-
         Prepare to build a project within some
         given parameters.
-      grade4_farmer_functions1_instruction: |-
-        *"Have we met before? I'm the farmer!"*\r
-        \r
-        Help
-        the farmer get to the pumpkins and pick them.
+      grade4_farmer_functions1_instruction: "*\"Have we met before? I'm the farmer!\"*\r\n\r\nHelp\nthe
+        farmer get to the pumpkins and pick them."
       grade4_farmer_functions2_instruction: |-
         Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle.
@@ -13194,20 +12699,14 @@
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
-      grade4_scaffolded_project2_instruction: |
-        Now let's get things moving! Use
-        event handlers and actions to make your hero move.\r
-        \r
-        We've added these
-        blocks to your tool box to help you.\r
-      grade4_scaffolded_project3_instruction: |-
-        Now that your game has a hero, it's
-        time to start adding other actors and assigning them behaviors. \r
-        \r
-        Add
-        two or more additional actors to your game and make them move. Do you want
-        to have an actor patrol back and forth? Try using a these new blocks to bring
-        these other components of your game to life!
+      grade4_scaffolded_project2_instruction: "Now let's get things moving! Use\nevent
+        handlers and actions to make your hero move.\r\n\r\nWe've added these\nblocks
+        to your tool box to help you.\r\n"
+      grade4_scaffolded_project3_instruction: "Now that your game has a hero, it's\ntime
+        to start adding other actors and assigning them behaviors. \r\n\r\nAdd\ntwo
+        or more additional actors to your game and make them move. Do you want\nto
+        have an actor patrol back and forth? Try using a these new blocks to bring\nthese
+        other components of your game to life!"
       grade4_scaffolded_project4_instruction: |-
         Just getting the actors moving is
         a great step, but we need to program some interactions to make this really
@@ -13254,20 +12753,13 @@
       grade5_artist_binary7_instruction: Quelle est la chaîne binaire la plus courte
         que tu peux répéter pour dessiner cette image ?
       grade5_artist_binary8_instruction: Finis ce dessin.
-      grade5_artist_binary9_instruction: |-
-        Here's a higher resolution canvas to draw
-        on - 16 pixels by 16 pixels!\r
-        \r
-        See what happens when we start to get
-        creative with the bits?
+      grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw\non
+        - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get\ncreative
+        with the bits?"
       grade5_artist_for_loops1_instruction: 'Dessine ce triangle qui mesure 50 pixels
         de large. Indice: utilise un bloc «Répéter».'
-      grade5_artist_for_loops10_instruction: |-
-        Can you figure out how to use all of
-        the things you've learned to create this image?\r
-        \r
-        Need a hint? Click
-        here.
+      grade5_artist_for_loops10_instruction: "Can you figure out how to use all of\nthe
+        things you've learned to create this image?\r\n\r\nNeed a hint? Click\nhere."
       grade5_artist_for_loops1a_instruction: |-
         Try using a `for loop`to create this
         triangular design. Don't worry that the numbers are different than the last
@@ -13283,12 +12775,9 @@
         200 pixel sides, and each triangle is 20 pixels larger than the last. "
       grade5_artist_for_loops4_instruction: "These squares start at 15 pixels long,\nthe
         largest is 300 pixels long, and each square is 15 pixels larger than the\nlast. "
-      grade5_artist_for_loops5_instruction: |-
-        Just one little change to the code from
-        the last image can create this drawing. Can you figure out what that change
-        is?\r
-        \r
-        Hint:  You need to remove something!
+      grade5_artist_for_loops5_instruction: "Just one little change to the code from\nthe
+        last image can create this drawing. Can you figure out what that change\nis?\r\n\r\nHint:
+        \ You need to remove something!"
       grade5_artist_for_loops6_instruction: |-
         If you turn a little bit more or less
         than you normally would for a shape, it creates a neat effect. Try using some
@@ -13300,24 +12789,19 @@
       grade5_artist_for_loops7a_instruction: |-
         Take the angle down to 72 degrees to
         get a spiraled pentagon.
-      grade5_artist_for_loops7b_instruction: |-
-        Use the counter inside the `set alpha`
-        block to get this faded center.\r
-        (This hexagon pattern was made using a
-        60 degree turn.)
+      grade5_artist_for_loops7b_instruction: "Use the counter inside the `set alpha`\nblock
+        to get this faded center.\r\n(This hexagon pattern was made using a\n60 degree
+        turn.)"
       grade5_artist_for_loops8_instruction: "Remember back in a previous stage when\nwe
         used a variable to control the number of sides in a shape? We are going\nto
         do the same thing with the `counter` variable now. This pattern starts\nwith
         a triangle and adds one side at a time until it draws a decagon (10 sides).\nEach
         side should be 100 pixels long. "
-      grade5_artist_for_loops9_instruction: |-
-        Let's put it all together!  Using your
-        knowledge of `for` loops and the `counter` variable, create this drawing where
-        each shape has two more sides than the last.  Make sure that each side is
-        10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
+      grade5_artist_for_loops9_instruction: "Let's put it all together!  Using your\nknowledge
+        of `for` loops and the `counter` variable, create this drawing where\neach
+        shape has two more sides than the last.  Make sure that each side is\n10 times
+        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
+        code has been provided for you."
       grade5_artist_for_loopsfreeplay11_instruction: |-
         Idées pour l’activité libre : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.
 
@@ -13396,50 +12880,35 @@
       grade5_artist_parameters_triangles2a_instruction: As-tu remarqué quelque chose
         de différent dans ces blocs «Fonction» ? Clique sur « Exécuter » pour voir
         ce qui se passe.
-      grade5_artist_parameters_triangles3_instruction: |-
-        The code for this triangle
-        function is broken.\r
-        \r
-        Can you edit the function to fix it, and then make
-        triangles of length 150, 75, 25?
+      grade5_artist_parameters_triangles3_instruction: "The code for this triangle\nfunction
+        is broken.\r\n\r\nCan you edit the function to fix it, and then make\ntriangles
+        of length 150, 75, 25?"
       grade5_artist_parameters_triangles4_instruction: |-
         The code for this triangle
         function is broken. Can you edit the function to fix it, and then make triangles
         of length 25, 50, and 75?
-      grade5_artist_parameters_trianglesy_instruction: |-
-        The code for this triangle
-        function is broken.\r
-        \r
-        Can you edit the function to fix it, and then make
-        triangles of length 150, 75, 25?
+      grade5_artist_parameters_trianglesy_instruction: "The code for this triangle\nfunction
+        is broken.\r\n\r\nCan you edit the function to fix it, and then make\ntriangles
+        of length 150, 75, 25?"
       grade5_artist_variables_freeplay10_instruction: |-
         Free Play: Experiment with
         the number of sides this shape has. Can you change the algorithm so that the
         overall size of the shape stays the same, no matter how many sides it has?
         Hint: If you divide your starting length by the number of sides, the length
         of each side will get shorter as the number of sides gets higher.
-      grade5_artist_variables_freeplay14_instruction: |-
-        Free Play: Check it out! Now
-        your algorithm is nested within one more loop. Experiment with changing the
-        values of your two variables to draw cool patterns.\r
-        \r
-        For even more effect,
-        try playing with color!  Use random colors inside loops to see how it changes
-        your design.
-      grade5_artist_variables_freeplay15_instruction: |-
-        Want a second peek at the
-        inspiration design or the hints?  Click here!\r
-        \r
-        Otherwise, make a design
-        all your own!
+      grade5_artist_variables_freeplay14_instruction: "Free Play: Check it out! Now\nyour
+        algorithm is nested within one more loop. Experiment with changing the\nvalues
+        of your two variables to draw cool patterns.\r\n\r\nFor even more effect,\ntry
+        playing with color!  Use random colors inside loops to see how it changes\nyour
+        design."
+      grade5_artist_variables_freeplay15_instruction: "Want a second peek at the\ninspiration
+        design or the hints?  Click here!\r\n\r\nOtherwise, make a design\nall your
+        own!"
       grade5_artist_variables_freeplay16_instruction: |-
         Still playing?  Here is a
         blank canvas where you can create whatever you want!
-      grade5_artist_variables_hexagons1_instruction: |-
-        Let's try it again! \r
-        \r
-        Can
-        you set the `length` variable to 60 to make this cool design with hexagons?
+      grade5_artist_variables_hexagons1_instruction: "Let's try it again! \r\n\r\nCan\nyou
+        set the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_letterT11_instruction: |-
         Here’s more complicated code
         using the same concepts from the last puzzle - what should you set the "sides"
@@ -13447,33 +12916,24 @@
       grade5_artist_variables_new1_instruction: |-
         Here is a program that will create
         an image. There are a few things that are wrong with it.
-      grade5_artist_variables_octagons13_instruction: |-
-        When a shape has lots of sides,
-        each side needs to be shorter if you want the whole pattern to fit on the
-        screen. \r
-        Let's recreate the algorithm for this amazing pattern, but instead
-        of manually setting the `length` variable, let's use a math block with the
-        `sides` variable inside to make sure that each shape fits correctly. The perimeter
-        of each polygon is 300 pixels.\r
-        Need some hints?  Click here.
-      grade5_artist_variables_pentagon8_instruction: |-
-        Use what you learned in the
-        last puzzle to create this hexagon using the "sides" variable.\r
-        \r
-        See
-        how you could change just one value to draw a triangle,  square, pentagon,
-        or octagon?
+      grade5_artist_variables_octagons13_instruction: "When a shape has lots of sides,\neach
+        side needs to be shorter if you want the whole pattern to fit on the\nscreen.
+        \r\nLet's recreate the algorithm for this amazing pattern, but instead\nof
+        manually setting the `length` variable, let's use a math block with the\n`sides`
+        variable inside to make sure that each shape fits correctly. The perimeter\nof
+        each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      grade5_artist_variables_pentagon8_instruction: "Use what you learned in the\nlast
+        puzzle to create this hexagon using the \"sides\" variable.\r\n\r\nSee\nhow
+        you could change just one value to draw a triangle,  square, pentagon,\nor
+        octagon?"
       grade5_artist_variables_pentagon9_instruction: |-
         Now, recreate the algorithm
         from the last level and create a pentagon with sides of length 150.
-      grade5_artist_variables_pentagons1_instruction: |-
-        Draw this pattern of pentagons
-        with 100 pixel sides by setting the right value for `length` and dropping
-        the `length` variable into all of the the correct places. \r
-        \r
-        See how
-        you only have to set the value for `length` once, and the code uses the right
-        value everywhere?
+      grade5_artist_variables_pentagons1_instruction: "Draw this pattern of pentagons\nwith
+        100 pixel sides by setting the right value for `length` and dropping\nthe
+        `length` variable into all of the the correct places. \r\n\r\nSee how\nyou
+        only have to set the value for `length` once, and the code uses the right\nvalue
+        everywhere?"
       grade5_artist_variables_pentagons12_instruction: |-
         Let's set the "sides"
         variable to 5. The more sides we add to this algorithm, the bigger this whole
@@ -13484,14 +12944,11 @@
         Now I want to make a rectangle
         that is twice as tall as it is wide. We've got a variable called "width"
         that needs to be set to 100. Can you use the math blocks to complete the code?
-      grade5_artist_variables_square7_instruction: |-
-        Here’s some code that can draw
-        any regular polygon. There’s a new variable called sides that is set to 4.
-        Can you use the sides variable (along with the math block) to turn the right
-        amount regardless of how many sides there are in the polygon?\r
-        \r
-        Click
-        here to go back to the hint!
+      grade5_artist_variables_square7_instruction: "Here’s some code that can draw\nany
+        regular polygon. There’s a new variable called sides that is set to 4.\nCan
+        you use the sides variable (along with the math block) to turn the right\namount
+        regardless of how many sides there are in the polygon?\r\n\r\nClick\nhere
+        to go back to the hint!"
       grade5_artist_variables_triangles2_instruction: |-
         Instead of using "move forward
         by 150," the "move" block is now referencing a variable called "length."
@@ -13543,11 +13000,11 @@
       grade5_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
         blocks in your tool box. "
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most\nof
-        the code is hidden. We've added a new function called `score_points.`\\r\n\\r\nAdd\na
-        new parameter called `points` to the `player_score` function. \\r\n\\r\nThe\n`score_points`
+        the code is hidden. We've added a new function called `score_points.`\r\n\r\nAdd\na
+        new parameter called `points` to the `player_score` function. \r\n\r\nThe\n`score_points`
         function should be able to both add and remove points from\n`player_score`
-        depending on which actor is hit.\\r\nChanging the score by 1\nwill add a point,
-        while changing the score by -1 will subtract a point.\\r\n\\r\nWhen\nyou're
+        depending on which actor is hit.\r\nChanging the score by 1\nwill add a point,
+        while changing the score by -1 will subtract a point.\r\n\r\nWhen\nyou're
         done, click \"Run\" to play.  When Dog scores 6 points, you will move\non
         to the next puzzle. "
       grade5_playlab_variables1_instruction: |-
@@ -13572,14 +13029,10 @@
         acteurs.
       grade5_playlab_variables14_instruction: "It's free play time! Have fun with\nall
         the blocks in your tool box. "
-      grade5_playlab_variables1ask_instruction: |-
-        This time, when you press 'run',
-        you will see a 'prompt' asking you for a number. This number will be stored
-        in a variable used to set the dog's speed.\r
-        \r
-        \r
-        Pay attention to how
-        this program is written!
+      grade5_playlab_variables1ask_instruction: "This time, when you press 'run',\nyou
+        will see a 'prompt' asking you for a number. This number will be stored\nin
+        a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how\nthis
+        program is written!"
       grade5_playlab_variables2_instruction: La course dans ce dernier puzzle n'était
         pas très équitable ! Change la variable «Vitesse du chien» pour t'assurer
         que tu peux obtenir plus de drapeaux que le chat. Le premier à obtenir 10
@@ -13591,23 +13044,18 @@
         Now we're using a variable called
         "height" to control how high the dog can jump. Update the "height" variable
         so that the dog can jump high enough to reach all the flags.
-      grade5_playlab_variables5_instruction: |-
-        You've seen now how a variable can
-        be used to set the height of an actor's jump. How else could  you use a variable?\r
-        \r
-        Let's
-        build a game! First we'll need a score. Try setting the 'points' variable
-        to give yourself 10 free points!
+      grade5_playlab_variables5_instruction: "You've seen now how a variable can\nbe
+        used to set the height of an actor's jump. How else could  you use a variable?\r\n\r\nLet's\nbuild
+        a game! First we'll need a score. Try setting the 'points' variable\nto give
+        yourself 10 free points!"
       grade5_playlab_variables6_instruction: |-
         Utilise la flèche droite pour lancer des cœurs.
 
         Dans notre jeu, comment devrions nous marquer des points ? Ajoute 1 à ta variable « Points » chaque fois que le Chien touche le Chat avec un cœur. Utilise l'événement « Quand acteur 2 touche quoi que ce soit » pour déclencher une mise à jour de ton score. Tu peux augmenter ta variable en définissant « points = points + 1 ». Fais monter ton score jusqu'à 10 (par un à la fois!) pour réussir le niveau.
-      grade5_playlab_variables6ask_instruction: |-
-        This time, you need 100 points to
-        win!  Don't worry though, you can choose how many points you earn each time
-        you score a hit!\r
-        Try adding the `ask` block and changing the number 1 out
-        for the variable `value`.
+      grade5_playlab_variables6ask_instruction: "This time, you need 100 points to\nwin!
+        \ Don't worry though, you can choose how many points you earn each time\nyou
+        score a hit!\r\nTry adding the `ask` block and changing the number 1 out\nfor
+        the variable `value`."
       grade5_playlab_variables7_instruction: Bon, maintenant assurons-nous que ce
         jeu n'est pas trop facile à jouer. Chaque fois que le Chien (acteur 1) se
         fait frapper par les cœurs jaunes du Chat (acteur 2), tu dois perdre un point.
@@ -13632,19 +13080,13 @@
       grade5_playlab_variables9_instruction: Voici une fonction appelée «Patrouille».
         Modifie-la pour déplacer le Chat vers le haut de 400 pixels, puis vers le
         bas de 400 pixels.
-      grade5_playlab_variables_freeplay_instruction: |-
-        Free Play time! Here are all
-        of the variables we've played with so far in this stage, as well as a few
-        more in case you want them. \r
-        \r
-        Notice that there are now so many blocks
-        in our toolbox that they need to be organized!  Here, we've put each piece
-        into an appropriate category.  Take some time to explore everything that is
-        available. When you're done browsing, make a game or story using repeats,
-        variables, and events.  \r
-        \r
-        Hint: scroll down to see all the commands
-        in the workspace.
+      grade5_playlab_variables_freeplay_instruction: "Free Play time! Here are all\nof
+        the variables we've played with so far in this stage, as well as a few\nmore
+        in case you want them. \r\n\r\nNotice that there are now so many blocks\nin
+        our toolbox that they need to be organized!  Here, we've put each piece\ninto
+        an appropriate category.  Take some time to explore everything that is\navailable.
+        When you're done browsing, make a game or story using repeats,\nvariables,
+        and events.  \r\n\r\nHint: scroll down to see all the commands\nin the workspace."
       grade5_playlab_variables_jump1_instruction: |-
         This puzzle uses a hidden function
         that makes the dog jump when the 'up' arrow is pressed. The height of the
@@ -13867,33 +13309,15 @@
       k1stickerfreeplay_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
-      kikiTesta_instruction: |-
-        Our adventurer wants to collect coins.  But she can
-        only use 4 blocks to get them.\r
-        \r
-        Can you help her grab as many as she
-        can using just 4 blocks?
-      kikiTesting_instruction: |
-        .\r
-         .\r
-        .\r
-        .\r
-        .\r
-        .\r
-        \r
-        .\r
-        \r
-      level 'grade3_Loops_10_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible.
-      level 'grade3_Loops_11_instruction: |-
-        The shape of this path is different than
-        the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly
+        use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she\ncan
+        using just 4 blocks?"
+      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      level 'grade3_Loops_10_instruction: "Such a busy bee!\r\n\r\nHelp bee collect\nall
+        of the nectar and make all of the honey with the fewest blocks possible."
+      level 'grade3_Loops_11_instruction: "The shape of this path is different than\nthe
+        others. \r\n\r\nCan you collect all of the nectar using as few blocks\nas
+        possible?"
       level 'grade3_Loops_12_instruction: |-
         Can you find the quickest way for the
         bee to collect all of the nectar and make all of the honey?
@@ -13909,17 +13333,11 @@
       level 'grade3_Loops_5_instruction: |-
         What a beautiful field of flowers!   Help
         the bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
-      level 'grade3_Loops_6_instruction: |-
-        How many times can loops help you in this
-        puzzle?  \r
-        \r
-        Loops are your friend! Use a few of them to complete this
-        puzzle with the fewest blocks possible.
-      level 'grade3_Loops_7_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect
-        nectar from each of the flowers using the fewest blocks possible.
+      level 'grade3_Loops_6_instruction: "How many times can loops help you in this\npuzzle?
+        \ \r\n\r\nLoops are your friend! Use a few of them to complete this\npuzzle
+        with the fewest blocks possible."
+      level 'grade3_Loops_7_instruction: "Those flowers look tasty!\r\n\r\nCollect\nnectar
+        from each of the flowers using the fewest blocks possible."
       level 'grade3_Loops_8_instruction: |-
         Collect all the nectar and make all of
         the honey using the fewest blocks possible.
@@ -13929,13 +13347,10 @@
       level grade3_Loops_2_instruction: |-
         This time, use a loop to gather all of the
         nectar.
-      loop pet test_instruction: |-
-        Last time, you practiced using the "repeat forever"
-        loop to make a sprite do something forever. This time, we will use it to make
-        a virtual pet. \r
-        \r
-        This dog's name is Daisy. Daisy LOVES to snack on
-        carrots. Use the "drag and drop" block to move the carrot to Daisy.
+      loop pet test_instruction: "Last time, you practiced using the \"repeat forever\"\nloop
+        to make a sprite do something forever. This time, we will use it to make\na
+        virtual pet. \r\n\r\nThis dog's name is Daisy. Daisy LOVES to snack on\ncarrots.
+        Use the \"drag and drop\" block to move the carrot to Daisy."
       loops_forvideo_angrybirds_ab_instruction: |-
         Use loops to get the bird to the
         pig!
@@ -13967,12 +13382,9 @@
         Our flowers are in full bloom!  Now we need the
         bee to grab nectar from each one so he can make plenty of honey back at his
         hive!
-      love_spring_3_instruction: |-
-        Figure out how to change this code so that Robin
-        chooses a number between 1 and 20.  \r
-        \r
-        When you're ready, press "Run"
-        and play until you guess Robin's number!
+      love_spring_3_instruction: "Figure out how to change this code so that Robin\nchooses
+        a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\"\nand
+        play until you guess Robin's number!"
       marina_gameLab_play_instruction: Clone this level and make your own blocks!
       mike3bit_instruction: |-
         We start you with the 4x2 image Maddie was creating,
@@ -13985,12 +13397,9 @@
       mike3bitfreeplay_instruction: |-
         Make something awesome and share it with your
         classmates! You can copy and paste the value of a pixel to use it repeatedly.
-      mike3bitmario_instruction: |-
-        A careless binary coder typed in ONE extra 0 or
-        1 somewhere within this image's data. The extra bit that is causing Mario
-        to glitch out! \r
-        \r
-        Delete the extra bit to restore Mario back to normal!
+      mike3bitmario_instruction: "A careless binary coder typed in ONE extra 0 or\n1
+        somewhere within this image's data. The extra bit that is causing Mario\nto
+        glitch out! \r\n\r\nDelete the extra bit to restore Mario back to normal!"
       pet game 1_instruction: |-
         Use the "make a new sprite" block to make yourself
         a pet!
@@ -14001,13 +13410,10 @@
         Pets love toys! Use a second "make sprite" block
         to give your pet a toy, then use the "move towards" behavior to make your
         pet run to their new toy.
-      pet game 4_instruction: |-
-        When your pet gets to their toy, they get excited!
-        Use the "when touches" block to detect when your pet gets to their toy.\r
-        \r
-        When
-        that happens, use the "remove behavior" block to make them stop walking,
-        and the "add behavior" block to make them have a dance party!
+      pet game 4_instruction: "When your pet gets to their toy, they get excited!\nUse
+        the \"when touches\" block to detect when your pet gets to their toy.\r\n\r\nWhen\nthat
+        happens, use the \"remove behavior\" block to make them stop walking,\nand
+        the \"add behavior\" block to make them have a dance party!"
       pet game 5_instruction: |-
         You can add lots more things for your pet to interact
         with! Play around with the "set sprite" block and make more stuff anywhere
@@ -14029,11 +13435,7 @@
       playEventsK1_instruction: |-
         This game is called "Play Lab".  See if you can
         figure out what each block does.
-      playEventsK2_instruction: |-
-        Jorge wants to say "Hi there."\r
-        \r
-        Can you
-        help?
+      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\r\n\r\nCan you\nhelp?"
       playEventsK3_instruction: |-
         Jorge wants to be scratched behind the ears!  Can
         you make it so that when you click Jorge he is happy?
@@ -14093,19 +13495,13 @@
         shorter using loops.
       ramp_artist_loops9_instruction: Solve this puzzle by drawing a square.
       ramp_artist_loops9_2018_instruction: Solve this puzzle by drawing a square.
-      sample1_instruction: |-
-        Our adventurer wants to collect coins.  But she can only
-        use 4 blocks to get them.\r
-        \r
-        Can you help her grab as many as she can
-        using just 4 blocks?
+      sample1_instruction: "Our adventurer wants to collect coins.  But she can only\nuse
+        4 blocks to get them.\r\n\r\nCan you help her grab as many as she can\nusing
+        just 4 blocks?"
       sample10_instruction: Now you can use loops to draw whatever you like!
-      sample10a_instruction: |-
-        You have helped the adventurer and her bee!  As a reward,
-        please stay and play around in my magical village. \r
-        \r
-        You should have
-        everything you need to create a game of your own.
+      sample10a_instruction: "You have helped the adventurer and her bee!  As a reward,\nplease
+        stay and play around in my magical village. \r\n\r\nYou should have\neverything
+        you need to create a game of your own."
       sample2_instruction: |-
         Use what you've learned to help bee gather all of this
         honey using only the blocks that you have here.
@@ -14118,11 +13514,8 @@
       sample3assessment_instruction: |-
         Can you figure out how to gather all of this
         nectar in just one try?
-      sample4_instruction: |-
-        Our adventurer has found a stash of coins in this cave.\r
-        \r
-        Can
-        you help her grab as many as she can using just 7 blocks?
+      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\r\n\r\nCan\nyou
+        help her grab as many as she can using just 7 blocks?"
       sample5_instruction: Help bee make all of the honey.
       sample6_instruction: 'Challenge: Help bee make all of the honey.'
       sample7assessment_instruction: |-

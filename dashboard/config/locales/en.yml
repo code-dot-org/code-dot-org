@@ -374,8 +374,8 @@ en:
     email_resend_confirm: 'Resend confirmation instructions'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
-    delete: 'Delete your account'
-    delete_text: "Clicking the button below will delete your account."
+    delete: 'Delete Account'
+    delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
@@ -391,6 +391,7 @@ en:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Completed'
     tried: 'Tried'

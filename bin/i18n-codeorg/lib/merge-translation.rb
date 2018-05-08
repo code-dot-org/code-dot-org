@@ -18,6 +18,10 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
        new_translation != prev_translation
       new_translation = prev_translation
     end
+    # Crowdin escapes carraige returns, so restore them here
+    if new_translation.is_a?(String)
+      new_translation = new_translation.gsub(/\\r/, "\r")
+    end
   else
     # Recursive merge for subtree.
     new_translation.each_key do |key|
