@@ -908,4 +908,11 @@ FactoryGirl.define do
     key "Object Key"
     etag "Object etag"
   end
+
+  factory :email_preference do
+    email 'test@example.net'
+    opt_in true
+    ip_address '10.0.0.1'
+    source 'form'
+  end
 end
