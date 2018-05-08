@@ -186,7 +186,6 @@ class DeleteAccountsHelper
   def purge_unshared_studio_person(user)
     return unless user.studio_person
     if user.studio_person.users.with_deleted.count <= 1
-      puts "Destroying: #{user.studio_person}"
       user.studio_person.destroy
     end
   end

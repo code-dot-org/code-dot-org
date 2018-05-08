@@ -17,6 +17,16 @@ require 'cdo/delete_accounts_helper'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  test 'sets purged_at' do
+    user = create :student
+    assert_nil user.purged_at
+
+    purge_user user
+
+    user.reload
+    refute_nil user.purged_at
+  end
+
   test 'clears user.name' do
     user = create :student
     refute_nil user.name
@@ -113,6 +123,31 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.full_address
     assert_nil user.school
     assert_nil user.school_info_id
+  end
+
+  test 'clears user properties' do
+    user = create :teacher do |t|
+      t.ops_first_name = 'test-value'
+      t.ops_last_name = 'test-value'
+      t.district_id = 'test-value'
+      t.ops_school = 'test-value'
+      t.ops_gender = 'test-value'
+      t.using_text_mode = 'test-value'
+      t.last_seen_school_info_interstitial = 'test-value'
+      t.ui_tip_dismissed_homepage_header = 'test-value'
+      t.ui_tip_dismissed_teacher_courses = 'test-value'
+      t.oauth_refresh_token = 'test-value'
+      t.oauth_token = 'test-value'
+      t.oauth_token_expiration = 'test-value'
+      t.sharing_disabled = 'test-value'
+      t.next_census_display = 'test-value'
+    end
+    refute_equal({}, user.properties)
+
+    purge_user user
+
+    user.reload
+    assert_equal({}, user.properties)
   end
 
   test 'leaves urm and races for US users' do
