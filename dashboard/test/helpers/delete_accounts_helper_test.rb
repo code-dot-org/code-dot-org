@@ -141,6 +141,34 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user.races
   end
 
+  test 'removes StudioPerson if it was only tied to this user' do
+    user = create :teacher
+    studio_person = user.studio_person
+    refute_nil user.studio_person_id
+
+    purge_user user
+
+    user.reload
+    assert_nil user.studio_person_id
+    assert_empty StudioPerson.where(id: studio_person.id)
+  end
+
+  test "only removes association with StudioPerson if it's tied to other users" do
+    user = create :teacher
+    studio_person = user.studio_person
+    refute_nil user.studio_person_id
+    other_user = create :teacher, studio_person_id: studio_person.id
+    assert_equal user.studio_person_id, other_user.studio_person_id
+
+    purge_user user
+
+    user.reload
+    other_user.reload
+    assert_nil user.studio_person_id
+    refute_nil other_user.studio_person_id
+    refute_empty StudioPerson.where(id: studio_person.id)
+  end
+
   test 'clears sensitive user location data' do
     user = create :student
     user_geo = create :user_geo, :seattle, user_id: user.id
@@ -164,9 +192,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user_geo.state
     refute_nil user_geo.country
   end
-
-  # TODO: Delete all attached studio_persons
-  # TODO: Delete attached school_infos?
 
   test 'purged student still passes validations' do
     user = create :student

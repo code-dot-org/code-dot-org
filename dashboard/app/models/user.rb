@@ -561,7 +561,7 @@ class User < ActiveRecord::Base
 
     # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
     # without an explicit acceptance, we clear the version accepted.
-    if teacher?
+    if teacher? && purged_at.nil?
       self.studio_person = StudioPerson.create!(emails: email) unless studio_person
       if user_type_changed? && !terms_of_service_version_changed?
         self.terms_of_service_version = nil
