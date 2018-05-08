@@ -71,7 +71,7 @@ function renderSectionProgress(section, validScripts) {
     Promise.all(promises).then(data => {
       let [studentScriptsData, validCourses] = data;
       const { studentScriptIds } = studentScriptsData;
-      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses));
+      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
       renderSectionProgressReact(store);
     });
   } else {

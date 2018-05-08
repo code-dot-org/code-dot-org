@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import skins from "@cdo/apps/maze/skins";
-import {getSubtypeForSkin} from '@cdo/apps/maze/mazeUtils';
-import MazeMap from '@cdo/apps/maze/mazeMap';
-import drawMap from '@cdo/apps/maze/drawMap';
+import {getSubtypeForSkin} from '@code-dot-org/maze/src/utils';
+import MazeMap from '@code-dot-org/maze/src/mazeMap';
+import drawMap from '@code-dot-org/maze/src/drawMap';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 export default class MazeThumbnail extends React.Component {
