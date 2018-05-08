@@ -15,7 +15,7 @@
 
   cookie_banner_message: 'By continuing to browse or by clicking "Accept all cookies," you agree to the storing of first- and third-party cookies on your device to enhance site navigation and analyze site usage.'
   cookie_banner_more_information: 'More information'
-  cookie_banner_accept: 'Accept all cookies'
+  cookie_banner_accept: 'Agree and dismiss'
 
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
