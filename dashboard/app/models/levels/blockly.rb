@@ -319,7 +319,7 @@ class Blockly < Level
 
   def get_localized_property(property_name)
     if should_localize? && try(property_name)
-      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}")
+      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}", default: nil)
     end
   end
 
