@@ -28,7 +28,8 @@ experiments.getQueryString_ = function () {
 
 experiments.getStoredExperiments_ = function () {
   // Get experiments on current user from experiments cookie
-  const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
+  const experimentsCookie = window.cookieEnvSuffix ?
+    Cookie.get('_experiments' + window.cookieEnvSuffix) : null;
   const userExperiments = experimentsCookie ?
     JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({key: name})) :
     [];
