@@ -315,7 +315,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Foo",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 17
+            "category_priority" => 15
           },
           {
             "id" => 3,
@@ -323,7 +323,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Bar",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 17
+            "category_priority" => 15
           },
           {
             "id" => 4,
@@ -363,7 +363,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp1",
             "category" => "CS Principles (2017)",
             "position" => 0,
-            "category_priority" => 11
+            "category_priority" => 9
           },
           {
             "id" => 32,
@@ -371,7 +371,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp2",
             "category" => "CS Principles (2017)",
             "position" => 1,
-            "category_priority" => 11
+            "category_priority" => 9
           },
           {
             "id" => 34,
@@ -379,7 +379,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp3",
             "category" => "CS Principles (2017)",
             "position" => 2,
-            "category_priority" => 11
+            "category_priority" => 9
           },
         ]
       end
