@@ -41,7 +41,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_CSF_SCRIPT_IDS = 'teacherDashboard/SET_CSF_SCRIPT_IDS';
+const SET_STAGE_EXTRAS_SCRIPT_IDS = 'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -91,7 +91,7 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setCsfScriptIds = ids => ({ type: SET_CSF_SCRIPT_IDS, ids });
+export const setstageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
@@ -401,10 +401,10 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === SET_CSF_SCRIPT_IDS) {
+  if (action.type === SET_STAGE_EXTRAS_SCRIPT_IDS) {
     return {
       ...state,
-      csfScriptIds: action.ids,
+      stageExtrasScriptIds: action.ids,
     };
   }
 
@@ -903,7 +903,7 @@ export const assignmentPaths = (validAssignments, section) => {
  * @param state
  * @param id
  */
-export const isCsfScript = (state, id) => state.teacherSections.csfScriptIds.indexOf(id) > -1;
+export const stageExtrasAvailable = (state, id) => state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
