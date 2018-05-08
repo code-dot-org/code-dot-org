@@ -5,6 +5,7 @@ window.setupCookieBanner = (environment) => {
   const cookieName = '_cookieBanner' +
     (environment === 'production' ? '' : ('_' + environment));
   const banner = document.getElementById("cookie-banner");
+  const bannerButton = document.getElementById("accept-cookies");
   const rootDomain = getRootDomainFromHostname(document.location.hostname);
   const value = cookies.get(cookieName);
 
@@ -18,7 +19,7 @@ window.setupCookieBanner = (environment) => {
   if (!value && !hideCookie) {
     banner.style.display = "block";
 
-    banner.onclick = () => {
+    bannerButton.onclick = () => {
       cookies.set(cookieName, '1', {expires: 10 * 365, domain: rootDomain});
       banner.style.display = "none";
     };
