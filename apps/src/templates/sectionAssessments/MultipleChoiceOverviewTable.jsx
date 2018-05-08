@@ -124,10 +124,6 @@ class MultipleChoiceOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    let dataColumns = [];
-
-    dataColumns.push(this.getQuestionColumn(sortable));
-
     const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
       question1.answers.length - question2.answers.length
     )).pop();
