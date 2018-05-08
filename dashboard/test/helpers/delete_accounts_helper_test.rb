@@ -151,8 +151,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'leaves urm and races for US users' do
-    user = create :student, races: 'white,hispanic'
-    create :user_geo, :seattle, user_id: user.id
+    user = create :student, :within_united_states, races: 'white,hispanic'
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -164,8 +163,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears urm and races for non-US users' do
-    user = create :student, races: 'white,hispanic'
-    create :user_geo, :sydney, user_id: user.id
+    user = create :student, :outside_united_states, races: 'white,hispanic'
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -205,8 +203,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears sensitive user location data' do
-    user = create :student
-    user_geo = create :user_geo, :seattle, user_id: user.id
+    user = create :student, :within_united_states
+    user_geo = user.user_geos.first
     refute_nil user_geo.ip_address
     refute_nil user_geo.city
     refute_nil user_geo.state

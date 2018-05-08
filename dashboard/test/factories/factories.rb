@@ -266,6 +266,18 @@ FactoryGirl.define do
         user.reload
       end
     end
+
+    trait :within_united_states do
+      after(:create) do |user|
+        create :user_geo, :seattle, user: user
+      end
+    end
+
+    trait :outside_united_states do
+      after(:create) do |user|
+        create :user_geo, :sydney, user: user
+      end
+    end
   end
 
   factory :authentication_option do
@@ -917,9 +929,10 @@ FactoryGirl.define do
   end
 
   factory :user_geo do
+    ip_address '10.0.0.1'
+
     # Space Needle
     trait :seattle do
-      ip_address '10.0.0.1'
       city 'Seattle'
       state 'Washington'
       country 'United States'
@@ -930,7 +943,6 @@ FactoryGirl.define do
 
     # Sydney Opera House
     trait :sydney do
-      ip_address '10.0.0.1'
       city 'Sydney'
       state 'New South Wales'
       country 'Australia'

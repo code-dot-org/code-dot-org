@@ -2751,13 +2751,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'within_united_states? is false if latest UserGeo has incomplete data' do
-    # Matches behavior in trackable.rb where we push a UserGeo with just
+    # Based on behavior in trackable.rb where we push a UserGeo with just
     # user_id and ip_address, no other geo information
     user = create :student
     Timecop.freeze do
-      create :user_geo, :seattle, user_id: user.id
+      create :user_geo, :seattle, user: user
       Timecop.travel 1
-      create :user_geo, user_id: user.id, ip_address: '10.0.0.1'
+      create :user_geo, user: user
     end
     assert_equal 2, user.user_geos.count
     refute user.within_united_states?
@@ -2766,9 +2766,9 @@ class UserTest < ActiveSupport::TestCase
   test 'within_united_states? is false if latest UserGeo from another country' do
     user = create :student
     Timecop.freeze do
-      create :user_geo, :seattle, user_id: user.id
+      create :user_geo, :seattle, user: user
       Timecop.travel 1
-      create :user_geo, :sydney, user_id: user.id
+      create :user_geo, :sydney, user: user
     end
     assert_equal 2, user.user_geos.count
     refute user.within_united_states?
@@ -2777,9 +2777,9 @@ class UserTest < ActiveSupport::TestCase
   test 'within_united_states? is true if latest UserGeo from the United States' do
     user = create :student
     Timecop.freeze do
-      create :user_geo, :sydney, user_id: user.id
+      create :user_geo, :sydney, user: user
       Timecop.travel 1
-      create :user_geo, :seattle, user_id: user.id
+      create :user_geo, :seattle, user: user
     end
     assert_equal 2, user.user_geos.count
     assert user.within_united_states?
