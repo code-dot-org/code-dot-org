@@ -754,7 +754,7 @@ function main() {
       );
     };
 
-    if (experiments.isEnabled('sectionProgressRedesign')) {
+    if (experiments.isEnabled(experiments.PROGRESS_TAB)) {
       $scope.react_progress = true;
       $scope.$on('section-progress-rendered', () => {
         $scope.section.$promise.then(script =>
@@ -764,7 +764,7 @@ function main() {
       return;
     }
 
-    // The below is not run if our sectionProgressRedesign experiment is not enabled
+    // The below is not run if our experiments.PROGRESS_TAB experiment is not enabled
 
     const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
       .then(result => {
