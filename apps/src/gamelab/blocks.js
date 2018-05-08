@@ -402,7 +402,13 @@ export default {
         this.appendDummyInput()
             .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-                : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+                : new Blockly.FieldVariable(
+                    Blockly.Msg.VARIABLES_SET_ITEM,
+                    null,
+                    null,
+                    Blockly.BlockValueType.SPRITE,
+                  ),
+                'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
@@ -436,7 +442,13 @@ export default {
             .setStrictCheck(Blockly.BlockValueType.SPRITE)
             .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
+              : new Blockly.FieldVariable(
+                  Blockly.Msg.VARIABLES_SET_ITEM,
+                  null,
+                  null,
+                  Blockly.BlockValueType.SPRITE,
+                ),
+              'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
