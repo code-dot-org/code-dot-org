@@ -4,12 +4,12 @@
  * Supports both Bee and Farmer skins.
  */
 import React, {PropTypes} from 'react';
-var HarvesterCell = require('@cdo/apps/maze/harvesterCell');
-var PlanterCell = require('@cdo/apps/maze/planterCell');
-var BeeCell = require('@cdo/apps/maze/beeCell');
-var Cell = require('@cdo/apps/maze/cell');
+var HarvesterCell = require('@code-dot-org/maze/src/harvesterCell');
+var PlanterCell = require('@code-dot-org/maze/src/planterCell');
+var BeeCell = require('@code-dot-org/maze/src/beeCell');
+var Cell = require('@code-dot-org/maze/src/cell');
 var StudioCell = require('@cdo/apps/studio/cell');
-var mazeUtils = require('@cdo/apps/maze/mazeUtils');
+var mazeUtils = require('@code-dot-org/maze/src/utils');
 
 var HarvesterCellEditor = require('./HarvesterCellEditor');
 var PlanterCellEditor = require('./PlanterCellEditor');
