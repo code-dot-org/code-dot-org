@@ -204,6 +204,8 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :user_geos, -> {order 'updated_at desc'}
+
   after_create :associate_with_potential_pd_enrollments
 
   # after_create :send_new_teacher_email
@@ -1705,8 +1707,7 @@ class User < ActiveRecord::Base
   end
 
   def within_united_states?
-    latest_geo = UserGeo.where(user_id: id).order(updated_at: :desc).first
-    latest_geo && 'United States' == latest_geo[:country]
+    'United States' == user_geos.first&.country
   end
 
   def associate_with_potential_pd_enrollments
