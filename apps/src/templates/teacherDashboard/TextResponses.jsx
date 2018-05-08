@@ -5,8 +5,16 @@ import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
+const styles = {
+  emptyInfoText: {
+    paddingTop: 20
+  }
+};
+
 class TextResponses extends Component {
   static propTypes = {
+    responses: PropTypes.array.isRequired,
+
     // provided by redux
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
@@ -17,19 +25,29 @@ class TextResponses extends Component {
     this.props.setScriptId(scriptId);
   };
 
+  renderResponsesTable = () => {
+    const {responses} = this.props;
+    if (!responses.length) {
+      return <div style={styles.emptyInfoText}>{i18n.emptyTextResponsesTable()}</div>;
+    }
+  };
+
   render() {
     const {validScripts, scriptId} = this.props;
 
     return (
       <div>
-        <div style={h3Style}>
-          {i18n.selectACourse()}
+        <div>
+          <div style={h3Style}>
+            {i18n.selectACourse()}
+          </div>
+          <ScriptSelector
+            validScripts={validScripts}
+            scriptId={scriptId}
+            onChange={this.onChangeScript}
+          />
         </div>
-        <ScriptSelector
-          validScripts={validScripts}
-          scriptId={scriptId}
-          onChange={this.onChangeScript}
-        />
+        {this.renderResponsesTable()}
       </div>
     );
   }
