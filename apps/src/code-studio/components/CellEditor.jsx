@@ -4,7 +4,9 @@
  * @see @cdo/apps/maze/cell
  */
 import React, {PropTypes} from 'react';
-import { SquareType } from '@cdo/apps/maze/tiles';
+import { tiles } from '@code-dot-org/maze';
+
+const SquareType = tiles.SquareType;
 
 export default class CellEditor extends React.Component {
   static propTypes = {
