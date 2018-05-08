@@ -25,6 +25,7 @@
 
 createEdgeSprites();
 let inputEvents = [];
+let touchEvents = [];
 let collisionEvents = [];
 let loops = [];
 let sprites = [];
@@ -166,11 +167,11 @@ function whileSpace(event) {
 }
 
 function whenMouseClicked(event) {
-  inputEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+  touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
 function clickedOn(sprite, event) {
-  inputEvents.push({type: mousePressedOver, event: event, param: sprite});
+  touchEvents.push({type: mousePressedOver, event: event, param: sprite});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -304,12 +305,23 @@ function hideTitleScreen() {
   title = subTitle = '';
 }
 
+function shouldUpdate() {
+  return World.frameCount > 1;
+}
+
 function draw() {
   background(World.background_color || "white");
 
-  if (World.frameCount > 1) {
-    // Run input events
-    for (var i=0; i<inputEvents.length; i++) {
+  if (shouldUpdate) {
+    // Perform sprite behaviors
+    sprites.forEach(function (sprite) {
+      sprite.behaviors.forEach(function (behavior) {
+        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
+      });
+    });
+
+    // Run key events
+    for (let i = 0; i < inputEvents.length; i++) {
       const eventType = inputEvents[i].type;
       const event = inputEvents[i].event;
       const param = inputEvents[i].param;
@@ -318,9 +330,18 @@ function draw() {
       }
     }
 
+    // Run touch events
+    for (let i = 0; i < touchEvents.length; i++) {
+      const eventType = touchEvents[i].type;
+      const event = touchEvents[i].event;
+      const param = touchEvents[i].param;
+      if (eventType(param)) {
+        event();
+      }
+    }
 
     // Run collision events
-    for (let i=0; i<collisionEvents.length; i++) {
+    for (let i = 0; i<collisionEvents.length; i++) {
       const collisionEvent = collisionEvents[i];
       const a = collisionEvent.a;
       const b = collisionEvent.b;
@@ -335,7 +356,7 @@ function draw() {
     }
 
     // Run loops
-    for (let i=0; i<loops.length; i++) {
+    for (let i = 0; i<loops.length; i++) {
       var loop = loops[i];
       if (!loop.condition()) {
         loops.splice(i, 1);
@@ -343,29 +364,6 @@ function draw() {
         loop.loop();
       }
     }
-
-
-    sprites.forEach(function (sprite) {
-
-      // Perform sprite behaviors
-      sprite.behaviors.forEach(function (behavior) {
-        behavior.func.apply(null, [sprite].concat(behavior.extraArgs));
-      });
-
-      // Make sprites say things
-      if (sprite.things_to_say.length > 0) {
-        fill("white");
-        rect(sprite.x + 10, sprite.y - 15, sprite.things_to_say[0][0].length * 7, 20);
-        fill("black");
-        text(sprite.things_to_say[0][0], sprite.x + 15, sprite.y);
-
-        if (sprite.things_to_say[0][1] === 0) {
-          sprite.things_to_say.shift();
-        } else if (sprite.things_to_say[0][1] > -1) {
-          sprite.things_to_say[0][1]--;
-        }
-      }
-    });
   }
 
   drawSprites();

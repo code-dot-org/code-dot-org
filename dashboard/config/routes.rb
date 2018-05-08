@@ -86,6 +86,7 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
+        get 'student_script_ids'
       end
     end
   end
@@ -518,7 +519,6 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
-  get '/dashboardapi/section/:section_id/student_script_ids', to: 'sections#student_script_ids'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
