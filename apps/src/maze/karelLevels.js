@@ -1,5 +1,5 @@
 var levelBase = require('../level_base');
-var Direction = require('./tiles').Direction;
+var Direction = require('@code-dot-org/maze/src/tiles').Direction;
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
