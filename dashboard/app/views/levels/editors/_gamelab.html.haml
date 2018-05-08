@@ -94,6 +94,10 @@
   = f.text_field :custom_setup_code
 
 .field
+  = f.label 'Validation code: Write some javascript that calls levelSuccess() or levelFailure() to stop execution as a success or failure'
+  = f.text_field :validation_code
+
+.field
   =f.label 'Animations are paused by default'
   %p
     If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
