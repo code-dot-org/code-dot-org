@@ -9,15 +9,6 @@ import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-const styles = {
-  header: {
-    marginBottom: 0
-  },
-  table: {
-    paddingTop: 10
-  }
-};
-
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 5,
@@ -25,6 +16,16 @@ const TABLE_COLUMN_WIDTHS = {
   puzzle: TABLE_WIDTH / 6,
   question: TABLE_WIDTH / 5,
   response: TABLE_WIDTH / 4
+};
+const RESPONSE_CHARACTER_LIMIT = 100;
+
+const styles = {
+  header: {
+    marginBottom: 0
+  },
+  table: {
+    paddingTop: 10
+  }
 };
 
 class TextResponses extends Component {
@@ -54,6 +55,27 @@ class TextResponses extends Component {
       >
         {rowData.student.name}
       </a>
+    );
+  };
+
+  responseFormatter = (_, {rowData}) => {
+    const {response, url} = rowData;
+    if (response.length < RESPONSE_CHARACTER_LIMIT) {
+      return response;
+    }
+
+    const clippedResponse = response.substring(0, RESPONSE_CHARACTER_LIMIT - 1);
+    return (
+      <div>
+        {clippedResponse}
+        <a
+          style={tableLayoutStyles.link}
+          href={url}
+          target="_blank"
+        >
+          ...see full response
+        </a>
+      </div>
     );
   };
 
@@ -150,7 +172,7 @@ class TextResponses extends Component {
           }}
         },
         cell: {
-          format: (_, {rowData}) => {return rowData.response;},
+          format: this.responseFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell
