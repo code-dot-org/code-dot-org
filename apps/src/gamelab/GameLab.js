@@ -56,6 +56,7 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
+import ValidationSetupCode from './ValidationSetup.interpreted.js';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -302,7 +303,7 @@ GameLab.prototype.init = function (config) {
     }
   };
 
-  var showFinishButton = !this.level.isProjectLevel;
+  var showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
   var showDebugButtons = config.level.editCode &&
@@ -597,7 +598,7 @@ GameLab.prototype.rerunSetupCode = function () {
   this.gameLabP5.p5.redraw();
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit) {
+GameLab.prototype.onPuzzleComplete = function (submit, testResult) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -612,6 +613,8 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
+  } else if (testResult) {
+    this.testResults = testResult;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -704,7 +707,7 @@ GameLab.prototype.runButtonClick = function () {
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
-  if (shareCell) {
+  if (shareCell && !this.level.validationCode) {
     shareCell.className = 'share-cell-enabled';
 
     // Adding completion button changes layout.  Force a resize.
@@ -937,6 +940,9 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
       .map((lib) => LIBRARIES[lib])
       .join("\n");
     code = libs + code;
+  }
+  if (this.level.validationCode) {
+    code = ValidationSetupCode + code;
   }
   this.JSInterpreter.parse({
     code,
@@ -1194,6 +1200,33 @@ GameLab.prototype.onP5Draw = function () {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
       this.eventHandlers.draw.apply(null);
+      if (this.level.validationCode) {
+        try {
+          const validationResult =
+            this.JSInterpreter.interpreter.marshalInterpreterToNative(
+              this.JSInterpreter.evalInCurrentScope(`
+                __validationState = null;
+                __validationResult = null;
+                ${this.level.validationCode}
+                ret = {
+                  state: __validationState,
+                  result: __validationResult
+                };
+              `)
+            );
+          if (validationResult.state === 'succeeded') {
+            console.log('success!');
+            const testResult = validationResult.result ||
+                TestResults.MINIMUM_OPTIMAL_RESULT;
+            this.onPuzzleComplete(false, testResult);
+          } else if (validationResult === 'failed') {
+            // TODO(ram): Show failure feedback
+          }
+        } catch (e) {
+          // If validation code errors, assume it was neither a success nor failure
+          console.error(e);
+        }
+      }
     } else if (this.shouldAutoRunSetup) {
       this.gameLabP5.p5.background('white');
       switch (this.level.autoRunSetup) {
