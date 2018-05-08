@@ -13,63 +13,63 @@ const studentAnswers = {
 
 //answerOptionA = 'A'
 
-const questions = {	
-	question1: {
-			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}],
-			//answer: {'A': {isCorrectAnswer: true}}
-			questionText: '1. what is a variable?'
-		},
-	question2:
-		{
-			answerOptions: [{option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB(), isCorrectAnswer: true}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}],
-			questionText: '2. What is a 4-bit number for the decimal number Ten(10)?'
-		},
-	question3:
-		{
-			answerOptions: [ {option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD(), isCorrectAnswer: true}, {option: commonMsg.answerOptionE()}],
-			questionText: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?'
-		},
-	question4:
-		{
-			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC(), isCorrectAnswer: true}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}, {option: commonMsg.answerOptionG()}],
-			questionText: '4. What is a function?'
-		},
-  };
-
-// const questions = [	
-// 	{
-// 		id: 1,
-// 		question1: {
+// const questions = {	
+// 	question1: {
 // 			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}],
 // 			//answer: {'A': {isCorrectAnswer: true}}
 // 			questionText: '1. what is a variable?'
-// 		}
-// 	},
-// 	{
-// 		id: 2,
-// 		question2:
+// 		},
+// 	question2:
 // 		{
 // 			answerOptions: [{option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB(), isCorrectAnswer: true}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}],
 // 			questionText: '2. What is a 4-bit number for the decimal number Ten(10)?'
-// 		}
-// 	},
-// 	{
-// 		id: 3,
-// 		question3:
+// 		},
+// 	question3:
 // 		{
 // 			answerOptions: [ {option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD(), isCorrectAnswer: true}, {option: commonMsg.answerOptionE()}],
 // 			questionText: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?'
-// 		}
-// 	},
-// 	{
-// 		id: 4,
-// 		question4:
+// 		},
+// 	question4:
 // 		{
 // 			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC(), isCorrectAnswer: true}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}, {option: commonMsg.answerOptionG()}],
 // 			questionText: '4. What is a function?'
-// 		}
-// 	},
-// ];
+// 		},
+//   };
+
+const questions = [	
+	{
+		id: 1,
+		question1: {
+			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}],
+			//answer: {'A': {isCorrectAnswer: true}}
+			questionText: '1. what is a variable?'
+		}
+	},
+	{
+		id: 2,
+		question2:
+		{
+			answerOptions: [{option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB(), isCorrectAnswer: true}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}],
+			questionText: '2. What is a 4-bit number for the decimal number Ten(10)?'
+		}
+	},
+	{
+		id: 3,
+		question3:
+		{
+			answerOptions: [ {option: commonMsg.answerOptionA()}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC()}, {option: commonMsg.answerOptionD(), isCorrectAnswer: true}, {option: commonMsg.answerOptionE()}],
+			questionText: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?'
+		}
+	},
+	{
+		id: 4,
+		question4:
+		{
+			answerOptions: [ {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, {option: commonMsg.answerOptionB()}, {option: commonMsg.answerOptionC(), isCorrectAnswer: true}, {option: commonMsg.answerOptionD()}, {option: commonMsg.answerOptionE()}, {option: commonMsg.answerOptionF()}, {option: commonMsg.answerOptionG()}],
+			questionText: '4. What is a function?'
+		}
+	},
+];
 
 export default storybook => {
 	return storybook

@@ -159,7 +159,7 @@ class MultipleChoiceOverviewTable extends Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.questionAnswerData);
+    })(this.props.questions);
 
     return (
         <Table.Provider
