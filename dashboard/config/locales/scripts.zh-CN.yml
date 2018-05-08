@@ -1608,10 +1608,9 @@
               name: 第6单元课程
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |-
-            Collect, analyze, and extract knowledge from data by programming and\r
-            building apps. Process data imported from other sources and also pull\r
-            data from live data APIs.
+          description: "Collect, analyze, and extract knowledge from data by programming
+            and\r\nbuilding apps. Process data imported from other sources and also
+            pull\r\ndata from live data APIs."
           description_short: Data
           description_audience: ''
           stages:
@@ -2241,10 +2240,7 @@
               name: 练习表演任务 - 编码和经验
         csp3:
           title: CSP Unit 3 - Programming
-          description: |-
-            这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r
-            \r
-            这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。
+          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r\n\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description_audience: ''
           stages:
@@ -2288,10 +2284,12 @@
               name: 请完成 计算机科学原理中期课程调查!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -3628,9 +3626,13 @@
         csd1:
           title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
           description_short: "  了解人类如何使用计算机来解决问题。"
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -3899,9 +3901,9 @@
               name: 数字足迹
               description_student: 这堂课退后了一步从创建个人网站到谈论人们选择共享数字的个人信息。 该课堂开始讨论哪些类型的信息是可以与他人分享的,
                 然后看几个社交媒体的页面样本, 以了解哪些类型的个人信息会被有意或无意地共享。最后, 该课堂提出一套在网上发布信息时遵循的准则 。
-              description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。\\r
-                \n\\r \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。
-                最后, 学生反思他们认为适合在网上发布信息的指导方针. \\r\n\\r\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
+              description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。\r
+                \n\r \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。
+                最后, 学生反思他们认为适合在网上发布信息的指导方针. \r\n\r\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
             Publishing a Website:
               name: 发布网站
             Sources and Search Engines:
@@ -3921,9 +3923,9 @@
               name: 使用 CSS 设置文本样式
               description_student: 本课介绍了 CSS 作为网页上样式元素的一种方式。该课堂学习 CSS 规则集的基本语法, 然后探讨影响
                 HTML 文本元素的属性。 最后, 每个人都将文本样式应用于他们的个人网站上。
-              description_teacher: |
-                本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中, 学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\r
-                \r
+              description_teacher: "本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响
+                HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中,
+                学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\r\n\r\n"
             Styling Elements with CSS:
               name: 使用 CSS 设置元素的样式
               description_student: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新
@@ -3967,16 +3969,15 @@
               name: 知识产权和图像
               description_student: 本课将介绍如何使用媒体，如由他人创建的图像、视频或音乐作为网站, 同时尊重该媒体创建者的权利。在首次研究了创作共享许可之后,
                 该课程学习如何在网页中添加图像, 以及如何在这样做时给予正确的属性。
-              description_teacher: |-
-                从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。 然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \r
-                \r
-                最后, 通过对各种创作共享许可的限制的共同理解, 学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。
+              description_teacher: "从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。
+                然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \r\n\r\n最后, 通过对各种创作共享许可的限制的共同理解,
+                学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。"
             Project - Multi-Page Websites:
               name: 项目- 多页面网站
               description_student: '本课包含超链接, 它允许网络开发人员将网页连接到一个网站上。 该课堂将所有以前的页面链接到一个项目中,
                 并在将整个站点发布到网络之前为每个页面创建导航栏。  '
-              description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\\r
-                \            \n\\r\n"
+              description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\r
+                \            \n\r\n"
             RGB Colors and Classes:
               name: RGB（红绿蓝） 颜色和分类
               description_student: 本课包括了类和自定义颜色。该课堂首先学习如何使用 RGB (红色、绿色、蓝色) 值指定自定义颜色,
@@ -3987,10 +3988,8 @@
               name: 项目- 个人文件集网站
               description_student: 在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位,
                 每个人都分享他们的项目以及他们是如何开发的。
-              description_teacher: '学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。
-                他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r
-
-'
+              description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。
+                他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r\n"
             Headings:
               name: 标题
               description_student: 本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题,
@@ -4042,10 +4041,8 @@
             Understanding Your User:
               name: 了解您的用户
               description_student: 使用用户配置文件, 该课堂探讨不同用户对各种产品的反应。角色扮演作为一个不同的人, 该班的每个成员都可以通过别人眼里体验设计。
-              description_teacher: '设计者需要了解用户的需求才能创造出有用的产品。本课程鼓励学生思考如何通过使用用户配置文件来扮演另一个角色为其他人设计，并将其作为用户对一系列产品的反应。每个学生被分配一个描述一个人的用户配置文件,
-                然后他们选择合适的产品, 批评产品设计, 并建议改进设计。\r
-
-'
+              description_teacher: "设计者需要了解用户的需求才能创造出有用的产品。本课程鼓励学生思考如何通过使用用户配置文件来扮演另一个角色为其他人设计，并将其作为用户对一系列产品的反应。每个学生被分配一个描述一个人的用户配置文件,
+                然后他们选择合适的产品, 批评产品设计, 并建议改进设计。\r\n"
             Discovering Users:
               name: 发现用户
             User-Centered Design Micro Activity:
@@ -4082,11 +4079,9 @@
               name: 纸面原型
               description_student: 纸面原型允许开发人员在投入大量时间编写代码之前快速测试想法。在本课中, 团队将探索在应用程序实验室中创建的一些示例应用程序,
                 并使用这些应用程序来帮助通知其应用程序的第一个纸面原型。
-              description_teacher: '在开始设计应用程序之前, 我们需要帮助学生更好地满足他们的期望。因为学生最终将在应用实验室中对这些应用程序进行原型化,
+              description_teacher: "在开始设计应用程序之前, 我们需要帮助学生更好地满足他们的期望。因为学生最终将在应用实验室中对这些应用程序进行原型化,
                 如果他们的想法与应用程序实验室中容易原型化的应用程序相一致, 他们的状态将会更好. 团队开始通过查看几个示例应用程序设计来启动此范围演示可以使用应用程序实验室创建的应用程序.
-                然后, 团队可以选择一个 (或更多) 的应用程序作为他们自己的基础。从那里, 在使用3x5 索引卡开发纸面原型之前, 团队有时间讨论其应用程序的基本功能。\r
-
-'
+                然后, 团队可以选择一个 (或更多) 的应用程序作为他们自己的基础。从那里, 在使用3x5 索引卡开发纸面原型之前, 团队有时间讨论其应用程序的基本功能。\r\n"
             Prototype Testing:
               name: 原型测试
               description_student: 在本课中, 该班团队将与其他成员一起测试其纸面原型。有一个学生角色扮演电脑, 一个讲述, 其余的观察,
@@ -4211,9 +4206,11 @@
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: 给早期读者的计算机科学介绍。
-          description: |-
-            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
-            Recommended for grade K.
+          description: "Course A is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. \r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
               name: '调试: Codeville 中的缺陷'
@@ -5702,16 +5699,11 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 坚持：史蒂夫和大项目
               description_student: ''
-              description_teacher: |-
-                当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r
-                \r
-                这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。
+              description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r\n\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
               description_student: ''
-              description_teacher: '在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r
-
-'
+              description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r\n"
             Learn to Drag and Drop:
               name: 使用拖拽的序列
               description_student: ''
@@ -7147,9 +7139,7 @@
           title: 计算机科学原理3建议的改动临时存放地
           description_audience: ''
           description_short: 十月计算机科学原理的临时改动
-          description: '这是 /s/csp3的新的和修改过的复制ban''ben版本。不要编辑当前关卡。\r
-
-'
+          description: "这是 /s/csp3的新的和修改过的复制ban'ben版本。不要编辑当前关卡。\r\n"
         pwc:
           stages:
             new stage:
@@ -7275,10 +7265,8 @@
           title: 探索 - AP表演任务准备
           description_audience: ''
           description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
-          description: |-
-            这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
-            \r
-            此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
+          description: "这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7292,10 +7280,8 @@
           title: 创建 - AP表演任务准备
           description_audience: ''
           description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
-          description: |-
-            这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
-            \r
-            此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
+          description: "这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -7792,9 +7778,9 @@
               name: 数字足迹
               description_student: 这堂课退后了一步从创建个人网站到谈论人们选择共享数字的个人信息。 该课堂开始讨论哪些类型的信息是可以与他人分享的,
                 然后看几个社交媒体的页面样本, 以了解哪些类型的个人信息会被有意或无意地共享。最后, 该课堂提出一套在网上发布信息时遵循的准则 。
-              description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。\\r
-                \n\\r \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。
-                最后, 学生反思他们认为适合在网上发布信息的指导方针. \\r\n\\r\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
+              description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。\r
+                \n\r \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。
+                最后, 学生反思他们认为适合在网上发布信息的指导方针. \r\n\r\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
             Lists:
               name: 列表
               description_student: 本课介绍了有序和无序列表以及相关 &lt; ul &gt;、&lt; ol &gt; 和 &lt;
@@ -7806,10 +7792,9 @@
               name: 知识产权和图像
               description_student: 本课将介绍如何使用媒体，如由他人创建的图像、视频或音乐作为网站, 同时尊重该媒体创建者的权利。在首次研究了创作共享许可之后,
                 该课程学习如何在网页中添加图像, 以及如何在这样做时给予正确的属性。
-              description_teacher: |-
-                从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。 然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \r
-                \r
-                最后, 通过对各种创作共享许可的限制的共同理解, 学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。
+              description_teacher: "从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。
+                然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \r\n\r\n最后, 通过对各种创作共享许可的限制的共同理解,
+                学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。"
             Clean Code and Debugging:
               name: 规整代码和调试
               description_student: 本课将介绍在 HTML 中设计网页时出现的常见问题。该课堂将纠正在代码工作室中找到的一系列日益复杂的网页中的错误,
@@ -7820,15 +7805,15 @@
               name: 项目- 多页面网站
               description_student: '本课包含超链接, 它允许网络开发人员将网页连接到一个网站上。 该课堂将所有以前的页面链接到一个项目中,
                 并在将整个站点发布到网络之前为每个页面创建导航栏。  '
-              description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\\r
-                \            \n\\r\n"
+              description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\r
+                \            \n\r\n"
             Styling Text with CSS:
               name: 使用 CSS 设置文本样式
               description_student: 本课介绍了 CSS 作为网页上样式元素的一种方式。该课堂学习 CSS 规则集的基本语法, 然后探讨影响
                 HTML 文本元素的属性。 最后, 每个人都将文本样式应用于他们的个人网站上。
-              description_teacher: |
-                本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中, 学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\r
-                \r
+              description_teacher: "本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响
+                HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中,
+                学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\r\n\r\n"
             Styling Elements with CSS:
               name: 使用 CSS 设置元素的样式
               description_student: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新
@@ -7850,10 +7835,8 @@
               name: 项目- 个人文件集网站
               description_student: 在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位,
                 每个人都分享他们的项目以及他们是如何开发的。
-              description_teacher: '学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。
-                他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r
-
-'
+              description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。
+                他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r\n"
         coursea-2018:
           title: 课程 A
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -7867,16 +7850,11 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 坚持与挫折 就像史蒂夫和天使。
               description_student: ''
-              description_teacher: |-
-                当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r
-                \r
-                这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。
+              description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r\n\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
               description_student: ''
-              description_teacher: '在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r
-
-'
+              description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r\n"
             Learn to Drag and Drop:
               name: 学习拖放
               description_student: ''

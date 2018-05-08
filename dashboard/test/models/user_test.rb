@@ -1133,6 +1133,27 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'can delete own account if teacher' do
+    user = create :teacher
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if independent student' do
+    user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'cannot delete own account if teacher-managed student' do
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    user = create(:student, encrypted_password: '')
+    create(:follower, student_user: user, section: picture_section)
+    user.reload
+
+    assert user.teacher_managed_account?
+    refute user.can_delete_own_account?
+  end
+
   test 'teacher_managed_account? is false for teacher' do
     refute @teacher.teacher_managed_account?
   end
