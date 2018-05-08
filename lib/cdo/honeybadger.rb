@@ -61,7 +61,9 @@ module Honeybadger
       }
     }
 
-    Honeybadger.notify(opts)
+    result = Honeybadger.notify(opts)
+    Honeybadger.flush # these events are sometimes getting swallowed without this
+    result
   end
 
   # parse_exception_from_stderr - attempts to parse an exception message and stacktrace from a stderr capture

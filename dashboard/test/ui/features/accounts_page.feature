@@ -5,5 +5,5 @@ Feature: Accounts Page
     And I am on "http://studio.code.org/users/edit"
     When I fill in account email and current password for "Zaphod"
     And I select the "Teacher" option in dropdown "user_user_type"
-    And I click selector ".btn-default"
+    And I click selector ".btn-primary"
     Then element ".modal" does not contain text "Please confirm your email"
