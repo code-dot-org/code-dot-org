@@ -180,6 +180,17 @@ class DeleteAccountsHelper
     SolrHelper.delete_document(@solr, 'user', user_id)
   end
 
+  # Removes the StudioPerson record associated with the user IF it is not
+  # associated with any other users.
+  # @param [User] user The user whose studio person we will delete if it's not shared
+  def purge_unshared_studio_person(user)
+    return unless user.studio_person
+    if user.studio_person.users.with_deleted.count <= 1
+      puts "Destroying: #{user.studio_person}"
+      user.studio_person.destroy
+    end
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -204,6 +215,7 @@ class DeleteAccountsHelper
     anonymize_user_sections(user.id)
     remove_from_pardot(user.id)
     remove_from_solr(user.id)
+    purge_unshared_studio_person(user)
     anonymize_user(user)
 
     user.purged_at = Time.zone.now
