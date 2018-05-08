@@ -127,11 +127,12 @@ class DSLDefined < Level
   def clone_with_name(new_name)
     raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     level = super(new_name)
-    new_dsl = dsl_text.try(:sub, "name '#{name}'", "name '#{new_name}'")
+    old_dsl = dsl_text
+    new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
 
     # raises unless the name is formatted with single, non-curly quotes, e.g.:
-    # name 'level-name'
-    raise "name not formatted correctly in dsl text for level: '#{name}'" if new_dsl == dsl_text
+    # name 'level-name', or the dsl_text is entirely blank as during unit tests
+    raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     level.update!(dsl_text: new_dsl) if new_dsl
     level
