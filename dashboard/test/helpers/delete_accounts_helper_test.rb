@@ -126,22 +126,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user properties' do
-    user = create :teacher do |t|
-      t.ops_first_name = 'test-value'
-      t.ops_last_name = 'test-value'
-      t.district_id = 'test-value'
-      t.ops_school = 'test-value'
-      t.ops_gender = 'test-value'
-      t.using_text_mode = 'test-value'
-      t.last_seen_school_info_interstitial = 'test-value'
-      t.ui_tip_dismissed_homepage_header = 'test-value'
-      t.ui_tip_dismissed_teacher_courses = 'test-value'
-      t.oauth_refresh_token = 'test-value'
-      t.oauth_token = 'test-value'
-      t.oauth_token_expiration = 'test-value'
-      t.sharing_disabled = 'test-value'
-      t.next_census_display = 'test-value'
-    end
+    user = create :teacher,
+      ops_first_name: 'test-value',
+      ops_last_name: 'test-value',
+      district_id: 'test-value',
+      ops_school: 'test-value',
+      ops_gender: 'test-value',
+      using_text_mode: 'test-value',
+      last_seen_school_info_interstitial: 'test-value',
+      ui_tip_dismissed_homepage_header: 'test-value',
+      ui_tip_dismissed_teacher_courses: 'test-value',
+      oauth_refresh_token: 'test-value',
+      oauth_token: 'test-value',
+      oauth_token_expiration: 'test-value',
+      sharing_disabled: 'test-value',
+      next_census_display: 'test-value'
     refute_equal({}, user.properties)
 
     purge_user user
