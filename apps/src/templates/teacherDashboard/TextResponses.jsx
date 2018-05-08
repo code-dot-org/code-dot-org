@@ -90,7 +90,8 @@ class TextResponses extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.stage}
-          }}
+          }},
+          transforms: [sortable]
         },
         cell: {
           format: (_, {rowData}) => {return rowData.stage;},
@@ -108,7 +109,8 @@ class TextResponses extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.puzzle}
-          }}
+          }},
+          transforms: [sortable]
         },
         cell: {
           format: (_, {rowData}) => {return rowData.puzzle;},
@@ -126,7 +128,8 @@ class TextResponses extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.question}
-          }}
+          }},
+          transforms: [sortable]
         },
         cell: {
           format: (_, {rowData}) => {return rowData.question;},
