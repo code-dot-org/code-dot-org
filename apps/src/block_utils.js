@@ -637,6 +637,13 @@ exports.createJsWrapperBlockCreator = function (
     if (simpleValue && args.length !== 1) {
       throw new Error('simpleValue blocks must have exactly one argument');
     }
+    if (inline === undefined) {
+      inline = true;
+    }
+    if (args.filter(arg => arg.statement).length > 1 && inline) {
+      console.warn('blocks with multiple statement inputs cannot be inlined');
+      inline = false;
+    }
     args = args || [];
     color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
@@ -647,9 +654,6 @@ exports.createJsWrapperBlockCreator = function (
         name: 'DO',
         statement: true,
       });
-    }
-    if (inline === undefined) {
-      inline = true;
     }
 
     blockly.Blocks[blockName] = {
