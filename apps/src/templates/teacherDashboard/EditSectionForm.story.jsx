@@ -79,7 +79,7 @@ export default storybook => storybook
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
-        isCsfScript={() => false}
+        stageExtrasAvailable={() => false}
       />
     );
   })
@@ -96,7 +96,7 @@ export default storybook => storybook
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
-        isCsfScript={() => false}
+        stageExtrasAvailable={() => false}
       />
     );
   });
