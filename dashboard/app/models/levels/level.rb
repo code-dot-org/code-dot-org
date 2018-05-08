@@ -62,6 +62,7 @@ class Level < ActiveRecord::Base
     reference_links
     name_suffix
     parent_level_id
+    hint_prompt_attempts_threshold
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
