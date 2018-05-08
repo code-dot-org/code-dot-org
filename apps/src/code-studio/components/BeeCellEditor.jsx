@@ -5,7 +5,9 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import BeeCell from '@cdo/apps/maze/beeCell';
+import { cells } from '@code-dot-org/maze';
+
+const BeeCell = cells.BeeCell;
 
 export default class BeeCellEditor extends CellEditor {
   /**
