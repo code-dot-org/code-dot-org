@@ -20,6 +20,12 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
 
+// This is a per user experiment and is defined in experiments.rb
+// On the front end we are treating it as an experiment group that contains
+// COURSE_VERSIONS and PROGRESS_TAB.
+experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
+experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB];
+
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
@@ -83,11 +89,18 @@ experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  let enabled = this.getStoredExperiments_()
+  const storedExperiments = this.getStoredExperiments_();
+  let enabled = storedExperiments
     .some(experiment => experiment.key === key) ||
     !!(window.appOptions &&
       window.appOptions.experiments &&
       window.appOptions.experiments.includes(key));
+
+  // Check for parent experiment
+  if (storedExperiments.map(obj => obj.key).includes(experiments.TEACHER_EXP_2018) &&
+    experiments.TEACHER_EXP_2018_LIST.includes(key)) {
+    enabled = true;
+  }
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
