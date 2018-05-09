@@ -1,10 +1,10 @@
 /* eslint-disable */
 function levelSuccess(testResult) {
-  __validationState = 'succeeded';
-  __validationResult = testResult;
+  validationState = 'succeeded';
+  validationResult = testResult;
 }
 
 function levelFailure(msg) {
-  __validationState = 'failed';
-  __validationResult = msg;
+  validationState = 'failed';
+  validationResult = msg;
 }

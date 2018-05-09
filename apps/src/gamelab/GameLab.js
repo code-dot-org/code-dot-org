@@ -467,7 +467,14 @@ GameLab.prototype.afterInject_ = function (config) {
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    Blockly.JavaScript.addReservedWords('GameLab,code');
+    Blockly.JavaScript.addReservedWords([
+      'GameLab',
+      'code',
+      'validationState',
+      'validationResult',
+      'levelSuccess',
+      'levelFailure',
+    ].join(','));
   }
 
   // Update gameLabP5's scale and keep it updated with future resizes:
@@ -1206,12 +1213,12 @@ GameLab.prototype.onP5Draw = function () {
             this.JSInterpreter.interpreter.marshalInterpreterToNative(
               this.JSInterpreter.evalInCurrentScope(`
                 (function () {
-                  __validationState = null;
-                  __validationResult = null;
+                  validationState = null;
+                  validationResult = null;
                   ${this.level.validationCode}
                   return {
-                    state: __validationState,
-                    result: __validationResult
+                    state: validationState,
+                    result: validationResult
                   };
                 })();
               `)
