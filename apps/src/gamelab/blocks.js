@@ -413,11 +413,8 @@ export default {
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
-      getVars: function (category) {
-        if (category && category !== Blockly.BlockValueType.SPRITE) {
-          return [];
-        }
-        return [this.getTitleValue('VAR')];
+      getVars: function () {
+        return Blockly.Variables.getVars.bind(this)(Blockly.BlockValueType.SPRITE);
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
@@ -454,12 +451,7 @@ export default {
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
       },
-      getVars: function (category) {
-        if (category && category !== Blockly.BlockValueType.SPRITE) {
-          return [];
-        }
-        return [this.getTitleValue('VAR')];
-      },
+      getVars: Blockly.Blocks.sprite_variables_get.getVars,
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
