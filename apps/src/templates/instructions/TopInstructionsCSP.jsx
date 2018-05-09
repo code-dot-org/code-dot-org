@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import TeacherFeedback from "../TeacherFeedback";
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
@@ -25,11 +26,19 @@ import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+
+const tab = {
+  instructions: 'instructions',
+  resources: 'resources',
+  comments: 'comments'
+};
 
 const styles = {
   main: {
@@ -115,11 +124,12 @@ class TopInstructions extends Component {
     ttsMarkdownInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
-    referenceLinks: PropTypes.array
+    referenceLinks: PropTypes.array,
+    teacherView: PropTypes.bool
   };
 
   state = {
-    helpTabSelected: false,
+    tabSelected: tab.instructions,
   };
 
   /**
@@ -173,7 +183,7 @@ class TopInstructions extends Component {
    */
 
   adjustMaxNeededHeight = () => {
-    const element = this.state.helpTabSelected ? this.refs.helpTab : this.refs.instructions;
+    const element = this.state.tabSelected === tab.resources ? this.refs.helpTab : this.refs.instructions;
     const maxNeededHeight = $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
@@ -206,11 +216,15 @@ class TopInstructions extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({helpTabSelected: true});
+    this.setState({tabSelected: tab.resources});
   };
 
   handleInstructionTabClick = () => {
-    this.setState({helpTabSelected: false});
+    this.setState({tabSelected: tab.instructions});
+  };
+
+  handleCommentTabClick = () => {
+    this.setState({tabSelected: tab.comments});
   };
 
   render() {
@@ -232,11 +246,13 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
+
+    const displayFeedback = experiments.isEnabled("commentBoxTab") && this.props.teacherView;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
           <div style={styles.paneHeaderOverride}>
-            {!this.state.helpTabSelected && ttsUrl &&
+            {this.state.tabSelected === tab.instructions && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
             {this.props.documentationUrl &&
@@ -251,15 +267,23 @@ class TopInstructions extends Component {
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
-                style={this.state.helpTabSelected ? null : styles.highlighted}
+                style={this.state.tabSelected === tab.instructions ? styles.highlighted : null}
                 text={msg.instructions()}
               />
               {displayHelpTab &&
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={this.state.helpTabSelected ? styles.highlighted : null}
+                  style={this.state.tabSelected === tab.resources ? styles.highlighted : null}
                   text={msg.helpTips()}
+                />
+              }
+              {displayFeedback &&
+                <InstructionsTab
+                  className="uitest-feedback"
+                  onClick={this.handleCommentTabClick}
+                  style={this.state.tabSelected === tab.comments ? styles.highlighted : null}
+                  text={msg.feedback()}
                 />
               }
             </div>
@@ -275,7 +299,7 @@ class TopInstructions extends Component {
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
               <div ref="instructions">
-                {!this.state.helpTabSelected &&
+                {this.state.tabSelected === tab.instructions &&
                   <div>
                     <Instructions
                       ref="instructions"
@@ -287,13 +311,16 @@ class TopInstructions extends Component {
                     <TeacherOnlyMarkdown/>
                   </div>
                 }
-                {this.state.helpTabSelected &&
+                {this.state.tabSelected === tab.resources &&
                   <HelpTabContents
                     ref="helpTab"
                     videoData={videoData}
                     mapReference={this.props.mapReference}
                     referenceLinks={this.props.referenceLinks}
                   />
+                }
+                {this.state.tabSelected === tab.comments &&
+                  <TeacherFeedback/>
                 }
               </div>
             }
@@ -324,7 +351,8 @@ export default connect(state => ({
   ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
-  referenceLinks: state.instructions.referenceLinks
+  referenceLinks: state.instructions.referenceLinks,
+  teacherView: state.viewAs === ViewType.Teacher
 }), dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());
