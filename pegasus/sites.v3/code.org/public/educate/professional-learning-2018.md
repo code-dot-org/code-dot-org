@@ -25,7 +25,12 @@ social:
 # 2018-19 Middle and High School Professional Learning#
 <%= view :professional_learning_apply_banner %>
 
+## Applications are still being accepted in some states
 
+Click the links below to see if applications are still being accepted in your state.
+
+* [CS Discoveries](https://code.org/educate/professional-learning/cs-discoveries#openings) (grades 6-10) 
+* [CS Principles](https://code.org/educate/professional-learning/cs-principles#openings) (grades 9-12)
 
 ## New to computer science? No worries.
 

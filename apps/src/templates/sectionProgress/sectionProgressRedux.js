@@ -90,8 +90,6 @@ export const ViewType = {
   DETAIL: "detail",
 };
 
-export const ACCELERATED_SCRIPT_ID = 1;
-
 /**
  * Shape for the section
  * The section we get directly from angular right now. This gives us a
@@ -204,9 +202,11 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_VALID_SCRIPTS) {
 
     let validScripts = action.validScripts;
+    // Set defaultScript to Express Course to use if there are no validScripts
+    let defaultScript = action.validScripts.filter(script => script.name === "Express Course")[0];
+
     if (action.studentScriptIds && action.validCourses) {
-      // Include the id for the Accelerated Course so that there will always be // at least one validScript and we don't end up with an empty dropdown.
-      const idMap = {ACCELERATED_SCRIPT_ID: true};
+      const idMap = {};
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => idMap[id] = true);
@@ -243,7 +243,10 @@ export default function sectionProgress(state=initialState, action) {
           scriptId = validScripts[0].id;
           break;
         default:
-         scriptId = ACCELERATED_SCRIPT_ID;
+          // Use the default script (currently Express Course) so we don't have
+          // an empty dropdown.
+          scriptId = defaultScript.id;
+          validScripts.push(defaultScript);
       }
     }
 
