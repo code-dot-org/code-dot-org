@@ -11,7 +11,17 @@ const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 const LOCATION_COLOR = [300, 0.46, 0.89];
 
-let sprites = [];
+let sprites = () => {
+  const animationList = getStore().getState().animationList;
+  if (!animationList || animationList.orderedKeys.length === 0) {
+    console.warn("No sprites available");
+    return [['sprites missing', 'null']];
+  }
+  return animationList.orderedKeys.map(key => {
+    const animation = animationList.propsByKey[key];
+    return [animation.sourceUrl, `"${animation.name}"`];
+  });
+};
 
 const customInputTypes = {
   locationPicker: {
@@ -52,7 +62,7 @@ const customInputTypes = {
     addInput(block, input) {
       block.appendDummyInput()
         .appendTitle(input.label)
-        .appendTitle(new Blockly.FieldDropdown(sprites), input.name);
+        .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), input.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
@@ -64,18 +74,6 @@ export default {
   install(blockly, blockInstallOptions) {
     const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
     const { ORDER_MEMBER, ORDER_ATOMIC } = Blockly.JavaScript;
-
-    sprites = () => {
-      const animationList = getStore().getState().animationList;
-      if (!animationList || animationList.orderedKeys.length === 0) {
-        console.warn("No sprites available");
-        return [['sprites missing', 'null']];
-      }
-      return animationList.orderedKeys.map(key => {
-        const name = animationList.propsByKey[key].name;
-        return [name, `"${name}"`];
-      });
-    };
 
     const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
@@ -98,7 +96,7 @@ export default {
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
@@ -110,7 +108,7 @@ export default {
       func: 'makeNewSpriteLocation',
       blockText: 'make a new {ANIMATION} sprite at {LOCATION}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
         { name: 'LOCATION', type: blockly.BlockValueType.LOCATION },
       ],
       returnType: SPRITE_TYPE,
@@ -121,7 +119,7 @@ export default {
       func: 'setAnimation',
       blockText: 'change {THIS} costume to {ANIMATION}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
       ],
       methodCall: true,
     });
