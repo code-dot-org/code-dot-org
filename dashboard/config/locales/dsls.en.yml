@@ -3355,6 +3355,9 @@ en:
       csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2017-wrapup-preamble: {}
       csp-post-survey-2017-wrapup-preamble_2018: {}
+      csp-post-survey-2018-AP-preamble:
+        description here: description here
+        title: title
       csp-post-survey-2018-topics-preamble:
         description here: description here
         title: title
@@ -12223,6 +12226,7 @@ en:
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
         If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was
         If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.
+        If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.
         More difficult than expected: More difficult than expected
         Sort of Easy: Sort of Easy
         Sort of hard: Sort of hard
@@ -12230,6 +12234,59 @@ en:
         Very hard: Very hard
         Way easier than expected: Way easier than expected
         Way more difficult than expected: Way more difficult than expected
+      csp-post-survey-2018-CreatePT-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        Did you like this performance task?: Did you like this performance task?
+        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
+        I didn't do it: I didn't do it
+        I don't remember this unit: I don't remember this unit
+        I loved this Performance Task!: I loved this Performance Task!
+        Not at all: Not at all
+        Somewhat: Somewhat
+        This was my favorite unit!: This was my favorite unit!
+      csp-post-survey-2018-CreatePT-time:
+        I think the amount of time I got to spend working on this Performance Task in class was...: I think the amount of time I got to spend working on this Performance Task in class was...
+        I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
+        a bit too little.: a bit too little.
+        a bit too much.: a bit too much.
+        about right.: about right.
+        way too little.: way too little.
+        way too much.: way too much.
+      csp-post-survey-2018-CreatePT-well-prepared:
+        Agree: Agree
+        Disagree: Disagree
+        I felt well-prepared to complete this Performance Task.: I felt well-prepared to complete this Performance Task.
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-post-survey-2018-ExplorePT-I-liked:
+        A little bit: A little bit
+        A lot: A lot
+        Did you like this performance task?: Did you like this performance task?
+        I didn't do it: I didn't do it
+        I loved this Performance Task!: I loved this Performance Task!
+        Not at all: Not at all
+        Somewhat: Somewhat
+      csp-post-survey-2018-ExplorePT-time:
+        I think the amount of time I got to spend working on this Performance Task in class was...: I think the amount of time I got to spend working on this Performance Task in class was...
+        a bit too little.: a bit too little.
+        a bit too much.: a bit too much.
+        about right.: about right.
+        way too little.: way too little.
+        way too much.: way too much.
+      csp-post-survey-2018-ExplorePT-well-prepared:
+        Agree: Agree
+        Disagree: Disagree
+        I felt well-prepared to complete this Performance Task.: I felt well-prepared to complete this Performance Task.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-post-survey-2018-U1-I-learned:
         For the topics covered in this unit I felt I learned...: For the topics covered in this unit I felt I learned...
         How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
@@ -12452,6 +12509,16 @@ en:
         Not sure what this is: Not sure what this is
         Web Development: Web Development
         'Yes': 'Yes'
+      csp-post-survey-2018-why-not-exam:
+        A friend recommended I not take the exam: A friend recommended I not take the exam
+        Another person at my school recommended I not take the exam: Another person at my school recommended I not take the exam
+        Cost of exam: Cost of exam
+        I didn't know it was an option: I didn't know it was an option
+        I didn't think I'd do well: I didn't think I'd do well
+        If you DID NOT take the CS Principles AP exam, what was the main reason why not?: If you DID NOT take the CS Principles AP exam, what was the main reason why not?
+        If you DID NOT take the CS Principles AP exam, why not?: If you DID NOT take the CS Principles AP exam, why not?
+        Not applicable. I DID take the exam: Not applicable. I DID take the exam
+        Wasn't offered at my school: Wasn't offered at my school
       csp-pre-survey-2017-q1:
         Agree: Agree
         Disagree: Disagree
