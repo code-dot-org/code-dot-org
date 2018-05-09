@@ -1,6 +1,7 @@
 import {PropTypes} from 'react';
 
-export const sectionTextResponsePropType = PropTypes.shape({
+// Shape for an individual text response
+export const textResponsePropType = PropTypes.shape({
   puzzle: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   response: PropTypes.string.isRequired,
@@ -12,7 +13,7 @@ export const sectionTextResponsePropType = PropTypes.shape({
 
 /**
  * Initial state of textResponsesRedux
- * responseData - object of arrays where the key is the sectionId and value is an array of sectionTextResponsePropType
+ * responseData - object where the keys are sectionIds and values are arrays of textResponsePropType
  */
 const initialState = {
   responseData: PropTypes.objectOf(PropTypes.number)
