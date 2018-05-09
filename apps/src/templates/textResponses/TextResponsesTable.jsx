@@ -15,7 +15,6 @@ const TABLE_COLUMN_WIDTHS = {
 };
 const RESPONSE_CHARACTER_LIMIT = 100;
 
-
 class TextResponsesTable extends Component {
   static propTypes = {
     responses: PropTypes.array.isRequired,
@@ -28,6 +27,7 @@ class TextResponsesTable extends Component {
     const {sectionId} = this.props;
     return (
       <a
+        className="uitest-name-cell"
         style={tableLayoutStyles.link}
         href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.student.id}`}
         target="_blank"
@@ -69,6 +69,7 @@ class TextResponsesTable extends Component {
         header: {
           label: i18n.name(),
           props: {
+            className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.name}

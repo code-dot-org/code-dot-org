@@ -31,7 +31,7 @@ class TextResponses extends Component {
   };
 
   render() {
-    const {validScripts, scriptId, responses} = this.props;
+    const {validScripts, scriptId, responses, sectionId} = this.props;
 
     return (
       <div>
@@ -46,7 +46,10 @@ class TextResponses extends Component {
           />
         </div>
         <div style={styles.table}>
-          <TextResponsesTable responses={responses}/>
+          <TextResponsesTable
+            responses={responses}
+            sectionId={sectionId}
+          />
         </div>
       </div>
     );
