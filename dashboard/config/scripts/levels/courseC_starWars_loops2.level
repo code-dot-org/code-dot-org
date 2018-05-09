@@ -45,10 +45,10 @@
     "tts_markdown_instructions_override": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
     "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Go BB-8!\"_\r\n\r\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "video_key": "CSF_bb8_loops_C-F",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

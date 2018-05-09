@@ -7831,6 +7831,8 @@ en:
               name: Fish Tank
             Virtual Pet - Forever:
               name: Virtual Pet - Forever
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
           title: ''
           description_audience: ''
           description_short: ''
@@ -8939,6 +8941,8 @@ en:
               name: 'Fish Tank: Creating Sprites'
             Fish Tank - Creating Sprites:
               name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
           title: Introduction to Sprite Lab (PILOT)
           description_audience: ''
           description_short: ''
