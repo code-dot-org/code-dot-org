@@ -37,6 +37,23 @@ export default function textResponses(state=initialState, action) {
   return state;
 }
 
+// Flatten text responses returned from server to remove nested student object
+const convertTextResponseServerData = (textResponses) => {
+  let responses = [];
+  textResponses.forEach(response => {
+    const {id, name} = response.student;
+    delete response.student;
+
+    responses.push({
+      ...response,
+      studentId: id,
+      studentName: name
+    });
+  });
+
+  return responses;
+};
+
 // Make a request to the server for text responses
 const loadTextResponsesFromServer = (sectionId, onComplete) => {
   $.ajax({
@@ -44,7 +61,7 @@ const loadTextResponsesFromServer = (sectionId, onComplete) => {
     method: 'GET',
     contentType: 'application/json;charset=UTF-8'
   }).done(responseData => {
-    onComplete(null, responseData);
+    onComplete(null, convertTextResponseServerData(responseData));
   }).fail((jqXhr, status) => {
     onComplete(status, jqXhr.responseJSON);
   });
