@@ -38,6 +38,18 @@ class RegistrationsController < Devise::RegistrationsController
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
     end
+
+    if current_user && current_user.teacher?
+      # While a/b testing, one of two possible fields might come through.
+      optin_value = params[:email_preference] == "yes" || params[:email_preference2] == "yes"
+      EmailPreference.upsert!(
+        email: params[:user][:email],
+        opt_in: optin_value,
+        ip_address: request.env['REMOTE_ADDR'],
+        source: "Teacher account sign up",
+        form_kind: "0"
+      )
+    end
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
