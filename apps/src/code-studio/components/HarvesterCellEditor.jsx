@@ -1,11 +1,11 @@
 /**
  * @overview React component to allow for easy editing and creation of HarvesterCells
- * @see @code-dot-org/maze/src/harvesterCell
+ * @see @cdo/apps/maze/harvesterCell
  */
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import HarvesterCell from '@code-dot-org/maze/src/harvesterCell';
+import HarvesterCell from '@cdo/apps/maze/harvesterCell';
 
 export default class PlanterCellEditor extends CellEditor {
   /**
