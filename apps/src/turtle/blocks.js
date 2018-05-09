@@ -358,12 +358,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function (category) {
-      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
-        return [];
-      }
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_counter = generator.variables_get;
@@ -380,12 +375,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function (category) {
-      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
-        return [];
-      }
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_length = generator.variables_get;
@@ -402,12 +392,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: function (category) {
-      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
-        return [];
-      }
-      return [this.getTitleValue('VAR')];
-    }
+    getVars: Blockly.Variable.getVars,
   };
 
   generator.variables_get_sides = generator.variables_get;
@@ -520,12 +505,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1', this.getTitleValue('VAR')));
     },
-    getVars: function (category) {
-      if (category && category !== Blockly.Variables.DEFAULT_CATEGORY) {
-        return [];
-      }
-      return [this.getTitleValue('VAR')];
-    },
+    getVars: Blockly.Variable.getVars,
     // serialize the counter variable name to xml so that it can be used across
     // different locales
     mutationToDom: function () {
