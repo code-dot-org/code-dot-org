@@ -361,7 +361,7 @@ class V2SectionRoutesTest < SequelTestCase
             "id" => 31,
             "name" => "Unit 1: The Internet",
             "script_name" => "csp1",
-            "category" => "CS Principles (2017)",
+            "category" => "CS Principles ('17-'18)",
             "position" => 0,
             "category_priority" => 9
           },
@@ -369,7 +369,7 @@ class V2SectionRoutesTest < SequelTestCase
             "id" => 32,
             "name" => "Unit 2: Digital Information",
             "script_name" => "csp2",
-            "category" => "CS Principles (2017)",
+            "category" => "CS Principles ('17-'18)",
             "position" => 1,
             "category_priority" => 9
           },
@@ -377,7 +377,7 @@ class V2SectionRoutesTest < SequelTestCase
             "id" => 34,
             "name" => "Unit 3: Algorithms and Programming",
             "script_name" => "csp3",
-            "category" => "CS Principles (2017)",
+            "category" => "CS Principles ('17-'18)",
             "position" => 2,
             "category_priority" => 9
           },
