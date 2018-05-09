@@ -52,7 +52,7 @@ const customInputTypes = {
     addInput(block, input) {
       block.appendDummyInput()
         .appendTitle(input.label)
-        .appendTitle(new Blockly.FieldDropdown(sprites));
+        .appendTitle(new Blockly.FieldDropdown(sprites), input.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
