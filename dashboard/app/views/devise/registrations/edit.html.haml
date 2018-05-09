@@ -24,13 +24,11 @@
     - else
       .field
         = f.label :email
+        = f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.can_edit_email? && !current_user.oauth?
-          = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off', maxlength: 255
-        - elsif current_user.can_edit_email? && current_user.oauth?
-          = f.hidden_field :email
-          = f.object.email.present? ? f.object.email : '***encrypted***'
-        - else
-          = f.object.email.present? ? f.object.email : '***encrypted***'
+          (
+          %a#edit-email-link{href: '#'}= "Update"
+          )
   - if resource.username.present?
     .field
       = f.label :username

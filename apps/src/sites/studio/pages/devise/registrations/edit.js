@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ConfirmEmailModal from '@cdo/apps/code-studio/ConfirmEmailModal';
+import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const scriptData = getScriptData('edit');
@@ -50,6 +51,24 @@ function onSubmitModal(e) {
   };
 }
 
+const changeEmailMountPoint = document.createElement('div');
+function showChangeEmailModal() {
+  document.body.appendChild(changeEmailMountPoint);
+  ReactDOM.render(
+    <ChangeEmailModal
+      isOpen
+      handleSubmit={hideChangeEmailModal}
+      handleCancel={hideChangeEmailModal}
+    />,
+    changeEmailMountPoint
+  );
+}
+
+function hideChangeEmailModal() {
+  ReactDOM.unmountComponentAtNode(changeEmailMountPoint);
+  document.body.removeChild(changeEmailMountPoint);
+}
+
 $(document).ready(() => {
   $( "#submit-update").find("input").on("click", function (e) {
     const userType = $('#user_user_type')[0].value;
@@ -74,4 +93,6 @@ $(document).ready(() => {
       });
     }
   });
+
+  $('#edit-email-link').click(showChangeEmailModal);
 });
