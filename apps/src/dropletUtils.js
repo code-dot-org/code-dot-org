@@ -810,11 +810,17 @@ export function setParamAtIndex(index, value, block) {
   // We have a block. Parse it to find our first socket.
   let token = block.start;
   let paramNumber = -1;
+  // Accounts for the additional socket depth from using arrays and indices as
+  // parameters
+  let socketDepth = 0;
   do {
     if (token.type === 'socketStart') {
-      paramNumber++;
+      if (socketDepth === 0) {
+        paramNumber++;
+      }
       if (paramNumber !== index) {
         token = token.next;
+        socketDepth++;
         continue;
       }
       let socket = token.container;
@@ -822,6 +828,9 @@ export function setParamAtIndex(index, value, block) {
       editor.populateSocket(socket, value);
       editor.redrawPalette();
       editor.redrawMain();
+    }
+    if (token.type === 'socketEnd') {
+      socketDepth--;
     }
     token = token.next;
   } while (token);
