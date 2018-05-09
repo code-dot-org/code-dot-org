@@ -9,6 +9,7 @@ import {
   scriptDataPropType,
   getColumnWidthsForDetailView,
   getLevels,
+  setLessonOfInterest,
 } from './sectionProgressRedux';
 import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
@@ -75,6 +76,7 @@ class VirtualizedDetailView extends Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
+    setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
   };
@@ -93,6 +95,10 @@ class VirtualizedDetailView extends Component {
       this.refs.detailView.measureAllCells();
     }
   }
+
+  onClickLevel = lessonOfInterest => {
+    this.props.setLessonOfInterest(lessonOfInterest);
+  };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {scriptData, columnWidths} = this.props;
@@ -125,7 +131,10 @@ class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 0 && columnIndex >= 1) && (
           <div style={styles.lessonHeaderContainer}>
-            <div style={styles.numberHeader}>
+            <div
+              onClick={() => this.onClickLevel(columnIndex)}
+              style={styles.numberHeader}
+            >
               {columnIndex}
             </div>
             {(columnWidths[columnIndex] > MAX_COLUMN_WITHOUT_ARROW) &&
@@ -241,4 +250,8 @@ export default connect(state => ({
   columnWidths: getColumnWidthsForDetailView(state),
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
   getLevels: (studentId, stageId) => getLevels(state, studentId, stageId),
+}), dispatch => ({
+  setLessonOfInterest(lessonOfInterest) {
+    dispatch(setLessonOfInterest(lessonOfInterest));
+  }
 }))(VirtualizedDetailView);
