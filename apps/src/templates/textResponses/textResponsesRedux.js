@@ -1,6 +1,21 @@
-// flesh out proptypes
+import {PropTypes} from 'react';
+
+export const sectionTextResponsePropType = PropTypes.shape({
+  puzzle: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  response: PropTypes.string.isRequired,
+  stage: PropTypes.string.isRequired,
+  studentId: PropTypes.number.isRequired,
+  studentName: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+});
+
+/**
+ * Initial state of textResponsesRedux
+ * responseData - object of arrays where the key is the sectionId and value is an array of sectionTextResponsePropType
+ */
 const initialState = {
-  responseData: {}
+  responseData: PropTypes.objectOf(PropTypes.number)
 };
 
 const SET_TEXT_RESPONSES = 'responseData/SET_TEXT_RESPONSES';
