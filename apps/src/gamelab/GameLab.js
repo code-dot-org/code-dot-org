@@ -1205,13 +1205,15 @@ GameLab.prototype.onP5Draw = function () {
           const validationResult =
             this.JSInterpreter.interpreter.marshalInterpreterToNative(
               this.JSInterpreter.evalInCurrentScope(`
-                __validationState = null;
-                __validationResult = null;
-                ${this.level.validationCode}
-                ret = {
-                  state: __validationState,
-                  result: __validationResult
-                };
+                (function () {
+                  __validationState = null;
+                  __validationResult = null;
+                  ${this.level.validationCode}
+                  return {
+                    state: __validationState,
+                    result: __validationResult
+                  };
+                })();
               `)
             );
           if (validationResult.state === 'succeeded') {
