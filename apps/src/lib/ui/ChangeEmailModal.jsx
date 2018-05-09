@@ -3,6 +3,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from "../../templates/Button";
+import {isEmail} from '../../util/formatValidation';
 
 const styles = {
   container: {
@@ -35,8 +36,48 @@ export default class ChangeEmailModal extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      newEmail: '',
+      currentPassword: '',
+      emailOptIn: '',
+    };
   }
+
+  getValidationErrors() {
+    return {
+      newEmail: this.getNewEmailValidationError(),
+      currentPassword: this.getCurrentPasswordValidationError(),
+      emailOptIn: this.getEmailOptInValidationError(),
+    };
+  }
+
+  getNewEmailValidationError = () => {
+    if (this.state.newEmail.trim().length === 0) {
+      return i18n.changeEmailModal_newEmail_isRequired();
+    }
+    if (!isEmail(this.state.newEmail.trim())) {
+      return i18n.changeEmailModal_newEmail_invalid();
+    }
+    return null;
+  };
+
+  getCurrentPasswordValidationError = () => {
+    if (this.state.currentPassword.length === 0) {
+      return i18n.changeEmailModal_currentPassword_isRequired();
+    }
+    return null;
+  };
+
+  getEmailOptInValidationError = () => {
+    if (this.state.emailOptIn.length === 0) {
+      return i18n.changeEmailModal_emailOptIn_isRequired();
+    }
+    return null;
+  };
+
+  onNewEmailChange = (event) => this.setState({newEmail: event.target.value});
+  onCurrentPasswordChange = (event) => this.setState({currentPassword: event.target.value});
+  onEmailOptInChange = (event) => this.setState({emailOptIn: event.target.value});
 
   cancel = () => {
     this.props.handleCancel();
@@ -47,6 +88,8 @@ export default class ChangeEmailModal extends React.Component {
   };
 
   render = () => {
+    const validationErrors = this.getValidationErrors();
+    const isFormValid = Object.keys(validationErrors).every(key => !validationErrors[key]);
     return (
       <BaseDialog
         useUpdatedStyles
@@ -66,13 +109,15 @@ export default class ChangeEmailModal extends React.Component {
               <input
                 id="user_email"
                 type="email"
+                value={this.state.newEmail}
+                onChange={this.onNewEmailChange}
                 autoComplete="off"
                 maxLength="255"
                 size="255"
                 style={styles.input}
               />
               <FieldError>
-                {i18n.changeEmailModal_newEmail_invalid()}
+                {validationErrors.newEmail}
               </FieldError>
             </Field>
             <Field>
@@ -85,12 +130,14 @@ export default class ChangeEmailModal extends React.Component {
               <input
                 id="user_current_password"
                 type="password"
+                value={this.state.currentPassword}
+                onChange={this.onCurrentPasswordChange}
                 maxLength="255"
                 size="255"
                 style={styles.input}
               />
               <FieldError>
-                {i18n.changeEmailModal_currentPassword_isRequired()}
+                {validationErrors.currentPassword}
               </FieldError>
             </Field>
             <Field>
@@ -98,12 +145,14 @@ export default class ChangeEmailModal extends React.Component {
                 {i18n.changeEmailModal_emailOptIn_description()}
               </p>
               <select
+                value={this.state.emailOptIn}
+                onChange={this.onEmailOptInChange}
                 style={{
                   ...styles.input,
                   width: 100,
                 }}
               >
-                <option selected value=""/>
+                <option value=""/>
                 <option value="yes">
                   {i18n.yes()}
                 </option>
@@ -112,7 +161,7 @@ export default class ChangeEmailModal extends React.Component {
                 </option>
               </select>
               <FieldError>
-                {i18n.changeEmailModal_emailOptIn_isRequired()}
+                {validationErrors.emailOptIn}
               </FieldError>
             </Field>
           </div>
@@ -120,6 +169,7 @@ export default class ChangeEmailModal extends React.Component {
             confirmText={i18n.changeEmailModal_save()}
             onConfirm={this.save}
             onCancel={this.cancel}
+            disableConfirm={!isFormValid}
           />
         </div>
       </BaseDialog>
@@ -193,11 +243,13 @@ class SystemDialogConfirmCancelFooter extends React.Component {
     onCancel: PropTypes.func.isRequired,
     confirmText: PropTypes.string.isRequired,
     cancelText: PropTypes.string.isRequired,
+    disableConfirm: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
+    disableConfirm: false,
   };
 
   static style = {
@@ -217,6 +269,7 @@ class SystemDialogConfirmCancelFooter extends React.Component {
           onClick={this.props.onConfirm}
           text={this.props.confirmText}
           color={Button.ButtonColor.orange}
+          disabled={this.props.disableConfirm}
         />
         <Button
           onClick={this.props.onCancel}

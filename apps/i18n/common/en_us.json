@@ -135,6 +135,7 @@
   "changeEmailModal_emailOptIn_description": "Would you like to be added to our mailing list so that we can tell you about updates to our courses, local learning opportunities, or other computer science news? This will not impact your subscription preferences for your old email address.",
   "changeEmailModal_emailOptIn_isRequired": "This field is required.",
   "changeEmailModal_newEmail_invalid": "The email address you provided is not valid.",
+  "changeEmailModal_newEmail_isRequired": "A new email address is required.",
   "changeEmailModal_newEmail_label": "New email address",
   "changeEmailModal_save": "Update email address",
   "changeEmailModal_title": "Update email address",
