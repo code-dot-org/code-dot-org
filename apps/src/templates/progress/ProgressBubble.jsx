@@ -86,8 +86,14 @@ class ProgressBubble extends React.Component {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
-    selectedStudentId: PropTypes.string,
+    selectedSectionId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    selectedStudentId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
