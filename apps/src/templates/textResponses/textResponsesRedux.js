@@ -10,7 +10,13 @@ export const setTextResponses = (sectionId, responseData) => ({ type: SET_TEXT_R
 
 export const asyncLoadTextResponses = (sectionId, onComplete) => {
   return (dispatch, getState) => {
-    // check state to make sure responses for this section/script haven't already been loaded
+    const state = getState().textResponses;
+
+    // Don't load data if it's already stored in redux.
+    if (state.responseData[sectionId]) {
+      onComplete();
+      return;
+    }
 
     loadTextResponsesFromServer(sectionId, (error, data) => {
       if (error) {
