@@ -11,6 +11,8 @@ const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 const LOCATION_COLOR = [300, 0.46, 0.89];
 
+let sprites = [];
+
 const customInputTypes = {
   locationPicker: {
     addInput(block, input) {
@@ -46,6 +48,16 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     },
   },
+  costumePicker: {
+    addInput(block, input) {
+      block.appendDummyInput()
+        .appendTitle(input.label)
+        .appendTitle(new Blockly.FieldDropdown(sprites));
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
 };
 
 export default {
@@ -53,7 +65,7 @@ export default {
     const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
     const { ORDER_MEMBER, ORDER_ATOMIC } = Blockly.JavaScript;
 
-    const sprites = () => {
+    sprites = () => {
       const animationList = getStore().getState().animationList;
       if (!animationList || animationList.orderedKeys.length === 0) {
         console.warn("No sprites available");
