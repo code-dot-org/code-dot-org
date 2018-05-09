@@ -271,6 +271,18 @@ GameLab.prototype.init = function (config) {
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
       config.valueTypeTabShapeMap = { Sprite: 'angle' };
+
+      this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
+        <div>
+          <p>
+            <strong>Welcome to the Sprite Lab pre-release ALPHA!</strong>
+          </p>
+          <p>
+            This is a brand new Code.org project we are still working on. Blocks
+            will change and <em>your projects may stop working at any time</em>.
+          </p>
+        </div>, ''
+      );
     }
 
     this.studioApp_.init(config);
