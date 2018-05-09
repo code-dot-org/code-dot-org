@@ -3,7 +3,7 @@ import {PropTypes} from 'react';
 // Shape for an individual text response
 export const textResponsePropType = PropTypes.shape({
   puzzle: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
+  question: PropTypes.string,
   response: PropTypes.string.isRequired,
   stage: PropTypes.string.isRequired,
   studentId: PropTypes.number.isRequired,
@@ -24,7 +24,7 @@ const SET_TEXT_RESPONSES = 'responseData/SET_TEXT_RESPONSES';
 // Action creators
 export const setTextResponses = (sectionId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, responseData});
 
-export const asyncLoadTextResponses = (sectionId, onComplete) => {
+export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   return (dispatch, getState) => {
     const state = getState().textResponses;
 
@@ -34,7 +34,7 @@ export const asyncLoadTextResponses = (sectionId, onComplete) => {
       return;
     }
 
-    loadTextResponsesFromServer(sectionId, (error, data) => {
+    loadTextResponsesFromServer(sectionId, scriptId, (error, data) => {
       if (error) {
         console.error(error);
       } else {
@@ -77,11 +77,18 @@ const convertTextResponseServerData = (textResponses) => {
 };
 
 // Make a request to the server for text responses
-const loadTextResponsesFromServer = (sectionId, onComplete) => {
+// scriptId is not required; endpoint will use the default script if no scriptId is supplied
+const loadTextResponsesFromServer = (sectionId, scriptId, onComplete) => {
+  let payload = {};
+  if (scriptId) {
+    payload.script_id = scriptId;
+  }
+
   $.ajax({
     url: `/dashboardapi/section_text_responses/${sectionId}`,
     method: 'GET',
-    contentType: 'application/json;charset=UTF-8'
+    contentType: 'application/json;charset=UTF-8',
+    data: payload
   }).done(responseData => {
     onComplete(null, convertTextResponseServerData(responseData));
   }).fail((jqXhr, status) => {
