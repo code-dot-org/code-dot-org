@@ -1274,6 +1274,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment.destroy
   end
 
   test "should present experiment level if in one of the experiments" do
