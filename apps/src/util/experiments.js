@@ -6,6 +6,7 @@
  * Experiment state is persisted across page loads using local storage.
  */
 import { trySetLocalStorage } from '../utils';
+import Cookie from 'js-cookie';
 import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
@@ -17,6 +18,13 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // specific experiment names
 experiments.COURSE_VERSIONS = 'courseVersions';
+experiments.PROGRESS_TAB = 'sectionProgressRedesign';
+
+// This is a per user experiment and is defined in experiments.rb
+// On the front end we are treating it as an experiment group that contains
+// COURSE_VERSIONS and PROGRESS_TAB.
+experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
+experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB];
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -26,6 +34,14 @@ experiments.getQueryString_ = function () {
 };
 
 experiments.getStoredExperiments_ = function () {
+  // Get experiments on current user from experiments cookie
+  const experimentsCookie = window.cookieEnvSuffix ?
+    Cookie.get('_experiments' + window.cookieEnvSuffix) : null;
+  const userExperiments = experimentsCookie ?
+    JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({key: name})) :
+    [];
+
+  // Get experiments stored in local storage.
   try {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
@@ -37,9 +53,9 @@ experiments.getStoredExperiments_ = function () {
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
     }
-    return enabledExperiments;
+    return userExperiments.concat(enabledExperiments);
   } catch (e) {
-    return [];
+    return userExperiments;
   }
 };
 
@@ -73,11 +89,18 @@ experiments.setEnabled = function (key, shouldEnable, expiration=undefined) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  let enabled = this.getStoredExperiments_()
+  const storedExperiments = this.getStoredExperiments_();
+  let enabled = storedExperiments
     .some(experiment => experiment.key === key) ||
     !!(window.appOptions &&
       window.appOptions.experiments &&
       window.appOptions.experiments.includes(key));
+
+  // Check for parent experiment
+  if (storedExperiments.map(obj => obj.key).includes(experiments.TEACHER_EXP_2018) &&
+    experiments.TEACHER_EXP_2018_LIST.includes(key)) {
+    enabled = true;
+  }
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
