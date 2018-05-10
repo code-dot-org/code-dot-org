@@ -45,6 +45,10 @@ class Course < ApplicationRecord
     I18n.t("data.course.name.#{name}.title", default: name)
   end
 
+  def localized_assignment_family_title
+    I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -174,6 +178,7 @@ class Course < ApplicationRecord
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:assignment_family_name] = assignment_family_name
+    info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
