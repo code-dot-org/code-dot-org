@@ -2733,13 +2733,14 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
  * @param {number} [object.sideMaring] - Optional param specifying margin on
  *   either side of element
  * @param {React.Component} alertContents
+ * @param {?string} position
  */
-StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+StudioApp.prototype.displayAlert = function (selector, props, alertContents, position = 'absolute') {
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert'/>").css({
-      position: 'absolute',
+      position: position,
       left: 0,
       right: 0,
       top: 0,

@@ -155,6 +155,7 @@ window.SignupManager = function (options) {
     $("#name-student").fadeIn();
     $("#name-teacher").hide();
     setSchoolInfoVisibility(false);
+    $(".email-preference").hide();
 
     // Show correct terms below form.
     $("#student-terms").fadeIn();
@@ -251,6 +252,7 @@ window.SignupManager = function (options) {
     $("#name-student").hide();
     $("#name-teacher").fadeIn();
     setSchoolInfoVisibility(true);
+    $(".email-preference").fadeIn();
 
     // Show correct terms below form.
     $("#student-terms").hide();

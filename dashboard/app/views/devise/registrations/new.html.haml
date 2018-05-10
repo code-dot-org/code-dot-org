@@ -15,6 +15,8 @@
 
 - user_return_to_url = get_and_clear_session_user_return_to
 
+%script{src: "https://cdn.optimizely.com/js/400912536.js"}
+
 #signup
   .row
     .span9
@@ -79,6 +81,26 @@
           .labelblock= t('signup_form.gender')
           = f.select :gender, gender_options, {disabled: '', selected: ''}, {class: 'fieldblock'}
           .error_in_field
+
+        #optin-container
+          #optin-block.itemblock.email-preference{style: "display: none"}
+            .labelblock-wide= t('signup_form.email_preference_question').html_safe
+            %select.fieldblock{name: "email_preference", type: "select"}
+              %option{value: "", selected: true, disabled: true}
+              %option{value: "yes"}= t('signup_form.email_preference_yes').html_safe
+              %option{value: "no"}= t('signup_form.email_preference_no').html_safe
+            .error_in_field
+
+        #optin2-container{style: "display: none"}
+          #optin2-block.itemblock.email-preference
+            .labelblock-wide= t('signup_form.email_preference_question').html_safe
+            #optin2-yes-container
+              %input{type: "radio", id: "optin2-yes", name: "email_preference2", value: "yes"}
+              %label{for: "optin2-yes"}= t('signup_form.email_preference_yes').html_safe
+            #optin2-no-container
+              %input{type: "radio", id: "optin2-no", name: "email_preference2", value: "no"}
+              %label{for: "optin2-no"}= t('signup_form.email_preference_no').html_safe
+            .error_in_field
 
         #teacher-terms{style: 'display: none'}
           .right
