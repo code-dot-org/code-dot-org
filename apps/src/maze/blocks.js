@@ -25,7 +25,7 @@ var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
 var codegen = require('../lib/tools/jsinterpreter/codegen');
 var blockUtils = require('../block_utils');
-var mazeUtils = require('./mazeUtils');
+var mazeUtils = require('@code-dot-org/maze/src/utils');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
