@@ -67,7 +67,7 @@ class TextResponses extends Component {
 export const UnconnectedTextResponses = TextResponses;
 
 export default connect(state => ({
-  responses: state.textResponses.responseData,
+  responses: state.textResponses.responseDataByScript,
   isLoadingResponses: state.textResponses.isLoadingResponses,
   validScripts: state.sectionProgress.validScripts,
   scriptId: state.sectionProgress.scriptId,
