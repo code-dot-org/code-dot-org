@@ -70,8 +70,6 @@ const customInputTypes = {
   },
   spritePicker: {
     addInput(block, input) {
-      Blockly.Variables.registerGetter(Blockly.BlockValueType.SPRITE, block.name);
-
       block.getVars = function () {
         return {
           [Blockly.BlockValueType.SPRITE]: [block.getTitleValue(input.name)],
