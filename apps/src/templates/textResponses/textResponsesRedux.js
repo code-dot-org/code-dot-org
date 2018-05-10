@@ -13,25 +13,28 @@ export const textResponsePropType = PropTypes.shape({
 
  // Initial state of textResponsesRedux
 const initialState = {
+  sectionId: null,
   responseData: {},
   isLoadingResponses: false
 };
 
+const SET_SECTION_ID = 'textResponses/SET_SECTION_ID';
 const SET_TEXT_RESPONSES = 'textResponses/SET_TEXT_RESPONSES';
-const START_LOADING_RESPONSES = 'textResponses/START_LOADING_RESPONSES';
-const FINISH_LOADING_RESPONSES = 'textResponses/FINISH_LOADING_RESPONSES';
+const START_LOADING_TEXT_RESPONSES = 'textResponses/START_LOADING_TEXT_RESPONSES';
+const FINISH_LOADING_TEXT_RESPONSES = 'textResponses/FINISH_LOADING_TEXT_RESPONSES';
 
 // Action creators
-export const setTextResponses = (sectionId, scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, scriptId, responseData});
-export const startLoadingResponses = () => ({ type: START_LOADING_RESPONSES });
-export const finishLoadingResponses = () => ({ type: FINISH_LOADING_RESPONSES });
+export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId });
+export const setTextResponses = (scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, scriptId, responseData});
+export const startLoadingResponses = () => ({ type: START_LOADING_TEXT_RESPONSES });
+export const finishLoadingResponses = () => ({ type: FINISH_LOADING_TEXT_RESPONSES });
 
 export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   return (dispatch, getState) => {
     const state = getState().textResponses;
 
     // Don't load data if it's already stored in redux.
-    if (state.responseData[sectionId] && state.responseData[sectionId][scriptId]) {
+    if (state.responseData[scriptId]) {
       onComplete();
       return;
     }
@@ -41,7 +44,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
       if (error) {
         console.error(error);
       } else {
-        dispatch(setTextResponses(sectionId, scriptId, data));
+        dispatch(setTextResponses(scriptId, data));
         onComplete();
       }
       dispatch(finishLoadingResponses());
@@ -50,24 +53,31 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
 };
 
 export default function textResponses(state=initialState, action) {
+  if (action.type === SET_SECTION_ID) {
+    // Setting the sectionId is the first action to be called when switching
+    // sections, which requires us to reset our state. This might need to change
+    // once switching sections is in react/redux.
+    return {
+      ...initialState,
+      sectionId: action.sectionId
+    };
+  }
   if (action.type === SET_TEXT_RESPONSES) {
     return {
       ...state,
       responseData: {
         ...state.responseData,
-        [action.sectionId]: {
-          [action.scriptId]: action.responseData
-        }
+        [action.scriptId]: action.responseData
       }
     };
   }
-  if (action.type === START_LOADING_RESPONSES) {
+  if (action.type === START_LOADING_TEXT_RESPONSES) {
     return {
       ...state,
       isLoadingResponses: true
     };
   }
-  if (action.type === FINISH_LOADING_RESPONSES) {
+  if (action.type === FINISH_LOADING_TEXT_RESPONSES) {
     return {
       ...state,
       isLoadingResponses: false
