@@ -116,7 +116,7 @@ class RegistrationsController < Devise::RegistrationsController
         format.any {head :no_content}
       else
         format.html {render "edit", formats: [:html]}
-        format.any {head :unprocessable_entity}
+        format.any {render status: :unprocessable_entity, json: user.errors.as_json(full_messages: true)}
       end
     end
   end

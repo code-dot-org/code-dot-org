@@ -16,7 +16,6 @@ Spec:
 https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
 
 Task list:
-Handle failed submissions gracefully.
 Update the email on the Account page after successful submit without reload.
 Fix id collisions between this form's fields and the default form fields on
   the account page.
@@ -26,21 +25,6 @@ Deduplicate and test client-side email hashing logic
 A less clumsy way to use Rails UJS?
 
  */
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-  label: {
-    display: 'block',
-    fontWeight: 'bold',
-    color: color.charcoal,
-  },
-  input: {
-    marginBottom: 4,
-  },
-};
 
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
@@ -54,7 +38,9 @@ export default class ChangeEmailModal extends React.Component {
     super(props);
     this.state = {
       newEmail: '',
+      newEmailServerError: undefined,
       currentPassword: '',
+      currentPasswordServerError: undefined,
       emailOptIn: '',
     };
   }
@@ -117,17 +103,25 @@ export default class ChangeEmailModal extends React.Component {
     this.props.handleSubmit();
   };
 
-  onSubmitFailure = (xhr, status, error) => {
-    // TODO: I'm not getting useful validation information back from Rails,
-    // TODO: just a 422 Unprocessable Entity.
-    // TODO: How do I detect, for example, that an email is already in use?
-    console.error(xhr, status, error);
+  onSubmitFailure = (event, xhr, error) => {
+    const errors = JSON.parse(xhr.responseText);
+    this.setState({
+      newEmailServerError: errors.email,
+      currentPasswordServerError: errors.current_password,
+    }, () => {
+      if (this.state.newEmailServerError) {
+        this.newEmailInput.focus();
+      } else if (this.state.currentPasswordServerError) {
+        this.currentPasswordInput.focus();
+      }
+    });
   };
 
   getValidationErrors() {
+    const {newEmailServerError, currentPasswordServerError} = this.state;
     return {
-      newEmail: this.getNewEmailValidationError(),
-      currentPassword: this.getCurrentPasswordValidationError(),
+      newEmail: newEmailServerError || this.getNewEmailValidationError(),
+      currentPassword: currentPasswordServerError || this.getCurrentPasswordValidationError(),
       // emailOptIn: this.getEmailOptInValidationError(),
     };
   }
@@ -156,10 +150,19 @@ export default class ChangeEmailModal extends React.Component {
     return null;
   };
 
-  onNewEmailChange = (event) => this.setState({newEmail: event.target.value});
-  onCurrentPasswordChange = (event) => this.setState({currentPassword: event.target.value});
-  onEmailOptInChange = (event) => this.setState({emailOptIn: event.target.value});
+  onNewEmailChange = (event) => this.setState({
+    newEmail: event.target.value,
+    newEmailServerError: undefined,
+  });
 
+  onCurrentPasswordChange = (event) => this.setState({
+    currentPassword: event.target.value,
+    currentPasswordServerError: undefined,
+  });
+
+  onEmailOptInChange = (event) => this.setState({
+    emailOptIn: event.target.value,
+  });
 
   render = () => {
     const validationErrors = this.getValidationErrors();
@@ -189,6 +192,7 @@ export default class ChangeEmailModal extends React.Component {
                 maxLength="255"
                 size="255"
                 style={styles.input}
+                ref={el => this.newEmailInput = el}
               />
               <FieldError>
                 {validationErrors.newEmail}
@@ -209,6 +213,7 @@ export default class ChangeEmailModal extends React.Component {
                 maxLength="255"
                 size="255"
                 style={styles.input}
+                ref={el => this.currentPasswordInput = el}
               />
               <FieldError>
                 {validationErrors.currentPassword}
@@ -358,3 +363,18 @@ class SystemDialogConfirmCancelFooter extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal,
+  },
+  label: {
+    display: 'block',
+    fontWeight: 'bold',
+    color: color.charcoal,
+  },
+  input: {
+    marginBottom: 4,
+  },
+};
