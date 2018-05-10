@@ -1317,6 +1317,9 @@ en:
       Debugging with Console.log_2018:
         description here: description here
         title: title
+      Deeper Learning Overview:
+        Deeper Learning Description: Deeper Learning Description
+        description here: description here
       Design Mode Overview: {}
       Design Mode Practice: {}
       Design a Screen for your App: {}
@@ -3327,6 +3330,9 @@ en:
       csd deeper learning timeline:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
+      csd deeper learning timeline 2018-2019:
+        Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
+        description here: description here
       csd-novice-congrats: {}
       csd-post-survey-2017 preamble 1: {}
       csd-post-survey-2017-implementation-student: {}
@@ -3432,6 +3438,12 @@ en:
         Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
         description here: description here
       deeper learning recommendations- csp:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
+      deeper learning recommendations- csp - 2018:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
+      dlp supports - csd:
         Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
         description here: description here
       dsl link test:
@@ -3553,6 +3565,7 @@ en:
       onlineNeighbors:
         Your Online Neighborhood: Your Online Neighborhood
       peer review recommendations: {}
+      peer review recommendations 18-19: {}
       'placeholder text: submit and warning about longitudinal study request': {}
       plc csp1 chapter overviews: {}
       plc csp1 intro to tools: {}
@@ -12221,33 +12234,21 @@ en:
       csp-post-survey-2018-AP-exam-how-hard:
         About what I was expecting: About what I was expecting
         Easier than expected: Easier than expected
-        Easy: Easy
-        Hard: Hard
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
-        If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was
-        If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.
         If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.
         More difficult than expected: More difficult than expected
-        Sort of Easy: Sort of Easy
-        Sort of hard: Sort of hard
-        Very easy: Very easy
-        Very hard: Very hard
         Way easier than expected: Way easier than expected
         Way more difficult than expected: Way more difficult than expected
       csp-post-survey-2018-CreatePT-I-liked:
         A little bit: A little bit
         A lot: A lot
         Did you like this performance task?: Did you like this performance task?
-        How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
         I didn't do it: I didn't do it
-        I don't remember this unit: I don't remember this unit
         I loved this Performance Task!: I loved this Performance Task!
         Not at all: Not at all
         Somewhat: Somewhat
-        This was my favorite unit!: This was my favorite unit!
       csp-post-survey-2018-CreatePT-time:
         I think the amount of time I got to spend working on this Performance Task in class was...: I think the amount of time I got to spend working on this Performance Task in class was...
-        I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
         a bit too much.: a bit too much.
         about right.: about right.
@@ -12257,7 +12258,6 @@ en:
         Agree: Agree
         Disagree: Disagree
         I felt well-prepared to complete this Performance Task.: I felt well-prepared to complete this Performance Task.
-        'I think computer science is interesting. ': 'I think computer science is interesting. '
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -12288,61 +12288,26 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-post-survey-2018-U1-I-learned:
-        For the topics covered in this unit I felt I learned...: For the topics covered in this unit I felt I learned...
         How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
-        a little too difficult: a little too difficult
         a little too difficult.: a little too difficult.
-        a little too easy: a little too easy
         a little too easy.: a little too easy.
-        about the right amount: about the right amount
-        about the right amount.: about the right amount.
-        just about right: just about right
         just about right.: just about right.
-        less than I needed to.: less than I needed to.
-        more than I needed to.: more than I needed to.
-        nothing: nothing
-        too little: too little
-        too much: too much
-        way more than I needed to: way more than I needed to
-        way more than I needed to.: way more than I needed to.
-        way too difficult: way too difficult
         way too difficult.: way too difficult.
-        way too easy: way too easy
         way too easy.: way too easy.
-        way too much: way too much
       csp-post-survey-2018-U1-I-liked:
         A little bit: A little bit
-        A little bit.: A little bit.
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I didn't like this unit at all: I didn't like this unit at all
         I don't remember this unit: I don't remember this unit
-        I liked this unit a little bit.: I liked this unit a little bit.
-        I liked this unit it a lot: I liked this unit it a lot
-        I liked this unit somewhat: I liked this unit somewhat
-        I really liked the lessons and topics covered in this unit.: I really liked the lessons and topics covered in this unit.
-        It was my favorite unit: It was my favorite unit
-        It was my favorite unit!: It was my favorite unit!
         Not at all: Not at all
-        Not at all.: Not at all.
         Somewhat: Somewhat
-        This was my <b>favorite</b> unit!: This was my <b>favorite</b> unit!
         This was my favorite unit!: This was my favorite unit!
-        a little: a little
-        a lot: a lot
-        somewhat: somewhat
       csp-post-survey-2018-U1-time-spent:
-        I think the amount of time we spent on the topics in this unit was...: I think the amount of time we spent on the topics in this unit was...
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
-        a bit too little: a bit too little
         a bit too little.: a bit too little.
-        a bit too much: a bit too much
         a bit too much.: a bit too much.
-        about right: about right
         about right.: about right.
-        way too little: way too little
         way too little.: way too little.
-        way too much: way too much
         way too much.: way too much.
       csp-post-survey-2018-U2-I-learned:
         How challenging were the lessons and topics in this unit for you?  I think this unit was...: How challenging were the lessons and topics in this unit for you?  I think this unit was...
@@ -12439,72 +12404,60 @@ en:
         'Yes': 'Yes'
       csp-post-survey-2018-topic-cryptocurrency:
         Cryptocurrency: Cryptocurrency
-        Cybersecurity: Cybersecurity
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-cybersecurity:
-        Artificial Intelligence and Machine Learning: Artificial Intelligence and Machine Learning
         Cybersecurity: Cybersecurity
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-databases:
-        Cybersecurity: Cybersecurity
         Databases: Databases
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-datascience:
         Data Science: Data Science
-        Databases: Databases
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-gamedev:
-        Data Science: Data Science
         Game Development: Game Development
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-hardware:
-        Game Development: Game Development
         Hardware: Hardware
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-internet:
-        Databases: Databases
         Networking and the Internet: Networking and the Internet
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-mobile:
-        Data Science: Data Science
         Mobile App Development: Mobile App Development
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-parallel:
-        Cybersecurity: Cybersecurity
         'No': 'No'
         Not sure what this is: Not sure what this is
         Parallel and Distributed Computing: Parallel and Distributed Computing
         'Yes': 'Yes'
       csp-post-survey-2018-topic-programming:
         Computer Programming: Computer Programming
-        Cryptocurrency: Cryptocurrency
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-robotics:
-        Cybersecurity: Cybersecurity
         'No': 'No'
         Not sure what this is: Not sure what this is
         Robotics: Robotics
         'Yes': 'Yes'
       csp-post-survey-2018-topic-web:
-        Artificial Intelligence and Machine Learning: Artificial Intelligence and Machine Learning
         'No': 'No'
         Not sure what this is: Not sure what this is
         Web Development: Web Development
@@ -12516,7 +12469,6 @@ en:
         I didn't know it was an option: I didn't know it was an option
         I didn't think I'd do well: I didn't think I'd do well
         If you DID NOT take the CS Principles AP exam, what was the main reason why not?: If you DID NOT take the CS Principles AP exam, what was the main reason why not?
-        If you DID NOT take the CS Principles AP exam, why not?: If you DID NOT take the CS Principles AP exam, why not?
         Not applicable. I DID take the exam: Not applicable. I DID take the exam
         Wasn't offered at my school: Wasn't offered at my school
       csp-pre-survey-2017-q1:
@@ -15628,21 +15580,14 @@ en:
       post-assessment survey q33:
         ok: ok
       post-assessment survey q34:
-        About what I was expecting: About what I was expecting
-        Easier than expected: Easier than expected
         Easy: Easy
         Hard: Hard
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
         If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was: If you DID take the CS Principles AP exam, please rate how easy or hard you thought the exam was
-        If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate difficult it was compared to what you were expecting.
-        More difficult than expected: More difficult than expected
-        Sort of  easy: Sort of  easy
         Sort of Easy: Sort of Easy
         Sort of hard: Sort of hard
         Very easy: Very easy
         Very hard: Very hard
-        Way easier than expected: Way easier than expected
-        Way more difficult than expected: Way more difficult than expected
       post-assessment survey q35:
         "...I didn't get any questions right": "...I didn't get any questions right"
         "...I got a lot of questions right, but some wrong": "...I got a lot of questions right, but some wrong"

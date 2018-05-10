@@ -70,11 +70,11 @@
     "encrypted_examples": "+KNgXk+lzxcQnAPuupg2HczdBYZonZWR5c1CSxuycIc4QsA2W3vVgFHq89RT\nB1jCUthlZYgEcuPeRiLjJ1pKEw==\n",
     "parent_level_id": 8752,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "map_reference": "/docs/csd-1718/drawing_shapes_map/index.html",
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
