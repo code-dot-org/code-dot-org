@@ -902,6 +902,9 @@ en:
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
     csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
     csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
