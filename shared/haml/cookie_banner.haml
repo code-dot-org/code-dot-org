@@ -21,6 +21,8 @@
     %button#accept-cookies= accept
 
 :javascript
+  // When loaded on the code.org homepage, jQuery is not yet available (since its
+  // load is deferred), but a shim implementing .ready() is available.
   $(document).ready(function() {
     window.setupCookieBanner("#{rack_env}");
   });
