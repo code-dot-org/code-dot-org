@@ -23,7 +23,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     refute_nil user.purged_at
   end
 
@@ -33,7 +32,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.name
   end
 
@@ -44,7 +42,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_match /^sys_deleted_\w{8}$/, user.username
   end
 
@@ -57,7 +54,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.current_sign_in_ip
     assert_nil user.last_sign_in_ip
   end
@@ -71,7 +67,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_empty user.email
     assert_empty user.hashed_email
     assert_nil user.parent_email
@@ -87,7 +82,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.encrypted_password
     assert_nil user.reset_password_token
     assert_nil user.secret_picture
@@ -103,7 +97,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_equal 'clever', user.provider
     assert_nil user.uid
   end
@@ -119,7 +112,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.full_address
     assert_nil user.school
     assert_nil user.school_info_id
@@ -145,7 +137,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_equal({}, user.properties)
   end
 
@@ -156,7 +147,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
   end
@@ -168,7 +158,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.urm
     assert_nil user.races
   end
@@ -180,7 +169,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert_nil user.studio_person_id
     assert_empty StudioPerson.where(id: studio_person.id)
   end
@@ -194,8 +182,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
-    other_user.reload
     assert_nil user.studio_person_id
     refute_nil other_user.studio_person_id
     refute_empty StudioPerson.where(id: studio_person.id)
@@ -231,7 +217,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert user.valid?
   end
 
@@ -241,14 +226,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    user.reload
     assert user.valid?
   end
 
   private
 
+  #
+  # Helper to make this specific set of tests more readable
+  # Performs our account purge on the provided user instance, and then reloads
+  # that instance so we can assert things about its final state.
+  #
   def purge_user(user)
     SolrHelper.stubs(:delete_document).once
     DeleteAccountsHelper.new(solr: {}).purge_user(user)
+    user.reload
   end
 end
