@@ -67,7 +67,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_showTitleScreen" />
   <block type="gamelab_hideTitleScreen" />
 </category>
-<category name="Sprites">
+<category name="Sprites" custom="Sprite">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_makeNewSpriteLocation" />
   <block type="gamelab_location_picker">
@@ -89,8 +89,6 @@ class GamelabJr < Gamelab
   <block type="gamelab_destroy" />
   <block type="gamelab_firstTouched" />
   <block type="gamelab_secondTouched" />
-  <block type="sprite_variables_get" />
-  <block type="sprite_variables_set" />
 </category>
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />

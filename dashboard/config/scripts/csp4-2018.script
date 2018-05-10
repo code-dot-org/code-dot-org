@@ -13,6 +13,16 @@ assessment 'U4L1 - MC moores law_2018', progression: 'Check Your Understanding'
 assessment 'U4L1 - MC big data def_2018', progression: 'Check Your Understanding'
 assessment 'csp-pulse-check-survey-5-levelgroup-U4Ch1_2018', progression: 'Quick Check-In'
 
+stage 'Finding Trends with Visualizations', flex_category: 'csp4_1'
+named_level 'CSP U2L08 SFLP'
+assessment 'U2L8 google trends MC_2018', progression: 'Check Your Understanding'
+assessment 'U2L8 google trends hypothesis_2018', progression: 'Check Your Understanding'
+
+stage 'Check Your Assumptions', flex_category: 'csp4_1'
+named_level 'CSP U2L09 SFLP'
+assessment 'U2L9 What is digital divide MC_2018', progression: 'Check Your Understanding'
+assessment 'U2L9 FR digital divide issue_2018', progression: 'Check Your Understanding'
+
 stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1'
 named_level 'CSP U4L02 SFLP'
 level 'Video - Data and Medicine_2018', progression: 'Data and Medicine'
@@ -74,9 +84,6 @@ assessment 'U2L19 Free Response Wrap Up_2018', progression: 'Check Your Understa
 stage 'Rapid Research - Cybercrime', flex_category: 'csp4_1'
 named_level 'CSP U4L08 SFLP'
 named_level 'Video - Cybersecurity and Crime_2018', progression: 'Cybersecurity and Crime'
-
-stage 'Practice PT - Big Data and Security Dilemmas', flex_category: 'csp4_1'
-named_level 'CSP U4L09 SFLP'
 
 stage 'Unit 4 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 variants

@@ -10,6 +10,7 @@ import sectionProgress, {
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
+  ACCELERATED_SCRIPT_ID,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
@@ -172,21 +173,24 @@ describe('sectionProgressRedux', () => {
   });
 
   describe('setValidScripts', () => {
-    it('sets the script data and defaults scriptId', () => {
-      const action = setValidScripts(fakeValidScripts);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.validScripts, fakeValidScripts);
-      assert.deepEqual(nextState.scriptId, fakeValidScripts[0].id);
-    });
 
-    it('sets the script data and does not override already assigned scriptId', () => {
-      const action = setValidScripts(fakeValidScripts);
+    it('does not override already assigned scriptId', () => {
+      const studentScriptIds = [];
+      const validCourses = [];
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
       const nextState = sectionProgress({
         ...initialState,
         scriptId: 100
       }, action);
-      assert.deepEqual(nextState.validScripts, fakeValidScripts);
       assert.deepEqual(nextState.scriptId, 100);
+    });
+
+    it('filtered validScripts includes Accelerated script id by default', () => {
+      const studentScriptIds = [];
+      const validCourses = [];
+      const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.id === ACCELERATED_SCRIPT_ID));
     });
 
     it('filters validScripts to those included in studentScriptIds', () => {

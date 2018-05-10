@@ -73,6 +73,7 @@ class Blockly < Level
     contained_level_names
     encrypted_examples
     disable_if_else_editing
+    show_type_hints
   )
 
   before_save :update_ideal_level_source

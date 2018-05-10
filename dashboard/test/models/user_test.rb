@@ -78,6 +78,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
+  test 'single user experiment is enabled' do
+    experiment = create(:single_user_experiment, min_user_id: @user.id)
+    assert_equal [experiment[:name]], @user.get_active_experiment_names
+  end
+
   test 'normalize_email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email

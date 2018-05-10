@@ -144,7 +144,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'signing in user creates SignIn' do
-    frozen_time = '1985-10-26 01:20:00'
+    frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
     user = create :user, sign_in_count: 2
     assert_creates(SignIn) do
@@ -159,7 +159,7 @@ class SessionsControllerTest < ActionController::TestCase
     sign_in = SignIn.find_by_user_id(user.id)
     assert sign_in
     assert_equal 2 + 1, sign_in.sign_in_count
-    assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
+    assert_equal frozen_time, sign_in.sign_in_at
   end
 
   test 'failed signin does not create SignIn' do
