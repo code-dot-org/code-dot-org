@@ -189,7 +189,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user = create :teacher
     studio_person = user.studio_person
     refute_nil user.studio_person_id
-    other_user = create :teacher, studio_person_id: studio_person.id
+    other_user = create :teacher, studio_person: studio_person
     assert_equal user.studio_person_id, other_user.studio_person_id
 
     purge_user user
