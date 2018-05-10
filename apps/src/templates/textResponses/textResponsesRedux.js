@@ -13,13 +13,18 @@ export const textResponsePropType = PropTypes.shape({
 
  // Initial state of textResponsesRedux
 const initialState = {
-  responseData: {}
+  responseData: {},
+  isLoadingResponses: false
 };
 
-const SET_TEXT_RESPONSES = 'responseData/SET_TEXT_RESPONSES';
+const SET_TEXT_RESPONSES = 'textResponses/SET_TEXT_RESPONSES';
+const START_LOADING_RESPONSES = 'textResponses/START_LOADING_RESPONSES';
+const FINISH_LOADING_RESPONSES = 'textResponses/FINISH_LOADING_RESPONSES';
 
 // Action creators
 export const setTextResponses = (sectionId, scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, scriptId, responseData});
+const startLoadingResponses = () => ({ type: START_LOADING_RESPONSES });
+const finishLoadingResponses = () => ({ type: FINISH_LOADING_RESPONSES });
 
 export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   return (dispatch, getState) => {
@@ -31,6 +36,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
       return;
     }
 
+    dispatch(startLoadingResponses());
     loadTextResponsesFromServer(sectionId, scriptId, (error, data) => {
       if (error) {
         console.error(error);
@@ -38,6 +44,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
         dispatch(setTextResponses(sectionId, scriptId, data));
         onComplete();
       }
+      dispatch(finishLoadingResponses());
     });
   };
 };
@@ -52,6 +59,18 @@ export default function textResponses(state=initialState, action) {
           [action.scriptId]: action.responseData
         }
       }
+    };
+  }
+  if (action.type === START_LOADING_RESPONSES) {
+    return {
+      ...state,
+      isLoadingResponses: true
+    };
+  }
+  if (action.type === FINISH_LOADING_RESPONSES) {
+    return {
+      ...state,
+      isLoadingResponses: false
     };
   }
 
