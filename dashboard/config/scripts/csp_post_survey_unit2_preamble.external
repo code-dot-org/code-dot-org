@@ -1,0 +1,8 @@
+name 'csp-post-survey-unit2-preamble'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+## Unit 2: Digital Information
+
+Topics: compression, data visualization, data analysis, pixel images,
+MARKDOWN
