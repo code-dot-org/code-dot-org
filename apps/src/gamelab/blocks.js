@@ -51,7 +51,7 @@ const customInputTypes = {
           }
         }
       );
-      block.appendDummyInput()
+      return block.appendDummyInput()
           .appendTitle(button, input.name);
     },
     generateCode(block, arg) {
@@ -60,7 +60,7 @@ const customInputTypes = {
   },
   costumePicker: {
     addInput(block, input) {
-      block.appendDummyInput()
+      return block.appendDummyInput()
         .appendTitle(input.label)
         .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), input.name);
     },
@@ -370,10 +370,11 @@ export default {
     createJsWrapperBlock({
       color: WORLD_COLOR,
       func: 'showTitleScreen',
-      blockText: 'show title screen',
+      blockText: 'show title screen {BREAK} title {TITLE} text {SUBTITLE}',
       args: [
-        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
-        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+        { name: 'BREAK', empty: true },
+        { name: 'TITLE', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', type: blockly.BlockValueType.STRING }
       ],
       inline: false,
     });
