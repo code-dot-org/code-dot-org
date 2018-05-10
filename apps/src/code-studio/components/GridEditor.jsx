@@ -4,12 +4,8 @@
  * Supports both Bee and Farmer skins.
  */
 import React, {PropTypes} from 'react';
-var HarvesterCell = require('@code-dot-org/maze/src/harvesterCell');
-var PlanterCell = require('@code-dot-org/maze/src/planterCell');
-var BeeCell = require('@code-dot-org/maze/src/beeCell');
-var Cell = require('@code-dot-org/maze/src/cell');
-var StudioCell = require('@cdo/apps/studio/cell');
-var mazeUtils = require('@code-dot-org/maze/src/utils');
+
+import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 
 var HarvesterCellEditor = require('./HarvesterCellEditor');
 var PlanterCellEditor = require('./PlanterCellEditor');
@@ -78,15 +74,15 @@ export default class GridEditor extends React.Component {
 
   getCellClass() {
     if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
-      return StudioCell;
+      return cells.StudioCell;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
-      return BeeCell;
+      return cells.BeeCell;
     } else if (mazeUtils.isHarvesterSkin(this.props.skin)) {
-      return HarvesterCell;
+      return cells.HarvesterCell;
     } else if (mazeUtils.isPlanterSkin(this.props.skin)) {
-      return PlanterCell;
+      return cells.PlanterCell;
     }
-    return Cell;
+    return cells.Cell;
   }
 
   getEditorClass() {
