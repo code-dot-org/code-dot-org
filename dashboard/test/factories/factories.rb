@@ -911,8 +911,8 @@ FactoryGirl.define do
 
   factory :email_preference do
     email 'test@example.net'
-    opt_in true
+    opt_in false
     ip_address '10.0.0.1'
-    source 'form'
+    source EmailPreference::ACCOUNT_SIGN_UP
   end
 end

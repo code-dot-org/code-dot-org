@@ -943,6 +943,7 @@ StudioApp.prototype.inject = function (div, options) {
     rtl: getStore().getState().isRtl,
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
+    typeHints: options.showTypeHints,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
@@ -2413,6 +2414,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
+    showTypeHints: utils.valueOr(config.showTypeHints, false),
   };
 
   // Never show unused blocks or disable autopopulate in edit mode
@@ -2733,13 +2735,14 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
  * @param {number} [object.sideMaring] - Optional param specifying margin on
  *   either side of element
  * @param {React.Component} alertContents
+ * @param {?string} position
  */
-StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+StudioApp.prototype.displayAlert = function (selector, props, alertContents, position = 'absolute') {
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert'/>").css({
-      position: 'absolute',
+      position: position,
       left: 0,
       right: 0,
       top: 0,
