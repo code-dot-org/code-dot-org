@@ -190,8 +190,8 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.csf_script_ids
-    @@csf_scripts ||= Script.all.select(&:csf?).pluck(:id)
+  def self.stage_extras_script_ids
+    @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those

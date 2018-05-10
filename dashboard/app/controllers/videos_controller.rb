@@ -37,10 +37,12 @@ class VideosController < ApplicationController
   end
 
   def edit
+    @s3_metadata = Video.s3_metadata(@video.download)
   end
 
   def create
-    @video = Video.new(video_params)
+    filename = upload_to_s3
+    @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
     if @video.save
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
@@ -55,7 +57,9 @@ class VideosController < ApplicationController
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
-    if @video.update(video_params)
+    filename = upload_to_s3
+
+    if @video.update(video_params.merge(download: "https://videos.code.org/#{filename}"))
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
       Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
 
@@ -66,6 +70,19 @@ class VideosController < ApplicationController
   end
 
   private
+
+  def upload_to_s3
+    raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
+
+    filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
+    AWS::S3.upload_to_bucket(
+      'videos.code.org',
+      "levelbuilder/#{filename}",
+      video_params[:download],
+      acl: 'public-read',
+      no_random: true,
+    )
+  end
 
   def allow_iframe
     response.headers['X-Frame-Options'] = 'ALLOWALL'
