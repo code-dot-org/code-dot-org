@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import experiments, { COURSE_VERSIONS } from '@cdo/apps/util/experiments';
+import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
@@ -55,29 +55,24 @@ function renderSectionProgress(section, validScripts) {
   const store = getStore();
   store.dispatch(setSection(section));
 
-  if (experiments.isEnabled(COURSE_VERSIONS)) {
-    const promises = [
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-        dataType: 'json'
-      }),
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/courses?allVersions=1`,
-        dataType: 'json'
-      })
-    ];
-    Promise.all(promises).then(data => {
-      let [studentScriptsData, validCourses] = data;
-      const { studentScriptIds } = studentScriptsData;
-      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
-      renderSectionProgressReact(store);
-    });
-  } else {
-    store.dispatch(setValidScripts(validScripts));
+  const promises = [
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/sections/${section.id}/student_script_ids`,
+      dataType: 'json'
+    }),
+    $.ajax({
+      method: 'GET',
+      url: `/dashboardapi/courses?allVersions=1`,
+      dataType: 'json'
+    })
+  ];
+  Promise.all(promises).then(data => {
+    let [studentScriptsData, validCourses] = data;
+    const { studentScriptIds } = studentScriptsData;
+    store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
     renderSectionProgressReact(store);
-  }
+  });
 }
 
 function renderSectionProgressReact(store) {
