@@ -1589,10 +1589,25 @@ a.download-video {
   }
   .itemblock {
     display: table;
+
+    input[type=radio] {
+      margin-top: -4px;
+      margin-right: 4px;
+    }
+
+    label {
+      display: inline-block;
+    }
   }
   .labelblock {
     display: table-cell;
     width: 140px;
+    vertical-align: middle;
+  }
+  .labelblock-wide {
+    display: table-cell;
+    width: 350px;
+    padding-right: 10px;
     vertical-align: middle;
   }
   .school-info-labelblock {
