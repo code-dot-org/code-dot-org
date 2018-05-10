@@ -410,4 +410,11 @@ class Blockly < Level
   def default_toolbox_blocks
     nil
   end
+
+  # Clear 'is_project_level' from cloned levels
+  def clone_with_name(name)
+    level = super(name)
+    level.update!(is_project_level: false)
+    level
+  end
 end
