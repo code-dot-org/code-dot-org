@@ -368,6 +368,7 @@ zh-TW:
     enter_new_login_info: '輸入你新的登入資訊'
     confirm_secret_words: '為了確認是你本人請輸入目前的通關密語'
     enter_parent_email: "輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)"
+    update: "Update Account"
   user_level:
     completed: '已完成'
     tried: '已體驗'
@@ -723,21 +724,21 @@ zh-TW:
     message: "請告訴我們你的種族（選擇）"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黑人/非裔美國人
+        black: "黑人/非裔美國人"
       - 
-        hispanic: 西班牙裔或拉丁裔
+        hispanic: "西班牙裔或拉丁裔"
       - 
-        asian: 亞裔
+        asian: "亞裔"
       - 
-        hawaiian: 夏威夷原住民或其他太平洋群島原住民
+        hawaiian: "夏威夷原住民或其他太平洋群島原住民"
       - 
-        american_indian: 美國印地安人/阿拉斯加原住民
+        american_indian: "美國印地安人/阿拉斯加原住民"
       - 
-        other: 其它
+        other: "其它"
       - 
-        opt_out: 不想說
+        opt_out: "不想說"
     submit: "提交"
     decline: "關閉"
   zendesk_too_young_message: '抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。'

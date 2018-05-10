@@ -362,6 +362,7 @@ et:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Tehtud'
     tried: 'Proovisin'
@@ -717,21 +718,21 @@ et:
     message: "Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)"
     races:
       - 
-        white: Valge
+        white: "Valge"
       - 
-        black: Mustanahaline või afroameeriklane
+        black: "Mustanahaline või afroameeriklane"
       - 
-        hispanic: Hispaania või ladina päritolu
+        hispanic: "Hispaania või ladina päritolu"
       - 
-        asian: aasialane
+        asian: "aasialane"
       - 
-        hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
+        hawaiian: "Havai põlisrahvusest või pärit vaikse ookeani saartelt"
       - 
-        american_indian: põlisameeriklane või Alaska põliselanik
+        american_indian: "põlisameeriklane või Alaska põliselanik"
       - 
-        other: Muu
+        other: "Muu"
       - 
-        opt_out: Ei soovi vastata
+        opt_out: "Ei soovi vastata"
     submit: "Esita"
     decline: "Sulge"
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'

@@ -318,6 +318,7 @@
   "moveSpriteN": "{spriteIndex} მსახიობის გადაადგილება",
   "moveDroid": "move droid",
   "moveDroidN": "დროიდის გადაადგილება {spriteIndex}",
+  "to": "იმისთვის, რომ",
   "toXY": "x, y-ზე",
   "moveDown": "გადაადგილება ქვემოთ",
   "moveDownTooltip": "მსახიობის ქვემოთ გადაადგილება.",

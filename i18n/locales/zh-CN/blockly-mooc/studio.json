@@ -318,6 +318,7 @@
   "moveSpriteN": "移动演员 {spriteIndex}",
   "moveDroid": "移动机器人",
   "moveDroidN": "移动机器人{spriteIndex}",
+  "to": "至",
   "toXY": "到 X，Y",
   "moveDown": "向下移动",
   "moveDownTooltip": "向下移动演员。",

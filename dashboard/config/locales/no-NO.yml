@@ -425,6 +425,7 @@
     enter_new_login_info: Angi ny påloggingsinformasjon
     confirm_secret_words: Bekreft at det er deg ved å angi gjeldende hemmelige ord
     enter_parent_email: Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)
+    update: Update Account
   user_level:
     completed: Fullført
     tried: Forsøkt

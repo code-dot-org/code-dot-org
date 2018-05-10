@@ -368,6 +368,7 @@ pt-BR:
     enter_new_login_info: 'Digite sua nova conta individual'
     confirm_secret_words: 'Confirme que é você ao digitar suas palavras secretas atuais'
     enter_parent_email: "Insira o E-Mail dos pais ou responsável legal (para recuperação de senha)"
+    update: "Update Account"
   user_level:
     completed: 'Concluído'
     tried: 'Provado'
@@ -723,21 +724,21 @@ pt-BR:
     message: "Diga-nos qual é sua raça (marque todas as opções aplicáveis)"
     races:
       - 
-        white: Branco
+        white: "Branco"
       - 
-        black: Negro ou Afro-americano
+        black: "Negro ou Afro-americano"
       - 
-        hispanic: Hispânico ou Latino
+        hispanic: "Hispânico ou Latino"
       - 
-        asian: Asiático
+        asian: "Asiático"
       - 
-        hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
+        hawaiian: "Nativo do Havaí ou de outra ilha do Pacífico"
       - 
-        american_indian: Índio Americano/Nativo do Alaska
+        american_indian: "Índio Americano/Nativo do Alaska"
       - 
-        other: Outros
+        other: "Outros"
       - 
-        opt_out: Prefiro não responder
+        opt_out: "Prefiro não responder"
     submit: "Enviar"
     decline: "Fechar"
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
