@@ -1,4 +1,4 @@
-require_relative '../helper_modules/dashboard'
+require 'cdo/email_preference_constants'
 
 class EmailPreferenceHelper
   def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
