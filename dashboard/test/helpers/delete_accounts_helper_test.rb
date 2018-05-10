@@ -98,13 +98,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user = create :student,
       provider: 'clever',
       uid: 'fake-clever-uid'
-    assert_equal user.provider, 'clever'
+    assert_equal 'clever', user.provider
     refute_nil user.uid
 
     purge_user user
 
     user.reload
-    assert_equal user.provider, 'clever'
+    assert_equal 'clever', user.provider
     assert_nil user.uid
   end
 
