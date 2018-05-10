@@ -17,3 +17,8 @@ ka:
           description_short: ეს არის კურსი ყველაფრისათვის
           description_student: ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა მოსწავლეებისათვის
           description_teacher: ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა მოსწავლეებისათვის
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
