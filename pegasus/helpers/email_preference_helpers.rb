@@ -1,6 +1,6 @@
 require_relative '../helper_modules/dashboard'
 
-class EmailPreference
+class EmailPreferenceHelper
   def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
     current_time = Time.now
 
