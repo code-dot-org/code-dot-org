@@ -21,7 +21,7 @@ describe('textResponsesRedux', () => {
       const currentState = {
         sectionId: 1,
         isLoadingResponses: true,
-        responseData: {
+        responseDataByScript: {
           1: {question: 'Question 1', response: 'Response 1'},
           2: {question: 'Question 2', response: 'Response 2'}
         }
@@ -46,7 +46,7 @@ describe('textResponsesRedux', () => {
       };
       const action = setTextResponses(scriptId, responseData);
       const nextState = textResponses(initialState, action);
-      const actualResponseData = nextState.responseData[scriptId];
+      const actualResponseData = nextState.responseDataByScript[scriptId];
       assert.deepEqual(actualResponseData, responseData);
     });
   });
