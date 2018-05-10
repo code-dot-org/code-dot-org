@@ -145,6 +145,9 @@ en:
     field_is_required: "is required"
     accept_terms: "You must agree to create an account"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Yes"
+    email_preference_no: "No"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'

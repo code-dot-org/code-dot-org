@@ -46,10 +46,6 @@
     "markdown_instructions": "# Remixing Apps That Use Data\r\n\r\nLet’s say you want to **remix** a classmate’s app to add some cool new features. You can do this by clicking the “Remix” button at the top of your screen.\r\n\r\n<img src=\"https://images.code.org/71f299efc9b95ab85471f6a66450af26-image-1450299352596.55.40.png\">\r\n\r\n**Clicking the “Remix” button creates your own copy of the app**, so that you can make changes and add things without affecting the original app. Remixing an app copies over all the **code** and **design elements** of the original app, but what happens to the **data**?\r\n\r\n# Do This:\r\n* **Run this app** and see what it prints to the console. Open the data viewer and **see what records are stored**.\r\n* **Remix the app** by clicking the “Remix” button at the top of your screen.\r\n\t* **Note:** This will take you out of this stage and bring you to a more free-form version of App Lab.\r\n* Go **run the remixed version** of the app. See what it prints to the console, look around in the data viewer, and then **come back here**. We’ll talk about what happened in the next level.\r\n\r\n",
     "parent_level_id": 4140,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -58,7 +54,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
