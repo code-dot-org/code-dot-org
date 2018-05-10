@@ -98,6 +98,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_groupLength" />
 </category>
 <category name="Events">
+  <block type="gamelab_whenPressedAndReleased" />
   <block type="gamelab_whenUpArrow" />
   <block type="gamelab_whenDownArrow" />
   <block type="gamelab_whenLeftArrow" />

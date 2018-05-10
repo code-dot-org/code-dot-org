@@ -14,6 +14,7 @@
  * fill,
  * keyDown,
  * keyWentDown,
+ * keyWentUp,
  * mousePressedOver,
  * mouseWentDown,
  * randomNumber,
@@ -168,6 +169,11 @@ function whileSpace(event) {
 
 function whenMouseClicked(event) {
   touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
+}
+
+function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
+  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
+  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
 function clickedOn(sprite, event) {
