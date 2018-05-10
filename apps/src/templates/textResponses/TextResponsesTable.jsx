@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
@@ -188,11 +189,11 @@ class TextResponsesTable extends Component {
     const {responses, isLoading} = this.props;
 
     if (isLoading) {
-      return <div>Loading...</div>;
+      return <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>;
     }
 
     if (!responses || !responses.length) {
-      return <div>{i18n.emptyTextResponsesTable()}</div>;
+      return <div id="uitest-empty-responses">{i18n.emptyTextResponsesTable()}</div>;
     }
 
     // Define a sorting transform that can be applied to each column
