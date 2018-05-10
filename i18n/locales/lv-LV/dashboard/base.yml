@@ -368,6 +368,7 @@ lv:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Pabeigts'
     tried: 'Mēģināts'
@@ -723,21 +724,21 @@ lv:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Citi
+        other: "Citi"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Iesniegt"
     decline: "Close"
   zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar mums tavā vietā.'

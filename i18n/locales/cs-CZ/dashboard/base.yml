@@ -368,6 +368,7 @@ cs:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Dokončeno'
     tried: 'Vyzkoušeno'
@@ -723,21 +724,21 @@ cs:
     message: "Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)"
     races:
       - 
-        white: Běloch
+        white: "Běloch"
       - 
-        black: Černoch nebo Afroameričan
+        black: "Černoch nebo Afroameričan"
       - 
-        hispanic: Hispánec nebo Latino
+        hispanic: "Hispánec nebo Latino"
       - 
-        asian: Asiat
+        asian: "Asiat"
       - 
-        hawaiian: Rodilý havajčan nebo ostrovan z Pacifiku
+        hawaiian: "Rodilý havajčan nebo ostrovan z Pacifiku"
       - 
-        american_indian: Indián/Aljašan
+        american_indian: "Indián/Aljašan"
       - 
-        other: Ostatní
+        other: "Ostatní"
       - 
-        opt_out: Preferujeme neuvést
+        opt_out: "Preferujeme neuvést"
     submit: "Odeslat"
     decline: "Zavřít"
   zendesk_too_young_message: 'Promiň, mladší uživatelé se nemohou přihlásit do našeho webového serveru podpory. Můžeš procházet <a href="http://support.code.org"> support.code.org</a> bez přihlášení nebo požádat rodiče nebo učitele, aby nás kontaktovali.'

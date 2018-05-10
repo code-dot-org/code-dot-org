@@ -38,3 +38,8 @@
           description_short: Това е курс за всичко
           description_student: Това е курс за всичко и има по-дълго описание за учениците
           description_teacher: Това е курс за всичко и има по-дълго описание за учителите
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

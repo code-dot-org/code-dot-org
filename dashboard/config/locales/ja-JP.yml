@@ -386,6 +386,7 @@
     enter_new_login_info: 新しいログイン情報の入力
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。
+    update: Update Account
   user_level:
     completed: 完了
     tried: 試してみました
