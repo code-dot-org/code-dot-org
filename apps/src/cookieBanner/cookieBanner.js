@@ -1,22 +1,25 @@
 import cookies from 'js-cookie';
 import { getRootDomainFromHostname } from '@cdo/apps/code-studio/utils';
 
+// Note that on the code.org homepage, jQuery is not yet available, since its
+// load is deferred.
+
 window.setupCookieBanner = (environment) => {
   const cookieName = '_cookieBanner' +
     (environment === 'production' ? '' : ('_' + environment));
   const banner = document.getElementById("cookie-banner");
   const bannerButton = document.getElementById("accept-cookies");
   const rootDomain = getRootDomainFromHostname(document.location.hostname);
-  const value = cookies.get(cookieName);
+  const userHasDismissedBanner = cookies.get(cookieName);
 
   // Only show the cookie banner on test environment if there is a special
   // URL parameter, which will be used for UI testing.
   // Also temporarily hide it on production while we test internally.
-  const hideCookie =
+  const hideCookieBanner =
     (environment === 'test' || environment === 'production') &&
     window.location.search.indexOf("show_cookie_banner_on_test") === -1;
 
-  if (!value && !hideCookie) {
+  if (!userHasDismissedBanner && !hideCookieBanner) {
     banner.style.display = "block";
 
     bannerButton.onclick = () => {
