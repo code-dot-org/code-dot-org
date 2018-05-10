@@ -1415,12 +1415,19 @@ StudioApp.prototype.displayFeedback = function (options) {
   store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
 
   if (experiments.isEnabled('bubbleDialog')) {
-    const ignoredKeys = ['level', 'alreadySaved', 'appStrings', 'disableSaveToGallery', 'message', 'saveToLegacyGalleryUrl', 'saveToProjectGallery', 'showingSharing'];
-    ignoredKeys.forEach(key => delete options[key]);
-    const {
-      response, preventDialog, feedbackType, feedbackImage, ...otherOptions
-    } = options;
-    if (Object.keys(otherOptions).length === 0) {
+    const {response, preventDialog, feedbackType, feedbackImage} = options;
+
+    const newFinishDialogApps = {
+      turtle: true,
+      karel: true,
+      maze: true,
+      studio: true,
+      flappy: true,
+      bounce: true,
+    };
+    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
+
+    if (hasNewFinishDialog && !this.hasContainedLevels) {
       const generatedCodeProperties =
         this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
       const studentCode = {
@@ -1442,9 +1449,6 @@ StudioApp.prototype.displayFeedback = function (options) {
         this.onFeedback(options);
         return;
       }
-    } else {
-      console.warn('Unexpected feedback props:');
-      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
@@ -2729,13 +2733,14 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
  * @param {number} [object.sideMaring] - Optional param specifying margin on
  *   either side of element
  * @param {React.Component} alertContents
+ * @param {?string} position
  */
-StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
+StudioApp.prototype.displayAlert = function (selector, props, alertContents, position = 'absolute') {
   var parent = $(selector);
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert'/>").css({
-      position: 'absolute',
+      position: position,
       left: 0,
       right: 0,
       top: 0,
