@@ -32,12 +32,10 @@ const categorizeAssignmentFamilies = assignmentFamilies => (
     .value()
   );
 
-const getVersion = assignment => {
-  return {
+const getVersion = assignment => ({
     year: assignment.version_year,
     title: assignment.version_title
-  };
-};
+});
 
 /**
  * This component displays a dropdown of courses/scripts, with each of these
@@ -67,10 +65,13 @@ export default class AssignmentSelector extends Component {
     if (!assignmentFamilyName) {
       return [];
     }
-    const versions = _.values(this.props.assignments)
+    return _(this.props.assignments)
+      .values()
       .filter(assignment => assignment.assignment_family_name === assignmentFamilyName)
-      .map(getVersion);
-    return _.sortBy(versions, 'year').reverse();
+      .map(getVersion)
+      .sortBy('year')
+      .reverse()
+      .value();
   };
 
   constructor(props) {
