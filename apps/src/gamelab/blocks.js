@@ -104,7 +104,12 @@ export default {
     const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
       'gamelab',
-      [SPRITE_TYPE],
+      [
+        // Strict Types
+        blockly.BlockValueType.SPRITE,
+        blockly.BlockValueType.BEHAVIOR,
+        blockly.BlockValueType.LOCATION,
+      ],
       SPRITE_TYPE,
       customInputTypes,
     );
@@ -558,7 +563,12 @@ export default {
     const blockNames = customBlocks.map(createJsWrapperBlockCreator(
       blockly,
       'gamelab',
-      [SPRITE_TYPE],
+      [
+        // Strict Types
+        blockly.BlockValueType.SPRITE,
+        blockly.BlockValueType.BEHAVIOR,
+        blockly.BlockValueType.LOCATION,
+      ],
       SPRITE_TYPE,
       customInputTypes,
     ));
