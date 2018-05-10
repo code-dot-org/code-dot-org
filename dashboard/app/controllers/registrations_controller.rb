@@ -47,7 +47,7 @@ class RegistrationsController < Devise::RegistrationsController
           email: params[:user][:email],
           opt_in: optin_value,
           ip_address: request.env['REMOTE_ADDR'],
-          source: "Teacher account sign up",
+          source: EmailPreference::ACCOUNT_SIGN_UP,
           form_kind: "0"
         )
       end
