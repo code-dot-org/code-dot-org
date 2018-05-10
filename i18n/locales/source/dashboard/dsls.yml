@@ -2185,6 +2185,9 @@ en:
       U1L1 Student Lesson Introduction:
         Impact of Innovation: Impact of Innovation
         description here: description here
+      U1L1 Student Lesson Introduction_2018:
+        Impact of Innovation: Impact of Innovation
+        description here: description here
       U1L10 Lesson Overview: {}
       U1L10 Lesson Plan: {}
       U1L10 Student Lesson Introduction:
@@ -2965,6 +2968,46 @@ en:
       courseF_firstFunctions_map:
         description here: description here
         title: title
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_events_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functions_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functions_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functionsparam_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_functionsparam_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_end:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       coursee-privateandpersonalinformation: {}
       coursef_functionsSummary_map:
         description here: description here
@@ -2995,13 +3038,20 @@ en:
       csp-post-survey-2017-thanks: {}
       csp-post-survey-2017-wrapup-preamble: {}
       csp-pre-survey-2017 preamble 1: {}
+      csp-pre-survey-2017 preamble 1_2018: {}
       csp-pre-survey-2017 preamble 2 cs in general: {}
+      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
       csp-pre-survey-2017 preamble 3 this class: {}
+      csp-pre-survey-2017 preamble 3 this class_2018: {}
       csp-pre-survey-2017 preamble 4 the future: {}
+      csp-pre-survey-2017 preamble 4 the future_2018: {}
       csp-pre-survey-2017 preamble 5 demographics: {}
+      csp-pre-survey-2017 preamble 5 demographics_2018: {}
       csp-pre-survey-2017-q36-preamble: {}
+      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pt-tech-setup-and-tools: {}
       csp-pulse-check-survey-preamble: {}
+      csp-pulse-check-survey-preamble_2018: {}
       csp3_subgoal_mc_levelgroup_preamble: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
@@ -3013,6 +3063,9 @@ en:
         description here: description here
         title: title
       csp_unit_assessment_overview:
+        description here: description here
+        title: title
+      csp_unit_assessment_overview_2018:
         description here: description here
         title: title
       csp_unit_assessment_overview_exam_prep:
@@ -3133,6 +3186,10 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      markdown_textbook:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
+      markdown_textbook2:
+        Test Markdown Textbook Page: Test Markdown Textbook Page
       more encryption algorithms:
         description here: description here
         title: title
@@ -3491,36 +3548,70 @@ en:
       v2 U1 Internet is for Everyone Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U1L10 Student Lesson Introduction:
+        U1L10 Routers and Redundancy: U1L10 Routers and Redundancy
+      v2 U1L10 Student Lesson Introduction_2018:
         U1L10 Routers and Redundancy: U1L10 Routers and Redundancy
       v2 U1L11 Student Lesson Introduction:
         Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+      v2 U1L11 Student Lesson Introduction_2018:
+        Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
       v2 U1L12 Student Lesson Introduction:
+        The Need for DNS: The Need for DNS
+      v2 U1L12 Student Lesson Introduction_2018:
         The Need for DNS: The Need for DNS
       v2 U1L13 Student Lesson Introduction:
         HTTP and Abstraction: HTTP and Abstraction
+      v2 U1L13 Student Lesson Introduction_2018:
+        HTTP and Abstraction: HTTP and Abstraction
       v2 U1L14 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L14 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U1L2 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1L2 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U1L3 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L3 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U1L4 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1L4 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U1L5 Student Lesson Introduction:
+        description here: description here
+        title: title
+      v2 U1L5 Student Lesson Introduction_2018:
         description here: description here
         title: title
       v2 U1L6 Student Lesson Introduction:
         Sending Numbers: Sending Numbers
         description here: description here
+      v2 U1L6 Student Lesson Introduction_2018:
+        Sending Numbers: Sending Numbers
+        description here: description here
       v2 U1L8 Student Lesson Introduction:
         description here: description here
         title: title
+      v2 U1L8 Student Lesson Introduction_2018:
+        description here: description here
+        title: title
       v2 U1L9 Student Lesson Introduction:
+        The Need for Addressing: The Need for Addressing
+      v2 U1L9 Student Lesson Introduction_2018:
         The Need for Addressing: The Need for Addressing
       v2 U2L1 Student Lesson Introduction:
         description here: description here
@@ -3607,8 +3698,10 @@ en:
         CSP Longitudinal Contact Request: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
+        CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
+        CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep: {}
         CSP Unit 1 Cumulative Assessment MC: {}
         CSP Unit 2 Ch1 Cumulative Assessment MC: {}
@@ -3672,7 +3765,9 @@ en:
         csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
         csp-post-survey-2017-levelgroup: {}
         csp-pre-survey-2017-levelgroup: {}
+        csp-pre-survey-2017-levelgroup_2018: {}
         csp-pulse-check-survey-1-levelgroup-U1Ch2: {}
+        csp-pulse-check-survey-1-levelgroup-U1Ch2_2018: {}
         csp-pulse-check-survey-2-levelgroup-U2Ch1: {}
         csp-pulse-check-survey-3-levelgroup-U2Ch2: {}
         csp-pulse-check-survey-4-levelgroup-U3Ch1: {}
@@ -4452,6 +4547,15 @@ en:
         Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
         'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
         Radio Wave: Radio Wave
+      U1L5 Matching Assessment_2018:
+        Alternating Frequencies: Alternating Frequencies
+        Beam of Light: Beam of Light
+        Copper Wire: Copper Wire
+        Electric Voltage: Electric Voltage
+        Fiber Optic Cable: Fiber Optic Cable
+        Match the bit sending technology with the underlying system: Match the bit sending technology with the underlying system
+        'Matching Assessment: Sending Bits in the Real World': 'Matching Assessment: Sending Bits in the Real World'
+        Radio Wave: Radio Wave
       'U2L06 - Matching: Label the Diagram':
         A: A
         B: B
@@ -4516,6 +4620,16 @@ en:
         Public key: Public key
         The number of beans Alice chooses to put in the cup initially: The number of beans Alice chooses to put in the cup initially
       U2L3 Assessment:
+        A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
+        A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
+        A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
+        IP addresses, Packets and Protocols: IP addresses, Packets and Protocols
+        IPv4 packet: IPv4 packet
+        The Internet Protocol (IP): The Internet Protocol (IP)
+        The required structure of a packet to be sent on the internet: The required structure of a packet to be sent on the internet
+        packet: packet
+        protocol: protocol
+      U2L3 Assessment_2018:
         A chunk of information that gets sent on the internet: A chunk of information that gets sent on the internet
         A packet of data that uses 32-bit addresses: A packet of data that uses 32-bit addresses
         A well-known set of rules and standards used to communicate: A well-known set of rules and standards used to communicate
@@ -5088,6 +5202,11 @@ en:
         example.co.uk: example.co.uk
         example.com.org: example.com.org
         example.org: example.org
+      CB_Question_20_2018:
+        about.example.com: about.example.com
+        example.co.uk: example.co.uk
+        example.com.org: example.com.org
+        example.org: example.org
       CB_Question_20_exam_prep:
         about.example.com: about.example.com
         example.co.uk: example.co.uk
@@ -5109,6 +5228,11 @@ en:
         V: V
         Y: Y
       CB_Question_3update:
+        'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
+        'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
+        'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
+        The table does not contain the value represented by the binary number <code>0100  0010</code>: The table does not contain the value represented by the binary number <code>0100  0010</code>
+      CB_Question_3update_2018:
         'ASCII Character: <code> A </code>': 'ASCII Character: <code> A </code>'
         'ASCII Character: <code> B </code>': 'ASCII Character: <code> B </code>'
         'ASCII Character: <code> D </code>': 'ASCII Character: <code> D </code>'
@@ -5353,6 +5477,14 @@ en:
         The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
         What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
         What's Binary?: What's Binary?
+      CSP Unit 1 Ch 1 MC binary def_2018:
+        ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+        It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.: It's easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.
+        It's impossible to build a computing machine that uses anything but binary to represent numbers: It's impossible to build a computing machine that uses anything but binary to represent numbers
+        The binary number system is the only system flexible enough to allow for representing data other than numbers.: The binary number system is the only system flexible enough to allow for representing data other than numbers.
+        What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
+        What's Binary?: What's Binary?
       CSP Unit 1 Ch 1 MC binary def_exam_prep:
         ? 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
         : 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
@@ -5362,6 +5494,13 @@ en:
         What is the best explanation for why digital data is represented in computers in binary?: What is the best explanation for why digital data is represented in computers in binary?
         What's Binary?: What's Binary?
       CSP Unit 1 Ch 1 MC binary to dec simple:
+        '0010': '0010'
+        '0101': '0101'
+        '0110': '0110'
+        '1010': '1010'
+        Decimal to Binary: Decimal to Binary
+        What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?: What is the 4-bit binary number for the decimal number <i>Ten (10)</i>?
+      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
         '0010': '0010'
         '0101': '0101'
         '0110': '0110'
@@ -5382,6 +5521,13 @@ en:
         8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
         9 bits: 9 bits
         How Many Bits?: How Many Bits?
+      CSP Unit 1 Ch 1 MC bits to make 512_2018:
+        10 bits: 10 bits
+        16 bits: 16 bits
+        17 bits: 17 bits
+        8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?: 8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?
+        9 bits: 9 bits
+        How Many Bits?: How Many Bits?
       CSP Unit 1 Ch 1 MC bits to make 512_exam_prep:
         10 bits: 10 bits
         16 bits: 16 bits
@@ -5396,6 +5542,13 @@ en:
         Layers of Protocols: Layers of Protocols
         TCP/IP relies on DNS: TCP/IP relies on DNS
         TCP/IP relies on HTTP: TCP/IP relies on HTTP
+      CSP Unit 1 Ch 2 MC internet layers_2018:
+        " ": " "
+        DNS relies on TCP/IP: DNS relies on TCP/IP
+        HTTP relies on TCP/IP: HTTP relies on TCP/IP
+        Layers of Protocols: Layers of Protocols
+        TCP/IP relies on DNS: TCP/IP relies on DNS
+        TCP/IP relies on HTTP: TCP/IP relies on HTTP
       CSP Unit 1 Ch 2 MC internet layers_exam_prep:
         " ": " "
         DNS relies on TCP/IP: DNS relies on TCP/IP
@@ -5404,6 +5557,13 @@ en:
         TCP/IP relies on DNS: TCP/IP relies on DNS
         TCP/IP relies on HTTP: TCP/IP relies on HTTP
       CSP Unit 1 Ch 2 MC packets:
+        Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
+        Packets: Packets
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets can be routed on different paths from sender to receiver.: Packets can be routed on different paths from sender to receiver.
+        TCP guarantees that no packets are ever dropped: TCP guarantees that no packets are ever dropped
+        Which of the following is NOT true about TCP/IP packets?: Which of the following is NOT true about TCP/IP packets?
+      CSP Unit 1 Ch 2 MC packets_2018:
         Messages are broken into packets to improve reliability of the internet: Messages are broken into packets to improve reliability of the internet
         Packets: Packets
         Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
@@ -5446,6 +5606,15 @@ en:
         predata: predata
         superdata: superdata
       CSP Unit 2 Ch 2 MC IETF:
+        A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
+        A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        The IETF: The IETF
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      CSP Unit 2 Ch 2 MC IETF_2018:
         A collection of the leaders of the Tier 1 Internet service providers.: A collection of the leaders of the Tier 1 Internet service providers.
         A loosely organized collection of citizens and engineers.: A loosely organized collection of citizens and engineers.
         An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
@@ -5500,6 +5669,14 @@ en:
         : The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular
         What's it showing?: What's it showing?
       CSP Unit 2 Ch 2 MC routing simple:
+        A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
+        Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
+        'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
+        ? Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        : Routers are hierarchical and the "root" router is responsible for communicating to sub-routers the best paths for them to route internet traffic.
+        Routing: Routing
+        Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.: Which of the following statements are true about routers and routing on the Internet. Choose <u>two</u> answers.
+      CSP Unit 2 Ch 2 MC routing simple_2018:
         A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".: A packet traveling between two computers on the Internet may be rerouted many times along the way or even lost or "dropped".
         Protocols ensure that a single path between two computers is established before sending packets over it.: Protocols ensure that a single path between two computers is established before sending packets over it.
         'Routers act independently and route packets as they see fit. ': 'Routers act independently and route packets as they see fit. '
@@ -5614,6 +5791,11 @@ en:
         High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
         Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
         Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
+      CSPFinal_Question_12_2018:
+        High level protocols can take on the role of a low level protocol in the event of failure in the system.: High level protocols can take on the role of a low level protocol in the event of failure in the system.
+        High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
+        Low level protocols are written in binary while high level protocols are written in hexadecimal.: Low level protocols are written in binary while high level protocols are written in hexadecimal.
+        Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.: Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.
       CSPFinal_Question_12_exam_prep:
         High level protocols can take on the role of a low level protocol in the event of failure in the system.: High level protocols can take on the role of a low level protocol in the event of failure in the system.
         High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.: High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.
@@ -5670,6 +5852,11 @@ en:
         Lossless compression: Lossless compression
         Lossy compression: Lossy compression
         Steganography: Steganography
+      CSPFinal_Question_1_2018:
+        Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
+        Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
+        Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.: Keep using an 8-bit number for <code>studentID</code> but reserve the first bit to indicate middle school or high school.
+        Remove a bit from <code>studentID</code> to make room for incoming students: Remove a bit from <code>studentID</code> to make room for incoming students
       CSPFinal_Question_1_exam_prep:
         Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.: Add a bit to <code>studentID</code> to double the number of IDs that the database can represent.
         Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent: Double the number of bits in <code>studentID</code> to double the number of IDs that the database can represent
@@ -5716,6 +5903,11 @@ en:
         Which programs students are running on the lab computers: Which programs students are running on the lab computers
         Which students are visiting social media sites from school: Which students are visiting social media sites from school
         Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
+      CSPFinal_Question_23_2018:
+        Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
+        Which programs students are running on the lab computers: Which programs students are running on the lab computers
+        Which students are visiting social media sites from school: Which students are visiting social media sites from school
+        Which websites are most frequently visited before and after school hours from a school computer: Which websites are most frequently visited before and after school hours from a school computer
       CSPFinal_Question_23_exam_prep:
         Which classes are assigning the most homework using the computers: Which classes are assigning the most homework using the computers
         Which programs students are running on the lab computers: Which programs students are running on the lab computers
@@ -5753,6 +5945,11 @@ en:
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
         The code will not display anything due to an error: The code will not display anything due to an error
+      CSPFinal_Question_2_2018:
+        High bandwidth, high latency: High bandwidth, high latency
+        High bandwidth, low latency: High bandwidth, low latency
+        Low bandwidth, high latency: Low bandwidth, high latency
+        Low bandwidth, low latency: Low bandwidth, low latency
       CSPFinal_Question_2_exam_prep:
         High bandwidth, high latency: High bandwidth, high latency
         High bandwidth, low latency: High bandwidth, low latency
@@ -5784,12 +5981,25 @@ en:
         It displays the last number in the list: It displays the last number in the list
         It displays the smallest number in the list.: It displays the smallest number in the list.
         Which of the following best describes the result after the program is executed on a given list?: Which of the following best describes the result after the program is executed on a given list?
+      CSPFinal_Question_3_2018:
+        "<code>Computer A</code>": "<code>Computer A</code>"
+        "<code>Computer B</code>": "<code>Computer B</code>"
+        "<code>Computer D</code>": "<code>Computer D</code>"
+        "<code>Computer F</code>": "<code>Computer F</code>"
       CSPFinal_Question_3_exam_prep:
         "<code>Computer A</code>": "<code>Computer A</code>"
         "<code>Computer B</code>": "<code>Computer B</code>"
         "<code>Computer D</code>": "<code>Computer D</code>"
         "<code>Computer F</code>": "<code>Computer F</code>"
       CSPFinal_Question_4:
+        ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
+        32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
+        IPv4 proved unreliable in some cases where network redundancy could not be ensured: IPv4 proved unreliable in some cases where network redundancy could not be ensured
+        IPv6 will allow problems with IPv4's address hierarchy to be resolved: IPv6 will allow problems with IPv4's address hierarchy to be resolved
+        ? The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+        : The world is currently in a transition to using IPv6, a newer version of the IP protocol that uses 128-bit addresses instead of 32-bit addresses used by IPv4. What is the main problem that IPv6 was created to solve?
+      CSPFinal_Question_4_2018:
         ? 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
         : 32-bit addresses could not accommodate the increased size and amount of data traveling on the Internet as it has grown in popularity
         32-bit addresses could not ensure that every internet-connected device can receive a unique IP address: 32-bit addresses could not ensure that every internet-connected device can receive a unique IP address
@@ -5825,12 +6035,22 @@ en:
         It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
         It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
         It uses a Border Gateway Protocol to get the address from a nearby computer.: It uses a Border Gateway Protocol to get the address from a nearby computer.
+      CSPFinal_Question_6_2018:
+        It asks a DNS server for the corresponding IP address: It asks a DNS server for the corresponding IP address
+        It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
+        It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
+        It uses a Border Gateway Protocol to get the address from a nearby computer.: It uses a Border Gateway Protocol to get the address from a nearby computer.
       CSPFinal_Question_6_exam_prep:
         It asks a DNS server for the corresponding IP address: It asks a DNS server for the corresponding IP address
         It creates an IP address for the domain, and shares it with the closest DNS.: It creates an IP address for the domain, and shares it with the closest DNS.
         It scans addresses until it finds the one it's looking for: It scans addresses until it finds the one it's looking for
         It uses a Border Gateway Protocol to get the address from a nearby computer.: It uses a Border Gateway Protocol to get the address from a nearby computer.
       CSPFinal_Question_7:
+        2 bits: 2 bits
+        3 bits: 3 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+      CSPFinal_Question_7_2018:
         2 bits: 2 bits
         3 bits: 3 bits
         5 bits: 5 bits
@@ -5860,6 +6080,16 @@ en:
         : '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
         ? '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
         : '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+      CSPFinal_Question_8update_2018:
+        " ": " "
+        ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+        : '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
       CSPFinal_Question_8update_exam_prep:
         " ": " "
         ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
@@ -5880,6 +6110,14 @@ en:
         ? 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
         : 'There is a limit to the number of things that can be represented in binary data at which point switching to hexadecimal representation is necessary. '
       CSPFinal_Question_9update:
+        ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
+        ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        : Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
+        The number system you use to view data has no effect on the underlying digital data.: The number system you use to view data has no effect on the underlying digital data.
+        ? When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+        : When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.
+      CSPFinal_Question_9update_2018:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         ? Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.
@@ -7155,6 +7393,11 @@ en:
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
         2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
         2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
+      U1 Ch1 Assessment question 4 to 8 bit_2018:
+        2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
+        2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
+        2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
+        2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
       U1 Ch1 Assessment question 4 to 8 bit_exam_prep:
         2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
         2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
@@ -7169,6 +7412,14 @@ en:
         Single Source Shortest Path Assessment: Single Source Shortest Path Assessment
         Which one is the shortest path tree from the source node indicated?: Which one is the shortest path tree from the source node indicated?
       U1L10 Assessment 1:
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?
+      U1L10 Assessment 1_2018:
         2 bits: 2 bits
         3 bits: 3 bits
         4 bits: 4 bits
@@ -7192,7 +7443,30 @@ en:
           The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
 
           How many bits would you need to encode everything that could be typed on this keyboard?
+      U1L10 Assessment 2_2018:
+        12 bits: 12 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        6 bits: 6 bits
+        7 bits: 7 bits
+        'Assessment: Encoding Text': 'Assessment: Encoding Text'
+        ? |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
+        : |-
+          The standard QWERTY keyboard has 47 keys that can place characters on the screen. Each of these keys can also display a second character by holding the "Shift" key at the same time.
+
+          How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
+        16 bits: 16 bits
+        24 bits: 24 bits
+        3 bits: 3 bits
+        32 bits: 32 bits
+        8 bits: 8 bits
+        'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
+      U1L11 Assessment 1_2018:
         16 bits: 16 bits
         24 bits: 24 bits
         3 bits: 3 bits
@@ -7207,7 +7481,22 @@ en:
         '097 112 112 108 101': '097 112 112 108 101'
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
         'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
+      U1L11 Assessment 2_2018:
+        041 108 108 111 119: 041 108 108 111 119
+        065 110 110 105 101: 065 110 110 105 101
+        065 112 112 108 101: 065 112 112 108 101
+        '097 108 108 111 119': '097 108 108 111 119'
+        '097 112 112 108 101': '097 112 112 108 101'
+        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
+        'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
       U1L2 Multiple Choice Assessment Question:
+        'A binary question is defined as:': 'A binary question is defined as:'
+        A message which has two possible states: A message which has two possible states
+        A piece of information that is sent in pairs: A piece of information that is sent in pairs
+        A question which can be answered in only one of two possible ways: A question which can be answered in only one of two possible ways
+        'Multiple Choice: Sending Binary Messages': 'Multiple Choice: Sending Binary Messages'
+        Two questions which share the same answer: Two questions which share the same answer
+      U1L2 Multiple Choice Assessment Question_2018:
         'A binary question is defined as:': 'A binary question is defined as:'
         A message which has two possible states: A message which has two possible states
         A piece of information that is sent in pairs: A piece of information that is sent in pairs
@@ -7222,7 +7511,22 @@ en:
         5 bits: 5 bits
         'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
         When responding to a question with 4 choices, the most efficient method will require _____ number of bits.: When responding to a question with 4 choices, the most efficient method will require _____ number of bits.
+      U1L3 Multiple Choice_2018:
+        1 bit: 1 bit
+        2 bits: 2 bits
+        3 bits: 3 bits
+        4 bits: 4 bits
+        5 bits: 5 bits
+        'Multiple Choice: Sending Complex Messages': 'Multiple Choice: Sending Complex Messages'
+        When responding to a question with 4 choices, the most efficient method will require _____ number of bits.: When responding to a question with 4 choices, the most efficient method will require _____ number of bits.
       U1L4 Multiple Choice:
+        AAAA: AAAA
+        AABB: AABB
+        ABAB: ABAB
+        ABBB: ABBB
+        BBBB: BBBB
+        'Multiple Choice: Coordination and Binary Messages': 'Multiple Choice: Coordination and Binary Messages'
+      U1L4 Multiple Choice_2018:
         AAAA: AAAA
         AABB: AABB
         ABAB: ABAB
@@ -7237,7 +7541,23 @@ en:
         '8': '8'
         If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
         'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
+      U1L6 Assessment multiple choice_2018:
+        '10': '10'
+        '12': '12'
+        '4': '4'
+        '6': '6'
+        '8': '8'
+        If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?: If you just had two shapes (say, a circle and a square), how many 3-place patterns could you make?
+        'Multiple Choice: Number Systems': 'Multiple Choice: Number Systems'
       U1L8 Multiple Choice:
+        '10': '10'
+        '13': '13'
+        '14': '14'
+        '16': '16'
+        'Sending Numbers: Multiple Choice Assessment': 'Sending Numbers: Multiple Choice Assessment'
+        ? You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
+        : You have a coordinate grid that is 96 x 96. Assuming that you encode the x and y coordinate as separate numbers, what is the minimum number of  bits that you will need to encode a coordinate in that space?
+      U1L8 Multiple Choice_2018:
         '10': '10'
         '13': '13'
         '14': '14'
@@ -7254,7 +7574,24 @@ en:
         'The Internet is for Everyone: Assessment 1': 'The Internet is for Everyone: Assessment 1'
         The worldwide leaders of the Tier 1 Internet service providers.: The worldwide leaders of the Tier 1 Internet service providers.
         There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
+      U2L01 Assessment 1_2018:
+        A loosely organized collection of citizens and engineers who communicate mostly by email.: A loosely organized collection of citizens and engineers who communicate mostly by email.
+        An International coalition of government agencies who oversee the Internet in their countries.: An International coalition of government agencies who oversee the Internet in their countries.
+        Political leaders and heads of state.: Political leaders and heads of state.
+        ? 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        : 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+        'The Internet is for Everyone: Assessment 1': 'The Internet is for Everyone: Assessment 1'
+        The worldwide leaders of the Tier 1 Internet service providers.: The worldwide leaders of the Tier 1 Internet service providers.
+        There are no members. IETF is an "organization" in name only.: There are no members. IETF is an "organization" in name only.
       U2L01 Assessment 2:
+        Radio Frequency Controller: Radio Frequency Controller
+        ReFactored Code: ReFactored Code
+        Related Fundamental Content: Related Fundamental Content
+        Request For Comments: Request For Comments
+        Restricted Fiduciary Contract: Restricted Fiduciary Contract
+        'The Internet is for Everyone: Assessment 2': 'The Internet is for Everyone: Assessment 2'
+        What is an RFC?: What is an RFC?
+      U2L01 Assessment 2_2018:
         Radio Frequency Controller: Radio Frequency Controller
         ReFactored Code: ReFactored Code
         Related Fundamental Content: Related Fundamental Content
@@ -7270,7 +7607,22 @@ en:
         make informed choices about my privacy on the internet.: make informed choices about my privacy on the internet.
         'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
         speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
+      U2L01 Assessment 3_2018:
+        'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:': 'Choose the two best answers to complete the sentence: If I understand how the internet works then I will be able to:'
+        'The Internet is for Everyone: Assessment 3': 'The Internet is for Everyone: Assessment 3'
+        connect the latest devices to the internet.: connect the latest devices to the internet.
+        get the best price for my cell phone plan.: get the best price for my cell phone plan.
+        make informed choices about my privacy on the internet.: make informed choices about my privacy on the internet.
+        'make informed choices to support or oppose decisions my government makes about access to the internet. ': 'make informed choices to support or oppose decisions my government makes about access to the internet. '
+        speed up my downloads of movies I purchase.: speed up my downloads of movies I purchase.
       U2L02 Assessment 3:
+        The Need For Addressing: The Need For Addressing
+        'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
+        algorithm: algorithm
+        encoding: encoding
+        heuristic: heuristic
+        protocol: protocol
+      U2L02 Assessment 3_2018:
         The Need For Addressing: The Need For Addressing
         'To improve communication in playing battleship on the Internet Simulator your group invented a(n):': 'To improve communication in playing battleship on the Internet Simulator your group invented a(n):'
         algorithm: algorithm
@@ -7284,6 +7636,13 @@ en:
         Time of Day: Time of Day
         To: To
         Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
+      U2L02 Assessment 4_2018:
+        From: From
+        Grid Coordinates: Grid Coordinates
+        The Need For Addressing: The Need For Addressing
+        Time of Day: Time of Day
+        To: To
+        Which of the following information is not necessary in your protocol to play battleship?: Which of the following information is not necessary in your protocol to play battleship?
       U2L04 Assessment1:
         Everyone is on the same router.: Everyone is on the same router.
         'In the Internet Simulator, your router knows to send your message to a different router because:': 'In the Internet Simulator, your router knows to send your message to a different router because:'
@@ -7291,7 +7650,22 @@ en:
         'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
         The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
         You set the “other router” bit in the message.: You set the “other router” bit in the message.
+      U2L04 Assessment1_2018:
+        Everyone is on the same router.: Everyone is on the same router.
+        'In the Internet Simulator, your router knows to send your message to a different router because:': 'In the Internet Simulator, your router knows to send your message to a different router because:'
+        Messages are routed over different paths.: Messages are routed over different paths.
+        'Routers and Redundancy: Question 1': 'Routers and Redundancy: Question 1'
+        The first 4 bits of the address specify the router number that your friend is on.: The first 4 bits of the address specify the router number that your friend is on.
+        You set the "other router" bit in the message.: You set the "other router" bit in the message.
       U2L04 Assessment4:
+        ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
+        Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.: Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.
+        One mailman would be responsible for delivering a letter from sender to receiver.: One mailman would be responsible for delivering a letter from sender to receiver.
+        'Routers and Redundancy: Question 2': 'Routers and Redundancy: Question 2'
+        The mailman would sometimes take a different path to deliver each letter to your home.: The mailman would sometimes take a different path to deliver each letter to your home.
+        Your mail could not be delivered if a road your mailman was planning to take were under construction.: Your mail could not be delivered if a road your mailman was planning to take were under construction.
+      U2L04 Assessment4_2018:
         ? If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
         : If the post office delivered mail exactly like routers deliver messages on the internet, which 2 of the following statements would be true?
         Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.: Letters would be written on the outside of envelopes for all to read instead of letters put inside envelopes.
@@ -7308,6 +7682,15 @@ en:
         There is one router which receives and redirects all the traffic of the Internet.: There is one router which receives and redirects all the traffic of the Internet.
         Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
         Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
+      U2L04 Assessment5_2018:
+        ? A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        : A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
+        A packet travelling between two computers on the Internet may be rerouted many times along the way.: A packet travelling between two computers on the Internet may be rerouted many times along the way.
+        Information travelling between two computers over the Internet will always take the same path.: Information travelling between two computers over the Internet will always take the same path.
+        'Routers and Redundancy: Question 3': 'Routers and Redundancy: Question 3'
+        There is one router which receives and redirects all the traffic of the Internet.: There is one router which receives and redirects all the traffic of the Internet.
+        Which two of the following statements are true about routing on the Internet.: Which two of the following statements are true about routing on the Internet.
+        Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.: Your router receives all the traffic of the Internet and delivers to your computer only the messages intended for you.
       U2L05 Assessment 1:
         'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
         ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
@@ -7316,7 +7699,22 @@ en:
         TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
         TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
         TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
+      U2L05 Assessment 1_2018:
+        'Packets and Making a Reliable Internet: Question 1': 'Packets and Making a Reliable Internet: Question 1'
+        ? Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        : Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent
+        'Pick Two: Pick the two statements about packets and routing on the Internet which are true.': 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
+        TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission: TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission
+        TCP ensures messages can be reliably transmitted across the Internet: TCP ensures messages can be reliably transmitted across the Internet
+        TCP must account for the fact that packets may not arrive at a destination computer in the intended order: TCP must account for the fact that packets may not arrive at a destination computer in the intended order
       U2L05 Assessment 2:
+        A message sent across the Internet can always be contained in a single packet: A message sent across the Internet can always be contained in a single packet
+        'Packets and Making a Reliable Internet: Question 2': 'Packets and Making a Reliable Internet: Question 2'
+        Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
+        Packets are routed on different paths from sender to receiver.: Packets are routed on different paths from sender to receiver.
+        The receiver computer must confirm to the sending computer that each packet was received.: The receiver computer must confirm to the sending computer that each packet was received.
+        Which of the following is NOT true about packets?: Which of the following is NOT true about packets?
+      U2L05 Assessment 2_2018:
         A message sent across the Internet can always be contained in a single packet: A message sent across the Internet can always be contained in a single packet
         'Packets and Making a Reliable Internet: Question 2': 'Packets and Making a Reliable Internet: Question 2'
         Packets are numbered so if they arrive out of order the message can be reassembled.: Packets are numbered so if they arrive out of order the message can be reassembled.
@@ -7377,7 +7775,22 @@ en:
         C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
         D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
         'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
+      U2L09 Assessment1_2018:
+        ? A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
+        : A single central register of IP addresses and names (a DNS style system) is an efficient means of translating human readable names to IP addresses. Which of the following is NOT solved by DNS?
+        A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.: A. It is inefficient to have everyone on the Internet maintain their own list of IP addresses.
+        B. There are too few IP addresses to meet the current demand.: B. There are too few IP addresses to meet the current demand.
+        C. When someone new joins the Internet they must inform everyone else of the new IP address: C. When someone new joins the Internet they must inform everyone else of the new IP address
+        D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.: D. When an IP address changes, it is impossible to locate a computer until the owner announces the change.
+        'The Need for DNS: Question 1': 'The Need for DNS: Question 1'
       U2L10 Assessment1:
+        A. Redundancy: A. Redundancy
+        Assessment Question 1: Assessment Question 1
+        B. Hierarchy: B. Hierarchy
+        C. Multiple servers: C. Multiple servers
+        D. Government control: D. Government control
+        What feature of DNS and IP allow the internet to scale?: What feature of DNS and IP allow the internet to scale?
+      U2L10 Assessment1_2018:
         A. Redundancy: A. Redundancy
         Assessment Question 1: Assessment Question 1
         B. Hierarchy: B. Hierarchy
@@ -7398,7 +7811,21 @@ en:
         HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
         HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
         HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
+      U2L11 Assessment 1_2018:
+        'HTTP and Abstraction on the Internet: Question 1': 'HTTP and Abstraction on the Internet: Question 1'
+        'HTTP is considered to be a high level protocol because:': 'HTTP is considered to be a high level protocol because:'
+        HTTP messages can be either requests or responses.: HTTP messages can be either requests or responses.
+        HTTP requests are encoded using higher frequency radio waves.: HTTP requests are encoded using higher frequency radio waves.
+        HTTP requests are given higher priority for fast delivery when being routed on the Internet.: HTTP requests are given higher priority for fast delivery when being routed on the Internet.
+        HTTP requests make use of abstractions provided by lower level protocols.: HTTP requests make use of abstractions provided by lower level protocols.
       U2L11 Assessment 2:
+        An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
+        An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
+        'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
+        Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.: Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
+        'HTTP and Abstraction on the Internet: Question 2': 'HTTP and Abstraction on the Internet: Question 2'
+        HTTP requests and responses have identical formats.: HTTP requests and responses have identical formats.
+      U2L11 Assessment 2_2018:
         An HTTP request is sent from a client to request access to data stored on a server.: An HTTP request is sent from a client to request access to data stored on a server.
         An HTTP response code is only used when a server could not fulfill a request.: An HTTP response code is only used when a server could not fulfill a request.
         'Choose Two: Identify the two true statements about HTTP.': 'Choose Two: Identify the two true statements about HTTP.'
@@ -7500,6 +7927,13 @@ en:
         Modulo Multiple Choice: Modulo Multiple Choice
         What is 20 MOD 15?: What is 20 MOD 15?
       U2L3 Assessment 2:
+        12 users: 12 users
+        32 users: 32 users
+        6 users: 6 users
+        64 users: 64 users
+        How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?: How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?
+        IP Addresses and Bits: IP Addresses and Bits
+      U2L3 Assessment 2_2018:
         12 users: 12 users
         32 users: 32 users
         6 users: 6 users
@@ -8728,14 +9162,11 @@ en:
       courseD_multi_maze_until10_predict2_2018:
         Correct!: Correct!
         I don't know.: I don't know.
-        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
-        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
         Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
         The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
-        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
         The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
       courseD_multi_maze_until2_predict1:
         Correct!: Correct!
@@ -8856,7 +9287,30 @@ en:
         : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
         The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
+      courseE_multi_farmer_predict1_2018:
+        Correct!: Correct!
+        I don't know: I don't know
+        ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
+        Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
+        ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
       courseE_multi_farmer_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: The farmer will not walk anywhere because there's no pumpkin in the first place.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+        What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
+      courseE_multi_farmer_predict2_2018:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
@@ -8947,6 +9401,19 @@ en:
         The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
         What will happen when you run this program?: What will happen when you run this program?
       courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseF_multi_artist_predict1_2018:
         Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
         Correct!: Correct!
         I don't know.: I don't know.
@@ -10196,7 +10663,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q10_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q11:
+        Agree: Agree
+        Disagree: Disagree
+        'I think computer science is interesting. ': 'I think computer science is interesting. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q11_2018:
         Agree: Agree
         Disagree: Disagree
         'I think computer science is interesting. ': 'I think computer science is interesting. '
@@ -10214,6 +10699,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q12_2018:
+        Agree: Agree
+        Disagree: Disagree
+        'I have the ability to learn computer science. ': 'I have the ability to learn computer science. '
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q13:
         Agree: Agree
         Disagree: Disagree
@@ -10223,7 +10717,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q13_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be better at computer science than other kids at my school.: I think I will be better at computer science than other kids at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q14:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.
+      csp-pre-survey-2017-q14_2018:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -10249,7 +10761,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q16_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is important to me to be good at computer science.: It is important to me to be good at computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q17:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People like me do computer science.: People like me do computer science.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q17_2018:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -10267,10 +10797,37 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q18_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think I could become a computer scientist one day.: I think I could become a computer scientist one day.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q19:
         Agree: Agree
         Disagree: Disagree
         I am going to like this computer science class.: I am going to like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q19_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am going to like this computer science class.: I am going to like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q1_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am very good at school.: I am very good at school.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -10294,7 +10851,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q20_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q21:
+        Agree: Agree
+        Disagree: Disagree
+        I know what I need to do to get good grades in this computer science class.: I know what I need to do to get good grades in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q21_2018:
         Agree: Agree
         Disagree: Disagree
         I know what I need to do to get good grades in this computer science class.: I know what I need to do to get good grades in this computer science class.
@@ -10312,7 +10887,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q22_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that at times I'll feel unsure whether I belong in this class.: I expect that at times I'll feel unsure whether I belong in this class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q23:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will be treated with as much respect as other students in this computer science class.: I think I will be treated with as much respect as other students in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q23_2018:
         Agree: Agree
         Disagree: Disagree
         I think I will be treated with as much respect as other students in this computer science class.: I think I will be treated with as much respect as other students in this computer science class.
@@ -10330,7 +10923,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q24_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think I will feel like I can be myself in this computer science class.: I think I will feel like I can be myself in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q25:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q25_2018:
         Agree: Agree
         Disagree: Disagree
         I feel like my opinions will be taken seriously in this computer science class.: I feel like my opinions will be taken seriously in this computer science class.
@@ -10348,7 +10959,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q26_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel like it will be hard for people like me to be accepted in this computer science class.: I feel like it will be hard for people like me to be accepted in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q27:
+        Agree: Agree
+        Disagree: Disagree
+        I do computer science in my free time.: I do computer science in my free time.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q27_2018:
         Agree: Agree
         Disagree: Disagree
         I do computer science in my free time.: I do computer science in my free time.
@@ -10366,6 +10995,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q28_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Learning computer science will help me in my other school subjects.: Learning computer science will help me in my other school subjects.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q29:
         Agree: Agree
         Computer science is important for my future.: Computer science is important for my future.
@@ -10375,6 +11013,24 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q29_2018:
+        Agree: Agree
+        Computer science is important for my future.: Computer science is important for my future.
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-pre-survey-2017-q3:
         Agree: Agree
         Disagree: Disagree
@@ -10393,7 +11049,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q30_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q31:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q31_2018:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
@@ -10411,7 +11085,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q32_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I often take a step back and think about what is most important to me.: I often take a step back and think about what is most important to me.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q33:
+        Agree: Agree
+        Disagree: Disagree
+        Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q33_2018:
         Agree: Agree
         Disagree: Disagree
         Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
@@ -10429,7 +11121,25 @@ en:
         Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q34_2018:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Some people are just better at learning and doing computer science than others.: Some people are just better at learning and doing computer science than others.
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q35:
+        Agree: Agree
+        Disagree: Disagree
+        I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q35_2018:
         Agree: Agree
         Disagree: Disagree
         I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
@@ -10443,7 +11153,17 @@ en:
         A lot: A lot
         I worry because I'm not good at math.: I worry because I'm not good at math.
         Not at all: Not at all
+      csp-pre-survey-2017-q36-a_2018:
+        A little: A little
+        A lot: A lot
+        I worry because I'm not good at math.: I worry because I'm not good at math.
+        Not at all: Not at all
       csp-pre-survey-2017-q36-b:
+        A little: A little
+        A lot: A lot
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        Not at all: Not at all
+      csp-pre-survey-2017-q36-b_2018:
         A little: A little
         A lot: A lot
         I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
@@ -10453,7 +11173,17 @@ en:
         A lot: A lot
         I worry because of my gender.: I worry because of my gender.
         Not at all: Not at all
+      csp-pre-survey-2017-q36-c_2018:
+        A little: A little
+        A lot: A lot
+        I worry because of my gender.: I worry because of my gender.
+        Not at all: Not at all
       csp-pre-survey-2017-q36-d:
+        A little: A little
+        A lot: A lot
+        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
+        Not at all: Not at all
+      csp-pre-survey-2017-q36-d_2018:
         A little: A little
         A lot: A lot
         I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
@@ -10462,11 +11192,29 @@ en:
         Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
         'no': 'no'
         'yes': 'yes'
+      csp-pre-survey-2017-q37_2018:
+        Before your current computer science class, had you taken any other computer science classes at school?: Before your current computer science class, had you taken any other computer science classes at school?
+        'no': 'no'
+        'yes': 'yes'
       csp-pre-survey-2017-q39:
         ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
         : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
         'no': 'no'
         'yes': 'yes'
+      csp-pre-survey-2017-q39_2018:
+        ? Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        : Have you ever participated in computer science activities or programs somewhere outside of school hours (such as at an after school program, online, or at a camp or summer program)?
+        'no': 'no'
+        'yes': 'yes'
+      csp-pre-survey-2017-q3_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I think my schoolwork is interesting.: I think my schoolwork is interesting.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q4:
         Agree: Agree
         Disagree: Disagree
@@ -10485,7 +11233,34 @@ en:
         Online program: Online program
         Other: Other
         Summer program/camp: Summer program/camp
+      csp-pre-survey-2017-q40_2018:
+        After school program at my school: After school program at my school
+        After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        I did not do any computer science outside of school: I did not do any computer science outside of school
+        ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
+        Online program: Online program
+        Other: Other
+        Summer program/camp: Summer program/camp
+      csp-pre-survey-2017-q4_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q5:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        People at my school notice when I am good at something.: People at my school notice when I am good at something.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q5_2018:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -10503,7 +11278,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q6_2018:
+        Agree: Agree
+        Disagree: Disagree
+        It is hard for people like me to be accepted at my school.: It is hard for people like me to be accepted at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q7:
+        Agree: Agree
+        Disagree: Disagree
+        Neither: Neither
+        Other students in my school take my opinions seriously.: Other students in my school take my opinions seriously.
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q7_2018:
         Agree: Agree
         Disagree: Disagree
         Neither: Neither
@@ -10521,7 +11314,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q8_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I am treated with as much respect as other students at my school.: I am treated with as much respect as other students at my school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q9:
+        Agree: Agree
+        Disagree: Disagree
+        I can really be myself at school.: I can really be myself at school.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pre-survey-2017-q9_2018:
         Agree: Agree
         Disagree: Disagree
         I can really be myself at school.: I can really be myself at school.
@@ -10539,7 +11350,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-1-q1-U1Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like computer science.: I like computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-1-q2-U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-1-q2-U1Ch2_2018:
         Agree: Agree
         Disagree: Disagree
         I have the ability to learn computer science.: I have the ability to learn computer science.
@@ -10557,6 +11386,15 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-1-q3-U1Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I like this computer science class.: I like this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-1-q4-U1Ch2:
         Agree: Agree
         Disagree: Disagree
@@ -10566,7 +11404,25 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-1-q4-U1Ch2_2018:
+        Agree: Agree
+        Disagree: Disagree
+        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
       csp-pulse-check-survey-1-q5-U1Ch2:
+        Agree: Agree
+        Disagree: Disagree
+        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        Neither: Neither
+        Slightly agree: Slightly agree
+        Slightly disagree: Slightly disagree
+        Strongly agree: Strongly agree
+        Strongly disagree: Strongly disagree
+      csp-pulse-check-survey-1-q5-U1Ch2_2018:
         Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future.: I want to take more computer science classes in the future.

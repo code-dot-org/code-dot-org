@@ -10,6 +10,7 @@ import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
+import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
 import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
@@ -226,6 +227,9 @@ function extractCSSFromHTML(el) {
   return css.join('\n');
 }
 
+const fontAwesomeWOFFRelativeSourcePath = '/assets/fontawesome-webfont.woff2';
+const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
+
 export default {
   exportAppToZip(appName, code, levelHtml, expoMode) {
     const { css, outerHTML } = transformLevelHtml(levelHtml);
@@ -238,13 +242,17 @@ export default {
         applabApiPath: "applab-api.j",
         jQueryPath: jQueryBaseName + ".j",
         applabCssPath: "applab/applab.css",
+        fontPath: fontAwesomeWOFFPath,
         appOptionsPath: null,
         commonLocalePath: null,
         applabLocalePath: null,
         commonCssPath: null,
       });
     } else {
-      html = exportProjectEjs({htmlBody: outerHTML});
+      html = exportProjectEjs({
+        htmlBody: outerHTML,
+        fontPath: fontAwesomeWOFFPath,
+      });
     }
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
@@ -259,6 +267,9 @@ export default {
         url: '/blockly/css/applab.css' + cacheBust,
       }, {
         url: '/blockly/css/common.css' + cacheBust,
+      }, {
+        dataType: 'binary',
+        url: fontAwesomeWOFFRelativeSourcePath + cacheBust,
       },
     ];
     if (expoMode) {
@@ -281,17 +292,13 @@ export default {
     if (expoMode) {
       appAssets.push({
         url: exportExpoIconPng,
-        rootRelativePath: 'appassets/icon.png',
         zipPath: appName + '/appassets/icon.png',
         dataType: 'binary',
-        filename: 'icon.png',
       });
       appAssets.push({
         url: exportExpoSplashPng,
-        rootRelativePath: 'appassets/splash.png',
         zipPath: appName + '/appassets/splash.png',
         dataType: 'binary',
-        filename: 'splash.png',
       });
     }
 
@@ -312,7 +319,8 @@ export default {
     // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
     zip.file(mainProjectFilesPrefix + "README.txt", readme);
-    zip.file(mainProjectFilesPrefix + "style.css", rewriteAssetUrls(appAssets, css));
+    const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
+    zip.file(mainProjectFilesPrefix + "style.css", fontAwesomeCSS + rewriteAssetUrls(appAssets, css));
     zip.file(mainProjectFilesPrefix + (expoMode ? "code.j" : "code.js"), rewriteAssetUrls(appAssets, code));
 
     const rootApplabPrefix = expoMode ? 'assets/applab/' : 'applab/';
@@ -323,9 +331,10 @@ export default {
       $.when(...[...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
       )).then(
-        ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], ...rest) => {
+        ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+          zip.file(mainProjectFilesPrefix + fontAwesomeWOFFPath, fontAwesomeWOFF);
           if (expoMode) {
             const [data] = rest[0];
             zip.file(mainProjectFilesPrefix + jQueryBaseName + '.j', data);
@@ -440,11 +449,13 @@ export default {
   async publishToExpo(appName, code, levelHtml) {
     const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
+    const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
     const html = exportExpoIndexEjs({
       htmlBody: outerHTML,
       commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
       applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
       appOptionsPath: "appOptions.j",
+      fontPath: fontAwesomeWOFFPath,
       applabApiPath: "https://studio.code.org/blockly/js/applab-api.js",
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       commonCssPath: "https://studio.code.org/blockly/css/common.css",
@@ -473,7 +484,7 @@ export default {
     // Important that index.html comes first:
     const fileAssets = [
       { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
-      { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
+      { filename: 'style.css', data: fontAwesomeCSS + rewriteAssetUrls(appAssets, css) },
       { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
       { filename: 'appOptions.j', data: appOptionsJs },
     ];
@@ -488,6 +499,12 @@ export default {
         contents: url,
         type: 'ASSET',
       };
+    });
+
+    appAssets.push({
+      url: fontAwesomeWOFFRelativeSourcePath,
+      dataType: 'binary',
+      filename: fontAwesomeWOFFPath,
     });
 
     const assetDownloads = appAssets.map(asset =>

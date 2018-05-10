@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, { COURSE_VERSIONS } from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSyncOauthSectionControl,
@@ -19,6 +19,7 @@ import {
   renderLoginTypeControls,
   unmountLoginTypeControls,
   renderSectionTable,
+  renderStatsTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -53,8 +54,33 @@ function renderSectionProgress(section, validScripts) {
   registerReducers({sectionProgress});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(setValidScripts(validScripts));
 
+  if (experiments.isEnabled(COURSE_VERSIONS)) {
+    const promises = [
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
+        dataType: 'json'
+      }),
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/courses?allVersions=1`,
+        dataType: 'json'
+      })
+    ];
+    Promise.all(promises).then(data => {
+      let [studentScriptsData, validCourses] = data;
+      const { studentScriptIds } = studentScriptsData;
+      store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
+      renderSectionProgressReact(store);
+    });
+  } else {
+    store.dispatch(setValidScripts(validScripts));
+    renderSectionProgressReact(store);
+  }
+}
+
+function renderSectionProgressReact(store) {
   ReactDOM.render(
     <Provider store={store}>
       <SectionProgress />
@@ -192,6 +218,7 @@ function main() {
       // Angular originally set this, but removed it in a breaking change in v1.4 because it is "rarely used in practice":
       // https://github.com/angular/angular.js/commit/3a75b1124d062f64093a90b26630938558909e8d
       $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+      $httpProvider.defaults.cache = true;
     }]);
 
   services.factory('studentsService', ['$resource',
@@ -383,6 +410,7 @@ function main() {
 
     if ($scope.tab === 'stats') {
       $scope.$on('stats-table-rendered', () => {
+        $scope.section.$promise.then(renderStatsTable);
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
@@ -527,10 +555,6 @@ function main() {
       $scope.section.students.unshift({editing: true});
     };
 
-    $scope.showMoveStudentsModal = function () {
-      $('#move-students').modal('show');
-    };
-
     $scope.clear_bulk_import = function () {
       $scope.bulk_import.editing = false;
       $scope.bulk_import.students = '';
@@ -576,101 +600,6 @@ function main() {
       $window.print();
     };
 
-  }]);
-
-  app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard-tabbing',
-        event: 'MovingStudentsController'
-      }
-    );
-
-    var self = this;
-
-    // 'Other Section' selected
-    $scope.otherTeacher = 'Other Teacher';
-    $scope.stayEnrolledInCurrentSection = 'true';
-
-    // Query
-    $scope.currentSection = sectionsService.get({id: $routeParams.id});
-    $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
-
-    $scope.moveStudents = function () {
-      function isOwnSection(sectionCode) {
-        return $scope.sections.some(function (section) {return section.code === sectionCode;});
-      }
-
-      function displayError(errorMessage) {
-        $('.move-students-error').text(errorMessage);
-      }
-
-      var params = {};
-      params['new_section_code'] = $scope.getNewSectionCode();
-      params['current_section_code'] = $scope.getCurrentSectionCode();
-      params['student_ids'] = $scope.getSelectedStudentIds().join(',');
-      params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
-
-      if (!params['student_ids']) {
-        displayError(error_string_none_selected);
-      } else if (isOwnSection($scope.manuallySelectedSectionCode)) {
-        displayError(error_string_other_section);
-      } else {
-        sectionsService.moveStudents(params, {}).$promise.then(
-          function success(response) {
-            $('#move-students').modal('hide');
-            $route.reload();
-          },
-          function error(response) {
-            $('.move-students-error').text(response.data["error"]);
-          });
-      }
-    };
-
-    $scope.showModal = function () {
-      $q.all([$scope.currentSection.$promise, $scope.students.$promise]).then(function () {
-        $('#move-students').modal('show');
-      });
-    };
-
-    $scope.checkAll = function () {
-      $scope.selectedAll = !$scope.selectedAll;
-      angular.forEach($scope.students, function (student) {
-        student.selected = $scope.selectedAll;
-      });
-    };
-
-    $scope.getCurrentSectionCode = function () {
-      return $scope.section.code;
-    };
-
-    $scope.getSelectedStudentIds = function () {
-      var student_ids = [];
-      angular.forEach($scope.students, function (student) {
-        if (student.selected) {
-          student_ids.push(student.id);
-        }
-      });
-
-      return student_ids;
-    };
-
-    $scope.getNewSectionCode = function () {
-      if ($scope.selectedSectionCode !== $scope.otherTeacher) {
-        return $scope.selectedSectionCode;
-      } else {
-        return $scope.manuallySelectedSectionCode;
-      }
-    };
-
-    $scope.getStayEnrolledInCurrentSection = function () {
-      if ($scope.selectedSectionCode == $scope.otherTeacher) {
-        return $scope.stayEnrolledInCurrentSection;
-      } else {
-        return false;
-      }
-    };
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',

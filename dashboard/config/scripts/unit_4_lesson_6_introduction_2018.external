@@ -1,0 +1,53 @@
+name 'Unit 4 Lesson 6 Introduction_2018'
+title 'Cracking the Code'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 4: Lesson 06 - Encryption with Keys and Passwords
+
+## Background
+
+There are situations in which cracking a code is ethical and important.  Good encryption algorithms are publicly known, but use secret keys as an input to the algorithm. The task of cracking the encryption becomes not guessing the method but guessing the key.  We want guessing the key to be **computationally hard**.  This relates to the passwords you choose to use on a daily basis.
+
+Encryption algorithms are evaluated based upon the amount of time it would take a computer to crack the key. The Vigenère cipher cannot be cracked using frequency analysis (at first glance); it requires a “brute force” strategy of trying every combination.
+
+## Vocabulary
+
+* **Vigenère cipher** (Vee-zha-nair): a method of encrypting text by applying a series of Caesar ciphers based on the letters of a keyword.
+
+* **Computationally Hard** - a "hard' problem for a computer is one in which it cannot arrive at a solution in a reasonable amount of time.
+
+## Lesson
+
+* Explore the Vignere Cipher Widget
+* How secure is your password?
+* Video
+
+## Resources
+
+<a href="http://xkcd.com/936/"></a><img src="http://imgs.xkcd.com/comics/password_strength.png" style="width: 300px; float: right"></a>
+
+For the Vigenère Cipher:
+
+* Exploring the Vigenere Cipher Widget- Worksheet ([PDF](https://docs.google.com/document/d/1r3I5XjhVY7btXmj9-Mzil7DxSMq-2SaL7H5al3PM7hU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1r3I5XjhVY7btXmj9-Mzil7DxSMq-2SaL7H5al3PM7hU/export?format=doc))
+
+* Widget: The Vigenere Cipher (click through on Code Studio)
+
+For "How Secure is my Password":
+
+* Keys and Passwords - Worksheet ([PDF](https://docs.google.com/document/d/14iF-WokiRlifOvTS-SwVYNAn8HQ1-lY7lGbJriRlIfQ/export?format=pdf) | [DOCX](https://docs.google.com/document/d/14iF-WokiRlifOvTS-SwVYNAn8HQ1-lY7lGbJriRlIfQ/export?format=doc))
+
+* Page: How Secure is my password (click through on Code Studio)
+
+Video: Encryption and Public Keys (click through on Code Studio)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1Q0IhLh-fphvGsfukDRk8jLrNutv3ZNiWaXZIqWOYm3I/edit" target="_blank">KEY: Exploring the Vigenere Cipher</a>
+
+* <a href="https://docs.google.com/document/d/1_4Fg6uxkr4W-CDlvrcik_Xx4QCOBJqP4YnqGkak0IYU/edit?usp=sharing" target="_blank">KEY: Keys and Passwords</a>
+MARKDOWN

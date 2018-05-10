@@ -1,0 +1,36 @@
+name 'v2 U3L05 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Creating Functions'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 05 - Creating Functions
+
+## Lesson
+
+* Write functions with names that describe what each function does in solving the problem.
+* Write a program that uses more than one function and more than one level of abstraction.
+
+## Vocabulary
+
+* **Abstraction:** a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+* **Function:** a named group of programming instructions. Functions are reusable abstractions that reduce the complexity of writing and maintaining programs
+
+## New Blocks
+
+*  **[Define a function](//docs.code.org/applab/functionParams_none/)** - `function myFunction() {
+    // function body
+}`
+*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
+
+## Resources
+
+* [College Board - Assessment Overview and Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf)
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Either as a class or individually, students should watch a video introducing the way that functions are defined and called in JavaScript. You may wish to take a minute following the video to address any questions that may have developed from watching the video.
+MARKDOWN

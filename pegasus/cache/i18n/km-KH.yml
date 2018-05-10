@@ -626,8 +626,10 @@
   video_title_real_madrid: កម្មវិធី Hour of Code ជាមួយ Real Madrid
   video_title_marco_belinelli: កម្មវិធី Hour of Code ជាមួយ Marco Belinelli
   video_title_chris_bosh: ការយល់ឃើញចំពោះវិទ្យាសាស្រ្តកុំព្យូទ័ររបស់ Chris Bosh
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: ១នាទី
   video_2min: ២នាទី
+  video_3min: 3 min
   video_5min: ៥នាទី
   speak_another_language: និយាយភាសាផ្សេងទៀត?
   help_translate: ជួយពួកយើងក្នុងការបកប្រែភាសា។
@@ -1968,7 +1970,7 @@
   user_header_settings: គណនី​របស់​ខ្ញុំ
   user_header_logout: ចាកចេញ
   user_header_signin: ចូល​គណនី
-  view_all_sections: View All Sections
+  view_all_sections: មើលផ្នែកទាំងអស់
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2023,5 +2025,3 @@
     Account” option:'
   hero_name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

@@ -100,10 +100,9 @@
       MC HOC 2016 Village Test_failure_message_override: |-
         You need to make the Iron
         Golem chase and attack the zombies to win.
-      Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
+      Valentine_playlab_01_failure_message_override: Beagnach ann! Bain triail eile
+        as.
+      WhileAdventure_failure_message_override: Comhghairdeas! Bhailigh tú X bonn!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
@@ -113,10 +112,10 @@
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
+      kikiTesta_failure_message_override: Comhghairdeas! Bhailigh tú X bonn!
+      sample1_failure_message_override: Comhghairdeas! Bhailigh tú X bonn!
+      sample4_failure_message_override: Comhghairdeas! Bhailigh tú X bonn!
       sample6_failure_message_override: |-
         Not quite.  Keep trying!  [Move to Play
         Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      sample8_failure_message_override: Comhghairdeas! Bhailigh tú X bonn!
