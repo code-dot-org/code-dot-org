@@ -640,11 +640,11 @@ exports.createJsWrapperBlockCreator = function (
     if (inline === undefined) {
       inline = true;
     }
+    args = args || [];
     if (args.filter(arg => arg.statement).length > 1 && inline) {
       console.warn('blocks with multiple statement inputs cannot be inlined');
       inline = false;
     }
-    args = args || [];
     color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
