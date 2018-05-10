@@ -141,7 +141,8 @@ class CourseTest < ActiveSupport::TestCase
 
     summary = course.summarize
 
-    assert_equal [:name, :id, :title, :description_short, :description_student,
+    assert_equal [:name, :id, :title, :assignment_family_title,
+                  :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions], summary.keys
     assert_equal 'my-course', summary[:name]
@@ -295,7 +296,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category
-    assert_equal 'Computer Science Principles', csp_assign_info[:name]
+    assert_equal "Computer Science Principles ('17-'18)", csp_assign_info[:name]
     assert_equal 'Full Courses', csp_assign_info[:category]
 
     # has script_ids

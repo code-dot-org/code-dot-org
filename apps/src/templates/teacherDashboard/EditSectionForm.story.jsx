@@ -19,7 +19,7 @@ const testSection = {
 const validAssignments = {
   '29_null': {
     id: 29,
-    name: "CS Discoveries",
+    name: "CS Discoveries 2017",
     script_name: "csd",
     category: "Full Courses",
     position: 1,
@@ -29,6 +29,7 @@ const validAssignments = {
     assignId: "29_null",
     path: '//localhost-studio.code.org:3000/courses/csd',
     assignment_family_name: 'csd',
+    assignment_family_title: 'CS Discoveries',
     version_year: '2017',
   },
   'null_168': {
@@ -43,17 +44,19 @@ const validAssignments = {
     assignId: "null_168",
     path: "//localhost-studio.code.org:3000/s/csd1",
     assignment_family_name: 'csd1',
+    assignment_family_title: 'Unit 1: Problem Solving',
     version_year: '2017',
   },
 };
 
 const assignmentFamilies = [
   {
-    name: "CS Discoveries",
+    name: "CS Discoveries 2017",
     category: "Full Courses",
     position: 1,
     category_priority: 0,
     assignment_family_name: 'csd',
+    assignment_family_title: 'CS Discoveries',
   },
   {
     name: "Unit 1: Problem Solving",
@@ -61,6 +64,7 @@ const assignmentFamilies = [
     position: 0,
     category_priority: 7,
     assignment_family_name: 'csd1',
+    assignment_family_title: 'Unit 1: Problem Solving',
   }
 ];
 
@@ -79,7 +83,7 @@ export default storybook => storybook
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
-        isCsfScript={() => false}
+        stageExtrasAvailable={() => false}
       />
     );
   })
@@ -96,7 +100,7 @@ export default storybook => storybook
         sections={{}}
         section={testSection}
         isSaveInProgress={true}
-        isCsfScript={() => false}
+        stageExtrasAvailable={() => false}
       />
     );
   });

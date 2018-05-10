@@ -2413,6 +2413,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
+    typeHints: utils.valueOr(config.level.showTypeHints, false),
   };
 
   // Never show unused blocks or disable autopopulate in edit mode
@@ -2823,13 +2824,13 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 
   // Not the most efficient of algo's, but we shouldn't have enough blocks for
   // it to matter.
-  return innerBlock && block.getVars().some(function (varName) {
+  return innerBlock && Blockly.Variables.allVariablesFromBlock(block).some(function (varName) {
     return innerBlock.getDescendants().some(function (descendant) {
       if (descendant.type !== 'controls_for' &&
           descendant.type !== 'controls_for_counter') {
         return false;
       }
-      return descendant.getVars().indexOf(varName) !== -1;
+      return Blockly.Variables.allVariablesFromBlock(descendant).indexOf(varName) !== -1;
     });
   });
 };

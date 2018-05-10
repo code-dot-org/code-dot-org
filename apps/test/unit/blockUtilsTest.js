@@ -51,7 +51,7 @@ describe('block utils', () => {
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
-    let appendDummyInput, appendTitle, setCheck, appendValueInput;
+    let appendDummyInput, appendTitle, setCheck, appendValueInput, setAlign;
     beforeEach(() => {
       appendDummyInput = sinon.stub();
       appendValueInput = sinon.stub();
@@ -59,7 +59,8 @@ describe('block utils', () => {
 
       appendTitle = sinon.stub();
       setCheck = sinon.stub();
-      fakeInput = { setCheck, appendTitle };
+      setAlign = sinon.stub();
+      fakeInput = { setCheck, appendTitle , setAlign };
 
       appendDummyInput.returns(fakeInput);
       appendValueInput.returns(fakeInput);
