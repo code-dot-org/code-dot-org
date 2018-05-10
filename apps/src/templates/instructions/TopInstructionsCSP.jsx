@@ -34,10 +34,10 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-const tab = {
-  instructions: 'instructions',
-  resources: 'resources',
-  comments: 'comments'
+const TabType = {
+  INSTRUCTIONS: 'instructions',
+  RESOURCES: 'resources',
+  COMMENTS: 'comments'
 };
 
 const styles = {
@@ -125,11 +125,11 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    teacherView: PropTypes.bool
+    viewAs: PropTypes.oneOf(ViewType)
   };
 
   state = {
-    tabSelected: tab.instructions,
+    tabSelected: TabType.INSTRUCTIONS,
   };
 
   /**
@@ -183,7 +183,18 @@ class TopInstructions extends Component {
    */
 
   adjustMaxNeededHeight = () => {
-    const element = this.state.tabSelected === tab.resources ? this.refs.helpTab : this.refs.instructions;
+    let element;
+    switch (this.state.tabSelected) {
+      case TabType.RESOURCES:
+        element = this.refs.helpTab;
+        break;
+      case TabType.INSTRUCTIONS:
+        element = this.refs.instructions;
+        break;
+      case TabType.COMMENTS:
+        element = this.refs.commentTab;
+        break;
+    }
     const maxNeededHeight = $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
@@ -216,15 +227,15 @@ class TopInstructions extends Component {
   };
 
   handleHelpTabClick = () => {
-    this.setState({tabSelected: tab.resources});
+    this.setState({tabSelected: TabType.RESOURCES});
   };
 
   handleInstructionTabClick = () => {
-    this.setState({tabSelected: tab.instructions});
+    this.setState({tabSelected: TabType.INSTRUCTIONS});
   };
 
   handleCommentTabClick = () => {
-    this.setState({tabSelected: tab.comments});
+    this.setState({tabSelected: TabType.COMMENTS});
   };
 
   render() {
@@ -247,12 +258,13 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
 
-    const displayFeedback = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.teacherView;
+    const displayFeedback = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
+      this.props.viewAs === ViewType.Teacher;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
           <div style={styles.paneHeaderOverride}>
-            {this.state.tabSelected === tab.instructions && ttsUrl &&
+            {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
             {this.props.documentationUrl &&
@@ -267,14 +279,14 @@ class TopInstructions extends Component {
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
-                style={this.state.tabSelected === tab.instructions ? styles.highlighted : null}
+                style={this.state.tabSelected === TabType.INSTRUCTIONS ? styles.highlighted : null}
                 text={msg.instructions()}
               />
               {displayHelpTab &&
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={this.state.tabSelected === tab.resources ? styles.highlighted : null}
+                  style={this.state.tabSelected === TabType.RESOURCES ? styles.highlighted : null}
                   text={msg.helpTips()}
                 />
               }
@@ -282,7 +294,7 @@ class TopInstructions extends Component {
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
-                  style={this.state.tabSelected === tab.comments ? styles.highlighted : null}
+                  style={this.state.tabSelected === TabType.COMMENTS ? styles.highlighted : null}
                   text={msg.feedback()}
                 />
               }
@@ -299,7 +311,7 @@ class TopInstructions extends Component {
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
               <div ref="instructions">
-                {this.state.tabSelected === tab.instructions &&
+                {this.state.tabSelected === TabType.INSTRUCTIONS &&
                   <div>
                     <Instructions
                       ref="instructions"
@@ -311,7 +323,7 @@ class TopInstructions extends Component {
                     <TeacherOnlyMarkdown/>
                   </div>
                 }
-                {this.state.tabSelected === tab.resources &&
+                {this.state.tabSelected === TabType.RESOURCES &&
                   <HelpTabContents
                     ref="helpTab"
                     videoData={videoData}
@@ -319,8 +331,10 @@ class TopInstructions extends Component {
                     referenceLinks={this.props.referenceLinks}
                   />
                 }
-                {this.state.tabSelected === tab.comments &&
-                  <TeacherFeedback/>
+                {this.state.tabSelected === TabType.COMMENTS &&
+                  <TeacherFeedback
+                    ref="commentTab"
+                  />
                 }
               </div>
             }
@@ -352,7 +366,7 @@ export default connect(state => ({
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,
-  teacherView: state.viewAs === ViewType.Teacher
+  viewAs: state.viewAs
 }), dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());
