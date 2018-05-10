@@ -4,6 +4,17 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from "../../templates/Button";
 import {isEmail} from '../../util/formatValidation';
+import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
+
+// TODO: List for this feature overall
+// Handle failed submissions gracefully.
+// Update the email on the Account page after successful submit without reload.
+// Send the email opt-in to the server and handle it correctly
+// Testing!
+// Deduplicate and test client-side email hashing logic
+// A less clumsy way to use Rails UJS? At least a comment describing how this works.
+//   see http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
 
 const styles = {
   container: {
@@ -29,9 +40,10 @@ const styles = {
  */
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
-    handleSubmit: PropTypes.func,
-    handleCancel: PropTypes.func,
-    isOpen: PropTypes.bool,
+    isOpen: PropTypes.bool.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
+    userAge: PropTypes.number.isRequired,
   };
 
   constructor(props) {
@@ -43,11 +55,43 @@ export default class ChangeEmailModal extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this._form = $('form[data-form-for=ChangeEmailModal]');
+    this._form.on('ajax:success', this.onSubmitSuccess);
+    this._form.on('ajax:error', this.onSubmitFailure);
+  }
+
+  componentWillUnmount() {
+    this._form.off('ajax:success', this.onSubmitSuccess);
+    this._form.off('ajax:error', this.onSubmitFailure);
+  }
+
+  save = () => {
+    this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
+    this._form.find('#user_hashed_email').val(MD5(this.state.newEmail));
+    this._form.find('#user_current_password').val(this.state.currentPassword);
+    // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
+    this._form.submit();
+  };
+
+  cancel = () => this.props.handleCancel();
+
+  onSubmitSuccess = (data, status, xhr) => {
+    this.props.handleSubmit();
+  };
+
+  onSubmitFailure = (xhr, status, error) => {
+    // TODO: I'm not getting useful validation information back from Rails,
+    // TODO: just a 422 Unprocessable Entity.
+    // TODO: How do I detect, for example, that an email is already in use?
+    console.error(xhr, status, error);
+  };
+
   getValidationErrors() {
     return {
       newEmail: this.getNewEmailValidationError(),
       currentPassword: this.getCurrentPasswordValidationError(),
-      emailOptIn: this.getEmailOptInValidationError(),
+      // emailOptIn: this.getEmailOptInValidationError(),
     };
   }
 
@@ -79,13 +123,6 @@ export default class ChangeEmailModal extends React.Component {
   onCurrentPasswordChange = (event) => this.setState({currentPassword: event.target.value});
   onEmailOptInChange = (event) => this.setState({emailOptIn: event.target.value});
 
-  cancel = () => {
-    this.props.handleCancel();
-  };
-
-  save = () => {
-    this.props.handleSubmit(this.state.email);
-  };
 
   render = () => {
     const validationErrors = this.getValidationErrors();
@@ -140,7 +177,7 @@ export default class ChangeEmailModal extends React.Component {
                 {validationErrors.currentPassword}
               </FieldError>
             </Field>
-            <Field>
+            <Field style={{display: 'none'}}>
               <p>
                 {i18n.changeEmailModal_emailOptIn_description()}
               </p>
@@ -177,16 +214,20 @@ export default class ChangeEmailModal extends React.Component {
   };
 }
 
-const Field = ({children}) => (
+const Field = ({children, style}) => (
   <div
     style={{
       marginBottom: 15,
+      ...style,
     }}
   >
     {children}
   </div>
 );
-Field.propTypes = {children: PropTypes.any};
+Field.propTypes = {
+  children: PropTypes.any,
+  style: PropTypes.object,
+};
 
 const FieldError = ({children}) => (
   <div
