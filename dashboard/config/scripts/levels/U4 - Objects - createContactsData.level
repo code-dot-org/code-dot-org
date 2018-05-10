@@ -41,7 +41,6 @@
     "debugger_disabled": "false",
     "instructions": "Add values to the three contact objects provided in the starter code. (Click to see full instructions)",
     "encrypted_examples": "/EGia63Q8hAFf9aJGS1bcA6d8k8ocF6tVwqfur8GlJFiDZiSmoVloI4XxlZE\nunei\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -50,7 +49,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

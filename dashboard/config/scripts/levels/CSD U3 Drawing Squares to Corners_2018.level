@@ -60,12 +60,9 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 9360,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "map_reference": "/docs/csd-1718/drawing_shapes_map/index.html",
-    "video_key": "csd_gamelab_draw_1"
+    "video_key": "csd_gamelab_draw_1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

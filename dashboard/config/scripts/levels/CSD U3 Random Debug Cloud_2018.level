@@ -52,11 +52,11 @@
     "encrypted_examples": "1Bzud6Oad+0OUeg96YBJz1Q0gilNPYIMWp/lLVvghYhsqTTTPEFT7d3kM9or\nxc9roFLRc5mOVjcK/KTJyJbrVg==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/drawing_shapes_map/index.html"
     ],
-    "map_reference": "/docs/csd-1718/shape_size_map/index.html"
+    "map_reference": "/docs/csd-1718/shape_size_map/index.html",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
