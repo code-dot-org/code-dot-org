@@ -91,7 +91,7 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setstageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
+export const setStageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
