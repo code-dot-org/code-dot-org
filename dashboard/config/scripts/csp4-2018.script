@@ -36,7 +36,6 @@ assessment 'U4L3 - FR Identifying people_2018', progression: 'Check Your Underst
 
 stage 'The Cost of Free', flex_category: 'csp4_1_2018'
 named_level 'CSP U4L04 SFLP'
-named_level 'Video - The Future of Big Data_2018', progression: 'The Future of Big Data'
 named_level 'U4-AP-Practice-Justify-the-Score_2018'
 assessment 'U4L4 - MC cost of free_2018', progression: 'Check Your Understanding'
 assessment 'U4L4 - FR cost of free_2018', progression: 'Check Your Understanding'
