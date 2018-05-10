@@ -7,7 +7,7 @@ import {
   WallCoordColMask,
   WallCoordColShift
 } from '@cdo/apps/studio/constants';
-import mazeUtils from '@code-dot-org/maze/src/utils';
+import mazeUtils from '@cdo/apps/maze/mazeUtils';
 
 const CELL_WIDTH = 48;
 const CELL_HEIGHT = 38;
