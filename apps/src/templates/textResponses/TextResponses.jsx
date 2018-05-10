@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 
 const styles = {
@@ -17,21 +18,27 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    responses: PropTypes.array.isRequired,
     sectionId: PropTypes.number.isRequired,
 
     // provided by redux
+    responses: PropTypes.object.isRequired,
+    isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
-    setScriptId: PropTypes.func.isRequired
+    setScriptId: PropTypes.func.isRequired,
+    asyncLoadTextResponses: PropTypes.func.isRequired
   };
 
   onChangeScript = scriptId => {
-    this.props.setScriptId(scriptId);
+    const {setScriptId, asyncLoadTextResponses, sectionId} = this.props;
+    asyncLoadTextResponses(sectionId, scriptId, () => {
+      setScriptId(scriptId);
+    });
   };
 
   render() {
-    const {validScripts, scriptId, responses, sectionId} = this.props;
+    const {validScripts, scriptId, responses, sectionId, isLoadingResponses} = this.props;
+    const scriptResponses = responses[sectionId][scriptId];
 
     return (
       <div>
@@ -47,8 +54,9 @@ class TextResponses extends Component {
         </div>
         <div style={styles.table}>
           <TextResponsesTable
-            responses={responses}
+            responses={scriptResponses}
             sectionId={sectionId}
+            isLoading={isLoadingResponses}
           />
         </div>
       </div>
@@ -59,10 +67,15 @@ class TextResponses extends Component {
 export const UnconnectedTextResponses = TextResponses;
 
 export default connect(state => ({
+  responses: state.textResponses.responseData,
+  isLoadingResponses: state.textResponses.isLoadingResponses,
   validScripts: state.sectionProgress.validScripts,
   scriptId: state.sectionProgress.scriptId,
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
+  },
+  asyncLoadTextResponses(sectionId, scriptId, onComplete) {
+    dispatch(asyncLoadTextResponses(sectionId, scriptId, onComplete));
   }
 }))(TextResponses);
