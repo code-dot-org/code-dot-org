@@ -46,8 +46,7 @@ export const assignmentFamilyShape = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,
-  // Display name
-  name: PropTypes.string.isRequired,
+  assignment_family_title: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired,
 });
 

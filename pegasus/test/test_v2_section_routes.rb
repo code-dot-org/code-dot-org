@@ -315,7 +315,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Foo",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 17
           },
           {
             "id" => 3,
@@ -323,7 +323,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "Bar",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 17
           },
           {
             "id" => 4,
@@ -363,7 +363,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp1",
             "category" => "CS Principles ('17-'18)",
             "position" => 0,
-            "category_priority" => 9
+            "category_priority" => 11
           },
           {
             "id" => 32,
@@ -371,7 +371,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp2",
             "category" => "CS Principles ('17-'18)",
             "position" => 1,
-            "category_priority" => 9
+            "category_priority" => 11
           },
           {
             "id" => 34,
@@ -379,7 +379,7 @@ class V2SectionRoutesTest < SequelTestCase
             "script_name" => "csp3",
             "category" => "CS Principles ('17-'18)",
             "position" => 2,
-            "category_priority" => 9
+            "category_priority" => 11
           },
         ]
       end
@@ -415,14 +415,14 @@ class V2SectionRoutesTest < SequelTestCase
             'script_name' => 'allthehiddenthings',
             'category' => 'other',
             'position' => nil,
-            'category_priority' => 15
+            'category_priority' => 17
           } << {
             "id" => 53,
             "name" => "csp2-alt *",
             "script_name" => "csp2-alt",
             "category" => "other",
             "position" => nil,
-            "category_priority" => 15
+            "category_priority" => 17
           },
           JSON.parse(@pegasus.last_response.body)
         )
