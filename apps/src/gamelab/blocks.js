@@ -413,21 +413,30 @@ export default {
         this.appendDummyInput()
             .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-                : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+                : new Blockly.FieldVariable(
+                    Blockly.Msg.VARIABLES_SET_ITEM,
+                    null,
+                    null,
+                    Blockly.BlockValueType.SPRITE,
+                  ),
+                'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
-        return [this.getTitleValue('VAR')];
+        return Blockly.Variables.getVars.bind(this)(Blockly.BlockValueType.SPRITE);
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
+      removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_variables_get = generator.variables_get;
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_get');
 
     Blockly.Blocks.sprite_variables_set = {
       // Variable setter.
@@ -441,15 +450,19 @@ export default {
             .setStrictCheck(Blockly.BlockValueType.SPRITE)
             .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
+              : new Blockly.FieldVariable(
+                  Blockly.Msg.VARIABLES_SET_ITEM,
+                  null,
+                  null,
+                  Blockly.BlockValueType.SPRITE,
+                ),
+              'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
       },
-      getVars: function () {
-        return [this.getTitleValue('VAR')];
-      },
+      getVars: Blockly.Blocks.sprite_variables_get.getVars,
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
@@ -457,6 +470,8 @@ export default {
       },
     };
     generator.sprite_variables_set = generator.variables_set;
+    Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_set');
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
