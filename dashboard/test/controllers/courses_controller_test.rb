@@ -156,7 +156,7 @@ class CoursesControllerTest < ActionController::TestCase
     create :course, name: 'csp'
 
     post :update, params: {course_name: 'csp', scripts: [], title: 'Computer Science Principles'}
-    assert_equal 'Computer Science Principles', Course.find_by_name!('csp').summarize[:title]
+    assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp').summarize[:title]
   end
 
   # tests for edit
