@@ -33,6 +33,7 @@ export default class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    assignmentFamilyTitle: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
@@ -63,6 +64,7 @@ export default class CourseOverview extends Component {
     const {
       name,
       title,
+      assignmentFamilyTitle,
       id,
       descriptionStudent,
       descriptionTeacher,
@@ -90,7 +92,7 @@ export default class CourseOverview extends Component {
     return (
       <div style={mainStyle}>
         <div style={styles.titleWrapper}>
-          <h1 style={styles.title}>{title}</h1>
+          <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {versions.length > 1 &&
             <select
               onChange={this.onChangeVersion}

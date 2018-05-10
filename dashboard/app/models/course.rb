@@ -254,6 +254,7 @@ class Course < ApplicationRecord
       name: name,
       id: id,
       title: localized_title,
+      assignment_family_title: localized_assignment_family_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
