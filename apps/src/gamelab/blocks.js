@@ -399,6 +399,33 @@ export default {
       orderPrecedence: ORDER_ATOMIC,
     });
 
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'whenPressedAndReleased',
+      eventLoopBlock: true,
+      inline: false,
+      blockText: "when {DIR} pressed {STATEMENT1}when released {STATEMENT2}",
+      args: [
+        {
+          "name": "DIR",
+          "options": [
+            ["up", "'up'"],
+            ["down", "'down'"],
+            ["left", "'left'"],
+            ["right", "'right'"]
+          ]
+        },
+        {
+          "name": "STATEMENT1",
+          "statement": true
+        },
+        {
+          "name": "STATEMENT2",
+          "statement": true
+        }
+      ],
+    });
+
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
