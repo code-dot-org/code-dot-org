@@ -11624,7 +11624,7 @@ en:
       csp-post-survey-2017-q19_2018:
         Agree: Agree
         Disagree: Disagree
-        I like this computer science class.: I like this computer science class.
+        I liked this computer science class.: I liked this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11660,7 +11660,7 @@ en:
       csp-post-survey-2017-q20_2018:
         Agree: Agree
         Disagree: Disagree
-        I feel comfortable in this computer science class.: I feel comfortable in this computer science class.
+        I felt comfortable in this computer science class.: I felt comfortable in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11681,7 +11681,7 @@ en:
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
-        Sometimes I feel unsure whether I belong in this class.: Sometimes I feel unsure whether I belong in this class.
+        Sometimes I felt unsure whether I belonged in this class.: Sometimes I felt unsure whether I belonged in this class.
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-post-survey-2017-q23:
@@ -11696,7 +11696,7 @@ en:
       csp-post-survey-2017-q23_2018:
         Agree: Agree
         Disagree: Disagree
-        I am treated with as much respect as other students in this computer science class.: I am treated with as much respect as other students in this computer science class.
+        I was treated with as much respect as other students in this computer science class.: I was treated with as much respect as other students in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11714,7 +11714,7 @@ en:
       csp-post-survey-2017-q24_2018:
         Agree: Agree
         Disagree: Disagree
-        I feel like I can be myself in this computer science class.: I feel like I can be myself in this computer science class.
+        I felt like I could be myself in this computer science class.: I felt like I could be myself in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11732,7 +11732,7 @@ en:
       csp-post-survey-2017-q25_2018:
         Agree: Agree
         Disagree: Disagree
-        I feel like my opinions are taken seriously in this computer science class.: I feel like my opinions are taken seriously in this computer science class.
+        I felt like my opinions were taken seriously in this computer science class.: I felt like my opinions were taken seriously in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11768,7 +11768,7 @@ en:
       csp-post-survey-2017-q28_2018:
         Agree: Agree
         Disagree: Disagree
-        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
+        Learning computer science has helped me in my other school subjects.: Learning computer science has helped me in my other school subjects.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11912,7 +11912,7 @@ en:
       csp-post-survey-2017-q35_2018:
         Agree: Agree
         Disagree: Disagree
-        I worry that the teacher or students in this class think that I am not as good at computer science as other students.: I worry that the teacher or students in this class think that I am not as good at computer science as other students.
+        I worried that the teacher or students in this class thought that I was not as good at computer science as other students.: I worried that the teacher or students in this class thought that I was not as good at computer science as other students.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -11926,7 +11926,7 @@ en:
       csp-post-survey-2017-q36-a_2018:
         A little: A little
         A lot: A lot
-        I worry because I'm not good at math.: I worry because I'm not good at math.
+        I worried because I'm not good at math.: I worried because I'm not good at math.
         Not at all: Not at all
       csp-post-survey-2017-q36-b:
         A little: A little
@@ -11936,7 +11936,7 @@ en:
       csp-post-survey-2017-q36-b_2018:
         A little: A little
         A lot: A lot
-        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
+        I worried because I have little experience with computer science.: I worried because I have little experience with computer science.
         Not at all: Not at all
       csp-post-survey-2017-q36-c:
         A little: A little
@@ -11946,7 +11946,7 @@ en:
       csp-post-survey-2017-q36-c_2018:
         A little: A little
         A lot: A lot
-        I worry because of my gender.: I worry because of my gender.
+        I worried because of my gender.: I worried because of my gender.
         Not at all: Not at all
       csp-post-survey-2017-q36-d:
         A little: A little
@@ -11956,7 +11956,7 @@ en:
       csp-post-survey-2017-q36-d_2018:
         A little: A little
         A lot: A lot
-        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
+        I worried because of my race/ethnicity.: I worried because of my race/ethnicity.
         Not at all: Not at all
       csp-post-survey-2017-q3_2018:
         Agree: Agree
