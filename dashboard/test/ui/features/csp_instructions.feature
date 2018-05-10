@@ -54,18 +54,16 @@ Scenario: Instructions do not show a resizer on embedded levels
 
 Scenario: 'Feedback' tab is visible if user is a teacher and flag is on and displays 'Coming soon'
   Given I am a teacher
-  And I am on "http://studio.code.org/experiments/set_single_user_experiment/2018-teacher-experience"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?enableExperiments=commentBoxTab"
   And I click selector ".uitest-feedback" once I see it
   And I wait until ".editor-column" contains text "Coming soon"
-  And I am on "http://studio.code.org/experiments/disable_single_user_experiment/2018-teacher-experience"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=commentBoxTab"
 
 Scenario: 'Feedback' tab is not visible if user is a student
   Given I am a student
-  And I am on "http://studio.code.org/experiments/set_single_user_experiment/2018-teacher-experience"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?enableExperiments=commentBoxTab"
   And element ".uitest-feedback" is not visible
-  And I am on "http://studio.code.org/experiments/disable_single_user_experiment/2018-teacher-experience"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/20?disableExperiments=commentBoxTab"
 
 Scenario: 'Feedback' tab is not visible if user is a teacher but flag is off
   Given I am a teacher
