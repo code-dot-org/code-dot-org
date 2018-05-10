@@ -38,7 +38,7 @@ class TextResponses extends Component {
 
   render() {
     const {validScripts, scriptId, responses, sectionId, isLoadingResponses} = this.props;
-    const scriptResponses = responses[sectionId][scriptId];
+    const scriptResponses = responses[scriptId];
 
     return (
       <div>
