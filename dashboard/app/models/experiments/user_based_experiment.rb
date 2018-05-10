@@ -28,6 +28,7 @@
 class UserBasedExperiment < Experiment
   def enabled?(user: nil, section: nil)
     return false unless user
+    return false unless user.id
     user_id = user.id % 100
     return (user_id >= min_user_id && user_id < max_user_id) ||
         user_id < overflow_max_user_id
