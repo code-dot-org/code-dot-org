@@ -33,12 +33,12 @@ class ExperimentsController < ApplicationController
       return
     end
 
-    # Default to being active for 30 days
+    # Default to being active for 100 days
     now = DateTime.now
     SingleUserExperiment.find_or_create_by!(
       min_user_id: current_user.id,
       name: experiment_name,
-      end_at: now + 30.days
+      end_at: now + 100.days
     )
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end
