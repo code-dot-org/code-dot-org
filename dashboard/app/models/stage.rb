@@ -171,6 +171,7 @@ class Stage < ActiveRecord::Base
           id: script_level.id,
           position: script_level.position,
           named_level: script_level.named_level?,
+          bonus_level: !!script_level.bonus,
           progression: script_level.progression,
           path: script_level.path,
         }
