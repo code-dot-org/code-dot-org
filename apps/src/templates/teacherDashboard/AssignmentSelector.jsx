@@ -54,6 +54,15 @@ export default class AssignmentSelector extends Component {
     disabled: PropTypes.bool,
   };
 
+  /**
+   * Given an assignment family, return a list of versions representing valid
+   * assignments within that family, with highest year numbers first.
+   * @param {AssignmentFamilyShape} assignmentFamilyName
+   * @returns {Object} Version object with the following properties:
+   *   {string} year The year associated with this version, used as a key for
+   *     identifying this version programmatically.
+   *   {string} title The UI string associated with this version.
+   */
   getVersions = assignmentFamilyName => {
     if (!assignmentFamilyName) {
       return [];
