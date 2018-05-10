@@ -913,6 +913,6 @@ FactoryGirl.define do
     email 'test@example.net'
     opt_in false
     ip_address '10.0.0.1'
-    source EmailPreference::REGISTRATION
+    source EmailPreference::ACCOUNT_SIGN_UP
   end
 end
