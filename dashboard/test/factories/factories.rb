@@ -266,6 +266,18 @@ FactoryGirl.define do
         user.reload
       end
     end
+
+    trait :within_united_states do
+      after(:create) do |user|
+        create :user_geo, :seattle, user: user
+      end
+    end
+
+    trait :outside_united_states do
+      after(:create) do |user|
+        create :user_geo, :sydney, user: user
+      end
+    end
   end
 
   factory :authentication_option do
@@ -915,5 +927,29 @@ FactoryGirl.define do
     opt_in false
     ip_address '10.0.0.1'
     source EmailPreference::ACCOUNT_SIGN_UP
+  end
+
+  factory :user_geo do
+    ip_address '10.0.0.1'
+
+    # Space Needle
+    trait :seattle do
+      city 'Seattle'
+      state 'Washington'
+      country 'United States'
+      postal_code '98109'
+      latitude 47.620470
+      longitude (-122.349181)
+    end
+
+    # Sydney Opera House
+    trait :sydney do
+      city 'Sydney'
+      state 'New South Wales'
+      country 'Australia'
+      postal_code '2000'
+      latitude (-33.859100)
+      longitude 151.200200
+    end
   end
 end
