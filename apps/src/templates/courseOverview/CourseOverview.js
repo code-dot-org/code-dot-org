@@ -102,7 +102,7 @@ export default class CourseOverview extends Component {
             >
               {versions.map(version => (
                 <option key={version.name} value={version.name}>
-                  {version.version_year}
+                  {version.version_title}
                 </option>
               ))}
             </select>
