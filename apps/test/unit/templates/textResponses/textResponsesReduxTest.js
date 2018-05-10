@@ -1,5 +1,6 @@
 import {assert} from '../../../util/configuredChai';
 import textResponses, {
+  setSectionId,
   setTextResponses,
   startLoadingResponses,
   finishLoadingResponses,
@@ -9,17 +10,43 @@ import textResponses, {
 describe('textResponsesRedux', () => {
   const initialState = textResponses(undefined, {});
 
+  describe('setSectionId', () => {
+    it('sets sectionId', () => {
+      const action = setSectionId(3);
+      const nextState = textResponses(initialState, action);
+      assert.equal(nextState.sectionId, 3);
+    });
+
+    it('resets all other state to initialState', () => {
+      const currentState = {
+        sectionId: 1,
+        isLoadingResponses: true,
+        responseData: {
+          1: {question: 'Question 1', response: 'Response 1'},
+          2: {question: 'Question 2', response: 'Response 2'}
+        }
+      };
+      const newSectionId = 2;
+      const expectedNextState = {
+        ...initialState,
+        sectionId: newSectionId
+      };
+      const action = setSectionId(newSectionId);
+      const nextState = textResponses(currentState, action);
+      assert.deepEqual(nextState, expectedNextState);
+    });
+  });
+
   describe('setTextResponses', () => {
-    it('associates the response data to the correct section and script', () => {
-      const sectionId = 1;
+    it('associates the response data to the correct script', () => {
       const scriptId = 2;
       const responseData = {
         question: 'Free Response',
         response: 'I love to code!'
       };
-      const action = setTextResponses(sectionId, scriptId, responseData);
+      const action = setTextResponses(scriptId, responseData);
       const nextState = textResponses(initialState, action);
-      const actualResponseData = nextState.responseData[sectionId][scriptId];
+      const actualResponseData = nextState.responseData[scriptId];
       assert.deepEqual(actualResponseData, responseData);
     });
   });
