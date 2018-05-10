@@ -366,6 +366,7 @@ bg:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -721,21 +722,21 @@ bg:
     message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
       - 
-        white: Бял
+        white: "Бял"
       - 
-        black: Черен или афро-американец
+        black: "Черен или афро-американец"
       - 
-        hispanic: Испанец или латино
+        hispanic: "Испанец или латино"
       - 
-        asian: Азиатец
+        asian: "Азиатец"
       - 
-        hawaiian: Хавайец или друг тихоокеански островитянин
+        hawaiian: "Хавайец или друг тихоокеански островитянин"
       - 
-        american_indian: Индианец/от Аляска
+        american_indian: "Индианец/от Аляска"
       - 
-        other: Друго
+        other: "Друго"
       - 
-        opt_out: Предпочитам да не отговоря
+        opt_out: "Предпочитам да не отговоря"
     submit: "Изпрати"
     decline: "Затваряне"
   zendesk_too_young_message: 'Съжаляваме, но малки потребители не може да влизат в нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org"> support.code.org</a> без регистрация или попитайте вашия родител или учител да се свърже с нас за вас.'
