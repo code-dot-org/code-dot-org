@@ -9,6 +9,7 @@ export default storybook => storybook
       isOpen
       handleSubmit={action('handleSubmit callback')}
       handleCancel={action('handleCancel callback')}
+      userAge={21}
     />
   ));
 
