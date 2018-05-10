@@ -1,3 +1,5 @@
+require 'cdo/email_preference_constants'
+
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]
@@ -47,7 +49,7 @@ class RegistrationsController < Devise::RegistrationsController
           email: params[:user][:email],
           opt_in: optin_value,
           ip_address: request.env['REMOTE_ADDR'],
-          source: EmailPreference::ACCOUNT_SIGN_UP,
+          source: EmailPreferenceConstants::ACCOUNT_SIGN_UP,
           form_kind: "0"
         )
       end
