@@ -407,8 +407,8 @@ export default {
       blockText: "when {DIR} pressed {STATEMENT1}when released {STATEMENT2}",
       args: [
         {
-          "name": "DIR",
-          "options": [
+          name: "DIR",
+          options: [
             ["up", "'up'"],
             ["down", "'down'"],
             ["left", "'left'"],
@@ -416,12 +416,38 @@ export default {
           ]
         },
         {
-          "name": "STATEMENT1",
-          "statement": true
+          name: "STATEMENT1",
+          statement: true
         },
         {
-          "name": "STATEMENT2",
-          "statement": true
+          name: "STATEMENT2",
+          statement: true
+        }
+      ],
+    });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'whenStartAndStopTouching',
+      eventLoopBlock: true,
+      inline: false,
+      blockText: "when {SPRITE1} starts touching {SPRITE2} {STATEMENT1}when they stop touching {STATEMENT2}",
+      args: [
+        {
+          name: "SPRITE1",
+          type: "Sprite"
+        },
+        {
+          name: "SPRITE2",
+          type: "Sprite"
+        },
+        {
+          name: "STATEMENT1",
+          statement: true
+        },
+        {
+          name: "STATEMENT2",
+          statement: true
         }
       ],
     });

@@ -192,6 +192,10 @@ function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
 }
 
+function whenStartAndStopTouching(a, b, startHandler, stopHandler) {
+  collisionEvents.push({a: a, b: b, event: startHandler, eventEnd: stopHandler});
+}
+
 // Loops
 
 function repeatWhile(condition, loop) {
@@ -357,6 +361,9 @@ function draw() {
         }
         collisionEvent.touching = true;
       } else {
+        if (collisionEvent.touching && collisionEvent.eventEnd) {
+          collisionEvent.eventEnd();
+        }
         collisionEvent.touching = false;
       }
     }
