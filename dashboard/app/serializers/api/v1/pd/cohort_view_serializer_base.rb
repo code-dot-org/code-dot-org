@@ -8,6 +8,7 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
+    :accepted_teachercon,
     :status
   )
 
