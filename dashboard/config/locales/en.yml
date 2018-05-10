@@ -1001,6 +1001,6 @@ en:
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
   cookie_banner:
-    message: 'By continuing to browse or by clicking "Accept all cookies," you agree to the storing of first- and third-party cookies on your device to enhance site navigation and analyze site usage.'
-    more_information: 'More information'
-    accept: 'Agree and dismiss'
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'I agree'
