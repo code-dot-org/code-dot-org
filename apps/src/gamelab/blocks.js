@@ -671,7 +671,7 @@ export default {
         // the toolbox or in the feedback dialog (which is readonly).
         this.setFramed( this.blockSpace === Blockly.mainBlockSpace &&
             !this.blockSpace.isReadOnly());
-        this.parameterNames_ = ['self'];
+        this.parameterNames_ = ['this sprite'];
         this.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
       },
       updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,
