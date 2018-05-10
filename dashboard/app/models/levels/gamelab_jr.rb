@@ -96,6 +96,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_groupLength" />
 </category>
 <category name="Events">
+  <block type="gamelab_whenPressedAndReleased" />
   <block type="gamelab_whenUpArrow" />
   <block type="gamelab_whenDownArrow" />
   <block type="gamelab_whenLeftArrow" />
@@ -104,6 +105,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileDownArrow" />
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
+  <block type="gamelab_whenStartAndStopTouching" />
   <block type="gamelab_whenTouching" />
   <block type="gamelab_whileTouching" />
   <block type="gamelab_clickedOn" />
