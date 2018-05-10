@@ -450,6 +450,7 @@ export default function teacherSections(state=initialState, action) {
         // on the server.
         assignment_family_name: script.script_name,
         version_year: defaultVersionYear,
+        version_title: defaultVersionYear
       };
 
       // Do not add assignment families for scripts belonging to courses. To assign
