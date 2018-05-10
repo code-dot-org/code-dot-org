@@ -318,6 +318,7 @@
   "moveSpriteN": "bewege Figur {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "für",
   "toXY": "nach x,y",
   "moveDown": "nach unten bewegen",
   "moveDownTooltip": "Bewege ein Element nach unten.",

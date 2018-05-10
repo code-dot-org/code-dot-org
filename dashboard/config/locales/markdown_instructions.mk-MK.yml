@@ -35727,9 +35727,12 @@
       courseE_artist_functions8_markdown_instruction: "**Challenge:** Did you know\nthat
         you can call functions from *inside* other functions?!\r\n\r\nCreate\nas many
         functions as you think you need to make this drawing of 50 pixel squares."
-      courseE_artist_functions8_2018_markdown_instruction: "**Challenge:** Did you\nknow
-        that you can call functions from *inside* other functions?!\r\n\r\nCreate\nas
-        many functions as you think you need to make this drawing of 50 pixel squares."
+      courseE_artist_functions8_2018_markdown_instruction: |-
+        **Challenge:** Did you
+        know that you can call functions from *inside* other functions?!\r
+        \r
+        Create
+        as many functions as you think you need to make this drawing of 50 pixel squares.
       courseE_artist_functions9_markdown_instruction: "Create this image using the\nlimited
         blocks provided. \r\n\r\n- Each triangle has sides of **50 pixels**  \r\n-\nTo
         draw a diamond, you will need to alternate between turning **60 degrees\nand

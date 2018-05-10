@@ -368,6 +368,7 @@ nl:
     enter_new_login_info: 'Voer je nieuwe aanmeldgegevens in'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Voltooid'
     tried: 'Geprobeerd'
@@ -723,21 +724,21 @@ nl:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: Wit
+        white: "Wit"
       - 
-        black: Zwart of African American
+        black: "Zwart of African American"
       - 
-        hispanic: Hispanic of Latino
+        hispanic: "Hispanic of Latino"
       - 
-        asian: Aziatisch
+        asian: "Aziatisch"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Anders
+        other: "Anders"
       - 
-        opt_out: Wil ik liever niet zeggen
+        opt_out: "Wil ik liever niet zeggen"
     submit: "Insturen"
     decline: "Afsluiten"
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
