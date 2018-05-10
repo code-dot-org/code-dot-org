@@ -17,6 +17,7 @@ class Video < ActiveRecord::Base
   default_scope {order(:key)}
 
   validates_uniqueness_of :key
+  validates_presence_of :download
 
   before_save :fetch_thumbnail
 
@@ -72,6 +73,13 @@ class Video < ActiveRecord::Base
 
   def self.youtube_base_url
     'https://www.youtube.com'
+  end
+
+  def self.s3_metadata(url)
+    key = url.sub(/^https?:\/\/videos.code.org\//, '')
+    AWS::S3.create_client.head_object(bucket: 'videos.code.org', key: key)
+  rescue Aws::S3::Errors::NoSuchKey
+    {}
   end
 
   def fetch_thumbnail

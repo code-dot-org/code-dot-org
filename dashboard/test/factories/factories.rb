@@ -563,6 +563,7 @@ FactoryGirl.define do
   factory :video do
     sequence(:key) {|n| "concept_#{n}"}
     youtube_code 'Bogus text'
+    download 'https://videos.code.org/test-video.mp4'
   end
 
   factory :follower do
