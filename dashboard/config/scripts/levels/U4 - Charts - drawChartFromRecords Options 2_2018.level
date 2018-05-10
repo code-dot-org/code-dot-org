@@ -41,10 +41,6 @@
     "project_template_level_name": "U4 - Charts - Line Chart Template_2018",
     "parent_level_id": 4130,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -53,7 +49,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

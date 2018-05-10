@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "What other topics do you wish were covered in the course?",
+    "markdown_instructions": "What other topics are you interested in learning about in the future?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -16,7 +16,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-07 17:36:27 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-05-07 17:37:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-07 17:36:27 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-05-07 17:37:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-05-09 10:50:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
