@@ -49,6 +49,10 @@ class Course < ApplicationRecord
     I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
   end
 
+  def localized_version_title
+    I18n.t("data.course.name.#{name}.version_title", default: version_year)
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -273,7 +277,7 @@ class Course < ApplicationRecord
   def summarize_versions
     Course.
       where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
-      map {|c| {name: c.name, version_year: c.version_year}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end
