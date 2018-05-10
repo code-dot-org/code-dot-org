@@ -99,7 +99,6 @@ class TextResponsesTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: (_, {rowData}) => {return rowData.stage;},
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -118,7 +117,6 @@ class TextResponsesTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: (_, {rowData}) => {return rowData.puzzle;},
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -137,7 +135,6 @@ class TextResponsesTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: (_, {rowData}) => {return rowData.question;},
           props: {
             style: {
               ...tableLayoutStyles.cell
