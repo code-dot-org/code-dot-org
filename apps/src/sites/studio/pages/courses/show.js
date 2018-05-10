@@ -56,6 +56,7 @@ function showCourseOverview() {
       <CourseOverview
         name={courseSummary.name}
         title={courseSummary.title}
+        assignmentFamilyTitle={courseSummary.assignment_family_title}
         id={courseSummary.id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
