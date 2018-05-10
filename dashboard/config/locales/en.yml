@@ -900,6 +900,8 @@ en:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Learning Stuff'
+    csp_postap_2: 'Chapter 2: Learning Other Stuff'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
