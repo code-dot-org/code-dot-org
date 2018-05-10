@@ -13,6 +13,10 @@
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
 
+  cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+  cookie_banner_more_information: "See Code.org's Privacy Policy."
+  cookie_banner_accept: 'I agree'
+
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
