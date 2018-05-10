@@ -57,13 +57,13 @@
     "examples_required": "false",
     "parent_level_id": 2273,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "instructions_important": "false",
     "display_name": "Internet Simulator: DNS",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
