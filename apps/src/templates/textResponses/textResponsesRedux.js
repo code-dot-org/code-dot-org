@@ -11,12 +11,9 @@ export const textResponsePropType = PropTypes.shape({
   url: PropTypes.string.isRequired
 });
 
-/**
- * Initial state of textResponsesRedux
- * responseData - object where the keys are sectionIds and values are arrays of textResponsePropType
- */
+ // Initial state of textResponsesRedux
 const initialState = {
-  responseData: PropTypes.objectOf(PropTypes.number)
+  responseData: {}
 };
 
 const SET_TEXT_RESPONSES = 'responseData/SET_TEXT_RESPONSES';
@@ -29,7 +26,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
     const state = getState().textResponses;
 
     // Don't load data if it's already stored in redux.
-    if (state.responseData[sectionId]) {
+    if (state.responseData[sectionId] && state.responseData[sectionId][scriptId]) {
       onComplete();
       return;
     }
