@@ -41,7 +41,7 @@ class TeacherFeedback extends Component {
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
-        <div style={styles.content}> Coming Fall 2018: Input to provide feedback on student work</div>
+        <div style={styles.content}>Coming soon: You’ll be able to use this tab to give feedback to your students about their work</div>
       </div>
     );
   }
