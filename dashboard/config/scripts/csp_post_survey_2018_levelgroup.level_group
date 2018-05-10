@@ -12,6 +12,8 @@ level 'csp-post-survey-2017-q4_2018'
 level 'csp-post-survey-2017-q6_2018'
 level 'csp-post-survey-2017-q8_2018'
 level 'csp-post-survey-2017-q9_2018'
+level 'csp-post-survey-2017-q34_2018'
+level 'csp-post-survey-2017-q33_2018'
 
 text 'csp-pre-survey-2017 preamble 2 cs in general_2018'
 level 'csp-post-survey-2017-q10_2018'
@@ -22,10 +24,11 @@ level 'csp-post-survey-2017-q14_2018'
 level 'csp-post-survey-2017-q16_2018'
 level 'csp-post-survey-2017-q17_2018'
 level 'csp-post-survey-2017-q18_2018'
-level 'csp-post-survey-2017-q28_2018'
+
 
 page
 text 'csp-post-survey-2017 preamble 3 this class_2018'
+level 'csp-post-survey-2017-q28_2018'
 level 'csp-post-survey-2017-q19_2018'
 level 'csp-post-survey-2017-q20_2018'
 level 'csp-post-survey-2017-q22_2018'
@@ -40,15 +43,16 @@ level 'csp-post-survey-2017-q36-b_2018'
 level 'csp-post-survey-2017-q36-c_2018'
 level 'csp-post-survey-2017-q36-d_2018'
 level 'csp-post-survey-2017-q36-e_2018'
+level 'csp-post-survey-2017-q32_2018'
 
 page
 text 'csp-post-survey-2017 preamble 4 future and outlook_2018'
 level 'csp-post-survey-2017-q29_2018'
 level 'csp-post-survey-2017-q30_2018'
 level 'csp-post-survey-2017-q31_2018'
-level 'csp-post-survey-2017-q34_2018'
-level 'csp-post-survey-2017-q32_2018'
-level 'csp-post-survey-2017-q33_2018'
+
+
+
 
 page
 text 'csp-post-survey-2017-preamble 5 implementation-teacher_2018'
