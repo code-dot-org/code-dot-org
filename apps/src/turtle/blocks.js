@@ -392,7 +392,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: Blockly.Variable.getVars,
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_sides = generator.variables_get;
@@ -505,7 +505,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1', this.getTitleValue('VAR')));
     },
-    getVars: Blockly.Variable.getVars,
+    getVars: Blockly.Variables.getVars,
     // serialize the counter variable name to xml so that it can be used across
     // different locales
     mutationToDom: function () {
