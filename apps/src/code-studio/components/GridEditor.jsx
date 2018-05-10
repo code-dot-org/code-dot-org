@@ -7,6 +7,8 @@ import React, {PropTypes} from 'react';
 
 import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 
+var StudioCell = require('@cdo/apps/studio/cell');
+
 var HarvesterCellEditor = require('./HarvesterCellEditor');
 var PlanterCellEditor = require('./PlanterCellEditor');
 var BeeCellEditor = require('./BeeCellEditor');
@@ -74,7 +76,7 @@ export default class GridEditor extends React.Component {
 
   getCellClass() {
     if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
-      return cells.StudioCell;
+      return StudioCell;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
       return cells.BeeCell;
     } else if (mazeUtils.isHarvesterSkin(this.props.skin)) {
