@@ -338,11 +338,13 @@ Devise.setup do |config|
       end
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
   end
 
   # ==> Mountable engine configurations
