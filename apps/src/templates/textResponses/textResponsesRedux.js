@@ -23,8 +23,8 @@ const FINISH_LOADING_RESPONSES = 'textResponses/FINISH_LOADING_RESPONSES';
 
 // Action creators
 export const setTextResponses = (sectionId, scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, scriptId, responseData});
-const startLoadingResponses = () => ({ type: START_LOADING_RESPONSES });
-const finishLoadingResponses = () => ({ type: FINISH_LOADING_RESPONSES });
+export const startLoadingResponses = () => ({ type: START_LOADING_RESPONSES });
+export const finishLoadingResponses = () => ({ type: FINISH_LOADING_RESPONSES });
 
 export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   return (dispatch, getState) => {
@@ -78,7 +78,7 @@ export default function textResponses(state=initialState, action) {
 }
 
 // Flatten text responses returned from server to remove nested student object
-const convertTextResponseServerData = (textResponses) => {
+export const convertTextResponseServerData = (textResponses) => {
   let responses = [];
   textResponses.forEach(response => {
     const {id, name} = response.student;
