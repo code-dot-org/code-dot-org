@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
 
-// responses - object where keys are scriptIds and values are
+// responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
 const responses = {
   1: [
