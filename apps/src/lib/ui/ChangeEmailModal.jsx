@@ -42,13 +42,6 @@ const styles = {
   },
 };
 
-/**
- * Pops up a dialog that prompts the user to confirm their email address.
- * This is used when oauth accounts switch from student to teacher, in order
- * to verify that the email address is already known to the user (it will
- * become visible on the accounts page after the transition, which is a
- * potential violation of student privacy).
- */
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
