@@ -153,8 +153,9 @@ export default class AssignmentSelector extends Component {
   }
 
   setPrimary = (selectedAssignmentFamily, selectedVersion) => {
-    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
     const versions = this.getVersions(selectedAssignmentFamily);
+    selectedVersion = selectedVersion || versions[0];
+    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
     const selectedSecondaryId = noAssignment;
 
     this.setState({
