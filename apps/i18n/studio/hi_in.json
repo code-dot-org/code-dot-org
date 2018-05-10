@@ -318,6 +318,7 @@
   "moveSpriteN": "move actor {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "करने के लिए",
   "toXY": "to x,y",
   "moveDown": "नीचे चले",
   "moveDownTooltip": "Move an actor down.",

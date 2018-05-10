@@ -440,6 +440,7 @@
     confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
     enter_parent_email: Entrez l'adresse e-mail de vos parents ou de votre tuteur
       (pour la récupération de mot de passe)
+    update: Update Account
   user_level:
     completed: Terminé
     tried: A essayé

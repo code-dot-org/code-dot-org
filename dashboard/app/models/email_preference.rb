@@ -22,14 +22,28 @@ class EmailPreference < ApplicationRecord
   validates_uniqueness_of :email
   validates_email_format_of :email
 
+  SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'Teacher account sign up',
+    ACCOUNT_TYPE_CHANGE = 'Student account change to teacher',
+    ACCOUNT_EMAIL_ADD = 'Add email to teacher account',
+    ACCOUNT_EMAIL_CHANGE = 'Update teacher account email',
+    FORM_HOUR_OF_CODE = 'Host Hour of Code form',
+    FORM_VOLUNTEER = 'Volunteer form'
+  ].freeze
+
+  validates_inclusion_of :source, in: SOURCE_TYPES
+
   def email=(value)
     super(value&.strip&.downcase)
   end
 
   def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
-    EmailPreference.find_or_initialize_by(email: email).update!(
+    email_preference = EmailPreference.find_or_initialize_by(email: email)
+    email_preference.update!(
       email: email,
-      opt_in: opt_in,
+      # Don't change opt_in to false if the record exists already.  We currently only allow user to opt out via Pardot
+      # unsubscribe link.
+      opt_in: (!email_preference.new_record? && !opt_in) ? email_preference.opt_in : opt_in,
       ip_address: ip_address,
       source: source,
       form_kind: form_kind

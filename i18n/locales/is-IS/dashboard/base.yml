@@ -368,6 +368,7 @@ is:
     enter_new_login_info: 'Færðu inn nýju innskráningarupplýsingarnar þínar'
     confirm_secret_words: 'Staðfestu að þetta sért þú með því að slá inn núverandi leyniorð'
     enter_parent_email: "Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi gleymast)"
+    update: "Update Account"
   user_level:
     completed: 'Lokið'
     tried: 'Reynt'
@@ -723,21 +724,21 @@ is:
     message: "Segðu okkur frá kynþætti þínum (merktu við allt sem á við)"
     races:
       - 
-        white: Hvít/ur
+        white: "Hvít/ur"
       - 
-        black: Svartur/svört eða afrísk-amerísk/ur
+        black: "Svartur/svört eða afrísk-amerísk/ur"
       - 
-        hispanic: Latnesk-amerísk/ur
+        hispanic: "Latnesk-amerísk/ur"
       - 
-        asian: Asísk/ur
+        asian: "Asísk/ur"
       - 
-        hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
+        hawaiian: "Hawaii frumbyggi eða af annarri Kyrrahafsþjóð"
       - 
-        american_indian: Amerískur indíáni / Alaska frumbyggi
+        american_indian: "Amerískur indíáni / Alaska frumbyggi"
       - 
-        other: Annað
+        other: "Annað"
       - 
-        opt_out: Vil ekki gefa upp
+        opt_out: "Vil ekki gefa upp"
     submit: "Senda inn"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'

@@ -14,7 +14,7 @@ export const textResponsePropType = PropTypes.shape({
  // Initial state of textResponsesRedux
 const initialState = {
   sectionId: null,
-  responseData: {},
+  responseDataByScript: {},
   isLoadingResponses: false
 };
 
@@ -34,7 +34,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
     const state = getState().textResponses;
 
     // Don't load data if it's already stored in redux.
-    if (state.responseData[scriptId]) {
+    if (state.responseDataByScript[scriptId]) {
       onComplete();
       return;
     }
@@ -65,8 +65,8 @@ export default function textResponses(state=initialState, action) {
   if (action.type === SET_TEXT_RESPONSES) {
     return {
       ...state,
-      responseData: {
-        ...state.responseData,
+      responseDataByScript: {
+        ...state.responseDataByScript,
         [action.scriptId]: action.responseData
       }
     };

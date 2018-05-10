@@ -346,7 +346,7 @@ es:
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: '(necesitamos tu contraseña actual para confirmar los cambios)'
     delete: 'Eliminar tu cuenta'
-    delete_text: "Si haces clic en el botón de abajo, se eliminará tu cuenta."
+    delete_text: "Haz click en el botón de abajo para eliminar tu cuenta."
     delete_text_teacher_note: "Nota: Al eliminar tu cuenta no eliminarás la cuenta de tus alumnos."
     delete_confirm: '¿Estás seguro de que deseas eliminar tu cuenta?'
     deleted_user: 'usuario borrado'
@@ -362,6 +362,7 @@ es:
     enter_new_login_info: 'Ingresa tu nueva información de inicio de sesión'
     confirm_secret_words: 'Confirma que eres tú al ingresar tus palabras secretas actuales'
     enter_parent_email: "Ingresa el email de tu padre o tutor (para recuperar la clave)"
+    update: "Update Account"
   user_level:
     completed: 'Completada'
     tried: 'Prueba'
@@ -717,21 +718,21 @@ es:
     message: "Por favor díganos su raza (marque todo lo que aplique)"
     races:
       - 
-        white: Blanco
+        white: "Blanco"
       - 
-        black: Negro o Afroamericano
+        black: "Negro o Afroamericano"
       - 
-        hispanic: Hispano o Latino
+        hispanic: "Hispano o Latino"
       - 
-        asian: Asiático
+        asian: "Asiático"
       - 
-        hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
+        hawaiian: "Nativo Hawaiano o de otra Isla del Pacífico"
       - 
-        american_indian: Indio Americano/Nativo de Alaska
+        american_indian: "Indio Americano/Nativo de Alaska"
       - 
-        other: Otros
+        other: "Otros"
       - 
-        opt_out: Prefiero no decir
+        opt_out: "Prefiero no decir"
     submit: "Enviar"
     decline: "Cerrar"
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar por <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.'

@@ -318,6 +318,7 @@
   "moveSpriteN": "Премести актьор {spriteIndex}",
   "moveDroid": "премести дроида",
   "moveDroidN": "премести дроид {spriteIndex}",
+  "to": "до",
   "toXY": "спрямо x, y",
   "moveDown": "Премести надолу",
   "moveDownTooltip": "Премести актьора надолу.",

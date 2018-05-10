@@ -213,7 +213,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create causes SignIn creation" do
-    frozen_time = '1985-10-26 01:20:00'
+    frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
     assert_creates(SignIn) do
       post :create, params: {user: @default_params}
@@ -221,7 +221,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in = SignIn.last
     assert sign_in
     assert_equal 1, sign_in.sign_in_count
-    assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
+    assert_equal frozen_time, sign_in.sign_in_at
   end
 
   test "update student without user param returns 400 BAD REQUEST" do

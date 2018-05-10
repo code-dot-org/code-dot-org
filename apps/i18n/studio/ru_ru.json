@@ -318,6 +318,7 @@
   "moveSpriteN": "переместить исполнителя {spriteIndex}",
   "moveDroid": "переместить дроида",
   "moveDroidN": "переместить дроида {spriteIndex}",
+  "to": "к",
   "toXY": "к x, y",
   "moveDown": "Переместить вниз",
   "moveDownTooltip": "Переместить исполнителя вниз.",
