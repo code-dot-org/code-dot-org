@@ -22,7 +22,7 @@ const initialState = {
 const SET_TEXT_RESPONSES = 'responseData/SET_TEXT_RESPONSES';
 
 // Action creators
-export const setTextResponses = (sectionId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, responseData});
+export const setTextResponses = (sectionId, scriptId, responseData) => ({ type: SET_TEXT_RESPONSES, sectionId, scriptId, responseData});
 
 export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
   return (dispatch, getState) => {
@@ -38,7 +38,7 @@ export const asyncLoadTextResponses = (sectionId, scriptId, onComplete) => {
       if (error) {
         console.error(error);
       } else {
-        dispatch(setTextResponses(sectionId, data));
+        dispatch(setTextResponses(sectionId, scriptId, data));
         onComplete();
       }
     });
@@ -51,7 +51,9 @@ export default function textResponses(state=initialState, action) {
       ...state,
       responseData: {
         ...state.responseData,
-        [action.sectionId]: action.responseData
+        [action.sectionId]: {
+          [action.scriptId]: action.responseData
+        }
       }
     };
   }
