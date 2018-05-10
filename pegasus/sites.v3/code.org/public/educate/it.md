@@ -11,14 +11,14 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 
 ### Ask your school or district IT department to whitelist these sites:
 
-| Priority | URL |
-| -------- | ----------- |
-| **Required**   | `https://code.org`<br/>`https://*.code.org` |
-| **Optional**    | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com` |
-| **To use YouTube hosted videos**   | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com`<br/>`https://*.ytimg.com` |
-| **To use Code.org hosted videos**   | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico` |
-| **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443` |
-| **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org` |
+| Priority | URL                                                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Required**   | `https://code.org`<br/>`https://*.code.org`                                                                                                              |
+| **Optional**    | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`                                                                                      |
+| **To use YouTube hosted videos**   | `https://youtube-nocookie.com/*`<br/>`https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com`<br/>`https://*.ytimg.com` |
+| **To use Code.org hosted videos**   | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`                                                      |
+| **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                             |
+| **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                                |
 
 ### Hardware
 
@@ -29,6 +29,11 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 
 - Tutorials work on [any modern browser](https://support.code.org/hc/en-us/articles/202591743) and operating system.
 - If YouTube is blocked at your school and you're using Firefox or Safari, Code.org hosted videos require [Flash player](https://get.adobe.com/flashplayer/). Chrome, iOS and Android do not require extra software to play videos.
+
+### Special settings for Google Apps/G-Suite users
+
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube.  If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels.  See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list.  You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.  
+
 
 ## Can you play this video?
 

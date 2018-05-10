@@ -1,4 +1,5 @@
 import { getLevelResult, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import { PropTypes } from 'react';
 import {
   NAME_COLUMN_WIDTH,
@@ -24,7 +25,9 @@ export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = validScripts => ({ type: SET_VALID_SCRIPTS, validScripts });
+export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
+  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
+);
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
   { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
@@ -199,9 +202,33 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_VALID_SCRIPTS) {
     // If no scriptId is assigned, use the first valid script.
     const defaultScriptId = state.scriptId || action.validScripts[0].id;
+
+    let validScripts = action.validScripts;
+    if (action.studentScriptIds && action.validCourses) {
+
+      // First, construct an id map consisting only of script ids which a
+      // student has participated in.
+      const idMap = {};
+      action.studentScriptIds.forEach(id => idMap[id] = true);
+
+      // If the student has participated in a script which is a unit in a
+      // course, or if this section is assigned to a course, make sure that
+      // all units in that course are included.
+      action.validCourses.forEach(course => {
+        if (
+          course.script_ids.some(id => idMap[id]) ||
+          (action.assignedCourseId && action.assignedCourseId === course.id)
+        ) {
+          course.script_ids.forEach(id => idMap[id] = true);
+        }
+      });
+
+      validScripts = validScripts.filter(script => idMap[script.id]);
+    }
+
     return {
       ...state,
-      validScripts: action.validScripts,
+      validScripts,
       scriptId: defaultScriptId,
     };
   }
@@ -257,7 +284,24 @@ export const getCurrentProgress = (state) => {
  * TODO(caleybrock) write a test for this function
  */
 export const getCurrentScriptData = (state) => {
-  return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+  const script = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+
+  if (script) {
+    const stages = script.stages.map(stage => {
+      return {
+        ...stage,
+        levels: stage.levels.map(level => {
+          return processedLevel(level);
+        })
+      };
+    });
+    return {
+      ...script,
+      stages: stages,
+    };
+  }
+
+  return script;
 };
 
 /**
@@ -282,14 +326,14 @@ export const getLevels = (state, studentId, stageId) => {
  */
 export const getColumnWidthsForDetailView = (state) => {
   let columnLengths = [NAME_COLUMN_WIDTH];
-  const stages = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId].stages;
+  const stages = getCurrentScriptData(state).stages;
 
   for (let stageIndex = 0; stageIndex < stages.length; stageIndex++) {
     const levels = stages[stageIndex].levels;
     // Left and right padding surrounding bubbles
     let width = 10;
     for (let levelIndex = 0; levelIndex < levels.length; levelIndex++) {
-      if (levels[levelIndex].kind === 'unplugged') {
+      if (levels[levelIndex].isUnplugged) {
         // Pill shaped bubble
         width = width + PILL_BUBBLE_WIDTH;
       } else if (levels[levelIndex].is_concept_level) {

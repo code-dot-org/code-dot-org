@@ -86,7 +86,15 @@ class ProgressBubble extends React.Component {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    //TODO: (ErinB) probably change to use just number during post launch clean-up.
+    selectedSectionId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    selectedStudentId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
@@ -99,7 +107,7 @@ class ProgressBubble extends React.Component {
   };
 
   render() {
-    const { level, smallBubble, selectedSectionId, currentLocation, stageTrophyEnabled } = this.props;
+    const { level, smallBubble, selectedSectionId, selectedStudentId, currentLocation, stageTrophyEnabled } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -121,6 +129,9 @@ class ProgressBubble extends React.Component {
       const queryParams = queryString.parse(currentLocation.search);
       if (selectedSectionId) {
         queryParams.section_id = selectedSectionId;
+      }
+      if (selectedStudentId) {
+        queryParams.user_id = selectedStudentId;
       }
       const paramString = queryString.stringify(queryParams);
       href = url;

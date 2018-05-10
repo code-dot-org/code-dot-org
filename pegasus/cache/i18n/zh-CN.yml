@@ -527,8 +527,10 @@
   video_title_real_madrid: 编程一小时和Real Madrid
   video_title_marco_belinelli: 编程一小时和Marco Belinelli
   video_title_chris_bosh: Chris Bosh和计算机科学
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 分钟
   video_2min: 2 分钟
+  video_3min: 3 min
   video_5min: 5 分钟
   speak_another_language: 使用另一种语言？
   help_translate: 帮助我们翻译
@@ -1579,5 +1581,3 @@
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: 应用程序实验室简介
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min

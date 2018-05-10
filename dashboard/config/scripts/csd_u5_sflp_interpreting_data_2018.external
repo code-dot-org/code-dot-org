@@ -1,0 +1,15 @@
+name 'CSD-U5-SFLP Interpreting Data_2018'
+display_name 'Overview'
+markdown <<MARKDOWN
+# Overview
+
+Go further into the structuring of data by cleaning and visualizing raw data sets. Look at how visualizations change the way you understand data and make decisions about it.
+
+## Resources
+
+* [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Structuring Data - Exemplar ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))
+MARKDOWN

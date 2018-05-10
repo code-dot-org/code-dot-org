@@ -663,8 +663,10 @@
   video_title_real_madrid: Hora de código con el Real Madrid
   video_title_marco_belinelli: Hora de código con Marco Belinelli
   video_title_chris_bosh: Chris Bosh sobre Ciencias de la computación
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: "¿Hablas otro idioma?"
   help_translate: Ayúdanos a traducir.
@@ -1547,7 +1549,8 @@
     de la computación y crea tu propio arte, historias y juegos.
   coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
     puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
-  coursee_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
+    de C y D y luego ir más allá con funciones.
   coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
     ciencias de la computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
@@ -2125,7 +2128,7 @@
   user_header_settings: Mi cuenta
   user_header_logout: Cerrar sesión
   user_header_signin: Iniciar Sesión
-  view_all_sections: View All Sections
+  view_all_sections: Ver todas las secciones
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2180,5 +2183,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_3min: 3 min
