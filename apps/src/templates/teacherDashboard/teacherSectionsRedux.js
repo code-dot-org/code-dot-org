@@ -377,7 +377,7 @@ const defaultVersionYear = '2017';
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
-  'category_priority', 'category', 'position', 'name', 'assignment_family_name'
+  'category_priority', 'category', 'position', 'assignment_family_title', 'assignment_family_name'
 ];
 
 export default function teacherSections(state=initialState, action) {
@@ -460,6 +460,7 @@ export default function teacherSections(state=initialState, action) {
         // own assignment family.
         assignmentFamilies.push({
           ..._.pick(script, assignmentFamilyFields),
+          assignment_family_title: script.name,
           assignment_family_name: script.script_name
         });
       }

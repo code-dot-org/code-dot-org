@@ -393,6 +393,9 @@ const FIELD_INPUT = 'field';
  * @param {boolean} args[].field Indicates that an input is a field input, i.e.
  *   a textbox. The generated code will be wrapped in quotes if the arg has type
  *   "String".
+ * @param {boolean} args[].empty Indicates that an input should not render a
+ *   connection or generate any code. Mostly just useful as a line break for
+ *   non-inlined blocks.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
@@ -438,6 +441,17 @@ const determineInputs = function (text, args, strictTypes=[]) {
           label,
           strict,
         });
+      } else if (arg.statement) {
+        inputs.push({
+          mode: STATEMENT_INPUT,
+          name: arg.name,
+          label,
+        });
+      } else if (arg.empty) {
+        inputs.push({
+          mode: DUMMY_INPUT,
+          label,
+        });
       } else {
         inputs.push({
           mode: VALUE_INPUT,
@@ -480,67 +494,56 @@ exports.determineInputs = determineInputs;
  * @param {object} customInputTypes A map of customType input names to their
  *   definitions, which are objects that have `addInput` and `generateCode`
  *   methods.
+ * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (blockly, block, inputs, customInputTypes) {
+const interpolateInputs = function (blockly, block, inputs, customInputTypes, inline) {
+  let dropdown, previousInput;
+  const getPreviousInput = () => {
+    if (!previousInput) {
+      previousInput = block.appendDummyInput();
+    }
+    return previousInput;
+  };
   inputs.map(input => {
-    let dropdown, valueInput;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
-        block.appendDummyInput()
-          .appendTitle(input.label)
+        getPreviousInput().appendTitle(input.label)
           .appendTitle(dropdown, input.name);
         break;
       case VALUE_INPUT:
-        valueInput = block.appendValueInput(input.name);
+        previousInput = block.appendValueInput(input.name);
         if (input.strict) {
-          valueInput.setStrictCheck(input.type);
+          previousInput.setStrictCheck(input.type);
         } else {
-          valueInput.setCheck(input.type);
+          previousInput.setCheck(input.type);
         }
-        valueInput.appendTitle(input.label);
+        previousInput.appendTitle(input.label);
+        if (!inline) {
+          previousInput.setAlign(Blockly.ALIGN_RIGHT);
+        }
         break;
       case DUMMY_INPUT:
-        block.appendDummyInput()
-          .appendTitle(input.label);
+        getPreviousInput().appendTitle(input.label);
         break;
       case STATEMENT_INPUT:
+        if (input.label) {
+          getPreviousInput().appendTitle(input.label);
+        }
         block.appendStatementInput(input.name);
+        previousInput = null;
         break;
       case FIELD_INPUT:
-        block.appendDummyInput()
-            .appendTitle(input.label)
+        getPreviousInput().appendTitle(input.label)
             .appendTitle(new Blockly.FieldTextInput(''), input.name);
         break;
       default:
-        customInputTypes[input.mode].addInput(block, input);
+        previousInput = customInputTypes[input.mode].addInput(block, input);
         break;
     }
   });
 };
 exports.interpolateInputs = interpolateInputs;
-
-/**
- * Add pre-labeled inputs
- * @param {Blockly} blockly The Blockly object provided to install()
- * @param {Block} block The block to add the inputs to
- * @param {Object[]} args The list of inputs
- * @param {String} args[].name The name for this input, conventionally all-caps
- * @param {String} args[].type The type for this input, defaults to allowing any
- *   type
- * @param {boolean} args[].strict Whether or not to enforce strict type checking
- * @param {String} args[].label The text to display to the left of the input
- */
-const addInputs = function (blockly, block, args) {
-  block.appendDummyInput()
-    .appendTitle('show title screen');
-  args.forEach(arg => {
-    block.appendValueInput(arg.name)
-      .setCheck(arg.type || Blockly.BlockValueType.NONE, arg.strict)
-      .setAlign(Blockly.ALIGN_RIGHT)
-      .appendTitle(arg.label);
-  });
-};
 
 /**
  * Create a block generator that creats blocks that directly map to a javascript
@@ -634,10 +637,19 @@ exports.createJsWrapperBlockCreator = function (
     if (simpleValue && args.length !== 1) {
       throw new Error('simpleValue blocks must have exactly one argument');
     }
+    if (inline === undefined) {
+      inline = true;
+    }
     args = args || [];
+    if (args.filter(arg => arg.statement).length > 1 && inline) {
+      console.warn('blocks with multiple statement inputs cannot be inlined');
+      inline = false;
+    }
     color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
-    if (eventLoopBlock) {
+    if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
+      // If the eventloop block doesn't explicitly list its statement inputs,
+      // just tack one onto the end
       args.push({
         name: 'DO',
         statement: true,
@@ -660,17 +672,14 @@ exports.createJsWrapperBlockCreator = function (
           });
         }
 
-        if (inline === false) {
-          addInputs(blockly, this, args);
-        } else {
-          interpolateInputs(
-            blockly,
-            this,
-            determineInputs(blockText, inputs, strictTypes),
-            customInputTypes,
-          );
-          this.setInputsInline(true);
-        }
+        interpolateInputs(
+          blockly,
+          this,
+          determineInputs(blockText, inputs, strictTypes),
+          customInputTypes,
+          inline,
+        );
+        this.setInputsInline(inline);
 
         if (returnType) {
           this.setOutput(
@@ -694,6 +703,8 @@ exports.createJsWrapperBlockCreator = function (
       const values = args.map(arg => {
         if (arg.customInput) {
           return customInputTypes[arg.customInput].generateCode(this, arg);
+        } else if (arg.empty) {
+          return null;
         } else if (arg.options) {
           return this.getTitleValue(arg.name);
         } else if (arg.field) {
@@ -708,7 +719,7 @@ exports.createJsWrapperBlockCreator = function (
         } else {
           return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
         }
-      }).map(value => {
+      }).filter(value => value !== null).map(value => {
         if (value === "") {
           // Missing inputs should be passed into func as undefined
           return "undefined";

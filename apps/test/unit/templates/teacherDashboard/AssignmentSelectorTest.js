@@ -21,7 +21,7 @@ const defaultProps = {
     // course with scripts
     '29_null': {
       id: 29,
-      name: "CS Discoveries",
+      name: "CS Discoveries 2017",
       script_name: "csd",
       category: "Full Courses",
       position: 1,
@@ -32,6 +32,7 @@ const defaultProps = {
       assignId: "29_null",
       path: '//localhost-studio.code.org:3000/courses/csd',
       assignment_family_name: 'csd',
+      assignment_family_title: 'CS Discoveries',
       version_year: '2017',
     },
     // script in course
@@ -47,6 +48,7 @@ const defaultProps = {
       assignId: "null_168",
       path: "//localhost-studio.code.org:3000/s/csd1",
       assignment_family_name: 'csd1',
+      assignment_family_title: 'Unit 1: Problem Solving',
       version_year: '2017',
     },
     // script not in course
@@ -62,19 +64,20 @@ const defaultProps = {
       assignId: "null_6",
       path: "//localhost-studio.code.org:3000/s/flappy",
       assignment_family_name: 'flappy',
+      assignment_family_title: 'Make a Flappy game',
       version_year: '2017',
     }
   },
   assignmentFamilies: [
     {
-      name: "CS Discoveries",
+      assignment_family_title: "CS Discoveries",
       category: "Full Courses",
       position: 1,
       category_priority: 0,
       assignment_family_name: 'csd',
     },
     {
-      name: "Make a Flappy game",
+      assignment_family_title: "Make a Flappy game",
       category: "Hour of Code",
       position: 4,
       category_priority: 2,

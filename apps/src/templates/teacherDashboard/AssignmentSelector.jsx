@@ -27,7 +27,7 @@ const hasAssignmentFamily = (assignmentFamilies, assignment)  => (
 const categorizeAssignmentFamilies = assignmentFamilies => (
   _(assignmentFamilies)
     .values()
-    .orderBy(['category_priority', 'category', 'position', 'name'])
+    .orderBy(['category_priority', 'category', 'position', 'assignment_family_title'])
     .groupBy('category')
     .value()
   );
@@ -199,7 +199,7 @@ export default class AssignmentSelector extends Component {
                     key={assignmentFamily.assignment_family_name}
                     value={assignmentFamily.assignment_family_name}
                   >
-                    {assignmentFamily.name}
+                    {assignmentFamily.assignment_family_title}
                   </option>
               ))}
             </optgroup>
