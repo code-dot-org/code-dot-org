@@ -138,9 +138,9 @@ class SectionProgress extends Component {
           </div>
         </div>
         <div style={{clear: 'both'}}>
-          {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
+          {!levelDataInitialized && <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>}
           {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-            <div>
+            <div id="uitest-summary-view">
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
@@ -151,7 +151,7 @@ class SectionProgress extends Component {
             </div>
           }
           {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-            <div>
+            <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
