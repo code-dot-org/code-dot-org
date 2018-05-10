@@ -87,9 +87,8 @@
         coins!
       courseE_playLab_scaffold3_failure_message_override: ඔබ ඔබගේ ක්‍රිඩාව සහ වැඩසටහන
         ඉදිරියට කිරීම සඳහා නව චරිත දෙකක් හෝ ඊට වැඩි එකතු විය යුතුය.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: ඔබ ඔබගේ ක්‍රිඩාව සහ
+        වැඩසටහන ඉදිරියට කිරීම සඳහා නව චරිත දෙකක් හෝ ඊට වැඩි එකතු විය යුතුය.
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.

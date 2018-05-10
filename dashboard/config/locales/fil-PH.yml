@@ -441,6 +441,7 @@
       ng iyong kasalukuyang mga secret na mga pulong
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
+    update: Update Account
   user_level:
     completed: Nakompleto
     tried: Sinubukan

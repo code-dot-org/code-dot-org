@@ -368,6 +368,7 @@ sq:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'E përfunduar'
     tried: 'U përpoqe'
@@ -723,21 +724,21 @@ sq:
     message: "Ju lutem na tregoni garën tuaj (kontrollo të gjitha aplikimet)"
     races:
       - 
-        white: E bardhë
+        white: "E bardhë"
       - 
-        black: I zi ose Afrikano American
+        black: "I zi ose Afrikano American"
       - 
-        hispanic: Hispanik ose Latin
+        hispanic: "Hispanik ose Latin"
       - 
-        asian: Aziatik
+        asian: "Aziatik"
       - 
-        hawaiian: Vendas Havajan ose banues të  tjetër të Paqësorit
+        hawaiian: "Vendas Havajan ose banues të  tjetër të Paqësorit"
       - 
-        american_indian: Amerikano-Indian/Vendas nga Alaska
+        american_indian: "Amerikano-Indian/Vendas nga Alaska"
       - 
-        other: Tjetër
+        other: "Tjetër"
       - 
-        opt_out: Preferoj të mos përgjigjem
+        opt_out: "Preferoj të mos përgjigjem"
     submit: "Dorëzo"
     decline: "Mbyll"
   zendesk_too_young_message: 'Na vjen keq, përdoruesit e vegjël nuk mund të futen tek faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a> pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.'

@@ -40,3 +40,8 @@
             per gli studenti
           description_teacher: Questo è un corso per globale e ha una corposa descrizione
             per gli insegnanti
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

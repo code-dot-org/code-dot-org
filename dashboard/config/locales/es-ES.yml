@@ -400,7 +400,7 @@
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
     delete: Eliminar tu cuenta
-    delete_text: Si haces clic en el botón de abajo, se eliminará tu cuenta.
+    delete_text: Haz click en el botón de abajo para eliminar tu cuenta.
     delete_text_teacher_note: 'Nota: Al eliminar tu cuenta no eliminarás la cuenta
       de tus alumnos.'
     delete_confirm: "¿Estás seguro de que deseas eliminar tu cuenta?"
@@ -430,6 +430,7 @@
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la clave)
+    update: Update Account
   user_level:
     completed: Completada
     tried: Prueba

@@ -368,6 +368,7 @@ si:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -723,21 +724,21 @@ si:
     message: "ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)"
     races:
       - 
-        white: සුදු ජාතික
+        white: "සුදු ජාතික"
       - 
-        black: අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත
+        black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
       - 
-        hispanic: ලතින් ඇමරිකානු
+        hispanic: "ලතින් ඇමරිකානු"
       - 
-        asian: ආසියානු
+        asian: "ආසියානු"
       - 
-        hawaiian: හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී
+        hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
       - 
-        american_indian: ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික
+        american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
       - 
-        other: වෙනත්
+        other: "වෙනත්"
       - 
-        opt_out: පිළිතුරු දීමට අකැමතියි
+        opt_out: "පිළිතුරු දීමට අකැමතියි"
     submit: "යොමු කරන්න"
     decline: "වසන්න"
   zendesk_too_young_message: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'

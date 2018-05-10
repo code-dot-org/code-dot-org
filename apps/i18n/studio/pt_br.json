@@ -318,6 +318,7 @@
   "moveSpriteN": "mova o personagem {spriteIndex}",
   "moveDroid": "mover o droide",
   "moveDroidN": "mover o droide {spriteIndex}",
+  "to": "para",
   "toXY": "para x,y",
   "moveDown": "mova para baixo",
   "moveDownTooltip": "Move um personagem para baixo.",
