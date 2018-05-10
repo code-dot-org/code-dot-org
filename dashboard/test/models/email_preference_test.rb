@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/email_preference_constants'
 
 class EmailPreferenceTest < ActiveSupport::TestCase
   test "create email preference with valid attributes creates email preference" do
@@ -7,7 +8,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
         email: 'test_valid@example.net',
         opt_in: true,
         ip_address: '1.1.1.1',
-        source: EmailPreference::ACCOUNT_SIGN_UP,
+        source: EmailPreferenceConstants::ACCOUNT_SIGN_UP,
         form_kind: nil
     end
   end
@@ -29,7 +30,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: true,
       ip_address: '192.168.1.1',
-      source: EmailPreference::FORM_HOUR_OF_CODE,
+      source: EmailPreferenceConstants::FORM_HOUR_OF_CODE,
       form_kind: 'form text version 2.71828'
     )
     email_preference.reload
@@ -45,7 +46,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: false,
       ip_address: '172.16.6.1',
-      source: EmailPreference::ACCOUNT_SIGN_UP,
+      source: EmailPreferenceConstants::ACCOUNT_SIGN_UP,
       form_kind: 'form text version 3.14159'
     )
     email_preference.reload
