@@ -9,7 +9,8 @@ const responses = [
     question: "Free Response",
     response: "Lorem ipsum dolor sit amet, postea pericula",
     stage: "Lesson 1",
-    student: {id: 1, name: "Student A"},
+    studentId: 1,
+    studentName: "Student A",
     url: "http://fake.url"
   },
   {
@@ -17,7 +18,8 @@ const responses = [
     question: "Free Response",
     response: "Lorem ipsum dolor sit amet, postea pericula",
     stage: "Lesson 1",
-    student: {id: 3, name: "Student C"},
+    studentId: 3,
+    studentName: "Student C",
     url: "http://fake.url"
   },
   {
@@ -25,7 +27,8 @@ const responses = [
     question: "Free Response",
     response: "Lorem ipsum dolor sit amet, postea pericula",
     stage: "Lesson 1",
-    student: {id: 2, name: "Student B"},
+    studentId: 2,
+    studentName: "Student B",
     url: "http://fake.url"
   },
 ];
