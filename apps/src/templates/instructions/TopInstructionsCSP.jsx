@@ -247,7 +247,7 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
 
-    const displayFeedback = experiments.isEnabled("commentBoxTab") && this.props.teacherView;
+    const displayFeedback = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.teacherView;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
