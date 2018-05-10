@@ -368,6 +368,7 @@ lt:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Baigta'
     tried: 'Išbandyta'
@@ -723,21 +724,21 @@ lt:
     message: "Nurodykite savo rasę (pažymėkite visus tinkamus variantus)"
     races:
       - 
-        white: Baltasis
+        white: "Baltasis"
       - 
-        black: Juodasis arba Afroamerikietis
+        black: "Juodasis arba Afroamerikietis"
       - 
-        hispanic: Ispanas arba Latino
+        hispanic: "Ispanas arba Latino"
       - 
-        asian: Azijietis
+        asian: "Azijietis"
       - 
-        hawaiian: Havajų arba kitų Ramiojo vandenyno salų gyventojas
+        hawaiian: "Havajų arba kitų Ramiojo vandenyno salų gyventojas"
       - 
-        american_indian: Amerikos indėnas/Aliaskos gyventojas
+        american_indian: "Amerikos indėnas/Aliaskos gyventojas"
       - 
-        other: Kita
+        other: "Kita"
       - 
-        opt_out: Nenoriu sakyti
+        opt_out: "Nenoriu sakyti"
     submit: "Pateikti"
     decline: "Užverti"
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
