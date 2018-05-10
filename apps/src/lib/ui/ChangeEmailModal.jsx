@@ -7,14 +7,25 @@ import {isEmail} from '../../util/formatValidation';
 import $ from 'jquery';
 import MD5 from 'crypto-js/md5';
 
-// TODO: List for this feature overall
-// Handle failed submissions gracefully.
-// Update the email on the Account page after successful submit without reload.
-// Send the email opt-in to the server and handle it correctly
-// Testing!
-// Deduplicate and test client-side email hashing logic
-// A less clumsy way to use Rails UJS? At least a comment describing how this works.
-//   see http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
+/*
+
+Note: This feature is in active development, so there are still some rough edges.
+(Brad Buchanan, 2018-05-10)
+
+Spec:
+https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
+
+Task list:
+Handle failed submissions gracefully.
+Update the email on the Account page after successful submit without reload.
+Fix id collisions between this form's fields and the default form fields on
+  the account page.
+Testing!
+Send the email opt-in to the server and handle it correctly
+Deduplicate and test client-side email hashing logic
+A less clumsy way to use Rails UJS?
+
+ */
 
 const styles = {
   container: {
@@ -55,18 +66,51 @@ export default class ChangeEmailModal extends React.Component {
     };
   }
 
+  //
+  // Note: This dialog submits account changes to dashboard using a
+  // hidden Rails-generated form.  It expects that form to already exist in the
+  // DOM when the component mounts and to have a particular data attribute.
+  //
+  // When the user clicks the "update" button, this dialog loads the relevant
+  // information into the hidden Rails form and calls submit(). Rails injects
+  // all the JavaScript needed for the form to submit via AJAX with all the
+  // appropriate validation tokens, etc.  The dialog subscribes to events
+  // emitted by the Rails helper JavaScript to detect success or errors.
+  //
+  // If the dialog can't find the Rails form anywhere it will emit a warning
+  // and be unable to submit anything (useful for tests and storybook).
+  //
+  // Read more:
+  // http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
+  // https://github.com/rails/jquery-ujs
+  //
+
   componentDidMount() {
     this._form = $('form[data-form-for=ChangeEmailModal]');
-    this._form.on('ajax:success', this.onSubmitSuccess);
-    this._form.on('ajax:error', this.onSubmitFailure);
+    if (this._form) {
+      this._form.on('ajax:success', this.onSubmitSuccess);
+      this._form.on('ajax:error', this.onSubmitFailure);
+    } else {
+      console.warn('The ChangeEmailModal component did not find the required ' +
+        'Rails UJS form, and will be unable to submit changes.');
+    }
   }
 
   componentWillUnmount() {
-    this._form.off('ajax:success', this.onSubmitSuccess);
-    this._form.off('ajax:error', this.onSubmitFailure);
+    if (this._form) {
+      this._form.off('ajax:success', this.onSubmitSuccess);
+      this._form.off('ajax:error', this.onSubmitFailure);
+      delete this._form;
+    }
   }
 
   save = () => {
+    if (!this._form) {
+      console.error('The ChangeEmailModal component did not find the required ' +
+        'Rails UJS form, and was unable to submit changes.');
+      return;
+    }
+
     this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
     this._form.find('#user_hashed_email').val(MD5(this.state.newEmail));
     this._form.find('#user_current_password').val(this.state.currentPassword);

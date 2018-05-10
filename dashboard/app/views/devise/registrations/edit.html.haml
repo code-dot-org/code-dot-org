@@ -134,8 +134,8 @@
       - data_hash = { confirm: t('user.delete_confirm') }
       = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
 
--# This hidden form is used by ChangeEmailModal.jsx to submit to Rails with
--# a working authenticity token.
+-# Hidden form used to asynchronously submit an email change to Rails with the
+-# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
 = form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true, data: { form_for: 'ChangeEmailModal' }, html: { method: :put }) do |f|
   - if f.object.can_edit_email?
     = f.hidden_field :email
