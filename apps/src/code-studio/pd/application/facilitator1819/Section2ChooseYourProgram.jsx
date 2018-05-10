@@ -7,7 +7,7 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
-const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
+const PROGRAM_CSF = "CS Fundamentals (K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
