@@ -26,23 +26,6 @@ def copy_to_yml(label, data, allow_full_length=true)
   end
 end
 
-def reformat_quotes
-  filenames = [
-    "instructions",
-    "markdown_instructions",
-    'failure_message_overrides',
-  ]
-
-  filenames.each do |filename|
-    temp_file = Tempfile.new("temp#{filename}.yml")
-    File.open("dashboard/config/locales/#{filename}.en.yml", "r") do |f|
-      f.each_line {|line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
-    end
-    temp_file.close
-    FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
-  end
-end
-
 # sanitize a string before uploading to crowdin. Currently only performs
 # CRLF -> LF conversion, but could be extended to do more
 def sanitize(string)
@@ -105,9 +88,8 @@ def localize_level_content
   copy_to_yml("instructions", level_instructions)
   copy_to_yml("markdown_instructions", level_markdown_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
-  copy_to_yml("authored_hints", level_authored_hints, true)
-  copy_to_yml("callouts", level_callouts, true)
-  reformat_quotes
+  copy_to_yml("authored_hints", level_authored_hints)
+  copy_to_yml("callouts", level_callouts)
 end
 
 sync_in if __FILE__ == $0
