@@ -139,6 +139,7 @@
   "changeEmailModal_newEmail_label": "New email address",
   "changeEmailModal_save": "Update email address",
   "changeEmailModal_title": "Update email address",
+  "changeEmailModal_unexpectedError": "An unexpected error has occurred.  Please wait a moment and try again.",
   "changeLoginType": "Change login type",
   "changeLoginTypeQuestion": "Change student login type?",
   "changeLoginTypeToPicture_button": "Change to picture login",
