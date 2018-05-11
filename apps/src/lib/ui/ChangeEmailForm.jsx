@@ -48,7 +48,7 @@ export default class ChangeEmailForm extends React.Component {
   });
 
   onKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && !this.props.disabled) {
       this.props.onSubmit();
     }
   };
