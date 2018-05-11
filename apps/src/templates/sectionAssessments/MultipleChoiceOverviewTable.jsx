@@ -46,6 +46,7 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
+  percentValue: PropTypes.number,
   percentAnswered: PropTypes.number,
   isCorrectAnswer: PropTypes.bool,
 });
