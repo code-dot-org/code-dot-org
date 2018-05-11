@@ -17,6 +17,7 @@ const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // specific experiment names
+experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
 
@@ -24,7 +25,8 @@ experiments.PROGRESS_TAB = 'sectionProgressRedesign';
 // On the front end we are treating it as an experiment group that contains
 // COURSE_VERSIONS and PROGRESS_TAB.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
-experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB];
+experiments.TEACHER_EXP_2018_LIST = [experiments.COURSE_VERSIONS, experiments.PROGRESS_TAB,
+  experiments.COMMENT_BOX_TAB];
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
