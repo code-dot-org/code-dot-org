@@ -32,6 +32,11 @@ const categorizeAssignmentFamilies = assignmentFamilies => (
     .value()
   );
 
+const getVersion = assignment => ({
+    year: assignment.version_year,
+    title: assignment.version_title
+});
+
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -47,15 +52,26 @@ export default class AssignmentSelector extends Component {
     disabled: PropTypes.bool,
   };
 
-  getVersionYears = assignmentFamilyName => {
+  /**
+   * Given an assignment family, return a list of versions representing valid
+   * assignments within that family, with highest year numbers first.
+   * @param {AssignmentFamilyShape} assignmentFamilyName
+   * @returns {Object} Version object with the following properties:
+   *   {string} year The year associated with this version, used as a key for
+   *     identifying this version programmatically.
+   *   {string} title The UI string associated with this version.
+   */
+  getVersions = assignmentFamilyName => {
     if (!assignmentFamilyName) {
       return [];
     }
-    return _.values(this.props.assignments)
+    return _(this.props.assignments)
+      .values()
       .filter(assignment => assignment.assignment_family_name === assignmentFamilyName)
-      .map(assignment => assignment.version_year)
-      .sort()
-      .reverse();
+      .map(getVersion)
+      .sortBy('year')
+      .reverse()
+      .value();
   };
 
   constructor(props) {
@@ -63,7 +79,7 @@ export default class AssignmentSelector extends Component {
 
     const { section, assignments } = props;
 
-    let selectedAssignmentFamily, selectedVersionYear, selectedPrimaryId, selectedSecondaryId;
+    let selectedAssignmentFamily, versions, selectedVersion, selectedPrimaryId, selectedSecondaryId;
     if (!section) {
       selectedPrimaryId = noAssignment;
       selectedSecondaryId = noAssignment;
@@ -78,12 +94,14 @@ export default class AssignmentSelector extends Component {
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
-      selectedVersionYear = primaryAssignment.version_year;
+      versions = this.getVersions(selectedAssignmentFamily);
+      selectedVersion = getVersion(primaryAssignment);
     }
 
     this.state = {
       selectedAssignmentFamily,
-      selectedVersionYear,
+      versions: versions || [],
+      selectedVersion,
       selectedPrimaryId,
       selectedSecondaryId,
     };
@@ -111,20 +129,21 @@ export default class AssignmentSelector extends Component {
   }
   onChangeAssignmentFamily = event => {
     const assignmentFamily = event.target.value;
-    const versionYears = this.getVersionYears(assignmentFamily);
-    this.setPrimary(assignmentFamily, versionYears[0]);
+    const { versions } = this.state;
+    this.setPrimary(assignmentFamily, versions[0]);
   };
 
-  onChangeVersionYear = event => {
-    const { selectedAssignmentFamily } = this.state;
+  onChangeVersion = event => {
+    const { selectedAssignmentFamily, versions } = this.state;
     const versionYear = event.target.value;
-    this.setPrimary(selectedAssignmentFamily, versionYear);
+    const version = versions.find(version => version.year === versionYear);
+    this.setPrimary(selectedAssignmentFamily, version);
   };
 
-  getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear) {
+  getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion) {
     const primaryAssignment = _.values(this.props.assignments).find(assignment => (
       assignment.assignment_family_name === selectedAssignmentFamily &&
-      assignment.version_year === selectedVersionYear
+      assignment.version_year === selectedVersion.year
     ));
 
     if (!primaryAssignment) {
@@ -134,13 +153,16 @@ export default class AssignmentSelector extends Component {
     return assignmentId(primaryAssignment.courseId, primaryAssignment.scriptId);
   }
 
-  setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
-    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
+  setPrimary = (selectedAssignmentFamily, selectedVersion) => {
+    const versions = this.getVersions(selectedAssignmentFamily);
+    selectedVersion = selectedVersion || versions[0];
+    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
     const selectedSecondaryId = noAssignment;
 
     this.setState({
       selectedAssignmentFamily,
-      selectedVersionYear,
+      versions,
+      selectedVersion,
       selectedPrimaryId,
       selectedSecondaryId
     }, this.reportChange);
@@ -161,8 +183,7 @@ export default class AssignmentSelector extends Component {
   render() {
     const { assignments, dropdownStyle, disabled } = this.props;
     let { assignmentFamilies } = this.props;
-    const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, selectedVersionYear } = this.state;
-    const versionYears = this.getVersionYears(selectedAssignmentFamily);
+    const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, versions, selectedVersion } = this.state;
 
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
@@ -205,18 +226,18 @@ export default class AssignmentSelector extends Component {
             </optgroup>
           ))}
         </select>
-        {versionYears.length > 1 && (
+        {versions.length > 1 && (
           <select
-            value={selectedVersionYear}
-            onChange={this.onChangeVersionYear}
+            value={selectedVersion.year}
+            onChange={this.onChangeVersion}
             style={dropdownStyle}
             disabled={disabled}
           >
             {
-              versionYears.map(versionYear => (
+              versions.map(version => (
                 <option
-                  key={versionYear}
-                  value={versionYear}
+                  key={version.year}
+                  value={version.year}
                 >
                   {
                     // If present, the 2018 version is the recommended one,
@@ -225,7 +246,7 @@ export default class AssignmentSelector extends Component {
                     // show initially. This information will need to be provided
                     // by the server once we support versioning of scripts.
                   }
-                  {versionYear === '2018' ? `${versionYear} (Recommended)` : versionYear}
+                  {version.year === '2018' ? `${version.title} (Recommended)` : version.title}
                 </option>
               ))
             }
