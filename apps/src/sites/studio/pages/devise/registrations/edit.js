@@ -55,13 +55,15 @@ function onSubmitModal(e) {
 const changeEmailMountPoint = document.createElement('div');
 function showChangeEmailModal() {
   document.body.appendChild(changeEmailMountPoint);
+  const form = document.getElementById('change-email-modal-form');
   const userAge = parseInt(document.getElementById('user_age').value, 10);
-  const userHashedEmail = document.getElementById('user_hashed_email').value;
+  const userHashedEmail = document.getElementById('change-email-modal-hashed-email').value;
   ReactDOM.render(
     <ChangeEmailModal
       isOpen
       handleSubmit={onEmailChanged}
       handleCancel={hideChangeEmailModal}
+      railsForm={form}
       userAge={userAge}
       currentHashedEmail={userHashedEmail}
     />,
@@ -69,10 +71,8 @@ function showChangeEmailModal() {
   );
 }
 
-function onEmailChanged(newEmail, newHashedEmail) {
+function onEmailChanged(newEmail) {
   const displayedUserEmail = $('#displayed-user-email');
-  const hashedEmail = $('#user_hashed_email');
-  hashedEmail.val(newHashedEmail);
   if ('***encrypted***' !== displayedUserEmail.text()) {
     displayedUserEmail.text(newEmail);
   }

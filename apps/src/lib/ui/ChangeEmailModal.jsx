@@ -16,8 +16,6 @@ Spec:
 https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
 
 Task list:
-Fix id collisions between this form's fields and the default form fields on
-  the account page.
 Testing!
 Send the email opt-in to the server and handle it correctly
 Deduplicate and test client-side email hashing logic
@@ -34,6 +32,7 @@ export default class ChangeEmailModal extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
+    railsForm: PropTypes.object,
     userAge: PropTypes.number.isRequired,
     currentHashedEmail: PropTypes.string,
   };
@@ -67,7 +66,7 @@ export default class ChangeEmailModal extends React.Component {
   //
 
   componentDidMount() {
-    this._form = $('form[data-form-for=ChangeEmailModal]');
+    this._form = $(this.props.railsForm);
     if (this._form) {
       this._form.on('ajax:success', this.onSubmitSuccess);
       this._form.on('ajax:error', this.onSubmitFailure);
@@ -94,9 +93,9 @@ export default class ChangeEmailModal extends React.Component {
     }
 
     this.setState({saveState: STATE_SAVING}, () => {
-      this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
-      this._form.find('#user_hashed_email').val(hashEmail(this.state.newEmail));
-      this._form.find('#user_current_password').val(this.state.currentPassword);
+      this._form.find('#change-email-modal-new-email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
+      this._form.find('#change-email-modal-hashed-email').val(hashEmail(this.state.newEmail));
+      this._form.find('#change-email-modal-current-password').val(this.state.currentPassword);
       // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
       this._form.submit();
     });
@@ -105,7 +104,7 @@ export default class ChangeEmailModal extends React.Component {
   cancel = () => this.props.handleCancel();
 
   onSubmitSuccess = () => {
-    this.props.handleSubmit(this.state.newEmail, hashEmail(this.state.newEmail));
+    this.props.handleSubmit(this.state.newEmail);
   };
 
   onSubmitFailure = (_, xhr) => {
