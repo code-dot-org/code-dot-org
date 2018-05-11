@@ -4,24 +4,43 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
+import color from "../../util/color";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
+
+// TODO: abstract into constants
+const PADDING = 8;
 
 const styles = {
   header: {
     marginBottom: 0
   },
-  table: {
-    paddingTop: 10
+  tableHeader: {
+    height: 44,
+    width: '100%',
+    padding: PADDING,
+    marginTop: 20,
+    backgroundColor: color.table_header,
+    display: 'flex'
+  },
+  dropdownContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  dropdownLabel: {
+    fontWeight: 'bold'
   },
   dropdown: {
     display: 'block',
     boxSizing: 'border-box',
-    fontSize: 'medium',
-    height: 34,
-    paddingLeft: 5,
-    paddingRight: 5
+    height: 30,
+    paddingLeft: PADDING,
+    paddingRight: PADDING,
+    marginLeft: PADDING
+  },
+  table: {
+    paddingTop: PADDING / 2
   }
 };
 
@@ -52,8 +71,8 @@ class TextResponses extends Component {
   renderStageFilterDropdown = () => {
     // TODO: i18n
     return (
-      <div>
-        Filter by stage:
+      <div style={styles.dropdownContainer}>
+        <div style={styles.dropdownLabel}>Filter by stage:</div>
         <select
           style={styles.dropdown}
           onChange={this.onChangeStageFilter}
@@ -102,7 +121,9 @@ class TextResponses extends Component {
             onChange={this.onChangeScript}
           />
         </div>
-        {this.renderStageFilterDropdown()}
+        <div style={styles.tableHeader}>
+          {this.renderStageFilterDropdown()}
+        </div>
         <div style={styles.table}>
           <TextResponsesTable
             responses={this.getFilteredResponses()}
