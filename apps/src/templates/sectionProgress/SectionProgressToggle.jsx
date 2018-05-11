@@ -11,8 +11,6 @@ const styles = {
   }
 };
 
-const IS_TRANSITIONING = 'IS_TRANSITIONING';
-
 /**
  * A toggle that provides a way to switch between detail and summary views of
  * the progress a section of students have made in a course. Teacher view.
@@ -27,7 +25,16 @@ class SectionProgressToggle extends React.Component {
     currentView: ViewType.SUMMARY,
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (this.state.currentView !== nextProps.currentView) {
+      this.setState({currentView: nextProps.currentView});
+    }
+  }
+
   onChange = () => {
+    // Display the toggle based on the internal state so that it is
+    // more immediately responsive. Once setting internal state is
+    // complete, then update the redux currentView.
     if (this.props.currentView === ViewType.SUMMARY) {
       this.setState({currentView: ViewType.DETAIL}, () => {
         setTimeout(() => {
@@ -47,25 +54,18 @@ class SectionProgressToggle extends React.Component {
     const { currentView } = this.state;
 
     return (
-      <div>
-        <ToggleGroup
-          selected={currentView}
-          activeColor={color.teal}
-          onChange={this.onChange}
-        >
-          <button value={ViewType.SUMMARY} style={styles.toggleButton}>
-            <FontAwesome icon="search-minus"/>
-          </button>
-          <button value={ViewType.DETAIL} style={styles.toggleButton}>
-            <FontAwesome icon="search-plus"/>
-          </button>
-        </ToggleGroup>
-        {currentView === IS_TRANSITIONING &&
-          <div>
-            <FontAwesome icon="spinner"/>
-          </div>
-        }
-      </div>
+      <ToggleGroup
+        selected={currentView}
+        activeColor={color.teal}
+        onChange={this.onChange}
+      >
+        <button value={ViewType.SUMMARY} style={styles.toggleButton}>
+          <FontAwesome icon="search-minus"/>
+        </button>
+        <button value={ViewType.DETAIL} style={styles.toggleButton}>
+          <FontAwesome icon="search-plus"/>
+        </button>
+      </ToggleGroup>
     );
 
   }
