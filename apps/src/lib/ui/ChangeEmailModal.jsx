@@ -179,7 +179,7 @@ export default class ChangeEmailModal extends React.Component {
   });
 
   render = () => {
-    const {saveState} = this.state;
+    const {saveState, newEmail, currentPassword, emailOptIn} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = Object.keys(validationErrors).every(key => !validationErrors[key]);
     return (
@@ -187,6 +187,7 @@ export default class ChangeEmailModal extends React.Component {
         useUpdatedStyles
         isOpen={this.props.isOpen}
         handleClose={this.cancel}
+        uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
           <SystemDialogHeader text={i18n.changeEmailModal_title()}/>
@@ -201,7 +202,8 @@ export default class ChangeEmailModal extends React.Component {
               <input
                 id="user_email"
                 type="email"
-                value={this.state.newEmail}
+                value={newEmail}
+                disabled={STATE_SAVING === saveState}
                 onChange={this.onNewEmailChange}
                 autoComplete="off"
                 maxLength="255"
@@ -223,7 +225,8 @@ export default class ChangeEmailModal extends React.Component {
               <input
                 id="user_current_password"
                 type="password"
-                value={this.state.currentPassword}
+                value={currentPassword}
+                disabled={STATE_SAVING === saveState}
                 onChange={this.onCurrentPasswordChange}
                 maxLength="255"
                 size="255"
@@ -239,8 +242,9 @@ export default class ChangeEmailModal extends React.Component {
                 {i18n.changeEmailModal_emailOptIn_description()}
               </p>
               <select
-                value={this.state.emailOptIn}
+                value={emailOptIn}
                 onChange={this.onEmailOptInChange}
+                disabled={STATE_SAVING === saveState}
                 style={{
                   ...styles.input,
                   width: 100,
@@ -263,7 +267,8 @@ export default class ChangeEmailModal extends React.Component {
             confirmText={i18n.changeEmailModal_save()}
             onConfirm={this.save}
             onCancel={this.cancel}
-            disableConfirm={!isFormValid}
+            disableConfirm={STATE_SAVING === saveState || !isFormValid}
+            disableCancel={STATE_SAVING === saveState}
           >
             {(STATE_SAVING === saveState) &&
               <em>{i18n.saving()}</em>}
@@ -346,14 +351,14 @@ class SystemDialogConfirmCancelFooter extends React.Component {
     onCancel: PropTypes.func.isRequired,
     confirmText: PropTypes.string.isRequired,
     cancelText: PropTypes.string.isRequired,
-    disableConfirm: PropTypes.bool.isRequired,
+    disableConfirm: PropTypes.bool,
+    disableCancel: PropTypes.bool,
     children: PropTypes.any,
   };
 
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
-    disableConfirm: false,
   };
 
   static style = {
@@ -398,6 +403,7 @@ class SystemDialogConfirmCancelFooter extends React.Component {
           onClick={this.props.onCancel}
           text={this.props.cancelText}
           color={Button.ButtonColor.gray}
+          disabled={this.props.disableCancel}
           style={SystemDialogConfirmCancelFooter.buttonStyle}
         />
       </div>
