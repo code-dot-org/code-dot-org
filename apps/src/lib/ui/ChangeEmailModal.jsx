@@ -16,7 +16,6 @@ Spec:
 https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
 
 Task list:
-Update the email on the Account page after successful submit without reload.
 Fix id collisions between this form's fields and the default form fields on
   the account page.
 Testing!
@@ -95,7 +94,7 @@ export default class ChangeEmailModal extends React.Component {
 
     this.setState({saveState: STATE_SAVING}, () => {
       this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
-      this._form.find('#user_hashed_email').val(MD5(this.state.newEmail));
+      this._form.find('#user_hashed_email').val(hashEmail(this.state.newEmail));
       this._form.find('#user_current_password').val(this.state.currentPassword);
       // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
       this._form.submit();
@@ -104,11 +103,11 @@ export default class ChangeEmailModal extends React.Component {
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitSuccess = (data, status, xhr) => {
-    this.props.handleSubmit();
+  onSubmitSuccess = () => {
+    this.props.handleSubmit(this.state.newEmail, hashEmail(this.state.newEmail));
   };
 
-  onSubmitFailure = (event, xhr, error) => {
+  onSubmitFailure = (_, xhr) => {
     const validationErrors = xhr.responseJSON;
     if (validationErrors) {
       this.setState({
@@ -149,7 +148,7 @@ export default class ChangeEmailModal extends React.Component {
     if (!isEmail(this.state.newEmail.trim())) {
       return i18n.changeEmailModal_newEmail_invalid();
     }
-    if (this.props.currentHashedEmail === MD5(this.state.newEmail).toString()) {
+    if (this.props.currentHashedEmail === hashEmail(this.state.newEmail)) {
       return i18n.changeEmailmodal_newEmail_mustBeDifferent();
     }
     return null;
@@ -336,3 +335,7 @@ const styles = {
     marginBottom: 4,
   },
 };
+
+function hashEmail(cleartextEmail) {
+  return MD5(cleartextEmail).toString();
+}

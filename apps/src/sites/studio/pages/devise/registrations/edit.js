@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ConfirmEmailModal from '@cdo/apps/code-studio/ConfirmEmailModal';
 import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import color from '@cdo/apps/util/color';
 
 const scriptData = getScriptData('edit');
 const initialUserType = scriptData.userType;
@@ -59,13 +60,27 @@ function showChangeEmailModal() {
   ReactDOM.render(
     <ChangeEmailModal
       isOpen
-      handleSubmit={hideChangeEmailModal}
+      handleSubmit={onEmailChanged}
       handleCancel={hideChangeEmailModal}
       userAge={userAge}
       currentHashedEmail={userHashedEmail}
     />,
     changeEmailMountPoint
   );
+}
+
+function onEmailChanged(newEmail, newHashedEmail) {
+  const displayedUserEmail = $('#displayed-user-email');
+  const hashedEmail = $('#user_hashed_email');
+  hashedEmail.val(newHashedEmail);
+  if ('***encrypted***' !== displayedUserEmail.text()) {
+    displayedUserEmail.text(newEmail);
+  }
+  hideChangeEmailModal();
+  $(displayedUserEmail).effect('highlight', {
+    duration: 'slow',
+    color: color.orange,
+  });
 }
 
 function hideChangeEmailModal() {
