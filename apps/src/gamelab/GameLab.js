@@ -734,6 +734,7 @@ function domIdFromArrow(idBtn) {
     case ArrowIds.SPACE:
       return 'studio-space-button';
   }
+  return undefined;
 }
 
 GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
