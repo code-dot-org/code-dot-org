@@ -184,6 +184,7 @@ class Course < ApplicationRecord
     info[:assignment_family_name] = assignment_family_name
     info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year
+    info[:version_title] = localized_version_title
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
