@@ -78,7 +78,7 @@ function onEmailChanged(newEmail, newHashedEmail) {
   }
   hideChangeEmailModal();
   $(displayedUserEmail).effect('highlight', {
-    duration: 'slow',
+    duration: 1500,
     color: color.orange,
   });
 }

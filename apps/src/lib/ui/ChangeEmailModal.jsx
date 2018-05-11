@@ -75,6 +75,7 @@ export default class ChangeEmailModal extends React.Component {
       console.warn('The ChangeEmailModal component did not find the required ' +
         'Rails UJS form, and will be unable to submit changes.');
     }
+    this.newEmailInput.focus();
   }
 
   componentWillUnmount() {
