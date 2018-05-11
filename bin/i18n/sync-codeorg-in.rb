@@ -18,10 +18,9 @@ def sync_in
   run_bash_script "bin/i18n-codeorg/in.sh"
 end
 
-def copy_to_yml(label, data, allow_full_length=true)
-  args = allow_full_length ? {line_width: -1} : {}
+def copy_to_yml(label, data)
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    data = ({"en" => {"data" => {label => data}}}).to_yaml(**args)
+    data = ({"en" => {"data" => {label => data}}}).to_yaml(line_width: -1)
     f.write(data)
   end
 end
