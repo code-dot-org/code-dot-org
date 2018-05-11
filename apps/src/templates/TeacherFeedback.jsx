@@ -27,11 +27,11 @@ const styles = {
 
 class TeacherFeedback extends Component {
   static propTypes = {
-    teacherView: PropTypes.bool
+    viewAs: PropTypes.oneOf(['Teacher', 'Student'])
   };
 
   render() {
-    if (!this.props.teacherView) {
+    if (!(this.props.viewAs === ViewType.Teacher)) {
       return null;
     }
 
@@ -46,5 +46,5 @@ class TeacherFeedback extends Component {
 }
 
 export default connect(state => ({
-  teacherView: state.viewAs === ViewType.Teacher
+  viewAs: state.viewAs
 }))(TeacherFeedback);
