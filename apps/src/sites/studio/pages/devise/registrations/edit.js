@@ -29,14 +29,6 @@ function closeConfirmEmailModal() {
   ReactDOM.unmountComponentAtNode(confirmEmailDiv[0]);
 }
 
-function prepareEmailData() {
-  window.dashboard.hashEmail({
-    email_selector: '#user_email',
-    hashed_email_selector: '#user_hashed_email',
-    age_selector: '#user_age'
-  });
-}
-
 function onCancelModal() {
   $("#user_user_type").val("student");
   closeConfirmEmailModal();
@@ -99,8 +91,6 @@ $(document).ready(() => {
     if (needToConfirmEmail) {
       e.preventDefault();
       showConfirmEmailModal(onCancelModal, onSubmitModal(e));
-    } else if ($('#user_email').length) {
-      prepareEmailData();
     }
   });
   $( "#edit_user_create_personal_account" ).on("submit", function (e) {
