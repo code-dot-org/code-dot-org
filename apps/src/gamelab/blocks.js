@@ -2,6 +2,7 @@ import { SVG_NS } from '../constants';
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
+import { GAME_HEIGHT } from './constants';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -44,7 +45,7 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(`${input.label}(${loc.x}, ${loc.y})`);
+              label.setText(`${input.label}(${loc.x}, ${GAME_HEIGHT - loc.y})`);
             } catch (e) {
               // Just ignore bad values
             }
