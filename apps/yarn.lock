@@ -9849,6 +9849,10 @@ react-color@^2.11.7:
     reactcss "^1.2.0"
     tinycolor2 "^1.1.2"
 
+react-csv@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-csv/-/react-csv-1.0.14.tgz#7c9e444fc4c3ca1e1cf73a81129b1ec032838a71"
+
 react-datepicker@0.37.0:
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.37.0.tgz#94eef12ae508d733c74fbf9e0f996609a9dd9b89"
