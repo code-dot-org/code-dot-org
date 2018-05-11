@@ -318,6 +318,7 @@
   "moveSpriteN": "moure actor {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "a",
   "toXY": "a x, y",
   "moveDown": "Desplaça avall",
   "moveDownTooltip": "Mou un actor avall.",

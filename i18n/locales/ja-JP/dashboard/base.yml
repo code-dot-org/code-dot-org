@@ -368,6 +368,7 @@ ja:
     enter_new_login_info: '新しいログイン情報の入力'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
+    update: "Update Account"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -723,21 +724,21 @@ ja:
     message: "あなたの人種 (該当するものすべてチェック) を教えてください。"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黒人、またはアフリカ系アメリカ人
+        black: "黒人、またはアフリカ系アメリカ人"
       - 
-        hispanic: ヒスパニックまたはラテン系
+        hispanic: "ヒスパニックまたはラテン系"
       - 
-        asian: アジア系
+        asian: "アジア系"
       - 
-        hawaiian: ハワイおよび他の太平洋諸島系
+        hawaiian: "ハワイおよび他の太平洋諸島系"
       - 
-        american_indian: アメリカインディアン/アラスカ ネイティブ
+        american_indian: "アメリカインディアン/アラスカ ネイティブ"
       - 
-        other: その他
+        other: "その他"
       - 
-        opt_out: 答えたくない
+        opt_out: "答えたくない"
     submit: "送信"
     decline: "閉じる"
   zendesk_too_young_message: 'ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。'

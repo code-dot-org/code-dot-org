@@ -38,3 +38,8 @@
             description for students
           description_teacher: This is a course for allthethings and has a longer
             description for teachers
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

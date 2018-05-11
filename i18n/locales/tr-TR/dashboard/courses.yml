@@ -17,3 +17,8 @@ tr:
           description_short: Bu tümherşey için bir kurs
           description_student: Bu tümherşey için bir kurs ve öğrenciler için daha uzun bir tanıma sahip
           description_teacher: Bu tümherşey için bir kurs ve öğretmenler için daha uzun bir tanıma sahip
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

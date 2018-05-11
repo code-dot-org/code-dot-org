@@ -328,9 +328,25 @@ $dpad-rim: #FFFFFF;
   }
   &.left {
     left: -17px;
+    &.up {
+      left: -12px;
+      top: -12px;
+    }
+    &.down {
+      left: -12px;
+      top: 12px;
+    }
   }
   &.right {
     left: 17px;
+    &.up {
+      left: 12px;
+      top: -12px;
+    }
+    &.down {
+      left: 12px;
+      top: 12px;
+    }
   }
   &.up {
     top: -17px;
@@ -355,7 +371,11 @@ $space-active-border: #9F9F9F;
   background-color: $space-fill;
   box-shadow: inset 1px 1px 0px 0 $space-shadow;
   &.active {
-    border: 1px solid $space-active-border;
+    border-radius: 39px;
+    width: 78px;
+    height: 78px;
+    margin-right: 6px;
+    margin-top: 6px;
   }
   &:focus {
     outline: 0;
