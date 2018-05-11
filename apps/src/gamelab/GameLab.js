@@ -290,7 +290,7 @@ GameLab.prototype.init = function (config) {
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
     }
 
     initializeSubmitHelper({
