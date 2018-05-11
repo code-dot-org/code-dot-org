@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import $ from "jquery";
 import Spinner from '../../../components/spinner';
 import Results from './results';
-import _ from 'lodash';
 
 export class ResultsLoader extends React.Component {
   static propTypes = {
@@ -36,7 +35,9 @@ export class ResultsLoader extends React.Component {
   }
 
   render() {
-    if (this.state.loading) {
+    const {loading, ...data} = this.state;
+
+    if (loading) {
       return (
         <div>
           <Spinner/>
@@ -45,7 +46,7 @@ export class ResultsLoader extends React.Component {
     } else {
       return (
         <Results
-          {..._.omit(this.state, ['loading'])}
+          {...data}
         />
       );
     }
