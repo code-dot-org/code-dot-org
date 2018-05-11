@@ -6,6 +6,7 @@ import {isEmail} from '../../util/formatValidation';
 import $ from 'jquery';
 import MD5 from 'crypto-js/md5';
 import {Header, ConfirmCancelFooter} from './SystemDialog/SystemDialog';
+import ChangeEmailForm from './ChangeEmailForm';
 
 /*
 
@@ -26,6 +27,24 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
+//
+// Note: This dialog submits account changes to dashboard using a
+// hidden Rails-generated form.  It expects that form to already exist in the
+// DOM when the component mounts and to have a particular data attribute.
+//
+// When the user clicks the "update" button, this dialog loads the relevant
+// information into the hidden Rails form and calls submit(). Rails injects
+// all the JavaScript needed for the form to submit via AJAX with all the
+// appropriate validation tokens, etc.  The dialog subscribes to events
+// emitted by the Rails helper JavaScript to detect success or errors.
+//
+// If the dialog can't find the Rails form anywhere it will emit a warning
+// and be unable to submit anything (useful for tests and storybook).
+//
+// Read more:
+// http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
+// https://github.com/rails/jquery-ujs
+//
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -45,24 +64,6 @@ export default class ChangeEmailModal extends React.Component {
     emailOptIn: '',
   };
 
-  //
-  // Note: This dialog submits account changes to dashboard using a
-  // hidden Rails-generated form.  It expects that form to already exist in the
-  // DOM when the component mounts and to have a particular data attribute.
-  //
-  // When the user clicks the "update" button, this dialog loads the relevant
-  // information into the hidden Rails form and calls submit(). Rails injects
-  // all the JavaScript needed for the form to submit via AJAX with all the
-  // appropriate validation tokens, etc.  The dialog subscribes to events
-  // emitted by the Rails helper JavaScript to detect success or errors.
-  //
-  // If the dialog can't find the Rails form anywhere it will emit a warning
-  // and be unable to submit anything (useful for tests and storybook).
-  //
-  // Read more:
-  // http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
-  // https://github.com/rails/jquery-ujs
-  //
 
   componentDidMount() {
     this._form = $(this.props.railsForm);
@@ -73,7 +74,6 @@ export default class ChangeEmailModal extends React.Component {
       console.warn('The ChangeEmailModal component did not find the required ' +
         'Rails UJS form, and will be unable to submit changes.');
     }
-    this.newEmailInput.focus();
   }
 
   componentWillUnmount() {
@@ -88,6 +88,12 @@ export default class ChangeEmailModal extends React.Component {
     if (!this._form) {
       console.error('The ChangeEmailModal component did not find the required ' +
         'Rails UJS form, and was unable to submit changes.');
+      return;
+    }
+
+    // No-op if we know the form is invalid, client-side.
+    // This blocks return-key submission when the form is invalid.
+    if (!this.isFormValid(this.getValidationErrors())) {
       return;
     }
 
@@ -111,13 +117,7 @@ export default class ChangeEmailModal extends React.Component {
         saveState: STATE_INITIAL,
         newEmailServerError: validationErrors.email && validationErrors.email[0],
         currentPasswordServerError: validationErrors.current_password && validationErrors.current_password[0],
-      }, () => {
-        if (this.state.newEmailServerError) {
-          this.newEmailInput.focus();
-        } else if (this.state.currentPasswordServerError) {
-          this.currentPasswordInput.focus();
-        }
-      });
+      }, () => this.changeEmailForm.focusOnAnError());
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
@@ -156,35 +156,29 @@ export default class ChangeEmailModal extends React.Component {
     return null;
   };
 
-  getEmailOptInValidationError = () => {
-    if (this.state.emailOptIn.length === 0) {
-      return i18n.changeEmailModal_emailOptIn_isRequired();
+  // getEmailOptInValidationError = () => {
+  //   if (this.state.emailOptIn.length === 0) {
+  //     return i18n.changeEmailModal_emailOptIn_isRequired();
+  //   }
+  //   return null;
+  // };
+
+  onFormChange = (newValues) => {
+    const {newEmail, currentPassword} = this.state;
+    const emailChanged = newValues.newEmail !== newEmail;
+    const passwordChanged = newValues.currentPassword !== currentPassword;
+    const stateUpdate = {...newValues};
+    if (emailChanged) {
+      stateUpdate.newEmailServerError = undefined;
     }
-    return null;
-  };
-
-  onNewEmailChange = (event) => this.setState({
-    newEmail: event.target.value,
-    newEmailServerError: undefined,
-  });
-
-  onCurrentPasswordChange = (event) => this.setState({
-    currentPassword: event.target.value,
-    currentPasswordServerError: undefined,
-  });
-
-  onEmailOptInChange = (event) => this.setState({
-    emailOptIn: event.target.value,
-  });
-
-  onKeyDown = (event) => {
-    if (event.key === 'Enter' && this.isFormValid(this.getValidationErrors())) {
-      this.save();
+    if (passwordChanged) {
+      stateUpdate.currentPasswordServerError = undefined;
     }
+    this.setState(stateUpdate);
   };
 
   render = () => {
-    const {saveState, newEmail, currentPassword, emailOptIn} = this.state;
+    const {saveState} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
     return (
@@ -196,81 +190,18 @@ export default class ChangeEmailModal extends React.Component {
       >
         <div style={styles.container}>
           <Header text={i18n.changeEmailModal_title()}/>
-          <div>
-            <Field>
-              <label
-                htmlFor="user_email"
-                style={styles.label}
-              >
-                {i18n.changeEmailModal_newEmail_label()}
-              </label>
-              <input
-                id="user_email"
-                type="email"
-                value={newEmail}
-                disabled={STATE_SAVING === saveState}
-                onKeyDown={this.onKeyDown}
-                onChange={this.onNewEmailChange}
-                autoComplete="off"
-                maxLength="255"
-                size="255"
-                style={styles.input}
-                ref={el => this.newEmailInput = el}
-              />
-              <FieldError>
-                {validationErrors.newEmail}
-              </FieldError>
-            </Field>
-            <Field>
-              <label
-                htmlFor="user_current_password"
-                style={styles.label}
-              >
-                {i18n.changeEmailModal_currentPassword_label()}
-              </label>
-              <input
-                id="user_current_password"
-                type="password"
-                value={currentPassword}
-                disabled={STATE_SAVING === saveState}
-                onKeyDown={this.onKeyDown}
-                onChange={this.onCurrentPasswordChange}
-                maxLength="255"
-                size="255"
-                style={styles.input}
-                ref={el => this.currentPasswordInput = el}
-              />
-              <FieldError>
-                {validationErrors.currentPassword}
-              </FieldError>
-            </Field>
-            <Field style={{display: 'none'}}>
-              <p>
-                {i18n.changeEmailModal_emailOptIn_description()}
-              </p>
-              <select
-                value={emailOptIn}
-                onKeyDown={this.onKeyDown}
-                onChange={this.onEmailOptInChange}
-                disabled={STATE_SAVING === saveState}
-                style={{
-                  ...styles.input,
-                  width: 100,
-                }}
-              >
-                <option value=""/>
-                <option value="yes">
-                  {i18n.yes()}
-                </option>
-                <option value="no">
-                  {i18n.no()}
-                </option>
-              </select>
-              <FieldError>
-                {validationErrors.emailOptIn}
-              </FieldError>
-            </Field>
-          </div>
+          <ChangeEmailForm
+            ref={x => this.changeEmailForm = x}
+            values={{
+              newEmail: this.state.newEmail,
+              currentPassword: this.state.currentPassword,
+              emailOptIn: this.state.emailOptIn,
+            }}
+            validationErrors={validationErrors}
+            disabled={STATE_SAVING === saveState}
+            onChange={this.onFormChange}
+            onSubmit={this.save}
+          />
           <ConfirmCancelFooter
             confirmText={i18n.changeEmailModal_save()}
             onConfirm={this.save}
@@ -289,46 +220,11 @@ export default class ChangeEmailModal extends React.Component {
   };
 }
 
-const Field = ({children, style}) => (
-  <div
-    style={{
-      marginBottom: 15,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
-Field.propTypes = {
-  children: PropTypes.any,
-  style: PropTypes.object,
-};
-
-const FieldError = ({children}) => (
-  <div
-    style={{
-      color: color.red,
-      fontStyle: 'italic',
-    }}
-  >
-    {children}
-  </div>
-);
-FieldError.propTypes = {children: PropTypes.string};
-
 const styles = {
   container: {
     margin: 20,
     color: color.charcoal,
-  },
-  label: {
-    display: 'block',
-    fontWeight: 'bold',
-    color: color.charcoal,
-  },
-  input: {
-    marginBottom: 4,
-  },
+  }
 };
 
 function hashEmail(cleartextEmail) {
