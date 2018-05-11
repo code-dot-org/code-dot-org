@@ -26,7 +26,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
 
   test "upsert email preference changes existing email preference" do
     email_preference = create :email_preference
-    EmailPreference.upsert!(
+    EmailPreference.upsert(
       email: email_preference.email,
       opt_in: true,
       ip_address: '192.168.1.1',
@@ -42,7 +42,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
 
   test "upsert email preference that is already opted in does not opt out" do
     email_preference = create :email_preference, opt_in: true
-    EmailPreference.upsert!(
+    EmailPreference.upsert(
       email: email_preference.email,
       opt_in: false,
       ip_address: '172.16.6.1',

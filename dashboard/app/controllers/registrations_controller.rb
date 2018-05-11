@@ -45,7 +45,7 @@ class RegistrationsController < Devise::RegistrationsController
       # While a/b testing, one of two possible fields might come through.
       if params[:email_preference] || params[:email_preference2]
         optin_value = params[:email_preference] == "yes" || params[:email_preference2] == "yes"
-        EmailPreference.upsert!(
+        EmailPreference.upsert(
           email: params[:user][:email],
           opt_in: optin_value,
           ip_address: request.env['REMOTE_ADDR'],
