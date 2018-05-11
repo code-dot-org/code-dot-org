@@ -55,7 +55,7 @@ class TextResponsesTable extends Component {
           href={url}
           target="_blank"
         >
-          {` ...${i18n.seeFullResponse()}`}
+          {i18n.seeFullResponse()}
         </a>
       </div>
     );
@@ -178,9 +178,7 @@ class TextResponsesTable extends Component {
     });
   };
 
-  getRowKey = ({rowData}) => {
-    return `${rowData.studentId}-${rowData.puzzle}`;
-  };
+  getRowKey = ({rowData}) => `${rowData.studentId}-${rowData.puzzle}`;
 
   render() {
     const {responses, isLoading} = this.props;
