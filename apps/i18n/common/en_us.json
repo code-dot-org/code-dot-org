@@ -136,6 +136,7 @@
   "changeEmailModal_emailOptIn_isRequired": "This field is required.",
   "changeEmailModal_newEmail_invalid": "The email address you provided is not valid.",
   "changeEmailModal_newEmail_isRequired": "A new email address is required.",
+  "changeEmailmodal_newEmail_mustBeDifferent": "New email address must not match old email address.",
   "changeEmailModal_newEmail_label": "New email address",
   "changeEmailModal_save": "Update email address",
   "changeEmailModal_title": "Update email address",
