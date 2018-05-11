@@ -19,7 +19,6 @@ Task list:
 Testing!
 Send the email opt-in to the server and handle it correctly
 Deduplicate and test client-side email hashing logic
-A less clumsy way to use Rails UJS?
 
  */
 
@@ -103,9 +102,7 @@ export default class ChangeEmailModal extends React.Component {
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitSuccess = () => {
-    this.props.handleSubmit(this.state.newEmail);
-  };
+  onSubmitSuccess = () => this.props.handleSubmit(this.state.newEmail);
 
   onSubmitFailure = (_, xhr) => {
     const validationErrors = xhr.responseJSON;
@@ -122,9 +119,7 @@ export default class ChangeEmailModal extends React.Component {
         }
       });
     } else {
-      this.setState({
-        saveState: STATE_UNKNOWN_ERROR,
-      });
+      this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
   };
 
