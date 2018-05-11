@@ -93,9 +93,9 @@ export default class ChangeEmailModal extends React.Component {
     }
 
     this.setState({saveState: STATE_SAVING}, () => {
-      this._form.find('#change-email-modal-new-email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
-      this._form.find('#change-email-modal-hashed-email').val(hashEmail(this.state.newEmail));
-      this._form.find('#change-email-modal-current-password').val(this.state.currentPassword);
+      this._form.find('#change-email-modal_user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
+      this._form.find('#change-email-modal_user_hashed_email').val(hashEmail(this.state.newEmail));
+      this._form.find('#change-email-modal_user_current_password').val(this.state.currentPassword);
       // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
       this._form.submit();
     });

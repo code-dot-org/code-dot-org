@@ -57,7 +57,7 @@ function showChangeEmailModal() {
   document.body.appendChild(changeEmailMountPoint);
   const form = document.getElementById('change-email-modal-form');
   const userAge = parseInt(document.getElementById('user_age').value, 10);
-  const userHashedEmail = document.getElementById('change-email-modal-hashed-email').value;
+  const userHashedEmail = document.getElementById('change-email-modal_user_hashed_email').value;
   ReactDOM.render(
     <ChangeEmailModal
       isOpen

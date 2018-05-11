@@ -141,12 +141,13 @@
     url: registration_path(resource_name),
     remote: true,
     html: { id: 'change-email-modal-form', method: :put },
+    namespace: 'change-email-modal',
   ) do |f|
   - if f.object.can_edit_email?
-    = f.hidden_field :email, id: 'change-email-modal-new-email'
-    = f.hidden_field :hashed_email, id: 'change-email-modal-hashed-email'
+    = f.hidden_field :email
+    = f.hidden_field :hashed_email
     -# = f.hidden_field :email_opt_in
-    = f.hidden_field :current_password, id: 'change-email-modal-current-password'
+    = f.hidden_field :current_password
 
 :ruby
   script_data = {
