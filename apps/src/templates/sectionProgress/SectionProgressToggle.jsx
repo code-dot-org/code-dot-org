@@ -22,7 +22,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   state = {
-    selectedToggle: ViewType.SUMMARY,
+    selectedToggle: this.props.currentView,
   };
 
   componentWillReceiveProps(nextProps) {
@@ -37,6 +37,8 @@ class SectionProgressToggle extends React.Component {
     // Display the toggle based on the internal state so that it is
     // more immediately responsive. Once setting internal state is
     // complete, then update the redux currentView.
+    // Timeouts forces a render of the local state before dispatching
+    // the action.
     if (this.state.selectedToggle === ViewType.SUMMARY) {
       this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
