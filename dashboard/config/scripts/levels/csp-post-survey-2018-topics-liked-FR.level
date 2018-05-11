@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "What were your two favorite topics covered in the course overall?",
+    "markdown_instructions": "Please provide any other feedback you have about the units of this course.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -15,7 +15,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-07 17:36:27 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-07 17:36:27 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-05-10 23:24:59 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

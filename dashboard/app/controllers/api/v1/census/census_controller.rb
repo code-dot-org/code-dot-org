@@ -1,3 +1,5 @@
+require 'cdo/email_preference_constants'
+
 class Api::V1::Census::CensusController < ApplicationController
   include SchoolInfoDeduplicator
   skip_before_action :verify_authenticity_token
@@ -144,6 +146,14 @@ class Api::V1::Census::CensusController < ApplicationController
         Poste2.send_message(template, recipient)
       end
       render json: {census_submission_id: submission.id}, status: :created
+
+      EmailPreference.upsert!(
+        email: submission.submitter_email_address,
+        opt_in: params[:opt_in],
+        ip_address: request.env['REMOTE_ADDR'],
+        source: EmailPreferenceHelper::FORM_ACCESS_REPORT,
+        form_kind: "0"
+      )
     else
       render json: errors, status: :bad_request
     end
