@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash';
+import _ from 'lodash'; // TODO: only import methods i need
+import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
@@ -9,6 +10,7 @@ import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgr
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
+
 
 // TODO: abstract into constants
 const PADDING = 8;
@@ -46,6 +48,14 @@ const styles = {
     paddingTop: PADDING / 4
   }
 };
+
+const CSV_HEADERS = [
+  {label: i18n.name(), key: 'studentName'},
+  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.puzzle(), key: 'puzzle'},
+  {label: i18n.question(), key: 'question'},
+  {label: i18n.response(), key: 'response'},
+];
 
 class TextResponses extends Component {
   static propTypes = {
@@ -111,6 +121,7 @@ class TextResponses extends Component {
 
   render() {
     const {validScripts, scriptId, sectionId, isLoadingResponses} = this.props;
+    const filteredResponses = this.getFilteredResponses();
 
     return (
       <div>
@@ -126,15 +137,21 @@ class TextResponses extends Component {
         </div>
         <div style={styles.tableHeader}>
           {this.renderStageFilterDropdown()}
-          <Button
-            text="Download CSV"
-            onClick={() => {}}
-            color={Button.ButtonColor.white}
-          />
+          <CSVLink
+            filename="responses.csv"
+            data={filteredResponses}
+            headers={CSV_HEADERS}
+          >
+            <Button
+              text="Download CSV"
+              onClick={() => {}}
+              color={Button.ButtonColor.white}
+            />
+          </CSVLink>
         </div>
         <div style={styles.table}>
           <TextResponsesTable
-            responses={this.getFilteredResponses()}
+            responses={filteredResponses}
             sectionId={sectionId}
             isLoading={isLoadingResponses}
           />
