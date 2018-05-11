@@ -115,8 +115,8 @@ export default class ChangeEmailModal extends React.Component {
     if (validationErrors) {
       this.setState({
         saveState: STATE_INITIAL,
-        newEmailServerError: validationErrors.email,
-        currentPasswordServerError: validationErrors.current_password,
+        newEmailServerError: validationErrors.email && validationErrors.email[0],
+        currentPasswordServerError: validationErrors.current_password && validationErrors.current_password[0],
       }, () => {
         if (this.state.newEmailServerError) {
           this.newEmailInput.focus();
@@ -130,6 +130,10 @@ export default class ChangeEmailModal extends React.Component {
       });
     }
   };
+
+  isFormValid(validationErrors) {
+    return Object.keys(validationErrors).every(key => !validationErrors[key]);
+  }
 
   getValidationErrors() {
     const {newEmailServerError, currentPasswordServerError} = this.state;
@@ -178,10 +182,16 @@ export default class ChangeEmailModal extends React.Component {
     emailOptIn: event.target.value,
   });
 
+  onKeyDown = (event) => {
+    if (event.key === 'Enter' && this.isFormValid(this.getValidationErrors())) {
+      this.save();
+    }
+  };
+
   render = () => {
     const {saveState, newEmail, currentPassword, emailOptIn} = this.state;
     const validationErrors = this.getValidationErrors();
-    const isFormValid = Object.keys(validationErrors).every(key => !validationErrors[key]);
+    const isFormValid = this.isFormValid(validationErrors);
     return (
       <BaseDialog
         useUpdatedStyles
@@ -204,6 +214,7 @@ export default class ChangeEmailModal extends React.Component {
                 type="email"
                 value={newEmail}
                 disabled={STATE_SAVING === saveState}
+                onKeyDown={this.onKeyDown}
                 onChange={this.onNewEmailChange}
                 autoComplete="off"
                 maxLength="255"
@@ -227,6 +238,7 @@ export default class ChangeEmailModal extends React.Component {
                 type="password"
                 value={currentPassword}
                 disabled={STATE_SAVING === saveState}
+                onKeyDown={this.onKeyDown}
                 onChange={this.onCurrentPasswordChange}
                 maxLength="255"
                 size="255"
@@ -243,6 +255,7 @@ export default class ChangeEmailModal extends React.Component {
               </p>
               <select
                 value={emailOptIn}
+                onKeyDown={this.onKeyDown}
                 onChange={this.onEmailOptInChange}
                 disabled={STATE_SAVING === saveState}
                 style={{
