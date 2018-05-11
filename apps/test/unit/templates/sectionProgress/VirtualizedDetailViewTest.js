@@ -13,13 +13,13 @@ const studentData = [
 ];
 
 describe('VirtualizedSummaryView', () => {
-  let DEFAULT_PROPS;
+  let defaultProps;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({sectionProgress});
-    DEFAULT_PROPS = {
-      getLevels: ()=>{
+    defaultProps = {
+      getLevels: () => {
         return [{id: 789, status: 'perfect'}];
       },
       lessonOfInterest: 1,
@@ -51,7 +51,7 @@ describe('VirtualizedSummaryView', () => {
   it('renders a MultiGrid', () => {
     const wrapper = shallow(
       <UnconnectedVirtualizedDetailView
-        {...DEFAULT_PROPS}
+        {...defaultProps}
       />
     );
     expect(wrapper.find('MultiGrid').exists()).to.be.true;
@@ -61,7 +61,7 @@ describe('VirtualizedSummaryView', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
         <UnconnectedVirtualizedDetailView
-          {...DEFAULT_PROPS}
+          {...defaultProps}
         />
       </Provider>
     );
@@ -75,7 +75,7 @@ describe('VirtualizedSummaryView', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
         <UnconnectedVirtualizedDetailView
-          {...DEFAULT_PROPS}
+          {...defaultProps}
         />
       </Provider>
     );
