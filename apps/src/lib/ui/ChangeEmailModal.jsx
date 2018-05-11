@@ -2,10 +2,10 @@ import React, {PropTypes} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import Button from "../../templates/Button";
 import {isEmail} from '../../util/formatValidation';
 import $ from 'jquery';
 import MD5 from 'crypto-js/md5';
+import {Header, ConfirmCancelFooter} from './SystemDialog/SystemDialog';
 
 /*
 
@@ -201,7 +201,7 @@ export default class ChangeEmailModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <SystemDialogHeader text={i18n.changeEmailModal_title()}/>
+          <Header text={i18n.changeEmailModal_title()}/>
           <div>
             <Field>
               <label
@@ -277,7 +277,7 @@ export default class ChangeEmailModal extends React.Component {
               </FieldError>
             </Field>
           </div>
-          <SystemDialogConfirmCancelFooter
+          <ConfirmCancelFooter
             confirmText={i18n.changeEmailModal_save()}
             onConfirm={this.save}
             onCancel={this.cancel}
@@ -288,7 +288,7 @@ export default class ChangeEmailModal extends React.Component {
               <em>{i18n.saving()}</em>}
             {(STATE_UNKNOWN_ERROR === saveState) &&
               <em>{i18n.changeEmailModal_unexpectedError()}</em>}
-          </SystemDialogConfirmCancelFooter>
+          </ConfirmCancelFooter>
         </div>
       </BaseDialog>
     );
@@ -321,109 +321,6 @@ const FieldError = ({children}) => (
   </div>
 );
 FieldError.propTypes = {children: PropTypes.string};
-
-const horizontalRuleStyle = {
-  borderStyle: 'solid',
-  borderColor: color.lighter_gray,
-  borderTopWidth: 0,
-  borderBottomWidth: 0,
-  borderRightWidth: 0,
-  borderLeftWidth: 0,
-};
-
-class SystemDialogHeader extends React.Component {
-  static propTypes = {
-    text: PropTypes.string.isRequired,
-  };
-
-  static style = {
-    fontSize: 16,
-    lineHeight: '20px',
-    color: color.charcoal,
-    fontFamily: "'Gotham 5r', sans-serif",
-    ...horizontalRuleStyle,
-    borderBottomWidth: 1,
-    paddingBottom: 10,
-    paddingTop: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-    marginBottom: 10,
-  };
-
-  render() {
-    return (
-      <h1 style={SystemDialogHeader.style}>
-        {this.props.text}
-      </h1>
-    );
-  }
-}
-
-class SystemDialogConfirmCancelFooter extends React.Component {
-  static propTypes = {
-    onConfirm: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
-    confirmText: PropTypes.string.isRequired,
-    cancelText: PropTypes.string.isRequired,
-    disableConfirm: PropTypes.bool,
-    disableCancel: PropTypes.bool,
-    children: PropTypes.any,
-  };
-
-  static defaultProps = {
-    confirmText: i18n.dialogOK(),
-    cancelText: i18n.cancel(),
-  };
-
-  static style = {
-    display: 'flex',
-    flexDirection: 'row-reverse',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    ...horizontalRuleStyle,
-    borderTopWidth: 1,
-    paddingTop: 10,
-    marginTop: 10,
-  };
-
-  static messageStyle = {
-    display: 'inline-block',
-    lineHeight: '34px',
-    textAlign: 'right',
-    verticalAlign: 'top',
-    marginLeft: '1em',
-    marginRight: '1em',
-    flexGrow: 1,
-  };
-
-  static buttonStyle = {
-    flexShrink: 0,
-  };
-
-  render() {
-    return (
-      <div style={SystemDialogConfirmCancelFooter.style}>
-        <Button
-          onClick={this.props.onConfirm}
-          text={this.props.confirmText}
-          color={Button.ButtonColor.orange}
-          disabled={this.props.disableConfirm}
-          style={SystemDialogConfirmCancelFooter.buttonStyle}
-        />
-        <span style={SystemDialogConfirmCancelFooter.messageStyle}>
-          {this.props.children}
-        </span>
-        <Button
-          onClick={this.props.onCancel}
-          text={this.props.cancelText}
-          color={Button.ButtonColor.gray}
-          disabled={this.props.disableCancel}
-          style={SystemDialogConfirmCancelFooter.buttonStyle}
-        />
-      </div>
-    );
-  }
-}
 
 const styles = {
   container: {
