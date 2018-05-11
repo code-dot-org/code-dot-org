@@ -147,7 +147,7 @@ class Api::V1::Census::CensusController < ApplicationController
 
       EmailPreference.upsert!(
         email: submission.submitter_email_address,
-        opt_in: params[:opt_in].downcase,
+        opt_in: params[:opt_in],
         ip_address: request.env['REMOTE_ADDR'],
         source: EmailPreference::FORM_CENSUS,
         form_kind: "0"
