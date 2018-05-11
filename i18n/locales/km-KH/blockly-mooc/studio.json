@@ -318,6 +318,7 @@
   "moveSpriteN": "ផ្លាស់ទីតួអង្គ​{spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "ផ្លាស់ទីមនុស្សយន្ត​{spriteIndex}",
+  "to": "ចំពោះ",
   "toXY": "ទៅ​x,y",
   "moveDown": "ផ្លាស់​ទី​ចុះ​ក្រោម",
   "moveDownTooltip": "ផ្លាស់ទីតួអង្គចុះក្រោម។",

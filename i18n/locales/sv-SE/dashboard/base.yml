@@ -368,6 +368,7 @@ sv:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -723,21 +724,21 @@ sv:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: Vit
+        white: "Vit"
       - 
-        black: Svart eller afroamerikansk
+        black: "Svart eller afroamerikansk"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Annat
+        other: "Annat"
       - 
-        opt_out: Föredrar att inte svara
+        opt_out: "Föredrar att inte svara"
     submit: "Skicka in"
     decline: "Avsluta"
   zendesk_too_young_message: 'Tyvärr, yngre användare kan inte logga in på vår supportsida. Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att logga in eller be din förälder eller lärare att kontakta oss.'

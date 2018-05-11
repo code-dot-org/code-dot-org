@@ -318,6 +318,7 @@
   "moveSpriteN": "verplaats speler {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "verplaats droid {spriteIndex}",
+  "to": "aan",
   "toXY": "naar x,y",
   "moveDown": "omlaag",
   "moveDownTooltip": "Verplaats de speler omlaag.",

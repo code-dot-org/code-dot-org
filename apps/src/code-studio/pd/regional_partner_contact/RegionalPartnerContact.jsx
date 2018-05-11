@@ -121,11 +121,18 @@ class RegionalPartnerContactComponent extends FormComponent {
             componentClass: 'textarea'
           })
         }
-
+        {
+          this.buildButtonsFromOptions({
+            name: 'opt_in',
+            label: 'Can we email you about updates to our courses, local learning opportunities, or other computer science news?',
+            type: 'radio',
+            required: true
+          })
+        }
       </FormGroup>
     );
   }
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes'];
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'opt_in'];

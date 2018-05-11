@@ -14,14 +14,18 @@ let schoolData = {
 const SCHOOL_NOT_FOUND = "-1";
 
 function renderSchoolDropdown() {
-  ReactDOM.render (
-    <SchoolAutocompleteDropdownWithLabel
-      setField={schoolDropdownOnChange}
-      value={schoolData.nces}
-      showErrorMsg={schoolData.showDropdownError}
-    />,
-    $('#school-selector')[0]
-  );
+  const schoolSelector = $('#school-selector')[0];
+
+  if (schoolSelector) {
+    ReactDOM.render (
+      <SchoolAutocompleteDropdownWithLabel
+        setField={schoolDropdownOnChange}
+        value={schoolData.nces}
+        showErrorMsg={schoolData.showDropdownError}
+      />,
+      schoolSelector
+    );
+  }
 }
 
 function schoolDropdownOnChange(field, event) {
@@ -43,7 +47,10 @@ function schoolDropdownOnChange(field, event) {
 
 $(document).ready(function () {
 
-  new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
+  const hocEventLocationElement = document.getElementById('hoc-event-location');
+  if (hocEventLocationElement) {
+    new google.maps.places.SearchBox(hocEventLocationElement);
+  }
 
   $('#hoc-signup-form select').selectize();
 

@@ -40,3 +40,8 @@
             längere Beschreibung für Studenten
           description_teacher: Dies ist ein Kurs für Allthethings und er hat eine
             längere Beschreibung für Lehrer
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
