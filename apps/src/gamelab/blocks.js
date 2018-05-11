@@ -68,6 +68,32 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     },
   },
+  spritePicker: {
+    addInput(block, input) {
+      block.getVars = function () {
+        return {
+          [Blockly.BlockValueType.SPRITE]: [block.getTitleValue(input.name)],
+        };
+      };
+      block.renameVar = function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(input.name))) {
+          block.setTitleValue(newName, input.name);
+        }
+      };
+      block.removeVar = function (oldName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(input.name))) {
+          block.dispose(true, true);
+        }
+      };
+
+      return block.appendDummyInput()
+        .appendTitle(input.label)
+        .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), input.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
 };
 
 export default {
