@@ -34,6 +34,7 @@ const defaultProps = {
       assignment_family_name: 'csd',
       assignment_family_title: 'CS Discoveries',
       version_year: '2017',
+      version_title: "'17-'18",
     },
     // script in course
     'null_168': {
@@ -50,6 +51,7 @@ const defaultProps = {
       assignment_family_name: 'csd1',
       assignment_family_title: 'Unit 1: Problem Solving',
       version_year: '2017',
+      version_title: '2017',
     },
     // script not in course
     'null_6': {
@@ -66,6 +68,7 @@ const defaultProps = {
       assignment_family_name: 'flappy',
       assignment_family_title: 'Make a Flappy game',
       version_year: '2017',
+      version_title: '2017',
     }
   },
   assignmentFamilies: [
