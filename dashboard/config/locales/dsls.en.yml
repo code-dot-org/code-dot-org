@@ -11840,7 +11840,7 @@ en:
       csp-post-survey-2017-q31_2018:
         Agree: Agree
         Disagree: Disagree
-        I want to take more computer science classes in the future.: I want to take more computer science classes in the future.
+        I want to take more computer science classes.: I want to take more computer science classes.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -12235,7 +12235,7 @@ en:
         About what I was expecting: About what I was expecting
         Easier than expected: Easier than expected
         I did not take the CS Principles AP Exam: I did not take the CS Principles AP Exam
-        If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.: If you took take the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.
+        If you took the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.: If you took the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.
         More difficult than expected: More difficult than expected
         Way easier than expected: Way easier than expected
         Way more difficult than expected: Way more difficult than expected
@@ -12266,7 +12266,7 @@ en:
       csp-post-survey-2018-ExplorePT-I-liked:
         A little bit: A little bit
         A lot: A lot
-        Did you like this performance task?: Did you like this performance task?
+        Did you like this Performance Task?: Did you like this Performance Task?
         I didn't do it: I didn't do it
         I loved this Performance Task!: I loved this Performance Task!
         Not at all: Not at all
