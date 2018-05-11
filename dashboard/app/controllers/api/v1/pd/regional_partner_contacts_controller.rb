@@ -6,7 +6,7 @@ class Api::V1::Pd::RegionalPartnerContactsController < Api::V1::Pd::FormsControl
   def on_successful_create
     EmailPreference.upsert!(
       email: @contact_form.email,
-      opt_in: @contact_form.optin?,
+      opt_in: @contact_form.opt_in?,
       ip_address: request.env['REMOTE_ADDR'],
       source: EmailPreference::FORM_REGIONAL_PARTNER,
       form_kind: "0"

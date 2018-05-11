@@ -60,7 +60,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :role,
       :job_title,
       :grade_levels,
-      :optin
+      :opt_in
     ]
   end
 
@@ -71,7 +71,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         role: ['Teacher', 'School Administrator', 'District Administrator'],
         gradeLevels: ['High School', 'Middle School', 'Elementary School'],
         program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
-        optin: ['Yes', 'No']
+        opt_in: ['Yes', 'No']
       }
     )
   end
@@ -86,8 +86,8 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
     sanitize_form_data_hash[:email]
   end
 
-  def optin?
-    sanitize_form_data_hash[:optin].downcase == "yes"
+  def opt_in?
+    sanitize_form_data_hash[:opt_in].downcase == "yes"
   end
 
   private
