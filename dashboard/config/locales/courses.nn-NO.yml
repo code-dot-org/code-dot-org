@@ -40,3 +40,8 @@
             for elevar
           description_teacher: Dette er ei kursrekke for alle kurs og har lengre skildring
             for lærarar
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

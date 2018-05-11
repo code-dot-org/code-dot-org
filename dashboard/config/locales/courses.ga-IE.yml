@@ -3,7 +3,7 @@
     course:
       name:
         csp:
-          title: Computer Science Principles
+          title: Foras Feasa ar an Ríomheolaíocht
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
             to the foundational concepts of computer science and challenges them to
@@ -22,7 +22,7 @@
             opportunities.
           description_short: Learn foundational computer science concepts.
         csd:
-          title: Computer Science Discoveries
+          title: Fionnachtana sa Ríomheolaíocht
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
@@ -34,9 +34,14 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
+          title: cúrsauilechuimsitheach
+          description_short: Seo é cúrsa ina bhfuil chuile rud
+          description_student: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur
+            síos níos faide air do na daltaí
+          description_teacher: Seo é cúrsa ina bhfuil chuile rud agus a bhfuil cur
+            síos níos faide air do na múinteoirí
+        csd-2018:
+          title: Fionnachtana sa Ríomheolaíocht 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

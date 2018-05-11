@@ -318,6 +318,7 @@
   "moveSpriteN": "नायक चल्नुहोस {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "to",
   "toXY": "to x,y",
   "moveDown": "move down",
   "moveDownTooltip": "नायक तल चल्नुहोस.",

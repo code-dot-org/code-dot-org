@@ -368,6 +368,7 @@ km:
     enter_new_login_info: 'សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក'
     confirm_secret_words: 'ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'បាន​បញ្ចប់'
     tried: 'បាន​ព្យាយាម'
@@ -723,21 +724,21 @@ km:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: ផ្សេងៗ
+        other: "ផ្សេងៗ"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "ដាក់ស្នើរ"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
