@@ -24,7 +24,7 @@
     - else
       .field
         = f.label :email
-        = f.object.email.present? ? f.object.email : '***encrypted***'
+        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.can_edit_email? && !current_user.oauth?
           (
           %a#edit-email-link{href: '#'}= "Update"
