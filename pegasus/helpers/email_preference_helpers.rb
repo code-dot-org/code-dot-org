@@ -1,7 +1,7 @@
 require 'cdo/email_preference_constants'
 
 class EmailPreferenceHelper
-  def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
+  def self.upsert(email:, opt_in:, ip_address:, source:, form_kind:)
     current_time = Time.now
 
     # assign the argument opt_in to a variable with a different name to avoid confusion below
