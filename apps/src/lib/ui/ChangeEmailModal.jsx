@@ -57,11 +57,14 @@ export default class ChangeEmailModal extends React.Component {
 
   state = {
     saveState: STATE_INITIAL,
-    newEmail: '',
-    newEmailServerError: undefined,
-    currentPassword: '',
-    currentPasswordServerError: undefined,
-    emailOptIn: '',
+    values: {
+      newEmail: '',
+      currentPassword: '',
+    },
+    serverErrors: {
+      newEmail: '',
+      currentPassword: ''
+    },
   };
 
 
@@ -97,26 +100,28 @@ export default class ChangeEmailModal extends React.Component {
       return;
     }
 
+    const {newEmail, currentPassword} = this.state.values;
     this.setState({saveState: STATE_SAVING}, () => {
-      this._form.find('#change-email-modal_user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
-      this._form.find('#change-email-modal_user_hashed_email').val(hashEmail(this.state.newEmail));
-      this._form.find('#change-email-modal_user_current_password').val(this.state.currentPassword);
-      // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
+      this._form.find('#change-email-modal_user_email').val(this.props.userAge < 13 ? '' : newEmail);
+      this._form.find('#change-email-modal_user_hashed_email').val(hashEmail(newEmail));
+      this._form.find('#change-email-modal_user_current_password').val(currentPassword);
       this._form.submit();
     });
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitSuccess = () => this.props.handleSubmit(this.state.newEmail);
+  onSubmitSuccess = () => this.props.handleSubmit(this.state.values.newEmail);
 
   onSubmitFailure = (_, xhr) => {
     const validationErrors = xhr.responseJSON;
     if (validationErrors) {
       this.setState({
         saveState: STATE_INITIAL,
-        newEmailServerError: validationErrors.email && validationErrors.email[0],
-        currentPasswordServerError: validationErrors.current_password && validationErrors.current_password[0],
+        serverErrors: {
+          newEmail: validationErrors.email && validationErrors.email[0],
+          currentPassword: validationErrors.current_password && validationErrors.current_password[0],
+        }
       }, () => this.changeEmailForm.focusOnAnError());
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
@@ -128,57 +133,53 @@ export default class ChangeEmailModal extends React.Component {
   }
 
   getValidationErrors() {
-    const {newEmailServerError, currentPasswordServerError} = this.state;
+    const {serverErrors} = this.state;
     return {
-      newEmail: newEmailServerError || this.getNewEmailValidationError(),
-      currentPassword: currentPasswordServerError || this.getCurrentPasswordValidationError(),
-      // emailOptIn: this.getEmailOptInValidationError(),
+      newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
+      currentPassword: serverErrors.currentPassword || this.getCurrentPasswordValidationError(),
     };
   }
 
   getNewEmailValidationError = () => {
-    if (this.state.newEmail.trim().length === 0) {
+    const {newEmail} = this.state.values;
+    const {currentHashedEmail} = this.props;
+    if (newEmail.trim().length === 0) {
       return i18n.changeEmailModal_newEmail_isRequired();
     }
-    if (!isEmail(this.state.newEmail.trim())) {
+    if (!isEmail(newEmail.trim())) {
       return i18n.changeEmailModal_newEmail_invalid();
     }
-    if (this.props.currentHashedEmail === hashEmail(this.state.newEmail)) {
+    if (currentHashedEmail === hashEmail(newEmail)) {
       return i18n.changeEmailmodal_newEmail_mustBeDifferent();
     }
     return null;
   };
 
   getCurrentPasswordValidationError = () => {
-    if (this.state.currentPassword.length === 0) {
+    const {currentPassword} = this.state.values;
+    if (currentPassword.length === 0) {
       return i18n.changeEmailModal_currentPassword_isRequired();
     }
     return null;
   };
 
-  // getEmailOptInValidationError = () => {
-  //   if (this.state.emailOptIn.length === 0) {
-  //     return i18n.changeEmailModal_emailOptIn_isRequired();
-  //   }
-  //   return null;
-  // };
-
   onFormChange = (newValues) => {
-    const {newEmail, currentPassword} = this.state;
-    const emailChanged = newValues.newEmail !== newEmail;
-    const passwordChanged = newValues.currentPassword !== currentPassword;
-    const stateUpdate = {...newValues};
-    if (emailChanged) {
-      stateUpdate.newEmailServerError = undefined;
+    const {values: oldValues, serverErrors} = this.state;
+    const newServerErrors = {...serverErrors};
+    if (newValues.newEmail !== oldValues.newEmail) {
+      newServerErrors.newEmailServerError = undefined;
     }
-    if (passwordChanged) {
-      stateUpdate.currentPasswordServerError = undefined;
+    if (newValues.currentPassword !== oldValues.currentPassword) {
+      newServerErrors.currentPasswordServerError = undefined;
     }
-    this.setState(stateUpdate);
+    this.setState({
+      values: newValues,
+      serverErrors: newServerErrors
+    });
   };
 
   render = () => {
-    const {saveState} = this.state;
+    const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
     return (
@@ -192,11 +193,7 @@ export default class ChangeEmailModal extends React.Component {
           <Header text={i18n.changeEmailModal_title()}/>
           <ChangeEmailForm
             ref={x => this.changeEmailForm = x}
-            values={{
-              newEmail: this.state.newEmail,
-              currentPassword: this.state.currentPassword,
-              emailOptIn: this.state.emailOptIn,
-            }}
+            values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
             onChange={this.onFormChange}
