@@ -11,6 +11,8 @@ const styles = {
   }
 };
 
+const IS_TRANSITIONING = 'IS_TRANSITIONING';
+
 /**
  * A toggle that provides a way to switch between detail and summary views of
  * the progress a section of students have made in a course. Teacher view.
@@ -21,30 +23,49 @@ class SectionProgressToggle extends React.Component {
     setCurrentView: PropTypes.func.isRequired,
   };
 
+  state = {
+    currentView: ViewType.SUMMARY,
+  };
+
   onChange = () => {
     if (this.props.currentView === ViewType.SUMMARY) {
-      this.props.setCurrentView(ViewType.DETAIL);
+      this.setState({currentView: ViewType.DETAIL}, () => {
+        setTimeout(() => {
+          this.props.setCurrentView(ViewType.DETAIL);
+        }, 0);
+      });
     } else {
-      this.props.setCurrentView(ViewType.SUMMARY);
+      this.setState({currentView: ViewType.SUMMARY}, () => {
+        setTimeout(() => {
+          this.props.setCurrentView(ViewType.SUMMARY);
+        }, 0);
+      });
     }
   };
 
   render() {
-    const { currentView } = this.props;
+    const { currentView } = this.state;
 
     return (
-      <ToggleGroup
-        selected={currentView}
-        activeColor={color.teal}
-        onChange={this.onChange}
-      >
-        <button value={ViewType.SUMMARY} style={styles.toggleButton}>
-          <FontAwesome icon="search-minus"/>
-        </button>
-        <button value={ViewType.DETAIL} style={styles.toggleButton}>
-          <FontAwesome icon="search-plus"/>
-        </button>
-      </ToggleGroup>
+      <div>
+        <ToggleGroup
+          selected={currentView}
+          activeColor={color.teal}
+          onChange={this.onChange}
+        >
+          <button value={ViewType.SUMMARY} style={styles.toggleButton}>
+            <FontAwesome icon="search-minus"/>
+          </button>
+          <button value={ViewType.DETAIL} style={styles.toggleButton}>
+            <FontAwesome icon="search-plus"/>
+          </button>
+        </ToggleGroup>
+        {currentView === IS_TRANSITIONING &&
+          <div>
+            <FontAwesome icon="spinner"/>
+          </div>
+        }
+      </div>
     );
 
   }
