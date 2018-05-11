@@ -8,6 +8,7 @@ import color from "../../util/color";
 import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
+import Button from '../Button';
 
 // TODO: abstract into constants
 const PADDING = 8;
@@ -17,19 +18,21 @@ const styles = {
     marginBottom: 0
   },
   tableHeader: {
-    height: 44,
+    height: 47,
     width: '100%',
     padding: PADDING,
     marginTop: 20,
     backgroundColor: color.table_header,
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   dropdownContainer: {
     display: 'flex',
     alignItems: 'center'
   },
   dropdownLabel: {
-    fontWeight: 'bold'
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   dropdown: {
     display: 'block',
@@ -40,7 +43,7 @@ const styles = {
     marginLeft: PADDING
   },
   table: {
-    paddingTop: PADDING / 2
+    paddingTop: PADDING / 4
   }
 };
 
@@ -123,6 +126,11 @@ class TextResponses extends Component {
         </div>
         <div style={styles.tableHeader}>
           {this.renderStageFilterDropdown()}
+          <Button
+            text="Download CSV"
+            onClick={() => {}}
+            color={Button.ButtonColor.white}
+          />
         </div>
         <div style={styles.table}>
           <TextResponsesTable
