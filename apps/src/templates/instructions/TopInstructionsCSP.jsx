@@ -125,7 +125,7 @@ class TopInstructions extends Component {
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    viewAs: PropTypes.oneOf(ViewType)
+    viewAs: PropTypes.oneOf(['Teacher', 'Student'])
   };
 
   state = {
