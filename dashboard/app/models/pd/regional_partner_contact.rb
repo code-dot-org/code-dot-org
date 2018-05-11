@@ -60,6 +60,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :role,
       :job_title,
       :grade_levels,
+      :opt_in
     ]
   end
 
@@ -69,7 +70,8 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         title: %w(Mr. Mrs. Ms. Dr.),
         role: ['Teacher', 'School Administrator', 'District Administrator'],
         gradeLevels: ['High School', 'Middle School', 'Elementary School'],
-        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)']
+        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
+        opt_in: ['Yes', 'No']
       }
     )
   end
@@ -78,6 +80,14 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
     if errors.messages[:form_data].include? 'schoolDistrictData'
       return_data[:general_error] = 'Please fill out the fields about your school above'
     end
+  end
+
+  def email
+    sanitize_form_data_hash[:email]
+  end
+
+  def opt_in?
+    sanitize_form_data_hash[:opt_in].downcase == "yes"
   end
 
   private
