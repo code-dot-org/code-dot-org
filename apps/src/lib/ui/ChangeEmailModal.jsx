@@ -36,19 +36,17 @@ export default class ChangeEmailModal extends React.Component {
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
     userAge: PropTypes.number.isRequired,
+    currentHashedEmail: PropTypes.string,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      saveState: STATE_INITIAL,
-      newEmail: '',
-      newEmailServerError: undefined,
-      currentPassword: '',
-      currentPasswordServerError: undefined,
-      emailOptIn: '',
-    };
-  }
+  state = {
+    saveState: STATE_INITIAL,
+    newEmail: '',
+    newEmailServerError: undefined,
+    currentPassword: '',
+    currentPasswordServerError: undefined,
+    emailOptIn: '',
+  };
 
   //
   // Note: This dialog submits account changes to dashboard using a
@@ -150,6 +148,9 @@ export default class ChangeEmailModal extends React.Component {
     }
     if (!isEmail(this.state.newEmail.trim())) {
       return i18n.changeEmailModal_newEmail_invalid();
+    }
+    if (this.props.currentHashedEmail === MD5(this.state.newEmail).toString()) {
+      return i18n.changeEmailmodal_newEmail_mustBeDifferent();
     }
     return null;
   };

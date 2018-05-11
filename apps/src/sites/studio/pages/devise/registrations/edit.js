@@ -55,12 +55,14 @@ const changeEmailMountPoint = document.createElement('div');
 function showChangeEmailModal() {
   document.body.appendChild(changeEmailMountPoint);
   const userAge = parseInt(document.getElementById('user_age').value, 10);
+  const userHashedEmail = document.getElementById('user_hashed_email').value;
   ReactDOM.render(
     <ChangeEmailModal
       isOpen
       handleSubmit={hideChangeEmailModal}
       handleCancel={hideChangeEmailModal}
       userAge={userAge}
+      currentHashedEmail={userHashedEmail}
     />,
     changeEmailMountPoint
   );
