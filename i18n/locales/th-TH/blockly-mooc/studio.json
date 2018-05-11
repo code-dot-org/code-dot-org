@@ -318,6 +318,7 @@
   "moveSpriteN": "บังคับตัวละคร {spriteIndex} ให้เคลื่อนที่",
   "moveDroid": "เคลื่อนหุ่นยนต์",
   "moveDroidN": "เคลื่อนหุ่นยนต์{spriteIndex}",
+  "to": "ถึง",
   "toXY": "ไปที่ x, y",
   "moveDown": "เคลื่อนลง",
   "moveDownTooltip": "บังคับตัวละครลงข้างล่าง",

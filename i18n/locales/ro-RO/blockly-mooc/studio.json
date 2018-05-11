@@ -318,6 +318,7 @@
   "moveSpriteN": "mută actor {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "mută droid {spriteIndex}",
+  "to": "la",
   "toXY": "la x,y",
   "moveDown": "mută în jos",
   "moveDownTooltip": "Mută un actor în jos.",

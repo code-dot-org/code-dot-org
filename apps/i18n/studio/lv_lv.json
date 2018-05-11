@@ -318,6 +318,7 @@
   "moveSpriteN": "pārvietot aktieri {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "darīt",
   "toXY": "uz x,y",
   "moveDown": "pārvietot uz leju",
   "moveDownTooltip": "Pārvietot aktieri uz leju.",

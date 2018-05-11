@@ -318,6 +318,7 @@
   "moveSpriteN": "liiguta tegelaskuju {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "liiguta droidi {spriteIndex}",
+  "to": "muutujale",
   "toXY": "x,y",
   "moveDown": "liigu alla",
   "moveDownTooltip": "Liiguta tegelaskuju alla.",

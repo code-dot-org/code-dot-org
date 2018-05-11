@@ -318,6 +318,7 @@
   "moveSpriteN": "تحريك الممثل {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "إلى",
   "toXY": "إلى y,x",
   "moveDown": "تحريك لأسفل",
   "moveDownTooltip": "تحريك الممثل إلى أسفل.",

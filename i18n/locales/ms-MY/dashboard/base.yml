@@ -345,8 +345,8 @@ ms:
     email_resend_confirm: 'Hantar semula arahan pengesahan'
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: '(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)'
-    delete: 'Delete your account'
-    delete_text: "Clicking the button below will delete your account."
+    delete: 'Delete Account'
+    delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
@@ -362,6 +362,7 @@ ms:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Lengkap'
     tried: 'Telah dicuba'
@@ -717,21 +718,21 @@ ms:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Lain-lain
+        other: "Lain-lain"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Hantar"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

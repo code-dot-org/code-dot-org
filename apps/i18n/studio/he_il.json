@@ -318,6 +318,7 @@
   "moveSpriteN": "הזז את השחקן {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "ל-",
   "toXY": "ל-x,y",
   "moveDown": "הזז למטה",
   "moveDownTooltip": "הזז שחקן כלפי מטה.",

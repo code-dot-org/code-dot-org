@@ -318,6 +318,7 @@
   "moveSpriteN": "neke kaitapere {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "ki te",
   "toXY": "ki x,y",
   "moveDown": "neke ki raro",
   "moveDownTooltip": "Neke whakararo te kaitapere.",
