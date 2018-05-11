@@ -129,6 +129,7 @@ class GameLabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
+    const spriteLab = true;
     return (
       <span>
         <ProtectedVisualizationDiv>
@@ -146,8 +147,8 @@ class GameLabVisualizationColumn extends React.Component {
             onMouseMove={this.onMouseMove}
           >
             <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay/>
-            <TooltipOverlay providers={[coordinatesProvider()]}/>
+            <CrosshairOverlay flip={spriteLab} />
+            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]}/>
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
@@ -162,9 +163,9 @@ class GameLabVisualizationColumn extends React.Component {
 
           <CompletionButton />
 
-          {!this.props.isShareView && this.renderGridCheckbox()}
+          {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {this.renderAppSpaceCoordinates()}
+        {!spriteLab && this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}
