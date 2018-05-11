@@ -10,7 +10,7 @@ const studentData = [
   {id: 0, name: 'studenta'}
 ];
 
-describe('MoveStudents', () => {
+describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
