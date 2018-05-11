@@ -38,15 +38,15 @@ export default class CrosshairOverlay extends React.Component {
       <g className="crosshair-overlay">
         <line
           x1={this.props.mouseX}
-          y1={this.props.mouseY - CROSSHAIR_MARGIN * (flip ? -1 : 1)}
+          y1={flip ? this.props.height : 0}
           x2={this.props.mouseX}
-          y2={flip ? this.props.height : 0}
+          y2={this.props.mouseY - CROSSHAIR_MARGIN * (flip ? -1 : 1)}
           style={styles.line}
         />
         <line
-          x1={this.props.mouseX - CROSSHAIR_MARGIN}
+          x1={0}
           y1={this.props.mouseY}
-          x2={0}
+          x2={this.props.mouseX - CROSSHAIR_MARGIN}
           y2={this.props.mouseY}
           style={styles.line}
         />
