@@ -449,6 +449,7 @@ module LevelsHelper
     if l.should_localize?
       level_options['markdownInstructions'] = l.localized_markdown_instructions unless l.localized_markdown_instructions.nil?
       level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
+      level_options['toolbox'] = l.localized_toolbox_blocks unless l.localized_toolbox_blocks.nil?
     end
 
     # Script-dependent option
