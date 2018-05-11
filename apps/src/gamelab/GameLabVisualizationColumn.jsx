@@ -33,6 +33,7 @@ class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    isBlockly: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
@@ -129,7 +130,7 @@ class GameLabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
-    const spriteLab = true;
+    const spriteLab = this.props.isBlockly;
     return (
       <span>
         <ProtectedVisualizationDiv>
@@ -181,6 +182,7 @@ class GameLabVisualizationColumn extends React.Component {
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
+  isBlockly: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
