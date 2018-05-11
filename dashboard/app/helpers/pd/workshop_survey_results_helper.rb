@@ -191,11 +191,12 @@ module Pd::WorkshopSurveyResultsHelper
       completed_surveys: surveys.count
     }
     questions.each do |q_key, question|
-      if include_free_response && question[:free_response]
-        sum = surveys.map {|survey| survey[q_key]}.reduce([], :append)
-        session_summary[q_key] = sum
-      elsif question[:free_response].nil?
-        puts surveys.map {|survey| survey[q_key]}
+      if question[:free_response]
+        if include_free_response
+          sum = surveys.map {|survey| survey[q_key]}.reduce([], :append)
+          session_summary[q_key] = sum
+        end
+      else
         sum = surveys.map {|survey| survey[q_key]}.reduce(0, :+)
         session_summary[q_key] = (sum / surveys.count.to_f).round(2)
       end
@@ -204,6 +205,7 @@ module Pd::WorkshopSurveyResultsHelper
     session_summary
   end
 
+  # Below two functions generate fake data.
   def get_surveys_for_sessions(sessions)
     (rand(10..20) * sessions.count).times.map do |_|
       {
