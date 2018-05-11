@@ -22,12 +22,14 @@ class SectionProgressToggle extends React.Component {
   };
 
   state = {
-    currentView: ViewType.SUMMARY,
+    selectedToggle: ViewType.SUMMARY,
   };
 
   componentWillReceiveProps(nextProps) {
-    if (this.state.currentView !== nextProps.currentView) {
-      this.setState({currentView: nextProps.currentView});
+    // currentView can be set externally, and the component will
+    // still need to update when that happens.
+    if (this.state.selectedToggle !== nextProps.currentView) {
+      this.setState({selectedToggle: nextProps.currentView});
     }
   }
 
@@ -35,14 +37,14 @@ class SectionProgressToggle extends React.Component {
     // Display the toggle based on the internal state so that it is
     // more immediately responsive. Once setting internal state is
     // complete, then update the redux currentView.
-    if (this.props.currentView === ViewType.SUMMARY) {
-      this.setState({currentView: ViewType.DETAIL}, () => {
+    if (this.state.selectedToggle === ViewType.SUMMARY) {
+      this.setState({selectedToggle: ViewType.DETAIL}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.DETAIL);
         }, 0);
       });
     } else {
-      this.setState({currentView: ViewType.SUMMARY}, () => {
+      this.setState({selectedToggle: ViewType.SUMMARY}, () => {
         setTimeout(() => {
           this.props.setCurrentView(ViewType.SUMMARY);
         }, 0);
@@ -51,11 +53,11 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const { currentView } = this.state;
+    const { selectedToggle } = this.state;
 
     return (
       <ToggleGroup
-        selected={currentView}
+        selected={selectedToggle}
         activeColor={color.teal}
         onChange={this.onChange}
       >
