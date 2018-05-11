@@ -26,6 +26,10 @@ A less clumsy way to use Rails UJS?
 
  */
 
+const STATE_INITIAL = 'initial';
+const STATE_SAVING = 'saving';
+const STATE_UNKNOWN_ERROR = 'unknown-error';
+
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -37,6 +41,7 @@ export default class ChangeEmailModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      saveState: STATE_INITIAL,
       newEmail: '',
       newEmailServerError: undefined,
       currentPassword: '',
@@ -90,11 +95,13 @@ export default class ChangeEmailModal extends React.Component {
       return;
     }
 
-    this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
-    this._form.find('#user_hashed_email').val(MD5(this.state.newEmail));
-    this._form.find('#user_current_password').val(this.state.currentPassword);
-    // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
-    this._form.submit();
+    this.setState({saveState: STATE_SAVING}, () => {
+      this._form.find('#user_email').val(this.props.userAge < 13 ? '' : this.state.newEmail);
+      this._form.find('#user_hashed_email').val(MD5(this.state.newEmail));
+      this._form.find('#user_current_password').val(this.state.currentPassword);
+      // this._form.find('#user_email_opt_in').val(this.state.emailOptIn);
+      this._form.submit();
+    });
   };
 
   cancel = () => this.props.handleCancel();
@@ -104,17 +111,24 @@ export default class ChangeEmailModal extends React.Component {
   };
 
   onSubmitFailure = (event, xhr, error) => {
-    const errors = JSON.parse(xhr.responseText);
-    this.setState({
-      newEmailServerError: errors.email,
-      currentPasswordServerError: errors.current_password,
-    }, () => {
-      if (this.state.newEmailServerError) {
-        this.newEmailInput.focus();
-      } else if (this.state.currentPasswordServerError) {
-        this.currentPasswordInput.focus();
-      }
-    });
+    const validationErrors = xhr.responseJSON;
+    if (validationErrors) {
+      this.setState({
+        saveState: STATE_INITIAL,
+        newEmailServerError: validationErrors.email,
+        currentPasswordServerError: validationErrors.current_password,
+      }, () => {
+        if (this.state.newEmailServerError) {
+          this.newEmailInput.focus();
+        } else if (this.state.currentPasswordServerError) {
+          this.currentPasswordInput.focus();
+        }
+      });
+    } else {
+      this.setState({
+        saveState: STATE_UNKNOWN_ERROR,
+      });
+    }
   };
 
   getValidationErrors() {
@@ -165,6 +179,7 @@ export default class ChangeEmailModal extends React.Component {
   });
 
   render = () => {
+    const {saveState} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = Object.keys(validationErrors).every(key => !validationErrors[key]);
     return (
@@ -249,7 +264,12 @@ export default class ChangeEmailModal extends React.Component {
             onConfirm={this.save}
             onCancel={this.cancel}
             disableConfirm={!isFormValid}
-          />
+          >
+            {(STATE_SAVING === saveState) &&
+              <em>{i18n.saving()}</em>}
+            {(STATE_UNKNOWN_ERROR === saveState) &&
+              <em>{i18n.changeEmailModal_unexpectedError()}</em>}
+          </SystemDialogConfirmCancelFooter>
         </div>
       </BaseDialog>
     );
@@ -327,6 +347,7 @@ class SystemDialogConfirmCancelFooter extends React.Component {
     confirmText: PropTypes.string.isRequired,
     cancelText: PropTypes.string.isRequired,
     disableConfirm: PropTypes.bool.isRequired,
+    children: PropTypes.any,
   };
 
   static defaultProps = {
@@ -338,11 +359,26 @@ class SystemDialogConfirmCancelFooter extends React.Component {
   static style = {
     display: 'flex',
     flexDirection: 'row-reverse',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
     ...horizontalRuleStyle,
     borderTopWidth: 1,
     paddingTop: 10,
     marginTop: 10,
+  };
+
+  static messageStyle = {
+    display: 'inline-block',
+    lineHeight: '34px',
+    textAlign: 'right',
+    verticalAlign: 'top',
+    marginLeft: '1em',
+    marginRight: '1em',
+    flexGrow: 1,
+  };
+
+  static buttonStyle = {
+    flexShrink: 0,
   };
 
   render() {
@@ -353,11 +389,16 @@ class SystemDialogConfirmCancelFooter extends React.Component {
           text={this.props.confirmText}
           color={Button.ButtonColor.orange}
           disabled={this.props.disableConfirm}
+          style={SystemDialogConfirmCancelFooter.buttonStyle}
         />
+        <span style={SystemDialogConfirmCancelFooter.messageStyle}>
+          {this.props.children}
+        </span>
         <Button
           onClick={this.props.onCancel}
           text={this.props.cancelText}
           color={Button.ButtonColor.gray}
+          style={SystemDialogConfirmCancelFooter.buttonStyle}
         />
       </div>
     );
