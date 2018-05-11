@@ -531,7 +531,7 @@ export default {
 };
 
 function generateAppAssets(params) {
-  const { html, code, rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
+  const { html = '', code = '', rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
 
   const appAssets = dashboard.assets.listStore.list().map(asset => ({
     url: assetPrefix.fixPath(asset.filename),
@@ -543,8 +543,8 @@ function generateAppAssets(params) {
 
   const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
   const allSounds = [
-    ...html.match(soundRegex),
-    ...code.match(soundRegex),
+    ...(html.match(soundRegex) || []),
+    ...(code.match(soundRegex) || []),
   ];
   const uniqueSounds = [...(new Set(allSounds))];
   const soundAssets = uniqueSounds.map(soundProtocolUrl => {
