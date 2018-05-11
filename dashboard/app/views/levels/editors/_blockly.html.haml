@@ -59,6 +59,9 @@
   = f.label :disable_if_else_editing, 'Don\'t let users mutate (add or remove) branches to if/else blocks'
   = boolean_check_box f, :disable_if_else_editing
 .field
+  = f.label :show_type_hints, 'Show a small visual hint for what type of block a connection accepts'
+  = boolean_check_box f, :show_type_hints
+.field
   = f.label :disable_procedure_autopopulate, 'Disable autopopulation of Functions category with default toolbox blocks'
   %p
     By default, Functions categories in Blockly will be automatically populated

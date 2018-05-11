@@ -76,4 +76,6 @@
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
 
+    = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
+
     = yield :body_scripts

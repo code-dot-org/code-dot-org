@@ -22,9 +22,9 @@ const MazeVisualizationColumn = require('./MazeVisualizationColumn');
 const api = require('./api');
 const dropletConfig = require('./dropletConfig');
 const mazeReducer = require('./redux');
+const tiles = require('./tiles');
 
-const MazeController = require('@code-dot-org/maze/src/mazeController');
-const tiles = require('@code-dot-org/maze/src/tiles');
+const MazeController = require('./mazeController');
 
 const createResultsHandlerForSubtype = require('./results/utils').createResultsHandlerForSubtype;
 
@@ -266,7 +266,6 @@ module.exports = class Maze {
 
   reset_ = () => {
     this.animating_ = false;
-    timeoutList.clearTimeouts();
     this.controller.reset();
   };
 

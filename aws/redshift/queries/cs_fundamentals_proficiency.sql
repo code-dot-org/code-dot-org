@@ -1,4 +1,10 @@
-SELECT COUNT(0) value, 'Level 1 proficient students' metric
+select *
+from
+(
+SELECT 
+  COUNT(0) value, 
+  'Level 1 proficient students' metric,
+  1 as sort
 FROM users
 INNER JOIN user_proficiencies
 ON user_proficiencies.user_id = users.id
@@ -22,7 +28,10 @@ AND users.user_type = 'student'
 
 union all
 
-SELECT COUNT(0) value, 'Level 2 proficient students' metric
+SELECT 
+  COUNT(0) value, 
+  'Level 2 proficient students' metric,
+  2 as sort
 FROM users
 INNER JOIN user_proficiencies
 ON user_proficiencies.user_id = users.id
@@ -46,7 +55,10 @@ AND users.user_type = 'student'
 
 union all
 
-SELECT COUNT(0) value, 'Level 3 proficient students' metric
+SELECT 
+  COUNT(0) value, 
+  'Level 3 proficient students' metric,
+  3 as sort
 FROM users 
 INNER JOIN user_proficiencies ON user_proficiencies.user_id = users.id 
 WHERE user_type = 'student' 
@@ -54,7 +66,10 @@ AND cast(basic_proficiency_at as date) <= last_day(dateadd(month, -1, getdate())
 
 union all
 
-SELECT COUNT(distinct u.id) * (COUNT(distinct case when gender = 'f' then u.id end)::float / COUNT(distinct case when gender in ('m', 'f') then u.id else null end)) value, '(extrapolated) # of level 3 proficient female students' metric
+SELECT 
+  COUNT(distinct u.id) * (COUNT(distinct case when gender = 'f' then u.id end)::float / COUNT(distinct case when gender in ('m', 'f') then u.id else null end)) value, 
+  '(extrapolated) # of level 3 proficient female students' metric,
+  4 as sort
 FROM users u
 INNER JOIN user_proficiencies ON user_proficiencies.user_id = u.id 
 WHERE user_type = 'student' 
@@ -62,7 +77,10 @@ AND cast(basic_proficiency_at as date) <= last_day(dateadd(month, -1, getdate())
 
 union all
 
-SELECT COUNT(0) value, 'Level 4 proficient students' metric
+SELECT 
+  COUNT(0) value, 
+  'Level 4 proficient students' metric,
+  5 as sort
 FROM users
 INNER JOIN user_proficiencies
 ON user_proficiencies.user_id = users.id
@@ -86,7 +104,10 @@ AND users.user_type = 'student'
 
 union all
 
-SELECT COUNT(0) value, 'Level 5 proficient students' metric
+SELECT 
+  COUNT(0) value, 
+  'Level 5 proficient students' metric,
+  6 as sort
 FROM users
 INNER JOIN user_proficiencies
 ON user_proficiencies.user_id = users.id
@@ -106,4 +127,6 @@ case when functions_d5_count >= 3 then 1 else 0 end
 + case when functions_with_params_d5_count >= 3 then 1 else 0 end
 )
 + case when conditionals_d5_count >= 3 then 1 else 0 end >= 3
-AND users.user_type = 'student';
+AND users.user_type = 'student'
+)
+order by sort asc;

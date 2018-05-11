@@ -204,6 +204,8 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :user_geos, -> {order 'updated_at desc'}
+
   after_create :associate_with_potential_pd_enrollments
 
   # after_create :send_new_teacher_email
@@ -561,7 +563,7 @@ class User < ActiveRecord::Base
 
     # As we want teachers to explicitly accept our Terms of Service, when the user_type is changing
     # without an explicit acceptance, we clear the version accepted.
-    if teacher?
+    if teacher? && purged_at.nil?
       self.studio_person = StudioPerson.create!(emails: email) unless studio_person
       if user_type_changed? && !terms_of_service_version_changed?
         self.terms_of_service_version = nil
@@ -1178,6 +1180,11 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
+  # Returns an array of experiment name strings
+  def get_active_experiment_names
+    Experiment.get_all_enabled(user: self).pluck(:name)
+  end
+
   def suppress_ui_tips_for_new_users
     # New teachers don't need to see the UI tips for their home and course pages,
     # so set them as already dismissed.
@@ -1620,6 +1627,8 @@ class User < ActiveRecord::Base
   end
 
   def stage_extras_enabled?(script)
+    return false unless script.stage_extras_available?
+
     sections_to_check = teacher? ? sections : sections_as_student
     sections_to_check.any? do |section|
       section.script_id == script.id && section.stage_extras
@@ -1689,11 +1698,23 @@ class User < ActiveRecord::Base
     self.uid = nil
     self.reset_password_token = nil
     self.full_address = nil
+    self.secret_picture_id = nil
+    self.secret_words = nil
+    self.school = nil
+    self.school_info_id = nil
     self.properties = {}
+    unless within_united_states?
+      self.urm = nil
+      self.races = nil
+    end
 
     self.purged_at = Time.zone.now
 
     save!
+  end
+
+  def within_united_states?
+    'United States' == user_geos.first&.country
   end
 
   def associate_with_potential_pd_enrollments
