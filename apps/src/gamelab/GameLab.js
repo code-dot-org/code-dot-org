@@ -1066,19 +1066,26 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   if (attachDebugger) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
-  let code = this.studioApp_.getCode();
-  if (this.level.customHelperLibrary) {
-    code = this.level.customHelperLibrary + code;
+  let code = '';
+  if (this.level.validationCode) {
+    code += ValidationSetupCode;
   }
   if (this.level.helperLibraries) {
     const libs = this.level.helperLibraries
       .map((lib) => LIBRARIES[lib])
       .join("\n");
-    code = libs + code;
+    code += libs;
   }
-  if (this.level.validationCode) {
-    code = ValidationSetupCode + code;
+  if (this.level.sharedBlocks) {
+    code += JSON.parse(this.level.sharedBlocks)
+      .map(blockConfig => blockConfig.helperCode)
+      .filter(helperCode => helperCode)
+      .join("\n");
   }
+  if (this.level.customHelperLibrary) {
+    code = this.level.customHelperLibrary + code;
+  }
+  code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
     blocks: dropletConfig.blocks,
