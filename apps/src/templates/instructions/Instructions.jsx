@@ -50,7 +50,6 @@ class Instructions extends React.Component {
       <div style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}>
         {this.props.renderedMarkdown &&
           <MarkdownInstructions
-            ref="instructionsMarkdown"
             renderedMarkdown={this.props.renderedMarkdown}
             onResize={this.props.onResize}
             inTopPane={this.props.inTopPane}
