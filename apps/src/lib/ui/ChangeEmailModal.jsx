@@ -2,9 +2,9 @@ import React, {PropTypes} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {hashEmail} from '../../code-studio/hashEmail';
 import {isEmail} from '../../util/formatValidation';
 import $ from 'jquery';
-import MD5 from 'crypto-js/md5';
 import {Header, ConfirmCancelFooter} from './SystemDialog/SystemDialog';
 import ChangeEmailForm from './ChangeEmailForm';
 
@@ -18,7 +18,6 @@ https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/
 
 Task list:
 Send the email opt-in to the server and handle it correctly
-Deduplicate and test client-side email hashing logic
 
  */
 
@@ -208,7 +207,3 @@ const styles = {
     color: color.charcoal,
   }
 };
-
-export function hashEmail(cleartextEmail) {
-  return MD5(cleartextEmail).toString();
-}

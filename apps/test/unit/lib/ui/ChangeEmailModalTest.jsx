@@ -2,7 +2,8 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import ChangeEmailModal, {hashEmail} from '@cdo/apps/lib/ui/ChangeEmailModal';
+import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
+import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
