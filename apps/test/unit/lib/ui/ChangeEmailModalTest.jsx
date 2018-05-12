@@ -52,7 +52,7 @@ describe('ChangeEmailModal', () => {
     expect(wrapper.text()).to.include(i18n.saving());
   });
 
-  it('disables everything and shows save text when saving', () => {
+  it('shows unknown error text when an unknown error occurs', () => {
     wrapper.setState({saveState: 'unknown-error'});
     expect(wrapper.text()).to.include(i18n.changeEmailModal_unexpectedError());
   });
