@@ -76,8 +76,8 @@ class ScrollButtons extends React.Component {
   }
 
   getMinHeight() {
-    const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true) +
-        getOuterHeight(this.refs.scrollDown, true);
+    const scrollButtonsHeight = getOuterHeight(this.scrollUp, true) +
+        getOuterHeight(this.scrollDown, true);
     return scrollButtonsHeight + (this.getMargin() * 2);
   }
 
@@ -141,7 +141,7 @@ class ScrollButtons extends React.Component {
     const upButton = (this.props.isMinecraft) ?
       <button
         className="arrow"
-        ref="scrollUp"
+        ref={(c) => { this.scrollUp = c; }}
         onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
@@ -151,7 +151,7 @@ class ScrollButtons extends React.Component {
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
       </button> :
       <div
-        ref="scrollUp"
+        ref={(c) => { this.scrollUp = c; }}
         onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
@@ -164,7 +164,7 @@ class ScrollButtons extends React.Component {
     const downButton = (this.props.isMinecraft) ?
       <button
         className="arrow"
-        ref="scrollDown"
+        ref={(c) => { this.scrollDown = c; }}
         onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
@@ -174,7 +174,7 @@ class ScrollButtons extends React.Component {
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
       </button> :
       <div
-        ref="scrollDown"
+        ref={(c) => { this.scrollDown = c; }}
         onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
