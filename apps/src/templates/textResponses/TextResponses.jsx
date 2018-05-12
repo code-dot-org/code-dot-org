@@ -25,7 +25,7 @@ const styles = {
   header: {
     marginBottom: 0
   },
-  tableHeader: {
+  actionRow: {
     height: 47,
     width: '100%',
     padding: PADDING,
@@ -83,13 +83,13 @@ class TextResponses extends Component {
     });
   };
 
-  renderStageFilterDropdown = () => {
+  renderFilterByStageDropdown = () => {
     return (
       <div style={styles.dropdownContainer}>
         <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
         <select
           style={styles.dropdown}
-          onChange={this.onChangeStageFilter}
+          onChange={this.onChangeFilter}
         >
           <option key={DEFAULT_FILTER_KEY}>{i18n.all()}</option>
           {this.getStages().map(stage => <option key={stage}>{stage}</option>)}
@@ -104,7 +104,7 @@ class TextResponses extends Component {
     return stages;
   };
 
-  onChangeStageFilter = event => {
+  onChangeFilter = event => {
     const filterByStageName = event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
     this.setState({filterByStageName});
   };
@@ -136,8 +136,8 @@ class TextResponses extends Component {
             onChange={this.onChangeScript}
           />
         </div>
-        <div style={styles.tableHeader}>
-          {this.renderStageFilterDropdown()}
+        <div style={styles.actionRow}>
+          {this.renderFilterByStageDropdown()}
           <CSVLink
             style={styles.buttonContainer}
             filename="responses.csv"
