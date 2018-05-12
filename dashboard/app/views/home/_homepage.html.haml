@@ -48,12 +48,17 @@
 
 .clear{style: "clear: both"}
 
+-# In-page reminders and surveys
 - if current_user
   - if current_user.teacher?
     #terms_reminder
       - unless current_user.accepted_latest_terms?
         = render template: 'api/accept_terms_reminder'
         = render partial: 'layouts/terms_interstitial'
+      - if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
+        = render partial: 'home/survey_nps'
+      - elsif show_diversity_survey? SurveyResult::DIVERSITY_2017
+        = render partial: 'home/survey_diversity'
 
 #homepage-container
 

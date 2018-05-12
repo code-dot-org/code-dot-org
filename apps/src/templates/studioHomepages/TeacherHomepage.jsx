@@ -111,7 +111,7 @@ export default class TeacherHomepage extends Component {
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
+    $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.teacherReminders)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
@@ -134,7 +134,7 @@ export default class TeacherHomepage extends Component {
           ref="flashes"
         />
         <ProtectedStatefulDiv
-          ref="termsReminder"
+          ref="teacherReminders"
         />
         {isEnglish && showSpecialAnnouncement && (
           <SpecialAnnouncementActionBlock/>
