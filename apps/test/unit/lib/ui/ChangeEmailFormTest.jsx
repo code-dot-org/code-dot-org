@@ -4,17 +4,17 @@ import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import ChangeEmailForm from '@cdo/apps/lib/ui/ChangeEmailForm';
 
-const DEFAULT_PROPS = {
-  values: {},
-  validationErrors: {},
-  onChange: () => {},
-  onSubmit: () => {}
-};
-
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
   const PASSWORD_SELECTOR = 'input[type="password"]';
   const OPT_IN_SELECTOR = 'select';
+
+  const DEFAULT_PROPS = {
+    values: {},
+    validationErrors: {},
+    onChange: () => {},
+    onSubmit: () => {}
+  };
 
   describe('calls onChange', () => {
     let onChange, wrapper;

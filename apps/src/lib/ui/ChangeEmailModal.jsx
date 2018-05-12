@@ -17,7 +17,6 @@ Spec:
 https://docs.google.com/document/d/1eKDnrgorG9koHQF3OdY6nxiO4PIfJ-JCNHGGQu0-G9Y/edit
 
 Task list:
-Testing!
 Send the email opt-in to the server and handle it correctly
 Deduplicate and test client-side email hashing logic
 
@@ -50,7 +49,7 @@ export default class ChangeEmailModal extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
-    railsForm: PropTypes.object,
+    railsForm: PropTypes.object.isRequired,
     userAge: PropTypes.number.isRequired,
     currentHashedEmail: PropTypes.string,
   };
@@ -67,33 +66,19 @@ export default class ChangeEmailModal extends React.Component {
     },
   };
 
-
   componentDidMount() {
     this._form = $(this.props.railsForm);
-    if (this._form) {
-      this._form.on('ajax:success', this.onSubmitSuccess);
-      this._form.on('ajax:error', this.onSubmitFailure);
-    } else {
-      console.warn('The ChangeEmailModal component did not find the required ' +
-        'Rails UJS form, and will be unable to submit changes.');
-    }
+    this._form.on('ajax:success', this.onSubmitSuccess);
+    this._form.on('ajax:error', this.onSubmitFailure);
   }
 
   componentWillUnmount() {
-    if (this._form) {
-      this._form.off('ajax:success', this.onSubmitSuccess);
-      this._form.off('ajax:error', this.onSubmitFailure);
-      delete this._form;
-    }
+    this._form.off('ajax:success', this.onSubmitSuccess);
+    this._form.off('ajax:error', this.onSubmitFailure);
+    delete this._form;
   }
 
   save = () => {
-    if (!this._form) {
-      console.error('The ChangeEmailModal component did not find the required ' +
-        'Rails UJS form, and was unable to submit changes.');
-      return;
-    }
-
     // No-op if we know the form is invalid, client-side.
     // This blocks return-key submission when the form is invalid.
     if (!this.isFormValid(this.getValidationErrors())) {
@@ -167,10 +152,10 @@ export default class ChangeEmailModal extends React.Component {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
     if (newValues.newEmail !== oldValues.newEmail) {
-      newServerErrors.newEmailServerError = undefined;
+      newServerErrors.newEmail = undefined;
     }
     if (newValues.currentPassword !== oldValues.currentPassword) {
-      newServerErrors.currentPasswordServerError = undefined;
+      newServerErrors.currentPassword = undefined;
     }
     this.setState({
       values: newValues,
@@ -224,6 +209,6 @@ const styles = {
   }
 };
 
-function hashEmail(cleartextEmail) {
+export function hashEmail(cleartextEmail) {
   return MD5(cleartextEmail).toString();
 }
