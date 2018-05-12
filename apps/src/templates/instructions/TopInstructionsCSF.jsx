@@ -238,7 +238,7 @@ class TopInstructions extends React.Component {
 
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
-    $(ReactDOM.findDOMNode(this.refs.icon)).load(function () {
+    $(ReactDOM.findDOMNode(this.icon)).load(function () {
       const minHeight = this.getMinHeight();
       if (this.props.height < minHeight) {
         this.props.setInstructionsRenderedHeight(minHeight);
@@ -291,7 +291,7 @@ class TopInstructions extends React.Component {
       // resizing our column significantly, it can result in our maxNeededHeight
       // being inaccurate. This isn't that big a deal except that it means when we
       // adjust maxNeededHeight below, it might not be as large as we want.
-      const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
+      const width = $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true);
 
       // setting state in componentDidUpdate will trigger another
       // re-render and is discouraged; unfortunately in this case we
@@ -308,8 +308,8 @@ class TopInstructions extends React.Component {
 
     this.adjustMaxNeededHeight();
 
-    if (this.refs && this.refs.instructions) {
-      const contentContainer = this.refs.instructions.parentElement;
+    if (this.instructions) {
+      const contentContainer = this.instructions.parentElement;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
         // see comment above
@@ -322,7 +322,7 @@ class TopInstructions extends React.Component {
 
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
-      const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
+      const images = ReactDOM.findDOMNode(this.instructions).getElementsByTagName('img');
       for (let i = 0, image; (image = images[i]); i++) {
         image.onload = image.onload || this.scrollInstructionsToBottom;
       }
@@ -353,17 +353,17 @@ class TopInstructions extends React.Component {
    * collapsed
    */
   getMinHeight(collapsed=this.props.collapsed) {
-    if (this.refs.containedLevel) {
+    if (this.containedLevel) {
       return MIN_CONTAINED_LEVEL_HEIGHT;
     }
-    const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
-    const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
-        this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
+    const collapseButtonHeight = getOuterHeight(this.collapser, true);
+    const scrollButtonsHeight = (!collapsed && this.scrollButtons) ?
+        this.scrollButtons.getWrappedInstance().getMinHeight() : 0;
 
-    const minIconHeight = this.refs.icon ?
-      getOuterHeight(this.refs.icon, true) : 0;
+    const minIconHeight = this.icon ?
+      getOuterHeight(this.icon, true) : 0;
     const minInstructionsHeight = this.props.collapsed ?
-      getOuterHeight(this.refs.instructions, true) : 0;
+      getOuterHeight(this.instructions, true) : 0;
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
@@ -390,9 +390,9 @@ class TopInstructions extends React.Component {
     const currentHeight = this.props.height;
 
     let newHeight = Math.max(minHeight, currentHeight + delta);
-    if (this.refs.containedLevel) {
+    if (this.containedLevel) {
       const maxContainedLevelHeight =
-        getOuterHeight(this.refs.containedLevel, true) +
+        getOuterHeight(this.containedLevel, true) +
         RESIZER_HEIGHT +
         CONTAINED_LEVEL_PADDING;
       newHeight = Math.min(newHeight, maxContainedLevelHeight);
@@ -411,9 +411,9 @@ class TopInstructions extends React.Component {
    */
   adjustMaxNeededHeight = () => {
     const minHeight = this.getMinHeight();
-    const instructionsContent = this.refs.instructions;
+    const instructionsContent = this.instructions;
     const maxNeededHeight = (this.props.hasContainedLevels ?
-        getOuterHeight(this.refs.containedLevel, true) + CONTAINED_LEVEL_PADDING :
+        getOuterHeight(this.containedLevel, true) + CONTAINED_LEVEL_PADDING :
         getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -441,7 +441,7 @@ class TopInstructions extends React.Component {
    * @return {Element} scrollTarget
    */
   getScrollTarget() {
-    return this.refs.instructions.parentElement;
+    return this.instructions.parentElement;
   }
 
   /**
@@ -453,7 +453,7 @@ class TopInstructions extends React.Component {
    * can scroll up to.
    */
   scrollInstructionsToBottom() {
-    const instructions = this.refs.instructions;
+    const instructions = this.instructions;
     if (!instructions) {
       // If we have a contained level instead of instructions, do nothing
       return;
@@ -586,7 +586,7 @@ class TopInstructions extends React.Component {
             }}
           >
             <div style={containedLevelStyles.level} className="contained-level">
-              <ContainedLevel ref="containedLevel" />
+              <ContainedLevel ref={(c) => { this.containedLevel = c; }} />
             </div>
           </div>
           {!this.props.collapsed && !this.props.isEmbedView &&
@@ -639,12 +639,12 @@ class TopInstructions extends React.Component {
             >
               {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
               {this.getAvatar() &&
-                <PromptIcon src={this.getAvatar()} ref="icon"/>
+                <PromptIcon src={this.getAvatar()} ref={(c) => { this.icon = c; }}/>
               }
             </div>
           </div>
           <div
-            ref="instructions"
+            ref={(c) => { this.instructions = c; }}
             className="csf-top-instructions"
             style={[
               styles.instructions,
@@ -654,7 +654,7 @@ class TopInstructions extends React.Component {
           >
             <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
-                ref="instructions"
+                ref={(c) => { this.instructions = c; }}
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
@@ -698,7 +698,7 @@ class TopInstructions extends React.Component {
           </div>
           <div>
             <CollapserButton
-              ref="collapser"
+              ref={(c) => { this.collapser = c; }}
               style={[
                 styles.collapserButton,
                 this.props.isMinecraft && craftStyles.collapserButton,
@@ -713,7 +713,7 @@ class TopInstructions extends React.Component {
                   this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
                   this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
                 ]}
-                ref="scrollButtons"
+                ref={(c) => { this.scrollButtons = c; }}
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
