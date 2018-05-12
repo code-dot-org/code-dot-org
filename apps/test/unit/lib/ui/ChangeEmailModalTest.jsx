@@ -19,8 +19,13 @@ describe('ChangeEmailModal', () => {
     userAge: 21,
   };
 
+  // Helpers for selecting particular elements/components
   const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
   const passwordInput = wrapper => wrapper.find(PASSWORD_SELECTOR);
+  const submitButton = wrapper => wrapper.find(Button)
+    .filterWhere(n => n.prop('text') === i18n.changeEmailModal_save());
+  const cancelButton = wrapper => wrapper.find(Button)
+    .filterWhere(n => n.prop('text') === i18n.cancel());
 
   beforeEach(() => {
     form = document.createElement('form');
@@ -41,9 +46,8 @@ describe('ChangeEmailModal', () => {
     wrapper.setState({saveState: 'saving'});
     expect(emailInput(wrapper)).to.have.attr('disabled');
     expect(passwordInput(wrapper)).to.have.attr('disabled');
-    wrapper.find(Button).forEach((button) => {
-      expect(button).to.have.prop('disabled', true);
-    });
+    expect(submitButton(wrapper)).to.have.attr('disabled');
+    expect(cancelButton(wrapper)).to.have.attr('disabled');
     expect(wrapper.text()).to.include(i18n.saving());
   });
 
@@ -56,9 +60,7 @@ describe('ChangeEmailModal', () => {
     const handleCancel = sinon.spy();
     wrapper.setProps({handleCancel});
     expect(handleCancel).not.to.have.been.called;
-    wrapper.find(Button)
-      .filterWhere(n => n.prop('text') === i18n.cancel())
-      .simulate('click');
+    cancelButton(wrapper).simulate('click');
     expect(handleCancel).to.have.been.calledOnce;
   });
 
@@ -148,9 +150,7 @@ describe('ChangeEmailModal', () => {
         }
       });
 
-      const submitButton = wrapper.find(Button)
-        .filterWhere(n => n.prop('text') === i18n.changeEmailModal_save());
-      expect(submitButton).to.have.prop('disabled', true);
+      expect(submitButton(wrapper)).to.have.prop('disabled', true);
     });
 
     it('enables the submit button form passes validation', () => {
@@ -161,9 +161,7 @@ describe('ChangeEmailModal', () => {
         }
       });
 
-      const submitButton = wrapper.find(Button)
-        .filterWhere(n => n.prop('text') === i18n.changeEmailModal_save());
-      expect(submitButton).to.have.prop('disabled', false);
+      expect(submitButton(wrapper)).to.have.prop('disabled', false);
     });
   });
 
@@ -188,6 +186,51 @@ describe('ChangeEmailModal', () => {
       expect(wrapper.state().serverErrors.currentPassword).to.equal('test-server-error');
       passwordInput(wrapper).simulate('change', {target:{value:'fakepassword'}});
       expect(wrapper.state().serverErrors.currentPassword).to.be.undefined;
+    });
+  });
+
+  describe('onSubmitSuccess', () => {
+    it('calls handleSubmit with the new email', () => {
+      const testEmail = 'me@example.com';
+      const handleSubmit = sinon.spy();
+      wrapper.setProps({handleSubmit});
+      wrapper.setState({
+        values: {
+          newEmail: testEmail,
+          currentPassword: '',
+        }
+      });
+
+      expect(handleSubmit).not.to.have.been.called;
+      wrapper.instance().onSubmitSuccess();
+      expect(handleSubmit).to.have.been.calledOnce.and.calledWith(testEmail);
+    });
+  });
+
+  describe('onSubmitFailure', () => {
+    it('puts the dialog in UNKNOWN ERROR state if response has no JSON', () => {
+      expect(wrapper.state().saveState).to.equal('initial');
+      wrapper.instance().onSubmitFailure(null, {});
+      expect(wrapper.state().saveState).to.equal('unknown-error');
+    });
+
+    it('loads returned validation errors into dialog state', () => {
+      expect(wrapper.state().saveState).to.equal('initial');
+      expect(wrapper.state().serverErrors).to.deep.equal({
+        newEmail: '',
+        currentPassword: '',
+      });
+      wrapper.instance().onSubmitFailure(null, {
+        responseJSON: {
+          email: ['test-email-server-error'],
+          current_password: ['test-password-server-error']
+        }
+      });
+      expect(wrapper.state().saveState).to.equal('initial');
+      expect(wrapper.state().serverErrors).to.deep.equal({
+        newEmail: 'test-email-server-error',
+        currentPassword: 'test-password-server-error',
+      });
     });
   });
 });
