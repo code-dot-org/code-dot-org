@@ -2321,10 +2321,8 @@
         full instructions)
       CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
         heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r
-
-'
+      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)\r\n"
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -6413,9 +6411,8 @@
         the program run without getting a warning message.
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click
         to see full instructions)"
-      U3L03 - draw rect function_2018_instruction: |-
-        Write a function called drawRectangle().\r
-        (Click to see full instructions)
+      U3L03 - draw rect function_2018_instruction: "Write a function called drawRectangle().\r\n(Click
+        to see full instructions)"
       U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
