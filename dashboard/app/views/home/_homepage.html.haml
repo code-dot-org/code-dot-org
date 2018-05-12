@@ -57,7 +57,7 @@
         = render partial: 'layouts/terms_interstitial'
       - if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
         = render partial: 'home/survey_nps'
-      - elsif show_diversity_survey? SurveyResult::DIVERSITY_2017
+      - elsif show_diversity_survey? SurveyResult::DIVERSITY_2018
         = render partial: 'home/survey_diversity'
 
 #homepage-container
