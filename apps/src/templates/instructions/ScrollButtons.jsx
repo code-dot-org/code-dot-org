@@ -62,24 +62,32 @@ const CRAFT_MARGIN = 0;
 /**
  * A pair of buttons for scrolling instructions in CSF
  */
-const ScrollButtons = React.createClass({
-  propTypes: {
+class ScrollButtons extends React.Component {
+  static propTypes = {
     style: PropTypes.object,
     visible: PropTypes.bool.isRequired,
     height: PropTypes.number.isRequired,
     getScrollTarget: PropTypes.func.isRequired,
     isMinecraft: PropTypes.bool.isRequired,
-  },
+  };
 
   getMargin() {
     return this.props.isMinecraft ? CRAFT_MARGIN : MARGIN;
-  },
+  }
 
   getMinHeight() {
     const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true) +
         getOuterHeight(this.refs.scrollDown, true);
     return scrollButtonsHeight + (this.getMargin() * 2);
-  },
+  }
+
+  scrollStartUp = () => {
+    this.scrollStart(DIRECTIONS.UP);
+  };
+
+  scrollStartDown = () => {
+    this.scrollStart(DIRECTIONS.DOWN);
+  };
 
   scrollStart(dir) {
     // initial scroll in response to button click
@@ -103,16 +111,16 @@ const ScrollButtons = React.createClass({
     }.bind(this), CONTINUOUS_SCROLL_TIMEOUT);
 
     this.unbindMouseUp = addMouseUpTouchEvent(document, this.scrollStop);
-  },
+  }
 
-  scrollStop() {
+  scrollStop = () => {
     this.unbindMouseUp();
     clearTimeout(this.scrollTimeout);
     clearInterval(this.scrollInterval);
     this.unbindMouseUp = null;
     this.scrollTimeout = null;
     this.scrollInterval = null;
-  },
+  };
 
   render() {
 
@@ -134,7 +142,7 @@ const ScrollButtons = React.createClass({
       <button
         className="arrow"
         ref="scrollUp"
-        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
           upStyle
@@ -144,7 +152,7 @@ const ScrollButtons = React.createClass({
       </button> :
       <div
         ref="scrollUp"
-        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
           styles.arrow,
@@ -157,7 +165,7 @@ const ScrollButtons = React.createClass({
       <button
         className="arrow"
         ref="scrollDown"
-        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
           downStyle
@@ -167,7 +175,7 @@ const ScrollButtons = React.createClass({
       </button> :
       <div
         ref="scrollDown"
-        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
           styles.arrow,
@@ -183,7 +191,7 @@ const ScrollButtons = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(function propsFromStore(state) {
   return {
