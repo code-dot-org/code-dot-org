@@ -11,8 +11,14 @@ import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
 
-
-// TODO: abstract into constants
+const CSV_HEADERS = [
+  {label: i18n.name(), key: 'studentName'},
+  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.puzzle(), key: 'puzzle'},
+  {label: i18n.question(), key: 'question'},
+  {label: i18n.response(), key: 'response'},
+];
+const DEFAULT_FILTER_KEY = "all";
 const PADDING = 8;
 
 const styles = {
@@ -45,20 +51,13 @@ const styles = {
     marginLeft: PADDING
   },
   buttonContainer: {
-    display: 'flex'
+    display: 'flex',
+    textDecoration: 'none'
   },
   table: {
     paddingTop: PADDING / 4
   }
 };
-
-const CSV_HEADERS = [
-  {label: i18n.name(), key: 'studentName'},
-  {label: i18n.stage(), key: 'stage'},
-  {label: i18n.puzzle(), key: 'puzzle'},
-  {label: i18n.question(), key: 'question'},
-  {label: i18n.response(), key: 'response'},
-];
 
 class TextResponses extends Component {
   static propTypes = {
@@ -85,15 +84,14 @@ class TextResponses extends Component {
   };
 
   renderStageFilterDropdown = () => {
-    // TODO: i18n
     return (
       <div style={styles.dropdownContainer}>
-        <div style={styles.dropdownLabel}>Filter by stage:</div>
+        <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
         <select
           style={styles.dropdown}
           onChange={this.onChangeStageFilter}
         >
-          <option key="All">All</option>
+          <option key={DEFAULT_FILTER_KEY}>{i18n.all()}</option>
           {this.getStages().map(stage => <option key={stage}>{stage}</option>)}
         </select>
       </div>
@@ -107,7 +105,7 @@ class TextResponses extends Component {
   };
 
   onChangeStageFilter = event => {
-    const filterByStageName = event.target.value === "All" ? null : event.target.value;
+    const filterByStageName = event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
     this.setState({filterByStageName});
   };
 
