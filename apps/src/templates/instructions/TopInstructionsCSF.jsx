@@ -166,8 +166,8 @@ const styles = {
   },
 };
 
-var TopInstructions = React.createClass({
-  propTypes: {
+class TopInstructions extends React.Component {
+  static propTypes = {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     hints: PropTypes.arrayOf(PropTypes.shape({
@@ -212,25 +212,23 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     showInstructionsDialog: PropTypes.func.isRequired,
-  },
+  };
 
-  defaultProps: {
+  static defaultProps = {
     hasContainedLevels: false,
     isEmbedView: false,
     noVisualization: false,
-  },
+  };
 
-  getInitialState() {
-    return {
-      rightColWidth: {
-        collapsed: undefined,
-        uncollapsed: undefined,
-        empty: 10
-      },
-      promptForHint: false,
-      displayScrollButtons: true
-    };
-  },
+  state = {
+    rightColWidth: {
+      collapsed: undefined,
+      uncollapsed: undefined,
+      empty: 10
+    },
+    promptForHint: false,
+    displayScrollButtons: true
+  };
 
   componentDidUpdate(prevProps, prevState) {
     if (this.shouldDisplayCollapserButton() && this.getRightColWidth() === undefined) {
@@ -290,7 +288,7 @@ var TopInstructions = React.createClass({
         this.props.setInstructionsRenderedHeight(newHeight);
       }
     }
-  },
+  }
 
   componentWillUpdate(nextProps, nextState) {
     const gotNewFeedback = !this.props.feedback && nextProps.feedback;
@@ -302,7 +300,7 @@ var TopInstructions = React.createClass({
         this.handleClickCollapser();
       }
     }
-  },
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -324,7 +322,7 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  },
+  }
 
   /**
    * When collapsed, height can change when we get additional feedback
@@ -344,7 +342,7 @@ var TopInstructions = React.createClass({
     if (shouldUpdateHeight) {
       this.props.setInstructionsRenderedHeight(newHeight);
     }
-  },
+  }
 
   /**
    * @param {boolean} collapsed whether or not the height should be
@@ -379,7 +377,7 @@ var TopInstructions = React.createClass({
 
     return Math.max(leftColHeight, middleColHeight, rightColHeight) +
         resizerHeight + margins;
-  },
+  }
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -387,7 +385,7 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta = 0) {
+  handleHeightResize = (delta = 0) => {
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
@@ -404,14 +402,14 @@ var TopInstructions = React.createClass({
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
-  },
+  };
 
   /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
    * @returns {number}
    */
-  adjustMaxNeededHeight() {
+  adjustMaxNeededHeight = () => {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = (this.props.hasContainedLevels ?
@@ -421,13 +419,13 @@ var TopInstructions = React.createClass({
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
-  },
+  };
 
   /**
    * Handle a click to our collapser icon by changing our collapse state, and
    * updating our rendered height.
    */
-  handleClickCollapser() {
+  handleClickCollapser = () => {
     const nextCollapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -437,14 +435,14 @@ var TopInstructions = React.createClass({
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
-  },
+  };
 
   /**
    * @return {Element} scrollTarget
    */
   getScrollTarget() {
     return this.refs.instructions.parentElement;
-  },
+  }
 
   /**
    * Manually scroll instructions to bottom. When we have multiple
@@ -467,12 +465,12 @@ var TopInstructions = React.createClass({
     } else {
       scrollBy(contentContainer, contentContainer.scrollHeight);
     }
-  },
+  }
 
   /**
    * Handle a click to the hint display bubble (lightbulb)
    */
-  handleClickBubble() {
+  handleClickBubble = () => {
     // If we don't have authored hints to display, clicking bubble shouldnt do anything
     if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
@@ -482,23 +480,23 @@ var TopInstructions = React.createClass({
         this.handleClickCollapser();
       }
     }
-  },
+  };
 
-  dismissHintPrompt() {
+  dismissHintPrompt = () => {
     this.setState({
       promptForHint: false
     });
-  },
+  };
 
-  showHint() {
+  showHint = () => {
     this.dismissHintPrompt();
     this.props.showNextHint();
     this.props.clearFeedback();
-  },
+  };
 
   shouldDisplayHintPrompt() {
     return this.state && this.state.promptForHint && !this.props.collapsed;
-  },
+  }
 
   shouldDisplayCollapserButton() {
     // if we have "extra" (non-instruction) content, we should always
@@ -510,7 +508,7 @@ var TopInstructions = React.createClass({
     // Otherwise, only show the button if we have two versions of
     // instruction we want to toggle between
     return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
-  },
+  }
 
   shouldIgnoreShortInstructions() {
     // if we have no long instructions, never ignore the short ones.
@@ -527,11 +525,11 @@ var TopInstructions = React.createClass({
     // instructions and only show long.
     let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
     return dist <= 10;
-  },
+  }
 
   shouldDisplayShortInstructions() {
     return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
-  },
+  }
 
   getAvatar() {
     // Show the "sad" avatar if there is failure feedback. Otherwise,
@@ -539,7 +537,7 @@ var TopInstructions = React.createClass({
     return this.props.feedback && this.props.feedback.isFailure
       ? this.props.failureAvatar
       : this.props.smallStaticAvatar;
-  },
+  }
 
   /**
    * this.state.rightColWidth contains three key/value pairs, reflecting the
@@ -557,13 +555,13 @@ var TopInstructions = React.createClass({
     } else {
       return 'empty';
     }
-  },
+  }
 
   getRightColWidth() {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
-  },
+  }
 
-  render: function () {
+  render() {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
     const topInstructionsHeight = this.props.height - resizerHeight;
 
@@ -730,7 +728,8 @@ var TopInstructions = React.createClass({
       </div>
     );
   }
-});
+}
+
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
