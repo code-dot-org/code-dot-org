@@ -230,6 +230,60 @@ class TopInstructions extends React.Component {
     displayScrollButtons: true
   };
 
+  /**
+   * Calculate our initial height (based off of rendered height of instructions)
+   */
+  componentDidMount() {
+    window.addEventListener('resize', this.adjustMaxNeededHeight);
+
+    // Might want to increase the size of our instructions after our icon image
+    // has loaded, to make sure the image fits
+    $(ReactDOM.findDOMNode(this.refs.icon)).load(function () {
+      const minHeight = this.getMinHeight();
+      if (this.props.height < minHeight) {
+        this.props.setInstructionsRenderedHeight(minHeight);
+      }
+    }.bind(this));
+
+    const maxNeededHeight = this.adjustMaxNeededHeight();
+
+    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
+    // adjusts max height.
+    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+  }
+
+  /**
+   * When collapsed, height can change when we get additional feedback
+   * or the hint prompt. In that case, we want to always resize.
+   * When in resize mode, height can get below min height iff we resize
+   * the window to be super small.  If we then resize it to be larger
+   * again, we want to increase height.
+   */
+  componentWillReceiveProps(nextProps) {
+    const minHeight = this.getMinHeight(nextProps.collapsed);
+    const newHeight = Math.min(nextProps.maxHeight, minHeight);
+
+    const shouldUpdateHeight = (nextProps.collapsed) ?
+        newHeight !== this.props.height :
+        nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
+
+    if (shouldUpdateHeight) {
+      this.props.setInstructionsRenderedHeight(newHeight);
+    }
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
+    if (gotNewFeedback) {
+      this.setState({
+        promptForHint: false
+      });
+      if (nextProps.collapsed) {
+        this.handleClickCollapser();
+      }
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (this.shouldDisplayCollapserButton() && this.getRightColWidth() === undefined) {
       // Update right col width now that we know how much space it needs, and
@@ -287,60 +341,6 @@ class TopInstructions extends React.Component {
         const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
         this.props.setInstructionsRenderedHeight(newHeight);
       }
-    }
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
-    if (gotNewFeedback) {
-      this.setState({
-        promptForHint: false
-      });
-      if (nextProps.collapsed) {
-        this.handleClickCollapser();
-      }
-    }
-  }
-
-  /**
-   * Calculate our initial height (based off of rendered height of instructions)
-   */
-  componentDidMount() {
-    window.addEventListener('resize', this.adjustMaxNeededHeight);
-
-    // Might want to increase the size of our instructions after our icon image
-    // has loaded, to make sure the image fits
-    $(ReactDOM.findDOMNode(this.refs.icon)).load(function () {
-      const minHeight = this.getMinHeight();
-      if (this.props.height < minHeight) {
-        this.props.setInstructionsRenderedHeight(minHeight);
-      }
-    }.bind(this));
-
-    const maxNeededHeight = this.adjustMaxNeededHeight();
-
-    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-    // adjusts max height.
-    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  }
-
-  /**
-   * When collapsed, height can change when we get additional feedback
-   * or the hint prompt. In that case, we want to always resize.
-   * When in resize mode, height can get below min height iff we resize
-   * the window to be super small.  If we then resize it to be larger
-   * again, we want to increase height.
-   */
-  componentWillReceiveProps(nextProps) {
-    const minHeight = this.getMinHeight(nextProps.collapsed);
-    const newHeight = Math.min(nextProps.maxHeight, minHeight);
-
-    const shouldUpdateHeight = (nextProps.collapsed) ?
-        newHeight !== this.props.height :
-        nextProps.height < minHeight && nextProps.height < nextProps.maxHeight;
-
-    if (shouldUpdateHeight) {
-      this.props.setInstructionsRenderedHeight(newHeight);
     }
   }
 
