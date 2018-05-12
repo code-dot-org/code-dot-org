@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash'; // TODO: only import methods i need
+import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
@@ -43,6 +43,9 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING,
     marginLeft: PADDING
+  },
+  buttonContainer: {
+    display: 'flex'
   },
   table: {
     paddingTop: PADDING / 4
@@ -99,7 +102,7 @@ class TextResponses extends Component {
 
   getStages = () => {
     const {responses, scriptId} = this.props;
-    const stages = _.uniq(_.map(responses[scriptId], 'stage'));
+    const stages = uniq(map(responses[scriptId], 'stage'));
     return stages;
   };
 
@@ -114,7 +117,7 @@ class TextResponses extends Component {
     let filteredResponses = [...responses[scriptId]];
 
     if (filterByStageName) {
-      filteredResponses = _.filter(filteredResponses, ['stage', filterByStageName]);
+      filteredResponses = filter(filteredResponses, ['stage', filterByStageName]);
     }
     return filteredResponses;
   };
@@ -138,6 +141,7 @@ class TextResponses extends Component {
         <div style={styles.tableHeader}>
           {this.renderStageFilterDropdown()}
           <CSVLink
+            style={styles.buttonContainer}
             filename="responses.csv"
             data={filteredResponses}
             headers={CSV_HEADERS}
