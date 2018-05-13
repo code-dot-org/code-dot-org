@@ -21,6 +21,15 @@ let responses = {
       question: "Free Response",
       response: "Lorem ipsum dolor sit amet, postea pericula",
       stage: "Lesson 2",
+      studentId: 1,
+      studentName: "Student A",
+      url: "http://fake.url"
+    },
+    {
+      puzzle: 3,
+      question: "Free Response",
+      response: "Lorem ipsum dolor sit amet, postea pericula",
+      stage: "Lesson 2",
       studentId: 3,
       studentName: "Student C",
       url: "http://fake.url"
@@ -117,6 +126,7 @@ describe('TextResponses', () => {
       const filterDropdown = wrapper.find('#uitest-stage-filter');
       const filterOptions = filterDropdown.find('option');
       expect(filterDropdown.exists()).to.be.true;
+      expect(filterOptions).to.have.length(3);
       expect(filterOptions.at(0)).to.have.text('All');
       expect(filterOptions.at(1)).to.have.text('Lesson 1');
       expect(filterOptions.at(2)).to.have.text('Lesson 2');
