@@ -84,6 +84,13 @@ class TextResponses extends Component {
   };
 
   renderFilterByStageDropdown = () => {
+    const stages = this.getStages();
+
+    // only render filter dropdown if there are 2+ stages
+    if (stages.length <= 1) {
+      return null;
+    }
+
     return (
       <div style={styles.dropdownContainer}>
         <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
@@ -92,7 +99,7 @@ class TextResponses extends Component {
           onChange={this.onChangeFilter}
         >
           <option key={DEFAULT_FILTER_KEY}>{i18n.all()}</option>
-          {this.getStages().map(stage => <option key={stage}>{stage}</option>)}
+          {stages.map(stage => <option key={stage}>{stage}</option>)}
         </select>
       </div>
     );
@@ -136,21 +143,25 @@ class TextResponses extends Component {
             onChange={this.onChangeScript}
           />
         </div>
-        <div style={styles.actionRow}>
-          {this.renderFilterByStageDropdown()}
-          <CSVLink
-            style={styles.buttonContainer}
-            filename="responses.csv"
-            data={filteredResponses}
-            headers={CSV_HEADERS}
-          >
-            <Button
-              text="Download CSV"
-              onClick={() => {}}
-              color={Button.ButtonColor.white}
-            />
-          </CSVLink>
-        </div>
+        {filteredResponses.length > 0 &&
+          <div style={styles.actionRow}>
+            <div>
+              {this.renderFilterByStageDropdown()}
+            </div>
+            <CSVLink
+              style={styles.buttonContainer}
+              filename="responses.csv"
+              data={filteredResponses}
+              headers={CSV_HEADERS}
+            >
+              <Button
+                text="Download CSV"
+                onClick={() => {}}
+                color={Button.ButtonColor.white}
+              />
+            </CSVLink>
+          </div>
+        }
         <div style={styles.table}>
           <TextResponsesTable
             responses={filteredResponses}
