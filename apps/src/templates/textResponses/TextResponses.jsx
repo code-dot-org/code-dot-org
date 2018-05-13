@@ -18,7 +18,7 @@ const CSV_HEADERS = [
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
 ];
-const DEFAULT_FILTER_KEY = "all";
+const DEFAULT_FILTER_KEY = i18n.all();
 const PADDING = 8;
 
 const styles = {
@@ -76,6 +76,11 @@ class TextResponses extends Component {
     filterByStageName: null
   };
 
+  getResponsesByScript = () => {
+    const {responses, scriptId} = this.props;
+    return responses[scriptId] || [];
+  };
+
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadTextResponses, sectionId} = this.props;
     asyncLoadTextResponses(sectionId, scriptId, () => {
@@ -96,10 +101,11 @@ class TextResponses extends Component {
       <div style={styles.dropdownContainer}>
         <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
         <select
+          id="uitest-stage-filter"
           style={styles.dropdown}
           onChange={this.onChangeFilter}
         >
-          <option key={DEFAULT_FILTER_KEY}>{i18n.all()}</option>
+          <option key={DEFAULT_FILTER_KEY}>{DEFAULT_FILTER_KEY}</option>
           {stages.map(stage => <option key={stage}>{stage}</option>)}
         </select>
       </div>
@@ -107,8 +113,7 @@ class TextResponses extends Component {
   };
 
   getStages = () => {
-    const {responses, scriptId} = this.props;
-    const stages = uniq(map(responses[scriptId], 'stage'));
+    const stages = uniq(map(this.getResponsesByScript(), 'stage'));
     return stages;
   };
 
@@ -119,12 +124,12 @@ class TextResponses extends Component {
 
   getFilteredResponses = () => {
     const {filterByStageName} = this.state;
-    const {responses, scriptId} = this.props;
-    let filteredResponses = [...responses[scriptId]];
+    let filteredResponses = [...this.getResponsesByScript()];
 
     if (filterByStageName) {
       filteredResponses = filter(filteredResponses, ['stage', filterByStageName]);
     }
+
     return filteredResponses;
   };
 
@@ -145,10 +150,11 @@ class TextResponses extends Component {
           />
         </div>
         {filteredResponses.length > 0 &&
-          <div style={styles.actionRow}>
-            <div>
-              {this.renderFilterByStageDropdown()}
-            </div>
+          <div
+            id="uitest-response-actions"
+            style={styles.actionRow}
+          >
+            <div>{this.renderFilterByStageDropdown()}</div>
             <CSVLink
               style={styles.buttonContainer}
               filename="responses.csv"
@@ -156,7 +162,7 @@ class TextResponses extends Component {
               headers={CSV_HEADERS}
             >
               <Button
-                text="Download CSV"
+                text={i18n.downloadCSV()}
                 onClick={() => {}}
                 color={Button.ButtonColor.white}
               />
