@@ -1680,4 +1680,11 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   }
 }
 
+td:nth-child(1) {  
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @import "RotateContainer";

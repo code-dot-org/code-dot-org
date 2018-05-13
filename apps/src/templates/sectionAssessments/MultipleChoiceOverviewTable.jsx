@@ -22,10 +22,18 @@ const questionAnswerDataPropType = PropTypes.shape({
   percentValue: PropTypes.number,
 });
 
+// const studentAnswerDataPropType = {
+//   studentAnswers: PropTypes.shape({
+//   question: PropTypes.number,
+//   answer: PropTypes.arrayOf(studentAnswers)
+//   })
+// };
+
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
     questions: PropTypes.arrayOf(questionAnswerDataPropType),
-    studentAnswers: PropTypes.objectOf(questionAnswerDataPropType)
+    // studentAnswers: PropTypes.objectOf(questionAnswerDataPropType),
+    studentAnswers: PropTypes.object
   };
 
   state = {
@@ -42,12 +50,59 @@ class MultipleChoiceOverviewTable extends Component {
 
     maxStudent.forEach(studentId => {  
       const answerObj = studentAnswers[studentId][index];
-      if (!answerObj.answer) {
-          notAnswered += 1;
+      if (answerObj) {
+        for (let i=0; i< answerObj.answer.length; i++) {
+          if (answerObj.answer[i] === ''){
+            // console.log('answerObj.answer ---->', answerObj.answer);
+            notAnswered += 1;
+            // console.log('numAnsweredForOption --->', numAnsweredForOption);
+            break; console.log('not answered --->', notAnswered);
+          }
+        }
       }
     });
+    console.log('not answered --->', notAnswered);
     return Math.floor((notAnswered / maxStudent.length) * 100);
   };
+
+  //  calculatePercentNotAnswered = (index) => {
+  //   const studentAnswers = this.props.studentAnswers;
+  //   const maxStudent = Object.keys(studentAnswers);
+  //   let notAnswered = 0;
+
+  //   maxStudent.forEach(studentId => {  
+  //     const answerObj = studentAnswers[studentId][index];
+  //     if (!answerObj.answer) {
+  //       for (let i=0; i< answerObj.answer.length; i++) {
+  //         if (answerObj.answer[i] === '') {
+  //         notAnswered += 1;
+  //         break;
+  //         }
+  //       }
+  //     }
+  //   });
+  //   return Math.floor((notAnswered / maxStudent.length) * 100);
+  // };
+
+
+  // calculatePercentAnswered = (option, index) => {
+  //   const studentAnswers = this.props.studentAnswers;
+  //   const maxStudent = Object.keys(studentAnswers);
+  //   let numAnsweredForOption = 0; 
+
+  //   maxStudent.forEach( studentId => {
+  //     const answerObj = studentAnswers[studentId][index];  
+  //     console.log('answerObj -->', answerObj);
+  //     if (answerObj) {
+
+  //       for (let i=0; i< answerObj.answer.length; i++) {
+  //         if (answerObj.answer[i] === option){
+  //           console.log('answerObj.answer ---->', answerObj.answer);
+  //           numAnsweredForOption += 1;
+  //           console.log('numAnsweredForOption --->', numAnsweredForOption);
+  //           break;
+  //         }
+  //       }
 
   // calculatePercentAnswered = (option, index) => {
   //   const studentAnswers = this.props.studentAnswers;
@@ -66,36 +121,24 @@ class MultipleChoiceOverviewTable extends Component {
   calculatePercentAnswered = (option, index) => {
     const studentAnswers = this.props.studentAnswers;
     const maxStudent = Object.keys(studentAnswers);
-    let numAnsweredForOprtion = 0; 
+    let numAnsweredForOption = 0; 
 
     maxStudent.forEach( studentId => {
       const answerObj = studentAnswers[studentId][index];  
+      // console.log('answerObj -->', answerObj);
       if (answerObj) {
 
-        for (let i=0; i< answerObj.answer.length; i++){
+        for (let i=0; i< answerObj.answer.length; i++) {
           if (answerObj.answer[i] === option){
-            numAnsweredForOprtion += 1;
+            // console.log('answerObj.answer ---->', answerObj.answer);
+            numAnsweredForOption += 1;
+            // console.log('numAnsweredForOption --->', numAnsweredForOption);
             break;
           }
         }
-
-        // answerObj.answer.forEach(answer => {
-        //     if (answer === option) {
-        //       numAnsweredForOprtion += 1;
-        //       //return true;
-        //     }
-        // });
-
-        //
-        // for (let i=0; i< answerArr.length; i++){
-        //   if (answerArr[i] === option){
-        //     numAnsweredForOprtion += 1;
-        //     break;
-        //   }
-        // }
       }
     });
-    return Math.floor((numAnsweredForOprtion / maxStudent.length ) * 100);
+    return Math.floor((numAnsweredForOption / maxStudent.length ) * 100);
   };
 
   notAnsweredColumnsFormatter = (answer, {rowData, columnIndex, rowIndex}) => {
@@ -118,10 +161,8 @@ class MultipleChoiceOverviewTable extends Component {
 
     if (cell) {    
       percentValue = this.calculatePercentAnswered(cell.option, rowIndex);
-    // }
-    } else {
-        percentValue = '-';
     }
+ 
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
@@ -225,7 +266,7 @@ class MultipleChoiceOverviewTable extends Component {
         columns={columns}
         style={tableLayoutStyles.table}
       >
-      <Table.Header />
+      <Table.Header/>
       <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>
     );
