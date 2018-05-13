@@ -1005,7 +1005,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
-    And I select the "Yes" option in dropdown "user_email_preference"
+    And I select the "Yes" option in dropdown "user_email_preference_opt_in"
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"

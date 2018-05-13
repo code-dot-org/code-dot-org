@@ -84,15 +84,15 @@
 
         #email_preference_opt_in-block
           #optin-container
-            #optin-block.itemblock.email-preference{style: "display: none"}
+            .email-preference.itemblock{style: "display: none"}
               .labelblock-wide= t('signup_form.email_preference_question').html_safe
-              %select#user_email_preference.fieldblock{name: "user[email_preference_opt_in]", type: "select"}
+              %select#user_email_preference_opt_in.fieldblock{name: "user[email_preference_opt_in]", type: "select"}
                 %option{value: "", selected: true, disabled: true}
                 %option{value: "yes"}= t('signup_form.email_preference_yes').html_safe
                 %option{value: "no"}= t('signup_form.email_preference_no').html_safe
 
           #optin2-container{style: "display: none"}
-            #optin2-block.itemblock.email-preference{style: "display: none"}
+            .email-preference.itemblock{style: "display: none"}
               .labelblock-wide= t('signup_form.email_preference_question').html_safe
               #optin2-yes-container
                 %input{type: "radio", id: "optin2-yes", name: "user[email_preference_opt_in]", value: "yes"}
