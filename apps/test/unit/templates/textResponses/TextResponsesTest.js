@@ -5,7 +5,7 @@ import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/tex
 
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
-let responses = {
+const responses = {
   1: [
     {
       puzzle: 2,
@@ -121,7 +121,6 @@ describe('TextResponses', () => {
           asyncLoadTextResponses={() => {}}
         />
       );
-
 
       const filterDropdown = wrapper.find('#uitest-stage-filter');
       const filterOptions = filterDropdown.find('option');
