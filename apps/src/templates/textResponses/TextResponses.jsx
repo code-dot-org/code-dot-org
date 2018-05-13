@@ -80,6 +80,7 @@ class TextResponses extends Component {
     const {setScriptId, asyncLoadTextResponses, sectionId} = this.props;
     asyncLoadTextResponses(sectionId, scriptId, () => {
       setScriptId(scriptId);
+      this.setState({filterByStageName: null});
     });
   };
 
