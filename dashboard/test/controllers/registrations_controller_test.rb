@@ -12,7 +12,8 @@ class RegistrationsControllerTest < ActionController::TestCase
       email: 'an@email.address',
       gender: 'F',
       age: '13',
-      user_type: 'student'
+      user_type: 'student',
+      opt_in: 'yes'
     }
   end
 

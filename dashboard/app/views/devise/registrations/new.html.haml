@@ -86,7 +86,7 @@
           #optin-container
             #optin-block.itemblock.email-preference{style: "display: none"}
               .labelblock-wide= t('signup_form.email_preference_question').html_safe
-              %select.fieldblock{name: "user[email_preference_opt_in]", type: "select"}
+              %select#user_email_preference.fieldblock{name: "user[email_preference_opt_in]", type: "select"}
                 %option{value: "", selected: true, disabled: true}
                 %option{value: "yes"}= t('signup_form.email_preference_yes').html_safe
                 %option{value: "no"}= t('signup_form.email_preference_no').html_safe
