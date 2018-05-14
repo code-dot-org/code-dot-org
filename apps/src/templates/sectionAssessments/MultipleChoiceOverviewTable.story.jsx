@@ -52,11 +52,25 @@ export default storybook => {
     .storiesOf('SectionAssessments/MultipleChoiceOverviewTable', module)
     .addStoryTable([
       {
-        name: 'Table for assessments',
+        name: 'Assessment multiple choice with 7 answers',
         description: 'Ability to see assessment overview for the entire class',
         story: () => (
             <MultipleChoiceOverviewTable
               questionAnswerData={multipleChoiceData}
+            />
+        )
+      },
+      {
+        name: 'Assessment multiple choice with 3 answers',
+        description: 'Ability to see assessment overview for the entire class',
+        story: () => (
+            <MultipleChoiceOverviewTable
+              questionAnswerData={multipleChoiceData.map(question => {
+                return {
+                  ...question,
+                  answers: question.answers.slice(0,2),
+                };
+              })}
             />
         )
       },
