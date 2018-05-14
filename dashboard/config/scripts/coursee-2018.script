@@ -178,6 +178,9 @@ level 'courseE_farmer_functions10a1_2018', challenge: true
 level 'courseE_farmer_functions13_2018'
 level 'courseE_farmer_functions11_predict_2018'
 
+stage 'Copyright and Creativity', flex_category: 'csf_e_2'
+level 'courseE_unplugged_CnC_2018'
+
 stage 'Functions in Artist', flex_category: 'csf_e_2'
 level 'courseE_artist_functions_predict1_2018'
 level 'courseE_artist_functions2_2018'

@@ -10,7 +10,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
-  setCsfScriptIds,
+  setStageExtrasScriptIds,
   setOAuthProvider,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -32,7 +32,7 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
-  store.dispatch(setCsfScriptIds(homepageData.csfScriptIds));
+  store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setOAuthProvider(homepageData.provider));
 
   let courseId;

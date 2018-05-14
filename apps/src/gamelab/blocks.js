@@ -11,6 +11,18 @@ const WORLD_COLOR = [240, 0.45, 0.65];
 const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 const LOCATION_COLOR = [300, 0.46, 0.89];
 
+let sprites = () => {
+  const animationList = getStore().getState().animationList;
+  if (!animationList || animationList.orderedKeys.length === 0) {
+    console.warn("No sprites available");
+    return [['sprites missing', 'null']];
+  }
+  return animationList.orderedKeys.map(key => {
+    const animation = animationList.propsByKey[key];
+    return [animation.sourceUrl, `"${animation.name}"`];
+  });
+};
+
 const customInputTypes = {
   locationPicker: {
     addInput(block, input) {
@@ -39,8 +51,44 @@ const customInputTypes = {
           }
         }
       );
-      block.appendDummyInput()
+      return block.appendDummyInput()
           .appendTitle(button, input.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
+  costumePicker: {
+    addInput(block, input) {
+      return block.appendDummyInput()
+        .appendTitle(input.label)
+        .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), input.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
+  spritePicker: {
+    addInput(block, input) {
+      block.getVars = function () {
+        return {
+          [Blockly.BlockValueType.SPRITE]: [block.getTitleValue(input.name)],
+        };
+      };
+      block.renameVar = function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(input.name))) {
+          block.setTitleValue(newName, input.name);
+        }
+      };
+      block.removeVar = function (oldName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(input.name))) {
+          block.dispose(true, true);
+        }
+      };
+
+      return block.appendDummyInput()
+        .appendTitle(input.label)
+        .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), input.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
@@ -52,18 +100,6 @@ export default {
   install(blockly, blockInstallOptions) {
     const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
     const { ORDER_MEMBER, ORDER_ATOMIC } = Blockly.JavaScript;
-
-    const sprites = () => {
-      const animationList = getStore().getState().animationList;
-      if (!animationList || animationList.orderedKeys.length === 0) {
-        console.warn("No sprites available");
-        return [['sprites missing', 'null']];
-      }
-      return animationList.orderedKeys.map(key => {
-        const name = animationList.propsByKey[key].name;
-        return [name, `"${name}"`];
-      });
-    };
 
     const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
@@ -86,7 +122,7 @@ export default {
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
@@ -98,7 +134,7 @@ export default {
       func: 'makeNewSpriteLocation',
       blockText: 'make a new {ANIMATION} sprite at {LOCATION}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
         { name: 'LOCATION', type: blockly.BlockValueType.LOCATION },
       ],
       returnType: SPRITE_TYPE,
@@ -109,7 +145,7 @@ export default {
       func: 'setAnimation',
       blockText: 'change {THIS} costume to {ANIMATION}',
       args: [
-        { name: 'ANIMATION', options: sprites },
+        { name: 'ANIMATION', customInput: 'costumePicker' },
       ],
       methodCall: true,
     });
@@ -360,10 +396,11 @@ export default {
     createJsWrapperBlock({
       color: WORLD_COLOR,
       func: 'showTitleScreen',
-      blockText: 'show title screen',
+      blockText: 'show title screen {BREAK} title {TITLE} text {SUBTITLE}',
       args: [
-        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
-        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+        { name: 'BREAK', empty: true },
+        { name: 'TITLE', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', type: blockly.BlockValueType.STRING }
       ],
       inline: false,
     });
@@ -388,6 +425,59 @@ export default {
       orderPrecedence: ORDER_ATOMIC,
     });
 
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'whenPressedAndReleased',
+      eventLoopBlock: true,
+      inline: false,
+      blockText: "when {DIR} pressed {STATEMENT1}when released {STATEMENT2}",
+      args: [
+        {
+          name: "DIR",
+          options: [
+            ["up", "'up'"],
+            ["down", "'down'"],
+            ["left", "'left'"],
+            ["right", "'right'"]
+          ]
+        },
+        {
+          name: "STATEMENT1",
+          statement: true
+        },
+        {
+          name: "STATEMENT2",
+          statement: true
+        }
+      ],
+    });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'whenStartAndStopTouching',
+      eventLoopBlock: true,
+      inline: false,
+      blockText: "when {SPRITE1} starts touching {SPRITE2} {STATEMENT1}when they stop touching {STATEMENT2}",
+      args: [
+        {
+          name: "SPRITE1",
+          type: "Sprite"
+        },
+        {
+          name: "SPRITE2",
+          type: "Sprite"
+        },
+        {
+          name: "STATEMENT1",
+          statement: true
+        },
+        {
+          name: "STATEMENT2",
+          statement: true
+        }
+      ],
+    });
+
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
 
@@ -402,21 +492,30 @@ export default {
         this.appendDummyInput()
             .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-                : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+                : new Blockly.FieldVariable(
+                    Blockly.Msg.VARIABLES_SET_ITEM,
+                    null,
+                    null,
+                    Blockly.BlockValueType.SPRITE,
+                  ),
+                'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
-        return [this.getTitleValue('VAR')];
+        return Blockly.Variables.getVars.bind(this)(Blockly.BlockValueType.SPRITE);
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
+      removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_variables_get = generator.variables_get;
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_get');
 
     Blockly.Blocks.sprite_variables_set = {
       // Variable setter.
@@ -430,15 +529,19 @@ export default {
             .setStrictCheck(Blockly.BlockValueType.SPRITE)
             .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
             .appendTitle(Blockly.disableVariableEditing ? fieldLabel
-              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
+              : new Blockly.FieldVariable(
+                  Blockly.Msg.VARIABLES_SET_ITEM,
+                  null,
+                  null,
+                  Blockly.BlockValueType.SPRITE,
+                ),
+              'VAR')
             .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
       },
-      getVars: function () {
-        return [this.getTitleValue('VAR')];
-      },
+      getVars: Blockly.Blocks.sprite_variables_get.getVars,
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
@@ -446,6 +549,8 @@ export default {
       },
     };
     generator.sprite_variables_set = generator.variables_set;
+    Blockly.Variables.registerSetter(Blockly.BlockValueType.SPRITE,
+      'sprite_variables_set');
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
