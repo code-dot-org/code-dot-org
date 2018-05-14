@@ -151,7 +151,7 @@ class Api::V1::Census::CensusController < ApplicationController
         email: submission.submitter_email_address,
         opt_in: params[:opt_in],
         ip_address: request.env['REMOTE_ADDR'],
-        source: EmailPreferenceHelper::FORM_ACCESS_REPORT,
+        source: EmailPreferenceConstants::FORM_ACCESS_REPORT,
         form_kind: "0"
       )
     else
