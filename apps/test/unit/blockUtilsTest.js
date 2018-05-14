@@ -66,6 +66,7 @@ describe('block utils', () => {
       appendValueInput.returns(fakeInput);
       appendTitle.returns(fakeInput);
       setCheck.returns(fakeInput);
+      setAlign.returns(fakeInput);
 
       fakeBlockly = {
         FieldDropdown: sinon.stub(),
