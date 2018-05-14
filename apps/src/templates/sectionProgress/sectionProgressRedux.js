@@ -84,6 +84,8 @@ export const processScriptAndProgress = (scriptId) => {
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
+const DEFAULT_SCRIPT_NAME = "Express Course";
+
 // Types of views of the progress tab
 export const ViewType = {
   SUMMARY: "summary",
@@ -203,7 +205,7 @@ export default function sectionProgress(state=initialState, action) {
 
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts
-    let defaultScript = action.validScripts.filter(script => script.name === "Express Course")[0];
+    const defaultScript = validScripts.find(script => script.name === DEFAULT_SCRIPT_NAME);
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
