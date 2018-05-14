@@ -365,6 +365,50 @@ exports.cleanBlocks = function (blocksDom) {
   });
 };
 
+/**
+ * Definition of an input type. Must have either addInputRow or addInput
+ * defined, but not both.
+ *
+ * @typedef {Object} InputType
+ * @property {?function(Blockly, Blockly.Block, InputConfig): Blockly.Input} addInputRow
+ *   Adds a potentially line-ending input to the provided block and returns the
+ *   new input.
+ * @property {?function(Blockly, Blockly.Block, InputConfig, Blockly.Input)} addInput
+ *   Adds an inline input by appending fields or titles to the provided input
+ * @property {function(Blockly.Block, InputConfig): string} generateCode
+ *   Return the code to be inserted as an argument to the function call
+ *   generated for the give block.
+ */
+
+/**
+ * @typedef {Object} InputConfig
+ * @property {string} name Input name, conventionally all-caps
+ * @property {string[][]|Function} options For dropdowns, the list of options.
+ *   Each entry is a 2-element string array with the display name first, and the
+ *   codegen-compatible value second (i.e. strings should be doubly-quoted).
+ *   Also accepts a zero-argument function to generate these options.
+ * @property {Blockly.BlockValueType} type For value inputs, the type required.
+ *   Use Blockly.BlockValueType.NONE to accept any block.
+ * @property {boolean} statement Indicates that an input is a statement input,
+ *   which is passed as a callback function.
+ * @property {string} customInput Use the customInput type under this name to
+ *   add this input to the block.
+ * @property {boolean} field Indicates that an input is a field input, i.e. a
+ *   textbox. The generated code will be wrapped in quotes if the arg has type
+ *   "String".
+ * @property {boolean} empty Indicates that an input should not render a
+ *   connection or generate any code. Mostly just useful as a line break for
+ *   non-inlined blocks.
+ */
+
+/**
+ * @typedef {Object} LabeledInputConfig
+ * @augments InputConfig
+ * @property {string} mode Name of the input type used for this input, either a
+ *   key from STANDARD_INPUT_TYPES or one defined as a customInputType.
+ * @property {string} label Text to display to the left of the input.
+ */
+
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
@@ -377,33 +421,11 @@ const FIELD_INPUT = 'field';
  *
  * @param {string} text The complete message shown on the block with inputs in
  *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
- * @param {Object[]} args Define the type/options of the block's inputs.
- * @param {string} args[].name Input name, conventionally all-caps
- * @param {string[][]|Function} args[].options For dropdowns, the list of
- *   options. Each entry is a 2-element string array with the display name
- *   first, and the codegen-compatible (i.e. strings should be doubly-quoted)
- *   value second. Also accepts a zero-argument function to generate these
- *   options.
- * @param {BlockValueType} args[].type For value inputs, the type required. Use
- *   BlockValueType.NONE to accept any block.
- * @param {boolean} args[].statement Indicates that an input is a statement
- *   input, which is passed as a callback function
- * @param {string} args[].customInput Use the customInput type under this name
- *   to add this input to the block.
- * @param {boolean} args[].field Indicates that an input is a field input, i.e.
- *   a textbox. The generated code will be wrapped in quotes if the arg has type
- *   "String".
- * @param {boolean} args[].empty Indicates that an input should not render a
- *   connection or generate any code. Mostly just useful as a line break for
- *   non-inlined blocks.
+ * @param {InputConfig[]} args Define the type/options of the block's inputs.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
- * @returns {Object[]} a list of labeled inputs. Each one has the same fields
- *   as 'args', but additionally includes:
- * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
- *   args[].customInput
- * @returns {string} return[].label Text to display to the left of the input
+ * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
 const determineInputs = function (text, args, strictTypes=[]) {
   const tokens = text.split(/[{}]/);
@@ -486,6 +508,9 @@ const determineInputs = function (text, args, strictTypes=[]) {
 };
 exports.determineInputs = determineInputs;
 
+/**
+ * @type {Object.<string, InputType>}
+ */
 const STANDARD_INPUT_TYPES = {
   [VALUE_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -549,11 +574,8 @@ const STANDARD_INPUT_TYPES = {
  * Adds the specified inputs to the block
  * @param {Blockly} blockly The Blockly object provided to install()
  * @param {Block} block The block to add the inputs to
- * @param {Object[]} inputs The list of inputs. See determineInputs() for
- *   the fields in each input.
- * @param {object} inputTypes A map of input types to their definitions, which
- *   are objects that have `addInput` and `generateCode`
- *   methods.
+ * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
+ * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
 const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
@@ -644,7 +666,7 @@ exports.createJsWrapperBlockCreator = function (
    * @param {string} opts.name Block name, defaults to func.
    * @param {string} opts.blockText Human-readable text to show on the block,
    *   with params specified in curly braces, see determineInputs()
-   * @param {Object[]} opts.args List of block inputs, see determineInputs()
+   * @param {InputConfig[]} opts.args List of block inputs.
    * @param {BlockValueType} opts.returnType Type of value returned by this
    *   block, omit if you want a block with no output.
    * @param {boolean} opts.strictOutput Whether to enforce strict type checking
@@ -658,6 +680,7 @@ exports.createJsWrapperBlockCreator = function (
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
+   * @param {boolean} opts.simpleValue Just return the
    *
    * @returns {string} the name of the generated block
    */
@@ -686,6 +709,9 @@ exports.createJsWrapperBlockCreator = function (
     }
     if (simpleValue && args.length !== 1) {
       throw new Error('simpleValue blocks must have exactly one argument');
+    }
+    if (simpleValue && !returnType) {
+      throw new Error('simpleValue blocks must specify a return type');
     }
     if (inline === undefined) {
       inline = true;
