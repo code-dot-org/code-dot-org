@@ -11935,9 +11935,13 @@
               description_teacher: ''
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
           description_audience: ''
@@ -12183,7 +12187,7 @@
                 sa sari-saring mga produkto. Ang pagganap bilang iba-ibang tao, ang
                 bawat miyembro ng klase ay makakakuha ng karanasan sa mga disenyo
                 sa pamamagitan ng mata ng ibang tao.
-              description_teacher: 'Ang mga taga-disenyo ay kailangang makakaintindi
+              description_teacher: "Ang mga taga-disenyo ay kailangang makakaintindi
                 sa pangangailangan ng kanilang mga gumagamit para makalikha ng mga
                 kapaki-pakinabang na mga produkto. Ang araling ito ay naghihikayat
                 sa mga estudyante na mag-isip kung paano magdisenyo para sa ibang
@@ -12192,9 +12196,7 @@
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r
-
-'
+                ng mga pagpapahusay sa disenyo.\r\n"
             User-Centered Design Micro Activity:
               name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
               description_student: Sa maliliit na mga grupo, ang klase ay gagamit
@@ -12339,7 +12341,7 @@
                 koponan ay tutuklas sa iilang mga halimbawang mga app na nalikha sa
                 App Lab, gamit ang mga apps na iyon para makatulong sa paggawa ng
                 unang papel na mga prototype ng kanilang mga app.
-              description_teacher: 'Bago magsimulang magdisenyo ng mga app, kailangan
+              description_teacher: "Bago magsimulang magdisenyo ng mga app, kailangan
                 nating tulungan ang mga estudyante na mas mabuti nilang malagyan ng
                 lawak ang kanilang mga inaasahan. Dahil ang mga estudyante ay di-magtatagal
                 mag-prototype sa mga app na ito sa App Lab, sila ay nasa mahusay na
@@ -12351,9 +12353,7 @@
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r
-
-'
+                para gawin ang papel na mga prototype.\r\n"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -12919,10 +12919,15 @@
               description_teacher: ''
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\r
-            \r
-            Ang yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga
+            konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
+            na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay
+            gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang
+            kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto
+            na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program
+            at mga kagamitan.\r\n\r\nAng yunit na ito ay huling binago noong ika-30
+            ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa
+            forum.code.org/c/csp/updates."
           description_short: Learn the basics of programming in JavaScript through
             a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -12977,10 +12982,15 @@
               description_teacher: ''
         csp-explore-2018:
           title: Tuklasin - Paghahanda sa AP Performance Task
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Explore Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Explore Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Explore PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Nobyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
           description_short: Mga aralin at mapagkukunan ng kaalaman para makayulong
             sa mga estudyante na maghanda at para makumpleto ang AP Pagtuklas sa Performance
             na mga Gawain.
@@ -13000,10 +13010,15 @@
               description_teacher: ''
         csp-create-2018:
           title: Paglikha - Paghahanda sa AP Performance Task
-          description: |-
-            Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa, makahanda, at makagawa ng AP Create Performance Task. Bawat "aralin" ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring mga elemento sa parehong Explore at Create na mga gawain.\r
-            \r
-            Ang yunit na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga nabago sa kurikulum sa forum.code.org/c/csp/updates.
+          description: "Ang mga araling ito ay nandito para makatulong sa iyo na maunawaa,
+            makahanda, at makagawa ng AP Create Performance Task. Bawat \"aralin\"
+            ay naglalaman ng mga link sa nakakatulong na mga dokumento para ang iyong
+            guro ay makatulong sa iyo. TANDAAN: ang pangalawang aytem sa unang aralin
+            ay walang direktang kinalaman sa Create PT, ngunit sumasaklaw sa pangkaraniwan
+            na tech setup at mga kagamitan na kailangan mong gawin para sa mga sari-saring
+            mga elemento sa parehong Explore at Create na mga gawain.\r\n\r\nAng yunit
+            na ito ay huling binago noong Disyembre, 2017. Magbasa pa tungkol sa mga
+            nabago sa kurikulum sa forum.code.org/c/csp/updates."
           description_short: Mga aralin at mapagkukunan ng kaalaman para makatulong
             sa mga estudyante na maghanda at makumpleto ang AP na Paglikha ng mga
             Performance Task.
@@ -13023,10 +13038,12 @@
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
