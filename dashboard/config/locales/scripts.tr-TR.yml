@@ -11048,9 +11048,13 @@
               description_teacher: ''
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
           description_audience: ''
@@ -11253,16 +11257,14 @@
                 kullanıcıların çeşitli ürünlere nasıl tepki gösterebileceklerini araştırıyor.
                 Rol farklı bir kişi olarak oynuyor, sınıfın her üyesi başkasının gözüyle
                 tasarımlar tecrübe edinecek.
-              description_teacher: 'Kullanışlı ürünler meydana getirmek için tasarımcıların,
+              description_teacher: "Kullanışlı ürünler meydana getirmek için tasarımcıların,
                 kullanıcılarının ihtiyaçlarını anlamaları gerekir. Bu ders öğrencileri,
                 Bu ders öğrencileri, bir kullanıcı profili kullanıp başka biriymiş
                 gibi rol yaparak ve bir dizi ürüne o kullanıcı gibi tepki vererek
                 başka bir insan için nasıl tasarlayacakları hakkında düşünmek için
                 cesaretlendirir. Her öğrenci bir kişiyi tanımlayan, daha sonra uygun
                 ürünleri seçmeyi, ürün tasarımını eleştirmeyi ve tasarım için geliştirmeler
-                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r
-
-'
+                önermeyi kullanacakları, bir kullanıcı profiline atanır.\r\n"
             User-Centered Design Micro Activity:
               name: Kullanıcı Merkezli Tasarım Mikro Aktivitesi
               description_student: Küçük gruplarda, sınıf akıllı kıyafetler için fikir
@@ -11388,10 +11390,10 @@
                 uygulama laboratuvarında bir kaç örnek uygulama yapmayı keşfeder,
                 bu uygulamalar, kendi uygulamalarının ilk kağıt prototipleri hakkında
                 bilgi vermeye yardımcı olurlar.
-              description_teacher: 'Uygulamaları tasarlamaya başlamadan önce öğrencilerin
+              description_teacher: "Uygulamaları tasarlamaya başlamadan önce öğrencilerin
                 beklentilerini daha iyi araştırmalarına yardımcı olmamız gerekir.
                 Çünkü öğrenciler eninde sonunda bu uygulamaları Uygulama Labaratuarında
-                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı''nda
+                ön model haline getirecekleri için eğer fikirleri Uygulama Laboratuarı'nda
                 kolayca ön model haline getirilebilen uygulama türleriyle uyumluysa
                 daha iyi bir halde olacaklar. Takımlar bu araştırmaya uygulama laboratuarı
                 ile oluşturulabilecek uygulamaları göstermek için tasarlanmış birkaç
@@ -11399,9 +11401,7 @@
                 uygulamayı kendisine bir temel olarak seçebilir. Buradan itibaren,
                 takımların kağıt ön modellerini geliştirmek için 3x5 dizin kartlarını
                 kullanmadan önce uygulamanın temel işlevselliğini tartışmak için zamanı
-                var.\r
-
-'
+                var.\r\n"
             Prototype Testing:
               name: Prototip testi
               description_student: Bu derste takımlar sınıflarındaki diğer üyelerle
@@ -11856,10 +11856,13 @@
               description_teacher: ''
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r
-            \r
-            Bu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates.
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini
+            ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir.
+            Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama
+            ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen
+            kavramlar tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu
+            ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle
+            ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
           description_short: Programlama
           description_audience: ''
           stages:
@@ -11913,10 +11916,15 @@
               description_teacher: ''
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
-          description: |-
-            Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her "ders", öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli unsurlarının araçlarını kapsar.\r
-            \r
-            Bu ünite en son  Kasım 2017'de güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates adresinden alabilirsiniz.
+          description: "Bu dersler,AP Araştırma Performans Görevini anlamanıza, bunun
+            için hazırlanmanıza ve yapmanıza yardımcı olmak için buradadır.Her \"ders\",
+            öğretmeninizin sizin gözden geçirmenize  yardımcı olabileceği yardımcı
+            belgelerle olan bağlantıları içerir.NOT: Birinci derste yer alan ikinci
+            öğe Araştırma PT ile doğrudan alakalı değildir, fakat genel teknoloji
+            kurulumunu ve yapmanız gereken  Araştırma ve Oluşturma görevlerinin çeşitli
+            unsurlarının araçlarını kapsar.\r\n\r\nBu ünite en son  Kasım 2017'de
+            güncellendi. Müfredat güncellemeleri hakkında daha fazla bilgiyi forum.code.org/c/csp/updates
+            adresinden alabilirsiniz."
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
           description_audience: ''
@@ -11940,7 +11948,7 @@
             size her yönüyle yardım edebileceği yardımcı belgelerle bağlantılar içerir.
             \nNOT: birinci dersteki ilk öge, doğrudan PT Oluşturma ile ilgili değildir,
             ancak hem Keşfet hem de Oluştur görevlerinin çeşitli ögelerini yapmanız
-            için gerekli olan genel teknik kurulumu ve araçları kapsar.\\r\n\\r\nBu
+            için gerekli olan genel teknik kurulumu ve araçları kapsar.\r\n\r\nBu
             birim son olarak Aralık, 2017 ‘de güncellendi. Müfredat güncellemeleri
             hakkında forum.code.org/c/csp/updates adresinden devamını okuyunuz."
           description_short: Lessons and resources to help students prepare for and
@@ -11961,10 +11969,12 @@
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
