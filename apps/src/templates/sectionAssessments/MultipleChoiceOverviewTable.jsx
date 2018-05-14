@@ -5,16 +5,28 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import styleConstants from "@cdo/apps/styleConstants";
 
 export const COLUMNS = {
   QUESTION: 0,
 };
 
+const ANSWER_COLUMN_WIDTH = 70;
+const PADDING = 10;
+
 const styles = {
   answerColumnHeader: {
-    width: 70,
+    width: ANSWER_COLUMN_WIDTH,
     textAlign: 'center',
   },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH,
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  }
 };
 
 const NOT_ANSWERED = 'notAnswered';
@@ -94,7 +106,12 @@ class MultipleChoiceOverviewTable extends Component {
       property: NOT_ANSWERED,
       header: {
         label: commonMsg.notAnswered(),
-        props: {style: tableLayoutStyles.headerCell},
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.answerColumnHeader,
+          }
+        },
       },
       cell: {
         format: answerColumnsFormatter,
@@ -117,12 +134,17 @@ class MultipleChoiceOverviewTable extends Component {
       },
       cell: {
         format: answerColumnsFormatter,
-        props: {style: tableLayoutStyles.cell},
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.answerColumnCell,
+          }
+        },
       }
     }
   );
 
-  getQuestionColumn = (sortable) => (
+  getQuestionColumn = (sortable, numAnswers) => (
     {
       property: 'question',
       header: {
@@ -131,7 +153,13 @@ class MultipleChoiceOverviewTable extends Component {
         transforms: [sortable],
       },
       cell: {
-        props: {style: tableLayoutStyles.cell},
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.questionCell,
+            maxWidth: styleConstants['content-width'] - (numAnswers * (ANSWER_COLUMN_WIDTH + PADDING * 2)),
+          }
+        },
       }
     }
   );
@@ -141,12 +169,14 @@ class MultipleChoiceOverviewTable extends Component {
       question1.answers.length - question2.answers.length
     )).pop();
 
-    let columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
+    const columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
       return this.getAnswerColumn(answer.multipleChoiceOption);
     });
 
+    const numAnswerColumns = columnLabelNames.length + 1;
+    console.log(numAnswerColumns);
     return [
-      this.getQuestionColumn(sortable),
+      this.getQuestionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
       this.getNotAnsweredColumn(),
     ];
