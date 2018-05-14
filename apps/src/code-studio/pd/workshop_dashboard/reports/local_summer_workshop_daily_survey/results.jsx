@@ -74,10 +74,8 @@ export default class Results extends React.Component {
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
       <Tab eventKey={i + 1} key={i} title={session}>
-        Session results for {session}
         {this.renderSessionResultsTable(session)}
         {this.renderSessionResultsFreeResponse(session)}
-        <hr/>
       </Tab>
     ));
   }
