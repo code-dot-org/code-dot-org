@@ -487,55 +487,55 @@ exports.determineInputs = determineInputs;
 
 const STANDARD_INPUT_TYPES = {
   [VALUE_INPUT]: {
-    addInputRow(blockly, block, input) {
-      const inputRow = block.appendValueInput(input.name);
-      if (input.strict) {
-        inputRow.setStrictCheck(input.type);
+    addInputRow(blockly, block, inputConfig) {
+      const inputRow = block.appendValueInput(inputConfig.name);
+      if (inputConfig.strict) {
+        inputRow.setStrictCheck(inputConfig.type);
       } else {
-        inputRow.setCheck(input.type);
+        inputRow.setCheck(inputConfig.type);
       }
       return inputRow;
     },
-    generateCode(block, input) {
-      return Blockly.JavaScript.valueToCode(this, input.name,
+    generateCode(block, inputConfig) {
+      return Blockly.JavaScript.valueToCode(this, inputConfig.name,
           Blockly.JavaScript.ORDER_COMMA);
     },
   },
   [STATEMENT_INPUT]: {
-    addInputRow(blockly, block, input) {
-      return block.appendStatementInput(input.name);
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendStatementInput(inputConfig.name);
     },
-    generateCode(block, input) {
-      const code = Blockly.JavaScript.statementToCode(this, input.name);
+    generateCode(block, inputConfig) {
+      const code = Blockly.JavaScript.statementToCode(this, inputConfig.name);
       return `function () {\n${code}}`;
     },
   },
   [DUMMY_INPUT]: {
-    addInputRow(blockly, block, input) {
+    addInputRow(blockly, block, inputConfig) {
       return block.appendDummyInput();
     },
-    generateCode(block, input) {
+    generateCode(block, inputConfig) {
       return null;
     },
   },
   [DROPDOWN_INPUT]: {
-    addInput(blockly, block, input, currentInputRow) {
-      const dropdown = new blockly.FieldDropdown(input.options);
-      currentInputRow.appendTitle(input.label)
-          .appendTitle(dropdown, input.name);
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const dropdown = new blockly.FieldDropdown(inputConfig.options);
+      currentInputRow.appendTitle(inputConfig.label)
+          .appendTitle(dropdown, inputConfig.name);
     },
-    generateCode(block, input) {
-      return block.getTitleValue(input.name);
+    generateCode(block, inputConfig) {
+      return block.getTitleValue(inputConfig.name);
     },
   },
   [FIELD_INPUT]: {
-    addInput(blockly, block, input, currentInputRow) {
-      currentInputRow.appendTitle(input.label)
-          .appendTitle(new blockly.FieldTextInput(''), input.name);
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow.appendTitle(inputConfig.label)
+          .appendTitle(new blockly.FieldTextInput(''), inputConfig.name);
     },
-    generateCode(block, input) {
-      let code = this.getTitleValue(input.name);
-      if (input.type === Blockly.BlockValueType.STRING) {
+    generateCode(block, inputConfig) {
+      let code = this.getTitleValue(inputConfig.name);
+      if (inputConfig.type === Blockly.BlockValueType.STRING) {
         code = `"${code}"`;
       }
       return code;
@@ -575,8 +575,8 @@ const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_
   groupedInputs.forEach(inputGroup => {
     const inputRowConfig = inputGroup[inputGroup.length - 1];
     const inputRow = inputTypes[inputRowConfig.mode].addInputRow(blockly, block, inputRowConfig);
-    inputGroup.slice(0, -1).forEach(input => {
-      inputTypes[input.mode].addInput(blockly, block, input, inputRow);
+    inputGroup.slice(0, -1).forEach(inputConfig => {
+      inputTypes[inputConfig.mode].addInput(blockly, block, inputConfig, inputRow);
     });
     inputRow.appendTitle(inputRowConfig.label);
   });
