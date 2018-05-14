@@ -270,36 +270,36 @@ module Pd::WorkshopSurveyResultsHelper
 
   def get_questions_for_forms
     {
-      pre_workshop: {
+      'Pre Workshop': {
         how_excited: {text: 'How excited are you?'},
         lunch_aspirations: {text: 'What do you hope lunch will be?', free_response: true}
       },
-      day_1: {
+      'Day 1': {
         how_was_intro: {text: 'How was the course introduction?'},
         bakers_speech_feedback: {text: 'What did you think of Baker?', free_response: true}
       },
-      day_2: {
+      'Day 2': {
         how_was_day_2_activity: {text: 'How were the day 2 activities?'},
         how_was_day_2_food: {text: 'How was the food on day 2?'},
         cats_or_dogs: {text: 'Do you like cats or dogs?', free_response: true}
       },
-      day_3: {
+      'Day 3': {
         how_was_day_3_activity: {text: 'How were the day 3 activities?'},
         how_were_animals: {text: 'How successful was the animal-based activity?'},
         favorite_sport: {text: 'What is your favorite sport?', free_response: true}
       },
-      day_4: {
+      'Day 4': {
         how_was_day_4_activity: {text: 'How were the day 4 activities?'},
         how_was_meeting_lebron: {text: 'Did you enjoy meeting LeBron?'},
         favorite_tv_show: {text: 'What is your favorite TV show?', free_response: true}
       },
-      day_5: {
+      'Day 5': {
         how_was_day_5_activity: {text: 'How was the day 5 activity?'},
         how_was_meeting_andy_sandberg: {text: 'How awesome was meeting Andy Sandberg?'},
         how_got_home: {text: 'How did you get home?', free_response: true},
         how_do_you_feel: {text: 'How do you really feel?', free_response: true}
       },
-      post_workshop: {
+      'Post Workshop': {
         overall: {text: 'Overall, how successful was the workshop?'},
         how_prepared: {text: 'How prepared do you feel for the coming year?'},
         any_feedback: {text: 'Any feedback?', free_response: true},
