@@ -575,11 +575,17 @@ const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_
   }
 
   inputRows.forEach(inputRow => {
+    // Create the last input in the row first
     const lastInputConfig = inputRow[inputRow.length - 1];
-    const lastInput = inputTypes[lastInputConfig.mode].addInputRow(blockly, block, lastInputConfig);
+    const lastInput = inputTypes[lastInputConfig.mode]
+        .addInputRow(blockly, block, lastInputConfig);
+
+    // Append the rest of the inputs onto that
     inputRow.slice(0, -1).forEach(inputConfig => {
       inputTypes[inputConfig.mode].addInput(blockly, block, inputConfig, lastInput);
     });
+
+    // Finally append the last input's label
     lastInput.appendTitle(lastInputConfig.label);
   });
 };
