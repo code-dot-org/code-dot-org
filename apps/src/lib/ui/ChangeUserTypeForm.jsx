@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {createUuid} from "../../utils";
+import {Field} from './SystemDialog/SystemDialog';
+
 
 const TEACHER = 'teacher';
 const STUDENT = 'student';
@@ -114,72 +114,6 @@ export default class ChangeUserTypeForm extends React.Component {
     );
   }
 }
-
-class Field extends React.Component {
-  static propTypes = {
-    label: PropTypes.string,
-    labelDetails: PropTypes.string,
-    error: PropTypes.any,
-    children: PropTypes.element.isRequired,
-    style: PropTypes.object,
-  };
-
-  constructor(props) {
-    super(props);
-    this.uniqueId = createUuid();
-  }
-
-  render() {
-    const {label, labelDetails, error, children, style} = this.props;
-    return (
-      <div
-        style={{
-          marginBottom: 15,
-          ...style,
-        }}
-      >
-        {(label || labelDetails) &&
-          <label
-            htmlFor={this.uniqueId}
-            style={{
-              display: 'block',
-              color: color.charcoal,
-            }}
-          >
-            {label &&
-              <span style={{fontWeight: 'bold', marginRight: '1em'}}>
-                {label}
-              </span>
-            }
-            {labelDetails &&
-              <span>
-                {labelDetails}
-              </span>
-            }
-          </label>
-        }
-        {React.cloneElement(children, {id: this.uniqueId})}
-        {error &&
-          <FieldError>
-            {error}
-          </FieldError>
-        }
-      </div>
-    );
-  }
-}
-
-const FieldError = ({children}) => (
-  <div
-    style={{
-      color: color.red,
-      fontStyle: 'italic',
-    }}
-  >
-    {children}
-  </div>
-);
-FieldError.propTypes = {children: PropTypes.string};
 
 const styles = {
   input: {
