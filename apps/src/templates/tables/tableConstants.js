@@ -31,6 +31,9 @@ export const tableLayoutStyles = {
     paddingBottom: 20,
     color: color.charcoal,
   },
+  customStyle :{
+    backgroundColor: 'green'
+  },
   link: {
     color: color.teal,
     fontFamily: '"Gotham 5r", sans-serif',

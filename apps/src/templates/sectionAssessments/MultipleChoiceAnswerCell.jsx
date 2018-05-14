@@ -45,6 +45,12 @@ const styles = {
     // justifyContent: 'space-between',
     // minWidth: '60%',
   },
+
+  header: {
+    width: 70,
+    textAlign: 'center',
+  }
+  
 };
 
 class MultipleChoiceAnswerCell extends Component {
@@ -54,12 +60,12 @@ class MultipleChoiceAnswerCell extends Component {
   };
 
   render() {
-    const {percentValue, isCorrectAnswer} = this.props;
+    const {percentValue, isCorrectAnswer} = this.props
+      console.log('percentValue -->', percentValue);
     return (
       <div style={styles.main}>
         <div style={styles.text}>
-          {(percentValue >= 0) &&
-            <span>{`${percentValue}%`}</span>
+          {(percentValue >= 0) && <span>{`${percentValue}%`}</span>
           }
           {(percentValue < 0 ) &&
             <span>{'-'}</span>
@@ -75,9 +81,19 @@ class MultipleChoiceAnswerCell extends Component {
   }
 }
 
-
 MultipleChoiceAnswerCell.defaultProps = {
   percentValue: -1
 };
+
+
+export const TableHeader = ({ answerOptions }) => (
+    <div style={styles.header}>
+      {answerOptions}
+    </div>
+)
+
+TableHeader.propTypes = {
+  answerOptions: PropTypes.string.isRequired,
+}
 
 export default MultipleChoiceAnswerCell;

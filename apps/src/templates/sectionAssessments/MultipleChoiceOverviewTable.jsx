@@ -4,7 +4,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import MultipleChoiceAnswerCell, { TableHeader } from './MultipleChoiceAnswerCell';
 
 const NOT_ANSWERED = 'notAnswered';
 
@@ -161,6 +161,8 @@ class MultipleChoiceOverviewTable extends Component {
 
     if (cell) {    
       percentValue = this.calculatePercentAnswered(cell.option, rowIndex);
+    } else {
+      percentValue = -1;
     }
  
     return (
@@ -168,6 +170,14 @@ class MultipleChoiceOverviewTable extends Component {
         id={rowData.id}
         percentValue={percentValue}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
+      />
+    );
+  };
+
+  answerHeaderFormatter = (label, { rowData }) => {
+    return (
+      <TableHeader
+        answerOptions={label}
       />
     );
   };
@@ -196,6 +206,7 @@ class MultipleChoiceOverviewTable extends Component {
       property: NOT_ANSWERED,
       header: {
         label: commonMsg.notAnswered(),
+        format: this.answerHeaderFormatter,
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
@@ -210,7 +221,8 @@ class MultipleChoiceOverviewTable extends Component {
       property: 'answer',
       header: {
         label: columnLabel,
-        props: {style: tableLayoutStyles.headerCell},
+
+        props: {style: tableLayoutStyles.customStyle},
       },
       cell: {
         format: this.answerColumnsFormatter,
