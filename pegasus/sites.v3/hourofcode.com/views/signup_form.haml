@@ -111,7 +111,7 @@
           = hoc_s(:signup_email_preference_opt_in)
           %span.required*
         %div
-          %select#email-preference.form-control{name: "email_preference_s", type: "select"}
+          %select#email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
             %option{value: nil, selected: true}
             -['yes', 'no'].each do |email_preference|
               %option{value: email_preference}= hoc_s('signup_email_preference_' + email_preference)
