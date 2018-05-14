@@ -68,10 +68,6 @@
       = f.label :full_address
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
     = f.hidden_field :age, value: "21"
-  - if f.object.can_change_own_user_type?
-    .field
-      = f.label t('signup_form.user_type')
-      = f.select :user_type, user_type_options
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
@@ -115,8 +111,28 @@
       %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
+-# Separately-submittable form section allowing the user to edit their own
+-# account type.  We keep this separate because it's sometimes a multi-step
+-# process (for example, confirming one's email when upgrading from a student
+-# account to a teacher account)
+- if resource.can_change_own_user_type?
+  = form_for(resource,
+      as: resource_name,
+      url: registration_path(resource_name),
+      remote: true,
+      html: { id: 'change-user-type-modal-form', method: :put },
+      namespace: 'change-user-type',
+    ) do |f|
+    %hr.account-page-section-break
+    %h2= t('signup_form.user_type_label')
+    .field
+      = f.label t('signup_form.user_type')
+      = f.select :user_type, user_type_options
+    .farSide
+      %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+
 - if current_user.can_delete_own_account?
-  %hr.danger#delete-account-spacer
+  %hr.danger.account-page-section-break
   %h2.danger= t('user.delete')
   %p
     = t('user.delete_text')
@@ -128,14 +144,14 @@
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
-= form_for(resource,
-    as: resource_name,
-    url: registration_path(resource_name),
-    remote: true,
-    html: { id: 'change-email-modal-form', method: :put },
-    namespace: 'change-email-modal',
-  ) do |f|
-  - if f.object.can_edit_email?
+- if resource.can_edit_email?
+  = form_for(resource,
+      as: resource_name,
+      url: registration_path(resource_name),
+      remote: true,
+      html: { id: 'change-email-modal-form', method: :put },
+      namespace: 'change-email-modal',
+    ) do |f|
     = f.hidden_field :email
     = f.hidden_field :hashed_email
     -# = f.hidden_field :email_opt_in
@@ -145,7 +161,6 @@
   script_data = {
     edit: {
       userType: current_user.reload.user_type,
-      isOauth: current_user.oauth?
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
