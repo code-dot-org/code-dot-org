@@ -13,7 +13,7 @@ class Petition < Form
 
     # Though this should have been done client-side, we do this server-side
     # for redundancy.
-    if age < 13
+    if age < 16
       result[:email_s] = 'anonymous@code.org' unless result[:email_s].class == FieldError
       result[:name_s] = nil unless result[:name_s].class == FieldError
     end
@@ -26,7 +26,11 @@ class Petition < Form
     result
   end
 
-  def self.process(data)
+  def self.process(data, created_ip = nil)
+    if created_ip && data['email_s'] && data['age_i'] >= 16
+      puts "Set email preference - yes - #{created_ip} - #{data['email_s']}"
+    end
+
     result = {}
 
     location = data['zip_code_s'] || data['country_s']
