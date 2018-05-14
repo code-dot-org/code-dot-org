@@ -1138,25 +1138,15 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
-  # Temporary constraint: Student accounts cannot be upgraded to teacher
-  # accounts without manual intervention.  This is because an intermediate
-  # state in our account page changes breaks the ability to confirm your
-  # email address as a student upgrading to a teacher.
-  # Captured in tests below, will be removed in the next few days.
-  # (Brad Buchanan, 2018-05-14.)
   test 'can change own user type as a student with a password' do
     student = create :student
     refute_empty student.encrypted_password
-    # Temporary: Students can't upgrade
-    #assert student.can_change_own_user_type?
-    refute student.can_change_own_user_type?
+    assert student.can_change_own_user_type?
   end
 
   test 'can change own user type as an oauth student' do
     student = create :google_oauth2_student
-    # Temporary: Students can't upgrade
-    # assert student.can_change_own_user_type?
-    refute student.can_change_own_user_type?
+    assert student.can_change_own_user_type?
   end
 
   test 'can change own user type as a teacher with a password' do
