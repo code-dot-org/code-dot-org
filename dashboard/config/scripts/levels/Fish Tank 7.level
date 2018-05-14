@@ -49,11 +49,8 @@
     "markdown_instructions": "There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.",
     "parent_level_id": 12610,
     "auto_run_setup": "DRAW_LOOP",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "true"
+    "show_type_hints": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

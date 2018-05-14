@@ -69,14 +69,14 @@
     "encrypted_examples": "MA6Tn1YV3/Xqlg1aRFhiSf0LGozoW8G1KY++3TJeOHlKb2HROOgqNkOLncyP\nbIbzqg7DRVjEA2gJx1ItPOvBsg==\n",
     "parent_level_id": 8768,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "map_reference": "/docs/gamelab/text/index.html",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "reference_links": [
       "/docs/gamelab/textSize/index.html"
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
