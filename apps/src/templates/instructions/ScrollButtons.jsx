@@ -142,6 +142,7 @@ class ScrollButtons extends React.Component {
       <button
         className="arrow"
         ref={(c) => { this.scrollUp = c; }}
+        key="scrollUp"
         onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
@@ -152,6 +153,7 @@ class ScrollButtons extends React.Component {
       </button> :
       <div
         ref={(c) => { this.scrollUp = c; }}
+        key="scrollUp"
         onMouseDown={this.scrollStartUp}
         style={[
           styles.all,
@@ -165,6 +167,7 @@ class ScrollButtons extends React.Component {
       <button
         className="arrow"
         ref={(c) => { this.scrollDown = c; }}
+        key="scrollUp"
         onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
@@ -175,6 +178,7 @@ class ScrollButtons extends React.Component {
       </button> :
       <div
         ref={(c) => { this.scrollDown = c; }}
+        key="scrollDown"
         onMouseDown={this.scrollStartDown}
         style={[
           styles.all,
