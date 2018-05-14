@@ -203,6 +203,7 @@ export default function sectionProgress(state=initialState, action) {
   }
   if (action.type === SET_VALID_SCRIPTS) {
 
+    // Computes the set of valid scripts.
     let validScripts = action.validScripts;
     // Set defaultScript to Express Course to use if there are no validScripts
     const defaultScript = validScripts.find(script => script.name === DEFAULT_SCRIPT_NAME);
@@ -225,7 +226,13 @@ export default function sectionProgress(state=initialState, action) {
         }
       });
       validScripts = validScripts.filter(script => idMap[script.id]);
+      // If we filter out everything, add the defaultScript to validScripts
+      // to avoid having an empty dropdown menu.
+      if (validScripts.length === 0) {
+        validScripts.push(defaultScript);
+      }
 
+      // Uses the set of valid scripts to determine the current scriptId.
       var scriptId;
       switch (true) {
         // When there is a scriptId already in state.
@@ -240,15 +247,10 @@ export default function sectionProgress(state=initialState, action) {
             }
           });
           break;
-        // If there are validScripts, set scriptId to the first valid script.
-        case validScripts.length > 0:
-          scriptId = validScripts[0].id;
-          break;
+        // Set scriptId to the first valid script.  If there weren't any
+        // valid scripts, this will be the default script.
         default:
-          // Use the default script (currently Express Course) so we don't have
-          // an empty dropdown.
-          scriptId = defaultScript.id;
-          validScripts.push(defaultScript);
+          scriptId = validScripts[0].id;
       }
     }
 
