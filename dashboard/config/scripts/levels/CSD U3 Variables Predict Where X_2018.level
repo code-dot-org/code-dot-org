@@ -50,7 +50,6 @@
     "markdown_instructions": "# Using Variables\r\n\r\nIn this program, the variable `xPosition` is used to store the x-coordinate of the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n* Change the number that is stored into the variable ([Show me where](#triggercallout=code_triggered)) and run the code again.",
     "parent_level_id": 8737,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/drawing_shapes_map/index.html",
       "/docs/csd-1718/shape_size_map/index.html",
@@ -60,7 +59,8 @@
     "video_key": "csd_gamelab_variables_1",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
