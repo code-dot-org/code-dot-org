@@ -450,6 +450,7 @@ const determineInputs = function (text, args, strictTypes=[]) {
       } else if (arg.empty) {
         inputs.push({
           mode: DUMMY_INPUT,
+          name: arg.name,
           label,
         });
       } else {
@@ -488,7 +489,8 @@ exports.determineInputs = determineInputs;
 const STANDARD_INPUT_TYPES = {
   [VALUE_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      const inputRow = block.appendValueInput(inputConfig.name);
+      const inputRow = block.appendValueInput(inputConfig.name)
+          .setAlign(blockly.ALIGN_RIGHT);
       if (inputConfig.strict) {
         inputRow.setStrictCheck(inputConfig.type);
       } else {
@@ -497,7 +499,7 @@ const STANDARD_INPUT_TYPES = {
       return inputRow;
     },
     generateCode(block, inputConfig) {
-      return Blockly.JavaScript.valueToCode(this, inputConfig.name,
+      return Blockly.JavaScript.valueToCode(block, inputConfig.name,
           Blockly.JavaScript.ORDER_COMMA);
     },
   },
@@ -506,7 +508,7 @@ const STANDARD_INPUT_TYPES = {
       return block.appendStatementInput(inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      const code = Blockly.JavaScript.statementToCode(this, inputConfig.name);
+      const code = Blockly.JavaScript.statementToCode(block, inputConfig.name);
       return `function () {\n${code}}`;
     },
   },
@@ -534,7 +536,7 @@ const STANDARD_INPUT_TYPES = {
           .appendTitle(new blockly.FieldTextInput(''), inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = this.getTitleValue(inputConfig.name);
+      let code = block.getTitleValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
         code = `"${code}"`;
       }
@@ -608,7 +610,6 @@ exports.createJsWrapperBlockCreator = function (
 ) {
 
   const {
-    ORDER_COMMA,
     ORDER_FUNCTION_CALL,
     ORDER_MEMBER,
     ORDER_NONE,
@@ -698,27 +699,28 @@ exports.createJsWrapperBlockCreator = function (
         statement: true,
       });
     }
+    const inputs = [...args];
+    if (methodCall) {
+      const thisType = objectType ||
+        defaultObjectType ||
+        Blockly.BlockValueType.NONE;
+      inputs.push({
+        name: 'THIS',
+        type: thisType,
+        strict: strictTypes.includes(thisType),
+      });
+    }
+    const inputConfigs = determineInputs(blockText, inputs, strictTypes);
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
         this.setHSV(...color);
-        const inputs = [...args];
-        if (methodCall) {
-          const thisType = objectType ||
-            defaultObjectType ||
-            Blockly.BlockValueType.NONE;
-          inputs.push({
-            name: 'THIS',
-            type: thisType,
-            strict: strictTypes.includes(thisType),
-          });
-        }
 
         interpolateInputs(
           blockly,
           this,
-          determineInputs(blockText, inputs, strictTypes),
+          inputConfigs,
           inputTypes,
           inline,
         );
@@ -744,24 +746,8 @@ exports.createJsWrapperBlockCreator = function (
 
     generator[blockName] = function () {
       const values = args.map(arg => {
-        if (arg.customInput) {
-          return inputTypes[arg.customInput].generateCode(this, arg);
-        } else if (arg.empty) {
-          return null;
-        } else if (arg.options) {
-          return this.getTitleValue(arg.name);
-        } else if (arg.field) {
-          let code = this.getTitleValue(arg.name);
-          if (arg.type === Blockly.BlockValueType.STRING) {
-            code = `"${code}"`;
-          }
-          return code;
-        } else if (arg.statement) {
-          const code = Blockly.JavaScript.statementToCode(this, arg.name);
-          return `function () {\n${code}}`;
-        } else {
-          return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
-        }
+        const inputConfig = inputConfigs.find(input => input.name === arg.name);
+        return inputTypes[inputConfig.mode].generateCode(this, inputConfig);
       }).filter(value => value !== null).map(value => {
         if (value === "") {
           // Missing inputs should be passed into func as undefined
