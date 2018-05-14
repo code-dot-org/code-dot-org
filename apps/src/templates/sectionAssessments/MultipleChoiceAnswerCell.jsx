@@ -16,7 +16,6 @@ const styles = {
     color: color.level_perfect,
     float: 'left',
     width: 20,
-    fontSize: 25,
   },
   text: {
     color: color.charcoal,
@@ -25,12 +24,13 @@ const styles = {
     float: 'left',
     paddingRight: 40,
     width: 20,
+    textAlign: 'center',
   },
 };
 
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
-    percentValue: PropTypes.string.isRequired,
+    percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
   };
 
@@ -39,7 +39,12 @@ class MultipleChoiceAnswerCell extends Component {
     return (
       <div>
         <div>
-          {percentValue}
+          {(percentValue >= 0) &&
+            <span>{`${percentValue}%`}</span>
+          }
+          {(percentValue < 0 ) &&
+            <span>{'-'}</span>
+          }
         </div>
         <div>
           {isCorrectAnswer &&
@@ -50,5 +55,10 @@ class MultipleChoiceAnswerCell extends Component {
     );
   }
 }
+
+
+MultipleChoiceAnswerCell.defaultProps = {
+  percentValue: -1
+};
 
 export default MultipleChoiceAnswerCell;
