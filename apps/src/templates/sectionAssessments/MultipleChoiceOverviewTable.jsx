@@ -12,24 +12,13 @@ export const COLUMNS = {
 
 const NOT_ANSWERED = 'notAnswered';
 
-const calculateNotAnswered = (multipleChoiceDataArr) => {
-  let total = 0;
-  multipleChoiceDataArr.forEach (studentsAnswersObj => {
-        if (studentsAnswersObj.percentAnswered) {
-            total += studentsAnswersObj.percentAnswered;
-        }
-    });
-
-    return (100 - total);
-};
-
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
 
   let percentValue = 0;
 
   if (property === NOT_ANSWERED) {
-     percentValue = calculateNotAnswered(rowData.answers);
+     percentValue = rowData.notAnswered;
   } else {
      percentValue = (cell && cell.percentAnswered);
   }
