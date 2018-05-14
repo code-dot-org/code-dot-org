@@ -590,7 +590,7 @@ const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_
     }
   });
   const lastRow = inputRows[inputRows.length - 1];
-  if (inputRows[inputRows.length - 1].length > 0) {
+  if (inputRows[inputRows.length - 1].length) {
     lastRow.push({mode: DUMMY_INPUT});
   } else {
     inputRows.pop();
