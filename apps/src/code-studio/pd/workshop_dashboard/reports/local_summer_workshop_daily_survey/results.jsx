@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Tab, Tabs} from 'react-bootstrap';
 
 export default class Results extends React.Component {
   static propTypes = {
@@ -70,30 +71,22 @@ export default class Results extends React.Component {
     );
   }
 
-  renderSessionResults(session) {
-    return (
-      <div>
+  renderAllSessionsResults() {
+    return this.props.sessions.map((session, i) => (
+      <Tab eventKey={i + 1} key={i} title={session}>
         Session results for {session}
         {this.renderSessionResultsTable(session)}
         {this.renderSessionResultsFreeResponse(session)}
         <hr/>
-      </div>
-    );
-  }
-
-  renderAllSessionsResults() {
-    return this.props.sessions.map((session, i) => (
-      <div key={i}>
-        {this.renderSessionResults(session)}
-      </div>
+      </Tab>
     ));
   }
 
   render() {
     return (
-      <div>
+      <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
-      </div>
+      </Tabs>
     );
   }
 }
