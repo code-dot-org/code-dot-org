@@ -4,44 +4,31 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import MultipleChoiceAnswerCell, { TableHeader } from './MultipleChoiceAnswerCell';
+
+const NOT_ANSWERED = 'notAnswered';
 
 export const COLUMNS = {
   QUESTION: 0,
 };
 
-const alphabetMapper =  [
-  commonMsg.answerOptionA(),
-  commonMsg.answerOptionB(),
-  commonMsg.answerOptionC(),
-  commonMsg.answerOptionD(),
-  commonMsg.answerOptionE(),
-  commonMsg.answerOptionF(),
-  commonMsg.answerOptionG(),
-];
-
-const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
-  const cell = rowData.answers[columnIndex - 1];
-  return (
-      <MultipleChoiceAnswerCell
-        id={rowData.id}
-        percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
-        isCorrectAnswer={cell && cell.isCorrectAnswer}
-      />
-  );
-};
-
 const questionAnswerDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string,
-  percentAnswered: PropTypes.string,
+  question: PropTypes.number,
+  answer: PropTypes.array,
+  answers: PropTypes.array,
+  // id: PropTypes.number.isRequired,
+  answerOptions: PropTypes.array,
+  questionText: PropTypes.string,
   isCorrectAnswer: PropTypes.bool,
-  notAnswered: PropTypes.string,
+  percentValue: PropTypes.number,
+  submitted: PropTypes.bool,
+  name: PropTypes.string,
 });
 
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
+    questions: PropTypes.arrayOf(questionAnswerDataPropType),
+    students: PropTypes.arrayOf(questionAnswerDataPropType)
   };
 
   state = {
@@ -50,6 +37,96 @@ class MultipleChoiceOverviewTable extends Component {
       position: 0
     }
   };
+
+  calculatePercentNotAnswered = (index) => {
+    const students = this.props.students;
+    const maxStudent = students.length;
+    let notAnswered = 0;
+  
+    students.forEach(student => { 
+      const studentAnswers = student.answers;
+      const answerArr = studentAnswers[index];
+  
+      if (answerArr) {
+        for (let i=0; i< answerArr.answer.length; i++) {
+          if (answerArr.answer[i] === '') {
+            console.log('answerArr.answer ---->', answerArr.answer);
+            notAnswered += 1;
+            console.log('not answered --->', notAnswered);
+            break; 
+          }
+        }
+      }
+    });
+    console.log('not answered --->', notAnswered);
+    return Math.floor((notAnswered / maxStudent) * 100);
+  };
+  
+  calculatePercentAnswered = (option, index) => {
+    const students = this.props.students;
+    const maxStudent = students.length;
+    console.log('maxStudent -->', maxStudent);
+    let numAnsweredForOption = 0; 
+
+    students.forEach(student => { 
+      const studentAnswers = student.answers;
+      const answerArr = studentAnswers[index];
+
+      if (answerArr) {
+
+        for (let i=0; i< answerArr.answer.length; i++) {
+          if (answerArr.answer[i] === option) {
+            console.log('answerArr.answer ---->', answerArr.answer);
+            numAnsweredForOption += 1;
+            console.log('numAnsweredForOption --->', numAnsweredForOption);
+            break;
+          }
+        }
+      }
+    });
+    return Math.floor((numAnsweredForOption / maxStudent) * 100);
+  };
+
+  notAnsweredColumnsFormatter = (answer, {rowData, columnIndex, rowIndex}) => {
+    const cell = rowData.answerOptions[columnIndex - 1];
+    let percentValue = 0;
+    percentValue = this.calculatePercentNotAnswered(rowIndex);
+
+    return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={percentValue}
+        isCorrectAnswer={cell && cell.isCorrectAnswer}
+      />
+    );
+  };
+
+  answerColumnsFormatter = (answer, {rowData, columnIndex, rowIndex}) => {
+    let percentValue = 0;
+    const cell = rowData.answerOptions[columnIndex - 1];
+
+    if (cell) {    
+      percentValue = this.calculatePercentAnswered(cell.option, rowIndex);
+    } else {
+      percentValue = -1;
+    }
+ 
+    return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        percentValue={percentValue}
+        isCorrectAnswer={cell && cell.isCorrectAnswer}
+      />
+    );
+  };
+
+  // answerHeaderFormatter = (label, { rowData }) => {
+  //   return (
+  //     <TableHeader
+  //       answerOptions={label}
+  //     />
+  //   );
+  // };
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -61,9 +138,9 @@ class MultipleChoiceOverviewTable extends Component {
         sortingColumns: this.state.sortingColumns,
         // Custom sortingOrder removes 'no-sort' from the cycle
         sortingOrder: {
-          FIRST: 'asc',
-          asc: 'desc',
-          desc: 'asc'
+            FIRST: 'asc',
+            asc: 'desc',
+            desc: 'asc'
         },
         selectedColumn
       })
@@ -72,26 +149,29 @@ class MultipleChoiceOverviewTable extends Component {
 
   getNotAnsweredColumn = () => (
     {
-      property: 'notAnswered',
+      property: NOT_ANSWERED,
       header: {
         label: commonMsg.notAnswered(),
+        // format: this.answerHeaderFormatter,
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
+        format: this.notAnsweredColumnsFormatter,
         props: {style: tableLayoutStyles.cell},
       }
     }
   );
 
-  getAnswerColumn = (index) => (
+  getAnswerColumn = (columnLabel) => (
     {
-      property: 'percentAnswered',
+      property: 'answer',
       header: {
-        label: alphabetMapper[index],
-        props: {style: tableLayoutStyles.headerCell},
+        label: columnLabel,
+        // format: this.answerHeaderFormatter,
+        props: {style: tableLayoutStyles.customStyle},
       },
       cell: {
-        format: answerColumnsFormatter,
+        format: this.answerColumnsFormatter,
         props: {style: tableLayoutStyles.cell},
       }
     }
@@ -99,7 +179,7 @@ class MultipleChoiceOverviewTable extends Component {
 
   getQuestionColumn = (sortable) => (
     {
-      property: 'question',
+      property: 'questionText',
       header: {
         label: commonMsg.question(),
         props: {style: tableLayoutStyles.headerCell},
@@ -112,18 +192,19 @@ class MultipleChoiceOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
-      return Math.max(answersTotal, currentAnswerCount.answers.length);
-    }, 0);
+    const maxOptionsQuestion = [...this.props.questions].sort((question1, question2) => (
+      question1.answerOptions.length - question2.answerOptions.length
+    )).pop();
 
-    let dataColumns = [];
-    dataColumns.push(this.getQuestionColumn(sortable));
-    for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      dataColumns.push(this.getAnswerColumn(i));
-    }
-    dataColumns.push(this.getNotAnsweredColumn());
+    let columnLabelNames = maxOptionsQuestion.answerOptions.map((answer) => {
+      return this.getAnswerColumn(answer.option);
+    });
 
-    return dataColumns;
+    return [
+      this.getQuestionColumn(sortable),
+      ...columnLabelNames,
+      this.getNotAnsweredColumn(),
+    ];
   };
 
   render() {
@@ -136,18 +217,19 @@ class MultipleChoiceOverviewTable extends Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.questionAnswerData);
+    })(this.props.questions);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+      <Table.Header/>
+      <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
 
 export default MultipleChoiceOverviewTable;
+

@@ -1,63 +1,109 @@
 import React from 'react';
 import MultipleChoiceOverviewTable from './MultipleChoiceOverviewTable';
+import commonMsg from '@cdo/locale';
 
-const multipleChoiceData = [
+const students = [
   {
-    id: 1,
-    question: '1. What is a variable?',
-    answers:  [{percentAnswered: 40, isCorrectAnswer: true},
-               {percentAnswered: 20, isCorrectAnswer: false},
-               {percentAnswered: 20, isCorrectAnswer: false},
-               {percentAnswered: 20, isCorrectAnswer: false},
-    ],
+    id: '012896',
+    name: 'Caley',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['D']}, {question: 3, answer: ['A']}, {question: 4, answer: ['C']}],
+    submitted: true
   },
   {
-    id: 2,
-    question: '2. What is a 4-bit number for the decimal number Ten(10)?',
-    answers:  [{percentAnswered: 30, isCorrectAnswer: false},
-               {percentAnswered: 10, isCorrectAnswer: true},
-               {percentAnswered: 10, isCorrectAnswer: false},
-               {percentAnswered: 10, isCorrectAnswer: false},
-               {percentAnswered: 20, isCorrectAnswer: false},
-               {percentAnswered: 10, isCorrectAnswer: false},
-    ],
+    id: '012896',
+    name: 'Erin',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D']}, {question: 4, answer: ['C']}],
+    submitted: false
   },
   {
-    id: 3,
-    question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?',
-    answers:  [{percentAnswered: 50, isCorrectAnswer: false},
-               {percentAnswered: 15, isCorrectAnswer: false},
-               {percentAnswered: 20, isCorrectAnswer: true},
-               {percentAnswered: 5, isCorrectAnswer: false},
-               {percentAnswered: 5, isCorrectAnswer: false},
-    ],
+    id: '012896',
+    name: 'Maddie',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['E']}, {question: 4, answer: ['C']}],
+    submitted: true
   },
   {
-    id: 4,
-    question: '4. What is a function?',
-    answers:  [{percentAnswered: 15, isCorrectAnswer: false},
-               {percentAnswered: 18, isCorrectAnswer: false},
-               {percentAnswered: 10, isCorrectAnswer: false},
-               {percentAnswered: 9, isCorrectAnswer: false},
-               {percentAnswered: 5, isCorrectAnswer: false},
-               {percentAnswered: 45, isCorrectAnswer: true},
-               {percentAnswered: 5, isCorrectAnswer: false},
-    ],
+    id: '012896',
+    name: 'Brad',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D', 'B']}, {question: 4, answer: ['C']}],
+    submitted: true
+    },
+  {
+    id: '012896',
+    name: 'Dave',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['C']}, {question: 4, answer: ['C']}],
+    submitted: true
   },
+  {
+    id: '012896',
+    name: 'Summer',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['']}, {question: 4, answer: ['C']}],
+    submitted: false
+  }
+];
+
+const questions = [	
+	{
+		id: 1,
+		answerOptions: 
+		[
+      {option: commonMsg.answerOptionA(), isCorrectAnswer: true}, 
+      {option: commonMsg.answerOptionB()}, 
+      {option: commonMsg.answerOptionC()}, 
+      {option: commonMsg.answerOptionD()}
+		],
+		questionText: '1. what is a variable?'
+	},
+	{
+		id: 2,
+		answerOptions: [
+      {option: commonMsg.answerOptionA()}, 
+      {option: commonMsg.answerOptionB(), isCorrectAnswer: true}, 
+      {option: commonMsg.answerOptionC()}, 
+      {option: commonMsg.answerOptionD()}, 
+      {option: commonMsg.answerOptionE()}, 
+      {option: commonMsg.answerOptionF()},
+		],
+		questionText: '2. What is a 4-bit number for the decimal number Ten(10)?'
+	},
+	{
+		id: 3,
+		answerOptions: [
+      {option: commonMsg.answerOptionA()}, 
+      {option: commonMsg.answerOptionB()}, 
+      {option: commonMsg.answerOptionC()}, 
+      {option: commonMsg.answerOptionD(), isCorrectAnswer: true}, 
+      {option: commonMsg.answerOptionE(), isCorrectAnswer: true},
+		],
+    	questionText: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet?'	
+	},
+	{
+		id: 4,
+		answerOptions: [
+      {option: commonMsg.answerOptionA()}, 
+      {option: commonMsg.answerOptionB()}, 
+      {option: commonMsg.answerOptionC(), isCorrectAnswer: true}, 
+      {option: commonMsg.answerOptionD()}, 
+      {option: commonMsg.answerOptionE()}, 
+      {option: commonMsg.answerOptionF()}, 
+      {option: commonMsg.answerOptionG()},
+		],
+		questionText: '4. What is a function?'
+	},
 ];
 
 export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/MultipleChoiceOverviewTable', module)
-    .addStoryTable([
-      {
-        name: 'Table for assessments',
-        description: 'Ability to see assessment overview for the entire class',
-        story: () => (
-            <MultipleChoiceOverviewTable
-              questionAnswerData={multipleChoiceData}
-            />
-        )
+	return storybook
+		.storiesOf('SectionAssessments/MultipleChoiceOverviewTable', module)
+		.addStoryTable([
+			{
+				name: 'Table for assessments',
+				description: 'Ability to see assessment overview for the entire class',
+				story: () => (
+					<MultipleChoiceOverviewTable
+					  students={students}
+					  questions={questions}
+					/>
+				)
       },
-    ]);
+    ]);   
 };

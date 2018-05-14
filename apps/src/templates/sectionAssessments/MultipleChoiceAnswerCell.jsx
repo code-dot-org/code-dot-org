@@ -2,53 +2,106 @@ import React, {Component, PropTypes} from 'react';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
+const PADDING = 80;
+
 const styles = {
   main: {
-    border: 'none',
-    marginTop: 20,
-    marginRight: 80,
-    paddingTop: 20,
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingBottom: 10,
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    minWidth: '80%',
+    alignItems: 'center',
   },
+
   icon: {
     color: color.level_perfect,
-    float: 'left',
-    width: 20,
-    fontSize: 25,
+    // float: 'left',
+    // display: 'flex',
+    // justifyContent: 'flex-end',
+
+    // width: 80,
+    // clear: 'left',
+    // width: '40%',
   },
+
   text: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16,
-    float: 'left',
-    paddingRight: 40,
-    width: 20,
+    // fontFamily: '"Gotham 5r", sans-serif',
+    // // fontSize: 16,
+    // float: 'left',
+    // // clear: 'right',
+    marginRight: 10,
+    // // width: '60%',
+    // textAlign: 'center',
+    // minWidth: '60',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // flexWrap: 'wrap',
+    // justifyContent: 'space-between',
+    // width: styleConstants['content-width'],
+    // display: 'flex',
+    // flexDirection: 'row',
+    // flexWrap: 'wrap',
+    // justifyContent: 'space-between',
+    // minWidth: '60%',
   },
+  header: {
+    width: 70,
+    textAlign: 'center',
+  },
+
+  // question: {
+  //   td:nth-child(1) {  
+  //     maxWidth: 250,
+  //     whiteSpace: nowrap,
+  //     overFlow: hidden,
+  //     textOverflow: ellipsis,
+  //   }
+  // }
+  
 };
 
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
-    percentValue: PropTypes.string.isRequired,
+    percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
   };
 
   render() {
-    const {percentValue, isCorrectAnswer} = this.props;
+    const {percentValue, isCorrectAnswer} = this.props
+      console.log('percentValue -->', percentValue);
     return (
-      <div>
-        <div>
-          {percentValue}
+      <div style={styles.main}>
+        <div style={styles.text}>
+          {(percentValue >= 0) && <span>{`${percentValue}%`}</span>
+          }
+          {(percentValue < 0 ) &&
+            <span>{'-'}</span>
+          }
         </div>
-        <div>
+        <div style={styles.icon}>
           {isCorrectAnswer &&
-             <FontAwesome icon="check-circle" style={styles.icon}/>
+             <FontAwesome icon="check-circle" />
           }
         </div>
       </div>
     );
   }
 }
+
+MultipleChoiceAnswerCell.defaultProps = {
+  percentValue: -1
+};
+
+
+// export const TableHeader = ({ answerOptions }) => (
+//     <div style={styles.header}>
+//       {answerOptions}
+//     </div>
+// )
+
+// TableHeader.propTypes = {
+//   answerOptions: PropTypes.string.isRequired,
+// }
 
 export default MultipleChoiceAnswerCell;
