@@ -51,7 +51,7 @@
 -# In-page reminders and surveys
 - if current_user
   - if current_user.teacher?
-    #terms_reminder
+    #teacher_reminders
       - unless current_user.accepted_latest_terms?
         = render template: 'api/accept_terms_reminder'
         = render partial: 'layouts/terms_interstitial'
