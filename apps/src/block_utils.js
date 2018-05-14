@@ -485,62 +485,100 @@ const determineInputs = function (text, args, strictTypes=[]) {
 };
 exports.determineInputs = determineInputs;
 
+const STANDARD_INPUT_TYPES = {
+  [VALUE_INPUT]: {
+    addInputRow(blockly, block, input) {
+      const inputRow = block.appendValueInput(input.name);
+      if (input.strict) {
+        inputRow.setStrictCheck(input.type);
+      } else {
+        inputRow.setCheck(input.type);
+      }
+      return inputRow;
+    },
+    generateCode(block, input) {
+      return Blockly.JavaScript.valueToCode(this, input.name,
+          Blockly.JavaScript.ORDER_COMMA);
+    },
+  },
+  [STATEMENT_INPUT]: {
+    addInputRow(blockly, block, input) {
+      return block.appendStatementInput(input.name);
+    },
+    generateCode(block, input) {
+      const code = Blockly.JavaScript.statementToCode(this, input.name);
+      return `function () {\n${code}}`;
+    },
+  },
+  [DUMMY_INPUT]: {
+    addInputRow(blockly, block, input) {
+      return block.appendDummyInput();
+    },
+    generateCode(block, input) {
+      return null;
+    },
+  },
+  [DROPDOWN_INPUT]: {
+    addInput(blockly, block, input, currentInputRow) {
+      const dropdown = new blockly.FieldDropdown(input.options);
+      currentInputRow.appendTitle(input.label)
+          .appendTitle(dropdown, input.name);
+    },
+    generateCode(block, input) {
+      return block.getTitleValue(input.name);
+    },
+  },
+  [FIELD_INPUT]: {
+    addInput(blockly, block, input, currentInputRow) {
+      currentInputRow.appendTitle(input.label)
+          .appendTitle(new blockly.FieldTextInput(''), input.name);
+    },
+    generateCode(block, input) {
+      let code = this.getTitleValue(input.name);
+      if (input.type === Blockly.BlockValueType.STRING) {
+        code = `"${code}"`;
+      }
+      return code;
+    },
+  },
+};
+
 /**
  * Adds the specified inputs to the block
  * @param {Blockly} blockly The Blockly object provided to install()
  * @param {Block} block The block to add the inputs to
  * @param {Object[]} inputs The list of inputs. See determineInputs() for
  *   the fields in each input.
- * @param {object} customInputTypes A map of customType input names to their
- *   definitions, which are objects that have `addInput` and `generateCode`
+ * @param {object} inputTypes A map of input types to their definitions, which
+ *   are objects that have `addInput` and `generateCode`
  *   methods.
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (blockly, block, inputs, customInputTypes, inline) {
-  let dropdown, previousInput;
-  const getPreviousInput = () => {
-    if (!previousInput) {
-      previousInput = block.appendDummyInput();
+const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
+  const groupedInputs = [];
+  let lastGroup = [];
+  groupedInputs.push(lastGroup);
+  inputs.forEach(input => {
+    lastGroup.push(input);
+    if (inputTypes[input.mode].addInputRow) {
+      lastGroup = [];
+      groupedInputs.push(lastGroup);
     }
-    return previousInput;
-  };
-  inputs.map(input => {
-    switch (input.mode) {
-      case DROPDOWN_INPUT:
-        dropdown = new blockly.FieldDropdown(input.options);
-        getPreviousInput().appendTitle(input.label)
-          .appendTitle(dropdown, input.name);
-        break;
-      case VALUE_INPUT:
-        previousInput = block.appendValueInput(input.name);
-        if (input.strict) {
-          previousInput.setStrictCheck(input.type);
-        } else {
-          previousInput.setCheck(input.type);
-        }
-        previousInput.appendTitle(input.label);
-        if (!inline) {
-          previousInput.setAlign(Blockly.ALIGN_RIGHT);
-        }
-        break;
-      case DUMMY_INPUT:
-        getPreviousInput().appendTitle(input.label);
-        break;
-      case STATEMENT_INPUT:
-        if (input.label) {
-          getPreviousInput().appendTitle(input.label);
-        }
-        block.appendStatementInput(input.name);
-        previousInput = null;
-        break;
-      case FIELD_INPUT:
-        getPreviousInput().appendTitle(input.label)
-            .appendTitle(new Blockly.FieldTextInput(''), input.name);
-        break;
-      default:
-        previousInput = customInputTypes[input.mode].addInput(block, input);
-        break;
-    }
+  });
+  const lastRow = groupedInputs[groupedInputs.length - 1];
+  if (groupedInputs[groupedInputs.length - 1].length > 0) {
+    lastRow.push({mode: DUMMY_INPUT});
+  } else {
+    groupedInputs.pop();
+  }
+
+  groupedInputs.forEach(inputGroup => {
+    const inputRowConfig = inputGroup[inputGroup.length - 1];
+    const inputRow = inputTypes[inputRowConfig.mode].addInputRow(blockly, block, inputRowConfig);
+    inputGroup.slice(0, -1).forEach(input => {
+      inputTypes[input.mode].addInput(blockly, block, input, inputRow);
+    });
+    inputRow.appendTitle(inputRowConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
@@ -577,6 +615,11 @@ exports.createJsWrapperBlockCreator = function (
   } = Blockly.JavaScript;
 
   const generator = blockly.Generator.get('JavaScript');
+
+  const inputTypes = {
+    ...STANDARD_INPUT_TYPES,
+    ...customInputTypes,
+  };
 
   /**
    * Create a block that directly maps to a javascript function call, method
@@ -676,7 +719,7 @@ exports.createJsWrapperBlockCreator = function (
           blockly,
           this,
           determineInputs(blockText, inputs, strictTypes),
-          customInputTypes,
+          inputTypes,
           inline,
         );
         this.setInputsInline(inline);
@@ -702,7 +745,7 @@ exports.createJsWrapperBlockCreator = function (
     generator[blockName] = function () {
       const values = args.map(arg => {
         if (arg.customInput) {
-          return customInputTypes[arg.customInput].generateCode(this, arg);
+          return inputTypes[arg.customInput].generateCode(this, arg);
         } else if (arg.empty) {
           return null;
         } else if (arg.options) {

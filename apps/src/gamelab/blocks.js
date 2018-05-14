@@ -51,16 +51,15 @@ const customInputTypes = {
           }
         }
       );
-      return block.appendDummyInput()
-          .appendTitle(button, input.name);
+      currentInputRow.appendTitle(button, input.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
     },
   },
   costumePicker: {
-    addInput(block, input) {
-      return block.appendDummyInput()
+    addInput(blockly, block, input, currentInputRow) {
+      currentInputRow
         .appendTitle(input.label)
         .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), input.name);
     },
@@ -69,7 +68,7 @@ const customInputTypes = {
     },
   },
   spritePicker: {
-    addInput(block, input) {
+    addInput(blockly, block, input, currentInputRow) {
       block.getVars = function () {
         return {
           [Blockly.BlockValueType.SPRITE]: [block.getTitleValue(input.name)],
@@ -86,7 +85,7 @@ const customInputTypes = {
         }
       };
 
-      return block.appendDummyInput()
+      currentInputRow
         .appendTitle(input.label)
         .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), input.name);
     },
