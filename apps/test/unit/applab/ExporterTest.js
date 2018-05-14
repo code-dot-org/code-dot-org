@@ -84,6 +84,10 @@ describe('The Exporter,', function () {
       /\/assets\/fontawesome-webfont\.woff2\?__cb__=\d+/,
       FONTAWESOME_CONTENT
     );
+    server.respondWith(
+      '/api/v1/sound-library/default.mp3',
+      'default.mp3 content'
+    );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
@@ -266,7 +270,7 @@ describe('The Exporter,', function () {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
-        'console.log("hello");\nplaySound("zoo.mp3");',
+        'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("sound://default.mp3");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
@@ -317,6 +321,7 @@ describe('The Exporter,', function () {
           'my-app/applab/fontawesome-webfont.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
+          'my-app/assets/default.mp3',
           'my-app/assets/foo.png',
           'my-app/assets/zoo.mp3',
           'my-app/code.js',
@@ -388,10 +393,14 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/README.txt');
       });
 
-      it("should contain the assets files used by the project", function () {
+      it("should contain the asset files used by the project", function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
+      });
+
+      it("should contain the sound library files referenced by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
       it("should rewrite urls in html to point to the correct asset files", function () {
@@ -401,7 +410,7 @@ describe('The Exporter,', function () {
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
-        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");\nplaySound("assets/zoo.mp3");');
+        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");');
       });
 
     });
@@ -414,7 +423,7 @@ describe('The Exporter,', function () {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
-        'console.log("hello");\nplaySound("zoo.mp3");',
+        'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("sound://default.mp3");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
@@ -473,6 +482,7 @@ describe('The Exporter,', function () {
           'my-app/assets/applab/fontawesome-webfont.woff2',
           'my-app/assets/bar.png',
           'my-app/assets/code.j',
+          'my-app/assets/default.mp3',
           'my-app/assets/foo.png',
           'my-app/assets/index.html',
           'my-app/assets/jquery-1.12.1.min.j',
@@ -551,10 +561,14 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/assets/README.txt');
       });
 
-      it("should contain the assets files used by the project", function () {
+      it("should contain the asset files used by the project", function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
+      });
+
+      it("should contain the sound library files referenced by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
       it("should rewrite urls in html to point to the correct asset files", function () {
@@ -564,7 +578,7 @@ describe('The Exporter,', function () {
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
-        assert.equal(zipFiles['my-app/assets/code.j'], 'console.log("hello");\nplaySound("zoo.mp3");');
+        assert.equal(zipFiles['my-app/assets/code.j'], 'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("default.mp3");');
       });
 
       it("should contain the react native files needed by the project", function () {
