@@ -19,6 +19,7 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 // specific experiment names
 experiments.COURSE_VERSIONS = 'courseVersions';
 experiments.PROGRESS_TAB = 'sectionProgressRedesign';
+experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
 
 // This is a per user experiment and is defined in experiments.rb
 // On the front end we are treating it as an experiment group that contains
