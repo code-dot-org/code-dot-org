@@ -10,6 +10,13 @@ export const COLUMNS = {
   QUESTION: 0,
 };
 
+const styles = {
+  answerColumnHeader: {
+    width: 70,
+    textAlign: 'center',
+  },
+};
+
 const NOT_ANSWERED = 'notAnswered';
 
 const calculateNotAnswered = (multipleChoiceDataArr) => {
@@ -101,7 +108,12 @@ class MultipleChoiceOverviewTable extends Component {
       property: 'percentAnswered',
       header: {
         label: columnLabel,
-        props: {style: tableLayoutStyles.headerCell},
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.answerColumnHeader,
+          }
+        },
       },
       cell: {
         format: answerColumnsFormatter,
