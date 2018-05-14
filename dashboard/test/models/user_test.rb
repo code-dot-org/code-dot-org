@@ -1138,6 +1138,43 @@ class UserTest < ActiveSupport::TestCase
     assert @student.can_edit_email?
   end
 
+  test 'can change own user type as a student with a password' do
+    student = create :student
+    refute_empty student.encrypted_password
+    assert student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth student' do
+    student = create :google_oauth2_student
+    assert student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as a teacher with a password' do
+    teacher = create :teacher
+    refute_empty teacher.encrypted_password
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth teacher' do
+    teacher = create :teacher,
+      encrypted_password: nil,
+      provider: 'facebook',
+      uid: '1111111'
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a student with a picture or secret words' do
+    student = create :student_in_picture_section
+    refute student.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a teacher with sections' do
+    section = create :section
+    teacher = section.teacher
+    refute_empty teacher.sections
+    refute teacher.can_change_own_user_type?
+  end
+
   test 'can delete own account if teacher' do
     user = create :teacher
     assert user.can_delete_own_account?
