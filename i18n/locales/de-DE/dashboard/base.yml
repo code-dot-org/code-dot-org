@@ -368,6 +368,7 @@ de:
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Abgeschlossen'
     tried: 'Versucht'
@@ -723,21 +724,21 @@ de:
     message: "Bitte verrate uns deine Ethnie (Zutreffendes bitte ankreuzen)"
     races:
       - 
-        white: Weiß
+        white: "Weiß"
       - 
-        black: Schwarz
+        black: "Schwarz"
       - 
-        hispanic: Spanisch oder Latino
+        hispanic: "Spanisch oder Latino"
       - 
-        asian: Asiatisch
+        asian: "Asiatisch"
       - 
-        hawaiian: Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner
+        hawaiian: "Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner"
       - 
-        american_indian: Indianer oder eingeborener Alaskaner
+        american_indian: "Indianer oder eingeborener Alaskaner"
       - 
-        other: Andere
+        other: "Andere"
       - 
-        opt_out: Das geht Euch nichts an
+        opt_out: "Das geht Euch nichts an"
     submit: "Absenden"
     decline: "Schließen"
   zendesk_too_young_message: 'Tut uns leid, jüngere Benutzer dürfen sich für unsere Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a> durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu kontaktieren.'

@@ -365,6 +365,7 @@ tr:
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
+    update: "Update Account"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Denenmiş'
@@ -720,21 +721,21 @@ tr:
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
       - 
-        white: Beyaz
+        white: "Beyaz"
       - 
-        black: Siyahi veya Afrika kökenli Amerikalı
+        black: "Siyahi veya Afrika kökenli Amerikalı"
       - 
-        hispanic: İspanyol veya Latin
+        hispanic: "İspanyol veya Latin"
       - 
-        asian: Asyalı
+        asian: "Asyalı"
       - 
-        hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+        hawaiian: "Yerel Hawaii veya diğer Pasifik Adalı"
       - 
-        american_indian: Amerikalı Kızılderili / Alaska Yerlisi
+        american_indian: "Amerikalı Kızılderili / Alaska Yerlisi"
       - 
-        other: Diğer
+        other: "Diğer"
       - 
-        opt_out: Söylememek istemiyorum
+        opt_out: "Söylememek istemiyorum"
     submit: "Gönder"
     decline: "Kapat"
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'

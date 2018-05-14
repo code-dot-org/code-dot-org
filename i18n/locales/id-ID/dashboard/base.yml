@@ -366,6 +366,7 @@ id:
     enter_new_login_info: 'Masukkan informasi login baru anda'
     confirm_secret_words: 'Konfirmasi bahwa ini adalah anda dengan memasukkan kata-kata rahasia yang anda miliki sekarang'
     enter_parent_email: "Masukkan alamat surel orang tua atau wali anda (untuk pemulihan sandi)"
+    update: "Update Account"
   user_level:
     completed: 'Selesai'
     tried: 'Telah mencoba'
@@ -721,21 +722,21 @@ id:
     message: "Silakan beritahu kami ras (periksa semua yang berlaku)"
     races:
       - 
-        white: Kaukasia
+        white: "Kaukasia"
       - 
-        black: Hitam atau Afrika Amerika
+        black: "Hitam atau Afrika Amerika"
       - 
-        hispanic: Hispanik atau Latino
+        hispanic: "Hispanik atau Latino"
       - 
-        asian: Orang Asia
+        asian: "Orang Asia"
       - 
-        hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
+        hawaiian: "Penduduk asli Hawaii atau Kepulauan Pasifik"
       - 
-        american_indian: Orang Indian Amerika/Penduduk Asli Alaska
+        american_indian: "Orang Indian Amerika/Penduduk Asli Alaska"
       - 
-        other: Lain
+        other: "Lain"
       - 
-        opt_out: Memilih untuk tidak menjawab
+        opt_out: "Memilih untuk tidak menjawab"
     submit: "Kirim"
     decline: "Tutup"
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'

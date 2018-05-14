@@ -17,3 +17,8 @@ id:
           description_short: Ini adalah kursus untuk semua bidang
           description_student: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang mudah bagi siswa
           description_teacher: Ini adalah kursus untuk semua bidang dan memiliki penjelasan yang mudah bagi guru
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

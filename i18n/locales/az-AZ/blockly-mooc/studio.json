@@ -318,6 +318,7 @@
   "moveSpriteN": "personaj {spriteIndex}, get",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "bu mətnin sonuna:",
   "toXY": "x, y istiqamətinə",
   "moveDown": "aşağı get",
   "moveDownTooltip": "Move an actor down.",

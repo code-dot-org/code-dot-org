@@ -348,8 +348,8 @@ zh-CN:
     email_resend_confirm: '重新发送确认指令'
     new_password_hint: "（如果你不想改变它，就留空白）"
     current_password_hint: '（我们需要您的当前密码以确认您的更改）'
-    delete: '删除你的帐号'
-    delete_text: "点击下面的按钮将会删除你的帐号"
+    delete: '删除帐号'
+    delete_text: "删除账号会擦除连接到这个账号的所有信息和进度。"
     delete_text_teacher_note: "请注意：删除你的帐号并不会同时删除你学生的帐号。"
     delete_confirm: '你确定删除这个帐号吗？'
     deleted_user: '已删除的用户'
@@ -365,6 +365,7 @@ zh-CN:
     enter_new_login_info: '输入新的登录信息'
     confirm_secret_words: '输入你当前的秘密单词来确认你的身份'
     enter_parent_email: "输入你的父母或监护人的电子邮件地址（用于恢复密码）"
+    update: "更新帐户"
   user_level:
     completed: '已完成'
     tried: '试过了'
@@ -720,21 +721,21 @@ zh-CN:
     message: "请告诉我们您的种族（选择所有适用的项目）"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黑人或非裔美国人
+        black: "黑人或非裔美国人"
       - 
-        hispanic: 西班牙裔或拉丁裔
+        hispanic: "西班牙裔或拉丁裔"
       - 
-        asian: 亚裔
+        asian: "亚裔"
       - 
-        hawaiian: 夏威夷土著或其他太平洋岛民
+        hawaiian: "夏威夷土著或其他太平洋岛民"
       - 
-        american_indian: 美国印第安/阿拉斯加原住民
+        american_indian: "美国印第安/阿拉斯加原住民"
       - 
-        other: 其他
+        other: "其他"
       - 
-        opt_out: 不想说
+        opt_out: "不想说"
     submit: "提交"
     decline: "关闭"
   zendesk_too_young_message: '对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org"> support.code.org</a> 或让你的父母或老师来联系我们。'

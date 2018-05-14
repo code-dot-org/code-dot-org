@@ -14,6 +14,7 @@
  * fill,
  * keyDown,
  * keyWentDown,
+ * keyWentUp,
  * mousePressedOver,
  * mouseWentDown,
  * randomNumber,
@@ -170,6 +171,11 @@ function whenMouseClicked(event) {
   touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
+function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
+  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
+  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
+}
+
 function clickedOn(sprite, event) {
   touchEvents.push({type: mousePressedOver, event: event, param: sprite});
 }
@@ -184,6 +190,10 @@ function whenTouching(a, b, event) {
 
 function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+}
+
+function whenStartAndStopTouching(a, b, startHandler, stopHandler) {
+  collisionEvents.push({a: a, b: b, event: startHandler, eventEnd: stopHandler});
 }
 
 // Loops
@@ -351,6 +361,9 @@ function draw() {
         }
         collisionEvent.touching = true;
       } else {
+        if (collisionEvent.touching && collisionEvent.eventEnd) {
+          collisionEvent.eventEnd();
+        }
         collisionEvent.touching = false;
       }
     }
