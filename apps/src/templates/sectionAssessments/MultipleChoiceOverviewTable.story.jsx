@@ -2,14 +2,44 @@ import React from 'react';
 import MultipleChoiceOverviewTable from './MultipleChoiceOverviewTable';
 import commonMsg from '@cdo/locale';
 
-const studentAnswers = {
-	'012896': [{question: 1, answer: ['']}, {question: 2, answer: ['D']}, {question: 3, answer: ['A']}, {question: 4, answer: ['C']}],
-	'012897': [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D']}, {question: 4, answer: ['C']}],
-	'012898': [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['E']}, {question: 4, answer: ['C']}],
-  '012899': [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D', 'B']}, {question: 4, answer: ['C']}],
-  '012900': [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['C']}, {question: 4, answer: ['C']}],
-  '012901': [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['']}, {question: 4, answer: ['C']}]
-};
+const students = [
+  {
+    id: '012896',
+    name: 'Caley',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['D']}, {question: 3, answer: ['A']}, {question: 4, answer: ['C']}],
+    submitted: true
+  },
+  {
+    id: '012896',
+    name: 'Erin',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D']}, {question: 4, answer: ['C']}],
+    submitted: false
+  },
+  {
+    id: '012896',
+    name: 'Maddie',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['E']}, {question: 4, answer: ['C']}],
+    submitted: true
+  },
+  {
+    id: '012896',
+    name: 'Brad',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D', 'B']}, {question: 4, answer: ['C']}],
+    submitted: true
+    },
+  {
+    id: '012896',
+    name: 'Dave',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['C']}, {question: 4, answer: ['C']}],
+    submitted: true
+  },
+  {
+    id: '012896',
+    name: 'Summer',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['']}, {question: 4, answer: ['C']}],
+    submitted: false
+  }
+];
 
 const questions = [	
 	{
@@ -70,14 +100,10 @@ export default storybook => {
 				description: 'Ability to see assessment overview for the entire class',
 				story: () => (
 					<MultipleChoiceOverviewTable
-					  studentAnswers={studentAnswers}
+					  students={students}
 					  questions={questions}
 					/>
 				)
       },
-		]);
+    ]);   
 };
-
-
-
-

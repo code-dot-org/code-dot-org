@@ -32,7 +32,8 @@ export const tableLayoutStyles = {
     color: color.charcoal,
   },
   customStyle :{
-    backgroundColor: 'green'
+    width: 70,
+    textAlign: 'center',
   },
   link: {
     color: color.teal,

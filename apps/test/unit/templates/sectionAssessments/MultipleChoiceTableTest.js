@@ -7,12 +7,26 @@ import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import MultipleChoiceOverviewTable from './MultipleChoiceOverviewTable';
 import commonMsg from '@cdo/locale';
 
-const studentAnswers = {
-	'896': [{question: 1, answer: ''}, {question: 2, answer: 'D'}, {question: 3, answer: 'A'},{question: 2, answer: 'C'}],
-	'897': [{question: 1, answer: ''}, {question: 2, answer: 'B'}, {question: 3, answer: 'B'},{question: 2, answer: ''}],
-	'898': [{question: 1, answer: ''}, {question: 2, answer: ''}, {question: 3, answer: 'E'},{question: 2, answer: 'B'}],
-  '899': [{question: 1, answer: ''}, {question: 2, answer: ''}, {question: 3, answer: 'D'},{question: 2, answer: 'F'}],
-};
+const students = [
+  {
+    id: '012896',
+    name: 'Caley',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['D']}, {question: 3, answer: ['A']}],
+    submitted: true
+  },
+  {
+    id: '012896',
+    name: 'Erin',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['B']}, {question: 3, answer: ['D']}],
+    submitted: false
+  },
+  {
+    id: '012896',
+    name: 'Maddie',
+    answers: [{question: 1, answer: ['']}, {question: 2, answer: ['']}, {question: 3, answer: ['E']}],
+    submitted: true
+  },
+]
 
 const questions = [	
 	{

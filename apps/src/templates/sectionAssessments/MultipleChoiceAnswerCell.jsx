@@ -45,11 +45,19 @@ const styles = {
     // justifyContent: 'space-between',
     // minWidth: '60%',
   },
-
   header: {
     width: 70,
     textAlign: 'center',
-  }
+  },
+
+  // question: {
+  //   td:nth-child(1) {  
+  //     maxWidth: 250,
+  //     whiteSpace: nowrap,
+  //     overFlow: hidden,
+  //     textOverflow: ellipsis,
+  //   }
+  // }
   
 };
 
@@ -86,14 +94,14 @@ MultipleChoiceAnswerCell.defaultProps = {
 };
 
 
-export const TableHeader = ({ answerOptions }) => (
-    <div style={styles.header}>
-      {answerOptions}
-    </div>
-)
+// export const TableHeader = ({ answerOptions }) => (
+//     <div style={styles.header}>
+//       {answerOptions}
+//     </div>
+// )
 
-TableHeader.propTypes = {
-  answerOptions: PropTypes.string.isRequired,
-}
+// TableHeader.propTypes = {
+//   answerOptions: PropTypes.string.isRequired,
+// }
 
 export default MultipleChoiceAnswerCell;

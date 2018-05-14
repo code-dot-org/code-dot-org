@@ -15,25 +15,20 @@ export const COLUMNS = {
 const questionAnswerDataPropType = PropTypes.shape({
   question: PropTypes.number,
   answer: PropTypes.array,
-  id: PropTypes.number.isRequired,
+  answers: PropTypes.array,
+  // id: PropTypes.number.isRequired,
   answerOptions: PropTypes.array,
   questionText: PropTypes.string,
   isCorrectAnswer: PropTypes.bool,
   percentValue: PropTypes.number,
+  submitted: PropTypes.bool,
+  name: PropTypes.string,
 });
-
-// const studentAnswerDataPropType = {
-//   studentAnswers: PropTypes.shape({
-//   question: PropTypes.number,
-//   answer: PropTypes.arrayOf(studentAnswers)
-//   })
-// };
 
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
     questions: PropTypes.arrayOf(questionAnswerDataPropType),
-    // studentAnswers: PropTypes.objectOf(questionAnswerDataPropType),
-    studentAnswers: PropTypes.object
+    students: PropTypes.arrayOf(questionAnswerDataPropType)
   };
 
   state = {
@@ -44,101 +39,52 @@ class MultipleChoiceOverviewTable extends Component {
   };
 
   calculatePercentNotAnswered = (index) => {
-    const studentAnswers = this.props.studentAnswers;
-    const maxStudent = Object.keys(studentAnswers);
+    const students = this.props.students;
+    const maxStudent = students.length;
     let notAnswered = 0;
-
-    maxStudent.forEach(studentId => {  
-      const answerObj = studentAnswers[studentId][index];
-      if (answerObj) {
-        for (let i=0; i< answerObj.answer.length; i++) {
-          if (answerObj.answer[i] === ''){
-            // console.log('answerObj.answer ---->', answerObj.answer);
+  
+    students.forEach(student => { 
+      const studentAnswers = student.answers;
+      const answerArr = studentAnswers[index];
+  
+      if (answerArr) {
+        for (let i=0; i< answerArr.answer.length; i++) {
+          if (answerArr.answer[i] === '') {
+            console.log('answerArr.answer ---->', answerArr.answer);
             notAnswered += 1;
-            // console.log('numAnsweredForOption --->', numAnsweredForOption);
-            break; console.log('not answered --->', notAnswered);
+            console.log('not answered --->', notAnswered);
+            break; 
           }
         }
       }
     });
     console.log('not answered --->', notAnswered);
-    return Math.floor((notAnswered / maxStudent.length) * 100);
+    return Math.floor((notAnswered / maxStudent) * 100);
   };
-
-  //  calculatePercentNotAnswered = (index) => {
-  //   const studentAnswers = this.props.studentAnswers;
-  //   const maxStudent = Object.keys(studentAnswers);
-  //   let notAnswered = 0;
-
-  //   maxStudent.forEach(studentId => {  
-  //     const answerObj = studentAnswers[studentId][index];
-  //     if (!answerObj.answer) {
-  //       for (let i=0; i< answerObj.answer.length; i++) {
-  //         if (answerObj.answer[i] === '') {
-  //         notAnswered += 1;
-  //         break;
-  //         }
-  //       }
-  //     }
-  //   });
-  //   return Math.floor((notAnswered / maxStudent.length) * 100);
-  // };
-
-
-  // calculatePercentAnswered = (option, index) => {
-  //   const studentAnswers = this.props.studentAnswers;
-  //   const maxStudent = Object.keys(studentAnswers);
-  //   let numAnsweredForOption = 0; 
-
-  //   maxStudent.forEach( studentId => {
-  //     const answerObj = studentAnswers[studentId][index];  
-  //     console.log('answerObj -->', answerObj);
-  //     if (answerObj) {
-
-  //       for (let i=0; i< answerObj.answer.length; i++) {
-  //         if (answerObj.answer[i] === option){
-  //           console.log('answerObj.answer ---->', answerObj.answer);
-  //           numAnsweredForOption += 1;
-  //           console.log('numAnsweredForOption --->', numAnsweredForOption);
-  //           break;
-  //         }
-  //       }
-
-  // calculatePercentAnswered = (option, index) => {
-  //   const studentAnswers = this.props.studentAnswers;
-  //   const maxStudent = Object.keys(studentAnswers);
-  //   let answered =0;
-
-  //   maxStudent.forEach( studentId => {
-  //     const answerObj = studentAnswers[studentId][index];
-  //     if (answerObj && answerObj.answer === option) {
-  //       answered += 1;
-  //     }
-  //   });
-  //   return Math.floor((answered / maxStudent.length ) * 100);
-  // };
   
   calculatePercentAnswered = (option, index) => {
-    const studentAnswers = this.props.studentAnswers;
-    const maxStudent = Object.keys(studentAnswers);
+    const students = this.props.students;
+    const maxStudent = students.length;
+    console.log('maxStudent -->', maxStudent);
     let numAnsweredForOption = 0; 
 
-    maxStudent.forEach( studentId => {
-      const answerObj = studentAnswers[studentId][index];  
-      // console.log('answerObj -->', answerObj);
-      if (answerObj) {
+    students.forEach(student => { 
+      const studentAnswers = student.answers;
+      const answerArr = studentAnswers[index];
 
-        for (let i=0; i< answerObj.answer.length; i++) {
-          if (answerObj.answer[i] === option){
-            // console.log('answerObj.answer ---->', answerObj.answer);
+      if (answerArr) {
+
+        for (let i=0; i< answerArr.answer.length; i++) {
+          if (answerArr.answer[i] === option) {
+            console.log('answerArr.answer ---->', answerArr.answer);
             numAnsweredForOption += 1;
-            // console.log('numAnsweredForOption --->', numAnsweredForOption);
+            console.log('numAnsweredForOption --->', numAnsweredForOption);
             break;
           }
         }
       }
     });
-    return Math.floor((numAnsweredForOption / maxStudent.length ) * 100);
+    return Math.floor((numAnsweredForOption / maxStudent) * 100);
   };
 
   notAnsweredColumnsFormatter = (answer, {rowData, columnIndex, rowIndex}) => {
@@ -174,13 +120,13 @@ class MultipleChoiceOverviewTable extends Component {
     );
   };
 
-  answerHeaderFormatter = (label, { rowData }) => {
-    return (
-      <TableHeader
-        answerOptions={label}
-      />
-    );
-  };
+  // answerHeaderFormatter = (label, { rowData }) => {
+  //   return (
+  //     <TableHeader
+  //       answerOptions={label}
+  //     />
+  //   );
+  // };
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -206,7 +152,7 @@ class MultipleChoiceOverviewTable extends Component {
       property: NOT_ANSWERED,
       header: {
         label: commonMsg.notAnswered(),
-        format: this.answerHeaderFormatter,
+        // format: this.answerHeaderFormatter,
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
@@ -221,7 +167,7 @@ class MultipleChoiceOverviewTable extends Component {
       property: 'answer',
       header: {
         label: columnLabel,
-
+        // format: this.answerHeaderFormatter,
         props: {style: tableLayoutStyles.customStyle},
       },
       cell: {
