@@ -12,8 +12,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       email: 'an@email.address',
       gender: 'F',
       age: '13',
-      user_type: 'student',
-      email_preference_opt_in: 'yes'
+      user_type: 'student'
     }
   end
 
@@ -135,7 +134,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create as teacher requires age" do
-    teacher_params = @default_params.update(user_type: 'teacher', age: '')
+    teacher_params = @default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: 'yes')
 
     assert_does_not_create(User) do
       post :create, params: {user: teacher_params}
@@ -145,7 +144,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with us ip sends email with us content" do
-    teacher_params = @default_params.update(user_type: 'teacher')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -158,7 +157,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with non-us ip sends email without us content" do
-    teacher_params = @default_params.update(user_type: 'teacher')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -168,6 +167,36 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'Welcome to Code.org!', mail.subject
     assert mail.body.to_s =~ /Hadi Partovi/
     refute mail.body.to_s =~ /New to teaching computer science/
+  end
+
+  test "create new teacher with opt-in option as yes writes email preference as yes" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    assert_creates(User) do
+      assert_creates(EmailPreference) do
+        post :create, params: {user: teacher_params}
+      end
+    end
+
+    email_preference = EmailPreference.last
+    assert_equal "an@email.address", email_preference[:email]
+    assert_equal true, email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
+  end
+
+  test "create new teacher with opt-in option as no writes email preference as no" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    assert_creates(User) do
+      assert_creates(EmailPreference) do
+        post :create, params: {user: teacher_params}
+      end
+    end
+
+    email_preference = EmailPreference.last
+    assert_equal "an@email.address", email_preference[:email]
+    assert_equal false, email_preference[:opt_in]
+    assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
   test "create new student does not send email" do
