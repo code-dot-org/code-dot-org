@@ -125,23 +125,25 @@
       2-3 Artist Functions 13_instruction: Ti abbiamo dato quattro funzioni. Usale
         come preferisci all'interno di uno o più cicli per realizzare immagini da
         condividere con i tuoi amici. Premi "run" per vedere un esempio.
-      2-3 Artist Functions 2 a_instruction: "Use the small green `draw a square`\nblock
-        to call this new function and create the glasses. "
+      2-3 Artist Functions 2 a_instruction: 'Usa il piccolo blocco verde `draw a square`
+        (<i>disegna un quadrato</i>) per richiamare questa nuova funzione e creare
+        gli occhiali. '
       2-3 Artist Functions 2_instruction: |-
         Le funzioni ti permettono di definire nuovi blocchi!<br>
         <br>
         Abbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `draw a square` (<i>disegna un quadrato</i>). Puoi usare la funzione `draw a square` per creare gli occhiali?<br>
         <br>
         I quadrati sono distanti 75 pixel.
-      2-3 Artist Functions 3 a_instruction: "Edit the \"draw a square\" function to
-        draw glasses with frames that are 115px on each side. \r\n\r\nThe squares
-        are now 45 pixels apart."
+      2-3 Artist Functions 3 a_instruction: "Modifica la funzione `draw a square`
+        (<i>disegna un quadrato</i>) in modo da disegnare un quadrato con i lati lunghi
+        115 pixel e creare occhiali più grandi.\r\n\r\nI quadrati sono ora distanti
+        45 pixel."
       2-3 Artist Functions 3_instruction: |-
         Modifica la funzione in modo da disegnare un quadrato con i lati lunghi 115 pixel e creare occhiali più grandi.<br><br>
         I quadrati sono ora distanti 45 pixel.
-      2-3 Artist Functions 4 a_instruction: |-
-        Now, put the function inside of a loop
-        and add an extra turn to draw these three squares.
+      2-3 Artist Functions 4 a_instruction: Ora, posiziona la funzione dentro a un
+        blocco `ripeti ... volte` e aggiungi un altro blocco `gira a ...` per disegnare
+        questi tre quadrati.
       2-3 Artist Functions 4_instruction: Usa il blocco `ripeti ... volte` per disegnare
         questi tre quadrati.
       2-3 Artist Functions 7_instruction: 'Usa la funzione "disegna una casa" per
@@ -2471,10 +2473,8 @@
         full instructions)
       CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
         heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r
-
-'
+      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)\r\n"
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -6902,9 +6902,8 @@
         the program run without getting a warning message.
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click
         to see full instructions)"
-      U3L03 - draw rect function_2018_instruction: |-
-        Write a function called drawRectangle().\r
-        (Click to see full instructions)
+      U3L03 - draw rect function_2018_instruction: "Write a function called drawRectangle().\r\n(Click
+        to see full instructions)"
       U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -8381,7 +8380,7 @@
       conditionals_forvideo_harvester_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
-      conditionals_forvideo_playlab_instruction: Score as many points as you can!
+      conditionals_forvideo_playlab_instruction: Fai più punti che puoi!
       course1_artist_loops_challenge1_instruction: "You can use a loop to draw many
         lines in a row.\r\n\r\nCan you draw a house? Make it look just the way you
         like it!  Try looking for patterns that repeat!"
@@ -9200,7 +9199,8 @@
       courseB_maze_seq11_instruction: Tocca a te! Porta l'uccellino fino al maialino.
       courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Ora prendi quel maialino in qualsiasi modo!
-      courseB_maze_seq12_2018_instruction: Ora prendi quel maialino in qualsiasi modo!
+      courseB_maze_seq12_2018_instruction: Ora prendi quella ghianda in qualsiasi
+        modo!
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they
         make Scrat do! \r\n\r\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
@@ -9226,8 +9226,8 @@
         blocks to get Scrat to the acorn!
       courseB_maze_seq8_instruction: È il tuo turno! Cosa ti serve per portare l'uccellino
         dal maialino?
-      courseB_maze_seq8_2018_instruction: Ora tocca a te! Cosa ti serve per portare
-        l'uccellino dal maialino?
+      courseB_maze_seq8_2018_instruction: Ora tocca a te! Cosa ti serve per far arrivare
+        Scrat fino alla ghianda?
       courseB_maze_seq9_instruction: 'Sfida: Evita la dinamite (TNT) per portare l''uccellino
         fino al maialino.'
       courseB_maze_seq9_2018_instruction: |-
