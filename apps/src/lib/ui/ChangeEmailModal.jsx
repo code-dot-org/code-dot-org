@@ -27,8 +27,8 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 
 //
 // Note: This dialog submits account changes to dashboard using a
-// hidden Rails-generated form.  It expects that form to already exist in the
-// DOM when the component mounts and to have a particular data attribute.
+// hidden Rails-generated form.  It expects that form to be provided
+// as a prop before the component mounts.
 //
 // When the user clicks the "update" button, this dialog loads the relevant
 // information into the hidden Rails form and calls submit(). Rails injects
