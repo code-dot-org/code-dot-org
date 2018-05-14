@@ -555,30 +555,30 @@ const STANDARD_INPUT_TYPES = {
  * @param {boolean} inline Whether inputs are being rendered inline
  */
 const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
-  const groupedInputs = [];
+  const inputRows = [];
   let lastGroup = [];
-  groupedInputs.push(lastGroup);
+  inputRows.push(lastGroup);
   inputs.forEach(input => {
     lastGroup.push(input);
     if (inputTypes[input.mode].addInputRow) {
       lastGroup = [];
-      groupedInputs.push(lastGroup);
+      inputRows.push(lastGroup);
     }
   });
-  const lastRow = groupedInputs[groupedInputs.length - 1];
-  if (groupedInputs[groupedInputs.length - 1].length > 0) {
+  const lastRow = inputRows[inputRows.length - 1];
+  if (inputRows[inputRows.length - 1].length > 0) {
     lastRow.push({mode: DUMMY_INPUT});
   } else {
-    groupedInputs.pop();
+    inputRows.pop();
   }
 
-  groupedInputs.forEach(inputGroup => {
-    const inputRowConfig = inputGroup[inputGroup.length - 1];
-    const inputRow = inputTypes[inputRowConfig.mode].addInputRow(blockly, block, inputRowConfig);
-    inputGroup.slice(0, -1).forEach(inputConfig => {
-      inputTypes[inputConfig.mode].addInput(blockly, block, inputConfig, inputRow);
+  inputRows.forEach(inputRow => {
+    const lastInputConfig = inputRow[inputRow.length - 1];
+    const lastInput = inputTypes[lastInputConfig.mode].addInputRow(blockly, block, lastInputConfig);
+    inputRow.slice(0, -1).forEach(inputConfig => {
+      inputTypes[inputConfig.mode].addInput(blockly, block, inputConfig, lastInput);
     });
-    inputRow.appendTitle(inputRowConfig.label);
+    lastInput.appendTitle(lastInputConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
