@@ -32,17 +32,22 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
-const questionAnswerDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string,
-  percentValue: PropTypes.number,
+const answerDataPropType = PropTypes.shape({
+  multipleChoiceOption: PropTypes.string,
   percentAnswered: PropTypes.number,
   isCorrectAnswer: PropTypes.bool,
 });
 
+const questionDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  answers: PropTypes.arrayOf(answerDataPropType),
+  notAnswered: PropTypes.number.isRequired,
+});
+
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
+    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
   };
 
   state = {
