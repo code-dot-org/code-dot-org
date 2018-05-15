@@ -10,6 +10,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Code.org blog posts
 ### Why computer science?
 
+* Code.org classrooms with resourceful teachers see [higher scores on English, math, and science standardized tests](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e). 
 * Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * The majority of Americans [want schools to teach computer science](http://codeorg.tumblr.com/post/139445414968).
 * [More high school students](http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.

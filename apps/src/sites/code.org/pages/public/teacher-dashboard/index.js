@@ -19,7 +19,8 @@ import {
   renderLoginTypeControls,
   unmountLoginTypeControls,
   renderSectionTable,
-  renderStatsTable
+  renderStatsTable,
+  renderTextResponsesTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
@@ -883,6 +884,14 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
+
+    if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
+      $scope.react_text_responses = true;
+      $scope.$on('text-responses-table-rendered', () => {
+        $scope.section.$promise.then(section => renderTextResponsesTable(section, valid_scripts));
+      });
+      return;
+    }
 
     $scope.responses = sectionsService.responses({id: $routeParams.id});
     // error handling
