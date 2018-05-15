@@ -110,7 +110,7 @@ module Api::V1::Pd
         raise 'Only call this route for local workshop daily survey reports'
       end
 
-      survey_report = generate_workshop_daily_session_summary(@workshop, Array.new(5).fill(@workshop))
+      survey_report = generate_workshop_daily_session_summary(@workshop)
 
       respond_to do |format|
         format.json do
