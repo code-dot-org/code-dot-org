@@ -78,6 +78,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
+  test 'single user experiment is enabled' do
+    experiment = create(:single_user_experiment, min_user_id: @user.id)
+    assert_equal [experiment[:name]], @user.get_active_experiment_names
+  end
+
   test 'normalize_email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
@@ -1131,6 +1136,53 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_email? is true for user with password' do
     assert @student.can_edit_email?
+  end
+
+  # Temporary constraint: Student accounts cannot be upgraded to teacher
+  # accounts without manual intervention.  This is because an intermediate
+  # state in our account page changes breaks the ability to confirm your
+  # email address as a student upgrading to a teacher.
+  # Captured in tests below, will be removed in the next few days.
+  # (Brad Buchanan, 2018-05-14.)
+  test 'can change own user type as a student with a password' do
+    student = create :student
+    refute_empty student.encrypted_password
+    # Temporary: Students can't upgrade
+    #assert student.can_change_own_user_type?
+    refute student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth student' do
+    student = create :google_oauth2_student
+    # Temporary: Students can't upgrade
+    # assert student.can_change_own_user_type?
+    refute student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as a teacher with a password' do
+    teacher = create :teacher
+    refute_empty teacher.encrypted_password
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth teacher' do
+    teacher = create :teacher,
+      encrypted_password: nil,
+      provider: 'facebook',
+      uid: '1111111'
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a student with a picture or secret words' do
+    student = create :student_in_picture_section
+    refute student.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a teacher with sections' do
+    section = create :section
+    teacher = section.teacher
+    refute_empty teacher.sections
+    refute teacher.can_change_own_user_type?
   end
 
   test 'can delete own account if teacher' do
@@ -2331,28 +2383,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'clear_user removes all PII and other information' do
-    user = create :teacher
-
-    user.clear_user_and_mark_purged
-    user.reload
-
-    assert user.valid?
-    assert_nil user.name
-    refute_nil user.username =~ /sys_deleted_\w{8}/
-    assert_nil user.current_sign_in_ip
-    assert_nil user.last_sign_in_ip
-    assert_equal '', user.email
-    assert_equal '', user.hashed_email
-    assert_nil user.parent_email
-    assert_nil user.encrypted_password
-    assert_nil user.uid
-    assert_nil user.reset_password_token
-    assert_nil user.full_address
-    assert_equal({"sharing_disabled" => false}, user.properties)
-    refute_nil user.purged_at
-  end
-
   test 'omniauth login stores auth token' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
@@ -2445,8 +2475,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'stage_extras_enabled?' do
-    script = create :script
-    other_script = create :script
+    script = create :script, stage_extras_available: true
+    other_script = create :script, stage_extras_available: true
     teacher = create :teacher
     student = create :student
 
@@ -2764,5 +2794,46 @@ class UserTest < ActiveSupport::TestCase
     assert_not_equal user.email, user.authentication_options.first.email
     assert_not_equal user.email, user.primary_authentication_option.email
     assert_equal user.primary_authentication_option.email, user.authentication_options.first.email
+  end
+
+  test 'within_united_states? is false without UserGeo record' do
+    user = create :student
+    assert_empty user.user_geos
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is false if latest UserGeo has incomplete data' do
+    # Based on behavior in trackable.rb where we push a UserGeo with just
+    # user_id and ip_address, no other geo information
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :seattle, user: user
+      Timecop.travel 1
+      create :user_geo, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is false if latest UserGeo from another country' do
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :seattle, user: user
+      Timecop.travel 1
+      create :user_geo, :sydney, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    refute user.within_united_states?
+  end
+
+  test 'within_united_states? is true if latest UserGeo from the United States' do
+    user = create :student
+    Timecop.freeze do
+      create :user_geo, :sydney, user: user
+      Timecop.travel 1
+      create :user_geo, :seattle, user: user
+    end
+    assert_equal 2, user.user_geos.count
+    assert user.within_united_states?
   end
 end

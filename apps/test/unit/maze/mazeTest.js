@@ -4,7 +4,7 @@ import { expect } from '../../util/configuredChai';
 
 import Maze from '@cdo/apps/maze/maze';
 import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
-import MazeController from '@code-dot-org/maze/src/mazeController';
+import { MazeController } from '@code-dot-org/maze';
 
 describe("Maze", function () {
   let maze;

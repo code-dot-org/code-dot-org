@@ -21,6 +21,7 @@ Feature: Using the YourSchool census page
     And I press the first "select[name='class_frequency'] option[value='THREE PLUS HOURS PER WEEK']" element
     And I press keys "me@me.me" for element "input[name='submitter_email_address']"
     And I press the first "select[name='share_with_regional_partners'] option[value='false']" element
+    And I press the first "select[name='opt_in'] option[value='false']" element
     Then I press "#submit-button" using jQuery
     Then I wait until I am on "http://code.org/yourschool/thankyou"
 

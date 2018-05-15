@@ -7,8 +7,6 @@
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
   = devise_error_messages!
-  - if f.object.can_edit_email?
-    = f.hidden_field :hashed_email
   %div
   .field
     = f.label :name
@@ -24,13 +22,11 @@
     - else
       .field
         = f.label :email
+        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
         - if current_user.can_edit_email? && !current_user.oauth?
-          = f.email_field :email, placeholder: '***encrypted***', autocomplete: 'off', maxlength: 255
-        - elsif current_user.can_edit_email? && current_user.oauth?
-          = f.hidden_field :email
-          = f.object.email.present? ? f.object.email : '***encrypted***'
-        - else
-          = f.object.email.present? ? f.object.email : '***encrypted***'
+          (
+          %a#edit-email-link{href: '#'}= "Update"
+          )
   - if resource.username.present?
     .field
       = f.label :username
@@ -72,13 +68,7 @@
       = f.label :full_address
       = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
     = f.hidden_field :age, value: "21"
-  -#
-    Don't allow editing user type unless we can also edit email, because
-    changing from a student (encrypted email) to a teacher (plaintext email)
-    requires entering an email address.
-    Don't allow editing user type for teachers with sections, as our validations
-    require sections to be owned by teachers.
-  - if f.object.can_edit_email? && (f.object.student? || Section.where(user_id: f.object.id).empty?)
+  - if f.object.can_change_own_user_type?
     .field
       = f.label t('signup_form.user_type')
       = f.select :user_type, user_type_options
@@ -135,6 +125,21 @@
     .farSide
       - data_hash = { confirm: t('user.delete_confirm') }
       = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+
+-# Hidden form used to asynchronously submit an email change to Rails with the
+-# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
+= form_for(resource,
+    as: resource_name,
+    url: registration_path(resource_name),
+    remote: true,
+    html: { id: 'change-email-modal-form', method: :put },
+    namespace: 'change-email-modal',
+  ) do |f|
+  - if f.object.can_edit_email?
+    = f.hidden_field :email
+    = f.hidden_field :hashed_email
+    -# = f.hidden_field :email_opt_in
+    = f.hidden_field :current_password
 
 :ruby
   script_data = {

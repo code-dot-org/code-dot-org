@@ -45,6 +45,14 @@ class Course < ApplicationRecord
     I18n.t("data.course.name.#{name}.title", default: name)
   end
 
+  def localized_assignment_family_title
+    I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
+  end
+
+  def localized_version_title
+    I18n.t("data.course.name.#{name}.version_title", default: version_year)
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -174,7 +182,9 @@ class Course < ApplicationRecord
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:assignment_family_name] = assignment_family_name
+    info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year
+    info[:version_title] = localized_version_title
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -249,6 +259,7 @@ class Course < ApplicationRecord
       name: name,
       id: id,
       title: localized_title,
+      assignment_family_title: localized_assignment_family_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
@@ -267,7 +278,7 @@ class Course < ApplicationRecord
   def summarize_versions
     Course.
       where('name regexp ?', "^#{assignment_family_name}(-[0-9]{4})?$").
-      map {|c| {name: c.name, version_year: c.version_year}}.
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
       sort_by {|info| info[:version_year]}.
       reverse
   end

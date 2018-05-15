@@ -57,10 +57,19 @@
     "examples_required": "false",
     "parent_level_id": 2273,
     "name_suffix": "_2018",
+    "instructions_important": "false",
+    "display_name": "Internet Simulator: DNS",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 16:47:10 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </NetSim>

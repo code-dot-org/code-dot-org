@@ -5,8 +5,9 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import PlanterCell from '@code-dot-org/maze/src/planterCell';
-import { SquareType } from '@code-dot-org/maze/src/tiles';
+import { cells, tiles } from '@code-dot-org/maze';
+const PlanterCell = cells.PlanterCell;
+const SquareType = tiles.SquareType;
 
 export default class PlanterCellEditor extends CellEditor {
 

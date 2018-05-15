@@ -84,6 +84,7 @@ const SILENCED = [
   'tutorialExplorer',
   'weblab',
   'learn/index',
+  'cookieBanner',
 ];
 const SITES_CONFIG = {
   'studio': {
