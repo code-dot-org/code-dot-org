@@ -1068,22 +1068,21 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   }
   let code = '';
   if (this.level.validationCode) {
-    code += ValidationSetupCode;
+    code += ValidationSetupCode + '\n';
   }
   if (this.level.helperLibraries) {
-    const libs = this.level.helperLibraries
+    code += this.level.helperLibraries
       .map((lib) => LIBRARIES[lib])
-      .join("\n");
-    code += libs;
+      .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
     code += JSON.parse(this.level.sharedBlocks)
-      .map(blockConfig => blockConfig.helperCode)
+      .map(blockOptions => blockOptions.helperCode)
       .filter(helperCode => helperCode)
-      .join("\n");
+      .join("\n") + '\n';
   }
   if (this.level.customHelperLibrary) {
-    code = this.level.customHelperLibrary + code;
+    code += this.level.customHelperLibrary + '\n';
   }
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
