@@ -8,10 +8,9 @@ import {
   PILL_BUBBLE_WIDTH,
 } from './multiGridConstants';
 import _ from 'lodash';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 
-const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
 const SET_SECTION = 'sectionProgress/SET_SECTION';
-const SET_VALID_SCRIPTS = 'sectionProgress/SET_VALID_SCRIPTS';
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
@@ -21,13 +20,9 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
 
 // Action creators
-export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
-  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
-);
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
   { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
@@ -83,8 +78,6 @@ export const processScriptAndProgress = (scriptId) => {
 };
 
 const NUM_STUDENTS_PER_PAGE = 50;
-
-const DEFAULT_SCRIPT_NAME = "Express Course";
 
 // Types of views of the progress tab
 export const ViewType = {
@@ -161,7 +154,6 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      scriptId: action.scriptId,
       lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
@@ -199,65 +191,6 @@ export default function sectionProgress(state=initialState, action) {
       ...initialState,
       section: action.section,
       scriptId: defaultScriptId,
-    };
-  }
-  if (action.type === SET_VALID_SCRIPTS) {
-
-    // Computes the set of valid scripts.
-    let validScripts = action.validScripts;
-    // Set defaultScript to Express Course to use if there are no validScripts
-    const defaultScript = validScripts.find(script => script.name === DEFAULT_SCRIPT_NAME);
-
-    if (action.studentScriptIds && action.validCourses) {
-      const idMap = {};
-      // First, construct an id map consisting only of script ids which a
-      // student has participated in.
-      action.studentScriptIds.forEach(id => idMap[id] = true);
-
-      // If the student has participated in a script which is a unit in a
-      // course, or if this section is assigned to a course, make sure that
-      // all units in that course are included.
-      action.validCourses.forEach(course => {
-        if (
-          course.script_ids.some(id => idMap[id]) ||
-          (action.assignedCourseId && action.assignedCourseId === course.id)
-        ) {
-          course.script_ids.forEach(id => idMap[id] = true);
-        }
-      });
-      validScripts = validScripts.filter(script => idMap[script.id]);
-      // If we filter out everything, add the defaultScript to validScripts
-      // to avoid having an empty dropdown menu.
-      if (validScripts.length === 0) {
-        validScripts.push(defaultScript);
-      }
-
-      // Uses the set of valid scripts to determine the current scriptId.
-      var scriptId;
-      switch (true) {
-        // When there is a scriptId already in state.
-        case !!state.scriptId:
-          scriptId = state.scriptId;
-          break;
-        // When there is an assigned course, set scriptId to the first script in the assigned course.
-        case !!action.assignedCourseId:
-          action.validCourses.forEach(course => {
-            if (course.id === action.assignedCourseId) {
-              scriptId = course.script_ids[0];
-            }
-          });
-          break;
-        // Set scriptId to the first valid script.  If there weren't any
-        // valid scripts, this will be the default script.
-        default:
-          scriptId = validScripts[0].id;
-      }
-    }
-
-    return {
-      ...state,
-      validScripts,
-      scriptId: scriptId,
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {

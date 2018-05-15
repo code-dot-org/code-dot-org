@@ -6,10 +6,11 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
 import color from "../../util/color";
-import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {validScriptPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
+import { setScriptId } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -188,7 +189,7 @@ export default connect(state => ({
   responses: state.textResponses.responseDataByScript,
   isLoadingResponses: state.textResponses.isLoadingResponses,
   validScripts: state.scriptSelection.validScripts,
-  scriptId: state.sectionProgress.scriptId,
+  scriptId: state.scriptSelection.scriptId,
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));

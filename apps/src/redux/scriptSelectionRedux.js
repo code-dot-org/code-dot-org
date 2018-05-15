@@ -89,7 +89,7 @@ export default function scriptSelection(state=initialState, action) {
   return state;
 }
 
-export const loadValidScripts = (section, validScripts) => {
+export const loadValidScripts = (section, validScripts, onComplete) => {
   return (dispatch, getState) => {
     const promises = [
       $.ajax({
@@ -107,6 +107,7 @@ export const loadValidScripts = (section, validScripts) => {
       let [studentScriptsData, validCourses] = data;
       const { studentScriptIds } = studentScriptsData;
       dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
+      onComplete();
     });
   };
 };
