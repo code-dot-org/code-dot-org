@@ -66,6 +66,7 @@ describe('block utils', () => {
       appendValueInput.returns(fakeInput);
       appendTitle.returns(fakeInput);
       setCheck.returns(fakeInput);
+      setAlign.returns(fakeInput);
 
       fakeBlockly = {
         FieldDropdown: sinon.stub(),
@@ -133,6 +134,25 @@ describe('block utils', () => {
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');
       expect(appendTitle).to.have.been.calledWith('dummy label');
+    });
+
+    it('adds labels before and after value input', () => {
+      interpolateInputs(fakeBlockly, fakeBlock, [
+        {
+          mode: 'value',
+          name: 'VALUE',
+          label: 'prefix'
+        },
+        {
+          mode: 'dummy',
+          label: 'suffix',
+        }
+      ]);
+
+      expect(appendValueInput).to.have.been.calledWith('VALUE');
+      expect(appendTitle).to.have.been.calledWith('prefix');
+      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendTitle).to.have.been.calledWith('suffix');
     });
   });
 

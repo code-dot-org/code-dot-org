@@ -208,6 +208,20 @@ class User < ActiveRecord::Base
 
   after_create :associate_with_potential_pd_enrollments
 
+  after_create :save_email_preference, if: -> {!email_preference_opt_in.nil?}
+
+  def save_email_preference
+    if teacher?
+      EmailPreference.upsert!(
+        email: email,
+        opt_in: email_preference_opt_in.downcase == "yes",
+        ip_address: email_preference_request_ip,
+        source: EmailPreference::ACCOUNT_SIGN_UP,
+        form_kind: "0"
+      )
+    end
+  end
+
   # after_create :send_new_teacher_email
   # def send_new_teacher_email
   # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
@@ -412,6 +426,8 @@ class User < ActiveRecord::Base
   ].freeze
 
   attr_accessor :login
+  attr_accessor :email_preference_opt_in_required, :email_preference_opt_in
+  attr_accessor :email_preference_request_ip
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -465,6 +481,8 @@ class User < ActiveRecord::Base
   validates_length_of       :password, within: 6..128, allow_blank: true
 
   validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
+
+  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
@@ -1585,6 +1603,25 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     encrypted_password.present?
+  end
+
+  # Whether the current user has permission to change their own account type
+  # from the account edit page.
+  def can_change_own_user_type?
+    # Don't allow editing user type unless we can also edit email, because
+    # changing from a student (encrypted email) to a teacher (plaintext email)
+    # requires entering an email address.
+    # Don't allow editing user type for teachers with sections, as our validations
+    # require sections to be owned by teachers.
+    # can_edit_email? && (student? || sections.empty?)
+
+    # Temporary constraint: Student accounts cannot be upgraded to teacher
+    # accounts without manual intervention.  This is because an intermediate
+    # state in our account page changes breaks the ability to confirm your
+    # email address as a student upgrading to a teacher.
+    # Captured in tests below, will be removed in the next few days.
+    # (Brad Buchanan, 2018-05-14.)
+    can_edit_email? && teacher? && sections.empty?
   end
 
   # Whether the current user has permission to delete their own account from
