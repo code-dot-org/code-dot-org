@@ -32,7 +32,7 @@ class TransfersController < ApplicationController
     end
     # Verify the destination section is not managed by a third-party login
     new_section = Section.find_by_code(new_section_code)
-    if new_section && new_section.third_party_login?
+    if new_section && new_section.externally_rostered?
       render json: {
         error: I18n.t('move_students.third_party_login')
       }, status: :bad_request

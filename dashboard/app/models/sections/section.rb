@@ -101,7 +101,7 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
-  def third_party_login?
+  def externally_rostered?
     [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
