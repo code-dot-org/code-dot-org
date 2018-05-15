@@ -143,6 +143,11 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
+  element_text = wait_until {@browser.execute_script("return $(#{selector.dump}).text();")}
+  !element_text.include? text
+end
+
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
