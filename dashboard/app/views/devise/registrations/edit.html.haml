@@ -123,6 +123,9 @@
       html: { id: 'change-user-type-modal-form', method: :put },
       namespace: 'change-user-type',
     ) do |f|
+    = f.hidden_field :email
+    = f.hidden_field :hashed_email
+    = f.hidden_field :current_password
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
     .field
@@ -161,6 +164,7 @@
   script_data = {
     edit: {
       userType: current_user.reload.user_type,
+      isOauth: current_user.oauth?
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
