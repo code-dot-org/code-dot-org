@@ -105,7 +105,11 @@ class MoveStudents extends Component {
     }),
 
     // redux provided
-    sections: PropTypes.object.isRequired,
+    sections: PropTypes.objectOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      loginType: PropTypes.string.isRequired
+    })).isRequired,
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
