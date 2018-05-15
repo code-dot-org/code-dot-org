@@ -335,4 +335,13 @@ class Homepage
 
     return heroes_arranged, hero_display_time
   end
+
+  def self.get_below_hero_announcement
+    {
+      showing: true,
+      text: "homepage_below_hero_announcement_text",
+      link: "/privacy",
+      link_text: "homepage_below_hero_announcement_link_text"
+    }
+  end
 end
