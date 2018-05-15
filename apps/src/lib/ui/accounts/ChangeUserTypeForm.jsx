@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import {Field} from './SystemDialog/SystemDialog';
+import {Field} from '../SystemDialog/SystemDialog';
 
 const TEACHER = 'teacher';
 const STUDENT = 'student';

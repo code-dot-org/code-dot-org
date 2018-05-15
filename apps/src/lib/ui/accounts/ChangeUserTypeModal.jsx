@@ -2,9 +2,9 @@ import React, {PropTypes} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import {hashEmail} from '../../code-studio/hashEmail';
-import {isEmail} from '../../util/formatValidation';
-import {Header, ConfirmCancelFooter} from './SystemDialog/SystemDialog';
+import {hashEmail} from '../../../code-studio/hashEmail';
+import {isEmail} from '../../../util/formatValidation';
+import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import ChangeUserTypeForm from './ChangeUserTypeForm';
 
 /*
