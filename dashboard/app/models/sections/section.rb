@@ -102,7 +102,7 @@ class Section < ActiveRecord::Base
   end
 
   def third_party_login?
-    [LOGIN_TYPE_GOOGLE_CLASSROOM, LOGIN_TYPE_CLEVER].include? login_type
+    [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
   validates_presence_of :user, unless: -> {deleted?}
