@@ -287,12 +287,12 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
-  test 'third_party_login?' do
+  test 'externally_rostered?' do
     [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
-      assert Section.new(login_type: type).third_party_login?
+      assert Section.new(login_type: type).externally_rostered?
     end
 
-    refute Section.new.third_party_login?
+    refute Section.new.externally_rostered?
   end
 
   test 'name safe students' do
