@@ -129,7 +129,7 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.lessonSelectorContainer}>
-            {lessons.length !== 0 &&
+            {currentView === ViewType.DETAIL && lessons.length !== 0 &&
               <LessonSelector
                 lessons={lessons}
                 onChange={this.onChangeLevel}
