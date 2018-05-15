@@ -818,9 +818,9 @@ export function setParamAtIndex(index, value, block) {
       if (socketDepth === 0) {
         paramNumber++;
       }
+      socketDepth++;
       if (paramNumber !== index) {
         token = token.next;
-        socketDepth++;
         continue;
       }
       let socket = token.container;
