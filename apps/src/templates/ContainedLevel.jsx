@@ -29,7 +29,7 @@ class ContainedLevel extends  Component {
 
   render() {
     return (
-      <div style={this.props.hidden ? {...styles.hidden} : null}>
+      <div style={this.props.hidden ? styles.hidden : null}>
         <ProtectedStatefulDiv
           style={styles.main}
         />
