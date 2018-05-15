@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import ChangeUserTypeModal from '../ChangeUserTypeModal';
+import ChangeUserTypeModal from './ChangeUserTypeModal';
 
 export default class ChangeUserTypeController {
   /**
