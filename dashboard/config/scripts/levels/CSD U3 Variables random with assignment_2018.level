@@ -58,7 +58,6 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 8731,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "reference_links": [
       "/docs/csd-1718/variables_intro_csd/index.html",
       "/docs/csd-1718/drawing_shapes_map/index.html",
@@ -67,7 +66,8 @@
     ],
     "map_reference": "/docs/csd-1718/naming_variables/index.html",
     "video_key": "csd_gamelab_variables_1",
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

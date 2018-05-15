@@ -99,7 +99,8 @@ window.SignupManager = function (options) {
       "age",
       "gender",
       "terms_of_service_version",
-      "school_info.zip"
+      "school_info.zip",
+      "email_preference_opt_in"
     ];
 
     var fieldsWithErrors = 0;
@@ -111,7 +112,9 @@ window.SignupManager = function (options) {
           // We have a custom inline message for user_type errors already set in the DOM.
           if (field === "terms_of_service_version") {
             errorField.text(self.options.acceptTermsString);
-          } else if (field === "school_info.zip") {
+          } else if (field === 'email_preference_opt_in') {
+            errorField.text(self.options.emailPreferenceOptInString);
+          }  else if (field === "school_info.zip") {
             errorField = $('#school-zip').find('.error_in_field');
             errorField.text(err.responseJSON.errors[field][0]);
           } else if (field !== "user_type") {
