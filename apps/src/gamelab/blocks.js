@@ -710,7 +710,7 @@ export default {
     Blockly.Variables.getters[Blockly.BlockValueType.BEHAVIOR] = 'gamelab_behavior_get';
     Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
       initialize(flyout, cursor) {
-        if (Blockly.functionEditor && !Blockly.functionEditor.isOpen()) {
+        if (behaviorEditor && !behaviorEditor.isOpen()) {
           flyout.addButtonToFlyout_(cursor, 'Create a Behavior',
             behaviorEditor.openWithNewFunction.bind(behaviorEditor));
         }
