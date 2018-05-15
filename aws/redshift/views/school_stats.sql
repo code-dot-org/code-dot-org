@@ -73,7 +73,18 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                        students_total::float) > 0.5
                  THEN 1
                  ELSE 0 END)                      AS high_needs,
-           school_stats_by_years.community_type   AS community_type
+           school_stats_by_years.community_type   AS community_type,
+           case when school_stats_by_years.community_type in 
+                 (
+                  'rural_fringe',
+                  'rural_distant',
+                  'rural_remote',
+                  'town_remote',
+                  'town_distant'
+                 )
+                then 1 
+                when school_stats_by_years.community_type is not null then 0
+                end as rural
       FROM dashboard_production.schools
  LEFT JOIN dashboard_production.school_districts
         ON schools.school_district_id = school_districts.id
@@ -90,5 +101,3 @@ WITH NO SCHEMA BINDING;
 
 GRANT ALL PRIVILEGES ON analysis.school_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_stats TO GROUP reader, GROUP reader_pii;
-
-select top 100 * from school_stats
