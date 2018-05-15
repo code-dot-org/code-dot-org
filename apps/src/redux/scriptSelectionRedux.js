@@ -1,16 +1,31 @@
+import { PropTypes } from 'react';
+
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
+const DEFAULT_SCRIPT_NAME = "Express Course";
+
+// Action type constants
 export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
 export const SET_VALID_SCRIPTS = 'scriptSelection/SET_VALID_SCRIPTS';
 
-const DEFAULT_SCRIPT_NAME = "Express Course";
-
+// Action creators
 export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
   {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
 );
+
+/**
+ * Shape for a validScript
+ */
+export const validScriptPropType = PropTypes.shape({
+  category: PropTypes.string.isRequired,
+  category_priority: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.number,
+});
 
 // Initial state of scriptSelectionRedux
 const initialState = {
@@ -89,7 +104,7 @@ export default function scriptSelection(state=initialState, action) {
   return state;
 }
 
-export const loadValidScripts = (section, validScripts, onComplete) => {
+export const loadValidScripts = (section, validScripts, onComplete = () => {}) => {
   return (dispatch, getState) => {
     const promises = [
       $.ajax({

@@ -18,10 +18,9 @@ import {
   getCurrentScriptData,
   setLessonOfInterest,
   sectionDataPropType,
-  validScriptPropType,
   scriptDataPropType,
 } from './sectionProgressRedux';
-import { setScriptId } from '@cdo/apps/redux/scriptSelectionRedux';
+import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
   heading: {
