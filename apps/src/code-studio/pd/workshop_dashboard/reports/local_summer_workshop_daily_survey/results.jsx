@@ -22,7 +22,7 @@ export default class Results extends React.Component {
         </thead>
         <tbody>
           {
-            Object.entries(this.props.questions).map(([question_key, question_data], i) => {
+            Object.entries(this.props.questions[session]).map(([question_key, question_data], i) => {
               if (!question_data['free_response']) {
                 return (
                   <tr key={i}>
@@ -48,9 +48,8 @@ export default class Results extends React.Component {
   renderSessionResultsFreeResponse(session) {
     return (
       <div>
-        Free Responses
         {
-          Object.entries(this.props.questions).map(([question_key, question_data], i) => {
+          Object.entries(this.props.questions[session]).map(([question_key, question_data], i) => {
             if (question_data['free_response']) {
               return (
                 <div key={i} className="well">
