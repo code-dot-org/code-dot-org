@@ -15,5 +15,6 @@ class Block < ApplicationRecord
 
   serialized_attrs %{
     config
+    helperCode
   }
 end
