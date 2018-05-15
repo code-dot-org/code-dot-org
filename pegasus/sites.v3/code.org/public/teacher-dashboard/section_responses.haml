@@ -4,64 +4,67 @@ theme: none
 content-type: text/ng-template
 ---
 
-%br/
+#text-responses-table-react{'ng-init' => '$emit("text-responses-table-rendered");'}
 
-.loading{'ng-hide' => 'responsesLoaded'}
-  = I18n.t('dashboard_landing_loading')
+#text-responses-table-angular{'ng-hide' => 'react_text_responses'}
+  %br/
 
-%div{'ng-show' => 'responsesLoaded'}
-  = I18n.t('dashboard_responses_view')
-  %select#uitest-course-dropdown{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
+  .loading{'ng-hide' => 'responsesLoaded'}
+    = I18n.t('dashboard_landing_loading')
 
-%br/
+  %div{'ng-show' => 'responsesLoaded'}
+    = I18n.t('dashboard_responses_view')
+    %select#uitest-course-dropdown{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
 
-:ruby
-  responses_filtered = "responses | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
+  %br/
 
-%div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
-  = I18n.t('dashboard_responses_none')
-#uitest-responses-tab{style: "padding-left:20px", 'ng-show' => 'responses.length'}
-  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'responses.length', "ng-form" => "allForm"}
-    %colgroup
-      %col{width: "200"}/
-      %col{width: "175"}/
-      %col{width: "75"}/
-      %col{width: "175"}/
-      %col{width: "300"}/
-    %tr
-      %th.manage-th{colspan: 5}
-        %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
-          = I18n.t('dashboard_filter_by_stage')
-          %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
-            %option{value: ""}= I18n.t('dashboard_filter_all')
-        %button.btn.btn-white{'ng-csv' => responses_filtered,
-                filename: "responses.csv",
-                'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response']",
-                'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'response']",
-                style: 'float: right'}
-          %i.fa.fa-download
-          = I18n.t('dashboard_download_csv')
+  :ruby
+    responses_filtered = "responses | orderBy:order | filter:(stageFilter && {stage: stageFilter}):true"
 
-    %tr
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
-    %tr{"ng-repeat" => "response in #{responses_filtered}", "ng-form" => "form"}
-      %td
-        %a{"ng-href" => "#/sections/{{section.id}}/student/{{response.student.id}}"} {{response.student.name}}
-      %td
-        {{response.stage}}
-      %td
-        {{response.puzzle}}
-      %td
-        {{response.question}}
-      %td
-        {{response.response | limitTo:100}}
-        %a{'ng-href' => '{{response.url}}', 'ng-show' => 'response.response.length > 100'} ... see full answer
+  %div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
+    = I18n.t('dashboard_responses_none')
+  #uitest-responses-tab{style: "padding-left:20px", 'ng-show' => 'responses.length'}
+    %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'responses.length', "ng-form" => "allForm"}
+      %colgroup
+        %col{width: "200"}/
+        %col{width: "175"}/
+        %col{width: "75"}/
+        %col{width: "175"}/
+        %col{width: "300"}/
+      %tr
+        %th.manage-th{colspan: 5}
+          %div{'ng-show' => 'stages && stages.length > 1', style: 'float: left; line-height: 35px'}
+            = I18n.t('dashboard_filter_by_stage')
+            %select{'ng-model' => 'stageFilter', "ng-options" => "stage for stage in stages", "ng-show" => 'stages'}
+              %option{value: ""}= I18n.t('dashboard_filter_all')
+          %button.btn.btn-white{'ng-csv' => responses_filtered,
+                  filename: "responses.csv",
+                  'csv-header' => "['Name', 'Stage', 'Puzzle', 'Question', 'Response']",
+                  'csv-column-order' => "['student.name', 'stage', 'puzzle', 'question', 'response']",
+                  style: 'float: right'}
+            %i.fa.fa-download
+            = I18n.t('dashboard_download_csv')
+
+      %tr
+        %th.manage-th
+          %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
+        %th.manage-th
+          %a{href: "", "ng-click" => "order = 'stage'"}= I18n.t('dashboard_stage')
+        %th.manage-th
+          %a{href: "", "ng-click" => "order = 'puzzle'"}= I18n.t('dashboard_puzzle')
+        %th.manage-th
+          %a{href: "", "ng-click" => "order = 'question'"}= I18n.t('dashboard_question')
+        %th.manage-th
+          %a{href: "", "ng-click" => "order = 'response'"}= I18n.t('dashboard_response')
+      %tr{"ng-repeat" => "response in #{responses_filtered}", "ng-form" => "form"}
+        %td
+          %a{"ng-href" => "#/sections/{{section.id}}/student/{{response.student.id}}"} {{response.student.name}}
+        %td
+          {{response.stage}}
+        %td
+          {{response.puzzle}}
+        %td
+          {{response.question}}
+        %td
+          {{response.response | limitTo:100}}
+          %a{'ng-href' => '{{response.url}}', 'ng-show' => 'response.response.length > 100'} ... see full answer

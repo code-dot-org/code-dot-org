@@ -159,4 +159,152 @@ module Pd::WorkshopSurveyResultsHelper
 
     sum_hash
   end
+
+  def generate_workshop_daily_session_summary(workshop, related_workshops)
+    # TODO: (mehal) - Logic to only allow this for selected summer workshops
+    summary = {
+      this_workshop: {},
+      all_my_workshops: {},
+      all_workshops: {}
+    }
+    summary['questions'] = get_questions_for_forms
+
+    summary[:this_workshop] = generate_workshops_survey_summary([workshop], include_free_response: true)
+    summary[:all_my_workshops] = generate_workshops_survey_summary(related_workshops)
+
+    summary
+  end
+
+  def generate_workshops_survey_summary(workshops, include_free_response: false)
+    surveys = get_surveys_for_workshops(workshops)
+
+    surveys[:pre_workshop] = get_pre_workshop_surveys(workshops)
+    surveys[:post_workshop] = get_post_workshop_surveys(workshops)
+
+    workshop_summary = {}
+
+    get_questions_for_forms.each do |session, questions|
+      surveys_for_session = surveys[session]
+      session_summary = {
+        survey_count: surveys_for_session.size,
+      }
+
+      questions.each do |q_key, question|
+        if question[:free_response]
+          if include_free_response
+            sum = surveys_for_session.map {|survey| survey[q_key]}.reduce([], :append)
+            session_summary[q_key] = sum
+          end
+        else
+          sum = surveys_for_session.map {|survey| survey[q_key]}.reduce(0, :+)
+          session_summary[q_key] = (sum / surveys_for_session.size.to_f).round(2)
+        end
+      end
+
+      workshop_summary[session] = session_summary
+    end
+
+    workshop_summary
+  end
+
+  # Below functions generate fake data.
+  def get_pre_workshop_surveys(workshops)
+    (rand(10..20) * workshops.size).times.map do |_|
+      {
+        how_excited: rand(3..5),
+        lunch_aspirations: %w(Tacos Burritos Pizza Sandwiches).sample
+      }
+    end
+  end
+
+  def get_surveys_for_workshops(workshops)
+    {
+      day_1: (rand(10..20) * workshops.size).times.map do |_|
+        {
+          how_was_intro: rand(3..5),
+          bakers_speech_feedback: %w(Cool Awesome Funny Weird).sample
+        }
+      end,
+      day_2: (rand(10..20) * workshops.size).times.map do |_|
+        {
+          how_was_day_2_activity: rand(3..5),
+          how_was_day_2_food: rand(2..5),
+          cats_or_dogs: %w(Cats Cats! Dogs Puppies! Lizards).sample
+        }
+      end,
+      day_3: (rand(10..20) * workshops.size).times.map do |_|
+        {
+          how_was_day_3_activity: rand(3..5),
+          how_were_animals: rand(4..5),
+          favorite_sport: %w(Football Baseball Basketball Soccer Hockey Judo).sample
+        }
+      end,
+      day_4: (rand(10..20) * workshops.size).times.map do |_|
+        {
+          how_was_day_4_activity: rand(3..5),
+          how_was_meeting_lebron: rand(1..5),
+          favorite_tv_show: %w(Westworld Brooklyn\ 99 West\ Wing The\ Wire Breaking\ Bad).sample
+        }
+      end,
+      day_5: (rand(10..20) * workshops.size).times.map do |_|
+        {
+          how_was_day_5_activity: rand(4..5),
+          how_was_meeting_andy_sandberg: rand(4..5),
+          how_got_home: %w(Walk Rideshare Bus Car Train).sample,
+          how_do_you_feel: %w(Good Great Awesome Amazing Excellent Fantabulous).sample
+        }
+      end,
+    }
+  end
+
+  def get_post_workshop_surveys(workshops)
+    (rand(10..20) * workshops.size).times.map do |_|
+      {
+        overall: rand(4..5),
+        how_prepared: rand(4..5),
+        any_feedback: %W(It\ was\ great! I'm\ psyched! More\ cats\ next\ time).sample,
+        last_words: %W(Hasta\ la\ vista Peace Sayonara Nope).sample
+      }
+    end
+  end
+
+  def get_questions_for_forms
+    {
+      pre_workshop: {
+        how_excited: {text: 'How excited are you?'},
+        lunch_aspirations: {text: 'What do you hope lunch will be?', free_response: true}
+      },
+      day_1: {
+        how_was_intro: {text: 'How was the course introduction?'},
+        bakers_speech_feedback: {text: 'What did you think of Baker?', free_response: true}
+      },
+      day_2: {
+        how_was_day_2_activity: {text: 'How were the day 2 activities?'},
+        how_was_day_2_food: {text: 'How was the food on day 2?'},
+        cats_or_dogs: {text: 'Do you like cats or dogs?', free_response: true}
+      },
+      day_3: {
+        how_was_day_3_activity: {text: 'How were the day 3 activities?'},
+        how_were_animals: {text: 'How successful was the animal-based activity?'},
+        favorite_sport: {text: 'What is your favorite sport?', free_response: true}
+      },
+      day_4: {
+        how_was_day_4_activity: {text: 'How were the day 4 activities?'},
+        how_was_meeting_lebron: {text: 'Did you enjoy meeting LeBron?'},
+        favorite_tv_show: {text: 'What is your favorite TV show?', free_response: true}
+      },
+      day_5: {
+        how_was_day_5_activity: {text: 'How was the day 5 activity?'},
+        how_was_meeting_andy_sandberg: {text: 'How awesome was meeting Andy Sandberg?'},
+        how_got_home: {text: 'How did you get home?', free_response: true},
+        how_do_you_feel: {text: 'How do you really feel?', free_response: true}
+      },
+      post_workshop: {
+        overall: {text: 'Overall, how successful was the workshop?'},
+        how_prepared: {text: 'How prepared do you feel for the coming year?'},
+        any_feedback: {text: 'Any feedback?', free_response: true},
+        last_words: {text: 'Any last words?', free_response: true}
+      }
+    }
+  end
 end

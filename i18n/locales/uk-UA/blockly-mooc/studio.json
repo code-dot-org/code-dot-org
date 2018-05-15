@@ -318,6 +318,7 @@
   "moveSpriteN": "перемістити персонажа {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "перемістити дроїда {spriteIndex} рухатись вперед",
+  "to": "до",
   "toXY": "до x,y",
   "moveDown": "рухатися вниз",
   "moveDownTooltip": "Перемістити персонаж вниз.",

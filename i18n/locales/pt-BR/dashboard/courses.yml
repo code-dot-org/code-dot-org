@@ -17,3 +17,8 @@ pt-BR:
           description_short: Este é um curso para todasascoisas
           description_student: Este é um curso para todasascoisas e tem uma descrição mais detalhada para os estudantes
           description_teacher: Este é um curso para todasascoisas e tem uma descrição mais detalhada para os professores
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

@@ -8,7 +8,7 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <br />
 ### No workshop in your area or outside the United States? <br />
 
-If you are in the United States, [find a CS Fundamentals Facilitator](/educate/k5-affiliates-directory) near you and ask them to host one. Many of our facilitators are happy to work with you to organize a training at your school.
+If you are in the United States, [please contact your local Regional Partner](https://studio.code.org/pd/regional_partner_contact/new) and ask them to host one. Our Regional Partners are happy to work with you to organize a training at your school or district.
 
 If there is no workshop near you, teachers anywhere in the world can use [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org) to connect with other teachers for support, teaching tips, and best practices.
 <br />

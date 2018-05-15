@@ -59,8 +59,15 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    selectedSectionId: PropTypes.string,
-    selectedStudentId: PropTypes.string,
+    //TODO: (ErinB) probably change to use just number during post launch clean-up.
+    selectedSectionId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    selectedStudentId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     hideToolTips: PropTypes.bool,
   };
 

@@ -11,9 +11,23 @@
     "encrypted_examples": "YkBxVdXGqb0xKzg/3nxZWRU3I6h56IOjMRRfXYzlQw2CkDQyHri67mB/9vj7\nm1V2e6IO/p0/vcFmuK3kmMem5A==\n",
     "hide_share_and_remix": "false",
     "parent_level_id": 7614,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/text_properties/index.html",
+      "/docs/csd-1718/html_tags/index.html",
+      "/docs/csd-1718/headers/index.html",
+      "/docs/csd-1718/lists/index.html",
+      "/docs/csd-1718/images-in-html/index.html",
+      "/docs/csd-1718/cc_search/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/style_sheets/index.html",
+    "video_key": "csd_weblab_css_2",
+    "submittable": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-09 18:11:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

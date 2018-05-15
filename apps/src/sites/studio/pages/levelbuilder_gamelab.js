@@ -58,6 +58,9 @@ $(document).ready(function () {
   if (document.getElementById('level_custom_helper_library')) {
     initializeCodeMirror('level_custom_helper_library', 'javascript');
   }
+  if (document.getElementById('level_validation_code')) {
+    initializeCodeMirror('level_validation_code', 'javascript');
+  }
   const autoRunSetup = document.getElementById('level_auto_run_setup');
   const customSetupCode = document.getElementById('level_custom_setup_code');
   if (autoRunSetup && customSetupCode) {

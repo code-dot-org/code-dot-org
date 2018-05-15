@@ -5,7 +5,9 @@
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import HarvesterCell from '@code-dot-org/maze/src/harvesterCell';
+import { cells } from '@code-dot-org/maze';
+
+const HarvesterCell = cells.HarvesterCell;
 
 export default class PlanterCellEditor extends CellEditor {
   /**

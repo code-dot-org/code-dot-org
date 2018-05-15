@@ -93,9 +93,8 @@
       WhileAdventure_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!
       courseE_playLab_scaffold3_failure_message_override: Je moet twee of meer nieuwe
         actoren aan het spel toevoegen en ze programmeren om te bewegen.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: Je moet twee of meer
+        nieuwe actoren aan het spel toevoegen en ze programmeren om te bewegen.
       grade4_scaffolded_project3_failure_message_override: Je moet 2 of meer nieuwe
         personages toevoegen die je spel vooruit brengen.
       kikiTesta_failure_message_override: Gefeliciteerd!  Je hebt X munten verzameld!

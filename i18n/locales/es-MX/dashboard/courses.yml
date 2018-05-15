@@ -15,5 +15,10 @@ es-MX:
         allthethingscourse:
           title: allthethingscourse
           description_short: Este es un curso para allthethings
-          description_student: Este es un curso para allthethings y cuenta con una descripción más larga para los estudiantes
-          description_teacher: Este es un curso para allthethings y cuenta con una descripción más larga para los profesores
+          description_student: Este es un curso para allthethings y cuenta con una descripción más extensa para los estudiantes
+          description_teacher: Este es un curso para allthethings y cuenta con una descripción más extensa para los profesores
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
