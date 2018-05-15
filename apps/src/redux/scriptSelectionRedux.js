@@ -2,11 +2,12 @@
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
-export const SET_SECTION_ID = 'scriptSelection/SET_SECTION_ID';
+export const SET_SCRIPT = 'scriptSelection/SET_SCRIPT';
 export const SET_VALID_SCRIPTS = 'scriptSelection/SET_VALID_SCRIPTS';
 
 const DEFAULT_SCRIPT_NAME = "Express Course";
 
+export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
   {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
 );
@@ -18,13 +19,10 @@ const initialState = {
 };
 
 export default function scriptSelection(state=initialState, action) {
-  if (action.type === SET_SECTION_ID) {
-    // Setting the sectionId is the first action to be called when switching
-    // sections, which requires us to reset our state. This might need to change
-    // once switching sections is in react/redux.
+  if (action.type === SET_SCRIPT) {
     return {
-      ...initialState,
-      sectionId: action.sectionId
+      ...state,
+      scriptId: action.scriptId,
     };
   }
 
