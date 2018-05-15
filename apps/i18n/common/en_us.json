@@ -1026,6 +1026,7 @@
   "submitYourProject": "Submit your project",
   "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?",
   "subtitle": "a visual programming environment",
+  "summaryAssessmentsOverview": "Multiple choice questions overview",
   "syncClever": "Sync students from Clever",
   "syncGoogleClassroom": "Sync students from Google Classroom",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
