@@ -1605,6 +1605,25 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  # Whether the current user has permission to change their own account type
+  # from the account edit page.
+  def can_change_own_user_type?
+    # Don't allow editing user type unless we can also edit email, because
+    # changing from a student (encrypted email) to a teacher (plaintext email)
+    # requires entering an email address.
+    # Don't allow editing user type for teachers with sections, as our validations
+    # require sections to be owned by teachers.
+    # can_edit_email? && (student? || sections.empty?)
+
+    # Temporary constraint: Student accounts cannot be upgraded to teacher
+    # accounts without manual intervention.  This is because an intermediate
+    # state in our account page changes breaks the ability to confirm your
+    # email address as a student upgrading to a teacher.
+    # Captured in tests below, will be removed in the next few days.
+    # (Brad Buchanan, 2018-05-14.)
+    can_edit_email? && teacher? && sections.empty?
+  end
+
   # Whether the current user has permission to delete their own account from
   # the account edit page.
   def can_delete_own_account?
