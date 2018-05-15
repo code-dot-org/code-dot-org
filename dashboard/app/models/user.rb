@@ -75,6 +75,7 @@ require 'cdo/race_interstitial_helper'
 require 'cdo/chat_client'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
+require 'cdo/email_preference_constants'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -212,11 +213,11 @@ class User < ActiveRecord::Base
 
   def save_email_preference
     if teacher?
-      EmailPreference.upsert!(
+      EmailPreference.upsert(
         email: email,
         opt_in: email_preference_opt_in.downcase == "yes",
         ip_address: email_preference_request_ip,
-        source: EmailPreference::ACCOUNT_SIGN_UP,
+        source: EmailPreferenceConstants::ACCOUNT_SIGN_UP,
         form_kind: "0"
       )
     end
