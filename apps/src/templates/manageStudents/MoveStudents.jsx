@@ -5,7 +5,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import Immutable from 'immutable';
-import orderBy from 'lodash/orderBy';
+import {orderBy, compact} from 'lodash';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -265,6 +265,7 @@ class MoveStudents extends Component {
         return null;
       }
     });
+    options = compact(options);
 
     // Add initial empty and final 'other teacher' options
     options.unshift(<option key="empty" value=""></option>);
