@@ -123,6 +123,9 @@ he:
     field_is_required: "נדרש"
     accept_terms: "You must agree to create an account"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "כן"
+    email_preference_no: "לא"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -883,6 +886,11 @@ he:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -987,3 +995,7 @@ he:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'מסכים'
