@@ -12,7 +12,7 @@ class SummaryText extends Component {
     return (
       <div>
         <div>
-          {i18n.summaryAssessmentsOverview()} {`${numStudentSubmissions} / ${totalNumStudents}`}
+         {`${i18n.summaryAssessmentsOverview()} ${numStudentSubmissions} / ${totalNumStudents}`}
         </div>
       </div>
     );
