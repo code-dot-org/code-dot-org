@@ -172,8 +172,7 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(state => ({
   scriptId: state.sectionProgress.scriptId,
   section: state.sectionProgress.section,
-  validScripts: state.sectionProgress.validScripts,
-  studentScriptIds: state.sectionProgress.studentScriptIds,
+  validScripts: state.scriptSelection.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
