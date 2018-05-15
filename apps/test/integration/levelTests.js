@@ -80,7 +80,7 @@ var example = {
 };
 
 // One day this might be the sort of thing we share with initApp.js
-function loadSource(src) {
+export function loadSource(src) {
   var deferred = new $.Deferred();
   document.body.appendChild($('<script>', { src: src }).on('load', function () {
     deferred.resolve();
