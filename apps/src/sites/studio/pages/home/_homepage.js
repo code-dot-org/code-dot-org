@@ -52,13 +52,13 @@ function showHomepage() {
   }
 
   // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
-  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
-  let announcementLink = "https://code.org/facilitator";
-  let announcementId = "facilitator_app";
-  let announcementType = "";
+  let announcementHeading = i18n.announcementHeadingPrivacyGdpr();
+  let announcementDescription = i18n.announcementDescriptionPrivacyGdpr();
+  let announcementLink = "https://code.org/privacy";
+  let announcementId = "privacy_gdpr";
+  let announcementType = "bullhorn";
 
-  // Optional override of teacher announcement.
+  // Optional override of teacher announcement (typically via DCDO).
   if (
     announcementOverride &&
     announcementOverride.teacher_announce_heading &&
