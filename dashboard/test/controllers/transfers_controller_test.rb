@@ -18,7 +18,7 @@ class TransfersControllerTest < ActionController::TestCase
     @picture_student = create(:follower, section: @picture_section).student_user
 
     @params = {
-      student_ids: @word_student.id.to_s,
+      student_ids: [@word_student.id],
       current_section_code: @word_section.code,
       new_section_code: @picture_section.code,
       stay_enrolled_in_current_section: true
@@ -77,7 +77,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when one of the student_ids does not exist" do
-    student_ids_with_invalid = [@word_student.id, User.last.id + 1].join(',')
+    student_ids_with_invalid = [@word_student.id, User.last.id + 1]
     @params[:student_ids] = student_ids_with_invalid
     post :create, params: @params
     assert_response :not_found
@@ -142,7 +142,7 @@ class TransfersControllerTest < ActionController::TestCase
       section: @word_section
     )
 
-    @params[:student_ids] = "#{new_student.id},#{@word_student.id}"
+    @params[:student_ids] = [new_student.id, @word_student.id]
     post :create, params: @params
 
     assert_response :no_content

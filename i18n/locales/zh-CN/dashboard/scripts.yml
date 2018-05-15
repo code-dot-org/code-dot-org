@@ -1453,8 +1453,8 @@ zh-CN:
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
           description_short: Short course designed for informal learning
           description_audience: Ages 7-13
-          stage: [ ]
-          stages: [ ]
+          stage: { }
+          stages: { }
         vigenere:
           title: Vigenere Cipher Widget
           description: 使用维吉尼亚的密码小部件来探索使用维吉尼亚密码加密和解密消息。
@@ -2839,14 +2839,14 @@ zh-CN:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
           description_short: Data
-          stage: [ ]
-          stages: [ ]
+          stage: { }
+          stages: { }
         CSDU6-Draft:
           title: " TEMP CSD Unit 6 "
           description: Temp place to work on U6 of Disco
           description_short: Makerlab
-          stage: [ ]
-          stages: [ ]
+          stage: { }
+          stages: { }
         CSF_Secret_Sample_Story:
           title: Secret Sample with Story
           description: Test of new educational philosophy with guiding storyline
@@ -4472,12 +4472,12 @@ zh-CN:
             Measuring Student Learning:
               name: 衡量学生学习
         csp6-support:
-          stage: [ ]
+          stage: { }
           title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
           description: 'COMING SOON: soon this page will host a set of resources for teachers preparing for the AP exam'
-          stages: [ ]
+          stages: { }
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
@@ -6114,6 +6114,8 @@ zh-CN:
               name: 循环嵌套
             Conditionals & Loops in Harvester:
               name: 收割者里的条件和循环
+            Until Loops in Maze:
+              name: 迷宫里的直到循环
           title: 快速课程
           description_audience: '年龄：9-18'
           description_short: '计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。'
@@ -6856,6 +6858,8 @@ zh-CN:
               name: 计算机科学发现中后期调查阶段2017
             CSP mid and post survey 2017 staging:
               name: 计算机科学原理中后期调查阶段2017
+            CSP post survey 2018 staging:
+              name: 计算机科学原理2018 后期调查阶段
           title: 所有调查
           description_audience: ''
           description_short: 极端和测试code.org调查的地方
@@ -7044,7 +7048,7 @@ zh-CN:
               name: 建立一个星球大战游戏!
             Functions in Harvester:
               name: 收割者中的函数
-          title: 课程 E 2018
+          title: 课程 E 2018 （过期！）
           description_audience: ''
           description_short: ''
           description: ''
@@ -7108,7 +7112,7 @@ zh-CN:
               name: 修改您的项目
             Present Your Project:
               name: 介绍您的项目
-          title: 课程 F 2018
+          title: 课程 F 2018 （过期）
           description_audience: ''
           description_short: ''
           description: ''
@@ -7614,7 +7618,7 @@ zh-CN:
             Conditionals in Bee:
               name: 蜜蜂里的条件
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: 迷宫里的直到循环
         courseb-2018:
           title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -7760,9 +7764,11 @@ zh-CN:
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: 迷宫里的直到循环
             Conditionals in Maze:
-              name: Conditionals in Maze
+              name: 迷宫里的条件
+            Conditionals & Loops in Harvester:
+              name: 收割者里的条件和循环
         jr-test:
           stages:
             Programming with Behaviors:
@@ -8112,6 +8118,16 @@ zh-CN:
               description_teacher: 在计算机科学中，我们面对一些很大的，令人气馁的问题。这些挑战像是找到最大的质数，或给DNS测序，这些基本上不可能由人来完成。增加一些来自其它人的力量会让这些任务可以被管理。这堂课会给你的学生展示团队合作如何在计算机科学的工业中有帮助的。
             Conditionals with Cards:
               name: 用 扑克牌 的 条件子句
+            Minecraft Hour of Code:
+              name: 我的世界 编程一小时
+            Functions in Minecraft:
+              name: '《我的世界》中的函数'
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
         coursef-2018:
           title: 课程 F
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
@@ -8238,6 +8254,20 @@ zh-CN:
               name: 用 扑克牌 的 条件子句
             Conditionals:
               name: 条件语句
+            Variables as Constant in Artist:
+              name: 艺术家里的变量作为常数
+            Variables that Change in Bee:
+              name: 蜜蜂里的变化的变量
+            Variables that Change in Artist:
+              name: 小艺术家里的变化的变量
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
+            Functions in Minecraft:
+              name: '《我的世界》中的函数'
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8310,5 +8340,506 @@ zh-CN:
               description_teacher: ''
             Unit 1 Chapter 2 Assessment:
               name: 第1单元 第2章 评估
+              description_student: ''
+              description_teacher: ''
+        csd1-2018:
+          title: CSD Unit 1 - Problem Solving
+          description: " \\r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\\r\n"
+          description_short: "  了解人类如何使用计算机来解决问题。"
+          description_audience: ''
+          stages:
+            CS Discoveries Pre-survey:
+              name: 计算机科学发现预调查
+              description_student: ''
+              description_teacher: ''
+            Intro to Problem Solving:
+              name: 解决问题入门
+              description_student: '该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验, 并与他们在余下的过程中所做的解决问题的类型建立联系。 '
+              description_teacher: '在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时, 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 '
+            The Problem Solving Process:
+              name: 解决问题的过程
+              description_student: 本课介绍了该班在接下来的一年中将使用的正式的问题解决流程：定义-准备-尝试-反思。该班将这些步骤与前一课中的铝箔船问题联系起来，然后是他们擅长解决的问题，然后是他们想要改进的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
+              description_teacher: 本课程介绍了学生在一年中将使用的正式的问题解决流程 定义-准备-尝试-反思。这一课的开始是要求学生集思广益集体讨论他们在日常生活中遇到的各种不同类型的问题。然后, 学生将显示问题解决过程的四步骤, 并协同工作, 将这些抽象步骤与他们解决问题的实际经验联系起来。第一个学生将这些步骤与前一课中的铝箔船问题联系起来, 然后是他们擅长解决的问题, 然后是他们想要改进解决的问题。在课程结束时, 该班收集了每一步中广泛有用的策略列表，书写海报并张贴起来，接下来的一年都可以随时看到。
+            Exploring Problem Solving:
+              name: 探索解决问题
+              description_student: '在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂, 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
+              description_teacher: |-
+                在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排, 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释, 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 
+                
+                此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时, 但第三个问题将需要移到第二天。
+            What is a Computer?:
+              name: 什么是电脑？
+              description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。
+              description_teacher: '在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。  '
+            Input and Output:
+              name: 输入和输出
+              description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。总结课程, 课堂检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
+              description_teacher: 在本课中, 学生将考虑一些计算设备来确定他们使用的输入和输出类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义, 列出其设备的输入和输出。在活动的早期, 学生被提示关注更明显的物理输入和输出 (例如, 键盘作为输入或屏幕作为输出), 但后来的讨论引导学生考虑不太明显的例子 (例如, 触摸屏既是输入, 又是输出, 或互联网可以作为输入和输出的事实）。在整个课程中, 教师将在教室前面的 T- Chart 图表上标识的输入和输出。总结课程, 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
+            Processing:
+              name: 正在处理中
+              description_student: 这一课深入探讨了作为计算机定义一部分引入的处理概念。 结对一起工作, 把一副牌按顺序排列, 一个形式的处理信息。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
+              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法, 以及产生解决问题的算法的价值。
+            Storage:
+              name: 存储
+              description_student: 本课将重点介绍计算机定义的存储组件，在处理信息的内容中。该课堂花费了大部分的课程开发和共享算法来处理信息，重点是任何特定算法所需要的总存储量。本课最后总结讨论了处理信息时存储的重要性。
+              description_teacher: 学生在计算机的输入-存储-处理-输出模型中探讨存储的重要性。热身活动要求学生反思过去曾见过的计算机存储的信息类型, 如文档、照片或视频。线下的主要活动让学生开发一种算法处理一小堆卡片，并在牌堆里查寻具体卡片。对学生如何移动卡片的限制迫使他们考虑存储的重要性, 即使他们正在处理的甲板。本课最后讨论了在本课中看到的两类存储学生, 以及在处理信息时存储的重要性。
+            Apps and Problem Solving:
+              name: 应用程序和问题解决
+              description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
+              description_teacher: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。学生结对评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
+            Project - Propose an App:
+              name: 项目- 提议一个应用程序
+              description_student: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 该课程提出了用于解决现实世界问题的应用程序。该项目需要多天来完成, 并在海报演示文稿突出显示每个应用程序的功能。该项目设计为结对完成，虽然也可以单独完成。
+              description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成, 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成, 虽然也可以单独完成。
+        csd4-2018:
+          title: CSD Unit 4 - The Design Process
+          description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
+          description_short: "  Learn how to design a program that meets the needs of your users."
+          description_audience: ''
+          stages:
+            Analysis of Design:
+              name: 设计分析
+              description_student: 该课堂探索各种不同的茶壶设计, 以考虑如何设计选择或制作, 为什么。以茶壶为例, 该课堂将探讨用户、他们的需求和他们使用的对象的设计之间的关系。
+              description_teacher: 为了启动一个致力于小组解决问题和为其他用户开发产品的单位，学生开始调查各种茶壶的设计。学生分析每个茶壶, 试图确定特定用户的需求如何告知其设计。通过考虑这些设计选择, 并试图匹配每个茶壶与潜在的用户, 学生可以开始看到如何采取以用户为中心的方法来设计产品 (物理和数字) 可以使这些产品更有用和可用。为了完成这项活动, 学生们被要求对其中一个茶壶提出一些改变, 使之更有用或更实用。
+            Understanding Your User:
+              name: 了解您的用户
+              description_student: 使用用户配置文件, 该课堂探讨不同用户对各种产品的反应。角色扮演作为一个不同的人, 该班的每个成员都可以通过别人眼里体验设计。
+              description_teacher: "设计者需要了解用户的需求才能创造出有用的产品。本课程鼓励学生思考如何通过使用用户配置文件来扮演另一个角色为其他人设计，并将其作为用户对一系列产品的反应。每个学生被分配一个描述一个人的用户配置文件, 然后他们选择合适的产品, 批评产品设计, 并建议改进设计。\\r\n"
+            User-Centered Design Micro Activity:
+              name: 以用户为中心的设计微活动
+              description_student: 在小团体中, 该课程使用设计过程来构思智能服装。从集思广益, 到识别用户, 到最后提出一个设计, 这是在这个单元中的第一个机会, 为其他人的需求实践设计一个解决方案。
+              description_teacher: 本课将引导学生通过一个缩略版本的设计过程, 他们将看到整个单位。学生们首先集思广益, 列出智能服装的潜在用户。作为一个班级, 他们将这些想法分成了广泛的类别, 每个小组将选择一个用户类别。小组重复这个过程, 以集思广益用户的需求或顾虑, 最终分类这些需求, 并选择一个重点来关注。最后, 学生设计了一件智能服装, 使用特定的需求和顾虑他们集思广益来指导自己的决策。在课程结束时, 学生们很快就会分享他们的决策过程, 并就他们的产品如何满足用户所选择的需求得到反馈。
+            User Interfaces:
+              name: 用户界面
+              description_student: 在编写任何代码之前请参阅如何使用纸面原型对软件进行测试和获取反馈。为了帮助开发人员了解他们的想法, 该班测试并提供一个由纸制作的应用程序原型。
+              description_teacher: 在微型设计项目之后, 学生们将目光转向下一阶段的设计 - 设计一个试图满足用户需求的原型产品。在小组中, 学生会检查一个叫做 "Txt Ur Grndkdz" 的聊天应用程序的纸面原型。通过使用纸面原型, 学生们有机会看到一个简单的纸面原型在我们进入计算机之前如何用来快速测试想法和假设。在 "使用" 提供的原型之后, 学生开始识别改进下一次迭代的方法。
+            Feedback and Testing:
+              name: 反馈和测试
+              description_student: 用户一直在测试一个应用程序, 他们对开发者有很多反馈。该课堂需要对所有这些反馈进行分类, 确定共同的主题和需求, 并开始修改原型, 使其更好地满足用户的需求。
+              description_teacher: '在这节课学生使用来自上一课的纸面原型应用程序的 "用户" 反馈, 来开发改进该纸面原型的用户界面。这节课首先反映了这样一个事实: 设计者需要将人类的需求与技术转化为用户界面或体验的改变。然后让学生收集从上一课的应用程序的用户那里得到反馈和请求。在小组中, 学生对反馈进行分类, 并确定在反馈中表达的需求方式可以通过对应用程序界面的更改来满足。然后在小组中学生将实施其中的一些变化, 以满足他们确定的需求之一。'
+            Identifying User Needs:
+              name: 识别用户需求
+              description_student: 到目前为止, 该班所考虑的用户都是远程的, 并且用户的唯一信息来自于文本或角色扮演。现在, 该班将作为潜在的用户相互依赖,, 并结对相互进行面谈, 可以通过开发一个应用程序来确定需要解决的需求。
+              description_teacher: '到目前为止, 学生们一直专注于设计那些在某种程度上与他们相距甚远的用户。无论是通过集思广益、配置文档还是文本反馈, 与最终用户的连接从来都不是直接的。这个距离设计是为了帮助学生在思考用户时走出自己的想法, 但是为了更直接地从一个实际的用户那里获取信息, 学生需要依靠他们的同学。在这一课中, 学生结对成为彼此的用户 (和设计者), 允许每个人直接采访他们的最终用户，并提出问题来更好地告知他们的设计。每个学生结对相互面谈, 试图找出一个 可以解决特定需求的应用程序。 '
+            Project - Paper Prototype:
+              name: 项目 - 纸张原型
+              description_student: 利用上一课的访谈信息, 该课程提出了应用程序的想法来满足用户的需求。为了表达这些想法, 并测试它们的有效性, 每个学生创建和测试自己的纸面原型。
+              description_teacher: 根据上一课的同行访谈, 每个学生都会提出一个应用程序的想法, 以解决用户的问题。然后, 学生通过在个人卡片上绘制 "屏幕" 来创建他们自己的应用程序想法的纸原型。项目指南指导学生完成这一过程, 包括构建应用程序并与用户进行测试, 看看他们对所创建的用户界面的假设是否准确。
+            Designing Apps for Good:
+              name: 设计好的应用程序
+              description_student: 为了启动应用程序设计项目, 该班组织成团队并开始探索应用程序主题。几个例子对社会有影响力的应用程序作为对项目的启发。
+              description_teacher: 为了启动持续到单元结束的应用程序设计项目, 学生首先要探索一些由其他学生创建的为社会影响而设计的应用程序, 然后, 该班回顾了定义、准备、尝试和反映问题解决过程的步骤, 因为他们为自己的应用程序开发了一个具有社会影响的理念。最后, 学生将组成项目团队, 并制定一份合同, 说明团队将如何在应用程序的整个开发过程中发挥作用。
+            Market Research:
+              name: 市场研究
+              description_student: 通过探索可能为类似用户服务的现有应用程序, 深入开发应用程序。每个组都识别了一些应用程序, 它们处理他们正在研究的同一主题, 使用这些应用程序来帮助改进他们将追求的应用程序理念。
+              description_teacher: 在本课中, 学生研究类似于他们打算创建的应用程序, 以便更好地了解用户的需求。学生在他们的团队中工作, 搜索其他应用程序的互联网, 然后评估他们感兴趣的。在课程结束时, 每个团队将对他们想要创建的应用程序类型有一个更清晰的了解, 并进一步细化他们的目标用户。每个团队将为他们在最后的演示中使用的所有应用程序保留一个引用列表。
+            Paper Prototypes:
+              name: 纸面原型
+              description_student: 纸面原型允许开发人员在投入大量时间编写代码之前快速测试想法。在本课中, 团队将探索在应用程序实验室中创建的一些示例应用程序, 并使用这些应用程序来帮助通知其应用程序的第一个纸面原型。
+              description_teacher: "在开始设计应用程序之前, 我们需要帮助学生更好地满足他们的期望。因为学生最终将在应用实验室中对这些应用程序进行原型化, 如果他们的想法与应用程序实验室中容易原型化的应用程序相一致, 他们的状态将会更好. 团队开始通过查看几个示例应用程序设计来启动此范围演示可以使用应用程序实验室创建的应用程序. 然后, 团队可以选择一个 (或更多) 的应用程序作为他们自己的基础。从那里, 在使用3x5 索引卡开发纸面原型之前, 团队有时间讨论其应用程序的基本功能。\\r\n"
+            Prototype Testing:
+              name: 原型测试
+              description_student: 在本课中, 该班团队将与其他成员一起测试其纸面原型。有一个学生角色扮演电脑, 一个讲述, 其余的观察, 团队将即时得到他们的应用程序设计的反馈, 这些反馈将应用到他们的应用程序原型的下一个版本。
+              description_teacher: 开发纸面原型的主要目的是, 他们允许在编写任何代码之前进行快速的测试和迭代。这一课的重点是让团队在移到应用程序实验室之前有机会测试他们的原型. 团队开发一个计划与该班中(也可能是在该班外) 的其他几个学生一起运行原型测试之前, 先与用户进行测试 。为了与用户测试原型, 学生将必须分配在测试中的角色 ("讲述者", "计算机" 和 "观察员"), 以及在测试完成后准备一些问题让用户回答。
+            Digital Design:
+              name: 数字设计
+              description_student: 在纸面原型上开发、测试并收集了反馈后, 小组现在将移到应用程序实验室, 来构建他们的应用程序的下一个迭代。使用拖放设计模式, 每个小组成员至少要建立一页他们小组的应用程序, 对上一轮测试中收到的反馈做出反应。
+              description_teacher: 为他们的应用程序合作开发了一个纸面原型, 小组现在开始分步解决基于纸面原型在交互式数字版本中的工作。使用应用程序实验室里的拖放设计模式, 学生可以独立通过技能构建级别的提升来学习如何构建纸面原型的数字版本。从那里, 每个小组成员在应用程序实验室中至少要建立一页的他们的应用程序, 之后再组合成一个单一的应用程序。
+            Linking Screens:
+              name: 连接屏幕
+              description_student: 在上一节课该班设计的屏幕上构建, 小组将屏幕组合成一个单一的应用程序. 然后可以添加简单的代码, 单击按钮转换到适当的屏幕。
+              description_teacher: 在本课中, 团队将上一课中设计的屏幕合并到一个应用程序中, 然后用代码将它们链接在一起。学生利用上一节课学习的有关基本的事件驱动编程通过建立模型应用程序。除了学生昨天设计的屏幕外, 他们还将学习如何创建更多的屏幕, 甚至是借用其他人制作的屏风。
+            Testing the App:
+              name: 测试应用程序
+              description_student: 小组运行另一轮用户测试, 这一次是与他们的交互式原型。从这一轮测试中收集的反馈将运用到应用程序原型的最后迭代。
+              description_teacher: '在上一课结束时, 每个小组都应该有一个最低可行的应用程序原型。本课的主要目的是让小组真正与其他人一起测试应用程序, 最好是从目标受众的应用程序, 或从班上不同的小组, 而小组观察员将结果记录在他们在计划阶段使用的工作表上。 与测试纸面原型一样, 团队将在运行和观察测试之前对特定场景进行规划。 '
+            Improving and Iterating:
+              name: 改进和迭代
+              description_student: 通过使用上一轮测试的反馈, 小组实现了满足用户需求的更改。每个小组跟踪并优先处理他们想要添加的特点以及需要修复的 bug 。
+              description_teacher: 小组在这一点上已经开发了一个应用程序原型, 它经历了多次迭代和用户测试。通过上一轮用户测试获得的信息和指导, 每个学生都有机会计划并实施对小组应用程序的改进. 根据您可用的时间和学生的兴趣, 您可以按照您认为合适的次数运行测试和迭代的周期。
+            Project - App Presentation:
+              name: 项目 - 应用程序演示
+              description_student: 每个团队准备一个演讲来 "推销" 他们开发的应用程序。这是分享奋斗、胜利和计划未来的时候了。
+              description_teacher: 在这一点上, 小组已经研究了一个个人和社会重要性的主题, 开发和测试了一个纸面原型和一个数字原型, 并对最初的应用程序进行迭代, 合并新功能和 bug 修复。现在是他们回顾他们所做的事情的时候了, 并把一个连贯的演示汇集在一起, 来展示他们的创造过程。使用提供的演示模板, 团队准备介绍他们的应用程序开发过程, 包括他们所解决的问题、他们从测试中获得反馈的方法, 以及他们对未来的计划。
+        csd5-2018:
+          title: CSD 单元5- 数据和社会
+          description: 单元5是关于数据在解决问题中的重要性, 它同时强调了计算机在这个过程中的作用。第一章探讨了在计算机中用来表示信息的不同系统以及使用它们所带来的挑战和折衷。在第二章中, 您将了解如何使用数据集合来解决问题, 以及计算机如何帮助自动化此过程的步骤。本章最后考虑如何将数据问题解决过程应用到您选择的区域。
+          description_short: 了解人们如何使用电脑来解决数据问题。
+          description_audience: ''
+          stages:
+            Representation Matters:
+              name: 表示事项
+              description_student: 第一节课提供了有关数据的概述以及如何运用它来解决问题。 各组使用数据设置为不同标准的人员提供一系列膳食建议。 之后， 各组成员相互比对他们的回答并讨论不同膳食数据的表达方式是如何影响学生们解决不同问题的。
+              description_teacher: 在数据单元的第一节课程中，学生们大概了解了数据是什么，以及它是如何被用来解决问题的。 学生们开始进行简短的讨论，对数据的理解达成一定的共识。 然后，他们分成不同的小组，并利用数据设置来对有着不同标准的人群做一系列的膳食建议。每个小组都有不同的膳食选择（图片，食谱，菜单，营养）方法，其中一种建议被赋予优势。之后，小组间来比对他们的答案，并讨论不同的膳食数据表达方式是如何影响学生们解决问题的。
+            Patterns and Representation:
+              name: 模式和表示法
+              description_student: 该课程进一步讲解需要什么来制作表达的系统。各组仅用一堆牌制作能够代表着字母表里的任何字母的系统。 然后，用他们的系统来创建信息资料并和其他小组交换来确保系统有依设定运作。 课堂里讨论课运行的系统将的相同性，同时又认识到有很多可行的解决方法。
+              description_teacher: 在这课程中，学生们创建他们自己能够代表信息的系统。 他们通过头脑风暴，来讨论各种他们已经用来代表是/否的系统。 然后，他们分成小组，仅用一堆牌来创建能够代表字母表里任何字母的系统。所用到的牌是6 种不同的可能绘画方法（6 只动物，6 种颜色等）之一。为了代表所有的字母表，学生们将不要使用多种牌的纸板来代表每一个字母。 学生们将使用他们的系统来创建信息，并和其他小组成员交换来保证该系统有依设定正常运作。 他们讨论运作系统将的共通性，同时也意识到有很多解决问题的不同方法，而且更重要的是每个人都使用相同的任意系统来沟通。
+            ASCII and Binary Representation:
+              name: ASCII 和二进制表示形式
+              description_student: 本课程介绍了一种编制信息的正规的二进制系统- 代表字母和其他字符的ASCII 系统。在本课程的开始，老师将介绍电脑必须用"开" 或者 "关"来代表信息的事实。然后将介绍运用二进制来代表文本的ASCII 系统。 并在学生们开始使用ASCII 编辑他们自己的信息前先练习使用这个系统。
+              description_teacher: 本课程中，学生们学习如何使用他们的第一个二进制系统来编制信息- 代表字母和其他字符的ASCII 系统。 在课程的开始，老师将介绍电脑必须用"开" 或者"关"来代表信息的事实。然后介绍使用二进制符号来代表文本的ASCII 系统。 些什么在开始使用ASCII 编制自己的信息前将先练习此系统。 在课程的最后， 进行总结对话，它将有帮助于总结活动学习的主要目的。
+            Representing Images:
+              name: 表示图像
+              description_student: 本课程继续学习二进位表示系统。这次用的是图片。 课堂里会介绍把图片分割成正方形或“像素”的概念。然后又把他们单独打开或关掉来制作整个图片。 在使用Pixelation Widget 完成一组简短的挑战后，学生们将把他们在上节课程中学习到的代表图片和文本的两个系统联系起来。
+              description_teacher: 在本课程中，学生学习电脑如何代表图片。 在开始本课程前，他们要考虑把复杂的视觉转成二进制模式的考验。 通过一系列显示转变的图片，学生们将被引入到把图片分割成正方形或者“像素” 的概念。然后可以打开火关掉这些正方形或像素来制作整张图片。接着学生们会使用Pixelation Widget来做个简短的绘制黑白图片的挑战，关卡设计了可以使用这种方法来召唤代表图片的一些挑战。在最后总结里，学生们将能够把他们在上一节课里学习到的代表图片和文本的两个系统联系起来。
+            Representing Numbers:
+              name: 表示数字
+              description_student: 本课程介绍二进制数字体系。利用一组牌来代表变数值在二进制数字体系里的位置，班级同学通过翻牌的正反面来“打开”或“关闭”比特（二进位制信息单位），然后观察从这些不同模式里得出的数字。最后，再把这些模式扩展为一个常用的4 比特进位体系。
+              description_teacher: 在本课程中， 学生们学习二进制体系。通过一系列的点，利用一组牌来代表变数值在二进制数字体系里的位置。学生们通过翻牌的正/反面来“打开”或"关闭“比特（二进制信息单位），然后观察这些不同模式里得出的数字。最后，学生们把这模式扩展为一个常用的4-比特体系。
+            Keeping Data Secret:
+              name: 数据保密
+              description_student: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
+              description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
+            Combining Representations:
+              name: 组合表示
+              description_student: 本课程结合了二进制代表系统的三种类型（ASCII 字符，二进制数字和图片）来允许编制在记录中的更复杂的类型信息。 看完一系列的位并被要求重新解码他们后，学生们将被教授一个观念，就是想要理解二进制信息，就得同时理解使用的两个系统是如何运作的，以及编制信息的含义。
+              description_teacher: 在本课程中，学生们使用所有三种二进制代表系统（ASCII 字符，二进制数字和图片）来解码记录里的信息。在看完一系列的位以及被要求对它们进行解码后，学生们将被教授一个概念。也就是为了理解二进制信息，他们得清楚了解所使用的两个系统 以及编程信息的意思。然后他们将对给出的结构解码代表宠物的记录。
+            Project - Create a Representation:
+              name: 项目-创建表示
+              description_student: 课堂设计了学生们在本章已经学到的二进制代表系统来展现他们完美的一天。 在决定那些信息需要被记录后， 学生们将决定如何解密信息的一串字节卡是如何代表那些信息的。 在那之后，每位同学讲使用他们已经学到的ASCII， 二进制数字和图片格式，来展示他们完美的一天，同时试着解码伙伴的完美一天是什么样的。
+              description_teacher: 在此课程中，学生们使用他们在本章中学习到的二进制代表系统来设计一个代表他们完美一天的架构。开始的时候，学生们书写关于他们完美一天的简短描述， 然后和伙伴一起核对并找出他们认为计算机可以捕捉到的主要信息。 学生们必须共同决定如何解译一堆信息字节卡，用它来代表那些信息。 接下来，学生们将使用他们已经学到的ASCII， 二进制数字和图片格式来展现他们完美的一天。然后学生们将交换卡片，并试着解译其他学生的完美一天是什么样的。最后，回顾学习了的内容来结束本课程。
+            Problem Solving and Data:
+              name: 解决问题和数据
+              description_student: 本课程涵盖了如何针对数据问题来量身定制解决问题的过程。这个班级的任务是决定哪个城市最需要资源花费。 他们必须找到并使用来自互联网的数据来支持他们的决定。
+              description_teacher: '在本课程中，学生们使用本课程里早些时候已经学到的问题解决过程来解决数据问题。在审核了过程后，该班级要演示他们的决定： 是否城市里要建一个图书馆，宠物收容所或消防部门。 学生们以团队来收集因特网上的信息来帮助他们决定要建什么，然后用这些信息来说服城市议会接受他们的论点。然后，他们将列出他们对整个课堂中他们使用到的解决问题过程做了什么， 并把整体解决问题过程和它在数据问题上的具体应用做比较。'
+            Problem Solving with Big Data:
+              name: 用大数据解决问题
+              description_student: 本课程涵盖了数据收集的方法，以及它是如何被组织在现实世界中使用来解决问题的。 同学们将面对三个可以被解决的设定情景，并进行脑筋激荡来讨论他们要用来解决这些问题的数据种类，以及如何去收集数据。每个场景设定也都包含了一个视频，它是关于在现实世界里用数据来解决类似问题的服务案例。
+              description_teacher: 在本课程中，学生们将了解数据收集的方法以及它们在现实中是如何被组织用来解决问题的。 本课程开始的时候先快速回顾在上节课里探索的数据解决问题流程。然后，学生们将被教授用数据解决的三个场景设定。并进行头脑风暴来讨论他们要用什么样的数据来解决这些问题，以及如何收集这些数据。 每个问题都设计反映了真实世界里存在的服务案例。在经过头脑风暴后，学生们将观看讲述真实世界服务的视频，并记录在真实世界服务里是如何收集数据并如何使用的笔记。本课程的最后，学生们会记录数据是由客户主动提供的， 被动记录的，还是通过传感器收集的。
+            Structuring Data:
+              name: 构造数据
+              description_student: 班级同学进一步来学习包含清除和可视化原始数据设置的数据解密。首先，让班级同学来看不同数据的表现方法是如何帮助人们来更好地了解它。在了解完清除和可视化是如何帮助人们做更好的决定以后，同学们将查看该流程的哪些部分是可以自动化，哪些需要人力来完成。
+              description_teacher: 在本课程中，学生们要进一步学习包含原始数据设定的清除和可视数据的收集和解译。首先，学生们将看数据的不同表现方法是如何帮助人们更好地理解它。然后，他们可视化自己的数据。用一个比萨佐料的调查结果，学生们必须决定决定要如何处理那些无法轻易满足他们选定的可视化方案的数据。 最后，学生们将检查在这流程中有哪些部分是可以自动化，哪些需要人来做决定。
+            Making Decisions with Data:
+              name: 依靠数据做决定
+              description_student: 本课程让学生们练习他们在上一节课里学习到的数据问题解决过程。 不是所有问题都有答案。 在一些案例中，学生们可以也应该要决定他们应该要收集更多的数据。 本课程最后总结探讨为什么不同的人从相同的数据里会得出不同的答案。或者收集不同的数据是如何影响他们所做的决定的。
+              description_teacher: 在本课程中， 学生就一些为类似中学生设计的问题如何用数据做决定。 在班级讨论他们最后选择之前，学生们分组讨论他们要如何运用所给的数据。 不是所有的问题都有正确答案。 在一些案例里，学生们可以也必须决定他们应该要收集更多的数据。 本课程最后总结讨论为什么不同的人会从相同的数据得出不一样的结论，或者收集不同数据是如何影响他们的决定的。
+            Interpreting Data:
+              name: 表达数据
+              description_student: 学生们在本课程开始时先看看蛋糕爱好倾向调查，它允许接受调查者指定蛋糕和酥皮口味。 他们讨论知道蛋糕和酥皮间的关系是如何帮助他们更好地决定要建议哪个组合。 然后，他们将被教授交叉制表，这将让他们能够绘制不同爱好倾向的关系图。 他们利用这个技能来发现爱好倾向调查里的各种关系。然后脑筋激荡来讨论该过程可以帮忙解决的不同种类的问题。
+              description_teacher: 学生们在本课程开始时先看看蛋糕爱好倾向调查，它允许接受调查者指定蛋糕和酥皮口味。 他们讨论知道蛋糕和酥皮间的关系是如何帮助他们更好地决定要建议哪个组合。 然后，他们将被教授交叉制表，这将让他们能够绘制不同爱好倾向的关系图。 他们利用这个技能来发现爱好倾向调查里的各种关系。然后脑筋激荡来讨论该过程可以帮忙解决的不同种类的问题。
+            Automating Data Decisions:
+              name: 自动化数据决策
+              description_student: 在本课程中，学生们将看到一个简单的关于计算机是如何被运用来决定数据问题解决过程的过程。学生们将被委任创建一个可以建议旅游场所的算法。 然后，学生们将创建一个电脑可以直接用来做决定的规则，或算法。学生们分享他们的规则，以及利用班级数据来决定要选择什么样的规则。接下来，他们把他们的规则运用到他们同学的数据，来测试是否他们的规则会坐车同样的决定。 本课程最后总结讨论使用实际上来自动化数据问题解决过程的好处和坏处。
+              description_teacher: 在本课程中，学生们将看到一个简单的关于计算机是如何被运用来决定数据问题解决过程的过程。学生们将被委任创建一个可以建议旅游场所的算法。 然后，学生们将创建一个电脑可以直接用来做决定的规则，或算法。学生们分享他们的规则，以及利用班级数据来决定要选择什么样的规则。接下来，他们把他们的规则运用到他们同学的数据，来测试是否他们的规则会坐车同样的决定。 本课程最后总结讨论使用实际上来自动化数据问题解决过程的好处和坏处。
+            Project - Solve a Data Problem:
+              name: 项目- 解决数据问题
+              description_student: 要结束此课程，班级学生必须设计出使用数据建议或预测来帮助解决问题的途径。最开始的步骤是让班级同学对问题进行头脑风暴，做简单的调研，并定义他们所选的问题。 然后，他们要在交换各自回馈以及做最后演示之前，决定他们要收集的数据类型， 收集方法，以及使用方法。
+              description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后， 学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前， 学生们要相互进行审核，并对他们的项目做必要的修改。
+        csp2-2018:
+          title: CSP Unit 2 - Digital Information
+          description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          description_short: Explore how more complex digital information is represented and manipulated through computation and visualization.
+          description_audience: ''
+          stages:
+            Bytes and File Sizes:
+              name: 字节和文件大小
+              description_student: ''
+              description_teacher: ''
+            Text Compression:
+              name: Text Compression
+              description_student: ''
+              description_teacher: ''
+            Encoding B&W Images:
+              name: 编码一张黑白图片
+              description_student: ''
+              description_teacher: ''
+            Encoding Color Images:
+              name: 编码彩色图像
+              description_student: ''
+              description_teacher: ''
+            Lossy Compression and File Formats:
+              name: 有损压缩和文件格式
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Encode an Experience:
+              name: 练习表演任务 - 编码和经验
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Chapter 1 Assessment:
+              name: 第2单元 第1章 评估
+              description_student: ''
+              description_teacher: ''
+            Intro to Data:
+              name: 数据简介
+              description_student: ''
+              description_teacher: ''
+            Finding Trends with Visualizations:
+              name: 通过可视化发现趋势
+              description_student: ''
+              description_teacher: ''
+            Check Your Assumptions:
+              name: 检查您的假设
+              description_student: ''
+              description_teacher: ''
+            Good and Bad Data Visualizations:
+              name: 好的和坏的数据可视化
+              description_student: ''
+              description_teacher: ''
+            Making Data Visualizations:
+              name: 使数据可视化
+              description_student: ''
+              description_teacher: ''
+            Discover a Data Story:
+              name: 发现一个数据故事
+              description_student: ''
+              description_teacher: ''
+            Cleaning Data:
+              name: 清理数据
+              description_student: ''
+              description_teacher: ''
+            Creating Summary Tables:
+              name: 创建汇总表
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Tell a Data Story:
+              name: 练习表演任务- 讲述一个数据故事
+              description_student: ''
+              description_teacher: ''
+            Unit 2 Chapter 2 Assessment:
+              name: 第2单元 第2章 评估
+              description_student: ''
+              description_teacher: ''
+        csp3-2018:
+          title: CSP Unit 3 - Intro to Programming
+          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\\r\n\\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
+          description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
+          description_audience: ''
+          stages:
+            The Need For Programming Languages:
+              name: 编程语言的需求
+              description_student: ''
+              description_teacher: ''
+            The Need for Algorithms:
+              name: 算法的必要性
+              description_student: ''
+              description_teacher: ''
+            Creativity in Algorithms:
+              name: 算法中的创造性
+              description_student: ''
+              description_teacher: ''
+            Using Simple Commands:
+              name: 使用简单命令
+              description_student: ''
+              description_teacher: ''
+            Creating Functions:
+              name: 创建函数
+              description_student: ''
+              description_teacher: ''
+            Functions and Top-Down Design:
+              name: 函数和至上而下的设计
+              description_student: ''
+              description_teacher: ''
+            APIs and Function Parameters:
+              name: 编程接口和函数参数
+              description_student: ''
+              description_teacher: ''
+            Creating functions with Parameters:
+              name: 使用参数创建函数
+              description_student: ''
+              description_teacher: ''
+            Looping and Random Numbers:
+              name: 循环和随机数字
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Design a Digital Scene:
+              name: PT练习 - 设计一个数字场景
+              description_student: ''
+              description_teacher: ''
+            Unit 3 Chapter 1 Assessment:
+              name: 第3单元 第1章 评估
+              description_student: ''
+              description_teacher: ''
+            Please complete the CSP Mid-course survey!:
+              name: 请完成 计算机科学原理中期课程调查!
+              description_student: ''
+              description_teacher: ''
+        csp-explore-2018:
+          title: 探索 - AP表演任务准备
+          description: "这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\\r\n\\r\n此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
+          description_audience: ''
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: 探索 表演任务 准备 - 检查任务
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Making a Plan:
+              name: 探索 表演任务 - 制定计划
+              description_student: ''
+              description_teacher: ''
+            Explore PT - Complete the Task:
+              name: 探索 表演任务 - 完成任务
+              description_student: ''
+              description_teacher: ''
+        csp-create-2018:
+          title: 创建 - AP表演任务准备
+          description: "这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\\r\n\\r\n此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
+          description_audience: ''
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: 创建 表演任务 准备 - 检查任务
+              description_student: ''
+              description_teacher: ''
+            Create PT Prep - Making a Plan:
+              name: 创建 表演任务 准备 - 制定计划
+              description_student: ''
+              description_teacher: ''
+            Create PT - Complete the Task:
+              name: 创建 表演任务- 完成任务
+              description_student: ''
+              description_teacher: ''
+        csp4-2018:
+          title: CSP Unit 4 - Big Data and Privacy
+          description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description_short: Explore the data-rich world we live, and how data impacts public policy, personal privacy, security, the law, and ethics.
+          description_audience: ''
+          stages:
+            What is Big Data?:
+              name: 什么是大数据？
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Data Innovations:
+              name: 快速研究 - 数据创新
+              description_student: ''
+              description_teacher: ''
+            Identifying People with Data:
+              name: 使用数据识别人员
+              description_student: ''
+              description_teacher: ''
+            The Cost of Free:
+              name: '“免费”的成本'
+              description_student: ''
+              description_teacher: ''
+            Simple Encryption:
+              name: 简单加密
+              description_student: ''
+              description_teacher: ''
+            Encryption with Keys and Passwords:
+              name: 使用密钥和密码进行加密
+              description_student: ''
+              description_teacher: ''
+            Public Key Crypto:
+              name: 公钥加密
+              description_student: ''
+              description_teacher: ''
+            Rapid Research - Cybercrime:
+              name: 快速研究-网络犯罪
+              description_student: ''
+              description_teacher: ''
+            Practice PT - Big Data and Security Dilemmas:
+              name: 实践表演任务 - 大数据和安全困境
+              description_student: ''
+              description_teacher: ''
+            Unit 4 Chapter 1 Assessment:
+              name: 第4单元 第1章 评估
+              description_student: ''
+              description_teacher: ''
+            Participate in a longitudinal study!:
+              name: 参与纵向研究!
+              description_student: ''
+              description_teacher: ''
+        csp5-2018:
+          title: CSP Unit 5 - Building Apps
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          description_audience: ''
+          stages:
+            Buttons and Events:
+              name: 按钮和事件
+              description_student: ''
+              description_teacher: ''
+            Multi-screen Apps:
+              name: 多屏应用
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Multi-Screen App':
+              name: '构建应用程序: 多屏幕应用程序'
+              description_student: ''
+              description_teacher: ''
+            Controlling Memory with Variables:
+              name: 使用变量控制内存
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Clicker Game':
+              name: '构建应用程序: 点击游戏'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 1:
+              name: 第5单元评估1
+              description_student: ''
+              description_teacher: ''
+            User Input and Strings:
+              name: 用户输入和字符串
+              description_student: ''
+              description_teacher: ''
+            '"If" Statements Unplugged':
+              name: '线下 "如果" 语句'
+              description_student: ''
+              description_teacher: ''
+            Boolean Expressions and "If" Statements:
+              name: 布尔表达式和 "如果" 语句
+              description_student: ''
+              description_teacher: ''
+            '"if-else-if" and Conditional Logic':
+              name: '“如果、否则如果” 和条件逻辑'
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Color Sleuth':
+              name: '构建一个应用程序: 色彩侦探'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 2:
+              name: 第5单元评估2
+              description_student: ''
+              description_teacher: ''
+            While Loops:
+              name: 当循环
+              description_student: ''
+              description_teacher: ''
+            Loops and Simulations:
+              name: 循环和模拟
+              description_student: ''
+              description_teacher: ''
+            Introduction to Arrays:
+              name: 数组的简介
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Image Scroller':
+              name: '构建应用程序: 图像滚动'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 3:
+              name: 第5单元评估3
+              description_student: ''
+              description_teacher: ''
+            Processing Arrays:
+              name: 处理数组
+              description_student: ''
+              description_teacher: ''
+            Functions with Return Values:
+              name: 函数和返回值
+              description_student: ''
+              description_teacher: ''
+            'Building an App: Canvas Painter':
+              name: '构建应用程序: 油画画家'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 4:
+              name: 第5单元评估4
+              description_student: ''
+              description_teacher: ''
+            'Practice PT: Create':
+              name: 'PT练习 - 创造'
+              description_student: ''
+              description_teacher: ''
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: 第5单元评估 5 - AP 伪代码练习题
+              description_student: ''
+              description_teacher: ''
+            Participate in a longitudinal study!:
+              name: 参与纵向研究!
               description_student: ''
               description_teacher: ''

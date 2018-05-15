@@ -17,3 +17,8 @@ el:
           description_short: Αυτό είναι ένα μάθημα για Αllthethings
           description_student: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια μεγαλύτερη περιγραφή για τους μαθητές
           description_teacher: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια μεγαλύτερη περιγραφή για τους καθηγητές
+        csd-2018:
+          title: Computer Science Discoveries 2018
+          description_short: ''
+          description_student: ''
+          description_teacher: ''

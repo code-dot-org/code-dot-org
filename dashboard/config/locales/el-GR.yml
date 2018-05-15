@@ -437,6 +437,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε

@@ -8,7 +8,7 @@
   "blockActionAttack": "napad",
   "blockActionClone": "clone blocks",
   "blockActionCloneFiltered": "clone only",
-  "blockActionCollect": "collect",
+  "blockActionCollect": "prikupiti",
   "blockActionCollectAll": "collect all",
   "blockActionDestroyEntity": "nestati",
   "blockActionDetect": "detect",

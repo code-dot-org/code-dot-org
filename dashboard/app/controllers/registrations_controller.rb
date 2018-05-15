@@ -32,11 +32,21 @@ class RegistrationsController < Devise::RegistrationsController
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
     end
+
     should_send_new_teacher_email = current_user && current_user.teacher?
     TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
     if current_user
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
+    end
+  end
+
+  def sign_up_params
+    super.tap do |params|
+      if params[:user_type] == "teacher"
+        params[:email_preference_opt_in_required] = true
+        params[:email_preference_request_ip] = request.env['REMOTE_ADDR']
+      end
     end
   end
 

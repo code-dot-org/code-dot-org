@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import color from '../util/color';
+import {valueOr} from '../utils';
 
 /**
  * Simple boot-strapped style alert.
@@ -18,8 +19,8 @@ export default class Alert extends React.Component {
         position: 'relative',
         zIndex: 1000,
         marginTop: 20,
-        marginLeft: this.props.sideMargin || 50,
-        marginRight: this.props.sideMargin || 50
+        marginLeft: valueOr(this.props.sideMargin, 50),
+        marginRight: valueOr(this.props.sideMargin, 50),
       },
       typeSpecific: {
         error: {

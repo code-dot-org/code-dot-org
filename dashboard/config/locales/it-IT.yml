@@ -430,6 +430,7 @@
     confirm_secret_words: Conferma la tua identità inserendo le tue parole segrete
     enter_parent_email: Inserisci l'email del tuo genitore o tutore (per il recupero
       della password)
+    update: Aggiorna Account
   user_level:
     completed: Completato
     tried: Provato

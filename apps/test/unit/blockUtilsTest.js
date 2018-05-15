@@ -51,7 +51,7 @@ describe('block utils', () => {
 
   describe('interpolateInputs', () => {
     let fakeBlockly, fakeBlock, fakeInput;
-    let appendDummyInput, appendTitle, setCheck, appendValueInput;
+    let appendDummyInput, appendTitle, setCheck, appendValueInput, setAlign;
     beforeEach(() => {
       appendDummyInput = sinon.stub();
       appendValueInput = sinon.stub();
@@ -59,12 +59,14 @@ describe('block utils', () => {
 
       appendTitle = sinon.stub();
       setCheck = sinon.stub();
-      fakeInput = { setCheck, appendTitle };
+      setAlign = sinon.stub();
+      fakeInput = { setCheck, appendTitle , setAlign };
 
       appendDummyInput.returns(fakeInput);
       appendValueInput.returns(fakeInput);
       appendTitle.returns(fakeInput);
       setCheck.returns(fakeInput);
+      setAlign.returns(fakeInput);
 
       fakeBlockly = {
         FieldDropdown: sinon.stub(),
@@ -132,6 +134,25 @@ describe('block utils', () => {
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');
       expect(appendTitle).to.have.been.calledWith('dummy label');
+    });
+
+    it('adds labels before and after value input', () => {
+      interpolateInputs(fakeBlockly, fakeBlock, [
+        {
+          mode: 'value',
+          name: 'VALUE',
+          label: 'prefix'
+        },
+        {
+          mode: 'dummy',
+          label: 'suffix',
+        }
+      ]);
+
+      expect(appendValueInput).to.have.been.calledWith('VALUE');
+      expect(appendTitle).to.have.been.calledWith('prefix');
+      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendTitle).to.have.been.calledWith('suffix');
     });
   });
 

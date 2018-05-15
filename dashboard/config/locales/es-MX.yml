@@ -433,6 +433,7 @@
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la contraseña)
+    update: Update Account
   user_level:
     completed: Completada
     tried: Intentaste
