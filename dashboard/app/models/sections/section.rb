@@ -101,6 +101,10 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  def third_party_login?
+    [LOGIN_TYPE_GOOGLE_CLASSROOM, LOGIN_TYPE_CLEVER].include? login_type
+  end
+
   validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)

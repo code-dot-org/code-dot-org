@@ -287,6 +287,14 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
+  test 'third_party_login?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).third_party_login?
+    end
+
+    refute Section.new.third_party_login?
+  end
+
   test 'name safe students' do
     def verify(actual, expected)
       section = create :section
