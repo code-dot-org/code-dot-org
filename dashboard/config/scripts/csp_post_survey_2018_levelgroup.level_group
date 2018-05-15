@@ -47,23 +47,6 @@ level 'csp-post-survey-2017-q36-d_2018'
 level 'csp-post-survey-2017-q36-e_2018'
 
 
-page
-text 'csp-post-survey-2017-preamble 5 implementation-teacher_2018'
-text 'csp-post-survey-2017 preamble how often did teacher ask you to_2018'
-
-level 'csp-post-survey-2017-q51_2018'
-
-level 'csp-post-survey-2017-q53_2018'
-level 'csp-post-survey-2017-q54_2018'
-level 'csp-post-survey-2017-q55_2018'
-level 'csp-post-survey-2017-q56_2018'
-text 'csp-post-survey-2017 preamble how often did teacher do_2018'
-level 'csp-post-survey-2017-q57_2018'
-level 'csp-post-survey-2017-q58_2018'
-level 'csp-post-survey-2017-q59_2018'
-text 'csp-post-survey-2017 preamble how often did you_2018'
-level 'csp-post-survey-2017-q60_2018'
-level 'csp-post-survey-2017-q61_2018'
 
 page
 text 'csp-post-survey-2018-AP-preamble'
