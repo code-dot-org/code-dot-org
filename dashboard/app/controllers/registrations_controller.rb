@@ -133,9 +133,15 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
-    params[:user][:email].present? && user.email != params[:user][:email] ||
-        params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
-        params[:user][:password].present?
+    email_is_changing = params[:user][:email].present? &&
+      user.email != params[:user][:email]
+    hashed_email_is_changing = params[:user][:hashed_email].present? &&
+      user.hashed_email != params[:user][:hashed_email]
+    new_email_matches_hashed_email = email_is_changing &&
+      User.hash_email(params[:user][:email]) == user.hashed_email
+    (email_is_changing && !new_email_matches_hashed_email) ||
+      hashed_email_is_changing ||
+      params[:user][:password].present?
   end
 
   # Accept only whitelisted params for update.
