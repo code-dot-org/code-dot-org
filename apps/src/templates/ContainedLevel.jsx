@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
@@ -8,7 +8,7 @@ const styles = {
   },
 };
 
-const ContainedLevel = React.createClass({
+class ContainedLevel extends  Component {
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
   // copied elsewhere.
@@ -17,7 +17,7 @@ const ContainedLevel = React.createClass({
     // Move it into this component once we mount.
     const container = $(ReactDOM.findDOMNode(this));
     $('#containedLevel0').appendTo(container);
-  },
+  }
 
   render() {
     return (
@@ -26,6 +26,6 @@ const ContainedLevel = React.createClass({
       />
     );
   }
-});
+}
 
 export default ContainedLevel;
