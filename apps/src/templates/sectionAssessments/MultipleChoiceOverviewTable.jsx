@@ -10,22 +10,34 @@ export const COLUMNS = {
   QUESTION: 0,
 };
 
-const alphabetMapper =  [
-  commonMsg.answerOptionA(),
-  commonMsg.answerOptionB(),
-  commonMsg.answerOptionC(),
-  commonMsg.answerOptionD(),
-  commonMsg.answerOptionE(),
-  commonMsg.answerOptionF(),
-  commonMsg.answerOptionG(),
-];
+const NOT_ANSWERED = 'notAnswered';
+
+const calculateNotAnswered = (multipleChoiceDataArr) => {
+  let total = 0;
+  multipleChoiceDataArr.forEach (studentsAnswersObj => {
+        if (studentsAnswersObj.percentAnswered) {
+            total += studentsAnswersObj.percentAnswered;
+        }
+    });
+
+    return (100 - total);
+};
 
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
+
+  let percentValue = 0;
+
+  if (property === NOT_ANSWERED) {
+     percentValue = calculateNotAnswered(rowData.answers);
+  } else {
+     percentValue = (cell && cell.percentAnswered);
+  }
+
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        percentValue={(cell && `${cell.percentAnswered}%`) || '-'}
+        percentValue={percentValue}
         isCorrectAnswer={cell && cell.isCorrectAnswer}
       />
   );
@@ -34,9 +46,9 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
 const questionAnswerDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string,
-  percentAnswered: PropTypes.string,
+  percentValue: PropTypes.number,
+  percentAnswered: PropTypes.number,
   isCorrectAnswer: PropTypes.bool,
-  notAnswered: PropTypes.string,
 });
 
 class MultipleChoiceOverviewTable extends Component {
@@ -72,22 +84,23 @@ class MultipleChoiceOverviewTable extends Component {
 
   getNotAnsweredColumn = () => (
     {
-      property: 'notAnswered',
+      property: NOT_ANSWERED,
       header: {
         label: commonMsg.notAnswered(),
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
+        format: answerColumnsFormatter,
         props: {style: tableLayoutStyles.cell},
       }
     }
   );
 
-  getAnswerColumn = (index) => (
+  getAnswerColumn = (columnLabel) => (
     {
       property: 'percentAnswered',
       header: {
-        label: alphabetMapper[index],
+        label: columnLabel,
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
@@ -112,18 +125,20 @@ class MultipleChoiceOverviewTable extends Component {
   );
 
   getColumns = (sortable) => {
-    const maxAnswerChoicesLength = this.props.questionAnswerData.reduce((answersTotal, currentAnswerCount) => {
-      return Math.max(answersTotal, currentAnswerCount.answers.length);
-    }, 0);
+    const maxOptionsQuestion = [...this.props.questionAnswerData].sort((question1, question2) => (
+      question1.answers.length - question2.answers.length
+    )).pop();
 
-    let dataColumns = [];
-    dataColumns.push(this.getQuestionColumn(sortable));
-    for (let i = 0; i < maxAnswerChoicesLength; i++) {
-      dataColumns.push(this.getAnswerColumn(i));
-    }
-    dataColumns.push(this.getNotAnsweredColumn());
+    let columnLabelNames = maxOptionsQuestion.answers.map((answer) => {
+      return this.getAnswerColumn(answer.multipleChoiceOption);
+    });
 
-    return dataColumns;
+    return [
+      this.getQuestionColumn(sortable),
+      ...columnLabelNames,
+      this.getNotAnsweredColumn(),
+    ];
+
   };
 
   render() {
@@ -151,3 +166,4 @@ class MultipleChoiceOverviewTable extends Component {
 }
 
 export default MultipleChoiceOverviewTable;
+
