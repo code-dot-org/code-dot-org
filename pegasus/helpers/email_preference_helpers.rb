@@ -1,13 +1,15 @@
 require 'cdo/email_preference_constants'
 require 'cdo/email_validator'
+require 'active_support/core_ext/object'
 
 class EmailPreferenceHelper
   def self.upsert(email:, opt_in:, ip_address:, source:, form_kind:)
     email = email&.strip&.downcase
 
-    raise "Email is required" unless !email.nil? && !email.empty?
-    raise "IP Address is required" unless !ip_address.nil? && !ip_address.empty?
-    raise "Source is required" unless !source.nil? && !source.empty?
+    raise "Email is required" if email.blank?
+    raise "IP Address is required" if ip_address.blank?
+    raise "Source is required" if source.blank?
+    # false.blank? returns true so check that opt_in is either true or false to enforce presence.
     raise "Opt In is required" unless [true, false].include?(opt_in)
 
     raise "Source is not included in the list" unless EmailPreferenceConstants::SOURCE_TYPES.include?(source)
