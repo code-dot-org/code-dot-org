@@ -646,63 +646,21 @@ export default {
       ];
     };
 
-    Blockly.Blocks.behavior_definition = {
-      shouldHideIfInMainBlockSpace: function () {
-        return Blockly.useModalFunctionEditor;
+    Blockly.Blocks.behavior_definition = Blockly.Block.createProcedureDefinitionBlock({
+      initPostScript(block) {
+        block.setHSV(136, 0.84, 0.80);
+        block.parameterNames_ = ['this sprite'];
+        block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
       },
-      init: function () {
-        var showParamEditIcon = !Blockly.disableParamEditing && !Blockly.useModalFunctionEditor;
-
-        this.setHSV(136, 0.84, 0.80);
-        var name = Blockly.Procedures.findLegalName(
-            Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
-        this.appendDummyInput()
-            .appendTitle(showParamEditIcon ? '' : ' ')
-            .appendTitle(
-                new Blockly.FieldTextInput(name, Blockly.Procedures.rename),
-                'NAME')
-            .appendTitle('', 'PARAMS');
-        this.appendStatementInput('STACK')
-            .appendTitle(Blockly.Msg.PROCEDURES_DEFNORETURN_DO);
-        if (showParamEditIcon) {
-          this.setMutator(new Blockly.Mutator(['procedures_mutatorarg']));
-        }
-        // Only want to have the backdrop in the mainBlockSpace. We don't want it in
-        // the toolbox or in the feedback dialog (which is readonly).
-        this.setFramed( this.blockSpace === Blockly.mainBlockSpace &&
-            !this.blockSpace.isReadOnly());
-        this.parameterNames_ = ['this sprite'];
-        this.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
-      },
-      updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,
-      mutationToDom: Blockly.Blocks.procedures_defnoreturn.mutationToDom,
-      domToMutation: Blockly.Blocks.procedures_defnoreturn.domToMutation,
-      updateParamsFromArrays: Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays,
-      updateCallerParams_: Blockly.Blocks.procedures_defnoreturn.updateCallerParams_,
-      dispose: Blockly.Blocks.procedures_defnoreturn.dispose,
-      getProcedureInfo: function () {
-        return {
-          name: this.getTitleValue('NAME'),
-          parameterNames: this.parameterNames_,
-          parameterIDs: this.paramIds_,
-          parameterTypes: this.parameterTypes_,
-          type: this.type,
-          callType: this.callType_
-        };
-      },
-      getVars: function (category) {
-        return {
-          Behavior: [this.getTitleValue('NAME')],
-        };
-      },
-      renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar,
-      removeVar: Blockly.Blocks.procedures_defnoreturn.removeVar,
-      userCreated: false,
-      shouldBeGrayedOut: function () {
-        return false;
-      },
-      callType_: 'gamelab_behavior_get'
-    };
+      overrides: {
+        getVars(category) {
+          return {
+            Behavior: [this.getTitleValue('NAME')],
+          };
+        },
+        callType_: 'gamelab_behavior_get',
+      }
+    });
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 
