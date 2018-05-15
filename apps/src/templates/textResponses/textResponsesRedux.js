@@ -12,6 +12,7 @@ export const textResponsePropType = PropTypes.shape({
 });
 
  // Initial state of textResponsesRedux
+ // responseDataByScript - object - key is scriptId, value is array of textResponsePropType
 const initialState = {
   sectionId: null,
   responseDataByScript: {},
