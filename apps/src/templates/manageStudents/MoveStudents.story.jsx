@@ -8,36 +8,15 @@ import {
 } from './manageStudentsRedux';
 
 const studentData = [
-  {
-    id: 1,
-    name: 'Student A'
-  },
-  {
-    id: 3,
-    name: 'Student C'
-  },
-  {
-    id: 2,
-    name: 'Student B'
-  }
+  {id: 1, name: 'Student A'},
+  {id: 3, name: 'Student C'},
+  {id: 2, name: 'Student B'}
 ];
 
 const sections = {
-  1: {
-    id: 1,
-    name: 'Section A',
-    loginType: 'email'
-  },
-  2: {
-    id: 2,
-    name: 'Section B',
-    loginType: 'word'
-  },
-  3: {
-    id: 3,
-    name: 'Section C',
-    loginType: 'picture'
-  }
+  1: {id: 1, name: 'Section A', loginType: 'email'},
+  2: {id: 2, name: 'Section B', loginType: 'word'},
+  3: {id: 3, name: 'Section C', loginType: 'picture'}
 };
 
 const transferToOtherTeacher = {
