@@ -10,7 +10,6 @@ import sectionProgress, {
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
-  ACCELERATED_SCRIPT_ID,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const fakeSectionData = {
@@ -72,7 +71,16 @@ const fakeValidScripts = [
     id: 301,
     name: 'csp2',
     position: 23
-  }
+  },
+  // Include Express Course to use as default if needed
+  {
+    category: "CS Fundamentals",
+    category_priority: 1,
+    id: 182,
+    name: "Express Course",
+    position: 6,
+    script_name: "express",
+  },
 ];
 
 const fakeValidCourses = [
@@ -185,12 +193,12 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.scriptId, 100);
     });
 
-    it('filtered validScripts includes Accelerated script id by default', () => {
+    it('includes Express Course if nothing assigned and no progress', () => {
       const studentScriptIds = [];
       const validCourses = [];
       const action = setValidScripts(fakeValidScripts, studentScriptIds, validCourses);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.id === ACCELERATED_SCRIPT_ID));
+      assert.deepEqual(nextState.validScripts, fakeValidScripts.filter(script => script.name === "Express Course"));
     });
 
     it('filters validScripts to those included in studentScriptIds', () => {
