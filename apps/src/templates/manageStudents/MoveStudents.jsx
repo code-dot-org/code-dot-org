@@ -244,17 +244,22 @@ class MoveStudents extends Component {
     });
   };
 
-  isMovableSection = (section) => {
-    if (section.id === this.props.currentSectionId) { return false; }
-    if (section.loginType === SectionLoginType.google_classroom || section.loginType === SectionLoginType.clever) { return false; }
-    return true;
+  isValidDestinationSection = (section) => {
+    const isSameAsSource = section.id === this.props.currentSectionId;
+    const isExternallyRostered = ![
+      SectionLoginType.word,
+      SectionLoginType.picture,
+      SectionLoginType.email,
+    ].includes(section.loginType);
+
+    return !isSameAsSource && !isExternallyRostered;
   };
 
   renderOptions = () => {
     const {sections} = this.props;
     let options = Object.keys(sections).map(sectionId => {
       const section = sections[sectionId];
-      if (this.isMovableSection(section)) {
+      if (this.isValidDestinationSection(section)) {
         return <option key={section.id} value={section.id}>{section.name}</option>;
       } else {
         return null;
