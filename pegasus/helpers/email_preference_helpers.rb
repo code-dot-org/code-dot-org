@@ -31,7 +31,7 @@ class EmailPreferenceHelper
         source: source,
         ip_address: ip_address,
         form_kind: form_kind,
-        # only set updated_at on update
+        # Don't set created_at on an update.
         updated_at: current_time
       ).
       insert(
