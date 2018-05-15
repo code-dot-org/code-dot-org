@@ -22,20 +22,23 @@ const studentData = [
   }
 ];
 
-const sections = [
-  {
+const sections = {
+  1: {
     id: 1,
-    name: 'Section A'
+    name: 'Section A',
+    loginType: 'email'
   },
-  {
+  2: {
     id: 2,
-    name: 'Section B'
+    name: 'Section B',
+    loginType: 'word'
   },
-  {
+  3: {
     id: 3,
-    name: 'Section C'
+    name: 'Section C',
+    loginType: 'picture'
   }
-];
+};
 
 const transferToOtherTeacher = {
   ...blankStudentTransfer,
