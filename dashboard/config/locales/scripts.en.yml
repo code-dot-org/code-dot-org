@@ -7817,6 +7817,10 @@ en:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
               name: Conditionals & Loops in Harvester
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Relay Programming:
+              name: Relay Programming
         jr-test:
           stages:
             Programming with Behaviors:
