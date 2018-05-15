@@ -5,20 +5,21 @@ create table analysis_pii.regional_partner_stats AS
          d.first_name,
          d.last_name,
          d.email,
-         d.school_id,
+         coalesce(d.school_id, ss_user.school_id) school_id,
          d.regional_partner,
          d.user_id,
          u.studio_person_id,
-         ss.school_name,
-         ss.city,
-         ss.state,
-         ss.school_district_name,
-         ss.school_district_id,
-         ss.high_needs,
+         coalesce(ss_summer_pd.school_name, ss_user.school_name) school_name,
+         coalesce(ss_summer_pd.city, ss_user.city) city,
+         coalesce(ss_summer_pd.state, ss_user.state) state,
+         coalesce(ss_summer_pd.school_district_name, ss_user.school_district_name) school_district_name,
+         coalesce(ss_summer_pd.school_district_id, ss_user.school_district_id) school_district_id,
+         coalesce(ss_summer_pd.high_needs, ss_user.high_needs) high_needs,
          qwa.q1,
          qwa.q2,
          qwa.q3,
          qwa.q4,
+         case when (q1 + q2 + q3 + q4) >= 3 then 1 else 0 end as retained,
          tmp.script_most_progress,
          tmp.students_script_most_progress,
          sa.sections,
@@ -34,8 +35,12 @@ create table analysis_pii.regional_partner_stats AS
   FROM analysis_pii.teachers_trained_2017 d
   LEFT JOIN dashboard_production_pii.users u 
          ON d.user_id = u.id
-  LEFT JOIN analysis.school_stats ss 
-         ON ss.school_id = d.school_id
+  LEFT JOIN analysis.school_stats ss_summer_pd 
+         ON ss_summer_pd.school_id = d.school_id
+  LEFT JOIN dashboard_production.school_infos si_user
+         ON si_user.id = u.school_info_id
+  LEFT JOIN analysis.school_stats ss_user
+         ON ss_user.school_id = si_user.school_id
   LEFT JOIN analysis.quarterly_workshop_attendance qwa
          ON qwa.studio_person_id = u.studio_person_id
         AND qwa.course = d.course -- only include attendance at the workshop for which you were trained
