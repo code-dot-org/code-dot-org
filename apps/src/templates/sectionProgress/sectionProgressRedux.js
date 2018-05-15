@@ -101,17 +101,6 @@ export const sectionDataPropType = PropTypes.shape({
 });
 
 /**
- * Shape for a validScript
- */
-export const validScriptPropType = PropTypes.shape({
-  category: PropTypes.string.isRequired,
-  category_priority: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  position: PropTypes.number,
-});
-
-/**
  * Shape for scriptData
  * The data we get from the server's call to script.summarize. The format
  * ends up being similar to that which we send to initProgress in progressRedux.
@@ -139,9 +128,7 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
 const INITIAL_LESSON_OF_INTEREST = 1;
 
 const initialState = {
-  scriptId: null,
   section: {},
-  validScripts: [],
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},

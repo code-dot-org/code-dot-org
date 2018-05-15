@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {validScriptPropType} from './sectionProgressRedux';
+import {validScriptPropType} from '@cdo/apps/redux/scriptSelectionRedux';
 import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
