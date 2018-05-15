@@ -158,6 +158,10 @@
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
     error: Tharla earráid.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_yes: Tá
+    email_preference_no: Níl
   school_info:
     title: Eolas faoin scoil (roghnach)
     school_country: Tír na Scoile
@@ -1172,6 +1176,11 @@
     csp_ap_1: 'Caibidil 1: Socrú Teicneolaíochta AP'
     csp_ap_2: 'Caibidil 2: Tasc Taiscéalaíoch AP'
     csp_ap_3: 'Caibidil 3: Tasc Cruthaitheach AP'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Aonad 2: Faisnéis dhigiteach'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Ábhar Machnaimh
   external_links:
     disclaimer: Séanadh
@@ -1316,3 +1325,8 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Cúrsaí Iomlána
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Glacaim leis
