@@ -22,7 +22,8 @@ import {
   renderStatsTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
-import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
+import sectionProgress, { setSection } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -51,28 +52,11 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
-  registerReducers({sectionProgress});
+  registerReducers({sectionProgress, scriptSelection});
   const store = getStore();
   store.dispatch(setSection(section));
-
-  const promises = [
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-      dataType: 'json'
-    }),
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/courses?allVersions=1`,
-      dataType: 'json'
-    })
-  ];
-  Promise.all(promises).then(data => {
-    let [studentScriptsData, validCourses] = data;
-    const { studentScriptIds } = studentScriptsData;
-    store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
-    renderSectionProgressReact(store);
-  });
+  store.dispatch(loadValidScripts(section, validScripts));
+  renderSectionProgressReact(store);
 }
 
 function renderSectionProgressReact(store) {
