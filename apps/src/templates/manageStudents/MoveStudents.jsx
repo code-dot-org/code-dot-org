@@ -5,11 +5,10 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import Immutable from 'immutable';
-import orderBy from 'lodash/orderBy';
+import {orderBy, compact} from 'lodash';
 import Button from '../Button';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
-import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   updateStudentTransfer,
   transferStudents,
@@ -18,6 +17,7 @@ import {
   cancelStudentTransfer
 } from './manageStudentsRedux';
 import color from "@cdo/apps/util/color";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const OTHER_TEACHER = "otherTeacher";
 const PADDING = 20;
@@ -105,12 +105,11 @@ class MoveStudents extends Component {
     }),
 
     // redux provided
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired
-      }).isRequired
-    ),
+    sections: PropTypes.objectOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      loginType: PropTypes.string.isRequired
+    })).isRequired,
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
@@ -249,15 +248,28 @@ class MoveStudents extends Component {
     });
   };
 
+  isValidDestinationSection = (section) => {
+    const isSameAsSource = section.id === this.props.currentSectionId;
+    const isExternallyRostered = ![
+      SectionLoginType.word,
+      SectionLoginType.picture,
+      SectionLoginType.email,
+    ].includes(section.loginType);
+
+    return !isSameAsSource && !isExternallyRostered;
+  };
+
   renderOptions = () => {
-    const {sections, currentSectionId} = this.props;
-    let options = sections.map(section => {
-      if (section.id === currentSectionId) {
-        return null;
-      } else {
+    const {sections} = this.props;
+    let options = Object.keys(sections).map(sectionId => {
+      const section = sections[sectionId];
+      if (this.isValidDestinationSection(section)) {
         return <option key={section.id} value={section.id}>{section.name}</option>;
+      } else {
+        return null;
       }
     });
+    options = compact(options);
 
     // Add initial empty and final 'other teacher' options
     options.unshift(<option key="empty" value=""></option>);
@@ -432,7 +444,7 @@ class MoveStudents extends Component {
 export const UnconnectedMoveStudents = MoveStudents;
 
 export default connect(state => ({
-  sections: sectionsNameAndId(state.teacherSections),
+  sections: state.teacherSections.sections,
   currentSectionId: state.manageStudents.sectionId
 }), dispatch => ({
   updateStudentTransfer(transferData) {

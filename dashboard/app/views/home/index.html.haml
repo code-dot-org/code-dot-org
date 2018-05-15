@@ -18,12 +18,6 @@
 - else
   - show_ui_tips = true
 
--# In-page surveys
-- if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
-  = render partial: 'home/survey_nps'
-- elsif show_diversity_survey? SurveyResult::DIVERSITY_2017
-  = render partial: 'home/survey_diversity'
-
 - if current_user
   = render partial: 'home/homepage', locals: {show_ui_tips: show_ui_tips}
 

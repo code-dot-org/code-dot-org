@@ -84,13 +84,13 @@ export const processScriptAndProgress = (scriptId) => {
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
+const DEFAULT_SCRIPT_NAME = "Express Course";
+
 // Types of views of the progress tab
 export const ViewType = {
   SUMMARY: "summary",
   DETAIL: "detail",
 };
-
-export const ACCELERATED_SCRIPT_ID = 1;
 
 /**
  * Shape for the section
@@ -203,10 +203,13 @@ export default function sectionProgress(state=initialState, action) {
   }
   if (action.type === SET_VALID_SCRIPTS) {
 
+    // Computes the set of valid scripts.
     let validScripts = action.validScripts;
+    // Set defaultScript to Express Course to use if there are no validScripts
+    const defaultScript = validScripts.find(script => script.name === DEFAULT_SCRIPT_NAME);
+
     if (action.studentScriptIds && action.validCourses) {
-      // Include the id for the Accelerated Course so that there will always be // at least one validScript and we don't end up with an empty dropdown.
-      const idMap = {ACCELERATED_SCRIPT_ID: true};
+      const idMap = {};
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => idMap[id] = true);
@@ -223,7 +226,13 @@ export default function sectionProgress(state=initialState, action) {
         }
       });
       validScripts = validScripts.filter(script => idMap[script.id]);
+      // If we filter out everything, add the defaultScript to validScripts
+      // to avoid having an empty dropdown menu.
+      if (validScripts.length === 0) {
+        validScripts.push(defaultScript);
+      }
 
+      // Uses the set of valid scripts to determine the current scriptId.
       var scriptId;
       switch (true) {
         // When there is a scriptId already in state.
@@ -238,12 +247,10 @@ export default function sectionProgress(state=initialState, action) {
             }
           });
           break;
-        // If there are validScripts, set scriptId to the first valid script.
-        case validScripts.length > 0:
-          scriptId = validScripts[0].id;
-          break;
+        // Set scriptId to the first valid script.  If there weren't any
+        // valid scripts, this will be the default script.
         default:
-         scriptId = ACCELERATED_SCRIPT_ID;
+          scriptId = validScripts[0].id;
       }
     }
 
