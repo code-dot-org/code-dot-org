@@ -13,4 +13,10 @@
 #
 
 class Block < ApplicationRecord
+  def block_options
+    {
+      block: config,
+      helperCode: helper_code,
+    }
+  end
 end
