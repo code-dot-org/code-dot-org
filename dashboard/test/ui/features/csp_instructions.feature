@@ -75,4 +75,4 @@ Scenario: Resources tab is clickable and displays correct text for contained lev
   When I click selector ".uitest-helpTab" once I see it
   And I wait until ".editor-column" contains text "Welcome to the Circuit Playground"
   And I click selector ".uitest-instructionsTab"
-  And I wait until ".editor-column" does not contain text "My free response markdown instructions"
+  And I wait until ".editor-column" does not contain text "Welcome to the Circuit Playground"
