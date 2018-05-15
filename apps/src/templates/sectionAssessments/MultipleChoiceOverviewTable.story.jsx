@@ -53,7 +53,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Assessment multiple choice with 7 answers',
-        description: 'Ability to see assessment overview for the entire class',
+        description: 'Ability to see assessment overview for a section',
         story: () => (
             <MultipleChoiceOverviewTable
               questionAnswerData={multipleChoiceData}
@@ -62,7 +62,7 @@ export default storybook => {
       },
       {
         name: 'Assessment multiple choice with 3 answers',
-        description: 'Ability to see assessment overview for the entire class',
+        description: 'Ability to see assessment overview for a section',
         story: () => (
             <MultipleChoiceOverviewTable
               questionAnswerData={multipleChoiceData.map(question => {

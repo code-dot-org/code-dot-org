@@ -12,7 +12,7 @@ export const COLUMNS = {
 };
 
 const ANSWER_COLUMN_WIDTH = 70;
-const PADDING = 10;
+const PADDING = 20;
 
 const styles = {
   answerColumnHeader: {
@@ -157,7 +157,7 @@ class MultipleChoiceOverviewTable extends Component {
           style: {
             ...tableLayoutStyles.cell,
             ...styles.questionCell,
-            maxWidth: styleConstants['content-width'] - (numAnswers * (ANSWER_COLUMN_WIDTH + PADDING * 2)),
+            maxWidth: styleConstants['content-width'] - (numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)),
           }
         },
       }
@@ -174,7 +174,6 @@ class MultipleChoiceOverviewTable extends Component {
     });
 
     const numAnswerColumns = columnLabelNames.length + 1;
-    console.log(numAnswerColumns);
     return [
       this.getQuestionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
