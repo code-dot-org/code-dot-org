@@ -147,13 +147,15 @@ class Api::V1::Census::CensusController < ApplicationController
       end
       render json: {census_submission_id: submission.id}, status: :created
 
-      EmailPreference.upsert(
-        email: submission.submitter_email_address,
-        opt_in: params[:opt_in],
-        ip_address: request.env['REMOTE_ADDR'],
-        source: EmailPreferenceConstants::FORM_ACCESS_REPORT,
-        form_kind: "0"
-      )
+      if params[:opt_in]
+        EmailPreference.upsert(
+          email: submission.submitter_email_address,
+          opt_in: params[:opt_in],
+          ip_address: request.env['REMOTE_ADDR'],
+          source: EmailPreferenceConstants::FORM_ACCESS_REPORT,
+          form_kind: "0"
+        )
+      end
     else
       render json: errors, status: :bad_request
     end
