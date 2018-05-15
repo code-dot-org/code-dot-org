@@ -71,7 +71,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :bad_request
     assert_equal(
-      "You cannot move students to this section that is synced with a third party tool.",
+      "You cannot move students to a section that is synced with a third party tool.",
       json_response["error"]
     )
   end
@@ -83,7 +83,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :bad_request
     assert_equal(
-      "You cannot move students to this section that is synced with a third party tool.",
+      "You cannot move students to a section that is synced with a third party tool.",
       json_response["error"]
     )
   end
