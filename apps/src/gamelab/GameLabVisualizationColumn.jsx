@@ -152,9 +152,10 @@ class GameLabVisualizationColumn extends React.Component {
         </ProtectedVisualizationDiv>
         <GameButtons>
           <div id="studio-dpad" className="studio-dpad-none">
-            <button id="studio-dpad-button" className="arrow">
-              <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
-            </button>
+            <div id="studio-dpad-rim" />
+            <div id="studio-dpad-cone" />
+            <button id="studio-dpad-button" />
+            <button id="studio-space-button" />
           </div>
 
           <ArrowButtons/>

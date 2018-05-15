@@ -13,9 +13,16 @@
     "skip_dialog": true,
     "hex": "false",
     "parent_level_id": 1820,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "display_name": "Widget: Color Pixelation"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-05 00:49:45 +0000\",\"changed\":[],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-05-10 17:43:45 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Pixelation>

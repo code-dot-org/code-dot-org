@@ -47,11 +47,19 @@
     "instructions": "Now, build your own game to show off to your friends!",
     "parent_level_id": 7968,
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "true",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-01 19:55:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:12:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-11 19:13:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -68,6 +76,10 @@
           <block type="studio_setBackground">
             <title name="VALUE">"cave"</title>
           </block>
+          <block type="studio_move">
+            <title name="SPRITE">0</title>
+            <title name="DIR">1</title>
+          </block>
           <block type="studio_setSpriteSizeParams" inline="true">
             <value name="SPRITE">
               <block type="math_number">
@@ -79,10 +91,6 @@
                 <title name="NUM">1</title>
               </block>
             </value>
-          </block>
-          <block type="studio_move">
-            <title name="SPRITE">0</title>
-            <title name="DIR">1</title>
           </block>
           <block type="studio_moveDistanceParams" inline="true">
             <title name="SPRITE">0</title>
@@ -246,6 +254,12 @@
             <title name="VISIBILITY">false</title>
           </block>
           <block type="controls_if" inline="false"/>
+          <block type="controls_if" inline="false">
+            <mutation else="1"/>
+          </block>
+          <block type="controls_if" inline="false">
+            <mutation elseif="1" else="1"/>
+          </block>
           <block type="logic_compare" inline="true">
             <title name="OP">EQ</title>
           </block>
