@@ -6,9 +6,9 @@ import {loadSource} from './levelTests';
 describe('setParamAtIndex', () => {
   let editor, parser, plainTree, arrayTree;
 
-  before(function (done) {
+  before(function () {
     // Load droplet sources.
-    loadSource('/base/lib/ace/src-noconflict/ace.js')
+    return loadSource('/base/lib/ace/src-noconflict/ace.js')
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
@@ -16,7 +16,6 @@ describe('setParamAtIndex', () => {
     .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
-      done();
     });
   });
 
@@ -36,6 +35,10 @@ describe('setParamAtIndex', () => {
       enablePaletteAtStart: false,
       textModeAtStart: true,
     });
+
+    var aceEditor = editor.aceEditor;
+    aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
     studioApp().editor = editor;
     parser = editor.session.mode;
 
