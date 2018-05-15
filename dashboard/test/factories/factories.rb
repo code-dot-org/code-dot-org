@@ -1,5 +1,4 @@
 require 'cdo/activity_constants'
-require 'cdo/email_preference_constants'
 
 FactoryGirl.allow_class_lookup = false
 
@@ -927,7 +926,7 @@ FactoryGirl.define do
     email 'test@example.net'
     opt_in false
     ip_address '10.0.0.1'
-    source EmailPreferenceConstants::ACCOUNT_SIGN_UP
+    source EmailPreference::ACCOUNT_SIGN_UP
   end
 
   factory :user_geo do

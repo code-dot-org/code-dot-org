@@ -15,15 +15,18 @@
 #
 #  index_email_preferences_on_email  (email) UNIQUE
 #
-require 'cdo/email_preference_constants'
+#
+require_dependency 'cdo/email_preference_constants'
 
 class EmailPreference < ApplicationRecord
+  include EmailPreferenceConstants
+
   validates_presence_of :email, :ip_address, :source
   validates_inclusion_of :opt_in, {in: [true, false]}
   validates_uniqueness_of :email
   validates_email_format_of :email
 
-  validates_inclusion_of :source, in: EmailPreferenceConstants::SOURCE_TYPES
+  validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES
 
   def email=(value)
     super(value&.strip&.downcase)

@@ -1,5 +1,3 @@
-require 'cdo/email_preference_constants'
-
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do

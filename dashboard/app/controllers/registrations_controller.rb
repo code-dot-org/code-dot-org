@@ -1,5 +1,3 @@
-require 'cdo/email_preference_constants'
-
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]

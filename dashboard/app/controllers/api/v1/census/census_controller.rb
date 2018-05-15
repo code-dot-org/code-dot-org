@@ -1,5 +1,3 @@
-require 'cdo/email_preference_constants'
-
 class Api::V1::Census::CensusController < ApplicationController
   include SchoolInfoDeduplicator
   skip_before_action :verify_authenticity_token
@@ -152,7 +150,7 @@ class Api::V1::Census::CensusController < ApplicationController
           email: submission.submitter_email_address,
           opt_in: params[:opt_in],
           ip_address: request.env['REMOTE_ADDR'],
-          source: EmailPreferenceConstants::FORM_ACCESS_REPORT,
+          source: EmailPreference::FORM_ACCESS_REPORT,
           form_kind: "0"
         )
       end
