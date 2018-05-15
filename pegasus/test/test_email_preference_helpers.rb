@@ -100,6 +100,9 @@ class EmailPreferenceHelperTest < Minitest::Test
       form_kind: nil
     )
 
+    # Wait one second so that updated_at will be different than created_at after updating existing entry.
+    sleep 1
+
     updated_row_id = EmailPreferenceHelper.upsert(
       email: 'existing@example.net',
       opt_in: true,
