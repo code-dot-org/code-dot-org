@@ -29,11 +29,6 @@ describe('setParamAtIndex', () => {
     editor = new window.droplet.Editor(dropletCodeTextbox, {
       mode: 'javascript',
       palette: [],
-      showPaletteInTextMode: false,
-      showDropdownInPalette: true,
-      allowFloatingBlocks: false,
-      enablePaletteAtStart: false,
-      textModeAtStart: true,
     });
 
     var aceEditor = editor.aceEditor;
