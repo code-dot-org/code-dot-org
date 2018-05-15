@@ -187,7 +187,7 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(state => ({
   responses: state.textResponses.responseDataByScript,
   isLoadingResponses: state.textResponses.isLoadingResponses,
-  validScripts: state.sectionProgress.validScripts,
+  validScripts: state.scriptSelection.validScripts,
   scriptId: state.sectionProgress.scriptId,
 }), dispatch => ({
   setScriptId(scriptId) {
