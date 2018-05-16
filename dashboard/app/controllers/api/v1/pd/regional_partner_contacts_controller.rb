@@ -8,7 +8,7 @@ class Api::V1::Pd::RegionalPartnerContactsController < Api::V1::Pd::FormsControl
       email: @contact_form.email,
       opt_in: @contact_form.opt_in?,
       ip_address: request.env['REMOTE_ADDR'],
-      source: EmailPreference::FORM_REGIONAL_PARTNER,
+      source: :FORM_REGIONAL_PARTNER,
       form_kind: "0"
     )
   end

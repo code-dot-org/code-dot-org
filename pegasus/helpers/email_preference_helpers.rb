@@ -23,6 +23,9 @@ class EmailPreferenceHelper
     # between the value of the opt_in column in the existing row and the new/input value.
     input_opt_in = opt_in
 
+    # Convert the symbol to a string before saving to the database.
+    source = source.to_s
+
     Dashboard.db[:email_preferences].
       # The arguments passed to on_duplicate_key_method are used to update the row
       # when a row exists with the same unique key.
