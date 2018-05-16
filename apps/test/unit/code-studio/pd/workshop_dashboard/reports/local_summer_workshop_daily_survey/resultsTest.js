@@ -8,47 +8,60 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
     const results = shallow(
       <Results
         questions={{
-          'q1': {text: 'Question 1'},
-          'q2': {text: 'Question 2'},
-          'q3': {text: 'Question 3'},
-          'f1': {text: 'Free Response 1', free_response: true},
-          'f2': {text: 'Free Response 2', free_response: true}
+            'day_1': {
+              'q1': {text: 'Day 1, Question 1'},
+              'q2': {text: 'Day 1, Question 2'},
+              'q3': {text: 'Day 1, Question 3'},
+              'f1': {text: 'Day 1, Free Response 1', free_response: true},
+              'f2': {text: 'Day 1, Free Response 2', free_response: true}
+            },
+            'day_2': {
+              'q4': {text: 'Day 2, Question 1'},
+              'q5': {text: 'Day 2, Question 2'},
+              'f3': {text: 'Day 2, Free Response 1', free_response: true}
+            }
         }}
         thisWorkshop={{
-          'Day 1': {
+          'day_1': {
             'q1': 3.5,
             'q2': 3.6,
             'q3': 3.7,
             'f1': ['a', 'b', 'c'],
             'f2': ['d', 'e', 'f']
           },
-          'Day 2': {
-            'q1': 3.5,
-            'q2': 3.6,
-            'q3': 3.7,
-            'f1': ['a', 'b', 'c'],
-            'f2': ['d', 'e', 'f']
+          'day_2': {
+            'q4': 3.8,
+            'q5': 3.9,
+            'f3': ['g', 'h', 'i']
           }
         }}
         allMyWorkshops={{
-          'Day 1': {
+          'day_1': {
             'q1': 2.5,
             'q2': 2.6,
             'q3': 2.7,
+            'f1': ['Should not render']
           },
-          'Day 2': {
-            'q1': 2.5,
-            'q2': 2.6,
-            'q3': 2.7,
+          'day_2': {
+            'q4': 2.8,
+            'q5': 2.9
           }
         }}
-        sessions={['Day 1', 'Day 2']}
+        sessions={['day_1', 'day_2']}
       />
     );
 
     expect(results.find('table')).to.have.length(2); // Session sections
-    expect(results.find('table tbody tr')).to.have.length(6); // Question tables
-    expect(results.find('.well')).to.have.length(4); // Free response sections
-    expect(results.find('.well li')).to.have.length(12); // Free responses
+    expect(results.find('td').map((x) => x.text())).to.deep.equal(
+      [
+        'Day 1, Question 1', '3.5', '2.5',
+        'Day 1, Question 2', '3.6', '2.6',
+        'Day 1, Question 3', '3.7', '2.7',
+        'Day 2, Question 1', '3.8', '2.8',
+        'Day 2, Question 2', '3.9', '2.9'
+      ]
+    );
+    expect(results.find('.well')).to.have.length(3);
+    expect(results.find('li').map((x) => x.text())).to.deep.equal('abcdefghi'.split(''));
   });
 });

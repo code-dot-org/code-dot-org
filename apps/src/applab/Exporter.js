@@ -397,7 +397,7 @@ export default {
           );
         },
         () => {
-          logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
+          logToCloud.addPageAction(logToCloud.PageAction.StaticResourceFetchError, {
             app: 'applab'
           }, 1/100);
           reject(new Error("failed to fetch assets"));

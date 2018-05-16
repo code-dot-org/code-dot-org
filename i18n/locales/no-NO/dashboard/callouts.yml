@@ -13,28 +13,28 @@
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger ikke å se etter bikaker i det hele tatt.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: Klikk og dra et "Tekstfelt" inn i skjermen
+        screenSelectorCallout3: Vel skjermen du lagde
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the id of your screen here.
+        screenSelectorCallout2: Dette er skjermvelgeren
+        changePlace1ID: Endre id-en til skjermen din her.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's "text"
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        applabIntro2_1: Klikk på tittelen til appen din
+        appLabIntro2_designMenu: Bruk disse menyene til å endre appen din sin "tekst"
+        appLabIntro2_textColor: Rull ned for å endre "tekstfarge"
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
-        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change below
+        applabIntro2storyText: Klikk på historieteksten på denne skjermen
+        appLabIntro2_editStoryText: Dra i det nederste høyre hjørnet av denne tekstboksen for å få mer plass. Så fyll ut teksten for historien din
+        appLabIntro2_textColor: Prøv noen av de forskjellige egenskapene du kan endre under
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag a button onto your screen.
+        designToolboxCallOut: Dra en knapp inn i skjermen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton" or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        screenSelectorCallout3: Gå til din "startScreen"
       AppLab Intro 2 - add more buttons 2_callout: { }
       AppLab Intro 2 - add more buttons_callout: { }
       AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
-        setScreenFirstTime: Click and drag into the space in your "onEvent" block
+        onEventFirstTime: Klikk og dra en "onEvent"-blokk inn i arbeidsområdet til høyre
+        setScreenFirstTime: Klikk og dra inn i området for din "onEvent"-blokk
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:

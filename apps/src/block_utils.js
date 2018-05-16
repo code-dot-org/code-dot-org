@@ -365,6 +365,50 @@ exports.cleanBlocks = function (blocksDom) {
   });
 };
 
+/**
+ * Definition of an input type. Must have either addInputRow or addInput
+ * defined, but not both.
+ *
+ * @typedef {Object} InputType
+ * @property {?function(Blockly, Blockly.Block, InputConfig): Blockly.Input} addInputRow
+ *   Adds a potentially line-ending input to the provided block and returns the
+ *   new input.
+ * @property {?function(Blockly, Blockly.Block, InputConfig, Blockly.Input)} addInput
+ *   Adds an inline input by appending fields or titles to the provided input
+ * @property {function(Blockly.Block, InputConfig): string} generateCode
+ *   Return the code to be inserted as an argument to the function call
+ *   generated for the give block.
+ */
+
+/**
+ * @typedef {Object} InputConfig
+ * @property {string} name Input name, conventionally all-caps
+ * @property {string[][]|Function} options For dropdowns, the list of options.
+ *   Each entry is a 2-element string array with the display name first, and the
+ *   codegen-compatible value second (i.e. strings should be doubly-quoted).
+ *   Also accepts a zero-argument function to generate these options.
+ * @property {Blockly.BlockValueType} type For value inputs, the type required.
+ *   Use Blockly.BlockValueType.NONE to accept any block.
+ * @property {boolean} statement Indicates that an input is a statement input,
+ *   which is passed as a callback function.
+ * @property {string} customInput Use the customInput type under this name to
+ *   add this input to the block.
+ * @property {boolean} field Indicates that an input is a field input, i.e. a
+ *   textbox. The generated code will be wrapped in quotes if the arg has type
+ *   "String".
+ * @property {boolean} empty Indicates that an input should not render a
+ *   connection or generate any code. Mostly just useful as a line break for
+ *   non-inlined blocks.
+ */
+
+/**
+ * @typedef {Object} LabeledInputConfig
+ * @augments InputConfig
+ * @property {string} mode Name of the input type used for this input, either a
+ *   key from STANDARD_INPUT_TYPES or one defined as a customInputType.
+ * @property {string} label Text to display to the left of the input.
+ */
+
 const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
@@ -377,33 +421,11 @@ const FIELD_INPUT = 'field';
  *
  * @param {string} text The complete message shown on the block with inputs in
  *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
- * @param {Object[]} args Define the type/options of the block's inputs.
- * @param {string} args[].name Input name, conventionally all-caps
- * @param {string[][]|Function} args[].options For dropdowns, the list of
- *   options. Each entry is a 2-element string array with the display name
- *   first, and the codegen-compatible (i.e. strings should be doubly-quoted)
- *   value second. Also accepts a zero-argument function to generate these
- *   options.
- * @param {BlockValueType} args[].type For value inputs, the type required. Use
- *   BlockValueType.NONE to accept any block.
- * @param {boolean} args[].statement Indicates that an input is a statement
- *   input, which is passed as a callback function
- * @param {string} args[].customInput Use the customInput type under this name
- *   to add this input to the block.
- * @param {boolean} args[].field Indicates that an input is a field input, i.e.
- *   a textbox. The generated code will be wrapped in quotes if the arg has type
- *   "String".
- * @param {boolean} args[].empty Indicates that an input should not render a
- *   connection or generate any code. Mostly just useful as a line break for
- *   non-inlined blocks.
+ * @param {InputConfig[]} args Define the type/options of the block's inputs.
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  *
- * @returns {Object[]} a list of labeled inputs. Each one has the same fields
- *   as 'args', but additionally includes:
- * @returns {string} return[].mode Either 'dropdown', 'value', 'dummy', or
- *   args[].customInput
- * @returns {string} return[].label Text to display to the left of the input
+ * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
 const determineInputs = function (text, args, strictTypes=[]) {
   const tokens = text.split(/[{}]/);
@@ -450,6 +472,7 @@ const determineInputs = function (text, args, strictTypes=[]) {
       } else if (arg.empty) {
         inputs.push({
           mode: DUMMY_INPUT,
+          name: arg.name,
           label,
         });
       } else {
@@ -486,61 +509,110 @@ const determineInputs = function (text, args, strictTypes=[]) {
 exports.determineInputs = determineInputs;
 
 /**
+ * @type {Object.<string, InputType>}
+ */
+const STANDARD_INPUT_TYPES = {
+  [VALUE_INPUT]: {
+    addInputRow(blockly, block, inputConfig) {
+      const inputRow = block.appendValueInput(inputConfig.name)
+          .setAlign(blockly.ALIGN_RIGHT);
+      if (inputConfig.strict) {
+        inputRow.setStrictCheck(inputConfig.type);
+      } else {
+        inputRow.setCheck(inputConfig.type);
+      }
+      return inputRow;
+    },
+    generateCode(block, inputConfig) {
+      return Blockly.JavaScript.valueToCode(block, inputConfig.name,
+          Blockly.JavaScript.ORDER_COMMA);
+    },
+  },
+  [STATEMENT_INPUT]: {
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendStatementInput(inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      const code = Blockly.JavaScript.statementToCode(block, inputConfig.name);
+      return `function () {\n${code}}`;
+    },
+  },
+  [DUMMY_INPUT]: {
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendDummyInput();
+    },
+    generateCode(block, inputConfig) {
+      return null;
+    },
+  },
+  [DROPDOWN_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const dropdown = new blockly.FieldDropdown(inputConfig.options);
+      currentInputRow.appendTitle(inputConfig.label)
+          .appendTitle(dropdown, inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      return block.getTitleValue(inputConfig.name);
+    },
+  },
+  [FIELD_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow.appendTitle(inputConfig.label)
+          .appendTitle(new blockly.FieldTextInput(''), inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      let code = block.getTitleValue(inputConfig.name);
+      if (inputConfig.type === Blockly.BlockValueType.STRING) {
+        code = `"${code}"`;
+      }
+      return code;
+    },
+  },
+};
+
+const groupInputsByRow = function (inputs, inputTypes=STANDARD_INPUT_TYPES) {
+  const inputRows = [];
+  let lastGroup = [];
+  inputRows.push(lastGroup);
+  inputs.forEach(input => {
+    lastGroup.push(input);
+    if (inputTypes[input.mode].addInputRow) {
+      lastGroup = [];
+      inputRows.push(lastGroup);
+    }
+  });
+  const lastRow = inputRows[inputRows.length - 1];
+  if (inputRows[inputRows.length - 1].length) {
+    lastRow.push({mode: DUMMY_INPUT});
+  } else {
+    inputRows.pop();
+  }
+  return inputRows;
+};
+exports.groupInputsByRow = groupInputsByRow;
+
+/**
  * Adds the specified inputs to the block
  * @param {Blockly} blockly The Blockly object provided to install()
  * @param {Block} block The block to add the inputs to
- * @param {Object[]} inputs The list of inputs. See determineInputs() for
- *   the fields in each input.
- * @param {object} customInputTypes A map of customType input names to their
- *   definitions, which are objects that have `addInput` and `generateCode`
- *   methods.
+ * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
+ * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (blockly, block, inputs, customInputTypes, inline) {
-  let dropdown, previousInput;
-  const getPreviousInput = () => {
-    if (!previousInput) {
-      previousInput = block.appendDummyInput();
-    }
-    return previousInput;
-  };
-  inputs.map(input => {
-    switch (input.mode) {
-      case DROPDOWN_INPUT:
-        dropdown = new blockly.FieldDropdown(input.options);
-        getPreviousInput().appendTitle(input.label)
-          .appendTitle(dropdown, input.name);
-        break;
-      case VALUE_INPUT:
-        previousInput = block.appendValueInput(input.name);
-        if (input.strict) {
-          previousInput.setStrictCheck(input.type);
-        } else {
-          previousInput.setCheck(input.type);
-        }
-        previousInput.appendTitle(input.label);
-        if (!inline) {
-          previousInput.setAlign(Blockly.ALIGN_RIGHT);
-        }
-        break;
-      case DUMMY_INPUT:
-        getPreviousInput().appendTitle(input.label);
-        break;
-      case STATEMENT_INPUT:
-        if (input.label) {
-          getPreviousInput().appendTitle(input.label);
-        }
-        block.appendStatementInput(input.name);
-        previousInput = null;
-        break;
-      case FIELD_INPUT:
-        getPreviousInput().appendTitle(input.label)
-            .appendTitle(new Blockly.FieldTextInput(''), input.name);
-        break;
-      default:
-        previousInput = customInputTypes[input.mode].addInput(block, input);
-        break;
-    }
+const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
+  groupInputsByRow(inputs, inputTypes).forEach(inputRow => {
+    // Create the last input in the row first
+    const lastInputConfig = inputRow[inputRow.length - 1];
+    const lastInput = inputTypes[lastInputConfig.mode]
+        .addInputRow(blockly, block, lastInputConfig);
+
+    // Append the rest of the inputs onto that
+    inputRow.slice(0, -1).forEach(inputConfig => {
+      inputTypes[inputConfig.mode].addInput(blockly, block, inputConfig, lastInput);
+    });
+
+    // Finally append the last input's label
+    lastInput.appendTitle(lastInputConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
@@ -570,13 +642,17 @@ exports.createJsWrapperBlockCreator = function (
 ) {
 
   const {
-    ORDER_COMMA,
     ORDER_FUNCTION_CALL,
     ORDER_MEMBER,
     ORDER_NONE,
   } = Blockly.JavaScript;
 
   const generator = blockly.Generator.get('JavaScript');
+
+  const inputTypes = {
+    ...STANDARD_INPUT_TYPES,
+    ...customInputTypes,
+  };
 
   /**
    * Create a block that directly maps to a javascript function call, method
@@ -594,7 +670,7 @@ exports.createJsWrapperBlockCreator = function (
    * @param {string} opts.name Block name, defaults to func.
    * @param {string} opts.blockText Human-readable text to show on the block,
    *   with params specified in curly braces, see determineInputs()
-   * @param {Object[]} opts.args List of block inputs, see determineInputs()
+   * @param {InputConfig[]} opts.args List of block inputs.
    * @param {BlockValueType} opts.returnType Type of value returned by this
    *   block, omit if you want a block with no output.
    * @param {boolean} opts.strictOutput Whether to enforce strict type checking
@@ -608,6 +684,7 @@ exports.createJsWrapperBlockCreator = function (
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
+   * @param {boolean} opts.simpleValue Just return the
    *
    * @returns {string} the name of the generated block
    */
@@ -637,6 +714,9 @@ exports.createJsWrapperBlockCreator = function (
     if (simpleValue && args.length !== 1) {
       throw new Error('simpleValue blocks must have exactly one argument');
     }
+    if (simpleValue && !returnType) {
+      throw new Error('simpleValue blocks must specify a return type');
+    }
     if (inline === undefined) {
       inline = true;
     }
@@ -655,28 +735,29 @@ exports.createJsWrapperBlockCreator = function (
         statement: true,
       });
     }
+    const inputs = [...args];
+    if (methodCall) {
+      const thisType = objectType ||
+        defaultObjectType ||
+        Blockly.BlockValueType.NONE;
+      inputs.push({
+        name: 'THIS',
+        type: thisType,
+        strict: strictTypes.includes(thisType),
+      });
+    }
+    const inputConfigs = determineInputs(blockText, inputs, strictTypes);
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
         this.setHSV(...color);
-        const inputs = [...args];
-        if (methodCall) {
-          const thisType = objectType ||
-            defaultObjectType ||
-            Blockly.BlockValueType.NONE;
-          inputs.push({
-            name: 'THIS',
-            type: thisType,
-            strict: strictTypes.includes(thisType),
-          });
-        }
 
         interpolateInputs(
           blockly,
           this,
-          determineInputs(blockText, inputs, strictTypes),
-          customInputTypes,
+          inputConfigs,
+          inputTypes,
           inline,
         );
         this.setInputsInline(inline);
@@ -701,24 +782,8 @@ exports.createJsWrapperBlockCreator = function (
 
     generator[blockName] = function () {
       const values = args.map(arg => {
-        if (arg.customInput) {
-          return customInputTypes[arg.customInput].generateCode(this, arg);
-        } else if (arg.empty) {
-          return null;
-        } else if (arg.options) {
-          return this.getTitleValue(arg.name);
-        } else if (arg.field) {
-          let code = this.getTitleValue(arg.name);
-          if (arg.type === Blockly.BlockValueType.STRING) {
-            code = `"${code}"`;
-          }
-          return code;
-        } else if (arg.statement) {
-          const code = Blockly.JavaScript.statementToCode(this, arg.name);
-          return `function () {\n${code}}`;
-        } else {
-          return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
-        }
+        const inputConfig = inputConfigs.find(input => input.name === arg.name);
+        return inputTypes[inputConfig.mode].generateCode(this, inputConfig);
       }).filter(value => value !== null).map(value => {
         if (value === "") {
           // Missing inputs should be passed into func as undefined
