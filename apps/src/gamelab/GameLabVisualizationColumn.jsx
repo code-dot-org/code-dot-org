@@ -33,6 +33,7 @@ class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
@@ -129,6 +130,7 @@ class GameLabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
+    const spriteLab = this.props.spriteLab;
     return (
       <span>
         <ProtectedVisualizationDiv>
@@ -146,8 +148,8 @@ class GameLabVisualizationColumn extends React.Component {
             onMouseMove={this.onMouseMove}
           >
             <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay/>
-            <TooltipOverlay providers={[coordinatesProvider()]}/>
+            <CrosshairOverlay flip={spriteLab} />
+            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]}/>
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
@@ -162,9 +164,9 @@ class GameLabVisualizationColumn extends React.Component {
 
           <CompletionButton />
 
-          {!this.props.isShareView && this.renderGridCheckbox()}
+          {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {this.renderAppSpaceCoordinates()}
+        {!spriteLab && this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}
@@ -180,6 +182,7 @@ class GameLabVisualizationColumn extends React.Component {
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
+  spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
   showGrid: state.gridOverlay,
   pickingLocation: isPickingLocation(state.locationPicker),
