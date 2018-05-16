@@ -127,6 +127,7 @@ module ScriptConstants
       CSP17_EXPLORE_NAME = 'csp-explore'.freeze,
       CSP17_CREATE_NAME = 'csp-create'.freeze,
       CSP17_POSTAP_NAME = 'csppostap'.freeze,
+      CSP17_SURVEY_NAME = 'csp-post-survey'.freeze,
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
