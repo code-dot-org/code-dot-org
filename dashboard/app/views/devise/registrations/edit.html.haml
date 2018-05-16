@@ -131,6 +131,7 @@
       = f.label t('signup_form.user_type')
       = f.select :user_type, user_type_options
     .farSide
+      %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
 - if current_user.can_delete_own_account?

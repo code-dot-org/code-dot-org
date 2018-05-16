@@ -21,6 +21,7 @@ export default class ChangeUserTypeController {
     this.isOauth = isOauth;
     this.dropdown = form.find('#change-user-type_user_user_type');
     this.button = form.find('#change-user-type-button');
+    this.status = form.find('#change-user-type-status');
 
 
     // Attach handlers
@@ -46,9 +47,17 @@ export default class ChangeUserTypeController {
     if (needEmailConfirmation) {
       this.showChangeUserTypeModal();
     } else {
+      this.dropdown.prop('disabled', true);
+      this.button.prop('disabled', true);
+      this.status.text(i18n.saving());
       this.submitUserTypeChange({})
         .then(() => window.location.reload())
-        .catch(err => console.error(err));
+        .catch(err => {
+          this.dropdown.prop('disabled', false);
+          this.button.prop('disabled', false);
+          this.status.text(err);
+          console.error(err);
+        });
     }
 
     e.preventDefault();
