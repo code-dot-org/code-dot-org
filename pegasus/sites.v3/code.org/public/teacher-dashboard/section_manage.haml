@@ -46,7 +46,3 @@ content-type: text/ng-template
 
   #login-type-react{'ng-init' => '$emit("login-type-react-rendered");'}
 
-  %br/
-  %div{id: 'privacy_link'}
-    %a{'ng-href' => CDO.code_org_url("/privacy/student-privacy"), target: "_blank"}
-      =I18n.t('privacy_doc_explanation')
