@@ -3,7 +3,6 @@ import ChangeUserTypeForm from './ChangeUserTypeForm';
 import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
-  targetUserType: 'teacher',
   values: {
     newEmail: '',
   },
@@ -23,19 +22,6 @@ export default storybook => storybook
       story: () => (
         <ChangeUserTypeForm
           {...DEFAULT_PROPS}
-          targetUserType="teacher"
-          values={{
-            currentEmail: 'batman@bat.cave',
-          }}
-        />
-      )
-    },
-    {
-      name: 'convert teacher to student account',
-      story: () => (
-        <ChangeUserTypeForm
-          {...DEFAULT_PROPS}
-          targetUserType="student"
           values={{
             currentEmail: 'batman@bat.cave',
           }}

@@ -43,7 +43,6 @@ export default class ChangeUserTypeController {
     // Email confirmation is required when changing from a student account
     // to a teacher account.
     const needEmailConfirmation = this.dropdown.val() === 'teacher';
-
     if (needEmailConfirmation) {
       this.showChangeUserTypeModal();
     } else {
@@ -64,7 +63,6 @@ export default class ChangeUserTypeController {
   };
 
   showChangeUserTypeModal() {
-    const targetUserType = this.dropdown.val();
     const userHashedEmail= document.getElementById('change-user-type_user_hashed_email').value;
     const handleSubmit = (values) => (
       this.submitUserTypeChange(values)
@@ -75,7 +73,6 @@ export default class ChangeUserTypeController {
     document.body.appendChild(this.mountPoint);
     ReactDOM.render(
       <ChangeUserTypeModal
-        targetUserType={targetUserType}
         currentHashedEmail={userHashedEmail}
         handleSubmit={handleSubmit}
         handleCancel={this.hideChangeUserTypeModal}

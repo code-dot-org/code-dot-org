@@ -24,9 +24,6 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
-const TEACHER = 'teacher';
-const STUDENT = 'student';
-
 // TODO: Move some of this comment into relevant edit.js code
 //
 // Note: This dialog submits account changes to dashboard using a
@@ -48,8 +45,6 @@ const STUDENT = 'student';
 //
 export default class ChangeUserTypeModal extends React.Component {
   static propTypes = {
-    // The desired user type _after_ submitting the form.
-    targetUserType: PropTypes.oneOf([TEACHER, STUDENT]).isRequired,
     currentHashedEmail: PropTypes.string,
     /**
      * @type {function({currentEmail: string}):Promise}
@@ -110,11 +105,7 @@ export default class ChangeUserTypeModal extends React.Component {
 
   getCurrentEmailValidationError = () => {
     const {currentEmail} = this.state.values;
-    const {targetUserType, currentHashedEmail} = this.props;
-    if (STUDENT === targetUserType) {
-      // We don't request email to become a student user.
-      return null;
-    }
+    const {currentHashedEmail} = this.props;
     if (currentEmail.trim().length === 0) {
       return i18n.changeUserTypeModal_currentEmail_isRequired();
     }
@@ -139,15 +130,6 @@ export default class ChangeUserTypeModal extends React.Component {
     });
   };
 
-  saveText() {
-    const {targetUserType} = this.props;
-    if (TEACHER === targetUserType) {
-      return i18n.changeUserTypeModal_save_teacher();
-    } else {
-      return i18n.changeUserTypeModal_save_student();
-    }
-  }
-
   render = () => {
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
@@ -163,7 +145,6 @@ export default class ChangeUserTypeModal extends React.Component {
           <Header text={i18n.changeUserTypeModal_title()}/>
           <ChangeUserTypeForm
             ref={x => this.changeUserTypeForm = x}
-            targetUserType={this.props.targetUserType}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
@@ -171,7 +152,7 @@ export default class ChangeUserTypeModal extends React.Component {
             onSubmit={this.save}
           />
           <ConfirmCancelFooter
-            confirmText={this.saveText()}
+            confirmText={i18n.changeUserTypeModal_save_teacher()}
             onConfirm={this.save}
             onCancel={this.cancel}
             disableConfirm={STATE_SAVING === saveState || !isFormValid}
