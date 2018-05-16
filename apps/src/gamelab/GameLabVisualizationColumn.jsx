@@ -19,6 +19,7 @@ import {
   updateLocation,
   isPickingLocation
 } from './locationPickerModule';
+import { calculateOffsetCoordinates } from '../utils';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
@@ -52,19 +53,21 @@ class GameLabVisualizationColumn extends React.Component {
 
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
-      this.props.updatePicker({
-        x: e.offsetX,
-        y: e.offsetY,
-      });
+      this.props.updatePicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
     }
   };
 
   pickerPointerUp = e => {
     if (this.props.pickingLocation) {
-      this.props.selectPicker({
-        x: e.offsetX,
-        y: e.offsetY,
-      });
+      this.props.selectPicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
     }
   };
 
@@ -82,9 +85,8 @@ class GameLabVisualizationColumn extends React.Component {
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
     const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
-    const divGameLab = document.getElementById('divGameLab');
     const visualizationOverlay = document.getElementById('visualizationOverlay');
-    divGameLab.style.zIndex = zIndex;
+    this.divGameLab.style.zIndex = zIndex;
     visualizationOverlay.style.zIndex = zIndex;
   }
 
@@ -139,6 +141,7 @@ class GameLabVisualizationColumn extends React.Component {
             tabIndex="1"
             onPointerMove={this.pickerPointerMove}
             onPointerUp={this.pickerPointerUp}
+            elementRef={el => this.divGameLab = el}
           />
           <VisualizationOverlay
             width={GAME_WIDTH}
