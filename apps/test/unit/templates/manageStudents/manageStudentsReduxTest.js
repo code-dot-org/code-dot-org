@@ -1,7 +1,6 @@
 import { assert } from '../../../util/configuredChai';
 import manageStudents, {
   setLoginType,
-  setSectionId,
   setStudents,
   convertStudentDataToArray,
   startEditingStudent,
@@ -331,14 +330,6 @@ describe('manageStudentsRedux', () => {
       const action = setLoginType('picture');
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.loginType, 'picture');
-    });
-  });
-
-  describe('setSectionId', () => {
-    it('sets section id for the section in view', () => {
-      const action = setSectionId('123abc');
-      const nextState = manageStudents(initialState, action);
-      assert.deepEqual(nextState.sectionId, '123abc');
     });
   });
 

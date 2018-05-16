@@ -6,10 +6,10 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import {h3Style} from "../../lib/ui/Headings";
 import color from "../../util/color";
-import {validScriptPropType, setScriptId} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {asyncLoadTextResponses} from './textResponsesRedux';
 import TextResponsesTable from './TextResponsesTable';
 import Button from '../Button';
+import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -61,9 +61,8 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-
     // provided by redux
+    sectionId: PropTypes.number.isRequired,
     responses: PropTypes.object.isRequired,
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
@@ -185,10 +184,11 @@ class TextResponses extends Component {
 export const UnconnectedTextResponses = TextResponses;
 
 export default connect(state => ({
+  sectionId: state.sectionData.section.id,
   responses: state.textResponses.responseDataByScript,
   isLoadingResponses: state.textResponses.isLoadingResponses,
-  validScripts: state.sectionProgress.validScripts,
-  scriptId: state.sectionProgress.scriptId,
+  validScripts: state.scriptSelection.validScripts,
+  scriptId: state.scriptSelection.scriptId,
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));

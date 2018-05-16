@@ -578,7 +578,7 @@ class ManageStudentsTable extends Component {
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(state => ({
-  sectionId: state.manageStudents.sectionId,
+  sectionId: state.sectionData.section.id,
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,

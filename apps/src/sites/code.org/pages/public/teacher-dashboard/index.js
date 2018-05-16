@@ -23,7 +23,9 @@ import {
   renderTextResponsesTable
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
-import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -52,28 +54,10 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
-  registerReducers({sectionProgress});
+  registerReducers({sectionProgress, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
-
-  const promises = [
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-      dataType: 'json'
-    }),
-    $.ajax({
-      method: 'GET',
-      url: `/dashboardapi/courses?allVersions=1`,
-      dataType: 'json'
-    })
-  ];
-  Promise.all(promises).then(data => {
-    let [studentScriptsData, validCourses] = data;
-    const { studentScriptIds } = studentScriptsData;
-    store.dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
-    renderSectionProgressReact(store);
-  });
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => renderSectionProgressReact(store));
 }
 
 function renderSectionProgressReact(store) {
@@ -432,7 +416,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
+        $scope.section.$promise.then(section => renderSectionTable(section));
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
