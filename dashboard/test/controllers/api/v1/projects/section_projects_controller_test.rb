@@ -28,7 +28,8 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
 
     other_student_project_value = {
       name: 'Bobs Other App',
-      # project level shouldn't look like this but sometimes does.
+      # Project level shouldn't look like this but sometimes does. We can remove
+      # this test case once level is backfilled to always be /projects/foo.
       level: 'https://studio.code.org/projects/weblab',
       createdAt: '2017-01-02T00:00:00.000-08:00',
       updatedAt: '2017-01-02T00:00:00.000-08:00',
@@ -79,7 +80,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     assert_response :success
     projects_list = JSON.parse(@response.body)
 
-    # this verifies that the hidden project was not shown.
+    # This verifies that the hidden project was not shown.
     assert_equal 2, projects_list.size
     project_row = projects_list.first
     storage_id, _ = storage_decrypt_channel_id(project_row['channel'])
