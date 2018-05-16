@@ -3,6 +3,21 @@ import ReactDOM from "react-dom";
 import ChangeUserTypeModal from './ChangeUserTypeModal';
 import i18n from '@cdo/locale';
 
+/**
+ * Note: This controller attaches to the accounts page, and submits account
+ * changes to dashboard using a Rails-generated form.  It takes a jQuery
+ * wrapper for that form as an argument to the constructor.
+ *
+ * On submit, this controller loads the relevant information into the form and
+ * calls submit(). Rails injects all the JavaScript needed for the form to
+ * submit via AJAX with all the appropriate validation tokens, etc.  The
+ * controller subscribes to events emitted by the Rails helper JavaScript to
+ * detect success or errors.
+ *
+ * Read more:
+ * http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
+ * https://github.com/rails/jquery-ujs
+ */
 export default class ChangeUserTypeController {
   /**
    * Attach handlers and behaviors for the part of the accounts page that
@@ -26,20 +41,23 @@ export default class ChangeUserTypeController {
 
     // Attach handlers
     this.dropdown.change(e => this.onUserTypeDropdownChange(e.target.value));
-    this.button.click(this.onUserTypeChangeButtonClick);
+    this.button.click(this.onChangeUserTypeButtonClick);
 
     // Set initial state
     this.onUserTypeDropdownChange(initialUserType);
   }
 
-  // Enable or disable the submit button for changing user type based on
-  // whether the selected user type is actually different than the user's
-  // current type.
+  /**
+   * Enable or disable the submit button for changing user type based on
+   * whether the selected user type is actually different than the user's
+   * current type.
+   * @param {string} selectedType
+   */
   onUserTypeDropdownChange = (selectedType) => {
     this.button.prop('disabled', selectedType === this.initialUserType);
   };
 
-  onUserTypeChangeButtonClick = (e) => {
+  onChangeUserTypeButtonClick = (e) => {
     // Email confirmation is required when changing from a student account
     // to a teacher account.
     const needEmailConfirmation = this.dropdown.val() === 'teacher';
