@@ -16,6 +16,26 @@ export const setValidScripts = (validScripts, studentScriptIds, validCourses, as
   {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
 );
 
+export const loadValidScripts = (section, validScripts) => {
+  return async (dispatch, getState) => {
+    const promises = [
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
+        dataType: 'json'
+      }),
+      $.ajax({
+        method: 'GET',
+        url: `/dashboardapi/courses?allVersions=1`,
+        dataType: 'json'
+      })
+    ];
+    const [studentScriptsData, validCourses] = await Promise.all(promises);
+    const { studentScriptIds } = studentScriptsData;
+    dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
+  };
+};
+
 /**
  * Shape for a validScript
  */
@@ -103,27 +123,3 @@ export default function scriptSelection(state=initialState, action) {
 
   return state;
 }
-
-export const loadValidScripts = (section, validScripts, onComplete = () => {}) => {
-  return (dispatch, getState) => {
-    const promises = [
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-        dataType: 'json'
-      }),
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/courses?allVersions=1`,
-        dataType: 'json'
-      })
-    ];
-    Promise.all(promises).then(data => {
-      let [studentScriptsData, validCourses] = data;
-      const { studentScriptIds } = studentScriptsData;
-      dispatch(setValidScripts(validScripts, studentScriptIds, validCourses, section.course_id));
-      onComplete();
-    });
-  };
-};
-
