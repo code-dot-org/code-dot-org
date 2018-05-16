@@ -45,7 +45,7 @@ export default class SchoolAutocompleteDropdown extends Component {
   debouncedSearch = _.debounce((q, callback) => {
     const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40` +
       (experiments.isEnabled(experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH) ?
-       '/true' : '');
+       '/useNewSearch' : '');
 
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
