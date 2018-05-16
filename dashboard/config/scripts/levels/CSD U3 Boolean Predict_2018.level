@@ -48,11 +48,17 @@
     "expand_debugger": "true",
     "encrypted_examples": "qHASsRt9P7AHes3CGv31taEEI1p2Wc54Ogr54/je7W6ikQfTCtkGJ8A+Dstz\nuQFRwxXp6do8vJtIxBqr8+GSbA==\n",
     "parent_level_id": 4618,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "map_reference": "/docs/csd-1718/booleans/index.html",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-26 16:37:52 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-26 16:37:52 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:17:32 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

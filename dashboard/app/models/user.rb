@@ -208,7 +208,7 @@ class User < ActiveRecord::Base
 
   after_create :associate_with_potential_pd_enrollments
 
-  after_create :save_email_preference, if: -> {!email_preference_opt_in.nil?}
+  after_create :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   def save_email_preference
     if teacher?
