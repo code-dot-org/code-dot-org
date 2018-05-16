@@ -64,15 +64,15 @@ export default class ChangeUserTypeController {
     if (needEmailConfirmation) {
       this.showChangeUserTypeModal();
     } else {
+      const promise = this.submitUserTypeChange({});
       this.dropdown.prop('disabled', true);
       this.button.prop('disabled', true);
       this.status.text(i18n.saving());
-      this.submitUserTypeChange({})
-        .then(() => window.location.reload())
+      promise.then(() => window.location.reload())
         .catch(err => {
           this.dropdown.prop('disabled', false);
           this.button.prop('disabled', false);
-          this.status.text(err);
+          this.status.text(JSON.stringify(err));
           console.error(err);
         });
     }
