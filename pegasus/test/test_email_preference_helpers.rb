@@ -2,6 +2,7 @@ require_relative '../helper_modules/dashboard'
 require_relative './test_helper'
 require 'cdo/email_preference_constants'
 require_relative '../helpers/email_preference_helpers'
+require 'timecop'
 
 class EmailPreferenceHelperTest < Minitest::Test
   def test_upsert_new_email_preference_with_valid_attributes_creates_email_preference
@@ -70,7 +71,7 @@ class EmailPreferenceHelperTest < Minitest::Test
       assert_equal 'Source is not included in the list', error.message
       assert_nil row_id
     else
-      assert false, "Expected a source validation error."
+      fail 'Expected a source validation error.'
     end
   end
 
@@ -87,11 +88,13 @@ class EmailPreferenceHelperTest < Minitest::Test
       assert_equal 'IP Address is required', error.message
       assert_nil row_id
     else
-      assert false, "Expected an IP Address error."
+      fail 'Expected an IP Address error.'
     end
   end
 
   def test_upsert_existing_email_preference_changes_existing_email_preference
+    Timecop.freeze
+
     existing_row_id = EmailPreferenceHelper.upsert(
       email: 'existing@example.net',
       opt_in: false,
@@ -100,8 +103,8 @@ class EmailPreferenceHelperTest < Minitest::Test
       form_kind: nil
     )
 
-    # Wait one second so that updated_at will be different than created_at after updating existing entry.
-    sleep 1
+    # Move clock forward so that the row is updated_at a different time from when it was created_at.
+    Timecop.travel 1
 
     updated_row_id = EmailPreferenceHelper.upsert(
       email: 'existing@example.net',
@@ -118,6 +121,8 @@ class EmailPreferenceHelperTest < Minitest::Test
     assert_equal EmailPreferenceConstants::FORM_ACCESS_REPORT, updated_email_preference[:source]
     assert_equal "0", updated_email_preference[:form_kind]
     refute_equal updated_email_preference[:updated_at], updated_email_preference[:created_at]
+
+    Timecop.return
   end
 
   def test_upsert_email_preference_that_is_already_opted_in_does_not_opt_out
@@ -138,6 +143,6 @@ class EmailPreferenceHelperTest < Minitest::Test
     )
 
     updated_email_preference = Dashboard.db[:email_preferences].where(id: still_opted_in_row_id).first
-    assert_equal true, updated_email_preference[:opt_in]
+    assert updated_email_preference[:opt_in]
   end
 end
