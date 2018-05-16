@@ -565,14 +565,28 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Note that this does not currently support custom marshaling.
    *
    * @param code {string} - the code to evaluation
-   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param scope {Object} - An object of globals to be added to the scope of code being executed
    * @param {Object} opts - Additional options to control behavior
    * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
    * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, globals, {asyncFunctionList, legacy}={}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
+    const defaultExecutionInfo = {
+      ticks: DEFAULT_MAX_STEPS,
+      checkTimeout: function () {
+        if (this.ticks-- < 0) {
+          throw 'Infinity';
+        }
+      },
+      isTerminated: () => false,
+    };
+    const globals = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
+
     if (legacy) {
       // execute JS code "natively"
       var params = [];
@@ -593,18 +607,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         new CustomMarshaler({}),
         (interpreter, scope) => {
           interpreter.asyncFunctionList = asyncFunctionList || [];
-          interpreter.marshalNativeToInterpreterObject({
-            executionInfo: {
-              ticks: DEFAULT_MAX_STEPS,
-              checkTimeout: function () {
-                if (this.ticks-- < 0) {
-                  throw 'Infinity';
-                }
-              },
-              isTerminated: () => false,
-            },
-            ...globals,
-          }, 5, scope);
+          interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
         }
       );
       interpreter.run();
