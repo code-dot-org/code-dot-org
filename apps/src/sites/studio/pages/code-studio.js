@@ -12,6 +12,7 @@ import { getStore } from '@cdo/apps/code-studio/redux';
 import { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
 import initResponsive from '@cdo/apps/code-studio/responsive';
+import hashEmail from '@cdo/apps/code-studio/hashEmail';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
@@ -47,7 +48,7 @@ if ($.fn.modal) {
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
 window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts').default;
-window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
+window.dashboard.hashEmail = hashEmail;
 window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
 window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');

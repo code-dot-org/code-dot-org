@@ -28,7 +28,9 @@ class EmailPreference < ApplicationRecord
     ACCOUNT_EMAIL_ADD = 'Add email to teacher account',
     ACCOUNT_EMAIL_CHANGE = 'Update teacher account email',
     FORM_HOUR_OF_CODE = 'Host Hour of Code form',
-    FORM_VOLUNTEER = 'Volunteer form'
+    FORM_VOLUNTEER = 'Volunteer form',
+    FORM_REGIONAL_PARTNER = 'Regional partner contact',
+    FORM_CENSUS = 'Census form'
   ].freeze
 
   validates_inclusion_of :source, in: SOURCE_TYPES

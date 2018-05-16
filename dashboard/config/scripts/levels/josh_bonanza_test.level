@@ -12,10 +12,6 @@
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -49,7 +45,8 @@
     "pause_animations_by_default": "false",
     "custom_helper_library": "function comment(text) {\r\n  console.log(\"program used a comment with text: \" + text);\r\n}\r\nfunction turnSprite() {\r\n}",
     "custom_blocks": "[\r\n  {\r\n    \"blockText\": \"// Josh's awesome comment block: {COMMENT}\",\r\n    \"func\": \"comment\",\r\n    \"color\": [\r\n      0,\r\n      0,\r\n      0.7\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"COMMENT\",\r\n        \"field\": true,\r\n        \"type\": \"String\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"blockText\": \"turn {FAKE} sprite {SPRITE} direction {DIR} degrees {ANGLE}\",\r\n    \"func\": \"turnSprite\",\r\n    \"inline\": false,\r\n    \"args\": [\r\n      {\r\n        \"name\": \"FAKE\",\r\n        \"empty\": true\r\n      },\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"DIR\",\r\n        \"type\": \"String\"\r\n      },\r\n      {\r\n        \"name\": \"ANGLE\",\r\n        \"type\": \"Number\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"name\": \"rightOrLeft\",\r\n    \"color\": [\r\n      230,\r\n      1,\r\n      0.99\r\n    ],\r\n    \"simpleValue\": true,\r\n    \"returnType\": \"String\",\r\n    \"blockText\": \"{DIR}\",\r\n    \"args\": [\r\n      {\r\n        \"options\": [\r\n          [\r\n            \"left ↺\",\r\n            \"'left'\"\r\n          ],\r\n          [\r\n            \"right ↻\",\r\n            \"'right'\"\r\n          ]\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]",
-    "hide_custom_blocks": "false"
+    "hide_custom_blocks": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -2,6 +2,7 @@ import {
   cleanBlocks,
   determineInputs,
   interpolateInputs,
+  groupInputsByRow,
 } from '@cdo/apps/block_utils';
 import { parseElement, serialize } from '@cdo/apps/xml.js';
 import { expect } from '../util/configuredChai';
@@ -66,6 +67,7 @@ describe('block utils', () => {
       appendValueInput.returns(fakeInput);
       appendTitle.returns(fakeInput);
       setCheck.returns(fakeInput);
+      setAlign.returns(fakeInput);
 
       fakeBlockly = {
         FieldDropdown: sinon.stub(),
@@ -133,6 +135,79 @@ describe('block utils', () => {
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');
       expect(appendTitle).to.have.been.calledWith('dummy label');
+    });
+
+    it('adds labels before and after value input', () => {
+      interpolateInputs(fakeBlockly, fakeBlock, [
+        {
+          mode: 'value',
+          name: 'VALUE',
+          label: 'prefix'
+        },
+        {
+          mode: 'dummy',
+          label: 'suffix',
+        }
+      ]);
+
+      expect(appendValueInput).to.have.been.calledWith('VALUE');
+      expect(appendTitle).to.have.been.calledWith('prefix');
+      expect(appendDummyInput).to.have.been.calledOnce;
+      expect(appendTitle).to.have.been.calledWith('suffix');
+    });
+
+    describe('groupInputsByRow', () => {
+      const valueInput1 = {
+        mode: 'value',
+        name: 'VALUE1',
+        label: 'hello',
+      };
+      const valueInput2 = {
+        mode: 'value',
+        name: 'VALUE2',
+        label: 'world',
+      };
+      const fieldInput = {
+        mode: 'dropdown',
+        name: 'DROPDOWN',
+        label: 'foo',
+      };
+      const dummyInput = {
+        mode: 'dummy',
+      };
+      it('groups a single value input as one row', () => {
+        const groupedInputs = groupInputsByRow([valueInput1]);
+        expect(groupedInputs).to.deep.equal([
+          [valueInput1],
+        ]);
+      });
+      it('groups two value inputs as two rows', () => {
+        const groupedInputs = groupInputsByRow([valueInput1, valueInput2]);
+        expect(groupedInputs).to.deep.equal([
+          [valueInput1],
+          [valueInput2],
+        ]);
+      });
+      it('groups a field and value input as one row', () => {
+        const groupedInputs = groupInputsByRow([fieldInput, valueInput1]);
+        expect(groupedInputs).to.deep.equal([
+          [fieldInput, valueInput1],
+        ]);
+      });
+      it('groups a value and field input as two rows with a dummy input on the second', () => {
+        const groupedInputs = groupInputsByRow([valueInput1, fieldInput]);
+        expect(groupedInputs).to.deep.equal([
+          [valueInput1],
+          [fieldInput, dummyInput],
+        ]);
+      });
+      it('groups a field and two value inputs as two rows', () => {
+        const groupedInputs = groupInputsByRow([fieldInput, valueInput1, valueInput2]);
+        expect(groupedInputs).to.deep.equal([
+          [fieldInput, valueInput1],
+          [valueInput2],
+        ]);
+      });
     });
   });
 

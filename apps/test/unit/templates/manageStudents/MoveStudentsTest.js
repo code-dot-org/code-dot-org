@@ -8,17 +8,19 @@ import {
   TransferStatus
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const studentData = [
   {id: 1, name: 'studentb'},
   {id: 3, name: 'studentc'},
   {id: 0, name: 'studenta'}
 ];
-const sections = [
-  {id: 0, name: 'sectiona'},
-  {id: 1, name: 'sectionb'},
-  {id: 2, name: 'sectionc'}
-];
+const sections = {
+  0: {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
+  1: {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
+  2: {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
+  3: {id: 3, name: 'sectiond', loginType: SectionLoginType.word},
+};
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;
@@ -87,20 +89,22 @@ describe('MoveStudents', () => {
     expect(nameCells.at(2)).to.have.text('studenta');
   });
 
-  it('shows all sections minus current section in dropdown', () => {
+  it('renders only movable sections in dropdown', () => {
     const wrapper = mount(
       <MoveStudents {...DEFAULT_PROPS}/>
     );
 
     wrapper.find('Button').simulate('click');
     const dropdownOptions = wrapper.find('select').find('option');
-    // Dropdown options should include initial empty option, list of
-    // sections (excluding current section), and 'Other teacher' option
-    expect(dropdownOptions).to.have.length(4);
+    /**
+     * Dropdown options should include initial empty option, list of
+     * sections (excluding current section and any clever/google classroom sections),
+     * and 'Other teacher' option
+     */
+    expect(dropdownOptions).to.have.length(3);
     expect(dropdownOptions.at(0)).to.have.text('');
-    expect(dropdownOptions.at(1)).to.have.text('sectiona');
-    expect(dropdownOptions.at(2)).to.have.text('sectionc');
-    expect(dropdownOptions.at(3)).to.have.text('Other teacher');
+    expect(dropdownOptions.at(1)).to.have.text('sectiond');
+    expect(dropdownOptions.at(2)).to.have.text('Other teacher');
   });
 
   it('renders additional inputs if other teacher is selected', () => {

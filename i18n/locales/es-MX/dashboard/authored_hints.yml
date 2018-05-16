@@ -9657,17 +9657,17 @@ es-MX:
         courseD_artist_functions8_g: "! [] (https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8a_2018_authored_hint: { }
       courseE_artist_functions8b_2018_authored_hint:
-        courseD_artist_functions8_f: You only need one `move forward` block if you're doing this correctly!
-        courseD_artist_functions8_a: Start by making a function for a square, then try making a function for a line of squares.
+        courseD_artist_functions8_f: Si lo hace correctamente, solo necesita avanzar un bloque!
+        courseD_artist_functions8_a: Inicia con una función por cada bloque, después intenta hacer una función por una línea de bloques.
         courseD_artist_functions8_d: |-
-          To make a line of squares,
-          - repeat 3 times
-          - draw a square
-          - jump forward **100 pixels**
+          Para hacer una línea de cuadrados
+          -repita 3 veces
+          -dibuja un cuadrado
+          -salta **100 pixeles**
       courseE_artist_functions8c_2018_authored_hint:
-        courseD_artist_functions8_f: This is easier than it looks!  You shouldn't need any `move` or `jump` blocks here!
-        courseD_artist_functions8_a: The second line of squares is just a 180 degree turn different than the first!
-        courseD_artist_functions8_c: At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!
+        courseD_artist_functions8_f: Esto es mas fácil de lo que parece, ¡Aquí no debe mover ni hacer saltar ningún bloque!
+        courseD_artist_functions8_a: '¡La segunda línea de cuadrados es diferente de la primera por solo un giro de 180 grados!'
+        courseD_artist_functions8_c: Al final de cada línea de cuadrados, el artista solo debe girar 180 grados antes de dibujar la siguiente línea. ¡Pon toda la instrucción en un lazo de repetición para iniciar el siguiente ejercicio!
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
           ¿Puedes ver los cuatro lugares donde se puede usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
@@ -13728,8 +13728,8 @@ es-MX:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques debajo de él hacia la derecha y permite que se queden en el espacio de trabajo por un tiempo. \n\nHaz clic en el bloque que desea eliminar y arrástralo nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques en su lugar.\n"
         courseF_maze_ramp3_b: Use el botón de paso para recorrer el programa línea por línea. ¿Dónde hay un error?
       drawings!_authored_hint:
-        triangle_geometry_hint: 'Recuerda: un triángulo equilátero tiene tres lados, ¡con un giro de 60 grados entre cada uno!'
-        repeat_pointer: Tienes que dibujar un lado y girar 3 veces... ¿qué bloque puedes usar para ejecutar las mismas instrucciones muchas veces?
+        triangle_geometry_hint: 'Recuerda: Un triangulo equilátero tiene tres lados y giros o ángulos de 60 grados entre ellos!'
+        repeat_pointer: Debe dibujar un lado y dar tres giros...¿Que bloque puede usar para repetir la misma instrucción varias veces?
         repeat_bottom_out: '¡Usa un bloque `repetir 3 veces`!'
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: Necesitarás tres bucles `repetir` para resolver este puzzle.
