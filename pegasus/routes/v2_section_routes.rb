@@ -21,7 +21,14 @@ post '/v2/sections' do
 end
 
 # Get the set of sections that the current user is enrolled in.
+# DEPRECATED: Use GET /dashboardapi/sections/membership instead
 get '/v2/sections/membership' do
+  # Notify Honeybadger to determine if this endpoint is still used anywhere
+  Honeybadger.notify(
+    error_class: "DeprecatedEndpointWarning",
+    error_message: 'Deprecated endpoint /v2/sections/membership called unexpectedly',
+  )
+
   only_for 'code.org'
   dont_cache
   content_type :json
