@@ -1,5 +1,6 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
+  load_and_authorize_resource :sections, only: [:membership]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave]
 
@@ -101,6 +102,12 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   def student_script_ids
     render json: {studentScriptIds: @section.student_script_ids}
+  end
+
+  # GET /api/v1/sections/membership
+  # Get the set of sections that the current user is enrolled in.
+  def membership
+    render json: {sections: @sections}
   end
 
   private

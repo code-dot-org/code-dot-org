@@ -46,15 +46,6 @@ class SectionsController < ApplicationController
     end
   end
 
-  # Get the set of sections that the current user is enrolled in.
-  def membership
-    unless current_user
-      return head :forbidden
-    end
-
-    render json: {sections: current_user.sections_as_student}
-  end
-
   private
 
   def redirect_to_section_script_or_course
