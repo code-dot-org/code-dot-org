@@ -56,10 +56,7 @@ function renderSectionProgress(section, validScripts) {
   registerReducers({sectionProgress, scriptSelection});
   const store = getStore();
   store.dispatch(setSection(section));
-  // add callback to this function?
-  store.dispatch(loadValidScripts(section, validScripts, () => {
-    renderSectionProgressReact(store);
-  }));
+  store.dispatch(loadValidScripts(section, validScripts)).then(() => renderSectionProgressReact(store));
 }
 
 function renderSectionProgressReact(store) {

@@ -21,7 +21,7 @@ const fakeValidScripts = [
     position: 23
   },
   {
-    // use a different category to make sure we aren't relying on it to group
+    // Use a different category to make sure we aren't relying on it to group
     // units within courses.
     category: 'other csp',
     category_priority: 1,
