@@ -204,7 +204,7 @@ In some cases, travel may be required to attend your five-day summer workshop. P
 **Local Academic Year Workshop Expenses**
 Meals and course materials will be provided to participants who attend the local follow-up workshops. Your Regional Partner will schedule and lead these workshops, and will provide more details.
 
-## Additional benefits
+## <a name="benefits"></a>Additional benefits
 
 [col-20]
 
