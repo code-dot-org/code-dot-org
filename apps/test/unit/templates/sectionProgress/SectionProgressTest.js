@@ -35,7 +35,8 @@ describe('SectionProgress', () => {
               {id: 789}
             ],
           }
-        ]
+        ],
+        excludeCsfColumnInLegend: true,
       },
       isLoadingProgress: false,
     };
