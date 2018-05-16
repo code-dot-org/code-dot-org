@@ -8,16 +8,14 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 describe('ChangeEmailModal', () => {
-  let wrapper, form, defaultProps;
+  let wrapper;
 
   const EMAIL_SELECTOR = 'input[type="email"]';
   const PASSWORD_SELECTOR = 'input[type="password"]';
 
-  const STATIC_DEFAULT_PROPS = {
-    isOpen: true,
+  const DEFAULT_PROPS = {
     handleSubmit: () => {},
     handleCancel: () => {},
-    userAge: 21,
   };
 
   // Helpers for selecting particular elements/components
@@ -29,14 +27,7 @@ describe('ChangeEmailModal', () => {
     .filterWhere(n => n.prop('text') === i18n.cancel());
 
   beforeEach(() => {
-    form = document.createElement('form');
-    defaultProps = {
-      ...STATIC_DEFAULT_PROPS,
-      railsForm: form,
-    };
-    wrapper = mount(
-      <ChangeEmailModal {...defaultProps}/>
-    );
+    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS}/>);
   });
 
   afterEach(() => {

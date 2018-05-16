@@ -21,7 +21,6 @@ import {hashEmail} from '../../../code-studio/hashEmail';
  */
 export default class ChangeEmailController {
   /**
-   *
    * @param {jQuery} form
    * @param {function(newEmail:string, newHashedEmail:string)} emailChangedCallback
    */
@@ -32,25 +31,27 @@ export default class ChangeEmailController {
   }
 
   showChangeEmailModal = () => {
-    const userAge = parseInt(document.getElementById('user_age').value, 10);
     const userHashedEmail = this.form.find('#change-email-modal_user_hashed_email').val();
-    this.changeEmailMountPoint = document.createElement('div');
-    document.body.appendChild(this.changeEmailMountPoint);
+    const handleSubmit = (values) => (
+      this.submitEmailChange(values)
+        .then(this.onEmailChanged)
+    );
+
+    this.mountPoint = document.createElement('div');
+    document.body.appendChild(this.mountPoint);
     ReactDOM.render(
       <ChangeEmailModal
-        handleSubmit={this.onEmailChanged}
+        handleSubmit={handleSubmit}
         handleCancel={this.hideChangeEmailModal}
-        railsForm={this.form[0]}
-        userAge={userAge}
         currentHashedEmail={userHashedEmail}
       />,
-      this.changeEmailMountPoint
+      this.mountPoint
     );
   };
 
   hideChangeEmailModal = () => {
-    ReactDOM.unmountComponentAtNode(this.changeEmailMountPoint);
-    document.body.removeChild(this.changeEmailMountPoint);
+    ReactDOM.unmountComponentAtNode(this.mountPoint);
+    document.body.removeChild(this.mountPoint);
   };
 
   onEmailChanged = (newEmail) => {
@@ -66,4 +67,44 @@ export default class ChangeEmailController {
     this.emailChangedCallback(newEmail, hashEmail(newEmail));
   };
 
+  submitEmailChange({newEmail, currentPassword}) {
+    const newHashedEmail = hashEmail(newEmail);
+    const userAge = parseInt(document.getElementById('user_age').value, 10);
+    return new Promise((resolve, reject) => {
+      const onSuccess = () => {
+        detachHandlers();
+        resolve(newEmail);
+      };
+
+      const onFailure = (_, xhr) => {
+        const validationErrors = xhr.responseJSON;
+        let error;
+        if (validationErrors) {
+          error = {
+            serverErrors: {
+              newEmail: validationErrors.email && validationErrors.email[0],
+              currentPassword: validationErrors.current_password && validationErrors.current_password[0],
+            }
+          };
+        } else {
+          error = new Error('Unexpected failure: ' + xhr.status);
+        }
+        detachHandlers();
+        reject(error);
+      };
+
+      // Subscribe to jquery-ujs events before we submit, and unsubscribe after
+      // the request is complete.
+      const detachHandlers = () => {
+        this.form.on('ajax:success', onSuccess);
+        this.form.on('ajax:error', onFailure);
+      };
+      this.form.on('ajax:success', onSuccess);
+      this.form.on('ajax:error', onFailure);
+      this.form.find('#change-email-modal_user_email').val(userAge < 13 ? '' : newEmail);
+      this.form.find('#change-email-modal_user_hashed_email').val(newHashedEmail);
+      this.form.find('#change-email-modal_user_current_password').val(currentPassword);
+      this.form.submit();
+    });
+  }
 }
