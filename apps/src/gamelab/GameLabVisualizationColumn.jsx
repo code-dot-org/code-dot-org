@@ -58,6 +58,17 @@ class GameLabVisualizationColumn extends React.Component {
     }
   };
 
+  pickerTouchMove = e => {
+    if (this.props.pickingLocation) {
+      const touch = e.nativeEvent.touches[0];
+      const divGameLabRect = this.divGameLab.getBoundingClientRect();
+      this.props.updatePicker({
+        x: Math.floor(touch.clientX - divGameLabRect.left),
+        y: Math.floor(touch.clientY - divGameLabRect.top),
+      });
+    }
+  };
+
   pickerMouseUp = e => {
     if (this.props.pickingLocation) {
       this.props.selectPicker({
@@ -67,6 +78,11 @@ class GameLabVisualizationColumn extends React.Component {
     }
   };
 
+  pickerTouchEnd = e => {
+    if (this.props.pickingLocation) {
+      this.props.cancelPicker();
+    }
+  };
 
   componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
@@ -82,9 +98,8 @@ class GameLabVisualizationColumn extends React.Component {
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
     const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
-    const divGameLab = document.getElementById('divGameLab');
     const visualizationOverlay = document.getElementById('visualizationOverlay');
-    divGameLab.style.zIndex = zIndex;
+    this.divGameLab.style.zIndex = zIndex;
     visualizationOverlay.style.zIndex = zIndex;
   }
 
@@ -138,6 +153,10 @@ class GameLabVisualizationColumn extends React.Component {
             tabIndex="1"
             onMouseUp={this.pickerMouseUp}
             onMouseMove={this.pickerMouseMove}
+            onTouchMove={this.pickerTouchMove}
+            onTouchEnd={this.pickerTouchEnd}
+            onTouchCancel={this.pickerTouchEnd}
+            ref={el => this.divGameLab = el}
           >
           </div>
           <VisualizationOverlay
