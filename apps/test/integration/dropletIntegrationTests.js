@@ -1,7 +1,7 @@
 import {assert, expect} from '../util/configuredChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
-import {loadSource} from './levelTests';
+import loadSource from "./util/loadSource";
 
 describe('setParamAtIndex', () => {
   let editor, parser, plainTree, arrayTree;
@@ -12,8 +12,6 @@ describe('setParamAtIndex', () => {
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
-    .then(function () { return loadSource('/base/lib/tooltipster/jquery.tooltipster.js'); })
-    .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
     });
@@ -30,9 +28,6 @@ describe('setParamAtIndex', () => {
       mode: 'javascript',
       palette: [],
     });
-
-    var aceEditor = editor.aceEditor;
-    aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
     studioApp().editor = editor;
     parser = editor.session.mode;
