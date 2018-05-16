@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Tab, Tabs} from 'react-bootstrap';
 
 export default class Results extends React.Component {
   static propTypes = {
@@ -22,7 +23,7 @@ export default class Results extends React.Component {
         </thead>
         <tbody>
           {
-            Object.entries(this.props.questions).map(([question_key, question_data], i) => {
+            Object.entries(this.props.questions[session]).map(([question_key, question_data], i) => {
               if (!question_data['free_response']) {
                 return (
                   <tr key={i}>
@@ -48,9 +49,8 @@ export default class Results extends React.Component {
   renderSessionResultsFreeResponse(session) {
     return (
       <div>
-        Free Responses
         {
-          Object.entries(this.props.questions).map(([question_key, question_data], i) => {
+          Object.entries(this.props.questions[session]).map(([question_key, question_data], i) => {
             if (question_data['free_response']) {
               return (
                 <div key={i} className="well">
@@ -71,30 +71,20 @@ export default class Results extends React.Component {
     );
   }
 
-  renderSessionResults(session) {
-    return (
-      <div>
-        Session results for {session}
-        {this.renderSessionResultsTable(session)}
-        {this.renderSessionResultsFreeResponse(session)}
-        <hr/>
-      </div>
-    );
-  }
-
   renderAllSessionsResults() {
     return this.props.sessions.map((session, i) => (
-      <div key={i}>
-        {this.renderSessionResults(session)}
-      </div>
+      <Tab eventKey={i + 1} key={i} title={session}>
+        {this.renderSessionResultsTable(session)}
+        {this.renderSessionResultsFreeResponse(session)}
+      </Tab>
     ));
   }
 
   render() {
     return (
-      <div>
+      <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
-      </div>
+      </Tabs>
     );
   }
 }

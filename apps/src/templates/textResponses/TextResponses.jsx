@@ -161,6 +161,7 @@ class TextResponses extends Component {
               data={filteredResponses}
               headers={CSV_HEADERS}
             >
+              {/* onClick functionality for Button handled by CSVLink */}
               <Button
                 text={i18n.downloadCSV()}
                 onClick={() => {}}
