@@ -5,12 +5,12 @@ import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/Stude
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '../../styleConstants';
 import {
-  sectionDataPropType,
   scriptDataPropType,
   getColumnWidthsForDetailView,
   getLevels,
   setLessonOfInterest,
 } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import { getIconForLevel } from '@cdo/apps/templates/progress/progressHelpers';
 import color from "../../util/color";
 import {

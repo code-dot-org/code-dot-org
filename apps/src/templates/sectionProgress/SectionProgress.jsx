@@ -16,12 +16,11 @@ import {
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
-  setScriptId,
   setLessonOfInterest,
-  sectionDataPropType,
-  validScriptPropType,
   scriptDataPropType,
 } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
+import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
   heading: {
@@ -129,7 +128,7 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.lessonSelectorContainer}>
-            {lessons.length !== 0 &&
+            {currentView === ViewType.DETAIL && lessons.length !== 0 &&
               <LessonSelector
                 lessons={lessons}
                 onChange={this.onChangeLevel}
@@ -170,10 +169,9 @@ class SectionProgress extends Component {
 export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(state => ({
-  scriptId: state.sectionProgress.scriptId,
-  section: state.sectionProgress.section,
-  validScripts: state.sectionProgress.validScripts,
-  studentScriptIds: state.sectionProgress.studentScriptIds,
+  scriptId: state.scriptSelection.scriptId,
+  section: state.sectionData.section,
+  validScripts: state.scriptSelection.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),

@@ -56,19 +56,19 @@
         parameters: Functions with parameters
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
+        maze_2_2: 'Тентек торопойду кармаганга жардам бересиңби? Бир нече "алдыга
+          жыл" блогун бириктирип туруп "Аткарды" бас, жеткенге жардам бер. '
+        maze_2_1: Бул торопой жиниме тийип жатат. Ага жеткенге жардам бер!
+        maze_2_2_5: Жол көрсөтүп, тентек торопойго жеткиз. Жардыргычтан алыс бол же
+          жарылып кетесиң!
+        maze_2_3: Мени жашыл мокочого жеткиз! (Жардыргычтан алыс бол)
+        maze_2_4: Сабырдуу бол, шүмшүк торопойду тапканга жардам бер. Болбосо ачуум
+          келет!
+        maze_2_5: 2 эле блок колдонуп шум торопойго жетүүнүн жолу бар. Ошону таба
+          аласыңбы?
+        maze_2_6: Үч эле блок колдонуп мени жашыл шүмшүккө жеткирип көр.
+        maze_2_7: Болушунча аз блок менен шум торопойду кубалаганга жардам кыл. Бирден
+          ашык "жолу кайтала" блогун колдонгонго аракет кылгыла.
         maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
           puzzle using the "repeat" block that repeats 3 times. Try putting these
           3 blocks inside the grey "repeat" block: move, move, turn.'

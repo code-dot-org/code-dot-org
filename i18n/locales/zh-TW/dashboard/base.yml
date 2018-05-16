@@ -123,6 +123,9 @@ zh-TW:
     field_is_required: "必填"
     accept_terms: "你必須同意以建立一個帳戶"
     error: "發生錯誤。"
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "是"
+    email_preference_no: "否"
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -882,6 +885,11 @@ zh-TW:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '單元 2：數位資訊'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反射提示'
   external_links:
     disclaimer: 免責聲明
@@ -986,3 +994,7 @@ zh-TW:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: '我同意'

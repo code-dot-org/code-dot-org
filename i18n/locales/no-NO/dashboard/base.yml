@@ -123,6 +123,9 @@
     field_is_required: "må fylles ut"
     accept_terms: "Du må gå med på å opprette en konto"
     error: "En feil har oppstått."
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "Ja"
+    email_preference_no: "Nei"
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'
@@ -171,7 +174,7 @@
       email: 'E-postadresse'
       submit: 'Send'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Fyll ut CAPTCHA for å lage nytt passord.'
       invalid_email: 'Det ser ut til at du har registrert deg med en ugyldig e-post adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke for tilbakestilling av passord.'
     change_form:
       title: 'Endre passordet ditt'
@@ -368,7 +371,7 @@
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
-    update: "Update Account"
+    update: "Oppdater konto"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -882,6 +885,11 @@
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Enhet 2: Digital informasjon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Ansvarsfraskrivelse
@@ -986,3 +994,7 @@
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Alle kurs'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Jeg samtykker'

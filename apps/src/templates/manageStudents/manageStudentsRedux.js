@@ -110,7 +110,6 @@ const initialState = {
   loginType: '',
   studentData: {},
   editingData: {},
-  sectionId: null,
   showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
   transferData: {...blankStudentTransfer},
@@ -119,7 +118,6 @@ const initialState = {
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
-const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -141,7 +139,6 @@ const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
-export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
 export const setStudents = studentData => ({ type: SET_STUDENTS, studentData });
 export const startEditingStudent = (studentId) => ({ type: START_EDITING_STUDENT, studentId });
 export const cancelEditingStudent = (studentId) => ({ type: CANCEL_EDITING_STUDENT, studentId });
@@ -179,8 +176,9 @@ export const handleShareSetting = (disable) => {
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    const sectionId = getState().sectionData.section.id;
     dispatch(startSavingStudent(studentId));
-    updateStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
+    updateStudentOnServer(state.editingData[studentId], sectionId, (error, data) => {
       if (error) {
         console.error(error);
       }
@@ -221,6 +219,7 @@ export const saveAllStudents = () => {
 export const addStudents = (studentIds) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    const sectionId = getState().sectionData.section.id;
     const numStudentsToAdd = studentIds.length;
 
     // Update each row to saving in progress.
@@ -231,13 +230,13 @@ export const addStudents = (studentIds) => {
     const arrayOfEditedData = Object.values(state.editingData);
     const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
     addStudentOnServer(filteredData,
-      state.sectionId, (error, data) => {
+      sectionId, (error, data) => {
       if (error) {
         dispatch(addStudentsFailure(numStudentsToAdd, error, studentIds));
         console.error(error);
       } else {
         dispatch(addStudentsSuccess(numStudentsToAdd, studentIds,
-          convertStudentServerData(data, state.loginType, state.sectionId)));
+          convertStudentServerData(data, state.loginType, sectionId)));
       }
     });
   };
@@ -270,7 +269,7 @@ export const transferStudents = (onComplete) => {
   return (dispatch, getState) => {
     const state = getState();
     // Get section code for current section from teacherSectionsRedux
-    const currentSectionCode = sectionCode(state, state.manageStudents.sectionId);
+    const currentSectionCode = sectionCode(state, state.sectionData.id);
     const {studentIds, sectionId: newSectionId, otherTeacher, otherTeacherSection, copyStudents} = state.manageStudents.transferData;
     let newSectionCode;
 
@@ -324,12 +323,6 @@ export default function manageStudents(state=initialState, action) {
       ...state,
       loginType: action.loginType,
       ...addRowInitialization,
-    };
-  }
-  if (action.type === SET_SECTION_ID) {
-    return {
-      ...state,
-      sectionId: action.sectionId,
     };
   }
   if (action.type === SET_STUDENTS) {
