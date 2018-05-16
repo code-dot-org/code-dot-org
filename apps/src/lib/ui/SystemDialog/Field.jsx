@@ -43,22 +43,22 @@ export default class Field extends React.Component {
           }}
         >
           {label &&
-          <span style={{fontWeight: 'bold', marginRight: '1em'}}>
-                {label}
-              </span>
+            <span style={{fontWeight: 'bold', marginRight: '1em'}}>
+              {label}
+            </span>
           }
           {labelDetails &&
-          <span>
-                {labelDetails}
-              </span>
+            <span>
+              {labelDetails}
+            </span>
           }
         </label>
         }
         {React.cloneElement(children, {id: this.uniqueId})}
         {error &&
-        <FieldError>
-          {error}
-        </FieldError>
+          <FieldError>
+            {error}
+          </FieldError>
         }
       </div>
     );
