@@ -52,7 +52,7 @@ export default class ChangeUserTypeModal extends React.Component {
     targetUserType: PropTypes.oneOf([TEACHER, STUDENT]).isRequired,
     currentHashedEmail: PropTypes.string,
     /**
-     * @type {function({currentEmail: string, currentPassword: string}):Promise}
+     * @type {function({currentEmail: string}):Promise}
      */
     handleSubmit: PropTypes.func.isRequired,
     /**
@@ -65,11 +65,9 @@ export default class ChangeUserTypeModal extends React.Component {
     saveState: STATE_INITIAL,
     values: {
       currentEmail: '',
-      currentPassword: '',
     },
     serverErrors: {
       currentEmail: '',
-      currentPassword: ''
     },
   };
 
@@ -107,7 +105,6 @@ export default class ChangeUserTypeModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       currentEmail: serverErrors.currentEmail || this.getCurrentEmailValidationError(),
-      currentPassword: serverErrors.currentPassword || this.getCurrentPasswordValidationError(),
     };
   }
 
@@ -130,22 +127,11 @@ export default class ChangeUserTypeModal extends React.Component {
     return null;
   };
 
-  getCurrentPasswordValidationError = () => {
-    const {currentPassword} = this.state.values;
-    if (currentPassword.length === 0) {
-      return i18n.changeUserTypeModal_currentPassword_isRequired();
-    }
-    return null;
-  };
-
   onFormChange = (newValues) => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
     if (newValues.currentEmail !== oldValues.currentEmail) {
       newServerErrors.currentEmail = undefined;
-    }
-    if (newValues.currentPassword !== oldValues.currentPassword) {
-      newServerErrors.currentPassword = undefined;
     }
     this.setState({
       values: newValues,
@@ -178,7 +164,6 @@ export default class ChangeUserTypeModal extends React.Component {
           <ChangeUserTypeForm
             ref={x => this.changeUserTypeForm = x}
             targetUserType={this.props.targetUserType}
-            userHasPassword={true}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
