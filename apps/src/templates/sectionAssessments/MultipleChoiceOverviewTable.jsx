@@ -31,24 +31,13 @@ const styles = {
 
 const NOT_ANSWERED = 'notAnswered';
 
-const calculateNotAnswered = (multipleChoiceDataArr) => {
-  let total = 0;
-  multipleChoiceDataArr.forEach (studentsAnswersObj => {
-        if (studentsAnswersObj.percentAnswered) {
-            total += studentsAnswersObj.percentAnswered;
-        }
-    });
-
-    return (100 - total);
-};
-
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   const cell = rowData.answers[columnIndex - 1];
 
   let percentValue = 0;
 
   if (property === NOT_ANSWERED) {
-     percentValue = calculateNotAnswered(rowData.answers);
+     percentValue = rowData.notAnswered;
   } else {
      percentValue = (cell && cell.percentAnswered);
   }
@@ -62,17 +51,22 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
-const questionAnswerDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string,
-  percentValue: PropTypes.number,
+const answerDataPropType = PropTypes.shape({
+  multipleChoiceOption: PropTypes.string,
   percentAnswered: PropTypes.number,
   isCorrectAnswer: PropTypes.bool,
 });
 
+const questionDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  answers: PropTypes.arrayOf(answerDataPropType),
+  notAnswered: PropTypes.number.isRequired,
+});
+
 class MultipleChoiceOverviewTable extends Component {
   static propTypes= {
-    questionAnswerData: PropTypes.arrayOf(questionAnswerDataPropType),
+    questionAnswerData: PropTypes.arrayOf(questionDataPropType),
   };
 
   state = {
