@@ -25,6 +25,15 @@ __Subject: Does your school teach computer science?__
 
 Code.org and the Computer Science Teachers Association are gathering data from every school in the country to determine how widely computer science is taught. This data will help allocate resources and focus activities in the effort to provide equitable access to computer science for all students. Can you please help by filling out the 5-minute survey for your school at [code.org/yourschool](https://code.org/yourschool#map)?
 
+__Subject: We want to celebrate schools that teach computer science!__
+Code.org and the Computer Science Teachers Association are gathering data from every school in the country to determine how widely computer science is taught.
+We want to celebrate the incredible efforts that teachers have made to get computer science into their schools. Make sure your school gets counted by filling out the 5-minute survey for your school at [code.org/yourschool](https://code.org/yourschool#map)
+
+__Subject: Make sure your school gets counted!__
+Have you heard that Code.org and the Computer Science Teachers Association are gathering data about computer science offerings in every school in the US? Make sure that your school gets counted by filling out the 5-minute survey for your school at [code.org/yourschool](https://code.org/yourschool#map)
+
+
+
 ## Email newsletter to parents:
 
 _Include this language in a newsletter that is primarily read by parents or computer science education advocates:_
