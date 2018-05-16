@@ -574,6 +574,7 @@
   "joinASection": "Join a section",
   "joinSection": "Join section",
   "joinSectionExplination": "Ask your students to join your section by going to this link and entering the section code (above): ",
+  "joinSectionAsk": "Tell your students to create their own accounts and join your section at: ",
   "joinSectionDescription": "Join a teacher's section by entering their Section Code.",
   "joinSectionPlaceholder": "Section Code (ABCDEF)",
   "joinCommunity": "Join community",
