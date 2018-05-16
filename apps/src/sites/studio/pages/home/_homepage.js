@@ -54,7 +54,7 @@ function showHomepage() {
   // Default teacher announcement.
   let announcementHeading = i18n.announcementHeadingPrivacyGdpr();
   let announcementDescription = i18n.announcementDescriptionPrivacyGdpr();
-  let announcementLink = "https://code.org/privacy";
+  let announcementLink = "https://code.org/privacy-may2018";
   let announcementId = "privacy_gdpr";
   let announcementType = "bullhorn";
 
