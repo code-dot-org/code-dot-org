@@ -148,9 +148,10 @@ module ProjectsList
 
     private
 
-    # e.g. '/p/applab' -> 'applab'
+    # e.g. '/projects/applab' -> 'applab', or
+    # 'https://studio.code.org/projects/weblab' --> 'weblab'
     def project_type(level)
-      level && level.split('/')[2]
+      level && level.split('/').last
     end
 
     # pull various fields out of the student and project records to populate

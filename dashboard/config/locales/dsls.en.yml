@@ -3364,6 +3364,7 @@ en:
       csp-post-survey-2018-AP-preamble:
         description here: description here
         title: title
+      csp-post-survey-2018-markdown-with-link-to-survey: {}
       csp-post-survey-2018-topics-preamble:
         description here: description here
         title: title
@@ -11926,7 +11927,7 @@ en:
       csp-post-survey-2017-q36-a_2018:
         A little: A little
         A lot: A lot
-        I worried because I'm not good at math.: I worried because I'm not good at math.
+        I worry because I'm not good at math.: I worry because I'm not good at math.
         Not at all: Not at all
       csp-post-survey-2017-q36-b:
         A little: A little
@@ -11936,7 +11937,7 @@ en:
       csp-post-survey-2017-q36-b_2018:
         A little: A little
         A lot: A lot
-        I worried because I have little experience with computer science.: I worried because I have little experience with computer science.
+        I worry because I have little experience with computer science.: I worry because I have little experience with computer science.
         Not at all: Not at all
       csp-post-survey-2017-q36-c:
         A little: A little
@@ -11946,7 +11947,7 @@ en:
       csp-post-survey-2017-q36-c_2018:
         A little: A little
         A lot: A lot
-        I worried because of my gender.: I worried because of my gender.
+        I worry because of my gender.: I worry because of my gender.
         Not at all: Not at all
       csp-post-survey-2017-q36-d:
         A little: A little
@@ -11956,7 +11957,7 @@ en:
       csp-post-survey-2017-q36-d_2018:
         A little: A little
         A lot: A lot
-        I worried because of my race/ethnicity.: I worried because of my race/ethnicity.
+        I worry because of my race/ethnicity.: I worry because of my race/ethnicity.
         Not at all: Not at all
       csp-post-survey-2017-q3_2018:
         Agree: Agree
@@ -12298,10 +12299,10 @@ en:
         A little bit: A little bit
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I don't remember this unit: I don't remember this unit
         Not at all: Not at all
         Somewhat: Somewhat
         This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
       csp-post-survey-2018-U1-time-spent:
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
@@ -12320,10 +12321,10 @@ en:
         A little bit: A little bit
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I don't remember this unit: I don't remember this unit
         Not at all: Not at all
         Somewhat: Somewhat
         This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
       csp-post-survey-2018-U2-time-spent:
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
@@ -12342,10 +12343,10 @@ en:
         A little bit: A little bit
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I don't remember this unit: I don't remember this unit
         Not at all: Not at all
         Somewhat: Somewhat
         This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
       csp-post-survey-2018-U3-time-spent:
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
@@ -12364,10 +12365,10 @@ en:
         A little bit: A little bit
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I don't remember this unit: I don't remember this unit
         Not at all: Not at all
         Somewhat: Somewhat
         This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
       csp-post-survey-2018-U4-time-spent:
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
@@ -12386,10 +12387,10 @@ en:
         A little bit: A little bit
         A lot: A lot
         How did you like the lessons and topics covered in this unit?: How did you like the lessons and topics covered in this unit?
-        I don't remember this unit: I don't remember this unit
         Not at all: Not at all
         Somewhat: Somewhat
         This was my favorite unit!: This was my favorite unit!
+        We didn't do this unit or I don't remember it: We didn't do this unit or I don't remember it
       csp-post-survey-2018-U5-time-spent:
         I think the amount of time we spent on this unit was...: I think the amount of time we spent on this unit was...
         a bit too little.: a bit too little.
@@ -12438,7 +12439,7 @@ en:
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
       csp-post-survey-2018-topic-mobile:
-        Mobile App Development: Mobile App Development
+        Mobile App Design: Mobile App Design
         'No': 'No'
         Not sure what this is: Not sure what this is
         'Yes': 'Yes'
