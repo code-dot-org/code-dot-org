@@ -25,27 +25,9 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
-//
-// Note: This dialog submits account changes to dashboard using a
-// hidden Rails-generated form.  It expects that form to be provided
-// as a prop before the component mounts.
-//
-// When the user clicks the "update" button, this dialog loads the relevant
-// information into the hidden Rails form and calls submit(). Rails injects
-// all the JavaScript needed for the form to submit via AJAX with all the
-// appropriate validation tokens, etc.  The dialog subscribes to events
-// emitted by the Rails helper JavaScript to detect success or errors.
-//
-// If the dialog can't find the Rails form anywhere it will emit a warning
-// and be unable to submit anything (useful for tests and storybook).
-//
-// Read more:
-// http://guides.rubyonrails.org/working_with_javascript_in_rails.html#rails-ujs-event-handlers
-// https://github.com/rails/jquery-ujs
-//
+
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
     railsForm: PropTypes.object.isRequired,
@@ -169,7 +151,7 @@ export default class ChangeEmailModal extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={this.props.isOpen}
+        isOpen
         handleClose={this.cancel}
         uncloseable={STATE_SAVING === saveState}
       >
