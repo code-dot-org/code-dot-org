@@ -29,15 +29,23 @@ class ManageStudentsLoginInfo extends Component {
         <h2>Login information</h2>
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
           <div>
-            {sectionCode}
             <p>
-              {"Ask your students to go to http://localhost.code.org:3000/join and type in the section code (${sectionCode})"}
+              {i18n.sectionCode() + ': ' + sectionCode}
             </p>
             <p>
-              Alternatively, share this section's sign in page with your students: http://localhost-studio.code.org:3000/sections/YNGDSR
+              {i18n.joinSectionExplination()}
+              <a target="_blank" href="http://localhost.code.org:3000/join">
+                http://localhost.code.org:3000/join
+              </a>
             </p>
             <p>
-              <a target="_blank" href={"/teacher-dashboard#/sections/${sectionId}/print_signin_cards"}>
+              {i18n.sectionSignInInfo()}
+              <a target="_blank" href={`http://localhost-studio.code.org:3000/sections/${sectionCode}`}>
+                {`http://localhost-studio.code.org:3000/sections/${sectionCode}`}
+              </a>
+            </p>
+            <p>
+              <a target="_blank" href={`/teacher-dashboard#/sections/${sectionId}/print_signin_cards`}>
                 {i18n.printLoginCardExplination()}
               </a>
             </p>
