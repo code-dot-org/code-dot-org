@@ -242,6 +242,11 @@ class SectionsControllerTest < ActionController::TestCase
     assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
   end
 
+  test "membership: returns status 403 'Forbidden' when not signed in" do
+    get :membership
+    assert_response :forbidden
+  end
+
   test "membership: returns sections for student" do
     sign_in @word_user_1
     get :membership
