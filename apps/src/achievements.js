@@ -17,7 +17,6 @@ export default function getAchievements(state) {
 
 const POSSIBLE_ACHIEVEMENTS = [
   puzzleComplete,
-  numberOfBlocks,
   usingHints,
 ];
 
@@ -26,33 +25,6 @@ export function puzzleComplete(state) {
     isAchieved: true,
     message: msg.puzzleCompleted(),
     successIconUrl: '',
-  };
-}
-
-export function numberOfBlocks(state) {
-  const blockLimit = state.feedback.blockLimit;
-  const blocksUsed = state.feedback.blocksUsed;
-  if (blockLimit === undefined || blockLimit === Infinity) {
-    return null;
-  }
-
-  let message, isAchieved;
-  if (blocksUsed < blockLimit) {
-    message = msg.fewerNumberOfBlocks({numBlocks: blockLimit});
-    isAchieved = true;
-  } else if (blocksUsed === blockLimit) {
-    message = msg.exactNumberOfBlocks({numBlocks: blockLimit});
-    isAchieved = true;
-  } else {
-    message = msg.usingTooManyBlocks();
-    isAchieved = false;
-  }
-
-  return {
-    isAchieved,
-    message,
-    successIconUrl: '',
-    failureIconUrl: '',
   };
 }
 
