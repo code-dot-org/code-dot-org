@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../../util/configuredChai';
 import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import Button from '@cdo/apps/templates/Button';
@@ -181,26 +181,8 @@ describe('ChangeEmailModal', () => {
     });
   });
 
-  describe('onSubmitSuccess', () => {
-    it('calls handleSubmit with the new email', () => {
-      const testEmail = 'me@example.com';
-      const handleSubmit = sinon.spy();
-      wrapper.setProps({handleSubmit});
-      wrapper.setState({
-        values: {
-          newEmail: testEmail,
-          currentPassword: '',
-        }
-      });
-
-      expect(handleSubmit).not.to.have.been.called;
-      wrapper.instance().onSubmitSuccess();
-      expect(handleSubmit).to.have.been.calledOnce.and.calledWith(testEmail);
-    });
-  });
-
   describe('onSubmitFailure', () => {
-    it('puts the dialog in UNKNOWN ERROR state if response has no JSON', () => {
+    it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
       expect(wrapper.state().saveState).to.equal('initial');
       wrapper.instance().onSubmitFailure(null, {});
       expect(wrapper.state().saveState).to.equal('unknown-error');
@@ -212,10 +194,10 @@ describe('ChangeEmailModal', () => {
         newEmail: '',
         currentPassword: '',
       });
-      wrapper.instance().onSubmitFailure(null, {
-        responseJSON: {
-          email: ['test-email-server-error'],
-          current_password: ['test-password-server-error']
+      wrapper.instance().onSubmitFailure({
+        serverErrors: {
+          newEmail: 'test-email-server-error',
+          currentPassword: 'test-password-server-error'
         }
       });
       expect(wrapper.state().saveState).to.equal('initial');
