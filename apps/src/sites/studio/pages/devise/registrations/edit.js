@@ -8,8 +8,20 @@ const initialUserType = scriptData.userType;
 const isOauth = scriptData.isOauth;
 
 $(document).ready(() => {
-  new ChangeEmailController($('#change-email-modal-form'), onEmailChanged);
-  new ChangeUserTypeController($('#change-user-type-modal-form'), initialUserType, isOauth);
+  new ChangeEmailController({
+    form: $('#change-email-modal-form'),
+    link: $('#edit-email-link'),
+    displayedUserEmail: $('#displayed-user-email'),
+    userAge: $('#user_age'),
+    emailChangedCallback: onEmailChanged,
+  });
+
+  new ChangeUserTypeController(
+    $('#change-user-type-modal-form'),
+    initialUserType,
+    isOauth,
+  );
+
   initializeCreatePersonalAccountControls();
 });
 

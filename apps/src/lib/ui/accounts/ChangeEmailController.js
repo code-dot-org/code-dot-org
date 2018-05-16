@@ -4,6 +4,8 @@ import color from '../../../util/color';
 import ChangeEmailModal from './ChangeEmailModal';
 import {hashEmail} from '../../../code-studio/hashEmail';
 
+export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
+
 /**
  * This controller submits email changes to dashboard using a hidden
  * Rails-generated form.  It expects a jQuery wrapper for that form to be
@@ -22,12 +24,17 @@ import {hashEmail} from '../../../code-studio/hashEmail';
 export default class ChangeEmailController {
   /**
    * @param {jQuery} form
+   * @param {jQuery} link
+   * @param {jQuery} displayedUserEmail
+   * @param {jQuery} userAge
    * @param {function(newEmail:string, newHashedEmail:string)} emailChangedCallback
    */
-  constructor(form, emailChangedCallback) {
+  constructor({form, link, displayedUserEmail, userAge, emailChangedCallback}) {
     this.form = form;
+    this.displayedUserEmail = displayedUserEmail;
+    this.userAge = userAge;
     this.emailChangedCallback = emailChangedCallback;
-    $('#edit-email-link').click(this.showChangeEmailModal);
+    link.click(this.showChangeEmailModal);
   }
 
   showChangeEmailModal = () => {
@@ -50,17 +57,19 @@ export default class ChangeEmailController {
   };
 
   hideChangeEmailModal = () => {
-    ReactDOM.unmountComponentAtNode(this.mountPoint);
-    document.body.removeChild(this.mountPoint);
+    if (this.mountPoint) {
+      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      document.body.removeChild(this.mountPoint);
+      delete this.mountPoint;
+    }
   };
 
   onEmailChanged = (newEmail) => {
-    const displayedUserEmail = $('#displayed-user-email');
-    if ('***encrypted***' !== displayedUserEmail.text()) {
-      displayedUserEmail.text(newEmail);
+    if (ENCRYPTED_EMAIL_PLACEHOLDER !== this.displayedUserEmail.text()) {
+      this.displayedUserEmail.text(newEmail);
     }
     this.hideChangeEmailModal();
-    $(displayedUserEmail).effect('highlight', {
+    this.displayedUserEmail.effect('highlight', {
       duration: 1500,
       color: color.orange,
     });
@@ -69,7 +78,7 @@ export default class ChangeEmailController {
 
   submitEmailChange({newEmail, currentPassword}) {
     const newHashedEmail = hashEmail(newEmail);
-    const userAge = parseInt(document.getElementById('user_age').value, 10);
+    const userAge = parseInt(this.userAge.val(), 10);
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
