@@ -15,6 +15,7 @@ import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
+import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {
   convertStudentDataToArray,
   AddStatus,
@@ -146,6 +147,7 @@ export const sortRows = (data, columnIndexList, orderList) => {
 class ManageStudentsTable extends Component {
   static propTypes = {
     // Provided by redux
+    sectionId: PropTypes.number,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
@@ -544,13 +546,28 @@ class ManageStudentsTable extends Component {
           <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
         <div style={styles.explination}>
+          <h2>Login type</h2>
+          <LoginTypeParagraph
+            sectionId={this.props.sectionId}
+            onLoginTypeChanged={() => window.location.reload()}
+          />
+          <h2>Privacy</h2>
           <p>
             <a target="_blank" href={"/privacy/student-privacy"}>
               {i18n.privacyDocExplination()}
             </a>
           </p>
-          <h3>Login information</h3>
+          <h2>Login information</h2>
           <p>
+            Ask your students to go to http://localhost.code.org:3000/join and type in the section code (YNGDSR)
+          </p>
+          <p>
+            Alternatively, share this section's sign in page with your students: http://localhost-studio.code.org:3000/sections/YNGDSR
+          </p>
+          <p>
+            <a target="_blank" href={"/teacher-dashboard#/sections/#{this.props.sectionId}/print_signin_cards"}>
+              {i18n.printLoginCardExplination()}
+            </a>
           </p>
         </div>
       </div>
@@ -561,6 +578,7 @@ class ManageStudentsTable extends Component {
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(state => ({
+  sectionId: state.manageStudents.sectionId,
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
