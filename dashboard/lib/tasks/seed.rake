@@ -40,6 +40,7 @@ namespace :seed do
     'csp-ap',
     'csp-explore',
     'csp-create',
+    'csp-post-survey',
     'csppostap',
     'events',
     'flappy',

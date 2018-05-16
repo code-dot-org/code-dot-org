@@ -287,6 +287,14 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
+  test 'externally_rostered?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).externally_rostered?
+    end
+
+    refute Section.new.externally_rostered?
+  end
+
   test 'name safe students' do
     def verify(actual, expected)
       section = create :section
