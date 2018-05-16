@@ -4,7 +4,7 @@ class Api::V1::Pd::RegionalPartnerContactsController < Api::V1::Pd::FormsControl
   end
 
   def on_successful_create
-    EmailPreference.upsert(
+    EmailPreference.upsert!(
       email: @contact_form.email,
       opt_in: @contact_form.opt_in?,
       ip_address: request.env['REMOTE_ADDR'],

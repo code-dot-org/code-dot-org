@@ -5,7 +5,7 @@ require_dependency 'cdo/email_preference_constants'
 
 class EmailPreferenceHelper
   include EmailPreferenceConstants
-  def self.upsert(email:, opt_in:, ip_address:, source:, form_kind:)
+  def self.upsert!(email:, opt_in:, ip_address:, source:, form_kind:)
     email = email&.strip&.downcase
 
     raise "Email is required" if email.blank?
