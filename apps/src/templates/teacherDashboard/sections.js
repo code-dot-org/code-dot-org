@@ -16,7 +16,6 @@ import manageStudents, {
 import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import textResponses, {asyncLoadTextResponses, setSectionId as textResponsesSetSectionId} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
@@ -49,28 +48,6 @@ export function unmountSyncOauthSectionControl() {
 
 function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
-}
-
-/**
- * Render the login type details and controls for changing login type
- * at the bottom of the manage students tab.
- * @param {number} sectionId
- */
-export function renderLoginTypeControls(sectionId) {
-  registerReducers({teacherSections});
-  const store = getStore();
-
-  store.dispatch(asyncLoadSectionData(sectionId));
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <LoginTypeParagraph
-        sectionId={sectionId}
-        onLoginTypeChanged={() => window.location.reload()}
-      />
-    </Provider>,
-    loginTypeControlsMountPoint()
-  );
 }
 
 export function renderTextResponsesTable(section, validScripts) {
@@ -132,10 +109,11 @@ export function renderStatsTable(section) {
 }
 
 export function renderSectionTable(sectionId, loginType, courseName) {
-  registerReducers({manageStudents, isRtl});
+  registerReducers({teacherSections, manageStudents, isRtl});
   const store = getStore();
 
   store.dispatch(setLoginType(loginType));
+  store.dispatch(asyncLoadSectionData(sectionId));
   store.dispatch(setSectionId(sectionId));
 
   // Show share column by default for CSD and CSP courses
@@ -161,12 +139,4 @@ export function renderSectionTable(sectionId, loginType, courseName) {
       </Provider>,
       element);
   });
-}
-
-export function unmountLoginTypeControls() {
-  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
-}
-
-function loginTypeControlsMountPoint() {
-  return document.getElementById('login-type-react');
 }
