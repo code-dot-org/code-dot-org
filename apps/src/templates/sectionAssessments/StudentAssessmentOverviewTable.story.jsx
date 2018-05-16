@@ -1,6 +1,5 @@
 import React from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import commonMsg from '@cdo/locale';
 import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
 
 export default storybook => {
