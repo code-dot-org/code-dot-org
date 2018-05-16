@@ -24,7 +24,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
 import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
-import sectionProgress, { setSection } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -53,7 +54,7 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
-  registerReducers({sectionProgress, scriptSelection});
+  registerReducers({sectionProgress, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
   store.dispatch(loadValidScripts(section, validScripts)).then(() => renderSectionProgressReact(store));
