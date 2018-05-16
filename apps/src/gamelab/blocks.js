@@ -26,9 +26,9 @@ let sprites = () => {
 
 const customInputTypes = {
   locationPicker: {
-    addInput(block, input) {
-      const label = block.appendDummyInput()
-          .appendTitle(`${input.label}(0, 0)`, `${input.name}_LABEL`)
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const label = currentInputRow
+          .appendTitle(`${inputConfig.label}(0, 0)`, `${inputConfig.name}_LABEL`)
           .titleRow[0];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
@@ -45,25 +45,50 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(`${input.label}(${loc.x}, ${GAME_HEIGHT - loc.y})`);
+              label.setText(`${inputConfig.label}(${loc.x}, ${GAME_HEIGHT - loc.y})`);
             } catch (e) {
               // Just ignore bad values
             }
           }
         }
       );
-      return block.appendDummyInput()
-          .appendTitle(button, input.name);
+      currentInputRow.appendTitle(button, inputConfig.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
     },
   },
   costumePicker: {
-    addInput(block, input) {
-      return block.appendDummyInput()
-        .appendTitle(input.label)
-        .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), input.name);
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldImageDropdown(sprites(), 32, 32), inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return block.getTitleValue(arg.name);
+    },
+  },
+  spritePicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      block.getVars = function () {
+        return {
+          [Blockly.BlockValueType.SPRITE]: [block.getTitleValue(inputConfig.name)],
+        };
+      };
+      block.renameVar = function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function (oldName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.dispose(true, true);
+        }
+      };
+
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldVariable(null, null, null, Blockly.BlockValueType.SPRITE), inputConfig.name);
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);

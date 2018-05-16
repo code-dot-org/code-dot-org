@@ -31,6 +31,7 @@ const validAssignments = {
     assignment_family_name: 'csd',
     assignment_family_title: 'CS Discoveries',
     version_year: '2017',
+    version_title: "'17-'18",
   },
   'null_168': {
     id: 168,
@@ -46,6 +47,7 @@ const validAssignments = {
     assignment_family_name: 'csd1',
     assignment_family_title: 'Unit 1: Problem Solving',
     version_year: '2017',
+    version_title: '2017',
   },
 };
 

@@ -290,7 +290,7 @@ GameLab.prototype.init = function (config) {
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
     }
 
     initializeSubmitHelper({
@@ -751,11 +751,23 @@ function p5KeyCodeFromArrow(idBtn) {
   }
 }
 
+function domIdFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.SPACE:
+      return 'studio-space-button';
+  }
+  return undefined;
+}
+
 GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.DOWN;
   e.preventDefault();  // Stop normal events so we see mouseup later.
 
+  const domId = domIdFromArrow(buttonId);
+  if (domId) {
+    $(`#${domId}`).addClass('active');
+  }
   this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
 };
 
@@ -763,6 +775,10 @@ GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
+  const domId = domIdFromArrow(buttonId);
+  if (domId) {
+    $(`#${domId}`).removeClass('active');
+  }
   this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
 };
 
@@ -792,33 +808,125 @@ GameLab.prototype.onDPadButtonDown = function (e) {
   e.preventDefault();  // Stop normal events so we see mouseup later.
 };
 
-var DPAD_DEAD_ZONE = 3;
+const DPAD_DEAD_ZONE = 3;
+// Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
+// of the 8 directions an equal 45 degree cone
+const DIAG_SCALE_FACTOR = Math.cos(Math.PI * 22.5 / 180);
 
-GameLab.prototype.onDPadMouseMove = function (e) {
+GameLab.prototype.notifyKeyEightWayDPad = function (keyCode, cssClass, currentX, currentY) {
   const dPadButton = $('#studio-dpad-button');
   const dPadCone = $('#studio-dpad-cone');
-  var self = this;
+  const { startingX, previousX, startingY, previousY } = this.dPadState;
+  let curPrimary, curSecondary, prevPrimary, prevSecondary;
 
-  function notifyKeyHelper(keyCode, cssClass, start, prev, cur, invert) {
-    if (invert) {
-      start *= -1;
-      prev *= -1;
-      cur *= -1;
-    }
-    start -= DPAD_DEAD_ZONE;
-
-    if (cur < start) {
-      if (prev >= start) {
-        self.gameLabP5.notifyKeyCodeDown(keyCode);
-        dPadButton.addClass(cssClass);
-        dPadCone.addClass(cssClass);
-      }
-    } else if (prev < start) {
-      self.gameLabP5.notifyKeyCodeUp(keyCode);
-      dPadButton.removeClass(cssClass);
-      dPadCone.removeClass(cssClass);
-    }
+  switch (keyCode) {
+    case window.p5.prototype.LEFT_ARROW:
+      curPrimary = -(currentX - startingX);
+      curSecondary = currentY - startingY;
+      prevPrimary = -(previousX - startingX);
+      prevSecondary = previousY - startingY;
+      break;
+    case window.p5.prototype.RIGHT_ARROW:
+      curPrimary = currentX - startingX;
+      curSecondary = currentY - startingY;
+      prevPrimary = previousX - startingX;
+      prevSecondary = previousY - startingY;
+      break;
+    case window.p5.prototype.UP_ARROW:
+      curPrimary = -(currentY - startingY);
+      curSecondary = currentX - startingX;
+      prevPrimary = -(previousY - startingY);
+      prevSecondary = previousX - startingX;
+      break;
+    case window.p5.prototype.DOWN_ARROW:
+      curPrimary = currentY - startingY;
+      curSecondary = currentX - startingX;
+      prevPrimary = previousY - startingY;
+      prevSecondary = previousX - startingX;
+      break;
   }
+
+  const curDiag = DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(curPrimary, 2) + Math.pow(curSecondary, 2));
+  const prevDiag = DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(prevPrimary, 2) + Math.pow(prevSecondary, 2));
+
+  const curDown = curPrimary > DPAD_DEAD_ZONE &&
+      (curPrimary > curDiag || curDiag > Math.abs(curSecondary));
+  const prevDown = prevPrimary > DPAD_DEAD_ZONE &&
+      (prevPrimary > prevDiag || prevDiag > Math.abs(prevSecondary));
+
+  if (curDown && !prevDown) {
+    this.gameLabP5.notifyKeyCodeDown(keyCode);
+    dPadButton.addClass(cssClass);
+    dPadCone.addClass(cssClass);
+  } else if (!curDown && prevDown) {
+    this.gameLabP5.notifyKeyCodeUp(keyCode);
+    dPadButton.removeClass(cssClass);
+    dPadCone.removeClass(cssClass);
+  }
+};
+
+GameLab.prototype.notifyKeysFourWayDPad = function (currentX, currentY) {
+  const dPadButton = $('#studio-dpad-button');
+  const dPadCone = $('#studio-dpad-cone');
+  const { startingX, previousX, startingY, previousY } = this.dPadState;
+
+  const keyValues = [
+    {
+      cssClass: 'left',
+      key: window.p5.prototype.LEFT_ARROW,
+      current: -(currentX - startingX),
+      previous: -(previousX - startingX),
+    }, {
+      cssClass: 'right',
+      key: window.p5.prototype.RIGHT_ARROW,
+      current: currentX - startingX,
+      previous: previousX - startingX,
+    }, {
+      cssClass: 'up',
+      key: window.p5.prototype.UP_ARROW,
+      current: -(currentY - startingY),
+      previous: -(previousY - startingY),
+    }, {
+      cssClass: 'down',
+      key: window.p5.prototype.DOWN_ARROW,
+      current: currentY - startingY,
+      previous: previousY - startingY,
+    },
+  ];
+  const prevKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
+    const { previous = 0 } = maxKeyValue || {};
+    if (curKeyValue.previous > Math.max(previous, DPAD_DEAD_ZONE)) {
+      return curKeyValue;
+    } else {
+      return maxKeyValue;
+    }
+  }, null);
+  const currentKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
+    const { current = 0 } = maxKeyValue || {};
+    if (curKeyValue.current > Math.max(current, DPAD_DEAD_ZONE)) {
+      return curKeyValue;
+    } else {
+      return maxKeyValue;
+    }
+  }, null);
+  const { key: prevKey, cssClass: prevCssClass } = prevKeyValue || {};
+  const { key: currentKey, cssClass: currentCssClass } = currentKeyValue || {};
+
+  if (prevKey && prevKey !== currentKey) {
+    this.gameLabP5.notifyKeyCodeUp(prevKey);
+    dPadButton.removeClass(prevCssClass);
+    dPadCone.removeClass(prevCssClass);
+  }
+  if (currentKey && prevKey !== currentKey) {
+    this.gameLabP5.notifyKeyCodeDown(currentKey);
+    dPadButton.addClass(currentCssClass);
+    dPadCone.addClass(currentCssClass);
+  }
+};
+
+GameLab.prototype.onDPadMouseMove = function (e) {
 
   var clientX = e.clientX;
   var clientY = e.clientY;
@@ -827,14 +935,14 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     clientY = e.touches[0].clientY;
   }
 
-  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
-      this.dPadState.startingX, this.dPadState.previousX, clientX, false);
-  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
-      this.dPadState.startingX, this.dPadState.previousX, clientX, true);
-  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
-      this.dPadState.startingY, this.dPadState.previousY, clientY, false);
-  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
-      this.dPadState.startingY, this.dPadState.previousY, clientY, true);
+  if (experiments.isEnabled('fourWayDPad')) {
+    this.notifyKeysFourWayDPad(clientX, clientY);
+  } else {
+    this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.RIGHT_ARROW, 'right', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.UP_ARROW, 'up', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.DOWN_ARROW, 'down', clientX, clientY);
+  }
 
   this.dPadState.previousX = clientX;
   this.dPadState.previousY = clientY;
@@ -873,6 +981,10 @@ GameLab.prototype.onMouseUp = function (e) {
     if (this.btnState[buttonId] === ButtonState.DOWN) {
 
       this.btnState[buttonId] = ButtonState.UP;
+      const domId = domIdFromArrow(buttonId);
+      if (domId) {
+        $(`#${domId}`).removeClass('active');
+      }
       this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
     }
   }

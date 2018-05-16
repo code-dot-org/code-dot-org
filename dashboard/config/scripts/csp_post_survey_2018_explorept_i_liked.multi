@@ -1,5 +1,5 @@
 name 'csp-post-survey-2018-ExplorePT-I-liked'
-question 'Did you like this performance task?'
+question 'Did you like this Performance Task?'
 right 'I didn\'t do it'
 right 'Not at all'
 right 'A little bit'

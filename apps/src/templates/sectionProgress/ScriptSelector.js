@@ -50,7 +50,6 @@ export default class ScriptSelector extends Component {
           onChange={event => onChange(parseInt(event.target.value))}
           style={styles.dropdown}
         >
-          <option key="default" value={''}/>
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (
