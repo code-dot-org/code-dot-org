@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import * as utils from '../../../utils';
 import ChangeUserTypeModal from './ChangeUserTypeModal';
 import i18n from '@cdo/locale';
 
@@ -28,12 +29,10 @@ export default class ChangeUserTypeController {
    *   to submit account type changes.  This module will only interact with
    *   children of that form element.
    * @param {!string} initialUserType
-   * @param {!boolean} isOauth
    */
-  constructor(form, initialUserType, isOauth) {
+  constructor(form, initialUserType) {
     this.form = form;
     this.initialUserType = initialUserType;
-    this.isOauth = isOauth;
     this.dropdown = form.find('#change-user-type_user_user_type');
     this.button = form.find('#change-user-type-button');
     this.status = form.find('#change-user-type-status');
@@ -68,12 +67,11 @@ export default class ChangeUserTypeController {
       this.dropdown.prop('disabled', true);
       this.button.prop('disabled', true);
       this.status.text(i18n.saving());
-      promise.then(() => window.location.reload())
+      promise.then(() => utils.reload())
         .catch(err => {
           this.dropdown.prop('disabled', false);
           this.button.prop('disabled', false);
           this.status.text(JSON.stringify(err));
-          console.error(err);
         });
     }
 
@@ -81,10 +79,10 @@ export default class ChangeUserTypeController {
   };
 
   showChangeUserTypeModal() {
-    const userHashedEmail= document.getElementById('change-user-type_user_hashed_email').value;
+    const userHashedEmail= this.form.find('#change-user-type_user_hashed_email').val();
     const handleSubmit = (values) => (
       this.submitUserTypeChange(values)
-        .then(() => window.location.reload())
+        .then(() => utils.reload())
     );
 
     this.mountPoint = document.createElement('div');
@@ -100,8 +98,11 @@ export default class ChangeUserTypeController {
   }
 
   hideChangeUserTypeModal = () => {
-    ReactDOM.unmountComponentAtNode(this.mountPoint);
-    document.body.removeChild(this.mountPoint);
+    if (this.mountPoint) {
+      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      document.body.removeChild(this.mountPoint);
+      delete this.mountPoint;
+    }
   };
 
   /**

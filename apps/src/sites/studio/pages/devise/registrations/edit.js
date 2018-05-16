@@ -5,7 +5,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const scriptData = getScriptData('edit');
 const initialUserType = scriptData.userType;
-const isOauth = scriptData.isOauth;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -19,7 +18,6 @@ $(document).ready(() => {
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
     initialUserType,
-    isOauth,
   );
 
   initializeCreatePersonalAccountControls();
