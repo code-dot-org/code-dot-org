@@ -157,7 +157,7 @@ class SectionProgress extends Component {
                 scriptData={scriptData}
               />
               <ProgressLegend
-                excludeCsfColumn={true}
+                excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }
