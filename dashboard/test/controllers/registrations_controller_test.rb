@@ -180,7 +180,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     email_preference = EmailPreference.last
     assert_equal "an@email.address", email_preference[:email]
-    assert_equal true, email_preference[:opt_in]
+    assert email_preference[:opt_in]
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
@@ -195,7 +195,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     email_preference = EmailPreference.last
     assert_equal "an@email.address", email_preference[:email]
-    assert_equal false, email_preference[:opt_in]
+    refute email_preference[:opt_in]
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
