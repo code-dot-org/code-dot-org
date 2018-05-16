@@ -71,7 +71,7 @@ export default class ChangeUserTypeController {
         .catch(err => {
           this.dropdown.prop('disabled', false);
           this.button.prop('disabled', false);
-          this.status.text(JSON.stringify(err));
+          this.status.text(i18n.changeUserTypeModal_unexpectedError());
         });
     }
 

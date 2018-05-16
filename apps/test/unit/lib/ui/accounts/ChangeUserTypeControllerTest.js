@@ -116,46 +116,7 @@ describe('ChangeUserTypeController', () => {
       setTimeout(() => {
         expect(dropdown.prop('disabled')).to.be.false;
         expect(button.prop('disabled')).to.be.false;
-        expect(status.text()).to.equal('{}');
-        done();
-      }, 2);
-    });
-
-    it('formats server validation errors', (done) => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      button.click();
-      expect(form.submit).to.have.been.calledOnce;
-
-      // Simulate server validation errors
-      form.trigger('ajax:error', [{
-        responseJSON: {
-          email: ['test-email-error'],
-        }
-      }]);
-      // Hidden promise needs time to resolve...
-      setTimeout(() => {
-        expect(status.text()).to.equal('{"serverErrors":{"currentEmail":"test-email-error"}}');
-        done();
-      }, 2);
-    });
-
-    it('interprets a password error as a mismatched email', (done) => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      button.click();
-      expect(form.submit).to.have.been.calledOnce;
-
-      // Simulate server validation errors
-      form.trigger('ajax:error', [{
-        responseJSON: {
-          current_password: ['test-current-password-error']
-        }
-      }]);
-      // Hidden promise needs time to resolve...
-      setTimeout(() => {
-        expect(status.text())
-          .to.equal(`{"serverErrors":{"currentEmail":"${i18n.changeUserTypeModal_currentEmail_mustMatch()}"}}`);
+        expect(status.text()).to.equal(i18n.changeUserTypeModal_unexpectedError());
         done();
       }, 2);
     });
