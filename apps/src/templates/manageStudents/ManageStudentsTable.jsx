@@ -45,6 +45,10 @@ const styles = {
   },
   buttonWithMargin: {
     marginRight: 5
+  },
+  explination: {
+    clear: 'both',
+    paddingTop: 20,
   }
 };
 
@@ -539,6 +543,16 @@ class ManageStudentsTable extends Component {
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
+        <div style={styles.explination}>
+          <p>
+            <a target="_blank" href={"/privacy/student-privacy"}>
+              {i18n.privacyDocExplination()}
+            </a>
+          </p>
+          <h3>Login information</h3>
+          <p>
+          </p>
+        </div>
       </div>
     );
   }
