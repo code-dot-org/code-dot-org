@@ -12,6 +12,7 @@
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
+import jQuery from 'jquery';
 var tickWrapper = require('./util/tickWrapper');
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
@@ -27,6 +28,8 @@ var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
 
 window.appOptions = {};
+window.jQuery = jQuery;
+window.$ = jQuery;
 
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
