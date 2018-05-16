@@ -1,8 +1,10 @@
-require 'cdo/email_preference_constants'
 require 'cdo/email_validator'
 require 'active_support/core_ext/object'
+require 'active_support/dependencies'
+require_dependency 'cdo/email_preference_constants'
 
 class EmailPreferenceHelper
+  include EmailPreferenceConstants
   def self.upsert(email:, opt_in:, ip_address:, source:, form_kind:)
     email = email&.strip&.downcase
 
@@ -12,7 +14,7 @@ class EmailPreferenceHelper
     # false.blank? returns true so check that opt_in is either true or false to enforce presence.
     raise "Opt In is required" unless [true, false].include?(opt_in)
 
-    raise "Source is not included in the list" unless EmailPreferenceConstants::SOURCE_TYPES.include?(source)
+    raise "Source is not included in the list" unless EmailPreferenceHelper::SOURCE_TYPES.include?(source)
     raise "Email does not appear to be a valid e-mail address" unless Cdo::EmailValidator.email_address?(email)
 
     current_time = Time.now
