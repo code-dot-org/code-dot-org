@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import ChangeEmailForm from '@cdo/apps/lib/ui/ChangeEmailForm';
+import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
