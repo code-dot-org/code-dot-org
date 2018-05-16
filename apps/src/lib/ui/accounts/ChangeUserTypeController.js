@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import ChangeUserTypeModal from './ChangeUserTypeModal';
+import i18n from '@cdo/locale';
 
 export default class ChangeUserTypeController {
   /**
@@ -41,14 +42,13 @@ export default class ChangeUserTypeController {
     // Email confirmation is required when changing from a student account
     // to a teacher account.
     const needEmailConfirmation = this.dropdown.val() === 'teacher';
-    // Confirm the user's password for this change, unless the user doesn't
-    // have a password.
-    const needPasswordConfirmation = !this.isOauth;
 
-    if (needEmailConfirmation || needPasswordConfirmation) {
-      this.showChangeUserTypeModal({needEmailConfirmation, needPasswordConfirmation});
+    if (needEmailConfirmation) {
+      this.showChangeUserTypeModal();
     } else {
-      // Submit form now?
+      this.submitUserTypeChange({})
+        .then(() => window.location.reload())
+        .catch(err => console.error(err));
     }
 
     e.preventDefault();
@@ -82,7 +82,7 @@ export default class ChangeUserTypeController {
 
   /**
    * Submit a user type change using the Rails-generated async form.
-   * @param {{currentEmail: string, currentPassword: string}} values
+   * @param {{currentEmail: string}} values
    * @return {Promise} which may reject with an error or object containing
    *   serverErrors.
    */
@@ -99,8 +99,9 @@ export default class ChangeUserTypeController {
         if (validationErrors) {
           error = {
             serverErrors: {
-              currentEmail: validationErrors.email && validationErrors.email[0],
-              currentPassword: validationErrors.current_password && validationErrors.current_password[0],
+              currentEmail:
+                (validationErrors.email && validationErrors.email[0]) ||
+                (validationErrors.current_password && i18n.changeUserTypeModal_currentEmail_mustMatch()),
             }
           };
         } else {
@@ -119,7 +120,6 @@ export default class ChangeUserTypeController {
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
       this.form.find('#change-user-type_user_email').val(values.currentEmail);
-      this.form.find('#change-user-type_user_current_password').val(values.currentPassword);
       this.form.submit();
     });
   }
