@@ -75,12 +75,12 @@ describe('block utils', () => {
     });
 
     it('adds a dropdown input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'dropdown',
         name: 'ANIMATION',
         label: 'create sprite ',
         options: TEST_SPRITES,
-      }]);
+      }]));
 
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
@@ -90,12 +90,12 @@ describe('block utils', () => {
     });
 
     it('adds a value input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'value',
         name: 'DISTANCE',
         type: Blockly.BlockValueType.NUMBER,
         label: 'block title',
-      }]);
+      }]));
 
       expect(appendValueInput).to.have.been.calledWith('DISTANCE');
       expect(setCheck).to.have.been.calledWith(Blockly.BlockValueType.NUMBER);
@@ -103,17 +103,17 @@ describe('block utils', () => {
     });
 
     it('adds a dummy input', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [{
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([{
         mode: 'dummy',
         label: 'block title',
-      }]);
+      }]));
 
       expect(appendDummyInput).to.have.been.calledOnce;
       expect(appendTitle).to.have.been.calledWith('block title');
     });
 
     it('adds all three', () => {
-      interpolateInputs(fakeBlockly, fakeBlock, [
+      interpolateInputs(fakeBlockly, fakeBlock, groupInputsByRow([
         {
           mode: 'dropdown',
           name: 'ANIMATION',
@@ -130,7 +130,7 @@ describe('block utils', () => {
           mode: 'dummy',
           label: 'dummy label',
         },
-      ]);
+      ]));
 
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');

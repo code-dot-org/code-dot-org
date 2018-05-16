@@ -595,8 +595,10 @@ exports.groupInputsByRow = groupInputsByRow;
  * Adds the specified inputs to the block
  * @param {Blockly} blockly The Blockly object provided to install()
  * @param {Block} block The block to add the inputs to
- * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
- * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
+ * @param {LabeledInputConfig[][]} inputs The list of inputs to interpolate,
+ *   grouped by row.
+ * @param {Object.<string, InputType>} inputTypes A map of input type names to
+ *   their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
 const interpolateInputs = function (blockly, block, inputRows, inputTypes=STANDARD_INPUT_TYPES, inline) {
