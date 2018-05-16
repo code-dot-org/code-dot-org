@@ -43,8 +43,11 @@ const initialState = {
 
 export default function sectionData(state=initialState, action) {
   if (action.type === SET_SECTION) {
+    // Setting the section is the first action to be called when switching
+    // sections, which requires us to reset our state. This might need to change
+    // once switching sections is in react/redux.
     return {
-      ...state,
+      ...initialState,
       section: action.section,
     };
   }
