@@ -91,6 +91,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/dashboardapi/sections/membership', to: 'sections#membership'
+
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
 

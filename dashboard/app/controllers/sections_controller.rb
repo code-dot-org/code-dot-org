@@ -2,6 +2,7 @@ class SectionsController < ApplicationController
   include UsersHelper
 
   before_action :load_section_by_code, only: [:log_in, :show]
+  before_action :authenticate_user!, only: [:membership]
 
   def show
     @secret_pictures = SecretPicture.all.shuffle
@@ -44,6 +45,11 @@ class SectionsController < ApplicationController
       flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)
     end
+  end
+
+  # Get the set of sections that the current user is enrolled in.
+  def membership
+    render json: {sections: current_user.sections_as_student}
   end
 
   private
