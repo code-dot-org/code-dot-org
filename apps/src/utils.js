@@ -756,3 +756,11 @@ export function createHiddenPrintWindow(src) {
     iframe[0].contentWindow.document.write(`<img src="${data}" style="border: 1px solid #000;" onload="if (document.execCommand('print', false, null)) {  } else { window.print(); }"/>`);
   });
 }
+
+export function calculateOffsetCoordinates(element, clientX, clientY) {
+  const rect = element.getBoundingClientRect();
+  return {
+    x: clientX - rect.left,
+    y: clientY - rect.top,
+  };
+}
