@@ -212,7 +212,7 @@ class User < ActiveRecord::Base
 
   def save_email_preference
     if teacher?
-      EmailPreference.upsert(
+      EmailPreference.upsert!(
         email: email,
         opt_in: email_preference_opt_in.downcase == "yes",
         ip_address: email_preference_request_ip,
