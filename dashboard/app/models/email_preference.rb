@@ -26,7 +26,7 @@ class EmailPreference < ApplicationRecord
   validates_uniqueness_of :email
   validates_email_format_of :email
 
-  validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES
+  validates_inclusion_of :source, in: EmailPreference::SOURCE_TYPES.map(&:to_s)
 
   def email=(value)
     super(value&.strip&.downcase)

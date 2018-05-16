@@ -1,12 +1,12 @@
 module EmailPreferenceConstants
-  SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'Teacher account sign up',
-    ACCOUNT_TYPE_CHANGE = 'Student account change to teacher',
-    ACCOUNT_EMAIL_ADD = 'Add email to teacher account',
-    ACCOUNT_EMAIL_CHANGE = 'Update teacher account email',
-    FORM_HOUR_OF_CODE = 'Host Hour of Code form',
-    FORM_VOLUNTEER = 'Volunteer form',
-    FORM_ACCESS_REPORT = 'Access Report form',
-    FORM_REGIONAL_PARTNER = 'Regional partner contact'
-  ].freeze
+  SOURCE_TYPES = %i(
+    ACCOUNT_SIGN_UP
+    ACCOUNT_TYPE_CHANGE
+    ACCOUNT_EMAIL_ADD
+    ACCOUNT_EMAIL_CHANGE
+    FORM_HOUR_OF_CODE
+    FORM_VOLUNTEER
+    FORM_ACCESS_REPORT
+    FORM_REGIONAL_PARTNER
+  ).freeze
 end

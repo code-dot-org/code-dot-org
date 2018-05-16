@@ -7,7 +7,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
         email: 'test_valid@example.net',
         opt_in: true,
         ip_address: '1.1.1.1',
-        source: EmailPreference::ACCOUNT_SIGN_UP,
+        source: :ACCOUNT_SIGN_UP,
         form_kind: nil
     end
   end
@@ -29,14 +29,14 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: true,
       ip_address: '192.168.1.1',
-      source: EmailPreference::FORM_HOUR_OF_CODE,
+      source: :FORM_HOUR_OF_CODE,
       form_kind: 'form text version 2.71828'
     )
     email_preference.reload
-    assert_equal email_preference.opt_in, true
-    assert_equal email_preference.ip_address, '192.168.1.1'
-    assert_equal email_preference.source, 'Host Hour of Code form'
-    assert_equal email_preference.form_kind, 'form text version 2.71828'
+    assert email_preference.opt_in
+    assert_equal '192.168.1.1', email_preference.ip_address
+    assert_equal :FORM_HOUR_OF_CODE, email_preference.source.to_sym
+    assert_equal 'form text version 2.71828', email_preference.form_kind
   end
 
   test "upsert email preference that is already opted in does not opt out" do
@@ -45,10 +45,10 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       email: email_preference.email,
       opt_in: false,
       ip_address: '172.16.6.1',
-      source: EmailPreference::ACCOUNT_SIGN_UP,
+      source: :ACCOUNT_SIGN_UP,
       form_kind: 'form text version 3.14159'
     )
     email_preference.reload
-    assert_equal email_preference.opt_in, true
+    assert email_preference.opt_in
   end
 end
