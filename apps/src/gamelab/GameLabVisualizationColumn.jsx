@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -49,38 +50,22 @@ class GameLabVisualizationColumn extends React.Component {
     mouseY: -1
   };
 
-  pickerMouseMove = e => {
+  pickerPointerMove = e => {
+    console.log(`pointer move event: ${e.offsetX}, ${e.offsetY}`);
     if (this.props.pickingLocation) {
       this.props.updatePicker({
-        x: e.nativeEvent.offsetX,
-        y: e.nativeEvent.offsetY,
+        x: e.offsetX,
+        y: e.offsetY,
       });
     }
   };
 
-  pickerTouchMove = e => {
-    if (this.props.pickingLocation) {
-      const touch = e.nativeEvent.touches[0];
-      const divGameLabRect = this.divGameLab.getBoundingClientRect();
-      this.props.updatePicker({
-        x: Math.floor(touch.clientX - divGameLabRect.left),
-        y: Math.floor(touch.clientY - divGameLabRect.top),
-      });
-    }
-  };
-
-  pickerMouseUp = e => {
+  pickerPointerUp = e => {
     if (this.props.pickingLocation) {
       this.props.selectPicker({
-        x: e.nativeEvent.offsetX,
-        y: e.nativeEvent.offsetY,
+        x: e.offsetX,
+        y: e.offsetY,
       });
-    }
-  };
-
-  pickerTouchEnd = e => {
-    if (this.props.pickingLocation) {
-      this.props.cancelPicker();
     }
   };
 
@@ -98,8 +83,9 @@ class GameLabVisualizationColumn extends React.Component {
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
     const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
+    const divGameLab = document.getElementById('divGameLab');
     const visualizationOverlay = document.getElementById('visualizationOverlay');
-    this.divGameLab.style.zIndex = zIndex;
+    divGameLab.style.zIndex = zIndex;
     visualizationOverlay.style.zIndex = zIndex;
   }
 
@@ -138,6 +124,7 @@ class GameLabVisualizationColumn extends React.Component {
 
   render() {
     const divGameLabStyle = {
+      touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT
     };
@@ -147,18 +134,13 @@ class GameLabVisualizationColumn extends React.Component {
     return (
       <span>
         <ProtectedVisualizationDiv>
-          <div
+          <Pointable
             id="divGameLab"
             style={divGameLabStyle}
             tabIndex="1"
-            onMouseUp={this.pickerMouseUp}
-            onMouseMove={this.pickerMouseMove}
-            onTouchMove={this.pickerTouchMove}
-            onTouchEnd={this.pickerTouchEnd}
-            onTouchCancel={this.pickerTouchEnd}
-            ref={el => this.divGameLab = el}
-          >
-          </div>
+            onPointerMove={this.pickerPointerMove}
+            onPointerUp={this.pickerPointerUp}
+          />
           <VisualizationOverlay
             width={GAME_WIDTH}
             height={GAME_HEIGHT}
