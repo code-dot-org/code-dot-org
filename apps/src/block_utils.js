@@ -599,8 +599,8 @@ exports.groupInputsByRow = groupInputsByRow;
  * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
-  groupInputsByRow(inputs, inputTypes).forEach(inputRow => {
+const interpolateInputs = function (blockly, block, inputRows, inputTypes=STANDARD_INPUT_TYPES, inline) {
+  inputRows.forEach(inputRow => {
     // Create the last input in the row first
     const lastInputConfig = inputRow[inputRow.length - 1];
     const lastInput = inputTypes[lastInputConfig.mode]
@@ -628,8 +628,8 @@ exports.interpolateInputs = interpolateInputs;
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
  *   method call blocks.
- * @param {object} customInputTypes customType input definitions, see
- *   interpolateInputs()
+ * @param {Object.<string,InputType>} customInputTypes customType input
+ *   definitions.
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
@@ -747,6 +747,10 @@ exports.createJsWrapperBlockCreator = function (
       });
     }
     const inputConfigs = determineInputs(blockText, inputs, strictTypes);
+    const inputRows = groupInputsByRow(inputConfigs, inputTypes);
+    if (inputRows.length === 1) {
+      inline = false;
+    }
 
     blockly.Blocks[blockName] = {
       helpUrl: '',
@@ -756,7 +760,7 @@ exports.createJsWrapperBlockCreator = function (
         interpolateInputs(
           blockly,
           this,
-          inputConfigs,
+          inputRows,
           inputTypes,
           inline,
         );
