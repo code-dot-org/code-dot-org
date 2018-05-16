@@ -11,8 +11,6 @@ module Pd
         RegionalPartnerSerializer.new(regional_partner).attributes
       end
 
-      puts serialized_partners.inspect
-
       @script_data = {
         props: {
           regionalPartners: serialized_partners,
