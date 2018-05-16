@@ -29,8 +29,9 @@ class ManageStudentsLoginInfo extends Component {
         <h2>Login information</h2>
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
           <div>
+            {sectionCode}
             <p>
-              "Ask your students to go to http://localhost.code.org:3000/join and type in the section code (${sectionCode})"
+              {"Ask your students to go to http://localhost.code.org:3000/join and type in the section code (${sectionCode})"}
             </p>
             <p>
               Alternatively, share this section's sign in page with your students: http://localhost-studio.code.org:3000/sections/YNGDSR
