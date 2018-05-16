@@ -6,9 +6,9 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
   StatusColors,
-  WorkshopTypes,
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
   RegionalPartnerPropType,
@@ -34,7 +34,7 @@ export class CohortViewTable extends React.Component {
     regionalPartnerFilter: RegionalPartnerPropType,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
-      workshopType: PropTypes.string
+      workshop_type: PropTypes.string
     })),
   };
 
@@ -72,11 +72,11 @@ export class CohortViewTable extends React.Component {
 
   constructColumns() {
     if ([UNMATCHED_PARTNER_VALUE, ALL_PARTNERS_VALUE].includes(this.props.regionalPartnerFilter.value)) {
-      this.workshopType = WorkshopTypes.BOTH;
+      this.workshopType = WorkshopTypes.both;
     } else {
       this.workshopType = this.props.regionalPartners.find(
         partner => partner.id === this.props.regionalPartnerFilter.value
-      ).workshopType;
+      ).workshop_type;
     }
 
     const sortable = wrappedSortable(
@@ -178,7 +178,7 @@ export class CohortViewTable extends React.Component {
       }
     });
 
-    if ([WorkshopTypes.TEACHERCON, WorkshopTypes.BOTH].includes(this.workshopType)) {
+    if ([WorkshopTypes["teachercon"], WorkshopTypes["both"]].includes(this.workshopType)) {
       columns.push({
         property: 'accepted_teachercon',
         header: {
@@ -188,7 +188,7 @@ export class CohortViewTable extends React.Component {
       });
     }
 
-    if ([WorkshopTypes.LOCAL_SUMMER, WorkshopTypes.BOTH].includes(this.workshopType)) {
+    if ([WorkshopTypes["local_summer"], WorkshopTypes["both"]].includes(this.workshopType)) {
       columns.push({
         property: 'registered_workshop',
         header: {
