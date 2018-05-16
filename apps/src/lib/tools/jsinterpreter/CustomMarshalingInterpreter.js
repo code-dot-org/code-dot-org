@@ -3,6 +3,8 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
+const DEFAULT_MAX_STEPS = 5e5;
+
 /**
  * Property access wrapped in try/catch. This is in an indepedendent function
  * so the JIT compiler can optimize the calling function.
@@ -591,7 +593,18 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         new CustomMarshaler({}),
         (interpreter, scope) => {
           interpreter.asyncFunctionList = asyncFunctionList || [];
-          interpreter.marshalNativeToInterpreterObject(globals, 5, scope);
+          interpreter.marshalNativeToInterpreterObject({
+            executionInfo: {
+              ticks: DEFAULT_MAX_STEPS,
+              checkTimeout: function () {
+                if (this.ticks-- < 0) {
+                  throw 'Infinity';
+                }
+              },
+              isTerminated: () => false,
+            },
+            ...globals,
+          }, 5, scope);
         }
       );
       interpreter.run();
