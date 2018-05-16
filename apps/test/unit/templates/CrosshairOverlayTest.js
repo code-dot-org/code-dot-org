@@ -24,15 +24,15 @@ describe('CrosshairOverlay', () => {
         <g className="crosshair-overlay">
           <line
             x1={x}
-            y1={y - CROSSHAIR_MARGIN}
+            y1={0}
             x2={x}
-            y2={0}
+            y2={y - CROSSHAIR_MARGIN}
             style={styles.line}
           />
           <line
-            x1={x - CROSSHAIR_MARGIN}
+            x1={0}
             y1={y}
-            x2={0}
+            x2={x - CROSSHAIR_MARGIN}
             y2={y}
             style={styles.line}
           />
