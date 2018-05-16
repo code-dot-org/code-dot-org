@@ -1,6 +1,5 @@
 import { assert } from '../../../util/configuredChai';
 import sectionProgress, {
-  setSection,
   setCurrentView,
   ViewType,
   addScriptData,
@@ -10,6 +9,7 @@ import sectionProgress, {
   finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
   id: 123,
@@ -22,24 +22,6 @@ const fakeSectionData = {
       id: 2,
       name: 'studenta'
     }
-  ],
-  script: {
-    id: 300,
-    name: 'csp2',
-  }
-};
-
-const sortedFakeSectionData = {
-  id: 123,
-  students: [
-    {
-      id: 2,
-      name: 'studenta'
-    },
-    {
-      id: 1,
-      name: 'studentb'
-    },
   ],
   script: {
     id: 300,
@@ -92,31 +74,12 @@ describe('sectionProgressRedux', () => {
   });
 
   describe('setSection', () => {
-    it('sets the section data and assigned scriptId', () => {
-      const action = setSection(fakeSectionData);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, sortedFakeSectionData);
-      assert.deepEqual(nextState.scriptId, 300);
-    });
-
     it('resets all non-section data to initial state', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, sortedFakeSectionData);
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
       assert.deepEqual(nextState.levelsByLessonByScript, {});
-    });
-
-    it('sets the section data with no default scriptId', () => {
-      const sectionDataWithNoScript = {
-        ...fakeSectionData,
-        script: null,
-      };
-      const action = setSection(sectionDataWithNoScript);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, {...sortedFakeSectionData, script: null});
-      assert.deepEqual(nextState.scriptId, null);
     });
   });
 
