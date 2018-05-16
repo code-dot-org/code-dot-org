@@ -10,6 +10,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Code.org blog posts
 ### Why computer science?
 
+* Code.org classrooms with resourceful teachers see [higher scores on English, math, and science standardized tests](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e). 
 * Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * The majority of Americans [want schools to teach computer science](http://codeorg.tumblr.com/post/139445414968).
 * [More high school students](http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
@@ -87,27 +88,21 @@ We are interested in seeing what's happening in computer science education inter
 - For each new high-tech job in a city, five jobs outside of tech are [ultimately created](http://eml.berkeley.edu//~moretti/book.htm).
 - A [comprehensive framework](https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf) for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce. 
 
-### Landscape of K-12 Computer Science Education in the U.S.
+### Landscape of K-12 Computer Science Education in the US
 This [series of reports](http://csedu.gallup.com/home.aspx) from Gallup and Google describes the landscape of computer science education across the states. 
 
-- [Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S.](https://services.google.com/fh/files/misc/images-of-computer-science-report.pdf) (Year 1):
-	- Parents in lower-income households and teachers at schools with a greater percentage of free- or
-reduced-lunch-eligible students are most likely to value formal computer science education. 
-	- Many students, parents, teachers and school administrators do not properly distinguish between
-computer science activities and general computer literacy. 
-	- Observations from students and parents suggest that TV and film media portrayals, as well as personal perceptions among students, parents and educators, often reflect stereotypes about people who
-engage in computer science.
-- [Searching for Computer Science: Access and Barriers in U.S. K-12 Education] (https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf) (Year 1): 
+- [Images of Computer Science: Perceptions Among Students, Parents and Educators in the US](https://services.google.com/fh/files/misc/images-of-computer-science-report.pdf) (Year 1):
+	- Parents in lower-income households and teachers at schools with a greater percentage of free- or reduced-lunch-eligible students are most likely to value formal computer science education. 
+	- Many students, parents, teachers and school administrators do not properly distinguish between computer science activities and general computer literacy. 
+	- Observations from students and parents suggest that TV and film media portrayals, as well as personal perceptions among students, parents and educators, often reflect stereotypes about people who engage in computer science.
+- [Searching for Computer Science: Access and Barriers in US K-12 Education] (https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf) (Year 1): 
 	- Only 25% of schools across the country in 2015 offer a computer science class that includes coding or programming. 
 	- 90% of parents believe that offering computer science is a good use of resources at their child's school.
-	- Principals and superintendents from schools and districts that do not offer computer science learning
-opportunities are most likely to say the main reason their schools do not offer computer science is
-the limited time they have to devote to classes that are not tied to testing requirements and the low
-availability and budget for computer science teachers. Few principals and superintendents mention a lack of computer equipment and software as the main reason their schools do not offer computer science.
-- [Trends in the State of Computer Science in U.S. K-12 Schools](http://services.google.com/fh/files/misc/trends-in-the-state-of-computer-science-report.pdf) (Year 2)
+	- Principals and superintendents from schools and districts that do not offer computer science learning opportunities are most likely to say the main reason their schools do not offer computer science is the limited time they have to devote to classes that are not tied to testing requirements and the low availability and budget for computer science teachers. Few principals and superintendents mention a lack of computer equipment and software as the main reason their schools do not offer computer science.
+- [Trends in the State of Computer Science in US K-12 Schools](http://services.google.com/fh/files/misc/trends-in-the-state-of-computer-science-report.pdf) (Year 2)
 	- Only 40% of schools across the country in 2016 offer a computer science class that includes coding or programming. Schools report a lack of qualified teachers and funds as key barriers to offering computer science. 
 	- 84% of parents, 71% of teachers, 66% of principals, and 65% of superintendents say that offering CS is more important than or just as important as required courses like math, science, history and English. Further, A majority of educators feel that students should be required to take computer science in schools when it is available (60% of teachers, 62% of principals and 56% of superintendents).
-	- 93% of parents believe that offering computer science is a good use of resources at their child's school, and 
+	- 93% of parents believe that offering computer science is a good use of resources at their child's school. 
 - [Computer Science Learning: Closing the Gap - Girls](http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-girls-brief.pdf)
 	- Girls are less likely to have learned computer science outside of school: 31% of girls who learned computer science did so online (vs. 44%) and 41% learned it on their own (vs 54% of boys). 
 - [Computer Science Learning: Closing the Gap - Black Students](http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-black-brief.pdf)
@@ -125,5 +120,5 @@ availability and budget for computer science teachers. Few principals and superi
 - [Encouraging Students Toward Computer Science Learning](http://services.google.com/fh/files/misc/encouraging-students-toward-computer-science-learning-brief.pdf)
 	- Students who have been told by parents or teachers that they would be good at computer science are 2.5-3 times more likely to be interested in learning it in the future; yet boys are more likely than girls to have been told by teachers (39% vs. 26%) and parents (46% vs. 27%) that they would be good at computer science. 
 	- Boys and girls have a similar level of interest in learning CS at age 12; however, girls' interest in learning CS decreases between ages 12 and 14 (27% to 12%) while boys’ increases (30% to 47%). 
-- [State-level reports] (http://services.google.com/fh/files/misc/cs-edu-state-reports-2017.pdf): Combined data from both Year 1 and Year 2 that summarizes the status of computer science in 43 U.S. states. 
+- [State-level reports] (http://services.google.com/fh/files/misc/cs-edu-state-reports-2017.pdf): Combined data from both Year 1 and Year 2 that summarizes the status of computer science in 43 US states. 
 

@@ -5,43 +5,40 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 const styles = {
   main: {
     border: 'none',
-    marginTop: 20,
-    marginRight: 80,
-    paddingTop: 20,
-    paddingLeft: 20,
-    paddingRight: 10,
-    paddingBottom: 10,
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   icon: {
     color: color.level_perfect,
-    float: 'left',
-    width: 20,
-    fontSize: 25,
   },
   text: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16,
-    float: 'left',
-    paddingRight: 40,
-    width: 20,
+    marginRight: 10,
   },
 };
 
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
-    percentValue: PropTypes.string.isRequired,
+    percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
   };
 
   render() {
     const {percentValue, isCorrectAnswer} = this.props;
     return (
-      <div>
-        <div>
-          {percentValue}
+      <div style={styles.main}>
+        <div style={styles.text}>
+          {(percentValue >= 0) &&
+            <span>{`${percentValue}%`}</span>
+          }
+          {(percentValue < 0 ) &&
+            <span>{'-'}</span>
+          }
         </div>
-        <div>
+        <div style={styles.icon}>
           {isCorrectAnswer &&
              <FontAwesome icon="check-circle" style={styles.icon}/>
           }
@@ -50,5 +47,10 @@ class MultipleChoiceAnswerCell extends Component {
     );
   }
 }
+
+
+MultipleChoiceAnswerCell.defaultProps = {
+  percentValue: -1
+};
 
 export default MultipleChoiceAnswerCell;
