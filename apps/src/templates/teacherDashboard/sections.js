@@ -14,7 +14,7 @@ import manageStudents, {
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
-import textResponses, {asyncLoadTextResponses, setSectionId as textResponsesSetSectionId} from '@cdo/apps/templates/textResponses/textResponsesRedux';
+import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
@@ -80,7 +80,6 @@ export function renderTextResponsesTable(section, validScripts) {
   registerReducers({textResponses, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(textResponsesSetSectionId(section.id));
   store.dispatch(loadValidScripts(section, validScripts));
 
   const scriptId = store.getState().scriptSelection.scriptId;

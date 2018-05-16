@@ -61,9 +61,8 @@ const styles = {
 
 class TextResponses extends Component {
   static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-
     // provided by redux
+    sectionId: PropTypes.number.isRequired,
     responses: PropTypes.object.isRequired,
     isLoadingResponses: PropTypes.bool.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
@@ -185,6 +184,7 @@ class TextResponses extends Component {
 export const UnconnectedTextResponses = TextResponses;
 
 export default connect(state => ({
+  sectionId: state.sectionData.section.id,
   responses: state.textResponses.responseDataByScript,
   isLoadingResponses: state.textResponses.isLoadingResponses,
   validScripts: state.scriptSelection.validScripts,
