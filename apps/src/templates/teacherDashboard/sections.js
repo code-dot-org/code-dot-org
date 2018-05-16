@@ -8,7 +8,6 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import manageStudents, {
   setLoginType,
-  setSectionId,
   setStudents,
   convertStudentServerData,
   toggleSharingColumn,
@@ -112,20 +111,20 @@ export function renderStatsTable(section) {
   });
 }
 
-export function renderSectionTable(sectionId, loginType, courseName) {
-  registerReducers({manageStudents, isRtl});
+export function renderSectionTable(section) {
+  registerReducers({manageStudents, isRtl, sectionData});
   const store = getStore();
 
-  store.dispatch(setLoginType(loginType));
-  store.dispatch(setSectionId(sectionId));
+  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(setSection(section));
 
   // Show share column by default for CSD and CSP courses
   const coursesToShowShareSetting = ['csd', 'csp'];
-  if (coursesToShowShareSetting.includes(courseName)) {
+  if (coursesToShowShareSetting.includes(section.course_name)) {
     store.dispatch(toggleSharingColumn());
   }
 
-  const dataUrl = `/dashboardapi/sections/${sectionId}/students`;
+  const dataUrl = `/dashboardapi/sections/${section.id}/students`;
   const element = document.getElementById('student-table-react');
 
   $.ajax({
@@ -134,7 +133,7 @@ export function renderSectionTable(sectionId, loginType, courseName) {
     dataType: 'json'
   }).done(studentData => {
     store.dispatch(
-      setStudents(convertStudentServerData(studentData, loginType, sectionId))
+      setStudents(convertStudentServerData(studentData, section.login_type, section.id))
     );
     ReactDOM.render(
       <Provider store={store}>
