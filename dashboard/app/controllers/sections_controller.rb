@@ -2,7 +2,6 @@ class SectionsController < ApplicationController
   include UsersHelper
 
   before_action :load_section_by_code, only: [:log_in, :show]
-  before_action :authenticate_user!, only: [:membership]
 
   def show
     @secret_pictures = SecretPicture.all.shuffle
@@ -49,6 +48,10 @@ class SectionsController < ApplicationController
 
   # Get the set of sections that the current user is enrolled in.
   def membership
+    unless current_user
+      return head :forbidden
+    end
+
     render json: {sections: current_user.sections_as_student}
   end
 
