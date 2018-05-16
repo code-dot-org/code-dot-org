@@ -51,7 +51,6 @@ class GameLabVisualizationColumn extends React.Component {
   };
 
   pickerPointerMove = e => {
-    console.log(`pointer move event: ${e.offsetX}, ${e.offsetY}`);
     if (this.props.pickingLocation) {
       this.props.updatePicker({
         x: e.offsetX,
