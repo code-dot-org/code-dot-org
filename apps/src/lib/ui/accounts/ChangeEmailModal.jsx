@@ -4,7 +4,6 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {hashEmail} from '../../../code-studio/hashEmail';
 import {isEmail} from '../../../util/formatValidation';
-import $ from 'jquery';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import ChangeEmailForm from './ChangeEmailForm';
 
@@ -25,13 +24,16 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
-
 export default class ChangeEmailModal extends React.Component {
   static propTypes = {
+    /**
+     * @type {function({newEmail: string, currentPassword: string}):Promise}
+     */
     handleSubmit: PropTypes.func.isRequired,
+    /**
+     * @type {function()}
+     */
     handleCancel: PropTypes.func.isRequired,
-    railsForm: PropTypes.object.isRequired,
-    userAge: PropTypes.number.isRequired,
     currentHashedEmail: PropTypes.string,
   };
 
@@ -47,18 +49,6 @@ export default class ChangeEmailModal extends React.Component {
     },
   };
 
-  componentDidMount() {
-    this._form = $(this.props.railsForm);
-    this._form.on('ajax:success', this.onSubmitSuccess);
-    this._form.on('ajax:error', this.onSubmitFailure);
-  }
-
-  componentWillUnmount() {
-    this._form.off('ajax:success', this.onSubmitSuccess);
-    this._form.off('ajax:error', this.onSubmitFailure);
-    delete this._form;
-  }
-
   save = () => {
     // No-op if we know the form is invalid, client-side.
     // This blocks return-key submission when the form is invalid.
@@ -66,28 +56,19 @@ export default class ChangeEmailModal extends React.Component {
       return;
     }
 
-    const {newEmail, currentPassword} = this.state.values;
-    this.setState({saveState: STATE_SAVING}, () => {
-      this._form.find('#change-email-modal_user_email').val(this.props.userAge < 13 ? '' : newEmail);
-      this._form.find('#change-email-modal_user_hashed_email').val(hashEmail(newEmail));
-      this._form.find('#change-email-modal_user_current_password').val(currentPassword);
-      this._form.submit();
-    });
+    const {values} = this.state;
+    this.setState({saveState: STATE_SAVING});
+    this.props.handleSubmit(values)
+      .catch(this.onSubmitFailure);
   };
 
   cancel = () => this.props.handleCancel();
 
-  onSubmitSuccess = () => this.props.handleSubmit(this.state.values.newEmail);
-
-  onSubmitFailure = (_, xhr) => {
-    const validationErrors = xhr.responseJSON;
-    if (validationErrors) {
+  onSubmitFailure = (error) => {
+    if (error && error.hasOwnProperty('serverErrors')) {
       this.setState({
         saveState: STATE_INITIAL,
-        serverErrors: {
-          newEmail: validationErrors.email && validationErrors.email[0],
-          currentPassword: validationErrors.current_password && validationErrors.current_password[0],
-        }
+        serverErrors: error.serverErrors
       }, () => this.changeEmailForm.focusOnAnError());
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
