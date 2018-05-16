@@ -9,6 +9,7 @@ import {
 } from './multiGridConstants';
 import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
@@ -139,6 +140,14 @@ export default function sectionProgress(state=initialState, action) {
     return {
       ...state,
       lessonOfInterest: action.lessonOfInterest
+    };
+  }
+  if (action.type === SET_SECTION) {
+    // Setting the section is the first action to be called when switching
+    // sections, which requires us to reset our state. This might need to change
+    // once switching sections is in react/redux.
+    return {
+      ...initialState,
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {
