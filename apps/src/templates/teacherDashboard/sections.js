@@ -13,7 +13,7 @@ import manageStudents, {
   convertStudentServerData,
   toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import sectionProgress, {setSection} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import textResponses, {asyncLoadTextResponses, setSectionId as textResponsesSetSectionId} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
@@ -77,13 +77,13 @@ export function renderLoginTypeControls(sectionId) {
 export function renderTextResponsesTable(section, validScripts) {
   const element = document.getElementById('text-responses-table-react');
 
-  registerReducers({sectionProgress, textResponses, scriptSelection});
+  registerReducers({textResponses, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
   store.dispatch(textResponsesSetSectionId(section.id));
   store.dispatch(loadValidScripts(section, validScripts));
 
-  const scriptId = store.getState().sectionProgress.scriptId;
+  const scriptId = store.getState().scriptSelection.scriptId;
   store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
     ReactDOM.render(
       <Provider store={store}>
