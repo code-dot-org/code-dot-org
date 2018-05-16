@@ -19,8 +19,8 @@ class EmailPreferenceHelper
 
     current_time = Time.now
 
-    # assign the argument opt_in to a variable with a different name to avoid confusion below
-    # between the value of the opt_in column in the existing row and the new/input value
+    # Assign the argument opt_in to a variable with a different name to avoid confusion below
+    # between the value of the opt_in column in the existing row and the new/input value.
     input_opt_in = opt_in
 
     Dashboard.db[:email_preferences].
