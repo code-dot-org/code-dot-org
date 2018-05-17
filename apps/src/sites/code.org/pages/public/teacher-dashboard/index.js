@@ -410,7 +410,7 @@ function main() {
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
+            study_group: 'react',
             event: 'stats'
           }
         );
@@ -436,7 +436,7 @@ function main() {
         firehoseClient.putRecord(
           {
             study: 'teacher-dashboard',
-            study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
+            study_group: 'react',
             event: 'manage'
           }
         );
@@ -651,7 +651,7 @@ function main() {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
+        study_group: 'react',
         event: 'projects'
       }
     );
@@ -732,7 +732,7 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
+          study_group: 'angular',
           event: 'progress-detailed'
         }
       );
@@ -744,7 +744,7 @@ function main() {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: experiments.isEnabled(experiments.TEACHER_EXP_2018) ? 'react' : 'angular',
+          study_group: 'angular',
           event: 'progress-summary'
         }
       );
