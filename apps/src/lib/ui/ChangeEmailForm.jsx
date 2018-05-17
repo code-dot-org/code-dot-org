@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import {Field} from './SystemDialog/SystemDialog';
 
 export default class ChangeEmailForm extends React.Component {
   static propTypes = {
@@ -57,15 +57,11 @@ export default class ChangeEmailForm extends React.Component {
     const {values, validationErrors, disabled} = this.props;
     return (
       <div>
-        <Field>
-          <label
-            htmlFor="user_email"
-            style={styles.label}
-          >
-            {i18n.changeEmailModal_newEmail_label()}
-          </label>
+        <Field
+          label={i18n.changeEmailModal_newEmail_label()}
+          error={validationErrors.newEmail}
+        >
           <input
-            id="user_email"
             type="email"
             value={values.newEmail}
             disabled={disabled}
@@ -77,19 +73,12 @@ export default class ChangeEmailForm extends React.Component {
             style={styles.input}
             ref={el => this.newEmailInput = el}
           />
-          <FieldError>
-            {validationErrors.newEmail}
-          </FieldError>
         </Field>
-        <Field>
-          <label
-            htmlFor="user_current_password"
-            style={styles.label}
-          >
-            {i18n.changeEmailModal_currentPassword_label()}
-          </label>
+        <Field
+          label={i18n.changeEmailModal_currentPassword_label()}
+          error={validationErrors.currentPassword}
+        >
           <input
-            id="user_current_password"
             type="password"
             value={values.currentPassword}
             disabled={disabled}
@@ -100,14 +89,12 @@ export default class ChangeEmailForm extends React.Component {
             style={styles.input}
             ref={el => this.currentPasswordInput = el}
           />
-          <FieldError>
-            {validationErrors.currentPassword}
-          </FieldError>
         </Field>
-        <Field style={{display: 'none'}}>
-          <p>
-            {i18n.changeEmailModal_emailOptIn_description()}
-          </p>
+        <Field
+          label={i18n.changeEmailModal_emailOptIn_description()}
+          error={validationErrors.emailOptIn}
+          style={{display: 'none'}}
+        >
           <select
             value={values.emailOptIn}
             onKeyDown={this.onKeyDown}
@@ -126,48 +113,13 @@ export default class ChangeEmailForm extends React.Component {
               {i18n.no()}
             </option>
           </select>
-          <FieldError>
-            {validationErrors.emailOptIn}
-          </FieldError>
         </Field>
       </div>
     );
   }
 }
 
-const Field = ({children, style}) => (
-  <div
-    style={{
-      marginBottom: 15,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
-Field.propTypes = {
-  children: PropTypes.any,
-  style: PropTypes.object,
-};
-
-const FieldError = ({children}) => (
-  <div
-    style={{
-      color: color.red,
-      fontStyle: 'italic',
-    }}
-  >
-    {children}
-  </div>
-);
-FieldError.propTypes = {children: PropTypes.string};
-
 const styles = {
-  label: {
-    display: 'block',
-    fontWeight: 'bold',
-    color: color.charcoal,
-  },
   input: {
     marginBottom: 4,
   },

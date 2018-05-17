@@ -134,7 +134,7 @@ export default class ChangeEmailModal extends React.Component {
       return i18n.changeEmailModal_newEmail_invalid();
     }
     if (currentHashedEmail === hashEmail(newEmail)) {
-      return i18n.changeEmailmodal_newEmail_mustBeDifferent();
+      return i18n.changeEmailModal_newEmail_mustBeDifferent();
     }
     return null;
   };
