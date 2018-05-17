@@ -3,6 +3,7 @@ class CreateBlocks < ActiveRecord::Migration[5.0]
     create_table :blocks do |t|
       t.string :name
       t.string :level_type
+      t.text :category
       t.text :config
       t.text :helper_code
 
