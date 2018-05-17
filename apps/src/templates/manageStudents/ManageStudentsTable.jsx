@@ -502,7 +502,6 @@ class ManageStudentsTable extends Component {
     })(this.props.studentData);
 
     const {addStatus, loginType, transferStatus, transferData, sectionId} = this.props;
-
     return (
       <div>
         {addStatus.status === AddStatus.SUCCESS &&
