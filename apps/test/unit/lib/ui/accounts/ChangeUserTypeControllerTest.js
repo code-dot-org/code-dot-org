@@ -53,6 +53,13 @@ describe('ChangeUserTypeController', () => {
       expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
+    it('show is idempotent', () => {
+      expect(ReactDOM.render).not.to.have.been.called;
+      controller.showChangeUserTypeModal();
+      controller.showChangeUserTypeModal();
+      expect(ReactDOM.render).to.have.been.calledOnce;
+    });
+
     it('can hide the modal dialog', () => {
       dropdown.val(OTHER_USER_TYPE);
       dropdown.change();
@@ -60,6 +67,15 @@ describe('ChangeUserTypeController', () => {
       expect(ReactDOM.render).to.have.been.calledOnce;
 
       expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      controller.hideChangeUserTypeModal();
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+    });
+
+    it('hide is idempotent', () => {
+      controller.showChangeUserTypeModal();
+
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      controller.hideChangeUserTypeModal();
       controller.hideChangeUserTypeModal();
       expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
