@@ -32,7 +32,14 @@ class MultipleChoiceAnswerCell extends Component {
     if (answerCell) {
       return (
         <div>
-          {answerCell}
+          <div>
+            {answerCell}
+          </div>
+          <div style={styles.icon}>
+          {isCorrectAnswer &&
+            <FontAwesome icon="check-circle" style={styles.icon}/>
+          }
+          </div>
         </div>
       );
     }
