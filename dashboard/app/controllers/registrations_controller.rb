@@ -15,11 +15,6 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    # Details required to perform email opt-in
-    email_opt_in = params[:user].delete(:email_opt_in)
-    account_type_changed = params[:user][:user_type] &&
-      params[:user][:user_type] != current_user.user_type
-
     successfully_updated =
       if forbidden_change?(current_user, params)
         false
@@ -31,23 +26,6 @@ class RegistrationsController < Devise::RegistrationsController
         params[:user].delete(:current_password)
         current_user.update_without_password(update_params(params))
       end
-
-    # Opt-in the user
-    if successfully_updated && !current_user.email.blank? && !email_opt_in.nil?
-      source =
-        if account_type_changed
-          EmailPreference::ACCOUNT_TYPE_CHANGE
-        else
-          nil
-        end
-      EmailPreference.upsert!(
-        email: current_user.email,
-        opt_in: email_opt_in == 'yes',
-        ip_address: request.env['REMOTE_ADDR'],
-        source: source,
-        form_kind: "0"
-      )
-    end
 
     respond_to_account_update(successfully_updated)
   end
