@@ -123,6 +123,9 @@ zh-CN:
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
     error: "发生错误。"
+    email_preference_question: "Can we email you about updates to our courses, local learning opportunities, or other computer science news?"
+    email_preference_yes: "是"
+    email_preference_no: "不"
   school_info:
     title: '学校信息（选填）'
     school_country: '学校所在国家'
@@ -879,6 +882,11 @@ zh-CN:
     csp_ap_1: '第一章：安装'
     csp_ap_2: '第二章：浏览成绩工具'
     csp_ap_3: '第三章：创建性能工具'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '第2单元︰ 数字信息'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反思提示'
   external_links:
     disclaimer: 免责声明
@@ -983,3 +991,7 @@ zh-CN:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: '完整课程'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: '我同意'

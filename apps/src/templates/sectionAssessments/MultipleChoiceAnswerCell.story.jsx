@@ -10,7 +10,7 @@ export default storybook => {
         description: 'A green check mark is displayed when the answer is correct.',
         story: () => (
           <MultipleChoiceAnswerCell
-            percentValue="40%"
+            percentValue={40}
             isCorrectAnswer={true}
           />
         )
@@ -20,7 +20,7 @@ export default storybook => {
         description: 'Check mark is hidden when the answer is wrong.',
         story: () => (
           <MultipleChoiceAnswerCell
-            percentValue="40%"
+            percentValue={60}
           />
         )
       },

@@ -206,25 +206,25 @@ ga:
       CSD U3 Watcher Debug_callout: { }
       CSD U3 Watcher Debug_2018_callout: { }
       CSD U3 abstraction accelerateX_callout:
-        CSD_U3_L11_S6_C1: Add your code here.
+        CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateX_2018_callout:
-        CSD_U3_L11_S6_C1: Add your code here.
+        CSD_U3_L11_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_callout:
-        CSD_U3_L11_S7_C1: Add your code here.
+        CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction accelerateY_2018_callout:
-        CSD_U3_L11_S7_C1: Add your code here.
+        CSD_U3_L11_S7_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction change velocityX_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction change velocityXY_callout:
         CSD_U3_L12_S4_C1: The velocity is updated here.
       CSD U3 abstraction change velocityY_callout:
-        CSD_U3_L11_S6_C1: Add your block here.
+        CSD_U3_L11_S6_C1: Cuir do bhloc anseo.
       CSD U3 abstraction circle_callout:
         CSD_U3_L12_S7_C1: Look at this line.
       CSD U3 abstraction dragonfly (OLD)_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction dragonfly OLD_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction horse_callout:
         CSD_U3_L11_S13_C1: Set your sprite's velocityX and velocityY here
         CSD_U3_L11_S13_C2: Change your sprite's velocityY here.
@@ -259,10 +259,10 @@ ga:
       CSD U3 abstraction looping_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction parabola_callout:
-        CSD_U3_L11_S13_C1: Add your block here.
+        CSD_U3_L11_S13_C1: Cuir do bhloc anseo.
       CSD U3 abstraction rotation accelerate_callout:
         CSD_U3_L11_S5_C1: Look at this code.
-        CSD_U3_L11_S5_C2: Add your code here.
+        CSD_U3_L11_S5_C2: Cuir do chuid cóid anseo.
       CSD U3 abstraction rotation control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction rotation control_2018_callout:
@@ -272,7 +272,7 @@ ga:
       CSD U3 abstraction rotation_2018_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction setSpeed accelerate_callout:
-        CSD_U3_L11_S14_C1: Add your code here.
+        CSD_U3_L11_S14_C1: Cuir do chuid cóid anseo.
       CSD U3 abstraction sidescroll intro_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
@@ -306,19 +306,19 @@ ga:
       CSD U3 abstraction velocityX if-statements_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX_callout:
-        CSD_U3_L11_S4_C1: Add your block here.
+        CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityX_2018_callout:
-        CSD_U3_L11_S4_C1: Add your block here.
+        CSD_U3_L11_S4_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY 2_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY control_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 abstraction velocityY_2018_callout:
-        CSD_U3_L11_S5_C1: Add your block here.
+        CSD_U3_L11_S5_C1: Cuir do bhloc anseo.
       CSD U3 challenge face_callout: { }
       CSD U3 challenge face_2018_callout: { }
       CSD U3 challenge new shape_callout: { }
@@ -327,9 +327,9 @@ ga:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
       CSD U3 collisions isTouching intro_callout:
-        CSD_U3_L12_S2_C1: Add your block here.
+        CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions isTouching intro_2018_callout:
-        CSD_U3_L12_S2_C1: Add your block here.
+        CSD_U3_L12_S2_C1: Cuir do bhloc anseo.
       CSD U3 collisions pinball2_callout:
         CSD_U3_L14_S16_C1: Sprite interactions go in this function.
       CSD U3 collisions scoreboard_callout:
@@ -343,9 +343,9 @@ ga:
       CSD U3 collisions try blocks_2018_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
-        CSD_U3_L13_S6_C1: Add your code here.
+        CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 collisions types_2018_callout:
-        CSD_U3_L13_S6_C1: Add your code here.
+        CSD_U3_L13_S6_C1: Cuir do chuid cóid anseo.
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Seo é an cód
         CSD_U3_rect_c2: Tarraing an bloc seo go dtí an cód.
@@ -423,9 +423,9 @@ ga:
       CSD U6 colorLeds predict_callout: { }
       CSD U6 colorLeds predict_2018_callout: { }
       CSD U6 getProperty input_callout:
-        CSD_U6L06P03: Add your block here.
+        CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 getProperty input_2018_callout:
-        CSD_U6L06P03: Add your block here.
+        CSD_U6L06P03: Cuir do bhloc anseo.
       CSD U6 light show predict_callout:
         CSDUDL03P09: Cad a dhéanann an líne seo?
       CSD U6 light show predict_2018_callout:
@@ -532,7 +532,7 @@ ga:
         edit_get_nectar: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus an treo ina gcasann an Beach le neachtar a fháil a athrú.
       Course 4 Bee Params 3_callout: { }
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called setting a "flag". This flag can signal our function with the direction that our bee needs to go.
+        Course_4_Bee_Params_4: Nuair a thugann tú luach "0" nó "1" do na hathróga seo, deirtear gur shocraigh tú "bratach". Cuireann an bhratach seo in iúl don fheidhm an treo ba chóir don bheach a dhul.
       Course 4 Bee Params 4_callout: { }
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Cliceáil "Rith" chun triail a bhaint as
@@ -555,7 +555,7 @@ ga:
         Course_4_Play_Labs_For_Loops_5: Dia linn! Phléasc mo chuid cóid! An féidir leat é a chur le chéile chun an fhadhb seo a réiteach?
       Course 4 Playlab For Loop Freeplay_callout: { }
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
+        Course_4_Playlab_For_Loops_4b_1: Tabhair faoi deara go bhfuil ainm difriúil ar an athróg "áiritheoir" do gach carachtar. Déantar é seo chun go mbeidh gach lúb "do gach" i gceannas ar a háiritheoir féin.
         Course_4_Playlab_For_Loops_4b_2: Sa dúshlán seo, níl cead agat ach an "incrimint" sna lúba "do gach" a athrú.
       Course 4 Playlab For Loops 5b_callout: { }
       Course 4 Playlab For Loops 6b_callout: { }
@@ -751,7 +751,7 @@ ga:
       Play Lab Rocket 2B_callout:
         pass_function: Leis an mbloc dubh seo, is féidir leat an fheidhm féin (seachas an luach a chuireann sí ar ais) a chur chuig an leabharlann bheochana roicéid. Tá an bheochan a fheiceann tú ag baint úsáide as an bhfeidhm chun an roicéad a rialú!
       Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
+        Play Lab Rocket 3 1: Nuashonraigh an ráiteas aidhme sula rachaidh tú ar aghaidh go dtí na samplaí agus an sainmhíniú.
       Play Lab Rocket Free Play_callout: { }
       Poorva copy U3L2 Using Simple Commands_callout: { }
       Quantum Bee - Ryan_callout:
@@ -776,19 +776,19 @@ ga:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
       SG Add Subgoals practice_callout: { }
       SG U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       SG U3L2 Using Simple Commands part 1_callout: { }
       SG U3L2 Using Simple Commands_callout: { }
       SG U3L2_Add-subgoals_callout: { }
       SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: penUp and penDown are here now if you want to use them.
+        pen_functions: Tá peannSuas agus peannSíos anseo anois más mian leat iad a úsáid.
         goals_tab: tarraing spriocanna amach as seo
       SG U3L2_TurtleSquare_right_callout: { }
       SGU3L2A Introducing Subgoals_callout:
         goals_palette_show: Seo é liosta fospriocanna
         goals_workspace: Cód samplach ina bhfuil fospriocanna
       Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: Cuir an fheidhm seo in eagar chun cosc a chur ar Sam imeacht ar thaobh na láimhe deise
+        Sam the Butterfly 3 1: Cuir an fheidhm seo in eagar chun cosc a chur ar Sam imeacht ón scáileán ar thaobh na láimhe deise
       Sam the Butterfly 5_callout: { }
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur leis an gclár
@@ -813,9 +813,9 @@ ga:
       U3L05_3x3GridEfficiencyChallenge_callout: { }
       U3L05_draw3x3GridEfficiently_callout: { }
       U3L08 how to add comments_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       U3L08 how to add comments_2018_callout:
-        comment_highlight: Drag a comment block from here into your code
+        comment_highlight: Tarraing bloc nóta tráchta as seo go dtí an cód
       U3L2 Using Simple Commands (no tooltips)_callout: { }
       U3L2 Using Simple Commands_callout: { }
       U3L2 Using Simple Commands_2018_callout: { }
@@ -854,7 +854,7 @@ ga:
       aE6_callout:
         aE6_1: Bloc amháin "téigh ar aghaidh" agus bloc amháin "cas"
       aEfreeplay_callout:
-        aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're looking at adding actions that can move the artist to absolute positions.
+        aEfreeplay_1: Tabhair faoi deara go bhfuil sé sách ciotach nuair a thosaíonn an t-ealaíontóir sa lár. Táimid ag smaoineamh ar ghníomhartha nua a bheadh in ann an t-ealaíontóir a aistriú go háit ar bith.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: { }
       artistLoopsK2_callout:
         artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo.
@@ -877,7 +877,7 @@ ga:
         courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach a aistriú ar gcúl.
       course3_bee_functions_challenge3_callout:
         courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm seo?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go leor uaireanta.
       course3_bee_functions_challenge4_callout: { }
       course3_collector_debugging_challenge2_callout: { }
       course3_farmer_until_challenge2_callout: { }
@@ -932,11 +932,11 @@ ga:
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
       courseA_maze_ramp3a_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseA_maze_ramp4a_2018_callout: { }
       courseA_maze_ramp5_2018_callout: { }
       courseA_maze_ramp5a_2018_callout: { }
@@ -962,9 +962,9 @@ ga:
       courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Is tagrán é seo
       courseA_playLab_events5_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+        courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events5_2018_callout:
-        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+        courseA_playLab_events5_1: Cliceáil anseo chun treo na saighde a athrú.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: Úsáid é seo le fuaim "randamach" a roghnú, rud a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go gcloisfidh tú é!
       courseA_playLab_events6_2018_callout:
@@ -1003,9 +1003,9 @@ ga:
       courseB_maze_seq7_callout: { }
       courseB_maze_seq7_2018_callout: { }
       courseB_playlab_events6_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseB_playlab_events6_2018_callout:
-        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+        courseB_playlab_events6_a: Úsáid an tsaighead uaine aníos chun an treo a athrú.
       courseC_PlayLab_events8_callout:
         courseC_PlayLab_events8_callout1: Cuirfear an bloc seo i bhfeidhm nuair a bhuaileann an phiongain agus an dineasár in aghaidh a chéile.
       courseC_PlayLab_events8_2018_callout:
@@ -1063,15 +1063,15 @@ ga:
       courseC_maze_programming2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir leat fáil réidh leo.
       courseC_maze_programming3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         courseC_maze_programming3_3: Déanta de chloch na blocanna seo agus ní féidir leat fáil réidh leo.
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseC_maze_programming4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseC_maze_programming5_callout: { }
       courseC_maze_programming5_2018_callout: { }
       courseC_maze_programming7_callout:
@@ -1103,7 +1103,7 @@ ga:
       courseC_starWars_loops9_callout: { }
       courseC_starWars_loops9_2018_callout: { }
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí.
       courseD_artist_nestedLoops1a_callout:
@@ -1114,7 +1114,7 @@ ga:
       courseD_artist_nestedLoops_challenge2_2018_callout: { }
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: Is féidir leat an uimhir seo a athrú.
-        courseD_artist_ramp11_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseD_artist_ramp11_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseD_artist_ramp12_callout: { }
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
@@ -1130,7 +1130,7 @@ ga:
       courseD_bee_conditionals_challenge2_2018_callout:
         courseD_bee_conditionals_challenge2_1: Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin.
       courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
+        courseD_bee_conditionals_challenge3_1: Úsáid an lúb seo chun an bloc "téigh ar aghaidh" a athdhéanamh.
       courseD_bee_debugging_challenge1_callout:
         courseD_bee_debugging_challenge1_callout1: Úsáid an t-ordú seo chun an beach a aistriú ar gcúl.
       courseD_bee_debugging_challenge1_2018_callout:
@@ -1164,15 +1164,15 @@ ga:
       courseD_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_maze_ramp3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
       courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_maze_ramp5_callout: { }
       courseD_maze_ramp5_2018_callout: { }
       courseD_maze_ramp5a_callout: { }
@@ -1184,16 +1184,16 @@ ga:
       courseD_maze_ramp5d_callout: { }
       courseD_maze_ramp5d_2018_callout: { }
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_maze_ramp7_callout: { }
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh cóid a thabhairt duit! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_2018_callout:
-        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh cóid a thabhairt duit! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
       courseD_playLab_condFP_a_callout:
-        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh cóid a thabhairt duit! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
+        courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá bhfuil na blocanna go léir anois.
       courseD_scrat_predict1_callout: { }
       courseD_scrat_predict1_2018_callout: { }
       courseD_scrat_ramp1_callout:
@@ -1205,23 +1205,23 @@ ga:
       courseD_scrat_ramp2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseD_scrat_ramp5_callout: { }
       courseD_scrat_ramp5_2018_callout: { }
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseD_scrat_ramp8_callout:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseD_scrat_ramp8_2018_callout:
@@ -1236,7 +1236,7 @@ ga:
       courseE_artist_functions2_callout:
         courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        courseD_artist_functions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí.
       courseE_artist_functions8_2018_callout: { }
@@ -1266,20 +1266,20 @@ ga:
       courseE_artist_ramp10_callout: { }
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Is féidir leat an uimhir seo a athrú.
-        courseD_artist_ramp11_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseD_artist_ramp11_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp12_callout: { }
       courseE_artist_ramp8_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp8_2_2018_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseE_artist_ramp9_callout: { }
       courseE_artist_ramp9_2_callout: { }
       courseE_artist_ramp9_2018_callout: { }
@@ -1348,19 +1348,19 @@ ga:
       courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       courseE_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseE_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseE_maze_ramp5_callout: { }
       courseE_maze_ramp5_2018_callout: { }
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseE_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseE_maze_ramp7_2018_callout:
@@ -1420,14 +1420,14 @@ ga:
       courseF_artist_ramp10_2018_callout: { }
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseF_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo le cur isteach an líon uaireanta ba mhaith leat an cód a athdhéanamh.
+        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach.
       courseF_artist_ramp9_callout: { }
       courseF_artist_ramp9_2018_callout: { }
       courseF_artist_variables1_callout:
-        courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
+        courseF_artist_variables1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
       courseF_artist_variables10_callout: { }
       courseF_artist_variables10_2018_callout: { }
       courseF_artist_variables2_callout: { }
@@ -1480,11 +1480,11 @@ ga:
       courseF_bee_conditionals2_2018_callout:
         courseF_bee_conditionals2_2: Tá an bosca uirlisí sa mód "catagóirí" anois. Gheobhaidh tú gach bloc a theastaíonn uait faoi na lipéid seo!
       courseF_bee_conditionals5_callout:
-        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
+        courseF_bee_conditionals5_1: Úsáid an bloc seo nuair a athraíonn fad an chosáin (is é sin taobhanna na dronuilleoige!)
       courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
+        courseF_bee_conditionals5_1: Úsáid an bloc seo nuair a athraíonn fad an chosáin (is é sin taobhanna na dronuilleoige!)
       courseF_bee_for3_callout:
-        courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
+        courseF_bee_for3_1: Tá an lúb 'do gach' chomh leathan sin anois gur chuireamar an bosca uirlisí sa mhód catagóirí chun spás a spáráil. Aimseoidh tú an lúb nua 'do gach' anseo!
       courseF_bee_for3_predict1_callout: { }
       courseF_bee_for3_predict1_2018_callout: { }
       courseF_bee_for4_callout:
@@ -1494,9 +1494,9 @@ ga:
       courseF_bee_for6_callout: { }
       courseF_bee_for6_2018_callout: { }
       courseF_bee_for9_callout:
-        courseF_bee_for9_1: You will find the `math` block in here.
+        courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
       courseF_bee_for9_2018_callout:
-        courseF_bee_for9_1: You will find the `math` block in here.
+        courseF_bee_for9_1: Gheobhaidh tú an bloc 'mata' anseo.
       courseF_bee_for_challenge1_callout: { }
       courseF_bee_for_challenge1_2018_callout: { }
       courseF_bee_functions2_callout:
@@ -1504,19 +1504,19 @@ ga:
       courseF_bee_functions2_2018_callout:
         courseF_bee_functions2_1: Glaonn an bloc seo feidhm. Cliceáil an cnaipe "eagar" le féachaint céard atá laistigh di!
       courseF_bee_functions6_callout:
-        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
+        courseF_bee_functions6_1: Ná déan dearmad féachaint anseo le lorg níos mó blocanna a chabhródh leat é seo a dhéanamh!
       courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
+        courseF_bee_functions6_1: Ná déan dearmad féachaint anseo le lorg níos mó blocanna a chabhródh leat é seo a dhéanamh!
       courseF_bee_functions_1_2018_callout:
         courseF_bee_functions_1_2018_1: Aimseoidh tú do chuid athróg anseo!
       courseF_bee_functions_2_2018_callout: { }
       courseF_bee_functions_3_2018_callout: { }
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm seo?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go leor uaireanta.
       courseF_bee_functions_challenge1_2018_callout:
         courseF_bee_functions_challenge1_1: Cén cód ba chóir duit a chur san fheidhm seo?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_2: Is féidir leat an fheidhm "seiceáil neachtar nó mil" a úsáid anseo má chuireann tú in eagar í chun mil a dhéanamh go leor uaireanta.
       courseF_bee_functions_challenge2_callout: { }
       courseF_bee_functions_challenge2_2018_callout: { }
       courseF_bee_fwp1_callout:
@@ -1561,15 +1561,15 @@ ga:
       courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseF_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseF_maze_ramp5_callout: { }
       courseF_maze_ramp5_2018_callout: { }
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseF_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis an gcuid eile den chlár.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
       courseF_playLab_func2_callout:
@@ -1614,9 +1614,9 @@ ga:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       coursef_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       drawings!_callout: { }
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Úsáid an bloc "cruthaigh ciorcal" agus athraigh an mhéid.
@@ -1656,11 +1656,11 @@ ga:
         grade2_CaringForNewPet_1_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause problems.
-        grade2_CaringForNewPet_2_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        grade2_CaringForNewPet_2_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraing go dtí an bosca uirlisí le fáil réidh leo.
+        courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+        grade2_CaringForNewPet_3_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       grade2_CaringForNewPet_3D_callout: { }
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are meant to be harder and may take several tries.
@@ -1707,7 +1707,7 @@ ga:
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat an chéad chearnóg a chruthú.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
+        grade4_artist_funcions2_1: Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Tá na blocanna is ansa leat leagtha amach ina gcatagóirí anois. Cliceáil na focail seo le féachaint cá bhfuil chuile rud anois!
       grade4_artist_functions_stars3_callout:
@@ -1775,9 +1775,9 @@ ga:
       grade5_artist_variables_square7_callout:
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach uillinne (céimeanna).
       grade5_artist_variables_triangles1_callout:
-        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles1_2018_callout:
-        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
+        grade5_artist_variables_triangles1_1: Tabhair faoi deara go bhfuil bealach nua ann uimhreacha a chur isteach i mblocanna. Is féidir leat na blocanna 'mata' seo a tharraingt amach agus a bhogadh thart!
       grade5_artist_variables_triangles2_callout:
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
       grade5_bee_for_loops3_callout:
@@ -1890,4 +1890,4 @@ ga:
         orient_subgoal: Ciallaíonn sé seo gur mhaith leat an turtar a chasadh
       subgoalU3L2_TurtleSquare_right_callout: { }
       testing code callout_callout:
-        testing_code_callout: This makes the sprite move!
+        testing_code_callout: Cuireann seo an sprid ag imeacht!

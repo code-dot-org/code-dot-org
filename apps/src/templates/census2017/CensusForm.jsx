@@ -766,6 +766,29 @@ class CensusForm extends Component {
               <span style={styles.asterisk}> *</span>
             </label>
           </div>
+
+          <div>
+            {errors.optIn && (
+               <div style={styles.errors}>
+                 Required. Please let us know if we can email you.
+               </div>
+            )}
+            <span style={styles.share}>
+              Can we email you about updates to our courses, local learning opportunities, or other computer science news?
+            </span>
+            <select
+              name="opt_in"
+              value={this.state.submission.optIn}
+              onChange={this.handleChange.bind(this, 'optIn')}
+              style={styles.dropdown}
+            >
+              <option value="" disabled>{i18n.yesNo()}</option>
+              <option value="true">{i18n.yes()}</option>
+              <option value="false">{i18n.no()}</option>
+            </select>
+            <span style={styles.asterisk}> *</span>
+          </div>
+
           <div>
             <label>
               <div style={styles.question}>
@@ -796,28 +819,6 @@ class CensusForm extends Component {
               </label>
             </div>
           )}
-
-          <div>
-            {errors.optIn && (
-               <div style={styles.errors}>
-                 Required. Please let us know if we can email you.
-               </div>
-            )}
-            <span style={styles.share}>
-              Can we email you about updates to our courses, local learning opportunities, or other computer science news?
-            </span>
-            <select
-              name="opt_in"
-              value={this.state.submission.optIn}
-              onChange={this.handleChange.bind(this, 'optIn')}
-              style={styles.dropdown}
-            >
-              <option value="" disabled>{i18n.yesNo()}</option>
-              <option value="true">{i18n.yes()}</option>
-              <option value="false">{i18n.no()}</option>
-            </select>
-            <span style={styles.asterisk}> *</span>
-          </div>
 
           {showErrorMsg && (
             <div style={styles.errors}>

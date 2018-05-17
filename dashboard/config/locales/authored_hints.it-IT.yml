@@ -4566,10 +4566,10 @@
       courseB_maze_seq11_2018_authored_hint: {}
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Connetti i blocchi al blocco <xml><block type="when_run"/></xml>
-          per far muovere l'uccello!
-        courseB_maze_seq1_b: Trascina fuori tre di queste frecce <xml><block type="maze_moveSouth"/></xml>
-          e connettile al blocco <xml><block type="when_run"/></xml> per portare il
-          tuo uccellino fino al maialino.
+          per far muovere Scart!
+        courseB_maze_seq1_b: Trascina tre di queste frecce <xml><block type="maze_moveSouth"/></xml>
+          e collegale al blocco <xml><block type="when_run"/></xml> per far arrivare
+          Scrat fino alla ghianda.
       courseB_maze_seq1_predict1_authored_hint: {}
       courseB_maze_seq1_predict1_2018_authored_hint: {}
       courseB_maze_seq2_authored_hint:
@@ -4581,7 +4581,7 @@
         courseB_maze_seq2_a: In questo programma manca un blocco. Riesci a capire
           quale?
         courseB_maze_seq2_b: Prova ad eseguire il codice preimpostato per vedere cosa
-          deve fare l'uccellino dopo.
+          deve fare Scrat dopo.
       courseB_maze_seq3_authored_hint:
         courseB_maze_seq3_a: Uno dei blocchi sposta l'uccellino nella direzione sbagliata.
           Riesci a capire qual è e a sostituirlo con il blocco corretto?
@@ -4603,7 +4603,7 @@
           per risolvere questo esercizio.
       courseB_maze_seq4_2018_authored_hint:
         courseB_maze_seq4_a: Prova ad aggiungere un'istruzione alla volta finché non
-          arrivi al maialino.
+          arrivi alla ghianda.
         courseB_maze_seq4_b: Potresti voler usare il blocco <xml><block type="maze_moveEast"/></xml>
           per risolvere questo esercizio.
       courseB_maze_seq5_authored_hint:
@@ -4615,7 +4615,7 @@
         courseB_maze_seq5_a: Se sei bloccato, prova a disegnare il percorso su un
           foglio.
         courseB_maze_seq5_b: Ci sono 2 modi per risolvere questo esercizio!
-        courseB_maze_seq5_c: Non sai come arrivare al maialino? Prova questo percorso.
+        courseB_maze_seq5_c: Non sai come arrivare alla ghianda? Prova questo percorso.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Il tuo codice dovrebbe avere tre blocchi movimento.
         courseB_maze_seq6_b: Se sei bloccato, prova a risolvere l'esercizio in due
@@ -4627,17 +4627,17 @@
         courseB_maze_seq6_b: Se sei bloccato, prova a risolvere l'esercizio in due
           parti, movimenti orizzontali e movimenti verticali.
         courseB_maze_seq5_c: Ci sono due modi per risolvere questo esercizio.
-        courseB_maze_seq5_d: Non sai come arrivare al maialino? Prova questo percorso!
+        courseB_maze_seq5_d: Non sai come arrivare alla ghianda? Prova questo percorso!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: Aggiungi un blocco per portare l'uccellino fino al maialino.
         courseB_maze_seq7_b: Prova ad eseguire il codice che ti è stato dato e guarda
           dove finisci.
         courseB_maze_seq7_c: Non riesci ad arrivare al maialino? Prova questo percorso!
       courseB_maze_seq7_2018_authored_hint:
-        courseB_maze_seq7_a: Aggiungi un blocco per portare l'uccellino fino al maialino.
+        courseB_maze_seq7_a: Aggiungi 1 blocco per far arrivare Scrat fino alla ghianda.
         courseB_maze_seq7_b: Prova ad eseguire il codice che ti è stato dato e guarda
           dove finisci.
-        courseB_maze_seq7_c: Non riesci ad arrivare al maialino? Prova questo percorso!
+        courseB_maze_seq7_c: Non riesci ad arrivare alla ghianda? Prova questo percorso!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Provare ad aggiungere un blocco alla volta finché non
           risolvi l'esercizio.
