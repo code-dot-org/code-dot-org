@@ -8,7 +8,8 @@ import sinon from 'sinon';
 
 const defaultProps = {
   name: 'csp',
-  title: 'Computer Science Principles',
+  title: 'Computer Science Principles 2017',
+  assignmentFamilyTitle: 'Computer Science Principles',
   id: 30,
   descriptionStudent: 'Desc here',
   descriptionTeacher: 'Desc here',

@@ -7,7 +7,8 @@ const WordsearchHandler = require('@cdo/apps/maze/results/wordsearch');
 const HarvesterHandler = require('@cdo/apps/maze/results/harvester');
 const PlanterHandler = require('@cdo/apps/maze/results/planter');
 const ResultsHandler = require('@cdo/apps/maze/results/resultsHandler');
-import MazeController from '@cdo/apps/maze/mazeController';
+
+import { MazeController } from '@code-dot-org/maze';
 
 const createResultsHandlerForSubtype = require('@cdo/apps/maze/results/utils').createResultsHandlerForSubtype;
 

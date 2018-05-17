@@ -15,7 +15,11 @@ Scenario: Script Level Versions
   # reloading here creates a previous version containing only comment 1
   And I reload the page
   And I wait for the page to fully load
+  # this particular level is set to always start in block mode
+  And I ensure droplet is in block mode
+  And I switch to text mode
   And I add code "// comment 2" to ace editor
+  Then ace editor code is equal to "// comment 2// comment 1"
   And I click selector "#runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 

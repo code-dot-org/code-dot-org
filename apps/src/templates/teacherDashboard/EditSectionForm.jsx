@@ -11,7 +11,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
-  isCsfScript,
+  stageExtrasAvailable,
 } from './teacherSectionsRedux';
 
 const style = {
@@ -53,7 +53,7 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    isCsfScript: PropTypes.func.isRequired,
+    stageExtrasAvailable: PropTypes.func.isRequired,
   };
 
   onSaveClick = () => {
@@ -73,7 +73,7 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      isCsfScript,
+      stageExtrasAvailable,
     } = this.props;
     if (!section) {
       return null;
@@ -102,7 +102,7 @@ class EditSectionForm extends Component {
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
           />
-          {isCsfScript(section.scriptId) &&
+          {stageExtrasAvailable(section.scriptId) &&
             <LessonExtrasField
               value={section.stageExtras}
               onChange={stageExtras => editSectionProperties({stageExtras})}
@@ -146,7 +146,7 @@ export default connect(state => ({
   sections: state.teacherSections.sections,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  isCsfScript: id => isCsfScript(state, id),
+  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
 }), {
   editSectionProperties,
   handleSave: finishEditingSection,

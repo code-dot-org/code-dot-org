@@ -48,8 +48,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   And I wait until element "label:contains('Workshop Type Options')" is visible
   And I select the "Yes, it is funded." option in dropdown "funded"
 
-  And I press keys "Test" for element "#regional-partner-select"
-  And I press the first ".Select-option[aria-label='Test Partner']" element
+  And I see "#regional-partner-name"
 
   And I press keys "These are my CSD notes" for element "textarea#notes"
 
@@ -80,8 +79,7 @@ Scenario: New workshop: CSP local summer with 1 facilitator
   And I wait until element "label:contains('Workshop Type Options')" is visible
   And I select the "Yes, it is funded." option in dropdown "funded"
 
-  And I press keys "Test" for element "#regional-partner-select"
-  And I press the first ".Select-option[aria-label='Test Partner']" element
+  And I see "#regional-partner-name"
 
   And I press keys "These are my CSP notes" for element "textarea#notes"
   And I select the "Test CSP Facilitator" facilitator at index 0

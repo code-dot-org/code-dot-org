@@ -29,7 +29,10 @@ export const progressStyles = {
     backgroundColor: color.teal,
     color: color.white,
     fontSize: 18,
-    padding: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
     textAlign: 'center'
   },
   multigrid: {

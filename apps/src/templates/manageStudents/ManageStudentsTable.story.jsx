@@ -2,16 +2,22 @@ import React from 'react';
 import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {combineReducers, createStore} from 'redux';
-import manageStudents, {RowType} from './manageStudentsRedux';
+import manageStudents, {RowType, blankStudentTransfer} from './manageStudentsRedux';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import {Provider} from 'react-redux';
 
 const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    sectionId: null,
     addStatus: {},
   },
+  sectionData: {
+    section: {
+      id: 1,
+    },
+  }
 };
 
 // Student names out of alphabetical order to demonstrate
@@ -222,7 +228,7 @@ const cleverData = [
 ];
 
 export default storybook => {
-  const store = createStore(combineReducers({manageStudents}), initialState);
+  const store = createStore(combineReducers({manageStudents, teacherSections, sectionData}), initialState);
   storybook
     .storiesOf('ManageStudentsTable', module)
     .addStoryTable([
@@ -237,6 +243,8 @@ export default storybook => {
               id={53}
               loginType={SectionLoginType.email}
               addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
             />
           </Provider>
         )
@@ -252,6 +260,8 @@ export default storybook => {
               id={53}
               loginType={SectionLoginType.word}
               addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
             />
           </Provider>
         )
@@ -267,6 +277,8 @@ export default storybook => {
               id={53}
               loginType={SectionLoginType.picture}
               addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
             />
           </Provider>
         )
@@ -282,6 +294,8 @@ export default storybook => {
               id={53}
               loginType={SectionLoginType.google_classroom}
               addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
             />
           </Provider>
         )
@@ -297,6 +311,8 @@ export default storybook => {
               id={53}
               loginType={SectionLoginType.clever}
               addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
             />
           </Provider>
         )

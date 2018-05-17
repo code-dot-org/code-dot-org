@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {validScriptPropType} from './sectionProgressRedux';
+import {validScriptPropType} from '@cdo/apps/redux/scriptSelectionRedux';
 import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
@@ -10,8 +10,9 @@ const styles = {
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
-    padding: '0.8em',
-    height: 34
+    height: 34,
+    paddingLeft: 5,
+    paddingRight: 5
   },
 };
 
@@ -49,7 +50,6 @@ export default class ScriptSelector extends Component {
           onChange={event => onChange(parseInt(event.target.value))}
           style={styles.dropdown}
         >
-          <option key="default" value={''}/>
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
-import experiments from '../../util/experiments';
+import experiments, { COURSE_VERSIONS } from '../../util/experiments';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -41,7 +41,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_CSF_SCRIPT_IDS = 'teacherDashboard/SET_CSF_SCRIPT_IDS';
+const SET_STAGE_EXTRAS_SCRIPT_IDS = 'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -91,7 +91,7 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setCsfScriptIds = ids => ({ type: SET_CSF_SCRIPT_IDS, ids });
+export const setStageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
 export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
@@ -197,7 +197,7 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-  const courseVersions = experiments.isEnabled('courseVersions');
+  const courseVersions = experiments.isEnabled(COURSE_VERSIONS);
 
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
@@ -209,20 +209,7 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
     // versions (e.g. csd-2018) of those courses.
     `/dashboardapi/courses${courseVersions ? '?allVersions=1' : ''}`,
 
-    // Let users in the courseVersions experiment see hidden scripts (e.g.
-    // csd3-2018) associated with unreleased course versions (e.g. csd-2018) by
-    // letting them see all hidden scripts. This clutters the UI for people in
-    // the experiment, but avoids doing a bunch of work to temporarily un-hide
-    // certain scripts that will already have been made visible by the time this
-    // experiment launches.
-    //
-    // Prior to the launch of this experiment, any hidden scripts associated
-    // with new versions of multi-unit courses like csp and csd should be made
-    // visible, and the includeHidden url param should be removed.
-    //
-    // When launching this experiment, includeHidden MUST NOT be set by
-    // default here.
-    `/v2/sections/valid_scripts${courseVersions ? '?includeHidden=1' : ''}`
+    '/v2/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
@@ -390,7 +377,7 @@ const defaultVersionYear = '2017';
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
-  'category_priority', 'category', 'position', 'name', 'assignment_family_name'
+  'category_priority', 'category', 'position', 'assignment_family_title', 'assignment_family_name'
 ];
 
 export default function teacherSections(state=initialState, action) {
@@ -401,10 +388,10 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === SET_CSF_SCRIPT_IDS) {
+  if (action.type === SET_STAGE_EXTRAS_SCRIPT_IDS) {
     return {
       ...state,
-      csfScriptIds: action.ids,
+      stageExtrasScriptIds: action.ids,
     };
   }
 
@@ -463,6 +450,7 @@ export default function teacherSections(state=initialState, action) {
         // on the server.
         assignment_family_name: script.script_name,
         version_year: defaultVersionYear,
+        version_title: defaultVersionYear
       };
 
       // Do not add assignment families for scripts belonging to courses. To assign
@@ -473,6 +461,7 @@ export default function teacherSections(state=initialState, action) {
         // own assignment family.
         assignmentFamilies.push({
           ..._.pick(script, assignmentFamilyFields),
+          assignment_family_title: script.name,
           assignment_family_name: script.script_name
         });
       }
@@ -903,7 +892,7 @@ export const assignmentPaths = (validAssignments, section) => {
  * @param state
  * @param id
  */
-export const isCsfScript = (state, id) => state.teacherSections.csfScriptIds.indexOf(id) > -1;
+export const stageExtrasAvailable = (state, id) => state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

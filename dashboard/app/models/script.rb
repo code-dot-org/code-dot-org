@@ -190,8 +190,8 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
-  def self.csf_script_ids
-    @@csf_scripts ||= Script.all.select(&:csf?).pluck(:id)
+  def self.stage_extras_script_ids
+    @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -1064,6 +1064,10 @@ class Script < ActiveRecord::Base
     path = course_path(course)
     path += "?section_id=#{section_id}" if section_id
     path
+  end
+
+  def course_title
+    course.try(:localized_title)
   end
 
   # If there is an alternate version of this script which the user should be on

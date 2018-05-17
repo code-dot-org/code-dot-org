@@ -430,9 +430,14 @@ module LevelsHelper
     app_options[:level] = level_options
 
     # Locale-depdendent option
+    # For historical reasons, localized_instructions should happen independent
+    # of `should_localize?`
     level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
-    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
-    level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
+    if l.should_localize?
+      level_options['markdownInstructions'] = l.localized_markdown_instructions unless l.localized_markdown_instructions.nil?
+      level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
+      level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
+    end
 
     # Script-dependent option
     script = @script
@@ -775,6 +780,7 @@ module LevelsHelper
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab
+    return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")

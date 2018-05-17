@@ -1,10 +1,13 @@
-var Direction = require('./tiles').Direction;
-var karelLevels = require('./karelLevels');
-var wordsearchLevels = require('./wordsearchLevels');
-var reqBlocks = require('./requiredBlocks');
+var tiles = require('@code-dot-org/maze').tiles;
+var Direction = tiles.Direction;
+
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
+
+var karelLevels = require('./karelLevels');
 var mazeMsg = require('./locale');
+var reqBlocks = require('./requiredBlocks');
+var wordsearchLevels = require('./wordsearchLevels');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {

@@ -56,7 +56,7 @@ trained_2016 as
   select 
     tp.studio_person_id,
     'CS Principles' as course,
-    2016 as year,
+    '2016-17' as school_year,
     case partner
       when 'Academy for CS Education - Florida International University' then 'Florida International University'
       when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
@@ -79,7 +79,7 @@ trained_2017 as
   select 
     studio_person_id,
     course,
-    2017 as year,
+    '2017-18' as school_year,
     case regional_partner
       when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
       when 'America Campaign - Big Sky Code Academy' then 'Teachers Teaching Tech (MT)'

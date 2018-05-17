@@ -38,4 +38,5 @@ from unplugged_stages
 union
 
 select *
-from standalone_video_stages;
+from standalone_video_stages
+with no schema binding;

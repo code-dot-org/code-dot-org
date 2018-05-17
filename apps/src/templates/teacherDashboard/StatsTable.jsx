@@ -8,6 +8,9 @@ import orderBy from 'lodash/orderBy';
 const styles = {
   table: {
     width: '100%'
+  },
+  rightAlignText: {
+    textAlign: 'right'
   }
 };
 
@@ -24,18 +27,17 @@ class StatsTable extends Component {
 
   studentsWithCompletedLevelCount = () => {
     const {section, studentsCompletedLevelCount} = this.props;
-    return section.students.map(student => {
-      return {
-        ...student,
-        completed_levels_count: studentsCompletedLevelCount[student.id] || 0
-      };
-    });
+    return section.students.map(student => ({
+      ...student,
+      completed_levels_count: studentsCompletedLevelCount[student.id] || 0
+    }));
   };
 
   nameFormatter = (name, {rowData}) => {
-    const {id: sectionId} = this.props.section;
+    const sectionId = this.props.section.id;
     return (
       <a
+        className="uitest-name-cell"
         style={tableLayoutStyles.link}
         href={`/teacher-dashboard#/sections/${sectionId}/student/${rowData.id}`}
         target="_blank"
@@ -56,6 +58,7 @@ class StatsTable extends Component {
         header: {
           label: i18n.name(),
           props: {
+            className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
           }},
@@ -72,34 +75,36 @@ class StatsTable extends Component {
       {
         property: 'completed_levels_count',
         header: {
-          label: 'Completed Levels', // TODO: i18n
+          label: i18n.completedLevels(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
-          }},
-          transforms: [sortable]
+              ...tableLayoutStyles.headerCell,
+              ...styles.rightAlignText
+          }}
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
+              ...tableLayoutStyles.cell,
+              ...styles.rightAlignText
           }}
         }
       },
       {
         property: 'total_lines',
         header: {
-          label: 'Lines of Code', // TODO: i18n
+          label: i18n.linesOfCode(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
-          }},
-          transforms: [sortable]
+              ...tableLayoutStyles.headerCell,
+              ...styles.rightAlignText
+          }}
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
+              ...tableLayoutStyles.cell,
+              ...styles.rightAlignText
           }}
         }
       }

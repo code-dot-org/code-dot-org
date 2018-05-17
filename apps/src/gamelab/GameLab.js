@@ -56,6 +56,7 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
+import ValidationSetupCode from './ValidationSetup.interpreted.js';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -75,7 +76,8 @@ var ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
-  DOWN: 'downButton'
+  DOWN: 'downButton',
+  SPACE: 'studio-space-button',
 };
 
 /**
@@ -172,6 +174,7 @@ GameLab.prototype.init = function (config) {
   this.skin.winAvatar = null;
   this.skin.failureAvatar = null;
   this.level = config.level;
+  this.showDPad = config.level.showDPad && config.share && dom.isMobile();
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
@@ -269,13 +272,25 @@ GameLab.prototype.init = function (config) {
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
       config.valueTypeTabShapeMap = { Sprite: 'angle' };
+
+      this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
+        <div>
+          <p>
+            <strong>Welcome to the Sprite Lab pre-release ALPHA!</strong>
+          </p>
+          <p>
+            This is a brand new Code.org project we are still working on. Blocks
+            will change and <em>your projects may stop working at any time</em>.
+          </p>
+        </div>, ''
+      );
     }
 
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
+      dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
     }
 
     initializeSubmitHelper({
@@ -300,10 +315,7 @@ GameLab.prototype.init = function (config) {
     }
   };
 
-  // Always hide DPad until better UI is created.
-  this.level.showDPad = false;
-
-  var showFinishButton = !this.level.isProjectLevel;
+  var showFinishButton = !this.level.isProjectLevel && !this.level.validationCode;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
   var showDebugButtons = config.level.editCode &&
@@ -452,7 +464,7 @@ GameLab.prototype.afterInject_ = function (config) {
     dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
         this.onArrowButtonDown.bind(this, ArrowIds[btn]));
   }
-  if (this.level.showDPad) {
+  if (this.showDPad) {
     dom.addMouseDownTouchEvent(document.getElementById('studio-dpad-button'),
         this.onDPadButtonDown.bind(this));
   }
@@ -467,7 +479,14 @@ GameLab.prototype.afterInject_ = function (config) {
   if (this.studioApp_.isUsingBlockly()) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
-    Blockly.JavaScript.addReservedWords('GameLab,code');
+    Blockly.JavaScript.addReservedWords([
+      'GameLab',
+      'code',
+      'validationState',
+      'validationResult',
+      'levelSuccess',
+      'levelFailure',
+    ].join(','));
   }
 
   // Update gameLabP5's scale and keep it updated with future resizes:
@@ -579,7 +598,7 @@ GameLab.prototype.reset = function () {
     $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + softButtonCount);
   }
 
-  if (this.level.showDPad) {
+  if (this.showDPad) {
     $('#studio-dpad').removeClass('studio-dpad-none');
     this.resetDPad();
   }
@@ -598,7 +617,7 @@ GameLab.prototype.rerunSetupCode = function () {
   this.gameLabP5.p5.redraw();
 };
 
-GameLab.prototype.onPuzzleComplete = function (submit) {
+GameLab.prototype.onPuzzleComplete = function (submit, testResult) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -613,6 +632,8 @@ GameLab.prototype.onPuzzleComplete = function (submit) {
     this.testResults = this.studioApp_.getTestResults(levelComplete, {
         executionError: this.executionError
     });
+  } else if (testResult) {
+    this.testResults = testResult;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -705,7 +726,7 @@ GameLab.prototype.runButtonClick = function () {
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
-  if (shareCell) {
+  if (shareCell && !this.level.validationCode) {
     shareCell.className = 'share-cell-enabled';
 
     // Adding completion button changes layout.  Force a resize.
@@ -725,7 +746,17 @@ function p5KeyCodeFromArrow(idBtn) {
       return window.p5.prototype.UP_ARROW;
     case ArrowIds.DOWN:
       return window.p5.prototype.DOWN_ARROW;
+    case ArrowIds.SPACE:
+      return window.p5.prototype.KEY.SPACE;
   }
+}
+
+function domIdFromArrow(idBtn) {
+  switch (idBtn) {
+    case ArrowIds.SPACE:
+      return 'studio-space-button';
+  }
+  return undefined;
 }
 
 GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
@@ -733,6 +764,10 @@ GameLab.prototype.onArrowButtonDown = function (buttonId, e) {
   this.btnState[buttonId] = ButtonState.DOWN;
   e.preventDefault();  // Stop normal events so we see mouseup later.
 
+  const domId = domIdFromArrow(buttonId);
+  if (domId) {
+    $(`#${domId}`).addClass('active');
+  }
   this.gameLabP5.notifyKeyCodeDown(p5KeyCodeFromArrow(buttonId));
 };
 
@@ -740,6 +775,10 @@ GameLab.prototype.onArrowButtonUp = function (buttonId, e) {
   // Store the most recent event type per-button
   this.btnState[buttonId] = ButtonState.UP;
 
+  const domId = domIdFromArrow(buttonId);
+  if (domId) {
+    $(`#${domId}`).removeClass('active');
+  }
   this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
 };
 
@@ -769,30 +808,125 @@ GameLab.prototype.onDPadButtonDown = function (e) {
   e.preventDefault();  // Stop normal events so we see mouseup later.
 };
 
-var DPAD_DEAD_ZONE = 3;
+const DPAD_DEAD_ZONE = 3;
+// Allows diagonal to kick in after 22.5 degrees off primary axis, giving each
+// of the 8 directions an equal 45 degree cone
+const DIAG_SCALE_FACTOR = Math.cos(Math.PI * 22.5 / 180);
+
+GameLab.prototype.notifyKeyEightWayDPad = function (keyCode, cssClass, currentX, currentY) {
+  const dPadButton = $('#studio-dpad-button');
+  const dPadCone = $('#studio-dpad-cone');
+  const { startingX, previousX, startingY, previousY } = this.dPadState;
+  let curPrimary, curSecondary, prevPrimary, prevSecondary;
+
+  switch (keyCode) {
+    case window.p5.prototype.LEFT_ARROW:
+      curPrimary = -(currentX - startingX);
+      curSecondary = currentY - startingY;
+      prevPrimary = -(previousX - startingX);
+      prevSecondary = previousY - startingY;
+      break;
+    case window.p5.prototype.RIGHT_ARROW:
+      curPrimary = currentX - startingX;
+      curSecondary = currentY - startingY;
+      prevPrimary = previousX - startingX;
+      prevSecondary = previousY - startingY;
+      break;
+    case window.p5.prototype.UP_ARROW:
+      curPrimary = -(currentY - startingY);
+      curSecondary = currentX - startingX;
+      prevPrimary = -(previousY - startingY);
+      prevSecondary = previousX - startingX;
+      break;
+    case window.p5.prototype.DOWN_ARROW:
+      curPrimary = currentY - startingY;
+      curSecondary = currentX - startingX;
+      prevPrimary = previousY - startingY;
+      prevSecondary = previousX - startingX;
+      break;
+  }
+
+  const curDiag = DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(curPrimary, 2) + Math.pow(curSecondary, 2));
+  const prevDiag = DIAG_SCALE_FACTOR *
+      Math.sqrt(Math.pow(prevPrimary, 2) + Math.pow(prevSecondary, 2));
+
+  const curDown = curPrimary > DPAD_DEAD_ZONE &&
+      (curPrimary > curDiag || curDiag > Math.abs(curSecondary));
+  const prevDown = prevPrimary > DPAD_DEAD_ZONE &&
+      (prevPrimary > prevDiag || prevDiag > Math.abs(prevSecondary));
+
+  if (curDown && !prevDown) {
+    this.gameLabP5.notifyKeyCodeDown(keyCode);
+    dPadButton.addClass(cssClass);
+    dPadCone.addClass(cssClass);
+  } else if (!curDown && prevDown) {
+    this.gameLabP5.notifyKeyCodeUp(keyCode);
+    dPadButton.removeClass(cssClass);
+    dPadCone.removeClass(cssClass);
+  }
+};
+
+GameLab.prototype.notifyKeysFourWayDPad = function (currentX, currentY) {
+  const dPadButton = $('#studio-dpad-button');
+  const dPadCone = $('#studio-dpad-cone');
+  const { startingX, previousX, startingY, previousY } = this.dPadState;
+
+  const keyValues = [
+    {
+      cssClass: 'left',
+      key: window.p5.prototype.LEFT_ARROW,
+      current: -(currentX - startingX),
+      previous: -(previousX - startingX),
+    }, {
+      cssClass: 'right',
+      key: window.p5.prototype.RIGHT_ARROW,
+      current: currentX - startingX,
+      previous: previousX - startingX,
+    }, {
+      cssClass: 'up',
+      key: window.p5.prototype.UP_ARROW,
+      current: -(currentY - startingY),
+      previous: -(previousY - startingY),
+    }, {
+      cssClass: 'down',
+      key: window.p5.prototype.DOWN_ARROW,
+      current: currentY - startingY,
+      previous: previousY - startingY,
+    },
+  ];
+  const prevKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
+    const { previous = 0 } = maxKeyValue || {};
+    if (curKeyValue.previous > Math.max(previous, DPAD_DEAD_ZONE)) {
+      return curKeyValue;
+    } else {
+      return maxKeyValue;
+    }
+  }, null);
+  const currentKeyValue = keyValues.reduce((maxKeyValue, curKeyValue) => {
+    const { current = 0 } = maxKeyValue || {};
+    if (curKeyValue.current > Math.max(current, DPAD_DEAD_ZONE)) {
+      return curKeyValue;
+    } else {
+      return maxKeyValue;
+    }
+  }, null);
+  const { key: prevKey, cssClass: prevCssClass } = prevKeyValue || {};
+  const { key: currentKey, cssClass: currentCssClass } = currentKeyValue || {};
+
+  if (prevKey && prevKey !== currentKey) {
+    this.gameLabP5.notifyKeyCodeUp(prevKey);
+    dPadButton.removeClass(prevCssClass);
+    dPadCone.removeClass(prevCssClass);
+  }
+  if (currentKey && prevKey !== currentKey) {
+    this.gameLabP5.notifyKeyCodeDown(currentKey);
+    dPadButton.addClass(currentCssClass);
+    dPadCone.addClass(currentCssClass);
+  }
+};
 
 GameLab.prototype.onDPadMouseMove = function (e) {
-  var dPadButton = $('#studio-dpad-button');
-  var self = this;
-
-  function notifyKeyHelper(keyCode, cssClass, start, prev, cur, invert) {
-    if (invert) {
-      start *= -1;
-      prev *= -1;
-      cur *= -1;
-    }
-    start -= DPAD_DEAD_ZONE;
-
-    if (cur < start) {
-      if (prev >= start) {
-        self.gameLabP5.notifyKeyCodeDown(keyCode);
-        dPadButton.addClass(cssClass);
-      }
-    } else if (prev < start) {
-      self.gameLabP5.notifyKeyCodeUp(keyCode);
-      dPadButton.removeClass(cssClass);
-    }
-  }
 
   var clientX = e.clientX;
   var clientY = e.clientY;
@@ -801,14 +935,14 @@ GameLab.prototype.onDPadMouseMove = function (e) {
     clientY = e.touches[0].clientY;
   }
 
-  notifyKeyHelper(window.p5.prototype.LEFT_ARROW, 'left',
-      this.dPadState.startingX, this.dPadState.previousX, clientX, false);
-  notifyKeyHelper(window.p5.prototype.RIGHT_ARROW, 'right',
-      this.dPadState.startingX, this.dPadState.previousX, clientX, true);
-  notifyKeyHelper(window.p5.prototype.UP_ARROW, 'up',
-      this.dPadState.startingY, this.dPadState.previousY, clientY, false);
-  notifyKeyHelper(window.p5.prototype.DOWN_ARROW, 'down',
-      this.dPadState.startingY, this.dPadState.previousY, clientY, true);
+  if (experiments.isEnabled('fourWayDPad')) {
+    this.notifyKeysFourWayDPad(clientX, clientY);
+  } else {
+    this.notifyKeyEightWayDPad(window.p5.prototype.LEFT_ARROW, 'left', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.RIGHT_ARROW, 'right', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.UP_ARROW, 'up', clientX, clientY);
+    this.notifyKeyEightWayDPad(window.p5.prototype.DOWN_ARROW, 'down', clientX, clientY);
+  }
 
   this.dPadState.previousX = clientX;
   this.dPadState.previousY = clientY;
@@ -838,10 +972,19 @@ GameLab.prototype.resetDPad = function () {
 GameLab.prototype.onMouseUp = function (e) {
   // Reset all arrow buttons on "global mouse up" - this handles the case where
   // the mouse moved off the arrow button and was released somewhere else
+
+  if (e.touches && e.touches.length > 0) {
+    return;
+  }
+
   for (var buttonId in this.btnState) {
     if (this.btnState[buttonId] === ButtonState.DOWN) {
 
       this.btnState[buttonId] = ButtonState.UP;
+      const domId = domIdFromArrow(buttonId);
+      if (domId) {
+        $(`#${domId}`).removeClass('active');
+      }
       this.gameLabP5.notifyKeyCodeUp(p5KeyCodeFromArrow(buttonId));
     }
   }
@@ -928,6 +1071,9 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
       .map((lib) => LIBRARIES[lib])
       .join("\n");
     code = libs + code;
+  }
+  if (this.level.validationCode) {
+    code = ValidationSetupCode + code;
   }
   this.JSInterpreter.parse({
     code,
@@ -1185,6 +1331,35 @@ GameLab.prototype.onP5Draw = function () {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
       this.eventHandlers.draw.apply(null);
+      if (this.level.validationCode) {
+        try {
+          const validationResult =
+            this.JSInterpreter.interpreter.marshalInterpreterToNative(
+              this.JSInterpreter.evalInCurrentScope(`
+                (function () {
+                  validationState = null;
+                  validationResult = null;
+                  ${this.level.validationCode}
+                  return {
+                    state: validationState,
+                    result: validationResult
+                  };
+                })();
+              `)
+            );
+          if (validationResult.state === 'succeeded') {
+            console.log('success!');
+            const testResult = validationResult.result ||
+                TestResults.ALL_PASS;
+            this.onPuzzleComplete(false, testResult);
+          } else if (validationResult === 'failed') {
+            // TODO(ram): Show failure feedback
+          }
+        } catch (e) {
+          // If validation code errors, assume it was neither a success nor failure
+          console.error(e);
+        }
+      }
     } else if (this.shouldAutoRunSetup) {
       this.gameLabP5.p5.background('white');
       switch (this.level.autoRunSetup) {

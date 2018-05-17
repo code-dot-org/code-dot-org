@@ -16,11 +16,12 @@
 - else
   - course_link = @script.course_link(params[:section_id])
   - if course_link
+    - course_title = @script.course_title || I18n.t('view_all_units')
     #script-breadcrumb
       %a{href: course_link}
         %i.fa.fa-chevron-left
         %span
-          = I18n.t('view_all_units')
+          = course_title
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react

@@ -309,13 +309,11 @@ class DashboardSection
   # on language and whether hidden scripts are included.
   # @param user_id [Integer]
   # @return AssignableInfo[]
-  def self.valid_scripts(user_id = nil, force_show_hidden = false)
+  def self.valid_scripts(user_id = nil)
     has_any_experiment = DashboardCourseExperiments.has_any_experiment?(user_id)
     # Users with course experiments enabled effectively lose their hidden
     # script access permissions to avoid unnecessary complexity.
-    with_hidden =
-      (!has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)) ||
-      force_show_hidden
+    with_hidden = !has_any_experiment && user_id && Dashboard.hidden_script_access?(user_id)
     scripts = valid_default_scripts(user_id, with_hidden)
     return scripts unless has_any_experiment
     scripts.map {|script| alternate_script_info(user_id, script)}
