@@ -88,7 +88,7 @@ export function renderStatsTable(section) {
   });
 }
 
-export function renderSectionTable(section) {
+export function renderSectionTable(section, studioUrlPrefix,) {
   registerReducers({teacherSections, manageStudents, isRtl, sectionData});
   const store = getStore();
 
@@ -115,7 +115,9 @@ export function renderSectionTable(section) {
     );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable />
+        <ManageStudentsTable
+          studioUrlPrefix={studioUrlPrefix}
+        />
       </Provider>,
       element);
   });
