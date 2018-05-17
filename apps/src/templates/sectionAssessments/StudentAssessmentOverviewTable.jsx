@@ -84,10 +84,10 @@ class StudentAssessmentOverviewTable extends Component {
 
   studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
     let cell = '';
-    const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex]
+    const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex];
     selectStudentAnswers.answer.forEach((answerSelection) => {
       cell = answerSelection;
-    })
+    });
 
     return (
       <MultipleChoiceAnswerCell
