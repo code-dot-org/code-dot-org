@@ -4,7 +4,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
 
 const styles = {
-  explination: {
+  explanation: {
     clear: 'both',
     paddingTop: 20,
   }
@@ -23,7 +23,7 @@ class ManageStudentsLoginInfo extends Component {
   render() {
     const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
     return (
-      <div style={styles.explination}>
+      <div style={styles.explanation}>
         <h2>Login information</h2>
         {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
           <div>
@@ -31,7 +31,7 @@ class ManageStudentsLoginInfo extends Component {
               {i18n.sectionCode() + ': ' + sectionCode}
             </p>
             <p>
-              {i18n.joinSectionExplination()}
+              {i18n.joinSectionExplanation()}
               <a target="_blank" href={`${window.location.origin}/join`}>
                 {`${window.location.origin}/join`}
               </a>
@@ -44,7 +44,7 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               <a target="_blank" href={`/teacher-dashboard#/sections/${sectionId}/print_signin_cards`}>
-                {i18n.printLoginCardExplination()}
+                {i18n.printLoginCardExplanation()}
               </a>
             </p>
           </div>
@@ -67,7 +67,7 @@ class ManageStudentsLoginInfo extends Component {
         <h2>Privacy</h2>
         <p>
           <a id="uitest-privacy-link" target="_blank" href={"/privacy/student-privacy"}>
-          {i18n.privacyDocExplination()}
+          {i18n.privacyDocExplanation()}
           </a>
         </p>
       </div>
