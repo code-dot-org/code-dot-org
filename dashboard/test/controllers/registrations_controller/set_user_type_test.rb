@@ -13,6 +13,9 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil
+
+    # This is an AJAX-first route
+    request.headers['HTTP_ACCEPT'] = "application/json"
   end
 
   test "update student without user param returns 400 BAD REQUEST" do
