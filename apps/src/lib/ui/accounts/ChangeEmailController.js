@@ -38,6 +38,10 @@ export default class ChangeEmailController {
   }
 
   showChangeEmailModal = () => {
+    if (this.mountPoint) {
+      return; // Idempotent show
+    }
+
     const userHashedEmail = this.form.find('#change-email-modal_user_hashed_email').val();
     const handleSubmit = (values) => (
       this.submitEmailChange(values)
