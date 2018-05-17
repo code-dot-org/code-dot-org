@@ -15,7 +15,7 @@ const initialState = {
   },
   sectionData: {
     section: {
-      id: 1,
+      id: 53,
     },
   }
 };
@@ -245,6 +245,7 @@ export default storybook => {
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -262,6 +263,7 @@ export default storybook => {
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -279,6 +281,7 @@ export default storybook => {
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -296,6 +299,7 @@ export default storybook => {
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -313,6 +317,7 @@ export default storybook => {
               addStatus={{}}
               transferData={blankStudentTransfer}
               transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
