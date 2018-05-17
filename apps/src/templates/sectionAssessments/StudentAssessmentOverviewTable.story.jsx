@@ -10,10 +10,10 @@ export default storybook => {
         name: 'Student Overview.',
         description: 'Ability to see assessment overview for a single student',
         story: () => (
-            <StudentAssessmentOverviewTable
-              questionAnswerData={multipleChoiceData}
-              studentAnswerData={studentData}
-            />
+          <StudentAssessmentOverviewTable
+            questionAnswerData={multipleChoiceData}
+            studentAnswerData={studentData}
+          />
         )
       },
     ]);
