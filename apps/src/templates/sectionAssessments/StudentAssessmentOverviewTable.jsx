@@ -4,7 +4,6 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-// import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 export const COLUMNS = {
@@ -76,10 +75,25 @@ class StudentAssessmentOverviewTable extends Component {
       });
 
     return (
-        <MultipleChoiceAnswerCell
-          id={rowData.id}
-          answerCell={answerCell}
-        />
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        answerCell={answerCell}
+      />
+    );
+  };
+
+  studentAnswerColumnFormatter = (studentAnswers, {rowData, rowIndex}) => {
+    let cell = '';
+    const selectStudentAnswers = this.props.studentAnswerData[0].studentAnswers[rowIndex]
+    selectStudentAnswers.answer.forEach((answerSelection) => {
+      cell = answerSelection;
+    })
+
+    return (
+      <MultipleChoiceAnswerCell
+        id={rowData.id}
+        answerCell={cell}
+      />
     );
   };
 
@@ -113,6 +127,7 @@ class StudentAssessmentOverviewTable extends Component {
           }},
         },
         cell: {
+          format: this.studentAnswerColumnFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
