@@ -27,6 +27,7 @@ import logToCloud from '@cdo/apps/logToCloud';
 import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionData, { setSection } from '@cdo/apps/redux/sectionDataRedux';
+import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -55,13 +56,17 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionAssessments(section, validScripts) {
-  registerReducers({scriptSelection, sectionData});
+  registerReducers({scriptSelection, sectionData, sectionAssessments});
   const store = getStore();
   store.dispatch(setSection(section));
+
+  //const scriptId = store.getState().scriptSelection.scriptId;
+  //async load assessments data
+
   store.dispatch(loadValidScripts(section, validScripts)).then(() => {
     ReactDOM.render(
       <Provider store={store}>
-        <SectionAssessments section={section} />
+        <SectionAssessments />
       </Provider>,
       document.getElementById('section-assessments-react')
     );
