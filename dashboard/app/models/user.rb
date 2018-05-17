@@ -936,6 +936,10 @@ class User < ActiveRecord::Base
       first
   end
 
+  def hidden_script_access?
+    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
@@ -1201,6 +1205,12 @@ class User < ActiveRecord::Base
   # Returns an array of experiment name strings
   def get_active_experiment_names
     Experiment.get_all_enabled(user: self).pluck(:name)
+  end
+
+  # Returns whether any experiments are enabled for the specified user
+  def any_experiments_enabled?
+    # TODO: refactor to not get all experiments
+    Experiment.get_all_enabled(user: self).present?
   end
 
   def suppress_ui_tips_for_new_users

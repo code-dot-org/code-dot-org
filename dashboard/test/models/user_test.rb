@@ -84,6 +84,15 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
+  test 'any_experiments_enabled? returns true if user experiment is enabled' do
+    create :single_user_experiment, min_user_id: @user.id
+    assert @user.any_experiments_enabled?
+  end
+
+  test 'any_experiments_enabled? returns false if no user experiments are enabled' do
+    refute @user.any_experiments_enabled?
+  end
+
   test 'normalize_email' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
@@ -2836,5 +2845,21 @@ class UserTest < ActiveSupport::TestCase
     end
     assert_equal 2, user.user_geos.count
     assert user.within_united_states?
+  end
+
+  test 'hidden_script_access? is false if user is not admin and does not have permission' do
+    user = create :student
+    refute user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user is admin' do
+    user = create :admin
+    assert user.hidden_script_access?
+  end
+
+  test 'hidden_script_access? is true if user has permission' do
+    user = create :teacher
+    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+    assert user.hidden_script_access?
   end
 end
