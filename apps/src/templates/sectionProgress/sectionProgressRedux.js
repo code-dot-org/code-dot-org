@@ -8,10 +8,9 @@ import {
   PILL_BUBBLE_WIDTH,
 } from './multiGridConstants';
 import _ from 'lodash';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 
-const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
-const SET_SECTION = 'sectionProgress/SET_SECTION';
-const SET_VALID_SCRIPTS = 'sectionProgress/SET_VALID_SCRIPTS';
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
@@ -21,13 +20,9 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
 
 // Action creators
-export const setScriptId = scriptId => ({ type: SET_SCRIPT, scriptId});
 export const startLoadingProgress = () => ({ type: START_LOADING_PROGRESS});
 export const finishLoadingProgress = () => ({ type: FINISH_LOADING_PROGRESS});
 export const setLessonOfInterest = lessonOfInterest => ({ type: SET_LESSON_OF_INTEREST, lessonOfInterest});
-export const setValidScripts = (validScripts, studentScriptIds, validCourses, assignedCourseId) => (
-  {type: SET_VALID_SCRIPTS, validScripts, studentScriptIds, validCourses, assignedCourseId}
-);
 export const setCurrentView = viewType => ({ type: SET_CURRENT_VIEW, viewType });
 export const addLevelsByLesson = (scriptId, levelsByLesson) => (
   { type: ADD_LEVELS_BY_LESSON, scriptId, levelsByLesson}
@@ -46,18 +41,7 @@ export const addScriptData = (scriptId, scriptData) => {
 export const addStudentLevelProgress = (scriptId, studentLevelProgress) => ({
   type: ADD_STUDENT_LEVEL_PROGRESS, scriptId, studentLevelProgress
 });
-export const setSection = (section) => {
-  // Sort section.students by name.
-  const sortedStudents = section.students.sort((a, b) => a.name.localeCompare(b.name));
 
-  // Filter data to match sectionDataPropType
-  const filteredSectionData = {
-    id: section.id,
-    script: section.script,
-    students: sortedStudents,
-  };
-  return { type: SET_SECTION, section: filteredSectionData };
-};
 export const jumpToLessonDetails = (lessonOfInterest) => {
   return (dispatch, getState) => {
     dispatch(setLessonOfInterest(lessonOfInterest));
@@ -90,34 +74,6 @@ export const ViewType = {
   DETAIL: "detail",
 };
 
-export const ACCELERATED_SCRIPT_ID = 1;
-
-/**
- * Shape for the section
- * The section we get directly from angular right now. This gives us a
- * different shape than some other places we use sections. For now, I'm just
- * going to document the parts of section that we use here
- */
-export const sectionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  script: PropTypes.object,
-  students: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired
-});
-
-/**
- * Shape for a validScript
- */
-export const validScriptPropType = PropTypes.shape({
-  category: PropTypes.string.isRequired,
-  category_priority: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  position: PropTypes.number,
-});
-
 /**
  * Shape for scriptData
  * The data we get from the server's call to script.summarize. The format
@@ -146,9 +102,7 @@ export const studentLevelProgressPropType = PropTypes.objectOf(
 const INITIAL_LESSON_OF_INTEREST = 1;
 
 const initialState = {
-  scriptId: null,
   section: {},
-  validScripts: [],
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
@@ -161,7 +115,6 @@ export default function sectionProgress(state=initialState, action) {
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      scriptId: action.scriptId,
       lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
     };
   }
@@ -190,67 +143,11 @@ export default function sectionProgress(state=initialState, action) {
     };
   }
   if (action.type === SET_SECTION) {
-    // Default the scriptId to the script assigned to the section
-    const defaultScriptId = action.section.script ? action.section.script.id : null;
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
     // once switching sections is in react/redux.
     return {
       ...initialState,
-      section: action.section,
-      scriptId: defaultScriptId,
-    };
-  }
-  if (action.type === SET_VALID_SCRIPTS) {
-
-    let validScripts = action.validScripts;
-    if (action.studentScriptIds && action.validCourses) {
-      // Include the id for the Accelerated Course so that there will always be // at least one validScript and we don't end up with an empty dropdown.
-      const idMap = {ACCELERATED_SCRIPT_ID: true};
-      // First, construct an id map consisting only of script ids which a
-      // student has participated in.
-      action.studentScriptIds.forEach(id => idMap[id] = true);
-
-      // If the student has participated in a script which is a unit in a
-      // course, or if this section is assigned to a course, make sure that
-      // all units in that course are included.
-      action.validCourses.forEach(course => {
-        if (
-          course.script_ids.some(id => idMap[id]) ||
-          (action.assignedCourseId && action.assignedCourseId === course.id)
-        ) {
-          course.script_ids.forEach(id => idMap[id] = true);
-        }
-      });
-      validScripts = validScripts.filter(script => idMap[script.id]);
-
-      var scriptId;
-      switch (true) {
-        // When there is a scriptId already in state.
-        case !!state.scriptId:
-          scriptId = state.scriptId;
-          break;
-        // When there is an assigned course, set scriptId to the first script in the assigned course.
-        case !!action.assignedCourseId:
-          action.validCourses.forEach(course => {
-            if (course.id === action.assignedCourseId) {
-              scriptId = course.script_ids[0];
-            }
-          });
-          break;
-        // If there are validScripts, set scriptId to the first valid script.
-        case validScripts.length > 0:
-          scriptId = validScripts[0].id;
-          break;
-        default:
-         scriptId = ACCELERATED_SCRIPT_ID;
-      }
-    }
-
-    return {
-      ...state,
-      validScripts,
-      scriptId: scriptId,
     };
   }
   if (action.type === ADD_SCRIPT_DATA) {
@@ -296,7 +193,7 @@ export default function sectionProgress(state=initialState, action) {
   * TODO(caleybrock) write a test for this function
   */
 export const getCurrentProgress = (state) => {
-  return state.sectionProgress.studentLevelProgressByScript[state.sectionProgress.scriptId];
+  return state.sectionProgress.studentLevelProgressByScript[state.scriptSelection.scriptId];
 };
 
 /**
@@ -305,7 +202,7 @@ export const getCurrentProgress = (state) => {
  * TODO(caleybrock) write a test for this function
  */
 export const getCurrentScriptData = (state) => {
-  const script = state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
+  const script = state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
 
   if (script) {
     const stages = script.stages.map(stage => {
@@ -329,7 +226,7 @@ export const getCurrentScriptData = (state) => {
  * Retrieves the combined script and progress data for the current scriptId for the entire section.
  */
 export const getLevelsByLesson = (state) => {
-  return state.sectionProgress.levelsByLessonByScript[state.sectionProgress.scriptId];
+  return state.sectionProgress.levelsByLessonByScript[state.scriptSelection.scriptId];
 };
 
 /**
@@ -379,6 +276,7 @@ export const getColumnWidthsForDetailView = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
+    const sectionData = getState().sectionData.section;
 
     // Don't load data if it's already stored in redux.
     if (state.studentLevelProgressByScript[scriptId] && state.scriptDataByScript[scriptId]) {
@@ -392,11 +290,11 @@ export const loadScript = (scriptId) => {
         dispatch(addScriptData(scriptId, scriptData));
       });
 
-    const numStudents = state.section.students.length;
+    const numStudents = sectionData.students.length;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
 
     const requests = _.range(1, numPages + 1).map((currentPage) => {
-      const url = `/dashboardapi/section_level_progress/${state.section.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+      const url = `/dashboardapi/section_level_progress/${sectionData.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
       return fetch(url, { credentials: 'include' })
         .then(response => response.json())
         .then((data) => {

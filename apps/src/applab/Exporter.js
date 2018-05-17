@@ -281,13 +281,12 @@ export default {
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
     const zipAssetPrefix = appName + '/assets/';
 
-    const appAssets = dashboard.assets.listStore.list().map(asset => ({
-      url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: rootRelativeAssetPrefix + asset.filename,
-      zipPath: zipAssetPrefix + asset.filename,
-      dataType: 'binary',
-      filename: asset.filename,
-    }));
+    const appAssets = generateAppAssets({
+      html,
+      code,
+      rootRelativeAssetPrefix,
+      zipAssetPrefix,
+    });
 
     if (expoMode) {
       appAssets.push({
@@ -398,7 +397,7 @@ export default {
           );
         },
         () => {
-          logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
+          logToCloud.addPageAction(logToCloud.PageAction.StaticResourceFetchError, {
             app: 'applab'
           }, 1/100);
           reject(new Error("failed to fetch assets"));
@@ -462,12 +461,7 @@ export default {
       applabCssPath: "https://studio.code.org/blockly/css/applab.css",
     });
 
-    const appAssets = dashboard.assets.listStore.list().map(asset => ({
-      url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: asset.filename,
-      dataType: 'binary',
-      filename: asset.filename,
-    }));
+    const appAssets = generateAppAssets({ html, code });
 
     const files = {
       'App.js': { contents: exportExpoAppJs, type: 'CODE'},
@@ -536,13 +530,50 @@ export default {
   }
 };
 
+function generateAppAssets(params) {
+  const { html = '', code = '', rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
+
+  const appAssets = dashboard.assets.listStore.list().map(asset => ({
+    url: assetPrefix.fixPath(asset.filename),
+    rootRelativePath: rootRelativeAssetPrefix + asset.filename,
+    zipPath: zipAssetPrefix + asset.filename,
+    dataType: 'binary',
+    filename: asset.filename,
+  }));
+
+  const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  const allSounds = [
+    ...(html.match(soundRegex) || []),
+    ...(code.match(soundRegex) || []),
+  ];
+  const uniqueSounds = [...(new Set(allSounds))];
+  const soundAssets = uniqueSounds.map(soundProtocolUrl => {
+    const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
+    const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
+    return {
+      url: soundOriginUrl,
+      rootRelativePath: rootRelativeAssetPrefix + filename,
+      zipPath: zipAssetPrefix + filename,
+      dataType: 'binary',
+      filename,
+      searchUrl: soundProtocolUrl,
+    };
+  });
+
+  return [
+    ...appAssets,
+    ...soundAssets,
+  ];
+}
+
 // TODO: for expoMode, replace spaces in asset filenames or wait for this fix
 // to make it into Metro Bundler:
 // https://github.com/facebook/react-native/pull/10365
 function rewriteAssetUrls(appAssets, data) {
   return appAssets.reduce(function (data, assetToDownload) {
+    const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
     data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
-    return data.replace(new RegExp(`["|']${assetToDownload.filename}["|']`), `"${assetToDownload.rootRelativePath}"`);
+    return data.replace(new RegExp(`["|']${searchUrl}["|']`), `"${assetToDownload.rootRelativePath}"`);
   }, data);
 }
 
