@@ -81,6 +81,7 @@ class UserTest < ActiveSupport::TestCase
   test 'single user experiment is enabled' do
     experiment = create(:single_user_experiment, min_user_id: @user.id)
     assert_equal [experiment[:name]], @user.get_active_experiment_names
+    experiment.destroy
   end
 
   test 'normalize_email' do
