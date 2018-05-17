@@ -262,8 +262,6 @@ export default {
       }, {
         url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
       }, {
-        url: '/blockly/js/applab-api.js' + cacheBust,
-      }, {
         url: '/blockly/css/applab.css' + cacheBust,
       }, {
         url: '/blockly/css/common.css' + cacheBust,
@@ -326,11 +324,20 @@ export default {
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
+    // Attempt to fetch applab-api.min.js if possible, but when running on non-production
+    // environments, fallback if we can't fetch that file to use applab-api.js:
+    var applabApiAsset = new $.Deferred();
+    $.when(download('/blockly/js/applab-api.min.js' + cacheBust, 'text'))
+      .then(minAsset => applabApiAsset.resolve([minAsset]), () => {
+        $.when(download('/blockly/js/applab-api.js' + cacheBust, 'text'))
+          .then(asset => applabApiAsset.resolve([asset])), () => applabApiAsset.reject(new Error("failed to fetch applab-api.js"));
+      });
+
     return new Promise((resolve, reject) => {
-      $.when(...[...staticAssets, ...appAssets].map(
+      $.when(applabApiAsset, ...([...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
-      )).then(
-        ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
+      ))).then(
+        ([applabApi], [commonLocale], [applabLocale], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
           zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
           zip.file(mainProjectFilesPrefix + fontAwesomeWOFFPath, fontAwesomeWOFF);
@@ -455,7 +462,7 @@ export default {
       applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
       appOptionsPath: "appOptions.j",
       fontPath: fontAwesomeWOFFPath,
-      applabApiPath: "https://studio.code.org/blockly/js/applab-api.js",
+      applabApiPath: "https://studio.code.org/blockly/js/applab-api.min.js",
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
       commonCssPath: "https://studio.code.org/blockly/css/common.css",
       applabCssPath: "https://studio.code.org/blockly/css/applab.css",
