@@ -326,12 +326,12 @@ export default {
 
     // Attempt to fetch applab-api.min.js if possible, but when running on non-production
     // environments, fallback if we can't fetch that file to use applab-api.js:
-    var applabApiAsset = new $.Deferred();
-    $.when(download('/blockly/js/applab-api.min.js' + cacheBust, 'text'))
-      .then(minAsset => applabApiAsset.resolve([minAsset]), () => {
-        $.when(download('/blockly/js/applab-api.js' + cacheBust, 'text'))
-          .then(asset => applabApiAsset.resolve([asset])), () => applabApiAsset.reject(new Error("failed to fetch applab-api.js"));
-      });
+    const applabApiAsset = new $.Deferred();
+    download('/blockly/js/applab-api.min.js' + cacheBust, 'text')
+      .then((data, success, jqXHR) => applabApiAsset.resolve([data, success, jqXHR]),
+          () => download('/blockly/js/applab-api.js' + cacheBust, 'text')
+              .then((data, success, jqXHR) => applabApiAsset.resolve([data, success, jqXHR]),
+                  () => applabApiAsset.reject(new Error("failed to fetch applab-api.js"))));
 
     return new Promise((resolve, reject) => {
       $.when(applabApiAsset, ...([...staticAssets, ...appAssets].map(
