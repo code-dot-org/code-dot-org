@@ -570,15 +570,7 @@ const STANDARD_INPUT_TYPES = {
   },
 };
 
-/**
- * Adds the specified inputs to the block
- * @param {Blockly} blockly The Blockly object provided to install()
- * @param {Block} block The block to add the inputs to
- * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
- * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
- * @param {boolean} inline Whether inputs are being rendered inline
- */
-const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
+const groupInputsByRow = function (inputs, inputTypes=STANDARD_INPUT_TYPES) {
   const inputRows = [];
   let lastGroup = [];
   inputRows.push(lastGroup);
@@ -595,8 +587,20 @@ const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_
   } else {
     inputRows.pop();
   }
+  return inputRows;
+};
+exports.groupInputsByRow = groupInputsByRow;
 
-  inputRows.forEach(inputRow => {
+/**
+ * Adds the specified inputs to the block
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {LabeledInputConfig[]} inputs The list of inputs to interpolate.
+ * @param {Object.<string, InputType>} inputTypes A map of input type names to their definitions,
+ * @param {boolean} inline Whether inputs are being rendered inline
+ */
+const interpolateInputs = function (blockly, block, inputs, inputTypes=STANDARD_INPUT_TYPES, inline) {
+  groupInputsByRow(inputs, inputTypes).forEach(inputRow => {
     // Create the last input in the row first
     const lastInputConfig = inputRow[inputRow.length - 1];
     const lastInput = inputTypes[lastInputConfig.mode]

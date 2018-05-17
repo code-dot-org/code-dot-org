@@ -11,6 +11,7 @@ const multipleChoiceData = [
                {multipleChoiceOption: commonMsg.answerOptionC(), percentAnswered: 20, isCorrectAnswer: false},
                {multipleChoiceOption: commonMsg.answerOptionD(), percentAnswered: 20, isCorrectAnswer: false},
     ],
+    notAnswered: 10,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const multipleChoiceData = [
                {multipleChoiceOption: commonMsg.answerOptionE(), percentAnswered: 20, isCorrectAnswer: false},
                {multipleChoiceOption: commonMsg.answerOptionF(), percentAnswered: 10, isCorrectAnswer: false},
     ],
+    notAnswered: 30,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const multipleChoiceData = [
                {multipleChoiceOption: commonMsg.answerOptionD(), percentAnswered: 5, isCorrectAnswer: false},
                {multipleChoiceOption: commonMsg.answerOptionE(), percentAnswered: 5, isCorrectAnswer: false},
     ],
+    notAnswered: 5,
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const multipleChoiceData = [
                {multipleChoiceOption: commonMsg.answerOptionF(), percentAnswered: 32, isCorrectAnswer: true},
                {multipleChoiceOption: commonMsg.answerOptionG(), percentAnswered: 5, isCorrectAnswer: false},
     ],
+    notAnswered: 0,
   },
 ];
 
