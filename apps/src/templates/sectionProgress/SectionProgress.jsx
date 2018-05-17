@@ -17,9 +17,9 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  sectionDataPropType,
   scriptDataPropType,
 } from './sectionProgressRedux';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
 import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
@@ -170,7 +170,7 @@ export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(state => ({
   scriptId: state.scriptSelection.scriptId,
-  section: state.sectionProgress.section,
+  section: state.sectionData.section,
   validScripts: state.scriptSelection.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),

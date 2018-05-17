@@ -1,4 +1,5 @@
 import { PropTypes } from 'react';
+import { SET_SECTION } from '@cdo/apps/redux/sectionDataRedux';
 
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
@@ -58,6 +59,18 @@ export default function scriptSelection(state=initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+    };
+  }
+
+  if (action.type === SET_SECTION) {
+    // Default the scriptId to the script assigned to the section
+    const defaultScriptId = action.section.script ? action.section.script.id : null;
+    // Setting the section is the first action to be called when switching
+    // sections, which requires us to reset our state. This might need to change
+    // once switching sections is in react/redux.
+    return {
+      ...initialState,
+      scriptId: defaultScriptId,
     };
   }
 
