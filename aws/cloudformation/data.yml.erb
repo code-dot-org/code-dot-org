@@ -30,6 +30,9 @@ Parameters:
   RedshiftPassword:
     Type: String
     NoEcho: true
+  RDSBackupAccount:
+    Type: String
+    NoEcho: true
 Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
@@ -211,3 +214,41 @@ Resources:
           MetricNamespace: "MySQL"
           MetricName: <%=metric.capitalize%>
 <% end -%>
+  DBSnapshotKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: !Sub "Encrypts cross-account DB snapshots for ${AWS::StackName}."
+      EnableKeyRotation: true
+      KeyPolicy:
+        Version: 2012-10-17
+        Id: key-policy-1
+        Statement:
+        - Sid: Enable IAM policies in source account for managing key access.
+          Effect: Allow
+          Principal: {AWS: [!Sub "arn:aws:iam::${AWS::AccountId}:root"]}
+          Action: 'kms:*'
+          Resource: '*'
+        - Sid: Allow use of the key in backup account.
+          Effect: Allow
+          Principal: {AWS: [!Sub "arn:aws:iam::${RDSBackupAccount}:root"]}
+          Action:
+          - 'kms:Encrypt'
+          - 'kms:Decrypt'
+          - 'kms:ReEncrypt*'
+          - 'kms:GenerateDataKey*'
+          - 'kms:DescribeKey'
+          Resource: '*'
+        - Sid: Allow attachment of persistent resources in backup account.
+          Effect: Allow
+          Principal: {AWS: !Sub "arn:aws:iam::${RDSBackupAccount}:root"}
+          Action:
+          - 'kms:CreateGrant'
+          - 'kms:ListGrants'
+          - 'kms:RevokeGrant'
+          Resource: '*'
+          Condition: {Bool: {'kms:GrantIsForAWSResource': true}}
+  DBSnapshotKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: !Sub "alias/snapshot-${AWS::StackName}"
+      TargetKeyId: !Ref DBSnapshotKey

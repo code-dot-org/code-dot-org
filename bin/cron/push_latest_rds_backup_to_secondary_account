@@ -8,7 +8,8 @@ require 'cdo/chat_client'
 # Wait for an RDS snapshot to be in the 'available' state
 # @param snapshot [DBSnapshot] the snapshot to wait for
 def wait_for_snapshot_copy(snapshot)
-  snapshot.wait_until(max_attempts: 120, delay: 5) do |snap|
+  # Wait up to 720 * 5 seconds = 60 minutes for snapshot to become available.
+  snapshot.wait_until(max_attempts: 720, delay: 5) do |snap|
     snap.status == 'available'
   end
 rescue Aws::Waiters::Errors::WaiterFailed
@@ -57,12 +58,16 @@ end
 # later, outside this method.
 # @param backup_account_id [String] backup account ID
 # @param latest_snapshot [DBSnapshot] snapshot to copy and share
+# @param key_id [String] KMS Key ID to use for encrypting the snapshot copy
 # @return Array(DBSnapshot, String) the temporary copied snapshot, and the name of the
 # temporary snapshot
-def share_snapshot_with_account(backup_account_id, latest_snapshot)
+def share_snapshot_with_account(backup_account_id, latest_snapshot, key_id)
   # Copy the automated backup into a shareable manual one
   temp_snapshot_name = "temp-snapshot-#{Time.now.to_i}"
-  copied_snapshot = latest_snapshot.copy({target_db_snapshot_identifier: temp_snapshot_name})
+  copied_snapshot = latest_snapshot.copy(
+    target_db_snapshot_identifier: temp_snapshot_name,
+    kms_key_id: key_id
+  )
 
   wait_for_snapshot_copy(copied_snapshot)
 
@@ -95,6 +100,7 @@ def main
   backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
 
   production_instance = rds_primary.db_instances.find {|i| i.id == 'production'}
+  key_id = 'alias/snapshot-DATA-production'
 
   # Find the latest automated backup
   sorted_snapshots = production_instance.snapshots.
@@ -103,14 +109,15 @@ def main
   latest_snapshot = sorted_snapshots.last
 
   begin
-    copied_snapshot, temp_snapshot_name = share_snapshot_with_account(backup_account_id, latest_snapshot)
+    copied_snapshot, temp_snapshot_name = share_snapshot_with_account(backup_account_id, latest_snapshot, key_id)
     shared_snapshot = find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
 
     # On the backup account, copy the shared snapshot
     begin
       backed_up_snapshot = shared_snapshot.copy(
         {
-          target_db_snapshot_identifier: latest_snapshot.snapshot_id.sub('rds:', '')
+          target_db_snapshot_identifier: latest_snapshot.snapshot_id.sub('rds:', ''),
+          kms_key_id: 'alias/aws/rds' # Use default master key
         }
       )
       wait_for_snapshot_copy(backed_up_snapshot)
