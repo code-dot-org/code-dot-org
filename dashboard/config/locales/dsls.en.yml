@@ -4186,6 +4186,7 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csd-post-survey-2017-levelgroup: {}
+        csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
         csd-post-survey-2017-levelgroup_2018: {}
         csd-pre-survey-2017-levelgroup: {}
         csd-pre-survey-2017-levelgroup_2018: {}
@@ -10562,7 +10563,23 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csd-post-survey-q26_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        : Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school).
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csd-post-survey-q27:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        : 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q27_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         ? 'Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
@@ -10577,7 +10594,21 @@ en:
         Many class sessions: Many class sessions
         Never: Never
         Once or more per class session: Once or more per class session
+      csd-post-survey-q28_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me to problem solve when something didn't work the way I wanted it to work.: Asked me to problem solve when something didn't work the way I wanted it to work.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
       csd-post-survey-q29:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Asked me to explain the logic and reasoning supporting my solutions to problems.: Asked me to explain the logic and reasoning supporting my solutions to problems.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q29_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Asked me to explain the logic and reasoning supporting my solutions to problems.: Asked me to explain the logic and reasoning supporting my solutions to problems.
@@ -10591,6 +10622,13 @@ en:
         Never: Never
         Once or more per class session: Once or more per class session
         Worked collaboratively with other students in a small group.: Worked collaboratively with other students in a small group.
+      csd-post-survey-q30_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Worked collaboratively with other students in a small group.: Worked collaboratively with other students in a small group.
       csd-post-survey-q31:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
@@ -10598,7 +10636,21 @@ en:
         Never: Never
         Once or more per class session: Once or more per class session
         Shared responsibility for activity and project work with group members.: Shared responsibility for activity and project work with group members.
+      csd-post-survey-q31_2018:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+        Shared responsibility for activity and project work with group members.: Shared responsibility for activity and project work with group members.
       csd-post-survey-q32:
+        A few classes: A few classes
+        About half the class sessions: About half the class sessions
+        Made my own choices about assignments in computer science class.: Made my own choices about assignments in computer science class.
+        Many class sessions: Many class sessions
+        Never: Never
+        Once or more per class session: Once or more per class session
+      csd-post-survey-q32_2018:
         A few classes: A few classes
         About half the class sessions: About half the class sessions
         Made my own choices about assignments in computer science class.: Made my own choices about assignments in computer science class.
