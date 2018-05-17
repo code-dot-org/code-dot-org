@@ -17,8 +17,8 @@ const styles = {
   }
 };
 
-const ButtonList = React.createClass({
-  propTypes: {
+class ButtonList extends React.Component {
+  static propTypes = {
     type: PropTypes.oneOf(['radio', 'check']).isRequired,
     label: PropTypes.oneOfType([
       PropTypes.string,
@@ -45,9 +45,9 @@ const ButtonList = React.createClass({
     required: PropTypes.bool,
     validationState: PropTypes.string,
     errorText: PropTypes.string,
-  },
+  };
 
-  handleChange(event) {
+  handleChange = (event) => {
     let value;
     if (this.props.type === 'radio') {
       value = event.target.value;
@@ -63,11 +63,11 @@ const ButtonList = React.createClass({
     this.props.onChange({
       [this.props.groupName]: value
     });
-  },
+  };
 
   handleAnswerInputChange(answer, event) {
     answer.onInputChange(event.target.value);
-  },
+  }
 
   renderInputComponents() {
     const InputComponent = {
@@ -122,7 +122,7 @@ const ButtonList = React.createClass({
     });
 
     return options;
-  },
+  }
 
   render() {
     let validationState = this.props.validationState;
@@ -147,7 +147,7 @@ const ButtonList = React.createClass({
       </FormGroup>
     );
   }
-});
+}
 
 export default ButtonList;
 export {

@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class EmailPreferenceTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   test "create email preference with valid attributes creates email preference" do
     assert_creates EmailPreference do
       create :email_preference,
@@ -33,10 +35,10 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       form_kind: 'form text version 2.71828'
     )
     email_preference.reload
-    assert_equal email_preference.opt_in, true
-    assert_equal email_preference.ip_address, '192.168.1.1'
-    assert_equal email_preference.source, 'Host Hour of Code form'
-    assert_equal email_preference.form_kind, 'form text version 2.71828'
+    assert email_preference.opt_in
+    assert_equal '192.168.1.1', email_preference.ip_address
+    assert_equal EmailPreference::FORM_HOUR_OF_CODE, email_preference.source
+    assert_equal 'form text version 2.71828', email_preference.form_kind
   end
 
   test "upsert email preference that is already opted in does not opt out" do
@@ -49,6 +51,6 @@ class EmailPreferenceTest < ActiveSupport::TestCase
       form_kind: 'form text version 3.14159'
     )
     email_preference.reload
-    assert_equal email_preference.opt_in, true
+    assert email_preference.opt_in
   end
 end
