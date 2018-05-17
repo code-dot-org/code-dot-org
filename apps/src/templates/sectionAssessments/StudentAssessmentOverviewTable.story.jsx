@@ -1,6 +1,6 @@
 import React from 'react';
 import StudentAssessmentOverviewTable from './StudentAssessmentOverviewTable';
-import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
+import { studentData, multipleChoiceData } from './sectionAssessmentsTestHelpers';
 
 export default storybook => {
   return storybook
