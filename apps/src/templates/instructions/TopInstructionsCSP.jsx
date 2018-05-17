@@ -308,42 +308,46 @@ class TopInstructions extends Component {
         </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
-            {!this.props.hasContainedLevels &&
-              <div ref="instructions">
-                {this.state.tabSelected === TabType.INSTRUCTIONS &&
-                  <div>
-                    <Instructions
-                      ref="instructions"
-                      renderedMarkdown={processMarkdown(this.props.markdown,
-                        { renderer })}
-                      onResize={this.adjustMaxNeededHeight}
-                      inTopPane
-                    />
-                    <TeacherOnlyMarkdown/>
-                  </div>
-                }
-                {this.state.tabSelected === TabType.RESOURCES &&
-                  <HelpTabContents
-                    ref="helpTab"
-                    videoData={videoData}
-                    mapReference={this.props.mapReference}
-                    referenceLinks={this.props.referenceLinks}
+            <div ref="instructions">
+              {this.props.hasContainedLevels &&
+                <ContainedLevel
+                  ref="instructions"
+                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                />
+              }
+              {!this.props.hasContainedLevels && this.state.tabSelected === TabType.INSTRUCTIONS &&
+                <div>
+                  <Instructions
+                    ref="instructions"
+                    renderedMarkdown={processMarkdown(this.props.markdown,
+                      { renderer })}
+                    onResize={this.adjustMaxNeededHeight}
+                    inTopPane
                   />
-                }
-                {this.state.tabSelected === TabType.COMMENTS &&
-                  <TeacherFeedback
-                    ref="commentTab"
-                  />
-                }
-              </div>
+                  <TeacherOnlyMarkdown/>
+                </div>
+              }
+            </div>
+            {this.state.tabSelected === TabType.RESOURCES &&
+              <HelpTabContents
+                ref="helpTab"
+                videoData={videoData}
+                mapReference={this.props.mapReference}
+                referenceLinks={this.props.referenceLinks}
+              />
+            }
+            {this.state.tabSelected === TabType.COMMENTS &&
+              <TeacherFeedback
+                ref="commentTab"
+              />
             }
           </div>
           {!this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
-            />}
+            />
+          }
         </div>
       </div>
     );

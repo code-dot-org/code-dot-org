@@ -104,6 +104,21 @@ module Api::V1::Pd
       end
     end
 
+    # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
+    def local_workshop_daily_survey_report
+      unless @workshop.local_summer? # Do we have to filter workshops that don't have daily results?
+        raise 'Only call this route for local workshop daily survey reports'
+      end
+
+      survey_report = generate_workshop_daily_session_summary(@workshop)
+
+      respond_to do |format|
+        format.json do
+          render json: survey_report
+        end
+      end
+    end
+
     private
 
     # We want to filter facilitator-specific responses if the user is a facilitator and

@@ -1,7 +1,10 @@
-var levelBase = require('../level_base');
-var Direction = require('./tiles').Direction;
-var msg = require('./locale');
+var tiles = require('@code-dot-org/maze').tiles;
+var Direction = tiles.Direction;
+
 var blockUtils = require('../block_utils');
+var levelBase = require('../level_base');
+
+var msg = require('./locale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {

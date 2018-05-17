@@ -123,7 +123,7 @@ class RegionalPartnerContactComponent extends FormComponent {
         }
         {
           this.buildButtonsFromOptions({
-            name: 'opt_in',
+            name: 'optIn',
             label: 'Can we email you about updates to our courses, local learning opportunities, or other computer science news?',
             type: 'radio',
             required: true
@@ -135,4 +135,4 @@ class RegionalPartnerContactComponent extends FormComponent {
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'opt_in'];
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'optIn'];

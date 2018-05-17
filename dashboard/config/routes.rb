@@ -88,6 +88,9 @@ Dashboard::Application.routes.draw do
         post 'update_sharing_disabled'
         get 'student_script_ids'
       end
+      collection do
+        get 'membership'
+      end
     end
   end
 
@@ -399,6 +402,7 @@ Dashboard::Application.routes.draw do
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
+        get :local_workshop_daily_survey_report, action: :local_workshop_daily_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
