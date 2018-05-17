@@ -30,8 +30,15 @@ class TransfersController < ApplicationController
       }, status: :bad_request
       return
     end
-    # Verify the destination section and destination teacher exist (are not soft-deleted).
+    # Verify the destination section is not managed by a third-party login
     new_section = Section.find_by_code(new_section_code)
+    if new_section && new_section.externally_rostered?
+      render json: {
+        error: I18n.t('move_students.third_party_login')
+      }, status: :bad_request
+      return
+    end
+    # Verify the destination section and destination teacher exist (are not soft-deleted).
     unless new_section && new_section.user
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)

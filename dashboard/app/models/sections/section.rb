@@ -101,6 +101,10 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  def externally_rostered?
+    [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
+  end
+
   validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
