@@ -652,4 +652,25 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
   end
+
+  test "membership: returns status 403 'Forbidden' when not signed in" do
+    get :membership
+    assert_response :forbidden
+  end
+
+  test "membership: returns section names and ids for student" do
+    sign_in @student_with_script
+    get :membership
+    assert_response :success
+    expected_response = [{id: @section_with_script.id, name: @section_with_script.name}].as_json
+    assert_equal(expected_response, json_response)
+  end
+
+  test "membership: returns empty array for student sections if none exist" do
+    student = create(:student)
+    sign_in student
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
 end
