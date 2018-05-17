@@ -44,7 +44,7 @@ class SectionProgressToggle extends React.Component {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'react',
           event: 'progress-detail'
         }
       );
@@ -57,7 +57,7 @@ class SectionProgressToggle extends React.Component {
       firehoseClient.putRecord(
         {
           study: 'teacher-dashboard',
-          study_group: 'control',
+          study_group: 'react',
           event: 'progress-summary'
         }
       );
