@@ -665,7 +665,8 @@ export default {
     generator.behavior_definition = generator.procedures_defnoreturn;
 
     Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
-    Blockly.Variables.getters[Blockly.BlockValueType.BEHAVIOR] = 'gamelab_behavior_get';
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.BEHAVIOR,
+      'gamelab_behavior_get');
     Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
       initialize(flyout, cursor) {
         if (behaviorEditor && !behaviorEditor.isOpen()) {
