@@ -102,9 +102,15 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     results
   end
 
-  def self.process(data, created_ip)
+  def self.process_with_ip(data, created_ip)
     if data['email_preference_opt_in_s'] && created_ip && data['email_s']
-      puts "Set email preference - #{data['email_preference_opt_in_s']} - #{created_ip} - #{data['email_s']}"
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_VOLUNTEER,
+        form_kind: '0'
+      )
     end
 
     {}.tap do |results|
