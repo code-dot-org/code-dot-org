@@ -81,6 +81,7 @@ class UserTest < ActiveSupport::TestCase
   test 'single user experiment is enabled' do
     experiment = create(:single_user_experiment, min_user_id: @user.id)
     assert_equal [experiment[:name]], @user.get_active_experiment_names
+    experiment.destroy
   end
 
   test 'normalize_email' do
@@ -1136,6 +1137,53 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can_edit_email? is true for user with password' do
     assert @student.can_edit_email?
+  end
+
+  # Temporary constraint: Student accounts cannot be upgraded to teacher
+  # accounts without manual intervention.  This is because an intermediate
+  # state in our account page changes breaks the ability to confirm your
+  # email address as a student upgrading to a teacher.
+  # Captured in tests below, will be removed in the next few days.
+  # (Brad Buchanan, 2018-05-14.)
+  test 'can change own user type as a student with a password' do
+    student = create :student
+    refute_empty student.encrypted_password
+    # Temporary: Students can't upgrade
+    #assert student.can_change_own_user_type?
+    refute student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth student' do
+    student = create :google_oauth2_student
+    # Temporary: Students can't upgrade
+    # assert student.can_change_own_user_type?
+    refute student.can_change_own_user_type?
+  end
+
+  test 'can change own user type as a teacher with a password' do
+    teacher = create :teacher
+    refute_empty teacher.encrypted_password
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'can change own user type as an oauth teacher' do
+    teacher = create :teacher,
+      encrypted_password: nil,
+      provider: 'facebook',
+      uid: '1111111'
+    assert teacher.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a student with a picture or secret words' do
+    student = create :student_in_picture_section
+    refute student.can_change_own_user_type?
+  end
+
+  test 'cannot change own user type as a teacher with sections' do
+    section = create :section
+    teacher = section.teacher
+    refute_empty teacher.sections
+    refute teacher.can_change_own_user_type?
   end
 
   test 'can delete own account if teacher' do

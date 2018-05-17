@@ -8789,9 +8789,13 @@
               description_teacher: ''
         csd1-2018:
           title: CSD Unit 1 - Problem Solving
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  了解人类如何使用计算机来解决问题。"
           description_audience: ''
           stages:
@@ -8877,10 +8881,8 @@
             Understanding Your User:
               name: 了解您的用户
               description_student: 使用用户配置文件, 该课堂探讨不同用户对各种产品的反应。角色扮演作为一个不同的人, 该班的每个成员都可以通过别人眼里体验设计。
-              description_teacher: '设计者需要了解用户的需求才能创造出有用的产品。本课程鼓励学生思考如何通过使用用户配置文件来扮演另一个角色为其他人设计，并将其作为用户对一系列产品的反应。每个学生被分配一个描述一个人的用户配置文件,
-                然后他们选择合适的产品, 批评产品设计, 并建议改进设计。\r
-
-'
+              description_teacher: "设计者需要了解用户的需求才能创造出有用的产品。本课程鼓励学生思考如何通过使用用户配置文件来扮演另一个角色为其他人设计，并将其作为用户对一系列产品的反应。每个学生被分配一个描述一个人的用户配置文件,
+                然后他们选择合适的产品, 批评产品设计, 并建议改进设计。\r\n"
             User-Centered Design Micro Activity:
               name: 以用户为中心的设计微活动
               description_student: 在小团体中, 该课程使用设计过程来构思智能服装。从集思广益, 到识别用户, 到最后提出一个设计,
@@ -8933,11 +8935,9 @@
               name: 纸面原型
               description_student: 纸面原型允许开发人员在投入大量时间编写代码之前快速测试想法。在本课中, 团队将探索在应用程序实验室中创建的一些示例应用程序,
                 并使用这些应用程序来帮助通知其应用程序的第一个纸面原型。
-              description_teacher: '在开始设计应用程序之前, 我们需要帮助学生更好地满足他们的期望。因为学生最终将在应用实验室中对这些应用程序进行原型化,
+              description_teacher: "在开始设计应用程序之前, 我们需要帮助学生更好地满足他们的期望。因为学生最终将在应用实验室中对这些应用程序进行原型化,
                 如果他们的想法与应用程序实验室中容易原型化的应用程序相一致, 他们的状态将会更好. 团队开始通过查看几个示例应用程序设计来启动此范围演示可以使用应用程序实验室创建的应用程序.
-                然后, 团队可以选择一个 (或更多) 的应用程序作为他们自己的基础。从那里, 在使用3x5 索引卡开发纸面原型之前, 团队有时间讨论其应用程序的基本功能。\r
-
-'
+                然后, 团队可以选择一个 (或更多) 的应用程序作为他们自己的基础。从那里, 在使用3x5 索引卡开发纸面原型之前, 团队有时间讨论其应用程序的基本功能。\r\n"
             Prototype Testing:
               name: 原型测试
               description_student: 在本课中, 该班团队将与其他成员一起测试其纸面原型。有一个学生角色扮演电脑, 一个讲述, 其余的观察,
@@ -9160,10 +9160,7 @@
               description_teacher: ''
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: |-
-            这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r
-            \r
-            这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。
+          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r\n\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description_audience: ''
           stages:
@@ -9217,10 +9214,8 @@
               description_teacher: ''
         csp-explore-2018:
           title: 探索 - AP表演任务准备
-          description: |-
-            这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
-            \r
-            此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
+          description: "这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
           description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
           description_audience: ''
           stages:
@@ -9238,10 +9233,8 @@
               description_teacher: ''
         csp-create-2018:
           title: 创建 - AP表演任务准备
-          description: |-
-            这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
-            \r
-            此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
+          description: "这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
           description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
           description_audience: ''
           stages:
@@ -9259,10 +9252,12 @@
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''

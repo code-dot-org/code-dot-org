@@ -2549,10 +2549,8 @@
         full instructions)
       CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
         heads in a row are flipped. (Click to see full instructions)\r\n"
-      CSPU5_U3 - Simulation - 3_2018_instruction: 'Add functionality that counts how
-        many heads in a row are flipped. (Click to see full instructions)\r
-
-'
+      CSPU5_U3 - Simulation - 3_2018_instruction: "Add functionality that counts how
+        many heads in a row are flipped. (Click to see full instructions)\r\n"
       CSPU5_U3 - Simulation - 4_instruction: |-
         Update your while loop's condition
         so the the coin flips until there are three heads in a row. (Click to see
@@ -2978,12 +2976,10 @@
         trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue
         descobrir o motivo? Conserte\no erro e execute o programa. Observe também
         a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\r\n\r\n"
-      CSPU5_U3L19 - fix the var name syntax error v2_2018_instruction: |
-        Demos a você um trecho de código
-        com um erro. Ele não reconhece a variável. Você consegue descobrir o motivo? Conserte
-        o erro e execute o programa. Observe também a mensagem de erro, já que ela
-        pode aparecer em algum momento da sua vida.\r
-        \r
+      CSPU5_U3L19 - fix the var name syntax error v2_2018_instruction: "Demos a você
+        um trecho de código\ncom um erro. Ele não reconhece a variável. Você consegue
+        descobrir o motivo? Conserte\no erro e execute o programa. Observe também
+        a mensagem de erro, já que ela\npode aparecer em algum momento da sua vida.\r\n\r\n"
       CSPU5_U3L19 - test reassignment of two vars_instruction: |-
         Predict the value
         of a and b. Add console.log statements to find out the actual value of a and
@@ -2996,13 +2992,11 @@
         linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável,
         atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome
         da variável de\nx para alguma outra coisa.\r\n"
-      CSPU5_U3L19 - three basic ops of variables_2018_instruction: |
-        Faça o seguinte:\r
-        Demos a você
-        três linhas de código mostradas na página anterior. Adicione três linhas de
-        código abaixo das mostradas aqui para criar sua própria variável, atribuir um
-        valor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome da variável de
-        x para alguma outra coisa.\r
+      CSPU5_U3L19 - three basic ops of variables_2018_instruction: "Faça o seguinte:\r\nDemos
+        a você\ntrês linhas de código mostradas na página anterior. Adicione três
+        linhas de\ncódigo abaixo das mostradas aqui para criar sua própria variável,
+        atribuir um\nvalor a ela e escrevê-la na tela.  OBSERVAÇÃO: altere o nome
+        da variável de\nx para alguma outra coisa.\r\n"
       CSPU5_U3L19 - variable reassignment challenge pt2_instruction: |-
         Make a prediction
         about the ending values of a, b, and c. Then use console.log to check your
@@ -7043,9 +7037,8 @@
         the program run without getting a warning message.
       U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click
         to see full instructions)"
-      U3L03 - draw rect function_2018_instruction: |-
-        Write a function called drawRectangle().\r
-        (Click to see full instructions)
+      U3L03 - draw rect function_2018_instruction: "Write a function called drawRectangle().\r\n(Click
+        to see full instructions)"
       U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -7091,7 +7084,7 @@
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
         função que desenha um lado do diamante. "
       U3L03 draw diamond_2018_instruction: "Use qualquer função que você escreveu\nantes
-        para fazer uma forma de \"diamante\" conforme mostrado na imagem.\\r\n\\r\nOBSERVAÇÃO:\nessa
+        para fazer uma forma de \"diamante\" conforme mostrado na imagem.\r\n\r\nOBSERVAÇÃO:\nessa
         é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
         função que desenha um lado do diamante. "

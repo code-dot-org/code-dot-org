@@ -103,7 +103,7 @@ level 'courseD_artist_project4a_2018'
 stage 'Conditionals with Cards', flex_category: 'csf_f_1'
 level 'Conditionals_2018'
 
-stage 'Conditionals', flex_category: 'csf_f_1'
+stage 'Conditionals in Farmer', flex_category: 'csf_f_1'
 level 'courseF_markdown_conditionals_intro'
 level 'courseD_video_whileIntro_2018'
 level 'courseE_farmer_ramp11a_2018'
