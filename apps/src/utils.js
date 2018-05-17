@@ -760,7 +760,7 @@ export function createHiddenPrintWindow(src) {
 export function calculateOffsetCoordinates(element, clientX, clientY) {
   const rect = element.getBoundingClientRect();
   return {
-    x: Math.round(clientX - rect.left),
-    y: Math.round(clientY - rect.top),
+    x: Math.round((clientX - rect.left) * element.offsetWidth / rect.width),
+    y: Math.round((clientY - rect.top) * element.offsetHeight / rect.height),
   };
 }
