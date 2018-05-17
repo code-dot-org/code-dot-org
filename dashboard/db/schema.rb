@@ -794,11 +794,11 @@ ActiveRecord::Schema.define(version: 20180517082249) do
     t.integer "pd_workshop_id",               null: false
     t.text    "form_data",      limit: 65535
     t.integer "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
-    t.index ["form_id", "user_id", "day"], name: "index_pd_workshop_daily_surveys_on_user_form_day", unique: true, using: :btree
     t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_daily_surveys_on_pd_workshop_id", using: :btree
     t.index ["submission_id"], name: "index_pd_workshop_daily_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "pd_workshop_id", "day", "form_id"], name: "index_pd_workshop_daily_surveys_on_user_workshop_day_form", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_workshop_daily_surveys_on_user_id", using: :btree
   end
 
