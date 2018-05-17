@@ -31,7 +31,6 @@ const questionDataPropType = PropTypes.shape({
   notAnswered: PropTypes.number.isRequired,
 });
 
-
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(questionDataPropType),
@@ -64,7 +63,7 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
-  correctAnswerColumnFormatter = (answers, {rowData, columnIndex, rowIndex, property}) => {
+  correctAnswerColumnFormatter = (answers, {rowData, columnIndex}) => {
     const cell = rowData.answers;
 
     let answerCell = '';
@@ -111,55 +110,33 @@ class StudentAssessmentOverviewTable extends Component {
         property: 'question',
         header: {
           label: commonMsg.question(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-          }},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-          }}
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
-        property: 'percentAnsweredOptionOne',
+        property: 'studentAnswer',
         header: {
           label: commonMsg.studentAnswer(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 90,
-          }},
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: this.studentAnswerColumnFormatter,
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 90,
-          }}
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
         property: 'correctAnswer',
         header: {
           label: commonMsg.checkCorrectAnswer(),
-          props: {
-            style: {
-            ...tableLayoutStyles.headerCell,
-            width: 120,
-          }},
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           format: this.correctAnswerColumnFormatter,
-          props: {
-            style: {
-            ...tableLayoutStyles.cell,
-            width: 120,
-          }}
+          props: {style: tableLayoutStyles.cell},
         }
       },
     ];
@@ -179,13 +156,13 @@ class StudentAssessmentOverviewTable extends Component {
     })(this.props.questionAnswerData);
 
     return (
-        <Table.Provider
-          columns={columns}
-          style={tableLayoutStyles.table}
-        >
-          <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="id" />
-        </Table.Provider>
+      <Table.Provider
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
+        <Table.Header />
+        <Table.Body rows={sortedRows} rowKey="id" />
+      </Table.Provider>
     );
   }
 }
