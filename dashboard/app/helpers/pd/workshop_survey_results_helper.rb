@@ -37,6 +37,8 @@ module Pd::WorkshopSurveyResultsHelper
   TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
   TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
+  include Pd::JotForm
+
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
   #   into an average of all responses
@@ -165,40 +167,38 @@ module Pd::WorkshopSurveyResultsHelper
     summary = {
       this_workshop: {},
     }
-    summary['questions'] = get_questions_for_forms
 
-    summary[:this_workshop] = generate_workshops_survey_summary(workshop)
+    questions = get_questions_for_forms(workshop)
+
+    summary['questions'] = questions
+
+    summary[:this_workshop] = generate_workshops_survey_summary(workshop, questions)
 
     summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
     summary
   end
 
-  def generate_workshops_survey_summary(workshop)
+  def generate_workshops_survey_summary(workshop, questions)
     surveys = get_surveys_for_workshops(workshop)
-
-    surveys['Pre Workshop'] = get_pre_workshop_surveys(workshop)
-    surveys['Post Workshop'] = get_post_workshop_surveys(workshop)
 
     workshop_summary = {}
 
-    get_questions_for_forms.each do |session, response_sections|
+    questions.each do |session, response_sections|
       surveys_for_session = surveys[session]
-      session_summary = {
-        survey_count: surveys_for_session.size,
-      }
 
-      response_sections.each do |response_section, questions|
+      session_summary = {}
+
+      response_sections.each do |response_section, section_questions|
         session_summary[response_section] = {}
-        questions.each do |q_key, question|
-          if question[:free_response]
+        section_questions.each do |q_key, question|
+          if question[:answer_type] == 'text'
             if response_section == :facilitator
               # For facilitator specific free responses, we want a hash of facilitator IDs
               # to an array of all of their specific responses
               facilitator_responses = Hash.new []
-
-              surveys_for_session.each do |survey|
-                survey[:facilitator][q_key].each do |facilitator, answer|
+              surveys_for_session[:facilitator].each do |survey|
+                survey[q_key].each do |facilitator, answer|
                   facilitator_responses[facilitator] += [answer]
                 end
               end
@@ -206,7 +206,7 @@ module Pd::WorkshopSurveyResultsHelper
               session_summary[:facilitator][q_key] = facilitator_responses
             else
               # Otherwise, we just want a list of all responses
-              sum = surveys_for_session.map {|survey| survey[response_section][q_key]}.reduce([], :append)
+              sum = surveys_for_session[response_section].map {|survey| survey[q_key]}.reduce([], :append).compact
               session_summary[response_section][q_key] = sum
             end
           else
@@ -216,8 +216,8 @@ module Pd::WorkshopSurveyResultsHelper
               # sum by responses to get the average for that facilitator.
               facilitator_response_sums = {}
 
-              surveys_for_session.each do |survey|
-                survey[:facilitator][q_key].each do |facilitator, answer|
+              surveys_for_session[:facilitator].each do |survey|
+                survey[q_key].each do |facilitator, answer|
                   if facilitator_response_sums[facilitator].nil?
                     facilitator_response_sums[facilitator] = {responses: 0, sum: 0}
                   end
@@ -233,9 +233,9 @@ module Pd::WorkshopSurveyResultsHelper
               end
               session_summary[:facilitator][q_key] = facilitator_response_averages
             else
-              # For non facilitator specific responses, just return the average
-              sum = surveys_for_session.map {|survey| survey[response_section][q_key]}.reduce(0, :+)
-              session_summary[response_section][q_key] = (sum / surveys_for_session.size.to_f).round(2)
+              # For non facilitator specific responses, just return a histogram with nulls removed
+              session_summary[response_section][q_key] =
+                Hash[*surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.flat_map {|k, v| [k, v.size]}].reject(&:nil?)
             end
           end
         end
@@ -247,145 +247,29 @@ module Pd::WorkshopSurveyResultsHelper
     workshop_summary
   end
 
-  # Below functions generate fake data.
-  def get_pre_workshop_surveys(workshop)
-    rand(10..20).times.map do |_|
-      {
-        general: {
-          how_excited: rand(3..5),
-          lunch_aspirations: %w(Tacos Burritos Pizza Sandwiches).sample
-        }
-      }
-    end
-  end
-
   def get_surveys_for_workshops(workshop)
+    pre_workshop_submissions = Pd::WorkshopDailySurvey.where(pd_workshop: workshop, day: 0)
+
     {
-      'Day 1' => rand(10..20).times.map do |_|
-        {
-          general: {
-            how_was_intro: rand(3..5),
-            bakers_speech_feedback: %w(Cool Awesome Funny Weird).sample
-          },
-          facilitator: {
-            rate_your_facilitator: {
-              500 => rand(1..5),
-              501 => rand(4..5)
-            },
-            describe_your_facilitator: {
-              500 => %w(Helpful Effective Smart Funny Engaging Boring).sample,
-              501 => %w(Amazing Super Brilliant Perfect).sample
-            }
-          }
-        }
-      end,
-      'Day 2' => rand(10..20).times.map do |_|
-        {
-          general: {
-            how_was_day_2_activity: rand(3..5),
-            how_was_day_2_food: rand(2..5),
-            cats_or_dogs: %w(Cats Cats! Dogs Puppies! Lizards).sample
-          }
-        }
-      end,
-      'Day 3' => rand(10..20).times.map do |_|
-        {
-          general: {
-            how_was_day_3_activity: rand(3..5),
-            how_were_animals: rand(4..5),
-            favorite_sport: %w(Football Baseball Basketball Soccer Hockey Judo).sample
-          }
-        }
-      end,
-      'Day 4' => rand(10..20).times.map do |_|
-        {
-          general: {
-            how_was_day_4_activity: rand(3..5),
-            how_was_meeting_lebron: rand(1..5),
-            favorite_tv_show: %w(Westworld Brooklyn\ 99 West\ Wing The\ Wire Breaking\ Bad).sample
-          }
-        }
-      end,
-      'Day 5' => rand(10..20).times.map do |_|
-        {
-          general: {
-            how_was_day_5_activity: rand(4..5),
-            how_was_meeting_andy_sandberg: rand(4..5),
-            how_got_home: %w(Walk Rideshare Bus Car Train).sample,
-            how_do_you_feel: %w(Good Great Awesome Amazing Excellent Fantabulous).sample
-          }
-        }
-      end,
+      'Pre Workshop' => {
+        general: pre_workshop_submissions.map(&:form_data_hash)
+      }
     }
   end
 
-  def get_post_workshop_surveys(workshops)
-    rand(10..20).times.map do |_|
-      {
-        general: {
-          overall: rand(4..5),
-          how_prepared: rand(4..5),
-          any_feedback: %W(It\ was\ great! I'm\ psyched! More\ cats\ next\ time).sample,
-          last_words: %W(Hasta\ la\ vista Peace Sayonara Nope).sample
-        }
-      }
-    end
-  end
+  def get_questions_for_forms(workshop)
+    pre_workshop_general = Pd::SurveyQuestion.find_by(form_id: CDO.jotform_forms['local']['day_0'])
+    pre_workshop_general_summary = pre_workshop_general.summarize
 
-  def get_questions_for_forms
+    pre_workshop_general_summary.each do |_, question|
+      if question[:text].match? '{.*}'
+        question[:text] = question[:text].gsub '{workshopCourse}', workshop.course
+      end
+    end
+
     {
       'Pre Workshop' => {
-        general: {
-          how_excited: {text: 'How excited are you?'},
-          lunch_aspirations: {text: 'What do you hope lunch will be?', free_response: true}
-        }
-      },
-      'Day 1' => {
-        general: {
-          how_was_intro: {text: 'How was the course introduction?'},
-          bakers_speech_feedback: {text: 'What did you think of Baker?', free_response: true}
-        },
-        facilitator: {
-          rate_your_facilitator: {text: 'How was your facilitator?'},
-          describe_your_facilitator: {text: 'What words best describe your facilitator?', free_response: true}
-        }
-      },
-      'Day 2' => {
-        general: {
-          how_was_day_2_activity: {text: 'How were the day 2 activities?'},
-          how_was_day_2_food: {text: 'How was the food on day 2?'},
-          cats_or_dogs: {text: 'Do you like cats or dogs?', free_response: true}
-        }
-      },
-      'Day 3' => {
-        general: {
-          how_was_day_3_activity: {text: 'How were the day 3 activities?'},
-          how_were_animals: {text: 'How successful was the animal-based activity?'},
-          favorite_sport: {text: 'What is your favorite sport?', free_response: true}
-        }
-      },
-      'Day 4' => {
-        general: {
-          how_was_day_4_activity: {text: 'How were the day 4 activities?'},
-          how_was_meeting_lebron: {text: 'Did you enjoy meeting LeBron?'},
-          favorite_tv_show: {text: 'What is your favorite TV show?', free_response: true}
-        }
-      },
-      'Day 5' => {
-        general: {
-          how_was_day_5_activity: {text: 'How was the day 5 activity?'},
-          how_was_meeting_andy_sandberg: {text: 'How awesome was meeting Andy Sandberg?'},
-          how_got_home: {text: 'How did you get home?', free_response: true},
-          how_do_you_feel: {text: 'How do you really feel?', free_response: true}
-        }
-      },
-      'Post Workshop' => {
-        general: {
-          overall: {text: 'Overall, how successful was the workshop?'},
-          how_prepared: {text: 'How prepared do you feel for the coming year?'},
-          any_feedback: {text: 'Any feedback?', free_response: true},
-          last_words: {text: 'Any last words?', free_response: true}
-        }
+        general: pre_workshop_general_summary
       }
     }
   end
