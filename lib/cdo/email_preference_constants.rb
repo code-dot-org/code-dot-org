@@ -7,6 +7,7 @@ module EmailPreferenceConstants
     FORM_HOUR_OF_CODE = 'FORM_HOUR_OF_CODE'.freeze,
     FORM_VOLUNTEER = 'FORM_VOLUNTEER'.freeze,
     FORM_ACCESS_REPORT = 'FORM_ACCESS_REPORT'.freeze,
-    FORM_REGIONAL_PARTNER = 'FORM_REGIONAL_PARTNER'.freeze
+    FORM_REGIONAL_PARTNER = 'FORM_REGIONAL_PARTNER'.freeze,
+    FORM_HOC_SIGN_UP = 'FORM_HOC_SIGN_UP'.freeze
   ].freeze
 end

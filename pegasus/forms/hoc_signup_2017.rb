@@ -13,7 +13,13 @@ class HocSignup2017 < HocSignup2014
 
   def self.process(data, created_ip = nil)
     if data['email_preference_opt_in_s'] && created_ip && data['email_s']
-      puts "Set email preference - #{data['email_preference_opt_in_s']} - #{created_ip} - #{data['email_s']}"
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_HOC_SIGN_UP,
+        form_kind: '0'
+      )
     end
 
     # If there is an nces school id then we need to load that school's address and use it as the event location.
