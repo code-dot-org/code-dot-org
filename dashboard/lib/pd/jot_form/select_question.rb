@@ -9,6 +9,10 @@ module Pd
         ]
       end
 
+      # JotForm designates the "other" option with this key.
+      # Other question keys are numbered.
+      OTHER_ANSWER_KEY = 'other'.freeze
+
       attr_accessor(
         :allow_other,
         :other_text,
@@ -52,7 +56,7 @@ module Pd
 
           # Hash includes other, in form {'0' => value1, '1' => value2, ..., 'other' => otherText}.
           # Note "other" can be chosen and blank, in which case we use the other text from the question.
-          values_with_other = answer.map {|k, v| k == 'other' ? v.presence || other_text : v}
+          values_with_other = answer.map {|k, v| k == OTHER_ANSWER_KEY ? v.presence || other_text : v}
 
           # It might be a single item or an array
           return answer_type == ANSWER_MULTI_SELECT ? values_with_other : values_with_other.first

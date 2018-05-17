@@ -27,7 +27,10 @@ module Pd
         ANSWER_SELECT_TEXT = 'selectText'.freeze,
 
         # Multi-select is always text
-        ANSWER_MULTI_SELECT = 'multiSelect'.freeze
+        ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
+
+        # No answer, just question metadata, e.g. matrix heading
+        ANSWER_NONE = 'none'.freeze
       ].freeze
     end
   end

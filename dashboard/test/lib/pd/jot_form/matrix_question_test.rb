@@ -73,35 +73,53 @@ module Pd
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
-          sub_questions: ['Question 1', 'Question 2']
+          text: 'How much do you agree or disagree with the following statements about this workshop?',
+          sub_questions: [
+            'I learned something',
+            'It was a good use of time'
+          ]
         )
 
-        assert_equal(
-          {
-            'sampleMatrix_0' => {text: 'Question 1', answer_type: ANSWER_SELECT_VALUE},
-            'sampleMatrix_1' => {text: 'Question 2', answer_type: ANSWER_SELECT_VALUE}
+        expected_summary = {
+          'sampleMatrix' => {
+            text: 'How much do you agree or disagree with the following statements about this workshop?',
+            answer_type: ANSWER_NONE
           },
-          question.to_summary
-        )
+          'sampleMatrix_0' => {
+            text: 'I learned something',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'sampleMatrix'
+          },
+          'sampleMatrix_1' => {
+            text: 'It was a good use of time',
+            answer_type: ANSWER_SELECT_VALUE,
+            parent: 'sampleMatrix'
+          }
+        }
+
+        assert_equal expected_summary, question.to_summary
       end
 
       test 'to_form_data' do
         question = MatrixQuestion.new(
           id: 1,
           name: 'sampleMatrix',
-          options: %w(Agree Neutral Disagree),
-          sub_questions: ['Question 1', 'Question 2']
+          options: %w(Disagree Neutral Agree),
+          sub_questions: [
+            'I learned something',
+            'It was a good use of time'
+          ],
         )
 
         answer = {
-          'Question 1' => 'Disagree',
-          'Question 2' => 'Agree'
+          'I learned something' => 'Agree',
+          'It was a good use of time' => 'Neutral'
         }
 
         assert_equal(
           {
             'sampleMatrix_0' => 3,
-            'sampleMatrix_1' => 1
+            'sampleMatrix_1' => 2
           },
           question.to_form_data(answer)
         )

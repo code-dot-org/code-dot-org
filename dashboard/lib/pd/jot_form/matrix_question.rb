@@ -1,3 +1,26 @@
+# Matrix questions consist of a heading followed by multiple sub-questions in a grid,
+# one question per row (radio buttons), and options as columns
+#
+# It looks something like this, for example:
+# +------------------------------------------------------------------------------------+
+# |How much do you agree or disagree with the following statements about this workshop?|
+# +------------------------------------------------------------------------------------+
+# |                            +----------------------------+                          |
+# |                            | Disagree | Neutral | Agree |                          |
+# +---------------------------------------------------------+                          |
+# |I learned something         |     O    |    O    |   O   |                          |
+# +---------------------------------------------------------+                          |
+# |It was a good use of time   |     O    |    O    |   O   |                          |
+# +---------------------------------------------------------+                          |
+# |I enjoyed it                |     O    |    O    |   O   |                          |
+# +----------------------------+----------+---------+-------+--------------------------+
+#
+# This has 3 sub_questions: ['I learned something', 'It was a good use of time', 'I enjoyed it']
+# And 3 options: ['Disagree', 'Neutral', 'Agree'], each of which will compute to a numeric value,
+# 1-3 from left to right.
+#
+# Note: JotForm has the ability to provide calculateValues,
+# but we are not using that to keep it simple.
 module Pd
   module JotForm
     class MatrixQuestion < QuestionWithOptions
@@ -37,15 +60,19 @@ module Pd
       end
 
       def to_summary
-        sub_questions.each_with_index.map do |sub_question, i|
+        heading_hash = {name => {text: text, answer_type: ANSWER_NONE}}
+        sub_questions_hash = sub_questions.each_with_index.map do |sub_question, i|
           [
             generate_sub_question_key(i),
             {
               text: sub_question,
-              answer_type: ANSWER_SELECT_VALUE
+              answer_type: ANSWER_SELECT_VALUE,
+              parent: name
             }
           ]
         end.to_h
+
+        heading_hash.merge(sub_questions_hash)
       end
 
       def to_form_data(answer)
