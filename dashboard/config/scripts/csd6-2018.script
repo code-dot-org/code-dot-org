@@ -236,7 +236,6 @@ level 'CSD U6 circuit smart bike blinker buttons_2018', progression: 'Smart Bike
 level 'CSD U6 circuit smart bike blinker build_2018', progression: 'Smart Bike - Blinkers'
 level 'CSD U6 circuit button map_2018', progression: 'Button Circuits'
 level 'CSD U6 circuit createButton_2018', progression: 'Button Circuits'
-level 'CSD U6 circuit createButton scratch_2018', progression: 'Button Circuits'
 level 'CSD U6 circuit smart bike buzzer_2018', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike light_2018', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike final_2018', progression: 'Finish the Prototype'
