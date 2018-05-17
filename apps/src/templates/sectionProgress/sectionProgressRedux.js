@@ -407,6 +407,8 @@ export const loadScript = (scriptId) => {
       return fetch(url, { credentials: 'include' })
         .then(response => response.json())
         .then((data) => {
+          console.log("data from API call to section_level_progress", data);
+          // ERIN - you need to rework what this function returns so that it includes whether the students paired on this level or not.
           const dataByStudent = data.students;
           let studentLevelProgress = {};
           Object.keys(dataByStudent).forEach((studentId) => {
