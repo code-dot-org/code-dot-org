@@ -4,17 +4,20 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import { studentData, multipleChoiceData } from './sectionAssessmentsHelpers';
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import { row } from 'reactabular-select/dist';
 
 export const COLUMNS = {
   QUESTION: 0,
-  ANSWER_1: 1,
-  NOT_ANSWERED: 3,
+  STUDENT_ANSWER: 1,
+  CORRECT_ANSWER: 2,
 };
 
 const studentAnswerDataPropType = PropTypes.shape({
   id:  PropTypes.string,
   name: PropTypes.string,
-  answers: PropTypes.array,
+  studentAnswers: PropTypes.array,
 });
 
 const answerDataPropType = PropTypes.shape({
@@ -29,6 +32,7 @@ const questionDataPropType = PropTypes.shape({
   answers: PropTypes.arrayOf(answerDataPropType),
   notAnswered: PropTypes.number.isRequired,
 });
+
 
 class StudentAssessmentOverviewTable extends Component {
   static propTypes= {
@@ -62,6 +66,25 @@ class StudentAssessmentOverviewTable extends Component {
     });
   };
 
+  correctAnswerColumnFormatter = (answers, {rowData, columnIndex, rowIndex, property}) => {
+    debugger;
+    const cell = rowData.answers;
+
+    let studentQuestion = '';
+      cell.forEach ((secItem) => {
+        if (secItem.isCorrectAnswer) {
+          studentQuestion = secItem.multipleChoiceOption;
+        }
+      });
+
+    return (
+        <MultipleChoiceAnswerCell
+          id={rowData.id}
+          studentQuestion={studentQuestion}
+        />
+    );
+  };
+
   getColumns = (sortable) => {
     let dataColumns = [
       {
@@ -84,7 +107,7 @@ class StudentAssessmentOverviewTable extends Component {
       {
         property: 'percentAnsweredOptionOne',
         header: {
-          label: commonMsg.answerOptionA(),
+          label: commonMsg.studentAnswer(),
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
@@ -100,7 +123,7 @@ class StudentAssessmentOverviewTable extends Component {
         }
       },
       {
-        property: 'notAnswered',
+        property: 'correctAnswer',
         header: {
           label: commonMsg.checkCorrectAnswer(),
           props: {
@@ -110,6 +133,7 @@ class StudentAssessmentOverviewTable extends Component {
           }},
         },
         cell: {
+          format: this.correctAnswerColumnFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
