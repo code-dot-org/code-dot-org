@@ -124,43 +124,37 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_email
     return head(:bad_request) if params[:user].nil?
-
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
+    permitted = params.
+        require(:user).
+        permit(
+          :email,
+          :hashed_email,
+          :email_opt_in,
+          :current_password
+        )
+
     # Details required to perform email opt-in
-    email_opt_in = params[:user].delete(:email_opt_in)
-    email_changed = params[:user][:email] &&
-      params[:user][:email] != current_user.email
-    account_type_changed = params[:user][:user_type] &&
-      params[:user][:user_type] != current_user.user_type
+    email_opt_in = permitted.delete(:email_opt_in)
 
     successfully_updated =
       if forbidden_change?(current_user, params)
         false
       elsif needs_password?(current_user, params)
-        current_user.update_with_password(update_params(params))
+        current_user.update_with_password(permitted)
       else
-        # remove the virtual current_password attribute update_without_password
-        # doesn't know how to ignore it
-        params[:user].delete(:current_password)
-        current_user.update_without_password(update_params(params))
+        permitted.delete(:current_password)
+        current_user.update_without_password(permitted)
       end
 
     # Opt-in the user
     if successfully_updated && !current_user.email.blank? && !email_opt_in.nil?
-      source =
-        if account_type_changed
-          EmailPreference::ACCOUNT_TYPE_CHANGE
-        elsif email_changed
-          EmailPreference::ACCOUNT_EMAIL_CHANGE
-        else
-          nil
-        end
       EmailPreference.upsert!(
         email: current_user.email,
         opt_in: email_opt_in == 'yes',
         ip_address: request.env['REMOTE_ADDR'],
-        source: source,
+        source: EmailPreference::ACCOUNT_EMAIL_CHANGE,
         form_kind: "0"
       )
     end
