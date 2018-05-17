@@ -63,7 +63,7 @@ class ManageStudentsLoginInfo extends Component {
         />
         <h2>Privacy</h2>
         <p>
-          <a target="_blank" href={"/privacy/student-privacy"}>
+          <a id="uitest-privacy-link" target="_blank" href={"/privacy/student-privacy"}>
           {i18n.privacyDocExplination()}
           </a>
         </p>
