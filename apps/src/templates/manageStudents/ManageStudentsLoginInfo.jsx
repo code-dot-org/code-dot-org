@@ -35,8 +35,8 @@ class ManageStudentsLoginInfo extends Component {
             </p>
             <p>
               {i18n.sectionSignInInfo()}
-              <a target="_blank" href={`http://localhost-studio.code.org:3000/sections/${sectionCode}`}>
-                {`http://localhost-studio.code.org:3000/sections/${sectionCode}`}
+              <a target="_blank" href={`http://studio.code.org/sections/${sectionCode}`}>
+                {`http://studio.code.org/sections/${sectionCode}`}
               </a>
             </p>
             <p>
@@ -50,8 +50,8 @@ class ManageStudentsLoginInfo extends Component {
           <div>
             <p>
               {i18n.joinSectionAsk()}
-              <a target="_blank" href={`${window.location.origin}/join/${sectionCode}`}>
-                {`http://localhost-studio.code.org:3000/join/${sectionCode}`}
+              <a target="_blank" href={`http://studio.code.org/join/${sectionCode}`}>
+                {`http://studio.code.org/join/${sectionCode}`}
               </a>
             </p>
           </div>
