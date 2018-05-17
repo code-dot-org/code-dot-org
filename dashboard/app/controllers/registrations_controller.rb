@@ -124,7 +124,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_email
     return head(:bad_request) if params[:user].nil?
-    current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
+    current_user.reload # Needed to make tests pass for reasons noted in set_email_test.rb
 
     permitted = params.
         require(:user).
@@ -148,8 +148,8 @@ class RegistrationsController < Devise::RegistrationsController
         current_user.update_without_password(permitted)
       end
 
-    # Opt-in the user
-    if successfully_updated && !current_user.email.blank? && !email_opt_in.nil?
+    # Add the user opt-in preferences
+    if email_opt_in && successfully_updated && !current_user.email.blank?
       EmailPreference.upsert!(
         email: current_user.email,
         opt_in: email_opt_in == 'yes',
