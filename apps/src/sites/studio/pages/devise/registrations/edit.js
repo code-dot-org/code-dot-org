@@ -1,46 +1,37 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ChangeEmailModal from '@cdo/apps/lib/ui/ChangeEmailModal';
-import color from '@cdo/apps/util/color';
+import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
-const changeEmailMountPoint = document.createElement('div');
-function showChangeEmailModal() {
-  document.body.appendChild(changeEmailMountPoint);
-  const form = document.getElementById('change-email-modal-form');
-  const userAge = parseInt(document.getElementById('user_age').value, 10);
-  const userHashedEmail = document.getElementById('change-email-modal_user_hashed_email').value;
-  ReactDOM.render(
-    <ChangeEmailModal
-      isOpen
-      handleSubmit={onEmailChanged}
-      handleCancel={hideChangeEmailModal}
-      railsForm={form}
-      userAge={userAge}
-      currentHashedEmail={userHashedEmail}
-    />,
-    changeEmailMountPoint
-  );
-}
-
-function onEmailChanged(newEmail) {
-  const displayedUserEmail = $('#displayed-user-email');
-  if ('***encrypted***' !== displayedUserEmail.text()) {
-    displayedUserEmail.text(newEmail);
-  }
-  hideChangeEmailModal();
-  $(displayedUserEmail).effect('highlight', {
-    duration: 1500,
-    color: color.orange,
-  });
-}
-
-function hideChangeEmailModal() {
-  ReactDOM.unmountComponentAtNode(changeEmailMountPoint);
-  document.body.removeChild(changeEmailMountPoint);
-}
+const scriptData = getScriptData('edit');
+const initialUserType = scriptData.userType;
 
 $(document).ready(() => {
+  new ChangeEmailController({
+    form: $('#change-email-modal-form'),
+    link: $('#edit-email-link'),
+    displayedUserEmail: $('#displayed-user-email'),
+    userAge: $('#user_age'),
+    emailChangedCallback: onEmailChanged,
+  });
+
+  new ChangeUserTypeController(
+    $('#change-user-type-modal-form'),
+    initialUserType,
+  );
+
+  initializeCreatePersonalAccountControls();
+});
+
+function onEmailChanged(newEmail, newHashedEmail) {
+  $('#user_hashed_email').val(newHashedEmail);
+  $('#change-user-type_user_email').val(newEmail);
+  $('#change-user-type_user_hashed_email').val(newHashedEmail);
+  $('#change-email-modal_user_email').val(newEmail);
+  $('#change-email-modal_user_hashed_email').val(newHashedEmail);
+}
+
+function initializeCreatePersonalAccountControls() {
   $( "#edit_user_create_personal_account" ).on("submit", function (e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
@@ -50,6 +41,4 @@ $(document).ready(() => {
       });
     }
   });
-
-  $('#edit-email-link').click(showChangeEmailModal);
-});
+}
