@@ -15,8 +15,6 @@ class RegistrationsController < Devise::RegistrationsController
 
     # Details required to perform email opt-in
     email_opt_in = params[:user].delete(:email_opt_in)
-    email_changed = params[:user][:email] &&
-      params[:user][:email] != current_user.email
     account_type_changed = params[:user][:user_type] &&
       params[:user][:user_type] != current_user.user_type
 
@@ -37,8 +35,6 @@ class RegistrationsController < Devise::RegistrationsController
       source =
         if account_type_changed
           EmailPreference::ACCOUNT_TYPE_CHANGE
-        elsif email_changed
-          EmailPreference::ACCOUNT_EMAIL_CHANGE
         else
           nil
         end
