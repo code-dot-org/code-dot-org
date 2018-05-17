@@ -7,7 +7,7 @@ require 'test_helper'
 # This route is handled by RegistrationsController but is complex enough to
 # merit its own test file.
 #
-class RegistrationsControllerTest < ActionController::TestCase
+class SetUserTypeTest < ActionController::TestCase
   setup do
     @controller = RegistrationsController.new
 
