@@ -68,12 +68,16 @@ export const levelProgressStyle = (level, disabled) => {
     };
   } else if (
     level.kind === LevelKind.assessment &&
-    level.status !== LevelStatus.perfect &&
-    level.status !== LevelStatus.not_tried
+    level.status === LevelStatus.free_play_complete
   ) {
     style.borderColor = color.level_submitted;
     style.backgroundColor = color.level_submitted;
     style.color = color.white;
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status === LevelStatus.attempted
+  ) {
+    style.borderColor = color.level_submitted;
   } else {
     if (level.status !== LevelStatus.not_tried) {
       style.borderColor = color.level_perfect;
