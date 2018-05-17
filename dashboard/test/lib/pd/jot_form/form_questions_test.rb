@@ -56,9 +56,13 @@ module Pd
           MatrixQuestion.new(
             id: 7,
             name: 'matrix',
-            text: 'matrix label',
-            options: %w(One Two Three),
-            sub_questions: %w(Q1 Q2)
+            text: 'How much do you agree or disagree with the following statements about this workshop?',
+            options: %w(Disagree Neutral Agree),
+            sub_questions: [
+              'I learned something',
+              'It was a good use of time',
+              'I enjoyed it'
+            ]
           )
         ]
 
@@ -73,8 +77,10 @@ module Pd
           'multiSelect' => {text: 'multi select label', answer_type: ANSWER_MULTI_SELECT},
           'multiSelectWithOther' => {text: 'multi select with other label', answer_type: ANSWER_MULTI_SELECT},
           'scale' => {text: 'scale label', answer_type: ANSWER_SELECT_VALUE},
-          'matrix_0' => {text: 'Q1', answer_type: ANSWER_SELECT_VALUE},
-          'matrix_1' => {text: 'Q2', answer_type: ANSWER_SELECT_VALUE}
+          'matrix' => {text: 'How much do you agree or disagree with the following statements about this workshop?', answer_type: ANSWER_NONE},
+          'matrix_0' => {text: 'I learned something', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
+          'matrix_1' => {text: 'It was a good use of time', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'},
+          'matrix_2' => {text: 'I enjoyed it', answer_type: ANSWER_SELECT_VALUE, parent: 'matrix'}
         }
 
         assert_equal expected_summary, @form_questions.to_summary
@@ -88,7 +94,11 @@ module Pd
           '4' => %w(Two Three),
           '5' => {'0' => 'Two', 'other' => 'my other reason'},
           '6' => '2',
-          '7' => {'Q1' => 'One', 'Q2' => 'Three'}
+          '7' => {
+            'I learned something' => 'Agree',
+            'It was a good use of time' => 'Neutral',
+            'I enjoyed it' => 'Agree'
+          }
         }
 
         expected_form_data = {
@@ -98,8 +108,9 @@ module Pd
           'multiSelect' => %w(Two Three),
           'multiSelectWithOther' => ['Two', 'my other reason'],
           'scale' => 2,
-          'matrix_0' => 1,
-          'matrix_1' => 3
+          'matrix_0' => 3,
+          'matrix_1' => 2,
+          'matrix_2' => 3
         }
 
         assert_equal expected_form_data, @form_questions.to_form_data(jotform_answers)
