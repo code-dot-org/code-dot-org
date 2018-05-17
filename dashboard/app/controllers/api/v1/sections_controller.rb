@@ -106,7 +106,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
-    render json: {sections: @sections}
+    render json: @sections, each_serializer: Api::V1::SectionNameAndIdSerializer
   end
 
   private
